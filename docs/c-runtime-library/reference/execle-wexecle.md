@@ -1,10 +1,10 @@
 ---
 title: _execle, _wexecle
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execle
 - _wexecle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wexecle
 - _execle
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3480b2220c71984dcc30cec54d00deac1f4dfbc7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288162"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937385"
 ---
-# <a name="execle-wexecle"></a>_execle, _wexecle
+# <a name="_execle-_wexecle"></a>_execle, _wexecle
 
 Carica ed esegue nuovi processi figlio.
 
@@ -73,9 +76,9 @@ Matrice di puntatori alle impostazioni d'ambiente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Valore restituito di -1 indica un errore, nel qual caso il **errno** (variabile globale) è impostata.
+Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valore restituito-1 indica un errore, nel qual caso è impostata la variabile globale **errno** .
 
-|**errno** valore|Descrizione|
+|**errno** (valore)|Descrizione|
 |-------------------|-----------------|
 |**E2BIG**|Lo spazio necessario per gli argomenti e le impostazioni di ambiente supera 32 KB.|
 |**EACCES**|Il file specificato dispone di una violazione di blocco o di condivisione.|
@@ -91,7 +94,7 @@ Per altre informazioni su questi codici restituiti, vedere [_doserrno, errno, _s
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passa ogni argomento della riga di comando come parametro separato e passa una matrice di puntatori alle impostazioni di ambiente.
 
-Il **execle** funzioni convalidano i propri parametri. Se *cmdname* oppure *arg0* è un puntatore null o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1. Non viene avviato alcun nuovo processo.
+Le funzioni **_execle** convalidano i relativi parametri. Se *CmdName* o *arg0* è un puntatore null o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1. Non viene avviato alcun nuovo processo.
 
 ## <a name="requirements"></a>Requisiti
 

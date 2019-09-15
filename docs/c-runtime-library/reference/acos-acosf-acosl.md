@@ -1,11 +1,11 @@
 ---
 title: acos, acosf, acosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acosf
 - acos
 - acosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acos
 - acosl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335672"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940001"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -58,23 +61,23 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>Parametri
 
 *x*<br/>
-Valore compreso tra -1 e 1, per la quale calcolare l'arcocoseno (il coseno inverso).
+Valore compreso tra-1 e 1, per il quale calcolare l'arcoseno (il coseno inverso).
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **acos** funzione restituisce l'arcocoseno di *x* nell'intervallo da 0 a radianti π.
+La funzione **ARccOS** restituisce l'arcoseno di *x* nell'intervallo compreso tra 0 e π radianti.
 
-Per impostazione predefinita, se *x* è minore di -1 o maggiore di 1 **acos** restituisce un valore indefinito.
+Per impostazione predefinita, se *x* è minore di-1 o maggiore di 1, **ARccOS** restituisce un valore indefinito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|NON VALIDO|_DOMAIN|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
 |&#124;x&#124;>1|NON VALIDO|_DOMAIN|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **acos** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **acos** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **ARccOS** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C, **ARccOS** accetta e restituisce sempre un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

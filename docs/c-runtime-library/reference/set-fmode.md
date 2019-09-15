@@ -1,9 +1,9 @@
 ---
 title: _set_fmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_fmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_fmode
 - set_fmode
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: af83f22ebfaf274b73ca9e891563d3775e28925f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3b811a607184de54bb736bddcc456af53ac089
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356578"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948555"
 ---
-# <a name="setfmode"></a>_set_fmode
+# <a name="_set_fmode"></a>_set_fmode
 
 Imposta la modalità di conversione di file predefinita per le operazioni di I/O dei file.
 
@@ -47,17 +50,17 @@ errno_t _set_fmode(
 ### <a name="parameters"></a>Parametri
 
 *mode*<br/>
-La modalità di conversione di file desiderata: **o_text** oppure **O_BINARY**.
+Modalità di conversione file desiderata: **_O_TEXT** o **_O_BINARY**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce zero in caso di esito positivo, un codice di errore in caso di esito negativo. Se *modalità* non è **o_text** oppure **O_BINARY** oppure **o_wtext**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EINVAL**.
+Restituisce zero in caso di esito positivo, un codice di errore in caso di esito negativo. Se *mode* non è **_O_TEXT** o **_O_BINARY** o **_O_WTEXT**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-La funzione imposta la variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione file predefinita per le operazioni dei / o file **Open** e **pipe**.
+La funzione imposta la variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione file predefinita per le operazioni di I/O dei file **_open** e **_pipe**.
 
-**O_text** e **O_BINARY** sono definiti in fcntl. h. **EINVAL** è definita in errno. h.
+**_O_TEXT** e **_O_BINARY** sono definite in Fcntl. h. **EINVAL** è definito in errno. h.
 
 ## <a name="requirements"></a>Requisiti
 

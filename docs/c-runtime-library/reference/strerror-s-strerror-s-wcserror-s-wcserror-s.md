@@ -1,12 +1,12 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wcserror_s
 - _strerror_s
 - _wcserror_s
 - strerror_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcserror_s
 - __wcserror_s
@@ -39,16 +42,16 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353822"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958157"
 ---
-# <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
+# <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
-Ottiene un messaggio di errore di sistema (**strerror_s**, **wcserror_s**) o stampa un messaggio di errore fornito dall'utente (**strerror_s**, **wcserror_s** ). Queste sono versioni di [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Ottenere un messaggio di errore di sistema (**strerror_s**, **_wcserror_s**) o stampare un messaggio di errore fornito dall'utente ( **_strerror_s**, **__wcserror_s**). Queste sono versioni di [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -115,14 +118,14 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo.
 
 ### <a name="error-condtions"></a>Condizioni di errore
 
-|*buffer*|*numberOfElements*|*strErrMsg*|Contenuto di *buffer*|
+|*buffer*|*numberOfElements*|*strErrMsg*|Contenuto del *buffer*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|qualsiasi|qualsiasi|N/D|
+|**NULL**|qualsiasi|qualsiasi|n/d|
 |qualsiasi|0|qualsiasi|non modificato|
 
 ## <a name="remarks"></a>Note
 
-Il **strerror_s** funzione mappe *errnum* a una stringa di messaggio di errore, restituendo la stringa nella *buffer*. **strerror_s** non accetta il numero di errore, viene usato il valore corrente di **errno** per determinare il messaggio appropriato. Né **strerror_s** né **strerror_s** stampano effettivamente il messaggio: A tal fine, è necessario chiamare una funzione di output, ad esempio [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+La funzione **strerror_s** esegue il mapping di *errnum* a una stringa di messaggio di errore, restituendo la stringa nel *buffer*. **_strerror_s** non accetta il numero di errore. Usa il valore corrente di **errno** per determinare il messaggio appropriato. Né **strerror_s** né **_strerror_s** stampano effettivamente il messaggio: A tale proposito, è necessario chiamare una funzione di output, ad esempio [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -132,17 +135,17 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-Se *strErrMsg* viene **NULL**, **strerror_s** restituisce una stringa in *buffer* contenente il messaggio di errore di sistema per l'ultima chiamata della libreria che ha generato un errore. La stringa del messaggio di errore termina con il carattere di nuova riga ("\n"). Se *strErrMsg* non è uguale a **NULL**, quindi **strerror_s** restituisce una stringa in *buffer* contenente (in ordine) il messaggio della stringa, un i due punti, uno spazio, il messaggio di errore di sistema per l'ultima chiamata della libreria che ha generato un errore e un carattere di nuova riga. La lunghezza massima consentita del messaggio stringa è pari a 94 caratteri.
+Se *strErrMsg* è **null**, **_strerror_s** restituisce una stringa nel *buffer* contenente il messaggio di errore di sistema per l'ultima chiamata di libreria che ha generato un errore. La stringa del messaggio di errore termina con il carattere di nuova riga ("\n"). Se *strErrMsg* è diverso da **null**, **_strerror_s** restituisce una stringa nel *buffer* contenente (nell'ordine) il messaggio della stringa, i due punti, uno spazio, il messaggio di errore di sistema per l'ultima chiamata di libreria che produce un errore e una nuova riga carattere. La lunghezza massima consentita del messaggio stringa è pari a 94 caratteri.
 
-Queste funzioni troncano il messaggio di errore se la lunghezza eccede *numberOfElements* -1. La stringa risultante nel *buffer* sono sempre con terminazione null.
+Queste funzioni troncano il messaggio di errore se la relativa lunghezza supera *NumberOfElements* -1. La stringa risultante nel *buffer* è sempre con terminazione null.
 
-Il numero di errore effettivo per **strerror_s** viene archiviato nella variabile [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). I messaggi di errore di sistema sono accessibili tramite la variabile [sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), ovvero una matrice dei messaggi ordinati in base al numero di errore. **strerror_s** accede al messaggio di errore appropriato usando il **errno** valore come indice per la variabile **sys_errlist**. Il valore della variabile [sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene definito come il numero massimo di elementi nel **sys_errlist** matrice. Per risultati accurati, chiamare **strerror_s** immediatamente dopo una routine di libreria restituisce un errore. In caso contrario, le chiamate successive a **strerror_s** oppure **strerror_s** può sovrascrivere il **errno** valore.
+Il numero di errore effettivo per **_strerror_s** viene archiviato nella variabile [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). I messaggi di errore di sistema sono accessibili tramite la variabile [sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), ovvero una matrice dei messaggi ordinati in base al numero di errore. **_strerror_s** accede al messaggio di errore appropriato utilizzando il valore **errno** come indice della variabile **_sys_errlist**. Il valore della variabile [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) è definito come il numero massimo di elementi nella matrice **_sys_errlist** . Per produrre risultati accurati, chiamare **_strerror_s** immediatamente dopo la restituzione di una routine di libreria con un errore. In caso contrario, le chiamate successive a **strerror_s** o **_strerror_s** possono sovrascrivere il valore **errno** .
 
-**wcserror_s** e **wcserror_s** sono versioni a caratteri wide di **strerror_s** e **strerror_s**, rispettivamente.
+**_wcserror_s** e **__wcserror_s** sono rispettivamente versioni a caratteri wide di **strerror_s** e **_strerror_s**.
 
-Queste funzioni convalidano i relativi parametri. Se il buffer è **NULL** o se il parametro delle dimensioni è 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e impostare **errno** al **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se il buffer è **null** o se il parametro size è 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**.
 
-**strerror_s**, **wcserror_s**, e **wcserror_s** non fanno parte della definizione ANSI ma sono estensioni Microsoft a esso. Non utilizzarli dove si desidera la portabilità; Per garantire la compatibilità ANSI, usare **strerror_s** invece.
+**_strerror_s**, **_wcserror_s**e **__wcserror_s** non fanno parte della definizione ANSI ma sono estensioni Microsoft. Non usarli per la portabilità desiderata; per la compatibilità ANSI, usare invece **strerror_s** .
 
 In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

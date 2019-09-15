@@ -1,9 +1,9 @@
 ---
 title: _get_osfhandle
 ms.date: 05/29/2018
-apiname:
+api_name:
 - _get_osfhandle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_osfhandle
 - _get_osfhandle
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: cc3b50e3d3f65bee83b8df83aa0adb5c8694e35a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 65060689e0a7fc72b67da8fc3bf7ce0af75fd645
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821665"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955780"
 ---
-# <a name="getosfhandle"></a>_get_osfhandle
+# <a name="_get_osfhandle"></a>_get_osfhandle
 
 Recupera l''handle di file del sistema operativo associato al descrittore di file specificato.
 
@@ -51,16 +54,16 @@ Descrittore di file esistente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un handle di file del sistema operativo se *fd* è valido. In caso contrario, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, viene restituito **INVALID_HANDLE_VALUE** (-1). Imposta inoltre **errno** al **EBADF**, che indica un handle di file non valido. Per evitare un avviso quando il risultato viene utilizzato come un handle di file Win32, eseguire il cast a un **gestire** tipo.
+Restituisce un handle di file del sistema operativo se *FD* è valido. In caso contrario, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituisce **INVALID_HANDLE_VALUE** (-1). Imposta anche **errno** su **EBADF**, che indica un handle di file non valido. Per evitare un avviso quando il risultato viene utilizzato come handle di file Win32, eseguirne il cast a un tipo di **handle** .
 
 > [!NOTE]
-> Quando **stdin**, **stdout**, e **stderr** non sono associate a un flusso (ad esempio, in un'applicazione Windows senza una finestra della console), i valori del descrittore di file per Questi flussi restituiti da [fileno](fileno.md) come speciale valore -2. Analogamente, se si usa il valore 0, 1 o 2 come il parametro del descrittore di file anziché il risultato di una chiamata a **fileno**, **get_osfhandle** restituisce anche il valore speciale -2 quando non è associato il descrittore del file con un flusso e non viene impostato **errno**. Tuttavia, non è un valore di handle di file valido e le chiamate successive proverà a usarlo si verifichino errori.
+> Quando **stdin**, **stdout**e **stderr** non sono associati a un flusso (ad esempio, in un'applicazione Windows senza una finestra della console), i valori del descrittore di file per questi flussi vengono restituiti da [_fileno](fileno.md) come valore speciale-2. Analogamente, se si usa 0, 1 o 2 come parametro del descrittore del file anziché il risultato di una chiamata a **_fileno**, **_get_osfhandle** restituisce anche il valore speciale-2 Se il descrittore del file non è associato a un flusso e non imposta **errno**. Tuttavia, non si tratta di un valore di handle di file valido e le chiamate successive che tentano di utilizzarlo hanno probabilmente esito negativo.
 
-Per altre informazioni sulle **EBADF** e altri codici di errore, vedere [doserrno, errno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per ulteriori informazioni su **EBADF** e altri codici di errore, vedere [doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Per chiudere un file con handle di file del sistema operativo (OS) viene ottenuto da **get_osfhandle**, chiamare [Close](close.md) per il descrittore di file *fd*. Non chiamano mai **CloseHandle** sul valore restituito di questa funzione. L'handle di file del sistema operativo sottostante è di proprietà di *fd* descrittore di file e viene chiuso quando [Close](close.md) viene chiamato sul *fd*. Se il descrittore del file è di proprietà di un `FILE *` flusso, quindi chiamare [fclose](fclose-fcloseall.md) su esso `FILE *` flusso viene chiuso il descrittore del file sia l'handle di file del sistema operativo sottostante. In questo caso, non chiamare [Close](close.md) nel descrittore di file.
+Per chiudere un file il cui handle di file del sistema operativo viene ottenuto da **_get_osfhandle**, chiamare [_close](close.md) sul descrittore di file *FD*. Non chiamare mai **CloseHandle** sul valore restituito della funzione. L'handle di file del sistema operativo sottostante è di proprietà del descrittore di file *FD* ed è chiuso quando viene chiamato [_close](close.md) su *FD*. Se il descrittore del file è `FILE *` di proprietà di un flusso, la `FILE *` chiamata a [fclose](fclose-fcloseall.md) su tale flusso chiude sia il descrittore del file che l'handle di file del sistema operativo sottostante. In questo caso, non chiamare [_close](close.md) sul descrittore del file.
 
 ## <a name="requirements"></a>Requisiti
 

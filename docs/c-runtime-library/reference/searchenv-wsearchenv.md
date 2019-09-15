@@ -1,10 +1,10 @@
 ---
 title: _searchenv, _wsearchenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _searchenv
 - _wsearchenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsearchenv
 - _tsearchenv
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: c1d2361fceec448c98fd9e5a368653aac38c83e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356771"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948765"
 ---
-# <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
+# <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
 Usa i percorsi di ambiente per cercare un file. Sono disponibili versioni più sicure di queste funzioni. Vedere [_searchenv_s, _wsearchenv_s](searchenv-s-wsearchenv-s.md).
 
@@ -83,24 +86,24 @@ Nome del file di cui eseguire la ricerca.
 *varname*<br/>
 Ambiente per la ricerca.
 
-*pathname*<br/>
+*percorso*<br/>
 Buffer per l'archiviazione del percorso completo.
 
 ## <a name="remarks"></a>Note
 
-Il **SEARCHENV** routine cerca il file di destinazione nel dominio specificato. Il *varname* variabile può essere qualsiasi ambiente o variabile definita dall'utente, ad esempio, **percorso**, **LIB**, o **inclusione**, che specifica un elenco dei percorsi di directory. In quanto **SEARCHENV** tra maiuscole e minuscole, *varname* deve corrispondere al caso della variabile di ambiente.
+La routine **_searchenv** Cerca il file di destinazione nel dominio specificato. La variabile *VarName* può essere qualsiasi ambiente o variabile definita dall'utente, ad esempio **path**, **lib**o **include**, che specifica un elenco di percorsi di directory. Poiché **_searchenv** fa distinzione tra maiuscole e minuscole, *VarName* deve corrispondere al case della variabile di ambiente.
 
-La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione è in una di queste directory, il percorso appena creato viene copiato nel *pathname*. Se il *nomefile* non viene trovato alcun file, *pathname* contiene una stringa vuota con terminazione null.
+La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione si trova in una di queste directory, il percorso appena creato viene copiato in *pathname*. Se il file *filename* non viene trovato, *pathname* contiene una stringa vuota con terminazione null.
 
-Il *pathname* buffer deve essere almeno **MAX_PATH** caratteri per consentire la lunghezza totale del nome del percorso costruito. In caso contrario, **SEARCHENV** potrebbe sovraccaricare la *pathname* nel buffer e causare un comportamento imprevisto.
+Il buffer del *percorso* deve avere una lunghezza di almeno **_MAX_PATH** caratteri per contenere la lunghezza totale del nome del percorso costruito. In caso contrario, **_searchenv** potrebbe sovraccaricare il buffer del *percorso* e causare un comportamento imprevisto.
 
-**wsearchenv** è una versione a caratteri wide di **SEARCHENV**e gli argomenti **wsearchenv** sono stringhe a caratteri wide. **wsearchenv** e **SEARCHENV** hanno lo stesso comportamento in caso contrario.
+**_wsearchenv** è una versione a caratteri wide di **_searchenv**e gli argomenti per **_wsearchenv** sono stringhe a caratteri wide. **_wsearchenv** e **_searchenv** si comportano in modo identico.
 
-Se *nomefile* è una stringa vuota, queste funzioni restituiscono **ENOENT**.
+Se *filename* è una stringa vuota, queste funzioni restituiscono **ENOENT**.
 
-Se *nomefile* oppure *pathname* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
+Se *filename* o *pathname* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
-Per altre informazioni sulle **errno** e i codici di errore, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
+Per altre informazioni sui codici di errore e **errno** , vedere [costanti errno](../../c-runtime-library/errno-constants.md).
 
 In C++, queste funzioni presentano overload di modello che richiamano le relative controparti più sicure e più recenti. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

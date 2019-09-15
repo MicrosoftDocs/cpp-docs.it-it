@@ -1,10 +1,10 @@
 ---
 title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wrmdir
 - _rmdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trmdir
 - _trmdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357460"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949211"
 ---
-# <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
+# <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
 Elimina una directory.
 
@@ -62,7 +65,7 @@ Percorso della directory da rimuovere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce 0 se la directory viene eliminata correttamente. Valore restituito di -1 indica un errore e **errno** è impostato su uno dei valori seguenti:
+Ognuna di queste funzioni restituisce 0 se la directory viene eliminata correttamente. Il valore restituito-1 indica un errore e **errno** viene impostato su uno dei valori seguenti:
 
 |Valore errno|Condizione|
 |-|-|
@@ -74,9 +77,9 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 ## <a name="remarks"></a>Note
 
-Il **rmdir** funzione Elimina la directory specificata da *dirname*. La directory deve essere vuota e non deve essere la directory di lavoro corrente o la directory radice.
+La funzione **_rmdir** Elimina la directory specificata da *dirname*. La directory deve essere vuota e non deve essere la directory di lavoro corrente o la directory radice.
 
-**wrmdir** è una versione a caratteri wide di **rmdir**; gli *dirname* argomento **wrmdir** è una stringa di caratteri "wide". **wrmdir** e **rmdir** hanno lo stesso comportamento in caso contrario.
+**_wrmdir** è una versione a caratteri wide di **_rmdir**; l'argomento *dirname* per **_wrmdir** è una stringa di caratteri wide. **_wrmdir** e **_rmdir** si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

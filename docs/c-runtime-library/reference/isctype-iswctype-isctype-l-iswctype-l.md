@@ -1,12 +1,12 @@
 ---
 title: _isctype, iswctype, _isctype_l, _iswctype_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswctype
 - _isctype
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157318"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954405"
 ---
-# <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
+# <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-I test *c* per la proprietà ctype specificata per il *desc* argomento. Per ogni valore valido del *desc*, è presente una routine di classificazione a caratteri wide equivalente.
+Verifica il *c* per la proprietà CType specificata dall'argomento *desc* . Per ogni valore valido di *desc*è presente una routine di classificazione a caratteri wide equivalente.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -85,16 +88,16 @@ Le impostazioni locali da utilizzare per qualsiasi test dipendente dalle imposta
 
 ## <a name="return-value"></a>Valore restituito
 
-**isctype** e **iswctype** restituiscono un valore diverso da zero se *c* dispone della proprietà specificata da *desc* nelle impostazioni locali correnti oppure 0 se non esiste. Le versioni di queste funzioni con il **l** suffisso sono identiche ma usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_isctype** e **iswctype** restituiscono un valore diverso da zero se *c* ha la proprietà specificata da *desc* nelle impostazioni locali correnti oppure 0 in caso contrario. Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento delle **isctype** e **isctype_l** non è definito se *c* non è EOF o nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* è non uno di questi valori, le funzioni generano un'asserzione.
+Il comportamento di **_isctype** e **_isctype_l** non è definito se *c* non è EOF o nell'intervallo compreso tra 0 e 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|N/D|**_isctype**|N/D|**_iswctype**|
-|N/D|**_isctype_l**|N/D|**_iswctype_l**|
+|n/d|**_isctype**|n/d|**_iswctype**|
+|n/d|**_isctype_l**|n/d|**_iswctype_l**|
 
 ## <a name="requirements"></a>Requisiti
 

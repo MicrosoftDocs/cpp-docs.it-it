@@ -1,14 +1,14 @@
 ---
 title: 'Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341120"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939464"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
 Calcola la funzione di Bessel di primo o secondo tipo, degli ordini 0, 1 o n. Le funzioni di Bessel vengono usate comunemente in matematica per la teoria delle onde elettromagnetiche.
 
@@ -84,17 +87,17 @@ Ordine Integer della funzione di Bessel.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce una funzione di Bessel *x*. Se *x* è un valore negativo nel **_y0**, **_y1**, oppure **Yn** funzioni, la routine imposta **errno** per  **EDOM**, viene stampato un **dominio** messaggio di errore **stderr**e restituisce **_HUGE_VAL**. È possibile modificare utilizzando la gestione degli errori **matherr**.
+Ognuna di queste routine restituisce una funzione di Bessel *x*. Se *x* è negativo nelle funzioni **_y0**, **_y1**o **_Yn** , la routine imposta **errno** su **Edom**, stampa un messaggio di errore **_DOMAIN** in **stderr**e restituisce **_HUGE_VAL**. È possibile modificare la gestione degli errori usando **_matherr**.
 
 ## <a name="remarks"></a>Note
 
-Il **_j0**, **_j1**, e **Jn** routine restituiscono il primo tipo di funzioni di Bessel: ordini 0, 1 e n, rispettivamente.
+Le routine **_j0**, **_j1**e **_Jn** restituiscono funzioni di Bessel del primo tipo: Orders 0, 1 e n, rispettivamente.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|**INVALID**|**_DOMAIN**|
 
-Il **_y0**, **_y1**, e **Yn** routine restituiscono Bessel funzioni del secondo tipo: ordini 0, 1 e n, rispettivamente.
+Le routine **_y0**, **_y1**e **_Yn** restituiscono funzioni di Bessel del secondo tipo: ordini 0, 1 e n, rispettivamente.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|

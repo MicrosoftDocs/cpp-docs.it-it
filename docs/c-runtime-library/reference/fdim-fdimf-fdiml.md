@@ -1,11 +1,11 @@
 ---
 title: fdim, fdimf, fdiml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fdim
 - fdimf
 - fdiml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fdim
 - fdimf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334788"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941291"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -93,15 +96,15 @@ In caso contrario, può restituire uno degli errori seguenti:
 |-----------|------------|
 |Errore di intervallo di overflow|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
 |Errore di intervallo di underflow|valore corretto (dopo l'arrotondamento)|
-|*x* oppure *y* è NaN|NaN|
+|*x* o *y* è NaN|NaN|
 
 Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **fdim** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **fdim** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **fdim** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **fdim** accetta e restituisce sempre un **valore Double**.
 
-Fatta eccezione per la gestione di NaN, questa funzione è equivalente a `fmax(x - y, 0)`.
+Ad eccezione della gestione NaN, questa funzione è equivalente a `fmax(x - y, 0)`.
 
 ## <a name="requirements"></a>Requisiti
 

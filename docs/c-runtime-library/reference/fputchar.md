@@ -1,9 +1,9 @@
 ---
 title: fputchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fputchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputchar
 helpviewer_keywords:
 - fputchar function
 ms.assetid: d6cf3492-ace9-47a7-9f7d-3c25aa8ad526
-ms.openlocfilehash: 9ccde6663ec601869f657ea836cda109cf64702c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f410c2dbf99f9f917460ea4d3a6ce0b036fc09fb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333079"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956917"
 ---
 # <a name="fputchar"></a>fputchar
 

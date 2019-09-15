@@ -1,10 +1,10 @@
 ---
 title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws_s
 - _cgets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cgets_s
 - cgets_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340585"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939270"
 ---
-# <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
+# <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
 Ottiene una stringa di caratteri dalla console. Queste versioni di [_cgets e _cgetws](../../c-runtime-library/cgets-cgetws.md) offrono miglioramenti della sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -86,17 +89,17 @@ Il valore restituito è zero se ha esito positivo; in caso contrario si verifica
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*numberOfElements*|*pSizeRead*|INVIO|Contenuto di *buffer*|
+|*buffer*|*numberOfElements*|*pSizeRead*|INVIO|Contenuto del *buffer*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|qualsiasi|qualsiasi|**EINVAL**|N/D|
-|Non **NULL**|zero|qualsiasi|**EINVAL**|non modificato|
-|Non **NULL**|qualsiasi|**NULL**|**EINVAL**|stringa di lunghezza zero|
+|**NULL**|qualsiasi|qualsiasi|**EINVAL**|n/d|
+|Not **null**|zero|qualsiasi|**EINVAL**|non modificato|
+|Not **null**|qualsiasi|**NULL**|**EINVAL**|stringa di lunghezza zero|
 
 ## <a name="remarks"></a>Note
 
-**cgets_s** e **cgetws_s** leggono una stringa dalla console e copiare la stringa (con un carattere di terminazione null) in *buffer*. **cgetws_s** è la versione a caratteri wide della funzione; a dimensioni del carattere, il comportamento di queste due funzioni sono identica. La dimensione massima della stringa da leggere viene passata come il *numberOfElements* parametro. Questa dimensione deve includere un carattere aggiuntivo per la terminazione null. Il numero effettivo di caratteri letti viene inserito nella *pSizeRead*.
+**_cgets_s** e **_cgetws_s** leggono una stringa dalla console e copiano la stringa (con un carattere di terminazione null) in *buffer*. **_cgetws_s** è la versione a caratteri wide della funzione. Oltre alla dimensione del carattere, il comportamento di queste due funzioni è identico. La dimensione massima della stringa da leggere viene passata come parametro *NumberOfElements* . Questa dimensione deve includere un carattere aggiuntivo per la terminazione null. Il numero effettivo di caratteri letti viene inserito in *pSizeRead*.
 
-Se si verifica un errore durante l'operazione o nella convalida dei parametri, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e **EINVAL** viene restituito.
+Se si verifica un errore durante l'operazione o nella convalida dei parametri, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e **EINVAL** viene restituito.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando quindi la necessità di specificare un argomento di dimensione, e possono sostituire automaticamente le funzioni precedenti, meno sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

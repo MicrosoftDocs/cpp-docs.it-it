@@ -1,12 +1,12 @@
 ---
 title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _atoi64_l
 - _wtoi64
 - _atoi64
 - _wtoi64_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoi64
 - _tstoi64
@@ -46,14 +49,14 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: c80480be8895db6afe499d5426b91dcde786d654
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 950774e74462e8d1f301a1d5b933e57feaa9f840
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341535"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939493"
 ---
-# <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
+# <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
 Converte una stringa in un Integer a 64 bit.
 
@@ -86,11 +89,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il **__int64** valore prodotto interpretando i caratteri di input sotto forma di numero. Il valore restituito è 0 per **_atoi64** se l'input non può essere convertito in un valore di quel tipo.
+Ogni funzione restituisce il valore **__int64** prodotto interpretando i caratteri di input come numero. Il valore restituito è 0 per **_atoi64** se l'input non può essere convertito in un valore di tale tipo.
 
-In caso di overflow con valori integrali positivi elevati, **_atoi64** restituisce **I64_MAX** e **I64_MIN** in caso di overflow con valori integrali negativi elevati.
+In caso di overflow con valori integrali positivi di grandi dimensioni, **_atoi64** restituisce **I64_MAX** e **I64_MIN** in caso di overflow con valori integrali negativi di grandi dimensioni.
 
-In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono 0.
+In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
 ## <a name="remarks"></a>Note
 
@@ -98,15 +101,15 @@ Queste funzioni convertono una stringa di caratteri in un Integer a 64 bit.
 
 La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere potrebbe essere il carattere null ('\0' or L'\0') che termina la stringa.
 
-Il *str* argomento **_atoi64** ha il formato seguente:
+L'argomento *Str* di **_atoi64** ha il formato seguente:
 
-> [*whitespace*] [*sign*] [*digits*]
+> [*spazi vuoti*] [*segno*] [*cifre*]
 
-Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* uno o più cifre.
+Uno spazio *vuoto* è costituito da caratteri di spazio o di tabulazione, che vengono ignorati; *segno* più (+) o meno (-); le *cifre* e corrispondono a una o più cifre.
 
-**_wtoi64** è identica alla **_atoi64** con la differenza che accetta una stringa di caratteri "wide" come parametro.
+**_wtoi64** è identico a **_atoi64** con la differenza che accetta una stringa di caratteri wide come parametro.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -124,7 +127,7 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 ## <a name="example"></a>Esempio
 
-Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la **_atoi64** funzioni.
+Questo programma Mostra come i numeri archiviati come stringhe possono essere convertiti in valori numerici usando le funzioni **_atoi64** .
 
 ```C
 // crt_atoi64.c

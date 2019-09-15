@@ -1,7 +1,7 @@
 ---
 title: Funzioni di ricerca dei nomi file
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - file names [C++], searching for
 - _find function
@@ -17,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: aebdf2e5aaf6d59e5ee39af05540604206ec6c23
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740546"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940375"
 ---
 # <a name="filename-search-functions"></a>Funzioni di ricerca dei nomi file
 
@@ -34,7 +37,7 @@ Queste funzioni eseguono e terminano le ricerche per i nomi di file specificati:
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 La funzione `_findfirst` fornisce informazioni sulla prima istanza di un nome file che corrisponde al file specificato nell'argomento `filespec` . In `filespec` è possibile usare qualsiasi combinazione di caratteri jolly supportata dal sistema operativo host.
 

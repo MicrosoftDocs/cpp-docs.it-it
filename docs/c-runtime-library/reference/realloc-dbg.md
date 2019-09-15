@@ -1,9 +1,9 @@
 ---
 title: _realloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _realloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _realloc_dbg
 - realloc_dbg
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - memory, reallocating
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
-ms.openlocfilehash: 9b30dfd6fbae9a4831ff53e7896aeb995657da03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58d12ed6f4b013996f3f59cba1b146b823adbee6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357746"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949506"
 ---
-# <a name="reallocdbg"></a>_realloc_dbg
+# <a name="_realloc_dbg"></a>_realloc_dbg
 
 Rialloca un blocco specificato di memoria nell'heap spostando e/o ridimensionando il blocco (solo versione di debug).
 
@@ -57,27 +60,27 @@ Puntatore al blocco di memoria allocato precedentemente.
 Dimensioni richieste per il blocco riallocato (byte).
 
 *blockType*<br/>
-Tipo richiesto per il blocco riallocato: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**.
+Tipo richiesto per il blocco riallocato: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntatore al nome del file di origine che ha richiesto la **realloc** operazione oppure **NULL**.
+Puntatore al nome del file di origine che ha richiesto l'operazione **realloc** o **null**.
 
 *linenumber*<br/>
-Numero di riga nel file di origine in cui il **realloc** è stato richiesto l'operazione oppure **NULL**.
+Numero di riga nel file di origine in cui è stata richiesta l'operazione **realloc** o **null**.
 
-Il *nomefile* e *linenumber* parametri sono disponibili solo quando **realloc_dbg** è stato chiamato in modo esplicito o [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) è stata definita la costante del preprocessore.
+I parametri *filename* e *lineNumber* sono disponibili solo quando **_realloc_dbg** è stato chiamato in modo esplicito o è stata definita la costante del preprocessore [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) .
 
 ## <a name="return-value"></a>Valore restituito
 
-Al termine, questa funzione restituisce un puntatore alla porzione utente del blocco di memoria riallocato, chiama la nuova funzione di gestione o restituisce **NULL**. Per una descrizione completa del comportamento di restituzione, vedere la sezione relativa alle osservazioni. Per altre informazioni sull'uso della nuova funzione di gestione, vedere la funzione [recalloc](realloc.md).
+Al termine, questa funzione restituisce un puntatore alla parte utente del blocco di memoria riallocato, chiama la nuova funzione di gestione o restituisce **null**. Per una descrizione completa del comportamento di restituzione, vedere la sezione relativa alle osservazioni. Per altre informazioni sull'uso della nuova funzione di gestione, vedere la funzione [recalloc](realloc.md).
 
 ## <a name="remarks"></a>Note
 
-**realloc_dbg** è una versione di debug di [realloc](realloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **realloc_dbg** viene ridotta a una chiamata a **realloc**. Entrambe **realloc** e **realloc_dbg** riallocano un blocco di memoria nell'heap di base, ma **realloc_dbg** contiene diverse funzionalità di debug: buffer presenti a entrambi i lati del porzione utente del blocco da verificare per le perdite, un parametro di tipo blocco per tenere traccia di tipi specifici di allocazioni e *nomefile*/*linenumber* informazioni per determinare l'origine di richieste di allocazione.
+**_realloc_dbg** è una versione di debug della funzione [realloc](realloc.md) . Quando _ [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **_realloc_dbg** viene ridotta a una chiamata a **realloc**. Sia **realloc** che **_realloc_dbg** riallocano un blocco di memoria nell'heap di base, ma **_realloc_dbg** include diverse funzionalità di debug: buffer su entrambi i lati della parte utente del blocco in cui verificare la presenza di perdite, un parametro di tipo blocco per tenere traccia di tipi di allocazione specifici e informazioni sul *nome del file*/*lineNumber* per determinare l'origine delle richieste di allocazione.
 
-**realloc_dbg** rialloca il blocco di memoria specificato con quantità di spazio leggermente superiore al valore richiesto *newSize*. *newSize* può essere maggiore o minore della dimensione del blocco di memoria allocato in origine. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. La riallocazione potrebbe comportare lo spostamento del blocco di memoria originale in un'altra posizione nell'heap nonché la modifica della dimensione del blocco di memoria. Se il blocco di memoria viene spostato, i contenuti del blocco originale verranno sovrascritti.
+**_realloc_dbg** rialloca il blocco di memoria specificato con una quantità di spazio leggermente superiore a quella richiesta dal *newSize*. *newSize* potrebbe essere maggiore o minore delle dimensioni del blocco di memoria allocato in origine. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. La riallocazione potrebbe comportare lo spostamento del blocco di memoria originale in un'altra posizione nell'heap nonché la modifica della dimensione del blocco di memoria. Se il blocco di memoria viene spostato, i contenuti del blocco originale verranno sovrascritti.
 
-**realloc_dbg** imposta **errno** al **ENOMEM** se un'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta (incluso l'overhead menzionato precedentemente) supera **_HEAP_ MAXREQ**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_realloc_dbg** imposta **errno** su **ENOMEM** se un'allocazione di memoria ha esito negativo o se la quantità di memoria necessaria (incluso l'overhead indicato in precedenza) supera **_HEAP_MAXREQ**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la sua versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

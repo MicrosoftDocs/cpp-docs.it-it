@@ -1,11 +1,11 @@
 ---
 title: remainder, remainderf, remainderl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remainderl
 - remainder
 - remainderf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remainderf
 - remainder
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 9a9abe82e69122ca87f44e293e1da725c97045d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357642"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949418"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -61,13 +64,13 @@ Denominatore.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il resto a virgola mobile e del *x* / *y*. Se il valore di *y* è 0,0, **resto** restituisce un NaN non interattivo. Per informazioni sulla rappresentazione di un NaN non interattivo per il **printf** famiglia, vedere [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **resto** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Note
 
-Il **resto** funzioni calcolano il resto a virgola mobile *r* dei *x* / *y* modo tale che *x*   =  *n* \* *y* + *r*, dove *n*è la numero intero più vicino al valore per *x* / *y* e *n*anche ogni volta che &#124; *n*  -  *x* / *y* &#124; = 1 o 2. Quando *r* = 0, *r* ha lo stesso segno *x*.
+Le funzioni **resto** calcolano il resto a virgola mobile *r* di *x* / *y* in modo che *x* = *n* \* *y* + *r*, dove *n* valore integer più vicino a *x* / *y* e *n*è anche ogni volta che &#124; *n* - *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* ha lo stesso segno di *x*.
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **resto** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **resto** accetta sempre due **double** argomenti e restituisce un **double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **resto** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C il **resto** accetta sempre due argomenti **doppi** e restituisce un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

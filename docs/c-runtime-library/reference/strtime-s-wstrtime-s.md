@@ -1,10 +1,10 @@
 ---
 title: _strtime_s, _wstrtime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime_s
 - _strtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime_s
 - strtime_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375327"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946572"
 ---
-# <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
+# <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
 Copia l'ora corrente in un buffer. Queste sono versioni di [_strtime, _wstrtime](strtime-wstrtime.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -78,24 +81,24 @@ Se si verifica una condizione di errore, viene richiamato il gestore di parametr
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*numberOfElements*|INVIO|Contenuto di *buffer*|
+|*buffer*|*numberOfElements*|INVIO|Contenuto del *buffer*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(qualsiasi)|**EINVAL**|Non modificato|
-|Non **NULL** (che punta a un buffer valido)|0|**EINVAL**|Non modificato|
-|Non **NULL** (che punta a un buffer valido)|0 < dimensioni < 9|**EINVAL**|Stringa vuota|
-|Non **NULL** (che punta a un buffer valido)|Dimensioni > 9|0|Ora corrente, formattata come specificato nella sezione Note|
+|Not **null** (che punta a un buffer valido)|0|**EINVAL**|Non modificato|
+|Not **null** (che punta a un buffer valido)|0 < dimensioni < 9|**EINVAL**|Stringa vuota|
+|Not **null** (che punta a un buffer valido)|Dimensioni > 9|0|Ora corrente, formattata come specificato nella sezione Note|
 
 ## <a name="security-issues"></a>Problemi relativi alla sicurezza
 
-Passando un valore non valido non -**NULL** valore per il buffer causerà una violazione di accesso se il *numberOfElements* parametro è maggiore di 9.
+Il passaggio di un valore non**null** non valido per il buffer comporterà una violazione di accesso se il parametro *NumberOfElements* è maggiore di 9.
 
-Passaggio di un valore per *numberOfElements* maggiore determinerà le dimensioni effettive del buffer di sovraccarico del buffer.
+Il passaggio di un valore per *NumberOfElements* maggiore della dimensione effettiva del buffer provocherà il sovraccarico del buffer.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni forniscono versioni più sicure di [strtime](strtime-wstrtime.md) e [wstrtime](strtime-wstrtime.md). Il **strtime_s** funzione di copia l'ora locale corrente nel buffer a cui punta *timestr*. L'ora è formattata come **hh.mm.ss** in cui **hh** corrisponde a due cifre che rappresenta l'ora nella notazione 24 ore, **mm** sono due cifre che rappresentano i minuti trascorsi dopo l'ora e i **ss** corrisponde a due cifre che rappresentano i secondi. Ad esempio, la stringa **18:23:44** rappresenta 23 minuti e 44 secondi dopo i 6 PM Il buffer deve avere una lunghezza di almeno 9 byte. Le dimensioni effettive sono specificate dal secondo parametro.
+Queste funzioni forniscono versioni più sicure di [_strtime](strtime-wstrtime.md) e [_wstrtime](strtime-wstrtime.md). La funzione **_strtime_s** copia l'ora locale corrente nel buffer a cui punta *timestr*. Il formato dell'ora è **hh: mm: SS** , dove **HH** è due cifre che rappresentano l'ora nella notazione di 24 ore, **mm** è due cifre che rappresentano i minuti trascorsi dall'ora e **SS** sono due cifre che rappresentano i secondi. Ad esempio, la stringa **18:23:44** rappresenta 23 minuti e 44 secondi dopo le 18.00 Il buffer deve avere una lunghezza di almeno 9 byte. Le dimensioni effettive sono specificate dal secondo parametro.
 
-**wstrtime** è una versione a caratteri wide di **strtime**; l'argomento e il valore restituito **wstrtime** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
+**_wstrtime** è una versione a caratteri wide di **_strtime**; l'argomento e il valore restituito di **_wstrtime** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

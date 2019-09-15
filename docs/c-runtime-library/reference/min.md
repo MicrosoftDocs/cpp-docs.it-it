@@ -1,9 +1,9 @@
 ---
 title: __min
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __min
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __min
 - min
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b5cc6517c125f91337ca0d9b12b7a49bd7c1753
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156551"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951729"
 ---
-# <a name="min"></a>__min
+# <a name="__min"></a>__min
 
-Una macro del preprocessore che restituisce il meno elevato tra due valori.
+Una macro del preprocessore che restituisce il minore di due valori.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,7 +48,7 @@ Una macro del preprocessore che restituisce il meno elevato tra due valori.
 ### <a name="parameters"></a>Parametri
 
 *a*, *b*<br/>
-Valori di qualsiasi tipo che il **<** operatore funziona su.
+Valori di qualsiasi tipo utilizzato dall' **<** operatore.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -53,9 +56,9 @@ Il minore dei due argomenti.
 
 ## <a name="remarks"></a>Note
 
-Il **min** macro Confronta due valori e restituisce il valore di quello minore. Gli argomenti possono essere di qualsiasi tipo di dati numerico, con o senza segno. Il tipo di dati deve essere lo stesso per entrambi gli argomenti e il valore restituito.
+La macro **__min** Confronta due valori e restituisce il valore di quello più piccolo. Gli argomenti possono essere di qualsiasi tipo di dati numerico, con o senza segno. Il tipo di dati deve essere lo stesso per entrambi gli argomenti e il valore restituito.
 
-L'argomento restituito viene valutata due volte tramite la macro. Questo può causare risultati imprevisti se l'argomento è un'espressione che modifica il valore quando viene valutata, ad esempio `*p++`.
+L'argomento restituito viene valutato due volte dalla macro. Questo può causare risultati imprevisti se l'argomento è un'espressione che modifica il valore quando viene valutato, ad esempio `*p++`.
 
 ## <a name="requirements"></a>Requisiti
 

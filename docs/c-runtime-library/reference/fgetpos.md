@@ -1,9 +1,9 @@
 ---
 title: fgetpos
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetpos
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetpos
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27d25b29f656d1df889e5f83857ca437f609a07a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333930"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940834"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -47,16 +50,16 @@ int fgetpos(
 *stream*<br/>
 Flusso di destinazione.
 
-*pos*<br/>
+*POS*<br/>
 Archiviazione dell'indicatore di posizione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **fgetpos** restituisce 0. In caso di errore, viene restituito un valore diverso da zero e imposta **errno** a uno dei seguenti manifesto costanti (definite in STDIO. H): **EBADF**, che significa che il flusso specificato non è un puntatore di file valido o non è accessibile, oppure **EINVAL**, vale a dire il *flusso* valore o il valore di *pos*è valido, ad esempio se è un puntatore null. Se *stream* oppure *pos* è un **NULL** puntatore, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Se ha esito positivo, **fgetpos** restituisce 0. In caso di errore, restituisce un valore diverso da zero e imposta **errno** su una delle costanti manifeste seguenti, definite in stdio. H): **EBADF**, che indica che il flusso specificato non è un puntatore di file valido o non è accessibile, o **EINVAL**, il che significa che il valore del *flusso* o il valore di *pos* non è valido, ad esempio se uno dei due è un puntatore null. Se *Stream* o *pos* è un puntatore **null** , la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Note
 
-Il **fgetpos** funzione Ottiene il valore corrente del *stream* indicatore di posizione dell'argomento e archivia nell'oggetto a cui fa riferimento *pos*. Il **fsetpos** funzione può utilizzare in un secondo momento le informazioni archiviate in *pos* reimpostare il *flusso* puntatore dell'argomento sulla propria posizione al momento **fgetpos** è stato chiamato. Il *pos* valore viene archiviato in un formato interno e deve essere utilizzato solo dai **fgetpos** e **fsetpos**.
+La funzione **fgetpos** ottiene il valore corrente dell'indicatore di posizione del file dell'argomento del *flusso* e lo archivia nell'oggetto a cui punta *pos*. La funzione **fsetpos** può usare in un secondo momento le informazioni archiviate in *pos* per reimpostare il puntatore dell'argomento del *flusso* sulla relativa posizione all'ora in cui è stato chiamato **fgetpos** . Il valore *pos* viene archiviato in un formato interno ed è destinato a essere utilizzato solo da **fgetpos** e **fsetpos**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -108,13 +111,13 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetpostxt"></a>Input: crt_fgetpos.txt
+## <a name="input-crt_fgetpostxt"></a>Input: crt_fgetpos.txt
 
 ```Input
 fgetpos gets a stream's file-position indicator.
 ```
 
-### <a name="output-crtfgetpostxt"></a>Output crt_fgetpos.txt
+### <a name="output-crt_fgetpostxt"></a>Output crt_fgetpos.txt
 
 ```Output
 after fgetpos: gets a stream

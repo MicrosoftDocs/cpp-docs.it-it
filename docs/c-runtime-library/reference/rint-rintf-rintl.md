@@ -1,11 +1,11 @@
 ---
 title: rint, rintf, rintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357590"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949259"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -58,16 +61,16 @@ Valore a virgola mobile da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **rint** funzioni restituiscono un valore a virgola mobile che rappresenta l'intero più vicino al *x*. I valori a metà vengono arrotondati in base all'impostazione corrente della modalità di arrotondamento a virgola mobile, lo stesso come il **nearbyint** funzioni. A differenza del **nearbyint** funzioni, il **rint** funzioni possono generare il **FE_INEXACT** eccezioni a virgola mobile, se il risultato è diverso nel valore dall'argomento. Non vi è restituzione di errori.
+Le funzioni **rint** restituiscono un valore a virgola mobile che rappresenta l'intero più vicino a *x*. I valori a metà vengono arrotondati in base all'impostazione corrente della modalità di arrotondamento a virgola mobile, come per le funzioni **nearbyint** . Diversamente dalle funzioni **nearbyint** , le funzioni **rint** possono generare l'eccezione a virgola mobile **FE_INEXACT** se il risultato è diverso dal valore dell'argomento. Non vi è restituzione di errori.
 
-|Input|Eccezione SEH|**matherr** eccezione|
+|Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|none|nessuno|
 |Valori denormalizzati|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **rint** che accettano e restituiscono **float** e **long** **double** valori. In un programma C **rint** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **rint** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C **rint** accetta e restituisce sempre un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

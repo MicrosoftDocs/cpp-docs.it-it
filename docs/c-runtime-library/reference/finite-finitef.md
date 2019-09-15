@@ -1,10 +1,10 @@
 ---
 title: isfinite, _finite, _finitef
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _finite
 - _finitef
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isfinite
 - finite
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333716"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957186"
 ---
-# <a name="isfinite-finite-finitef"></a>isfinite, _finite, _finitef
+# <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
 Determina se un valore a virgola mobile è finito.
 
@@ -71,11 +74,11 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il `isfinite` macro e il `_finite` e `_finitef` funzioni restituiscono un valore diverso da zero se *x* è un normale o subnormal finito valore. Restituiscono 0 se l'argomento è infinito o NaN. La funzione di modello inline C++ `isfinite` si comporta allo stesso modo, ma restituisce **true** oppure **false**.
+La `isfinite` macro e le `_finite` funzioni `_finitef` e restituiscono un valore diverso da zero se *x* è un valore finito normale o subnormale. Restituisce 0 se l'argomento è infinito o NaN. La C++ funzione `isfinite` del modello inline si comporta allo stesso modo, ma restituisce **true** o **false**.
 
 ## <a name="remarks"></a>Note
 
-`isfinite` è una macro quando viene compilato come C e una funzione di modello inline durante la compilazione come C++. Il `_finite` e `_finitef` funzioni sono specifiche di Microsoft. La funzione `_finitef` è disponibile solo per la compilazione per le piattaforme x86, ARM o ARM64.
+`isfinite`è una macro quando viene compilata come C e una funzione di modello inline C++quando viene compilata come. Le `_finite` funzioni `_finitef` e sono specifiche di Microsoft. La funzione `_finitef` è disponibile solo per la compilazione per le piattaforme x86, ARM o ARM64.
 
 ## <a name="requirements"></a>Requisiti
 

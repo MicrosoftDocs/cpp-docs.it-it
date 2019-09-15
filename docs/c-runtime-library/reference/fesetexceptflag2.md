@@ -1,9 +1,9 @@
 ---
 title: fesetexceptflag
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fesetexceptflag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29a6b36b0744bec30463fe55df05fe26180b93fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333995"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941083"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -45,7 +48,7 @@ int fesetexceptflag(
 ### <a name="parameters"></a>Parametri
 
 *pstatus*<br/>
-Puntatore a un **fexcept_t** contenente i valori per impostare l'eccezione flag di stato. L'oggetto può essere impostato da una precedente chiamata a [fegetexceptflag](fegetexceptflag2.md).
+Puntatore a un oggetto **fexcept_t** che contiene i valori a cui impostare i flag di stato delle eccezioni. L'oggetto può essere impostato da una precedente chiamata a [fegetexceptflag](fegetexceptflag2.md).
 
 *excepts*<br/>
 Flag di stato delle eccezioni a virgola mobile da impostare.
@@ -56,7 +59,7 @@ Se tutti i flag di stato delle eccezioni specificati sono impostati correttament
 
 ## <a name="remarks"></a>Note
 
-Il **fesetexceptflag** funzione imposta lo stato dei flag di stato eccezione a virgola mobile specificato da *eccetto* ai corrispondenti valori impostati **fexcept_t** oggetto a cui punta *pstatus*.  Non genera l'eccezione. Il *pstatus* puntatore deve puntare a un valore valido **fexcept_t** oggetto oppure il comportamento successivo non è definito. Il **fesetexceptflag** funzione supporta questi valori di macro eccezioni nella *eccetto*, definito nel \<fenv. h >:
+La funzione **fesetexceptflag** imposta lo stato dei flag di stato delle eccezioni a virgola mobile specificati da ad *eccezione* dei valori corrispondenti impostati nell'oggetto **fexcept_t** a cui punta *pStatus*.  Non genera l'eccezione. Il puntatore *pStatus* deve puntare a un oggetto **fexcept_t** valido oppure il comportamento successivo non è definito. La funzione **fesetexceptflag** supporta questi valori di macro di eccezione in *excepts*, \<definiti in fenv. h >:
 
 |Macro di eccezioni|Descrizione|
 |---------------------|-----------------|
@@ -67,7 +70,7 @@ Il **fesetexceptflag** funzione imposta lo stato dei flag di stato eccezione a v
 |FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|
 |FE_ALLEXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
 
-Il *eccetto* argomento può essere uguale a zero, una delle macro di eccezioni a virgola mobile supportate o bit per bit di due o più macro. L'effetto di qualsiasi altro valore di argomento non è definito.
+L'argomento *excepts* può essere zero, una delle macro di eccezioni a virgola mobile supportate o l'operatore OR bit per bit di due o più macro. L'effetto di qualsiasi altro valore di argomento non è definito.
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 

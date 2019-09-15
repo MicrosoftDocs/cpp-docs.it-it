@@ -1,12 +1,12 @@
 ---
 title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtoll
 - _atoll_l
 - _wtoll_l
 - atoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoll_l
 - _wtoll
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 7933b3e25185b5abdbd10c1b3fd616742bb28f92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b5fca9c3428bce26a8a40cf8271760fa97b10b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341184"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939472"
 ---
-# <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
+# <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Converte una stringa in un **lungo** **lungo** integer.
+Converte una stringa **in un intero Long** **Long** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -73,27 +76,27 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il **lungo** **lungo** valore che viene prodotto interpretando i caratteri di input sotto forma di numero. Il valore restituito per **Palmira** è 0 se l'input non può essere convertito in un valore di quel tipo.
+Ogni funzione **restituisce il valore Long** **Long** prodotto interpretando i caratteri di input come numero. Il valore restituito per **Atoll** è 0 se l'input non può essere convertito in un valore di tale tipo.
 
-Per gli overflow con valori integrali positivi elevati, **Palmira** restituisce **LLONG_MAX**, e di overflow con valori integrali negativi elevati, restituisce **LLONG_MIN**.
+Per l'overflow con valori integrali positivi di grandi dimensioni, **Atoll** restituisce **LLONG_MAX**e per l'overflow con valori integrali negativi di grandi dimensioni restituisce **LLONG_MIN**.
 
-In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono 0.
+In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni convertono una stringa di caratteri a un **lungo** **lungo** valore intero.
+Queste funzioni convertono una stringa di caratteri **in un valore Long** **Long** Integer.
 
 La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere potrebbe essere il carattere null ('\0' or L'\0') che termina la stringa.
 
-Il *str* argomento **Palmira** ha il formato seguente:
+L'argomento *Str* per **Atoll** ha il formato seguente:
 
-> [*whitespace*] [*sign*] [*digits*]
+> [*spazi vuoti*] [*segno*] [*cifre*]
 
-Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* uno o più cifre.
+Uno spazio *vuoto* è costituito da caratteri di spazio o di tabulazione, che vengono ignorati; *segno* più (+) o meno (-); le *cifre* e corrispondono a una o più cifre.
 
-**wtoll** è identica alla **Palmira** con la differenza che accetta una stringa di caratteri "wide" come parametro.
+**_wtoll** è identico a **Atoll** con la differenza che accetta una stringa di caratteri wide come parametro.
 
-Le versioni di queste funzioni che hanno le **l** suffisso sono identiche alle versioni di cui non è presente, ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche alle versioni che non lo hanno, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -112,7 +115,7 @@ Le versioni di queste funzioni che hanno le **l** suffisso sono identiche alle v
 
 ## <a name="example"></a>Esempio
 
-Questo programma mostra come usare il **Palmira** funzioni per convertire numeri memorizzati come stringhe in valori numerici.
+Questo programma Mostra come usare le funzioni **Atoll** per convertire i numeri archiviati come stringhe in valori numerici.
 
 ```C
 // crt_atoll.c

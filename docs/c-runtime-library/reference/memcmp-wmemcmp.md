@@ -1,10 +1,10 @@
 ---
 title: memcmp, wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,8 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
-topictype: APIRef
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
-ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265623"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951930"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -61,21 +63,21 @@ Primo buffer.
 Secondo buffer.
 
 *count*<br/>
-Numero di caratteri da confrontare. (Confronta byte per **memcmp**, caratteri wide per **wmemcmp**).
+Numero di caratteri da confrontare. (Confronta i byte per **memcmp**, caratteri wide per **wmemcmp**).
 
 ## <a name="return-value"></a>Valore restituito
 
 Il valore restituito indica la relazione tra i buffer.
 
-|Valore restituito|Relazione dei primi *conteggio* caratteri di buf1 e buf2|
+|Valore restituito|Relazione dei primi caratteri di *conteggio* di buf1 e buf2|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1* minore di *buffer2*|
-|0|*buffer1* identica alla *buffer2*|
-|> 0|*buffer1* maggiore *buffer2*|
+|0|*buffer1* identico a *buffer2*|
+|> 0|*buffer1* maggiore di *buffer2*|
 
 ## <a name="remarks"></a>Note
 
-Confronta i primi *conteggio* caratteri di *buffer1* e *buffer2* e restituisce un valore che indica la relazione. Il segno di un valore restituito diverso da zero è il segno della differenza tra la prima coppia di valori diversi nei buffer. I valori vengono interpretati come **unsigned** **char** per **memcmp**e come **wchar_t** per **wmemcmp**.
+Confronta i primi caratteri di *conteggio* di *buffer1* e *buffer2* e restituisce un valore che ne indica la relazione. Il segno di un valore restituito diverso da zero è il segno della differenza tra la prima coppia di valori diversi nei buffer. I valori vengono interpretati come **unsigned** **char** per **memcmp**e come **wchar_t** per **wmemcmp**.
 
 ## <a name="requirements"></a>Requisiti
 

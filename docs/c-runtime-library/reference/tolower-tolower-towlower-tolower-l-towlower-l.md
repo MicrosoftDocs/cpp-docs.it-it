@@ -1,13 +1,13 @@
 ---
 title: tolower, _tolower, towlower, _tolower_l, _towlower_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _tolower_l
 - towlower
 - tolower
 - _tolower
 - _towlower_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _totlower
 - tolower
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: f7d017235eddb19b08353dceb332a2721e7434aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d182fca50befac3393012572e68e65a8c81fa72
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155517"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957460"
 ---
-# <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+# <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
 Converte un carattere in minuscolo.
 
@@ -90,9 +93,9 @@ Ognuna di queste routine converte una copia di *c* in lettere minuscole se la co
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione di maiuscole e minuscole **towlower** dipende dalle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il **l** suffisso usare correnti delle impostazioni locali. Le versioni di queste funzioni che hanno le **l** suffisso accettano le impostazioni locali come parametro e usano tali anziché correnti delle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione del case di **towlower** è specifica delle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il suffisso **suffisso** usano le impostazioni locali attualmente impostate. Le versioni di queste funzioni che hanno il suffisso **suffisso** accettano le impostazioni locali come parametro e lo usano anziché le impostazioni locali attualmente impostate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Affinché **ToLower** possa fornire i risultati previsti [isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) devono entrambe restituire diverso da zero.
+Per consentire a **_tolower** di fornire i risultati previsti, è necessario che [__isascii](isascii-isascii-iswascii.md) e [ToUpper](isupper-isupper-l-iswupper-iswupper-l.md) restituiscano entrambi un valore diverso da zero.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -102,7 +105,7 @@ Affinché **ToLower** possa fornire i risultati previsti [isascii](isascii-isasc
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **tolower_l** e **towlower_l** non dipendono dalle impostazioni locali e non sono progettate per essere chiamate direttamente. Vengono forniti per uso interno da parte **_totlower_l**.
+> **_tolower_l** e **_towlower_l** non hanno alcuna dipendenza dalle impostazioni locali e non sono destinati a essere chiamati direttamente. Sono disponibili per uso interno da **_totlower_l**.
 
 ## <a name="requirements"></a>Requisiti
 

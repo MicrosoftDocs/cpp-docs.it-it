@@ -1,11 +1,11 @@
 ---
 title: carg, cargf, cargl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - carg
 - cargf
 - cargl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - carg
 - cargf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e66b0b3545b3f28a8f7b4ca14c29ffe1e0fc260c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340716"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939306"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -68,11 +71,11 @@ Numero complesso.
 
 ## <a name="return-value"></a>Valore restituito
 
-L'argomento (anche noto come fase) di *z*. Il risultato sia compreso nell'intervallo [-π, + π].
+Argomento (noto anche come fase) della *z*. Il risultato è compreso nell'intervallo [-π, + π].
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **carg** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float**oppure **lungo** **doppie** valori. In un programma C **carg** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **CARG** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono valori **float** o **Long** **Double** . In un programma C **CARG** accetta sempre un valore **_Dcomplex** e restituisce un valore **Double** .
 
 ## <a name="requirements"></a>Requisiti
 

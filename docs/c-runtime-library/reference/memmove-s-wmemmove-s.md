@@ -1,10 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285148"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951787"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
 Sposta un buffer in un altro. Queste sono versioni di [memmove, wmemmove](memmove-wmemmove.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -81,9 +84,9 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo
 
 ## <a name="remarks"></a>Note
 
-Le copie *conteggio* byte di caratteri da *src* al *dest*. Se alcune parti dell'area di origine e destinazione si sovrappongono, **memmove_s** assicura che i byte di origine originali nell'area sovrapposta vengono copiati prima di essere sovrascritti.
+Copia il *numero* di byte di caratteri da *src* a *dest*. Se alcune aree dell'area di origine e di destinazione si sovrappongono, **memmove_s** garantisce che i byte di origine originali nell'area sovrapposta vengano copiati prima di essere sovrascritti.
 
-Se *dest* o se *src* è un puntatore null o se la stringa di destinazione è troppo piccola, queste funzioni richiamano un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostare **errno** al **EINVAL**.
+Se *dest* o se *src* è un puntatore null o se la stringa di destinazione è troppo piccola, queste funzioni richiamano un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

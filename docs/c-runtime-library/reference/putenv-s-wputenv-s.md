@@ -1,10 +1,10 @@
 ---
 title: _putenv_s, _wputenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wputenv_s
 - _putenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putenv_s
 - wputenv_s
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - environment variables, creating
 - environment variables, modifying
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
-ms.openlocfilehash: f675c2c0a2b12db3cce841dd0db9fa722393f1b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2de609314a12f626a21680b470bc8831eada2cb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357863"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949896"
 ---
-# <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
+# <a name="_putenv_s-_wputenv_s"></a>_putenv_s, _wputenv_s
 
 Crea, modifica o rimuove variabili di ambiente. Queste sono versioni di [_putenv, _wputenv](putenv-wputenv.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -77,11 +80,11 @@ Restituisce 0 se ha esito positivo o un codice di errore.
 |**NULL**|qualsiasi|**EINVAL**|
 |qualsiasi|**NULL**|**EINVAL**|
 
-Se si verifica una delle condizioni di errore, queste funzioni richiamano un gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostare **errno** al **EINVAL**.
+Se si verifica una delle condizioni di errore, queste funzioni richiamano un gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **putenv_s** funzione aggiunge nuove variabili di ambiente o modifica i valori delle variabili di ambiente esistente. Le variabili di ambiente definiscono l'ambiente in cui viene eseguito un processo (ad esempio, il percorso di ricerca predefinito per le librerie da collegare a un programma). **wputenv_s** è una versione a caratteri wide di **putenv_s**; gli *envstring* argomento **wputenv_s** è una stringa di caratteri "wide".
+La funzione **_putenv_s** aggiunge nuove variabili di ambiente o modifica i valori delle variabili di ambiente esistenti. Le variabili di ambiente definiscono l'ambiente in cui viene eseguito un processo (ad esempio, il percorso di ricerca predefinito per le librerie da collegare a un programma). **_wputenv_s** è una versione a caratteri wide di **_putenv_s**; l'argomento *stringaamb* per **_wputenv_s** è una stringa di caratteri wide.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -89,16 +92,16 @@ Il **putenv_s** funzione aggiunge nuove variabili di ambiente o modifica i valor
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tputenv_s**|**_putenv_s**|**_putenv_s**|**_wputenv_s**|
 
-*VarName* è il nome della variabile di ambiente per essere aggiunti o modificati e *value_string* è il valore della variabile. Se *varname* fa già parte dell'ambiente, il valore viene sostituito dal *value_string*; in caso contrario, il nuovo *varname* variabile e il relativo *value_string*  vengono aggiunte all'ambiente. È possibile rimuovere una variabile dall'ambiente specificando una stringa vuota (ovvero, "") per *value_string*.
+*VarName* è il nome della variabile di ambiente da aggiungere o modificare e *value_string* è il valore della variabile. Se *VarName* fa già parte dell'ambiente, il relativo valore viene sostituito da *value_string*; in caso contrario, la nuova variabile *VarName* e i relativi *value_string* vengono aggiunti all'ambiente. È possibile rimuovere una variabile dall'ambiente specificando una stringa vuota (ovvero "") per *value_string*.
 
-**putenv_s** e **wputenv_s** interessano solo l'ambiente locale per il processo corrente; non possono essere utilizzati per modificare l'ambiente a livello di comando. Queste funzioni sono disponibili solo nelle strutture dati accessibili dalla libreria di runtime e non nel "segmento" di ambiente creato per un processo dal sistema operativo. Quando il processo corrente termina, l'ambiente viene ripristinato al livello del processo chiamante che, nella maggior parte dei casi, è il livello del sistema operativo. Tuttavia, l'ambiente modificato può essere passato a tutti i nuovi processi creati da **spawn**, **Exec**, o **system**, e questi nuovi processi ottengono i nuovi elementi che sono aggiunto da **putenv_s** e **wputenv_s**.
+**_putenv_s** e **_wputenv_s** influiscono solo sull'ambiente locale rispetto al processo corrente. non è possibile usarli per modificare l'ambiente a livello di comando. Queste funzioni sono disponibili solo nelle strutture dati accessibili dalla libreria di runtime e non nel "segmento" di ambiente creato per un processo dal sistema operativo. Quando il processo corrente termina, l'ambiente viene ripristinato al livello del processo chiamante che, nella maggior parte dei casi, è il livello del sistema operativo. Tuttavia, l'ambiente modificato può essere passato a tutti i nuovi processi creati da **_spawn**, **_exec**o **System**e questi nuovi processi ottengono tutti i nuovi elementi aggiunti da **_putenv_s** e **_wputenv_s**.
 
-Non modificare una voce dell'ambiente direttamente. Usare invece **putenv_s** oppure **wputenv_s** per modificarlo. In particolare, la liberazione diretta di elementi del **[] Environ** matrice globale può causare la memoria non valida da risolvere.
+Non modificare direttamente una voce di ambiente. usare invece **_putenv_s** o **_wputenv_s** per modificarlo. In particolare, la liberazione diretta di elementi della matrice globale **environ []** potrebbe causare la richiamata della memoria non valida.
 
-**getenv** e **putenv_s** usano la variabile globale **Environ** per accedere alla tabella di ambiente; **wgetenv** e **wputenv_s** usare **wenviron**. **putenv_s** e **wputenv_s** può modificare il valore di **Environ** e **wenviron**e pertanto invalidano il *envp*argomento di **principale** e il **_wenvp** argomento **wmain**. Pertanto, è preferibile usare **Environ** oppure **wenviron** per accedere alle informazioni di ambiente. Per altre informazioni sulla relazione tra **putenv_s** e **wputenv_s** le variabili globali, vedere [Environ, wenviron](../../c-runtime-library/environ-wenviron.md).
+**getenv** e **_putenv_s** usano la variabile globale **Environ** per accedere alla tabella dell'ambiente. **_wgetenv** e **_wputenv_s** usano **_wenviron**. **_putenv_s** e **_wputenv_s** possono modificare il valore di **Environ** e **_wenviron**e pertanto invalidano l'argomento *envp* su **Main** e l'argomento **_wenvp** in **wmain**. Pertanto, è più sicuro usare **Environ** o **_wenviron** per accedere alle informazioni sull'ambiente. Per ulteriori informazioni sulla relazione tra **_putenv_s** e **_wputenv_s** e le variabili globali, vedere [Environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> Il **putenv_s** e **_getenv_s** famiglie delle funzioni non sono thread-safe. **_getenv_s** potrebbe restituire un puntatore di stringa mentre **putenv_s** è modificando la stringa, causando errori casuali. Assicurarsi che le chiamate alle funzioni siano sincronizzate.
+> Le famiglie di funzioni **_putenv_s** e **_getenv_s** non sono thread-safe. **_getenv_s** potrebbe restituire un puntatore di stringa mentre **_putenv_s** sta modificando la stringa e causare quindi errori casuali. Assicurarsi che le chiamate alle funzioni siano sincronizzate.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -111,7 +114,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Per un esempio che illustra come usare **putenv_s**, vedere [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md).
+Per un esempio che illustra come usare **_putenv_s**, vedere [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 ## <a name="see-also"></a>Vedere anche
 

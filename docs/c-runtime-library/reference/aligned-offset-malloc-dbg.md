@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_malloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_malloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_offset_malloc_dbg
 - aligned_offset_malloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fbacb170fd1ae1ce92de4a11ea85ff42b3942a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348874"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939777"
 ---
-# <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
+# <a name="_aligned_offset_malloc_dbg"></a>_aligned_offset_malloc_dbg
 
 Alloca la memoria in un limite di allineamento specificato (solo versione di debug).
 
@@ -57,26 +60,26 @@ Valore di allineamento, che deve essere una potenza intera di 2.
 Offset nell'allocazione di memoria per imporre l'allineamento.
 
 *filename*<br/>
-Puntatore al nome del file di origine che ha richiesto l'operazione di allocazione o **NULL**.
+Puntatore al nome del file di origine che ha richiesto l'operazione di allocazione o **null**.
 
 *linenumber*<br/>
-Numero di riga nel file di origine in cui è stata richiesta l'operazione di allocazione o **NULL**.
+Numero di riga nel file di origine in cui è stata richiesta l'operazione di allocazione o **null**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Un puntatore al blocco di memoria allocato o **NULL** se l'operazione non riuscita.
+Puntatore al blocco di memoria allocato o **null** se l'operazione non è riuscita.
 
 ## <a name="remarks"></a>Note
 
-**aligned_offset_malloc_dbg** è una versione di debug di [aligned_offset_malloc](aligned-offset-malloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_offset_malloc_dbg** viene ridotta a una chiamata a **aligned_offset_malloc**. Entrambe **aligned_offset_malloc** e **aligned_offset_malloc_dbg** allocare un blocco di memoria nell'heap di base, ma **aligned_offset_malloc_dbg** offre diversi le funzionalità di debug: buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, e *nomefile*/*linenumber* informazioni per determinare l'origine di richieste di allocazione. Rilevamento di tipi specifici di allocazioni con un parametro di tipo blocco non è una funzionalità di debug supportati per le allocazioni allineate. Allocazioni allineate verranno visualizzato come un tipo di blocco NORMAL_BLOCK.
+**_aligned_offset_malloc_dbg** è una versione di debug della funzione [_aligned_offset_malloc](aligned-offset-malloc.md) . Quando _ [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **_aligned_offset_malloc_dbg** viene ridotta a una chiamata a **_aligned_offset_malloc**. Sia **_aligned_offset_malloc** che **_aligned_offset_malloc_dbg** allocano un blocco di memoria nell'heap di base, ma **_aligned_offset_malloc_dbg** offre diverse funzionalità di debug: buffer su entrambi i lati della parte utente del blocco verificare la presenza di perdite e informazioni sul *nome del file*/*lineNumber* per determinare l'origine delle richieste di allocazione. Il rilevamento di tipi di allocazione specifici con un parametro di tipo blocco non è una funzionalità di debug supportata per le allocazioni allineate. Le allocazioni allineate verranno visualizzate come tipo di blocco _NORMAL_BLOCK.
 
-**aligned_offset_malloc_dbg** alloca il blocco di memoria con quantità di spazio leggermente superiore al valore richiesto *dimensioni*. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
+**_aligned_offset_malloc_dbg** alloca il blocco di memoria con una quantità di spazio leggermente superiore alla *dimensione*richiesta. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
 
-**aligned_offset_malloc_dbg** è utile nelle situazioni in cui è necessario l'allineamento su un elemento annidato, ad esempio, se era necessario l'allineamento in una classe annidata.
+**_aligned_offset_malloc_dbg** è utile nelle situazioni in cui è necessario l'allineamento su un elemento annidato; ad esempio, se l'allineamento era necessario in una classe annidata.
 
-**aligned_offset_malloc_dbg** basa **malloc**; per altre informazioni, vedere [malloc](malloc.md).
+**_aligned_offset_malloc_dbg** è basato su **malloc**; per altre informazioni, vedere [malloc](malloc.md).
 
-La funzione imposta **errno** al **ENOMEM** se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore di **heap_maxreq**. Per altre informazioni sulle **errno**, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). È inoltre **aligned_offset_malloc** convalida i propri parametri. Se *allineamento* non è una potenza di 2 o se *offset* è maggiore o uguale a *dimensioni* e diverso da zero, questa funzione richiama il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **NULL** e imposta **errno** al **EINVAL**.
+Questa funzione imposta **errno** su **ENOMEM** se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore di **_HEAP_MAXREQ**. Per ulteriori informazioni su **errno**, vedere [errno, doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Inoltre, **_aligned_offset_malloc** convalida i relativi parametri. Se l' *allineamento* non è una potenza di 2 o se l' *offset* è maggiore o uguale a *size* e diverso da zero, questa funzione richiama il gestore di parametri non validi, come descritto in convalida dei [parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **null** e imposta **errno** su **EINVAL**.
 
 Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 

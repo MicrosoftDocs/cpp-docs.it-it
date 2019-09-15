@@ -1,9 +1,9 @@
 ---
 title: _CIexp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIexp
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIexp
 - _CIexp
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: 5d51e8e542ffb14a77001d045903dccb1a091d53
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: c901442bc7874e75dc0be03c72953dbacb67add3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944696"
 ---
-# <a name="ciexp"></a>_CIexp
+# <a name="_ciexp"></a>_CIexp
 
 Calcola l'esponenziale del primo valore dello stack.
 
@@ -37,7 +40,7 @@ Calcola l'esponenziale del primo valore dello stack.
 void __cdecl _CIexp();
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Questa versione della funzione `exp` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.
 

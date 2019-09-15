@@ -1,10 +1,10 @@
 ---
 title: asctime, _wasctime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wasctime
 - asctime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tasctime
 - asctime
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: bc2d7a50442d9000eaaebf7a06bf336b3317e4df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341808"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939665"
 ---
-# <a name="asctime-wasctime"></a>asctime, _wasctime
+# <a name="asctime-_wasctime"></a>asctime, _wasctime
 
-Convertire un **tm** ora struttura da una stringa di caratteri. Sono disponibili versioni più sicure di queste funzioni. Vedere [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
+Converte una struttura Time **TM** in una stringa di caratteri. Sono disponibili versioni più sicure di queste funzioni. Vedere [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -59,13 +62,13 @@ Struttura di data e ora.
 
 ## <a name="return-value"></a>Valore restituito
 
-**asctime** restituisce un puntatore al risultato della stringa di caratteri; **wasctime** restituisce un puntatore al risultato della stringa di caratteri "wide". Non vengono restituiti valori di errore.
+**asctime** restituisce un puntatore al risultato della stringa di caratteri; **_wasctime** restituisce un puntatore al risultato della stringa di caratteri wide. Non vengono restituiti valori di errore.
 
 ## <a name="remarks"></a>Note
 
 Sono disponibili versioni più sicure di queste funzioni. Vedere [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
-Il **asctime** funzione converte un'ora archiviata come una struttura di una stringa di caratteri. Il *timeptr* valore viene in genere ottenuto da una chiamata a **gmtime** oppure **localtime**, che restituiscono un puntatore a un **tm** struttura, definito nel tempo. H.
+La funzione **asctime** converte un'ora archiviata come una struttura in una stringa di caratteri. Il valore *timeptr* viene in genere ottenuto da una chiamata a **gmtime** o **localtime**, che entrambi restituiscono un puntatore a una struttura **TM** , definito nel tempo. H.
 
 |membro timeptr|Value|
 |--------------------|-----------|
@@ -76,16 +79,16 @@ Il **asctime** funzione converte un'ora archiviata come una struttura di una str
 |**tm_mon**|Mese (0-11; Gennaio = 0)|
 |**tm_sec**|Secondi dopo il minuto (0-59)|
 |**tm_wday**|Giorno della settimana (0-6; Domenica = 0)|
-|**tm_yday**|Giorno dell'anno (0-365; Il 1 ° gennaio = 0)|
+|**tm_yday**|Giorno dell'anno (0-365; 1 gennaio = 0)|
 |**tm_year**|Anno (anno corrente meno 1900)|
 
 La stringa di caratteri convertita viene anche modificata in base alle impostazioni di fuso orario locale. Vedere le funzioni [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) per informazioni sulla configurazione dell'ora locale e la funzione [_tzset](tzset.md) per informazioni sulla definizione delle variabili di ambiente e globali del fuso orario.
 
-Risultato stringa prodotto da **asctime** contiene esattamente 26 caratteri e ha il formato `Wed Jan 02 02:03:55 1980\n\0`. Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. **asctime** Usa un buffer allocato in modo statico, singolo per contenere la stringa restituita. Ogni chiamata a questa funzione elimina definitivamente il risultato della chiamata precedente.
+Il risultato della stringa prodotto da **asctime** contiene esattamente 26 caratteri e ha il `Wed Jan 02 02:03:55 1980\n\0`formato. Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. **asctime** usa un singolo buffer allocato in modo statico per memorizzare la stringa restituita. Ogni chiamata a questa funzione elimina definitivamente il risultato della chiamata precedente.
 
-**wasctime** è una versione a caratteri wide di **asctime**. **wasctime** e **asctime** hanno lo stesso comportamento in caso contrario.
+**_wasctime** è una versione a caratteri wide di **asctime**. **_wasctime** e **asctime** si comportano in modo identico.
 
-Queste funzioni convalidano i relativi parametri. Se *timeptr* è un puntatore null o se contiene valori out-of-range, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **NULL** e imposta **errno** al **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se *timeptr* è un puntatore null o se contiene valori non compresi nell'intervallo, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **null** e imposta **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico
 
@@ -102,7 +105,7 @@ Queste funzioni convalidano i relativi parametri. Se *timeptr* è un puntatore n
 
 ## <a name="example"></a>Esempio
 
-Questo programma inserisce l'ora di sistema in long integer **aclock**, lo converte in struttura **newtime** e quindi lo converte in formato stringa di output, usando il **asctime**(funzione).
+Questo programma posiziona l'ora di sistema nel valore long integer **ACLOCK**, lo converte nella struttura **newTime** e quindi lo converte in formato stringa per l'output, usando la funzione **asctime** .
 
 ```C
 // crt_asctime.c

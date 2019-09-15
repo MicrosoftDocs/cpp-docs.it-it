@@ -1,9 +1,9 @@
 ---
 title: _setmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmode
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f14cc9451b93a9077916b8c650645990ba654a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356395"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948584"
 ---
-# <a name="setmode"></a>_setmode
+# <a name="_setmode"></a>_setmode
 
 Imposta la modalità di conversione di file.
 
@@ -58,23 +61,23 @@ Nuova modalità di conversione.
 
 In caso di esito positivo, restituisce la modalità di conversione precedente.
 
-Se a questa funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** a una delle due **EBADF**, che indica un descrittore di file non valido, o **EINVAL**, ovvero indica un valore non valido *modalità* argomento.
+Se a questa funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce-1 e **errno** viene impostato su **EBADF**, che indica un descrittore di file non valido, o **EINVAL**, che indica un argomento della *modalità* non valido.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **setMode** funzione imposta *modalità* la modalità di conversione di file fornito dal *fd*. Il passaggio **o_text** come *modalità* imposta il testo (convertito è,) modalità. Combinazioni di ritorno a capo return-line feed (CR-LF) vengono convertite in una singola riga, carattere di avanzamento nell'input. I caratteri di avanzamento riga sono convertiti in combinazioni di ritorno a capo-avanzamento riga in fase di output. Il passaggio **O_BINARY** set (non convertita) modalità binaria, in cui queste conversioni sono eliminate.
+La funzione **_setmode** *imposta la modalità di conversione* del file fornita da *FD*. Se si passa **_O_TEXT** come *mode* , viene impostata la modalità testo (ovvero la traduzione). Le combinazioni di ritorno a capo/avanzamento riga (CR-LF) vengono convertite in un singolo carattere di avanzamento riga nell'input. I caratteri di avanzamento riga sono convertiti in combinazioni di ritorno a capo-avanzamento riga in fase di output. Il passaggio di **_O_BINARY** imposta la modalità binaria (non convertita), in cui queste conversioni vengono omesse.
 
-È anche possibile passare **_O_U16TEXT**, **_O_U8TEXT**, o **o_wtext** per abilitare la modalità Unicode, come illustrato nel secondo esempio più avanti in questo documento.
-
-> [!CAUTION]
-> Modalità Unicode è per le funzioni di stampa a livello (ad esempio, `wprintf`) e non è supportata per le funzioni di stampa narrow. Utilizzo di una funzione di stampa narrow nel flusso Unicode in modalità attiva un'asserzione.
-
-**setMode** viene in genere usato per modificare la modalità di traduzione predefinita di **stdin** e **stdout**, ma è possibile usarlo per qualsiasi file. Se si applicano **setMode** al descrittore di file per un flusso, chiamare **setMode** prima di eseguire qualsiasi operazione di input o output nel flusso.
+È anche possibile passare **_O_U16TEXT**, **_O_U8TEXT**o **_O_WTEXT** per abilitare la modalità Unicode, come illustrato nel secondo esempio più avanti in questo documento.
 
 > [!CAUTION]
-> Se si scrittura dati in un flusso di file, scaricare esplicitamente il codice usando [fflush](fflush.md) prima di usare **setMode** per modificare la modalità. Se non si scarica il codice, è possibile che si ottenga comportamento imprevisto. Se non sono stati scritti dati nel flusso, non sarà necessario scaricare il codice.
+> La modalità Unicode è per le funzioni di stampa Wide ( `wprintf`ad esempio,) e non è supportata per le funzioni di stampa narrow. L'uso di una funzione di stampa narrow su un flusso in modalità Unicode attiva un'asserzione.
+
+**_setmode** viene in genere usato per modificare la modalità di conversione predefinita di **stdin** e **stdout**, ma è possibile usarla in qualsiasi file. Se si applica **_setmode** al descrittore di file per un flusso, chiamare **_setmode** prima di eseguire qualsiasi operazione di input o output nel flusso.
+
+> [!CAUTION]
+> Se si scrivono dati in un flusso di file, svuotare in modo esplicito il codice usando [fflush](fflush.md) prima di usare **_setmode** per modificare la modalità. Se non si scarica il codice, è possibile che si ottenga comportamento imprevisto. Se non sono stati scritti dati nel flusso, non sarà necessario scaricare il codice.
 
 ## <a name="requirements"></a>Requisiti
 

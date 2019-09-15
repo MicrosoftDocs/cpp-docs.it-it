@@ -1,9 +1,9 @@
 ---
 title: _set_new_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_new_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_new_mode
 - _set_new_mode
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: 0228170e4ab5b55b4b061fa61a412766de77a063
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b248f1c97b1ec334b7441f33862b90473e08993f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356602"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948449"
 ---
-# <a name="setnewmode"></a>_set_new_mode
+# <a name="_set_new_mode"></a>_set_new_mode
 
-Imposta una nuova modalità del gestore per **malloc**.
+Imposta una nuova modalità di gestione per **malloc**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,15 +47,15 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>Parametri
 
 *newhandlermode*<br/>
-Nuova modalità del gestore per **malloc**; valido valore è 0 o 1.
+Nuova modalità di gestione per **malloc**; il valore valido è 0 o 1.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il gestore precedente set di modalità per **malloc**. Valore restituito pari a 1 indica che, in caso di errore di allocazione della memoria, **malloc** precedentemente chiamato la routine del nuovo gestore; un valore restituito pari a 0 indica che non è stato eseguito. Se il *newhandlermode* argomento non è uguale a 0 o 1, restituisce -1.
+Restituisce la modalità del gestore precedente impostata per **malloc**. Il valore restituito 1 indica che, in caso di errore di allocazione della memoria, **malloc** ha precedentemente chiamato la routine del nuovo gestore; il valore restituito 0 indica che non è stato fatto. Se l'argomento *newhandlermode* non è uguale a 0 o 1, restituisce-1.
 
 ## <a name="remarks"></a>Note
 
-La funzione C++ **_set_new_mode** imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore **malloc** consiste nel chiamare la routine del nuovo gestore come impostato da [set_new_handler](set-new-handler.md). Per impostazione predefinita **malloc** non chiama la routine del nuovo gestore in caso di errore per allocare memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore Quando non riesce per lo stesso motivo. Per altre informazioni, vedere le informazioni sugli operatori [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*. Per eseguire l'override del comportamento predefinito, chiamare:
+La funzione C++ **_set_new_mode** imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando si verifica un errore per lo stesso motivo. Per altre informazioni, vedere le informazioni sugli operatori [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++* . Per eseguire l'override del comportamento predefinito, chiamare:
 
 ```cpp
 _set_new_mode(1);
@@ -60,7 +63,7 @@ _set_new_mode(1);
 
 all'inizio del programma o collegarsi a Newmode.obj (vedere [Opzioni di collegamento](../../c-runtime-library/link-options.md)).
 
-Questa funzione convalida il relativo parametro. Se *newhandlermode* qualsiasi elemento diverso da 0 o 1, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, <strong>set_new_mode</strong> restituisce -1 e imposta **errno** a `EINVAL`.
+Questa funzione convalida il relativo parametro. Se *newhandlermode* è un valore diverso da 0 o 1, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, <strong>_set_new_mode</strong> restituisce-1 e **errno** viene impostato su `EINVAL`.
 
 ## <a name="requirements"></a>Requisiti
 

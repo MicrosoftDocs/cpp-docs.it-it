@@ -1,10 +1,10 @@
 ---
 title: _ismbbgraph, _ismbbgraph_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbgraph_l
 - _ismbbgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbgraph
 - _ismbbgraph_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096450869f9a150585b3102cea155ecd948c5751
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286772"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954194"
 ---
-# <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
+# <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph, _ismbbgraph_l
 
 Determina se un particolare carattere multibyte è un carattere grafico.
 
@@ -65,7 +68,7 @@ Restituisce un valore diverso da zero se l'espressione:
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-è diverso da zero per *c*, oppure 0 in caso contrario. **ismbbgraph** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **ismbbgraph_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+è diverso da zero per *c*oppure 0 in caso contrario. **_ismbbgraph** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **_ismbbgraph_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

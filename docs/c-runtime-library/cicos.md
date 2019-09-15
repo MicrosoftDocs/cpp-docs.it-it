@@ -1,9 +1,9 @@
 ---
 title: _CIcos
 ms.date: 04/11/2018
-apiname:
+api_name:
 - _CIcos
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcrt.dll
 - msvcr120.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIcos
 - _CIcos
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-ms.openlocfilehash: fef9ef9e197dcd6e8a1880c3acdfa2755ccf1ae1
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
+ms.openlocfilehash: 5a57e948a73b8c4243ebe5a8a12f62cc55a40f3b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702726"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940546"
 ---
-# <a name="cicos"></a>_CIcos
+# <a name="_cicos"></a>_CIcos
 
 Calcola il coseno del primo valore dello stack a virgola mobile.
 

@@ -1,12 +1,15 @@
 ---
 title: _acmdln, _tcmdln, _wcmdln
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcmdln
 - _acmdln
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _acmdln
 - acmdln
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - tcmdln global variable
 - acmdln global variable
 ms.assetid: 4fc0a6a0-3f93-420a-a19f-5276061ba539
-ms.openlocfilehash: f4cacb512cb9b5bb6ea22f4dc4014ac2a2eeebe6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 07061244e06256341a6da7d04e5487e81c4b9378
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747021"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940605"
 ---
-# <a name="acmdln-tcmdln-wcmdln"></a>_acmdln, _tcmdln, _wcmdln
+# <a name="_acmdln-_tcmdln-_wcmdln"></a>_acmdln, _tcmdln, _wcmdln
 
 Variabile globale CRT interna. Riga di comando
 
@@ -45,7 +48,7 @@ wchar_t * _wcmdln;
    #define _tcmdln _acmdln
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Nelle variabili CRT interne viene archiviata l'intera riga di comando. Sono esposte nei simboli esportati per CRT, ma non sono progettate per l'uso nel codice. `_acmdln` archivia i dati come stringa di caratteri. `_wcmdln` archivia i dati come stringa di caratteri wide. `_tcmdln` può essere definita come `_acmdln` o `_wcmdln`, a seconda del tipo più appropriato.
 

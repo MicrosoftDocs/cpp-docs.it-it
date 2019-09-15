@@ -1,11 +1,11 @@
 ---
 title: _seh_filter_dll, _seh_filter_exe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _XcptFilter
 - _seh_filter_dll
 - _seh_filter_exe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - XcptFilter
 - _XcptFilter
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-ms.openlocfilehash: 51d6a21b3867eb830a7d9f9b4b9b0ac844cd5aa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8c76a4a1d1a39e26f5e78869d3b107578d2085a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356732"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948687"
 ---
-# <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll, _seh_filter_exe
+# <a name="_seh_filter_dll-_seh_filter_exe"></a>_seh_filter_dll, _seh_filter_exe
 
 Identifica l'eccezione e la relativa azione da intraprendere.
 

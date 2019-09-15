@@ -1,9 +1,9 @@
 ---
 title: _CIsqrt
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIsqrt
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcr100.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIsqrt
 - CIsqrt
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - CIsqrt intrinsic
 - _CIsqrt intrinsic
 ms.assetid: 663548ea-398c-48ee-8397-a787c6ebb937
-ms.openlocfilehash: 5042be822df7789d30d2b4ea2d5be6cf8a081ef9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b914ac73fcaeb924832852294af1535bc87c1119
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749386"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940487"
 ---
-# <a name="cisqrt"></a>_CIsqrt
+# <a name="_cisqrt"></a>_CIsqrt
 
 Calcola la radice quadrata del primo valore dello stack.
 
@@ -37,7 +40,7 @@ Calcola la radice quadrata del primo valore dello stack.
 void __cdecl _CIsqrt();
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Questa versione della funzione `sqrt` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.
 

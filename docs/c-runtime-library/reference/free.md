@@ -1,9 +1,9 @@
 ---
 title: free
 ms.date: 11/04/2016
-apiname:
+api_name:
 - free
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - free
 helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: f56212874f05ea5d4ab7bd826a7a4c145551dfc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e09bec7c83eae64064e3997f2e8d5632a47258a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287759"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956721"
 ---
 # <a name="free"></a>free
 
@@ -48,15 +51,15 @@ Blocco di memoria precedentemente allocata da liberare.
 
 ## <a name="remarks"></a>Note
 
-Il **gratuito** funzione dealloca un blocco di memoria (*memblock*) precedentemente allocato da una chiamata a **calloc**, **malloc**, o **realloc**. Il numero di byte liberati è equivalente al numero di byte richiesto quando il blocco è stato allocato (o riallocato, nel caso del **realloc**). Se *memblock* viene **NULL**, il puntatore viene ignorato e **gratuito** restituisce immediatamente. Tentativo di liberare un puntatore non valido (un puntatore a un blocco di memoria non allocata dalle **calloc**, **malloc**, o **realloc**) può influire sulle richieste di allocazione successive e causare errori.
+La funzione **Free** consente di deallocare un blocco di memoria (*memblock*) precedentemente allocato da una chiamata a **calloc**, **malloc**o **realloc**. Il numero di byte liberati è equivalente al numero di byte richiesti quando il blocco è stato allocato (o riallocato, nel caso di **realloc**). Se *memblock* è **null**, il puntatore viene ignorato e **Free** restituisce immediatamente un risultato. Il tentativo di liberare un puntatore non valido (un puntatore a un blocco di memoria non allocato da **calloc**, **malloc**o **realloc**) può influire sulle richieste di allocazione successive e causare errori.
 
-Se si verifica un errore nel liberare la memoria **errno** viene impostato con informazioni dal sistema operativo sulla natura dell'errore. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
+Se si verifica un errore durante la liberazione della memoria, **errno** viene impostato con le informazioni del sistema operativo sulla natura dell'errore. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
 Dopo che un blocco di memoria è stato liberato, [_heapmin](heapmin.md) riduce la quantità di memoria libera nell'heap unendo le aree inutilizzate e rilasciandole nuovamente al sistema operativo. La memoria liberata che non viene rilasciata al sistema operativo viene ripristinata al pool libero ed è disponibile nuovamente per l'allocazione.
 
-Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **gratuito** viene risolto [free_dbg](free-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime **C, viene** risolto in [_free_dbg](free-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-**libera** contrassegnato `__declspec(noalias)`, vale a dire che la funzione è garantito che non modifichi le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).
+**Free** è contrassegnato `__declspec(noalias)`, pertanto la funzione non modifica le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).
 
 Per liberare la memoria allocata con [_malloca](malloca.md), usare [_freea](freea.md).
 

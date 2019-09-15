@@ -1,9 +1,9 @@
 ---
 title: __dllonexit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __dllonexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
@@ -12,20 +12,23 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr120_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __dllonexit
 helpviewer_keywords:
 - __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
-ms.openlocfilehash: a6c077ac010c0b5d94ba21ba823441ea6ac932b9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 61d63c751dd755bf8a7680c674681e114945814b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739370"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940437"
 ---
-# <a name="dllonexit"></a>__dllonexit
+# <a name="__dllonexit"></a>__dllonexit
 
 Registra una routine da chiamare in fase di uscita.
 
@@ -53,7 +56,7 @@ Puntatore a una variabile che indica la fine di un elenco di funzioni da eseguir
 
 Se ha esito positivo, un puntatore che indica la funzione dell'utente. In caso contrario, un puntatore **NULL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 La funzione `__dllonexit` è analoga alla funzione [OnExit](../c-runtime-library/reference/onexit-onexit-m.md) ad eccezione delle variabili globali usate da tale funzione che non sono visibili per questa routine. Al posto di variabili globali, questa funzione usa i parametri `pbegin` e `pend`.
 

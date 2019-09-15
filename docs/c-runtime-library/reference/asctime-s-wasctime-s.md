@@ -1,10 +1,10 @@
 ---
 title: asctime_s, _wasctime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wasctime_s
 - asctime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asctime_s
 - _wasctime_s
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: fe6ada0d50865897e791fc04b99ec0bb486f5a55
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499986"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943663"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -98,7 +101,7 @@ Zero in caso di esito positivo. In caso di esito negativo, viene richiamato il g
 
 La funzione **asctime** converte un'ora archiviata come una struttura in una stringa di caratteri. Il valore *tmSource* viene in genere ottenuto da una chiamata a **gmtime** o **localtime**. Entrambe le funzioni possono essere usate per compilare una struttura **TM** , come definito nel tempo. H.
 
-|membro timeptr|Valore|
+|membro timeptr|Value|
 |--------------------|-----------|
 |**tm_hour**|Ore dalla mezzanotte (0-23)|
 |**tm_isdst**|Positivo se è in vigore l'ora legale. 0 se l'ora legale non è in vigore. Negativo se lo stato dell'ora legale è sconosciuto. La libreria di runtime C presuppone le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).|

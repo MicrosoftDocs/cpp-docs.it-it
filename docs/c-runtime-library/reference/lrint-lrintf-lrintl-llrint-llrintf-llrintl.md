@@ -1,14 +1,14 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285772"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953121"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -104,19 +107,19 @@ Valore da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce il valore integrale arrotondato di *x*.
+Se ha esito positivo, restituisce il valore integrale arrotondato di *x*.
 
 |Problema|INVIO|
 |-----------|------------|
-|*x* è compreso nell'intervallo del tipo restituito<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Genera **FE_INVALID** e restituisce zero (0).|
+|*x* non è compreso nell'intervallo del tipo restituito<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Genera **FE_INVALID** e restituisce zero (0).|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **lrint** e **llrint** che accettano **float** e **lungo**  **Double** tipi. In un programma C **lrint** e **llrint** hanno sempre un **double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **lrint** e **llrint** che accettano i tipi **float** e **Long** **Double** . In un programma C, **lrint** e **llrint** accettano sempre un **valore Double**.
 
-Se *x* non rappresenta l'equivalente a virgola mobile e di un valore integrale, queste funzioni generano **FE_INEXACT**.
+Se *x* non rappresenta l'equivalente a virgola mobile di un valore integrale, queste funzioni generano **FE_INEXACT**.
 
-**Sezione specifica Microsoft**: Quando il risultato è compreso nell'intervallo del tipo restituito o quando il parametro è NaN o infinito, il valore restituito è definito dall'implementazione. Il compilatore Microsoft restituisce un valore zero (0).
+**Specifico di Microsoft**: Quando il risultato non è compreso nell'intervallo del tipo restituito o quando il parametro è NaN o Infinity, il valore restituito è definito dall'implementazione. Il compilatore Microsoft restituisce un valore zero (0).
 
 ## <a name="requirements"></a>Requisiti
 

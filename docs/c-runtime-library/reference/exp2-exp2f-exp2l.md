@@ -1,11 +1,11 @@
 ---
 title: exp2, exp2f, exp2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - exp2
 - exp2f
 - exp2l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - exp2
 - math/exp2
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89e0448501cbd423278607bb22959c6cd1ed9464
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338831"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941574"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
-Calcola 2 al valore specificato.
+Calcola 2 elevato al valore specificato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -72,7 +75,7 @@ Valore dell'esponente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce l'esponente in base 2 del *x*, vale a dire 2<sup>x</sup>. In caso contrario, verrà restituito uno dei valori seguenti:
+Se ha esito positivo, restituisce l'esponente in base 2 di *x*, ovvero 2<sup>x</sup>. In caso contrario, restituisce uno dei valori seguenti:
 
 |Problema|INVIO|
 |-----------|------------|
@@ -87,7 +90,7 @@ Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **exp2** che accettano e restituiscono **float** e **long double** tipi. In un programma C **exp2** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **exp2** che accettano e restituiscono i tipi **float** e **long double** . In un programma C **exp2** accetta e restituisce sempre un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

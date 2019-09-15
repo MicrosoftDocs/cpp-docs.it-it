@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c61986184f93c6cf6e83b33f77dce2bd017cfae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339221"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937684"
 ---
-# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
+# <a name="_dupenv_s_dbg-_wdupenv_s_dbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
 Ottiene un valore dall'ambiente corrente.  Versioni di [dupenv_s, wdupenv_s](dupenv-s-wdupenv-s.md) che allocano la memoria con [malloc_dbg](malloc-dbg.md) per fornire informazioni di debug aggiuntive.
 
@@ -73,27 +76,27 @@ Dimensioni del *buffer*.
 Nome della variabile di ambiente.
 
 *blockType*<br/>
-Tipo del blocco di memoria richiesto: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**.
+Tipo di blocco di memoria richiesto: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntatore al nome del file di origine oppure **NULL**.
+Puntatore al nome del file di origine o **null**.
 
 *linenumber*<br/>
-Numero di riga nel file di origine oppure **NULL**.
+Numero di riga nel file di origine o **null**.
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero se eseguita correttamente, un codice di errore se non eseguita correttamente.
 
-Queste funzioni convalidano i propri parametri. Se *buffer* oppure *varname* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni impostano **errno** al **EINVAL** e restituiti **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se *buffer* o *VarName* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
-Se queste funzioni non possono allocare memoria sufficiente, impostano *buffer* al **NULL** e *numberOfElements* a 0, quindi restituiscono **ENOMEM**.
+Se queste funzioni non sono in grado di allocare memoria sufficiente, il *buffer* viene impostato su **null** e *NumberOfElements* su 0 e viene restituito **ENOMEM**.
 
 ## <a name="remarks"></a>Note
 
-Il **dupenv_s_dbg** e **wdupenv_s_dbg** sono identiche alle funzioni **dupenv_s** e **wdupenv_s** ad eccezione del fatto che, quando **Debug** è definito, queste funzioni usano la versione di debug [malloc](malloc.md), [malloc_dbg](malloc-dbg.md)per allocare memoria per il valore della variabile di ambiente. Per informazioni sulle funzionalità di debug della **malloc_dbg**, vedere [malloc_dbg](malloc-dbg.md).
+Le funzioni **_dupenv_s_dbg** e **_wdupenv_s_dbg** sono identiche a **_dupenv_s** e **_wdupenv_s** , ad eccezione del fatto che, quando viene definito _ **debug** , queste funzioni usano la versione di debug di [malloc](malloc.md), [differenze](malloc-dbg.md), per allocare memoria per il valore della variabile di ambiente. Per informazioni sulle funzionalità di debug di **differenze**, vedere [differenze](malloc-dbg.md).
 
-Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire il flag **CRTDBG_MAP_ALLOC**. Quando **CRTDBG_MAP_ALLOC** è definito, le chiamate a **dupenv_s** e **wdupenv_s** vengono mappate nuovamente a **dupenv_s_dbg** e **wdupenv_s_dbg**, rispettivamente, con il *blockType* impostato su **NORMAL_BLOCK**. Di conseguenza, non è necessario chiamare queste funzioni in modo esplicito, a meno che non si desidera contrassegnare come blocchi di memoria heap **CLIENT_BLOCK**. Per altre informazioni sui tipi di blocco, vedere [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipi di blocchi sull'heap di debug).
+Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire il flag **_CRTDBG_MAP_ALLOC**. Quando **_CRTDBG_MAP_ALLOC** è definito, le chiamate a **_dupenv_s** e **_wdupenv_s** vengono rimappate rispettivamente a **_dupenv_s_dbg** e **_wdupenv_s_dbg**, con *blockType* impostato su **_NORMAL_BLOCK**. Pertanto, non è necessario chiamare queste funzioni in modo esplicito a meno che non si desideri contrassegnare i blocchi dell'heap come **_CLIENT_BLOCK**. Per altre informazioni sui tipi di blocco, vedere [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipi di blocchi sull'heap di debug).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

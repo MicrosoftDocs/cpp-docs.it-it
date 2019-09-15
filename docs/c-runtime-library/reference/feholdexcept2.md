@@ -1,9 +1,9 @@
 ---
 title: feholdexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feholdexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd55a4ed627d731f7246d589d4b74b4173e31d4e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334385"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941194"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -44,7 +47,7 @@ int feholdexcept(
 ### <a name="parameters"></a>Parametri
 
 *penv*<br/>
-Puntatore a un **fenv_t** oggetto per contenere una copia dell'ambiente a virgola mobile.
+Puntatore a un oggetto **fenv_t** per contenere una copia dell'ambiente a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -52,9 +55,9 @@ Restituisce zero se e solo se la funzione è in grado di attivare correttamente 
 
 ## <a name="remarks"></a>Note
 
-Il **feholdexcept** funzione viene utilizzata per archiviare lo stato dell'ambiente a virgola mobile corrente nel **fenv_t** oggetto a cui fa riferimento *penv*e per impostare l'ambiente non interrompere l'esecuzione in corrispondenza di eccezioni a virgola mobile. Questa attività è nota come modalità senza interruzioni.  Questa modalità continua fino a quando l'ambiente viene ripristinato tramite [fesetenv](fesetenv1.md) o [feupdateenv](feupdateenv.md).
+La funzione **feholdexcept** viene usata per archiviare lo stato dell'ambiente a virgola mobile corrente nell'oggetto **fenv_t** a cui punta *penv*e per impostare l'ambiente in modo da non interrompere l'esecuzione sulle eccezioni a virgola mobile. Questa attività è nota come modalità senza interruzioni.  Questa modalità continua fino a quando l'ambiente viene ripristinato tramite [fesetenv](fesetenv1.md) o [feupdateenv](feupdateenv.md).
 
-È possibile usare questa funzione all'inizio di una subroutine che deve nascondere uno o più eccezioni a virgola mobile dal chiamante. Per segnalare un'eccezione, è possibile eliminare semplicemente le eccezioni non utilizzando [feclearexcept](feclearexcept1.md) e quindi terminare la modalità senza interruzioni con una chiamata a **feupdateenv**.
+È possibile usare questa funzione all'inizio di una subroutine che deve nascondere uno o più eccezioni a virgola mobile dal chiamante. Per segnalare un'eccezione, è possibile cancellare semplicemente le eccezioni indesiderate tramite [feclearexcept](feclearexcept1.md) e quindi terminare la modalità non di arresto con una chiamata a **feupdateenv**.
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 

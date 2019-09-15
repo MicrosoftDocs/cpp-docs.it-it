@@ -1,11 +1,11 @@
 ---
 title: tan, tanf, tanl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tan
 - tanf
 - tanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tan
 - tanf
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946894"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -63,16 +66,16 @@ Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **tan** le funzioni restituiscono la tangente *x*. Se *x* è maggiore o uguale a 263 o inferiore o uguale a -263, si verifica una perdita di significato nel risultato.
+Le funzioni **Tan** restituiscono la tangente di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si verifica una perdita di significato nel risultato.
 
-|Input|Eccezione SEH|**Matherr** eccezione|
+|Input|Eccezione SEH|**Matherr** Eccezione|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|none|_DOMAIN|
-|+ INF|**INVALID**|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
+|± INF|**INVALID**|_DOMAIN|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **tan** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **tan** accetta e restituisce sempre **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tan** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **Tan** accetta sempre e restituisce **Double**.
 
 ## <a name="requirements"></a>Requisiti
 

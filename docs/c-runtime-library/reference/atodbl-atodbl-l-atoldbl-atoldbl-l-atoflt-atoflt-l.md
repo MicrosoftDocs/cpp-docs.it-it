@@ -1,14 +1,14 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _atoldbl
 - _atoldbl_l
 - _atodbl
 - _atoflt
 - _atoflt_l
 - _atodbl_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoflt
 - _atoflt_l
@@ -49,16 +52,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349277"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943617"
 ---
-# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
+# <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Converte una stringa in un valore double (**atodbl**), long double (**atoldbl**), o float (**atoflt**).
+Converte una stringa in un valore Double ( **_atodbl**), long double ( **_atoldbl**) o float ( **_atoflt**).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -84,15 +87,15 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce 0 in caso di esito positivo. Sono possibili codici di errore **underflow** oppure **overflow**, che sono definiti nel file di intestazione \<Math. h >.
+Restituisce 0 in caso di esito positivo. I codici di errore possibili sono **_UNDERFLOW** o **_OVERFLOW**, definiti nel file \<di intestazione Math. h >.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni convertono una stringa in un valore a virgola mobile. La differenza tra queste funzioni e le **atof** famiglia di funzioni è che queste funzioni non generano codice a virgola mobile e non causano eccezioni hardware. Al contrario, le condizioni di errore vengono segnalate come codici di errore.
+Queste funzioni convertono una stringa in un valore a virgola mobile. La differenza tra queste funzioni e la famiglia di funzioni **atof** consiste nel fatto che queste funzioni non generano codice a virgola mobile e non provocano eccezioni hardware. Al contrario, le condizioni di errore vengono segnalate come codici di errore.
 
-Se una stringa non ha un'interpretazione valida come valore a virgola mobile, *valore* è impostato su zero e il valore restituito il valore è uguale a zero.
+Se una stringa non ha un'interpretazione valida come valore a virgola mobile, il *valore* viene impostato su zero e il valore restituito è zero.
 
-Le versioni di queste funzioni che hanno le **l** suffisso sono identiche le versioni che non hanno il suffisso, ad eccezione del fatto che usino il *delle impostazioni locali* parametro che viene passato al posto del thread corrente impostazioni locali.
+Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche a quelle che non hanno il suffisso, ad eccezione del fatto che usano il parametro delle *impostazioni locali* passato al posto delle impostazioni locali del thread corrente.
 
 ## <a name="requirements"></a>Requisiti
 

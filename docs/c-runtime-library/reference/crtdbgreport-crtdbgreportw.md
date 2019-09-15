@@ -1,10 +1,10 @@
 ---
 title: _CrtDbgReport, _CrtDbgReportW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDbgReport
 - _CrtDbgReportW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtDbgReport
 - CrtDbgReportW
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 986777f755a749e858f7e51b5aa19f10090db13a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500011"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938844"
 ---
 # <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 

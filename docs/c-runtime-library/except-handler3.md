@@ -1,9 +1,9 @@
 ---
 title: _except_handler3
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _except_handler3
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr90.dll
 - msvcr80.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - msvcr110.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _except_handler3
 - except_handler3
@@ -19,14 +22,14 @@ helpviewer_keywords:
 - _except_handler3 function
 - except_handler3 function
 ms.assetid: b0c64898-0ae5-48b7-9724-80135a0813e2
-ms.openlocfilehash: 0dfe007d7b444401accbf547674f96f7f7d54ac1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 5e1dbab97e0f193d4ff59c19229d2c00e2cd7d6a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741310"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944475"
 ---
-# <a name="excepthandler3"></a>_except_handler3
+# <a name="_except_handler3"></a>_except_handler3
 
 Funzione CRT interna. Usata da un framework per individuare il gestore di eccezioni appropriato per elaborare l'eccezione corrente.
 
@@ -59,7 +62,7 @@ int _except_handler3(
 
 Se un'eccezione deve essere chiusa, restituisce `DISPOSITION_DISMISS`. Se l'eccezione deve essere passata a un livello superiore, ai gestori di eccezioni in cui è incapsulata, restituisce `DISPOSITION_CONTINUE_SEARCH`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Se il metodo trova un gestore di eccezioni appropriato, passa l'eccezione al gestore. In questa situazione, il metodo non torna al codice che lo ha chiamato e il valore restituito è irrilevante.
 

@@ -1,7 +1,7 @@
 ---
 title: Funzioni obsolete
 ms.date: 01/22/2019
-apiname:
+api_name:
 - _beep
 - _sleep
 - _loaddll
@@ -10,7 +10,7 @@ apiname:
 - is_wctype
 - _getsystime
 - _setsystime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -25,7 +25,10 @@ apilocation:
 - api-ms-win-crt-runtime-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - is_wctype
 - _loaddll
@@ -50,12 +53,12 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: ff0e4376c021fcfd46d4631d1598a3826e9f2851
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500025"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940132"
 ---
 # <a name="obsolete-functions"></a>Funzioni obsolete
 
@@ -81,14 +84,14 @@ Alcune funzioni di libreria sono obsolete e hanno equivalenti più recenti. Si c
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|nessuno|
-|[_heapadd](../c-runtime-library/heapadd.md)|nessuno|
-|[_heapset](../c-runtime-library/heapset.md)|nessuno|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|nessuno|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|nessuno|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|nessuno|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|nessuno|
-|[_set_output_format](../c-runtime-library/set-output-format.md)|nessuno|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|Nessuna|
+|[_heapadd](../c-runtime-library/heapadd.md)|Nessuna|
+|[_heapset](../c-runtime-library/heapset.md)|Nessuna|
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|Nessuna|
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Nessuna|
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|Nessuna|
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Nessuna|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|Nessuna|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Funzione rimossa da CRT nelle versioni precedenti di Visual Studio
 

@@ -1,10 +1,10 @@
 ---
 title: _execvp, _wexecvp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execvp
 - _wexecvp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execvp
 - wexecvp
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60de62a61c78152cd4a2d8053da41a37a4091424
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339098"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941785"
 ---
-# <a name="execvp-wexecvp"></a>_execvp, _wexecvp
+# <a name="_execvp-_wexecvp"></a>_execvp, _wexecvp
 
 Carica ed esegue nuovi processi figlio.
 
@@ -64,9 +67,9 @@ Matrice di puntatori ai parametri.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Valore restituito di -1 indica un errore, nel qual caso il **errno** (variabile globale) è impostata.
+Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valore restituito-1 indica un errore, nel qual caso è impostata la variabile globale **errno** .
 
-|**errno** valore|Descrizione|
+|**errno** (valore)|Descrizione|
 |-------------------|-----------------|
 |**E2BIG**|Lo spazio necessario per gli argomenti e le impostazioni di ambiente supera 32 KB.|
 |**EACCES**|Il file specificato dispone di una violazione di blocco o di condivisione.|
@@ -80,9 +83,9 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni carica ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando e utilizzando il **percorso** variabile di ambiente per individuare il file da eseguire.
+Ognuna di queste funzioni carica ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando e usando la variabile di ambiente **path** per trovare il file da eseguire.
 
-Il **execvp** funzioni convalidano i propri parametri. Se il *cmdname* è un puntatore null, o *argv* è un puntatore null, un puntatore a una matrice vuota, o se la matrice contiene una stringa vuota come primo argomento, queste funzioni richiamano il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1. Nessun processo viene avviato.
+Le funzioni **_execvp** convalidano i relativi parametri. Se *CmdName* è un puntatore null o *argv* è un puntatore null, un puntatore a una matrice vuota o se la matrice contiene una stringa vuota come primo argomento, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1. Nessun processo viene avviato.
 
 ## <a name="requirements"></a>Requisiti
 

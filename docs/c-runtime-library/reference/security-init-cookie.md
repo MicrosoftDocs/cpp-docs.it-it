@@ -1,9 +1,9 @@
 ---
 title: __security_init_cookie
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __security_init_cookie
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - security_init_cookie
 - __security_init_cookie
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-ms.openlocfilehash: c7b25e05b4574a7b397cd07d55000a5e53db58f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f7e9924f4a96803749418d777e5ee2020f9df78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356836"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948724"
 ---
-# <a name="securityinitcookie"></a>__security_init_cookie
+# <a name="__security_init_cookie"></a>__security_init_cookie
 
 Inizializza il cookie di sicurezza globale.
 
@@ -45,9 +48,9 @@ void __security_init_cookie(void);
 
 Il cookie di sicurezza globale viene usato per la protezione da sovraccarico del buffer nel codice compilato con [/GS (Controllo sicurezza buffer)](../../build/reference/gs-buffer-security-check.md) e nel codice che usa la gestione delle eccezioni. All'ingresso in una funzione protetta da sovraccarico, il cookie viene inserito nello stack e, all'uscita, il valore presente nello stack viene confrontato con il cookie globale. Eventuali differenze tra di essi indicano che si è verificato un sovraccarico del buffer causando l'interruzione immediata del programma.
 
-In genere **security_init_cookie** viene chiamato da CRT quando viene inizializzato. Se si ignora l'inizializzazione di CRT, ad esempio, se si usa [/ENTRY](../../build/reference/entry-entry-point-symbol.md) per specificare un punto di ingresso, sarà necessario chiamare **security_init_cookie** manualmente. Se **security_init_cookie** non viene chiamato, globale cookie di sicurezza è impostata su un valore predefinito e protezione da sovraccarico del buffer è compromesso. Poiché un utente malintenzionato può sfruttare questo valore di cookie predefinito per aggirare i controlli di sovraccarico del buffer, è consigliabile chiamare sempre **security_init_cookie** quando si definisce un punto di ingresso.
+In genere, **__security_init_cookie** viene chiamato da CRT al momento dell'inizializzazione. Se si ignora l'inizializzazione di CRT, ad esempio se si usa [/entry](../../build/reference/entry-entry-point-symbol.md) per specificare un punto di ingresso, sarà necessario chiamare **__security_init_cookie** manualmente. Se **__security_init_cookie** non viene chiamato, il cookie di sicurezza globale viene impostato su un valore predefinito e la protezione con sovraccarico del buffer è compromessa. Poiché un utente malintenzionato può sfruttare questo valore del cookie predefinito per sconfiggere i controlli di sovraccarico del buffer, si consiglia di chiamare sempre **__security_init_cookie** quando si definisce un punto di ingresso personalizzato.
 
-La chiamata a **security_init_cookie** deve essere effettuata prima di qualsiasi protetta da sovraccarico (funzione) viene immesso; in caso contrario, verrà rilevato un sovraccarico del buffer non corretto. Per altre informazioni, vedere [Errore di run-time C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+La chiamata a **__security_init_cookie** deve essere eseguita prima dell'immissione di qualsiasi funzione protetta da sovraccarico; in caso contrario, verrà rilevato un sovraccarico del buffer non corretto. Per altre informazioni, vedere [Errore di run-time C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Esempio
 
@@ -59,7 +62,7 @@ Vedere gli esempi in [Errore di run-time C R6035](../../error-messages/tool-erro
 |-------------|---------------------|
 |**__security_init_cookie**|\<process.h>|
 
-**security_init_cookie** è un'estensione Microsoft della libreria di Runtime C standard. Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+**__security_init_cookie** è un'estensione Microsoft della libreria di runtime C standard. Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

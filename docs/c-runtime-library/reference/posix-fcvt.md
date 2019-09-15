@@ -1,9 +1,9 @@
 ---
 title: fcvt
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fcvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fcvt
 helpviewer_keywords:
 - fcvt function
 ms.assetid: 1f748ad0-e186-400e-af8e-80d4431523d7
-ms.openlocfilehash: 4e0c2111d7741652b514020cb3b7adb9a44f98e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58c15d545054615bc7da498c7be49cb0cf468ed4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155908"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950792"
 ---
 # <a name="fcvt"></a>fcvt
 

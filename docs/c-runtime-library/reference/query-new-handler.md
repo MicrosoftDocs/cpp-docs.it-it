@@ -1,9 +1,9 @@
 ---
 title: _query_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _query_new_handler
 - query_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357878"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949687"
 ---
-# <a name="querynewhandler"></a>_query_new_handler
+# <a name="_query_new_handler"></a>_query_new_handler
 
 Restituisce l'indirizzo della routine del nuovo gestore corrente.
 
@@ -46,11 +49,11 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce l'indirizzo della routine del nuovo gestore corrente come impostato da **set_new_handler**.
+Restituisce l'indirizzo della routine del nuovo gestore corrente impostata da **_set_new_handler**.
 
 ## <a name="remarks"></a>Note
 
-Il C++ **query_new_handler** funzione restituisce l'indirizzo della funzione di gestione delle eccezioni corrente impostata dal C++ [set_new_handler](set-new-handler.md) (funzione). **set_new_handler** viene usato per specificare una funzione di gestione delle eccezioni che deve assumere il controllo se il **nuovi** operatore non riesce ad allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
+La C++ funzione **_query_new_handler** restituisce l'indirizzo della funzione di gestione delle eccezioni corrente impostata dalla C++ funzione [_set_new_handler](set-new-handler.md) . **_set_new_handler** viene usato per specificare una funzione di gestione delle eccezioni che deve ottenere il controllo se l'operatore **New** non riesce ad allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
 
 ## <a name="requirements"></a>Requisiti
 

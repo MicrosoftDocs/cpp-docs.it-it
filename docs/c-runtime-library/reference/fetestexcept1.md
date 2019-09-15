@@ -1,9 +1,9 @@
 ---
 title: fetestexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetestexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: ed75ab0ff13029f6ec10c1aafbcb7f7b23b46fd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334165"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941005"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -52,7 +55,7 @@ Se l'esito è positivo, restituisce una maschera di bit che contiene OR bit per 
 
 ## <a name="remarks"></a>Note
 
-Usare la funzione fetestexcept per determinare le eccezioni generate da un'operazione a virgola mobile. Usare la *eccetto* parametro per specificare quali flag di stato di eccezione da testare. Il **fetestexcept** funzione vengono utilizzate queste macro di eccezioni definite nelle \<fenv. h > in *eccetto* e il valore restituito:
+Usare la funzione fetestexcept per determinare le eccezioni generate da un'operazione a virgola mobile. Usare il parametro *excepts* per specificare i flag di stato delle eccezioni da testare. La funzione **fetestexcept** usa queste macro di eccezioni definite \<in fenv. h > in *excepts* e il valore restituito:
 
 |Macro di eccezioni|Descrizione|
 |---------------------|-----------------|
@@ -63,7 +66,7 @@ Usare la funzione fetestexcept per determinare le eccezioni generate da un'opera
 |FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|
 |FE_ALLEXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
 
-L'oggetto specificato *eccetto* argomento può essere 0, una delle macro di eccezioni a virgola mobile supportate o bit per bit di due o più macro. L'effetto di qualsiasi altra *eccetto* valore dell'argomento non è definito.
+L'argomento *excepts* specificato può essere 0, una delle macro di eccezioni a virgola mobile supportate o l'operatore OR bit per bit di due o più macro. L'effetto di qualsiasi altro valore di argomento *excepts non* è definito.
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 

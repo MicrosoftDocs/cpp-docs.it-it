@@ -1,11 +1,11 @@
 ---
 title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cmulcr
 - _FCmulcr
 - _LCmulcr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cmulcr
 - _FCmulcr
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbff1c2cb0e66da77b6fdc8127b78fb475aa5080
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340404"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942893"
 ---
-# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
+# <a name="_cmulcr-_fcmulcr-_lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
-Moltiplica un numero complesso da un numero a virgola mobile.
+Moltiplica un numero complesso per un numero a virgola mobile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -54,15 +57,15 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 Uno degli operandi complessi da moltiplicare.
 
 *y*<br/>
-L'operando a virgola mobile da moltiplicare.
+Operando a virgola mobile da moltiplicare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Oggetto **_Dcomplex**, **fcomplex**, o **_Lcomplex** struttura che rappresenta il prodotto del numero complesso complesso *x* e numero a virgola flaoting *y*.
+Struttura **_Dcomplex**, **_Fcomplex**o **_Lcomplex** che rappresenta il prodotto complesso del numero complesso *x* e del numero di punto flaoting *y*.
 
 ## <a name="remarks"></a>Note
 
-In quanto gli operatori aritmetici incorporati non funziona con l'implementazione Microsoft dei tipi complessi, il **_Cmulcr**, **_FCmulcr**, e **_LCmulcr** funzioni semplificare la moltiplicazione dei tipi complessi da tipi a virgola mobile.
+Poiché gli operatori aritmetici incorporati non funzionano nell'implementazione Microsoft dei tipi complessi, le funzioni **_Cmulcr**, **_FCmulcr**e **_LCmulcr** semplificano la moltiplicazione dei tipi complessi in base ai tipi a virgola mobile.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -70,7 +73,7 @@ In quanto gli operatori aritmetici incorporati non funziona con l'implementazion
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Queste funzioni sono specifiche di Microsoft. I tipi **_Dcomplex**, **fcomplex**, e **_Lcomplex** sono equivalenti di specifiche di Microsoft per i tipi nativi C99 non implementati **double Complex** , **float Complex**, e **long double Complex**, rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Queste funzioni sono specifiche di Microsoft. I tipi **_Dcomplex**, **_Fcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft ai tipi nativi C99 non implementati **Double _Complex**, **float _Complex**e **long double _Complex**, rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

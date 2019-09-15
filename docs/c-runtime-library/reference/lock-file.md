@@ -1,9 +1,9 @@
 ---
 title: _lock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157437"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953308"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-Blocca un' **FILE** oggetto per garantire la coerenza per i thread che accedono al **FILE** oggetto contemporaneamente.
+Blocca un oggetto **file** per garantire la coerenza dei thread che accedono contemporaneamente all'oggetto **file** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,7 +51,7 @@ Handle di file.
 
 ## <a name="remarks"></a>Note
 
-Il **lock_file** funzione blocchi il **FILE** specificato dall'oggetto *file*. Il file sottostante non sia bloccato da **lock_file**. Usare [unlock_file](unlock-file.md) per rilasciare il blocco sul file. Le chiamate a **lock_file** e **unlock_file** devono corrispondere in un thread.
+La funzione **_lock_file** blocca l'oggetto **file** specificato dal *file*. Il file sottostante non è bloccato da **_lock_file**. Usare [unlock_file](unlock-file.md) per rilasciare il blocco sul file. È necessario trovare una corrispondenza tra le chiamate a **_lock_file** e **_unlock_file** in un thread.
 
 ## <a name="requirements"></a>Requisiti
 

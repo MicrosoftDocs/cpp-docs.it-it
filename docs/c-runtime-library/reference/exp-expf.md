@@ -1,11 +1,11 @@
 ---
 title: exp, expf, expl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - expf
 - expl
 - exp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _expl
 - expf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 380f3e861b3ae1ba2f57aa781c32829771612b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288188"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941630"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,24 +67,24 @@ long double expl(
 ### <a name="parameters"></a>Parametri
 
 *x*<br/>
-Valore di virgola mobile a exponentiate la base logaritmica naturale *elettronica* da.
+Valore a virgola mobile in cui exponentiate il logaritmo naturale base *e* da.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **exp** le funzioni restituiscono il valore esponenziale del parametro a virgola mobile *x*, se ha esito positivo. Vale a dire, il risultato viene *elettronica*<sup>*x*</sup>, dove *e* costituisce la base del logaritmo naturale. In caso di overflow, la funzione restituisce INF (infinito) e in caso di underflow, **exp** restituisce 0.
+Le funzioni **Exp** restituiscono il valore esponenziale del parametro a virgola mobile, *x*, se ha esito positivo. Ovvero il risultato è *e*<sup>*x*</sup>, dove *e* è la base del logaritmo naturale. In un overflow, la funzione restituisce INF (infinito) e in underflow, **Exp** restituisce 0.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|+ NaN non interattivo, indeterminato|nessuno|_DOMAIN|
-|+ Infinity|NON VALIDO|_DOMAIN|
+|± NaN silenzioso, indeterminato|Nessuna|_DOMAIN|
+|Infinito ±|NON VALIDO|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
-Il **exp** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+La funzione **Exp** ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Note
 
-C++ consente l'overload, quindi è possibile chiamare overload di **exp** che accettano un **float** oppure **long double** argomento. In un programma C **exp** accetta e restituisce sempre un **doppie**.
+C++consente l'overload, quindi è possibile chiamare gli overload di **Exp** che accettano un argomento **float** o **long double** . In un programma C, **Exp** accetta e restituisce sempre un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

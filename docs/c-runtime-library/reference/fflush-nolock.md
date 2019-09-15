@@ -1,9 +1,9 @@
 ---
 title: _fflush_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fflush_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fflush_nolock
 - _fflush_nolock
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-ms.openlocfilehash: 721098899525df02dc3b3d121cf894f8056fcb98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f31ef5018abd9adbe9b9db00aaa91e3f0f0c01d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334296"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940971"
 ---
-# <a name="fflushnolock"></a>_fflush_nolock
+# <a name="_fflush_nolock"></a>_fflush_nolock
 
 Scarica un flusso senza bloccare il thread.
 
@@ -55,7 +58,7 @@ Vedere [fflush](fflush.md).
 
 ## <a name="remarks"></a>Note
 
-Questa funzione è una versione non blocca il thread del **fflush**. È identico a **fflush** ad eccezione del fatto che non è protetta da interferenze da altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Questa funzione è una versione non di blocco di **fflush**. È identica a **fflush** , con la differenza che non è protetta da interferenze da parte di altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ## <a name="requirements"></a>Requisiti
 

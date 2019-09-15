@@ -1,9 +1,9 @@
 ---
 title: wctype
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctype
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f77082bbcc5f3cd9d82fb40993c3ac678e7e7ba2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155316"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957794"
 ---
 # <a name="wctype"></a>wctype
 
@@ -47,7 +50,7 @@ Stringa di proprietà.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se il **LC_CTYPE** categoria delle impostazioni locali correnti non definisce una regola di classificazione il cui nome corrisponde alla stringa di proprietà *proprietà*, la funzione restituisce zero. In caso contrario, restituisce un valore diverso da zero adatto per l'uso come secondo argomento per una chiamata successiva a [towctrans](towctrans.md).
+Se la categoria **LC_CTYPE** delle impostazioni locali correnti non definisce una regola di classificazione il cui nome corrisponde alla *Proprietà*della stringa di proprietà, la funzione restituisce zero. In caso contrario, restituisce un valore diverso da zero adatto per l'uso come secondo argomento per una chiamata successiva a [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Note
 
@@ -56,15 +59,15 @@ La funzione determina una regola di classificazione per i codici di caratteri wi
 |Funzione|Uguale a|
 |--------------|-------------|
 |iswalnum(c)|iswctype(c, wctype( "alnum" ) )|
-|iswalpha(c)|iswctype(c, wctype( "alpha" ) )|
+|iswalpha (c)|iswctype(c, wctype( "alpha" ) )|
 |iswcntrl(c)|iswctype(c, wctype( "cntrl" ) )|
-|iswdigit(c)|iswctype(c, wctype( "digit" ) )|
-|iswgraph(c)|iswctype(c, wctype( "graph" ) )|
-|iswlower(c)|iswctype(c, wctype( "lower" ) )|
-|iswprint(c)|iswctype(c, wctype( "print" ) )|
-|iswpunct(c)|iswctype(c, wctype( "punct" ) )|
-|iswspace(c)|iswctype(c, wctype( "space" ) )|
-|iswupper(c)|iswctype(c, wctype( "upper" ) )|
+|iswdigit (c)|iswctype(c, wctype( "digit" ) )|
+|iswgraph (c)|iswctype (c, wctype ("Graph"))|
+|iswlower (c)|iswctype(c, wctype( "lower" ) )|
+|iswprint(c)|iswctype (c, wctype ("Print"))|
+|iswpunct (c)|iswctype (c, wctype ("punct"))|
+|iswspace (c)|iswctype (c, wctype ("spazio"))|
+|iswupper (c)|iswctype(c, wctype( "upper" ) )|
 |iswxdigit(c)|iswctype(c, wctype( "xdigit" ) )|
 
 ## <a name="requirements"></a>Requisiti

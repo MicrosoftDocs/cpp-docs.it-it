@@ -1,11 +1,11 @@
 ---
 title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348575"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939392"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Recupera l'arcocoseno di un numero complesso, con raggi compreso nell'intervallo [-1, + 1] lungo l'asse reale.
+Recupera l'arcoseno di un numero complesso, con tagli di rami al di fuori dell'intervallo [-1, + 1] lungo l'asse reale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,11 +64,11 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-L'arcocoseno di un *z*, espresso in radianti. Il risultato è unbounded lungo l'asse immaginario e nel nell'intervallo [0, π] lungo l'asse reale. Se si verificherà un errore di dominio *z* è compreso nell'intervallo [-1, + 1].
+Arcoseno di *z*, in radianti. Il risultato è unbounded lungo l'asse immaginario e in nell'intervallo [0, π] lungo l'asse reale. Si verificherà un errore di dominio se *z* non è compreso nell'intervallo [-1, + 1].
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **cacos** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **cacos** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **Cacos** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **Cacos** accetta e restituisce sempre un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

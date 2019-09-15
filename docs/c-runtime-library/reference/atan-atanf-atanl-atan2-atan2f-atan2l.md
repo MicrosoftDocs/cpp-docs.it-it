@@ -1,14 +1,14 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atan2f
 - atan2l
 - atan2
 - atanf
 - atan
 - atanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atan
 - atan2l
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341717"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939600"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Calcola l'arcotangente del **x** (**atan**, **atanf**, e **atanl**) o l'arcotangente di **y** / **x** (**atan2**, **atan2f**, e **atan2l**).
+Calcola il arcotangente di **x** (**atan**, **atanf**e **atanl**) o la arcotangente di **y**/**x** (**Atan2**, **atan2f**e **atan2l**).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -76,9 +79,9 @@ Qualsiasi numero.
 
 ## <a name="return-value"></a>Valore restituito
 
-**atan** restituisce l'arcotangente del *x* nell'intervallo - π/2 in π/2 radianti. **atan2** restituisce l'arcotangente del *y*/*x* nell'intervallo - π in radianti π. Se *x* è 0, **atan** restituisce 0. Se entrambi i parametri del **atan2** sono pari a 0, la funzione restituisce 0. Tutti i risultati sono in radianti.
+**atan** restituisce il arcotangente di *x* compreso tra-π/2 e π/2 radianti. **Atan2** restituisce il arcotangente di *y*/*x* compreso tra-π e π radianti. Se *x* è 0, **atan** restituisce 0. Se entrambi i parametri di **Atan2** sono 0, la funzione restituisce 0. Tutti i risultati sono in radianti.
 
-**atan2** Usa i segni di entrambi i parametri per determinare il quadrante del valore restituito.
+**Atan2** usa i segni di entrambi i parametri per determinare il quadrante del valore restituito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
@@ -86,11 +89,11 @@ Qualsiasi numero.
 
 ## <a name="remarks"></a>Note
 
-Il **atan** funzione calcola l'arcotangente (la funzione tangente inversa) di *x*. **atan2** calcola l'arcotangente del *y*/*x* (se *x* è uguale a 0, **atan2** restituisce π/2 se *y* è un valore positivo, if/2 - π *y* è negativo o 0 se *y* è 0.)
+La funzione **atan** calcola il arcotangente (funzione inversa della tangente) di *x*. **Atan2** calcola il arcotangente di *y*/*x* (se *x* è uguale a 0, **Atan2** restituisce π/2 Se *y* è positivo,-π/2 Se *y* è negativo oppure 0 se *y* è 0).
 
 **atan** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **atan** e **atan2** che accettano **float** oppure **lungo** **double**  argomenti. In un programma C **atan** e **atan2** accettano sempre **double** argomenti e restituiscono un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **atan** e **Atan2** che accettano gli argomenti di tipo **float** o **Long** **Double** . In un programma C, **atan** e **Atan2** accettano sempre gli argomenti **doppi** e restituiscono un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

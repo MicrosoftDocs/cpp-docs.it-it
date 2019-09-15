@@ -1,9 +1,9 @@
 ---
 title: _isatty
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isatty
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isatty
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157474"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954561"
 ---
-# <a name="isatty"></a>_isatty
+# <a name="_isatty"></a>_isatty
 
 Determina se un descrittore di file è associato a un dispositivo a caratteri.
 
@@ -48,13 +51,13 @@ Descrittore di file che fa riferimento al dispositivo da testare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**isatty** restituisce un valore diverso da zero se il descrittore è associato un dispositivo a caratteri. In caso contrario, **isatty** restituisce 0.
+**_isatty** restituisce un valore diverso da zero se il descrittore è associato a un dispositivo a caratteri. In caso contrario, **_isatty** restituisce 0.
 
 ## <a name="remarks"></a>Note
 
-Il **isatty** funzione determina se *fd* è associato un dispositivo a caratteri (terminale, console, stampante o porta seriale).
+La funzione **_isatty** determina se *FD* è associato a un dispositivo a caratteri (un terminale, una console, una stampante o una porta seriale).
 
-Questa funzione convalida il *fd* parametro. Se *fd* è un puntatore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e imposta **errno** al **EBADF**.
+Questa funzione convalida il parametro *FD* . Se *FD* è un puntatore di file errato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e **errno** viene impostato su **EBADF**.
 
 ## <a name="requirements"></a>Requisiti
 

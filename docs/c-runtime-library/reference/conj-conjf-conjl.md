@@ -1,11 +1,11 @@
 ---
 title: conj, conjf, conjl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - conj
 - conjf
 - conjl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - conj
 - conjf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb87e502d3fa927f10675796bae0b1d37115b2a2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335399"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939033"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -68,11 +71,11 @@ Numero complesso.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il complesso coniugato di *z*.  Il risultato ha la stessa parte reale e immaginaria come *z*, ma con segno opposto.
+Coniugato complesso di *z*.  Il risultato ha la stessa parte reale e immaginaria della *z*, ma con segno opposto.
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **conj** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **conj** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **CONJ** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **CONJ** accetta e restituisce sempre un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

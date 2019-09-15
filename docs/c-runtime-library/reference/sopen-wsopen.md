@@ -1,10 +1,10 @@
 ---
 title: _sopen, _wsopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sopen
 - _wsopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsopen
 - wsopen
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-ms.openlocfilehash: b3773550fd32df75f0a3819767de1171daebaf0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d337b2353ad15eade15235b4b5217a3b881bab1d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355393"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948053"
 ---
-# <a name="sopen-wsopen"></a>_sopen, _wsopen
+# <a name="_sopen-_wsopen"></a>_sopen, _wsopen
 
-Apre un file per la condivisione. Sono disponibili versioni più sicure di queste funzioni: vedere [sopen_s, wsopen_s](sopen-s-wsopen-s.md).
+Apre un file per la condivisione. Sono disponibili versioni più sicure di queste funzioni: vedere [_sopen_s, _wsopen_s](sopen-s-wsopen-s.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -78,13 +81,13 @@ Impostazione di autorizzazione.
 
 Ognuna di queste funzioni restituisce un descrittore di file per il file aperto.
 
-Se *nomefile* oppure *oflag* è un **NULL** puntatore, o se *oflag* o *shflag* non è compreso in un valore valido intervallo di valori, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** a uno dei valori seguenti.
+Se *filename* o *Oflag* è un puntatore **null** o se *Oflag* o *shflag* non è compreso in un intervallo di valori valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su uno dei valori seguenti.
 
 |Valore errno|Condizione|
 |-|-|
 | **EACCES** | Il percorso specificato è una directory o il file è di sola lettura, ma è stata tentata un'operazione di apertura in scrittura. |
-| **EEXIST** | **O_creat** e **o_excl** flag, sono stati specificati ma *filename* esiste già. |
-| **EINVAL** | Non è valido *oflag* oppure *shflag* argomento. |
+| **EEXIST** | Sono stati specificati i flag **_O_CREAT** e **_O_EXCL** , ma *filename* esiste già. |
+| **EINVAL** | Argomento *Oflag* o *shflag* non valido. |
 | **EMFILE** | Non sono disponibili altri descrittori di file. |
 | **ENOENT** | Il file o il percorso non è stato trovato. |
 
@@ -92,7 +95,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 ## <a name="remarks"></a>Note
 
-Il **sopen** funzione si apre il file specificato da *filename* e prepara il file per la lettura o scrittura, condivisa come definito dal *oflag* e *shflag* . **wsopen** è una versione a caratteri wide di **sopen**; gli *nomefile* argomento **wsopen** è una stringa di caratteri "wide". **wsopen** e **sopen** hanno lo stesso comportamento in caso contrario.
+La funzione **_sopen** apre il file specificato da *filename* e prepara il file per la lettura o la scrittura condivisa, come definito da *Oflag* e *shflag*. **_wsopen** è una versione a caratteri wide di **_sopen**; l'argomento *filename* per **_wsopen** è una stringa di caratteri wide. **_wsopen** e **_sopen** si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -100,44 +103,44 @@ Il **sopen** funzione si apre il file specificato da *filename* e prepara il fil
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen**|**_sopen**|**_sopen**|**_wsopen**|
 
-L'espressione integer *oflag* è costituita dalla combinazione di uno o più delle costanti manifesto seguenti, definite in \<fcntl. h >. Quando due o più costanti costituiscono l'argomento *oflag*, vengono combinate con l'operatore OR bit per bit ( **&#124;** ).
+L'espressione integer *Oflag* è costituita dalla combinazione di una o più delle costanti manifeste seguenti, definite in \<fcntl. h >. Quando due o più costanti formano l'argomento *Oflag*, vengono combinate con l'operatore OR bit per bit ( **&#124;** ).
 
-|*oflag* constant|Comportamento|
+|costante *Oflag*|Comportamento|
 |-|-|
 | **_O_APPEND** | Sposta il puntatore a file alla fine del file prima di ogni operazione di scrittura. |
 | **_O_BINARY** | Apre il file in modalità binaria (non convertita). Vedere [fopen](fopen-wfopen.md) per una descrizione della modalità binaria. |
-| **_O_CREAT** | Crea e apre un nuovo file per la scrittura. Non ha alcun effetto se il file specificato da *filename* esiste. Il *pmode* argomento è obbligatorio quando **o_creat** è specificato. |
-| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Crea un file come temporaneo e se possibile non lo scarica su disco. Il *pmode* argomento è obbligatorio quando **o_creat** è specificato. |
-| **_O_CREAT** &#124; **_O_TEMPORARY** | Crea un file come temporaneo; il file viene eliminato quando l'ultimo descrittore del file viene chiuso. Il *pmode* argomento è obbligatorio quando **o_creat** è specificato. |
-| **_O_CREAT** &#124; ` _O_EXCL` | Restituisce un errore se un file specificato da *filename* esiste. Si applica solo se abbinata **o_creat**. |
+| **_O_CREAT** | Crea e apre un nuovo file per la scrittura. Non ha alcun effetto se il file specificato da *filename* esiste. L'argomento *pmode* è obbligatorio quando si specifica **_O_CREAT** . |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Crea un file come temporaneo e se possibile non lo scarica su disco. L'argomento *pmode* è obbligatorio quando si specifica **_O_CREAT** . |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Crea un file come temporaneo; il file viene eliminato quando l'ultimo descrittore del file viene chiuso. L'argomento *pmode* è obbligatorio quando si specifica **_O_CREAT** . |
+| **_O_CREAT** &#124; ` _O_EXCL` | Restituisce un valore di errore se esiste un file specificato da *filename* . Si applica solo se usato con **_O_CREAT**. |
 | **_O_NOINHERIT** | Impedisce la creazione di un descrittore di file condiviso. |
 | **_O_RANDOM** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
-| **_O_RDONLY** | Apre un file per la sola lettura. Non è possibile specificare con **o_rdwr** oppure **o_wronly**. |
-| **_O_RDWR** | Apre un file per lettura e scrittura. Non è possibile specificare con **o_rdonly** oppure **o_wronly**. |
+| **_O_RDONLY** | Apre un file per la sola lettura. Non può essere specificato con **_O_RDWR** o **_O_WRONLY**. |
+| **_O_RDWR** | Apre un file per lettura e scrittura. Non può essere specificato con **_O_RDONLY** o **_O_WRONLY**. |
 | **_O_SEQUENTIAL** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco. |
 | **_O_TEXT** | Apre un file in modalità testo (convertito). Per altre informazioni, vedere [I/O file in modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [fopen](fopen-wfopen.md). |
-| **_O_TRUNC** | Apre un file e lo tronca a lunghezza zero; il file deve disporre dell'autorizzazione di scrittura. Non è possibile specificare con **o_rdonly**. **O_trunc** abbinata **o_creat** apre un file esistente o crea un file. **Nota:** Il **o_trunc** flag distrugge il contenuto del file specificato. |
-| **_O_WRONLY** | Apre un file per la sola scrittura. Non è possibile specificare con **o_rdonly** oppure **o_rdwr**. |
+| **_O_TRUNC** | Apre un file e lo tronca a lunghezza zero; il file deve disporre dell'autorizzazione di scrittura. Non può essere specificato con **_O_RDONLY**. **_O_TRUNC** usato con **_O_CREAT** apre un file esistente o crea un file. **Nota:** Il flag **_O_TRUNC** Elimina il contenuto del file specificato. |
+| **_O_WRONLY** | Apre un file per la sola scrittura. Non può essere specificato con **_O_RDONLY** o **_O_RDWR**. |
 | **_O_U16TEXT** | Apre un file in modalità Unicode UTF-16. |
 | **_O_U8TEXT** | Apre un file in modalità Unicode UTF-8. |
 | **_O_WTEXT** | Apre un file in modalità Unicode. |
 
-Per specificare la modalità di accesso ai file, è necessario specificare **o_rdonly**, **o_rdwr**, o **o_wronly**. Non vi è alcun valore predefinito per la modalità d'accesso.
+Per specificare la modalità di accesso ai file, è necessario specificare **_O_RDONLY**, **_O_RDWR**o **_O_WRONLY**. Non vi è alcun valore predefinito per la modalità d'accesso.
 
-Quando un file viene aperto in modalità Unicode usando **o_wtext**, **_O_U8TEXT**, o **_O_U16TEXT**, input funzioni traducono i dati vengono letti dal file in dati UTF-16 archiviati come tipo **wchar_t**. Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **wchar_t**. Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causerà un errore di convalida del parametro. Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
+Quando un file viene aperto in modalità Unicode usando **_O_WTEXT**, **_O_U8TEXT**o **_O_U16TEXT**, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **wchar_t**. Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **wchar_t**. Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causerà un errore di convalida del parametro. Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
 
-Se **sopen** viene chiamato con **o_wronly** | **o_append** (modalità di aggiunta) e **o_wtext**, **_O_ U16TEXT**, oppure **_O_U8TEXT**, esso tenta prima di aprire il file per lettura e scrittura, leggere il BOM e quindi riaprirlo per la sola scrittura. Se l'apertura del file per lettura e scrittura ha esito negativo, il file verrà aperto per la sola lettura e verrà usato il valore predefinito per l'impostazione della modalità Unicode.
+Se **_sopen** viene chiamato con **_O_WRONLY** |  **_O_APPEND** (modalità Append) e **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**, tenterà innanzitutto di aprire il file per la lettura e la scrittura, di leggere l'indicatore di ordine dei byte e quindi di riaprirlo per solo scrittura. Se l'apertura del file per lettura e scrittura ha esito negativo, il file verrà aperto per la sola lettura e verrà usato il valore predefinito per l'impostazione della modalità Unicode.
 
-L'argomento *shflag* è un'espressione costante costituita da una delle costanti manifesto seguenti, definite in \<Share. h >.
+L'argomento *shflag* è un'espressione costante costituita da una delle seguenti costanti manifesto, definite in \<share. h >.
 
-|*shflag* constant|Comportamento|
+|costante *shflag*|Comportamento|
 |-|-|
 | **_SH_DENYRW** | Nega l'accesso in lettura e scrittura a un file. |
 | **_SH_DENYWR** | Nega l'accesso in scrittura a un file. |
 | **_SH_DENYRD** | Nega l'accesso in lettura a un file. |
 | **_SH_DENYNO** | Consente l'accesso in lettura e scrittura. |
 
-Il *pmode* argomento è obbligatorio solo quando **o_creat** è specificato. Se il file non esiste, *pmode* specifica impostazioni di autorizzazione del file, che vengono impostate quando il nuovo file viene chiuso la prima volta. In caso contrario, *pmode* viene ignorato. *pmode* è un'espressione integer che contiene una o entrambe le costanti manifeste **s_iwrite** e **s_iread**, che sono definiti nella \<sys\stat.h. >. Quando vengono fornite entrambe le costanti, queste sono combinate con l'operatore OR bit per bit. Il significato dei *pmode* è come indicato di seguito.
+L'argomento *pmode* è obbligatorio solo quando si specifica **_O_CREAT** . Se il file non esiste, *pmode* specifica le impostazioni di autorizzazione del file, che vengono impostate quando il nuovo file viene chiuso la prima volta. In caso contrario, *pmode* viene ignorato. *pmode* è un'espressione Integer che contiene una o entrambe le costanti manifeste **_S_IWRITE** e **_S_IREAD**, definite in \<SYS\Stat.h >. Quando vengono fornite entrambe le costanti, queste sono combinate con l'operatore OR bit per bit. Il significato di *pmode* è il seguente.
 
 |*pmode*|Significato|
 |-|-|
@@ -145,9 +148,9 @@ Il *pmode* argomento è obbligatorio solo quando **o_creat** è specificato. Se 
 | **_S_IWRITE** | Scrittura consentita. (In effetti, consente la lettura e la scrittura) |
 | **_S_IREAD** &#124; **_S_IWRITE** | Lettura e scrittura consentite. |
 
-Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Nel sistema operativo Windows, tutti i file sono leggibili; non è possibile concedere l'autorizzazione di sola scrittura. Di conseguenza, le modalità **s_iwrite** e **s_iread** | **s_iwrite** sono equivalenti.
+Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Nel sistema operativo Windows, tutti i file sono leggibili; non è possibile concedere l'autorizzazione di sola scrittura. Pertanto, le modalità **_S_IWRITE** e **_S_IREAD** |  **_S_IWRITE** sono equivalenti.
 
-**sopen** applica la maschera di autorizzazione file corrente per *pmode* prima che siano impostate le autorizzazioni. Vedere [_umask](umask.md).
+**_sopen** applica la maschera di autorizzazione file corrente a *pmode* prima che vengano impostate le autorizzazioni. Vedere [_umask](umask.md).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,10 +1,10 @@
 ---
 title: _searchenv_s, _wsearchenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsearchenv_s
 - _searchenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _searchenv_s
 - _wsearchenv_s
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 606215fb7a2cce7929b29e2035f8e03556ca25e0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356823"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948794"
 ---
-# <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
+# <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
 Cerca un file usando i percorsi di ambiente. Queste versioni di [_searchenv, _wsearchenv](searchenv-wsearchenv.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -87,37 +90,37 @@ Nome del file di cui eseguire la ricerca.
 *varname*<br/>
 Ambiente per la ricerca.
 
-*pathname*<br/>
+*percorso*<br/>
 Buffer per l'archiviazione del percorso completo.
 
 *numberOfElements*<br/>
-Dimensioni dei *pathname* buffer.
+Dimensioni del buffer del *percorso* .
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero se con esito positivo; un codice di errore in caso di errore.
 
-Se *nomefile* è una stringa vuota, il valore restituito viene **ENOENT**.
+Se *filename* è una stringa vuota, il valore restituito è **ENOENT**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*filename*|*varname*|*pathname*|*numberOfElements*|Valore restituito|Contenuto di *pathname*|
+|*filename*|*varname*|*percorso*|*numberOfElements*|Valore restituito|Contenuto di *pathname*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|qualsiasi|qualsiasi|**NULL**|qualsiasi|**EINVAL**|N/D|
+|qualsiasi|qualsiasi|**NULL**|qualsiasi|**EINVAL**|n/d|
 |**NULL**|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|non modificato|
 |qualsiasi|qualsiasi|qualsiasi|<= 0|**EINVAL**|non modificato|
 
-Se si verifica una di queste condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **EINVAL**.
+Se si verifica una di queste condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **searchenv_s** routine cerca il file di destinazione nel dominio specificato. Il *varname* variabile può essere qualsiasi ambiente o variabile definita dall'utente che specifica un elenco di percorsi di directory, ad esempio **PATH**, **LIB**, e **inclusione** . In quanto **searchenv_s** tra maiuscole e minuscole, *varname* deve corrispondere al caso della variabile di ambiente. Se *varname* non corrisponde il nome di una variabile di ambiente definito nell'ambiente del processo, la funzione restituisce zero e il *pathname* variabile rimane invariata.
+La routine **_searchenv_s** Cerca il file di destinazione nel dominio specificato. La variabile *VarName* può essere qualsiasi ambiente o variabile definita dall'utente che specifica un elenco di percorsi di directory, ad esempio **path**, **lib**e **include**. Poiché **_searchenv_s** fa distinzione tra maiuscole e minuscole, *VarName* deve corrispondere al case della variabile di ambiente. Se *VarName* non corrisponde al nome di una variabile di ambiente definita nell'ambiente del processo, la funzione restituisce zero e la variabile *pathname* è invariata.
 
-La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione è in una di queste directory, il percorso appena creato viene copiato nel *pathname*. Se il *nomefile* non viene trovato alcun file, *pathname* contiene una stringa vuota con terminazione null.
+La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione si trova in una di queste directory, il percorso appena creato viene copiato in *pathname*. Se il file *filename* non viene trovato, *pathname* contiene una stringa vuota con terminazione null.
 
-Il *pathname* buffer deve essere almeno **MAX_PATH** caratteri per consentire la lunghezza totale del nome del percorso costruito. In caso contrario, **searchenv_s** potrebbe sovraccaricare la *pathname* buffer causando un comportamento imprevisto.
+Il buffer del *percorso* deve avere una lunghezza di almeno **_MAX_PATH** caratteri per contenere la lunghezza totale del nome del percorso costruito. In caso contrario, **_searchenv_s** potrebbe sovraccaricare il buffer del *percorso* causando un comportamento imprevisto.
 
-**wsearchenv_s** è una versione a caratteri wide di **searchenv_s**; gli argomenti **wsearchenv_s** sono stringhe a caratteri wide. **wsearchenv_s** e **searchenv_s** hanno lo stesso comportamento in caso contrario.
+**_wsearchenv_s** è una versione a caratteri wide di **_searchenv_s**; gli argomenti di **_wsearchenv_s** sono stringhe a caratteri wide. **_wsearchenv_s** e **_searchenv_s** si comportano in modo identico.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

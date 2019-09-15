@@ -1,9 +1,9 @@
 ---
 title: _ecvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _ecvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ecvt_s
 - _ecvt_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288253"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937720"
 ---
-# <a name="ecvts"></a>_ecvt_s
+# <a name="_ecvt_s"></a>_ecvt_s
 
-Converte un **doppie** numeri in una stringa. Questa è una versione di [_ecvt](ecvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) (Funzionalità di sicurezza in CRT).
+Converte un numero **doppio** in una stringa. Questa è una versione di [_ecvt](ecvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) (Funzionalità di sicurezza in CRT).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -81,30 +84,30 @@ Segno del numero convertito.
 
 Zero in caso di esito positivo. Il valore restituito è un codice di errore se si verifica un errore. I codici di errore sono definiti in Errno.h. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
-Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione chiama il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EINVAL**.
+Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione chiama il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valore restituito|Valore in *buffer*|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valore restituito|Valore nel *buffer*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
 |**NULL**|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
-|Non **NULL** (punta alla memoria valida)|<=0|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
+|Not **null** (punta alla memoria valida)|<=0|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
 |qualsiasi|qualsiasi|qualsiasi|qualsiasi|**NULL**|qualsiasi|**EINVAL**|Non modificato.|
 |qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**NULL**|**EINVAL**|Non modificato.|
 
 ## <a name="security-issues"></a>Problemi relativi alla sicurezza
 
-**ecvt_s** potrebbe generare una violazione di accesso se *buffer* punta alla memoria valida e non è **NULL**.
+**_ecvt_s** potrebbe generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**.
 
 ## <a name="remarks"></a>Note
 
-Il **ecvt_s** funzione converte un numero a virgola mobile in una stringa di caratteri. Il *Value* parametro indica il numero a virgola mobile da convertire. Questa funzione consente di archiviare fino a *conteggio* cifre *Value* sotto forma di stringa e aggiunge un carattere null ('\0'). Se il numero di cifre nella *Value* supera *Count*, la cifra meno significativa viene arrotondata. Se ci sono meno *conteggio* cifre, la stringa viene riempita con zeri.
+La funzione **_ecvt_s** converte un numero a virgola mobile in una stringa di caratteri. Il parametro *_Value* è il numero a virgola mobile da convertire. Questa funzione Archivia fino a *conteggiare* le cifre di *_Value* come stringa e aggiunge un carattere null (' \ 0'). Se il numero di cifre in *_Value* è maggiore di *_Count*, la cifra di ordine inferiore viene arrotondata. Se sono presenti meno di un *numero* di cifre, la stringa viene riempita con zeri.
 
-Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *Value* può essere ottenuto dalla *_Dec* e *_Sign* dopo la chiamata. Il *_Dec* punta a un valore integer che indica la posizione del separatore decimale rispetto all'inizio della stringa parametro. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il *_Sign* parametro punta a un numero intero che indica il segno del numero convertito. Se il valore intero è 0, il numero è positivo. In caso contrario, il risultato sarà negativo.
+Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *_Value* possono essere ottenuti da *_Dec* e *_Sign* dopo la chiamata. Il parametro *_Dec* punta a un valore integer che indica la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il parametro *_Sign* punta a un Integer che indica il segno del numero convertito. Se il valore intero è 0, il numero è positivo. In caso contrario, il risultato sarà negativo.
 
 Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a virgola mobile.
 
-La differenza tra **ecvt_s** e **fcvt_s** consiste nell'interpretazione dei *Count* parametro. **ecvt_s** interpreta *Count* come numero totale di cifre nella stringa di output, mentre **fcvt_s** interpreta *Count* come il numero di cifre dopo il il separatore decimale.
+La differenza tra **_ecvt_s** e **_fcvt_s** è l'interpretazione del parametro *_Count* . **_ecvt_s** interpreta *_Count* come il numero totale di cifre nella stringa di output, mentre **_fcvt_s** interpreta *_Count* come numero di cifre dopo il separatore decimale.
 
 In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

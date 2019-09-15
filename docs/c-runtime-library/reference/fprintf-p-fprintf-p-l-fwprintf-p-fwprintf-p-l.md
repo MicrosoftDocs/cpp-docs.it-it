@@ -1,12 +1,12 @@
 ---
 title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fwprintf_p
 - _fprintf_p_l
 - _fwprintf_p_l
 - _fprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fprintf_p
 - _ftprintf_p
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6509aba4097b3b37443443b533ebd9fb92c923a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333144"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956993"
 ---
-# <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
+# <a name="_fprintf_p-_fprintf_p_l-_fwprintf_p-_fwprintf_p_l"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 
 Stampa i dati formattati in un flusso.
 
@@ -95,20 +98,20 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fprintf_p** e **fwprintf_p** restituito il numero di caratteri scritti o un valore negativo quando si verifica un errore di output.
+**_fprintf_p** e **_fwprintf_p** restituiscono il numero di caratteri scritti o restituiscono un valore negativo quando si verifica un errore di output.
 
 ## <a name="remarks"></a>Note
 
-**fprintf_p** formatta e stampa una serie di caratteri e valori di output *flusso*. Ogni funzione *argomenti* (se presente) viene convertita e restituita in base alla specifica di formato corrispondente in *formato*. Per la **fprintf_p**, il *formato* argomento ha la stessa sintassi e utilizzo in cui sia presente nel **printf_p**. Queste funzioni supportano parametri posizionali, vale a dire che l'ordine dei parametri usati dalla stringa di formato può essere modificato. Per altre informazioni sui parametri posizionali, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+**_fprintf_p** formatta e stampa una serie di caratteri e di valori nel *flusso*di output. Ogni *argomento* della funzione (se presente) viene convertito e restituito in base alla specifica di formato corrispondente nel *formato*. Per **_fprintf_p**, l'argomento *Format* ha la stessa sintassi e lo usa in **_printf_p**. Queste funzioni supportano parametri posizionali, vale a dire che l'ordine dei parametri usati dalla stringa di formato può essere modificato. Per altre informazioni sui parametri posizionali, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**fwprintf_p** è una versione a caratteri wide di **fprintf_p**; nella **fwprintf_p**, *formato* è una stringa di caratteri "wide". Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fprintf_p** attualmente non supporta output in un flusso UNICODE.
+**_fwprintf_p** è una versione a caratteri wide di **_fprintf_p**; in **_fwprintf_p**, *Format* è una stringa di caratteri wide. Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **_fprintf_p** attualmente non supporta l'output in un flusso Unicode.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente.
 
-Come le versioni non sicure (vedere [fprintf, fprintf_l, fwprintf, fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), queste funzioni convalidano i parametri e richiamano il gestore di parametri non validi, come descritto in [convalidadeiparametri](../../c-runtime-library/parameter-validation.md), se il valore *stream* oppure *formato* è un puntatore null o se sono presenti identificatori di formattazione sconosciuti o non corretti. Se l'esecuzione può continuare, le funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
+Come le versioni non sicure (vedere [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), queste funzioni convalidano i relativi parametri e richiamano il gestore di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), se *Stream* o  *Format* è un puntatore null o se sono presenti identificatori di formattazione sconosciuti o non formattati correttamente. Se l'esecuzione può continuare, le funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

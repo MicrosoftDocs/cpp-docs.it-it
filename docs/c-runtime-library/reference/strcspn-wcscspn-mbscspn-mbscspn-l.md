@@ -1,12 +1,12 @@
 ---
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscspn_l
 - wcscspn
 - _mbscspn
 - strcspn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcspn
 - _mbscspn
@@ -39,19 +42,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 501732cd4758d14a32aba3bdf503c5d314eee7f9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353976"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940762"
 ---
-# <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
+# <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
 Restituisce l'indice della prima occorrenza in una stringa di un carattere che appartiene a un set di caratteri.
 
 > [!IMPORTANT]
-> **mbschr** e **mbschr_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbschr** e **_mbschr_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -88,15 +91,15 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Queste funzioni restituiscono l'indice del primo carattere in *str* che si trova in *strCharSet*. Se nessuno dei caratteri *str* le novità *strCharSet*, quindi il valore restituito è la lunghezza del *str*.
+Queste funzioni restituiscono l'indice del primo carattere in *Str* che si trova in *strCharSet*. Se nessuno dei caratteri in *Str* è in *strCharSet*, il valore restituito è la lunghezza di *Str*.
 
 Nessun valore restituito è riservato per indicare un errore.
 
 ## <a name="remarks"></a>Note
 
-**wcscspn** e **mbscspn** sono versioni a caratteri wide e caratteri multibyte di **strcspn**. Gli argomenti di **wcscspn** sono caratteri wide, mentre quelli di stringhe **mbscspn** sono stringhe a caratteri multibyte.
+**wcscspn** e **_mbscspn** sono versioni a caratteri wide e a caratteri multibyte di **strcspn**. Gli argomenti di **wcscspn** sono stringhe a caratteri wide. quelli di **_mbscspn** sono stringhe di caratteri multibyte.
 
-**mbscspn** convalida i propri parametri. Se uno dei due *str* oppure *strCharSet* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e imposta **errno** al **EINVAL**. **strcspn** e **wcscspn** non convalidano i relativi parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
+**_mbscspn** convalida i relativi parametri. Se *Str* o *strCharSet* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e **errno** viene impostato su **EINVAL**. **strcspn** e **wcscspn** non convalidano i relativi parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -105,7 +108,7 @@ La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazi
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscspn**|**strcspn**|**_mbscspn**|**wcscspn**|
-|N/D|N/D|**_mbscspn_l**|N/D|
+|n/d|n/d|**_mbscspn_l**|n/d|
 
 ## <a name="requirements"></a>Requisiti
 

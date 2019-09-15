@@ -1,11 +1,11 @@
 ---
 title: asinh, asinhf, asinhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinh
 - asinhf
 - asinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asinhf
 - asinhl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341782"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939647"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -58,15 +61,15 @@ Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **asinh** le funzioni restituiscono il seno iperbolico inverso (seno iperbolico) della *x*. Questa funzione è valida nel dominio a virgola mobile. Se *x* è un NaN non interattivo, un valore indefinito o infinito, viene restituito lo stesso valore.
+Le funzioni **asinh** restituiscono il seno iperbolico inverso (seno iperbolico d'arco) di *x*. Questa funzione è valida nel dominio a virgola mobile. Se *x* è un valore NaN non interattiva, indefinito o infinito, viene restituito lo stesso valore.
 
-|Input|Eccezione SEH|**matherr** eccezione|
+|Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|none|none|
 
 ## <a name="remarks"></a>Note
 
-Quando si usa C++, è possibile chiamare overload di **asinh** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **asinh** accetta e restituisce sempre **doppie**.
+Quando si usa C++, è possibile chiamare gli overload di **asinh** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C **asinh** accetta e restituisce sempre **Double**.
 
 ## <a name="requirements"></a>Requisiti
 

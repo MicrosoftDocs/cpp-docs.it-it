@@ -1,10 +1,10 @@
 ---
 title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memicmp_l
 - _memicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memicmp
 - memicmp_l
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285274"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951834"
 ---
-# <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
+# <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
 Confronta i caratteri in due buffer (senza distinzione tra maiuscole e minuscole).
 
@@ -74,18 +77,18 @@ Il valore restituito indica la relazione tra i buffer.
 
 |Valore restituito|Relazione dei primi byte corrispondenti al conteggio di buf1 e buf2|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* minore *buffer2*.|
-|0|*buffer1* identica alla *buffer2*.|
-|> 0|*buffer1* maggiore *buffer2*.|
+|< 0|*buffer1* minore di *buffer2*.|
+|0|*buffer1* identico a *buffer2*.|
+|> 0|*buffer1* maggiore di *buffer2*.|
 |**_NLSCMPERROR**|Si è verificato un errore.|
 
 ## <a name="remarks"></a>Note
 
-Il **memicmp** funzione Confronta i primi *conteggio* caratteri di due buffer *buffer1* e *buffer2* byte per byte. Nel confronto non viene fatta distinzione tra maiuscole e minuscole.
+La funzione **_memicmp** Confronta i primi caratteri di *conteggio* dei due buffer *buffer1* e *buffer2* byte per byte. Nel confronto non viene fatta distinzione tra maiuscole e minuscole.
 
-Se uno dei due *buffer1* oppure *buffer2* è un puntatore null, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **_NLSCMPERROR** e imposta **errno** al **EINVAL**.
+Se *buffer1* o *buffer2* è un puntatore null, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **_NLSCMPERROR** e imposta **errno** su **EINVAL**.
 
-**memicmp** Usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; **memicmp_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_memicmp** usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; **_memicmp_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

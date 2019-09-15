@@ -1,10 +1,10 @@
 ---
 title: _ismbbalpha, _ismbbalpha_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbalpha
 - _ismbbalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbbalpha
 - ismbbalpha_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: c08a92ae0630c977f12deb1d0bd7587f575efd86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe60eec2eb7f93d866340aabe382bf32d6b04b21
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331558"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954251"
 ---
-# <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
+# <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha, _ismbbalpha_l
 
 Determina se un carattere multibyte specificato corrisponde ad alfa.
 
@@ -60,11 +63,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**ismbbalpha** restituisce un valore diverso da zero se l'espressione:
+**_ismbbalpha** restituisce un valore diverso da zero se l'espressione:
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-è diverso da zero per *c*, oppure 0 in caso contrario. **ismbbalpha** Usa le impostazioni locali correnti per le impostazioni del carattere dipendente dalle impostazioni locali. **ismbbalpha_l** è identica, ma usa le impostazioni locali passata.
+è diverso da zero per *c*oppure 0 in caso contrario. **_ismbbalpha** usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. **_ismbbalpha_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate.
 
 ## <a name="requirements"></a>Requisiti
 

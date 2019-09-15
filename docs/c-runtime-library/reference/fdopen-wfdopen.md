@@ -1,10 +1,10 @@
 ---
 title: _fdopen, _wfdopen
 ms.date: 12/12/2017
-apiname:
+api_name:
 - _fdopen
 - _wfdopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tfdopen
 - _fdopen
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5202c84cd1a9038faf68587f9207d376ed8c0af1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334775"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941252"
 ---
-# <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
+# <a name="_fdopen-_wfdopen"></a>_fdopen, _wfdopen
 
 Associa un flusso a un file che è stato precedentemente aperto per I/O di basso livello.
 
@@ -67,62 +70,62 @@ Tipo di accesso ai file.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore al flusso aperto. Un valore di puntatore Null indica un errore. Quando si verifica un errore, viene richiamato il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EBADF**, che indica un descrittore di file non valido, o **EINVAL**, che indica che *modalità*  era un puntatore null.
+Ognuna di queste funzioni restituisce un puntatore al flusso aperto. Un valore di puntatore Null indica un errore. Quando si verifica un errore, viene richiamato il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EBADF**, che indica un descrittore di file non valido, o **EINVAL**, che indica che la *modalità* è un puntatore null.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **fdopen** funzione associa un flusso dei / o con il file identificato dal *fd*in modo da consentire un file che viene aperto per i/o di basso livello essere memorizzati nel buffer e formattato. **wfdopen** è una versione a caratteri wide di **fdopen**; gli *modalità* argomento **wfdopen** è una stringa di caratteri "wide". **wfdopen** e **fdopen** in caso contrario, si comportano in modo identico.
+La funzione **_fdopen** associa un flusso di i/o al file identificato da *FD*e consente quindi a un file aperto per l'i/o di basso livello di essere memorizzato nel buffer e formattato. **_wfdopen** è una versione a caratteri wide di **_fdopen**; l'argomento *mode* per **_wfdopen** è una stringa di caratteri wide. **_wfdopen** e **_fdopen** altrimenti si comportano in modo identico.
 
-File descrittori passati **fdopen** sono di proprietà dall'oggetto restituito **FILE &#42;**  flusso. Se **fdopen** ha esito positivo, non chiamare [ \_chiudere](close.md) nel descrittore di file. La chiamata [fclose](fclose-fcloseall.md) sull'oggetto restituito **FILE &#42;**  chiude anche il descrittore del file.
+I descrittori di file passati in **_fdopen** sono di proprietà del flusso di **file &#42;**  restituito. Se **_fdopen** ha esito positivo, non chiamare [ \_Close](close.md) sul descrittore del file. La chiamata di [fclose](fclose-fcloseall.md) nel **file &#42;**  restituito chiude anche il descrittore del file.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|
+|Routine Tchar.h|\_Unicode e \_MBCS non definiti|\_MBCS definito|\_Definito UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
-Il *modalità* stringa di caratteri specifica il tipo di accesso al file richiesto per il file:
+La stringa di caratteri *mode* specifica il tipo di accesso ai file richiesto per il file:
 
 | *mode* | Accesso |
 |--------|--------|
-| **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **fopen** chiamata ha esito negativo. |
+| **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, la chiamata di fopen ha esito negativo. |
 | **"w"** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
 | **"a"** | Viene aperto per la scrittura alla fine del file (aggiunta). Creare il file se è inesistente. |
 | **"r+"** | Viene aperto per la lettura e la scrittura. Il file deve esistere. |
 | **"w+"** | Apre un file vuoto per la lettura e la scrittura. Se il file esiste, il contenuto viene eliminato in modo permanente. |
 | **"a+"** | Viene aperto per la lettura e l'aggiunta. Creare il file se è inesistente. |
 
-Quando un file viene aperto con il **"a"** oppure **"a +"** accedere a tipo, tutte le operazioni vengono eseguite alla fine del file di scrittura. Il puntatore del file può essere riposizionato usando [fseek](fseek-fseeki64.md) oppure [rewind](rewind.md), ma viene sempre spostato di nuovo alla fine del file prima di qualsiasi operazione di scrittura. Di conseguenza, i dati esistenti non possono essere sovrascritti. Quando la **"r +"**, **"w +"**, o **"a +"** viene specificato il tipo di accesso, sono consentite sia la lettura e scrittura (il file viene definito aperto per "update"). Tuttavia, quando si passa da lettura a scrittura, deve esserci una nuova [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), oppure [rewind](rewind.md) operazione. È possibile specificare la posizione corrente per il [fsetpos](fsetpos.md) oppure [fseek](fseek-fseeki64.md) operazione, se si desidera.
+Quando un file viene aperto con il tipo di accesso **"a"** o **"a +"** , tutte le operazioni di scrittura si verificano alla fine del file. Il puntatore del file può essere riposizionato utilizzando [fseek](fseek-fseeki64.md) o [Rewind](rewind.md), ma viene sempre spostato di nuovo alla fine del file prima che venga eseguita un'operazione di scrittura. Di conseguenza, i dati esistenti non possono essere sovrascritti. Quando viene specificato il tipo di accesso **"r +"** , **"w +"** o **"a +"** , sono consentite sia la lettura che la scrittura (il file viene definito aperto per "aggiornare"). Tuttavia, quando si passa dalla lettura alla scrittura, è necessario che sia presente un'operazione [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md)o [Rewind](rewind.md) corrispondente. Se lo si desidera, è possibile specificare la posizione corrente per l'operazione [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) .
 
-Oltre ai valori specificati sopra, i caratteri seguenti possono essere incluso anche nelle *modalità* per specificare la modalità di conversione per caratteri di nuova riga:
+Oltre ai valori precedenti, è anche possibile includere i caratteri seguenti in *modalità* per specificare la modalità di conversione per i caratteri di nuova riga:
 
-| *modalità* modificatore | Comportamento |
+| modificatore di *modalità* | Comportamento |
 |-----------------|----------|
 | **t** | Aprire in modalità testo (convertita). In questa modalità, le combinazioni di ritorno a capo-avanzamento di riga (CR-LF) vengono convertite in un avanzamento riga (LF) al momento dell'input e i caratteri di avanzamento riga vengono convertiti in combinazioni di ritorno a capo-avanzamento di riga (CR-LF) al momento dell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. |
-| **b** | Aprire in modalità binaria (non convertita). Tutte le conversioni dalla **t** modalità vengono soppressi. |
-| **c** | Abilitare il flag commit per la proprietà associata *nomefile* in modo che il contenuto del buffer di file viene scritti direttamente su disco se **fflush** oppure **FlushAll** viene chiamato. |
-| **n** | Reimpostare il flag commit per la proprietà associata *filename* per "no-commit". Questa è l'impostazione predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a Commode.obj. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a Commode.obj. |
+| **b** | Aprire in modalità binaria (non convertita). Tutte le traduzioni dalla modalità **t** vengono evitate. |
+| **c** | Abilitare il flag commit per il *nome file* associato, in modo che il contenuto del buffer di file venga scritto direttamente su disco se viene chiamato **fflush** o **_flushall** . |
+| **n** | Reimpostare il flag di commit per il *nome file* associato su "no-commit". Questa è l'impostazione predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a Commode.obj. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a Commode.obj. |
 
-Il **t**, **c**, e **n** *modalità* opzioni sono estensioni Microsoft per **fopen** e**fdopen**. Non usarle se si desidera mantenere la portabilità ANSI.
+Le opzioni della *modalità* **t**, **c**e **n** sono estensioni Microsoft per **fopen** e **_fdopen**. Non usarle se si desidera mantenere la portabilità ANSI.
 
-Se **t** oppure **b** non è specificato in *modalità*, la modalità di traduzione predefinita è definita dalla variabile globale [ \_fmode](../../c-runtime-library/fmode.md). Se **t** oppure **b** viene utilizzato come prefisso per l'argomento, la funzione ha esito negativo e viene restituito NULL. Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Se **t** o **b** non è specificato in *modalità*, la modalità di conversione predefinita è definita dalla variabile [ \_globale fmode](../../c-runtime-library/fmode.md). Se **t** o **b** è preceduto dall'argomento, la funzione ha esito negativo e restituisce null. Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-I caratteri validi per il *modalità* stringa usata nella **fopen** e **fdopen** corrispondono alle *oflag* argomenti utilizzati in [ \_apre](open-wopen.md) e [ \_sopen](sopen-wsopen.md), come illustrato in questa tabella:
+I caratteri validi per la stringa della *modalità* utilizzata in **fopen** e **_fdopen** corrispondono agli argomenti *Oflag* utilizzati in [ \_Open](open-wopen.md) e [ \_sopen](sopen-wsopen.md), come illustrato nella tabella seguente:
 
-|I caratteri *modalità* stringa|Equivalente *oflag* affare **Open** e **sopen**|
+|Caratteri nella stringa della *modalità*|Valore *Oflag* equivalente per **_open** e **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**a**|**\_U\_WRONLY &#124; \_u\_APPEND** (in genere  **\_u\_WRONLY &#124; \_u\_per creare &#124; \_u \_APPEND**)|
-|**a+**|**\_O\_RDWR &#124; \_O\_APPEND** (usually **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_CREAT** )|
+|**a**|**\_O\_ &#124; WRONLYoAppend\_(in genere o WRONLY o create o \_**  **&#124; \_ &#124; \_\_ \_ \_\_ ACCODA**)|
+|**a+**|**\_O\_ &#124; RDWRoAppend\_(in genere o RDWR o Append o creat \_** **&#124; \_\_ &#124; \_\_\_ \_** )|
 |**r**|**\_O\_RDONLY**|
 |**r+**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (usually **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
-|**w+**|**\_O\_RDWR** (usually **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
-|**b**|**\_O\_BINARY**|
+|**w**|**\_O\_WRONLY** (in  **\_genere o &#124; &#124; WRONLY o create o\_tronca)\_\_ \_\_**|
+|**w +**|**\_O\_RDWR** (in  **\_genere o &#124; &#124; RDWR o create o\_tronca)\_\_ \_\_**|
+|**b**|**\_BINARIO\_O**|
 |**t**|**\_O\_TEXT**|
-|**c**|nessuno|
-|**n**|nessuno|
+|**c**|Nessuna|
+|**n**|Nessuna|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -170,7 +173,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfdopentxt"></a>Input: crt_fdopen.txt
+### <a name="input-crt_fdopentxt"></a>Input: crt_fdopen.txt
 
 ```Input
 Line one
@@ -190,4 +193,4 @@ Lines in file: 2
 [fclose, \_fcloseall](fclose-fcloseall.md)<br/>
 [fopen, \_wfopen](fopen-wfopen.md)<br/>
 [freopen, \_wfreopen](freopen-wfreopen.md)<br/>
-[\_open, \_wopen](open-wopen.md)<br/>
+[\_Apri, \_wopen](open-wopen.md)<br/>

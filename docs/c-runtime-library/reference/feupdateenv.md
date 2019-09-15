@@ -1,9 +1,9 @@
 ---
 title: feupdateenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feupdateenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,20 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f40cab42e4a89b1fc5a100587b11b0e2aeeb55c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334074"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940981"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -43,7 +44,7 @@ int feupdateenv(
 ### <a name="parameters"></a>Parametri
 
 *penv*<br/>
-Puntatore a un **fenv_t** oggetto che contiene un ambiente a virgola mobile come impostato da una chiamata a [fegetenv](fegetenv1.md) oppure [feholdexcept](feholdexcept2.md). È anche possibile specificare l'ambiente a virgola mobile di avvio predefinito tramite la macro FE_DFL_ENV.
+Puntatore a un oggetto **fenv_t** che contiene un ambiente a virgola mobile impostato da una chiamata a [fegetenv](fegetenv1.md) o [feholdexcept](feholdexcept2.md). È anche possibile specificare l'ambiente a virgola mobile di avvio predefinito tramite la macro FE_DFL_ENV.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -51,7 +52,7 @@ Restituisce 0 se tutte le operazioni sono state completate correttamente. In cas
 
 ## <a name="remarks"></a>Note
 
-Il **feupdateenv** funzione esegue più azioni. Archivia prima i flag di stato delle eccezioni a virgola mobile attualmente generati in un'archiviazione automatica. Quindi imposta l'ambiente a virgola mobile corrente dal valore archiviato nel **fenv_t** oggetto a cui punta *penv*. Se *penv* non è **FE_DFL_ENV** oppure non punta a un valore valido **fenv_t** dell'oggetto, il successivo comportamento non è definito. Infine **feupdateenv** genera le eccezioni a virgola mobile archiviate localmente.
+La funzione **feupdateenv** esegue più azioni. Archivia prima i flag di stato delle eccezioni a virgola mobile attualmente generati in un'archiviazione automatica. Imposta quindi l'ambiente a virgola mobile corrente dal valore archiviato nell'oggetto **fenv_t** a cui punta *penv*. Se *penv* non è **FE_DFL_ENV** o non punta a un oggetto **fenv_t** valido, il comportamento successivo non è definito. Infine, **feupdateenv** genera le eccezioni a virgola mobile archiviate localmente.
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 

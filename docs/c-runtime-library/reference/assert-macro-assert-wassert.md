@@ -1,11 +1,11 @@
 ---
 title: Macro assert, _assert, _wassert
 ms.date: 11/04/2016
-apiname:
+api_name:
 - assert
 - _assert
 - _wassert
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - assert
 - _assert
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-ms.openlocfilehash: a2cc780fbc93aa66bd7fd613c3e155cda27eb7f9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: badca46a0793e51602f0de87dfca21816dcd6295
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500328"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939612"
 ---
 # <a name="assert-macro-_assert-_wassert"></a>Macro assert, _assert, _wassert
 
@@ -81,7 +84,7 @@ Il messaggio di diagnostica viene visualizzato in caratteri wide. Pertanto, funz
 
 La destinazione dei messaggi di diagnostica dipende dal tipo di applicazione che ha chiamato la routine. Le applicazioni console ricevono sempre il messaggio tramite **stderr**. In un'applicazione basata su Windows, **Assert** chiama la funzione [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) di Windows per creare una finestra di messaggio per visualizzare il messaggio insieme a un pulsante **OK** . Quando l'utente fa clic su **OK**, il programma terminerà immediatamente.
 
-Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime, **Assert** crea una finestra di messaggio con tre pulsanti:Interrompi, Riprova e **Ignora**. Se l'utente fa clic su **Interrompi**, il programma terminerà immediatamente. Se l'utente fa clic su **Riprova**, il debugger viene chiamato e l'utente può eseguire il debug del programma se il debug JIT (Just-In-Time) è abilitato. Se l'utente fa clic su **Ignora**, **Assert** continua con l'esecuzione normale: creando la finestra di messaggio con il pulsante **OK** . Si noti che facendo clic su **Ignora** quando esiste una condizione di errore può verificarsi un comportamento indefinito.
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime, **Assert** crea una finestra di messaggio con tre pulsanti: **Interrompi**, **Riprova**e **Ignora**. Se l'utente fa clic su **Interrompi**, il programma terminerà immediatamente. Se l'utente fa clic su **Riprova**, il debugger viene chiamato e l'utente può eseguire il debug del programma se il debug JIT (Just-In-Time) è abilitato. Se l'utente fa clic su **Ignora**, **Assert** continua con l'esecuzione normale: creando la finestra di messaggio con il pulsante **OK** . Si noti che facendo clic su **Ignora** quando esiste una condizione di errore può verificarsi un comportamento indefinito.
 
 Per ulteriori informazioni sul debug CRT, vedere [Tecniche di debug CRT](/visualstudio/debugger/crt-debugging-techniques).
 

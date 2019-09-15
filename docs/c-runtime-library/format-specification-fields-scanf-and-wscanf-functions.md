@@ -1,14 +1,17 @@
 ---
 title: 'Campi per la specifica di formato: funzioni scanf e wscanf'
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr90.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wscanf
 - scanf
@@ -21,12 +24,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 5b45de9af3642825f1fddf3a1560b2fc1dbc4ffc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 78b64ea29aebdfb355525be69dc7a9fdece55367
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748463"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944412"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Campi per la specifica di formato: funzioni scanf e wscanf
 

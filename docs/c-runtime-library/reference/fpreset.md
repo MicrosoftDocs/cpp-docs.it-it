@@ -1,9 +1,9 @@
 ---
 title: _fpreset
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpreset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fpreset
 - fpreset
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333235"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957006"
 ---
-# <a name="fpreset"></a>_fpreset
+# <a name="_fpreset"></a>_fpreset
 
 Reimposta il pacchetto a virgola mobile.
 
@@ -43,9 +46,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Note
 
-Il **fpreset** funzione reinizializza il pacchetto matematica a virgola mobile. **fpreset** viene in genere usato con **segnale**, **system**, o il **Exec** oppure **spawn** funzioni. Se un programma intercetta segnali di errore a virgola mobile (**SIGFPE**) con **segnale**, è possibile in modo sicuro un ripristino da errori a virgola mobile richiamando **fpreset** e l'utilizzo **longjmp**.
+La funzione **_fpreset** reinizializza il pacchetto matematico a virgola mobile. **_fpreset** viene in genere usato con le funzioni **Signal**, **System**o **_exec** o **_spawn** . Se un programma intrappola i segnali di errore a virgola mobile (**SIGFPE**) con **Signal**, può recuperare in modo sicuro gli errori a virgola mobile richiamando **_fpreset** e usando **longjmp**.
 
-Questa funzione è deprecata durante la compilazione con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Poiché common language runtime supporta solamente la precisione a virgola mobile predefinita.
+Questa funzione è deprecata durante la compilazione con [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) perché il Common Language Runtime supporta solo la precisione a virgola mobile predefinita.
 
 ## <a name="requirements"></a>Requisiti
 

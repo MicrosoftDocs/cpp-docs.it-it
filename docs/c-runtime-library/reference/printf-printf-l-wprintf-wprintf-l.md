@@ -1,12 +1,12 @@
 ---
 title: printf, _printf_l, wprintf, _wprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_l
 - wprintf
 - _wprintf_l
 - printf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - printf
 - _tprintf
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232493"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950198"
 ---
-# <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
+# <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
 Stampa output formattato nel flusso di output standard. Sono disponibili versioni più sicure di queste funzioni. Vedere [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).
 
@@ -85,17 +88,17 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il numero di caratteri stampati o un valore negativo se si verifica un errore. Se *formato* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** al **EINVAL**. Se **EOF** (0xFFFF) viene rilevata in *argomento*, la funzione restituisce -1.
+Restituisce il numero di caratteri stampati o un valore negativo se si verifica un errore. Se *Format* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**. Se viene rilevato **EOF** (0xFFFF) nell' *argomento*, la funzione restituisce-1.
 
-Per informazioni sul **errno** e i codici di errore, vedere [doserrno, errno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per informazioni sui codici **errno** e Error, vedere [doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **printf** funzione formatta e stampa una serie di caratteri e valori nel flusso di output standard **stdout**. Se seguita da argomenti di *formato* stringa, il *formato* stringa deve contenere le specifiche che determinano il formato di output per gli argomenti. **printf** e [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) si comportano in modo identico con la differenza che **printf** scrive output **stdout** anziché in una destinazione di tipo **FILE** .
+La funzione **printf** formatta e stampa una serie di caratteri e di valori nel flusso di output standard, **stdout**. Se gli argomenti seguono la stringa di *formato* , la stringa di *formato* deve contenere le specifiche che determinano il formato di output per gli argomenti. **printf** e [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) si comportano in modo identico, ad eccezione del fatto che **printf** scrive l'output in **stdout** anziché in una destinazione di tipo **file**.
 
-**wprintf** è una versione a caratteri wide di **printf**; *formato* è una stringa di caratteri "wide". **wprintf** e **printf** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **printf** non supporta attualmente l'output in un flusso UNICODE.
+**wprintf** è una versione a caratteri wide di **printf**; *Format* è una stringa di caratteri wide. **wprintf** e **printf** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **printf** non supporta attualmente l'output in un flusso Unicode.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -103,7 +106,7 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-Il *formato* argomento è costituito da caratteri ordinari, sequenze di escape, e (se seguita da argomenti *formato*) specifiche di formato. Vengono copiate i caratteri ordinari e le sequenze di escape **stdout** in ordine di visualizzazione. Ad esempio, la riga:
+L'argomento *Format* è costituito da caratteri ordinari, sequenze di escape e (se gli argomenti seguono il *formato*) specifiche di formato. I caratteri ordinari e le sequenze di escape vengono copiati in **stdout** in ordine di visualizzazione. Ad esempio, la riga:
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -116,7 +119,7 @@ Line one
         Line two
 ```
 
-[Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) iniziano sempre con un segno di percentuale (**%**) e vengono letti da sinistra a destra. Quando **printf** rileva la prima specifica di formato (se presente), converte il valore del primo argomento dopo *formato* e lo restituisce. La seconda specifica di formato fa sì che venga convertito e restituito il secondo argomento e così via. Se sono presenti più argomenti che specifiche di formato, gli argomenti aggiuntivi vengono ignorati. I risultati sono indefiniti in mancanza di argomenti sufficienti per tutte le specifiche di formato.
+Le [specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) iniziano sempre con un segno **%** di percentuale () e vengono lette da sinistra a destra. Quando **printf** rileva la prima specifica di formato, se presente, converte il valore del primo argomento dopo *Format* e lo restituisce di conseguenza. La seconda specifica di formato fa sì che venga convertito e restituito il secondo argomento e così via. Se sono presenti più argomenti che specifiche di formato, gli argomenti aggiuntivi vengono ignorati. I risultati sono indefiniti in mancanza di argomenti sufficienti per tutte le specifiche di formato.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente.
@@ -135,7 +138,7 @@ Line one
 |**printf**, **_printf_l**|\<stdio.h>|
 |**wprintf**, **_wprintf_l**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

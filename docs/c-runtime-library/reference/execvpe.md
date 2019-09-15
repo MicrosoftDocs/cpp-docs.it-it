@@ -1,9 +1,9 @@
 ---
 title: execvpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - execvpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - execvpe
 helpviewer_keywords:
 - execvpe function
 ms.assetid: ee657071-c459-4bb6-82a2-8925c888f624
-ms.openlocfilehash: 55457b245927db0aabe34e89d5b4dfd59f0efb43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82f4437418fd7c3ca5cdc5bd762a1aecb35f8a17
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288456"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941681"
 ---
 # <a name="execvpe"></a>execvpe
 

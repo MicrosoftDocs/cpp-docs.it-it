@@ -1,10 +1,10 @@
 ---
 title: _mbccpy_s, _mbccpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy_s
 - _mbccpy_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy_s_l
 - mbccpy_s_l
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156850"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952625"
 ---
-# <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
+# <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
 Copia un carattere multibyte da una stringa in un'altra stringa. Queste versioni di [_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -86,7 +89,7 @@ Destinazione della copia.
 Dimensioni del buffer di destinazione.
 
 *pCopied*<br/>
-Riempito con il numero di byte copiati (1 o 2 se ha esito positivo). Passare **NULL** se non si è interessati al numero.
+Riempito con il numero di byte copiati (1 o 2 se ha esito positivo). Passare **null** se non si è interessati al numero.
 
 *src*<br/>
 Caratteri multibyte da copiare.
@@ -96,17 +99,17 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero se con esito positivo; un codice di errore in caso di errore. Se *src* oppure *dest* viene **NULL**, oppure se più **buffSizeinBytes** vengono copiati byte *dest*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e **errno** è impostata su **EINVAL**.
+Zero se con esito positivo; un codice di errore in caso di errore. Se *src* o *dest* è **null**o se vengono copiati più di **buffSizeInBytes** byte in *dest*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e **errno** viene impostato su **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **mbccpy_s** funzione copia un carattere multibyte da *src* al *dest*. Se *src* non punta al byte di apertura di un carattere multibyte a quanto determinato da una chiamata implicita a [ismbblead](ismbblead-ismbblead-l.md), quindi il singolo byte che *src* punta a viene copiato. Se *src* punta a un byte di apertura, ma il byte successivo è 0 e pertanto non è valido, quindi viene copiato 0 *dest*, **errno** è impostata su **EILSEQ**e il funzione restituisce **EILSEQ**.
+La funzione **_mbccpy_s** copia un carattere multibyte da *src* a *dest*. Se *src* non punta al byte di apertura di un carattere multibyte come determinato da una chiamata implicita a [_ismbblead](ismbblead-ismbblead-l.md), viene copiato il singolo byte a cui punta *src* . Se *src* punta a un byte di apertura, ma il byte seguente è 0 e pertanto non è valido, 0 viene copiato in *dest*, **errno** viene impostato su **EILSEQ**e la funzione restituisce **EILSEQ**.
 
-**mbccpy_s** non viene accodato un carattere di terminazione null; tuttavia, se *src* punta a un carattere null, tale valore null viene copiato in *dest* (si tratta semplicemente una normale copia a byte singolo).
+**_mbccpy_s** non aggiunge un carattere di terminazione null. Tuttavia, se *src* punta a un carattere null, il valore null viene copiato in *dest* (si tratta semplicemente di una normale copia a byte singolo).
 
-Il valore in *pCopied* viene riempita con il numero di byte copiati. I valori possibili sono 1 e 2 se l'operazione ha esito positivo. Se **NULL** viene passato, questo parametro viene ignorato.
+Il valore in *pCopied* è riempito con il numero di byte copiati. I valori possibili sono 1 e 2 se l'operazione ha esito positivo. Se viene passato **null** , questo parametro viene ignorato.
 
-|*src*|copiati *dest*|*pCopied*|Valore restituito|
+|*src*|copiato in *dest*|*pCopied*|Valore restituito|
 |-----------|----------------------|---------------|------------------|
 |byte non di apertura|byte non di apertura|1|0|
 |0|0|1|0|
@@ -115,7 +118,7 @@ Il valore in *pCopied* viene riempita con il numero di byte copiati. I valori po
 
 Si noti che la seconda riga è semplicemente un caso speciale della prima. Si noti inoltre che la tabella presuppone *buffSizeInBytes* >= *pCopied*.
 
-**mbccpy_s** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **mbccpy_s_l** è identica alla **mbccpy_s** ad eccezione del fatto che **mbccpy_s_l** Usa le impostazioni locali passate per qualsiasi comportamento dipendente dalle impostazioni locali.
+**_mbccpy_s** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **_mbccpy_s_l** è identico a **_mbccpy_s** ad eccezione del fatto che **_mbccpy_s_l** usa le impostazioni locali passate per qualsiasi comportamento dipendente dalle impostazioni locali.
 
 In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

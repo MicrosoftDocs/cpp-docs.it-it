@@ -1,9 +1,9 @@
 ---
 title: _CrtReportBlockType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtReportBlockType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347415"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942330"
 ---
-# <a name="crtreportblocktype"></a>_CrtReportBlockType
+# <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
 Restituisce il tipo/sottotipo di blocco associato a un puntatore di blocco dell'heap di debug specificato.
 
@@ -52,11 +55,11 @@ Puntatore a un blocco di heap per il debug valido.
 
 ## <a name="return-value"></a>Valore restituito
 
-Quando viene passato un puntatore di heap di debug valido, il **CrtReportBlockType** funzione restituisce il tipo di blocco e il sottotipo sotto forma di un **int**. Se viene passato un puntatore non valido, la funzione restituisce -1.
+Quando viene passato un puntatore di heap di debug valido, la funzione **_CrtReportBlockType** restituisce il tipo di blocco e il sottotipo sotto forma di **int**. Se viene passato un puntatore non valido, la funzione restituisce -1.
 
 ## <a name="remarks"></a>Note
 
-Per estrarre il tipo e sottotipo restituito da **CrtReportBlockType**, usare le macro **BLOCK_TYPE** e **BLOCK_SUBTYPE** (entrambe definite in CRTDBG. h) sul valore restituito.
+Per estrarre il tipo e il sottotipo restituiti da **_CrtReportBlockType**, usare le macro **_BLOCK_TYPE** e **_BLOCK_SUBTYPE** (entrambe definite in CRTDBG. h) sul valore restituito.
 
 Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details).
 

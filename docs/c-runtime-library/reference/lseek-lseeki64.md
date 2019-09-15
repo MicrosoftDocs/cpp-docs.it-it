@@ -1,10 +1,10 @@
 ---
 title: _lseek, _lseeki64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lseeki64
 - _lseek
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lseeki64
 - _lseek
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285926"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952978"
 ---
-# <a name="lseek-lseeki64"></a>_lseek, _lseeki64
+# <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
 Sposta un puntatore di file nella posizione specificata.
 
@@ -68,21 +71,21 @@ Posizione iniziale.
 
 ## <a name="return-value"></a>Valore restituito
 
-**lseek** restituisce l'offset, in byte, della nuova posizione dall'inizio del file. **_lseeki64** restituisce l'offset in un intero a 64 bit. La funzione restituisce-1L per indicare un errore. Se viene passato un parametro non valido, ad esempio un descrittore di file non valido o il valore per *origin* non è valido o la posizione specificata da *offset* è prima dell'inizio del file, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EBADF** e restituiscono-1L. Nei dispositivi che non supportano la ricerca (ad esempio terminali e stampanti), il valore restituito è indefinito.
+**_lseek** restituisce l'offset, in byte, della nuova posizione a partire dall'inizio del file. **_lseeki64** restituisce l'offset in un intero a 64 bit. La funzione restituisce-1L per indicare un errore. Se viene passato un parametro non valido, ad esempio un descrittore di file non valido o il valore per *origin* non è valido o la posizione specificata da *offset* è prima dell'inizio del file, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EBADF** e restituiscono-1L. Nei dispositivi che non supportano la ricerca (ad esempio terminali e stampanti), il valore restituito è indefinito.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **lseek** funzione passa il puntatore del file associato *fd* a una nuova posizione distante *offset* byte da *origin*. L'operazione successiva nel file viene eseguita nella nuova posizione. L'argomento *origin* deve essere una delle costanti seguenti, definite in Stdio.h.
+La funzione **_lseek** sposta il puntatore del file associato a *FD* in una nuova posizione che è un *offset* di byte dall' *origine*. L'operazione successiva nel file viene eseguita nella nuova posizione. L'argomento *origin* deve essere una delle costanti seguenti, definite in Stdio.h.
 
-|*origine* valore||
+|valore di *origine*||
 |-|-|
 | **SEEK_SET** | Inizio del file. |
 | **SEEK_CUR** | Posizione corrente del puntatore del file. |
 | **SEEK_END** | Fine del file. |
 
-È possibile usare **lseek** per riposizionare il puntatore del mouse in qualsiasi punto in un file o oltre la fine del file.
+È possibile utilizzare **_lseek** per riposizionare il puntatore in qualsiasi punto di un file o oltre la fine del file.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlseekcinput"></a>Input: crt_lseek.c_input
+### <a name="input-crt_lseekc_input"></a>Input: crt_lseek.c_input
 
 ```Input
 Line one.

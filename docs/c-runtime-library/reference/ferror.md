@@ -1,9 +1,9 @@
 ---
 title: ferror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ferror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ferror
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4efb1b01ac94f1cb2d28bffb1f09b594a0e71479
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334333"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941094"
 ---
 # <a name="ferror"></a>ferror
 
@@ -49,13 +52,13 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se si è verificato alcun errore in *stream*, **ferror** restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Se il flusso è **NULL**, **ferror** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce 0.
+Se non si è verificato alcun errore nel *flusso*, il **ferro** restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Se il flusso è **null**, il **ferror** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce 0.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **ferror** routine (implementata sia come una funzione che come macro) testa una lettura o scrittura errore per il file associato *stream*. Se si è verificato un errore, l'indicatore di errore per il flusso rimane impostato fino a quando il flusso di chiusura o azzeramento, o fino alla **clearerr** viene chiamato su di esso.
+La routine del **ferratore** (implementata sia come funzione che come macro) testa un errore di lettura o scrittura nel file associato al *flusso*. Se si è verificato un errore, l'indicatore di errore per il flusso rimane impostato fino a quando il flusso non viene chiuso o riavvolto oppure finché non viene chiamato **clearerr** .
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,10 +1,10 @@
 ---
 title: ftell, _ftelli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftelli64
 - ftell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftelli64
 - ftell
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: f9548d4684bd2df734be2b0b703f98d8c7982884
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: fda309420e6ae241d3c8ed73c3d41c8ae50de662
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376131"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956459"
 ---
-# <a name="ftell-ftelli64"></a>ftell, _ftelli64
+# <a name="ftell-_ftelli64"></a>ftell, _ftelli64
 
 Ottiene la posizione corrente di un puntatore del file.
 
@@ -66,7 +69,7 @@ Le funzioni **ftell** e **_ftelli64** recuperano la posizione corrente del punta
 
 Si noti che quando un file viene aperto per l'accodamento dei dati, la posizione corrente nel file è determinata dall'ultima operazione di I/O e non dalla posizione in cui si verificherà la scrittura successiva. Ad esempio, se un file viene aperto per un accodamento e l'ultima operazione è stata una lettura, la posizione nel file è il punto in cui inizierebbe l'operazione di lettura successiva e non quella in cui inizierebbe inizia la scrittura successiva. (Quando un file viene aperto per l'accodamento, la posizione nel file viene spostata alla fine del file prima di qualsiasi operazione di scrittura.) Se non è ancora stata eseguita alcuna operazione di I/O su un file aperto per l'accodamento, la posizione nel file è l'inizio del file.
 
-In modalità testo CTRL+Z viene interpretato nell'input come un carattere di fine file. Nei file aperti per la lettura/scrittura  , fopen e tutte le routine correlate verificano la presenza di una combinazione di tasti CTRL + Z alla fine del file e la rimuove, se possibile. Questa operazione viene eseguita perché l'uso della combinazione di **ftell** e [fseek](fseek-fseeki64.md) o **_ftelli64** e [_fseeki64](fseek-fseeki64.md)per spostarsi all'interno di un file che termina con CTRL + Z può causare un comportamento non corretto di **ftell** o **_ftelli64** in prossimità della fine del file.
+In modalità testo CTRL+Z viene interpretato nell'input come un carattere di fine file. Nei file aperti per la lettura/scrittura , fopen e tutte le routine correlate verificano la presenza di una combinazione di tasti CTRL + Z alla fine del file e la rimuove, se possibile. Questa operazione viene eseguita perché l'uso della combinazione di **ftell** e [fseek](fseek-fseeki64.md) o **_ftelli64** e [_fseeki64](fseek-fseeki64.md)per spostarsi all'interno di un file che termina con CTRL + Z può causare un comportamento non corretto di **ftell** o **_ftelli64** in prossimità della fine del file.
 
 Questa funzione blocca il thread chiamante durante l'esecuzione e pertanto è thread-safe. Per una versione non di blocco, vedere **_ftell_nolock**.
 

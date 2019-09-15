@@ -1,11 +1,11 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - nearbyint
 - nearbyintf
 - nearbyintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nearbyint
 - nearbyintf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 827286c840c6564c8c3f8b351197b0201509d241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0a7d00c5019dd1e483d555df6db8d9770e61c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156200"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951399"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -61,23 +64,23 @@ Il valore da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, restituisce *x*, arrotondato all'intero più prossimo, usando il formato di arrotondamento corrente come riportato da [fegetround](fegetround-fesetround2.md). In caso contrario, la funzione può restituire uno dei valori seguenti:
+Se ha esito positivo, restituisce *x*, arrotondato all'intero più vicino, usando il formato di arrotondamento corrente come riportato da [fegetround](fegetround-fesetround2.md). In caso contrario, la funzione può restituire uno dei valori seguenti:
 
 |Problema|INVIO|
 |-----------|------------|
-|*x* = ±INFINITY|±INFINITY, senza modificata|
+|*x* = ±INFINITY|± INFINITO, non modificato|
 |*x* = ±0|± 0, non modificato|
 |*x* = NaN|NaN|
 
-Gli errori non vengono segnalati tramite [matherr](matherr.md); in particolare, questa funzione non segnala eventuali **FE_INEXACT** eccezioni.
+Gli errori non vengono segnalati tramite [_matherr](matherr.md); in particolare, questa funzione non segnala eccezioni **FE_INEXACT** .
 
 ## <a name="remarks"></a>Note
 
-La differenza principale tra questa funzione e [rint](rint-rintf-rintl.md) è che questa funzione non genera l'eccezione a virgola mobile inesatti.
+La differenza principale tra questa funzione e [rint](rint-rintf-rintl.md) è che questa funzione non genera l'eccezione di virgola mobile non esatta.
 
 Dato che i valori a virgola massimi sono interi esatti, questa funzione da sola non genererà mai un overflow. È invece possibile un overflow del valore restituito nell'output, a seconda della versione della funzione usata.
 
-C++ consente l'overload, quindi è possibile chiamare overload di **nearbyint** che accettano e restituiscono **float** oppure **long** **double** parametri. In un programma C **nearbyint** sempre accetta due valori double e restituisce un valore double.
+C++consente l'overload, quindi è possibile chiamare overload di **nearbyint** che accettano e restituiscono parametri **float** o **Long** **Double** . In un programma C **nearbyint** accetta sempre due valori Double e restituisce un valore Double.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -90,4 +93,4 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
-[Matematiche e supporto a virgola mobile](../floating-point-support.md)<br/>
+[Supporto matematico e a virgola mobile](../floating-point-support.md)<br/>

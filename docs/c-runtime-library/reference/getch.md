@@ -1,9 +1,9 @@
 ---
 title: getch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getch
 helpviewer_keywords:
 - getch function
 ms.assetid: d3a0b744-d63c-4f71-960e-24e619dccd01
-ms.openlocfilehash: e207aa231a524b8efdfacd9abd953774c5523f08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ba00b8016719cf673c41b556b4cd9016538722e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331818"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955457"
 ---
 # <a name="getch"></a>getch
 

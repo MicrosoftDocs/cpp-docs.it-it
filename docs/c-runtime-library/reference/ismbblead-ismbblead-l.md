@@ -1,10 +1,10 @@
 ---
 title: _ismbblead, _ismbblead_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbblead_l
 - _ismbblead
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbblead_l
 - istlead
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157211"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954058"
 ---
-# <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
+# <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
 Testa un carattere per determinare se è il byte di apertura di un carattere multibyte.
 
@@ -65,13 +68,13 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un valore diverso da zero se il valore integer *c* è il primo byte di un carattere multibyte.
+Restituisce un valore diverso da zero se l'integer *c* è il primo byte di un carattere multibyte.
 
 ## <a name="remarks"></a>Note
 
-I caratteri multibyte sono costituiti da un byte di apertura seguito da un byte finale. I byte di apertura si distinguono in quanto sono compresi in un intervallo specifico per un determinato set di caratteri. Ad esempio, in byte di apertura, solo tabella codici 932 codice compresi tra 0x81-0x9F e 0xE0 - 0xFC.
+I caratteri multibyte sono costituiti da un byte di apertura seguito da un byte finale. I byte di apertura si distinguono in quanto sono compresi in un intervallo specifico per un determinato set di caratteri. Ad esempio, solo nella tabella codici 932, i byte di apertura sono compresi tra 0x81-0x9F e 0xE0-0xFC.
 
-**ismbblead** Usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. **ismbblead_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_ismbblead** usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. **_ismbblead_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -1,12 +1,12 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - wcscpy_s
 - _mbscpy_s
 - _mbscpy_s_l
 - strcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcpy_s
 - _mbscpy_s
@@ -37,19 +40,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: 9763ba66867faba080ed8729b4fe07b96c56ee0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12c20abc13846388b7a303af4e29de3cd2a60fed
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354171"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957863"
 ---
-# <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
+# <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
 Copia una stringa. Queste versioni di [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbscpy_s** e **_mbscpy_s_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbscpy_s** e **_mbscpy_s_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -108,7 +111,7 @@ errno_t _mbscpy_s_l(
 Posizione del buffer di stringa di destinazione.
 
 *dest_size*<br/>
-Dimensioni del buffer di stringa di destinazione nelle **char** unità di misura per funzioni narrow e multibyte, e **wchar_t** unità per funzioni "wide". Questo valore deve essere maggiore di zero e non superare **RSIZE_MAX**.
+Dimensioni del buffer della stringa di destinazione nelle unità di tipo **char** per le funzioni narrow e multibyte e le unità **wchar_t** per le funzioni estese. Questo valore deve essere maggiore di zero e non maggiore di **RSIZE_MAX**.
 
 *src*<br/>
 Buffer della stringa di origine che termina con Null.
@@ -125,22 +128,22 @@ Zero in caso di esito positivo; in caso contrario un errore.
 |*dest*|*dest_size*|*src*|Valore restituito|Contenuto di *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**|qualsiasi|qualsiasi|**EINVAL**|non modificato|
-|qualsiasi|qualsiasi|**NULL**|**EINVAL**|*dest*[0] impostato su 0|
-|qualsiasi|0 o troppo piccolo|qualsiasi|**ERANGE**|*dest*[0] impostato su 0|
+|qualsiasi|qualsiasi|**NULL**|**EINVAL**|*dest* [0] impostato su 0|
+|qualsiasi|0 o troppo piccolo|qualsiasi|**ERANGE**|*dest* [0] impostato su 0|
 
 ## <a name="remarks"></a>Note
 
-Il **strcpy_s** funzione di copia il contenuto nell'indirizzo di *src*, incluso il carattere null di terminazione, nel percorso specificato dal *dest*. La stringa di destinazione deve essere sufficientemente grande da contenere la stringa di origine e il relativo carattere Null di terminazione. Il comportamento delle **strcpy_s** è definito se le stringhe di origine e destinazione si sovrappongono.
+La funzione **strcpy_s** copia il contenuto nell'indirizzo di *src*, incluso il carattere null di terminazione, nel percorso specificato da *dest*. La stringa di destinazione deve essere sufficientemente grande da contenere la stringa di origine e il relativo carattere Null di terminazione. Il comportamento di **strcpy_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
-**wcscpy_s** è la versione a caratteri wide di **strcpy_s**, e **mbscpy_s** è la versione a caratteri multibyte. Gli argomenti di **wcscpy_s** sono caratteri wide, mentre quelli di stringhe **mbscpy_s** e **_mbscpy_s_l** sono stringhe a caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico. **_mbscpy_s_l** è identica alla **mbscpy_s** ad eccezione del fatto che usa il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**wcscpy_s** è la versione a caratteri wide di **strcpy_s**e **_mbscpy_s** è la versione a caratteri multibyte. Gli argomenti di **wcscpy_s** sono stringhe a caratteri wide. gli **_mbscpy_s** e **_mbscpy_s_l** sono stringhe di caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico. **_mbscpy_s_l** è identico a **_mbscpy_s** ad eccezione del fatto che usa il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *dest* oppure *src* è un puntatore null, o se la destinazione di stringhe delle dimensioni *dest_size* è troppo piccola, viene richiamato il gestore di parametri non validi, come descritto nella [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostare **errno** al **EINVAL** quando *dest* o  *src* è un puntatore null e restituiscono **ERANGE** e impostare **errno** alla **ERANGE** quando la stringa di destinazione è troppo piccola.
+Se *dest* o *src* è un puntatore null o se la dimensione della stringa di destinazione *Dest_size* è troppo piccola, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL** quando *dest* o *src* è un puntatore null e restituiscono **ERANGE** e impostano **errno** su **ERANGE** quando il la stringa di destinazione è troppo piccola.
 
 Quando l'esecuzione dell'operazione si conclude correttamente, la stringa di destinazione è sempre con terminazione Null.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando quindi la necessità di specificare un argomento di dimensione, e possono sostituire automaticamente le funzioni precedenti, meno sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -160,7 +163,7 @@ Queste funzioni sono specifiche di Microsoft. Per altre informazioni sulla compa
 
 ## <a name="example"></a>Esempio
 
-A differenza del codice di qualità di produzione, in questo esempio chiama le funzioni di stringa sicura senza verificare la presenza di errori:
+A differenza del codice di qualità di produzione, in questo esempio vengono chiamate le funzioni stringa sicure senza verificare la presenza di errori:
 
 ```C
 // crt_strcpy_s.c
@@ -190,7 +193,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Quando si compila codice C++, le versioni dei modelli potrebbero essere più facile da usare.
+Quando si C++ compila il codice, le versioni dei modelli possono essere più facili da usare.
 
 ```cpp
 // crt_wcscpy_s.cpp

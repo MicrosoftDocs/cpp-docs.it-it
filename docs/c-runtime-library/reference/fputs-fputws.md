@@ -1,10 +1,10 @@
 ---
 title: fputs, fputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fputs
 - fputws
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputs
 - fputws
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 3f7c7cff3300ae28717062a41aebd9e19c0cb5e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7470901fda72e74caea12758bed4f23fcc087a33
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287967"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956908"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -62,15 +65,15 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In caso di errore, **fputs** e **fputws** restituiscono **EOF**. Se *str* oppure *stream* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e quindi **fputs** restituisce **EOF**, e  **fputws** restituisce **WEOF**.
+Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In un errore, **fputs** e **fputws** restituiscono **EOF**. Se *Str* o *Stream* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** , quindi **fputs** restituisce **EOF**e **fputws** restituisce **WEOF**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni copie *str* nell'output *stream* in corrispondenza della posizione corrente. **fputws** copia l'argomento a caratteri wide *str* al *stream* come una stringa di caratteri multibyte o una stringa di caratteri wide in base a se *flusso*venga aperto in modalità testo o binaria, rispettivamente. Nessuna delle funzioni copia il carattere Null di terminazione.
+Ognuna di queste funzioni copia *Str* nel *flusso* di output nella posizione corrente. **fputws** copia l'argomento a caratteri wide *Str* in *Stream* come stringa di caratteri multibyte o una stringa di caratteri wide, a seconda che il *flusso* sia aperto in modalità testo o in modalità binaria, rispettivamente. Nessuna delle funzioni copia il carattere Null di terminazione.
 
-Le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fputs** non supporta attualmente l'output in un flusso UNICODE.
+Le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fputs** attualmente non supporta l'output in un flusso Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -85,7 +88,7 @@ Le due funzioni si comportano in modo identico se il flusso viene aperto in moda
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console —**stdin**, **stdout**, e **stderr**, ovvero devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

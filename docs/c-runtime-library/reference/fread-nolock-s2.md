@@ -1,9 +1,9 @@
 ---
 title: _fread_nolock_s2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fread_nolock_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7fded9860b7a1364841d5f9b8a7e3aa478a8420
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333105"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956898"
 ---
-# <a name="freadnolocks"></a>_fread_nolock_s
+# <a name="_fread_nolock_s"></a>_fread_nolock_s
 
 Legge i dati da un flusso senza bloccare altri thread. Questa versione di [fread_nolock](fread-nolock.md) include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -66,7 +69,7 @@ Vedere [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Note
 
-Questa funzione è una versione non blocca il thread del **fread_s**. È identico a **fread_s** ad eccezione del fatto che non è protetta da interferenze da altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Questa funzione è una versione non di blocco di **fread_s**. È identica a **fread_s** , con la differenza che non è protetta da interferenze da parte di altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,10 +1,10 @@
 ---
 title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy_s
 - wmemcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952805"
 ---
-# <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
+# <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
 Copia i byte tra i buffer. Queste sono versioni di [memcpy, wmemcpy](memcpy-wmemcpy.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -82,9 +85,9 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 
 ## <a name="remarks"></a>Note
 
-**memcpy_s** copie *conteggio* byte dal *src* alla *dest*; **wmemcpy_s** copie *conteggio* caratteri "wide" (due byte). Se l'origine e destinazione si sovrappongono, il comportamento delle **memcpy_s** è definito. Uso **memmove_s** per gestire le aree di sovrapposizione.
+**memcpy_s** copia i byte del *conteggio* da *src* a *dest*; **wmemcpy_s** copia il *numero* di caratteri wide (due byte). Se l'origine e la destinazione si sovrappongono, il comportamento di **memcpy_s** non è definito. Usare **memmove_s** per gestire le aree sovrapposte.
 
-Queste funzioni convalidano i relativi parametri. Se *conteggio* è diverso da zero e *dest* oppure *src* è un puntatore null, o *destSize* inferiori *conteggio*, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** oppure **ERANGE** e impostare **errno** al valore restituito.
+Queste funzioni convalidano i relativi parametri. Se *count* è diverso da zero e *dest* o *src* è un puntatore null o *destSize* è minore di *count*, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** o **ERANGE** e impostano **errno** sul valore restituito.
 
 ## <a name="requirements"></a>Requisiti
 

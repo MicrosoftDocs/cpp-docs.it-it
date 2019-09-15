@@ -1,9 +1,9 @@
 ---
 title: rewind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rewind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rewind
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357564"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949279"
 ---
 # <a name="rewind"></a>rewind
 
@@ -50,15 +53,15 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="remarks"></a>Note
 
-Il **rewind** funzione Riposiziona il puntatore del file associato *stream* all'inizio del file. Una chiamata a **rewind** è simile a
+La funzione **Rewind** riposiziona il puntatore del file associato al *flusso* all'inizio del file. Una chiamata a **rewind** è simile a
 
-**(void) fseek(** _stream_**, 0L, SEEK_SET );**
+**(void) fseek (** _Stream_ **, 0L, SEEK_SET);**
 
-Tuttavia, a differenza [fseek](fseek-fseeki64.md), **rewind** Cancella gli indicatori di errore per il flusso, nonché l'indicatore di fine del file. Inoltre, a differenza [fseek](fseek-fseeki64.md), **rewind** non restituisce un valore che indica se il puntatore è stato spostato correttamente.
+Tuttavia, a differenza di [fseek](fseek-fseeki64.md), **Rewind** Cancella gli indicatori di errore per il flusso e l'indicatore di fine del file. A differenza di [fseek](fseek-fseeki64.md), **Rewind** , inoltre, non restituisce un valore per indicare se il puntatore è stato spostato correttamente.
 
-Per cancellare il buffer della tastiera, usare **rewind** con il flusso **stdin**, cui è associato con la tastiera per impostazione predefinita.
+Per cancellare il buffer della tastiera, utilizzare **Rewind** con il flusso **stdin**, che è associato alla tastiera per impostazione predefinita.
 
-Se il flusso è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce e **errno** è impostata su **EINVAL**.
+Se il flusso è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce e **errno** viene impostato su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

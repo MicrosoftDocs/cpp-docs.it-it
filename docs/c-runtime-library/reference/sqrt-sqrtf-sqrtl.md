@@ -1,11 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - sqrtl
 - sqrtf
 - sqrt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sqrt
 - sqrtf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 7c17c973b98638195e2e2d2a5f793578437d11ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354899"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958100"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -69,15 +72,15 @@ Valore a virgola mobile non negativo
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **sqrt** che accettano **float** oppure **long** **double** tipi. In un programma C **sqrt** accetta e restituisce sempre **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Sqrt** che accettano tipi **float** o **Long** **Double** . In un programma C, **Sqrt** accetta sempre e restituisce **Double**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **sqrt** le funzioni restituiscono la radice quadrata del *x*. Per impostazione predefinita, se *x* è un valore negativo **sqrt** restituisce un valore NaN indefinito.
+Le funzioni **Sqrt** restituiscono la radice quadrata di *x*. Per impostazione predefinita, se *x* è negativo, **Sqrt** restituisce un valore NaN indefinito.
 
-|Input|Eccezione SEH|**matherr** eccezione|
+|Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
 |- ∞|none|_DOMAIN|
 |x<0|none|_DOMAIN|
 

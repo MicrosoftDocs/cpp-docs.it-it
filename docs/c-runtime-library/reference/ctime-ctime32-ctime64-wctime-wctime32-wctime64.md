@@ -1,14 +1,14 @@
 ---
 title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ctime64
 - _wctime32
 - ctime
 - _wctime64
 - _ctime32
 - _wctime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wctime64
 - _ctime32
@@ -50,14 +53,14 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: d1858a36c68a2ca5cedf70a1d74d5f250cbac8df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee802e9e6ddef839f08cf6dab6573f404328b2c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288603"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937765"
 ---
-# <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
+# <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
 Convertono un valore di tempo in una stringa e lo regolano per le impostazioni di fuso orario locale. Sono disponibili versioni più sicure di queste funzioni. Vedere [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).
 
@@ -75,23 +78,23 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 ### <a name="parameters"></a>Parametri
 
 *sourceTime*<br/>
-Puntatore all'ora archiviata da convertire.
+Puntatore al tempo archiviato per la conversione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Puntatore al risultato della stringa di caratteri. **NULL** verrà restituito se:
+Puntatore al risultato della stringa di caratteri. Viene restituito **null** se:
 
 - *sourceTime* rappresenta una data precedente alla mezzanotte del 1 gennaio 1970, UTC.
 
-- Se si usa **_ctime32** oppure **_wctime32** e *sourceTime* rappresenta una data successiva: 23.59.59 del 18 gennaio 2038, UTC.
+- Se si usa **_ctime32** o **_wctime32** e *sourceTime* rappresenta una data successiva 23:59:59 del 18 gennaio 2038, UTC.
 
-- Se si usa **_ctime64** oppure **_wctime64** e *sourceTime* rappresenta una data successiva alle 23:59:59, 31 dicembre 3000, UTC.
+- Se si usa **_ctime64** o **_wctime64** e *sourceTime* rappresenta una data successiva 23:59:59, 31 dicembre 3000, UTC.
 
-**CTime** è una funzione inline equivalente a **_ctime64** e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come il vecchio 32 bit **time_t**, è possibile definire **_USE_32BIT_TIME_T**. In questo modo **ctime** restituisca **_ctime32**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
+**CTime** è una funzione inline che restituisce **_ctime64** e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come **time_t**precedente a 32 bit, è possibile definire **_USE_32BIT_TIME_T**. In questo modo, **CTime** restituirà **_ctime32**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
 
 ## <a name="remarks"></a>Note
 
-Il **ctime** funzione converte un valore di tempo archiviato come una [time_t](../../c-runtime-library/standard-types.md) valore in una stringa di caratteri. Il *sourceTime* valore viene in genere ottenuto da una chiamata a [ora](time-time32-time64.md), che restituisce il numero di secondi trascorsi dalla mezzanotte (00: 00:00), 1 gennaio 1970, ora UTC (coordinated universal time). La stringa del valore restituito contiene esattamente 26 caratteri e ha il formato:
+La funzione **CTime** converte un valore di ora archiviato come valore [time_t](../../c-runtime-library/standard-types.md) in una stringa di caratteri. Il valore *sourceTime* viene in genere ottenuto da una chiamata a [Time](time-time32-time64.md), che restituisce il numero di secondi trascorsi dalla mezzanotte (00:00:00) del 1 ° gennaio 1970, UTC (Coordinated Universal Time). La stringa del valore restituito contiene esattamente 26 caratteri e ha il formato:
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
@@ -99,13 +102,13 @@ Wed Jan 02 02:03:55 1980\n\0
 
 Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga ('\n') e il carattere null ('\0') occupano le ultime due posizioni della stringa.
 
-La stringa di caratteri convertita viene anche modificata in base alle impostazioni di fuso orario locale. Vedere le [tempo](time-time32-time64.md), [ftime](ftime-ftime32-ftime64.md), e [localtime](localtime-localtime32-localtime64.md) funzioni per informazioni sulla configurazione dell'ora locale e il [tzset](tzset.md) funzionare per informazioni dettagliate sulla definizione dell'ambiente di fuso orario e variabili globali.
+La stringa di caratteri convertita viene anche modificata in base alle impostazioni di fuso orario locale. Vedere le funzioni [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)e [localtime](localtime-localtime32-localtime64.md) per informazioni sulla configurazione dell'ora locale e la funzione [_tzset](tzset.md) per informazioni dettagliate sulla definizione dell'ambiente e delle variabili globali del fuso orario.
 
-Una chiamata a **ctime** modifica il singolo buffer allocato in modo statico usato per il **gmtime** e **localtime** funzioni. Ogni chiamata a una di queste routine elimina definitivamente i risultati della chiamata precedente. **CTime** condivide un buffer statico con il **asctime** (funzione). Di conseguenza, una chiamata a **ctime** Elimina i risultati di qualsiasi chiamata precedente a **asctime**, **localtime**, oppure **gmtime**.
+Una chiamata a **CTime** modifica il singolo buffer allocato in modo statico usato dalle funzioni **gmtime** e **localtime** . Ogni chiamata a una di queste routine elimina definitivamente i risultati della chiamata precedente. **CTime** condivide un buffer statico con la funzione **asctime** . Pertanto, una chiamata a **CTime** Elimina i risultati di qualsiasi chiamata precedente a **asctime**, **localtime**o **gmtime**.
 
-**wctime** e **_wctime64** sono la versione a caratteri wide di **ctime** e **_ctime64**; che restituisce un puntatore alla stringa di caratteri "wide". In caso contrario, **_ctime64**, **wctime**, e **_wctime64** si comportano in modo identico alle **ctime**.
+**_wctime** e **_wctime64** sono la versione a caratteri wide di **CTime** e **_ctime64**; restituzione di un puntatore a una stringa di caratteri wide. In caso contrario, **_ctime64**, **_wctime**e **_wctime64** si comportano in modo identico a **CTime**.
 
-Queste funzioni convalidano i relativi parametri. Se *sourceTime* è un puntatore null, o se il *sourceTime* valore è negativo, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **NULL** e impostare **errno** al **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se *sourceTime* è un puntatore null o se il valore *sourceTime* è negativo, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **null** e impostano **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

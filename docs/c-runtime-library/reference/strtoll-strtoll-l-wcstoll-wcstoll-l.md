@@ -1,12 +1,12 @@
 ---
 title: strtoll, _strtoll_l, wcstoll, _wcstoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strtoll
 - wcstoll
 - _strtoll_l
 - _wcstoll_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strtoll_l
 - _tcstoll_l
@@ -34,16 +37,16 @@ helpviewer_keywords:
 - _tcstoll function
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
-ms.openlocfilehash: 53ae4ab1d482478c50aa257acdc974569bfc05f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152efb26f0a2e9a312654e37a95bee15f386aa9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269150"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946448"
 ---
-# <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
+# <a name="strtoll-_strtoll_l-wcstoll-_wcstoll_l"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 
-Converte una stringa in un **lungo** **lungo** valore.
+Converte una stringa **in un valore Long** **Long** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -88,17 +91,17 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strtoll** restituisce il valore rappresentato nella stringa *strSource*, tranne quando la rappresentazione potrebbe causare un overflow, in tal caso, restituisce **LLONG_MAX** o**LLONG_MIN**. La funzione restituisce 0 se è non possibile eseguire alcuna conversione. **wcstoll** restituisce i valori in modo analogo a **strtoll**.
+**strtoll** restituisce il valore rappresentato nella stringa *strSource*, tranne quando la rappresentazione potrebbe causare un overflow, in questo caso restituisce **LLONG_MAX** o **LLONG_MIN**. La funzione restituisce 0 se è non possibile eseguire alcuna conversione. **wcstoll** restituisce i valori in modo analogo a **strtoll**.
 
 **LLONG_MAX** e **LLONG_MIN** sono definiti nei limiti. H.
 
-Se *strSource* viene **NULL** o nella *base* è diverso da zero e minore di 2 o maggiore di 36, **errno** è impostato su **EINVAL** .
+Se *strSource* è **null** o la *base* è diversa da zero e minore di 2 o maggiore di 36, **errno** viene impostato su **EINVAL**.
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **strtoll** funzione converte *strSource* a un **long** **lungo**. Entrambe le funzioni interrompono la lettura della stringa *strSource* in corrispondenza del primo carattere che non riconosce come parte di un numero. Ciò potrebbe essere il carattere null di terminazione, o potrebbe essere il primo carattere numerico maggiore o uguale a *base*. **wcstoll** è una versione a caratteri wide di **strtoll**; relativo *strSource* argomento è una stringa di caratteri "wide". In caso contrario, il comportamento di queste funzioni è identico.
+La funzione **strtoll** converte *strSource* **a Long** **Long**. Entrambe le funzioni interrompono la lettura della stringa *strSource* al primo carattere che non sono in grado di riconoscere come parte di un numero. Può trattarsi del carattere null di terminazione o del primo carattere numerico maggiore o uguale a *base*. **wcstoll** è una versione a caratteri wide di **strtoll**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -107,15 +110,15 @@ Il **strtoll** funzione converte *strSource* a un **long** **lungo**. Entrambe l
 |**_tcstoll**|**strtoll**|**strtoll**|**wcstoll**|
 |**_tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
 
-Le impostazioni locali **LC_NUMERIC** impostazione di categoria determina il riconoscimento del carattere di base *strSource*; per altre informazioni, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md). Le funzioni che non hanno le **l** suffisso usare le impostazioni locali correnti. **strtoll_l** e **wcstoll_l** sono identiche alle funzioni corrispondenti che non hanno il suffisso, ad eccezione del fatto che usano le impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali determina il riconoscimento del carattere radice in *strSource*; Per ulteriori informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). Le funzioni che non hanno il suffisso **suffisso** usano le impostazioni locali correnti; **_strtoll_l** e **_wcstoll_l** sono identici alle funzioni corrispondenti che non hanno il suffisso, ad eccezione del fatto che usano invece le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui fa riferimento *endptr*. Se è non possibile eseguire alcuna conversione (non trovate cifre valide sono stati o è stata specificata una base non valida), il valore di *strSource* viene archiviato in corrispondenza della posizione a cui punta *endptr*.
+Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'analisi viene archiviato nella posizione a cui punta *endptr*. Se non è possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore di *strSource* viene archiviato nella posizione a cui punta *endptr*.
 
-**strtoll** prevede *strSource* in modo che punti a una stringa nel formato seguente:
+**strtoll** prevede che *strSource* faccia riferimento a una stringa nel formato seguente:
 
-> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
+> [*spazi vuoti*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [cifre lettere] **-**
 
-Oggetto *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. *cifre* sono uno o più cifre decimali. *lettere* sono uno o più lettere 'a' a 'z' (o 'A' a 'Z'). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui punta *strSource* vengono usate per determinare la base. Se il primo carattere è '0' e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se *base* è 0 e il primo carattere letto è '0', si presuppone un intero ottale e un carattere '8' o '9' interrompe la lettura.
+Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; le *cifre* corrispondono a una o più cifre decimali; le *lettere* sono una o più lettere da' a' a' z ' (o da' A ' a' z '). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta *strSource* . Se il primo carattere è '0' e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Se ad esempio *base* è 0 e il primo carattere analizzato è' 0', si presuppone un Integer ottale e il carattere ' 8' o ' 9' interrompe l'analisi.
 
 ## <a name="requirements"></a>Requisiti
 

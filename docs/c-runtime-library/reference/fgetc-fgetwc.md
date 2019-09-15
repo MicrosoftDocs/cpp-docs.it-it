@@ -1,10 +1,10 @@
 ---
 title: fgetc, fgetwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetwc
 - fgetc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgettc
 - fgetwc
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f44c65802f3baed37078574577bf108bbcd09a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334008"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940897"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -59,15 +62,15 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fgetc** restituisce il carattere letto come un **int** o restituisce **EOF** per indicare un errore o fine del file. **fgetwc** viene restituito, come un [wint_t](../../c-runtime-library/standard-types.md), il carattere wide che corrisponde al carattere letto o restituisce **WEOF** per indicare un errore o fine del file. Per entrambe le funzioni, usare **feof** oppure **ferror** per distinguere un errore e una condizione di fine del file. Se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. Se *stream* viene **NULL**, **fgetc** e **fgetwc** richiamano il gestore di parametri non validi, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **EOF**.
+**fgetc** restituisce il carattere letto come **int** o restituisce **EOF** per indicare un errore o la fine del file. **fgetwc** restituisce, come [wint_t](../../c-runtime-library/standard-types.md), il carattere wide che corrisponde al carattere letto o restituisce **WEOF** per indicare un errore o la fine del file. Per entrambe le funzioni, usare **feof** o **ferrator** per distinguere tra un errore e una condizione di fine del file. Se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. Se il *flusso* è **null**, **fgetc** e **fgetwc** richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EOF**.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni legge un singolo carattere dalla posizione corrente del file associato *flusso*. La funzione quindi incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Se il flusso è alla fine del file, viene impostato l'indicatore di fine del file per il flusso.
+Ognuna di queste funzioni legge un singolo carattere dalla posizione corrente del file associato al *flusso*. La funzione quindi incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Se il flusso è alla fine del file, viene impostato l'indicatore di fine del file per il flusso.
 
-**fgetc** equivale a **getc**, ma è implementata solo come funzione, anziché come una funzione e macro.
+**fgetc** è equivalente a **GETC**, ma viene implementato solo come funzione, anziché come funzione e macro.
 
-**fgetwc** è la versione a caratteri wide di **fgetc**; legge **c** come un carattere multibyte o un carattere Wide a seconda se *flusso* viene aperto in la modalità testo o in modalità binaria.
+**fgetwc** è la versione a caratteri wide di **fgetc**; viene letto **c** come carattere multibyte o un carattere wide a seconda che il *flusso* venga aperto in modalità testo o in modalità binaria.
 
 Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread.
 
@@ -125,7 +128,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetctxt"></a>Input: crt_fgetc.txt
+## <a name="input-crt_fgetctxt"></a>Input: crt_fgetc.txt
 
 ```Input
 Line one.

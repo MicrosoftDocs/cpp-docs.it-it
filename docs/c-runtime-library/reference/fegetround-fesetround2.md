@@ -1,10 +1,10 @@
 ---
 title: fegetround, fesetround
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fegetround
 - fesetround
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetround
 - fesetround
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b210dbce3104820f667d4ad0b4421277567b279f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334372"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941202"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -54,9 +57,9 @@ La modalità di arrotondamento da impostare, come una delle macro di arrotondame
 
 ## <a name="return-value"></a>Valore restituito
 
-In caso di esito positivo **fegetround** restituisce la modalità di arrotondamento come uno dei valori delle macro di arrotondamento a virgola mobile. Restituisce un valore negativo se non è possibile determinare la modalità di arrotondamento corrente.
+Se l'operazione riesce, **fegetround** restituisce la modalità di arrotondamento come uno dei valori delle macro di arrotondamento a virgola mobile. Restituisce un valore negativo se non è possibile determinare la modalità di arrotondamento corrente.
 
-In caso di esito positivo **fesetround** restituisce 0. In caso contrario, viene restituito un valore diverso da zero.
+Se l'operazione riesce, **fesetround** restituisce 0. In caso contrario, viene restituito un valore diverso da zero.
 
 ## <a name="remarks"></a>Note
 
@@ -77,13 +80,13 @@ La modalità di arrotondamento corrente influisce su queste operazioni:
 
 - Risultati degli operatori aritmetici a virgola mobile al di fuori delle espressioni costanti.
 
-- La libreria di funzioni, ad esempio di arrotondamento **rint** e **nearbyint**.
+- Funzioni di arrotondamento della libreria, ad esempio **rint** e **nearbyint**.
 
 - Valori restituiti da funzioni matematiche della libreria standard.
 
 La modalità di arrotondamento corrente non influisce su queste operazioni:
 
-- Il **trunc**, **ceil**, **floor**, e **lround** funzioni della libreria.
+- Funzioni della libreria **Tronca**, lround, **floor**e .
 
 - Conversioni e cast impliciti da virgola mobile a tipo integer, arrotondati sempre per difetto.
 
