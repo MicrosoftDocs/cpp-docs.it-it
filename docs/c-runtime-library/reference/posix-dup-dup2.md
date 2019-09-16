@@ -1,10 +1,10 @@
 ---
 title: dup, dup2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - dup2
 - dup
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - dup
 - dup2
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - dup function
 - dup2 function
 ms.assetid: c7572170-47ff-4e0d-b9c3-10f0ab0ba40a
-ms.openlocfilehash: c115f7df2587ee0e36098bc5e70c2d998827f84e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fded2fdabae7629519025213556ca3b2437dfff1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155907"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950852"
 ---
 # <a name="dup-dup2"></a>dup, dup2
 
