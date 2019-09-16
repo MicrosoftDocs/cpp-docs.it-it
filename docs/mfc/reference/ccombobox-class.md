@@ -1,5 +1,5 @@
 ---
-title: CComboBox (classe)
+title: Classe CComboBox
 ms.date: 11/04/2016
 f1_keywords:
 - CComboBox
@@ -108,14 +108,14 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54a1913073ca0b23aeb17a57b16f589a074637b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253987"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507184"
 ---
-# <a name="ccombobox-class"></a>CComboBox (classe)
+# <a name="ccombobox-class"></a>Classe CComboBox
 
 Fornisce la funzionalità di una casella combinata di Windows.
 
@@ -125,128 +125,128 @@ Fornisce la funzionalità di una casella combinata di Windows.
 class CComboBox : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Costruisce un oggetto `CComboBox`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[CComboBox::AddString](#addstring)|Aggiunge una stringa alla fine dell'elenco nella casella di riepilogo di una casella combinata o in corrispondenza della posizione per le caselle di riepilogo con lo stile CBS_SORT ordinata.|
-|[CComboBox::Clear](#clear)|Elimina (Elimina) la selezione corrente, se presente, nel controllo di modifica.|
-|[CComboBox::CompareItem](#compareitem)|Chiamato dal framework per determinare la posizione relativa di un nuovo elemento elenco in una casella combinata ordinato disegnato dal proprietario.|
-|[CComboBox::Copy](#copy)|Copia la selezione corrente, se presente, negli Appunti nel formato CF_TEXT.|
-|[CComboBox::Create](#create)|Crea la casella combinata e lo collega al `CComboBox` oggetto.|
-|[CComboBox::Cut](#cut)|Elimina (tagli) la selezione corrente, se presente, in modalità di modifica di controllo e copia il testo eliminato negli Appunti nel formato CF_TEXT.|
-|[CComboBox::DeleteItem](#deleteitem)|Chiamato dal framework quando viene eliminato un elemento di elenco da una casella combinata disegnato dal proprietario.|
+|[CComboBox::AddString](#addstring)|Aggiunge una stringa alla fine dell'elenco nella casella di riepilogo di una casella combinata o in corrispondenza della posizione ordinata per le caselle di riepilogo con lo stile CBS_SORT.|
+|[CComboBox:: Clear](#clear)|Elimina (Cancella) la selezione corrente, se presente, nel controllo di modifica.|
+|[CComboBox::CompareItem](#compareitem)|Chiamata eseguita dal Framework per determinare la posizione relativa di un nuovo elemento elenco in una casella combinata creata dal proprietario.|
+|[CComboBox:: Copy](#copy)|Copia la selezione corrente, se presente, negli Appunti nel formato CF_TEXT.|
+|[CComboBox:: create](#create)|Crea la casella combinata e la collega all' `CComboBox` oggetto.|
+|[CComboBox:: Cut](#cut)|Elimina (taglia) la selezione corrente, se presente, nel controllo di modifica e copia il testo eliminato negli Appunti nel formato CF_TEXT.|
+|[CComboBox::DeleteItem](#deleteitem)|Chiamata eseguita dal framework quando un elemento elenco viene eliminato da una casella combinata creata dal proprietario.|
 |[CComboBox::DeleteString](#deletestring)|Elimina una stringa dalla casella di riepilogo di una casella combinata.|
-|[CComboBox::Dir](#dir)|Aggiunge un elenco di nomi di file nella casella di riepilogo di una casella combinata.|
-|[CComboBox::DrawItem](#drawitem)|Chiamato dal framework quando un aspetto visivo delle modifiche casella combinata disegnato dal proprietario.|
+|[CComboBox::Dir](#dir)|Aggiunge un elenco di nomi di file alla casella di riepilogo di una casella combinata.|
+|[CComboBox::D rawItem](#drawitem)|Chiamata eseguita dal framework quando viene modificato un aspetto visivo di una casella combinata creata dal proprietario.|
 |[CComboBox::FindString](#findstring)|Trova la prima stringa che contiene il prefisso specificato nella casella di riepilogo di una casella combinata.|
-|[CComboBox::FindStringExact](#findstringexact)|Trova la prima stringa di casella di riepilogo, in una casella combinata, che corrisponde alla stringa specificata.|
-|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Recupera le informazioni sul `CComboBox` oggetto.|
+|[CComboBox::FindStringExact](#findstringexact)|Trova la prima stringa della casella di riepilogo (in una casella combinata) che corrisponde alla stringa specificata.|
+|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Recupera le informazioni sull' `CComboBox` oggetto.|
 |[CComboBox::GetCount](#getcount)|Recupera il numero di elementi nella casella di riepilogo di una casella combinata.|
-|[CComboBox::GetCueBanner](#getcuebanner)|Ottiene il testo della segnalazione che viene visualizzato per un controllo casella combinata.|
+|[CComboBox::GetCueBanner](#getcuebanner)|Ottiene il testo cue visualizzato per un controllo casella combinata.|
 |[CComboBox::GetCurSel](#getcursel)|Recupera l'indice dell'elemento attualmente selezionato, se presente, nella casella di riepilogo di una casella combinata.|
-|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|Recupera le coordinate dello schermo della casella di riepilogo (eliminati verso il basso) visibile di una casella combinata a discesa.|
-|[CComboBox::GetDroppedState](#getdroppedstate)|Determina se la casella di riepilogo di una casella combinata a discesa è visibile (diminuivano).|
-|[CComboBox::GetDroppedWidth](#getdroppedwidth)|Recupera la larghezza minima consentita per la parte di casella di riepilogo discesa di una casella combinata.|
-|[CComboBox::GetEditSel](#geteditsel)|Ottiene le posizioni dei caratteri iniziale e finale della selezione corrente nel controllo di modifica di una casella combinata.|
-|[CComboBox::GetExtendedUI](#getextendedui)|Determina se una casella combinata è l'interfaccia utente predefinita o l'interfaccia utente estesa.|
-|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|Restituisce la larghezza in pixel che la parte di casella di riepilogo della casella combinata può essere necessario scorrere orizzontalmente.|
-|[CComboBox::GetItemData](#getitemdata)|Recupera il valore a 32 bit fornito dall'applicazione associato all'elemento casella combinata specificata.|
-|[CComboBox::GetItemDataPtr](#getitemdataptr)|Recupera il puntatore a 32 bit fornito dall'applicazione che viene associato all'elemento casella combinata specificata.|
-|[CComboBox::GetItemHeight](#getitemheight)|Recupera l'altezza degli elementi dell'elenco in una casella combinata.|
-|[CComboBox::GetLBText](#getlbtext)|Ottiene una stringa nella casella di riepilogo di una casella combinata.|
+|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|Recupera le coordinate dello schermo della casella di riepilogo visibile (rilasciata) di una casella combinata a discesa.|
+|[CComboBox::GetDroppedState](#getdroppedstate)|Determina se la casella di riepilogo di una casella combinata a discesa è visibile (eliminata).|
+|[CComboBox::GetDroppedWidth](#getdroppedwidth)|Recupera la larghezza minima consentita per la parte della casella di riepilogo a discesa di una casella combinata.|
+|[CComboBox::GetEditSel](#geteditsel)|Ottiene le posizioni dei caratteri iniziali e finali della selezione corrente nel controllo di modifica di una casella combinata.|
+|[CComboBox:: GetExtendedUI](#getextendedui)|Determina se una casella combinata dispone dell'interfaccia utente predefinita o dell'interfaccia utente estesa.|
+|[CComboBox:: GetHorizontalExtent](#gethorizontalextent)|Restituisce la larghezza in pixel a cui è possibile scorrere orizzontalmente la parte della casella combinata della casella combinata.|
+|[CComboBox::GetItemData](#getitemdata)|Recupera il valore di 32 bit fornito dall'applicazione associato all'elemento della casella combinata specificato.|
+|[CComboBox::GetItemDataPtr](#getitemdataptr)|Recupera il puntatore a 32 bit fornito dall'applicazione associato all'elemento della casella combinata specificato.|
+|[CComboBox:: GetItemHeight](#getitemheight)|Recupera l'altezza degli elementi dell'elenco in una casella combinata.|
+|[CComboBox::GetLBText](#getlbtext)|Ottiene una stringa dalla casella di riepilogo di una casella combinata.|
 |[CComboBox::GetLBTextLen](#getlbtextlen)|Ottiene la lunghezza di una stringa nella casella di riepilogo di una casella combinata.|
 |[CComboBox::GetLocale](#getlocale)|Recupera l'identificatore delle impostazioni locali per una casella combinata.|
 |[CComboBox::GetMinVisible](#getminvisible)|Ottiene il numero minimo di elementi visibili nell'elenco a discesa della casella combinata corrente.|
-|[CComboBox::GetTopIndex](#gettopindex)|Restituisce l'indice del primo elemento visibile nella casella di elenco della casella combinata.|
-|[CComboBox::InitStorage](#initstorage)|Prealloca blocchi di memoria per gli elementi e le stringhe nella casella di elenco della casella combinata.|
+|[CComboBox::GetTopIndex](#gettopindex)|Restituisce l'indice del primo elemento visibile nella parte della casella di riepilogo della casella combinata.|
+|[CComboBox::InitStorage](#initstorage)|Prealloca i blocchi di memoria per gli elementi e le stringhe nella parte di casella di riepilogo della casella combinata.|
 |[CComboBox::InsertString](#insertstring)|Inserisce una stringa nella casella di riepilogo di una casella combinata.|
 |[CComboBox::LimitText](#limittext)|Limita la lunghezza del testo che l'utente può immettere nel controllo di modifica di una casella combinata.|
-|[CComboBox::MeasureItem](#measureitem)|Chiamato dal framework per determinare le dimensioni di casella combinata quando viene creata una casella combinata disegnato dal proprietario.|
-|[CComboBox::Paste](#paste)|Inserisce i dati dagli Appunti nel controllo di modifica nella posizione corrente del cursore. Dati vengono inseriti solo se gli Appunti contengono dati nel formato CF_TEXT.|
-|[CComboBox::ResetContent](#resetcontent)|Rimuove tutti gli elementi dall'elenco casella e controllo di una casella combinata di modifica.|
-|[CComboBox::SelectString](#selectstring)|Cerca una stringa nella casella di riepilogo di una casella combinata e, se la stringa viene trovata, seleziona la stringa nella casella di riepilogo e copia la stringa per il controllo di modifica.|
-|[CComboBox::SetCueBanner](#setcuebanner)|Imposta il testo della segnalazione che viene visualizzato per un controllo casella combinata.|
+|[CComboBox:: MeasureItem](#measureitem)|Chiamata eseguita dal Framework per determinare le dimensioni della casella combinata quando viene creata una casella combinata creata dal proprietario.|
+|[CComboBox::P incolla](#paste)|Inserisce i dati dagli Appunti nel controllo di modifica in corrispondenza della posizione corrente del cursore. I dati vengono inseriti solo se gli Appunti contengono dati nel formato CF_TEXT.|
+|[CComboBox::ResetContent](#resetcontent)|Rimuove tutti gli elementi dalla casella di riepilogo e il controllo di modifica di una casella combinata.|
+|[CComboBox::SelectString](#selectstring)|Cerca una stringa nella casella di riepilogo di una casella combinata e, se la stringa viene trovata, seleziona la stringa nella casella di riepilogo e copia la stringa nel controllo di modifica.|
+|[CComboBox::SetCueBanner](#setcuebanner)|Imposta il testo cue visualizzato per un controllo casella combinata.|
 |[CComboBox::SetCurSel](#setcursel)|Seleziona una stringa nella casella di riepilogo di una casella combinata.|
-|[CComboBox::SetDroppedWidth](#setdroppedwidth)|Imposta la larghezza minima consentita per la parte di casella di riepilogo discesa di una casella combinata.|
+|[CComboBox::SetDroppedWidth](#setdroppedwidth)|Imposta la larghezza minima consentita per la parte della casella di riepilogo a discesa di una casella combinata.|
 |[CComboBox::SetEditSel](#seteditsel)|Seleziona i caratteri nel controllo di modifica di una casella combinata.|
-|[CComboBox::SetExtendedUI](#setextendedui)|Seleziona l'interfaccia utente predefinita o l'interfaccia utente estesa di una casella combinata con lo stile CBS_DROPDOWN o CBS_DROPDOWNLIST.|
-|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|Imposta la larghezza in pixel che la parte di casella di riepilogo della casella combinata può essere necessario scorrere orizzontalmente.|
-|[CComboBox::SetItemData](#setitemdata)|Imposta il valore a 32 bit associato con l'elemento specificato in una casella combinata.|
-|[CComboBox::SetItemDataPtr](#setitemdataptr)|Imposta il puntatore a 32 bit associato con l'elemento specificato in una casella combinata.|
-|[CComboBox::SetItemHeight](#setitemheight)|Imposta l'altezza degli elementi dell'elenco in una casella combinata o l'altezza della porzione di controllo di modifica (o testo statico) di una casella combinata.|
+|[CComboBox:: SetExtendedUI](#setextendedui)|Consente di selezionare l'interfaccia utente predefinita o l'interfaccia utente estesa per una casella combinata con lo stile CBS_DROPDOWN o CBS_DROPDOWNLIST.|
+|[CComboBox:: SetHorizontalExtent](#sethorizontalextent)|Imposta la larghezza in pixel di cui è possibile scorrere orizzontalmente la parte della casella combinata della casella combinata.|
+|[CComboBox::SetItemData](#setitemdata)|Imposta il valore a 32 bit associato all'elemento specificato in una casella combinata.|
+|[CComboBox::SetItemDataPtr](#setitemdataptr)|Imposta il puntatore a 32 bit associato all'elemento specificato in una casella combinata.|
+|[CComboBox:: SetItemHeight](#setitemheight)|Imposta l'altezza degli elementi dell'elenco in una casella combinata o l'altezza della parte della casella combinata (o del testo statico) del controllo di modifica.|
 |[CComboBox::SetLocale](#setlocale)|Imposta l'identificatore delle impostazioni locali per una casella combinata.|
 |[CComboBox::SetMinVisibleItems](#setminvisibleitems)|Imposta il numero minimo di elementi visibili nell'elenco a discesa della casella combinata corrente.|
-|[CComboBox::SetTopIndex](#settopindex)|Indica la parte di casella di riepilogo della casella combinata per visualizzare l'elemento con l'indice specificato nella parte superiore.|
-|[CComboBox::ShowDropDown](#showdropdown)|Mostra o nasconde la casella di riepilogo di una casella combinata con lo stile CBS_DROPDOWN o CBS_DROPDOWNLIST.|
+|[CComboBox::SetTopIndex](#settopindex)|Indica alla parte della casella combinata di visualizzare l'elemento con l'indice specificato nella parte superiore.|
+|[CComboBox::ShowDropDown](#showdropdown)|Consente di visualizzare o nascondere la casella di riepilogo di una casella combinata con lo stile CBS_DROPDOWN o CBS_DROPDOWNLIST.|
 
 ## <a name="remarks"></a>Note
 
-Una casella combinata è costituito da una casella di riepilogo combinata con un controllo statico o controllo di modifica. La parte di casella di riepilogo del controllo potrebbe essere visualizzata in qualsiasi momento o può solo elenco a discesa quando l'utente seleziona la freccia giù accanto al controllo.
+Una casella combinata è costituita da una casella di riepilogo combinata con un controllo statico o un controllo di modifica. La parte della casella di riepilogo del controllo può essere visualizzata in qualsiasi momento o solo quando l'utente seleziona la freccia a discesa accanto al controllo.
 
-L'elemento attualmente selezionato (se presente) nella casella di riepilogo viene visualizzato in statico o controllo di modifica. Inoltre, se la casella combinata è applicato lo stile elenco a discesa, l'utente può digitare il carattere iniziale di uno degli elementi nell'elenco e la casella di riepilogo, se visibile, evidenzierà l'elemento successivo con il carattere iniziale.
+L'elemento attualmente selezionato, se presente, nella casella di riepilogo viene visualizzato nel controllo statico o modifica. Inoltre, se la casella combinata dispone dello stile dell'elenco a discesa, l'utente può digitare il carattere iniziale di uno degli elementi nell'elenco e la casella di riepilogo, se visibile, evidenzia l'elemento successivo con tale carattere iniziale.
 
-La tabella seguente confronta la casella combinata tre [stili](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles).
+Nella tabella seguente vengono confrontati i tre [stili](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)della casella combinata.
 
-|Stile|Quando casella di riepilogo è visibile|Controllo statico o di modifica|
+|Style|Quando è visibile la casella di riepilogo|Controllo statico o di modifica|
 |-----------|-------------------------------|-----------------------------|
 |Semplice|Always|Edit|
-|Drop-down|Quando viene rilasciata verso il basso|Edit|
-|Elenco a discesa|Quando viene rilasciata verso il basso|Static|
+|Drop-down|Quando viene eliminato|Edit|
+|Elenco a discesa|Quando viene eliminato|statico|
 
-È possibile creare un `CComboBox` oggetto da un modello di finestra di dialogo o direttamente nel codice. In entrambi i casi, chiamare prima il costruttore `CComboBox` per costruire il `CComboBox` dell'oggetto, quindi chiamare il [Create](#create) funzione membro per creare il controllo e associarlo al `CComboBox` oggetto.
+È possibile creare un `CComboBox` oggetto da un modello di finestra di dialogo o direttamente nel codice. In entrambi i casi, chiamare prima il `CComboBox` costruttore per costruire `CComboBox` l'oggetto, quindi chiamare la funzione membro [create](#create) per creare `CComboBox` il controllo e collegarlo all'oggetto.
 
-Se si desidera gestire i messaggi di notifica Windows inviati da una casella combinata per il relativo elemento padre (in genere una classe derivata da `CDialog`), aggiungere una funzione membro della mappa messaggi voce e gestore di messaggi alla classe padre per ogni messaggio.
+Se si desidera gestire i messaggi di notifica di Windows inviati da una casella combinata al relativo elemento padre (in genere `CDialog`una classe derivata da), aggiungere una voce della mappa messaggi e una funzione membro del gestore del messaggio alla classe padre per ogni messaggio.
 
-Ogni voce nella mappa messaggi assume il formato seguente:
+Ogni voce della mappa messaggi assume il formato seguente:
 
-**VIA\_**_notifica_ **(** _id_, _memberFxn_ **)**
+**In\_** _notifica_ **(** _ID_, _memberFxn_ **)**
 
-in cui `id` specifica l'ID di finestra figlio del controllo casella combinata che invia la notifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.
+dove `id` specifica l'ID della finestra figlio del controllo casella combinata che invia la notifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.
 
-Prototipo di funzione dell'elemento padre è il seguente:
+Il prototipo di funzione del padre è il seguente:
 
 **afx_msg** `void` `memberFxn` **( );**
 
-Non è possibile prevedere l'ordine in cui verranno inviate determinate notifiche. In particolare, una notifica CBN_SELCHANGE proveniente può verificarsi prima o dopo una notifica CBN_CLOSEUP.
+Non è possibile prevedere l'ordine in cui verranno inviate determinate notifiche. In particolare, una notifica CBN_SELCHANGE può verificarsi prima o dopo una notifica CBN_CLOSEUP.
 
-Le voci della mappa messaggi possibili sono i seguenti:
+Le potenziali voci della mappa messaggi sono le seguenti:
 
-- ON_CBN_CLOSEUP (Windows 3.1 e successive). La casella di riepilogo di una casella combinata è chiuso. Questo messaggio di notifica non viene inviato per una casella combinata con il [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile.
+- ON_CBN_CLOSEUP (Windows 3,1 e versioni successive) La casella di riepilogo di una casella combinata è stata chiusa. Questo messaggio di notifica non viene inviato per una casella combinata con lo stile [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
-- ON_CBN_DBLCLK l'utente fa doppio clic su una stringa nella casella di riepilogo di una casella combinata. Questo messaggio di notifica verrà inviato solo per una casella combinata con lo stile CBS_SIMPLE. Per una casella combinata con il [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) oppure [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) applicare uno stile, non è possibile eseguire un doppio clic in quanto un solo clic consente di nascondere la casella di riepilogo.
+- ON_CBN_DBLCLK l'utente fa doppio clic su una stringa nella casella di riepilogo di una casella combinata. Questo messaggio di notifica viene inviato solo per una casella combinata con lo stile CBS_SIMPLE. Per una casella combinata con lo stile [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , non è possibile eseguire un doppio clic perché un solo clic nasconde la casella di riepilogo.
 
-- La casella di riepilogo di una casella combinata sta per elenco a discesa ON_CBN_DROPDOWN (essere resa visibile). Questo messaggio di notifica può verificarsi solo per una casella combinata con lo stile CBS_DROPDOWN o CBS_DROPDOWNLIST.
+- ON_CBN_DROPDOWN la casella di riepilogo di una casella combinata sta per essere visualizzata. Questo messaggio di notifica può verificarsi solo per una casella combinata con lo stile CBS_DROPDOWN o CBS_DROPDOWNLIST.
 
-- ON_CBN_EDITCHANGE l'utente ha eseguito un'azione che potrebbe aver modificato il testo nella parte di controllo di modifica di una casella combinata. A differenza del messaggio CBN_EDITUPDATE, questo messaggio viene inviato dopo l'aggiornamento di Windows la schermata. Non viene inviato se la casella combinata stile CBS_DROPDOWNLIST.
+- ON_CBN_EDITCHANGE l'utente ha effettuato un'azione che potrebbe aver modificato il testo nella parte relativa al controllo di modifica di una casella combinata. A differenza del messaggio CBN_EDITUPDATE, questo messaggio viene inviato dopo che Windows aggiorna la schermata. Non viene inviato se la casella combinata ha lo stile CBS_DROPDOWNLIST.
 
-- ON_CBN_EDITUPDATE la parte di controllo di modifica di una casella combinata sta per il testo di visualizzazione modificato. Questo messaggio di notifica viene inviato dopo che il controllo ha formattato il testo, ma prima che venga visualizzato il testo. Non viene inviato se la casella combinata stile CBS_DROPDOWNLIST.
+- ON_CBN_EDITUPDATE la parte relativa al controllo di modifica di una casella combinata sta per visualizzare il testo modificato. Questo messaggio di notifica viene inviato dopo che il controllo ha formattato il testo ma prima di visualizzare il testo. Non viene inviato se la casella combinata ha lo stile CBS_DROPDOWNLIST.
 
-- Casella combinata ON_CBN_ERRSPACE Impossibile allocare memoria sufficiente per soddisfare una richiesta specifica.
+- ON_CBN_ERRSPACE la casella combinata non può allocare memoria sufficiente per soddisfare una richiesta specifica.
 
-- ON_CBN_SELENDCANCEL (Windows 3.1 e successive). Indica che la selezione dell'utente deve essere annullata. L'utente fa clic su un elemento e quindi fa clic su un'altra finestra o per nascondere la casella di riepilogo di una casella combinata. Questo messaggio di notifica viene inviato prima il messaggio di notifica CBN_CLOSEUP per indicare che la selezione dell'utente deve essere ignorata. Il messaggio di notifica CBN_SELENDCANCEL o CBN_SELENDOK viene inviato anche se non viene inviato il messaggio di notifica di CBN_CLOSEUP (come nel caso una casella combinata con lo stile CBS_SIMPLE).
+- ON_CBN_SELENDCANCEL (Windows 3,1 e versioni successive) Indica che la selezione dell'utente deve essere annullata. L'utente fa clic su un elemento e quindi fa clic su un'altra finestra o controllo per nascondere la casella di riepilogo di una casella combinata. Questo messaggio di notifica viene inviato prima del messaggio di notifica CBN_CLOSEUP per indicare che la selezione dell'utente deve essere ignorata. Il messaggio di notifica CBN_SELENDCANCEL o CBN_SELENDOK viene inviato anche se il messaggio di notifica CBN_CLOSEUP non viene inviato (come nel caso di una casella combinata con lo stile CBS_SIMPLE).
 
-- ON_CBN_SELENDOK l'utente seleziona un elemento e quindi preme il tasto INVIO o sceglie il tasto freccia giù per nascondere la casella di riepilogo di una casella combinata. Questo messaggio di notifica viene inviato prima il messaggio CBN_CLOSEUP per indicare che la selezione dell'utente deve essere considerata valida. Il messaggio di notifica CBN_SELENDCANCEL o CBN_SELENDOK viene inviato anche se non viene inviato il messaggio di notifica di CBN_CLOSEUP (come nel caso una casella combinata con lo stile CBS_SIMPLE).
+- ON_CBN_SELENDOK l'utente seleziona un elemento e quindi preme il tasto invio o fa clic sul tasto freccia giù per nascondere la casella di riepilogo di una casella combinata. Questo messaggio di notifica viene inviato prima del messaggio CBN_CLOSEUP per indicare che la selezione dell'utente deve essere considerata valida. Il messaggio di notifica CBN_SELENDCANCEL o CBN_SELENDOK viene inviato anche se il messaggio di notifica CBN_CLOSEUP non viene inviato (come nel caso di una casella combinata con lo stile CBS_SIMPLE).
 
-- Casella combinata ON_CBN_KILLFOCUS sta per perdere lo stato attivo.
+- ON_CBN_KILLFOCUS la casella combinata sta perdendo lo stato attivo per l'input.
 
-- ON_CBN_SELCHANGE la selezione nella casella di riepilogo di una casella combinata sta per essere modificato in seguito l'utente modifica la selezione utilizzando i tasti di direzione o facendo clic nella casella di riepilogo. Quando l'elaborazione del messaggio, il testo nel controllo di modifica della casella combinata può essere recuperato solo tramite `GetLBText` o un'altra funzione simile. `GetWindowText` non è utilizzabile.
+- ON_CBN_SELCHANGE la selezione nella casella di riepilogo di una casella combinata sta per essere modificata a seguito dell'utente facendo clic nella casella di riepilogo o cambiando la selezione usando i tasti di direzione. Quando si elabora questo messaggio, il testo nel controllo di modifica della casella combinata può essere recuperato solo tramite `GetLBText` o un'altra funzione simile. `GetWindowText`non può essere utilizzato.
 
-- Casella combinata ON_CBN_SETFOCUS riceve lo stato attivo.
+- ON_CBN_SETFOCUS la casella combinata riceve lo stato attivo per l'input.
 
-Se si crea una `CComboBox` oggetto all'interno di una finestra di dialogo (tramite una risorsa finestra di dialogo), il `CComboBox` oggetto viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
+Se si crea un `CComboBox` oggetto in una finestra di dialogo (tramite una risorsa della finestra di `CComboBox` dialogo), l'oggetto viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
 
-Se si incorpora un `CComboBox` oggetto all'interno di un'altra finestra dell'oggetto, non è necessario eliminarla definitivamente. Se si crea il `CComboBox` dell'oggetto nello stack, viene eliminato automaticamente. Se si crea il `CComboBox` oggetto sull'heap tramite il **nuovi** funzione, è necessario chiamare **eliminare** sull'oggetto per eliminarla definitivamente quando viene eliminata definitivamente la casella combinata di Windows.
+Se si incorpora un `CComboBox` oggetto in un altro oggetto finestra, non è necessario eliminarlo definitivamente. Se si crea l' `CComboBox` oggetto nello stack, questo viene eliminato automaticamente. Se si crea l' `CComboBox` oggetto nell'heap usando la **nuova** funzione, è necessario chiamare **Delete** nell'oggetto per eliminarlo quando la casella combinata di Windows viene distrutta.
 
-**Nota** se si desidera gestire i messaggi WM_CHAR e WM_KEYDOWN, è necessario sottoclasse della casella combinata modifica e i controlli casella di elenco, derivare classi dalla `CEdit` e `CListBox`, e aggiungere i gestori per i messaggi per le classi derivate. Per altre informazioni, vedere [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Nota** Se si desidera gestire i messaggi WM_KEYDOWN e WM_CHAR, è necessario creare una sottoclasse dei controlli di modifica e casella di riepilogo della casella combinata, `CEdit` derivare le classi da e `CListBox`e aggiungere gestori per tali messaggi alle classi derivate. Per ulteriori informazioni, vedere [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -262,9 +262,9 @@ Se si incorpora un `CComboBox` oggetto all'interno di un'altra finestra dell'ogg
 
 **Intestazione:** afxwin.h
 
-##  <a name="addstring"></a>  CComboBox::AddString
+##  <a name="addstring"></a>CComboBox:: AddString
 
-Aggiunge una stringa nella casella di riepilogo di una casella combinata.
+Aggiunge una stringa alla casella di riepilogo di una casella combinata.
 
 ```
 int AddString(LPCTSTR lpszString);
@@ -273,26 +273,26 @@ int AddString(LPCTSTR lpszString);
 ### <a name="parameters"></a>Parametri
 
 *lpszString*<br/>
-Punta a una stringa con terminazione null che deve essere aggiunto.
+Punta alla stringa con terminazione null da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il valore restituito è maggiore o uguale a 0, si tratta dell'indice in base zero per la stringa nella casella di riepilogo. Il valore restituito è CB_ERR se si verifica un errore; il valore restituito è CB_ERRSPACE se non c'è spazio sufficiente per archiviare la nuova stringa.
+Se il valore restituito è maggiore o uguale a 0, è l'indice in base zero della stringa nella casella di riepilogo. Se si verifica un errore, il valore restituito è CB_ERR. Se non è disponibile spazio sufficiente per archiviare la nuova stringa, il valore restituito è CB_ERRSPACE.
 
 ### <a name="remarks"></a>Note
 
-Se la casella di riepilogo non è stata creata con il [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile, la stringa viene aggiunta alla fine dell'elenco. In caso contrario, la stringa viene inserita nell'elenco e l'elenco è ordinato.
+Se la casella di riepilogo non è stata creata con lo stile [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , la stringa viene aggiunta alla fine dell'elenco. In caso contrario, la stringa viene inserita nell'elenco e l'elenco viene ordinato.
 
 > [!NOTE]
->  Questa funzione non è supportata per il Windows `ComboBoxEx` controllo. Per altre informazioni su questo controllo, vedere [i controlli ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) nel SDK di Windows.
+>  Questa funzione non è supportata dal controllo di `ComboBoxEx` Windows. Per ulteriori informazioni su questo controllo, vedere [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) nella Windows SDK.
 
-Per inserire una stringa in una posizione specifica all'interno dell'elenco, usare il [InsertString](#insertstring) funzione membro.
+Per inserire una stringa in una posizione specifica all'interno dell'elenco, usare la funzione membro [InsertString](#insertstring) .
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]
 
-##  <a name="ccombobox"></a>  CComboBox::CComboBox
+##  <a name="ccombobox"></a>CComboBox:: CComboBox
 
 Costruisce un oggetto `CComboBox`.
 
@@ -304,9 +304,9 @@ CComboBox();
 
 [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]
 
-##  <a name="clear"></a>  CComboBox::Clear
+##  <a name="clear"></a>CComboBox:: Clear
 
-Elimina (Elimina) la selezione corrente, se presente, nel controllo di modifica della casella combinata.
+Elimina (Cancella) la selezione corrente, se presente, nel controllo di modifica della casella combinata.
 
 ```
 void Clear();
@@ -314,15 +314,15 @@ void Clear();
 
 ### <a name="remarks"></a>Note
 
-Per eliminare la selezione corrente e inserire il contenuto eliminato negli Appunti, usare il [Taglia](#cut) funzione membro.
+Per eliminare la selezione corrente e inserire il contenuto eliminato sugli Appunti, usare la funzione membro [Cut](#cut) .
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]
 
-##  <a name="compareitem"></a>  CComboBox::CompareItem
+##  <a name="compareitem"></a>CComboBox:: CompareItem
 
-Chiamato dal framework per determinare la posizione relativa di un nuovo elemento nella parte di casella di riepilogo di una casella combinata disegno ordinato.
+Chiamata eseguita dal Framework per determinare la posizione relativa di un nuovo elemento nella parte della casella di riepilogo di una casella combinata creata dal proprietario.
 
 ```
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
@@ -331,29 +331,29 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpCompareItemStruct*<br/>
-Un puntatore di tipo long a un [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) struttura.
+Puntatore long a una struttura [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) .
 
 ### <a name="return-value"></a>Valore restituito
 
-Indica la posizione relativa dei due elementi descritti nel `COMPAREITEMSTRUCT` struttura. Può essere uno dei valori seguenti:
+Indica la posizione relativa dei due elementi descritti nella `COMPAREITEMSTRUCT` struttura. Può essere uno dei valori seguenti:
 
 |Value|Significato|
 |-----------|-------------|
-|- 1|Elemento 1 precede l'elemento 2.|
-|0|Item 1 e item 2 è lo stesso ordine.|
-|1|Elemento 1 ordinato alfabeticamente dopo l'elemento 2.|
+|- 1|L'elemento 1 Ordina prima dell'elemento 2.|
+|0|Gli elementi 1 e 2 vengono ordinati allo stesso modo.|
+|1|L'elemento 1 Ordina dopo l'elemento 2.|
 
-Visualizzare [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) per una descrizione di `COMPAREITEMSTRUCT`.
+Per una descrizione di `COMPAREITEMSTRUCT`, vedere [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) .
 
 ### <a name="remarks"></a>Note
 
-Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Se si crea una casella combinata proprietario con lo stile LBS_SORT, è necessario eseguire l'override di questa funzione membro per facilitare il framework per l'ordinamento dei nuovi elementi aggiunti alla casella di riepilogo.
+Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Se si crea una casella combinata creata dal proprietario con lo stile LBS_SORT, è necessario eseguire l'override di questa funzione membro per supportare il Framework nell'ordinamento dei nuovi elementi aggiunti alla casella di riepilogo.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]
 
-##  <a name="copy"></a>  CComboBox::Copy
+##  <a name="copy"></a>CComboBox:: Copy
 
 Copia la selezione corrente, se presente, nel controllo di modifica della casella combinata negli Appunti nel formato CF_TEXT.
 
@@ -365,9 +365,9 @@ void Copy();
 
 [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]
 
-##  <a name="create"></a>  CComboBox::Create
+##  <a name="create"></a>CComboBox:: create
 
-Crea la casella combinata e lo collega al `CComboBox` oggetto.
+Crea la casella combinata e la collega all' `CComboBox` oggetto.
 
 ```
 virtual BOOL Create(
@@ -383,13 +383,13 @@ virtual BOOL Create(
 Specifica lo stile della casella combinata. Applicare qualsiasi combinazione di [stili casella combinata](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) alla casella.
 
 *rect*<br/>
-Punta alla posizione e dimensioni della casella combinata. Può essere un' [struttura RECT](/windows/desktop/api/windef/ns-windef-tagrect) o un `CRect` oggetto.
+Punta alla posizione e alle dimensioni della casella combinata. Può essere una [struttura Rect](/windows/win32/api/windef/ns-windef-rect) o un `CRect` oggetto.
 
 *pParentWnd*<br/>
-Specifica una finestra padre della casella combinata (in genere un `CDialog`). Non deve essere NULL.
+Specifica la finestra padre della casella combinata (in genere `CDialog`un oggetto). Non deve essere NULL.
 
 *nID*<br/>
-Specifica l'ID del controllo. della casella combinata
+Specifica l'ID del controllo della casella combinata.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -397,25 +397,25 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Si costruisce un `CComboBox` oggetto in due passaggi. In primo luogo, chiamare il costruttore e quindi chiamare `Create`, che consente di creare la casella combinata di Windows e lo collega al `CComboBox` oggetto.
+Si costruisce `CComboBox` un oggetto in due passaggi. Chiamare innanzitutto il costruttore e quindi chiamare `Create`, che crea la casella combinata di Windows e la `CComboBox` collega all'oggetto.
 
-Quando `Create` viene eseguito, invia Windows la [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), e [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messaggi alla casella combinata.
+Quando `Create` viene eseguito, Windows invia i messaggi [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)e [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) alla casella combinata.
 
-Questi messaggi vengono gestiti per impostazione predefinita il [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), e [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funzioni membro nel `CWnd` classe di base. Per estendere la gestione dei messaggi predefinito, derivare una classe da `CComboBox`, aggiungere una mappa messaggi per la nuova classe e sostituire le funzioni membro di gestione del messaggio precedente. Eseguire l'override `OnCreate`, ad esempio, per eseguire l'inizializzazione necessaria per una nuova classe.
+Questi messaggi vengono gestiti per impostazione predefinita dalle funzioni membro [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)e [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) nella classe `CWnd` di base. Per estendere la gestione dei messaggi predefinita, derivare una `CComboBox`classe da, aggiungere una mappa messaggi alla nuova classe ed eseguire l'override delle funzioni membro del gestore di messaggi precedenti. Eseguire `OnCreate`l'override, ad esempio, per eseguire l'inizializzazione necessaria per una nuova classe.
 
-Applicare la seguente istruzione [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) a un controllo casella combinata. :
+Applicare gli [stili della finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) seguenti a un controllo casella combinata. :
 
 - WS_CHILD sempre
 
-- In genere WS_VISIBLE
+- WS_VISIBLE in genere
 
 - WS_DISABLED raramente
 
-- WS_VSCROLL per aggiungere lo scorrimento verticale per la casella di riepilogo nella casella combinata
+- WS_VSCROLL aggiungere lo scorrimento verticale per la casella di riepilogo nella casella combinata
 
-- WS_HSCROLL per aggiungere lo scorrimento orizzontale per la casella di riepilogo nella casella combinata
+- WS_HSCROLL aggiungere lo scorrimento orizzontale per la casella di riepilogo nella casella combinata
 
-- WS_GROUP ai controlli di gruppo
+- WS_GROUP per raggruppare i controlli
 
 - WS_TABSTOP per includere la casella combinata nell'ordine di tabulazione
 
@@ -423,9 +423,9 @@ Applicare la seguente istruzione [stili di finestra](../../mfc/reference/styles-
 
 [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]
 
-##  <a name="cut"></a>  CComboBox::Cut
+##  <a name="cut"></a>CComboBox:: Cut
 
-Elimina (tagli) la selezione corrente, se presente, nella casella combinata modifica controllano e copia il testo eliminato negli Appunti in formato CF_TEXT.
+Elimina (taglia) la selezione corrente, se presente, nel controllo di modifica della casella combinata e copia il testo eliminato negli Appunti nel formato CF_TEXT.
 
 ```
 void Cut();
@@ -433,15 +433,15 @@ void Cut();
 
 ### <a name="remarks"></a>Note
 
-Per eliminare la selezione corrente senza inserire il testo eliminato negli Appunti, chiamare il [chiaro](#clear) funzione membro.
+Per eliminare la selezione corrente senza inserire il testo eliminato sugli Appunti, chiamare la funzione membro [Clear](#clear) .
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]
 
-##  <a name="deleteitem"></a>  CComboBox::DeleteItem
+##  <a name="deleteitem"></a>CComboBox::D eleteItem
 
-Chiamato dal framework quando l'utente elimina un elemento da un disegno `CComboBox` dell'oggetto o distrugge la casella combinata.
+Chiamata eseguita dal framework quando l'utente elimina un elemento da un oggetto disegnato `CComboBox` dal proprietario o Elimina la casella combinata.
 
 ```
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
@@ -450,17 +450,17 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpDeleteItemStruct*<br/>
-Un puntatore di tipo long a un Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) struttura che contiene informazioni sull'elemento eliminato. Visualizzare [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) per una descrizione della struttura.
+Puntatore long a una struttura [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) di Windows che contiene informazioni sull'elemento eliminato. Per una descrizione della struttura, vedere [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) .
 
 ### <a name="remarks"></a>Note
 
-L'implementazione predefinita di questa funzione non esegue alcuna operazione. Eseguire l'override di questa funzione per ridisegnare la casella combinata in base alle esigenze.
+L'implementazione predefinita di questa funzione non esegue alcuna operazione. Eseguire l'override di questa funzione per ricreare la casella combinata in base alle esigenze.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]
 
-##  <a name="deletestring"></a>  CComboBox::DeleteString
+##  <a name="deletestring"></a>CComboBox::D eleteString
 
 Elimina l'elemento nella posizione *nIndex* dalla casella combinata.
 
@@ -471,23 +471,23 @@ int DeleteString(UINT nIndex);
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Specifica l'indice a una stringa che deve essere eliminato.
+Specifica l'indice della stringa da eliminare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il valore restituito è maggiore o uguale a 0, quindi è un conteggio delle stringhe rimanenti nell'elenco. Il valore restituito è CB_ERR *nIndex* specifica un indice maggiore del numero di elementi nell'elenco.
+Se il valore restituito è maggiore o uguale a 0, è un conteggio delle stringhe rimaste nell'elenco. Il valore restituito è CB_ERR se *nIndex* specifica un indice maggiore del numero di elementi nell'elenco.
 
 ### <a name="remarks"></a>Note
 
-Tutti gli elementi segue *nIndex* ora spostare verso il basso di una posizione. Ad esempio, se una casella combinata contiene due elementi, l'eliminazione il primo elemento causerà l'elemento rimanente in questo modo la prima posizione. *nIndex*= 0 per l'elemento nella prima posizione.
+Tutti gli elementi che seguono *nIndex* ora si spostano verso il basso di una posizione. Se, ad esempio, una casella combinata contiene due elementi, l'eliminazione del primo elemento comporterà la prima posizione dell'elemento rimanente. *nIndex*= 0 per l'elemento nella prima posizione.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]
 
-##  <a name="dir"></a>  CComboBox::Dir
+##  <a name="dir"></a>CComboBox::D IR
 
-Aggiunge un elenco di nomi di file o le unità nella casella di riepilogo di una casella combinata.
+Aggiunge un elenco di nomi file o unità alla casella di riepilogo di una casella combinata.
 
 ```
 int Dir(
@@ -498,42 +498,42 @@ int Dir(
 ### <a name="parameters"></a>Parametri
 
 *attr*<br/>
-Può essere qualsiasi combinazione dei **enum** i valori descritti nella [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) o qualsiasi combinazione dei valori seguenti:
+Può essere una qualsiasi combinazione dei valori **enum** descritti in [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) o qualsiasi combinazione dei valori seguenti:
 
-- File DDL_READWRITE possono essere letti da o scritti.
+- Il file DDL_READWRITE può essere letto o scritto.
 
-- DDL_READONLY File può essere letto da ma non scritto.
+- Il file DDL_READONLY può essere letto da ma non scritto.
 
-- File DDL_HIDDEN è nascosta e non viene visualizzata nell'elenco delle directory.
+- Il file DDL_HIDDEN è nascosto e non viene visualizzato in un elenco di directory.
 
-- File DDL_SYSTEM è un file di sistema.
+- Il file DDL_SYSTEM è un file di sistema.
 
 - DDL_DIRECTORY il nome specificato da *lpszWildCard* specifica una directory.
 
-- DDL_ARCHIVE File sono stati archiviati.
+- Il file DDL_ARCHIVE è stato archiviato.
 
-- DDL_DRIVES includono tutte le unità che corrispondono al nome specificato da *lpszWildCard*.
+- DDL_DRIVES include tutte le unità che corrispondono al nome specificato da *lpszWildCard*.
 
-- Flag Exclusive DDL_EXCLUSIVE. Se è impostato il flag exclusive, vengono elencati solo i file del tipo specificato. In caso contrario, sono elencati i file del tipo specificato oltre ai file "normali".
+- Flag esclusivo DDL_EXCLUSIVE. Se viene impostato il flag exclusive, vengono elencati solo i file del tipo specificato. In caso contrario, i file del tipo specificato vengono elencati oltre ai file "normali".
 
 *lpszWildCard*<br/>
-Punta a una stringa specifica di file. La stringa può contenere i caratteri jolly (ad esempio, *.\*).
+Punta a una stringa di specifica del file. La stringa può contenere caratteri jolly, ad esempio *.\*
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il valore restituito è maggiore o uguale a 0, si tratta dell'indice in base zero del nome del file ultimo aggiunto all'elenco. Il valore restituito è CB_ERR se si verifica un errore; il valore restituito è CB_ERRSPACE se non c'è spazio sufficiente per archiviare le nuove stringhe.
+Se il valore restituito è maggiore o uguale a 0, è l'indice in base zero dell'ultimo nome file aggiunto all'elenco. Se si verifica un errore, il valore restituito è CB_ERR. il valore restituito è CB_ERRSPACE se non è disponibile spazio sufficiente per archiviare le nuove stringhe.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione non è supportata per il Windows `ComboBoxEx` controllo. Per altre informazioni su questo controllo, vedere [i controlli ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) nel SDK di Windows.
+Questa funzione non è supportata dal controllo di `ComboBoxEx` Windows. Per ulteriori informazioni su questo controllo, vedere [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]
 
-##  <a name="drawitem"></a>  CComboBox::DrawItem
+##  <a name="drawitem"></a>CComboBox::D rawItem
 
-Chiamato dal framework quando un aspetto visivo di una casella combinata proprietario cambia.
+Chiamata eseguita dal framework quando viene modificato un aspetto visivo di una casella combinata creata dal proprietario.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -542,13 +542,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpDrawItemStruct*<br/>
-Un puntatore a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struttura che contiene informazioni sul tipo di disegno necessaria.
+Puntatore a una struttura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) che contiene informazioni sul tipo di disegno necessario.
 
 ### <a name="remarks"></a>Note
 
-Il `itemAction` membro del `DRAWITEMSTRUCT` struttura definisce l'azione di disegno che deve essere eseguita. Visualizzare [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) per una descrizione della struttura.
+Il `itemAction` membro`DRAWITEMSTRUCT` della struttura definisce l'azione di disegno da eseguire. Per una descrizione della struttura, vedere [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) .
 
-Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro per implementare disegno di un disegno `CComboBox` oggetto. Prima di questa funzione membro termina, l'applicazione è necessario ripristinare tutti grafica device interface (GDI) gli oggetti selezionati per il contesto di visualizzazione fornito *lpDrawItemStruct*.
+Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro per implementare il disegno per `CComboBox` un oggetto disegnato dal proprietario. Prima che questa funzione membro termini, l'applicazione deve ripristinare tutti gli oggetti GDI (Graphics Device Interface) selezionati per il contesto di visualizzazione fornito in *lpDrawItemStruct*.
 
 ### <a name="example"></a>Esempio
 
@@ -556,7 +556,7 @@ Per impostazione predefinita, questa funzione membro non esegue alcuna operazion
 
 ##  <a name="findstring"></a>  CComboBox::FindString
 
-Trova, ma non selezionata, la prima stringa che contiene il prefisso specificato nella casella di riepilogo di una casella combinata.
+Trova, ma non seleziona, la prima stringa che contiene il prefisso specificato nella casella di riepilogo di una casella combinata.
 
 ```
 int FindString(
@@ -567,18 +567,18 @@ int FindString(
 ### <a name="parameters"></a>Parametri
 
 *nStartAfter*<br/>
-Contiene l'indice in base zero dell'elemento che precede il primo elemento da cercare. Quando la ricerca raggiunge la fine della casella di riepilogo, continua nella parte superiore della casella di riepilogo fino all'elemento specificato da *nStartAfter*. Se-1, la casella di riepilogo intero viene eseguita la ricerca dall'inizio.
+Contiene l'indice in base zero dell'elemento prima del primo elemento da cercare. Quando la ricerca raggiunge la fine della casella di riepilogo, continua dalla parte superiore della casella di riepilogo all'elemento specificato da *nStartAfter*. Se-1, viene eseguita la ricerca dell'intera casella di riepilogo dall'inizio.
 
 *lpszString*<br/>
-Punta alla stringa con terminazione null che contiene il prefisso per la ricerca. La ricerca avviene indipendenti, in modo che questa stringa può contenere qualsiasi combinazione di lettere maiuscole e minuscole.
+Punta alla stringa con terminazione null che contiene il prefisso da ricercare. La ricerca è indipendente dalla distinzione tra maiuscole e minuscole, pertanto questa stringa può contenere qualsiasi combinazione di lettere maiuscole e minuscole.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il valore restituito è maggiore o uguale a 0, è l'indice in base zero dell'elemento corrispondente. È CB_ERR se la ricerca ha esito negativo.
+Se il valore restituito è maggiore o uguale a 0, è l'indice in base zero dell'elemento corrispondente. È CB_ERR se la ricerca ha avuto esito negativo.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione non è supportata per il Windows `ComboBoxEx` controllo. Per altre informazioni su questo controllo, vedere [i controlli ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) nel SDK di Windows.
+Questa funzione non è supportata dal controllo di `ComboBoxEx` Windows. Per ulteriori informazioni su questo controllo, vedere [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -586,7 +586,7 @@ Questa funzione non è supportata per il Windows `ComboBoxEx` controllo. Per alt
 
 ##  <a name="findstringexact"></a>  CComboBox::FindStringExact
 
-Chiamare il `FindStringExact` trovare la prima stringa di casella di riepilogo, in una casella combinata, che corrisponde alla stringa specificata nella funzione membro *lpszFind*.
+Chiamare la `FindStringExact` funzione membro per trovare la prima stringa della casella di riepilogo (in una casella combinata) che corrisponde alla stringa specificata in *lpszFind*.
 
 ```
 int FindStringExact(
@@ -597,18 +597,18 @@ int FindStringExact(
 ### <a name="parameters"></a>Parametri
 
 *nIndexStart*<br/>
-Specifica l'indice in base zero dell'elemento che precede il primo elemento da cercare. Quando la ricerca raggiunge la fine della casella di riepilogo, continua nella parte superiore della casella di riepilogo fino all'elemento specificato da *nIndexStart*. Se *nIndexStart* è -1, la casella di riepilogo intero viene eseguita la ricerca dall'inizio.
+Specifica l'indice in base zero dell'elemento prima del primo elemento da cercare. Quando la ricerca raggiunge la fine della casella di riepilogo, continua dalla parte superiore della casella di riepilogo all'elemento specificato da *nIndexStart*. Se *nIndexStart* è-1, viene eseguita la ricerca dell'intera casella di riepilogo dall'inizio.
 
 *lpszFind*<br/>
-Punta alla stringa con terminazione null da cercare. Questa stringa può contenere un nome di file completo, inclusa l'estensione. La ricerca non è tra maiuscole e minuscole, pertanto questa stringa può contenere qualsiasi combinazione di lettere maiuscole e minuscole.
+Punta alla stringa con terminazione null da cercare. Questa stringa può contenere un nome file completo, inclusa l'estensione. Per la ricerca non viene fatta distinzione tra maiuscole e minuscole, pertanto questa stringa può contenere qualsiasi combinazione di lettere maiuscole e minuscole.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice a base zero dell'elemento corrispondente oppure CB_ERR se la ricerca ha esito negativo.
+Indice in base zero dell'elemento corrispondente o CB_ERR se la ricerca ha avuto esito negativo.
 
 ### <a name="remarks"></a>Note
 
-Se la casella combinata è stata creata con uno stile di disegno, ma senza il [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile `FindStringExact` tenta di far corrispondere il valore di parola doppia rispetto al valore di *lpszFind*.
+Se la casella combinata è stata creata con uno stile di creazione del proprietario ma senza lo stile [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), `FindStringExact` tenta di trovare una corrispondenza tra il valore di parola doppia e il valore di *lpszFind*.
 
 ### <a name="example"></a>Esempio
 
@@ -616,7 +616,7 @@ Se la casella combinata è stata creata con uno stile di disegno, ma senza il [C
 
 ##  <a name="getcomboboxinfo"></a>  CComboBox::GetComboBoxInfo
 
-Recupera le informazioni per il `CComboBox` oggetto.
+Recupera le informazioni per `CComboBox` l'oggetto.
 
 ```
 BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
@@ -625,19 +625,19 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 ### <a name="parameters"></a>Parametri
 
 *pcbi*<br/>
-Un puntatore per il [COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo) struttura.
+Puntatore alla struttura [COMBOBOXINFO](/windows/win32/api/winuser/ns-winuser-comboboxinfo) .
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
+Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità dei [CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo) del messaggio, come descritto nel SDK di Windows.
+Questa funzione membro emula la funzionalità del messaggio [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo) , come descritto nel Windows SDK.
 
-##  <a name="getcount"></a>  CComboBox::GetCount
+##  <a name="getcount"></a>CComboBox:: GetCount
 
-Chiamare questa funzione membro per recuperare il numero di elementi nella parte di casella di riepilogo di una casella combinata.
+Chiamare questa funzione membro per recuperare il numero di elementi nella parte della casella di riepilogo di una casella combinata.
 
 ```
 int GetCount() const;
@@ -645,15 +645,15 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di elementi. Il conteggio restituito è una maggiore del valore di indice dell'ultimo elemento (l'indice è in base zero). È CB_ERR se si verifica un errore.
+Numero di elementi. Il conteggio restituito è maggiore di uno rispetto al valore di indice dell'ultimo elemento (l'indice è in base zero). È CB_ERR se si verifica un errore.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]
 
-##  <a name="getcuebanner"></a>  CComboBox::GetCueBanner
+##  <a name="getcuebanner"></a>CComboBox:: GetCueBanner
 
-Ottiene il testo della segnalazione che viene visualizzato per un controllo casella combinata.
+Ottiene il testo cue visualizzato per un controllo casella combinata.
 
 ```
 CString GetCueBanner() const;
@@ -665,26 +665,26 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
-|*lpszText*|[out] Puntatore a un buffer che riceve il testo dell'intestazione della segnalazione.|
-|*cchText*|[in] Dimensione del buffer che il *lpszText* punta il parametro.|
+|*lpszText*|out Puntatore a un buffer che riceve il testo del banner cue.|
+|*cchText*|in Dimensioni del buffer a cui punta il parametro *lpszText* .|
 
 ### <a name="return-value"></a>Valore restituito
 
-Nel primo overload, una [CString](../../atl-mfc-shared/using-cstring.md) oggetto che contiene il testo dell'intestazione della segnalazione, se esistente; in caso contrario, un `CString` oggetto che ha lunghezza zero.
+Nel primo overload, oggetto [CString](../../atl-mfc-shared/using-cstring.md) che contiene il testo del banner del suggerimento, se esistente. in caso contrario `CString` , un oggetto con lunghezza zero.
 
 -oppure-
 
-Nel secondo overload, TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
+Nel secondo overload, TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Testo della segnalazione è una richiesta che viene visualizzata nell'area di input della casella combinata. Fino a quando l'utente fornisce l'input, viene visualizzato il testo della segnalazione.
+Il testo cue è un prompt visualizzato nell'area di input del controllo casella combinata. Il testo della stecca viene visualizzato fino a quando l'utente non fornisce l'input.
 
-Questo metodo invia il [CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner) messaggio, che è descritti nel SDK di Windows.
+Questo metodo invia il messaggio [CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner) , descritto nella Windows SDK.
 
-##  <a name="getcursel"></a>  CComboBox::GetCurSel
+##  <a name="getcursel"></a>CComboBox:: GetCurSel
 
 Chiamare questa funzione membro per determinare quale elemento della casella combinata è selezionato.
 
@@ -694,19 +694,19 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice a base zero dell'elemento attualmente selezionato nella casella di riepilogo di una casella combinata o CB_ERR se è selezionato alcun elemento.
+Indice in base zero dell'elemento attualmente selezionato nella casella di riepilogo di una casella combinata oppure CB_ERR se non è selezionato alcun elemento.
 
 ### <a name="remarks"></a>Note
 
-`GetCurSel` Restituisce un indice nell'elenco.
+`GetCurSel`Restituisce un indice nell'elenco.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]
 
-##  <a name="getdroppedcontrolrect"></a>  CComboBox::GetDroppedControlRect
+##  <a name="getdroppedcontrolrect"></a>CComboBox:: GetDroppedControlRect
 
-Chiamare il `GetDroppedControlRect` funzione membro per recuperare le coordinate dello schermo di una casella visibile (eliminato) elenco a discesa di una casella combinata a discesa.
+Chiamare la `GetDroppedControlRect` funzione membro per recuperare le coordinate dello schermo della casella di riepilogo visibile (a discesa) di una casella combinata a discesa.
 
 ```
 void GetDroppedControlRect(LPRECT lprect) const;
@@ -715,15 +715,15 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>Parametri
 
 *lprect*<br/>
-Punta al [struttura RECT](/windows/desktop/api/windef/ns-windef-tagrect) che deve ricevere le coordinate.
+Punta alla [struttura Rect](/windows/win32/api/windef/ns-windef-rect) che deve ricevere le coordinate.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]
 
-##  <a name="getdroppedstate"></a>  CComboBox::GetDroppedState
+##  <a name="getdroppedstate"></a>CComboBox:: GetDroppedState
 
-Chiamare il `GetDroppedState` funzione membro per determinare se la casella di riepilogo di una casella combinata a discesa è visibile (diminuivano).
+Chiamare la `GetDroppedState` funzione membro per determinare se la casella di riepilogo di una casella combinata a discesa è visibile (eliminata).
 
 ```
 BOOL GetDroppedState() const;
@@ -731,13 +731,13 @@ BOOL GetDroppedState() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la casella di riepilogo è visibile; in caso contrario 0.
+Diverso da zero se la casella di riepilogo è visibile; in caso contrario, 0.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]
 
-##  <a name="getdroppedwidth"></a>  CComboBox::GetDroppedWidth
+##  <a name="getdroppedwidth"></a>CComboBox:: GetDroppedWidth
 
 Chiamare questa funzione per recuperare la larghezza minima consentita, in pixel, della casella di riepilogo di una casella combinata.
 
@@ -747,21 +747,21 @@ int GetDroppedWidth() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, la larghezza minima consentita, in pixel. in caso contrario, CB_ERR.
+Se ha esito positivo, la larghezza minima consentita, in pixel; in caso contrario, CB_ERR.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione si applica solo a caselle combinate con il [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) oppure [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile.
+Questa funzione si applica solo alle caselle combinate con lo stile [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
-Per impostazione predefinita, la larghezza minima consentita della casella di riepilogo a discesa è 0. La larghezza minima consentita può essere impostata chiamando [SetDroppedWidth](#setdroppedwidth). Quando viene visualizzata la parte di casella di riepilogo della casella combinata, la larghezza è maggiore della larghezza minima consentita o la larghezza della casella combinata.
+Per impostazione predefinita, la larghezza minima consentita della casella di riepilogo a discesa è 0. La larghezza minima consentita può essere impostata chiamando [SetDroppedWidth](#setdroppedwidth). Quando viene visualizzata la parte relativa alla casella di riepilogo della casella combinata, la larghezza è maggiore della larghezza minima consentita o della casella combinata.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [SetDroppedWidth](#setdroppedwidth).
+  Vedere l'esempio per [SetDroppedWidth](#setdroppedwidth).
 
-##  <a name="geteditsel"></a>  CComboBox::GetEditSel
+##  <a name="geteditsel"></a>CComboBox:: GetEditSel
 
-Ottiene le posizioni dei caratteri iniziale e finale della selezione corrente nel controllo di modifica di una casella combinata.
+Ottiene le posizioni dei caratteri iniziali e finali della selezione corrente nel controllo di modifica di una casella combinata.
 
 ```
 DWORD GetEditSel() const;
@@ -769,15 +769,15 @@ DWORD GetEditSel() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore a 32 bit contenente la posizione iniziale della parola di ordine inferiore e la posizione del primo carattere per dopo la fine della selezione all'interno della parola più significativa. Se questa funzione viene utilizzata in una casella combinata senza un controllo di modifica, viene restituito CB_ERR.
+Valore a 32 bit che contiene la posizione iniziale nella parola di ordine inferiore e la posizione del primo carattere non selezionato dopo la fine della selezione nella parola più significativa. Se questa funzione viene utilizzata in una casella combinata senza un controllo di modifica, viene restituito CB_ERR.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]
 
-##  <a name="getextendedui"></a>  CComboBox::GetExtendedUI
+##  <a name="getextendedui"></a>CComboBox:: GetExtendedUI
 
-Chiamare il `GetExtendedUI` funzione membro per determinare se una casella combinata è l'interfaccia utente predefinita o l'interfaccia utente estesa.
+Chiamare la `GetExtendedUI` funzione membro per determinare se una casella combinata dispone dell'interfaccia utente predefinita o dell'interfaccia utente estesa.
 
 ```
 BOOL GetExtendedUI() const;
@@ -785,25 +785,25 @@ BOOL GetExtendedUI() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la casella combinata è l'interfaccia utente estesa. in caso contrario 0.
+Diverso da zero se la casella combinata dispone dell'interfaccia utente estesa; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-L'interfaccia utente estesa può essere identificato nei modi seguenti:
+L'interfaccia utente estesa può essere identificata nei modi seguenti:
 
-- Il controllo del codice statico consente di visualizzare la casella di riepilogo solo per le caselle combinate con il [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile.
+- Facendo clic sul controllo statico viene visualizzata la casella di riepilogo solo per le caselle combinate con lo stile [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
-- Premendo il tasto freccia giù consente di visualizzare la casella di riepilogo (F4 è disabilitato).
+- Premendo il tasto freccia giù viene visualizzata la casella di riepilogo (F4 è disabilitato).
 
-Lo scorrimento nel controllo statico è disabilitato quando l'elenco di elementi non visibili (giù le chiavi sono disabilitate).
+Lo scorrimento nel controllo statico viene disabilitato quando l'elenco di elementi non è visibile (i tasti di direzione sono disabilitati).
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]
 
-##  <a name="gethorizontalextent"></a>  CComboBox::GetHorizontalExtent
+##  <a name="gethorizontalextent"></a>CComboBox:: GetHorizontalExtent
 
-Recupera dalla casella combinata la larghezza in pixel mediante il quale la parte di casella di riepilogo della casella combinata può essere necessario scorrere orizzontalmente.
+Recupera dalla casella combinata la larghezza in pixel in base alla quale è possibile scorrere orizzontalmente la parte della casella combinata della casella combinata.
 
 ```
 UINT GetHorizontalExtent() const;
@@ -811,19 +811,19 @@ UINT GetHorizontalExtent() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Scorrevole larghezza della casella di elenco della casella combinata, in pixel.
+Larghezza scorrevole della parte della casella di riepilogo della casella combinata, in pixel.
 
 ### <a name="remarks"></a>Note
 
-Questo è applicabile solo se la parte di casella di riepilogo della casella combinata dispone di una barra di scorrimento orizzontale.
+Questa operazione è applicabile solo se la parte relativa alla casella di riepilogo della casella combinata presenta una barra di scorrimento orizzontale.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]
 
-##  <a name="getitemdata"></a>  CComboBox::GetItemData
+##  <a name="getitemdata"></a>CComboBox:: GetItemData
 
-Recupera il valore a 32 bit fornito dall'applicazione associato all'elemento casella combinata specificata.
+Recupera il valore di 32 bit fornito dall'applicazione associato all'elemento della casella combinata specificato.
 
 ```
 DWORD_PTR GetItemData(int nIndex) const;
@@ -836,19 +836,19 @@ Contiene l'indice in base zero di un elemento nella casella di riepilogo della c
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore a 32 bit associato con l'elemento o CB_ERR se si verifica un errore.
+Valore a 32 bit associato all'elemento o CB_ERR se si verifica un errore.
 
 ### <a name="remarks"></a>Note
 
-Il valore a 32 bit può essere impostato con il *dwItemData* parametro di un [SetItemData](#setitemdata) chiamata di funzione membro. Usare la `GetItemDataPtr` funzione di membro, se il valore a 32 bit da recuperare è un puntatore (**void** <strong>\*</strong>).
+Il valore a 32 bit può essere impostato con il parametro *dwItemData* di una chiamata di funzione membro [SetItemData](#setitemdata) . Usare la `GetItemDataPtr` funzione membro se il valore a 32 bit da recuperare è un puntatore (**void** <strong>\*</strong>).
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]
 
-##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr
+##  <a name="getitemdataptr"></a>CComboBox:: GetItemDataPtr
 
-Recupera il valore a 32 bit fornito dall'applicazione associato all'elemento casella combinata specificata come indicatore di misura (**void** <strong>\*</strong>).
+Recupera il valore di 32 bit fornito dall'applicazione associato all'elemento della casella combinata specificato come puntatore (**void** <strong>\*</strong>).
 
 ```
 void* GetItemDataPtr(int nIndex) const;
@@ -861,15 +861,15 @@ Contiene l'indice in base zero di un elemento nella casella di riepilogo della c
 
 ### <a name="return-value"></a>Valore restituito
 
-Recupera un puntatore o -1 se si verifica un errore.
+Recupera un puntatore, oppure-1 se si verifica un errore.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]
 
-##  <a name="getitemheight"></a>  CComboBox::GetItemHeight
+##  <a name="getitemheight"></a>CComboBox:: GetItemHeight
 
-Chiamare il `GetItemHeight` funzione membro per recuperare l'altezza degli elementi dell'elenco in una casella combinata.
+Chiamare la `GetItemHeight` funzione membro per recuperare l'altezza degli elementi dell'elenco in una casella combinata.
 
 ```
 int GetItemHeight(int nIndex) const;
@@ -878,11 +878,11 @@ int GetItemHeight(int nIndex) const;
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Specifica il componente della casella combinata è necessario recuperare la cui altezza. Se il *nIndex* parametro è -1, viene recuperato l'altezza della porzione di controllo di modifica (o testo statico) della casella combinata. Se la casella combinata è il [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile *nIndex* specifica l'indice in base zero dell'elemento di elenco è necessario recuperare la cui altezza. In caso contrario, *nIndex* deve essere impostato su 0.
+Specifica il componente della casella combinata di cui è necessario recuperare l'altezza. Se il parametro *nIndex* è-1, viene recuperata l'altezza della parte relativa alla modifica del controllo (o del testo statico) della casella combinata. Se la casella combinata ha lo stile [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , *nIndex* specifica l'indice in base zero dell'elemento dell'elenco di cui è necessario recuperare l'altezza. In caso contrario, *nIndex* deve essere impostato su 0.
 
 ### <a name="return-value"></a>Valore restituito
 
-Altezza, in pixel, dell'elemento specificato in una casella combinata. Il valore restituito è CB_ERR se si verifica un errore.
+Altezza, in pixel, dell'elemento specificato in una casella combinata. Se si verifica un errore, il valore restituito è CB_ERR.
 
 ### <a name="example"></a>Esempio
 
@@ -890,7 +890,7 @@ Altezza, in pixel, dell'elemento specificato in una casella combinata. Il valore
 
 ##  <a name="getlbtext"></a>  CComboBox::GetLBText
 
-Ottiene una stringa nella casella di riepilogo di una casella combinata.
+Ottiene una stringa dalla casella di riepilogo di una casella combinata.
 
 ```
 int GetLBText(
@@ -905,21 +905,21 @@ void GetLBText(
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Contiene l'indice in base zero della stringa di casella di riepilogo da copiare.
+Contiene l'indice in base zero della stringa della casella di riepilogo da copiare.
 
 *lpszText*<br/>
-Punta a un buffer che deve ricevere la stringa. Il buffer deve avere spazio sufficiente per la stringa e un carattere di terminazione null.
+Punta a un buffer che riceverà la stringa. Il buffer deve contenere spazio sufficiente per la stringa e un carattere null di terminazione.
 
 *rString*<br/>
-Un riferimento a un `CString`.
+Riferimento a un oggetto `CString`.
 
 ### <a name="return-value"></a>Valore restituito
 
-La lunghezza (in byte) della stringa, escluso il carattere di terminazione null. Se *nIndex* non specifica un indice valido, il valore restituito è CB_ERR.
+Lunghezza, in byte, della stringa, escluso il carattere null di terminazione. Se *nIndex* non specifica un indice valido, il valore restituito è CB_ERR.
 
 ### <a name="remarks"></a>Note
 
-La seconda forma di questo membro funzione riempie un `CString` oggetto con il testo dell'elemento.
+Il secondo formato di questa funzione membro compila un `CString` oggetto con il testo dell'elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -936,19 +936,19 @@ int GetLBTextLen(int nIndex) const;
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Contiene l'indice in base zero della stringa di casella di riepilogo.
+Contiene l'indice in base zero della stringa della casella di riepilogo.
 
 ### <a name="return-value"></a>Valore restituito
 
-La lunghezza della stringa in byte, escluso il carattere di terminazione null. Se *nIndex* non specifica un indice valido, il valore restituito è CB_ERR.
+Lunghezza della stringa in byte, escluso il carattere null di terminazione. Se *nIndex* non specifica un indice valido, il valore restituito è CB_ERR.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CComboBox::GetLBText](#getlbtext).
+  Vedere l'esempio per [CComboBox:: GetLBText](#getlbtext).
 
-##  <a name="getlocale"></a>  CComboBox::GetLocale
+##  <a name="getlocale"></a>CComboBox:: GetLocale
 
-Recupera le impostazioni locali utilizzate per la casella combinata.
+Recupera le impostazioni locali utilizzate dalla casella combinata.
 
 ```
 LCID GetLocale() const;
@@ -956,19 +956,19 @@ LCID GetLocale() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore dell'identificatore (LCID) delle impostazioni locali per le stringhe nella casella combinata.
+Valore dell'identificatore delle impostazioni locali (LCID) per le stringhe nella casella combinata.
 
 ### <a name="remarks"></a>Note
 
-Le impostazioni locali viene utilizzata, ad esempio, per determinare l'ordinamento delle stringhe in una casella combinata ordinato.
+Le impostazioni locali vengono utilizzate, ad esempio, per determinare l'ordinamento delle stringhe in una casella combinata ordinata.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CComboBox::SetLocale](#setlocale).
+  Vedere l'esempio per [CComboBox:: setlocale](#setlocale).
 
-##  <a name="getminvisible"></a>  CComboBox::GetMinVisible
+##  <a name="getminvisible"></a>CComboBox:: GetMinVisible
 
-Ottiene il numero minimo di elementi visibili nell'elenco elenco a discesa della casella combinata.
+Ottiene il numero minimo di elementi visibili nell'elenco a discesa del controllo casella combinata corrente.
 
 ```
 int GetMinVisible() const;
@@ -976,15 +976,15 @@ int GetMinVisible() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero minimo di elementi visibili nell'elenco a discesa elenco corrente.
+Numero minimo di elementi visibili nell'elenco a discesa corrente.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo invia il [CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) messaggio, che è descritti nel SDK di Windows.
+Questo metodo invia il messaggio [CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) , descritto nella Windows SDK.
 
-##  <a name="gettopindex"></a>  CComboBox::GetTopIndex
+##  <a name="gettopindex"></a>CComboBox:: GetTopIndex
 
-Recupera l'indice in base zero del primo elemento visibile nella casella di elenco della casella combinata.
+Recupera l'indice in base zero del primo elemento visibile nella parte della casella di riepilogo della casella combinata.
 
 ```
 int GetTopIndex() const;
@@ -992,19 +992,19 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice a base zero del primo elemento visibile nella casella di elenco della casella combinata se ha esito positivo, CB_ERR in caso contrario.
+Indice in base zero del primo elemento visibile nella parte di casella di riepilogo della casella combinata, in caso di esito positivo, CB_ERR in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-Inizialmente, l'elemento 0 è nella parte superiore della casella di riepilogo, ma se si scorre la casella di riepilogo, un altro elemento potrebbe essere nella parte superiore.
+Inizialmente, l'elemento 0 si trova nella parte superiore della casella di riepilogo, ma se viene eseguito lo scorrimento della casella di riepilogo, è possibile che un altro elemento si trovi nella parte superiore.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]
 
-##  <a name="initstorage"></a>  CComboBox::InitStorage
+##  <a name="initstorage"></a>CComboBox:: InitStorage
 
-Alloca memoria per archiviare elementi casella di riepilogo nella parte di casella di riepilogo della casella combinata.
+Alloca memoria per archiviare gli elementi della casella di riepilogo nella parte della casella combinata.
 
 ```
 int InitStorage(
@@ -1022,21 +1022,21 @@ Specifica la quantità di memoria, in byte, da allocare per le stringhe di eleme
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, il numero massimo di elementi che può archiviare la parte di casella di riepilogo della casella combinata prima una riallocazione della memoria è necessario, in caso contrario CB_ERRSPACE, vale a dire non è disponibile memoria sufficiente.
+Se ha esito positivo, il numero massimo di elementi che la parte della casella combinata della casella combinata può archiviare prima che sia necessaria una riallocazione della memoria, in caso contrario CB_ERRSPACE, che significa che non è disponibile memoria sufficiente.
 
 ### <a name="remarks"></a>Note
 
-Chiamare questa funzione prima di aggiungere un numero elevato di elementi alla porzione della casella di riepilogo di `CComboBox`.
+Chiamare questa funzione prima di aggiungere un numero elevato di elementi alla parte della casella di riepilogo di `CComboBox`.
 
-Windows 95 o 98 solo: Il *wParam* parametro è limitato a valori a 16 bit. Ciò significa che le caselle di riepilogo non possono contenere elementi oltre 32.767. Anche se il numero di elementi è limitato, le dimensioni totali degli elementi in una casella di riepilogo sono limitata solo dalla memoria disponibile.
+Solo Windows 95/98: Il parametro *wParam* è limitato ai valori a 16 bit. Ciò significa che le caselle di riepilogo non possono contenere più di 32.767 elementi. Sebbene il numero di elementi sia limitato, le dimensioni totali degli elementi in una casella di riepilogo sono limitate solo dalla memoria disponibile.
 
-Questa funzione consente di velocizzare l'inizializzazione di caselle di riepilogo che hanno un numero elevato di elementi (più di 100). Prealloca la quantità di memoria in modo che le successive specificata [AddString](#addstring), [InsertString](#insertstring), e [Dir](#dir) funzioni accettano il minor tempo possibile. È possibile usare le stime per i parametri. Se sovrastima, alcuni memoria aggiuntiva viene allocata; Se si sottostima, l'allocazione normale viene utilizzato per gli elementi che superano la quantità preallocata.
+Questa funzione consente di velocizzare l'inizializzazione di caselle di riepilogo con un numero elevato di elementi (più di 100). Viene preallocata la quantità di memoria specificata in modo che le funzioni [AddString](#addstring), [InsertString](#insertstring)e [dir](#dir) successive importino il tempo più breve possibile. È possibile utilizzare le stime per i parametri. Se si esegue la sovrastima, viene allocata una memoria aggiuntiva; Se si sottovaluta, l'allocazione normale viene utilizzata per gli elementi che superano la quantità preallocata.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]
 
-##  <a name="insertstring"></a>  CComboBox::InsertString
+##  <a name="insertstring"></a>CComboBox:: InsertString
 
 Inserisce una stringa nella casella di riepilogo di una casella combinata.
 
@@ -1049,21 +1049,21 @@ int InsertString(
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Contiene l'indice in base zero della posizione nella casella di riepilogo che riceverà la stringa. Se questo parametro è -1, la stringa viene aggiunta alla fine dell'elenco.
+Contiene l'indice in base zero della posizione nella casella di riepilogo che riceverà la stringa. Se questo parametro è-1, la stringa viene aggiunta alla fine dell'elenco.
 
 *lpszString*<br/>
 Punta a una stringa con terminazione null da inserire.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice in base zero della posizione in cui è stata inserita la stringa. Il valore restituito è CB_ERR se si verifica un errore. Il valore restituito è CB_ERRSPACE se non c'è spazio sufficiente per archiviare la nuova stringa.
+Indice in base zero della posizione in cui è stata inserita la stringa. Se si verifica un errore, il valore restituito è CB_ERR. Se non è disponibile spazio sufficiente per archiviare la nuova stringa, il valore restituito è CB_ERRSPACE.
 
 ### <a name="remarks"></a>Note
 
 A differenza della funzione membro [AddString](#addstring) , la funzione membro `InsertString` non genera un elenco con lo stile [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) da ordinare.
 
 > [!NOTE]
->  Questa funzione non è supportata per il Windows `ComboBoxEx` controllo. Per altre informazioni su questo controllo, vedere [i controlli ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) nel SDK di Windows.
+>  Questa funzione non è supportata dal controllo di `ComboBoxEx` Windows. Per ulteriori informazioni su questo controllo, vedere [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1080,25 +1080,25 @@ BOOL LimitText(int nMaxChars);
 ### <a name="parameters"></a>Parametri
 
 *nMaxChars*<br/>
-Specifica la lunghezza, in byte, del testo che l'utente può immettere. Se questo parametro è 0, lunghezza del testo viene impostata su 65.535 byte.
+Specifica la lunghezza (in byte) del testo che l'utente può immettere. Se questo parametro è 0, la lunghezza del testo viene impostata su 65.535 byte.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo. Se viene chiamato per una casella combinata con lo stile [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o di una casella combinata senza un controllo di modifica, il valore restituito è CB_ERR.
+Diverso da zero se ha esito positivo. Se viene chiamato per una casella combinata con lo stile [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o per una casella combinata senza un controllo di modifica, il valore restituito è CB_ERR.
 
 ### <a name="remarks"></a>Note
 
-Se la casella combinata non è lo stile [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), l'impostazione del limite di testo più grande rispetto alla dimensione del controllo di modifica non avrà alcun effetto.
+Se la casella combinata non ha lo stile [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), l'impostazione del limite di testo maggiore della dimensione del controllo di modifica non avrà alcun effetto.
 
-`LimitText` Limita solo l'utente può immettere testo. Non ha effetto su qualsiasi testo già nel controllo di modifica quando il messaggio viene inviato, né influisce la lunghezza del testo copiato il controllo di modifica quando viene selezionata una stringa nella casella di riepilogo.
+`LimitText`limita solo il testo che l'utente può immettere. Non ha alcun effetto sui testi già presenti nel controllo di modifica quando il messaggio viene inviato, né sulla lunghezza del testo copiato nel controllo di modifica quando viene selezionata una stringa nella casella di riepilogo.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]
 
-##  <a name="measureitem"></a>  CComboBox::MeasureItem
+##  <a name="measureitem"></a>CComboBox:: MeasureItem
 
-Chiamato dal framework quando viene creata una casella combinata con uno stile di disegno.
+Chiamata eseguita dal framework quando viene creata una casella combinata con uno stile di creazione del proprietario.
 
 ```
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
@@ -1107,23 +1107,23 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpMeasureItemStruct*<br/>
-Un puntatore di tipo long a un [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) struttura.
+Puntatore long a una struttura [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct) .
 
 ### <a name="remarks"></a>Note
 
-Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro e compilare il `MEASUREITEMSTRUCT` struttura per informare la finestra di Windows delle dimensioni dell'elenco nella casella combinata. Se la casella combinata viene creata con il [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile, il framework chiama questa funzione membro per ogni elemento nella casella di riepilogo. In caso contrario, questo membro viene chiamato una sola volta.
+Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro e `MEASUREITEMSTRUCT` compilare la struttura per informare le finestre delle dimensioni della casella di riepilogo nella casella combinata. Se la casella combinata viene creata con lo stile [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , il Framework chiama questa funzione membro per ogni elemento nella casella di riepilogo. In caso contrario, questo membro viene chiamato una sola volta.
 
-Usando lo stile CBS_OWNERDRAWFIXED in una casella combinata disegno creato con il [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) funzione di membro di `CWnd` implica considerazioni di programmazione ulteriormente. Vedere la discussione nella [tecnica nota 14](../../mfc/tn014-custom-controls.md).
+L'uso dello stile CBS_OWNERDRAWFIXED in una casella combinata creata dal proprietario creata con la funzione membro [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) di `CWnd` prevede ulteriori considerazioni sulla programmazione. Vedere la discussione nella [Nota tecnica 14](../../mfc/tn014-custom-controls.md).
 
-Visualizzare [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) per una descrizione del `MEASUREITEMSTRUCT` struttura.
+Per una descrizione della `MEASUREITEMSTRUCT` struttura, vedere [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) .
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]
 
-##  <a name="paste"></a>  CComboBox::Paste
+##  <a name="paste"></a>CComboBox::P incolla
 
-Inserisce i dati dagli Appunti nel controllo di modifica della casella combinata nella posizione corrente del cursore.
+Inserisce i dati dagli Appunti nel controllo di modifica della casella combinata in corrispondenza della posizione corrente del cursore.
 
 ```
 void Paste();
@@ -1131,15 +1131,15 @@ void Paste();
 
 ### <a name="remarks"></a>Note
 
-Dati vengono inseriti solo se gli Appunti contengono dati nel formato CF_TEXT.
+I dati vengono inseriti solo se gli Appunti contengono dati nel formato CF_TEXT.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]
 
-##  <a name="resetcontent"></a>  CComboBox::ResetContent
+##  <a name="resetcontent"></a>CComboBox:: ResetContent
 
-Rimuove tutti gli elementi dall'elenco casella e controllo di una casella combinata di modifica.
+Rimuove tutti gli elementi dalla casella di riepilogo e il controllo di modifica di una casella combinata.
 
 ```
 void ResetContent();
@@ -1149,9 +1149,9 @@ void ResetContent();
 
 [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]
 
-##  <a name="selectstring"></a>  CComboBox::SelectString
+##  <a name="selectstring"></a>CComboBox:: SelectString
 
-Cerca una stringa nella casella di riepilogo di una casella combinata e se la stringa viene trovata, seleziona la stringa nella casella di riepilogo e lo copi il controllo di modifica.
+Cerca una stringa nella casella di riepilogo di una casella combinata e, se la stringa viene trovata, seleziona la stringa nella casella di riepilogo e la copia nel controllo di modifica.
 
 ```
 int SelectString(
@@ -1162,28 +1162,28 @@ int SelectString(
 ### <a name="parameters"></a>Parametri
 
 *nStartAfter*<br/>
-Contiene l'indice in base zero dell'elemento che precede il primo elemento da cercare. Quando la ricerca raggiunge la fine della casella di riepilogo, continua nella parte superiore della casella di riepilogo fino all'elemento specificato da *nStartAfter*. Se-1, la casella di riepilogo intero viene eseguita la ricerca dall'inizio.
+Contiene l'indice in base zero dell'elemento prima del primo elemento da cercare. Quando la ricerca raggiunge la fine della casella di riepilogo, continua dalla parte superiore della casella di riepilogo all'elemento specificato da *nStartAfter*. Se-1, viene eseguita la ricerca dell'intera casella di riepilogo dall'inizio.
 
 *lpszString*<br/>
-Punta alla stringa con terminazione null che contiene il prefisso per la ricerca. La ricerca avviene indipendenti, in modo che questa stringa può contenere qualsiasi combinazione di lettere maiuscole e minuscole.
+Punta alla stringa con terminazione null che contiene il prefisso da ricercare. La ricerca è indipendente dalla distinzione tra maiuscole e minuscole, pertanto questa stringa può contenere qualsiasi combinazione di lettere maiuscole e minuscole.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice a base zero dell'elemento selezionato se la stringa è stata trovata. Se la ricerca ha esito negativo, il valore restituito è CB_ERR e non viene modificata la selezione corrente.
+Indice in base zero dell'elemento selezionato se è stata trovata la stringa. Se la ricerca ha avuto esito negativo, il valore restituito è CB_ERR e la selezione corrente non viene modificata.
 
 ### <a name="remarks"></a>Note
 
-Una stringa viene selezionata solo se caratteri sull'estremità iniziale (dal punto di partenza) corrisponde ai caratteri nella stringa di prefisso.
+Viene selezionata una stringa solo se i caratteri iniziali (dal punto iniziale) corrispondono ai caratteri nella stringa di prefisso.
 
-Si noti che il `SelectString` e `FindString` entrambe le funzioni membro trovare una stringa, ma il `SelectString` funzione membro selezionata anche la stringa.
+Si noti che `SelectString` le `FindString` funzioni membro e trovano entrambe una stringa, ma `SelectString` la funzione membro seleziona anche la stringa.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]
 
-##  <a name="setcuebanner"></a>  CComboBox::SetCueBanner
+##  <a name="setcuebanner"></a>CComboBox:: SetCueBanner
 
-Imposta il testo della segnalazione che viene visualizzato per un controllo casella combinata.
+Imposta il testo cue visualizzato per un controllo casella combinata.
 
 ```
 BOOL SetCueBanner(LPCTSTR lpszText);
@@ -1193,31 +1193,31 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*lpszText*|[in] Puntatore a un buffer con terminazione null che contiene il testo della segnalazione.|
+|*lpszText*|in Puntatore a un buffer con terminazione null che contiene il testo del suggerimento.|
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il metodo ha esito positivo. in caso contrario, FALSE.
+TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Testo della segnalazione è una richiesta che viene visualizzata nell'area di input della casella combinata. Fino a quando l'utente fornisce l'input, viene visualizzato il testo della segnalazione.
+Il testo cue è un prompt visualizzato nell'area di input del controllo casella combinata. Il testo della stecca viene visualizzato fino a quando l'utente non fornisce l'input.
 
-Questo metodo invia il [CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner) messaggio, che è descritti nel SDK di Windows.
+Questo metodo invia il messaggio [CB_SETCUEBANNER](/windows/win32/Controls/cb-setcuebanner) , descritto nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente definisce la variabile *m_combobox*, che viene usato per accedere a livello di codice il controllo casella combinata. Questa variabile viene usata nell'esempio riportato di seguito.
+Nell'esempio di codice seguente viene definita la variabile *m_combobox*, utilizzata per accedere a livello di codice al controllo casella combinata. Questa variabile viene usata nell'esempio riportato di seguito.
 
 [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente imposta l'intestazione della segnalazione per il controllo casella combinata.
+Nell'esempio di codice seguente viene impostato il banner cue per il controllo casella combinata.
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-##  <a name="setcursel"></a>  CComboBox::SetCurSel
+##  <a name="setcursel"></a>CComboBox:: CurSel
 
 Seleziona una stringa nella casella di riepilogo di una casella combinata.
 
@@ -1228,21 +1228,21 @@ int SetCurSel(int nSelect);
 ### <a name="parameters"></a>Parametri
 
 *nSelect*<br/>
-Specifica l'indice in base zero della stringa da selezionare. Se-1, viene rimosso qualsiasi selezione corrente nella casella di riepilogo e il controllo di modifica viene cancellato.
+Specifica l'indice in base zero della stringa da selezionare. Se-1, qualsiasi selezione corrente nella casella di riepilogo viene rimossa e il controllo di modifica viene cancellato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice a base zero dell'elemento selezionato se il messaggio ha esito positivo. Il valore restituito è CB_ERR *nSelezionare* è maggiore del numero di elementi nell'elenco o se *nSelezionare* è impostato su -1, che cancella la selezione.
+Indice in base zero dell'elemento selezionato se il messaggio ha esito positivo. Il valore restituito è CB_ERR se *nSelezionare* è maggiore del numero di elementi nell'elenco oppure se *nSelezionare* è impostato su-1, il quale cancella la selezione.
 
 ### <a name="remarks"></a>Note
 
-Se necessario, la casella di riepilogo scorre la stringa all'interno della visualizzazione (se la casella di riepilogo è visibile). Il testo nel controllo di modifica della casella combinata viene modificato per riflettere la nuova selezione. Qualsiasi selezione precedente nella casella di riepilogo è stato rimosso.
+Se necessario, la casella di riepilogo scorre la stringa in visualizzazione (se la casella di riepilogo è visibile). Il testo nel controllo di modifica della casella combinata viene modificato per riflettere la nuova selezione. Qualsiasi selezione precedente nella casella di riepilogo viene rimossa.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]
 
-##  <a name="setdroppedwidth"></a>  CComboBox::SetDroppedWidth
+##  <a name="setdroppedwidth"></a>CComboBox:: SetDroppedWidth
 
 Chiamare questa funzione per impostare la larghezza minima consentita, in pixel, della casella di riepilogo di una casella combinata.
 
@@ -1253,23 +1253,23 @@ int SetDroppedWidth(UINT nWidth);
 ### <a name="parameters"></a>Parametri
 
 *nWidth*<br/>
-La larghezza minima consentita della casella di elenco della casella combinata, in pixel.
+Larghezza minima consentita della parte della casella di riepilogo della casella combinata, in pixel.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, la nuova larghezza della casella di riepilogo, in caso contrario CB_ERR.
+Se ha esito positivo, la nuova larghezza della casella di riepilogo, in caso contrario CB_ERR.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione si applica solo a caselle combinate con il [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) oppure [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile.
+Questa funzione si applica solo alle caselle combinate con lo stile [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
-Per impostazione predefinita, la larghezza minima consentita della casella di riepilogo a discesa è 0. Quando viene visualizzata la parte di casella di riepilogo della casella combinata, la larghezza è maggiore della larghezza minima consentita o la larghezza della casella combinata.
+Per impostazione predefinita, la larghezza minima consentita della casella di riepilogo a discesa è 0. Quando viene visualizzata la parte relativa alla casella di riepilogo della casella combinata, la larghezza è maggiore della larghezza minima consentita o della casella combinata.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]
 
-##  <a name="seteditsel"></a>  CComboBox::SetEditSel
+##  <a name="seteditsel"></a>CComboBox:: SetEditSel
 
 Seleziona i caratteri nel controllo di modifica di una casella combinata.
 
@@ -1282,29 +1282,29 @@ BOOL SetEditSel(
 ### <a name="parameters"></a>Parametri
 
 *nStartChar*<br/>
-Specifica la posizione iniziale. Se la posizione iniziale è impostata su -1, viene rimosso qualsiasi altra selezione esistente.
+Specifica la posizione iniziale. Se la posizione iniziale è impostata su-1, viene rimossa qualsiasi selezione esistente.
 
 *nEndChar*<br/>
-Specifica la posizione finale. Se la posizione finale è impostata su -1, quindi tutto il testo dalla posizione iniziale e l'ultimo carattere nel controllo di modifica è selezionata.
+Specifica la posizione finale. Se la posizione finale è impostata su-1, viene selezionato tutto il testo dalla posizione iniziale fino all'ultimo carattere del controllo di modifica.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la funzione membro ha esito positivo. in caso contrario 0. Se è CB_ERR `CComboBox` ha il [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) applicare uno stile o non dispone di una casella di riepilogo.
+Diverso da zero se la funzione membro ha esito positivo; in caso contrario, 0. È CB_ERR se `CComboBox` ha lo stile [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o non contiene una casella di riepilogo.
 
 ### <a name="remarks"></a>Note
 
-Le posizioni sono in base zero. Per selezionare il primo carattere del controllo di modifica, si specifica una posizione iniziale pari a 0. La posizione finale è il carattere immediatamente dopo l'ultimo carattere da selezionare. Ad esempio, per selezionare i primi quattro caratteri di controllo di modifica, si utilizzerebbe una posizione iniziale pari a 0 e una posizione finale di 4.
+Le posizioni sono in base zero. Per selezionare il primo carattere del controllo di modifica, è necessario specificare una posizione iniziale pari a 0. La posizione finale è per il carattere subito dopo l'ultimo carattere da selezionare. Per selezionare, ad esempio, i primi quattro caratteri del controllo di modifica, utilizzare una posizione iniziale pari a 0 e una posizione finale pari a 4.
 
 > [!NOTE]
->  Questa funzione non è supportata per il Windows `ComboBoxEx` controllo. Per altre informazioni su questo controllo, vedere [i controlli ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) nel SDK di Windows.
+>  Questa funzione non è supportata dal controllo di `ComboBoxEx` Windows. Per ulteriori informazioni su questo controllo, vedere [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CComboBox::GetEditSel](#geteditsel).
+  Vedere l'esempio per [CComboBox:: GetEditSel](#geteditsel).
 
-##  <a name="setextendedui"></a>  CComboBox::SetExtendedUI
+##  <a name="setextendedui"></a>CComboBox:: SetExtendedUI
 
-Chiamare il `SetExtendedUI` funzione membro per selezionare l'interfaccia utente predefinita o l'interfaccia utente estesa di una casella combinata con il [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) oppure [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile.
+Chiamare la `SetExtendedUI` funzione membro per selezionare l'interfaccia utente predefinita o l'interfaccia utente estesa per una casella combinata con lo stile [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
 ```
 int SetExtendedUI(BOOL bExtended = TRUE);
@@ -1313,29 +1313,29 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bExtended*<br/>
-Specifica se la casella combinata deve utilizzare l'interfaccia utente estesa o l'interfaccia utente predefinita. Il valore TRUE consente di selezionare l'interfaccia utente estesa. il valore FALSE consente di selezionare l'interfaccia utente standard.
+Specifica se la casella combinata deve usare l'interfaccia utente estesa o l'interfaccia utente predefinita. Il valore TRUE seleziona l'interfaccia utente estesa; il valore FALSE consente di selezionare l'interfaccia utente standard.
 
 ### <a name="return-value"></a>Valore restituito
 
-CB_OKAY se l'operazione ha esito positivo o CB_ERR se si verifica un errore.
+CB_OKAY se l'operazione ha esito positivo oppure CB_ERR se si verifica un errore.
 
 ### <a name="remarks"></a>Note
 
-L'interfaccia utente estesa può essere identificato nei modi seguenti:
+L'interfaccia utente estesa può essere identificata nei modi seguenti:
 
-- Il controllo del codice statico consente di visualizzare la casella di riepilogo solo per le caselle combinate con lo stile CBS_DROPDOWNLIST.
+- Facendo clic sul controllo statico viene visualizzata la casella di riepilogo solo per le caselle combinate con lo stile CBS_DROPDOWNLIST.
 
-- Premendo il tasto freccia giù consente di visualizzare la casella di riepilogo (F4 è disabilitato).
+- Premendo il tasto freccia giù viene visualizzata la casella di riepilogo (F4 è disabilitato).
 
-Lo scorrimento nel controllo statico viene disabilitato quando l'elenco di elementi non è visibile (sono disabilitati i tasti di direzione).
+Lo scorrimento nel controllo statico viene disabilitato quando l'elenco di elementi non è visibile (i tasti di direzione sono disabilitati).
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CComboBox::GetExtendedUI](#getextendedui).
+  Vedere l'esempio per [CComboBox:: GetExtendedUI](#getextendedui).
 
-##  <a name="sethorizontalextent"></a>  CComboBox::SetHorizontalExtent
+##  <a name="sethorizontalextent"></a>CComboBox:: SetHorizontalExtent
 
-Imposta la larghezza, in pixel, mediante il quale la parte di casella di riepilogo della casella combinata può essere necessario scorrere orizzontalmente.
+Imposta la larghezza, in pixel, in base alla quale è possibile scorrere orizzontalmente la parte della casella combinata della casella combinata.
 
 ```
 void SetHorizontalExtent(UINT nExtent);
@@ -1344,19 +1344,19 @@ void SetHorizontalExtent(UINT nExtent);
 ### <a name="parameters"></a>Parametri
 
 *nExtent*<br/>
-Specifica il numero di pixel mediante il quale la parte di casella di riepilogo della casella combinata può essere necessario scorrere orizzontalmente.
+Specifica il numero di pixel in base al quale è possibile scorrere orizzontalmente la parte della casella combinata della casella combinata.
 
 ### <a name="remarks"></a>Note
 
-Se la larghezza della casella di riepilogo è inferiore a questo valore, la barra di scorrimento orizzontale scorrerà orizzontalmente elementi nella casella di riepilogo. Se la larghezza della casella di riepilogo è uguale o maggiore di questo valore, viene nascosta la barra di scorrimento orizzontale o, se la casella combinata è il [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile, disabilitato.
+Se la larghezza della casella di riepilogo è inferiore a questo valore, la barra di scorrimento orizzontale scorre orizzontalmente gli elementi nella casella di riepilogo. Se la larghezza della casella di riepilogo è maggiore o uguale a questo valore, la barra di scorrimento orizzontale è nascosta o, se la casella combinata ha lo stile [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , disabilitato.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]
 
-##  <a name="setitemdata"></a>  CComboBox::SetItemData
+##  <a name="setitemdata"></a>CComboBox:: SetItemData
 
-Imposta il valore a 32 bit associato con l'elemento specificato in una casella combinata.
+Imposta il valore a 32 bit associato all'elemento specificato in una casella combinata.
 
 ```
 int SetItemData(
@@ -1378,15 +1378,15 @@ CB_ERR se si verifica un errore.
 
 ### <a name="remarks"></a>Note
 
-Usare il `SetItemDataPtr` funzione membro se l'elemento a 32 bit deve essere un puntatore.
+Utilizzare la `SetItemDataPtr` funzione membro se l'elemento a 32 bit deve essere un puntatore.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]
 
-##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr
+##  <a name="setitemdataptr"></a>CComboBox:: SetItemDataPtr
 
-Imposta il valore a 32 bit associato con l'elemento specificato in una casella combinata sia il puntatore specificato (**void** <strong>\*</strong>).
+Imposta il valore a 32 bit associato all'elemento specificato in una casella combinata come puntatore specificato (**void** <strong>\*</strong>).
 
 ```
 int SetItemDataPtr(
@@ -1408,15 +1408,15 @@ CB_ERR se si verifica un errore.
 
 ### <a name="remarks"></a>Note
 
-Questo puntatore rimane valido per tutta la durata della casella combinata, anche se la posizione dell'elemento relativo all'interno della casella combinata può cambiare man mano gli elementi vengono aggiunti o rimossi. Di conseguenza, l'indice dell'elemento all'interno della casella è possibile modificare, ma il puntatore rimane affidabile.
+Questo puntatore rimane valido per tutta la durata della casella combinata, anche se la posizione relativa dell'elemento all'interno della casella combinata potrebbe cambiare quando gli elementi vengono aggiunti o rimossi. Di conseguenza, l'indice dell'elemento all'interno della casella può essere modificato, ma il puntatore rimane affidabile.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]
 
-##  <a name="setitemheight"></a>  CComboBox::SetItemHeight
+##  <a name="setitemheight"></a>CComboBox:: SetItemHeight
 
-Chiamare il `SetItemHeight` funzione membro per impostare l'altezza degli elementi dell'elenco in una casella combinata o l'altezza della porzione di controllo di modifica (o testo statico) di una casella combinata.
+Chiamare la `SetItemHeight` funzione membro per impostare l'altezza delle voci di elenco in una casella combinata o l'altezza della parte di una casella combinata (o testo statico).
 
 ```
 int SetItemHeight(
@@ -1427,30 +1427,30 @@ int SetItemHeight(
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Specifica se l'altezza degli elementi dell'elenco o l'altezza della porzione di controllo di modifica (o testo statico) della casella combinata è impostata.
+Specifica se è impostata l'altezza degli elementi dell'elenco o l'altezza della parte della casella combinata del controllo (o del testo statico).
 
-Se la casella combinata è il [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile *nIndex* specifica l'indice in base zero dell'elemento di elenco, la cui altezza deve essere impostata; in caso contrario, *nIndex* deve essere 0 e l'altezza di tutti gli elementi di elenco verrà impostato.
+Se la casella combinata ha lo stile [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , *nIndex* specifica l'indice in base zero dell'elemento dell'elenco di cui deve essere impostata l'altezza. in caso contrario, *nIndex* deve essere 0 e verrà impostata l'altezza di tutti gli elementi dell'elenco.
 
-Se *nIndex* è -1, l'altezza del controllo di modifica o parte di testo statico della casella combinata è necessario impostare.
+Se *nIndex* è-1, è necessario impostare l'altezza della parte del controllo di modifica o del testo statico della casella combinata.
 
 *cyItemHeight*<br/>
-Specifica l'altezza, in pixel, del componente casella combinata identificato da *nIndex*.
+Specifica l'altezza, in pixel, del componente della casella combinata identificato da *nIndex*.
 
 ### <a name="return-value"></a>Valore restituito
 
-CB_ERR se l'indice o dell'altezza non è valido. in caso contrario 0.
+CB_ERR se l'indice o l'altezza non è valido; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-L'altezza della porzione di controllo di modifica (o testo statico) della casella combinata è impostata indipendentemente dall'altezza degli elementi dell'elenco. Un'applicazione deve garantire che l'altezza della porzione di controllo di modifica (o testo statico) non è minore dell'altezza di un elemento specifico della casella di riepilogo.
+L'altezza della parte del controllo di modifica (o del testo statico) della casella combinata viene impostata indipendentemente dall'altezza degli elementi dell'elenco. Un'applicazione deve garantire che l'altezza della parte di modifica del controllo (o del testo statico) non sia minore dell'altezza di un particolare elemento della casella di riepilogo.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]
 
-##  <a name="setlocale"></a>  CComboBox::SetLocale
+##  <a name="setlocale"></a>CComboBox:: setlocale
 
-Imposta l'identificatore delle impostazioni locali per questa casella combinata.
+Imposta l'identificatore delle impostazioni locali per la casella combinata.
 
 ```
 LCID SetLocale(LCID nNewLocale);
@@ -1459,23 +1459,23 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="parameters"></a>Parametri
 
 *nNewLocale*<br/>
-Il nuovo valore identifier (LCID) di impostazioni locali da impostare per la casella combinata.
+Nuovo valore dell'identificatore delle impostazioni locali (LCID) da impostare per la casella combinata.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il precedente valore identifier (LCID) delle impostazioni locali per questa casella combinata.
+Valore dell'identificatore delle impostazioni locali (LCID) precedente per la casella combinata.
 
 ### <a name="remarks"></a>Note
 
-Se `SetLocale` non viene chiamato, il valore predefinito delle impostazioni locali vengano ottenuta dal sistema. Queste impostazioni locali predefinite di sistema possono essere modificata da Pannello di controllo applicazione internazionali (o internazionale).
+Se `SetLocale` non viene chiamato, le impostazioni locali predefinite vengono ottenute dal sistema. Le impostazioni locali predefinite del sistema possono essere modificate tramite l'applicazione regionale (o internazionale) del pannello di controllo.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]
 
-##  <a name="setminvisibleitems"></a>  CComboBox::SetMinVisibleItems
+##  <a name="setminvisibleitems"></a>CComboBox:: SetMinVisibleItems
 
-Imposta il numero minimo di elementi visibili nell'elenco a discesa elenco della casella combinata corrente controllo di finestra.
+Imposta il numero minimo di elementi visibili nell'elenco a discesa del controllo casella combinata corrente.
 
 ```
 BOOL SetMinVisibleItems(int iMinVisible);
@@ -1485,7 +1485,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*iMinVisible*|[in] Specifica il numero minimo di elementi visibili.|
+|*iMinVisible*|in Specifica il numero minimo di elementi visibili.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1493,23 +1493,23 @@ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo invia il [CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) messaggio, che è descritti nel SDK di Windows.
+Questo metodo invia il messaggio [CB_SETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) , descritto nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente definisce la variabile *m_combobox*, che viene usato per accedere a livello di codice il controllo casella combinata. Questa variabile viene usata nell'esempio riportato di seguito.
+Nell'esempio di codice seguente viene definita la variabile *m_combobox*, utilizzata per accedere a livello di codice al controllo casella combinata. Questa variabile viene usata nell'esempio riportato di seguito.
 
 [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente inserisce 20 elementi all'elenco di riepilogo a discesa di un controllo casella combinata. Specifica quindi che un minimo di 10 elementi da visualizzare quando si preme la freccia a discesa.
+Nell'esempio di codice seguente vengono inseriti 20 elementi nell'elenco a discesa di un controllo casella combinata. Quindi specifica che vengono visualizzati almeno 10 elementi quando un utente preme la freccia a discesa.
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-##  <a name="settopindex"></a>  CComboBox::SetTopIndex
+##  <a name="settopindex"></a>CComboBox:: SetTopIndex
 
-Garantisce che un particolare elemento sia visibile nella casella di elenco della casella combinata.
+Garantisce che un particolare elemento sia visibile nella parte della casella di riepilogo della casella combinata.
 
 ```
 int SetTopIndex(int nIndex);
@@ -1518,23 +1518,23 @@ int SetTopIndex(int nIndex);
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Specifica l'indice in base zero dell'elemento casella di riepilogo.
+Specifica l'indice in base zero dell'elemento della casella di riepilogo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Zero se ha esito positivo o CB_ERR se si verifica un errore.
+Zero in caso di esito positivo o CB_ERR se si verifica un errore.
 
 ### <a name="remarks"></a>Note
 
-Il sistema consente di scorrere la casella di riepilogo finché entrambi l'elemento specificato dalla *nIndex* viene visualizzata nella parte superiore dell'elenco casella o l'intervallo di scorrimento massimo viene raggiunto.
+Il sistema scorre la casella di riepilogo finché l'elemento specificato da *nIndex* non viene visualizzato nella parte superiore della casella di riepilogo o se è stato raggiunto l'intervallo massimo di scorrimento.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]
 
-##  <a name="showdropdown"></a>  CComboBox::ShowDropDown
+##  <a name="showdropdown"></a>CComboBox:: ShowDropDown
 
-Mostra o nasconde la casella di riepilogo di una casella combinata con il [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) oppure [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile.
+Consente di visualizzare o nascondere la casella di riepilogo di una casella combinata con lo stile [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
 ```
 void ShowDropDown(BOOL bShowIt = TRUE);
@@ -1543,21 +1543,21 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bShowIt*<br/>
-Specifica se la casella di riepilogo a discesa deve essere visualizzato o nascosto. Il valore TRUE Mostra la casella di riepilogo. Il valore FALSE nasconde la casella di riepilogo.
+Specifica se la casella di riepilogo a discesa deve essere visualizzata o nascosta. Il valore TRUE Mostra la casella di riepilogo. Il valore FALSE nasconde la casella di riepilogo.
 
 ### <a name="remarks"></a>Note
 
-Per impostazione predefinita, una casella combinata di questo stile mostrerà la casella di riepilogo.
+Per impostazione predefinita, in una casella combinata di questo stile verrà visualizzata la casella di riepilogo.
 
-Questa funzione membro non ha alcun effetto su una casella combinata creata con il [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile.
+Questa funzione membro non ha alcun effetto su una casella combinata creata con lo stile [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CComboBox::GetDroppedState](#getdroppedstate).
+  Vedere l'esempio per [CComboBox:: GetDroppedState](#getdroppedstate).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC viene](../../overview/visual-cpp-samples.md)<br/>
+[CTRLBARS di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

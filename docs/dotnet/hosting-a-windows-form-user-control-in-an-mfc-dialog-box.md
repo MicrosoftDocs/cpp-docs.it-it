@@ -6,33 +6,33 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 56cf00da71fe6c47e39de2a8fc06df572a301a61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22f2c5c6c162e459470f9babab66c61c096540ec
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222988"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "70311872"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hosting di un controllo utente Windows Form in una finestra di dialogo MFC
 
-Ospita un controllo Windows Form come un tipo speciale di controlli ActiveX MFC e comunica con il controllo mediante interfacce ActiveX e le proprietà e metodi del <xref:System.Windows.Forms.Control> classe. È consigliabile usare i metodi e proprietà di .NET Framework per operare sul controllo.
+MFC ospita un controllo Windows Forms come un tipo speciale di controllo ActiveX e comunica con il controllo tramite le interfacce ActiveX, nonché le proprietà e i metodi della <xref:System.Windows.Forms.Control> classe. Si consiglia di usare .NET Framework proprietà e metodi per operare sul controllo.
 
-Per un'applicazione di esempio che illustra Windows Form utilizzato con MFC, vedere [MFC e Windows Forms Integration](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vedere [MFC and Windows Forms Integration](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
 
 > [!NOTE]
->  Nella versione corrente, un `CDialogBar` oggetto non può ospitare controlli Windows Form.
+>  Nella versione corrente, un `CDialogBar` oggetto non può ospitare controlli Windows Forms.
 
 ## <a name="in-this-section"></a>In questa sezione
 
 [Procedura: Creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
 
-[Procedura: Eseguire DDX/DDV associazione dati con Windows Form](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
+[Procedura: Eseguire il data binding DDX/DDV con Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
 
 [Procedura: Elaborare eventi di Windows Form da classi C++ native](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ## <a name="reference"></a>Riferimenti
 
-[Classe CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [classe CDialog](../mfc/reference/cdialog-class.md) &#124; [classe CWnd](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>
+[Classe CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [Classe CDialog](../mfc/reference/cdialog-class.md) &#124; [Classe CWnd](../mfc/reference/cwnd-class.md) &#124; <xref:System.Windows.Forms.Control>
 
 ## <a name="see-also"></a>Vedere anche
 

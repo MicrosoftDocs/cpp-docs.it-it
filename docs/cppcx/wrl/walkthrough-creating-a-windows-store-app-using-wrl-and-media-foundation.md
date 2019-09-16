@@ -3,35 +3,35 @@ title: "Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Found
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ac2c16fb94646af7445d41010253967be126636a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450152"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498310"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Foundation
 
 > [!NOTE]
-> Per la nuova App della piattaforma UWP e componenti, è consigliabile usare [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), una nuova proiezione standard del C + + 17 language for Windows Runtime APIs. C++/ È disponibile in Windows 10 SDK versione 1803 poi WinRT. C++/ WinRT viene implementata interamente nel file di intestazione e viene progettato per fornire un accesso all'API Windows moderna.
+> Per le nuove app e i componenti di UWP, è consigliabile usare [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), una nuova proiezione del linguaggio c++ 17 standard per le API Windows Runtime. C++/WinRT è disponibile in Windows 10 SDK dalla versione 1803 in poi. C++/WinRT viene implementato interamente nei file di intestazione ed è progettato per fornire l'accesso di prima classe all'API Windows moderna.
 
-In questa esercitazione si apprenderà come usare il Runtime di Windows C++ libreria di modelli (WRL) per creare un'app Universal Windows Platform (UWP) che usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+In questa esercitazione si apprenderà come usare la libreria di C++ modelli Windows Runtime (WRL) per creare un'app piattaforma UWP (Universal Windows Platform) (UWP) che usa [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
 
 Questo esempio illustra come creare una trasformazione personalizzata di Media Foundation che applica un effetto scala di grigi alle immagini acquisite da una webcam. L'app usa C++ per definire la trasformazione personalizzata e C# per usare il componente per trasformare le immagini acquisite.
 
 > [!NOTE]
 > Oltre a C#, per il componente personalizzato di trasformazione è possibile usare JavaScript, Visual Basic o C++.
 
-Nella maggior parte dei casi, è possibile usare c++ /CX per creare un Runtime di Windows. Tuttavia, in alcuni casi è necessario usare il WRL. Ad esempio, quando si crea un'estensione multimediale per Microsoft Media Foundation, è necessario creare un componente che implementa le interfacce COM e Windows Runtime. Poiché C++ c++ /CX è possibile creare solo gli oggetti di Windows Runtime, per creare un'estensione multimediale è necessario usare il WRL perché consente l'implementazione di interfacce COM e Windows Runtime.
+Nella maggior parte dei casi, è C++possibile usare/CX per creare Windows Runtime. Tuttavia, a volte è necessario usare WRL. Ad esempio, quando si crea un'estensione per supporti per Microsoft Media Foundation, è necessario creare un componente che implementi interfacce COM e Windows Runtime. Poiché C++/CX può creare solo oggetti di Windows Runtime, per creare un'estensione multimediale è necessario usare WRL perché consente l'implementazione di interfacce COM e Windows Runtime.
 
 > [!NOTE]
-> Anche se questo esempio di codice è lungo, mostra i requisiti minimi per poter creare una trasformazione utile di Media Foundation. È possibile usare l'esempio come punto di partenza per una trasformazione personalizzata. In questo esempio è stato adattato dal [esempio di estensioni multimediali](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), che usa le estensioni multimediali per applicare effetti ai video, decodificare i video e creare gestori di schema che generano flussi multimediali.
+> Anche se questo esempio di codice è lungo, mostra i requisiti minimi per poter creare una trasformazione utile di Media Foundation. È possibile usare l'esempio come punto di partenza per una trasformazione personalizzata. Questo esempio è stato adattato dall' [esempio Media Extensions](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), che usa le estensioni multimediali per applicare effetti a video, decodifica video e creare gestori dello schema che producono flussi multimediali.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- In Visual Studio 2017 e versioni successive, il supporto UWP è un componente facoltativo. Per installarlo, aprire l'installazione di Visual Studio dal menu Start di Windows e trovare la versione di Visual Studio. Scegliere **Modify** e quindi assicurarsi che il **sviluppo della piattaforma Windows Universal** riquadro viene controllato. Sotto **i componenti facoltativi** controllare  **C++ strumenti per la piattaforma UWP (v141)** per Visual Studio 2017, o  **C++ strumenti per la piattaforma UWP (v142)** per Visual Studio 2019. Controllare quindi la versione del SDK di Windows che si desidera utilizzare. 
+- In Visual Studio 2017 e versioni successive il supporto UWP è un componente facoltativo. Per installarlo, aprire il Programma di installazione di Visual Studio dal menu Start di Windows e trovare la versione di Visual Studio. Scegliere **modifica** e quindi assicurarsi che il riquadro **sviluppo piattaforma UWP (Universal Windows Platform)** sia selezionato. In **componenti facoltativi** controllare  **C++ gli strumenti per UWP (V141)** per Visual Studio 2017 o  **C++ gli strumenti per UWP (v142)** per Visual Studio 2019. Controllare quindi la versione del Windows SDK che si vuole usare. 
 
-- Esperienza con la [Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
+- Esperienza con la [Windows Runtime](/uwp/api/).
 
 - Esperienza con COM.
 
@@ -41,45 +41,45 @@ Nella maggior parte dei casi, è possibile usare c++ /CX per creare un Runtime d
 
 - Per creare un componente personalizzato di Media Foundation, usare un file del linguaggio di definizione dell'interfaccia (Microsoft Interface Definition Language, MIDL) per definire un'interfaccia, implementare l'interfaccia e quindi renderla attivabile dagli altri componenti.
 
-- Il `namespace` e `runtimeclass` attributi e il `NTDDI_WIN8` [versione](/windows/desktop/Midl/version) valore dell'attributo sono parti importanti della definizione MIDL per un componente di Media Foundation che usa WRL.
+- Gli attributi `namespace` e `runtimeclass` e il valore dell'attributo `NTDDI_WIN8`[Version](/windows/win32/Midl/version) sono parti importanti della definizione MIDL per un componente Media Foundation che usa WRL.
 
-- [Microsoft::WRL::RuntimeClass](runtimeclass-class.md) è la classe base per il componente personalizzato di Media Foundation. Il [Microsoft::WRL::RuntimeClassType::WinRtClassicComMix](runtimeclasstype-enumeration.md) valore di enumerazione, che viene fornito come argomento di modello, contrassegna una classe da utilizzare come classe di Runtime di Windows sia come classe di runtime classica COM.
+- [Microsoft:: WRL:: RuntimeClass](runtimeclass-class.md) è la classe di base per il componente Media Foundation personalizzato. Il valore di enumerazione [Microsoft:: WRL:: RuntimeClassType:: WinRtClassicComMix](runtimeclasstype-enumeration.md) , fornito come argomento di modello, contrassegna la classe per l'utilizzo sia come classe Windows Runtime sia come classe di runtime com classica.
 
-- Il [InspectableClass](inspectableclass-macro.md) macro implementa funzionalità COM di base, ad esempio il conteggio dei riferimenti e `QueryInterface` (metodo) e imposta il runtime di nome della classe e livello di attendibilità.
+- La macro [InspectableClass](inspectableclass-macro.md) implementa la funzionalità com di base, ad esempio il `QueryInterface` conteggio dei riferimenti e il metodo, e imposta il nome della classe di runtime e il livello di attendibilità.
 
-- Utilizzare il Microsoft:: wrl::[classe modulo](module-class.md) per implementare le funzioni di punto di ingresso DLL, ad esempio [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), e [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Usare la classe Microsoft:: WRL::[Module](module-class.md) per implementare funzioni di punto di ingresso della dll, ad esempio [DllGetActivationFactory](/windows/win32/winrt/functions), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)e [DllGetClassObject](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
-- Collegare la DLL del componente a runtimeobject.lib. Specificare anche [/WINMD](../../cppcx/compiler-and-linker-options-c-cx.md) nella riga del linker per generare i metadati di Windows.
+- Collegare la DLL del componente a runtimeobject.lib. Specificare anche [/WinMD](../../cppcx/compiler-and-linker-options-c-cx.md) nella riga del linker per generare i metadati di Windows.
 
-- Usare riferimenti di progetto per rendere accessibile alle App UWP dei componenti WRL.
+- Usare i riferimenti al progetto per rendere i componenti WRL accessibili alle app UWP.
 
-### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Per l'uso di WRL per creare la scala di grigi di Media Foundation componente di trasformazione
+### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Per usare WRL per creare il componente di trasformazione scala di grigi Media Foundation
 
-1. In Visual Studio, creare un **soluzione vuota** progetto. Nome del progetto, ad esempio *MediaCapture*.
+1. In Visual Studio creare un progetto di **soluzione vuota** . Assegnare un nome al progetto, ad esempio *MediaCapture*.
 
-1. Aggiungere un **DLL (Windows universale)** progetto alla soluzione. Nome del progetto, ad esempio *GrayscaleTransform*.
+1. Aggiungere un progetto **dll (Windows universale)** alla soluzione. Assegnare un nome al progetto, ad esempio *GrayscaleTransform*.
 
-1. Aggiungere un **Midl File (. idl)** file al progetto. Nome file, ad esempio *Grayscaletransform*.
+1. Aggiungere un file di **file MIDL (IDL)** al progetto. Assegnare un nome al file, ad esempio *GrayscaleTransform. idl*.
 
-1. Aggiungere questo codice a Grayscaletransform:
+1. Aggiungere questo codice a GrayscaleTransform. idl:
 
    [!code-cpp[wrl-media-capture#1](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]
 
-1. Usare il codice seguente sostituire il contenuto di `pch.h`:
+1. Usare il codice seguente per sostituire il contenuto di `pch.h`:
 
    [!code-cpp[wrl-media-capture#2](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]
 
-1. Aggiungere un nuovo file di intestazione al progetto, denominarlo `BufferLock.h`e quindi sostituire il contenuto con il seguente codice:
+1. Aggiungere un nuovo file di intestazione al progetto, denominarlo `BufferLock.h`e quindi sostituire il contenuto con il codice seguente:
 
    [!code-cpp[wrl-media-capture#3](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]
 
-1. `GrayscaleTransform.h` non viene usata in questo esempio. Volendo, è possibile rimuoverlo dal progetto.
+1. `GrayscaleTransform.h`non viene usato in questo esempio. Volendo, è possibile rimuoverlo dal progetto.
 
-1. Usare il codice seguente sostituire il contenuto di `GrayscaleTransform.cpp`:
+1. Usare il codice seguente per sostituire il contenuto di `GrayscaleTransform.cpp`:
 
    [!code-cpp[wrl-media-capture#4](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]
 
-1. Aggiungere un nuovo file di definizione moduli al progetto, denominarlo `GrayscaleTransform.def`e quindi aggiungere questo codice:
+1. Aggiungere un nuovo file di definizione moduli al progetto, denominarlo `GrayscaleTransform.def`e quindi aggiungere il codice seguente:
 
    ```
    EXPORTS
@@ -88,44 +88,44 @@ Nella maggior parte dei casi, è possibile usare c++ /CX per creare un Runtime d
        DllGetClassObject                   PRIVATE
    ```
 
-1. Usare il codice seguente sostituire il contenuto di `dllmain.cpp`:
+1. Usare il codice seguente per sostituire il contenuto di `dllmain.cpp`:
 
    [!code-cpp[wrl-media-capture#6](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]
 
-1. Il progetto **pagine delle proprietà** finestra di dialogo casella, impostare quanto segue **Linker** proprietà.
+1. Nella finestra di dialogo **pagine delle proprietà** del progetto impostare le seguenti proprietà del **linker** .
 
-   1. Sotto **Input**, per il **File di definizione moduli**, specificare `GrayScaleTransform.def`.
+   1. In **input**, per il **file di definizione**del modulo `GrayScaleTransform.def`, specificare.
 
-   1. Anche in **Input**, aggiungere `runtimeobject.lib`, `mfuuid.lib`, e `mfplat.lib` per i **dipendenze aggiuntive** proprietà.
+   1. Inoltre, in **input**aggiungere `runtimeobject.lib`, `mfuuid.lib`e `mfplat.lib` alla proprietà **dipendenze aggiuntive** .
 
-   1. Sotto **dei metadati di Windows**, impostare **genera metadati Windows** al **Sì (/ WINMD)** .
+   1. In **metadati di Windows**impostare **genera metadati Windows** su **Sì (/WinMD)** .
 
-### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Usare il componente personalizzato di Media Foundation da un'app c# di WRL
+### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Per usare WRL il componente Media Foundation personalizzato da un' C# app
 
-1. Aggiungere un nuovo **c# App vuota (Windows universale)** del progetto per il `MediaCapture` soluzione. Nome del progetto, ad esempio *MediaCapture*.
+1. Aggiungere un `MediaCapture` nuovo  **C# progetto app vuota (Windows universale)** alla soluzione. Assegnare un nome al progetto, ad esempio *MediaCapture*.
 
-1. Nel **MediaCapture** del progetto, aggiungere un riferimento al `GrayscaleTransform` progetto. Per altre informazioni, vedere [come: Aggiungere o rimuovere riferimenti tramite Gestione riferimenti](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).
+1. Nel progetto **MediaCapture** aggiungere un riferimento al `GrayscaleTransform` progetto. Per informazioni, vedere [procedura: Aggiungere o rimuovere riferimenti tramite Gestione riferimenti](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).
 
-1. Nelle `Package.appxmanifest`via il **funzionalità** , selezionare **microfono** e **Webcam**. Per poter acquisire foto da webcam sono necessarie entrambe le funzionalità.
+1. In `Package.appxmanifest`, nella scheda **funzionalità** , selezionare **microfono** e **Webcam**. Per poter acquisire foto da webcam sono necessarie entrambe le funzionalità.
 
-1. Nelle `MainPage.xaml`, aggiungere questo codice nella directory principale [griglia](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) elemento:
+1. In `MainPage.xaml`aggiungere questo codice all'elemento [Grid](/uwp/api/Windows.UI.Xaml.Controls.Grid) radice:
 
    [!code-xml[wrl-media-capture#7](../codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
-1. Usare il codice seguente sostituire il contenuto di `MainPage.xaml.cs`:
+1. Usare il codice seguente per sostituire il contenuto di `MainPage.xaml.cs`:
 
    [!code-cs[wrl-media-capture#8](../codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]
 
-La figura seguente illustra il `MediaCapture app`.
+Nella figura seguente viene illustrato `MediaCapture app`il.
 
-![Applicazione mediacapture durante l'acquisizione di una foto](../media/wrl_media_capture.png "WRL_Media_Capture")
+![App MediaCapture che acquisisce una foto](../media/wrl_media_capture.png "WRL_Media_Capture")
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-L'esempio mostra come acquisire foto, una alla volta, dalla webcam predefinita. Il [esempio di estensioni multimediali](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) ancora più avanzate. Illustra come enumerare i dispositivi webcam e come usare i gestori di schema locali. Illustra inoltre altri effetti multimediali che lavorano sia sulle singole foto che sui flussi di video.
+L'esempio mostra come acquisire foto, una alla volta, dalla webcam predefinita. L' [esempio Media Extensions](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) esegue altre operazione. Illustra come enumerare i dispositivi webcam e come usare i gestori di schema locali. Illustra inoltre altri effetti multimediali che lavorano sia sulle singole foto che sui flussi di video.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Libreria di modelli di Windows Runtime C++ (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
-[Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
+[Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk)<br/>
 [Esempio di estensioni multimediali](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

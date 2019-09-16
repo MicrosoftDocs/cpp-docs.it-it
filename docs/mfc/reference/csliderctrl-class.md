@@ -1,5 +1,5 @@
 ---
-title: CSliderCtrl (classe)
+title: Classe CSliderCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CSliderCtrl
@@ -74,14 +74,14 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fffdfc002b25fdcd72dcbbf53e7e6c321f55296
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324415"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502512"
 ---
-# <a name="csliderctrl-class"></a>CSliderCtrl (classe)
+# <a name="csliderctrl-class"></a>Classe CSliderCtrl
 
 Fornisce la funzionalità del controllo dispositivo di scorrimento comune di Windows.
 
@@ -91,11 +91,11 @@ Fornisce la funzionalità del controllo dispositivo di scorrimento comune di Win
 class CSliderCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Costruisce un oggetto `CSliderCtrl`.|
 
@@ -104,52 +104,52 @@ class CSliderCtrl : public CWnd
 |Nome|Descrizione|
 |----------|-----------------|
 |[CSliderCtrl::ClearSel](#clearsel)|Cancella la selezione corrente in un controllo dispositivo di scorrimento.|
-|[CSliderCtrl::ClearTics](#cleartics)|Rimuove i segni di graduazione corrente da un controllo dispositivo di scorrimento.|
-|[CSliderCtrl::Create](#create)|Crea un controllo dispositivo di scorrimento e la collega a un `CSliderCtrl` oggetto.|
-|[CSliderCtrl::CreateEx](#createex)|Crea un controllo dispositivo di scorrimento con gli stili estesi di Windows specificati e lo collega a un `CSliderCtrl` oggetto.|
-|[CSliderCtrl::GetBuddy](#getbuddy)|Recupera l'handle di finestra buddy controllo dispositivo di scorrimento in una posizione specificata.|
+|[CSliderCtrl::ClearTics](#cleartics)|Rimuove i segni di graduazione correnti da un controllo dispositivo di scorrimento.|
+|[CSliderCtrl::Create](#create)|Crea un controllo dispositivo di scorrimento e lo collega a `CSliderCtrl` un oggetto.|
+|[CSliderCtrl::CreateEx](#createex)|Crea un controllo dispositivo di scorrimento con gli stili estesi di Windows specificati e lo `CSliderCtrl` collega a un oggetto.|
+|[CSliderCtrl::GetBuddy](#getbuddy)|Recupera l'handle di una finestra di controllo dispositivo di scorrimento in una posizione specificata.|
 |[CSliderCtrl::GetChannelRect](#getchannelrect)|Recupera la dimensione del canale del controllo dispositivo di scorrimento.|
-|[CSliderCtrl::GetLineSize](#getlinesize)|Recupera la dimensione di riga di un controllo dispositivo di scorrimento.|
+|[CSliderCtrl::GetLineSize](#getlinesize)|Recupera le dimensioni di riga di un controllo dispositivo di scorrimento.|
 |[CSliderCtrl::GetNumTics](#getnumtics)|Recupera il numero di segni di graduazione in un controllo dispositivo di scorrimento.|
-|[CSliderCtrl::GetPageSize](#getpagesize)|Recupera le dimensioni della pagina di un controllo dispositivo di scorrimento.|
+|[CSliderCtrl::GetPageSize](#getpagesize)|Recupera le dimensioni di pagina di un controllo dispositivo di scorrimento.|
 |[CSliderCtrl::GetPos](#getpos)|Recupera la posizione corrente del dispositivo di scorrimento.|
 |[CSliderCtrl::GetRange](#getrange)|Recupera le posizioni minime e massime per un dispositivo di scorrimento.|
-|[CSliderCtrl::GetRangeMax](#getrangemax)|Recupera la posizione massima di un dispositivo di scorrimento.|
+|[CSliderCtrl::GetRangeMax](#getrangemax)|Recupera la posizione massima per un dispositivo di scorrimento.|
 |[CSliderCtrl::GetRangeMin](#getrangemin)|Recupera la posizione minima per un dispositivo di scorrimento.|
 |[CSliderCtrl::GetSelection](#getselection)|Recupera l'intervallo della selezione corrente.|
-|[CSliderCtrl::GetThumbLength](#getthumblength)|Recupera la lunghezza del dispositivo di scorrimento nel controllo indicatore di avanzamento corrente.|
-|[CSliderCtrl::GetThumbRect](#getthumbrect)|Recupera la dimensione del thumb del controllo dispositivo di scorrimento.|
-|[CSliderCtrl::GetTic](#gettic)|Recupera la posizione del segno di graduazione specificati.|
-|[CSliderCtrl::GetTicArray](#getticarray)|Recupera la matrice di posizioni di contrassegno dei segni di graduazione per un controllo dispositivo di scorrimento.|
-|[CSliderCtrl::GetTicPos](#getticpos)|Recupera la posizione del segno di graduazione specificati, nelle coordinate del client.|
-|[CSliderCtrl::GetToolTips](#gettooltips)|Recupera l'handle per il controllo tooltip assegnato al controllo dispositivo di scorrimento, se presente.|
+|[CSliderCtrl::GetThumbLength](#getthumblength)|Recupera la lunghezza del dispositivo di scorrimento nel controllo TrackBar corrente.|
+|[CSliderCtrl::GetThumbRect](#getthumbrect)|Recupera la dimensione del Thumb del controllo dispositivo di scorrimento.|
+|[CSliderCtrl::GetTic](#gettic)|Recupera la posizione del segno di graduazione specificato.|
+|[CSliderCtrl::GetTicArray](#getticarray)|Recupera la matrice di posizioni dei segni di graduazione per un controllo dispositivo di scorrimento.|
+|[CSliderCtrl::GetTicPos](#getticpos)|Recupera la posizione del segno di graduazione specificato nelle coordinate del client.|
+|[CSliderCtrl::GetToolTips](#gettooltips)|Recupera l'handle per il controllo ToolTip assegnato al controllo dispositivo di scorrimento, se disponibile.|
 |[CSliderCtrl::SetBuddy](#setbuddy)|Assegna una finestra come finestra buddy per un controllo dispositivo di scorrimento.|
-|[CSliderCtrl::SetLineSize](#setlinesize)|Imposta le dimensioni di riga di un controllo dispositivo di scorrimento.|
-|[CSliderCtrl::SetPageSize](#setpagesize)|Imposta le dimensioni della pagina di un controllo dispositivo di scorrimento.|
+|[CSliderCtrl::SetLineSize](#setlinesize)|Imposta la dimensione della riga di un controllo dispositivo di scorrimento.|
+|[CSliderCtrl::SetPageSize](#setpagesize)|Imposta la dimensione di pagina di un controllo dispositivo di scorrimento.|
 |[CSliderCtrl::SetPos](#setpos)|Imposta la posizione corrente del dispositivo di scorrimento.|
 |[CSliderCtrl::SetRange](#setrange)|Imposta le posizioni minime e massime per un dispositivo di scorrimento.|
-|[CSliderCtrl::SetRangeMax](#setrangemax)|Imposta la posizione massima di un dispositivo di scorrimento.|
+|[CSliderCtrl::SetRangeMax](#setrangemax)|Imposta la posizione massima per un dispositivo di scorrimento.|
 |[CSliderCtrl::SetRangeMin](#setrangemin)|Imposta la posizione minima per un dispositivo di scorrimento.|
 |[CSliderCtrl::SetSelection](#setselection)|Imposta l'intervallo della selezione corrente.|
-|[CSliderCtrl::SetThumbLength](#setthumblength)|Imposta la lunghezza del dispositivo di scorrimento nel controllo indicatore di avanzamento corrente.|
-|[CSliderCtrl::SetTic](#settic)|Imposta la posizione del segno di graduazione specificati.|
-|[CSliderCtrl::SetTicFreq](#setticfreq)|Imposta la frequenza dei segni di graduazione contrassegni per ogni incremento di controllo dispositivo di scorrimento.|
-|[CSliderCtrl::SetTipSide](#settipside)|Posizioni di un controllo descrizione comando utilizzata da un controllo indicatore di avanzamento.|
-|[CSliderCtrl::SetToolTips](#settooltips)|Assegna un controllo descrizione comandi a un controllo dispositivo di scorrimento.|
+|[CSliderCtrl::SetThumbLength](#setthumblength)|Imposta la lunghezza del dispositivo di scorrimento nel controllo TrackBar corrente.|
+|[CSliderCtrl::SetTic](#settic)|Imposta la posizione del segno di graduazione specificato.|
+|[CSliderCtrl::SetTicFreq](#setticfreq)|Imposta la frequenza dei segni di graduazione per incremento del controllo dispositivo di scorrimento.|
+|[CSliderCtrl::SetTipSide](#settipside)|Posiziona un controllo ToolTip utilizzato da un controllo TrackBar.|
+|[CSliderCtrl::SetToolTips](#settooltips)|Assegna un controllo ToolTip a un controllo dispositivo di scorrimento.|
 
 ## <a name="remarks"></a>Note
 
-Un "controllo dispositivo di scorrimento" (noto anche come indicatore di avanzamento) è una finestra contenente un dispositivo di scorrimento e segni di graduazione facoltativi. Quando l'utente sposta il dispositivo di scorrimento, utilizzando il mouse o i tasti di direzione, il controllo Invia messaggi di notifica per indicare la modifica.
+Un "controllo dispositivo di scorrimento" (noto anche come TrackBar) è una finestra contenente un dispositivo di scorrimento e segni di graduazione facoltativi. Quando l'utente sposta il dispositivo di scorrimento usando il mouse o i tasti di direzione, il controllo Invia messaggi di notifica per indicare la modifica.
 
 I controlli dispositivo di scorrimento sono utili quando si desidera che l'utente selezioni un valore distinto o un set di valori consecutivi in un intervallo. È ad esempio possibile utilizzare un controllo dispositivo di scorrimento per consentire all'utente di impostare la velocità di ripetizione della tastiera spostando il dispositivo di scorrimento in corrispondenza di uno specifico segno di graduazione.
 
-Questo controllo (e pertanto il `CSliderCtrl` classe) è disponibile solo per i programmi in esecuzione in Windows 95 o 98 e Windows NT versione 3.51 e successive.
+Questo controllo (e pertanto la `CSliderCtrl` classe) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3,51 e successive.
 
-Consente di spostare il dispositivo di scorrimento in base a incrementi specificato durante la creazione. Ad esempio, se si specifica che il dispositivo di scorrimento deve disporre di un intervallo di cinque, il dispositivo di scorrimento potrà occupare solo sei posizioni: una posizione sul lato sinistro del controllo dispositivo di scorrimento e una posizione per ogni incremento nell'intervallo. In genere, ognuna di queste posizioni è identificata da un segno di graduazione.
+Il dispositivo di scorrimento si sposta in incrementi specificati al momento della creazione. Ad esempio, se si specifica che il dispositivo di scorrimento deve avere un intervallo di cinque, il dispositivo di scorrimento può occupare solo sei posizioni: una posizione sul lato sinistro del controllo dispositivo di scorrimento e una posizione per ogni incremento nell'intervallo. In genere, ognuna di queste posizioni è identificata da un segno di graduazione.
 
-Si crea un dispositivo di scorrimento utilizzando il costruttore e il `Create` funzione membro di `CSliderCtrl`. Dopo aver creato un controllo dispositivo di scorrimento, è possibile usare funzioni membro in `CSliderCtrl` modificare molte delle relative proprietà. Le modifiche effettuabili includono l'impostazione delle posizioni minima e massima per il dispositivo di scorrimento, il disegno di segni di graduazione, l'impostazione di un intervallo di selezione e il riposizionamento del dispositivo di scorrimento.
+È possibile creare un dispositivo di scorrimento usando il costruttore `Create` e la funzione `CSliderCtrl`membro di. Una volta creato un controllo dispositivo di scorrimento, è possibile utilizzare le funzioni `CSliderCtrl` membro in per modificare molte delle relative proprietà. Le modifiche effettuabili includono l'impostazione delle posizioni minima e massima per il dispositivo di scorrimento, il disegno di segni di graduazione, l'impostazione di un intervallo di selezione e il riposizionamento del dispositivo di scorrimento.
 
-Per altre informazioni sull'uso `CSliderCtrl`, vedere [controlli](../../mfc/controls-mfc.md) e [usando CSliderCtrl](../../mfc/using-csliderctrl.md).
+Per altre informazioni sull'uso `CSliderCtrl`di, vedere [controlli](../../mfc/controls-mfc.md) e [uso di CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -176,11 +176,11 @@ void ClearSel(BOOL bRedraw = FALSE);
 ### <a name="parameters"></a>Parametri
 
 *bRedraw*<br/>
-Flag di visualizzazione. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo la selezione sia deselezionata. in caso contrario, il dispositivo di scorrimento non viene ridisegnata.
+Ridisegni flag. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo la cancellazione della selezione; in caso contrario, il dispositivo di scorrimento non viene ridisegnato.
 
 ##  <a name="cleartics"></a>  CSliderCtrl::ClearTics
 
-Rimuove i segni di graduazione corrente da un controllo dispositivo di scorrimento.
+Rimuove i segni di graduazione correnti da un controllo dispositivo di scorrimento.
 
 ```
 void ClearTics(BOOL bRedraw = FALSE);
@@ -189,11 +189,11 @@ void ClearTics(BOOL bRedraw = FALSE);
 ### <a name="parameters"></a>Parametri
 
 *bRedraw*<br/>
-Flag di visualizzazione. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo che i segni di graduazione vengono cancellati; in caso contrario, il dispositivo di scorrimento non viene ridisegnata.
+Ridisegni flag. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo la cancellazione dei segni di graduazione. in caso contrario, il dispositivo di scorrimento non viene ridisegnato.
 
 ##  <a name="create"></a>  CSliderCtrl::Create
 
-Crea un controllo dispositivo di scorrimento e la collega a un `CSliderCtrl` oggetto.
+Crea un controllo dispositivo di scorrimento e lo collega a `CSliderCtrl` un oggetto.
 
 ```
 virtual BOOL Create(
@@ -206,32 +206,32 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametri
 
 *dwStyle*<br/>
-Specifica lo stile del controllo dispositivo di scorrimento. Applicare qualsiasi combinazione di [stili del controllo slider](/windows/desktop/Controls/trackbar-control-styles), come descritto nel SDK di Windows, al controllo.
+Specifica lo stile del controllo Slider. Applicare qualsiasi combinazione di [stili del controllo Slider](/windows/win32/Controls/trackbar-control-styles), descritti nella Windows SDK, al controllo.
 
 *rect*<br/>
-Specifica le dimensioni e la posizione del controllo dispositivo di scorrimento. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
+Specifica le dimensioni e la posizione del controllo dispositivo di scorrimento. Può essere un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
 *pParentWnd*<br/>
-Specifica finestra padre del controllo dispositivo di scorrimento, in genere un `CDialog`. Non deve essere NULL.
+Specifica la finestra padre del controllo dispositivo di scorrimento, `CDialog`in genere un. Non deve essere NULL.
 
 *nID*<br/>
-Specifica l'ID. del controllo dispositivo di scorrimento
+Specifica l'ID del controllo dispositivo di scorrimento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se l'inizializzazione ha avuto esito positivo; in caso contrario 0.
+Diverso da zero se l'inizializzazione ha esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Si costruisce un `CSliderCtrl` in due passaggi. In primo luogo, chiamare il costruttore e quindi chiamare `Create`, che crea il controllo dispositivo di scorrimento e lo collega al `CSliderCtrl` oggetto.
+Si costruisce `CSliderCtrl` un in due passaggi. In primo luogo, chiamare il costruttore, quindi `Create`chiamare, che crea il controllo dispositivo di scorrimento e lo collega all' oggetto.`CSliderCtrl`
 
-A seconda dei valori impostati per *dwStyle*, il controllo dispositivo di scorrimento può avere un orientamento verticale o orizzontale. Può avere i segni di graduazione su entrambi i lati, entrambi i lati, o nessuna delle due. Può anche essere utilizzato per specificare un intervallo di valori consecutivi.
+A seconda dei valori impostati per *dwStyle*, il controllo dispositivo di scorrimento può avere un orientamento verticale o orizzontale. Può avere segni di graduazione su entrambi i lati, entrambi i lati o nessuno. Può anche essere usato per specificare un intervallo di valori consecutivi.
 
-Per applicare stili finestra estesi per il controllo dispositivo di scorrimento, chiamare [CreateEx](#createex) invece di `Create`.
+Per applicare gli stili della finestra estesa al controllo dispositivo di scorrimento, chiamare [CreateEx](#createex) anziché `Create`.
 
 ##  <a name="createex"></a>  CSliderCtrl::CreateEx
 
-Crea un controllo (una finestra figlio) e la associa il `CSliderCtrl` oggetto.
+Crea un controllo (una finestra figlio) e lo associa `CSliderCtrl` all'oggetto.
 
 ```
 virtual BOOL CreateEx(
@@ -245,19 +245,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametri
 
 *dwExStyle*<br/>
-Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.
+Specifica lo stile esteso del controllo da creare. Per un elenco degli stili Windows estesi, vedere il parametro *dwExStyle* per [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) nel Windows SDK.
 
 *dwStyle*<br/>
-Specifica lo stile del controllo dispositivo di scorrimento. Applicare qualsiasi combinazione di [stili del controllo slider](/windows/desktop/Controls/trackbar-control-styles), come descritto nel SDK di Windows, al controllo.
+Specifica lo stile del controllo Slider. Applicare qualsiasi combinazione di [stili del controllo Slider](/windows/win32/Controls/trackbar-control-styles), descritti nella Windows SDK, al controllo.
 
 *rect*<br/>
-Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Riferimento a una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd*<br/>
-Puntatore alla finestra padre del controllo.
+Puntatore alla finestra che rappresenta l'elemento padre del controllo.
 
 *nID*<br/>
-ID di finestra figlio. del controllo
+ID della finestra figlio del controllo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -265,7 +265,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Uso `CreateEx` invece di [Create](#create) per applicare stili estesi di Windows, specificati dal prefisso di stile esteso di Windows **WS_EX _**.
+Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificato dalla prefazione **WS_EX_** di Windows Extended Style.
 
 ##  <a name="csliderctrl"></a>  CSliderCtrl::CSliderCtrl
 
@@ -277,7 +277,7 @@ CSliderCtrl();
 
 ##  <a name="getbuddy"></a>  CSliderCtrl::GetBuddy
 
-Recupera l'handle di finestra buddy controllo dispositivo di scorrimento in una posizione specificata.
+Recupera l'handle di una finestra di controllo dispositivo di scorrimento in una posizione specificata.
 
 ```
 CWnd* GetBuddy(BOOL fLocation = TRUE) const;
@@ -286,19 +286,19 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="parameters"></a>Parametri
 
 *fLocation*<br/>
-Valore booleano che indica quale dei due handle di finestra buddy da recuperare. Il valore può essere uno dei seguenti:
+Valore booleano che indica quale dei due handle della finestra di Buddy recuperare. Il valore può essere uno dei seguenti:
 
-- TRUE recupera l'handle per il controllo correlato a sinistra del dispositivo di scorrimento. Se il controllo dispositivo di scorrimento Usa lo stile TBS_VERT, il messaggio recupererà il buddy sopra il dispositivo di scorrimento.
+- TRUE Recupera l'handle per l'oggetto Buddy a sinistra del dispositivo di scorrimento. Se il controllo dispositivo di scorrimento utilizza lo stile TBS_VERT, il messaggio recupererà l'oggetto Buddy sopra il dispositivo di scorrimento.
 
-- FALSE recupera l'handle per il controllo correlato a destra del dispositivo di scorrimento. Se il controllo dispositivo di scorrimento Usa lo stile TBS_VERT, il messaggio recupererà il buddy sotto il dispositivo di scorrimento.
+- FALSE Recupera l'handle all'oggetto Buddy a destra del dispositivo di scorrimento. Se il controllo dispositivo di scorrimento utilizza lo stile TBS_VERT, il messaggio recupererà l'oggetto Buddy sotto il dispositivo di scorrimento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra buddy in corrispondenza della posizione specificata da *fLocation*, o NULL se non esiste alcuna finestra buddy in quella posizione.
+Puntatore a un oggetto [CWnd](../../mfc/reference/cwnd-class.md) che corrisponde alla finestra di Buddy nella posizione specificata da *fLocation*oppure null se non esiste alcuna finestra di Buddy in quel percorso.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy), come descritto nel SDK di Windows. Per una descrizione degli stili del controllo dispositivo di scorrimento, vedere [stili del controllo Trackbar](/windows/desktop/Controls/trackbar-control-styles) nel SDK di Windows.
+Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_GETBUDDY](/windows/win32/Controls/tbm-getbuddy), come descritto nel Windows SDK. Per una descrizione degli stili del controllo Slider, vedere gli [stili dei controlli TrackBar](/windows/win32/Controls/trackbar-control-styles) nel Windows SDK.
 
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect
 
@@ -311,11 +311,11 @@ void GetChannelRect(LPRECT lprc) const;
 ### <a name="parameters"></a>Parametri
 
 *lprc*<br/>
-Un puntatore a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che contiene le dimensioni e la posizione del canale del rettangolo di delimitazione quando la funzione restituisce.
+Puntatore a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene le dimensioni e la posizione del rettangolo di delimitazione del canale quando la funzione restituisce un valore.
 
 ### <a name="remarks"></a>Note
 
-Il canale è l'area di failover che consente di spostare il dispositivo di scorrimento e che include l'evidenziazione quando viene selezionato un intervallo.
+Il canale è l'area in cui viene spostato il dispositivo di scorrimento e che contiene l'evidenziazione quando viene selezionato un intervallo.
 
 ##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize
 
@@ -327,11 +327,11 @@ int GetLineSize() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Le dimensioni di una riga per il controllo dispositivo di scorrimento.
+Dimensioni di una linea per il controllo dispositivo di scorrimento.
 
 ### <a name="remarks"></a>Note
 
-Le dimensioni di riga influisce su quanto il dispositivo di scorrimento viene spostato per ricevere le notifiche TB_LINEUP e TB_LINEDOWN. L'impostazione predefinita per le dimensioni di riga è 1.
+Le dimensioni della riga influiscono sul modo in cui viene spostato il dispositivo di scorrimento per le notifiche TB_LINEUP e TB_LINEDOWN. L'impostazione predefinita per le dimensioni della riga è 1.
 
 ##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics
 
@@ -343,11 +343,11 @@ UINT GetNumTics() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di segni di graduazione del controllo dispositivo di scorrimento.
+Numero di segni di graduazione nel controllo dispositivo di scorrimento.
 
 ##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize
 
-Recupera la dimensione della pagina per un controllo dispositivo di scorrimento.
+Recupera le dimensioni della pagina per un controllo dispositivo di scorrimento.
 
 ```
 int GetPageSize() const;
@@ -355,11 +355,11 @@ int GetPageSize() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Le dimensioni di una pagina per il controllo dispositivo di scorrimento.
+Dimensioni di una pagina per il controllo dispositivo di scorrimento.
 
 ### <a name="remarks"></a>Note
 
-Le dimensioni della pagina influisce sulla quantità il dispositivo di scorrimento viene spostato per ricevere le notifiche TB_PAGEUP e TB_PAGEDOWN.
+Le dimensioni della pagina influiscono sul modo in cui viene spostato il dispositivo di scorrimento per le notifiche TB_PAGEUP e TB_PAGEDOWN.
 
 ##  <a name="getpos"></a>  CSliderCtrl::GetPos
 
@@ -375,7 +375,7 @@ Posizione corrente.
 
 ##  <a name="getrange"></a>  CSliderCtrl::GetRange
 
-Recupera le posizioni minime e massime per il dispositivo di scorrimento in un controllo dispositivo di scorrimento.
+Recupera le posizioni massime e minime per il dispositivo di scorrimento in un controllo dispositivo di scorrimento.
 
 ```
 void GetRange(
@@ -386,14 +386,14 @@ void GetRange(
 ### <a name="parameters"></a>Parametri
 
 *nMin*<br/>
-Riferimento a un integer che riceve la minima posizione.
+Riferimento a un intero che riceve la posizione minima.
 
 *nMax*<br/>
-Riferimento a un integer che riceve la posizione massima.
+Riferimento a un Integer che riceve la posizione massima.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione copia i valori nei numeri interi fa *nMin* e *nMax*.
+Questa funzione copia i valori negli Integer a cui fa riferimento *nmin* e *nmax*.
 
 ##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax
 
@@ -409,7 +409,7 @@ Posizione massima del controllo.
 
 ##  <a name="getrangemin"></a>  CSliderCtrl::GetRangeMin
 
-Recupera la posizione minima per il dispositivo di scorrimento in un controllo dispositivo di scorrimento.
+Recupera la posizione minima del dispositivo di scorrimento in un controllo dispositivo di scorrimento.
 
 ```
 int GetRangeMin() const;
@@ -432,14 +432,14 @@ void GetSelection(
 ### <a name="parameters"></a>Parametri
 
 *nMin*<br/>
-Riferimento a un integer che riceve la posizione iniziale della selezione corrente.
+Riferimento a un Integer che riceve la posizione iniziale della selezione corrente.
 
 *nMax*<br/>
-Riferimento a un integer che riceve la posizione finale della selezione corrente.
+Riferimento a un Integer che riceve la posizione finale della selezione corrente.
 
-##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
+##  <a name="getthumblength"></a>CSliderCtrl:: GetThumbLength
 
-Recupera la lunghezza del dispositivo di scorrimento nel controllo indicatore di avanzamento corrente.
+Recupera la lunghezza del dispositivo di scorrimento nel controllo TrackBar corrente.
 
 ```
 int GetThumbLength() const;
@@ -447,15 +447,15 @@ int GetThumbLength() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La lunghezza del dispositivo di scorrimento, in pixel.
+Lunghezza del dispositivo di scorrimento, in pixel.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo invia il [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength) messaggio, che è descritti nel SDK di Windows.
+Questo metodo invia il messaggio [TBM_GETTHUMBLENGTH](/windows/win32/Controls/tbm-getthumblength) , descritto nella Windows SDK.
 
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect
 
-Recupera le dimensioni e la posizione del rettangolo di delimitazione per il dispositivo di scorrimento (casella) in un controllo dispositivo di scorrimento.
+Recupera le dimensioni e la posizione del rettangolo di delimitazione per il dispositivo di scorrimento (Thumb) in un controllo dispositivo di scorrimento.
 
 ```
 void GetThumbRect(LPRECT lprc) const;
@@ -464,11 +464,11 @@ void GetThumbRect(LPRECT lprc) const;
 ### <a name="parameters"></a>Parametri
 
 *lprc*<br/>
-Un puntatore a un `CRect` oggetto che contiene il rettangolo di delimitazione per il dispositivo di scorrimento quando la funzione restituisce.
+Puntatore a un `CRect` oggetto che contiene il rettangolo di delimitazione per il dispositivo di scorrimento quando la funzione restituisce.
 
 ##  <a name="gettic"></a>  CSliderCtrl::GetTic
 
-Recupera la posizione di un segno di spunta in un controllo dispositivo di scorrimento.
+Recupera la posizione di un segno di graduazione in un controllo dispositivo di scorrimento.
 
 ```
 int GetTic(int nTic) const;
@@ -477,15 +477,15 @@ int GetTic(int nTic) const;
 ### <a name="parameters"></a>Parametri
 
 *nTic*<br/>
-Indice in base zero che identifica un segno di spunta.
+Indice in base zero che identifica un segno di graduazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-La posizione di graduazione specificato oppure - 1 se *nTic* non specifica un indice valido.
+Posizione del segno di graduazione specificato oppure-1 se *NTIC* non specifica un indice valido.
 
 ##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray
 
-Recupera l'indirizzo della matrice che contiene le posizioni dei segni di graduazione per un controllo dispositivo di scorrimento.
+Recupera l'indirizzo della matrice contenente le posizioni dei segni di graduazione per un controllo dispositivo di scorrimento.
 
 ```
 DWORD* GetTicArray() const;
@@ -493,11 +493,11 @@ DWORD* GetTicArray() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-L'indirizzo della matrice che contiene le posizioni degli indicatori dei segni di graduazione per il controllo dispositivo di scorrimento.
+Indirizzo della matrice contenente le posizioni dei segni di graduazione per il controllo dispositivo di scorrimento.
 
 ##  <a name="getticpos"></a>  CSliderCtrl::GetTicPos
 
-Recupera la posizione fisica corrente di un segno di spunta in un controllo dispositivo di scorrimento.
+Recupera la posizione fisica corrente di un segno di graduazione in un controllo dispositivo di scorrimento.
 
 ```
 int GetTicPos(int nTic) const;
@@ -506,15 +506,15 @@ int GetTicPos(int nTic) const;
 ### <a name="parameters"></a>Parametri
 
 *nTic*<br/>
-Indice in base zero che identifica un segno di spunta.
+Indice in base zero che identifica un segno di graduazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-La posizione fisica, nelle coordinate client, di graduazione specificato oppure - 1 se *nTic* non specifica un indice valido.
+Posizione fisica, in coordinate client, del segno di graduazione specificato o-1 se *NTIC* non specifica un indice valido.
 
 ##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips
 
-Recupera l'handle per il controllo tooltip assegnato al controllo dispositivo di scorrimento, se presente.
+Recupera l'handle per il controllo ToolTip assegnato al controllo dispositivo di scorrimento, se disponibile.
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -522,13 +522,13 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) dell'oggetto, o NULL se le descrizioni comandi non sono in uso. Se il controllo dispositivo di scorrimento non utilizza lo stile TBS_TOOLTIPS, il valore restituito è NULL.
+Puntatore a un oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) o null se le descrizioni comandi non sono in uso. Se il controllo dispositivo di scorrimento non usa lo stile TBS_TOOLTIPS, il valore restituito è NULL.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips), come descritto nel SDK di Windows. Si noti che questa funzione membro restituisce un `CToolTipCtrl` oggetto anziché un handle a un controllo.
+Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_GETTOOLTIPS](/windows/win32/Controls/tbm-gettooltips), come descritto nel Windows SDK. Si noti che questa funzione membro restituisce `CToolTipCtrl` un oggetto invece di un handle a un controllo.
 
-Per una descrizione degli stili del controllo dispositivo di scorrimento, vedere [stili del controllo Trackbar](/windows/desktop/Controls/trackbar-control-styles) nel SDK di Windows.
+Per una descrizione degli stili del controllo Slider, vedere gli [stili dei controlli TrackBar](/windows/win32/Controls/trackbar-control-styles) nel Windows SDK.
 
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy
 
@@ -543,28 +543,28 @@ CWnd* SetBuddy(
 ### <a name="parameters"></a>Parametri
 
 *pWndBuddy*<br/>
-Un puntatore a un `CWnd` oggetto che verrà impostato come contatto del controllo dispositivo di scorrimento.
+Puntatore a un `CWnd` oggetto che verrà impostato come Buddy del controllo dispositivo di scorrimento.
 
 *fLocation*<br/>
-Valore che specifica la posizione in cui si desidera visualizzare la finestra buddy. Questo valore può essere uno dei seguenti:
+Valore che specifica la posizione in cui visualizzare la finestra di Buddy. Il valore può essere uno dei seguenti:
 
-- TRUE il contatto verrà visualizzato a sinistra del controllo trackbar se il controllo trackbar utilizza lo stile di stili TBS_HORZ. Se l'indicatore di avanzamento viene utilizzato lo stile TBS_VERT, il contatto viene visualizzato sopra il controllo trackbar.
+- TRUE l'oggetto Buddy verrà visualizzato a sinistra del controllo TrackBar se il controllo TrackBar usa lo stile TBS_HORZ. Se TrackBar usa lo stile TBS_VERT, l'oggetto Buddy viene visualizzato sopra il controllo TrackBar.
 
-- FALSE il contatto verrà visualizzato a destra del controllo trackbar se il controllo trackbar utilizza lo stile di stili TBS_HORZ. Se l'indicatore di avanzamento viene utilizzato lo stile TBS_VERT, il contatto viene visualizzato sotto il controllo trackbar.
+- FALSE l'oggetto Buddy verrà visualizzato a destra di TrackBar se il controllo TrackBar usa lo stile TBS_HORZ. Se TrackBar usa lo stile TBS_VERT, l'oggetto Buddy viene visualizzato sotto il controllo TrackBar.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto assegnato al controllo dispositivo di scorrimento nel percorso specificato in precedenza.
+Puntatore a un oggetto [CWnd](../../mfc/reference/cwnd-class.md) assegnato in precedenza al controllo Slider in tale posizione.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy), come descritto nel SDK di Windows. Si noti che questa funzione membro Usa puntatori a `CWnd` oggetti anziché gli handle di finestra per il valore restituito e parametro.
+Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_SETBUDDY](/windows/win32/Controls/tbm-setbuddy), come descritto nel Windows SDK. Si noti che questa funzione membro utilizza i puntatori agli `CWnd` oggetti, anziché gli handle di finestra sia per il valore restituito che per il parametro.
 
-Per una descrizione degli stili del controllo dispositivo di scorrimento, vedere [stili del controllo Trackbar](/windows/desktop/Controls/trackbar-control-styles) nel SDK di Windows.
+Per una descrizione degli stili del controllo Slider, vedere gli [stili dei controlli TrackBar](/windows/win32/Controls/trackbar-control-styles) nel Windows SDK.
 
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize
 
-Imposta le dimensioni della linea per un controllo dispositivo di scorrimento.
+Imposta la dimensione della linea per un controllo dispositivo di scorrimento.
 
 ```
 int SetLineSize(int nSize);
@@ -573,19 +573,19 @@ int SetLineSize(int nSize);
 ### <a name="parameters"></a>Parametri
 
 *nSize*<br/>
-La nuova dimensione di riga del controllo dispositivo di scorrimento.
+Nuova dimensione della riga del controllo dispositivo di scorrimento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Le dimensioni di riga precedente.
+Dimensioni della riga precedente.
 
 ### <a name="remarks"></a>Note
 
-Le dimensioni di riga influisce su quanto il dispositivo di scorrimento viene spostato per ricevere le notifiche TB_LINEUP e TB_LINEDOWN.
+Le dimensioni della riga influiscono sul modo in cui viene spostato il dispositivo di scorrimento per le notifiche TB_LINEUP e TB_LINEDOWN.
 
 ##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize
 
-Imposta le dimensioni della pagina per un controllo dispositivo di scorrimento.
+Imposta la dimensione della pagina per un controllo dispositivo di scorrimento.
 
 ```
 int SetPageSize(int nSize);
@@ -594,15 +594,15 @@ int SetPageSize(int nSize);
 ### <a name="parameters"></a>Parametri
 
 *nSize*<br/>
-Le nuove dimensioni di pagina del controllo dispositivo di scorrimento.
+Nuova dimensione della pagina del controllo dispositivo di scorrimento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Le dimensioni della pagina precedente.
+Dimensioni di pagina precedenti.
 
 ### <a name="remarks"></a>Note
 
-Le dimensioni della pagina influisce sulla quantità il dispositivo di scorrimento viene spostato per ricevere le notifiche TB_PAGEUP e TB_PAGEDOWN.
+Le dimensioni della pagina influiscono sul modo in cui viene spostato il dispositivo di scorrimento per le notifiche TB_PAGEUP e TB_PAGEDOWN.
 
 ##  <a name="setpos"></a>  CSliderCtrl::SetPos
 
@@ -615,11 +615,11 @@ void SetPos(int nPos);
 ### <a name="parameters"></a>Parametri
 
 *nPos*<br/>
-Specifica la nuova posizione di scorrimento.
+Specifica la nuova posizione del dispositivo di scorrimento.
 
 ##  <a name="setrange"></a>  CSliderCtrl::SetRange
 
-Imposta l'intervallo (posizioni minima e massima) per il dispositivo di scorrimento in un controllo dispositivo di scorrimento.
+Imposta l'intervallo (posizioni minime e massime) per il dispositivo di scorrimento in un controllo dispositivo di scorrimento.
 
 ```
 void SetRange(
@@ -631,13 +631,13 @@ void SetRange(
 ### <a name="parameters"></a>Parametri
 
 *nMin*<br/>
-Posizione minima per il dispositivo di scorrimento.
+Posizione minima del dispositivo di scorrimento.
 
 *nMax*<br/>
-Posizione massima per il dispositivo di scorrimento.
+Posizione massima del dispositivo di scorrimento.
 
 *bRedraw*<br/>
-Il flag di aggiornamento dello schermo. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo l'impostazione dell'intervallo; in caso contrario, il dispositivo di scorrimento non viene ridisegnata.
+Flag di ritraccia. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo l'impostazione dell'intervallo; in caso contrario, il dispositivo di scorrimento non viene ridisegnato.
 
 ##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax
 
@@ -652,10 +652,10 @@ void SetRangeMax(
 ### <a name="parameters"></a>Parametri
 
 *nMax*<br/>
-Posizione massima per il dispositivo di scorrimento.
+Posizione massima del dispositivo di scorrimento.
 
 *bRedraw*<br/>
-Il flag di aggiornamento dello schermo. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo l'impostazione dell'intervallo; in caso contrario, il dispositivo di scorrimento non viene ridisegnata.
+Flag di ritraccia. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo l'impostazione dell'intervallo; in caso contrario, il dispositivo di scorrimento non viene ridisegnato.
 
 ##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin
 
@@ -670,10 +670,10 @@ void SetRangeMin(
 ### <a name="parameters"></a>Parametri
 
 *nMin*<br/>
-Posizione minima per il dispositivo di scorrimento.
+Posizione minima del dispositivo di scorrimento.
 
 *bRedraw*<br/>
-Il flag di aggiornamento dello schermo. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo l'impostazione dell'intervallo; in caso contrario, il dispositivo di scorrimento non viene ridisegnata.
+Flag di ritraccia. Se questo parametro è TRUE, il dispositivo di scorrimento viene ridisegnato dopo l'impostazione dell'intervallo; in caso contrario, il dispositivo di scorrimento non viene ridisegnato.
 
 ##  <a name="setselection"></a>  CSliderCtrl::SetSelection
 
@@ -688,14 +688,14 @@ void SetSelection(
 ### <a name="parameters"></a>Parametri
 
 *nMin*<br/>
-Posizione iniziale per il dispositivo di scorrimento.
+Posizione iniziale del dispositivo di scorrimento.
 
 *nMax*<br/>
 Posizione finale per il dispositivo di scorrimento.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
 
-Imposta la lunghezza del dispositivo di scorrimento nel controllo indicatore di avanzamento corrente.
+Imposta la lunghezza del dispositivo di scorrimento nel controllo TrackBar corrente.
 
 ```
 void SetThumbLength(int nLength);
@@ -703,31 +703,31 @@ void SetThumbLength(int nLength);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
-|*nLength*|[in] Lunghezza del dispositivo di scorrimento, in pixel.|
+|*nLength*|in Lunghezza del dispositivo di scorrimento, in pixel.|
 
 ### <a name="remarks"></a>Note
 
-Questo metodo richiede che il controllo trackbar sia impostata su [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) stile.
+Questo metodo richiede che il controllo TrackBar sia impostato sullo stile [TBS_FIXEDLENGTH](/windows/win32/Controls/trackbar-control-styles) .
 
-Questo metodo invia il [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength) messaggio, che è descritti nel SDK di Windows.
+Questo metodo invia il messaggio [TBM_SETTHUMBLENGTH](/windows/win32/Controls/tbm-setthumblength) , descritto nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente definisce la variabile `m_sliderCtrl`, che viene usato per accedere al controllo indicatore di avanzamento corrente. L'esempio definisce anche una variabile, `thumbLength`, che viene usato per archiviare la lunghezza predefinita del componente casella di scorrimento del controllo indicatore di avanzamento. Queste variabili vengono usate nell'esempio seguente.
+Nell'esempio di codice seguente viene definita la `m_sliderCtrl`variabile,, utilizzata per accedere al controllo TrackBar corrente. Nell'esempio viene inoltre definita una variabile `thumbLength`,, utilizzata per archiviare la lunghezza predefinita del componente Thumb del controllo TrackBar. Queste variabili vengono usate nell'esempio successivo.
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente imposta il componente di cursore del controllo indicatore di avanzamento a due volte la lunghezza predefinita.
+Nell'esempio di codice seguente il componente Thumb del controllo TrackBar viene impostato su due volte la lunghezza predefinita.
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]
 
 ##  <a name="settic"></a>  CSliderCtrl::SetTic
 
-Imposta la posizione di un segno di spunta in un controllo dispositivo di scorrimento.
+Imposta la posizione di un segno di graduazione in un controllo dispositivo di scorrimento.
 
 ```
 BOOL SetTic(int nTic);
@@ -736,15 +736,15 @@ BOOL SetTic(int nTic);
 ### <a name="parameters"></a>Parametri
 
 *nTic*<br/>
-Posizione del segno di graduazione. Questo parametro è necessario specificare un valore positivo.
+Posizione del segno di graduazione. Questo parametro deve specificare un valore positivo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se è impostato il segno di spunta; in caso contrario 0.
+Diverso da zero se il segno di graduazione è impostato; in caso contrario, 0.
 
 ##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq
 
-Imposta la frequenza con cui segni di graduazione vengono visualizzati contrassegni in un dispositivo di scorrimento.
+Imposta la frequenza con cui vengono visualizzati i segni di graduazione in un dispositivo di scorrimento.
 
 ```
 void SetTicFreq(int nFreq);
@@ -757,13 +757,13 @@ Frequenza dei segni di graduazione.
 
 ### <a name="remarks"></a>Note
 
-Ad esempio, se la frequenza è impostata su 2, viene visualizzato un segno di spunta per ogni altro incremento nell'intervallo del dispositivo di scorrimento. L'impostazione predefinita per la frequenza è 1 (vale a dire, ogni incremento nell'intervallo è associato a un segno di spunta).
+Se, ad esempio, la frequenza è impostata su 2, viene visualizzato un segno di graduazione per ogni altro incremento nell'intervallo del dispositivo di scorrimento. L'impostazione predefinita per la frequenza è 1 (ovvero ogni incremento dell'intervallo è associato a un segno di graduazione).
 
-È necessario creare il controllo con lo stile TBS_AUTOTICKS per utilizzare questa funzione. Per altre informazioni, vedere [CSliderCtrl::Create](#create).
+Per usare questa funzione, è necessario creare il controllo con lo stile TBS_AUTOTICKS. Per ulteriori informazioni, vedere [CSliderCtrl:: create](#create).
 
 ##  <a name="settipside"></a>  CSliderCtrl::SetTipSide
 
-Posizioni di un controllo descrizione comando utilizzata da un controllo indicatore di avanzamento.
+Posiziona un controllo ToolTip utilizzato da un controllo TrackBar.
 
 ```
 int SetTipSide(int nLocation);
@@ -772,19 +772,19 @@ int SetTipSide(int nLocation);
 ### <a name="parameters"></a>Parametri
 
 *nLocation*<br/>
-Valore che rappresenta la posizione in cui visualizzare il controllo tooltip. Per un elenco di valori possibili, vedere il messaggio Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), come descritto nel SDK di Windows.
+Valore che rappresenta la posizione in cui visualizzare il controllo ToolTip. Per un elenco di valori possibili, vedere il messaggio Win32 [TBM_SETTIPSIDE](/windows/win32/Controls/tbm-settipside), come descritto nel Windows SDK.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore che rappresenta la posizione precedente del controllo tooltip. Il valore restituito è uguale a uno dei valori possibili per *Nposizione*.
+Valore che rappresenta la posizione precedente del controllo ToolTip. Il valore restituito è uguale a uno dei valori possibili per *nPosizione*.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro implementa il comportamento del messaggio Win32 TBM_SETTIPSIDE, come descritto nel SDK di Windows. I controlli dispositivo di scorrimento che usano lo stile TBS_TOOLTIPS visualizzano descrizioni comandi. Per una descrizione degli stili del controllo dispositivo di scorrimento, vedere [stili del controllo Trackbar](/windows/desktop/Controls/trackbar-control-styles) nel SDK di Windows.
+Questa funzione membro implementa il comportamento del messaggio Win32 TBM_SETTIPSIDE, come descritto nel Windows SDK. Dispositivi di scorrimento che usano le descrizioni comandi di visualizzazione dello stile TBS_TOOLTIPS. Per una descrizione degli stili del controllo Slider, vedere gli [stili dei controlli TrackBar](/windows/win32/Controls/trackbar-control-styles) nel Windows SDK.
 
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips
 
-Assegna un controllo descrizione comandi a un controllo dispositivo di scorrimento.
+Assegna un controllo ToolTip a un controllo dispositivo di scorrimento.
 
 ```
 void SetToolTips(CToolTipCtrl* pWndTip);
@@ -793,15 +793,15 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="parameters"></a>Parametri
 
 *pWndTip*<br/>
-Un puntatore a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) oggetto che contiene le descrizioni comandi da usare con il controllo dispositivo di scorrimento.
+Puntatore a un oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) contenente le descrizioni comandi da usare con il controllo dispositivo di scorrimento.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), come descritto nel SDK di Windows. Quando un dispositivo di scorrimento viene creato con lo stile TBS_TOOLTIPS, viene creato un controllo di descrizione comando predefinita visualizzata accanto al dispositivo di scorrimento, la visualizzazione di posizione corrente del dispositivo di scorrimento. Per una descrizione degli stili del controllo dispositivo di scorrimento, vedere [stili del controllo Trackbar](/windows/desktop/Controls/trackbar-control-styles) nel SDK di Windows.
+Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_SETTOOLTIPS](/windows/win32/Controls/tbm-settooltips), come descritto nel Windows SDK. Quando viene creato un controllo dispositivo di scorrimento con lo stile TBS_TOOLTIPS, viene creato un controllo ToolTip predefinito visualizzato accanto al dispositivo di scorrimento, che visualizza la posizione corrente del dispositivo di scorrimento. Per una descrizione degli stili del controllo Slider, vedere gli [stili dei controlli TrackBar](/windows/win32/Controls/trackbar-control-styles) nel Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 
-[CMNCTRL2 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CProgressCtrl](../../mfc/reference/cprogressctrl-class.md)

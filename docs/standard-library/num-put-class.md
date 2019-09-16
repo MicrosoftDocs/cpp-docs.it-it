@@ -21,7 +21,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457692"
 ---
-# <a name="numput-class"></a>Classe num_put
+# <a name="num_put-class"></a>Classe num_put
 
 Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni dei valori numerici in sequenze di tipo `CharType`.
 
@@ -60,7 +60,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[do_put](#do_put)|Funzione virtuale chiamata per convertire un numero in una sequenza di `CharType` che rappresenta il numero formattato per le impostazioni locali specificate.|
 |[put](#put)|Converte un numero in una sequenza di `CharType` che rappresenta il numero formattato per le impostazioni locali specificate.|
@@ -161,7 +161,7 @@ La prima funzione membro virtuale protetta genera elementi sequenziali a partire
 
 Il campo di output di tipo Integer viene generato dalle stesse regole utilizzate dalle funzioni di stampa per la generazione di una serie di elementi **char** in un file. Si presuppone che ogni elemento char venga mappato a un elemento equivalente di `CharType` tipo mediante un semplice mapping uno-a-uno. Tuttavia, `do_put` quando una funzione di stampa riempie un campo con uno o più spazi o con la `fill`cifra 0, USA invece. La specifica di conversione di stampa equivalente viene determinata nel modo seguente:
 
-- Se **iosbase**. [Flags](../standard-library/ios-base-class.md#flags) & Oct,`ios_base::basefield`la specifica[](../standard-library/ios-functions.md#oct)di conversione è .`lo` == `ios_base::`
+- Se **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), la specifica di conversione è `lo`.
 
 - Se **iosbase. Flags** & **ios_base:: basefield** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la specifica di `lx`conversione è.
 
@@ -171,7 +171,7 @@ Se **iosbase**. [width](../standard-library/ios-base-class.md#width) è diverso 
 
 Il riempimento si verifica solo se il numero minimo di elementi *N* necessario per specificare il campo di output è minore di **iosbase**. [width](../standard-library/ios-base-class.md#width). Tale riempimento è costituito da una sequenza di *N* - copie di**larghezza** del **riempimento**. Il riempimento si verifica quindi nel modo seguente:
 
-- Se **iosbase**. **Flags** & `ios_base::adjustfield`Left,[](../standard-library/ios-functions.md#left)il **flag-** viene anteposto. == `ios_base::` Il riempimento si verifica dopo il testo generato.
+- Se **iosbase**. **flags** & `ios_base::adjustfield` == `ios_base::`[left](../standard-library/ios-functions.md#left), il flag **-** viene anteposto. Il riempimento si verifica dopo il testo generato.
 
 - Se **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), viene anteposto il flag **0**. Per un campo di output numerico, il riempimento si verifica quando le funzioni di stampa riempiono il campo con la cifra 0.
 
@@ -215,7 +215,7 @@ si comporta come la prima, ad eccezione del fatto che genera un campo di output 
 
 - Se **iosbase**. **flag** & [corretti](../standard-library/ios-functions.md#fixed), la specifica di conversione è`lf`.`ios_base::floatfield` == `ios_base::`
 
-- Se **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), la specifica di conversione è `le`. Se **iosbase**. **Flags** & [](../standard-library/ios-functions.md#uppercase) `e` `E`maiuscole è diverso da zero, viene sostituito con.`ios_base::`
+- Se **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), la specifica di conversione è `le`. Se **iosbase**. **flags** & `ios_base::`[maiuscole](../standard-library/ios-functions.md#uppercase) è diverso da zero, `e` viene sostituito con `E`.
 
 - In caso contrario, la specifica di conversione è **lg**. Se **iosbase**. **Flags** & **ios_base:: maiuscole** è diverso da `g` zero, viene `G`sostituito con.
 

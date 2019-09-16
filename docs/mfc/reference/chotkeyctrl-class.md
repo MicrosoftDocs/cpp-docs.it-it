@@ -1,5 +1,5 @@
 ---
-title: CHotKeyCtrl (classe)
+title: Classe CHotKeyCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CHotKeyCtrl
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 66edc7d4a1b4c78480da7d11cf30f7feeecefe2c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9818c32a7779d646ca5a9485a1331dfa393408ba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339554"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506154"
 ---
-# <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
+# <a name="chotkeyctrl-class"></a>Classe CHotKeyCtrl
 
 Fornisce la funzionalità del controllo tasto di scelta comune di Windows.
 
@@ -39,7 +39,7 @@ Fornisce la funzionalità del controllo tasto di scelta comune di Windows.
 class CHotKeyCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -49,27 +49,27 @@ class CHotKeyCtrl : public CWnd
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[CHotKeyCtrl::Create](#create)|Crea un controllo tasto di scelta e la collega a un `CHotKeyCtrl` oggetto.|
-|[CHotKeyCtrl::CreateEx](#createex)|Crea un controllo tasto di scelta con gli stili estesi di Windows specificati e lo collega a un `CHotKeyCtrl` oggetto.|
-|[CHotKeyCtrl::GetHotKey](#gethotkey)|Recupera i flag di codice e il modificatore chiave virtuali di un tasto di scelta rapida da un controllo tasto di scelta.|
-|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Recupera il nome della chiave, nel set di caratteri locali, assegnato a un tasto di scelta rapida.|
-|[CHotKeyCtrl::GetKeyName](#getkeyname)|Recupera il nome della chiave, nel set di caratteri locali, assegnato per il codice tasto virtuale specificato.|
-|[CHotKeyCtrl::SetHotKey](#sethotkey)|Imposta la combinazione di tasti per un controllo tasto di scelta.|
-|[CHotKeyCtrl::SetRules](#setrules)|Definisce le combinazioni non è valide e la combinazione di modificatore predefinito per un controllo tasto di scelta.|
+|[CHotKeyCtrl::Create](#create)|Crea un controllo tasto di scelta e lo collega a un `CHotKeyCtrl` oggetto.|
+|[CHotKeyCtrl::CreateEx](#createex)|Crea un controllo tasto di scelta con gli stili estesi di Windows specificati e lo collega `CHotKeyCtrl` a un oggetto.|
+|[CHotKeyCtrl::GetHotKey](#gethotkey)|Recupera il codice della chiave virtuale e i flag di modifica di un tasto di scelta da un controllo tasto di scelta.|
+|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Recupera il nome della chiave, nel set di caratteri locale, assegnato a un tasto di scelta.|
+|[CHotKeyCtrl::GetKeyName](#getkeyname)|Recupera il nome della chiave, nel set di caratteri locale, assegnato al codice della chiave virtuale specificato.|
+|[CHotKeyCtrl::SetHotKey](#sethotkey)|Imposta la combinazione di tasti di scelta rapida per un controllo tasto di scelta.|
+|[CHotKeyCtrl::SetRules](#setrules)|Definisce le combinazioni non valide e la combinazione di modificatore predefinita per un controllo tasto di scelta.|
 
 ## <a name="remarks"></a>Note
 
-Un "controllo tasto di scelta" è una finestra che consente all'utente creare un tasto di scelta rapida. Un "tasto di scelta rapida" è una combinazione di tasti da preme per eseguire velocemente un'azione utente. (Ad esempio, un utente può creare un tasto di scelta rapida che attiva una finestra specificata e viene visualizzato nella parte superiore dello Z order). Il controllo tasto di scelta sono visualizzate le scelte dell'utente e garantisce che l'utente seleziona una combinazione di tasti valida.
+Un "controllo tasto di scelta" è una finestra che consente all'utente di creare un tasto di scelta. Un "tasto di scelta rapida" è una combinazione di tasti che l'utente può premere per eseguire rapidamente un'azione. Ad esempio, un utente può creare un tasto di scelta che attiva una determinata finestra e la porta nella parte superiore del z order.) Il controllo tasto di scelta consente di visualizzare le scelte dell'utente e garantisce che l'utente selezioni una combinazione di tasti valida.
 
-Questo controllo (e pertanto il `CHotKeyCtrl` classe) è disponibile solo per i programmi in esecuzione in Windows 95 o 98 e Windows NT versione 3.51 e successive.
+Questo controllo (e pertanto la `CHotKeyCtrl` classe) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3,51 e successive.
 
-Quando l'utente ha scelto una combinazione di tasti, l'applicazione può recuperare la combinazione di chiave specificata dal controllo e utilizzare il messaggio di messaggio WM_SETHOTKEY per configurare il tasto di scelta rapida nel sistema. Ogni volta che l'utente preme il tasto di scelta rapida in seguito, da qualsiasi parte del sistema, la finestra specificata nel messaggio di messaggio WM_SETHOTKEY riceve un messaggio WM_SYSCOMMAND specificando SC_HOTKEY. Questo messaggio è attiva la finestra che lo riceve. Il tasto di scelta rapida rimane valido finché l'applicazione che ha chiamato WM_SETHOTKEY non viene chiusa.
+Quando l'utente ha scelto una combinazione di tasti, l'applicazione può recuperare la combinazione di tasti specificata dal controllo e usare il messaggio WM_SETHOTKEY per configurare il tasto di scelta rapida nel sistema. Ogni volta che l'utente preme il tasto di scelta in seguito, da qualsiasi parte del sistema, la finestra specificata nel messaggio WM_SETHOTKEY riceve un messaggio WM_SYSCOMMAND che specifica SC_HOTKEY. Questo messaggio attiva la finestra che la riceve. Il tasto di scelta rimane valido fino alla chiusura dell'applicazione che ha chiamato WM_SETHOTKEY.
 
-Questo meccanismo è diverso dal supporto delle chiavi attivo che varia a seconda di Windows e il messaggio WM_HOTKEY [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) e [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funzioni.
+Questo meccanismo è diverso dal supporto per i tasti di scelta rapida che dipende dal messaggio WM_HOTKEY e dalle funzioni Windows [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey) e [UnregisterHotKey](/windows/win32/api/winuser/nf-winuser-unregisterhotkey) .
 
-Per altre informazioni sull'uso `CHotKeyCtrl`, vedere [controlli](../../mfc/controls-mfc.md) e [usando CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
+Per altre informazioni sull'uso `CHotKeyCtrl`di, vedere [controlli](../../mfc/controls-mfc.md) e [uso di CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -93,9 +93,9 @@ Costruisce un oggetto `CHotKeyCtrl`.
 CHotKeyCtrl();
 ```
 
-##  <a name="create"></a>  CHotKeyCtrl::Create
+##  <a name="create"></a>CHotKeyCtrl:: create
 
-Crea un controllo tasto di scelta e la collega a un `CHotKeyCtrl` oggetto.
+Crea un controllo tasto di scelta e lo collega a un `CHotKeyCtrl` oggetto.
 
 ```
 virtual BOOL Create(
@@ -108,30 +108,30 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametri
 
 *dwStyle*<br/>
-Specifica lo stile di controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Visualizzare [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel SDK di Windows per altre informazioni.
+Specifica lo stile del controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Per ulteriori informazioni, vedere [stili di controllo comuni](/windows/win32/Controls/common-control-styles) nell'Windows SDK.
 
 *rect*<br/>
-Specifica del controllo tasto di scelta dimensione e la posizione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [struttura RECT](/windows/desktop/api/windef/ns-windef-tagrect).
+Specifica la posizione e le dimensioni del controllo tasto di scelta. Può essere un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una [struttura Rect](/windows/win32/api/windef/ns-windef-rect).
 
 *pParentWnd*<br/>
-Specifica padre di finestra del controllo tasto di scelta, in genere un [CDialog](../../mfc/reference/cdialog-class.md). Non deve essere NULL.
+Specifica la finestra padre del controllo tasto di scelta, di solito [CDialog](../../mfc/reference/cdialog-class.md). Non deve essere NULL.
 
 *nID*<br/>
-Specifica ID. del controllo tasto di scelta
+Specifica l'ID del controllo tasto di scelta.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero, se l'inizializzazione ha avuto esito positivo; in caso contrario 0.
+Diverso da zero, se l'inizializzazione ha avuto esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Si costruisce un `CHotKeyCtrl` oggetto in due passaggi. In primo luogo, chiamare il costruttore e quindi chiamare `Create`, che crea il controllo tasto di scelta e la collega al `CHotKeyCtrl` oggetto.
+Si costruisce `CHotKeyCtrl` un oggetto in due passaggi. In primo luogo, chiamare il costruttore e `Create`quindi chiamare, che crea il controllo tasto di scelta e lo collega all' oggetto.`CHotKeyCtrl`
 
-Se si desidera utilizzare gli stili estesi di windows con il controllo, chiamare [CreateEx](#createex) invece di `Create`.
+Se si desidera utilizzare gli stili estesi di Windows con il controllo, chiamare [CreateEx](#createex) anziché `Create`.
 
-##  <a name="createex"></a>  CHotKeyCtrl::CreateEx
+##  <a name="createex"></a>CHotKeyCtrl:: CreateEx
 
-Chiamare questa funzione per creare un controllo (una finestra figlio) e associarlo con il `CHotKeyCtrl` oggetto.
+Chiamare questa funzione per creare un controllo, ovvero una finestra figlio, e associarlo `CHotKeyCtrl` all'oggetto.
 
 ```
 virtual BOOL CreateEx(
@@ -145,19 +145,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametri
 
 *dwExStyle*<br/>
-Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.
+Specifica lo stile esteso del controllo da creare. Per un elenco degli stili Windows estesi, vedere il parametro *dwExStyle* per [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) nel Windows SDK.
 
 *dwStyle*<br/>
-Specifica lo stile di controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Per altre informazioni, vedere [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel SDK di Windows.
+Specifica lo stile del controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Per ulteriori informazioni, vedere [stili di controllo comuni](/windows/win32/Controls/common-control-styles) nell'Windows SDK.
 
 *rect*<br/>
-Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Riferimento a una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd*<br/>
-Puntatore alla finestra padre del controllo.
+Puntatore alla finestra che rappresenta l'elemento padre del controllo.
 
 *nID*<br/>
-ID di finestra figlio. del controllo
+ID della finestra figlio del controllo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -165,11 +165,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Uso `CreateEx` invece di [Create](#create) per applicare stili estesi di Windows, specificati dal prefisso di stile esteso di Windows **WS_EX _**.
+Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificato dalla prefazione **WS_EX_** di Windows Extended Style.
 
-##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey
+##  <a name="gethotkey"></a>CHotKeyCtrl:: GetHotKey
 
-Recupera i flag di codice e il modificatore chiave virtuali dei tasti di scelta rapida da un controllo tasto di scelta.
+Recupera il codice della chiave virtuale e i flag di modifica di un tasto di scelta rapida da un controllo tasto di scelta.
 
 ```
 DWORD GetHotKey() const;
@@ -182,10 +182,10 @@ void GetHotKey(
 ### <a name="parameters"></a>Parametri
 
 *wVirtualKeyCode*<br/>
-[out] Codice tasto virtuale di tasti di scelta rapida. Per un elenco di codici di tasti virtuali standard, vedere winuser. h.
+out Codice chiave virtuale del tasto di scelta rapida. Per un elenco di codici chiave virtuali standard, vedere Winuser. h.
 
 *wModifiers*<br/>
-[out] Una combinazione bit per bit (OR) di flag che indicano i tasti di modifica nel tasto di scelta rapida.
+out Combinazione bit per bit (o) di flag che indicano i tasti di modifica nel tasto di scelta rapida.
 
 I flag di modifica sono i seguenti:
 
@@ -193,18 +193,18 @@ I flag di modifica sono i seguenti:
 |----------|-----------------------|
 |HOTKEYF_ALT|ALT (tasto)|
 |HOTKEYF_CONTROL|Tasto CTRL|
-|HOTKEYF_EXT|Chiave estesi|
+|HOTKEYF_EXT|Chiave estesa|
 |HOTKEYF_SHIFT|Tasto MAIUSC|
 
 ### <a name="return-value"></a>Valore restituito
 
-Nel primo metodo di overload per un valore DWORD che contiene i flag codice e il modificatore chiave virtuali. Il byte meno significativi della parola meno significativa contiene il codice tasto virtuale, il byte più significativo della parola meno significativa contiene i flag di modifica e la parola più significativa è uguale a zero.
+Nel primo metodo di overload, valore DWORD che contiene il codice della chiave virtuale e i flag di modifica. Il byte di ordine inferiore della parola di basso livello contiene il codice della chiave virtuale, il byte più significativo della parola di basso livello contiene i flag di modifica e la parola più ordinata è zero.
 
 ### <a name="remarks"></a>Note
 
-Il codice tasto virtuale e i tasti di modifica insieme definiscono i tasti di scelta rapida.
+Il codice della chiave virtuale e i tasti di modifica insieme definiscono il tasto di scelta rapida.
 
-##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName
+##  <a name="gethotkeyname"></a>CHotKeyCtrl:: GetHotKeyName
 
 Chiamare questa funzione membro per ottenere il nome localizzato del tasto di scelta.
 
@@ -214,15 +214,15 @@ CString GetHotKeyName() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il nome localizzato del tasto di scelta attualmente selezionato. Se non vi è alcun tasto di scelta rapida selezionato, `GetHotKeyName` restituisce una stringa vuota.
+Nome localizzato del tasto di scelta corrente selezionato. Se non è presente alcun tasto di scelta `GetHotKeyName` , viene restituita una stringa vuota.
 
 ### <a name="remarks"></a>Note
 
-Il nome che questa funzione membro restituisce deriva dal driver di tastiera. È possibile installare un driver non localizzato della tastiera in una versione localizzata di Windows e viceversa.
+Il nome restituito da questa funzione membro deriva dal driver della tastiera. È possibile installare un driver della tastiera non localizzato in una versione localizzata di Windows e viceversa.
 
-##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName
+##  <a name="getkeyname"></a>CHotKeyCtrl:: GetKeyName
 
-Chiamare questa funzione membro per ottenere il nome localizzato della chiave di cui è assegnato a un codice tasto virtuale specificato.
+Chiamare questa funzione membro per ottenere il nome localizzato della chiave assegnata a un codice di chiave virtuale specificato.
 
 ```
 static CString GetKeyName(
@@ -233,26 +233,26 @@ static CString GetKeyName(
 ### <a name="parameters"></a>Parametri
 
 *vk*<br/>
-Il codice tasto virtuale.
+Codice della chiave virtuale.
 
 *fExtended*<br/>
-Se il codice tasto virtuale è una chiave estesa, TRUE. in caso contrario, FALSE.
+Se il codice della chiave virtuale è una chiave estesa, TRUE. in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il nome localizzato della chiave specificata per il *vk* parametro. Se la chiave non ha alcun nome mappato, `GetKeyName` restituisce una stringa vuota.
+Nome localizzato della chiave specificata dal parametro *VK* . Se il nome della chiave non è mappato, `GetKeyName` viene restituita una stringa vuota.
 
 ### <a name="remarks"></a>Note
 
-Il nome della chiave restituita da questa funzione viene fornito dal driver di tastiera, pertanto è possibile installare un driver non localizzato della tastiera in una versione localizzata di Windows e viceversa.
+Il nome della chiave restituito dalla funzione deriva dal driver della tastiera, quindi è possibile installare un driver della tastiera non localizzato in una versione localizzata di Windows e viceversa.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]
 
-##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey
+##  <a name="sethotkey"></a>CHotKeyCtrl:: sehotkey
 
-Imposta il tasto di scelta rapida per un controllo tasto di scelta.
+Imposta la scelta rapida da tastiera per un controllo tasto di scelta.
 
 ```
 void SetHotKey(
@@ -263,10 +263,10 @@ void SetHotKey(
 ### <a name="parameters"></a>Parametri
 
 *wVirtualKeyCode*<br/>
-[in] Codice tasto virtuale di tasti di scelta rapida. Per un elenco di codici di tasti virtuali standard, vedere winuser. h.
+in Codice chiave virtuale del tasto di scelta rapida. Per un elenco di codici chiave virtuali standard, vedere Winuser. h.
 
 *wModifiers*<br/>
-[in] Una combinazione bit per bit (OR) di flag che indicano i tasti di modifica nel tasto di scelta rapida.
+in Combinazione bit per bit (o) di flag che indicano i tasti di modifica nel tasto di scelta rapida.
 
 I flag di modifica sono i seguenti:
 
@@ -274,16 +274,16 @@ I flag di modifica sono i seguenti:
 |----------|-----------------------|
 |HOTKEYF_ALT|ALT (tasto)|
 |HOTKEYF_CONTROL|Tasto CTRL|
-|HOTKEYF_EXT|Chiave estesi|
+|HOTKEYF_EXT|Chiave estesa|
 |HOTKEYF_SHIFT|Tasto MAIUSC|
 
 ### <a name="remarks"></a>Note
 
-Il codice tasto virtuale e i tasti di modifica insieme definiscono i tasti di scelta rapida.
+Il codice della chiave virtuale e i tasti di modifica insieme definiscono il tasto di scelta rapida.
 
-##  <a name="setrules"></a>  CHotKeyCtrl::SetRules
+##  <a name="setrules"></a>CHotKeyCtrl:: serules
 
-Chiamare questa funzione per definire le combinazioni non è valide e la combinazione di modificatore predefinito per un controllo tasto di scelta.
+Chiamare questa funzione per definire le combinazioni non valide e la combinazione di modificatore predefinita per un controllo tasto di scelta.
 
 ```
 void SetRules(
@@ -300,24 +300,24 @@ Matrice di flag che specifica le combinazioni di tasti non valide. Può essere u
 
 - HKCOMB_C CTRL
 
-- HKCOMB_CA CTRL+ALT
+- HKCOMB_CA CTRL + ALT
 
-- Chiavi HKCOMB_NONE non modificato
+- HKCOMB_NONE chiavi non modificate
 
-- MAIUSC HKCOMB_S
+- HKCOMB_S SHIFT
 
-- MAIUSC + ALT HKCOMB_SA
+- HKCOMB_SA MAIUSC + ALT
 
-- MAIUSC + CTRL HKCOMB_SC
+- HKCOMB_SC MAIUSC + CTRL
 
 - HKCOMB_SCA MAIUSC + CTRL + ALT
 
 *wModifiers*<br/>
-Matrice di flag che specifica la combinazione di tasti da utilizzare quando l'utente immette una combinazione non valida. Per altre informazioni sui flag di modifica, vedere [GetHotKey](#gethotkey).
+Matrice di flag che specifica la combinazione di tasti da utilizzare quando l'utente immette una combinazione non valida. Per ulteriori informazioni sui flag di modifica, vedere [GetHotKey](#gethotkey).
 
 ### <a name="remarks"></a>Note
 
-Quando un utente immette una combinazione di tasti non valida, come definito dai flag specificato nel *wInvalidComb*, il sistema utilizza l'operatore OR per combinare le chiavi immesse dall'utente con i flag specificati nella *wModifiers*. La combinazione di tasti risulta viene convertita in una stringa e quindi visualizzata nel controllo tasto di scelta.
+Quando un utente immette una combinazione di chiavi non valida, come definito dai flag specificati in *wInvalidComb*, il sistema usa l'operatore OR per combinare le chiavi immesse dall'utente con i flag specificati in *wModifiers*. La combinazione di tasti risultante viene convertita in una stringa e quindi visualizzata nel controllo tasto di scelta.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -110,7 +110,7 @@ esegue la `char32_t` conversione tra le sequenze codificate come UTF-32 (UCS-4) 
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|Nome del tipo|DESCRIZIONE|
 |-|-|
 |[extern_type](#extern_type)|Tipo di carattere utilizzato per le rappresentazioni esterne.|
 |[intern_type](#intern_type)|Tipo di carattere utilizzato per le rappresentazioni interne.|
@@ -371,7 +371,7 @@ Il numero massimo di `Byte`s necessario per generarne `CharType`uno.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protected restituisce il valore massimo consentito che può essere restituito [](#do_length)da do_length `first1`( `last1`,, 1) per i valori validi arbitrari di *First1* e *Last1*.
+La funzione membro virtuale protected restituisce il valore massimo consentito che può essere restituito da [do_length](#do_length)( `first1`, `last1`, 1) per i valori validi arbitrari di *first1* e *last1*.
 
 ### <a name="example"></a>Esempio
 

@@ -115,7 +115,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68449181"
 ---
-# <a name="iosbase-class"></a>Classe ios_base
+# <a name="ios_base-class"></a>Classe ios_base
 
 La classe descrive le funzioni membro e di archiviazione comuni ai flussi di input e di output che non dipendono dai parametri di modello. La classe modello [basic_ios](../standard-library/basic-ios-class.md) descrive gli elementi comuni e dipendenti dai parametri modello.
 
@@ -982,7 +982,7 @@ Flag che si vuole disattivare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro chiama in [](#flags)modo efficace`~`i flag ( *_Mask* **& Flags**) (Cancella i bit selezionati).
+La funzione membro chiama in modo efficace [flags](#flags)(`~` *_Mask* **& flags**) (Cancella i bit selezionati).
 
 ### <a name="example"></a>Esempio
 
@@ -1081,6 +1081,6 @@ testing
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

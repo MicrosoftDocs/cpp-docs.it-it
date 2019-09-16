@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375767"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506578"
 ---
 # <a name="cfile-class"></a>Classe CFile
 
@@ -87,7 +87,7 @@ class CFile : public CObject
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFile:: Abort](#abort)|Chiude un file ignorando tutti gli avvisi e gli errori.|
 |[CFile:: Close](#close)|Chiude un file ed Elimina l'oggetto.|
@@ -166,7 +166,7 @@ virtual void Abort();
 
 Se il file non è stato chiuso prima dell'eliminazione dell'oggetto, il distruttore lo chiuderà.
 
-Quando si gestiscono `CFile::Abort` le eccezioni, `CFile::Close` si differenzia da in due modi importanti. In primo luogo `Abort` , la funzione non genera un'eccezione per gli errori, perché gli `Abort`errori vengono ignorati da. In secondo `Abort` luogo, non asserirà se il file non è stato aperto oppure è stato chiuso in precedenza.
+Quando si gestiscono `CFile::Abort` le eccezioni, `CFile::Close` si differenzia da in due modi importanti. In primo luogo `Abort` , la funzione non genera un'eccezione per gli errori, perché gli `Abort`errori vengono ignorati da. In secondo `Abort` luogo, non **asserirà** se il file non è stato aperto oppure è stato chiuso in precedenza.
 
 Se è stato usato **New** per allocare l' `CFile` oggetto nell'heap, è necessario eliminarlo dopo la chiusura del file. `Abort`imposta `m_hFile` su `CFile::hFileNull`.
 
@@ -221,7 +221,7 @@ Scegliere una sola delle seguenti opzioni relative alla modalità di accesso al 
 
 Scegliere una delle opzioni seguenti relative alla modalità carattere.
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |`CFile::typeBinary`|Imposta la modalità binaria (solo per le classi derivate).|
 |`CFile::typeText`|Imposta la modalità testo con elaborazione speciale per le coppie ritorno a capo/avanzamento riga (utilizzate solo nelle classi derivate).|
@@ -229,7 +229,7 @@ Scegliere una delle opzioni seguenti relative alla modalità carattere.
 
 Scegliere una sola delle seguenti opzioni relative alla modalità di condivisione del file. La modalità di condivisione file predefinita è `CFile::shareExclusive`, che è esclusiva.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|Nessuna restrizione alla condivisione.|
 |`CFile::shareDenyRead`|Nega l'accesso in lettura a tutti gli altri utenti.|
@@ -238,14 +238,14 @@ Scegliere una sola delle seguenti opzioni relative alla modalità di condivision
 
 Scegliere la prima delle seguenti opzioni relative alla modalità di creazione del file oppure entrambe. La modalità di creazione predefinita è `CFile::modeNoTruncate`, che prevede l'apertura di un file esistente.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::modeCreate`|Crea un nuovo file se non esiste alcun file. Se il file esiste già, viene sovrascritto e inizialmente impostato su una lunghezza pari a zero.|
 |`CFile::modeNoTruncate`|Crea un nuovo file se non esiste alcun file; in caso contrario, se il file esiste già, viene collegato all' `CFile` oggetto.|
 
 Scegliere le opzioni di memorizzazione nella cache del file come descritto. Per impostazione predefinita, il sistema usa uno schema di memorizzazione nella cache di uso generico che non è disponibile come opzione.
 
-|Value|DESCRIZIONE|
+|Valore|Descrizione|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|Il sistema non usa una cache intermedia per il file. Questa opzione annulla le due opzioni seguenti.|
 |`CFile::osRandomAccess`|La cache dei file viene ottimizzata per l'accesso casuale. Non usare questa opzione e l'opzione di analisi sequenziale.|
@@ -254,7 +254,7 @@ Scegliere le opzioni di memorizzazione nella cache del file come descritto. Per 
 
 Scegliere l'opzione di sicurezza seguente per evitare che l'handle di file venga ereditato. Per impostazione predefinita, l'handle di file può essere usato da tutti i nuovi processi figlio.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|Evita l'uso dell'handle di file da parte di qualsiasi processo figlio.|
 
@@ -338,7 +338,7 @@ Nome del file.
 
 Ad esempio, quando si chiama `GetFileName` per generare un messaggio per l'utente sul file, `c:\windows\write\myfile.wri`viene restituito il nome `myfile.wri`del file.
 
-Per restituire l'intero percorso del file, incluso il nome, chiamare FilePath. [](#getfilepath) Per restituire il titolo del file ( `myfile`), chiamare [GetFileTitle](#getfiletitle).
+Per restituire l'intero percorso del file, incluso il nome, chiamare [filePath](#getfilepath). Per restituire il titolo del file ( `myfile`), chiamare [GetFileTitle](#getfiletitle).
 
 ### <a name="example"></a>Esempio
 
@@ -362,11 +362,11 @@ Percorso completo del file specificato.
 
 Ad esempio, quando si chiama `GetFilePath` per generare un messaggio per l'utente sul file `c:\windows\write\myfile.wri`, viene restituito il percorso del `c:\windows\write\myfile.wri`file,,.
 
-Per restituire solo il nome del file (`myfile.wri`), chiamare GetFileName. [](#getfilename) Per restituire il titolo del file (`myfile`), chiamare [GetFileTitle](#getfiletitle).
+Per restituire solo il nome del file (`myfile.wri`), chiamare [GetFileName](#getfilename). Per restituire il titolo del file (`myfile`), chiamare [GetFileTitle](#getfiletitle).
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [](#getfilename)a GetFileName.
+Vedere l'esempio relativo a [GetFileName](#getfilename).
 
 ##  <a name="getfiletitle"></a>CFile:: GetFileTitle
 
@@ -382,13 +382,13 @@ Titolo del file sottostante.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo chiama [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) per recuperare il titolo del file. In caso di esito positivo, il metodo restituisce la stringa che il sistema utilizzerebbe per visualizzare il nome del file all'utente. In caso contrario, il metodo chiama [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) per recuperare il nome file (inclusa l'estensione di file) del file sottostante. Ciò significa che l'estensione di file non è sempre inclusa nella stringa del titolo del file restituita. Per ulteriori informazioni, vedere [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) e [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) nel Windows SDK.
+Questo metodo chiama [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) per recuperare il titolo del file. In caso di esito positivo, il metodo restituisce la stringa che il sistema utilizzerebbe per visualizzare il nome del file all'utente. In caso contrario, il metodo chiama [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) per recuperare il nome file (inclusa l'estensione di file) del file sottostante. Ciò significa che l'estensione di file non è sempre inclusa nella stringa del titolo del file restituita. Per ulteriori informazioni, vedere [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) e [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) nel Windows SDK.
 
-Per restituire l'intero percorso del file, incluso il nome, chiamare FilePath. [](#getfilepath) Per restituire solo il nome del file, chiamare GetFileName. [](#getfilename)
+Per restituire l'intero percorso del file, incluso il nome, chiamare [filePath](#getfilepath). Per restituire solo il nome del file, chiamare [GetFileName](#getfilename).
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [](#getfilename)a GetFileName.
+Vedere l'esempio relativo a [GetFileName](#getfilename).
 
 ##  <a name="getlength"></a>CFile:: GetLength
 
@@ -613,7 +613,7 @@ Nella tabella seguente vengono descritti i possibili risultati `Open`di.
 
 ##  <a name="operator_handle"></a>HANDLE CFile:: operator
 
-Utilizzare questo operatore per passare un handle a un `CFile` oggetto a funzioni quali [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) e [GetFileTime ha provocato](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) che prevedono `HANDLE`un.
+Utilizzare questo operatore per passare un handle a un `CFile` oggetto a funzioni quali [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) e [GetFileTime ha provocato](/windows/win32/api/fileapi/nf-fileapi-getfiletime) che prevedono `HANDLE`un.
 
 ```
 operator HANDLE() const;
@@ -785,7 +785,7 @@ Lunghezza, in byte, del file.
 
 ##  <a name="setfilepath"></a>CFile:: FilePath
 
-Chiamare questa funzione per specificare il percorso del file. Se, ad esempio, il percorso di un file non è disponibile [](../../mfc/reference/cfile-class.md) quando viene costruito un oggetto CFile `SetFilePath` , chiamare per fornirlo.
+Chiamare questa funzione per specificare il percorso del file. Se, ad esempio, il percorso di un file non è disponibile quando viene costruito un oggetto [CFile](../../mfc/reference/cfile-class.md) , chiamare `SetFilePath` per fornirlo.
 
 ```
 virtual void SetFilePath(LPCTSTR lpszNewName);
@@ -844,7 +844,7 @@ static void PASCAL SetStatus(
 Stringa che rappresenta il percorso del file desiderato. Il percorso può essere relativo o assoluto e può contenere un nome di rete.
 
 *status*<br/>
-Buffer contenente le nuove informazioni sullo stato. Chiamare la `GetStatus` funzione membro per precompilare la `CFileStatus` struttura con i valori correnti, quindi apportare le modifiche necessarie. Se un valore è 0, l'elemento di stato corrispondente non viene aggiornato. Per una [](#getstatus) Descrizione della `CFileStatus` struttura, vedere la funzione membro GetStatus.
+Buffer contenente le nuove informazioni sullo stato. Chiamare la `GetStatus` funzione membro per precompilare la `CFileStatus` struttura con i valori correnti, quindi apportare le modifiche necessarie. Se un valore è 0, l'elemento di stato corrispondente non viene aggiornato. Per una descrizione della `CFileStatus` struttura, vedere la funzione membro [GetStatus](#getstatus) .
 
 *pTM*<br/>
 Puntatore all'oggetto CAtlTransactionManager

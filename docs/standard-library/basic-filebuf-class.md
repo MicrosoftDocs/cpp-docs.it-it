@@ -47,7 +47,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459474"
 ---
-# <a name="basicfilebuf-class"></a>Classe basic_filebuf
+# <a name="basic_filebuf-class"></a>Classe basic_filebuf
 
 Descrive un buffer del flusso che controlla la trasmissione di elementi di tipo *elem*, i cui tratti di carattere sono determinati dalla classe *TR*, verso e da una sequenza di elementi archiviati in un file esterno.
 
@@ -431,7 +431,7 @@ La funzione membro apre il file con nome file *filename* chiamando [fopen](../c-
 
 - **ios_base::in &#124; ios_base::out &#124; ios_base::app** diventa **"a+"** (aprire il file esistente per la lettura e per aggiungere tutte le operazioni di scrittura).
 
-Se **mode & ios_base:: Binary** è diverso da zero, la funzione aggiunge `b` a `strmode` per aprire un flusso binario invece di un flusso di testo. Archivia quindi il valore restituito da `fopen` nel puntatore `fp`del file. Se **mode & ios_base::ate** è diverso da zero e il puntatore del file non è un puntatore null, la funzione chiama `fseek`( **fp**, 0, `SEEK_END`) per posizionare il flusso alla fine del file. Se l'operazione di posizionamento ha esito negativo [](#close), la `fp`funzione chiama Close () e archivia un puntatore null nel puntatore del file.
+Se **mode & ios_base:: Binary** è diverso da zero, la funzione aggiunge `b` a `strmode` per aprire un flusso binario invece di un flusso di testo. Archivia quindi il valore restituito da `fopen` nel puntatore `fp`del file. Se **mode & ios_base::ate** è diverso da zero e il puntatore del file non è un puntatore null, la funzione chiama `fseek`( **fp**, 0, `SEEK_END`) per posizionare il flusso alla fine del file. Se l'operazione di posizionamento ha esito negativo, la funzione chiama [Close](#close)( `fp`) e archivia un puntatore null nel puntatore del file.
 
 Se il puntatore del file non è un puntatore null, la funzione determina il facet di conversione file: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::** [state_type](../standard-library/char-traits-struct.md#state_type)> > ( [getloc](../standard-library/basic-streambuf-class.md#getloc)), per l'uso da [underflow](#underflow) e [overflow](#overflow).
 
@@ -667,6 +667,6 @@ La funzione membro virtuale protetta tenta di estrarre l' `ch` elemento corrente
 ## <a name="see-also"></a>Vedere anche
 
 [\<fstream>](../standard-library/fstream.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

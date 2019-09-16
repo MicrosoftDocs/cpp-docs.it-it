@@ -23,7 +23,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459596"
 ---
-# <a name="basicfstream-class"></a>Classe basic_fstream
+# <a name="basic_fstream-class"></a>Classe basic_fstream
 
 Descrive un oggetto che controlla l'inserimento e l'estrazione di elementi e oggetti codificati tramite un buffer del flusso della classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> con elementi di tipo `Elem` i cui tratti di carattere sono determinati dalla classe `Tr`.
 
@@ -138,9 +138,9 @@ La protezione predefinita per l'apertura dei file, equivalente al parametro *shf
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza la classe base chiamando [basic_iostream](../standard-library/basic-iostream-class.md)(`sb` `sb` ), dove è l'oggetto archiviato della classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **elem**, **TR**>. Inizializza `sb` `basic_filebuf`  anche chiamandoelem,TR>.\<
+Il primo costruttore inizializza la classe base chiamando [basic_iostream](../standard-library/basic-iostream-class.md)(`sb` `sb` ), dove è l'oggetto archiviato della classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **elem**, **TR**>. Inizializza `sb` `basic_filebuf`anche chiamandoelem,TR>.\<
 
-Il secondo e il terzo costruttore inizializza la classe base chiamando `basic_iostream`( **sb**). Inizializza `sb` anche chiamando `basic_filebuf` `_Mode` [](../standard-library/basic-filebuf-class.md#open)   elem, TR > e quindi SB. Open (_ fileName,). \< Se la seconda funzione restituisce un puntatore null, il costruttore chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+Il secondo e il terzo costruttore inizializza la classe base chiamando `basic_iostream`( **sb**). Inizializza anche `sb` chiamando `basic_filebuf`\< **Elem**, **Tr**>, e quindi **sb.** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Se la seconda funzione restituisce un puntatore null, il costruttore chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 Il quarto costruttore inizializza l'oggetto con il contenuto di `right`, considerato come riferimento rvalue.
 
@@ -283,6 +283,6 @@ La funzione membro scambia il contenuto di questo oggetto e il contenuto di *rig
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

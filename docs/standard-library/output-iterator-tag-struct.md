@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453013"
 ---
-# <a name="outputiteratortag-struct"></a>Struct output_iterator_tag
+# <a name="output_iterator_tag-struct"></a>Struct output_iterator_tag
 
 Classe che fornisce un tipo restituito per la `iterator_category` funzione che rappresenta un iteratore di output.
 
@@ -24,7 +24,7 @@ struct output_iterator_tag {};
 
 ## <a name="remarks"></a>Note
 
-Le classi di tag di categoria vengono usate come tag di compilazione per la selezione dell'algoritmo. La funzione modello deve trovare la categoria più specifica dell'argomento iteratore in modo da usare l'algoritmo più efficiente in fase di compilazione. Per ciascun iteratore di tipo `Iterator`, `iterator_traits`< `Iterator`>  **::iterator_category** deve essere definito come il tag di categoria più specifico che descrive il comportamento dell'iteratore.
+Le classi di tag di categoria vengono usate come tag di compilazione per la selezione dell'algoritmo. La funzione modello deve trovare la categoria più specifica dell'argomento iteratore in modo da usare l'algoritmo più efficiente in fase di compilazione. Per ogni iteratore di tipo `Iterator`, è necessario definire `iterator_traits`< `Iterator`>  **::iterator_category** come il tag di categoria più specifico che descrive il comportamento dell'iteratore.
 
 Il tipo è uguale a **iterator** \< **iter**>  **:: iterator_category** quando `Iter` descrive un oggetto che può essere utilizzato come iteratore di output.
 
@@ -32,7 +32,7 @@ Il tag non è basato sui parametri di `value_type` o `difference_type` per l'ite
 
 ## <a name="example"></a>Esempio
 
-Per un esempio [](../standard-library/random-access-iterator-tag-struct.md) su come usare `iterator_tag`i, vedere [iterator_traits](../standard-library/iterator-traits-struct.md) o random_access_iterator_tag.
+Vedere [iterator_traits](../standard-library/iterator-traits-struct.md) o [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) per un esempio su come usare `iterator_tag`.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -42,5 +42,5 @@ Per un esempio [](../standard-library/random-access-iterator-tag-struct.md) su c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

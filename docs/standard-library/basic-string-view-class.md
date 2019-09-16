@@ -126,7 +126,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68447859"
 ---
-# <a name="basicstringview-class"></a>Classe basic_string_view
+# <a name="basic_string_view-class"></a>Classe basic_string_view
 
 Il modello `basic_string_view<charT>` di classe è stato aggiunto in c++ 17 per fungere da modo sicuro ed efficiente per consentire a una funzione di accettare vari tipi di stringa non correlati senza che la funzione debba essere creato un modello su tali tipi. La classe include un puntatore non proprietario a una sequenza contigua di dati di tipo carattere e una lunghezza che specifica il numero di caratteri nella sequenza. Non viene presupposto se la sequenza è con terminazione null.
 
@@ -189,7 +189,7 @@ Il valore predefinito è [char_traits](char-traits-struct.md)<*CharType*>.
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|DESCRIZIONE|
+|Costruttore|Descrizione|
 |-|-|
 |[basic_string_view](#basic_string_view)|Costruisce un string_view vuoto o che punta a tutti i dati di un oggetto stringa o a parte di essi o a una matrice di caratteri di tipo C.|
 
@@ -197,7 +197,7 @@ Il valore predefinito è [char_traits](char-traits-struct.md)<*CharType*>.
 
 |Nome del tipo|DESCRIZIONE|
 |-|-|
-|**const_iterator**|Iteratore ad accesso casuale che può  leggere gli elementi const.|
+|**const_iterator**|Iteratore ad accesso casuale che può leggere gli elementi **const** .|
 |**const_pointer**|`using const_pointer = const value_type*;`|
 |**const_reference**|`using const_reference = const value_type&;`|
 |**const_reverse_iterator**|`using const_reverse_iterator = std::reverse_iterator<const_iterator>;`|
@@ -220,7 +220,7 @@ Il valore predefinito è [char_traits](char-traits-struct.md)<*CharType*>.
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[at](#at)|Restituisce un const_reference all'elemento in una posizione specificata.|
 |[back](#back)|Restituisce un const_reference all'ultimo elemento.|
@@ -893,7 +893,7 @@ Numero massimo di caratteri che possono essere contenuti in un string_view.
 
 ### <a name="remarks"></a>Note
 
-Quando un'operazione produce [](../standard-library/length-error-class.md) un string_view con una lunghezza maggiore di `max_size()`, viene generata un'eccezione di tipo length_error.
+Quando un'operazione produce un string_view con una lunghezza maggiore di `max_size()`, viene generata un'eccezione di tipo [length_error](../standard-library/length-error-class.md).
 
 ## <a name="op_eq"></a>  basic_string_view::operator=
 

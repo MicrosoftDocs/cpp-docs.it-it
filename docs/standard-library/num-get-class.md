@@ -21,7 +21,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457651"
 ---
-# <a name="numget-class"></a>Classe num_get
+# <a name="num_get-class"></a>Classe num_get
 
 Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni delle sequenze di tipo `CharType` in valori numerici.
 
@@ -59,7 +59,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[do_get](#do_get)|Funzione virtuale chiamata per estrarre un valore numerico o booleano da una sequenza di caratteri.|
 |[get](#get)|Estrae un tipo numerico o booleano da una sequenza di caratteri.|
@@ -199,7 +199,7 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-trova la corrispondenza di elementi  sequenziali a partire `[first, last)` da First nella sequenza fino a quando non viene riconosciuto un campo di input di tipo Integer completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come tipo **Long**e archivia il risultato in *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input numerico. In caso contrario, la funzione non archivia alcun elemento `ios_base::failbit` in `state` *Val* e imposta in. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo Integer valido. In entrambi i casi, se il valore restituito è uguale a `last`, la funzione imposta `ios_base::eofbit` in `state`.
+trova la corrispondenza di elementi sequenziali a partire `[first, last)` da First nella sequenza fino a quando non viene riconosciuto un campo di input di tipo Integer completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come tipo **Long**e archivia il risultato in *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input numerico. In caso contrario, la funzione non archivia alcun elemento `ios_base::failbit` in `state` *Val* e imposta in. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo Integer valido. In entrambi i casi, se il valore restituito è uguale a `last`, la funzione imposta `ios_base::eofbit` in `state`.
 
 Il campo di input Integer viene convertito dalle stesse regole usate dalle funzioni di analisi per la corrispondenza e la conversione di una serie di elementi **char** da un file. Si presuppone che ogni elemento **char** venga mappato a un elemento equivalente di tipo `Elem` mediante un semplice mapping uno-a-uno. La specifica di conversione di analisi equivalente viene determinata nel modo seguente:
 
@@ -230,7 +230,7 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```
 
-si comporta come la prima, ad eccezione del fatto che sostituisce una specifica di conversione di `ld` con `lu`. Se ha esito positivo, converte il campo di input numerico in un valore di tipo unsigned **Long** e archivia tale valore in *Val*.
+si comporta come la prima, ad eccezione del fatto che sostituisce una specifica di conversione di `ld` con `lu`. Se ha esito positivo, converte il campo di input numerico in un valore di tipo **unsigned long** e archivia tale valore in *Val*.
 
 La quinta funzione membro virtuale protetta:
 
@@ -256,7 +256,7 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```
 
-si comporta come la prima, ad eccezione del fatto che sostituisce una specifica di conversione di `ld` con `llu`. Se ha esito positivo, converte il campo di input numerico in un valore di tipo unsigned **Long Long** e archivia tale valore in *Val*.
+si comporta come la prima, ad eccezione del fatto che sostituisce una specifica di conversione di `ld` con `llu`. Se ha esito positivo, converte il campo di input numerico in un valore di tipo **unsigned long long** e archivia tale valore in *Val*.
 
 La settima funzione membro virtuale protetta:
 
@@ -437,11 +437,11 @@ Iteratore dopo la lettura del valore.
 
 Tutte le funzioni membro restituiscono [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).
 
-La prima funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire dall'inizio nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo Integer completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come tipo **Long** e archivia il risultato in *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input numerico. In caso contrario, la funzione non  archivia alcun elemento `ios_base::failbit` in Val e imposta in _ *state*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo Integer valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la `ios_base::eofbit` funzione imposta in *_State*.
+La prima funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire dall'inizio nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo Integer completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come tipo **Long** e archivia il risultato in *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input numerico. In caso contrario, la funzione non archivia alcun elemento `ios_base::failbit` in Val e imposta in _ *state*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo Integer valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la `ios_base::eofbit` funzione imposta in *_State*.
 
 Il campo di input Integer viene convertito dalle stesse regole usate dalle funzioni di analisi per la corrispondenza e la conversione di una serie di elementi **char** da un file. Si presuppone che ogni elemento **char** venga mappato a un elemento equivalente di `CharType` tipo mediante un semplice mapping uno-a-uno. La specifica di conversione di analisi equivalente viene determinata nel modo seguente:
 
-- Se `iosbase`. [Flags](../standard-library/ios-base-class.md#flags) & Oct,`ios_base::basefield`la specifica[](../standard-library/ios-functions.md#oct)di conversione è .`lo` == `ios_base::`
+- Se `iosbase`. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), la specifica di conversione è `lo`.
 
 - Se **iosbase. Flags** & **ios_base:: basefield** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la specifica di `lx`conversione è.
 
@@ -467,7 +467,7 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```
 
-si comporta come la prima, ad eccezione del fatto che sostituisce una specifica di conversione di `ld` con `lu`. Se ha esito positivo, converte il campo di input numerico in un valore di tipo unsigned **Long** e archivia tale valore in *Val*.
+si comporta come la prima, ad eccezione del fatto che sostituisce una specifica di conversione di `ld` con `lu`. Se ha esito positivo, converte il campo di input numerico in un valore di tipo **unsigned long** e archivia tale valore in *Val*.
 
 La terza funzione membro virtuale protetta:
 

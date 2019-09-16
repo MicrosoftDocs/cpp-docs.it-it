@@ -79,7 +79,7 @@ class CArchive
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CArchive:: Abort](#abort)|Chiude un archivio senza generare un'eccezione.|
 |[CArchive:: Close](#close)|Scarica i dati non scritti e si disconnette da `CFile`.|
@@ -124,7 +124,7 @@ In seguito è possibile caricare gli oggetti da un archivio permanente, ricostit
 
 È possibile considerare un oggetto archivio come un tipo di flusso binario. Come un flusso di input/output, un archivio è associato a un file e consente la scrittura e la lettura dei dati memorizzati nel buffer da e verso l'archiviazione. Un flusso di input/output elabora sequenze di caratteri ASCII, ma un archivio elabora i dati di oggetti binari in un formato efficiente e non ridondante.
 
-Prima di poter creare [](../../mfc/reference/cfile-class.md) un `CArchive` oggetto, è necessario creare un oggetto CFile. Inoltre, è necessario assicurarsi che lo stato di caricamento/archiviazione dell'archivio sia compatibile con la modalità di apertura del file. Si è limitati a un archivio attivo per ogni file.
+Prima di poter creare un oggetto [CFile](../../mfc/reference/cfile-class.md), è necessario creare un oggetto `CArchive`. Inoltre, è necessario assicurarsi che lo stato di caricamento/archiviazione dell'archivio sia compatibile con la modalità di apertura del file. Si è limitati a un archivio attivo per ogni file.
 
 Quando si costruisce `CArchive` un oggetto, lo si collega a un oggetto della `CFile` classe (o a una classe derivata) che rappresenta un file aperto. Viene inoltre specificato se l'archivio verrà utilizzato per il caricamento o l'archiviazione. Un `CArchive` oggetto può elaborare non solo i tipi primitivi, ma anche gli oggetti delle classi derivate da [CObject](../../mfc/reference/cobject-class.md)progettate per la serializzazione. Una classe serializzabile ha in `Serialize` genere una funzione membro e USA in genere le macro [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) e [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) , come descritto in `CObject`classe.
 
@@ -198,7 +198,7 @@ Puntatore facoltativo a un buffer fornito dall'utente di dimensioni *nBufSize*. 
 
 Non è possibile modificare questa specifica dopo aver creato l'archivio.
 
-Non è possibile utilizzare `CFile` le operazioni per modificare lo stato del file fino a quando non viene chiuso l'archivio. Qualsiasi operazione di questo tipo danneggerà l'integrità dell'archivio. È possibile accedere alla posizione del puntatore del file in qualsiasi momento durante la serializzazione ottenendo l'oggetto file dell'archivio dalla [](#getfile) funzione membro GetFile e quindi usando la funzione [CFile:: GetPosition](../../mfc/reference/cfile-class.md#getposition) . È necessario chiamare [CArchive:: Flush](#flush) prima di ottenere la posizione del puntatore del file.
+Non è possibile utilizzare `CFile` le operazioni per modificare lo stato del file fino a quando non viene chiuso l'archivio. Qualsiasi operazione di questo tipo danneggerà l'integrità dell'archivio. È possibile accedere alla posizione del puntatore del file in qualsiasi momento durante la serializzazione ottenendo l'oggetto file dell'archivio dalla funzione membro [GetFile](#getfile) e quindi usando la funzione [CFile:: GetPosition](../../mfc/reference/cfile-class.md#getposition) . È necessario chiamare [CArchive:: Flush](#flush) prima di ottenere la posizione del puntatore del file.
 
 ### <a name="example"></a>Esempio
 
@@ -445,7 +445,7 @@ Le ultime due versioni precedenti sono specifiche per l'archiviazione di interi 
 
 Se è stata usata la macro IMPLEMENT_SERIAL nell'implementazione della classe, l'operatore di inserimento in overload per `CObject` chiama l'oggetto `WriteObject`protetto. Questa funzione, a sua volta, chiama `Serialize` la funzione della classe.
 
-L' [](../../atl-mfc-shared/reference/cstringt-class.md) operatore di inserimento CStringT (< <) supporta il dump di diagnostica e l'archiviazione in un archivio.
+L'operatore di inserimento [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) (< <) supporta il dump di diagnostica e l'archiviazione in un archivio.
 
 ### <a name="example"></a>Esempio
 
@@ -525,7 +525,7 @@ Le ultime due versioni precedenti sono specifiche per il caricamento di interi a
 
 Se è stata usata la macro IMPLEMENT_SERIAL nell'implementazione della classe, gli operatori di estrazione in overload per `CObject` chiamano la funzione `ReadObject` protetta (con un puntatore della classe di runtime diverso da zero). Questa funzione, a sua volta, chiama `Serialize` la funzione della classe.
 
-L' [](../../atl-mfc-shared/reference/cstringt-class.md) operatore di estrazione CStringT (> >) supporta il caricamento da un archivio.
+L'operatore di estrazione [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) (> >) supporta il caricamento da un archivio.
 
 ### <a name="example"></a>Esempio
 

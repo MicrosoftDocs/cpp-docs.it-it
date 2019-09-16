@@ -93,7 +93,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448587"
 ---
-# <a name="hashset-class"></a>Classe hash_set
+# <a name="hash_set-class"></a>Classe hash_set
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).
@@ -150,19 +150,19 @@ L'iteratore fornito dalla classe hash_set è un iteratore bidirezionale, ma le f
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-|-|
 |[hash_set](#hash_set)|Costruisce un `hash_set` vuoto o che rappresenta una copia totale o parziale di un altro `hash_set`.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|Nome del tipo|DESCRIZIONE|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe `allocator` per l'oggetto `hash_set`.|
 |[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento `const` nel `hash_set`.|
 |[const_pointer](#const_pointer)|Tipo che fornisce un puntatore a un elemento **const** in un `hash_set`oggetto.|
 |[const_reference](#const_reference)|Tipo che fornisce un riferimento a un elemento **const** archiviato in un `hash_set` oggetto per la lettura e l'esecuzione di operazioni **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi  elemento const in `hash_set`.|
+|[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento **const** in `hash_set`.|
 |[difference_type](#difference_type)|Tipo Signed Integer che può essere utilizzato per rappresentare il numero di elementi di un `hash_set` in un intervallo compreso tra gli elementi a cui puntano gli iteratori.|
 |[iterator](#iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qualsiasi elemento di un `hash_set`.|
 |[key_compare](#key_compare)|Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordinamento per determinare l'ordine relativo di due elementi nel `hash_set`.|
@@ -176,7 +176,7 @@ L'iteratore fornito dalla classe hash_set è un iteratore bidirezionale, ma le f
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[begin](#begin)|Restituisce un iteratore che punta al primo elemento in `hash_set`.|
 |[cbegin](#cbegin)|Restituisce un iteratore const che punta al primo elemento del `hash_set`.|
@@ -206,7 +206,7 @@ L'iteratore fornito dalla classe hash_set è un iteratore bidirezionale, ma le f
 
 ### <a name="operators"></a>Operatori
 
-|Operator|Descrizione|
+|Operator|DESCRIZIONE|
 |-|-|
 |[hash_set::operator=](#op_eq)|Sostituisce gli elementi di un `hash_set` con una copia di un altro `hash_set`.|
 
@@ -229,7 +229,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>Note
 
-`allocator_type`è un sinonimo del parametro di modello allocator.
+`allocator_type`è un sinonimo del parametro di modello *allocator*.
 
 Per ulteriori informazioni sull' *allocatore*, vedere la sezione Note dell'argomento [classe hash_set](../standard-library/hash-set-class.md) .
 
@@ -801,13 +801,13 @@ emplace(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |-|-|
 |*val*|Valore di un elemento da inserire nell'oggetto [hash_set](../standard-library/hash-set-class.md), a meno che l'oggetto `hash_set` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
 
 ### <a name="return-value"></a>Valore restituito
 
-La `emplace` funzione membro restituisce una coppia il cui componente **bool** restituisce **true** se è stato creato un  inserimento e false `hash_set` se in è già contenuto un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui il componente iteratore restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.
+La `emplace` funzione membro restituisce una coppia il cui componente **bool** restituisce **true** se è stato creato un inserimento e false `hash_set` se in è già contenuto un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui il componente iteratore restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.
 
 ### <a name="remarks"></a>Note
 
@@ -853,7 +853,7 @@ iterator emplace(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |-|-|
 |*val*|Valore di un elemento da inserire nell'oggetto [hash_set](../standard-library/hash-set-class.md), a meno che l'oggetto `hash_set` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
 |*_Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. L'inserimento può essere eseguito in un tempo costante ammortizzato, invece che in un tempo logaritmico, se il punto di inserimento segue immediatamente *_Where*.|
@@ -1300,7 +1300,7 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Allocatore usato da hash_set per gestire la memoria, che corrisponde al parametro di modello allocator.
+Allocatore usato da hash_set per gestire la memoria, che corrisponde al parametro di modello *allocator*.
 
 Per ulteriori informazioni sull' *allocatore*, vedere la sezione Note dell'argomento [classe hash_set](../standard-library/hash-set-class.md) .
 
@@ -1482,7 +1482,7 @@ void insert(
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima `insert` funzione membro restituisce una coppia il cui componente **bool** restituisce **true** se è stato creato un  inserimento e false `hash_set` se in è già contenuto un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui componente iteratore restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.
+La prima `insert` funzione membro restituisce una coppia il cui componente **bool** restituisce **true** se è stato creato un inserimento e false `hash_set` se in è già contenuto un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui componente iteratore restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.
 
 Per accedere al componente iterator di una coppia `pr` restituita da questa funzione membro, usare `pr.first` e per dereferenziarlo, usare `*(pr.first)`. Per accedere al componente **bool** di una coppia `pr` restituita da questa funzione membro, `pr.second`usare e per dereferenziarlo, usare `*(pr.second)`.
 
@@ -1768,7 +1768,7 @@ hash_set& operator=(hash_set&& right);
 
 ### <a name="remarks"></a>Note
 
-Dopo la cancellazione di tutti gli elementi esistenti `hash_set`in `operator=` un oggetto, copia o sposta il  `hash_set`contenuto di direttamente in.
+Dopo la cancellazione di tutti gli elementi esistenti `hash_set`in `operator=` un oggetto, copia o sposta il `hash_set`contenuto di direttamente in.
 
 ### <a name="example"></a>Esempio
 
@@ -2368,7 +2368,7 @@ typedef key_compare value_compare;
 
 Per ulteriori informazioni sui *tratti* , vedere l'argomento relativo alla [classe hash_set](../standard-library/hash-set-class.md) .
 
-Si noti che [](#key_compare) sia key_compare `value_compare` che sono sinonimi per i *tratti*del parametro di modello. Entrambi i tipi vengono forniti per le classi hash_set e hash_multiset, dove sono identici, per la compatibilità con le classi hash_map e hash_multimap, dove sono distinti.
+Si noti che sia [key_compare](#key_compare) che `value_compare` sono sinonimi per i *tratti*del parametro di modello. Entrambi i tipi vengono forniti per le classi hash_set e hash_multiset, dove sono identici, per la compatibilità con le classi hash_map e hash_multimap, dove sono distinti.
 
 ### <a name="example"></a>Esempio
 
@@ -2423,5 +2423,5 @@ The hash_set has elements: 10 20.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
