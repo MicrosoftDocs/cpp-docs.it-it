@@ -35,13 +35,13 @@ in Indirizzo in cui è archiviato il puntatore VMCS.
 
 ## <a name="return-value"></a>Valore restituito
 
-0
+0\
 Operazione completata.
 
-1
+1\
 Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.
 
-2
+2\
 Operazione non riuscita senza stato disponibile.
 
 ## <a name="remarks"></a>Note
