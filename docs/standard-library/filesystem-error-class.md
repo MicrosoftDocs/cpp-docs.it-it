@@ -4,14 +4,14 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: c3dbfc080f0a1494950016f42189d932be05b0f1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7bd6b2d3d716ba25999388d44e7bd5a8d0750eb5
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240737"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127206"
 ---
-# <a name="filesystemerror-class"></a>Classe filesystem_error
+# <a name="filesystem_error-class"></a>Classe filesystem_error
 
 Classe base per tutte le eccezioni generate per segnalare un overflow del sistema di basso livello.
 
@@ -23,9 +23,9 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Note
 
-La classe funge da classe base per tutte le eccezioni generate per segnalare un errore nelle funzioni \<filesystem>. Archivia un oggetto di tipo `string`, denominato `mymesg` qui come a scopo illustrativo. Archivia anche due oggetti di tipo `path`, denominato `mypval1` e `mypval2`.
+La classe funge da classe base per tutte le eccezioni generate per segnalare un errore nelle funzioni \<filesystem>. Archivia un oggetto di tipo `string`, chiamato `mymesg` qui per le finalità di esposizione. Archivia anche due oggetti di tipo `path`, denominati `mypval2` `mypval1` e.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
@@ -43,13 +43,13 @@ La classe funge da classe base per tutte le eccezioni generate per segnalare un 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<filesystem >
+**Intestazione:** \<> filesystem
 
 **Spazio nomi:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error
+## <a name="filesystem_error"></a>filesystem_error
 
-Il primo costruttore crea il messaggio da *what_arg* e *ec*. Il secondo costruttore crea anche il messaggio dal *pval1*, che viene archiviato in `mypval1`. Il terzo costruttore crea anche il messaggio dal *pval1*, che viene archiviato in `mypval1`e dal *pval2*, che viene archiviato in `mypval2`.
+Il primo costruttore crea il messaggio da *what_arg* e *EC*. Il secondo costruttore crea anche il messaggio da *Pval1*, che archivia in `mypval1`. Il terzo costruttore crea anche il messaggio da *Pval1*, archiviato in `mypval1`e da *Pval2*, in `mypval2`cui viene archiviato.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -70,16 +70,16 @@ filesystem_error(const string& what_arg,
 *what_arg*\
 Messaggio specificato.
 
-*CE*\
+*EC*\
 Codice di errore specificato.
 
 *mypval1*\
-Un'ulteriore parametro del messaggio specificato.
+Parametro del messaggio specificato.
 
 *mypval2*\
-Un'ulteriore parametro del messaggio specificato.
+Parametro del messaggio specificato.
 
-## <a name="path1"></a> percorso 1
+## <a name="path1"></a>path1
 
 La funzione membro restituisce `mypval1`
 
@@ -87,7 +87,7 @@ La funzione membro restituisce `mypval1`
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a> path2
+## <a name="path2"></a>path2
 
 La funzione membro restituisce `mypval2`
 
@@ -95,9 +95,9 @@ La funzione membro restituisce `mypval2`
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> Novità
+## <a name="what"></a>cosa
 
-La funzione membro restituisce un puntatore a un `NTBS`, preferibilmente composto da `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, e `mypval2.native_string()`.
+La funzione membro restituisce un puntatore a un `NTBS`oggetto, preferibilmente composto da `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`e `mypval2.native_string()`.
 
 ```cpp
 const char *what() const noexcept;

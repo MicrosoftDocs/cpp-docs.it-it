@@ -1,13 +1,13 @@
 ---
 title: Cenni preliminari sulla programmazione Windows in C++
-ms.date: 07/28/2019
+ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514801"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127187"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
 
@@ -17,7 +17,7 @@ In questa sezione viene illustrato come utilizzare Visual Studio e le librerie d
 
 ## <a name="command-line-console-applications"></a>Applicazioni della riga di comando (console)
 
-C++le applicazioni console vengono eseguite dalla riga di comando in una finestra della console e possono visualizzare solo l'output di testo. Per altre informazioni, vedere [applicazioni console](console-applications-in-visual-cpp.md).
+C++le applicazioni console vengono eseguite dalla riga di comando in una finestra della console e possono visualizzare solo l'output di testo. Per altre informazioni, vedere [creare un C++ progetto di app console](../get-started/tutorial-console-cpp.md).
 
 ## <a name="native-desktop-client-applications"></a>Applicazioni client desktop native
 
@@ -115,7 +115,7 @@ Visual Studio include un potente debugger per codice nativo, strumenti di analis
 
 ## <a name="related-articles"></a>Articoli correlati
 
-|Titolo|DESCRIZIONE|
+|Titolo|Descrizione|
 |-----------|-----------------|
 |[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Argomento padre per il C++ contenuto di Visual Developer.|
 [Sviluppo in .NET con C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Creare wrapper per le librerie C++ native che consentono la comunicazione con le applicazioni e i componenti .NET.|
