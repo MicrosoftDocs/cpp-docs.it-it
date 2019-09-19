@@ -1,6 +1,6 @@
 ---
 title: Classi visualizzazione (architettura)
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.view
 helpviewer_keywords:
@@ -9,64 +9,64 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: 15b120f0354c483480351b8d3abf995334779411
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352671"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096049"
 ---
 # <a name="view-classes-architecture"></a>Classi visualizzazione (architettura)
 
-`CView` e le relative classi derivate sono finestre figlio che rappresentano l'area client di una finestra cornice. Le viste mostrano i dati e accettano l'input per un documento.
+`CView`e le classi derivate sono finestre figlio che rappresentano l'area client di una finestra cornice. Le visualizzazioni mostrano i dati e accettano l'input per un documento.
 
-Una classe di visualizzazione è associata a una classe documento e una classe della finestra cornice usando un oggetto modello di documento.
+Una classe di visualizzazione è associata a una classe di documento e a una classe della finestra cornice usando un oggetto modello di documento.
 
 [CView](../mfc/reference/cview-class.md)<br/>
-Classe di base per le visualizzazioni specifiche dell'applicazione di dati del documento. Viste di visualizzano i dati e accettano l'input dell'utente per modificare o selezionare i dati. Derivare le classi di visualizzazione da `CView`.
+Classe base per le visualizzazioni specifiche dell'applicazione dei dati di un documento. Le visualizzazioni visualizzano i dati e accettano l'input dell'utente per modificare o selezionare i dati. Derivare le classi di visualizzazione da `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Classe di base per le viste con funzionalità di scorrimento. Derivare la classe di visualizzazione da `CScrollView` per lo scorrimento automatico.
+Classe base per le visualizzazioni con funzionalità di scorrimento. Derivare la classe di `CScrollView` visualizzazione da per lo scorrimento automatico.
 
-## <a name="form-and-record-views"></a>Form e le visualizzazioni di Record
+## <a name="form-and-record-views"></a>Visualizzazioni form e record
 
-Le visualizzazioni di form sono anche scorrimento di visualizzazioni. Si basano su un modello di finestra di dialogo.
+Anche le visualizzazioni form sono viste a scorrimento. Sono basate su un modello di finestra di dialogo.
 
-Le visualizzazioni di record sono derivate dalle visualizzazioni di form. Oltre a modello della finestra di dialogo, hanno anche una connessione a un database.
+Le visualizzazioni di record sono derivate da visualizzazioni form. Oltre al modello della finestra di dialogo, dispone anche di una connessione a un database.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Una visualizzazione a scorrimento la cui layout viene definito in un modello di finestra di dialogo. Derivare una classe da `CFormView` per implementare un'interfaccia utente basata su un modello di finestra di dialogo.
+Visualizzazione a scorrimento il cui layout è definito in un modello di finestra di dialogo. Derivare una classe `CFormView` da per implementare un'interfaccia utente basata su un modello di finestra di dialogo.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Fornisce un modulo visualizzazione connessa direttamente a un oggetto recordset oggetto DAO (Data Access). Come tutte le visualizzazioni di form, un `CDaoRecordView` si basa su un modello di finestra di dialogo.
+Fornisce una visualizzazione form connessa direttamente a un oggetto recordset DAO (Data Access Object). Analogamente a tutte le visualizzazioni `CDaoRecordView` form, un è basato su un modello di finestra di dialogo. DAO viene usato con i database di Access ed è supportato tramite Office 2013. 3,6 è la versione finale ed è considerata obsoleta.
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
-Supporta un controllo per la navigazione all'interno di un'applicazione Web. Il controllo supporta l'HTML dinamico in MFC.
+Supporta un controllo per l'esplorazione Web all'interno di un'applicazione. Il controllo supporta il codice HTML dinamico in MFC.
 
 [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)<br/>
-Fornisce supporto OLE DB di MFC per le visualizzazioni di form.
+Fornisce il supporto OLE DB MFC per le visualizzazioni di form.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Fornisce un modulo visualizzazione connessa direttamente a un oggetto recordset Open Database Connectivity (ODBC). Come tutte le visualizzazioni di form, un `CRecordView` si basa su un modello di finestra di dialogo.
+Fornisce una visualizzazione form connessa direttamente a un oggetto recordset Open Database Connectivity (ODBC). Analogamente a tutte le visualizzazioni `CRecordView` form, un è basato su un modello di finestra di dialogo.
 
-## <a name="control-views"></a>Viste di controllo
+## <a name="control-views"></a>Visualizzazioni di controllo
 
-Controllo consente di visualizzare un controllo come relativa visualizzazione.
+Le visualizzazioni di controllo visualizzano un controllo come visualizzazione.
 
 [CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
-Classe di base per tutte le visualizzazioni associate ai controlli di Windows. Le visualizzazioni basate su controlli sono descritti di seguito.
+Classe base per tutte le visualizzazioni associate ai controlli Windows. Le visualizzazioni basate sui controlli sono descritte di seguito.
 
 [CEditView](../mfc/reference/ceditview-class.md)<br/>
-Controllo di modifica di una vista che contiene uno standard di Windows (vedere [CEdit](../mfc/reference/cedit-class.md)). Modificare la modifica del testo di supporto di controlli, la ricerca, la sostituzione e funzionalità di scorrimento.
+Vista che contiene un controllo di modifica standard di Windows (vedere [CEdit](../mfc/reference/cedit-class.md)). I controlli di modifica supportano la modifica del testo, la ricerca, la sostituzione e le funzionalità di scorrimento.
 
 [CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
-Controllo di modifica di una vista che contiene un Windows avanzata (vedere [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Oltre alle funzionalità di un controllo di modifica, rich edit controlli supporto per tipi di carattere, colori, la formattazione dei paragrafi e gli oggetti OLE incorporati.
+Visualizzazione contenente un controllo Rich Edit di Windows (vedere [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Oltre alle funzionalità di un controllo di modifica, i controlli Rich Edit supportano i tipi di carattere, i colori, la formattazione dei paragrafi e gli oggetti OLE incorporati.
 
 [CListView](../mfc/reference/clistview-class.md)<br/>
-Vista contenente un controllo elenco di Windows (vedere [CListCtrl](../mfc/reference/clistctrl-class.md)). Un controllo elenco consente di visualizzare le icone e le stringhe in modo analogo nel riquadro a destra di Esplora File.
+Visualizzazione contenente un controllo elenco di Windows (vedere [CListCtrl](../mfc/reference/clistctrl-class.md)). Un controllo elenco Visualizza le icone e le stringhe in modo simile al riquadro destro di Esplora file.
 
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
-Una vista che contiene un controllo struttura ad albero di Windows (vedere [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Un controllo albero vengono visualizzate le icone e le stringhe disposti in una gerarchia in modo simile al riquadro sinistro di Esplora File.
+Visualizzazione contenente un controllo albero di Windows (vedere [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Un controllo struttura ad albero Visualizza le icone e le stringhe disposte in una gerarchia in modo simile al riquadro sinistro di Esplora file.
 
 ## <a name="see-also"></a>Vedere anche
 

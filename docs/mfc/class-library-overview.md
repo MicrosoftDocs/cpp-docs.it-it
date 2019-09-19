@@ -1,6 +1,6 @@
 ---
 title: Cenni preliminari sulla libreria di classi
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.mfc
 helpviewer_keywords:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23097c0bf3399a4dced6640f41c0d46dba101b26
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327314"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095949"
 ---
 # <a name="class-library-overview"></a>Cenni preliminari sulla libreria di classi
 
-Questa panoramica vengono suddivisi in categorie e vengono descritte le classi in Microsoft Foundation classe libreria (MFC) versione 9.0. Le classi in MFC, complessivamente, costituiscono un framework applicazione, il framework di un'applicazione scritta per l'API di Windows. L'attività di programmazione consiste nel compilare il codice specifico per l'applicazione.
+In questa panoramica vengono categorizzate e descritte le classi nella libreria Microsoft Foundation Class (MFC) versione 9,0. Le classi di MFC, riunite, costituiscono un Framework applicazione, ovvero il Framework di un'applicazione scritta per l'API Windows. L'attività di programmazione consiste nel compilare il codice specifico dell'applicazione.
 
-Le classi della libreria sono riportate qui nelle categorie seguenti:
+Le classi della libreria sono presentate nelle categorie seguenti:
 
 - [Classe radice: CObject](../mfc/root-class-cobject.md)
 
@@ -71,7 +71,7 @@ Le classi della libreria sono riportate qui nelle categorie seguenti:
 
 - [Classi di file e database](../mfc/file-and-database-classes.md)
 
-   - [Classi dei / o file](../mfc/file-i-o-classes.md)
+   - [Classi I/O di file](../mfc/file-i-o-classes.md)
 
    - [Classi DAO](../mfc/dao-classes.md)
 
@@ -109,13 +109,13 @@ Le classi della libreria sono riportate qui nelle categorie seguenti:
 
    - [Classi di eccezioni](../mfc/exception-classes.md)
 
-La sezione [filosofia di progettazione classi generale](../mfc/general-class-design-philosophy.md) viene spiegato come è stata progettata la libreria MFC.
+La sezione [filosofia di progettazione delle classi generali](../mfc/general-class-design-philosophy.md) spiega come è stata progettata la libreria MFC.
 
-Per una panoramica del framework, vedere [utilizzando le classi per scrivere applicazioni per Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Alcune delle classi elencate in precedenza sono classi generiche che possono essere usate all'esterno del framework e garantiscono astrazioni utili come raccolte, eccezioni, i file e le stringhe.
+Per una panoramica del Framework, vedere [utilizzo delle classi per scrivere applicazioni per Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Alcune delle classi elencate in precedenza sono classi generiche che possono essere usate all'esterno del Framework e forniscono astrazioni utili, ad esempio raccolte, eccezioni, file e stringhe.
 
-Per visualizzare l'ereditarietà di una classe, usare il [grafico delle gerarchie classe](../mfc/hierarchy-chart.md).
+Per visualizzare l'ereditarietà di una classe, utilizzare il [grafico della gerarchia di classi](../mfc/hierarchy-chart.md).
 
-Oltre alle classi elencate in questa panoramica, la libreria MFC contiene un numero di funzioni globali, variabili globali e macro. È una panoramica e un elenco dettagliato di questi nell'argomento [macro MFC e funzioni globali](../mfc/reference/mfc-macros-and-globals.md), che segue il riferimento alfabetico alle classi MFC.
+Oltre alle classi elencate in questa panoramica, la libreria MFC contiene una serie di funzioni globali, variabili globali e macro. Sono disponibili una panoramica e un elenco dettagliato di questi elementi nell'argomento [macro e globali MFC](../mfc/reference/mfc-macros-and-globals.md), che seguono il riferimento alfabetico alle classi MFC.
 
 ## <a name="see-also"></a>Vedere anche
 

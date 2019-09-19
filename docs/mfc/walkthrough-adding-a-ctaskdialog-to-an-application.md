@@ -1,22 +1,22 @@
 ---
-title: "Procedura dettagliata: Aggiunta di CTaskDialog a un'applicazione"
+title: "Procedura dettagliata: Aggiunta di un CTaskDialog a un'applicazione"
 ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: 8cf2223b2859a2dfa6ecc7582ec2f171a056152c
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 1a46cc7681a2556aee8e856be6ce1fd7cc01686a
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558202"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096020"
 ---
-# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procedura dettagliata: Aggiunta di CTaskDialog a un'applicazione
+# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procedura dettagliata: Aggiunta di un CTaskDialog a un'applicazione
 
 Questa procedura dettagliata illustra [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) e descrive come aggiungerla a un'applicazione.
 
-Il `CTaskDialog` è una finestra di dialogo attività che sostituisce la finestra di messaggio di Windows in Windows Vista o versioni successive. `CTaskDialog` migliora la finestra di messaggio originale e consente di aggiungere funzionalità. La finestra di messaggio di Windows è ancora supportata in Visual Studio.
+`CTaskDialog` È una finestra di dialogo attività che sostituisce la finestra di messaggio di Windows in Windows Vista o versione successiva. `CTaskDialog` migliora la finestra di messaggio originale e consente di aggiungere funzionalità. La finestra di messaggio di Windows è ancora supportata in Visual Studio.
 
 > [!NOTE]
 > Le versioni di Windows precedenti a Windows Vista non supportano il `CTaskDialog`. Se si desidera far visualizzare un messaggio a un utente che esegue l'applicazione su una versione precedente di Windows, è necessario programmare un'opzione alternativa per la finestra di dialogo. È possibile usare il metodo statico [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) per determinare in fase di esecuzione se un computer è in grado di visualizzare `CTaskDialog`. Inoltre, `CTaskDialog` è disponibile solo quando l'applicazione viene compilata con la libreria Unicode.
@@ -33,13 +33,13 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Sostituzione di una finestra di messaggio di Windows con CTaskDialog
 
-La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel sostituire la finestra di messaggio di Windows. In questo esempio viene anche modificata l'icona associata alla finestra di dialogo delle attività. Modifica dell'icona rende il `CTaskDialog` visualizzati stesso per la finestra di messaggio di Windows.
+La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel sostituire la finestra di messaggio di Windows. In questo esempio viene anche modificata l'icona associata alla finestra di dialogo delle attività. La modifica dell'icona rende `CTaskDialog` lo stesso aspetto della finestra di messaggio di Windows.
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Per sostituire una finestra di messaggio di Windows con CTaskDialog
 
-1. Usare la **Creazione guidata applicazione MFC** per creare un'applicazione MFC con tutte le impostazioni predefinite. Vedere [Procedura dettagliata: Utilizzo dei nuovi controlli Shell MFC](walkthrough-using-the-new-mfc-shell-controls.md) per istruzioni su come aprire la procedura guidata per la versione di Visual Studio.
+1. Utilizzare la **creazione guidata applicazione MFC** per creare un'applicazione MFC con tutte le impostazioni predefinite. Vedere [Procedura dettagliata: Uso dei nuovi controlli](walkthrough-using-the-new-mfc-shell-controls.md) della shell MFC per istruzioni su come aprire la procedura guidata per la versione di Visual Studio.
 
-1. Chiamarla *MyProject*. 
+1. Chiamarlo *MyProject*.
 
 1. Usare la finestra **Esplora soluzioni** per aprire il file MyProject.cpp.
 
@@ -84,7 +84,7 @@ La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel 
     taskDialog.DoModal();
     ```
 
-Passaggio 7 può essere evitato se non si vuole la `CTaskDialog` per visualizzare la stessa icona come la finestra di messaggio di Windows. Se si evita questo passaggio, il `CTaskDialog` disporrà di alcuna icona quando l'applicazione li visualizza.
+Se non si desidera `CTaskDialog` che visualizzi la stessa icona della finestra di messaggio di Windows, è possibile evitare il passaggio 7. Se si evita questo passaggio, `CTaskDialog` non è presente alcuna icona quando viene visualizzata dall'applicazione.
 
 Compilare l'applicazione ed eseguirla. L'applicazione consente di visualizzare la finestra di dialogo delle attività dopo l'avvio.
 
@@ -94,7 +94,7 @@ La procedura seguente descrive come aggiungere funzionalità alla classe `CTaskD
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>Per aggiungere funzionalità a CTaskDialog
 
-1. Passare alla finestra **Visualizzazione risorse**. Se non è possibile visualizzare il **visualizzazione di risorse**, è possibile aprirlo dal **visualizzazione** menu.
+1. Passare alla finestra **Visualizzazione risorse**. Se la **visualizzazione risorse**non è visibile, è possibile aprirla dal menu **Visualizza** .
 
 1. Espandere la finestra **Visualizzazione risorse** fino a quando non è possibile selezionare la cartella **Tabelle delle stringhe** . Espandere la finestra e fare doppio clic sulla voce **Tabelle delle stringhe** .
 
@@ -163,7 +163,7 @@ La procedura seguente descrive come aggiungere funzionalità alla classe `CTaskD
     }
     ```
 
-Nel codice nel passaggio 9 sostituire i commenti che iniziano con `PROCESS IF` con il codice che si vuole eseguire nelle condizioni specificate.
+Nel codice del passaggio 9 sostituire i commenti che iniziano con `PROCESS IF` con il codice che si vuole eseguire in base alle condizioni specificate.
 
 Compilare l'applicazione ed eseguirla. L'applicazione visualizza la finestra di dialogo delle attività che usa i nuovi controlli e le informazioni aggiuntive.
 
@@ -173,7 +173,7 @@ La procedura seguente illustra come visualizzare `CTaskDialog` senza prima crear
 
 ### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Per visualizzare CTaskDialog senza creare un oggetto CTaskDialog
 
-1. Se non è già aperto, aprire il file MyProject.
+1. Se non è già aperto, aprire il file MyProject. cpp.
 
 1. Passare alla parentesi di chiusura per l'istruzione `if (CTaskDialog::IsSupported())` .
 
@@ -187,12 +187,12 @@ La procedura seguente illustra come visualizzare `CTaskDialog` senza prima crear
         TEMP_LINE2);
     ```
 
-Compilare l'applicazione ed eseguirla. L'applicazione visualizza due finestre di dialogo delle attività. La prima finestra di dialogo è dal **per aggiungere la funzionalità a CTaskDialog** procedure; il secondo è la finestra di dialogo dall'ultima procedura.
+Compilare l'applicazione ed eseguirla. L'applicazione visualizza due finestre di dialogo delle attività. La prima finestra di dialogo è dalla **per aggiungere la funzionalità alla procedura CTaskDialog** ; la seconda finestra di dialogo è riportata nell'ultima procedura.
 
-Questi esempi non illustrano tutte le opzioni disponibili per un `CTaskDialog`, ma consentono di iniziare. Per una descrizione completa della classe, vedere [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
+Questi esempi non illustrano tutte le opzioni disponibili per `CTaskDialog`un, ma dovrebbero essere utili per iniziare. Per una descrizione completa della classe, vedere [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
 
 ## <a name="see-also"></a>Vedere anche
 
 [Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
 [Classe CTaskDialog](../mfc/reference/ctaskdialog-class.md)<br/>
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)
+[CTaskDialog:: CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

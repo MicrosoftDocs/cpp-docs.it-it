@@ -1,6 +1,6 @@
 ---
-title: 'TN055: La migrazione delle applicazioni di classe Database ODBC MFC a classi DAO MFC'
-ms.date: 06/20/2018
+title: 'TN055: Migrazione di applicazioni di classi di database ODBC MFC a classi DAO MFC'
+ms.date: 09/17/2019
 helpviewer_keywords:
 - DAO [MFC], migration
 - TN055
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 7a1d3436a9b19c40df2a08576d797de49833f14f
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 7107964cc894a0aa45be5de362c9edd166dc0af1
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611230"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095964"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: La migrazione delle applicazioni di classe Database ODBC MFC a classi DAO MFC
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrazione di applicazioni di classi di database ODBC MFC a classi DAO MFC
 
 > [!NOTE]
-> L'ambiente di Visual C++ e le procedure guidate non supportano DAO (anche se sono incluse le classi DAO ed è comunque possibile usarli). Microsoft consiglia di usare [modelli OLE DB](../data/oledb/ole-db-templates.md) oppure [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO nella gestione delle applicazioni esistenti.
+> DAO viene usato con i database di Access ed è supportato tramite Office 2013. 3,6 è la versione finale ed è considerata obsoleta. Gli ambienti C++ visivi e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare [OLE DB modelli](../data/oledb/ole-db-templates.md) o [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
 
 ## <a name="overview"></a>Panoramica
 
 In molte situazioni potrebbe risultare utile eseguire una migrazione delle applicazioni che utilizzano le classi di database ODBC MFC alle classi di database DAO MFC. In questa nota tecnica viene illustrata in dettaglio la maggior parte delle differenze tra le classi ODBC MFC e DAO MFC. Conoscendo queste differenze, la migrazione delle applicazioni dalle classi ODBC alle classi MFC non dovrebbe risultare eccessivamente difficile.
 
-## <a name="why-migrate-from-odbc-to-dao"></a>Il motivo per cui eseguire la migrazione da ODBC a DAO
+## <a name="why-migrate-from-odbc-to-dao"></a>Vantaggi della migrazione da ODBC a DAO
 
 Esistono numerosi motivi per cui si potrebbe desiderare una migrazione delle applicazioni dalle classi di database ODBC alle classi di database DAO, ma la decisione non è necessariamente semplice o ovvia. È necessario tenere presente che il motore di database Microsoft Jet utilizzato da DAO è in grado di leggere qualsiasi origine dati ODBC per la quale sia disponibile un driver ODBC. Potrebbe essere più efficiente utilizzare le classi di database ODBC o chiamare direttamente ODBC, ma il motore di database Microsoft Jet è in grado di leggere i dati ODBC.
 
@@ -74,12 +74,12 @@ Probabilmente la maggior parte delle differenze più ovvie tra le classi consist
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date` (`COleDateTime`-base)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date`(`COleDateTime`basato su)|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-<sup>1</sup> il `RFX_Date` dipende dalla funzione `CTime` e `TIMESTAMP_STRUCT`.
+<sup>1</sup> la `RFX_Date` funzione è basata su `CTime` e `TIMESTAMP_STRUCT`.
 
 Le modifiche essenziali alle funzionalità che possono influenzare l'applicazione e che richiedono più di una semplice ridenominazione sono elencate di seguito.
 
@@ -87,9 +87,9 @@ Le modifiche essenziali alle funzionalità che possono influenzare l'applicazion
 
    Con le classi ODBC, in MFC è necessario definire queste opzioni tramite macro o tipi enumerati.
 
-   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. Ad esempio userà **snapshot** quando si specifica il tipo di `CRecordset` in ODBC ma **DB_OPEN_SNAPSHOT** quando si specifica il tipo di `CDaoRecordset`.
+   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. È ad esempio possibile utilizzare lo **snapshot** quando si specifica il `CRecordset` tipo di in ODBC, ma **DB_OPEN_SNAPSHOT** quando si `CDaoRecordset`specifica il tipo di.
 
-- Il tipo di recordset predefinito per `CRecordset` viene **snapshot** mentre il tipo di recordset predefinito per `CDaoRecordset` viene **dynaset** (vedere la nota riportata sotto per un problema aggiuntivo sugli snapshot della classe ODBC).
+- Il tipo di recordset predefinito `CRecordset` per è **snapshot** mentre il tipo di recordset `CDaoRecordset` predefinito per è **Dynaset** (vedere la nota di seguito per un ulteriore problema relativo agli snapshot della classe ODBC).
 
 - La classe ODBC `CRecordset` include un'opzione per creare un recordset di tipo forward-only. Nella classe `CDaoRecordset`, forward-only non è un tipo di recordset, ma una proprietà (o un opzione) di determinati tipi di recordset.
 
@@ -97,12 +97,12 @@ Le modifiche essenziali alle funzionalità che possono influenzare l'applicazion
 
 - Le funzioni membro della transazione delle classi ODBC sono membri di `CDatabase` e operano a livello di database. Nelle classi DAO, le funzioni membro delle transazioni sono membri di una classe di livello superiore (`CDaoWorkspace`) e pertanto possono influire su più oggetti `CDaoDatabase` che condividono la stessa area di lavoro (spazio di transazione).
 
-- La classe Exception è stata modificata. `CDBExceptions` vengono generate nelle classi ODBC e `CDaoExceptions` nelle classi DAO.
+- La classe Exception è stata modificata. `CDBExceptions`vengono generate nelle classi ODBC e `CDaoExceptions` nelle classi DAO.
 
-- `RFX_Date` viene utilizzato `CTime` e `TIMESTAMP_STRUCT` oggetti mentre `DFX_Date` utilizza `COleDateTime`. Il `COleDateTime` è quasi identico al `CTime`, ma si basa su un OLE a 8 byte **data** invece di 4 byte **time_t** pertanto può contenere un intervallo molto più grande di dati.
+- `RFX_Date`USA `CTime` oggetti `TIMESTAMP_STRUCT` e durante `DFX_Date` l' uso`COleDateTime`di. È quasi identico a `CTime`, ma si basa su una **Data** OLE a 8 byte anziché su un time_t a 4 byte, in modo da poter mantenere un intervallo di dati molto più ampio. `COleDateTime`
 
    > [!NOTE]
-   > Gli snapshot di DAO (`CDaoRecordset`) sono di sola lettura mentre gli snapshot di ODBC (`CRecordset`) possono essere aggiornati in base al driver e all'utilizzo della libreria di cursori ODBC. Se si utilizza la libreria di cursori, gli snapshot `CRecordset` sono aggiornabili. Se si utilizza uno dei driver Microsoft da Desktop Driver Pack 3.0 senza la libreria di cursori ODBC, gli snapshot `CRecordset` sono di sola lettura. Se si usa un altro driver, controllare la relativa documentazione per verificare se gli snapshot (`STATIC_CURSORS`) sono di sola lettura.
+   > Gli snapshot di DAO (`CDaoRecordset`) sono di sola lettura mentre gli snapshot di ODBC (`CRecordset`) possono essere aggiornati in base al driver e all'utilizzo della libreria di cursori ODBC. Se si utilizza la libreria di cursori, gli snapshot `CRecordset` sono aggiornabili. Se si utilizza uno dei driver Microsoft da Desktop Driver Pack 3.0 senza la libreria di cursori ODBC, gli snapshot `CRecordset` sono di sola lettura. Se si utilizza un altro driver, controllare la documentazione del driver per verificare se gli snapshot (`STATIC_CURSORS`) sono di sola lettura.
 
 ## <a name="see-also"></a>Vedere anche
 
