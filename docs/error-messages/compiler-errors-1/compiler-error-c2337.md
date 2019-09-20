@@ -1,27 +1,27 @@
 ---
 title: Errore del compilatore C2337
-ms.date: 11/04/2016
+ms.date: 09/19/2019
 f1_keywords:
 - C2337
 helpviewer_keywords:
 - C2337
 ms.assetid: eccc9178-a15e-42cd-bbd0-3cea7cf2d55b
-ms.openlocfilehash: 63f18a12ccd1962dd221324f5557c29be89eb04c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf9b3e782804add13aeaef0e6672d2dd66d193be
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188274"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158779"
 ---
 # <a name="compiler-error-c2337"></a>Errore del compilatore C2337
 
-'attribute name': attributo non trovato
+> '*attribute-name*': attributo non trovato
 
-È stato usato un attributo non supportato in questa versione di Visual C++.
+Il codice usa un attributo che non è supportato in questo contesto. In alternativa, l'attributo non è disponibile in questa versione del compilatore. Per risolvere questo problema, rimuovere l'attributo non supportato.
 
 L'esempio seguente genera l'errore C2337:
 
-```
+```cpp
 // C2337.cpp
 // compile with: /c
 [emitidl];

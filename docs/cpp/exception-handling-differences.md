@@ -1,6 +1,7 @@
 ---
 title: Gestire le eccezioni strutturate in C++
-ms.date: 08/14/2018
+description: Come gestire le eccezioni strutturate utilizzando C++ il modello di gestione delle eccezioni.
+ms.date: 09/19/2019
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-ms.openlocfilehash: 2c4f1a8c3729e2b4d49a0152425e57717f7e9997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c0e458f576325034d77676d247020adedfa33e5
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154412"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158735"
 ---
 # <a name="handle-structured-exceptions-in-c"></a>Gestire le eccezioni strutturate in C++
 
-La differenza principale tra C strutturata (SEH) di gestione delle eccezioni e gestione delle eccezioni C++ è che il modello gestisce i tipi di gestione delle eccezioni C++, mentre C del modello di gestione strutturata delle eccezioni gestisce le eccezioni di uno tipo. in particolare **unsigned int**. In altre parole, le eccezioni C sono identificate da un intero senza segno, mentre le eccezioni C++ sono identificate dal tipo di dati. Quando viene generata un'eccezione strutturata in C, ogni possibile gestore esegue un filtro che esamina il contesto di eccezione C e determina se accettare l'eccezione, passarla a un altro gestore o ignorarla. Quando viene generata un'eccezione in C++, può essere di qualsiasi tipo.
+La differenza principale tra la gestione delle eccezioni strutturate (SEH C++ ) e la gestione delle C++ eccezioni è che il modello di gestione delle eccezioni gestisce i tipi, mentre il modello di gestione delle eccezioni strutturate c gestisce le eccezioni di un tipo. in particolare, **unsigned int**. In altre parole, le eccezioni C sono identificate da un intero senza segno, mentre le eccezioni C++ sono identificate dal tipo di dati. Quando viene generata un'eccezione strutturata in C, ciascun gestore possibile esegue un filtro che esamina il contesto di eccezione C e determina se accettare l'eccezione, passarla a un altro gestore o ignorarla. Quando viene generata un'eccezione in C++, può essere di qualsiasi tipo.
 
-Una seconda differenza consiste nel fatto che il modello di gestione delle eccezioni strutturata di C è detto *asincrona*, perché si verificano eccezioni secondario per il normale flusso di controllo. Meccanismo di gestione delle eccezioni C++ è totalmente *sincrono*, il che significa che si verifichino eccezioni solo quando vengono generate.
+Una seconda differenza è che il modello di gestione delle eccezioni strutturate C viene definito *asincrono*, in quanto le eccezioni si verificano secondarie al normale flusso di controllo. Il C++ meccanismo di gestione delle eccezioni è completamente *sincrono*, il che significa che le eccezioni si verificano solo quando vengono generate.
 
-Quando si usa la [/EHs o /EHsc](../build/reference/eh-exception-handling-model.md) opzione del compilatore, senza eccezioni di handle strutturato gestori eccezioni C++. Queste eccezioni vengono gestite solo da **catch** gestori di eccezioni strutturato o **finally** strutturati i gestori di terminazione. Per informazioni, vedere [Structured Exception Handling (C/C++)](structured-exception-handling-c-cpp.md).
+Quando si usa l'opzione del compilatore [/EHS o/EHsc](../build/reference/eh-exception-handling-model.md) , C++ nessun gestore di eccezioni gestisce le eccezioni strutturate. Queste eccezioni vengono gestite solo dai gestori di eccezioni strutturate di **__except** o dai gestori di terminazione strutturati di **__finally** . Per informazioni, vedere [gestione delle eccezioni strutturate (C++C/)](structured-exception-handling-c-cpp.md).
 
-Sotto il [/EHa](../build/reference/eh-exception-handling-model.md) l'opzione del compilatore, se viene generata un'eccezione C in un programma C++, può essere gestito da un gestore di eccezioni strutturate con il filtro associato o da un C++ **catch** gestore, a seconda del valore è dinamicamente più vicino al contesto dell'eccezione. Ad esempio, il seguente programma C++ genera un'eccezione C all'interno di C++ **provare** contesto:
+Sotto l'opzione del compilatore [/EHA](../build/reference/eh-exception-handling-model.md) , se un'eccezione C viene generata in C++ un programma, può essere gestita da un gestore di eccezioni strutturato con il filtro associato o C++ da un gestore **catch** , a seconda di quale sia l'eccezione in modo dinamico. contesto. Ad esempio, questo programma C++ di esempio genera un'eccezione C all' C++ interno di un contesto **try** :
 
-## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>Esempio - Catch blocco genera un'eccezione C in C++
+## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>Esempio: intercettare un'eccezione C in C++ un blocco catch
 
 ```cpp
 // exceptions_Exception_Handling_Differences.cpp
@@ -62,9 +63,9 @@ Caught a C exception.
 
 ## <a name="c-exception-wrapper-classes"></a>Classi wrapper di eccezione C
 
-In un esempio semplice come quello precedente, l'eccezione C può essere rilevata solo dai puntini di sospensione (**...** ) **catch** gestore. Nessuna informazione sul tipo o la natura dell'eccezione viene comunicata al gestore. Anche se questo metodo funziona, in alcuni casi è possibile definire una trasformazione tra i modelli di gestione delle eccezioni due in modo che ogni eccezione C è associato a una classe specifica. A tale scopo, è possibile definire la classe "wrapper" di eccezione C che può essere utilizzata o da cui può essere derivata per associare un tipo di classe specifico a un'eccezione C. In questo modo, ogni eccezione C può essere gestita separatamente da una specifica C++ **catch** gestore, anziché tutti gli elementi in un singolo gestore.
+In un esempio semplice come quello precedente, l'eccezione C può essere rilevata solo dai puntini di sospensione ( **...** ) gestore **catch** . Nessuna informazione sul tipo o la natura dell'eccezione viene comunicata al gestore. Sebbene questo metodo funzioni, in alcuni casi potrebbe essere necessario definire una trasformazione tra i due modelli di gestione delle eccezioni in modo che ogni eccezione C sia associata a una classe specifica. Per trasformare una classe, è possibile definire una classe "wrapper" dell'eccezione C, che può essere utilizzata o derivata da per attribuire un tipo di classe specifico a un'eccezione C. In questo modo, ogni eccezione C può essere gestita separatamente da uno specifico C++ gestore **catch** , anziché da tutti in un singolo gestore.
 
-La classe wrapper potrebbe avere un'interfaccia composta da alcune funzioni membro che determinano il valore dell'eccezione e che accedono alle informazioni sul contesto delle eccezioni estese fornite dal modello di eccezione C. È anche possibile definire un costruttore predefinito e un costruttore che accetta un **unsigned int** argomento (per fornire la rappresentazione di eccezione C sottostante) e un costruttore di copia bit per bit. Di seguito è riportata una possibile implementazione di una classe wrapper di eccezione C:
+La classe wrapper potrebbe avere un'interfaccia composta da alcune funzioni membro che determinano il valore dell'eccezione e che accedono alle informazioni sul contesto delle eccezioni estese fornite dal modello di eccezione C. Potrebbe anche essere necessario definire un costruttore predefinito e un costruttore che accetti un argomento **int senza segno** (per fornire la rappresentazione di eccezione C sottostante) e un costruttore di copia bit per bit. Di seguito è illustrata una possibile implementazione di una classe wrapper di eccezione C:
 
 ```cpp
 // exceptions_Exception_Handling_Differences2.cpp
@@ -83,9 +84,9 @@ public:
 };
 ```
 
-Per usare questa classe, installare una funzione di tipo traduzione di eccezione C personalizzata che viene chiamata dal meccanismo ogni volta che viene generata un'eccezione C di gestione delle eccezioni interne. All'interno della funzione di conversione, è possibile generare qualsiasi eccezione tipizzata (probabilmente un `SE_Exception` , tipo o un tipo di classe derivato `SE_Exception`) che può essere rilevata da un C++ corrispondente appropriata **catch** gestore. La funzione di conversione può eseguire semplicemente una restituzione che indica che l'eccezione non è stata gestita. Se la funzione di conversione se stesso genera un'eccezione C, [terminare](../c-runtime-library/reference/terminate-crt.md) viene chiamato.
+Per utilizzare questa classe, installare una funzione di conversione delle eccezioni C personalizzata che viene chiamata dal meccanismo interno di gestione delle eccezioni ogni volta che viene generata un'eccezione C. All'interno della funzione translation, è possibile generare qualsiasi eccezione tipizzata ( `SE_Exception` forse un tipo o un tipo di classe `SE_Exception`derivato da) che può essere intercettato da C++ un appropriato gestore **catch** corrispondente. La funzione Translation può invece restituire, che indica che l'eccezione non è stata gestita. Se la funzione di conversione genera un'eccezione C, viene chiamato il metodo [Terminate](../c-runtime-library/reference/terminate-crt.md) .
 
-Per specificare una funzione di conversione personalizzata, chiamare il [set_se_translator](../c-runtime-library/reference/set-se-translator.md) funzione con il nome della funzione di conversione come unico argomento. La funzione di conversione che si scrive viene chiamata una volta per ogni chiamata di funzione nello stack con **provare** blocchi. Non vi è alcuna funzione di conversione predefinita; Se non si specifica una chiamando **set_se_translator**, l'eccezione C può essere rilevata solo dai puntini di sospensione **catch** gestore.
+Per specificare una funzione di conversione personalizzata, chiamare la funzione [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) con il nome della funzione di conversione come argomento singolo. La funzione di conversione che si scrive viene chiamata una volta per ogni chiamata di funzione nello stack con blocchi **try** . Non esiste alcuna funzione di conversione predefinita. Se non si specifica una chiamando **_set_se_translator**, l'eccezione C può essere rilevata solo da un gestore **catch** con i puntini di sospensione.
 
 ## <a name="example---use-a-custom-translation-function"></a>Esempio: usare una funzione di conversione personalizzata
 
@@ -145,4 +146,4 @@ nSE = 0xc0000094
 
 ## <a name="see-also"></a>Vedere anche
 
-[Combinazione di eccezioni di C++ e C (strutturato)](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+[Combinazione di C (strutturata C++ ) ed eccezioni](../cpp/mixing-c-structured-and-cpp-exceptions.md)

@@ -1,34 +1,34 @@
 ---
 title: Allineamento (dichiarazioni C++)
-description: Come viene specificato l'allineamento dei dati nel Framework moderno C++.
-ms.date: 05/30/2019
+description: Modalità di specifica dell'allineamento dei dati C++in modern.
+ms.date: 09/19/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: b6e03ac2b89624a0eb6602183d4ff4bf8b518f8d
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 67debc00343b8bee4184e020c9269011e2fcebc9
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450765"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158743"
 ---
 # <a name="alignment-c-declarations"></a>Allineamento (dichiarazioni C++)
 
-Una delle funzionalità di basso livello di C++ è costituita dalla possibilità di specificare l'allineamento preciso degli oggetti in memoria per sfruttare al massimo una specifica architettura hardware. Per impostazione predefinita, il compilatore consente di allineare i membri di classi e struct al relativo valore di dimensioni: `bool` e `char` nei limiti di 1 byte `short` nei limiti di 2 byte, `int`, `long`, e `float` su limiti di 4 byte e `long long`, `double`, e `long double` nei limiti di 8 byte. Nella maggior parte degli scenari, è non necessario mai essere interessati con allineamento in quanto l'allineamento predefinito è già ottimale. In alcuni casi, tuttavia, è possibile ottenere miglioramenti significativi delle prestazioni o risparmi, della memoria specificando un allineamento personalizzato per le strutture di dati. Prima di Visual Studio 2015 è possibile usare le parole chiave specifiche di Microsoft `__alignof` e `declspec(alignas)` per specificare un allineamento maggiore rispetto a quello predefinito. A partire da Visual Studio 2015 è necessario utilizzare le C + + 11 parole chiave standard [alignof e alignas](../cpp/alignof-and-alignas-cpp.md) per la portabilità del codice massimo. Le nuove parole chiave si comportano allo stesso modo dietro le quinte come le estensioni specifiche di Microsoft. La documentazione per le estensioni valide anche per le nuove parole chiave. Per altre informazioni, vedere [operatore alignof](../cpp/alignof-operator.md) e [allineare](../cpp/align-cpp.md). Il C++ standard non specificare il comportamento di compressione per l'allineamento in base a limiti inferiori rispetto a quello predefinito del compilatore per la piattaforma di destinazione, quindi è comunque necessario usare Microsoft #pragma [pack](../preprocessor/pack.md) in questo caso.
+Una delle funzionalità di basso livello di C++ è costituita dalla possibilità di specificare l'allineamento preciso degli oggetti in memoria per sfruttare al massimo una specifica architettura hardware. Per impostazione predefinita, il compilatore allinea i membri della classe e dello struct al relativo `bool` valore `char` di dimensione: e sui limiti `short` di 1 byte, sui limiti di `long`2 byte `float` , `int`, e sui limiti di 4 byte e `long long`, esui`long double` limiti di 8 byte. `double` Nella maggior parte degli scenari, non è mai necessario preoccuparsi dell'allineamento perché l'allineamento predefinito è già ottimale. In alcuni casi, tuttavia, è possibile ottenere miglioramenti significativi delle prestazioni o risparmi di memoria, specificando un allineamento personalizzato per le strutture di dati. Prima di Visual Studio 2015 è possibile usare le parole chiave `__alignof` specifiche di Microsoft e `declspec(alignas)` specificare un allineamento maggiore rispetto a quello predefinito. A partire da Visual Studio 2015 è necessario usare le parole chiave standard C++ 11 [alignof e aligns](../cpp/alignof-and-alignas-cpp.md) per la massima portabilità del codice. Le nuove parole chiave si comportano nello stesso modo in cui si trovino le estensioni specifiche di Microsoft. La documentazione relativa a tali estensioni si applica anche alle nuove parole chiave. Per altre informazioni, vedere [operatore __alignof](../cpp/alignof-operator.md) e [align](../cpp/align-cpp.md). Lo C++ standard non specifica il comportamento di compressione per l'allineamento sui limiti inferiori rispetto al valore predefinito del compilatore per la piattaforma di destinazione, quindi è comunque necessario usare Microsoft #pragma [Pack](../preprocessor/pack.md) in questo caso.
 
-Usare la [classe aligned_storage](../standard-library/aligned-storage-class.md) per l'allocazione di memoria delle strutture di dati con allineamenti personalizzati. Il [classe aligned_union](../standard-library/aligned-union-class.md) è per la specifica dell'allineamento con costruttori non semplici o distruttori.
+Usare la [classe aligned_storage](../standard-library/aligned-storage-class.md) per l'allocazione di memoria di strutture di dati con allineamenti personalizzati. La [classe aligned_union](../standard-library/aligned-union-class.md) è per specificare l'allineamento per le unioni con costruttori o distruttori non semplici.
 
 ## <a name="about-alignment"></a>Informazioni sull'allineamento
 
-Per allineamento si intende una proprietà di un indirizzo di memoria, espresso come modulo di indirizzo numerico di una potenza di 2. Ad esempio, l'indirizzo 0x0001103F modulo 4 è 3. Si dice che tale indirizzo allineato a 4N+3, dove 4 indica la potenza di 2 scelta. L'allineamento di un indirizzo dipende la potenza di 2 scelta. Il modulo 8 dello stesso indirizzo è 7. Si dice che un indirizzo è allineato a X se il relativo allineamento è Xn+0.
+Per allineamento si intende una proprietà di un indirizzo di memoria, espresso come modulo di indirizzo numerico di una potenza di 2. Ad esempio, l'indirizzo 0x0001103F modulo 4 è 3. Tale indirizzo viene detto allineato a 4N + 3, dove 4 indica la potenza scelta di 2. L'allineamento di un indirizzo dipende dalla potenza scelta di 2. Il modulo 8 dello stesso indirizzo è 7. Si dice che un indirizzo è allineato a X se il relativo allineamento è Xn+0.
 
-Le CPU eseguono le istruzioni che operano sui dati archiviati in memoria. I dati sono identificati dai relativi indirizzi in memoria. Inoltre, un singolo riferimento ha una dimensione. Definiamo un dato *allineati naturalmente* se l'indirizzo è allineato alle dimensioni. Viene chiamato *disallineati* in caso contrario. Ad esempio, un riferimento a virgola mobile a 8 byte è allineato naturalmente se l'indirizzo usato per facilitarne l'identificazione con un allineamento di 8 byte.
+Le CPU eseguono istruzioni che operano sui dati archiviati in memoria. I dati vengono identificati dai rispettivi indirizzi in memoria. Un singolo Datum ha anche una dimensione. Un datum viene chiamato *naturalmente allineato* se l'indirizzo è allineato alle dimensioni. In caso contrario, viene chiamato non *allineato* . Un riferimento a virgola mobile a 8 byte, ad esempio, è naturalmente allineato se l'indirizzo utilizzato per identificarlo dispone di un allineamento a 8 byte.
 
-## <a name="compiler-handling-of-data-alignment"></a>Gestione di compilatore di allineamento dei dati
+## <a name="compiler-handling-of-data-alignment"></a>Gestione del compilatore dell'allineamento dei dati
 
-I compilatori provare a effettuare allocazioni di dati in modo da evitare disallineamenti.
+I compilatori tentano di eseguire allocazioni di dati in modo da impedire l'allineamento dei dati.
 
-Per i tipi di dati semplici il compilatore assegna indirizzi che sono multipli delle dimensioni in byte del tipo di dati. Ad esempio, il compilatore assegna indirizzi a variabili di tipo `long` che sono multipli di 4, l'impostazione di 2 bit dell'indirizzo nella parte inferiore a zero.
+Per i tipi di dati semplici il compilatore assegna indirizzi che sono multipli delle dimensioni in byte del tipo di dati. Ad esempio, il compilatore assegna indirizzi a variabili di tipo `long` che sono multipli di 4, impostando i 2 bit inferiori dell'indirizzo su zero.
 
-Il compilatore aggiunge anche strutture in modo che si allinea naturalmente ogni elemento della struttura. Si consideri la struttura `struct x_` nell'esempio di codice seguente:
+Il compilatore adatta anche le strutture in modo da allineare in modo naturale ogni elemento della struttura. Si consideri la struttura `struct x_` nell'esempio di codice seguente:
 
 ```cpp
 struct x_
@@ -37,12 +37,12 @@ struct x_
    int b;      // 4 bytes
    short c;    // 2 bytes
    char d;     // 1 byte
-} MyStruct;
+} bar[3];
 ```
 
 Il compilatore aggiunge elementi di spaziatura interna in questa struttura in modo applicare naturalmente l'allineamento.
 
-Esempio di codice seguente viene illustrato come il compilatore compilatura inserisce la struttura in memoria:
+Nell'esempio di codice seguente viene illustrato il modo in cui il compilatore inserisce la struttura riempita in memoria:
 
 ```cpp
 // Shows the actual memory layout
@@ -54,20 +54,20 @@ struct x_
    short c;          // 2 bytes
    char d;           // 1 byte
    char _pad1[1];    // padding to make sizeof(x_) multiple of 4
-}
+} bar[3];
 ```
 
-1. Entrambe le dichiarazioni restituiscono `sizeof(struct x_)` 12 byte.
+Entrambe le dichiarazioni restituiscono `sizeof(struct x_)` 12 byte.
 
-1. La seconda dichiarazione include due elementi di spaziatura interna:
+La seconda dichiarazione include due elementi di spaziatura interna:
 
-1. `char _pad0[3]` Per allineare il `int b` membro su un limite di 4 byte
+1. `char _pad0[3]`per allineare il `int b` membro a un limite di 4 byte.
 
-1. `char _pad1[1]` Per allineare gli elementi della matrice della struttura `struct _x bar[3];`
+1. `char _pad1[1]`per allineare gli elementi della matrice della struttura `struct _x bar[3];` a un limite di quattro byte.
 
-1. La spaziatura interna consente di allineare gli elementi di `bar[3]` in modo da consenta l'accesso naturale.
+La spaziatura interna allinea gli elementi `bar[3]` di in modo da consentire l'accesso naturale.
 
-Nell'esempio di codice riportato di seguito viene illustrato il `bar[3]` layout della matrice:
+Nell'esempio di codice seguente viene `bar[3]` illustrato il layout della matrice:
 
 ```Output
 adr offset   element
@@ -96,4 +96,4 @@ adr offset   element
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allineamento di strutture di dati](https://en.wikipedia.org/wiki/Data_structure_alignment)
+[Allineamento della struttura dei dati](https://en.wikipedia.org/wiki/Data_structure_alignment)

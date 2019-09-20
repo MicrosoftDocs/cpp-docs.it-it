@@ -1,6 +1,6 @@
 ---
 title: _getdrive
-ms.date: 11/04/2016
+ms.date: 09/19/2019
 api_name:
 - _getdrive
 api_location:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: eb79d18c4ad177d7dc4da140e047ff3071ea3542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955082"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158757"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -50,7 +50,7 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce l'unità corrente (predefinita) (1=A, 2=B e così via). Non vi è restituzione di errori.
+Restituisce l'unità corrente (predefinita) (1=A, 2=B e così via). Un valore restituito pari a zero indica che il percorso corrente non inizia con un nome di unità lettera, ad esempio un percorso UNC. In alternativa, significa che un'allocazione del buffer interna non è riuscita. Se un'allocazione interna ha `errno` esito negativo, viene impostato su ENOMEM.
 
 ## <a name="requirements"></a>Requisiti
 
