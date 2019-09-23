@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
-ms.translationtype: HT
+ms.openlocfilehash: f6c51d85aa4a9f5516fe08dad163274051d94c13
+ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453769"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71195824"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
@@ -27,7 +27,7 @@ Definisce lo stack della classe modello e due modelli di supporto.
 > [!NOTE]
 > Anche \<la libreria dello stack > USA `#include <initializer_list>` l'istruzione.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="operators"></a>Operatori
 
@@ -39,12 +39,6 @@ Definisce lo stack della classe modello e due modelli di supporto.
 |[operator==](../standard-library/stack-operators.md#op_eq_eq)|Verifica se l'oggetto stack a sinistra dell'operatore è uguale all'oggetto stack a destra.|
 |[operator>](../standard-library/stack-operators.md#op_gt)|Verifica se l'oggetto stack a sinistra dell'operatore è maggiore dell'oggetto stack a destra.|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Verifica se l'oggetto stack a sinistra dell'operatore è maggiore o uguale all'oggetto stack a destra.|
-
-### <a name="functions"></a>Funzioni
-
-|||
-|-|-|
-|[swap]()||
 
 ### <a name="classes"></a>Classi
 

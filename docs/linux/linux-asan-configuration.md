@@ -2,12 +2,12 @@
 title: Configurare progetti Linux per l'uso di Address Sanitizer
 description: Descrive come configurare i progetti Linux C++ in Visual Studio per l'uso di Address Sanitizer.
 ms.date: 06/07/2019
-ms.openlocfilehash: 2415e8971614de35f046b699ce99c3822faf9372
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
-ms.translationtype: HT
+ms.openlocfilehash: da7197981a431becfc1231dae96f7542062de675
+ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66824182"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71195905"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Configurare progetti Linux per l'uso di Address Sanitizer
 
@@ -31,6 +31,9 @@ Quando Address Sanitizer rileva un errore, arresta l'esecuzione immediatamente. 
 È anche possibile visualizzare l'output di Address Sanitizer completo, incluso il punto in cui la memoria danneggiata è stata allocata o deallocata, nel riquadro Debug della finestra di output.
 
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Abilitare Address Sanitizer per progetti Linux basati su MSBuild
+
+> [!NOTE]
+> A partire da Visual Studio 2019 versione 16,4, i progetti AddressSanitizer per Linux sono abilitati tramite le **Proprietà** > di > configurazione**C/C++** **Enable reigienizzator Address**.
 
 Per abilitare Address Sanitizer per progetti Linux basati su MSBuild, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Proprietà**. Passare quindi a **Proprietà di configurazione** > **C/C++**  > **Sanitizer**. L'abilitazione di Address Sanitizer viene eseguita tramite flag del compilatore e del linker. Perché funzioni, è necessario ricompilare il progetto.
 
