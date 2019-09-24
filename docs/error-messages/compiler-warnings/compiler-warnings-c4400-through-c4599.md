@@ -134,12 +134,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 9f7886a88ebd98d5d7ab1848ea7a788967362ad7
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: d1a4da3d5e721c85879441a53ef4bc00549b587d
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550450"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230490"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Avvisi del compilatore da C4400 a C4599
 
@@ -208,7 +208,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 4) C4457](compiler-warning-level-4-c4457.md)|la dichiarazione di '*Identifier*' nasconde il parametro della funzione|
 |[Avviso del compilatore (livello 4) C4458](compiler-warning-level-4-c4458.md)|la dichiarazione di '*Identifier*' nasconde il membro della classe|
 |[Avviso del compilatore (livello 4) C4459](compiler-warning-level-4-c4459.md)|la dichiarazione di '*Identifier*' nasconde la dichiarazione globale|
-|[Avviso del compilatore (livello 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' Operator&#124;' gestito da WinRT, con parametro passato per riferimento. L'operatore&#124;' operator ' gestitoda WinRT ha una semantica diversa C++ rispetto all'operatore '*cpp_operator*'. si intendeva passare per valore?|
+|[Avviso del compilatore (livello 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' Operator&#124;' gestito da WinRT, con parametro passato per riferimento. L'operatore&#124; *' operator '* gestito da WinRT ha una semantica diversa C++ rispetto all'operatore '*cpp_operator*'. si intendeva passare per valore?|
 |[Avviso del compilatore (livello 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*NomeClasse*': questa classe ha un finalizzatore '! *finalizzatore*' ma nessun distruttore ' ~*dtor*'|
 |[Avviso del compilatore (livello 1, errore) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*Type*': non è possibile determinare il GUID del tipo. Il programma potrebbe bloccarsi in fase di esecuzione.|
 |[Avviso del compilatore (livello 4) C4463](compiler-warning-level-4-c4463.md)|overflow assegnazione di '*value*' a un campo di bit che può conservare solo i valori da'*MIN_VALUE*' a'*MAX_VALUE*'|
@@ -261,7 +261,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 3) C4521](../../error-messages/compiler-warnings/compiler-warning-level-3-c4521.md)|'*Class*': specificati più costruttori di copia|
 |[Avviso del compilatore (livello 3) C4522](../../error-messages/compiler-warnings/compiler-warning-level-3-c4522.md)|'*Class*': specificati più operatori di assegnazione|
 |[Avviso del compilatore (livello 3) C4523](../../error-messages/compiler-warnings/compiler-warning-level-3-c4523.md)|'*Class*': specificati più distruttori|
-|[Avviso del compilatore (livello 1) C4526](../../error-messages/compiler-warnings/compiler-warning-level-1-c4526.md)|'*Function*': la funzione membro statica non può eseguire l'override della funzione virtuale ' override della funzione virtuale ' ignorata. la funzione virtuale sarà nascosta|
+|[Avviso del compilatore (livello 1) C4526](../../error-messages/compiler-warnings/compiler-warning-level-1-c4526.md)|'*Function*': la funzione membro statica non può eseguire l'override della funzione virtuale ' override*della funzione virtuale '* ignorata. la funzione virtuale sarà nascosta|
 |[Avviso del compilatore (livello 1) C4530](../../error-messages/compiler-warnings/compiler-warning-level-1-c4530.md)|C++utilizzato gestore di eccezioni, ma la semantica di rimozione non è abilitata. Specificare/EHsc|
 |Avviso del compilatore (livello 1) c4531|C++gestione delle eccezioni non disponibile in Windows CE. Usare la gestione delle eccezioni strutturata|
 |[Avviso del compilatore (livello 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|' continue ': il salto dal blocco ' __finally/Finally ' presenta un comportamento non definito durante la gestione della terminazione|
@@ -299,13 +299,13 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Avviso del compilatore (livello 1) C4568|'*Function*': nessun membro corrisponde alla firma dell'override esplicito|
 |Avviso del compilatore (livello 3) C4569|'*Function*': nessun membro corrisponde alla firma dell'override esplicito|
 |[Avviso del compilatore (livello 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|'*Type*': non è dichiarato in modo esplicito come abstract ma ha funzioni astratte|
-|[Avviso del compilatore (livello 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Informativo: la semantica di catch (...) C++ è cambiata da Visual 7,1; le eccezioni strutturate (SEH) non vengono più rilevate|
+|[Avviso del compilatore (livello 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|informativo: la semantica di catch (...) C++ è cambiata da Visual 7,1; le eccezioni strutturate (SEH) non vengono più rilevate|
 |[Avviso del compilatore (livello 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|L'attributo [ParamArray] è deprecato in/CLR, utilizzare '.. .' invece|
 |Avviso del compilatore (livello 1) C4573|per l'utilizzo di '*lambda Function*' è necessario che il compilatore acquisisca ' This ', ma la modalità di acquisizione predefinita corrente non la consente|
 |Avviso del compilatore (livello 4) C4574|'*Identifier*' è definito come ' 0': si intendeva usare ' #if Identifier '?|
 |Avviso del compilatore (livello 1) C4575|' __vectorcall ' incompatibile con l'opzione '/CLR ': conversione in ' stdcall '|
 |Avviso del compilatore (livello 1, errore) C4576|un tipo racchiuso tra parentesi seguito da un elenco di inizializzatori è una sintassi di conversione di tipi esplicita non standard|
-|Avviso del compilatore (livello 1, disattivato) C4577|' noexcept ' usato senza la modalità di gestione delle eccezioni specificata. la chiusura dell'eccezione non è garantita. Specificare/EHsc|
+|[Avviso del compilatore (livello 1, disattivato) C4577](../../error-messages/compiler-warnings/compiler-warning-level-1-c4577.md)|' noexcept ' usato senza la modalità di gestione delle eccezioni specificata. la chiusura dell'eccezione non è garantita. Specificare/EHsc|
 |Avviso del compilatore (livello 1, errore) C4578|' ABS ': conversione da'*tipo1*' a'*tipo2*'. possibile perdita di dati (si intendeva chiamare '*Function*' o #include \<cmath >?)|
 |[Avviso del compilatore (livello 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] è deprecato; specificare System::Attribute o Platform::Metadata come classe base|
 |[Avviso del compilatore (livello 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|comportamento deprecato:' "*stringa*"' sostituita con '*String*' per elaborare l'attributo|

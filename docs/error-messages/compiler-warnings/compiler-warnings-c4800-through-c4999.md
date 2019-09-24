@@ -63,8 +63,6 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -74,7 +72,6 @@ f1_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
 helpviewer_keywords:
@@ -139,8 +136,6 @@ helpviewer_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -150,15 +145,14 @@ helpviewer_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
-ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 7e715dcbac9dc59fe09ee1f917c02a23b3c4db14
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631543"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230468"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Avvisi del compilatore da C4800 a C5999
 
@@ -185,7 +179,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 4) C4816](compiler-warning-level-4-c4816.md)|'*param*': il parametro ha una matrice di dimensioni zero che verrà troncata, a meno che l'oggetto non venga passato per riferimento|
 |[Avviso del compilatore (livello 1) C4817](compiler-warning-level-1-c4817.md)|'*member*': utilizzo non valido di ' .' per accedere a questo membro; il compilatore è stato sostituito con '->'|
 |[Avviso del compilatore (livello 1) C4819](compiler-warning-level-1-c4819.md)|Il file contiene un carattere che non può essere rappresentato nella tabella codici corrente (numero). Salvare il file in formato Unicode per evitare la perdita di dati|
-|[Avviso del compilatore (livello 4) C4820](compiler-warning-level-4-c4820.md)|riempimentobyte ' bytes ' aggiunto dopo il costrutto '*MEMBER_NAME*'|
+|[Avviso del compilatore (livello 4) C4820](compiler-warning-level-4-c4820.md)|riempimento byte '*bytes*' aggiunto dopo il costrutto '*MEMBER_NAME*'|
 |[Avviso del compilatore (livello 1) C4821](compiler-warning-level-1-c4821.md)|Impossibile determinare il tipo di codifica Unicode. salvare il file con la firma (BOM)|
 |[Avviso del compilatore (livello 1) C4822](compiler-warning-level-1-c4822.md)|' member function ': la funzione membro della classe locale non dispone di un corpo|
 |[Avviso del compilatore (livello 3) C4823](compiler-warning-level-3-c4823.md)|'*Function*': USA puntatori di blocco ma la semantica di rimozione non è abilitata. Prendere in considerazione l'uso di/EHa|
@@ -219,7 +213,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 1) C4912](compiler-warning-level-1-c4912.md)|'*attribute*': l'attributo presenta un comportamento non definito su un tipo definito dall'utente annidato|
 |[Avviso del compilatore (livello 4) C4913](compiler-warning-level-4-c4913.md)|l'operatore binario definito dall'utente ',' esiste, ma nessuno degli overload può convertire tutti gli operandi. Verrà utilizzato l'operatore binario ',' incorporato predefinito.|
 |Avviso del compilatore (livello 1) C4916|per avere un DISPID,'*Description*': deve essere introdotto da un'interfaccia|
-|[Avviso del compilatore (livello 1) C4917](compiler-warning-level-1-c4917.md)|'dichiaratore ': un GUID può essere associato solo a una classe, un'interfaccia o uno spazio dei nomi|
+|[Avviso del compilatore (livello 1) C4917](compiler-warning-level-1-c4917.md)|'*dichiaratore*': un GUID può essere associato solo a una classe, un'interfaccia o uno spazio dei nomi|
 |[Avviso del compilatore (livello 4) C4918](compiler-warning-level-4-c4918.md)|'*character*': carattere non valido nell'elenco di ottimizzazione pragma|
 |[Avviso del compilatore (livello 1) C4920](compiler-warning-level-1-c4920.md)|enum enum member member_1 = value_1 già visualizzato in enum enum As member_2 = value_2|
 |Avviso del compilatore (livello 3) C4921|'*Description*': il valore dell'attributo '*attribute*' non deve essere specificato come Multiply|
@@ -303,10 +297,10 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Avviso del compilatore (livello 3) C5042|'*Declaration*': le dichiarazioni di funzione nell'ambito del blocco non possono essere specificate come ' inline ' nello standard C++; Rimuovi identificatore ' inline '|
 |Avviso del compilatore (livello 2) C5043|'*Specification*': la specifica di eccezione non corrisponde alla dichiarazione precedente|
 |Avviso del compilatore (livello 4) C5044|Un argomento dell' *opzione* della riga di comando punta a un percorso '*path*' che non esiste|
-|[Avviso del compilatore C5045](c5045.md)|Il compilatore inserirà la mitigazione Spectre per il carico di memoria se è stata specificata l'opzione/Qspectre|
-|[Avviso del compilatore (livello 2) C5046](c5046.md)|'*Function*': Simbolo che interessa il tipo con collegamento interno non definito|
+| [Avviso del compilatore C5045](c5045.md) | Il compilatore inserirà la mitigazione Spectre per il carico di memoria se è stata specificata l'opzione/Qspectre |
+| [Avviso del compilatore (livello 2) C5046](c5046.md) | '*Function*': Simbolo che interessa il tipo con collegamento interno non definito |
 | Avviso del compilatore (livello 1) C5047 | l'uso di non \_standard\_ \_se esiste con moduli non è supportato |
-| Avviso del compilatore (livello 1) C5048 | L'uso della macro' macroname ' può produrre output non deterministici |
+| Avviso del compilatore (livello 1) C5048 | L'uso della macro '*macroname*' può produrre output non deterministici |
 | Avviso del compilatore (livello 1) C5049 | '*String*': L'incorporamento di un percorso completo può produrre output dipendente dal computer |
 | Avviso del compilatore (livello 1) C5050 | Possibile ambiente incompatibile durante l'importazione del modulo '*module_name*': *problema* |
 | Avviso del compilatore (livello 1) C5100 | \_\_Gli\_argomenti\_ vasonoriservatiperl'\_ uso in macro Variadic |
@@ -314,7 +308,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | Avviso del compilatore (livello 1) C5102 | la definizione macro '*value*' della riga di comando non valida verrà ignorata |
 | Avviso del compilatore (livello 1) C5103 | Se si incolla '*token1*' è*token2*' non si ottiene un token di pre-elaborazione valido |
 | Avviso del compilatore (livello 1) C5104 | '*String1*#*string2*' è stato trovato nell'elenco delle macro sostituzioni. si intendeva '*String1*"" #*string2*'? |
-| Avviso del compilatore (livello 1) C5105 | l'espansione della macro che produce ' defined ' presenta un comportamento non definito |
+| [Avviso del compilatore (livello 1) C5105](c5105.md) | l'espansione della macro che produce ' defined ' presenta un comportamento non definito |
 | Avviso del compilatore (livello 1) C5106 | macro ridefinita con nomi di parametro diversi |
 | Avviso del compilatore (livello 1) C5107 | manca il carattere '*char*' di terminazione |
 
