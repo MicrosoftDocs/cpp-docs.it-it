@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514682"
 ---
 # <a name="toolbar-editor-c"></a>Editor barra degliC++strumenti ()
@@ -76,7 +76,7 @@ Una bitmap utilizzata per creare una barra degli strumenti ha una larghezza mass
 
 La finestra di dialogo **nuova risorsa barra degli strumenti** presenta le proprietà seguenti:
 
-|Proprietà|DESCRIZIONE|
+|Proprietà|Descrizione|
 |---|---------------|
 |**Larghezza pulsante**|Fornisce uno spazio per immettere la larghezza dei pulsanti della barra degli strumenti che si sta convertendo da una risorsa bitmap a una risorsa della barra degli strumenti.|
 |**Altezza pulsante**|Consente di immettere l'altezza per i pulsanti della barra degli strumenti che si sta convertendo da una risorsa bitmap a una risorsa della barra degli strumenti.|
@@ -163,7 +163,7 @@ Nel riquadro **visualizzazione barra degli strumenti** trascinare il pulsante ch
 
 - Per inserire o rimuovere spazio tra i pulsanti di una barra degli strumenti, trascinarli da o verso un altro sulla barra degli strumenti.
 
-|Azione|Passaggio|
+|Operazione|Passaggio|
 |------|------|
 |Per inserire uno spazio prima di un pulsante non seguito da uno spazio|Trascinare il pulsante a destra o a sinistra fino a quando non si sovrappone al pulsante avanti circa la metà.|
 |Per inserire uno spazio prima di un pulsante seguito da uno spazio e per il mantenimento dello spazio finale|Trascinare il pulsante finché il bordo destro o inferiore sta semplicemente toccando il pulsante avanti o semplicemente si sovrappone.|

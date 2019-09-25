@@ -16,10 +16,10 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 ms.openlocfilehash: a1c7bb070a75f4406556817163931f0707706c40
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69508119"
 ---
 # <a name="mfc-activex-controls"></a>Controlli ActiveX MFC
@@ -92,7 +92,7 @@ Elaborazione dei messaggi Windows in un controllo ActiveX con finestra (se attiv
 
 La possibilità di serializzare i dati, talvolta definita come persistenza, consente al controllo di scrivere il valore delle proprietà in un'archiviazione permanente. I controlli possono quindi essere ricreati leggendo lo stato dell'oggetto dall'archiviazione.
 
-Notare che non spetta al controllo ottenere l'accesso al supporto di archiviazione. È il contenitore che deve fornire al controllo un supporto di archiviazione da utilizzare al momento giusto. Per ulteriori informazioni sulla serializzazione, vedere l' [articolo controlli ActiveX MFC: Serializzazione](../mfc/mfc-activex-controls-serializing.md). Per informazioni sull'ottimizzazione della serializzazione, vedere [ottimizzazione della persistenza e](../mfc/optimizing-persistence-and-initialization.md) dell'inizializzazione nei controlli ActiveX: Ottimizzazione.
+Notare che non spetta al controllo ottenere l'accesso al supporto di archiviazione. È il contenitore che deve fornire al controllo un supporto di archiviazione da utilizzare al momento giusto. Per ulteriori informazioni sulla serializzazione, vedere l' [articolo controlli ActiveX MFC: Serializzazione](../mfc/mfc-activex-controls-serializing.md). Per informazioni sull'ottimizzazione della serializzazione, vedere [ottimizzazione della persistenza e dell'inizializzazione](../mfc/optimizing-persistence-and-initialization.md) nei controlli ActiveX: Ottimizzazione.
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a>Installazione di strumenti e classi di controlli ActiveX
 

@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514227"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor di immagini per leC++icone ()
@@ -80,7 +80,7 @@ Il menu **immagine** , visualizzato solo quando l' **editor di immagini** è att
 |**Mostra finestra colori**|Apre la finestra **colori** , in cui è possibile scegliere i colori da usare per l'immagine.|
 |**Usa selezione come pennello**|Consente di creare un pennello personalizzato da una parte di un'immagine.<br/><br/>La selezione diventa un pennello personalizzato che distribuisce i colori nella selezione all'interno dell'immagine. Le copie della selezione rimangono lungo il percorso di trascinamento. Più lentamente si trascina, più copie vengono eseguite.|
 |**Copia e struttura selezione**|Consente di creare e strutturare una copia della selezione corrente.<br/><br/>Se il colore di sfondo è contenuto nella selezione corrente, verrà escluso se è stata selezionata l'opzione trasparente.
-|**Regolazione colori**|Apre il selettore di **colore personalizzato**, che consente di personalizzare i colori usati per l'immagine.|
+|**Regolazione colori**|Apre il **selettore di colore personalizzato**, che consente di personalizzare i colori usati per l'immagine.|
 |**Carica tavolozza**|Apre la finestra di dialogo **Carica tavolozza** , che consente di caricare i colori della tavolozza precedentemente salvati in un file. PAL.|
 |**Salva tavolozza**|Salva i colori della tavolozza in un file con estensione PAL.|
 |**Opaco**|Quando questa opzione è selezionata, rende opaca la selezione corrente.<br/><br/>Quando è deselezionata, rende trasparente la selezione corrente.|
@@ -186,7 +186,7 @@ La finestra dell' **editor di immagini** Mostra due visualizzazioni di un'immagi
 
 Una visualizzazione è la dimensione effettiva e l'altra viene ingrandita da un fattore di ingrandimento predefinito pari a 6. Le visualizzazioni in questi due riquadri vengono aggiornate automaticamente e tutte le modifiche apportate in un riquadro vengono visualizzate immediatamente nell'altra. I due riquadri semplificano l'utilizzo di una vista ingrandita dell'immagine, in cui è possibile distinguere singoli pixel e, allo stesso tempo, osservare l'effetto del lavoro sulla visualizzazione delle dimensioni effettive dell'immagine.
 
-Il riquadro sinistro usa la quantità di spazio necessaria (fino alla metà della finestra **immagine** ) per visualizzare la visualizzazione di ingrandimento 1:1 predefinita dell'immagine. Il riquadro di destra visualizza un'immagine ingrandita di ingrandimento 6:1 predefinita. È possibile modificare l'ingrandimento in ogni riquadro utilizzando lo strumento di ingrandimento sulla barra degli strumenti dell' **editor di immagini** o utilizzando i tasti di scelta rapida.
+Il riquadro sinistro usa la quantità di spazio necessaria (fino alla metà della finestra **immagine** ) per visualizzare la visualizzazione di ingrandimento 1:1 predefinita dell'immagine. Il riquadro di destra visualizza un'immagine ingrandita di ingrandimento 6:1 predefinita. È possibile modificare l'ingrandimento in ogni riquadro utilizzando lo strumento di **ingrandimento** sulla barra degli strumenti dell' **editor di immagini** o utilizzando i tasti di scelta rapida.
 
 È possibile ingrandire il riquadro inferiore della finestra dell' **editor di immagini** e utilizzare i due riquadri per visualizzare aree diverse di un'immagine di grandi dimensioni. Selezionare all'interno del riquadro per sceglierlo.
 
@@ -200,10 +200,10 @@ Per impostazione predefinita, l' **editor di immagini** Visualizza la visualizza
 
 1. Selezionare il riquadro **editor di immagini** di cui si desidera modificare il fattore di ingrandimento.
 
-1. Sulla barra degli strumenti dell' **editor di immagini** selezionare la freccia a destra dello strumento di ingrandimento e selezionare il fattore di ingrandimento dal sottomenu: **1x**, **2x**, **6x**o **8x**.
+1. Sulla barra degli strumenti dell' **editor di immagini** selezionare la freccia a destra dello **strumento di ingrandimento** e selezionare il fattore di ingrandimento dal sottomenu: **1x**, **2x**, **6x**o **8x**.
 
    > [!NOTE]
-   > Per selezionare un fattore di ingrandimento diverso da quelli elencati nello strumento di ingrandimento, usare i tasti di scelta rapida.
+   > Per selezionare un fattore di ingrandimento diverso da quelli elencati nello strumento di **ingrandimento** , usare i tasti di scelta rapida.
 
 ### <a name="to-display-or-hide-the-pixel-grid"></a>Per visualizzare o nascondere la griglia in pixel
 
@@ -215,7 +215,7 @@ Per tutti i riquadri dell' **editor di immagini** con un fattore di ingrandiment
 
 ## <a name="requirements"></a>Requisiti
 
-Nessuna
+nessuno
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
 ms.openlocfilehash: 0c9fb5588cfd44c83d8fe72c7c4aede0fedab672
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631592"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procedura dettagliata: Debug di C++ un'applicazione amp
@@ -76,13 +76,13 @@ Le istruzioni per la creazione di un progetto variano a seconda della versione d
 
 1. Fare clic su **Avanti**.
 
-1. Deselezionare la casella di controllo **intestazione** precompilata, quindi scegliere il pulsante **fine** .
+1. Deselezionare la casella di controllo **intestazione precompilata** , quindi scegliere il pulsante **fine** .
 
 1. In **Esplora soluzioni**eliminare *stdafx. h*, *targetver. h*e *stdafx. cpp* dal progetto.
 
 ::: moniker-end
 
-Prossimo
+Successivo:
 
 8. Aprire AMPMapReduce. cpp e sostituirne il contenuto con il codice seguente.
 
@@ -207,9 +207,9 @@ Prossimo
 
 10. In **Esplora soluzioni**aprire il menu di scelta rapida per **AMPMapReduce**, quindi scegliere **proprietà**.
 
-11. Nella finestra di dialogo **pagine delle proprietà** , in **proprietà di configurazione**, scegliere **CC++/**  > intestazioni precompilate.
+11. Nella finestra di dialogo **pagine delle proprietà** , in **proprietà di configurazione**, scegliere **C/C++**  > intestazioni precompilate.
 
-12. Per la proprietà dell' **intestazione** precompilata, selezionare **non usare le intestazioni**precompilate, quindi scegliere il pulsante **OK** .
+12. Per la proprietà dell' **intestazione precompilata** , selezionare **non usare le intestazioni precompilate**, quindi scegliere il pulsante **OK** .
 
 13. Nella barra dei menu scegliere **Compila** > **Compila soluzione**.
 

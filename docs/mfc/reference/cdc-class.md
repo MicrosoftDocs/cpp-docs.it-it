@@ -403,10 +403,10 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69507008"
 ---
 # <a name="cdc-class"></a>CDC (classe)
@@ -668,7 +668,7 @@ In alcuni casi è possibile che siano necessarie informazioni sulle metriche di 
 |[GetTextMetrics](#gettextmetrics)|[GetOutputTextMetrics](#getoutputtextmetrics)|
 |[GetCharWidth](#getcharwidth)|[GetOutputCharWidth](#getoutputcharwidth)|
 
-Per altre informazioni su `CDC`, vedere contesti di [dispositivo](../../mfc/device-contexts.md).
+Per altre informazioni su `CDC`, vedere [contesti di dispositivo](../../mfc/device-contexts.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -1896,7 +1896,7 @@ Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un og
 Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenente i caratteri specificati da disegnare.
 
 *nFormat*<br/>
-Specifica il metodo di formattazione del testo. Può essere qualsiasi combinazione dei valori descritti per il parametro *UFormat* in [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) nel Windows SDK. (Combinare utilizzando l'operatore or bit per bit):
+Specifica il metodo di formattazione del testo. Può essere qualsiasi combinazione dei valori descritti per il parametro *UFormat* in [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) nel Windows SDK. (Combinare utilizzando **l'operatore OR** bit per bit):
 
 > [!NOTE]
 >  Alcune combinazioni di flag *UFormat* possono causare la modifica della stringa passata. L'uso di DT_MODIFYSTRING con DT_END_ELLIPSIS o DT_PATH_ELLIPSIS può causare la modifica della stringa, causando un'asserzione `CString` nell'override. Non è possibile usare i valori DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP e DT_NOPREFIX con il valore DT_TABSTOP.
@@ -2053,7 +2053,7 @@ Non è inoltre necessario esportare il nome della funzione in un'istruzione **ex
 
 **esportazione callback int** AFunction **(LPSTR**, **LPSTR);**
 
-per fare in modo che il compilatore crei il record di esportazione appropriato per l'esportazione per nome senza alias. Questa operazione funziona per la maggior parte delle esigenze. Per alcuni casi speciali, ad esempio l'esportazione di una funzione in base al numero ordinale o l'aliasing dell'esportazione , è comunque necessario utilizzare un'istruzione EXPORTS in un file di definizione del modulo.
+per fare in modo che il compilatore crei il record di esportazione appropriato per l'esportazione per nome senza alias. Questa operazione funziona per la maggior parte delle esigenze. Per alcuni casi speciali, ad esempio l'esportazione di una funzione in base al numero ordinale o l'aliasing dell'esportazione, è comunque necessario utilizzare un'istruzione **exports** in un file di definizione del modulo.
 
 Per la compilazione di programmi Microsoft Foundation, in genere si useranno le opzioni del compilatore/GA e/GEs. L'opzione del compilatore/GW non viene usata con le classi di Microsoft Foundation. Se si usa la funzione `MakeProcInstance`di Windows, sarà necessario eseguire il cast esplicito del puntatore a funzione restituito da FARPROC al tipo necessario in questa API. Le interfacce di registrazione di callback sono ora indipendenti dai tipi (è necessario passare un puntatore a funzione che punta al tipo corretto di funzione per il callback specifico).
 
@@ -3097,7 +3097,7 @@ Valore della funzionalità richiesta se la funzione ha esito positivo.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [CPrintDialog::](../../mfc/reference/cprintdialog-class.md#getdefaults)GetDefaults.
+  Vedere l'esempio per [CPrintDialog:: GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).
 
 ##  <a name="getfontdata"></a>  CDC::GetFontData
 
@@ -3242,7 +3242,7 @@ Puntatore a un `CBrush` oggetto in caso di esito positivo; in caso contrario nul
 
 Un pennello a mezzitoni Mostra i pixel che sono alternativamente di primo piano e di sfondo per creare un modello con ditinatura. Di seguito è riportato un esempio di modello con ditinatura creato da un pennello a mezzitoni.
 
-![Dettaglio di un tratto di penna] con digitazione (../../mfc/reference/media/vc318s1.gif "Dettaglio di un tratto di penna") con digitazione
+![Dettaglio di un tratto di penna con digitazione](../../mfc/reference/media/vc318s1.gif "Dettaglio di un tratto di penna con digitazione")
 
 ##  <a name="getkerningpairs"></a>CDC:: GetKerningPairs
 
@@ -4926,7 +4926,7 @@ I tipi PT_BEZIERTO vengono sempre eseguiti in set di tre. La posizione corrente 
 
 - PT_CLOSEFIGURE specifica che la figura viene chiusa automaticamente dopo che è stato eseguito il tipo PT_LINETO o PT_BEZIERTO per questo punto. Una linea viene disegnata da questo punto al punto di PT_MOVETO o `MoveTo` al punto più recente.
 
-   Questo flag viene combinato con il tipo PT_LINETO per una riga o con il tipo PT_BEZIERTO del punto finale per una spline Bzier, usando l'operatore OR bit per bit. La posizione corrente è impostata sul punto finale della linea di chiusura.
+   Questo flag viene combinato con il tipo PT_LINETO per una riga o con il tipo PT_BEZIERTO del punto finale per una spline Bzier, usando **l'operatore OR bit per bit** . La posizione corrente è impostata sul punto finale della linea di chiusura.
 
 *nCount*<br/>
 Specifica il numero totale di punti nella matrice *lpPoints* , uguale al numero di byte nella matrice *lpTypes* .
@@ -5744,7 +5744,7 @@ Non è inoltre necessario esportare il nome della funzione in un'istruzione **ex
 
 **esportazione callback bool** AFunction ( **HDC**, `int` **);**
 
-per fare in modo che il compilatore crei il record di esportazione appropriato per l'esportazione per nome senza alias. Questa operazione funziona per la maggior parte delle esigenze. Per alcuni casi speciali, ad esempio l'esportazione di una funzione in base al numero ordinale o l'aliasing dell'esportazione , è comunque necessario utilizzare un'istruzione EXPORTS in un file di definizione del modulo.
+per fare in modo che il compilatore crei il record di esportazione appropriato per l'esportazione per nome senza alias. Questa operazione funziona per la maggior parte delle esigenze. Per alcuni casi speciali, ad esempio l'esportazione di una funzione in base al numero ordinale o l'aliasing dell'esportazione, è comunque necessario utilizzare un'istruzione **exports** in un file di definizione del modulo.
 
 Le interfacce di registrazione di callback sono ora indipendenti dai tipi (è necessario passare un puntatore a funzione che punta al tipo corretto di funzione per il callback specifico).
 
@@ -6038,7 +6038,7 @@ Se ha esito negativo, GDI_ERROR. Per ottenere informazioni estese sull'errore, c
 
 In genere, non si chiama `SetLayout` per una finestra. È invece possibile controllare il layout da destra a sinistra in una finestra impostando gli [stili della finestra estesa](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) , ad esempio WS_EX_RTLREADING. Un contesto di dispositivo, ad esempio una stampante o un metafile, non eredita questo layout. L'unico modo per impostare il contesto di dispositivo per un layout da destra a sinistra è chiamando `SetLayout`.
 
-Se si chiama il metodo selayout **(LAYOUT_RTL** ), `SetLayout` la modalità di mapping viene modificata automaticamente in MM_ISOTROPIC. Di conseguenza, una chiamata successiva a [GetMapMode](#getmapmode) restituirà MM_ISOTROPIC anziché MM_TEXT.
+Se si chiama il metodo **selayout (LAYOUT_RTL** ), `SetLayout` la modalità di mapping viene modificata automaticamente in MM_ISOTROPIC. Di conseguenza, una chiamata successiva a [GetMapMode](#getmapmode) restituirà MM_ISOTROPIC anziché MM_TEXT.
 
 In alcuni casi, ad esempio con molte bitmap, potrebbe essere necessario mantenere il layout da sinistra a destra. In questi casi, eseguire il rendering dell'immagine `BitBlt` chiamando `StretchBlt`o, quindi impostare il flag di controllo bitmap per *dwLayout* su LAYOUT_BITMAPORIENTATIONPRESERVED.
 

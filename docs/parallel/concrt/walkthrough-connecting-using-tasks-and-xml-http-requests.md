@@ -7,10 +7,10 @@ helpviewer_keywords:
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
 ms.openlocfilehash: b11b56578cadc4b3bd037acf84014a718f9fad84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512143"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procedura dettagliata: Connessione tramite attività e richieste HTTP XML
@@ -94,7 +94,7 @@ Questa sezione illustra come usare la `HttpRequest` classe in un'app UWP. L'app 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
    > [!TIP]
-   > Se l'app non richiede il supporto per l' `HttpRequest::GetAsync` annullamento, passare concurrency [:: cancellation_token:: None](reference/cancellation-token-class.md#none) ai metodi `HttpRequest::PostAsync` e.
+   > Se l'app non richiede il supporto per l' `HttpRequest::GetAsync` annullamento, passare [Concurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) ai metodi e. `HttpRequest::PostAsync`
 
 1. In MainPage. XAML. cpp, implementare il `MainPage::ProcessHttpRequest` metodo.
 
@@ -106,7 +106,7 @@ Ecco l'app in esecuzione:
 
 ![App Windows Runtime in esecuzione](../../parallel/concrt/media/concrt_usingixhr2.png "App Windows Runtime in esecuzione")
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 [Procedure dettagliate del runtime di concorrenza](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 

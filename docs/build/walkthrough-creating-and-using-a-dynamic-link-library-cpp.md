@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70026064"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: Creare e usare una libreria di collegamento dinamico personalizzata (C++)
@@ -38,7 +38,7 @@ Questa procedura dettagliata crea due soluzioni di Visual Studio: una che compil
 
 Questa procedura dettagliata non tratta alcune situazioni comuni. Il codice non Mostra l'uso di C++ dll da altri linguaggi di programmazione. Non viene illustrato come [creare una DLL di sole risorse](creating-a-resource-only-dll.md)o come utilizzare il [collegamento esplicito](linking-an-executable-to-a-dll.md#linking-explicitly) per caricare le dll in fase di esecuzione anziché in fase di caricamento. Se si è certi, è possibile usare MSVC e Visual Studio per eseguire tutte queste operazioni.
 
-Per collegamenti a ulteriori informazioni sulle DLL, vedere [Creare DLL C/C++ in Visual Studio](dlls-in-visual-cpp.md). Per ulteriori informazioni sul collegamento implicito e sul collegamento esplicito, vedere [determinare il metodo di collegamento da utilizzare](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Per informazioni sulla creazione C++ di dll da usare con i linguaggi di programmazione che usano le convenzioni di collegamento del linguaggio c, vedere [ C++ esportazione di funzioni da usare in eseguibili in linguaggio c](exporting-cpp-functions-for-use-in-c-language-executables.md). Per informazioni su come creare DLL da usare con i linguaggi .NET, vedere [Chiamata di funzioni DLL da applicazioni Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
+Per collegamenti a ulteriori informazioni sulle DLL, vedere [Creare DLL C/C++ in Visual Studio](dlls-in-visual-cpp.md). Per ulteriori informazioni sul collegamento implicito e sul collegamento esplicito, vedere [determinare il metodo di collegamento da utilizzare](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Per informazioni sulla creazione C++ di dll da usare con i linguaggi di programmazione che usano le convenzioni di collegamento del linguaggio c, vedere [esportazione C++ di funzioni da usare in eseguibili in linguaggio c](exporting-cpp-functions-for-use-in-c-language-executables.md). Per informazioni su come creare DLL da usare con i linguaggi .NET, vedere [Chiamata di funzioni DLL da applicazioni Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -194,7 +194,7 @@ A questo punto la DLL non fa molto. Successivamente, verrà creato un file di in
 
 Questo file di intestazione dichiara alcune funzioni per produrre una sequenza di Fibonacci generalizzata, dati due valori iniziali. Una chiamata a `fibonacci_init(1, 1)` genera la familiare sequenza di Fibonacci.
 
-Si notino le istruzioni del preprocessore nella parte superiore del file. Il nuovo modello di progetto per un progetto di **&#95; dll aggiunge le esportazioni NomeProgetto alle macro del preprocessore definite. In questo esempio, Visual Studio definisce **MATHLIBRARY&#95;EXPORTS** quando viene compilato il progetto di DLL MathLibrary.
+Si notino le istruzioni del preprocessore nella parte superiore del file. Il nuovo modello di progetto per un progetto di dll aggiunge le **&#95;esportazioni NomeProgetto alle macro del preprocessore definite. In questo esempio, Visual Studio definisce **MATHLIBRARY&#95;EXPORTS** quando viene compilato il progetto di DLL MathLibrary.
 
 Quando viene definita la macro **MATHLIBRARY&#95;EXPORTS**, la macro **MATHLIBRARY&#95;API** imposta il modificatore `__declspec(dllexport)` sulle dichiarazioni di funzione. Questo modificatore indica al compilatore e al linker di esportare una funzione o una variabile dalla DLL per l'uso da parte di altre applicazioni. Quando **MATHLIBRARY&#95;EXPORTS** non è definito, ad esempio, quando il file di intestazione viene incluso da un'applicazione client, **MATHLIBRARY&#95;API** applica il modificatore `__declspec(dllimport)` alle dichiarazioni. Questo modificatore ottimizza l'importazione della funzione o della variabile in un'applicazione. Per altre informazioni, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 

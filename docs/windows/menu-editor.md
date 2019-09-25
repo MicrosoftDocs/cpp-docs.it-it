@@ -40,10 +40,10 @@ helpviewer_keywords:
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
 ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514822"
 ---
 # <a name="menu-editor-c"></a>Editor menu (C++)
@@ -68,7 +68,7 @@ L' **editor di menu** consente di:
 
 1. Digitare un nome per il nuovo menu, ad esempio *file*.
 
-   Il testo digitato viene visualizzato nell' **editor di menu** e nella casella didascalia nella [finestra Proprietà](/visualstudio/ide/reference/properties-window). È possibile modificare le proprietà per il nuovo menu in questa posizione.
+   Il testo digitato viene visualizzato nell' **editor di menu** e nella casella **didascalia** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window). È possibile modificare le proprietà per il nuovo menu in questa posizione.
 
    Dopo aver assegnato al nuovo menu un nome nella barra dei menu, la casella del nuovo elemento viene spostata verso destra (per consentire l'aggiunta di un altro menu) e un'altra casella del nuovo elemento viene visualizzata sotto il primo menu in modo da poter aggiungere i comandi di menu.
 
@@ -101,7 +101,7 @@ Selezionare un nome di menu esistente e premere il tasto **ins** oppure fare cli
 1. Nella casella del nuovo elemento, digitare un nome per il nuovo comando di menu.
 
    > [!NOTE]
-   > Il testo digitato viene visualizzato nell' **editor di menu** e nella casella didascalia nella [finestra Proprietà](/visualstudio/ide/reference/properties-window). È possibile modificare le proprietà per il nuovo menu in questa posizione.
+   > Il testo digitato viene visualizzato nell' **editor di menu** e nella casella **didascalia** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window). È possibile modificare le proprietà per il nuovo menu in questa posizione.
 
    > [!TIP]
    > È possibile definire un tasto di scelta rapida che consente all'utente di selezionare il comando di menu. Digitare una e commerciale`&`() davanti a una lettera per specificarla come tasto di scelta. L'utente può selezionare il comando di menu digitando quella lettera.

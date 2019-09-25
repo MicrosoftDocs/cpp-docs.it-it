@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498612"
 ---
 # <a name="try-finally-statement"></a>Istruzione try-finally
@@ -68,7 +68,7 @@ Se si verifica un'eccezione nel blocco **__try** , il sistema operativo deve tro
 
 Si supponga ad esempio che una serie di chiamate di funzione colleghi la funzione A alla funzione D, come illustrato di seguito. Ogni funzione dispone di un gestore di terminazione. Se viene generata un'eccezione nella funzione D e gestita in, i gestori di terminazione vengono chiamati in questo ordine quando il sistema rimuove lo stack: D, C, B.
 
-![Ordine di esecuzione del&#45;gestore]di terminazione(../cpp/media/vc38cx1.gif "dell'esecuzione&#45;del gestore di terminazione") <br/>
+![Ordine di esecuzione del&#45;gestore di terminazione](../cpp/media/vc38cx1.gif "dell'esecuzione&#45;del gestore di terminazione") <br/>
 Ordine di terminazione esecuzione del gestore
 
 > [!NOTE]
@@ -86,7 +86,7 @@ Un'istruzione **goto** può anche uscire dalla sezione sorvegliata, ma peggiora 
 
 L'uscita da un'istruzione **try-finally** utilizzando la funzione di runtime [longjmp](../c-runtime-library/reference/longjmp.md) viene considerata una terminazione anomala. Non è consentito passare a un'istruzione **__try** , ma è lecito saltare di una. Devono essere eseguite tutte le istruzioni **__finally** attive tra il punto di partenza (terminazione normale del blocco **__try** ) e la destinazione (il blocco **__except** che gestisce l'eccezione). Si tratta di una rimozione locale.
 
-Se un blocco **try** viene terminato prematuramente per qualsiasi motivo, incluso un salto fuori dal blocco, il sistema esegue il blocco finally associato come parte del processo di rimozione dello stack. In questi casi, la funzione [AbnormalTermination](/windows/win32/Debug/abnormaltermination) restituisce **true** se viene chiamata dall'interno del blocco **finally** . in caso contrario, restituisce **false**.
+Se un blocco **try** viene terminato prematuramente per qualsiasi motivo, incluso un salto fuori dal blocco, il sistema esegue il blocco **finally** associato come parte del processo di rimozione dello stack. In questi casi, la funzione [AbnormalTermination](/windows/win32/Debug/abnormaltermination) restituisce **true** se viene chiamata dall'interno del blocco **finally** . in caso contrario, restituisce **false**.
 
 Il gestore terminazioni non viene chiamato se un processo viene terminato durante l'esecuzione di un'istruzione **try-finally** .
 

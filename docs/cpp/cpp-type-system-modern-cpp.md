@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498634"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
@@ -24,11 +24,11 @@ Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è 
 
 ## <a name="specifying-variable-and-function-types"></a>Specificare tipi di funzione e di variabile
 
-C++è un linguaggio *fortemente tipizzato* ed è anche tipizzato in modo *statico*; ogni oggetto ha un tipo e tale tipo non viene mai modificato (da non confondere con gli oggetti dati statici).
+C++è un linguaggio *fortemente tipizzato* ed è anche *tipizzato*in modo statico; ogni oggetto ha un tipo e tale tipo non viene mai modificato (da non confondere con gli oggetti dati statici).
 **Quando si dichiara una variabile** nel codice, è necessario specificarne il tipo in modo esplicito oppure usare la parola chiave **auto** per indicare al compilatore di dedurre il tipo dall'inizializzatore.
 **Quando si dichiara una funzione** nel codice, è necessario specificare il tipo di ciascun argomento e il relativo valore restituito oppure **void** se la funzione non restituisce alcun valore. Si verifica un'eccezione quando si utilizzano modelli di funzione che consentono l'utilizzo di argomenti di tipi arbitrari.
 
-Dopo aver dichiarato una variabile, non è più possibile modificarne il tipo. È tuttavia possibile copiare il valore della variabile o il valore restituito di una funzione in un'altra variabile di un tipo diverso. Tali operazioni sono denominate conversioni di *tipi*, che talvolta sono necessarie, ma sono anche potenziali fonti di perdita o di incorrettezza dei dati.
+Dopo aver dichiarato una variabile, non è più possibile modificarne il tipo. È tuttavia possibile copiare il valore della variabile o il valore restituito di una funzione in un'altra variabile di un tipo diverso. Tali operazioni sono denominate *conversioni di tipi*, che talvolta sono necessarie, ma sono anche potenziali fonti di perdita o di incorrettezza dei dati.
 
 Quando si dichiara una variabile di tipo POD, è consigliabile inizializzarla, ovvero assegnare ad essa un valore iniziale. Finché non viene inizializzata, una variabile presenta un valore consistente di qualsiasi bit che in precedenza si trovava in quella posizione di memoria. Si tratta di un aspetto importante di C++ da ricordare, specialmente se si è abituati a un altro linguaggio che gestisce l'inizializzazione in modo automatico. Quando si dichiara una variabile di un tipo di classe non POD, il costruttore gestisce l'inizializzazione.
 
@@ -63,10 +63,10 @@ Di seguito vengono mostrate le dimensioni relative dei tipi predefiniti:
 
 Nella tabella seguente sono elencati i tipi fondamentali di uso più comune:
 
-|Type|Dimensione|Commento|
+|Tipo|Dimensione|Commento|
 |----------|----------|-------------|
 |int|4 byte|Scelta predefinita per i valori integrali.|
-|Double|8 byte|Scelta predefinita per i valori a virgola mobile.|
+|double|8 byte|Scelta predefinita per i valori a virgola mobile.|
 |bool|1 byte|Rappresenta i valori che possono essere true o false.|
 |char|1 byte|Utilizzare i caratteri ASCII negli oggetti std::string o nelle stringhe di tipo C precedenti che non dovranno mai essere convertiti in UNICODE.|
 |wchar_t|2 byte|Rappresenta valori a caratteri "wide" che è possibile codificare in formato Unicode (UTF-16 in Windows, per altri sistemi operativi potrebbe essere diverso). Si tratta del tipo di carattere utilizzato in stringhe di tipo `std::wstring`.|
@@ -80,7 +80,7 @@ Il tipo **void** è un tipo speciale; non è possibile dichiarare una variabile 
 
 ## <a name="const-type-qualifier"></a>qualificatore di tipo const
 
-Qualsiasi tipo predefinito o definito dall'utente può essere qualificato tramite la parola chiave const. Inoltre, le funzioni membro possonoessere const-Qualified e persino **const**-overload. Il valore di un tipo const non può essere modificato dopo l'inizializzazione.
+Qualsiasi tipo predefinito o definito dall'utente può essere qualificato tramite la parola chiave const. Inoltre, le funzioni membro possono essere **const**-Qualified e persino **const**-overload. Il valore di un tipo **const** non può essere modificato dopo l'inizializzazione.
 
 ```cpp
 
@@ -88,13 +88,13 @@ const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
 ```
 
-Il qualificatore const viene ampiamente utilizzato nelle dichiarazioni di funzione e di variabile e la correttezza const è un concetto C++importante in; essenzialmente, significa usare **const** per garantire, in fase di compilazione, che i valori non vengano modificati accidentalmente. Per ulteriori informazioni, vedere [const](../cpp/const-cpp.md).
+Il qualificatore **const** viene ampiamente utilizzato nelle dichiarazioni di funzione e di variabile e la correttezza const è un concetto C++importante in; essenzialmente, significa usare **const** per garantire, in fase di compilazione, che i valori non vengano modificati accidentalmente. Per ulteriori informazioni, vedere [const](../cpp/const-cpp.md).
 
-Un tipo const è diverso dalla relativa versione non const; ad esempio, **const int** è un tipo distinto da **int**. È possibile usare l' C++ operatore **const_cast** in rari casi in cui è necessario rimuovere *const-ness* da una variabile. Per ulteriori informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Un tipo **const** è diverso dalla relativa versione non const; ad esempio, **const int** è un tipo distinto da **int**. È possibile usare l' C++ operatore **const_cast** in rari casi in cui è necessario rimuovere *const-ness* da una variabile. Per ulteriori informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="string-types"></a>Tipi di stringa
 
-In modo rigoroso C++ , il linguaggio non ha un tipo di stringa incorporato; caratteri singoli di archivio **char** e **wchar_t** : è necessario dichiarare una matrice di questi tipi per approssimare una stringa, aggiungendo un valore null di terminazione (ad `'\0'`esempio, ASCII) all'elemento della matrice dopo l'ultimo carattere valido (detto anche *Stringa di tipo C*). Le stringhe di tipo C richiedono la scrittura di una quantità maggiore di codice o l'utilizzo delle funzioni della libreria dell'utilità di stringa esterna. In moderni C++, tuttavia, sono disponibili i tipi `std::string` di libreria standard (per lestringhe di caratteri di tipo carattere a `std::wstring` 8 bit) o (per le stringhe di caratteri di tipo **wchar_t**a 16 bit). Questi C++ contenitori di librerie standard possono essere considerati come tipi di stringa nativi perché fanno parte delle librerie standard incluse in qualsiasi ambiente di compilazione conforme C++ . È sufficiente utilizzare la direttiva `#include <string>` per rendere questi tipi disponibili nel programma. (Se si utilizza MFC o ATL, è disponibile anche la classe CString, anche se non fa parte dello standard C++). L'utilizzo di matrici di caratteri con terminazione Null (le stringhe in stile C citate in precedenza) è fortemente sconsigliato nel linguaggio C++ moderno.
+In modo rigoroso C++ , il linguaggio non ha un tipo di stringa incorporato; caratteri singoli di archivio **char** e **wchar_t** : è necessario dichiarare una matrice di questi tipi per approssimare una stringa, aggiungendo un valore null di terminazione (ad `'\0'`esempio, ASCII) all'elemento della matrice dopo l'ultimo carattere valido (detto anche *Stringa di tipo C*). Le stringhe di tipo C richiedono la scrittura di una quantità maggiore di codice o l'utilizzo delle funzioni della libreria dell'utilità di stringa esterna. C++In moderni, tuttavia `std::string` , sono disponibili i tipi di libreria standard (per le stringhe di caratteri di tipo carattere a 8 bit) o `std::wstring` (per le stringhe di caratteri di tipo **wchar_t**a 16 bit). Questi C++ contenitori di librerie standard possono essere considerati come tipi di stringa nativi perché fanno parte delle librerie standard incluse in qualsiasi ambiente di compilazione conforme C++ . È sufficiente utilizzare la direttiva `#include <string>` per rendere questi tipi disponibili nel programma. (Se si utilizza MFC o ATL, è disponibile anche la classe CString, anche se non fa parte dello standard C++). L'utilizzo di matrici di caratteri con terminazione Null (le stringhe in stile C citate in precedenza) è fortemente sconsigliato nel linguaggio C++ moderno.
 
 ## <a name="user-defined-types"></a>Tipi definiti dall'utente
 
@@ -106,7 +106,7 @@ Quando si definisce una **classe**, uno **struct**, un' **Unione**o un' **enumer
 
 ## <a name="pointer-types"></a>Tipi puntatore
 
-Tornando alle versioni precedenti del linguaggio C, C++ continua a consentire la dichiarazione di una variabile di un tipo di puntatore tramite il dichiaratore speciale `*` (asterisco). Un tipo di puntatore archivia l'indirizzo della posizione in memoria in cui è archiviato il valore effettivo dei dati. In Modern C++, questi vengono definiti puntatorinon elaborati e sono accessibili nel codice tramite operatori `*` speciali (asterisco) o `->` (Dash con maggiore di). Questa operazione vienedefinita dereferenziazione e quella da usare dipende dal fatto che si dereferenzia un puntatore a un puntatore scalare o a un membro in un oggetto. L'utilizzo dei tipi di puntatore ha rappresentato per molto tempo uno degli aspetti più ostici e confusi dello sviluppo di programmi in C e C++. In questa sezione vengono descritti alcuni fatti e procedure che consentono di utilizzare i puntatori non elaborati, ma in contemporanea C++ non è più necessario (o consigliato) utilizzare i puntatori non elaborati per la proprietà dell'oggetto, a causa dell'evoluzione del [puntatore intelligente](../cpp/smart-pointers-modern-cpp.md) (illustrata di più alla fine di questa sezione). È ancora utile e sicuro utilizzare i puntatori non elaborati per l'osservazione degli oggetti, tuttavia se è necessario utilizzarli per la proprietà dell'oggetto, è necessario farlo con attenzione valutando attentamente come vengono creati ed eliminati definitivamente gli oggetti di proprietà.
+Tornando alle versioni precedenti del linguaggio C, C++ continua a consentire la dichiarazione di una variabile di un tipo di puntatore tramite il dichiaratore speciale `*` (asterisco). Un tipo di puntatore archivia l'indirizzo della posizione in memoria in cui è archiviato il valore effettivo dei dati. In Modern C++, questi vengono definiti *puntatori non elaborati*e sono accessibili nel codice tramite operatori `*` speciali (asterisco) o `->` (Dash con maggiore di). Questa operazione viene definita *dereferenziazione*e quella da usare dipende dal fatto che si dereferenzia un puntatore a un puntatore scalare o a un membro in un oggetto. L'utilizzo dei tipi di puntatore ha rappresentato per molto tempo uno degli aspetti più ostici e confusi dello sviluppo di programmi in C e C++. In questa sezione vengono descritti alcuni fatti e procedure che consentono di utilizzare i puntatori non elaborati, ma in contemporanea C++ non è più necessario (o consigliato) utilizzare i puntatori non elaborati per la proprietà dell'oggetto, a causa dell'evoluzione del [puntatore intelligente](../cpp/smart-pointers-modern-cpp.md) (illustrata di più alla fine di questa sezione). È ancora utile e sicuro utilizzare i puntatori non elaborati per l'osservazione degli oggetti, tuttavia se è necessario utilizzarli per la proprietà dell'oggetto, è necessario farlo con attenzione valutando attentamente come vengono creati ed eliminati definitivamente gli oggetti di proprietà.
 
 La prima cosa da sapere è che dichiarare una variabile di puntatore non elaborato comporta l'allocazione della sola memoria necessaria per archiviare un indirizzo di posizione in memoria a cui farà riferimento il puntatore quando verrà dereferenziato. L'allocazione della memoria per il valore di dati stesso (anche detto *Archivio di backup*) non è ancora allocata. In altre parole, dichiarando una variabile di puntatore non elaborato si crea una variabile di indirizzo di memoria, non una variabile dati effettivi. Dereferenziare una variabile di puntatore senza verificare che contenga un indirizzo valido a un archivio di backup causa un comportamento non definito (in genere un errore irreversibile) nel programma. Nell'esempio seguente viene illustrato questo tipo di errore:
 
@@ -149,7 +149,7 @@ void someFunction() {
 
 Per ulteriori informazioni sui puntatori intelligenti, vedere la pagina relativa ai [puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md).
 
-Per ulteriori informazioni sulle conversioni dei puntatori, vedere conversioni di [tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Per ulteriori informazioni sulle conversioni dei puntatori, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 Per ulteriori informazioni sui puntatori in generale, vedere [puntatori](../cpp/pointers-cpp.md).
 

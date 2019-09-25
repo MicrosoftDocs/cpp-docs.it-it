@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 20b3bafcdbaf02b0f7e40f0092d7f6661855114d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505166"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
@@ -173,14 +173,14 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Costruisce un oggetto `CMFCPropertyGridCtrl`.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |`CMFCPropertyGridCtrl::accHitTest`|Chiamata eseguita dal framework per recuperare l'elemento figlio o l'oggetto figlio in un determinato punto dello schermo. Esegue l'override di [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest).|
 |`CMFCPropertyGridCtrl::accLocation`|Chiamata eseguita dal framework per recuperare la posizione sullo schermo corrente dell'oggetto specificato. Esegue l'override di [CWnd:: accLocation](../../mfc/reference/cwnd-class.md#acclocation).|
@@ -434,7 +434,7 @@ Puntatore a una proprietà.
 
 ### <a name="return-value"></a>Valore restituito
 
-|Valore restituito|DESCRIZIONE|
+|Valore restituito|Descrizione|
 |------------------|-----------------|
 |< 0|Il nome del parametro *pProp1* è minore del nome del parametro *pProp2* .|
 |0|Il nome del parametro *pProp1* è uguale al nome del parametro *pProp2* .|
@@ -1074,7 +1074,7 @@ L' *area delle proprietà* termine fa riferimento a una delle aree nome, valore 
 
 Questo metodo imposta il valore della variabile a cui punta il parametro *pnArea* . Nella tabella seguente sono elencati i valori possibili e le aree corrispondenti.
 
-|Valore|Area|
+|Value|Area|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|Proprietà Espandi controllo box.|
 |`ClickArea::ClickName`|Nome della proprietà.|
@@ -1508,7 +1508,7 @@ in Colore delle linee disegnate tra le proprietà.
 
 Per qualsiasi parametro, specificare il `((COLORREF)-1)` valore del colore per utilizzare il colore predefinito per l'elemento del controllo griglia delle proprietà.
 
-Per personalizzare l'aspetto di una proprietà specifica, derivare una classe dalla classe [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) , quindi eseguire l'override di [CMFCPropertyGridProperty::](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname)ondisegnatoname, [CMFCPropertyGridProperty:: OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [ Metodi CMFCPropertyGridProperty:: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)e [CMFCPropertyGridProperty:: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) .
+Per personalizzare l'aspetto di una proprietà specifica, derivare una classe dalla classe [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) , quindi eseguire l'override di [CMFCPropertyGridProperty:: ondisegnatoname](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty:: OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [ Metodi CMFCPropertyGridProperty:: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)e [CMFCPropertyGridProperty:: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) .
 
 ##  <a name="setdescriptionrows"></a>  CMFCPropertyGridCtrl::SetDescriptionRows
 

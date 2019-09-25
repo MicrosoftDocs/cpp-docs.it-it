@@ -10,10 +10,10 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: 3a7f9c5720c4bd6a43a1a95f9bc19680ba0a9c1e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631717"
 ---
 # <a name="cancellation-in-the-ppl"></a>Annullamento nella libreria PPL
@@ -21,7 +21,7 @@ ms.locfileid: "69631717"
 In questo documento viene illustrato il ruolo dell'annullamento nella libreria PPL (Parallel Patterns Library), come annullare un lavoro parallelo e come determinare quando un lavoro parallelo è annullato.
 
 > [!NOTE]
->  Il runtime usa la gestione delle eccezioni per implementare l'annullamento. Non rilevare o gestire queste eccezioni nel codice. Inoltre, si consiglia di scrivere codice indipendente dalle eccezioni nei corpi delle funzioni per le attività. È ad esempio possibile utilizzare il modello di inizializzazione della *risorsa* (RAII) per garantire che le risorse vengano gestite correttamente quando viene generata un'eccezione nel corpo di un'attività. Per un esempio completo in cui viene usato il modello RAII per pulire una risorsa in un'attività annullabile [, vedere Procedura dettagliata: Rimozione di lavoro da un thread](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)dell'interfaccia utente.
+>  Il runtime usa la gestione delle eccezioni per implementare l'annullamento. Non rilevare o gestire queste eccezioni nel codice. Inoltre, si consiglia di scrivere codice indipendente dalle eccezioni nei corpi delle funzioni per le attività. È ad esempio possibile utilizzare il modello di *inizializzazione della risorsa* (RAII) per garantire che le risorse vengano gestite correttamente quando viene generata un'eccezione nel corpo di un'attività. Per un esempio completo in cui viene usato il modello RAII per pulire una risorsa in un'attività annullabile [, vedere Procedura dettagliata: Rimozione di lavoro da un thread](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)dell'interfaccia utente.
 
 ## <a name="key-points"></a>Punti chiave
 
@@ -29,13 +29,13 @@ In questo documento viene illustrato il ruolo dell'annullamento nella libreria P
 
 - Quando possibile, utilizzare i token di annullamento per annullare un lavoro. La classe [Concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) definisce un token di annullamento.
 
-- Quando si usano i token di annullamento, usare il metodo [Concurrency:: cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) per avviare l'annullamento e la funzione Concurrency [:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) per rispondere all'annullamento. Utilizzare il metodo [Concurrency:: cancellation_token:: is_canceled](reference/cancellation-token-class.md#is_canceled) per verificare se un'altra attività ha richiesto l'annullamento.
+- Quando si usano i token di annullamento, usare il metodo [Concurrency:: cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) per avviare l'annullamento e la funzione [Concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) per rispondere all'annullamento. Utilizzare il metodo [Concurrency:: cancellation_token:: is_canceled](reference/cancellation-token-class.md#is_canceled) per verificare se un'altra attività ha richiesto l'annullamento.
 
 - L'annullamento non si verifica immediatamente. Sebbene il nuovo lavoro non venga avviato se un'attività o un gruppo di attività viene annullato, il lavoro attivo deve verificare e rispondere all'annullamento.
 
 - Una continuazione basata su valori eredita il token di annullamento dell'attività precedente. Una continuazione basata su attività non eredita mai il token dell'attività precedente.
 
-- Utilizzare il metodo Concurrency [:: cancellation_token:: None](reference/cancellation-token-class.md#none) quando si chiama un costruttore o una funzione che accetta `cancellation_token` un oggetto ma non si desidera che l'operazione sia annullabile. Inoltre, se non si passa un token di annullamento al costruttore [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) o alla funzione [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) , tale attività non è annullabile.
+- Utilizzare il metodo [Concurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) quando si chiama un costruttore o una funzione che accetta `cancellation_token` un oggetto ma non si desidera che l'operazione sia annullabile. Inoltre, se non si passa un token di annullamento al costruttore [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) o alla funzione [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) , tale attività non è annullabile.
 
 ##  <a name="top"></a>Contenuto del documento
 
@@ -59,7 +59,7 @@ La libreria PPL utilizza attività e gruppi di attività per gestire attività e
 
 ![Un albero del lavoro parallelo](../../parallel/concrt/media/parallelwork_trees.png "Un albero del lavoro parallelo")
 
-Nell'esempio seguente viene illustrato il codice necessario per creare l'albero dell'illustrazione. In questo esempio `tg1` e `tg2` sono gli oggetti Concurrency [:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) ; `t1` ,`t2`, ,`t4`e sono`t5` oggetti Concurrency [:: task_handle.](../../parallel/concrt/reference/task-handle-class.md) `t3`
+Nell'esempio seguente viene illustrato il codice necessario per creare l'albero dell'illustrazione. In questo esempio `tg1` e `tg2` sono gli oggetti [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) ; `t1` ,`t2`, ,`t4`e sono`t5` oggetti [Concurrency:: task_handle.](../../parallel/concrt/reference/task-handle-class.md) `t3`
 
 [!code-cpp[concrt-task-tree#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_1.cpp)]
 
@@ -69,13 +69,13 @@ Nell'esempio seguente viene illustrato il codice necessario per creare l'albero 
 
 ##  <a name="tasks"></a>Annullamento di attività in parallelo
 
-Sono disponibili più modi per annullare un lavoro parallelo. La modalità consigliata è quella che consiste nell'utilizzo di un token di annullamento. I gruppi di attività supportano anche il metodo [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) e il metodo Concurrency [:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) . L'ultimo modo consiste nel generare un'eccezione nel corpo di una funzione lavoro dell'attività. Indipendentemente dal metodo scelto, si tenga presente che l'annullamento non si verifica immediatamente. Sebbene il nuovo lavoro non venga avviato se un'attività o un gruppo di attività viene annullato, il lavoro attivo deve verificare e rispondere all'annullamento.
+Sono disponibili più modi per annullare un lavoro parallelo. La modalità consigliata è quella che consiste nell'utilizzo di un token di annullamento. I gruppi di attività supportano anche il metodo [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) e il metodo [Concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) . L'ultimo modo consiste nel generare un'eccezione nel corpo di una funzione lavoro dell'attività. Indipendentemente dal metodo scelto, si tenga presente che l'annullamento non si verifica immediatamente. Sebbene il nuovo lavoro non venga avviato se un'attività o un gruppo di attività viene annullato, il lavoro attivo deve verificare e rispondere all'annullamento.
 
 Per altri esempi che annullano le attività [in parallelo, vedere Procedura dettagliata: Connessione tramite attività e richieste](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)http XML, [procedura: Usare l'annullamento per interrompere un ciclo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)parallelo e [procedura: Utilizzare la gestione delle eccezioni per interrompere un ciclo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)parallelo.
 
 ###  <a name="tokens"></a>Uso di un token di annullamento per annullare il lavoro parallelo
 
-Le classi `task`, `task_group` e `structured_task_group` supportano l'annullamento tramite l'utilizzo di token di annullamento. La libreria PPL definisce le classi [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) e Concurrency [:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) a questo scopo. Quando si usa un token di annullamento per annullare il lavoro, il runtime non avvia nuovo lavoro che sottoscrive tale token. Il lavoro già attivo può utilizzare la funzione membro [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) per monitorare il token di annullamento e arrestarsi quando possibile.
+Le classi `task`, `task_group` e `structured_task_group` supportano l'annullamento tramite l'utilizzo di token di annullamento. La libreria PPL definisce le classi [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) e [Concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) a questo scopo. Quando si usa un token di annullamento per annullare il lavoro, il runtime non avvia nuovo lavoro che sottoscrive tale token. Il lavoro già attivo può utilizzare la funzione membro [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) per monitorare il token di annullamento e arrestarsi quando possibile.
 
 Per avviare l'annullamento, chiamare il metodo [Concurrency:: cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) . È possibile rispondere all'annullamento nei seguenti modi:
 
@@ -90,14 +90,14 @@ Nell'esempio seguente viene illustrato il primo modello di base per l'annullamen
 La funzione `cancel_current_task` genera un'eccezione, pertanto non è necessario uscire in modo esplicito dal ciclo corrente o dalla funzione.
 
 > [!TIP]
-> In alternativa, è possibile chiamare la funzione Concurrency [:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point) anziché `cancel_current_task`.
+> In alternativa, è possibile chiamare la funzione [Concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point) anziché `cancel_current_task`.
 
 È importante chiamare `cancel_current_task` quando si risponde all'annullamento perché l'attività possa passare allo stato annullato. Se si esce prima di chiamare `cancel_current_task`, l'operazione passa allo stato completato e tutte le continuazioni basate su valori verranno eseguite.
 
 > [!CAUTION]
 > Non generare mai `task_canceled` dal codice. In alternativa, chiamare `cancel_current_task`.
 
-Quando un'attività termina nello stato annullato, il metodo [Concurrency:: Task:: Get](reference/task-class.md#get) genera Concurrency [:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Viceversa, [Concurrency:: Task:: wait](reference/task-class.md#wait) restituisce [task_status:: Cancel](reference/concurrency-namespace-enums.md#task_group_status) e non genera. Nell'esempio seguente viene illustrato questo comportamento per una continuazione basata su attività. Una continuazione basata su attività viene sempre chiamata, anche quando l'attività precedente è stata annullata.
+Quando un'attività termina nello stato annullato, il metodo [Concurrency:: Task:: Get](reference/task-class.md#get) genera [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Viceversa, [Concurrency:: Task:: wait](reference/task-class.md#wait) restituisce [task_status:: Cancel](reference/concurrency-namespace-enums.md#task_group_status) e non genera. Nell'esempio seguente viene illustrato questo comportamento per una continuazione basata su attività. Una continuazione basata su attività viene sempre chiamata, anche quando l'attività precedente è stata annullata.
 
 [!code-cpp[concrt-task-canceled#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_3.cpp)]
 
@@ -106,13 +106,13 @@ Poiché le continuazioni basate su valori ereditano il token della relativa atti
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-> Se non si passa un token di annullamento al `task` costruttore o la funzione Concurrency [:: create_task](reference/concurrency-namespace-functions.md#create_task) , tale attività non è annullabile. Inoltre, è necessario passare lo stesso token di annullamento al costruttore di tutte le attività annidate (ovvero alle attività create nel corpo di un'altra attività) per annullare contemporaneamente tutte le attività.
+> Se non si passa un token di annullamento al `task` costruttore o la funzione [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) , tale attività non è annullabile. Inoltre, è necessario passare lo stesso token di annullamento al costruttore di tutte le attività annidate (ovvero alle attività create nel corpo di un'altra attività) per annullare contemporaneamente tutte le attività.
 
 È possibile eseguire codice arbitrario quando un token di annullamento viene annullato. Se, ad esempio, l'utente sceglie un pulsante **Annulla** sull'interfaccia utente per annullare l'operazione, è possibile disabilitare tale pulsante fino a quando l'utente non avvia un'altra operazione. Nell'esempio seguente viene illustrato come utilizzare il metodo [Concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) per registrare una funzione di callback che viene eseguita quando un token di annullamento viene annullato.
 
 [!code-cpp[concrt-task-cancellation-callback#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_5.cpp)]
 
-Il parallelismo delle [attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md) dei documenti spiega la differenza tra le continuazioni basate su valori e quelle basate su attività. Se non si fornisce un oggetto `cancellation_token` a un'attività di continuazione, la continuazione eredita il token di annullamento dall'attività precedente nei modi seguenti:
+Il [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md) dei documenti spiega la differenza tra le continuazioni basate su valori e quelle basate su attività. Se non si fornisce un oggetto `cancellation_token` a un'attività di continuazione, la continuazione eredita il token di annullamento dall'attività precedente nei modi seguenti:
 
 - Una continuazione basata su valori eredita sempre il token di annullamento dell'attività precedente.
 
@@ -124,15 +124,15 @@ Questi comportamenti non sono influenzati da un'attività in cui si è verificat
 > Un'attività creata in un'altra attività (ovvero un'attività annidata) non eredita il token di annullamento dell'attività padre. Solo una continuazione basata su valori eredita il token di annullamento dell'attività precedente.
 
 > [!TIP]
-> Utilizzare il metodo Concurrency [:: cancellation_token:: None](reference/cancellation-token-class.md#none) quando si chiama un costruttore o una funzione che accetta `cancellation_token` un oggetto e non si desidera che l'operazione sia annullabile.
+> Utilizzare il metodo [Concurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) quando si chiama un costruttore o una funzione che accetta `cancellation_token` un oggetto e non si desidera che l'operazione sia annullabile.
 
-È anche possibile fornire un token di annullamento al costruttore di un oggetto `task_group` o `structured_task_group`. Un aspetto importante è che i gruppi di attività figlio ereditano il token di annullamento. Per un esempio in cui viene illustrato questo concetto utilizzando la funzione Concurrency [:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) per eseguire per `parallel_for`chiamare, vedere [annullamento degli algoritmi paralleli](#algorithms) più avanti in questo documento.
+È anche possibile fornire un token di annullamento al costruttore di un oggetto `task_group` o `structured_task_group`. Un aspetto importante è che i gruppi di attività figlio ereditano il token di annullamento. Per un esempio in cui viene illustrato questo concetto utilizzando la funzione [Concurrency:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) per eseguire per `parallel_for`chiamare, vedere [annullamento degli algoritmi paralleli](#algorithms) più avanti in questo documento.
 
 [[Torna all'inizio](#top)]
 
 #### <a name="cancellation-tokens-and-task-composition"></a>Token di annullamento e composizione di attività
 
-Le funzioni [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) e Concurrency [:: when_any](reference/concurrency-namespace-functions.md#when_all) consentono di comporre più attività per implementare modelli comuni. In questa sezione viene descritto il funzionamento di queste funzioni con i token di annullamento.
+Le funzioni [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) e [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) consentono di comporre più attività per implementare modelli comuni. In questa sezione viene descritto il funzionamento di queste funzioni con i token di annullamento.
 
 Quando si fornisce un token di annullamento per la `when_all` funzione `when_any` e, la funzione Annulla solo quando il token di annullamento viene annullato o quando una delle attività del partecipante termina in uno stato annullato o genera un'eccezione.
 
@@ -144,7 +144,7 @@ Il runtime sceglie il token di annullamento per l'attività restituita dalla fun
 
 ###  <a name="cancel"></a>Utilizzo del metodo Cancel per annullare il lavoro parallelo
 
-Il metodo [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) e Concurrency [:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) imposta un gruppo di attività sullo stato annullato. Dopo avere chiamato `cancel`, il gruppo di attività non avvia attività successive. I metodi `cancel` possono essere chiamati da più attività figlio. Un'attività annullata causa la restituzione di [Concurrency:: Cancel](reference/concurrency-namespace-enums.md#task_group_status)da parte dei metodi Concurrency: [: task_group:: wait](reference/task-group-class.md#wait) e Concurrency: [: structured_task_group:: wait](reference/structured-task-group-class.md#wait) .
+Il metodo [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) e [Concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) imposta un gruppo di attività sullo stato annullato. Dopo avere chiamato `cancel`, il gruppo di attività non avvia attività successive. I metodi `cancel` possono essere chiamati da più attività figlio. Un'attività annullata causa la restituzione di [Concurrency:: Cancel](reference/concurrency-namespace-enums.md#task_group_status)da parte dei metodi Concurrency: [: task_group:: wait](reference/task-group-class.md#wait) e [Concurrency:: structured_task_group:: wait](reference/structured-task-group-class.md#wait) .
 
 Se un gruppo di attività viene annullato, le chiamate da ogni attività figlio al runtime possono attivare un *punto di interruzione*, causando il quale il runtime genera e intercetta un tipo di eccezione interno per annullare le attività attive. Il runtime di concorrenza non definisce punti di interruzione specifici; i punti di interruzione possono verificarsi in qualsiasi chiamata al runtime. Il runtime deve gestire le eccezioni generate per poter eseguire l'annullamento. Pertanto, non gestire le eccezioni sconosciute nel corpo di un'attività.
 
@@ -152,7 +152,7 @@ Se un'attività figlio esegue un'operazione che richiede molto tempo e non viene
 
 [!code-cpp[concrt-task-tree#6](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_6.cpp)]
 
-Questo esempio verifica l'annullamento in ogni iterazione 100 del ciclo di attività.<sup></sup> La frequenza di verifica dell'annullamento dipende dalla quantità di lavoro eseguita dall'attività e dalla velocità necessaria alle attività per rispondere all'annullamento.
+Questo esempio verifica l'annullamento in ogni iterazione<sup>100 del</sup> ciclo di attività. La frequenza di verifica dell'annullamento dipende dalla quantità di lavoro eseguita dall'attività e dalla velocità necessaria alle attività per rispondere all'annullamento.
 
 Se non si dispone dell'accesso all'oggetto gruppo di attività padre, chiamare la funzione [Concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) per determinare se il gruppo di attività padre è stato annullato.
 
@@ -168,7 +168,7 @@ Il secondo esempio è simile al primo, ad eccezione del fatto che l'attività an
 
 [!code-cpp[concrt-task-tree#3](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_8.cpp)]
 
-La classe `structured_task_group` non è thread-safe. Pertanto, un'attività figlio che chiama un metodo del relativo oggetto `structured_task_group` padre produce un comportamento non specificato. Le eccezioni a questa regola sono i `structured_task_group::cancel` metodi e Concurrency [:: structured_task_group:: is_canceling](reference/structured-task-group-class.md#is_canceling) . Un'attività figlio può chiamare questi metodi per annullare il gruppo di attività padre o verificarne l'annullamento.
+La classe `structured_task_group` non è thread-safe. Pertanto, un'attività figlio che chiama un metodo del relativo oggetto `structured_task_group` padre produce un comportamento non specificato. Le eccezioni a questa regola sono i `structured_task_group::cancel` metodi e [Concurrency:: structured_task_group:: is_canceling](reference/structured-task-group-class.md#is_canceling) . Un'attività figlio può chiamare questi metodi per annullare il gruppo di attività padre o verificarne l'annullamento.
 
 > [!CAUTION]
 >  Sebbene sia possibile utilizzare un token di annullamento per annullare il lavoro eseguito da un gruppo di attività che viene eseguito come figlio di un oggetto `task`, non è possibile utilizzare i metodi `task_group::cancel` o `structured_task_group::cancel` per annullare gli oggetti `task` eseguiti in un gruppo di attività.
@@ -206,7 +206,7 @@ Nell'esempio riportato di seguito si utilizza la funzione `run_with_cancellation
 
 [!code-cpp[concrt-cancel-parallel-for#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_11.cpp)]
 
-Nell'esempio seguente viene utilizzato il metodo Concurrency [:: structured_task_group:: run_and_wait](reference/structured-task-group-class.md#run_and_wait) per chiamare `parallel_for` l'algoritmo. Il metodo `structured_task_group::run_and_wait` attende il completamento dell'attività fornita. L'oggetto `structured_task_group` consente alla funzione lavoro di annullare l'attività.
+Nell'esempio seguente viene utilizzato il metodo [Concurrency:: structured_task_group:: run_and_wait](reference/structured-task-group-class.md#run_and_wait) per chiamare `parallel_for` l'algoritmo. Il metodo `structured_task_group::run_and_wait` attende il completamento dell'attività fornita. L'oggetto `structured_task_group` consente alla funzione lavoro di annullare l'attività.
 
 [!code-cpp[concrt-task-tree#7](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_12.cpp)]
 

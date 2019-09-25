@@ -4,10 +4,10 @@ ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 ms.openlocfilehash: 8dbf18d24c0369507743c3c1da624838f9ab4703
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69513829"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedura: Usare Windows 10 SDK in un'applicazione desktop di Windows
@@ -42,9 +42,9 @@ A partire da Visual Studio 2015 e Windows 10 SDK, la libreria CRT è stata suddi
 
    ![Versione piattaforma di destinazione](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
-   Questa azione modifica i valori delle macro del progetto che includono i percorsi ai file di intestazione e ai file delle librerie. Per visualizzare le modifiche apportate, nella sezione **directory C++ visive** della finestra di dialogo delle **proprietà del progetto** scegliere una delle proprietà, ad esempio **directory**di inclusione, scegliere di aprire \<l'elenco a discesa e scegliere Modifica >. Viene visualizzata la finestra di dialogo **Directory di inclusione** .
+   Questa azione modifica i valori delle macro del progetto che includono i percorsi ai file di intestazione e ai file delle librerie. Per visualizzare le modifiche apportate, nella sezione **directory visive C++**  della finestra di dialogo delle **proprietà del progetto** scegliere una delle proprietà, ad esempio directory di **inclusione**, scegliere di aprire \<l'elenco a discesa e scegliere Modifica >. Viene visualizzata la finestra di dialogo **Directory di inclusione** .
 
-   Finestra di ![dialogo Directory] di inclusione (../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
+   Finestra di ![dialogo Directory di inclusione](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 
    Scegliere le **macro > pulsante >** e scorrere verso Windows SDK il basso l'elenco di macro per visualizzare tutti i nuovi valori.
 
