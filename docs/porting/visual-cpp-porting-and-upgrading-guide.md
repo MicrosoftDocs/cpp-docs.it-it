@@ -2,13 +2,13 @@
 title: Guida al porting e aggiornamento in Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.topic: landing-page
-ms.openlocfilehash: eed1f3d6ba66aa77561d610530f820b09cf439df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 55bfb9a1ad23a0e4a3efa7f0a9361523c6c9754d
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216367"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274684"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guida al porting e aggiornamento in Visual C++
 

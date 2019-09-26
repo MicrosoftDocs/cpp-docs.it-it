@@ -1,7 +1,7 @@
 ---
 title: Estensioni componenti per .NET e UWP
 ms.date: 10/12/2018
-ms.topic: landing-page
+ms.topic: overview
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 76cbb20d108745984490e67b53db39f58e34d327
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70311650"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274676"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Estensioni componenti per .NET e UWP
 
@@ -43,9 +43,9 @@ Nella tabella seguente sono elencate le parole chiave nell'estensione del lingua
 |**value class**<br /><br /> **value struct**|No|Dichiara una classe di valori.|[Classi e struct](classes-and-structs-cpp-component-extensions.md)|
 |**interface class**<br /><br /> **interface struct**|No|Dichiara un'interfaccia.|[interface class](interface-class-cpp-component-extensions.md)|
 |**enum class**<br /><br /> **enum struct**|No|Dichiara un'enumerazione.|[enum class](enum-class-cpp-component-extensions.md)|
-|**proprietà**|Sì|Dichiara una proprietà.|[proprietà](property-cpp-component-extensions.md)|
+|**proprietà**|Yes|Dichiara una proprietà.|[proprietà](property-cpp-component-extensions.md)|
 |**delegate**|Yes|Dichiara un delegato.|[delegate (C++/CLI e C++/CX)](delegate-cpp-component-extensions.md)|
-|**event**|Sì|Dichiara un evento.|[event](event-cpp-component-extensions.md)|
+|**event**|Yes|Dichiara un evento.|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Identificatori di override
 
@@ -65,7 +65,7 @@ Le parole chiave seguenti sono state aggiunte per supportare tipi generici. Per 
 |Parola chiave|Sensibile al contesto|Scopo|
 |-------------|-----------------------|-------------|
 |**generic**|No|Dichiara un tipo generico.|
-|**where**|Sì|Specifica i vincoli che vengono applicati a un parametro di tipo generico.|
+|**where**|Yes|Specifica i vincoli che vengono applicati a un parametro di tipo generico.|
 
 ## <a name="miscellaneous-keywords"></a>Varie parole chiave
 
@@ -73,12 +73,12 @@ Le parole chiave seguenti sono state aggiunte alle estensioni di C++.
 
 |Parola chiave|Sensibile al contesto|Scopo|Riferimenti|
 |-------------|-----------------------|-------------|---------------|
-|**finally**|Sì|Indica il comportamento di gestione delle eccezioni predefinito.|[Gestione delle eccezioni](exception-handling-cpp-component-extensions.md)|
+|**finally**|Yes|Indica il comportamento di gestione delle eccezioni predefinito.|[Gestione delle eccezioni](exception-handling-cpp-component-extensions.md)|
 |**for each, in**|No|Enumera gli elementi di una raccolta.|[for each, in](../dotnet/for-each-in.md)|
 |**gcnew**|No|Alloca tipi sull'heap sottoposto a Garbage Collection. Usare al posto di **new** e **delete**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
-|**ref new**|Sì|Alloca un tipo Windows Runtime. Usare al posto di **new** e **delete**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
-|**initonly**|Sì|Indica che un membro può essere inizializzato solo in fase di dichiarazione o in un costruttore statico.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**literal**|Sì|Crea una variabile letterale.|[literal](literal-cpp-component-extensions.md)|
+|**ref new**|Yes|Alloca un tipo Windows Runtime. Usare al posto di **new** e **delete**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
+|**initonly**|Yes|Indica che un membro può essere inizializzato solo in fase di dichiarazione o in un costruttore statico.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
+|**literal**|Yes|Crea una variabile letterale.|[literal](literal-cpp-component-extensions.md)|
 |**nullptr**|No|Indica che un handle o un puntatore non punta a un oggetto.|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Costrutti di modello
@@ -97,7 +97,7 @@ I seguenti costrutti di linguaggio vengono implementati come modelli, anziché c
 
 I dichiaratori di tipo seguenti indicano al runtime di gestire automaticamente la durata e l'eliminazione degli oggetti allocati.
 
-|Operator|Scopo|Riferimenti|
+|Operatore|Scopo|Riferimenti|
 |--------------|-------------|---------------|
 |`^`|Dichiara un handle a un oggetto, ovvero un puntatore a un oggetto Windows Runtime o CLR che viene automaticamente eliminato quando non è più utilizzabile.|[Operatore handle a oggetto (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Dichiara un riferimento di rilevamento, ovvero un riferimento a un oggetto Windows Runtime o CLR che viene automaticamente eliminato quando non è più utilizzabile.|[Operatore di riferimento di rilevamento](tracking-reference-operator-cpp-component-extensions.md)|

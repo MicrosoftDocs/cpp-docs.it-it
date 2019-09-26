@@ -1,6 +1,7 @@
 ---
 title: _getcwd, _wgetcwd
-ms.date: 11/04/2016
+description: Funzioni della libreria di runtime C _getcwd, _wgetcwd ottenere la directory di lavoro corrente.
+ms.date: 09/24/2019
 api_name:
 - _wgetcwd
 - _getcwd
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955239"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274623"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -62,10 +63,10 @@ wchar_t *_wgetcwd(
 
 ### <a name="parameters"></a>Parametri
 
-*buffer*<br/>
+*buffer*\
 Posizione di archiviazione per il percorso.
 
-*maxlen*<br/>
+*MAXLEN*\
 Lunghezza massima del percorso in caratteri: **char** per **_getcwd** e **wchar_t** per **_wgetcwd**.
 
 ## <a name="return-value"></a>Valore restituito
@@ -78,7 +79,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 La funzione **_getcwd** ottiene il percorso completo della directory di lavoro corrente per l'unità predefinita e lo archivia nel *buffer*. L'argomento integer *maxlen* specifica la lunghezza massima per il percorso. Si verifica un errore se la lunghezza del percorso, incluso il carattere null di terminazione, supera *maxlen*. L'argomento *buffer* può essere **null**. un buffer di almeno dimensioni *maxlen* (solo se necessario) viene allocato automaticamente, usando **malloc**, per archiviare il percorso. Questo buffer può essere successivamente liberato chiamando **Free** e passandogli il valore restituito **_getcwd** (un puntatore al buffer allocato).
 
-**_getcwd** restituisce una stringa che rappresenta il percorso della directory di lavoro corrente. Se la directory di lavoro corrente è la radice, la stringa termina con una barra **\\** rovesciata (). Se la directory di lavoro corrente è impostata su una directory diversa dalla quella radice, la stringa termina con il nome della directory e non con una barra rovesciata.
+**_getcwd** restituisce una stringa che rappresenta il percorso della directory di lavoro corrente. Se la directory di lavoro corrente è la radice, la stringa termina con una barra`\`rovesciata (). Se la directory di lavoro corrente è impostata su una directory diversa dalla quella radice, la stringa termina con il nome della directory e non con una barra rovesciata.
 
 **_wgetcwd** è una versione a caratteri wide di **_getcwd**; l'argomento del *buffer* e il valore restituito di **_wgetcwd** sono stringhe a caratteri wide. **_wgetcwd** e **_getcwd** si comportano in modo identico.
 
@@ -103,26 +104,28 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ```C
 // crt_getcwd.c
+// Compile with: cl /W4 crt_getcwd.c
 // This program places the name of the current directory in the
 // buffer array, then displays the name of the current directory
 // on the screen. Passing NULL as the buffer forces getcwd to allocate
 // memory for the path, which allows the code to support file paths
 // longer than _MAX_PATH, which are supported by NTFS.
 
-#include <direct.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <direct.h> // _getcwd
+#include <stdlib.h> // free, perror
+#include <stdio.h>  // printf
+#include <string.h> // strlen
 
 int main( void )
 {
    char* buffer;
 
    // Get the current working directory:
-   if( (buffer = _getcwd( NULL, 0 )) == NULL )
+   if ( (buffer = _getcwd( NULL, 0 )) == NULL )
       perror( "_getcwd error" );
    else
    {
-      printf( "%s \nLength: %d\n", buffer, strnlen(buffer) );
+      printf( "%s \nLength: %zu\n", buffer, strlen(buffer) );
       free(buffer);
    }
 }
@@ -134,7 +137,7 @@ C:\Code
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
-[_chdir, _wchdir](chdir-wchdir.md)<br/>
-[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
-[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
+[Controllo delle directory](../../c-runtime-library/directory-control.md)\
+[_chdir, _wchdir](chdir-wchdir.md)\
+[_mkdir, _wmkdir](mkdir-wmkdir.md)\
+[_rmdir, _wrmdir](rmdir-wrmdir.md)
