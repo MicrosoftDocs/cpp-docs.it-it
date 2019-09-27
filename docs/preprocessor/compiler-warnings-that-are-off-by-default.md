@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
+ms.openlocfilehash: d497886b22c7a90ab7cda47e46dc13daf297b192
+ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70220481"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314464"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avvisi del compilatore disattivati per impostazione predefinita
 
@@ -150,14 +150,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |C5042 (livello 3)|'*Function*': le dichiarazioni di funzione nell'ambito del blocco non possono essere specificate come ' inline ' nello standard C++; Rimuovi identificatore ' inline ' <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Il compilatore inserirà la mitigazione Spectre per il carico di memoria se l'opzione/Qspectre è specificata <sup>15,7</sup>|
 
-<sup>14,1</sup> questo avviso è disponibile a partire da Visual Studio 2015 Update 1. \
-<sup>14,3</sup> questo avviso è disponibile a partire da Visual Studio 2015 Update 3. \
-<sup>15,3</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,3. \
-<sup>15,5</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,5. \
-<sup>15,7</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,7. \
-<sup>15,8</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,8. \
-<sup>16,0</sup> questo avviso è disponibile a partire da Visual Studio 2019 RTM. \
-<sup>Perm</sup> Questo avviso è disattivato a meno che non sia stata impostata l'opzione del compilatore [/permissive-](../build/reference/permissive-standards-conformance.md) .
+<sup>14,1</sup> questo avviso è disponibile a partire da Visual Studio 2015 Update 1.\\ <sup>14,3</sup> questo avviso è disponibile a partire da Visual Studio 2015 Update 3.\\ <sup>15,3</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,3.\\ <sup>15,5</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,5.\\ <sup>15,7</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,7.\\ <sup>15,8</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,8.\\ <sup>16,0</sup> questo avviso è disponibile a partire da Visual Studio 2019 RTM.\\ <sup>Perm</sup> Questo avviso è disattivato a meno che non sia stata impostata l'opzione del compilatore [/permissive-](../build/reference/permissive-standards-conformance.md) .
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avvisi disattivati per impostazione predefinita nelle versioni precedenti
 
