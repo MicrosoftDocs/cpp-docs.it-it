@@ -1,55 +1,58 @@
 ---
 title: Cenni preliminari su LIB
-ms.date: 11/04/2016
+description: Panoramica dell'utilizzo e delle opzioni dello strumento libreria, lib. exe.
+ms.date: 09/25/2019
 f1_keywords:
 - Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 97d7b8892574fbe485a8d6c5e344e4a77aaf8519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7223ef0a624cf15c43bd067db8a7919efd27df17
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320279"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685493"
 ---
 # <a name="overview-of-lib"></a>Cenni preliminari su LIB
 
-LIB crea librerie standard, librerie di importazione ed esportare file di cui è possibile usare con [collegamento](linker-options.md) durante la creazione di un programma. LIB viene eseguito da un prompt dei comandi.
+LIB (lib. exe) crea librerie standard, librerie di importazione e file di esportazione che è possibile usare con il [collegamento](linker-options.md) durante la compilazione di un programma. LIB viene eseguito da un prompt dei comandi.
 
-È possibile usare LIB nelle modalità seguenti:
+È possibile utilizzare LIB nelle modalità seguenti:
 
-- [Creando o modificando una libreria COFF](managing-a-library.md)
+- [Compilazione o modifica di una libreria COFF](managing-a-library.md)
 
-- [L'estrazione di un oggetto membro in un file](extracting-a-library-member.md)
+- [Estrazione di un oggetto membro in un file](extracting-a-library-member.md)
 
-- [Creazione di un file di esportazione e una libreria di importazione](working-with-import-libraries-and-export-files.md)
+- [Creazione di un file di esportazione e di una libreria di importazione](working-with-import-libraries-and-export-files.md)
 
-Queste modalità si escludono a vicenda; è possibile usare LIB nella sola modalità alla volta.
+Queste modalità si escludono a vicenda. è possibile utilizzare LIB in una sola modalità alla volta.
 
 ## <a name="lib-options"></a>Opzioni di LIB
 
-Nella tabella seguente sono elencate le opzioni per lib.exe, con un collegamento a informazioni aggiuntive.
+Nella tabella seguente sono elencate le opzioni di lib. exe, con un collegamento a ulteriori informazioni.
 
 |Opzione|Descrizione|
 |-|-|
-|**/DEF**|Creare una libreria di importazione e un file di esportazione.<br/><br/>Per altre informazioni, vedere [compilazione di una libreria di importazione e File di esportazione](building-an-import-library-and-export-file.md).|
-|**/ERRORREPORT**|   Inviare a Microsoft informazioni sugli errori interni con lib.exe.<br/><br/>Per altre informazioni, vedere [esecuzione di LIB](running-lib.md).|
-|**/EXPORT**|   Esporta una funzione dal programma.<br/><br/>Per altre informazioni, vedere [compilazione di una libreria di importazione e File di esportazione](building-an-import-library-and-export-file.md).|
-|**/EXTRACT**|   Creare un file oggetto (obj) che contiene una copia di un membro di una libreria esistente.<br/><br/>Per altre informazioni, vedere [l'estrazione di un membro di una libreria](extracting-a-library-member.md).|
-|**/INCLUDE**|   Aggiunge un simbolo alla tabella dei simboli.<br/><br/>Per altre informazioni, vedere [compilazione di una libreria di importazione e File di esportazione](building-an-import-library-and-export-file.md).|
-|**/LIBPATH**|   Esegue l'override del percorso delle librerie dell'ambiente.<br/><br/>Per altre informazioni, vedere [gestione di una libreria](managing-a-library.md).|
-|**/LIST**|   Visualizza le informazioni sulla libreria di output nell'output standard.<br/><br/>Per altre informazioni, vedere [gestione di una libreria](managing-a-library.md).|
-|**/LTCG**|   Fa sì che la libreria essere compilate utilizzando generazione codice in fase di collegamento.<br/><br/>Per altre informazioni, vedere [esecuzione di LIB](running-lib.md).|
-|**/MACHINE**|   Specifica la piattaforma di destinazione per il programma.<br/><br/>Per altre informazioni, vedere [esecuzione di LIB](running-lib.md).|
-|**/NAME**|   Quando si compila una libreria di importazione, specifica il nome della DLL per il quale viene compilata la libreria di importazione.<br/><br/>Per altre informazioni, vedere [gestione di una libreria](managing-a-library.md).|
-|**/NODEFAULTLIB**|   Rimuove uno o più librerie predefinite dall'elenco delle librerie di che viene eseguita la ricerca durante la risoluzione di riferimenti esterni.<br/><br/>Per altre informazioni, vedere [gestione di una libreria](managing-a-library.md).|
-|**/NOLOGO**|   Evita la visualizzazione di LIB copyright messaggio e numero di versione e impedire che vengano visualizzati dei file di comando.<br/><br/>Per altre informazioni, vedere [esecuzione di LIB](running-lib.md).|
-|**/OUT**|   Sostituisce il nome di file di output predefinito.<br/><br/>Per altre informazioni, vedere [gestione di una libreria](managing-a-library.md).|
-|**/REMOVE**|   Omette un oggetto dalla libreria di output.<br/><br/>Per altre informazioni, vedere [gestione di una libreria](managing-a-library.md).|
-|**/SUBSYSTEM**|   Indica al sistema operativo come eseguire un programma creato mediante il collegamento alla libreria di output.<br/><br/>Per altre informazioni, vedere [gestione di una libreria](managing-a-library.md).|
-|**/VERBOSE**|   Visualizza i dettagli sullo stato di avanzamento della sessione, inclusi i nomi dei file con estensione obj da aggiungere.<br/><br/>Per altre informazioni, vedere [esecuzione di LIB](running-lib.md).|
-|**/WX**|   Considera gli avvisi come errori.<br/><br/>Per altre informazioni, vedere [esecuzione di LIB](running-lib.md).|
+|**/DEF**|Creare una libreria di importazione e un file di esportazione.<br/><br/>Per ulteriori informazioni, vedere [compilazione di una libreria di importazione e di un file di esportazione](building-an-import-library-and-export-file.md).|
+|**/ERRORREPORT**|   Inviare informazioni a Microsoft sugli errori interni con lib. exe.<br/><br/>Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
+|**/EXPORT**|   Esporta una funzione dal programma.<br/><br/>Per ulteriori informazioni, vedere [compilazione di una libreria di importazione e di un file di esportazione](building-an-import-library-and-export-file.md).|
+|**/EXTRACT**|   Creare un file oggetto (. obj) contenente una copia di un membro di una libreria esistente.<br/><br/>Per ulteriori informazioni, vedere [estrazione di un membro di libreria](extracting-a-library-member.md).|
+|**/INCLUDE**|   Aggiunge un simbolo alla tabella dei simboli.<br/><br/>Per ulteriori informazioni, vedere [compilazione di una libreria di importazione e di un file di esportazione](building-an-import-library-and-export-file.md).|
+|**/LIBPATH**|   Esegue l'override del percorso delle librerie dell'ambiente.<br/><br/>Per ulteriori informazioni, vedere [gestione di una libreria](managing-a-library.md).|
+|**/LINKREPRO**|   Crea gli elementi necessari per riprodurre un arresto anomalo o un errore interno di lib. exe.<br/><br/>Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
+|**/LINKREPROTARGET**|   Genera gli elementi **/LINKREPRO** solo quando lib. exe viene usato con un file specificato.<br/><br/>Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
+|**/LIST**|   Visualizza le informazioni sulla libreria di output per l'output standard.<br/><br/>Per ulteriori informazioni, vedere [gestione di una libreria](managing-a-library.md).|
+|**/LTCG**|   Fa in modo che la libreria venga compilata utilizzando la generazione di codice in fase di collegamento.<br/><br/>Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
+|**/MACHINE**|   Specifica la piattaforma di destinazione per il programma.<br/><br/>Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
+|**/NAME**|   Quando si compila una libreria di importazione, specifica il nome della DLL per la quale viene compilata la libreria di importazione.<br/><br/>Per ulteriori informazioni, vedere [gestione di una libreria](managing-a-library.md).|
+|**/NODEFAULTLIB**|   Rimuove una o più librerie predefinite dall'elenco di librerie che esegue la ricerca durante la risoluzione dei riferimenti esterni.<br/><br/>Per ulteriori informazioni, vedere [gestione di una libreria](managing-a-library.md).|
+|**/NOLOGO**|   Elimina la visualizzazione del messaggio di copyright e del numero di versione di LIB e impedisce l'eco dei file di comando.<br/><br/>Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
+|**/OUT**|   Esegue l'override del nome file di output predefinito.<br/><br/>Per ulteriori informazioni, vedere [gestione di una libreria](managing-a-library.md).|
+|**/REMOVE**|   Omette un oggetto dalla libreria di output.<br/><br/>Per ulteriori informazioni, vedere [gestione di una libreria](managing-a-library.md).|
+|**/SUBSYSTEM**|   Indica al sistema operativo come eseguire un programma creato mediante il collegamento alla libreria di output.<br/><br/>Per ulteriori informazioni, vedere [gestione di una libreria](managing-a-library.md).|
+|**/VERBOSE**|   Visualizza i dettagli sullo stato di avanzamento della sessione, inclusi i nomi dei file con estensione obj da aggiungere.<br/><br/>Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
+|**/WX**|   Considera gli avvisi come errori.<br/><br/>Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
 
 ## <a name="see-also"></a>Vedere anche
 

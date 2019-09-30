@@ -8,26 +8,26 @@ helpviewer_keywords:
 - dialog templates [MFC], MFC framework
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
-ms.openlocfilehash: 88027df7433267925e91db2d368b744cee8a9e75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15d01924be811a9c9ec8ea333870f444bf9aa61a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182293"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685826"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Componenti della finestra di dialogo nel framework
 
-Nel framework MFC, una finestra di dialogo presenta due componenti:
+Nel framework MFC una finestra di dialogo include due componenti:
 
-- Una risorsa modello di finestra di dialogo che specifica i controlli della finestra di dialogo e sulla relativa posizione.
+- Una risorsa modello di finestra di dialogo che specifica i controlli della finestra di dialogo e la relativa posizione.
 
-   La risorsa finestra di dialogo Archivia un modello di finestra di dialogo da cui Windows crea la finestra di dialogo e lo visualizza. Il modello specifica le caratteristiche della finestra di dialogo, tra cui le dimensioni, posizione, lo stile e i tipi e le posizioni dei controlli della finestra di dialogo. Si userà in genere un modello di finestra di dialogo archiviato come una risorsa, ma è anche possibile creare il proprio modello in memoria.
+   La risorsa finestra di dialogo Archivia un modello di finestra di dialogo da cui Windows crea la finestra di dialogo e la Visualizza. Il modello specifica le caratteristiche della finestra di dialogo, incluse le dimensioni, la posizione, lo stile e i tipi e le posizioni dei controlli della finestra di dialogo. Si userà in genere un modello di finestra di dialogo archiviato come risorsa, ma è anche possibile creare un modello personalizzato in memoria.
 
-- Una classe di finestra di dialogo, derivata da [CDialog](../mfc/reference/cdialog-class.md), per fornire un'interfaccia programmatica per gestire la finestra di dialogo.
+- Una classe di finestre di dialogo, derivata da [CDialog](../mfc/reference/cdialog-class.md), per fornire un'interfaccia a livello di codice per la gestione della finestra di dialogo.
 
-   Una finestra di dialogo è una finestra e verrà collegata a una finestra di Windows quando visibile. Quando viene creata la finestra di dialogo, viene usata la risorsa modello di finestra di dialogo come modello per la creazione di controlli di finestra di dialogo figlio.
+   Una finestra di dialogo è una finestra che verrà collegata a una finestra di Windows, se visibile. Quando viene creata la finestra di dialogo, la risorsa modello di finestra di dialogo viene utilizzata come modello per la creazione di controlli finestra figlio per la finestra di dialogo.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
-[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilizzo delle finestre di dialogo in MFC](../mfc/life-cycle-of-a-dialog-box.md)

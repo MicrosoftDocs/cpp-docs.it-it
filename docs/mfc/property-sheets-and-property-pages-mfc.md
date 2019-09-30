@@ -8,27 +8,27 @@ helpviewer_keywords:
 - CPropertySheet class [MFC], property sheets and pages
 - property sheets, propert pages
 ms.assetid: de8fea12-6c35-4cef-8625-b8073a379446
-ms.openlocfilehash: 7ff2851cc4ed04a64f1a49d68b6e3143b5edccd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d4fd1c957b7f4d0d6ad10379a448309743aa11a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297023"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685083"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Finestre delle proprietà e pagine delle proprietà (MFC)
 
-MFC [finestra di dialogo](../mfc/dialog-boxes.md) può assumere uno sguardo "scheda della finestra" incorporando le finestre delle proprietà e pagine delle proprietà. Chiamata una "finestra delle proprietà" in MFC, questo tipo di finestra di dialogo simile a molte finestre di dialogo in Microsoft Word, Excel e Visual C++, sembra contenere una pila di finestre a schede, molto simile a una pila di cartelle del file visualizzato da fronte a retro o un gruppo di finestre sovrapposte. Controlli della scheda front sono visibili; solo la scheda con etichetta è visibile nelle schede posteriore. Finestre delle proprietà sono particolarmente utili per gestire un numero elevato di proprietà o le impostazioni che possono essere suddivise in diversi gruppi. In genere, una finestra delle proprietà consente di semplificare un'interfaccia utente mediante la sostituzione diverse finestre di dialogo separate.
+Una finestra di [dialogo](../mfc/dialog-boxes.md) MFC può assumere una "finestra di dialogo a schede" incorporando le finestre delle proprietà e le pagine delle proprietà. Denominata "finestra delle proprietà" in MFC, questo tipo di finestra di dialogo, simile a molte finestre di dialogo in Microsoft Word, Excel e C++Visual, sembra contenere uno stack di fogli a schede, molto simile a uno stack di cartelle di file visualizzato dall'inizio al retro o a un gruppo di finestre a cascata. I controlli nella scheda anteriore sono visibili; nelle schede posteriori è visibile solo la scheda con etichetta. Le finestre delle proprietà sono particolarmente utili per la gestione di un numero elevato di proprietà o impostazioni che rientrano in modo abbastanza accurato in diversi gruppi. In genere, una finestra delle proprietà può semplificare un'interfaccia utente sostituendo diverse finestre di dialogo separate.
 
-A partire dalla versione 4.0 di MFC, le finestre delle proprietà e pagine delle proprietà vengono implementate mediante i controlli comuni che è disponibile con Windows 95 e Windows NT versione 3.51 e successiva.
+A partire dalla versione 4,0 di MFC, le finestre delle proprietà e le pagine delle proprietà vengono implementate usando i controlli comuni disponibili in Windows 95 e Windows NT versione 3,51 e successive.
 
-Finestre delle proprietà vengono implementate con le classi [CPropertySheet](../mfc/reference/cpropertysheet-class.md) e [CPropertyPage](../mfc/reference/cpropertypage-class.md) (descritto nel *riferimenti alla libreria MFC*). `CPropertySheet` definisce la finestra di dialogo generale, che può contenere più "pagine" basate `CPropertyPage`.
+Le finestre delle proprietà vengono implementate con le classi [CPropertySheet](../mfc/reference/cpropertysheet-class.md) e [CPropertyPage](../mfc/reference/cpropertypage-class.md) (descritte in *riferimenti a MFC*). `CPropertySheet` definisce la finestra di dialogo complessiva, che può contenere più "pagine" basate su `CPropertyPage`.
 
-Per informazioni sulla creazione e utilizzo delle finestre delle proprietà, vedere l'argomento [finestre delle proprietà](../mfc/property-sheets-mfc.md).
+Per informazioni sulla creazione e sull'utilizzo delle finestre delle proprietà, vedere l'argomento [finestre delle proprietà](../mfc/property-sheets-mfc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
-[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Utilizzo delle finestre di dialogo in MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Finestre delle proprietà e pagine delle proprietà in MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)<br/>
 [Scambio di dati](../mfc/exchanging-data.md)<br/>
 [Creazione di una finestra delle proprietà non modale](../mfc/creating-a-modeless-property-sheet.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: Ciclo di vita di una finestra di dialogo
-ms.date: 11/04/2016
+title: Utilizzo delle finestre di dialogo in MFC
+ms.date: 09/27/2019
 helpviewer_keywords:
 - dialog boxes [MFC], life cycle
 - modal dialog boxes [MFC], life cycle
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: a3772a180e35a57c997446fcf2268d84bec2daa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad15250cf9a8dd663072cf9423263260bbb40a0e
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365340"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685731"
 ---
-# <a name="life-cycle-of-a-dialog-box"></a>Ciclo di vita di una finestra di dialogo
+# <a name="working-with-dialog-boxes-in-mfc"></a>Utilizzo delle finestre di dialogo in MFC
 
-Durante il ciclo di vita di una finestra di dialogo, l'utente richiama la finestra di dialogo, in genere all'interno di un gestore comando che crea e inizializza l'oggetto finestra di dialogo, l'utente interagisce con la finestra di dialogo e chiudere la finestra di dialogo.
+Durante il ciclo di vita di una finestra di dialogo, l'utente richiama la finestra di dialogo, in genere all'interno di un gestore di comando che crea e Inizializza l'oggetto finestra di dialogo, l'utente interagisce con la finestra di dialogo, quindi la finestra di dialogo viene chiusa.
 
-Per le finestre di dialogo modale, il gestore raccoglie tutti i dati immessi dopo che la finestra di dialogo viene chiusa dall'utente. Poiché l'oggetto finestra di dialogo è presente dopo che la finestra di dialogo è chiusa, è possibile utilizzare semplicemente le variabili membro della classe della finestra per estrarre i dati.
+Per le finestre di dialogo modali, il gestore raccoglie tutti i dati immessi dall'utente una volta chiusa la finestra di dialogo. Poiché l'oggetto finestra di dialogo esiste dopo che la finestra di dialogo è stata chiusa, è possibile usare semplicemente le variabili membro della classe della finestra di dialogo per estrarre i dati.
 
-Per le finestre di dialogo non modali, è possibile estrarre dati da un oggetto dialog mentre è ancora visibile la finestra di dialogo. A un certo punto, l'oggetto finestra di dialogo viene distrutto; Quando accade questo dipende dal codice.
+Per le finestre di dialogo non modali, è spesso possibile estrarre dati dall'oggetto finestra di dialogo mentre la finestra di dialogo è ancora visibile. A un certo punto, l'oggetto finestra di dialogo viene eliminato definitivamente; Quando ciò accade, dipende dal codice.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Creazione e visualizzazione delle finestre di dialogo](../mfc/creating-and-displaying-dialog-boxes.md)
+- [Creazione e visualizzazione di finestre di dialogo](../mfc/creating-and-displaying-dialog-boxes.md)
 
 - [Creazione di finestre di dialogo modali](../mfc/creating-modal-dialog-boxes.md)
 
 - [Creazione di finestre di dialogo non modali](../mfc/creating-modeless-dialog-boxes.md)
 
-- [Usando un modello di finestra di dialogo in memoria](../mfc/using-a-dialog-template-in-memory.md)
+- [Uso di un modello di finestra di dialogo in memoria](../mfc/using-a-dialog-template-in-memory.md)
 
-- [L'impostazione colore di sfondo della finestra di dialogo](../mfc/setting-the-dialog-boxs-background-color.md)
+- [Impostazione del colore di sfondo della finestra di dialogo](../mfc/setting-the-dialog-boxs-background-color.md)
 
-- [La finestra di dialogo di inizializzazione](../mfc/initializing-the-dialog-box.md)
+- [Inizializzazione della finestra di dialogo](../mfc/initializing-the-dialog-box.md)
 
 - [Gestione dei messaggi di Windows nella finestra di dialogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
 
-- [Il recupero dei dati da un oggetto dialog](../mfc/retrieving-data-from-the-dialog-object.md)
+- [Recupero di dati dall'oggetto finestra di dialogo](../mfc/retrieving-data-from-the-dialog-object.md)
 
-- [Chiudere la finestra di dialogo](../mfc/closing-the-dialog-box.md)
+- [Chiusura della finestra di dialogo](../mfc/closing-the-dialog-box.md)
 
-- [Eliminazione definitiva di finestra di dialogo](../mfc/destroying-the-dialog-box.md)
+- [Eliminazione definitiva della finestra di dialogo](../mfc/destroying-the-dialog-box.md)
 
-- [(DDV) di convalida e DDX (DDX)](../mfc/dialog-data-exchange-and-validation.md)
+- [DDX (Dialog Data Exchange) e convalida (DDV)](../mfc/dialog-data-exchange-and-validation.md)
 
-- [Finestre di dialogo Proprietà finestra](../mfc/property-sheets-and-property-pages-mfc.md)
+- [Finestre di dialogo della finestra delle proprietà](../mfc/property-sheets-and-property-pages-mfc.md)
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,6 +1,7 @@
 ---
 title: Esecuzione di LIB
-ms.date: 09/28/2018
+description: Descrive le opzioni della riga di comando che è possibile utilizzare con lib. exe.
+ms.date: 09/25/2019
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -26,73 +27,75 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d65c8d8b3b0cd28c7cccda25bfd9512321172f9
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318693"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685548"
 ---
 # <a name="running-lib"></a>Esecuzione di LIB
 
-Varie opzioni della riga di comando possono essere utilizzato per controllare LIB.
+Per controllare LIB, è possibile utilizzare varie opzioni della riga di comando.
 
 ## <a name="lib-command-line"></a>Riga di comando LIB
 
-Per l'esecuzione di LIB, digitare il comando `lib` seguito dalle opzioni e nomi di file per l'attività si usa LIB per eseguire. LIB inoltre accetta l'input della riga di comando nei file di comando, che sono descritte nella sezione seguente. Non usa una variabile di ambiente LIB.
+Per eseguire LIB, digitare il comando `lib` seguito dalle opzioni e dai nomi file per l'attività che si utilizza LIB per eseguire. LIB accetta anche l'input da riga di comando nei file di comando, descritti nella sezione seguente. LIB non usa una variabile di ambiente.
 
-> [!NOTE]
-> Se si è abituati al LINK32.exe LIB32.exe gli strumenti e forniti con Microsoft Win32 Software Development Kit per Windows NT, si potrebbe usano entrambi il comando `link32 -lib` o il comando `lib32` per la gestione delle librerie e la creazione librerie di importazione. Assicurarsi di modificare i makefile e file batch da utilizzare il `lib` invece di comando.
+## <a name="lib-command-files"></a>File di comando LIB
 
-## <a name="lib-command-files"></a>File di comando di LIB
+È possibile passare argomenti della riga di comando a LIB in un file di comando utilizzando la sintassi seguente:
 
-È possibile passare argomenti della riga di comando a LIB in un file di comando usando la sintassi seguente:
+> <em>File di comando</em> **lib \@**
 
-> **LIB \@**  <em>commandfile</em>
+Il file di *comando* file è un file di testo. Non sono consentiti spazi o schede tra il simbolo di chiocciola ( **\@** ) e il nome del file. Il nome del *file di comando* non ha un'estensione predefinita; è necessario specificare il nome completo del file, incluse eventuali estensioni. Non è possibile usare i caratteri jolly. È possibile specificare un percorso assoluto o relativo con il nome del file.
 
-Il file *commandfile* è un file di testo. Non è consentito alcun spazio o tabulazione tra il simbolo di chiocciola (**\@**) e il nome del file. Non vi è alcuna estensione predefinita; è necessario specificare il nome completo del file, incluso qualsiasi estensione. Non è possibile usare caratteri jolly. È possibile specificare un percorso relativo o assoluto con il nome del file.
+Nel file di comando gli argomenti possono essere separati da spazi o tabulazioni, in quanto possono essere presenti nella riga di comando. Gli argomenti possono anche essere separati da caratteri di nuova riga. Utilizzare un punto e virgola ( **;** ) per contrassegnare un commento. LIB Ignora tutto il testo dal punto e virgola alla fine della riga.
 
-Nel file di comando, gli argomenti possono essere separati da spazi o tabulazioni, differenza di quanto accade nella riga di comando. possono anche essere separate da caratteri di nuova riga. Usare un punto e virgola (**;**) per contrassegnare un commento. LIB Ignora tutto il testo da punto e virgola alla fine della riga.
+È possibile specificare tutta o parte della riga di comando in un file di comando ed è possibile usare più di un file di comando in un comando LIB. LIB accetta l'input del file di comando come se fosse specificato in tale posizione nella riga di comando. I file di comando non possono essere annidati. LIB restituisce il contenuto dei file di comando a meno che non venga utilizzata l'opzione **/nologo** .
 
-È possibile specificare tutti o parte della riga di comando in un file di comando ed è possibile usare più di un file di comando in un comando LIB. LIB accetta l'input di file di comando come se fosse specificato in tale posizione nella riga di comando. File di comando non possono essere annidati. VIENE visualizzato il contenuto dei file di comando, a meno che non viene utilizzata l'opzione /NOLOGO.
+## <a name="using-lib-options"></a>Uso delle opzioni LIB
 
-## <a name="using-lib-options"></a>Utilizzo delle opzioni di LIB
-
-Un'opzione è costituito da un identificatore di opzione, ovvero entrambi un trattino (**-**) o una barra rovesciata (**/**), seguito dal nome dell'opzione. I nomi di opzione non possono essere abbreviati. Alcune opzioni accettano un argomento, specificato dopo i due punti (**:**). Spazi o tabulazioni non sono consentite all'interno di una specifica opzione. Usare uno o più spazi o tabulazioni per separare le specifiche di opzione nella riga di comando. I nomi e i relativi argomenti Nome parola chiave o un file non sono tra maiuscole e minuscole, ma gli identificatori usati come argomenti sono tra maiuscole e minuscole. LE opzioni nell'ordine specificato nella riga di comando e nei file di comando vengono elaborate. Se un'opzione viene ripetuta con diversi argomenti, quello più recente per l'elaborazione ha la precedenza.
+Un'opzione è costituita da un identificatore di opzione, che può essere un trattino ( **-** ) o una barra ( **/** ), seguita dal nome dell'opzione. I nomi di opzione non possono essere abbreviati. Alcune opzioni accettano un argomento, specificato dopo i due punti ( **:** ). Non sono consentiti spazi o tabulazioni all'interno di una specifica Option. Usare uno o più spazi o schede per separare le specifiche delle opzioni nella riga di comando. I nomi delle opzioni e gli argomenti relativi a parola chiave o nome file non fanno distinzione tra maiuscole e minuscole, ma gli identificatori usati come argomenti fanno distinzione tra maiuscole LIB elabora le opzioni nell'ordine specificato nella riga di comando e nei file di comando. Se si ripete un'opzione con argomenti diversi, l'ultimo oggetto da elaborare avrà la precedenza.
 
 Le opzioni seguenti si applicano a tutte le modalità di LIB:
 
-> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
+> **/ERRORREPORT** \[**NESSUNA** &#124; **RICHIESTA** &#124; **CODA** &#124; **INVIO**]
 
-Se lib.exe ha esito negativo in fase di esecuzione, è possibile usare **/ERRORREPORT** per inviare informazioni a Microsoft informazioni su questi errori interni.
+Se lib. exe non riesce in fase di esecuzione, è possibile utilizzare **/errorreport** per inviare informazioni a Microsoft su questi errori interni.
 
-Per altre informazioni sulle **/ERRORREPORT**, vedere [/errorReport (segnala interni del compilatore gli errori)](errorreport-report-internal-compiler-errors.md).
+Per ulteriori informazioni su **/errorreport**, vedere [/errorreport (segnala gli errori interni del compilatore)](errorreport-report-internal-compiler-errors.md).
+
+> **/LINKREPRO:** _directory-path_ \
+> **/LINKREPROTARGET:** _nomefile_
+
+Per consentire a Microsoft di diagnosticare gli arresti anomali e gli errori interni di lib. exe, è possibile utilizzare l'opzione [/LINKREPRO](linkrepro.md) . Genera una procedura di *riproduzione del collegamento*, un set di elementi di compilazione che consentono a Microsoft di riprodurre un problema che si verifica durante le operazioni della libreria. L'opzione [/LINKREPROTARGET](linkreprotarget.md) può essere usata con l'opzione **/LINKREPRO** . Genera solo elementi di ripetizione dei collegamenti quando lib. exe produce il file specificato. Per ulteriori informazioni, vedere [come segnalare un problema con il set di C++ strumenti Microsoft](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 > **/LTCG**
 
-"LTCG" è l'acronimo *generazione di codice in fase di collegamento*. Questa funzionalità richiede la cooperazione tra il compilatore ([cl.exe](compiler-options.md)), LIB e il linker ([collegamento](linker-options.md)) per ottimizzare il codice più di quanto qualsiasi componente possa ottenere autonomamente.
+"LTCG" è l'acronimo della *generazione di codice in fase di collegamento*. Questa funzionalità richiede la collaborazione tra il compilatore ([CL. exe](compiler-options.md)), lib e il linker ([link](linker-options.md)) per ottimizzare il codice oltre quello che qualsiasi componente può eseguire autonomamente.
 
-Per LIB, il **/LTCG** opzione specifica che gli input da cl.exe includono i file oggetto che sono stati generati utilizzando il [/GL](gl-whole-program-optimization.md) opzione del compilatore. Se LIB rileva tali input e **/LTCG** non viene specificato, verrà riavviato con l'opzione /LTCG abilitato dopo aver visualizzato un messaggio informativo. In altre parole, non è necessario impostare in modo esplicito questa opzione, ma accelera le prestazioni di compilazione per eseguire questa operazione perché non dispone di LIB per riavviarsi.
+Per LIB, l'opzione **/LTCG** specifica che gli input da cl. exe includono i file oggetto generati con l'opzione del compilatore [/GL](gl-whole-program-optimization.md) . Se LIB rileva tali input e **/LTCG** non è specificato, verrà riavviato con/LTCG abilitato dopo la visualizzazione di un messaggio informativo. In altre parole, non è necessario impostare in modo esplicito questa opzione, ma accelera le prestazioni di compilazione perché LIB non deve riavviare se stesso.
 
-Nel processo di compilazione, l'output di LIB viene inviato al collegamento. COLLEGAMENTO ha un proprio separato **/LTCG** opzione che consente di eseguire varie ottimizzazioni, tra cui Ottimizzazione intero programma e strumentazione di ottimizzazione PGO (PGO). Per altre informazioni sull'opzione di collegamento, vedere [/LTCG](ltcg-link-time-code-generation.md).
+Nel processo di compilazione, l'output di LIB viene inviato al collegamento. Il collegamento ha una propria opzione **/LTCG** separata. Viene usato per eseguire varie ottimizzazioni, tra cui l'ottimizzazione dell'intero programma e la strumentazione di ottimizzazione PGO (PGO). Per ulteriori informazioni sull'opzione di collegamento, vedere [/LTCG](ltcg-link-time-code-generation.md).
 
 > **/MACHINE**
 
-Specifica la piattaforma di destinazione per il programma. In genere, non è necessario specificare questa opzione. LIB deduce il tipo di computer dai file con estensione obj. Tuttavia, in alcune circostanze, LIB non è possibile determinare il tipo di computer e genera un messaggio di errore. Se si verifica questo errore, specificare questa opzione. In modalità /EXTRACT, questa opzione è solo per la verifica. Usare `lib /?` nella riga di comando per visualizzare i tipi di computer disponibili.
+Specifica la piattaforma di destinazione per il programma. In genere, non è necessario specificare **/Machine**. LIB deduce il tipo di computer dai file obj. Tuttavia, in alcune circostanze, LIB non è in grado di determinare il tipo di computer e genera un messaggio di errore. Se si verifica un errore di questo tipo, specificare **/Machine**. In modalità **/Extract** questa opzione è solo per la verifica. Usare `lib /?` nella riga di comando per visualizzare i tipi di computer disponibili.
 
 > **/NOLOGO**
 
-Evita la visualizzazione di LIB copyright messaggio e numero di versione e impedire che vengano visualizzati dei file di comando.
+Elimina la visualizzazione del messaggio di copyright e del numero di versione di LIB e impedisce l'eco dei file di comando.
 
 > **/VERBOSE**
 
 Visualizza i dettagli sullo stato di avanzamento della sessione, inclusi i nomi dei file con estensione obj da aggiungere. Le informazioni vengono inviate all'output standard e possono essere reindirizzate a un file.
 
-> **/WX**[**:NO**]
+> **/WX**[ **:NO**]
 
-Considera gli avvisi come errori. Visualizzare [/WX (considera gli avvisi del Linker come errori)](wx-treat-linker-warnings-as-errors.md) per altre informazioni.
+Considera gli avvisi come errori. Per altre informazioni, vedere [/WX (Considera gli avvisi del linker come errori)](wx-treat-linker-warnings-as-errors.md).
 
-Altre opzioni si applicano solo a una particolare modalità di LIB. Queste opzioni sono descritte nelle sezioni che descrivono ogni modalità.
+Le altre opzioni sono valide solo per le modalità specifiche di LIB. Queste opzioni vengono descritte nelle sezioni che descrivono ogni modalità.
 
 ## <a name="see-also"></a>Vedere anche
 

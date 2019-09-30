@@ -1,6 +1,7 @@
 ---
 title: calloc
-ms.date: 11/04/2016
+description: La funzione della libreria di runtime C calloc alloca la memoria inizializzata su zero.
+ms.date: 09/27/2019
 api_name:
 - calloc
 api_location:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: ba498b35106f9ff1636bb1bc0764088a434b5b01
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 228ec6d01a6f57ff98a9030f5a6d82e4c57388cd
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939331"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685371"
 ---
 # <a name="calloc"></a>calloc
 
@@ -40,7 +41,7 @@ Alloca una matrice in memoria con elementi inizializzati a 0.
 
 ```C
 void *calloc(
-   size_t num,
+   size_t number,
    size_t size
 );
 ```
@@ -63,17 +64,19 @@ La funzione **calloc** alloca lo spazio di archiviazione per una matrice di elem
 
 **calloc** imposta **errno** su **ENOMEM** se un'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta supera **_HEAP_MAXREQ**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**calloc** chiama **malloc** per usare la C++ funzione [_set_new_mode](set-new-mode.md) per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **calloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore funziona quando ha esito negativo per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare
+Nell'implementazione Microsoft, se *Number* o *size* è zero, **calloc** restituisce un puntatore a un blocco allocato di dimensioni diverse da zero. Un tentativo di leggere o scrivere tramite il puntatore restituito comporta un comportamento non definito.
+
+**calloc** usa la C++ funzione [_set_new_mode](set-new-mode.md) per impostare la *nuova modalità del gestore*. La nuova modalità del gestore indica se, in caso di errore, **calloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **calloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **calloc** non riesce ad allocare memoria, chiami la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore funziona quando ha esito negativo per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare
 
 ```C
 _set_new_mode(1);
 ```
 
-all'inizio del programma o collegarsi a NEWMODE.OBJ (vedere [Opzioni di collegamento](../../c-runtime-library/link-options.md)).
+all'inizio del programma o collegarsi a *NewMode. OBJ* (vedere [Opzioni di collegamento](../../c-runtime-library/link-options.md)).
 
 Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **calloc** si risolve in [_calloc_dbg](calloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-**calloc** è contrassegnato `__declspec(noalias)` come `__declspec(restrict)`e, pertanto la funzione non modifica le variabili globali e il puntatore restituito non viene associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**calloc** è contrassegnato `__declspec(noalias)` e `__declspec(restrict)`, vale a dire che la funzione non modifica le variabili globali e che il puntatore restituito non è associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Requisiti
 

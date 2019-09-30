@@ -19,38 +19,38 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: 338630aef358d9490461179288d5c45a2d3b821c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a0199577ea46520c2eadc308812de8a1ce4b514
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348787"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685801"
 ---
 # <a name="dialog-data-exchange"></a>DDX (Dialog Data Exchange)
 
-Se si usa il meccanismo DDX Elimina, impostare i valori iniziali della finestra di dialogo variabili membro dell'oggetto, in genere nel `OnInitDialog` gestore o il costruttore della finestra di dialogo. Immediatamente prima che venga visualizzata la finestra di dialogo, meccanismo DDX Elimina del framework trasferisce i valori delle variabili membro per i controlli nella finestra di dialogo, in cui vengono visualizzate quando la finestra di dialogo viene visualizzata in risposta a `DoModal` o `Create`. L'implementazione predefinita di `OnInitDialog` nelle `CDialog` chiama il `UpdateData` funzione membro di classe `CWnd` per inizializzare i controlli nella finestra di dialogo.
+Se si utilizza il meccanismo DDX, è possibile impostare i valori iniziali delle variabili membro dell'oggetto finestra di dialogo, in genere nel gestore @no__t 0 o nel costruttore della finestra di dialogo. Immediatamente prima della visualizzazione della finestra di dialogo, il meccanismo DDX del framework trasferisce i valori delle variabili membro ai controlli della finestra di dialogo, dove vengono visualizzati quando la finestra di dialogo viene visualizzata in risposta a `DoModal` o `Create`. L'implementazione predefinita di `OnInitDialog` in `CDialog` chiama la funzione membro `UpdateData` della classe `CWnd` per inizializzare i controlli nella finestra di dialogo.
 
-Lo stesso meccanismo trasferisce i valori dai controlli per le variabili membro quando l'utente fa clic sul pulsante OK (o ogni volta che si chiama il `UpdateData` la funzione membro con l'argomento **TRUE**). Il meccanismo di convalida dei dati di finestra di dialogo Convalida gli elementi di dati per cui sono specificate le regole di convalida.
+Lo stesso meccanismo trasferisce i valori dai controlli alle variabili membro quando l'utente fa clic sul pulsante OK (oppure ogni volta che si chiama la funzione membro `UpdateData` con l'argomento **true**). Il meccanismo di convalida dei dati della finestra di dialogo convalida tutti gli elementi di dati per i quali sono state specificate regole di convalida.
 
-La figura seguente illustra lo scambio di dati della finestra.
+Nella figura seguente viene illustrato lo scambio di dati della finestra di dialogo.
 
-![Lo scambio di dati finestra di dialogo](../mfc/media/vc379d1.gif "lo scambio di dati finestra di dialogo") <br/>
+![](../mfc/media/vc379d1.gif "Scambio di") dati della finestra di dialogo scambio di dati della finestra di dialogo <br/>
 DDX (Dialog Data Exchange)
 
-`UpdateData` funziona in entrambe le direzioni, come specificato dalle **BOOL** parametro passato ad esso. Per eseguire lo scambio `UpdateData` configura un `CDataExchange` oggetto e chiama l'override della classe di finestra di dialogo della `CDialog`del `DoDataExchange` funzione membro. `DoDataExchange` accetta un argomento di tipo `CDataExchange`. Il `CDataExchange` oggetto passato al `UpdateData` rappresenta il contesto dello scambio, la definizione di tali informazioni come la direzione dello scambio.
+`UpdateData` funziona in entrambe le direzioni, come specificato dal parametro **bool** passato. Per eseguire Exchange, `UpdateData` configura un oggetto `CDataExchange` e chiama l'override della classe della finestra di dialogo della funzione membro `DoDataExchange` di `CDialog`. `DoDataExchange` accetta un argomento di tipo `CDataExchange`. L'oggetto `CDataExchange` passato a `UpdateData` rappresenta il contesto dello scambio, definendo tali informazioni come direzione dello scambio.
 
-Quando l'utente (o una procedura guidata codice) esegue l'override `DoDataExchange`, si specifica una chiamata a una funzione DDX per ogni membro dati (controllo). Ogni funzione DDX sa come lo scambio di dati in entrambe le direzioni in base al contesto fornito dal `CDataExchange` argomento passato alle `DoDataExchange` da `UpdateData`.
+Quando si esegue l'override di o di una creazione guidata codice `DoDataExchange`, è necessario specificare una chiamata a una funzione DDX per membro dati (controllo). Ogni funzione DDX sa come scambiare dati in entrambe le direzioni in base al contesto fornito dall'argomento `CDataExchange` passato al `DoDataExchange` da `UpdateData`.
 
-MFC fornisce molte funzioni DDX per diversi tipi di exchange. L'esempio seguente mostra un `DoDataExchange` override nel quale DDX due funzioni e una funzione DDV sono denominati:
+MFC fornisce molte funzioni DDX per diversi tipi di scambio. Nell'esempio seguente viene illustrato un override `DoDataExchange` in cui vengono chiamate due funzioni DDX e una funzione DDV:
 
 [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]
 
-Il `DDX_` e `DDV_` righe sono un mapping dei dati. Le funzioni DDX e DDV di esempio illustrate sono per un controllo casella di controllo e un controllo casella di modifica, rispettivamente.
+Le linee `DDX_` e `DDV_` sono una mappa dati. Le funzioni DDX e DDV di esempio visualizzate sono rispettivamente per un controllo casella di controllo e un controllo della casella di modifica.
 
-Se l'utente annulla una finestra di dialogo modale, il `OnCancel` funzione membro termina la finestra di dialogo e `DoModal` restituisce il valore **IDCANCEL**. In tal caso, non i dati vengono scambiati tra la finestra di dialogo e oggetto finestra di dialogo.
+Se l'utente annulla una finestra di dialogo modale, la funzione membro `OnCancel` termina la finestra di dialogo e `DoModal` restituisce il valore **IDCANCEL**. In tal caso, non viene scambiato alcun dato tra la finestra di dialogo e l'oggetto finestra di dialogo.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Convalida e DDX (Dialog Data Exchange)](../mfc/dialog-data-exchange-and-validation.md)<br/>
-[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Utilizzo delle finestre di dialogo in MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Convalida dei dati delle finestre di dialogo](../mfc/dialog-data-validation.md)

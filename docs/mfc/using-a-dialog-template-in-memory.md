@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dialog templates [MFC], in memory
 - MFC dialog boxes [MFC], dialog templates
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
-ms.openlocfilehash: de694f6561dfe1423c7758ae572ccf6be1c8fd17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7250ea628f371cac16e0a34e81d8bab0828db73e
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180557"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685030"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Utilizzo di un modello di finestra di dialogo in memoria
 
-Invece di usare i metodi descritti nel [tabella di creazione della finestra di dialogo](../mfc/creating-a-dialog-class-with-code-wizards.md), è possibile creare qualsiasi tipo di finestra di dialogo indirettamente da un modello di finestra di dialogo in memoria. Per altre informazioni, vedere la classe [CDialog](../mfc/reference/cdialog-class.md) nel *riferimento MFC*.
+Anziché utilizzare i metodi forniti nella tabella di [creazione della finestra](../mfc/creating-a-dialog-class-with-code-wizards.md)di dialogo, è possibile creare un tipo di finestra di dialogo indirettamente da un modello di finestra di dialogo in memoria. Per ulteriori informazioni, vedere la classe [CDialog](../mfc/reference/cdialog-class.md) nella Guida di *riferimento a MFC*.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilizzo delle finestre di dialogo in MFC](../mfc/life-cycle-of-a-dialog-box.md)
