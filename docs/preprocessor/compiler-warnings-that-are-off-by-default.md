@@ -5,16 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: d497886b22c7a90ab7cda47e46dc13daf297b192
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314464"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685714"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avvisi del compilatore disattivati per impostazione predefinita
 
-Il compilatore supporta gli avvisi che sono disattivati per impostazione predefinita, perché la maggior parte degli sviluppatori non li trova utili. In alcuni casi, avvertono una scelta stilistica o informazioni sugli idiomi comuni nel codice meno recente. Altri avvisi sono relativi all'uso di un'estensione Microsoft per la lingua. In altri casi, indicano un'area in cui i programmatori spesso eseguono presupposti non corretti, che possono causare un comportamento imprevisto o non definito. Se abilitata, alcuni di questi avvisi possono essere visualizzati più volte nelle intestazioni della libreria. Le librerie di runtime C e C++ le librerie standard hanno lo scopo di non generare avvisi solo a livello di avviso [/W4](../build/reference/compiler-option-warning-level.md).
+Il compilatore supporta gli avvisi che sono disattivati per impostazione predefinita, perché la maggior parte degli sviluppatori non li trova utili. In alcuni casi, avvertono una scelta stilistica o informazioni sugli idiomi comuni nel codice meno recente. Altri avvisi sono relativi all'uso di un'estensione Microsoft per la lingua. Alcuni avvisi indicano un'area in cui i programmatori spesso si basano su presupposti non corretti, che possono causare un comportamento imprevisto o non definito. Se tutti questi avvisi sono abilitati, alcuni possono essere visualizzati più volte nelle intestazioni della libreria. Le librerie di runtime C e C++ le librerie standard hanno lo scopo di non generare avvisi solo a livello di avviso [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Abilitare gli avvisi che sono disattivati per impostazione predefinita
 
@@ -89,7 +89,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |C4587 (livello 1)|'*anonymous_structure*': modifica del comportamento: il costruttore non viene più chiamato in modo implicito|
 |C4588 (livello 1)|'*anonymous_structure*': modifica del comportamento: il distruttore non viene più chiamato in modo implicito|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (livello 4)|'*Identifier*': nome completo non valido nella dichiarazione del membro <sup>14,3</sup> <sup>Perm</sup>|
-|C4598 (livello 1 e livello 3)|' #include '*intestazione*"': il *numero* di numero di intestazione nell'intestazione precompilata non corrisponde alla compilazione corrente nella posizione <sup>14,3</sup>|
+|C4598 (livello 1 e livello 3)|' #include '*intestazione*"': numero di intestazione *. il numero* nell'intestazione precompilata non corrisponde alla compilazione corrente nella posizione <sup>14,3</sup>|
 |C4599 (livello 3)|'*Option* *path*': il numero di argomenti della riga di *comando non corrisponde* all'intestazione precompilata <sup>14,3</sup>|
 |C4605 (livello 1)|'/D*macro*' specificato nella riga di comando corrente, ma non è stato specificato quando è stata compilata l'intestazione precompilata|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (livello 3)|'*union_member*' è già stato inizializzato da un altro membro dell'Unione nell'elenco degli inizializzatori, <sup>Perm</sup> '*union_member*'|
@@ -108,7 +108,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (livello 1)|'*Function*': la firma del membro non privato contiene il tipo nativo privato '*NATIVE_TYPE*' dell'assembly|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (livello 4)|'*Function*': funzione non inline|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (livello 3)|archiviazione in memoria del risultato float a 32 bit, possibile riduzione delle prestazioni|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l'accesso volatile di '*Expression*' è soggetto all'impostazione\</volatile&#124;: ISO MS >; provare a usare funzioni intrinseche __iso_volatile_load/Store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l'accesso volatile di '*Expression*' è soggetto a/volatile: @no__t-&#124;1iso MS > Setting; prendere in considerazione l'uso di funzioni intrinseche __iso_volatile_load/Store|
 |C4749 (livello 4)|supportato in modo condizionale: offsetof applicato al tipo di layout non standard '*Type*'|
 |C4767 (livello 4)|il nome di sezione '*Symbol*' è più lungo di 8 caratteri e verrà troncato dal linker|
 |C4768 (livello 3)|attributi _ _ declspec prima della specifica del collegamento vengono ignorati|
@@ -142,15 +142,22 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |C5029 (livello 4)|utilizzata estensione non standard: gli attributi di C++ allineamento in si applicano solo a variabili, membri dati e tipi di tag|
 |C5031 (livello 4)|avviso di #pragma (pop): probabile mancata corrispondenza, visualizzazione dello stato di avviso inserito in un file diverso <sup>14,1</sup>|
 |C5032 (livello 4)|rilevato #pragma avviso (push) senza #pragma avviso corrispondente (pop) <sup>14,1</sup>|
-|C5034|l'uso di '*intrinsic*' intrinseco causa la compilazione della *funzione* di funzione come codice Guest <sup>15,3</sup>|
-|C5035|l'uso della funzionalità'*feature*' comporta la compilazione della *funzione* function come codice Guest <sup>15,3</sup>|
+|C5034|l'uso di '*intrinsic*' intrinseco causa la compilazione della *funzione function-name* come codice Guest <sup>15,3</sup>|
+|C5035|Se si usa la funzionalità'*feature*', il *nome della funzione* funzione viene compilato come codice Guest <sup>15,3</sup>|
 |C5036 (livello 1)|conversione del puntatore a funzione varargs durante la compilazione con/Hybrid: x86arm64'*tipo1*' in '*tipo2*' <sup>15,3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (livello 4)|il membro dati '*member1*' verrà inizializzato dopo il membro dati '*membro2*' <sup>15,3</sup>|
 |C5039 (livello 4)|'*Function*': puntatore o riferimento a una funzione potenzialmente generata passata alla funzione extern C in-EHC. Se questa funzione genera un'eccezione, può verificarsi un comportamento non definito. <sup>15.5</sup>|
 |C5042 (livello 3)|'*Function*': le dichiarazioni di funzione nell'ambito del blocco non possono essere specificate come ' inline ' nello standard C++; Rimuovi identificatore ' inline ' <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Il compilatore inserirà la mitigazione Spectre per il carico di memoria se l'opzione/Qspectre è specificata <sup>15,7</sup>|
 
-<sup>14,1</sup> questo avviso è disponibile a partire da Visual Studio 2015 Update 1.\\ <sup>14,3</sup> questo avviso è disponibile a partire da Visual Studio 2015 Update 3.\\ <sup>15,3</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,3.\\ <sup>15,5</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,5.\\ <sup>15,7</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,7.\\ <sup>15,8</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,8.\\ <sup>16,0</sup> questo avviso è disponibile a partire da Visual Studio 2019 RTM.\\ <sup>Perm</sup> Questo avviso è disattivato a meno che non sia stata impostata l'opzione del compilatore [/permissive-](../build/reference/permissive-standards-conformance.md) .
+<sup>14,1</sup> questo avviso è disponibile a partire da Visual Studio 2015 Update 1. <br/>
+<sup>14,3</sup> questo avviso è disponibile a partire da Visual Studio 2015 Update 3. <br/>
+<sup>15,3</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,3. <br/>
+<sup>15,5</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,5. <br/>
+<sup>15,7</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,7. <br/>
+<sup>15,8</sup> questo avviso è disponibile a partire da Visual Studio 2017 versione 15,8. <br/>
+<sup>16,0</sup> questo avviso è disponibile a partire da Visual Studio 2019 RTM. <br/>
+<sup>Perm</sup> Questo avviso è disattivato a meno che non sia stata impostata l'opzione del compilatore [/permissive-](../build/reference/permissive-standards-conformance.md) .
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avvisi disattivati per impostazione predefinita nelle versioni precedenti
 

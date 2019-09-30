@@ -21,25 +21,25 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-ms.openlocfilehash: b376edc3ee7d8abbca43da6d823e71abad99bc5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 903d76a1e672d05a3c093e528f7153562df8e3e5
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308901"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685577"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Recupero di dati da un oggetto Dialog
 
-Il framework offre un modo semplice per inizializzare i valori dei controlli in una finestra di dialogo e per recuperare i valori dai controlli. L'approccio manuale più laboriosa consiste nel chiamare funzioni quali la `SetDlgItemText` e `GetDlgItemText` funzioni membro della classe `CWnd`, che si applicano a finestre di controllo. Con queste funzioni, è accedere a ciascun controllo individualmente per impostare o ottenere il relativo valore, chiamare funzioni quali `SetWindowText` e `GetWindowText`. Consente di automatizzare l'utilizzo del framework sia l'inizializzazione e il recupero.
+Il Framework fornisce un modo semplice per inizializzare i valori dei controlli in una finestra di dialogo e recuperare i valori dai controlli. L'approccio manuale più laborioso consiste nel chiamare funzioni quali le funzioni membro `SetDlgItemText` e `GetDlgItemText` della classe `CWnd`, applicabili alle finestre di controllo. Con queste funzioni è possibile accedere singolarmente a ogni controllo per impostare o ottenere il relativo valore, chiamando funzioni quali `SetWindowText` e `GetWindowText`. L'approccio del Framework automatizza sia l'inizializzazione che il recupero.
 
-DDX (DDX) consente di scambiare dati tra i controlli di finestra di dialogo casella e le variabili membro nell'oggetto finestra di dialogo più facilmente. Questo scambio funziona in entrambe le direzioni. Per inizializzare i controlli nella finestra di dialogo, è possibile impostare i valori dei membri dati nell'oggetto finestra di dialogo, quindi il framework trasferirà i valori per i controlli prima che venga visualizzata la finestra di dialogo. È possibile in qualsiasi momento aggiornare i membri di dati della finestra di dialogo con i dati immessi dall'utente. A questo punto, è possibile usare i dati facendo riferimento alle variabili di membro dati.
+DDX (Dialog Data Exchange) consente di scambiare i dati tra i controlli della finestra di dialogo e le variabili membro nell'oggetto finestra di dialogo in modo più semplice. Questo scambio funziona in entrambi i modi. Per inizializzare i controlli nella finestra di dialogo, è possibile impostare i valori dei membri dati nell'oggetto finestra di dialogo e il framework trasferirà i valori ai controlli prima che la finestra di dialogo venga visualizzata. In qualsiasi momento, è possibile aggiornare i membri dati della finestra di dialogo con i dati immessi dall'utente. A questo punto, è possibile usare i dati facendo riferimento alle variabili del membro dati.
 
-È inoltre possibile ordinare per i valori dei controlli di finestra di dialogo di essere convalidati automaticamente con la convalida dei dati di finestra di dialogo (DDV).
+È anche possibile disporre i valori dei controlli della finestra di dialogo da convalidare automaticamente con la convalida dei dati della finestra di dialogo (DDV).
 
-DDX e DDV sono illustrati più dettagliatamente [convalida e DDX](../mfc/dialog-data-exchange-and-validation.md).
+DDX e DDV sono illustrati in modo più dettagliato in [scambio di dati e convalida del dialogo](../mfc/dialog-data-exchange-and-validation.md).
 
-Per una finestra di dialogo modale, è possibile recuperare tutti i dati l'utente ha immesso quando `DoModal` restituisce IDOK ma prima la finestra di dialogo viene eliminato definitivamente l'oggetto. Per una finestra di dialogo non modale, è possibile recuperare dati da un oggetto dialog in qualsiasi momento chiamando `UpdateData` con l'argomento **TRUE** e l'accesso a variabili membro della classe della finestra. Questo argomento viene discusso in maggior dettaglio nella [convalida e DDX](../mfc/dialog-data-exchange-and-validation.md).
+Per una finestra di dialogo modale, è possibile recuperare tutti i dati immessi dall'utente quando `DoModal` restituisce IDOK ma prima che l'oggetto finestra di dialogo venga eliminato definitivamente. Per una finestra di dialogo non modale, è possibile recuperare i dati dall'oggetto finestra di dialogo in qualsiasi momento chiamando `UpdateData` con l'argomento **true** e quindi accedendo alle variabili membro della classe della finestra di dialogo. Questo argomento viene discusso più dettagliatamente nella pagina [relativa a scambio e convalida dei dati della finestra di dialogo](../mfc/dialog-data-exchange-and-validation.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilizzo delle finestre di dialogo in MFC](../mfc/life-cycle-of-a-dialog-box.md)

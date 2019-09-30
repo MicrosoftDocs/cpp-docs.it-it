@@ -3,12 +3,12 @@ title: Opzioni del compilatore elencate in ordine alfabetico
 ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 90c7ee5637a5d1e0f9d48c0f128364ee0df73dab
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273640"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685328"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -57,12 +57,12 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Fx](fx-merge-injected-code.md)|Unisce il codice inserito al file di origine.|
 |[/GA](ga-optimize-for-windows-application.md)|Ottimizza il codice per l'applicazione Windows.|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|Usa la convenzione di chiamata `__cdecl` (solo x86).|
-|[/Ge](ge-enable-stack-probes.md)|Operazione deprecata. Attiva le ricerche dello stack.|
+|[/Ge](ge-enable-stack-probes.md)|Deprecato. Attiva le ricerche dello stack.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Attiva la condivisione delle stringhe.|
 |[/GH](gh-enable-pexit-hook-function.md)|Chiama la funzione hook `_pexit`.|
 |[/Gh](gh-enable-penter-hook-function.md)|Chiama la funzione hook `_penter`.|
 |[/GL](gl-whole-program-optimization.md)|Attiva l'ottimizzazione dell'intero programma.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Operazione deprecata. Attiva una ricompilazione minima.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Deprecato. Attiva una ricompilazione minima.|
 |[/GR](gr-enable-run-time-type-information.md)|Attiva RTTI (Run-Time Type Information).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa la convenzione di chiamata `__fastcall` (solo x86).|
 |[/GS](gs-buffer-security-check.md)|Inserisce i controlli di sicurezza nel buffer.|
@@ -71,11 +71,11 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/guard:cf](guard-enable-control-flow-guard.md)|Aggiunge controlli di sicurezza guard del flusso di controllo.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Usa la convezione di chiamata `__vectorcall` . (solo x86 e x64)|
 |[/Gw](gw-optimize-global-data.md)|Abilita l'ottimizzazione dei dati globale per l'intero programma|
-|[/GX](gx-enable-exception-handling.md)|Operazione deprecata. Attiva la gestione sincrona delle eccezioni. Usare [/EH](eh-exception-handling-model.md) .|
+|[/GX](gx-enable-exception-handling.md)|Deprecato. Attiva la gestione sincrona delle eccezioni. Usare [/EH](eh-exception-handling-model.md) .|
 |[/Gy](gy-enable-function-level-linking.md)|Attiva il collegamento a livello di funzione.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Operazione deprecata. Equivale a [/RTC1](rtc-run-time-error-checks.md).|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Deprecato. Equivale a [/RTC1](rtc-run-time-error-checks.md).|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Usa la convenzione di chiamata `__stdcall` (solo x86).|
-|[/H](h-restrict-length-of-external-names.md)|Operazione deprecata. Limita la lunghezza dei nomi esterni (pubblici).|
+|[/H](h-restrict-length-of-external-names.md)|Deprecato. Limita la lunghezza dei nomi esterni (pubblici).|
 |[/HELP](help-compiler-command-line-help.md)|Elenca le opzioni del compilatore.|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Forza la scrittura di parametri passati nei registri nei rispettivi percorsi nello stack quando vengono immesse funzioni. Questa opzione del compilatore è solo per i compilatori x64 (compilazione nativa e incrociata).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crea un'immagine con patch a caldo.|
@@ -97,9 +97,9 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Effettua creazioni in base alla velocità del codice.|
 |[/Ob](ob-inline-function-expansion.md)|Controlla l'espansione inline.|
 |[/Od](od-disable-debug.md)|Disabilita l'ottimizzazione.|
-|[/Og](og-global-optimizations.md)|Operazione deprecata. Usa le ottimizzazioni globali.|
+|[/Og](og-global-optimizations.md)|Deprecato. Usa le ottimizzazioni globali.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Genera funzioni intrinseche.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Abilita la [`#pragma omp`](../../preprocessor/omp.md) direttiva nel codice sorgente.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Abilita la direttiva [`#pragma omp`](../../preprocessor/omp.md) nel codice sorgente.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per dimensione codice.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per velocità codice.|
 |[/Ox](ox-full-optimization.md)|Subset di/O2 che non include/GF o/GY.|
@@ -107,7 +107,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/P](p-preprocess-to-a-file.md)|Scrive l'output del preprocessore in un file.|
 |[/permissive-](permissive-standards-conformance.md)|Impostare la modalità di conformità standard.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Genera funzioni trascendenti veloci.|
-|[/QIfist](qifist-suppress-ftol.md)|Operazione deprecata. Elimina `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale (solo x86).|
+|[/QIfist](qifist-suppress-ftol.md)|Deprecato. Elimina `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale (solo x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Rimuove i comandi `fwait` all'interno dei blocchi `try` .|
 |[/Qpar (parallelizzazione automatica)](qpar-auto-parallelizer.md)|Abilita la parallelizzazione automatica dei cicli contrassegnati con la direttiva [#pragma loop()](../../preprocessor/loop.md) .|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Usa istruzioni di spostamento Integer per i valori a virgola mobile e disabilita determinate ottimizzazioni di carico a virgola mobile.|
@@ -125,7 +125,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/U](u-u-undefine-symbols.md)|Rimuove una macro predefinita.|
 |[/u](u-u-undefine-symbols.md)|Rimuove tutte le macro predefinite.|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Imposta i set di caratteri di esecuzione e di origine su UTF-8.|
-|[/V](v-version-number.md)|Operazione deprecata. Imposta la stringa di versione del file OBJ.|
+|[/V](v-version-number.md)|Deprecato. Imposta la stringa di versione del file OBJ.|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Convalidare i file UTF-8 solo per i caratteri compatibili.|
 |[/vd](vd-disable-construction-displacements.md)|Disabilita o abilita i membri della classe vtordisp nascosti.|
 |[/vmb](vmb-vmg-representation-method.md)|Usa la base migliore per i puntatori ai membri.|
@@ -148,15 +148,16 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/X](x-ignore-standard-include-paths.md)|Ignora la directory di inclusione standard.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Ignora tutte le altre opzioni del compilatore dell'intestazione precompilata nella generazione corrente.|
 |[/Yc](yc-create-precompiled-header-file.md)|Crea un file di intestazione precompilato.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|Operazione deprecata. Inserisce informazioni di debug complete in tutti i file oggetto. Usare [/Zi](z7-zi-zi-debug-information-format.md) .|
+|[/Yd](yd-place-debug-information-in-object-file.md)|Deprecato. Inserisce informazioni di debug complete in tutti i file oggetto. Usare [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Inserisce un riferimento PCH durante la creazione di una libreria di debug|
 |[/Yu](yu-use-precompiled-header-file.md)|Usa un file di intestazione precompilato durante la compilazione.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Genera informazioni di debug compatibili con C 7,0.|
 |[/Za](za-ze-disable-language-extensions.md)|Disabilita le estensioni del linguaggio.|
 |[/Zc](zc-conformance.md)|Specifica il comportamento standard in [/ze](za-ze-disable-language-extensions.md). [/Za,/ze (Disabilita estensioni linguaggio)](za-ze-disable-language-extensions.md)|
-|[/Ze](za-ze-disable-language-extensions.md)|Operazione deprecata. Attiva le estensioni del linguaggio.|
+|[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Attiva le estensioni del linguaggio.|
 |[/Zf](zf.md)|Migliora il tempo di generazione PDB nelle compilazioni parallele.|
 |[/Zg](zg-generate-function-prototypes.md)|Rimosso in Visual Studio 2015. Genera prototipi di funzione.|
+|[/ZH](zh.md)|Specifica MD5, SHA-1 o SHA-256 per i checksum nelle informazioni di debug.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Include informazioni di debug in un database di programma compatibile con Modifica e continuazione.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera informazioni di debug complete.|
 |[/Zl](zl-omit-default-library-name.md)|Rimuove il nome di libreria predefinito dal file obj (solo x86).|

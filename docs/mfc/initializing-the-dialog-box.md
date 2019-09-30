@@ -8,19 +8,19 @@ helpviewer_keywords:
 - modeless dialog boxes [MFC], initializing
 - MFC dialog boxes [MFC], initializing
 ms.assetid: 968142f5-19f9-4b34-a1d4-8e6412d4379b
-ms.openlocfilehash: 87b3405f1441e730cf5c9ce7fc03d2c7372e55db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14cdf94bef79f254b4aaa2c1c0dfba6c88b7498b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297099"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685619"
 ---
 # <a name="initializing-the-dialog-box"></a>Inizializzazione della finestra di dialogo
 
-Dopo la finestra di dialogo finestra e tutti i relativi controlli vengono creati, ma prima la finestra di dialogo viene visualizzata la finestra (di entrambi i tipi) sullo schermo, l'oggetto finestra di dialogo [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) viene chiamata la funzione membro. Per una finestra di dialogo modale, ciò si verifica durante la `DoModal` chiamare. Per una finestra di dialogo non modale `OnInitDialog` viene chiamato quando `Create` viene chiamato. È in genere eseguire l'override `OnInitDialog` per inizializzare i controlli della finestra di dialogo, ad esempio l'impostazione il testo iniziale di una casella di modifica. È necessario chiamare il `OnInitDialog` la funzione membro della classe di base, `CDialog`, dal `OnInitDialog` eseguire l'override.
+Dopo la creazione della finestra di dialogo e di tutti i relativi controlli, ma appena prima della finestra di dialogo (di uno dei due tipi) viene visualizzato sullo schermo, viene chiamata la funzione membro [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) dell'oggetto finestra di dialogo. Per una finestra di dialogo modale, questo errore si verifica durante la chiamata `DoModal`. Per una finestra di dialogo non modale, viene chiamato `OnInitDialog` quando viene chiamato `Create`. In genere si esegue l'override di `OnInitDialog` per inizializzare i controlli della finestra di dialogo, ad esempio impostando il testo iniziale di una casella di modifica. È necessario chiamare la funzione membro `OnInitDialog` della classe base, `CDialog`, dall'override `OnInitDialog`.
 
-Se si desidera impostare il colore di sfondo della finestra di dialogo (e di tutte le altre finestre di dialogo nell'applicazione), vedere [impostando il colore di sfondo della finestra di dialogo](../mfc/setting-the-dialog-boxs-background-color.md).
+Se si desidera impostare il colore di sfondo della finestra di dialogo e quella di tutte le altre finestre di dialogo nell'applicazione, vedere [impostazione del colore di sfondo](../mfc/setting-the-dialog-boxs-background-color.md)della finestra di dialogo.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilizzo delle finestre di dialogo in MFC](../mfc/life-cycle-of-a-dialog-box.md)
