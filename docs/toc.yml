@@ -409,6 +409,8 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: File di progetto di esempio
                   href: build/reference/project-files.md
+                - name: Struttura dei file con estensione vcxproj.filters
+                  href: build/reference/vcxproj-filters-files.md
             - name: Pagine delle proprietà del progetto C++
               expanded: false
               items:
@@ -426,15 +428,15 @@
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Pagine delle proprietà C/C++
                   href: build/reference/c-cpp-prop-page.md
-                - name: Pagine delle proprietà Linker
+                - name: Linker (pagine delle proprietà)
                   href: build/reference/linker-property-pages.md
                 - name: Pagine delle proprietà Riga di comando
                   href: build/reference/command-line-property-pages.md
-                - name: Pagina delle proprietà NMake
+                - name: NMake (pagina delle proprietà)
                   href: build/reference/nmake-property-page.md
-                - name: Pagine delle proprietà dello strumento Manifesto
+                - name: Strumento Manifesto (pagine delle proprietà)
                   href: build/reference/manifest-tool-property-pages.md
-                - name: Pagine delle proprietà Risorse
+                - name: risorse (pagine delle proprietà)
                   href: build/reference/resources-property-pages.md
                 - name: Pagina delle proprietà Risorse gestite
                   href: build/reference/managed-resources-property-page.md
@@ -794,6 +796,8 @@
                       href: build/reference/zf.md
                     - name: /Zg (Genera i prototipi delle funzioni)
                       href: build/reference/zg-generate-function-prototypes.md
+                    - name: /ZH (Algoritmo hash per checksum nelle informazioni di debug)
+                      href: build/reference/zh.md
                     - name: /Zl (Omette il nome della libreria predefinita)
                       href: build/reference/zl-omit-default-library-name.md
                     - name: /Zm (Specifica il limite di allocazione della memoria per l'intestazione precompilata)
@@ -952,6 +956,10 @@
                   href: build/reference/largeaddressaware-handle-large-addresses.md
                 - name: /LIBPATH (Percorso LIB aggiuntivo)
                   href: build/reference/libpath-additional-libpath.md
+                - name: /LINKREPRO (Nome della directory per la riproduzione del collegamento)
+                  href: build/reference/linkrepro.md
+                - name: /LINKREPROTARGET (Nome del file per la riproduzione del collegamento)
+                  href: build/reference/linkreprotarget.md
                 - name: /LTCG (Generazione di codice in fase di collegamento)
                   href: build/reference/ltcg-link-time-code-generation.md
                 - name: /MACHINE (Specifica la piattaforma di destinazione)
@@ -1521,6 +1529,8 @@
           href: ide/writing-and-refactoring-code-cpp.md
         - name: Spostarsi all'interno del codice C++
           href: ide/navigate-code-cpp.md
+        - name: Impostare le preferenze di codifica per C++
+          href: ide/how-to-set-preferences.md
         - name: Collaborare tramite Live Share per C++
           href: ide/live-share-cpp.md
         - name: Modificare la firma
@@ -4809,7 +4819,7 @@
                       href: preprocessor/preprocessor-operators.md
                     - name: 'Operatore per la creazione di stringhe (#)'
                       href: preprocessor/stringizing-operator-hash.md
-                    - name: 'Operatore charizing (#@)'
+                    - name: 'Operatore per la creazione di caratteri (#@)'
                       href: preprocessor/charizing-operator-hash-at.md
                     - name: 'Operatore di concatenamento dei token (##)'
                       href: preprocessor/token-pasting-operator-hash-hash.md
@@ -4840,7 +4850,7 @@
               items:
                 - name: Direttive pragma e parola chiave __pragma
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
-                - name: Pragma alloc_text
+                - name: alloc_text (pragma)
                   href: preprocessor/alloc-text.md
                 - name: Pragma auto_inline
                   href: preprocessor/auto-inline.md
@@ -8991,7 +9001,7 @@
                       href: standard-library/shared-ptr-class.md
                     - name: Classe unique_ptr
                       href: standard-library/unique-ptr-class.md
-                    - name: Classe weak_ptr
+                    - name: weak_ptr (classe)
                       href: standard-library/weak-ptr-class.md
                 - name: <memory_resource>
                   expanded: false
@@ -9069,7 +9079,7 @@
                   items:
                     - name: <ostream>
                       href: standard-library/ostream.md
-                    - name: Classe basic_ostream
+                    - name: basic_ostream (classe)
                       href: standard-library/basic-ostream-class.md
                     - name: Funzioni<ostream>
                       href: standard-library/ostream-functions.md
@@ -9630,7 +9640,7 @@
                       href: standard-library/slice-array-class.md
                     - name: Classe valarray
                       href: standard-library/valarray-class.md
-                    - name: Classe valarray<bool>
+                    - name: valarray<bool> (classe)
                       href: standard-library/valarray-bool-class.md
                 - name: <variant>
                   expanded: false
@@ -9648,7 +9658,7 @@
                   items:
                     - name: <vector>
                       href: standard-library/vector.md
-                    - name: Classe vector
+                    - name: vector (classe)
                       href: standard-library/vector-class.md
                     - name: Classe vector<bool>
                       expanded: false
@@ -9873,10 +9883,10 @@
               href: standard-library/regular-expressions-cpp.md
             - name: Esplorazione del file system
               href: standard-library/file-system-navigation.md
-        - name: Libreria SafeInt
+        - name: libreria SafeInt
           expanded: false
           items:
-            - name: Libreria SafeInt
+            - name: libreria SafeInt
               href: safeint/safeint-library.md
             - name: Classe SafeInt
               href: safeint/safeint-class.md
@@ -10415,7 +10425,7 @@
                           href: parallel/concrt/reference/scheduler-worker-creation-error-class.md
                         - name: Classe SchedulerPolicy
                           href: parallel/concrt/reference/schedulerpolicy-class.md
-                        - name: Classe simple_partitioner
+                        - name: simple_partitioner (classe)
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: Classe single_assignment
                           href: parallel/concrt/reference/single-assignment-class.md
