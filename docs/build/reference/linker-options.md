@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685579"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712693"
 ---
 # <a name="linker-options"></a>Opzioni del linker
 
@@ -88,7 +88,7 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Indica al compilatore che l'applicazione supportata indirizzi superiori a 2 GB|
 |[/LIBPATH](libpath-additional-libpath.md)|Specifica un percorso da cercare prima del percorso della libreria dell'ambiente.|
 |[/LINKREPRO](linkrepro.md)|Specifica un percorso in cui generare gli artefatti per la ripetizione del collegamento.|
-|[/LINKREPROTARGET](linkreprotarget.md)|Genera una ripetizione del collegamento solo quando produce la destinazione specificata.|
+|[/LINKREPROTARGET](linkreprotarget.md)|Genera una ripetizione del collegamento solo quando produce la destinazione specificata. <sup>16,1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|Specifica la generazione del codice in fase di collegamento.|
 |[/MACHINE](machine-specify-target-platform.md)|Specifica la piattaforma di destinazione.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Crea un file manifesto side-by-side e facoltativamente lo incorpora nel file binario.|
@@ -137,7 +137,7 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|Firma parzialmente un file di metadati di Windows Runtime (winmd) inserendo la chiave pubblica nel file winmd.|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|Considera gli avvisi del linker come errori.|
 
-Per altre informazioni, vedere [Compiler-Controlled LINK Options](compiler-controlled-link-options.md).
+<sup>16,1</sup> questa opzione è disponibile a partire da Visual Studio 2019 versione 16,1.
 
 ## <a name="see-also"></a>Vedere anche
 

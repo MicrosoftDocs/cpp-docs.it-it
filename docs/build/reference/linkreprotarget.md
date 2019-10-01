@@ -1,5 +1,5 @@
 ---
-title: /LINKREPROTARGET (collega il nome del file di riproduzione)
+title: /LINKREPROTARGET (Nome del file per la riproduzione del collegamento)
 description: Opzione del linker o dello strumento di libreria per impostare il nome di un file di destinazione per la riproduzione di un collegamento.
 ms.date: 09/24/2019
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - /LINKREPROTARGET linker option
 - -LINKREPROTARGET linker option
 - linker repro reporting
-ms.openlocfilehash: 4912e8bc64d31e3ecc97ea25783c7329e7d7861c
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d629c4c2665239d03f38569677fa579b6c8d37e0
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686838"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712677"
 ---
-# <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET (collega il nome del file di riproduzione)
+# <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET (Nome del file per la riproduzione del collegamento)
 
 Indica al linker o allo strumento di libreria di generare una ripetizione dei collegamenti solo quando la destinazione ha il nome file specificato.
 
@@ -38,6 +38,8 @@ L'opzione **/LINKREPROTARGET** è utile nelle compilazioni complesse che richiam
 Per ulteriori informazioni su come e quando creare una procedura di riproduzione del collegamento, vedere la sezione relativa alle procedure di [collegamento](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md#link-repros) per la [segnalazione di un C++ problema con il set di strumenti Microsoft](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 È necessario impostare le opzioni **/LINKREPRO** e [/out](out-output-file-name.md) affinché l'opzione **/LINKREPROTARGET** abbia effetto.
+
+**/LINKREPROTARGET** è disponibile a partire da Visual Studio 2019 versione 16,1.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
