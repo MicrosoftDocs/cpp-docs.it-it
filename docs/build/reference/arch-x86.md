@@ -1,22 +1,22 @@
 ---
 title: /arch (x86)
-ms.date: 11/04/2016
+ms.date: 10/01/2019
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b1e5501f6edd3eb016395380ff476250c0c388b9
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341053"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816321"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-Specifica l'architettura per la generazione del codice su piattaforme x86. Vedere anche [/arch (x64)](arch-x64.md) e [/arch (ARM)](arch-arm.md).
+Specifica l'architettura per la generazione del codice su piattaforme x86. Vedere anche [/Arch (x64)](arch-x64.md) e [/Arch (ARM)](arch-arm.md).
 
 ## <a name="syntax"></a>Sintassi
 
 ```
-/arch:[IA32|SSE|SSE2|AVX|AVX2]
+/arch:[IA32|SSE|SSE2|AVX|AVX2|AVX512]
 ```
 
 ## <a name="arguments"></a>Argomenti
@@ -28,7 +28,7 @@ Non specifica istruzioni avanzate e specifica x87 per i calcoli a virgola mobile
 Abilita l'uso delle istruzioni SSE.
 
 **/arch:SSE2**<br/>
-Abilita l'uso delle istruzioni SSE2. Si tratta dell'istruzione predefinita per x86 piattaforme se nessun **/arch** opzione specificata.
+Abilita l'uso delle istruzioni SSE2. Si tratta dell'istruzione predefinita sulle piattaforme x86 se non è specificata alcuna opzione **/Arch** .
 
 **/arch:AVX**<br/>
 Abilita l'uso di istruzioni Intel Advanced Vector Extensions.
@@ -36,27 +36,40 @@ Abilita l'uso di istruzioni Intel Advanced Vector Extensions.
 **/arch:AVX2**<br/>
 Abilita l'uso di istruzioni Intel Advanced Vector Extensions 2.
 
+**/Arch: AVX512**<br/>
+Abilita l'uso di istruzioni Intel Advanced Vector Extensions 512.
+
 ## <a name="remarks"></a>Note
 
-Le istruzioni SSE ed SSE2 sono presenti in vari processori Intel e AMD. Le istruzioni AVX sono presenti nei processori Sandy Bridge di Intel e nei processori Bulldozer di AMD. Le istruzioni AVX2 sono supportate dai processori Haswalle e Broadwell di Intel e dai processori AMD basati su Excavator.
+L'opzione **/Arch** Abilita o Disabilita l'uso di alcune estensioni del set di istruzioni, in particolare per il calcolo vettoriale, disponibile nei processori di Intel e AMD. In generale, i processori introdotti più di recente possono supportare estensioni aggiuntive rispetto a quelle supportate dai processori precedenti, anche se è consigliabile consultare la documentazione per un particolare processore o un test per il supporto dell'estensione del set di istruzioni con [_ _ CPUID](../../intrinsics/cpuid-cpuidex.md) prima dell'esecuzione del codice utilizzando un'estensione del set di istruzioni.
 
-Il `_M_IX86_FP`, `__AVX__` e `__AVX2__` macro indicano che, se presente, **/arch** è stata usata l'opzione del compilatore. Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md). Il **/arch:avx2** opzione e `__AVX2__` macro sono state introdotte in Visual Studio 2013 Update 2, versione 12.0.34567.1.
+**/Arch** influiscono solo sulla generazione del codice per le funzioni native. Quando si usa [/CLR](clr-common-language-runtime-compilation.md) per la compilazione, **/Arch** non ha effetto sulla generazione del codice per le funzioni gestite.
 
-L'utilità di ottimizzazione sceglie quando e come usare le istruzioni SSE ed SSE2 quando **/arch** è specificato. Usa le istruzioni SSE ed SSE2 per alcuni calcoli a virgola mobile scalari, quando stabilisce che l'esecuzione dei calcoli sarà più veloce usando i registri e le istruzioni SSE/SSE2 anziché lo stack di registri a virgola mobile x87. Di conseguenza, nel codice potrebbe essere in uso una combinazione di istruzioni x87 ed SSE/SSE2 per i calcoli a virgola mobile. Inoltre, con **/arch:SSE2**, le istruzioni SSE2 sono utilizzabile per alcune operazioni integer a 64 bit.
+Le opzioni **/Arch** fanno riferimento alle estensioni dei set di istruzioni con le caratteristiche seguenti:
 
-Oltre a usare le istruzioni SSE ed SSE2, il compilatore usa anche altre istruzioni presenti nelle revisioni del processore che supportano SSE ed SSE2. Un esempio è costituito dall'istruzione CMOV che ha fatto la sua prima apparizione nella revisione Pentium Pro dei processori Intel.
+- **Ia32** è il set di istruzioni x86 a 32 bit legacy senza alcuna operazione Vector e l'uso di x87 per i calcoli a virgola mobile.
 
-Poiché il compilatore x86 genera codice che Usa istruzioni SSE2 per impostazione predefinita, è necessario specificare **/arch:IA32** per disabilitare la generazione di istruzioni SSE ed SSE2 per x86 processori.
+- La crittografia **SSE** consente il calcolo con vettori di un massimo di quattro valori a virgola mobile a precisione singola. Sono state aggiunte anche le istruzioni scalari a virgola mobile corrispondenti.
 
-**/arch** solo interessa generare il codice per le funzioni native. Quando si usa [/clr](clr-common-language-runtime-compilation.md) per compilare, **/arch** non ha alcun effetto sulla generazione di codice per le funzioni gestite.
+- **SSE2** consente il calcolo con vettori a 128 bit di valori integer a precisione singola, a precisione doppia e a 1, 2, 4 o 8 byte. Sono state aggiunte anche istruzioni scalari a precisione doppia.
 
-**/arch** e [/QIfist](qifist-suppress-ftol.md) non può essere usato nello stesso compilando. In particolare, se non si usa `_controlfp` per modificare la parola di controllo FP, il codice di avvio in fase di esecuzione imposta il campo di controllo della precisione della parola di controllo FPU dell'istruzione x87 su 53 bit. Di conseguenza, ogni operazione a virgola mobile e precisione doppia in un'espressione usa un significando a 53 bit e un esponente a 15 bit. Tuttavia, ogni operazione a precisione singola SSE usa un significando a 24 bit e un esponente a 8 bit, mentre le operazioni a precisione doppia SSE2 usano un significando a 53 bit e un esponente a 11 bit. Per altre informazioni, vedere [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Queste differenze sono possibili in un albero delle espressioni, ma non nei casi in cui è coinvolta un'assegnazione utente dopo ogni sottoespressione. Si consideri quanto segue.
+- In **AVX** è stata introdotta una codifica di istruzioni alternativa per istruzioni scalari vettoriali e a virgola mobile che consente vettori di 128 bit o 256 bit e che estende a zero tutti i risultati in formato vettoriale completo. Per la compatibilità con le versioni precedenti, le istruzioni vettoriali di tipo SSE conservano tutti i bit oltre il bit 127. La maggior parte delle operazioni a virgola mobile è estesa a 256 bit.
+
+- **AVX2** estende la maggior parte delle operazioni integer a vettori a 256 bit e consente l'uso di istruzioni fuse multiply-add (FMA).
+
+- In **AVX512** è stato introdotto un altro formato di codifica delle istruzioni che consente vettori a 512 bit, oltre ad alcune altre funzionalità facoltative. Sono state aggiunte anche le istruzioni per altre operazioni.
+
+Query Optimizer sceglie quando e come usare le istruzioni vettoriali a seconda del **/Arch** specificato. I calcoli a virgola mobile scalari vengono eseguiti con le istruzioni SSE o AVX, se disponibili. Alcune convenzioni di chiamata specificano il passaggio di argomenti a virgola mobile nello stack x87 e, di conseguenza, il codice può usare una combinazione di istruzioni x87 e SSE/AVX per i calcoli a virgola mobile. Le istruzioni per i vettori integer possono anche essere usate per alcune operazioni integer a 64 bit, quando disponibili.
+
+Oltre alle istruzioni scalari vettoriali e a virgola mobile, ogni opzione **/Arch** può anche consentire l'uso di altre istruzioni non vettoriali associate a tale opzione. Un esempio è la famiglia di istruzioni CMOVcc che è apparsa per la prima volta sui processori Intel Pentium Pro. Poiché le istruzioni SSE sono state introdotte con il processore Intel Pentium III successivo, le istruzioni CMOVcc possono essere generate tranne quando si specifica **/Arch: IA32** .
+
+Le operazioni a virgola mobile vengono in genere arrotondate a precisione doppia (64 bit) nel codice x87, ma è possibile usare `_controlfp` per modificare la parola di controllo FP, inclusa l'impostazione del controllo di precisione su precisione estesa (80 bit) o precisione singola (32 bit). Per altre informazioni, vedere [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). SSE e AVX hanno istruzioni separate a precisione singola e precisione doppia per ogni operazione, pertanto non esiste alcun equivalente per il codice SSE/AVX. Questo può modificare il modo in cui i risultati vengono arrotondati quando il risultato di un'operazione a virgola mobile viene usato direttamente in un ulteriore calcolo anziché assegnarlo a una variabile utente. Si consideri quanto segue.
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
 ```
 
-Confronto:
+Con assegnazione esplicita:
 
 ```cpp
 t = f1 * f2;   // Do f1 * f2, round to the type of t.
@@ -64,15 +77,29 @@ r = t + d;     // This should produce the same overall result
                // whether x87 stack is used or SSE/SSE2 is used.
 ```
 
-### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>Per impostare questa opzione del compilatore per le istruzioni AVX, AVX2, IA32, SSE o SSE2 in Visual Studio
+non è possibile usare **/Arch** e [/QIfist](qifist-suppress-ftol.md) nello stesso modulo. L'opzione **/QIfist** modifica il comportamento di arrotondamento della conversione a virgola mobile in Integer. Il comportamento predefinito prevede il troncamento (arrotondamento verso zero), mentre l'opzione **/QIfist** specifica l'uso della modalità di arrotondamento dell'ambiente a virgola mobile. Poiché in questo modo viene modificato il comportamento di tutte le conversioni a virgola mobile in Integer, questo flag è stato deprecato. Quando si esegue la compilazione per SSE o AVX, è possibile arrotondare un valore a virgola mobile a un Integer usando la modalità di arrotondamento dell'ambiente a virgola mobile usando una sequenza di funzione intrinseca:
 
-1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+```cpp
+int convert_float_to_int(float x) {
+    return _mm_cvtss_si32(_mm_set_ss(x));
+}
 
-1. Selezionare il **le proprietà di configurazione**, **C/C++** cartella.
+int convert_double_to_int(double x) {
+    return _mm_cvtsd_si32(_mm_set_sd(x));
+}
+```
 
-1. Selezionare il **generazione di codice** pagina delle proprietà.
+Le macro `_M_IX86_FP`, `__AVX__`, `__AVX2__`, `__AVX512F__`, `__AVX512CD__`, `__AVX512BW__`, `__AVX512DQ__` e `__AVX512VL__` indicano quale opzione del compilatore **/Arch** è stata usata. Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md). L'opzione **/Arch: AVX2** e la macro `__AVX2__` sono state introdotte in Visual Studio 2013 Update 2, versione 12.0.34567.1. Supporto limitato per **/Arch: AVX512** è stato aggiunto in visual studio 2017 ed espanso in visual studio 2019.
 
-1. Modificare il **Abilita Set di istruzioni avanzate** proprietà.
+### <a name="to-set-this-compiler-option-for-avx-avx2-avx512-ia32-sse-or-sse2-in-visual-studio"></a>Per impostare questa opzione del compilatore per AVX, AVX2, AVX512, IA32, SSE o SSE2 in Visual Studio
+
+1. Aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
+
+1. Selezionare le **proprietà di configurazione**, **CC++ /** cartella.
+
+1. Selezionare la pagina delle proprietà **generazione codice** .
+
+1. Modificare la proprietà **Abilita set di istruzioni avanzate** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 

@@ -1,30 +1,30 @@
 ---
 title: Progetti CMake in Visual Studio
-ms.date: 06/12/2019
+ms.date: 10/01/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: f2bafb75aae2eabb4e8f289435ddaeb61e6aabf4
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 52ca34ef8522ada1881e2f7f5df212167c64c919
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042641"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816471"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Progetti CMake in Visual Studio
 
 CMake è uno strumento open source multipiattaforma per la definizione di processi di compilazione che funzionano su più piattaforme. Questo articolo presuppone una certa familiarità con CMake. Per altre informazioni su questo strumento, vedere come [compilare, testare e creare pacchetti software con CMake](https://cmake.org/). 
 
 > [!NOTE]
-> CMake è diventano più integrato con Visual Studio alle versioni precedenti. Per visualizzare le informazioni corrette per la versione in che uso, assicurarsi che il selettore di versione in alto a sinistra della pagina sia impostato correttamente. 
+> CMake è diventato sempre più integrato con Visual Studio nelle ultime versioni. Per visualizzare le informazioni corrette per la versione in uso, verificare che il selettore di versione nell'angolo superiore sinistro della pagina sia impostato correttamente. 
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 introduce il **editor le impostazioni di CMake** e altri miglioramenti rispetto a Visual Studio 2017. Il  **C++ CMake tools per Windows** componente utilizza le **Apri cartella** funzionalità per abilitare l'IDE di utilizzare i file di progetto CMake (ad esempio file cmakelists. txt) direttamente ai fini di IntelliSense e esplorazione. Sono supportati i generatori Ninja e Visual Studio. Se si usa un generatore di Visual Studio, viene generato un file di progetto temporaneo, che viene passato a msbuild.exe, ma non viene mai caricato per IntelliSense o a scopo di navigazione. È anche possibile importare una cache di CMake esistente. 
+Il  **C++ componente CMake Tools per Windows** utilizza la funzionalità [Apri cartella](https://docs.microsoft.com/en-us/cpp/build/open-folder-projects-cpp?view=vs-2019) per utilizzare i file di progetto CMake (ad esempio, CMakeLists. txt) direttamente a scopo di IntelliSense ed esplorazione. Sono supportati i generatori Ninja e Visual Studio. Se si usa un generatore di Visual Studio, viene generato un file di progetto temporaneo, che viene passato a msbuild.exe, ma non viene mai caricato per IntelliSense o a scopo di navigazione. È anche possibile importare una cache CMake esistente.
 
 ## <a name="installation"></a>Installazione
 
-**C++CMake tools per Windows** viene installato per impostazione predefinita come parte del **sviluppo di applicazioni Desktop con C++**  carico di lavoro e come parte del **sviluppo di applicazioni Linux con C++**  carico di lavoro. Visualizzare [progetti multipiattaforma CMake](../linux/cmake-linux-project.md) per altre informazioni.
+Gli strumenti **C++** **CMake per Windows vengono installati per impostazione predefinita come parte dello sviluppo desktop con carico di lavoro e come parte dello sviluppo di Linux con C++**  carico di lavoro. **C++** Per ulteriori informazioni, vedere [progetti CMake multipiattaforma](../linux/cmake-linux-project.md) .
 
 ![Componente CMake nel carico di lavoro Desktop C++](media/cmake-install-2019.png)
 
@@ -32,13 +32,13 @@ Per altre informazioni, vedere [Installare il carico di lavoro Linux C++ in Visu
 
 ## <a name="ide-integration"></a>Integrazione nell'IDE
 
-Scegliendo **File | Apri | Cartella** per aprire una cartella contenente un file CMakeLists.txt, si verifica quanto segue:
+Quando si sceglie **file > aprire > cartella** per aprire una cartella contenente un file CMakeLists. txt, si verifica quanto segue:
 
-- Visual Studio aggiunge **CMake** degli elementi per il **progetto** menu, con i comandi per la visualizzazione e modifica di script di CMake.
+- Visual Studio aggiunge gli elementi **CMake** al menu **progetto** , con i comandi per la visualizzazione e la modifica degli script CMake.
 
 - **Esplora soluzioni** visualizza la struttura delle cartelle e i file.
 
-- Visual Studio esegue CMake.exe e genera facoltativamente la cache CMake per la *configurazione* predefinita, ovvero Debug x86. La riga di comando CMake viene visualizzata nella **Finestra di output**, insieme all'uscita aggiuntiva da CMake.
+- Visual Studio esegue CMake. exe e genera la cache CMake per la *configurazione*predefinita, che è il debug x64. La riga di comando CMake viene visualizzata nella **Finestra di output**, insieme all'uscita aggiuntiva da CMake.
 
 - In background, Visual Studio inizia a indicizzare i file sorgente per abilitare IntelliSense, le informazioni di navigazione, il refactoring e così via. Mentre si lavora, Visual Studio esegue il monitoraggio delle modifiche nell'editor e anche sul disco per mantenere l'indice sincronizzato con le sorgenti.
 
@@ -50,48 +50,38 @@ Scegliendo **File | Apri | Cartella** per aprire una cartella contenente un file
 
 ![Pulsante Visualizzazione destinazioni CMake](media/cmake-targets-view.png)
 
-Visual Studio Usa un file denominato **Cmakesettings** per archiviare le variabili di ambiente o le opzioni della riga di comando per Cmake.exe. **Cmakesettings** consente inoltre agli utenti è possibile definire e archiviare CMake più configurazioni della build e passare facilmente tra loro nell'IDE. In Visual Studio 2019, il **Editor di impostazioni di CMake** fornisce un modo pratico per modificare le impostazioni. Visualizzare [impostazioni di CMake personalizzare](customize-cmake-settings.md) per altre informazioni.
+Visual Studio usa un file denominato **CMakeSettings. JSON** per archiviare le variabili di ambiente o le opzioni della riga di comando per CMake. exe. **CMakeSettings. JSON** consente inoltre di definire e archiviare più configurazioni di compilazione CMake e di passare da una all'altra nell'IDE. In Visual Studio 2019, l' **Editor delle impostazioni CMake** offre un modo pratico per modificare le impostazioni. Per ulteriori informazioni, vedere [personalizzare le impostazioni CMake](customize-cmake-settings.md) .
 
-In caso contrario, usare il **cmakelists. txt** esattamente come si sarebbe in qualsiasi progetto CMake per specificare i file di origine, trovare le librerie, impostare le opzioni di compilatore e linker e specificare altro sistema di compilazione informazioni correlate.
+In caso contrario, usare **CMakeLists. txt** Analogamente a qualsiasi progetto CMake per specificare i file di origine, trovare le librerie, impostare le opzioni del compilatore e del linker e specificare altre informazioni correlate al sistema di compilazione.
 
-Se è necessario passare argomenti a un file eseguibile in fase di debug, è possibile usare un altro file denominato **Launch**. In alcuni scenari Visual Studio genera automaticamente questi file che possono essere successivamente modificati. È anche possibile creare il file manualmente.
+Se è necessario passare argomenti a un file eseguibile in fase di debug, è possibile usare un altro file denominato **Launch. vs. JSON**. In alcuni scenari Visual Studio genera automaticamente questi file che possono essere successivamente modificati. È anche possibile creare il file manualmente.
 
 > [!NOTE]
-> Per altri tipi di progetti Apri cartella, vengono utilizzati altri due file JSON: **Cppproperties** e **Tasks**. Nessuno dei due è rilevante per i progetti CMake.
+> Per altri tipi di progetti di cartelle aperte, vengono usati due file JSON aggiuntivi: **CppProperties. JSON** e **Tasks. vs. JSON**. Nessuno dei due è rilevante per i progetti CMake.
 
 ## <a name="import-an-existing-cache"></a>Importare una cache esistente
 
-Quando si importa un file CMakeCache.txt esistente, Visual Studio estrae automaticamente le variabili personalizzate e crea un file **CMakeSettings.json** prepopolato basato su tali variabili. La cache originale non viene modificata in alcun modo e può essere comunque usata dalla riga di comando o con qualsiasi strumento o IDE usato per generarla. Il nuovo **Cmakesettings** file viene posizionato insieme ad la radice del progetto file cmakelists. txt. Visual Studio genera una nuova cache basata sul file di impostazione. È possibile eseguire l'override della generazione automatica della cache nella finestra di dialogo **Strumenti | Opzioni | CMake | Generale**.
+Quando si importa un file CMakeCache.txt esistente, Visual Studio estrae automaticamente le variabili personalizzate e crea un file **CMakeSettings.json** prepopolato basato su tali variabili. La cache originale non viene modificata in alcun modo e può essere comunque usata dalla riga di comando o con qualsiasi strumento o IDE usato per generarla. Il nuovo file **CMakeSettings. JSON** viene inserito insieme alla radice del progetto CMakeLists. txt. Visual Studio genera una nuova cache basata sul file di impostazione. È possibile eseguire l'override della generazione automatica della cache nella finestra di dialogo **strumenti > opzioni > cmake > generale** .
 
-Non tutti gli elementi della cache vengono importati.  Proprietà quali il generatore e la posizione dei compilatori vengono sostituite con proprietà predefinite che funzionano bene con l'IDE.
+Non tutti gli elementi della cache vengono importati. Proprietà quali il generatore e la posizione dei compilatori vengono sostituite con proprietà predefinite che funzionano bene con l'IDE.
 
-### <a name="to-import-an-existing-cache"></a>Per importare una cache esistente
+## <a name="open-an-existing-cache"></a>Aprire una cache esistente
 
-1. Dal menu principale scegliere **File | Apri | CMake**:
-
-   ![Apri CMake](media/cmake-file-open.png "File, Apri, CMake")
-
-   Verrà visualizzata la procedura guidata **Import CMake from Cache** (Importa CMake dalla Cache).
-
-2. Passare al file CMakeCache.txt che si desidera importare, quindi fare clic su **OK**. Viene visualizzata la procedura guidata **Importa progetto CMake dalla cache**:
-
-   ![Importare una cache di CMake](media/cmake-import-wizard.png "Aprire la procedura guidata di importazione della cache di CMake")
-
-   Al termine della procedura guidata, è visibile il nuovo file CMakeCache.txt **Esplora soluzioni** accanto al file radice CMakeLists.txt del progetto.
+Quando si apre una cache CMake esistente, Visual Studio non tenterà di gestire la cache e la struttura di compilazione. Ciò offre agli strumenti personalizzati o Preferiti il controllo completo sulla modalità di configurazione del progetto da CMake. È possibile aprire una cache esistente in Visual Studio tramite **File > aprire > CMake** e passare a un CMakeCache. txt esistente. In alternativa, se è già stato aperto il progetto in Visual Studio, è possibile aggiungervi una cache esistente nello stesso modo in cui si aggiunge una nuova configurazione. Per altre informazioni, vedere il post di Blog sull' [apertura di una cache esistente in Visual Studio](https://devblogs.microsoft.com/cppblog/open-existing-cmake-caches-in-visual-studio/).
 
 ## <a name="building-cmake-projects"></a>Compilazione di progetti CMake
 
 Per compilare un progetto di CMake, sono disponibili le opzioni seguenti:
 
-1. Sulla barra degli strumenti generali, trovare il **configurazioni** elenco a discesa e viene visualizzato probabilmente "Linux-Debug" o "x64-Debug" per impostazione predefinita. Selezionare la configurazione desiderata e premere **F5**, oppure fare clic sui **eseguire** pulsante (triangolo verde) sulla barra degli strumenti. Il progetto viene compilato automaticamente prima di tutto, come una soluzione Visual Studio.
+1. Nella barra degli strumenti generale trovare l'elenco a discesa **configurazioni** . Per impostazione predefinita, è probabile che venga visualizzato "x64-debug". Selezionare la configurazione desiderata e premere **F5**oppure fare clic sul pulsante **Esegui** (triangolo verde) sulla barra degli strumenti. Il progetto viene compilato automaticamente prima di tutto, come una soluzione Visual Studio.
 
 1. Fare clic con il pulsante destro del mouse su CMakeLists.txt e scegliere **Build**  dal menu di scelta rapida. Se nella struttura delle cartelle sono presenti più destinazioni, è possibile scegliere di compilare tutte o solo una destinazione specifica.
 
-1. Nel menu principale, selezionare **Genera | Genera soluzione** (**F7** o **Ctrl+Shift+B**). Assicurarsi che sia già selezionata una destinazione di CMake nell'elenco a discesa **Elemento di avvio** nella barra degli strumenti **Generale**.
+1. Dal menu principale, selezionare **compila > compila tutto** (**F7** o **CTRL + MAIUSC + B**). Assicurarsi che sia già selezionata una destinazione di CMake nell'elenco a discesa **Elemento di avvio** nella barra degli strumenti **Generale**.
 
 ![Comando del menu di compilazione CMake](media/cmake-build-menu.png "Comando del menu di compilazione CMake")
 
-È possibile personalizzare le configurazioni della build, le variabili di ambiente, gli argomenti della riga di comando e altre impostazioni senza modificare il file cmakelists. txt tramite il **Editor di impostazioni di CMake**. Per altre informazioni, vedere [Customize CMake settings](customize-cmake-settings.md) (Personalizzare le impostazioni di CMake).
+È possibile personalizzare le configurazioni di compilazione, le variabili di ambiente, gli argomenti della riga di comando e altre impostazioni senza modificare il file CMakeLists. txt tramite l' **Editor delle impostazioni CMake**. Per altre informazioni, vedere [Customize CMake settings](customize-cmake-settings.md) (Personalizzare le impostazioni di CMake).
 
 Come prevedibile, i risultati della compilazione sono visualizzati nella **Finestra di output** e nell'**Elenco errori**.
 
@@ -107,21 +97,21 @@ Per eseguire il debug di un progetto di CMake, scegliere la configurazione desid
 
 I comandi **Esegui** o **F5** compilano innanzitutto il progetto se sono state apportate modifiche rispetto alla compilazione precedente.
 
-È possibile personalizzare un CMake sessione di debug impostando le proprietà nel **Launch** file. Per altre informazioni, vedere [Configure CMake debugging sessions](configure-cmake-debugging-sessions.md) (Configurare le sessioni di debug di CMake).
-
-## <a name="vcpkg-integration"></a>Vcpkg Integration
-
-Se è installato [vcpkg](vcpkg.md), progetti CMake aperti in Visual Studio si integrano automaticamente il file di toolchain di vcpkg. Ciò significa che è richiesta alcuna configurazione aggiuntiva per usare vcpkg con i progetti CMake. Questo supporto funziona sia per le installazioni locali vcpkg le installazioni di vcpkg nei computer remoti di destinazione. Questo comportamento viene disabilitato automaticamente quando si specifica qualsiasi altre toolchain nella configurazione di impostazioni di CMake.
+È possibile personalizzare una sessione di debug CMake impostando le proprietà nel file **Launch. vs. JSON** . Per altre informazioni, vedere [Configure CMake debugging sessions](configure-cmake-debugging-sessions.md) (Configurare le sessioni di debug di CMake).
 
 ## <a name="just-my-code-for-cmake-projects"></a>Just My Code per i progetti CMake
 
-Quando si compila per Windows utilizzando il compilatore MSVC, i progetti CMake ora supportano solo il debug del codice nel compilatore e linker se l'opzione è abilitata in Visual Studio. Per modificare l'impostazione, passare a **degli strumenti** > **opzioni** > **debug** > **generale**.
+Quando si compila per Windows usando il compilatore MSVC, i progetti CMake hanno il supporto per il debug Just My Code nel compilatore e nel linker se l'opzione è abilitata in Visual Studio. Per modificare l'impostazione, passare a **strumenti** > **Opzioni** > **debug** > **generale**.
 
-## <a name="customize-configuration-feedback"></a>Personalizzare i commenti e suggerimenti di configurazione
+## <a name="vcpkg-integration"></a>Integrazione vcpkg
 
-Per impostazione predefinita, la maggior parte dei messaggi di configurazione vengono soppressi a meno che non si è verificato un errore. È possibile visualizzare tutti i messaggi abilitando questa funzionalità nella **degli strumenti** > **opzioni** > **CMake**.
+Se è stato installato [vcpkg](vcpkg.md), i progetti CMake aperti in Visual Studio integreranno automaticamente il file di vcpkg. Questo significa che non è necessaria alcuna configurazione aggiuntiva per usare vcpkg con i progetti CMake. Questo supporto funziona sia per le installazioni vcpkg locali sia per le installazioni vcpkg nei sistemi remoti di destinazione. Questo comportamento viene disabilitato automaticamente quando si specifica un altro sistema di gestione dei problemi nella configurazione delle impostazioni CMake.
 
-   ![Configurazione delle opzioni di diagnostica di CMake](media/vs2019-cmake-configure-options.png "opzioni di diagnostica di CMake")
+## <a name="customize-configuration-feedback"></a>Personalizzare il feedback sulla configurazione
+
+Per impostazione predefinita, la maggior parte dei messaggi di configurazione viene eliminata a meno che non si verifichi un errore. È possibile visualizzare tutti i messaggi abilitando questa funzionalità in **strumenti** > **Opzioni** > **CMake**.
+
+   ![Configurazione]delle opzioni di diagnostica CMake opzioni di(media/vs2019-cmake-configure-options.png "diagnostica CMake")
 
 ## <a name="editing-cmakeliststxt-files"></a>Modifica dei file CMakeLists.txt
 
@@ -136,19 +126,13 @@ Non appena si salva il file, viene eseguito nuovamente e automaticamente il pass
 
 ## <a name="cmake-configure-step"></a>Fase di configurazione di CMake
 
-Quando vengono apportate modifiche significative per la **Cmakesettings** o ai file cmakelists. txt, Visual Studio automaticamente consente di rieseguire il CMake il passaggio di configurazione. Se la fase di configurazione termina senza errori, le informazioni raccolte sono disponibili in C++ IntelliSense e nei servizi linguistici, nonché nelle operazioni di compilazione e debug.
-
-Quando più progetti CMake usano lo stesso nome di configurazione CMake (ad esempio, x86-Debug), vengono tutti configurati e compilati (nella loro cartella radice di compilazione) quando viene selezionata tale configurazione. È possibile eseguire il debug delle destinazioni da tutti i progetti CMake che partecipano alla configurazione CMake.
-
-   ![Voce di menu CMake Build Only (Solo generazione CMake)](media/cmake-build-only.png "CMake Build Only (Solo generazione CMake), voce di menu")
-
-Per limitare le compilazioni e il debug di sessioni da un sottoinsieme di progetti nell'area di lavoro, creare una nuova configurazione con un nome univoco nel **Cmakesettings** file e li applicherà alla solo tali progetti. Quando si seleziona questa configurazione, i comandi IntelliSense e build e debug sono abilitati solo per i progetti specificati.
+Quando vengono apportate modifiche significative a **CMakeSettings. JSON** o ai file CMakeLists. txt, Visual Studio riesegue automaticamente il passaggio di configurazione CMake. Se la fase di configurazione termina senza errori, le informazioni raccolte sono disponibili in C++ IntelliSense e nei servizi linguistici, nonché nelle operazioni di compilazione e debug.
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>Risoluzione degli errori di cache CMake
 
-Per altre informazioni sullo stato della cache CMake per diagnosticare un problema, aprire il menu principale **CMake** o il menu contestuale **CMakeLists.txt** in **Esplora soluzioni** per eseguire uno di questi comandi:
+Se sono necessarie altre informazioni sullo stato della cache CMake per diagnosticare un problema, aprire il menu principale del **progetto** o il menu di scelta rapida **CMakeLists. txt** in **Esplora soluzioni** per eseguire uno di questi comandi:
 
-- **Visualizza cache** apre il file CMakeCache.txt dalla cartella radice di compilazione nell'editor. (Tutte le modifiche apportate qui a CMakeCache.txt vengono cancellate se si pulisce la cache. Per apportare modifiche che rendono persistenti dopo che la cache viene eliminata, vedere [impostazioni di CMake personalizzare](customize-cmake-settings.md).)
+- **Visualizza cache** apre il file CMakeCache.txt dalla cartella radice di compilazione nell'editor. (Tutte le modifiche apportate qui a CMakeCache.txt vengono cancellate se si pulisce la cache. Per apportare modifiche che vengono mantenute dopo la pulizia della cache, vedere [personalizzare le impostazioni CMake](customize-cmake-settings.md).
 
 - **Apri cartella cache** apre una finestra di Explorer corrispondente alla cartella radice di compilazione.
 
@@ -156,13 +140,7 @@ Per altre informazioni sullo stato della cache CMake per diagnosticare un proble
 
 - **Genera cache** forza l'esecuzione della fase di generazione anche se Visual Studio considera l'ambiente aggiornato.
 
-È possibile disabilitare la generazione automatica della cache nella finestra di dialogo **Strumenti | Opzioni | CMake | Generale**.
-
-## <a name="single-file-compilation"></a>Compilazione di un file singolo
-
-Per compilare un singolo file in un progetto CMake, fare clic con il pulsante destro del mouse sul file in **Esplora soluzioni** e scegliere **Compila**. È anche possibile compilare il file aperto in quel momento nell'editor tramite il menu principale di CMake:
-
-![Compilazione di un file singolo di CMake](media/cmake-single-file-compile.png)
+La generazione automatica della cache può essere disabilitata nella finestra di dialogo **strumenti > opzioni > cmake > generale** .
 
 ## <a name="run-cmake-from-the-command-line"></a>Eseguire CMake dalla riga di comando
 
@@ -178,7 +156,7 @@ Se CMake è stato installato dal programma di installazione di Visual Studio, è
 
 ::: moniker range="vs-2017"
 
-Visual Studio 2017 offre un supporto dettagliato per CMake, inclusi [progetti CMake multipiattaforma](../linux/cmake-linux-project.md). Il componente **Strumenti Visual C++ per CMake** usa la funzionalità **Apri cartella** per consentire all'IDE di usare direttamente i file di progetto CMake, ad esempio CMakeLists.txt, per IntelliSense e l'esplorazione. Sono supportati i generatori Ninja e Visual Studio. Se si usa un generatore di Visual Studio, viene generato un file di progetto temporaneo, che viene passato a msbuild.exe, ma non viene mai caricato per IntelliSense o a scopo di navigazione. È anche possibile importare una cache di CMake esistente. 
+Visual Studio 2017 offre un supporto avanzato per CMake, inclusi i [progetti CMake multipiattaforma](../linux/cmake-linux-project.md). Il componente **Strumenti Visual C++ per CMake** usa la funzionalità **Apri cartella** per consentire all'IDE di usare direttamente i file di progetto CMake, ad esempio CMakeLists.txt, per IntelliSense e l'esplorazione. Sono supportati i generatori Ninja e Visual Studio. Se si usa un generatore di Visual Studio, viene generato un file di progetto temporaneo, che viene passato a msbuild.exe, ma non viene mai caricato per IntelliSense o a scopo di navigazione. È anche possibile importare una cache CMake esistente. 
 
 ## <a name="installation"></a>Installazione
 
@@ -190,7 +168,7 @@ Per altre informazioni, vedere [Installare il carico di lavoro Linux C++ in Visu
 
 ## <a name="ide-integration"></a>Integrazione nell'IDE
 
-Scegliendo **File | Apri | Cartella** per aprire una cartella contenente un file CMakeLists.txt, si verifica quanto segue:
+Quando si sceglie **file > aprire > cartella** per aprire una cartella contenente un file CMakeLists. txt, si verifica quanto segue:
 
 - Visual Studio aggiunge una voce di menu **CMake** al menu principale, con comandi per la visualizzazione e la modifica di script di CMake.
 
@@ -208,24 +186,24 @@ Scegliendo **File | Apri | Cartella** per aprire una cartella contenente un file
 
 ![Pulsante Visualizzazione destinazioni CMake](media/cmake-targets-view.png)
 
-Visual Studio Usa un file denominato **Cmakesettings** per archiviare le variabili di ambiente o le opzioni della riga di comando per Cmake.exe. **Cmakesettings** consente inoltre agli utenti è possibile definire e archiviare CMake più configurazioni della build e passare facilmente tra loro nell'IDE. 
+Visual Studio usa un file denominato **CMakeSettings. JSON** per archiviare le variabili di ambiente o le opzioni della riga di comando per CMake. exe. **CMakeSettings. JSON** consente inoltre di definire e archiviare più configurazioni di compilazione CMake e di passare da una all'altra nell'IDE. 
 
-In caso contrario, usare il **cmakelists. txt** esattamente come si sarebbe in qualsiasi progetto CMake per specificare i file di origine, trovare le librerie, impostare le opzioni di compilatore e linker e specificare altro sistema di compilazione informazioni correlate.
+In caso contrario, usare **CMakeLists. txt** Analogamente a qualsiasi progetto CMake per specificare i file di origine, trovare le librerie, impostare le opzioni del compilatore e del linker e specificare altre informazioni correlate al sistema di compilazione.
 
-Se è necessario passare argomenti a un file eseguibile in fase di debug, è possibile usare un altro file denominato **Launch**. In alcuni scenari Visual Studio genera automaticamente questi file che possono essere successivamente modificati. È anche possibile creare il file manualmente.
+Se è necessario passare argomenti a un file eseguibile in fase di debug, è possibile usare un altro file denominato **Launch. vs. JSON**. In alcuni scenari Visual Studio genera automaticamente questi file che possono essere successivamente modificati. È anche possibile creare il file manualmente.
 
 > [!NOTE]
-> Per altri tipi di progetti Apri cartella, vengono utilizzati altri due file JSON: **Cppproperties** e **Tasks**. Nessuno dei due è rilevante per i progetti CMake.
+> Per altri tipi di progetti di cartelle aperte, vengono usati due file JSON aggiuntivi: **CppProperties. JSON** e **Tasks. vs. JSON**. Nessuno dei due è rilevante per i progetti CMake.
 
 ## <a name="import-an-existing-cache"></a>Importare una cache esistente
 
-Quando si importa un file CMakeCache.txt esistente, Visual Studio estrae automaticamente le variabili personalizzate e crea un file **CMakeSettings.json** prepopolato basato su tali variabili. La cache originale non viene modificata in alcun modo e può essere comunque usata dalla riga di comando o con qualsiasi strumento o IDE usato per generarla. Il nuovo **Cmakesettings** file viene posizionato insieme ad la radice del progetto file cmakelists. txt. Visual Studio genera una nuova cache basata sul file di impostazione. È possibile eseguire l'override della generazione automatica della cache nella finestra di dialogo **Strumenti | Opzioni | CMake | Generale**.
+Quando si importa un file CMakeCache.txt esistente, Visual Studio estrae automaticamente le variabili personalizzate e crea un file **CMakeSettings.json** prepopolato basato su tali variabili. La cache originale non viene modificata in alcun modo e può essere comunque usata dalla riga di comando o con qualsiasi strumento o IDE usato per generarla. Il nuovo file **CMakeSettings. JSON** viene inserito insieme alla radice del progetto CMakeLists. txt. Visual Studio genera una nuova cache basata sul file di impostazione. È possibile eseguire l'override della generazione automatica della cache nella finestra di dialogo **strumenti > opzioni > cmake > generale** .
 
 Non tutti gli elementi della cache vengono importati.  Proprietà quali il generatore e la posizione dei compilatori vengono sostituite con proprietà predefinite che funzionano bene con l'IDE.
 
 ### <a name="to-import-an-existing-cache"></a>Per importare una cache esistente
 
-1. Dal menu principale scegliere **File | Apri | CMake**:
+1. Dal menu principale scegliere **File > apri > CMake**:
 
    ![Apri CMake](media/cmake-file-open.png "File, Apri, CMake")
 
@@ -241,15 +219,15 @@ Non tutti gli elementi della cache vengono importati.  Proprietà quali il gener
 
 Per compilare un progetto di CMake, sono disponibili le opzioni seguenti:
 
-1. Sulla barra degli strumenti generali, trovare il **configurazioni** elenco a discesa e viene visualizzato probabilmente "Linux-Debug" o "x64-Debug" per impostazione predefinita. Selezionare la configurazione desiderata e premere **F5**, oppure fare clic sui **eseguire** pulsante (triangolo verde) sulla barra degli strumenti. Il progetto viene compilato automaticamente prima di tutto, come una soluzione Visual Studio.
+1. Nella barra degli strumenti generale trovare l'elenco a discesa **configurazioni** ; per impostazione predefinita, è probabile che venga visualizzato "Linux-debug" o "x64-debug". Selezionare la configurazione desiderata e premere **F5**oppure fare clic sul pulsante **Esegui** (triangolo verde) sulla barra degli strumenti. Il progetto viene compilato automaticamente prima di tutto, come una soluzione Visual Studio.
 
 1. Fare clic con il pulsante destro del mouse su CMakeLists.txt e scegliere **Build**  dal menu di scelta rapida. Se nella struttura delle cartelle sono presenti più destinazioni, è possibile scegliere di compilare tutte o solo una destinazione specifica.
 
-1. Nel menu principale, selezionare **Genera | Genera soluzione** (**F7** o **Ctrl+Shift+B**). Assicurarsi che sia già selezionata una destinazione di CMake nell'elenco a discesa **Elemento di avvio** nella barra degli strumenti **Generale**.
+1. Dal menu principale, selezionare **compila > Compila soluzione** (**F7** o **CTRL + MAIUSC + B**). Assicurarsi che sia già selezionata una destinazione di CMake nell'elenco a discesa **Elemento di avvio** nella barra degli strumenti **Generale**.
 
 ![Comando del menu di compilazione CMake](media/cmake-build-menu.png "Comando del menu di compilazione CMake")
 
-È possibile personalizzare le configurazioni della build, le variabili di ambiente, gli argomenti della riga di comando e altre impostazioni senza modificare il file cmakelists. txt tramite il **Cmakesettings** file. Per altre informazioni, vedere [Customize CMake settings](customize-cmake-settings.md) (Personalizzare le impostazioni di CMake).
+È possibile personalizzare le configurazioni di compilazione, le variabili di ambiente, gli argomenti della riga di comando e altre impostazioni senza modificare il file CMakeLists. txt usando il file **CMakeSettings. JSON** . Per altre informazioni, vedere [Customize CMake settings](customize-cmake-settings.md) (Personalizzare le impostazioni di CMake).
 
 Come prevedibile, i risultati della compilazione sono visualizzati nella **Finestra di output** e nell'**Elenco errori**.
 
@@ -265,7 +243,7 @@ Per eseguire il debug di un progetto di CMake, scegliere la configurazione desid
 
 I comandi **Esegui** o **F5** compilano innanzitutto il progetto se sono state apportate modifiche rispetto alla compilazione precedente.
 
-È possibile personalizzare un CMake sessione di debug impostando le proprietà nel **Launch** file. Per altre informazioni, vedere [Configure CMake debugging sessions](configure-cmake-debugging-sessions.md) (Configurare le sessioni di debug di CMake).
+È possibile personalizzare una sessione di debug CMake impostando le proprietà nel file **Launch. vs. JSON** . Per altre informazioni, vedere [Configure CMake debugging sessions](configure-cmake-debugging-sessions.md) (Configurare le sessioni di debug di CMake).
 
 
 ## <a name="editing-cmakeliststxt-files"></a>Modifica dei file CMakeLists.txt
@@ -281,19 +259,19 @@ Non appena si salva il file, viene eseguito nuovamente e automaticamente il pass
 
 ## <a name="cmake-configure-step"></a>Fase di configurazione di CMake
 
-Quando vengono apportate modifiche significative per la **Cmakesettings** o ai file cmakelists. txt, Visual Studio automaticamente consente di rieseguire il CMake il passaggio di configurazione. Se la fase di configurazione termina senza errori, le informazioni raccolte sono disponibili in C++ IntelliSense e nei servizi linguistici, nonché nelle operazioni di compilazione e debug.
+Quando vengono apportate modifiche significative a **CMakeSettings. JSON** o ai file CMakeLists. txt, Visual Studio riesegue automaticamente il passaggio di configurazione CMake. Se la fase di configurazione termina senza errori, le informazioni raccolte sono disponibili in C++ IntelliSense e nei servizi linguistici, nonché nelle operazioni di compilazione e debug.
 
 Quando più progetti CMake usano lo stesso nome di configurazione CMake (ad esempio, x86-Debug), vengono tutti configurati e compilati (nella loro cartella radice di compilazione) quando viene selezionata tale configurazione. È possibile eseguire il debug delle destinazioni da tutti i progetti CMake che partecipano alla configurazione CMake.
 
    ![Voce di menu CMake Build Only (Solo generazione CMake)](media/cmake-build-only.png "CMake Build Only (Solo generazione CMake), voce di menu")
 
-Per limitare le compilazioni e il debug di sessioni da un sottoinsieme di progetti nell'area di lavoro, creare una nuova configurazione con un nome univoco nel **Cmakesettings** file e li applicherà alla solo tali progetti. Quando si seleziona questa configurazione, i comandi IntelliSense e build e debug sono abilitati solo per i progetti specificati.
+Per limitare le compilazioni e le sessioni di debug a un subset dei progetti nell'area di lavoro, creare una nuova configurazione con un nome univoco nel file **CMakeSettings. JSON** e applicarla solo a tali progetti. Quando si seleziona questa configurazione, i comandi IntelliSense e build e debug sono abilitati solo per i progetti specificati.
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>Risoluzione degli errori di cache CMake
 
 Per altre informazioni sullo stato della cache CMake per diagnosticare un problema, aprire il menu principale **CMake** o il menu contestuale **CMakeLists.txt** in **Esplora soluzioni** per eseguire uno di questi comandi:
 
-- **Visualizza cache** apre il file CMakeCache.txt dalla cartella radice di compilazione nell'editor. (Tutte le modifiche apportate qui a CMakeCache.txt vengono cancellate se si pulisce la cache. Per apportare modifiche che rendono persistenti dopo che la cache viene eliminata, vedere [impostazioni di CMake personalizzare](customize-cmake-settings.md).)
+- **Visualizza cache** apre il file CMakeCache.txt dalla cartella radice di compilazione nell'editor. (Tutte le modifiche apportate qui a CMakeCache.txt vengono cancellate se si pulisce la cache. Per apportare modifiche che vengono mantenute dopo la pulizia della cache, vedere [personalizzare le impostazioni CMake](customize-cmake-settings.md).
 
 - **Apri cartella cache** apre una finestra di Explorer corrispondente alla cartella radice di compilazione.
 
@@ -301,7 +279,7 @@ Per altre informazioni sullo stato della cache CMake per diagnosticare un proble
 
 - **Genera cache** forza l'esecuzione della fase di generazione anche se Visual Studio considera l'ambiente aggiornato.
 
-È possibile disabilitare la generazione automatica della cache nella finestra di dialogo **Strumenti | Opzioni | CMake | Generale**.
+La generazione automatica della cache può essere disabilitata nella finestra di dialogo **strumenti > opzioni > cmake > generale** .
 
 ## <a name="single-file-compilation"></a>Compilazione di un file singolo
 

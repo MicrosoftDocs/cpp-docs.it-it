@@ -5,12 +5,12 @@ description: Microsoft C++ in Visual Studio si avvicina alla conformità complet
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 4825317b07535d98b1b5db4442f935e9b2cfb632
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: 02cf57666c3bffd1adabb912f042f22b71e8d8f5
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314462"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816359"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Miglioramenti della conformità di C++ in Visual Studio 2017
 
@@ -383,7 +383,7 @@ bool neq(const S& lhs, const S& rhs) {
 - [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html): Atomic\<float >, doppio\<atomico >, Long\<Double atomico >
 - [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html): endian
 - [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html): Supporto della libreria per char8_t
-- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[noscarto]] per la libreria STL, parte 1
+- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[nodiscard]] per la libreria STL, parte 1
 - [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html): to_address ()
 - [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): \<versione >
 - [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf): noexcept per il costruttore di spostamento std:: Function
@@ -392,7 +392,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>Operatori di estrazione del flusso per char * rimosso
 
-Gli operatori di estrazione dei flussi per puntatore a caratteri sono stati rimossi e sostituiti da operatori di estrazione per la matrice di caratteri (per [P0487R1](http://http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considera unsafe gli overload rimossi. In [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) Mode, l'esempio seguente produce ora *C2679: binary ' > >': non è stato trovato alcun operatore che accetti un operando destro di\*tipo ' Char ' (oppure non esiste alcuna conversione accettabile)* :
+Gli operatori di estrazione dei flussi per puntatore a caratteri sono stati rimossi e sostituiti da operatori di estrazione per la matrice di caratteri (per [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considera unsafe gli overload rimossi. In [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) Mode, l'esempio seguente produce ora *C2679: binary ' > >': non è stato trovato alcun operatore che accetti un operando destro di\*tipo ' Char ' (oppure non esiste alcuna conversione accettabile)* :
 
 ```cpp
    char x[42];
