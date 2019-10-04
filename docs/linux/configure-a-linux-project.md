@@ -2,12 +2,12 @@
 title: Configurare un progetto C++ Linux in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
-ms.translationtype: HT
+ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042626"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960686"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
@@ -93,12 +93,6 @@ Poiché tutta la compilazione avviene in un computer remoto (o WSL), sono stati 
 ![Eventi di compilazione](media/settings_buildevents.png)
 
 ## <a name="remote_intellisense"></a> IntelliSense per le intestazioni nei sistemi remoti
-
-::: moniker range="vs-2019"
-
-Questa sezione non si applica se la destinazione è WSL.
-
-::: moniker-end
 
 Quando si aggiunge una nuova connessione in **Gestione connessione**, Visual Studio rileva automaticamente le directory di inclusione per il compilatore nel sistema remoto. Visual Studio quindi comprime e copia i file in una directory nel computer Windows locale. Successivamente, ogni volta che si usa la connessione in un progetto Visual Studio o CMake, le intestazioni in tali directory vengono usate per gestire IntelliSense.
 
