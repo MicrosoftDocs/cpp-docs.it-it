@@ -1,27 +1,31 @@
 ---
 title: Errore del compilatore C2864
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - C2864
 helpviewer_keywords:
 - C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
-ms.openlocfilehash: 9bfc18137df1a54530011a8ec3f7ea50b1d6c86a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 122e0455f84d8940eda04f3968e883dd1f0cd444
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227500"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998661"
 ---
 # <a name="compiler-error-c2864"></a>Errore del compilatore C2864
 
-"variabile": un membro dati statico con un in-class initializer deve avere un tipo integrale const non volatile
+> '*member-Name*': un membro dati statico con un inizializzatore in classe deve avere un tipo integrale const non volatile
 
-Per inizializzare un membro dati `static` definito come `volatile`, non `const` o non come tipo integrale, utilizzare un'istruzione member-definition. Non è possibile inizializzarlo in una dichiarazione.
+## <a name="remarks"></a>Note
 
-In questo esempio genera l'errore C2864:
+Per inizializzare un membro dati `static` definito come `volatile`, non-`const` o non è un tipo integrale, utilizzare un'istruzione membro-definizione. Non possono essere inizializzati in una dichiarazione.
 
-```
+## <a name="example"></a>Esempio
+
+Questo esempio genera C2864:
+
+```cpp
 // C2864.cpp
 // compile with: /c
 class B  {
@@ -30,14 +34,14 @@ private:
    static int b = 3;   // C2864
    volatile static int c = 3;   // C2864
    volatile static const int d = 3;   // C2864
-   const static long long e = 3;   // OK
+   static const long long e = 3;   // OK
    static const double f = 3.33;   // C2864
 };
 ```
 
 In questo esempio viene illustrato come risolvere l'errore C2864:
 
-```
+```cpp
 // C2864b.cpp
 // compile with: /c
 class C  {

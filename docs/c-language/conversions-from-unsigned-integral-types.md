@@ -1,6 +1,6 @@
 ---
 title: Conversioni dai tipi integrali senza segno
-ms.date: 03/27/2019
+ms.date: 10/02/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,67 +8,83 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
-ms.translationtype: HT
+ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565022"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998796"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversioni dai tipi integrali senza segno
 
-Un intero senza segno viene convertito in un intero senza segno o con segno più breve troncando i bit più significativi oppure in un intero senza segno o con segno più lungo mediante estensione con zeri. Per altre informazioni, vedere la [tabella delle conversioni dai tipi integrali senza segno](#conversions-from-unsigned-integral-types-table).
+Quando un Unsigned Integer viene convertito in un tipo Integer o a virgola mobile, se il valore originale è rappresentabile nel tipo di risultato, il valore è invariato.
 
-Quando il valore con un tipo integrale viene abbassato di livello a un intero con segno di dimensione inferiore o un intero senza segno viene convertito nell'intero con segno corrispondente, tale valore rimane invariato se può essere rappresentato nel nuovo tipo. Tuttavia, il valore che esso rappresenta cambia se è impostato il bit di segno, come nell'esempio riportato di seguito.
+Quando si converte un Unsigned Integer in un numero intero di dimensioni maggiori, il valore viene esteso con zero. Quando si esegue la conversione in un numero intero di dimensioni inferiori, i bit più significativi vengono troncati. Il risultato viene interpretato usando il tipo di risultato, come illustrato in questo esempio.
 
 ```C
-int j;
-unsigned short k = 65533;
+unsigned k = 65533;
+short j;
 
 j = k;
 printf_s( "%hd\n", j );   // Prints -3
 ```
 
-Se non può essere rappresentato, il risultato è definito dall'implementazione. Per informazioni sulla gestione dell'abbassamento di livello di un Integer nel compilatore C Microsoft, vedere [Conversioni di cast di tipo](../c-language/type-cast-conversions.md). Lo stesso comportamento deriva dalla conversione di un intero o da un tipo che esegue il cast dell'intero.
+Quando si converte un Unsigned Integer in un tipo a virgola mobile, se il valore originale non può essere rappresentato esattamente nel tipo di risultato, il risultato è il valore più alto o inferiore rappresentabile successivo.
 
-I valori senza segno vengono convertiti in modo da mantenerne il valore e non sono direttamente rappresentabili in C. L'unica eccezione è una conversione da **unsigned long** a **float**, che perde al massimo i bit meno significativi. In caso contrario, il valore viene mantenuto, sia esso con segno che senza segno. Quando un valore di tipo integrale viene convertito in un valore a virgola mobile e il valore non è compreso nell'intervallo rappresentabile, il risultato non è definito. Per informazioni sull'intervallo dei tipi a virgola mobile e integrali, vedere [Archiviazione di tipi di base](../c-language/storage-of-basic-types.md).
+Per informazioni sulle dimensioni dei tipi a virgola mobile e integrali, vedere [archiviazione dei tipi di base](../c-language/storage-of-basic-types.md) .
+
+**Sezione specifica Microsoft**
+
+Nel compilatore Microsoft, **senza segno** (o **unsigned int**) e **unsigned long** sono tipi Distinct ma equivalenti. La conversione di un valore **unsigned int** viene eseguita nello stesso modo di una conversione di un valore **unsigned long**.
+
+**Fine sezione specifica Microsoft**
 
 Nella tabella seguente sono riepilogate le conversioni dai tipi integrali senza segno.
 
-## <a name="conversions-from-unsigned-integral-types-table"></a>Tabella delle conversioni dai tipi integrali senza segno
+## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tabella delle conversioni dai tipi integrali senza segno
 
 |Da|A|Metodo|
 |----------|--------|------------|
 |**unsigned char**|**char**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
 |**unsigned char**|**short**|Estensione zero|
 |**unsigned char**|**long**|Estensione zero|
+|**unsigned char**|**long long**|Estensione zero|
 |**unsigned char**|**unsigned short**|Estensione zero|
 |**unsigned char**|**unsigned long**|Estensione zero|
+|**unsigned char**|**Long Long senza segno**|Estensione zero|
 |**unsigned char**|**float**|Convertire a **long**; convertire **long** a **float**|
 |**unsigned char**|**double**|Convertire a **long**; convertire **long** a **double**|
 |**unsigned char**|**long double**|Convertire a **long**; convertire **long** a **double**|
 |**unsigned short**|**char**|Mantenimento del byte meno significativo|
 |**unsigned short**|**short**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
 |**unsigned short**|**long**|Estensione zero|
+|**unsigned short**|**long long**|Estensione zero|
 |**unsigned short**|**unsigned char**|Mantenimento del byte meno significativo|
 |**unsigned short**|**unsigned long**|Estensione zero|
+|**unsigned short**|**Long Long senza segno**|Estensione zero|
 |**unsigned short**|**float**|Convertire a **long**; convertire **long** a **float**|
 |**unsigned short**|**double**|Convertire a **long**; convertire **long** a **double**|
 |**unsigned short**|**long double**|Convertire a **long**; convertire **long** a **double**|
 |**unsigned long**|**char**|Mantenimento del byte meno significativo|
 |**unsigned long**|**short**|Mantenimento della parola meno significativa|
 |**unsigned long**|**long**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
+|**unsigned long**|**long long**|Estensione zero|
 |**unsigned long**|**unsigned char**|Mantenimento del byte meno significativo|
 |**unsigned long**|**unsigned short**|Mantenimento della parola meno significativa|
+|**unsigned long**|**Long Long senza segno**|Estensione zero|
 |**unsigned long**|**float**|Convertire a **long**; convertire **long** a **float**|
 |**unsigned long**|**double**|Convertire direttamente a **double**|
 |**unsigned long**|**long double**|Convertire a **long**; convertire **long** a **double**|
-
-**Sezione specifica Microsoft**
-
-Per il compilatore Microsoft C, il tipo **unsigned int** è equivalente al tipo **unsigned long**. La conversione di un valore **unsigned int** viene eseguita nello stesso modo di una conversione di un valore **unsigned long**. Le conversioni dai valori **unsigned long** ai valori **float** non sono precise se il valore convertito è maggiore del valore **long** massimo con segno positivo.
-
-**Fine sezione specifica Microsoft**
+|**Long Long senza segno**|**char**|Mantenimento del byte meno significativo|
+|**Long Long senza segno**|**short**|Mantenimento della parola meno significativa|
+|**Long Long senza segno**|**long**|Mantieni valore DWORD di ordine inferiore|
+|**Long Long senza segno**|**long long**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
+|**Long Long senza segno**|**unsigned char**|Mantenimento del byte meno significativo|
+|**Long Long senza segno**|**unsigned short**|Mantenimento della parola meno significativa|
+|**Long Long senza segno**|**unsigned long**|Mantieni valore DWORD di ordine inferiore|
+|**Long Long senza segno**|**float**|Convertire a **long**; convertire **long** a **float**|
+|**Long Long senza segno**|**double**|Convertire direttamente a **double**|
+|**Long Long senza segno**|**long double**|Convertire a **long**; convertire **long** a **double**|
 
 ## <a name="see-also"></a>Vedere anche
 
