@@ -1,6 +1,6 @@
 ---
 title: Conversioni dai tipi integrali con segno
-ms.date: 11/04/2016
+ms.date: 10/02/2019
 helpviewer_keywords:
 - integral conversions, from signed
 - integers, converting
@@ -8,16 +8,18 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-ms.openlocfilehash: 4d2f0ab43adf3cbad3d1ffa244551c67883c6606
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 79608b5ca4335ee3c30bdab27e7efade5b7e2f54
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152781"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998730"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Conversioni dai tipi integrali con segno
 
-Quando un intero con segno viene convertito in un intero senza segno di dimensione uguale o maggiore e il valore dell'intero con segno non è negativo, tale valore rimane invariato. La conversione viene eseguita mediante l'estensione del segno dell'intero con segno. Un intero con segno viene convertito in un intero con segno più corto troncando i bit più significativi. Il risultato viene interpretato come un valore senza segno, come illustrato in questo esempio.
+Quando un intero con segno viene convertito in un Integer o in un tipo a virgola mobile, se il valore originale è rappresentabile nel tipo di risultato, il valore è invariato.
+
+Quando un intero con segno viene convertito in un numero intero di dimensioni maggiori, il valore viene esteso con segno. Quando viene convertito in un numero intero di dimensioni inferiori, i bit più significativi vengono troncati. Il risultato viene interpretato usando il tipo di risultato, come illustrato nell'esempio seguente:
 
 ```C
 int i = -3;
@@ -27,46 +29,64 @@ u = i;
 printf_s( "%hu\n", u );  // Prints 65533
 ```
 
-Quando un intero con segno viene convertito in un valore a virgola mobile non viene persa alcuna informazione, tuttavia parte della precisione può andare persa quando un valore **long int** or **long int senza segno** viene convertito in un valore **float**.
+Quando si converte un intero con segno in un tipo a virgola mobile, se il valore originale non è rappresentabile esattamente nel tipo di risultato, il risultato è il valore più alto o inferiore rappresentabile successivo.
 
-Nella tabella seguente sono riepilogate le conversioni dai tipi integrali con segno. In questa tabella si presuppone che il tipo **char** sia un tipo con segno per impostazione predefinita. Se si usa un'opzione in fase di compilazione per modificare l'impostazione predefinita del tipo **char** in un tipo senza segno, le conversioni indicate nella tabella [Conversioni dai tipi integrali senza segno](../c-language/conversions-from-unsigned-integral-types.md) per il tipo **char senza segno** si applicano al posto delle conversioni nella tabella riportata di seguito, Conversioni dai tipi integrali con segno.
+Per informazioni sulle dimensioni dei tipi a virgola mobile e integrali, vedere [archiviazione di tipi di base](../c-language/storage-of-basic-types.md).
 
-### <a name="conversions-from-signed-integral-types"></a>Conversioni dai tipi integrali con segno
+Nella tabella seguente sono riepilogate le conversioni dai tipi integrali con segno. Presuppone che il tipo **char** sia firmato per impostazione predefinita. Se si usa un'opzione in fase di compilazione per modificare il valore predefinito per il tipo di **carattere** senza segno, le conversioni fornite nella tabella [conversioni da tipi integrali senza segno](../c-language/conversions-from-unsigned-integral-types.md) per il tipo **char senza** segno si applicano anziché le conversioni in questa tabella.
+
+**Sezione specifica Microsoft**
+
+Nel compilatore Microsoft, **int** e **Long** sono tipi distinti ma equivalenti. La conversione di un valore **int** continua nello stesso modo in cui si esegue la conversione di un valore **Long**.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="table-of-conversions-from-signed-integral-types"></a>Tabella delle conversioni dai tipi integrali con segno
 
 |Da|A|Metodo|
 |----------|--------|------------|
-|**char**1|**short**|Estensione del segno|
+|**carattere**<sup>1</sup>|**short**|Estensione del segno|
 |**char**|**long**|Estensione del segno|
+|**char**|**long long**|Estensione del segno|
 |**char**|**unsigned char**|Mantenimento del modello; il bit più significativo perde la funzione come bit di segno|
 |**char**|**unsigned short**|Estensione del segno a **short**; conversione di **short** in **short senza segno**|
 |**char**|**long senza segno**|Estensione del segno a **long**; conversione di **long** in **long senza segno**|
+|**char**|**Long Long senza segno**|Estensione del segno a Long **Long**; Converte **Long Long** a **unsigned** Long Long|
 |**char**|**float**|Estensione del segno a **long**; conversione di **long** in **float**|
 |**char**|**double**|Estensione del segno a **long**; conversione di **long** in **double**|
 |**char**|**long double**|Estensione del segno a **long**; conversione di **long** in **double**|
 |**short**|**char**|Mantenimento del byte meno significativo|
 |**short**|**long**|Estensione del segno|
+|**short**|**long long**|Estensione del segno|
 |**short**|**char senza segno**|Mantenimento del byte meno significativo|
 |**short**|**unsigned short**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
 |**short**|**unsigned long**|Estensione del segno a **long**; conversione di **long** in **long senza segno**|
+|**short**|**Long Long senza segno**|Estensione del segno a Long **Long**; Converte **Long Long** a **unsigned** Long Long|
 |**short**|**float**|Estensione del segno a **long**; conversione di **long** in **float**|
 |**short**|**double**|Estensione del segno a **long**; conversione di **long** in **double**|
 |**short**|**long double**|Estensione del segno a **long**; conversione di **long** in **double**|
 |**long**|**char**|Mantenimento del byte meno significativo|
 |**long**|**short**|Mantenimento della parola meno significativa|
+|**long**|**long long**|Estensione del segno|
 |**long**|**unsigned char**|Mantenimento del byte meno significativo|
 |**long**|**short senza segno**|Mantenimento della parola meno significativa|
 |**long**|**unsigned long**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
-|**long**|**float**|Rappresentazione come **float**. Se **long** non può essere rappresentato con esattezza, la precisione diminuisce.|
-|**long**|**double**|Rappresentazione come **double**. Se **long** non può essere rappresentato con esattezza come **double**, la precisione diminuisce.|
-|**long**|**long double**|Rappresentazione come **double**. Se **long** non può essere rappresentato con esattezza come **double**, la precisione diminuisce.|
+|**long**|**Long Long senza segno**|Estensione del segno a Long **Long**; Converte **Long Long** a **unsigned** Long Long|
+|**long**|**float**|Rappresentazione come **float**. Se **Long** non può essere rappresentato esattamente, la precisione viene persa.|
+|**long**|**double**|Rappresentazione come **double**. Se **Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|
+|**long**|**long double**|Rappresentazione come **double**. Se **Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|
+|**long long**|**char**|Mantenimento del byte meno significativo|
+|**long long**|**short**|Mantenimento della parola meno significativa|
+|**long long**|**long**|Mantieni valore DWORD di ordine inferiore|
+|**long long**|**unsigned char**|Mantenimento del byte meno significativo|
+|**long long**|**unsigned short**|Mantenimento della parola meno significativa|
+|**long long**|**unsigned long**|Mantieni valore DWORD di ordine inferiore|
+|**long long**|**Long Long senza segno**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
+|**long long**|**float**|Rappresentazione come **float**. Se **Long Long** non può essere rappresentato esattamente, la precisione viene persa.|
+|**long long**|**double**|Rappresentazione come **double**. Se **Long Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|
+|**long long**|**long double**|Rappresentazione come **double**. Se **Long Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|
 
-1. Tutte le voci **char** presuppongono che il tipo **char** sia un tipo con segno per impostazione predefinita.
-
-**Sezione specifica Microsoft**
-
-Per il compilatore C a 32 bit Microsoft , un intero è equivalente a un valore **long**. La conversione di un valore **int** viene eseguita in modo analogo a quella di un valore **long**.
-
-**Fine sezione specifica Microsoft**
+<sup>1</sup> per tutte le voci **char** si presuppone che il tipo **char** sia firmato per impostazione predefinita.
 
 ## <a name="see-also"></a>Vedere anche
 
