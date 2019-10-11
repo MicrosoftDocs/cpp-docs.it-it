@@ -1,5 +1,5 @@
 ---
-title: 'Operatore condizionale:? :'
+title: 'Operatore condizionale: &quest;:'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399148"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276814"
 ---
-# <a name="conditional-operator--"></a>Operatore condizionale:? :
+# <a name="conditional-operator-quest-"></a>Operatore condizionale: &quest;:
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>Note
 
-L'operatore condizionale (**?:**) è un operatore ternario (accetta tre operandi). L'operatore condizionale funziona nel modo seguente:
+L'operatore condizionale ( **?:** ) è un operatore ternario (accetta tre operandi). L'operatore condizionale funziona nel modo seguente:
 
-- Il primo operando viene convertito implicitamente in **bool**. Viene valutato e tutti gli effetti collaterali vengono completati prima di continuare.
+- Il primo operando viene convertito in modo implicito in **bool**. Viene valutato e tutti gli effetti collaterali vengono completati prima di continuare.
 
-- Se il primo operando restituisce **true** (1), il secondo operando viene valutato.
+- Se il primo operando restituisce **true** (1), viene valutato il secondo operando.
 
 - Se il primo operando restituisce **false** (0), il terzo operando viene valutato.
 
@@ -39,7 +39,7 @@ Le espressioni condizionali presentano un'associatività da destra a sinistra. I
 
 - Se entrambi gli operandi sono dello stesso tipo, il risultato è di quel tipo.
 
-- Se entrambi gli operandi sono di tipo aritmetico o enumerazione, le conversioni aritmetiche consuete (illustrate in [conversioni Standard](standard-conversions.md)) vengono eseguiti per convertirli in un tipo comune.
+- Se entrambi gli operandi sono di tipo aritmetico o di enumerazione, vengono eseguite le conversioni aritmetiche consuete (descritte in [conversioni standard](standard-conversions.md)) per convertirle in un tipo comune.
 
 - Se entrambi gli operandi sono di tipo puntatore o se uno è un tipo puntatore e l'altro è un'espressione costante che restituisce 0, vengono eseguite le conversioni del puntatore per convertire tali operandi in un tipo comune.
 
