@@ -55,7 +55,7 @@ Come prima, quando il progetto viene compilato, il compilatore analizza ogni C++
 
 Nella figura seguente viene illustrata la relazione tra il compilatore e il provider di attributi.
 
-![Comunicazione degli attributi di componente] (../media/vccompattrcomm.gif "Comunicazione degli attributi di componente")
+![Comunicazione degli attributi di componente](../media/vccompattrcomm.gif "Comunicazione degli attributi di componente")
 
 > [!NOTE]
 > L'utilizzo degli attributi non modifica il contenuto del file di origine. L'unica volta in cui il codice dell'attributo generato è visibile è durante le sessioni di debug. Inoltre, per ogni file di origine nel progetto, è possibile generare un file di testo in cui vengono visualizzati i risultati della sostituzione dell'attributo. Per ulteriori informazioni su questa procedura, vedere [/FX (merge del codice inserito)](../../build/reference/fx-merge-injected-code.md) e [debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).
