@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], destroying
 - modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
-ms.openlocfilehash: 84ae5b336bb8eeac4f8ab7b6e5b9f00246f9ca15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b407c6e832dde7a5865146e7cc12d1840d3234a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254306"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685845"
 ---
 # <a name="destroying-the-dialog-box"></a>Distruzione della finestra di dialogo
 
-Finestre di dialogo modali sono in genere create nello stack frame ed eliminati definitivamente quando termina la funzione che li ha creati. Distruttore dell'oggetto finestra di dialogo viene chiamato quando l'oggetto esce dall'ambito.
+Le finestre di dialogo modali vengono in genere create nel stack frame e distrutte al termine della funzione che le ha create. Il distruttore dell'oggetto finestra di dialogo viene chiamato quando l'oggetto esce dall'ambito.
 
-Finestre di dialogo non modali in genere vengono create e possedute da una finestra di visualizzazione o il frame padre, ovvero finestra cornice principale dell'applicazione o una finestra cornice del documento. Il valore predefinito [OnClose](../mfc/reference/cwnd-class.md#onclose) chiamate del gestore [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), che elimina la finestra di dialogo. Se la finestra di dialogo autonoma, ovvero nessun puntatori o altri tipi di semantica speciale della proprietà, è necessario eseguire l'override [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) da eliminare definitivamente l'oggetto finestra C++. È inoltre consigliabile eseguire l'override [OnCancel](../mfc/reference/cdialog-class.md#oncancel) e chiamare `DestroyWindow` dal suo interno. In caso contrario, il proprietario della finestra di dialogo deve eliminare definitivamente l'oggetto C++ quando non è più necessario.
+Le finestre di dialogo non modali vengono in genere create e sono di proprietà di una visualizzazione padre o di una finestra cornice, ovvero la finestra cornice principale dell'applicazione o una finestra cornice del documento. Il gestore [OnClose](../mfc/reference/cwnd-class.md#onclose) predefinito chiama [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), che elimina la finestra di dialogo. Se la finestra di dialogo è autonoma, senza puntatori o altra semantica di proprietà speciale, è necessario eseguire l'override di [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) per eliminare l'oggetto finestra di dialogo C++. È inoltre consigliabile eseguire l'override di [OnCancel](../mfc/reference/cdialog-class.md#oncancel) e chiamare `DestroyWindow` dall'interno di esso. In caso contrario, il proprietario della finestra di dialogo deve eliminare C++ l'oggetto quando non è più necessario.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Utilizzo delle finestre di dialogo in MFC](../mfc/life-cycle-of-a-dialog-box.md)
