@@ -23,102 +23,102 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: dc5a823951e07af96efceec52d2aa23552c2d002
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414322"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445020"
 ---
 # <a name="dialog-editor-c"></a>Editor finestre (C++)
 
-Il **finestra di dialogo Editor** consente di creare o modificare le risorse finestra di dialogo.
+L' **editor finestre** consente di creare o modificare le risorse della finestra di dialogo.
 
-- Per aprire l'editor, fare doppio clic sul file RC di una finestra di dialogo di **visualizzazione risorse** finestra o passare al menu **View** > **visualizzazione risorse**.
+- Per aprire l'editor, fare doppio clic sul file RC di una finestra di dialogo nella finestra di **visualizzazione risorse** o passare alla **visualizzazione**menu  > **altre finestre** > **visualizzazione risorse**.
 
-È uno dei primi passaggi della creazione di una nuova finestra di dialogo o un modello di finestra di dialogo, aggiunta di controlli. Nel **finestra di dialogo Editor**, è possibile disporre i controlli per adattarli un determinate dimensioni, forma o allineamento o è possibile spostare circa affinché funzioni nella finestra di dialogo. È inoltre facile eliminare un controllo.
+Uno dei primi passaggi per creare una nuova finestra di dialogo o un modello di finestra di dialogo consiste nell'aggiungere controlli. Nell' **editor finestre**è possibile disporre i controlli per adattarli a una determinata dimensione, forma o allineamento oppure è possibile spostarli in modo che funzionino all'interno della finestra di dialogo. È inoltre facile eliminare un controllo.
 
 È possibile archiviare una finestra di dialogo come modello in modo da poterla riusare. È possibile passare facilmente dalla progettazione della finestra di dialogo e alla modifica del codice che la implementa e viceveresa.
 
-È anche possibile modificare le proprietà del singolo o più controlli nel **finestra di dialogo Editor**. È possibile modificare l'ordine di tabulazione, vale a dire, l'ordine in cui i controlli vengono attivati lo stato attivo quando la **scheda** viene premuto, oppure è possibile definire una chiave di accesso o una combinazione di tasti che consente agli utenti di scegliere un controllo usando la tastiera.
+È anche possibile modificare le proprietà di uno o più controlli nell' **editor finestre**. È possibile modificare l'ordine di tabulazione, ovvero l'ordine in cui i controlli vengono attivati quando viene premuto il tasto **Tab** oppure è possibile definire una chiave di accesso o una combinazione di tasti che consente agli utenti di scegliere un controllo usando la tastiera.
 
-Il **finestra di dialogo Editor** consente inoltre di usare i controlli personalizzati, inclusi i controlli ActiveX. È anche possibile modificare un [visualizzazione form](../mfc/reference/cformview-class.md), [visualizzazioni di record](../data/record-views-mfc-data-access.md), o [barre di finestra di dialogo](../mfc/dialog-bars.md).
+L' **editor finestre** consente inoltre di utilizzare controlli personalizzati, inclusi i controlli ActiveX. È inoltre possibile modificare una [visualizzazione form](../mfc/reference/cformview-class.md), le [visualizzazioni di record](../data/record-views-mfc-data-access.md)o le barre delle finestre di [dialogo](../mfc/dialog-bars.md).
 
-A partire da Visual Studio 2015, è possibile usare la **finestra di dialogo Editor** definire layout dinamico che specifica come controlli vengono spostati e ridimensionamento quando l'utente ridimensiona una finestra di dialogo. Per altre informazioni, vedere [Dynamic Layout](../mfc/dynamic-layout.md).
+A partire da Visual Studio 2015, è possibile usare l' **editor finestre** per definire i layout dinamici, che specificano il modo in cui i controlli vengono spostati e ridimensionati quando l'utente ridimensiona una finestra di dialogo. Per altre informazioni, vedere [Dynamic Layout](../mfc/dynamic-layout.md).
 
-Per altre informazioni sulle risorse, vedere come [creare una finestra di dialogo](../windows/creating-a-new-dialog-box.md) e [controlli finestra di dialogo](../windows/controls-in-dialog-boxes.md).
+Per ulteriori informazioni sulle risorse, vedere come [creare una](../windows/creating-a-new-dialog-box.md) finestra di dialogo e [controlli](../windows/controls-in-dialog-boxes.md)della finestra di dialogo.
 
 > [!TIP]
-> Quando si usa la **finestra di dialogo Editor**, in molti casi, è possibile selezionare con il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi usati frequentemente.
+> Quando si utilizza l' **editor finestre**, in molti casi è possibile selezionare con il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi utilizzati di frequente.
 
 ## <a name="dialog-editor-toolbar"></a>Barra degli strumenti dell'editor finestre
 
-Il **finestra di dialogo Editor** sulla barra degli strumenti contiene pulsanti per la disposizione del layout dei controlli nella finestra di dialogo, ad esempio dimensione e allineamento. **Editor finestre** pulsanti della barra degli strumenti corrispondono ai comandi nella **formato** menu.
+La barra degli strumenti dell' **editor finestre** contiene i pulsanti per la disposizione del layout dei controlli nella finestra di dialogo, ad esempio dimensioni e allineamento. I pulsanti della barra degli strumenti dell' **editor finestre** corrispondono ai comandi del menu **formato** .
 
 |Icona|Significato|Icona|Significato|
 |----------|-------------|----------|-------------|
-|![Pulsante Verifica finestra di dialogo](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Verifica finestra di dialogo|![Pulsante spaziatura orizzontale](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Spaziatura orizzontale|
-|![Pulsante Allinea a sinistra](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Allinea a sinistra|![Pulsante spaziatura verticale](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Giù|
-|![Pulsante Allinea a destra](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Allinea a destra|![Marca stessa larghezza pulsante](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Assegna stessa larghezza|
+|![Pulsante della finestra di dialogo test](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Verifica finestra di dialogo|![Pulsante spazio tra](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Spaziatura orizzontale|
+|![Pulsante Allinea a sinistra](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Allinea a sinistra|![Pulsante di scorrimento dello spazio](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Giù|
+|![Pulsante Allinea diritti](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Allinea a destra|![Fare lo stesso pulsante larghezza](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Assegna stessa larghezza|
 |![Pulsante Allinea in alto](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Allinea in alto|![Pulsante Crea stessa altezza](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Assegna stessa altezza|
-|![Pulsante Allinea in basso](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Allinea in basso|![Pulsante di dimensione stessa marca](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Rendi uguali|
-|![Pulsante Centra verticalmente](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Pulsante Mostra/Nascondi griglia](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Attiva/Disattiva griglia|
-|![Pulsante Centra orizzontalmente](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Orizzontale|![Pulsante Attiva/Disattiva guide](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Attiva/Disattiva guide|
+|![Pulsante Allinea in basso](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Allinea in basso|![Pulsante Crea stessa dimensione](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Rendi uguali|
+|![Pulsante Centra verticalmente](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Pulsante Imposta/Rimuovi griglia](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Attiva/Disattiva griglia|
+|![Pulsante Centra orizzontalmente](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Orizzontale|![Pulsante Mostra/Nascondi guide](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Attiva/Disattiva guide|
 
-- Per mostrare o nascondere il **Editor finestre** sulla barra degli strumenti, andare al menu **View** > **barre degli strumenti** > **Editor finestre**.
+- Per visualizzare o nascondere la barra degli strumenti dell' **editor finestre** , passare a menu **Visualizza** > **barre degli strumenti** > **editor finestre**.
 
-Quando si apre la **Editor finestre** in un progetto C++, il **Editor finestre** sulla barra degli strumenti viene visualizzato automaticamente nella parte superiore della soluzione, tuttavia, se si chiude in modo esplicito la barra degli strumenti, è necessario richiamare questo comando, il alla successiva apertura il **finestra di dialogo Editor**. È possibile attivare o disattivare la visualizzazione, selezionarlo dall'elenco di barre degli strumenti disponibili e windows.
+Quando si apre l' **editor finestre** di un C++ progetto, la barra degli strumenti dell' **editor finestre** viene visualizzata automaticamente nella parte superiore della soluzione. Tuttavia, se si chiude in modo esplicito la barra degli strumenti, sarà necessario richiamarla alla successiva apertura dell' **editor finestre** . È possibile abilitare o disabilitare la visualizzazione selezionandola dall'elenco delle barre degli strumenti e delle finestre disponibili.
 
-## <a name="switch-between-dialog-box-controls-and-code"></a>Passare da una finestra di dialogo e il codice
+## <a name="switch-between-dialog-box-controls-and-code"></a>Spostarsi tra i controlli della finestra di dialogo e il codice
 
-Nelle applicazioni MFC, è possibile fare doppio clic su controlli di finestre di dialogo per passare al codice del gestore o di creare rapidamente stub di funzioni del gestore.
+Nelle applicazioni MFC, è possibile fare doppio clic sui controlli della finestra di dialogo per passare al codice del gestore o creare rapidamente funzioni del gestore stub.
 
-Con un controllo è selezionato, selezionare il **eventi di controllo** pulsante o il **messaggi** pulsante il [finestra proprietà](/visualstudio/ide/reference/properties-window) per visualizzare un elenco completo dei messaggi di Windows e gli eventi è disponibile per l'elemento selezionato. Scegliere dall'elenco per creare o modificare le funzioni del gestore.
+Con un controllo selezionato, selezionare il pulsante **ControlEvents** o il pulsante **messages (messaggi** ) nella [finestra Proprietà](/visualstudio/ide/reference/properties-window) per visualizzare un elenco completo dei messaggi e degli eventi di Windows disponibili per l'elemento selezionato. Scegliere dall'elenco per creare o modificare le funzioni del gestore.
 
-- Per passare al codice dal **finestra di dialogo Editor**, fare doppio clic su un controllo nella finestra di dialogo a cui passare la dichiarazione per la funzione di gestione dei messaggi implementato più di recente.
+- Per passare al codice dall' **editor finestre**, fare doppio clic su un controllo nella finestra di dialogo per passare alla dichiarazione per la funzione di gestione dei messaggi implementata più di recente.
 
-   Per le classi di finestra di dialogo basato su ATL, è sempre passare direttamente alla definizione del costruttore.
+   Per le classi di finestre di dialogo basate su ATL, è sempre possibile passare alla definizione del costruttore.
 
-- Per visualizzare gli eventi per un controllo, con un controllo è selezionato, scegliere il **eventi di controllo** pulsante il **proprietà** finestra.
+- Per visualizzare gli eventi per un controllo, con un controllo selezionato, scegliere il pulsante **ControlEvents** nella finestra **Proprietà** .
 
-   Quando un singolo controllo ha lo stato attivo nella finestra di dialogo, è possibile fare doppio clic e selezionare **Aggiungi gestore**. In questo modo è possibile specificare la classe a cui viene aggiunto il gestore. Per altre informazioni, vedere [aggiunta di un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md).
+   Quando un singolo controllo ha lo stato attivo nella finestra di dialogo, è possibile fare clic con il pulsante destro del mouse e scegliere **Aggiungi gestore eventi**. In questo modo è possibile specificare la classe a cui viene aggiunto il gestore. Per ulteriori informazioni, vedere [aggiunta di un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md).
 
    > [!NOTE]
-   > Scegliere il **eventi di controllo** pulsante quando la finestra di dialogo ha lo stato attivo espone un elenco di tutti i controlli nella finestra di dialogo, è quindi possibile espandere per modificare gli eventi per i singoli controlli.
+   > Se si sceglie il pulsante **ControlEvents** quando la finestra di dialogo ha lo stato attivo, viene esposto un elenco di tutti i controlli della finestra di dialogo, che è quindi possibile espandere per modificare gli eventi per i singoli controlli.
 
-- Per visualizzare i messaggi per una finestra di dialogo con la finestra di dialogo selezionata, scegliere il **messaggi** pulsante il **proprietà** finestra.
+- Per visualizzare i messaggi per una finestra di dialogo, con la finestra di dialogo selezionata, scegliere il pulsante **messaggi** nella finestra **Proprietà** .
 
 ## <a name="accelerator-keys"></a>Tasti di scelta rapida
 
-Di seguito sono quelli predefiniti dei tasti di scelta rapida per il **finestra di dialogo Editor** comandi.  
+Di seguito sono riportati i tasti di scelta rapida predefiniti per i comandi dell' **editor finestre** .  
 
 |Comando|Tasti|Descrizione|
 |-------------|----------|-----------------|
-|Format.AlignBottoms|**CTRL** + **MAIUSC** + **freccia giù**|Consente di allineare i bordi inferiore dei controlli selezionati con il controllo dominante.|
-|Format.AlignCenters|**Shift** + **F9**|Consente di allineare l'asse verticale dei controlli selezionati con il controllo dominante.|
-|Format.AlignLefts|**CTRL** + **MAIUSC** + **freccia sinistra**|Allinea bordi a sinistra dei controlli selezionati con il controllo dominante.|
-|Format.AlignMiddles|**F9**|Consente di allineare l'asse orizzontale dei controlli selezionati con il controllo dominante.|
-|Format.AlignRights|**CTRL** + **MAIUSC** + **freccia destra**|Allinea bordi a destra dei controlli selezionati con il controllo dominante.|
-|Format.AlignTops|**CTRL** + **MAIUSC** + **freccia in su**|Consente di allineare i bordi superiore dei controlli selezionati con il controllo dominante.|
-|Format.ButtonBottom|**Ctrl** + **B**|Colloca i pulsanti selezionati in basso al centro della finestra di dialogo.|
-|Format.ButtonRight|**Ctrl** + **R**|Colloca i pulsanti selezionati nell'angolo superiore destro della finestra di dialogo.|
-|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|Centra i controlli orizzontalmente nella finestra di dialogo.|
-|Format.CenterVertical|**CTRL** + **F9**|Centra i controlli verticalmente nella finestra di dialogo.|
-|Format.CheckMnemonics|**Ctrl** + **M**|Controlla l'univocità dei tasti di scelta.|
-|Format.SizeToContent|**Shift** + **F7**|Ridimensiona i controlli selezionati per adattarsi al testo della didascalia.|
-|Format.SpaceAcross|**ALT** + **Freccia SINISTRA**|Distribuire uniformemente i controlli selezionati in senso orizzontale.|
-|Format.SpaceDown|**ALT** + **freccia giù**|Distribuire uniformemente i controlli selezionati in senso verticale.|
-|Format.TabOrder|**Ctrl** + **D**|Imposta l'ordine dei controlli nella finestra di dialogo.|
-|Format.TestDialog|**CTRL** + **T**|Esegue la finestra di dialogo per verificarne l'aspetto e comportamento.|
-|Format.ToggleGuides|**CTRL** + **G**|Consente di alternare alcuna griglia, la griglia e guide per la finestra di dialogo Modifica.|
+|Format.AlignBottoms|**Ctrl** + **MAIUSC** + **freccia giù**|Allinea i bordi inferiore dei controlli selezionati con il controllo dominante.|
+|Format.AlignCenters|**Maiusc** + **F9**|Allinea i centri verticali dei controlli selezionati con il controllo dominante.|
+|Format.AlignLefts|**Ctrl** + **MAIUSC** + **freccia sinistra**|Allinea i bordi sinistro dei controlli selezionati con il controllo dominante.|
+|Format.AlignMiddles|**F9**|Allinea i centri orizzontali dei controlli selezionati con il controllo dominante.|
+|Format.AlignRights|**Ctrl** + **MAIUSC** + **freccia destra**|Allinea i bordi destro dei controlli selezionati con il controllo dominante.|
+|Format.AlignTops|**Ctrl** + **MAIUSC** + **freccia su**|Allinea i bordi superiori dei controlli selezionati con il controllo dominante.|
+|Format.ButtonBottom|**Ctrl** + **B**|Inserisce i pulsanti selezionati lungo il centro inferiore della finestra di dialogo.|
+|Format.ButtonRight|**Ctrl** + **R**|Inserisce i pulsanti selezionati nell'angolo superiore destro della finestra di dialogo.|
+|Format.CenterHorizontal|**Ctrl** + **MAIUSC** + **F9**|Centra orizzontalmente i controlli all'interno della finestra di dialogo.|
+|Format.CenterVertical|**CTRL** + **F9**|Centra verticalmente i controlli all'interno della finestra di dialogo.|
+|Format.CheckMnemonics|**Ctrl** + **M**|Verifica l'univocità dei tasti di scelta.|
+|Format. SizeToContent|**Maiusc** + **F7**|Ridimensiona i controlli selezionati per adattarli al testo della didascalia.|
+|Format.SpaceAcross|**ALT** + **Freccia SINISTRA**|Spazi uniformemente i controlli selezionati orizzontalmente.|
+|Format.SpaceDown|**Alt** + **freccia giù**|Consente di spaziare in modo uniforme i controlli selezionati verticalmente.|
+|Format.TabOrder|**Ctrl** + **D**|Imposta l'ordine dei controlli all'interno della finestra di dialogo.|
+|Format.TestDialog|**CTRL** + **T**|Esegue la finestra di dialogo per verificare l'aspetto e il comportamento.|
+|Format.ToggleGuides|**CTRL** + **G**|Cicli tra nessuna griglia, linee guida e griglia per la modifica della finestra di dialogo.|
 
-- Per modificare i tasti di scelta rapida, passare al menu di scelta **degli strumenti** > **opzioni**e scegliere **tastiera** sotto la **ambiente** cartella.
+- Per modificare i tasti di scelta rapida, passare a menu **strumenti** > **Opzioni**e scegliere **tastiera** nella cartella **ambiente** .
 
    Per altre informazioni, vedere [Identificazione e personalizzazione dei tasti di scelta rapida](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
-- Per modificare le impostazioni, passare al menu di scelta **degli strumenti** > **Importa / Esporta impostazioni**.
+- Per modificare le impostazioni, passare a menu **strumenti** > **Importa/Esporta impostazioni**.
 
-   Le opzioni disponibili nelle finestre di dialogo e i nomi e i percorsi dei comandi di menu viene visualizzata, potrebbe essere diverso rispetto a quanto descritto nella **aiutare** a seconda dell'edizione o dalle impostazioni attive.  Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+   Le opzioni disponibili nelle finestre di dialogo e i nomi e i percorsi dei comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella **Guida** a seconda dell'edizione o delle impostazioni attive.  Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -127,7 +127,7 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [Editor di risorse](../windows/resource-editors.md)<br/>
-[Procedura: Creare una finestra di dialogo](../windows/creating-a-new-dialog-box.md)<br/>
+[Procedura: creare una finestra di dialogo](../windows/creating-a-new-dialog-box.md)<br/>
 [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)<br/>
 <!--
 [Controls](../mfc/controls-mfc.md)<br/>
