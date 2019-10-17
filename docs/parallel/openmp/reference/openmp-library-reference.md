@@ -2,12 +2,12 @@
 title: Riferimento alla libreria OpenMP
 ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: c63ae5ba7f04d8ee6bd02418792804373fa71e6b
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682584"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348216"
 ---
 # <a name="openmp-library-reference"></a>Riferimento alla libreria OpenMP
 
@@ -26,10 +26,10 @@ Le funzioni C++ della libreria di runtime di Visual OpenMP sono contenute nelle 
 
 |Libreria di runtime OpenMP|Caratteristiche|
 |------------------------------|---------------------|
-|VCOMP.LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMP. LIB).|
-|VCOMPD.LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMPD. COPERCHIO) (debug)|
+|VCOMP. LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMP. LIB).|
+|VCOMPD. LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMPD. COPERCHIO) (debug)|
 
-Se _ debug è definito in una compilazione e `#include omp.h` se è nel codice sorgente, VCOMPD. LIB sarà la lib predefinita, in caso contrario, VCOMP. Verrà utilizzato LIB.
+Se _ debug è definito in una compilazione e se `#include <omp.h>` si trova nel codice sorgente, VCOMPD. LIB sarà la lib predefinita, in caso contrario, VCOMP. Verrà utilizzato LIB.
 
 È possibile utilizzare [/NODEFAULTLIB (Ignora librerie)](../../../build/reference/nodefaultlib-ignore-libraries.md) per rimuovere la lib predefinita e collegarsi in modo esplicito al lib scelto.
 
