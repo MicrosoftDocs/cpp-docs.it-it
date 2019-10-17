@@ -21,110 +21,110 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 850d4b72ddb45551528526cd9e02345aee74d751
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344218"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445002"
 ---
 # <a name="resource-editors-c"></a>Editor di risorse (C++)
 
-Un editor di risorse è un ambiente specializzato per la creazione o modifica le risorse incluse in un progetto di Visual Studio. Gli editor di risorse di Visual Studio condividono tecniche e interfacce in modo da semplificare e velocizzare la creazione e la modifica delle risorse delle applicazioni. Editor di risorse consentono di visualizzare e modificare risorse nell'editor e anteprima risorse appropriate.
+Un editor di risorse è un ambiente specializzato per la creazione o la modifica di risorse incluse in un progetto di Visual Studio. Gli editor di risorse di Visual Studio condividono tecniche e interfacce in modo da semplificare e velocizzare la creazione e la modifica delle risorse delle applicazioni. Gli editor di risorse consentono di visualizzare e modificare le risorse nell'editor appropriato e di visualizzare in anteprima le risorse.
 
 Quando si crea o si apre una risorsa, si apre automaticamente l'editor appropriato.
 
 > [!NOTE]
-> Perché i progetti gestiti non usano i file di script di risorsa, è necessario aprire le risorse dal **Esplora soluzioni**. È possibile usare la [Editor di immagini](../windows/image-editor-for-icons.md) e il [Editor binario](binary-editor.md) per lavorare con i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.
+> Poiché i progetti gestiti non usano file di script di risorse, è necessario aprire le risorse da **Esplora soluzioni**. È possibile usare l' [editor di immagini](../windows/image-editor-for-icons.md) e l' [editor binario](binary-editor.md) per lavorare con i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.
 
 |Usare|Per modificare|
 |----------------|----------------|
-|[Editor tasti di scelta rapida](../windows/accelerator-editor.md)|Le tabelle di tasti di scelta rapida in Visual Studio C++ progetti.|
+|[Editor tasti di scelta rapida](../windows/accelerator-editor.md)|Tabelle dei tasti di scelta C++ rapida nei progetti di Visual Studio.|
 |[Binary Editor](binary-editor.md)|Informazioni sui dati binari e risorse personalizzate in progetti Visual C++, Visual Basic o Visual C#.|
-|[Editor finestre](../windows/dialog-editor.md)|Finestre di dialogo di Visual Studio C++ progetti.|
+|[Editor finestre](../windows/dialog-editor.md)|Finestre di dialogo nei progetti C++ di Visual Studio.|
 |[Image Editor](../windows/image-editor-for-icons.md)|Bitmap, icone, cursori e altri file di immagine in progetti Visual C++, Visual Basic o Visual C#.|
-|[Editor dei menu](../windows/menu-editor.md)|Risorse menu in Visual Studio C++ progetti.|
+|[Editor dei menu](../windows/menu-editor.md)|Risorse dei menu nei progetti C++ di Visual Studio.|
 |[Editor barra multifunzione](../mfc/ribbon-designer-mfc.md)|Risorse della barra multifunzione in progetti MFC.|
-|[Editor stringhe](../windows/string-editor.md)|Tabelle di stringhe in Visual Studio C++ progetti.|
-|[Editor barra degli strumenti](../windows/toolbar-editor.md)|Le risorse della barra degli strumenti in Visual Studio C++ progetti. Il **Editor barra degli strumenti** fa parte il **Editor di immagini**.|
-|[Editor di informazioni sulla versione](../windows/version-information-editor.md)|Informazioni sulla versione in Visual Studio C++ progetti.|
+|[Editor stringhe](../windows/string-editor.md)|Tabelle di stringhe nei progetti C++ di Visual Studio.|
+|[Editor barra degli strumenti](../windows/toolbar-editor.md)|Risorse della barra degli strumenti C++ nei progetti di Visual Studio. L' **Editor barra degli strumenti** fa parte dell' **editor di immagini**.|
+|[Editor di informazioni sulla versione](../windows/version-information-editor.md)|Informazioni sulla versione nei progetti C++ di Visual Studio.|
 
 > [!NOTE]
-> Se il progetto non contiene già un file RC, vedere [come: Creare risorse](../windows/how-to-create-a-resource-script-file.md).
+> Se il progetto non contiene già un file RC, vedere [procedura: creare risorse](../windows/how-to-create-a-resource-script-file.md).
 
-## <a name="view-and-edit-resources"></a>Visualizzazione e modifica risorse
+## <a name="view-and-edit-resources"></a>Visualizzare e modificare le risorse
 
-Ogni tipo di risorsa dispone di un editor di risorse specifico per quel tipo di risorsa. È possibile ridisporre, ridimensionare, aggiungere controlli e funzionalità o in caso contrario, modificare alcuni aspetti di una risorsa tramite l'editor associato. È anche possibile modificare una risorsa in [formato di testo](../windows/how-to-open-a-resource-script-file-in-text-format.md) e [formato binario](../windows/opening-a-resource-for-binary-editing.md).
+Ogni tipo di risorsa ha un editor di risorse specifico per quel tipo di risorsa. È possibile ridisporre, ridimensionare, aggiungere controlli e funzionalità oppure modificare gli aspetti di una risorsa usando l'editor associato. È anche possibile modificare una risorsa in formato [testo](../windows/how-to-open-a-resource-script-file-in-text-format.md) e [formato binario](../windows/opening-a-resource-for-binary-editing.md).
 
-Alcuni tipi di risorse sono i singoli file che possono essere importati e usati in diversi modi. Queste includono le bitmap, icone, cursori, barre degli strumenti e i file html. Tali risorse hanno nomi di file e [identificatori di risorsa](../windows/symbols-resource-identifiers.md). Altri, ad esempio le finestre di dialogo, menu e le tabelle di stringhe in progetti Win32, esiste solo come parte di un file di risorse (RC) o un file modello (con estensione rct) di risorse.
+Alcuni tipi di risorse sono singoli file che possono essere importati e usati in vari modi. sono incluse bitmap, icone, cursori, barre degli strumenti e file HTML. Tali risorse hanno nomi file e [identificatori di risorsa](../windows/symbols-resource-identifiers.md). Altri, ad esempio finestre di dialogo, menu e tabelle di stringhe nei progetti Win32, esistono solo come parte di un file di script di risorsa (RC) o di un file di modello di risorse (con estensione RCT).
 
-Le risorse possono anche essere modificato all'esterno del progetto senza un progetto aperto, vedere [come: Creare risorse](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Le risorse possono anche essere modificate all'esterno del progetto senza aprire il progetto. vedere [procedura: creare risorse](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
 > [!NOTE]
-> Proprietà di una risorsa può essere modificata usando il **proprietà** finestra.
+> È possibile modificare le proprietà di una risorsa utilizzando la finestra **Proprietà** .
 
-- Per modificare le proprietà di una risorsa, in [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources), fare doppio clic la risorsa che si desidera modificare e scegliere **proprietà**.  Quindi, nella [finestra proprietà](/visualstudio/ide/reference/properties-window), modificare le proprietà della risorsa.
+- Per modificare le proprietà di una risorsa, in [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources), fare clic con il pulsante destro del mouse sulla risorsa che si desidera modificare e scegliere **Proprietà**.  Quindi, nella [finestra Proprietà](/visualstudio/ide/reference/properties-window)modificare le proprietà della risorsa.
 
-- Per annullare una modifica apportata alle proprietà di una risorsa, verificare che la risorsa abbia lo stato attivo **visualizzazione di risorse** e scegliere **Annulla** dal **modifica** menu.
+- Per annullare una modifica apportata alle proprietà di una risorsa, verificare che la risorsa abbia lo stato attivo nel **visualizzazione risorse** e scegliere **Annulla** dal menu **modifica** .
 
 ### <a name="win32-resources"></a>Risorse Win32
 
-È possibile accedere alle risorse Win32 nel [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources) riquadro.
+È possibile accedere alle risorse Win32 nel riquadro [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources) .
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Per visualizzare una risorsa Win32 in un editor di risorse
 
-1. Passare al menu di scelta **View** > **visualizzazione risorse**.
+1. Passare alla **visualizzazione**menu  > **other Windows** > **visualizzazione risorse**.
 
-1. Se il **visualizzazione di risorse** finestra non è la finestra in primo piano, seleziona la **visualizzazione risorse** pressione di tab per attivare la modalità nella parte superiore.
+1. Se la finestra **visualizzazione risorse** non è la finestra in primo piano, selezionare la scheda **visualizzazione risorse** per portarla nella parte superiore.
 
-1. Dal **visualizzazione risorse**, espandere la cartella del progetto che contiene le risorse che si desidera visualizzare. Ad esempio, se si desidera visualizzare una risorsa finestra di dialogo, espandere la **dialogo** cartella.
+1. Da **visualizzazione risorse**, espandere la cartella per il progetto che contiene le risorse che si desidera visualizzare. Se, ad esempio, si desidera visualizzare una risorsa finestra di dialogo, espandere la cartella **finestra di dialogo** .
 
-1. Fare doppio clic sulla risorsa, ad esempio, **IDD_ABOUTBOX**.
+1. Fare doppio clic sulla risorsa, ad esempio **IDD_ABOUTBOX**.
 
-   La risorsa viene visualizzata nell'editor appropriato. Ad esempio, per le risorse finestra di dialogo, la risorsa viene aperta la **finestra di dialogo Editor**.
+   La risorsa viene visualizzata nell'editor appropriato. Per le risorse della finestra di dialogo, ad esempio, la risorsa viene aperta nell' **editor finestre**.
 
 #### <a name="to-delete-an-existing-win32-resource"></a>Per eliminare una risorsa Win32 esistente
 
-1. Nelle **visualizzazione risorse**, espandere il nodo per un tipo di risorsa.
+1. In **visualizzazione risorse**espandere il nodo per un tipo di risorsa.
 
-1. Pulsante destro del mouse sulla risorsa di cui si desidera eliminare e scegliere **Elimina**.
+1. Fare clic con il pulsante destro del mouse sulla risorsa che si desidera eliminare e scegliere **Elimina**.
 
 > [!TIP]
-> È anche possibile usare questo metodo quando è aperto il file RC in una finestra del documento all'esterno di un progetto.
+> È anche possibile usare questo metodo quando il file RC è aperto in una finestra del documento all'esterno di un progetto.
 
-### <a name="managed-project-resources"></a>Risorse di progetto gestito
+### <a name="managed-project-resources"></a>Risorse di progetto gestite
 
-Poiché i progetti gestiti non usano i file di script di risorsa, è necessario aprire le risorse dal **Esplora soluzioni**. Usare la [Editor di immagini](../windows/image-editor-for-icons.md) e il [Editor binario](binary-editor.md) per lavorare con i file di risorse nei progetti gestiti. Le risorse gestite che si desidera modificare devono essere risorse collegate e negli editor di risorse di Visual Studio non supportano la modifica di risorse incorporate.
+Poiché i progetti gestiti non usano file di script di risorse, è necessario aprire le risorse da **Esplora soluzioni**. Utilizzare l' [editor di immagini](../windows/image-editor-for-icons.md) e l' [editor binario](binary-editor.md) per utilizzare i file di risorse nei progetti gestiti. Tutte le risorse gestite che si desidera modificare devono essere risorse collegate e gli editor di risorse di Visual Studio non supportano la modifica delle risorse incorporate.
 
-- Per visualizzare una risorsa gestita in un editor di risorse, in **Esplora soluzioni**, fare doppio clic sulla risorsa, ad esempio *BITMAP1*, e la risorsa verrà aperto nell'editor appropriato.
+- Per visualizzare una risorsa gestita in un editor di risorse, in **Esplora soluzioni**fare doppio clic sulla risorsa, ad esempio *bitmap1. bmp*, e la risorsa viene aperta nell'editor appropriato.
 
-- Per eliminare una risorsa gestita esistente, in **Esplora soluzioni**, fare doppio clic la risorsa che si desidera eliminare, quindi scegliere **eliminare**.
+- Per eliminare una risorsa gestita esistente, in **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla risorsa che si desidera eliminare e scegliere **Elimina**.
 
-## <a name="preview-resources"></a>Risorse di anteprima
+## <a name="preview-resources"></a>Anteprima risorse
 
-Visualizzare in anteprima le risorse per consentire di visualizzare le risorse grafiche senza aprirle. La visualizzazione in anteprima è utile per gli eseguibili anche dopo aver compilato, perché gli identificatori di risorsa cambia in numeri. Poiché questi identificatori numerici spesso non forniscono informazioni sufficienti, la visualizzazione in anteprima le risorse consente di identificare rapidamente li.
+Visualizzare in anteprima le risorse per consentire di visualizzare le risorse grafiche senza aprirle. L'anteprima è utile anche per gli eseguibili dopo averli compilati, in quanto gli identificatori di risorsa cambiano in numeri. Poiché questi identificatori numerici spesso non forniscono informazioni sufficienti, la visualizzazione in anteprima delle risorse consente di identificarli rapidamente.
 
-I tipi di risorse seguenti forniscono un'anteprima layout visivo: Bitmap, finestra di dialogo, icone, Menu, cursore, sulla barra degli strumenti
+I tipi di risorse seguenti forniscono un'anteprima del layout visivo: bitmap, finestra di dialogo, icona, menu, cursore, barra degli strumenti
 
-Le risorse seguenti non forniscono un'anteprima: Tasti di scelta rapida, informazioni sulla versione del manifesto, tabella di stringhe,
+Le risorse seguenti non forniscono un'anteprima visiva: acceleratore, manifesto, stringa tabella, informazioni sulla versione
 
 > [!NOTE]
-> Per visualizzare in anteprima le risorse richiede Win32.
+> Per visualizzare in anteprima le risorse è necessario Win32.
 
 ### <a name="to-preview-resources"></a>Per visualizzare in anteprima le risorse
 
-1. Nelle [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources) o una finestra del documento, selezionare la risorsa, ad esempio **IDD_ABOUTBOX**.
+1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources) o in una finestra del documento selezionare la risorsa, ad esempio **IDD_ABOUTBOX**.
 
-1. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), selezionare la **pagine delle proprietà** pulsante.
+1. Nella [finestra Proprietà](/visualstudio/ide/reference/properties-window)selezionare il pulsante **pagine delle proprietà** .
 
    > [!TIP]
-   > Utilizzare un collegamento, andare al menu di scelta **View** > **pagine delle proprietà**.
+   > Usare un tasto di scelta rapida, passare alla **visualizzazione**menu  > **pagine delle proprietà**.
 
-   Il **proprietà** pagina per la risorsa viene visualizzata un'anteprima di tale risorsa. È possibile usare la **iscrizione** e **verso il basso** tasti di direzione per esplorare l'albero controllano **visualizzazione risorse** o finestra del documento. Il **proprietà** pagina rimangono aperto e visualizzare qualsiasi risorsa che ha lo stato attivo e può essere visualizzato in anteprima.
+   Viene visualizzata la pagina delle **Proprietà** per la risorsa che visualizza un'anteprima di tale risorsa. È possibile utilizzare i tasti freccia **su** e **giù** per spostarsi nel controllo albero **visualizzazione risorse** o nella finestra del documento. La pagina delle **Proprietà** rimarrà aperta e mostrerà tutte le risorse che hanno lo stato attivo e che possono essere visualizzate in anteprima.
 
 ## <a name="requirements"></a>Requisiti
 
-nessuno
+Nessuno
 
 ## <a name="see-also"></a>Vedere anche
 

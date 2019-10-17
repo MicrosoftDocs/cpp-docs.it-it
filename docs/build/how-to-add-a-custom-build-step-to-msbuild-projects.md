@@ -1,45 +1,45 @@
 ---
-title: 'Procedura: Aggiungere un passaggio di compilazione personalizzata a progetti MSBuild'
-ms.date: 11/04/2016
+title: "Procedura: aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild"
+ms.date: 10/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: d70f145a9d43463266a9c0bbff68e8e7f36ef2c6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 78d40a5b4a02fe9b065bbbdde33afc6180d75381
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220724"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444913"
 ---
-# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Procedura: Aggiungere un passaggio di compilazione personalizzata a progetti MSBuild
+# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Procedura: aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild
 
-Un'istruzione di compilazione personalizzato è un passaggio definito dall'utente in una compilazione. Un'istruzione di compilazione personalizzato si comporta come qualsiasi altra *strumento di comando* passaggio, ad esempio il passaggio di strumento di compilazione o un collegamento standard.
+Un'istruzione di compilazione personalizzata è un passaggio definito dall'utente in una compilazione. Un'istruzione di compilazione personalizzata si comporta in modo analogo a qualsiasi altro passaggio *dello strumento di comando* , ad esempio il passaggio standard di compilazione o di collegamento.
 
-Specificare un passaggio di compilazione personalizzato nel file di progetto (vcxproj). Il passaggio è possibile specificare una riga di comando da eseguire, eventuali input aggiuntivi o i file di output e un messaggio da visualizzare. Se **MSBuild** determina che i file di output sono aggiornati rispetto ai file di input, viene visualizzato il messaggio e viene eseguito il comando.
+Specificare un'istruzione di compilazione personalizzata nel file di progetto (con estensione vcxproj). Il passaggio può specificare una riga di comando da eseguire, eventuali file di input o output aggiuntivi e un messaggio da visualizzare. Se **MSBuild** determina che i file di output non sono aggiornati rispetto ai file di input, Visualizza il messaggio ed esegue il comando.
 
-Per specificare il percorso della build personalizzata passaggio della sequenza di destinazioni di compilazione, usare uno o entrambi i `CustomBuildAfterTargets` e `CustomBuildBeforeTargets` elementi XML nel file di progetto. Ad esempio, è possibile specificare che viene eseguito il passaggio di compilazione personalizzato dopo la destinazione del collegamento dello strumento e prima della destinazione dello strumento manifesto. Il set effettivo di destinazioni disponibili dipende dalla compilazione specifica.
+Per specificare il percorso dell'istruzione di compilazione personalizzata nella sequenza di destinazioni di compilazione, utilizzare uno o entrambi gli elementi XML `CustomBuildAfterTargets` e `CustomBuildBeforeTargets` nel file di progetto. Ad esempio, è possibile specificare che l'istruzione di compilazione personalizzata viene eseguita dopo la destinazione dello strumento di collegamento e prima della destinazione dello strumento Manifesto. Il set effettivo di destinazioni disponibili dipende dalla build specifica.
 
-Specificare il `CustomBuildBeforeTargets` elemento per eseguire l'istruzione di compilazione personalizzato prima che venga eseguito una determinata destinazione, il `CustomBuildAfterTargets` elemento per eseguire il passaggio dopo l'esecuzione di un determinato obiettivo o entrambi gli elementi per eseguire il passaggio tra due destinazioni adiacenti. Se nessuno dei due viene specificato, lo strumento di compilazione personalizzata verrà eseguito nel percorso predefinito, ovvero dopo il **collegamento** destinazione.
+Specificare l'elemento `CustomBuildBeforeTargets` per eseguire l'istruzione di compilazione personalizzata prima dell'esecuzione di una determinata destinazione, l'elemento `CustomBuildAfterTargets` per eseguire il passaggio dopo l'esecuzione di una determinata destinazione oppure entrambi gli elementi per eseguire il passaggio tra due destinazioni adiacenti. Se nessuno dei due elementi viene specificato, lo strumento di compilazione personalizzato viene eseguito nel percorso predefinito, che si trova dopo la destinazione del **collegamento** .
 
-Istruzioni di compilazione personalizzate e strumenti di compilazione personalizzati condividono le informazioni specificate nel `CustomBuildBeforeTargets` e `CustomBuildAfterTargets` elementi XML. Pertanto, specificare le destinazioni solo una volta nel file di progetto.
+Le istruzioni di compilazione personalizzate e gli strumenti di compilazione personalizzati condividono le informazioni specificate negli elementi XML `CustomBuildBeforeTargets` e `CustomBuildAfterTargets`. Pertanto, specificare le destinazioni solo una volta nel file di progetto.
 
-### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Definire ciò che viene eseguita dall'istruzione di compilazione personalizzata
+### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Per definire gli elementi eseguiti dall'istruzione di compilazione personalizzata
 
-1. Aggiungere un gruppo di proprietà al file di progetto. In questo gruppo di proprietà, specificare il comando, gli input e output e un messaggio, come illustrato nell'esempio seguente. In questo esempio crea un file CAB dal file Main. cpp è stato creato in [procedura dettagliata: Uso di MSBuild per creare un C++ Project](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Aggiungere un gruppo di proprietà al file di progetto. In questo gruppo di proprietà specificare il comando, i relativi input e output e un messaggio, come illustrato nell'esempio seguente. Questo esempio crea un file con estensione cab dal file Main. cpp creato in [procedura dettagliata: uso di MSBuild per creare C++ un progetto](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
       <CustomBuildStep>
         <Command>makecab.exe $(ProjectDir)main.cpp $(TargetName).cab</Command>
         <Outputs>$(TargetName).cab</Outputs>
-        <Inputs>$(TargetFileName)</Inputs>
+        <Inputs>$(ProjectDir)main.cpp</Inputs>
       </CustomBuildStep>
     </ItemDefinitionGroup>
     ```
 
-### <a name="to-define-where-in-the-build-the-custom-build-step-will-execute"></a>Per definire in cui la compilazione in cui verrà eseguita l'istruzione di compilazione personalizzato
+### <a name="to-define-where-in-the-build-the-custom-build-step-will-execute"></a>Per definire il punto in cui verrà eseguita l'istruzione Build the Custom Build
 
-1. Aggiungere il gruppo di proprietà seguente al file di progetto. È possibile specificare entrambe le destinazioni, oppure è possibile omettere uno se si desidera solo l'istruzione personalizzata da eseguire prima o dopo una determinata destinazione. In questo esempio indica **MSBuild** per eseguire il passaggio personalizzato dopo il passaggio di compilazione, ma prima del passaggio di collegamento.
+1. Aggiungere il gruppo di proprietà seguente al file di progetto. È possibile specificare entrambe le destinazioni oppure ometterne una solo se si vuole che il passaggio personalizzato venga eseguito prima o dopo una determinata destinazione. Questo esempio indica a **MSBuild** di eseguire il passaggio personalizzato dopo il passaggio di compilazione ma prima del passaggio del collegamento.
 
     ```
     <PropertyGroup>
@@ -50,6 +50,6 @@ Istruzioni di compilazione personalizzate e strumenti di compilazione personaliz
 
 ## <a name="see-also"></a>Vedere anche
 
-[Procedura dettagliata: Uso di MSBuild per creare un progetto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[Procedura: Uso degli eventi di compilazione nei progetti MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
-[Procedura: Aggiungere strumenti di compilazione personalizzati ai progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
+[Procedura dettagliata: uso di MSBuild per C++ la creazione di un progetto](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Procedura: Uso di eventi di compilazione in progetti MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Procedura: Aggiungere uno strumento di compilazione personalizzato a progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
