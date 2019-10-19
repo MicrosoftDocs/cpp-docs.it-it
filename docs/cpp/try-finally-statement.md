@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498612"
 ---
 # <a name="try-finally-statement"></a>Istruzione try-finally
@@ -33,19 +33,19 @@ ms.locfileid: "69498612"
 
 Nella sintassi seguente viene descritta l'istruzione **try-finally** :
 
-> **\_\_provare**<br/>
+> **\_ \_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;codice sorvegliato<br/>
+> &nbsp; &nbsp; &nbsp; codice &nbsp;//sorvegliato<br/>
 > }<br/>
-> **\_\_Infine**<br/>
+> **\_ \_finally**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;codice di terminazione<br/>
+> &nbsp; &nbsp; &nbsp; codice di terminazione/&nbsp;<br/>
 > }
 
 ## <a name="grammar"></a>Grammatica
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;try Compound *-*  **\_ Statementfinallycomposto-statement\_**  **\_ \_**
+&nbsp; &nbsp; **&nbsp; &nbsp; \_** *composte* **\_try \_** *-* istruzione composta 0finally
 
 L'istruzione **try-finally** è un'estensione Microsoft per i linguaggi C++ C e che consente alle applicazioni di destinazione di garantire l'esecuzione del codice di pulizia quando l'esecuzione di un blocco di codice viene interrotta. La pulizia è costituita da attività quali la deallocazione della memoria, la chiusura dei file e il rilascio di handle di file. L'istruzione **try-finally** è particolarmente utile per le routine che presentano diverse posizioni in cui viene effettuato un controllo per un errore che può causare un ritorno prematuro dalla routine.
 
@@ -66,15 +66,15 @@ Il controllo raggiunge un'istruzione **__try** dall'esecuzione sequenziale sempl
 
 Se si verifica un'eccezione nel blocco **__try** , il sistema operativo deve trovare un gestore per l'eccezione o il programma avrà esito negativo. Se viene trovato un gestore, vengono eseguiti tutti i blocchi **__finally** e l'esecuzione riprende nel gestore.
 
-Si supponga ad esempio che una serie di chiamate di funzione colleghi la funzione A alla funzione D, come illustrato di seguito. Ogni funzione dispone di un gestore di terminazione. Se viene generata un'eccezione nella funzione D e gestita in, i gestori di terminazione vengono chiamati in questo ordine quando il sistema rimuove lo stack: D, C, B.
+Si supponga ad esempio che una serie di chiamate di funzione colleghi la funzione A alla funzione D, come illustrato di seguito. Ogni funzione dispone di un gestore di terminazione. Se un'eccezione viene generata nella funzione D e gestita in A, i gestori di terminazione, man mano che il sistema rimuove lo stack, vengono chiamati nell'ordine seguente: D, C, B.
 
-![Ordine di esecuzione del&#45;gestore di terminazione](../cpp/media/vc38cx1.gif "dell'esecuzione&#45;del gestore di terminazione") <br/>
+![Ordine di esecuzione del&#45;gestore di terminazione](../cpp/media/vc38cx1.gif "Ordine di esecuzione del&#45;gestore di terminazione") <br/>
 Ordine di terminazione esecuzione del gestore
 
 > [!NOTE]
 > Il comportamento di try-finally è diverso da altri linguaggi che supportano l'utilizzo di **finally**, ad C#esempio.  Un singolo **__try** può avere, ma non entrambi, **__finally** e **__except**.  Se entrambi devono essere utilizzati insieme, un'istruzione try-except deve racchiudere l'istruzione try-finally interna.  Sono diverse anche le regole che specificano quando viene eseguito ciascun blocco.
 
-Per compatibilità con le versioni precedenti, **_try**, **_finally**e **_leave** sono sinonimi di **__try**, **__finally**e **__leave** , a meno che l'opzione del compilatore [/za \(Disabilita le estensioni del linguaggio) ](../build/reference/za-ze-disable-language-extensions.md)è specificato.
+Per compatibilità con le versioni precedenti, **_try**, **_finally**e **_leave** sono sinonimi **di __try**, **__finally**e **__leave** , a meno che l'opzione del compilatore [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) sia specificato.
 
 ## <a name="the-__leave-keyword"></a>La parola chiave __leave
 

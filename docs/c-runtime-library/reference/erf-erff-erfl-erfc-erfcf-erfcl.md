@@ -40,10 +40,10 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70937610"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -108,9 +108,9 @@ Poiché C++ consente l'overload, è possibile chiamare gli overload di **ERF** e
 
 |Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
-|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+|**ERF**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
