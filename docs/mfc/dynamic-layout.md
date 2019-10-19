@@ -3,10 +3,10 @@ title: Layout dinamico
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70907558"
 ---
 # <a name="dynamic-layout"></a>Layout dinamico
@@ -23,7 +23,7 @@ Dopo il ridimensionamento l'area della casella di riepilogo viene ampliata in mo
 
 ![Finestra di dialogo dopo il ridimensionamento.](../mfc/media/mfcdynamiclayout5.png "Finestra di dialogo dopo il ridimensionamento.")
 
-È possibile controllare il layout dinamico specificando i dettagli per ogni controllo nell'editor risorse nell'IDE. in alternativa, è possibile eseguire questa operazione a livello di codice `CMFCDynamicLayout` accedendo all'oggetto per un particolare controllo e impostando le proprietà.
+È possibile controllare il layout dinamico specificando i dettagli per ogni controllo nell'editor risorse nell'IDE. in alternativa, è possibile eseguire questa operazione a livello di codice accedendo all'oggetto `CMFCDynamicLayout` per un particolare controllo e impostando le proprietà.
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Impostazione delle proprietà del layout dinamico nell'Editor risorse
 
@@ -33,7 +33,7 @@ Dopo il ridimensionamento l'area della casella di riepilogo viene ampliata in mo
 
 1. Dopo aver aperto un progetto MFC aprire la finestra di dialogo con cui lavorare nell'editor della finestra di dialogo.
 
-   ![Aprire la finestra di dialogo nell'editor risorse.](../mfc/media/mfcdynamiclayout3.png "Aprire la finestra di dialogo nell'editor risorse.")
+   ![Aprire la finestra di dialogo nell'editor risorse.](../mfc/media/mfcdynamiclayout3.png "Aprire la finestra di dialogo nell'editor di risorse.")
 
 1. Selezionare un controllo e nella finestra **Proprietà** (in **Visualizzazione classi**) impostare le proprietà del layout dinamico. La sezione **layout dinamico** della finestra **Proprietà** contiene le proprietà **tipo di spostamento**, **tipo di ridimensionamento**e, a seconda dei valori selezionati per tali proprietà, proprietà specifiche che definiscono la quantità di controlli da spostare o modificare le dimensioni. Il **tipo in movimento** determina il modo in cui un controllo viene spostato quando viene modificata la dimensione della finestra di dialogo; Il **tipo di ridimensionamento** determina il modo in cui un controllo viene ridimensionato quando viene modificata la dimensione della finestra di dialogo. Lo stato di **tipo e il** **tipo di ridimensionamento** possono essere **orizzontali**, **verticali**, **entrambi**o **nessuno** , a seconda delle dimensioni che si desidera modificare dinamicamente. Il termine Orizzontale si riferisce alla dimensione X, mentre Verticale corrisponde alla direzione Y.
 
@@ -43,7 +43,7 @@ Dopo il ridimensionamento l'area della casella di riepilogo viene ampliata in mo
 
 1. Si supponga che sia presente anche un altro controllo da espandere all'espansione della finestra di dialogo. In genere, un utente espande una finestra di dialogo per espandere una casella di modifica multiriga e aumentare le dimensioni dell'area di testo oppure espande un controllo elenco per visualizzare ulteriori dati. Per questo caso, impostare il **tipo di ridimensionamento** su entrambi e impostare il **tipo di trasferimento** su nessuno. Impostare quindi i valori **X di ridimensionamento** e **ridimensionamento Y** su 100.
 
-   ![Impostazioni del layout dinamico](../mfc/media/mfcdynamiclayout2.png "Impostazioni del layout dinamico")
+   ![Impostazioni del layout dinamico](../mfc/media/mfcdynamiclayout2.png "Impostazioni layout dinamico")
 
 1. Sperimentare altri valori che potrebbero risultare efficaci per i controlli usati. Un dialogo con una casella di testo a riga singola potrebbe avere il **tipo di ridimensionamento** impostato solo su **orizzontale** , ad esempio.
 
@@ -55,13 +55,13 @@ La procedura precedente è utile per specificare le proprietà del layout dinami
 
 1. Nel codice di implementazione della classe della finestra individuare o creare un punto in cui specificare il layout dinamico per la finestra di dialogo. Ad esempio, si può aggiungere un metodo come `AdjustLayout` nella finestra di dialogo e chiamarlo da punti in cui è necessario modificare il layout. Il metodo può innanzitutto essere chiamato dal costruttore o dopo aver apportato modifiche alla finestra di dialogo.
 
-1. Per la finestra di dialogo, chiamare [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un metodo `CWnd` della classe. `GetDynamicLayout` restituisce un puntatore a un oggetto `CMFCDynamicLayout` .
+1. Per la finestra di dialogo, chiamare [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un metodo della classe `CWnd`. `GetDynamicLayout` restituisce un puntatore a un oggetto `CMFCDynamicLayout` .
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Per il primo controllo a cui si desidera aggiungere il comportamento dinamico, utilizzare i metodi statici sulla classe del layout dinamico per creare la struttura [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) che codifica il modo in cui deve essere regolato il controllo. A tale scopo, è necessario innanzitutto scegliere il metodo statico appropriato: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)o [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Passare una percentuale per gli aspetti orizzontale e/o verticale dello spostamento. Questi metodi statici restituiscono tutti un oggetto MoveSettings appena creato che è possibile usare per specificare il comportamento di spostamento di un controllo.
+1. Per il primo controllo a cui si desidera aggiungere il comportamento dinamico, utilizzare i metodi statici sulla classe del layout dinamico per creare la struttura [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) che codifica il modo in cui deve essere regolato il controllo. A tale scopo, è necessario innanzitutto scegliere il metodo statico appropriato: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)o [CMFCDynamicLayout:: MoveHorizontalAndVertical ](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Passare una percentuale per gli aspetti orizzontale e/o verticale dello spostamento. Questi metodi statici restituiscono tutti un oggetto MoveSettings appena creato che è possibile usare per specificare il comportamento di spostamento di un controllo.
 
    Tenere presente che con il valore 100 l'entità dello spostamento sarà identico a quello del ridimensionamento della finestra di dialogo, di conseguenza il bordo di un controllo rimarrà a una distanza fissa dal nuovo bordo.
 

@@ -20,26 +20,26 @@ helpviewer_keywords:
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 ms.openlocfilehash: 9a0199577ea46520c2eadc308812de8a1ce4b514
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "71685801"
 ---
 # <a name="dialog-data-exchange"></a>DDX (Dialog Data Exchange)
 
-Se si utilizza il meccanismo DDX, è possibile impostare i valori iniziali delle variabili membro dell'oggetto finestra di dialogo, in genere nel gestore @no__t 0 o nel costruttore della finestra di dialogo. Immediatamente prima della visualizzazione della finestra di dialogo, il meccanismo DDX del framework trasferisce i valori delle variabili membro ai controlli della finestra di dialogo, dove vengono visualizzati quando la finestra di dialogo viene visualizzata in risposta a `DoModal` o `Create`. L'implementazione predefinita di `OnInitDialog` in `CDialog` chiama la funzione membro `UpdateData` della classe `CWnd` per inizializzare i controlli nella finestra di dialogo.
+Se si utilizza il meccanismo DDX, è possibile impostare i valori iniziali delle variabili membro dell'oggetto finestra di dialogo, in genere nel gestore `OnInitDialog` o nel costruttore della finestra di dialogo. Immediatamente prima della visualizzazione della finestra di dialogo, il meccanismo DDX del framework trasferisce i valori delle variabili membro ai controlli della finestra di dialogo, dove vengono visualizzati quando la finestra di dialogo viene visualizzata in risposta a `DoModal` o `Create`. L'implementazione predefinita di `OnInitDialog` in `CDialog` chiama la funzione membro `UpdateData` della classe `CWnd` per inizializzare i controlli nella finestra di dialogo.
 
 Lo stesso meccanismo trasferisce i valori dai controlli alle variabili membro quando l'utente fa clic sul pulsante OK (oppure ogni volta che si chiama la funzione membro `UpdateData` con l'argomento **true**). Il meccanismo di convalida dei dati della finestra di dialogo convalida tutti gli elementi di dati per i quali sono state specificate regole di convalida.
 
 Nella figura seguente viene illustrato lo scambio di dati della finestra di dialogo.
 
-![](../mfc/media/vc379d1.gif "Scambio di") dati della finestra di dialogo scambio di dati della finestra di dialogo <br/>
+![Scambio di dati della finestra di dialogo](../mfc/media/vc379d1.gif "DDX (Dialog Data Exchange)") <br/>
 DDX (Dialog Data Exchange)
 
-`UpdateData` funziona in entrambe le direzioni, come specificato dal parametro **bool** passato. Per eseguire Exchange, `UpdateData` configura un oggetto `CDataExchange` e chiama l'override della classe della finestra di dialogo della funzione membro `DoDataExchange` di `CDialog`. `DoDataExchange` accetta un argomento di tipo `CDataExchange`. L'oggetto `CDataExchange` passato a `UpdateData` rappresenta il contesto dello scambio, definendo tali informazioni come direzione dello scambio.
+`UpdateData` funziona in entrambe le direzioni, come specificato dal parametro **bool** passato. Per eseguire lo scambio, `UpdateData` imposta un oggetto `CDataExchange` e chiama l'override della classe della finestra di dialogo della funzione membro `DoDataExchange` di `CDialog`. `DoDataExchange` accetta un argomento di tipo `CDataExchange`. L'oggetto `CDataExchange` passato a `UpdateData` rappresenta il contesto dello scambio, definendo tali informazioni come direzione dello scambio.
 
-Quando si esegue l'override di o di una creazione guidata codice `DoDataExchange`, è necessario specificare una chiamata a una funzione DDX per membro dati (controllo). Ogni funzione DDX sa come scambiare dati in entrambe le direzioni in base al contesto fornito dall'argomento `CDataExchange` passato al `DoDataExchange` da `UpdateData`.
+Quando si esegue l'override di `DoDataExchange`, o di una creazione guidata codice, si specifica una chiamata a una funzione DDX per membro dati (controllo). Ogni funzione DDX sa come scambiare dati in entrambe le direzioni in base al contesto fornito dall'argomento `CDataExchange` passato al `DoDataExchange` da `UpdateData`.
 
 MFC fornisce molte funzioni DDX per diversi tipi di scambio. Nell'esempio seguente viene illustrato un override `DoDataExchange` in cui vengono chiamate due funzioni DDX e una funzione DDV:
 

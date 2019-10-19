@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498634"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
@@ -16,11 +16,11 @@ Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è 
 
 ## <a name="terminology"></a>Terminologia
 
-**Variabile**: Nome simbolico di una quantità di dati in modo che il nome possa essere utilizzato per accedere ai dati a cui si riferisce nell'ambito del codice in cui è definito. In C++la *variabile* viene in genere utilizzata per fare riferimento a istanze di tipi di dati scalari, mentre le istanze di altri tipi sono in genere chiamate *oggetti*.
+**Variabile**: nome simbolico di una quantità di dati in modo che il nome possa essere usato per accedere ai dati a cui fa riferimento nell'ambito del codice in cui è definito. In C++la *variabile* viene in genere utilizzata per fare riferimento a istanze di tipi di dati scalari, mentre le istanze di altri tipi sono in genere chiamate *oggetti*.
 
-**Oggetto**: Per semplicità e coerenza, in questo articolo viene utilizzato il termine *oggetto* per fare riferimento a qualsiasi istanza di una classe o struttura e quando viene utilizzato in senso generale include tutti i tipi, anche le variabili scalari.
+**Oggetto**: per semplicità e coerenza, in questo articolo viene utilizzato il termine *oggetto* per fare riferimento a qualsiasi istanza di una classe o struttura e quando viene utilizzato in senso generale include tutti i tipi, anche le variabili scalari.
 
-**Tipo di Pod** (dati Plain Old): Questa categoria informale di tipi di dati C++ in fa riferimento ai tipi che sono scalari (vedere la sezione relativa ai tipi fondamentali) o alle *classi POD*. Una classe POD non contiene membri dati statici che non siano anche POD e non contiene costruttori, distruttori e operatori di assegnazione definiti dall'utente. Una classe POD non include funzioni virtuali, né una classe base e né membri dati non statici privati o protetti. I tipi POD vengono spesso utilizzati per lo scambio di dati esterni, ad esempio con un modulo scritto nel linguaggio C (che presenta solo tipi POD).
+**Tipo POD** (dati non aggiornati): questa categoria informale di tipi di dati C++ in si riferisce ai tipi scalari (vedere la sezione tipi fondamentali) o alle *classi POD*. Una classe POD non contiene membri dati statici che non siano anche POD e non contiene costruttori, distruttori e operatori di assegnazione definiti dall'utente. Una classe POD non include funzioni virtuali, né una classe base e né membri dati non statici privati o protetti. I tipi POD vengono spesso utilizzati per lo scambio di dati esterni, ad esempio con un modulo scritto nel linguaggio C (che presenta solo tipi POD).
 
 ## <a name="specifying-variable-and-function-types"></a>Specificare tipi di funzione e di variabile
 
@@ -59,24 +59,24 @@ I tipi fondamentali sono riconosciuti dal compilatore che ha regole predefinite 
 
 Di seguito vengono mostrate le dimensioni relative dei tipi predefiniti:
 
-![Dimensioni in byte delle dimensioni&#45;dei tipi predefiniti](../cpp/media/built-intypesizes.png "in byte dei tipi&#45;predefiniti")
+![Dimensioni in byte dei tipi&#45;incorporati](../cpp/media/built-intypesizes.png "Dimensioni in byte dei tipi&#45;incorporati")
 
 Nella tabella seguente sono elencati i tipi fondamentali di uso più comune:
 
-|Tipo|Dimensione|Commento|
+|Digitare|Dimensioni|Commento|
 |----------|----------|-------------|
 |int|4 byte|Scelta predefinita per i valori integrali.|
-|double|8 byte|Scelta predefinita per i valori a virgola mobile.|
+|doppio|8 byte|Scelta predefinita per i valori a virgola mobile.|
 |bool|1 byte|Rappresenta i valori che possono essere true o false.|
 |char|1 byte|Utilizzare i caratteri ASCII negli oggetti std::string o nelle stringhe di tipo C precedenti che non dovranno mai essere convertiti in UNICODE.|
 |wchar_t|2 byte|Rappresenta valori a caratteri "wide" che è possibile codificare in formato Unicode (UTF-16 in Windows, per altri sistemi operativi potrebbe essere diverso). Si tratta del tipo di carattere utilizzato in stringhe di tipo `std::wstring`.|
-|unsigned&nbsp;char|1 byte|C++ non include alcun tipo `byte` predefinito.  Utilizzare il tipo unsigned char per rappresentare un valore byte.|
+|&nbsp;char senza segno|1 byte|C++ non include alcun tipo `byte` predefinito.  Utilizzare il tipo unsigned char per rappresentare un valore byte.|
 |unsigned int|4 byte|Scelta predefinita per i flag di bit.|
 |long long|8 byte|Rappresenta valori integer di grandi dimensioni.|
 
 ## <a name="the-void-type"></a>Tipo void
 
-Il tipo **void** è un tipo speciale; non è possibile dichiarare una variabile di tipo **void**, ma è possibile dichiarare una variabile di __tipo \* void__ (puntatore a **void**), che talvolta è necessaria per l'allocazione di memoria non elaborata (non tipizzata). Tuttavia, i puntatori a **void** non sono indipendenti dai tipi e in genere il loro uso è fortemente sconsigliato C++nel moderno. In una dichiarazione di funzione, un valore restituito **void** significa che la funzione non restituisce un valore. si tratta di un uso comune e accettabile di **void**. Mentre il linguaggio C richiede funzioni che hanno zero parametri per dichiarare **void** nell'elenco di parametri, ad esempio `fou(void)`, questa pratica è sconsigliata nel moderno C++ e deve essere dichiarata `fou()`. Per ulteriori informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Il tipo **void** è un tipo speciale; non è possibile dichiarare una variabile di tipo **void**, ma è possibile dichiarare una variabile di tipo __void \*__ (puntatore a **void**), che talvolta è necessaria per l'allocazione di memoria non elaborata (non tipizzata). Tuttavia, i puntatori a **void** non sono indipendenti dai tipi e in genere il loro uso è fortemente sconsigliato C++nel moderno. In una dichiarazione di funzione, un valore restituito **void** significa che la funzione non restituisce un valore. si tratta di un uso comune e accettabile di **void**. Mentre il linguaggio C richiede funzioni che hanno zero parametri per dichiarare **void** nell'elenco di parametri, ad esempio `fou(void)`, questa pratica è sconsigliata nel moderno C++ e deve essere dichiarata `fou()`. Per ulteriori informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>qualificatore di tipo const
 
@@ -94,7 +94,7 @@ Un tipo **const** è diverso dalla relativa versione non const; ad esempio, **co
 
 ## <a name="string-types"></a>Tipi di stringa
 
-In modo rigoroso C++ , il linguaggio non ha un tipo di stringa incorporato; caratteri singoli di archivio **char** e **wchar_t** : è necessario dichiarare una matrice di questi tipi per approssimare una stringa, aggiungendo un valore null di terminazione (ad `'\0'`esempio, ASCII) all'elemento della matrice dopo l'ultimo carattere valido (detto anche *Stringa di tipo C*). Le stringhe di tipo C richiedono la scrittura di una quantità maggiore di codice o l'utilizzo delle funzioni della libreria dell'utilità di stringa esterna. C++In moderni, tuttavia `std::string` , sono disponibili i tipi di libreria standard (per le stringhe di caratteri di tipo carattere a 8 bit) o `std::wstring` (per le stringhe di caratteri di tipo **wchar_t**a 16 bit). Questi C++ contenitori di librerie standard possono essere considerati come tipi di stringa nativi perché fanno parte delle librerie standard incluse in qualsiasi ambiente di compilazione conforme C++ . È sufficiente utilizzare la direttiva `#include <string>` per rendere questi tipi disponibili nel programma. (Se si utilizza MFC o ATL, è disponibile anche la classe CString, anche se non fa parte dello standard C++). L'utilizzo di matrici di caratteri con terminazione Null (le stringhe in stile C citate in precedenza) è fortemente sconsigliato nel linguaggio C++ moderno.
+In modo rigoroso C++ , il linguaggio non ha un tipo di stringa incorporato; caratteri singoli di archivio **char** e **wchar_t** : è necessario dichiarare una matrice di questi tipi per approssimare una stringa, aggiungendo un valore null di terminazione (ad esempio, ASCII `'\0'`) all'elemento della matrice dopo l'ultimo carattere valido (detto *anche Stringa di tipo C*). Le stringhe di tipo C richiedono la scrittura di una quantità maggiore di codice o l'utilizzo delle funzioni della libreria dell'utilità di stringa esterna. Tuttavia, in C++Modern sono disponibili i tipi di libreria standard `std::string` (per le stringhe di caratteri di tipo carattere a 8 bit) o `std::wstring` (per le stringhe di caratteri di tipo **wchar_t**a **16 bit)** . Questi C++ contenitori di librerie standard possono essere considerati come tipi di stringa nativi perché fanno parte delle librerie standard incluse in qualsiasi ambiente di compilazione conforme C++ . È sufficiente utilizzare la direttiva `#include <string>` per rendere questi tipi disponibili nel programma. Se si utilizza MFC o ATL, è disponibile anche la classe CString, ma non fa parte dello C++ standard. L'utilizzo di matrici di caratteri con terminazione null (le stringhe di tipo C citate in precedenza) è fortemente sconsigliato C++nel moderno.
 
 ## <a name="user-defined-types"></a>Tipi definiti dall'utente
 
@@ -106,7 +106,7 @@ Quando si definisce una **classe**, uno **struct**, un' **Unione**o un' **enumer
 
 ## <a name="pointer-types"></a>Tipi puntatore
 
-Tornando alle versioni precedenti del linguaggio C, C++ continua a consentire la dichiarazione di una variabile di un tipo di puntatore tramite il dichiaratore speciale `*` (asterisco). Un tipo di puntatore archivia l'indirizzo della posizione in memoria in cui è archiviato il valore effettivo dei dati. In Modern C++, questi vengono definiti *puntatori non elaborati*e sono accessibili nel codice tramite operatori `*` speciali (asterisco) o `->` (Dash con maggiore di). Questa operazione viene definita *dereferenziazione*e quella da usare dipende dal fatto che si dereferenzia un puntatore a un puntatore scalare o a un membro in un oggetto. L'utilizzo dei tipi di puntatore ha rappresentato per molto tempo uno degli aspetti più ostici e confusi dello sviluppo di programmi in C e C++. In questa sezione vengono descritti alcuni fatti e procedure che consentono di utilizzare i puntatori non elaborati, ma in contemporanea C++ non è più necessario (o consigliato) utilizzare i puntatori non elaborati per la proprietà dell'oggetto, a causa dell'evoluzione del [puntatore intelligente](../cpp/smart-pointers-modern-cpp.md) (illustrata di più alla fine di questa sezione). È ancora utile e sicuro utilizzare i puntatori non elaborati per l'osservazione degli oggetti, tuttavia se è necessario utilizzarli per la proprietà dell'oggetto, è necessario farlo con attenzione valutando attentamente come vengono creati ed eliminati definitivamente gli oggetti di proprietà.
+Tornando alle versioni precedenti del linguaggio C, C++ continua a consentire la dichiarazione di una variabile di un tipo di puntatore tramite il dichiaratore speciale `*` (asterisco). Un tipo di puntatore archivia l'indirizzo della posizione in memoria in cui è archiviato il valore effettivo dei dati. In Modern C++, questi vengono definiti *puntatori non elaborati*e sono accessibili nel codice tramite operatori speciali `*` (asterisco) o `->` (Dash con maggiore di). Questa operazione viene definita *dereferenziazione*e quella da usare dipende dal fatto che si dereferenzia un puntatore a un puntatore scalare o a un membro in un oggetto. L'utilizzo dei tipi di puntatore ha rappresentato per molto tempo uno degli aspetti più ostici e confusi dello sviluppo di programmi in C e C++. In questa sezione vengono descritti alcuni fatti e procedure che consentono di utilizzare i puntatori non elaborati, ma in contemporanea C++ non è più necessario (o consigliato) utilizzare i puntatori non elaborati per la proprietà dell'oggetto, a causa dell'evoluzione del [puntatore intelligente](../cpp/smart-pointers-modern-cpp.md) (illustrata di più alla fine di questa sezione). È ancora utile e sicuro utilizzare i puntatori non elaborati per l'osservazione degli oggetti, tuttavia se è necessario utilizzarli per la proprietà dell'oggetto, è necessario farlo con attenzione valutando attentamente come vengono creati ed eliminati definitivamente gli oggetti di proprietà.
 
 La prima cosa da sapere è che dichiarare una variabile di puntatore non elaborato comporta l'allocazione della sola memoria necessaria per archiviare un indirizzo di posizione in memoria a cui farà riferimento il puntatore quando verrà dereferenziato. L'allocazione della memoria per il valore di dati stesso (anche detto *Archivio di backup*) non è ancora allocata. In altre parole, dichiarando una variabile di puntatore non elaborato si crea una variabile di indirizzo di memoria, non una variabile dati effettivi. Dereferenziare una variabile di puntatore senza verificare che contenga un indirizzo valido a un archivio di backup causa un comportamento non definito (in genere un errore irreversibile) nel programma. Nell'esempio seguente viene illustrato questo tipo di errore:
 
@@ -134,7 +134,7 @@ Nell'esempio viene dereferenziato un tipo di puntatore senza avere allocato memo
                               // "pNumber".
 ```
 
-Nell'esempio di codice corretto viene utilizzata la memoria dello stack locale per creare l'archivio di backup a cui punta `pNumber`. Per semplicità viene utilizzato un tipo fondamentale. In pratica, l'archivio di backup per i puntatori è spesso costituito da tipi definiti dall'utente, allocati in modo dinamico in un'area di memoria denominata *heap* (o *archivio gratuito*) utilizzando una **nuova** espressione di parola chiave (nella programmazione di tipo C, il meno recente `malloc()` È stata usata la funzione della libreria di runtime C). Una volta allocate, queste variabili vengono in genere definite oggetti, soprattutto se sono basate su una definizione di classe. La memoria allocata con **New** deve essere eliminata da un'istruzione **Delete** corrispondente (oppure, se è stata `malloc()` usata la funzione per allocarla, la funzione `free()`di runtime C).
+Nell'esempio di codice corretto viene utilizzata la memoria dello stack locale per creare l'archivio di backup a cui punta `pNumber`. Per semplicità viene utilizzato un tipo fondamentale. In pratica, l'archivio di backup per i puntatori è spesso costituito da tipi definiti dall'utente, allocati in modo dinamico in un'area di memoria denominata *heap* (o *archivio libero*) utilizzando una **nuova** espressione di parola chiave (nella programmazione di tipo C, il @no_ precedente è stata usata la funzione della libreria di runtime _t_3 C). Una volta allocate, queste variabili vengono in genere definite oggetti, soprattutto se sono basate su una definizione di classe. La memoria allocata con **New** deve essere eliminata da un'istruzione **Delete** corrispondente (oppure, se è stata usata la funzione `malloc()` per allocarla, la funzione di runtime C `free()`).
 
 Tuttavia, è facile dimenticare di eliminare un oggetto allocato in modo dinamico, soprattutto nel codice complesso, causando un bug di risorse denominato *perdita di memoria*. Per questo motivo, l'utilizzo dei puntatori non elaborati è fortemente sconsigliato nel linguaggio C++ moderno. È quasi sempre preferibile eseguire il wrapping di un puntatore non elaborato in un [puntatore intelligente](../cpp/smart-pointers-modern-cpp.md), che rilascerà automaticamente la memoria quando viene richiamato il relativo distruttore (quando il codice esce dall'ambito del puntatore intelligente); usando i C++ puntatori intelligenti si elimina virtualmente un'intera classe di bug nei programmi. Nell'esempio seguente si supponga che `MyClass` sia un tipo definito dall'utente avente un metodo pubblico `DoSomeWork();`
 
