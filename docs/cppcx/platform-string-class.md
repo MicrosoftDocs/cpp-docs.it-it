@@ -1,6 +1,6 @@
 ---
 title: Classe Platform::String
-ms.date: 12/30/2016
+ms.date: 10/16/2019
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c8c179c416ca744cace26cff3def0829f425664
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330206"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587925"
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 
-Rappresenta una raccolta sequenziale di caratteri Unicode, tipicamente utilizzata per rappresentare del testo. Per altre informazioni ed esempi, vedere [stringhe](../cppcx/strings-c-cx.md).
+Rappresenta una raccolta sequenziale di caratteri Unicode, tipicamente utilizzata per rappresentare del testo. Per ulteriori informazioni ed esempi, vedere [stringhe](../cppcx/strings-c-cx.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,7 +48,7 @@ Per enumerare i caratteri in un oggetto String, è possibile utilizzare due funz
 |`const char16* begin(String^ s)`|Restituisce un puntatore che punta all'inizio dell'oggetto String specificato.|
 |`const char16* end(String^ s)`|Restituisce un puntatore successivo alla fine dell'oggetto String specificato.|
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 La classe String eredita da Object e dalle interfacce IDisposable, IEquatable e IPrintable.
 
@@ -58,7 +58,7 @@ La classe String include inoltre i seguenti tipi di membri.
 
 |Member|Descrizione|
 |------------|-----------------|
-|[String::String](#ctor)|Inizializza una nuova istanza della classe String.|
+|[String:: String](#ctor)|Inizializza una nuova istanza della classe String.|
 
 **Metodi**
 
@@ -66,18 +66,18 @@ La classe String eredita i metodi Equals(), Finalize(), GetHashCode(), GetType()
 
 |Metodo|Descrizione|
 |------------|-----------------|
-|[String::Begin](#begin)|Restituisce un puntatore che punta all'inizio della stringa corrente.|
-|[String::CompareOrdinal](#compareordinal)|Confronta due oggetti `String` valutando i valori numerici dei caratteri corrispondenti nei due valori stringa rappresentati dagli oggetti.|
-|[String::Concat](#concat)|Concatena i valori di due oggetti String specificati.|
-|[String::Data](#data)|Restituisce un puntatore che punta all'inizio della stringa corrente.|
-|[String:: Dispose](#dispose)|Libera o rilascia delle risorse.|
-|[String::End](#end)|Restituisce un puntatore successivo alla fine della stringa corrente.|
+|[String:: Begin](#begin)|Restituisce un puntatore che punta all'inizio della stringa corrente.|
+|[String:: CompareOrdinal](#compareordinal)|Confronta due oggetti `String` valutando i valori numerici dei caratteri corrispondenti nei due valori stringa rappresentati dagli oggetti.|
+|[Stringa:: Concat](#concat)|Concatena i valori di due oggetti String specificati.|
+|[Stringa::D ATA](#data)|Restituisce un puntatore che punta all'inizio della stringa corrente.|
+|[Stringa::D](#dispose)|Libera o rilascia delle risorse.|
+|[String:: end](#end)|Restituisce un puntatore successivo alla fine della stringa corrente.|
 |[String:: Equals](#equals)|Indica se l'oggetto specificato è uguale all'oggetto corrente.|
-|[String::GetHashCode](#gethashcode)|Restituisce il codice hash per l'istanza.|
-|[String::IsEmpty](#isempty)|Indica se l'oggetto String corrente è vuoto.|
-|[String::IsFastPass](#isfastpass)|Indica se l'oggetto String corrente è coinvolto in una *passaggio rapido* operazione. In questo tipo di operazione il conteggio dei riferimenti viene sospeso.|
-|[String:: Length](#length)|Recupera la lunghezza dell'oggetto String corrente.|
-|[String::ToString](#tostring)|Restituisce un oggetto String il cui valore è uguale a quello dell'oggetto String corrente.|
+|[String:: GetHashCode](#gethashcode)|Restituisce il codice hash per l'istanza.|
+|[String:: IsEmpty](#isempty)|Indica se l'oggetto String corrente è vuoto.|
+|[String:: IsFastPass](#isfastpass)|Indica se l'oggetto stringa corrente partecipa a un'operazione di *passaggio rapido* . In questo tipo di operazione il conteggio dei riferimenti viene sospeso.|
+|[String:: length](#length)|Recupera la lunghezza dell'oggetto String corrente.|
+|[String:: ToString](#tostring)|Restituisce un oggetto String il cui valore è uguale a quello dell'oggetto String corrente.|
 
 **Operatori**
 
@@ -85,12 +85,12 @@ La classe String presenta gli operatori seguenti.
 
 |Member|Descrizione|
 |------------|-----------------|
-|[String:: operator = = Operator](#operator-equality)|Indica se due oggetti String specificati hanno lo stesso valore.|
+|[Operatore String:: operator = =](#operator-equality)|Indica se due oggetti stringa specificati hanno lo stesso valore.|
 |[operatore+ Operatore](#operator-plus)|Concatena due oggetti stringa in un nuovo oggetto stringa.|
-|[String:: operator > operatore](#operator-greater-than)|Indica se il valore di un oggetto String è maggiore del valore di un secondo oggetto String.|
-|[String:: operator > = (operatore)](#operator-greater-than-or-equals)|Indica se il valore di un oggetto String è maggiore o uguale al valore di un secondo oggetto String.|
-|[String:: operator! = (operatore)](#operator-inequality)|Indica se due oggetti String specificati hanno valori diversi.|
-|[String:: operator < operatore](#operator-less-than)|Indica se il valore di un oggetto String è minore del valore di un secondo oggetto String.|
+|[Operatore String:: operator >](#operator-greater-than)|Indica se il valore di un oggetto String è maggiore del valore di un secondo oggetto String.|
+|[Operatore String:: operator > =](#operator-greater-than-or-equals)|Indica se il valore di un oggetto String è maggiore o uguale al valore di un secondo oggetto String.|
+|[Operatore String:: operator! =](#operator-inequality)|Indica se due oggetti stringa specificati hanno valori diversi.|
+|[Operatore String:: operator <](#operator-less-than)|Indica se il valore di un oggetto String è minore del valore di un secondo oggetto String.|
 
 ### <a name="requirements"></a>Requisiti
 
@@ -98,11 +98,11 @@ La classe String presenta gli operatori seguenti.
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
 **Intestazione** vccorlib.h (inclusa per impostazione predefinita)
 
-## <a name="begin"></a>  Metodo String:: begin
+## <a name="begin"></a>Metodo String:: Begin
 
 Restituisce un puntatore che punta all'inizio della stringa corrente.
 
@@ -116,14 +116,14 @@ char16* Begin();
 
 Puntatore all'inizio della stringa corrente.
 
-## <a name="compareordinal"></a>  Metodo String:: CompareOrdinal
+## <a name="compareordinal"></a>Metodo String:: CompareOrdinal
 
-Confronta due oggetti `String` valutando i valori numerici dei caratteri corrispondenti nei due valori stringa rappresentati dagli oggetti.
+Metodo statico che confronta due oggetti `String` valutando i valori numerici dei caratteri corrispondenti nei due valori stringa rappresentati dagli oggetti.
 
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-int CompareOrdinal( String^ str1, String^ str2 );
+static int CompareOrdinal( String^ str1, String^ str2 );
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -144,7 +144,7 @@ Intero che indica la relazione lessicale tra i due termini di confronto. Nella t
 |0|`str1` è uguale `str2`.|
 |1|`str1` è maggiore di `str2`.|
 
-## <a name="concat"></a>  Metodo String:: concat
+## <a name="concat"></a>Metodo String:: Concat
 
 Concatena i valori di due oggetti String specificati.
 
@@ -168,7 +168,7 @@ Nuovo oggetto String^ il cui valore è dato dalla concatenazione dei valori di `
 
 Se `str1` è `null` e `str2` è diverso da Null, viene restituito `str1`. Se `str2` è `null` e `str1` è diverso da Null, viene restituito `str2`. Se `str1` e `str2` sono entrambi `null`, viene restituita la stringa vuota (L"").
 
-## <a name="data"></a>  Metodo String:: data
+## <a name="data"></a>Stringa::D metodo ATA
 
 Restituisce un puntatore all'inizio del buffer di dati dell'oggetto come matrice di tipo C di elementi `char16` (`wchar_t`).
 
@@ -180,13 +180,13 @@ const char16* Data();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore all'inizio di una `const char16` matrice di caratteri Unicode (`char16` è un typedef per `wchar_t`).
+Puntatore all'inizio di una matrice di `const char16` di caratteri Unicode (`char16` è un typedef per `wchar_t`).
 
 ### <a name="remarks"></a>Note
 
-Puoi usare questo metodo per la conversione da `Platform::String^` a `wchar_t*`. Quando l'oggetto `String` esce dall'ambito, non viene più garantito che il puntatore a dati sia valido. Per archiviare i dati oltre la durata dell'originale `String` dell'oggetto, utilizzare [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) per copiare la matrice in memoria che hai allocato manualmente.
+Puoi usare questo metodo per la conversione da `Platform::String^` a `wchar_t*`. Quando l'oggetto `String` esce dall'ambito, non viene più garantito che il puntatore a dati sia valido. Per archiviare i dati oltre la durata dell'oggetto `String` originale, usare [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) per copiare la matrice in memoria che è stata allocata manualmente.
 
-## <a name="dispose"></a>  Metodo String:: Dispose
+## <a name="dispose"></a>String::D Metodo IsValid
 
 Libera o rilascia delle risorse.
 
@@ -196,7 +196,7 @@ Libera o rilascia delle risorse.
 virtual override void Dispose();
 ```
 
-## <a name="end"></a>  Metodo String:: end
+## <a name="end"></a>Metodo String:: end
 
 Restituisce un puntatore successivo alla fine della stringa corrente.
 
@@ -212,9 +212,9 @@ Puntatore successivo alla fine della stringa corrente.
 
 ### <a name="remarks"></a>Note
 
-End() returns Begin() + Length.
+End () restituisce Begin () + Length.
 
-## <a name="equals"></a>  Metodo String:: Equals
+## <a name="equals"></a>Metodo String:: Equals
 
 Indica se la stringa specificata ha lo stesso valore dell'oggetto corrente.
 
@@ -236,9 +236,9 @@ Oggetto da confrontare.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo è equivalente per la [String:: CompareOrdinal](#compareordinal). Nel primo overload, si prevede che il parametro `str` possa essere sottoposto a cast a un oggetto String^.
+Questo metodo è equivalente alla stringa statica [:: CompareOrdinal](#compareordinal). Nel primo overload, si prevede che il parametro `str` possa essere sottoposto a cast a un oggetto String^.
 
-## <a name="gethashcode"></a>  Metodo String:: GetHashCode
+## <a name="gethashcode"></a>Metodo String:: GetHashCode
 
 Restituisce il codice hash per l'istanza.
 
@@ -252,7 +252,7 @@ virtual override int GetHashCode();
 
 Codice hash per l'istanza.
 
-## <a name="isempty"></a>  Metodo String:: IsEmpty
+## <a name="isempty"></a>Metodo String:: IsEmpty
 
 Indica se l'oggetto String corrente è vuoto.
 
@@ -264,11 +264,11 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto corrente `String` oggetto viene **null** o una stringa vuota (L""); in caso contrario, **false**.
+**true** se l'oggetto `String` corrente è **null** o una stringa vuota (L ""); in caso contrario, **false**.
 
-## <a name="isfastpass"></a>  Metodo String:: isfastpass
+## <a name="isfastpass"></a>Metodo String:: IsFastPass
 
-Indica se l'oggetto String corrente è coinvolto in una *passaggio rapido* operazione. In questo tipo di operazione il conteggio dei riferimenti viene sospeso.
+Indica se l'oggetto stringa corrente partecipa a un'operazione di *passaggio rapido* . In questo tipo di operazione il conteggio dei riferimenti viene sospeso.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -278,15 +278,15 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto corrente `String` oggetto è passato rapidamente; in caso contrario, **false**.
+**true** se l'oggetto `String` corrente è veloce. in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
 In una chiamata a una funzione in cui un oggetto con conteggio dei riferimenti è un parametro e la funzione chiamata legge semplicemente l'oggetto, il compilatore può sospendere il conteggio dei riferimenti in modo sicuro e migliorare le prestazioni di chiamata. Non vi è alcuna operazione utile che il codice possa eseguire tramite questa proprietà. Il sistema gestisce tutti i dettagli.
 
-## <a name="length"></a>  Metodo String:: Length
+## <a name="length"></a>Metodo String:: length
 
-Recupera il numero di caratteri nell'attuale `String` oggetto.
+Recupera il numero di caratteri nell'oggetto `String` corrente.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -296,7 +296,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di caratteri nell'attuale `String` oggetto.
+Numero di caratteri nell'oggetto `String` corrente.
 
 ### <a name="remarks"></a>Note
 
@@ -307,11 +307,11 @@ String^ str = "Hello";
 int len = str->Length(); //len = 5
 ```
 
-La matrice di caratteri restituita per il [String:: data](#data) dispone di un carattere aggiuntivo, ovvero il carattere di terminazione NULL o '\0'. La lunghezza di questo carattere è inoltre di due byte.
+La matrice di caratteri restituita dalla [stringa::D ATA](#data) include un carattere aggiuntivo, ovvero il carattere di terminazione null o ' \ 0'. La lunghezza di questo carattere è inoltre di due byte.
 
-## <a name="operator-plus"></a>  Operatore String:: operator +
+## <a name="operator-plus"></a>Operatore String:: operator +
 
-Concatena due [stringa](../cppcx/platform-string-class.md) gli oggetti in un nuovo [stringa](../cppcx/platform-string-class.md) oggetto.
+Concatena due oggetti [stringa](../cppcx/platform-string-class.md) in un nuovo oggetto [stringa](../cppcx/platform-string-class.md) .
 
 ### <a name="syntax"></a>Sintassi
 
@@ -335,7 +335,7 @@ Secondo oggetto `String`, il cui contenuto verrà aggiunto a `str1`.
 
 Questo operatore crea un oggetto `String^` contenente i dati dei due operandi. Puoi usarlo per praticità quando non è fondamentale ottenere prestazioni estreme. Alcune chiamate a "`+`" in una funzione non saranno probabilmente rilevanti, ma se modifichi oggetti di grandi dimensioni o dati di testo in un ciclo rigido, usa tipi e meccanismi C++ standard.
 
-##  <a name="operator-equality"></a> String:: operator = = Operator
+##  <a name="operator-equality"></a>Operatore String:: operator = =
 
 Indica se due oggetti String specificati hanno lo stesso valore di testo.
 
@@ -355,15 +355,15 @@ Secondo oggetto da confrontare `String`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il contenuto del `str1` sono uguali a `str2`; in caso contrario, **false**.
+**true** se il contenuto di `str1` è uguale `str2`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Questo operatore equivale alla [String:: CompareOrdinal](#compareordinal).
+Questo operatore è equivalente a [String:: CompareOrdinal](#compareordinal).
 
-##  <a name="operator-greater-than"></a>  String::operator&gt;
+##  <a name="operator-greater-than"></a>@No__t_1 String:: operator
 
-Indica se il valore di uno `String` è maggiore del valore di un secondo oggetto `String` oggetto.
+Indica se il valore di un oggetto `String` è maggiore del valore di un secondo oggetto `String`.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -387,9 +387,9 @@ Secondo oggetto `String`.
 
 Questo operatore equivale a chiamare in modo esplicito [String:: CompareOrdinal](#compareordinal) e ottenere un risultato maggiore di zero.
 
-## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
+## <a name="operator-greater-than-or-equals"></a>@No__t_1 String:: operator =
 
-Indica se il valore di uno `String` oggetto è maggiore o uguale al valore di un secondo `String` oggetto.
+Indica se il valore di un oggetto `String` è maggiore o uguale al valore di un secondo oggetto `String`.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -409,9 +409,9 @@ Secondo oggetto `String`.
 
 **true** se il valore di `str1` è maggiore o uguale al valore di `str2`; in caso contrario, **false**.
 
-## <a name="operator-inequality"></a> String::operator!=
+## <a name="operator-inequality"></a>String:: operator! =
 
-Indica se due `String` oggetti presentano valori diversi.
+Indica se due oggetti `String` specificati hanno valori diversi.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -429,11 +429,11 @@ Secondo oggetto da confrontare `String`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se `str1` non è uguale a `str2`; in caso contrario, **false**.
+**true** se `str1` è diverso da `str2`; in caso contrario, **false**.
 
-## <a name="operator-less-than"></a> String:: operator&lt;
+## <a name="operator-less-than"></a>@No__t_1 String:: operator
 
-Indica se il valore di uno `String` oggetto è minore del valore di un secondo `String` oggetto.
+Indica se il valore di un oggetto `String` è minore del valore di un secondo oggetto `String`.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -453,9 +453,9 @@ Secondo oggetto `String`.
 
 **true** se il valore di *str1* è minore del valore di *str2*; in caso contrario, **false**.
 
-## <a name="ctor"></a> Costruttore String:: String
+## <a name="ctor"></a>Costruttore String:: String
 
-Inizializza una nuova istanza di `String` classe con una copia di dati stringa di input.
+Inizializza una nuova istanza della classe `String` con una copia dei dati della stringa di input.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -475,16 +475,16 @@ Numero che specifica la lunghezza della stringa.
 
 ### <a name="remarks"></a>Note
 
-Se le prestazioni sono essenziali e controlli la durata della stringa di origine, è possibile usare [platform:: stringreference](../cppcx/platform-stringreference-class.md) al posto di stringa.
+Se le prestazioni sono critiche e si controlla la durata della stringa di origine, è possibile usare [Platform:: StringReference](../cppcx/platform-stringreference-class.md) al posto della stringa.
 ### <a name="example"></a>Esempio
 
 ```cpp
 String^ s = L"Hello!";
 ```
 
-## <a name="tostring"></a> String::ToString
+## <a name="tostring"></a>String:: ToString
 
-Restituisce un `String` oggetto il cui valore è lo stesso della stringa corrente.
+Restituisce un oggetto `String` il cui valore è uguale a quello della stringa corrente.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -494,7 +494,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `String` oggetto il cui valore è lo stesso della stringa corrente.
+Oggetto `String` il cui valore è uguale a quello della stringa corrente.
 
 ## <a name="see-also"></a>Vedere anche
 

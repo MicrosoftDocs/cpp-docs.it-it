@@ -1,18 +1,18 @@
 ---
 title: Platform::ArrayReference (classe)
-ms.date: 12/30/2016
+ms.date: 10/16/2019
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ArrayReference::ArrayReference
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7e587902f1c99b294ed79255397aeffccee26b5
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161571"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587921"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference (classe)
 
@@ -24,17 +24,17 @@ ms.locfileid: "62161571"
 class ArrayReference
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[ArrayReference::ArrayReference](#ctor)|Inizializza una nuova istanza della classe `ArrayReference`.|
+|[ArrayReference:: ArrayReference](#ctor)|Inizializza una nuova istanza della classe `ArrayReference` .|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Operatore ArrayReference::operator()](#operator-call)|Converte questo oggetto `ArrayReference` in `Platform::Array<T>^*`.|
 |[Operatore ArrayReference::operator=](#operator-assign)|Assegna il contenuto di un altro oggetto `ArrayReference` a questa istanza.|
@@ -51,13 +51,13 @@ Utilizzando `ArrayReference` per compilare una matrice di tipo C, puoi evitare l
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
 **Intestazione:** vccorlib.h
 
-## <a name="ctor"></a>  Costruttore arrayreference:: Arrayreference
+## <a name="ctor"></a>Costruttore ArrayReference:: ArrayReference
 
-Inizializza una nuova istanza di [platform:: arrayreference](../cppcx/platform-arrayreference-class.md) classe.
+Inizializza una nuova istanza della classe [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) .
 
 ### <a name="syntax"></a>Sintassi
 
@@ -79,9 +79,9 @@ Oggetto `ArrayReference` i cui dati verranno spostati per inizializzare la nuova
 
 ### <a name="remarks"></a>Note
 
-## <a name="operator-assign"></a>  Arrayreference:: operator = (operatore)
+## <a name="operator-assign"></a>Operatore ArrayReference:: operator =
 
-Assegna l'oggetto specificato all'oggetto corrente [platform:: arrayreference](../cppcx/platform-arrayreference-class.md) oggetto usando la semantica di spostamento.
+Assegna l'oggetto specificato all'oggetto [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) corrente usando la semantica di spostamento.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -102,9 +102,9 @@ Riferimento a un oggetto di tipo `ArrayReference`.
 
 `Platform::ArrayReference` è un modello di classe C++ standard, non una classe di riferimento.
 
-## <a name="operator-call"></a>  Operatore Arrayreference
+## <a name="operator-call"></a>Operatore ArrayReference:: operator ()
 
-Converte l'oggetto corrente [platform:: arrayreference](../cppcx/platform-arrayreference-class.md) dell'oggetto a un [platform:: Array](../cppcx/platform-array-class.md) classe.
+Converte di nuovo l'oggetto [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) corrente in una classe [Platform:: Array](../cppcx/platform-array-class.md) .
 
 ### <a name="syntax"></a>Sintassi
 
@@ -118,7 +118,7 @@ Handle a oggetto di tipo `Array<TArg>^`
 
 ### <a name="remarks"></a>Note
 
-[Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) e [platform:: Array](../cppcx/platform-array-class.md) sono classi di modelli di classe C++ standard, non ref.
+[Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) è un modello C++ di classe standard e [Platform:: Array](../cppcx/platform-array-class.md) è una classe di riferimento.
 
 ## <a name="see-also"></a>Vedere anche
 

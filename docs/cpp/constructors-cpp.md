@@ -1,23 +1,23 @@
 ---
 title: Costruttori (C++)
-ms.date: 09/05/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 0e2e3536c8eb0a5b111ff18e43044783ea684f1f
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062023"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587932"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
 Per personalizzare la modalità di inizializzazione dei membri della classe o per richiamare funzioni quando viene creato un oggetto della classe, definire un *Costruttore*. Ha nome uguale a quello della classe e non restituisce alcun valore. È possibile definire tutti i costruttori di overload necessari per personalizzare l'inizializzazione in diversi modi. In genere, i costruttori hanno accessibilità pubblica, in modo che il codice al di fuori della definizione della classe o della gerarchia di ereditarietà possa creare oggetti della classe. È anche possibile dichiarare un costruttore come **protetto** o **privato**.
 
-I costruttori possono facoltativamente prendere un elenco di inizializzazione del membro. Si tratta di un modo più efficiente per inizializzare i membri della classe rispetto all'assegnazione di valori nel corpo del costruttore. Nell'esempio seguente viene illustrata `Box` una classe con tre costruttori di overload. Gli ultimi due elenchi use member init:
+I costruttori possono facoltativamente prendere un elenco di inizializzazione del membro. Si tratta di un modo più efficiente per inizializzare i membri della classe rispetto all'assegnazione di valori nel corpo del costruttore. Nell'esempio seguente viene illustrata una classe `Box` con tre costruttori di overload. Gli ultimi due elenchi use member init:
 
 ```cpp
 class Box {
@@ -64,11 +64,11 @@ int main()
 
 - I costruttori possono essere dichiarati come **inline**, [Explicit](#explicit_constructors), **Friend** o [constExpr](#constexpr_constructors).
 - Un costruttore può inizializzare un oggetto dichiarato come **const**, **volatile** o **const volatile**. L'oggetto diventa **const** dopo il completamento del costruttore.
-- Per definire un costruttore in un file di implementazione, assegnargli un nome completo come con qualsiasi altra funzione membro `Box::Box(){...}`:.
+- Per definire un costruttore in un file di implementazione, assegnargli un nome completo come con qualsiasi altra funzione membro: `Box::Box(){...}`.
 
 ## <a name="member_init_list"></a>Elenchi di inizializzatori di membri
 
-Un costruttore può facoltativamente avere un elenco di inizializzatori di membri che Inizializza i membri della classe prima dell'esecuzione del corpo del costruttore. Si noti che un elenco di inizializzatori di membro non corrisponde a un *elenco di inizializzatori* di tipo [std:\<: initializer_list T >](../standard-library/initializer-list-class.md).)
+Un costruttore può facoltativamente avere un elenco di inizializzatori di membri che Inizializza i membri della classe prima dell'esecuzione del corpo del costruttore. Si noti che un elenco di inizializzatori di membro non corrisponde a un *elenco di inizializzatori* di tipo [std:: initializer_list \<T >](../standard-library/initializer-list-class.md).)
 
 È preferibile usare un elenco di inizializzatori di membri rispetto all'assegnazione di valori nel corpo del costruttore, in quanto Inizializza direttamente il membro. Nell'esempio seguente viene illustrato l'elenco di inizializzatori di membro costituito da tutte le espressioni dell' **identificatore (argomento)** dopo i due punti:
 
@@ -78,7 +78,7 @@ Un costruttore può facoltativamente avere un elenco di inizializzatori di membr
     {}
 ```
 
-L'identificatore deve fare riferimento a un membro di classe; viene inizializzata con il valore dell'argomento. L'argomento può essere uno dei parametri del costruttore, una chiamata di funzione o un oggetto [std:\<: initializer_list T >](../standard-library/initializer-list-class.md).
+L'identificatore deve fare riferimento a un membro di classe; viene inizializzata con il valore dell'argomento. L'argomento può essere uno dei parametri del costruttore, una chiamata di funzione o un [\<T std:: initializer_list >](../standard-library/initializer-list-class.md).
 
 i membri **const** e i membri del tipo di riferimento devono essere inizializzati nell'elenco di inizializzatori di membri.
 
@@ -206,13 +206,13 @@ Il tentativo di copiare l'oggetto genera l'errore *C2280: tentativo di fare rife
 
 ## <a name="move_constructors"></a>Costruttori di spostamento
 
-Un *costruttore di spostamento* è una funzione membro speciale che sposta la proprietà dei dati di un oggetto esistente in una nuova variabile senza copiare i dati originali. Accetta un riferimento rvalue come primo parametro e tutti i parametri aggiuntivi devono avere valori predefiniti. I costruttori di spostamento possono aumentare significativamente l'efficienza del programma quando passano oggetti di grandi dimensioni. Un costruttore di spostamento accetta un riferimento rvalue come primo parametro. Tutti gli altri parametri devono avere valori predefiniti.
+Un *costruttore di spostamento* è una funzione membro speciale che sposta la proprietà dei dati di un oggetto esistente in una nuova variabile senza copiare i dati originali. Accetta un riferimento rvalue come primo parametro e tutti i parametri aggiuntivi devono avere valori predefiniti. I costruttori di spostamento possono aumentare significativamente l'efficienza del programma quando passano oggetti di grandi dimensioni.
 
 ```cpp
 Box(Box&& other);
 ```
 
-Il compilatore sceglie un costruttore di spostamento in determinate situazioni in cui l'oggetto viene inizializzato da un altro oggetto dello stesso tipo che sta per essere eliminato definitivamente e non richiede più risorse it. Nell'esempio seguente viene illustrato un caso in cui un costruttore di spostamento è selezionato dalla risoluzione dell'overload. La variabile *Box* restituita da get_Box () è un *xValue* (valore in scadenza) che sta per uscire dall'ambito. Per fornire la motivazione di questo esempio, è possibile assegnare a Box un vettore di stringhe di grandi dimensioni che ne rappresenta il contenuto. Invece di copiare il vettore e le relative stringhe, il costruttore di spostamento "lo sottrae" dalla "casella" del valore in scadenza, in modo che il vettore ora appartenga al nuovo oggetto. La chiamata a `std::move` è sufficiente perché entrambe `vector` le classi e `string` implementano i propri costruttori di spostamento.
+Il compilatore sceglie un costruttore di spostamento in determinate situazioni in cui l'oggetto viene inizializzato da un altro oggetto dello stesso tipo che sta per essere eliminato definitivamente e che non necessita più delle relative risorse. Nell'esempio seguente viene illustrato un caso in cui un costruttore di spostamento è selezionato dalla risoluzione dell'overload. Nel costruttore che chiama `get_Box()`, il valore restituito è un *xValue* (valore di scadenza). Non viene assegnato ad alcuna variabile e pertanto sta per uscire dall'ambito. Per fornire la motivazione di questo esempio, è possibile assegnare a Box un vettore di stringhe di grandi dimensioni che ne rappresenta il contenuto. Invece di copiare il vettore e le relative stringhe, il costruttore di spostamento "lo sottrae" dalla "casella" del valore in scadenza, in modo che il vettore ora appartenga al nuovo oggetto. La chiamata a `std::move` è tutto ciò che è necessario perché le classi `vector` e `string` implementano i propri costruttori di spostamento.
 
 ```cpp
 #include <iostream>
@@ -318,7 +318,7 @@ Un costruttore può essere dichiarato come [constExpr](constexpr-cpp.md) se
 
 ## <a name="init_list_constructors"></a>Costruttori dell'elenco di inizializzatori
 
-Se un costruttore accetta un oggetto [std::\<initializer_list\> T](../standard-library/initializer-list-class.md) come parametro e qualsiasi altro parametro presenta argomenti predefiniti, il costruttore verrà selezionato nella risoluzione dell'overload quando viene creata un'istanza della classe tramite Direct inizializzazione. È possibile usare initializer_list per inizializzare qualsiasi membro che può accettarlo. Si supponga, ad esempio, che la classe Box (mostrata `std::vector<string>` in `m_contents`precedenza) disponga di un membro. È possibile specificare un costruttore analogo al seguente:
+Se un costruttore accetta un [\<T std:: initializer_list \>](../standard-library/initializer-list-class.md) come parametro e tutti gli altri parametri hanno argomenti predefiniti, il costruttore verrà selezionato nella risoluzione dell'overload quando viene creata un'istanza della classe tramite Direct inizializzazione. È possibile usare initializer_list per inizializzare qualsiasi membro che può accettarlo. Si supponga, ad esempio, che la classe Box (mostrata in precedenza) disponga di un membro `std::vector<string>` `m_contents`. È possibile specificare un costruttore analogo al seguente:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Un costruttore di classi derivate chiama sempre un costruttore di classi base, in modo da poter utilizzare le classi base completamente costruite prima che vengano completate eventuali operazioni aggiuntive. I costruttori della classe base vengono chiamati in ordine di derivazione, ad esempio se `ClassA` è derivato da `ClassB`, che è derivato da `ClassC`, il `ClassC` costruttore viene chiamato per primo, quindi `ClassB` il costruttore, quindi il `ClassA` costruttore.
+Un costruttore di classi derivate chiama sempre un costruttore di classi base, in modo da poter utilizzare le classi base completamente costruite prima che vengano completate eventuali operazioni aggiuntive. I costruttori della classe di base vengono chiamati in ordine di derivazione, ad esempio se `ClassA` viene derivato da `ClassB`, che è derivato da `ClassC`, il costruttore di `ClassC` viene chiamato per primo, quindi il costruttore di `ClassB`, quindi il costruttore di `ClassA`.
 
 Se una classe base non dispone di un costruttore predefinito, è necessario fornire i parametri del costruttore della classe base nel costruttore della classe derivata:
 
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 versione 15.7 e successive**: L'istruzione **using** in modalità **/std: c++ 17** introduce nell'ambito tutti i costruttori della classe di base, ad eccezione di quelli che hanno una firma identica ai costruttori nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori. Vedere anche miglioramenti apportati [a Visual Studio 2017 versione 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
+**Visual Studio 2017 versione 15,7 e successive**: l'istruzione **using** in modalità **/std: c++ 17** riporta nell'ambito tutti i costruttori della classe di base, ad eccezione di quelli che hanno una firma identica ai costruttori nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori. Vedere anche miglioramenti apportati [a Visual Studio 2017 versione 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
 
 ::: moniker-end
 
