@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: 67aef1ce52b6717ce6d6381429982cf660aa5e20
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5c6fec7002541b519d7cf7d043eed3e5c932bcb9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457651"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689225"
 ---
 # <a name="num_get-class"></a>Classe num_get
 
-Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni delle sequenze di tipo `CharType` in valori numerici.
+Modello di classe che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni delle sequenze di tipo `CharType` in valori numerici.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,10 +34,10 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
-*InputIterator*\
+@No__t_1 *InputIterator*
 Tipo di iteratore da cui le funzioni get numeric leggono il relativo input.
 
 ## <a name="remarks"></a>Note
@@ -46,7 +46,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|DESCRIZIONE|
+|Costruttore|Descrizione|
 |-|-|
 |[num_get](#num_get)|Costruttore per oggetti di tipo `num_get` utilizzati per estrarre i valori numerici dalle sequenze.|
 
@@ -59,7 +59,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[do_get](#do_get)|Funzione virtuale chiamata per estrarre un valore numerico o booleano da una sequenza di caratteri.|
 |[get](#get)|Estrae un tipo numerico o booleano da una sequenza di caratteri.|
@@ -167,19 +167,19 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parametri
 
-*prima*\
+*primo* \
 Inizio dell'intervallo di caratteri da cui leggere il numero.
 
-*Ultima*\
+*ultimo* \
 Fine dell'intervallo di caratteri da cui leggere il numero.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 [ios_base](../standard-library/ios-base-class.md) i cui flag vengono usati per la conversione.
 
-*_State*\
+@No__t_1 *_State*
 Lo stato a cui viene aggiunto failbit (vedere [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) in caso di errore.
 
-*Val*\
+\ *Val*
 Valore letto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -199,9 +199,9 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-trova la corrispondenza di elementi sequenziali a partire `[first, last)` da First nella sequenza fino a quando non viene riconosciuto un campo di input di tipo Integer completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come tipo **Long**e archivia il risultato in *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input numerico. In caso contrario, la funzione non archivia alcun elemento `ios_base::failbit` in `state` *Val* e imposta in. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo Integer valido. In entrambi i casi, se il valore restituito è uguale a `last`, la funzione imposta `ios_base::eofbit` in `state`.
+trova la corrispondenza con elementi sequenziali a partire da *First* nella sequenza `[first, last)` fino a quando non viene riconosciuto un campo di input Integer completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come tipo **Long**e archivia il risultato in *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input numerico. In caso contrario, la funzione non archivia alcun elemento in *Val* e imposta `ios_base::failbit` in `state`. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo Integer valido. In entrambi i casi, se il valore restituito è uguale a `last`, la funzione imposta `ios_base::eofbit` in `state`.
 
-Il campo di input Integer viene convertito dalle stesse regole usate dalle funzioni di analisi per la corrispondenza e la conversione di una serie di elementi **char** da un file. Si presuppone che ogni elemento **char** venga mappato a un elemento equivalente di tipo `Elem` mediante un semplice mapping uno-a-uno. La specifica di conversione di analisi equivalente viene determinata nel modo seguente:
+Il campo di input Integer viene convertito dalle stesse regole usate dalle funzioni di analisi per la corrispondenza e la conversione di una serie di elementi **char** da un file. Si presuppone che ogni elemento **char** venga mappato a un elemento equivalente di tipo `Elem` da un semplice mapping uno-a-uno. La specifica di conversione di analisi equivalente è determinata nel modo seguente:
 
 Se `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), la specifica di conversione è `lo`.
 
@@ -414,19 +414,19 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametri
 
-*prima*\
+*primo* \
 Inizio dell'intervallo di caratteri da cui leggere il numero.
 
-*Ultima*\
+*ultimo* \
 Fine dell'intervallo di caratteri da cui leggere il numero.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 [ios_base](../standard-library/ios-base-class.md) i cui flag vengono usati per la conversione.
 
-*_State*\
+@No__t_1 *_State*
 Lo stato a cui viene aggiunto failbit (vedere [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) in caso di errore.
 
-*Val*\
+\ *Val*
 Valore letto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -437,13 +437,13 @@ Iteratore dopo la lettura del valore.
 
 Tutte le funzioni membro restituiscono [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).
 
-La prima funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire dall'inizio nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo Integer completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come tipo **Long** e archivia il risultato in *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input numerico. In caso contrario, la funzione non archivia alcun elemento `ios_base::failbit` in Val e imposta in _ *state*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo Integer valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la `ios_base::eofbit` funzione imposta in *_State*.
+La prima funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire dall'inizio nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo Integer completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come tipo **Long** e archivia il risultato in *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input numerico. In caso contrario, la funzione non archivia alcun elemento in *Val* e imposta `ios_base::failbit` in _ *state*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo Integer valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` in *_State*.
 
-Il campo di input Integer viene convertito dalle stesse regole usate dalle funzioni di analisi per la corrispondenza e la conversione di una serie di elementi **char** da un file. Si presuppone che ogni elemento **char** venga mappato a un elemento equivalente di `CharType` tipo mediante un semplice mapping uno-a-uno. La specifica di conversione di analisi equivalente viene determinata nel modo seguente:
+Il campo di input Integer viene convertito dalle stesse regole usate dalle funzioni di analisi per la corrispondenza e la conversione di una serie di elementi **char** da un file. Si presuppone che ogni elemento **char** venga mappato a un elemento equivalente di tipo `CharType` da un semplice mapping uno-a-uno. La specifica di conversione di analisi equivalente viene determinata nel modo seguente:
 
-- Se `iosbase`. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), la specifica di conversione è `lo`.
+- Se `iosbase`. [flags](../standard-library/ios-base-class.md#flags)  &  `ios_base::basefield`  ==  `ios_base::`[Oct](../standard-library/ios-functions.md#oct), la specifica di conversione è `lo`.
 
-- Se **iosbase. Flags** & **ios_base:: basefield** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la specifica di `lx`conversione è.
+- Se **iosbase. flags**  & **ios_base:: basefield**  ==  `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la specifica di conversione è `lx`.
 
 - Se **iosbase.flags** & **ios_base::basefield** == 0, la specifica di conversione è `li`.
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-si comporta allo stesso modo della terza, ad eccezione del fatto che l'identificatore della `Lf`conversione di analisi equivalente è.
+si comporta allo stesso modo della terza, ad eccezione del fatto che l'identificatore di conversione di analisi equivalente è `Lf`.
 
 La quinta funzione membro virtuale protetta:
 
@@ -573,20 +573,20 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
 I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
-- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: La durata dell'oggetto deve essere gestita manualmente.
+- 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
-Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
+Non è possibile offrire esempi diretti, poiché il distruttore è protetto.
 
 Il costruttore inizializza l'oggetto di base con **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 

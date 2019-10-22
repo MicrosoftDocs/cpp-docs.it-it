@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - typeindex/std::hash
 ms.assetid: e5a41202-ef3b-45d0-b3a7-4c2dbdc0487a
-ms.openlocfilehash: b8484c8987534051c79ea02a1f87f0df1cd1f027
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4f73d1bfe7f3370d76b39b95f740a4d3a759b908
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456353"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687961"
 ---
 # <a name="hash-structure"></a>Struttura hash
 
-La classe modello definisce il proprio metodo in modo che restituisca `val.hash_code()`. Il metodo definisce una funzione hash usata per il mapping di valori di tipo [type_index](../standard-library/type-index-class.md) con una distribuzione di valori di indice.
+Il modello di classe definisce il metodo come restituito `val.hash_code()`. Il metodo definisce una funzione hash usata per il mapping di valori di tipo [type_index](../standard-library/type-index-class.md) con una distribuzione di valori di indice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,7 +27,7 @@ template <> struct hash<type_index>
 
 ## <a name="specialized-types"></a>Tipi specializzati
 
-### <a name="system_error"></a>\<> system_error
+### <a name="system_error"></a>\<system_error >
 
 ```cpp
 template <class T> struct hash;

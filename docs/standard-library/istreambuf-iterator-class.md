@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b839126b7b5541c3a9dd033fcbbc8221bde7c22
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448135"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689466"
 ---
 # <a name="istreambuf_iterator-class"></a>Classe istreambuf_iterator
 
-La classe modello istreambuf_iterator descrive un oggetto iteratore di input che estrae gli elementi dei caratteri da un buffer del flusso di input, a cui accede tramite un oggetto archiviato di tipo puntatore a `basic_streambuf`\< **CharType**, **Traits**>.
+Il modello di classe istreambuf_iterator descrive un oggetto iteratore di input che estrae gli elementi di caratteri da un buffer del flusso di input, a cui accede tramite un oggetto archiviato di tipo pointer a `basic_streambuf` \< **CharType**, **tratti**> .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo che rappresenta il tipo di carattere per istreambuf_iterator.
 
-*Tratti*\
+*Tratti* \
 Tipo che rappresenta il tipo di carattere per istreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Note
@@ -75,7 +75,7 @@ Dopo la costruzione o l'incremento di un oggetto della classe istreambuf_iterato
 
 ### <a name="operators"></a>Operatori
 
-|Operator|Descrizione|
+|??|Descrizione|
 |-|-|
 |[operator*](#op_star)|L'operatore di dereferenziazione restituisce il carattere successivo del flusso.|
 |[operator++](#op_add_add)|Restituisce il carattere successivo del flusso di input oppure copia l'oggetto prima di incrementarlo e restituisce la copia.|
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Iteratore per cui verificare l'equivalenza.
 
 ### <a name="return-value"></a>Valore restituito
@@ -151,7 +151,7 @@ Iteratore per cui verificare l'equivalenza.
 
 ### <a name="remarks"></a>Note
 
-Un intervallo viene definito dall'oggetto `istreambuf_iterator` alla posizione corrente e all'iteratore di fine flusso, ma poiché tutti gli iteratori non di fine flusso sono equivalenti `equal` nella funzione membro, non è possibile definire intervalli secondari utilizzando `istreambuf_iterator`s. Gli operatori `==` e `!=` hanno la stessa semantica.
+Un intervallo viene definito dal `istreambuf_iterator` alla posizione corrente e all'iteratore di fine flusso, ma poiché tutti gli iteratori non di fine flusso sono equivalenti sotto la funzione membro `equal`, non è possibile definire intervalli secondari utilizzando `istreambuf_iterator`s. Gli operatori `==` e `!=` hanno la stessa semantica.
 
 ### <a name="example"></a>Esempio
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Strbuf*\
+\ *Strbuf*
 Buffer del flusso di input a cui viene collegato l'oggetto `istreambuf_iterator`.
 
-*_Istr*\
+@No__t_1 *_Istr*
 Flusso di input a cui viene collegato l'oggetto `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza il puntatore del buffer del flusso di input con *Strbuf*. Il secondo costruttore inizializza il puntatore del buffer del flusso di input con *_Istr*. `rdbuf`e, infine, tenta di estrarre e archiviare un oggetto di tipo `CharType`.
+Il primo costruttore inizializza il puntatore del buffer del flusso di input con *Strbuf*. Il secondo costruttore inizializza il puntatore del buffer del flusso di input con *_Istr*. `rdbuf` e, infine, tenta di estrarre e archiviare un oggetto di tipo `CharType`.
 
 ### <a name="example"></a>Esempio
 
@@ -443,5 +443,5 @@ int main( )
 
 [Struct iterator](../standard-library/iterator-struct.md)\
 [\<iterator>](../standard-library/iterator.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

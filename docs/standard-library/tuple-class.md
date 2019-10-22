@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241829"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688868"
 ---
 # <a name="tuple-class"></a>Classe tuple
 
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+@No__t_1 *TN*
 Tipo dell'ennesimo elemento tupla.
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto che archivia gli oggetti di N di tipi `T1`, `T2`,..., `TN`, rispettivamente, in cui `0 <= N <= Nmax`. L'ambito di un'istanza di tupla `tuple<T1, T2, ..., TN>` è il numero `N` dei relativi argomenti di modello. L'indice dell'argomento del modello `Ti` e del valore archiviato corrispondente di quel tipo è `i - 1`. Di conseguenza, mentre è numerare i tipi da 1 a N in questa documentazione, l'indice corrispondente i valori compresi tra 0 e N - 1.
+Il modello di classe descrive un oggetto che archivia N oggetti di tipo `T1`, `T2`,... `TN`, rispettivamente, dove `0 <= N <= Nmax`. L'ambito di un'istanza di tupla `tuple<T1, T2, ..., TN>` è il numero `N` degli argomenti di modello. L'indice dell'argomento del modello `Ti` e del valore archiviato corrispondente di quel tipo è `i - 1`. Pertanto, mentre i tipi sono numerati da 1 a N in questa documentazione, i valori di indice corrispondenti variano da 0 a N-1.
 
 ## <a name="example"></a>Esempio
 
@@ -116,7 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operatore =
 
 Assegna un oggetto `tuple`.
 
@@ -137,15 +137,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametri
 
-*ANNULLA LA*\
+@No__t_1 *un*
 Il tipo dell'ennesimo elemento tupla copiato.
 
-*Ok*\
+\ a *destra*
 Tupla da cui eseguire la copia.
 
 ### <a name="remarks"></a>Note
 
-I primi due operatori membro assegnano gli elementi della *a destra* agli elementi corrispondenti di `*this`. Il terzo operatore membro assegna `right.first` all'elemento in corrispondenza dell'indice 0 di `*this` e `right.second` all'elemento in corrispondenza dell'indice 1. Tutti e tre gli operatori membro restituiscono `*this`.
+I primi due operatori membro assegnano gli elementi di *right* agli elementi corrispondenti di `*this`. Il terzo operatore membro assegna `right.first` all'elemento in corrispondenza dell'indice 0 di `*this` e `right.second` all'elemento in corrispondenza dell'indice 1. Tutti e tre gli operatori membro restituiscono `*this`.
 
 Gli operatori membro rimanenti sono simili ai precedenti, ma con [Dichiaratore di riferimento: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -198,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a> swap
+## <a name="tuple_swap"></a>scambio
 
 Scambia gli elementi di due tuple.
 
@@ -209,17 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
-Una tupla cui elementi devono essere scambiati con quelli della tupla *a destra*.
+\ a *sinistra*
+Tupla i cui elementi devono essere scambiati con quelli della tupla a *destra*.
 
-*Ok*\
-Una tupla cui elementi devono essere scambiati con quelli della tupla *sinistro*.
+\ a *destra*
+Tupla i cui elementi devono essere scambiati con quelli della tupla a *sinistra*.
 
 ### <a name="remarks"></a>Note
 
 La funzione esegue `left.swap(right)`.
 
-## <a name="tuple"></a> Tupla
+## <a name="tuple"></a>tupla
 
 Costruisce un oggetto `tuple`.
 
@@ -246,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametri
 
-*ANNULLA LA*\
+@No__t_1 *un*
 Il tipo dell'ennesimo elemento tupla copiato.
 
-*Ok*\
+\ a *destra*
 Tupla da cui eseguire la copia.
 
 ### <a name="remarks"></a>Note
@@ -258,7 +258,7 @@ Il primo costruttore crea un oggetto i cui elementi sono costruiti per impostazi
 
 Il secondo costruttore crea un oggetto i cui elementi sono una copia costruita dagli argomenti `P1`, `P2`, ..., `PN` in cui ciascun `Pi` inizializza l'elemento nell'indice `i - 1`.
 
-Il terzo e il quarto costruttore costruiscono un oggetto cui elementi sono una copia costruita dall'elemento corrispondente di *a destra*.
+Il terzo e il quarto costruttore creano un oggetto i cui elementi sono costituiti da una copia costruita dall'elemento corrispondente di *right*.
 
 Il quinto costruttore crea un oggetto il cui elemento nell'indice 0 è la copia costruita da `right.first` e il cui elemento nell'indice 1 è la copia costruita da `right.second`.
 

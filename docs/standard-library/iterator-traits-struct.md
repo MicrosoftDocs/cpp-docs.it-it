@@ -7,12 +7,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455574"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689458"
 ---
 # <a name="iterator_traits-struct"></a>Struct iterator_traits
 
@@ -41,13 +41,13 @@ La struct modello definisce i tipi di membro:
 
 - `difference_type`: sinonimo di `Iterator::difference_type`.
 
-- `distance_type`: sinonimo di`Iterator::difference_type.`
+- `distance_type`: sinonimo di `Iterator::difference_type.`
 
 - `pointer`: sinonimo di `Iterator::pointer`.
 
 - `reference`: sinonimo di `Iterator::reference`.
 
-Le specializzazioni parziali determinano i tipi critici associati a un puntatore a un oggetto di tipo **Type** <strong>\*</strong> o **const** <strong>\*</strong>.
+Le specializzazioni parziali determinano i tipi critici associati a un puntatore a un oggetto di tipo **type** <strong>\*</strong> o **const di tipo** <strong>\*</strong>.
 
 In questa implementazione è anche possibile usare varie funzioni modello che non fanno uso di specializzazioni parziali:
 
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-Ciò determina indirettamente la presenza di più funzioni dello stesso tipo. È possibile usare queste funzioni come argomenti per una chiamata di funzione. Il loro unico scopo è di fornire un utile parametro di classe modello alla funzione chiamata.
+Ciò determina indirettamente la presenza di più funzioni dello stesso tipo. È possibile usare queste funzioni come argomenti per una chiamata di funzione. Il loro unico scopo è fornire un parametro di modello di classe utile alla funzione chiamata.
 
 ## <a name="example"></a>Esempio
 
@@ -125,5 +125,5 @@ struct std::bidirectional_iterator_tag
 ## <a name="see-also"></a>Vedere anche
 
 [\<iterator>](../standard-library/iterator.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)
