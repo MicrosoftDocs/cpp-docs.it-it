@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456951"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689260"
 ---
-# <a name="negativebinomialdistribution-class"></a>Classe negative_binomial_distribution
+# <a name="negative_binomial_distribution-class"></a>Classe negative_binomial_distribution
 
 Genera una distribuzione binomiale negativa.
 
@@ -71,21 +71,21 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*IntType*\
-Il tipo di risultato Integer, il valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+@No__t_1 *intType*
+Il tipo di risultato Integer, il valore predefinito è **int**. Per i tipi possibili, vedere [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **int** se non ne viene fornito alcuno, distribuiti in base alla funzione di probabilità discreta di distribuzione binomiale negativa. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **int** se non ne viene fornito alcuno, distribuiti in base alla funzione di probabilità discreta di distribuzione binomiale negativa. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-I membri `k()` di proprietà `p()` e restituiscono i valori del parametro di distribuzione attualmente archiviati *k* e *p* rispettivamente.
+I membri della proprietà `k()` e `p()` restituiscono rispettivamente i valori *k* e *p* del parametro di distribuzione attualmente archiviati.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*k*\
+*k* \
 Parametro di distribuzione `k`.
 
-*p*\
+\ *p*
 Parametro di distribuzione `p`.
 
-*parm*\
+\ di *parmigiana*
 Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -253,19 +253,19 @@ Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializ
 
 Archivia i parametri della distribuzione.
 
-struct param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () const; double p () const;
+struct param_type {typedef negative_binomial_distribution `<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () const; double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parametri
 
-*k*\
+*k* \
 Parametro di distribuzione `k`.
 
-*p*\
+\ *p*
 Parametro di distribuzione `p`.
 
-*Ok*\
+\ a *destra*
 Struttura `param_type` usata per il confronto.
 
 ### <a name="remarks"></a>Note

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-ms.openlocfilehash: 2024574633069cc70f0885fdce63f3afc09227c0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 404e372e65af8b93ae4f6f2827a73ef64336690a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451104"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688969"
 ---
 # <a name="sample-container-class"></a>Classe contenitore di esempio
 
@@ -30,11 +30,11 @@ Alcune avvertenze aggiuntive:
 
 Le classi contenitore definite dalla libreria standard C++ soddisfano diversi requisiti aggiuntivi, come descritto nei paragrafi seguenti.
 
-La classe modello contenitore [list](../standard-library/list-class.md) garantisce un comportamento deterministico e utile, anche in presenza delle eccezioni descritte in precedenza. Se ad esempio viene generata un'eccezione durante l'inserimento di uno o più elementi, il contenitore viene lasciato inalterato e viene nuovamente generata l'eccezione.
+L' [elenco](../standard-library/list-class.md) di modelli di classe contenitore fornisce un comportamento deterministico e utile anche in presenza delle eccezioni descritte in precedenza. Se ad esempio viene generata un'eccezione durante l'inserimento di uno o più elementi, il contenitore viene lasciato inalterato e viene nuovamente generata l'eccezione.
 
-Per *tutte* le classi contenitore definite dalla C++ libreria standard, se viene generata un'eccezione durante le chiamate alle funzioni membro seguenti, `insert`, `push_back`o `push_front`, il contenitore viene lasciato inalterato e l'eccezione è generata.
+Per *tutte* le classi contenitore definite dalla C++ libreria standard, se viene generata un'eccezione durante le chiamate alle funzioni membro seguenti, `insert`, `push_back` o `push_front`, il contenitore viene lasciato inalterato e viene nuovamente generata l'eccezione.
 
-Per *tutte* le classi contenitore definite dalla C++ libreria standard, non viene generata alcuna eccezione durante le chiamate alle funzioni membro seguenti `pop_back`: `pop_front`,.
+Per *tutte* le classi contenitore definite dalla C++ libreria standard, non viene generata alcuna eccezione durante le chiamate alle funzioni membro seguenti: `pop_back`, `pop_front`.
 
 La funzione membro [erase](../standard-library/container-class-erase.md) genera un'eccezione solo se un'operazione di copia (costruzione di copia o assegnazione) genera un'eccezione.
 
@@ -46,29 +46,29 @@ La funzione membro [swap](../standard-library/container-class-swap.md) per *tutt
 
 - I riferimenti, i puntatori e gli iteratori che designano elementi delle sequenze controllate che vengono scambiate restano validi.
 
-Un oggetto di una classe di contenitori definita dalla libreria standard C++ alloca e libera la memoria per la sequenza che controlla tramite un oggetto archiviato di tipo `Alloc`, che in genere è un parametro di modello. Tale oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto della classe `allocator<Ty>`. In particolare, `Alloc` deve essere dello stesso tipo di`Alloc::rebind<value_type>::other`
+Un oggetto di una classe di contenitori definita dalla libreria standard C++ alloca e libera la memoria per la sequenza che controlla tramite un oggetto archiviato di tipo `Alloc`, che in genere è un parametro di modello. Tale oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto della classe `allocator<Ty>`. In particolare, `Alloc` deve essere dello stesso tipo di `Alloc::rebind<value_type>::other`
 
-Per *tutte* le classi contenitore definite C++ dalla libreria standard, la funzione `Alloc get_allocator const;` membro restituisce una copia dell'oggetto allocatore archiviato. Si noti che l'oggetto allocatore archiviato *non* viene copiato dopo l'assegnazione dell'oggetto contenitore. Tutti i costruttori inizializzano il valore archiviato `allocator`in, `Alloc` su se il costruttore non contiene un parametro allocatore.
+Per *tutte* le classi contenitore definite C++ dalla libreria standard, la funzione membro `Alloc get_allocator const;` restituisce una copia dell'oggetto allocatore archiviato. Si noti che l'oggetto allocatore archiviato *non* viene copiato dopo l'assegnazione dell'oggetto contenitore. Tutti i costruttori inizializzano il valore archiviato in `allocator`, per `Alloc` se il costruttore non contiene alcun parametro allocatore.
 
 In base allo standard C++, per una classe di contenitori definita nella libreria standard C++ si può presupporre quanto segue:
 
 - Tutti gli oggetti della classe `Alloc` risultano uguali.
 
-- Il `Alloc::const_pointer` tipo è uguale a `const Ty *`.
+- Il tipo `Alloc::const_pointer` è uguale a quello `const Ty *`.
 
-- Il `Alloc::const_reference` tipo è uguale a `const Ty&`.
+- Il tipo `Alloc::const_reference` è uguale a quello `const Ty&`.
 
-- Il `Alloc::pointer` tipo è uguale a `Ty *`.
+- Il tipo `Alloc::pointer` è uguale a quello `Ty *`.
 
-- Il `Alloc::reference` tipo è uguale a `Ty&`.
+- Il tipo `Alloc::reference` è uguale a quello `Ty&`.
 
 In questa implementazione, tuttavia, i contenitori non si basano su presupposti semplificati. Funzionano pertanto correttamente con gli oggetti allocatore più ambiziosi:
 
 - Gli oggetti della classe `Alloc` non devono risultare tutti uguali. È possibile mantenere più pool di archiviazione.
 
-- Il `Alloc::const_pointer` tipo non deve essere `const Ty *`uguale a. Un puntatore const può essere una classe.
+- Il tipo `Alloc::const_pointer` non deve essere uguale a quello `const Ty *`. Un puntatore const può essere una classe.
 
-- Il `Alloc::pointer` tipo non deve essere `Ty *`uguale a. Un puntatore può essere una classe.
+- Il tipo `Alloc::pointer` non deve essere uguale a quello `Ty *`. Un puntatore può essere una classe.
 
 ## <a name="requirements"></a>Requisiti
 

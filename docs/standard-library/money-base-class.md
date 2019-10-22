@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c614832b0cbb1cc23e42ecb3a939ccf1334a5cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455571"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689316"
 ---
-# <a name="moneybase-class"></a>Classe money_base
+# <a name="money_base-class"></a>Classe money_base
 
-Questa classe descrive un'enumerazione e una struttura comuni a tutte le specializzazioni della classe modello [moneypunct](../standard-library/moneypunct-class.md).
+La classe descrive un'enumerazione e una struttura comuni a tutte le specializzazioni del modello di classe [moneypunct](../standard-library/moneypunct-class.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,15 +30,15 @@ struct pattern
 
 L'enumerazione `part` descrive i valori possibili negli elementi del campo di matrice nel modello della struttura. I valori di `part` sono:
 
-- `none`per trovare la corrispondenza con zero o più spazi oppure non generare alcun elemento.
+- `none` per trovare la corrispondenza con zero o più spazi oppure non generare alcun elemento.
 
-- `sign`per trovare una corrispondenza o generare un segno positivo o negativo.
+- `sign` per trovare la corrispondenza o generare un segno positivo o negativo.
 
-- `space`per trovare la corrispondenza con zero o più spazi o generare uno spazio.
+- `space` per trovare la corrispondenza con zero o più spazi o per generare uno spazio.
 
-- `symbol`per trovare una corrispondenza o generare un simbolo di valuta.
+- `symbol` la corrispondenza o la generazione di un simbolo di valuta.
 
-- `value`per trovare una corrispondenza o generare un valore monetario.
+- `value` la corrispondenza o la generazione di un valore monetario.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c282791fb0ff85c0c8818c6905c51703614f4675
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456381"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689391"
 ---
-# <a name="matchresults-class"></a>Classe match_results
+# <a name="match_results-class"></a>Classe match_results
 
 Contiene una sequenza delle sottocorrispondenze.
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>Parametri
 
-*BidIt*\
+@No__t_1 *BidIt*
 Tipo di iteratore per le sottocorrispondenze.
 
-*Alloc*\
+@No__t_1 *Alloc*
 Tipo di un allocatore per gestire l'archiviazione.
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto che controlla una sequenza non modificabile di elementi di tipo `sub_match<BidIt>` generata da una ricerca di espressione regolare. Ogni elemento punta alla sottosequenza corrispondente al gruppo Capture corrispondente a tale elemento.
+Il modello di classe descrive un oggetto che controlla una sequenza non modificabile di elementi di tipo `sub_match<BidIt>` generata da una ricerca di espressioni regolari. Ogni elemento punta alla sottosequenza corrispondente al gruppo Capture corrispondente a tale elemento.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -69,15 +69,15 @@ La classe modello descrive un oggetto che controlla una sequenza non modificabil
 |[length](#length)|Restituisce la lunghezza di una sottocorrispondenza.|
 |[max_size](#max_size)|Ottiene il numero massimo delle sottocorrispondenze.|
 |[posizione](#position)|Ottiene l'offset iniziale di un sottogruppo.|
-|[prefix](#prefix)|Ottiene la sequenza prima della prima sottocorrispondenza.|
+|[prefisso](#prefix)|Ottiene la sequenza prima della prima sottocorrispondenza.|
 |[size](#size)|Conteggia il numero di sottocorrispondenze.|
 |[str](#str)|Restituisce una sottocorrispondenza.|
-|[suffix](#suffix)|Ottiene la sequenza dopo l'ultima sottocorrispondenza.|
+|[suffisso](#suffix)|Ottiene la sequenza dopo l'ultima sottocorrispondenza.|
 |[swap](#swap)|Scambia due oggetti match_results.|
 
 ### <a name="operators"></a>Operatori
 
-|Operator|DESCRIZIONE|
+|??|Descrizione|
 |-|-|
 |[operator=](#op_eq)|Copia un oggetto match_results.|
 |[operator\[\]](#op_at)|Accede a un oggetto secondario.|
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parametri
 
-*OutIt*\
+@No__t_1 *OutIt*
 Tipo di iteratore di output.
 
 *out*\
 Flusso di output in cui scrivere.
 
-*FMT*\
+\ *FMT*
 Stringa di formato.
 
-*Bandiere*\
+*flag* \
 Flag di formato.
 
 ### <a name="remarks"></a>Note
 
-Ogni funzione membro genera il testo formattato sotto il controllo del formato *FMT*. La prima funzione membro scrive il testo formattato nella sequenza definita dal *relativo argomento e* *restituisce un*risultato. La seconda funzione membro restituisce un oggetto stringa contenente una copia del testo formattato.
+Ogni funzione membro genera il testo formattato sotto il controllo del formato *FMT*. La prima funzione membro scrive il testo formattato nella sequenza *definita dal relativo argomento e* *restituisce un*risultato. La seconda funzione membro restituisce un oggetto stringa contenente una copia del testo formattato.
 
 Per generare testo formattato, il testo letterale della stringa di formato viene in genere copiato nella sequenza di destinazione. Ogni sequenza di escape della stringa di formato viene sostituita con il testo da essa rappresentato. I dettagli delle operazioni di copia e sostituzione vengono controllati dai flag di formato passati alla funzione.
 
@@ -350,7 +350,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Sub*\
+sotto\
 Indice della sottocorrispondenza.
 
 ### <a name="remarks"></a>Note
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Alloc*\
+\ *Alloc*
 Oggetto allocatore da archiviare.
 
-*Ok*\
+\ a *destra*
 Oggetto match_results da copiare.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore crea un oggetto `match_results` che non contiene sottocorrispondenze. Il secondo costruttore crea un `match_results` oggetto che è una copia di *right*.
+Il primo costruttore crea un oggetto `match_results` che non contiene sottocorrispondenze. Il secondo costruttore crea un oggetto `match_results` che è una copia di *right*.
 
 ## <a name="max_size"></a>  match_results::max_size
 
@@ -401,7 +401,7 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Oggetto match_results da copiare.
 
 ### <a name="remarks"></a>Note
@@ -423,7 +423,7 @@ Indice della sottocorrispondenza.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce un riferimento all'elemento *n* della sequenza controllata oppure un riferimento a un oggetto vuoto `sub_match` se `size() <= n` o se il gruppo Capture *n* non fa parte della corrispondenza.
+La funzione membro restituisce un riferimento all'elemento *n* della sequenza controllata oppure un riferimento a un oggetto `sub_match` vuoto se `size() <= n` o se il gruppo Capture *n* non fa parte della corrispondenza.
 
 ## <a name="position"></a>  match_results::position
 
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Sub*\
+sotto\
 Indice della sottocorrispondenza.
 
 ### <a name="remarks"></a>Note
@@ -500,7 +500,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Sub*\
+sotto\
 Indice della sottocorrispondenza.
 
 ### <a name="remarks"></a>Note
@@ -541,7 +541,7 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Oggetto match_results con cui effettuare lo scambio.
 
 ### <a name="remarks"></a>Note
