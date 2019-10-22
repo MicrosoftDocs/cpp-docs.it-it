@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: 8eb497e6a4380affd0f13f41c7b55990c562b7d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453649"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689434"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
-Definisce l'elenco di classi modello del contenitore e diversi modelli di supporto.
+Definisce l'elenco di modelli di classe del contenitore e diversi modelli di supporto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,7 +25,7 @@ Definisce l'elenco di classi modello del contenitore e diversi modelli di suppor
 ```
 
 > [!NOTE]
-> L' \<elenco > libreria usa anche l' `#include <initializer_list>` istruzione.
+> Anche la libreria \<list > USA l'istruzione `#include <initializer_list>`.
 
 ## <a name="members"></a>Members
 
@@ -50,10 +50,10 @@ Definisce l'elenco di classi modello del contenitore e diversi modelli di suppor
 
 |||
 |-|-|
-|[Classe list](../standard-library/list-class.md)|Classe modello di contenitori sequenziali che gestiscono gli elementi in una disposizione lineare e consentono inserimenti ed eliminazioni efficienti in qualsiasi posizione all'interno della sequenza.|
+|[Classe list](../standard-library/list-class.md)|Modello di classe dei contenitori sequenza che conservano gli elementi in una disposizione lineare e consentono inserimenti ed eliminazioni efficienti in qualsiasi posizione all'interno della sequenza.|
 
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

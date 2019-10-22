@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 585f970f1a3482412ff225454b7acce9060e2d7c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 071e9369cdd0469d8ddc1c6649a3801732d8e23f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449430"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688223"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Definisce la classe `complex` modello del contenitore e i relativi modelli di supporto.
+Definisce il modello di classe del contenitore `complex` e i relativi modelli di supporto.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -28,9 +28,9 @@ Definisce la classe `complex` modello del contenitore e i relativi modelli di su
 
 Un numero complesso è una coppia ordinata di numeri reali. In termini puramente geometrici, il piano complesso è il piano bidimensionale reale. Le qualità speciali del piano complesso che lo distinguono dal piano reale dipendono dal fatto che ha una struttura algebrica aggiuntiva. Questa struttura algebrica include due operazioni fondamentali:
 
-- Aggiunta definita come (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)
+- Aggiunta definita come (*a*, *b*) + (*c*, *d*) = (*a*  + *c*, *b*  + *d*)
 
-- Moltiplicazione definita come (*a*, *b*) \* (*c*, *d*) = (*CA* - *BD*, *ad* + *BC*)
+- Moltiplicazione definita come (*a*, *b*) \* (*c*, *d*) = (*AC*  - *BD*, *ad*  + *BC*)
 
 L'insieme di numeri complessi con operazioni di addizione complessa e moltiplicazione complessa corrisponde a un campo nel senso algebrico standard:
 
@@ -40,21 +40,21 @@ L'insieme di numeri complessi con operazioni di addizione complessa e moltiplica
 
 - L'inverso additivo per un numero complesso (*a*, *b*) è (-*a*,-*b*) e l'inverso moltiplicativo per tutti questi numeri complessi ad eccezione di (0, 0) è
 
-   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
+   (*a/* (*a*<sup>2</sup>  + *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  + *b*<sup>2</sup>))
 
-Rappresentando un numero complesso *z* = (*a*, *b*) nel formato *z* = *a* + *bi*, dove *i*<sup>2</sup> =-1, le regole per l'algebra del set di numeri reali possono essere applicate al set di numeri complessi e ai relativi componenti. Ad esempio:
+Rappresentando un numero complesso *z* = (*a*, *b*) nel formato *z*  = *un*  + *bi*, dove *i*<sup>2</sup> =-1, le regole per l'algebra del set di numeri reali possono essere applicate al set di complessi numeri e ai relativi componenti. Esempio:
 
-   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
 
 Il sistema di numeri complessi è un campo, ma non è un campo ordinato. Non esiste alcun ordinamento dei numeri complessi come per il campo dei numeri reali e dei relativi subset, pertanto non è possibile applicare le disuguaglianze ai numeri complessi così come sono i numeri reali.
 
 Esistono tre formati comuni di rappresentazione di un numero complesso *z*:
 
-- Cartesiano: *z* = *a* + *bi*
+- Cartesiano: *z*  = *una*  + *bi*
 
-- Polare *: z* = *r* ( *cos p* + *i* sin *p*)
+- Polar: *z*  = *r* (cos *p*  + *i* sin *p*)
 
-- Esponenziale: *z* = *r* \* *e*<sup>*IP*</sup>
+- Esponenziale: *z*  = *r* \* *e*<sup>*IP*</sup>
 
 I termini usati in queste rappresentazioni standard di un numero complesso vengono definiti come segue:
 
@@ -117,10 +117,10 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 |||
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|La classe modello specializzata in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **Double**, dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
-|[complex\<float>](../standard-library/complex-float.md)|La classe modello specializzata in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **float**, dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
-|[complex\<long double>](../standard-library/complex-long-double.md)|La classe modello specializzata in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **long double**, dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
-|[complex](../standard-library/complex-class.md)|La classe modello descrive un oggetto usato per rappresentare il sistema di numeri complessi e per eseguire operazioni aritmetiche complesse.|
+|[complex\<double>](../standard-library/complex-double.md)|Il modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **Double**, dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
+|[complex\<float>](../standard-library/complex-float.md)|Il modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **float**, dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
+|[complex\<long double>](../standard-library/complex-long-double.md)|Il modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **long double**, dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
+|[complex](../standard-library/complex-class.md)|Il modello di classe descrive un oggetto usato per rappresentare il sistema di numeri complessi ed eseguire operazioni aritmetiche complesse.|
 
 ### <a name="literals"></a>Valori letterali
 
@@ -128,7 +128,7 @@ L'intestazione \<complex> definisce i [valori letterali definiti dall'utente](..
 
 |||
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Restituisce`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Restituisce: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Restituisce `complex<double>{0.0, static_cast<double>(d)}`.|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|Restituisce `complex<float>{0.0f, static_cast<float>(d)}`.|
 

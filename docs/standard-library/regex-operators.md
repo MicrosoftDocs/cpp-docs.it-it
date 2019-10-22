@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460129"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689078"
 ---
 # <a name="ltregexgt-operators"></a>Operatori &lt;regex&gt;
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*\
+@No__t_1 *BidIt*
 Tipo di iteratore.
 
-*IOtraits*\
+@No__t_1 *IOtraits*
 Classe traits della stringa.
 
-*Alloc*\
+@No__t_1 *Alloc*
 Classe Allocator.
 
-*sinistra*\
+\ a *sinistra*
 Oggetto a sinistra da confrontare.
 
-*Ok*\
+\ a *destra*
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -181,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*\
+@No__t_1 *BidIt*
 Tipo di iteratore.
 
-*IOtraits*\
+@No__t_1 *IOtraits*
 Classe traits della stringa.
 
-*Alloc*\
+@No__t_1 *Alloc*
 Classe Allocator.
 
-*sinistra*\
+\ a *sinistra*
 Oggetto a sinistra da confrontare.
 
-*Ok*\
+\ a *destra*
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*\
+*Elem* \
 Tipo dell'elemento.
 
-*IOtraits*\
+@No__t_1 *IOtraits*
 Classe traits della stringa.
 
-*Alloc*\
+@No__t_1 *Alloc*
 Classe Allocator.
 
-*BidIt*\
+@No__t_1 *BidIt*
 Tipo di iteratore.
 
-*del sistema operativo*\
+\ del *sistema operativo*
 Flusso di output.
 
-*Ok*\
+\ a *destra*
 Oggetto da inserire.
 
 ### <a name="remarks"></a>Note
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*\
+@No__t_1 *BidIt*
 Tipo di iteratore.
 
-*IOtraits*\
+@No__t_1 *IOtraits*
 Classe traits della stringa.
 
-*Alloc*\
+@No__t_1 *Alloc*
 Classe Allocator.
 
-*sinistra*\
+\ a *sinistra*
 Oggetto a sinistra da confrontare.
 
-*Ok*\
+\ a *destra*
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*\
+@No__t_1 *BidIt*
 Tipo di iteratore.
 
-*IOtraits*\
+@No__t_1 *IOtraits*
 Classe traits della stringa.
 
-*Alloc*\
+@No__t_1 *Alloc*
 Classe Allocator.
 
-*sinistra*\
+\ a *sinistra*
 Oggetto a sinistra da confrontare.
 
-*Ok*\
+\ a *destra*
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -486,11 +486,11 @@ Ciascun operatore modello converte ciascun argomento in un tipo stringa e restit
 
 Quando un operatore modello converte gli argomenti in un tipo stringa, usa la prima trasformazione applicabile tra quelle seguenti:
 
-gli argomenti i cui tipi sono una specializzazione della classe modello `match_results` o `sub_match` vengono convertiti chiamando la funzione membro `str`;
+gli argomenti i cui tipi sono una specializzazione del modello di classe `match_results` o `sub_match` vengono convertiti chiamando la funzione membro `str`;
 
-gli argomenti i cui tipi sono una specializzazione della classe modello `basic_string` restano invariati;
+gli argomenti i cui tipi sono una specializzazione del modello di classe `basic_string` sono invariati;
 
-tutti gli altri tipi di argomenti vengono convertiti passando il valore dell'argomento al costruttore per una specializzazione appropriata della classe modello `basic_string`.
+tutti gli altri tipi di argomento vengono convertiti passando il valore dell'argomento al costruttore per una specializzazione appropriata del modello di classe `basic_string`.
 
 ### <a name="example"></a>Esempio
 
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*\
+@No__t_1 *BidIt*
 Tipo di iteratore.
 
-*IOtraits*\
+@No__t_1 *IOtraits*
 Classe traits della stringa.
 
-*Alloc*\
+@No__t_1 *Alloc*
 Classe Allocator.
 
-*sinistra*\
+\ a *sinistra*
 Oggetto a sinistra da confrontare.
 
-*Ok*\
+\ a *destra*
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*\
+@No__t_1 *BidIt*
 Tipo di iteratore.
 
-*IOtraits*\
+@No__t_1 *IOtraits*
 Classe traits della stringa.
 
-*Alloc*\
+@No__t_1 *Alloc*
 Classe Allocator.
 
-*sinistra*\
+\ a *sinistra*
 Oggetto a sinistra da confrontare.
 
-*Ok*\
+\ a *destra*
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -774,10 +774,10 @@ sub >= 'a' == true
 ## <a name="see-also"></a>Vedere anche
 
 [\<regex>](../standard-library/regex.md)\
-[Classe regex_constants](../standard-library/regex-constants-class.md)\
-[Classe regex_error](../standard-library/regex-error-class.md)\
-[\<funzioni > Regex](../standard-library/regex-functions.md)\
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[classe regex_constants](../standard-library/regex-constants-class.md) \
+[classe regex_error](../standard-library/regex-error-class.md) \
+[\<regex funzioni >](../standard-library/regex-functions.md) \
+[Classe regex_iterator](../standard-library/regex-iterator-class.md) \
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md) \
+[Classe regex_traits](../standard-library/regex-traits-class.md) \
 [Typedef \<regex>](../standard-library/regex-typedefs.md)

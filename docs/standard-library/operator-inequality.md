@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: 1214dd7d5034b80b14f8dd1422aa1a3b8a253023
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 89d41d099d151f77d91cd94b22047824779dcf54
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447655"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687341"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
 > Questo argomento è disponibile nella documentazione C++ di Microsoft come esempio non funzionale dei contenitori usati nella libreria C++ standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
 
-Esegue l'overload di `operator!=` per confrontare due oggetti della classe modello [Container](../standard-library/sample-container-class.md).
+Overload `operator!=` per confrontare due oggetti del [contenitore](../standard-library/sample-container-class.md)di modelli di classe.
 
 ## <a name="syntax"></a>Sintassi
 

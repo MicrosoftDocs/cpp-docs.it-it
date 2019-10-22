@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449650"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688351"
 ---
-# <a name="cachesuballoc-class"></a>Classe cache_suballoc
+# <a name="cache_suballoc-class"></a>Classe cache_suballoc
 
 Definisce un [allocatore di blocco](../standard-library/allocators-header.md) che alloca e dealloca blocchi di memoria di un'unica dimensione.
 
@@ -32,11 +32,11 @@ class cache_suballoc
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Sz*|Numero di elementi della matrice da allocare.|
+|*SZ*|Numero di elementi della matrice da allocare.|
 
 ## <a name="remarks"></a>Note
 
-La classe modello cache_suballoc archivia i blocchi di memoria deallocati in un elenco di disponibilità con lunghezza non `freelist<sizeof(Type), max_unbounded>`vincolata, usando e suddivide i blocchi di memoria da un blocco maggiore allocato con **operator new** quando l'elenco di disponibilità è vuoto.
+Il modello di classe cache_suballoc archivia i blocchi di memoria deallocati in un elenco libero con lunghezza non vincolata, usando `freelist<sizeof(Type), max_unbounded>` e suddivide i blocchi di memoria da un blocco maggiore allocato con **operator new** quando l'elenco di disponibilità è vuoto.
 
 Ogni blocco include `Sz * Nelts` byte di memoria utilizzabile e i dati necessari per **operator new** e **operator delete** . Le porzioni allocate non vengono mai liberate.
 
@@ -69,7 +69,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*count*|Numero di elementi della matrice da allocare.|
 

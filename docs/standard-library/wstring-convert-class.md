@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ce03510bec05f3e5e770e930759648c9add0387f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450904"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684059"
 ---
-# <a name="wstringconvert-class"></a>Classe wstring_convert
+# <a name="wstring_convert-class"></a>Classe wstring_convert
 
-La classe modello `wstring_convert` esegue le conversioni tra una stringa di caratteri "wide" e una stringa di byte.
+Il modello di classe `wstring_convert` esegue le conversioni tra una stringa di caratteri "wide" e una stringa di byte.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,17 +42,17 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parametri
 
-*Codecvt*\
+@No__t_1 *codecvt*
 Facet delle [impostazioni locali](../standard-library/locale-class.md) che rappresenta l'oggetto di conversione.
 
-*Elem*\
+*Elem* \
 Tipo di elemento a caratteri "wide".
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto che controlla le conversioni tra gli oggetti stringa di caratteri estesi della classe `std::basic_string<Elem>` e gli oggetti stringa di byte della classe `std::basic_string<char>` (nota anche come `std::string`). La classe modello definisce i tipi `wide_string` e `byte_string` come sinonimi per questi due tipi. La conversione tra una sequenza di valori `Elem` (archiviati in un oggetto `wide_string`) e sequenze multibyte (archiviate in un oggetto `byte_string`) viene eseguita da un oggetto della classe `Codecvt<Elem, char, std::mbstate_t>`, che soddisfa i requisiti del facet standard di conversione del codice `std::codecvt<Elem, char, std::mbstate_t>`.
+Il modello di classe descrive un oggetto che controlla le conversioni tra oggetti stringa estesi della classe `std::basic_string<Elem>` e oggetti stringa di byte della classe `std::basic_string<char>` (noti anche come `std::string`). Il modello di classe definisce i tipi `wide_string` e `byte_string` come sinonimi per questi due tipi. La conversione tra una sequenza di valori `Elem` (archiviati in un oggetto `wide_string`) e sequenze multibyte (archiviate in un oggetto `byte_string`) viene eseguita da un oggetto della classe `Codecvt<Elem, char, std::mbstate_t>`, che soddisfa i requisiti del facet standard di conversione del codice `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Un oggetto di questa classe modello archivia:
+Un oggetto di questo modello di classe archivia:
 
 - Una stringa di byte da visualizzare in caso di errori
 
@@ -66,13 +66,13 @@ Un oggetto di questa classe modello archivia:
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|DESCRIZIONE|
+|Costruttore|Descrizione|
 |-|-|
 |[wstring_convert](#wstring_convert)|Costruisce un oggetto di tipo `wstring_convert`.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|DESCRIZIONE|
+|Nome del tipo|Descrizione|
 |-|-|
 |[byte_string](#byte_string)|Tipo che rappresenta una stringa di tipo byte.|
 |[wide_string](#wide_string)|Tipo che rappresenta una stringa di tipo wide.|
@@ -81,7 +81,7 @@ Un oggetto di questa classe modello archivia:
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[from_bytes](#from_bytes)|Converte una stringa di byte in una stringa di caratteri "wide".|
 |[to_bytes](#to_bytes)|Converte una stringa di caratteri "wide" in una stringa di byte.|
@@ -135,13 +135,13 @@ wide_string from_bytes(const char* first, const char* last);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*Byte*|Sequenza di byte a elemento singolo da convertire.|
 |*ptr*|Sequenza di caratteri con terminazione Null di tipo C da convertire.|
 |*BSTR*|Oggetto [byte_string](#byte_string) da convertire.|
-|*first*|Il primo carattere in un intervallo di caratteri da convertire.|
-|*last*|L'ultimo carattere in un intervallo di caratteri da convertire.|
+|*prima*|Il primo carattere in un intervallo di caratteri da convertire.|
+|*Ultima*|L'ultimo carattere in un intervallo di caratteri da convertire.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -209,8 +209,8 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |*Char*|Carattere wide da convertire.|
 |*Wptr*|Sequenza con terminazione Null di tipo C, che inizia da `wptr`, da convertire.|
 |*WSTR*|Oggetto [wide_string](#wide_string) da convertire.|
-|*first*|Primo elemento nell'intervallo di elementi da convertire.|
-|*last*|Ultimo elemento nell'intervallo di elementi da convertire.|
+|*prima*|Primo elemento nell'intervallo di elementi da convertire.|
+|*Ultima*|Ultimo elemento nell'intervallo di elementi da convertire.|
 
 ### <a name="remarks"></a>Note
 
@@ -242,7 +242,7 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*\*Pcvt*|Oggetto di tipo `Codecvt` per eseguire la conversione.|
 |*_State*|Oggetto di tipo [state_type](#state_type) che rappresenta lo stato della conversione.|

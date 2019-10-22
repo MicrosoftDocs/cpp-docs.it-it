@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 0b8ca5744418860cc6b4868dda9174ae2eb68a98
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957123"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685885"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
-Definisce la classe modello `basic_string` del contenitore e diversi modelli di supporto.
+Definisce il modello di classe del contenitore `basic_string` e diversi modelli di supporto.
 
 Per altre informazioni su `basic_string`, vedere [Classe basic_string](../standard-library/basic-string-class.md)
 
@@ -32,20 +32,20 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 - Matrici di caratteri con terminazione Null spesso definite stringhe C.
 
-- Oggetti della classe modello, di `basic_string`tipo, che gestiscono tutti gli argomenti di modello di tipo **char**.
+- oggetti modello di classe, di tipo `basic_string`, che gestiscono tutti gli argomenti di modello di tipo **char**.
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|DESCRIZIONE|
+|Nome del tipo|Descrizione|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Tipo che descrive una specializzazione della classe `basic_string` modello con elementi di tipo `string`char come.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo che descrive una specializzazione della classe `basic_string` modello con elementi di tipo `wstring`wchar_t come.|
-|[u16string](../standard-library/string-typedefs.md#u16string)|Tipo che descrive una specializzazione della classe modello `basic_string` basata su elementi di tipo `char16_t`.|
-|[u32string](../standard-library/string-typedefs.md#u32string)|Tipo che descrive una specializzazione della classe modello `basic_string` basata su elementi di tipo `char32_t`.|
+|[string](../standard-library/string-typedefs.md#string)|Tipo che descrive una specializzazione del modello di classe `basic_string` con gli elementi di tipo **char** come `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo che descrive una specializzazione del modello di classe `basic_string` con elementi di tipo **wchar_t** come `wstring`.|
+|[u16string](../standard-library/string-typedefs.md#u16string)|Tipo che descrive una specializzazione del modello di classe `basic_string` in base agli elementi di tipo `char16_t`.|
+|[u32string](../standard-library/string-typedefs.md#u32string)|Tipo che descrive una specializzazione del modello di classe `basic_string` in base agli elementi di tipo `char32_t`.|
 
 ### <a name="operators"></a>Operatori
 
-|Operator|Descrizione|
+|??|Descrizione|
 |-|-|
 |[operator+](../standard-library/string-operators.md#op_add)|Concatena due oggetti stringa.|
 |[operator!=](../standard-library/string-operators.md#op_neq)|Verifica se l'oggetto stringa a sinistra dell'operatore non è uguale all'oggetto stringa a destra.|
@@ -55,7 +55,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 |[operator<\<](../standard-library/string-operators.md#op_lt_lt)|Funzione di modello che inserisce una stringa nel flusso di output.|
 |[operator>](../standard-library/string-operators.md#op_gt)|Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore dell'oggetto stringa a destra.|
 |[operator>=](../standard-library/string-operators.md#op_gt_eq)|Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore o uguale all'oggetto stringa a destra.|
-|[operator>> ](../standard-library/string-operators.md#op_gt_gt)|Funzione di modello che estrae una stringa dal flusso di input.|
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|Funzione di modello che estrae una stringa dal flusso di input.|
 
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate
 
@@ -81,10 +81,10 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|Class|Descrizione|
 |-|-|
-|[Classe basic_string](../standard-library/basic-string-class.md)|Classe modello che descrive gli oggetti che possono archiviare una sequenza di oggetti arbitrari di tipo carattere.|
-|[Struct char_traits](../standard-library/char-traits-struct.md)|Classe modello che descrive gli attributi associati a un carattere di tipo CharType.|
+|[Classe basic_string](../standard-library/basic-string-class.md)|Modello di classe che descrive gli oggetti che possono archiviare una sequenza di oggetti arbitrari di tipo carattere.|
+|[Struct char_traits](../standard-library/char-traits-struct.md)|Modello di classe che descrive gli attributi associati a un carattere di tipo CharType|
 
 ### <a name="specializations"></a>Specializzazioni
 

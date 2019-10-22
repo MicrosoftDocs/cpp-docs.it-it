@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455462"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688154"
 ---
 # <a name="ctypeltchargt-class"></a>Classe ctype&lt;char&gt;
 
-La classe è una specializzazione esplicita della `ctype\<CharType>` classe modello per il tipo **char**, che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo **char**.
+La classe è una specializzazione esplicita del modello di classe `ctype\<CharType>` al tipo **char**, che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo **char**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -106,17 +106,17 @@ protected:
 
 ## <a name="remarks"></a>Note
 
-La specializzazione esplicita è diversa dalla classe di modello in vari modi:
+La specializzazione esplicita è diversa dal modello di classe in diversi modi:
 
-- Un oggetto della classe CType < `char`> Archivia un puntatore al primo elemento di una tabella della maschera CType, una matrice di UCHAR_MAX + 1 elementi di tipo `ctype_base::mask`. Archivia anche un oggetto booleano che indica se la matrice deve essere eliminata (tramite `operator delete[]`) quando l'oggetto di ctype\< **Elem**> viene eliminato.
+- Un oggetto della classe CType < `char` > Archivia un puntatore al primo elemento di una tabella della maschera CType, una matrice di UCHAR_MAX + 1 elementi di tipo `ctype_base::mask`. Archivia anche un oggetto booleano che indica se la matrice deve essere eliminata (tramite `operator delete[]`) quando l'oggetto di ctype\< **Elem**> viene eliminato.
 
-- Il suo unico costruttore pubblico consente di `tab`specificare, la tabella della maschera CType `del`, e, l'oggetto booleano che è true se la matrice deve essere eliminata `char`quando il CType < > oggetto viene eliminato definitivamente, nonché il conteggio dei riferimenti parametro refs.
+- Il suo unico costruttore pubblico consente di specificare `tab`, la tabella della maschera CType e `del`, l'oggetto booleano che è true se la matrice deve essere eliminata quando l'oggetto CType < `char` oggetto > viene eliminato definitivamente, così come il parametro reference-count refs.
 
-- La funzione `table` membro protetto restituisce la tabella della maschera CType archiviata.
+- La funzione membro protetta `table` restituisce la tabella della maschera CType archiviata.
 
-- L'oggetto `table_size` membro statico specifica il numero minimo di elementi in una tabella della maschera CType.
+- L'oggetto membro statico `table_size` specifica il numero minimo di elementi in una tabella della maschera CType.
 
-- La funzione `classic_table`membro statica protetta (restituisce la tabella della maschera CType appropriata per le impostazioni locali "C".
+- La funzione membro statica protetta `classic_table` (restituisce la tabella della maschera CType appropriata per le impostazioni locali "C".
 
 - Non ci sono funzioni membro virtuale protetto [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) o [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Le funzioni membro pubblico corrispondenti eseguono direttamente le operazioni equivalenti.
 

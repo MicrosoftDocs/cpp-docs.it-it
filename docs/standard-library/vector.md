@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 59424a9f6a9434b5d7d3f4298cbb0bc03926621c
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 19068de41cfdcb17ae624858c137bf624851479f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957058"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684063"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
-Definisce il vettore della classe modello del contenitore e diversi modelli di supporto.
+Definisce il vettore del modello della classe del contenitore e diversi modelli di supporto.
 
 L'oggetto `vector` è un contenitore che consente di organizzare gli elementi di un determinato tipo in una sequenza lineare. Consente l'accesso casuale veloce a qualsiasi elemento e aggiunte e rimozioni dinamiche nella sequenza. L'oggetto `vector`è il contenitore preferito per una sequenza quando le prestazioni di accesso casuale sono scarse.
 
 > [!NOTE]
-> Anche \<la libreria Vector > USA l' `#include <initializer_list>` istruzione.
+> Anche la libreria \<vector > USA l'istruzione `#include <initializer_list>`.
 
 Per altre informazioni sulla classe `vector`, vedere [Classe vector](../standard-library/vector-class.md). Per informazioni sulla specializzazione `vector<bool>`, vedere [Classe vector\<bool>](../standard-library/vector-bool-class.md).
 
@@ -77,16 +77,16 @@ void swap (
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo*\
+*Digitare* \
 Parametro di modello per il tipo di dati archiviati nel vettore.
 
-*Allocatore*\
+@No__t_1 *allocatore*
 Parametro di modello per l'oggetto allocatore archiviato responsabile dell'allocazione e disallocazione della memoria.
 
-*sinistra*\
+\ a *sinistra*
 Primo vettore (a sinistra) in un'operazione di confronto.
 
-*Ok*\
+\ a *destra*
 Secondo vettore (a destra) in un'operazione di confronto.
 
 ## <a name="members"></a>Members
@@ -106,14 +106,14 @@ Secondo vettore (a destra) in un'operazione di confronto.
 
 |||
 |-|-|
-|[Classe vector](../standard-library/vector-class.md)|Classe modello di contenitori di sequenza che organizzano gli elementi di un determinato tipo in una disposizione lineare e consentono l'accesso casuale veloce a qualsiasi elemento.|
+|[Classe vector](../standard-library/vector-class.md)|Modello di classe di contenitori di sequenza che organizzano gli elementi di un determinato tipo in una disposizione lineare e consentono l'accesso casuale veloce a qualsiasi elemento.|
 
 ### <a name="specializations"></a>Specializzazioni
 
 |||
 |-|-|
 |hash|Restituisce un hash del vettore.|
-|[Classe vector\<bool>](../standard-library/vector-bool-class.md)|Specializzazione completa del vettore della classe modello per gli elementi di tipo `bool` con un allocatore per il tipo sottostante usato dalla specializzazione.|
+|[Classe vector\<bool>](../standard-library/vector-bool-class.md)|Specializzazione completa del vettore del modello di classe per gli elementi di tipo `bool` con un allocatore per il tipo sottostante utilizzato dalla specializzazione.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -125,4 +125,4 @@ Secondo vettore (a destra) in un'operazione di confronto.
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

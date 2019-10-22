@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be0c5153cbc94d09b414fc9e14fa498c7a4cfa7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456334"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687924"
 ---
-# <a name="indirectarray-class"></a>Classe indirect_array
+# <a name="indirect_array-class"></a>Classe indirect_array
 
-Classe modello ausiliaria interna che supporta oggetti che sono subset di oggetti valarray fornendo operazioni tra matrici di subset definite specificando un subset di indici di un oggetto valarray padre.
+Modello di classe ausiliario interno che supporta oggetti che sono subset di oggetti valarray fornendo operazioni tra matrici di subset definite specificando un subset di indici di un oggetto valarray padre.
 
 ## <a name="syntax"></a>Sintassi
 
 ## <a name="remarks"></a>Note
 
-La classe descrive un oggetto che archivia un riferimento a un oggetto `va` di classe [valarray](../standard-library/valarray-class.md) **\<di tipo >** , insieme a un `xa` oggetto della `valarray<size_t>`classe, che descrive la sequenza di elementi da selezionare `valarray<Type>` oggetto.
+La classe descrive un oggetto che archivia un riferimento a un oggetto `va` della classe [valarray](../standard-library/valarray-class.md)  **\<Type >** , insieme a un oggetto `xa` della classe `valarray<size_t>`, che descrive la sequenza di elementi da selezionare dall'oggetto `valarray<Type>`.
 
-Per costruire un `indirect_array<Type>` oggetto, è sufficiente scrivere un'espressione nel formato `va[xa]`. Le funzioni membro della classe indirect_array si comportano quindi come le firme di `valarray<Type>`funzione corrispondenti definite per, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati.
+Per costruire un oggetto `indirect_array<Type>` è sufficiente scrivere un'espressione nel formato `va[xa]`. Le funzioni membro della classe indirect_array si comportano quindi come le firme di funzione corrispondenti definite per `valarray<Type>`, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati.
 
-La sequenza è costituita da **XA.** elementi [size](../standard-library/valarray-class.md#size) , dove elemento `I` diventa l'indice **XA**[ `I`] all' `va`interno di.
+La sequenza è costituita da **XA.** elementi [size](../standard-library/valarray-class.md#size) , dove element `I` diventa l'indice **XA**[`I`] all'interno `va`.
 
 ## <a name="example"></a>Esempio:
 

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9e8334db52e05f4a61adb7256e87ed611f0d3ecb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460215"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689279"
 ---
-# <a name="moveiterator-class"></a>Classe move_iterator
+# <a name="move_iterator-class"></a>Classe move_iterator
 
 Il modello di classe `move_iterator` è un wrapper di un iteratore. move_iterator offre lo stesso comportamento dell'iteratore di cui esegue il wrapping (archivia), con la differenza che trasforma l'operatore di dereferenziazione dell'iteratore archiviato in un riferimento rvalue, trasformando una copia in uno spostamento. Per altre informazioni sui riferimenti rvalue, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -39,7 +39,7 @@ class move_iterator;
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto che si comporta come un iteratore, eccetto quando viene dereferenziato. Archivia un iteratore ad accesso casuale di tipo `Iterator`, a cui si accede tramite la funzione membro `base()`. Tutte le operazioni effettuate su un `move_iterator` vengono eseguite direttamente sull'iteratore archiviato, ad eccezione del fatto che viene eseguito il cast in modo implicito del risultato di `operator*` a `value_type&&` per creare un riferimento rvalue.
+Il modello di classe descrive un oggetto che si comporta come un iteratore eccetto quando viene dereferenziato. Archivia un iteratore ad accesso casuale di tipo `Iterator`, a cui si accede tramite la funzione membro `base()`. Tutte le operazioni effettuate su un `move_iterator` vengono eseguite direttamente sull'iteratore archiviato, ad eccezione del fatto che viene eseguito il cast in modo implicito del risultato di `operator*` a `value_type&&` per creare un riferimento rvalue.
 
 Un `move_iterator` potrebbe essere in grado di effettuare operazioni non definite dall'iteratore di cui è stato eseguito il wrapping. Queste operazioni non devono essere utilizzate.
 
@@ -54,9 +54,9 @@ Un `move_iterator` potrebbe essere in grado di effettuare operazioni non definit
 |Nome del tipo|Descrizione|
 |-|-|
 |[iterator_type](#iterator_type)|Sinonimo del parametro di modello `RandomIterator`.|
-|[iterator_category](#iterator_category)|Sinonimo di un'espressione **typeName** più lunga con lo stesso nome `iterator_category` , identifica le capacità generali dell'iteratore.|
-|[value_type](#value_type)|Un sinonimo di un'espressione **typeName** più lunga con lo stesso `value_type` nome descrive il tipo degli elementi iteratori.|
-|[difference_type](#difference_type)|Sinonimo di un'espressione **typeName** più lunga con lo stesso nome `difference_type` , descrive il tipo integrale necessario per esprimere i valori di differenza tra gli elementi.|
+|[iterator_category](#iterator_category)|Sinonimo di un'espressione **typeName** più lunga con lo stesso nome, `iterator_category` identifica le capacità generali dell'iteratore.|
+|[value_type](#value_type)|Sinonimo di un'espressione **typeName** più lunga con lo stesso nome, `value_type` descrive il tipo degli elementi iteratori.|
+|[difference_type](#difference_type)|Sinonimo di un'espressione **typeName** più lunga con lo stesso nome, `difference_type` descrive il tipo integrale necessario per esprimere i valori di differenza tra gli elementi.|
 |[pointer](#pointer)|Sinonimo del parametro di modello `RandomIterator`.|
 |[reference](#reference)|Sinonimo del riferimento `rvalue` `value_type&&`.|
 
@@ -68,7 +68,7 @@ Un `move_iterator` potrebbe essere in grado di effettuare operazioni non definit
 
 ### <a name="operators"></a>Operatori
 
-|Operator|DESCRIZIONE|
+|??|Descrizione|
 |-|-|
 |[move_iterator::operator*](#op_star)|Restituisce `(reference)*base().`.|
 |[move_iterator::operator++](#op_add_add)|Incrementa l'iteratore archiviato. Il comportamento esatto dipende dal fatto che si tratti di un'operazione di incremento prefisso o incremento suffisso.|
@@ -147,7 +147,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Iteratore da usare come iteratore archiviato.
 
 ### <a name="remarks"></a>Note
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*_Off*\
+@No__t_1 *_Off*
 Offset da aggiungere alla posizione corrente per determinare la nuova posizione corrente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -291,7 +291,7 @@ L'operatore restituisce `&**this`.
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-Il tipo `pointer` è un **typedef** basato sull'iteratore `RandomIterator` casuale per `move_iterator`e può essere usato in modo intercambiabile.
+Il tipo `pointer` è un **typedef** basato sull'iteratore casuale `RandomIterator` per `move_iterator` e può essere usato in modo intercambiabile.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -303,7 +303,7 @@ Il tipo è sinonimo di `RandomIterator`.
 
 ## <a name="reference"></a>  move_iterator::reference
 
-Il tipo `reference` è un **typedef** basato su `value_type&&` per `move_iterator`e può essere usato in modo intercambiabile `value_type&&`con.
+Il tipo `reference` è un **typedef** basato su `value_type&&` per `move_iterator` e può essere usato in modo interscambiabile con `value_type&&`.
 
 ```cpp
 typedef value_type&& reference;
@@ -330,4 +330,4 @@ Il tipo è un sinonimo del tratto dell'iteratore `typename iterator_traits<Rando
 [\<iterator>](../standard-library/iterator.md)\
 [Elementi Lvalue e Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)\
 [Costruttori di spostamento e operatori di assegnazione di spostamento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

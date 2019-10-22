@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 2eac3324516cf88a114064cf0145593c7bf4806b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f7f6f038c0e8bc922874388065ce06d76854bc1b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459460"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688314"
 ---
-# <a name="chisquareddistribution-class"></a>Classe chi_squared_distribution
+# <a name="chi_squared_distribution-class"></a>Classe chi_squared_distribution
 
 Genera una distribuzione chi quadrato.
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*\
+@No__t_1 *RealType*
 Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*GENERATORE URNG*\
+@No__t_1 *Generatore URNG*
 Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione chi quadrato. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione chi quadrato. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -83,7 +83,7 @@ La classe modello descrive una distribuzione che produce valori di un tipo a vir
 
 La funzione di proprietà `n()` restituisce il valore per il parametro di distribuzione archiviato `n`.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -238,7 +238,7 @@ explicit chi_squared_distribution(const param_type& parm);
 *n*\
 Parametro di distribuzione `n`.
 
-*parm*\
+\ di *parmigiana*
 Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -269,7 +269,7 @@ struct param_type {
 *n*\
 Parametro di distribuzione `n`.
 
-*Ok*\
+\ a *destra*
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note

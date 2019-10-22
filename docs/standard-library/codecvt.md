@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458595"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688288"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Definisce diverse classi modello che descrivono oggetti basati sulla classe modello [codecvt](../standard-library/codecvt-class.md). Questi oggetti possono fungere da facet delle [impostazioni locali](../standard-library/locale-class.md#facet_class) che controllano le conversioni tra una sequenza di `Elem` valori di tipo e una sequenza di valori di tipo **char**.
+Definisce diversi modelli di classe che descrivono oggetti basati sul modello di classe [codecvt](../standard-library/codecvt-class.md). Questi oggetti possono fungere da [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) che controllano le conversioni tra una sequenza di valori di tipo `Elem` e una sequenza di valori di tipo **char**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -50,7 +50,7 @@ Per i flussi di byte (archiviati in un file, trasmessi come sequenza di byte o a
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|Class|Descrizione|
 |-|-|
 |[codecvt_utf8](codecvt-utf8-class.md)|Rappresenta un facet di impostazioni locali che esegue la conversione tra caratteri wide codificati come UCS-2 o UCS-4 e un flusso di byte codificato come UTF-8.|
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Rappresenta un facet di impostazioni locali che esegue la conversione tra caratteri wide codificati come UTF-16 e un flusso di byte codificato come UTF-8.|

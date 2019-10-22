@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: c5e45af5d350ba9c3f1e4e240dec2c13366318c3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb72c3abbe87bc975dbc3c99ffab9e77635c9df5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457030"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689711"
 ---
-# <a name="fisherfdistribution-class"></a>Classe fisher_f_distribution
+# <a name="fisher_f_distribution-class"></a>Classe fisher_f_distribution
 
 Genera una distribuzione F di Fisher.
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*\
+@No__t_1 *RealType*
 Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*GENERATORE URNG*\
+@No__t_1 *Generatore URNG*
 Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione F di Fisher. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione F di Fisher. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ La classe modello descrive una distribuzione che produce valori di un tipo a vir
 
 Le funzioni di proprietà `m()` e `n()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati `m` e `n`, rispettivamente.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -248,13 +248,13 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*m*\
+\ *m*
 Parametro di distribuzione `m`.
 
 *n*\
 Parametro di distribuzione `n`.
 
-*parm*\
+\ di *parmigiana*
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -283,13 +283,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*m*\
+\ *m*
 Parametro di distribuzione `m`.
 
 *n*\
 Parametro di distribuzione `n`.
 
-*Ok*\
+\ a *destra*
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note

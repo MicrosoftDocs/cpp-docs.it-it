@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459264"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686002"
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
-*Ok*\
+\ a *destra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -115,7 +115,7 @@ La stringa che rappresenta la concatenazione delle stringhe di input.
 
 ### <a name="remarks"></a>Note
 
-Le funzioni eseguono ciascuna l'overload `operator+` per concatenare due oggetti della classe modello [basic_string](../standard-library/basic-string-class.md). Tutti effettivamente restituiscono `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Per ulteriori informazioni, vedere [Append](../standard-library/basic-string-class.md#append).
+Le funzioni di ogni overload `operator+` per concatenare due oggetti della classe [basic_string](../standard-library/basic-string-class.md)del modello di classe. Tutti effettivamente restituiscono `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Per ulteriori informazioni, vedere [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Esempio
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*Ok*\
+\ a *destra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*Ok*\
+\ a *destra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*Ok*\
+\ a *destra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*Ok*\
+\ a *destra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*_Ostr*\
+@No__t_1 *_Ostr*
 Flusso di output in cui scrivere.
 
-*Str*\
+\ *Str*
 Stringa da immettere nel flusso di output.
 
 ### <a name="return-value"></a>Valore restituito
@@ -575,7 +575,7 @@ Scrive il valore della stringa specificata nel flusso di output *_Ostr*.
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello consente di eseguire l'overload di **operator < <** per inserire un oggetto *Str* della classe modello [basic_string](../standard-library/basic-string-class.md) nel flusso  *\_OSTR*. La funzione restituisce `_Ostr.write( str.c_str, str.size )`effettivamente.
+La funzione di modello consente di eseguire l'overload di **operator < <** per inserire un oggetto *Str* del modello di classe [basic_string](../standard-library/basic-string-class.md) nel flusso *\_Ostr*. La funzione restituisce effettivamente `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*Ok*\
+\ a *destra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*Ok*\
+\ a *destra*
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -796,10 +796,10 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-*_Istr*\
+@No__t_1 *_Istr*
 Flusso di input usato per estrarre la sequenza
 
-*Ok*\
+\ a *destra*
 Stringa da estrarre dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito

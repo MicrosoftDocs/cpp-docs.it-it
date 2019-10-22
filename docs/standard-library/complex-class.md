@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453169"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688254"
 ---
 # <a name="complex-class"></a>Classe complex
 
-La classe modello descrive un oggetto che archivia due oggetti di tipo `Type`, uno che rappresenta la parte reale di un numero complesso e uno che rappresenta la parte immaginaria.
+Il modello di classe descrive un oggetto che archivia due oggetti di tipo `Type`, uno che rappresenta la parte reale di un numero complesso e uno che rappresenta la parte immaginaria.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,7 +40,7 @@ Oggetto della classe `Type`:
 
 In particolare, non possono esistere sottili differenze tra il costruttore di copia e la costruzione predefinita seguita dall'assegnazione. Nessuna delle operazioni sugli oggetti della classe `Type` può generare eccezioni.
 
-Per i tre tipi a virgola mobile esistono specializzazioni esplicite della classe modello complex. In questa implementazione, un valore di qualsiasi altro tipo `Type` è typecast a **Double** per i calcoli effettivi, con il **doppio** risultato assegnato nuovamente all'oggetto archiviato di `Type`tipo.
+Sono presenti specializzazioni esplicite di modelli di classe complessi per i tre tipi a virgola mobile. In questa implementazione, un valore di qualsiasi altro tipo `Type` è typecast a **Double** per i calcoli effettivi, con il **doppio** risultato assegnato nuovamente all'oggetto archiviato di tipo `Type`.
 
 ## <a name="members"></a>Members
 
@@ -91,18 +91,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametri
 
-*_RealVal*\
+@No__t_1 *_RealVal*
 Valore della parte reale usata per inizializzare il numero complesso da costruire.
 
-*_ImagVal*\
+@No__t_1 *_ImagVal*
 Valore della parte immaginaria usata per inizializzare il numero complesso da costruire.
 
-*complexNum*\
+\ *complexNum*
 Numero complesso le cui parti reale e immaginaria vengono usate per inizializzare il numero complesso da costruire.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza la parte reale archiviata  *\_* in RealVal e la parte immaginaria archiviata in  *\_Imagval*. Il secondo costruttore inizializza la parte reale archiviata `complexNum.real()` in e la parte immaginaria archiviata `complexNum.imag()`in.
+Il primo costruttore inizializza la parte reale archiviata per *\_RealVal* e la parte immaginaria archiviata *\_Imagval*. Il secondo costruttore inizializza la parte reale archiviata per `complexNum.real()` e la parte immaginaria archiviata `complexNum.imag()`.
 
 In questa implementazione, se un convertitore non supporta le funzioni del modello membro, il modello:
 
@@ -171,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Numero complesso di cui estrarre il valore immaginario.
 
 ### <a name="return-value"></a>Valore restituito
@@ -228,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -313,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -416,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum*\
+\ *complexNum*
 Numero complesso da sottrarre dal numero complesso di destinazione.
 
-*_RealPart*\
+@No__t_1 *_RealPart*
 Numero reale da sottrarre dal numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -524,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum*\
+\ *complexNum*
 Numero complesso da sottrarre dal numero complesso di destinazione.
 
-*_RealPart*\
+@No__t_1 *_RealPart*
 Numero reale da sottrarre dal numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -613,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operatore =
 
 Assegna un numero a un numero complesso di destinazione, in cui il numero assegnato può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene assegnato.
 
@@ -626,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -703,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Numero complesso di cui estrarre il valore reale.
 
 ### <a name="return-value"></a>Valore restituito
@@ -745,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Tipo che rappresenta il tipo di dati usato per rappresentare le parti reale e immaginaria di un numero complesso.
 
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Note
 
-`value_type`è un sinonimo del parametro di `Type` modello complesso della classe.
+`value_type` è un sinonimo del parametro di modello `Type` complesso di classe.
 
 ### <a name="example"></a>Esempio
 

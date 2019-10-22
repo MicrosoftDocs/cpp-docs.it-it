@@ -6,19 +6,19 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: cca38386892ce4df6bf9863e0cbac3dc16106d35
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e586a933c2a80b7e611bcd4b4714e300eb21a0ad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448658"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689566"
 ---
 # <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> Questa intestazione è obsoleta. L'alternativa è [ \<unordered_map >](unordered-map.md).
+> Questa intestazione è obsoleta. L'alternativa è [\<unordered_map >](unordered-map.md).
 
-Definisce le classi del modello del contenitore hash_map e hash_multimap e i relativi modelli di supporto.
+Definisce i modelli di classe del contenitore hash_map e hash_multimap e i relativi modelli di supporto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,7 +30,7 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 
 |Versione hash_map|Versione hash_multimap|Descrizione|
 |-----------------------|----------------------------|-----------------|
-|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Verifica se l'oggetto hash_map o hash_multimap a sinistra dell'operatore non è uguale all'oggetto hash_map o hash_multimap a destra.|
+|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[operatore! = (hash_multimap)](hash-map-operators.md#op_neq_mm)|Verifica se l'oggetto hash_map o hash_multimap a sinistra dell'operatore non è uguale all'oggetto hash_map o hash_multimap a destra.|
 |[operator== (hash_map)](hash-map-operators.md#op_eq_eq)|[operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Verifica se l'oggetto hash_map o hash_multimap a sinistra dell'operatore è uguale all'oggetto hash_map o hash_multimap a destra.|
 
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate
@@ -41,9 +41,9 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 
 ### <a name="classes"></a>Classi
 
-|Classe|DESCRIZIONE|
+|Class|Descrizione|
 |-|-|
-|[Classe hash_compare](hash-compare-class.md)|Descrive un oggetto che può essere usato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come oggetto di parametro `Traits` predefinito per ordinare ed eseguire l'hashing degli elementi in essi contenuti.|
+|[Classe hash_compare](hash-compare-class.md)|Descrive un oggetto che può essere usato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come oggetto predefinito `Traits` parametro per ordinare ed eseguire l'hashing degli elementi in essi contenuti.|
 |[Classe value_compare](value-compare-class.md)|Fornisce un oggetto funzione in grado di confrontare gli elementi di un oggetto hash_map comparando i valori delle chiavi per determinarne l'ordine relativo nell'oggetto hash_map.|
 |[Classe hash_map](hash-map-class.md)|Usata per archiviare e recuperare rapidamente i dati da una raccolta in cui ogni elemento è una coppia che ha una chiave di ordinamento con valore univoco e un valore di dati associato.|
 |[Classe hash_multimap](hash-multimap-class.md)|Usata per archiviare e recuperare rapidamente i dati da una raccolta in cui ogni elemento è una coppia con una chiave di ordinamento il cui valore non deve essere univoco e un valore di dati associato.|
@@ -57,5 +57,5 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459623"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688508"
 ---
-# <a name="weibulldistribution-class"></a>Classe weibull_distribution
+# <a name="weibull_distribution-class"></a>Classe weibull_distribution
 
 Genera una distribuzione di Weibull.
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*\
+@No__t_1 *RealType*
 Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione di Weibull. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione di Weibull. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -84,7 +84,7 @@ La classe modello descrive una distribuzione che produce valori di un tipo a vir
 
 Le funzioni di proprietà `a()` e `b()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati *a* e *b*.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -222,13 +222,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*un*\
+*\*
 Parametro di distribuzione `a`.
 
-*b*\
+\ *b*
 Parametro di distribuzione `b`.
 
-*parm*\
+\ di *parmigiana*
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -257,13 +257,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*un*\
+*\*
 Parametro di distribuzione `a`.
 
-*b*\
+\ *b*
 Parametro di distribuzione `b`.
 
-*Ok*\
+\ a *destra*
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note

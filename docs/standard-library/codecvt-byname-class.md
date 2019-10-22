@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459856"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688297"
 ---
-# <a name="codecvtbyname-class"></a>Classe codecvt_byname
+# <a name="codecvt_byname-class"></a>Classe codecvt_byname
 
-Classe modello derivata che descrive un oggetto che può essere utilizzato come facet di ordinamento delle impostazioni locali specificate, consentendo il recupero di informazioni relative alle conversioni specifiche di un'area culturale.
+Modello di classe derivata che descrive un oggetto che può fungere da facet di ordinamento delle impostazioni locali specificate, consentendo il recupero di informazioni specifiche di un'area culturale relativa alle conversioni.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -43,10 +43,10 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*_Locname*\
+@No__t_1 *_Locname*
 Impostazioni locali denominate.
 
-*_Refs*\
+@No__t_1 *_Refs*
 Conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note

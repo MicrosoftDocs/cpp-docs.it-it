@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6fca9b2130407b165a7a7bfb1fb2a9ec81774e20
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459383"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689883"
 ---
-# <a name="codecvtbase-class"></a>Classe codecvt_base
+# <a name="codecvt_base-class"></a>Classe codecvt_base
 
-Classe base per la classe Codecvt utilizzata per definire un tipo di enumerazione indicato come `result`, utilizzato come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.
+Classe base per la classe Codecvt utilizzata per definire un tipo di enumerazione denominato `result`, utilizzato come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,13 +38,13 @@ protected:
 
 ## <a name="remarks"></a>Note
 
-La classe descrive un'enumerazione comune a tutte le specializzazioni della classe modello [codecvt](../standard-library/codecvt-class.md). Il risultato dell'enumerazione descrive i possibili valori restituiti da [do_in](../standard-library/codecvt-class.md#do_in) o [do_out](../standard-library/codecvt-class.md#do_out):
+La classe descrive un'enumerazione comune a tutte le specializzazioni del modello di classe [codecvt](../standard-library/codecvt-class.md). Il risultato dell'enumerazione descrive i possibili valori restituiti da [do_in](../standard-library/codecvt-class.md#do_in) o [do_out](../standard-library/codecvt-class.md#do_out):
 
-- `ok`Se la conversione tra codifiche di caratteri interne ed esterne ha esito positivo.
+- `ok` se la conversione tra codifiche di caratteri interne ed esterne ha esito positivo.
 
-- `partial`Se la destinazione non è sufficientemente grande da consentire la conversione.
+- `partial` se la destinazione non è sufficientemente grande da consentire la conversione.
 
-- `error`Se la sequenza di origine non è in formato corretto.
+- `error` se la sequenza di origine non è in formato corretto.
 
 - `noconv` se la funzione non esegue alcuna conversione.
 

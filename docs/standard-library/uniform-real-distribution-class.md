@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 752226c9cacfdd36b93890502d62187f7b44a8da
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1c63002db7de4ebce348505c4e757e6901861a93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454943"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688817"
 ---
-# <a name="uniformrealdistribution-class"></a>Classe uniform_real_distribution
+# <a name="uniform_real_distribution-class"></a>Classe uniform_real_distribution
 
 Genera una distribuzione a virgola mobile uniforme (ogni valore è ugualmente probabile) all'interno di un intervallo di output che è inclusivo-inclusivo.
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*\
+@No__t_1 *RealType*
 Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione inclusiva-esclusiva che produce valori di un tipo a virgola mobile definito dall'utente con una distribuzione in cui ogni valore è ugualmente probabile. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione esclusiva inclusiva che produce valori di un tipo a virgola mobile integrale specificato dall'utente con una distribuzione, in modo che ogni valore sia ugualmente probabile. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -85,7 +85,7 @@ La classe modello descrive una distribuzione inclusiva-esclusiva che produce val
 
 Il membro della proprietà `a()` restituisce il limite minimo della distribuzione attualmente archiviato, mentre `b()` restituisce il limite massimo attualmente archiviato. Per questa classe di distribuzione, i valori minimo e massimo sono gli stessi restituiti dalle funzioni di proprietà comuni `min()` e `max()` descritte nell'argomento [\<random>](../standard-library/random.md).
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -189,13 +189,13 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*un*\
+*\*
 Limite inferiore per i valori casuali, inclusivo.
 
-*b*\
+\ *b*
 Limite superiore per i valori casuali, esclusivo.
 
-*parm*\
+\ di *parmigiana*
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -224,13 +224,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*un*\
+*\*
 Limite inferiore per i valori casuali, inclusivo.
 
-*b*\
+\ *b*
 Limite superiore per i valori casuali, esclusivo.
 
-*Ok*\
+\ a *destra*
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_assignable
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
-ms.openlocfilehash: 324e4a1f1bd3528f09f21c5e485ac814038b7517
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4b349d328da995105a6217f4ab597da5d7eafc38
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448373"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689497"
 ---
-# <a name="istriviallymoveassignable-class"></a>Classe is_trivially_move_assignable
+# <a name="is_trivially_move_assignable-class"></a>Classe is_trivially_move_assignable
 
 Verifica se il tipo ha un operatore di assegnazione di spostamento semplice.
 
@@ -26,7 +26,7 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*\
+@No__t_1 *Ty*
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
@@ -35,15 +35,11 @@ Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che
 
 Un operatore di assegnazione di spostamento per una classe *Ty* è semplice se:
 
-viene fornito in modo implicito
-
-la classe *Ty* non ha funzioni virtuali
-
-la classe *Ty* non ha basi virtuali
-
-le classi di tutti i membri dati non statici del tipo di classe hanno operatori di assegnazione di spostamento semplici
-
-le classi di tutti i membri dati non statici di tipo matrice della classe hanno operatori di assegnazione di spostamento semplici
+- viene fornito in modo implicito
+- la classe *Ty* non ha funzioni virtuali
+- la classe *Ty* non ha basi virtuali
+- le classi di tutti i membri dati non statici del tipo di classe hanno operatori di assegnazione di spostamento semplici
+- le classi di tutti i membri dati non statici di tipo matrice della classe hanno operatori di assegnazione di spostamento semplici
 
 ## <a name="requirements"></a>Requisiti
 

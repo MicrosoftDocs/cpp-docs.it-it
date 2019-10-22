@@ -21,14 +21,14 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458994"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685859"
 ---
-# <a name="studenttdistribution-class"></a>Classe student_t_distribution
+# <a name="student_t_distribution-class"></a>Classe student_t_distribution
 
 Genera una distribuzione Student-*t*.
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*\
+@No__t_1 *RealType*
 Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione *t*di Student. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione *t*di Student. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -177,7 +177,7 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 Parametro di distribuzione `n`.
 
-*parm*\
+\ di *parmigiana*
 Pacchetto di parametri usato per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -208,7 +208,7 @@ struct param_type {
 *n*\
 Parametro di distribuzione `n`.
 
-*Ok*\
+\ a *destra*
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note

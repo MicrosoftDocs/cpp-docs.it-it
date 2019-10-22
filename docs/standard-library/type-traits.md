@@ -7,14 +7,14 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455041"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684420"
 ---
-# <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
+# <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
 Definisce i modelli per le costanti in fase di compilazione che forniscono informazioni sulle proprietà dei rispettivi argomenti di tipo o producono tipi trasformati.
 
@@ -26,22 +26,22 @@ Definisce i modelli per le costanti in fase di compilazione che forniscono infor
 
 ## <a name="remarks"></a>Note
 
-Le classi e i modelli \<in type_traits > vengono usati per supportare l'inferenza del tipo, la classificazione e la trasformazione in fase di compilazione. Vengono inoltre usati per rilevare gli errori correlati ai tipi e per semplificare l'ottimizzazione del codice generico. I tratti di tipo unario descrivono una proprietà di un tipo, i tratti di tipo binario descrivono una relazione tra tipi e i tratti di trasformazione modificano una proprietà di un tipo.
+Le classi e i modelli in \<type_traits > vengono utilizzati per supportare l'inferenza del tipo, la classificazione e la trasformazione in fase di compilazione. Vengono inoltre usati per rilevare gli errori correlati ai tipi e per semplificare l'ottimizzazione del codice generico. I tratti di tipo unario descrivono una proprietà di un tipo, i tratti di tipo binario descrivono una relazione tra tipi e i tratti di trasformazione modificano una proprietà di un tipo.
 
-La classe `integral_constant` helper e le `true_type` specializzazioni del modello e `false_type` formano le classi base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo *include true*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo *include false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type).
+La classe helper `integral_constant` e le specializzazioni dei modelli `true_type` e `false_type` formano le classi base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo *include true*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo *include false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Un *modificatore di tipo* o *tratto di trasformazione* è un modello che accetta uno o più argomenti di modello e include un membro, `type`, che è sinonimo di tipo modificato.
 
 ### <a name="alias-templates"></a>Modelli di alias
 
-Per semplificare le espressioni di tratti di tipo, vengono `typename some_trait<T>::type` forniti i [modelli di alias](../cpp/aliases-and-typedefs-cpp.md) per, dove *some_trait* è il nome della classe modello. Ad esempio, [add_const](../standard-library/add-const-class.md) include il modello di alias per il rispettivo tipo `add_const_t`, definito come:
+Per semplificare le espressioni di tratti di tipo, vengono forniti [modelli di alias](../cpp/aliases-and-typedefs-cpp.md) per `typename some_trait<T>::type`, dove *some_trait* è il nome del modello di classe. Ad esempio, [add_const](../standard-library/add-const-class.md) include il modello di alias per il rispettivo tipo `add_const_t`, definito come:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Questi sono gli alias forniti per i `type` membri:
+Questi sono gli alias forniti per i membri `type`:
 
 ||||
 |-|-|-|
@@ -168,7 +168,7 @@ Modifiche costante-volatile
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Produce un  tipo const dal tipo.|
+|[add_const](../standard-library/add-const-class.md)|Produce un tipo **const** dal tipo.|
 |[add_volatile](../standard-library/add-volatile-class.md)|Produce un tipo **volatile** dal tipo.|
 |[add_cv](../standard-library/add-cv-class.md)|Produce un tipo **const volatile** dal tipo.|
 |[remove_const](../standard-library/remove-const-class.md)|Genera un tipo non costante dal tipo.|

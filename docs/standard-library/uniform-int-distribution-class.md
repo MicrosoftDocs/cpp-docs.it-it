@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7e24c320e909bb2d0471acdd275f89c43d3e44de
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454951"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684505"
 ---
-# <a name="uniformintdistribution-class"></a>Classe uniform_int_distribution
+# <a name="uniform_int_distribution-class"></a>Classe uniform_int_distribution
 
 Genera una distribuzione Integer uniforme (ogni valore è ugualmente probabile) all'interno di un intervallo di output è inclusivo-inclusivo.
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*IntType*\
-Il tipo di risultato Integer, il valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+@No__t_1 *intType*
+Il tipo di risultato Integer, il valore predefinito è **int**. Per i tipi possibili, vedere [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione inclusiva-inclusiva che produce valori di un tipo integrale definito dall'utente con una distribuzione in cui ogni valore è ugualmente probabile. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione inclusiva-inclusiva che produce valori di un tipo integrale specificato dall'utente con una distribuzione, in modo che ogni valore sia ugualmente probabile. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -85,7 +85,7 @@ La classe modello descrive una distribuzione inclusiva-inclusiva che produce val
 
 Il membro della proprietà `a()` restituisce il limite minimo della distribuzione attualmente archiviato, mentre `b()` restituisce il limite massimo attualmente archiviato. Per questa classe di distribuzione, i valori minimo e massimo sono gli stessi restituiti dalle funzioni di proprietà comuni `min()` e `max()`.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -191,13 +191,13 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*un*\
+*\*
 Limite inferiore per i valori casuali, inclusivo.
 
-*b*\
+\ *b*
 Limite superiore per i valori casuali, inclusivo.
 
-*parm*\
+\ di *parmigiana*
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*un*\
+*\*
 Limite inferiore per i valori casuali, inclusivo.
 
-*b*\
+\ *b*
 Limite superiore per i valori casuali, inclusivo.
 
-*Ok*\
+\ a *destra*
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note

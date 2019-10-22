@@ -2,15 +2,15 @@
 title: Contenitori della libreria standard C++
 ms.date: 11/04/2016
 helpviewer_keywords:
-- C++ Standard Library, template class containers
+- C++ Standard Library, class template containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449603"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686098"
 ---
 # <a name="c-standard-library-containers"></a>Contenitori della libreria standard C++
 
@@ -166,7 +166,7 @@ Tutti i contenitori sottopongono a overload l'operatore == per confrontare due c
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Confronto tra contenitori dissimili (C++14)
 
-In c++ 14 e versioni successive, è possibile confrontare contenitori diversi e/o tipi di elementi non simili usando uno degli overload `std::equal`della `std::mismatch`funzione, `std::is_permutation` o che accettano due intervalli completi. Questi overload consentono di confrontare i contenitori con lunghezze diverse. Questi overload sono molto meno soggetti a errori e ottimizzati in modo da restituire false in un tempo costante quando vengono confrontati i contenitori di lunghezze diverse. Di conseguenza, è consigliabile usare questi overload a meno che (1) si abbia un motivo molto chiaro per non farlo; (2) si usa un contenitore [std::list](../standard-library/list-class.md), che non trae vantaggio dalle ottimizzazioni a doppio intervallo.
+In C++ 14 e versioni successive, è possibile confrontare contenitori diversi e/o tipi di elementi non simili usando uno degli overload della funzione `std::equal`, `std::mismatch` o `std::is_permutation` che accettano due intervalli completi. Questi overload consentono di confrontare i contenitori con lunghezze diverse. Questi overload sono molto meno soggetti a errori e ottimizzati in modo da restituire false in un tempo costante quando vengono confrontati i contenitori di lunghezze diverse. Di conseguenza, è consigliabile usare questi overload a meno che (1) si abbia un motivo molto chiaro per non farlo; (2) si usa un contenitore [std::list](../standard-library/list-class.md), che non trae vantaggio dalle ottimizzazioni a doppio intervallo.
 
 ## <a name="see-also"></a>Vedere anche
 

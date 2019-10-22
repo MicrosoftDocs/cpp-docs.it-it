@@ -108,16 +108,16 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 056b7e47c474c64bf357523e2995ef49d456a9cd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e269028ff28b00586fd8d8dcef728f11037dfbc8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449181"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687897"
 ---
 # <a name="ios_base-class"></a>Classe ios_base
 
-La classe descrive le funzioni membro e di archiviazione comuni ai flussi di input e di output che non dipendono dai parametri di modello. La classe modello [basic_ios](../standard-library/basic-ios-class.md) descrive gli elementi comuni e dipendenti dai parametri modello.
+La classe descrive le funzioni membro e di archiviazione comuni ai flussi di input e di output che non dipendono dai parametri di modello. Il modello di classe [basic_ios](../standard-library/basic-ios-class.md) descrive le informazioni comuni e dipendenti dai parametri di modello.
 
 Un oggetto della classe ios_base archivia le informazioni di formattazione che sono costituite da:
 
@@ -199,7 +199,7 @@ Un oggetto della classe ios_base archivia anche informazioni sullo stato del flu
 
 |||
 |-|-|
-|[failure](#failure)|Classe membro che svolge la funzione di classe di base per tutte le eccezioni generate dalla funzione membro [clear](../standard-library/basic-ios-class.md#clear) nella classe modello [basic_ios](../standard-library/basic-ios-class.md).|
+|[failure](#failure)|La classe membro funge da classe di base per tutte le eccezioni generate dalla funzione membro [Clear](../standard-library/basic-ios-class.md#clear) nel modello di classe [basic_ios](../standard-library/basic-ios-class.md).|
 |[flags](#flags)|Imposta o restituisce le impostazioni dei flag correnti.|
 |[getloc](#getloc)|Restituisce l'oggetto delle impostazioni locali archiviate.|
 |[imbue](#imbue)|Modifica le impostazioni locali.|
@@ -243,7 +243,7 @@ Il tipo è costituito da un tipo non enumerato che descrive un oggetto in grado 
 
 - `copyfmt_event`, per identificare un callback che si verifica in prossimità della fine di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt), immediatamente prima che venga copiata la [maschera delle eccezioni](../standard-library/ios-base-class.md) .
 
-- `erase_event`, per identificare un callback che si verifica all'inizio di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt)o all'inizio di una chiamata al distruttore per  **\*questo**oggetto.
+- `erase_event`, per identificare un callback che si verifica all'inizio di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt)o all'inizio di una chiamata al distruttore per **\*this**.
 
 - `imbue_event`, per identificare un callback che si verifica alla fine di una chiamata a [imbue](#imbue), immediatamente prima della restituzione della funzione.
 
@@ -264,13 +264,13 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parametri
 
-*_E*\
+@No__t_1 *_E*
 [Evento](#event).
 
-*_Base*\
+@No__t_1 *_Base*
 Flusso in cui è stato chiamato l'evento.
 
-*_I*\
+@No__t_1 *_i*
 Numero definito dall'utente.
 
 ### <a name="remarks"></a>Note
@@ -344,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parametri
 
-*fmtfl*\
+\ *fmtfl*
 Nuova impostazione `fmtflags`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -465,7 +465,7 @@ locale getloc() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto delle impostazioni locali archiviato.
+L'oggetto delle impostazioni locali archiviato.
 
 ### <a name="example"></a>Esempio
 
@@ -495,7 +495,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametri
 
-*_Loc*\
+@No__t_1 *_Loc*
 Nuove impostazioni locali.
 
 ### <a name="return-value"></a>Valore restituito
@@ -504,7 +504,7 @@ Impostazioni locali precedenti.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro Archivia *_Loc* nell'oggetto delle impostazioni locali, quindi segnala l'evento di callback `imbue_event`e. Restituisce il valore archiviato precedente.
+La funzione membro Archivia *_Loc* nell'oggetto delle impostazioni locali, quindi segnala l'evento di callback e `imbue_event`. Restituisce il valore archiviato precedente.
 
 ### <a name="example"></a>Esempio
 
@@ -532,7 +532,7 @@ ios_base();
 
 ### <a name="remarks"></a>Note
 
-Il costruttore (protetto) non esegue alcuna operazione. Una chiamata successiva a **basic_ios::** [init](../standard-library/basic-ios-class.md#init) deve inizializzare l'oggetto prima che possa essere eliminato definitivamente. La classe ios_base, quindi, può essere usata in modo sicuro solo come classe di base per la classe modello [basic_ios](../standard-library/basic-ios-class.md).
+Il costruttore (protetto) non esegue alcuna operazione. Una chiamata successiva a **basic_ios::** [init](../standard-library/basic-ios-class.md#init) deve inizializzare l'oggetto prima che possa essere eliminato definitivamente. Pertanto, l'unico utilizzo sicuro per la classe ios_base è come classe di base per il modello di classe [basic_ios](../standard-library/basic-ios-class.md).
 
 ## <a name="iostate"></a>iostate
 
@@ -560,7 +560,7 @@ Il tipo è costituito da un tipo maschera di bit che descrive un oggetto in grad
 
 - `failbit`, per registrare un errore per l'estrazione di un campo valido da un flusso.
 
-Inoltre, un valore utile è `goodbit`, in cui nessuno dei bit indicati in precedenza è impostato (`goodbit` è sicuramente zero).
+Inoltre, viene `goodbit` un valore utile, in cui nessuno dei bit indicati in precedenza è impostato (`goodbit` è sicuramente zero).
 
 ## <a name="iword"></a>iword
 
@@ -572,7 +572,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parametri
 
-*idx*\
+*idx* \
 Indice del valore da archiviare come `iword`.
 
 ### <a name="remarks"></a>Note
@@ -607,9 +607,9 @@ public:
 
 Il tipo è costituito da un `bitmask type` che descrive un oggetto in grado di archiviare la modalità di apertura per vari oggetti iostream. I valori flag distinti (elementi) sono:
 
-- `app`, per cercare alla fine di un flusso prima di ogni inserimento.
+- `app`, per cercare la fine di un flusso prima di ogni inserimento.
 
-- `ate`, per cercare alla fine di un flusso quando viene creato per la prima volta l'oggetto di controllo.
+- `ate`, per eseguire la ricerca alla fine di un flusso quando viene creato per la prima volta l'oggetto di controllo.
 
 - `binary`, per leggere un file come flusso binario, anziché come flusso di testo.
 
@@ -637,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operatore =
 
 L'operatore di assegnazione per oggetti ios_base.
 
@@ -647,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `ios_base`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -671,7 +671,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parametri
 
-*_Prec*\
+@No__t_1 *_Prec*
 Numero di cifre significative da visualizzare o numero di cifre dopo il separatore decimale nella notazione fissa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -716,7 +716,7 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parametri
 
-*_Idx*\
+@No__t_1 *_Idx*
 Indice del valore da archiviare come `pword`.
 
 ### <a name="remarks"></a>Note
@@ -742,15 +742,15 @@ void register_callback(
 
 ### <a name="parameters"></a>Parametri
 
-*PFN*\
+\ *PFN*
 Puntatore alla funzione di callback.
 
-*idx*\
+*idx* \
 Numero definito dall'utente.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro inserisce la coppia `{pfn, idx}` nello stack di [callback](../standard-library/ios-base-class.md)dello stack di callback archiviato. Quando viene segnalato un evento di callback **EV** , le funzioni vengono chiamate, in ordine inverso del registro di sistema `(*pfn)(ev, *this, idx)`, dall'espressione.
+La funzione membro inserisce la coppia `{pfn, idx}` nello [stack di callback](../standard-library/ios-base-class.md)dello stack di callback archiviato. Quando viene segnalato un evento di callback **EV** , le funzioni vengono chiamate, in ordine inverso del registro di sistema, dall'espressione `(*pfn)(ev, *this, idx)`.
 
 ### <a name="example"></a>Esempio
 
@@ -860,7 +860,7 @@ namespace std {
 
 Il tipo è un tipo enumerato che descrive un oggetto in grado di archiviare la modalità di ricerca utilizzata come argomento per le funzioni membro di diverse classi iostream. I valori flag distinti sono:
 
-- `beg`, per cercare (modificare la posizione di lettura o scrittura corrente) rispetto all'inizio di una sequenza (matrice, flusso o file).
+- `beg`, per eseguire la ricerca (modificare la posizione di lettura o scrittura corrente) rispetto all'inizio di una sequenza (matrice, flusso o file).
 
 - `cur`, per eseguire la ricerca relativa alla posizione corrente all'interno di una sequenza.
 
@@ -904,10 +904,10 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parametri
 
-*_Mask*\
+@No__t_1 *_Mask*
 Flag da attivare.
 
-*_Unset*\
+@No__t_1 *_Unset*
 Flag da disattivare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -916,7 +916,7 @@ Flag di formato precedenti
 
 ### <a name="remarks"></a>Note
 
-La prima funzione membro chiama in modo efficace  *\_* i [flag](#flags)( &#124;  *\_flag*mask), imposta i bit selezionati, quindi restituisce i flag di formato precedenti. La seconda funzione membro chiama `flags(_Mask & fmtfl, flags & ~_Mask)` in modo efficace (sostituisce i bit selezionati in una maschera) e quindi restituisce i flag di formato precedenti.
+La prima funzione membro chiama in modo efficace i [flag](#flags)( *\_Mask* &#124; *\_Flags*) (imposta i bit selezionati), quindi restituisce i flag di formato precedenti. La seconda funzione membro chiama in modo efficace `flags(_Mask & fmtfl, flags & ~_Mask)` (sostituisce i bit selezionati in una maschera) e quindi restituisce i flag di formato precedenti.
 
 ### <a name="example"></a>Esempio
 
@@ -954,7 +954,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parametri
 
-*_Sync*\
+@No__t_1 *_Sync*
 Indica se tutti i flussi sono sincronizzati con `stdio`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -963,7 +963,7 @@ Impostazione precedente per questa funzione.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro statica archivia un `stdio` flag di sincronizzazione, che inizialmente è **true**. Se il valore è **true**, questo flag garantisce che le operazioni nello stesso file vengano sincronizzate correttamente tra le funzioni [iostreams](../standard-library/iostreams-conventions.md) e C++ quelle definite nella libreria standard. In caso contrario, la sincronizzazione può essere garantita o meno, ma le prestazioni potrebbero essere migliorate. La funzione Archivia *_Sync* nel `stdio` flag Sync e restituisce il relativo valore archiviato precedente. È possibile chiamarlo in modo affidabile solo prima di eseguire qualsiasi operazione sui flussi standard.
+La funzione membro statica archivia un flag di sincronizzazione `stdio`, che inizialmente è **true**. Se il valore è **true**, questo flag garantisce che le operazioni nello stesso file vengano sincronizzate correttamente tra le funzioni [iostreams](../standard-library/iostreams-conventions.md) e C++ quelle definite nella libreria standard. In caso contrario, la sincronizzazione può essere garantita o meno, ma le prestazioni potrebbero essere migliorate. La funzione Archivia *_Sync* nel flag `stdio` Sync e restituisce il relativo valore archiviato precedente. È possibile chiamarlo in modo affidabile solo prima di eseguire qualsiasi operazione sui flussi standard.
 
 ## <a name="unsetf"></a>unsetf
 
@@ -977,16 +977,16 @@ void unsetf(
 
 ### <a name="parameters"></a>Parametri
 
-*_Mask*\
+@No__t_1 *_Mask*
 Flag che si vuole disattivare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro chiama in modo efficace [flags](#flags)(`~` *_Mask* **& flags**) (Cancella i bit selezionati).
+La funzione membro chiama in modo efficace i [flag](#flags)(`~` *_Mask* **& flag**) (Cancella i bit selezionati).
 
 ### <a name="example"></a>Esempio
 
-Vedere [ios_base:: setf](#setf) per un esempio di utilizzo `unsetf`di.
+Per un esempio di utilizzo di `unsetf`, vedere [ios_base:: setf](#setf) .
 
 ## <a name="width"></a>Larghezza
 
@@ -1001,7 +1001,7 @@ streamsize width(
 
 ### <a name="parameters"></a>Parametri
 
-*_Wide*\
+@No__t_1 *_Wide*
 Dimensione desiderata del flusso di output.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1081,6 +1081,6 @@ testing
 
 ## <a name="see-also"></a>Vedere anche
 
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

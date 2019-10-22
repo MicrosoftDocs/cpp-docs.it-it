@@ -14,19 +14,19 @@ helpviewer_keywords:
 - <= operator, with specific objects
 - <= operator
 ms.assetid: 338577dd-dc88-4a2b-9e12-0379c54fc8a2
-ms.openlocfilehash: c559838f66c483f7c1a76fd17f6a4c07b8aa1fec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fff370d595afaf4b4692b4166f248b56a72efcb8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456611"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689172"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;sample container&gt;)
 
 > [!NOTE]
 > Questo argomento è disponibile nella documentazione C++ di Microsoft come esempio non funzionale dei contenitori usati nella libreria C++ standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
 
-Esegue l'overload di **operator<=** per confrontare due oggetti della classe modello [Container](../standard-library/sample-container-class.md).
+Consente di eseguire l'overload di **operator < =** per confrontare due oggetti del [contenitore](../standard-library/sample-container-class.md)di modelli di classe.
 
 ## <a name="syntax"></a>Sintassi
 

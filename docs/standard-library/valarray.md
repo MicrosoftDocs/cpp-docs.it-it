@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed90273fe293ae2e08c3c91762c12c42bb368c16
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448348"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688770"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
-Definisce la classe modello valarray e numerose funzioni e classi modello.
+Definisce il modello di classe valarray e numerose funzioni e modelli di classe di supporto.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -24,11 +24,11 @@ Definisce la classe modello valarray e numerose funzioni e classi modello.
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> La \<libreria > valarray utilizza l'istruzione ' #include < initializer_list >'.
+> La libreria > \<valarray usa l'istruzione ' #include < initializer_list >'.
 
 ## <a name="remarks"></a>Note
 
-A queste funzioni e classi modello sono consentiti livelli insoliti di libertà ai fini del miglioramento delle prestazioni. In particolare, qualsiasi funzione che `valarray<T1>` restituisce il tipo può restituire un oggetto di un altro tipo T2. In tal caso, qualsiasi funzione che accetta uno o più argomenti di tipo `valarray<T2>` deve avere overload che accettano combinazioni arbitrarie di questi argomenti, ognuno sostituito da un argomento di tipo T2.
+Questi modelli e funzioni di classe sono consentiti a una latitudine insolita per migliorare le prestazioni. In particolare, qualsiasi funzione che restituisce il tipo `valarray<T1>` può restituire un oggetto di un altro tipo T2. In tal caso, qualsiasi funzione che accetta uno o più argomenti di tipo `valarray<T2>` deve avere overload che accettano combinazioni arbitrarie di questi argomenti, ognuno sostituito da un argomento di tipo T2.
 
 ## <a name="members"></a>Members
 
@@ -66,7 +66,7 @@ A queste funzioni e classi modello sono consentiti livelli insoliti di libertà 
 |[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Ottiene l'operatore `AND` logico tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato del tipo di elemento dell'oggetto valarray.|
 |[operator>](../standard-library/valarray-operators.md#op_gt)|Verifica se gli elementi di un oggetto valarray sono maggiori degli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o minori di un valore specificato del tipo di elemento dell'oggetto valarray.|
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Verifica se gli elementi di un oggetto valarray sono maggiori o uguali agli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o uguali o minori o uguali a un valore specificato.|
-|[operator>> ](../standard-library/valarray-operators.md#op_gt_gt)|Sposta verso destra i bit per ogni elemento di un oggetto valarray di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto valarray.|
+|[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|Sposta verso destra i bit per ogni elemento di un oggetto valarray di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto valarray.|
 |[operator<](../standard-library/valarray-operators.md#op_lt)|Verifica se gli elementi di un oggetto valarray sono minori degli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o minori di un valore specificato.|
 |[operator<=](../standard-library/valarray-operators.md#op_lt_eq)|Verifica se gli elementi di un oggetto valarray sono minori o uguali agli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o uguali o minori o uguali a un valore specificato.|
 |[operator<<](../standard-library/valarray-operators.md#op_lt_lt)|Sposta verso sinistra i bit per ogni elemento di un oggetto valarray di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto valarray.|
@@ -84,18 +84,18 @@ A queste funzioni e classi modello sono consentiti livelli insoliti di libertà 
 |||
 |-|-|
 |[Classe gslice](../standard-library/gslice-class.md)|Classe di utilità per l'oggetto valarray usato per definire sezioni multidimensionali di un oggetto valarray.|
-|[Classe gslice_array](../standard-library/gslice-array-class.md)|Classe modello ausiliaria interna che supporta oggetti sezione generale fornendo operazioni tra matrici di subset definite dalla sezione generale di un oggetto valarray.|
-|[Classe indirect_array](../standard-library/indirect-array-class.md)|Classe modello ausiliaria interna che supporta oggetti che sono subset di oggetti valarray fornendo operazioni tra matrici di subset definite specificando un subset di indici di un oggetto valarray padre.|
-|[Classe mask_array](../standard-library/mask-array-class.md)|Classe modello ausiliaria interna che supporta oggetti che sono subset di oggetti valarray padre, specificati con un'espressione booleana, fornendo operazioni tra le matrici di subset.|
+|[Classe gslice_array](../standard-library/gslice-array-class.md)|Modello di classe ausiliario interno che supporta oggetti sezione generale fornendo operazioni tra matrici di subset definite dalla sezione generale di un oggetto valarray.|
+|[Classe indirect_array](../standard-library/indirect-array-class.md)|Modello di classe ausiliario interno che supporta oggetti che sono subset di oggetti valarray fornendo operazioni tra matrici di subset definite specificando un subset di indici di un oggetto valarray padre.|
+|[Classe mask_array](../standard-library/mask-array-class.md)|Modello di classe ausiliario interno che supporta oggetti che sono subset di oggetti valarray padre, specificati con un'espressione booleana, fornendo operazioni tra le matrici di subset.|
 |[Classe slice](../standard-library/slice-class.md)|Classe di utilità per valarray usata per definire subset simili a vettori unidimensionali di un oggetto valarray.|
-|[Classe slice_array](../standard-library/slice-array-class.md)|Classe modello ausiliaria interna che supporta oggetti sezione fornendo operazioni tra matrici di subset definite dalla sezione di un oggetto valarray.|
-|[Classe valarray](../standard-library/valarray-class.md)|La classe modello descrive un oggetto che controlla una sequenza di elementi di tipo `Type` archiviati come matrice e progettati per l'esecuzione di operazioni matematiche ad alta velocità, ottimizzate per le prestazioni di calcolo.|
+|[Classe slice_array](../standard-library/slice-array-class.md)|Modello di classe ausiliario interno che supporta gli oggetti Slice fornendo operazioni tra matrici di subset definite dalla sezione di un oggetto valarray.|
+|[Classe valarray](../standard-library/valarray-class.md)|Il modello di classe descrive un oggetto che controlla una sequenza di elementi di tipo `Type` archiviati come matrice e progettati per l'esecuzione di operazioni matematiche ad alta velocità, ottimizzate per le prestazioni di calcolo.|
 
 ### <a name="specializations"></a>Specializzazioni
 
 |||
 |-|-|
-|[Classe valarray\<bool>](../standard-library/valarray-bool-class.md)|Una versione specializzata della classe modello valarray\<**Type**> agli elementi di tipo **bool**.|
+|[Classe valarray\<bool>](../standard-library/valarray-bool-class.md)|Una versione specializzata del modello di classe valarray \<**tipo**> a elementi di tipo **bool**.|
 
 ## <a name="see-also"></a>Vedere anche
 

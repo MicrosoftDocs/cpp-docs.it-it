@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 28c9301d270ef516a1acc59f6ab06f0e61a1c9c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456351"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687933"
 ---
-# <a name="independentbitsengine-class"></a>Classe independent_bits_engine
+# <a name="independent_bits_engine-class"></a>Classe independent_bits_engine
 
 Genera una sequenza casuale di numeri con un numero specificato di bit tramite la creazione di nuovi pacchetti di bit dai valori restituiti dal motore di base corrispondente.
 
@@ -26,13 +26,13 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*Motore*\
+@No__t_1 del *motore*
 Tipo del motore di base.
 
-*W*\
-**Dimensione parola**. Dimensione, in bit, di ogni numero generato. **Precondizione:** `0 < W ≤ numeric_limits<UIntType>::digits`
+@No__t_1 *W*
+**Dimensione parola**. Dimensione, in bit, di ogni numero generato. **Precondizione**:`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*\
+@No__t_1 *UIntType*
 Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Members
@@ -46,7 +46,7 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello descrive un *adattatore del motore* che produce valori riimballando i bit dai valori restituiti dal motore di base, ottenendo i valori *W*-bit.
+Questo modello di classe descrive un *adattatore del motore* che produce valori riimballando i bit dai valori restituiti dal motore di base, ottenendo i valori *W*-bit.
 
 ## <a name="requirements"></a>Requisiti
 

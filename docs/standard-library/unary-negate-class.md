@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240537"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684438"
 ---
-# <a name="unarynegate-class"></a>Classe unary_negate
+# <a name="unary_negate-class"></a>Classe unary_negate
 
-Classe modello che fornisce una funzione membro che nega il valore restituito di una funzione unaria specificata. Deprecata in c++17 in favore di [not_fn](functional-functions.md#not_fn).
+Modello di classe che fornisce una funzione membro che nega il valore restituito di una funzione unaria specificata. Deprecato in C++ 17 a favore di [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,10 +31,10 @@ class unary_negate
 
 ### <a name="parameters"></a>Parametri
 
-*Func*\
+@No__t_1 *Func*
 La funzione unaria da negare.
 
-*A sinistra*\
+\ a *sinistra*
 Operando della funzione unaria da negare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -43,9 +43,9 @@ Negazione della funzione unaria.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia di un oggetto funzione unaria  *\_Func*. Definisce la relativa funzione membro `operator()` prevede la restituzione `!_Func(left)`.
+Il modello di classe archivia una copia di un oggetto funzione unaria *\_Func*. Definisce la funzione membro `operator()` come restituito `!_Func(left)`.
 
-Il costruttore di `unary_negate` viene usato raramente in modo diretto. La funzione di supporto [not1](../standard-library/functional-functions.md#not1) costituisce un modo più semplice per dichiarare e usare il predicato adattatore **binary_negator**.
+Il costruttore di `unary_negate` viene usato di rado in modo diretto. La funzione di supporto [not1](../standard-library/functional-functions.md#not1) costituisce un modo più semplice per dichiarare e usare il predicato adattatore **binary_negator**.
 
 ## <a name="example"></a>Esempio
 

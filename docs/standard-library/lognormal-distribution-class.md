@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453815"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687792"
 ---
-# <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
+# <a name="lognormal_distribution-class"></a>Classe lognormal_distribution
 
 Genera una distribuzione lognormale.
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*\
+@No__t_1 *RealType*
 Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione normale dei log. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione normale dei log. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -82,7 +82,7 @@ La classe modello descrive una distribuzione che produce valori di un tipo integ
 
 Le funzioni di proprietà `m()` e `s()` restituiscono i valori per i parametri di distribuzione archiviati, rispettivamente *m* e *s*.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*m*\
+\ *m*
 Parametro di distribuzione `m`.
 
-*s*\
+\ *s*
 Parametro di distribuzione `s`.
 
-*parm*\
+\ di *parmigiana*
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*m*\
+\ *m*
 Parametro di distribuzione `m`.
 
-*s*\
+\ *s*
 Parametro di distribuzione `s`.
 
-*Ok*\
+\ a *destra*
 Struttura `param_type` usata per il confronto.
 
 ### <a name="remarks"></a>Note

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb00945084affb2be9299953e5ca9352c56d3b32
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454401"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688097"
 ---
-# <a name="discardblockengine-class"></a>Classe discard_block_engine
+# <a name="discard_block_engine-class"></a>Classe discard_block_engine
 
 Genera una sequenza casuale, eliminando i valori restituiti dal motore di base corrispondente.
 
@@ -26,14 +26,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*Motore*\
+@No__t_1 del *motore*
 Tipo del motore di base.
 
-*P*\
+@No__t_1 *P*
 **Dimensioni del blocco**. Numero di valori in ogni blocco.
 
 *R*\
-**Blocco usato**. Numero di valori usati in ogni blocco. Il resto viene rimosso (`P` - `R`). **Precondizione:** `0 < R ≤ P`
+**Blocco usato**. Numero di valori usati in ogni blocco. Il resto viene scartato (`P`  -  `R`). **Precondizione**:`0 < R ≤ P`
 
 ## <a name="members"></a>Members
 
@@ -46,7 +46,7 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello descrive un adattatore del motore che produce valori scartando alcuni dei valori restituiti dal rispettivo motore di base.
+Questo modello di classe descrive un adattatore del motore che produce valori ignorando alcuni dei valori restituiti dal motore di base.
 
 ## <a name="requirements"></a>Requisiti
 

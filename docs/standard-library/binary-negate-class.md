@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: d93ead4f301b6c5df918a6f402cea6963a9535e1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243361"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688395"
 ---
-# <a name="binarynegate-class"></a>Classe binary_negate
+# <a name="binary_negate-class"></a>Classe binary_negate
 
-Classe modello che fornisce una funzione membro che nega il valore restituito di una funzione binaria specificata. Deprecata in c++17 in favore di [not_fn](functional-functions.md#not_fn).
+Modello di classe che fornisce una funzione membro che nega il valore restituito di una funzione binaria specificata. Deprecato in C++ 17 a favore di [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,13 +33,13 @@ class binary_negate
 
 ### <a name="parameters"></a>Parametri
 
-*Func*\
+@No__t_1 *Func*
 La funzione binaria da negare.
 
-*A sinistra*\
+\ a *sinistra*
 L'operando di sinistra della funzione binaria da negare.
 
-*Ok*\
+\ a *destra*
 L'operando di destra della funzione binaria da negare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -48,9 +48,9 @@ La negazione della funzione binaria.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia di un oggetto funzione binaria *Func*. Definisce la relativa funzione membro `operator()` prevede la restituzione `!Func(left, right)`.
+Il modello di classe archivia una copia di un oggetto funzione binario *Func*. Definisce la funzione membro `operator()` come restituito `!Func(left, right)`.
 
-Il costruttore di `binary_negate` viene usato raramente in modo diretto. La funzione di supporto [not2](../standard-library/functional-functions.md#not2) in genere è preferibile per dichiarare e usare il predicato adattatore **binary_negator**.
+Il costruttore di `binary_negate` viene usato di rado in modo diretto. La funzione di supporto [not2](../standard-library/functional-functions.md#not2) in genere è preferibile per dichiarare e usare il predicato adattatore **binary_negator**.
 
 ## <a name="example"></a>Esempio
 

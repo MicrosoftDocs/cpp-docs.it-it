@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 8df9e927c430f3b94f5857bf18f575e79d6b922a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 45776754bd0854aeb85382eda95891a6832ca09e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453428"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689971"
 ---
-# <a name="basicregex-class"></a>Classe basic_regex
+# <a name="basic_regex-class"></a>Classe basic_regex
 
 Esegue il wrapping di un'espressione regolare.
 
@@ -26,21 +26,21 @@ class basic_regex
 
 ## <a name="parameters"></a>Parametri
 
-*Elem*\
+*Elem* \
 Tipo di elementi di cui trovare una corrispondenza.
 
-*RXtraits*\
+@No__t_1 *RXtraits*
 Classe traits per gli elementi.
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto contenente un'espressione regolare. Gli oggetti di questa classe modello possono essere passati alle funzioni di modello [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)e [regex_replace](../standard-library/regex-functions.md#regex_replace), insieme agli argomenti stringa di testo appropriati, per cercare il testo che corrisponde all'espressione regolare. Esistono due specializzazioni di questa classe modello, con le definizioni di tipo [Regex](../standard-library/regex-typedefs.md#regex) per gli elementi di tipo **char**e [wregex](../standard-library/regex-typedefs.md#wregex) per gli elementi di tipo **wchar_t**.
+Il modello di classe descrive un oggetto che contiene un'espressione regolare. Gli oggetti di questo modello di classe possono essere passati alle funzioni di modello [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)e [regex_replace](../standard-library/regex-functions.md#regex_replace), insieme agli argomenti stringa di testo appropriati, per cercare il testo che corrisponde all'espressione regolare. Esistono due specializzazioni di questo modello di classe, con le definizioni di tipo [Regex](../standard-library/regex-typedefs.md#regex) per gli elementi di tipo **char**e [wregex](../standard-library/regex-typedefs.md#wregex) per gli elementi di tipo **wchar_t**.
 
-L'argomento di modello *RXtraits* descrive le varie proprietà importanti della sintassi delle espressioni regolari supportate dalla classe modello. Una classe che specifica questi tratti dell'espressione regolare deve avere la stessa interfaccia esterna di un oggetto della classe di modello [regex_traits](../standard-library/regex-traits-class.md).
+L'argomento di modello *RXtraits* descrive le varie proprietà importanti della sintassi delle espressioni regolari supportate dal modello di classe. Una classe che specifica questi tratti dell'espressione regolare deve avere la stessa interfaccia esterna di un oggetto di tipo [Classe regex_traits](../standard-library/regex-traits-class.md).
 
 Alcune funzioni accettano una sequenza di operandi che definisce un'espressione regolare. È possibile specificare tale sequenza di operandi in diversi modi:
 
-`ptr`-una sequenza con terminazione null (ad esempio una stringa C, per *elem* di tipo **char**) a partire `ptr` da (che non deve essere un puntatore null), in cui l'elemento di terminazione `value_type()` è il valore e non fa parte della sequenza dell'operando
+`ptr`: una sequenza con terminazione null, ad esempio una stringa C, per *elem* di tipo **char**, a partire da `ptr` (che non deve essere un puntatore null), in cui l'elemento di terminazione è il valore `value_type()` e non fa parte della sequenza di operandi
 
 `ptr`, `count`: una sequenza di elementi `count` che inizia con `ptr` (che non deve essere un puntatore Null)
 
@@ -54,18 +54,18 @@ Queste funzioni membro accettano anche un argomento `flags` che specifica divers
 
 ### <a name="members"></a>Members
 
-|Member|Default Value|
+|Member|Valore predefinito|
 |-|-|
 |public static const flag_type icase|regex_constants::icase|
-|public static const flag_type NoSubs|regex_constants::nosubs|
-|public static const flag_type Optimize|regex_constants::optimize|
+|public static const flag_type NoSubs|regex_constants:: NoSubs|
+|public static const flag_type Optimize|regex_constants:: Optimize|
 |regole di confronto flag_type statico public const|regex_constants:: COLLATE|
-|public static const flag_type ECMAScript|regex_constants::ECMAScript|
-|public static const flag_type Basic|regex_constants::basic|
-|public static const flag_type esteso|regex_constants::extended|
-|public static const flag_type awk|regex_constants::awk|
-|public static const flag_type grep|regex_constants::grep|
-|public static const flag_type egrep|regex_constants::egrep|
+|public static const flag_type ECMAScript|regex_constants:: ECMAScript|
+|public static const flag_type Basic|regex_constants:: Basic|
+|public static const flag_type esteso|regex_constants:: Extended|
+|public static const flag_type awk|regex_constants:: awk|
+|public static const flag_type grep|regex_constants:: grep|
+|public static const flag_type egrep|regex_constants:: egrep|
 |tratti RXtraits privati||
 
 ### <a name="constructors"></a>Costruttori
@@ -84,7 +84,7 @@ Queste funzioni membro accettano anche un argomento `flags` che specifica divers
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[assign](#assign)|Assegna un valore all'oggetto di espressione regolare.|
 |[flags](#flags)|Restituisce i flag delle opzioni della sintassi.|
@@ -95,7 +95,7 @@ Queste funzioni membro accettano anche un argomento `flags` che specifica divers
 
 ### <a name="operators"></a>Operatori
 
-|Operator|Descrizione|
+|??|Descrizione|
 |-|-|
 |[operator=](#op_eq)|Assegna un valore all'oggetto di espressione regolare.|
 
@@ -230,37 +230,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Parametri
 
-*STtraits*\
+@No__t_1 *STtraits*
 Classe traits per un'origine di stringa.
 
-*STalloc*\
+@No__t_1 *STalloc*
 Classe allocator per un'origine di stringa.
 
-*InIt*\
+@No__t_1 *init*
 Tipo di iteratore di input per un'origine di intervallo.
 
-*Ok*\
+\ a *destra*
 Origine regex da copiare.
 
-*PTR*\
+\ *ptr*
 Puntatore all'inizio della sequenza da copiare.
 
-*Bandiere*\
+*flag* \
 Flag di opzione sintassi da aggiungere durante la copia.
 
-*> Len/TD*\
+*> Len/TD* \
 Lunghezza della sequenza da copiare.
 
-*Str*\
+\ *Str*
 Stringa da copiare.
 
-*prima*\
+*primo* \
 Inizio della sequenza da copiare.
 
-*Ultima*\
+*ultimo* \
 Fine della sequenza da copiare.
 
-*IList*\
+*IList* \
 Initializer_list da copiare.
 
 ### <a name="remarks"></a>Note
@@ -304,37 +304,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Parametri
 
-*STtraits*\
+@No__t_1 *STtraits*
 Classe traits per un'origine di stringa.
 
-*STalloc*\
+@No__t_1 *STalloc*
 Classe allocator per un'origine di stringa.
 
-*InIt*\
+@No__t_1 *init*
 Tipo di iteratore di input per un'origine di intervallo.
 
-*Ok*\
+\ a *destra*
 Origine regex da copiare.
 
-*PTR*\
+\ *ptr*
 Puntatore all'inizio della sequenza da copiare.
 
-*Bandiere*\
+*flag* \
 Flag di opzione sintassi da aggiungere durante la copia.
 
-*> Len/TD*\
+*> Len/TD* \
 Lunghezza della sequenza da copiare.
 
-*Str*\
+\ *Str*
 Stringa da copiare.
 
-*prima*\
+*primo* \
 Inizio della sequenza da copiare.
 
-*Ultima*\
+*ultimo* \
 Fine della sequenza da copiare.
 
-*IList*\
+*IList* \
 Initializer_list da copiare.
 
 ### <a name="remarks"></a>Note
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametri
 
-*loc*\
+\ *loc*
 Oggetto impostazioni locali da archiviare.
 
 ### <a name="remarks"></a>Note
@@ -437,16 +437,16 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Parametri
 
-*STtraits*\
+@No__t_1 *STtraits*
 Classe traits per un'origine di stringa.
 
-*STalloc*\
+@No__t_1 *STalloc*
 Classe allocator per un'origine di stringa.
 
-*Ok*\
+\ a *destra*
 Origine regex da copiare.
 
-*Str*\
+\ *Str*
 Stringa da copiare.
 
 ### <a name="remarks"></a>Note
@@ -463,7 +463,7 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 L'oggetto di espressione regolare con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
@@ -485,9 +485,9 @@ Il tipo è un sinonimo del parametro di modello *elem*.
 ## <a name="see-also"></a>Vedere anche
 
 [\<regex>](../standard-library/regex.md)\
-[regex_match](../standard-library/regex-functions.md#regex_match)\
-[regex_search](../standard-library/regex-functions.md#regex_search)\
-[regex_replace](../standard-library/regex-functions.md#regex_replace)\
+\ [regex_match](../standard-library/regex-functions.md#regex_match)
+\ [regex_search](../standard-library/regex-functions.md#regex_search)
+\ [regex_replace](../standard-library/regex-functions.md#regex_replace)
 [regex](../standard-library/regex-typedefs.md#regex)\
 [wregex](../standard-library/regex-typedefs.md#wregex)\
 [Classe regex_traits](../standard-library/regex-traits-class.md)

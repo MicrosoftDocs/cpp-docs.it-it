@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 10cd1d51c2cd6053dcbaa0f5bf1548f80ed01659
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448232"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690058"
 ---
 # <a name="ltallocatorsgt-macros"></a>Macro &lt;allocators&gt;
 
@@ -30,7 +30,7 @@ ms.locfileid: "68448232"
 
 ## <a name="allocator_decl"></a>  ALLOCATOR_DECL
 
-Restituisce una classe di modello allocatore.
+Restituisce un modello di classe allocator.
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ Restituisce una classe di modello allocatore.
 
 ### <a name="remarks"></a>Note
 
-La macro restituisce una definizione di modello `template <class Type> class name {.....}` e una specializzazione `template <> class name<void> {.....}` che definiscono una classe di modello allocatore che usa il filtro di sincronizzazione `sync` e una cache di tipo `cache`.
+La macro restituisce una definizione di modello `template <class Type> class name {.....}` e una specializzazione `template <> class name<void> {.....}` che insieme definiscono un modello di classe allocator che utilizza il filtro di sincronizzazione `sync` e una cache di tipo `cache`.
 
 Per i compilatori che possono compilare la riassociazione, la definizione di modello risultante è simile alla seguente:
 

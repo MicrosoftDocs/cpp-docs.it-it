@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454134"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688046"
 ---
 # <a name="freelist-class"></a>Classe freelist
 
@@ -30,14 +30,14 @@ class freelist : public Max
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
-|*Sz*|Numero di elementi della matrice da allocare.|
+|*SZ*|Numero di elementi della matrice da allocare.|
 |*Max*|Classe max che rappresenta il numero massimo di elementi da archiviare nell'elenco di disponibilità. La classe max può essere [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello gestisce un elenco di blocchi di memoria di dimensioni *SZ* con la lunghezza massima dell'elenco determinato dalla classe max passata in *Max*.
+Questo modello di classe gestisce un elenco di blocchi di memoria di dimensioni *SZ* con la lunghezza massima dell'elenco determinato dalla classe max passata in *Max*.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -47,7 +47,7 @@ Questa classe modello gestisce un elenco di blocchi di memoria di dimensioni *SZ
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[pop](#pop)|Rimuove il primo blocco di memoria dall'elenco di disponibilità.|
 |[push](#push)|Aggiunge un blocco di memoria all'elenco.|
@@ -94,17 +94,17 @@ bool push(void* ptr);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*ptr*|Puntatore al blocco di memoria da aggiungere all'elenco di disponibilità.|
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la `full` funzione della classe max restituisce **false**. in caso contrario, `push` la funzione restituisce **false**.
+**true** se la funzione `full` della classe max restituisce **false**; in caso contrario, la funzione `push` restituisce **false**.
 
 ### <a name="remarks"></a>Note
 
-Se la `full` funzione della classe max restituisce **false**, questa funzione membro aggiunge il blocco di memoria a cui punta *ptr* all'inizio dell'elenco.
+Se la funzione `full` della classe max restituisce **false**, questa funzione membro aggiunge il blocco di memoria a cui punta *ptr* all'inizio dell'elenco.
 
 ## <a name="see-also"></a>Vedere anche
 

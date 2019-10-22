@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458594"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689816"
 ---
 # <a name="collate-class"></a>Classe collate
 
-Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare l'ordinamento e il raggruppamento dei caratteri all'interno di una stringa, i confronti tra tali caratteri e l'hashing delle stringhe.
+Modello di classe che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare l'ordinamento e il raggruppamento dei caratteri all'interno di una stringa, i confronti tra di essi e l'hashing di stringhe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
 ## <a name="remarks"></a>Note
@@ -108,23 +108,23 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-*_Locname*\
+@No__t_1 *_Locname*
 Nome delle impostazioni locali.
 
 ### <a name="remarks"></a>Note
 
 I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
-- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: La durata dell'oggetto deve essere gestita manualmente.
+- 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
-Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Il costruttore inizializza l'oggetto di base con **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="compare"></a> collate::compare
 
@@ -139,25 +139,25 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametri
 
-*First1*\
+\ *First1*
 Puntatore al primo elemento nella prima sequenza da confrontare.
 
-*Last1*\
+\ *Last1*
 Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 
-*first2*\
+\ *first2*
 Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-*Last2*\
+\ *last2*
 Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
 La funzione membro restituisce:
 
-- - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
+- \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- + 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- +1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
@@ -205,31 +205,31 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametri
 
-*First1*\
+\ *First1*
 Puntatore al primo elemento nella prima sequenza da confrontare.
 
-*Last1*\
+\ *Last1*
 Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 
-*first2*\
+\ *first2*
 Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-*Last2*\
+\ *last2*
 Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
 La funzione membro restituisce:
 
-- - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
+- \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- + 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- +1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta confronta la sequenza in [* first1, last1) * con la sequenza in *[first2, last2*). Confronta i valori applicando `operator<` tra coppie di elementi corrispondenti di tipo. `CharType` La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
+La funzione membro virtuale protetta confronta la sequenza in [* first1, last1) * con la sequenza in *[first2, last2*). Confronta i valori applicando `operator<` tra coppie di elementi corrispondenti di tipo `CharType`. La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
 
 ### <a name="example"></a>Esempio
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*prima*\
+*primo* \
 Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*Ultima*\
+*ultimo* \
 Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametri
 
-*prima*\
+*primo* \
 Puntatore al primo carattere nella sequenza da convertire.
 
-*Ultima*\
+*ultimo* \
 Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*prima*\
+*primo* \
 Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*Ultima*\
+*ultimo* \
 Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -355,7 +355,7 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo descrive una specializzazione della classe modello [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie della sequenza di punteggiatura.
+Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie della sequenza di origine.
 
 ### <a name="example"></a>Esempio
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*prima*\
+*primo* \
 Puntatore al primo carattere nella sequenza da convertire.
 
-*Ultima*\
+*ultimo* \
 Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito

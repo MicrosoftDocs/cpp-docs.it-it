@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241560"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688859"
 ---
-# <a name="tuplesize-class"></a>Classe tuple_size
+# <a name="tuple_size-class"></a>Classe tuple_size
 
 Restituisce il numero di elementi contenuti in un `tuple` .
 
@@ -60,19 +60,19 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ### <a name="parameters"></a>Parametri
 
-*Tupla*\
+@No__t_1 *tupla*
 Tipo della tupla.
 
-*Elem*\
+*Elem* \
 Tipo degli elementi della matrice.
 
-*Dimensioni*\
+*Dimensioni* \
 Dimensione della matrice.
 
-*T1*\
+@No__t_1 *T1*
 Tipo del primo membro della coppia.
 
-*T2*\
+@No__t_1 *T2*
 Tipo del secondo membro della coppia.
 
 *Tipi*\
@@ -80,9 +80,9 @@ Tipo degli elementi della tupla.
 
 ## <a name="remarks"></a>Note
 
-La classe modello include un membro `value` che rappresenta un'espressione costante integrale il cui valore è l'estensione del tipo di tupla *tupla*.
+Il modello di classe dispone di un membro `value` che è un'espressione costante integrale il cui valore è l'extent della *tupla del tipo di*tupla.
 
-La specializzazione modello per le matrici include un membro `value` che rappresenta un'espressione costante integrale il cui valore è *dimensioni*, che corrisponde alla dimensione della matrice.
+La specializzazione del modello per le matrici ha un membro `value` che è un'espressione costante integrale il cui valore è *size*, che corrisponde alla dimensione della matrice.
 
 La specializzazione modello per la coppia include un membro `value` che è un'espressione costante integrale di valore 2.
 

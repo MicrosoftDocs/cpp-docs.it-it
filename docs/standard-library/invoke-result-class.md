@@ -9,14 +9,14 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 2b2051b0c854151cff9b439f5ec0a951c25a6387
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8cd72e62fcb65209482fd9677afcc2ec83356feb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447632"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689525"
 ---
-# <a name="invokeresult-class"></a>Classe invoke_result
+# <a name="invoke_result-class"></a>Classe invoke_result
 
 Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati in fase di compilazione. Aggiunto in C++ 17.
 
@@ -33,15 +33,15 @@ template<lass Callable, class... Args>
 
 ### <a name="parameters"></a>Parametri
 
-*Callable*\
+@No__t_1 *chiamabili*
 Tipo chiamabile su cui eseguire una query.
 
-*Args*\
+*Argomenti* \
 Tipi dell'elenco di argomenti al tipo chiamabile su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Utilizzare questo modello per determinare il tipo di risultato di Callable (*args*...) in fase di  compilazione, dove Callable e tutti i tipi in *args* sono qualsiasi tipo completo, una matrice di associazione sconosciuta o un `void`qualificatore cv. Il `type` membro della classe modello denomina il tipo restituito di *Callable* quando viene richiamato usando gli argomenti *args*.... Il `type` membro viene definito solo se *Callable* può essere chiamato quando viene richiamato usando gli argomenti *args*... in un contesto non valutato. In caso contrario, la classe modello non `type`dispone di membri, che consente i test SFINAE su un particolare set di tipi di argomento in fase di compilazione.
+Usare questo modello per determinare il tipo di risultato di *Callable*(*args*...) in fase di compilazione, dove *Callable* e tutti i tipi in *args* sono qualsiasi tipo completo, una matrice di associazione sconosciuta o un `void` probabilmente qualificato da CV. Il membro `type` del modello di classe denomina il tipo restituito di *Callable* quando viene richiamato usando gli argomenti *args*.... Il membro `type` viene definito solo se *Callable* può essere chiamato quando viene richiamato usando gli argomenti *args*... in un contesto non valutato. In caso contrario, il modello di classe non dispone di membri `type`, che consente i test SFINAE su un particolare set di tipi di argomento in fase di compilazione.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -52,4 +52,4 @@ Utilizzare questo modello per determinare il tipo di risultato di Callable (*arg
 ## <a name="see-also"></a>Vedere anche
 
 [<type_traits>](../standard-library/type-traits.md)\
-[invoke](functional-functions.md#invoke)
+[richiamare](functional-functions.md#invoke)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460201"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687662"
 ---
-# <a name="moneypunctbyname-class"></a>Classe moneypunct_byname
+# <a name="moneypunct_byname-class"></a>Classe moneypunct_byname
 
-Questa classe modello derivata descrive un oggetto che può essere usato come facet `moneypunct` delle impostazioni locali specificate, consentendo la formattazione dei campi di input o output di tipo valuta.
+Modello di classe derivata che descrive un oggetto che può fungere da `moneypunct` facet delle impostazioni locali specificate, consentendo la formattazione dei campi di input o di output di valuta.
 
 ## <a name="syntax"></a>Sintassi
 
