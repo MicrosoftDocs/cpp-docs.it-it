@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 432b61c7bc5b7f0e6f82e5bfeca7758c70785774
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243801"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689641"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -79,15 +79,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*Fty*\
+@No__t_1 *FTY*
 Tipo di funzione di cui eseguire il wrapping.
 
-*AX*\
+@No__t_1 *ax*
 Funzione allocatore.
 
 ## <a name="remarks"></a>Note
 
-La classe modello è un wrapper di chiamata con firma di chiamata `Ret(T1, T2, ..., TN)`. Usarla per racchiudere una vasta gamma di oggetti chiamabili in un wrapper uniforme.
+Il modello di classe è un wrapper di chiamata la cui firma di chiamata è `Ret(T1, T2, ..., TN)`. Usarla per racchiudere una vasta gamma di oggetti chiamabili in un wrapper uniforme.
 
 Alcune funzioni membro accettano un operando che specifica l'oggetto di destinazione desiderato. È possibile specificare tale operando in diversi modi:
 
@@ -134,7 +134,7 @@ Un oggetto `function` vuoto non include un oggetto chiamabile o un riferimento a
 |[operator()](#op_call)|Chiama un oggetto chiamabile.|
 |[operator=](#op_eq)|Sostituisce l'oggetto chiamabile archiviato.|
 
-## <a name="assign"></a> assegnare
+## <a name="assign"></a>assegnare
 
 Assegna un oggetto chiamabile a questo oggetto funzione.
 
@@ -152,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-*Func*\
+@No__t_1 *_Func*
 Oggetto chiamabile.
 
-*_Fnref*\
+@No__t_1 *_Fnref*
 Wrapper di riferimento che contiene un oggetto chiamabile.
 
-*AX*\
-Un oggetto allocatore.
+@No__t_1 *ax*
+Oggetto allocatore.
 
 ### <a name="remarks"></a>Note
 
-Ogni funzione membro sostituisce l'oggetto `callable object` incluso in `*this` con l'oggetto chiamabile passato come `operand`. Entrambe allocano memoria con l'oggetto allocatore *Ax*.
+Ogni funzione membro sostituisce l'oggetto `callable object` incluso in `*this` con l'oggetto chiamabile passato come `operand`. Entrambi allocano memoria con l'oggetto allocatore *ax*.
 
-## <a name="function"></a> (Funzione)
+## <a name="function"></a>funzione
 
 Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.
 
@@ -190,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Oggetto funzione da copiare.
 
-*Fx*\
+@No__t_1 *FX*
 Tipo di oggetto chiamabile.
 
-*Func*\
+@No__t_1 *_Func*
 Oggetto chiamabile di cui eseguire il wrapping.
 
-*Alloc*\
+@No__t_1 *Alloc*
 Tipo di allocatore.
 
-*AX*\
+@No__t_1 *ax*
 Allocatore.
 
-*_Fnref*\
+@No__t_1 *_Fnref*
 Riferimento all'oggetto chiamabile di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a> operatore non specificato
+## <a name="op_unspecified"></a>operatore non specificato
 
 Verifica se è presente un oggetto chiamabile archiviato.
 
@@ -292,7 +292,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>Note
 
-L'operatore restituisce un valore che è convertibile in **bool** con un valore true solo se l'oggetto non è vuoto. Può essere usato per verificare se l'oggetto è vuoto.
+L'operatore restituisce un valore convertibile in **bool** con un valore true solo se l'oggetto non è vuoto. Può essere usato per verificare se l'oggetto è vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a> operator()
+## <a name="op_call"></a>operatore ()
 
 Chiama un oggetto chiamabile.
 
@@ -337,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+@No__t_1 *TN*
 Tipo dell'ennesimo argomento di chiamata.
 
-*TN*\
+\ *TN*
 Ennesimo argomento di chiamata.
 
 ### <a name="remarks"></a>Note
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operatore =
 
 Sostituisce l'oggetto chiamabile archiviato.
 
@@ -390,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametri
 
-*NPC*\
+\ *NPC*
 Costante puntatore Null.
 
-*Ok*\
+\ a *destra*
 Oggetto funzione da copiare.
 
-*Fn*\
+*fn* \
 Oggetto chiamabile di cui eseguire il wrapping.
 
-*fnref*\
+\ *fnref*
 Riferimento all'oggetto chiamabile di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a>result_type
 
 Tipo restituito dell'oggetto chiamabile archiviato.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>scambio
 
 Scambia due oggetti chiamabili.
 
@@ -509,12 +509,12 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Oggetto funzione con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro Scambia gli oggetti di destinazione tra `*this` e *destro*. Esegue tale operazione in un tempo costante e non genera eccezioni.
+La funzione membro scambia gli oggetti di destinazione tra `*this` e *right*. Esegue tale operazione in un tempo costante e non genera eccezioni.
 
 ### <a name="example"></a>Esempio
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a> Destinazione
+## <a name="target"></a>destinazione
 
 Verifica se l'oggetto chiamabile archiviato è chiamabile come specificato.
 
@@ -571,14 +571,14 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametri
 
-*Fty2*\
+@No__t_1 *Fty2*
 Tipo di oggetto chiamabile di destinazione da verificare.
 
 ### <a name="remarks"></a>Note
 
-Il tipo *Fty2* deve essere chiamabile per i tipi di argomento `T1, T2, ..., TN` e il tipo restituito `Ret`. Se `target_type() == typeid(Fty2)`, la funzione modello membro restituisce l'indirizzo dell'oggetto di destinazione; in caso contrario, restituisce 0.
+Il tipo *Fty2* deve essere richiamabile per i tipi di argomento `T1, T2, ..., TN` e il tipo restituito `Ret`. Se `target_type() == typeid(Fty2)`, la funzione modello membro restituisce l'indirizzo dell'oggetto di destinazione; in caso contrario, restituisce 0.
 
-Un tipo *Fty2* chiamabile per i tipi di argomento `T1, T2, ..., TN` e il tipo restituito `Ret` se, per lvalue `fn, t1, t2, ..., tN` dei tipi `Fty2, T1, T2, ..., TN`, rispettivamente, `INVOKE(fn, t1, t2, ..., tN)` è ben formata e, se `Ret`non è **void**, convertibile in `Ret`.
+Un tipo *Fty2* è richiamabile per i tipi di argomento `T1, T2, ..., TN` e il tipo restituito `Ret` se, per lvalue `fn, t1, t2, ..., tN` di tipi `Fty2, T1, T2, ..., TN` rispettivamente, `INVOKE(fn, t1, t2, ..., tN)` è ben formato e, se `Ret` non è **void**, convertibile in `Ret`.
 
 ### <a name="example"></a>Esempio
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a> target_type
+## <a name="target_type"></a>target_type
 
 Ottiene le informazioni sui tipi per l'oggetto chiamabile.
 
