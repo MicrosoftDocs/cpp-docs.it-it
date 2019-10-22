@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449934"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687680"
 ---
 # <a name="messages-class"></a>Classe messages
 
-La classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per recuperare i messaggi localizzati da un catalogo di messaggi internazionalizzati per le impostazioni locali specificate.
+Il modello di classe descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per recuperare i messaggi localizzati da un catalogo di messaggi internazionalizzati per le impostazioni locali specificate.
 
 Attualmente, mentre viene implementata la classe dei messaggi, non esiste alcun messaggio.
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 ## <a name="remarks"></a>Note
@@ -61,7 +61,7 @@ Questo facet apre fondamentalmente un catalogo di messaggi definiti in messages_
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|DESCRIZIONE|
+|Nome del tipo|Descrizione|
 |-|-|
 |[char_type](#char_type)|Tipo di carattere utilizzato per visualizzare i messaggi.|
 |[string_type](#string_type)|Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo `CharType`.|
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*_Catval*\
+@No__t_1 *_Catval*
 Catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*_Catval*\
+@No__t_1 *_Catval*
 Catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catval*\
+@No__t_1 *_Catval*
 Valore di identificazione che specifica il catalogo dei messaggi in cui eseguire ricerche.
 
-*_Set*\
+@No__t_1 *_Set*
 Primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*Corpo*\
+@No__t_1 *corpo*
 Secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*_Dfault*\
+@No__t_1 *_Dfault*
 Stringa da restituire in caso di esito negativo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catname*\
+@No__t_1 *_Catname*
 Nome del catalogo in cui eseguire ricerche.
 
-*_Loc*\
+@No__t_1 *_Loc*
 Impostazioni locali da ricercare nel catalogo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catval*\
+@No__t_1 *_Catval*
 Valore di identificazione che specifica il catalogo dei messaggi in cui eseguire ricerche.
 
-*_Set*\
+@No__t_1 *_Set*
 Primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*Corpo*\
+@No__t_1 *corpo*
 Secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*_Dfault*\
+@No__t_1 *_Dfault*
 Stringa da restituire in caso di esito negativo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -254,23 +254,23 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-*_Locname*\
+@No__t_1 *_Locname*
 Nome delle impostazioni locali.
 
 ### <a name="remarks"></a>Note
 
 I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
-- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: La durata dell'oggetto deve essere gestita manualmente.
+- 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
-Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
+Non è possibile offrire esempi diretti, poiché il distruttore è protetto.
 
 Il costruttore inizializza l'oggetto di base con **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catname*\
+@No__t_1 *_Catname*
 Nome del catalogo in cui eseguire ricerche.
 
-*_Loc*\
+@No__t_1 *_Loc*
 Impostazioni locali da ricercare nel catalogo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -310,7 +310,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo descrive una specializzazione della classe modello [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie delle sequenze di messaggi.
+Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie delle sequenze di messaggi.
 
 ## <a name="see-also"></a>Vedere anche
 

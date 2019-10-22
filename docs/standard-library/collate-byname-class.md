@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458616"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688266"
 ---
 # <a name="collate_byname-class"></a>Classe collate_byname
 
-Classe modello derivata che descrive un oggetto che può essere utilizzato come facet di ordinamento delle impostazioni locali specificate, consentendo il recupero di informazioni relative alle convenzioni di ordinamento delle stringhe specifiche di un'area culturale.
+Modello di classe derivata che descrive un oggetto che può fungere da facet di ordinamento delle impostazioni locali specificate, consentendo il recupero di informazioni specifiche di un'area culturale relativa alle convenzioni di ordinamento delle stringhe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*_Locname*\
+@No__t_1 *_Locname*
 Impostazioni locali denominate.
 
-*_Refs*\
+@No__t_1 *_Refs*
 Conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto che può fungere da [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Il comportamento è determinato dalle impostazioni locali [denominate](../standard-library/locale-class.md#name) *_Locname*. Ogni costruttore inizializza l'oggetto di base con [collate](../standard-library/collate-class.md#collate)\<CharType> (`_Refs`).
+Il modello di classe descrive un oggetto che può essere utilizzato come [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [COLLATE](../standard-library/collate-class.md#collate) \<CharType >. Il comportamento è determinato dalle impostazioni locali [denominate](../standard-library/locale-class.md#name) *_Locname*. Ogni costruttore inizializza l'oggetto di base con [collate](../standard-library/collate-class.md#collate)\<CharType> (`_Refs`).
 
 ## <a name="requirements"></a>Requisiti
 

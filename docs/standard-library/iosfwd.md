@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449078"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687861"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-Dichiara riferimenti in avanti a varie classi modello usate nelle intestazioni iostream. Tutte queste classi modello sono definite in altre intestazioni standard. Questa intestazione deve essere inclusa in modo esplicito solo quando è necessaria una delle relative dichiarazioni, non la definizione.
+Dichiara i riferimenti in diretta a diversi modelli di classe usati in iostreams. Tutti questi modelli di classe sono definiti in altre intestazioni standard. Questa intestazione deve essere inclusa in modo esplicito solo quando è necessaria una delle relative dichiarazioni, non la definizione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Dichiarazioni con prototipo/Classi modello
+## <a name="forward-declarations-and-class-templates"></a>Dichiarazioni in diretta e modelli di classe
 
 ```cpp
 template <class _Statetype>
@@ -129,6 +129,6 @@ class basic_fstream;
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

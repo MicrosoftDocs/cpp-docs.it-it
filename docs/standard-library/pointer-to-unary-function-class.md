@@ -7,16 +7,16 @@ helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-ms.openlocfilehash: cff84f1f15eea34c60162f702dfe05350d1383d1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2b6bf82faa39e22c5af584a9fc3ebf68f5851463
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240459"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689132"
 ---
-# <a name="pointertounaryfunction-class"></a>Classe pointer_to_unary_function
+# <a name="pointer_to_unary_function-class"></a>Classe pointer_to_unary_function
 
-Converte un puntatore a funzione unaria in una funzione unaria adattabile. Deprecate in c++11, rimossi in c++17.
+Converte un puntatore a funzione unaria in una funzione unaria adattabile. Deprecato in C++ 11, rimosso in C++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,19 +32,19 @@ class pointer_to_unary_function
 
 ### <a name="parameters"></a>Parametri
 
-*pfunc*\
+\ *pfunc*
 Funzione binaria da convertire.
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto su cui viene chiamata la funzione *\*pfunc*.
 
 ## <a name="return-value"></a>Valore restituito
 
-La classe modello archivia una copia di `pfunc`. Definisce la relativa funzione membro `operator()` che restituisce (\* **pfunc**)(_ *Left*).
+Il modello di classe archivia una copia di `pfunc`. Definisce la relativa funzione membro `operator()` che restituisce (\* **pfunc**)(_ *Left*).
 
 ## <a name="remarks"></a>Note
 
-Un puntatore a funzione unaria è un oggetto funzione e può essere passato a qualsiasi algoritmo della libreria standard C++ che prevede una funzione unaria come parametro, ma non è adattabile. Per usarlo con un adattatore, ad esempio in associazione a un valore o con un negator, deve essere fornito con i tipi annidati `argument_type` e `result_type` che rendono possibile tale adattamento. La conversione da `pointer_to_unary_function` consente il funzionamento degli adattatori di funzione con i puntatori a funzione binaria.
+Un puntatore a funzione unaria è un oggetto funzione e può essere passato a qualsiasi algoritmo della libreria standard C++ che prevede una funzione unaria come parametro, ma non è adattabile. Per usarlo con un adattatore, ad esempio per associarvi un valore o usarlo con un negazionitore, è necessario che venga fornito con i tipi annidati `argument_type` e `result_type` che rendono possibile tale adattamento. La conversione da `pointer_to_unary_function` consente il funzionamento degli adattatori di funzione con i puntatori a funzione binaria.
 
 ## <a name="example"></a>Esempio
 

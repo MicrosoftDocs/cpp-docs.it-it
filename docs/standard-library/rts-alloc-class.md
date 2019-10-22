@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b0ec7d4d3dbe5ef1334bf3c394819a4f5235c28c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451129"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688988"
 ---
-# <a name="rtsalloc-class"></a>Classe rts_alloc
+# <a name="rts_alloc-class"></a>Classe rts_alloc
 
-La classe modello rts_alloc descrive un [filtro](../standard-library/allocators-header.md) che contiene una matrice di istanze cache e determina quale istanza usare per l'allocazione e la deallocazione in fase di esecuzione anziché in quella di compilazione.
+Il modello di classe rts_alloc descrive un [filtro](../standard-library/allocators-header.md) che contiene una matrice di istanze della cache e determina quale istanza usare per l'allocazione e la deallocazione in fase di esecuzione anziché in fase di compilazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,11 +38,11 @@ class rts_alloc
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello contiene più istanze allocator di blocchi e determina quale istanza usare per l'allocazione e la deallocazione in fase di esecuzione piuttosto che in quella di compilazione. Viene usata con i compilatori e non può compilare la riassociazione.
+Questo modello di classe include più istanze dell'allocatore di blocchi e determina quale istanza usare per l'allocazione o la deallocazione in fase di esecuzione anziché in fase di compilazione. Viene usata con i compilatori e non può compilare la riassociazione.
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[allocate](#allocate)|Alloca un blocco di memoria.|
 |[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
@@ -64,7 +64,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*count*|Numero di elementi della matrice da allocare.|
 
@@ -74,7 +74,7 @@ Puntatore all'oggetto allocato.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce `caches[_IDX].allocate(count)`, in cui l' `_IDX` indice è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande `operator new(count)`, restituisce. Oggetto `cache` che rappresenta l'oggetto cache.
+La funzione membro restituisce `caches[_IDX].allocate(count)`, in cui l'indice `_IDX` è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, restituisce `operator new(count)`. Oggetto `cache` che rappresenta l'oggetto cache.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -93,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>Note
 
-La funzione membro chiama `caches[_IDX].deallocate(ptr, count)`, dove l'indice `_IDX` è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, `operator delete(ptr)`restituisce.
+La funzione membro chiama `caches[_IDX].deallocate(ptr, count)`, in cui l'indice `_IDX` è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, restituisce `operator delete(ptr)`.
 
 ## <a name="equals"></a>  rts_alloc::equals
 

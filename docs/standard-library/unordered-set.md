@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: e03fc2f1c541caedfa9ac83bb9500e50a4b513b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 71acab214d891c6139f21685e9368399b99e1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454681"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688795"
 ---
-# <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
+# <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
-Definisce le classi modello di contenitore [unordered_multiset](../standard-library/unordered-multiset-class.md) e [unordered_set](../standard-library/unordered-set-class.md) e i relativi modelli di supporto.
+Definisce i modelli di classe del contenitore [unordered_multiset](../standard-library/unordered-multiset-class.md) e [unordered_set](../standard-library/unordered-set-class.md) e i relativi modelli di supporto.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -24,7 +24,7 @@ Definisce le classi modello di contenitore [unordered_multiset](../standard-libr
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Anche \<la libreria > unordered_set utilizza l' `#include <initializer_list>` istruzione.
+> Anche la libreria \<unordered_set > USA l'istruzione `#include <initializer_list>`.
 
 ## <a name="members"></a>Members
 

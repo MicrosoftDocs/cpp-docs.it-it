@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e77fd79375fa7f636f551c1246be4f0d8f309ffd
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454755"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688824"
 ---
-# <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
+# <a name="ltunordered_mapgt"></a>&lt;unordered_map&gt;
 
-Definisce le classi modello di contenitore [unordered_map](../standard-library/unordered-map-class.md) e [unordered_multimap](../standard-library/unordered-multimap-class.md) e i relativi modelli di supporto.
+Definisce i modelli di classe del contenitore [unordered_map](../standard-library/unordered-map-class.md) e [unordered_multimap](../standard-library/unordered-multimap-class.md) e i relativi modelli di supporto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,11 +24,11 @@ Definisce le classi modello di contenitore [unordered_map](../standard-library/u
 ```
 
 > [!NOTE]
-> Anche \<la libreria > unordered_map utilizza l' `#include <initializer_list>` istruzione.
+> Anche la libreria \<unordered_map > USA l'istruzione `#include <initializer_list>`.
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|Class|Descrizione|
 |-|-|
 |[Classe unordered_map](../standard-library/unordered-map-class.md)|Archivia la tabella hash di coppie {key, mapped}.|
 |[Classe unordered_multimap](../standard-library/unordered-multimap-class.md)|Archivia la tabella hash di coppie {key, mapped}.|

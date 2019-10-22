@@ -7,12 +7,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: a1ade5547b98e4376a00f33d45d695a328b772d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 950ca5ae34b6469c3d79b7297d4fe7b7644d2fcf
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459229"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688924"
 ---
 # <a name="ltstringgt-typedefs"></a>Typedefs &lt;string&gt;
 
@@ -23,7 +23,7 @@ ms.locfileid: "68459229"
 
 ## <a name="string"></a>  string
 
-Tipo che descrive una specializzazione della classe modello [basic_string](../standard-library/basic-string-class.md) con elementi di tipo **char**.
+Tipo che descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) con elementi di tipo **char**.
 
 Altri typedef che specializzano `basic_string` sono [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string) e [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -45,7 +45,7 @@ Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](..
 
 ## <a name="u16string"></a>  u16string
 
-Tipo che descrive una specializzazione della classe modello [basic_string](../standard-library/basic-string-class.md) con elementi di tipo `char16_t`.
+Tipo che descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) con elementi di tipo `char16_t`.
 
 Altri typedef che specializzano `basic_string` sono [wstring](../standard-library/string-typedefs.md#wstring), [string](../standard-library/string-typedefs.md#string) e [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -59,7 +59,7 @@ Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](..
 
 ## <a name="u32string"></a>  u32string
 
-Tipo che descrive una specializzazione della classe modello [basic_string](../standard-library/basic-string-class.md) con elementi di tipo `char32_t`.
+Tipo che descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) con elementi di tipo `char32_t`.
 
 Altri typedef che specializzano `basic_string` sono [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) e [wstring](../standard-library/string-typedefs.md#wstring).
 
@@ -73,7 +73,7 @@ Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](..
 
 ## <a name="wstring"></a>  wstring
 
-Tipo che descrive una specializzazione della classe modello [basic_string](../standard-library/basic-string-class.md) con elementi di tipo **wchar_t**.
+Tipo che descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) con elementi di tipo **wchar_t**.
 
 Altri typedef che specializzano `basic_string` sono [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) e [u32string](../standard-library/string-typedefs.md#u32string).
 

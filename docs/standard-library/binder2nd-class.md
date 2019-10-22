@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 5f59887e6c9d2965a6c8680f17a40c5bd93869c0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243360"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689942"
 ---
 # <a name="binder2nd-class"></a>Classe binder2nd
 
-Classe modello che fornisce un costruttore che converte un oggetto funzione binaria in un oggetto funzione unaria associando il secondo argomento della funzione binaria a un valore specificato. Deprecate in c++11, rimossi in c++17.
+Modello di classe che fornisce un costruttore che converte un oggetto funzione binaria in un oggetto funzione unaria associando il secondo argomento della funzione binaria a un valore specificato. Deprecato in C++ 11, rimosso in C++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,24 +38,24 @@ class binder2nd
 
 ### <a name="parameters"></a>Parametri
 
-*Func*\
+@No__t_1 *Func*
 Oggetto funzione binaria da convertire in un oggetto funzione unaria.
 
-*Ok*\
+\ a *destra*
 Valore a cui deve essere associato il secondo argomento dell'oggetto funzione binaria.
 
-*A sinistra*\
+\ a *sinistra*
 Valore dell'argomento che l'oggetto binario adattato confronta con il valore predefinito del secondo argomento.
 
 ## <a name="return-value"></a>Valore restituito
 
-L'oggetto funzione unaria risultante dall'associazione del secondo argomento dell'oggetto funzione binaria al valore *a destra*.
+Oggetto funzione unaria risultante dall'associazione del secondo argomento dell'oggetto funzione binaria al valore a *destra*.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia di un oggetto funzione binaria _ *Func* nelle `op`e una copia di *a destra* in `value`. Definisce la relativa funzione membro `operator()` prevede la restituzione **op**(`left`, **valore**).
+Il modello di classe archivia una copia di un oggetto funzione binaria _ *Func* in `op` e una copia di *right* in `value`. Definisce la funzione membro `operator()` come returning **op**(`left`, **value**).
 
-Se `Func` è un oggetto di tipo `Operation` e c è una costante, quindi [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) equivale al `binder2nd` costruttore della classe `binder2nd` \<  **Operazione**> (`Func`, `c`) ed è più pratico.
+Se `Func` è un oggetto di tipo `Operation` e c è una costante, [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) equivale al costruttore della classe `binder2nd` `binder2nd` \< **operazione**> (`Func`, 0) ed è più pratico.
 
 ## <a name="example"></a>Esempio
 

@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456757"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688465"
 ---
 # <a name="ltarraygt-operators"></a>Operatori &lt;array&gt;
 
-L' \<intestazione > della matrice include le funzioni del modello di confronto non membro della **matrice** .
+L'intestazione \<array > include le funzioni del modello di confronto non membro della **matrice** .
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*\
+@No__t_1 *Ty*
 Tipo di un elemento.
 
-*N*\
+*N* \
 Dimensione della matrice.
 
-*sinistra*\
+\ a *sinistra*
 Contenitore sinistro da confrontare.
 
-*Ok*\
+\ a *destra*
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*\
+@No__t_1 *Ty*
 Tipo di un elemento.
 
-*N*\
+*N* \
 Dimensione della matrice.
 
-*sinistra*\
+\ a *sinistra*
 Contenitore sinistro da confrontare.
 
-*Ok*\
+\ a *destra*
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello esegue l'overload di `operator<` per confrontare due oggetti della classe di modello [array Class](../standard-library/array-class-stl.md). La funzione restituisce `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+La funzione di modello viene sottoposta a overload `operator<` per confrontare due oggetti della classe [Array](../standard-library/array-class-stl.md)template class. La funzione restituisce `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Esempio
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*\
+@No__t_1 *Ty*
 Tipo di un elemento.
 
-*N*\
+*N* \
 Dimensione della matrice.
 
-*sinistra*\
+\ a *sinistra*
 Contenitore sinistro da confrontare.
 
-*Ok*\
+\ a *destra*
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*\
+@No__t_1 *Ty*
 Tipo di un elemento.
 
-*N*\
+*N* \
 Dimensione della matrice.
 
-*sinistra*\
+\ a *sinistra*
 Contenitore sinistro da confrontare.
 
-*Ok*\
+\ a *destra*
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello esegue l'overload di `operator==` per confrontare due oggetti della classe di modello [array Class](../standard-library/array-class-stl.md). La funzione restituisce `equal(left.begin(), left.end(), right.begin())`.
+La funzione di modello viene sottoposta a overload `operator==` per confrontare due oggetti della classe [Array](../standard-library/array-class-stl.md)template class. La funzione restituisce `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Esempio
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*\
+@No__t_1 *Ty*
 Tipo di un elemento.
 
-*N*\
+*N* \
 Dimensione della matrice.
 
-*sinistra*\
+\ a *sinistra*
 Contenitore sinistro da confrontare.
 
-*Ok*\
+\ a *destra*
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*\
+@No__t_1 *Ty*
 Tipo di un elemento.
 
-*N*\
+*N* \
 Dimensione della matrice.
 
-*sinistra*\
+\ a *sinistra*
 Contenitore sinistro da confrontare.
 
-*Ok*\
+\ a *destra*
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note

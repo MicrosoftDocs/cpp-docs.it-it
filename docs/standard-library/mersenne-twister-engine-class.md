@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 79613c76b3ea6dc15643e83a15d5bd6d90b60c6a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451866"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687693"
 ---
-# <a name="mersennetwisterengine-class"></a>Classe mersenne_twister_engine
+# <a name="mersenne_twister_engine-class"></a>Classe mersenne_twister_engine
 
 Genera una sequenza di numeri integer casuali di alta qualità usando l'algoritmo Mersenne Twister.
 
@@ -29,31 +29,31 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*UIntType*\
+@No__t_1 *UIntType*
 Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*W*\
-**Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `2u < W ≤ numeric_limits<UIntType>::digits`
+@No__t_1 *W*
+**Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione**:`2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N*\
+*N* \
 **Dimensione stato**. Numero di elementi (valori) nella sequenza di stato.
 
-*M*\
-**Dimensione spostamento**. Numero di elementi da ignorare durante ogni twist. **Precondizione:** `0 < M ≤ N`
+@No__t_1 *M*
+**Dimensione spostamento**. Numero di elementi da ignorare durante ogni twist. **Precondizione**:`0 < M ≤ N`
 
 *R*\
-**Bit di maschera**. **Precondizione:** `R ≤ W`
+**Bit di maschera**. **Precondizione**:`R ≤ W`
 
-*UN*\
-**Maschera XOR**. **Precondizione:** `A ≤ (1u<<W) - 1u`
+*@No__t_1*
+**Maschera XOR**. **Precondizione**:`A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L*\
+*U*, *S*, *T*, *L* \
 **Parametri di spostamento per la crittografia**. Usati come valori di spostamento durante la crittografia. Precondizione: `U,S,T,L ≤ W`
 
-*D*, *B*, *C*\
+*D*, *B*, *C* \
 **Parametri maschera di bit crittografia**. Usati come valori di maschera di bit durante la crittografia. Precondizione: `D,B,C ≤ (1u<<W) - 1u`
 
-*F*\
+@No__t_1 *F*
 **Moltiplicatore inizializzazione**. Usato per l'inizializzazione della sequenza. Precondizione: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Members
@@ -69,7 +69,7 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 ## <a name="remarks"></a>Note
 
-Questa classe di modello descrive un motore di numeri casuali che restituisce valori sull'intervallo chiuso [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valore integrale di grandi dimensioni con `W * (N - 1) + R` bit. Estrae *W* bit alla volta da questo valore elevato e quando ha usato tutti i bit, esegue il Twist del valore di grandi dimensioni spostando e combinando i bit in modo da avere un nuovo set di bit da estrarre. Lo stato del motore è costituito `N` dagli ultimi `W`valori di bit `operator()` usati se è stato chiamato almeno *N* volte, in `M` caso contrario i `W`valori a-bit che sono stati `N - M` usati e gli ultimi valori del inizializzazione.
+Questo modello di classe descrive un motore di numeri casuali, restituendo valori nell'intervallo chiuso [`0`, `2`<sup>W</sup>  -  `1`]. Contiene un valore integrale di grandi dimensioni con `W * (N - 1) + R` bit. Estrae *W* bit alla volta da questo valore elevato e quando ha usato tutti i bit, esegue il Twist del valore di grandi dimensioni spostando e combinando i bit in modo da avere un nuovo set di bit da estrarre. Lo stato del motore è costituito dagli ultimi valori `N` `W` bit utilizzati se `operator()` è stato chiamato almeno *N* volte, in caso contrario i valori `M` a `W` bit che sono stati usati e gli ultimi `N - M` valori del valore di inizializzazione.
 
 Il generatore torce il valore di grandi dimensioni che possiede usando un registro di spostamento di feedback generalizzato, definito dai valori MAIUSC *N* e *M*, un valore di torsione *R*e una maschera XOR condizionale *a*. Inoltre, i bit del registro di spostamento non elaborato vengono codificati in base a una matrice di distorsione dei bit definita dai valori *U*, *D*, *S*, *B*, *T*, *C*e *L*.
 
@@ -77,7 +77,7 @@ L'argomento del modello `UIntType` deve essere abbastanza grande da contenere va
 
 Sebbene sia possibile costruire un generatore direttamente da questo motore, è anche possibile usare uno dei typedef predefiniti seguenti:
 
-`mt19937`: Motore Mersenne Twister a 32 bit (Matsumoto e Nishimura, 1998).
+`mt19937`: motore Mersenne Twister a 32 bit (Matsumoto e Nishimura, 1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -88,7 +88,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`: Motore Mersenne Twister a 64 bit (Matsumoto e Nishimura, 2000).
+`mt19937_64`: motore Mersenne Twister a 64 bit (Matsumoto e Nishimura, 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,

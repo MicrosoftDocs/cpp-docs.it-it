@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447433"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685841"
 ---
-# <a name="submatch-class"></a>Classe sub_match
+# <a name="sub_match-class"></a>Classe sub_match
 
 Descrive una sottocorrispondenza.
 
@@ -41,16 +41,16 @@ class sub_match
 
 ## <a name="parameters"></a>Parametri
 
-*BidIt*\
+@No__t_1 *BidIt*
 Tipo di iteratore per le sottocorrispondenze.
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto che definisce una sequenza di caratteri corrispondente a un gruppo Capture in una chiamata a [regex_match](../standard-library/regex-functions.md#regex_match) o a [regex_search](../standard-library/regex-functions.md#regex_search). Oggetti di tipo [classe match_results](../standard-library/match-results-class.md) contengono una matrice di questi oggetti, una per ogni gruppo Capture nell'espressione regolare usata nella ricerca.
+Il modello di classe descrive un oggetto che designa una sequenza di caratteri corrispondente a un gruppo Capture in una chiamata a [regex_match](../standard-library/regex-functions.md#regex_match) o a [regex_search](../standard-library/regex-functions.md#regex_search). Oggetti di tipo [classe match_results](../standard-library/match-results-class.md) contengono una matrice di questi oggetti, una per ogni gruppo Capture nell'espressione regolare usata nella ricerca.
 
 Se il gruppo Capture non è corrispondente, il membro di dati dell'oggetto `matched` contiene false e i due iteratori `first` e `second` (ereditati dalla base `std::pair`) sono uguali. Se il gruppo Capture è corrispondente, `matched` contiene true, l'iteratore `first` punta al primo carattere nella sequenza di destinazione corrispondente al gruppo Capture e l'iteratore `second` punti punta a una posizione dopo l'ultimo carattere nel database di destinazione che corrisponda al gruppo Capture. Si noti che per una corrispondenza di lunghezza zero il membro `matched` è true, i due iteratori saranno uguali ed entrambi punteranno alla posizione della corrispondenza.
 
-Una corrispondenza zero si può verificare quando un gruppo Capture è costituito solamente da un'asserzione o da una ripetizione che consente zero ripetizioni. Ad esempio:
+Una corrispondenza zero si può verificare quando un gruppo Capture è costituito solamente da un'asserzione o da una ripetizione che consente zero ripetizioni. Esempio:
 
 "^" corrisponde alla sequenza di destinazione "a"; l'oggetto `sub_match` corrispondente al gruppo Capture 0 contiene gli iteratori che entrambi puntano al primo carattere della sequenza.
 
@@ -70,12 +70,12 @@ Una corrispondenza zero si può verificare quando un gruppo Capture è costituit
 |-|-|
 |[compare](#compare)|Confronta una sottocorrispondenza rispetto a una sequenza.|
 |[length](#length)|Restituisce la lunghezza di una sottocorrispondenza.|
-|[matched](#matched)|Indica se la corrispondenza ha avuto esito positivo.|
+|[abbinato](#matched)|Indica se la corrispondenza ha avuto esito positivo.|
 |[str](#str)|Converte una sottocorrispondenza in una stringa.|
 
 ### <a name="operators"></a>Operatori
 
-|Operator|Descrizione|
+|??|Descrizione|
 |-|-|
 |[operatore basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Esegue il cast di una sottocorrispondenza a una stringa.|
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Sottocorrispondenza da confrontare.
 
-*Str*\
+\ *Str*
 Stringa da confrontare.
 
-*PTR*\
+\ *ptr*
 Sequenza con terminazione null da confrontare.
 
 ### <a name="remarks"></a>Note

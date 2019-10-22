@@ -15,14 +15,14 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d72cfaae2e7f6768a68439fbc30aa5ab0d38f270
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450420"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686426"
 ---
-# <a name="shuffleorderengine-class"></a>Classe shuffle_order_engine
+# <a name="shuffle_order_engine-class"></a>Classe shuffle_order_engine
 
 Genera una sequenza casuale riordinando i valori restituiti dal motore di base corrispondente.
 
@@ -35,11 +35,11 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*Motore*\
+@No__t_1 del *motore*
 Tipo del motore di base.
 
-*K*\
-**Dimensioni tabella**. Numero di elementi nel buffer (tabella). **Precondizione:** `0 < K`
+*K* \
+**Dimensioni tabella**. Numero di elementi nel buffer (tabella). **Precondizione**:`0 < K`
 
 ## <a name="members"></a>Members
 
@@ -52,7 +52,7 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello descrive un *adattatore del motore* che produce valori riordinando quelli restituiti dal rispettivo motore di base. Ogni costruttore inserisce nella tabella interna i valori *K* restituiti dal motore di base e un elemento casuale è selezionato dalla tabella quando viene richiesto un valore.
+Questo modello di classe descrive un *adattatore del motore* che produce valori riordinando i valori restituiti dal relativo motore di base. Ogni costruttore inserisce nella tabella interna i valori *K* restituiti dal motore di base e un elemento casuale è selezionato dalla tabella quando viene richiesto un valore.
 
 ## <a name="requirements"></a>Requisiti
 

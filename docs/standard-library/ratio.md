@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458171"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687055"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Il modello `ratio` definisce le `num` costanti statiche e `den` in questo modo `num`  /  `den` = = numeratore/denominatore `den` e `num` e non hanno fattori comuni. `num` / `den`valore rappresentato dalla classe modello. Indica pertanto la `ratio<num, den>`creazione dell'istanza. `type`
+Il `ratio` modello definisce le costanti statiche `num` e `den` in modo che `num`  /  `den` = = numeratore/denominatore e `num` e `den` non abbiano fattori comuni. `num`  /  `den` è il valore rappresentato dal modello di classe. Pertanto, `type` definisce la `ratio<num, den>` di creazione di istanze.
 
 ### <a name="specializations"></a>Specializzazioni
 

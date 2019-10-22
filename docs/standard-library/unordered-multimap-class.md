@@ -137,16 +137,16 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-ms.openlocfilehash: d278da5538e100b4b97320c8e1e4c9c4ad6c34ff
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f19e6c1a4befa3e1b5ddd46e607b8cf894f29ba6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454744"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684114"
 ---
 # <a name="unordered_multimap-class"></a>Classe unordered_multimap
 
-La classe modello descrive un oggetto che controlla una sequenza di elementi di lunghezza diversa di tipo `std::pair<const Key, Ty>`. La sequenza viene ordinata in modo debole da una funzione hash, che esegue il partizionamento della sequenza in un set ordinato di sottosequenze denominate bucket. In ogni bucket una funzione di confronto determina se una coppia di elementi ha un ordinamento equivalente. In ogni elemento sono archiviati due oggetti, una chiave di ordinamento e un valore. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario mediante una serie di operazioni che possono essere indipendenti dal numero di elementi della sequenza (tempo costante), almeno quando tutti i bucket sono più o meno lunghi uguali. Nella peggiore delle ipotesi, quando tutti gli elementi si trovano in un unico bucket, il numero di operazioni è proporzionale al numero di elementi della sequenza (tempo lineare). Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.
+Il modello di classe descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi di tipo `std::pair<const Key, Ty>`. La sequenza viene ordinata in modo debole da una funzione hash, che esegue il partizionamento della sequenza in un set ordinato di sottosequenze denominate bucket. In ogni bucket una funzione di confronto determina se una coppia di elementi ha un ordinamento equivalente. In ogni elemento sono archiviati due oggetti, una chiave di ordinamento e un valore. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario mediante una serie di operazioni che possono essere indipendenti dal numero di elementi della sequenza (tempo costante), almeno quando tutti i bucket sono più o meno lunghi uguali. Nella peggiore delle ipotesi, quando tutti gli elementi si trovano in un unico bucket, il numero di operazioni è proporzionale al numero di elementi della sequenza (tempo lineare). Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -171,7 +171,7 @@ class unordered_multimap;
 
 ## <a name="members"></a>Members
 
-|Definizione dei tipi|DESCRIZIONE|
+|Definizione dei tipi|Descrizione|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo di un allocatore per gestire l'archiviazione.|
 |[const_iterator](#const_iterator)|Tipo di un iteratore costante per la sequenza controllata.|
@@ -179,7 +179,7 @@ class unordered_multimap;
 |[const_pointer](#const_pointer)|Tipo di un puntatore costante a un elemento.|
 |[const_reference](#const_reference)|Tipo di un riferimento costante a un elemento.|
 |[difference_type](#difference_type)|Tipo di una distanza Signed tra due elementi.|
-|[hasher](#hasher)|Tipo della funzione hash.|
+|[Hasher](#hasher)|Tipo della funzione hash.|
 |[iterator](#iterator)|Tipo di un iteratore per la sequenza controllata.|
 |[key_equal](#key_equal)|Tipo della funzione di confronto.|
 |[key_type](#key_type)|Tipo di una chiave di ordinamento.|
@@ -190,10 +190,10 @@ class unordered_multimap;
 |[size_type](#size_type)|Tipo di una distanza Unsigned tra due elementi.|
 |[value_type](#value_type)|Tipo di un elemento.|
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[begin](#begin)|Indica l'inizio della sequenza controllata.|
-|[bucket](#bucket)|Ottiene il numero di bucket relativo a un valore della chiave.|
+|[secchio](#bucket)|Ottiene il numero di bucket relativo a un valore della chiave.|
 |[bucket_count](#bucket_count)|Ottiene il numero di bucket.|
 |[bucket_size](#bucket_size)|Ottiene le dimensioni di un bucket.|
 |[cbegin](#cbegin)|Indica l'inizio della sequenza controllata.|
@@ -220,19 +220,19 @@ class unordered_multimap;
 |[swap](#swap)|Scambia il contenuto di due contenitori.|
 |[unordered_multimap](#unordered_multimap)|Costruisce un oggetto contenitore.|
 
-|Operator|DESCRIZIONE|
+|??|Descrizione|
 |-|-|
 |[unordered_multimap::operator=](#op_eq)|Copia una tabella hash.|
 
 ## <a name="remarks"></a>Note
 
-L'oggetto ordina la sequenza da esso controllata chiamando due oggetti archiviati, un oggetto della funzione di confronto di tipo [unordered_multimap::key_equal](#key_equal) e un oggetto della funzione hash di tipo [unordered_multimap::hasher](#hasher). È possibile accedere al primo oggetto archiviato chiamando la funzione membro [unordered_multimap::key_eq](#key_eq)`()` ed è possibile accedere al secondo oggetto archiviato chiamando la funzione membro [unordered_multimap::hash_function](#hash)`()`. In particolare, per tutti i valori `X` e `Y` di tipo `Key`, la chiamata a `key_eq()(X, Y)` restituisce true solo se i valori dei due argomenti hanno un ordinamento equivalente; la chiamata a `hash_function()(keyval)` produce una distribuzione di valori di tipo `size_t`. A differenza della classe modello [unordered_map](../standard-library/unordered-map-class.md), un oggetto della classe modello `unordered_multimap` non garantisce che `key_eq()(X, Y)` sia sempre false per due elementi qualsiasi della sequenza controllata. Le chiavi non devono essere necessariamente univoche.
+L'oggetto ordina la sequenza da esso controllata chiamando due oggetti archiviati, un oggetto della funzione di confronto di tipo [unordered_multimap::key_equal](#key_equal) e un oggetto della funzione hash di tipo [unordered_multimap::hasher](#hasher). È possibile accedere al primo oggetto archiviato chiamando la funzione membro [unordered_multimap::key_eq](#key_eq)`()` ed è possibile accedere al secondo oggetto archiviato chiamando la funzione membro [unordered_multimap::hash_function](#hash)`()`. In particolare, per tutti i valori `X` e `Y` di tipo `Key`, la chiamata a `key_eq()(X, Y)` restituisce true solo se i valori dei due argomenti hanno un ordinamento equivalente; la chiamata a `hash_function()(keyval)` produce una distribuzione di valori di tipo `size_t`. A differenza del modello di classe [unordered_map Class](../standard-library/unordered-map-class.md), un oggetto di tipo `unordered_multimap` non garantisce che `key_eq()(X, Y)` sia sempre false per due elementi qualsiasi della sequenza controllata. Le chiavi non devono essere necessariamente univoche.
 
 L'oggetto consente inoltre di archiviare un fattore di carico massimo che specifica il numero medio massimo di elementi per bucket desiderato. Se l'inserimento di un elemento comporta il superamento del fattore di carico massimo da parte di [unordered_multimap::load_factor](#load_factor)`()`, il contenitore aumenta il numero dei bucket e ricompila la tabella hash in base alle necessità.
 
 L'ordine effettivo degli elementi nella sequenza controllata dipende dalla funzione hash, dalla funzione di confronto, dall'ordine di inserimento, dal fattore di carico massimo e dal numero corrente di bucket. Non è in genere possibile prevedere l'ordine degli elementi nella sequenza selezionata. Si può tuttavia avere sempre la certezza dell'adiacenza dei subset di elementi con un ordinamento equivalente nella sequenza controllata.
 
-L'oggetto alloca e libera la memoria per la sequenza da esso controllata tramite un oggetto allocatore archiviato di tipo [unordered_multimap::allocator_type](#allocator_type). Tale oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto della classe modello `allocator`. Si noti che l'oggetto allocatore archiviato non viene copiato dopo l'assegnazione dell'oggetto contenitore.
+L'oggetto alloca e libera la memoria per la sequenza da esso controllata tramite un oggetto allocatore archiviato di tipo [unordered_multimap::allocator_type](#allocator_type). Tale oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto di tipo `allocator`. Si noti che l'oggetto allocatore archiviato non viene copiato dopo l'assegnazione dell'oggetto contenitore.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -356,7 +356,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*keyval*\
+\ *keyval*
 Valore della chiave da mappare.
 
 ### <a name="remarks"></a>Note
@@ -498,7 +498,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nbucket*\
+\ *nbucket*
 Numero di bucket.
 
 ### <a name="remarks"></a>Note
@@ -546,7 +546,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a>  unordered_multimap::cbegin
 
-Restituisce un iteratore const che punta al primo elemento nell'intervallo.
+Restituisce un iteratore **const** che punta al primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -560,7 +560,7 @@ Iteratore di accesso in avanti **const** che punta al primo elemento dell'interv
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
-È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio `Container` , si consideri come un contenitore modificabile (non **const**) di qualsiasi tipo `begin()` che `cbegin()`supporta e.
+È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` essere un contenitore modificabile (non **const**) di qualsiasi tipo che supporta `begin()` e `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -572,7 +572,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  unordered_multimap::cend
 
-Restituisce un iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
+Restituisce un iteratore **const** che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
 ```cpp
 const_iterator cend() const;
@@ -586,7 +586,7 @@ Iteratore di accesso in avanti **const** che punta appena oltre la fine dell'int
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
-È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio `Container` , si consideri come un contenitore modificabile (non **const**) di qualsiasi tipo `end()` che `cend()`supporta e.
+È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` essere un contenitore modificabile (non **const**) di qualsiasi tipo che supporta `end()` e `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -858,7 +858,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*keyval*\
+\ *keyval*
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -973,7 +973,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |-|-|
 |*args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered_multimap.|
 
@@ -985,7 +985,7 @@ Iteratore all'elemento appena inserito.
 
 Questa funzione non invalida alcun riferimento a elementi del contenitore, ma potrebbe invalidare tutti gli iteratori per il contenitore.
 
-L'oggetto [value_type](../standard-library/map-class.md#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dati dell'elemento.
+L'oggetto [value_type](../standard-library/map-class.md#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dei dati dell'elemento.
 
 Durante l'inserimento, se viene generata un'eccezione che non si trova nella funzione hash del contenitore, quest'ultimo non viene modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito.
 
@@ -1174,12 +1174,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametri
 
-*keyval*\
+\ *keyval*
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce una coppia di iteratori `X` in modo `[X.first, X.second)` che delimiti solo gli elementi della sequenza controllata che hanno un ordinamento equivalente con *keyval*. Se tali elementi non esistono, entrambi gli iteratori sono `end()`.
+La funzione membro restituisce una coppia di iteratori `X` in modo che `[X.first, X.second)` delimiti solo gli elementi della sequenza controllata che hanno un ordinamento equivalente con *keyval*. Se tali elementi non esistono, entrambi gli iteratori sono `end()`.
 
 ### <a name="example"></a>Esempio
 
@@ -1249,21 +1249,21 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametri
 
-*In cui*\
+*Dove* \
 Posizione dell'elemento che deve essere rimosso.
 
-*Prima*\
+*Primo* \
 Posizione del primo elemento che deve essere rimosso.
 
-*Ultima*\
+*Ultimo* \
 Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
-*Chiave*\
+@No__t_1 *chiave*
 Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
-Per le prime due funzioni membro, iteratore bidirezionale che definisce il primo elemento rimanente oltre gli eventuali elementi rimossi o elemento che rappresenta la fine dell'oggetto unordered_map se tali elementi non sono presenti.
+Per le prime due funzioni membro, iteratore bidirezionale che definisce il primo elemento rimanente oltre gli eventuali elementi rimossi o elemento che rappresenta la fine dell'oggetto map se tali elementi non sono presenti.
 
 Per la terza funzione membro, restituisce il numero di elementi rimossi dall'oggetto unordered_multimap.
 
@@ -1281,7 +1281,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*keyval*\
+\ *keyval*
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -1509,7 +1509,7 @@ Se viene generata un'eccezione durante l'inserimento di un solo elemento, ma l'e
 
 L'oggetto [value_type](../standard-library/map-class.md#value_type) di un contenitore è un typedef appartenente al contenitore e, per map, `map<K, V>::value_type` è `pair<const K, V>`. Il valore di un elemento è una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dati dell'elemento.
 
-La funzione membro di intervallo (5) inserisce la sequenza di valori di elemento in un unordered_multimap che corrisponde a ogni elemento a cui punta un iteratore nell'intervallo `[First, Last)`. non viene quindi inserito l' *ultimo* . La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `m.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `m`.
+La funzione membro di intervallo (5) inserisce la sequenza di valori di elemento in un unordered_multimap che corrisponde a ogni elemento a cui punta un iteratore nell'intervallo `[First, Last)`; Pertanto, *l'ultimo* non viene inserito. La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `m.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `m`.
 
 La funzione membro di elenco di inizializzatori (6) usa un oggetto [initializer_list](../standard-library/initializer-list.md) per copiare gli elementi nell'oggetto unordered_multimap.
 
@@ -1964,7 +1964,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametri
 
-*Factor*\
+*factor* \
 Nuovo fattore di carico massimo.
 
 ### <a name="remarks"></a>Note
@@ -2098,7 +2098,7 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 ### <a name="remarks"></a>Note
 
-Dopo la cancellazione di tutti gli elementi esistenti in un `operator=` unordered_multimap, copia o sposta il contenuto di *direttamente* in unordered_multimap.
+Dopo la cancellazione di tutti gli elementi esistenti in un unordered_multimap, `operator=` copia o sposta il contenuto di *right* in unordered_multimap.
 
 ### <a name="example"></a>Esempio
 
@@ -2239,7 +2239,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametri
 
-*nbuckets*\
+\ *nbuckets*
 Numero di bucket richiesto.
 
 ### <a name="remarks"></a>Note
@@ -2420,7 +2420,7 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Contenitore con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
@@ -2552,13 +2552,13 @@ Il primo costruttore specifica una copia della sequenza controllata da *right*. 
 
 Tutti i costruttori inizializzano inoltre diversi valori archiviati. Per il costruttore di copia, i valori vengono ottenuti da *right*. In caso contrario:
 
-Il numero minimo di bucket è l'argomento *Bucket_count*, se presente; in caso contrario, si tratta di un valore predefinito descritto qui come valore `N0`definito dall'implementazione.
+Il numero minimo di bucket è l'argomento *Bucket_count*, se presente; in caso contrario, si tratta di un valore predefinito descritto qui come valore definito dall'implementazione `N0`.
 
-L'oggetto della funzione hash è l' *hash*dell'argomento, se presente; in caso contrario `Hash()`, è.
+L'oggetto della funzione hash è l' *hash*dell'argomento, se presente; in caso contrario, viene `Hash()`.
 
-L'oggetto della funzione di confronto è l'argomento *comp*, se presente; in caso contrario `Pred()`, è.
+L'oggetto della funzione di confronto è l'argomento *comp*, se presente; in caso contrario, viene `Pred()`.
 
-L'oggetto allocatore è l'argomento *al*, se presente; in caso contrario, `Alloc()`è.
+L'oggetto allocatore è l'argomento *al*, se presente; in caso contrario, viene `Alloc()`.
 
 ### <a name="example"></a>Esempio
 
@@ -2742,5 +2742,5 @@ int main()
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [Contenitori](../cpp/containers-modern-cpp.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

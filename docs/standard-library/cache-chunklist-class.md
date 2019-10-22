@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449669"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688357"
 ---
-# <a name="cachechunklist-class"></a>Classe cache_chunklist
+# <a name="cache_chunklist-class"></a>Classe cache_chunklist
 
 Definisce un [allocatore di blocco](../standard-library/allocators-header.md) che alloca e dealloca blocchi di memoria di un'unica dimensione.
 
@@ -32,13 +32,13 @@ class cache_chunklist
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Sz*|Numero di elementi della matrice da allocare.|
+|*SZ*|Numero di elementi della matrice da allocare.|
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello usa l' **operatore New** per allocare blocchi di memoria non elaborata, i blocchi di sottoallocazione per allocare spazio di archiviazione per un blocco di memoria quando necessario; Archivia i blocchi di memoria deallocati in un elenco libero separato per ogni blocco e USA **operator delete** per deallocare un blocco quando nessuno dei blocchi di memoria è in uso.
+Questo modello di classe USA **operator new** per allocare blocchi di memoria RAW, sottoallocando blocchi per allocare spazio di archiviazione per un blocco di memoria quando necessario; Archivia i blocchi di memoria deallocati in un elenco libero separato per ogni blocco e USA **operator delete** per deallocare un blocco quando nessuno dei blocchi di memoria è in uso.
 
-Ogni blocco di memoria include *SZ* byte di memoria utilizzabile e un puntatore al blocco a cui appartiene. Ogni blocco include `Nelts` blocchi di memoria, tre puntatori, int e i dati necessari per **operator new** e **operator delete** .
+Ogni blocco di memoria include *SZ* byte di memoria utilizzabile e un puntatore al blocco a cui appartiene. Ogni blocco include `Nelts` blocchi di memoria, tre puntatori, un int e i dati necessari per **operator new** e **operator delete** .
 
 ### <a name="constructors"></a>Costruttori
 

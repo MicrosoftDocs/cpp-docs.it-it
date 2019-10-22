@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454188"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689215"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
-Classe modello che descrive un oggetto che può essere utilizzato come facet locale per descrivere le sequenze di tipo `CharType` utilizzate per rappresentare le informazioni sulla formattazione e la punteggiatura delle espressioni numeriche e booleane.
+Modello di classe che descrive un oggetto che può fungere da facet locale per descrivere le sequenze di tipo `CharType` utilizzate per rappresentare le informazioni sulla formattazione e la punteggiatura delle espressioni numeriche e booleane.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 ## <a name="remarks"></a>Note
@@ -59,7 +59,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|DESCRIZIONE|
+|Costruttore|Descrizione|
 |-|-|
 |[numpunct](#numpunct)|Costruttore per oggetti di tipo `numpunct`.|
 
@@ -200,7 +200,7 @@ La funzione membro virtuale protetta restituisce una regola specifica delle impo
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio per il [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata `grouping`da.
+Vedere l'esempio per il [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata da `grouping`.
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ Restituisce un elemento specifico delle impostazioni locali da utilizzare come s
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta restituisce un elemento specifico delle impostazioni locali di tipo `CharType` da utilizzare come separatore di gruppo a sinistra di un separatore decimale.
+La funzione membro virtuale protetta restituisce un elemento specifico delle impostazioni locali di tipo `CharType` da usare come separatore di gruppo a sinistra di un separatore decimale.
 
 ### <a name="example"></a>Esempio
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Stringa contenente una sequenza di `CharType`oggetti da utilizzare come rappresentazione testuale del valore **false**.
+Stringa contenente una sequenza di `CharType`s da utilizzare come rappresentazione testo del valore **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
 I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
-- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: La durata dell'oggetto deve essere gestita manualmente.
+- 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
-Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
+Non è possibile offrire esempi diretti, poiché il distruttore è protetto.
 
-Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Il costruttore inizializza l'oggetto di base con **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="string_type"></a>  numpunct::string_type
 
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo descrive una specializzazione della classe modello [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie delle sequenze di punteggiatura.
+Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie delle sequenze di punteggiatura.
 
 ## <a name="thousands_sep"></a>  numpunct::thousands_sep
 

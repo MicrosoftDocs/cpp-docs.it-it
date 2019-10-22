@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7418c0316f98f633d229b3bb544bd34d2ac0fb07
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457875"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688093"
 ---
-# <a name="exponentialdistribution-class"></a>Classe exponential_distribution
+# <a name="exponential_distribution-class"></a>Classe exponential_distribution
 
 Genera una distribuzione esponenziale.
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*\
+@No__t_1 *RealType*
 Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*GENERATORE URNG*\
+@No__t_1 *Generatore URNG*
 Motore generatore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione esponenziale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione esponenziale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*lambda*\
+\ *lambda*
 Parametro di distribuzione `lambda`.
 
-*parm*\
+\ di *parmigiana*
 Pacchetto di parametri usato per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*lambda*\
+\ *lambda*
 Parametro di distribuzione `lambda`.
 
-*Ok*\
+\ a *destra*
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note

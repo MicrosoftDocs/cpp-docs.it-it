@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243377"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688393"
 ---
 # <a name="binder1st-class"></a>Classe binder1st
 
-Classe modello che fornisce un costruttore che converte un oggetto funzione binaria in un oggetto funzione unaria associando il primo argomento della funzione binaria a un valore specificato. Deprecate in c++11 in favore di [associare](functional-functions.md#bind)e rimossi in c++17.
+Modello di classe che fornisce un costruttore che converte un oggetto funzione binaria in un oggetto funzione unaria associando il primo argomento della funzione binaria a un valore specificato. Deprecato in C++ 11 a favore di [Bind](functional-functions.md#bind)e rimosso in c++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*binary_fn*\
+\ *binary_fn*
 Oggetto funzione binaria da convertire in un oggetto funzione unaria.
 
-*A sinistra*\
+\ a *sinistra*
 Valore a cui deve essere associato il primo argomento dell'oggetto funzione binaria.
 
-*Ok*\
+\ a *destra*
 Valore dell'argomento che l'oggetto binario adattato confronta con il valore predefinito del secondo argomento.
 
 ## <a name="return-value"></a>Valore restituito
 
-L'oggetto funzione unaria risultante dall'associazione del primo argomento dell'oggetto funzione binaria al valore *sinistro*.
+Oggetto funzione unaria risultante dall'associazione del primo argomento dell'oggetto funzione binaria al valore a *sinistra*.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia di un oggetto funzione binaria *binary_fn* nelle `op`e una copia di *sinistro* in `value`. Definisce la relativa funzione membro `operator()` prevede la restituzione `op(value, right)`.
+Il modello di classe archivia una copia di un oggetto funzione binaria *binary_fn* in `op` e una copia di *Left* in `value`. Definisce la funzione membro `operator()` come restituito `op(value, right)`.
 
-Se *binary_fn* è un oggetto di tipo `Operation` e `c` è una costante, quindi `bind1st(binary_fn, c)` è equivalente a un più pratico per `binder1st<Operation>(binary_fn, c)`. Per altre informazioni, vedere [bind1st](../standard-library/functional-functions.md#bind1st).
+Se *binary_fn* è un oggetto di tipo `Operation` e `c` è una costante, `bind1st(binary_fn, c)` è più utile per `binder1st<Operation>(binary_fn, c)`. Per ulteriori informazioni, vedere [bind1st](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Esempio
 

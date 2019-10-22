@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 190c9aa23493cea67bae44be93fd3fdbdecc4447
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460092"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689998"
 ---
 # <a name="basic_iostream-class"></a>Classe basic_iostream
 
@@ -35,23 +35,23 @@ public:
 
 ## <a name="remarks"></a>Note
 
-La classe di modello descrive un oggetto che controlla gli inserimenti, attraverso la propria classe base [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> e le estrazioni attraverso la propria classe base [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. I due oggetti condividono la classe base virtuale comune [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. I due oggetti gestiscono anche il buffer di un flusso comune, con elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`. Il costruttore inizializza le proprie classi base attraverso `basic_istream`( **strbuf**) e `basic_ostream`( **strbuf**).
+Il modello di classe descrive un oggetto che controlla gli inserimenti, tramite la relativa classe base [basic_ostream](../standard-library/basic-ostream-class.md) <  `Elem`, `Tr` > ed estrazioni, tramite la relativa classe di base [basic_istream](../standard-library/basic-istream-class.md) <  `Elem` `Tr`. I due oggetti condividono la classe base virtuale comune [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. I due oggetti gestiscono anche il buffer di un flusso comune, con elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`. Il costruttore inizializza le proprie classi base attraverso `basic_istream`( **strbuf**) e `basic_ostream`( **strbuf**).
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|DESCRIZIONE|
+|Costruttore|Descrizione|
 |-|-|
 |[basic_iostream](#basic_iostream)|Creare un oggetto `basic_iostream`.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[swap](#swap)|Scambia il contenuto dell'oggetto `basic_iostream` fornito con il contenuto di questo oggetto.|
 
 ### <a name="operators"></a>Operatori
 
-|Operator|DESCRIZIONE|
+|??|Descrizione|
 |-|-|
 |[operator=](#op_eq)|Assegna il valore di un oggetto `basic_iostream` specificato a questo oggetto. Si tratta di un'assegnazione di spostamento che implica un oggetto `rvalue` che non lascia alcuna copia.|
 
@@ -75,10 +75,10 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parametri
 
-*Strbuf*\
+\ *Strbuf*
 Oggetto `basic_streambuf` esistente.
 
-*Ok*\
+\ a *destra*
 Un oggetto `basic_iostream` esistente usato per costruire una nuova classe `basic_iostream`.
 
 ### <a name="remarks"></a>Note
@@ -97,7 +97,7 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Riferimento `rvalue` a un oggetto `basic_iostream` dal quale effettuare l'assegnazione.
 
 ### <a name="remarks"></a>Note
@@ -114,7 +114,7 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 L'oggetto `basic_iostream` da scambiare.
 
 ### <a name="remarks"></a>Note
@@ -123,6 +123,6 @@ La funzione membro chiama `swap(right)`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

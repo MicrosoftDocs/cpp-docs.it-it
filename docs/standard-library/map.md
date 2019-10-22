@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456296"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687771"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-Definisce le classi del modello del contenitore map e multimap e i relativi modelli di supporto.
+Definisce i modelli di classe del contenitore map e multimap e i relativi modelli di supporto.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -24,7 +24,7 @@ Definisce le classi del modello del contenitore map e multimap e i relativi mode
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Anche \<la libreria > della mappa USA `#include <initializer_list>` l'istruzione.
+> Anche la libreria \<map > USA l'istruzione `#include <initializer_list>`.
 
 ## <a name="members"></a>Members
 
@@ -41,7 +41,7 @@ Definisce le classi del modello del contenitore map e multimap e i relativi mode
 
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate
 
-|Versione map|Versione multimap|DESCRIZIONE|
+|Versione map|Versione multimap|Descrizione|
 |-----------------|----------------------|-----------------|
 |[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|Scambia gli elementi di due oggetti map o multimap.|
 
@@ -56,5 +56,5 @@ Definisce le classi del modello del contenitore map e multimap e i relativi mode
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

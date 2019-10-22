@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240655"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689682"
 ---
 # <a name="ltforward_listgt-operators"></a>Operatori &lt;forward_list&gt;
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è uguale all'oggetto elenco di inoltro a destra.
 
@@ -37,17 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `forward_list`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `forward_list`.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione modello esegue l'overload di `operator==` per confrontare due oggetti della classe modello `forward_list`. La funzione restituisce `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Questa funzione di modello consente di eseguire l'overload di `operator==` per confrontare due oggetti della classe modello `forward_list`. La funzione restituisce `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
-## <a name="op_neq"></a> operatore! =
+## <a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore non è uguale all'oggetto elenco di inoltro a destra.
 
@@ -59,10 +59,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `forward_list`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -73,7 +73,7 @@ Oggetto di tipo `forward_list`.
 
 Questa funzione modello restituisce `!(left == right)`.
 
-## <a name="op_lt"></a> Operatore&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è minore dell'oggetto elenco di inoltro a destra.
 
@@ -85,10 +85,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `forward_list`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -97,9 +97,9 @@ Oggetto di tipo `forward_list`.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione modello esegue l'overload di `operator<` per confrontare due oggetti della classe modello `forward_list`. La funzione restituisce `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Questa funzione di modello consente di eseguire l'overload di `operator<` per confrontare due oggetti della classe modello `forward_list`. La funzione restituisce `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a> Operatore&lt;=
+## <a name="op_lt_eq"></a>operatore &lt; =
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è minore o uguale all'oggetto elenco di inoltro a destra.
 
@@ -111,10 +111,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `forward_list`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -125,7 +125,7 @@ Oggetto di tipo `forward_list`.
 
 Questa funzione modello restituisce `!(right < left)`.
 
-## <a name="op_gt"></a> Operatore&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è maggiore dell'oggetto elenco di inoltro a destra.
 
@@ -137,10 +137,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `forward_list`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -151,7 +151,7 @@ Oggetto di tipo `forward_list`.
 
 Questa funzione modello restituisce `right < left`.
 
-## <a name="op_gt_eq"></a> Operatore&gt;=
+## <a name="op_gt_eq"></a>operatore &gt; =
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è maggiore o uguale all'oggetto elenco di inoltro a destra.
 
@@ -163,15 +163,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `forward_list`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco di inoltro a sinistra dell'operatore è maggiore o uguale all'elenco di inoltro a destra dell'operatore; in caso contrario **false**.
+**true** se l'elenco di inoltri a sinistra dell'operatore è maggiore o uguale all'elenco di avanzamento sul lato destro dell'operatore; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 

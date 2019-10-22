@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: 61446ab6b79496024d44a99fcf5f500bb871bb80
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e30810412db29473597da144d2dd42bdb8184f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448825"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687994"
 ---
 # <a name="hash-class"></a>Classe hash
 
@@ -45,7 +45,7 @@ struct hash {
 
 ## <a name="remarks"></a>Note
 
-L'oggetto funzione definisce una funzione hash, idonea per il mapping di valori di tipo *Ty* con una distribuzione di valori di indice. Il membro `operator()` restituisce un codice hash per *val*, idoneo per l'uso con classi modello `unordered_map`, `unordered_multimap`, `unordered_set` e `unordered_multiset`. La libreria standard fornisce le specializzazioni per i tipi di base: *Ty* può essere qualsiasi tipo scalare, inclusi tipi di puntatore e tipi di enumerazione. Sono inoltre disponibili specializzazioni per i tipi della libreria `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant` e `vector<bool>`.
+L'oggetto funzione definisce una funzione hash, idonea per il mapping di valori di tipo *Ty* con una distribuzione di valori di indice. Il `operator()` del membro restituisce un codice hash per *Val*, adatto per l'utilizzo con i modelli di classe `unordered_map`, `unordered_multimap`, `unordered_set` e `unordered_multiset`. La libreria standard fornisce specializzazioni per i tipi di base: *Ty* può essere qualsiasi tipo scalare, inclusi tipi di puntatore e tipi di enumerazione. Sono inoltre disponibili specializzazioni per i tipi della libreria `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant` e `vector<bool>`.
 
 ## <a name="example"></a>Esempio
 

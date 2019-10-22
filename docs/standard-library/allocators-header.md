@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 5de872080bc02f4654f53d94928b5e44dbc36816
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3619f3810f167fef291ad3def4a2b94f9a6b9b1a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453692"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688483"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -33,7 +33,7 @@ I contenitori basati su nodi nella libreria standard C++ (std::list, std::set, s
 
 Se usati con contenitori che non sono basati su nodi (ad esempio i contenitori della libreria standard C++ std::vector std::deque e std::basic_string), i modelli allocatore funzioneranno correttamente ma non offriranno probabilmente alcun miglioramento delle prestazioni rispetto all'allocatore predefinito.
 
-Un allocatore è una classe di modello che descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per oggetti e matrici di oggetti di un tipo specificato. Gli oggetti allocatore vengono usati da diverse classi di modello di contenitore nella libreria standard C++.
+Un allocatore è un modello di classe che descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per oggetti e matrici di oggetti di un tipo designato. Gli oggetti allocator vengono utilizzati da diversi modelli di classe C++ contenitore nella libreria standard.
 
 Gli allocatori sono tutti i modelli di questo tipo:
 
@@ -42,7 +42,7 @@ template<class Type>
 class allocator;
 ```
 
-dove l'argomento di modello `Type` è il tipo gestito dall'istanza dell'allocatore. La libreria standard C++ fornisce un oggetto allocatore predefinito, la classe di modello [allocator](../standard-library/allocator-class.md) definita in [\<memory>](../standard-library/memory.md). L'intestazione \<allocators> fornisce gli allocatori seguenti:
+dove l'argomento di modello `Type` è il tipo gestito dall'istanza dell'allocatore. La C++ libreria standard fornisce un allocatore predefinito, il modello di classe [allocator](../standard-library/allocator-class.md), definito in [\<memory >](../standard-library/memory.md). L'intestazione \<allocators> fornisce gli allocatori seguenti:
 
 - [allocator_newdel](../standard-library/allocator-newdel-class.md)
 
@@ -77,7 +77,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 alloca nodi con `allocator_chunklist` e il filtro di sincronizzazione [sync_per_thread](../standard-library/sync-per-thread-class.md).
 
-Un allocatore di blocco è una cache o un filtro. Una cache è una classe di modello che accetta un solo argomento di tipo std::size_t. Definisce un allocatore di blocco che alloca e dealloca blocchi di memoria di un'unica dimensione. Deve ottenere memoria utilizzando operator **New**, ma non deve effettuare una chiamata separata a Operator **New** per ogni blocco. Può, ad esempio, sottoallocare da un blocco più grande o blocchi deallocati della cache per una riallocazione successiva.
+Un allocatore di blocco è una cache o un filtro. Una cache è un modello di classe che accetta un argomento di tipo std:: size_t. Definisce un allocatore di blocco che alloca e dealloca blocchi di memoria di un'unica dimensione. Deve ottenere memoria utilizzando operator **New**, ma non deve effettuare una chiamata separata a Operator **New** per ogni blocco. Può, ad esempio, sottoallocare da un blocco più grande o blocchi deallocati della cache per una riallocazione successiva.
 
 Con un compilatore che non compila la riassociazione il valore dell'argomento std::size_t usato al momento della creazione dell'istanza del modello non è necessariamente il valore dell'argomento _Sz passato alle funzioni membro di una cache allocate e deallocate.
 
@@ -119,9 +119,9 @@ Il modello di cache `cache_freelist` accetta un argomento classe max che determi
 
 ### <a name="macros"></a>Macro
 
-|Macro|DESCRIZIONE|
+|Macro|Descrizione|
 |-|-|
-|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Restituisce una classe di modello allocatore.|
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Restituisce un modello di classe allocator.|
 |[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Restituisce `stdext::allocators::cache_chunklist<sizeof(Type)>`.|
 |[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Restituisce `stdext::allocators::cache_freelist<sizeof(Type), max>`.|
 |[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Restituisce `stdext::allocators::cache_suballoc<sizeof(Type)>`.|
@@ -129,14 +129,14 @@ Il modello di cache `cache_freelist` accetta un argomento classe max che determi
 
 ### <a name="operators"></a>Operatori
 
-|Operator|Descrizione|
+|??|Descrizione|
 |-|-|
 |[operator!= (\<allocators>)](../standard-library/allocators-operators.md#op_neq)|Verifica la disuguaglianza tra gli oggetti allocatore di una classe specificata.|
 |[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|Verifica l'uguaglianza tra gli oggetti allocatore di una classe specificata.|
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|Class|Descrizione|
 |-|-|
 |[allocator_base](../standard-library/allocator-base-class.md)|Definisce la classe base e le funzioni comuni necessari per creare un allocatore definito dall'utente da un filtro di sincronizzazione.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per gli oggetti usando una cache di tipo [cache_chunklist](../standard-library/cache-chunklist-class.md).|
@@ -153,7 +153,7 @@ Il modello di cache `cache_freelist` accetta un argomento classe max che determi
 |[max_none](../standard-library/max-none-class.md)|Descrive un oggetto classe max che limita un oggetto [freelist](../standard-library/freelist-class.md) a una lunghezza massima pari a zero.|
 |[max_unbounded](../standard-library/max-unbounded-class.md)|Descrive un oggetto classe max che non limita la lunghezza massima di un oggetto [freelist](../standard-library/freelist-class.md).|
 |[max_variable_size](../standard-library/max-variable-size-class.md)|Descrive un oggetto classe max che limita un oggetto [freelist](../standard-library/freelist-class.md) a una lunghezza massima approssimativamente proporzionale al numero di blocchi di memoria allocati.|
-|[rts_alloc](../standard-library/rts-alloc-class.md)|La classe di modello rts_alloc descrive un [filtro](../standard-library/allocators-header.md) che contiene una matrice di istanze cache e determina quale istanza usare per l'allocazione e la deallocazione in fase di esecuzione anziché in fase di compilazione.|
+|[rts_alloc](../standard-library/rts-alloc-class.md)|Il modello di classe rts_alloc descrive un [filtro](../standard-library/allocators-header.md) che contiene una matrice di istanze della cache e determina quale istanza usare per l'allocazione e la deallocazione in fase di esecuzione anziché in fase di compilazione.|
 |[sync_none](../standard-library/sync-none-class.md)|Descrive un filtro di sincronizzazione che non fornisce alcuna sincronizzazione.|
 |[sync_per_container](../standard-library/sync-per-container-class.md)|Descrive un filtro di sincronizzazione che fornisce un oggetto cache separato per ogni oggetto allocatore.|
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|Descrive un filtro di sincronizzazione che fornisce un oggetto cache separato per ogni thread.|

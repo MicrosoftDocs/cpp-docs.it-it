@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: b466f8a893a14f7a94ee7b9e54b72e43aa6cf6e3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9df3831e085f1dea1df45ff9368479fa516b944e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460021"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685761"
 ---
-# <a name="timegetbyname-class"></a>Classe time_get_byname
+# <a name="time_get_byname-class"></a>Classe time_get_byname
 
-Questa classe modello derivata descrive un oggetto che può essere usato come facet delle impostazioni locali di tipo `time_get`\<CharType, InputIterator>.
+Il modello di classe derivata descrive un oggetto che può essere utilizzato come facet delle impostazioni locali di tipo `time_get` \<CharType, InputIterator >.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,10 +40,10 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*_Locname*\
+@No__t_1 *_Locname*
 Impostazioni locali denominate.
 
-*_Refs*\
+@No__t_1 *_Refs*
 Conteggio di riferimento iniziale.
 
 ## <a name="requirements"></a>Requisiti

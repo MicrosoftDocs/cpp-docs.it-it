@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460197"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689288"
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 
-La classe modello descrive un oggetto che può fungere da facet delle impostazioni locali per descrivere le sequenze di tipo *CharType* utilizzate per rappresentare un campo di input di tipo valuta o un campo di output di tipo valuta. Se il parametro di modello *Intl* è *true*, vengono rispettate le convenzioni internazionali.
+Il modello di classe descrive un oggetto che può fungere da facet delle impostazioni locali per descrivere le sequenze di tipo *CharType* utilizzate per rappresentare un campo di input di tipo valuta o un campo di output di tipo valuta. Se il parametro di modello *Intl* è *true*, vengono rispettate le convenzioni internazionali.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-*Intl*\
+@No__t_1 *Intl*
 Flag che specifica se devono essere rispettate le convenzioni internazionali.
 
 ## <a name="remarks"></a>Note
@@ -93,7 +93,7 @@ L'oggetto statico const intl archivia il valore del parametro di modello *Intl*.
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[curr_symbol](#curr_symbol)|Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di valuta.|
 |[decimal_point](#decimal_point)|Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di separatore decimale.|
@@ -277,7 +277,7 @@ Regola specifica delle impostazioni locali per determinare la modalità di raggr
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio per il [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata `grouping`da.
+Vedere l'esempio per il [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata da `grouping`.
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo negativo. Ognuno dei quattro elementi di `pattern::field` può avere i valori seguenti:
+La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo negativo. Ognuno dei quattro elementi di `pattern::field` può includere i valori seguenti:
 
-- `none`per trovare la corrispondenza con zero o più spazi oppure non generare alcun elemento.
+- `none` per trovare la corrispondenza con zero o più spazi oppure non generare alcun elemento.
 
-- `sign`per trovare una corrispondenza o generare un segno positivo o negativo.
+- `sign` per trovare la corrispondenza o generare un segno positivo o negativo.
 
-- `space`per trovare la corrispondenza con zero o più spazi o generare uno spazio.
+- `space` per trovare la corrispondenza con zero o più spazi o per generare uno spazio.
 
-- `symbol`per trovare una corrispondenza o generare un simbolo di valuta.
+- `symbol` la corrispondenza o la generazione di un simbolo di valuta.
 
-- `value`per trovare una corrispondenza o generare un valore monetario.
+- `value` la corrispondenza o la generazione di un valore monetario.
 
-I componenti di un campo di output di tipo valuta vengono generati e i componenti di un campo di input di tipo valuta corrispondono nell'ordine in `pattern::field`cui questi elementi sono visualizzati in. Ognuno `sign`dei valori, `value` ,e`none` deve essere visualizzato esattamente una volta. `space` `symbol` Il valore `none` non deve essere visualizzato per primo. Il valore **space** non deve comparire come primo o ultimo. Se `Intl` è true, l'ordine è `symbol`, `sign` `none`,, quindi `value`.
+I componenti di un campo di output di tipo valuta vengono generati e i componenti di un campo di input di tipo valuta corrispondono nell'ordine in cui questi elementi vengono visualizzati in `pattern::field`. Ogni valore `sign`, `symbol`, `value` e `none` o `space` deve essere visualizzato esattamente una volta. Il valore `none` non deve essere visualizzato per primo. Il valore **space** non deve comparire come primo o ultimo. Se `Intl` è true, l'ordine è `symbol`, `sign` `none`, quindi `value`.
 
 La versione del modello di `moneypunct`\< **CharType**, **Intl**> restituisce `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -335,7 +335,7 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo positivo. Determina inoltre la modalità di messa in corrispondenza dei componenti di un campo di input di tipo valuta. La codifica è uguale a quella per [do_neg_format](#do_neg_format).
+La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo positivo. Determina inoltre la modalità di corrispondenza tra i componenti di un campo di input di tipo valuta. La codifica è identica a quella di [do_neg_format](#do_neg_format).
 
 La versione del modello di moneypunct\< **CharType**, **Inputlterator**> restituisce `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -523,20 +523,20 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
 I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
-- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: La durata dell'oggetto deve essere gestita manualmente.
+- 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
-Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
+Non è possibile offrire esempi diretti, poiché il distruttore è protetto.
 
 Il costruttore inizializza l'oggetto di base con [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).
 
@@ -770,7 +770,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo descrive una specializzazione della classe modello [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie delle sequenze di punteggiatura.
+Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie delle sequenze di punteggiatura.
 
 ## <a name="thousands_sep"></a>  moneypunct::thousands_sep
 

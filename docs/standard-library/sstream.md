@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 8284e56e8afb1e5518cbcbb772079b4f19d57b18
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f1fb202692d09fa87eb775677e46e1c3f36dbad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451736"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688952"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
-Definisce diverse classi modello che supportano operazioni iostream su sequenze archiviate in un oggetto matrice allocato. Queste sequenze vengono facilmente convertite in e da oggetti della classe modello [basic_string](../standard-library/basic-string-class.md).
+Definisce diversi modelli di classe che supportano operazioni iostreams su sequenze archiviate in un oggetto matrice allocato. Queste sequenze vengono facilmente convertite in e da oggetti della classe modello [basic_string](../standard-library/basic-string-class.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -77,11 +77,11 @@ void swap (
 
 ## <a name="remarks"></a>Note
 
-Gli oggetti di tipo `char *` possono usare la funzionalità in [\<strstream>](../standard-library/strstream.md) per lo streaming. Tuttavia, \<strstream > è deprecato e l'uso di \<sstream > è consigliato.
+Gli oggetti di tipo `char *` possono usare la funzionalità in [\<strstream>](../standard-library/strstream.md) per lo streaming. Tuttavia, \<strstream > è deprecata e l'utilizzo di \<sstream > è consigliato.
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|DESCRIZIONE|
+|Nome del tipo|Descrizione|
 |-|-|
 |[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Crea un tipo `basic_istringstream` specializzato in un parametro di modello **char** .|
 |[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Crea un tipo `basic_ostringstream` specializzato in un parametro di modello **char** .|
@@ -100,12 +100,12 @@ Gli oggetti di tipo `char *` possono usare la funzionalità in [\<strstream>](..
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|Class|Descrizione|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Descrive un buffer del flusso che controlla la trasmissione di elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`, verso e da una sequenza di elementi archiviati in un oggetto matrice.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso della classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**elem**, **TR**, `Alloc`>, con elementi di tipo `Elem`, il cui carattere i tratti sono determinati dalla classe `Tr`e i cui elementi sono allocati da un allocatore della classe. `Alloc`|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso della classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**elem**, **TR**, `Alloc`>, con elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`e i cui elementi sono allocati da un allocatore della classe. `Alloc`|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Descrive un oggetto che controlla l'inserimento e l'estrazione di elementi e oggetti codificati usando un buffer di flusso della classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**elem**, `Alloc` **TR**, >, con elementi `Elem`di tipo, i cui i tratti di carattere sono determinati dalla classe `Tr`e i cui elementi sono allocati da un allocatore `Alloc`della classe.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso della classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, con elementi di tipo `Elem`, i cui tratti di carattere sono determinati da la classe `Tr` e i cui elementi sono allocati da un allocatore della classe `Alloc`.|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso della classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, con elementi di tipo `Elem`, i cui tratti di carattere sono determinati dal `Tr` della classe e i cui elementi sono allocati da un allocatore della classe `Alloc`.|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Descrive un oggetto che controlla l'inserimento e l'estrazione di elementi e oggetti codificati usando un buffer di flusso della classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, con elementi di tipo `Elem`, i cui tratti di carattere sono determinato dalla classe `Tr` e i cui elementi sono allocati da un allocatore della classe `Alloc`.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -116,6 +116,6 @@ Gli oggetti di tipo `char *` possono usare la funzionalità in [\<strstream>](..
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

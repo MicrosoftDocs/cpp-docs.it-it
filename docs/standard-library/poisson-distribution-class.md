@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458471"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689120"
 ---
-# <a name="poissondistribution-class"></a>Classe poisson_distribution
+# <a name="poisson_distribution-class"></a>Classe poisson_distribution
 
 Genera una distribuzione di Poisson.
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*IntType*\
-Il tipo di risultato Integer, il valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+@No__t_1 *intType*
+Il tipo di risultato Integer, il valore predefinito è **int**. Per i tipi possibili, vedere [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe di modelli descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente con una distribuzione di Poisson. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente con una distribuzione di Poisson. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -81,7 +81,7 @@ La classe di modelli descrive una distribuzione che produce valori di un tipo in
 
 La funzione di proprietà `mean()` restituisce il valore per il parametro di distribuzione archiviato *mean*.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*significa*\
+\ *medio*
 Parametro di distribuzione `mean`.
 
-*parm*\
+\ di *parmigiana*
 Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note

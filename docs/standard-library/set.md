@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450518"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686463"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-Definisce le classi modello del contenitore set e multiset e i rispettivi modelli di supporto.
+Definisce i modelli di classe del contenitore set e multiset e i rispettivi modelli di supporto.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -24,7 +24,7 @@ Definisce le classi modello del contenitore set e multiset e i rispettivi modell
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Anche \<la libreria set > USA l' `#include <initializer_list>` istruzione.
+> Anche la libreria \<set > USA l'istruzione `#include <initializer_list>`.
 
 ## <a name="members"></a>Members
 
@@ -41,7 +41,7 @@ Definisce le classi modello del contenitore set e multiset e i rispettivi modell
 
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate
 
-|Versione set|Versione multiset|DESCRIZIONE|
+|Versione set|Versione multiset|Descrizione|
 |-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Scambia gli elementi di due set o multiset.|
 
@@ -55,5 +55,5 @@ Definisce le classi modello del contenitore set e multiset e i rispettivi modell
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

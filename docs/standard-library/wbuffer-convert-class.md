@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: d19abf74bd9f794bc39ce04e5ed22e360cde75b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410889"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688535"
 ---
-# <a name="wbufferconvert-class"></a>Classe wbuffer_convert
+# <a name="wbuffer_convert-class"></a>Classe wbuffer_convert
 
 Descrive un buffer del flusso che controlla la trasmissione di elementi da e verso un buffer del flusso di byte.
 
@@ -35,11 +35,11 @@ class wbuffer_convert
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un buffer del flusso che controlla la trasmissione di elementi di tipo `_Elem`, i cui tratti di carattere sono descritti dalla classe `Traits`, verso e da un buffer del flusso di byte di tipo `std::streambuf`.
+Questo modello di classe descrive un buffer del flusso che controlla la trasmissione di elementi di tipo `_Elem`, i cui tratti di carattere sono descritti dalla classe `Traits`, da e verso un buffer del flusso di byte di tipo `std::streambuf`.
 
 La conversione tra una sequenza di valori `Elem` e sequenze multibyte viene eseguita da un oggetto della classe `Codecvt<Elem, char, std::mbstate_t>`, che soddisfa i requisiti del facet standard di conversione del codice `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Un oggetto di questa classe modello archivia:
+Un oggetto di questo modello di classe archivia:
 
 - Un puntatore al buffer del flusso di byte sottostante
 

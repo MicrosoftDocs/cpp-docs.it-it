@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: f6c51d85aa4a9f5516fe08dad163274051d94c13
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: e8c468da35ae23e5a37c2dfc5ac3fbdf47408c71
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195824"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686088"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Definisce lo stack della classe modello e due modelli di supporto.
+Definisce lo stack del modello di classe e due modelli di supporto.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -25,9 +25,9 @@ Definisce lo stack della classe modello e due modelli di supporto.
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Anche \<la libreria dello stack > USA `#include <initializer_list>` l'istruzione.
+> Anche la libreria \<stack > USA l'istruzione `#include <initializer_list>`.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>Operatori
 
@@ -49,5 +49,5 @@ Definisce lo stack della classe modello e due modelli di supporto.
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

@@ -38,14 +38,14 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cbc1a9eb9432a454ca5dc04205b9d0c7b631a430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456437"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690101"
 ---
-# <a name="allocatorbase-class"></a>Classe allocator_base
+# <a name="allocator_base-class"></a>Classe allocator_base
 
 Definisce la classe base e le funzioni comuni necessari per creare un allocatore definito dall'utente da un filtro di sincronizzazione.
 
@@ -60,7 +60,7 @@ class allocator_base
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Tipo*|Tipo degli elementi assegnato dall'allocatore.|
+|*Type*|Tipo degli elementi assegnato dall'allocatore.|
 |*Sincronizzazione*|I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](../standard-library/sync-none-class.md), la [Classe sync_per_container](../standard-library/sync-per-container-class.md), la [Classe sync_per_thread](../standard-library/sync-per-thread-class.md) o la [Classe sync_shared](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Costruttori
@@ -78,7 +78,7 @@ class allocator_base
 |[difference_type](#difference_type)|Tipo integrale con segno che può rappresentare la differenza tra valori di puntatori al tipo di oggetto gestito dall'allocatore.|
 |[pointer](#pointer)|Tipo che fornisce un puntatore al tipo di oggetto gestito dall'allocatore.|
 |[reference](#reference)|Tipo che fornisce un riferimento al tipo di oggetto gestito dall'allocatore.|
-|[size_type](#size_type)|Un tipo integrale senza segno che può rappresentare la lunghezza di qualsiasi sequenza che un oggetto della classe modello `allocator_base` può allocare.|
+|[size_type](#size_type)|Tipo integrale senza segno che può rappresentare la lunghezza di qualsiasi sequenza che può essere allocata da un oggetto di tipo `allocator_base`.|
 |[value_type](#value_type)|Tipo gestito dall'allocatore.|
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parametri
 
-*Val*\
+\ *Val*
 Valore const o nonconst dell'oggetto di cui viene cercato l'indirizzo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -237,7 +237,7 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*ptr*|Puntatore al percorso in cui deve essere creato l'oggetto.|
 |*val*|Il valore con cui viene inizializzato l'oggetto costruito.|
@@ -275,7 +275,7 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*ptr*|Un puntatore che indica l'indirizzo dell'oggetto da distruggere.|
 
@@ -325,7 +325,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a>  allocator_base::size_type
 
-Un tipo integrale senza segno che può rappresentare la lunghezza di qualsiasi sequenza che un oggetto della classe modello `allocator_base` può allocare.
+Tipo integrale senza segno che può rappresentare la lunghezza di qualsiasi sequenza che può essere allocata da un oggetto di tipo `allocator_base`.
 
 ```cpp
 typedef std::size_t size_type;

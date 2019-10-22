@@ -9,12 +9,12 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 2f8ef031731e4213ce8cda326d05f1241cd03625
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 67b2ccf70b4d3045cecd13d9096875f77c4cde9a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447386"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689629"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -28,9 +28,9 @@ Definisce C++ le funzioni della libreria standard che consentono di costruire *o
 
 ## <a name="remarks"></a>Note
 
-Gli algoritmi richiedono due tipi di oggetti funzione, ovvero unario e *binario*. Gli oggetti funzione di tipo unario richiedono un argomento, mentre gli oggetti funzione di tipo binario richiedono due argomenti. Un oggetto funzione e i puntatori a funzione possono essere passati come predicato a un algoritmo, ma gli oggetti funzione sono anche adattabili e aumentano l'ambito, la flessibilità e l'efficienza della libreria standard C++. Se, ad esempio, un valore deve essere associato a una funzione prima del passaggio a un algoritmo, non è possibile ad esempio utilizzare un puntatore a funzione. Gli adattatori di funzione convertono i puntatori a funzione in oggetti funzione adattabili che possono essere associati a un valore. L'intestazione \<functional> contiene anche gli adattatori di funzione membro che consentono a queste ultime di essere chiamate come oggetti funzione adattabili. Le funzioni sono adattabili se le dichiarazioni di tipo corrispondenti sono annidate, ne specificano l'argomento e i tipi restituiti. Gli oggetti funzione e i relativi adattatori consentono alla libreria standard C++ di aggiornare le applicazioni esistenti, oltre a facilitare l'integrazione di tale libreria nell'ambiente di programmazione C++.
+Gli algoritmi richiedono due tipi di oggetti funzione, ovvero *unario* e *binario*. Gli oggetti funzione di tipo unario richiedono un argomento, mentre gli oggetti funzione di tipo binario richiedono due argomenti. Un oggetto funzione e i puntatori a funzione possono essere passati come predicato a un algoritmo, ma gli oggetti funzione sono anche adattabili e aumentano l'ambito, la flessibilità e l'efficienza della libreria standard C++. Se, ad esempio, un valore deve essere associato a una funzione prima del passaggio a un algoritmo, non è possibile ad esempio utilizzare un puntatore a funzione. Gli adattatori di funzione convertono i puntatori a funzione in oggetti funzione adattabili che possono essere associati a un valore. L'intestazione \<functional> contiene anche gli adattatori di funzione membro che consentono a queste ultime di essere chiamate come oggetti funzione adattabili. Le funzioni sono adattabili se le dichiarazioni di tipo corrispondenti sono annidate, ne specificano l'argomento e i tipi restituiti. Gli oggetti funzione e i relativi adattatori consentono alla libreria standard C++ di aggiornare le applicazioni esistenti, oltre a facilitare l'integrazione di tale libreria nell'ambiente di programmazione C++.
 
-L'implementazione degli oggetti funzione nell' \<> funzionale include l' *operatore Transparent funtori*. che sono specializzazioni di oggetti funzione standard e non accettano parametri di modello ed eseguono l'avanzamento perfetto degli argomenti della funzione e la restituzione perfetta del risultato. In queste specializzazioni del modello non è necessario specificare i tipi di argomento quando si richiamano i funtori di aritmetica, di confronto e degli operatori bit per bit. È possibile eseguire l'overload degli operatori di aritmetica, di confronto, logici o bit per bit per i tipi personalizzati o per le combinazioni eterogenee di tipi, quindi utilizzare i funtori di operatore trasparenti come argomenti della funzione. Ad esempio, se il tipo *MyType* implementa `operator<`, è possibile chiamare `sort(my_collection.begin(), my_collection.end(), less<>())` anziché specificare in modo esplicito il tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
+L'implementazione degli oggetti funzione in \<functional > include *Transparent operator funtori*. che sono specializzazioni di oggetti funzione standard e non accettano parametri di modello ed eseguono l'avanzamento perfetto degli argomenti della funzione e la restituzione perfetta del risultato. In queste specializzazioni del modello non è necessario specificare i tipi di argomento quando si richiamano i funtori di aritmetica, di confronto e degli operatori bit per bit. È possibile eseguire l'overload degli operatori di aritmetica, di confronto, logici o bit per bit per i tipi personalizzati o per le combinazioni eterogenee di tipi, quindi utilizzare i funtori di operatore trasparenti come argomenti della funzione. Ad esempio, se il tipo *MyType* implementa `operator<`, è possibile chiamare `sort(my_collection.begin(), my_collection.end(), less<>())` anziché specificare in modo esplicito il tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
 
 Le funzionalità seguenti sono state aggiunte in C++ 11, C++ 14 e C++ 17:
 
@@ -79,9 +79,9 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 |||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Classe che descrive un'eccezione generata per indicare che una chiamata a `operator()` su un oggetto [function](../standard-library/function-class.md) non è riuscita perché l'oggetto era vuoto.|
-|[binary_negate](../standard-library/binary-negate-class.md)|Classe modello che fornisce una funzione membro che nega il valore restituito di una funzione binaria specificata.<br/> (Deprecato in C++ 17). |
-|[binder1st](../standard-library/binder1st-class.md)|Classe modello che fornisce un costruttore che converte un oggetto funzione binaria in un oggetto funzione unaria associando il primo argomento della funzione binaria a un valore specificato.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
-|[binder2nd](../standard-library/binder2nd-class.md)|Classe modello che fornisce un costruttore che converte un oggetto funzione binaria in un oggetto funzione unaria associando il secondo argomento della funzione binaria a un valore specificato.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
+|[binary_negate](../standard-library/binary-negate-class.md)|Modello di classe che fornisce una funzione membro che nega il valore restituito di una funzione binaria specificata.<br/> (Deprecato in C++ 17). |
+|[binder1st](../standard-library/binder1st-class.md)|Modello di classe che fornisce un costruttore che converte un oggetto funzione binaria in un oggetto funzione unaria associando il primo argomento della funzione binaria a un valore specificato.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
+|[binder2nd](../standard-library/binder2nd-class.md)|Modello di classe che fornisce un costruttore che converte un oggetto funzione binaria in un oggetto funzione unaria associando il secondo argomento della funzione binaria a un valore specificato.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
 |[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
 |[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Classe di adattatori che consente a una funzione membro const che non accetta argomenti di chiamare gli operatori come oggetto funzione unaria una volta inizializzata con un argomento di riferimento.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
@@ -93,14 +93,14 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 |[hash](../standard-library/hash-class.md)|Classe che calcola un codice hash per un valore.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Classe che consente di verificare se un particolare tipo viene generato chiamando `bind`.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Classe che consente di verificare se un particolare tipo è un segnaposto.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Classe di adattatori che consente `non_const` a una funzione membro che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di riferimento.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Classe di adattatori che consente `non_const` a una funzione membro che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di puntatore.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Classe di adattatori che consente `non_const` a una funzione membro che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di riferimento.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Classe di adattatori che consente `non_const` a una funzione membro che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di puntatore.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Classe di adattatori che consente a una funzione membro `non_const` che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di riferimento.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Classe di adattatori che consente a una funzione membro `non_const` che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di puntatore.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Classe di adattatori che consente a una funzione membro `non_const` che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di riferimento.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Classe di adattatori che consente a una funzione membro `non_const` che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di puntatore.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Converte un puntatore a funzione binaria in una funzione binaria adattabile.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Converte un puntatore a funzione unaria in una funzione unaria adattabile.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Classe che incapsula un riferimento.|
-|[unary_negate](../standard-library/unary-negate-class.md)|Classe modello che fornisce una funzione membro che nega il valore restituito di una funzione unaria specificata.<br/> (Deprecato in C++ 17).  |
+|[unary_negate](../standard-library/unary-negate-class.md)|Modello di classe che fornisce una funzione membro che nega il valore restituito di una funzione unaria specificata.<br/> (Deprecato in C++ 17).  |
 
 ### <a name="functions"></a>Funzioni
 
@@ -114,7 +114,7 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Restituisce l'OR logico bit per bit (operatore&#124;) dei due parametri.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Restituisce il risultato dell'operazione XOR logico bit per bit (operator ^) dei due parametri.|
 |[cref](../standard-library/functional-functions.md#cref)|Costruisce un oggetto `reference_wrapper` di tipo const da un argomento.|
-|[invoke](../standard-library/functional-functions.md#invoke)||
+|[richiamare](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Genera un wrapper di chiamata semplice.|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|Funzioni di modello helper utilizzate per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzate con gli argomenti di puntatore.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Funzione di modello helper utilizzata per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzata con gli argomenti di riferimento.|
@@ -125,7 +125,7 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 |[ref](../standard-library/functional-functions.md#ref)|Costruisce un oggetto `reference_wrapper` da un argomento.|
 |[swap](../standard-library/functional-functions.md#swap)|Scambia due oggetti `function`.|
 
-### <a name="structs"></a>Struct
+### <a name="structs"></a>Strutture
 
 |||
 |-|-|
@@ -163,5 +163,5 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 109e51ad9eba54f31b90da9b8b85bec105c7dce6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240432"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687144"
 ---
-# <a name="pointertraits-struct"></a>Struct pointer_traits
+# <a name="pointer_traits-struct"></a>Struct pointer_traits
 
-Fornisce le informazioni necessarie per un oggetto della classe modello `allocator_traits` per descrivere un allocatore con il tipo di puntatore `Ptr`.
+Fornisce le informazioni necessarie per un oggetto di tipo `allocator_traits` per descrivere un allocatore con tipo di puntatore `Ptr`.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -58,7 +58,7 @@ struct Ptr
 |`typedef T1 element_type`|Il tipo `T1` è `Ptr::element_type` se quel tipo esiste; in caso contrario `Ty`. Se `Ptr` è un puntatore non elaborato, il tipo è `Ty`.|
 |`typedef Ptr pointer`|Il tipo è `Ptr`.|
 
-### <a name="structs"></a>Struct
+### <a name="structs"></a>Strutture
 
 |||
 |-|-|
@@ -70,7 +70,7 @@ struct Ptr
 |----------|-----------------|
 |[pointer_to](#pointer_to)|Converte un riferimento arbitrario a un oggetto della classe `Ptr`.|
 
-### <a name="pointer_to"></a> pointer_to
+### <a name="pointer_to"></a>pointer_to
 
 Metodo statico che restituisce `Ptr::pointer_to(obj)`, se tale funzione esiste. In caso contrario, non è possibile convertire un riferimento arbitrario a un oggetto della classe `Ptr`. Se `Ptr` è un puntatore non elaborato, il metodo restituisce `addressof(obj)`.
 
