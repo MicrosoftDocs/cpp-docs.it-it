@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-ms.openlocfilehash: 9da5e3593288be02819330e11b60e306784054dc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 12398203d61f2c3ea155b5f6e6e7b118d4a13c75
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460145"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689397"
 ---
-# <a name="maskarray-class"></a>mask_array (classe)
+# <a name="mask_array-class"></a>mask_array (classe)
 
-Classe modello ausiliaria interna che supporta oggetti che sono subset di oggetti valarray padre, specificati con un'espressione booleana, fornendo operazioni tra le matrici di subset.
+Modello di classe ausiliario interno che supporta oggetti che sono subset di oggetti valarray padre, specificati con un'espressione booleana, fornendo operazioni tra le matrici di subset.
 
 ## <a name="syntax"></a>Sintassi
 
 ## <a name="remarks"></a>Note
 
-La classe descrive un oggetto che archivia un riferimento a un oggetto `va` di classe [valarray](../standard-library/valarray-class.md) **\<di tipo >** , insieme a un `ba` oggetto della [classe\<valarray bool >](../standard-library/valarray-bool-class.md), che descrive il sequenza di elementi da selezionare dall' `valarray<Type>` oggetto.
+La classe descrive un oggetto che archivia un riferimento a un oggetto `va` della classe [valarray](../standard-library/valarray-class.md)  **\<Type >** , insieme a un oggetto `ba` della classe [valarray \<bool >](../standard-library/valarray-bool-class.md), che descrive la sequenza di elementi da selezionare dall'oggetto `valarray<Type>`.
 
-Per costruire un `mask_array<Type>` oggetto, è sufficiente scrivere un'espressione nel formato [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Le funzioni membro della classe mask_array si comportano quindi come le firme di `valarray<Type>`funzione corrispondenti definite per, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati.
+Per costruire un oggetto `mask_array<Type>` è sufficiente scrivere un'espressione nel formato [va&#91;BA&#93;](../standard-library/valarray-class.md#op_at). Le funzioni membro della classe mask_array si comportano quindi come le firme di funzione corrispondenti definite per `valarray<Type>`, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati.
 
-La sequenza è costituita dal `ba.size` numero massimo di elementi. Un elemento *J* viene incluso solo se **ba**[ *J*] è true. Sono pertanto presenti tutti gli elementi nella sequenza perché sono presenti elementi true in `ba`. Se `I` è l'indice dell'elemento true più basso in `ba`, allora **va**[ `I`] è l'elemento zero nella sequenza selezionata.
+La sequenza è costituita da al massimo `ba.size` elementi. Un elemento *J* viene incluso solo se **ba**[ *J*] è true. Sono quindi presenti tutti gli elementi nella sequenza perché esistono elementi veri in `ba`. Se `I` è l'indice dell'elemento true più basso nel `ba`, **va**[`I`] è l'elemento zero nella sequenza selezionata.
 
 ## <a name="example"></a>Esempio
 

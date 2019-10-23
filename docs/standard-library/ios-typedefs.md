@@ -9,16 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: a0fd73cc53c5d538469cb957b7b4c4ec56783ade
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245276"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687882"
 ---
 # <a name="ltiosgt-typedefs"></a>Typedef &lt;ios&gt;
 
-## <a name="ios"></a> IOS
+## <a name="ios"></a>iOS
 
 Supporta la classe ios dalla libreria iostream precedente.
 
@@ -28,9 +28,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md)specializzata per gli elementi di tipo **char** con tratti di carattere predefiniti.
+Il tipo è un sinonimo del modello di classe [basic_ios](../standard-library/basic-ios-class.md), specializzato per gli elementi di tipo **char** con tratti di carattere predefiniti.
 
-## <a name="streamoff"></a> streamoff
+## <a name="streamoff"></a>streamoff
 
 Supporta operazioni interne.
 
@@ -44,9 +44,9 @@ Supporta operazioni interne.
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un intero con segno che descrive un oggetto in grado di archiviare un offset di byte interessato da varie operazioni di posizionamento del flusso. La relativa rappresentazione contiene almeno 32 bit di valore. Non necessariamente è abbastanza ampia da rappresentare una posizione di byte arbitraria all'interno di un flusso. Il valore `streamoff(-1)` indica in genere un offset errato.
+Il tipo è un intero con segno che descrive un oggetto in grado di archiviare un offset di byte interessato da varie operazioni di posizionamento del flusso. La relativa rappresentazione contiene almeno 32 bit di valore. Non necessariamente è abbastanza ampia da rappresentare una posizione di byte arbitraria all'interno di un flusso. Il valore `streamoff(-1)` in genere indica un offset errato.
 
-## <a name="streampos"></a> streampos
+## <a name="streampos"></a>streampos
 
 Contiene la posizione corrente del puntatore a un buffer o del puntatore a un file.
 
@@ -127,9 +127,9 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md)specializzata per gli elementi di tipo **wchar_t** con tratti di carattere predefiniti.
+Il tipo è un sinonimo del modello di classe [basic_ios](../standard-library/basic-ios-class.md), specializzato per gli elementi di tipo **wchar_t** con tratti di carattere predefiniti.
 
-## <a name="wstreampos"></a> wstreampos
+## <a name="wstreampos"></a>wstreampos
 
 Contiene la posizione corrente del puntatore a un buffer o del puntatore a un file.
 
