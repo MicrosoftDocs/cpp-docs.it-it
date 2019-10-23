@@ -1968,7 +1968,7 @@
               href: cppcx/delegates-c-cx.md
             - name: Eccezioni
               href: cppcx/exceptions-c-cx.md
-            - name: Eventi
+            - name: Events
               href: cppcx/events-c-cx.md
             - name: Cast
               href: cppcx/casting-c-cx.md
@@ -2969,7 +2969,7 @@
                           href: c-language/c-integer-constants.md
                         - name: Tipi integer
                           href: c-language/integer-types.md
-                        - name: Limiti per i tipi Integer in C++
+                        - name: Limiti per i tipi Integer in C e C++
                           href: c-language/cpp-integer-limits.md
                     - name: Costanti carattere C
                       expanded: false
