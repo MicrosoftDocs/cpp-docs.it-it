@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449128"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689503"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,18 +20,18 @@ Definisce diversi tipi e funzioni alla base del funzionamento delle intestazioni
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**: \<iOS >
+**Intestazione**: \<ios >
 
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> La \<libreria > iOS usa l' `#include <iosfwd>` istruzione.
+> Nella libreria di > \<ios viene utilizzata l'istruzione `#include <iosfwd>`.
 
 ## <a name="remarks"></a>Note
 
-Molte funzioni vengono considerate manipolatori. Un manipolatore dichiarato in \<ios> modifica i valori archiviati nel relativo oggetto argomento della classe [ios_base](../standard-library/ios-base-class.md). Altri manipolatori eseguono azioni sui flussi controllati dagli oggetti di un tipo derivato da questa classe, ad esempio una specializzazione di una delle classi modello [basic_istream](../standard-library/basic-istream-class.md) o [basic_ostream](../standard-library/basic-ostream-class.md). Ad esempio, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) cancella il flag `ios_base::skipws` di formato nell'oggetto `str`, che può essere di uno di questi tipi.
+Molte funzioni vengono considerate manipolatori. Un manipolatore dichiarato in \<ios> modifica i valori archiviati nel relativo oggetto argomento della classe [ios_base](../standard-library/ios-base-class.md). Altri manipolatori eseguono azioni sui flussi controllati da oggetti di un tipo derivato da questa classe, ad esempio una specializzazione di uno dei modelli di classe [basic_istream](../standard-library/basic-istream-class.md) o [basic_ostream](../standard-library/basic-ostream-class.md). Ad esempio, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) cancella il flag di formato `ios_base::skipws` nell'oggetto `str`, che può essere di uno di questi tipi.
 
-È anche possibile chiamare un manipolatore inserendolo in un flusso di output o estraendolo da un flusso di input, a causa delle operazioni speciali di inserimento ed estrazione fornite per le classi derivate da `ios_base`. Ad esempio:
+È anche possibile chiamare un manipolatore inserendolo in un flusso di output o estraendolo da un flusso di input, a causa delle operazioni speciali di inserimento ed estrazione fornite per le classi derivate da `ios_base`. Esempio:
 
 ```cpp
 istr>> noskipws;
@@ -95,13 +95,13 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|La classe modello descrive le funzioni membro e di archiviazione comuni ai flussi di input (della classe modello [basic_istream](../standard-library/basic-istream-class.md)) e ai flussi di output (della classe modello [basic_ostream](../standard-library/basic-ostream-class.md)) che dipendono dai parametri modello.|
-|[fpos](../standard-library/fpos-class.md)|La classe modello descrive un oggetto che può archiviare tutte le informazioni necessarie per ripristinare un indicatore di posizione del file arbitrario all'interno di qualsiasi flusso.|
+|[basic_ios](../standard-library/basic-ios-class.md)|Il modello di classe descrive le funzioni membro e di archiviazione comuni a entrambi i flussi di input (di classe modello [basic_istream](../standard-library/basic-istream-class.md)) e ai flussi di output (della classe modello [basic_ostream](../standard-library/basic-ostream-class.md)) che dipendono dai parametri del modello.|
+|[fpos](../standard-library/fpos-class.md)|Il modello di classe descrive un oggetto in grado di archiviare tutte le informazioni necessarie per ripristinare un indicatore di posizione del file arbitrario all'interno di qualsiasi flusso.|
 |[ios_base](../standard-library/ios-base-class.md)|La classe descrive le funzioni membro e di archiviazione comuni ai flussi di input e di output che non dipendono dai parametri di modello.|
 
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)
