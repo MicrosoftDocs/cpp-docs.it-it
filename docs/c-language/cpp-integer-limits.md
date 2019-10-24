@@ -1,27 +1,29 @@
 ---
-title: Limiti per i tipi Integer in C++
-ms.date: 01/29/2018
+title: Limiti C C++ e Integer
+ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
 - limits, integer constants
 - integer limits
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
-ms.openlocfilehash: 057da1ac8e4549a05d10a01cc3aead678045d9c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 6940f36e37ec58ca8fe23c9062928cbf90b125bd
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548291"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778380"
 ---
-# <a name="c-integer-limits"></a>Limiti per i tipi Integer in C++
+# <a name="c-and-c-integer-limits"></a>Limiti C C++ e Integer
 
 **Sezione specifica Microsoft**
 
-I limiti per i tipi Integer sono elencati nella tabella seguente. Tali limiti sono definiti anche nel file di intestazione standard. LIMITS.H. Microsoft C consente inoltre di dichiarare variabili Integer ridimensionate, che sono tipi integrali di dimensioni di 8, 16 o 32 bit. Per altre informazioni sui tipi Integer ridimensionati, vedere [Tipi Integer ridimensionati](../c-language/c-sized-integer-types.md).
+I limiti per i tipi integer in C C++ e sono elencati nella tabella seguente. Questi limiti sono definiti nel file di intestazione standard C `<limits.h>`. L' C++ intestazione della libreria standard `<limits>` include `<climits>`, che include `<limits.h>`.
+
+Microsoft C consente inoltre la dichiarazione di variabili Integer ridimensionate, che sono tipi integrali di dimensioni 8, 16, 32 o 64 bit. Per ulteriori informazioni sugli Integer ridimensionati in C, vedere [tipi Integer ridimensionati](../c-language/c-sized-integer-types.md).
 
 ## <a name="limits-on-integer-constants"></a>Limiti su costanti Integer
 
-|**Costante**|Significato|Valore|
+|**Costante**|Significato|Value|
 |------------------|-------------|-----------|
 |**CHAR_BIT**|Numero di bit nella variabile minore che non sia un campo di bit.|8|
 |**SCHAR_MIN**|Valore minimo per una variabile di tipo **char con segno**.|-128|
@@ -39,6 +41,9 @@ I limiti per i tipi Integer sono elencati nella tabella seguente. Tali limiti so
 |**LONG_MIN**|Valore minimo per una variabile di tipo **long**.|-2147483647 - 1|
 |**LONG_MAX**|Valore massimo per una variabile di tipo **long**.|2147483647|
 |**ULONG_MAX**|Valore massimo per una variabile di tipo **unsigned long**.|4294967295 (0xffffffff)|
+|**LLONG_MIN**|Valore minimo per una variabile di tipo **Long Long**.|-9.223.372.036.854.775.807-1|
+|**LLONG_MAX**|Valore massimo per una variabile di tipo **Long Long**.|9,223,372,036,854,775,807|
+|**ULLONG_MAX**|Valore massimo per una variabile di tipo **unsigned long long**.|18.446.744.073.709.551.615 (0xFFFFFFFFFFFFFFFF)|
 
 Se un valore è superiore al massimo valore rappresentabile con il tipo Integer, il compilatore Microsoft genera un errore.
 

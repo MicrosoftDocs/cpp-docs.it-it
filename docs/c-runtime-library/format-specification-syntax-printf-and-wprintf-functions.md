@@ -1,6 +1,6 @@
 ---
 title: 'Sintassi per la specifica del formato: funzioni printf wprintf'
-ms.date: 07/30/2019
+ms.date: 10/21/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: db144703a89fe1a6a76ed15f1cf77395c4565fab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500097"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778382"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
-Le diverse funzioni `printf` e `wprintf` accettano una stringa di formato e argomenti facoltativi e producono una sequenza di caratteri formattati per l'output. La stringa di formato contiene zero o più *direttive*, che sono caratteri letterali per l'output o *specifiche di conversione* codificate che descrivono come formattare un argomento nell'output. Questo articolo descrive la sintassi usata per codificare le specifiche di conversione nella stringa di formato. Per l'elenco di queste funzioni, vedere [I/O di flusso](../c-runtime-library/stream-i-o.md).
+Le diverse funzioni `printf` e `wprintf` accettano una stringa di formato e argomenti facoltativi e producono una sequenza di caratteri formattati per l'output. La stringa di formato contiene zero o più *direttive*, che sono caratteri letterali per l'output o *specifiche di conversione* codificate che descrivono come formattare un argomento nell'output. Questo articolo descrive la sintassi usata per codificare le specifiche di conversione nella stringa di formato. Per l'elenco di queste funzioni, vedere [I/O di flusso](../c-runtime-library/stream-i-o.md). 
 
 Una specifica di conversione è costituita da campi obbligatori e facoltativi nel seguente formato:
 
@@ -39,13 +39,16 @@ Una specifica di conversione semplice contiene solo il segno di percentuale e un
 
 <a name="type"></a>
 
+> [!NOTE] 
+> In Visual Studio 2015 il `printf` e la famiglia di funzioni `scanf` sono stati dichiarati come **inline** e spostati nelle intestazioni `<stdio.h>` e `<conio.h>`. Se si esegue la migrazione di codice precedente, è possibile che venga visualizzato *LNK2019* in relazione a queste funzioni. Per ulteriori informazioni, vedere [la C++ cronologia delle modifiche visive 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+
 ## <a name="type-conversion-specifier"></a>Identificatore di conversione tipo
 
 Il carattere identificatore di conversione *tipo* specifica se l'argomento corrispondente deve essere interpretato come un carattere, una stringa, un puntatore, un numero intero o un numero a virgola mobile. Il carattere *tipo* è l'unico campo di specifica conversione obbligatorio e viene visualizzato dopo tutti i campi facoltativi.
 
 Gli argomenti che seguono la stringa di formato vengono interpretati a seconda del carattere *tipo* corrispondente e del prefisso [dimensione](#size) facoltativo. Le conversioni dei tipi di carattere `char` e `wchar_t` vengono specificate con **c** o **C** e le stringhe di caratteri estesi a byte singolo e multibyte vengono specificate con **s** o **S**, a seconda della funzione di formattazione usata. Gli argomenti di tipo stringa e carattere che vengono specificati usando **c** e **s** vengono interpretati come `char` e `char*` dalle funzioni della famiglia `printf` o come `wchar_t` e `wchar_t*` dalle funzioni della famiglia `wprintf`. Gli argomenti di tipo stringa e carattere che vengono specificati usando **C** e **S** vengono interpretati come `wchar_t` e `wchar_t*` dalle funzioni della famiglia `printf` o come `char` e `char*` dalle funzioni della famiglia `wprintf`. Questa funzionalità è specifica di Microsoft.
 
-I tipi Integer come `short`, `int`, `long`, `long long` e le loro varianti `unsigned` vengono specificati usando **d**, **i**, **o**, **u**, **x** e **X**. I tipi a virgola mobile come `float`, `double` e `long double` vengono specificati usando **a**, **A**, **e**, **E**, **f**, **F**, **g** e **G**. Per impostazione predefinita, a meno che non che vengano modificati da un prefisso *dimensione*, gli argomenti Integer vengono imposti al tipo `int` e gli argomenti a virgola mobile vengono imposti a `double`. Nei sistemi a 64 bit, un `int` è un valore a 32 bit; di conseguenza gli interi a 64 bit vengono troncati quando vengono formattati per l'output, a meno che non venga usato un prefisso *dimensione* **ll** o **I64**. I tipi di puntatore specificati da **p** usano le dimensioni puntatore predefinite per la piattaforma.
+I tipi Integer, ad esempio `short`, `int`, `long`, `long long` e le relative varianti di `unsigned`, vengono specificati tramite **d**, **i**, **o**, **u**, **x**e **x**. I tipi a virgola mobile, ad esempio 1, 2 e 3, vengono specificati **usando**, **a, e**, **e**, **f**, **f**, **g**e **g**. Per impostazione predefinita, a meno che non vengano modificati da un prefisso di *dimensione* , gli argomenti Integer vengono assegnati al tipo 3 e gli argomenti a virgola mobile vengono assegnati al 4. Nei sistemi a 64 bit, un `int` è un valore a 32 bit; di conseguenza gli interi a 64 bit vengono troncati quando vengono formattati per l'output, a meno che non venga usato un prefisso *dimensione* **ll** o **I64**. I tipi di puntatore specificati da **p** usano le dimensioni puntatore predefinite per la piattaforma.
 
 > [!NOTE]
 > **Sezione specifica Microsoft** Il carattere tipo **Z** e il comportamento dei caratteri tipo **c**, **C**, **s** e **S** usati con le funzioni `printf` e `wprintf` sono estensioni Microsoft. Lo standard ISO C usa **c** e **s** in modo coerente per i caratteri e le stringhe narrow e **C** e **S** per i caratteri e le stringhe wide in tutte le funzioni di formattazione.
@@ -157,7 +160,7 @@ Il carattere *tipo* determina l'interpretazione di *precisione* o la precisione 
 
 ### <a name="how-precision-values-affect-type"></a>Effetti del tipo sui valori di precisione
 
-|Tipo|Significato|Impostazione predefinita|
+|Digitare|Significato|Impostazione predefinita|
 |----------|-------------|-------------|
 |**a**, **A**|La precisione indica il numero di cifre dopo il punto.|La precisione predefinita è 13. Se la precisione è 0 non viene stampato alcun separatore decimale, a meno che non venga usato il flag **#** .|
 |**c**, **C**|La precisione non ha alcun effetto.|Viene stampato il carattere.|
