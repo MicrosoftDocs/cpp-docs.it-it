@@ -256,7 +256,7 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 6. Impostare un punto di interruzione alla riga 30, come illustrato nella figura seguente.
 
-   Punti di ![interruzione GPU] Punti di (../../parallel/amp/media/campgpubreakpoints.png "interruzione GPU") <br/>
+   ![Punti di interruzione GPU](../../parallel/amp/media/campgpubreakpoints.png "Punti di interruzione GPU") <br/>
    Punto di interruzione GPU
 
 7. Sulla barra dei menu scegliere **Debug** > **Avvia debug**. I punti di interruzione nel codice della CPU alle righe 67 e 70 non vengono eseguiti durante il debug della GPU, perché tali righe di codice vengono eseguite sulla CPU.
