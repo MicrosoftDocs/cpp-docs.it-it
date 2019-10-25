@@ -227,7 +227,7 @@ In questa procedura verrà usato il debugger Windows locale per assicurarsi che 
 
 4. Impostare punti di interruzione nelle righe di codice mostrate nella figura seguente (approssimativamente linee 67 riga 70).
 
-   Punti di ![interruzione CPU] Punti di (../../parallel/amp/media/campcpubreakpoints.png "interruzione CPU") <br/>
+   ![Punti di interruzione CPU](../../parallel/amp/media/campcpubreakpoints.png "Punti di interruzione CPU") <br/>
    Punti di interruzione CPU
 
 5. Sulla barra dei menu scegliere **Debug** > **Avvia debug**.

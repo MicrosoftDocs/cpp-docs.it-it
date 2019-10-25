@@ -152,7 +152,7 @@ Nel codice seguente viene illustrato l'esempio completo. La `wmain` funzione ges
 
 Nella figura seguente viene illustrato l'output di esempio. Ogni immagine di origine è sopra l'immagine modificata corrispondente.
 
-Esempio ![di output per l'esempio] Esempio (../../parallel/concrt/media/concrt_imageout.png "di output per l'esempio")
+![Esempio di output per l'esempio](../../parallel/concrt/media/concrt_imageout.png "Esempio di output per l'esempio")
 
 `Lighthouse`viene creato da Tom Alphin e pertanto viene convertito in scala di grigi. `Chrysanthemum`,, `Desert` e`Tulips` hanno rosso come colore dominante, quindi i componenti di colore blu e verde sono stati rimossi e sono scuriti. `Koala` `Hydrangeas`, `Jellyfish` e`Penguins` corrispondono ai criteri predefiniti e pertanto sono toni seppia.
 
