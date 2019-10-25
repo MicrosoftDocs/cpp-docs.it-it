@@ -1,6 +1,6 @@
 ---
 title: bsearch
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch
 api_location:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939442"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811092"
 ---
 # <a name="bsearch"></a>bsearch
 
-Esegue una ricerca binaria di una matrice ordinata. È disponibile una versione più sicura di questa funzione. Vedere [bsearch_s](bsearch-s.md).
+Esegue una ricerca binaria di una matrice ordinata. È disponibile una versione più sicura di questa funzione; vedere [bsearch_s](bsearch-s.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,19 +51,19 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parametri
 
-*key*<br/>
-Oggetto da cercare.
+\ *chiave*
+Puntatore alla chiave da cercare.
 
-*base*<br/>
-Puntatore a base dei dati di ricerca.
+*base*\
+Puntatore alla base dei dati di ricerca.
 
-*numero*<br/>
+*numero*\
 Numero di elementi.
 
-*width*<br/>
+\ *larghezza*
 Larghezza degli elementi.
 
-*compare*<br/>
+*confronta*\
 Funzione di callback che confronta due elementi. Il primo è un puntatore alla chiave per la ricerca e il secondo è un puntatore all'elemento della matrice da confrontare con la chiave.
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,15 +72,15 @@ Funzione di callback che confronta due elementi. Il primo è un puntatore alla c
 
 ## <a name="remarks"></a>Note
 
-La funzione **bCerca** esegue una ricerca binaria di una matrice ordinata di elementi *numerici* , ognuno con dimensioni di byte di *larghezza* . Il valore di *base* è un puntatore alla base della matrice in cui eseguire la ricerca e *Key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento della matrice e restituisce uno dei valori seguenti che specifica la relazione:
+La funzione **bCerca** esegue una ricerca binaria di una matrice ordinata di elementi *numerici* , ognuno con dimensioni di byte di *larghezza* . Il valore di *base* è un puntatore alla base della matrice in cui eseguire la ricerca e *Key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento di matrice. Restituisce uno dei valori seguenti che specificano la relazione:
 
-|Valore restituito dalla routine di *confronto*|DESCRIZIONE|
+|Valore restituito dalla routine di *confronto*|Descrizione|
 |-----------------------------------------|-----------------|
 |\< 0|La chiave è minore dell'elemento della matrice.|
 |0|La chiave è uguale all'elemento della matrice.|
 |> 0|La chiave è maggiore dell'elemento della matrice.|
 
-Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri. ](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su `EINVAL` e la funzione restituisce **null**.
+Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è zero, la funzione richiama il gestore di parametri non validi, come descritto in [Parameter Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su `EINVAL` e la funzione restituisce **null**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -88,7 +88,7 @@ Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* �
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> e \<search.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -137,7 +137,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Vedere anche
 
-[Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)
