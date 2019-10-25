@@ -1,6 +1,6 @@
 ---
 title: c16rtomb, c32rtomb
-ms.date: 01/22/2018
+ms.date: 10/22/2019
 api_name:
 - c16rtomb
 - c32rtomb
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: a16effe48442ccbb5144b57ead2fb15c908fe898
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8f480d9b450b528275fea78ae878269fa6a4fa54
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943423"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811072"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
-Convertire un carattere wide UTF-16 o UTF-32 in un carattere multibyte nelle impostazioni locali correnti.
+Convertire un carattere wide UTF-16 o UTF-32 in un carattere multibyte UTF-8.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -57,13 +57,13 @@ size_t c32rtomb(
 
 ### <a name="parameters"></a>Parametri
 
-*mbchar*<br/>
-Puntatore a una matrice per archiviare il carattere multibyte convertito.
+\ *mbchar*
+Puntatore a una matrice per archiviare il carattere multibyte UTF-8 convertito.
 
-*wchar*<br/>
+\ *WCHAR*
 Carattere wide da convertire.
 
-*state*<br/>
+\ di *stato*
 Puntatore a un oggetto **mbstate_t** .
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,11 +72,15 @@ Numero di byte archiviati nell'oggetto matrice *mbchar*, incluse tutte le sequen
 
 ## <a name="remarks"></a>Note
 
-La funzione **c16rtomb** converte il carattere *WCHAR* UTF-16 in una sequenza di caratteri narrow multibyte equivalente nelle impostazioni locali correnti. Se *mbchar* non è un puntatore null, la funzione Archivia la sequenza convertita nell'oggetto matrice a cui punta *mbchar*. Fino a **MB_CUR_MAX** byte vengono archiviati in *mbchar*e *lo stato* viene impostato sullo stato di spostamento multibyte risultante.    Se *WCHAR* è un carattere wide null, viene archiviata una sequenza necessaria per ripristinare lo stato di spostamento iniziale, se necessario, seguita dal carattere null e *lo stato viene impostato* sullo stato di conversione iniziale. La funzione **c32rtomb** è identica, ma converte un carattere UTF-32.
+La funzione **c16rtomb** converte il carattere *WCHAR* UTF-16 le nella sequenza di caratteri multibyte UTF-8 equivalente. Se *mbchar* non è un puntatore null, la funzione Archivia la sequenza convertita nell'oggetto matrice a cui punta *mbchar*. Fino a **MB_CUR_MAX** byte vengono archiviati in *mbchar*e *lo stato* viene impostato sullo stato di spostamento multibyte risultante.
+
+Se *WCHAR* è un carattere wide null, viene archiviata una sequenza necessaria per ripristinare lo stato di spostamento iniziale, se necessario, seguita dal carattere null. *lo stato è impostato* sullo stato di conversione iniziale. La funzione **c32rtomb** è identica, ma converte un carattere UTF-32.
 
 Se *mbchar* è un puntatore null, il comportamento è equivalente a una chiamata alla funzione che sostituisce un buffer interno per *mbchar* e un carattere null Wide per *WCHAR*.
 
-L'oggetto stato di conversione *dello stato* consente di effettuare chiamate successive a questa funzione e ad altre funzioni riavviabili che mantengono lo stato di spostamento dei caratteri di output multibyte. I risultati non sono definiti quando si combina l'uso di funzioni riavviabili e non riavviabili oppure se viene eseguita una chiamata a **setlocale** tra le chiamate di funzione riavviabili.
+L'oggetto stato di conversione *dello stato* consente di effettuare chiamate successive a questa funzione e ad altre funzioni riavviabili che mantengono lo stato di spostamento dei caratteri di output multibyte. I risultati non sono definiti quando si combina l'uso di funzioni riavviabili e non riavviabili.
+
+Per convertire i caratteri UTF-16 in caratteri multibyte non UTF-8, usare le funzioni [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md), [wcstombs_s o _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -84,13 +88,13 @@ L'oggetto stato di conversione *dello stato* consente di effettuare chiamate suc
 |-------------|---------------------|
 |**c16rtomb**, **c32rtomb**|C, C++: \<uchar.h>|
 
-Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per informazioni sulla compatibilità, vedere [Compatibilità](../compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[mbrtoc16, mbrtoc32](mbrtoc16-mbrtoc323.md)<br/>
-[wcrtomb](wcrtomb.md)<br/>
-[wcrtomb_s](wcrtomb-s.md)<br/>
+\ [conversione dati](../data-conversion.md)
+[Impostazioni locali](../locale.md)\
+[Interpretazione di sequenze di caratteri multibyte](../interpretation-of-multibyte-character-sequences.md)\
+[mbrtoc16, mbrtoc32](mbrtoc16-mbrtoc323.md)\
+[wcrtomb](wcrtomb.md)\
+[wcrtomb_s](wcrtomb-s.md)
