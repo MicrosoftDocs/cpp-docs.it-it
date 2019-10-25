@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243328"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890134"
 ---
 # <a name="ltbitsetgt-operators"></a>Operatori &lt;bitset&gt;
 
-## <a name="op_amp"></a> Operatore &amp;
+## <a name="op_amp">Operatore </a>&amp;
 
 Esegue un'operazione `AND` bit per bit tra due bitset.
 
@@ -35,15 +35,15 @@ operator&(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `AND` bit per bit.
 
-*Ok*\
+\ a *destra*
 La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `AND` bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un bitset di cui elementi sono il risultato dell'esecuzione di `AND` operazione su elementi corrispondenti delle *a sinistra* e *a destra*.
+Un oggetto bits i cui elementi sono il risultato dell'esecuzione dell'operazione di `AND` sui corrispondenti elementi di *Left* e *right*.
 
 ### <a name="example"></a>Esempio
 
@@ -73,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a> Operatore&lt;&lt;
+## <a name="op_lt_lt"></a>operatore&lt;&lt;
 
 Inserisce una rappresentazione di testo della sequenza di bit nel flusso di output.
 
@@ -86,18 +86,18 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Un oggetto di tipo **bitset\<N>** che deve essere inserito nel flusso di output come stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
-Una rappresentazione di testo della sequenza di bit in `ostr`.
+Rappresentazione testuale della sequenza di bit in `ostr`.
 
 ### <a name="remarks"></a>Note
 
-Gli overload della funzione modello `operator<<`, consentendo un bitset devono essere scritti senza prima convertirlo in una stringa. La funzione di modello consente di gestire in modo efficace quanto segue:
+La funzione di modello consente di eseguire l'overload di `operator<<`, consentendo di scrivere un bit senza prima convertirlo in una stringa. La funzione di modello consente di gestire in modo efficace quanto segue:
 
-**ostr** << _*destra*. [to_string](bitset-class.md) <**CharType**, **Traits**, **allocator**\<**CharType**>>)
+`ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
 ### <a name="example"></a>Esempio
 
@@ -130,36 +130,34 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a> Operatore&gt;&gt;
+## <a name="op_gt_gt"></a>operatore&gt;&gt;
 
 Legge una stringa di caratteri di bit in un bitset.
 
 ```
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
-    basic_istream<CharType, Traits>&
-_Istr,
-    bitset<N>&
-    right);
+    basic_istream<CharType, Traits>& i_str,
+    bitset<N>& right);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*_Istr*\
+\ *i_str*
 La immessa nel flusso di input da inserire nel bitset.
 
-*Ok*\
+\ a *destra*
 Il bitset che riceve i bit dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione modello restituisce la stringa *_Istr*.
+La funzione di modello restituisce la stringa *i_str*.
 
 ### <a name="remarks"></a>Note
 
-Gli overload della funzione modello `operator>>` per memorizzare nel bitset _ *a destra* il valore bitset (`str`), dove `str` è un oggetto di tipo [basic_string](basic-string-class.md)  <  **CharType**, **Traits**, **allocatore** \< **CharType**>> **&** estratto *_Istr*.
+La funzione di modello viene *sottoposto* a overload `operator>>` per archiviare il bit a destra del valore `bitset(str)`, dove `str` è un oggetto di tipo [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` Estratto da *i_str*.
 
-La funzione di modello estrae gli elementi da *_Istr* e li inserisce nel bitset fino a quando:
+La funzione modello estrae gli elementi da *i_str* e li inserisce nel bitst fino a quando:
 
 - Tutti gli elementi di bit sono stati estratti dal flusso di input e memorizzati nel bitset.
 
@@ -216,7 +214,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a> operatore ^
+## <a name="op_xor"></a>operatore ^
 
 Esegue un'operazione `EXCLUSIVE-OR` bit per bit tra due bitset.
 
@@ -230,15 +228,15 @@ operator^(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `EXCLUSIVE-OR` bit per bit.
 
-*Ok*\
+\ a *destra*
 La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `EXCLUSIVE-OR` bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un bitset di cui elementi sono il risultato dell'esecuzione di `EXCLUSIVE-OR` operazione su elementi corrispondenti delle *a sinistra* e *a destra*.
+Un oggetto bits i cui elementi sono il risultato dell'esecuzione dell'operazione di `EXCLUSIVE-OR` sui corrispondenti elementi di *Left* e *right*.
 
 ### <a name="example"></a>Esempio
 
@@ -268,7 +266,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a> operatore&#124;
+## <a name="op_or"></a>operatore&#124;
 
 Esegue un'operazione `OR` bit per bit tra due bitset.
 
@@ -282,15 +280,15 @@ operator|(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `OR` bit per bit.
 
-*Ok*\
+\ a *destra*
 La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `OR` bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un bitset di cui elementi sono il risultato dell'esecuzione di `OR` operazione su elementi corrispondenti delle *a sinistra* e *a destra*.
+Un oggetto bits i cui elementi sono il risultato dell'esecuzione dell'operazione di `OR` sui corrispondenti elementi di *Left* e *right*.
 
 ### <a name="example"></a>Esempio
 

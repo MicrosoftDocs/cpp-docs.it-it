@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689692"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890196"
 ---
 # <a name="forward_list-class"></a>Classe forward_list
 
@@ -103,7 +103,7 @@ class forward_list
 Tipo * \
 Tipo di dati degli elementi da archiviare in forward_list.
 
-@No__t_1 *allocatore*
+\ *allocatore*
 Oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di forward_list e alla deallocazione della memoria. Questo parametro è facoltativo. Il valore predefinito è allocator<`Type`>.
 
 ## <a name="remarks"></a>Note
@@ -515,16 +515,16 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *al*
+\ *al*
 Classe Allocator da usare con questo oggetto.
 
 *Conteggio* \
 Numero di elementi dell'elenco costruito.
 
-@No__t_1 *Val*
+\ *Val*
 Valore degli elementi dell'elenco costruito.
 
-@No__t_1 a *destra*
+\ a *destra*
 Elenco di cui l'elenco costruito deve essere una copia.
 
 *Primo* \
@@ -604,7 +604,7 @@ Inizio dell'intervallo di inserimento.
 *Ultimo* \
 Fine dell'intervallo di inserimento.
 
-@No__t_1 *Val*
+\ *Val*
 Elemento aggiunto all'elenco di inoltro.
 
 *IList* \
@@ -678,7 +678,7 @@ Oggetto funzione di confronto usato per ordinare gli elementi.
 
 ### <a name="remarks"></a>Note
 
-`forward_list::merge` rimuove gli elementi dalla `right` di `forward_list` e li inserisce in questo `forward_list`. Entrambe le sequenze devono essere ordinate in base allo stesso predicato, descritto di seguito. La sequenza combinata è ordinata anche in base all'oggetto funzione di confronto.
+`forward_list::merge` rimuove gli elementi dalla `right`di `forward_list` e li inserisce in questo `forward_list`. Entrambe le sequenze devono essere ordinate in base allo stesso predicato, descritto di seguito. La sequenza combinata è ordinata anche in base all'oggetto funzione di confronto.
 
 Per gli iteratori `Pi` e `Pj` che designano gli elementi nelle posizioni `i` e `j`, la prima funzione membro impone l'ordine `!(*Pj < *Pi)` ogni volta che `i < j` Gli elementi vengono ordinati in base a `ascending` ordine. La seconda funzione membro impone l'ordine `! comp(*Pj, *Pi)` ogni volta che `i < j`.
 
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Newsize*
+\ *_Newsize*
 Numero di elementi nell'elenco di inoltro ridimensionato.
 
 \ *Val*
@@ -898,7 +898,7 @@ Posizione nell'elenco forward_list di destinazione prima dopo cui effettuare l'i
 *Source*\
 Elenco forward_list di origine da inserire nell'elenco forward_list di destinazione.
 
-@No__t_1 *iter*
+\ *iter*
 Elemento da inserire dall'elenco forward_list di origine.
 
 *Primo* \
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del parametro di modello _ `Ty`.
+Il tipo è un sinonimo del parametro di modello `Type`.
