@@ -1,22 +1,22 @@
 ---
 title: File di intestazione precompilata
-ms.date: 08/19/2019
+ms.date: 10/24/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69630500"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920101"
 ---
 # <a name="precompiled-header-files"></a>File di intestazione precompilata
 
-Quando si crea un nuovo progetto in Visual Studio, al progetto viene aggiunto un *file di intestazione precompilato* denominato *PCH. h* . (In Visual Studio 2017 e versioni precedenti, il file era denominato *stdafx. h*). Lo scopo del file è velocizzare il processo di compilazione. Tutti i file di intestazione stabili, ad esempio le intestazioni della `<vector>`libreria standard, ad esempio, devono essere inclusi qui. L'intestazione precompilata viene compilata solo quando viene modificato il file o i file in esso inclusi. Se si apportano modifiche solo al codice sorgente del progetto, la compilazione ignorerà la compilazione per l'intestazione precompilata. 
+Quando si crea un nuovo progetto in Visual Studio, al progetto viene aggiunto un *file di intestazione precompilato* denominato *PCH. h* . (In Visual Studio 2017 e versioni precedenti, il file era denominato *stdafx. h*). Lo scopo del file è velocizzare il processo di compilazione. Qui è opportuno includere tutti i file di intestazione stabili, ad esempio le intestazioni della libreria standard come `<vector>`. L'intestazione precompilata viene compilata solo quando viene modificato il file o i file in esso inclusi. Se si apportano modifiche solo al codice sorgente del progetto, la compilazione ignorerà la compilazione per l'intestazione precompilata. 
 
 Le opzioni del compilatore per le intestazioni precompilate sono [/Y](reference/y-precompiled-headers.md). Nelle pagine delle proprietà del progetto le opzioni si trovano in **proprietà di configurazione > leC++ intestazioni precompilate C/>** . È possibile scegliere di non usare le intestazioni precompilate e specificare il nome del file di intestazione e il nome e il percorso del file di output. 
 
@@ -87,7 +87,7 @@ Quando si specifica l'opzione Usa file di intestazione precompilata (/Yu), il co
 
 ### <a name="pragma-consistency"></a>Coerenza pragma
 
-I pragma elaborati durante la creazione di un file PCH influiscono in genere sul file con cui viene successivamente utilizzato il file PCH. I `comment` pragma `message` e non influiscono sul resto della compilazione.
+I pragma elaborati durante la creazione di un file PCH influiscono in genere sul file con cui viene successivamente utilizzato il file PCH. I pragma `comment` e `message` non influiscono sul resto della compilazione.
 
 Questi pragma hanno effetto solo sul codice all'interno del file PCH. non influiscono sul codice che successivamente usa il file PCH:
 
@@ -116,13 +116,13 @@ Quando si usa un'intestazione precompilata creata con/Yc o/Yu, il compilatore co
 
 Questa tabella elenca le opzioni del compilatore che potrebbero attivare un avviso di incoerenza quando si usa un'intestazione precompilata:
 
-|Opzione|nome|Regola|
+|Opzione|Name|Regola|
 |------------|----------|----------|
 |/D|Definire costanti e macro|Deve essere lo stesso tra la compilazione che ha creato l'intestazione precompilata e la compilazione corrente. Lo stato delle costanti definite non è selezionato, ma possono verificarsi risultati imprevedibili se i file dipendono dai valori delle costanti modificate.|
 |/E o/EP|Copia l'output del preprocessore nell'output standard|Le intestazioni precompilate non funzionano con l'opzione/E o/EP.|
 |/Fr o/FR|Genera informazioni sul browser Microsoft Source|Affinché le opzioni/FR e/FR siano valide con l'opzione/Yu, devono essere attive anche al momento della creazione dell'intestazione precompilata. Le compilazioni successive che usano l'intestazione precompilata generano anche informazioni sul browser di origine. Le informazioni del browser vengono inserite in un singolo file SBR a cui fanno riferimento altri file allo stesso modo delle informazioni CodeView. Non è possibile eseguire l'override del posizionamento delle informazioni del browser di origine.|
 |/GA,/GD,/GE,/GW o/GW|Opzioni del protocollo Windows|Deve essere lo stesso tra la compilazione che ha creato l'intestazione precompilata e la compilazione corrente. Se queste opzioni sono diverse, viene restituito un messaggio di avviso.|
-|/ZI|Genera informazioni di debug complete|Se questa opzione è attiva al momento della creazione dell'intestazione precompilata, le compilazioni successive che usano la precompilazione possono usare tali informazioni di debug. Se/Zi non è attivo al momento della creazione dell'intestazione precompilata, le compilazioni successive che usano la precompilazione e l'opzione/Zi attivano un avviso. Le informazioni di debug vengono inserite nel file oggetto corrente e i simboli locali definiti nell'intestazione precompilata non sono disponibili per il debugger.|
+|/Zi|Genera informazioni di debug complete|Se questa opzione è attiva al momento della creazione dell'intestazione precompilata, le compilazioni successive che usano la precompilazione possono usare tali informazioni di debug. Se/Zi non è attivo al momento della creazione dell'intestazione precompilata, le compilazioni successive che usano la precompilazione e l'opzione/Zi attivano un avviso. Le informazioni di debug vengono inserite nel file oggetto corrente e i simboli locali definiti nell'intestazione precompilata non sono disponibili per il debugger.|
 
 > [!NOTE]
 >  La funzionalità di intestazione precompilata è destinata all'uso solo nei C++ file C e di origine.
@@ -179,9 +179,9 @@ UNSTABLEHDRS = unstable.h
 CLFLAGS = /c /W3
 # List all linker options common to both debug and final
 # versions of your code here:
-LINKFLAGS = /NOD /ONERROR:NOEXE
+LINKFLAGS = /nologo
 !IF "$(DEBUG)" == "1"
-CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi /f
+CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi
 LINKFLAGS = $(LINKFLAGS) /COD
 LIBS      = slibce
 !ELSE
@@ -257,7 +257,7 @@ void savetime( void );
 //
 #ifndef __UNSTABLE_H
 #define __UNSTABLE_H
-#include<iostream.h>
+#include<iostream>
 void notstable( void );
 #endif // __UNSTABLE_H
 ```
@@ -270,6 +270,7 @@ void notstable( void );
 #include"another.h"
 #include"stable.h"
 #include"unstable.h"
+using namespace std;
 // The following code represents code that is deemed stable and
 // not likely to change. The associated interface code is
 // precompiled. In this example, the header files STABLE.H and
