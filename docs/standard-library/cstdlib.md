@@ -259,5 +259,5 @@ Queste funzioni hanno la semantica specificata nella libreria standard C.
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)\
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
