@@ -141,5 +141,5 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 
 ## <a name="see-also"></a>Vedere anche
 
-[C/C++ Building Reference](c-cpp-building-reference.md)\ (Informazioni di riferimento per la compilazione in C/C++)
+[C/C++ Building Reference](c-cpp-building-reference.md)\ (Informazioni di riferimento per la compilazione in C/C++)\
 [Informazioni di riferimento sul linker MSVC](linking.md)
