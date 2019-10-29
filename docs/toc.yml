@@ -1673,7 +1673,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: Supporto per set di caratteri Unicode e multibyte (MBCS)
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: Riferimenti
+        - name: Riferimento
           expanded: false
           items:
             - name: Classe CSize
@@ -10257,7 +10257,7 @@
                       href: parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
                     - name: Procedure consigliate generali nel runtime di concorrenza
                       href: parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
-                - name: Riferimenti
+                - name: Riferimento
                   expanded: false
                   items:
                     - name: Riferimento (runtime di concorrenza)

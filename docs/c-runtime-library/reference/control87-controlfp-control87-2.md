@@ -201,7 +201,7 @@ Default:  0x0009001f
 
 ## <a name="see-also"></a>Vedere anche
 
-[Floating-Point Support](../../c-runtime-library/floating-point-support.md)\ (Supporto delle funzioni a virgola mobile)
+[Floating-Point Support](../../c-runtime-library/floating-point-support.md)\ (Supporto delle funzioni a virgola mobile)\
 [_clear87, _clearfp](clear87-clearfp.md)\
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)\
 [_controlfp_s](controlfp-s.md)
