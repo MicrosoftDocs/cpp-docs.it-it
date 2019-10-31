@@ -1,23 +1,25 @@
 ---
 title: Opzioni di DUMPBIN
-ms.date: 11/04/2016
+ms.date: 10/24/2019
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 655087236e3e4644c6215da2adccd9755c767b77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
+ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272741"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144551"
 ---
 # <a name="dumpbin-options"></a>Opzioni di DUMPBIN
 
-Un'opzione è costituito da un identificatore di opzione, che può essere un trattino (-) o una barra (/), seguito dal nome dell'opzione. I nomi di opzione non possono essere abbreviati. Alcune opzioni accettano argomenti, dopo i due punti (:) specificati. Spazi o tabulazioni non sono consentite all'interno di una specifica opzione. Usare uno o più spazi o tabulazioni per separare le specifiche di opzione nella riga di comando. I nomi delle opzioni e i relativi argomenti Nome parola chiave o un file non sono tra maiuscole e minuscole. La maggior parte delle opzioni si applicano a tutti i file binari; alcuni si applicano solo a determinati tipi di file. Per impostazione predefinita, le informazioni vengono inviate all'output standard. Usare la [/out](out-dumpbin.md) opzione per inviare l'output in un file.
+Un'opzione è costituita da un *identificatore di opzione*, che può essere un trattino (`-`) o una barra (`/`), seguita dal nome dell'opzione. I nomi di opzione non possono essere abbreviati. Alcune opzioni accettano argomenti, specificati dopo i due punti (`:`). Non sono consentiti spazi o tabulazioni all'interno di una specifica Option. Usare uno o più spazi o schede per separare le specifiche delle opzioni nella riga di comando. I nomi delle opzioni e la relativa parola chiave o gli argomenti del nome di file non fanno distinzione tra maiuscole La maggior parte delle opzioni si applica a tutti i file binari, ma alcune sono valide solo per determinati tipi di file. Per impostazione predefinita, DUMPBIN Invia le informazioni all'output standard. Usare l'opzione [/out](out-dumpbin.md) per inviare l'output a un file.
 
-DUMPBIN dispone delle opzioni seguenti:
+## <a name="options-list"></a>Elenco di opzioni
+
+In DUMPBIN sono disponibili le opzioni seguenti:
 
 - [/ALL](all.md)
 
@@ -29,9 +31,9 @@ DUMPBIN dispone delle opzioni seguenti:
 
 - [/DIRECTIVES](directives.md)
 
-- [/DISASM](disasm.md)
+- [\[/DISASM: {BYTEs\|nobytes}\]](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
+- [/ERRORREPORT: {NONE | Messaggio di richiesta | CODA | INVIARE](errorreport-dumpbin-exe.md)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -39,27 +41,29 @@ DUMPBIN dispone delle opzioni seguenti:
 
 - [/HEADERS](headers.md)
 
-- [/IMPORTS](imports-dumpbin.md)
+- [\[/IMPORTS: filename\]](imports-dumpbin.md)
 
 - [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](linkermember.md)
+- [\[/LINKERMEMBER: {1 | 2}\]](linkermember.md)
 
 - [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](out-dumpbin.md)
+- [/NOPDB](nopdb.md)
+
+- [/OUT: nomefile](out-dumpbin.md)
 
 - [/PDATA](pdata.md)
 
-- [/PDBPATH](pdbpath.md)
+- [Specificando/PDBPATH\[: VERBOse\]](pdbpath.md)
 
-- [/RANGE](range.md)
+- [/RANGEE: vaMin\[, vaMax\]](range.md)
 
-- [/RAWDATA](rawdata.md)
+- [/RAWDATA\[: {NONE\|1\|2\|4\|8}\[, #\]\]](rawdata.md)
 
 - [/RELOCATIONS](relocations.md)
 
-- [/SECTION](section-dumpbin.md)
+- [/SECTION: nome](section-dumpbin.md)
 
 - [/SUMMARY](summary.md)
 
@@ -67,7 +71,10 @@ DUMPBIN dispone delle opzioni seguenti:
 
 - [/TLS](tls.md)
 
+Per elencare le opzioni supportate da DUMPBIN nella riga di comando, usare il comando **/?** opzione.
+
 ## <a name="see-also"></a>Vedere anche
 
-[Strumenti di compilazione MSVC aggiuntive](c-cpp-build-tools.md)<br/>
+[Ulteriori strumenti di compilazione MSVC](c-cpp-build-tools.md)\
+\ della [riga di comando DUMPBIN](dumpbin-command-line.md)
 [Riferimento a DUMPBIN](dumpbin-reference.md)
