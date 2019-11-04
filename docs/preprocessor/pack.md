@@ -21,20 +21,20 @@ Specifica l'allineamento di compressione per la struttura, l'Unione e i membri d
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma pack (Mostra)** \
-> **#pragma pack (push** [ **,** *identificatore* ] [ **,** *n* ] **)** \
-> **#pragma pack (pop** [ **,** { *Identifier* | *n* }] **)** \
+> **#pragma pack( show )** \
+> **#pragma pack( push** [ **,** *identifier* ] [ **,** *n* ] **)** \
+> **#pragma pack ( pop** [ **,** { *Identifier* | *n* }] **)** \
 > **#pragma pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>Parametri
 
-**Visualizza**\
+**show**\
 Opzionale Visualizza il valore byte corrente per l'allineamento di compressione. Il valore viene visualizzato da un messaggio di avviso.
 
-**spingere**\
+**push**\
 Opzionale Inserisce il valore di allineamento di compressione corrente nello stack interno del compilatore e imposta il valore di allineamento di compressione corrente su *n*. Se *n* non è specificato, viene effettuato il push del valore di allineamento di compressione corrente.
 
-**popup**\
+**pop**\
 Opzionale Rimuove il record dall'inizio dello stack interno del compilatore. Se *n* non è specificato con **pop**, il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se viene specificato *n* , ad esempio `#pragma pack(pop, 16)`, *n* diventa il nuovo valore di allineamento di compressione. Se si esegue il pop usando un *identificatore*, ad `#pragma pack(pop, r1)`esempio, vengono estratti tutti i record dello stack finché non viene trovato il record con *identificatore* . Il record viene estratto e il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se si esegue il pop usando un *identificatore* non trovato in nessun record nello stack, il **pop** viene ignorato.
 
 *identificatore*\
