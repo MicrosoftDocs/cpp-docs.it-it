@@ -1,20 +1,20 @@
 ---
 title: Creare e configurare un progetto CMake per Linux in Visual Studio
 description: Come creare, configurare, modificare e compilare un progetto CMake per Linux in Visual Studio
-ms.date: 06/12/2019
+ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383420"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625956"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Creare e configurare un progetto CMake per Linux
 
 ::: moniker range="vs-2015"
 
-Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
@@ -25,13 +25,13 @@ Per creare un nuovo progetto CMake per Linux in Visual Studio 2019:
 1. Selezionare **File > Nuovo progetto** in Visual Studio o premere **CTRL + MAIUSC + N**.
 1. Impostare **Linguaggio** su **C++** e cercare "CMake". Scegliere quindi **Avanti**. Immettere un **nome** e una **posizione** e scegliere **Crea**.
 
-Visual Studio crea un file CMakeLists.txt minimo con solo il nome dell'eseguibile e la versione minima di CMake richiesta. È possibile modificare manualmente questo file come si preferisce. Visual Studio non sovrascriverà mai le modifiche. Per specificare gli argomenti della riga di comando di CMake e le variabili di ambiente, fare clic con il pulsante destro del mouse sul file CMakeLists.txt in **Esplora soluzioni** e scegliere **CMake settings for project** (Impostazioni di CMake per il progetto). Per specificare le opzioni per il debug, fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Impostazioni per debug e avvio**.
+Visual Studio crea un file CMakeLists.txt minimo con solo il nome dell'eseguibile e la versione minima di CMake richiesta. È possibile modificare manualmente questo file come si preferisce. Visual Studio non sovrascriverà mai le modifiche. È possibile specificare gli argomenti della riga di comando CMake e le variabili di ambiente facendo clic con il pulsante destro del mouse sul file CMakeLists. txt radice in **Esplora soluzioni** e scegliendo **Impostazioni CMake per progetto**. Per specificare le opzioni per il debug, fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Impostazioni per debug e avvio**.
 
 ::: moniker-end
 
-Quando si apre una cartella contenente un progetto CMake esistente, Visual Studio usa i metadati prodotti da CMake per configurare IntelliSense ed esegue automaticamente la compilazione. La configurazione locale e le impostazioni di debug vengono archiviate in file JSON che possono essere facoltativamente condivisi con altri utenti che usano Visual Studio. 
+Quando si apre una cartella che contiene un progetto CMake esistente, Visual Studio usa le variabili nella cache CMake per configurare IntelliSense e le compilazioni automatiche. La configurazione locale e le impostazioni di debug vengono archiviate in file JSON che possono essere facoltativamente condivisi con altri utenti che usano Visual Studio.
 
-Poiché Visual Studio non modifica i file CMakeLists.txt, gli altri utenti che lavorano sullo stesso progetto possono continuare a usare gli strumenti già in uso. Visual Studio rigenerare la cache quando si apportano modifiche al file CMakeLists.txt o in alcuni casi a CMakeSettings.json. Se si usa una configurazione **Cache esistente**, però, Visual Studio non modifica la cache.
+Poiché Visual Studio non modifica i file CMakeLists.txt, gli altri utenti che lavorano sullo stesso progetto possono continuare a usare gli strumenti già in uso. Visual Studio rigenera la cache quando si salvano le modifiche in CMakeLists. txt o in alcuni casi in CMakeSettings. JSON. Se si usa una configurazione **Cache esistente**, però, Visual Studio non modifica la cache.
 
 Per informazioni generali sul supporto di CMake in Visual Studio, vedere [Progetti CMake in Visual Studio](../build/cmake-projects-in-visual-studio.md). Leggere tale articolo prima di continuare.
 
@@ -104,7 +104,7 @@ Se si specifica una destinazione Linux remota, il codice sorgente viene copiato 
 
 Dopo la selezione di una destinazione, CMake viene eseguito automaticamente nel sistema Linux per generare la cache CMake per il progetto. 
 
-![Generare la cache CMake in Linux](media/cmake-linux-1.png "Generare la cache CMake in Linux")
+![Genera cache CMake in Linux](media/cmake-linux-1.png "Generare la cache CMake in Linux")
 
 Per rendere disponibile il supporto IntelliSense per le intestazioni nei sistemi Linux remoti, Visual Studio copia automaticamente le intestazioni dal computer Linux in una directory nel computer Windows locale. Per altre informazioni, vedere [IntelliSense per le intestazioni remote](configure-a-linux-project.md#remote_intellisense).
 
@@ -133,7 +133,7 @@ Un file CMakeSettings.json in un progetto CMake per Linux può specificare tutte
 
 Per cambiare le impostazioni predefinite di CMake in Visual Studio 2019, sulla barra degli strumenti principale aprire l'elenco a discesa **Configurazione** e scegliere **Gestisci configurazioni**. 
 
-![Gestisci configurazioni di CMake](../build/media/vs2019-cmake-manage-configurations.png "Elenco a discesa delle configurazioni di CMake")
+![Configurazioni di gestione CMake](../build/media/vs2019-cmake-manage-configurations.png "Elenco a discesa delle configurazioni di CMake")
 
 Verrà visualizzato l'**Editor impostazioni CMake**, che è possibile usare per modificare il file `CMakeSettings.json` presente nella cartella radice del progetto. È anche possibile aprire il file direttamente facendo clic sul pulsante **Modifica JSON** nell'editor. Per altre informazioni, vedere [Personalizzare le impostazioni di CMake](../build/customize-cmake-settings.md).
 

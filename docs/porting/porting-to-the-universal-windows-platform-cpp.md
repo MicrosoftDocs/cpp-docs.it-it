@@ -1,19 +1,19 @@
 ---
 title: Trasferimento alla piattaforma UWP (Universal Windows Platform) (C++)
-ms.date: 11/04/2016
+ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
-ms.translationtype: HT
+ms.openlocfilehash: 9314cb564e792a7d4949d422a3942e9d46a23cb2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278463"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627199"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Trasferimento alla piattaforma UWP (Universal Windows Platform) (C++)
 
-In questo argomento è possibile trovare informazioni su come eseguire il porting di codice C++ esistente alla piattaforma di app Windows 10, la piattaforma UWP (Universal Windows Platform). Il termine *universale* indica che il codice può essere eseguito su uno qualsiasi dei dispositivi su cui è in esecuzione Windows 10, tra cui desktop, tablet e dispositivi futuri che eseguono Windows 10. Si crea un unico progetto e un'unica interfaccia utente basata su XAML che funziona con qualsiasi dispositivo che esegue Windows 10. È possibile usare le funzionalità di layout dinamico in XAML per consentire l'interfaccia utente dell'applicazione di adattarsi alle dimensioni del display diverse.
+In questo argomento è possibile trovare informazioni su come eseguire il porting di codice C++ esistente alla piattaforma di app Windows 10, la piattaforma UWP (Universal Windows Platform). Il termine *universale* è che il codice può essere eseguito in qualsiasi dispositivo che esegue Windows 10. Si crea un unico progetto e un'unica interfaccia utente basata su XAML che funziona con qualsiasi dispositivo che esegue Windows 10. È possibile usare le funzionalità di layout dinamico in XAML per consentire l'interfaccia utente dell'applicazione di adattarsi alle dimensioni del display diverse.
 
-La documentazione di Windows Developer Center contiene una guida al trasferimento di app di Windows 8.1 alla piattaforma UWP (Universal Windows Platform). Vedere [Passare da Windows Runtime 8 a UWP](/windows/uwp/porting/w8x-to-uwp-root). Nonostante la Guida illustri principalmente il codice C#, la maggior parte del materiale sussidiario è applicabile a C++. Le procedure seguenti contengono informazioni più dettagliate.
+La documentazione di Windows Developer Center contiene una guida al trasferimento di app di Windows 8.1 alla piattaforma UWP (Universal Windows Platform). Vedere [Passare da Windows Runtime 8 a UWP](/windows/uwp/porting/w8x-to-uwp-root). Nonostante la Guida illustri principalmente il codice C#, la maggior parte del materiale sussidiario è applicabile a C++. Le procedure seguenti contengono informazioni più dettagliate. Vedere anche [passare da un'applicazione desktop a UWP](/windows/uwp/porting/desktop-to-uwp-migrate).
 
 Questo argomento contiene le procedure seguenti per convertire il codice per la piattaforma UWP.
 
@@ -21,11 +21,11 @@ Questo argomento contiene le procedure seguenti per convertire il codice per la 
 
 - [Porting di un componente Runtime di Windows 8.1 per il UWP](#BK_81Component)
 
-Se si ha a disposizione una DLL Win32 per desktop classico e la si vuole chiamare da un'applicazione UWP, è anche possibile eseguire queste operazioni. Usando queste procedure, è possibile creare un livello dell'interfaccia utente UWP per un'applicazione C++ per desktop Windows classico esistente oppure un codice C++ multipiattaforma standard. Vedere [How to: Usare codice C++ esistente in un'app per la piattaforma UWP (Universal Windows Platform)](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
+Se si ha a disposizione una DLL Win32 per desktop classico e la si vuole chiamare da un'applicazione UWP, è anche possibile eseguire queste operazioni. Usando queste procedure, è possibile creare un livello dell'interfaccia utente UWP per un'applicazione C++ per desktop Windows classico esistente oppure un codice C++ multipiattaforma standard. Vedere [Procedura: usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md). 
 
 ## <a name="BK_81StoreApp"></a> Porting di un'app di Windows Store 8.1 alla piattaforma UWP
 
-Se è disponibile un'app di Windows 8.1 Store, è possibile usare questa procedura per ottenere lo stesso risultato in UWP e nei dispositivi che eseguono Windows 10.  È consigliabile iniziare compilando il progetto con Visual Studio 2017 come progetto di Windows 8.1, per eliminare eventuali problemi originati dalle modifiche apportate al compilatore e alle librerie. Dopo aver eseguito l'operazione, sono disponibili due modi per convertirlo in un progetto UWP Windows 10. Il modo più semplice (come spiegato nella procedura seguente) consiste nel creare un progetto Windows universale e copiarvi il codice esistente. Se si usa un progetto universale per desktop per Windows 8.1 e Windows 8.1 Phone, il progetto verrà avviato con due layout diversi in XAML, ma terminerà con un singolo layout dinamico che consente di regolare le dimensioni di visualizzazione.
+Se è disponibile un'app di Windows 8.1 Store, è possibile usare questa procedura per ottenere lo stesso risultato in UWP e nei dispositivi che eseguono Windows 10.  È consigliabile innanzitutto compilare il progetto con Visual Studio 2019 come progetto di Windows 8.1, per eliminare prima eventuali problemi causati dalle modifiche apportate al compilatore e alle librerie. Dopo aver eseguito l'operazione, sono disponibili due modi per convertirlo in un progetto UWP Windows 10. Il modo più semplice (come spiegato nella procedura seguente) consiste nel creare un progetto Windows universale e copiarvi il codice esistente. Se si usa un progetto universale per desktop per Windows 8.1 e Windows 8.1 Phone, il progetto verrà avviato con due layout diversi in XAML, ma terminerà con un singolo layout dinamico che consente di regolare le dimensioni di visualizzazione.
 
 ### <a name="to-port-a-windows-81-store-app-to-the-uwp"></a>Per eseguire il porting di un'app di Windows Store 8.1 alla piattaforma UWP
 
@@ -33,7 +33,7 @@ Se è disponibile un'app di Windows 8.1 Store, è possibile usare questa procedu
 
    È necessario aver installato la configurazione degli **strumenti di Windows 8.1 in Visual Studio**. Se non sono stati installati questi strumenti, avviare la configurazione di **Visual Studio** nella finestra **Programs and Features** (Programmi e funzionalità), scegliere **Visual Studio 2017** e nella finestra di dialogo di configurazione scegliere **Modifica**. Individuare **Windows 8.1 Tools** (Strumenti di Windows 8.1), assicurarsi che l'opzione sia selezionata e scegliere **OK**.
 
-1. Aprire la finestra **Proprietà progetto** e in **C++** > **Generale** impostare **Set di strumenti piattaforma** su **v141**, il set di strumenti per Visual Studio 2017.
+1. Aprire la finestra **Proprietà progetto** e in **C++**  > **Generale** impostare **Set di strumenti piattaforma** su **v141**, il set di strumenti per Visual Studio 2017.
 
 1. Compilare il progetto come progetto di Windows 8.1 e risolvere gli eventuali errori di compilazione. Eventuali errori in questa fase sono probabilmente a causa di modifiche importanti nelle librerie e strumenti di compilazione. Vedere [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](../porting/visual-cpp-change-history-2003-2015.md) per la spiegazione dettagliata delle modifiche che potrebbero influire sul codice.
 
@@ -82,7 +82,7 @@ Se si dispone di una DLL o di un componente Windows Runtime già compatibile con
 
 1. Compilare il progetto e risolvere gli eventuali errori di compilazione a causa di modifiche importanti tra le diverse versioni di Windows SDK.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Possono verificarsi diversi errori durante il processo di porting di codice per la piattaforma UWP. Di seguito sono riportati alcuni possibili problemi riscontrati.
 

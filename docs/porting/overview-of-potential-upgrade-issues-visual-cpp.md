@@ -2,12 +2,12 @@
 title: Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511550"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627245"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 
@@ -33,7 +33,7 @@ C++ non dispone di un'interfaccia binaria dell'applicazione stabile (ABI, Aplica
 
 Se è presente un file oggetto che include simboli esterni con collegamento a C++, tale file oggetto potrebbe non collegarsi correttamente con file oggetto creati con un'altra versione principale del set di strumenti. Esistono molti risultati possibili. Il collegamento potrebbe non riuscire completamente, ad esempio se la decorazione dei nomi è stata modificata. Il collegamento potrebbe riuscire, ma le operazioni potrebbero non funzionare in fase di esecuzione, ad esempio se il layout del tipo è stato modificato. Oppure in molti casi può succedere che tutto funzioni senza errori. Si noti anche che sebbene l'ABI C++ non sia stabile, l'ABI C e il subset dell'ABI C++ necessaria per COM sono stabili.
 
-Se si effettua il collegamento a una libreria di importazione, in fase di esecuzione si potranno usare tutte le versioni successive delle librerie ridistribuibili di Visual Studio che mantengono la compatibilità ABI. Ad esempio, se l'app viene compilata e collegata usando il set di strumenti di Visual Studio 2015 Update 3, è possibile usare qualsiasi componente ridistribuibile di Visual Studio 2017 o Visual Studio 2019 poiché le librerie 2015, 2017 e 2019 conservano la compatibilità binaria con le versioni precedenti. Non è vero invece il contrario: non è possibile usare un componente ridistribuibile per una versione precedente del set di strumenti usato per compilare il codice, anche se ha un ABI compatibile.
+Se si effettua il collegamento a una libreria di importazione, in fase di esecuzione si potranno usare tutte le versioni successive delle librerie ridistribuibili di Visual Studio che mantengono la compatibilità ABI. Ad esempio, se l'app viene compilata e collegata usando il set di strumenti di Visual Studio 2015 Update 3, è possibile usare qualsiasi componente ridistribuibile di Visual Studio 2017 o Visual Studio 2019 poiché le librerie 2015, 2017 e 2019 conservano la compatibilità binaria con le versioni precedenti. Il contrario non è vero: non è possibile usare un ridistribuibile per una versione precedente del set di strumenti rispetto a quello usato per compilare il codice, anche se è presente un ABI compatibile.
 
 ### <a name="libraries"></a>Librerie
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (Tipo nativo wchar_t)
 
-In Microsoft Visual C++ 6.0 e versioni precedenti, **wchar_t** non è implementato come tipo incorporato, ma è dichiarato in wchar.h come typedef per unsigned short. Lo standard C++ richiede che **wchar_t** sia un tipo incorporato. L'uso della versione typedef può causare problemi di portabilità. Se si esegue l'aggiornamento da versioni precedenti di Visual Studio e si verifica l'errore del compilatore C2664 perché il codice sta cercando di convertire in modo implicito **wchar_t** in **unsigned short**, è consigliabile modificare il codice per risolvere l'errore anziché impostare `/Zc:wchar_t-`. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(In Microsoft Visual C++ 6,0 e versioni precedenti, **wchar_t** non è stato implementato come tipo predefinito, ma è stato dichiarato in WCHAR. h come typedef per unsigned short). Lo C++ standard richiede che **wchar_t** sia un tipo incorporato. L'uso della versione typedef può causare problemi di portabilità. Se si esegue l'aggiornamento da versioni precedenti di Visual Studio e si verifica l'errore del compilatore C2664 perché il codice sta cercando di convertire in modo implicito **wchar_t** in **unsigned short**, è consigliabile modificare il codice per risolvere l'errore anziché impostare `/Zc:wchar_t-`. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Aggiornare con le opzioni del linker /NODEFAULTLIB, /ENTRY e /NOENTRY
 
@@ -150,7 +150,7 @@ Ora lo standard C++ specifica che le conversioni da valori integrali senza segno
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>Avvisi per l'uso di funzioni CRT protette
 
-Nel corso degli anni sono state introdotte versioni sicure delle funzioni runtime C. Le versioni precedenti e non sicure sono ancora disponibili, ma è consigliabile modificare il codice per usare le versioni sicure. Il compilatore genererà un avviso se si usano versioni non sicure. È possibile scegliere di disabilitare o ignorare questi avvisi. Per disabilitare l'avviso per tutti i progetti nella soluzione, aprire **Visualizza** > **Gestione proprietà**, selezionare tutti i progetti per i quali disabilitare l'avviso, quindi fare clic con il pulsante destro del mouse sugli elementi selezionati e scegliere **Proprietà**. Nella finestra di dialogo **Pagine delle proprietà** in **Proprietà di configurazione** > **C/C++**  > **Avanzate**, selezionare **Disabilita avvisi specifici**. Fare clic sulla freccia a discesa e quindi su **Modifica**. Immettere 4996 nella casella di testo. (Non includere il prefisso "C".) Per altre informazioni, vedere [Porting per l'uso di funzioni CRT sicure](porting-guide-spy-increment.md#porting_to_secure_crt).
+Nel corso degli anni sono state introdotte versioni sicure delle funzioni runtime C. Le versioni precedenti e non sicure sono ancora disponibili, ma è consigliabile modificare il codice per usare le versioni sicure. Il compilatore genererà un avviso se si usano versioni non sicure. È possibile scegliere di disabilitare o ignorare questi avvisi. Per disabilitare l'avviso per tutti i progetti nella soluzione, aprire **Visualizza** > **Gestione proprietà**, selezionare tutti i progetti per i quali disabilitare l'avviso, quindi fare clic con il pulsante destro del mouse sugli elementi selezionati e scegliere **Proprietà**. Nella finestra di dialogo **Pagine delle proprietà** in **Proprietà di configurazione** > **C/C++**  > **Avanzate**, selezionare **Disabilita avvisi specifici**. Fare clic sulla freccia a discesa e quindi su **Modifica**. Immettere 4996 nella casella di testo. Non includere il prefisso "C". Per altre informazioni, vedere [porting to use the Secure CRT](porting-guide-spy-increment.md#porting_to_secure_crt).
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>Errori dovuti a modifiche alle API di Windows o a SDK obsoleti
 
@@ -170,7 +170,7 @@ ATL e MFC sono API relativamente stabili, ma anch'esse vengono modificate occasi
 
 ### <a name="lnk-2005-_dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 già definito in MSVCRTD.lib
 
-Questo errore può verificarsi nelle applicazioni MFC. Indica un problema di ordinamento tra la libreria CRT e la libreria MFC. La libreria MFC deve essere collegata per prima, in modo che renda disponibili gli operatori new e delete. Per correggere l'errore, usare l'opzione `/NODEFAULTLIB` per ignorare le librerie predefinite: MSVCRTD.lib e mfcs140d.lib. Quindi aggiungere queste librerie come dipendenze aggiuntive.
+Questo errore può verificarsi nelle applicazioni MFC. Indica un problema di ordinamento tra la libreria CRT e la libreria MFC. La libreria MFC deve essere collegata per prima, in modo che renda disponibili gli operatori new e delete. Per correggere l'errore, usare l'opzione `/NODEFAULTLIB` per ignorare le librerie predefinite MSVCRTD.lib e mfcs140d.lib. Quindi aggiungere queste librerie come dipendenze aggiuntive.
 
 ## <a name="32-vs-64-bit"></a>32 bit e 64 bit
 
@@ -180,11 +180,11 @@ Se il codice originale viene compilato per sistemi a 32 bit, è possibile scegli
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode e MBCS/ASCII
 
-Prima dell'introduzione dello standard Unicode, molti programmi usavano set di caratteri multibyte (MBCS) per rappresentare i caratteri non inclusi nel set di caratteri ASCII. Nei vecchi progetti MFC, MBCS era l'impostazione predefinita. Quando si aggiorna un programma di questo tipo vengono visualizzati avvisi che consigliano di usare Unicode. È possibile scegliere di disabilitare o ignorare l'avviso se si decide che la conversione a Unicode comporta costi di sviluppo eccessivi. Per disabilitare l'avviso per tutti i progetti nella soluzione, aprire **Visualizza** > **Gestione proprietà**, selezionare tutti i progetti per i quali disabilitare l'avviso, quindi fare clic con il pulsante destro del mouse sugli elementi selezionati e scegliere **Proprietà**. Nella finestra di dialogo **Pagina delle proprietà** selezionare **Proprietà di configurazione** > **C/C++**  > **Avanzate**. Nella proprietà **Disabilita avvisi specifici** fare clic sulla freccia a discesa, quindi scegliere **Modifica**. Immettere 4996 nella casella di testo. (Non includere il prefisso "C".) Scegliere **OK** per salvare la proprietà, quindi scegliere **OK** per salvare le modifiche.
+Prima dell'introduzione dello standard Unicode, molti programmi usavano set di caratteri multibyte (MBCS) per rappresentare i caratteri non inclusi nel set di caratteri ASCII. Nei vecchi progetti MFC, MBCS era l'impostazione predefinita. Quando si aggiorna un programma di questo tipo vengono visualizzati avvisi che consigliano di usare Unicode. È possibile scegliere di disabilitare o ignorare l'avviso se si decide che la conversione a Unicode comporta costi di sviluppo eccessivi. Per disabilitare l'avviso per tutti i progetti nella soluzione, aprire **Visualizza** > **Gestione proprietà**, selezionare tutti i progetti per i quali disabilitare l'avviso, quindi fare clic con il pulsante destro del mouse sugli elementi selezionati e scegliere **Proprietà**. Nella finestra di dialogo **Pagina delle proprietà** selezionare **Proprietà di configurazione** > **C/C++**  > **Avanzate**. Nella proprietà **Disabilita avvisi specifici** fare clic sulla freccia a discesa, quindi scegliere **Modifica**. Immettere 4996 nella casella di testo. Non includere il prefisso "C". Scegliere **OK** per salvare la proprietà, quindi scegliere **OK** per salvare le modifiche.
 
-Per altre informazioni, vedere [Porting da MBCS a Unicode](porting-guide-spy-increment.md#porting_to_unicode). Per informazioni generali su MBCS e Unicode, vedere [Testo e stringhe in Visual C++](../text/text-and-strings-in-visual-cpp.md) e [Internazionalizzazione](../c-runtime-library/internationalization.md) .
+Per altre informazioni, vedere [Porting da MBCS a Unicode](porting-guide-spy-increment.md#porting_to_unicode). Per informazioni generali su MBCS e Unicode, vedere [Text and Strings in Visual C++ ](../text/text-and-strings-in-visual-cpp.md) and [internazionalizzazione](../c-runtime-library/internationalization.md) .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aggiornamento di progetti da versioni precedenti di VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Miglioramenti della conformità di C++ in Visual Studio](../overview/cpp-conformance-improvements.md)

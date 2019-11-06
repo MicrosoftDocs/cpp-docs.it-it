@@ -35,12 +35,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: b0db1a50f638c6130e4beb6798431179edec153b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951590"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624217"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -83,15 +83,17 @@ Entrambe queste funzioni restituiscono zero in caso di esito positivo e un codic
 
 |*nameTemplate*|*sizeInChars*|Valore restituito|Nuovo valore in *nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|qualsiasi|**EINVAL**|**NULL**|
-|Formato non corretto (vedere la sezione Osservazioni per il formato corretto)|qualsiasi|**EINVAL**|stringa vuota|
-|qualsiasi|<= numero di X|**EINVAL**|stringa vuota|
+|**NULL**|any|**EINVAL**|**NULL**|
+|Formato non corretto (vedere la sezione Osservazioni per il formato corretto)|any|**EINVAL**|stringa vuota|
+|any|<= numero di X|**EINVAL**|stringa vuota|
 
 Se si verifica una delle condizioni di errore precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e le funzioni restituiscono **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
 La funzione **_mktemp_s** crea un nome di file univoco modificando l'argomento *nameTemplate* , in modo che, dopo la chiamata, il puntatore *nameTemplate* punti a una stringa contenente il nuovo nome file. **_mktemp_s** gestisce automaticamente gli argomenti della stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente utilizzata dal sistema di Runtime. **_wmktemp_s** è una versione a caratteri wide di **_mktemp_s**; l'argomento di **_wmktemp_s** è una stringa di caratteri wide. **_wmktemp_s** e **_mktemp_s** si comportano in modo identico, ad eccezione del fatto che **_wmktemp_s** non gestisce le stringhe di caratteri multibyte.
+
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -103,11 +105,11 @@ Il formato dell'argomento *nameTemplate* è **baseXXXXXX**, dove *base* è la pa
 
 Ogni chiamata riuscita a **_mktemp_s** modifica *nameTemplate*. In ogni chiamata successiva dallo stesso processo o thread con lo stesso argomento *nameTemplate* , **_mktemp_s** controlla i nomi file che corrispondono ai nomi restituiti da **_mktemp_s** nelle chiamate precedenti. Se non esiste alcun file per un nome specificato, **_mktemp_s** restituisce tale nome. Se sono presenti file per tutti i nomi restituiti in precedenza, **_mktemp_s** crea un nuovo nome sostituendo il carattere alfabetico usato nel nome restituito in precedenza con la lettera minuscola disponibile successiva, in ordine, da "a" a "z". Ad esempio, se *base* è:
 
-> **fn**
+> **FN**
 
 e il valore a cinque cifre fornito da **_mktemp_s** è 12345, il primo nome restituito è:
 
-> **fna12345**
+> **FNA12345**
 
 Se questo nome viene usato per creare il file FNA12345 e il file esiste ancora, il nome successivo restituito per una chiamata dallo stesso processo o thread con lo stesso valore di *base* per *nameTemplate* è:
 
@@ -115,11 +117,11 @@ Se questo nome viene usato per creare il file FNA12345 e il file esiste ancora, 
 
 Se FNA12345 non esiste, il successivo nome restituito è:
 
-> **fna12345**
+> **FNA12345**
 
 **_mktemp_s** può creare un massimo di 26 nomi file univoci per qualsiasi combinazione specificata di valori di *base* e *nameTemplate* . Pertanto, FNZ12345 è l'ultimo nome file univoco **_mktemp_s** può creare per i valori di *base* e *nameTemplate* usati in questo esempio.
 
-In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -128,7 +130,7 @@ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli.
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

@@ -1,30 +1,30 @@
 ---
 title: Conversione di librerie di terze parti
-ms.date: 01/10/2017
+ms.date: 10/29/2019
 helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: e1aefc82eb23a8479035dd3372fa9ec24ab8feb1
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.openlocfilehash: 89460af1ad0b356f4f5952141636a9f067131750
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774204"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627196"
 ---
 # <a name="porting-third-party-libraries"></a>Porting di librerie di terze parti
 
-Quando si aggiorna un progetto alla versione corrente di Visual C++, è necessario aggiornare anche le eventuali librerie usate dal progetto, in modo che sia le librerie sia il progetto siano compilati con la stessa versione del compilatore. Per altre informazioni, vedere [Panoramica dei potenziali problemi di aggiornamento](overview-of-potential-upgrade-issues-visual-cpp.md).
+Quando si aggiorna un progetto da Visual Studio 2013 o versione precedente alla versione corrente di Visual C++, è necessario aggiornare anche tutte le librerie usate dal progetto, in modo che la libreria e il progetto siano compilati con la stessa versione e la stessa versione del compilatore. Se non si ha accesso al codice sorgente della libreria e la libreria non è disponibile tramite vcpkg, è necessario ottenere un file binario aggiornato dal fornitore della libreria. Per altre informazioni, vedere [Panoramica dei potenziali problemi di aggiornamento](overview-of-potential-upgrade-issues-visual-cpp.md).
 
-## <a name="introducing-vcpkg"></a>Introduzione a vcpkg
+Quando si aggiorna un'applicazione da Visual Studio 2015 o Visual Studio 2017 a Visual Studio 2019, non è necessario aggiornare le dipendenze perché il codice generato da queste tre versioni è compatibile con binario. Per altre informazioni, vedere [ C++ compatibilità binaria tra Visual Studio 2015 e Visual Studio 2019](binary-compat-2015-2017.md).
 
-In passato la ricerca e l'aggiornamento delle librerie di terze parti potevano essere attività complesse. Per semplificare l'acquisizione e la ricompilazione di librerie C++ open source di terze parti, il team di Visual C++ ha creato uno strumento della riga di comando denominato **VC++ Packaging Tool** o **vcpkg**. Vcpkg dispone di un catalogo ricercabile contenente molte delle librerie C++ open source più diffuse. È possibile installare qualsiasi libreria del catalogo direttamente dalla riga di comando di vcpkg. Quando si installa una libreria, Vcpkg crea una struttura di directory nel computer in uso e aggiunge i componenti .h, .lib e binari in tale cartella. È possibile usare questa cartella nella riga di comando di compilazione o integrarla in Visual Studio 2015 o versione successiva con il comando vcpkg integrate install. Dopo l'integrazione di un percorso di libreria, Visual Studio consente di trovarlo e aggiungerlo a qualsiasi nuovo progetto creato. Per usare una libreria è sufficiente includerla con `#include` e Visual Studio aggiungerà automaticamente il percorso .lib alle impostazioni del progetto e copierà la DLL nella cartella della soluzione. Per altre informazioni, vedere [vcpkg: gestione pacchetti per C++](../build/vcpkg.md).
+## <a name="vcpkg-for-open-source-libraries"></a>vcpkg per le librerie open source
+
+In passato la ricerca e l'aggiornamento delle librerie di terze parti potevano essere attività complesse. Per semplificare l'acquisizione e la ricompilazione C++ di librerie open source di terze parti, C++ il team visuale ha creato uno strumento da riga di comando denominato strumento per la creazione di **pacchetti VC + +** o **vcpkg**. Vcpkg dispone di un catalogo ricercabile contenente molte delle librerie C++ open source più diffuse. È possibile installare qualsiasi libreria del catalogo direttamente dalla riga di comando di vcpkg. Quando si installa una libreria, Vcpkg crea una struttura di directory nel computer in uso e aggiunge i componenti .h, .lib e binari in tale cartella. È possibile usare questa cartella nella riga di comando di compilazione o integrarla in Visual Studio 2015 o versione successiva con il comando vcpkg integrate install. Dopo l'integrazione di un percorso di libreria, Visual Studio consente di trovarlo e aggiungerlo a qualsiasi nuovo progetto creato. Per usare una libreria è sufficiente includerla con `#include` e Visual Studio aggiungerà automaticamente il percorso .lib alle impostazioni del progetto e copierà la DLL nella cartella della soluzione. Per altre informazioni, vedere [vcpkg: gestione pacchetti per C++](../build/vcpkg.md).
 
 ## <a name="reporting-issues"></a>Segnalazione di problemi
 
-Se la libreria desiderata non è presente nel catalogo **vcpkg**, è possibile segnalare il problema nel [repository GitHub](https://github.com/Microsoft/vcpkg/issues), dove la community e il team di Visual C++ potranno visualizzarlo ed eventualmente creare il file della porta corrispondente.
-
-Per le librerie di proprietà di terze parti (non open source) è consigliabile contattare il provider della libreria. Tuttavia, può essere utile per Microsoft ricevere la segnalazione delle librerie proprietarie in uso che bloccano l'elaborazione e di quelle che risultano affidabili. Usare l'indirizzo vcupgrade@microsoft.com.
+Se la libreria open source non è presente nel catalogo di **vcpkg** , è possibile aprire un problema nel [repository GitHub](https://github.com/Microsoft/vcpkg/issues) in cui la community e il team C++ visivo possono visualizzarlo e potenzialmente creare il file di porta per questa libreria.
 
 ## <a name="see-also"></a>Vedere anche
 

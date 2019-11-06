@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4002
 ms.assetid: 6bda1dfe-e2e4-4771-9794-5a404c466dd5
-ms.openlocfilehash: f2d2166a1370c02cfbc2346a63a424239ccb2b92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aac8285e3935bb0fb910b52a7dd813d0a708732
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187261"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627399"
 ---
 # <a name="compiler-warning-level-1-c4002"></a>Avviso del compilatore (livello 1) C4002
 
@@ -23,7 +23,7 @@ L'errore C4002 può verificarsi quando si usa [Variadic Macros](../../preprocess
 
 L'esempio seguente genera l'errore C4002:
 
-```
+```cpp
 // C4002.cpp
 // compile with: /W1
 #define test(a) (a)
@@ -41,7 +41,7 @@ Questo errore può verificarsi anche in seguito a operazioni di conformità del 
 
 Il compilatore non accetta più virgole aggiuntive in una macro. Affinché il codice sia valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++, rimuovere le virgole aggiuntive.
 
-```
+```cpp
 // C4002b.cpp
 // compile with: /W1
 #define F(x,y)

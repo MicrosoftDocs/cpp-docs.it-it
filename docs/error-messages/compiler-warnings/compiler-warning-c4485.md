@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: b5afb829485e0e9533a14e818e6d6785f268a83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 896fca6c6b257c90ccdf813a9c6cb6bc27ad9e96
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311319"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623616"
 ---
 # <a name="compiler-warning-c4485"></a>Avviso del compilatore C4485
 
-'funzione_override': corrisponde al metodo di classe di base di riferimento 'funzione_classe_base', ma non è contrassegnato 'new' o 'override'; 'new' (e 'virtual') si presuppone che
+' override_function ': corrisponde al metodo della classe di riferimento di base ' base_class_function ', ma non è contrassegnato ' New ' o ' override '; si presuppone ' New ' (è Virtual ')
 
-Sostituisce una funzione di accesso, con o senza il `virtual` parola chiave, una funzione di accesso di classe di base, ma la `override` o `new` identificatore non faceva parte della firma della funzione esegue l'override. Aggiungere il `new` o `override` identificatore per risolvere il problema.
+Una funzione di accesso esegue l'override di, con o senza la parola chiave `virtual`, una funzione di accesso della classe base, ma l'identificatore `override` o `new` non fa parte della firma della funzione che esegue l'override. Aggiungere l'identificatore `new` o `override` per risolvere il problema.
 
-Visualizzare [eseguire l'override](../../extensions/override-cpp-component-extensions.md) e [new (nuovo slot in vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) per altre informazioni.
+Per ulteriori informazioni, vedere [override](../../extensions/override-cpp-component-extensions.md) e [nuovo (nuovo slot in vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) .
 
-C4485 viene sempre generato come errore. Usare la [avviso](../../preprocessor/warning.md) pragma per sopprimere C4485.
+C4485 viene sempre emesso come un errore. Usare il pragma [warning](../../preprocessor/warning.md) per disattivare C4485.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4485
+L'esempio seguente genera C4485
 
-```
+```cpp
 // C4485.cpp
 // compile with: /clr
 delegate void Del();

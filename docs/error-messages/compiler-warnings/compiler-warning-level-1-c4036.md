@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4036
 ms.assetid: f0b15359-4d62-48ec-8cb1-a7b36587a47f
-ms.openlocfilehash: 632e88bb64568c97e937e83e177598054a954f22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 858cf089d3f681438a221115c8758c38a5cf8d9a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151786"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626273"
 ---
 # <a name="compiler-warning-level-1-c4036"></a>Avviso del compilatore (livello 1) C4036
 
@@ -25,7 +25,7 @@ Per risolvere il problema, specificare un nome di tipo.
 
 L'esempio seguente genera l'errore C4036.
 
-```
+```c
 // C4036.c
 // compile with: /Zg /W1
 // D9035 expected

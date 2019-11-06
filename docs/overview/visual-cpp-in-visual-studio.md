@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
-ms.translationtype: HT
+ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552370"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626220"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -36,7 +36,7 @@ Novità di C++ introdotte per ogni versione di Visual Studio, dalla versione 200
 [Miglioramenti della conformità di C++ in Visual Studio](cpp-conformance-improvements.md)<br/>
 Informazioni sui miglioramenti della conformità di C++ in Visual Studio.
 
-[Conformità al linguaggio Visual C++](visual-cpp-language-conformance.md)<br/>
+[Tabella C++ di conformità del linguaggio Microsoft](visual-cpp-language-conformance.md)<br/>
 Elenco dello stato di conformità per funzionalità nel compilatore MSVC C++.
 
 [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>

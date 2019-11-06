@@ -28,12 +28,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941345"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623842"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -68,7 +68,7 @@ Buffer specificato che conterrà il risultato della conversione.
 *sizeInBytes*<br/>
 Dimensioni del buffer in byte.
 
-*value*<br/>
+*valore*<br/>
 Numero da convertire.
 
 *count*<br/>
@@ -84,16 +84,16 @@ Puntatore all'indicatore di segno archiviato.
 
 Zero in caso di esito positivo. Il valore restituito è un codice di errore se si verifica un errore. I codici di errore sono definiti in Errno.h. Per un elenco di questi errori, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione chiama il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
+Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione richiama il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*sizeInBytes*|value|Conteggio|dec|segno|INVIO|Valore nel *buffer*|
+|*buffer*|*sizeInBytes*|valore|count|dec|segno|INVIO|Valore nel *buffer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
-|Not **null** (punta alla memoria valida)|<=0|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
-|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**NULL**|qualsiasi|**EINVAL**|Non modificato.|
-|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**NULL**|**EINVAL**|Non modificato.|
+|**NULL**|any|any|any|any|any|**EINVAL**|Non modificato.|
+|Not **null** (punta alla memoria valida)|<=0|any|any|any|any|**EINVAL**|Non modificato.|
+|any|any|any|any|**NULL**|any|**EINVAL**|Non modificato.|
+|any|any|any|any|any|**NULL**|**EINVAL**|Non modificato.|
 
 ## <a name="security-issues"></a>Problemi relativi alla sicurezza
 
@@ -109,9 +109,9 @@ Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a vir
 
 La differenza tra **_ecvt_s** e **_fcvt_s** è l'interpretazione del parametro *count* . **_ecvt_s** interpreta *count* come il numero totale di cifre nella stringa di output e **_fcvt_s** interpreta il *conteggio* come numero di cifre dopo il separatore decimale.
 
-In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni di debug di questa funzione riempiono prima il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La versione di debug di questa funzione riempie prima di tutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -119,9 +119,9 @@ Le versioni di debug di questa funzione riempiono prima il buffer con 0xFD. Per 
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-**Librerie** Tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+**Librerie:** tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Esempio
 

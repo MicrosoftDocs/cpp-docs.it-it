@@ -1,13 +1,13 @@
 ---
 title: 'Guida al porting: MFC Scribble'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511540"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627220"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guida al porting: MFC Scribble
 
@@ -23,15 +23,15 @@ Prima di provare a eseguire l'aggiornamento, verificare che sia installato il ca
 
 Quindi eseguire il backup dell'intera soluzione e di tutto il contenuto.
 
-In seguito sarà necessario scegliere il metodo di aggiornamento specifico. Per soluzioni e progetti più complessi che non sono stati aggiornati da molto tempo, è opportuno eseguire l'aggiornamento a una sola versione di Visual Studio alla volta. In tal modo è possibile individuare più facilmente la versione di Visual Studio con cui è stato introdotto un certo problema. Per un progetto semplice vale la pena provare ad aprirlo nella versione più recente di Visual Studio e consentire alla procedura guidata di procedere alla conversione. Se questo approccio non funziona, è quindi possibile provare ad effettuare l'aggiornamento una versione alla volta, purché siano disponibili le versioni appropriate di Visual Studio.
+Infine, aprire la soluzione nella versione più recente di Visual Studio e consentire alla procedura guidata di convertire il progetto. 
 
 Tenere presente che invece di aggiornare i progetti con la procedura guidata, è anche possibile eseguire devenv dalla riga di comando specificando l'opzione `/Upgrade`. Vedere [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Questo approccio può risultare utile per automatizzare la procedura di aggiornamento per un numero elevato di progetti.
 
 ### <a name="step-1-converting-the-project-file"></a>Passaggio 1. Conversione del file di progetto
 
-Quando si apre in Visual Studio 2017 un file di progetto creato in una versione precedente, viene chiesto se si vuole convertire il file di progetto alla versione più recente. In questo caso l'offerta è stata accettata. viene visualizzata la finestra di dialogo seguente:
+Quando si apre un vecchio file di progetto in Visual Studio, Visual Studio offre la conversione del file di progetto nella versione più recente, che è stata accettata. viene visualizzata la finestra di dialogo seguente:
 
-![Esamina modifiche a progetti e soluzioni](../porting/media/scribbleprojectupgrade.PNG "Esamina modifiche a progetti e soluzioni")
+![Verifica modifiche a progetti e soluzioni](../porting/media/scribbleprojectupgrade.PNG "Revisione modifiche a progetti e soluzioni")
 
 Si è verificato un errore e viene visualizzato un messaggio per informare che la destinazione Itanium non è disponibile e la conversione non verrà eseguita.
 
@@ -43,13 +43,13 @@ All'epoca in cui è stato creato il progetto Scribble precedente, Itanium era un
 
 Visual Studio visualizza quindi un report di migrazione che elenca tutti i problemi riscontrati nel vecchio file di progetto.
 
-![Report di aggiornamento](../porting/media/scribblemigrationreport.PNG "Report di aggiornamento")
+![Report aggiornamento](../porting/media/scribblemigrationreport.PNG "Report di aggiornamento")
 
 In questo caso, i problemi erano tutti avvisi e Visual Studio ha apportato le modifiche appropriate nel file di progetto. La grande differenza per quanto riguarda il progetto è che lo strumento di compilazione è cambiato da vcbuild a msbuild. Questa modifica è stata introdotta in Visual Studio 2010. Altre modifiche includono una riorganizzazione della sequenza di elementi nel file di progetto. Per questo progetto semplice nessuno dei problemi ha richiesto ulteriore attenzione.
 
-### <a name="step-2-getting-it-to-build"></a>Passaggio 2. Preparazione della compilazione
+### <a name="step-2-getting-it-to-build"></a>Passaggio 2: Preparazione della compilazione
 
-Prima della compilazione è necessario controllare il set di strumenti della piattaforma per conoscere la versione del compilatore usata dal sistema del progetto. Nella finestra delle proprietà del progetto esaminare la proprietà **Set di strumenti della piattaforma** nella categoria **Generale** in **Proprietà di configurazione**. Tale proprietà contiene la versione di Visual Studio e il numero di versione dello strumento della piattaforma, che in questo caso è v141 per la versione Visual Studio 2017 degli strumenti. Quando si converte un progetto che in origine è stato compilato con Visual Studio C++ 2010, 2012, 2013 o 2015, il set di strumenti non viene aggiornato automaticamente a Visual Studio 2017.
+Prima della compilazione è necessario controllare il set di strumenti della piattaforma per conoscere la versione del compilatore usata dal sistema del progetto. Nella finestra delle proprietà del progetto esaminare la proprietà **Set di strumenti della piattaforma** nella categoria **Generale** in **Proprietà di configurazione**. Tale proprietà contiene la versione di Visual Studio e il numero di versione dello strumento della piattaforma, che in questo caso è v141 per la versione Visual Studio 2017 degli strumenti. Quando si converte un progetto compilato originariamente con Visual Studio 2010, 2012, 2013 o 2015, il set di strumenti non viene aggiornato automaticamente al set di strumenti più recente.
 
 Per il passaggio a Unicode, aprire le proprietà del progetto e in **Proprietà di configurazione** scegliere la sezione **Generale**, quindi trovare la proprietà **Set di caratteri**. Modificare l'impostazione corrente **Utilizza set di caratteri multibyte** in **Usa set di caratteri Unicode**. Per effetto di questa modifica le macro _UNICODE e UNICODE sono ora definite mentre _MBCS non lo è, come è possibile verificare nella proprietà **Riga di comando** della categoria **C/C++** nella finestra di dialogo delle proprietà.
 

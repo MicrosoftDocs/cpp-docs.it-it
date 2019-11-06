@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4155
 ms.assetid: ba233353-09e3-4195-8127-13a27ddd8d70
-ms.openlocfilehash: 1f47b990762ebe2ea18368949c1781fcf5553d8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9359012d7782e9f8eb9054cbcc7fa3d53b3c6697
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391855"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624971"
 ---
 # <a name="compiler-warning-level-1-c4155"></a>Avviso del compilatore (livello 1) C4155
 
@@ -23,7 +23,7 @@ Per eliminare una matrice deve essere usata la forma per le matrici di **delete*
 
 L'esempio seguente genera l'errore C4155:
 
-```
+```cpp
 // C4155.cpp
 // compile with: /Za /W1
 #include <stdio.h>

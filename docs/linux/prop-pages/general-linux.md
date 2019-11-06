@@ -2,24 +2,24 @@
 title: Proprietà generali (progetto Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: ce3683f11d80c253195b751b5eed364fbc04b68a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
-ms.translationtype: HT
+ms.openlocfilehash: c17a5e0214e6365d604a80bd4b3891858f0f9186
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821278"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626809"
 ---
 # <a name="general-properties-linux-c"></a>Proprietà generali (Linux C++)
 
 ::: moniker range="vs-2015"
 
-Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Proprietà | Description | Scelte
+proprietà | Descrizione | Scelte
 --- | ---| ---
 Directory di output | Specifica un percorso relativo della directory dei file di output. Può includere variabili di ambiente.
 Directory intermedia | Specifica un percorso relativo della directory dei file intermedi. Può includere variabili di ambiente.
@@ -35,4 +35,3 @@ Tipo di configurazione | Specifica il tipo di output generato da questa configur
 Uso di STL | Specifica la libreria standard C++ da usare per questa configurazione. | **Libreria C++ standard GNU condivisa**<br>**Libreria C++ standard GNU statica (-static)**<br>
 
 ::: moniker-end
-

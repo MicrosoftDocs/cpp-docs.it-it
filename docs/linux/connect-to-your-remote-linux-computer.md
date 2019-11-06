@@ -3,18 +3,18 @@ title: Connettersi al sistema Linux di destinazione in Visual Studio
 description: Come connettersi a un computer Linux remoto o a WSL dall'interno di un progetto di Visual Studio C++.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925564"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626793"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connettersi al sistema Linux di destinazione in Visual Studio
 
 ::: moniker range="vs-2015"
 
-Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
@@ -79,6 +79,20 @@ Per configurare la connessione remota:
    I log includono le connessioni, tutti i comandi inviati al computer remoto (testo, codice di uscita e tempo di esecuzione) e tutto l'output da Visual Studio alla shell. La registrazione funziona per qualsiasi progetto CMake multipiattaforma o per un progetto Linux basato su MSBuild in Visual Studio.
 
    È possibile configurare l'output in modo che venga indirizzato a un file o al riquadro **Registrazione multipiattaforma** nella finestra di output. Per i progetti Linux basati su MSBuild, i comandi inviati al computer remoto da MSBuild non vengono indirizzati alla **finestra di output** perché sono out-of-process. Vengono invece registrati in un file con il prefisso "msbuild_".
+   
+## <a name="tcp-port-forwarding"></a>Porting porta TCP
+
+Il supporto Linux di Visual Studio presenta una dipendenza dall'invio della porta TCP. **Rsync** e **gdbserver** saranno interessati se l'invio della porta TCP è disabilitato nel sistema remoto. 
+
+Rsync viene usato dai progetti Linux basati su MSBuild e dai progetti CMake per [copiare le intestazioni dal sistema remoto a Windows da usare per IntelliSense](configure-a-linux-project.md#remote_intellisense). Se non si è in grado di abilitare l'invio di porta TCP, è possibile disabilitare il download automatico delle intestazioni remote tramite strumenti > Opzioni > multipiattaforma > Gestione connessione > gestione IntelliSense per le intestazioni remote. Se al sistema remoto a cui si sta tentando di connettersi non è abilitato l'invio della porta TCP, verrà visualizzato l'errore seguente quando viene avviato il download delle intestazioni remote per IntelliSense.
+
+![Errore intestazioni](media/port-forwarding-headers-error.png)
+
+Rsync viene usato anche dal supporto CMake di Visual Studio per copiare i file di origine nel sistema remoto. Se non si è in grado di abilitare l'invio di porta TCP, è possibile usare SFTP come metodo per le origini di copia remote. SFTP è in genere più lento rispetto a rsync ma non presenta una dipendenza dall'invio della porta TCP. È possibile gestire il metodo di origini di copia remote con la proprietà remoteCopySourcesMethod nell' [Editor delle impostazioni CMake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Se l'invio della porta TCP è disabilitato nel sistema remoto, verrà visualizzato un errore nella finestra di output CMake la prima volta che si richiama rsync.
+
+![Errore rsync](media/port-forwarding-copy-error.png)
+
+Gdbserver può essere usato per eseguire il debug su dispositivi incorporati. Se non si è in grado di abilitare l'invio di porta TCP, sarà necessario usare gdb per tutti gli scenari di debug remoto. Per impostazione predefinita, GDB viene usato per il debug di progetti in un sistema remoto. 
 
    ::: moniker-end
 

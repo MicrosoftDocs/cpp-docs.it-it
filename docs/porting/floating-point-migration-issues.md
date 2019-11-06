@@ -2,12 +2,12 @@
 title: Problemi relativi alla migrazione dei valori a virgola mobile
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: HT
+ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332348"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626984"
 ---
 # <a name="floating-point-migration-issues"></a>Problemi relativi alla migrazione dei valori a virgola mobile
 
@@ -31,6 +31,6 @@ Nella maggior parte dei casi, le modifiche dei calcoli a virgola mobile nei comp
 
 ## <a name="see-also"></a>Vedere anche
 
-[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aggiornamento di progetti da versioni precedenti di VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Panoramica dei potenziali problemi di aggiornamento (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md)

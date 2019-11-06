@@ -1,31 +1,31 @@
 ---
-title: Compilatore Warning (level 1) C4129
+title: Avviso del compilatore (livello 1) C4129
 ms.date: 11/04/2016
 f1_keywords:
 - C4129
 helpviewer_keywords:
 - C4129
 ms.assetid: a4190c64-4bfb-48fd-8e98-52720bc0d878
-ms.openlocfilehash: dc4f4c4c1feeba543ce0baa71e1ee5dfd81fdcae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab3108c60c18276e8e4797c7cfde1b66535dbaaa
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310956"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627426"
 ---
-# <a name="compiler-warning-level-1-c4129"></a>Compilatore Warning (level 1) C4129
+# <a name="compiler-warning-level-1-c4129"></a>Avviso del compilatore (livello 1) C4129
 
-'character': sequenza di caratteri escape sconosciuta
+' character ': sequenza di escape di caratteri non riconosciuta
 
-Il `character` dopo una barra rovesciata (\\) in un carattere o una stringa costante non è riconosciuta come una sequenza di escape valida. La barra rovesciata viene ignorata e non stampata. Il carattere che segue la barra rovesciata viene stampato.
+Il `character` dopo una barra rovesciata (\\) in una costante carattere o stringa non è riconosciuto come una sequenza di escape valida. La barra rovesciata viene ignorata e non viene stampata. Viene stampato il carattere che segue la barra rovesciata.
 
 Per stampare una singola barra rovesciata, specificare una doppia barra rovesciata (\\\\).
 
-C++ standard, nella sezione 2.13.2 illustra le sequenze di escape.
+Lo C++ standard, nella sezione 2.13.2, illustra le sequenze di escape.
 
-L'esempio seguente genera l'errore C4129:
+L'esempio seguente genera l'C4129:
 
-```
+```cpp
 // C4129.cpp
 // compile with: /W1
 int main() {

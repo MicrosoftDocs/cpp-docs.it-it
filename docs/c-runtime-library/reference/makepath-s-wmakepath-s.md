@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 7efd7c8e5ce7314e6fe719073685377f4b325fbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7bd85734e71120a214d652048c02c176728474b2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952938"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624361"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -92,7 +92,7 @@ Dimensione del buffer in forma di testo.
 *sizeInBytes*<br/>
 Dimensione del buffer in byte.
 
-*drive*<br/>
+*unità*<br/>
 Contiene una lettera (A, B e così via) corrispondente all'unità desiderata e i due punti finali opzionali. **_makepath_s** inserisce i due punti automaticamente nel percorso composito, se mancante. Se l' *unità* è **null** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella stringa del *percorso* composito.
 
 *dir*<br/>
@@ -101,7 +101,7 @@ Contiene il percorso delle directory, escluso il designatore di unità o il nome
 *fname*<br/>
 Contiene il nome del file di base senza alcuna estensione di nome file. Se *fname* è **null** o punta a una stringa vuota, nessun nome file viene inserito nella stringa del *percorso* composito.
 
-*ext*<br/>
+*EXT*<br/>
 Contiene l'estensione di nome file effettiva, con o senza un punto iniziale (.). **_makepath_s** inserisce il punto automaticamente se non viene visualizzato in *ext*. Se *ext* è **null** o punta a una stringa vuota, nessuna estensione viene inserita nella stringa del *percorso* composito.
 
 ## <a name="return-value"></a>Valore restituito
@@ -112,10 +112,10 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 
 |*path*|*sizeInWords* / *sizeInBytes*|INVIO|Contenuto del *percorso*|
 |------------|------------------------------------|------------|------------------------|
-|**NULL**|qualsiasi|**EINVAL**|non modificato|
-|qualsiasi|<= 0|**EINVAL**|non modificato|
+|**NULL**|any|**EINVAL**|non modificato|
+|any|<= 0|**EINVAL**|non modificato|
 
-Se si verifica una delle condizioni di errore sopra indicate, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e le funzioni restituiscono **EINVAL**. Il **valore null** è consentito per i parametri *Drive*, *fname*e *ext*. Per informazioni sul comportamento di questi parametri quando sono puntatori null o stringhe vuote, vedere la sezione Osservazioni.
+Se si verifica una delle condizioni di errore sopra indicate, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e le funzioni restituiscono **EINVAL**. Il **valore null** è consentito per i parametri *Drive*, *fname*e *ext*. Per informazioni sul comportamento quando questi parametri sono puntatori null o stringhe vuote, vedere la sezione Osservazioni.
 
 ## <a name="remarks"></a>Note
 
@@ -131,9 +131,9 @@ L'argomento *path* deve puntare a un buffer vuoto sufficientemente grande da man
 
 Se path è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). **Errno** è inoltre impostato su **EINVAL**. Sono consentiti valori **null** per tutti gli altri parametri.
 
-In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -142,7 +142,7 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 |**_makepath_s**|\<stdlib.h>|
 |**_wmakepath_s**|\<stdlib.h> or \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

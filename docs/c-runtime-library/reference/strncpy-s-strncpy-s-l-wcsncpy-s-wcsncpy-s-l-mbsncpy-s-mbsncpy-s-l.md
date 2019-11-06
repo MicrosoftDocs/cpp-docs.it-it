@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 196a3aac09db790da6b8137029383cca77c3d2ad
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947269"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626156"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -171,10 +171,10 @@ Zero se l'operazione riesce, **STRUNCATE** se si è verificato il troncamento, i
 
 |*strDest*|*numberOfElements*|*strSource*|Valore restituito|Contenuto di *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|qualsiasi|qualsiasi|**EINVAL**|non modificato|
-|qualsiasi|qualsiasi|**NULL**|**EINVAL**|*strDest* [0] impostato su 0|
-|qualsiasi|0|qualsiasi|**EINVAL**|non modificato|
-|Not **null**|troppo piccolo|qualsiasi|**ERANGE**|*strDest* [0] impostato su 0|
+|**NULL**|any|any|**EINVAL**|non modificato|
+|any|any|**NULL**|**EINVAL**|*strDest*[0] impostato su 0|
+|any|0|any|**EINVAL**|non modificato|
+|Not **null**|troppo piccolo|any|**ERANGE**|*strDest*[0] impostato su 0|
 
 ## <a name="remarks"></a>Note
 
@@ -182,7 +182,7 @@ Queste funzioni tentano di copiare i primi *d* caratteri di *strSource* in *strD
 
 Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *count* è **_TRUNCATE**, la maggior parte di *strSource* che rientrerà in *strDest* viene copiata lasciando comunque lo spazio per la terminazione null, che viene sempre accodato.
 
-Ad esempio,
+Di seguito è riportato un esempio:
 
 ```C
 char dst[5];
@@ -208,9 +208,9 @@ Se *strDest* o *strSource* è **null**o *NumberOfElements* è 0, viene richiamat
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -230,7 +230,7 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 |**wcsncpy_s**, **_wcsncpy_s_l**|\<string.h> o \<wchar.h>|
 |**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

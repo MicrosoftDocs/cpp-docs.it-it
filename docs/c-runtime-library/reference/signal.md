@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948089"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625849"
 ---
 # <a name="signal"></a>signal
 
@@ -115,7 +115,7 @@ Le impostazioni del segnale non vengono mantenute nei processi generati creati d
 |-------------|---------------------|
 |**signal**|\<signal.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -127,7 +127,6 @@ Nell'esempio seguente viene illustrato come utilizzare **Signal** per aggiungere
 // Use signal to attach a signal handler to the abort routine
 #include <stdlib.h>
 #include <signal.h>
-#include <tchar.h>
 
 void SignalHandler(int signal)
 {
@@ -149,9 +148,16 @@ int main()
 }
 ```
 
+L'output dipende dalla versione del runtime usata, dal fatto che l'app sia una console o un'app di Windows e le impostazioni del registro di sistema di Windows. Per un'app console, potrebbe essere inviato a stderr un messaggio simile al seguente:
+
 ```Output
-This application has requested the Runtime to terminate it in an unusual way.
-Please contact the application's support team for more information.
+Debug Error!
+
+Program: c:\Projects\crt_signal\Debug\crt_signal.exe
+
+R6010
+
+- abort() has been called
 ```
 
 ## <a name="see-also"></a>Vedere anche
@@ -161,4 +167,4 @@ Please contact the application's support team for more information.
 [Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_fpreset](fpreset.md)<br/>
-[Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md) (Funzioni _spawn, _wspawn)<br/>

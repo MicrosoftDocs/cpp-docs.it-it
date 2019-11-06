@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4218
 ms.assetid: d6c3cd90-4518-49e9-ae86-4ba9e2761d98
-ms.openlocfilehash: 36d5de3b1270b41edfc391df960a556aca207709
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1db3eabc3b614019676dc4494e83104c62fe579
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386473"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627312"
 ---
 # <a name="compiler-warning-level-1-c4218"></a>Avviso del compilatore (livello 1) C4218
 
 utilizzata estensione non standard: è necessario specificare almeno una classe di archiviazione o un tipo
 
-Con le estensioni Microsoft predefinito (/Ze), è possibile dichiarare una variabile senza specificare una classe di tipo o di archiviazione. Il tipo predefinito è `int`.
+Con le estensioni Microsoft predefinite (/Ze), è possibile dichiarare una variabile senza specificare un tipo o una classe di archiviazione. Il tipo predefinito è `int`.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // C4218.c
 // compile with: /W4
 i;  // C4218
@@ -31,4 +31,4 @@ int main()
 }
 ```
 
-Tali dichiarazioni sono valide in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Queste dichiarazioni non sono valide in compatibilità ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

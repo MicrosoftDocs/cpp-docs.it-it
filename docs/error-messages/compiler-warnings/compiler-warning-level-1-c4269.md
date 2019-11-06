@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4269
 ms.assetid: 96c97bbc-068a-4b65-8cd8-4ed5dca04c15
-ms.openlocfilehash: 9a7f42b2dd65644d3f2abec58236a0b93cc6f635
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84a0d4c541f67742d68c7f08e0dda52ccd350d04
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207233"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626705"
 ---
 # <a name="compiler-warning-level-1-c4269"></a>Avviso del compilatore (livello 1) C4269
 
-'identifier': dati automatici 'const' inizializzati con un costruttore predefinito generato dal compilatore producono risultati inaffidabili
+' Identifier ': i dati automatici ' const ' inizializzati con il costruttore predefinito generato dal compilatore producono risultati non affidabili
 
-Oggetto **const** istanza automatica di una classe non è semplice viene inizializzata con un costruttore predefinito generato dal compilatore.
+Un'istanza automatica **const** di una classe non semplice viene inizializzata con un costruttore predefinito generato dal compilatore.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // C4269.cpp
 // compile with: /c /LD /W1
 class X {
@@ -34,4 +34,4 @@ void g() {
 };
 ```
 
-Poiché questa istanza della classe viene generata sullo stack, il valore iniziale di `m_data` possono essere qualsiasi tipo. Inoltre, poiché si tratta un **const** dell'istanza, il valore di `m_data` non possono mai essere modificati.
+Poiché questa istanza della classe viene generata nello stack, il valore iniziale di `m_data` può essere qualsiasi elemento. Inoltre, poiché si tratta di un'istanza **const** , il valore di `m_data` non può mai essere modificato.

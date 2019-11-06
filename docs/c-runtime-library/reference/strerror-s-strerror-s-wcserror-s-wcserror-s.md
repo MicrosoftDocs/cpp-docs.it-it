@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958157"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625814"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -120,12 +120,12 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo.
 
 |*buffer*|*numberOfElements*|*strErrMsg*|Contenuto del *buffer*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|qualsiasi|qualsiasi|n/d|
-|qualsiasi|0|qualsiasi|non modificato|
+|**NULL**|any|any|N/D|
+|any|0|any|non modificato|
 
 ## <a name="remarks"></a>Note
 
-La funzione **strerror_s** esegue il mapping di *errnum* a una stringa di messaggio di errore, restituendo la stringa nel *buffer*. **_strerror_s** non accetta il numero di errore. Usa il valore corrente di **errno** per determinare il messaggio appropriato. Né **strerror_s** né **_strerror_s** stampano effettivamente il messaggio: A tale proposito, è necessario chiamare una funzione di output, ad esempio [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+La funzione **strerror_s** esegue il mapping di *errnum* a una stringa di messaggio di errore, restituendo la stringa nel *buffer*. **_strerror_s** non accetta il numero di errore. Usa il valore corrente di **errno** per determinare il messaggio appropriato. Né **strerror_s** né **_strerror_s** stampano effettivamente il messaggio. a tale proposito, è necessario chiamare una funzione di output, ad esempio [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -147,9 +147,9 @@ Queste funzioni convalidano i relativi parametri. Se il buffer è **null** o se 
 
 **_strerror_s**, **_wcserror_s**e **__wcserror_s** non fanno parte della definizione ANSI ma sono estensioni Microsoft. Non usarli per la portabilità desiderata; per la compatibilità ANSI, usare invece **strerror_s** .
 
-In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -164,7 +164,7 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 |**strerror_s**, **_strerror_s**|\<string.h>|
 |**_wcserror_s**, **__wcserror_s**|\<string.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

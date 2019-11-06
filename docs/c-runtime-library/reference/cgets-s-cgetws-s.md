@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2acefcf907ca9b908fa7f439b6e245a5e103d8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939270"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624773"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
@@ -91,9 +91,9 @@ Il valore restituito è zero se ha esito positivo; in caso contrario si verifica
 
 |*buffer*|*numberOfElements*|*pSizeRead*|INVIO|Contenuto del *buffer*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|qualsiasi|qualsiasi|**EINVAL**|n/d|
-|Not **null**|zero|qualsiasi|**EINVAL**|non modificato|
-|Not **null**|qualsiasi|**NULL**|**EINVAL**|stringa di lunghezza zero|
+|**NULL**|any|any|**EINVAL**|N/D|
+|Not **null**|zero|any|**EINVAL**|non modificato|
+|Not **null**|any|**NULL**|**EINVAL**|stringa di lunghezza zero|
 
 ## <a name="remarks"></a>Note
 
@@ -101,7 +101,9 @@ Il valore restituito è zero se ha esito positivo; in caso contrario si verifica
 
 Se si verifica un errore durante l'operazione o nella convalida dei parametri, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e **EINVAL** viene restituito.
 
-In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando quindi la necessità di specificare un argomento di dimensione, e possono sostituire automaticamente le funzioni precedenti, meno sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando quindi la necessità di specificare un argomento di dimensione, e possono sostituire automaticamente le funzioni precedenti, meno sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
+
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -116,7 +118,7 @@ In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; 
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
