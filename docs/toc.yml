@@ -111,6 +111,17 @@
           href: build/cmake-predefined-configuration-reference.md
     - name: 'vcpkg: gestione pacchetti per C++'
       href: build/vcpkg.md
+    - name: C++ Build Insights
+      expanded: false
+      items:
+        - name: Introduzione a C++ Build Insights
+          href: build-insights/get-started-with-cpp-build-insights.md
+        - name: Nozioni di base su Windows Performance Analyzer
+          href: build-insights/wpa-basics.md
+        - name: Informazioni di riferimento su vcperf.exe
+          href: build-insights/vcperf-reference.md
+        - name: Informazioni di riferimento sulle visualizzazioni di Windows Performance Analyzer
+          href: build-insights/wpa-views-reference.md
     - name: File di intestazione precompilati
       href: build/creating-precompiled-header-files.md
     - name: Build di versione C++
@@ -2811,20 +2822,38 @@
 - name: Convertire e aggiornare codice C++
   expanded: false
   items:
-    - name: Guida al porting e aggiornamento in Visual C++
+    - name: Guida a conversione e aggiornamento in Microsoft C++
       href: porting/visual-cpp-porting-and-upgrading-guide.md
+    - name: Aggiornare progetti da versioni precedenti
+      items:
+        - name: Aggiornare progetti da versioni precedenti
+          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+        - name: Panoramica dei potenziali problemi di aggiornamento
+          href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
+        - name: Aggiornare il codice a Universal CRT
+          href: porting/upgrade-your-code-to-the-universal-crt.md
+        - name: Aggiornare WINVER e _WIN32_WINNT
+          href: porting/modifying-winver-and-win32-winnt.md
+        - name: Correggere le dipendenze da elementi interni delle librerie
+          href: porting/fix-your-dependencies-on-library-internals.md
+        - name: Problemi relativi alla migrazione dei valori a virgola mobile
+          href: porting/floating-point-migration-issues.md
+        - name: Usare multitargeting nativo in Visual Studio per compilare progetti precedenti
+          href: porting/use-native-multi-targeting.md
+        - name: Funzionalità di C++ deprecate in Visual Studio 2019
+          href: porting/features-deprecated-in-visual-studio.md
+        - name: VCBuild a confronto con MSBuild
+          href: porting/build-system-changes.md
+        - name: Convertire librerie di terze parti
+          href: porting/porting-third-party-libraries.md
+        - name: Convertire applicazioni dati
+          href: data/data-access-programming-mfc-atl.md
     - name: Cronologia delle modifiche di Visual C++ dal 2003 al 2015
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: 'Visual C++: novità dalla versione 2003 alla 2015'
       href: porting/visual-cpp-what-s-new-2003-through-2015.md
-    - name: Compatibilità binaria C++ tra 2015 e 2017
+    - name: Compatibilità binaria C++ tra 2015 e 2019
       href: porting/binary-compat-2015-2017.md
-    - name: Panoramica dei potenziali problemi di aggiornamento (Visual C++)
-      href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
-    - name: Convertire librerie di terze parti
-      href: porting/porting-third-party-libraries.md
-    - name: Convertire applicazioni dati
-      href: data/data-access-programming-mfc-atl.md
     - name: 'Convertire e aggiornare: esempi e case study'
       items:
         - name: Esempi e case study
@@ -2835,27 +2864,9 @@
           href: porting/porting-guide-com-spy.md
         - name: 'Guida alla conversione: Spy++'
           href: porting/porting-guide-spy-increment.md
-    - name: Aggiornare progetti da versioni precedenti
-      items:
-        - name: Aggiornare progetti da versioni precedenti
-          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
-        - name: Aggiornare il codice a Universal CRT
-          href: porting/upgrade-your-code-to-the-universal-crt.md
-        - name: Modificare WINVER e _WIN32_WINNT
-          href: porting/modifying-winver-and-win32-winnt.md
-        - name: Correggere le dipendenze da elementi interni delle librerie
-          href: porting/fix-your-dependencies-on-library-internals.md
-        - name: Problemi relativi alla migrazione dei valori a virgola mobile
-          href: porting/floating-point-migration-issues.md
-        - name: Usare multitargeting nativo in Visual Studio per compilare progetti precedenti
-          href: porting/use-native-multi-targeting.md
-        - name: Funzionalità di Visual C++ deprecate in Visual Studio 2019
-          href: porting/features-deprecated-in-visual-studio.md
-        - name: Modifiche al sistema di compilazione
-          href: porting/build-system-changes.md
-    - name: Introduzione a Visual C++ per utenti UNIX
+    - name: Introduzione a Microsoft C++ per utenti UNIX
       href: porting/introduction-to-visual-cpp-for-unix-users.md
-    - name: Convertire da UNIX a Win32
+    - name: Esecuzione di programmi Linux in Windows
       href: porting/porting-from-unix-to-win32.md
     - name: Convertire nella piattaforma UWP (C++)
       items:
@@ -10410,7 +10421,7 @@
                           href: parallel/concrt/reference/source-block-class.md
                         - name: Classe source_link_manager
                           href: parallel/concrt/reference/source-link-manager-class.md
-                        - name: Classe static_partitioner
+                        - name: static_partitioner (classe)
                           href: parallel/concrt/reference/static-partitioner-class.md
                         - name: Classe structured_task_group
                           href: parallel/concrt/reference/structured-task-group-class.md
@@ -10422,7 +10433,7 @@
                           href: parallel/concrt/reference/task-canceled-class.md
                         - name: Classe task_completion_event
                           href: parallel/concrt/reference/task-completion-event-class.md
-                        - name: task_continuation_context (classe)
+                        - name: Classe task_continuation_context
                           href: parallel/concrt/reference/task-continuation-context-class.md
                         - name: Classe task_group
                           href: parallel/concrt/reference/task-group-class.md
