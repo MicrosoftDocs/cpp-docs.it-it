@@ -34,7 +34,7 @@ La tabella seguente elenca i tipi numerici incorporati. I tipi numerici vengono 
 |uint16|Intero senza segno a 16 bit.|unsigned short|Da 0 a 65.535|
 |int32|Intero con segno a 32 bit.|int|da -2.147.483.648 e 2.147.483.647|
 |uint32|Intero senza segno a 32 bit.|unsigned int|Da 0 a 4.294.967.295|
-|int64|Intero con segno a 64 bit.|long long - oppure - __int64|-9,223,372,036,854, 775,808 e 9.223.372.036.854.775.807|
+|int64|Intero con segno a 64 bit.|long long - oppure - __int64|-9,223,372,036,854, 775,808 e 9,223,372,036,854,775,807|
 |uint64|Intero senza segno a 64 bit.|unsigned long long - oppure - unsigned __int64|Da 0 a 18.446.744.073.709.551.615|
 |float32|Numero a virgola mobile IEEE 754 a 32 bit.|float|3.4E +/- 38 (7 cifre)|
 |float64|Numero a virgola mobile IEEE 754 a 64 bit.|double|1.7E +/- 308 (15 cifre)|
