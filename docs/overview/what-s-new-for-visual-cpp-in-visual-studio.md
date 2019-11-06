@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
-ms.translationtype: HT
+ms.openlocfilehash: 4b9f393f133fea41e1fbffa88abe225f9b05a9ec
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552350"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626439"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novità di C++ in Visual Studio
 
@@ -76,7 +76,7 @@ Miglioramento dell'analisi con `/Qspectre` per fornire assistenza per la mitigaz
 
 - È stata corretta una regressione delle prestazioni in `std::hash` introdotta durante l'implementazione di `std::hash<std::filesystem::path>`.
 
-- La libreria standard usa ora distruttori anziché blocchi catch in varie posizioni per ottenere la correttezza. Questa modifica comporta una migliore interazione del debugger: le eccezioni generate tramite la libreria standard nelle posizioni interessate verranno ora visualizzate come generate dal relativo sito di generazione originale, anziché dal sito di rigenerazione. Non tutti i blocchi catch della libreria standard sono stati eliminati. Il numero di blocchi catch dovrebbe essere ulteriormente ridotto nelle successive versioni di MSVC.
+- La libreria standard usa ora distruttori anziché blocchi catch in varie posizioni per ottenere la correttezza. Questa modifica comporta una migliore interazione del debugger: le eccezioni generate tramite la libreria standard nelle posizioni interessate vengono ora visualizzate come generate dal sito di generazione originale, anziché dalla rigenerazione. Non tutti i blocchi catch della libreria standard sono stati eliminati. Il numero di blocchi catch dovrebbe essere ulteriormente ridotto nelle successive versioni di MSVC.
 
 - Un codegen non ottimale in `std::bitset` causato da una generazione condizionale all'interno di una funzione noexcept è stato corretto eseguendo il factoring del percorso di generazione.
 
@@ -94,7 +94,7 @@ Miglioramento dell'analisi con `/Qspectre` per fornire assistenza per la mitigaz
 
 ### <a name="live-share-c-support"></a>Supporto di Live Share per C++
 
-[Live Share](/visualstudio/liveshare/) ora supporta C++, consentendo agli sviluppatori che usano Visual Studio o Visual Studio Code di collaborare in tempo reale. Per altre informazioni, vedere [Announcing Live Share for C++: Real-Time Sharing and Collaboration](https://devblogs.microsoft.com/cppblog/cppliveshare/) (Annuncio di Live Share per C++: condivisione e collaborazione in tempo reale)
+[Live Share](/visualstudio/liveshare/) ora supporta C++, consentendo agli sviluppatori che usano Visual Studio o Visual Studio Code di collaborare in tempo reale. Per ulteriori informazioni, vedere [annuncio Live Share per C++: condivisione e collaborazione in tempo reale](https://devblogs.microsoft.com/cppblog/cppliveshare/)
 
 ### <a name="intellicode-for-c"></a>IntelliCode per C++
 
@@ -134,7 +134,7 @@ Per altre informazioni, vedere [C++ Productivity Improvements in Visual Studio 2
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 versione 16.1
 
-Informazioni rapide rispetta ora la colorazione semantica dell'editor. Include anche un nuovo collegamento **Cerca online** che esegue la ricerca di documenti online per ottenere altre informazioni sul costrutto di codice al passaggio del mouse. Per il codice con sottolineatura rossa, il collegamento in Informazioni rapide cercherà l'errore online. In questo modo non sarà necessario digitare nuovamente il messaggio nel browser. Per altre informazioni, vedere [Quick Info Improvements in Visual Studio 2019: Colorization and Search Online](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/) (Miglioramenti in Informazioni rapide in Visual Studio 2019: colorazione e Cerca online).
+Informazioni rapide rispetta ora la colorazione semantica dell'editor. Include anche un nuovo collegamento **Cerca online** che esegue la ricerca di documenti online per ottenere altre informazioni sul costrutto di codice al passaggio del mouse. Per il codice con sottolineatura rossa, il collegamento in Informazioni rapide cercherà l'errore online. In questo modo non sarà necessario digitare nuovamente il messaggio nel browser. Per altre informazioni, vedere [miglioramenti delle informazioni rapide in Visual Studio 2019: colorazione e ricerca online](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/).
 
 ### <a name="intellicode-available-in-c-workload"></a>IntelliCode disponibile nel carico di lavoro C++
 
@@ -255,21 +255,21 @@ Il compilatore supporta il 75% circa delle nuove funzionalità di C++17, inclusi
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versione 15.7
 
-Il set di strumenti del compilatore MSVC in Visual Studio versione 15.7 è ora conforme allo standard C++. Per altre informazioni, vedere [Announcing: MSVC Conforms to the C++ Standard](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) (Annuncio: MSVC è conforme allo standard C++) e [Conformità al linguaggio C++ di Microsoft](../visual-cpp-language-conformance.md).
+Il set di strumenti del compilatore MSVC in Visual Studio versione 15.7 è ora conforme allo standard C++. Per ulteriori informazioni, vedere [annuncio: MSVC è conforme alla conformità C++ standard e al](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) [linguaggio C++ Microsoft](../visual-cpp-language-conformance.md).
 
 ### <a name="new-compiler-options"></a>Nuove opzioni del compilatore
 
 - [/permissive-](../build/reference/permissive-standards-conformance.md): consente di abilitare tutte le opzioni del compilatore relative alla conformità allo standard e di disabilitare la maggior parte delle estensioni del compilatore specifiche di Microsoft (ma non `__declspec(dllimport)`, ad esempio). Questa opzione è attiva per impostazione predefinita in Visual Studio 2017 versione 15.5.  La modalità di conformità **/permissive-** include il supporto della ricerca del nome in due fasi. Per altre informazioni, vedere [Miglioramenti della conformità di C++ in Visual Studio](cpp-conformance-improvements.md).
 
-- [/diagnostics](../build/reference/diagnostics-compiler-diagnostic-options.md): consente di abilitare la visualizzazione di numero di riga, numero di riga e colonna o numero di riga, colonna e cursore per la riga di codice per la quale è stato rilevato l'errore o l'avviso di diagnostica.
+- [/diagnostics](../build/reference/diagnostics-compiler-diagnostic-options.md): consente di abilitare la visualizzazione di numero di riga, numero di riga e colonna o numero di riga, colonna e cursore per la riga di codice per la quale è stato generato l'errore o l'avviso di diagnostica.
 
-- [/debug:fastlink](../build/reference/debug-generate-debug-info.md): consente di abilitare fasi di collegamento incrementali fino al 30% più veloci (rispetto a Visual Studio 2015) evitando di copiare tutte le informazioni di debug nel file PDB. Il file PDB punta invece alle informazioni di debug per i file di libreria e oggetto usati per creare il file eseguibile. Vedere [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://devblogs.microsoft.com/cppblog/faster-c-build-cycle-in-vs-15-with-debugfastlink/) (Ciclo di build di C++ più rapido in Visual Studio "15" con /Debug:fastlink) e [Recommendations to speed C++ builds in Visual Studio](https://devblogs.microsoft.com/cppblog/recommendations-to-speed-c-builds-in-visual-studio/) (Consigli per velocizzare le compilazioni di C++ in Visual Studio).
+- [/debug: FASTLINK](../build/reference/debug-generate-debug-info.md): Abilita fino al 30% di tempi di collegamento incrementali più veloci (rispetto a Visual Studio 2015) non copiando tutte le informazioni di debug nel file PDB. Il file PDB punta invece alle informazioni di debug per i file di libreria e oggetto usati per creare il file eseguibile. Vedere [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://devblogs.microsoft.com/cppblog/faster-c-build-cycle-in-vs-15-with-debugfastlink/) (Ciclo di build di C++ più rapido in Visual Studio "15" con /Debug:fastlink) e [Recommendations to speed C++ builds in Visual Studio](https://devblogs.microsoft.com/cppblog/recommendations-to-speed-c-builds-in-visual-studio/) (Consigli per velocizzare le compilazioni di C++ in Visual Studio).
 
 - Visual Studio 2017 consente l'uso di [/sdl](../build/reference/sdl-enable-additional-security-checks.md) con [/await](../build/reference/await-enable-coroutine-support.md). È stata rimossa la limitazione [/RTC](../build/reference/rtc-run-time-error-checks.md) con le coroutine.
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versione 15.3
 
-- [/std:c++14 e /std:c++latest](../build/reference/std-specify-language-standard-version.md): queste opzioni del compilatore controllano il consenso esplicito per versioni specifiche del linguaggio di programmazione ISO C++ in un progetto. La maggior parte delle nuove funzionalità standard in fase di progettazione è protetta dall'opzione **/std:c++latest**.
+- [/std: c++ 14 e/std: c + + Latest](../build/reference/std-specify-language-standard-version.md): queste opzioni del compilatore consentono di acconsentire esplicitamente a versioni specifiche C++ del linguaggio di programmazione ISO in un progetto. La maggior parte delle nuove funzionalità standard in fase di progettazione è protetta dall'opzione **/std:c++latest**.
 
 - [/std:c++17](../build/reference/std-specify-language-standard-version.md) abilita il set di funzionalità C++17 implementate dal compilatore. Questa opzione disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni del documento di lavoro, nonché degli aggiornamenti per i difetti dello standard C++ dopo C++17. Per abilitare queste funzionalità, usare **/std:c++latest**.
 
@@ -279,9 +279,9 @@ In questa versione sono stati introdotti numerosi miglioramenti per l'ottimizzaz
 
 - Miglioramento della generazione del codice per i cicli: supporto della vettorializzazione automatica della divisione di interi costanti, migliore identificazione dei modelli memset.
 - Maggiore sicurezza del codice: è stata migliorata l'emissione della diagnostica del compilatore per i sovraccarichi del buffer e [/guard:cf](../build/reference/guard-enable-control-flow-guard.md) protegge ora le istruzioni switch che generano tabelle di collegamento.
-- Controllo delle versioni: il valore della macro del preprocessore predefinita **\_MSC\_VER** ora viene aggiornato monotonicamente ad ogni aggiornamento del set di strumenti di Visual C++. Per altre informazioni, vedere il post relativo alla [versione del compilatore Visual C++](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/).
+- Controllo delle versioni: il valore della macro del preprocessore predefinita **\_MSC\_VER** ora viene monotonicamente aggiornato ad ogni aggiornamento del set di strumenti di Visual C++. Per altre informazioni, vedere il post relativo alla [versione del compilatore Visual C++](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/).
 - Nuovo layout del set di strumenti: il compilatore e gli strumenti di compilazione correlati hanno un nuovo percorso e una nuova struttura di directory nel computer di sviluppo. Il nuovo layout consente installazioni side-by-side di più versioni del compilatore. Per altre informazioni, vedere il post [Compiler Tools Layout in Visual Studio 2017](https://devblogs.microsoft.com/cppblog/compiler-tools-layout-in-visual-studio-15/) (Layout degli strumenti del compilatore in Visual Studio 2017).
-- Miglioramenti alla diagnostica: la finestra di output ora visualizza la colonna in cui si verifica un errore. Per altre informazioni, vedere il post [C++ compiler diagnostics improvements in VS "15" Preview 5](https://devblogs.microsoft.com/cppblog/c-compiler-diagnostics-improvements-in-vs-15-rc/) (Miglioramenti della diagnostica del compilatore C++ in VS "15" anteprima 5).
+- Miglioramenti alla diagnostica: nella finestra di output ora appare la colonna in cui si verifica un errore. Per altre informazioni, vedere il post [C++ compiler diagnostics improvements in VS "15" Preview 5](https://devblogs.microsoft.com/cppblog/c-compiler-diagnostics-improvements-in-vs-15-rc/) (Miglioramenti della diagnostica del compilatore C++ in VS "15" anteprima 5).
 - Quando si usano coroutine, la parola chiave sperimentale **yield** (disponibile con l'opzione **/await**) non è più disponibile. È necessario aggiornare il codice per l'uso di `co_yield`. Per altre informazioni, vedere [La parola chiave `yield` diventa `co_yield` in Visual Studio 2017](https://devblogs.microsoft.com/cppblog/yield-keyword-to-become-co_yield-in-vs-2017/).
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versione 15.3
@@ -360,11 +360,11 @@ Per l'elenco completo dei miglioramenti apportati alla libreria standard in Visu
 - Sono stati aggiunti \<optional\>, \<variant\>, `shared_ptr::weak_type` e \<cstdalign\>.
 - È stato abilitato C++ 14 `constexpr` in `min(initializer_list)`, `max(initializer_list)` e `minmax(initializer_list)` e `min_element()`, `max_element()` e `minmax_element()`.
 
-Per altre informazioni, vedere [Conformità al linguaggio di Visual C++](../visual-cpp-language-conformance.md).
+Per ulteriori informazioni, vedere [tabella C++ conformità del linguaggio Microsoft](../visual-cpp-language-conformance.md).
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versione 15.3
 
-- Sono state implementate varie funzionalità aggiuntive C++17. Per altre informazioni, vedere [Conformità al linguaggio di Visual C++](cpp-conformance-improvements.md#improvements_153).
+- Sono state implementate varie funzionalità aggiuntive C++17. Per ulteriori informazioni, vedere [tabella C++ conformità del linguaggio Microsoft](cpp-conformance-improvements.md#improvements_153).
 - Implementazione di P0602R0 "variant e optional devono propagare trivially_move e trivially_copy".
 - La libreria standard ora tollera ufficialmente la disabilitazione dell'opzione RTTI dinamica tramite l'opzione [/GR-](../build/reference/gr-enable-run-time-type-information.md). Sia `dynamic_pointer_cast()` che `rethrow_if_nested()` richiedono intrinsecamente `dynamic_cast`. La libreria standard, quindi, ora li contrassegna con `=delete` in **/GR-** .
 - Anche se l'opzione RTTI dinamica è stata disabilitata tramite **/GR-** , l'opzione "RTTI statica" (sotto forma di `typeid(SomeType)`) è ancora disponibile e costituisce la base di vari componenti della libreria standard. La libreria standard ora supporta la disabilitazione anche di questa funzionalità tramite **/D\_HAS\_STATIC\_RTTI=0**. Questo flag disabilita anche le funzioni membro `std::any`, `target()` e `target_type()` di `std::function` e la funzione membro Friend `get_deleter()` di `std::shared_ptr` e `std::weak_ptr`.
@@ -422,7 +422,7 @@ Per altre informazioni, vedere [Conformità al linguaggio di Visual C++](../visu
 - `constexpr char_traits`
 - Guide alla deduzione per la libreria standard
 
-Per altre informazioni, vedere [Conformità al linguaggio di Visual C++](../visual-cpp-language-conformance.md).
+Per ulteriori informazioni, vedere [tabella C++ conformità del linguaggio Microsoft](../visual-cpp-language-conformance.md).
 
 ### <a name="performance-and-throughput-fixes"></a>Correzioni per prestazioni e velocità effettiva
 
@@ -534,7 +534,7 @@ C++ supporta ora Ctrl+ clic **Vai a definizione**, semplificando lo spostamento 
 
 - È stata aggiunta la possibilità di filtrare per tipo gli elementi dell'elenco dei membri.
 
-  ![Filtro elenco membri](media/mlfiltering.png "Filtro elenco membri")
+  ![Filtro elenco membri](media/mlfiltering.png "Filtro dell'elenco dei membri")
 
 - È stata aggiunta una nuova funzionalità sperimentale IntelliSense predittiva che fornisce un elenco di risultati filtrato e compatibile con il contesto per l'elenco dei membri. Per altre informazioni, vedere [C++ IntelliSense Improvements - Predictive IntelliSense & Filtering](https://devblogs.microsoft.com/cppblog/c-intellisense-improvements-predictive-intellisense-filtering/) (Miglioramenti di IntelliSense per C++ - IntelliSense predittiva e filtri).
 - **Trova tutti i riferimenti** (Maiusc+F12) ora consente di spostarsi con facilità, anche nelle codebase complesse. Offre funzioni avanzate di raggruppamento, filtro, ordinamento, ricerca all'interno dei risultati e, per alcuni linguaggi, colorazione, che agevolano notevolmente la comprensione dei riferimenti. Per C++ la nuova interfaccia utente include informazioni che indicano se è in corso la lettura o la scrittura in una variabile.
@@ -570,7 +570,7 @@ Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la c
 
 - Supporto per configurazione aggiuntiva tramite un file CMakeSettings.json che si trova nella stessa cartella del file CMakeLists.txt.
 
-  ![Apri cartella Cmake](media/cmake-cpp.png "Apri cartella Cmake")
+  ![Apri cartella di CMake](media/cmake-cpp.png "Apri cartella di CMake")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versione 15.3
 
@@ -629,13 +629,13 @@ C++ viene fornito come componente facoltativo del carico di lavoro per lo svilup
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nuove opzioni per C++ nella piattaforma UWP (Universal Windows Platform)
 
-Ora sono disponibili nuove opzioni per la scrittura e la creazione di pacchetti di applicazioni C++ per la piattaforma UWP (Universal Windows Platform) e Windows Store: è possibile usare l'infrastruttura Desktop Bridge per creare un pacchetto dell'applicazione desktop esistente o un oggetto COM per la distribuzione tramite Windows Store o su altri canali esistenti tramite sideload. Nuove funzionalità in Windows 10 consentono di aggiungere funzionalità della piattaforma UWP all'applicazione desktop in vari modi. Per altre informazioni, vedere [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
+Sono ora disponibili nuove opzioni per la scrittura e la creazione di pacchetti di applicazioni C++ per la piattaforma UWP e Windows Store: è possibile usare l'infrastruttura Desktop Bridge per creare un pacchetto dell'applicazione desktop esistente o un oggetto COM per la distribuzione tramite Windows Store o su altri canali esistenti tramite sideload. Nuove funzionalità in Windows 10 consentono di aggiungere funzionalità della piattaforma UWP all'applicazione desktop in vari modi. Per altre informazioni, vedere [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versione 15.5
 
 È stato aggiunto un modello di **Progetto di creazione di pacchetti di applicazioni Windows** che semplifica notevolmente la creazione di pacchetti di applicazioni desktop con Desktop Bridge. È disponibile in **File > Nuovo > Progetto > Installati > Visual C++ > Piattaforma UWP**. Per altre informazioni, vedere [Creare un pacchetto dell'app con Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-Quando si scrive nuovo codice, ora è possibile usare C++/WinRT, una proiezione standard del linguaggio C++ per Windows Runtime implementata esclusivamente nei file di intestazione. Consente sia di creare che di consumare le API di Windows Runtime usando qualsiasi compilatore C++ conforme agli standard. C++/WinRT è progettato per offrire agli sviluppatori C++ un accesso di prima classe all'API Windows moderna. Per altre informazioni, vedere [C++/WinRT: Modern C++ for the Windows Runtime](https://moderncpp.com/) (C++ moderno per Windows Runtime).
+Quando si scrive nuovo codice, ora è possibile usare C++/WinRT, una proiezione standard del linguaggio C++ per Windows Runtime implementata esclusivamente nei file di intestazione. Consente sia di creare che di consumare le API di Windows Runtime usando qualsiasi compilatore C++ conforme agli standard. C++/WinRT è progettato per offrire agli sviluppatori C++ un accesso di prima classe all'API Windows moderna. Per ulteriori informazioni, vedere [ C++/WinRT: Modern C++ per la Windows Runtime](https://moderncpp.com/).
 
 A partire dal build 17025 di Windows SDK Insider Preview, C++/WinRT è incluso in Windows SDK. Per altre informazioni, vedere [C++/WinRT is now included the Windows SDK](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/) (C++/WinRT ora incluso in Windows SDK).
 
@@ -679,7 +679,7 @@ L'adattatore per Google Test e quello per Boost.Test sono ora disponibili come c
 - Aggiunto il supporto per il supporto delle librerie dinamiche Boost.Test.
 - Un modello di elemento Boost.Test è ora disponibile nell'IDE.
 
-Per altre informazioni, vedere [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://devblogs.microsoft.com/cppblog/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Unit test Boost.Test: supporto della libreria dinamica e nuovo modello di elemento).
+Per altre informazioni, vedere il blog [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://devblogs.microsoft.com/cppblog/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Testing unità Boost.Test: supporto per librerie dinamiche e nuovo modello di elemento).
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versione 15.7
 
@@ -689,11 +689,11 @@ Aggiunto il supporto di [CodeLens](/visualstudio/ide/find-code-changes-and-other
 
 Diagnostica della grafica di Visual Studio è un set di strumenti per la registrazione e l'analisi dei problemi di prestazioni e di rendering nelle app Direct3D. Le funzionalità di Diagnostica della grafica possono essere usate con app eseguite localmente in un computer Windows, in un emulatore di dispositivo Windows oppure in un computer o un dispositivo remoto.
 
-- **Input e output per vertex e geometry shader:** la possibilità di visualizzare input e output di vertex shader e geometry shader era una delle funzionalità più richieste ed è ora supportata negli strumenti. È sufficiente selezionare la fase VS o GS nella visualizzazione Fasi pipeline per avviare la verifica dell'input e dell'output nella tabella che segue.
+- **Input & output per shader Vertex e Geometry:** La possibilità di visualizzare l'input e l'output di vertex shader e geometry shader è stata una delle funzionalità più richieste ed è ora supportata negli strumenti. È sufficiente selezionare la fase VS o GS nella visualizzazione Fasi pipeline per avviare la verifica dell'input e dell'output nella tabella che segue.
 
   ![Input/output per shader](media/io-shaders.png)
 
-- **Ricerca e filtro nella tabella degli oggetti:** un modo rapido e semplice per trovare le risorse che si stanno cercando.
+- **Ricerca e filtro nella tabella degli oggetti:** un modo rapido e semplice per individuare le risorse che si stanno cercando.
 
   ![Cerca](media/search.png)
 
@@ -707,7 +707,7 @@ Diagnostica della grafica di Visual Studio è un set di strumenti per la registr
 
   Se il frame è stato acquisito con l'acquisizione dello stack di chiamate completo abilitata (**Visual Studio > Strumenti > Opzioni** in **Diagnostica della grafica**), il contesto di ogni evento di modifica può essere rapidamente dedotto e verificato all'interno del progetto di Visual Studio.
 
-- **Statistiche API:** consente di visualizzare un riepilogo dettagliato dell'uso dell'API nel frame. Può essere utile per individuare chiamate che si stanno effettuando senza saperlo o chiamate che si effettuano in quantità eccessiva. Questa finestra è disponibile da **Visualizza > Statistiche API** in Analizzatore grafica di Visual Studio.
+- **Statistiche API:** consente di visualizzare un riepilogo dettagliato dell'utilizzo dell'API nel frame. Può essere utile per individuare chiamate che si stanno effettuando senza saperlo o chiamate che si effettuano in quantità eccessiva. Questa finestra è disponibile da **Visualizza > Statistiche API** in Analizzatore grafica di Visual Studio.
 
   ![Statistiche API](media/api-stats.png)
 
@@ -719,11 +719,11 @@ Diagnostica della grafica di Visual Studio è un set di strumenti per la registr
 
   ![Convalida frame](media/frame-validation.png)
 
-- **Analisi dei frame per D3D12:** usare Analisi dei frame per analizzare le prestazioni delle chiamate di disegno con esperimenti di simulazione diretti. Passare alla scheda Analisi dei frame ed eseguire l'analisi per visualizzare il report. Per altre informazioni, guardare il video [GoingNative 25: Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) (GoingNative 25: Analisi dei frame di grafica di Visual Studio).
+- **Analisi dei frame per D3D12:** Usare l'analisi dei frame per analizzare le prestazioni delle chiamate di progetto con esperimenti di simulazione diretti. Passare alla scheda Analisi dei frame ed eseguire l'analisi per visualizzare il report. Per informazioni dettagliate, guardare il video [GoingNative 25](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) sull'analisi dei frame di grafica di Visual Studio.
 
   ![Analisi dei frame](media/frame-analysis.png)
 
-- **Miglioramenti dell'uso della GPU:** è possibile acquisire tracce aperte con il profiler Utilizzo GPU di Visual Studio dalla visualizzazione GPU o con lo strumento Windows Performance Analyzer (WPA) per eseguire analisi più dettagliate. Se Windows Performance Toolkit è installato, sono disponibili due collegamenti ipertestuali, uno per WPA e altro per la visualizzazione GPU, in basso a destra nella panoramica della sessione.
+- **Miglioramenti dell'utilizzo della GPU:** Le tracce aperte possono essere eseguite tramite il profiler utilizzo GPU di Visual Studio con la visualizzazione GPU o lo strumento Windows Performance Analyzer (WPA) per un'analisi più dettagliata. Se Windows Performance Toolkit è installato, sono disponibili due collegamenti ipertestuali, uno per WPA e altro per la visualizzazione GPU, in basso a destra nella panoramica della sessione.
 
   ![Utilizzo GPU](media/gpu-usage.png)
 

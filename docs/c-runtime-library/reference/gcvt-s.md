@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da36641f6a3ba8dc1da0894aedbfa390d2e796ae
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956116"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625039"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -68,10 +68,10 @@ Buffer per l'archiviazione del risultato della conversione.
 *sizeInBytes*<br/>
 Dimensioni del buffer.
 
-*value*<br/>
+*valore*<br/>
 Valore da convertire.
 
-*cifre*<br/>
+*digits*<br/>
 Numero di cifre significative archiviate.
 
 ## <a name="return-value"></a>Valore restituito
@@ -80,11 +80,11 @@ Zero in caso di esito positivo. Se si verifica un errore a causa di un parametro
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*sizeInBytes*|*value*|*cifre*|INVIO|Valore nel *buffer*|
+|*buffer*|*sizeInBytes*|*valore*|*digits*|INVIO|Valore nel *buffer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
-|Not **null** (punta alla memoria valida)|zero|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
-|Not **null** (punta alla memoria valida)|qualsiasi|qualsiasi|>= *sizeInBytes*|**EINVAL**|Non modificato.|
+|**NULL**|any|any|any|**EINVAL**|Non modificato.|
+|Not **null** (punta alla memoria valida)|zero|any|any|**EINVAL**|Non modificato.|
+|Not **null** (punta alla memoria valida)|any|any|>= *sizeInBytes*|**EINVAL**|Non modificato.|
 
 **Problemi di sicurezza**
 
@@ -94,9 +94,9 @@ Zero in caso di esito positivo. Se si verifica un errore a causa di un parametro
 
 La funzione **_gcvt_s** converte un *valore* a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte di segno) e archivia la stringa nel *buffer*. il *buffer* deve essere sufficientemente grande da contenere il valore convertito e un carattere null di terminazione, che viene aggiunto automaticamente. Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a virgola mobile. Se viene utilizzata una dimensione del buffer di *cifre* + 1, la funzione non sovrascriverà la fine del buffer, pertanto assicurarsi di specificare un buffer sufficiente per questa operazione. **_gcvt_s** tenta *di produrre cifre cifrate* in formato decimale. In caso contrario, *le cifre vengono generate* in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
 
-In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni di debug di questa funzione riempiono prima il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La versione di debug di questa funzione riempie prima di tutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -104,7 +104,7 @@ Le versioni di debug di questa funzione riempiono prima il buffer con 0xFD. Per 
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

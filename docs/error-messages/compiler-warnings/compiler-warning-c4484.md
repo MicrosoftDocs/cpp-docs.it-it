@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363531"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623623"
 ---
 # <a name="compiler-warning-c4484"></a>Avviso del compilatore C4484
 
-'funzione_override': corrisponde al metodo di classe di base di riferimento 'funzione_classe_base', ma non è contrassegnato 'virtual', 'new' o 'override'; verrà utilizzato 'new' (e non 'virtual')
+' override_function ': corrisponde al metodo della classe di riferimento di base ' base_class_function ', ma non è contrassegnato ' Virtual ',' New ' o ' override '; si presuppone ' New ' (e non ' Virtual ')
 
-Durante la compilazione con **/clr**, il compilatore non sostituirà in modo implicito una funzione di classe di base, ovvero la funzione verrà visualizzato un nuovo slot in vtable. Per risolvere, specificare in modo esplicito se una funzione è una sostituzione.
+Quando si compila con **/CLR**, il compilatore non esegue l'override implicito di una funzione della classe base, il che significa che la funzione otterrà un nuovo slot in vtable. Per risolvere il errore, specificare in modo esplicito se una funzione è un override.
 
 Per altre informazioni, vedere:
 
@@ -27,13 +27,13 @@ Per altre informazioni, vedere:
 
 - [new (nuovo slot in vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
-C4484 viene sempre generato come errore. Usare la [avviso](../../preprocessor/warning.md) pragma per sopprimere C4484.
+C4484 viene sempre emesso come un errore. Usare il pragma [warning](../../preprocessor/warning.md) per disattivare C4484.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4484.
+L'esempio seguente genera l'C4484.
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {

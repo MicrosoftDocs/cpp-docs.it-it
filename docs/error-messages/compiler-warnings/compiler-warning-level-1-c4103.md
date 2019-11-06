@@ -1,29 +1,29 @@
 ---
-title: Compilatore Warning (level 1) C4103
+title: Avviso del compilatore (livello 1) C4103
 ms.date: 11/04/2016
 f1_keywords:
 - C4103
 helpviewer_keywords:
 - C4103
 ms.assetid: 9021b514-375e-4d62-b261-ccb06f299e8e
-ms.openlocfilehash: 15d7403d461467e33b7e89957821a311179d33a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 456e7d393eb751e99c1969619ccfdcc649193c75
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300286"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627061"
 ---
-# <a name="compiler-warning-level-1-c4103"></a>Compilatore Warning (level 1) C4103
+# <a name="compiler-warning-level-1-c4103"></a>Avviso del compilatore (livello 1) C4103
 
-'filename': l'allineamento è cambiato dopo l'inclusione dell'intestazione, potrebbe essere causato dalla mancanza #pragma pack (POP)
+' filename ': l'allineamento è stato modificato dopo l'inclusione dell'intestazione, probabilmente a causa della mancata #pragma pack (pop)
 
-Compressione influisce sul layout delle classi, e in genere, se la compressione delle modifiche nei file di intestazione, possono verificarsi problemi.
+L'operazione di compressione influiscono sul layout delle classi e, in genere, in caso di compressione delle modifiche nei file di intestazione, possono verificarsi problemi.
 
-Usare #pragma [pack](../../preprocessor/pack.md)(pop) prima di chiudere il file di intestazione per risolvere il problema.
+Usare #pragma [Pack](../../preprocessor/pack.md)(pop) prima di uscire dal file di intestazione per risolvere l'avviso.
 
-L'esempio seguente genera l'errore C4103:
+L'esempio seguente genera l'C4103:
 
-```
+```cpp
 // C4103.h
 #pragma pack(push, 4)
 
@@ -35,7 +35,7 @@ L'esempio seguente genera l'errore C4103:
 
 E quindi,
 
-```
+```cpp
 // C4103.cpp
 // compile with: /LD /W1
 #include "c4103.h"   // C4103

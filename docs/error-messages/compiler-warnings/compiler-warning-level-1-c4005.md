@@ -1,39 +1,39 @@
 ---
-title: Compilatore Warning (level 1) C4005
+title: Avviso del compilatore (livello 1) C4005
 ms.date: 11/04/2016
 f1_keywords:
 - C4005
 helpviewer_keywords:
 - C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
-ms.openlocfilehash: 76aab2160bd5f7918771dcf63b7297a869da751e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71b23ec719198d15a99b4fcfd50db8b151e03226
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187339"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627361"
 ---
-# <a name="compiler-warning-level-1-c4005"></a>Compilatore Warning (level 1) C4005
+# <a name="compiler-warning-level-1-c4005"></a>Avviso del compilatore (livello 1) C4005
 
-'identifier': ridefinizione macro
+' Identifier ': ridefinizione della macro
 
-L'identificatore di macro è definito due volte. Il compilatore Usa la seconda definizione macro.
+L'identificatore della macro è definito due volte. Il compilatore usa la seconda definizione di macro.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
 
-1. Definizione di una macro nella riga di comando e nel codice con un `#define` direttiva.
+1. Definizione di una macro nella riga di comando e nel codice con una direttiva `#define`.
 
-1. Macro importate da file di inclusione.
+1. Macro importate dai file di inclusione.
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili
 
 1. Rimuovere una delle definizioni.
 
-1. Usa un' [#undef](../../preprocessor/hash-undef-directive-c-cpp.md) direttiva prima della definizione della seconda.
+1. Usare una direttiva [#undef](../../preprocessor/hash-undef-directive-c-cpp.md) prima della seconda definizione.
 
-L'esempio seguente genera l'errore C4005:
+L'esempio seguente genera l'C4005:
 
-```
+```cpp
 // C4005.cpp
 // compile with: /W1 /EHsc
 #include <iostream>

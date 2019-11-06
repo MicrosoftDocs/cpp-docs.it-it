@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 8fa7f02f8537f60b71ff21a476589cab9fcf595b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587932"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625078"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
@@ -68,7 +68,7 @@ int main()
 
 ## <a name="member_init_list"></a>Elenchi di inizializzatori di membri
 
-Un costruttore può facoltativamente avere un elenco di inizializzatori di membri che Inizializza i membri della classe prima dell'esecuzione del corpo del costruttore. Si noti che un elenco di inizializzatori di membro non corrisponde a un *elenco di inizializzatori* di tipo [std:: initializer_list \<T >](../standard-library/initializer-list-class.md).)
+Un costruttore può facoltativamente avere un elenco di inizializzatori di membri che Inizializza i membri della classe prima dell'esecuzione del corpo del costruttore. Si noti che un elenco di inizializzatori di membro non corrisponde a un *elenco di inizializzatori* di tipo [std:: initializer_list\<t >](../standard-library/initializer-list-class.md).)
 
 È preferibile usare un elenco di inizializzatori di membri rispetto all'assegnazione di valori nel corpo del costruttore, in quanto Inizializza direttamente il membro. Nell'esempio seguente viene illustrato l'elenco di inizializzatori di membro costituito da tutte le espressioni dell' **identificatore (argomento)** dopo i due punti:
 
@@ -78,7 +78,7 @@ Un costruttore può facoltativamente avere un elenco di inizializzatori di membr
     {}
 ```
 
-L'identificatore deve fare riferimento a un membro di classe; viene inizializzata con il valore dell'argomento. L'argomento può essere uno dei parametri del costruttore, una chiamata di funzione o un [\<T std:: initializer_list >](../standard-library/initializer-list-class.md).
+L'identificatore deve fare riferimento a un membro di classe; viene inizializzata con il valore dell'argomento. L'argomento può essere uno dei parametri del costruttore, una chiamata di funzione o un oggetto [std:: initializer_list\<t >](../standard-library/initializer-list-class.md).
 
 i membri **const** e i membri del tipo di riferimento devono essere inizializzati nell'elenco di inizializzatori di membri.
 
@@ -318,7 +318,7 @@ Un costruttore può essere dichiarato come [constExpr](constexpr-cpp.md) se
 
 ## <a name="init_list_constructors"></a>Costruttori dell'elenco di inizializzatori
 
-Se un costruttore accetta un [\<T std:: initializer_list \>](../standard-library/initializer-list-class.md) come parametro e tutti gli altri parametri hanno argomenti predefiniti, il costruttore verrà selezionato nella risoluzione dell'overload quando viene creata un'istanza della classe tramite Direct inizializzazione. È possibile usare initializer_list per inizializzare qualsiasi membro che può accettarlo. Si supponga, ad esempio, che la classe Box (mostrata in precedenza) disponga di un membro `std::vector<string>` `m_contents`. È possibile specificare un costruttore analogo al seguente:
+Se un costruttore accetta un oggetto [std:: initializer_list\<t\>](../standard-library/initializer-list-class.md) come parametro e tutti gli altri parametri hanno argomenti predefiniti, il costruttore verrà selezionato nella risoluzione dell'overload quando viene creata un'istanza della classe tramite Direct inizializzazione. È possibile usare initializer_list per inizializzare qualsiasi membro che può accettarlo. Si supponga, ad esempio, che la classe Box (mostrata in precedenza) disponga di un membro `std::vector<string>` `m_contents`. È possibile specificare un costruttore analogo al seguente:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)

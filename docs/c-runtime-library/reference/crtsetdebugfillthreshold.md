@@ -1,6 +1,7 @@
 ---
 title: _CrtSetDebugFillThreshold
-ms.date: 03/21/2018
+description: Utilizzare la funzione _CrtSetDebugFillThreshold per impostare la quantità massima di buffer in cui inserire le funzioni CRT protette.
+ms.date: 10/31/2019
 api_name:
 - _CrtSetDebugFillThreshold
 api_location:
@@ -26,14 +27,14 @@ helpviewer_keywords:
 - CrtSetDebugFillThreshold function
 - _CrtSetDebugFillThreshold function
 - buffer-filling behavior
-- 0xFD
+- 0xFE
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: fe7d998a44502709edde33d22c1b1e88cf5ecbee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3fdf6646603a59e8a7a2387600060ab3a3556b37
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942302"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624400"
 ---
 # <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
@@ -56,11 +57,17 @@ Valore soglia precedente.
 
 ## <a name="remarks"></a>Note
 
-Le versioni di debug di alcune funzioni CRT con sicurezza avanzata riempiono il buffer passato con un carattere speciale (0xFE). Ciò consente di individuare i casi in cui la dimensione errata è stata passata alla funzione. Sfortunatamente, questo riduce anche le prestazioni. Per migliorare le prestazioni, usare **_CrtSetDebugFillThreshold** per disabilitare il riempimento del buffer per i buffer più grandi della soglia *newThreshold* . Il valore 0 di *newThreshold* lo Disabilita per tutti i buffer.
+Le versioni di debug di alcune funzioni CRT con sicurezza avanzata riempiono il buffer passato con un carattere speciale (0xFE). Questo carattere di riempimento aiuta a individuare i casi in cui la dimensione non corretta è stata passata alla funzione. Sfortunatamente, questo riduce anche le prestazioni. Per migliorare le prestazioni, usare **_CrtSetDebugFillThreshold** per disabilitare il riempimento del buffer per i buffer più grandi della soglia *newThreshold* . Il valore 0 di *newThreshold* lo Disabilita per tutti i buffer.
 
 La soglia predefinita è **SIZE_T_MAX**.
 
 Segue un elenco delle funzioni interessate.
+
+- [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)
+
+- [_cgets_s, _cgetws_s](cgets-s-cgetws-s.md)
+
+- [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
 
 - [_ecvt_s](ecvt-s.md)
 
@@ -78,11 +85,15 @@ Segue un elenco delle funzioni interessate.
 
 - [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md)
 
+- [_mktemp_s, _wmktemp_s](makepath-s-wmakepath-s.md)
+
 - [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md)
 
 - [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md)
 
 - [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)
+
+- [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md)
 
 - [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md)
 
@@ -96,6 +107,8 @@ Segue un elenco delle funzioni interessate.
 
 - [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md)
 
+- [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md)
+
 - [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)
 
 ## <a name="requirements"></a>Requisiti
@@ -104,7 +117,7 @@ Segue un elenco delle funzioni interessate.
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-Questa funzione è specifica di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Questa funzione è specifica di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

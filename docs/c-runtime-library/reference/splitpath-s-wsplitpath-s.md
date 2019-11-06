@@ -34,12 +34,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958046"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625836"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -93,14 +93,14 @@ errno_t _wsplitpath_s(
 *path*<br/>
 Percorso completo.
 
-*drive*<br/>
+*unità*<br/>
 Lettera di unità, seguita da due punti ( **:** ). È possibile passare **null** per questo parametro se non è necessaria la lettera di unità.
 
 *driveNumberOfElements*<br/>
 Dimensioni del buffer dell' *unità* in caratteri a byte singolo o Wide. Se l' *unità* è **null**, questo valore deve essere 0.
 
 *dir*<br/>
-Percorso di directory, inclusa la barra finale. È possibile utilizzare le **/** barre (), le barre **\\** rovesciate () o entrambe. È possibile passare **null** per questo parametro se non è necessario il percorso della directory.
+Percorso di directory, inclusa la barra finale. È possibile usare barre ( **/** ), barre rovesciate ( **\\** ) o entrambe. È possibile passare **null** per questo parametro se non è necessario il percorso della directory.
 
 *dirNumberOfElements*<br/>
 Dimensioni del buffer *dir* in caratteri a byte singolo o Wide. Se *dir* è **null**, questo valore deve essere 0.
@@ -111,7 +111,7 @@ Nome di file di base (senza estensione). È possibile passare **null** per quest
 *nameNumberOfElements*<br/>
 Dimensioni del buffer *fname* in caratteri a byte singolo o Wide. Se *fname* è **null**, questo valore deve essere 0.
 
-*ext*<br/>
+*EXT*<br/>
 Estensione del nome file, incluso il punto principale ( **.** ). È possibile passare **null** per questo parametro se non è necessaria l'estensione del nome file.
 
 *extNumberOfElements*<br/>
@@ -155,16 +155,16 @@ La tabella seguente elenca i valori delle costanti manifeste.
 
 |Name|Value|
 |----------|-----------|
-|_MAX_DRIVE|3|
+|_MAX_DRIVE|3\.|
 |_MAX_DIR|256|
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
 Se il percorso completo non contiene un componente, ad esempio un nome di file, **_splitpath_s** assegna una stringa vuota al buffer corrispondente.
 
-In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -173,7 +173,7 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> or \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 0d409928de4bf66bcc6d6dda3008131f87e790c3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b296c641be68efac7410328a448a4ad2bd0fa88e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460165"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626821"
 ---
-# <a name="maxnone-class"></a>Classe max_none
+# <a name="max_none-class"></a>Classe max_none
 
 Descrive un oggetto [classe max](../standard-library/allocators-header.md) che limita un oggetto [freelist](../standard-library/freelist-class.md) a una lunghezza massima pari a zero.
 
@@ -42,7 +42,7 @@ class max_none
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[allocated](#allocated)|Incrementa il conteggio dei blocchi di memoria allocati.|
 |[deallocated](#deallocated)|Decrementa il conteggio dei blocchi di memoria allocati.|
@@ -66,13 +66,13 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*_Nx*|Valore di incremento.|
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro non esegue alcuna operazione. Viene chiamata dopo ogni chiamata eseguita da `cache_freelist::allocate` a Operator **New**. L'argomento *_Nx* è il numero di blocchi di memoria nel blocco allocato da operator **New**.
+Questa funzione membro non esegue alcuna operazione. Viene chiamata dopo ogni chiamata riuscita da `cache_freelist::allocate` a Operator **New**. L'argomento *_Nx* è il numero di blocchi di memoria nel blocco allocato da operator **New**.
 
 ## <a name="deallocated"></a>  max_none::deallocated
 
@@ -106,7 +106,7 @@ Questa funzione membro restituisce sempre **true**.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro viene chiamata da `cache_freelist::deallocate`. Se la chiamata restituisce **true**, `deallocate` inserisce il blocco di memoria nell'elenco di disponibilità; se restituisce false, `deallocate` chiama l'operatore **Delete** per deallocare il blocco.
+Questa funzione membro viene chiamata da `cache_freelist::deallocate`. Se la chiamata restituisce **true**, `deallocate` inserisce il blocco di memoria nell'elenco di disponibilità. Se restituisce **false**, `deallocate` chiama l'operatore **Delete** per deallocare il blocco.
 
 ## <a name="released"></a>  max_none::released
 

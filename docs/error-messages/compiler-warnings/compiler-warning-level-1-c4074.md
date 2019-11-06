@@ -1,27 +1,27 @@
 ---
-title: Compilatore Warning (level 1) C4074
+title: Avviso del compilatore (livello 1) C4074
 ms.date: 11/04/2016
 f1_keywords:
 - C4074
 helpviewer_keywords:
 - C4074
 ms.assetid: cd510e66-c338-4a86-a4d7-bfa1df9b16c3
-ms.openlocfilehash: d9b0259e95198396d8c34ca43781045248e22ad9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c84bbf436354ed672cedf13358837e298c7e4a5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374742"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626911"
 ---
-# <a name="compiler-warning-level-1-c4074"></a>Compilatore Warning (level 1) C4074
+# <a name="compiler-warning-level-1-c4074"></a>Avviso del compilatore (livello 1) C4074
 
 inizializzatori inseriti nell'area di inizializzazione riservata del compilatore
 
-L'area di inizializzazione del compilatore, che viene specificato da [init_seg #pragma](../../preprocessor/init-seg.md), è riservata da Microsoft. Il codice in questa area può essere eseguito prima dell'inizializzazione della libreria di runtime C.
+L'area di inizializzazione del compilatore, specificata da [#pragma init_seg](../../preprocessor/init-seg.md), è riservata da Microsoft. Il codice in quest'area può essere eseguito prima dell'inizializzazione della libreria di runtime del linguaggio C.
 
-L'esempio seguente genera l'errore C4074:
+L'esempio seguente genera l'C4074:
 
-```
+```cpp
 // C4074.cpp
 // compile with: /W1
 #pragma init_seg( compiler )   // C4074

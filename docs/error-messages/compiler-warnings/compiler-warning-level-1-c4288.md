@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-ms.openlocfilehash: d8769f5663ca0bde9048e52d4579012dfccab0a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81094bf019060b56337347f7d364ead7c78c8128
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207095"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626655"
 ---
 # <a name="compiler-warning-level-1-c4288"></a>Avviso del compilatore (livello 1) C4288
 
-utilizzata estensione non standard: 'var': variabile di controllo ciclo dichiarata nel ciclo for e viene usato all'esterno dell'ambito del ciclo for; è in conflitto con la dichiarazione in ambito esterno
+utilizzata estensione non standard:' var ': la variabile di controllo del ciclo dichiarata nel ciclo for viene utilizzata all'esterno dell'ambito del ciclo for. è in conflitto con la dichiarazione nell'ambito esterno
 
-Durante la compilazione con [/Ze](../../build/reference/za-ze-disable-language-extensions.md) e **/Zc:forscope-**, una variabile dichiarata in un **per** ciclo è stato usato dopo la [per](../../cpp/for-statement-cpp.md)-ambito del ciclo. Un'estensione Microsoft del linguaggio C++ consente questa variabile deve rimanere nell'ambito e C4288 viene indicato che non viene utilizzata la prima dichiarazione della variabile.
+Quando si esegue la compilazione con [/ze](../../build/reference/za-ze-disable-language-extensions.md) e **/Zc: forScope-** , una variabile dichiarata in un ciclo **for** è stata usata dopo l'ambito del ciclo [for](../../cpp/for-statement-cpp.md). Un'estensione Microsoft del C++ linguaggio consente a questa variabile di rimanere nell'ambito e C4288 ricorda che la prima dichiarazione della variabile non viene utilizzata.
 
-Visualizzare [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) per informazioni su come specificare l'estensione di Microsoft nel **per** cicli con /Ze.
+Vedere [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) per informazioni su come specificare l'estensione Microsoft nei cicli **for** con/ze.
 
-L'esempio seguente genera l'errore C4288:
+L'esempio seguente genera l'C4288:
 
-```
+```cpp
 // C4288.cpp
 // compile with: /W1 /c /Zc:forScope-
 int main() {

@@ -1,31 +1,31 @@
 ---
-title: Compilatore Warning (level 1) C4090
+title: Avviso del compilatore (livello 1) C4090
 ms.date: 11/04/2016
 f1_keywords:
 - C4090
 helpviewer_keywords:
 - C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-ms.openlocfilehash: b47d0bfbb6eab24fbe811d3e4f79b6bd86b3bb11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ed48e9bf7057c55ee4004ca1bb1eb18cd4be51
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406483"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626158"
 ---
-# <a name="compiler-warning-level-1-c4090"></a>Compilatore Warning (level 1) C4090
+# <a name="compiler-warning-level-1-c4090"></a>Avviso del compilatore (livello 1) C4090
 
-'operation': qualificatori 'modifier' diversa
+' Operation ': qualificatori ' modifier ' diversi
 
-Una variabile usata in un'operazione viene definita con un modificatore di tipo specificato che ne impedisce la modifica senza rilevamento dal compilatore. L'espressione viene compilato senza alcuna modifica.
+Una variabile usata in un'operazione viene definita con un modificatore specificato che ne impedisce la modifica senza rilevamento da parte del compilatore. L'espressione viene compilata senza modifiche.
 
-Questo avviso può essere causato quando un puntatore a un **const** oppure `volatile` elemento viene assegnato a un puntatore non è dichiarato come puntatore a **const** o `volatile`.
+Questo avviso può essere causato quando un puntatore a un elemento **const** o `volatile` viene assegnato a un puntatore non dichiarato come che punta a **const** o `volatile`.
 
-Questo avviso viene generato per i programmi C. In un C++ programma, il compilatore genera un errore: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
+Questo avviso viene emesso per i programmi C. In un C++ programma, il compilatore genera un errore: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
 
-L'esempio seguente genera l'errore C4090:
+L'esempio seguente genera l'C4090:
 
-```
+```c
 // C4090.c
 // compile with: /W1
 int *volatile *p;

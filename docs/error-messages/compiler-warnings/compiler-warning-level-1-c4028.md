@@ -1,31 +1,31 @@
 ---
-title: Compilatore Warning (level 1) C4028
+title: Avviso del compilatore (livello 1) C4028
 ms.date: 11/04/2016
 f1_keywords:
 - C4028
 helpviewer_keywords:
 - C4028
 ms.assetid: c3e8b70b-e870-416c-a285-bba5f71dbfc6
-ms.openlocfilehash: bfe54fc40b4d6927a1d75f529ec9b619f9b29226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19bfd2659ee9017d3a304dee2d647da091515876
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397367"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623830"
 ---
-# <a name="compiler-warning-level-1-c4028"></a>Compilatore Warning (level 1) C4028
+# <a name="compiler-warning-level-1-c4028"></a>Avviso del compilatore (livello 1) C4028
 
-parametro formale 'number' diverse dalla dichiarazione
+il parametro formale ' Number ' è diverso dalla dichiarazione
 
-Il tipo del parametro formale non concordano con il parametro corrispondente nella dichiarazione. Viene usato il tipo nella dichiarazione originale.
+Il tipo del parametro formale non accetta il parametro corrispondente nella dichiarazione. Viene utilizzato il tipo nella dichiarazione originale.
 
-Questo avviso è valido solo per codice sorgente C.
+Questo avviso è valido solo per il codice sorgente C.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4028.
+L'esempio seguente genera l'C4028.
 
-```
+```c
 // C4028.c
 // compile with: /W1 /Za
 void f(int , ...);

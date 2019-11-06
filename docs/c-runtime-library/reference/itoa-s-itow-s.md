@@ -79,14 +79,14 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 204abd65981371a970623879ec94ff77db6728b2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953549"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625072"
 ---
-# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
 Converte un intero in una stringa. Queste sono versioni di [_itoa, _itow funzioni](itoa-itow.md) con miglioramenti per la sicurezza, come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -135,7 +135,7 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>Parametri
 
-*value*<br/>
+*valore*<br/>
 Numero da convertire.
 
 *buffer*<br/>
@@ -153,12 +153,12 @@ Zero se con esito positivo; un codice di errore in caso di errore. Se si applica
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|value|buffer|size|radix|INVIO|
+|valore|buffer|size|radix|INVIO|
 |-----------|------------|----------------------|-----------|------------|
-|qualsiasi|**NULL**|qualsiasi|qualsiasi|**EINVAL**|
-|qualsiasi|qualsiasi|<=0|qualsiasi|**EINVAL**|
-|qualsiasi|qualsiasi|<= lunghezza della stringa di risultato richiesta|qualsiasi|**EINVAL**|
-|qualsiasi|qualsiasi|qualsiasi|*radice* < 2 o *radice* > 36|**EINVAL**|
+|any|**NULL**|any|any|**EINVAL**|
+|any|any|<=0|any|**EINVAL**|
+|any|any|<= lunghezza della stringa di risultato richiesta|any|**EINVAL**|
+|any|any|any|*radice* < 2 o *radice* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemi di sicurezza
 
@@ -168,9 +168,9 @@ Queste funzioni possono generare una violazione di accesso se il *buffer* non pu
 
 Ad eccezione dei parametri e del valore restituito, le famiglie di funzioni **_itoa_s** e **_itow_s** hanno lo stesso comportamento delle versioni **_itoa** e **_itow** meno sicure corrispondenti.
 
-In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 CRT include pratici macro per definire le dimensioni del buffer necessarie per convertire il valore più lungo possibile di ogni tipo Integer, inclusi il carattere di terminazione null e il carattere di segno, per diverse basi comuni. Per informazioni, vedere le [macro numero massimo di conversioni](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -191,7 +191,7 @@ CRT include pratici macro per definire le dimensioni del buffer necessarie per c
 |**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
 |**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> or \<wchar.h>|
 
-Queste funzioni sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Queste funzioni sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

@@ -1,13 +1,13 @@
 ---
 title: 'Guida al porting: Spy++'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630452"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627224"
 ---
 # <a name="porting-guide-spy"></a>Guida al porting: Spy++
 
@@ -15,7 +15,7 @@ Questo case study relativo al porting contiene informazioni generali sul funzion
 
 ## <a name="spy"></a>Spy++
 
-Spy++ è uno strumento di diagnostica GUI ampiamente usato per il desktop di Windows, che fornisce ogni tipo di informazione sugli elementi dell'interfaccia utente sul desktop di Windows. Spy++ mostra la completa gerarchia di finestre e fornisce l'accesso ai metadati su ogni finestra e controllo. Questa utile applicazione è fornita da molti anni con Visual Studio. È stata trovata una vecchia versione compilata per l'ultima volta in Visual C++ 6.0 ed è stata convertita per Visual Studio 2015. L'esperienza per Visual Studio 2017 dovrebbe essere quasi identica.
+Spy++ è uno strumento di diagnostica GUI ampiamente usato per il desktop di Windows, che fornisce ogni tipo di informazione sugli elementi dell'interfaccia utente sul desktop di Windows. Spy++ mostra la completa gerarchia di finestre e fornisce l'accesso ai metadati su ogni finestra e controllo. Questa utile applicazione è fornita da molti anni con Visual Studio. È stata trovata una vecchia versione compilata per l'ultima volta in Visual C++ 6.0 ed è stata convertita per Visual Studio 2015. L'esperienza di Visual Studio 2017 o Visual Studio 2019 dovrebbe essere quasi identica.
 
 Questo è considerato un tipico caso di porting di applicazioni desktop Windows che usano MFC e l'API Win32, in special modo in caso di progetti obsoleti che non sono stati aggiornati con ogni versione di Visual C++ fin da Visual C++ 6.0.
 
@@ -25,7 +25,7 @@ Il file di progetto, due vecchi file con estensione dsw di Visual C++ 6.0, è st
 
 Dopo l'aggiornamento dei due progetti, la soluzione era simile alla seguente:
 
-![Spy&#43;&#43; - Soluzione](../porting/media/spyxxsolution.PNG "Spy&#43;&#43; - Soluzione")
+![Soluzione Spy&#43; &#43;](../porting/media/spyxxsolution.PNG "Soluzione Spy&#43; &#43;")
 
 Sono disponibili due progetti: uno con un ingente numero di file C++, l'altro rappresentato da una DLL scritta in C.
 
@@ -292,7 +292,7 @@ Dopo la modifica è visibile il codice riportato di seguito:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Dal momento che sono presenti circa dieci occorrenze di questa funzione, tutte in classi diverse derivate da CWnd, è utile usare **Vai a definizione** (tastiera: **F12**) e **Vai a dichiarazione** (tastiera: **CTRL**+**F12**) quando il cursore è sulla funzione nell'editor per individuarle e spostarsi su di esse dalla finestra dello strumento **Trova simbolo**. **Vai a definizione** è in genere l'opzione più utile. **Vai a dichiarazione** trova le dichiarazioni diverse dalla dichiarazione di classe di definizione, ad esempio le dichiarazioni di classe friend o i riferimenti in avanti.
+Dal momento che esistono circa dieci occorrenze di questa funzione in diverse classi derivate da CWnd, è opportuno usare **Vai a definizione** (tastiera: **F12**) e **Vai a dichiarazione** (tastiera: **Ctrl**+**CtrlF12**) quando il cursore si trova nella funzione nell'editor per trovare le occorrenze e passare ad esse dalla finestra degli strumenti **Trova simbolo**. **Vai a definizione** è in genere l'opzione più utile. **Vai a dichiarazione** trova le dichiarazioni diverse dalla dichiarazione di classe di definizione, ad esempio le dichiarazioni di classe friend o i riferimenti in avanti.
 
 ##  <a name="mfc_changes"></a> Passaggio 9. Modifiche MFC
 
@@ -466,7 +466,7 @@ class CTreeListBox : public CListBox
   BOOL m_bStdMouse : 1;
 ```
 
-Questo codice è stato scritto prima che il tipo bool predefinito fosse supportato in Visual C++. In tale codice, BOOL era un **typedef** per **int**. Il tipo **int** è un tipo **signed** e la rappresentazione di bit di un tipo **signed int** consiste nell'usare il primo bit come bit di segno, in modo che un campo di bit di tipo int possa essere interpretato come 0 o -1, in modo probabilmente diverso da quanto previsto.
+Questo codice è stato scritto prima che il tipo bool predefinito fosse supportato in Visual C++. In tale codice, BOOL era un **typedef** per **int**. Il tipo **int** è un tipo con **segno** e la rappresentazione di bit di un valore **signed int** prevede l'uso del primo bit come bit di segno, quindi un bit di tipo int può essere interpretato come 0 o-1, probabilmente non come previsto.
 
 Con una semplice osservazione del codice non si direbbe che questi siano campi di bit. Forse l'intento era di mantenere le dimensioni dell'oggetto ridotte, oppure in qualche punto è stato usato il layout binario dell'oggetto? I campi di bit sono stati modificati in membri BOOL ordinari, perché non vi era alcun motivo di usare un campo di bit. L'uso dei campi di bit per mantenere ridotte le dimensioni di un oggetto non sempre funziona: dipende dalla modalità di layout del tipo da parte del compilatore.
 
@@ -542,7 +542,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-La macro \_T fa sì che il valore letterale stringa venga compilato come stringa **char** o stringa **wchar_t**, a seconda dell'intestazione di MBCS o UNICODE. Per sostituire tutte le stringhe con \_T in Visual Studio, aprire prima di tutto la casella **Sostituzione veloce** (tastiera: **CTRL**+**F**) o **Sostituisci nei file** (tastiera: **CTRL**+**MAIUSC**+**H**)e quindi selezionare la casella di controllo **Usa espressioni regolari**. Immettere `((\".*?\")|('.+?'))` come testo di ricerca e `_T($1)` come testo di sostituzione. Se la macro \_T è già presente in alcune stringhe, questa procedura l'aggiungerà di nuovo e potrebbe anche trovare alcuni casi in cui \_T non è disponibile, ad esempio quando si usa `#include`; di conseguenza, è preferibile usare **Sostituisci successivo** anziché **Sostituisci tutto**.
+La macro \_T fa sì che il valore letterale stringa venga compilato come stringa **char** o stringa **wchar_t**, a seconda dell'intestazione di MBCS o UNICODE. Per sostituire tutte le stringhe con \_T in Visual Studio, aprire prima **Sostituzione veloce** (tastiera: **Ctrl**+**F**) oppure **Sostituisci nei file** (tastiera: **Ctrl**+**Maiusc**+**H**), quindi scegliere la casella di controllo **Utilizza espressioni regolari**. Immettere `((\".*?\")|('.+?'))` come testo di ricerca e `_T($1)` come testo di sostituzione. Se la macro \_T è già presente in alcune stringhe, questa procedura l'aggiungerà di nuovo e potrebbe anche trovare alcuni casi in cui \_T non è disponibile, ad esempio quando si usa `#include`; di conseguenza, è preferibile usare **Sostituisci successivo** anziché **Sostituisci tutto**.
 
 Questa funzione particolare, [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw), viene effettivamente definita nelle intestazioni di Windows e la relativa documentazione consiglia di non usarla, a causa del possibile sovraccarico del buffer. Non è specificata una dimensione per il buffer `szTmp`, quindi non esiste alcun modo per la funzione di verificare che il buffer possa contenere tutti i dati da scrivere. Vedere la sezione successiva sul porting alle funzioni CRT sicure, in cui è possibile risolvere altri problemi simili. Alla fine è stata sostituita da [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 

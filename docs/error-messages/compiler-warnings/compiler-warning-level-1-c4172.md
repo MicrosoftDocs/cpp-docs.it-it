@@ -1,29 +1,29 @@
 ---
-title: Compilatore Warning (level 1) C4172
+title: Avviso del compilatore (livello 1) C4172
 ms.date: 11/04/2016
 f1_keywords:
 - C4172
 helpviewer_keywords:
 - C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-ms.openlocfilehash: caa71da9182c1da1d17d87d901084d0ee9badf73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d53972dbcb2e3ab6a95b0b874cc6bb98cd66840
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391790"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624818"
 ---
-# <a name="compiler-warning-level-1-c4172"></a>Compilatore Warning (level 1) C4172
+# <a name="compiler-warning-level-1-c4172"></a>Avviso del compilatore (livello 1) C4172
 
-restituzione di indirizzo della variabile locale o temporanei
+restituzione dell'indirizzo della variabile locale o temporanea
 
-Una funzione restituisce l'indirizzo di un oggetto temporaneo o variabile locale. Le variabili locali e gli oggetti temporanei vengono eliminati definitivamente quando una funzione viene restituito, in modo che l'indirizzo restituito non è valido.
+Una funzione restituisce l'indirizzo di una variabile locale o di un oggetto temporaneo. Le variabili locali e gli oggetti temporanei vengono eliminati quando una funzione restituisce, quindi l'indirizzo restituito non è valido.
 
-Riprogettare la funzione in modo che non viene restituito l'indirizzo di un oggetto locale.
+Riprogettare la funzione in modo che non restituisca l'indirizzo di un oggetto locale.
 
-L'esempio seguente genera l'errore C4172:
+L'esempio seguente genera l'C4172:
 
-```
+```cpp
 // C4172.cpp
 // compile with: /W1 /LD
 float f = 10;

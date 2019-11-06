@@ -2,12 +2,12 @@
 title: Aggiornare il codice a Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0554ff713b499f99e7e7508faf687c1635e6d912
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448991"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627181"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Aggiornare il codice a Universal CRT
 
@@ -35,7 +35,7 @@ Quando si aggiornano i progetti Visual Studio C++, se è stata impostata la prop
 
 Poiché la libreria UCRT ora è un componente del sistema operativo Microsoft Windows, è inclusa come parte del sistema operativo in Windows 10 ed è disponibile in Windows Update per i sistemi operativi precedenti, da Windows Vista a Windows 8.1. Una versione ridistribuibile è disponibile per Windows XP. Come componente del sistema operativo, gli aggiornamenti e la manutenzione della libreria UCRT vengono gestiti da Windows Update indipendentemente dalle versioni del compilatore di Visual Studio e Microsoft C++. Poiché la libreria UCRT è un componente di Windows, per migliorare la sicurezza e semplificare gli aggiornamenti, riducendo la dimensione dell'immagine, è consigliabile usare una distribuzione centrale della libreria UCRT per l'applicazione.
 
-È possibile usare la libreria UCRT in qualsiasi versione di Windows supportata da Visual Studio 2015 o Visual Studio 2017. La libreria può essere ridistribuita usando un pacchetto vcredist per le versioni supportate di Windows diverse da Windows 10. I pacchetti vcredist includono i componenti UCRT e li installano automaticamente nei sistemi operativi Windows su cui non sono installati per impostazione predefinita. Per altre informazioni, vedere [Ridistribuzione di file Visual C++](../windows/redistributing-visual-cpp-files.md).
+È possibile usare la libreria UCRT in qualsiasi versione di Windows supportata da Visual Studio 2015 o Visual Studio 2017. La libreria può essere ridistribuita usando un pacchetto vcredist per le versioni supportate di Windows diverse da Windows 10. I pacchetti vcredist includono i componenti UCRT e li installano automaticamente nei sistemi operativi Windows su cui non sono installati per impostazione predefinita. Per altre informazioni, vedere [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md).
 
 La distribuzione app-local della libreria UCRT è supportata, anche se non è consigliabile per motivi di prestazioni e di sicurezza. Le DLL per la distribuzione app-local e sono incluse come parte di Windows SDK, nella sottodirectory **redist**. Le DLL necessarie includono ucrtbase.dll e un set di DLL di **inoltro APISet** denominato api-ms-win-_subset_.dll. Il set di DLL necessarie in ogni sistema operativo varia, quindi si consiglia di includere tutte le DLL quando si usa la distribuzione app-local. Per altri dettagli e suggerimenti relativi alla distribuzione app-local, vedere [Distribuzione in Visual C++](../windows/deployment-in-visual-cpp.md).
 
@@ -47,6 +47,6 @@ Molte funzioni sono state aggiunte o aggiornate nella libreria UCRT per migliora
 
 [Guida al porting e aggiornamento in Visual C++](visual-cpp-porting-and-upgrading-guide.md)<br/>
 [Panoramica dei potenziali problemi di aggiornamento (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aggiornamento di progetti da versioni precedenti di VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md)<br/>
 [Miglioramenti della conformità di C++ in Visual Studio](../overview/cpp-conformance-improvements.md)

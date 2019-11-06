@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942013"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624402"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -150,9 +150,9 @@ Zero in caso di esito positivo. Se si verifica un errore a causa di un parametro
 
 |*buffer*|*numberOfElements*|*sourceTime*|INVIO|Valore nel *buffer*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|qualsiasi|qualsiasi|**EINVAL**|Non modificato|
-|Not **null** (punta alla memoria valida)|0|qualsiasi|**EINVAL**|Non modificato|
-|Not **null**|0< size < 26|qualsiasi|**EINVAL**|Stringa vuota|
+|**NULL**|any|any|**EINVAL**|Non modificato|
+|Not **null** (punta alla memoria valida)|0|any|**EINVAL**|Non modificato|
+|Not **null**|0< size < 26|any|**EINVAL**|Stringa vuota|
 |Not **null**|>= 26|NULL|**EINVAL**|Stringa vuota|
 |Not **null**|>= 26|< 0|**EINVAL**|Stringa vuota|
 
@@ -170,7 +170,9 @@ La stringa di caratteri convertita viene anche modificata in base alle impostazi
 
 **ctime_s** è una funzione inline che restituisce **_ctime64_s** e **time_t** è equivalente a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come **time_t**precedente a 32 bit, è possibile definire **_USE_32BIT_TIME_T**. Questa operazione causerà la valutazione di **ctime_s** in **_ctime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
 
-In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
+
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -185,9 +187,9 @@ In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
-|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> or \<wchar.h>|
+|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

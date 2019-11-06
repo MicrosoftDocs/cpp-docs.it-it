@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4033
 ms.assetid: 189a9ec3-ff6d-49dd-b9b2-530b28bbb7c9
-ms.openlocfilehash: bef57d99ec9057f8b008deabda00b8a422a9e509
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 740be5fa45d0cd332cc7ac6b62a983ce00d05a8f
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151695"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623736"
 ---
 # <a name="compiler-warning-level-1-c4033"></a>Avviso del compilatore (livello 1) C4033
 
@@ -25,7 +25,7 @@ Questo errore è relativo al codice del linguaggio C.
 
 L'esempio seguente genera l'errore C4033:
 
-```
+```c
 // C4033.c
 // compile with: /W1 /LD
 int test_1(int x)   // C4033 expected

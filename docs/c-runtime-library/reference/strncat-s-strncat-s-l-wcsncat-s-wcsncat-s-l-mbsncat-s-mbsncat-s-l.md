@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 2a3c8d7019c271b2673e85e124d50139d34866c6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b76f20516cbf20530f20d3f5b6d1978cfeaaef4
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947399"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626178"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -173,9 +173,9 @@ Restituisce 0 in caso di esito positivo e un codice di errore in caso di errore.
 
 |*strDestination*|*numberOfElements*|*strSource*|Valore restituito|Contenuto di *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null** o senza terminazione|qualsiasi|qualsiasi|**EINVAL**|non modificato|
-|qualsiasi|qualsiasi|**NULL**|**EINVAL**|non modificato|
-|qualsiasi|0 o troppo piccolo|qualsiasi|**ERANGE**|non modificato|
+|**Null** o senza terminazione|any|any|**EINVAL**|non modificato|
+|any|any|**NULL**|**EINVAL**|non modificato|
+|any|0 o troppo piccolo|any|**ERANGE**|non modificato|
 
 ## <a name="remarks"></a>Note
 
@@ -183,7 +183,7 @@ Queste funzioni tentano di accodare i primi *d* caratteri di *strSource* alla fi
 
 Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *count* è [_TRUNCATE](../../c-runtime-library/truncate.md) , la maggior parte di *strSource* che verrà adattata viene aggiunta a *strDest* lasciando spazio per l'aggiunta di un null di terminazione.
 
-Ad esempio,
+Di seguito è riportato un esempio:
 
 ```C
 char dst[5];
@@ -199,7 +199,7 @@ Se è necessario il comportamento di troncamento, utilizzare **_TRUNCATE** o mod
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
 ```
 
-oppure
+Oppure
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
@@ -213,9 +213,9 @@ Se *strSource* o *strDest* è **null**o è *NumberOfElements* è zero, viene ric
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -234,7 +234,7 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 |**wcsncat_s**|\<string.h> o \<wchar.h>|
 |**_mbsncat_s**, **_mbsncat_s_l**|\<mbstring.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

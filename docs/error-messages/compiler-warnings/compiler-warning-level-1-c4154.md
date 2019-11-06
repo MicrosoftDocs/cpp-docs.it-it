@@ -1,27 +1,27 @@
 ---
-title: Compilatore Warning (level 1) C4154
+title: Avviso del compilatore (livello 1) C4154
 ms.date: 11/04/2016
 f1_keywords:
 - C4154
 helpviewer_keywords:
 - C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-ms.openlocfilehash: 5d2d6316838e8f3ef4acdf60494a0450a5efbdbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f0d56f6ae4b4ca92bc330d72176266e3196ea6a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324558"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625018"
 ---
-# <a name="compiler-warning-level-1-c4154"></a>Compilatore Warning (level 1) C4154
+# <a name="compiler-warning-level-1-c4154"></a>Avviso del compilatore (livello 1) C4154
 
-eliminazione di un'espressione di matrice. fornita conversione a puntatore
+eliminazione di un'espressione di matrice; conversione in puntatore fornito
 
-Non è possibile usare `delete` su una matrice, pertanto, il compilatore converte in un puntatore.
+Non è possibile usare `delete` su una matrice, in modo che il compilatore converta la matrice in un puntatore.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // C4154.cpp
 // compile with: /c /W1
 int main() {

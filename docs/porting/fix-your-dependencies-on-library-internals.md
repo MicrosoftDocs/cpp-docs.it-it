@@ -1,24 +1,24 @@
 ---
-title: Correggere le dipendenze da elementi interni delle librerie
+title: Correggere le dipendenze C++ dagli elementi interni della libreria
 ms.date: 05/24/2017
 helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: af395ea6f8c8e6a88bd2b003f0eee948bde8b6a9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449093"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627004"
 ---
-# <a name="fix-your-dependencies-on-library-internals"></a>Correggere le dipendenze da elementi interni delle librerie
+# <a name="fix-your-dependencies-on-c-library-internals"></a>Correggere le dipendenze C++ dagli elementi interni della libreria
 
 Microsoft ha pubblicato il codice sorgente per la libreria standard, la maggior parte della libreria di runtime C e altre librerie Microsoft in molte versioni di Visual Studio. Lo scopo è consentire una migliore comprensione del comportamento delle librerie e agevolare il debug del codice. Un effetto collaterale della pubblicazione del codice sorgente delle librerie è l'esposizione di alcuni valori, strutture di dati e funzioni, anche se non fanno parte dell'interfaccia della libreria. Si tratta di elementi che hanno in genere nomi che iniziano con due caratteri di sottolineatura o un carattere di sottolineatura seguito da una lettera maiuscola, ovvero i nomi riservati dallo standard C++ alle implementazioni. Questi valori, strutture e funzioni sono dettagli di implementazione che possono cambiare in seguito alle evoluzioni delle librerie nel tempo, quindi è caldamente consigliabile evitare di creare dipendenze da questi elementi. In caso contrario, si rischia di realizzare codice non portabile e possono verificarsi problemi quando si tenta di eseguire la migrazione del codice a nuove versioni delle librerie.
 
 Nella maggior parte dei casi, il documento relativo alle novità o alle modifiche di rilievo pubblicato per ogni versione di Visual Studio non menziona le modifiche apportate agli elementi interni delle librerie. Dopo tutto, si presuppone che questi dettagli di implementazione non abbiano un impatto sugli sviluppatori. A volte, tuttavia, la tentazione si usare codice disponibile all'interno della libreria è troppo grande. Questo argomento descrive le potenziali dipendenze dagli elementi interni di CRT o della libreria standard e come aggiornare il codice per rimuovere tali dipendenze, in modo da renderlo più portabile o eseguirne la migrazione a nuove versioni della libreria.
 
-## <a name="hashseq"></a>_Hash_seq
+## <a name="_hash_seq"></a>_Hash_seq
 
 La funzione hash interna `std::_Hash_seq(const unsigned char *, size_t)`, usata per implementare `std::hash` su alcuni tipi di stringa, è visibile nelle versioni più recenti della libreria standard. Questa funzione implementa un [hash FNV-1a]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) su una sequenza di caratteri.
 
@@ -76,6 +76,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aggiornamento di progetti da versioni precedenti di VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Panoramica dei potenziali problemi di aggiornamento (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Aggiornare il codice a Universal CRT](upgrade-your-code-to-the-universal-crt.md)

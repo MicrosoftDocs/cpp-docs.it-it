@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4087
 ms.assetid: 546e4d57-5c8e-422c-8ef1-92657336dad5
-ms.openlocfilehash: 84d24d95053b962c1776dc18576e4ed236b63469
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe2b4fadfb87726e81178a3530299dbb8620aec9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363869"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626834"
 ---
 # <a name="compiler-warning-level-1-c4087"></a>Avviso del compilatore (livello 1) C4087
 
@@ -23,7 +23,7 @@ Questo avviso è relativo al compilatore C.
 
 ## <a name="example"></a>Esempio
 
-```
+```c
 // C4087.c
 // compile with: /W1
 int f1( void ) {

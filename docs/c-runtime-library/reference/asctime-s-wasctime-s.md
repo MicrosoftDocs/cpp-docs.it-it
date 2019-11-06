@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943663"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624791"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -88,9 +88,9 @@ Zero in caso di esito positivo. In caso di esito negativo, viene richiamato il g
 
 |*buffer*|*numberOfElements*|*tmSource*|INVIO|Valore nel *buffer*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Any|Any|**EINVAL**|Non modificato|
-|Not **null** (punta alla memoria valida)|0|Any|**EINVAL**|Non modificato|
-|Not **null**|0< size < 26|Any|**EINVAL**|Stringa vuota|
+|**NULL**|Qualsiasi|Qualsiasi|**EINVAL**|Non modificato|
+|Not **null** (punta alla memoria valida)|0|Qualsiasi|**EINVAL**|Non modificato|
+|Not **null**|0< size < 26|Qualsiasi|**EINVAL**|Stringa vuota|
 |Not **null**|>= 26|**NULL**|**EINVAL**|Stringa vuota|
 |Not **null**|>= 26|Struttura temporale non valida o valori fuori intervallo per i componenti dell'ora|**EINVAL**|Stringa vuota|
 
@@ -115,9 +115,11 @@ La funzione **asctime** converte un'ora archiviata come una struttura in una str
 
 La stringa di caratteri convertita viene anche modificata in base alle impostazioni di fuso orario locale. Vedere le funzioni [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) e [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) per informazioni sulla configurazione dell'ora locale e la funzione [_tzset](tzset.md) per informazioni sulla definizione delle variabili di ambiente e globali del fuso orario.
 
-Il risultato della stringa prodotto da **asctime_s** contiene esattamente 26 caratteri e ha il `Wed Jan 02 02:03:55 1980\n\0`formato. Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. Il valore passato come secondo parametro deve avere una dimensione minima corrispondente. Se è minore, verrà restituito un codice di errore **EINVAL**.
+Il risultato della stringa prodotto da **asctime_s** contiene esattamente 26 caratteri e ha il formato `Wed Jan 02 02:03:55 1980\n\0`. Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. Il valore passato come secondo parametro deve avere una dimensione minima corrispondente. Se è minore, verrà restituito un codice di errore **EINVAL**.
 
 **_wasctime_s** è una versione a caratteri wide di **asctime_s**. **_wasctime_s** e **asctime_s** si comportano in modo identico.
+
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico
 
@@ -125,16 +127,16 @@ Il risultato della stringa prodotto da **asctime_s** contiene esattamente 26 car
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
-In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**asctime_s**|\<time.h>|
-|**_wasctime_s**|\<time.h> or \<wchar.h>|
+|**_wasctime_s**|\<time.h> o \<wchar.h>|
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 Se il puntatore del buffer non è **null** e il puntatore non punta a un buffer valido, la funzione sovrascriverà qualsiasi altra posizione. Questo può comportare anche una violazione di accesso.
 
