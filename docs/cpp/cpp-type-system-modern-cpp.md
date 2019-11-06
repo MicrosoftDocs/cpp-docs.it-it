@@ -66,11 +66,11 @@ Nella tabella seguente sono elencati i tipi fondamentali di uso più comune:
 |Digitare|Dimensioni|Commento|
 |----------|----------|-------------|
 |int|4 byte|Scelta predefinita per i valori integrali.|
-|doppio|8 byte|Scelta predefinita per i valori a virgola mobile.|
+|double|8 byte|Scelta predefinita per i valori a virgola mobile.|
 |bool|1 byte|Rappresenta i valori che possono essere true o false.|
 |char|1 byte|Utilizzare i caratteri ASCII negli oggetti std::string o nelle stringhe di tipo C precedenti che non dovranno mai essere convertiti in UNICODE.|
 |wchar_t|2 byte|Rappresenta valori a caratteri "wide" che è possibile codificare in formato Unicode (UTF-16 in Windows, per altri sistemi operativi potrebbe essere diverso). Si tratta del tipo di carattere utilizzato in stringhe di tipo `std::wstring`.|
-|&nbsp;char senza segno|1 byte|C++ non include alcun tipo `byte` predefinito.  Utilizzare il tipo unsigned char per rappresentare un valore byte.|
+|unsigned&nbsp;char|1 byte|C++ non include alcun tipo `byte` predefinito.  Utilizzare il tipo unsigned char per rappresentare un valore byte.|
 |unsigned int|4 byte|Scelta predefinita per i flag di bit.|
 |long long|8 byte|Rappresenta valori integer di grandi dimensioni.|
 
