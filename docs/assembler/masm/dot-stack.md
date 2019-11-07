@@ -1,25 +1,25 @@
 ---
 title: .STACK
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .STACK
 helpviewer_keywords:
 - .STACK directive
 ms.assetid: 70019463-5d4f-41b6-8464-023a8ac2466f
-ms.openlocfilehash: f97f10155894a86c9ddcd4cf8633712c458be386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78c089c771e8e5a8c82905578ec2377246a44a0e
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178631"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703529"
 ---
-# <a name="stack"></a>.STACK
+# <a name="stack-32-bit-masm"></a>. STACK (MASM a 32 bit)
 
-Se usato con [. MODELLO](../../assembler/masm/dot-model.md), definisce un intervallo di stack (con nome segmento STACK). L'opzione facoltativa `size` specifica il numero di byte per lo stack (impostazione predefinita a 1.024). Il `.STACK` direttiva deve essere chiuso automaticamente l'istruzione dello stack.
+Se usato con [. MODEL](../../assembler/masm/dot-model.md), definisce un segmento dello stack (con lo stack del nome del segmento). Il `size` facoltativo specifica il numero di byte per lo stack (valore predefinito 1.024). La direttiva `.STACK` chiude automaticamente l'istruzione dello stack. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
-> .STACK [[size]]
+> . STACK [[dimensioni]]
 
 ## <a name="see-also"></a>Vedere anche
 

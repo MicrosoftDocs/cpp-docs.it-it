@@ -1,25 +1,25 @@
 ---
 title: .CONTINUE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .CONTINUE
 helpviewer_keywords:
 - .CONTINUE directive
 ms.assetid: 60a6e46d-49e6-4d65-97d0-cbe8c47b3fab
-ms.openlocfilehash: ac6d76247499c715ede0be6f7e426435e72bdf3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a74fac7e00a801b0b58b8c49694da70f6f779fed
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204519"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703469"
 ---
-# <a name="continue"></a>.CONTINUE
+# <a name="continue-32-bit-masm"></a>. CONTINUA (MASM a 32 bit)
 
-Genera codice per passare alla parte superiore di un [. Sebbene](../../assembler/masm/dot-while.md) o [. Ripetere](../../assembler/masm/dot-repeat.md) bloccare se `condition` è true.
+Genera il codice per passare all'inizio di un oggetto [. WHILE](../../assembler/masm/dot-while.md) o [. ](../../assembler/masm/dot-repeat.md)Se `condition` è true, ripetere il blocco. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
-> . CONTINUARE [[. Condizione IF]]
+> . CONTINUA [[. Condizione IF]]
 
 ## <a name="see-also"></a>Vedere anche
 

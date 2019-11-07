@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 165c72b4f91073947d3914ae773e277cce192564
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 52de36217a5ab47eddcbe1abd6617860dcb910b8
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "70311732"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704182"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Differenze tra la programmazione con Windows Form e quella con MFC
 
@@ -22,7 +22,7 @@ Tuttavia, se si è abituati a MFC, è possibile usare la creazione di determinat
 
 Per ulteriori informazioni sulle applicazioni Windows Forms, vedere [Introduzione a Windows Forms](/dotnet/framework/winforms/windows-forms-overview).
 
-Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vedere [MFC and Windows Forms Integration](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vedere [MFC and Windows Forms Integration](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
 Le funzionalità seguenti per la visualizzazione MFC o il routing di documenti e comandi non hanno equivalenti in Windows Forms:
 
@@ -42,7 +42,7 @@ Le funzionalità seguenti per la visualizzazione MFC o il routing di documenti e
 
    MFC gestisce gli Stati Dirty per il documento. Pertanto, quando si chiude l'applicazione, si chiude l'ultima visualizzazione che contiene l'applicazione o si esce da Windows, MFC richiede di salvare il documento. Windows Forms non dispone di supporto equivalente.
 
-- Comandi:
+- Comandi
 
    MFC è il concetto di comandi. La barra dei menu, la barra degli strumenti e il menu di scelta rapida possono richiamare lo stesso comando, ad esempio taglia e copia. In Windows Forms, i comandi sono eventi strettamente associati da un particolare elemento dell'interfaccia utente, ad esempio una voce di menu. Pertanto, è necessario associare tutti gli eventi del comando in modo esplicito. È anche possibile gestire più eventi con un singolo gestore in Windows Forms. Per ulteriori informazioni, vedere [connessione di più eventi a un singolo gestore eventi in Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
 
