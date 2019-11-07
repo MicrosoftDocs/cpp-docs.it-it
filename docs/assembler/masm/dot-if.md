@@ -1,35 +1,35 @@
 ---
 title: .IF
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .IF
 helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-ms.openlocfilehash: cf9c594d843c937dd2191bee2a7cebadbc615c82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83c9ff588e2fe273e24e1d0b1c16517c5eee3365
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185267"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703780"
 ---
-# <a name="if"></a>.IF
+# <a name="if-32-bit-masm"></a>. IF (MASM a 32 bit)
 
-Genera il codice che consente di verificare `condition1` (ad esempio, AX > 7) e viene eseguita la *istruzioni* se tale condizione è true.
+Genera codice che verifica `condition1` (ad esempio, AX > 7) ed esegue le *istruzioni* se tale condizione è true. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
 > . Se condition1<br/>
 > istruzioni<br/>
-> [[. ELSEIF condizione2<br/>
+> [[. Condizione2 ELSEIF<br/>
 > istruzioni]]<br/>
-> [[.ELSE<br/>
+> [[. ALTRO<br/>
 > istruzioni]]<br/>
 > .ENDIF
 
 ## <a name="remarks"></a>Note
 
-Se un [. ELSE](../../assembler/masm/dot-else.md) indicato di seguito, le relative istruzioni viene eseguite se la condizione originale è false. Si noti che le condizioni vengono valutate in fase di esecuzione.
+Se un oggetto [. ALTRIMENTI](../../assembler/masm/dot-else.md) segue, le istruzioni vengono eseguite se la condizione originale è false. Si noti che le condizioni vengono valutate in fase di esecuzione.
 
 ## <a name="see-also"></a>Vedere anche
 

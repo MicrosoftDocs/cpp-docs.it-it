@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 96730cb3902674373e3e2429b7bc51cbbe257ff3
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 1351f0b2aa4ebc288469231a27c691237b52b1c1
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311888"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704130"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hosting di un controllo utente Windows Form come finestra di dialogo MFC
 
-MFC fornisce la classe modello [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) in modo che sia possibile ospitare un controllo utente Windows Forms<xref:System.Windows.Forms.UserControl>() in una finestra di dialogo MFC modale o non modale. `CWinFormsDialog`viene derivato dalla classe MFC [CDialog](../mfc/reference/cdialog-class.md), quindi la finestra di dialogo può essere avviata come modale o non modale.
+MFC fornisce la classe modello [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) in modo che sia possibile ospitare un controllo utente Windows Forms (<xref:System.Windows.Forms.UserControl>) in una finestra di dialogo MFC modale o non modale. `CWinFormsDialog` deriva dalla classe MFC [CDialog](../mfc/reference/cdialog-class.md), quindi la finestra di dialogo può essere avviata come modale o non modale.
 
-Il processo `CWinFormsDialog` utilizzato da per ospitare il controllo utente è simile a quello descritto in [hosting di un controllo utente Windows Form in una finestra di dialogo MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Tuttavia, `CWinFormsDialog` gestisce l'inizializzazione e l'hosting del controllo utente in modo che non debba essere programmato manualmente.
+Il processo che `CWinFormsDialog` utilizza per ospitare il controllo utente è simile a quello descritto in [hosting di un controllo utente Windows Form in una finestra di dialogo MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Tuttavia, `CWinFormsDialog` gestisce l'inizializzazione e l'hosting del controllo utente in modo che non debba essere programmato manualmente.
 
-Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vedere [MFC and Windows Forms Integration](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vedere [MFC and Windows Forms Integration](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
 ### <a name="to-create-the-mfc-host-application"></a>Per creare l'applicazione host MFC
 
@@ -39,13 +39,13 @@ Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vede
 
 1. Aggiungere un riferimento al controllo .NET.
 
-   In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nodo del progetto **MFC03** e scegliere **Aggiungi**, **riferimenti**. Nella **pagina delle proprietà**fare clic su **Aggiungi nuovo riferimento**, selezionare WindowsControlLibrary1 (nella scheda **progetti** ) e fare clic su **OK**. Viene aggiunto un riferimento sotto forma di opzione del compilatore [/fu](../build/reference/fu-name-forced-hash-using-file.md) in modo che il programma venga compilato. copia inoltre WindowsControlLibrary1. dll nella directory del `MFC03` progetto, in modo che il programma venga eseguito.
+   In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nodo del progetto **MFC03** e scegliere **Aggiungi**, **riferimenti**. Nella **pagina delle proprietà**fare clic su **Aggiungi nuovo riferimento**, selezionare WindowsControlLibrary1 (nella scheda **progetti** ) e fare clic su **OK**. Viene aggiunto un riferimento sotto forma di opzione del compilatore [/fu](../build/reference/fu-name-forced-hash-using-file.md) in modo che il programma venga compilato. copia inoltre WindowsControlLibrary1. dll nella directory del progetto `MFC03` in modo che il programma venga eseguito.
 
-1. Aggiungere `#include <afxwinforms.h>` a *PCH. h* (*stdafx. h* in Visual Studio 2017 e versioni precedenti) alla fine delle istruzioni esistenti `#include` .
+1. Aggiungere `#include <afxwinforms.h>` a *PCH. h* (*stdafx. h* in Visual Studio 2017 e versioni precedenti), alla fine delle istruzioni di `#include` esistenti.
 
-1. Aggiungere una nuova classe che sottoclasse `CDialog`.
+1. Aggiungere una nuova classe che sottoclassi `CDialog`.
 
-   Fare clic con il pulsante destro del mouse sul nome del progetto e aggiungere una classe MFC ( `CDialog`denominata CHostForWinForm) sottoclassi. Poiché la risorsa della finestra di dialogo non è necessaria, è possibile eliminare l'ID risorsa (selezionare **visualizzazione risorse**, espandere la cartella della finestra `IDD_HOSTFORWINFORM` di **dialogo** ed eliminare la risorsa.  Rimuovere quindi tutti i riferimenti all'ID nel codice.
+   Fare clic con il pulsante destro del mouse sul nome del progetto e aggiungere una classe MFC (denominata CHostForWinForm) che sottoclassi `CDialog`. Poiché la risorsa della finestra di dialogo non è necessaria, è possibile eliminare l'ID risorsa (selezionare **visualizzazione risorse**, espandere la cartella della **finestra di dialogo** ed eliminare `IDD_HOSTFORWINFORM` risorsa.  Rimuovere quindi tutti i riferimenti all'ID nel codice.
 
 1. Sostituire `CDialog` nei file CHostForWinForm. h e CHostForWinForm. cpp con `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 
@@ -137,4 +137,4 @@ Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vede
 ## <a name="see-also"></a>Vedere anche
 
 <xref:System.Windows.Forms.UserControl?displayProperty=fullName>
-[Uso di un controllo utente Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
+[utilizzando un controllo utente Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)

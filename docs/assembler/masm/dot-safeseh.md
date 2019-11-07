@@ -1,6 +1,6 @@
 ---
 title: .SAFESEH
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .SAFESEH
 helpviewer_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: 417aea13518621f775cafa176ff7d74f9704d511
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4577bd5d76949dfb777a359c80d91814f1c45fe2
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178293"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703955"
 ---
-# <a name="safeseh"></a>.SAFESEH
+# <a name="safeseh-32-bit-masm"></a>. SAFESEH (MASM a 32 bit)
 
-Registra una funzione come gestore di eccezioni strutturate.
+Registra una funzione come gestore di eccezioni strutturate. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Registra una funzione come gestore di eccezioni strutturate.
 
 ## <a name="remarks"></a>Note
 
-*Identificatore* deve essere l'ID per un controllo definito localmente [PROC](../../assembler/masm/proc.md) oppure [EXTRN](../../assembler/masm/extrn.md) durante il processo. Oggetto [etichetta](../../assembler/masm/label-masm.md) non è consentita. Il file con estensione SAFESEH (direttiva) richiede la [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe opzione della riga di comando.
+l' *identificatore* deve essere l'ID di una procedura [EXTRN](../../assembler/masm/extrn.md) [o proc](../../assembler/masm/proc.md) definita localmente. Un' [etichetta](../../assembler/masm/label-masm.md) non è consentita. Il. Per la direttiva SAFESEH è richiesta l'opzione della riga di comando [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
 
-Per altre informazioni sui gestori di eccezioni strutturate, vedere [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+Per ulteriori informazioni sui gestori di eccezioni strutturate, vedere [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-Ad esempio, per registrare un gestore di eccezioni sicuri, creare un nuovo file MASM (come indicato di seguito), assemblare con /safeseh e aggiungerlo degli oggetti collegati.
+Ad esempio, per registrare un gestore eccezioni sicuro, creare un nuovo file MASM (come indicato di seguito), assemblarlo con/SAFESEH e aggiungerlo agli oggetti collegati.
 
 ```asm
 .386

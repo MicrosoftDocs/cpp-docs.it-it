@@ -1,29 +1,29 @@
 ---
 title: INVOKE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - Invoke
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: efa8f710701e15845c3a6a22ba024c9cf1882457
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853bc9cd22d866357a4cd2d695beccc3efc20acf
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202619"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703968"
 ---
-# <a name="invoke"></a>INVOKE
+# <a name="invoke-32-bit-masm"></a>INVOKE (MASM a 32 bit)
 
-La routine viene chiamata in corrispondenza dell'indirizzo specificato da *espressione*, passando gli argomenti nello stack o nei registri in base alle convenzioni di chiamata standard del tipo di linguaggio.
+Chiama la routine in corrispondenza dell'indirizzo fornito dall' *espressione*, passando gli argomenti nello stack o nei registri in base alle convenzioni di chiamata standard del tipo di linguaggio. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
-> INVOKE *espressione* [[, *argomenti*]]
+> INVOKE ( *espressione* ) [[, *arguments*]]
 
 ## <a name="remarks"></a>Note
 
-Ogni argomento passato alla routine può essere un'espressione, una coppia di registro o un'espressione di indirizzo (l'espressione preceduta da `ADDR`).
+Ogni argomento passato alla stored procedure può essere un'espressione, una coppia di registri o un'espressione di indirizzo (un'espressione preceduta da `ADDR`).
 
 ## <a name="see-also"></a>Vedere anche
 
