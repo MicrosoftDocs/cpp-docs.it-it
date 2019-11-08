@@ -1531,7 +1531,7 @@
           href: ide/refactoring/implement-pure-virtuals.md
         - name: Spostare la definizione della funzione
           href: ide/refactoring/move-definition-location.md
-        - name: Rinomina
+        - name: Rinominare
           href: ide/refactoring/rename.md
     - name: Uso dell'ambiente di sviluppo integrato di Visual Studio per lo sviluppo di applicazioni desktop C++
       expanded: false
@@ -1565,7 +1565,7 @@
           href: ide/adding-a-member-variable-visual-cpp.md
         - name: Aggiungere un metodo
           href: ide/adding-a-method-visual-cpp.md
-        - name: Aggiungere una proprietà
+        - name: Aggiungi proprietà
           href: ide/adding-a-property-visual-cpp.md
         - name: Aggiungere un evento
           href: ide/adding-an-event-visual-cpp.md
@@ -1940,7 +1940,7 @@
               href: cppcx/value-classes-and-structs-c-cx.md
             - name: Classi parziali
               href: cppcx/partial-classes-c-cx.md
-            - name: Proprietà
+            - name: Properties
               href: cppcx/properties-c-cx.md
             - name: Raccolte
               href: cppcx/collections-c-cx.md
@@ -1954,7 +1954,7 @@
               href: cppcx/delegates-c-cx.md
             - name: Eccezioni
               href: cppcx/exceptions-c-cx.md
-            - name: Events
+            - name: Eventi
               href: cppcx/events-c-cx.md
             - name: Cast
               href: cppcx/casting-c-cx.md
@@ -2893,7 +2893,7 @@
     - name: Informazioni di riferimento sui linguaggi
       expanded: false
       items:
-        - name: Linguaggi
+        - name: Languages
           href: overview/languages-cpp.md
         - name: Riferimenti per il linguaggio C
           expanded: false
@@ -3457,10 +3457,10 @@
                   href: c-language/implementation-defined-behavior.md
                 - name: 'Conversione: Diagnostica'
                   href: c-language/translation-diagnostics.md
-                - name: Ambiente
+                - name: Environment
                   expanded: false
                   items:
-                    - name: Ambiente
+                    - name: Environment
                       href: c-language/environment.md
                     - name: Argomenti passati a main
                       href: c-language/arguments-to-main.md
@@ -3706,7 +3706,7 @@
                   href: cpp/overview-of-file-translation.md
                 - name: Set di caratteri
                   href: cpp/character-sets.md
-                - name: token
+                - name: Tokens
                   href: cpp/tokens-cpp.md
                 - name: Commenti
                   href: cpp/comments-cpp.md
@@ -3769,7 +3769,7 @@
                       href: cpp/decltype-cpp.md
                     - name: Attributi
                       href: cpp/attributes.md
-                - name: Ambito
+                - name: Scope
                   href: cpp/scope-visual-cpp.md
                 - name: File di intestazione
                   href: cpp/header-files-cpp.md
@@ -4113,7 +4113,7 @@
               items:
                 - name: Classi e struct
                   href: cpp/classes-and-structs-cpp.md
-                - name: classe
+                - name: class
                   href: cpp/class-cpp.md
                 - name: struct
                   href: cpp/struct-cpp.md
@@ -4126,7 +4126,7 @@
                       href: cpp/member-access-control-cpp.md
                     - name: friend
                       href: cpp/friend-cpp.md
-                    - name: private
+                    - name: Privato
                       href: cpp/private-cpp.md
                     - name: protected
                       href: cpp/protected-cpp.md
@@ -4372,10 +4372,10 @@
                       href: cpp/overload-resolution-of-function-template-calls.md
                 - name: Organizzazione del codice sorgente (modelli di C++)
                   href: cpp/source-code-organization-cpp-templates.md
-            - name: Gestione di eventi
+            - name: Gestione degli eventi
               expanded: false
               items:
-                - name: Gestione di eventi
+                - name: Gestione degli eventi
                   href: cpp/event-handling.md
                 - name: __event
                   href: cpp/event.md
@@ -4714,6 +4714,8 @@
               items:
                 - name: Preprocessore
                   href: preprocessor/preprocessor.md
+                - name: Panoramica del preprocessore sperimentale
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: Fasi di conversione
                   href: preprocessor/phases-of-translation.md
                 - name: Direttive per il preprocessore
@@ -5344,7 +5346,7 @@
                   href: assembler/masm/dot-data-q.md
                 - name: DB
                   href: assembler/masm/db.md
-                - name: DD
+                - name: GG
                   href: assembler/masm/dd.md
                 - name: DF
                   href: assembler/masm/df.md
@@ -5594,7 +5596,7 @@
                   href: assembler/masm/textequ.md
                 - name: .TFCOND
                   href: assembler/masm/dot-tfcond.md
-                - name: TITLE
+                - name: TITOLO
                   href: assembler/masm/title.md
                 - name: TYPEDEF (MASM)
                   href: assembler/masm/typedef-masm.md
@@ -6043,7 +6045,7 @@
               href: extensions/property-cpp-component-extensions.md
             - name: safe_cast
               href: extensions/safe-cast-cpp-component-extensions.md
-            - name: Stringa
+            - name: string
               href: extensions/string-cpp-component-extensions.md
             - name: sealed
               href: extensions/sealed-cpp-component-extensions.md
@@ -6163,7 +6165,7 @@
                   href: windows/attributes/coclass.md
                 - name: com_interface_entry
                   href: windows/attributes/com-interface-entry-cpp.md
-                - name: controllo
+                - name: control
                   href: windows/attributes/control.md
                 - name: cpp_quote
                   href: windows/attributes/cpp-quote.md
@@ -6221,7 +6223,7 @@
                   href: windows/attributes/helpstringdll.md
                 - name: hidden
                   href: windows/attributes/hidden.md
-                - name: ID
+                - name: id
                   href: windows/attributes/id.md
                 - name: idl_module
                   href: windows/attributes/idl-module.md
@@ -6235,7 +6237,7 @@
                   href: windows/attributes/implements-cpp.md
                 - name: implements_category
                   href: windows/attributes/implements-category.md
-                - name: importazione
+                - name: import
                   href: windows/attributes/import.md
                 - name: importidl
                   href: windows/attributes/importidl.md
@@ -6257,7 +6259,7 @@
                   href: windows/attributes/library-block.md
                 - name: licensed
                   href: windows/attributes/licensed.md
-                - name: locali
+                - name: local
                   href: windows/attributes/local-cpp.md
                 - name: max_is
                   href: windows/attributes/max-is.md
@@ -6279,9 +6281,9 @@
                   href: windows/attributes/odl.md
                 - name: oleautomation
                   href: windows/attributes/oleautomation.md
-                - name: facoltativi
+                - name: facoltativo
                   href: windows/attributes/optional-cpp.md
-                - name: out
+                - name: fo
                   href: windows/attributes/out-cpp.md
                 - name: pointer_default
                   href: windows/attributes/pointer-default.md
@@ -6321,9 +6323,9 @@
                   href: windows/attributes/satype.md
                 - name: size_is
                   href: windows/attributes/size-is.md
-                - name: origine
+                - name: source
                   href: windows/attributes/source-cpp.md
-                - name: string
+                - name: stringa
                   href: windows/attributes/string-cpp.md
                 - name: support_error_info
                   href: windows/attributes/support-error-info.md
@@ -7320,7 +7322,7 @@
                   href: c-runtime-library/reference/fread-nolock.md
                 - name: _fread_nolock_s2
                   href: c-runtime-library/reference/fread-nolock-s2.md
-                - name: free
+                - name: libero
                   href: c-runtime-library/reference/free.md
                 - name: _free_dbg
                   href: c-runtime-library/reference/free-dbg.md
@@ -7762,7 +7764,7 @@
                   href: c-runtime-library/reference/offsetof-macro.md
                 - name: '_onexit, _onexit_m'
                   href: c-runtime-library/reference/onexit-onexit-m.md
-                - name: apri
+                - name: apre
                   href: c-runtime-library/reference/open.md
                 - name: '_open, _wopen'
                   href: c-runtime-library/reference/open-wopen.md
@@ -8308,7 +8310,7 @@
                   href: c-runtime-library/reference/wctrans.md
                 - name: wctype
                   href: c-runtime-library/reference/wctype.md
-                - name: scrivere
+                - name: write
                   href: c-runtime-library/reference/posix-write.md
                 - name: _write
                   href: c-runtime-library/reference/write.md
@@ -10419,9 +10421,9 @@
                           href: parallel/concrt/reference/single-link-registry-class.md
                         - name: Classe source_block
                           href: parallel/concrt/reference/source-block-class.md
-                        - name: Classe source_link_manager
+                        - name: source_link_manager (classe)
                           href: parallel/concrt/reference/source-link-manager-class.md
-                        - name: static_partitioner (classe)
+                        - name: Classe static_partitioner
                           href: parallel/concrt/reference/static-partitioner-class.md
                         - name: Classe structured_task_group
                           href: parallel/concrt/reference/structured-task-group-class.md
