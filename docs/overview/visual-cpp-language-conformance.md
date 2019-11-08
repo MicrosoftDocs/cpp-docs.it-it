@@ -1,16 +1,16 @@
 ---
 title: Tabella di conformità al linguaggio C++ di Microsoft
-ms.date: 08/12/2019
+ms.date: 10/31/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: e3e86acb81120af1b663b56681ff0f8c41036b5a
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631638"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754069"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabella di conformità al linguaggio C++ di Microsoft
 
@@ -172,7 +172,7 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 |&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|No|
 |&nbsp;&nbsp;[P0475R1 Elisione copia garantita per una costruzione lineare a tratti](https://wg21.link/P0475R1)|No|
 |&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|No|
-|&nbsp;&nbsp;[P0482R6 char8_t: tipo per stringhe e caratteri UTF-8](https://wg21.link/P0482R6)|No|
+|&nbsp;&nbsp;[P0482R6 char8_t: tipo per caratteri e stringhe UTF-8](https://wg21.link/P0482R6)|No|
 |&nbsp;&nbsp;[P0487R1 Correzione di operator>>(basic_istream&, CharT*)](https://wg21.link/P0487R1)|No|
 |&nbsp;&nbsp;[P0528R3 Confronto e scambio atomico con bit di riempimento](https://wg21.link/P0528R3)|No|
 |&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|No|
@@ -233,7 +233,7 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 |&nbsp;&nbsp;[N4562 Nozioni fondamentali della libreria: \<optional>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017 15.0|
 |&nbsp;&nbsp;[N4562 Nozioni fondamentali della libreria: \<string_view>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#string.view)|VS 2017 15.0|
 |&nbsp;&nbsp;[N4562 Nozioni fondamentali della libreria: \<tuple> apply()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#tuple)|VS 2017 15.0|
-|&nbsp;&nbsp;[N4562 Nozioni fondamentali della libreria: algoritmo di Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Correzione dei tipi restituiti dal servizio di ricerca](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4562 Nozioni fondamentali della libreria: ricerca di Boyer-Moore()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Correzione dei tipi restituiti dal servizio di ricerca](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0003R5 Rimozione specifiche di eccezione dinamiche](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0004R1 Rimozione di alias iostream deprecati](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0004r1.html)|VS 2015.2 <sup>[rem](#note_rem)</sup>|
 |&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br/>&nbsp;&nbsp;[P0358R1 Correzioni per not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
@@ -346,7 +346,7 @@ L'opzione del compilatore [/Zc:noexceptTypes](../build/reference/zc-noexcepttype
 
 <a name="note_B"></a>__B__ Supporto nella modalità [/permissive-](../build/reference/permissive-standards-conformance.md) in Visual Studio 2017 versione 15.7. vedere [Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) (Nuovo supporto per la ricerca nome in due fasi in MSVC) per altre informazioni.
 
-<a name="note_C"></a>__C__ Il supporto del compilatore per le regole del preprocessore C99 è incompleto in Visual Studio 2017. Le macro variadic sono supportate, ma sono presenti molti bug nel comportamento del preprocessore. Il preprocessore è in fase di revisione. In via sperimentale, le modifiche saranno inserite presto nella modalità [/permissive-](../build/reference/permissive-standards-conformance.md).
+<a name="note_C"></a>__C__ Il supporto del compilatore per le regole del preprocessore C99 è incompleto in Visual Studio 2017. Il preprocessore viene revisionato e ha iniziato a spedire le modifiche in Visual Studio 2017 versione 15,8 con l'opzione del compilatore [/Experimental: Preprocessor](../build/reference/experimental-preprocessor.md) .
 
 <a name="note_D"></a>__D__ Supporto disponibile in [/std:c++14](../build/reference/std-specify-language-standard-version.md) con un messaggio di avviso che può essere rimosso, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
@@ -367,14 +367,14 @@ L'opzione del compilatore [/Zc:noexceptTypes](../build/reference/zc-noexcepttype
 <a name="note_rem"></a>__rem__ Funzionalità rimosse quando si specifica l'opzione del compilatore [/std:c++17](../build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](../build/reference/std-specify-language-standard-version.md)). Queste funzionalità possono essere riabilitate per facilitare la transizione a modalità di linguaggio più recenti mediante l'uso di queste macro: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS`e `_HAS_UNEXPECTED`.
 
 <a name="note_charconv"></a>__charconv__ `from_chars()` e `to_chars()` sono disponibili per gli interi. La sequenza temporale per `from_chars()` a virgola mobile e `to_chars()` a virgola mobile è la seguente:
-- VS 2017 15.7: `from_chars()` e `to_chars()` interi.
-- VS 2017 15.8: `from_chars()` a virgola mobile.
-- VS 2017 15.9: Overload `to_chars()` a virgola mobile per il decimale più breve.
-- VS 2019 16.0: Overload `to_chars()` a virgola mobile per l'esadecimale più breve e la precisione fissa.
-- VS 2019 16.2: Overload `to_chars()` a virgola mobile per precisione fissa e scientifica.
-- Non ancora implementato: Overload `to_chars()` a virgola mobile per la precisione generale. 
+- VS 2017 15,7: integer `from_chars()` e `to_chars()`.
+- VS 2017 15,8: `from_chars()`a virgola mobile.
+- VS 2017 15,9: overload a virgola mobile `to_chars()` per il numero decimale più breve.
+- VS 2019 16,0: overload a virgola mobile `to_chars()` per Hex più breve e Hex di precisione.
+- VS 2019 16,2: overload a virgola mobile `to_chars()` per precisione fissa e precisione scientifica.
+- Non ancora implementato: l'overload a virgola mobile `to_chars()` per la precisione generale. 
 
-<a name ="note_parallel"></a> __parallel__ La libreria degli algoritmi paralleli di C++17 è completa. Ciò non significa tuttavia che vengono parallelizzati sempre tutti gli algoritmi. Sono stati parallelizzati gli algoritmi più importanti e le firme dei criteri di esecuzione sono disponibili anche quando gli algoritmi non sono parallelizzati. L'intestazione interna centrale dell'implementazione, yvals_core.h, contiene le seguenti note sugli algoritmi paralleli: C++ consente un'implementazione per inserire algoritmi paralleli come chiamate agli algoritmi seriali.  Con questa implementazione è possibile eseguire la parallelizzazione di diverse chiamate di algoritmi comuni, ma non di tutti.
+<a name ="note_parallel"></a> __parallel__ La libreria degli algoritmi paralleli di C++17 è completa. Ciò non significa tuttavia che vengono parallelizzati sempre tutti gli algoritmi. Sono stati parallelizzati gli algoritmi più importanti e le firme dei criteri di esecuzione sono disponibili anche quando gli algoritmi non sono parallelizzati. L'intestazione interna centrale dell'implementazione, yvals_core. h, contiene le seguenti "note sugli algoritmi paralleli" C++ : consente a un'implementazione di implementare algoritmi paralleli come chiamate agli algoritmi seriali.  Con questa implementazione è possibile eseguire la parallelizzazione di diverse chiamate di algoritmi comuni, ma non di tutti.
 
 Vengono parallelizzati gli algoritmi seguenti:
 
