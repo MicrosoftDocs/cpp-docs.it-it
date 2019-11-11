@@ -116,16 +116,16 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 6983baacd9cc40d916f2e1e6213dde1f92e23ea3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: c77c09394bb8997168d8a6756da69e9545dad0a2
+ms.sourcegitcommit: 4a0a108aa6f042576a777feb6dcb310dc0bb9230
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689949"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842321"
 ---
 # <a name="basic_string-class"></a>Classe basic_string
 
-Le sequenze controllate da un oggetto di tipo `basic_string` sono la classe stringa C++ standard e vengono in genere definite stringhe, ma non devono essere confuse con le stringhe di tipo C con terminazione null usate nella libreria C++ standard. La stringa C++ standard è un contenitore che consente l'uso di stringhe come tipi normali, ad esempio come operazioni di confronto e concatenazione, iteratori, algoritmi della libreria standard C++ e copia e assegnazione con Managed Memory dell'allocatore della classe. Se è necessario convertire una stringa C++ standard in una stringa in formato C con terminazione Null, usare il membro [basic_string::c_str](#c_str).
+The sequences controlled by an object of type `basic_string` are the Standard C++ string class and are usually referred to as strings, but they should not be confused with the null-terminated C-style strings used throughout the C++ Standard Library. La stringa C++ standard è un contenitore che consente l'uso di stringhe come tipi normali, ad esempio come operazioni di confronto e concatenazione, iteratori, algoritmi della libreria standard C++ e copia e assegnazione con Managed Memory dell'allocatore della classe. Se è necessario convertire una stringa C++ standard in una stringa in formato C con terminazione Null, usare il membro [basic_string::c_str](#c_str).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -136,13 +136,13 @@ class basic_string;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *CharType*
-Tipo di dati di un singolo carattere da archiviare nella stringa. La C++ libreria standard fornisce le specializzazioni di questo modello di classe, con la [stringa](../standard-library/string-typedefs.md#string) delle definizioni dei tipi per gli elementi di tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), per **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) per `char16_t` e [u32string ](../standard-library/string-typedefs.md#u32string)per `char32_t`.
+*CharType*\
+Tipo di dati di un singolo carattere da archiviare nella stringa. The C++ Standard Library provides specializations of this class template, with the type definitions [string](../standard-library/string-typedefs.md#string) for elements of type **char**, [wstring](../standard-library/string-typedefs.md#wstring), for **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) for `char16_t`, and [u32string](../standard-library/string-typedefs.md#u32string) for `char32_t`.
 
-*Tratti* \
-Diverse proprietà importanti degli elementi `CharType` in una specializzazione basic_string sono descritte dalla classe `Traits`. Il valore predefinito è `char_traits`< `CharType`>.
+*Traits*\
+Various important properties of the `CharType` elements in a basic_string specialization are described by the class `Traits`. Il valore predefinito è `char_traits`< `CharType`>.
 
-@No__t_1 *allocatore*
+*Allocator*\
 Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione e alla deallocazione di memoria della stringa. Il valore predefinito è **allocator**< `CharType`>.
 
 ### <a name="constructors"></a>Costruttori
@@ -170,9 +170,9 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 |[traits_type](#traits_type)|Tipo per i tratti dei caratteri degli elementi archiviati in una stringa.|
 |[value_type](#value_type)|Tipo che rappresenta il tipo di caratteri archiviati in una stringa.|
 
-### <a name="member-functions"></a>Funzioni membro
+### <a name="member-functions"></a>Member functions
 
-|Funzione membro|Descrizione|
+|Member function|Descrizione|
 |-|-|
 |[append](#append)|Aggiunge caratteri alla fine di una stringa.|
 |[assign](#assign)|Assegna nuovi valori di caratteri al contenuto di una stringa.|
@@ -313,13 +313,13 @@ La stringa C da aggiungere.
 \ *Str*
 La stringa i cui caratteri devono essere aggiunti.
 
-@No__t_1 *_Off*
+*_Off*\
 Indice della parte della stringa di origine che fornisce i caratteri da aggiungere.
 
 *conteggio* \
 Il numero massimo di caratteri da aggiungere dalla stringa di origine.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Il valore di caratteri da aggiungere.
 
 *primo* \
@@ -334,7 +334,7 @@ Un riferimento all'oggetto stringa che viene aggiunto con i caratteri passati da
 
 ### <a name="remarks"></a>Note
 
-I caratteri possono essere aggiunti a una stringa usando [operator + =](#op_add_eq) o le funzioni membro `append` o [push_back](#push_back). `operator+=` aggiunge valori a argomento singolo mentre la funzione membro `append` a più argomenti consente di specificare una parte specifica di una stringa per l'aggiunta.
+Characters may be appended to a string using the [operator+=](#op_add_eq) or the member functions `append` or [push_back](#push_back). `operator+=` appends single-argument values while the multiple-argument `append` member function allows a specific part of a string to be specified for adding.
 
 ### <a name="example"></a>Esempio
 
@@ -472,12 +472,12 @@ basic_string<CharType, Traits, Allocator>& assign(
 Un puntatore ai caratteri della stringa C da assegnare alla stringa di destinazione.
 
 *conteggio* \
-Numero di caratteri da assegnare dalla stringa di origine.
+The number of characters to be assigned, from the source string.
 
 \ *Str*
 La stringa di origine i cui caratteri devono essere assegnati alla stringa di destinazione.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Il valore di caratteri da assegnare.
 
 *primo* \
@@ -486,7 +486,7 @@ Un iteratore di input, const_pointer o const_iterator che punta al primo caratte
 *ultimo* \
 Un iteratore di input, const_pointer o const_iterator che punta al carattere immediatamente successivo all'ultimo carattere dell'intervallo della stringa di origine da assegnare all'intervallo di destinazione.
 
-\ *off*
+*off*\
 La posizione da cui si inizia ad assegnare i nuovi caratteri.
 
 ### <a name="return-value"></a>Valore restituito
@@ -495,7 +495,7 @@ Un riferimento all'oggetto stringa cui vengono assegnati nuovi caratteri dalla f
 
 ### <a name="remarks"></a>Note
 
-È possibile assegnare alle stringhe nuovi valori di caratteri. Il nuovo valore può essere una stringa e una stringa C o un singolo carattere. [Operator =](#op_eq) può essere usato se il nuovo valore può essere descritto da un singolo parametro. in caso contrario, la funzione membro `assign`, che ha più parametri, può essere usata per specificare quale parte della stringa deve essere assegnata a una stringa di destinazione.
+È possibile assegnare alle stringhe nuovi valori di caratteri. Il nuovo valore può essere una stringa e una stringa C o un singolo carattere. The [operator=](#op_eq) may be used if the new value can be described by a single parameter; otherwise the member function `assign`, which has multiple parameters, can be used to specify which part of the string is to be assigned to a target string.
 
 ### <a name="example"></a>Esempio
 
@@ -601,7 +601,7 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Off*
+*_Off*\
 L'indice della posizione dell'elemento a cui fare riferimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -610,11 +610,11 @@ Un riferimento al carattere della stringa in corrispondenza della posizione spec
 
 ### <a name="remarks"></a>Note
 
-Il primo elemento della stringa ha un indice zero e gli elementi seguenti vengono indicizzati consecutivamente da numeri interi positivi, in modo che una stringa di lunghezza *n* includa un elemento *n*indicizzato dal numero *n-* 1.
+The first element of the string has an index of zero and the following elements are indexed consecutively by the positive integers, so that a string of length *n* has an *n*th element indexed by the number *n -* 1.
 
-L' [operatore&#91; ](#op_at) membro è più veloce della funzione membro `at` per fornire l'accesso in lettura e scrittura agli elementi di una stringa.
+The member [operator&#91;&#93;](#op_at) is faster than the member function `at` for providing read and write access to the elements of a string.
 
-Il `operator[]` del membro non controlla se l'indice passato come parametro è valido, ma la funzione membro `at` esegue e pertanto deve essere utilizzata se la validità non è certa. Un indice non valido, ovvero un indice minore di zero o maggiore o uguale alla dimensione della stringa, passato alla funzione membro `at` genera un'eccezione della [classe out_of_range](../standard-library/out-of-range-class.md) . Un indice non valido passato a `operator[]` causa un comportamento non definito, mentre l'indice uguale alla lunghezza della stringa è un indice valido per le stringhe const e l'operatore restituisce il carattere null quando l'indice viene passato.
+The member `operator[]` does not check whether the index passed as a parameter is valid but the member function `at` does and so should be used if the validity is not certain. An invalid index, which is an index less that zero or greater than or equal to the size of the string, passed to the member function `at` throws an [out_of_range Class](../standard-library/out-of-range-class.md) exception. Un indice non valido passato a `operator[]` causa un comportamento non definito, mentre l'indice uguale alla lunghezza della stringa è un indice valido per le stringhe const e l'operatore restituisce il carattere null quando l'indice viene passato.
 
 Il riferimento restituito può essere invalidato da riallocazioni o modifiche delle stringhe per le stringhe non **const**.
 
@@ -750,7 +750,7 @@ basic_string(
 \ *ptr*
 Stringa C i cui caratteri devono essere usati per inizializzare l'oggetto `string` costruito. Questo valore non può essere un puntatore Null.
 
-@No__t_1 *_Al*
+*_Al*\
 Classe allocatore di archiviazione per l'oggetto stringa costruito.
 
 *conteggio* \
@@ -759,10 +759,10 @@ Numero dei caratteri da inizializzare.
 \ a *destra*
 Stringa per inizializzare la stringa costruita.
 
-@No__t_1 *_Roff*
+*_Roff*\
 Indice di un carattere in una stringa che è il primo da usare per inizializzare i valori di carattere per la stringa costruita.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valore di carattere da copiare nella stringa costruita.
 
 *primo* \
@@ -894,7 +894,7 @@ Puntatore alla versione in formato C della stringa di richiamo.  Il valore del p
 
 ### <a name="remarks"></a>Note
 
-Gli oggetti di tipo String appartenenti al modello di classe basic_string \<char > non sono necessariamente terminati con null. Il carattere null ' \0 ' viene usato come carattere speciale in una stringa C per contrassegnare la fine della stringa ma non ha alcun significato particolare in un oggetto di tipo string e può essere parte della stringa come qualsiasi altro carattere. Viene eseguita una conversione automatica da **const char**  <strong>\*</strong> in stringhe, ma la classe String non fornisce conversioni automatiche da stringhe di tipo C a oggetti di tipo **basic_string \<char >** .
+Gli oggetti di tipo String appartenenti al modello di classe basic_string\<char > non sono necessariamente terminati con null. Il carattere null ' \0 ' viene usato come carattere speciale in una stringa C per contrassegnare la fine della stringa ma non ha alcun significato particolare in un oggetto di tipo string e può essere parte della stringa come qualsiasi altro carattere. Viene eseguita una conversione automatica da **const char** <strong>\*</strong> in stringhe, ma la classe String non fornisce conversioni automatiche da stringhe di tipo C a oggetti di tipo **basic_string\<char >** .
 
 La stringa in formato C restituita non deve essere modificata o eliminata poiché la modifica potrebbe invalidare il puntatore alla stringa in quanto la stringa ha una durata limitata ed è di proprietà della classe string.
 
@@ -1159,16 +1159,16 @@ int compare(
 \ *Str*
 La stringa da confrontare con la stringa operando.
 
-@No__t_1 *_Pos1*
+*_Pos1*\
 L'indice della stringa operando da cui inizia il confronto.
 
-@No__t_1 *_Num1*
+*_Num1*\
 Il numero massimo di caratteri della stringa operando da confrontare.
 
-@No__t_1 *_Num2*
+*_Num2*\
 Il numero massimo di caratteri della stringa parametro da confrontare.
 
-@No__t_1 *_Off*
+*_Off*\
 L'indice della stringa parametro da cui inizia il confronto.
 
 *conteggio* \
@@ -1490,7 +1490,7 @@ Matrice di caratteri di destinazione in cui copiare gli elementi.
 
 _ *Contare* il numero di caratteri da copiare al massimo dalla stringa di origine.
 
-@No__t_1 *_Off*
+*_Off*\
 Posizione iniziale nella stringa di origine da cui effettuare le copie.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1593,12 +1593,12 @@ size_type _Copy_s(
 \ *dest*
 Matrice di caratteri di destinazione in cui copiare gli elementi.
 
-\ *Dest_size*
+*dest_size*\
 Dimensione della *dest*.
 
 _ *Contare* il numero di caratteri da copiare al massimo dalla stringa di origine.
 
-@No__t_1 *_Off*
+*_Off*\
 Posizione iniziale nella stringa di origine da cui effettuare le copie.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1658,23 +1658,26 @@ The copied characters array2 is: World
 
 ## <a name="data"></a>  basic_string::data
 
-Converte il contenuto di una stringa in una matrice di caratteri.
+Converte il contenuto di una stringa in una matrice di caratteri con terminazione null.
 
 ```cpp
-const value_type *data() const;
+const value_type *data() const noexcept;
+value_type *data() noexcept;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore al primo elemento della matrice che include il contenuto della stringa o, per una matrice vuota, un puntatore non Null che non può essere dereferenziato.
+Puntatore al primo elemento della matrice con terminazione null che contiene il contenuto della stringa. Per una stringa vuota, il puntatore punta a un singolo carattere null uguale a `value_type()`.
 
 ### <a name="remarks"></a>Note
 
-Gli oggetti di tipo String appartenenti al modello di classe basic_string \<char > non sono necessariamente terminati con null. Il tipo restituito per `data` non è una stringa C valida, perché non viene aggiunto alcun carattere null. Il carattere null ' \0 ' viene usato come carattere speciale in una stringa C per contrassegnare la fine della stringa ma non ha alcun significato particolare in un oggetto di tipo string e può essere parte dell'oggetto stringa come qualsiasi altro carattere.
+Il puntatore restituito da `data` punta a un intervallo valido `[data(), data() + size()]`. Ogni elemento nell'intervallo corrisponde ai dati correnti nella stringa. Ovvero per ogni offset valido *n* nell'intervallo `data() + n == addressof(operator[](n))`.
 
-Viene eseguita una conversione automatica da **const char**  <strong>\*</strong> in stringhe, ma la classe String non fornisce conversioni automatiche da stringhe di tipo C a oggetti di tipo **basic_string \<char >** .
+Se si modifica il contenuto della stringa restituita dall'overload **const** di `data`, il comportamento non è definito. Si ottiene anche un comportamento non definito se il carattere null del terminale viene modificato in qualsiasi altro valore. Il puntatore restituito può essere invalidato se un riferimento non const alla stringa viene passato a una funzione della libreria standard. Può anche essere invalidato da una chiamata a una funzione membro non const. Le chiamate ai membri `at`, `back`, `begin`, `end`, `front`, `rbegin`, `rend`e `operator[]` non invalidano il puntatore. 
 
-La stringa restituita non deve essere modificata o eliminata poiché la modifica potrebbe invalidare il puntatore alla stringa in quanto la stringa ha una durata limitata ed è di proprietà della classe string.
+Prima di C++ 11, `data` non garantiva che la stringa restituita fosse a terminazione null. Dal momento che C++ 11, `data` e `c_str` entrambi restituiscono una stringa con terminazione null e sono in effetti identici.
+
+L'overload non const è una novità di C++ 17. Per usarlo, specificare l'opzione del compilatore **/std: c++ 17** o **/std: c + + Latest più recente** .
 
 ### <a name="example"></a>Esempio
 
@@ -1916,10 +1919,10 @@ Iteratore che punta alla posizione del primo elemento nell'intervallo da cancell
 *ultimo* \
 Iteratore che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cancellare.
 
-@No__t_1 *_it*
+*_It*\
 Iteratore che punta alla posizione dell'elemento nella stringa da cancellare.
 
-@No__t_1 *_Pos*
+*_Pos*\
 Indice del primo carattere della stringa da rimuovere.
 
 *conteggio* \
@@ -2019,10 +2022,10 @@ size_type find(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valore di carattere che la funzione membro deve cercare.
 
-@No__t_1 *_Off*
+*_Off*\
 Indice della posizione da cui partirà la ricerca.
 
 \ *ptr*
@@ -2194,10 +2197,10 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valore di carattere che la funzione membro deve cercare.
 
-@No__t_1 *_Off*
+*_Off*\
 Indice della posizione da cui partirà la ricerca.
 
 \ *ptr*
@@ -2382,10 +2385,10 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valore di carattere che la funzione membro deve cercare.
 
-@No__t_1 *_Off*
+*_Off*\
 Indice della posizione da cui partirà la ricerca.
 
 \ *ptr*
@@ -2569,10 +2572,10 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valore di carattere che la funzione membro deve cercare.
 
-@No__t_1 *_Off*
+*_Off*\
 Indice della posizione in cui finirà la ricerca.
 
 \ *ptr*
@@ -2758,10 +2761,10 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valore di carattere che la funzione membro deve cercare.
 
-@No__t_1 *_Off*
+*_Off*\
 Indice della posizione in cui finirà la ricerca.
 
 \ *ptr*
@@ -3025,7 +3028,7 @@ void insert(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_P0*
+*_P0*\
 Indice della posizione dietro il punto di inserimento di nuovi caratteri.
 
 \ *ptr*
@@ -3037,13 +3040,13 @@ Numero dei caratteri da inserire.
 \ *Str*
 Stringa C da inserire interamente o parzialmente nella stringa di destinazione.
 
-@No__t_1 *_Off*
+*_Off*\
 Indice della parte della stringa di origine che fornisce i caratteri da aggiungere.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valore di carattere degli elementi da inserire.
 
-@No__t_1 *_it*
+*_It*\
 Iteratore che punta alla posizione sotto la quale deve essere inserito un carattere.
 
 *primo* \
@@ -3330,7 +3333,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ch*
+*_Ch*\
 Il carattere da aggiungere.
 
 \ *ptr*
@@ -3422,7 +3425,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ch*
+*_Ch*\
 Il valore di caratteri da assegnare.
 
 \ *ptr*
@@ -3507,7 +3510,7 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Off*
+*_Off*\
 L'indice della posizione dell'elemento a cui fare riferimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3520,7 +3523,7 @@ Il primo elemento della stringa ha un indice zero e agli elementi seguenti vengo
 
 `operator[]` è più veloce della funzione membro [at](#at) nel concedere l'accesso in lettura e scrittura agli elementi di una stringa.
 
-`operator[]` non controlla se l'indice passato come parametro è valido, ma la funzione membro `at` esegue tale operazione e pertanto deve essere utilizzata nella validità non è certo. Un indice non valido, ovvero un indice minore di zero o maggiore o uguale alla dimensione della stringa, passato alla funzione membro `at` genera un'eccezione della [classe out_of_range](../standard-library/out-of-range-class.md) . Un indice non valido passato a `operator[]` causa un comportamento non definito, mentre l'indice uguale alla lunghezza della stringa è un indice valido per le stringhe const e l'operatore restituisce il carattere null quando l'indice viene passato.
+`operator[]` non controlla se l'indice passato come parametro è valido, ma la funzione membro `at` esegue tale operazione e pertanto deve essere utilizzata nella validità non è certo. Un indice non valido, ovvero un indice minore di zero o maggiore o uguale alla dimensione della stringa, passato alla funzione membro `at` genera un'eccezione [Out_of_range classe](../standard-library/out-of-range-class.md) . Un indice non valido passato a `operator[]` causa un comportamento non definito, mentre l'indice uguale alla lunghezza della stringa è un indice valido per le stringhe const e l'operatore restituisce il carattere null quando l'indice viene passato.
 
 Il riferimento restituito può essere invalidato da riallocazioni o modifiche delle stringhe per le stringhe non **const**.
 
@@ -3624,7 +3627,7 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ch*
+*_Ch*\
 Carattere da aggiungere alla fine della stringa.
 
 ### <a name="remarks"></a>Note
@@ -3924,22 +3927,22 @@ basic_string<CharType, Traits, Allocator>& replace(
 \ *Str*
 Stringa che deve essere un'origine dei caratteri per la stringa operando.
 
-@No__t_1 *_Pos1*
+*_Pos1*\
 L'indice della stringa operando da cui inizia la sostituzione.
 
-@No__t_1 *_Num1*
+*_Num1*\
 Numero massimo di caratteri da sostituire nella stringa operando.
 
-@No__t_1 *_Pos2*
+*_Pos2*\
 L'indice della stringa parametro da cui inizia la copia.
 
-@No__t_1 *_Num2*
+*_Num2*\
 Numero massimo di caratteri della stringa parametro C da usare.
 
 \ *ptr*
 Stringa C che deve essere un'origine dei caratteri per la stringa operando.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Carattere da copiare nella stringa operando.
 
 \ *first0*
@@ -4248,7 +4251,7 @@ void resize(
 *conteggio* \
 La nuova dimensione della stringa.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valore con cui vengono inizializzati i caratteri aggiunti se sono necessari elementi aggiuntivi.
 
 ### <a name="remarks"></a>Note
@@ -4381,10 +4384,10 @@ size_type rfind(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valore di carattere che la funzione membro deve cercare.
 
-@No__t_1 *_Off*
+*_Off*\
 Indice della posizione da cui partirà la ricerca.
 
 \ *ptr*
@@ -4664,7 +4667,7 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Off*
+*_Off*\
 Indice che individua l'elemento nella posizione da cui viene eseguita la copia della stringa, con un valore predefinito di 0.
 
 *conteggio* \
@@ -4784,7 +4787,7 @@ typedef Traits traits_type;
 
 Il tipo è un sinonimo del secondo parametro di modello `Traits`.
 
-Per il tipo `string`, è equivalente a **char_traits \<char >** .
+Per il tipo `string`, è equivalente a **char_traits\<char >** .
 
 ### <a name="example"></a>Esempio
 
