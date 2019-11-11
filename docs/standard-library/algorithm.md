@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f72969052ae3ecc0d9fb88382e1560c846e2167c
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456507"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912891"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -26,7 +26,7 @@ Definisce le funzioni di modello del contenitore di libreria standard C++ che es
 ```
 
 > [!NOTE]
-> L' \<algoritmo > libreria usa anche l' `#include <initializer_list>` istruzione.
+> La libreria > \<Algorithm usa anche l'istruzione `#include <initializer_list>`.
 
 ## <a name="remarks"></a>Note
 
@@ -36,7 +36,7 @@ Gli algoritmi di libreria standard C++ consentono di elaborare gli intervalli de
 
 Gli algoritmi di libreria standard C++ consentono di estendere le azioni supportate dalle operazioni e dalle funzioni membro di ciascun contenitore di libreria standard C++, nonché di usare, ad esempio, diversi tipi di oggetti contenitore contemporaneamente. Per trasferire le informazioni sullo scopo degli algoritmi sono stati usati due suffissi.
 
-- Il suffisso `_if` indica che l'algoritmo viene usato con oggetti funzione che operano sui valori degli elementi anziché sui valori degli elementi stessi. L'algoritmo `find_if` consente di cercare gli elementi i cui valori soddisfano i criteri specificati da un oggetto funzione e l'algoritmo `find` consente di cercare un valore specifico.
+- Il suffisso `_if` indica che l'algoritmo viene usato con oggetti funzione che operano sui valori degli elementi anziché sugli elementi stessi. L'algoritmo `find_if` consente di cercare gli elementi i cui valori soddisfano i criteri specificati da un oggetto funzione e l'algoritmo `find` consente di cercare un valore specifico.
 
 - Il suffisso _copy indica che l'algoritmo non solo consente di modificare i valori degli elementi, ma anche di copiare i valori modificati in un intervallo di destinazione. L'algoritmo `reverse` consente di invertire l'ordine degli elementi in un intervallo e l'algoritmo `reverse_copy` consente anche di copiare il risultato in un intervallo di destinazione.
 
@@ -52,7 +52,7 @@ Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numer
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Restituisce **true** quando una condizione è presente in ogni elemento nell'intervallo specificato.|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|Restituisce **true** quando una condizione è presente almeno una volta nell'intervallo di elementi specificato.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Verifica se in un intervallo ordinato è presente un elemento uguale a un valore specificato o equivalente a tale valore nel senso specificato da un predicato binario.|
-|[clamp](../standard-library/algorithm-functions.md#clamp)||
+|[morsetto](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in avanti.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in indietro.|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copia tutti gli elementi di un determinato intervallo che verificano **true** per una condizione specificata|
@@ -118,7 +118,7 @@ Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numer
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Inverte l'ordine degli elementi all'interno di un intervallo di origine copiandoli nel contempo in un intervallo di destinazione|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|Scambia gli elementi di due intervalli adiacenti.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Scambia gli elementi di due intervalli adiacenti all'interno di un intervallo di origine e copia il risultato in un intervallo di destinazione.|
-|[sample](../standard-library/algorithm-functions.md#sample)||
+|[esempio](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|Cerca la prima occorrenza di una sequenza all'interno di un intervallo di destinazione i cui elementi sono uguali a quelli di una sequenza specificata di elementi oppure i cui elementi sono equivalenti nel senso specificato da un predicato binario agli elementi della sequenza specificata.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Cerca la prima sottosequenza di un intervallo di un numero specificato di elementi che dispongono di un valore specifico o di una relazione con tale valore come specificato da un predicato binario.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Unisce tutti gli elementi appartenenti a un intervallo di origine ordinato, ma non a un secondo intervallo di origine ordinato, in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.|
@@ -140,5 +140,5 @@ Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numer
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

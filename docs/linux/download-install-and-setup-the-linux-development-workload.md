@@ -3,12 +3,12 @@ title: Installare il carico di lavoro Linux C++ in Visual Studio
 description: Descrive come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925412"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912911"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
@@ -36,7 +36,7 @@ Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni 
 
    ![Casella di ricerca di Windows](media/visual-studio-installer-search.png)
 
-2. Cercare il programma di installazione nei risultati **App** e farci doppio clic sopra. Quando il programma di installazione si apre, scegliere **Modifica** e quindi fare clic sulla scheda **Carichi di lavoro**. Scorrere verso il basso fino ad **Altri set di strumenti** e selezionare il carico di lavoro **Linux development with C++** (Sviluppo di applicazioni Linux con C++).
+2. Cercare il programma di installazione nei risultati **App** e farci doppio clic sopra. Quando si apre il programma di installazione, scegliere **modifica**, quindi fare clic sulla scheda **carichi di lavoro** . scorrere verso il basso fino ad **altri set di strumenti** e selezionare lo sviluppo per **Linux con C++**  carico di lavoro.
 
    ![Carico di lavoro Visual C++ per lo sviluppo di applicazioni Linux](media/linuxworkload.png)
 
@@ -46,9 +46,9 @@ Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni 
 
 ## <a name="options-for-creating-a-linux-environment"></a>Opzioni per la creazione di un ambiente Linux
 
-Se non si ha già un computer Linux, è possibile creare una macchina virtuale Linux in Azure. Per altre informazioni, vedere [Avvio rapido: Creare una macchina virtuale Linux nel portale di Azure](/azure/virtual-machines/linux/quick-create-portal).
+Se non si ha già un computer Linux, è possibile creare una macchina virtuale Linux in Azure. Per altre informazioni, vedere [Guida introduttiva: Creare una macchina virtuale Linux nel portale di Azure](/azure/virtual-machines/linux/quick-create-portal).
 
-In Windows 10 è possibile installare e impostare come destinazione la distribuzione Linux preferita nel sottosistema Windows per Linux (WSL). Per altre informazioni, vedere [Guida all'installazione del sottosistema Windows per Linux per Windows 10](/windows/wsl/install-win10). WSL è un ambiente console pratico, ma non è consigliato per le applicazioni grafiche. 
+In Windows 10 è possibile installare e impostare come destinazione la distribuzione Linux preferita nel sottosistema Windows per Linux (WSL). Per altre informazioni, vedere [Guida all'installazione del sottosistema Windows per Linux per Windows 10](/windows/wsl/install-win10). Se non si è in grado di accedere a Windows Store, è possibile [scaricare manualmente i pacchetti di distribuzione WSL](/windows/wsl/install-manual). WSL è un ambiente console pratico, ma non è consigliato per le applicazioni grafiche. 
 
 ::: moniker-end
 
@@ -80,7 +80,7 @@ Per i progetti Linux in Visual Studio è necessario che le dipendenze seguenti s
 
 ::: moniker range="vs-2019" 
 
-## <a name="linux-setup-ubuntu-on-wsl"></a>Configurazione di Linux: Ubuntu in WSL
+## <a name="linux-setup-ubuntu-on-wsl"></a>Installazione di Linux: Ubuntu in WSL
 
 Quando si intende usare WSL, non è necessario aggiungere una connessione remota o configurare SSH per la compilazione e il debug. Per la sincronizzazione automatica delle intestazioni di Linux con Visual Studio per il supporto di Intellisense sono necessari **zip** e **rsync**. Se le applicazioni richieste non sono già presenti, è possibile installarle come indicato di seguito:
 
