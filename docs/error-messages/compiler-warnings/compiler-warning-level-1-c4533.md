@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4533
 ms.assetid: 359fecda-d540-46e5-b214-dbabe9ef50d2
-ms.openlocfilehash: 8ac7f00ad3401e88224c0150324822ce71e95018
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ee88af66238497216d7e5dab497394a58a55805
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160770"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965756"
 ---
 # <a name="compiler-warning-level-1-c4533"></a>Avviso del compilatore (livello 1) C4533
 
-inizializzazione di 'variable' ignorata da 'istruzione'
+inizializzazione di ' variable ' ignorata da' istruzione '
 
-Un'istruzione del programma di modificata il flusso di controllo, tale che, non è stata eseguita un'istruzione che Inizializza una variabile. L'esempio seguente genera l'errore C4533:
+Un'istruzione nel programma ha modificato il flusso di controllo, in modo tale che un'istruzione che ha inizializzato una variabile non è stata eseguita. L'esempio seguente genera l'c4533:
 
-```
+```cpp
 // C4533.cpp
 // compile with: /W1
 #include <stdio.h>

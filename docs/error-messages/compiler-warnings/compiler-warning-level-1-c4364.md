@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
-ms.openlocfilehash: db2774b6a73a989b4e9250719f99122826b486fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 716f440cddc3889ec719ef3b295a0d076175be93
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207108"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966526"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>Avviso del compilatore (livello 1) C4364
 
-\#utilizzo per l'assembly 'file' visualizzato in precedenza al percorso (numero_riga) senza l'attributo as_friend; as_friend non applicato
+\#utilizzando per l'assembly ' file ' precedentemente visualizzato nella posizione (line_number) senza as_friend attributo; as_friend non applicato
 
-Oggetto `#using` direttiva è stata ripetuta per un file di metadati specificato, ma la `as_friend` qualificatore non è stato usato nella prima occorrenza, il compilatore ignorerà la seconda `as_friend`.
+Una direttiva `#using` è stata ripetuta per un file di metadati specificato, ma il qualificatore di `as_friend` non è stato usato nella prima occorrenza; il compilatore ignorerà il secondo `as_friend`.
 
-Per altre informazioni, vedere [gli assembly Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
+Per ulteriori informazioni, vedere [assembly Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="example"></a>Esempio
 
 L'esempio seguente crea un componente.
 
-```
+```cpp
 // C4364.cpp
 // compile with: /clr /LD
 ref class A {};
@@ -33,9 +33,9 @@ ref class A {};
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4364.
+L'esempio seguente genera l'C4364.
 
-```
+```cpp
 // C4364_b.cpp
 // compile with: /clr /W1 /c
 #using " C4364.dll"

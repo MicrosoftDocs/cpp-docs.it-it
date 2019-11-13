@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4392
 ms.assetid: 817806ad-06a6-4b9e-8355-e25687c782dc
-ms.openlocfilehash: 1dc0c546509b17132358f432f6a781035a314a72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b19080f4a86267a48618a5f40d7576c07c96c18a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386421"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966101"
 ---
 # <a name="compiler-warning-level-1-c4392"></a>Avviso del compilatore (livello 1) C4392
 
-'signature': numero errato di argomenti per una funzione intrinseca, previsto 'number' argomenti
+' Signature ': numero non corretto di argomenti per la funzione intrinseca, argomenti ' Number ' previsti
 
-Una dichiarazione di funzione per una funzione intrinseca del compilatore contiene un numero errato di argomenti. L'immagine risultante potrebbe non funzionare correttamente.
+Una dichiarazione di funzione per un intrinseco del compilatore ha un numero errato di argomenti. L'immagine risultante potrebbe non essere eseguita correttamente.
 
-Per risolvere questo problema, correggere la dichiarazione o eliminare la dichiarazione e semplicemente #include il file di intestazione appropriato.
+Per correggere il problema, correggere la dichiarazione o eliminare la dichiarazione e semplicemente #include il file di intestazione appropriato.
 
-L'esempio seguente genera l'errore C4392:
+L'esempio seguente genera l'C4392:
 
-```
+```cpp
 // C4392.cpp
 // compile with: /W1
 // processor: x86

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4540
 ms.assetid: 8085e748-5f4d-43c2-b06d-eaf794edbf72
-ms.openlocfilehash: 86f6cd866f7708277ebba436ba7c076086dc9c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e514f4f3cf0cc3ee95ff709eda307b143ab3b1c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160705"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965691"
 ---
 # <a name="compiler-warning-level-1-c4540"></a>Avviso del compilatore (livello 1) C4540
 
-dynamic_cast usato per convertire in base ambigua o inaccessibile; fase di esecuzione test avrà esito negativo ('type1' a 'type2')
+dynamic_cast utilizzato per convertire la base inaccessibile o ambigua; il test in fase di esecuzione avrà esito negativo (da' tipo1' a' tipo2')
 
-È stato usato `dynamic_cast` convertire da un tipo diverso. Il compilatore determinato che il cast andava sempre male (restituiscono **NULL**) perché una classe di base è inaccessibile (`private`, ad esempio) o ambigue (ad esempio, viene visualizzato più volte nella gerarchia delle classi,).
+È stato usato `dynamic_cast` per eseguire la conversione da un tipo a un altro. Il compilatore ha determinato che il cast avrebbe sempre esito negativo (restituisce **null**) perché una classe di base è inaccessibile (`private`, ad esempio) o ambigua (viene visualizzata più di una volta nella gerarchia di classi, ad esempio).
 
-Di seguito viene riportato un esempio di questo avviso. Classe **B** è derivato dalla classe **oggetto**. Il programma utilizza `dynamic_cast` per eseguire il cast dalla classe **B** (la classe derivata) alla classe **oggetto**, che avrà sempre esito negativo perché classe **B** è `private` e di conseguenza inaccessibile. La modifica dell'accesso di **un'** al **pubblico** risolverà il problema.
+Di seguito viene illustrato un esempio di questo avviso. La classe **B** è derivata dalla classe **A**. Il programma usa `dynamic_cast` per eseguire il cast dalla classe **b** (la classe derivata) alla classe **a**, che avrà sempre esito negativo perché la classe **b** è `private` e pertanto non è accessibile. La **modifica dell'accesso di** a **public** risolverà l'avviso.
 
-```
+```cpp
 // C4540.cpp
 // compile with: /W1
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-ms.openlocfilehash: aebac17a343efedf678b55f8940004c85a2db708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd3109df3ecd32933b5fc217dfc02181f43d97c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408381"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966529"
 ---
 # <a name="compiler-warning-level-1-c4358"></a>Avviso del compilatore (livello 1) C4358
 
-'operator': il tipo restituito di delegati combinati non 'void'; valore restituito è indefinito
+' operator ': il tipo restituito di delegati combinati non è' void '; il valore restituito non è definito
 
-Sono stati combinati due delegati e il valore restituito non void. Se si combinano due delegati con i valori restituiti non void, il compilatore non sarà in grado di eseguire un'assegnazione corretta, se viene usato il valore restituito del delegato.
+Due delegati sono stati combinati e il valore restituito non è void. Se vengono combinati due delegati con valori restituiti non void, il compilatore non sarà in grado di eseguire un'assegnazione appropriata se viene utilizzato il valore restituito del delegato.
 
-L'esempio seguente genera l'errore C4358:
+L'esempio seguente genera l'C4358:
 
-```
+```cpp
 // C4358.cpp
 // compile with: /clr /W1
 delegate int D();

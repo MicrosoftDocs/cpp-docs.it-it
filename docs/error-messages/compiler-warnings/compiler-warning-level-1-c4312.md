@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 1983d7b89688568b8152372328216c2a814f7bc0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 83f8aa5d03bddde58f9edd4ffc9f19073045da30
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510088"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966088"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>Avviso del compilatore (livello 1) C4312
 
@@ -25,7 +25,7 @@ Questo avviso viene generato solo per le destinazioni di compilazione a 64 bit. 
 
 L'esempio di codice seguente genera l'errore C4312 quando viene eseguita la compilazione per le destinazioni a 64 bit:
 
-```
+```cpp
 // C4312.cpp
 // compile by using: cl /W1 /LD C4312.cpp
 void* f(int i) {
