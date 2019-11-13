@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4805
 ms.assetid: 99c7b7e2-272e-4ab5-8580-17c42e62e2ef
-ms.openlocfilehash: 3bbce2529b208b764fa28bad1d67e1bbb38ec127
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 129bff79b35fb14136cbf8127a3cfb77fc0d2a40
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406353"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051296"
 ---
 # <a name="compiler-warning-level-1-c4805"></a>Avviso del compilatore (livello 1) C4805
 
 'operation': combinazione non affidabile del tipo 'type' e del tipo 'type' nell'operazione
 
-Questo avviso viene generato per le operazioni di confronto tra [bool](../../cpp/bool-cpp.md) e [int](../../c-language/integer-types.md). L'esempio seguente genera l'errore C4805:
+Questo avviso viene generato per le operazioni di confronto tra [bool](../../cpp/bool-cpp.md) e [int](../../c-language/integer-types.md). L'esempio seguente genera l'C4805:
 
-```
+```cpp
 // C4805.cpp
 // compile with: /W1
 int main() {

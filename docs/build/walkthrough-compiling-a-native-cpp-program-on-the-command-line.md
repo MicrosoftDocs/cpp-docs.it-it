@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando'
+title: 'Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando'
 description: Usare il compilatore C++ Microsoft da un prompt dei comandi.
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: 36017b28ab91478da2515cd7c8588a998013171d
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960709"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051520"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando
 
 Visual Studio include un compilatore da riga C++ di comando che è possibile usare per creare tutti gli elementi, dalle app console di base alle app piattaforma UWP (Universal Windows Platform), alle app desktop, ai driver di dispositivo e ai componenti .NET.
 
-In questa procedura dettagliata viene creato un programma di tipo C++ "Hello, World" di base usando un editor di testo e quindi compilato nella riga di comando. Se si vuole provare l'IDE di Visual Studio invece di usare la riga di comando, vedere [Walkthrough: Uso di progetti e soluzioni (C++) ](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) o [dell'IDE di Visual Studio per C++ lo sviluppo di applicazioni desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+In questa procedura dettagliata viene creato un programma di tipo C++ "Hello, World" di base usando un editor di testo e quindi compilato nella riga di comando. Se si vuole provare l'IDE di Visual Studio invece di usare la riga di comando, vedere [procedura dettagliata: uso di progetti e soluzioniC++()](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) o [uso dell'IDE di Visual C++ Studio per lo sviluppo](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)di applicazioni desktop.
 
 In questa procedura dettagliata è possibile usare il proprio programma Visual C++ anziché digitare quello riportato nell'esempio oppure usare esempi di codice Visual C++ di altri articoli della Guida.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per completare questa procedura dettagliata, è necessario aver installato Visual Studio e lo **sviluppo di desktop facoltativo C++ con** carico di lavoro oppure gli strumenti di compilazione da riga di comando per Visual Studio.
 
 Visual Studio è un potente Integrated Development Environment (IDE) che supporta un editor completo, gestori di risorse, debugger e compilatori per molti linguaggi e piattaforme. Per informazioni su come scaricare e installare Visual Studio, inclusa la versione gratuita di Visual Studio Community Edition e per includere il supporto per CC++ /sviluppo, [vedere C++ installare il supporto in Visual Studio](vscpp-step-0-installation.md).
 
-Gli strumenti di compilazione per Visual Studio installano solo i compilatori della riga di comando, gli strumenti e le librerie necessari C++ per compilare i programmi C e. È perfetto per i laboratori di compilazione o gli esercizi in aula e viene installato relativamente rapidamente. Per installare solo gli strumenti da riga di comando, cercare Build Tools per Visual Studio nella pagina dei [download di Visual Studio](https://visualstudio.microsoft.com/downloads/) .
+Gli strumenti di compilazione per Visual Studio installano solo i compilatori della riga di comando, gli strumenti e le librerie necessari C++ per compilare i programmi C e. È perfetto per i laboratori di compilazione o gli esercizi in aula e viene installato relativamente rapidamente. Per installare solo gli strumenti da riga di comando, cercare Build Tools per Visual Studio nella pagina dei [download di Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) .
 
 Prima di poter compilare un programma C C++ o nella riga di comando, è necessario verificare che gli strumenti siano installati e che sia possibile accedervi dalla riga di comando. L' C++ oggetto visivo presenta requisiti complessi per l'ambiente della riga di comando per trovare gli strumenti, le intestazioni e le librerie utilizzate. **Non è possibile usare C++ Visual in una finestra del prompt dei comandi normale** senza eseguire alcune operazioni di preparazione. Fortunatamente, Visual C++ installa i tasti di scelta rapida per avviare un prompt dei comandi per gli sviluppatori in cui è configurato l'ambiente per le compilazioni della riga di comando. Sfortunatamente, i nomi dei tasti di scelta rapida del prompt dei comandi per gli sviluppatori e la posizione in cui si trovano C++ sono diversi in quasi tutte le versioni di Visual e in versioni diverse di Windows. Il primo processo di procedura dettagliata è trovare quello giusto da usare.
 
@@ -58,9 +58,9 @@ Prima di poter compilare un programma C C++ o nella riga di comando, è necessar
    Potrebbero essere presenti differenze nei numeri di versione o della directory correnti, a seconda della versione di Visual C++ e degli aggiornamenti installati. Se l'output precedente è simile a quello visualizzato, si è pronti per compilare i programmi C o C++ nella riga di comando.
 
    > [!NOTE]
-   > Se viene rilevato un errore, ad esempio "CL" non è riconosciuto come comando interno o esterno, un programma eseguibile o un file batch, "Error C1034 o LNK1104 di errore quando si esegue il comando **CL** , non si utilizza un prompt dei comandi per gli sviluppatori o si verifica un problema con l'installazione di Visual C++. Per poter continuare, è necessario risolvere il problema.
+   > Se viene visualizzato un errore, ad esempio "CL" non è riconosciuto come comando interno o esterno, programma eseguibile o file batch, "errore C1034 o errore LNK1104 quando si esegue il comando **CL** , non si utilizza un prompt dei comandi per gli sviluppatori oppure si verifica un problema con l'installazione di Visual C++. Per poter continuare, è necessario risolvere il problema.
 
-   Se non è possibile trovare il collegamento al prompt dei comandi per gli sviluppatori o se viene visualizzato un messaggio di errore quando si immette @no__t- C++ 0, l'installazione visiva potrebbe avere un problema. Provare a reinstallare il componente visivo C++ in Visual Studio oppure reinstallare Microsoft Visual C++ build Tools. Non passare alla sezione successiva finché non funziona. Per ulteriori informazioni sull'installazione e la risoluzione dei C++problemi relativi a oggetti visivi, vedere [Install Visual Studio](/visualstudio/install/install-visual-studio).
+   Se non è possibile trovare il collegamento al prompt dei comandi per gli sviluppatori o se viene visualizzato un messaggio di errore quando si immette C++ `cl`, l'installazione visiva potrebbe avere un problema. Provare a reinstallare il componente visivo C++ in Visual Studio oppure reinstallare Microsoft Visual C++ build Tools. Non passare alla sezione successiva finché non funziona. Per ulteriori informazioni sull'installazione e la risoluzione dei C++problemi relativi a oggetti visivi, vedere [Install Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
    > A seconda della versione di Windows nel computer e della configurazione della sicurezza del sistema, potrebbe essere necessario fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida per il collegamento prompt dei comandi per gli sviluppatori, quindi scegliere **Esegui come amministratore** per compilare ed eseguire correttamente il programma creato seguendo questa procedura dettagliata.

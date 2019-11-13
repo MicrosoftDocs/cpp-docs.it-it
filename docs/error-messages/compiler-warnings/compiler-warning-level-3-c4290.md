@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4290
 ms.assetid: d1c6d85b-28e0-4a1f-9d48-23593337a6fb
-ms.openlocfilehash: c585294686298a1197d437d41a0d541f1268985f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ccacd7d5f4dfd2e9ad8de3958d7aa43571091fe
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402086"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051655"
 ---
 # <a name="compiler-warning-level-3-c4290"></a>Avviso del compilatore (livello 3) C4290
 
-C++Specifica di eccezione ignorata, eccetto to indicare che una funzione non è __declspec(nothrow)
+C++la specifica dell'eccezione è stata ignorata, tranne per indicare che una funzione non è __declspec (nothrow)
 
-Una funzione viene dichiarata utilizzando la specifica di eccezione, che accetta Visual C++, ma non implementa. Scrivi codice con eccezioni specifiche che vengono ignorate durante la compilazione potrebbero dover essere ricompilato e collegato a essere riutilizzato nelle future versioni che supportano le specifiche di eccezione.
+Una funzione viene dichiarata utilizzando la specifica di C++ eccezione, che l'oggetto visivo accetta ma non implementa. Il codice con specifiche di eccezione che viene ignorato durante la compilazione potrebbe dover essere ricompilato e collegato per essere riutilizzato nelle versioni future che supportano le specifiche di eccezione.
 
-Per altre informazioni, vedere [specifiche di eccezioni (generazione)](../../cpp/exception-specifications-throw-cpp.md) .
+Per ulteriori informazioni, vedere [specifiche di eccezione (throw)](../../cpp/exception-specifications-throw-cpp.md) .
 
-È possibile evitare questo avviso usando la [avviso](../../preprocessor/warning.md) pragma:
+È possibile evitare questo avviso utilizzando il pragma [warning](../../preprocessor/warning.md) :
 
-```
+```cpp
 #pragma warning( disable : 4290 )
 ```
 
-Esempio di codice seguente genera l'errore C4290:
+L'esempio di codice seguente genera l'C4290:
 
-```
+```cpp
 // C4290.cpp
 // compile with: /EHs /W3 /c
 void f1(void) throw(int) {}   // C4290

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-ms.openlocfilehash: af821d80ff8c4c7717986f2ff4d0f3392cd6fca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43d8a992801d556ce85577f5f9da1bec584cb173
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349724"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052122"
 ---
 # <a name="compiler-warning-level-2-c4244"></a>Avviso del compilatore (livello 2) C4244
 
-'argument': conversione da 'type1' a 'type2'. possibile perdita di dati
+' argument ': conversione da' tipo1' a' tipo2', possibile perdita di dati
 
-Un tipo a virgola mobile è stato convertito in un tipo integer.  Potrebbe essersi verificata una perdita di dati.
+Un tipo a virgola mobile è stato convertito in un tipo Integer.  Potrebbe essersi verificata una perdita di dati.
 
 Se viene visualizzato l'errore C4244, è consigliabile modificare il programma per poter usare tipi compatibili o aggiungere al codice la logica, per assicurarsi che l'intervallo di valori possibili sia sempre compatibili con i tipi usati.
 
-L'errore C4244 possono inoltre attivare al livello 3 e 4. visualizzare [avviso del compilatore (livelli 3 e 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) per altre informazioni.
+C4244 può anche essere attivato al livello 3 e 4; Per ulteriori informazioni, vedere [Avviso del compilatore (livelli 3 e 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) .
 
 ## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore C4244:
 
-```
+```cpp
 // C4244_level2.cpp
 // compile with: /W2
 

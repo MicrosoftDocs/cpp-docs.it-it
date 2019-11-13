@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4390
 ms.assetid: c95c2f1b-9bce-4b1f-a80c-565d4cde0b1e
-ms.openlocfilehash: 4ca00f892adc8fe3ac1bffb59a27ea1744249dea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8402c6a2d0fcbb4704b833ac7ae2b070c7af3a48
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401982"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051595"
 ---
 # <a name="compiler-warning-level-3-c4390"></a>Avviso del compilatore (livello 3) C4390
 
-';': trovata; istruzione controllata vuota è questo lo scopo?
+';': è stata trovata un'istruzione controllata vuota; si tratta della finalità?
 
 È stato trovato un punto e virgola dopo un'istruzione di controllo che non contiene istruzioni.
 
-Se si verificano C4390 a causa di una macro, è consigliabile usare la [avviso](../../preprocessor/warning.md) pragma per disabilitare C4390 nel modulo che contiene la macro.
+Se si ottiene C4390 a causa di una macro, è necessario usare il pragma [warning](../../preprocessor/warning.md) per disabilitare C4390 nel modulo che contiene la macro.
 
-L'esempio seguente genera l'errore C4390:
+L'esempio seguente genera l'C4390:
 
-```
+```cpp
 // C4390.cpp
 // compile with: /W3
 int main() {

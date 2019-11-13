@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4659
 ms.assetid: e29ba8db-7917-43f6-8e34-868b752279ae
-ms.openlocfilehash: 2aef25e922d8f38ac7103b1b12ccb31c282f0403
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27023e6886638be63db1e1fb654c0caa70769a56
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374651"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052527"
 ---
 # <a name="compiler-warning-level-1-c4659"></a>Avviso del compilatore (livello 1) C4659
 
-\#pragma 'pragma': utilizzo del segmento riservato 'segment' ha un comportamento non definito, è necessario utilizzare #pragma comment (linker,...)
+\#pragma ' pragma ': l'uso del segmento riservato ' segment ' presenta un comportamento non definito. usare #pragma comment (linker,...)
 
-L'opzione drectve è stato usato per passare un'opzione del linker. Usare invece il pragma [commento](../../preprocessor/comment-c-cpp.md) per il passaggio di un'opzione del linker.
+È stata usata l'opzione. drectve per passare un'opzione al linker. Usare invece il [Commento](../../preprocessor/comment-c-cpp.md) pragma per passare un'opzione del linker.
 
-```
+```cpp
 // C4659.cpp
 // compile with: /W1 /LD
 #pragma code_seg(".drectve")   // C4659

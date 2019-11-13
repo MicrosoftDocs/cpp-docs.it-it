@@ -1,29 +1,29 @@
 ---
-title: Del compilatore (livello 3) Avviso C4018
+title: Avviso del compilatore (livello 3) C4018
 ms.date: 11/04/2016
 f1_keywords:
 - C4018
 helpviewer_keywords:
 - C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-ms.openlocfilehash: 6436f62a06cbe931ca5b42751d60507f21675c5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e136a82f8a0ecb3f5375d3a486dd017df7edb6e0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402372"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051974"
 ---
-# <a name="compiler-warning-level-3-c4018"></a>Del compilatore (livello 3) Avviso C4018
+# <a name="compiler-warning-level-3-c4018"></a>Avviso del compilatore (livello 3) C4018
 
-'expression': mancata corrispondenza tra signed e unsigned
+' Expression ': mancata corrispondenza tra signed e unsigned
 
-Confronto tra un numero con segno e senza segno necessaria al compilatore di convertire il valore con segno a valori senza segno.
+Il confronto di un numero con segno e senza segno richiede al compilatore di convertire il valore con segno in senza segno.
 
-Questo problema può essere risolto se si esegue il cast uno dei due tipi durante il test di tipi signed che unsigned.
+Questo avviso può essere risolto se si esegue il cast di uno dei due tipi durante il test di tipi firmati e non firmati.
 
-L'esempio seguente genera l'errore C4018:
+L'esempio seguente genera l'C4018:
 
-```
+```cpp
 // C4018.cpp
 // compile with: /W3
 int main() {

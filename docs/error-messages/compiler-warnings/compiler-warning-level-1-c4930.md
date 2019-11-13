@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-ms.openlocfilehash: 15cd1ed61c747e2c9168b9fc0fee03dca8403a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21cc6364692eb2f3b1d56b03d175df1f2ad7ee8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242786"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050261"
 ---
 # <a name="compiler-warning-level-1-c4930"></a>Avviso del compilatore (livello 1) C4930
 
-'prototipo di ': funzione con prototipo non chiamata (era destinata a una definizione di variabile)?
+' Prototype ': funzione con prototipo non chiamata. è prevista una definizione di variabile?
 
-Il compilatore ha rilevato un prototipo di funzione non usata. Se il prototipo è da intendersi come una dichiarazione di variabile, rimuovere le parentesi di apertura e chiusura.
+Il compilatore ha rilevato un prototipo di funzione non utilizzato. Se il prototipo è stato progettato come dichiarazione di variabile, rimuovere le parentesi di apertura e chiusura.
 
-L'esempio seguente genera l'errore C4930:
+L'esempio seguente genera l'C4930:
 
-```
+```cpp
 // C4930.cpp
 // compile with: /W1
 class Lock {
@@ -39,11 +39,11 @@ int main() {
 }
 ```
 
-C4930 può verificarsi anche quando il compilatore non è possibile distinguere tra una dichiarazione di prototipo di funzione e una chiamata di funzione.
+C4930 può verificarsi anche quando il compilatore non è in grado di distinguere tra una dichiarazione del prototipo di funzione e una chiamata di funzione.
 
-L'esempio seguente genera l'errore C4930:
+L'esempio seguente genera l'C4930:
 
-```
+```cpp
 // C4930b.cpp
 // compile with: /EHsc /W1
 
@@ -112,4 +112,4 @@ int main()
 }
 ```
 
-Nell'esempio precedente, il risultato di un metodo che accetta zero argomenti viene passato come argomento al costruttore di una variabile di classe senza nome locale. La chiamata può eliminare le ambiguità dei nomi di variabile locale o precedere la chiamata di metodo da un'istanza dell'oggetto con l'operatore puntatore a membro appropriato.
+Nell'esempio precedente, il risultato di un metodo che accetta zero argomenti viene passato come argomento al costruttore di una variabile di classe locale senza nome. La chiamata può essere ambiguità assegnando un nome alla variabile locale o anteponendo la chiamata al metodo con un'istanza dell'oggetto insieme all'operatore puntatore a membro appropriato.

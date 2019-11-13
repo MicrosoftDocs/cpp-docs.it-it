@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 2a6d83074f180a455e9c305fb4ca8ea270d0a593
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35b57cf88bf9f9a170a05af890632316b7030838
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385400"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052405"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>Avviso del compilatore (livello 1) C4750
 
@@ -33,7 +33,7 @@ La funzione 'identifier' impone l'espansione inline della funzione [_alloca](../
 
 Nell'esempio di codice seguente viene chiamato `MyFunction` in un ciclo e `MyFunction` chiama la funzione `_alloca` . Il modificatore `__forceinline` provoca l'espansione inline della funzione `_alloca` .
 
-```
+```cpp
 // c4750.cpp
 // compile with: /O2 /W1 /c
 #include <intrin.h>

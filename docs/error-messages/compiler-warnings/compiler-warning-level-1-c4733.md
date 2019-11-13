@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-ms.openlocfilehash: 0d0b0b912ef15294f9a4362a79dffd6d7eeabed8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbecdda481748aa77eefdab8d61e50350804e09f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221115"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051316"
 ---
 # <a name="compiler-warning-level-1-c4733"></a>Avviso del compilatore (livello 1) C4733
 
-Assegnazione dell'assembly inline a 'FS:0': gestore non registrato come sicuro
+Assegnazione dell'assembly inline a' FS: 0': gestore non registrato come gestore sicuro
 
-Una funzione che modifica il valore in corrispondenza FS:0 per aggiungere un nuovo gestore di eccezioni potrebbe non funzionare con le eccezioni sicure, in quanto il gestore non può essere registrato come un gestore di eccezioni validi (vedere [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
+Funzione che modifica il valore in FS: 0 per aggiungere un nuovo gestore di eccezioni potrebbe non funzionare con eccezioni sicure, perché il gestore potrebbe non essere registrato come gestore di eccezioni valido (vedere [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
 
-Per risolvere questo problema, rimuovere la definizione FS:0 o disattivare questo avviso e usare [. SAFESEH](../../assembler/masm/dot-safeseh.md) per specificare i gestori eccezioni sicuri.
+Per risolvere il problema, rimuovere il FS: 0 definire o disattivare questo avviso e usare [. SAFESEH](../../assembler/masm/dot-safeseh.md) per specificare i gestori delle eccezioni sicure.
 
-L'esempio seguente genera l'errore C4733:
+L'esempio seguente genera l'C4733:
 
-```
+```cpp
 // C4733.cpp
 // compile with: /W1 /c
 // processor: x86

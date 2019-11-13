@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: c194e19c8766b67eb7deef32e7228564cda5f1e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6124171bb5f257dac1dd972f7943d001fb54c9ca
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406379"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051365"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>Avviso del compilatore (livello 1) C4691
 
-'type': tipo di riferimento previsto nell'assembly privo di riferimento 'file', tipo definito in unità di conversione corrente utilizzato
+' type ': previsto tipo a cui si fa riferimento nell'assembly senza riferimenti ' file ', tipo definito nell'unità di conversione corrente utilizzata
 
-Il file di metadati che contiene la definizione del tipo originale non viene fatto riferimento e il compilatore Usa una definizione del tipo locale.
+Al file di metadati che contiene la definizione di tipo originale non viene fatto riferimento e il compilatore utilizza una definizione di tipo locale.
 
-Nel caso in cui in corso la ricompilazione *file*, possono essere ignorati o disattivato il pragma C4691 [avviso](../../preprocessor/warning.md).  Vale a dire, se il file che si sta creando è quello utilizzato per il file in cui il compilatore si aspetta di trovare la definizione del tipo, è possibile ignorare C4691.
+Nel caso in cui si stia ricompilando il *file*, C4691 può essere ignorato o disattivato con pragma [warning](../../preprocessor/warning.md).  Ovvero, se il file che si sta compilando corrisponde al file in cui il compilatore prevede di trovare la definizione del tipo, è possibile ignorare C4691.
 
-Tuttavia, può verificarsi un comportamento imprevisto se il compilatore Usa una definizione non dallo stesso assembly cui viene fatto riferimento nei metadati. Tipi CLR sono tipizzati non solo il nome del tipo, ma anche dall'assembly.  Vale a dire, un tipo Z dalla DLL di assembly è diverso da un tipo Z da assembly y.
+Tuttavia, può verificarsi un comportamento imprevisto se il compilatore utilizza una definizione non appartenente allo stesso assembly a cui si fa riferimento nei metadati; I tipi CLR sono digitati non solo dal nome del tipo, ma anche dall'assembly.  Ovvero un tipo Z dall'assembly z. dll è diverso da un tipo Z dall'assembly y. dll.
 
 ## <a name="example"></a>Esempio
 
-In questo esempio contiene la definizione del tipo originale.
+Questo esempio contiene la definizione di tipo originale.
 
-```
+```cpp
 // C4691_a.cpp
 // compile with: /clr /LD /W1
 public ref class Original_Type {};
@@ -35,9 +35,9 @@ public ref class Original_Type {};
 
 ## <a name="example"></a>Esempio
 
-In questo esempio si riferisce C4691_a. dll e dichiara un campo di tipo Original_Type.
+Questo esempio fa riferimento a C4691_a. dll e dichiara un campo di tipo Original_Type.
 
-```
+```cpp
 // C4691_b.cpp
 // compile with: /clr /LD
 #using "C4691_a.dll"
@@ -49,11 +49,11 @@ public:
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4691.  Si noti che in questo esempio contiene una definizione per Original_Type e non fa riferimento C4691a.
+L'esempio seguente genera l'C4691.  Si noti che questo esempio contiene una definizione per Original_Type e non fa riferimento a C4691a. dll.
 
-Per risolvere, fare riferimento al file di metadati che contiene la definizione del tipo originale e rimuovere la dichiarazione locale e la definizione.
+Per risolverlo, fare riferimento al file di metadati che contiene la definizione di tipo originale e rimuovere la dichiarazione e la definizione locali.
 
-```
+```cpp
 // C4691_c.cpp
 // compile with: /clr /LD /W1
 // C4691 expected

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4287
 ms.assetid: 1bf3bff8-6402-4d06-95ba-431678a790a7
-ms.openlocfilehash: da051bb27ec877fd6347469c9f06b09bd4e0db32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b37e0692a63f02dc96dec8717d4defd64d7183ac
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402099"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051667"
 ---
 # <a name="compiler-warning-level-3-c4287"></a>Avviso del compilatore (livello 3) C4287
 
-'operator': errata corrispondenza tra costanti unsigned/negative
+' operator ': mancata corrispondenza di costanti non firmate/negative
 
 Una variabile senza segno è stata usata in un'operazione con un numero negativo.
 
@@ -23,9 +23,9 @@ Per impostazione predefinita, questo avviso non è attivo. Per altre informazion
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4287:
+L'esempio seguente genera l'C4287:
 
-```
+```cpp
 // C4287.cpp
 // compile with: /W3
 #pragma warning(default : 4287)

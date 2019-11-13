@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4964
 ms.assetid: b89c9274-8a92-4b7c-aa30-3fbb1b68ac73
-ms.openlocfilehash: 556c6e0963fc41d76cd123373cc4cd85edc66962
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a75a1b7d3738794046ac697113c3c746bb6fcff
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384140"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052238"
 ---
 # <a name="compiler-warning-level-1-c4964"></a>Avviso del compilatore (livello 1) C4964
 
-Nessuna opzione di ottimizzazione specificata; info del profilo non verrà raccolti
+Nessuna opzione di ottimizzazione specificata. le informazioni sul profilo non verranno raccolte
 
-[/GL](../../build/reference/gl-whole-program-optimization.md) e [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) è stata specificata, ma non le ottimizzazioni sono stati richiesti, in modo che non verranno generati alcun file. pgc e, pertanto, non sarà possibile le ottimizzazioni PGO.
+[/GL](../../build/reference/gl-whole-program-optimization.md) e [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) sono stati specificati, ma non è stata richiesta alcuna ottimizzazione, quindi non verrà generato alcun file. PGC e, pertanto, non sarà possibile ottimizzare le ottimizzazioni PGO.
 
-Se si desidera che i file. pgc da generare quando si esegue l'applicazione, specificare uno dei [/O](../../build/reference/o-options-optimize-code.md) opzioni del compilatore.
+Se si desidera che vengano generati file con estensione PGC quando si esegue l'applicazione, specificare una delle opzioni del compilatore [/o](../../build/reference/o-options-optimize-code.md) .
 
-L'esempio seguente genera l'errore C4964:
+L'esempio seguente genera l'C4964:
 
-```
+```cpp
 // C4964.cpp
 // compile with: /W1 /GL /link /ltcg:pgi
 // C4964 expected

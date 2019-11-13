@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4927
 ms.assetid: 7009e740-a2ef-4130-96ba-482e092f717a
-ms.openlocfilehash: 59a39e4e695fdd161135cd70a74e1f3f6518e361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e56d185f6f87bc6e381ccec9ed8bd50ba3e2245
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393454"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052279"
 ---
 # <a name="compiler-warning-level-1-c4927"></a>Avviso del compilatore (livello 1) C4927
 
-conversione non valida; più di una conversione definita dall'utente è state implicitamente applicata
+conversione non valida; è stata applicata in modo implicito più di una conversione definita dall'utente
 
-Più di una conversione definita dall'utente viene applicata in modo implicito in un singolo valore, il compilatore non è stata trovata una conversione esplicita, ma è stata trovata una conversione, che ha utilizzato.
+Più di una conversione definita dall'utente viene applicata in modo implicito a un singolo valore, ovvero il compilatore non ha trovato una conversione esplicita ma ha trovato una conversione che è stata usata.
 
-L'esempio seguente genera l'errore C4927:
+L'esempio seguente genera l'C4927:
 
-```
+```cpp
 // C4927.cpp
 // compile with: /W1
 struct B

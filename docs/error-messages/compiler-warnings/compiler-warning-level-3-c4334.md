@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4334
 ms.assetid: d845857f-bc95-4faf-a079-626a0cf935ba
-ms.openlocfilehash: 55512bf28c8c20512d0d245810d3e5c1fec36939
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebebfe9994be3dd136e3924cb2aea60c0c901926
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402034"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051628"
 ---
 # <a name="compiler-warning-level-3-c4334"></a>Avviso del compilatore (livello 3) C4334
 
-'operator': risultato dello shift a 32 bit convertito in modo implicito a 64 bit (si intendeva eseguire lo shift a 64 bit?)
+' operator ': il risultato dello spostamento a 32 bit è stato convertito in modo implicito in 64 bit (era previsto lo spostamento a 64 bit?)
 
-Il risultato dello shift a 32 bit è stato convertito implicitamente a 64 bit e il compilatore sospetta dovuto al fatto che era previsto un cambiamento di a 64 bit.  Per risolvere questo problema, usare MAIUSC a 64 bit oppure in modo esplicito il cast del risultato shift a 64 bit.
+Il risultato dello spostamento a 32 bit è stato convertito in modo implicito in 64 bit e il compilatore sospetta che sia stato previsto uno spostamento a 64 bit.  Per risolvere il problema, usare Maiusc a 64 bit oppure eseguire il cast esplicito del risultato dello spostamento a 64 bit.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4334.
+L'esempio seguente genera l'C4334.
 
-```
+```cpp
 // C4334.cpp
 // compile with: /W3 /c
 void SetBit(unsigned __int64 *p, int i) {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383847"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052225"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Avviso del compilatore (livello 1) C4965
 
-casella implicita dell'intero 0. usare un cast esplicito o nullptr
+casella implicita di Integer 0; usare nullptr o cast esplicito
 
-Visual C++ include la conversione boxing implicita dei tipi di valore. Un'istruzione che ha comportato un'assegnazione di null usando estensioni gestite per C++ ora diventa un'assegnazione a un valore int sottoposto a conversione boxing.
+Funzionalità C++ visive conversione boxing implicita dei tipi di valore. Un'istruzione che ha generato un'assegnazione null che usa le estensioni gestite C++ per ora diventa un'assegnazione a un int boxed.
 
 Per ulteriori informazioni, vedi [Boxing](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4965.
+L'esempio seguente genera l'C4965.
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0cf9aef8f68ca5972fd3d7886cd8061b88d043ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221141"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051352"
 ---
 # <a name="compiler-warning-level-1-c4717"></a>Avviso del compilatore (livello 1) C4717
 
-'function': funzione ricorsiva su tutti i percorsi di controlli, provocherà un overflow dello stack di runtime
+' Function ': ricorsivo su tutti i percorsi di controllo. la funzione provocherà un overflow dello stack di runtime
 
-Ogni percorso tramite una funzione contiene una chiamata alla funzione. Poiché non è possibile uscire in modo ricorsivo la funzione senza prima chiamare se stesso, la funzione non terminerà mai.
+Ogni percorso tramite una funzione contiene una chiamata alla funzione. Poiché non è possibile uscire dalla funzione senza prima chiamare in modo ricorsivo, la funzione non verrà mai chiusa.
 
-L'esempio seguente genera l'errore C4717:
+L'esempio seguente genera l'C4717:
 
-```
+```cpp
 // C4717.cpp
 // compile with: /W1 /c
 // C4717 expected
