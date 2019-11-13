@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4313
 ms.assetid: bcf64191-e2cf-452e-97b4-423fcec2d07c
-ms.openlocfilehash: 774af2d5d29112d56adf97e22d1bdd758a816ef1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4000ba2254c868bf9959a6f0fb6f8e76255f7590
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352936"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966073"
 ---
 # <a name="compiler-warning-level-1-c4313"></a>Avviso del compilatore (livello 1) C4313
 
@@ -23,7 +23,7 @@ Esiste un conflitto tra il formato specificato e il valore che si sta passando. 
 
 L'esempio di codice seguente genera l'errore C4313 quando viene eseguita la compilazione per una destinazione a 64 bit.
 
-```
+```cpp
 // C4313.cpp
 // Compile by using: cl /W1 C4313.cpp
 #include <stdio.h>

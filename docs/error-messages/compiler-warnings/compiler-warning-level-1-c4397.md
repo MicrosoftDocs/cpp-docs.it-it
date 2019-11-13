@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-ms.openlocfilehash: 7f0a3c31f460a66523ed1c327cee097dc890bbeb
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fc13f83f79f8c8103184b4322a77866a78d149be
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447664"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964924"
 ---
 # <a name="compiler-warning-level-1-c4397"></a>Avviso del compilatore (livello 1) C4397
 
 DefaultCharSetAttribute ignorato
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> viene ignorato da Microsoft C++ compilatore. Per specificare un set di caratteri per la DLL, usare l'opzione CharSet di DllImport. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).
+<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> viene ignorato dal compilatore Microsoft C++ . Per specificare un set di caratteri per la DLL, utilizzare l'opzione CharSet di DllImport. Per ulteriori informazioni, vedere [utilizzo C++ dell'interoperabilità (PInvoke implicito)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4397.
+L'esempio seguente genera l'C4397.
 
-```
+```cpp
 // C4397.cpp
 // compile with: /W1 /c /clr
 using namespace System;

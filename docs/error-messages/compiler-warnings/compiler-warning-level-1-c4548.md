@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4548
 ms.assetid: 2cee817e-e463-4d90-bbd2-de120d48c101
-ms.openlocfilehash: 02010107c90f52f0fd2df838d90b78809fb80b70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09d2d2d1b67b203ebbc6b62b5b19f4b063e312c3
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384179"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966399"
 ---
 # <a name="compiler-warning-level-1-c4548"></a>Avviso del compilatore (livello 1) C4548
 
 l'espressione prima della virgola non ha effetto. Prevista espressione con effetto collaterale.
 
-Il compilatore ha rilevato un'espressione di formato non corretto delimitata da virgole.
+Il compilatore ha rilevato un'espressione di virgola in formato non valido.
 
 Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-L'esempio seguente genera l'errore C4548:
+L'esempio seguente genera l'C4548:
 
-```
+```cpp
 // C4548.cpp
 // compile with: /W1
 #pragma warning (default : 4548)

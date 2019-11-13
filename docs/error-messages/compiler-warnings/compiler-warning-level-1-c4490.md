@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41fa124eed365b87b419a4019262c0c673399295
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161095"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966186"
 ---
 # <a name="compiler-warning-level-1-c4490"></a>Avviso del compilatore (livello 1) C4490
 
-'override': uso non corretto dell'identificatore di override; 'function' non corrisponde a un metodo di classe di base di riferimento
+' override ': utilizzo non corretto dell'identificatore di override; ' Function ' non corrisponde a un metodo della classe di riferimento di base
 
-Un identificatore di override è stato usato in modo non corretto. Ad esempio, non si esegue l'override di una funzione di interfaccia, si implementarla.
+Identificatore di override utilizzato in modo errato. Ad esempio, non si esegue l'override di una funzione di interfaccia, che viene implementata.
 
-Per altre informazioni, vedere [gli identificatori di Override](../../extensions/override-specifiers-cpp-component-extensions.md).
+Per altre informazioni, vedere [identificatori di override](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4490.
+L'esempio seguente genera l'C4490.
 
-```
+```cpp
 // C4490.cpp
 // compile with: /clr /c /W1
 
