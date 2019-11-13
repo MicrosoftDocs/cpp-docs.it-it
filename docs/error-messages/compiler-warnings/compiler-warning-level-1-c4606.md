@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
-ms.openlocfilehash: e471ca3e478d1166b150e49bf25efa4b9d5803cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36031aa9a831d4669d796d8a40292e2d6ba15a8
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402515"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964969"
 ---
 # <a name="compiler-warning-level-1-c4606"></a>Avviso del compilatore (livello 1) C4606
 
-\#avviso pragma: 'numero_avviso' ignorato. Avvisi dell'analisi codice non sono associati livelli di avviso
+avviso \#pragma:' warning_number ' ignorato; Gli avvisi di analisi del codice non sono associati ai livelli di avviso
 
-Per gli avvisi di analisi del codice, solo `error`, `once`, e `default` sono supportati con il [avviso](../../preprocessor/warning.md) pragma.
+Per gli avvisi di analisi del codice, solo `error`, `once`e `default` sono supportati con il pragma [warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4606.
+L'esempio seguente genera l'C4606.
 
-```
+```cpp
 // C4606.cpp
 // compile with: /c /W1
 #pragma warning(1: 6001)   // C4606

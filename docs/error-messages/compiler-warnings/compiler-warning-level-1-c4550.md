@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4550
 ms.assetid: f902b4ed-5f17-48ea-b693-92f4fb8c8054
-ms.openlocfilehash: eff3548ef43075a86f52086caf9b79158ad70cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c310855ee3925374de8b736cde9013d48df6482
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410382"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966379"
 ---
 # <a name="compiler-warning-level-1-c4550"></a>Avviso del compilatore (livello 1) C4550
 
-espressione restituisce una funzione che non contiene un elenco di argomenti
+l'espressione restituisce una funzione in cui manca un elenco di argomenti
 
-Un puntatore dereferenziato a una funzione non contiene un elenco di argomenti.
+Un puntatore dereferenziato a una funzione manca un elenco di argomenti.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // C4550.cpp
 // compile with: /W1
 bool f()

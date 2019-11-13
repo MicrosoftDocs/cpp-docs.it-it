@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa71565824355ff4b3658fd9de22c09d6db6dc33
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187218"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966555"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>Avviso del compilatore (livello 1) C4346
 
-'name': nome dipendente non è un tipo
+' name ': il nome dipendente non è un tipo
 
-Il [typename](../../cpp/typename.md) parola chiave è obbligatoria se un nome di dipendente deve essere trattato come un tipo. Per il codice che funziona in tutte le versioni di Visual C++, aggiungere `typename` alla dichiarazione.
+La parola chiave [typeName](../../cpp/typename.md) è obbligatoria se un nome dipendente deve essere considerato come un tipo. Per il codice che funziona allo stesso modo in tutte le C++versioni di Visual, aggiungere `typename` alla dichiarazione.
 
-L'esempio seguente genera l'errore C4346:
+L'esempio seguente genera l'C4346:
 
-```
+```cpp
 // C4346.cpp
 // compile with: /WX /LD
 template<class T>
@@ -32,9 +32,9 @@ struct C {
 };
 ```
 
-Gli esempi seguenti vengono illustrati altri esempi in cui il **typename** parola chiave è necessario:
+Negli esempi seguenti vengono illustrati altri esempi in cui la parola chiave **typeName** è obbligatoria:
 
-```
+```cpp
 // C4346b.cpp
 // compile with: /LD /W1
 template<class T>
@@ -55,7 +55,7 @@ struct M : public L<typename T::Type, T::Value>
 
 E questo
 
-```
+```cpp
 // C4346c.cpp
 // compile with: /LD /WX
 struct Y {

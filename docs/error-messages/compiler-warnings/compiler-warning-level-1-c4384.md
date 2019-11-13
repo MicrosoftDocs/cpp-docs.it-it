@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4384
 ms.assetid: fafa8eb2-cbfc-4edb-8b0f-511ff5d37ac0
-ms.openlocfilehash: 0f2666011e88dfd59eaaca154f4407bece7c963c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 467f15522503d16d3b023661ee339c986f74ddec
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344587"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964893"
 ---
 # <a name="compiler-warning-level-1-c4384"></a>Avviso del compilatore (livello 1) C4384
 
-\#pragma 'make_public' deve essere utilizzato solo in ambito globale
+\#pragma ' make_public ' deve essere utilizzato solo in ambito globale
 
-Il [make_public](../../preprocessor/make-public.md) pragma è stato applicato in modo non corretto.
+Il pragma [make_public](../../preprocessor/make-public.md) è stato applicato in modo errato.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4384.
+L'esempio seguente genera l'C4384.
 
-```
+```cpp
 // C4384.cpp
 // compile with: /c /W1
 namespace n {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4348
 ms.assetid: 816010eb-6079-48d5-a41b-0fc4d67cfe4c
-ms.openlocfilehash: b39d5a596594367d1ca2aea17d9a752c991d06be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022b71a27819934d444f5ffd9811b62cf1012abb
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352892"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964950"
 ---
 # <a name="compiler-warning-level-1-c4348"></a>Avviso del compilatore (livello 1) C4348
 
-'type': ridefinizione del parametro predefinito: numero di parametro
+' type ': ridefinizione del parametro predefinito: numero di parametro
 
 Un parametro di modello è stato ridefinito.
 
-L'esempio seguente genera l'errore C4348:
+L'esempio seguente genera l'C4348:
 
-```
+```cpp
 // C4348.cpp
 // compile with: /LD /W1
 template <class T=int> struct A;   // forward declaration

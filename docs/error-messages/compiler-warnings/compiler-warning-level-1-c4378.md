@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 6197bd66214785d515bb1b73ceaf5a68d6751e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc5e5365ffb53125085ce7b374f1362e93f4bb03
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410408"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966500"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Avviso del compilatore (livello 1) C4378
 
-È necessario ottenere i puntatori a funzione per eseguire gli inizializzatori; prendere in considerazione System::ModuleHandle::ResolveMethodHandle
+Per eseguire gli inizializzatori è necessario ottenere i puntatori a funzione; si consiglia System:: ModuleHandle:: ResolveMethodHandle
 
-Sotto **/clr**, inizializzatore simboli contengono token di funzione, non puntatori alle funzioni.  È necessario convertire i token usando puntatori <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+In **/CLR**i simboli degli inizializzatori contengono token di funzione e non puntatori di funzioni.  È necessario convertire i token in puntatori utilizzando <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4378.
+L'esempio seguente genera l'C4378.
 
-```
+```cpp
 // C4378.cpp
 // compile with: /W1 /clr /c
 typedef void (__cdecl *PF)(void);
@@ -65,9 +65,9 @@ int main () {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente viene illustrato come correggere l'errore C4378.
+Nell'esempio seguente viene illustrato come risolvere C4378.
 
-```
+```cpp
 // C4378_b.cpp
 // compile with: /clr
 #pragma warning(disable:4378)

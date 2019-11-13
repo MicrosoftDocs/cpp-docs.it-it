@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
-ms.openlocfilehash: b374b67fa3319be35490358d7664bcb45bc640db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 617cb2cc3774b288581a3868125ced19b28ba45a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207030"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966502"
 ---
 # <a name="compiler-warning-level-1-c4369"></a>Avviso del compilatore (livello 1) C4369
 
-'enumeratore': il valore di enumeratore 'value' non può essere rappresentato come 'type', valore sarà 'nuovo_valore'
+' Enumerator ': il valore dell'enumeratore ' value ' non può essere rappresentato come ' type ', il valore è' new_value '
 
-Un enumeratore è stato calcolato sia maggiore del valore massimo per il tipo sottostante specificato.  Ciò ha causato un overflow e il compilatore è incluso il valore dell'enumeratore sul valore più basso possibile per il tipo.
+Un enumeratore è stato calcolato in modo che sia maggiore del valore massimo per il tipo sottostante specificato.  Questo ha causato un overflow e il compilatore ha eseguito il wrapper del valore dell'enumeratore al valore minimo possibile per il tipo.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4369.
+L'esempio seguente genera l'C4369.
 
-```
+```cpp
 // C4369.cpp
 // compile with: /W1
 int main() {
