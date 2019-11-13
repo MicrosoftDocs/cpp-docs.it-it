@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4804
 ms.assetid: 069e8f44-3ef6-43bb-8524-4116fc6eea83
-ms.openlocfilehash: 28b3e49717993a3bf20c8cfec5938d698266c0f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97ad076325b11329896d98367fb3ac311ec5ded9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406535"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051563"
 ---
 # <a name="compiler-warning-level-1-c4804"></a>Avviso del compilatore (livello 1) C4804
 
-'operation': utilizzo non affidabile del tipo 'bool' nell'operazione
+' Operation ': utilizzo non sicuro del tipo ' bool ' nell'operazione
 
-Questo avviso viene generato quando utilizza un `bool` variabile o un valore in modo imprevisto. Ad esempio, C4804 viene generato se si usano l'operatore unario negativo (**-**) o l'operatore di complemento (`~`). Il compilatore valuta l'espressione.
+Questo avviso si verifica quando si utilizza una `bool` variabile o un valore in modo imprevisto. Ad esempio, C4804 viene generato se si utilizzano operatori quali l'operatore unario negativo ( **-** ) o l'operatore di complemento (`~`). Il compilatore valuta l'espressione.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4804:
+L'esempio seguente genera l'C4804:
 
-```
+```cpp
 // C4804.cpp
 // compile with: /W1
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4756
 ms.assetid: 5a16df83-6b82-4619-83bd-319af4ef1d1d
-ms.openlocfilehash: 0e4e0d5e227795a45eb22e3fcb17bdfa600d69e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 640eb77273fdbda0b12bbf2c2a326e970951cbda
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402424"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051997"
 ---
 # <a name="compiler-warning-level-2-c4756"></a>Avviso del compilatore (livello 2) C4756
 
-overflow durante operazioni aritmetiche su costanti
+overflow in aritmetica costante
 
-Il compilatore ha generato un'eccezione durante l'esecuzione di operazioni aritmetiche su costanti durante la compilazione.
+Il compilatore ha generato un'eccezione durante l'operazione aritmetica costante durante la compilazione.
 
-L'esempio seguente genera l'errore C4756:
+L'esempio seguente genera l'C4756:
 
-```
+```cpp
 // C4756.cpp
 // compile with: /W2 /Od
 int main()

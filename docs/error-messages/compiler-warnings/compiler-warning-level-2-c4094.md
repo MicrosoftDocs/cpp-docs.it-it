@@ -1,27 +1,27 @@
 ---
-title: Compilatore avviso (livello 2) C4094
+title: Avviso del compilatore (livello 2) C4094
 ms.date: 11/04/2016
 f1_keywords:
 - C4094
 helpviewer_keywords:
 - C4094
 ms.assetid: e68929fb-3a1c-4be7-920b-d5f79f534f99
-ms.openlocfilehash: 73805afc897d14c6d2cc87490dfa0769a8de5193
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c293522e5d60d0edb4cc2da289e0ece71f89329f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350517"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052211"
 ---
-# <a name="compiler-warning-level-2-c4094"></a>Compilatore avviso (livello 2) C4094
+# <a name="compiler-warning-level-2-c4094"></a>Avviso del compilatore (livello 2) C4094
 
-non contrassegnato 'token' non dichiara alcun simbolo
+' token ' senza tag non ha dichiarato alcun simbolo
 
-Il compilatore ha rilevato una dichiarazione vuota con un tag di struttura, unione o classe. La dichiarazione viene ignorata.
+Il compilatore ha rilevato una dichiarazione vuota utilizzando una struttura, un'Unione o una classe senza tag. La dichiarazione viene ignorata.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // C4094.cpp
 // compile with: /W2
 struct
@@ -33,4 +33,4 @@ int main()
 }
 ```
 
-Questa condizione genera un errore in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Questa condizione genera un errore in compatibilità ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

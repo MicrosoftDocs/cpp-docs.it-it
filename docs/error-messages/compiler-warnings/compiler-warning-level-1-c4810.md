@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4810
 ms.assetid: 39e2cae0-9c1c-4ac1-aaa0-5f661d06085b
-ms.openlocfilehash: 4701ac40d436a9f5511f2c7cec86e8183ec2f837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1f62b744547dc91923b397f3715c09659433a05
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406301"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052337"
 ---
 # <a name="compiler-warning-level-1-c4810"></a>Avviso del compilatore (livello 1) C4810
 
@@ -21,7 +21,7 @@ Questo avviso viene generato quando si usa l'opzione **show** della direttiva pr
 
 Il codice seguente, ad esempio, illustra il funzionamento dell'avviso C4810 con la direttiva pragma pack:
 
-```
+```cpp
 // C4810.cpp
 // compile with: /W1 /LD
 // C4810 expected

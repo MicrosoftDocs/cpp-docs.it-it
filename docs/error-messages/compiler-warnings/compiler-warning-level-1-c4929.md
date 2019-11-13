@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-ms.openlocfilehash: 07081f2b8e305e20eb1725d3d76a6d77638caa7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8ed1252d61748047077defb4e7e77c85e596107
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393428"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052267"
 ---
 # <a name="compiler-warning-level-1-c4929"></a>Avviso del compilatore (livello 1) C4929
 
-'file': libreria dei tipi contiene un elemento union: verrà ignorato il qualificatore 'embedded_idl'
+' file ': libreria dei tipi contiene un'Unione. il qualificatore ' embedded_idl ' verrà ignorato
 
-L'attributo embedded_idl del [#import](../../preprocessor/hash-import-directive-cpp.md) non è stato possibile applicare alla libreria dei tipi perché un'unione è presente nella libreria dei tipi. Per risolvere questo problema, non utilizzare l'attributo embedded_idl.
+Impossibile applicare l'attributo embedded_idl di [#import](../../preprocessor/hash-import-directive-cpp.md) alla libreria dei tipi perché è presente un'Unione nella libreria dei tipi. Per risolvere il problema, non usare embedded_idl.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente definisce un componente.
+Nell'esempio seguente viene definito un componente.
 
-```
+```cpp
 // C4929a.cpp
 // compile with: /LD /link /TLBOUT:C4929a.tlb
 #include <objbase.h>
@@ -55,9 +55,9 @@ struct C : I {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4929.
+L'esempio seguente genera l'C4929.
 
-```
+```cpp
 // C4929b.cpp
 // compile with: /c /W1
 #import "C4929a.tlb" embedded_idl   // C4929

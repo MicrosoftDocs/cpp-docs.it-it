@@ -1,29 +1,29 @@
 ---
-title: Compilatore avviso (livello 2) C4156
+title: Avviso del compilatore (livello 2) C4156
 ms.date: 11/04/2016
 f1_keywords:
 - C4156
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: 7d9a4ed09f026267e2c0f37fbbe4550ecd668dfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95605aa29e1faba449e19dcf20e6895d31cc5874
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350465"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052136"
 ---
-# <a name="compiler-warning-level-2-c4156"></a>Compilatore avviso (livello 2) C4156
+# <a name="compiler-warning-level-2-c4156"></a>Avviso del compilatore (livello 2) C4156
 
-eliminazione di un'espressione di matrice senza utilizzare la forma di matrice di 'delete'. forma di matrice sostituita
+eliminazione di un'espressione di matrice senza utilizzare il formato di matrice ' Delete '; form di matrice sostituito
 
-Non-matrice costituiti **eliminare** non è possibile eliminare una matrice. Il compilatore tradotto **eliminare** forma per le matrici.
+Il formato non di matrice di **Delete** non può eliminare una matrice. Il compilatore ha convertito l' **eliminazione** nel formato della matrice.
 
-Questo avviso viene visualizzato solo in estensioni Microsoft (/Ze).
+Questo avviso viene visualizzato solo in Microsoft Extensions (/Ze).
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // C4156.cpp
 // compile with: /W2
 int main()

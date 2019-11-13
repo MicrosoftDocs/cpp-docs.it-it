@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 66b8d42b63bcbf328703523c4eeda7a047f4643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8567e7392537507a25121977448ac47ec079316b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374573"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051372"
 ---
 # <a name="compiler-warning-level-1-c4677"></a>Avviso del compilatore (livello 1) C4677
 
-'function': firma del membro non privato contiene il tipo privato dell'assembly 'tipo_privato'
+' Function ': la firma del membro non privato contiene il tipo privato ' private_type ' dell'assembly
 
-Un tipo con accessibilità pubblica all'esterno dell'assembly Usa un tipo che ha accesso privato all'esterno dell'assembly. Un componente che fa riferimento al tipo pubblica dell'assembly non sarà in grado di usare il membro del tipo o i membri che fanno riferimento al tipo di assembly privati.
+Un tipo con accessibilità pubblica all'esterno dell'assembly usa un tipo con accesso privato all'esterno dell'assembly. Un componente che fa riferimento al tipo di assembly pubblico non sarà in grado di utilizzare il membro o i membri del tipo che fanno riferimento al tipo privato dell'assembly.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4677.
+L'esempio seguente genera l'C4677.
 
-```
+```cpp
 // C4677.cpp
 // compile with: /clr /c /W1
 delegate void TestDel();

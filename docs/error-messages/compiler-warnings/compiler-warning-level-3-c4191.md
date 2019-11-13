@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0d7dc57c8d3c94a52f72b536657bb3ea1c6b3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402255"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051872"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Avviso del compilatore (livello 3) C4191
 
@@ -27,7 +27,7 @@ Numerose operazioni in cui sono usati puntatori a funzione sono considerate non 
 
 - Lunghezze diverse degli elenchi di argomenti (su `__cdecl`, solo sul cast da un elenco più lungo a uno più breve, anche se quest'ultimo è varargs).
 
-- Puntatore ai dati (diverso da **void**<strong>\*</strong>) con alias basato su un puntatore a funzione.
+- Puntatore a dati (diversi da **void** <strong>\*</strong>) con alias per il funzionamento di un puntatore.
 
 - Qualsiasi altra differenza di tipo che restituisce un errore o un avviso su un `reinterpret_cast`.
 
@@ -37,7 +37,7 @@ Per impostazione predefinita, questo avviso non è attivo. Per altre informazion
 
 L'esempio seguente genera l'errore C4191:
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

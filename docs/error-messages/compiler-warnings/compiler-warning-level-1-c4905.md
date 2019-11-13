@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4905
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
-ms.openlocfilehash: c1d201eb7d3eee322a1aa1e598eeb24928e361a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0086a3b312895d86f2e76bdbbd348f90654ba8e2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380656"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051221"
 ---
 # <a name="compiler-warning-level-1-c4905"></a>Avviso del compilatore (livello 1) C4905
 
 cast di stringa letterale wide su "LPSTR"
 
-Il compilatore ha rilevato un cast di tipo unsafe. Il cast esito positivo, ma è consigliabile usare una routine di conversione.
+Il compilatore ha rilevato un cast non sicuro. Il cast ha avuto esito positivo, ma è necessario usare una routine di conversione.
 
 Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4905.
+L'esempio seguente genera l'C4905.
 
-```
+```cpp
 // C4905.cpp
 // compile with: /W1
 #pragma warning(default : 4905)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e874e00d44eef29240cca55541837facfcf64495
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402450"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052036"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Avviso del compilatore (livello 2) C4396
 
@@ -27,7 +27,7 @@ Una specializzazione di un modello di funzione non può specificare uno degli id
 
 Il codice di esempio seguente mostra una dichiarazione di funzione Friend non valida con un identificatore `inline` .
 
-```
+```cpp
 // C4396.cpp
 // compile with: /W2 /c
 

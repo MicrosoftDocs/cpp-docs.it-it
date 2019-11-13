@@ -2,7 +2,7 @@
 title: Usare il set C++ di strumenti Microsoft dalla riga di comando
 description: Usare la toolchain del compilatore Microsoft C++ (MSVC) dalla riga di comando all'esterno dell'ambiente di sviluppo integrato (IDE) di Visual Studio.
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811153"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051486"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Usare il set C++ di strumenti Microsoft dalla riga di comando
 
-È possibile compilare applicazioni C e C++ dalla riga di comando usando gli strumenti inclusi in Visual Studio. Il set C++ di strumenti del compilatore Microsoft (MSVC) è scaricabile anche come pacchetto autonomo dalla pagina dei [download di Visual Studio](https://visualstudio.microsoft.com/downloads/) . Fa parte del pacchetto **Build Tools per Visual Studio** . È possibile scegliere di scaricare solo gli strumenti necessari per C++ lo sviluppo.
+È possibile compilare applicazioni C e C++ dalla riga di comando usando gli strumenti inclusi in Visual Studio. Il set C++ di strumenti del compilatore Microsoft (MSVC) è scaricabile anche come pacchetto autonomo che non include l'IDE di Visual Studio.
+
+## <a name="download-and-install-the-tools"></a>Scaricare e installare gli strumenti
+
+Se sono stati installati Visual Studio e un C++ carico di lavoro, sono disponibili tutti gli strumenti da riga di comando. Per informazioni su come installare C++ e Visual Studio, vedere installare [ C++ il supporto in Visual Studio](vscpp-step-0-installation.md). Se si vuole solo il set di strumenti della riga di comando, scaricare gli [strumenti di compilazione per Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Quando si esegue il file eseguibile scaricato, viene aggiornato ed eseguito il Programma di installazione di Visual Studio. Per installare solo gli strumenti necessari per lo C++ sviluppo, selezionare il **C++** carico di lavoro strumenti di compilazione. È possibile selezionare librerie e set di strumenti facoltativi da includere in **Dettagli installazione**. Per compilare il codice usando i set di strumenti di Visual Studio 2015 o 2017, selezionare gli strumenti di compilazione facoltativa MSVC V140 o MSVC V141. Quando si è soddisfatti delle selezioni, scegliere **Installa**.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Come usare gli strumenti da riga di comando
 
@@ -150,7 +154,7 @@ Facoltativamente, specifica il set di strumenti del compilatore di Visual Studio
 
 ::: moniker range=">= vs-2019"
 
-Usare **-vcvars_ver = 14.2 x. yyyyy** per specificare una versione specifica del set di strumenti del compilatore di Visual Studio 2019.
+Usare **-vcvars_ver = 14.2 x. aaaay** per specificare una versione specifica del set di strumenti del compilatore di Visual Studio 2019.
 
 Usare **-vcvars_ver = 14.16** per specificare la versione più recente del set di strumenti del compilatore di Visual Studio 2017.
 

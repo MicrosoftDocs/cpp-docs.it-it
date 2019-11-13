@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-ms.openlocfilehash: 1032261c39e0a285ac686e09573161de3b46e0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c682b309cbabbaf97346e37038806d331f949ac
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324545"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052613"
 ---
 # <a name="compiler-warning-level-1-c4615"></a>Avviso del compilatore (livello 1) C4615
 
-\#avviso pragma: tipo di avviso utente sconosciuto
+avviso \#pragma: tipo di avviso utente sconosciuto
 
-Un identificatore di avviso non è valido è stato usato con **pragma** [avviso](../../preprocessor/warning.md). Per risolvere l'errore, usare un identificatore di avviso valido.
+Con **pragma** [warning](../../preprocessor/warning.md)è stato usato un identificatore di avviso non valido. Per risolvere l'errore, usare un identificatore di avviso valido.
 
-L'esempio seguente genera l'errore C4615:
+L'esempio seguente genera l'C4615:
 
-```
+```cpp
 // C4615.cpp
 // compile with: /W1 /LD
 #pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cdd6018afd26b09f7a4555ff8d0431c3364f09e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386356"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051334"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Avviso del compilatore (livello 1) C4730
 
-'main': miste _m64 e a virgola mobile le espressioni possono generare codice non corretto
+' Main ': la combinazione di _m64 ed espressioni a virgola mobile può produrre codice errato
 
-Una funzione Usa [__m64](../../cpp/m64.md) e **float**/**double** tipi. Poiché i registri MMX e a virgola mobile e condividono lo stesso fisico ripetere la registrazione dello spazio (non può essere usata contemporaneamente), usando `__m64` e **float**/**double** tipi nello stesso funzione può causare il danneggiamento dei dati, che probabilmente causa un'eccezione.
+Una funzione usa [__m64](../../cpp/m64.md) e **float**/tipi **Double** . Poiché i registri MMX e a virgola mobile condividono lo stesso spazio di registro fisico (non può essere usato contemporaneamente), l'uso di `__m64` e **float**/tipi **Double** nella stessa funzione può causare il danneggiamento dei dati, causando probabilmente un'eccezione.
 
-Usare in modo sicuro `__m64` i tipi e tipi a virgola mobile nella stessa funzione, ogni istruzione che usa uno dei tipi deve essere separati dal **m_empty** (per MMX) o **m_femms** (per 3DNow!) funzione intrinseca.
+Per usare in modo sicuro i tipi `__m64` e i tipi a virgola mobile nella stessa funzione, ogni istruzione che usa uno dei tipi deve essere separata dalla **_m_empty ()** (per MMX) o **_m_femms ()** (per 3DNow!) intrinseco.
 
-L'esempio seguente genera l'errore C4730:
+L'esempio seguente genera l'C4730:
 
-```
+```cpp
 // C4730.cpp
 // compile with: /W1
 // processor: x86

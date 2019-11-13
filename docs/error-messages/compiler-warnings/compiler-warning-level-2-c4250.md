@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 8baf3c03c87dc70a80b785d7f81cbee4e1d828f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03826f10659cbdf6035cd4dedebecca3e3302e3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349711"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052119"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Avviso del compilatore (livello 2) C4250
 
-'class1': eredita 'classe2:: membro' tramite dominanza
+' Class1': eredità Class2:: Member ' tramite dominanza
 
-Due o più membri hanno lo stesso nome. Quello di `class2` viene ereditata perché è una classe di base per le altre classi che contiene questo membro.
+Due o più membri hanno lo stesso nome. Quello in `class2` viene ereditato perché è una classe di base per le altre classi che contengono questo membro.
 
-Per eliminare C4250, usare il [avviso](../../preprocessor/warning.md) pragma.
+Per disattivare C4250, usare il pragma [warning](../../preprocessor/warning.md) .
 
-Poiché una classe base virtuale verrà condivisi tra più classi derivate, un nome in una classe derivata domina un nome in una classe base. Ad esempio, data la seguente gerarchia di classi, esistono due definizioni di func ereditate in forma di rombo: l'istanza di vbc tramite la classe debole e il dominante:: introducesse tramite la classe dominante. Una chiamata non qualificata di introducesse tramite un oggetto di classe a forma di rombo, chiama sempre l'istanza dominate:: introducesse.  Se la classe debole introduce introducesse un'istanza di, né sarebbe dominante definizione e la chiamata potrebbe essere contrassegnata come ambigua.
+Poiché una classe base virtuale è condivisa tra più classi derivate, un nome in una classe derivata domina un nome in una classe base. Data la gerarchia di classi seguente, ad esempio, sono presenti due definizioni di func ereditate all'interno di Diamond, ovvero l'istanza vbc:: Func () tramite la classe debole e l'oggetto dominante:: Func () tramite la classe dominante. Chiamata non qualificata di Func () tramite un oggetto classe Diamond, che chiama sempre l'istanza dominate:: Func ().  Se la classe debole doveva introdurre un'istanza di Func (), nessuna definizione verrebbe dominata e la chiamata verrebbe contrassegnata come ambigua.
 
-```
+```cpp
 // C4250.cpp
 // compile with: /c /W2
 #include <stdio.h>
@@ -47,9 +47,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4250.
+L'esempio seguente genera l'C4250.
 
-```
+```cpp
 // C4250_b.cpp
 // compile with: /W2 /EHsc
 #include <iostream>
@@ -80,9 +80,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Questo esempio illustra una situazione più complessa. L'esempio seguente genera l'errore C4250.
+In questo esempio viene illustrata una situazione più complessa. L'esempio seguente genera l'C4250.
 
-```
+```cpp
 // C4250_c.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

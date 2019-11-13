@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-ms.openlocfilehash: e08a8538c93681c59779f681812a9ba8f7e316a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed5cc87f1bc376526f5129aa157c38a3f034b20b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402203"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051747"
 ---
 # <a name="compiler-warning-level-3-c4243"></a>Avviso del compilatore (livello 3) C4243
 
-esiste da 'type1' a 'type2' conversione 'conversion type', ma non è accessibile
+la conversione ' tipo conversione ' esiste da' tipo1' a' tipo2', ma non è accessibile
 
-Un puntatore a una classe derivata viene convertito in un puntatore a una classe di base, ma la classe derivata eredita la classe di base con accesso privato o protetto.
+Un puntatore a una classe derivata viene convertito in un puntatore a una classe base, ma la classe derivata eredita la classe base con accesso privato o protetto.
 
-L'esempio seguente genera l'errore C4243:
+L'esempio seguente genera l'C4243:
 
-```
+```cpp
 // C4243.cpp
 // compile with: /W3
 // C4243 expected
