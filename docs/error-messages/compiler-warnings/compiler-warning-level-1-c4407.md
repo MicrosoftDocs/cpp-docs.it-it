@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: 2e47e293b650f64d2a6be91a837cc4195e073e8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: cdc25155aced50331851e9581c346155c6f8e45c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447755"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966333"
 ---
 # <a name="compiler-warning-level-1-c4407"></a>Avviso del compilatore (livello 1) C4407
 
-eseguire il cast tra diversi puntatore alle rappresentazioni di membro, compilatore potrebbe generare codice non corretto
+cast tra diverse rappresentazioni di puntatore a membro, il compilatore potrebbe generare codice non corretto
 
-È stato rilevato un cast non corretto.
+È stato rilevato un cast errato.
 
-C4407 può essere generato a causa di operazioni di conformità del compilatore eseguite per Visual Studio 2005. Puntatore a membro richiede ora un nome completo e l'operatore address-of (&).
+C4407 può essere generato a causa di operazioni di conformità del compilatore eseguite in Visual Studio 2005. Il puntatore a membro ora richiede un nome completo e l'operatore address-of (&).
 
-C4407 può verificarsi se si esegue il cast tra un più ereditarietà puntatore a membro a ereditarietà singola puntatore-a-membro. In alcuni casi ciò possa funzionare, ma a volte non viene completata perché la rappresentazione di puntatore a membro ereditarietà singola non contiene informazioni sufficienti. La compilazione con il **/vmm** può essere utile (per altre informazioni, vedere [/vmm, /vms, /vmv (rappresentazione generale)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). È anche possibile provare riorganizzando le classi base. il compilatore rileva una perdita di informazioni durante la conversione perché è una classe di base a un offset di diverso da zero da derivato.
+C4407 può verificarsi se si esegue il cast tra un puntatore a membro con ereditarietà multipla a un singolo puntatore di ereditarietà a membro. A volte questo può funzionare, ma a volte non è possibile perché la rappresentazione da puntatore a membro con ereditarietà singola non tiene a sufficienza le informazioni. La compilazione con **/VMM** può essere utile (per altre informazioni, vedere [/VMM,/VMS,/vmv (rappresentazione per utilizzo generico)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). È anche possibile provare a riorganizzare le classi base. il compilatore sta rilevando una perdita di informazioni nella conversione perché una classe base è a un offset diverso da zero dall'oggetto derivato.
 
-L'esempio seguente genera l'errore C4407:
+L'esempio seguente genera l'C4407:
 
-```
+```cpp
 // C4407.cpp
 // compile with: /W1 /c
 struct C1 {};

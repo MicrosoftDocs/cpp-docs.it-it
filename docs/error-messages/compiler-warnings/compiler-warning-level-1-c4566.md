@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-ms.openlocfilehash: c864feb2478e9f99ad6e4c0087dcef72b55de601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6a62b399aa32ec6caf2e5a9ee6d4c5836601ba4
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397264"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965967"
 ---
 # <a name="compiler-warning-level-1-c4566"></a>Avviso del compilatore (livello 1) C4566
 
-carattere rappresentato dal nome di carattere universale 'char' non può essere rappresentato nella tabella codici corrente (pagina)
+il carattere rappresentato dal nome di caratteri universali ' Char ' non può essere rappresentato nella tabella codici corrente (pagina)
 
 Non tutti i caratteri Unicode possono essere rappresentati nella tabella codici ANSI corrente.
 
-Stringhe a caratteri Narrow (caratteri a un byte) vengono convertite in caratteri multibyte, mentre non lo sono le stringhe wide (caratteri a due byte).
+Le stringhe strette (caratteri a un byte) vengono convertite in caratteri multibyte, mentre le stringhe wide (caratteri a due byte) non lo sono.
 
-L'esempio seguente genera l'errore C4566:
+L'esempio seguente genera l'C4566:
 
-```
+```cpp
 // C4566.cpp
 // compile with: /W1
 int main() {

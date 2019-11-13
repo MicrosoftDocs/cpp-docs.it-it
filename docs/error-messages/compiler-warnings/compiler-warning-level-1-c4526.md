@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4526
 ms.assetid: 490f8916-5fdc-4cad-b412-76c3382a5976
-ms.openlocfilehash: 892e6c37e54a868be48ced35354a1096aa7bf9d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ac01d6a118f37a22b39ab41fa60252866f3360
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160744"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966275"
 ---
 # <a name="compiler-warning-level-1-c4526"></a>Avviso del compilatore (livello 1) C4526
 
-'function': funzione membro statica non è possibile eseguire l'override di funzioni virtuali ' function'override virtuale ignorata, funzione virtuale verrà nascosta
+' Function ': la funzione membro statica non può eseguire l'override della funzione virtuale ' function'override virtuale ignorata. la funzione virtuale sarà nascosta
 
-La funzione membro statica soddisfa i criteri per eseguire l'override della funzione virtuale, che rende la funzione membro virtuale sia statico.
+La funzione membro statica soddisfa i criteri per eseguire l'override della funzione virtuale, rendendo la funzione membro sia virtuale che statica.
 
-Il codice seguente genera l'errore C4526:
+Il codice seguente genera l'C4526:
 
-```
+```cpp
 // C4526.cpp
 // compile with: /W1 /c
 // C4526 expected
@@ -34,8 +34,8 @@ struct myStruct2: public myStruct1 {
 };
 ```
 
-Di seguito sono indicate le possibili correzioni.
+Di seguito sono riportate le correzioni possibili:
 
-- Se la funzione è intenzionale per eseguire l'override della funzione di classe base virtuale, rimuovere l'identificatore statico.
+- Se la funzione ha lo scopo di eseguire l'override della funzione virtuale della classe di base, rimuovere l'identificatore statico.
 
-- Se la funzione è stata pensata come una funzione membro statica, rinominarlo in modo che non entrino in conflitto con la funzione di classe base virtuale.
+- Se la funzione deve essere una funzione membro statica, rinominarla in modo che non sia in conflitto con la funzione virtuale della classe di base.

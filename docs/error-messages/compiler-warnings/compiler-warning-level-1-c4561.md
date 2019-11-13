@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4561
 ms.assetid: 3a10c12c-601b-4b6c-9861-331fd022e021
-ms.openlocfilehash: 24a3ca8b35266e93f298314f45015b7a480e2af0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0fd27142f0404a53fa2fee87fb2309e2f54d2c2
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397289"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965969"
 ---
 # <a name="compiler-warning-level-1-c4561"></a>Avviso del compilatore (livello 1) C4561
 
-fastcall' incompatibile con il ' o clr' opzione: la conversione in '\_stdcall '
+' __fastcall ' incompatibile con l'opzione '/CLR ': conversione in '\__stdcall '
 
-Il [fastcall](../../cpp/fastcall.md) convenzione di chiamata di funzione non può essere utilizzato con il [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opzione del compilatore. Il compilatore ignora le chiamate a `__fastcall`. Per risolvere questo problema, rimuovere le chiamate a **fastcall** o compilare senza **/clr**.
+Impossibile utilizzare la convenzione di chiamata di funzione [__fastcall](../../cpp/fastcall.md) con l'opzione del compilatore [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) . Il compilatore ignora le chiamate a `__fastcall`. Per correggere il problema, rimuovere le chiamate a **__fastcall** o compilare senza **/CLR**.
 
-L'esempio seguente genera l'errore C4561:
+L'esempio seguente genera l'C4561:
 
-```
+```cpp
 // C4561.cpp
 // compile with: /clr /W1 /c
 // processor: x86

@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Modificare il Framework di destinazione e il set di strumenti della piattaforma'
+title: 'Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma'
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 6af7a4eb47c1d3f8b9c52eec39795c9307ca9d8e
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492225"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964897"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedura: Modificare il Framework di destinazione e il set di strumenti della piattaforma
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma
 
 È possibile modificare un file di C++ progetto di Visual Studio per le diverse versioni C++ del set di strumenti della piattaforma, il Windows SDKC++e il .NET Framework (solo progetti/CLI). Per impostazione predefinita, il sistema del progetto usa la versione .NET Framework e la versione del set di strumenti corrispondenti alla versione di Visual Studio usata per creare il progetto. È possibile modificare tutti questi valori nel file con estensione vcxproj in modo da poter usare la stessa codebase per ogni destinazione di compilazione.
 
@@ -30,9 +30,9 @@ Visual Studio supporta anche il multitargeting C++ per i progetti. È possibile 
 
 ## <a name="target-framework-ccli-project-only"></a>Framework di destinazioneC++(solo progetto/CLI)
 
-Quando si modifica il framework di destinazione, viene modificato anche il set di strumenti della piattaforma in una versione che supporta tale framework. Per impostare .NET Framework 4.5 come destinazione, ad esempio, è necessario usare un set di strumenti della piattaforma compatibile, ad esempio Visual Studio 2015 (v140), Visual Studio 2013 (v120) o Visual Studio 2012 (v110). È possibile usare il set di strumenti della piattaforma [Windows 7,1 SDK](https://www.microsoft.com/en-us/download/details.aspx?id=8279) per la .NET Framework 2,0, 3,0, 3,5 e 4 e le piattaforme x86/x64.
+Quando si modifica il framework di destinazione, viene modificato anche il set di strumenti della piattaforma in una versione che supporta tale framework. Per impostare .NET Framework 4.5 come destinazione, ad esempio, è necessario usare un set di strumenti della piattaforma compatibile, ad esempio Visual Studio 2015 (v140), Visual Studio 2013 (v120) o Visual Studio 2012 (v110). È possibile usare il set di strumenti della piattaforma [Windows 7,1 SDK](https://www.microsoft.com/download/details.aspx?id=8279) per la .NET Framework 2,0, 3,0, 3,5 e 4 e le piattaforme x86/x64.
 
-È possibile estendere ulteriormente la piattaforma di destinazione creando un set di strumenti della piattaforma personalizzato. Per altre informazioni, vedere il post sul [multitargeting nativo C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) nel blog di Visual C++.
+È possibile estendere ulteriormente la piattaforma di destinazione creando un set di strumenti della piattaforma personalizzato. Per altre informazioni, vedere il post sul [multitargeting nativo C++](https://devblogs.microsoft.com/cppblog/c-native-multi-targeting/) nel blog di Visual C++.
 
 ### <a name="to-change-the-target-framework"></a>Per modificare il framework di destinazione
 
@@ -63,7 +63,7 @@ Quando si modifica il framework di destinazione, viene modificato anche il set d
 
 1. Nel riquadro destro selezionare **Set strumenti della piattaforma** , quindi selezionare il set di strumenti desiderato dall'elenco a discesa. Ad esempio, se è stato installato il set di strumenti di Visual Studio 2010, selezionare **Visual studio 2010 (V100)** per usarlo per il progetto.
 
-1. Fare clic sul pulsante **OK** .
+1. Fare clic sul pulsante **OK**.
 
 ## <a name="see-also"></a>Vedere anche
 
