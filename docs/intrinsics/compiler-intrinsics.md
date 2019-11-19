@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 8c101de6d74a4f2d3073bd220a29f2a0328d2959
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 61fc825e333b8d839d15752ce737dfc6d3980809
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216877"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163482"
 ---
 # <a name="compiler-intrinsics"></a>Intrinseci del compilatore
 
@@ -26,15 +26,17 @@ L'uso degli intrinseci influisce sulla portabilità del codice, poiché gli intr
 
 Alcune funzioni intrinseche, ad esempio `__assume` e `__ReadWriteBarrier`, forniscono informazioni al compilatore che influiscono sul comportamento dell'utilità di ottimizzazione.
 
-Alcune funzioni intrinseche sono disponibili solo come intrinseci e alcune sono disponibili nelle implementazioni sia di intrinseci che di funzione. È possibile indicare al compilatore di usare l'implementazione di intrinseci in due modi, a seconda che si voglia abilitare solo funzioni specifiche o abilitare tutte le funzioni intrinseche. Il primo modo consiste nell'usare `#pragma intrinsic(` *intrinsic-function-name-list*`)`. Il pragma può essere usato per specificare uno o più intrinseci separati da virgole. Il secondo consiste nell'usare l'opzione del compilatore [/OI (genera funzioni intrinseche)](../build/reference/oi-generate-intrinsic-functions.md) , che rende disponibili tutte le funzioni intrinseche su una determinata piattaforma. In **/OI**usare `#pragma function(` *intrinsic-function-name-list* `)` per forzare l'uso di una chiamata di funzione al posto di un intrinseco. Se la documentazione per un intrinseco specifico rileva che la routine è disponibile solo come funzione intrinseca, l'implementazione intrinseca viene utilizzata indipendentemente dal fatto `#pragma intrinsic` che sia specificato/Oi o. In tutti i casi ,/OI `#pragma intrinsic` o consente, ma non forza, a Query Optimizer di usare l'oggetto intrinseco. L'utilità di ottimizzazione potrà ancora chiamare la funzione.
+Alcune funzioni intrinseche sono disponibili solo come intrinseci e alcune sono disponibili nelle implementazioni sia di intrinseci che di funzione. È possibile indicare al compilatore di usare l'implementazione di intrinseci in due modi, a seconda che si voglia abilitare solo funzioni specifiche o abilitare tutte le funzioni intrinseche. Il primo consiste nell'usare `#pragma intrinsic(``)`di tipo *intrinseco-funzione-nome* . Il pragma può essere usato per specificare uno o più intrinseci separati da virgole. Il secondo consiste nell'usare l'opzione del compilatore [/OI (genera funzioni intrinseche)](../build/reference/oi-generate-intrinsic-functions.md) , che rende disponibili tutte le funzioni intrinseche su una determinata piattaforma. In **/OI**usare `#pragma function(``)` *intrinseco-function-name-list* per forzare l'uso di una chiamata di funzione al posto di un intrinseco. Se la documentazione per un intrinseco specifico rileva che la routine è disponibile solo come funzione intrinseca, l'implementazione intrinseca viene utilizzata indipendentemente dal fatto che sia specificato **/OI** o `#pragma intrinsic`. In tutti i casi, **/OI** o `#pragma intrinsic` consente, ma non forza, a Query Optimizer di usare l'oggetto intrinseco. L'utilità di ottimizzazione potrà ancora chiamare la funzione.
 
 Alcune funzioni di libreria standard C/C++ sono disponibili nelle implementazioni intrinseche in alcune architetture. Quando si chiama una funzione CRT, viene utilizzata l'implementazione intrinseca se nella riga di comando viene specificato **/OI** .
 
-È disponibile un file \<di intestazione, intrin. h >, che dichiara i prototipi per le funzioni intrinseche comuni. Le funzioni intrinseche specifiche del \<produttore sono disponibili nei file di intestazione > immintrin. h > e \<ammintrin. h. Inoltre, alcune intestazioni di Windows dichiarano funzioni che eseguono il mapping su un intrinseco del compilatore.
+È disponibile un file di intestazione, \<intrin. h >, che dichiara i prototipi per le funzioni intrinseche comuni. Sono disponibili funzioni intrinseche specifiche del produttore nei file di intestazione \<immintrin. h > e \<ammintrin. h >. Inoltre, alcune intestazioni di Windows dichiarano funzioni che eseguono il mapping su un intrinseco del compilatore.
 
 Le sezioni seguenti elencano tutti gli intrinseci disponibili in varie architetture. Per altre informazioni sull'uso degli intrinseci su un particolare processore di destinazione, fare riferimento alla documentazione di riferimento del produttore.
 
 - [Oggetti intrinseci ARM](../intrinsics/arm-intrinsics.md)
+
+- [Funzioni intrinseche ARM64](../intrinsics/arm64-intrinsics.md)
 
 - [Elenco intrinseci x86](../intrinsics/x86-intrinsics-list.md)
 

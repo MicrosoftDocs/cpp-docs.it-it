@@ -4931,6 +4931,8 @@
               href: intrinsics/compiler-intrinsics.md
             - name: Intrinseci ARM
               href: intrinsics/arm-intrinsics.md
+            - name: Funzioni intrinseche ARM64
+              href: intrinsics/arm64-intrinsics.md
             - name: Elenco intrinseci x86
               href: intrinsics/x86-intrinsics-list.md
             - name: Elenco intrinseci x64 (amd64)
@@ -8339,14 +8341,14 @@
                   items:
                     - name: <algorithm>
                       href: standard-library/algorithm.md
-                    - name: 'Funzioni<algorithm> '
+                    - name: Funzioni<algorithm>
                       href: standard-library/algorithm-functions.md
                 - name: <allocators>
                   expanded: false
                   items:
                     - name: <allocators>
                       href: standard-library/allocators-header.md
-                    - name: 'Funzioni<allocators> '
+                    - name: Funzioni<allocators>
                       href: standard-library/allocators-functions.md
                     - name: Operatori <allocators>
                       href: standard-library/allocators-operators.md
@@ -8395,7 +8397,7 @@
                   items:
                     - name: <any>
                       href: standard-library/any.md
-                    - name: 'Funzioni<any> '
+                    - name: Funzioni<any>
                       href: standard-library/any-functions.md
                     - name: Classe any (libreria standard C++)
                       href: standard-library/any-class.md
@@ -8404,7 +8406,7 @@
                   items:
                     - name: <array>
                       href: standard-library/array.md
-                    - name: 'Funzioni<array> '
+                    - name: Funzioni<array>
                       href: standard-library/array-functions.md
                     - name: Operatori <array>
                       href: standard-library/array-operators.md
@@ -8419,7 +8421,7 @@
                       href: standard-library/atomic-structure.md
                     - name: Struct atomic_flag
                       href: standard-library/atomic-flag-structure.md
-                    - name: 'Funzioni<atomic> '
+                    - name: Funzioni<atomic>
                       href: standard-library/atomic-functions.md
                     - name: Enumerazioni <atomic>
                       href: standard-library/atomic-enums.md
@@ -8449,7 +8451,7 @@
                   items:
                     - name: <chrono>
                       href: standard-library/chrono.md
-                    - name: 'Funzioni<chrono> '
+                    - name: Funzioni<chrono>
                       href: standard-library/chrono-functions.md
                     - name: Operatori <chrono>
                       href: standard-library/chrono-operators.md
@@ -8497,7 +8499,7 @@
                   items:
                     - name: <complex>
                       href: standard-library/complex.md
-                    - name: 'Funzioni<complex> '
+                    - name: Funzioni<complex>
                       href: standard-library/complex-functions.md
                     - name: Operatori <complex>
                       href: standard-library/complex-operators.md
@@ -8559,7 +8561,7 @@
                   items:
                     - name: <deque>
                       href: standard-library/deque.md
-                    - name: 'Funzioni<deque> '
+                    - name: Funzioni<deque>
                       href: standard-library/deque-functions.md
                     - name: Operatori <deque>
                       href: standard-library/deque-operators.md
@@ -8570,7 +8572,7 @@
                   items:
                     - name: <exception>
                       href: standard-library/exception.md
-                    - name: 'Funzioni<exception> '
+                    - name: Funzioni<exception>
                       href: standard-library/exception-functions.md
                     - name: Typedef <exception>
                       href: standard-library/exception-typedefs.md
@@ -8587,7 +8589,7 @@
                       href: standard-library/filesystem.md
                     - name: Operatori <filesystem>
                       href: standard-library/filesystem-operators.md
-                    - name: 'Funzioni<filesystem> '
+                    - name: Funzioni<filesystem>
                       href: standard-library/filesystem-functions.md
                     - name: Enumerazioni <filesystem>
                       href: standard-library/filesystem-enumerations.md
@@ -8636,7 +8638,7 @@
                   items:
                     - name: <functional>
                       href: standard-library/functional.md
-                    - name: 'Funzioni<functional> '
+                    - name: Funzioni<functional>
                       href: standard-library/functional-functions.md
                     - name: Operatori <functional>
                       href: standard-library/functional-operators.md
@@ -8721,7 +8723,7 @@
                   items:
                     - name: <future>
                       href: standard-library/future.md
-                    - name: 'Funzioni<future> '
+                    - name: Funzioni<future>
                       href: standard-library/future-functions.md
                     - name: Enumerazioni <future>
                       href: standard-library/future-enums.md
@@ -8781,14 +8783,14 @@
                   items:
                     - name: <iomanip>
                       href: standard-library/iomanip.md
-                    - name: 'Funzioni<iomanip> '
+                    - name: Funzioni<iomanip>
                       href: standard-library/iomanip-functions.md
                 - name: <ios>
                   expanded: false
                   items:
                     - name: <ios>
                       href: standard-library/ios.md
-                    - name: 'Funzioni<ios> '
+                    - name: Funzioni<ios>
                       href: standard-library/ios-functions.md
                     - name: Typedef <ios>
                       href: standard-library/ios-typedefs.md
@@ -8807,7 +8809,7 @@
                   items:
                     - name: <istream>
                       href: standard-library/istream.md
-                    - name: 'Funzioni<istream> '
+                    - name: Funzioni<istream>
                       href: standard-library/istream-functions.md
                     - name: Operatori <istream>
                       href: standard-library/istream-operators.md
@@ -8822,7 +8824,7 @@
                   items:
                     - name: <iterator>
                       href: standard-library/iterator.md
-                    - name: 'Funzioni<iterator> '
+                    - name: Funzioni<iterator>
                       href: standard-library/iterator-functions.md
                     - name: Operatori <iterator>
                       href: standard-library/iterator-operators.md
@@ -8885,7 +8887,7 @@
                   items:
                     - name: <locale>
                       href: standard-library/locale.md
-                    - name: 'Funzioni<locale> '
+                    - name: Funzioni<locale>
                       href: standard-library/locale-functions.md
                     - name: Classe codecvt
                       href: standard-library/codecvt-class.md
@@ -8950,7 +8952,7 @@
                   items:
                     - name: <map>
                       href: standard-library/map.md
-                    - name: 'Funzioni<map> '
+                    - name: Funzioni<map>
                       href: standard-library/map-functions.md
                     - name: Operatori <map>
                       href: standard-library/map-operators.md
@@ -8965,7 +8967,7 @@
                   items:
                     - name: <memory>
                       href: standard-library/memory.md
-                    - name: 'Funzioni<memory> '
+                    - name: Funzioni<memory>
                       href: standard-library/memory-functions.md
                     - name: Operatori <memory>
                       href: standard-library/memory-operators.md
@@ -9009,7 +9011,7 @@
                   items:
                     - name: <mutex>
                       href: standard-library/mutex.md
-                    - name: 'Funzioni<mutex> '
+                    - name: Funzioni<mutex>
                       href: standard-library/mutex-functions.md
                     - name: Struct adopt_lock_t
                       href: standard-library/adopt-lock-t-structure.md
@@ -9036,7 +9038,7 @@
                   items:
                     - name: <new>
                       href: standard-library/new.md
-                    - name: 'Funzioni<new> '
+                    - name: Funzioni<new>
                       href: standard-library/new-functions.md
                     - name: Typedef <new>
                       href: standard-library/new-typedefs.md
@@ -9051,14 +9053,14 @@
                   items:
                     - name: <numeric>
                       href: standard-library/numeric.md
-                    - name: 'Funzioni<numeric> '
+                    - name: Funzioni<numeric>
                       href: standard-library/numeric-functions.md
                 - name: <optional>
                   expanded: false
                   items:
                     - name: <optional>
                       href: standard-library/optional.md
-                    - name: 'Funzioni<optional> '
+                    - name: Funzioni<optional>
                       href: standard-library/optional-functions.md
                     - name: Operatori <optional>
                       href: standard-library/optional-operators.md
@@ -9071,7 +9073,7 @@
                       href: standard-library/ostream.md
                     - name: basic_ostream (classe)
                       href: standard-library/basic-ostream-class.md
-                    - name: 'Funzioni<ostream> '
+                    - name: Funzioni<ostream>
                       href: standard-library/ostream-functions.md
                     - name: Operatori <ostream>
                       href: standard-library/ostream-operators.md
@@ -9093,7 +9095,7 @@
                   items:
                     - name: <random>
                       href: standard-library/random.md
-                    - name: 'Funzioni<random> '
+                    - name: Funzioni<random>
                       href: standard-library/random-functions.md
                     - name: Classe bernoulli_distribution
                       href: standard-library/bernoulli-distribution-class.md
@@ -9158,7 +9160,7 @@
                   items:
                     - name: <regex>
                       href: standard-library/regex.md
-                    - name: 'Funzioni<regex> '
+                    - name: Funzioni<regex>
                       href: standard-library/regex-functions.md
                     - name: Operatori <regex>
                       href: standard-library/regex-operators.md
@@ -9198,7 +9200,7 @@
                   items:
                     - name: <set>
                       href: standard-library/set.md
-                    - name: 'Funzioni<set> '
+                    - name: Funzioni<set>
                       href: standard-library/set-functions.md
                     - name: Operatori <set>
                       href: standard-library/set-operators.md
@@ -9213,7 +9215,7 @@
                   items:
                     - name: <sstream>
                       href: standard-library/sstream.md
-                    - name: 'Funzioni<sstream> '
+                    - name: Funzioni<sstream>
                       href: standard-library/sstream-functions.md
                     - name: Typedef <sstream>
                       href: standard-library/sstream-typedefs.md
@@ -9271,7 +9273,7 @@
                   items:
                     - name: <string>
                       href: standard-library/string.md
-                    - name: 'Funzioni<string> '
+                    - name: Funzioni<string>
                       href: standard-library/string-functions.md
                     - name: Operatori <string>
                       href: standard-library/string-operators.md
@@ -9343,7 +9345,7 @@
                   items:
                     - name: <thread>
                       href: standard-library/thread.md
-                    - name: 'Funzioni<thread> '
+                    - name: Funzioni<thread>
                       href: standard-library/thread-functions.md
                     - name: Operatori <thread>
                       href: standard-library/thread-operators.md
@@ -9356,7 +9358,7 @@
                   items:
                     - name: <tuple>
                       href: standard-library/tuple.md
-                    - name: 'Funzioni<tuple> '
+                    - name: Funzioni<tuple>
                       href: standard-library/tuple-functions.md
                     - name: Operatori <tuple>
                       href: standard-library/tuple-operators.md
@@ -9599,7 +9601,7 @@
                   items:
                     - name: <utility>
                       href: standard-library/utility.md
-                    - name: 'Funzioni<utility> '
+                    - name: Funzioni<utility>
                       href: standard-library/utility-functions.md
                     - name: Operatori <utility>
                       href: standard-library/utility-operators.md
@@ -9612,7 +9614,7 @@
                   items:
                     - name: <valarray>
                       href: standard-library/valarray.md
-                    - name: 'Funzioni<valarray> '
+                    - name: Funzioni<valarray>
                       href: standard-library/valarray-functions.md
                     - name: Operatori <valarray>
                       href: standard-library/valarray-operators.md
@@ -9637,7 +9639,7 @@
                   items:
                     - name: <variant>
                       href: standard-library/variant.md
-                    - name: 'Funzioni<variant> '
+                    - name: Funzioni<variant>
                       href: standard-library/variant-functions.md
                     - name: Operatori <variant>
                       href: standard-library/variant-operators.md
@@ -9665,7 +9667,7 @@
                               href: standard-library/vector-bool-reference-operator-bool.md
                             - name: 'vector<bool>::reference::operator='
                               href: standard-library/vector-bool-reference-operator-assign.md
-                    - name: 'Funzioni<vector> '
+                    - name: Funzioni<vector>
                       href: standard-library/vector-functions.md
                     - name: Operatori <vector>
                       href: standard-library/vector-operators.md
@@ -10419,9 +10421,9 @@
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: Classe single_assignment
                           href: parallel/concrt/reference/single-assignment-class.md
-                        - name: Classe single_link_registry
+                        - name: single_link_registry (classe)
                           href: parallel/concrt/reference/single-link-registry-class.md
-                        - name: source_block (classe)
+                        - name: Classe source_block
                           href: parallel/concrt/reference/source-block-class.md
                         - name: Classe source_link_manager
                           href: parallel/concrt/reference/source-link-manager-class.md
