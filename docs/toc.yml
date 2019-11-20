@@ -2854,7 +2854,7 @@
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: 'Visual C++: novità dalla versione 2003 alla 2015'
       href: porting/visual-cpp-what-s-new-2003-through-2015.md
-    - name: Compatibilità binaria C++ tra 2015 e 2019
+    - name: Compatibilità binaria C++ 2015-2019
       href: porting/binary-compat-2015-2017.md
     - name: 'Convertire e aggiornare: esempi e case study'
       items:
@@ -4215,22 +4215,7 @@
                 - name: Espressioni lambda constexpr
                   href: cpp/lambda-expressions-constexpr.md
             - name: Matrici
-              expanded: false
-              items:
-                - name: Matrici
-                  href: cpp/arrays-cpp.md
-                - name: Uso delle matrici
-                  href: cpp/using-arrays-cpp.md
-                - name: Inizializzazione di matrici
-                  href: cpp/initializing-arrays.md
-                - name: Matrici nelle espressioni
-                  href: cpp/arrays-in-expressions.md
-                - name: Interpretazione dell'operatore di indice
-                  href: cpp/interpretation-of-subscript-operator.md
-                - name: Riferimento indiretto sui tipi di matrice
-                  href: cpp/indirection-on-array-types.md
-                - name: Ordine delle matrici C++
-                  href: cpp/ordering-of-cpp-arrays.md
+              href: cpp/arrays-cpp.md
             - name: Riferimenti
               expanded: false
               items:
@@ -10421,7 +10406,7 @@
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: Classe single_assignment
                           href: parallel/concrt/reference/single-assignment-class.md
-                        - name: single_link_registry (classe)
+                        - name: Classe single_link_registry
                           href: parallel/concrt/reference/single-link-registry-class.md
                         - name: Classe source_block
                           href: parallel/concrt/reference/source-block-class.md
@@ -10435,7 +10420,7 @@
                           href: parallel/concrt/reference/target-block-class.md
                         - name: Classe task (runtime di concorrenza)
                           href: parallel/concrt/reference/task-class.md
-                        - name: Classe task_canceled
+                        - name: task_canceled (classe)
                           href: parallel/concrt/reference/task-canceled-class.md
                         - name: Classe task_completion_event
                           href: parallel/concrt/reference/task-completion-event-class.md
