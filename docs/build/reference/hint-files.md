@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707104"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189012"
 ---
 # <a name="hint-files"></a>File dei suggerimenti
 
@@ -36,8 +36,8 @@ Un file dei suggerimenti contiene suggerimenti che possono essere personalizzati
 
 > [!IMPORTANT]
 > Se si modifica o aggiunge un file dei suggerimenti, è necessario eseguire altri passaggi per rendere effettive le modifiche:
-> - Nelle versioni precedenti a Visual Studio 2017 versione 15.6: Eliminare il file con estensione sdf e/o il file VC.db nella soluzione per tutte le modifiche.
-> - In Visual Studio 2017 dalla versione 15.6 alla versione 15.9: Chiudere e riaprire la soluzione dopo aver aggiunto nuovi file dei suggerimenti.
+> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
+> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
 
 ## <a name="scenario"></a>Scenario
 
@@ -92,13 +92,13 @@ A partire da Visual Studio 2017 versione 15.8 sono disponibili numerose funziona
 
 - Azione rapida per la creazione di un file dei suggerimenti che includa la macro evidenziata oppure, se il file dei suggerimenti è già presente, per l'aggiunta della macro al file.
 
-![Macro evidenziata.](media/hint-squiggle-and-actions.png "Suggerimento e azioni rapide")
+![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
 
 Dopo l'esecuzione di una delle azioni rapide, il parser analizza di nuovo i file interessati dal file dei suggerimenti.
 
-Per impostazione predefinita, la macro dannosa è evidenziata come un suggerimento. L'evidenziazione può essere modificata in un elemento maggiormente visibile, ad esempio una sottolineatura a zigzag rossa o verde. Usare l'opzione **Macro nelle aree di esplorazione ignorate** nella sezione **Controllo ortografia codice** in **Strumenti** > **Opzioni** > **Editor di testo** > **C/C++** > **Visualizza**.
+Per impostazione predefinita, la macro dannosa è evidenziata come un suggerimento. L'evidenziazione può essere modificata in un elemento maggiormente visibile, ad esempio una sottolineatura a zigzag rossa o verde. Usare l'opzione **Macro nelle aree di esplorazione ignorate** nella sezione **Controllo ortografia codice** in **Strumenti** > **Opzioni** > **Editor di testo** > **C/C++**  > **Visualizza**.
 
-![Opzione Macro nelle aree di esplorazione ignorate.](media/skipped-regions-squiggle-option.png "Opzione di controllo delle aree ignorate.")
+![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
 
 ## <a name="display-browsing-database-errors"></a>Visualizzare gli errori del database di esplorazione
 
@@ -156,7 +156,7 @@ I suggerimenti usano questa sintassi:
 |`@>`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica la fine di un set di elementi della mappa.|
 |`#undef` *hint-name*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è specificato dall'identificatore *hint-name*.|
 |`//` *comment*|Commento a riga singola.|
-|`/*` *commento* `*/`|Un commento su più righe.|
+|`/*` *comment* `*/`|Un commento su più righe.|
 
 ## <a name="example"></a>Esempio
 
@@ -166,7 +166,7 @@ La figura illustra alcune delle directory fisiche di un progetto Visual Studio C
 
 ### <a name="hint-file-directories"></a>Directory dei file dei suggerimenti
 
-![Directory dei file dei suggerimenti comuni e specifiche del progetto.](media/hintfile.png "HintFile")
+![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Directory e contenuto dei file dei suggerimenti
 

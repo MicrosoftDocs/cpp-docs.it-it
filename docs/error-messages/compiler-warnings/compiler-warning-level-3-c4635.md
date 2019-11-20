@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
-ms.openlocfilehash: 21873a883b19924ce3ef41511d65f8ae640875f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6fd45dc6c28c0d12eb2b2991f8a087b1841d1a9
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401722"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189139"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>Avviso del compilatore (livello 3) C4635
 
@@ -21,7 +21,7 @@ Il compilatore ha rilevato alcuni problemi con i tag XML.  Correggere il problem
 
 L'esempio seguente genera l'errore C4635:
 
-```
+```cpp
 // C4635.cpp
 // compile with: /doc /clr /W3 /c
 /// <summary>
@@ -33,6 +33,6 @@ L'esempio seguente genera l'errore C4635:
 public ref class Test {};
 ```
 
-Si noti che l'output relativo a questo esempio è: **Fine tag 'member' non corrisponde al tag iniziale 'summary'.**
+L'output relativo a questo esempio è: **Il tag finale 'member' non corrisponde al tag iniziale 'summary'** .
 
-Il problema con questo esempio è che il tag di fine per \<summary > non è corretta, e il compilatore non lo riconosce come il \<riepilogo > tag di fine.  Il \<membro > tag è incorporato nel file con estensione xdc dal compilatore nelle compilazioni /doc.  Quindi, qui il problema è che il tag di fine \</member >, non corrisponde al tag iniziale precedente che il compilatore elaborato (\<riepilogo >.
+The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.
