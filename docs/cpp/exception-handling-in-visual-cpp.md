@@ -1,42 +1,62 @@
 ---
-title: Gestione delle eccezioni in MSVC
-ms.date: 05/07/2019
+title: Exception handling in MSVC
+ms.date: 11/19/2019
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: 47443f1b7021aac7755d77f797a4f7b7410281f8
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 6cf71d6e6d0519951a084ebead65003bd363395f
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222072"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246583"
 ---
-# <a name="exception-handling-in-msvc"></a>Gestione delle eccezioni in MSVC
+# <a name="exception-handling-in-msvc"></a>Exception handling in MSVC
 
-Un'eccezione è una condizione di errore, probabilmente non controllata dal programma, che impedisce al programma di proseguire il proprio percorso di esecuzione normale. Alcune operazioni, tra cui la creazione di oggetti, i file di input/output e le chiamate di funzione effettuate da altri moduli, possono dare origine a delle eccezioni anche quando il programma viene eseguito correttamente. Quando è affidabile, il codice prevede e gestisce le eccezioni.
+Un'eccezione è una condizione di errore, probabilmente non controllata dal programma, che impedisce al programma di proseguire il proprio percorso di esecuzione normale. Alcune operazioni, tra cui la creazione di oggetti, i file di input/output e le chiamate di funzione effettuate da altri moduli, possono dare origine a delle eccezioni anche quando il programma viene eseguito correttamente. Quando è affidabile, il codice prevede e gestisce le eccezioni. To detect logic errors, use assertions rather than exceptions (see [Using Assertions](/visualstudio/debugger/c-cpp-assertions)).
 
-Per rilevare errori logici all'interno di un unico programma o un modulo, usare le asserzioni, anziché le eccezioni (vedere [utilizzo delle asserzioni](/visualstudio/debugger/c-cpp-assertions)).
+## <a name="kinds-of-exceptions"></a>Kinds of exceptions
 
-Microsoft C++ compilatore (MSVC) supporta tre tipi di gestione delle eccezioni:
+The Microsoft C++ compiler (MSVC) supports three kinds of exception handling:
 
-- [Gestione delle eccezioni C++](../cpp/cpp-exception-handling.md)
+- [C++ exception handling](errors-and-exception-handling-modern-cpp.md)
 
    Per la maggior parte dei programmi C++, si dovrebbe utilizzare la gestione delle eccezioni C++, che è indipendente dai tipi e assicura che i distruttori di oggetti siano richiamati durante la rimozione dello stack.
 
-- [Gestione strutturata delle eccezioni](../cpp/structured-exception-handling-c-cpp.md)
+- [Structured exception handling](structured-exception-handling-c-cpp.md)
 
-   Windows fornisce il proprio meccanismo di eccezione, denominato SEH. Non è consigliato per la programmazione in MFC o in C++. Usare SEH solo nei programmi C non MFC.
+   Windows fornisce il proprio meccanismo di eccezione, denominato SEH. Non è consigliato per la programmazione in MFC o in C++. Use SEH only in non-MFC C programs.
 
-- [Eccezioni MFC](../mfc/exception-handling-in-mfc.md)
+- [MFC exceptions](../mfc/exception-handling-in-mfc.md)
 
-   A partire dalla versione 3.0, MCF utilizza le eccezioni C++, ma supporta ancora le precedenti macro di gestione delle eccezioni, che sono simili, nella forma, alle eccezioni C++. Sebbene per la creazione di nuovi programmi non sia consigliato utilizzare tali macro, le stesse sono ancora supportate per garantire la compatibilità con le versioni precedenti. Nei programmi che già utilizzano le macro, è possibile usare liberamente anche le eccezioni C++. Durante la pre-elaborazione, le macro vengono valutate per parole chiave definite nell'implementazione di MSVC di gestione delle eccezioni di C++ linguaggio a partire da Visual C++ versione 2.0. È possibile lasciare le macro di gestione delle eccezioni esistenti al loro posto, quando si inizia a utilizzare le eccezioni C++.
+Use the [/EH](../build/reference/eh-exception-handling-model.md) compiler option to specify the type of exception handling to use in a project; C++ exception handling is the default. Non combinare i meccanismi di gestione degli errori; ad esempio non usare le eccezioni C++ con la gestione strutturata delle eccezioni. L'uso della gestione delle eccezioni C++ rende il codice più portabile e consente di gestire eccezioni di ogni tipo. For more information about the drawbacks of structured exception handling, see [Structured Exception Handling](structured-exception-handling-c-cpp.md). For advice about mixing MFC macros and C++ exceptions, see [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-Usare la [/EH](../build/reference/eh-exception-handling-model.md) opzione del compilatore per specificare il tipo di gestione delle eccezioni da usare in un progetto. Gestione delle eccezioni C++ è il valore predefinito. Non combinare i meccanismi di gestione degli errori; ad esempio non usare le eccezioni C++ con la gestione strutturata delle eccezioni. L'uso della gestione delle eccezioni C++ rende il codice più portabile e consente di gestire eccezioni di ogni tipo. Per altre informazioni sugli svantaggi della gestione strutturata delle eccezioni, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per consigli su come combinare le macro MFC ed eccezioni C++, vedere [alle eccezioni: Utilizzo delle macro MFC ed eccezioni C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
+## <a name="in-this-section"></a>In questa sezione
 
-Per informazioni sulla gestione delle eccezioni nelle applicazioni CLR, vedere [gestione delle eccezioni (C + c++ /CLI e c++ /CX)](../extensions/exception-handling-cpp-component-extensions.md).
+- [Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)
 
-Per informazioni sulla gestione delle eccezioni nei x64 processori, vedere [x64 la gestione delle eccezioni](../build/exception-handling-x64.md).
+- [How to design for exception safety](how-to-design-for-exception-safety.md)
+
+- [How to interface between exceptional and non-exceptional code](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+
+- [The try, catch, and throw Statements](try-throw-and-catch-statements-cpp.md)
+
+- [Modalità di valutazione dei blocchi catch](how-catch-blocks-are-evaluated-cpp.md)
+
+- [Exceptions and Stack Unwinding](exceptions-and-stack-unwinding-in-cpp.md)
+
+- [Exception Specifications](exception-specifications-throw-cpp.md)
+
+- [noexcept](noexcept-cpp.md)
+
+- [Eccezioni C++ non gestite](unhandled-cpp-exceptions.md)
+
+- [Combinazione di eccezioni C (strutturate) e C++](mixing-c-structured-and-cpp-exceptions.md)
+
+- [Structured Exception Handling (SEH) (C/C++)](structured-exception-handling-c-cpp.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
+[Riferimenti al linguaggio C++](cpp-language-reference.md)</br>
+[Gestione delle eccezioni x64](../build/exception-handling-x64.md)</br>
+[Exception Handling (C++/CLI and C++/CX)](../extensions/exception-handling-cpp-component-extensions.md)
