@@ -1,15 +1,16 @@
 ---
-title: Inizializzazione di classi e struct senza costruttori (C++)
-ms.date: 10/17/2018
+title: Brace initialization for classes, structs, and unions
+description: Use brace initialization with any C++ class, struct or union
+ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 4f696f4fc8862b953e40a03c96b88d1a0b7f720b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183414"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246495"
 ---
-# <a name="initializing-classes-and-structs-without-constructors-c"></a>Inizializzazione di classi e struct senza costruttori (C++)
+# <a name="brace-initialization"></a>Brace initialization
 
 Non è sempre necessario definire un costruttore per una classe, in particolare quelli relativamente semplici. Gli utenti possono inizializzare oggetti di una classe o uno struct usando l'inizializzazione uniforme, come illustrato nell'esempio seguente:
 
@@ -60,7 +61,110 @@ int main()
 }
 ```
 
-Si noti che quando una classe o struct non dispone di alcun costruttore, si forniscono gli elementi dell'elenco nell'ordine che i membri vengono dichiarati nella classe. Se la classe ha un costruttore, fornire gli elementi nell'ordine dei parametri.
+Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. Se un tipo dispone di un costruttore predefinito, dichiarato in modo implicito o esplicito, è possibile utilizzare l'inizializzazione predefinita con parentesi graffe (con le parentesi graffe vuote). Ad esempio, la classe seguente può essere inizializzata utilizzando sia l'inizializzazione con parentesi graffe predefinita che quella non predefinita:
+
+```cpp
+#include <string>
+using namespace std;
+
+class class_a {
+public:
+    class_a() {}
+    class_a(string str) : m_string{ str } {}
+    class_a(string str, double dbl) : m_string{ str }, m_double{ dbl } {}
+double m_double;
+string m_string;
+};
+
+int main()
+{
+    class_a c1{};
+    class_a c1_1;
+
+    class_a c2{ "ww" };
+    class_a c2_1("xx");
+
+    // order of parameters is the same as the constructor
+    class_a c3{ "yy", 4.4 };
+    class_a c3_1("zz", 5.5);
+}
+```
+
+Se la classe dispone di costruttori non predefiniti, l'ordine in cui i membri della classe vengono visualizzati nell'inizializzatore con parentesi graffe è l'ordine in cui appaiono i parametri corrispondenti nel costruttore, non l'ordine in cui i membri vengono dichiarati (come nel caso di `class_a` nell'esempio precedente). Altrimenti, se il tipo non dispone di alcun costruttore dichiarato, l'ordine in cui i membri vengono visualizzati nell'inizializzatore con parentesi graffe corrisponde all'ordine in cui essi sono dichiarati; in questo caso, è possibile inizializzare un numero a piacere di membri pubblici, ma non è possibile ignorare alcun membro. Nell'esempio seguente viene illustrato l'ordine utilizzato nell'inizializzazione con parentesi graffe quando non vi è alcun costruttore dichiarato:
+
+```cpp
+class class_d {
+public:
+    float m_float;
+    string m_string;
+    wchar_t m_char;
+};
+
+int main()
+{
+    class_d d1{};
+    class_d d1{ 4.5 };
+    class_d d2{ 4.5, "string" };
+    class_d d3{ 4.5, "string", 'c' };
+
+    class_d d4{ "string", 'c' }; // compiler error
+    class_d d5("string", 'c', 2.0 }; // compiler error
+}
+```
+
+Se il costruttore predefinito è dichiarato in modo esplicito ma contrassegnato come eliminato, l'inizializzazione con parentesi graffe predefinita non può essere utilizzata:
+
+```cpp
+class class_f {
+public:
+    class_f() = delete;
+    class_f(string x): m_string { x } {}
+    string m_string;
+};
+int main()
+{
+    class_f cf{ "hello" };
+    class_f cf1{}; // compiler error C2280: attempting to reference a deleted function
+}
+```
+
+You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+
+```cpp
+class_d* cf = new class_d{4.5};
+kr->add_d({ 4.5 });
+return { 4.5 };
+```
+
+## <a name="initializer_list-constructors"></a>initializer_list constructors
+
+The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. È possibile creare un initializer_list tramite l'inizializzazione con parentesi graffe:
+
+```cpp
+initializer_list<int> int_list{5, 6, 7};
+```
+
+> [!IMPORTANT]
+>  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+
+Un `initializer_list` può essere copiato. In questo caso, i membri del nuovo elenco sono riferimenti ai membri dell'elenco originale:
+
+```cpp
+initializer_list<int> ilist1{ 5, 6, 7 };
+initializer_list<int> ilist2( ilist1 );
+if (ilist1.begin() == ilist2.begin())
+    cout << "yes" << endl; // expect "yes"
+```
+
+Le classi di contenitori di libreria standard e `string`, `wstring` e `regex`, dispongono di costruttori `initializer_list`. Negli esempi seguenti viene illustrato come effettuare l'inizializzazione con parentesi graffe con questi costruttori:
+
+```cpp
+vector<int> v1{ 9, 10, 11 };
+map<int, string> m1{ {1, "a"}, {2, "b"} };
+string s{ 'a', 'b', 'c' };
+regex rgx{'x', 'y', 'z'};
+```
+
 
 ## <a name="see-also"></a>Vedere anche
 

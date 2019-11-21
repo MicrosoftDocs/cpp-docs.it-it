@@ -3,20 +3,20 @@ title: Portabilità in base ai limiti ABI (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-ms.openlocfilehash: 3f72bc32e436c2f7a2f76ed6bbb9553b5e5be6b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 379b402354c6f08e003dffb38366d1dce20e0987
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267676"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246396"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilità in base ai limiti ABI (C++ moderno)
 
-Usare tipi sufficientemente portabili e le convenzioni in corrispondenza dei limiti di interfaccia binaria. Un tipo"portable" è un tipo incorporato C o uno struct che contiene solo i tipi predefiniti di C. Tipi di classe possono essere utilizzati solo quando chiamante e chiamato concordano su layout, la chiamata a convenzione e così via. Ciò è possibile solo quando vengono compilate entrambe con il compilatore stesso e le impostazioni del compilatore.
+Use sufficiently portable types and conventions at binary interface boundaries. A “portable type” is a C built-in type or a struct that contains only C built-in types. Class types can only be used when caller and callee agree on layout, calling convention, etc. This is only possible when both are compiled with the same compiler and compiler settings.
 
-## <a name="how-to-flatten-a-class-for-c-portability"></a>Come rendere flat una classe per la portabilità di C
+## <a name="how-to-flatten-a-class-for-c-portability"></a>How to flatten a class for C portability
 
-Quando i chiamanti potrebbero essere compilati con un altro compilatore/linguaggio e quindi "appiattire" a un **extern "C"** API con una convenzione di chiamata specifica:
+When callers may be compiled with another compiler/language, then “flatten” to an **extern "C"** API with a specific calling convention:
 
 ```cpp
 // class widget {
@@ -34,6 +34,6 @@ extern "C" {        // functions using explicit "this"
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

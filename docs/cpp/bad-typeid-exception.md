@@ -1,5 +1,5 @@
 ---
-title: Eccezione bad_typeid
+title: bad_typeid (eccezione)
 ms.date: 10/04/2019
 f1_keywords:
 - bad_typeid
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 6410f27342ed40300ff236ee1c47ada740255f84
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: bb56de77ba001b5a511ef3a2695d18109b1ed3ca
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998797"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245923"
 ---
-# <a name="bad_typeid-exception"></a>Eccezione bad_typeid
+# <a name="bad_typeid-exception"></a>bad_typeid (eccezione)
 
-L'eccezione **bad_typeid** viene generata dall' [operatore typeid](../cpp/typeid-operator.md) quando l'operando per **typeid** è un puntatore null.
+The **bad_typeid** exception is thrown by the [typeid operator](../cpp/typeid-operator.md) when the operand for **typeid** is a NULL pointer.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,7 +28,7 @@ catch (bad_typeid)
 
 ## <a name="remarks"></a>Note
 
-L'interfaccia per **bad_typeid** è:
+The interface for **bad_typeid** is:
 
 ```cpp
 class bad_typeid : public exception
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-Nell'esempio seguente viene illustrato l'operatore **typeid** che genera un'eccezione **bad_typeid** .
+The following example shows the **typeid** operator throwing a **bad_typeid** exception.
 
 ```cpp
 // expre_bad_typeid.cpp

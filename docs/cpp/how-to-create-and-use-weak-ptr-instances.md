@@ -1,25 +1,25 @@
 ---
-title: 'Procedura: Creare e usare istanze di weak_ptr'
+title: 'How to: Create and use weak_ptr instances'
 ms.custom: how-to
-ms.date: 09/18/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: e5d1b13d894a617ca514e26f14fde3f514540d34
-ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
+ms.openlocfilehash: 32e8d64fdb6449f1d40aec4161bfda54987ca66a
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127171"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245593"
 ---
-# <a name="how-to-create-and-use-weak_ptr-instances"></a>Procedura: Creare e usare istanze di weak_ptr
+# <a name="how-to-create-and-use-weak_ptr-instances"></a>How to: Create and use weak_ptr instances
 
-A volte un oggetto deve archiviare un modo per accedere all'oggetto sottostante di `shared_ptr` un senza causare l'incremento del conteggio dei riferimenti. In genere, questa situazione si verifica quando sono presenti riferimenti `shared_ptr` ciclici tra le istanze.
+Sometimes an object must store a way to access the underlying object of a [shared_ptr](../standard-library/shared-ptr-class.md) without causing the reference count to be incremented. Typically, this situation occurs when you have cyclic references between `shared_ptr` instances.
 
-Il progetto migliore è evitare la proprietà condivisa dei puntatori ogni volta che è possibile. Tuttavia, se è necessario avere la proprietà condivisa `shared_ptr` delle istanze, evitare i riferimenti ciclici tra di essi. Quando i riferimenti ciclici sono inevitabili o anche preferibili per qualche motivo `weak_ptr` , usare per assegnare a uno o più proprietari un riferimento debole a `shared_ptr`un altro. Utilizzando un `weak_ptr`è possibile creare un oggetto `shared_ptr` che si unisce a un set di istanze correlate esistente, ma solo se la risorsa di memoria sottostante è ancora valida. Un `weak_ptr` oggetto stesso non partecipa al conteggio dei riferimenti e pertanto non può impedire il conteggio dei riferimenti da zero. Tuttavia, è possibile utilizzare un `weak_ptr` oggetto per tentare di ottenere una nuova copia `shared_ptr` di con cui è stata inizializzata. Se la memoria è già stata eliminata, `weak_ptr`l'operatore bool di `false`restituisce. Se la memoria è ancora valida, il nuovo puntatore condiviso incrementa il conteggio dei riferimenti e garantisce che la memoria sia valida fino a quando la `shared_ptr` variabile rimane nell'ambito.
+The best design is to avoid shared ownership of pointers whenever you can. However, if you must have shared ownership of `shared_ptr` instances, avoid cyclic references between them. When cyclic references are unavoidable, or even preferable for some reason, use [weak_ptr](../standard-library/weak-ptr-class.md) to give one or more of the owners a weak reference to another `shared_ptr`. By using a `weak_ptr`, you can create a `shared_ptr` that joins to an existing set of related instances, but only if the underlying memory resource is still valid. A `weak_ptr` itself does not participate in the reference counting, and therefore, it cannot prevent the reference count from going to zero. However, you can use a `weak_ptr` to try to obtain a new copy of the `shared_ptr` with which it was initialized. If the memory has already been deleted, the `weak_ptr`'s bool operator returns `false`. If the memory is still valid, the new shared pointer increments the reference count and guarantees that the memory will be valid as long as the `shared_ptr` variable stays in scope.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio di codice riportato di seguito viene `weak_ptr` illustrato un caso in cui viene utilizzato per garantire la corretta eliminazione di oggetti con dipendenze circolari. Quando si esamina l'esempio, si supponga che sia stato creato solo dopo che sono state prese in considerazione soluzioni alternative. Gli `Controller` oggetti rappresentano un aspetto di un processo del computer e operano in modo indipendente. Ogni controller deve essere in grado di eseguire query sullo stato degli altri controller in qualsiasi momento e ognuno di essi contiene un `vector<weak_ptr<Controller>>` privato a questo scopo. Ogni vettore contiene un riferimento circolare e pertanto `weak_ptr` vengono usate le istanze `shared_ptr`anziché.
+The following code example shows a case where `weak_ptr` is used to ensure proper deletion of objects that have circular dependencies. As you examine the example, assume that it was created only after alternative solutions were considered. The `Controller` objects represent some aspect of a machine process, and they operate independently. Each controller must be able to query the status of the other controllers at any time, and each one contains a private `vector<weak_ptr<Controller>>` for this purpose. Each vector contains a circular reference, and therefore, `weak_ptr` instances are used instead of `shared_ptr`.
 
 [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]
 
@@ -82,7 +82,7 @@ Destroying Controller4
 Press any key
 ```
 
-Come esperimento, modificare il vettore `others` in modo che sia un `vector<shared_ptr<Controller>>`e quindi nell'output si noti che non viene richiamato alcun distruttore quando `TestRun` viene restituito.
+As an experiment, modify the vector `others` to be a `vector<shared_ptr<Controller>>`, and then in the output, notice that no destructors are invoked when `TestRun` returns.
 
 ## <a name="see-also"></a>Vedere anche
 

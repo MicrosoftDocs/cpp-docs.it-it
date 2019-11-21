@@ -1,5 +1,5 @@
 ---
-title: Eccezioni hardware
+title: 'Eccezioni hardware:'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions [C++], hardware
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 17775f3b2ee6dfa235c93d0bf0e3335b464aaa69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b74f47cd86d94b50ab9213b3e517c2b08db696
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153671"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246556"
 ---
-# <a name="hardware-exceptions"></a>Eccezioni hardware
+# <a name="hardware-exceptions"></a>Eccezioni hardware:
 
 La maggior parte delle eccezioni standard riconosciute dal sistema operativo sono quelle definite a livello hardware. In Windows vengono riconosciute alcune eccezioni software di basso livello, ma queste sono generalmente gestite meglio dal sistema operativo.
 
@@ -27,7 +27,7 @@ Le eccezioni hardware riconosciute da Windows sono riepilogate nella tabella seg
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|Lettura o scrittura in una posizione di memoria inaccessibile.|
 |STATUS_BREAKPOINT|Rilevamento di punti di interruzione definiti a livello hardware; utilizzato solo dai debugger.|
-|STATUS_DATATYPE_MISALIGNMENT|Lettura o scrittura nei dati in un indirizzo allineato in modo non corretto. Le entità a 16 bit devono ad esempio essere allineate su limiti di 2 byte. (Non applicabile a Intel 80*x*x86 processori.)|
+|STATUS_DATATYPE_MISALIGNMENT|Lettura o scrittura nei dati in un indirizzo allineato in modo non corretto. Le entità a 16 bit devono ad esempio essere allineate su limiti di 2 byte. (Not applicable to Intel 80*x*86 processors.)|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|Divisione del tipo a virgola mobile per 0,0.|
 |STATUS_FLOAT_OVERFLOW|Superamento del massimo esponente positivo del tipo a virgola mobile.|
 |STATUS_FLOAT_UNDERFLOW|Superamento del minimo esponente negativo del tipo a virgola mobile.|
@@ -38,9 +38,9 @@ Le eccezioni hardware riconosciute da Windows sono riepilogate nella tabella seg
 |STATUS_INTEGER_OVERFLOW|Tentativo di eseguire un'operazione che supera l'intervallo dei numeri interi.|
 |STATUS_SINGLE_STEP|Esecuzione di un'istruzione in modalità di istruzione singola; utilizzato solo dai debugger.|
 
-Molte eccezioni presenti nella tabella precedente devono essere gestite dai debugger, dal sistema operativo o da altro codice di basso livello. Ad eccezione degli errori correlati ai tipi Integer e a virgola mobile, tali errori non devono essere gestiti nel codice. Di conseguenza, in genere è necessario utilizzare il filtro di gestione delle eccezioni per ignorarle (valutandole 0). In caso contrario, è possibile impedire ai meccanismi di livello più basso di rispondere in modo appropriato. Tuttavia, è possibile, adottare le precauzioni appropriate contro l'impatto potenziale di questi errori di basso livello per [scrittura di gestori di terminazione](../cpp/writing-a-termination-handler.md).
+Molte eccezioni presenti nella tabella precedente devono essere gestite dai debugger, dal sistema operativo o da altro codice di basso livello. Ad eccezione degli errori correlati ai tipi Integer e a virgola mobile, tali errori non devono essere gestiti nel codice. Di conseguenza, in genere è necessario utilizzare il filtro di gestione delle eccezioni per ignorarle (valutandole 0). In caso contrario, è possibile impedire ai meccanismi di livello più basso di rispondere in modo appropriato. You can, however, take appropriate precautions against the potential effect of these low-level errors by [writing termination handlers](../cpp/writing-a-termination-handler.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)<br/>
+[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
 [Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
