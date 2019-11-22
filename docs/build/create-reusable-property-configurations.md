@@ -3,16 +3,16 @@ title: Condividere o riutilizzare le impostazioni di progetto di Visual Studio-C
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 9a8f6da3dc754aa9d47d46e26207a02bd1685ea8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 49a0153edc5678777c937423ba2bdbd2d92a6a35
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313187"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303217"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Condividere o riutilizzare le impostazioni di progetto di Visual Studio
 
-Per creare un gruppo personalizzato di impostazioni che è possibile condividere con altri utenti o riutilizzare in più progetti, utilizzare **Gestione proprietà** per creare una *finestra delle proprietà* (file con estensione Props) per archiviare le impostazioni per ogni tipo di progetto che si desidera riutilizzare o condividere con altri. L'utilizzo delle finestre delle proprietà è molto meno soggetto a errori rispetto ad altri modi per creare impostazioni "globali". 
+Per creare un gruppo personalizzato di impostazioni che è possibile condividere con altri utenti o riutilizzare in più progetti, utilizzare **Gestione proprietà** per creare una *finestra delle proprietà* (file props) per archiviare le impostazioni per ogni tipo di progetto che si desidera riutilizzare o condividere con altri. L'utilizzo delle finestre delle proprietà è molto meno soggetto a errori rispetto ad altri modi per creare impostazioni "globali". 
 
 > [!IMPORTANT]
 > **File con estensione user e per quale motivo sono problematici**
@@ -21,7 +21,7 @@ Per creare un gruppo personalizzato di impostazioni che è possibile condividere
 >
 > Sebbene i file con estensione user vengano ancora installati da Visual Studio e partecipino all'ereditarietà delle proprietà, sono vuoti per impostazione predefinita. È consigliabile eliminare il riferimento a essi in **Gestione proprietà** per verificare che i progetti funzionino a prescindere dalle impostazioni per utente e per computer. Questo è importante per garantire il corretto funzionamento in un ambiente di controllo del codice sorgente.
 
-Per visualizzare **Gestione proprietà**, sulla barra dei menu scegliere **Visualizza** > **Gestione proprietà** o **Visualizza** > **altre finestre** > **Gestione proprietà**, a seconda delle impostazioni.
+Per visualizzare **Gestione proprietà**, sulla barra dei menu scegliere **Visualizza** > **Gestione proprietà** o **Visualizza** > altre > di Windows **Gestione proprietà,** a seconda delle impostazioni.
 
 Se si ha un set di proprietà comune usato di frequente da applicare a più progetti, è possibile usare **Gestione proprietà** per acquisirle in un file della *finestra delle proprietà* riutilizzabile la cui estensione di file è generalmente props. È possibile applicare il foglio (o i fogli) a nuovi progetti in modo da non dover impostare le relative proprietà da zero.
 
@@ -35,16 +35,16 @@ Le proprietà in una finestra delle proprietà vengono sottoposte a override se 
 
 È possibile importare una finestra delle proprietà ogni volta che si rivela necessario. Più progetti in una soluzione possono ereditare le impostazioni dalla stessa finestra delle proprietà e in un progetto possono essere presenti più finestre. La stessa finestra delle proprietà può ereditare le impostazioni da un'altra finestra delle proprietà.
 
-È inoltre possibile creare una finestra delle proprietà per più configurazioni. A tale scopo, creare una finestra delle proprietà per ogni configurazione, aprire il menu di scelta rapida per una di esse, scegliere **Aggiungi finestra delle proprietà esistente** e quindi aggiungere le altre finestre. Se tuttavia si usa una finestra delle proprietà comuni, si tenga presente che quando si imposta una proprietà, essa è valida per tutte le configurazioni a cui la finestra viene applicata. Inoltre, tramite l'IDE non vengono mostrati i progetti o le altre finestre delle proprietà tramite cui si sta ereditando da una finestra delle proprietà specificata.
+È inoltre possibile creare una finestra delle proprietà per più configurazioni. A tale scopo, creare una finestra delle proprietà per ogni configurazione, aprire il menu di scelta rapida per una di esse, scegliere **Aggiungi finestra delle proprietà esistente** e quindi aggiungere le altre finestre. Tuttavia, se si utilizza una finestra delle proprietà comune, tenere presente che quando si imposta una proprietà, viene impostata per tutte le configurazioni a cui si applica il foglio e che l'IDE non Mostra i progetti o altre finestre delle proprietà che ereditano da una finestra delle proprietà specificata.
 
 In soluzioni di grandi dimensioni, in cui vengono usati numerosi progetti, può essere utile creare una finestra delle proprietà a livello di soluzione. Quando si aggiunge un progetto alla soluzione, usare **Gestione proprietà** per aggiungere tale finestra delle proprietà al progetto. Se richiesto a livello di progetto, è possibile aggiungere una nuova finestra delle proprietà per impostare i valori specifici del progetto.
 
 > [!IMPORTANT]
-> Un file props per impostazione predefinita non partecipa al controllo del codice sorgente, poiché non viene creato come elemento di progetto. È possibile aggiungere manualmente il file come elemento di soluzione se si desidera includerlo nel controllo del codice sorgente.
+> Un file. props per impostazione predefinita non partecipa al controllo del codice sorgente perché non viene creato come elemento di progetto. È possibile aggiungere manualmente il file come elemento di soluzione se si desidera includerlo nel controllo del codice sorgente.
 
 #### <a name="to-create-a-property-sheet"></a>Per creare una finestra delle proprietà
 
-1. Sulla barra dei menu scegliere **Visualizza** > **Gestione proprietà** o **Visualizza** > **altre** > **Gestione proprietà**di Windows. Verrà aperto **Gestione proprietà**.
+1. Nella barra dei menu scegliere **visualizza** > **Gestione proprietà** o **Visualizza** > altre **Gestione proprietà** > di **Windows** . Verrà aperto **Gestione proprietà**.
 
 2. Per definire l'ambito della finestra delle proprietà, selezionare l'elemento a cui si applica. Può trattarsi di una configurazione specifica o di un'altra finestra delle proprietà. Aprire il menu di scelta rapida per questo elemento e quindi scegliere **Aggiungi nuova finestra delle proprietà del progetto**. Specificare un nome e un percorso.
 

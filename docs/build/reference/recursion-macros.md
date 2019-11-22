@@ -1,27 +1,32 @@
 ---
 title: Macro di ricorsione
-ms.date: 11/04/2016
+description: Descrive le macro utilizzate per chiamare NMAKE nelle sessioni ricorsive.
+ms.date: 11/20/2019
 helpviewer_keywords:
 - NMAKE program, recursion macros
 - recursion macros
 - macros, recursion
 ms.assetid: c53e5ae7-619e-46b1-bdc2-86d8c7798b1d
-ms.openlocfilehash: 064bc40906bcf3a126c225585a6df43443b5c38e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- MAKE
+- MAKEDIR
+- MAKEFLAGS
+ms.openlocfilehash: f2bda23cb079e4fd7d12cea3598d33b3625c088d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319239"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303151"
 ---
 # <a name="recursion-macros"></a>Macro di ricorsione
 
-Usare le macro di ricorsione per chiamare in modo ricorsivo NMAKE. Le sessioni ricorsiva ereditano macro della riga di comando e variabili di ambiente e informazioni Tools. ini. Mentre non ereditano regole di inferenza definite nel makefile o **. I SUFFISSI** e **. PREZIOSE** specifiche. Per passare una sessione NMAKE ricorsiva delle macro, impostare una variabile di ambiente con SET prima della chiamata ricorsiva, definire una macro nel comando per la chiamata ricorsiva o definire una macro in Tools. ini.
+Usare le macro di ricorsione per chiamare NMAKE in modo ricorsivo. Le sessioni ricorsive ereditano le macro della riga di comando e delle variabili di ambiente e le informazioni su Tools. ini. Non ereditano regole di inferenza definite da makefile o `.SUFFIXES` e `.PRECIOUS` specifiche. Esistono tre modi per passare le macro a una sessione NMAKE ricorsiva: impostare una variabile di ambiente con un comando :::no-loc text="SET"::: prima della chiamata ricorsiva. Definire una macro nel comando per la chiamata ricorsiva. In alternativa, definire una macro in Tools. ini.
 
 |Macro|Definizione|
 |-----------|----------------|
-|**MAKE**|Comando usato originariamente per richiamare NMAKE.<br /><br /> La macro $ (Make) fornisce il percorso completo di nmake.exe.|
-|**MAKEDIR**|Directory corrente quando è stata richiamata NMAKE.|
-|**MAKEFLAGS**|Opzioni attualmente in vigore. Usare come `/$(MAKEFLAGS)`.  Si noti che, /F non sono incluso.|
+|**MAKE**|Comando utilizzato originariamente per richiamare NMAKE.<br /><br /> La macro `$(MAKE)` fornisce il percorso completo di NMAKE. exe.|
+|**MAKEDIR**|Directory corrente in cui è stato richiamato NMAKE.|
+|**MAKEFLAGS**|Opzioni attualmente attive. Utilizzare come `/$(MAKEFLAGS)`. L'opzione **/f** non è inclusa.|
 
 ## <a name="see-also"></a>Vedere anche
 

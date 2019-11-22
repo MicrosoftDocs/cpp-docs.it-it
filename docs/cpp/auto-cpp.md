@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284760"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303385"
 ---
 # <a name="auto-c"></a>auto (C++)
 
@@ -28,45 +28,45 @@ auto declarator initializer;
 [](auto param1, auto param2) {};
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **automatica** parola chiave indica al compilatore di usare l'espressione di inizializzazione di una variabile dichiarata, o un parametro di espressione lambda, per dedurre il tipo.
+La parola chiave **auto** indica al compilatore di usare l'espressione di inizializzazione di una variabile dichiarata o un parametro dell'espressione lambda per dedurre il tipo.
 
-È consigliabile usare la **automatica** parola chiave per la maggior parte dei casi, a meno che non si desideri effettivamente una conversione, perché offre questi vantaggi:
+Si consiglia di usare la parola chiave **auto** per la maggior parte delle situazioni, a meno che non si desideri effettivamente una conversione, perché offre i vantaggi seguenti:
 
-- **Affidabilità:** Se viene modificato il tipo dell'espressione, incluso quando viene modificato un tipo restituito della funzione, ovvero comunque a funzionare.
+- **Affidabilità:** se il tipo dell'espressione viene modificato, ad esempio quando il tipo restituito dalla funzione cambia, continua comunque a funzionare.
 
-- **Prestazioni:** Si ha la certezza che non verrà eseguita alcuna conversione.
+- **Prestazioni:** non verrà eseguita alcuna conversione.
 
-- **Usabilità:** Non è necessario preoccuparsi delle difficoltà legate all'ortografia nome tipo e di errori ortografici.
+- **Usabilità:** Non è necessario preoccuparsi delle difficoltà di ortografia del nome del tipo e dei digitazioni.
 
-- **Efficienza:** La codifica può essere più efficiente.
+- **Efficienza:** la codifica può essere più efficiente.
 
-Casi di conversione in cui è possibile evitare di usare **automatica**:
+Casi di conversione in cui potrebbe non essere necessario usare **auto**:
 
 - Quando si desidera esclusivamente un tipo specifico.
 
-- Tipi di helper modello di espressione, ad esempio, `(valarray+valarray)`.
+- Tipi di helper del modello di espressione, ad esempio `(valarray+valarray)`.
 
-Usare la **automatica** parola chiave, usarlo invece di un tipo per dichiarare una variabile e specificare un'espressione di inizializzazione. Inoltre, è possibile modificare il **automatica** (parola chiave) tramite, ad esempio identificatori e dichiaratori **const**, **volatile**, puntatore (`*`), riferimenti (`&`) e riferimento rvalue (`&&`). Il compilatore valuta l'espressione di inizializzazione, quindi utilizza tali informazioni per dedurre il tipo della variabile.
+Per usare la parola chiave **auto** , usarla invece di un tipo per dichiarare una variabile e specificare un'espressione di inizializzazione. Inoltre, è possibile modificare la parola chiave **auto** usando gli identificatori e i dichiaratori quali **const**, **volatile**, Pointer (`*`), Reference (`&`) e il riferimento rvalue (`&&`). Il compilatore valuta l'espressione di inizializzazione, quindi utilizza tali informazioni per dedurre il tipo della variabile.
 
-L'espressione di inizializzazione può essere un'assegnazione (sintassi del segno di uguale), un'inizializzazione diretta (sintassi di tipo funzione), un' [operatore new](new-operator-cpp.md) espressione o l'espressione di inizializzazione può essere il  *for-range-declaration* parametro in un [Range-based per istruzione (C++)](../cpp/range-based-for-statement-cpp.md) istruzione. Per altre informazioni, vedere [inizializzatori](../cpp/initializers.md) e gli esempi di codice più avanti in questo documento.
+L'espressione di inizializzazione può essere un'assegnazione (sintassi del segno di uguale), un'inizializzazione diretta (sintassi di tipo funzione), un'espressione [operator new](new-operator-cpp.md) oppure l'espressione di inizializzazione può essere il parametro *for-range-declaration* in un'istruzione [per istruzione (C++) basata sull'intervallo](../cpp/range-based-for-statement-cpp.md) . Per altre informazioni, vedere [Inizializzatori](../cpp/initializers.md) e gli esempi di codice più avanti in questo argomento.
 
-Il **automatica** (parola chiave) è un segnaposto per un tipo, ma non è un tipo. Pertanto, il **automatica** parola chiave non può essere utilizzata in un cast o operatori, ad esempio [sizeof](../cpp/sizeof-operator.md) e (per C++/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
+La parola chiave **auto** è un segnaposto per un tipo, ma non è un tipo. Non è quindi possibile usare la parola chiave **auto** nei cast o negli operatori, ad esempio [sizeof](../cpp/sizeof-operator.md) e C++(per/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Utilizzabilità
 
-Il **automatica** (parola chiave) è un modo semplice per dichiarare una variabile con un tipo complesso. Ad esempio, è possibile usare **automatica** per dichiarare una variabile in cui l'espressione di inizializzazione include modelli, puntatori a funzioni o i puntatori ai membri.
+La parola chiave **auto** è un modo semplice per dichiarare una variabile con un tipo complesso. Ad esempio, è possibile usare **auto** per dichiarare una variabile in cui l'espressione di inizializzazione include modelli, puntatori a funzioni o puntatori a membri.
 
-È anche possibile usare **automatica** dichiarare e inizializzare una variabile in un'espressione lambda. Non è possibile dichiarare il tipo della variabile manualmente poiché il tipo di un'espressione lambda è noto solo al compilatore. Per altre informazioni, vedere [esempi di espressioni Lambda](../cpp/examples-of-lambda-expressions.md).
+È anche possibile usare **auto** per dichiarare e inizializzare una variabile in un'espressione lambda. Non è possibile dichiarare il tipo della variabile manualmente poiché il tipo di un'espressione lambda è noto solo al compilatore. Per altre informazioni, vedere [Esempi di espressioni lambda](../cpp/examples-of-lambda-expressions.md).
 
 ## <a name="trailing-return-types"></a>Tipi restituiti finali
 
-È possibile usare **automatica**, in combinazione con la **decltype** identificatore, per scrivere librerie di modelli di tipo. Uso **automatica** e **decltype** per dichiarare una funzione di modello restituiscono il cui tipo dipende dai tipi dei relativi argomenti di modello. In alternativa, usare **automatica** e **decltype** per dichiarare una funzione di modello che esegue il wrapping di una chiamata a un'altra funzione e quindi restituisce il tipo restituito di altra funzione. Per altre informazioni, vedere [decltype](../cpp/decltype-cpp.md).
+È possibile usare **auto**, insieme all'identificatore di tipo **decltype** , per facilitare la scrittura di librerie di modelli. Usare **auto** e **decltype** per dichiarare una funzione di modello il cui tipo restituito dipende dai tipi dei relativi argomenti di modello. In alternativa, usare **auto** e **decltype** per dichiarare una funzione di modello che esegue il wrapping di una chiamata a un'altra funzione e quindi restituisce il tipo restituito dell'altra funzione. Per ulteriori informazioni, vedere [decltype](../cpp/decltype-cpp.md).
 
 ## <a name="references-and-cv-qualifiers"></a>Riferimenti ed elementi cv-qualifier
 
-Si noti che l'utilizzo **automatica** Elimina riferimenti, qualificatori const e volatili qualificatori. Si consideri l'esempio seguente:
+Si noti che l'utilizzo di Elimina **automaticamente** i riferimenti, i qualificatori const e i qualificatori volatili. Si consideri l'esempio seguente:
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -88,11 +88,11 @@ int main( )
 }
 ```
 
-Nell'esempio precedente, myAuto sia un numero intero, non è un riferimento di int, l'output viene `11 11`, non `11 12` come sarebbe il caso se il qualificatore di riferimento non fosse stato rilasciato **auto**.
+Nell'esempio precedente, la funzione auto è un valore int, non un riferimento int, quindi l'output viene `11 11`, non `11 12` come si farebbe se il qualificatore di riferimento non venisse eliminato da **auto**.
 
-## <a name="type-deduction-with-braced-initializers-c14"></a>Deduzione del tipo con inizializzatori racchiusi tra parentesi graffe (c++14)
+## <a name="type-deduction-with-braced-initializers-c14"></a>Deduzione del tipo con inizializzatori con parentesi graffe (C++ 14)
 
-Esempio di codice seguente viene illustrato come inizializzare una variabile automatica usando le parentesi graffe. Si noti la differenza tra B e C e tra A ed E.
+Nell'esempio di codice seguente viene illustrato come inizializzare una variabile auto utilizzando le parentesi graffe. Si noti la differenza tra B e C e tra A e e.
 
 ```cpp
 #include <initializer_list>
@@ -121,39 +121,39 @@ int main()
 
 ## <a name="restrictions-and-error-messages"></a>Restrizioni e messaggi di errore
 
-Nella tabella seguente sono elencate le restrizioni sull'uso delle **automatica** (parola chiave) e il messaggio di errore diagnostico corrispondente generato dal compilatore.
+La tabella seguente elenca le restrizioni relative all'uso della parola chiave **auto** e del messaggio di errore di diagnostica corrispondente generato dal compilatore.
 
-|Numero di errore|Descrizione|
+|Numero di errore|description|
 |------------------|-----------------|
-|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|Il **automatica** parola chiave non può essere combinato con qualsiasi altro identificatore di tipo.|
-|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Un simbolo dichiarato con la **automatica** (parola chiave) deve contenere un inizializzatore.|
-|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|È stato usato in modo errato il **automatica** parola chiave per dichiarare un tipo. Ad esempio, è stato dichiarato un tipo restituito di un metodo o una matrice.|
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Un parametro o un modello di argomento non può essere dichiarato con la **automatica** (parola chiave).|
-|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Un parametro di metodo o il modello non può essere dichiarato con la **automatica** (parola chiave).|
+|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|La parola chiave **auto** non può essere combinata con qualsiasi altro identificatore di tipo.|
+|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Un simbolo dichiarato con la parola chiave **auto** deve avere un inizializzatore.|
+|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|Per dichiarare un tipo è stata usata erroneamente la parola chiave **auto** . Ad esempio, è stato dichiarato un tipo restituito di un metodo o una matrice.|
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Un parametro o un argomento di modello non può essere dichiarato con la parola chiave **auto** .|
+|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Un metodo o un parametro di modello non può essere dichiarato con la parola chiave **auto** .|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Un simbolo non può essere usato prima che venga inizializzato. In pratica, ciò significa che una variabile non può essere usata per inizializzare se stessa.|
-|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|È possibile eseguire il cast a un tipo dichiarato con la **automatica** (parola chiave).|
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Tutti i simboli in un elenco di dichiaratori dichiarati con la **automatica** parola chiave deve essere risolto nello stesso tipo. Per altre informazioni, vedere [dichiarazioni e definizioni](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Il [sizeof](../cpp/sizeof-operator.md) e [typeid](../extensions/typeid-cpp-component-extensions.md) non è possibile applicare operatori per un simbolo dichiarato con il **automatico** (parola chiave).|
+|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Non è possibile eseguire il cast a un tipo dichiarato con la parola chiave **auto** .|
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Tutti i simboli in un elenco di dichiaratori dichiarati con la parola chiave **auto** devono essere risolti nello stesso tipo. Per altre informazioni, vedere [dichiarazioni e definizioni](declarations-and-definitions-cpp.md).|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Gli operatori [sizeof](../cpp/sizeof-operator.md) e [typeid](../extensions/typeid-cpp-component-extensions.md) non possono essere applicati a un simbolo dichiarato con la parola chiave **auto** .|
 
 ## <a name="examples"></a>Esempi
 
-Questi frammenti di codice illustrano alcuni modi in cui il **automatica** parola chiave può essere utilizzata.
+Questi frammenti di codice illustrano alcune modalità in cui è possibile usare la parola chiave **auto** .
 
-Le dichiarazioni seguenti sono equivalenti. Nella prima istruzione, variabile `j` viene dichiarato come tipo **int**. Nella seconda istruzione, variabile `k` viene dedotto come tipo **int** perché l'espressione di inizializzazione (0) è un numero intero.
+Le dichiarazioni seguenti sono equivalenti. Nella prima istruzione la variabile `j` è dichiarata come tipo **int**. Nella seconda istruzione, Variable `k` viene dedotto come tipo **int** perché l'espressione di inizializzazione (0) è un numero intero.
 
 ```cpp
 int j = 0;  // Variable j is explicitly type int.
 auto k = 0; // Variable k is implicitly type int because 0 is an integer.
 ```
 
-Le dichiarazioni seguenti sono equivalenti, ma la seconda dichiarazione è più semplice della prima. Uno dei motivi più interessanti di usare la **automatica** (parola chiave) è la semplicità.
+Le dichiarazioni seguenti sono equivalenti, ma la seconda dichiarazione è più semplice della prima. Uno dei motivi più interessanti per usare la parola chiave **auto** è la semplicità.
 
 ```cpp
 map<int,list<string>>::iterator i = m.begin();
 auto i = m.begin();
 ```
 
-Il frammento di codice seguente dichiara il tipo delle variabili `iter` e `elem` quando il **per** e l'intervallo **per** i cicli di avvio.
+Il frammento di codice seguente dichiara il tipo di variabili `iter` e `elem` quando viene avviato il **ciclo for e l'intervallo** **for** .
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -181,7 +181,7 @@ int main()
 }
 ```
 
-Il frammento di codice seguente usa il **nuovo** dichiarazione operatore e il puntatore per dichiarare i puntatori.
+Il frammento di codice seguente usa il **nuovo** operatore e la dichiarazione del puntatore per dichiarare i puntatori.
 
 ```cpp
 double x = 12.34;
@@ -204,14 +204,14 @@ int v1 = 100, v2 = 200;
 auto x = v1 > v2 ? v1 : v2;
 ```
 
-Il frammento di codice seguente inizializza variabile `x` al tipo **int**variabile `y` a un riferimento al tipo **const int**e la variabile `fp` a un puntatore a una funzione che restituirà il tipo **int**.
+Il frammento di codice seguente inizializza la variabile `x` al tipo **int**, la variabile `y` a un riferimento al tipo **const int**e la variabile `fp` a un puntatore a una funzione che restituisce il tipo **int**.
 
 ```cpp
 int f(int x) { return x; }
 int main()
 {
     auto x = f(0);
-    const auto & y = f(1);
+    const auto& y = f(1);
     int (*p)(int x);
     p = f;
     auto fp = p;
@@ -224,7 +224,7 @@ int main()
 [Auto (parola chiave)](../cpp/auto-keyword.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (deduzione del tipo di variabile)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[Operatore sizeof](../cpp/sizeof-operator.md)<br/>
+[sizeof Operator](../cpp/sizeof-operator.md) (Operatore sizeof)<br/>
 [typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operator new](new-operator-cpp.md)<br/>
 [Dichiarazioni e definizioni](declarations-and-definitions-cpp.md)<br/>

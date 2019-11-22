@@ -4,12 +4,12 @@ description: Come configurare, compilare ed eseguire il debug di un C++ progetto
 author: mikeblome
 ms.topic: tutorial
 ms.date: 11/08/2019
-ms.openlocfilehash: 05f120335180d27e84a99819ee97c233dd1b39a7
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965096"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303259"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Esercitazione: creare C++ progetti multipiattaforma in Visual Studio
 
@@ -155,7 +155,7 @@ In questo passaggio verrà eseguito il debug di un programma di esempio che illu
 
    Se è già stata aggiunta una connessione remota, è possibile aprire questa finestra passando a **strumenti > opzioni > multipiattaforma > gestione connessione**.
 
-1. Fornire le [informazioni di connessione al computer Linux](/cpp/linux/connect-to-your-remote-linux-computer.md) e scegliere **Connetti**. Visual Studio aggiunge tale computer a CMakeSettings. JSON come connessione predefinita per **Linux-debug**. Estrae anche le intestazioni dal computer remoto, in modo da ottenere [IntelliSense specifico per tale connessione remota](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Successivamente, Visual Studio invia i file al computer remoto e genera la cache CMake nel sistema remoto. Questa procedura può richiedere del tempo, a seconda della velocità della rete e della potenza del computer remoto. Si saprà che è completa quando viene visualizzato il messaggio "estrazione delle informazioni di destinazione completata" nella finestra di output di CMake.
+1. Fornire le [informazioni di connessione al computer Linux](/cpp/linux/connect-to-your-remote-linux-computer) e scegliere **Connetti**. Visual Studio aggiunge tale computer a CMakeSettings. JSON come connessione predefinita per **Linux-debug**. Estrae anche le intestazioni dal computer remoto, in modo da ottenere [IntelliSense specifico per tale connessione remota](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Successivamente, Visual Studio invia i file al computer remoto e genera la cache CMake nel sistema remoto. Questa procedura può richiedere del tempo, a seconda della velocità della rete e della potenza del computer remoto. Si saprà che è completa quando viene visualizzato il messaggio "estrazione delle informazioni di destinazione completata" nella finestra di output di CMake.
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Impostare un punto di interruzione, compilare ed eseguire in Linux
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: c1936e51630c78de3e7b9dc8a5c7d141ea01ad4b
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444871"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303199"
 ---
 # <a name="x64-exception-handling"></a>Gestione delle eccezioni x64
 
@@ -30,7 +30,7 @@ Per la gestione delle eccezioni basata su tabella è richiesta una voce di tabel
 |ULONG|Indirizzo finale funzione|
 |ULONG|Indirizzo informazioni di rimozione|
 
-La struttura RUNTIME_FUNCTION deve essere DWORD allineata in memoria. Tutti gli indirizzi sono relativi all'immagine, ovvero sono offset a 32 bit dall'indirizzo iniziale dell'immagine che contiene la voce della tabella di funzioni. Queste voci vengono ordinate e inserite nella sezione. pData di un'immagine di PE32 +. Per le funzioni generate dinamicamente [compilatori JIT], il runtime per supportare queste funzioni deve usare RtlInstallFunctionTableCallback o RtlAddFunctionTable per fornire queste informazioni al sistema operativo. In caso contrario, si otterrà una gestione delle eccezioni non affidabile e il debug dei processi.
+La struttura di RUNTIME_FUNCTION deve essere DWORD allineata in memoria. Tutti gli indirizzi sono relativi all'immagine, ovvero sono offset a 32 bit dall'indirizzo iniziale dell'immagine che contiene la voce della tabella di funzioni. Queste voci vengono ordinate e inserite nella sezione. pData di un'immagine di PE32 +. Per le funzioni generate dinamicamente [compilatori JIT], il runtime per supportare queste funzioni deve usare RtlInstallFunctionTableCallback o RtlAddFunctionTable per fornire queste informazioni al sistema operativo. In caso contrario, si otterrà una gestione delle eccezioni non affidabile e il debug dei processi.
 
 ### <a name="struct-unwind_info"></a>struct UNWIND_INFO
 
@@ -38,8 +38,8 @@ La struttura delle informazioni sui dati di rimozione viene utilizzata per regis
 
 |||
 |-|-|
-|UBYTE: 3|Versione|
-|UBYTE: 5|Flags|
+|UBYTE: 3|Version|
+|UBYTE: 5|Flag|
 |UBYTE|Dimensioni del prologo|
 |UBYTE|Conteggio dei codici di rimozione|
 |UBYTE: 4|Registro frame|
@@ -62,9 +62,9 @@ La struttura delle informazioni sui dati di rimozione viene utilizzata per regis
 |ULONG|Indirizzo finale funzione|
 |ULONG|Indirizzo informazioni di rimozione|
 
-La struttura UNWIND_INFO deve essere DWORD allineata in memoria. Ecco cosa significa ogni campo:
+La struttura di UNWIND_INFO deve essere DWORD allineata in memoria. Ecco cosa significa ogni campo:
 
-- **Version**
+- **Versione**
 
    Numero di versione dei dati di rimozione, attualmente 1.
 
@@ -72,11 +72,11 @@ La struttura UNWIND_INFO deve essere DWORD allineata in memoria. Ecco cosa signi
 
    Sono attualmente definiti tre flag:
 
-   |Flag|Descrizione|
+   |Flag|description|
    |-|-|
    |`UNW_FLAG_EHANDLER`| La funzione dispone di un gestore di eccezioni che deve essere chiamato durante la ricerca di funzioni che devono esaminare le eccezioni.|
    |`UNW_FLAG_UHANDLER`| La funzione dispone di un gestore di terminazione che deve essere chiamato durante la rimozione di un'eccezione.|
-   |`UNW_FLAG_CHAININFO`| Questa struttura delle informazioni di rimozione non è quella primaria per la procedura. Al contrario, la voce di informazioni di rimozione concatenata è il contenuto di una voce RUNTIME_FUNCTION precedente. Per informazioni, vedere [strutture di informazioni di rimozione concatenate](#chained-unwind-info-structures). Se questo flag è impostato, i flag UNW_FLAG_EHANDLER e UNW_FLAG_UHANDLER devono essere cancellati. Inoltre, il registro frame e i campi di allocazione dello stack fisso devono avere gli stessi valori delle informazioni di rimozione primarie.|
+   |`UNW_FLAG_CHAININFO`| Questa struttura delle informazioni di rimozione non è quella primaria per la procedura. Al contrario, la voce di informazioni di rimozione concatenata è il contenuto di una voce di RUNTIME_FUNCTION precedente. Per informazioni, vedere [strutture di informazioni di rimozione concatenate](#chained-unwind-info-structures). Se questo flag è impostato, i flag di UNW_FLAG_EHANDLER e di UNW_FLAG_UHANDLER devono essere cancellati. Inoltre, il registro frame e i campi di allocazione dello stack fisso devono avere gli stessi valori delle informazioni di rimozione primarie.|
 
 - **Dimensioni del prologo**
 
@@ -88,7 +88,7 @@ La struttura UNWIND_INFO deve essere DWORD allineata in memoria. Ecco cosa signi
 
 - **Registro frame**
 
-   Se è diverso da zero, la funzione usa un puntatore a frame (FP) e questo campo è il numero del registro non volatile usato come puntatore al frame, usando la stessa codifica per il campo delle informazioni sull'operazione dei nodi UNWIND_CODE.
+   Se è diverso da zero, la funzione usa un puntatore a frame (FP) e questo campo è il numero del registro non volatile usato come puntatore al frame, usando la stessa codifica per il campo informazioni sull'operazione dei nodi UNWIND_CODE.
 
 - **Offset registro frame (ridimensionato)**
 
@@ -96,11 +96,11 @@ La struttura UNWIND_INFO deve essere DWORD allineata in memoria. Ecco cosa signi
 
 - **Matrice codici di rimozione**
 
-   Matrice di elementi che illustra l'effetto del prologo sui registri non volatili e RSP. Per i significati dei singoli elementi, vedere la sezione relativa a UNWIND_CODE. Ai fini dell'allineamento, questa matrice contiene sempre un numero pari di voci e la voce finale è potenzialmente inutilizzata. In tal caso, la matrice è più lunga di quella indicata dal campo numero di codici di rimozione.
+   Matrice di elementi che illustra l'effetto del prologo sui registri non volatili e RSP. Vedere la sezione UNWIND_CODE per il significato dei singoli elementi. Ai fini dell'allineamento, questa matrice contiene sempre un numero pari di voci e la voce finale è potenzialmente inutilizzata. In tal caso, la matrice è più lunga di quella indicata dal campo numero di codici di rimozione.
 
 - **Indirizzo del gestore di eccezioni**
 
-   Puntatore relativo all'immagine o al gestore di terminazione specifico del linguaggio della funzione, se il flag UNW_FLAG_CHAININFO è chiaro e viene impostato uno dei flag UNW_FLAG_EHANDLER o UNW_FLAG_UHANDLER.
+   Puntatore relativo all'immagine per il gestore di terminazione o eccezione specifica della funzione, se flag UNW_FLAG_CHAININFO è chiaro e uno dei flag UNW_FLAG_EHANDLER o UNW_FLAG_UHANDLER è impostato.
 
 - **Dati del gestore specifici della lingua**
 
@@ -128,7 +128,7 @@ Offset (dall'inizio del prologo) della fine dell'istruzione che esegue questa op
 
 #### <a name="unwind-operation-code"></a>Codice dell'operazione di rimozione
 
-Nota: per determinati codici operativi è necessario un offset senza segno a un valore nel stack frame locale. Questo offset è dall'inizio, ovvero l'indirizzo più basso dell'allocazione dello stack fisso. Se il campo Registro frame in UNWIND_INFO è zero, questo offset viene da RSP. Se il campo del registro dei frame è diverso da zero, questo offset viene da dove RSP si trovava al momento della creazione del Registro FP. È uguale al Registro FP meno l'offset del Registro FP (16 \* l'offset del registro frame scalato in UNWIND_INFO). Se viene usato un registro FP, qualsiasi codice di rimozione che accetta un offset deve essere usato solo dopo che è stato stabilito il Registro FP nel prologo.
+Nota: per determinati codici operativi è necessario un offset senza segno a un valore nel stack frame locale. Questo offset è dall'inizio, ovvero l'indirizzo più basso dell'allocazione dello stack fisso. Se il campo Registro frame nel UNWIND_INFO è zero, questo offset è da RSP. Se il campo del registro dei frame è diverso da zero, questo offset viene da dove RSP si trovava al momento della creazione del Registro FP. È uguale al Registro FP meno l'offset del Registro FP (16 \* offset del registro frame scalato nel UNWIND_INFO). Se viene usato un registro FP, qualsiasi codice di rimozione che accetta un offset deve essere usato solo dopo che è stato stabilito il Registro FP nel prologo.
 
 Per tutti i codici operativi eccetto `UWOP_SAVE_XMM128` e `UWOP_SAVE_XMM128_FAR`, l'offset è sempre un multiplo di 8, poiché tutti i valori dello stack di interesse vengono archiviati su limiti di 8 byte (lo stack stesso è sempre allineato a 16 byte). Per i codici operativi che accettano un offset breve (minore di 512K), l'oggetto USHORT finale nei nodi del codice include l'offset diviso per 8. Per i codici operativi che accettano un offset lungo (512K < = offset < 4 GB), i due nodi USHORT finali per questo codice contengono l'offset (in formato little endian).
 
@@ -138,7 +138,7 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
 
 - `UWOP_PUSH_NONVOL` (0) 1 nodo
 
-  Eseguire il push di un registro di tipo integer non volatile, diminuendo RSP da 8. Le informazioni sull'operazione sono il numero del registro. A causa dei vincoli su epilogo, i codici di rimozione `UWOP_PUSH_NONVOL` devono essere visualizzati per primi nel prologo e corrispondenti, infine nella matrice di codice di rimozione. Questo ordinamento relativo si applica a tutti gli altri codici di rimozione tranne `UWOP_PUSH_MACHFRAME`.
+  Eseguire il push di un registro di tipo integer non volatile, diminuendo RSP da 8. Le informazioni sull'operazione sono il numero del registro. A causa dei vincoli su epilogo, `UWOP_PUSH_NONVOL` codici di rimozione devono essere visualizzati per primi nel prologo e corrispondenti, ultimo nella matrice di codice di rimozione. Questo ordinamento relativo si applica a tutti gli altri codici di rimozione tranne `UWOP_PUSH_MACHFRAME`.
 
 - `UWOP_ALLOC_LARGE` (1) 2 o 3 nodi
 
@@ -146,7 +146,7 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
 
 - `UWOP_ALLOC_SMALL` (2) 1 nodo
 
-  Allocare un'area di piccole dimensioni nello stack. La dimensione dell'allocazione è il campo informazioni sull'operazione \* 8 + 8, che consente allocazioni da 8 a 128 byte.
+  Allocare un'area di piccole dimensioni nello stack. La dimensione dell'allocazione è il campo informazioni sull'operazione \* 8 + 8, consentendo allocazioni da 8 a 128 byte.
 
   Il codice di rimozione per un'allocazione dello stack deve sempre usare la codifica più breve possibile:
 
@@ -156,11 +156,11 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
   |da 136 a 512K-8 byte|`UWOP_ALLOC_LARGE`, informazioni sull'operazione = 0|
   |da 512K a 4G-8 byte|`UWOP_ALLOC_LARGE`, informazioni sull'operazione = 1|
 
-- nodo `UWOP_SET_FPREG` (3) 1
+- `UWOP_SET_FPREG` (3) 1 nodo
 
-  Stabilire il registro del puntatore del frame impostando il registro su un offset del RSP corrente. L'offset è uguale al campo offset del registro frame (ridimensionato) in UNWIND_INFO \* 16, consentendo gli offset da 0 a 240. L'uso di un offset consente di stabilire un puntatore a un frame che punta al centro dell'allocazione dello stack fisso, aiutando la densità del codice consentendo a più accessi di usare moduli di istruzioni brevi. Il campo informazioni sull'operazione è riservato e non deve essere usato.
+  Stabilire il registro del puntatore del frame impostando il registro su un offset del RSP corrente. L'offset è uguale al campo offset del registro frame (ridimensionato) nell'UNWIND_INFO \* 16, consentendo gli offset da 0 a 240. L'uso di un offset consente di stabilire un puntatore a un frame che punta al centro dell'allocazione dello stack fisso, aiutando la densità del codice consentendo a più accessi di usare moduli di istruzioni brevi. Il campo informazioni sull'operazione è riservato e non deve essere usato.
 
-- nodi `UWOP_SAVE_NONVOL` (4) 2
+- `UWOP_SAVE_NONVOL` (4) 2 nodi
 
   Salvare un registro di tipo integer non volatile nello stack usando un MOV anziché un PUSH. Questo codice viene usato principalmente per la *riduzione del wrapping*, in cui un registro non volatile viene salvato nello stack in una posizione allocata in precedenza. Le informazioni sull'operazione sono il numero del registro. L'offset dello stack ridimensionato per 8 viene registrato nello slot di codice di un'operazione di rimozione successiva, come descritto nella nota sopra.
 
@@ -182,21 +182,21 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|RSP precedente|
-  |RSP + 16|EFLAGS|
-  |RSP + 8|CS|
+  |RSP+32|SS|
+  |RSP+24|RSP precedente|
+  |RSP+16|EFLAGS|
+  |RSP+8|CS|
   |RSP|RIP|
 
   Se le informazioni sull'operazione sono uguali a 1, è stato eseguito il push di uno di questi frame:
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|RSP precedente|
-  |RSP + 24|EFLAGS|
-  |RSP + 16|CS|
-  |RSP + 8|RIP|
+  |RSP+40|SS|
+  |RSP+32|RSP precedente|
+  |RSP+24|EFLAGS|
+  |RSP+16|CS|
+  |RSP+8|RIP|
   |RSP|Codice di errore|
 
   Questo codice di rimozione viene sempre visualizzato in un prologo fittizio, che non viene mai effettivamente eseguito, ma viene invece visualizzato prima del punto di ingresso reale di una routine di interrupt ed esiste solo per fornire una posizione per simulare il push di un frame del computer. `UWOP_PUSH_MACHFRAME` registra la simulazione, che indica che il computer ha eseguito concettualmente questa operazione:
@@ -215,7 +215,7 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
 
   1. Codice di errore push (se le informazioni op sono uguali a 1)
 
-  L'operazione simulata `UWOP_PUSH_MACHFRAME` decrementa RSP di 40 (info op è uguale a 0) o 48 (le informazioni sulle op sono pari a 1).
+  L'operazione di `UWOP_PUSH_MACHFRAME` simulata decrementa RSP di 40 (info op è uguale a 0) o 48 (le informazioni sulle op sono pari a 1).
 
 #### <a name="operation-info"></a>Informazioni operazione
 
@@ -226,7 +226,7 @@ Il significato dei bit delle informazioni sull'operazione dipende dal codice ope
 |0|RAX|
 |1|RCX|
 |2|RDX|
-|3\.|RBX|
+|3|RBX|
 |4|RSP|
 |5|RBP|
 |6|RSI|
@@ -235,7 +235,7 @@ Il significato dei bit delle informazioni sull'operazione dipende dal codice ope
 
 ### <a name="chained-unwind-info-structures"></a>Strutture di informazioni di rimozione concatenate
 
-Se il flag UNW_FLAG_CHAININFO è impostato, una struttura di informazioni di rimozione è secondaria e il campo Shared Exception-Handler/info concatenated-info contiene le informazioni di rimozione primarie. Questo codice di esempio recupera le informazioni di rimozione primarie, supponendo che `unwindInfo` sia la struttura con il flag UNW_FLAG_CHAININFO impostato.
+Se viene impostato il flag di UNW_FLAG_CHAININFO, una struttura delle informazioni di rimozione è secondaria e il campo dell'indirizzo di gestione delle eccezioni condivise/concatenato-info contiene le informazioni di rimozione primarie. Questo codice di esempio recupera le informazioni di rimozione primarie, supponendo che `unwindInfo` sia la struttura con il flag di UNW_FLAG_CHAININFO impostato.
 
 ```cpp
 PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);
@@ -245,13 +245,13 @@ Le informazioni concatenate sono utili in due situazioni. Per prima cosa, può e
 
 È anche possibile usare le informazioni concatenate per raggruppare i salvataggi di registro volatili. Il compilatore può ritardare il salvataggio di alcuni registri volatili fino a quando non è al di fuori del prologo della voce di funzione. È possibile registrarli con le informazioni di rimozione primarie per la parte della funzione prima del codice raggruppato e quindi impostare le informazioni concatenate con una dimensione diversa da zero del prologo, dove i codici di rimozione nelle informazioni concatenate riflettono i salvataggi dei registri non volatili. In tal caso, i codici di rimozione sono tutte istanze di UWOP_SAVE_NONVOL. Un raggruppamento che salva registri non volatili usando un PUSH o modifica il registro RSP usando un'allocazione dello stack fissa aggiuntiva non è supportato.
 
-Un elemento UNWIND_INFO con UNW_FLAG_CHAININFO impostato può contenere una voce RUNTIME_FUNCTION il cui elemento UNWIND_INFO dispone anche del set di UNW_FLAG_CHAININFO, talvolta denominato *multiplo-wrapping*. Infine, i puntatori delle informazioni di rimozione concatenati arrivano a un elemento UNWIND_INFO con UNW_FLAG_CHAININFO deselezionato. Questo elemento è l'elemento UNWIND_INFO primario, che fa riferimento al punto di ingresso della procedura effettivo.
+Un elemento UNWIND_INFO che dispone di UNW_FLAG_CHAININFO set può contenere una voce di RUNTIME_FUNCTION il cui elemento UNWIND_INFO dispone anche di un set di UNW_FLAG_CHAININFO, talvolta denominato *multiplo-wrapping*. Infine, i puntatori delle informazioni di rimozione concatenati arrivano a un elemento UNWIND_INFO UNW_FLAG_CHAININFO cancellato. Questo elemento è l'elemento UNWIND_INFO primario, che fa riferimento al punto di ingresso della procedura effettivo.
 
 ## <a name="unwind-procedure"></a>Procedura di rimozione
 
 La matrice di codice di rimozione è ordinata in ordine decrescente. Quando si verifica un'eccezione, il contesto completo viene archiviato dal sistema operativo in un record di contesto. Viene quindi richiamata la logica di invio delle eccezioni, che esegue ripetutamente questi passaggi per trovare un gestore di eccezioni:
 
-1. Usare il RIP corrente archiviato nel record di contesto per cercare una voce della tabella RUNTIME_FUNCTION che descriva la funzione corrente (o la parte della funzione, per le voci UNWIND_INFO concatenate).
+1. Utilizzare il RIP corrente archiviato nel record di contesto per cercare una voce di tabella RUNTIME_FUNCTION che descriva la funzione corrente (o la parte della funzione, per le voci di UNWIND_INFO concatenate).
 
 1. Se non viene trovata alcuna voce della tabella di funzioni, si trova in una funzione foglia e RSP indirizza direttamente il puntatore restituito. Il puntatore restituito in [RSP] viene archiviato nel contesto aggiornato, il RSP simulato viene incrementato di 8 e il passaggio 1 viene ripetuto.
 
@@ -267,13 +267,13 @@ La matrice di codice di rimozione è ordinata in ordine decrescente. Quando si v
 
 1. Se non è presente alcun gestore specifico della lingua o il gestore restituisce uno stato "continua ricerca", il record di contesto deve essere rimosso allo stato del chiamante. Questa operazione viene eseguita elaborando tutti gli elementi della matrice di codice di rimozione, annullando l'effetto di ciascuno di essi. Il passaggio 1 viene quindi ripetuto.
 
-Quando le informazioni di rimozione concatenate sono necessarie, questi passaggi di base sono ancora seguiti. L'unica differenza consiste nel fatto che, mentre si esamina la matrice di codice di rimozione per rimuovere gli effetti di un prologo, una volta raggiunta la fine della matrice, questa viene collegata alle informazioni di rimozione padre e l'intera matrice di codice di rimozione viene trovata. Questo collegamento continua fino a ottenere le informazioni di rimozione senza il flag UNW_CHAINED_INFO, quindi completa la matrice di codice di rimozione.
+Quando le informazioni di rimozione concatenate sono necessarie, questi passaggi di base sono ancora seguiti. L'unica differenza consiste nel fatto che, mentre si esamina la matrice di codice di rimozione per rimuovere gli effetti di un prologo, una volta raggiunta la fine della matrice, questa viene collegata alle informazioni di rimozione padre e l'intera matrice di codice di rimozione viene trovata. Questo collegamento continua fino a ottenere le informazioni di rimozione senza il flag di UNW_CHAINED_INFO, quindi completa la relativa matrice di codice di rimozione.
 
 Il set più piccolo di dati di rimozione è di 8 byte. Questo rappresenterebbe una funzione che ha allocato solo 128 byte di stack o meno ed è possibile che sia stato salvato un registro non volatile. È anche la dimensione di una struttura di informazioni di rimozione concatenata per un prologo di lunghezza zero senza codici di rimozione.
 
 ## <a name="language-specific-handler"></a>Gestore specifico della lingua
 
-L'indirizzo relativo del gestore specifico della lingua è presente in UNWIND_INFO ogni volta che vengono impostati i flag UNW_FLAG_EHANDLER o UNW_FLAG_UHANDLER. Come descritto nella sezione precedente, il gestore specifico della lingua viene chiamato come parte della ricerca di un gestore di eccezioni o come parte di una rimozione. Il prototipo è il seguente:
+L'indirizzo relativo del gestore specifico della lingua è presente nel UNWIND_INFO ogni volta che vengono impostati i flag UNW_FLAG_EHANDLER o UNW_FLAG_UHANDLER. Come descritto nella sezione precedente, il gestore specifico della lingua viene chiamato come parte della ricerca di un gestore di eccezioni o come parte di una rimozione. Il prototipo è il seguente:
 
 ```cpp
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
@@ -305,11 +305,11 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** è il valore di RIP all'interno di questa funzione. Questo valore è un indirizzo di eccezione o l'indirizzo a cui il controllo ha lasciato la funzione di definizione. Il RIP viene usato per determinare se il controllo si trova all'interno di un costrutto sorvegliato all'interno di questa funzione, ad esempio un blocco `__try` per `__try` @ no__t-2 @ no__t-3 o `__try` @ no__t-5 @ no__t-6.
+**ControlPc** è il valore di RIP all'interno di questa funzione. Questo valore è un indirizzo di eccezione o l'indirizzo a cui il controllo ha lasciato la funzione di definizione. Il RIP viene usato per determinare se il controllo si trova all'interno di un costrutto sorvegliato all'interno di questa funzione, ad esempio un blocco di `__try` per `__try`/`__except` o `__try`/`__finally`.
 
 **ImageBase sul** è la base dell'immagine (indirizzo di caricamento) del modulo contenente questa funzione, da aggiungere agli offset a 32 bit usati nella voce della funzione e le informazioni di rimozione per registrare gli indirizzi relativi.
 
-**FunctionEntry** fornisce un puntatore alla voce della funzione RUNTIME_FUNCTION che contiene gli indirizzi relativi alla funzione e all'immagine di rimozione delle informazioni di base per questa funzione.
+**FunctionEntry** fornisce un puntatore alla voce della funzione RUNTIME_FUNCTION che contiene la funzione e la rimozione delle informazioni sugli indirizzi relativi per questa funzione.
 
 **EstablisherFrame** è l'indirizzo della base dell'allocazione dello stack fisso per questa funzione.
 
@@ -327,15 +327,15 @@ Per scrivere routine di assembly appropriate, è disponibile un set di pseudo-op
 
 ### <a name="raw-pseudo-operations"></a>Pseudo-operazioni RAW
 
-|Operazione pseudo|Descrizione|
+|Operazione pseudo|description|
 |-|-|
-|@No__t FRAME PROC-0:*ehandler*]|Fa in modo che MASM generi una voce della tabella di funzione in. pdata e le informazioni di rimozione in. xdata per il comportamento di rimozione della gestione delle eccezioni strutturate di una funzione.  Se *ehandler* è presente, questa procedura viene immessa in. xdata come gestore specifico del linguaggio.<br /><br /> Quando si usa l'attributo FRAME, deve essere seguito da un oggetto. Direttiva ENDPROLOG.  Se la funzione è una funzione foglia (come definito nei [tipi di funzione](../build/stack-usage.md#function-types)) l'attributo frame non è necessario, così come il resto di queste pseudo-operazioni.|
+|\[FRAME PROC:*ehandler*]|Fa in modo che MASM generi una voce della tabella di funzione in. pdata e le informazioni di rimozione in. xdata per il comportamento di rimozione della gestione delle eccezioni strutturate di una funzione.  Se *ehandler* è presente, questa procedura viene immessa in. xdata come gestore specifico del linguaggio.<br /><br /> Quando si usa l'attributo FRAME, deve essere seguito da un oggetto. Direttiva ENDPROLOG.  Se la funzione è una funzione foglia (come definito nei [tipi di funzione](../build/stack-usage.md#function-types)) l'attributo frame non è necessario, così come il resto di queste pseudo-operazioni.|
 |. *Registro* pushreg|Genera una voce di codice di rimozione UWOP_PUSH_NONVOL per il numero di registro specificato usando l'offset corrente nel prologo.<br /><br /> Utilizzarlo solo con registri di tipo integer non volatili.  Per i push di registri volatili, usare un oggetto. ALLOCSTACK 8, invece|
 |. *Registro*seframe, *offset*|Inserisce il campo Registro frame e l'offset nelle informazioni di rimozione utilizzando il registro e l'offset specificati. L'offset deve essere un multiplo di 16 e minore o uguale a 240. Questa direttiva genera anche una voce di codice di rimozione UWOP_SET_FPREG per il registro specificato usando l'offset del prologo corrente.|
 |. *Dimensioni* ALLOCSTACK|Genera un UWOP_ALLOC_SMALL o un UWOP_ALLOC_LARGE con le dimensioni specificate per l'offset corrente nel prologo.<br /><br /> L'operando *size* deve essere un multiplo di 8.|
-|. *Registro*savereg, *offset*|Genera una voce di codice di rimozione UWOP_SAVE_NONVOL o UWOP_SAVE_NONVOL_FAR per il registro e l'offset specificati usando l'offset del prologo corrente. MASM sceglie la codifica più efficiente.<br /><br /> *offset* deve essere positivo e un multiplo di 8. *offset* è relativo alla base del frame della procedura, che in genere si trova in RSP o, se si usa un puntatore a frame, il puntatore ai frame non ridimensionato.|
-|. *Registro*SAVEXMM128, *offset*|Genera una voce di codice di rimozione UWOP_SAVE_XMM128 o UWOP_SAVE_XMM128_FAR per il registro di XMM e l'offset specificati usando l'offset del prologo corrente. MASM sceglie la codifica più efficiente.<br /><br /> *offset* deve essere positivo e un multiplo di 16.  *offset* è relativo alla base del frame della procedura, che in genere si trova in RSP o, se si usa un puntatore a frame, il puntatore ai frame non ridimensionato.|
-|. PUSHFRAME \[*codice*]|Genera una voce di codice di rimozione UWOP_PUSH_MACHFRAME. Se viene specificato il *codice* facoltativo, alla voce di codice di rimozione viene assegnato un modificatore pari a 1. In caso contrario, il modificatore è 0.|
+|. *Registro*savereg, *offset*|Genera una UWOP_SAVE_NONVOL o una voce di codice di rimozione UWOP_SAVE_NONVOL_FAR per il registro e l'offset specificati usando l'offset del prologo corrente. MASM sceglie la codifica più efficiente.<br /><br /> *offset* deve essere positivo e un multiplo di 8. *offset* è relativo alla base del frame della procedura, che in genere si trova in RSP o, se si usa un puntatore a frame, il puntatore ai frame non ridimensionato.|
+|. *Registro*SAVEXMM128, *offset*|Genera una UWOP_SAVE_XMM128 o una voce di codice di rimozione UWOP_SAVE_XMM128_FAR per il registro e l'offset di XMM specificati usando l'offset del prologo corrente. MASM sceglie la codifica più efficiente.<br /><br /> *offset* deve essere positivo e un multiplo di 16.  *offset* è relativo alla base del frame della procedura, che in genere si trova in RSP o, se si usa un puntatore a frame, il puntatore ai frame non ridimensionato.|
+|. PUSHFRAME *codice*\[]|Genera una voce di codice di rimozione UWOP_PUSH_MACHFRAME. Se viene specificato il *codice* facoltativo, alla voce di codice di rimozione viene assegnato un modificatore pari a 1. In caso contrario, il modificatore è 0.|
 |.ENDPROLOG|Segnala la fine delle dichiarazioni di prologo.  Deve essere presente nei primi 255 byte della funzione.|
 
 Ecco un prologo della funzione di esempio con l'uso corretto della maggior parte dei codici operativi:
@@ -361,8 +361,8 @@ sample PROC FRAME
 
 ; you can modify the stack pointer outside of the prologue (similar to alloca)
 ; because we have a frame pointer.
-; if we didn’t have a frame pointer, this would be illegal
-; if we didn’t make this modification,
+; if we didn't have a frame pointer, this would be illegal
+; if we didn't make this modification,
 ; there would be no need for a frame pointer
 
     sub rsp, 060h
@@ -372,14 +372,14 @@ sample PROC FRAME
     mov rax, 0
     mov rax, [rax] ; AV!
 
-; restore the registers that weren’t saved with a push
-; this isn’t part of the official epilog, as described in section 2.5
+; restore the registers that weren't saved with a push
+; this isn't part of the official epilog, as described in section 2.5
 
     movdqa xmm7, [rbp]
     mov rsi, [rbp+018h]
     mov rdi, [rbp-010h]
 
-; Here’s the official epilog
+; Here's the official epilog
 
     lea rsp, [rbp+020h] ; deallocate both fixed and dynamic portions of the frame
     pop rbp
@@ -393,14 +393,14 @@ Per ulteriori informazioni sull'esempio di epilogo, vedere [codice di epilogo](p
 
 Per semplificare l'uso delle [pseudo-operazioni non elaborate](#raw-pseudo-operations), è disponibile un set di macro, definito in ksamd64. Inc, che può essere usato per creare prologhi ed epiloghi delle procedure tipiche.
 
-|Macro|Descrizione|
+|Macro|description|
 |-|-|
 |alloc_stack (n)|Alloca un stack frame di n byte (usando `sub rsp, n`) e genera le informazioni di rimozione appropriate (. allocstack n)|
-|*reg*save_reg, *loc*|Salva un *reg* di registro non volatile nello stack all'offset RSP *loc*e genera le informazioni di rimozione appropriate. (SAVEREG reg, loc)|
-|*reg* push_reg|Inserisce un *reg* di registro non volatile nello stack e genera le informazioni di rimozione appropriate. (reg. pushreg)|
-|*reg* rex_push_reg|Salva un registro non volatile nello stack utilizzando un push a 2 byte e genera le informazioni di rimozione appropriate (pushreg reg).  Usare questa macro se il push è la prima istruzione nella funzione, per garantire che la funzione sia a patch a caldo.|
-|*reg*save_xmm128, *loc*|Salva *una registrazione di registro XMM* non volatile nello stack all'offset RSP *loc*e genera le informazioni di rimozione appropriate (. SAVEXMM128 reg, loc)|
-|set_frame *reg*, *offset*|Imposta il *reg* del registro dei frame su RSP + *offset* (usando un `mov` o un `lea`) e genera le informazioni di rimozione appropriate (set_frame reg, offset)|
+|save_reg *reg*, *loc*|Salva un *reg* di registro non volatile nello stack all'offset RSP *loc*e genera le informazioni di rimozione appropriate. (SAVEREG reg, loc)|
+|push_reg *reg*|Inserisce un *reg* di registro non volatile nello stack e genera le informazioni di rimozione appropriate. (reg. pushreg)|
+|rex_push_reg *reg*|Salva un registro non volatile nello stack utilizzando un push a 2 byte e genera le informazioni di rimozione appropriate (pushreg reg).  Usare questa macro se il push è la prima istruzione nella funzione, per garantire che la funzione sia a patch a caldo.|
+|save_xmm128 *reg*, *loc*|Salva *una registrazione di registro XMM* non volatile nello stack all'offset RSP *loc*e genera le informazioni di rimozione appropriate (. SAVEXMM128 reg, loc)|
+|set_frame *reg*, *offset*|Imposta il *reg* del registro del frame su RSP + *offset* (usando un `mov`o un `lea`) e genera le informazioni di rimozione appropriate (. set_frame reg, offset)|
 |push_eflags|Inserisce il EFLAGS con un'istruzione `pushfq` e genera le informazioni di rimozione appropriate (. alloc_stack 8)|
 
 Ecco un prologo della funzione di esempio con l'utilizzo corretto delle macro:
@@ -423,7 +423,7 @@ sample2 PROC FRAME
     mov rsi, sampleFrame.SavedRsi[rsp]
     mov rdi, sampleFrame.SavedRdi[rsp]
 
-; Here’s the official epilog
+; Here's the official epilog
 
     add rsp, (sizeof sampleFrame)
     ret

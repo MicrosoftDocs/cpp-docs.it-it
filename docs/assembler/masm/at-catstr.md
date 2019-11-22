@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@CatStr symbol'
 ms.assetid: 01fcc590-1ec2-42f6-b868-ed0433297c26
-ms.openlocfilehash: 7c314ee362132da75a6024b76b011963fe6ce3db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca740aa31866cc55d9babd8fd43b78bdad96a72
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166750"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302890"
 ---
-# <a name="catstr"></a>@CatStr
+# <a name="catstr"></a>\@Catstr (
 
-Funzione di macro che concatena una o più stringhe. Restituisce una stringa.
+Funzione macro che concatena una o più stringhe. Restituisce una stringa.
 
 ## <a name="syntax"></a>Sintassi
 
-> @CatStr( string1 [[, string2...]] )
+> **\@catstr ((** *String1* ⟦ __,__ *string2*... ⟧ **)**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)<br/>
+[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)

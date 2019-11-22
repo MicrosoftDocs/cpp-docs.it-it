@@ -8,24 +8,24 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: f3e9ea2ebf3eb0ce04fde0339aaf0243686248a9
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096036"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302961"
 ---
 # <a name="view-classes-windows"></a>Classi visualizzazione (Windows)
 
-`CView`e le classi derivate sono finestre figlio che rappresentano l'area client di una finestra cornice. Le visualizzazioni mostrano i dati e accettano l'input per un documento.
+`CView` e le classi derivate sono finestre figlio che rappresentano l'area client di una finestra cornice. Le visualizzazioni mostrano i dati e accettano l'input per un documento.
 
 Una classe di visualizzazione è associata a una classe di documento e a una classe della finestra cornice usando un oggetto modello di documento.
 
 [CView](../mfc/reference/cview-class.md)<br/>
-Classe base per le visualizzazioni specifiche dell'applicazione dei dati di un documento. Le visualizzazioni visualizzano i dati e accettano l'input dell'utente per modificare o selezionare i dati. Derivare la classe o le classi `CView`di visualizzazione da.
+Classe base per le visualizzazioni specifiche dell'applicazione dei dati di un documento. Le visualizzazioni visualizzano i dati e accettano l'input dell'utente per modificare o selezionare i dati. Derivare la classe o le classi di visualizzazione da `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Classe base per le visualizzazioni con funzionalità di scorrimento. Derivare la classe di `CScrollView` visualizzazione da per lo scorrimento automatico.
+Classe base per le visualizzazioni con funzionalità di scorrimento. Derivare la classe di visualizzazione da `CScrollView` per lo scorrimento automatico.
 
 ## <a name="form-and-record-views"></a>Visualizzazioni form e record
 
@@ -34,13 +34,13 @@ Anche le visualizzazioni form sono viste a scorrimento. Sono basate su un modell
 Le visualizzazioni di record sono derivate da visualizzazioni form. Oltre al modello della finestra di dialogo, dispone anche di una connessione a un database.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Visualizzazione a scorrimento il cui layout è definito in un modello di finestra di dialogo. Derivare una classe `CFormView` da per implementare un'interfaccia utente basata su un modello di finestra di dialogo.
+Visualizzazione a scorrimento il cui layout è definito in un modello di finestra di dialogo. Derivare una classe da `CFormView` per implementare un'interfaccia utente basata su un modello di finestra di dialogo.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Fornisce una visualizzazione form connessa direttamente a un oggetto recordset DAO (Data Access Object). Analogamente a tutte le visualizzazioni `CDaoRecordView` form, un è basato su un modello di finestra di dialogo. DAO viene usato con i database di Access ed è supportato tramite Office 2013. 3,6 è la versione finale ed è considerata obsoleta.
+Fornisce una visualizzazione form connessa direttamente a un oggetto recordset DAO (Data Access Object). Analogamente a tutte le visualizzazioni form, un `CDaoRecordView` si basa su un modello di finestra di dialogo. DAO viene usato con i database di Access ed è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Fornisce una visualizzazione form connessa direttamente a un oggetto recordset Open Database Connectivity (ODBC). Analogamente a tutte le visualizzazioni `CRecordView` form, un è basato su un modello di finestra di dialogo.
+Fornisce una visualizzazione form connessa direttamente a un oggetto recordset Open Database Connectivity (ODBC). Analogamente a tutte le visualizzazioni form, un `CRecordView` si basa su un modello di finestra di dialogo.
 
 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
 Visualizzazione form che fornisce la funzionalità della piattaforma di modifica HTML WebBrowser.
@@ -66,7 +66,7 @@ Visualizzazione contenente un controllo albero di Windows (vedere [CTreeCtrl](..
 
 ## <a name="related-classes"></a>Classi correlate
 
-`CSplitterWnd`consente di avere più visualizzazioni in una singola finestra cornice. `CPrintDialog`e `CPrintInfo` supportano la funzionalità di anteprima di stampa e stampa delle visualizzazioni. `CRichEditDoc`e `CRichEditCntrItem` vengono utilizzati con `CRichEditView` per implementare le funzionalità del contenitore OLE.
+`CSplitterWnd` consente di avere più visualizzazioni in una singola finestra cornice. `CPrintDialog` e `CPrintInfo` supportano la funzionalità di anteprima di stampa e stampa delle visualizzazioni. `CRichEditDoc` e `CRichEditCntrItem` vengono utilizzati con `CRichEditView` per implementare le funzionalità del contenitore OLE.
 
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
 Finestra che l'utente può dividere in più riquadri. Questi riquadri possono essere ridimensionati in base all'utente o alle dimensioni fisse.
@@ -75,13 +75,13 @@ Finestra che l'utente può dividere in più riquadri. Questi riquadri possono es
 Fornisce una finestra di dialogo standard per la stampa di un file.
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-Struttura che contiene informazioni su un processo di stampa o di anteprima di stampa. Utilizzato dall' `CView`architettura di stampa di.
+Struttura che contiene informazioni su un processo di stampa o di anteprima di stampa. Utilizzato dall'architettura di stampa `CView`.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-Mantiene l'elenco di elementi client OLE presenti in un oggetto `CRichEditView`.
+Mantiene l'elenco di elementi client OLE presenti in un `CRichEditView`.
 
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-Fornisce accesso sul lato client a un elemento OLE archiviato in un `CRichEditView`oggetto.
+Fornisce accesso sul lato client a un elemento OLE archiviato in un `CRichEditView`.
 
 ## <a name="see-also"></a>Vedere anche
 

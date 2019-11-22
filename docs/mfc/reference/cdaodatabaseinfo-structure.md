@@ -7,17 +7,16 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 46d8056ee4ab478b65f3ef0bd59d88bd3af9b28c
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 60972aa3ecaef4d38c9a0d0ecc70477796aa37aa
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096153"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304250"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>Struttura CDaoDatabaseInfo
 
-La `CDaoDatabaseInfo` struttura contiene informazioni su un oggetto di database definito per DAO (Data Access Objects).
-DAO 3,6 è la versione finale ed è considerata obsoleta.
+La struttura `CDaoDatabaseInfo` contiene informazioni su un oggetto di database definito per DAO (Data Access Objects). DAO 3,6 è la versione finale ed è considerata obsoleta.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,41 +50,41 @@ Indica la versione del motore di database di Microsoft Jet. Per recuperare diret
 *m_lCollatingOrder*<br/>
 Specifica la sequenza di ordinamento nel testo per il confronto o l'ordinamento delle stringhe. I valori possibili includono:
 
-- `dbSortGeneral`Utilizzare il tipo di ordinamento generale (inglese, francese, tedesco, portoghese, italiano e spagnolo moderno).
+- `dbSortGeneral` utilizzare il tipo di ordinamento generale (inglese, francese, tedesco, portoghese, italiano e spagnolo moderno).
 
-- `dbSortArabic`Usare l'ordinamento arabo.
+- `dbSortArabic` utilizzare l'ordinamento arabo.
 
-- `dbSortCyrillic`Usare l'ordinamento russo.
+- `dbSortCyrillic` utilizzare l'ordinamento russo.
 
-- `dbSortCzech`Utilizzare l'ordinamento ceco.
+- `dbSortCzech` utilizzare l'ordinamento ceco.
 
-- `dbSortDutch`Usare l'ordinamento olandese.
+- `dbSortDutch` utilizzare l'ordinamento olandese.
 
-- `dbSortGreek`Usare l'ordinamento greco.
+- `dbSortGreek` utilizzare l'ordinamento greco.
 
-- `dbSortHebrew`Utilizzare l'ordinamento ebraico.
+- `dbSortHebrew` utilizzare l'ordinamento ebraico.
 
-- `dbSortHungarian`Usare l'ordinamento ungherese.
+- `dbSortHungarian` utilizzare l'ordinamento ungherese.
 
-- `dbSortIcelandic`Usare l'ordinamento islandese.
+- `dbSortIcelandic` utilizzare l'ordinamento islandese.
 
-- `dbSortNorwdan`Usare l'ordinamento norvegese o danese.
+- `dbSortNorwdan` utilizzare l'ordinamento norvegese o danese.
 
-- `dbSortPDXIntl`Usare il tipo di ordinamento internazionale Paradox.
+- `dbSortPDXIntl` utilizzare il tipo di ordinamento internazionale Paradox.
 
-- `dbSortPDXNor`Utilizzare l'ordinamento Paradox norvegese o danese.
+- `dbSortPDXNor` utilizzare l'ordinamento Paradox norvegese o danese.
 
-- `dbSortPDXSwe`Utilizzare l'ordinamento Paradox svedese o finlandese.
+- `dbSortPDXSwe` utilizzare l'ordinamento Paradox svedese o finlandese.
 
-- `dbSortPolish`Usare l'ordinamento polacco.
+- `dbSortPolish` utilizzare l'ordinamento polacco.
 
-- `dbSortSpanish`Utilizzare l'ordinamento spagnolo.
+- `dbSortSpanish` utilizzare l'ordinamento spagnolo.
 
-- `dbSortSwedFin`Utilizzare l'ordinamento svedese o finlandese.
+- `dbSortSwedFin` utilizzare l'ordinamento svedese o finlandese.
 
-- `dbSortTurkish`Usare l'ordinamento turco.
+- `dbSortTurkish` utilizzare l'ordinamento turco.
 
-- `dbSortUndefined`L'ordinamento non è definito o è sconosciuto.
+- `dbSortUndefined` l'ordinamento non è definito o è sconosciuto.
 
 Per ulteriori informazioni, vedere l'argomento "personalizzazione delle impostazioni del registro di sistema di Windows per l'accesso ai dati" nella Guida di DAO.
 
@@ -95,15 +94,15 @@ Il numero di secondi di attesa del motore di database di Microsoft Jet prima che
 *m_strConnect*<br/>
 Fornisce informazioni sull'origine di un database aperto. Per informazioni sulle stringhe di connessione e per informazioni sul recupero diretto del valore di questa proprietà, vedere la funzione membro [CDaoDatabase:: GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) . Per ulteriori informazioni, vedere l'argomento "Connect Property" nella Guida di DAO.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il database è un oggetto DAO sottostante un oggetto MFC della classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). I riferimenti a primary, Secondary e all sopra indicati indicano il modo in cui le informazioni vengono restituite dalla funzione membro [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) .
 
-Le informazioni recuperate dalla funzione membro [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) vengono archiviate `CDaoDatabaseInfo` in una struttura. Chiamare `GetDatabaseInfo` per l' `CDaoWorkspace` oggetto nella cui raccolta di database è archiviato l'oggetto di database. `CDaoDatabaseInfo`definisce inoltre una `Dump` funzione membro nelle compilazioni di debug. È possibile utilizzare `Dump` per eseguire il dump del contenuto `CDaoDatabaseInfo` di un oggetto.
+Le informazioni recuperate dalla funzione membro [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) vengono archiviate in una struttura `CDaoDatabaseInfo`. Chiamare `GetDatabaseInfo` per l'oggetto `CDaoWorkspace` nella cui raccolta di database è archiviato l'oggetto di database. `CDaoDatabaseInfo` definisce anche una funzione membro `Dump` nelle compilazioni di debug. È possibile utilizzare `Dump` per eseguire il dump del contenuto di un oggetto `CDaoDatabaseInfo`.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** AFXDAO. h
+**Intestazione:** afxdao.h
 
 ## <a name="see-also"></a>Vedere anche
 

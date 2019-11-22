@@ -7,18 +7,16 @@ helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 4f0ee7ebe1d5d4eff50194c2d5c5cccf8f373c61
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f96cba8ea43db7e24e834b1de4ffb593b2c6e0d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096072"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303488"
 ---
 # <a name="cdaoparameterinfo-structure"></a>Struttura CDaoParameterInfo
 
-La `CDaoParameterInfo` struttura contiene informazioni su un oggetto Parameter definito per DAO (Data Access Objects).
-DAO 3,6 è la versione finale ed è considerata obsoleta.
-
+La struttura `CDaoParameterInfo` contiene informazioni su un oggetto Parameter definito per DAO (Data Access Objects). DAO 3,6 è la versione finale ed è considerata obsoleta.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,22 +40,22 @@ Valore che indica il tipo di dati di un oggetto Parameter. Per un elenco dei val
 *m_varValue*<br/>
 Valore del parametro archiviato in un oggetto [COleVariant](../../mfc/reference/colevariant-class.md) .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-I riferimenti a primary e Secondary sopra indicati indicano il modo in cui le informazioni vengono restituite dalla funzione membro `CDaoQueryDef` [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) nella classe.
+I riferimenti a primary e Secondary sopra indicati indicano il modo in cui le informazioni vengono restituite dalla funzione membro [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) nella classe `CDaoQueryDef`.
 
-MFC non incapsula oggetti parametro DAO in una classe. Gli oggetti QueryDef DAO sottostanti oggetti MFC `CDaoQueryDef` archiviano i parametri nelle raccolte di parametri. Per accedere agli oggetti Parameter in un oggetto [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) , chiamare la funzione `GetParameterInfo` membro dell'oggetto QueryDef per un nome di parametro o un indice specifico nella raccolta Parameters. È possibile usare la funzione membro [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) insieme `GetParameterInfo` a per eseguire un ciclo nella raccolta Parameters.
+MFC non incapsula oggetti parametro DAO in una classe. Gli oggetti QueryDef DAO sottostanti MFC `CDaoQueryDef` oggetti archiviano i parametri nelle raccolte di parametri. Per accedere agli oggetti Parameter in un oggetto [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) , chiamare la funzione membro `GetParameterInfo` dell'oggetto QueryDef per un nome di parametro o un indice specifico nella raccolta di parametri. È possibile usare la funzione membro [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) insieme a `GetParameterInfo` per eseguire il ciclo della raccolta Parameters.
 
-Le informazioni recuperate dalla funzione membro [CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) sono archiviate `CDaoParameterInfo` in una struttura. Chiamare `GetParameterInfo` per l'oggetto QueryDef nella cui raccolta Parameters è archiviato l'oggetto Parameter.
+Le informazioni recuperate dalla funzione membro [CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) sono archiviate in una struttura `CDaoParameterInfo`. Chiamare `GetParameterInfo` per l'oggetto QueryDef nella cui raccolta Parameters è archiviato l'oggetto Parameter.
 
 > [!NOTE]
 >  Se si desidera ottenere o impostare solo il valore di un parametro, utilizzare le funzioni membro [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) e [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) della classe `CDaoRecordset`.
 
-`CDaoParameterInfo`definisce inoltre una `Dump` funzione membro nelle compilazioni di debug. È possibile utilizzare `Dump` per eseguire il dump del contenuto `CDaoParameterInfo` di un oggetto.
+`CDaoParameterInfo` definisce anche una funzione membro `Dump` nelle compilazioni di debug. È possibile utilizzare `Dump` per eseguire il dump del contenuto di un oggetto `CDaoParameterInfo`.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** AFXDAO. h
+**Intestazione:** afxdao.h
 
 ## <a name="see-also"></a>Vedere anche
 

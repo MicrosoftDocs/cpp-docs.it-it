@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Line symbol'
 ms.assetid: f879fda0-c046-478a-acbd-2e7ff7f7ddad
-ms.openlocfilehash: 2a4226dd5befb917ec1a8af0fa2bd9ca9ae0ee6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bb02778a1b6525a9844d2db47cf362f6793aff5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179737"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301929"
 ---
-# <a name="line"></a>@Line
+# <a name="line"></a>Riga di \@
 
-Il numero di riga di origine nel file corrente (numeric equivalgono).
+Numero di riga del codice sorgente nel file corrente (valore numerico equivalente).
 
 ## <a name="syntax"></a>Sintassi
 
-> @Line
+> **Riga di \@**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)<br/>
+[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)

@@ -1,12 +1,12 @@
 ---
 title: Panoramica delle convenzioni ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163228"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303262"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -65,7 +65,7 @@ Allineamento del layout predefinito per gli elementi globali e statici:
 | 1 | 1 |
 | 2 - 7 | 4 |
 | 8 - 63 | 8 |
-| > = 64 | 16 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Registri integer
 
@@ -74,11 +74,11 @@ L'architettura AArch64 supporta i registri di 32 Integer:
 | Registrazione | Volatile? | Ruolo |
 | - | - | - |
 | X0 | Volatile | Registro parametri/Scratch 1, registro risultati |
-| X1-X7 | Volatile | Registro parametri/Scratch 2-8 |
-| X8-x15 | Volatile | Registri Scratch |
+| x1-x7 | Volatile | Registro parametri/Scratch 2-8 |
+| x8-x15 | Volatile | Registri Scratch |
 | x16-x17 | Volatile | Registri temporanei di chiamata intra-routine |
 | x18 | Non volatile | Registro della piattaforma: in modalità kernel punta a KPCR per il processore corrente; in modalità utente punta a TEB |
-| x19-X28 | Non volatile | Registri Scratch |
+| x19-x28 | Non volatile | Registri Scratch |
 | x29/FP | Non volatile | Puntatori ai frame |
 | X30/LR | Non volatile | Registri di collegamento |
 
@@ -99,7 +99,7 @@ L'architettura AArch64 supporta anche i registri a virgola mobile/SIMD 32, riepi
 | V0 | Volatile | Registro parametri/Scratch 1, registro risultati |
 | V1-V7 | Volatile | Registri parametri/Scratch 2-8 |
 | V8-versione 15 | Non volatile | Registri Scratch (solo i bit 64 Bassi sono non volatili) |
-| V16-V31 | Volatile | Registri Scratch |
+| v16-v31 | Volatile | Registri Scratch |
 
 È possibile accedere a ogni registro come valore a 128 bit completo (tramite V0-V31 o Q0-q31). È possibile accedervi come valore a 64 bit (tramite D0-D31), come valore a 32 bit (tramite S0-S31), come valore a 16 bit (tramite H0-H31) o come valore a 8 bit (tramite B0-B31). Gli accessi di dimensioni inferiori a 128 bit accedono solo ai bit inferiori del registro completo a 128 bit. Lasciano invariati i restanti bit se non diversamente specificato. (AArch64 è diverso da AArch32, dove i registri più piccoli venivano compressi sopra i registri più grandi).
 
@@ -111,7 +111,7 @@ Il registro di controllo a virgola mobile (FPCR) ha determinati requisiti per i 
 | 25 | DN | Non volatile | Controllo modalità NaN predefinito. |
 | 24 | FZ | Non volatile | Controllo modalità flush-to-zero. |
 | 23-22 | RMode | Non volatile | Controllo della modalità di arrotondamento. |
-| 15, 12-8 | IDE/IXE/ecc. | Non volatile | Bit di abilitazione della trap delle eccezioni. deve essere sempre 0. |
+| 15, 12-8 | IDE/IXE/etc | Non volatile | Bit di abilitazione della trap delle eccezioni. deve essere sempre 0. |
 
 ## <a name="system-registers"></a>Registri di sistema
 

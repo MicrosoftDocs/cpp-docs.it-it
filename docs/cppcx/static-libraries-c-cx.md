@@ -2,55 +2,55 @@
 title: Librerie statiche (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 188ba06518bf6cdd154b7d6bd61216ed1e4ffad3
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: HT
+ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877252"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302944"
 ---
 # <a name="static-libraries-ccx"></a>Librerie statiche (C++/CX)
 
-Una libreria statica che viene usata in un'app Universal Windows Platform (UWP) può contenere codice C++ conforme allo standard ISO, inclusi i tipi STL, nonché le chiamate alle API Win32 che non sono escluse dalla piattaforma di app di Windows Runtime. Una libreria statica utilizza i componenti Windows Runtime e può creare i componenti Windows Runtime con determinate restrizioni.
+Una libreria statica usata in un'app piattaforma UWP (Universal Windows Platform) (UWP) può contenere codice standard C++ ISO, inclusi i tipi STL, e anche chiamate a API Win32 che non sono escluse dalla piattaforma dell'app Windows Runtime. Una libreria statica usa componenti Windows Runtime e può creare componenti Windows Runtime con determinate restrizioni.
 
 ## <a name="creating-static-libraries"></a>Creazione di librerie statiche
 
 
-Le istruzioni per la creazione di un nuovo progetto variano a seconda di quale versione di Visual Studio installata. Assicurarsi di avere il selettore di versione nell'angolo superiore sinistro impostata per la versione corretta.
+Le istruzioni per la creazione di un nuovo progetto variano a seconda della versione di Visual Studio installata. Verificare che il selettore di versione in alto a sinistra sia impostato sulla versione corretta.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Per creare una libreria statica di UWP in Visual Studio 2019
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Per creare una libreria statica UWP in Visual Studio 2019
 
-1. Nella barra dei menu, scegliere **File** > **New** > **progetto** per aprire la **crea un nuovo progetto** nella finestra di dialogo.
+1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto**.
 
-1. Nella parte superiore della finestra di dialogo, impostare **Language** al **C++**, impostare **Platform** al **Windows**e impostare **tipodiprogetto** al **UWP**. 
+1. Nella parte superiore della finestra di dialogo impostare **lingua** su **C++** , imposta **piattaforma** su **Windows**e imposta **tipo di progetto** su **UWP**. 
 
-1. Nell'elenco filtrato dei tipi di progetto, scegliere **libreria statica (Windows universale - C++/CX)** quindi scegliere **successiva**. Nella pagina successiva, assegnare un nome al progetto e specificare il percorso del progetto se si desidera.
+1. Dall'elenco filtrato dei tipi di progetto scegliere **libreria statica (Windows universale- C++/CX)** e quindi fare clic su **Avanti**. Nella pagina successiva assegnare un nome al progetto e specificare il percorso del progetto, se necessario.
 
-1. Scegliere il **Create** pulsante per creare il progetto.
+1. Scegliere il pulsante **Crea** per creare il progetto.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Per creare una libreria statica di UWP in Visual Studio 2017 o Visual Studio 2015
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Per creare una libreria statica UWP in Visual Studio 2017 o Visual Studio 2015
 
-1. Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**. Sotto **Visual C++** > **Windows Universal** sceglie **libreria statica (Windows universale)**.
+1. Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**. In **Visual C++**  > **universale Windows** scegliere **libreria statica (Windows universale)** .
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**. Nel **delle proprietà** finestra di dialogo il **le proprietà di configurazione** > **C/C++** impostare **utilizzano Windows Runtime estensione** al **Sì (/ZW)**.
+1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**. Nella finestra di dialogo **Proprietà** , in **proprietà di configurazione** > **C/C++**  pagina, impostare **utilizza Windows Runtime estensione** su **Sì (/ZW)** .
 
 ::: moniker-end
 
-Quando si compila una nuova raccolta statica, se si effettua una chiamata a un'API Win32 esclusa per le app UWP, il compilatore genererà l'errore C3861, "Identificatore non trovato". Per cercare un metodo alternativo supportato per il Runtime di Windows, vedere [alternative alle API di Windows nelle App UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
+Quando si compila una nuova libreria statica, se si effettua una chiamata a un'API Win32 che viene esclusa per le app UWP, il compilatore genererà l'errore C3861 "identificatore non trovato". Per cercare un metodo alternativo supportato per la Windows Runtime, vedere [alternative alle API Windows nelle app UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 
-Se si aggiunge un progetto di libreria statica C++ a una soluzione di app UWP, è necessario aggiornare le impostazioni delle proprietà del progetto di libreria in modo che la proprietà di supporto UWP è impostata su **Sì**. Senza questa impostazione, compila il codice e collegamenti, ma un errore si verifica quando si tenta di verificare l'app per i Microsoft Store. La libreria statica deve essere compilata con le stesse impostazioni del compilatore del progetto che la utilizza.
+Se si aggiunge un C++ progetto di libreria statica a una soluzione di app UWP, potrebbe essere necessario aggiornare le impostazioni delle proprietà del progetto della libreria in modo che la proprietà di supporto UWP sia impostata su **Sì**. Senza questa impostazione, il codice compila i collegamenti, ma si verifica un errore quando si tenta di verificare l'app per la Microsoft Store. La libreria statica deve essere compilata con le stesse impostazioni del compilatore del progetto che la utilizza.
 
 Se utilizzi una libreria statica che crea classi `ref` pubbliche, classi di interfaccia pubbliche o classi di valore pubbliche, verrà generato il seguente avviso da parte del linker:
 
-> **Warning LNK4264:** archiviazione del file oggetto compilato con /ZW in una libreria statica; si noti che quando si creano tipi Windows Runtime non è consigliabile eseguire il collegamento con una libreria statica che contiene i metadati di Windows Runtime.
+> **avviso LNK4264:** archiviazione del file oggetto compilato con/ZW in una libreria statica; Si noti che durante la creazione di tipi di Windows Runtime non è consigliabile eseguire il collegamento a una libreria statica che contiene Windows Runtime metadati.
 
-È possibile ignorare l'avviso solo se la libreria statica non sta generando componenti Windows Runtime che vengono usati all'esterno della libreria stessa. Se la libreria non utilizza un componente da essa definito, il linker può ottimizzare l'implementazione anche se i metadati pubblici contengono informazioni sul tipo. Ciò significa che i componenti pubblici in una libreria statica verranno compilati ma non attivati in fase di esecuzione. Per questo motivo, qualsiasi componente Windows Runtime che è destinato all'utilizzo da altri componenti o l'app deve essere implementata in una libreria di collegamento dinamico (DLL).
+È possibile ignorare l'avviso solo se la libreria statica non sta producendo Windows Runtime componenti utilizzati all'esterno della libreria stessa. Se la libreria non utilizza un componente da essa definito, il linker può ottimizzare l'implementazione anche se i metadati pubblici contengono informazioni sul tipo. Ciò significa che i componenti pubblici in una libreria statica verranno compilati ma non attivati in fase di esecuzione. Per questo motivo, qualsiasi componente Windows Runtime destinato all'utilizzo da parte di altri componenti o app deve essere implementato in una libreria a collegamento dinamico (DLL).
 
 ## <a name="see-also"></a>Vedere anche
 
