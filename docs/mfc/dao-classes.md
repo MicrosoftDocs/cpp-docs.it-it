@@ -7,20 +7,20 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: febd20971fd85275bd7ded0d2216fab0e05adbd1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: cdd3fd9a733df73d36441693d049724878219df5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095607"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303402"
 ---
 # <a name="dao-classes"></a>Classi DAO
 
-DAO viene usato con i database di Access ed è supportato tramite Office 2013. 3,6 è la versione finale ed è considerata obsoleta.
+DAO viene usato con i database di Access ed è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta.
 
 Queste classi interagiscono con le altre classi del Framework applicazione per consentire un facile accesso ai database DAO (Data Access Object), che usano lo stesso motore di database di Microsoft Visual Basic e Microsoft Access. Le classi DAO possono inoltre accedere a una vasta gamma di database per cui sono disponibili i driver Open Database Connectivity (ODBC).
 
-I programmi che utilizzano i database DAO avranno almeno un `CDaoDatabase` oggetto e un `CDaoRecordset` oggetto.
+I programmi che utilizzano i database DAO avranno almeno un oggetto `CDaoDatabase` e un oggetto `CDaoRecordset`.
 
 > [!NOTE]
 >  L'ambiente C++ visivo e le procedure guidate non supportano più DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare ODBC per i nuovi progetti MFC. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
@@ -52,16 +52,16 @@ Supporta le routine DFX DAO (record field exchange) utilizzate dalle classi di d
 ## <a name="related-classes"></a>Classi correlate
 
 [CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
-Incapsula un handle per l'archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. `CLongBinary`gli oggetti vengono utilizzati per gestire oggetti dati di grandi dimensioni archiviati nelle tabelle di database.
+Incapsula un handle per l'archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. gli oggetti `CLongBinary` vengono utilizzati per gestire oggetti dati di grandi dimensioni archiviati nelle tabelle di database.
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
-Wrapper per la **valuta**del tipo di automazione OLE, un tipo aritmetico a virgola fissa, con 15 cifre prima del separatore decimale e 4 cifre dopo.
+Wrapper per il tipo di automazione OLE **CURRENCY**, un tipo aritmetico a virgola fissa, con 15 cifre prima del separatore decimale e 4 cifre dopo.
 
 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-Wrapper per la **Data**del tipo di automazione OLE. Rappresenta valori di data e ora.
+Wrapper per il tipo di automazione OLE **DATA**. Rappresenta valori di data e ora.
 
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
-Wrapper per la **variante**del tipo di automazione OLE. I dati nei **Variant**possono essere archiviati in molti formati.
+Wrapper per il tipo di automazione OLE **VARIANT**. I dati in **VARIANT** possono essere archiviati in numerosi formati.
 
 ## <a name="see-also"></a>Vedere anche
 

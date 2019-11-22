@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624422"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303241"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informazioni di riferimento sullo schema CMakeSettings.json
 
@@ -73,7 +73,7 @@ Poiché Ninja è progettato per velocità di configurazione rapide anziché per 
 
 Per specificare un generatore di Visual Studio in Visual Studio 2017, aprire il dal menu principale scegliendo **CMake | Modificare le impostazioni di CMake**. Eliminare "Ninja" e digitare "V". Questa operazione attiva IntelliSense, che consente di scegliere il generatore desiderato.
 
-Per specificare un generatore di Visual Studio in Visual Studio 2019, fare clic con il pulsante destro del mouse sul file *CMakeLists. txt* in **Esplora soluzioni** e scegliere **impostazioni CMake per progetto** > **Mostra impostazioni avanzate** > **CMake Generatore**.
+Per specificare un generatore di Visual Studio in Visual Studio 2019, fare clic con il pulsante destro del mouse sul file *CMakeLists. txt* in **Esplora soluzioni** e scegliere **impostazioni CMake per progetto** > **Mostra impostazioni avanzate** > **Generatore CMake**.
 
 Quando la configurazione attiva specifica un generatore Visual Studio, per impostazione predefinita viene richiamato MSBuild.exe con gli argomenti `-m -v:minimal`. Per personalizzare la compilazione, all'interno del file *CMakeSettings. JSON* , è possibile specificare [argomenti della riga di comando di MSBuild](../build/reference/msbuild-visual-cpp-overview.md) aggiuntivi da passare al sistema di compilazione tramite la proprietà `buildCommandArgs`:
 
@@ -88,7 +88,7 @@ Quando la configurazione attiva specifica un generatore Visual Studio, per impos
   - MinSizeRel
   - RelWithDebInfo
  
-- `buildRoot`: specifica la directory in cui CMake genera script di compilazione per il generatore selezionato.  Esegue il mapping all'opzione **-DCMAKE_BINARY_DIR** e specifica la posizione in cui verrà creato il *CMakeCache. txt* . Se la cartella non esiste, viene creata. Le macro supportate includono `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
+- `buildRoot`: specifica la directory in cui CMake genera script di compilazione per il generatore selezionato.  Esegue il mapping all'opzione **-DCMAKE_BINARY_DIR** e specifica la posizione in cui verrà creato *CMakeCache. txt* . Se la cartella non esiste, viene creata. Le macro supportate includono `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `installRoot`: specifica la directory in cui CMake genera le destinazioni di installazione per il generatore selezionato. Le macro supportate includono `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `cmakeCommandArgs`: specifica le opzioni aggiuntive della riga di comando passate a CMake quando viene richiamato per generare i file di progetto.
 - `cmakeToolchain`: specifica il file di toolchain. Viene passato a CMake usando -DCMAKE_TOOLCHAIN_FILE.
@@ -167,7 +167,7 @@ Un *ambiente* incapsula le variabili di ambiente che vengono impostate nel proce
 - linux_x64: destinazione x64 Linux in modalità remota.
 - linux_x86: destinazione x86 Linux in modalità remota.
 - msvc_arm: destinazione Windows ARM con il compilatore MSVC.
-- msvc_arm_x64: destinazione ARM Windows con il compilatore MSVC a 64 bit.
+- msvc_arm_x64: destinazione Windows ARM con il compilatore MSVC a 64 bit.
 - msvc_arm64: destinazione ARM64 Windows con il compilatore MSVC.
 - msvc_arm64_x64: destinazione ARM64 Windows con il compilatore MSVC a 64 bit.
 - msvc_x64: destinazione x64 Windows con il compilatore MSVC.
@@ -256,7 +256,7 @@ Nell'esempio seguente la configurazione x86-Debug definisce il proprio valore pe
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
+      // Since this configuration doesn't modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
     }
@@ -288,7 +288,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opzione|Descrizione|
+|Opzione|description|
 |--------------|------------|
 | --versione  | versione ninja per la stampa ("1.7.1")|
 |   -C DIR   | passa a DIR prima di eseguire qualunque altra operazione|

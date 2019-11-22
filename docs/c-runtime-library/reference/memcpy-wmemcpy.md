@@ -27,12 +27,12 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-ms.openlocfilehash: e9d947dc4e9ecea654e8cb16e957887fe4360161
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf7f12cd00780347f23252764aace449dd6f5722
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951847"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303290"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -68,7 +68,7 @@ Numero di caratteri da copiare.
 
 Valore di *dest*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 **memcpy** copia i byte del *conteggio* da *src* a *dest*; **wmemcpy** copia il *numero* di caratteri wide (due byte). Se l'origine e la destinazione si sovrappongono, il comportamento di **memcpy** non è definito. Usare **memmove** per gestire le aree sovrapposte.
 
@@ -76,7 +76,7 @@ Valore di *dest*.
 > Verificare che il buffer di destinazione abbia una dimensione maggiore o uguale al buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!IMPORTANT]
-> Poiché il numero di sovraccarichi del buffer e di conseguenza potenziali exploit di sicurezza è stato tracciato per un utilizzo non corretto di **memcpy**, questa funzione è elencata tra le funzioni "vietate" dal processo SDL (Security Development Lifecycle).  È possibile osservare che alcune classi di libreria VC + + continuano a usare **memcpy**.  Inoltre, è possibile osservare che l'utilità di ottimizzazione del compilatore VC + + a volte emette chiamate a **memcpy**.  Il prodotto Visual C++ viene sviluppato in conformità con il processo SDL, quindi l'utilizzo di questa funzione bloccata è stato esaminato attentamente.  In caso di utilizzo della funzione da parte di una libreria, le chiamate sono state analizzate attentamente per assicurare il blocco dei sovraccarichi del buffer attraverso tali chiamate.  Nel caso del compilatore, a volte alcuni modelli di codice vengono riconosciuti come identici al modello di **memcpy**e vengono quindi sostituiti con una chiamata alla funzione.  In questi casi, l'uso di **memcpy** non è più sicuro rispetto alle istruzioni originali. sono state semplicemente ottimizzate per una chiamata alla funzione **memcpy** ottimizzata per le prestazioni.  Il semplice utilizzo delle funzioni CRT "sicure" non garantisce la protezione (rendono solo il sistema un po' meno insicuro), così come l'utilizzo delle funzioni "bloccate" non espone maggiormente a rischi (richiedono solo un controllo maggiore che ne garantisca la sicurezza).
+> Poiché il numero di sovraccarichi del buffer e di conseguenza potenziali exploit di sicurezza è stato tracciato per un utilizzo non corretto di **memcpy**, questa funzione è elencata tra le funzioni "vietate" dal processo SDL (Security Development Lifecycle).  È possibile osservare che alcune classi di libreria VC + + continuano a usare **memcpy**.  Inoltre, è possibile osservare che l'utilità di ottimizzazione del compilatore VC + + a volte emette chiamate a **memcpy**.  Il prodotto Visual C++ viene sviluppato in conformità con il processo SDL, quindi l'utilizzo di questa funzione bloccata è stato esaminato attentamente.  In caso di utilizzo della funzione da parte di una libreria, le chiamate sono state analizzate attentamente per assicurare il blocco dei sovraccarichi del buffer attraverso tali chiamate.  Nel caso del compilatore, a volte alcuni modelli di codice vengono riconosciuti come identici al modello di **memcpy**e vengono quindi sostituiti con una chiamata alla funzione.  In questi casi, l'uso di **memcpy** non è più sicuro rispetto alle istruzioni originali. sono state semplicemente ottimizzate per una chiamata alla funzione **memcpy** ottimizzata per le prestazioni.  Proprio come l'uso di funzioni CRT "sicure" non garantisce la sicurezza (sono semplicemente più difficili da non essere sicure), l'uso di funzioni "vietate" non garantisce rischi (richiedono solo un controllo maggiore per garantire la sicurezza).
 >
 > Poiché l'utilizzo di **memcpy** da parte del compilatore e delle librerie di VC + + è stato analizzato in modo accurato, queste chiamate sono consentite all'interno del codice che è altrimenti conforme a SDL.  le chiamate **memcpy** introdotte nel codice sorgente dell'applicazione sono conformi al processo SDL solo quando tale utilizzo è stato esaminato da esperti di sicurezza.
 
@@ -101,7 +101,7 @@ oppure
 |**memcpy**|\<memory.h> o \<string.h>|
 |**wmemcpy**|\<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

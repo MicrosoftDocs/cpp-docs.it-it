@@ -9,16 +9,16 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: fda4e968a4761fcf1e2245964bd5dca3f41a82ad
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096049"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302985"
 ---
 # <a name="view-classes-architecture"></a>Classi visualizzazione (architettura)
 
-`CView`e le classi derivate sono finestre figlio che rappresentano l'area client di una finestra cornice. Le visualizzazioni mostrano i dati e accettano l'input per un documento.
+`CView` e le classi derivate sono finestre figlio che rappresentano l'area client di una finestra cornice. Le visualizzazioni mostrano i dati e accettano l'input per un documento.
 
 Una classe di visualizzazione è associata a una classe di documento e a una classe della finestra cornice usando un oggetto modello di documento.
 
@@ -26,7 +26,7 @@ Una classe di visualizzazione è associata a una classe di documento e a una cla
 Classe base per le visualizzazioni specifiche dell'applicazione dei dati di un documento. Le visualizzazioni visualizzano i dati e accettano l'input dell'utente per modificare o selezionare i dati. Derivare le classi di visualizzazione da `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Classe base per le visualizzazioni con funzionalità di scorrimento. Derivare la classe di `CScrollView` visualizzazione da per lo scorrimento automatico.
+Classe base per le visualizzazioni con funzionalità di scorrimento. Derivare la classe di visualizzazione da `CScrollView` per lo scorrimento automatico.
 
 ## <a name="form-and-record-views"></a>Visualizzazioni form e record
 
@@ -35,10 +35,10 @@ Anche le visualizzazioni form sono viste a scorrimento. Sono basate su un modell
 Le visualizzazioni di record sono derivate da visualizzazioni form. Oltre al modello della finestra di dialogo, dispone anche di una connessione a un database.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Visualizzazione a scorrimento il cui layout è definito in un modello di finestra di dialogo. Derivare una classe `CFormView` da per implementare un'interfaccia utente basata su un modello di finestra di dialogo.
+Visualizzazione a scorrimento il cui layout è definito in un modello di finestra di dialogo. Derivare una classe da `CFormView` per implementare un'interfaccia utente basata su un modello di finestra di dialogo.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Fornisce una visualizzazione form connessa direttamente a un oggetto recordset DAO (Data Access Object). Analogamente a tutte le visualizzazioni `CDaoRecordView` form, un è basato su un modello di finestra di dialogo. DAO viene usato con i database di Access ed è supportato tramite Office 2013. 3,6 è la versione finale ed è considerata obsoleta.
+Fornisce una visualizzazione form connessa direttamente a un oggetto recordset DAO (Data Access Object). Analogamente a tutte le visualizzazioni form, un `CDaoRecordView` si basa su un modello di finestra di dialogo. DAO viene usato con i database di Access ed è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta.
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 Supporta un controllo per l'esplorazione Web all'interno di un'applicazione. Il controllo supporta il codice HTML dinamico in MFC.
@@ -47,7 +47,7 @@ Supporta un controllo per l'esplorazione Web all'interno di un'applicazione. Il 
 Fornisce il supporto OLE DB MFC per le visualizzazioni di form.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Fornisce una visualizzazione form connessa direttamente a un oggetto recordset Open Database Connectivity (ODBC). Analogamente a tutte le visualizzazioni `CRecordView` form, un è basato su un modello di finestra di dialogo.
+Fornisce una visualizzazione form connessa direttamente a un oggetto recordset Open Database Connectivity (ODBC). Analogamente a tutte le visualizzazioni form, un `CRecordView` si basa su un modello di finestra di dialogo.
 
 ## <a name="control-views"></a>Visualizzazioni di controllo
 

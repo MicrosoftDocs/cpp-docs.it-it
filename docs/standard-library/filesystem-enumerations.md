@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457716"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303506"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerazioni &lt;filesystem&gt;
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Valori
 
-|`Name`|Descrizione|
+|`Name`|description|
 |------------|-----------------|
 |`none`|Eseguire il comportamento predefinito per l'operazione.|
 |`skip_existing`|Non copiare se il file esiste già, non segnalare un errore.|
@@ -79,14 +79,14 @@ enum class directory_options {
 
 ### <a name="values"></a>Valori
 
-|NOME|Descrizione|
+|nome|description|
 |----------|-----------------|
 |`none`|Comportamento predefinito: ignorare i collegamenti simbolici a directory. L'autorizzazione negata è un errore.|
 |`follow_directory_symlink`|Considerare i collegamenti simbolici a directory come directory effettive.|
 
 ## <a name="file_type"></a>  file_type
 
-Enumerazione di tipi di file. I valori supportati sono regular, directory, NOT_FOUND e Unknown.
+Enumerazione di tipi di file. I valori supportati sono regular, directory, not_found e Unknown.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valori
 
-|Nome|Valore|Descrizione|
+|nome|Value|description|
 |----------|-----------|-----------------|
 |`not_found`|-1|Rappresenta un file che non esiste.|
 |`none`|0|Rappresenta un file che non ha alcun attributo di tipo. (non supportato).|
@@ -122,7 +122,7 @@ enum class file_type {
 
 ## <a name="perm_options"></a>perm_options
 
-Include i `replace`valori `add` ,`remove`, e `nofollow`.
+Include i valori `replace`, `add`, `remove`e `nofollow`.
 
 ```cpp
 enum class perm_options;
@@ -130,7 +130,7 @@ enum class perm_options;
 
 ## <a name="perms"></a>  perms
 
-Flag per le autorizzazioni del file. I valori supportati sono essenzialmente "readonly" e all. Per un file readonly non è impostato alcun bit *_write. In caso contrario, è impostato il bit `all` (0x0777).
+Flag per le autorizzazioni del file. I valori supportati sono essenzialmente "ReadOnly" e all. Per un file readonly non è impostato alcun bit *_write. In caso contrario, è impostato il bit `all` (0x0777).
 
 ### <a name="syntax"></a>Sintassi
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\ (Riferimento file di intestazione)
 [\<filesystem>](../standard-library/filesystem.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@DataSize symbol'
 ms.assetid: c31dd6ab-0706-43ed-9a5d-024730f7931b
-ms.openlocfilehash: b2c300bf7c616184ae928b4d07d8ccb93d5d37bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be8495e609e5ca9cf45f7cac2e7d05c9298c4dcf
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166607"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302726"
 ---
-# <a name="datasize"></a>@DataSize
+# <a name="datasize"></a>\@DataSize
 
-0 per **TINY**, **SMALL**, **MEDIUM**, e **FLAT** dei modelli, 1 per **COMPACT** e  **GRANDI** modelli e 2 per **molto grandi** modello (numeric equivalgono).
+0 per i modelli **small, Small**, **medium**e **Flat** , 1 per i modelli **Compact** e **large** e 2 per un modello **molto** **grande (** equivalenti numerici).
 
 ## <a name="syntax"></a>Sintassi
 
-> @DataSize
+> **\@DataSize**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)<br/>
+[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)

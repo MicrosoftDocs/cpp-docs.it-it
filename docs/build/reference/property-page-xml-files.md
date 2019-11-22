@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: da9fa72419dc6971e90124b061da48493d7ca017
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630751"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303168"
 ---
 # <a name="property-page-xml-rule-files"></a>File XML delle pagine delle proprietà
 
@@ -73,7 +73,7 @@ Se da cl.xml si eliminano tutti i dati, si otterrà la struttura seguente:
 
 Nella sezione seguente vengono descritti tutti gli elementi principali e alcuni dei metadati che possono essere associati.
 
-1. **Regola:**  è generalmente il nodo radice nel file XML. Può avere molti attributi:
+1. **Rule:** è generalmente il nodo radice nel file XML. Può avere molti attributi:
 
     ```xml
     <Rule Name="CL" PageTemplate="tool" SwitchPrefix="/" Order="10"
@@ -95,7 +95,7 @@ Nella sezione seguente vengono descritti tutti gli elementi principali e alcuni 
 
    e. **xmlns:** un elemento XAML standard. È possibile visualizzare tre spazi dei nomi elencati, che corrispondono rispettivamente agli spazi dei nomi per le classe di deserializzazione XAML, allo spazio dei nomi per lo schema XML e il sistema.
 
-   f. **DisplayName:** il nome visualizzato nell'interfaccia utente della pagina delle proprietà per il nodo Rule. Questo valore non è localizzato. DisplayName è stato creato come elemento figlio di Rule e non come attributo (come ad esempio Name o SwitchPrefix) per via dei requisiti interni dello strumento di localizzazione. Dal punto di vista di XAML, sono entrambi equivalenti. È quindi possibile trasformarlo in attributo per evitare confusione o lasciarlo invariato.
+   f. **DisplayName:** il nome visualizzato nell'interfaccia utente della pagina delle proprietà per il nodo Rule. Questo valore non è localizzato. DisplayName è stato creato come elemento figlio di Rule e non come attributo (come ad esempio Name o SwitchPrefix) per via dei requisiti interni dello strumento di localizzazione. Dal punto di vista di XAML, entrambi sono equivalenti. È quindi possibile trasformarlo in attributo per evitare confusione o lasciarlo invariato.
 
    g. **DataSource:** una proprietà molto importante che indica al sistema del progetto il percorso da cui leggere o in cui scrivere il valore della proprietà e il relativo raggruppamento (spiegato di seguito). Per cl.xml, i valori sono i seguenti:
 
@@ -112,7 +112,7 @@ Nella sezione seguente vengono descritti tutti gli elementi principali e alcuni 
    - `HasConfigurationCondition="true"`: indica al sistema del progetto di aggiungere una condizione di configurazione al valore in modo che sia applicato solo alla configurazione di progetto corrente. La condizione può essere aggiunta al gruppo padre o al valore stesso. Ad esempio, aprire le pagine delle proprietà dal nodo di progetto e impostare il valore della proprietà **Considera avviso come errore** in **Proprietà di configurazione > C/C++ Generale**  su "Sì". Il valore seguente viene scritto nel file di progetto. Si noti la condizione di configurazione associata all'elemento padre ItemDefinitionGroup.
 
       ```xml
-      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
+      <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
         <ClCompile>
           <TreatWarningAsError>true</TreatWarningAsError>
         </ClCompile>
@@ -124,20 +124,20 @@ Nella sezione seguente vengono descritti tutti gli elementi principali e alcuni 
       ```xml
       <ItemGroup>
         <ClCompile Include="stdafx.cpp">
-          <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+          <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
         </ClCompile>
       </ItemGroup>
       ```
 
-   Un altro attributo di **DataSource** non elencato in precedenza è **PersistedName**. È possibile usare questo attributo per rappresentare una proprietà nel file di progetto usando un nome diverso. Per impostazione predefinita, questo attributo è impostato sull'elemento **Name** della proprietà.
+   Un altro attributo di **DataSource** non elencato in precedenza è **PersistedName**. È possibile usare questo attributo per rappresentare una proprietà nel file di progetto usando un nome diverso. Per impostazione predefinita, questo attributo è impostato sul **nome**della proprietà.
 
-   Una singola proprietà può eseguire l'override dell'elemento padre DataSource di Rule. In questo caso il percorso per tale valore della proprietà sarà diverso dalle altre proprietà di Rule.
+   Una singola proprietà può eseguire l'override dell'origine dati della regola padre. In tal caso, il percorso del valore della proprietà sarà diverso da quello delle altre proprietà nella regola.
 
    h. Esistono altri attributi di Rule, ad esempio Description e SupportsFileBatching, che non sono illustrati in questo articolo. È possibile ottenere informazioni su tutti gli attributi applicabili a Rule o a un qualsiasi altro elemento esplorando la documentazione per questi tipi di elemento. In alternativa, è possibile esaminare le proprietà pubbliche nei tipi dello spazio dei nomi `Microsoft.Build.Framework.XamlTypes` nell'assembly `Microsoft.Build.Framework .dll`.
 
    i. **DisplayName**, **PageTemplate** e **Order** sono proprietà relative all'interfaccia utente, presenti in questo modello di dati indipendente dall'interfaccia utente. Queste sono quasi sicuramente le proprietà di tutte le interfacce utente usate per visualizzare le pagine delle proprietà. **DisplayName** e **Description** sono due proprietà presenti in quasi tutti gli elementi del file XML. Sono anche le uniche due proprietà localizzate. La localizzazione di queste stringhe sarà descritta in un post successivo.
 
-1. **Categoria:** una regola può avere più attributi Category. L'ordine in cui le categorie sono elencate nel file XML indica all'interfaccia utente di visualizzare le categorie nello stesso ordine. Ad esempio, l'ordine delle categorie nel nodo C/C++ dell'interfaccia utente, Generale, Ottimizzazione, Preprocessore e così via,  è uguale a quello specificato nel file cl.xml. Di seguito un esempio di categoria:
+1. **Category:** l'elemento Rule può avere più elementi Category. L'ordine in cui le categorie sono elencate nel file XML indica all'interfaccia utente di visualizzare le categorie nello stesso ordine. Ad esempio, l'ordine delle categorie nel nodo C/C++ dell'interfaccia utente, Generale, Ottimizzazione, Preprocessore e così via,  è uguale a quello specificato nel file cl.xml. Di seguito un esempio di categoria:
 
     ```xml
     <Category Name="Optimization">
@@ -149,7 +149,7 @@ Nella sezione seguente vengono descritti tutti gli elementi principali e alcuni 
 
    Il frammento di codice illustrato sopra contiene gli attributi **Name** e **DisplayName** descritti in precedenza. Ancora una volta, un elemento **Category** può avere altri attributi che non sono stati tuttavia usati nell'esempio sopra. Leggere la documentazione o esaminare gli assembly che usano ildasm.exe per ottenere informazioni su questi attributi.
 
-1. **Properties:** è l'elemento principale del file XML e contiene l'elenco di tutte le proprietà di questa regola. Ogni proprietà può essere uno dei cinque tipi possibili illustrati nella struttura XAML precedente. Naturalmente, è possibile usare solo alcuni di questi tipi nel file. Una proprietà ha un numero di attributi che la descrivono in modo completo. Qui viene illustrato solo l'attributo **StringProperty**. Gli altri attributi sono molto simili.
+1. **Properties:** è l'elemento principale del file XML e contiene l'elenco di tutte le proprietà di questa regola. Ogni proprietà può essere uno dei cinque tipi possibili illustrati nella struttura XAML precedente. Naturalmente, è possibile usare solo alcuni di questi tipi nel file. Una proprietà ha un numero di attributi che la descrivono in modo completo. Spiegherò solo il **StringProperty** qui. Gli altri attributi sono molto simili.
 
     ```xml
     <StringProperty Subtype="file" Name="ObjectFileName" Category="Output Files" Switch="Fo">
@@ -164,16 +164,16 @@ Nella sezione seguente vengono descritti tutti gli elementi principali e alcuni 
 
    La maggior parte degli attributi nel frammento di codice è stata descritta in precedenza. I nuovi attributi sono Subtype, Category e Switch.
 
-   a. **Subtype** è un attributo disponibile solo per **StringProperty** e **StringListProperty**. Offre informazioni contestuali. Ad esempio, il valore di "file" indica che la proprietà rappresenta un percorso di file. Queste informazioni contestuali migliorano le funzioni di modifica, offrendo una finestra di Esplora risorse come editor della proprietà in cui l'utente può visivamente scegliere il file.
+   a. **Subtype** è un attributo disponibile solo per **StringProperty** e **StringListProperty**. Offre informazioni contestuali. Ad esempio, il valore di "file" indica che la proprietà rappresenta un percorso di file. Tali informazioni contestuali vengono utilizzate per migliorare l'esperienza di modifica fornendo una finestra Esplora risorse come editor della proprietà che consente all'utente di scegliere visivamente il file.
 
-   b. **Categoria:** dichiara la categoria in cui rientra questa proprietà. Provare a cercare questa proprietà nella categoria **File di output** nell'interfaccia utente.
+   b. **Category:** dichiara la categoria in cui rientra questa proprietà. Provare a cercare questa proprietà nella categoria **File di output** nell'interfaccia utente.
 
-   c. **Switch:** quando una regola è rappresentata da uno strumento, ad esempio lo strumento compilatore come in questo caso, la maggior parte delle proprietà della regola vengono passate come opzioni all'eseguibile dello strumento durante la fase di compilazione. Il valore di questo attributo indica il valore letterale dell'opzione da usare. La proprietà precedente indica che l'opzione deve essere **Fo**. Insieme all'attributo **SwitchPrefix** nell'elemento padre Rule, questa proprietà viene passata all'eseguibile come **/Fo "Debug\"**  (visibile nella riga di comando per C/C++ nell'interfaccia utente della pagina delle proprietà).
+   c. **Switch:** quando una regola è rappresentata da uno strumento, ad esempio lo strumento Compilatore come in questo caso, la maggior parte delle proprietà della regola viene passata come opzioni all'eseguibile dello strumento durante la fase di compilazione. Il valore di questo attributo indica il valore letterale dell'opzione da usare. La proprietà precedente indica che l'opzione deve essere **Fo**. Insieme all'attributo **SwitchPrefix** nell'elemento padre Rule, questa proprietà viene passata all'eseguibile come **/Fo "Debug\"**  (visibile nella riga di comando per C/C++ nell'interfaccia utente della pagina delle proprietà).
 
    Altri attributi della proprietà includono:
 
-   d. **Visible:** se per qualche motivo non si vuole che la proprietà sia visualizzata nelle pagine delle proprietà, ma possa comunque essere disponibile durante la fase di compilazione, impostare questo attributo su False.
+   d. **Visibile:** Se per qualche motivo non si vuole che la proprietà venga visualizzata nelle pagine delle proprietà (ma probabilmente ancora disponibile durante la fase di compilazione), impostare questo attributo su false.
 
-   e. **ReadOnly:** se si vuole che la visualizzazione del valore di questa proprietà sia di sola lettura nelle pagine delle proprietà, impostare questo attributo su True.
+   e. **ReadOnly:** Se si desidera fornire una visualizzazione di sola lettura del valore di questa proprietà nelle pagine delle proprietà, impostare questo attributo su true.
 
    f. **IncludeInCommandLine:** è possibile che alcune proprietà non debbano essere passate a uno strumento durante la fase di compilazione. Impostare questo attributo su False per impedire che siano passate.

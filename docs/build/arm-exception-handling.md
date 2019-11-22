@@ -2,12 +2,12 @@
 title: Gestione delle eccezioni ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: a3d1a5f3becefc064c5bb38dc566892ae8da8530
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c55baf453c1879f1e0a857cc746bba7802d69f88
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493371"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303279"
 ---
 # <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
@@ -15,7 +15,7 @@ Windows su architetture ARM usa lo stesso meccanismo di gestione strutturata del
 
 ## <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
-Windows on ARM usa i *codici di rimozione* per controllare la rimozione dello stack durante la [gestione delle eccezioni strutturata](/windows/win32/debug/structured-exception-handling) (SEH). I codici di rimozione sono sequenze di byte memorizzate nella sezione .xdata dell'immagine eseguibile. Descrivono il funzionamento del codice di prologo ed epilogo della funzione in modo astratto, affinché sia possibile annullare gli effetti del prologo di una funzione in previsione della rimozione fino allo stack frame del chiamante.
+Windows on ARM usa i *codici di rimozione* per controllare la rimozione dello stack durante la [gestione delle eccezioni strutturata](/windows/win32/debug/structured-exception-handling) (SEH). I codici di rimozione sono sequenze di byte memorizzate nella sezione .xdata dell'immagine eseguibile. Descrivono il funzionamento del prologo e del codice dell'epilogo della funzione in modo astratto, in modo che gli effetti del prologo di una funzione possano essere annullati in preparazione per la rimozione al stack frame del chiamante.
 
 L'interfaccia EABI (Embedded Application Binary Interface) ARM specifica un modello di rimozione delle eccezioni che usa i codici di rimozione, ma non è sufficiente per la rimozione SEH in Windows, che deve gestire i casi asincroni in cui il processore è al centro del prologo o dell'epilogo di una funzione. Windows suddivide inoltre il controllo della rimozione in rimozione a livello di funzione e rimozione con ambito specifico del linguaggio, unificate nell'interfaccia EABI ARM. Per queste ragioni Windows su ARM specifica maggiori dettagli per i dati e la procedura di rimozione.
 
@@ -25,7 +25,7 @@ Le immagini eseguibili per Windows su ARM usano il formato Portable Executable (
 
 Il meccanismo di gestione delle eccezioni si basa su alcuni presupposti in relazione al codice che segue l'ABI per Windows su ARM:
 
-- Quando si verifica un'eccezione all'interno del corpo di una funzione, non è rilevante se le operazioni del prologo vengono annullate o se le operazioni dell'epilogo vengono eseguite in avanti. Entrambi devono produrre risultati identici.
+- Quando si verifica un'eccezione all'interno del corpo di una funzione, non è importante se le operazioni del prologo vengono annullate o se le operazioni dell'epilogo vengono eseguite in modo diretto. Entrambi devono produrre risultati identici.
 
 - Prologhi ed epiloghi tendono a riflettersi. Questo può essere sfruttato per ridurre le dimensioni dei metadati necessari per descrivere la rimozione.
 
@@ -119,7 +119,7 @@ Se viene specificata una regolazione non ridotta, l'istruzione 5 è la regolazio
 
 Le istruzioni 2 e 4 sono impostate in base alla necessità o meno di un'operazione push. Questa tabella riepiloga i registri salvati in base ai campi *C*, *L*, *R*e *PF* . In tutti i casi, *N* è uguale a *reg* + 4, *e* è uguale a *reg* + 8 e *S* è uguale a (~*stack Adjust*) & 3.
 
-|C|L|R|PF|Registri Integer sottoposti a push|Registri VFP sottoposti a push|
+|C|L|V|PF|Registri Integer sottoposti a push|Registri VFP sottoposti a push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
 |0|0|0|0|r4-r*N*|none|
 |0|0|0|1|r*S*-r*N*|none|
@@ -171,17 +171,17 @@ Quando il formato di rimozione compresso non è sufficiente per descrivere la ri
    |0|20|*X* è un campo a 1 bit che indica la presenza (1) o l'assenza (0) dei dati dell'eccezione.|
    |0|21|*E* è un campo a 1 bit che indica che le informazioni che descrivono un singolo epilogo vengono compresse nell'intestazione (1) anziché richiedere ulteriori parole di ambito in un secondo momento (0).|
    |0|22|*F* è un campo a 1 bit che indica che questo record descrive un frammento di funzione (1) o una funzione completa (0). Un frammento implica che non esiste un prologo e che l'elaborazione dei prologhi deve essere ignorata.|
-   |0|23-27|Il *conteggio* degli epiloghi è un campo a 5 bit che ha due significati, a seconda dello stato del bit *E* :<br /><br /> -Se *E* è 0, questo campo è un conteggio del numero totale di ambiti di eccezione descritti nella sezione 3. Se nella funzione sono presenti più di 31 ambiti, questo campo e il campo *parole codice* devono essere entrambi impostati su 0 per indicare che è necessaria una parola di estensione.<br />-Se *E* è 1, questo campo specifica l'indice del primo codice di rimozione che descrive l'unico epilogo.|
+   |0|23-27|Il *conteggio degli epiloghi* è un campo a 5 bit che ha due significati, a seconda dello stato del bit *E* :<br /><br /> -Se *E* è 0, questo campo è un conteggio del numero totale di ambiti di eccezione descritti nella sezione 3. Se nella funzione sono presenti più di 31 ambiti, questo campo e il campo *parole codice* devono essere entrambi impostati su 0 per indicare che è necessaria una parola di estensione.<br />-Se *E* è 1, questo campo specifica l'indice del primo codice di rimozione che descrive l'unico epilogo.|
    |0|28-31|*Code Words* è un campo a 4 bit che specifica il numero di parole a 32 bit necessarie per contenere tutti i codici di rimozione nella sezione 4. Se sono necessarie più di 15 parole per più di 63 byte di codice di rimozione, questo campo e il campo di *conteggio epilogo* devono essere entrambi impostati su 0 per indicare che è necessaria una parola di estensione.|
-   |1|0-15|Il *conteggio* degli epiloghi estesi è un campo a 16 bit che fornisce più spazio per la codifica di un numero insolitamente elevato di epiloghi. La parola di estensione che contiene questo campo è presente solo se i campi *conteggio epilogo* e *parole codice* nella prima parola di intestazione sono entrambi impostati su 0.|
+   |1|0-15|Il *conteggio degli epiloghi estesi* è un campo a 16 bit che fornisce più spazio per la codifica di un numero insolitamente elevato di epiloghi. La parola di estensione che contiene questo campo è presente solo se i campi *conteggio epilogo* e *parole codice* nella prima parola di intestazione sono entrambi impostati su 0.|
    |1|16-23|*Parole di codice estese* è un campo a 8 bit che fornisce più spazio per la codifica di un numero insolitamente elevato di parole di codice di rimozione. La parola di estensione che contiene questo campo è presente solo se i campi *conteggio epilogo* e *parole codice* nella prima parola di intestazione sono entrambi impostati su 0.|
-   |1|24-31|Riservato|
+   |1|24-31|Riservata|
 
 1. Dopo i dati dell'eccezione, se il bit *e* nell'intestazione è stato impostato su 0, è un elenco di informazioni sugli ambiti di epilogo, che vengono compressi uno a una parola e archiviati in ordine di incremento dell'offset iniziale. Ogni ambito contiene i campi seguenti:
 
    |BITS|Scopo|
    |----------|-------------|
-   |0-17|L' *offset iniziale* dell'epilogo è un campo a 18 bit che descrive l'offset dell'epilogo, in byte diviso per 2, rispetto all'inizio della funzione.|
+   |0-17|L' *offset iniziale dell'epilogo* è un campo a 18 bit che descrive l'offset dell'epilogo, in byte diviso per 2, rispetto all'inizio della funzione.|
    |18-19|*Res* è un campo a 2 bit riservato per l'espansione futura. Il suo valore deve essere 0.|
    |20-23|*Condition* è un campo a 4 bit che fornisce la condizione in cui viene eseguito l'epilogo. Per gli epiloghi non condizionali, deve essere impostato su 0xE, che significa "sempre". Si noti che un epilogo deve essere interamente condizionale o interamente non condizionale e, in modalità Thumb-2, l'epilogo inizia con la prima istruzione dopo l'opcode IT.|
    |24-31|L' *indice di inizio epilogo* è un campo a 8 bit che indica l'indice di byte del primo codice di rimozione che descrive questo epilogo.|
@@ -236,7 +236,7 @@ Se fosse garantito che le eccezioni possono verificarsi solo nel corpo di una fu
 
 La tabella seguente illustra il mapping dai codici di rimozione ai codici operativi. I codici più comuni includono un solo byte, mentre quelli meno comuni richiedono due, tre o persino quattro byte. Ogni codice è archiviato dal byte più significativo a quello meno significativo. La struttura di codici di rimozione è diversa rispetto alla codifica descritta in nell'interfaccia EABI ARM perché questi codici di rimozione sono progettati per disporre di un mapping uno a uno agli opcode nel prologo e nell'epilogo per consentire la rimozione di prologhi ed epiloghi parzialmente eseguiti.
 
-|Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Spiegazione|
+|Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Descrizione|
 |------------|------------|------------|------------|------------|-----------------|
 |00-7F||||16|`add   sp,sp,#X`<br /><br /> dove X è (codice & 0x7F) \* 4|
 |80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> dove LR viene estratto se il codice & 0x2000 e R0-R12 vengono estratti se il bit corrispondente è impostato nel codice & 0x1FFF|
@@ -267,7 +267,7 @@ Viene visualizzato l'intervallo di valori esadecimali per ogni byte in un *codic
 
 I codici di rimozione sono progettati in modo tale che il primo byte del codice indica sia la dimensione totale in byte del codice, sia la dimensione dell'opcode corrispondente nel flusso di istruzioni. Per calcolare la dimensione del prologo o epilogo, scorrere i codici di rimozione dall'inizio della sequenza fino alla fine e usare una tabella di ricerca o un metodo analogo per determinare la lunghezza dell'opcode corrispondente.
 
-I codici di rimozione 0xFD e 0xFE sono equivalenti al codice finale normale 0xFF, ma prevedono un codice operativo nop supplementare nel caso dell'epilogo, a 16 o 32 bit. Per i prologhi, i codici 0xFD, 0xFE e 0xFF sono perfettamente equivalenti. Questo tiene conto delle comuni terminazioni di epilogo `bx lr` o `b <tailcall-target>`, che non hanno un'istruzione di prologo equivalente. In questo modo aumentano le possibilità di condivisione delle sequenze di rimozione tra il prologo e gli epiloghi.
+I codici di rimozione 0xFD e 0xFE sono equivalenti al codice finale normale 0xFF, ma prevedono un codice operativo nop supplementare nel caso dell'epilogo, a 16 o 32 bit. Per i prologhi, i codici 0xFD, 0xFE e 0xFF sono perfettamente equivalenti. Questo account per l'epilogo comune termina `bx lr` o `b <tailcall-target>`, che non hanno un'istruzione di prologo equivalente. In questo modo aumentano le possibilità di condivisione delle sequenze di rimozione tra il prologo e gli epiloghi.
 
 In molti casi dovrebbe essere possibile usare lo stesso set di codici di rimozione per il prologo e tutti gli epiloghi. Per gestire la rimozione di prologhi ed epiloghi parzialmente eseguiti, tuttavia, possono essere necessarie più sequenze di codici di rimozione che variano per ordine e comportamento. Per questo motivo ogni epilogo ha un indice proprio nella matrice di rimozione per specificare l'inizio dell'esecuzione.
 
@@ -290,7 +290,7 @@ Si consideri ad esempio questo prologo ed epilogo:
 0148:   bx    lr
 ```
 
-Accanto a ogni codice operativo è presente il codice di rimozione appropriato per descrivere l'operazione. La sequenza dei codici di rimozione per il prologo è un'immagine speculare dei codici di rimozione per l'epilogo, senza contare l'istruzione finale. Si tratta di un caso comune ed è il motivo per cui i codici di rimozione per il prologo si presumono sempre archiviati in ordine inverso rispetto all'ordine di esecuzione del prologo. Ecco quindi un set comune di codici di rimozione:
+Accanto a ogni codice operativo è presente il codice di rimozione appropriato per descrivere l'operazione. La sequenza dei codici di rimozione per il prologo è un'immagine speculare dei codici di rimozione per l'epilogo, senza contare l'istruzione finale. Questo caso è comune ed è il motivo per cui i codici di rimozione per il prologo vengono sempre considerati archiviati in ordine inverso rispetto all'ordine di esecuzione del prologo. Ecco quindi un set comune di codici di rimozione:
 
 ```asm
 0xc7, 0xdd, 0x04, 0xfd
@@ -298,9 +298,9 @@ Accanto a ogni codice operativo è presente il codice di rimozione appropriato p
 
 Il codice 0xFD è un codice speciale per la fine della sequenza che indica che l'epilogo è più lungo di un'istruzione a 16 bit rispetto al prologo. Questo aumenta notevolmente le possibilità di condivisione dei codici di rimozione.
 
-Nell'esempio, se si verifica un'eccezione durante l'esecuzione del corpo della funzione compreso tra prologo ed epilogo, la rimozione inizia con il caso dell'epilogo, all'offset 0 all'interno del codice dell'epilogo. Questo corrisponde all'offset 0x140 nell'esempio. L'agente di rimozione esegue la sequenza di rimozione completa poiché non è stata eseguita alcuna pulizia. Se invece l'eccezione si verifica un'istruzione dopo l'inizio del codice dell'epilogo, l'agente di rimozione può eseguire la rimozione saltando il primo codice di rimozione. Dato un mapping uno-a-uno tra i codici operativi e i codici di rimozione, se si rimuove dall'istruzione *n* nell'epilogo, l'oggetto di rimozione deve ignorare i primi *n* codici di rimozione.
+Nell'esempio, se si verifica un'eccezione durante l'esecuzione del corpo della funzione compreso tra prologo ed epilogo, la rimozione inizia con il caso dell'epilogo, all'offset 0 all'interno del codice dell'epilogo. Questo corrisponde all'offset 0x140 nell'esempio. L'agente di rimozione esegue la sequenza di rimozione completa poiché non è stata eseguita alcuna pulizia. Se invece l'eccezione si verifica un'istruzione dopo l'inizio del codice dell'epilogo, l'agente di rimozione può eseguire la rimozione saltando il primo codice di rimozione. Dato un mapping uno a uno tra codici operativi e codici di rimozione, in caso di rimozione dalle istruzioni *n* nell'epilogo, l'agente di rimozione deve saltare i primi codici di rimozione *n*.
 
-Una logica simile è applicabile al contrario per il prologo. In caso di rimozione dall'offset 0 nel prologo, non deve essere eseguito nulla. Per la rimozione da un'istruzione in avanti, la sequenza di rimozione deve iniziare da un codice di rimozione dalla fine perché i codici di rimozione del prologo sono archiviati in ordine inverso. In generale, se si esegue la rimozione dall'istruzione *n* nel prologo, la rimozione dovrebbe iniziare l'esecuzione a *n* codici di rimozione dalla fine dell'elenco di codici.
+Una logica simile è applicabile al contrario per il prologo. In caso di rimozione dall'offset 0 nel prologo, non deve essere eseguito nulla. Per la rimozione da un'istruzione in avanti, la sequenza di rimozione deve iniziare da un codice di rimozione dalla fine perché i codici di rimozione del prologo sono archiviati in ordine inverso. Nel caso generale, per la rimozione dall'istruzione *n* nel prologo, l'esecuzione della rimozione deve iniziare in corrispondenza di *n* codici di rimozione dalla fine dell'elenco di codici.
 
 I codici di rimozione di prologo ed epilogo non sempre corrispondono esattamente. In questo caso, può essere necessario che la matrice di codici di rimozione contenga più sequenze di codice. Per determinare l'offset per l'inizio dell'elaborazione dei codici, usare la logica seguente:
 
@@ -328,9 +328,9 @@ Supponendo che il prologo della funzione si trovi all'inizio della funzione e no
 
 Nel primo caso, deve essere descritto solo il prologo. Questa operazione può essere eseguita nel formato Compact. pData descrivendo normalmente il prologo e specificando un valore *ret* pari a 3 per indicare nessun epilogo. Nel formato .xdata completo, è possibile specificare i codici di rimozione del prologo all'indice 0 come di consueto e specificare un numero di epiloghi pari a 0.
 
-Il secondo caso corrisponde esattamente a una funzione normale. Se c'è solo un epilogo nel frammento e si trova alla fine del frammento, è possibile usare un record .pdata compatto. Altrimenti, è necessario usare un record .xdata completo. Tenere presente che gli offset specificati per l'inizio dell'epilogo sono relativi all'inizio del frammento, non all'inizio originario della funzione.
+Il secondo caso corrisponde esattamente a una funzione normale. Se il frammento contiene un solo epilogo e si trova alla fine del frammento, è possibile usare un record Compact. pdata. Altrimenti, è necessario usare un record .xdata completo. Tenere presente che gli offset specificati per l'inizio dell'epilogo sono relativi all'inizio del frammento, non all'inizio originario della funzione.
 
-Il terzo e quarto caso sono varianti del primo e secondo caso rispettivamente, con la differenza che non contengono un prologo. In situazioni di questo tipo, si presume che prima dell'inizio dell'epilogo sia presente codice che è considerato parte del corpo della funzione, che normalmente verrebbe rimosso annullando gli effetti del prologo. Questi casi devono quindi essere codificati con uno pseudo-prologo, che descrive le modalità di rimozione dal corpo, ma che viene considerato di lunghezza 0 quando viene stabilito se eseguire una rimozione parziale all'inizio del frammento. In alternativa, questo pseudo-prologo può essere descritto usando gli stessi codici di rimozione dell'epilogo perché presumibilmente eseguono operazioni equivalenti.
+Il terzo e il quarto caso sono rispettivamente varianti del primo e del secondo case, ad eccezione del fatto che non contengono un prologo. In situazioni di questo tipo, si presume che prima dell'inizio dell'epilogo sia presente codice che è considerato parte del corpo della funzione, che normalmente verrebbe rimosso annullando gli effetti del prologo. Questi casi devono quindi essere codificati con uno pseudo-prologo, che descrive le modalità di rimozione dal corpo, ma che viene considerato di lunghezza 0 quando viene stabilito se eseguire una rimozione parziale all'inizio del frammento. In alternativa, questo pseudo-prologo può essere descritto usando gli stessi codici di rimozione dell'epilogo perché presumibilmente eseguono operazioni equivalenti.
 
 Nel terzo e quarto caso, la presenza di uno pseudo-prologo viene specificata impostando il campo del *flag* del record Compact. pData su 2 oppure impostando il flag *F* nell'intestazione. XData su 1. In entrambi i casi, il controllo della presenza di una rimozione epilogo parziale viene ignorato e tutte le rimozioni non epilogo vengono considerate complete.
 
@@ -360,7 +360,7 @@ ShrinkWrappedFunction
     pop    {r4, pc}          ; C:
 ```
 
-Le funzioni con wrapping di riduzione in genere preallocano lo spazio per il salvataggio dei registri aggiuntivi nel prologo normale, quindi eseguono i salvataggi dei registri usando `str` o `stm` anziché `push`. In questo modo, tutte le modifiche ai puntatori dello stack rimangono nel prologo originale della funzione.
+Le funzioni con wrapping di riduzione in genere preallocano lo spazio per il salvataggio dei registri aggiuntivi nel prologo normale, quindi eseguono i salvataggi dei registri usando `str` o `stm` anziché `push`. Questo consente di mantenere tutte le manipolazioni dei puntatori dello stack nel prologo originale della funzione.
 
 La funzione con wrapping di riduzione di esempio deve essere suddivisa in tre aree, contrassegnate come A, B e C nei commenti. La prima area A si estende dall'inizio della funzione fino alla fine dei salvataggi non volatili supplementari. È necessario che sia costruito un record .pdata o .xdata per descrivere questo frammento come dotato di prologo e privo di epiloghi.
 
@@ -410,7 +410,7 @@ Se dopo gli epiloghi a istruzione singola ignorati non restano altri epiloghi, p
 
 In questi esempi, la base dell'immagine è in 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Esempio 1: Funzione foglia, nessuna variabili locali
+### <a name="example-1-leaf-function-no-locals"></a>Esempio 1: funzione foglia, nessuna variabile locale
 
 ```asm
 Prologue:
@@ -444,7 +444,7 @@ Epilogue:
 
    - *Regolazione dello stack* = 0, che indica nessuna regolazione dello stack
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Esempio 2 Funzione nidificata con allocazione locale
+### <a name="example-2-nested-function-with-local-allocation"></a>Esempio 2: funzione annidata con allocazione locale
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Regolazione dello stack* = 3 (= 0x0C/4)
 
-### <a name="example-3-nested-variadic-function"></a>Esempio 3: Funzione Variadic nidificata
+### <a name="example-3-nested-variadic-function"></a>Esempio 3: funzione variadic annidata
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Regolazione dello stack* = 0, che indica nessuna regolazione dello stack
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Esempio 4: Funzione con più epiloghi
+### <a name="example-4-function-with-multiple-epilogues"></a>Esempio 4: funzione con più epiloghi
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - Codice di rimozione 2 = 0xFF: end
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Esempio 5: Funzione con stack dinamico ed epilogo interno
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Esempio 5: funzione con stack dinamico e prologo interno
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Code Words* = 0x01, che indica parole a 1 32 bit di codici di rimozione
 
-- Parola 1: Ambito dell'epilogo all'offset 0xC6 (= 0x18C/2), avvio dell'indice di codice di rimozione in 0x00 e con una condizione di 0x0E (always)
+- Parola 1: ambito di epilogo all'offset 0xC6 (= 0x18C/2), con inizio indice dei codici di rimozione in 0x00 e con la condizione 0x0E (sempre)
 
 - Codici di rimozione, a partire dalla parola 2: (condivisi tra prologo/epilogo)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - Codice di rimozione 3 = 0xFD: end, conta come istruzione a 16 bit per l'epilogo
 
-### <a name="example-6-function-with-exception-handler"></a>Esempio 6: Funzione con gestore di eccezioni
+### <a name="example-6-function-with-exception-handler"></a>Esempio 6: funzione con gestore di eccezioni
 
 ```asm
 Prologue:
@@ -680,7 +680,7 @@ Epilogue:
 
    - *F* = 0, che indica una descrizione completa della funzione, incluso il prologo
 
-   - *Conteggio* degli epiloghi = 0x00, che indica che i codici di rimozione dell'epilogo iniziano all'offset 0x00
+   - *Conteggio degli epiloghi* = 0x00, che indica che i codici di rimozione dell'epilogo iniziano all'offset 0x00
 
    - *Code Words* = 0x02, che indica parole a 2 32 bit di codici di rimozione
 

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@data symbol'
 ms.assetid: d3e99fb0-4c9e-40a8-9e2d-15de3b01a2fe
-ms.openlocfilehash: 456a1f1e53fbcba47d1ef33a1fa89b0d4fdc6a37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50c8128697ab9d488be013bed10d6875ce8bd33a
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166867"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302733"
 ---
-# <a name="data"></a>@data
+# <a name="data"></a>dati \@
 
-Il nome del gruppo di dati predefinito. Restituisce tutti i modelli, ad eccezione DGROUP **FLAT**. Viene valutata **FLAT** sotto il **FLAT** il modello di memoria (macro di testo).
+Nome del gruppo di dati predefinito. Restituisce DGROUP per tutti i modelli tranne **Flat**. Restituisce **Flat** sotto il modello di memoria **piatta** (macro di testo).
 
 ## <a name="syntax"></a>Sintassi
 
-> @data
+> **dati \@**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)<br/>
+[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)

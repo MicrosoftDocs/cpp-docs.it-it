@@ -2,16 +2,16 @@
 title: Panoramica delle convenzioni ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 176aaaa17af1ce358255ca94eaccc7d5217f2a87
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295239"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303187"
 ---
-# <a name="overview-of-arm32-abi-conventions"></a>Panoramica delle convenzioni ABI ARM32
+# <a name="overview-of-arm32-abi-conventions"></a>Panoramica delle convenzioni ABI di ARM32
 
-L'interfaccia applicativa binaria (ABI, Application Binary Interface) per il codice compilato per Windows su processori ARM si basa sull'interfaccia EABI ARM standard. Questo articolo evidenzia le principali differenze tra Windows su ARM e lo standard. Questo documento illustra l'interfaccia ABI ARM32. Per informazioni su ABI ARM64, vedere [convenzioni di panoramica di ARM64 ABI](arm64-windows-abi-conventions.md). Per altre informazioni sull'interfaccia EABI ARM standard, vedere [interfaccia applicativa binaria (ABI) per l'architettura ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (collegamento esterno).
+L'interfaccia applicativa binaria (ABI, Application Binary Interface) per il codice compilato per Windows su processori ARM si basa sull'interfaccia EABI ARM standard. Questo articolo evidenzia le principali differenze tra Windows su ARM e lo standard. Questo documento illustra l'ABI ARM32. Per informazioni su ARM64 ABI, vedere [Panoramica delle convenzioni ABI di arm64](arm64-windows-abi-conventions.md). Per altre informazioni sulla interfaccia EABI ARM standard, vedere [l'interfaccia ABI (Application Binary Interface) per l'architettura ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (collegamento esterno).
 
 ## <a name="base-requirements"></a>Requisiti di base
 
@@ -23,7 +23,7 @@ Il supporto per la divisione di numeri interi (UDIV/SDIV) è fortemente consigli
 
 ## <a name="endianness"></a>Ordine dei byte
 
-Windows su ARM viene eseguito in modalità little endian. Il compilatore MSVC sia il runtime di Windows prevede dati little-endian in qualsiasi momento. Anche se l'istruzione SETEND nell'architettura ISA (Instruction Set Architecture) ARM consente anche al codice in modalità utente di cambiare l'ordine dei byte corrente, è sconsigliato farlo perché è pericoloso per un'applicazione. Se viene generata un'eccezione in modalità big endian, il comportamento non è prevedibile e può provocare un errore dell'applicazione in modalità utente o un controllo errori in modalità kernel.
+Windows su ARM viene eseguito in modalità little endian. Sia il compilatore MSVC che Windows Runtime prevedono sempre dati little-endian. Anche se l'istruzione SETEND nell'architettura ISA (Instruction Set Architecture) ARM consente anche al codice in modalità utente di cambiare l'ordine dei byte corrente, è sconsigliato farlo perché è pericoloso per un'applicazione. Se viene generata un'eccezione in modalità big endian, il comportamento non è prevedibile e può provocare un errore dell'applicazione in modalità utente o un controllo errori in modalità kernel.
 
 ## <a name="alignment"></a>Allineamento
 
@@ -135,9 +135,9 @@ La maggior parte dell'hardware ARM non supporta le eccezioni a virgola mobile IE
 
 ## <a name="parameter-passing"></a>Passaggio dei parametri
 
-Per le funzioni non variadic, l'interfaccia ABI di Windows su ARM segue le regole ARM per il passaggio dei parametri, tra cui le estensioni SIMD avanzate e VFP. Queste regole seguono il [Procedure Standard delle chiamate per l'architettura ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), consolidato con le estensioni VFP. Per impostazione predefinita, i primi quattro argomenti Integer e fino a otto argomenti vettoriali o a virgola mobile vengono passati nei registri e gli argomenti aggiuntivi vengono passati nello stack. Gli argomenti vengono assegnati ai registri o allo stack con questa procedura:
+Per le funzioni non variadic, l'interfaccia ABI di Windows su ARM segue le regole ARM per il passaggio dei parametri, tra cui le estensioni SIMD avanzate e VFP. Queste regole seguono lo [standard di chiamata della procedura per l'architettura ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), consolidata con le estensioni VFP. Per impostazione predefinita, i primi quattro argomenti Integer e fino a otto argomenti vettoriali o a virgola mobile vengono passati nei registri e gli argomenti aggiuntivi vengono passati nello stack. Gli argomenti vengono assegnati ai registri o allo stack con questa procedura:
 
-### <a name="stage-a-initialization"></a>Fase r: Inizializzazione
+### <a name="stage-a-initialization"></a>Fase A: inizializzazione
 
 L'inizializzazione viene eseguita una sola volta, prima dell'elaborazione degli argomenti:
 
@@ -149,7 +149,7 @@ L'inizializzazione viene eseguita una sola volta, prima dell'elaborazione degli 
 
 1. Se viene chiamata una funzione che restituisce un risultato in memoria, l'indirizzo per il risultato viene inserito in r0 e il numero NCRN viene impostato su r1.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fase b: Pre-spaziatura interna e l'estensione di argomenti
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fase B: pre-riempimento ed estensione degli argomenti
 
 Per ogni argomento nell'elenco, viene applicata la prima regola corrispondente dell'elenco seguente:
 
@@ -159,7 +159,7 @@ Per ogni argomento nell'elenco, viene applicata la prima regola corrispondente d
 
 1. Se l'argomento è un tipo composito, la dimensione viene arrotondata per eccesso al più vicino multiplo di 4.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fase c: Assegnazione di argomenti ai registri e allo stack
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fase C: assegnazione di argomenti a registri e stack
 
 Per ogni argomento nell'elenco, vengono applicate una alla volta le regole seguenti finché l'argomento non viene allocato:
 
@@ -187,35 +187,35 @@ Lo stack deve mantenere sempre l'allineamento a 4 byte e deve avere l'allineamen
 
 Le funzioni che devono usare un puntatore a un frame, ad esempio le funzioni che chiamano `alloca` o che cambiano il puntatore dello stack in modo dinamico, devono impostare il puntatore al frame in r11 nel prologo della funzione e lasciarlo invariato fino all'epilogo. Le funzioni che non richiedono un puntatore a un frame devono eseguire tutti gli aggiornamenti dello stack nel prologo e lasciare il puntatore dello stack invariato fino all'epilogo.
 
-Le funzioni che allocano 4 KB o più nello stack devono verificare che ogni pagina prima di quella finale sia elaborata in ordine. In questo modo nessun codice può "andare oltre" i guard page usati da Windows per espandere lo stack. In genere, questa operazione viene eseguita dall'helper `__chkstk`, che ha superato l'allocazione totale dello stack in byte diviso 4 in r4 e che restituisce la quantità di allocazione finale dello stack in byte in r4.
+Le funzioni che allocano 4 KB o più nello stack devono verificare che ogni pagina prima di quella finale sia elaborata in ordine. Ciò garantisce che nessun codice possa "saltare" le pagine di Guard utilizzate da Windows per espandere lo stack. In genere, questa operazione viene eseguita dall'helper `__chkstk`, che ha superato l'allocazione totale dello stack in byte diviso 4 in r4 e che restituisce la quantità di allocazione finale dello stack in byte in r4.
 
 ### <a name="red-zone"></a>Zona rossa
 
 L'area a 8 byte immediatamente sotto il puntatore dello stack corrente è riservata all'analisi e all'applicazione di patch dinamica. Consente l'inserimento del codice generato. 2 registri vengono archiviati in [sp, #-8] e usati temporaneamente per scopi arbitrari. Il kernel Windows garantisce che questi 8 byte non verranno sovrascritti qualora si verifichi un'eccezione o un interrupt sia in modalità utente che in modalità kernel.
 
-### <a name="kernel-stack"></a>Stack del kernel
+### <a name="kernel-stack"></a>Stack kernel
 
 Lo stack in modalità kernel predefinito in Windows è di tre pagine (12 KB). Prestare attenzione a non creare funzioni con grandi buffer di stack in modalità kernel. Potrebbe verificarsi un interrupt con una capacità aggiuntiva dello stack molto ridotta e causare un controllo errori gravi dello stack.
 
-## <a name="cc-specifics"></a>Specifiche di C/C++
+## <a name="cc-specifics"></a>C/C++ specifiche
 
 Le enumerazioni sono tipi Integer a 32 bit a meno che almeno un valore nell'enumerazione non richieda memoria double word a 64 bit. In questo caso, il livello dell'enumerazione viene alzato a un tipo Integer a 64 bit.
 
-`wchar_t` è definito come equivalente a `unsigned short`, per mantenere la compatibilità con le altre piattaforme.
+`wchar_t` è definito come equivalente a `unsigned short`, per mantenere la compatibilità con altre piattaforme.
 
 ## <a name="stack-walking"></a>Analisi dello stack
 
-Codice di Windows viene compilato con puntatori ai frame abilitati ([/Oy (omissione dei puntatori ai Frame)](reference/oy-frame-pointer-omission.md)) per abilitare l'analisi rapida dello stack. In genere, il registro r11 punta al collegamento successivo nella catena, che è una coppia {r11, lr} che specifica il puntatore al frame precedente nello stack e l'indirizzo restituito. È consigliabile che anche il codice abiliti i puntatori ai frame per una profilatura e un'analisi migliori.
+Il codice di Windows viene compilato con i puntatori ai frame abilitati ([/Oy (omissione dei puntatori ai frame)](reference/oy-frame-pointer-omission.md)) per consentire l'analisi rapida dello stack. In genere, il registro r11 punta al collegamento successivo nella catena, che è una coppia {r11, lr} che specifica il puntatore al frame precedente nello stack e l'indirizzo restituito. È consigliabile che anche il codice abiliti i puntatori ai frame per una profilatura e un'analisi migliori.
 
 ## <a name="exception-unwinding"></a>Rimozione delle eccezioni
 
 Lo svuotamento dello stack durante la gestione delle eccezioni è abilitato dall'uso di codici di rimozione. I codici di rimozione sono sequenze di byte memorizzate nella sezione .xdata dell'immagine eseguibile. Descrivono il funzionamento del codice di prologo ed epilogo della funzione in modo astratto, per annullare gli effetti del prologo di una funzione in previsione della rimozione fino allo stack frame del chiamante.
 
-L'interfaccia EABI ARM specifica un modello di rimozione delle eccezioni che usa codici di rimozione. Questa specifica non è tuttavia sufficiente per la rimozione in Windows, che deve gestire casi in cui il processore è al centro del prologo o dell'epilogo di una funzione. Per altre informazioni su Windows su ARM eccezione dati e per la rimozione, vedere [gestione delle eccezioni ARM](arm-exception-handling.md).
+L'interfaccia EABI ARM specifica un modello di rimozione delle eccezioni che usa codici di rimozione. Questa specifica non è tuttavia sufficiente per la rimozione in Windows, che deve gestire casi in cui il processore è al centro del prologo o dell'epilogo di una funzione. Per altre informazioni sui dati delle eccezioni e sulla rimozione di Windows su ARM, vedere [gestione delle eccezioni ARM](arm-exception-handling.md).
 
 È consigliabile che il codice generato in modo dinamico venga descritto con tabelle di funzioni dinamiche nelle Chiamate a `RtlAddFunctionTable` e le funzioni associate, in modo che il codice generato possa partecipare alla gestione delle eccezioni.
 
-## <a name="cycle-counter"></a>Contatore di cicli
+## <a name="cycle-counter"></a>Contatore cicli
 
 Per supportare un contatore di cicli, sono necessari processori ARM che eseguono Windows, ma l'uso diretto del contatore può causare problemi. Per evitare questi problemi, Windows su ARM usa un codice operativo non definito per richiedere un valore del contatore di cicli a 64 bit normalizzato. Da C o C++ usare l'intrinseco `__rdpmccntr64` per creare il codice operativo appropriato. Dall'assembly usare l'istruzione `__rdpmccntr64`. La lettura del contatore di cicli richiede circa 60 cicli su Cortex-A9.
 
