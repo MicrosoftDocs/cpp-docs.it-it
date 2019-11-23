@@ -8,28 +8,28 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: 4577bd5d76949dfb777a359c80d91814f1c45fe2
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: df9798800da293e5e0b4f545a8442380b7ff9408
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703955"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397989"
 ---
-# <a name="safeseh-32-bit-masm"></a>. SAFESEH (MASM a 32 bit)
+# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
 
-Registra una funzione come gestore di eccezioni strutturate. (solo MASM a 32 bit).
+Registers a function as a structured exception handler. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Sintassi
 
-> . Identificatore SAFESEH
+> **.SAFESEH** *identifier*
 
 ## <a name="remarks"></a>Note
 
-l' *identificatore* deve essere l'ID di una procedura [EXTRN](../../assembler/masm/extrn.md) [o proc](../../assembler/masm/proc.md) definita localmente. Un' [etichetta](../../assembler/masm/label-masm.md) non è consentita. Il. Per la direttiva SAFESEH è richiesta l'opzione della riga di comando [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
+*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
 
-Per ulteriori informazioni sui gestori di eccezioni strutturate, vedere [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-Ad esempio, per registrare un gestore eccezioni sicuro, creare un nuovo file MASM (come indicato di seguito), assemblarlo con/SAFESEH e aggiungerlo agli oggetti collegati.
+For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
 
 ```asm
 .386
@@ -41,4 +41,4 @@ end
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

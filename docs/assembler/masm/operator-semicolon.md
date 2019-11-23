@@ -9,21 +9,21 @@ helpviewer_keywords:
 - semicolon operator
 - ; operator
 ms.assetid: 8369b28c-1fee-4e9a-a4a6-7db627e21075
-ms.openlocfilehash: e7ab11485e772431b684f22aa5ec0278e4bde7af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df1e75f749e00781ae7ce1ffc580632d6216201c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176278"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396448"
 ---
 # <a name="operator-"></a>Operatore ;
 
-Considera *testo* come commento.
+Treats *text* as a comment.
 
 ## <a name="syntax"></a>Sintassi
 
-> ; *text*
+> __;__ *text*
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

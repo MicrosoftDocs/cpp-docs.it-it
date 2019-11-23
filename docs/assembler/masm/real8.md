@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - REAL8 directive
 ms.assetid: 757244ea-e4c9-4fc9-94ec-16313578bede
-ms.openlocfilehash: 19c3d408542b2f9b8a8f8b5397c3e001eed3de76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d1d5826ece0cd9eb45b9c095b1d00702be0f89d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210457"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394615"
 ---
 # <a name="real8"></a>REAL8
 
-Alloca e inizializza facoltativamente un numero a virgola mobile a precisione doppia (8 byte) per ciascuno *inizializzatore*.
+Allocates and optionally initializes a double-precision (8-byte) floating-point number for each *initializer*.
 
 ## <a name="syntax"></a>Sintassi
 
-> inizializzatore REAL8 nome [[, inizializzatore]]...
+> *name* **REAL8** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

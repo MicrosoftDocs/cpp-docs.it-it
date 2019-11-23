@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - IRP directive
 ms.assetid: 055f746d-f422-43d1-b73d-d38979c593cb
-ms.openlocfilehash: 7cf54c6a6b0d145a7d7f999202559704b586e502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 357bdb521829f371919b4bbec851d9f2cdcbf43a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203602"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397287"
 ---
 # <a name="irp"></a>IRP
 
 ## <a name="syntax"></a>Sintassi
 
-> IRP
+> **IRP**
 
 ## <a name="remarks"></a>Note
 
-Visualizzare [per](../../assembler/masm/for-masm.md).
+See [FOR](../../assembler/masm/for-masm.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

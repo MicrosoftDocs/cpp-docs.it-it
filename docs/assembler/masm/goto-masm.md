@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - GOTO directive
 ms.assetid: 6a5f73e7-6784-4eae-ac52-4fc77a7f369f
-ms.openlocfilehash: a03cbda5a8ff64f6c167766f416e7744a5382ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424ff295fe37e7c5ff02897a01b99a7c75876f85
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203082"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397487"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
 
-Trasferisce assieme alla riga contrassegnata **:**_macrolabel_.
+Transfers assembly to the line marked **:** _macrolabel_.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,8 +23,8 @@ Trasferisce assieme alla riga contrassegnata **:**_macrolabel_.
 
 ## <a name="remarks"></a>Note
 
-**GOTO** è consentito solo all'interno [MACRO](macro.md), [per](for-masm.md), [fil](forc.md), [ripetere](repeat.md), e [durante](while-masm.md)blocchi. Il *macrolabel* destinazione deve essere l'unica direttiva sulla riga e deve essere preceduto da due punti iniziali.
+**GOTO** is permitted only inside [MACRO](macro.md), [FOR](for-masm.md), [FORC](forc.md), [REPEAT](repeat.md), and [WHILE](while-masm.md) blocks. The *macrolabel* target must be the only directive on the line and must be preceded by a leading colon.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

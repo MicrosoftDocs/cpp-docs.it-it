@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INCLUDELIB directive
 ms.assetid: 5455d004-8202-4b57-93f3-9aa66f133a2d
-ms.openlocfilehash: 12b629029c6ef250c288021232c23f82dcdd00a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef8a6e91ca8c5ca77b64b4668bf08087299701e0
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202830"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397335"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-Indica al linker che il modulo corrente deve essere collegato a *NomeLibreria*.
+Informs the linker that the current module should be linked with *libraryname*.
 
 ## <a name="syntax"></a>Sintassi
 
-> INCLUDELIB NomeLibreria
+> **INCLUDELIB** *libraryname*
 
 ## <a name="remarks"></a>Note
 
-Il *NomeLibreria* deve essere racchiuso tra parentesi angolari se include una barra rovesciata, punto e virgola, maggiore-rispetto a simbolo, meno-rispetto a simbolo, virgolette singole o virgolette doppie.
+The *libraryname* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

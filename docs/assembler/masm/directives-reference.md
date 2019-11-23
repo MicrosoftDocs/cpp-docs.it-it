@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
-ms.openlocfilehash: 655c177b8e5b859faf3b6d9c3250bc3ced31b430
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12effa33b80403f3e8f1a130ac53a75b02cfefff
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178938"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398781"
 ---
 # <a name="directives-reference"></a>Riferimento a direttive
 
@@ -23,14 +23,14 @@ ms.locfileid: "62178938"
 |[.PUSHFRAME](../../assembler/masm/dot-pushframe.md)|[.PUSHREG](../../assembler/masm/dot-pushreg.md)|[.SAVEREG](../../assembler/masm/dot-savereg.md)|
 |[.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)|[.SETFRAME](../../assembler/masm/dot-setframe.md)||
 
-### <a name="code-labels"></a>Etichette di codice
+### <a name="code-labels"></a>Code Labels
 
 |||
 |-|-|
 |[ALIGN](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|
 |[LABEL](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
 
-### <a name="conditional-assembly"></a>Assembly condizionale
+### <a name="conditional-assembly"></a>Conditional Assembly
 
 ||||
 |-|-|-|
@@ -39,7 +39,7 @@ ms.locfileid: "62178938"
 |[IFDEF](../../assembler/masm/ifdef.md)/[IFNDEF](../../assembler/masm/ifndef.md)|[IFDIF](../../assembler/masm/ifdif.md)/[IFDIF&#91;&#91;I&#93;&#93;](../../assembler/masm/ifdif.md)|[IFE](../../assembler/masm/ife.md)|
 |[IFIDN](../../assembler/masm/ifidn.md)/[IFIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/ifidn.md)|||
 
-### <a name="conditional-control-flow"></a>Flusso di controllo condizionale
+### <a name="conditional-control-flow"></a>Conditional Control Flow
 
 ||||
 |-|-|-|
@@ -48,7 +48,7 @@ ms.locfileid: "62178938"
 |[.IF](../../assembler/masm/dot-if.md)|[.REPEAT](../../assembler/masm/dot-repeat.md)|[.UNTIL](../../assembler/masm/dot-until.md)|
 |[.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)|[.WHILE](../../assembler/masm/dot-while.md)||
 
-### <a name="conditional-error"></a>Errore condizionale
+### <a name="conditional-error"></a>Conditional Error
 
 ||||
 |-|-|-|
@@ -57,7 +57,7 @@ ms.locfileid: "62178938"
 |[.ERRIDN](../../assembler/masm/dot-erridn.md)/[.ERRIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/dot-erridn.md)|[.ERRNB](../../assembler/masm/dot-errnb.md)|[.ERRNDEF](../../assembler/masm/dot-errndef.md)|
 |[.ERRNZ](../../assembler/masm/dot-errnz.md)|||
 
-### <a name="data-allocation"></a>Allocazione di dati
+### <a name="data-allocation"></a>Data Allocation
 
 ||||
 |-|-|-|
@@ -67,13 +67,13 @@ ms.locfileid: "62178938"
 |[REAL8](../../assembler/masm/real8.md)|[REAL10](../../assembler/masm/real10.md)|[TBYTE](../../assembler/masm/tbyte.md)|
 |[WORD](../../assembler/masm/word.md)/[SWORD](../../assembler/masm/sword.md)|||
 
-### <a name="equates"></a>Considera
+### <a name="equates"></a>Equates
 
 ||||
 |-|-|-|
 |[=](../../assembler/masm/equal.md)|[EQU](../../assembler/masm/equ.md)|[TEXTEQU](../../assembler/masm/textequ.md)|
 
-### <a name="listing-control"></a>Controllo elenco
+### <a name="listing-control"></a>Listing Control
 
 ||||
 |-|-|-|
@@ -94,8 +94,8 @@ ms.locfileid: "62178938"
 
 ||||
 |-|-|-|
-|[ALIAS](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[COMMENTO](../../assembler/masm/comment-masm.md)|
-|[ECHO](../../assembler/masm/echo.md)|[FINE](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|
+|[ALIAS](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[COMMENT](../../assembler/masm/comment-masm.md)|
+|[ECHO](../../assembler/masm/echo.md)|[END](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|
 |[INCLUDE](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|
 |[OPTION](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|
 |[.RADIX](../../assembler/masm/dot-radix.md)|[.SAFESEH](../../assembler/masm/dot-safeseh.md)|[XMMWORD](../../assembler/masm/xmmword.md)|
@@ -117,29 +117,29 @@ ms.locfileid: "62178938"
 |[.586P](../../assembler/masm/dot-586p.md)|[.686](../../assembler/masm/dot-686.md)|[.686P](../../assembler/masm/dot-686p.md)|
 |[.K3D](../../assembler/masm/dot-k3d.md)|[.MMX](../../assembler/masm/dot-mmx.md)|[.XMM](../../assembler/masm/dot-xmm.md)|
 
-### <a name="repeat-blocks"></a>Ripetere i blocchi
+### <a name="repeat-blocks"></a>Repeat Blocks
 
 ||||
 |-|-|-|
 |[ENDM](../../assembler/masm/endm.md)|[FOR](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
 |[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|
 
-### <a name="scope"></a>Ambito
+### <a name="scope"></a>Scope
 
 ||||
 |-|-|-|
 |[COMM](../../assembler/masm/comm.md)|[EXTERN](../../assembler/masm/extern-masm.md)|[EXTERNDEF](../../assembler/masm/externdef.md)|
 |[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[PUBLIC](../../assembler/masm/public-masm.md)||
 
-### <a name="segment"></a>Segmento
+### <a name="segment"></a>Segment
 
 ||||
 |-|-|-|
 |[.ALPHA](../../assembler/masm/dot-alpha.md)|[ASSUME](../../assembler/masm/assume.md)|[.DOSSEG](../../assembler/masm/dot-dosseg.md)|
-|[FINE](../../assembler/masm/end-masm.md)|[TERMINA](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|
+|[END](../../assembler/masm/end-masm.md)|[ENDS](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|
 |[SEGMENT](../../assembler/masm/segment.md)|[.SEQ](../../assembler/masm/dot-seq.md)||
 
-### <a name="simplified-segment"></a>Segmento semplificata
+### <a name="simplified-segment"></a>Simplified Segment
 
 ||||
 |-|-|-|
@@ -155,13 +155,13 @@ ms.locfileid: "62178938"
 |[CATSTR](../../assembler/masm/catstr.md)|[INSTR](../../assembler/masm/instr.md)|
 |[SIZESTR](../../assembler/masm/sizestr.md)|[SUBSTR](../../assembler/masm/substr.md)|
 
-### <a name="structure-and-record"></a>Struttura e un Record
+### <a name="structure-and-record"></a>Structure and Record
 
 ||||
 |-|-|-|
-|[TERMINA](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|
+|[ENDS](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|
 |[TYPEDEF](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
