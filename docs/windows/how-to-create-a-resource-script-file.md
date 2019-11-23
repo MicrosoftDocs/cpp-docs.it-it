@@ -83,7 +83,7 @@ Prima di creare e aggiungere nuove risorse al progetto, è necessario creare pri
 > [!NOTE]
 > Alcuni comandi sono disponibili solo se il file è aperto autonomo, ovvero all'esterno di un progetto senza prima caricare il progetto. Ad esempio, per utilizzare il comando **Salva** con nome e salvare un file con un formato o un nome di file diverso, il file deve essere aperto autonomamente.
 
-- Per aprire un file di script di risorsa all'esterno di un progetto, nel menu passare a **file** > **Apri**, quindi scegliere **file**. Passare al file di script di risorsa, evidenziare il file e scegliere **Apri**.
+- Per aprire un file di script di risorsa all'esterno di un progetto, nel menu passare a **file** > **Apri**e scegliere **file**. Passare al file di script di risorsa, evidenziare il file e scegliere **Apri**.
 
     > [!NOTE]
     > A volte può essere utile visualizzare il contenuto del file di script di risorse del progetto senza usare gli editor di risorse per aprire una risorsa. È ad esempio possibile che si desideri cercare una stringa in tutte le finestre di dialogo del file di risorse senza che sia necessario aprire separatamente ogni finestra. È possibile aprire facilmente il file di risorse in formato testo per visualizzare tutte le risorse in esso contenute e completare le operazioni globali supportate dall'editor di testo.
@@ -109,15 +109,15 @@ Quando si compila un'applicazione MFC (Microsoft Foundation Class) per Windows m
 Utilizzare la finestra **visualizzazione risorse** per visualizzare i file di risorse inclusi nei progetti. Espandendo la cartella top, ad esempio, *Project1. RC*, vengono visualizzati i tipi di risorse all'interno di tale file. Espandere ogni tipo di risorsa per visualizzare le singole risorse di quel tipo.
 
 > [!TIP]
-> Per aprire la finestra di **visualizzazione risorse** , passare alla **visualizzazione**menu  > **Other Windows** > **visualizzazione risorse** oppure premere **CTRL**+**Shift**+**E**.
+> Per aprire la finestra di **visualizzazione risorse** , passare alla **visualizzazione** menu > **altre finestre** > **visualizzazione risorse** oppure premere **CTRL**+**MAIUSC**+**E**.
 
 È anche possibile fare clic con il pulsante destro del mouse sulla finestra **visualizzazione risorse** per avviare un menu di scelta rapida dei comandi oppure fare doppio clic sulla barra del titolo per ancorare e disancorare la finestra. Fare clic con il pulsante destro del mouse sulla barra del titolo per i comandi che controllano il comportamento della finestra. Per ulteriori informazioni, vedere [gestione di Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
 Il **visualizzazione risorse** Windows include la finestra di dialogo **Aggiungi risorsa** con le proprietà seguenti per aggiungere risorse a C++ un progetto di applicazione desktop di Windows:
 
-| proprietà | Descrizione |
+| Proprietà | Descrizione |
 |---|---|
-| **Tipo di risorsa** | Specificare il tipo di risorsa che si vuole creare.<br/><br/>È possibile espandere le categorie di risorse del cursore e della finestra di dialogo per visualizzare altre risorse, che si trovano in *. \Microsoft Visual Studio \<version @ no__t-2\VC\VCResourceTemplates @ no__t-3 < LCID @ no__t-4\mfc.rct*. Se è necessario aggiungere i file RCT, inserirli qui o specificare un altro [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Le risorse visualizzate al primo livello del controllo albero sono le risorse predefinite fornite da Visual Studio. Le risorse nei file con estensione RCT vengono visualizzate al secondo livello nella categoria appropriata. Non è previsto alcun limite per il numero di file con estensione RCT che è possibile aggiungere.<br/><br/> |
+| **Tipo di risorsa** | Specificare il tipo di risorsa che si vuole creare.<br/><br/>È possibile espandere le categorie di risorse del cursore e della finestra di dialogo per visualizzare altre risorse, che si trovano in *. \Microsoft Visual Studio \<Version\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*. Se è necessario aggiungere i file RCT, inserirli qui o specificare un altro [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Le risorse visualizzate al primo livello del controllo albero sono le risorse predefinite fornite da Visual Studio. Le risorse nei file con estensione RCT vengono visualizzate al secondo livello nella categoria appropriata. Non è previsto alcun limite per il numero di file con estensione RCT che è possibile aggiungere.<br/><br/> |
 | **Nuovo** | Creare una risorsa in base al tipo selezionato nella casella **tipo di risorsa** e aprire la risorsa nell'editor appropriato.<br/><br/>Se, ad esempio, si crea una risorsa finestra di dialogo, la risorsa viene aperta nell' [editor finestre](../windows/dialog-editor.md). |
 | **Importaa** | Aprire la finestra di dialogo **Importa** per passare alla risorsa che si desidera importare nel progetto corrente.<br/><br/>È possibile importare una bitmap, un'icona, un cursore, un HTML, un suono (. WAV) o file di risorse personalizzato. |
 | **Personalizzato** | Aprire la finestra di dialogo **nuova risorsa personalizzata** per creare una risorsa personalizzata.<br/><br/>Include anche una proprietà relativa al **tipo di risorsa** che fornisce una casella di testo in cui immettere il nome del tipo di risorsa personalizzato. Quando C++ si esce, Visual crea automaticamente il nome in maiuscolo. Le risorse personalizzate vengono modificate solo nell' [editor binario](../windows/binary-editor.md). |
@@ -125,7 +125,7 @@ Il **visualizzazione risorse** Windows include la finestra di dialogo **Aggiungi
 Quando si crea una nuova risorsa, l' C++ oggetto visivo assegna a tale risorsa un nome univoco, ad esempio `IDD_Dialog1`. È possibile personalizzare questo ID risorsa modificando le proprietà della risorsa nell'editor di risorse associato o nel [finestra Proprietà](/visualstudio/ide/reference/properties-window).
 
 > [!NOTE]
-> Non specificare un nome di risorsa o un ID riservato da Visual Studio. I nomi riservati sono `DESIGNINFO`, `HWB` e `TEXTINCLUDE` e l'ID riservato è `255`.
+> Non specificare un nome di risorsa o un ID riservato da Visual Studio. I nomi riservati sono `DESIGNINFO`, `HWB`e `TEXTINCLUDE`e l'ID riservato è `255`.
 
 ### <a name="to-create-a-resource"></a>Per creare una risorsa
 
@@ -141,7 +141,7 @@ Quando si crea una nuova risorsa, l' C++ oggetto visivo assegna a tale risorsa u
 
 - In [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code)fare clic con il pulsante destro del mouse sulla classe, scegliere **Aggiungi** > **Aggiungi risorsa** e scegliere il tipo di risorsa da aggiungere al progetto.
 
-- Usare il **progetto**menu  > **Aggiungi risorsa**.
+- Usare il **progetto** di menu > **Aggiungi risorsa**.
 
 ## <a name="use-resource-templates"></a>Usare i modelli di risorse
 
@@ -153,9 +153,9 @@ Dopo aver personalizzato un modello di risorsa, salvare le modifiche nella carte
 > L'editor di risorse fornisce automaticamente un ID della risorsa univoco. È possibile modificare le [proprietà delle risorse](../windows/changing-the-properties-of-a-resource.md) in base alle esigenze.
 
 > [!NOTE]
-> Inserire i file di modello specifici della lingua nelle sottodirectory della directory principale del modello. Ad esempio, i file di modello solo in lingua inglese entrano in *. \\ < la directory del modello di risorsa @ no__t-2\1033*.
+> Inserire i file di modello specifici della lingua nelle sottodirectory della directory principale del modello. Ad esempio, i file di modello solo in lingua inglese passano *..\\< directory del modello di risorsa\>\ 1033*.
 >
-> Visual Studio cerca i nuovi file. RCT in *\Programmi\microsoft Visual studio \<version @ no__t-2\VC\VCResourceTemplates*, *\programmi\microsoft Visual Studio \<version > \VC\VCResourceTemplates @ no__t-5 < LCID @ no__t-6* (ad esempio identificatore lcid 1033 per l'inglese) o in qualsiasi punto del [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Se si preferisce archiviare i file RCT in un'altra posizione, è necessario aggiungere il percorso al percorso di inclusione.
+> Visual Studio cerca i nuovi file RCT in *\Programmi\microsoft Visual studio \<version\>\VC\VCResourceTemplates*, *\programmi\microsoft visual studio \<version > \VC\VCRESOURCETEMPLATES\\< LCID\>* (ad esempio un LCID 1033 per l'inglese) o in qualsiasi punto del [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Se si preferisce archiviare i file RCT in un'altra posizione, è necessario aggiungere il percorso al percorso di inclusione.
 
 ### <a name="to-create-and-use-a-resource-template"></a>Per creare e usare un modello di risorsa
 
@@ -181,7 +181,7 @@ Dopo aver personalizzato un modello di risorsa, salvare le modifiche nella carte
 
 ### <a name="to-convert-an-existing-resource-file-to-a-template"></a>Per convertire un file di risorse esistente in un modello
 
-Con il file script di risorsa aperto, nel menu passare a **file** > **Save \<*filename*> As**. Specificare un percorso e scegliere **OK**.
+Con il file script di risorsa aperto, nel menu Vai a **file** > **salva \<*nomefile*> come**. Specificare un percorso e scegliere **OK**.
 
 ## <a name="requirements"></a>Requisiti
 

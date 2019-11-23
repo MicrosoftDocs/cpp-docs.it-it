@@ -30,7 +30,7 @@ Il compilatore supporta gli avvisi che sono disattivati per impostazione predefi
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` abilita tutti gli avvisi, inclusi quelli disabilitati per impostazione predefinita. Se si utilizza questa opzione, è possibile disattivare singoli avvisi utilizzando l'opzione [/WD.](../build/reference/compiler-option-warning-level.md) .
+   `/Wall` Abilita tutti gli avvisi che sono disattivati per impostazione predefinita. Se si utilizza questa opzione, è possibile disattivare singoli avvisi utilizzando l'opzione [/WD.](../build/reference/compiler-option-warning-level.md) .
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
@@ -66,7 +66,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |C4388 (livello 4)|errata corrispondenza tra signed e unsigned|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (livello 2)|'*Function*': la firma della funzione contiene il tipo '*Type*'; C++ gli oggetti non sono sicuri di passare tra codice puro e misto o nativo|
 |C4426 (livello 1)|i flag di ottimizzazione modificati dopo l'inclusione dell'intestazione potrebbero essere dovuti a #pragma optimize () <sup>14,1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (livello 4)|'*Class1*': Il layout dell'oggetto in/vd2 cambierà a causa della base virtuale '*Class2*'|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (livello 4)|'*Class1*': il layout dell'oggetto in/vd2 cambierà a causa della base virtuale '*Class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (livello 4)|dynamic_cast dalla base virtuale '*Class1*' a'*Class2*' potrebbe non riuscire in alcuni contesti|
 |C4444 (livello 3)|'__unaligned' di livello superiore non implementato nel contesto|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (livello 4)|il percorso di inclusione relativo contiene '. .'|
@@ -100,7 +100,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (livello 1)|digraph non supportati con -Ze. La sequenza di caratteri '*digraph*' non è stata interpretata come token alternativo per '*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (livello 3)|'*instance*': la costruzione di oggetti statici locali non è thread-safe|
 | C4643 (livello 4) | La C++ dichiarazione di "*Identifier*" in base allo spazio dei nomi STD non è consentita dallo standard. <sup>15.8</sup> |
-|C4647 (livello 3)|modifica del comportamento: il valore di __is_pod (*Type*) è diverso nelle versioni precedenti|
+|C4647 (livello 3)|modifica del comportamento: __is_pod (*tipo*) ha un valore diverso nelle versioni precedenti|
 |C4654 (livello 4)|Il codice inserito prima dell'inclusione della riga di intestazione precompilata verrà ignorato. Aggiungere codice all'intestazione precompilata. <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (livello 4)|'*Symbol*' non è definito come macro del preprocessore, sostituendo con ' 0' per '*Directives*'|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (livello 4)|'*Symbol*': nessun attributo di parametro direzionale specificato. il valore predefinito è [in]|
@@ -108,10 +108,10 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (livello 1)|'*Function*': la firma del membro non privato contiene il tipo nativo privato '*NATIVE_TYPE*' dell'assembly|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (livello 4)|'*Function*': funzione non inline|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (livello 3)|archiviazione in memoria del risultato float a 32 bit, possibile riduzione delle prestazioni|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l'accesso volatile di '*Expression*' è soggetto a/volatile: @no__t-&#124;1iso MS > Setting; prendere in considerazione l'uso di funzioni intrinseche __iso_volatile_load/Store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l'accesso volatile di '*Expression*' è soggetto a/volatile:\<&#124;ISO MS > impostazione. provare a usare __iso_volatile_load funzioni intrinseche/Store|
 |C4749 (livello 4)|supportato in modo condizionale: offsetof applicato al tipo di layout non standard '*Type*'|
 |C4767 (livello 4)|il nome di sezione '*Symbol*' è più lungo di 8 caratteri e verrà troncato dal linker|
-|C4768 (livello 3)|attributi _ _ declspec prima della specifica del collegamento vengono ignorati|
+|C4768 (livello 3)|gli attributi __declspec prima della specifica del collegamento vengono ignorati|
 |C4774 (livello 4)|'*String*': la stringa di formato prevista nel *numero* dell'argomento non è un valore letterale stringa|
 |C4777 (livello 4)|'*Function*': la stringa di formato '*String*' richiede un argomento di tipo '*tipo1*', ma il *numero* dell'argomento Variadic è di tipo '*tipo2*'|
 |C4786 (livello 3)|'*Symbol*': il nome dell'oggetto è stato troncato a'*Number*' caratteri nelle informazioni di debug|
@@ -128,7 +128,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (livello 1)|'*dichiaratore*': un GUID può essere associato solo a una classe, un'interfaccia o uno spazio dei nomi|
 |[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (livello 1)|inizializzazione di copia non valida; sono state implicitamente applicate più conversioni definite dall'utente|
 |[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (livello 4)|si suppone che la libreria dei tipi sia stata compilata per puntatori a numero bit|
-|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (livello 1)|reinterpret_cast utilizzato tra le classi correlate:'*Class1*' è*Class2*'|
+|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (livello 1)|reinterpret_cast usato tra le classi correlate:'*Class1*' è*Class2*'|
 |C4962|'*Function*': ottimizzazioni PGO disabilitate perché le ottimizzazioni provocano l'incoerenza dei dati di profilo|
 |[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md) (livello 4)|'*Symbol*': la specifica dell'eccezione non corrisponde alla dichiarazione precedente|
 |C4987 (livello 4)|utilizzata estensione non standard: 'throw (...)'|
@@ -174,7 +174,7 @@ Questo avviso è disattivato per impostazione predefinita nelle versioni del com
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (livello 4)|identificatore di tipo mancante, verrà utilizzato int. Nota: C non supporta più default-int|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (livello 4)|identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++|
 
 ## <a name="see-also"></a>Vedere anche
 

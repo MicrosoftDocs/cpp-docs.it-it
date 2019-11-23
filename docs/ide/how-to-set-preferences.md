@@ -36,7 +36,7 @@ Per nascondere tutte le finestre degli strumenti e ingrandire la finestra dell'e
 
 ## <a name="set-c-coding-styles-and-formatting"></a>Impostare C++ gli stili e la formattazione del codice
 
-È possibile specificare molte opzioni di formattazione del codice singole, ad esempio le posizioni di rientro e parentesi graffe. A tale scopo, passare a **strumenti** > **Opzioni** > **editor di testo**@no__t-**5 CC++/**  > **Formatting** (oppure premere **CTRL + Q** e cercare "Formatting"). In alternativa, è possibile specificare uno degli stili [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (o lo stile ClangFormat personalizzato).
+È possibile specificare molte opzioni di formattazione del codice singole, ad esempio le posizioni di rientro e parentesi graffe. A tale scopo, passare a **strumenti** > **Opzioni** > **editor di testo** > **formattazione** **C/C++**  > (oppure premere **CTRL + Q** e cercare "formattazione"). In alternativa, è possibile specificare uno degli stili [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (o lo stile ClangFormat personalizzato).
 
 ![Screenshot delle opzioni di ClangFormat](media/clang-format-ide.png)
 
@@ -44,7 +44,7 @@ Per ulteriori informazioni su tutte le opzioni di formattazione, vedere [Opzioni
 
 ## <a name="set-the-color-theme"></a>Impostare il tema colori
 
-Per impostare uno sfondo chiaro o scuro, digitare **CTRL + Q** e cercare "tema colori". È anche possibile trovarli selezionando **strumenti** > **Opzioni** > **ambiente**e scegliendo **tema colori**.
+Per impostare uno sfondo chiaro o scuro, digitare **CTRL + Q** e cercare "tema colori". È anche possibile trovarli scegliendo **strumenti** > **Opzioni** > **ambiente**e scegliendo **tema colori**.
 
 ![Screenshot dei temi colori](media/tools-options-color-theme.png)
 
@@ -54,15 +54,15 @@ Ad esempio, ecco il tema scuro:
 
 ## <a name="customize-code-colorization"></a>Personalizzare la colorazione del codice
 
-In Visual Studio 2019 è possibile scegliere tra tre *combinazioni di colori*predefinite. Che specificano la modalità di colorazione degli elementi di codice nell'editor. Per scegliere un tema, passare a **strumenti** > **Opzioni** > **editor di testo**@no__t-**5 CC++/**  > **visualizzazione**e scegliere **combinazione colori**:
+In Visual Studio 2019 è possibile scegliere tra tre *combinazioni di colori*predefinite. Che specificano la modalità di colorazione degli elementi di codice nell'editor. Per scegliere un tema, passare a **strumenti** > **Opzioni** > **editor di testo** > **visualizzazione** **CC++ /**  > e scegliere **combinazione colori**:
 
 ![Screenshot delle C++ opzioni della combinazione di colori con evidenziato avanzato](media/color-schemes.png)
 
-Nella combinazione di colori denominata **Visual Studio 2017**, la maggior parte degli elementi di codice sono semplicemente neri. Nella combinazione di colori **avanzata** , le funzioni, le variabili locali, le macro e gli altri elementi vengono colorati. Nel **Enhanced (Globals vs. Membri)**  schema, funzioni globali e variabili vengono colorate per contrastare i membri della classe. La modalità predefinita è **migliorata**e ha un aspetto simile al seguente:
+Nella combinazione di colori denominata **Visual Studio 2017**, la maggior parte degli elementi di codice sono semplicemente neri. Nella combinazione di colori **avanzata** , le funzioni, le variabili locali, le macro e gli altri elementi vengono colorati. Nello schema **Enhanced (Globals vs. Members)** , le funzioni e le variabili globali vengono colorate per contrastare i membri della classe. La modalità predefinita è **migliorata**e ha un aspetto simile al seguente:
 
 ![Screenshot della combinazione di colori avanzata](media/color-scheme-enhanced.png)
 
-Indipendentemente dal tema o dallo schema dei colori attivo, è possibile personalizzare il tipo di carattere e i colori dei singoli elementi di codice. A tale scopo, passare a **strumenti** > **Opzioni** > **ambiente** > **tipi di carattere e colori** (oppure premere **CTRL + Q** e cercare "caratteri"). Scorrere l'elenco degli elementi visualizzati fino a visualizzare le C++ opzioni.
+Indipendentemente dal tema o dallo schema dei colori attivo, è possibile personalizzare il tipo di carattere e i colori dei singoli elementi di codice. A tale scopo, passare a **strumenti** > **opzioni** > **ambiente** > **tipi di carattere e colori** (oppure premere **CTRL + Q** e cercare "caratteri"). Scorrere l'elenco degli elementi visualizzati fino a visualizzare le C++ opzioni.
 
 ![Screenshot delle C++ opzioni relative al tipo di carattere e al colore](media/tools-options-cpp-colors.png)
 
@@ -80,7 +80,7 @@ Passare il mouse sulle icone della barra degli strumenti per vedere quale comand
 
 ![Screenshot della barra degli strumenti, con freccia giù e barra tratteggiata evidenziata](media/toolbar-move-edit.png).
 
-Per altre informazioni, vedere [Procedura: Personalizzare i menu e le barre degli strumenti in Visual Studio @ no__t-0.
+Per altre informazioni, vedere [procedura: personalizzare menu e barre degli strumenti in Visual Studio](/visualstudio/ide/how-to-customize-menus-and-toolbars-in-visual-studio).
 
 ## <a name="show-or-hide-line-numbers"></a>Mostra o Nascondi numeri di riga
 
@@ -90,4 +90,4 @@ Per altre informazioni, vedere [Procedura: Personalizzare i menu e le barre degl
 
 ## <a name="create-keyboard-shortcuts"></a>Creazione di tasti di scelta rapida
 
-Molti comandi in Visual Studio hanno *scelte rapide da tastiera*, combinazioni di tasti con i tasti CTRL, ALT e MAIUSC. È possibile modificare questi tasti di scelta rapida o crearne di nuovi in Visual Studio. Passare a **strumenti** > **Opzioni** > **ambiente** > **tastiera** (oppure premere **CTRL + Q** e cercare "collegamenti"). Per altre informazioni, vedere [identificare e personalizzare i tasti di scelta rapida in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Molti comandi in Visual Studio hanno *scelte rapide da tastiera*, combinazioni di tasti con i tasti CTRL, ALT e MAIUSC. È possibile modificare questi tasti di scelta rapida o crearne di nuovi in Visual Studio. Passare a **strumenti** > **opzioni** > **ambiente** > **tastiera** (oppure premere **CTRL + Q** e cercare "collegamenti"). Per altre informazioni, vedere [identificare e personalizzare i tasti di scelta rapida in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).

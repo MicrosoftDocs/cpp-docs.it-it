@@ -107,13 +107,13 @@ L' **Editor barra degli strumenti** consente di:
 
 1. Nella finestra di dialogo **Aggiungi risorsa** selezionare **barra degli strumenti** nell'elenco **tipo di risorsa** , quindi scegliere **nuovo**.
 
-   Se viene visualizzato un segno **+** più () accanto al tipo di risorsa della **barra degli strumenti** , significa che sono disponibili i modelli della barra degli strumenti. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **nuovo**.
+   Se viene visualizzato un segno più ( **+** ) accanto al tipo di risorsa della **barra degli strumenti** , significa che sono disponibili i modelli della barra degli strumenti. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **nuovo**.
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Per convertire le bitmap in risorse della barra degli strumenti
 
 1. Aprire una risorsa bitmap esistente nell' [editor di immagini](../windows/image-editor-for-icons.md). Se la bitmap non è già presente nel file *RC* , fare clic con il pulsante destro del mouse sul file *RC* e scegliere **Importa**, quindi passare alla bitmap che si desidera aggiungere al file *RC* e selezionare **Apri**.
 
-1. Passare all'**Editor della barra degli strumenti**dell' **immagine** > del menu.
+1. Passare all' **immagine** del menu > **Editor della barra degli strumenti**.
 
    Verrà visualizzata la finestra di dialogo **nuova risorsa barra degli strumenti** . È possibile modificare la larghezza e l'altezza delle immagini dell'icona in modo che corrispondano alla bitmap. L'immagine della barra degli strumenti viene quindi visualizzata nell' **Editor della barra degli strumenti**.
 
@@ -134,7 +134,7 @@ L' **Editor barra degli strumenti** consente di:
 
    - Assegnare un ID al pulsante vuoto all'estremità destra della barra degli strumenti. Questa operazione può essere eseguita modificando la proprietà **ID** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window). Ad esempio, è possibile assegnare a un pulsante della barra degli strumenti lo stesso ID di un'opzione di menu. In questo caso, utilizzare la casella di riepilogo a discesa per selezionare l' **ID** dell'opzione di menu.
 
-   - Selezionare il pulsante vuoto nell'estremità destra della barra degli strumenti nel riquadro di **visualizzazione della barra degli strumenti** e iniziare il disegno. Viene assegnato un ID di comando del pulsante predefinito\<(ID_BUTTON n >).
+   - Selezionare il pulsante vuoto nell'estremità destra della barra degli strumenti nel riquadro di **visualizzazione della barra degli strumenti** e iniziare il disegno. Viene assegnato un ID di comando del pulsante predefinito (ID_BUTTON\<n >).
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Per aggiungere un'immagine a una barra degli strumenti come pulsante
 
@@ -163,7 +163,7 @@ Nel riquadro **visualizzazione barra degli strumenti** trascinare il pulsante ch
 
 - Per inserire o rimuovere spazio tra i pulsanti di una barra degli strumenti, trascinarli da o verso un altro sulla barra degli strumenti.
 
-|Operazione|Passaggio|
+|Azione|Passaggio|
 |------|------|
 |Per inserire uno spazio prima di un pulsante non seguito da uno spazio|Trascinare il pulsante a destra o a sinistra fino a quando non si sovrappone al pulsante avanti circa la metà.|
 |Per inserire uno spazio prima di un pulsante seguito da uno spazio e per il mantenimento dello spazio finale|Trascinare il pulsante finché il bordo destro o inferiore sta semplicemente toccando il pulsante avanti o semplicemente si sovrappone.|
@@ -183,19 +183,19 @@ Nel riquadro **visualizzazione barra degli strumenti** trascinare il pulsante ch
 
 1. Selezionare il pulsante della barra degli strumenti.
 
-1. Nel campo **prompt** della `\n` [finestra Proprietà](/visualstudio/ide/reference/properties-window)aggiungere una descrizione del pulsante per la barra di stato e, dopo il messaggio, aggiungere e il nome della descrizione comando.
+1. Nel campo **prompt** della [finestra Proprietà](/visualstudio/ide/reference/properties-window)aggiungere una descrizione del pulsante per la barra di stato e dopo il messaggio aggiungere `\n` e il nome della descrizione comando.
 
 Ad esempio, per visualizzare la descrizione comando per il pulsante **stampa** in **WordPad**:
 
 1. Aprire **WordPad**.
 
-1. Posizionare il puntatore del mouse sul pulsante della barra degli strumenti **stampa** e `Print` notare che la parola ora è mobile sotto il puntatore del mouse.
+1. Posizionare il puntatore del mouse sul pulsante della barra degli strumenti **stampa** e notare che la parola `Print` ora è mobile sotto il puntatore del mouse.
 
-1. Osservare la barra di stato nella parte inferiore della finestra di **WordPad** e notare che ora viene visualizzato il testo `Prints the active document`.
+1. Osservare la barra di stato nella parte inferiore della finestra di **WordPad** e notare che ora Visualizza il testo `Prints the active document`.
 
-`Print`è il nome della descrizione comando `Prints the active document` e è la descrizione del pulsante per la barra di stato.
+`Print` è il nome della descrizione comando e `Prints the active document` è la descrizione del pulsante per la barra di stato.
 
-Se si vuole questo effetto usando l' **Editor della barra degli strumenti**, impostare la `Prints the active document\nPrint`proprietà **prompt** su.
+Se si vuole questo effetto usando l' **Editor della barra degli strumenti**, impostare la proprietà **prompt** su `Prints the active document\nPrint`.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -203,6 +203,6 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vedere anche
 
-[Menu editor](../windows/resource-editors.md)
-risorse[e altre risorse](/windows/win32/menurc/resources)<br/>
+[Editor di risorse](../windows/resource-editors.md)
+[menu e altre risorse](/windows/win32/menurc/resources)<br/>
 [Proprietà dei pulsanti della barra degli strumenti](../windows/toolbar-button-properties.md)<br/>

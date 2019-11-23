@@ -51,7 +51,7 @@ long_num1 = int_num;
 long_num2 = int_num * long_num2;
 ```
 
-Il risultato di una conversione è un l-value solo se genera un tipo di riferimento. Ad esempio, una conversione definita dall'utente dichiarata come `operator int&()` restituisce un riferimento ed è un l-value. Tuttavia, una conversione dichiarata come `operator int()` restituisce un oggetto e non è un l-value.
+Il risultato di una conversione è un l-value solo se genera un tipo di riferimento. Una conversione definita dall'utente, ad esempio, dichiarata come `operator int&()` restituisce un riferimento ed è un l-value. Tuttavia, una conversione dichiarata come `operator int()` restituisce un oggetto e non è un l-value.
 
 ## <a name="integral-promotions"></a>Promozioni a intero
 
@@ -69,7 +69,7 @@ C++le promozioni sono "con mantenimento del valore", come valore dopo che la pro
 
 Le promozioni a mantenimento del valore e le promozioni che mantengono il segno producono, in genere, gli stessi risultati. Tuttavia, possono produrre risultati diversi se l'oggetto promosso viene visualizzato come segue:
 
-- Operando di `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` o `>=`
+- Operando di `/`, `%`, `/=`, `%=`, `<`, `<=`, `>`o `>=`
 
    Questi operatori si basano sul segno per determinare il risultato. Le promozioni con mantenimento del valore e mantenimento del segno producono risultati diversi quando vengono applicati a questi operandi.
 
@@ -101,7 +101,7 @@ int main()
 // Output: 65533
 ```
 
-Nell'esempio precedente, un valore **short con segno**, `i`, viene definito e inizializzato su un numero negativo. L'espressione `(u = i)` determina la conversione di `i` in un **short senza segno** prima dell'assegnazione a `u`.
+Nell'esempio precedente, un valore **short con segno**, `i`, viene definito e inizializzato su un numero negativo. L'espressione `(u = i)` causa la conversione di `i` in un **short senza segno** prima dell'assegnazione al `u`.
 
 ### <a name="unsigned-to-signed"></a>Da tipo unsigned a tipo signed
 
@@ -194,23 +194,23 @@ Grafico dell'ereditarietà per l'illustrazione dell'accessibilità delle classi 
 
 Nella tabella seguente viene illustrata l'accessibilità della classe base per la situazione illustrata nella figura.
 
-|Tipo di funzione|Derivazione|Conversione da<br /><br /> B * a un @ no__t-0 valido?|
+|Tipo di funzione|Derivazione|Conversione da<br /><br /> B * a un\* valido?|
 |----------------------|----------------|-------------------------------------------|
 |Funzione esterna (non a livello dell'ambito della classe)|Private|No|
-||Protetta|No|
-||Public|Yes|
-|Funzione del membro B (nell'ambito B)|Private|Yes|
-||Protetta|Yes|
-||Public|Yes|
+||Protetto|No|
+||Pubblico|Sì|
+|Funzione del membro B (nell'ambito B)|Private|Sì|
+||Protetto|Sì|
+||Pubblico|Sì|
 |Funzione del membro C (nell'ambito C)|Private|No|
-||Protetta|Yes|
-||Public|Yes|
+||Protetto|Sì|
+||Pubblico|Sì|
 
 Il secondo caso in cui un puntatore a una classe può essere convertito in un puntatore a una classe base è quando si usa una conversione di tipo esplicita. Per ulteriori informazioni sulle conversioni di tipi esplicite, vedere [operatore di conversione esplicita dei tipi](explicit-type-conversion-operator-parens.md).
 
 Il risultato di tale conversione è un puntatore all' *oggetto SubObject*, ovvero la parte dell'oggetto descritta completamente dalla classe base.
 
-Nel codice seguente vengono definite due classi, `A` e `B`, dove `B` è derivata da `A`. Per ulteriori informazioni sull'ereditarietà, vedere [classi derivate](../cpp/inheritance-cpp.md). Definisce quindi `bObject` un oggetto di tipo `B` e due puntatori (`pA` e `pB`) che puntano all'oggetto.
+Nel codice seguente vengono definite due classi, `A` e `B`, dove `B` è derivata da `A`. Per ulteriori informazioni sull'ereditarietà, vedere [classi derivate](../cpp/inheritance-cpp.md). Definisce quindi `bObject`, un oggetto di tipo `B`e due puntatori (`pA` e `pB`) che puntano all'oggetto.
 
 ```cpp
 // C2039 expected
