@@ -45,7 +45,7 @@ Questi presupposti vengono creati nella descrizione della gestione delle eccezio
 
 1. In epilogo non è presente alcun codice condizionale.
 
-1. Registro puntatore frame dedicato: Se SP viene salvato in un altro registro (x29) nel prologo, tale registro rimane invariato in tutta la funzione. Ciò significa che l'SP originale può essere recuperato in qualsiasi momento.
+1. Registro del puntatore ai frame dedicato: se il SP viene salvato in un altro registro (x29) nel prologo, tale registro rimane invariato in tutta la funzione. Ciò significa che l'SP originale può essere recuperato in qualsiasi momento.
 
 1. A meno che SP non venga salvato in un altro registro, tutte le modifiche del puntatore dello stack si verificano esclusivamente nel prologo e nell'epilogo.
 
@@ -55,9 +55,9 @@ Questi presupposti vengono creati nella descrizione della gestione delle eccezio
 
 layout(media/arm64-exception-handling-stack-frame.png "stack frame") layout ![stack frame]
 
-Per le funzioni concatenate ai frame, la coppia FP e LR può essere salvata in qualsiasi posizione nell'area della variabile locale, a seconda delle considerazioni sull'ottimizzazione. L'obiettivo è quello di ottimizzare il numero di variabili locali che possono essere raggiunte da una singola istruzione basata sul puntatore al frame (x29) o sul puntatore dello stack (SP). Tuttavia, per le funzioni `alloca`, deve essere concatenato e x29 deve puntare al lato inferiore dello stack. Per consentire una migliore copertura della modalità di indirizzamento delle coppie Register, le aree di salvataggio dei registri non volatili vengono posizionate nella parte superiore dello stack dell'area locale. Di seguito sono riportati alcuni esempi che illustrano diverse sequenze di prologo più efficienti. Per maggiore chiarezza e una migliore località della cache, l'ordine di archiviazione dei registri salvati dal chiamato in tutti i registri canonici è in ordine di crescita. `#framesz` riportato di seguito rappresenta le dimensioni dell'intero stack (esclusa l'area alloca). `#localsz` e `#outsz` indicano le dimensioni dell'area locale (inclusa l'area di salvataggio per la coppia \<x29, LR >) e le dimensioni del parametro in uscita rispettivamente.
+Per le funzioni concatenate ai frame, la coppia FP e LR può essere salvata in qualsiasi posizione nell'area della variabile locale, a seconda delle considerazioni sull'ottimizzazione. L'obiettivo è quello di ottimizzare il numero di variabili locali che possono essere raggiunte da una singola istruzione basata sul puntatore al frame (x29) o sul puntatore dello stack (SP). Per `alloca` funzioni, tuttavia, deve essere concatenato e x29 deve puntare al lato inferiore dello stack. Per consentire una migliore copertura della modalità di indirizzamento delle coppie Register, le aree di salvataggio dei registri non volatili vengono posizionate nella parte superiore dello stack dell'area locale. Di seguito sono riportati alcuni esempi che illustrano diverse sequenze di prologo più efficienti. Per maggiore chiarezza e una migliore località della cache, l'ordine di archiviazione dei registri salvati dal chiamato in tutti i registri canonici è in ordine di crescita. `#framesz` riportato di seguito rappresenta le dimensioni dell'intero stack, esclusa l'area alloca. `#localsz` e `#outsz` indicano le dimensioni dell'area locale (inclusa l'area di salvataggio per le \<x29, LR > Pair) e le dimensioni del parametro in uscita rispettivamente.
 
-1. Concatenato, #localsz \< = 512
+1. Concatenato, #localsz \<= 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -96,7 +96,7 @@ Per le funzioni concatenate ai frame, la coppia FP e LR può essere salvata in q
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   È possibile accedere a tutte le variabili locali in base a SP. \<x29, LR > punta al frame precedente. Per le dimensioni del frame \< = 512, "Sub SP,..." può essere ottimizzato se l'area salvata REGS viene spostata nella parte inferiore dello stack. Lo svantaggio è che non è coerente con gli altri layout sopra indicati e i REGS salvati fanno parte dell'intervallo per la modalità di indirizzamento degli offset Pair-REGS e pre-indicizzata.
+   È possibile accedere a tutte le variabili locali in base a SP. \<x29, LR > punta al frame precedente. Per le dimensioni del frame \<= 512, "Sub SP,..." può essere ottimizzato se l'area salvata REGS viene spostata nella parte inferiore dello stack. Lo svantaggio è che non è coerente con gli altri layout sopra indicati e i REGS salvati fanno parte dell'intervallo per la modalità di indirizzamento degli offset Pair-REGS e pre-indicizzata.
 
 1. Funzioni non concatenate e non foglia (LR è salvato nell'area salvata int)
 
@@ -128,11 +128,11 @@ Per le funzioni concatenate ai frame, la coppia FP e LR può essere salvata in q
         sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
-   \* l'allocazione dell'area di salvataggio reg non viene ripiegata in STP perché non è possibile rappresentare un reg-LR STP pre-indicizzato con i codici di rimozione.
+   \* l'allocazione dell'area di salvataggio reg non è ripiegata in STP perché non è possibile rappresentare un reg-LR STP pre-indicizzato con i codici di rimozione.
 
    È possibile accedere a tutte le variabili locali in base a SP. \<x29 > punta al frame precedente.
 
-1. Concatenato, #framesz \< = 512, #outsz = 0
+1. Concatenato, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -287,18 +287,18 @@ I codici di rimozione sono codificati in base alla tabella seguente. Tutti i cod
 |Codice di rimozione|BITS e interpretazione|
 |-|-|
 |`alloc_s`|000xxxxx: alloca Small stack con dimensioni \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: Save \<x19, X20 > Pair in `[sp-#Z*8]!`, offset pre-indicizzato > =-248 |
-|`save_fplr`|        01zzzzzz: Salva \<x29, LR > Pair in `[sp+#Z*8]`, offset \< = 504. |
-|`save_fplr_x`|        10zzzzzz: Salva \<x29, LR > Pair in `[sp-(#Z+1)*8]!`, offset pre-indicizzato > =-512 |
+|`save_r19r20_x`|    001zzzzz: Salva \<x19, X20 coppia di > in `[sp-#Z*8]!`, offset pre-indicizzato > =-248 |
+|`save_fplr`|        01zzzzzz: Salva \<x29, LR > Pair in `[sp+#Z*8]`, offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Save \<x29, LR > Pair in `[sp-(#Z+1)*8]!`, pre-indexed offset > =-512 |
 |`alloc_m`|        11000xxx'xxxxxxxx: allocare stack di grandi dimensioni con dimensioni \< 16K (2 ^ 11 * 16). |
-|`save_regp`|        110010xx'xxzzzzzz: Salva la coppia x (19 + #X) a `[sp+#Z*8]`, offset \< = 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: Salva coppia x (19 + #X) a `[sp-(#Z+1)*8]!`, offset pre-indicizzato > =-512 |
-|`save_reg`|        110100xx'xxzzzzzz: Salva reg x (19 + #X) a `[sp+#Z*8]`, offset \< = 504 |
-|`save_reg_x`|        1101010x'xxxzzzzz: Salva reg x (19 + #X) con `[sp-(#Z+1)*8]!`, offset pre-indicizzato > =-256 |
-|`save_lrpair`|         1101011x'xxzzzzzz: Save Pair \<x (19 + 2 * #X), LR > in `[sp+#Z*8]`, offset \< = 504 |
-|`save_fregp`|        1101100x'xxzzzzzz: Salva coppia d (8 + #X) a `[sp+#Z*8]`, offset \< = 504 |
-|`save_fregp_x`|        1101101x'xxzzzzzz: Salva coppia d (8 + #X), a `[sp-(#Z+1)*8]!`, offset pre-indicizzato > =-512 |
-|`save_freg`|        1101110x'xxzzzzzz: Salva reg d (8 + #X) a `[sp+#Z*8]`, offset \< = 504 |
+|`save_regp`|        110010xx'xxzzzzzz: Salva la coppia x (19 + #X) in corrispondenza `[sp+#Z*8]`, offset \<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: Salva coppia x (19 + #X) al `[sp-(#Z+1)*8]!`, offset pre-indicizzato > =-512 |
+|`save_reg`|        110100xx'xxzzzzzz: Salva reg x (19 + #X) in `[sp+#Z*8]`, offset \<= 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz: Salva reg x (19 + #X) al `[sp-(#Z+1)*8]!`, offset pre-indicizzato > =-256 |
+|`save_lrpair`|         1101011x'xxzzzzzz: Save Pair \<x (19 + 2 * #X), LR > in `[sp+#Z*8]`, offset \<= 504 |
+|`save_fregp`|        1101100x'xxzzzzzz: Salva coppia d (8 + #X) in `[sp+#Z*8]`, offset \<= 504 |
+|`save_fregp_x`|        1101101x'xxzzzzzz: Salva coppia d (8 + #X), in `[sp-(#Z+1)*8]!`, offset pre-indicizzato > =-512 |
+|`save_freg`|        1101110x'xxzzzzzz: Salva reg d (8 + #X) in `[sp+#Z*8]`, offset \<= 504 |
 |`save_freg_x`|        11011110' xxxzzzzz: Save reg d (8 + #X) at `[sp-(#Z+1)*8]!`, offset pre-indicizzato > =-256 |
 |`alloc_l`|         11100000' xxxxxxxx'xxxxxxxx'xxxxxxxx: allocare stack di grandi dimensioni con dimensioni \< 256M (2 ^ 24 * 16) |
 |`set_fp`|        11100001: configurare x29: con: `mov x29,sp` |
@@ -314,25 +314,25 @@ I codici di rimozione sono codificati in base alla tabella seguente. Tutti i cod
 |`arithmetic(ror)`|    11100111' 100zxxxx: ROR LR con cookie reg (z) (0 = X28, 1 = SP); `ror lr, lr, reg(z)` |
 | |            11100111:----Xxxz:----riservata |
 | |              11101xxx: riservato per i casi di stack personalizzati indicati di seguito solo per le routine ASM |
-| |              11101000: Stack personalizzato per MSFT_OP_TRAP_FRAME |
-| |              11101001: Stack personalizzato per MSFT_OP_MACHINE_FRAME |
-| |              11101010: Stack personalizzato per MSFT_OP_CONTEXT |
-| |              11101100: Stack personalizzato per MSFT_OP_CLEAR_UNWOUND_TO_CALL |
+| |              11101000: stack personalizzato per MSFT_OP_TRAP_FRAME |
+| |              11101001: stack personalizzato per MSFT_OP_MACHINE_FRAME |
+| |              11101010: stack personalizzato per MSFT_OP_CONTEXT |
+| |              11101100: stack personalizzato per MSFT_OP_CLEAR_UNWOUND_TO_CALL |
 | |              1111xxxx: riservato |
 
 Nelle istruzioni con valori di grandi dimensioni che coprono più byte, i bit più significativi vengono archiviati per primi. Questa progettazione consente di trovare la dimensione totale in byte del codice di rimozione cercando solo il primo byte del codice. Poiché ogni codice di rimozione è mappato esattamente a un'istruzione in un prologo o un epilogo, è possibile calcolare la dimensione del prologo o dell'epilogo. È possibile spostarsi dall'inizio della sequenza fino alla fine e usare una tabella di ricerca o un dispositivo simile per determinare la durata del codice operativo corrispondente.
 
-L'indirizzamento dell'offset dopo l'indicizzazione non è consentito in un prologo. Tutti gli intervalli di offset (#Z) corrispondono alla codifica dell'indirizzamento STP/STR eccetto `save_r19r20_x`, in cui 248 è sufficiente per tutte le aree di salvataggio (10 registri int + 8 registri FP + 8 registri di input).
+L'indirizzamento dell'offset dopo l'indicizzazione non è consentito in un prologo. Tutti gli intervalli di offset (#Z) corrispondono alla codifica di indirizzi STP/STR ad eccezione di `save_r19r20_x`, in cui 248 è sufficiente per tutte le aree di salvataggio (10 registri int + 8 registri FP + 8 registri di input).
 
-`save_next` deve seguire un salvataggio per la coppia di registri di tipo int o FP volatile: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x` o un altro `save_next`. Salva la coppia di registri successiva nello slot a 16 byte successivo nell'ordine "crescente". Un `save_next` fa riferimento alla prima coppia di registri di FP quando segue l'`save-next` che denota l'ultima coppia di registri int.
+`save_next` deve seguire una coppia di registri di salvataggio per int o FP volatile: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x`o un altro `save_next`. Salva la coppia di registri successiva nello slot a 16 byte successivo nell'ordine "crescente". Una `save_next` si riferisce alla prima coppia di registri FP quando segue la `save-next` che denota l'ultima coppia di registri int.
 
-Poiché le dimensioni delle normali istruzioni return e Jump sono le stesse, non è necessario un codice di rimozione separato `end` per gli scenari di chiamata tail.
+Poiché le dimensioni delle normali istruzioni return e Jump sono le stesse, non è necessario un codice di rimozione `end` separato per gli scenari di chiamata tail.
 
-`end_c` è progettato per gestire frammenti di funzione non contigui ai fini dell'ottimizzazione. Un `end_c` che indica la fine dei codici di rimozione nell'ambito corrente deve essere seguito da un'altra serie di codice di rimozione terminata con un vero `end`. I codici di rimozione tra `end_c` e `end` rappresentano le operazioni di prologo nell'area padre (Prologo "fantasma").  Altri dettagli ed esempi sono descritti nella sezione seguente.
+`end_c` è progettato per gestire i frammenti di funzione non contigui ai fini dell'ottimizzazione. Un `end_c` che indica la fine dei codici di rimozione nell'ambito corrente deve essere seguito da un'altra serie di codice di rimozione terminata con un `end`reale. I codici di rimozione tra `end_c` e `end` rappresentano le operazioni di prologo nell'area padre (Prologo "fantasma").  Altri dettagli ed esempi sono descritti nella sezione seguente.
 
 ### <a name="packed-unwind-data"></a>Dati di rimozione compressi
 
-Per le funzioni i cui Prolog e epilogo seguono la forma canonica descritta di seguito, è possibile usare i dati di rimozione compressi. Elimina la necessità di un record. XData completamente e riduce significativamente il costo di fornire dati di rimozione. I registri e i epilogo canonici sono progettati per soddisfare i requisiti comuni di una funzione semplice: Uno che non richiede un gestore di eccezioni e che esegue le operazioni di installazione e teardown in un ordine standard.
+Per le funzioni i cui Prolog e epilogo seguono la forma canonica descritta di seguito, è possibile usare i dati di rimozione compressi. Elimina la necessità di un record. XData completamente e riduce significativamente il costo di fornire dati di rimozione. I registri e epilogo canonici sono progettati per soddisfare i requisiti comuni di una funzione semplice: uno che non richiede un gestore di eccezioni e che esegue le operazioni di installazione e teardown in ordine standard.
 
 Il formato di un record. pdata con dati di rimozione compressi ha un aspetto simile al seguente:
 
@@ -349,27 +349,27 @@ I campi sono i seguenti:
 - La **lunghezza della funzione** è un campo a 11 bit che fornisce la lunghezza dell'intera funzione in byte, divisa per 4. Se la funzione è maggiore di 8K, è necessario usare un record. XData completo.
 - **Dimensioni frame** è un campo a 9 bit che indica il numero di byte dello stack allocato per la funzione, divisa per 16. Le funzioni che allocano maggiore di (8 KB) byte dello stack devono usare un record. XData completo. Include l'area della variabile locale, l'area dei parametri in uscita, l'area int e FP salvata dal chiamato e l'area dei parametri Home, ma esclude l'area di allocazione dinamica.
 - **CR** è un flag a 2 bit che indica se la funzione include istruzioni aggiuntive per la configurazione di una catena di frame e di un collegamento di ritorno:
-  - 00 = la funzione non concatenata, la coppia \<x29, LR > non viene salvata nello stack.
-  - 01 = funzione non concatenata, \<LR > salvato nello stack
+  - 00 = la funzione non concatenata, \<x29, la coppia di > LR non viene salvata nello stack.
+  - 01 = funzione non concatenata, \<> LR salvato nello stack
   - 10 = riservato;
   - 11 = funzione concatenata, viene usata un'istruzione di coppia Store/Load in prologo/epilogo \<x29, LR >
 - **H** è un flag a 1 bit che indica se la funzione ospita i registri di parametri Integer (x0-x7) archiviando tali registri all'inizio della funzione. (0 = non Home registra, 1 = Home registers).
 - **RegI** è un campo a 4 bit che indica il numero di registri int non volatili (x19-X28) salvati nella posizione dello stack canonica.
-- **RegF** è un campo a 3 bit che indica il numero di registri FP non volatili (D8-D15) salvati nella posizione dello stack canonica. (RegF = 0: non è stato salvato alcun registro FP; RegF > 0: Vengono salvati i registri FP RegF + 1. Non è possibile usare i dati di rimozione compressi per la funzione che salva un solo registro FP.
+- **RegF** è un campo a 3 bit che indica il numero di registri FP non volatili (D8-D15) salvati nella posizione dello stack canonica. (RegF = 0: non è stato salvato alcun registro FP; RegF > 0: RegF + 1 registri FP vengono salvati). Non è possibile usare i dati di rimozione compressi per la funzione che salva un solo registro FP.
 
 I proregistri canonici che rientrano nelle categorie 1, 2 (senza area parametri in uscita), 3 e 4 nella sezione precedente possono essere rappresentati da un formato di rimozione compresso.  Il epilogo per le funzioni canoniche segue un formato simile, ad eccezione di **H** non ha alcun effetto, l'istruzione `set_fp` viene omessa e l'ordine dei passaggi e delle istruzioni in ogni passaggio viene invertito nell'epilogo. L'algoritmo per compresso. XData segue questi passaggi, descritti in dettaglio nella tabella seguente:
 
-Passaggio 0: Pre-calcolo delle dimensioni di ogni area.
+Passaggio 0: pre-calcolo delle dimensioni di ogni area.
 
-Passaggio 1: Salva i registri di tipo int.
+Passaggio 1: salvare i registri di tipo int chiamato-salvati.
 
-Passaggio 2: Questo passaggio è specifico per il tipo 4 nelle prime sezioni. LR viene salvato alla fine dell'area int.
+Passaggio 2: questo passaggio è specifico per il tipo 4 nelle prime sezioni. LR viene salvato alla fine dell'area int.
 
-Passaggio 3: Salva i registri salvati dal chiamato FP.
+Passaggio 3: salvare i registri salvati dal chiamato FP.
 
-Passaggio 4: Salvare gli argomenti di input nell'area dei parametri Home.
+Passaggio 4: salvare gli argomenti di input nell'area dei parametri Home.
 
-Passaggio 5: Allocare lo stack rimanente, inclusi l'area locale, \<x29, la coppia LR > e l'area parametri in uscita. 5a corrisponde a canonico di tipo 1. 5b e 5C sono per i tipi canonici 2. 5D e 5e sono per il tipo 3 e il tipo 4.
+Passaggio 5: allocare lo stack rimanente, inclusa l'area locale, \<x29, la coppia LR > e l'area parametri in uscita. 5a corrisponde a canonico di tipo 1. 5b e 5C sono per i tipi canonici 2. 5D e 5e sono per il tipo 3 e il tipo 4.
 
 Passo #|Valori di flag|istruzioni|Codice operativo|Codice di rimozione
 -|-|-|-|-
@@ -381,14 +381,14 @@ Passo #|Valori di flag|istruzioni|Codice operativo|Codice di rimozione
 5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** = = 11 & &<br/>512 < #locsz < = 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5c|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** = = 00 \| @ NO__T-2 **CR**= = 01) & &<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** = = 00 \| @ NO__T-2 **CR**= = 01) & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5D|(**CR** = = 00 \|\| **CR**= = 01) & &<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** = = 00 \|\| **CR**= = 01) & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\* se **CR** = = 01 e **RegI** è un numero dispari, il passaggio 2 e l'ultimo save_rep nel passaggio 1 vengono uniti in un save_regp.
+\* se **CR** = = 01 e **RegI** è un numero dispari, il passaggio 2 e l'ultimo save_rep nel passaggio 1 vengono uniti in un solo save_regp.
 
-\* @ no__t-1 se **RegI** == **CR** = = 0 e **RegF** ! = 0, il primo STP per il punto a virgola mobile esegue il decremento.
+\*\* se **RegI** == **CR** = = 0 e **RegF** ! = 0, il primo STP per il punto a virgola mobile esegue il decremento.
 
-\* @ no__t-1 @ no__t-2 non è presente alcuna istruzione corrispondente a `mov x29,sp` nell'epilogo. Non è possibile usare i dati di rimozione compressi se una funzione richiede il ripristino di SP da x29.
+\*\*\* nessuna istruzione corrispondente a `mov x29,sp` è presente nell'epilogo. Non è possibile usare i dati di rimozione compressi se una funzione richiede il ripristino di SP da x29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Rimozione dei proregistri parziali e epilogo
 
@@ -480,9 +480,9 @@ Un caso tipico di frammenti di funzione è "separazione del codice" con tale com
 
 1. Solo epilogo (regione 2: prologo è nell'area host)
 
-   Si presuppone che dal controllo del tempo che salta in questa area, siano stati eseguiti tutti i codici di prologo. La rimozione parziale può essere eseguita in epilogo allo stesso modo di una funzione normale. Questo tipo di area non può essere rappresentato da Compact. pdata. Nel record. XData completo, può essere codificato con un prologo "fantasma", racchiuso da una coppia di codici di rimozione `end_c` e `end`.  Il `end_c` principale indica che le dimensioni del prologo sono pari a zero. L'indice iniziale epilogo del singolo epilogo punta a `set_fp`.
+   Si presuppone che dal controllo del tempo che salta in questa area, siano stati eseguiti tutti i codici di prologo. La rimozione parziale può essere eseguita in epilogo allo stesso modo di una funzione normale. Questo tipo di area non può essere rappresentato da Compact. pdata. Nel record. XData completo, può essere codificato con un prologo "fantasma", racchiuso da una `end_c` e `end` coppia di codici di rimozione.  Il `end_c` principale indica che le dimensioni del prologo sono pari a zero. Indice iniziale epilogo dei singoli punti di epilogo `set_fp`.
 
-   Codice di rimozione per Region 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
+   Codice di rimozione per Region 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256``end`.
 
 1. Nessun Prolog o epilogo (area 3: ProLogs e tutti epilogo sono in altri frammenti):
 
@@ -521,7 +521,7 @@ Un altro caso più complesso di frammenti di funzione è "compattazione del wrap
 
 Nel prologo dell'area 1, lo spazio dello stack è pre-allocato. Si noterà che Region 2 avrà lo stesso codice di rimozione anche se viene spostato fuori dalla relativa funzione host.
 
-Region 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end` con epilog Start index punta a `set_fp` come di consueto.
+Area 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256``end` con epilogo Start index punta a `set_fp` come di consueto.
 
 Area 2: `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. Epilog Start index punta al primo codice di rimozione `save_regp 2, 224`.
 
@@ -535,7 +535,7 @@ Se un frammento non ha un prologo e nessun epilogo, richiede comunque il proprio
 
 ## <a name="examples"></a>Esempi
 
-### <a name="example-1-frame-chained-compact-form"></a>Esempio 1: Frame concatenato, formato compatto
+### <a name="example-1-frame-chained-compact-form"></a>Esempio 1: concatenato a frame, formato compatto
 
 ```asm
 |Foo|     PROC
@@ -553,7 +553,7 @@ Se un frammento non ha un prologo e nessun epilogo, richiede comunque il proprio
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Esempio 2 Frame a catena, formato completo con prologo speculare & epilogo
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Esempio 2: epilogo a catena, Full-Form con prologo speculare & epilogo
 
 ```asm
 |Bar|     PROC
@@ -587,7 +587,7 @@ Se un frammento non ha un prologo e nessun epilogo, richiede comunque il proprio
 
 L'indice iniziale di epilogo [0] punta alla stessa sequenza di codice di rimozione del prologo.
 
-### <a name="example-3-variadic-unchained-function"></a>Esempio 3: Funzione Unchained Variadic
+### <a name="example-3-variadic-unchained-function"></a>Esempio 3: Variadic Unchained Function
 
 ```asm
 |Delegate| PROC

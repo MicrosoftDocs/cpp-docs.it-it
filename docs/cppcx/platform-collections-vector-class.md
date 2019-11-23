@@ -51,13 +51,13 @@ Specifica un predicato binario per verificare l'uguaglianza con valori di tipo *
 
 I tipi consentiti sono:
 
-1. Integer
+1. integer
 
 1. classe di interfaccia ^
 
 1. classe di riferimento pubblica^
 
-1. value struct
+1. struct di valore
 
 1. classe enum pubblica
 
@@ -69,13 +69,13 @@ Se si tenta di usare un tipo **vector** in un valore restituito pubblico o in un
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Vector:: Vector](#ctor)|Inizializza una nuova istanza della classe Vector.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Vector:: Append](#append)|Inserisce l'elemento specificato dopo l'ultimo elemento nel vettore corrente.|
 |[Vector:: Clear](#clear)|Elimina tutti gli elementi nell'oggetto Vector corrente.|
@@ -95,8 +95,8 @@ Se si tenta di usare un tipo **vector** in un valore restituito pubblico o in un
 
 |||
 |-|-|
-|nome|Descrizione|
-|evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler @ no__t-1T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Si verifica quando l'oggetto Vector subisce delle modifiche.|
+|Name|Descrizione|
+|evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Si verifica quando l'oggetto Vector subisce delle modifiche.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parametri
 
-*value*<br/>
+*valore*<br/>
 Elemento da cercare.
 
 *index*<br/>
@@ -367,7 +367,7 @@ Oggetto [Platform:: Array](../cppcx/platform-array-class.md) che verrà usato pe
 Tipo di una raccolta di oggetti utilizzati per inizializzare l'oggetto Vector corrente.
 
 *il*<br/>
-[Std:: initializer_list](../standard-library/initializer-list-class.md) di oggetti di tipo *T* che verranno usati per inizializzare il vettore.
+[Std:: initializer_list](../standard-library/initializer-list-class.md) di oggetti di tipo *T* che verranno utilizzati per inizializzare il vettore.
 
 *N*<br/>
 Numero di elementi in una raccolta di oggetti utilizzati per inizializzare l'oggetto Vector corrente.
@@ -375,7 +375,7 @@ Numero di elementi in una raccolta di oggetti utilizzati per inizializzare l'ogg
 *size*<br/>
 Numero di elementi nell'oggetto Vector.
 
-*value*<br/>
+*valore*<br/>
 Valore utilizzato per inizializzare ciascun elemento nell'oggetto Vector corrente.
 
 *v*<br/>

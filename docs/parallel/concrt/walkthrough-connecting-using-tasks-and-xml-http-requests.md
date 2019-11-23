@@ -22,12 +22,12 @@ Questo esempio illustra come usare le interfacce [IXMLHTTPRequest2](/windows/win
 
 Per ulteriori informazioni sulle attività, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Per altre informazioni su come usare le attività in un'app UWP, vedere [programmazione asincrona in C++ ](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) e [creazione di operazioni asincrone C++ in per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 
-In questo documento viene prima illustrato come `HttpRequest` creare e le relative classi di supporto. Viene quindi illustrato come usare questa classe da un'app UWP che usa C++ e XAML.
+Questo documento illustra prima di tutto come creare `HttpRequest` e le relative classi di supporto. Viene quindi illustrato come usare questa classe da un'app UWP che usa C++ e XAML.
 
-Per un esempio che usa `IXMLHTTPRequest2` , ma non usa le attività, [vedere Guida introduttiva: Connessione tramite richiesta HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
+Per un esempio che usa `IXMLHTTPRequest2` ma non usa le attività, vedere [Guida introduttiva: connessione tramite richiesta HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
->  `IXMLHTTPRequest2`e `IXMLHTTPRequest2Callback` sono le interfacce consigliate per l'uso in un'app UWP. Questo esempio può essere adattato anche per l'uso in un'app desktop.
+>  `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` sono le interfacce consigliate per l'uso in un'app UWP. Questo esempio può essere adattato anche per l'uso in un'app desktop.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -35,17 +35,17 @@ Il supporto per UWP è facoltativo in Visual Studio 2017 e versioni successive. 
 
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>Definizione delle classi HttpRequest, HttpRequestBuffersCallback e HttpRequestStringCallback
 
-Quando si usa l' `IXMLHTTPRequest2` interfaccia per creare richieste Web tramite http, si implementa l' `IXMLHTTPRequest2Callback` interfaccia per ricevere la risposta del server e reagire ad altri eventi. Questo esempio definisce la `HttpRequest` classe per creare richieste Web e le classi `HttpRequestBuffersCallback` e `HttpRequestStringCallback` per elaborare le risposte. Le `HttpRequestBuffersCallback` classi `HttpRequestStringCallback` e supportano la `HttpRequest` classe. si utilizza solo la `HttpRequest` classe dal codice dell'applicazione.
+Quando si usa l'interfaccia `IXMLHTTPRequest2` per creare richieste Web su HTTP, si implementa l'interfaccia `IXMLHTTPRequest2Callback` per ricevere la risposta del server e reagire ad altri eventi. Questo esempio definisce la classe `HttpRequest` per creare richieste Web e le classi `HttpRequestBuffersCallback` e `HttpRequestStringCallback` per elaborare le risposte. Le classi `HttpRequestBuffersCallback` e `HttpRequestStringCallback` supportano la classe `HttpRequest`; si utilizza solo la classe `HttpRequest` dal codice dell'applicazione.
 
-I `GetAsync`metodi della classe`HttpRequest` consentono di avviare rispettivamente le operazioni HTTP GET e post. `PostAsync` Questi metodi usano la `HttpRequestStringCallback` classe per leggere la risposta del server sotto forma di stringa. I `SendAsync` metodi `ReadAsync` e consentono di trasmettere contenuto di grandi dimensioni in blocchi. Questi metodi restituiscono ciascun oggetto [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) per rappresentare l'operazione. I `GetAsync` metodi `PostAsync` e `wstring` producono `task<std::wstring>` un valore, dove la parte rappresenta la risposta del server. I `SendAsync` metodi `ReadAsync` e producono`task<void>` valori. queste attività vengono completate al completamento delle operazioni di invio e lettura.
+I metodi di `GetAsync`, `PostAsync` della classe `HttpRequest` consentono di avviare rispettivamente le operazioni HTTP GET e POST. Questi metodi usano la classe `HttpRequestStringCallback` per leggere la risposta del server sotto forma di stringa. I metodi `SendAsync` e `ReadAsync` consentono di trasmettere contenuto di grandi dimensioni in blocchi. Questi metodi restituiscono ciascun oggetto [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) per rappresentare l'operazione. I metodi `GetAsync` e `PostAsync` producono `task<std::wstring>` valore, dove la parte `wstring` rappresenta la risposta del server. I metodi `SendAsync` e `ReadAsync` producono valori `task<void>`; Queste attività vengono completate al completamento delle operazioni di invio e lettura.
 
-Poiché le `IXMLHTTPRequest2` interfacce agiscono in modo asincrono, in questo esempio viene utilizzato [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) per creare un'attività che viene completata dopo il completamento dell'oggetto callback o l'annullamento dell'operazione di download. La `HttpRequest` classe crea una continuazione basata su attività da questa attività per impostare il risultato finale. La `HttpRequest` classe utilizza una continuazione basata su attività per assicurarsi che l'attività di continuazione venga eseguita anche se l'attività precedente genera un errore o viene annullata. Per ulteriori informazioni sulle continuazioni basate su attività, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
+Poiché le interfacce di `IXMLHTTPRequest2` agiscono in modo asincrono, in questo esempio viene utilizzato [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) per creare un'attività che viene completata dopo il completamento dell'oggetto callback o l'annullamento dell'operazione di download. La classe `HttpRequest` crea una continuazione basata su attività da questa attività per impostare il risultato finale. La classe `HttpRequest` utilizza una continuazione basata su attività per assicurarsi che l'attività di continuazione venga eseguita anche se l'attività precedente genera un errore o viene annullata. Per ulteriori informazioni sulle continuazioni basate su attività, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
 
-Per supportare l'annullamento, `HttpRequest`le `HttpRequestBuffersCallback`classi, `HttpRequestStringCallback` e usano i token di annullamento. Le `HttpRequestBuffersCallback` classi `HttpRequestStringCallback` e usano il metodo [Concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) per consentire all'evento di completamento dell'attività di rispondere all'annullamento. Questo callback di annullamento interrompe il download. Per ulteriori informazioni sull'annullamento, vedere [annullamento](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
+Per supportare l'annullamento, le classi `HttpRequest`, `HttpRequestBuffersCallback`e `HttpRequestStringCallback` usano i token di annullamento. Le classi `HttpRequestBuffersCallback` e `HttpRequestStringCallback` utilizzano il metodo [Concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) per consentire all'evento di completamento dell'attività di rispondere all'annullamento. Questo callback di annullamento interrompe il download. Per ulteriori informazioni sull'annullamento, vedere [annullamento](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
 #### <a name="to-define-the-httprequest-class"></a>Per definire la classe HttpRequest
 
-1. Dal menu principale scegliere **file** > **nuovo** > **progetto**. 
+1. Dal menu principale scegliere **File** > **nuovo** > **progetto**. 
 
 1. Usare il C++ modello **app vuota (Windows universale)** per creare un progetto di app XAML vuoto. Questo esempio assegna al progetto il nome `UsingIXMLHTTPRequest2`.
 
@@ -65,7 +65,7 @@ Per supportare l'annullamento, `HttpRequest`le `HttpRequestBuffersCallback`class
 
 ## <a name="using-the-httprequest-class-in-a-uwp-app"></a>Uso della classe HttpRequest in un'app UWP
 
-Questa sezione illustra come usare la `HttpRequest` classe in un'app UWP. L'app fornisce una casella di input che definisce una risorsa URL, i comandi dei pulsanti che eseguono operazioni GET e POST e un comando Button che annulla l'operazione corrente.
+Questa sezione illustra come usare la classe `HttpRequest` in un'app UWP. L'app fornisce una casella di input che definisce una risorsa URL, i comandi dei pulsanti che eseguono operazioni GET e POST e un comando Button che annulla l'operazione corrente.
 
 #### <a name="to-use-the-httprequest-class"></a>Per utilizzare la classe HttpRequest
 
@@ -73,15 +73,15 @@ Questa sezione illustra come usare la `HttpRequest` classe in un'app UWP. L'app 
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-2. In MainPage. XAML. h aggiungere questa `#include` direttiva:
+2. In MainPage. XAML. h aggiungere questa direttiva `#include`:
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-3. In MainPage. XAML. h aggiungere le variabili `private` membro seguenti `MainPage` alla classe:
+3. In MainPage. XAML. h aggiungere le variabili membro `private` alla classe `MainPage`:
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-4. In MainPage. XAML. h, dichiarare il `private` metodo `ProcessHttpRequest`:
+4. In MainPage. XAML. h dichiarare il metodo di `private` `ProcessHttpRequest`:
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
@@ -89,14 +89,14 @@ Questa sezione illustra come usare la `HttpRequest` classe in un'app UWP. L'app 
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-6. In MainPage. XAML. `GetButton_Click`cpp implementare i metodi, `PostButton_Click`e `CancelButton_Click` della `MainPage` classe.
+6. In MainPage. XAML. cpp implementare i metodi `GetButton_Click`, `PostButton_Click`e `CancelButton_Click` della classe `MainPage`.
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
    > [!TIP]
-   > Se l'app non richiede il supporto per l' `HttpRequest::GetAsync` annullamento, passare [Concurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) ai metodi e. `HttpRequest::PostAsync`
+   > Se l'app non richiede il supporto per l'annullamento, passare [Concurrency:: cancellation_token:: None](reference/cancellation-token-class.md#none) ai metodi `HttpRequest::GetAsync` e `HttpRequest::PostAsync`.
 
-1. In MainPage. XAML. cpp, implementare il `MainPage::ProcessHttpRequest` metodo.
+1. In MainPage. XAML. cpp implementare il metodo `MainPage::ProcessHttpRequest`.
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
@@ -104,7 +104,7 @@ Questa sezione illustra come usare la `HttpRequest` classe in un'app UWP. L'app 
 
 Ecco l'app in esecuzione:
 
-![App Windows Runtime in esecuzione](../../parallel/concrt/media/concrt_usingixhr2.png "App Windows Runtime in esecuzione")
+![L'app in esecuzione Windows Runtime](../../parallel/concrt/media/concrt_usingixhr2.png "l'app Windows Runtime in esecuzione")
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -116,6 +116,6 @@ Ecco l'app in esecuzione:
 [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)<br/>
 [Programmazione asincrona inC++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Avvio rapido: Connessione tramite la classe di attività richiesta HTTP](/previous-versions/windows/apps/hh770550\(v=win.10\))XML (IXMLHTTPRequest2)
-[(runtime di concorrenza)](../../parallel/concrt/reference/task-class.md)<br/>
+[Guida introduttiva: connessione tramite richiesta HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[classe di attività (runtime di concorrenza)](../../parallel/concrt/reference/task-class.md)<br/>
 [Classe task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)

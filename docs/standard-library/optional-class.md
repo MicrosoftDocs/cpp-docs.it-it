@@ -101,18 +101,18 @@ explicit optional(optional<U>&& rhs);
 ### <a name="parameters"></a>Parametri
 
 \ *RHS*
-@No__t_0 da copiare o spostare costruire il valore contenuto da.
+`optional` da copiare o spostare costruire il valore contenuto da.
 
-\ *I_list*
+*i_list*\
 Elenco di inizializzatori da cui creare il valore contenuto.
 
-*argomenti* \
+*argomenti*\
 Elenco di argomenti da cui creare il valore contenuto.
 
 ### <a name="remarks"></a>Note
 
-`constexpr optional() noexcept;` 
- `constexpr optional(nullopt_t nullopt) noexcept;` questi costruttori costruiscono un `optional` che non contiene un valore.
+`constexpr optional() noexcept;`
+`constexpr optional(nullopt_t nullopt) noexcept;` questi costruttori costruiscono un `optional` che non contiene un valore.
 
 `constexpr optional(const optional& rhs);` il costruttore di copia Inizializza il valore contenuto dal valore contenuto dell'argomento. Viene definita come **eliminata** , a meno che non `is_copy_constructible_v<T>` sia true ed è semplice se `is_trivially_copy_constructible_v<T>` è true.
 
@@ -124,9 +124,9 @@ Elenco di argomenti da cui creare il valore contenuto.
 
 `template <class U = T> explicit constexpr optional(U&& rhs);` diretto Inizializza il valore contenuto come se si utilizzasse `std::forward<U>(v)`. Questo costruttore viene `constexpr` se il costruttore di `T` utilizzato è `constexpr`. Non partecipa alla risoluzione dell'overload a meno che `is_constructible_v<T, U&&>` sia true e `is_same_v<remove_cvref_t<U>, in_place_t>` e `is_same_v<remove_cvref_t<U>, optional>` siano false.
 
-`template <class U> explicit optional(const optional<U>& rhs);` se *RHS* contiene un valore, Direct Inizializza il valore contenuto del valore contenuto dell'argomento. Non partecipa alla risoluzione dell'overload a meno che non `is_constructible_v<T, const U&>` sia true e `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` e `is_convertible_v<const optional<U>&&, T>` siano tutte false.
+`template <class U> explicit optional(const optional<U>& rhs);` se *RHS* contiene un valore, Direct Inizializza il valore contenuto del valore contenuto dell'argomento. Non partecipa alla risoluzione dell'overload a meno che non `is_constructible_v<T, const U&>` sia true e `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`e `is_convertible_v<const optional<U>&&, T>` siano tutte false.
 
-`template <class U> explicit optional(optional<U>&& rhs);` se *RHS* contiene un valore, Direct Inizializza il valore contenuto come se si utilizzasse `std::move(*rhs)`. Non partecipa alla risoluzione dell'overload a meno che non `is_constructible_v<T, U&&>` sia true e `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` e `is_convertible_v<const optional<U>&&, T>` siano tutte false.
+`template <class U> explicit optional(optional<U>&& rhs);` se *RHS* contiene un valore, Direct Inizializza il valore contenuto come se si utilizzasse `std::move(*rhs)`. Non partecipa alla risoluzione dell'overload a meno che non `is_constructible_v<T, U&&>` sia true e `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`e `is_convertible_v<const optional<U>&&, T>` siano tutte false.
 
 ## <a name="optional-destructor"></a>~ distruttore facoltativo
 
@@ -140,7 +140,7 @@ Elimina qualsiasi valore contenuto non facilmente distruttibile, se presente, ri
 
 Se `T` è facilmente distruttibile, anche `optional<T>` è facilmente distruttibile.
 
-## <a name="op_eq"></a>operatore =
+## <a name="op_eq"></a> operator=
 
 Sostituisce il valore contenuto di un `optional` con una copia o uno spostamento da un altro valore `optional` contenuto.
 
@@ -201,7 +201,7 @@ In realtà, chiama il distruttore dell'oggetto contenuto, se presente, e lo impo
 void reset() noexcept;
 ```
 
-## <a name="swap"></a>scambio
+## <a name="swap"></a> swap
 
 ```cpp
 template<class T>
@@ -228,4 +228,4 @@ template <class U>
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<optional >](optional.md)
+[\<facoltativo >](optional.md)

@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 Vedere [ricezione di notifiche](../../data/oledb/receiving-notifications.md) sull'implementazione dell'interfaccia del punto di connessione sul consumer.
 
-`IRowsetNotifyImpl`fornisce un'implementazione fittizia `IRowsetNotify`per, con funzioni vuote per `IRowsetNotify` i metodi [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)), [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))e [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)). Se si eredita da questa classe quando si implementa un' `IRowsetNotify` interfaccia, è possibile implementare solo i metodi necessari. È anche necessario fornire implementazioni vuote per gli altri metodi.
+`IRowsetNotifyImpl` fornisce un'implementazione fittizia per `IRowsetNotify`, con funzioni vuote per i metodi di `IRowsetNotify` [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)), [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))e [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)). Se si eredita da questa classe quando si implementa un'interfaccia di `IRowsetNotify`, è possibile implementare solo i metodi necessari. È anche necessario fornire implementazioni vuote per gli altri metodi.
 
 ## <a name="onfieldchange"></a>IRowsetNotifyImpl:: OnFieldChange
 
@@ -143,5 +143,5 @@ Questo metodo esegue il wrapping del metodo [IRowsetNotify:: OnRowsetChange](/pr
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Classe IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))
+Classe [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))
 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)

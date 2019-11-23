@@ -111,7 +111,7 @@ Una procedura di riproduzione esaustiva è:
 
 - **Confronto con l'ultima versione del compiler** Le procedure di riproduzione devono usare l'aggiornamento più recente dell'ultima versione del set di strumenti quando possibile. In alternativa, usare la versione provvisoria più recente dell'aggiornamento successivo o della versione principale successiva. Spesso è possibile che i problemi che si verificano ancora nelle versioni precedenti del set di strumenti siano stati risolti nelle versioni più recenti. Il backporting delle correzioni in versioni precedenti avviene solo in casi eccezionali.
 
-- **Confronto con altri compilatori**, se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile. Lo standard C++ stabilisce in definitiva la correttezza del programma e nessun compilatore è perfetto. Tuttavia, quando Clang e GCC accettano il codice senza una diagnostica e MSVC non lo accetta, probabilmente ciò indica un bug nel compilatore Microsoft. È anche possibile che vi siano differenze nel comportamento di Unix e Windows o livelli diversi di implementazione degli standard C++ e così via. Quando tutti i compilatori rifiutano il codice, è probabile che il codice non sia corretto. Analizzare messaggi di errore diversi può aiutare l'utente a diagnosticare il problema.
+- **Confronto con altri compilatori**, se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile. Lo standard C++ stabilisce in definitiva la correttezza del programma e nessun compilatore è perfetto. Tuttavia, quando Clang e GCC accettano il codice senza una diagnostica e MSVC non lo accetta, probabilmente ciò indica un bug nel compilatore Microsoft. (Altre possibilità includono differenze nel comportamento di UNIX e Windows o livelli diversi di C++ implementazione di standard e così via). Quando tutti i compilatori rifiutano il codice, è probabile che il codice non sia corretto. Analizzare messaggi di errore diversi può aiutare l'utente a diagnosticare il problema.
 
    In [Online C++ compilers](https://isocpp.org/blog/2013/01/online-c-compilers) (Compilatori C++ online) oppure in questo elenco dettagliato [List of Online C++ Compilers](https://arnemertz.github.io/online-compilers/) (Elenco di compilatori C++ online) in GitHub sono disponibili elenchi di compilatori online per testare e confrontare il codice. Alcuni esempi specifici sono [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](https://coliru.stacked-crooked.com/).
 
@@ -318,9 +318,9 @@ Infine, allegare alla segnalazione i file pre-elaborati per la procedura di ripr
 
 ### <a name="link-repros"></a>Procedure di riproduzione del collegamento
 
-Una procedura di *riproduzione del collegamento* è il contenuto generato dal linker di una directory, specificata dalla variabile di ambiente **link @ no__t-2repro** o come argomento dell'opzione del linker [/LINKREPRO](../build/reference/linkrepro.md) . Contiene gli artefatti della compilazione che insieme dimostrano un problema che si verifica in fase di collegamento. Ad esempio un arresto anomalo del back-end che interessa la Generazione codice in fase di collegamento (LTCG) o un arresto anomalo del linker. Questi elementi di compilazione sono quelli necessari come input del linker in modo che il problema possa essere riprodotto. È possibile creare facilmente una procedura di riproduzione del collegamento utilizzando questa variabile di ambiente. Abilita la funzionalità di generazione della procedura di riproduzione predefinita del linker.
+Una procedura di *riproduzione del collegamento* è il contenuto generato dal linker di una directory, specificata dal **collegamento\_** variabile di ambiente di riproduzione o come argomento dell'opzione del linker [/LINKREPRO](../build/reference/linkrepro.md) . Contiene gli artefatti della compilazione che insieme dimostrano un problema che si verifica in fase di collegamento. Ad esempio un arresto anomalo del back-end che interessa la Generazione codice in fase di collegamento (LTCG) o un arresto anomalo del linker. Questi elementi di compilazione sono quelli necessari come input del linker in modo che il problema possa essere riprodotto. È possibile creare facilmente una procedura di riproduzione del collegamento utilizzando questa variabile di ambiente. Abilita la funzionalità di generazione della procedura di riproduzione predefinita del linker.
 
-#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Per generare una procedura di riproduzione del collegamento utilizzando la variabile di ambiente LINK_REPRO
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Per generare una procedura di riproduzione del collegamento utilizzando la variabile di ambiente link_repro
 
 1. Acquisire gli argomenti della riga di comando usati per compilare la procedura di riproduzione, come descritto in [Per segnalare i contenuti della riga di comando](#to-report-the-contents-of-the-command-line).
 
@@ -330,7 +330,7 @@ Una procedura di *riproduzione del collegamento* è il contenuto generato dal li
 
 1. Immettere **mkdir linkrepro** per creare una directory denominata *linkrepro* per la riproduzione del collegamento. Per acquisire un'altra ripetizione del collegamento, è possibile usare un nome diverso.
 
-1. Immettere il comando **set link\_repro=linkrepro** per impostare la variabile di ambiente **link\_repro** nella directory creata. Se la compilazione viene eseguita da una directory diversa, come spesso accade per progetti più complessi, impostare **link @ no__t-1repro** sul percorso completo della directory di riproduzione del collegamento.
+1. Immettere il comando **set link\_repro=linkrepro** per impostare la variabile di ambiente **link\_repro** nella directory creata. Se la compilazione viene eseguita da una directory diversa, come spesso accade per progetti più complessi, impostare **link\_riproduzione** sul percorso completo della directory di riproduzione del collegamento.
 
 1. Per compilare il progetto della procedura di riproduzione in Visual Studio, immettere il comando **devenv** nella finestra della console del prompt dei comandi per gli sviluppatori. Ciò assicura che il valore della variabile di ambiente **link\_repro** sia visibile in Visual Studio. Per compilare il progetto nella riga di comando, usare gli argomenti della riga di comando acquisiti in precedenza per duplicare la compilazione della procedura di riproduzione.
 
@@ -342,13 +342,13 @@ Una procedura di *riproduzione del collegamento* è il contenuto generato dal li
 
 Infine, creare un pacchetto per la riproduzione comprimendo l'intera directory linkrepro in un file con estensione zip o simile e alleghila al report.
 
-L'opzione del linker **/LINKREPRO** ha lo stesso effetto della variabile di ambiente **link @ no__t-2repro** . È possibile usare l'opzione [/LINKREPROTARGET](../build/reference/linkreprotarget.md) per specificare il nome da filtrare per la riproduzione del collegamento generata. Per usare **/LINKREPROTARGET**, è necessario specificare anche l'opzione **/out** del linker.
+L'opzione del linker **/LINKREPRO** ha lo stesso effetto del **collegamento\_** variabile di ambiente di riproduzione. È possibile usare l'opzione [/LINKREPROTARGET](../build/reference/linkreprotarget.md) per specificare il nome da filtrare per la riproduzione del collegamento generata. Per usare **/LINKREPROTARGET**, è necessario specificare anche l'opzione **/out** del linker.
 
 #### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Per generare una procedura di riproduzione del collegamento utilizzando l'opzione/LINKREPRO
 
 1. Creare una directory che contenga la riproduzione del collegamento. Si farà riferimento al percorso completo della directory creato come _directory-path_. Se sono inclusi spazi, utilizzare le virgolette doppie intorno al percorso.
 
-1. Aggiungere il comando **/LINKREPRO:** _directory-path_ alla riga di comando del linker. In Visual Studio aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Selezionare la pagina delle proprietà **proprietà di configurazione** > **linker** >  della**riga di comando** . Quindi, immettere l'opzione **/LINKREPRO:** _directory-path_ nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
+1. Aggiungere il comando **/LINKREPRO:** _directory-path_ alla riga di comando del linker. In Visual Studio aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Selezionare le **proprietà di configurazione** > **linker** > pagina delle proprietà **riga di comando** . Quindi, immettere l'opzione **/LINKREPRO:** _directory-path_ nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
 
 1. Compilare il progetto della procedura di riproduzione e confermare che il problema previsto si è verificato.
 
@@ -356,7 +356,7 @@ Infine, creare il pacchetto della procedura di riproduzione comprimendo l'intera
 
 ### <a name="other-repros"></a>Altre procedure di riproduzione
 
-Se non è possibile ridurre il problema a un singolo file di origine o a una riproduzione pre-elaborata e il problema non richiede una procedura di riproduzione del collegamento, è possibile esaminare un progetto IDE. Tute le indicazioni su come creare una procedura di riproduzione valida sono comunque applicabili: Il codice dovrebbe essere minimo e indipendente. Il problema dovrebbe verificarsi negli strumenti Microsoft più recenti e se rilevante, non dovrebbe comparire in altri compilatori.
+Se non è possibile ridurre il problema a un singolo file di origine o a una riproduzione pre-elaborata e il problema non richiede una procedura di riproduzione del collegamento, è possibile esaminare un progetto IDE. Si applicano tutte le indicazioni su come creare una ripetizione corretta: il codice deve essere minimo e indipendente. Il problema dovrebbe verificarsi negli strumenti Microsoft più recenti e se rilevante, non dovrebbe comparire in altri compilatori.
 
 Creare la procedura di riproduzione come progetto IDE minimo, comprimere l'intera struttura della directory in un file con estensione zip o simile e allegarla al report.
 

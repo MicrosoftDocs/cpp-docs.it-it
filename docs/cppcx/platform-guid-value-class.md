@@ -26,14 +26,14 @@ public value struct Guid
 
 ### <a name="members"></a>Members
 
-`Platform::Guid` ha i metodi `Equals()`, `GetHashCode()` e `ToString()` derivati dalla [Classe Platform:: Object](../cppcx/platform-object-class.md)e il metodo `GetTypeCode()` derivato dalla [Classe Platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` dispone inoltre dei membri seguenti.
+`Platform::Guid` presenta i metodi `Equals()`, `GetHashCode()`e `ToString()` derivati dalla [Classe Platform:: Object](../cppcx/platform-object-class.md)e il metodo `GetTypeCode()` derivato dalla [Classe Platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` dispone inoltre dei membri seguenti.
 
-|Member|Descrizione|
+|Membro|Descrizione|
 |------------|-----------------|
 |[Guid](#ctor)|Inizializza una nuova istanza di un oggetto `Platform::Guid`.|
-|[operator==](#operator-equality)|Operatore di uguaglianza.|
-|[operator!=](#operator-inequality)|Operatore di disuguaglianza.|
-|[operator&lt;](#operator-less)|Operatore minore di.|
+|[operator==](#operator-equality)|Operatore Equals.|
+|[operator!=](#operator-inequality)|Operatore Not equals.|
+|[operator&lt;](#operator-less)|Operatore Less than.|
 |[operator()](#operator-call)|Converte `Platform::Guid` in `GUID`.|
 
 ### <a name="remarks"></a>Note
@@ -46,7 +46,7 @@ Per generare un nuovo `Platform::Guid`, usare il metodo statico [Windows:: Found
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
 **Metadati:** platform.winmd
 
@@ -115,7 +115,7 @@ Byte successivo del `GUID`.
 Byte successivo del `GUID`.
 
 *m*<br/>
-Un `GUID` nel formato di una [struttura Guid](/previous-versions/cc317743(v%3dmsdn.10)).
+Una `GUID` nel formato di una [struttura Guid](/previous-versions/cc317743(v%3dmsdn.10)).
 
 *n*<br/>
 Gli 8 byte rimanenti del `GUID`.
@@ -140,15 +140,15 @@ Secondo oggetto `Platform::Guid` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-True se le due istanze di @no__t 0 sono uguali.
+True se le due istanze di `Platform::Guid` sono uguali.
 
 ### <a name="remarks"></a>Note
 
-Preferisce usare l'operatore `==` invece del metodo statico [Windows:: Foundation:: GuidHelper:: Equals](/uwp/api/windows.foundation.guidhelper.equals) .
+Preferire l'utilizzo dell'operatore `==` anziché il metodo statico [Windows:: Foundation:: GuidHelper:: Equals](/uwp/api/windows.foundation.guidhelper.equals) .
 
 ## <a name="operator-inequality"></a>Operatore Guid:: operator! =
 
-Confronta due istanze di @no__t 0 per verificarne la disuguaglianza.
+Confronta due istanze di `Platform::Guid` per verificarne la disuguaglianza.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -166,11 +166,11 @@ Secondo oggetto `Platform::Guid` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-True se le due istanze @no__t 0 non sono uguali.
+True se le due istanze di `Platform::Guid` non sono uguali.
 
-## <a name="operator-less"></a>Operatore Guid:: operator @ no__t-1
+## <a name="operator-less"></a>Operatore Guid:: operator&lt;
 
-Confronta due istanze di @no__t 0 per l'ordinamento.
+Confronta due istanze di `Platform::Guid` per l'ordinamento.
 
 ### <a name="syntax"></a>Sintassi
 
