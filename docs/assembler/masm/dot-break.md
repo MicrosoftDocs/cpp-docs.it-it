@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .BREAK directive
 ms.assetid: 4f55dfce-ff41-4a68-9423-b0077dfc9206
-ms.openlocfilehash: b08f1953aaf6b77925f38739c5ad79cec283617e
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: e4692e38cbbdda4ad09bdfa248c9bc386c27dd3d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703039"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398588"
 ---
-# <a name="break-32-bit-masm"></a>. BREAK (MASM a 32 bit)
+# <a name="break-32-bit-masm"></a>.BREAK (32-bit MASM)
 
-Genera il codice per terminare un oggetto [. WHILE](../../assembler/masm/dot-while.md) o [. RIPETE](../../assembler/masm/dot-repeat.md) il blocco se *Condition* è true. (solo MASM a 32 bit).
+Generates code to terminate a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Sintassi
 
-> . INTERROMPI [[. Condizione IF]]
+> **.BREAK** ⟦ **.IF** *condition*⟧
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)

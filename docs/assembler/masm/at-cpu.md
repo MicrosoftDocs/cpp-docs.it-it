@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Cpu symbol'
 ms.assetid: 04f9fdf6-9772-407e-9c09-c12bed29087b
-ms.openlocfilehash: 610ddf6a2650371029d61ecf131395767394ec16
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 528db8ce2a23cefaeef0b1e52f4a373b49d1cbeb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302878"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399180"
 ---
-# <a name="cpu"></a>CPU \@
+# <a name="cpu"></a>\@Cpu
 
-Maschera di bit che specifica la modalità del processore (uguaglianza numerica).
+A bit mask specifying the processor mode (numeric equate).
 
 ## <a name="syntax"></a>Sintassi
 
-> **CPU \@**
+> **\@Cpu**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

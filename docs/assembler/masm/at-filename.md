@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '@FileName symbol'
 ms.assetid: a713bf70-2abd-4953-b187-7875ded58e52
-ms.openlocfilehash: 6104cf7abbbd1be945344c6221c0bbaeb19a014a
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 6967c2d6d8955cbde03f1b4698343b05b8d5c9e3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302658"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399038"
 ---
-# <a name="filename"></a>Nome file \@
+# <a name="filename"></a>\@FileName
 
-Nome base del file principale da assemblare (macro testo).
+The base name of the main file being assembled (text macro).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,4 +23,4 @@ Nome base del file principale da assemblare (macro testo).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

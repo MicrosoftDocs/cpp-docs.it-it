@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .ERRDEF directive
 ms.assetid: 07e39826-56f7-4734-a9de-5ff72879af10
-ms.openlocfilehash: 61d78bc026d53cf8fafd99de8e6e29566938631e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8af2f14c93159236cbf8c055ea6a5836e9acb7d1
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185213"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398387"
 ---
 # <a name="errdef"></a>.ERRDEF
 
-Genera un errore se *nome* è un'etichetta definita in precedenza, una variabile o un simbolo.
+Generates an error if *name* is a previously defined label, variable, or symbol.
 
 ## <a name="syntax"></a>Sintassi
 
-> . Nome ERRDEF [[, messaggio]]
+> **.ERRDEF** *name* ⟦ __,__ *message*⟧
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)

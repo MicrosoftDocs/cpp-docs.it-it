@@ -8,21 +8,21 @@ helpviewer_keywords:
 - PARITY? operator
 - operator PARITY?
 ms.assetid: f8c52def-c4b7-4b81-af96-2b0c2d943f6c
-ms.openlocfilehash: 12c9a8a4e2127274f915a60c83232c0266a17061
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5abfcf12a22240f5ffe7ef01c0156c0f48845e5
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199541"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396518"
 ---
 # <a name="operator-parity"></a>Operatore PARITY?
 
-Stato del flag di parità. Utilizzato solo all'interno [. IF](../../assembler/masm/dot-if.md), [. Sebbene](../../assembler/masm/dot-while.md), o [. Ripetere](../../assembler/masm/dot-repeat.md) blocca e valutate in fase di esecuzione, non in fase di assembly.
+Status of parity flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
 
 ## <a name="syntax"></a>Sintassi
 
-> PARITY?
+> **PARITY?**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

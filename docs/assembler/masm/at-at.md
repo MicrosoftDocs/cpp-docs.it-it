@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '@@: symbol'
 ms.assetid: 4c0aa730-d534-4efd-9608-54d683d78654
-ms.openlocfilehash: 927837ae7089a042bc8b210ceecac929eb3862dc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 28233a637158dc025f5ba72a79b1b11197b3cbb4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302930"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399255"
 ---
 # <a name=""></a>\@\@:
 
-Definisce un'etichetta del codice riconoscibile solo tra *Label1* e *Label2*, dove *Label1* è l'inizio del codice o l'etichetta di `@@:` precedente e *Label2* è la fine del codice o l'etichetta `@@:` successiva. Vedere [\@B](../../assembler/masm/at-b.md) e [\@F](../../assembler/masm/at-f.md).
+Defines a code label recognizable only between *label1* and *label2*, where *label1* is either start of code or the previous `@@:` label, and *label2* is either end of code or the next `@@:` label. See [\@B](../../assembler/masm/at-b.md) and [\@F](../../assembler/masm/at-f.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,4 +23,4 @@ Definisce un'etichetta del codice riconoscibile solo tra *Label1* e *Label2*, do
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)
