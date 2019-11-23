@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
-ms.openlocfilehash: 8f0388c3df9804c0cdb105162a962a44fe207345
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 17edea122afc03a8c3a2fdc86ee6c06c2ccf3c85
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703314"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398481"
 ---
-# <a name="dosseg-32-bit-masm"></a>. DOSSEG ((MASM a 32 bit)
+# <a name="dosseg-32-bit-masm"></a>.DOSSEG (32-bit MASM)
 
-Ordina i segmenti in base alla convenzione del segmento MS-DOS: CODE First, then Segments not in DGROUP e then Segments in DGROUP. (solo MASM a 32 bit).
+Orders the segments according to the MS-DOS segment convention: CODE first, then segments not in DGROUP, and then segments in DGROUP. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Sintassi
 
-> .DOSSEG
+> **.DOSSEG**
 
 ## <a name="remarks"></a>Note
 
-I segmenti in DGROUP seguono questo ordine: segmenti non in BSS o STACK, quindi segmenti BSS e infine segmenti dello STACK. Utilizzato principalmente per garantire il supporto CodeView nei programmi autonomi MASM. Uguale a [DOSSEG (](../../assembler/masm/dosseg.md).
+The segments in DGROUP follow this order: segments not in BSS or STACK, then BSS segments, and finally STACK segments. Primarily used for ensuring CodeView support in MASM stand-alone programs. Same as [DOSSEG](../../assembler/masm/dosseg.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)

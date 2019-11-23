@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - ELSE directive
 ms.assetid: c43af707-4567-4489-97ca-f14982d84e88
-ms.openlocfilehash: 47cda33eb415070a4eca2d0faadef683c905aaaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de162bfda80f659dc477d7cbb003a36de60c2328
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185187"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397701"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
 
-Contrassegna l'inizio di un blocco alternativo all'interno di un blocco condizionale.
+Marks the beginning of an alternate block within a conditional block.
 
 ## <a name="syntax"></a>Sintassi
 
-> ELSE
+> **ELSE**
 
 ## <a name="remarks"></a>Note
 
-Visualizzare [IF](../../assembler/masm/if-masm.md).
+See [IF](../../assembler/masm/if-masm.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - IFDEF directive
 ms.assetid: d8fadaa9-2b9c-44d7-a9e9-b103d16904f7
-ms.openlocfilehash: 509bf82646e60aee1d3f7bd230c42c0ddf8f7116
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f17812c36b8b6d208dd172dec2c288226b2ebbb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184740"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397426"
 ---
 # <a name="ifdef"></a>IFDEF
 
-Concede l'assembly se *nome* è un'etichetta definita in precedenza, una variabile o un simbolo.
+Grants assembly if *name* is a previously defined label, variable, or symbol.
 
 ## <a name="syntax"></a>Sintassi
 
-> Nome IFDEF
+> **IFDEF** *name*
 
 ## <a name="remarks"></a>Note
 
-Visualizzare [IF](../../assembler/masm/if-masm.md) per la sintassi completa.
+See [IF](../../assembler/masm/if-masm.md) for complete syntax.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

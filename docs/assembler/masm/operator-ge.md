@@ -8,21 +8,21 @@ helpviewer_keywords:
 - GE operator
 - operator GE
 ms.assetid: 28804311-174d-42d0-9ce1-2187b81bc844
-ms.openlocfilehash: 63b8486a6d3f7d8b61dc5befaaf43296f71f9ec0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45bd137ab5833d11691261eaaa370daccdc08ed4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176772"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396959"
 ---
 # <a name="operator-ge"></a>Operatore GE
 
-Restituisce true (-1) se *expression1* è maggiore o uguale a *expression2*, o restituisce false (0) se non lo è.
+Returns true (-1) if *expression1* is greater than or equal to *expression2*, or returns false (0) if it is not.
 
 ## <a name="syntax"></a>Sintassi
 
-> expression1 GE expression2
+> *expression1* **GE** *expression2*
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

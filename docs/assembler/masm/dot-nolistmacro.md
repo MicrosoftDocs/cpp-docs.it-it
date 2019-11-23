@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .NOLISTMACRO directive
 ms.assetid: 52ea451a-fe18-4b90-b662-91e177011c2e
-ms.openlocfilehash: 1ef7b5042cb1399521e4eedf6e58f6bbdf4a9918
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 829aa73eaab2b7a08d351dd4f24dba97a09e1a47
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204032"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398053"
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
 
-Evita la visualizzazione elenco delle espansioni della macro.
+Suppresses listing of macro expansions.
 
 ## <a name="syntax"></a>Sintassi
 
-> .NOLISTMACRO
+> **.NOLISTMACRO**
 
 ## <a name="remarks"></a>Note
 
-Uguale allo [. STUTTE](../../assembler/masm/dot-sall.md).
+Same as [.SALL](../../assembler/masm/dot-sall.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

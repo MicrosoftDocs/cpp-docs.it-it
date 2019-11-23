@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - DB directive
 ms.assetid: 0c69ccaa-043f-46e1-9f95-dc76d9bc87c8
-ms.openlocfilehash: 0dd3a4e06b19c04a495c5c30f5d10405ddfea57e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc67cd01990f541e6d2590a08c988476324c297f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179042"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398811"
 ---
 # <a name="db"></a>DB
 
-Alloca e inizializza facoltativamente un byte di spazio di archiviazione per ogni `initializer`. `DB` è un sinonimo di [BYTE](../../assembler/masm/byte-masm.md)
+Allocates and optionally initializes a byte of storage for each *initializer*. **DB** is a synonym of [BYTE](../../assembler/masm/byte-masm.md).
 
 ## <a name="syntax"></a>Sintassi
 
-> [[nome]] Inizializzatore di database [[, inizializzatore]]...
+> ⟦*name*⟧ **DB** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="remarks"></a>Note
 
-Può anche essere utilizzato come identificatore di tipo ovunque un tipo è consentito.
+Can also be used as a type specifier anywhere a type is legal.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
-[DB](../../assembler/masm/db.md)<br/>
-[SBYTE](../../assembler/masm/sbyte-masm.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[DB](../../assembler/masm/db.md)\
+[SBYTE](../../assembler/masm/sbyte-masm.md)

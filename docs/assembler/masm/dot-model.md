@@ -6,47 +6,47 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703575"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398104"
 ---
-# <a name="model-32-bit-masm"></a>. MODEL (MASM a 32 bit)
+# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
 
-Inizializza il modello di memoria del programma. (solo MASM a 32 bit).
+Inizializza il modello di memoria del programma. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Sintassi
 
-> .MODEL memorymodel [[, langtype]] [[, stackoption]]
+> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
 
 ### <a name="parameters"></a>Parametri
 
-*memorymodel*<br/>
+*memory-model*\
 Parametro obbligatorio che determina le dimensioni dei puntatori di codice e di dati.
 
-*langtype*<br/>
+*language-type*\
 Parametro facoltativo che imposta le convenzioni di denominazione e chiamata per le procedure e i simboli pubblici.
 
-*stackoption*<br/>
+*stack-option*\
 Parametro facoltativo.
 
-*stackoption* non viene usato se *memorymodel* è `FLAT`.
+*stack-option* is not used if *memory-model* is **FLAT**.
 
-Se si specifica `NEARSTACK` il segmento dello stack viene raggruppato in un singolo segmento fisico (`DGROUP`) insieme ai dati. Si presuppone che il registro dello stack di segmento (`SS`) contenga lo stesso indirizzo del registro del segmento di dati (`DS`). `FARSTACK` non raggruppa lo stack con `DGROUP`; di conseguenza `SS` non è uguale a `DS`.
+Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
 
 ## <a name="remarks"></a>Note
 
-.`MODEL` non viene usato in [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 La tabella seguente elenca i valori possibili per ogni parametro quando la destinazione è rappresentata da piattaforme a 16 bit e a 32 bit:
 
 |Parametro|Valori a 32 bit|Valori a 16 bit (supporto per lo sviluppo di versioni precedenti a 16 bit)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
-|*stackoption*|Non utilizzato|`NEARSTACK`, `FARSTACK`|
+|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
+|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
+|*stack-option*|Non utilizzato|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Codice
 
@@ -88,4 +88,4 @@ end
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)

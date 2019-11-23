@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-ms.openlocfilehash: b92db3d03bb5c45e67473cd4085f2369698f6b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9d86371503992d1bebe738fb6e6773581b10e3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185653"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398626"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
-Genera una **voce UWOP_ALLOC_SMALL** o una **UWOP_ALLOC_LARGE** con le dimensioni specificate per l'offset corrente nel prologo.
+Generates a **UWOP_ALLOC_SMALL** or a **UWOP_ALLOC_LARGE** with the specified size for the current offset in the prologue.
 
 ## <a name="syntax"></a>Sintassi
 
-> . Dimensioni ALLOCSTACK
+> **.ALLOCSTACK** *size*
 
 ## <a name="remarks"></a>Note
 
-MASM sceglierà la codifica più efficiente per le dimensioni specificate.
+MASM will choose the most efficient encoding for a given size.
 
-. ALLOCSTACK ml64.exe gli utenti possono specificare come una funzione di frame viene rimosso ed è consentita solo all'interno di prologo, che si estende dal [PROC](../../assembler/masm/proc.md) dichiarazione FRAME per il [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) direttiva. Queste direttive non generano codice. solo generano `.xdata` e `.pdata`. . ALLOCSTACK deve essere preceduto da istruzioni che implementano effettivamente le azioni per essere rimosso. È consigliabile eseguire il wrapping di direttive di rimozione sia il codice che dalla necessità di rimozione in una macro per garantire l'accordo.
+**.ALLOCSTACK** allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.ALLOCSTACK** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-Il `size` operando deve essere un multiplo di 8.
+The *size* operand must be a multiple of 8.
 
-Per ulteriori informazioni, vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Esempio
 
-L'esempio seguente viene illustrato come specificare un gestore di rimozione/con eccezione:
+The following sample shows how to specify an unwind/exception handler:
 
 ```asm
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console
@@ -65,4 +65,4 @@ END
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)

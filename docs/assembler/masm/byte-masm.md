@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - BYTE directive
 ms.assetid: 8dd94476-c069-4585-a478-3cb2e8e6ae54
-ms.openlocfilehash: 124e4491ff5242a8b1d4a1cd3b3ad503257139fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef7d3f19203672822183f49b3e55e9c25053a660
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204648"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398869"
 ---
 # <a name="byte-masm"></a>BYTE (MASM)
 
-Alloca e inizializza facoltativamente un byte di spazio di archiviazione per ogni `initializer`.
+Allocates and optionally initializes a byte of storage for each *initializer*.
 
 ## <a name="syntax"></a>Sintassi
 
-> [[nome]] BYTEinitializer [[, inizializzatore]]...
+> ⟦*name*⟧ **BYTE** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="remarks"></a>Note
 
-Può anche essere utilizzato come identificatore di tipo ovunque un tipo è consentito.
+Can also be used as a type specifier anywhere a type is legal.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
-[DB](../../assembler/masm/db.md)<br/>
-[SBYTE](../../assembler/masm/sbyte-masm.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[DB](../../assembler/masm/db.md)\
+[SBYTE](../../assembler/masm/sbyte-masm.md)

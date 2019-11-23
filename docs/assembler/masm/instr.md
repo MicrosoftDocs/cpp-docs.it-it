@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INSTR directive
 ms.assetid: fc37f6a2-3c95-47b2-b6bb-1066edd25994
-ms.openlocfilehash: be3dda768d153e764242f16cd6500e39bdda7923
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23641e4f7a8bec9eddcfa0e26b8acfe50c760a1a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184554"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397322"
 ---
 # <a name="instr"></a>INSTR
 
-Trova la prima occorrenza di *textitem2* nelle *textitem1*.
+Finds the first occurrence of *textitem2* in *textitem1*.
 
 ## <a name="syntax"></a>Sintassi
 
-> *nome* INSTR [[*posizione*,]] *textitem1*, *textitem2*
+> *name* **INSTR** ⟦*position* __,__ ⟧ *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>Note
 
-A partire dalla *posizione* è facoltativo. Ogni elemento di testo può essere una stringa letterale, una costante preceduta da un `%`, o la stringa restituita da una funzione di macro.
+The starting *position* is optional. Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

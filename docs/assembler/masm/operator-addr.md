@@ -8,21 +8,21 @@ helpviewer_keywords:
 - ADDR operator
 - operator ADDR
 ms.assetid: 9c2a46e4-3222-4a5b-baa2-07bdb62b7d03
-ms.openlocfilehash: 79e7df05adc19ad6e795c16044b02b1e6b286da4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e45b2dfc05b3708e37618f42491ec47d90a8d9c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176837"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397123"
 ---
 # <a name="operator-addr"></a>Operatore ADDR
 
-Vedere le [INVOKE](../../assembler/masm/invoke.md) direttiva.
+See the [INVOKE](../../assembler/masm/invoke.md) directive.
 
 ## <a name="syntax"></a>Sintassi
 
-> ADDR
+> **ADDR**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)

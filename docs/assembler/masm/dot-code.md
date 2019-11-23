@@ -6,28 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 65d336d2829c97fdf21e6f4b0fcb3063cc7776ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5b6608ca71a2b406c54a06cd44ac2865211a8ac
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204374"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398574"
 ---
 # <a name="code"></a>.CODE
 
-Se usato con [. MODELLO](../../assembler/masm/dot-model.md), indica l'inizio di un segmento di codice.
+When used with [.MODEL](../../assembler/masm/dot-model.md), indicates the start of a code segment.
 
 ## <a name="syntax"></a>Sintassi
 
-> . CODICE [[nome]]
+> **.CODE** ⟦*name*⟧
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|`name`|Parametro facoltativo che specifica il nome del segmento di codice. Il nome predefinito è text per la piccola, piccola, compatto e flat [modelli](../../assembler/masm/dot-model.md). Il nome predefinito è *modulename*Text per altri modelli.|
+*name*\
+Optional parameter that specifies the name of the code segment. The default name is **_TEXT** for tiny, small, compact, and flat [models](../../assembler/masm/dot-model.md). The default name is *modulename*_TEXT for other models.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
-[.DATA](../../assembler/masm/dot-data.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[.DATA](../../assembler/masm/dot-data.md)

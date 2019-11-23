@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator SEG
 - SEG operator
 ms.assetid: 471733f3-72a0-4024-9861-5cc48c30dd0c
-ms.openlocfilehash: ae82c936a4cac8ff985deba6ef6af923cb3bdfbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0afe3d4825d096a0d12f5d15e63d479e78c3bd7
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198706"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396468"
 ---
 # <a name="operator-seg"></a>Operatore SEG
 
-Restituisce il segmento della *espressione*.
+Returns the segment of *expression*.
 
 ## <a name="syntax"></a>Sintassi
 
-> Espressione SEG
+> **SEG** *expression*
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

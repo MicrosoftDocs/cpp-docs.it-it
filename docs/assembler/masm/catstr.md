@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - CATSTR directive
 ms.assetid: ae893190-8247-4435-a74e-de2f00db052f
-ms.openlocfilehash: 1c093cf93f0c7eb0e2384d565bad37a1ef69890c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3dc888e29c8db173a7624e41ccb9904cd27552e9
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178782"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398853"
 ---
 # <a name="catstr"></a>CATSTR
 
-Concatena gli elementi di testo.
+Concatenates text items.
 
 ## <a name="syntax"></a>Sintassi
 
-> name CATSTR [[textitem1 [[, textitem2]] ...]]
+> *name* **CATSTR** ⟦*textitem1* ⟦ __,__ *textitem2* ...⟧⟧
 
 ## <a name="remarks"></a>Note
 
-Ogni elemento di testo può essere una stringa letterale, una costante preceduta da un `%`, o la stringa restituita da una funzione di macro.
+Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function. **CATSTR** is a synonym for [TEXTEQU](textequ.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)

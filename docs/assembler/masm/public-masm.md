@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PUBLIC directive
 ms.assetid: 56e15a68-8a35-4bdd-b1ec-a38cbbf1c582
-ms.openlocfilehash: 1ff18d3a4e3e5c6141b12c269a7faac1ff0cdefa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec76b88134d2d9e4cfc3f18abf78f43007ef3806
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210646"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394745"
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
 
-Consente di ogni variabile, un'etichetta o simbolo assoluto specificato come *nome* disponibile per tutti gli altri moduli nel programma.
+Makes each variable, label, or absolute symbol specified as *name* available to all other modules in the program.
 
 ## <a name="syntax"></a>Sintassi
 
-> Nome pubblico [[langtype]] [[, nome [[langtype]]]]...
+> **PUBLIC** ⟦language-type⟧ *name* ⟦ __,__ ⟦language-type⟧ *name* ...⟧
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

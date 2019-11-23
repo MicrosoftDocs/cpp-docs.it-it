@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .LISTMACROALL directive
 ms.assetid: 36f329fd-eff0-4414-8b4a-6223113f9fda
-ms.openlocfilehash: 6b9e5a028d607ea1d3d3dfdb497bf0b8f61ade12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f14e2badf8b2e925e9f432d20e91f87814993e0
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205631"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398117"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
 
-Comincia a elencare di tutte le istruzioni nelle macro.
+Starts listing of all statements in macros.
 
 ## <a name="syntax"></a>Sintassi
 
-> .LISTMACROALL
+> **.LISTMACROALL**
 
 ## <a name="remarks"></a>Note
 
-Uguale allo [. LALL](../../assembler/masm/dot-lall.md).
+Same as [.LALL](../../assembler/masm/dot-lall.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

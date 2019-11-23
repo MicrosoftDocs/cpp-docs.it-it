@@ -6,21 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .ERR2 directive
 ms.assetid: ea8e0f14-cbdd-4576-9268-846527c27870
-ms.openlocfilehash: 41a7d43745cacacff3b7a957ca20e6edb3afc273
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 623a13ee8f5b2333f6e4b5278f1fa246110d596d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185394"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398417"
 ---
 # <a name="err2"></a>.ERR2
 
-[. ERR](../../assembler/masm/dot-err.md) blocco valutato a ogni passaggio di assembly, se **opzione: SETIF2** è **TRUE.**
+[.ERR](../../assembler/masm/dot-err.md) block evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE.**
 
 ## <a name="syntax"></a>Sintassi
 
-> . ERR2 [[messaggi]]
+> **.ERR2** ⟦*message*⟧
+
+## <a name="remarks"></a>Note
+
+For more information about 2-pass behavior in MASM 5.1 vs MASM 6.1, see [IF1 and IF2](if2.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)
