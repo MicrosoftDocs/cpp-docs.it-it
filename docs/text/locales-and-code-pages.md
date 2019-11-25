@@ -15,32 +15,32 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5821048363d92911f2902a580cb11f5b349f5e7c
+ms.sourcegitcommit: 4f15b69e35dd112001b24fe9dc836dd5d6902465
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410642"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74474079"
 ---
 # <a name="locales-and-code-pages"></a>Impostazioni locali e tabelle codici
 
-Un ID impostazioni locali riflette le convenzioni locali e la lingua per una determinata area geografica. Una lingua può essere parlata in più di un paese, ad esempio il portoghese è parlato sia in Brasile che in Portogallo. Per contro, è possibile che in un paese siano parlate più lingue ufficiali. Ad esempio, in Canada ha due lingue: Inglese e francese. Pertanto, in Canada dispone di due diverse impostazioni locali: Inglese (Canada) e francese (Canada). Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari.
+A locale ID reflects the local conventions and language for a particular geographical region. Una lingua può essere parlata in più di un paese, ad esempio il portoghese è parlato sia in Brasile che in Portogallo. Per contro, è possibile che in un paese siano parlate più lingue ufficiali. For example, Canada has two languages: English and French. Thus, Canada has two distinct locales: Canadian-English and Canadian-French. Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari.
 
-La lingua determina le convenzioni di formattazione del testo e dei dati, mentre il paese determina le convenzioni locali. Ogni linguaggio ha un mapping univoco, rappresentato da tabelle codici, che include caratteri diversi da quelli dell'alfabeto (ad esempio i segni di punteggiatura e numeri). Una tabella codici è un set di caratteri ed è correlata al linguaggio. Di conseguenza, una [delle impostazioni locali](../c-runtime-library/locale.md) è una combinazione univoca di lingua, paese/area geografica e tabella codici. L'impostazione della pagina delle impostazioni locali e il codice può essere modificato in fase di esecuzione chiamando il [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) (funzione).
+La lingua determina le convenzioni di formattazione del testo e dei dati, mentre il paese determina le convenzioni locali. Every language has a unique mapping, represented by code pages, which includes characters other than those in the alphabet (such as punctuation marks and numbers). A code page is a character set and is related to the language. As such, a [locale](../c-runtime-library/locale.md) is a unique combination of language, country/region, and code page. The locale and code page setting can be changed at run time by calling the [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) function.
 
-Diversi linguaggi potrebbero utilizzare tabelle codici diverse. Ad esempio, la tabella codici ANSI 1252 viene utilizzata per l'inglese e la maggior parte delle lingue europee, e la tabella codici ANSI 932 viene utilizzata per il Kanji giapponese. Praticamente tutte le tabelle codici condividono il set per i primi 128 caratteri (da 0x00 a 0x7F) di caratteri ASCII.
+Different languages might use different code pages. For example, the ANSI code page 1252 is used for English and most European languages, and the ANSI code page 932 is used for Japanese Kanji. Virtually all code pages share the ASCII character set for the lowest 128 characters (0x00 to 0x7F).
 
-Qualsiasi tabella codici a byte singolo può essere rappresentato in una tabella (con le 256 voci) come un mapping di valori di byte di caratteri (compresi i numeri e segni di punteggiatura), o glifi. Qualsiasi tabella codici multibyte può essere rappresentato anche come una tabella di dimensioni molto grande (con le voci di 64 KB) dei valori a byte doppio a caratteri. In pratica, tuttavia sono generalmente rappresentato come una tabella per i primi 256 caratteri (a byte singolo) e come gli intervalli per i valori a byte doppio.
+Any single-byte code page can be represented in a table (with 256 entries) as a mapping of byte values to characters (including numbers and punctuation marks), or glyphs. Any multibyte code page can also be represented as a very large table (with 64K entries) of double-byte values to characters. In practice, however, it is usually represented as a table for the first 256 (single-byte) characters and as ranges for the double-byte values.
 
-Per altre informazioni sulle tabelle codici, vedere [Code Pages](../c-runtime-library/code-pages.md).
+Per altre informazioni sulle tabelle codici, vedere [Tabelle codici](../c-runtime-library/code-pages.md).
 
-La libreria di runtime C offre due tipi di tabelle codici interni: impostazioni locali e multibyte. È possibile modificare la tabella codici corrente durante l'esecuzione del programma (vedere la documentazione per il [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [setmbcp](../c-runtime-library/reference/setmbcp.md) funzioni). Inoltre, la libreria run-time potrebbe ottenere e usare il valore della tabella codici del sistema operativo, ovvero costante per la durata dell'esecuzione del programma.
+The C run-time library has two types of internal code pages: locale and multibyte. You can change the current code page during program execution (see the documentation for the [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) and [_setmbcp](../c-runtime-library/reference/setmbcp.md) functions). Also, the run-time library might obtain and use the value of the operating system code page, which is constant for the duration of the program's execution.
 
-Quando cambia la tabella codici delle impostazioni locali, il comportamento del set di modifiche di funzioni a quello impostato per la tabella codici scelto dipende dalla lingua. Per impostazione predefinita, tutte le funzioni dipende dalla lingua iniziano l'esecuzione con una tabella codici delle impostazioni locali univoca per le impostazioni locali "C". È possibile modificare la tabella codici delle impostazioni locali interna (nonché altre proprietà specifiche delle impostazioni locali) chiamando il `setlocale` (funzione). Una chiamata a `setlocale`(LC_ALL, "") imposta le impostazioni locali a quello indicato nelle impostazioni locali dell'utente del sistema operativo.
+When the locale code page changes, the behavior of the locale-dependent set of functions changes to that dictated by the chosen code page. By default, all locale-dependent functions begin execution with a locale code page unique to the "C" locale. You can change the internal locale code page (as well as other locale-specific properties) by calling the `setlocale` function. A call to `setlocale`(LC_ALL, "") sets the locale to that indicated by the operating system user locale.
 
-Analogamente, quando la tabella codici multibyte cambia il comportamento delle modifiche funzioni multibyte a quello impostato dalla tabella codici selezionata. Per impostazione predefinita, tutte le funzioni multibyte iniziano l'esecuzione con una tabella codici multibyte corrispondente alla tabella codici predefinita del sistema operativo. È possibile modificare la tabella codici multibyte interno chiamando il `_setmbcp` (funzione).
+Similarly, when the multibyte code page changes, the behavior of the multibyte functions changes to that dictated by the chosen code page. By default, all multibyte functions begin execution with a multibyte code page corresponding to the operating system's default code page. You can change the internal multibyte code page by calling the `_setmbcp` function.
 
-La funzione di runtime C `setlocale` imposta, modifica o esegue una query alcune o tutte le informazioni delle impostazioni locali del programma corrente. Il [wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) routine è una versione a caratteri wide di `setlocale`; gli argomenti e valori restituiti di `_wsetlocale` sono stringhe a caratteri wide.
+The C run-time function `setlocale` sets, changes, or queries some or all of the current program's locale information. The [_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) routine is a wide-character version of `setlocale`; the arguments and return values of `_wsetlocale` are wide-character strings.
 
 ## <a name="see-also"></a>Vedere anche
 
