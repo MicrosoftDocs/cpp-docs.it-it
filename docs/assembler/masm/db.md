@@ -1,5 +1,5 @@
 ---
-title: DB
+title: Database del sito (DB)
 ms.date: 08/30/2018
 f1_keywords:
 - DB
@@ -13,20 +13,20 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398811"
 ---
-# <a name="db"></a>DB
+# <a name="db"></a>Database del sito (DB)
 
-Allocates and optionally initializes a byte of storage for each *initializer*. **DB** is a synonym of [BYTE](../../assembler/masm/byte-masm.md).
+Alloca ed eventualmente Inizializza un byte di archiviazione per ogni *inizializzatore*. **DB** è sinonimo di [byte](../../assembler/masm/byte-masm.md).
 
 ## <a name="syntax"></a>Sintassi
 
-> ⟦*name*⟧ **DB** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*nome*⟧ **database** *inizializzatore* ⟦ __,__ *inizializzatore* ... ⟧
 
 ## <a name="remarks"></a>Note
 
-Can also be used as a type specifier anywhere a type is legal.
+Può essere usato anche come identificatore di tipo in qualsiasi punto in cui un tipo è valido.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[DB](../../assembler/masm/db.md)\
+[Riferimento alle direttive](../../assembler/masm/directives-reference.md)\
+\ [database](../../assembler/masm/db.md)
 [SBYTE](../../assembler/masm/sbyte-masm.md)

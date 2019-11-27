@@ -102,12 +102,12 @@ Ai fini della discussione riportata di seguito, vengono derivati due pseudo-flag
 
 I prologhi per le funzioni canoniche possono contenere fino a 5 istruzioni (tenere presente che 3a e 3b si escludono a vicenda):
 
-|Istruzione|Il codice operativo è considerato presente se:|Dimensione|Codice operativo|Codici di rimozione|
+|Istruzione|Il codice operativo è considerato presente se:|Dimensione|Opcode|Codici di rimozione|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*==1|16|`push {r0-r3}`|04|
+|1|*H*= = 1|16|`push {r0-r3}`|04|
 |2|*C*= = 1 o *L*= = 1 o *R*= = 0 o PF = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*= = 1 e (*L*= = 0 e *R*= = 1 e PF = = 0)|16|`mov r11,sp`|C0-CF/FB|
-|3b|*C*= = 1 e (*L*= = 1 o *R*= = 0 o PF = = 1)|32|`add r11,sp,#xx`|FC|
+|3b|*C*= = 1 e (*L*= = 1 o *R*= = 0 o PF = = 1)|32|`add r11,sp,#xx`|CC|
 |4|*R*= = 1 e *reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
 |5|*Regolazione dello stack* ! = 0 e PF = = 0|16/32|`sub sp,sp,#xx`|00-7F/E8-EB|
 
@@ -121,7 +121,7 @@ Le istruzioni 2 e 4 sono impostate in base alla necessità o meno di un'operazio
 
 |C|L|V|PF|Registri Integer sottoposti a push|Registri VFP sottoposti a push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|r4-r*N*|none|
+|0|0|0|0|R4-r*N*|none|
 |0|0|0|1|r*S*-r*N*|none|
 |0|0|1|0|none|D8-d*E*|
 |0|0|1|1|r*S*-R3|D8-d*E*|
@@ -140,7 +140,7 @@ Le istruzioni 2 e 4 sono impostate in base alla necessità o meno di un'operazio
 
 Gli epiloghi per le funzioni canoniche hanno un formato analogo, ma in ordine inverso e con alcune opzioni aggiuntive. L'epilogo può contenere fino a 5 istruzioni e la sua forma dipende strettamente dalla forma del prologo.
 
-|Istruzione|Il codice operativo è considerato presente se:|Dimensione|Codice operativo|
+|Istruzione|Il codice operativo è considerato presente se:|Dimensione|Opcode|
 |-----------------|-----------------------------------|----------|------------|
 |6|*Regolazione dello stack*! = 0 e *EF*= = 0|16/32|`add   sp,sp,#xx`|
 |7|*R*= = 1 e *reg*! = 7|32|`vpop  {d8-dE}`|
@@ -175,7 +175,7 @@ Quando il formato di rimozione compresso non è sufficiente per descrivere la ri
    |0|28-31|*Code Words* è un campo a 4 bit che specifica il numero di parole a 32 bit necessarie per contenere tutti i codici di rimozione nella sezione 4. Se sono necessarie più di 15 parole per più di 63 byte di codice di rimozione, questo campo e il campo di *conteggio epilogo* devono essere entrambi impostati su 0 per indicare che è necessaria una parola di estensione.|
    |1|0-15|Il *conteggio degli epiloghi estesi* è un campo a 16 bit che fornisce più spazio per la codifica di un numero insolitamente elevato di epiloghi. La parola di estensione che contiene questo campo è presente solo se i campi *conteggio epilogo* e *parole codice* nella prima parola di intestazione sono entrambi impostati su 0.|
    |1|16-23|*Parole di codice estese* è un campo a 8 bit che fornisce più spazio per la codifica di un numero insolitamente elevato di parole di codice di rimozione. La parola di estensione che contiene questo campo è presente solo se i campi *conteggio epilogo* e *parole codice* nella prima parola di intestazione sono entrambi impostati su 0.|
-   |1|24-31|Riservata|
+   |1|24-31|Riservato|
 
 1. Dopo i dati dell'eccezione, se il bit *e* nell'intestazione è stato impostato su 0, è un elenco di informazioni sugli ambiti di epilogo, che vengono compressi uno a una parola e archiviati in ordine di incremento dell'offset iniziale. Ogni ambito contiene i campi seguenti:
 
@@ -226,7 +226,7 @@ Sebbene il prologo e ogni epilogo includano un indice nei codici di rimozione, l
 
 La matrice di codici di rimozione è un pool di sequenze di istruzione che descrive esattamente come annullare gli effetti del prologo, nell'ordine in cui le operazioni devono essere annullate. I codici di rimozione sono un mini set di istruzioni, codificato come stringa di byte. Al termine dell'esecuzione, l'indirizzo mittente della funzione di chiamata è nel registro LR e vengono ripristinati i valori di tutti i registri non volatili al momento della chiamata della funzione.
 
-Se fosse garantito che le eccezioni possono verificarsi solo nel corpo di una funzione e mai all'interno di un prologo o epilogo, sarebbe necessaria una sola sequenza di rimozione. Il modello di rimozione di Windows, invece, richiede la possibilità di rimozione da un prologo o un epilogo parzialmente eseguito. Per tenere conto di questo requisito, i codici di rimozione sono stati progettati accuratamente in modo da includere un mapping uno a uno non ambiguo a ogni codice operativo pertinente nel prologo e nell'epilogo. Questo ha diverse implicazioni:
+Se fosse garantito che le eccezioni possono verificarsi solo nel corpo di una funzione e mai all'interno di un prologo o epilogo, sarebbe necessaria una sola sequenza di rimozione. Il modello di rimozione di Windows, invece, richiede la possibilità di rimozione da un prologo o un epilogo parzialmente eseguito. Per tenere conto di questo requisito, i codici di rimozione sono stati progettati accuratamente in modo da includere un mapping uno a uno non ambiguo a ogni codice operativo pertinente nel prologo e nell'epilogo. Questo presenta diverse implicazioni:
 
 - È possibile calcolare la lunghezza del prologo e dell'epilogo contando il numero di codici di rimozione. Questo è possibile anche con istruzioni Thumb-2 a lunghezza variabile perché ci sono mapping distinti per i codici operativi a 16 e 32 bit.
 
@@ -236,7 +236,7 @@ Se fosse garantito che le eccezioni possono verificarsi solo nel corpo di una fu
 
 La tabella seguente illustra il mapping dai codici di rimozione ai codici operativi. I codici più comuni includono un solo byte, mentre quelli meno comuni richiedono due, tre o persino quattro byte. Ogni codice è archiviato dal byte più significativo a quello meno significativo. La struttura di codici di rimozione è diversa rispetto alla codifica descritta in nell'interfaccia EABI ARM perché questi codici di rimozione sono progettati per disporre di un mapping uno a uno agli opcode nel prologo e nell'epilogo per consentire la rimozione di prologhi ed epiloghi parzialmente eseguiti.
 
-|Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Descrizione|
+|Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Spiegazione|
 |------------|------------|------------|------------|------------|-----------------|
 |00-7F||||16|`add   sp,sp,#X`<br /><br /> dove X è (codice & 0x7F) \* 4|
 |80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> dove LR viene estratto se il codice & 0x2000 e R0-R12 vengono estratti se il bit corrispondente è impostato nel codice & 0x1FFF|
@@ -258,7 +258,7 @@ La tabella seguente illustra il mapping dai codici di rimozione ai codici operat
 |F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> dove X è (codice & 0x00FFFF) \* 4|
 |FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> dove X è (codice & 0x00FFFFFF) \* 4|
 |FB||||16|nop (16 bit)|
-|FC||||32|nop (32 bit)|
+|CC||||32|nop (32 bit)|
 |FD||||16|end + nop a 16 bit nell'epilogo|
 |FE||||32|end + nop a 32 bit nell'epilogo|
 |FF||||-|end|
@@ -298,9 +298,9 @@ Accanto a ogni codice operativo è presente il codice di rimozione appropriato p
 
 Il codice 0xFD è un codice speciale per la fine della sequenza che indica che l'epilogo è più lungo di un'istruzione a 16 bit rispetto al prologo. Questo aumenta notevolmente le possibilità di condivisione dei codici di rimozione.
 
-Nell'esempio, se si verifica un'eccezione durante l'esecuzione del corpo della funzione compreso tra prologo ed epilogo, la rimozione inizia con il caso dell'epilogo, all'offset 0 all'interno del codice dell'epilogo. Questo corrisponde all'offset 0x140 nell'esempio. L'agente di rimozione esegue la sequenza di rimozione completa poiché non è stata eseguita alcuna pulizia. Se invece l'eccezione si verifica un'istruzione dopo l'inizio del codice dell'epilogo, l'agente di rimozione può eseguire la rimozione saltando il primo codice di rimozione. Dato un mapping uno a uno tra codici operativi e codici di rimozione, in caso di rimozione dalle istruzioni *n* nell'epilogo, l'agente di rimozione deve saltare i primi codici di rimozione *n*.
+Nell'esempio, se si verifica un'eccezione durante l'esecuzione del corpo della funzione compreso tra prologo ed epilogo, la rimozione inizia con il caso dell'epilogo, all'offset 0 all'interno del codice dell'epilogo. Questo corrisponde all'offset 0x140 nell'esempio. L'agente di rimozione esegue la sequenza di rimozione completa poiché non è stata eseguita alcuna pulizia. Se invece l'eccezione si verifica un'istruzione dopo l'inizio del codice dell'epilogo, l'agente di rimozione può eseguire la rimozione saltando il primo codice di rimozione. Dato un mapping uno-a-uno tra i codici operativi e i codici di rimozione, se si rimuove dall'istruzione *n* nell'epilogo, l'oggetto di rimozione deve ignorare i primi *n* codici di rimozione.
 
-Una logica simile è applicabile al contrario per il prologo. In caso di rimozione dall'offset 0 nel prologo, non deve essere eseguito nulla. Per la rimozione da un'istruzione in avanti, la sequenza di rimozione deve iniziare da un codice di rimozione dalla fine perché i codici di rimozione del prologo sono archiviati in ordine inverso. Nel caso generale, per la rimozione dall'istruzione *n* nel prologo, l'esecuzione della rimozione deve iniziare in corrispondenza di *n* codici di rimozione dalla fine dell'elenco di codici.
+Una logica simile è applicabile al contrario per il prologo. In caso di rimozione dall'offset 0 nel prologo, non deve essere eseguito nulla. Per la rimozione da un'istruzione in avanti, la sequenza di rimozione deve iniziare da un codice di rimozione dalla fine perché i codici di rimozione del prologo sono archiviati in ordine inverso. In generale, se si esegue la rimozione dall'istruzione *n* nel prologo, la rimozione dovrebbe iniziare l'esecuzione a *n* codici di rimozione dalla fine dell'elenco di codici.
 
 I codici di rimozione di prologo ed epilogo non sempre corrispondono esattamente. In questo caso, può essere necessario che la matrice di codici di rimozione contenga più sequenze di codice. Per determinare l'offset per l'inizio dell'elaborazione dei codici, usare la logica seguente:
 

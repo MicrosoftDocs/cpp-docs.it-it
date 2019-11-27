@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use shared_ptr instances'
+title: 'Procedura: creare e utilizzare istanze di shared_ptr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245836"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>Procedura: creare e utilizzare istanze di shared_ptr
 
 Il tipo `shared_ptr` è un puntatore intelligente nella libreria C++ standard progettato per scenari in cui più proprietari potrebbero dover gestire la durata dell'oggetto in memoria. Dopo avere inizializzato un oggetto `shared_ptr`, è possibile copiarlo, passarlo come valore negli argomenti di funzione e assegnarlo ad altre istanze di `shared_ptr`. Tutte le istanze puntano allo stesso oggetto e condividono l'accesso a un "blocco di controllo" che incrementa e decrementa il conteggio dei riferimenti ogni qualvolta un nuovo oggetto `shared_ptr` viene aggiunto, esce dall'ambito o viene reimpostato. Quando il conteggio dei riferimenti arriva a zero, il blocco di controllo elimina la risorsa di memoria e se stesso.
 
 Nella figura che segue vengono mostrate diverse istanze di `shared_ptr` che puntano a una posizione di memoria.
 
-![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
+![Diagramma puntatore condiviso](media/shared_ptr.png "Diagramma puntatore condiviso")
 
 ## <a name="example-setup"></a>Configurazione di esempio
 
@@ -82,7 +82,7 @@ Nell'esempio che segue viene illustrato come dichiarare e inizializzare istanze 
 
 [!code-cpp[stl_smart_pointers#2](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example-3"></a>Esempio 3:
+## <a name="example-3"></a>Esempio 3
 
 `shared_ptr` è utile anche nei contenitori della libreria standard C++ quando si usano algoritmi che copiano elementi. È possibile eseguire il wrapping degli elementi in un oggetto `shared_ptr`, quindi copiarlo in altri contenitori, beninteso che la memoria sottostante è valida fino a quando serve e non oltre. Nell'esempio seguente viene illustrato come utilizzare l'algoritmo `remove_copy_if` su delle istanze di `shared_ptr` in un vettore.
 

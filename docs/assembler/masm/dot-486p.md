@@ -13,9 +13,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398676"
 ---
-# <a name="486p-32-bit-masm"></a>.486P (32-bit MASM)
+# <a name="486p-32-bit-masm"></a>.486P (MASM a 32 bit)
 
-Enables assembly of all instructions (including privileged) for the 80486 processor. (32-bit MASM only.)
+Abilita l'assembly di tutte le istruzioni (incluso il privilegio) per il processore 80486. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 

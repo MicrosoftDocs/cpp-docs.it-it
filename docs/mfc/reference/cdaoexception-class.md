@@ -35,30 +35,30 @@ Rappresenta una condizione di eccezione generata da classi di database MFC basat
 class CDaoException : public CException
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|nome|description|
+|Name|Descrizione|
 |----------|-----------------|
 |[CDaoException:: CDaoException](#cdaoexception)|Costruisce un oggetto `CDaoException`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|nome|description|
+|Name|Descrizione|
 |----------|-----------------|
 |[CDaoException:: GetErrorCount](#geterrorcount)|Restituisce il numero di errori nella raccolta di errori del motore di database.|
 |[CDaoException:: GetErrorInfo](#geterrorinfo)|Restituisce informazioni sull'errore relative a un particolare oggetto Error nella raccolta Errors.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|nome|description|
+|Name|Descrizione|
 |----------|-----------------|
-|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Contiene un codice di errore esteso per qualsiasi errore nelle classi DAO MFC.|
+|[CDaoException:: m_nAfxDaoError](#m_nafxdaoerror)|Contiene un codice di errore esteso per qualsiasi errore nelle classi DAO MFC.|
 |[CDaoException:: m_pErrorInfo](#m_perrorinfo)|Puntatore a un oggetto [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) che contiene informazioni su un oggetto errore DAO.|
 |[CDaoException:: m_scode](#m_scode)|Valore [SCODE](#m_scode) associato all'errore.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 La classe include membri dati pubblici che è possibile usare per determinare la ragione dell'eccezione. `CDaoException` oggetti vengono costruiti e generati dalle funzioni membro delle classi di database DAO.
 
@@ -83,7 +83,7 @@ Per ulteriori informazioni sulla gestione delle eccezioni in generale o sugli og
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdao.h
+**Intestazione:** AFXDAO. h
 
 ##  <a name="cdaoexception"></a>CDaoException:: CDaoException
 
@@ -93,7 +93,7 @@ Costruisce un oggetto `CDaoException`.
 CDaoException();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 In genere, il Framework crea oggetti eccezione quando il codice genera un'eccezione. Raramente è necessario costruire un oggetto eccezione in modo esplicito. Se si vuole generare una `CDaoException` dal codice, chiamare la funzione globale [AfxThrowDaoException](../../mfc/reference/exception-processing.md#afxthrowdaoexception).
 
@@ -127,7 +127,7 @@ short GetErrorCount();
 
 Numero di oggetti di errore DAO nella raccolta di errori del motore di database.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Queste informazioni sono utili per il ciclo della raccolta Errors per recuperare tutti gli oggetti di errore DAO nella raccolta. Per recuperare un oggetto Error in base all'indice o al numero di errore DAO, chiamare la funzione membro [GetErrorInfo](#geterrorinfo) .
 
@@ -147,15 +147,15 @@ void GetErrorInfo(int nIndex);
 *nIndex*<br/>
 Indice delle informazioni sull'errore nella raccolta di errori del motore di database per la ricerca in base all'indice.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Chiamare questa funzione membro per ottenere i seguenti tipi di informazioni sull'eccezione:
 
 - Codice di errore
 
-- Source
+- Origine
 
-- description
+- Descrizione
 
 - File della Guida
 
@@ -169,7 +169,7 @@ Per informazioni sulle eccezioni DAO e il codice di esempio, vedere l'articolo [
 
 Contiene un codice di errore esteso MFC.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Questo codice viene fornito nei casi in cui si è verificato un errore in un componente specifico delle classi DAO MFC.
 
@@ -187,15 +187,15 @@ I possibili valori sono:
 
 Contiene un puntatore a una struttura di `CDaoErrorInfo` che fornisce informazioni sull'oggetto errore DAO recuperato dall'ultima volta chiamando [GetErrorInfo](#geterrorinfo).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Questo oggetto contiene le informazioni seguenti:
 
 |Membro CDaoErrorInfo|Informazioni|Significato|
 |--------------------------|-----------------|-------------|
-|`m_lErrorCode`|Codice di errore|Codice di errore DAO|
-|`m_strSource`|Source|Nome dell'oggetto o dell'applicazione che ha generato in origine l'errore.|
-|`m_strDescription`|description|Stringa descrittiva associata all'errore.|
+|`m_lErrorCode`|Codice errore|Codice di errore DAO|
+|`m_strSource`|Origine|Nome dell'oggetto o dell'applicazione che ha generato in origine l'errore.|
+|`m_strDescription`|Descrizione|Stringa descrittiva associata all'errore.|
 |`m_strHelpFile`|File della Guida|Percorso di un file della Guida di Windows in cui l'utente può ottenere informazioni sul problema|
 |`m_lHelpContext`|Contesto della Guida|ID del contesto per un argomento nel file della Guida DAO|
 
@@ -205,7 +205,7 @@ Per dettagli completi sulle informazioni contenute nell'oggetto `CDaoErrorInfo`,
 
 Contiene un valore di tipo `SCODE` che descrive l'errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Si tratta di un codice OLE. Raramente è necessario usare questo valore perché, in quasi tutti i casi, sono disponibili informazioni più specifiche sugli errori MFC o DAO negli altri `CDaoException` membri dati.
 

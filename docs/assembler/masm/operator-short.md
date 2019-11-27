@@ -16,12 +16,12 @@ ms.locfileid: "74396176"
 ---
 # <a name="operator-short"></a>operatore SHORT
 
-Sets the type of *label* to short. All jumps to *label* must be short (within the range -128 to +127 bytes from the jump instruction to *label*).
+Imposta il tipo di *etichetta* su short. Tutti i salti all' *etichetta* devono essere brevi (compreso tra-128 e + 127 byte dall'istruzione Jump a *Label*).
 
 ## <a name="syntax"></a>Sintassi
 
-> **SHORT** *label*
+> *Etichetta* breve
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operators reference](operators-reference.md)
+[Guida di riferimento agli operatori](operators-reference.md)

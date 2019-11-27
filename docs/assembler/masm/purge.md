@@ -15,12 +15,12 @@ ms.locfileid: "74395777"
 ---
 # <a name="purge"></a>PURGE
 
-Deletes the specified macros from memory.
+Elimina dalla memoria le macro specificate.
 
 ## <a name="syntax"></a>Sintassi
 
-> **PURGE** *macroname* ⟦ __,__ *macroname* ...⟧
+> **Elimina** *macroname* ⟦ __,__ *macroname* ... ⟧
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Guida di riferimento alle direttive](../../assembler/masm/directives-reference.md)

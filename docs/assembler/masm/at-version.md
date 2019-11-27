@@ -13,14 +13,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398884"
 ---
-# <a name="version"></a>\@Version
+# <a name="version"></a>Versione \@
 
-The major and minor version of MASM reported at the command line, as a single number (text macro). For example, MASM version 14.23.28107.0 produces "1423".
+La versione principale e secondaria di MASM segnalata dalla riga di comando, come un numero singolo (macro di testo). Ad esempio, la versione di MASM 14.23.28107.0 produce "1423".
 
 ## <a name="syntax"></a>Sintassi
 
-> **\@Version**
+> **Versione \@**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Symbols reference](symbols-reference.md)
+[Riferimento ai simboli](symbols-reference.md)

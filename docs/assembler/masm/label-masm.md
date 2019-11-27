@@ -15,14 +15,14 @@ ms.locfileid: "74397265"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
 
-Creates a new label by assigning the current location-counter value and the given *type* to *name*.
+Crea una nuova etichetta assegnando il valore del contatore di posizione corrente e il *tipo* specificato a *Name*.
 
 ## <a name="syntax"></a>Sintassi
 
-> *name* **LABEL** *type*
+> *tipo* di **etichetta** *nome*
 >
-> *name* **LABEL** ⟦**NEAR** | **FAR** | **PROC**⟧ **PTR** ⟦*type*⟧
+> *nome* **LABEL** ⟦**near** | **Lung** | **proc**⟧ **ptr** ⟦*Type*⟧
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

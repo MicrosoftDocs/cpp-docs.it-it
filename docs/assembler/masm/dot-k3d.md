@@ -13,9 +13,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398234"
 ---
-# <a name="k3d-32-bit-masm"></a>.K3D (32-bit MASM)
+# <a name="k3d-32-bit-masm"></a>. K3D (MASM a 32 bit)
 
-Enables assembly of **K3D** instructions. (32-bit MASM only.)
+Abilita l'assembly delle istruzioni **K3D** . (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,4 +23,4 @@ Enables assembly of **K3D** instructions. (32-bit MASM only.)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

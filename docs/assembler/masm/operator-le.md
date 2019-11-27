@@ -17,12 +17,12 @@ ms.locfileid: "74396856"
 ---
 # <a name="operator-le"></a>Operatore LE
 
-Returns true (-1) if *expression1* is less than or equal to *expression2*, or returns false (0) if it is not.
+Restituisce true (-1) se *expression1* è minore o uguale a *expression2*oppure restituisce false (0) in caso contrario.
 
 ## <a name="syntax"></a>Sintassi
 
-> *expression1* **LE** *expression2*
+> *expression1* **le** *expression2*
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operators reference](operators-reference.md)
+[Guida di riferimento agli operatori](operators-reference.md)

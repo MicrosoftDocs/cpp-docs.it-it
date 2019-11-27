@@ -15,21 +15,21 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397989"
 ---
-# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
+# <a name="safeseh-32-bit-masm"></a>. SAFESEH (MASM a 32 bit)
 
-Registers a function as a structured exception handler. (32-bit MASM only.)
+Registra una funzione come gestore di eccezioni strutturate. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
-> **.SAFESEH** *identifier*
+> **.**  *Identificatore* SAFESEH
 
 ## <a name="remarks"></a>Note
 
-*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
+l' *identificatore* deve essere l'ID di una procedura [EXTRN](../../assembler/masm/extrn.md) [o proc](../../assembler/masm/proc.md) definita localmente. Un' [etichetta](../../assembler/masm/label-masm.md) non è consentita. Il. Per la direttiva SAFESEH è richiesta l'opzione della riga di comando [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
 
-For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+Per ulteriori informazioni sui gestori di eccezioni strutturate, vedere [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
+Ad esempio, per registrare un gestore eccezioni sicuro, creare un nuovo file MASM (come indicato di seguito), assemblarlo con/SAFESEH e aggiungerlo agli oggetti collegati.
 
 ```asm
 .386
@@ -41,4 +41,4 @@ end
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

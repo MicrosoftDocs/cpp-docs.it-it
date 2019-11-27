@@ -18,19 +18,19 @@ ms.locfileid: "74246641"
 ---
 # <a name="cleaning-up-resources"></a>Pulizia di risorse
 
-Durante l'esecuzione del gestore terminazioni, potrebbe essere possibile non sapere quali risorse sono effettivamente allocate prima che il gestore terminazioni venga chiamato. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+Durante l'esecuzione del gestore terminazioni, potrebbe essere possibile non sapere quali risorse sono effettivamente allocate prima che il gestore terminazioni venga chiamato. È possibile che il blocco di istruzioni **__try** sia stato interrotto prima dell'allocazione di tutte le risorse, in modo che non tutte le risorse siano state aperte.
 
 Di conseguenza, per essere certi, è necessario verificare quali risorse sono effettivamente aperte prima di procedere con la pulizia gestione-terminazione. Una procedura consigliata consiste in:
 
 1. Inizializzare gli handle su NULL.
 
-1. In the **__try** statement block, allocate resources. Gli handle vengono impostati su valori positivi mentre la risorsa viene allocata.
+1. Nel blocco di istruzioni **__try** allocare le risorse. Gli handle vengono impostati su valori positivi mentre la risorsa viene allocata.
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. Nel blocco di istruzioni **__finally** rilasciare ogni risorsa la cui variabile handle o flag corrispondente è diversa da zero o not null.
 
 ## <a name="example"></a>Esempio
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Prima di pulire una risorsa, il codice controlla se la risorsa è stata allocata.
+Il codice seguente, ad esempio, usa un gestore di terminazione per chiudere tre file e un blocco di memoria allocati nel blocco di istruzioni **__try** . Prima di pulire una risorsa, il codice controlla se la risorsa è stata allocata.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

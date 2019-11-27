@@ -1,6 +1,6 @@
 ---
-title: Delegating constructors (C++)
-description: Use delegating constructors in C++ to invoke other constructors and reduce code repetition.
+title: Delega di costruttori (C++)
+description: Usare i costruttori di delega in C++ per richiamare altri costruttori e ridurre la ripetizione del codice.
 ms.date: 11/19/2019
 ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
 ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e

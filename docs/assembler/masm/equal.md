@@ -15,16 +15,16 @@ ms.locfileid: "74397605"
 ---
 # <a name=""></a>=
 
-Assigns the numeric value of *expression* to *name*.
+Assegna il valore numerico dell' *espressione* a *Name*.
 
 ## <a name="syntax"></a>Sintassi
 
-> *name* **=** *expression*
+> *espressione*=nome
 
 ## <a name="remarks"></a>Note
 
-The symbol can be redefined later.
+Il simbolo può essere ridefinito in un secondo momento.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

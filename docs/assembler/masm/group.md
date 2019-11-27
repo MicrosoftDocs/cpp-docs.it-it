@@ -1,5 +1,5 @@
 ---
-title: GROUP
+title: GRUPPO
 ms.date: 11/05/2019
 f1_keywords:
 - group
@@ -13,14 +13,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397469"
 ---
-# <a name="group-32-bit-masm"></a>GROUP (32-bit MASM)
+# <a name="group-32-bit-masm"></a>GRUPPO (MASM a 32 bit)
 
-Add the specified *segments* to the group called *name*. (32-bit MASM only.)
+Aggiungere i *segmenti* specificati al gruppo denominato *nome*. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
-> *name* **GROUP** *segment* ⟦ __,__ *segment* ...⟧
+> ⟦ *segmento* **gruppo** nome __,__ *segmento* ... ⟧
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Guida di riferimento alle direttive](../../assembler/masm/directives-reference.md)

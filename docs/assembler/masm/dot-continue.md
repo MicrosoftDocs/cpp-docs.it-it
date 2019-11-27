@@ -13,13 +13,13 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398546"
 ---
-# <a name="continue-32-bit-masm"></a>.CONTINUE (32-bit MASM)
+# <a name="continue-32-bit-masm"></a>. CONTINUA (MASM a 32 bit)
 
-Generates code to jump to the top of a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
+Genera il codice per passare all'inizio di un oggetto [. WHILE](../../assembler/masm/dot-while.md) o [. RIPETE](../../assembler/masm/dot-repeat.md) il blocco se *Condition* è true. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
-> **.CONTINUE** ⟦ **.IF** *condition*⟧
+> **. CONTINUA** ⟦ **.**  *Condizione*if ⟧
 
 ## <a name="see-also"></a>Vedere anche
 

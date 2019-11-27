@@ -17,12 +17,12 @@ ms.locfileid: "74396796"
 ---
 # <a name="operator-ltgt"></a>operator &lt;&gt;
 
-Treats *text* as a single literal element.
+Considera il *testo* come un singolo elemento letterale.
 
 ## <a name="syntax"></a>Sintassi
 
-> __\<__ *text* __>__
+> *testo*\< __>__
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operators reference](operators-reference.md)
+[Guida di riferimento agli operatori](operators-reference.md)

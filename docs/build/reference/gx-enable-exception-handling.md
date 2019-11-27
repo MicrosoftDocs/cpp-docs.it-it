@@ -20,7 +20,7 @@ ms.locfileid: "74245094"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (Attiva gestione eccezioni)
 
-Deprecato. Enables synchronous exception handling using the assumption that functions declared by using `extern "C"` never throw an exception.
+Deprecato. Abilita la gestione delle eccezioni sincrona usando il presupposto che le funzioni dichiarate con `extern "C"` non generano mai un'eccezione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,15 +30,15 @@ Deprecato. Enables synchronous exception handling using the assumption that func
 
 ## <a name="remarks"></a>Note
 
-**/GX** is deprecated. Use the equivalent [/EHsc](eh-exception-handling-model.md) option instead. For a list of deprecated compiler options, see the **Deprecated and Removed Compiler Options** section in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
+**/GX** è deprecato. Usare invece l'opzione [/EHsc](eh-exception-handling-model.md) equivalente. Per un elenco delle opzioni del compilatore deprecate, vedere la sezione Opzioni del compilatore **deprecate e rimosse** in [Opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
-By default, **/EHsc**, the equivalent of **/GX**, is in effect when you compile by using the Visual Studio development environment. When using the command line tools, no exception handling is specified. This is the equivalent of **/GX-** .
+Per impostazione predefinita, **/EHsc**, equivalente a **/GX**, è attivo quando si esegue la compilazione usando l'ambiente di sviluppo di Visual Studio. Quando si usano gli strumenti da riga di comando, non viene specificata alcuna gestione delle eccezioni. Equivale a **/GX-** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. In the navigation pane, choose **Configuration Properties**, **C/C++** , **Command Line**.
+1. Nel riquadro di spostamento scegliere **proprietà di configurazione**, **C/C++** , **riga di comando**.
 
 1. Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .
 

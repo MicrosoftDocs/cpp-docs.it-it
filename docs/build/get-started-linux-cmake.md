@@ -24,7 +24,7 @@ In questa esercitazione si imparerà a:
 > * aggiungere una connessione a un computer Linux
 > * compilare ed eseguire il debug della stessa destinazione in Linux
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 * Configurare Visual Studio per lo sviluppo C++ multipiattaforma
   * Installare innanzitutto [Visual Studio](https://visualstudio.microsoft.com/vs/) e scegliere lo sviluppo **di applicazioni desktop C++ con** e **Linux con C++ i carichi di lavoro**. Questa installazione minima è di 3 GB. A seconda della velocità di download, l'installazione non deve durare più di 10 minuti.

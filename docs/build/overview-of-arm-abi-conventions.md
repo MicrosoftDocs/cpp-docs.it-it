@@ -55,11 +55,11 @@ L'uso di istruzioni IT nel codice Thumb-2 non è consentito, se non in questi ca
 
    |Codici operativi a 16 bit|Classe|Restrizioni|
    |---------------------|-----------|------------------|
-   |MOV, MVN|Move|Rm != PC, Rd != PC|
+   |MOV, MVN|Sposta|Rm != PC, Rd != PC|
    |LDR, LDR[S]B, LDR[S]H|Load from memory|Ma non formati letterali LDR|
    |STR, STRB, STRH|Store to memory||
    |ADD, ADC, RSB, SBC, SUB|Add or subtract|Ma non formati ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-   |CMP, CMN|Compare|Rm != PC, Rn != PC|
+   |CMP, CMN|Confronto|Rm != PC, Rn != PC|
    |MUL|Multiply||
    |ASR, LSL, LSR, ROR|Bit shift||
    |AND, BIC, EOR, ORR, TST|Bitwise arithmetic||
@@ -75,7 +75,7 @@ L'uso delle istruzioni di divisione dei numeri interi SDIV e UDIV è completamen
 
 Il processore ARM supporta registri con 16 Integer:
 
-|Registrazione|Volatile?|Ruolo|
+|Registrazione|Volatile?|Role|
 |--------------|---------------|----------|
 |r0|Volatile|Parametro, risultato, registro temporaneo 1|
 |r1|Volatile|Parametro, risultato, registro temporaneo 2|
@@ -102,7 +102,7 @@ Windows usa r11 per analizzare rapidamente lo stack frame. Per altre informazion
 
 Windows supporta solo varianti ARM con supporto per il coprocessore VFPv3-D32. I registri a virgola mobile sono quindi sempre presenti e possono essere ritenuti attendibili per il passaggio dei parametri e il set completo di 32 registri è disponibile per l'uso. I registri VFP e il loro utilizzo sono riepilogati in questa tabella:
 
-|Singoli|Doppi|Quadrupli|Volatile?|Ruolo|
+|Singoli|Doppi|Quadrupli|Volatile?|Role|
 |-------------|-------------|-----------|---------------|----------|
 |s0-s3|d0-d1|q0|Volatile|Parametri, risultato, registro temporaneo|
 |s4-s7|d2-d3|q1|Volatile|Parametri, registro temporaneo|
@@ -116,7 +116,7 @@ Windows supporta solo varianti ARM con supporto per il coprocessore VFPv3-D32. I
 
 La tabella successiva illustra i campi di bit FPSCR (Floating-Point Status and Control Register):
 
-|BITS|Significato|Volatile?|Ruolo|
+|BITS|Significato|Volatile?|Role|
 |----------|-------------|---------------|----------|
 |31-28|NZCV|Volatile|Flag di stato|
 |27|QC|Volatile|Saturazione cumulativa|

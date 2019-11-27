@@ -38,7 +38,7 @@ Assegna un nome univoco all'oggetto campo dell'indice. Per informazioni dettagli
 *m_bDescending*<br/>
 Indica l'ordine degli indici definito dall'oggetto index. TRUE se l'ordine è decrescente.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Un oggetto index può avere un numero di campi, che indica i campi su cui è indicizzato un oggetto TableDef (o un recordset basato su una tabella). I riferimenti al database primario precedente indicano il modo in cui vengono restituite le informazioni nel membro `m_pFieldInfos` di un oggetto [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) ottenuto chiamando la funzione membro `GetIndexInfo` della classe [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).
 
@@ -48,10 +48,10 @@ Chiamare la funzione membro `GetIndexInfo` dell'oggetto TableDef o recordset con
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdao.h
+**Intestazione:** AFXDAO. h
 
 ## <a name="see-also"></a>Vedere anche
 
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef:: GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
-[CDaoRecordset::GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)
+[CDaoRecordset:: GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)

@@ -21,7 +21,7 @@ ms.locfileid: "74303439"
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: routine DFX personalizzate per le classi database DAO
 
 > [!NOTE]
->  DAO viene usato con i database di Access ed è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta. Gli ambienti C++ visivi e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare i [Modelli OLE DB](../data/oledb/ole-db-templates.md) oppure [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
+>  DAO viene usato con i database di Access ed è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta. Gli ambienti C++ visivi e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare [OLE DB modelli](../data/oledb/ole-db-templates.md) o [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
 
 Questa nota tecnica descrive il meccanismo DFX (record Field Exchange) DAO. Per comprendere ciò che accade nelle routine DFX, la funzione `DFX_Text` verrà illustrata in dettaglio come esempio. Come fonte di informazioni aggiuntive per questa nota tecnica, è possibile esaminare il codice per le altre funzioni di DFX. Probabilmente non sarà necessaria una routine di DFX personalizzata con la stessa frequenza con cui potrebbe essere necessaria una routine RFX personalizzata (utilizzata con le classi di database ODBC).
 
@@ -119,7 +119,7 @@ Il meccanismo DFX funziona in modo simile al meccanismo RFX (record Field Exchan
 
 Il fulcro del meccanismo DFX è la funzione `DoFieldExchange` della classe derivata `CDaoRecordset`. Questa funzione Invia le chiamate alle singole funzioni DFX di un tipo di operazione appropriato. Prima di chiamare `DoFieldExchange` le funzioni MFC interne impostano il tipo di operazione. Nell'elenco seguente vengono illustrati i vari tipi di operazione e una breve descrizione.
 
-|Operazione|description|
+|Operazione|Descrizione|
 |---------------|-----------------|
 |`AddToParameterList`|Clausola Builds PARAMETERS|
 |`AddToSelectList`|Compila clausola SELECT|

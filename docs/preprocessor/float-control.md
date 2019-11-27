@@ -1,5 +1,5 @@
 ---
-title: Pragma float_control
+title: float_control (pragma)
 description: Viene descritto l'utilizzo e gli effetti della direttiva pragma float_control. La direttiva float_control controlla lo stato della semantica precisa a virgola mobile e della semantica di eccezione in fase di esecuzione.
 ms.date: 11/18/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305501"
 ---
-# <a name="float_control-pragma"></a>Pragma float_control
+# <a name="float_control-pragma"></a>float_control (pragma)
 
 Specifica il comportamento a virgola mobile per una funzione.
 
@@ -37,23 +37,23 @@ Specifica se abilitare o disabilitare la semantica delle eccezioni**a**virgola m
 
 **except** può essere impostato **su on** **solo quando è** impostato **su on**.
 
-**push**\
+\ **push**
 Inserisce l'impostazione del **float_control** corrente nello stack interno del compilatore.
 
-**pop**\
+\ **pop**
 Rimuove l'impostazione del **float_control** dall'inizio dello stack interno del compilatore e rende tale impostazione la nuova **float_control** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Le opzioni **precise** e **except** non hanno esattamente lo stesso comportamento delle opzioni del compilatore [/FP](../build/reference/fp-specify-floating-point-behavior.md) con gli stessi nomi. Il pragma **float_control** regola solo parte del comportamento della virgola mobile. È necessario combinarlo con [fp_contract](../preprocessor/fp-contract.md) e [fenv_access](../preprocessor/fenv-access.md) pragma per ricreare le opzioni del compilatore **/FP** . La tabella seguente illustra le impostazioni pragma equivalenti per ogni opzione del compilatore:
 
 | | float_control (preciso, \*) | float_control (eccetto, \*) | fp_contract (\*) | fenv_access (\*) |
 |-|-|-|-|-|
-| /fp:strict             | attivo  | attivo  | off | attivo  |
-| /fp:strict /fp:except- | attivo  | off | off | attivo  |
-| /fp:precise            | attivo  | off | attivo  | off |
-| /FP: precise/FP: except | attivo  | attivo  | attivo  | off |
-| /fp:fast               | off | off | attivo  | off |
+| /fp:strict             | in  | in  | off | in  |
+| /fp:strict /fp:except- | in  | off | off | in  |
+| /fp:precise            | in  | off | in  | off |
+| /FP: precise/FP: except | in  | in  | in  | off |
+| /fp:fast               | off | off | in  | off |
 
 In altre parole, è necessario usare diversi pragma in combinazione per emulare le opzioni di riga di comando **/FP: Fast**, **/FP: precise**, **/FP: Strict**e **/FP: except** .
 

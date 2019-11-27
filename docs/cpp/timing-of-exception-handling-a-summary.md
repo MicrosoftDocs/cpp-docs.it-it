@@ -1,5 +1,5 @@
 ---
-title: 'Timing of exception handling: A summary'
+title: 'Intervallo di gestione delle eccezioni: Riepilogo'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -18,12 +18,12 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246340"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
+# <a name="timing-of-exception-handling-a-summary"></a>Intervallo di gestione delle eccezioni: Riepilogo
 
-A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
+Un gestore terminazioni viene eseguito indipendentemente dal modo in cui il blocco di istruzioni **__try** viene terminato. Le cause includono il salto all'esterno del blocco di **__try** , un'istruzione `longjmp` che trasferisce il controllo dal blocco e la rimozione dello stack a causa della gestione delle eccezioni.
 
 > [!NOTE]
->  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. La versione veloce ignora la gestione delle terminazioni ma è più efficiente. To use this version, include the file \<setjmp.h>. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. To use this version, include the file \<setjmpex.h>. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.
+>  Il compilatore C++ Microsoft supporta due forme delle istruzioni `setjmp` e `longjmp`. La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per usare questa versione, includere il file \<> setjmp. h. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per usare questa versione, includere il file \<> setjmpex. h. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.
 
 Il sistema operativo esegue tutti i gestori terminazioni nell'ordine corretto (incluso il corpo di un gestore eccezioni), prima che sia possibile eseguire qualsiasi altro codice.
 
@@ -35,7 +35,7 @@ Quando la causa dell'interruzione è un'eccezione, il sistema deve innanzitutto 
 
 1. Se questo filtro supera il controllo (restituisce 0), il processo continua fino a quando non viene trovato un filtro che non invece non lo supera.
 
-1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
+1. Se questo filtro restituisce-1, l'esecuzione continua dove è stata generata l'eccezione e non viene completata alcuna terminazione.
 
 1. Se il filtro restituisce 1, si verificano i seguenti eventi:
 
@@ -49,5 +49,5 @@ Quando la causa dell'interruzione è un'eccezione, il sistema deve innanzitutto 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -68,7 +68,7 @@ Numero di caratteri da copiare.
 
 Valore di *dest*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 **memcpy** copia i byte del *conteggio* da *src* a *dest*; **wmemcpy** copia il *numero* di caratteri wide (due byte). Se l'origine e la destinazione si sovrappongono, il comportamento di **memcpy** non è definito. Usare **memmove** per gestire le aree sovrapposte.
 

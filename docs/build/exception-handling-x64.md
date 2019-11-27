@@ -38,7 +38,7 @@ La struttura delle informazioni sui dati di rimozione viene utilizzata per regis
 
 |||
 |-|-|
-|UBYTE: 3|Version|
+|UBYTE: 3|di destinazione|
 |UBYTE: 5|Flag|
 |UBYTE|Dimensioni del prologo|
 |UBYTE|Conteggio dei codici di rimozione|
@@ -64,7 +64,7 @@ La struttura delle informazioni sui dati di rimozione viene utilizzata per regis
 
 La struttura di UNWIND_INFO deve essere DWORD allineata in memoria. Ecco cosa significa ogni campo:
 
-- **Versione**
+- **Version**
 
    Numero di versione dei dati di rimozione, attualmente 1.
 
@@ -72,7 +72,7 @@ La struttura di UNWIND_INFO deve essere DWORD allineata in memoria. Ecco cosa si
 
    Sono attualmente definiti tre flag:
 
-   |Flag|description|
+   |Flag|Descrizione|
    |-|-|
    |`UNW_FLAG_EHANDLER`| La funzione dispone di un gestore di eccezioni che deve essere chiamato durante la ricerca di funzioni che devono esaminare le eccezioni.|
    |`UNW_FLAG_UHANDLER`| La funzione dispone di un gestore di terminazione che deve essere chiamato durante la rimozione di un'eccezione.|
@@ -182,7 +182,7 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
 
   |||
   |-|-|
-  |RSP+32|SS|
+  |RSP+32|Server del sito (SS)|
   |RSP+24|RSP precedente|
   |RSP+16|EFLAGS|
   |RSP+8|CS|
@@ -192,7 +192,7 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
 
   |||
   |-|-|
-  |RSP+40|SS|
+  |RSP+40|Server del sito (SS)|
   |RSP+32|RSP precedente|
   |RSP+24|EFLAGS|
   |RSP+16|CS|
@@ -327,7 +327,7 @@ Per scrivere routine di assembly appropriate, è disponibile un set di pseudo-op
 
 ### <a name="raw-pseudo-operations"></a>Pseudo-operazioni RAW
 
-|Operazione pseudo|description|
+|Operazione pseudo|Descrizione|
 |-|-|
 |\[FRAME PROC:*ehandler*]|Fa in modo che MASM generi una voce della tabella di funzione in. pdata e le informazioni di rimozione in. xdata per il comportamento di rimozione della gestione delle eccezioni strutturate di una funzione.  Se *ehandler* è presente, questa procedura viene immessa in. xdata come gestore specifico del linguaggio.<br /><br /> Quando si usa l'attributo FRAME, deve essere seguito da un oggetto. Direttiva ENDPROLOG.  Se la funzione è una funzione foglia (come definito nei [tipi di funzione](../build/stack-usage.md#function-types)) l'attributo frame non è necessario, così come il resto di queste pseudo-operazioni.|
 |. *Registro* pushreg|Genera una voce di codice di rimozione UWOP_PUSH_NONVOL per il numero di registro specificato usando l'offset corrente nel prologo.<br /><br /> Utilizzarlo solo con registri di tipo integer non volatili.  Per i push di registri volatili, usare un oggetto. ALLOCSTACK 8, invece|
@@ -393,7 +393,7 @@ Per ulteriori informazioni sull'esempio di epilogo, vedere [codice di epilogo](p
 
 Per semplificare l'uso delle [pseudo-operazioni non elaborate](#raw-pseudo-operations), è disponibile un set di macro, definito in ksamd64. Inc, che può essere usato per creare prologhi ed epiloghi delle procedure tipiche.
 
-|Macro|description|
+|Macro|Descrizione|
 |-|-|
 |alloc_stack (n)|Alloca un stack frame di n byte (usando `sub rsp, n`) e genera le informazioni di rimozione appropriate (. allocstack n)|
 |save_reg *reg*, *loc*|Salva un *reg* di registro non volatile nello stack all'offset RSP *loc*e genera le informazioni di rimozione appropriate. (SAVEREG reg, loc)|

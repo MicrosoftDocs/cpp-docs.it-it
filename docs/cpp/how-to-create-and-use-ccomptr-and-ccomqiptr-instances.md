@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use CComPtr and CComQIPtr instances'
+title: 'Procedura: creare e usare istanze CComPtr e CComQIPtr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246546"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and use CComPtr and CComQIPtr instances
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procedura: creare e usare istanze CComPtr e CComQIPtr
 
 Nella programmazione Windows classica le librerie sono spesso implementate come oggetti COM (o, più precisamente, come server COM). Molti componenti del sistema operativo Windows sono implementati come server COM e molti autori forniscono librerie in questa forma. Per informazioni sui fondamenti di COM, vedere [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
 
@@ -23,7 +23,7 @@ L'esempio seguente illustra come usare `CComPtr` per creare un'istanza di un ogg
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` and its relatives are part of the ATL and are defined in \<atlcomcli.h>. `_com_ptr_t` is declared in \<comip.h>. Il compilatore crea specializzazioni di `_com_ptr_t` quando genera classi wrapper per le librerie dei tipi.
+`CComPtr` e i relativi parenti fanno parte di ATL e sono definiti in \<Atlcomcli. h >. `_com_ptr_t` viene dichiarata nel > di \<comip. h. Il compilatore crea specializzazioni di `_com_ptr_t` quando genera classi wrapper per le librerie dei tipi.
 
 ## <a name="example"></a>Esempio
 

@@ -15,15 +15,15 @@ ms.locfileid: "74398417"
 ---
 # <a name="err2"></a>.ERR2
 
-[.ERR](../../assembler/masm/dot-err.md) block evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE.**
+[. ](../../assembler/masm/dot-err.md)Il blocco Err è stato valutato per ogni assembly pass if **: SETIF2** è **true.**
 
 ## <a name="syntax"></a>Sintassi
 
-> **.ERR2** ⟦*message*⟧
+> **. ERR2** ⟦*Message*⟧
 
 ## <a name="remarks"></a>Note
 
-For more information about 2-pass behavior in MASM 5.1 vs MASM 6.1, see [IF1 and IF2](if2.md).
+Per ulteriori informazioni sul comportamento di 2 passaggi in MASM 5,1 e MASM 6,1, vedere [IF1 e IF2](if2.md).
 
 ## <a name="see-also"></a>Vedere anche
 

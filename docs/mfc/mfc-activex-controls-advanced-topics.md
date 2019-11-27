@@ -43,7 +43,7 @@ Poiché le classi di controlli ActiveX fanno parte della libreria di classi, è 
 Per una panoramica generale delle classi di database MFC, vedere [classi di database MFC (DAO e ODBC)](../data/mfc-database-classes-odbc-and-dao.md). In questo articolo vengono presentate le classi ODBC MFC e le classi DAO MFC e vengono fornite informazioni dettagliate su entrambi.
 
 > [!NOTE]
-> DAO è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta. Gli ambienti C++ visivi e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare i [Modelli OLE DB](../data/oledb/ole-db-programming.md) oppure [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
+> DAO è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta. Gli ambienti C++ visivi e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare [OLE DB modelli](../data/oledb/ole-db-programming.md) o [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>Implementazione di una proprietà con parametri
 
@@ -79,7 +79,7 @@ Nella procedura seguente viene aggiunta una proprietà con parametri, denominata
 
 10. Aggiungere un secondo parametro denominato *Column* (Type *short*).
 
-11. Scegliere **Fine**.
+11. Fare clic su **Fine**.
 
 ### <a name="changes-made-by-the-add-property-wizard"></a>Modifiche apportate dall'aggiunta guidata proprietà
 
@@ -107,11 +107,11 @@ Per indicare il tipo di errore che si è verificato, il controllo deve passare u
 
 ### <a name="activex-control-error-codes"></a>Codici di errore del controllo ActiveX
 
-|Error|description|
+|Errore|Descrizione|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|Chiamata di funzione non valida|
 |CTL_E_OVERFLOW|Overflow|
-|CTL_E_OUTOFMEMORY|Memoria insufficiente|
+|CTL_E_OUTOFMEMORY|Memoria esaurita|
 |CTL_E_DIVISIONBYZERO|Divisione per zero|
 |CTL_E_OUTOFSTRINGSPACE|Spazio di stringa insufficiente|
 |CTL_E_OUTOFSTACKSPACE|Spazio dello stack insufficiente|
@@ -150,7 +150,7 @@ Per indicare il tipo di errore che si è verificato, il controllo deve passare u
 |CTL_E_SEARCHTEXTNOTFOUND|Impossibile trovare il testo cercato|
 |CTL_E_REPLACEMENTSTOOLONG|Sostituzioni troppo lunghe|
 
-Se necessario, usare la macro CUSTOM_CTL_SCODE per definire un codice di errore personalizzato per una condizione non coperta da uno dei codici standard. Il parametro per questa macro deve essere un numero intero compreso tra 1000 e 32767 inclusi. Di seguito è riportato un esempio:
+Se necessario, usare la macro CUSTOM_CTL_SCODE per definire un codice di errore personalizzato per una condizione non coperta da uno dei codici standard. Il parametro per questa macro deve essere un numero intero compreso tra 1000 e 32767 inclusi. Ad esempio:
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
@@ -174,7 +174,7 @@ Per ulteriori informazioni sulla gestione delle interfacce della tastiera per un
 
 - Utilizzando la procedura guidata Aggiungi variabile membro, selezionare **variabile di controllo** e quindi selezionare l'ID del controllo. Immettere un nome di variabile membro e selezionare la classe wrapper del controllo come **tipo di controllo**.
 
-     oppure
+     -oppure-
 
 - Dichiarare una variabile locale e una sottoclasse come elemento della finestra di dialogo. Inserire codice simile al seguente (`CMyCtrl` è la classe wrapper, IDC_MYCTRL1 è l'ID del controllo):
 

@@ -15,7 +15,7 @@ ms.locfileid: "74399143"
 ---
 # <a name="datasize"></a>\@DataSize
 
-0 for **TINY**, **SMALL**, **MEDIUM**, and **FLAT** models, 1 for **COMPACT** and **LARGE** models, and 2 for **HUGE** model (numeric equate).
+0 per i modelli **small, Small**, **medium**e **Flat** , 1 per i modelli **Compact** e **large** e 2 per un modello **molto** **grande (** equivalenti numerici).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,4 +23,4 @@ ms.locfileid: "74399143"
 
 ## <a name="see-also"></a>Vedere anche
 
-[Symbols reference](symbols-reference.md)
+[Riferimento ai simboli](symbols-reference.md)

@@ -15,13 +15,13 @@ ms.locfileid: "74397748"
 ---
 # <a name="dw"></a>DW
 
-Allocates and optionally initializes a word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal. **DW** is a synonym of [WORD](../../assembler/masm/word.md).
+Alloca ed eventualmente Inizializza una parola (2 byte) di archiviazione per ogni *inizializzatore*. Può essere usato anche come identificatore di tipo in qualsiasi punto in cui un tipo è valido. **DW** è un sinonimo di [Word](../../assembler/masm/word.md).
 
 ## <a name="syntax"></a>Sintassi
 
-> ⟦*name*⟧ **DW** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*nome*⟧ **DW** *inizializzatore* ⟦ __,__ *inizializzatore* ... ⟧
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[Riferimento alle direttive](../../assembler/masm/directives-reference.md)\
 [SWORD](../../assembler/masm/sword.md)

@@ -15,28 +15,28 @@ ms.locfileid: "74395177"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-Enables and disables features of the assembler.
+Abilita e Disabilita le funzionalità dell'assembler.
 
 ## <a name="syntax"></a>Sintassi
 
-> **OPTION** *optionlist*
+> **Option (** *opzione)*
 
 ## <a name="remarks"></a>Note
 
-Available options include:
+Le opzioni disponibili includono:
 
 |||||
 |-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATOR**|
-|**NOEMULATOR**|**EPILOGUE**|**EXPR16**|**EXPR32**|
-|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
+|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATORE**|
+|**Noemulator**|**EPILOGO**|**EXPR16**|**EXPR32**|
+|**LINGUAGGIO**|**LJMP**|**NOLJMP**|**M510**|
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**PROLOGUE**|**READONLY**|**NOREADONLY**|
-|**SCOPED**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
+|**PROC**|**Prologo**|**READONLY**|**Noreadonly**|
+|**AMBITO**|**Senza ambito**|**SEGMENT**|**SETIF2**.|
 
-The syntax for LANGUAGE is **OPTION LANGUAGE:** <em>x</em>, where *x* is one of C, SYSCALL, STDCALL, PASCAL, FORTRAN, or BASIC.  SYSCALL, PASCAL, FORTRAN, and BASIC are not supported with used with [.MODEL](../../assembler/masm/dot-model.md) FLAT.
+La sintassi per LANGUAGE è **Option Language:** <em>x</em>, dove *x* è uno dei seguenti: C, syscall, stdcall, Pascal, FORTRAN o Basic.  SYSCALL, PASCAL, FORTRAN e BASIC non sono supportati con usato con [. MODELLO](../../assembler/masm/dot-model.md) flat.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

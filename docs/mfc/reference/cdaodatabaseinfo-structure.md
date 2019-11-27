@@ -94,7 +94,7 @@ Il numero di secondi di attesa del motore di database di Microsoft Jet prima che
 *m_strConnect*<br/>
 Fornisce informazioni sull'origine di un database aperto. Per informazioni sulle stringhe di connessione e per informazioni sul recupero diretto del valore di questa proprietà, vedere la funzione membro [CDaoDatabase:: GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) . Per ulteriori informazioni, vedere l'argomento "Connect Property" nella Guida di DAO.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Il database è un oggetto DAO sottostante un oggetto MFC della classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). I riferimenti a primary, Secondary e all sopra indicati indicano il modo in cui le informazioni vengono restituite dalla funzione membro [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) .
 
@@ -102,7 +102,7 @@ Le informazioni recuperate dalla funzione membro [CDaoWorkspace:: GetDatabaseInf
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdao.h
+**Intestazione:** AFXDAO. h
 
 ## <a name="see-also"></a>Vedere anche
 

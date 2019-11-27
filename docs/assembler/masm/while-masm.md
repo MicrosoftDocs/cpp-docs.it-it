@@ -15,14 +15,14 @@ ms.locfileid: "74392815"
 ---
 # <a name="while-masm"></a>WHILE (MASM)
 
-Repeats assembly of block *statements* as long as *expression* remains true.
+Ripete l'assembly di *istruzioni* Block purché l' *espressione* rimanga true.
 
 ## <a name="syntax"></a>Sintassi
 
-> **WHILE** *expression*\
-> *statements*\
+> *Espressione*\
+> \ di *istruzioni*
 > **ENDM**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

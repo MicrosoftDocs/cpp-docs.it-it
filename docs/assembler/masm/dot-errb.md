@@ -15,11 +15,11 @@ ms.locfileid: "74398400"
 ---
 # <a name="errb"></a>.ERRB
 
-Generates an error if *textitem* is blank.
+Genera un errore se *textItem* è vuoto.
 
 ## <a name="syntax"></a>Sintassi
 
-> **.ERRB** *textitem* ⟦ __,__ *message*⟧
+> **. ERRB** *textItem* ⟦ __,__ *Message*⟧
 
 ## <a name="see-also"></a>Vedere anche
 

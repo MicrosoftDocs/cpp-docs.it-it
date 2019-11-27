@@ -17,12 +17,12 @@ ms.locfileid: "74395472"
 ---
 # <a name="operator-this"></a>Operatore THIS
 
-Returns an operand of specified *type* whose offset and segment values are equal to the current location counter value.
+Restituisce un operando di *tipo* specificato i cui valori di offset e segmento sono uguali al valore del contatore di posizione corrente.
 
 ## <a name="syntax"></a>Sintassi
 
-> **THIS** *type*
+> **Questo** *tipo*
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operators reference](operators-reference.md)
+[Guida di riferimento agli operatori](operators-reference.md)

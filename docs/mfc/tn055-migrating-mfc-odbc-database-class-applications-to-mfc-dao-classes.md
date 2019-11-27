@@ -22,7 +22,7 @@ ms.locfileid: "74305371"
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: migrazione di applicazioni classi di database ODBC MFC a classi DAO MFC
 
 > [!NOTE]
-> DAO viene usato con i database di Access ed è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta. Gli ambienti C++ visivi e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare i [Modelli OLE DB](../data/oledb/ole-db-templates.md) oppure [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
+> DAO viene usato con i database di Access ed è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta. Gli ambienti C++ visivi e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare [OLE DB modelli](../data/oledb/ole-db-templates.md) o [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
 
 ## <a name="overview"></a>Panoramica
 
@@ -87,9 +87,9 @@ Le modifiche essenziali alle funzionalità che possono influenzare l'applicazion
 
    Con le classi ODBC, in MFC è necessario definire queste opzioni tramite macro o tipi enumerati.
 
-   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. Ad esempio, si utilizza **snapshot** quando si specifica il tipo `CRecordset` in ODBC ma **DB_OPEN_SNAPSHOT** quando si specifica il tipo di `CDaoRecordset`.
+   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. È ad esempio possibile utilizzare lo **snapshot** quando si specifica il tipo di `CRecordset` in ODBC, ma **DB_OPEN_SNAPSHOT** quando si specifica il tipo di `CDaoRecordset`.
 
-- Il tipo predefinito del recordset per `CRecordset` è **snapshot** mentre il tipo predefinito del recordset per `CDaoRecordset` è **dynaset** (vedere la nota riportata di seguito per un problema aggiuntivo sugli snapshot della classe ODBC).
+- Il tipo di recordset predefinito per `CRecordset` è **snapshot** mentre il tipo di recordset predefinito per `CDaoRecordset` è **Dynaset** (vedere la nota di seguito per un ulteriore problema relativo agli snapshot della classe ODBC).
 
 - La classe ODBC `CRecordset` include un'opzione per creare un recordset di tipo forward-only. Nella classe `CDaoRecordset`, forward-only non è un tipo di recordset, ma una proprietà (o un opzione) di determinati tipi di recordset.
 

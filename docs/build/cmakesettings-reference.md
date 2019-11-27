@@ -288,7 +288,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opzione|description|
+|Opzione|Descrizione|
 |--------------|------------|
 | --versione  | versione ninja per la stampa ("1.7.1")|
 |   -C DIR   | passa a DIR prima di eseguire qualunque altra operazione|

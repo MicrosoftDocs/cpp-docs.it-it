@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398450"
 ---
-# <a name="endw-32-bit-masm"></a>.ENDW (32-bit MASM)
+# <a name="endw-32-bit-masm"></a>. ENDW (MASM a 32 bit)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,7 +21,7 @@ ms.locfileid: "74398450"
 
 ## <a name="remarks"></a>Note
 
-(32-bit MASM only.) See [.WHILE](../../assembler/masm/dot-while.md).
+(solo MASM a 32 bit). Vedere [. MENTRE](../../assembler/masm/dot-while.md).
 
 ## <a name="see-also"></a>Vedere anche
 

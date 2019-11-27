@@ -1,29 +1,29 @@
 ---
-title: Compilatore avviso (livello 3) C4995
+title: Avviso del compilatore (livello 3) C4995
 ms.date: 11/04/2016
 f1_keywords:
 - C4995
 helpviewer_keywords:
 - C4995
 ms.assetid: c6b61755-4730-4947-ad4d-d1c2bc82585a
-ms.openlocfilehash: 54bc8931b5eaa3bbb5053e5c21aa2aaaa73126fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c31023fbcb36c53a7d0f5138c280ff12c4d495e
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401514"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541170"
 ---
-# <a name="compiler-warning-level-3-c4995"></a>Compilatore avviso (livello 3) C4995
+# <a name="compiler-warning-level-3-c4995"></a>Avviso del compilatore (livello 3) C4995
 
-'function': nome contrassegnato come deprecato #pragma
+' Function ': il nome è stato contrassegnato come #pragma deprecato
 
-Il compilatore ha rilevato una funzione che è stata contrassegnata con il pragma [deprecato](../../preprocessor/deprecated-c-cpp.md). È possibile che tale funzione non sia più supportata in una versione futura. È possibile disattivare questo avviso con il [avviso](../../preprocessor/warning.md) pragma (ad esempio riportato di seguito).
+Il compilatore ha rilevato una funzione contrassegnata con pragma [deprecated](../../preprocessor/deprecated-c-cpp.md). È possibile che tale funzione non sia più supportata in una versione futura. È possibile disattivare questo avviso con il pragma [warning](../../preprocessor/warning.md) (esempio riportato di seguito).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4995:
+L'esempio seguente genera l'C4995:
 
-```
+```cpp
 // C4995.cpp
 // compile with: /W3
 #include <stdio.h>

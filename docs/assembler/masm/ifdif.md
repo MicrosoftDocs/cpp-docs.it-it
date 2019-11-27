@@ -17,7 +17,7 @@ ms.locfileid: "74397402"
 ---
 # <a name="ifdif-ifdifi"></a>IFDIF, IFDIFI
 
-Grants assembly if the text items are different.
+Concede l'assembly se gli elementi di testo sono diversi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,8 +26,8 @@ Grants assembly if the text items are different.
 
 ## <a name="remarks"></a>Note
 
-If **IFDIFI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Se viene specificato **IFDIFI** , il confronto non fa distinzione tra maiuscole e minuscole. Per [la](../../assembler/masm/if-masm.md) sintassi completa, vedere.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Guida di riferimento alle direttive](../../assembler/masm/directives-reference.md)

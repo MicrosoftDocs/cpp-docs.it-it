@@ -15,15 +15,15 @@ ms.locfileid: "74398853"
 ---
 # <a name="catstr"></a>CATSTR
 
-Concatenates text items.
+Concatena gli elementi di testo.
 
 ## <a name="syntax"></a>Sintassi
 
-> *name* **CATSTR** ⟦*textitem1* ⟦ __,__ *textitem2* ...⟧⟧
+> *nome* **catstr (** ⟦*textitem1* ⟦ __,__ *textitem2* ... ⟧⟧
 
 ## <a name="remarks"></a>Note
 
-Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function. **CATSTR** is a synonym for [TEXTEQU](textequ.md).
+Ogni elemento di testo può essere una stringa letterale, una costante preceduta da un **%** o la stringa restituita da una funzione macro. **Catstr (** è un sinonimo di [TEXTEQU](textequ.md).
 
 ## <a name="see-also"></a>Vedere anche
 

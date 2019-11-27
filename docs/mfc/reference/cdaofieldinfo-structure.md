@@ -80,7 +80,7 @@ Valore che indica il tipo di dati del campo. Per informazioni dettagliate, veder
 *m_lSize*<br/>
 Valore che indica la dimensione massima, in byte, di un oggetto campo DAO contenente testo o la dimensione fissa di un oggetto campo che contiene valori di testo o numerici. Per informazioni dettagliate, vedere l'argomento relativo alla proprietà Size nella Guida di DAO. Size può essere uno dei valori seguenti:
 
-|Digitare|Dimensioni (byte)|description|
+|Type|Dimensione (byte)|Descrizione|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 byte|Sì/No (uguale a true/false)|
 |`dbByte`|1|Byte|
@@ -142,7 +142,7 @@ Valore che specifica il testo del messaggio visualizzato dall'applicazione se il
 *m_strDefaultValue*<br/>
 Valore predefinito di un oggetto campo DAO. Quando viene creato un nuovo record, l'impostazione della proprietà DefaultValue viene immessa automaticamente come valore per il campo. Per informazioni dettagliate, vedere l'argomento "proprietà DefaultValue" nella Guida di DAO. È possibile impostare questa proprietà per un oggetto TableDef con [CDaoTableDef:: CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 I riferimenti a primary, Secondary e all sopra indicati indicano il modo in cui le informazioni vengono restituite dalla funzione membro `GetFieldInfo` nelle classi [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getfieldinfo), [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)e [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo).
 
@@ -154,11 +154,11 @@ Le informazioni recuperate dalla funzione membro `GetFieldInfo` (della classe ch
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdao.h
+**Intestazione:** AFXDAO. h
 
 ## <a name="see-also"></a>Vedere anche
 
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef:: GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset:: GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
-[CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
+[CDaoQueryDef:: GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)

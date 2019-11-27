@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Valori
 
-|`Name`|description|
+|`Name`|Descrizione|
 |------------|-----------------|
 |`none`|Eseguire il comportamento predefinito per l'operazione.|
 |`skip_existing`|Non copiare se il file esiste già, non segnalare un errore.|
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Valori
 
-|nome|description|
+|Name|Descrizione|
 |----------|-----------------|
 |`none`|Comportamento predefinito: ignorare i collegamenti simbolici a directory. L'autorizzazione negata è un errore.|
 |`follow_directory_symlink`|Considerare i collegamenti simbolici a directory come directory effettive.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valori
 
-|nome|Value|description|
+|Name|Valore|Descrizione|
 |----------|-----------|-----------------|
 |`not_found`|-1|Rappresenta un file che non esiste.|
 |`none`|0|Rappresenta un file che non ha alcun attributo di tipo. (non supportato).|

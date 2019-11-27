@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
-ms.openlocfilehash: 6d61191c4a7ed950d979158ccdfa3a390439b019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6387f58430098e49e7add25e8915bf6b181634e9
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401137"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541836"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>Avviso del compilatore (livello 4) C4211
 
-utilizzata estensione non standard: ridefinito extern in statico
+utilizzata estensione non standard: ridefinito extern in static
 
-Con le estensioni Microsoft predefinito (/Ze), è possibile ridefinire un `extern` identificatore **statici**.
+Con le estensioni Microsoft predefinite (/Ze), è possibile ridefinire un identificatore `extern` come **static**.
 
 ## <a name="example"></a>Esempio
 
-```
+```c
 // C4211.c
 // compile with: /W4
 extern int i;
@@ -32,4 +32,4 @@ int main()
 }
 ```
 
-Tali ridefinizioni non sono validi in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Tali ridefinizioni non sono valide in compatibilità ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

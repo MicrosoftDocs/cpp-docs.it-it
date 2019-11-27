@@ -47,7 +47,7 @@ Se si sceglie di modificare manualmente un file con estensione vcxproj, tenere p
 
 È possibile ispezionare il contenuto di un file con estensione vcxproj usando qualsiasi editor di testo o XML. Per visualizzare il file in Visual Studio, fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni, scegliere **Scarica progetto** e quindi **Modifica Foo.vcxproj**.
 
-Il primo aspetto da notare è che gli elementi di primo livello sono visualizzati in un ordine particolare. Di seguito è riportato un esempio:
+Il primo aspetto da notare è che gli elementi di primo livello sono visualizzati in un ordine particolare. Ad esempio:
 
 - La maggior parte dei gruppi di proprietà e di definizioni elementi viene visualizzata dopo l'importazione per Microsoft.Cpp.Default.props.
 
@@ -213,7 +213,7 @@ Contiene le definizioni degli elementi che devono seguire le stesse regole di co
 
 Contiene gli elementi (file di origine e altro) del progetto. Per gli elementi del progetto, ovvero i tipi di elemento considerati come elementi del progetto dalle definizioni delle regole, non sono supportate condizioni.
 
-I metadata devono includere le condizioni di configurazione per ogni configurazione, anche se sono le stesse. Di seguito è riportato un esempio:
+I metadata devono includere le condizioni di configurazione per ogni configurazione, anche se sono le stesse. Ad esempio:
 
 ```xml
 <ItemGroup>

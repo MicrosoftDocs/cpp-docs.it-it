@@ -15,7 +15,7 @@ ms.locfileid: "74397985"
 ---
 # <a name="sall"></a>.SALL
 
-See [.NOLISTMACRO](../../assembler/masm/dot-nolistmacro.md).
+Vedere [. NOLISTMACRO](../../assembler/masm/dot-nolistmacro.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,4 +23,4 @@ See [.NOLISTMACRO](../../assembler/masm/dot-nolistmacro.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

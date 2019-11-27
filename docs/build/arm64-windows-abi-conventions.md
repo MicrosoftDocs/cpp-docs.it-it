@@ -71,7 +71,7 @@ Allineamento del layout predefinito per gli elementi globali e statici:
 
 L'architettura AArch64 supporta i registri di 32 Integer:
 
-| Registrazione | Volatile? | Ruolo |
+| Registrazione | Volatile? | Role |
 | - | - | - |
 | X0 | Volatile | Registro parametri/Scratch 1, registro risultati |
 | x1-x7 | Volatile | Registro parametri/Scratch 2-8 |
@@ -94,7 +94,7 @@ Il puntatore a frame (x29) è necessario per la compatibilità con Fast Stack Wa
 
 L'architettura AArch64 supporta anche i registri a virgola mobile/SIMD 32, riepilogati di seguito:
 
-| Registrazione | Volatile? | Ruolo |
+| Registrazione | Volatile? | Role |
 | - | - | - |
 | V0 | Volatile | Registro parametri/Scratch 1, registro risultati |
 | V1-V7 | Volatile | Registri parametri/Scratch 2-8 |
@@ -105,7 +105,7 @@ L'architettura AArch64 supporta anche i registri a virgola mobile/SIMD 32, riepi
 
 Il registro di controllo a virgola mobile (FPCR) ha determinati requisiti per i vari campi al suo interno:
 
-| BITS | Significato | Volatile? | Ruolo |
+| BITS | Significato | Volatile? | Role |
 | - | - | - | - |
 | 26 | AHP | Non volatile | Controllo alternativo a metà precisione. |
 | 25 | DN | Non volatile | Controllo modalità NaN predefinito. |
@@ -117,7 +117,7 @@ Il registro di controllo a virgola mobile (FPCR) ha determinati requisiti per i 
 
 Analogamente a AArch32, la specifica AArch64 fornisce tre registri "ID thread" controllati dal sistema:
 
-| Registrazione | Ruolo |
+| Registrazione | Role |
 | - | - |
 | TPIDR_EL0 | Riservato. |
 | TPIDRRO_EL0 | Contiene il numero di CPU per il processore corrente. |
