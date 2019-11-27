@@ -17,7 +17,7 @@ ms.locfileid: "74541962"
 
 utilizzata estensione non standard. 'variabile': variabile di controllo ciclo dichiarata nel ciclo for e utilizzata all'esterno dell'ambito del ciclo for
 
-Quando si esegue la compilazione con [/ze](../../build/reference/za-ze-disable-language-extensions.md) e **/Zc: forScope-** , una variabile dichiarata in un ciclo [for](../../cpp/for-statement-cpp.md) è stata usata dopo l'ambito del ciclo **for**.
+Quando si esegue la compilazione con [/ze](../../build/reference/za-ze-disable-language-extensions.md) e **/Zc: forScope-**, una variabile dichiarata in un ciclo [for](../../cpp/for-statement-cpp.md) è stata usata dopo l'ambito del ciclo **for**.
 
 Vedere [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) per informazioni su come specificare il comportamento standard nei cicli **for** con **/ze**.
 

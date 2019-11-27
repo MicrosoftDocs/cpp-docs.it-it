@@ -103,19 +103,19 @@ Windows Runtime C++ libreria di modelli supporta la funzionalità com necessaria
 
 - COM+
 
-## <a name="concepts"></a>Concetti
+## <a name="concepts"></a>Concetti relativi a
 
 Windows Runtime C++ libreria di modelli fornisce tipi che rappresentano alcuni concetti di base. Nelle seguenti sezioni vengono descritti questi tipi.
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) è un tipo di *puntatore intelligente* che rappresenta l'interfaccia specificata dal parametro di modello. Utilizzare `ComPtr` per dichiarare una variabile che può accedere ai membri di un oggetto derivato dall'interfaccia. `ComPtr` gestisce automaticamente un conteggio dei riferimenti per il puntatore di interfaccia sottostante e rilascia l'interfaccia quando il conteggio dei riferimenti va a zero.
+[ComPtr](comptr-class.md) è un tipo di *puntatore intelligente* che rappresenta l'interfaccia specificata dal parametro di modello. Utilizzare `ComPtr` per dichiarare una variabile che può accedere ai membri di un oggetto derivato dall'interfaccia. `ComPtr` mantiene automaticamente un conteggio dei riferimenti per un puntatore di interfaccia sottostante e rilascia l'interfaccia quando il conteggio dei riferimenti va a zero.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
 [RuntimeClass](runtimeclass-class.md) rappresenta una classe di cui è stata creata un'istanza che eredita un set di interfacce specificate. Un oggetto `RuntimeClass` può fornire una combinazione di supporto per una o più interfacce Windows Runtime COM o un riferimento debole a un componente.
 
-### <a name="module"></a>Modulo
+### <a name="module"></a>Module
 
 [Modulo](module-class.md) rappresenta una raccolta di oggetti correlati. Un oggetto `Module` gestisce le class factory, che creano oggetti, e la registrazione, che consente alle altre applicazioni di utilizzare un oggetto.
 
@@ -133,7 +133,7 @@ La funzione [Callback](callback-function-wrl.md) crea un oggetto la cui funzione
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) rappresenta un oggetto di gestore del marshalling con modello di threading Free. `FtmBase` crea una tabella di interfaccia globale (GIT) e consente di gestire il marshalling e gli oggetti proxy.
+[FtmBase](ftmbase-class.md) rappresenta un oggetto di gestore del marshalling con modello di threading Free. `FtmBase` crea una tabella globale (GIT) dell'interfaccia e aiuta a gestire il marshalling e gli oggetti proxy.
 
 ### <a name="weakref"></a>WeakRef
 
@@ -146,6 +146,6 @@ Un oggetto `WeakRef` in genere rappresenta un oggetto la cui esistenza è contro
 |||
 |-|-|
 |[API chiave per categoria](key-wrl-apis-by-category.md)|Evidenzia i tipi, C++ le funzioni e le macro principali della libreria di modelli di Windows Runtime.|
-|[Riferimento](wrl-reference.md)|Contiene informazioni di riferimento per la C++ libreria di modelli Windows Runtime.|
+|[Reference](wrl-reference.md)|Contiene informazioni di riferimento per la C++ libreria di modelli Windows Runtime.|
 |[Riferimento C++rapido/CX)](../../cppcx/quick-reference-c-cx.md)|Descrive brevemente le C++funzionalità di/CX che supportano il Windows Runtime.|
 |[Uso di componenti Windows Runtime in VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Viene illustrato come utilizzare C++/CX per creare un componente Windows Runtime di base.|
