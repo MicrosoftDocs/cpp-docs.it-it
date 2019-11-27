@@ -17,12 +17,12 @@ ms.locfileid: "74396923"
 ---
 # <a name="operator-gt"></a>Operatore GT
 
-Returns true (-1) if *expression1* is greater than *expression2*, or returns false (0) if it is not.
+Restituisce true (-1) se *expression1* è maggiore di *expression2*oppure restituisce false (0) in caso contrario.
 
 ## <a name="syntax"></a>Sintassi
 
-> *expression1* **GT** *expression2*
+> *expression1* **gt** *expression2*
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operators reference](operators-reference.md)
+[Guida di riferimento agli operatori](operators-reference.md)

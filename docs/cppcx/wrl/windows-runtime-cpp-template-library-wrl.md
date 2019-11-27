@@ -1,16 +1,16 @@
 ---
-title: Libreria di modelli di Windows Runtime C++ (WRL)
+title: Libreria modelli C++ per Windows Runtime (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274664"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541195"
 ---
-# <a name="windows-runtime-c-template-library-wrl"></a>Libreria di modelli di Windows Runtime C++ (WRL)
+# <a name="windows-runtime-c-template-library-wrl"></a>Libreria modelli C++ per Windows Runtime (WRL)
 
 La libreria modelli C++ per Windows Runtime (WRL) è una libreria modello che offre un approccio di base per creare e usare componenti Windows Runtime.
 
@@ -36,26 +36,26 @@ Il Windows Runtime C++ libreria di modelli C++e/CX offrono diversi vantaggi. Di 
 
 - Lo scopo e la progettazione della libreria C++ di modelli Windows Runtime sono ispirati dalla Active Template Library (ATL), ovvero un set di classi basate su C++ modello che semplificano la programmazione di oggetti com. Poiché Windows Runtime C++ libreria di modelli utilizza C++ standard per eseguire il wrapping del Windows Runtime, è possibile trasferire più facilmente e interagire con molti componenti COM esistenti scritti in ATL nella Windows Runtime. Se si conosce già ATL, è possibile che Windows Runtime C++ programmazione della libreria di modelli sia più semplice.
 
-## <a name="getting-started"></a>Introduzione
+## <a name="getting-started"></a>Guida introduttiva
 
 Di seguito sono riportate alcune risorse che consentono di lavorare immediatamente C++ con la libreria di modelli Windows Runtime.
 
 [Libreria di Windows Runtime (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 In questo video di Channel 9 sono disponibili altre informazioni sul modo C++ in cui la libreria di modelli di Windows Runtime consente di scrivere piattaforma UWP (Universal Windows Platform) app (UWP) e come creare e utilizzare componenti di Windows Runtime.
 
-[Procedura: Attivare e usare un componente Windows Runtime](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
+[Procedura: attivare e utilizzare un componente Windows Runtime](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Viene illustrato come utilizzare la libreria C++ di modelli Windows Runtime per inizializzare il Windows Runtime e attivare e utilizzare un componente Windows Runtime.
 
-[Procedura: Completare le operazioni asincrone](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
+[Procedura: completare operazioni asincrone](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Viene illustrato come utilizzare la libreria C++ di modelli Windows Runtime per avviare le operazioni asincrone ed eseguire il lavoro quando le operazioni vengono completate.
 
-[Procedura: Gestisci eventi](how-to-handle-events-using-wrl.md)<br/>
+[Procedura: gestire eventi](how-to-handle-events-using-wrl.md)<br/>
 Viene illustrato come utilizzare la libreria C++ di modelli Windows Runtime per sottoscrivere e gestire gli eventi di un oggetto Windows Runtime.
 
-[Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
+[Procedura dettagliata: creazione di un'app UWP tramite WRL e Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Informazioni su come creare un'app UWP che usa [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
 
-[Procedura: Creazione di un componente COM classico](how-to-create-a-classic-com-component-using-wrl.md)<br/>
+[Procedura: creare un componente COM classico](how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Viene illustrato come utilizzare la libreria C++ di modelli Windows Runtime per creare un componente COM di base e un metodo di base per registrare e utilizzare il componente COM da un'applicazione desktop.
 
 [Procedura: Creare direttamente un'istanza dei componenti WRL](how-to-instantiate-wrl-components-directly.md)<br/>
@@ -64,16 +64,16 @@ Informazioni sull'utilizzo delle funzioni [Microsoft::WRL::Details::MakeAndIniti
 [Procedura: Usare winmdidl.exe e midlrt.exe per creare file con estensione h dai metadati di Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Viene illustrato come utilizzare i componenti personalizzati di Windows Runtime da WRL creando un file IDL dai metadati di .winmd.
 
-[Procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
+[Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Viene illustrato come utilizzare le interfacce [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) insieme alle attività per inviare richieste HTTP GET e post a un servizio Web in un'app UWP.
 
 [Esempio di utilità di ottimizzazione viaggi di Bing mappe](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
-Usa la `HttpRequest` classe definita in [procedura dettagliata: Connessione tramite attività e richieste](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) http XML nel contesto di un'app UWP completa.
+Usa la classe `HttpRequest` definita in [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) nel contesto di un'app UWP completa.
 
 [Creazione di un componente Windows Runtime DLL C++ con Sample](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Viene illustrato come utilizzare la libreria C++ di modelli Windows Runtime per creare un componente dll in-process e utilizzarlo C++da/CX, JavaScript e C#.
 
-[Esempio di gioco Marble Maze DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[Esempio di gioco Marble Maze DirectX](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Viene illustrato come utilizzare la libreria C++ di modelli Windows Runtime per gestire la durata di componenti com come DirectX e Media Foundation nel contesto di un gioco 3D completo.
 
 [Esempio di invio di notifiche di tipo avviso popup da app desktop](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
@@ -109,11 +109,11 @@ Windows Runtime C++ libreria di modelli fornisce tipi che rappresentano alcuni c
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) è un tipo di *puntatore intelligente* che rappresenta l'interfaccia specificata dal parametro di modello. Utilizzare `ComPtr` per dichiarare una variabile che può accedere ai membri di un oggetto derivato dall'interfaccia. `ComPtr` mantiene automaticamente un conteggio dei riferimenti per un puntatore di interfaccia sottostante e rilascia l'interfaccia quando il conteggio dei riferimenti va a zero.
+[ComPtr](comptr-class.md) è un tipo di *puntatore intelligente* che rappresenta l'interfaccia specificata dal parametro di modello. Utilizzare `ComPtr` per dichiarare una variabile che può accedere ai membri di un oggetto derivato dall'interfaccia. `ComPtr` gestisce automaticamente un conteggio dei riferimenti per il puntatore di interfaccia sottostante e rilascia l'interfaccia quando il conteggio dei riferimenti va a zero.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](runtimeclass-class.md) rappresenta una classe di cui è stata creata un'istanza che eredita un set di interfacce specificate. Un `RuntimeClass` oggetto può fornire una combinazione di supporto per una o più Windows Runtime interfacce com o un riferimento debole a un componente.
+[RuntimeClass](runtimeclass-class.md) rappresenta una classe di cui è stata creata un'istanza che eredita un set di interfacce specificate. Un oggetto `RuntimeClass` può fornire una combinazione di supporto per una o più interfacce Windows Runtime COM o un riferimento debole a un componente.
 
 ### <a name="module"></a>Modulo
 
@@ -133,11 +133,11 @@ La funzione [Callback](callback-function-wrl.md) crea un oggetto la cui funzione
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) rappresenta un oggetto di gestore del marshalling con modello di threading Free. `FtmBase` crea una tabella globale (GIT) dell'interfaccia e aiuta a gestire il marshalling e gli oggetti proxy.
+[FtmBase](ftmbase-class.md) rappresenta un oggetto di gestore del marshalling con modello di threading Free. `FtmBase` crea una tabella di interfaccia globale (GIT) e consente di gestire il marshalling e gli oggetti proxy.
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) è un tipo di puntatore intelligente che rappresenta un *riferimento debole*che fa riferimento a un oggetto che potrebbe essere accessibile o meno. Un `WeakRef` oggetto può essere usato solo da Windows Runtime e non da com classico.
+[WeakRef](weakref-class.md) è un tipo di puntatore intelligente che rappresenta un *riferimento debole*che fa riferimento a un oggetto che potrebbe essere accessibile o meno. Un oggetto `WeakRef` può essere usato solo da Windows Runtime e non da COM classico.
 
 Un oggetto `WeakRef` in genere rappresenta un oggetto la cui esistenza è controllata da un thread o da un'applicazione esterna. Ad esempio, un oggetto `WeakRef` può fare riferimento a un oggetto file. Quando il file viene aperto, `WeakRef` è valido e il file a cui si fa riferimento è accessibile. Ma quando il file viene chiuso, `WeakRef` non è valido e il file non è accessibile.
 

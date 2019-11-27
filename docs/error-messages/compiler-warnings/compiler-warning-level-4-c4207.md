@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4207
 ms.assetid: f4e09e3e-ac87-4489-8e3f-c8f76b82e721
-ms.openlocfilehash: 44f49705bf197d7a42b80e50983e47a4c0ce7bed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd18964f8969bc75967de435e2ca3099b12213e0
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401202"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541872"
 ---
 # <a name="compiler-warning-level-4-c4207"></a>Avviso del compilatore (livello 4) C4207
 
-utilizzata estensione non standard: forma inizializzatore estesa
+utilizzata estensione non standard: modulo inizializzatore esteso
 
-Con le estensioni Microsoft (/Ze), è possibile inizializzare una matrice non dimensionata di `char` usando una stringa all'interno delle parentesi graffe.
+Con le estensioni Microsoft (/Ze) è possibile inizializzare una matrice non dimensionata di `char` usando una stringa racchiusa tra parentesi graffe.
 
 ## <a name="example"></a>Esempio
 
-```
+```c
 // C4207.c
 // compile with: /W4
 char c[] = { 'a', 'b', "cdefg" }; // C4207
@@ -31,4 +31,4 @@ int main()
 }
 ```
 
-Tale inizializzazione non sono valide in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Tali inizializzazioni non sono valide in compatibilità ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

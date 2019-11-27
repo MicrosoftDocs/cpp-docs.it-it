@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447768"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541690"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Avviso del compilatore (livello 4) C4256
 
-'function': costruttore di classe con basi virtuali ha '...'; le chiamate potrebbero non essere compatibili con le versioni precedenti di Visual C++
+' Function ': il costruttore per la classe con basi virtuali ha '.. .'; le chiamate potrebbero non essere compatibili con le versioni precedenti di VisualC++
 
-Possibili incompatibilità.
+Possibile incompatibilità.
 
-Si prenda in considerazione il seguente esempio di codice. Se la definizione del costruttore S2::S2 (int i,...) è stato compilato con una versione di Microsoft C++ compilatore prima della versione 7, ma nell'esempio seguente viene compilato con la versione corrente, la chiamata al costruttore per S3 non funziona più correttamente a causa di una modifica di convenzione di chiamata speciale. Utilizzando Visual C++ 6.0, in entrambi i casi la chiamata non funziona comunque, a meno che non venga passato alcun parametro per i puntini di sospensione.
+Si consideri il codice di esempio seguente: Se la definizione del costruttore S2:: S2 (int i,...) è stata compilata utilizzando una versione del compilatore C++ Microsoft precedente alla versione 7, ma l'esempio seguente viene compilato utilizzando la versione corrente, la chiamata al costruttore per S3 non funzionerà correttamente a causa di una modifica speciale della convenzione di chiamata. Utilizzando Visual C++ 6.0, in entrambi i casi la chiamata non funziona comunque, a meno che non venga passato alcun parametro per i puntini di sospensione.
 
-Per risolvere il problema,
+Per correggere il problema,
 
 1. Non usare i puntini di sospensione in un costruttore.
 
-1. Assicurarsi che tutti i componenti del progetto vengono compilati con la versione corrente (incluse le eventuali librerie che definiscono o fare riferimento a questa classe), quindi disattivare l'avviso utilizzando il [avviso](../../preprocessor/warning.md) pragma.
+1. Verificare che tutti i componenti del progetto siano compilati con la versione corrente (incluse le librerie che possono definire o fare riferimento a questa classe), quindi disabilitare l'avviso utilizzando il pragma [warning](../../preprocessor/warning.md) .
 
-L'esempio seguente genera l'errore C4256:
+L'esempio seguente genera l'C4256:
 
-```
+```cpp
 // C4256.cpp
 // compile with: /W4
 // #pragma warning(disable : 4256)

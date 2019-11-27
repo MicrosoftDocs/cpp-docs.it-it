@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4823
 ms.assetid: 8a77560d-dcea-4cae-aebb-8ebf1b4cef85
-ms.openlocfilehash: 28d490c341c4d14c2e6c03e13007b5a8be423622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96877252b0b7699f5e4033f8e695f4d9016a6c9
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401540"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541272"
 ---
 # <a name="compiler-warning-level-3-c4823"></a>Avviso del compilatore (livello 3) C4823
 
-'function': i puntatori di blocco di rimozione ma viene utilizzata la semantica non è abilitata. È consigliabile usare /EHa.
+' Function ': USA puntatori di blocco ma la semantica di rimozione non è abilitata. Prendere in considerazione l'uso di/EHa
 
-Per sbloccare un oggetto nell'heap gestito a cui punta un puntatore di blocco dichiarato in ambito di un blocco, il compilatore simula il comportamento dei distruttori delle classi locali, "che fingono" il puntatore di blocco ha un distruttore che annulla il puntatore del mouse. Per abilitare una chiamata a un distruttore dopo la generazione di un'eccezione, è necessario abilitare la rimozione di oggetti, è possibile ripetere l'operazione usando [/EHsc](../../build/reference/eh-exception-handling-model.md).
+Per Rimuovi un oggetto nell'heap gestito a cui punta un puntatore di blocco dichiarato in un ambito di blocco, il compilatore simula il comportamento dei distruttori delle classi locali, "fingendo" il puntatore di blocco ha un distruttore che annulla il puntatore. Per abilitare una chiamata a un distruttore dopo che è stata generata un'eccezione, è necessario abilitare la rimozione dell'oggetto, che è possibile eseguire usando [/EHsc](../../build/reference/eh-exception-handling-model.md).
 
-Puoi anche manualmente è possibile rimuovere l'oggetto e ignorare l'avviso.
+È anche possibile Rimuovi manualmente l'oggetto e ignorare l'avviso.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'avviso C4823.
+L'esempio seguente genera l'C4823.
 
-```
+```cpp
 // C4823.cpp
 // compile with: /clr /W3 /EHa-
 using namespace System;

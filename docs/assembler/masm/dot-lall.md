@@ -21,8 +21,8 @@ ms.locfileid: "74398218"
 
 ## <a name="remarks"></a>Note
 
-See [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+Vedere [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)
