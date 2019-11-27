@@ -24,17 +24,17 @@ ms.locfileid: "74246412"
 
 Alcuni degli errori di programma più comuni non sono contrassegnati come eccezioni dal sistema. Ad esempio, se si tenta di allocare un blocco di memoria ma non vi è memoria sufficiente, il runtime o la funzione API non genera un'eccezione ma restituisce un codice di errore.
 
-However, you can treat any condition as an exception by detecting that condition in your code and then reporting it by calling the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function. Contrassegnando gli errori in questo modo, è possibile offrire i vantaggi di gestione delle eccezioni strutturate a qualsiasi tipo di errore di runtime.
+Tuttavia, è possibile considerare qualsiasi condizione come un'eccezione rilevando tale condizione nel codice e quindi inviando una segnalazione chiamando la funzione [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) . Contrassegnando gli errori in questo modo, è possibile offrire i vantaggi di gestione delle eccezioni strutturate a qualsiasi tipo di errore di runtime.
 
 Per utilizzare la gestione delle eccezioni strutturata con errori:
 
 - Definire il proprio codice di eccezione per l'evento.
 
-- Call `RaiseException` when you detect a problem.
+- Chiamare `RaiseException` quando si rileva un problema.
 
 - Utilizzare i filtri per la gestione delle eccezioni per esegue il test del codice di eccezione definito.
 
-The \<winerror.h> file shows the format for exception codes. Per assicurarsi di non definire un codice che sia in conflitto con il codice di eccezione esistente, impostare il terzo bit più significativo su 1. I quattro bit più significativi dovrebbe essere impostati come illustrato nella tabella seguente.
+Il file di > \<Winerror. h Mostra il formato per i codici di eccezione. Per assicurarsi di non definire un codice che sia in conflitto con il codice di eccezione esistente, impostare il terzo bit più significativo su 1. I quattro bit più significativi dovrebbe essere impostati come illustrato nella tabella seguente.
 
 |BITS|Impostazione binaria consigliata|Descrizione|
 |----------|--------------------------------|-----------------|
@@ -44,14 +44,14 @@ The \<winerror.h> file shows the format for exception codes. Per assicurarsi di 
 
 È possibile impostare i primi due bit su un'impostazione diversa dall'11 binario se si desidera, sebbene l'impostazione "errore" sia appropriata per la maggior parte delle eccezioni. È importante ricordare che è possibile impostare i bit 29 e 28 come illustrato nella tabella precedente.
 
-The resulting error code should therefore have the highest four bits set to hexadecimal E. For example, the following definitions define exception codes that do not conflict with any Windows exception codes. È possibile, tuttavia, che sia necessario verificare quali codici vengono utilizzati dalle DLL di terze parti.
+Il codice di errore risultante dovrebbe quindi avere i quattro bit più elevati impostati su esadecimale E. Le definizioni seguenti, ad esempio, definiscono i codici di eccezione che non sono in conflitto con i codici delle eccezioni di Windows. È possibile, tuttavia, che sia necessario verificare quali codici vengono utilizzati dalle DLL di terze parti.
 
 ```cpp
 #define STATUS_INSUFFICIENT_MEM       0xE0000001
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-Dopo aver definito un codice di eccezione, è possibile utilizzarlo per generare un'eccezione. For example, the following code raises the `STATUS_INSUFFICIENT_MEM` exception in response to a memory allocation problem:
+Dopo aver definito un codice di eccezione, è possibile utilizzarlo per generare un'eccezione. Il codice seguente, ad esempio, genera l'eccezione `STATUS_INSUFFICIENT_MEM` in risposta a un problema di allocazione della memoria:
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -59,9 +59,9 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
 ```
 
-Se si desidera semplicemente generare un'eccezione, è possibile impostare gli ultimi tre parametri su 0. Gli ultimi tre parametri sono utili per comunicare le informazioni aggiuntive e impostare un contrassegno che impedisce ai gestori di proseguire l'esecuzione. See the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function in the Windows SDK for more information.
+Se si desidera semplicemente generare un'eccezione, è possibile impostare gli ultimi tre parametri su 0. Gli ultimi tre parametri sono utili per comunicare le informazioni aggiuntive e impostare un contrassegno che impedisce ai gestori di proseguire l'esecuzione. Per ulteriori informazioni, vedere la funzione [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) nel Windows SDK.
 
-Nei filtri di gestione delle eccezioni, è quindi possibile eseguire il test dei codici definiti. Esempio:
+Nei filtri di gestione delle eccezioni, è quindi possibile eseguire il test dei codici definiti. Ad esempio:
 
 ```cpp
 __try {
@@ -73,5 +73,5 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
 
 ## <a name="see-also"></a>Vedere anche
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
-[Structured exception handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)<br/>
+[Gestione strutturata delle eccezioni (C++C/)](../cpp/structured-exception-handling-c-cpp.md)

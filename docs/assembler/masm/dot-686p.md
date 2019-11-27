@@ -13,9 +13,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398617"
 ---
-# <a name="686p-32-bit-masm"></a>.686P (32-bit MASM)
+# <a name="686p-32-bit-masm"></a>.686P (MASM a 32 bit)
 
-Enables assembly of all instructions (including privileged) for the Pentium Pro processor. (32-bit MASM only.)
+Abilita l'assembly di tutte le istruzioni (incluso il privilegio) per il processore Pentium Pro. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 

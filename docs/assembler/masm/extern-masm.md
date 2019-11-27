@@ -15,15 +15,15 @@ ms.locfileid: "74397559"
 ---
 # <a name="extern-masm"></a>EXTERN (MASM)
 
-Defines one or more external variables, labels, or symbols called *name* whose type is *type*.
+Definisce una o più variabili esterne, etichette o simboli chiamati *nome* il cui tipo è *Type*.
 
 ## <a name="syntax"></a>Sintassi
 
-> **EXTERN** ⟦*language-type*⟧ *name* ⟦ __(__ *altid* __)__ ⟧ __:__ *type* ⟦ __,__ ⟦*language-type*⟧ *name* ⟦ __(__ *altid* __)__ ⟧ __:__ *type* ...⟧
+> **Extern** ⟦*Language-Type*⟧ *nome* ⟦ __(__ *altid* __)__ ⟧ __:__ *Type* ⟦ __,__ ⟦*Language-Type*⟧ *Name* ⟦ __(__ *altid* __)__ ⟧ __:__ *Type* ... ⟧
 
 ## <a name="remarks"></a>Note
 
-The *type* can be [ABS](../../assembler/masm/operator-abs.md), which imports *name* as a constant. Same as [EXTRN](../../assembler/masm/extrn.md).
+Il *tipo* può essere [ABS](../../assembler/masm/operator-abs.md), che importa il *nome* come costante. Uguale a [EXTRN](../../assembler/masm/extrn.md).
 
 ## <a name="see-also"></a>Vedere anche
 

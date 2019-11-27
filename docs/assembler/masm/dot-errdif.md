@@ -17,17 +17,17 @@ ms.locfileid: "74398364"
 ---
 # <a name="errdif-errdifi"></a>.ERRDIF, .ERRDIFI
 
-Generates an error if the text items are different.
+Genera un errore se gli elementi di testo sono diversi.
 
 ## <a name="syntax"></a>Sintassi
 
-> **.ERRDIF** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧\
-> **.ERRDIFI** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧
+> **. ERRDIF** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧ \
+> **. ERRDIFI** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧
 
 ## <a name="remarks"></a>Note
 
-If **.ERRDIFI** is given, the comparison is case insensitive.
+Se **. ERRDIFI** viene specificato, il confronto non fa distinzione tra maiuscole e minuscole.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Guida di riferimento alle direttive](../../assembler/masm/directives-reference.md)

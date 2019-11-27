@@ -28,19 +28,19 @@ auto declarator initializer;
 [](auto param1, auto param2) {};
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 La parola chiave **auto** indica al compilatore di usare l'espressione di inizializzazione di una variabile dichiarata o un parametro dell'espressione lambda per dedurre il tipo.
 
 Si consiglia di usare la parola chiave **auto** per la maggior parte delle situazioni, a meno che non si desideri effettivamente una conversione, perché offre i vantaggi seguenti:
 
-- **Affidabilità:** se il tipo dell'espressione viene modificato, ad esempio quando il tipo restituito dalla funzione cambia, continua comunque a funzionare.
+- **Affidabilità:** Se il tipo dell'espressione viene modificato, incluso quando viene modificato un tipo restituito da una funzione, funziona solo.
 
-- **Prestazioni:** non verrà eseguita alcuna conversione.
+- **Prestazioni:** Si è certi che non verrà eseguita alcuna conversione.
 
 - **Usabilità:** Non è necessario preoccuparsi delle difficoltà di ortografia del nome del tipo e dei digitazioni.
 
-- **Efficienza:** la codifica può essere più efficiente.
+- **Efficienza:** Il codice può essere più efficiente.
 
 Casi di conversione in cui potrebbe non essere necessario usare **auto**:
 
@@ -50,7 +50,7 @@ Casi di conversione in cui potrebbe non essere necessario usare **auto**:
 
 Per usare la parola chiave **auto** , usarla invece di un tipo per dichiarare una variabile e specificare un'espressione di inizializzazione. Inoltre, è possibile modificare la parola chiave **auto** usando gli identificatori e i dichiaratori quali **const**, **volatile**, Pointer (`*`), Reference (`&`) e il riferimento rvalue (`&&`). Il compilatore valuta l'espressione di inizializzazione, quindi utilizza tali informazioni per dedurre il tipo della variabile.
 
-L'espressione di inizializzazione può essere un'assegnazione (sintassi del segno di uguale), un'inizializzazione diretta (sintassi di tipo funzione), un'espressione [operator new](new-operator-cpp.md) oppure l'espressione di inizializzazione può essere il parametro *for-range-declaration* in un'istruzione [per istruzione (C++) basata sull'intervallo](../cpp/range-based-for-statement-cpp.md) . Per altre informazioni, vedere [Inizializzatori](../cpp/initializers.md) e gli esempi di codice più avanti in questo argomento.
+L'espressione di inizializzazione può essere un'assegnazione (sintassi del segno di uguale), un'inizializzazione diretta (sintassi di tipo funzione), un'espressione [operator new](new-operator-cpp.md) oppure l'espressione di inizializzazione può essere il parametro *for-range-declaration* in un'istruzione [per istruzione (C++) basata sull'intervallo](../cpp/range-based-for-statement-cpp.md) . Per ulteriori informazioni, vedere [inizializzatori](../cpp/initializers.md) e gli esempi di codice più avanti in questo documento.
 
 La parola chiave **auto** è un segnaposto per un tipo, ma non è un tipo. Non è quindi possibile usare la parola chiave **auto** nei cast o negli operatori, ad esempio [sizeof](../cpp/sizeof-operator.md) e C++(per/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
@@ -58,7 +58,7 @@ La parola chiave **auto** è un segnaposto per un tipo, ma non è un tipo. Non �
 
 La parola chiave **auto** è un modo semplice per dichiarare una variabile con un tipo complesso. Ad esempio, è possibile usare **auto** per dichiarare una variabile in cui l'espressione di inizializzazione include modelli, puntatori a funzioni o puntatori a membri.
 
-È anche possibile usare **auto** per dichiarare e inizializzare una variabile in un'espressione lambda. Non è possibile dichiarare il tipo della variabile manualmente poiché il tipo di un'espressione lambda è noto solo al compilatore. Per altre informazioni, vedere [Esempi di espressioni lambda](../cpp/examples-of-lambda-expressions.md).
+È anche possibile usare **auto** per dichiarare e inizializzare una variabile in un'espressione lambda. Non è possibile dichiarare il tipo della variabile manualmente poiché il tipo di un'espressione lambda è noto solo al compilatore. Per ulteriori informazioni, vedere [esempi di espressioni lambda](../cpp/examples-of-lambda-expressions.md).
 
 ## <a name="trailing-return-types"></a>Tipi restituiti finali
 
@@ -123,7 +123,7 @@ int main()
 
 La tabella seguente elenca le restrizioni relative all'uso della parola chiave **auto** e del messaggio di errore di diagnostica corrispondente generato dal compilatore.
 
-|Numero di errore|description|
+|Numero di errore|Descrizione|
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|La parola chiave **auto** non può essere combinata con qualsiasi altro identificatore di tipo.|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Un simbolo dichiarato con la parola chiave **auto** deve avere un inizializzatore.|

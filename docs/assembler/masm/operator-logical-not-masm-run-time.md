@@ -1,5 +1,5 @@
 ---
-title: operatore ! (MASM Run Time)
+title: operatore ! (Tempo di esecuzione MASM)
 ms.date: 08/30/2018
 f1_keywords:
 - operator !
@@ -14,9 +14,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396753"
 ---
-# <a name="operator--masm-run-time"></a>operatore ! (MASM Run Time)
+# <a name="operator--masm-run-time"></a>operatore ! (Tempo di esecuzione MASM)
 
-Logical negation. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Negazione logica. Utilizzato solo all'interno di [. SE](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)o [. Ripetere](../../assembler/masm/dot-repeat.md) i blocchi e valutati in fase di esecuzione, non in fase di assembly.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,4 +24,4 @@ Logical negation. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHIL
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operators reference](operators-reference.md)
+[Guida di riferimento agli operatori](operators-reference.md)

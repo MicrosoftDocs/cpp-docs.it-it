@@ -23,7 +23,7 @@ DAO viene usato con i database di Access ed è supportato tramite Office 2013. D
 |[AfxDaoInit](#afxdaoinit)|Inizializza il motore di database DAO.|
 |[AfxDaoTerm](#afxdaoterm)|Termina il motore di database DAO.|
 
-##  <a name="afxdaoinit"></a>  AfxDaoInit
+##  <a name="afxdaoinit"></a>AfxDaoInit
 
 Questa funzione Inizializza il motore di database DAO.
 
@@ -34,7 +34,7 @@ void AfxDaoInit();
 throw(CDaoException*);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Nella maggior parte dei casi non è necessario chiamare `AfxDaoInit` perché l'applicazione lo chiama automaticamente quando necessario.
 
@@ -44,7 +44,7 @@ Per informazioni correlate e per un esempio di chiamata di `AfxDaoInit`, vedere 
 
   **Intestazione** AFXDAO. h
 
-##  <a name="afxdaoterm"></a>  AfxDaoTerm
+##  <a name="afxdaoterm"></a>AfxDaoTerm
 
 Questa funzione termina il motore di database DAO.
 
@@ -53,7 +53,7 @@ Questa funzione termina il motore di database DAO.
 void AfxDaoTerm();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 In genere, è sufficiente chiamare questa funzione in una normale DLL MFC; Quando necessario, un'applicazione chiamerà automaticamente `AfxDaoTerm`.
 

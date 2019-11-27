@@ -13,9 +13,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398650"
 ---
-# <a name="586p-32-bit-masm"></a>.586P (32-bit MASM)
+# <a name="586p-32-bit-masm"></a>.586P (MASM a 32 bit)
 
-Enables assembly of all instructions (including privileged) for the Pentium processor. (32-bit MASM only.)
+Abilita l'assembly di tutte le istruzioni (incluso il privilegio) per il processore Pentium. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 

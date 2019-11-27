@@ -15,18 +15,18 @@ ms.locfileid: "74398869"
 ---
 # <a name="byte-masm"></a>BYTE (MASM)
 
-Allocates and optionally initializes a byte of storage for each *initializer*.
+Alloca ed eventualmente Inizializza un byte di archiviazione per ogni *inizializzatore*.
 
 ## <a name="syntax"></a>Sintassi
 
-> ⟦*name*⟧ **BYTE** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*nome*⟧ ⟦ *inizializzatore* di **byte** __,__ *inizializzatore* ... ⟧
 
 ## <a name="remarks"></a>Note
 
-Can also be used as a type specifier anywhere a type is legal.
+Può essere usato anche come identificatore di tipo in qualsiasi punto in cui un tipo è valido.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[DB](../../assembler/masm/db.md)\
+[Riferimento alle direttive](../../assembler/masm/directives-reference.md)\
+\ [database](../../assembler/masm/db.md)
 [SBYTE](../../assembler/masm/sbyte-masm.md)

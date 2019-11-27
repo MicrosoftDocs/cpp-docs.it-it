@@ -17,12 +17,12 @@ ms.locfileid: "74395803"
 ---
 # <a name="operator-size"></a>Operatore SIZE
 
-Returns the number of bytes in *variable* allocated by the first initializer.
+Restituisce il numero di byte nella *variabile* allocata dal primo inizializzatore.
 
 ## <a name="syntax"></a>Sintassi
 
-> **SIZE** *variable*
+> *Variabile* di dimensione
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operators reference](operators-reference.md)
+[Guida di riferimento agli operatori](operators-reference.md)

@@ -21,7 +21,7 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 Le proprietà impostate in questa pagina delle proprietà si applicano a tutti i file del progetto tranne quelli per cui sono impostate proprietà a livello di file.
 
-Proprietà | description
+Proprietà | Descrizione
 --- | ---
 Origini da copiare | Specifica le origini da copiare nel sistema remoto. La modifica di questo elenco potrebbe comportare spostamenti o influire in altro modo sulla struttura di directory in cui i file vengono copiati nel sistema remoto.
 Copia origini | Specifica se copiare le origini nel sistema remoto.

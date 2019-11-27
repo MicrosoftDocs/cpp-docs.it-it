@@ -15,14 +15,14 @@ ms.locfileid: "74394641"
 ---
 # <a name="qword"></a>QWORD
 
-Allocates and optionally initializes 8 bytes of storage for each *initializer*. Also can be used as a type specifier anywhere a type is legal.
+Alloca ed eventualmente Inizializza 8 byte di archiviazione per ogni *inizializzatore*. Può essere usato anche come identificatore di tipo in qualsiasi punto in cui un tipo è valido.
 
 ## <a name="syntax"></a>Sintassi
 
-> ⟦*name*⟧ **QWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*nome*⟧ **QWORD** *inizializzatore* ⟦ __,__ *inizializzatore* ... ⟧
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[SQWORD](../../assembler/masm/qword.md)\
+[Riferimento alle direttive](../../assembler/masm/directives-reference.md)\
+\ [SQWORD](../../assembler/masm/qword.md)
 [DQ](../../assembler/masm/dq.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: 067d1aef41280f4d14fe799e4f4ee26a9f1b9f5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcb66fca7e5b8708171849f885518c15b8355ac4
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401020"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541738"
 ---
 # <a name="compiler-warning-level-4-c4239"></a>Avviso del compilatore (livello 4) C4239
 
-utilizzata estensione non standard: 'token': conversione da 'type' a 'type'
+utilizzata estensione non standard:' token ': conversione da' type ' a' type '
 
-Tale conversione non è consentita dallo standard C++, ma è consentito come estensione. Questo avviso viene sempre seguito da almeno una riga di una spiegazione che descrive la regola di linguaggio violata.
+Questa conversione del C++ tipo non è consentita dallo standard, ma è consentita come estensione. Questo avviso è sempre seguito da almeno una riga di spiegazione che descrive la regola del linguaggio violata.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4239.
+L'esempio seguente genera l'C4239.
 
-```
+```cpp
 // C4239.cpp
 // compile with: /W4 /c
 struct C {
@@ -39,11 +39,11 @@ void func(void) {
 
 ## <a name="example"></a>Esempio
 
-Conversione da tipo integrale a tipo di enumerazione non è consentita in modo esplicito.
+La conversione da tipo integrale a tipo enum non è consentita in modo esplicito.
 
-L'esempio seguente genera l'errore C4239.
+L'esempio seguente genera l'C4239.
 
-```
+```cpp
 // C4239b.cpp
 // compile with: /W4 /c
 enum E { value };

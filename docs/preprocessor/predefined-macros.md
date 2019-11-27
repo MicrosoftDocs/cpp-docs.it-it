@@ -259,7 +259,7 @@ Il compilatore supporta queste macro predefinite specificate dagli standard ISO 
 
 - `__DATE__` la data di compilazione del file di origine corrente. La data è un valore letterale stringa di lunghezza costante nel formato *mmm gg aaaa*. Il nome del mese *mmm* corrisponde al nome abbreviato del mese generato dalla funzione [asctime](../c-runtime-library/reference/asctime-wasctime.md) della libreria di runtime C (CRT). Il primo carattere della data *GG* è uno spazio se il valore è minore di 10. Questa macro è sempre definita.
 
-- `__FILE__` il nome del file di origine corrente. `__FILE__` si espande in un valore letterale stringa di caratteri. Per assicurarsi che venga visualizzato il percorso completo del file, usare [/FC (Percorso completo del file di codice sorgente nella diagnostica)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Questa macro è sempre definita.
+- `__FILE__` il nome del file di origine corrente. `__FILE__` si espande in un valore letterale stringa di caratteri. Per assicurarsi che venga visualizzato il percorso completo del file, usare [/FC (percorso completo del file di codice sorgente nella diagnostica)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Questa macro è sempre definita.
 
 - `__LINE__` definito come numero di riga integer nel file di origine corrente. Il valore della macro `__LINE__` può essere modificato utilizzando una direttiva `#line`. Questa macro è sempre definita.
 
@@ -306,7 +306,7 @@ MSVC supporta queste macro predefinite aggiuntive.
 
 - `_CONTROL_FLOW_GUARD` definito come 1 quando viene impostata l'opzione del compilatore [/Guard: CF (Abilita Guard flusso di controllo)](../build/reference/guard-enable-control-flow-guard.md) . In caso contrario, non definito.
 
-- `__COUNTER__` si espande in un valore letterale integer che inizia da 0. Il valore viene incrementato di 1 ogni volta che viene usato in un file di origine o nelle intestazioni incluse del file di origine. `__COUNTER__` memorizza il rispettivo stato quando si usano intestazioni precompilate. Questa macro è sempre definita.
+- `__COUNTER__` si espande in un valore letterale integer che inizia da 0. Il valore viene incrementato di 1 ogni volta che viene usato in un file di origine o nelle intestazioni incluse del file di origine. `__COUNTER__` ricorda lo stato quando si utilizzano le intestazioni precompilate. Questa macro è sempre definita.
 
   Questo esempio USA `__COUNTER__` per assegnare identificatori univoci a tre oggetti diversi dello stesso tipo. Il costruttore `exampleClass` accetta un Integer come parametro. In `main`, l'applicazione dichiara tre oggetti di tipo `exampleClass`, usando `__COUNTER__` come parametro identificatore univoco:
 
@@ -439,7 +439,7 @@ MSVC supporta queste macro predefinite aggiuntive.
 
   - 1 se è stata impostata l'opzione del compilatore `/arch:SSE`.
 
-  - 2 se è stata impostata l'opzione del compilatore `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`o `/arch:AVX512`. Si tratta del valore predefinito se non è stata specificata un'opzione del compilatore `/arch`. Se è specificata l'opzione `/arch:AVX`, viene definita anche la macro `__AVX__`. Quando si specifica `/arch:AVX2`, vengono definiti anche `__AVX__` e `__AVX2__`. Quando si specifica `/arch:AVX512`, vengono definiti anche `__AVX__`, `__AVX2__`, `__AVX512BW__`, `__AVX512CD__`, `__AVX512DQ__`, `__AVX512F__` e `__AVX512VL__`.
+  - 2 se è stata impostata l'opzione del compilatore `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`o `/arch:AVX512`. Si tratta del valore predefinito se non è stata specificata un'opzione del compilatore `/arch`. Quando si specifica `/arch:AVX`, viene definita anche la macro `__AVX__`. Quando si specifica `/arch:AVX2`, vengono definiti anche `__AVX__` e `__AVX2__`. Quando si specifica `/arch:AVX512`, vengono definiti anche `__AVX__`, `__AVX2__`, `__AVX512BW__`, `__AVX512CD__`, `__AVX512DQ__`, `__AVX512F__` e `__AVX512VL__`.
 
   - Per altre informazioni, vedere [/arch (x86)](../build/reference/arch-x86.md).
 

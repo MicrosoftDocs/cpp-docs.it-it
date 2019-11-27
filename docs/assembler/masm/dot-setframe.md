@@ -15,23 +15,23 @@ ms.locfileid: "74397924"
 ---
 # <a name="setframe"></a>.SETFRAME
 
-Fills in the frame register field and offset in the unwind information using the specified register (*reg*) and offset (*offset*). The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a `UWOP_SET_FPREG` unwind code entry for the specified register using the current prologue offset.
+Inserisce il campo Registro frame e l'offset nelle informazioni di rimozione utilizzando il registro (*reg*) e l'offset (*offset*) specificati. L'offset deve essere un multiplo di 16 e minore o uguale a 240. Questa direttiva genera anche una voce di codice di rimozione `UWOP_SET_FPREG` per il registro specificato usando l'offset del prologo corrente.
 
 ## <a name="syntax"></a>Sintassi
 
-> **.SETFRAME** *reg*, *offset*
+> **. Seframe** *reg*, *offset*
 
 ## <a name="remarks"></a>Note
 
-**.SETFRAME** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SETFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. Seframe** consente agli utenti di ml64. exe di specificare la modalità di rimozione di una funzione di frame ed è consentita solo all'interno del prologo, che si estende dalla dichiarazione del frame [proc](../../assembler/masm/proc.md) a [. Direttiva ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Queste direttive non generano codice; generano solo `.xdata` e `.pdata`. **. Il segramma** deve essere preceduto da istruzioni che implementano effettivamente le azioni da riportare. È consigliabile eseguire il wrapping di entrambe le direttive di rimozione e del codice di cui si intende rimuovere la rimozione in una macro per garantire l'accordo.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Per ulteriori informazioni, vedere [MASM per x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Esempio
 
 ### <a name="description"></a>Descrizione
 
-The following sample shows how to use a frame pointer:
+Nell'esempio seguente viene illustrato come utilizzare un puntatore al frame:
 
 ### <a name="code"></a>Codice
 
@@ -64,4 +64,4 @@ END
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

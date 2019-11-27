@@ -13,9 +13,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398740"
 ---
-# <a name="dosseg-32-bit-masm"></a>DOSSEG (32-bit MASM)
+# <a name="dosseg-32-bit-masm"></a>DOSSEG ((MASM a 32 bit)
 
-Identical to [.DOSSEG](../../assembler/masm/dot-dosseg.md), which is the preferred form. (32-bit MASM only.)
+Identico a [. DOSSEG (](../../assembler/masm/dot-dosseg.md), che rappresenta il formato preferito. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 

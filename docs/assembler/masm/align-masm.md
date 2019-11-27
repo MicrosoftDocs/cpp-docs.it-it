@@ -15,21 +15,21 @@ ms.locfileid: "74399279"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-The **ALIGN** directive aligns the next data element or instruction on an address that is a multiple of its parameter. The parameter must be a power of 2 (for example, 1, 2, 4, and so on) that is less than or equal to the segment alignment.
+La direttiva **align** allinea l'elemento dati successivo o l'istruzione su un indirizzo che è un multiplo del relativo parametro. Il parametro deve essere una potenza di 2 (ad esempio 1, 2, 4 e così via) minore o uguale all'allineamento del segmento.
 
 ## <a name="syntax"></a>Sintassi
 
-> **ALIGN** ⟦*number*⟧
+> **Allinea** *numero*⟦ ⟧
 
 ## <a name="remarks"></a>Note
 
-The **ALIGN** directive allows you to specify the beginning offset of a data element or an instruction. Aligned data can improve performance, at the expense of wasted space between data elements. Large performance improvements can be seen when data accesses are on boundaries that fit within cache lines. Accesses on natural boundaries for native types means less time spent in internal hardware realignment microcode.
+La direttiva **align** consente di specificare l'offset iniziale di un elemento dati o di un'istruzione. I dati allineati possono migliorare le prestazioni, a scapito dello spazio sprecato tra gli elementi dati. I miglioramenti delle prestazioni di grandi dimensioni possono verificarsi quando gli accessi ai dati si trovano sui limiti che rientrano nelle righe della cache. L'accesso ai limiti naturali per i tipi nativi comporta un minor tempo impiegato nel microcodice interno di riallineamento hardware.
 
-The need for aligned instructions is rare on modern processors that use a flat addressing model, but may be required for jump targets in older code for other addressing models.
+La necessità di istruzioni allineate è rara nei processori moderni che usano un modello di indirizzamento Flat, ma potrebbe essere necessario per le destinazioni di salto nel codice precedente per altri modelli di indirizzamento.
 
-When data is aligned, the skipped space is padded with zeroes. When instructions are aligned, the skipped space is filled with appropriately-sized NOP instructions.
+Quando i dati sono allineati, lo spazio ignorato viene riempito con zeri. Quando le istruzioni sono allineate, lo spazio ignorato viene riempito con le istruzioni NOP di dimensioni appropriate.
 
 ## <a name="see-also"></a>Vedere anche
 
-[EVEN](even.md)\
-[Directives reference](directives-reference.md)
+[Anche](even.md)\
+[Guida di riferimento alle direttive](directives-reference.md)

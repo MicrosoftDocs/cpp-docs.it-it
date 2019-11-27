@@ -15,7 +15,7 @@ ms.locfileid: "74398440"
 ---
 # <a name="elseif-masm"></a>ELSEIF (MASM)
 
-Combines [ELSE](../../assembler/masm/else-masm.md) and [IF](../../assembler/masm/if-masm.md) into one statement.
+Combina [else](../../assembler/masm/else-masm.md) e [if](../../assembler/masm/if-masm.md) in un'unica istruzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,8 +23,8 @@ Combines [ELSE](../../assembler/masm/else-masm.md) and [IF](../../assembler/masm
 
 ## <a name="remarks"></a>Note
 
-See [IF](../../assembler/masm/if-masm.md).
+Vedere [se](../../assembler/masm/if-masm.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

@@ -36,8 +36,8 @@ Un file dei suggerimenti contiene suggerimenti che possono essere personalizzati
 
 > [!IMPORTANT]
 > Se si modifica o aggiunge un file dei suggerimenti, è necessario eseguire altri passaggi per rendere effettive le modifiche:
-> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
-> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
+> - Nelle versioni precedenti a Visual Studio 2017 versione 15,6: eliminare il file SDF e/o il file VC. DB nella soluzione per tutte le modifiche.
+> - In Visual Studio 2017 versione 15,6 e successive: chiudere e riaprire la soluzione dopo l'aggiunta di nuovi file hint.
 
 ## <a name="scenario"></a>Scenario
 
@@ -92,13 +92,13 @@ A partire da Visual Studio 2017 versione 15.8 sono disponibili numerose funziona
 
 - Azione rapida per la creazione di un file dei suggerimenti che includa la macro evidenziata oppure, se il file dei suggerimenti è già presente, per l'aggiunta della macro al file.
 
-![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
+![Macro evidenziata.](media/hint-squiggle-and-actions.png "Hint zigzag e azioni rapide")
 
 Dopo l'esecuzione di una delle azioni rapide, il parser analizza di nuovo i file interessati dal file dei suggerimenti.
 
 Per impostazione predefinita, la macro dannosa è evidenziata come un suggerimento. L'evidenziazione può essere modificata in un elemento maggiormente visibile, ad esempio una sottolineatura a zigzag rossa o verde. Usare l'opzione **Macro nelle aree di esplorazione ignorate** nella sezione **Controllo ortografia codice** in **Strumenti** > **Opzioni** > **Editor di testo** > **C/C++**  > **Visualizza**.
 
-![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
+![Macro nell'opzione aree di esplorazione ignorate.](media/skipped-regions-squiggle-option.png "Opzione zigzag di Regions ignorata.")
 
 ## <a name="display-browsing-database-errors"></a>Visualizzare gli errori del database di esplorazione
 
@@ -156,7 +156,7 @@ I suggerimenti usano questa sintassi:
 |`@>`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica la fine di un set di elementi della mappa.|
 |`#undef` *hint-name*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è specificato dall'identificatore *hint-name*.|
 |`//` *comment*|Commento a riga singola.|
-|`/*` *comment* `*/`|Un commento su più righe.|
+|`/*` *commento* `*/`|Un commento su più righe.|
 
 ## <a name="example"></a>Esempio
 
@@ -166,7 +166,7 @@ La figura illustra alcune delle directory fisiche di un progetto Visual Studio C
 
 ### <a name="hint-file-directories"></a>Directory dei file dei suggerimenti
 
-![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
+![Directory di file&#45;di hint comuni e specifici del progetto.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Directory e contenuto dei file dei suggerimenti
 

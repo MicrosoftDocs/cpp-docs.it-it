@@ -1,5 +1,5 @@
 ---
-title: operator brackets
+title: parentesi operatore
 ms.date: 08/30/2018
 f1_keywords:
 - operator []
@@ -17,7 +17,7 @@ ms.locfileid: "74397078"
 ---
 # <a name="operator-"></a>operator \[\]
 
-Returns *expression1* plus \[*expression2*\].
+Restituisce *expression1* plus \[\]*expression2* .
 
 ## <a name="syntax"></a>Sintassi
 

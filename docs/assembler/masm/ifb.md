@@ -15,16 +15,16 @@ ms.locfileid: "74397437"
 ---
 # <a name="ifb"></a>IFB
 
-Grants assembly if *textitem* is blank.
+Concede l'assembly se *textItem* è vuoto.
 
 ## <a name="syntax"></a>Sintassi
 
-> **IFB** *textitem*
+> *TextItem* IFB
 
 ## <a name="remarks"></a>Note
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Per [la](../../assembler/masm/if-masm.md) sintassi completa, vedere.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Pragma fenv_access
+title: fenv_access (pragma)
 description: Viene descritto l'utilizzo e gli effetti della direttiva pragma fenv_access. La direttiva fenv_access controlla l'accesso all'ambiente a virgola mobile in fase di esecuzione.
 ms.date: 11/19/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305854"
 ---
-# <a name="fenv_access-pragma"></a>Pragma fenv_access
+# <a name="fenv_access-pragma"></a>fenv_access (pragma)
 
 Disabilita (**attivato) o**Abilita (**disattivato**) le ottimizzazioni che potrebbero modificare i test di flag dell'ambiente a virgola mobile e le modifiche alla modalità.
 
@@ -24,7 +24,7 @@ Disabilita (**attivato) o**Abilita (**disattivato**) le ottimizzazioni che potre
 
 > **#pragma fenv_access (** { **on** | **off** } **)**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Per impostazione predefinita, **fenv_access** è **disattivato**. Il compilatore presuppone che il codice non acceda o modifichi l'ambiente a virgola mobile. Se non è necessario l'accesso all'ambiente, il compilatore può eseguire altre operazioni per ottimizzare il codice a virgola mobile.
 

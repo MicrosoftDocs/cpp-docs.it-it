@@ -15,7 +15,7 @@ ms.locfileid: "74398872"
 ---
 # <a name="wordsize"></a>\@WordSize
 
-Two for a 16-bit segment or four for a 32-bit segment (numeric equate).
+Due per un segmento a 16 bit o quattro per un segmento a 32 bit (valore numerico equivalenti).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,4 +23,4 @@ Two for a 16-bit segment or four for a 32-bit segment (numeric equate).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Symbols reference](symbols-reference.md)
+[Riferimento ai simboli](symbols-reference.md)

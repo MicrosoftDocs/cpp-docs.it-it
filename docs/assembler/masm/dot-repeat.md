@@ -13,16 +13,16 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398000"
 ---
-# <a name="repeat-32-bit-masm"></a>.REPEAT (32-bit MASM)
+# <a name="repeat-32-bit-masm"></a>. REPEAT (MASM a 32 bit)
 
-Generates code that repeats execution of the block of *statements* until *condition* becomes true. [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md), which becomes true when CX is zero, may be substituted for [.UNTIL](../../assembler/masm/dot-until.md). The *condition* is optional with **.UNTILCXZ**. (32-bit MASM only.)
+Genera codice che ripete l'esecuzione del blocco di *istruzioni* fino a quando la *condizione* non diventa true. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), che diventa true quando CX è zero, può essere sostituito da [. FINO a](../../assembler/masm/dot-until.md). La *condizione* è facoltativa con **. UNTILCXZ**. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
-> **.REPEAT**\
-> *statements*\
-> **.UNTIL** *condition*
+> **. Ripeti**\
+> \ di *istruzioni*
+> **.**  *Condizione* until
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](directives-reference.md)
+[Guida di riferimento alle direttive](directives-reference.md)

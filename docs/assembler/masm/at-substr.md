@@ -13,14 +13,14 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398921"
 ---
-# <a name="substr"></a>\@SubStr
+# <a name="substr"></a>\@substr
 
-A macro function that returns a substring starting at *position*.
+Funzione macro che restituisce una sottostringa a partire dalla *posizione*.
 
 ## <a name="syntax"></a>Sintassi
 
-> **\@SubStr(** *string* __,__ *position* ⟦ __,__ *length*⟧ **)**
+> **\@substr (** *String* __,__ *position* ⟦ __,__ *length*⟧ **)**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Symbols reference](symbols-reference.md)
+[Riferimento ai simboli](symbols-reference.md)
