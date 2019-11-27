@@ -18,33 +18,33 @@ ms.locfileid: "74245122"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-Structured exception handling (SEH) is a Microsoft extension to C to handle certain exceptional code situations, such as hardware faults, gracefully. Although Windows and Microsoft C++ support SEH, we recommend that you use ISO-standard C++ exception handling because it makes your code more portable and flexible. Nevertheless, to maintain existing code or for particular kinds of programs, you still might have to use SEH.
+Gestione delle eccezioni strutturata (SEH) è un'estensione Microsoft a C per gestire determinate situazioni di codice eccezionali, ad esempio errori hardware, normalmente. Sebbene Windows e Microsoft C++ supportino SEH, è consigliabile utilizzare la gestione delle eccezioni C++ standard ISO perché rende il codice più portabile e flessibile. Tuttavia, per mantenere il codice esistente o per determinati tipi di programmi, potrebbe essere necessario usare SEH.
 
-**Microsoft specific:**
+**Specifico di Microsoft:**
 
 ## <a name="grammar"></a>Grammatica
 
-*try-except-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
+*try-except-Statement* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*composte* **__try dell'** *istruzione* **composta __except** **(** *Expression* **)**
 
-*try-finally-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__finally** *compound-statement*
+*try-finally-Statement* :<br/>
+&nbsp;&nbsp; &nbsp;l' *istruzione composta* **__try** &nbsp; **__finally**
 
 ## <a name="remarks"></a>Note
 
-With SEH, you can ensure that resources such as memory blocks and files are released correctly if execution unexpectedly terminates. You can also handle specific problems—for example, insufficient memory—by using concise structured code that does not rely on **goto** statements or elaborate testing of return codes.
+Con SEH è possibile verificare che le risorse quali blocchi di memoria e file vengano rilasciate correttamente se l'esecuzione viene terminata in modo imprevisto. È anche possibile gestire problemi specifici, ad esempio memoria insufficiente, usando codice strutturato conciso che non si basa su istruzioni **goto** o test elaborati dei codici restituiti.
 
-Le istruzioni try-except e try-finally a cui si fa riferimento in questo articolo sono estensioni Microsoft per il linguaggio C. Supportano la gestione delle eccezioni strutturata permettendo alle applicazioni di ottenere il controllo di un programma dopo eventi che altrimenti terminerebbero l'esecuzione. Anche se la gestione delle eccezioni strutturata può essere usata con file di origine C++, non è stata progettata in modo specifico per C++. If you use SEH in a C++ program that you compile by using the [/EHa or /EHsc](../build/reference/eh-exception-handling-model.md) option, destructors for local objects are called but other execution behavior might not be what you expect. For an illustration, see the example later in this article. In most cases, instead of SEH we recommend that you use ISO-standard [C++ exception handling](../cpp/try-throw-and-catch-statements-cpp.md), which the Microsoft C++ compiler also supports. L'uso della gestione delle eccezioni C++ permette di assicurare una maggiore portabilità del codice e la gestione di qualsiasi tipo di eccezione.
+Le istruzioni try-except e try-finally a cui si fa riferimento in questo articolo sono estensioni Microsoft per il linguaggio C. Supportano la gestione delle eccezioni strutturata permettendo alle applicazioni di ottenere il controllo di un programma dopo eventi che altrimenti terminerebbero l'esecuzione. Anche se la gestione delle eccezioni strutturata può essere usata con file di origine C++, non è stata progettata in modo specifico per C++. Se si usa SEH in un C++ programma compilato con l'opzione [/EHa o/EHsc](../build/reference/eh-exception-handling-model.md) , vengono chiamati i distruttori per gli oggetti locali, ma il comportamento di esecuzione potrebbe non essere quello previsto. Per un'illustrazione, vedere l'esempio più avanti in questo articolo. Nella maggior parte dei casi, anziché SEH è consigliabile usare la [ C++ gestione delle eccezioni](../cpp/try-throw-and-catch-statements-cpp.md)standard ISO, supportata anche dal C++ compilatore Microsoft. L'uso della gestione delle eccezioni C++ permette di assicurare una maggiore portabilità del codice e la gestione di qualsiasi tipo di eccezione.
 
-If you have C code that uses SEH, you can mix it with C++ code that uses C++ exception handling. For information, see [Handle structured exceptions in C++](../cpp/exception-handling-differences.md).
+Se si dispone di codice C che usa SEH, è possibile combinarlo C++ con codice che C++ usa la gestione delle eccezioni. Per informazioni, vedere [gestire le eccezioni strutturate in C++ ](../cpp/exception-handling-differences.md).
 
 Sono disponibili due meccanismi per la gestione delle eccezioni strutturata:
 
-- [Exception handlers](../cpp/writing-an-exception-handler.md), or **__except** blocks, which can respond to or dismiss the exception.
+- [Gestori di eccezioni](../cpp/writing-an-exception-handler.md)o blocchi di **__except** che possono rispondere o ignorare l'eccezione.
 
-- [Termination handlers](../cpp/writing-a-termination-handler.md), or **__finally** blocks, which are always called, whether an exception causes termination or not.
+- I [gestori di terminazione](../cpp/writing-a-termination-handler.md)o i blocchi di **__finally** , che vengono sempre chiamati, se un'eccezione causa la terminazione o meno.
 
-Questi due tipi di gestori sono distinti, ma sono strettamente correlati tramite un processo noto come "rimozione dello stack". When a structured exception occurs, Windows looks for the most recently installed exception handler that is currently active. Il gestore può procedere nei tre modi seguenti:
+Questi due tipi di gestori sono distinti, ma sono strettamente correlati tramite un processo noto come "rimozione dello stack". Quando si verifica un'eccezione strutturata, Windows cerca il gestore di eccezioni installato più di recente attualmente attivo. Il gestore può procedere nei tre modi seguenti:
 
 - Non riuscire a riconoscere l'eccezione e passare il controllo ad altri gestori.
 
@@ -52,21 +52,21 @@ Questi due tipi di gestori sono distinti, ma sono strettamente correlati tramite
 
 - Riconoscere l'eccezione e gestirla.
 
-È possibile che il gestore di eccezioni che riconosce l'eccezione non si trovi nella funzione che era in esecuzione quando si è verificata l'eccezione. In alcuni casi, potrebbe trattarsi di una funzione che si trova in una posizione molto più alta nello stack. La funzione attualmente in esecuzione e tutte le altre funzioni nel frame dello stack vengono terminate. During this process, the stack is "unwound;" that is, local non-static variables of terminated functions are cleared from the stack.
+È possibile che il gestore di eccezioni che riconosce l'eccezione non si trovi nella funzione che era in esecuzione quando si è verificata l'eccezione. In alcuni casi, potrebbe trattarsi di una funzione che si trova in una posizione molto più alta nello stack. La funzione attualmente in esecuzione e tutte le altre funzioni nel frame dello stack vengono terminate. Durante questo processo, lo stack è "Unwound;", ovvero le variabili locali non statiche delle funzioni terminate vengono cancellate dallo stack.
 
-Durante la rimozione dello stack, il sistema operativo chiama eventuali gestori di terminazione scritti per ogni funzione. Usando un gestore di terminazione, è possibile pulire le risorse che altrimenti rimarrebbero aperte a causa di una terminazione anomala. If you've entered a critical section, you can exit it in the termination handler. Se il programma verrà arrestato, è possibile eseguire altre attività di manutenzione, ad esempio la chiusura e la rimozione di file temporanei.
+Durante la rimozione dello stack, il sistema operativo chiama eventuali gestori di terminazione scritti per ogni funzione. Usando un gestore di terminazione, è possibile pulire le risorse che altrimenti rimarrebbero aperte a causa di una terminazione anomala. Se è stata immessa una sezione critica, è possibile chiuderla nel gestore di terminazione. Se il programma verrà arrestato, è possibile eseguire altre attività di manutenzione, ad esempio la chiusura e la rimozione di file temporanei.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Writing an exception handler](../cpp/writing-an-exception-handler.md)
+- [Scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)
 
-- [Writing a termination handler](../cpp/writing-a-termination-handler.md)
+- [Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)
 
 - [Gestire le eccezioni strutturate in C++](../cpp/exception-handling-differences.md)
 
 ## <a name="example"></a>Esempio
 
-As stated earlier, destructors for local objects are called if you use SEH in a C++ program and compile it by using the **/EHa** or **/EHsc** option. È tuttavia possibile che il comportamento durante l'esecuzione non corrisponda a quanto previsto se si usano anche eccezioni C++. This example demonstrates these behavioral differences.
+Come indicato in precedenza, i distruttori per gli oggetti locali vengono chiamati se si usa SEH C++ in un programma e lo si compila con l'opzione **/EHA** o **/EHsc** . È tuttavia possibile che il comportamento durante l'esecuzione non corrisponda a quanto previsto se si usano anche eccezioni C++. In questo esempio vengono illustrate queste differenze di comportamento.
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-If you use **/EHsc** to compile this code but the local test control macro `CPPEX` is undefined, there is no execution of the `TestClass` destructor and the output looks like this:
+Se si usa **/EHsc** per compilare il codice, ma la macro del controllo test locale `CPPEX` non è definita, non viene eseguita alcuna esecuzione del distruttore `TestClass` e l'output è simile al seguente:
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-If you use **/EHsc** to compile the code and `CPPEX` is defined by using `/DCPPEX` (so that a C++ exception is thrown), the `TestClass` destructor executes and the output looks like this:
+Se si usa **/EHsc** per compilare il codice e `CPPEX` viene definito usando `/DCPPEX` (in modo che venga C++ generata un'eccezione), il distruttore `TestClass` viene eseguito e l'output è simile al seguente:
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-If you use **/EHa** to compile the code, the `TestClass` destructor executes regardless of whether the exception was thrown by using `std::throw` or by using SEH to trigger the exception, that is, whether `CPPEX` defined or not. L'output sarà analogo al seguente:
+Se si utilizza **/EHA** per compilare il codice, il distruttore `TestClass` viene eseguito indipendentemente dal fatto che l'eccezione sia stata generata utilizzando `std::throw` o utilizzando SEH per attivare l'eccezione, ovvero se `CPPEX` definito o meno. L'output sarà analogo al seguente:
 
 ```Output
 Throwing C++ exception
@@ -147,5 +147,5 @@ Per altre informazioni, vedere [/EH (Modello di gestione delle eccezioni)](../bu
 [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
-[Errors and Exception Handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Structured Exception Handling (Windows)](/windows/win32/debug/structured-exception-handling)
+[Errori e gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Gestione strutturata delle eccezioni (Windows)](/windows/win32/debug/structured-exception-handling)

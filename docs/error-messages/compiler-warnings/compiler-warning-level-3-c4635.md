@@ -35,4 +35,4 @@ public ref class Test {};
 
 L'output relativo a questo esempio è: **Il tag finale 'member' non corrisponde al tag iniziale 'summary'** .
 
-The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.
+Il problema di questo esempio è che il tag di fine per \<> di riepilogo non è stato formattato correttamente e che il compilatore non lo riconosce come \<di riepilogo > tag di fine.  Il \<membro > Tag è incorporato nel file con estensione xdc dal compilatore in ogni compilazione/doc.  Il problema in questo caso è che il tag di fine \</member >, non corrisponde al tag di inizio precedente elaborato dal compilatore (\<> di riepilogo.

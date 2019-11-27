@@ -15,13 +15,13 @@ ms.locfileid: "74393575"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 
-Declares a structure type having the specified *field-declarations*. Each field must be a valid data definition. Same as [STRUC](../../assembler/masm/struc.md).
+Dichiara un tipo di struttura con le *dichiarazioni di campo*specificate. Ogni campo deve essere una definizione di dati valida. Uguale a [strut](../../assembler/masm/struc.md).
 
 ## <a name="syntax"></a>Sintassi
 
-> *name* **STRUCT** ⟦*alignment*⟧ ⟦ __,__ **NONUNIQUE**⟧ *field-declarations*\
-> *name* **ENDS**
+> *nome* **struct** ⟦*allineamento*⟧ ⟦ __,__ *dichiarazioni di campo* ⟧ non **univoche**\
+> *nome* **termina**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Guida di riferimento alle direttive](../../assembler/masm/directives-reference.md)

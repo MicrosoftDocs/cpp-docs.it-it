@@ -1,5 +1,5 @@
 ---
-title: Portabilità ai limiti ABI
+title: Portabilità in base ai limiti ABI
 description: Rendere C++ Flat le interfacce alle convenzioni di chiamata C ai limiti dell'interfaccia binaria.
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74303316"
 ---
-# <a name="portability-at-abi-boundaries"></a>Portabilità ai limiti ABI
+# <a name="portability-at-abi-boundaries"></a>Portabilità in base ai limiti ABI
 
 Usare i tipi e le convenzioni sufficientemente portabili nei limiti dell'interfaccia binaria. Un "tipo portabile" è un tipo incorporato C o uno struct che contiene solo tipi incorporati C. I tipi di classe possono essere utilizzati solo quando il chiamante e il chiamato accettano il layout, la convenzione di chiamata e così via. Questo è possibile solo quando entrambi sono compilati con le stesse impostazioni del compilatore e del compilatore.
 

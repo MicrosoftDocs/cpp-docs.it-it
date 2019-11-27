@@ -45,7 +45,7 @@ Per altre informazioni, vedere [Usare multitargeting nativo in Visual Studio per
 
 ## <a name="in-this-section"></a>In questa sezione
 
-|Titolo|description|
+|Titolo|Descrizione|
 |-----------|-----------------|
 |[Aggiornamento C++ di progetti da versioni precedenti di Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Come aggiornare la codebase a Visual Studio 2019 e V142 del compilatore.|
 |[Strumenti IDE per l' C++ aggiornamento del codice](ide-tools-for-upgrading-code.md)|Funzionalità IDE utili che consentono di eseguire il processo di aggiornamento.|
@@ -54,7 +54,7 @@ Per altre informazioni, vedere [Usare multitargeting nativo in Visual Studio per
 |[Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md)|Elenco di tutte le modifiche apportate alle C++ librerie Microsoft e agli strumenti di compilazione da Visual Studio 2003 a 2015 che potrebbero richiedere modifiche al codice.|
 |[Visual C++: novità dalla versione 2003 alla 2015](visual-cpp-what-s-new-2003-through-2015.md)|Tutte le informazioni sulle novità per Microsoft C++ da visual Studio 2003 a visual studio 2015.|
 |[Porting e aggiornamento: esempi e case study](porting-and-upgrading-examples-and-case-studies.md)|In questa sezione viene illustrato il processo di porting e aggiornamento di vari esempi e applicazioni e vengono descritte le esperienze e i risultati. Questi articoli forniscono un'idea di ciò che è necessario per il processo di porting e aggiornamento. Vengono inoltre presentati suggerimenti e indicazioni per l'aggiornamento e viene descritto come risolvere errori specifici.|
-|[Trasferimento Universal Windows Platform](porting-to-the-universal-windows-platform-cpp.md)|Contiene informazioni sul porting di codice a Windows 10|
+|[Porting to the Universal Windows Platform](porting-to-the-universal-windows-platform-cpp.md) (Conversione in Universal Windows Platform)|Contiene informazioni sul porting di codice a Windows 10|
 |[Introduzione a Visual C++ per utenti UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fornisce informazioni per gli utenti UNIX che non hanno familiarità con Visual C++ e vogliono aumentare la produttività con questo linguaggio.|
 |[Esecuzione di programmi Linux in Windows](porting-from-unix-to-win32.md)|Illustra le opzioni per la migrazione di applicazioni UNIX a Windows.|
 

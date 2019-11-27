@@ -12,19 +12,19 @@ ms.locfileid: "74245182"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl per incapsulamento in fase di compilazione (C++ moderno)
 
-The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
+L' *idioma magnaccia* è una tecnica C++ moderna per nascondere l'implementazione, ridurre al minimo l'accoppiamento e separare le interfacce. Pimpl è breve per "puntatore all'implementazione". È possibile che l'utente abbia già familiarità con il concetto ma lo conosca con altri nomi, ad esempio Cheshire Cat o il linguaggio del firewall del compilatore.
 
-## <a name="why-use-pimpl"></a>Why use pimpl?
+## <a name="why-use-pimpl"></a>Perché usare pimpl?
 
-Here's how the pimpl idiom can improve the software development lifecycle:
+Ecco in che modo l'idioma magnaccia può migliorare il ciclo di vita dello sviluppo del software:
 
-- Minimization of compilation dependencies.
+- Riduzione delle dipendenze di compilazione.
 
-- Separation of interface and implementation.
+- Separazione dell'interfaccia e dell'implementazione.
 
-- Portability.
+- Portabilità.
 
-## <a name="pimpl-header"></a>Pimpl header
+## <a name="pimpl-header"></a>Intestazione pimpl
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
+L'idioma pimpl evita di ricompilare le cascate e i layout degli oggetti fragili. È particolarmente adatto per i tipi più diffusi (transitivamente).
 
-## <a name="pimpl-implementation"></a>Pimpl implementation
+## <a name="pimpl-implementation"></a>Implementazione di pimpl
 
-Define the `impl` class in the .cpp file.
+Definire la classe `impl` nel file con estensione cpp.
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>Procedure consigliate
 
-Consider whether to add support for non-throwing swap specialization.
+Valutare se aggiungere il supporto per la specializzazione di swap senza generazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[BentornatiC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

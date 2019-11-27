@@ -40,7 +40,7 @@ Valore che indica il tipo di dati di un oggetto Parameter. Per un elenco dei val
 *m_varValue*<br/>
 Valore del parametro archiviato in un oggetto [COleVariant](../../mfc/reference/colevariant-class.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 I riferimenti a primary e Secondary sopra indicati indicano il modo in cui le informazioni vengono restituite dalla funzione membro [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) nella classe `CDaoQueryDef`.
 
@@ -55,7 +55,7 @@ Le informazioni recuperate dalla funzione membro [CDaoQueryDef:: GetParameterInf
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdao.h
+**Intestazione:** AFXDAO. h
 
 ## <a name="see-also"></a>Vedere anche
 

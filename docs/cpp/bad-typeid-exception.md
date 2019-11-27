@@ -17,7 +17,7 @@ ms.locfileid: "74245923"
 ---
 # <a name="bad_typeid-exception"></a>bad_typeid (eccezione)
 
-The **bad_typeid** exception is thrown by the [typeid operator](../cpp/typeid-operator.md) when the operand for **typeid** is a NULL pointer.
+L'eccezione **bad_typeid** viene generata dall' [operatore typeid](../cpp/typeid-operator.md) quando l'operando per **typeid** è un puntatore null.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,7 +28,7 @@ catch (bad_typeid)
 
 ## <a name="remarks"></a>Note
 
-The interface for **bad_typeid** is:
+L'interfaccia per **bad_typeid** è:
 
 ```cpp
 class bad_typeid : public exception
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-The following example shows the **typeid** operator throwing a **bad_typeid** exception.
+Nell'esempio seguente viene illustrato l'operatore **typeid** che genera un'eccezione **bad_typeid** .
 
 ```cpp
 // expre_bad_typeid.cpp

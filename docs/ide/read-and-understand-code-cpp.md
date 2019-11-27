@@ -25,11 +25,11 @@ Visual Studio colora gli elementi della sintassi per distinguere tra loro i tipi
 
 È possibile personalizzare i colori digitando "Tipi di carattere" in **Avvio veloce** e quindi scegliendo **Tipi di carattere e colori**. Nella finestra di dialogo **Tipi di carattere e colori** scorrere verso il basso fino alle opzioni di C/C++, quindi scegliere un tipo di carattere e/o un colore personalizzato.
 
-## <a name="outlining"></a>struttura
+## <a name="outlining"></a>Struttura
 
 Fare clic con il pulsante destro del mouse in un punto qualsiasi di un file del codice sorgente e scegliere **Struttura** per comprimere o espandere i blocchi di codice e/o le aree personalizzate e individuare più facilmente solo il codice che interessa. Per altre informazioni, vedere [Struttura](/visualstudio/ide/outlining).
 
-![Struttura&#43; &#43; C](../ide/media/vs2015_cpp_outlining.png "struttura")
+![Struttura&#43; &#43; C](../ide/media/vs2015_cpp_outlining.png "Struttura")
 
 Quando si posiziona il cursore davanti a una parentesi graffa, '{' o '}', l'editor evidenzia la controparte corrispondente.
 

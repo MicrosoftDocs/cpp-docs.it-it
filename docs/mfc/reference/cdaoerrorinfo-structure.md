@@ -48,7 +48,7 @@ Percorso completo di un file della Guida di Microsoft Windows. Per informazioni 
 *m_lHelpContext*<br/>
 ID del contesto per un argomento in un file della Guida di Microsoft Windows. Per informazioni dettagliate, vedere l'argomento "HelpContext, fileguided Properties" nella Guida di DAO.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 MFC non incapsula gli oggetti di errore DAO in una classe. Al contrario, la classe [CDaoException](../../mfc/reference/cdaoexception-class.md) fornisce un'interfaccia per accedere alla raccolta di errori contenuta nell'oggetto `DBEngine` DAO, l'oggetto che contiene anche tutte le aree di lavoro. Quando un'operazione DAO MFC genera un oggetto `CDaoException` intercettato, MFC compila una struttura di `CDaoErrorInfo` e la archivia nel membro [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) dell'oggetto eccezione. Se si sceglie di chiamare direttamente DAO, è necessario chiamare manualmente la funzione membro [GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) dell'oggetto Exception per riempire `m_pErrorInfo`.)
 
@@ -58,7 +58,7 @@ Le informazioni recuperate dalla funzione membro [CDaoException:: GetErrorInfo](
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdao.h
+**Intestazione:** AFXDAO. h
 
 ## <a name="see-also"></a>Vedere anche
 

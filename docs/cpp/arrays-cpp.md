@@ -15,11 +15,11 @@ ms.locfileid: "74188995"
 ---
 # <a name="arrays-c"></a>Matrici (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory but provide much greater type safety along with iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers (Modern C++)](containers-modern-cpp.md).
+Una matrice è una sequenza di oggetti dello stesso tipo che occupano un'area di memoria contigua. Le matrici di tipo C tradizionali sono l'origine di molti bug, ma sono ancora comuni, soprattutto nelle basi di codice precedenti. In Modern C++è consigliabile usare [std:: Vector](../standard-library/vector-class.md) o [std:: Array](../standard-library/array-class-stl.md) anziché le matrici di tipo C descritte in questa sezione. Entrambi i tipi di libreria standard archiviano gli elementi come un blocco di memoria contiguo, ma garantiscono una maggiore indipendenza dai tipi insieme agli iteratori che fanno riferimento a una posizione valida all'interno della sequenza. Per ulteriori informazioni, vedere [contenitori (moderni C++)](containers-modern-cpp.md).
 
-## <a name="stack-declarations"></a>Stack declarations
+## <a name="stack-declarations"></a>Dichiarazioni dello stack
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression because the compiler has to know how much stack space to allocate; it cannot use a value computed at run-time. Each element in the array is assigned a default value of 0. If you do not assign a default value, each element will initially contain whatever random values happen to be at that location.
+In una C++ dichiarazione di matrice, la dimensione della matrice viene specificata dopo il nome della variabile, non dopo il nome del tipo come in altri linguaggi. Nell'esempio seguente viene dichiarata una matrice di 1000 Double da allocare nello stack. Il numero di elementi deve essere specificato come valore letterale intero o in caso contrario come espressione costante perché il compilatore deve conoscere la quantità di spazio dello stack da allocare. non può utilizzare un valore calcolato in fase di esecuzione. A ogni elemento nella matrice viene assegnato il valore predefinito 0. Se non si assegna un valore predefinito, ogni elemento conterrà inizialmente tutti i valori casuali che si trovano in tale posizione.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the 0th element, and the last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+Il primo elemento della matrice è l'elemento 0A e l'ultimo elemento è l'elemento (*n*-1), dove *n* è il numero di elementi che la matrice può contenere. Il numero di elementi nella dichiarazione deve essere di un tipo integrale e deve essere maggiore di 0. È responsabilità dell'utente garantire che il programma non passi mai un valore all'operatore di pedice maggiore di `(size - 1)`.
 
-A zero-sized array is legal only when the array is the last field in a **struct** or **union** and when the Microsoft extensions (/Ze) are enabled.
+Una matrice di dimensioni zero è valida solo quando la matrice è l'ultimo campo in uno **struct** o un' **Unione** e quando le estensioni Microsoft (/Ze) sono abilitate.
 
-Stack-based arrays are faster to allocate and access than heap-based arrays, but the number of elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+Le matrici basate su stack sono più veloci da allocare e accedere alle matrici basate su heap, ma il numero di elementi non può essere così elevato da usare una quantità eccessiva di memoria dello stack. La quantità eccessiva dipende dal programma. È possibile usare gli strumenti di profilatura per determinare se una matrice è troppo grande.
 
-## <a name="heap-declarations"></a>Heap declarations
+## <a name="heap-declarations"></a>Dichiarazioni heap
 
-If you require an array that is too large to be allocated on the stack, or whose size cannot be known at compile time, you can allocate it on the heap with a [new\[\]](new-operator-cpp.md) expression. The operator returns a pointer to the first element. You can use the subscript operator with the pointer variable just as with a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It is your responsibility to ensure that:
+Se è necessaria una matrice troppo grande per essere allocata nello stack o le cui dimensioni non sono note in fase di compilazione, è possibile allocarla nell'heap con una nuova espressione [\[\]](new-operator-cpp.md) . L'operatore restituisce un puntatore al primo elemento. È possibile utilizzare l'operatore di indice con la variabile puntatore Analogamente a una matrice basata su stack. È inoltre possibile utilizzare l' [aritmetica dei puntatori](../c-language/pointer-arithmetic.md) per spostare il puntatore a tutti gli elementi arbitrari nella matrice. È responsabilità dell'utente verificare che:
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you do not increment or decrement the pointer address past the array bounds.
+- si mantiene sempre una copia dell'indirizzo del puntatore originale, in modo che sia possibile eliminare la memoria quando la matrice non è più necessaria.
+- non si incrementa o decrementa l'indirizzo del puntatore oltre i limiti della matrice.
 
-The following example shows how to define an array on the heap at run time, and how to access the array elements using the subscript operator or by using pointer arithmetic:
+Nell'esempio seguente viene illustrato come definire una matrice nell'heap in fase di esecuzione e come accedere agli elementi della matrice utilizzando l'operatore di indice o utilizzando l'aritmetica dei puntatori:
 
 ```cpp
 
@@ -117,7 +117,7 @@ int main()
 
 ## <a name="initializing-arrays"></a>Inizializzazione di matrici
 
-You can initialize an array in a loop, one element at a time, or in a single statement. The contents of the following two arrays are identical:
+È possibile inizializzare una matrice in un ciclo, un elemento alla volta o in un'unica istruzione. Il contenuto delle due matrici seguenti è identico:
 
 ```cpp
     int a[10];
@@ -129,11 +129,11 @@ You can initialize an array in a loop, one element at a time, or in a single sta
     int b[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 ```
 
-## <a name="passing-arrays-to-functions"></a>Passing arrays to functions
+## <a name="passing-arrays-to-functions"></a>Passaggio di matrici a funzioni
 
-When an array is passed to a function, it is passed as a pointer to the first element. This is true for both stack-based and heap-based arrays. The pointer contains no additional size or type information. This behavior is called *pointer decay*. When you pass an array to a function, you must always specify the number of elements in a separate parameter. This behavior also implies that the array elements are not copied when the array is passed to a function. To prevent the function from modifying the elements, specify the parameter as a pointer to **const** elements.
+Quando una matrice viene passata a una funzione, viene passata come puntatore al primo elemento. Questo vale sia per le matrici basate su stack sia per quelle basate su heap. Il puntatore non contiene informazioni aggiuntive sul tipo o sulle dimensioni. Questo comportamento viene definito *decadimento del puntatore*. Quando si passa una matrice a una funzione, è sempre necessario specificare il numero di elementi in un parametro separato. Questo comportamento implica anche che gli elementi della matrice non vengano copiati quando la matrice viene passata a una funzione. Per impedire che la funzione modifichi gli elementi, specificare il parametro come puntatore a elementi **const** .
 
-The following example shows a function that accepts an array and a length. The pointer points to the original array, not a copy. Because the parameter is not **const**, the function can modify the array elements.
+Nell'esempio seguente viene illustrata una funzione che accetta una matrice e una lunghezza. Il puntatore punta alla matrice originale, non a una copia. Poiché il parametro non è **const**, la funzione può modificare gli elementi della matrice.
 
 ```cpp
 void process(double p*, const size_t len)
@@ -146,13 +146,13 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare the array as const to make it read-only within the function block:
+Dichiarare la matrice come const per renderla di sola lettura all'interno del blocco della funzione:
 
 ```cpp
 void process(const double p*, const size_t len);
 ```
 
-The same function can also be declared in these ways, with no change in behavior. The array is still passed as a pointer to the first element:
+La stessa funzione può anche essere dichiarata in questi modi, senza alcuna modifica del comportamento. La matrice viene ancora passata come puntatore al primo elemento:
 
 ```cpp
 // Unsized array
@@ -162,7 +162,7 @@ void process(const double p[] const size_t len);
 void process(const double p[1000], const size_t len);
 ```
 
-## <a name="multidimensional-arrays"></a>Multidimensional arrays
+## <a name="multidimensional-arrays"></a>Matrici multidimensionali
 
 Le matrici generate da altre matrici sono matrici multidimensionali. Queste matrici multidimensionali sono specificate posizionando più espressioni costanti tra parentesi in sequenza. Ad esempio, considerare la dichiarazione riportata di seguito:
 
@@ -170,12 +170,12 @@ Le matrici generate da altre matrici sono matrici multidimensionali. Queste matr
 int i2[5][7];
 ```
 
-It specifies an array of type **int**, conceptually arranged in a two-dimensional matrix of five rows and seven columns, as shown in the following figure:
+Specifica una matrice di tipo **int**, concettualmente disposta in una matrice bidimensionale di cinque righe e sette colonne, come illustrato nella figura seguente:
 
-![Conceptual layout of a multi&#45;dimensional array](../cpp/media/vc38rc1.gif "Conceptual layout of a multi&#45;dimensional array") <br/>
+![Layout concettuale di una&#45;matrice multidimensionale](../cpp/media/vc38rc1.gif "Layout concettuale di una&#45;matrice multidimensionale") <br/>
 Layout concettuale di una matrice multidimensionale
 
-In declarations of multidimensioned arrays that have an initializer list (as described in [Initializers](../cpp/initializers.md)), the constant expression that specifies the bounds for the first dimension can be omitted. Esempio:
+Nelle dichiarazioni di matrici multidimensionali che dispongono di un elenco di inizializzatori (come descritto in [inizializzatori](../cpp/initializers.md)), l'espressione costante che specifica i limiti della prima dimensione può essere omessa. Ad esempio:
 
 ```cpp
 // arrays2.cpp
@@ -191,7 +191,7 @@ double TransportCosts[][cMarkets] = {
 
 La dichiarazione precedente definisce una matrice costituita da tre righe e da quattro colonne. Le righe rappresentano le ditte e le colonne rappresentano i mercati di destinazione delle ditte. I valori sono i costi di trasporto dalle ditte ai mercati. La prima dimensione della matrice viene lasciata fuori, ma il compilatore la completa esaminando l'inizializzatore.
 
-Use of the indirection operator (*) on an n-dimensional array type yields an n-1 dimensional array. If n is 1, a scalar (or array element) is yielded.
+L'uso dell'operatore di riferimento indiretto (*) su un tipo di matrice n-dimensionale produce una matrice di n-1 dimensionale. Se n è 1, viene generato un valore scalare (o elemento di matrice).
 
 Le matrici C++ sono archiviate per lunghezza di riga. L'ordine per lunghezza di riga significa che l'ultimo indice varia più velocemente.
 
@@ -283,7 +283,7 @@ int main()
 
 Il primo elemento `aPoint` viene costruito usando il costruttore `Point( int, int )`; i due elementi rimanenti vengono costruiti usando il costruttore predefinito.
 
-Static member arrays (whether **const** or not) can be initialized in their definitions (outside the class declaration). Esempio:
+Le matrici di membri statiche, sia **const** che non possono essere inizializzate nelle rispettive definizioni (all'esterno della dichiarazione di classe). Ad esempio:
 
 ```cpp
 // initializing_arrays2.cpp
@@ -301,7 +301,7 @@ int main()
 }
 ```
 
-## <a name="accessing-array-elements"></a>Accessing array elements
+## <a name="accessing-array-elements"></a>Accesso agli elementi della matrice
 
 È possibile accedere ai singoli elementi di una matrice tramite l'operatore di indice di matrice (`[ ]`). Se una matrice unidimensionale viene utilizzata in un'espressione senza indice, il nome della matrice restituisce un puntatore al primo elemento della matrice.
 
@@ -336,15 +336,15 @@ int main() {
 }
 ```
 
-In the preceding code, `multi` is a three-dimensional array of type **double**. The `p2multi` pointer points to an array of type **double** of size three. In questo esempio la matrice viene utilizzata con uno, due e tre indici. Sebbene sia più comune specificare tutti gli indici, come nell'istruzione `cout`, è talvolta utile selezionare un sottoinsieme specifico di elementi della matrice, come illustrato nelle istruzioni che seguono `cout`.
+Nel codice precedente `multi` è una matrice tridimensionale di tipo **Double**. Il puntatore `p2multi` punta a una matrice di tipo **Double** di dimensioni tre. In questo esempio la matrice viene utilizzata con uno, due e tre indici. Sebbene sia più comune specificare tutti gli indici, come nell'istruzione `cout`, è talvolta utile selezionare un sottoinsieme specifico di elementi della matrice, come illustrato nelle istruzioni che seguono `cout`.
 
-## <a name="overloading-subscript-operator"></a>Overloading subscript operator
+## <a name="overloading-subscript-operator"></a>Overload dell'operatore pedice
 
-Like other operators, the subscript operator (`[]`) can be redefined by the user. Il comportamento predefinito dell'operatore di indice, se non sottoposto a overload, è di combinare il nome della matrice e l'indice utilizzando il seguente metodo:
+Analogamente ad altri operatori, l'operatore di indice (`[]`) può essere ridefinito dall'utente. Il comportamento predefinito dell'operatore di indice, se non sottoposto a overload, è di combinare il nome della matrice e l'indice utilizzando il seguente metodo:
 
 `*((array_name) + (subscript))`
 
-Come in qualsiasi aggiunta che include i tipi puntatore, il ridimensionamento viene eseguito automaticamente per regolare le dimensioni del tipo. Therefore, the resultant value is not *n* bytes from the origin of array-name; rather, it is the *n*th element of the array. For more information about this conversion, see [Additive operators](additive-operators-plus-and.md).
+Come in qualsiasi aggiunta che include i tipi puntatore, il ridimensionamento viene eseguito automaticamente per regolare le dimensioni del tipo. Pertanto, il valore risultante non è *n* byte dall'origine di array-name; è invece l'elemento *n*della matrice. Per ulteriori informazioni su questa conversione, vedere [operatori additivi](additive-operators-plus-and.md).
 
 Analogamente, per le matrici multidimensionali, l'indirizzo viene derivato utilizzando il seguente metodo:
 
@@ -352,14 +352,14 @@ Analogamente, per le matrici multidimensionali, l'indirizzo viene derivato utili
 
 ## <a name="arrays-in-expressions"></a>Matrici nelle espressioni
 
-Quando un identificatore di un tipo di matrice appare in un'espressione diversa da `sizeof`, indirizzo di (`&`) o come inizializzazione di un riferimento, viene convertito in un puntatore al primo elemento della matrice. Esempio:
+Quando un identificatore di un tipo di matrice viene visualizzato in un'espressione diversa da `sizeof`, address-of (`&`) o l'inizializzazione di un riferimento, viene convertito in un puntatore al primo elemento della matrice. Ad esempio:
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-Il puntatore `psz` fa riferimento al primo elemento della matrice `szError1`. Arrays, unlike pointers, are not modifiable l-values. Pertanto, la seguente assegnazione non è valida:
+Il puntatore `psz` fa riferimento al primo elemento della matrice `szError1`. Le matrici, a differenza dei puntatori, non sono valori l-value modificabili. Pertanto, la seguente assegnazione non è valida:
 
 ```cpp
 szError1 = psz;
@@ -367,4 +367,4 @@ szError1 = psz;
 
 ## <a name="see-also"></a>Vedere anche
 
-[std::array](../standard-library/array-class-stl.md)
+[STD:: Array](../standard-library/array-class-stl.md)

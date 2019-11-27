@@ -43,11 +43,11 @@ Incapsulamento significa che C++ la classe `CWnd`, ad esempio, contiene una vari
 
 [CWinApp: classe Application](../mfc/cwinapp-the-application-class.md)
 
-[Modelli di documenti e processo di creazione documento/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md)
+[Modelli di documento e processo di creazione documento/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
 
-[Oggetti di Window](../mfc/window-objects.md)
+[Oggetti finestra](../mfc/window-objects.md)
 
 ## <a name="see-also"></a>Vedere anche
 

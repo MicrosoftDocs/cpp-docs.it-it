@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4522
+title: Avviso del compilatore (livello 3) C4522
 ms.date: 11/04/2016
 f1_keywords:
 - C4522
@@ -13,17 +13,17 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188962"
 ---
-# <a name="compiler-warning-level-3-c4522"></a>Compiler Warning (level 3) C4522
+# <a name="compiler-warning-level-3-c4522"></a>Avviso del compilatore (livello 3) C4522
 
-'class' : multiple assignment operators specified
+' Class ': specificati più operatori di assegnazione
 
-The class has multiple assignment operators of a single type. This warning is informational; the constructors are callable in your program.
+La classe dispone di più operatori di assegnazione di un singolo tipo. Questo avviso è informativo. i costruttori sono richiamabili nel programma.
 
-Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning.
+Usare il pragma [warning](../../preprocessor/warning.md) per non visualizzare questo avviso.
 
 ## <a name="example"></a>Esempio
 
-The following sample generates C4522.
+L'esempio seguente genera l'C4522.
 
 ```cpp
 // C4522.cpp

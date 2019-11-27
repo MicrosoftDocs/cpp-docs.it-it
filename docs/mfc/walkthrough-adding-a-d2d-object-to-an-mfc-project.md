@@ -30,7 +30,7 @@ Nella procedura dettagliata viene illustrato come eseguire queste attività:
 
 [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa procedura dettagliata, è necessario che Visual Studio sia installato con il carico di lavoro sviluppo di applicazioni **desktop con C++**  e il componente **Visual C++ MFC facoltativo per x86 e x64** .
 

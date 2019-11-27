@@ -55,13 +55,13 @@ Supporta le routine DFX DAO (record field exchange) utilizzate dalle classi di d
 Incapsula un handle per l'archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. gli oggetti `CLongBinary` vengono utilizzati per gestire oggetti dati di grandi dimensioni archiviati nelle tabelle di database.
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
-Wrapper per il tipo di automazione OLE **CURRENCY**, un tipo aritmetico a virgola fissa, con 15 cifre prima del separatore decimale e 4 cifre dopo.
+Wrapper per la **valuta**del tipo di automazione OLE, un tipo aritmetico a virgola fissa, con 15 cifre prima del separatore decimale e 4 cifre dopo.
 
 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-Wrapper per il tipo di automazione OLE **DATA**. Rappresenta valori di data e ora.
+Wrapper per la **Data**del tipo di automazione OLE. Rappresenta valori di data e ora.
 
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
-Wrapper per il tipo di automazione OLE **VARIANT**. I dati in **VARIANT** possono essere archiviati in numerosi formati.
+Wrapper per la **variante**del tipo di automazione OLE. I dati nei **Variant**possono essere archiviati in molti formati.
 
 ## <a name="see-also"></a>Vedere anche
 
