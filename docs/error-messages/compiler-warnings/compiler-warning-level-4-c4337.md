@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-ms.openlocfilehash: 2bfa5f9b30fa0325df1c3655ded53ab0525449c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86d03e30e2776a8dae4cf56032c45d0022ca01d
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400838"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683301"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>Avviso del compilatore (livello 4) C4337
 
-libreria dei tipi di riferimenti incrociati "typelib1" in "typelib2" viene automaticamente importata
+importazione automatica della libreria dei tipi ' typelib1' a cui viene fatto riferimento incrociato in ' typelib2'
 
-L'attributo auto_search del [la direttiva #import](../../preprocessor/hash-import-directive-cpp.md) ha causato una libreria dei tipi da importare in modo implicito.
+L'attributo auto_search della [direttiva #import](../../preprocessor/hash-import-directive-cpp.md) ha causato l'importazione implicita di una libreria dei tipi.
 
-Date due librerie sul disco creato da due file seguenti (compilati con midl.exe):
+Date due librerie dei tipi su disco create dai due file seguenti (compilati con MIDL. exe):
 
 ```
 // C4337a.idl
@@ -38,7 +38,7 @@ library C4337aLib
 };
 ```
 
-e quindi il secondo file. idl,
+quindi, il secondo file IDL,
 
 ```
 // C4337b.idl
@@ -58,9 +58,9 @@ library C4337bLib
 };
 ```
 
-L'esempio seguente genera l'errore C4337:
+L'esempio seguente genera l'C4337:
 
-```
+```cpp
 // C4337.cpp
 // compile with: /W4 /LD
 #import "c4337b.tlb" auto_search   // C4337
