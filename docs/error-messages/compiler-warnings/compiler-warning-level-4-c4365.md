@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4365
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
-ms.openlocfilehash: 3f9f6df9f72608f0c1197e0602c3f54548f8efcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 554ead2d26a090eb1ffc86e532841143483b365a
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404000"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683030"
 ---
 # <a name="compiler-warning-level-4-c4365"></a>Avviso del compilatore (livello 4) C4365
 
-'action': conversione da 'type_1' a 'type_2', mancata corrispondenza tra signed e unsigned
+' Action ': conversione da' type_1' a' type_2', mancata corrispondenza tra signed e unsigned
 
 Ad esempio, si è provato a convertire un valore senza segno in un valore con segno.
 
-C4365 è disattivata per impostazione predefinita.  Per altre informazioni, vedere [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+C4365 è disattivato per impostazione predefinita.  Per altre informazioni, vedere [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4365.
+L'esempio seguente genera l'C4365.
 
-```
+```cpp
 // C4365.cpp
 // compile with: /W4
 #pragma warning(default:4365)

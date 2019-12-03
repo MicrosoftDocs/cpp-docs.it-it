@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b8f11b55cf6ef2df601c125a1b6629aa0554da
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220990"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683189"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>Avviso del compilatore (livello 4) C4512
 
@@ -29,15 +29,15 @@ Per evitare la visualizzazione dell'avviso C4512 per il codice, sono possibili t
 
 - Definire in modo esplicito un operatore di assegnazione per la classe.
 
-- Rimuovere **const** o l'operatore di riferimento dell'elemento dati nella classe.
+- Rimuovere **const** o l'operatore Reference dall'elemento dati nella classe.
 
-- Usare il #pragma [avviso](../../preprocessor/warning.md) istruzione per eliminare l'avviso.
+- Utilizzare l'istruzione #pragma [warning](../../preprocessor/warning.md) per disattivare l'avviso.
 
 ## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene generato l'errore C4512.
 
-```
+```cpp
 // C4512.cpp
 // compile with: /EHsc /W4
 // processor: x86

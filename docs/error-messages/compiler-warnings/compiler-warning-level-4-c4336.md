@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: 4946b932fa897dab057e430f16c781e2d06bebd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c4a25618c1afcf93704b161483bc4c0a6e16a0
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400851"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683315"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>Avviso del compilatore (livello 4) C4336
 
-importare il tipo di riferimenti incrociato della libreria "type_lib1" prima di importare 'lib_tipi2'
+importa la libreria dei tipi a cui si fa riferimento incrociato ' type_lib1' prima di importare ' type_lib2'
 
-Una libreria dei tipi viene fatto riferimento con il [#import](../../preprocessor/hash-import-directive-cpp.md) direttiva. Tuttavia, la libreria dei tipi contiene un riferimento a un'altra libreria dei tipi che non esiste alcun riferimento con `#import`. Quest'altro file con estensione tlb è stato trovato dal compilatore.
+È stato fatto riferimento a una libreria dei tipi con la direttiva [#import](../../preprocessor/hash-import-directive-cpp.md) . Tuttavia, la libreria dei tipi contiene un riferimento a un'altra libreria dei tipi a cui non è stato fatto riferimento con `#import`. Questo altro file con estensione tlb è stato trovato dal compilatore.
 
-Date due librerie sul disco creato da due file seguenti (compilati con midl.exe):
+Date due librerie dei tipi su disco create dai due file seguenti (compilati con MIDL. exe):
 
 ```
 // c4336a.idl
@@ -34,7 +34,7 @@ library c4336aLib
 };
 ```
 
-La libreria dei tipi secondo:
+Seconda libreria dei tipi:
 
 ```
 // c4336b.idl
@@ -50,9 +50,9 @@ library C4336bLib
 };
 ```
 
-L'esempio seguente genera l'errore C4336:
+L'esempio seguente genera l'C4336:
 
-```
+```cpp
 // C4336.cpp
 // compile with: /W4 /LD
 // #import "C4336a.tlb"

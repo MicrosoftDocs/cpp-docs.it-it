@@ -1,40 +1,41 @@
 ---
 title: Avviso degli strumenti del linker LNK4098
-ms.date: 03/26/2019
+description: Descrive il modo in cui le librerie incompatibili provocano l'avviso degli strumenti del linker LNK4098 e come usare/NODEFAULTLIB per risolverlo.
+ms.date: 12/02/2019
 f1_keywords:
 - LNK4098
 helpviewer_keywords:
 - LNK4098
 ms.assetid: 1f1b1408-1316-4e34-80f5-6a02f2db0ac1
-ms.openlocfilehash: 66cf1a1bc75405ffc9bae8158bfc8682776a8228
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d0c7da0614651a98d5ed4f3bd3676c7d837ce67
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408095"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682935"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>Avviso degli strumenti del linker LNK4098
 
-> DEFAULTLIB '*library*' è in conflitto con l'utilizzo di altre librerie; usare /NODEFAULTLIB:*libreria*
+> DEFAULTLIB "*Library*" è in conflitto con l'uso di altre librerie; usare/NODEFAULTLIB:*Library*
 
-Si sta cercando di collegarsi alle librerie incompatibili.
+Si sta tentando di eseguire il collegamento con librerie incompatibili.
 
 > [!NOTE]
-> Le librerie di runtime ora contengono direttive per impedire la combinazione di tipi diversi. Si riceverà questo avviso se si prova a usare diversi tipi o eseguire il debug e le versioni non di debug della libreria run-time nello stesso programma. Ad esempio, se è stato compilato un file da utilizzare uno dei tipi della libreria run-time e un altro file da utilizzare un altro tipo (ad esempio tra debug e delle vendite al dettaglio) e tentato il collegamento, viene visualizzato questo avviso. È necessario compilare tutti i file di origine per usare la stessa libreria di runtime. Per altre informazioni, vedere la [/MD, /MT, /LD (utilizzo della libreria Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md) opzioni del compilatore.
+> Le librerie di runtime contengono ora direttive per impedire la combinazione di tipi diversi. Questo avviso viene visualizzato se si tenta di utilizzare tipi diversi o versioni di debug e non di debug della libreria di runtime nello stesso programma. Se, ad esempio, è stato compilato un file per usare un tipo di libreria di runtime e un altro file per usare un altro tipo (ad esempio, debug rispetto al dettaglio) e si è tentato di collegarlo, verrà visualizzato questo avviso. È necessario compilare tutti i file di origine per utilizzare la stessa libreria di Runtime. Per ulteriori informazioni, vedere le opzioni del compilatore [/MD,/MT,/LD (use Run-Time Library)](../../build/reference/md-mt-ld-use-run-time-library.md) .
 
-È possibile usare l'opzione del linker [/verbose: lib](../../build/reference/verbose-print-progress-messages.md) passa a Trova le librerie cercato dal linker. Ad esempio, quando il file eseguibile Usa le librerie di runtime a thread multipli, non di debug, l'elenco riportato dovrebbe includere LIBCMT. lib e non LIBCMTD. lib, Msvcrt. lib o MSVCRTD. lib. È possibile indicare al linker di ignorare le librerie di runtime non corrette usando [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) per ogni raccolta a cui si desidera ignorare.
+È possibile usare l'opzione [/verbose: lib](../../build/reference/verbose-print-progress-messages.md) del linker per individuare le librerie a cui il linker esegue la ricerca. Ad esempio, quando il file eseguibile usa le librerie di runtime multithread non di debug, l'elenco segnalato deve includere LIBCMT. lib e non LIBCMTD. lib, MSVCRT. lib o MSVCRTD. lib. È possibile indicare al linker di ignorare le librerie di runtime non corrette usando [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) per ogni libreria che si desidera ignorare.
 
-La tabella seguente illustra le librerie a cui devono essere ignorate in base alla quale libreria di runtime da usare. Nella riga di comando, usare uno **/NODEFAULTLIB** opzione per tutte le librerie da ignorare. Nell'IDE di Visual Studio, separare le librerie da ignorare da punti e virgola nel **Ignora librerie predefinite specifiche** proprietà.
+Nella tabella seguente vengono illustrate le librerie che devono essere ignorate a seconda della libreria di runtime che si desidera utilizzare. Nella riga di comando usare un'opzione **/NODEFAULTLIB** per ogni libreria da ignorare. Nell'IDE di Visual Studio separare le librerie da ignorare con i punti e virgola nella proprietà **Ignora librerie predefinite specifiche** .
 
-| Usare questa libreria run-time | Ignora queste librerie |
+| Per usare questa libreria di runtime | Ignora queste librerie |
 |-----------------------------------|----------------------------|
-| Multithreaded (libcmt.lib) | msvcrt.lib; libcmtd.lib; msvcrtd.lib |
-| Multithreaded using DLL (msvcrt.lib) | libcmt.lib; libcmtd.lib; msvcrtd.lib |
-| Debug Multithreaded (libcmtd.lib) | libcmt.lib; msvcrt.lib; msvcrtd.lib |
-| Debug Multithreaded using DLL (msvcrtd.lib) | libcmt.lib; msvcrt.lib; libcmtd.lib |
+| Multithreading (LIBCMT. lib) | Msvcrt. lib; libcmtd. lib; msvcrtd. lib |
+| Multithreading con DLL (Msvcrt. lib) | LIBCMT. lib; libcmtd. lib; msvcrtd. lib |
+| Debug multithreading (libcmtd. lib) | LIBCMT. lib; Msvcrt. lib; msvcrtd. lib |
+| Eseguire il debug di multithreading tramite DLL (msvcrtd. lib) | LIBCMT. lib; Msvcrt. lib; libcmtd. lib |
 
-Ad esempio, se hai ricevuto questo messaggio di avviso e si desidera creare un file eseguibile che utilizza la versione DLL non di debug, delle librerie di runtime, è possibile usare le opzioni seguenti con il linker:
+Se ad esempio si è ricevuto questo avviso e si desidera creare un file eseguibile che utilizza la versione DLL non di debug delle librerie di runtime, è possibile utilizzare le opzioni seguenti con il linker:
 
 ```cmd
-/NODEFAULTLIB:libcmt.lib NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
+/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
 ```
