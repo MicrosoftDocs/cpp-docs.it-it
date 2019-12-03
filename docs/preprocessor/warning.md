@@ -1,5 +1,5 @@
 ---
-title: Pragma warning
+title: warning (pragma)
 ms.date: 08/29/2019
 f1_keywords:
 - warning_CPP
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 9a79f0c4a9eed6b62e42f056f9d1994b44b57297
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216467"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683350"
 ---
-# <a name="warning-pragma"></a>Pragma warning
+# <a name="warning-pragma"></a>warning (pragma)
 
 Consente la modifica selettiva del comportamento dei messaggi di avviso del compilatore.
 
 ## <a name="syntax"></a>Sintassi
 
 > **avviso #pragma (** \
-> &nbsp;&nbsp;&nbsp;&nbsp;*avviso-identificatore* **:** *Avviso-numero-elenco*\
-> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *avviso-identificatore* **:** *Avviso-numero-elenco* ...] **)** \
+> &nbsp;&nbsp;&nbsp;&nbsp;*warning-specifier* **:** *warning-number-list*\
+> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *warning-specifier* **:** *warning-number-list* ...] **)** \
 > **avviso #pragma (push** [ **,** *n* ] **)** \
 > **avviso #pragma (pop)**
 
@@ -37,8 +37,8 @@ Sono disponibili i seguenti parametri identificatore-avviso.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Applica il livello specificato agli avvisi specificati. Attiva anche un avviso specificato che è disattivato per impostazione predefinita.|
 |*default*|Reimposta il comportamento dell'avviso sul valore predefinito. Attiva anche un avviso specificato che è disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per ulteriori informazioni, vedere [avvisi del compilatore disattivati per impostazione predefinita](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*disable*|Non emettere i messaggi di avviso specificati.|
-|*error*|Segnala gli avvisi specificati come errori.|
+|*disabilitare*|Non emettere i messaggi di avviso specificati.|
+|*errore*|Segnala gli avvisi specificati come errori.|
 |*once*|Visualizza i messaggi specificati solo una volta.|
 |*sopprimere*|Inserisce lo stato corrente del pragma nello stack, disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che venga ripristinato lo stato del pragma.|
 
@@ -63,7 +63,7 @@ Questa direttiva è funzionalmente equivalente al codice seguente:
 
 Il compilatore aggiunge 4000 a qualsiasi numero di avviso compreso tra 0 e 999.
 
-Per i numeri di avviso compresi tra 4700 e 4999, che sono quelli associati alla generazione del codice, lo stato dell'avviso attivo al momento della rilevazione della parentesi graffa di apertura di una funzione da parte del compilatore sarà attivo per il resto della funzione. L'utilizzo del pragma **warning** nella funzione per modificare lo stato di un numero di avviso maggiore di 4699 ha effetto solo dopo la fine della funzione. Nell'esempio seguente viene illustrata la posizione corretta dei pragma **warning** per disabilitare un messaggio di avviso di generazione del codice e quindi ripristinarlo.
+Per i numeri di avviso nell'intervallo 4700-4999, che sono quelli associati alla generazione del codice, lo stato dell'avviso in vigore quando il compilatore rileva che la definizione di funzione sarà attiva per il resto della funzione. L'utilizzo del pragma **warning** nella funzione per modificare lo stato di un numero di avviso maggiore di 4699 ha effetto solo dopo la fine della funzione. Nell'esempio seguente viene illustrata la posizione corretta dei pragma **warning** per disabilitare un messaggio di avviso di generazione del codice e quindi ripristinarlo.
 
 ```cpp
 // pragma_warning.cpp

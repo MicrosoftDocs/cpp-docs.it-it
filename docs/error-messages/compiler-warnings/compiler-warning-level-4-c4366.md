@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-ms.openlocfilehash: 11fcb0070359201de39ca5f33c83d000e02f0835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18045377210b6c020786ad2ec2e003d0e764e4b5
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391556"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683268"
 ---
 # <a name="compiler-warning-level-4-c4366"></a>Avviso del compilatore (livello 4) C4366
 
-Il risultato dell'operatore 'operator' unario potrebbe essere non allineato
+Il risultato dell'operatore ' operator ' unario potrebbe essere non allineato
 
-Se un membro di struttura non è stato possibile mai essere allineato a causa della compressione, il compilatore genererà un avviso quando che indirizzo del membro viene assegnato a un puntatore allineato. Per impostazione predefinita, tutti i puntatori sono allineati.
+Se è possibile che un membro di una struttura non venga allineato a causa della compressione, il compilatore avvisirà quando l'indirizzo di tale membro verrà assegnato a un puntatore allineato. Per impostazione predefinita, tutti i puntatori sono allineati.
 
-Per risolvere C4366, modificare l'allineamento della struttura o il puntatore dichiarato con la [unaligned](../../cpp/unaligned.md) (parola chiave).
+Per risolvere C4366, modificare l'allineamento della struttura o dichiarare il puntatore con la parola chiave [__unaligned](../../cpp/unaligned.md) .
 
-Per altre informazioni, vedere unaligned e [pack](../../preprocessor/pack.md).
+Per ulteriori informazioni, vedere __unaligned e [Pack](../../preprocessor/pack.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4366.
+L'esempio seguente genera l'C4366.
 
-```
+```cpp
 // C4366.cpp
 // compile with: /W4 /c
 // processor: IPF x64

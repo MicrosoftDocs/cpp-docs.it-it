@@ -1,95 +1,93 @@
 ---
-title: Del compilatore (livello 3) avviso C4996
-ms.date: 11/17/2017
+title: Avviso del compilatore (livello 3) C4996
+description: Viene illustrato il motivo per cui viene visualizzato l'avviso del compilatore C4996 e vengono descritte le operazioni da eseguire.
+ms.date: 11/25/2019
 f1_keywords:
 - C4996
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401501"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683336"
 ---
-# <a name="compiler-warning-level-3-c4996"></a>Del compilatore (livello 3) avviso C4996
+# <a name="compiler-warning-level-3-c4996"></a>Avviso del compilatore (livello 3) C4996
 
-Il compilatore ha rilevato una dichiarazione deprecata. **Questo avviso è sempre un messaggio intenzionale dall'autore della raccolta o del file di intestazione inclusi che non è consigliabile usare il simbolo deprecato senza conoscere le conseguenze.** Il messaggio di avviso effettivo viene specificato il modificatore di deprecazione o nel sito della dichiarazione dell'attributo.
+Il codice usa una funzione, un membro di classe, una variabile o un TypeDef contrassegnato come *deprecato*. I simboli sono deprecati utilizzando un modificatore [__declspec (deprecato)](../../cpp/deprecated-cpp.md) o c++ 14 [\[\[deprecato\]\]](../../cpp/attributes.md) attributo. Il messaggio di avviso C4996 effettivo viene specificato dal modificatore `deprecated` o dall'attributo della dichiarazione.
 
-Si tratta di alcuni comuni messaggi C4996 generati dalla libreria di Runtime C e la libreria Standard, ma non un elenco esaustivo. Seguire i collegamenti o continuare a leggere per modi per risolvere il problema o per disattivare l'avviso.
-
-- [Il nome POSIX per questo elemento è deprecato. Usare invece il ISO C e C++ nome conforme: *new_name*. Vedere la Guida online per i dettagli.](#posix-function-names)
-
-- [Questa funzione o variabile potrebbe non essere sicuro. È consigliabile usare *safe_version* invece. Per disabilitare la deprecazione, usare \_CRT\_SECURE\_NO\_avvisi.  Vedere la Guida online per i dettagli.](#unsafe-crt-library-functions)
-
-- [' std::*nome_funzione*::\_Unchecked\_iteratori::\_Deprecate' chiamare per std::*nome_funzione*con parametri potenzialmente non sicuri: questa chiamata si basa su il chiamante per verificare che i valori passati siano corretti. Per disabilitare questo avviso, utilizzare -D_SCL_SECURE_NO_WARNINGS. Vedere la documentazione su come usare Visual C++ 'Iteratori verificati'](#unsafe-standard-library-functions)
-
-- [Questa funzione o variabile è stato sostituito dalla funzionalità di libreria o dal sistema operativo più recente. È consigliabile usare *new_item* invece. Vedere la Guida online per i dettagli.](#obsolete-crt-functions-and-variables)
-
-## <a name="cause"></a>Causa
-
-L'avviso C4996 si verifica quando il compilatore rileva una funzione o variabile contrassegnata come [deprecate](../../cpp/deprecated-cpp.md) con un `__declspec(deprecated)` modificatore, o quando si tenta di accedere a una funzione, membro di classe o un typedef che dispone di c++14 [ \[ \[deprecate\] \] ](../../cpp/attributes.md) attributo. È possibile usare la `__declspec(deprecated)` modificatore o `[[deprecated]]` attributo manualmente le librerie o file di intestazione per avvertire i client su funzioni obsolete, le variabili, membri o typedef.
+> [!IMPORTANT]
+> Questo avviso è sempre un messaggio intenzionale dell'autore del file di intestazione che dichiara il simbolo. Non usare il simbolo deprecato senza conoscere le conseguenze.
 
 ## <a name="remarks"></a>Note
 
-Molte funzioni, funzioni membro, modello funzioni e variabili globali nelle librerie di Visual Studio sono contrassegnate come *deprecato*. Queste funzioni sono deprecate perché può avere un nome preferito diverso, potrebbero non sicuri o avere varianti più sicure, o potrebbe essere diventato obsoleto. Numero di messaggi di deprecazione include una sostituzione suggerita per la funzione deprecata o una variabile globale.
+Molte funzioni, funzioni membro, funzioni di modello e variabili globali nelle librerie di Visual Studio sono *deprecate*. Alcune, ad esempio le funzioni POSIX, sono deprecate perché hanno un nome preferito diverso. Alcune funzioni della libreria di runtime C sono deprecate perché non sono sicure e hanno una variante più sicura. Altre sono deprecate perché sono obsolete. I messaggi di deprecazione includono in genere una sostituzione suggerita per la funzione o la variabile globale deprecata.
 
-Per risolvere questo problema, è generalmente consigliabile che modificare il codice per utilizzare invece il consigliato più sicure o aggiornate funzioni e variabili globali. Se è necessario usare le funzioni esistenti o le variabili per motivi di portabilità, il messaggio di avviso può essere disattivata.
+## <a name="turn-off-the-warning"></a>Disattiva avviso
 
-### <a name="to-turn-the-warning-off-without-fixing-the-issue"></a>Per disattivare l'avviso senza risoluzione del problema
+Per risolvere un problema C4996, in genere è consigliabile modificare il codice. Usare invece le funzioni suggerite e le variabili globali. Se è necessario usare le funzioni o le variabili esistenti per motivi di portabilità, è possibile disattivare l'avviso.
 
-È possibile disattivare l'avviso per una specifica riga di codice usando il [avviso](../../preprocessor/warning.md) pragma, `#pragma warning(suppress : 4996)`. È possibile anche disattivare l'avviso all'interno di un file usando il pragma warning, `#pragma warning(disable : 4996)`.
+Per disattivare l'avviso per una riga di codice specifica, usare il pragma [warning](../../preprocessor/warning.md) `#pragma warning(suppress : 4996)`.
 
-È possibile disattivare l'avviso a livello globale nelle compilazioni della riga di comando usando il **/wd4996** opzione della riga di comando.
+Per disattivare l'avviso all'interno di un file, utilizzare il pragma warning `#pragma warning(disable : 4996)`.
 
-Per disabilitare l'avviso per un intero progetto nell'IDE di Visual Studio:
+Per disattivare l'avviso a livello globale nelle compilazioni da riga di comando, usare l'opzione della riga di comando [/wd4996](../../build/reference/compiler-option-warning-level.md) .
 
-- Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per informazioni su come usare la finestra di dialogo Pagine delle proprietà, vedere [pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md).
-- Selezionare il **le proprietà di configurazione**, **C/C++**, **avanzate** pagina.
-- Modificare il **Disabilita avvisi specifici** proprietà da aggiungere `4996`. Scegli **OK** per applicare le modifiche.
+Per disattivare l'avviso per un intero progetto nell'IDE di Visual Studio:
 
-È anche possibile usare le macro del preprocessore per disattivare alcune classi specifiche di avvisi di deprecazione utilizzati nelle librerie. Queste macro sono descritti di seguito.
+1. Aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Per informazioni sull'utilizzo della finestra di dialogo Pagine delle proprietà, vedere [pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md).
+
+1. Selezionare le **proprietà di configurazione** > pagina **Avanzate** di **CC++ /**  > .
+
+1. Modificare la proprietà **Disabilita avvisi specifici** per aggiungere `4996`. Scegliere **OK** per applicare le modifiche.
+
+È anche possibile usare le macro del preprocessore per disattivare alcune classi specifiche di avvisi di deprecazione usati nelle librerie. Queste macro sono descritte di seguito.
 
 Per definire una macro del preprocessore in Visual Studio:
 
-- Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per informazioni su come usare la finestra di dialogo Pagine delle proprietà, vedere [pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md).
-- Espandere **le proprietà di configurazione > C/C++ > preprocessore**.
-- Nel **definizioni preprocessore** proprietà, aggiungere il nome della macro. Scegliere **OK** per salvare e ricompilare il progetto.
+1. Aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Per informazioni sull'utilizzo della finestra di dialogo Pagine delle proprietà, vedere [pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md).
 
-Per definire una macro solo in specifici file di origine, aggiungere una riga, ad esempio `#define EXAMPLE_MACRO_NAME` prima tutte le righe che include un file di intestazione.
+1. Espandere **proprietà di configurazione > ilC++ preprocessore C/>** .
 
-## <a name="specific-c4996-messages"></a>Specifici messaggi l'avviso C4996
+1. Nella proprietà **definizioni preprocessore** aggiungere il nome della macro. Scegliere **OK** per salvare e ricompilare il progetto.
 
-Ecco alcune delle origini comuni di C4996 avvisi ed errori.
+Per definire una macro solo in specifici file di origine, aggiungere una riga, ad esempio `#define EXAMPLE_MACRO_NAME` prima di qualsiasi riga che includa un file di intestazione.
 
-### <a name="posix-function-names"></a>Nomi delle funzioni POSIX
+Di seguito sono riportate alcune delle fonti comuni di avvisi ed errori di C4996:
 
-**Il nome POSIX per questo elemento è deprecato. Usare invece il ISO C e C++ nome conforme:** *new_name*. **Vedere la Guida online per informazioni dettagliate.**
+## <a name="posix-function-names"></a>Nomi di funzioni POSIX
 
-Microsoft è stato rinominato alcune funzioni POSIX in CRT deve essere conforme a C99 e C++11 03 regole per i nomi di funzione globale definito dall'implementazione. Solo i nomi POSIX originali sono deprecati, non le funzioni. Nella maggior parte dei casi, il carattere di sottolineatura iniziale è stato aggiunto al nome della funzione POSIX per creare un nome conforme allo standard. Il compilatore genera un avviso di deprecazione per il nome di funzione originali e suggerisce un nome preferito.
+**Il nome POSIX per questo elemento è deprecato. In alternativa, usare ISO C e C++ il nome conforme:** *New-Name*. **Per informazioni dettagliate, vedere la guida online.**
 
-Per risolvere questo problema, è in genere consigliabile che si modifica il codice per usare invece i nomi delle funzioni suggerita. Tuttavia, i nomi aggiornati sono specifiche di Microsoft. Se è necessario usare i nomi di funzione esistenti per motivi di portabilità, è possibile disattivare la visualizzazione degli avvisi. Le funzioni POSIX sono ancora disponibili nella libreria con i nomi originali.
+Microsoft ha rinominato alcune funzioni POSIX in CRT per conformarsi alle regole C99 e C++ 03 per i nomi delle funzioni globali definite dall'implementazione. Solo i nomi sono deprecati, non le funzioni. Nella maggior parte dei casi, un carattere di sottolineatura principale è stato aggiunto al nome della funzione POSIX per creare un nome conforme agli standard. Il compilatore genera un avviso di deprecazione per il nome della funzione originale e suggerisce il nome preferito.
 
-Per disattivare gli avvisi di deprecazione per queste funzioni, definire la macro del preprocessore  **\_CRT\_NONSTDC\_NO\_avvisi**. È possibile definire questa macro nella riga di comando includendo l'opzione `/D_CRT_NONSTDC_NO_WARNINGS`.
+Per risolvere questo problema, in genere è consigliabile modificare il codice per usare invece i nomi di funzione suggeriti. Tuttavia, i nomi aggiornati sono specifici di Microsoft. Se è necessario usare i nomi di funzione esistenti per motivi di portabilità, è possibile disattivare questi avvisi. Le funzioni POSIX sono ancora disponibili nella libreria con i rispettivi nomi originali.
 
-### <a name="unsafe-crt-library-functions"></a>Funzioni della libreria CRT unsafe
+Per disattivare gli avvisi di deprecazione per queste funzioni, definire la macro del preprocessore **\_CRT\_NONSTDC\_nessun avviso\_** . È possibile definire questa macro dalla riga di comando includendo l'opzione `/D_CRT_NONSTDC_NO_WARNINGS`.
 
-**Questa funzione o variabile potrebbe non essere sicuro. È consigliabile usare** *safe_version* **invece. Per disabilitare la deprecazione, usare \_CRT\_SECURE\_NO\_avvisi.  Vedere la Guida online per i dettagli.**
+## <a name="unsafe-crt-library-functions"></a>Funzioni della libreria CRT non sicure
 
-Microsoft ha deprecato alcune funzioni della libreria Standard C++ e CRT e funzioni globali a favore di versioni più sicure. Nella maggior parte dei casi, le funzioni deprecate consentono unchecked accesso in lettura o scrittura di buffer, che può provocare seri problemi di protezione. Il compilatore genera un avviso di deprecazione per queste funzioni e suggerisce la funzione preferita.
+**Questa funzione o variabile potrebbe non essere sicura. Prendere in considerazione l'uso** *di Safe-Version* **. Per disabilitare la deprecazione, usare \_CRT\_protetto\_nessun avviso\_.  Per informazioni dettagliate, vedere la guida online.**
 
-Per risolvere questo problema, è consigliabile usare la funzione o variabile *safe_version* invece. Se si è verificato che non è possibile che una sovrascrittura buffer o overread presenti nel codice ed è possibile modificare il codice per motivi di portabilità, è possibile disattivare l'avviso.
+Microsoft ha deprecato alcune funzioni C++ e globali della libreria CRT e standard perché sono disponibili versioni più sicure. La maggior parte delle funzioni deprecate consente l'accesso in lettura o scrittura non verificato ai buffer. Il loro utilizzo improprio può causare gravi problemi di sicurezza. Il compilatore genera un avviso di deprecazione per queste funzioni e suggerisce la funzione preferita.
 
-Per disattivare gli avvisi di deprecazione per queste funzioni in CRT, definire  **\_CRT\_SECURE\_NO\_avvisi**. Per disattivare gli avvisi sulle variabili globali deprecate, definire  **\_CRT\_SECURE\_NO\_avvisi\_GLOBALS**. Per altre informazioni su queste funzioni deprecate e variabili globali, vedere [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) e [librerie protette: Libreria Standard C++](../../standard-library/safe-libraries-cpp-standard-library.md).
+Per risolvere questo problema, è consigliabile usare invece la funzione o la variabile *Safe-Version* . In alcuni casi non è possibile, per motivi di compatibilità con le versioni precedenti o per la portabilità. Verificare con attenzione che non sia possibile eseguire una sovrascrittura del buffer o che si verifichino sovraletture nel codice. Quindi, è possibile disattivare l'avviso.
 
-### <a name="unsafe-standard-library-functions"></a>Funzioni della libreria Standard non sicure
+Per disattivare gli avvisi di deprecazione per queste funzioni in CRT, definire **\_crt\_protetto\_nessun avviso\_** .
 
-__' std::__*nome_funzione*__::\_Unchecked\_iteratori::\_Deprecate' chiamare per std::__*nome_funzione* **con parametri potenzialmente non sicuri: questa chiamata dipende dal chiamante per verificare che i valori passati siano corretti. Per disabilitare questo avviso, usare -D\_SCL\_SECURE\_NO\_avvisi. Vedere la documentazione su come usare Visual C++ 'Iteratori verificati'**
+Per disattivare gli avvisi sulle variabili globali deprecate, definire **\_CRT\_SECURE\_no\_warnings\_Globals**.
 
-Questo avviso viene visualizzato nelle build di debug perché alcune funzioni di modello della libreria Standard C++ non controllano la correttezza dei parametri. Nella maggior parte dei casi, questo è perché non sono sufficienti informazioni sono disponibili per la funzione di controllo dei limiti di contenitore o perché gli iteratori possono essere utilizzati in modo non corretto con la funzione. Questo avviso consente di identificare questi utilizzi di funzione, perché potrebbe trattarsi di un'origine di lacune nella protezione grave nel programma. Per altre informazioni, vedere [Checked Iterators](../../standard-library/checked-iterators.md).
+Per altre informazioni su queste funzioni e globali deprecate, vedere [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) e [librerie sicure: C++ libreria standard](../../standard-library/safe-libraries-cpp-standard-library.md).
 
-Ad esempio, questo avviso viene visualizzato in modalità di Debug, se si passa un puntatore di elemento a `std::copy` anziché una matrice normale. Per risolvere questo problema, usare una matrice dichiarata in modo appropriato, in modo che la libreria consente di controllare gli extent di matrice ed eseguire la verifica dei limiti.
+## <a name="unsafe-standard-library-functions"></a>Funzioni della libreria standard non sicure
+
+__' std::__ *function_name* __::\_deselezionato\_iteratori::\_deprecate ' chiamata a std::__ *function_name* **con parametri che potrebbero non essere sicuri. questa chiamata si basa sul chiamante per verificare che i valori passati siano corretti. Per disabilitare questo avviso, utilizzare-D\_SCL\_protetto\_nessun avviso\_. Vedere la documentazione su come usare gli C++ iteratori verificati di Visual '**
+
+Questo avviso viene visualizzato nelle build di debug C++ perché alcune funzioni modello della libreria standard non controllano la correttezza dei parametri. Spesso è perché non sono disponibili informazioni sufficienti per la funzione per controllare i limiti del contenitore. O, perché gli iteratori possono essere utilizzati in modo errato con la funzione. Questo avviso consente di identificare queste funzioni, perché possono costituire un'origine di gravi problemi di sicurezza nel programma. Per altre informazioni, vedere [iteratori verificati](../../standard-library/checked-iterators.md).
+
+Ad esempio, questo avviso viene visualizzato in modalità di debug se si passa un puntatore a un elemento `std::copy`, anziché una matrice normale. Per risolvere questo problema, usare una matrice dichiarata in modo appropriato, in modo che la libreria possa controllare gli extent della matrice ed eseguire il controllo dei limiti.
 
 ```cpp
 // C4996_copyarray.cpp
@@ -104,7 +102,7 @@ void example(char const * const src) {
 }
 ```
 
-Diversi algoritmi della libreria standard sono stati aggiornati per le versioni "a doppio intervallo" in c++14. Se si usano le versioni a doppio intervallo, il secondo intervallo offre i controllo dei limiti necessari:
+Diversi algoritmi di libreria standard sono stati aggiornati in modo da avere versioni "Dual range" in C++ 14. Se si usano le versioni a doppio intervallo, il secondo intervallo fornisce il controllo dei limiti necessari:
 
 ```cpp
 // C4996_containers.cpp
@@ -125,7 +123,7 @@ bool example(
 }
 ```
 
-Questo esempio illustra diversi modi più la libreria standard consente di controllare l'utilizzo di iteratore, e quando l'uso deselezionata può essere pericoloso:
+Questo esempio illustra diversi modi in cui la libreria standard può essere usata per controllare l'utilizzo degli iteratori e quando l'utilizzo non verificato può essere pericoloso:
 
 ```cpp
 // C4996_standard.cpp
@@ -210,11 +208,11 @@ int main()
 }
 ```
 
-Se si è verificato che il codice non può avere un buffer al sovraccarico errore nelle funzioni di libreria Standard che attivano questo avviso, è possibile disattivare questo avviso. Per disattivare gli avvisi per queste funzioni, definire  **\_SCL\_SECURE\_NO\_avvisi**.
+Se è stato verificato che il codice non può avere un errore di sovraccarico del buffer, è possibile disattivare questo avviso. Per disattivare gli avvisi per queste funzioni, definire **\_SCL\_protetto\_nessun avviso\_** .
 
-### <a name="checked-iterators-enabled"></a>Iteratori verificati abilitati
+## <a name="checked-iterators-enabled"></a>Iteratori controllati abilitati
 
-L'avviso C4996 può verificarsi anche se non si usa un iteratore verificato durante la compilazione con `_ITERATOR_DEBUG_LEVEL` definito come 1 o 2. È impostato su 2 per impostazione predefinita per le compilazioni in modalità debug e su 0 per le compilazioni delle vendite al dettaglio. Per altre informazioni, vedere [Checked Iterators](../../standard-library/checked-iterators.md) .
+C4996 può verificarsi anche se non si usa un iteratore verificato quando `_ITERATOR_DEBUG_LEVEL` viene definito come 1 o 2. Per impostazione predefinita, è impostato su 2 per le compilazioni in modalità di debug e su 0 per le compilazioni al dettaglio. Per altre informazioni, vedere [iteratori verificati](../../standard-library/checked-iterators.md).
 
 ```cpp
 // C4996_checked.cpp
@@ -236,29 +234,29 @@ int main() {
 }
 ```
 
-### <a name="unsafe-mfc-or-atl-code"></a>Codice unsafe MFC o ATL
+## <a name="unsafe-mfc-or-atl-code"></a>Codice MFC o ATL non sicuro
 
-L'avviso C4996 può verificarsi anche se si usano le funzioni MFC o ATL considerate deprecate per motivi di sicurezza.
+C4996 può verificarsi se si utilizzano le funzioni MFC o ATL deprecate per motivi di sicurezza.
 
-Per risolvere questo problema, è consigliabile che si modifica il codice per usare invece le funzioni aggiornate.
+Per risolvere questo problema, è consigliabile modificare il codice per usare le funzioni aggiornate.
 
-Per informazioni su come eliminare questi avvisi, vedere [afx_secure_no_warnings](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings).
+Per informazioni sull'eliminazione di questi avvisi, vedere [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings).
 
-### <a name="obsolete-crt-functions-and-variables"></a>Le variabili e funzioni CRT obsolete
+## <a name="obsolete-crt-functions-and-variables"></a>Funzioni e variabili CRT obsolete
 
-**Questa funzione o variabile è stato sostituito dalla funzionalità di libreria o dal sistema operativo più recente. È consigliabile usare** *new_item* **invece. Vedere la Guida online per i dettagli.**
+**Questa funzione o variabile è stata sostituita da una nuova funzionalità della libreria o del sistema operativo.** In alternativa, provare a usare *new_item* **. Per informazioni dettagliate, vedere la guida online.**
 
 Alcune funzioni e variabili globali della libreria sono deprecate come obsolete. Queste funzioni e variabili potrebbero essere rimosse nelle future versioni della libreria. Il compilatore genera un avviso di deprecazione per questi elementi e suggerisce l'alternativa preferita.
 
-Per risolvere questo problema, si consiglia di che modificare il codice per usare la funzione suggeriti o variabile.
+Per risolvere questo problema, è consigliabile modificare il codice in modo da usare la funzione o la variabile suggerita.
 
-Per disattivare gli avvisi di deprecazione per questi elementi, definire  **\_CRT\_obsoleto\_NO\_avvisi**. Per altre informazioni, vedere la documentazione per la funzione o la variabile deprecata.
+Per disattivare gli avvisi di deprecazione per questi elementi, definire **\_CRT\_obsoleto\_nessun avviso\_** . Per altre informazioni, vedere la documentazione per la funzione o la variabile deprecata.
 
-### <a name="marshalling-errors-in-clr-code"></a>Errori di marshalling nel codice CLR
+## <a name="marshaling-errors-in-clr-code"></a>Marshalling degli errori nel codice CLR
 
-L'avviso C4996 può verificarsi anche quando si usa la libreria del marshalling CLR. In questo caso C4996 rappresenta un errore e non un avviso. Questo errore si verifica quando si usa [marshal_as](../../dotnet/marshal-as.md) eseguire la conversione tra due tipi di dati che richiedono una [marshal_context Class](../../dotnet/marshal-context-class.md). È anche possibile ricevere questo errore quando la libreria di marshalling non supporta una conversione. Per altre informazioni sulla libreria di marshalling, vedere [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md).
+C4996 può verificarsi anche quando si utilizza la libreria di marshalling CLR. In questo caso, C4996 è un errore e non un avviso. Questo errore si verifica quando si usa [marshal_as](../../dotnet/marshal-as.md) per eseguire la conversione tra due tipi di dati che richiedono una [Classe marshal_context](../../dotnet/marshal-context-class.md). Questo errore può essere visualizzato anche quando la libreria di marshalling non supporta una conversione. Per ulteriori informazioni sulla libreria di marshalling, vedere [Cenni preliminari sul marshalling in C++ ](../../dotnet/overview-of-marshaling-in-cpp.md).
 
-In questo esempio viene generato l'avviso C4996 perché la libreria del marshalling richiede un contesto per la conversione da un `System::String` a un `const char *`.
+Questo esempio genera C4996 perché la libreria di marshalling richiede un contesto per la conversione da un `System::String` a un `const char *`.
 
 ```cpp
 // C4996_Marshal.cpp
@@ -279,9 +277,9 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>Esempio: Funzione deprecata definita dall'utente
+## <a name="example-user-defined-deprecated-function"></a>Esempio: funzione deprecata definita dall'utente
 
-È possibile usare l'attributo deprecato nel proprio codice per avvisare i chiamanti quando non si consiglia di usare alcune funzioni. In questo esempio, viene generato l'avviso C4996 per la riga su cui è dichiarata la funzione deprecata e per la riga in cui viene utilizzata la funzione.
+È possibile usare l'attributo deprecated nel codice per avvisare i chiamanti quando non è più consigliabile usare determinate funzioni. In questo esempio, C4996 viene generato in due posizioni: una per la riga in cui è dichiarata la funzione deprecata e una per la riga in cui viene usata la funzione.
 
 ```cpp
 // C4996.cpp
@@ -294,7 +292,8 @@ void func1(void) {
    printf_s("\nIn func1");
 }
 
-__declspec(deprecated) void func1(int) {
+[[deprecated]]
+void func1(int) {
    printf_s("\nIn func2");
 }
 

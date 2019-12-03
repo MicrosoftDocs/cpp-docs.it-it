@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-ms.openlocfilehash: 1948bdec5367fa7943f5a0de4338fd4ecd6c6581
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5db6bf366c86a716be33539feb0085ac03a9647
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220507"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683167"
 ---
 # <a name="compiler-warning-level-4-c4564"></a>Avviso del compilatore (livello 4) C4564
 
-metodo 'method' della classe 'class' definisce il parametro predefinito non supportata 'parameter'
+il metodo ' Method ' della classe ' Class ' definisce il parametro predefinito ' parameter ' non supportato
 
-Il compilatore ha rilevato un metodo con uno o più parametri con valori predefiniti. I valori predefiniti per i parametri verranno ignorati quando viene richiamato il metodo; specificare in modo esplicito i valori per tali parametri. Se non si specifica in modo esplicito i valori per tali parametri, il compilatore C++ genererà un errore.
+Il compilatore ha rilevato un metodo con uno o più parametri con i valori predefiniti. I valori predefiniti per i parametri verranno ignorati quando viene richiamato il metodo. specificare in modo esplicito i valori per tali parametri. Se non si specificano in modo esplicito i valori per tali C++ parametri, il compilatore genererà un errore.
 
-Dato il file DLL seguenti creati con Visual Basic, che consente di parametri predefiniti in argomenti del metodo:
+Dato il file con estensione dll seguente creato con Visual Basic, che consente i parametri predefiniti negli argomenti del metodo:
 
-```
+```vb
 ' C4564.vb
 ' compile with: vbc /t:library C4564.vb
 Public class TestClass
@@ -31,9 +31,9 @@ Public class TestClass
 End class
 ```
 
-L'esempio C++ seguente che usa il file DLL creati con Visual Basic, e
+E l'esempio C++ seguente che usa il file con estensione dll creato con Visual Basic,
 
-```
+```cpp
 // C4564.cpp
 // compile with: /clr /W4 /WX
 #using <C4564.dll>
