@@ -1,17 +1,21 @@
 ---
 title: Avviso del compilatore (livello 4) C4437
 ms.date: 11/04/2016
+f1_keywords:
+- C4437
+helpviewer_keywords:
+- C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 9ff52ae6d10f7d4ba429bbf3457a2a6b969998d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd50d5c4d79b82c135ab4e84ec390dee9e906ef
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391465"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810648"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Avviso del compilatore (livello 4) C4437
 
-dynamic_cast dalla base virtuale "classe1" a "classe2" potrebbe non riuscire in alcuni contesti compilazione con/vd2 o definire "classe2" con #pragma vtordisp(2) attivo
+dynamic_cast dalla base virtuale ' Class1' a' Class2' potrebbe non riuscire in alcuni contesti compilare con/VD2 o definire ' Class2' con #pragma vtordisp (2) attivo
 
 Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
@@ -23,13 +27,13 @@ Il compilatore ha rilevato un'operazione `dynamic_cast` con le seguenti caratter
 
 - La classe derivata non include un campo `vtordisp` per la base virtuale.
 
-- Il cast non viene trovato in un costruttore o distruttore della classe derivata o una classe che ulteriormente eredita dalla classe derivata (avviso del compilatore in caso contrario, verrà generato C4436).
+- Il cast non viene trovato in un costruttore o in un distruttore della classe derivata o in una classe che eredita ulteriormente dalla classe derivata; in caso contrario, verrà emesso un avviso del compilatore C4436.
 
-L'avviso indica che il `dynamic_cast` potrebbe non funzionare correttamente se è in esecuzione su un oggetto parzialmente costruito.  Questa situazione si verifica quando viene chiamata la funzione contenitore da un costruttore o distruttore di una classe che eredita la classe derivata denominata nell'avviso.  Se la classe derivata denominata nell'avviso non è mai più derivata, o la funzione contenitore non viene chiamata durante la costruzione o distruzione di $, l'avviso può essere ignorato.
+L'avviso indica che il `dynamic_cast` potrebbe non funzionare correttamente se opera su un oggetto parzialmente costruito.  Questa situazione si verifica quando la funzione contenitore viene chiamata da un costruttore o distruttore di una classe che eredita la classe derivata denominata nell'avviso.  Se la classe derivata denominata nell'avviso non è mai derivata ulteriormente oppure la funzione contenitore non viene chiamata durante la costruzione o l'eliminazione di un oggetto, l'avviso può essere ignorato.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4437 e dimostra il problema di generazione di codice che deriva dal parametro mancante `vtordisp` campo.
+Nell'esempio seguente viene generato C4437 e viene illustrato il problema di generazione del codice che deriva dal campo `vtordisp` mancante.
 
 ```cpp
 // C4437.cpp

@@ -1,17 +1,21 @@
 ---
 title: Avviso del compilatore (livello 4) C4435
 ms.date: 11/04/2016
+f1_keywords:
+- C4435
+helpviewer_keywords:
+- C4435
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ff545d3de3ef173cdbfd99d7714890e8631ce7a
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391478"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810670"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>Avviso del compilatore (livello 4) C4435
 
-'class1': Layout dell'oggetto in/vd2 verrà modificato a causa di base virtuale 'class2'
+'classe1': il layout dell'oggetto in /vd2 verrà modificato a causa della base virtuale '%$S'
 
 Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
@@ -19,7 +23,7 @@ Nell'opzione di compilazione predefinita di /vd1, la classe derivata non ha un c
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4435.
+L'esempio seguente genera l'C4435.
 
 ```cpp
 // C4435.cpp

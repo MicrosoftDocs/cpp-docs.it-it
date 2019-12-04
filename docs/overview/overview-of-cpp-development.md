@@ -1,17 +1,17 @@
 ---
 title: Panoramica dello sviluppo con C++ in Visual Studio
 description: IDE di Visual Studio supporta lo sviluppo di C++ in Windows, Linux, Android e iOS con un editor di codice, debugger, framework di test, analizzatori statici e altri strumenti di programmazione.
-ms.date: 03/08/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 54ed590122f1eb914ff039378914a1fd4adc5f10
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
-ms.translationtype: HT
+ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182901"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810628"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Panoramica dello sviluppo con C++ in Visual Studio
 
@@ -29,13 +29,13 @@ Visual Studio offre il supporto per qualsiasi sistema di progetto o strumento di
 
    ::: moniker range="vs-2019"
 
-   ![Nuovi modelli di progetto](../build/media/mathclient-project-name-2019.png "Finestra di dialogo Nuovo progetto di Visual Studio 2019")
+   ![Nuovi modelli di progetto](../build/media/mathclient-project-name-2019.png "Finestra di dialogo nuovo progetto di Visual Studio 2019")
 
    ::: moniker-end
 
    ::: moniker range="<=vs-2017"
 
-   ![Modelli di progetto](media/vs2017-new-project.png "Finestra di dialogo Nuovo progetto di Visual Studio 2017")
+   ![Modelli di progetto](media/vs2017-new-project.png "Finestra di dialogo nuovo progetto di Visual Studio 2017")
 
    ::: moniker-end
 
@@ -73,29 +73,27 @@ Se il programma ha un'interfaccia utente, è possibile usare una finestra di pro
 
 ![Finestra di progettazione e casella degli strumenti](media/vs2017-toolbox-designer.png "Casella degli strumenti e finestra di progettazione di Visual Studio 2017")
 
-Per altre informazioni sulla progettazione di un'interfaccia utente per un'app della piattaforma UWP (Universal Windows Platform), vedere [Progettazione e interfaccia utente](https://developer.microsoft.com/windows/design).
+Per ulteriori informazioni sulla progettazione di un'interfaccia utente per un'app piattaforma UWP (Universal Windows Platform), vedere [progettazione e interfaccia](https://developer.microsoft.com/windows/design)utente.
 
 Per altre informazioni sulla creazione di un'interfaccia utente per un'applicazione MFC, vedere [Applicazioni desktop MFC](../mfc/mfc-desktop-applications.md). Per informazioni sui programmi Windows Win32, vedere [Applicazioni desktop di Windows](../windows/windows-desktop-applications-cpp.md).
 
 ## <a name="write-code"></a>Scrittura di codice
 
-Dopo aver creato un progetto, tutti i file di progetto vengono visualizzati nella finestra **Esplora soluzioni**. (Una *soluzione* è un contenitore logico per uno o più progetti correlati.) Quando si fa clic su un file con estensione h o cpp in **Esplora soluzioni**, il file viene aperto nell'editor di codice.
+Dopo aver creato un progetto, tutti i file di progetto vengono visualizzati nella finestra **Esplora soluzioni**. Una *soluzione* è un contenitore logico per uno o più progetti correlati. Quando si fa clic su un file con estensione h o cpp in **Esplora soluzioni**, il file viene aperto nell'editor di codice.
 
-![Esplora soluzioni ed editor di codice](media/vs2017-solution-explorer-code-editor.png "Esplora soluzioni ed editor di codice di Visual Studio 2017")
+![Editor Esplora soluzioni e codice](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 Esplora soluzioni e l'editor di codice")
 
 L'editor di codice è un elaboratore di testo specializzato per il codice sorgente C++. L'editor applica colori specifici alle parole chiave del linguaggio, ai nomi di metodi e variabili e ad altri elementi del codice per rendere quest'ultimo più leggibile e di più facile comprensione. Offre anche strumenti per effettuare il refactoring del codice, spostarsi tra i diversi file e comprendere come è strutturato il codice. Per altre informazioni, vedere [Scrittura e refactoring del codice](../ide/writing-and-refactoring-code-cpp.md).
 
 ## <a name="add-and-edit-resources"></a>Aggiungere e modificare risorse
 
-Il termine *risorsa* include elementi quali finestre di dialogo, icone, immagini, stringhe localizzabili, schermate iniziali, stringhe di connessione di database o eventuali dati arbitrari che si vuole includere nel file eseguibile.
-
-Per altre informazioni sull'aggiunta e la modifica di risorse in progetti C++ desktop nativi, vedere [Uso di file di risorse](../windows/working-with-resource-files.md).
+Un programma o una DLL di Windows include in genere alcune *risorse*, ad esempio finestre di dialogo, icone, immagini, stringhe localizzabili, schermate iniziali, stringhe di connessione del database o dati arbitrari. Visual Studio include strumenti per l'aggiunta e la modifica delle risorse. Per altre informazioni, vedere [uso dei file di risorse](../windows/working-with-resource-files.md).
 
 ## <a name="build-compile-and-link"></a>Compilazione (compilare e collegare)
 
-Nella barra dei menu scegliere **Compila** > **Compila soluzione** oppure premere la combinazione di tasti CTRL+MAIUSC+B per compilare e collegare un progetto. Errori e avvisi di compilazione vengono segnalati in Elenco errori (CTRL+\\, E). La finestra di **output** (ALT+2) visualizza le informazioni relative al processo di compilazione.
+Scegliere **compila** > **Compila soluzione** sulla barra dei menu oppure premere la combinazione di tasti **CTRL + MAIUSC + B** per compilare e collegare un progetto. Gli errori e gli avvisi di compilazione vengono segnalati nella Elenco errori (**CTRL +\\, E**). La finestra di **output** (**ALT + 2**) Mostra le informazioni sul processo di compilazione.
 
-![Finestra di output ed elenco errori](media/vs2017-output-error-list.png "Finestra di output ed elenco errori di Visual Studio 2017")
+![Finestra di output e Elenco errori](media/vs2017-output-error-list.png "Finestra di output di Visual Studio 2017 e Elenco errori")
 
 Per altre informazioni sulla configurazione delle build, vedere [Uso delle proprietà del progetto](../build/working-with-project-properties.md) e [Progetti e sistemi di compilazione](../build/projects-and-build-systems-cpp.md).
 
@@ -103,11 +101,11 @@ Per altre informazioni sulla configurazione delle build, vedere [Uso delle propr
 
 ## <a name="debug"></a>Debug
 
-È possibile avviare il debug premendo **F5**. L'esecuzione viene sospesa in qualsiasi punto di interruzione impostato. È inoltre possibile eseguire il passaggio nel codice una riga alla volta, visualizzare i valori delle variabili o dei registri e addirittura, in alcuni casi, apportare modifiche al codice e continuare a eseguire il debug senza ricompilare. La figura seguente mostra una sessione di debug in cui l'esecuzione viene arrestata in un punto di interruzione. I valori dei membri della struttura dati sono visibili nella **finestra Espressione di controllo**.
+È possibile avviare il debug premendo **F5**. L'esecuzione viene sospesa in corrispondenza di tutti i punti di interruzione impostati (premendo **F9**). È anche possibile esaminare il codice una riga alla volta (**F10**), visualizzare i valori delle variabili o dei registri e anche in alcuni casi apportare modifiche al codice e continuare a eseguire il debug senza ricompilare. La figura seguente mostra una sessione di debug in cui l'esecuzione viene arrestata in un punto di interruzione. I valori dei membri della struttura dati sono visibili nella **finestra Espressione di controllo**.
 
 ![Sessione di debug](media/vs2017-debug-watch.png "Sessione di debug di Visual Studio 2017")
 
-Per altre informazioni, vedere [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
+Per altre informazioni, vedere [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
 ## <a name="test"></a>Test
 
@@ -117,7 +115,7 @@ Visual Studio include il framework di unit test Microsoft per C++, nonché il su
 
 Per altre informazioni, vedere [Verifying Code by Using Unit Tests ](/visualstudio/test/unit-test-your-code) (Verifica del codice tramite unit test) e [Scrivere unit test per C/C++ in Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
-## <a name="analyze"></a>Analyze
+## <a name="analyze"></a>Analizza
 
 Visual Studio include strumenti statici di analisi del codice in grado di rilevare potenziali problemi nel codice sorgente. Questi strumenti includono un'implementazione degli strumenti di controllo delle regole [Linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Per altre informazioni, vedere [Code analysis for C/C++ overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) (Panoramica dell'analisi codice per C/C++).
 
@@ -125,7 +123,7 @@ Visual Studio include strumenti statici di analisi del codice in grado di rileva
 
 È possibile distribuire ai clienti sia le applicazioni desktop tradizionali che le applicazioni UWP tramite Microsoft Store. La distribuzione di CRT viene gestita automaticamente in background. Per altre informazioni, vedere [Pubblicare app e giochi per Windows](/windows/uwp/publish/).
 
-È inoltre possibile distribuire un desktop C++ nativo a un altro computer. Per altre informazioni, vedere [Distribuzione di applicazioni desktop](../windows/deploying-native-desktop-applications-visual-cpp.md).
+È anche possibile distribuire un desktop C++ nativo in un altro computer. Per altre informazioni, vedere [Distribuzione di applicazioni desktop](../windows/deploying-native-desktop-applications-visual-cpp.md).
 
 Per altre informazioni sulla distribuzione di un programma C++/CLI, vedere [Guida alla distribuzione per gli sviluppatori](/dotnet/framework/deployment/deployment-guide-for-developers).
 
@@ -137,4 +135,4 @@ Esplorare più approfonditamente Visual Studio seguendo uno di questi articoli i
 > [Informazioni su come usare l'editor del codice](/visualstudio/get-started/tutorial-editor)
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: progetti e soluzioni](/visualstudio/get-started/tutorial-projects-solutions)
+> [Introduzione a progetti e soluzioni](/visualstudio/get-started/tutorial-projects-solutions)

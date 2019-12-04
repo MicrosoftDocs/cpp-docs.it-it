@@ -1,6 +1,6 @@
 ---
 title: Piattaforme supportate (Visual C++)
-ms.date: 05/14/2019
+ms.date: 12/02/2019
 ms.technology: cpp-tools
 helpviewer_keywords:
 - Visual C++, platforms supported
@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 950f62b4cbf1255af97f1f4950bab03c58c2ceba
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
-ms.translationtype: HT
+ms.openlocfilehash: eb2a258a73e69ef032576f5b42e8071fd27439a1
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174850"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810595"
 ---
 # <a name="supported-platforms-visual-c"></a>Piattaforme supportate (Visual C++)
 
 Le applicazioni compilate con Visual Studio possono essere destinate a diverse piattaforme come indicato di seguito.
 
-|Sistema operativo|x86|X64|ARM|ARM64\*\*\*\*|
+|Sistema operativo|x86|x64|ARM|ARM64\*\*\*\*|
 |----------------------|---------|---------|---------|---------|
 |Windows XP|X\*|X\*|||
 |Windows Server 2003|X\*|X\*|||
@@ -28,13 +28,13 @@ Le applicazioni compilate con Visual Studio possono essere destinate a diverse p
 |Windows 7|x|x|||
 |Windows Server 2012 R2|x|x|||
 |Windows 8|x|x|x||
-|Windows 8,1|x|x|x||
+|Windows 8.1|x|x|x||
 |Windows 10|x|x|x|x|
 |Android \*\*|x|x|x|x|
 |iOS \*\*|x|x|x|x|
 |Linux \*\*\*|x|x|x|x|
 
-\* È possibile usare il set di strumenti della piattaforma Windows XP in Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 e Visual Studio 2012 Update 1 o versione successiva per la compilazione di progetti Windows XP e Windows Server 2003. Per informazioni su come usare questo set di strumenti della piattaforma, vedere [Configurazione di programmi per Windows XP](../build/configuring-programs-for-windows-xp.md). Per altre informazioni sulla modifica del set di strumenti della piattaforma, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+\* è possibile utilizzare il set di strumenti della piattaforma Windows XP incluso in Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 e Visual Studio 2012 Update 1 per compilare progetti Windows XP e Windows Server 2003. Per informazioni su come usare questo set di strumenti della piattaforma, vedere [Configurazione di programmi per Windows XP](../build/configuring-programs-for-windows-xp.md). Per altre informazioni sulla modifica del set di strumenti della piattaforma, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 \*\* È possibile installare il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con C++** nel programma di installazione di Visual Studio 2017 e versioni successive. Nell'installazione di Visual Studio 2015 scegliere il componente facoltativo **Visual C++ per lo sviluppo di app per dispositivi mobili multipiattaforma** per specificare come destinazione le piattaforme iOS o Android. Per istruzioni, vedere [Installare Visual C++ per lo sviluppo di app per dispositivi mobili multipiattaforma](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Per compilare il codice iOS, è necessario disporre di un computer Mac e soddisfare altri requisiti. Per un elenco di prerequisiti e istruzioni di installazione, vedere [Installare e configurare gli strumenti per la compilazione con iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). È possibile compilare il codice x86 o ARM in modo che corrisponda all'hardware di destinazione. Utilizzare le configurazioni x86 da compilare per il simulatore iOS, l’emulatore Microsoft Visual Studio e alcuni dispositivi Android. Utilizzare le configurazioni ARM da compilare per dispositivi iOS e la maggior parte dei dispositivi Android.
 

@@ -1,19 +1,23 @@
 ---
 title: Avviso del compilatore C4746
 ms.date: 11/04/2016
+f1_keywords:
+- C4746
+helpviewer_keywords:
+- C4746
 ms.assetid: 5e79ab46-6031-499a-a986-716c866b6c0e
-ms.openlocfilehash: 1b79eed2134b8c6310e508e56b3388c6f38fe4b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e761deb1b8c1b00e025f49775a845d07985fd2c
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311111"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810572"
 ---
 # <a name="compiler-warning-c4746"></a>Avviso del compilatore C4746
 
-accesso volatile di '\<espressione >' è soggetto a /volatile: [iso&#124;ms] impostazione; considerare l'uso di funzioni intrinseche iso_volatile_load/store.
+l'accesso volatile di '\<Expression >' è soggetto all'impostazione/volatile:&#124;[ISO MS]; si consiglia di utilizzare __iso_volatile_load funzioni intrinseche/Store.
 
-C4746 viene generato ogni volta che si accede ad una variabile volatile direttamente. Consente di aiutare gli sviluppatori di identificare i percorsi di codice che sono interessati dal modello volatile specificato attualmente (che può essere controllato con il [/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) opzione del compilatore). In particolare, può essere utile per individuare barriere di memoria hardware generate dal compilatore quando /volatile:ms viene utilizzato.
+C4746 viene generato ogni volta che si accede ad una variabile volatile direttamente. È progettato per consentire agli sviluppatori di identificare i percorsi di codice interessati dal modello volatile specifico attualmente specificato (che può essere controllato con l'opzione del compilatore [/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) ). In particolare, può essere utile per individuare barriere di memoria hardware generate dal compilatore quando /volatile:ms viene utilizzato.
 
 Le funzioni intrinseche __iso_volatile_load/store possono essere utilizzate per accedere in modo esplicito alla memoria volatile senza essere influenzate dal modello volatile. Utilizzando queste funzioni intrinseche non verrà generato C4746.
 
