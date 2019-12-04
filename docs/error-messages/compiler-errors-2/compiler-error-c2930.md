@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2930
 ms.assetid: f07eecd1-e5d1-4518-bd89-b1fd2a003a17
-ms.openlocfilehash: 20fa3e81e66bb30bd63e579a863b6071de4ef871
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b30e614236298cf9a07cbc29e028039903f9748f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385758"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760980"
 ---
 # <a name="compiler-error-c2930"></a>Errore del compilatore C2930
 
@@ -23,7 +23,7 @@ Questo errore può verificarsi quando le parentesi graffe non corrispondono.
 
 L'esempio seguente genera l'errore C2930:
 
-```
+```cpp
 // C2930.cpp
 // compile with: /c
 template<class T>
@@ -36,7 +36,7 @@ enum SomeEnum { y };
 
 L'errore C2930 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C2930c.cpp
 // compile with: /clr /c
 generic<class T>

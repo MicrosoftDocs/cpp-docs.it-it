@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3766
 ms.assetid: b5af2089-2e1e-4e45-a41d-495b6c55656e
-ms.openlocfilehash: 2d871e331987cb2731aad8b4fbc6ec2f094bd218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1cbd218b127bdf0d6784b7d35dac563d8ea198d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400227"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757215"
 ---
 # <a name="compiler-error-c3766"></a>Errore del compilatore C3766
 
-'type' deve fornire un'implementazione per l'interfaccia 'function' (metodo)
+' type ' deve fornire un'implementazione per il metodo di interfaccia ' Function '
 
 Una classe che eredita da un'interfaccia deve implementare i membri di interfaccia.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3766.
+L'esempio seguente genera l'C3766.
 
-```
+```cpp
 // C3766.cpp
 // compile with: /clr /c
 

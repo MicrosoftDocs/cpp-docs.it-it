@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2971
 ms.assetid: fdb5467b-9a41-41ef-ac20-2e9428d5a4fc
-ms.openlocfilehash: 09f3578bff5806fc32a3b5599dcfa8caa3696974
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9912224c5c871f9bae2c6d22f0d38f5f88c983a9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256323"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743289"
 ---
 # <a name="compiler-error-c2971"></a>Errore del compilatore C2971
 
-'class': parametro di modello 'param': 'arg': una variabile locale non può essere utilizzata come un argomento non di tipo
+' Class ': parametro di modello ' param ':' arg ': Impossibile utilizzare una variabile locale come argomento non di tipo
 
-È possibile usare il nome o l'indirizzo di una variabile locale come argomento di modello.
+Non è possibile usare il nome o l'indirizzo di una variabile locale come argomento di modello.
 
-L'esempio seguente genera l'errore C2971:
+L'esempio seguente genera l'C2971:
 
-```
+```cpp
 // C2971.cpp
 template <int *pi>
 class Y {};

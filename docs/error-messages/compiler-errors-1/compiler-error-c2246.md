@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2246
 ms.assetid: 4f3e4f83-21f3-4256-af96-43e0bb060311
-ms.openlocfilehash: c8efb71e0a39c56628fc582421e0f24ceb9b290c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89352029afbae4d977a4109f76c0e18bb761b4d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302605"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758918"
 ---
 # <a name="compiler-error-c2246"></a>Errore del compilatore C2246
 
@@ -21,7 +21,7 @@ Un membro di una classe, di una struttura o di un'unione con ambito locale è di
 
 L'esempio seguente genera l'errore C2246:
 
-```
+```cpp
 // C2246.cpp
 // compile with: /c
 void func( void ) {

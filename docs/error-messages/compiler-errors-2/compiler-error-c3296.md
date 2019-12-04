@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3296
 ms.assetid: fc4c9dcd-16cf-4eee-a1ac-c43e7c29e443
-ms.openlocfilehash: c0a162590ac2a72dda17b2ecfc96899e94cde24c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6821fc1bafa5110fe9a3db2da9a69ad6c1e57f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222544"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760095"
 ---
 # <a name="compiler-error-c3296"></a>Errore del compilatore C3296
 
@@ -25,7 +25,7 @@ Per altre informazioni, vedere [property](../../extensions/property-cpp-componen
 
 L'esempio seguente genera l'errore C3296.
 
-```
+```cpp
 // C3296.cpp
 // compile with: /clr /c
 using namespace System;

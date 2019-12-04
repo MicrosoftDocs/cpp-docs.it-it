@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
-ms.openlocfilehash: 1f30026d8f853aedc863bef4ecfa32b0bd3262b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbdd54ad0e87557b62d42c8ef5651122d9ebc205
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382359"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761608"
 ---
 # <a name="compiler-error-c3190"></a>Errore del compilatore C3190
 
-'istanza' con gli argomenti di modello fornito non è la creazione di istanze esplicite di alcuna funzione membro di 'type'
+' creazione di istanze ' con gli argomenti di modello forniti non è la creazione di un'istanza esplicita di alcuna funzione membro di ' type '
 
-Il compilatore ha rilevato un tentativo di creare un'istanza di funzione esplicito; Tuttavia, gli argomenti di tipo fornito non corrisponde ad alcuna delle funzioni di possibili.
+Il compilatore ha rilevato un tentativo di creare un'istanza di funzione esplicita; Tuttavia, gli argomenti di tipo specificati non corrispondono ad alcuna delle funzioni possibili.
 
-L'esempio seguente genera l'errore C3190:
+L'esempio seguente genera l'C3190:
 
-```
+```cpp
 // C3190.cpp
 // compile with: /LD
 template<class T>

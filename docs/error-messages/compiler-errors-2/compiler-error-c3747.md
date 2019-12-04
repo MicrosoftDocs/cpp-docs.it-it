@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3747
 ms.assetid: a9a4be67-5d9c-4dcc-9ae9-baae46cbecde
-ms.openlocfilehash: 860a990e35b0d51dfc1316a11a2d2512eb40c273
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 761bb44f5097d998fd885fdb1c5caacf90db3642
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226796"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761868"
 ---
 # <a name="compiler-error-c3747"></a>Errore del compilatore C3747
 
 parametro di tipo predefinito mancante: parametro param
 
-Generica o modello di parametri con valori predefiniti non possono essere seguiti nell'elenco dei parametri per i parametri privi di valori predefiniti.
+I parametri generici o di modello con valori predefiniti non possono essere seguiti nell'elenco di parametri per i parametri che non hanno valori predefiniti.
 
-L'esempio seguente genera l'errore C3747:
+L'esempio seguente genera l'C3747:
 
-```
+```cpp
 // C3747.cpp
 template <class T1 = int, class T2>   // C3747
 struct MyStruct {};
@@ -29,7 +29,7 @@ struct MyStruct {};
 
 Possibile soluzione:
 
-```
+```cpp
 // C3747b.cpp
 // compile with: /c
 template <class T1, class T2 = int>

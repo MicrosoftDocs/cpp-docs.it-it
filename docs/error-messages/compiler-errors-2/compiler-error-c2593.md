@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
-ms.openlocfilehash: c358553a36104b5c389076f5a5ce02f94f85e85a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a385e35376ddce528678980705595bfb98aca95
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386915"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759347"
 ---
 # <a name="compiler-error-c2593"></a>Errore del compilatore C2593
 
-'operatore identifier' è ambiguo
+' operator Identifier ' è ambiguo
 
-Più di un operatore possibili è definito per un operatore di overload.
+È possibile definire più di un operatore per un operatore di overload.
 
-Questo errore può essere risolto se si usa un cast esplicito in una o più parametri effettivi.
+Questo errore può essere corretto se si usa un cast esplicito su uno o più parametri effettivi.
 
-L'esempio seguente genera l'errore C2593:
+L'esempio seguente genera l'C2593:
 
-```
+```cpp
 // C2593.cpp
 struct A {};
 struct B : A {};
@@ -39,9 +39,9 @@ int main() {
 }
 ```
 
-Questo errore può essere causato dalla serializzazione di una variabile a virgola mobile utilizzando una `CArchive` oggetto. Il compilatore identifica la `<<` operatore come ambigua. Tipi di C++ solo primitivi `CArchive` può essere serializzato sono i tipi a dimensione fissa `BYTE`, `WORD`, `DWORD`, e `LONG`. Tutti i tipi integer devono essere impostati su uno di questi tipi per la serializzazione. Tipi a virgola mobile devono essere archiviati utilizzando il `CArchive::Write()` funzione membro.
+Questo errore può essere causato dalla serializzazione di una variabile a virgola mobile mediante un oggetto `CArchive`. Il compilatore identifica l'operatore `<<` come ambiguo. Gli unici tipi C++ primitivi che `CArchive` possibile serializzare sono i tipi a dimensione fissa `BYTE`, `WORD`, `DWORD`e `LONG`. Per la serializzazione è necessario eseguire il cast di tutti i tipi Integer a uno di questi tipi. I tipi a virgola mobile devono essere archiviati usando la funzione membro `CArchive::Write()`.
 
-Nell'esempio seguente viene illustrato come archiviare una variabile a virgola mobile (`f`) all'archivio `ar`:
+Nell'esempio seguente viene illustrato come archiviare una variabile a virgola mobile (`f`) per archiviare `ar`:
 
 ```
 ar.Write(&f, sizeof( float ));

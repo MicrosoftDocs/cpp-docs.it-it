@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3065
 ms.assetid: e7a0bc69-1c68-459e-a7c4-93c65609ff7c
-ms.openlocfilehash: e12f6e318d51ecaccc7c29e1e01d1aedcaac937e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 026a6d5191f5bf7969dd2c8217b624d44b8ca345
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404214"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761429"
 ---
 # <a name="compiler-error-c3065"></a>Errore del compilatore C3065
 
@@ -21,7 +21,7 @@ Il modificatore __declspec della [proprietà](../../cpp/property-cpp.md) è stat
 
 L'esempio seguente genera l'errore C3065:
 
-```
+```cpp
 // C3065.cpp
 // compile with: /c
 __declspec(property(get=get_i)) int i;   // C3065

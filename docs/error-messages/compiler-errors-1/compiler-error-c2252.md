@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2252
 ms.assetid: fee74ab9-1997-4615-82fe-e6d1fe3aacd9
-ms.openlocfilehash: 9f24e6dfeb6544e5a6173fd844e3fe8b9ae8698e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fe64292ce6463b3b628367ef0052208e74b24d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379012"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758879"
 ---
 # <a name="compiler-error-c2252"></a>Errore del compilatore C2252
 
-non è possibile creare in modo esplicito un'istanza di modello nell'ambito corrente
+non è possibile creare un'istanza esplicita del modello nell'ambito corrente
 
-Il compilatore ha rilevato un problema con un'istanza esplicita di un modello.  Ad esempio, non è possibile creare in modo esplicito un modello in una funzione.
+Il compilatore ha rilevato un problema con un'istanza esplicita di un modello.  Non è ad esempio possibile creare un'istanza esplicita di un modello in una funzione.
 
-L'esempio seguente genera l'errore C2252:
+L'esempio seguente genera l'C2252:
 
-```
+```cpp
 // C2252.cpp
 class A {
 public:

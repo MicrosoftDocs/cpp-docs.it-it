@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f548c72a0e95c533ed711fe9f2583a7abd6c500
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404117"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760761"
 ---
 # <a name="compiler-error-c3114"></a>Errore del compilatore C3114
 
-'argument': argomento di attributo denominato non valida
+' argument ': non è un argomento di attributo denominato valido
 
-Affinché un membro dati della classe attribute sia un argomento denominato valido, non deve essere contrassegnato `static`, `const`, o `literal`. Se una proprietà, la proprietà non deve essere `static` e deve avere get e set di funzioni di accesso.
+Affinché un membro dati della classe Attribute sia un argomento denominato valido, non deve essere contrassegnato come `static`, `const`o `literal`. Se una proprietà, la proprietà non deve essere `static` e deve avere funzioni di accesso get e set.
 
-Per altre informazioni, vedere [proprietà](../../extensions/property-cpp-component-extensions.md) e [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Per ulteriori informazioni, vedere [Proprietà](../../extensions/property-cpp-component-extensions.md) e [attributi definiti dall'utente](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3114.
+L'esempio seguente genera l'C3114.
 
-```
+```cpp
 // C3114.cpp
 // compile with: /clr /c
 public ref class A : System::Attribute {
