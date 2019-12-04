@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3470
 ms.assetid: 170c7a9d-214d-41b1-8f15-d4a4fc38aaa5
-ms.openlocfilehash: 7d6c8627fe0904dd2fe81dd805d8f87bbebf29c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9bda55c7a65eb5eec4e1f5104a779a817ad5c36
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173236"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760491"
 ---
 # <a name="compiler-error-c3470"></a>Errore del compilatore C3470
 
@@ -23,7 +23,7 @@ Un tipo non può definire sia un indicizzatore predefinito che un operatore[].
 
 L'esempio seguente genera l'errore C3470
 
-```
+```cpp
 // C3470.cpp
 // compile with: /clr
 using namespace System;
