@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2274
 ms.assetid: 8e874903-f499-45ef-8291-f821eee4cc1c
-ms.openlocfilehash: f2fcb75098f18ad113ba68959035b37d9cddd6e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd807dedb6c300860611d07212b8fc8952a90a65
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388865"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758671"
 ---
 # <a name="compiler-error-c2274"></a>Errore del compilatore C2274
 
-'type': non valido a destra di '.' operatore
+' type ': non valido a destra dell'operatore ' .'
 
-Viene visualizzato un tipo come operando destro dell'operatore di accesso ai membri (.).
+Un tipo viene visualizzato come operando destro di un operatore di accesso ai membri (.).
 
-Questo errore può essere causato dal tentativo di accedere a una conversione del tipo definito dall'utente. Usare la parola chiave `operator` tra la durata e `type`.
+Questo errore può essere causato dal tentativo di accedere a una conversione di tipo definito dall'utente. Usare la parola chiave `operator` tra il punto e il `type`.
 
 L'esempio seguente genera l'errore C2286:
 
-```
+```cpp
 // C2274.cpp
 struct MyClass {
    operator int() {

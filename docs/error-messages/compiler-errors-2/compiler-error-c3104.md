@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447843"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755864"
 ---
 # <a name="compiler-error-c3104"></a>Errore del compilatore C3104
 
-argomento dell'attributo non valido
+argomento di attributo non valido
 
-È stato specificato un argomento non valido a un attributo.
+È stato specificato un argomento non valido per un attributo.
 
-Visualizzare [tipi di parametro di attributo](../../extensions/attribute-parameter-types-cpp-component-extensions.md) per altre informazioni.
+Per ulteriori informazioni, vedere [tipi di parametro dell'attributo](../../extensions/attribute-parameter-types-cpp-component-extensions.md) .
 
-Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual Studio 2005: passaggio di matrici gestite agli attributi personalizzati, il tipo della matrice non viene dedotto non è più nell'elenco di inizializzazione aggregata. Il compilatore ora è necessario specificare il tipo di matrice, nonché l'elenco di inizializzatori.
+Questo errore può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: quando si passano matrici gestite a attributi personalizzati, il tipo della matrice non viene più dedotto dall'elenco di inizializzazione aggregata. Il compilatore ora richiede di specificare il tipo della matrice e l'elenco di inizializzatori.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3104.
+L'esempio seguente genera l'C3104.
 
-```
+```cpp
 // C3104a.cpp
 // compile with: /clr /c
 using namespace System;
@@ -46,9 +46,9 @@ ref struct AStruct{};
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3104.
+L'esempio seguente genera l'C3104.
 
-```
+```cpp
 // C3104b.cpp
 // compile with: /clr /c
 // C3104 expected

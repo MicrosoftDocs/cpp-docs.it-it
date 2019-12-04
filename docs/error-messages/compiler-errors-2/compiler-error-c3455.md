@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3455
 ms.assetid: 218e5cfe-5391-4eeb-81c2-85c47e3a6cd2
-ms.openlocfilehash: 4451ddbd8d5a7125112ef8e1c58e8843095bffd4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e016105a53b4020ca8ed83a95b0c9b96036b1884
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328577"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756669"
 ---
 # <a name="compiler-error-c3455"></a>Errore del compilatore C3455
 
@@ -23,7 +23,7 @@ ms.locfileid: "62328577"
 
 L'esempio seguente genera l'errore C3455.
 
-```
+```cpp
 // C3455.cpp
 // compile with: /clr /c
 using namespace System;

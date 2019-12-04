@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-ms.openlocfilehash: 3e387fe77c521a4f25ba67205f1fbd552397e272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a61d4f2472ef6da8aedcf8a8ef90b70de47d8af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381039"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738271"
 ---
 # <a name="compiler-error-c3495"></a>Errore del compilatore C3495
 
@@ -27,7 +27,7 @@ Non è possibile acquisire una variabile che non ha una durata di archiviazione 
 
 L'esempio seguente genera l'errore C3495 perché la variabile `static` `n` è presente nell'elenco di acquisizione di un'espressione lambda:
 
-```
+```cpp
 // C3495.cpp
 
 int main()

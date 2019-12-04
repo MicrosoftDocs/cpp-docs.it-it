@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: dc848d4108ed4a1a7b6646647a1bbb1ec8dcadf7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30ed7016ca3a4d4948a08c5c09268e52c9a407d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382398"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761673"
 ---
 # <a name="compiler-error-c3181"></a>Errore del compilatore C3181
 
-'type': operando non valido per l'operatore
+' type ': operando non valido per l'operatore
 
-È stato passato un parametro non valido per il [typeid](../../extensions/typeid-cpp-component-extensions.md) operatore. Il parametro deve essere un tipo gestito.
+Parametro non valido passato all'operatore [typeid](../../extensions/typeid-cpp-component-extensions.md) . Il parametro deve essere un tipo gestito.
 
-Si noti che il compilatore Usa gli alias per i tipi nativi che eseguono il mapping a tipi in common language runtime.
+Si noti che il compilatore usa gli alias per i tipi nativi che vengono mappati ai tipi nel Common Language Runtime.
 
-L'esempio seguente genera l'errore C3181:
+L'esempio seguente genera l'C3181:
 
-```
+```cpp
 // C3181a.cpp
 // compile with: /clr
 using namespace System;

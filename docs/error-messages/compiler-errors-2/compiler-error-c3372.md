@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3372
 ms.assetid: 38ee39ed-03ff-4e6d-9104-f1977b96645d
-ms.openlocfilehash: f410e18621c6784de011d12b45d07c163afdb1c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ce3424559ff58dd36d6f2544a9d85c958f2ab3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400344"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758593"
 ---
 # <a name="compiler-error-c3372"></a>Errore del compilatore C3372
 
@@ -21,7 +21,7 @@ Per alcuni attributi, è necessario passare un nome dell'interfaccia come parame
 
 L'esempio seguente genera l'errore C3372:
 
-```
+```cpp
 // C3372.cpp
 #include <windows.h>
 [module(name="MyModule")];

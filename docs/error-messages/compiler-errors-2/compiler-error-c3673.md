@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
-ms.openlocfilehash: 9fd6920956d6a48ec7e1f15bf54ea8d75bad4aa5
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 50585904f125dcb572043b568978d65eb1c61e80
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345427"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758086"
 ---
 # <a name="compiler-error-c3673"></a>Errore del compilatore C3673
 
-'type': classe ha un costruttore di copia
+' type ': la classe non ha un costruttore di copia
 
-Per copiare oggetti di tipi di riferimento CLR è necessario un costruttore definito dall'utente. Per altre informazioni, vedere [semantica dello Stack C++ per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Per copiare oggetti di tipi di riferimento CLR, è necessario un costruttore definito dall'utente. Per ulteriori informazioni, vedere [ C++ semantica dello stack per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3673.
+L'esempio seguente genera l'C3673.
 
-```
+```cpp
 // C3673.cpp
 // compile with: /clr
 public ref struct R {
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3673.
+L'esempio seguente genera l'C3673.
 
-```
+```cpp
 // C3673_b.cpp
 // compile with: /clr /c
 // C3673 expected

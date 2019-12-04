@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3654
 ms.assetid: 57d96e3f-6bbb-4eaa-934b-26c23b4ceb2e
-ms.openlocfilehash: e66f0071a3d086c84a51c8b69e52b06643344c4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960dbe9f18403c12919db713cc41451dd7b93aac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227098"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756292"
 ---
 # <a name="compiler-error-c3654"></a>Errore del compilatore C3654
 
-'testo': errore di sintassi nell'override esplicito
+' text ': errore di sintassi nell'override esplicito
 
-Una stringa imprevista è stato in un override esplicito. Per altre informazioni, vedere [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Una stringa imprevista si trovava in un override esplicito. Per ulteriori informazioni, vedere [override espliciti](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-L'esempio seguente genera l'errore C3654:
+L'esempio seguente genera l'C3654:
 
-```
+```cpp
 // C3654.cpp
 // compile with: /clr /c
 public ref struct B {

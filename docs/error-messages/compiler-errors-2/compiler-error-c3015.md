@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3015
 ms.assetid: d5e8e50b-7542-4b2d-8665-1b22072a5bc6
-ms.openlocfilehash: 97ad6b51b9444e03f17511e26be75f5a783a5f07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f83da313c71ff081ecd5d4339014b66f98578dc1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350270"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742223"
 ---
 # <a name="compiler-error-c3015"></a>Errore del compilatore C3015
 
@@ -21,7 +21,7 @@ l'inizializzazione nell'istruzione 'for' OpenMP non ha un formato valido
 
 L'esempio seguente genera l'errore C3015:
 
-```
+```cpp
 // C3015.cpp
 // compile with: /openmp
 int main()

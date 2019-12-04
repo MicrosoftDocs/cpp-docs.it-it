@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3450
 ms.assetid: 78892cf7-0b82-4589-90d0-e06666247003
-ms.openlocfilehash: a5228e0396221c51f5fc7336255656416c1e553b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b57b67e8f4542266818ad5b3d90d78a1a943d55
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328646"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756227"
 ---
 # <a name="compiler-error-c3450"></a>Errore del compilatore C3450
 
@@ -25,7 +25,7 @@ Per altre informazioni, vedere [User-Defined Attributes](../../extensions/user-d
 
 L'esempio seguente genera l'errore C3450 e mostra come risolverlo.
 
-```
+```cpp
 // C3450.cpp
 // compile with: /clr
 // C3450 expected

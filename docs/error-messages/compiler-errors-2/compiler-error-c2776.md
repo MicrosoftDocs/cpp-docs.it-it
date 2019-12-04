@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2776
 ms.assetid: 9d80addc-62c7-40fc-a2cc-60303abb87df
-ms.openlocfilehash: 200fbc5c42a6b735c072c093ec4cb4f081031824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79758c88e595e6d5ebb5cd4b39a8df8fc1339752
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257101"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740065"
 ---
 # <a name="compiler-error-c2776"></a>Errore del compilatore C2776
 
-ciascuna proprietà è possibile specificare un solo metodo 'get'
+è possibile specificare un solo metodo ' Get ' per proprietà
 
-È possibile specificare solo uno `get` funzionare nel [proprietà](../../cpp/property-cpp.md) attributi estesa. Questo errore si verifica quando più `get` le funzioni vengono specificate.
+È possibile specificare una sola funzione `get` nell'attributo esteso della [Proprietà](../../cpp/property-cpp.md) . Questo errore si verifica quando vengono specificate più funzioni `get`.
 
-L'esempio seguente genera l'errore C2776:
+L'esempio seguente genera l'C2776:
 
-```
+```cpp
 // C2776.cpp
 struct A {
    __declspec(property(get=GetProp,get=GetPropToo))

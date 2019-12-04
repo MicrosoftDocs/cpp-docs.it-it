@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2788
 ms.assetid: 8688fc5c-e652-43b4-b407-9c488c76f2db
-ms.openlocfilehash: 0025aa5211c2736860bdd30cad4315f63fba9337
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a708e711fd086d31ecd5e8cc9c35679571af48c4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256893"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739571"
 ---
 # <a name="compiler-error-c2788"></a>Errore del compilatore C2788
 
-'identifier': più di un GUID associato all'oggetto
+' Identifier ': più di un GUID associato a questo oggetto
 
-Il [uuidof](../../cpp/uuidof-operator.md) operatore accetta un tipo definito dall'utente con un GUID collegato o un oggetto di un tipo definito dall'utente. Questo errore si verifica quando l'argomento è un oggetto con più GUID.
+L'operatore [__uuidof](../../cpp/uuidof-operator.md) accetta un tipo definito dall'utente con un GUID collegato o un oggetto di tale tipo definito dall'utente. Questo errore si verifica quando l'argomento è un oggetto con più GUID.
 
-L'esempio seguente genera l'errore C2788:
+L'esempio seguente genera l'C2788:
 
-```
+```cpp
 // C2788.cpp
 #include <windows.h>
 struct __declspec(uuid("00000001-0000-0000-0000-000000000000")) A {};

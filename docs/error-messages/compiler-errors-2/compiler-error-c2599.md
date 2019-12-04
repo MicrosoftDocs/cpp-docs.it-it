@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2599
 ms.assetid: 88515f36-7589-47e2-862e-0de8b18d6668
-ms.openlocfilehash: 872c3a66d4738c1a69990dffdbbc59cee9e90002
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c722335660653df7e533ec25d4708f42c16846ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395469"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740767"
 ---
 # <a name="compiler-error-c2599"></a>Errore del compilatore C2599
 
-'enum': dichiarazione con prototipo di tipo enum non è consentita
+' enum ': la dichiarazione con server di tipo enum non è consentita
 
-Il compilatore non supporta più la dichiarazione con prototipo di un'enumerazione gestita.
+Il compilatore non supporta più la dichiarazione in diretta di un'enumerazione gestita.
 
-Dichiarazione con prototipo di un tipo enum non è consentita negli [/Za](../../build/reference/za-ze-disable-language-extensions.md).
+La dichiarazione con licenza di un tipo enum non è consentita in [/za](../../build/reference/za-ze-disable-language-extensions.md).
 
-L'esempio seguente genera l'errore C2599:
+L'esempio seguente genera l'C2599:
 
-```
+```cpp
 // C2599.cpp
 // compile with: /clr /c
 enum class Status;   // C2599

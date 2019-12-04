@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2687
 ms.assetid: 1d24b24a-cd0f-41cc-975c-b08dcfb7f402
-ms.openlocfilehash: a30efa264a4e7be387c3c2363940bd5ceca1bcc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3e728033a3230d628242aab341377be2f6670ca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266192"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760257"
 ---
 # <a name="compiler-error-c2687"></a>Errore del compilatore C2687
 
-'type': dichiarazione di eccezione non può essere 'void' o indicare un tipo incompleto o un puntatore o riferimento a un tipo incompleto
+' type ': la dichiarazione di eccezione non può essere ' void ' o indicare un tipo incompleto o un puntatore o un riferimento a un tipo incompleto
 
-Per un tipo a far parte di una dichiarazione di eccezione, deve essere definito e diverso da void.
+Affinché un tipo faccia parte di una dichiarazione di eccezione, è necessario che sia definito e non void.
 
-L'esempio seguente genera l'errore C2687:
+L'esempio seguente genera l'C2687:
 
-```
+```cpp
 // C2687.cpp
 class C;
 
@@ -33,7 +33,7 @@ int main() {
 
 Possibile soluzione:
 
-```
+```cpp
 // C2687b.cpp
 // compile with: /EHsc
 class C {};

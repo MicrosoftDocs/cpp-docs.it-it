@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2884
 ms.assetid: 8b4d43e3-3fb5-4360-86c8-de59d8736d4f
-ms.openlocfilehash: d920629dc0697d0f2fdd05ac5aca6118b89b88cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0e283c7cd6116655a56f8df67ab4eecf9923b68
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378856"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760941"
 ---
 # <a name="compiler-error-c2884"></a>Errore del compilatore C2884
 
-'name': introdotto dalla dichiarazione using è in conflitto con funzione locale 'function'
+' name ': introdotto dalla dichiarazione using in conflitto con la funzione locale ' Function '
 
-Si è provato a definire una funzione più volte. La prima definizione è una definizione locale. Il secondo è da uno spazio dei nomi con un `using` dichiarazione.
+Si è tentato di definire una funzione più di una volta. La prima definizione è una definizione locale. Il secondo è da uno spazio dei nomi con una dichiarazione `using`.
 
-L'esempio seguente genera l'errore C2884:
+L'esempio seguente genera l'C2884:
 
-```
+```cpp
 // C2884.cpp
 namespace A {
    void z(int);

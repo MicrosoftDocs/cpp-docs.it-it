@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-ms.openlocfilehash: b175b14af55a9a462e040f064cc6e38d13fffb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 460000531dba77e42379199f276c9e2e02f43a9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173990"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743419"
 ---
 # <a name="compiler-error-c3227"></a>Errore del compilatore C3227
 
-'parameter': Impossibile utilizzare 'keyword' per allocare un tipo generico
+' parameter ': non è possibile usare ' keyword ' per allocare un tipo generico
 
-Per creare un'istanza di un tipo, è necessario un costruttore appropriato. Tuttavia, il compilatore non è in grado di assicurare che sia disponibile un costruttore appropriato.
+Per creare un'istanza di un tipo, è necessario un costruttore appropriato. Tuttavia, il compilatore non è in grado di garantire che sia disponibile un costruttore appropriato.
 
-È possibile usare i modelli anziché i generics per risolvere l'errore oppure è possibile usare uno dei diversi metodi per creare un'istanza del tipo.
+Per risolvere l'errore è possibile utilizzare modelli anziché generics oppure utilizzare uno dei diversi metodi disponibili per creare un'istanza del tipo.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3227.
+L'esempio seguente genera l'C3227.
 
-```
+```cpp
 // C3227.cpp
 // compile with: /clr /c
 generic<class T> interface class ICreate {

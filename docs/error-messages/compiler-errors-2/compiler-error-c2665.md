@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2665
 ms.assetid: a7f99b61-2eae-4f2b-ba75-ea68fd1e8312
-ms.openlocfilehash: 63817c4181edb942f43f41c24fb10278d14f397e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95ca5ea846f9cd45bdb1e9706ae377589d37a285
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386889"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756019"
 ---
 # <a name="compiler-error-c2665"></a>Errore del compilatore C2665
 
-'function': nessuno degli overload number1 convertila parametri number2 dal tipo 'type'
+' Function ': nessuno degli overload number1 può convertire il parametro number2 dal tipo ' type '
 
-Un parametro della funzione in overload non può essere convertito nel tipo richiesto.  Possibili risoluzioni:
+Un parametro della funzione in overload non può essere convertito nel tipo richiesto.  Di seguito vengono riportate alcune soluzioni possibili:
 
-- Specificare un operatore di conversione.
+- Fornire un operatore di conversione.
 
 - Usare la conversione esplicita.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2665.
+L'esempio seguente genera l'C2665.
 
-```
+```cpp
 // C2665.cpp
 void func(short, char*){}
 void func(char*, char*){}

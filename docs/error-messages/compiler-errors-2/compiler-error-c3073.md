@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
-ms.openlocfilehash: 8a4a2011124056af7064c8241450e1f3613776a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b53e704c14746579a32550726364c062a9ade6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406704"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756747"
 ---
 # <a name="compiler-error-c3073"></a>Errore del compilatore C3073
 
-'type': classe di riferimento dispone di un costruttore di copia definito dall'utente
+' type ': la classe di riferimento non ha un costruttore di copia definito dall'utente
 
-In un [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) compilazione, il compilatore non genererà un costruttore di copia per un tipo riferimento. In una qualsiasi **/clr** compilazione, è necessario definire il proprio costruttore di copia per un tipo riferimento se si prevede che un'istanza del tipo deve essere copiato.
+In una compilazione [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) , il compilatore non genererà un costruttore di copia per un tipo di riferimento. In qualsiasi compilazione **/CLR** è necessario definire un costruttore di copia personalizzato per un tipo riferimento se si prevede che un'istanza del tipo venga copiata.
 
-Per altre informazioni, vedere [semantica dello Stack C++ per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Per ulteriori informazioni, vedere [ C++ semantica dello stack per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3073.
+L'esempio seguente genera l'C3073.
 
-```
+```cpp
 // C3073.cpp
 // compile with: /clr
 ref class R {

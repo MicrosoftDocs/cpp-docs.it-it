@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-ms.openlocfilehash: 665244cbfc87f32274f9eaf9afacfb1caad50659
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a602238ca5a2f2a64eaa601cc6733a897b9fdb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402684"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738687"
 ---
 # <a name="compiler-error-c3206"></a>Errore del compilatore C3206
 
@@ -21,7 +21,7 @@ La definizione di una funzione di modello prevede che accetti un argomento di ti
 
 L'esempio seguente genera l'errore C3206:
 
-```
+```cpp
 // C3206.cpp
 template <class T>
 void f() {}
@@ -38,7 +38,7 @@ void f1() {
 
 Possibile soluzione:
 
-```
+```cpp
 // C3206b.cpp
 // compile with: /c
 template <class T>
@@ -54,7 +54,7 @@ void f1() {
 
 C3206 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C3206c.cpp
 // compile with: /clr
 generic <class GT1>
@@ -70,7 +70,7 @@ int main() {
 
 Possibile soluzione:
 
-```
+```cpp
 // C3206d.cpp
 // compile with: /clr
 generic <class GT1>
@@ -84,9 +84,9 @@ int main() {
 }
 ```
 
-Un modello di classe non è consentito come argomento di tipo modello. L'esempio seguente genera C3206:
+Un modello di classe non è consentito come argomento di tipo modello. L'esempio seguente genera l'esempio C3206:
 
-```
+```cpp
 // C3206e.cpp
 template <class T>
 struct S {};
@@ -103,7 +103,7 @@ int main() {
 
 Possibile soluzione:
 
-```
+```cpp
 // C3206f.cpp
 template <class T>
 struct S {};
@@ -118,9 +118,9 @@ int main() {
 }
 ```
 
-Se è necessario un parametro di modello template, è necessario includere la funzione in una classe di modello che accetta un parametro modello template:
+Se è necessario un parametro di modello di modello, è necessario eseguire il wrapping della funzione in una classe modello che accetta un parametro di modello di modello:
 
-```
+```cpp
 // C3206g.cpp
 template <class T>
 struct S {};

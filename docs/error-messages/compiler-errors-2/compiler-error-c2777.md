@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2777
 ms.assetid: 5fe158c0-2a65-488a-aca2-61d4a8b32d43
-ms.openlocfilehash: cfbe2c729141108565f00b7b5a7fd581b49e516d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67132f0acbee3614d8032685ae454386d97b8fb1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227702"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740013"
 ---
 # <a name="compiler-error-c2777"></a>Errore del compilatore C2777
 
-ciascuna proprietà è possibile specificare un solo metodo 'put'
+è possibile specificare un solo metodo ' Put ' per proprietà
 
-Oggetto [proprietà](../../cpp/property-cpp.md) declspec modificatore ha più di una `put` proprietà.
+Un modificatore declspec della [Proprietà](../../cpp/property-cpp.md) ha più di una proprietà `put`.
 
-L'esempio seguente genera l'errore C2777:
+L'esempio seguente genera l'C2777:
 
-```
+```cpp
 // C2777.cpp
 struct A {
    __declspec(property(put=PutProp,put=PutPropToo))   // C2777

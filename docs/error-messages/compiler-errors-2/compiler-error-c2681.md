@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2681
 ms.assetid: eb42da6d-8d2c-43fd-986b-e73e2b004885
-ms.openlocfilehash: 8b311052d3a3525090d954c0dc8cee20e985b1b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7cf39e89f70f27471fb3a251aac12793f1fb33b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282140"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760296"
 ---
 # <a name="compiler-error-c2681"></a>Errore del compilatore C2681
 
-'type': tipo di espressione non valida per nome
+' type ': tipo di espressione non valido per il nome
 
-Un operatore di cast ha provato a eseguire la conversione da un tipo non valido. Ad esempio, se si usa la [dynamic_cast](../../cpp/dynamic-cast-operator.md) operatore per convertire un'espressione in un tipo di puntatore, l'espressione di origine deve essere un puntatore.
+Un operatore di cast ha tentato di eseguire la conversione da un tipo non valido. Se ad esempio si usa l'operatore [dynamic_cast](../../cpp/dynamic-cast-operator.md) per convertire un'espressione in un tipo di puntatore, l'espressione di origine deve essere un puntatore.
 
-L'esempio seguente genera l'errore C2681:
+L'esempio seguente genera l'C2681:
 
-```
+```cpp
 // C2681.cpp
 class A { virtual void f(); };
 

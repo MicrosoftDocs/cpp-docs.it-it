@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3168
 ms.assetid: 4c36fcfb-c351-48ff-b4eb-78d2aa1b4d55
-ms.openlocfilehash: f39160cc09825c6d87d56ff5ba80d21a35f41e12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f09c7e250b4c2b02ba2db582f92d54336bed673
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174160"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761790"
 ---
 # <a name="compiler-error-c3168"></a>Errore del compilatore C3168
 
-'type': tipo di enumerazione sottostante non valido
+' type ': tipo sottostante non valido per enum
 
-Il tipo sottostante è specificato per il `enum` tipo non valido. Il tipo sottostante deve essere un tipo integrale di C++ o un tipo CLR corrispondente.
+Il tipo sottostante specificato per il tipo di `enum` non è valido. Il tipo sottostante deve essere un tipo C++ integrale o un tipo CLR corrispondente.
 
-L'esempio seguente genera l'errore C3168:
+L'esempio seguente genera l'C3168:
 
-```
+```cpp
 // C3168.cpp
 // compile with: /clr /c
 ref class G{};

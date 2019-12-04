@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: d2ba8d919ab71b566950cc227588e071d24016bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381111"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738414"
 ---
 # <a name="compiler-error-c3489"></a>Errore del compilatore C3489
 
@@ -33,7 +33,7 @@ Quando si specifica che la modalità di acquisizione predefinita per un'espressi
 
 L'esempio seguente genera l'errore C3489 perché la variabile `n` viene visualizzata per valore nella clausola di acquisizione di un'espressione lambda la cui modalità predefinita è per valore:
 
-```
+```cpp
 // C3489a.cpp
 
 int main()
@@ -47,7 +47,7 @@ int main()
 
 L'esempio seguente mostra quattro possibili soluzioni all'errore C3489:
 
-```
+```cpp
 // C3489b.cpp
 
 int main()

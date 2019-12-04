@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
-ms.openlocfilehash: 68435610680e3b21415a1d9439a8133fd1e2557f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea158d8dada013f6b90d0fbe1e7502665c1c24da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391959"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757722"
 ---
 # <a name="compiler-error-c2079"></a>Errore del compilatore C2079
 
-'identifier' viene utilizzato undefined classe, struct o unione 'name'
+' Identifier ' utilizza una classe, uno struct o un'Unione ' name ' non definita
 
-L'identificatore specificato è una classe non definita, una struttura o unione.
+L'identificatore specificato è una classe, una struttura o un'Unione non definita.
 
-Questo errore può essere causato dall'inizializzazione in corso un'unione anonima.
+Questo errore può essere causato dall'inizializzazione di un'unione anonima.
 
-L'esempio seguente genera l'errore C2079:
+L'esempio seguente genera l'C2079:
 
-```
+```cpp
 // C2079.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -34,7 +34,7 @@ int main() {
 
 Possibile soluzione:
 
-```
+```cpp
 // C2079b.cpp
 // compile with: /EHsc
 #include <fstream>
@@ -43,9 +43,9 @@ int main( ) {
 }
 ```
 
-C2079 può verificarsi anche se si tenta di dichiarare un oggetto nello stack di un tipo la cui dichiarazione con prototipo è solo nell'ambito.
+C2079 può anche verificarsi se si tenta di dichiarare un oggetto nello stack di un tipo la cui dichiarazione con estensione è solo nell'ambito.
 
-```
+```cpp
 // C2079c.cpp
 class A;
 
@@ -58,7 +58,7 @@ class A {};
 
 Possibile soluzione:
 
-```
+```cpp
 // C2079d.cpp
 // compile with: /c
 class A;

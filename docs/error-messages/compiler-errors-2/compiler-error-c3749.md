@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3749
 ms.assetid: 3d26b468-4757-41b8-b5a2-78022a5295fb
-ms.openlocfilehash: 7535f82a392f3d54b265ada2bd40a8d433838f4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75138bf8b090b7770d5bee918790efc095d76627
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227273"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761842"
 ---
 # <a name="compiler-error-c3749"></a>Errore del compilatore C3749
 
-'attribute': non è possibile usare un attributo personalizzato all'interno di una funzione
+' attribute ': non è possibile usare un attributo personalizzato all'interno di una funzione
 
-Un attributo personalizzato non può essere usato all'interno di una funzione. Per altre informazioni sugli attributi personalizzati, vedere l'argomento [attributo](../../windows/attributes/attribute.md).
+Impossibile utilizzare un attributo personalizzato all'interno di una funzione. Per ulteriori informazioni sugli attributi personalizzati, vedere l'argomento [attributo](../../windows/attributes/attribute.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3749:
+L'esempio seguente genera l'C3749:
 
-```
+```cpp
 // C3749a.cpp
 // compile with: /clr /c
 using namespace System;

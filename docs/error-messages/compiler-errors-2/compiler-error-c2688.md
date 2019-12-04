@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
-ms.openlocfilehash: 5355abc603726eb1bacb7a22fa1095bf2d81c538
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc871467e1e3fb23edc6231c3adb182f5e26c0d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266283"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760244"
 ---
 # <a name="compiler-error-c2688"></a>Errore del compilatore C2688
 
-'C2::fgrv': tipo restituito da covariante con più o ereditarietà virtuale non è supportata per le funzioni varargs
+' C2:: fgrv ': restituisce covariante con ereditarietà multipla o virtuale non supportata per le funzioni varargs
 
-Tipi restituiti di covariante non sono supportati in Visual C++ quando una funzione contiene argomenti variabili.
+I tipi restituiti covariante non sono supportati C++ in Visual quando una funzione contiene argomenti variabili.
 
-Per risolvere questo errore, definire le funzioni in modo che non utilizzano argomenti variabili o rendere i valori restituiti gli stessi per tutte le funzioni virtuali.
+Per correggere l'errore, definire le funzioni in modo che non utilizzino argomenti variabili o rendere uguali i valori restituiti per tutte le funzioni virtuali.
 
-L'esempio seguente genera l'errore C2688:
+L'esempio seguente genera l'C2688:
 
-```
+```cpp
 // C2688.cpp
 struct G1 {};
 struct G2 {};

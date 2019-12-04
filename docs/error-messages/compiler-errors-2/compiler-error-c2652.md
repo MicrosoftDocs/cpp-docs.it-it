@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2652
 ms.assetid: 6e3d1a90-a989-4088-8afd-dc82f6a2d66f
-ms.openlocfilehash: 9c9772052b690ad87de1d408c06478d82d48e724
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cedee3f1e3289aaf0ea38d75b6c812b61f891435
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282114"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756123"
 ---
 # <a name="compiler-error-c2652"></a>Errore del compilatore C2652
 
-'identifier': costruttore di copia non valida: primo parametro non deve essere un' 'identifier'
+' Identifier ': costruttore di copia non valido: il primo parametro non deve essere un'Identifier '
 
-Il primo parametro nel costruttore di copia ha lo stesso tipo della classe, struttura o unione per il quale è definito. Il primo parametro può essere un riferimento al tipo, ma non il tipo stesso.
+Il primo parametro del costruttore di copia è dello stesso tipo della classe, della struttura o dell'Unione per cui è definito. Il primo parametro può essere un riferimento al tipo, ma non il tipo stesso.
 
-L'esempio seguente genera l'errore C2651:
+L'esempio seguente genera l'C2651:
 
-```
+```cpp
 // C2652.cpp
 // compile with: /c
 class A {

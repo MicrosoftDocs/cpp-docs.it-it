@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174016"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757618"
 ---
 # <a name="compiler-error-c3225"></a>Errore del compilatore C3225
 
-argomento di tipo generico per 'arg' non può essere 'type', deve essere un tipo valore o tipo di handle
+l'argomento di tipo generico per ' arg ' non può essere ' type '. deve essere un tipo di valore o un tipo di handle
 
-L'argomento tipo generico non è del tipo corretto.
+Il tipo dell'argomento di tipo generico non è corretto.
 
 Per altre informazioni, vedere [Generics](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-È possibile creare istanze di un tipo generico con un tipo nativo. L'esempio seguente genera l'errore C3225.
+Non è possibile creare un'istanza di un tipo generico con un tipo nativo. L'esempio seguente genera l'C3225.
 
-```
+```cpp
 // C3225.cpp
 // compile with: /clr
 class A {};
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente crea un componente utilizzando il linguaggio c#. Si noti che il vincolo specifica che è possibile creare istanze del tipo generico solo con un tipo valore.
+Nell'esempio seguente viene creato un componente C#utilizzando. Si noti che il vincolo specifica che è possibile creare un'istanza del tipo generico solo con un tipo di valore.
 
 ```
 // C3225_b.cs
@@ -54,9 +54,9 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Esempio
 
-Questo esempio viene utilizzato il linguaggio c#-componente creato e viola il vincolo che può essere solo MyList creata un'istanza con un tipo di valore diverso da <xref:System.Nullable>. L'esempio seguente genera l'errore C3225.
+In questo esempio viene utilizzato C#il componente creato da e viene violato il vincolo di cui è possibile creare un'istanza solo con un tipo di valore diverso da <xref:System.Nullable>. L'esempio seguente genera l'C3225.
 
-```
+```cpp
 // C3225_c.cpp
 // compile with: /clr
 #using "C3225_b.dll"

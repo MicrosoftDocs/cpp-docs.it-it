@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3354
 ms.assetid: 185de401-231e-4999-a149-172ee4c69d84
-ms.openlocfilehash: 1ff2967f602722c99b58b679324bd4f50575f109
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5945b2112d1d03e4f18944d15028229cce4b668
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402606"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738596"
 ---
 # <a name="compiler-error-c3354"></a>Errore del compilatore C3354
 
@@ -31,7 +31,7 @@ I tipi seguenti non sono validi come tipi restituiti per un `delegate`:
 
 L'esempio seguente genera l'errore C3354:
 
-```
+```cpp
 // C3354_2.cpp
 // compile with: /clr /c
 using namespace System;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3029
 ms.assetid: 655eb04d-504a-468d-8c0c-bda1e5f297b7
-ms.openlocfilehash: a003a0b8fcba3609c355ae467a11b4024a0529d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12c06757ed6ec7560f7dd647e241ddd08a0484d5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385810"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736750"
 ---
 # <a name="compiler-error-c3029"></a>Errore del compilatore C3029
 
@@ -21,7 +21,7 @@ Un simbolo è stato usato più volte in una o più clausole di una direttiva. Il
 
 L'esempio seguente genera l'errore C3029:
 
-```
+```cpp
 // C3029.cpp
 // compile with: /openmp /link vcomps.lib
 #include "omp.h"

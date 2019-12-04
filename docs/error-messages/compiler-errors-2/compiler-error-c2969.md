@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2969
 ms.assetid: e4ea3d66-b937-4b2c-b42a-96e03fb11579
-ms.openlocfilehash: 1330babe92266a6bc410084b4a46ef75f83f0b7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 045ba4930e985d90f755ac44d482a55f04a3e6a3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256802"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759438"
 ---
 # <a name="compiler-error-c2969"></a>Errore del compilatore C2969
 
@@ -21,7 +21,7 @@ La definizione di una funzione membro del modello ha una parentesi graffa di chi
 
 L'esempio seguente genera l'errore C2969:
 
-```
+```cpp
 // C2969.cpp
 // compile with: /c
 class A {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2802
 ms.assetid: 08b68c0e-9382-40ac-8949-39a7a2749e05
-ms.openlocfilehash: 9024a13b0e4fdbc4174f94e6c0c8736b03f3c221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12ce65def043a05f5f154130b64326797a974137
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408446"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758294"
 ---
 # <a name="compiler-error-c2802"></a>Errore del compilatore C2802
 
-membro statico 'operator operator' non ha parametri formali
+il membro statico ' operator Operator ' non ha parametri formali
 
-Un operatore dichiarati da un `static` funzione membro deve avere almeno un parametro.
+Un operatore dichiarato da una funzione membro `static` deve avere almeno un parametro.
 
-L'esempio seguente genera l'errore C2802:
+L'esempio seguente genera l'C2802:
 
-```
+```cpp
 // C2802.cpp
 // compile with: /clr /c
 ref class A {

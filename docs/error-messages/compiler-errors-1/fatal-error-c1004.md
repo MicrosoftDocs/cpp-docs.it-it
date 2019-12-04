@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
-ms.openlocfilehash: 13fb8963b33569facf62ccedfe9ce8b7bbbbfdc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82a1a3e410505be53d4356e46d5521aebb72763c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383205"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756968"
 ---
 # <a name="fatal-error-c1004"></a>Errore irreversibile C1004
 
-fine file imprevista
+fine del file imprevista
 
-È stata raggiunta la fine di un file di origine senza la risoluzione di un costrutto. Il codice potrebbe mancare uno degli elementi seguenti:
+Il compilatore ha raggiunto la fine di un file di origine senza risolvere un costrutto. Nel codice potrebbe mancare uno degli elementi seguenti:
 
-- Una parentesi graffa di chiusura
+- Parentesi graffa di chiusura
 
-- Una parentesi di chiusura
+- Parentesi di chiusura
 
-- Marcatore di commento di chiusura (* /)
+- Marcatore di chiusura del commento (*/)
 
-- Un punto e virgola
+- Punto e virgola
 
-Per risolvere questo errore, verificare quanto segue:
+Per correggere l'errore, verificare quanto segue:
 
-- L'unità disco predefinita dispone di spazio sufficiente per i file temporanei, che richiedono circa il doppio dello spazio del file di origine.
+- Lo spazio disponibile nell'unità disco predefinita non è sufficiente per i file temporanei, che richiedono circa due volte lo spazio del file di origine.
 
-- Un' `#if` direttiva che restituisce false non dispone di chiusura `#endif` direttiva.
+- Una direttiva `#if` che restituisce false non dispone di una direttiva di `#endif` di chiusura.
 
-- Un file di origine non termina con un ritorno a capo e avanzamento riga.
+- Un file di origine non termina con un ritorno a capo e un avanzamento riga.
 
-L'esempio seguente genera l'errore C1004:
+L'esempio seguente genera l'C1004:
 
-```
+```cpp
 // C1004.cpp
 #if TEST
 int main() {}
@@ -46,7 +46,7 @@ int main() {}
 
 Possibile soluzione:
 
-```
+```cpp
 // C1004b.cpp
 #if TEST
 #endif

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: 03361fa3e8d4ecb9647d354dd402a9f2b0865eb6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1308ff91bcebabc5495b015321494f3457cf2d1e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344684"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761504"
 ---
 # <a name="compiler-error-c3541"></a>Errore del compilatore C3541
 
-'type': Impossibile applicare typeid a un tipo che contiene 'auto'
+' type ': typeid non può essere applicato a un tipo che contiene ' auto '
 
-Il [typeid](../../extensions/typeid-cpp-component-extensions.md) operatore non può essere applicato al tipo indicato perché contiene la `auto` identificatore.
+Non è possibile applicare l'operatore [typeid](../../extensions/typeid-cpp-component-extensions.md) al tipo indicato perché contiene l'identificatore `auto`.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente generato l'errore C3541.
+Nell'esempio seguente viene restituito C3541.
 
-```
+```cpp
 // C3541.cpp
 // Compile with /Zc:auto
 #include <typeinfo>

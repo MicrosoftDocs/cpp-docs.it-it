@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
-ms.openlocfilehash: f1fad1ad18af54945ef32dadaac50a6de4dbd62f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca603eb94d5d528a7fed15e0320e1f5d88bf0629
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366381"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760876"
 ---
 # <a name="compiler-error-c2893"></a>Errore del compilatore C2893
 
-Impossibile specializzare il modello di funzione 'nome del modello'
+Non è stato possibile specializzare il modello di funzione ' nome modello '
 
-Il compilatore non è stato possibile specializzare un modello di funzione. Possono esistere molte cause di questo errore.
+Il compilatore non è riuscito a specializzare un modello di funzione. Questo errore può essere dovuto a numerose cause.
 
-In generale, il modo per risolvere un errore C2893 è per verificare la firma della funzione e verificare che è possibile creare un'istanza di ogni tipo.
+In generale, la modalità di risoluzione di un errore C2893 consiste nel rivedere la firma della funzione e verificare che sia possibile creare un'istanza di ogni tipo.
 
 ## <a name="example"></a>Esempio
 
-C2893 si verifica perché `f`del parametro di modello `T` viene dedotto per essere `std::map<int,int>`, ma `std::map<int,int>` dispone di alcun membro `data_type` (`T::data_type` non è possibile creare istanze con `T = std::map<int,int>`.). L'esempio seguente genera l'errore C2893.
+C2893 si verifica perché il parametro di modello di `f``T` viene dedotto come `std::map<int,int>`, ma `std::map<int,int>` non dispone di alcun membro `data_type` (`T::data_type` non è possibile crearne un'istanza con `T = std::map<int,int>`). L'esempio seguente genera l'C2893.
 
-```
+```cpp
 // C2893.cpp
 // compile with: /c /EHsc
 #include<map>

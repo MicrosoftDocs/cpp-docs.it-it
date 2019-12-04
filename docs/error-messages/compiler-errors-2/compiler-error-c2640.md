@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2640
 ms.assetid: e4d137ab-ed1d-457c-9eec-b70d97f1b0b4
-ms.openlocfilehash: d0dc2dd514186a94811b816c5f3f470a057186f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75acfa4d702b31052b7113117c71bf66ed9de149
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182600"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758242"
 ---
 # <a name="compiler-error-c2640"></a>Errore del compilatore C2640
 
-'identifier': based non valido di modificatore su un riferimento
+' Identifier ': modificatore __based non valido per riferimento
 
-Il `__based` modificatore può essere usato solo su puntatori.
+Il modificatore `__based` può essere utilizzato solo sui puntatori.
 
-L'esempio seguente genera l'errore C2640:
+L'esempio seguente genera l'C2640:
 
-```
+```cpp
 // C2640.cpp
 void f(int i) {
     void *vp;

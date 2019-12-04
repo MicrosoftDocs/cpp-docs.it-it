@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2711
 ms.assetid: 9df9f808-7419-4e63-abdd-e6538ff0871f
-ms.openlocfilehash: 568128d6199d16380b6a540173eded25f5588d23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65612e4a7d19295a8fa49576fb1d72c852a76b82
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160939"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757436"
 ---
 # <a name="compiler-error-c2711"></a>Errore del compilatore C2711
 
-'function': questa funzione non possa essere compilate come gestite, prendere in considerazione utilizzando #pragma non gestiti
+' Function ': questa funzione non può essere compilata come gestita. provare a usare #pragma non gestita
 
-Alcune istruzioni impedirà al compilatore di generare codice MSIL per la funzione contenitore.
+Alcune istruzioni impediscono al compilatore di generare codice MSIL per la funzione contenitore.
 
-L'esempio seguente genera l'errore C2711:
+L'esempio seguente genera l'C2711:
 
-```
+```cpp
 // C2711.cpp
 // compile with: /clr
 // processor: x86

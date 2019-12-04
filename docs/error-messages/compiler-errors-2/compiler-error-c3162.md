@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3162
 ms.assetid: 0d4c4a24-1456-4191-b7d8-c38cb7b17c32
-ms.openlocfilehash: f522a2de77e03a7c5f8f8dc774d62744417344fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95cd2c4af614906da7ba2d1c4c5dd488059f970a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174289"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761803"
 ---
 # <a name="compiler-error-c3162"></a>Errore del compilatore C3162
 
-'type': un tipo di riferimento che ha un distruttore non può essere usato come tipo di membro dati statico 'member'
+' type ': un tipo di riferimento con un distruttore non può essere utilizzato come tipo di membro dati statico ' member '
 
-Common language runtime non può sapere quando eseguire un distruttore definito dall'utente quando la classe contiene inoltre una funzione membro statica.
+Il Common Language Runtime non è in grado di stabilire quando eseguire un distruttore definito dall'utente quando la classe contiene anche la funzione membro statica.
 
-Un distruttore non verranno eseguito solo se l'oggetto viene eliminato in modo esplicito.
+Un distruttore non verrà mai eseguito, a meno che l'oggetto non venga eliminato in modo esplicito.
 
 Per ulteriori informazioni, vedere,
 
@@ -29,9 +29,9 @@ Per ulteriori informazioni, vedere,
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3162.
+L'esempio seguente genera l'C3162.
 
-```
+```cpp
 // C3162.cpp
 // compile with: /clr /c
 ref struct A {

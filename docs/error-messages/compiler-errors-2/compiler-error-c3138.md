@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: d812c14c2f364681fe28a58bdaed68fe3ed8ad30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374989"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761252"
 ---
 # <a name="compiler-error-c3138"></a>Errore del compilatore C3138
 
-'interface': un'interfaccia 'attribute' deve ereditare da IDispatch o da un'interfaccia che eredita da IDispatch
+' Interface ': un'interfaccia ' attribute ' deve ereditare da IDispatch o da un'interfaccia che eredita da IDispatch
 
-Un'interfaccia con il [duale](../../windows/dual.md) o [dispinterface](../../windows/dispinterface.md) gli attributi non ha `IDispatch` come interfaccia di base diretta o indiretta.
+Un'interfaccia con gli attributi [Dual](../../windows/dual.md) o [dispatch](../../windows/dispinterface.md) non ha `IDispatch` come interfaccia di base diretta o indiretta.
 
-Nell'esempio seguente genera l'errore C3138:
+L'esempio seguente genera l'C3138:
 
-```
+```cpp
 // C3138.cpp
 #include <unknwn.h>
 

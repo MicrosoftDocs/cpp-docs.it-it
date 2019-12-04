@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
-ms.openlocfilehash: 76206cdffce3f551ff472cbd83df486eb41ae80b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7236cb75aef4250440a1e992415df07fb5b7da3f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400136"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757176"
 ---
 # <a name="compiler-error-c3797"></a>Errore del compilatore C3797
 
-'override': dichiarazione di evento non può avere l'identificatore di override (da posizionare invece con i metodi add/remove/raise evento)
+' override ': la dichiarazione di evento non può avere un identificatore di override (deve essere posizionata in metodi Add/Remove/Raise di evento)
 
-È possibile eseguire l'override di un evento semplice (un evento senza metodi di accesso definiti in modo esplicito) con un altro evento semplice. L'evento esegue l'override deve definire il comportamento con funzioni di accesso.
+Non è possibile eseguire l'override di un evento Trivial (un evento senza metodi di funzione di accesso definiti in modo esplicito) con un altro evento Trivial. L'evento di override deve definire il comportamento con le funzioni di accesso.
 
-Per altre informazioni, vedere [evento](../../extensions/event-cpp-component-extensions.md).
+Per ulteriori informazioni, vedere [evento](../../extensions/event-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3797.
+L'esempio seguente genera l'C3797.
 
-```
+```cpp
 // C3797.cpp
 // compile with: /clr /c
 delegate void MyDel();

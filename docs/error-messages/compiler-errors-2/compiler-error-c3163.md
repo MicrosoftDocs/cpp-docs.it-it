@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: eda3910c99f4c8ea96568f2d475c5d6a1e4cdc7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 436fb112758dfdec9997ff7e6dd7ef8f9dcdc66e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174225"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761777"
 ---
 # <a name="compiler-error-c3163"></a>Errore del compilatore C3163
 
-'construct': attributi non coerenti con la dichiarazione precedente
+' construct ': attributi non coerenti con la dichiarazione precedente
 
-Gli attributi che vengono applicati a una definizione in conflitto con gli attributi che vengono applicati a una dichiarazione.
+Gli attributi applicati a una definizione sono in conflitto con l'attributo o gli attributi applicati a una dichiarazione.
 
-Un modo per risolvere C3163 è eliminare attributi nella dichiarazione con prototipo. Tutti gli attributi in una dichiarazione con prototipo devono essere minore di attributi sulla definizione o, al massimo, uguale ad essi.
+Un modo per risolvere C3163 consiste nell'eliminare gli attributi nella dichiarazione in avanti. Tutti gli attributi in una dichiarazione in avanti devono essere minori degli attributi nella definizione o, al massimo, uguali.
 
-Una possibile causa dell'errore C3163 implica il linguaggio annotazione del codice sorgente Microsoft (SAL). Le macro SAL non si espanderanno a meno che non si compila il progetto utilizzando il **/ANALYZE** flag. Un programma che viene compilato senza errori senza / analizza potrebbe generare C3163 se si prova a ricompilarla con l'opzione /Analyze. Per altre informazioni su SAL, vedere [annotazioni SAL](../../c-runtime-library/sal-annotations.md).
+Una possibile causa dell'errore C3163 riguarda il linguaggio di annotazione del codice sorgente Microsoft (SAL). Le macro SAL non si espandono, a meno che il progetto non venga compilato con il flag **/Analyze** . Un programma che compila senza/analyze potrebbe generare C3163 se si tenta di ricompilarlo con l'opzione/analyze. Per altre informazioni su SAL, vedere [annotazioni SAL](../../c-runtime-library/sal-annotations.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3163.
+L'esempio seguente genera l'C3163.
 
-```
+```cpp
 // C3163.cpp
 // compile with: /clr /c
 using namespace System;

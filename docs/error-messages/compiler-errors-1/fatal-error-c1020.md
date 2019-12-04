@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1020
 ms.assetid: 42f429e2-5e3b-4086-a10d-b99e032e51c5
-ms.openlocfilehash: bdd7a6c87b0e00bd7bef174b8daf0e16cc488a5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67cf5067c85d07215f6391d9e5d3d1bcb4978e42
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383152"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756903"
 ---
 # <a name="fatal-error-c1020"></a>Errore irreversibile C1020
 
@@ -21,14 +21,14 @@ La direttiva `#endif` non corrisponde ad alcuna direttiva `#if`, `#ifdef`o `#ifn
 
 L'esempio seguente genera l'errore C1020:
 
-```
+```cpp
 // C1020.cpp
 #endif     // C1020
 ```
 
 Possibile soluzione:
 
-```
+```cpp
 // C1020b.cpp
 // compile with: /c
 #if 1

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2890
 ms.assetid: 49147375-182c-42b1-b170-f475cd436d47
-ms.openlocfilehash: 43c05fba15ee78c8e1454c115246f557f98f897e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d51748e80dad0370b5f735180455dd6c8d113c7a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311709"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760902"
 ---
 # <a name="compiler-error-c2890"></a>Errore del compilatore C2890
 
-'class': una classe di riferimento può avere solo una classe di base non di interfaccia
+' Class ': una classe di riferimento può avere una sola classe di base non di interfaccia
 
-Una classe di riferimento può avere solo una classe di base.
+Una classe di riferimento può avere una sola classe di base.
 
-L'esempio seguente genera l'errore C2890:
+L'esempio seguente genera l'C2890:
 
-```
+```cpp
 // C2890.cpp
 // compile with: /clr /c
 ref class A {};

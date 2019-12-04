@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3140
 ms.assetid: 122f8943-fac3-4db8-a3a8-2c5d19233de6
-ms.openlocfilehash: e7dde3eb27c018502225ea3bc45e4bee7c699379
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc1e1828583b3ac8342c12a62e6ba4c1694b5824
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374963"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760569"
 ---
 # <a name="compiler-error-c3140"></a>Errore del compilatore C3140
 
-non può contenere più attributi 'module' nella stessa unità di compilazione
+non è possibile avere più attributi ' Module ' nella stessa unità di compilazione
 
-Il [modulo](../../windows/module-cpp.md) attributo può essere definito una sola volta per ogni progetto.
+L'attributo [Module](../../windows/module-cpp.md) può essere definito una sola volta per ogni progetto.
 
-L'esempio seguente genera l'errore C3140:
+L'esempio seguente genera l'C3140:
 
-```
+```cpp
 // C3140.cpp
 // compile with: /c
 [emitidl];

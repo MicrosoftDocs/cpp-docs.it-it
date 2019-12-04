@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
-ms.openlocfilehash: 34d19e8e9f51c90c48ec0d429f98bb82e3d829d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56f4e6e1d6c392fc377fe5fdf11643ae8a2e503a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228538"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759607"
 ---
 # <a name="compiler-error-c2750"></a>Errore del compilatore C2750
 
-'type': non è possibile usare 'new' per il tipo di riferimento. In alternativa, usare 'gcnew'
+' type ': non è possibile usare ' New ' nel tipo di riferimento; usare invece ' gcnew '
 
-Per creare un'istanza di un tipo CLR, che fa sì che l'istanza da inserire nell'heap sottoposto a garbage collection, è necessario utilizzare [gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md).
+Per creare un'istanza di un tipo CLR, che provoca l'inserimento dell'istanza nell'heap sottoposta a Garbage Collection, è necessario utilizzare [gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
-L'esempio seguente genera l'errore C2750:
+L'esempio seguente genera l'C2750:
 
-```
+```cpp
 // C2750.cpp
 // compile with: /clr
 ref struct Y1 {};

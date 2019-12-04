@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2892
 ms.assetid: c22a5084-2f50-42c2-a56b-6dfe5442edc9
-ms.openlocfilehash: 296224532b19d9ff85c8644aa653b6d842205213
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3868a44cf04d6c87092759ea473aa78aa0ad4c4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265880"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760889"
 ---
 # <a name="compiler-error-c2892"></a>Errore del compilatore C2892
 
-classe locale non deve avere modelli di membro
+la classe locale non deve avere modelli di membro
 
-Funzioni membro basate su modelli non sono valide in una classe che viene definita in una funzione.
+Le funzioni membro basate su modelli non sono valide in una classe definita in una funzione.
 
-L'esempio seguente genera l'errore C2892:
+L'esempio seguente genera l'C2892:
 
-```
+```cpp
 // C2892.cpp
 int main() {
    struct local {

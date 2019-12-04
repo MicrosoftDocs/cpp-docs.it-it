@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
-ms.openlocfilehash: 0b34760bc3f5b23148ce84cf590685efad2008df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1071623c8dbaef52a6a391d8858e7502de9c74b4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324636"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757995"
 ---
 # <a name="compiler-error-c3703"></a>Errore del compilatore C3703
 
-'gestore dell'evento': un metodo del gestore eventi deve avere la stessa classe di archiviazione di origine 'event'
+' event handler ': un metodo del gestore eventi deve avere la stessa classe di archiviazione dell'origine ' Event '
 
-Un' [evento](../../cpp/event-handling.md) dispone di una classe di archiviazione diverso rispetto a cui è associato il gestore dell'evento. Ad esempio, questo errore si verifica se il gestore dell'evento è una funzione membro statica e l'evento non è statico. Per correggere questo errore, assegnare l'evento e il gestore dell'evento la stessa classe di archiviazione.
+Un [evento](../../cpp/event-handling.md) ha una classe di archiviazione diversa rispetto al gestore eventi a cui è associato. Questo errore si verifica, ad esempio, se il gestore eventi è una funzione membro statica e l'evento non è statico. Per correggere l'errore, assegnare all'evento e al gestore eventi la stessa classe di archiviazione.
 
-L'esempio seguente genera l'errore C3703:
+L'esempio seguente genera l'C3703:
 
-```
+```cpp
 // C3703.cpp
 // C3703 expected
 #include <stdio.h>

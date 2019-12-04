@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3369
 ms.assetid: c6ceb9cb-3df9-4334-9a5c-d16db351d476
-ms.openlocfilehash: 0cd27da4b73732513afe0bd33a2d7312e6ddbe97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee936f4921369b1d59d81b51dcb3e81c69be083c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388729"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755603"
 ---
 # <a name="compiler-error-c3369"></a>Errore del compilatore C3369
 
@@ -21,7 +21,7 @@ L'oggetto [idl_module](../../windows/idl-module.md) in cui è stata definita la 
 
 L'esempio seguente genera l'errore C3369:
 
-```
+```cpp
 // C3369.cpp
 // compile with: /c
 [idl_module(name="name1", dllname="x.dll")]; // C3369

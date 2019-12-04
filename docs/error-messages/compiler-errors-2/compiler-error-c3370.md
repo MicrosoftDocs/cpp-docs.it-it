@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3370
 ms.assetid: ee6d4c85-78fc-42b2-836e-5cc491a3b2ba
-ms.openlocfilehash: 0dbc95fcb26354b0f963d1844ddd6a43783c532a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c1a9e4e099fc33dd585e5cdbffa2bbb8ea36987
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300609"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755590"
 ---
 # <a name="compiler-error-c3370"></a>Errore del compilatore C3370
 
@@ -21,7 +21,7 @@ Prima di poter usare [idl_module](../../windows/idl-module.md) per specificare u
 
 L'esempio seguente genera l'errore C3370:
 
-```
+```cpp
 // C3370.cpp
 [module(name=MyLibrary)];
 // uncomment the following line to resolve the error

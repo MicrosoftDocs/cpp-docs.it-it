@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2553
 ms.assetid: 64bc1e9a-627f-4ce9-b7bc-dc911bdb9180
-ms.openlocfilehash: 11cb2b83d958f0c59d05034a716a022f00b326ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa3e97d576e994878ab5b080363c4c09b79f42ed
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353197"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756786"
 ---
 # <a name="compiler-error-c2553"></a>Errore del compilatore C2553
 
-'funzione_base': funzione virtual in override tipo restituito differisce da 'funzione_override'
+' base_function ': il tipo restituito dalla funzione virtuale che esegue l'override differisce da' override_function '
 
-Una funzione in una classe derivata ha tentato di eseguire l'override di una funzione virtuale in una classe di base, ma la funzione di classe derivata non includono lo stesso tipo restituito della funzione di classe di base.  Una firma della funzione di override deve corrispondere alla firma della funzione da sottoporre a override.
+Una funzione in una classe derivata ha tentato di eseguire l'override di una funzione virtuale in una classe base, ma la funzione della classe derivata non ha lo stesso tipo restituito della funzione della classe base.  Una firma della funzione di override deve corrispondere alla firma della funzione sottoposta a override.
 
-L'esempio seguente genera l'errore C2553:
+L'esempio seguente genera l'C2553:
 
-```
+```cpp
 // C2553.cpp
 // compile with: /clr /c
 ref struct C {

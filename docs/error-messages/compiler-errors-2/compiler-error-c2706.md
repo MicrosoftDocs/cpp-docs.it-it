@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2706
 ms.assetid: e18da924-c42d-4b09-8e29-f4e0382d7dc6
-ms.openlocfilehash: 9767d36d44b99423d600d299d0803901d3dbfec5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bca86d3c0cf886c64a1d668468c793d0e77b2867
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161108"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757462"
 ---
 # <a name="compiler-error-c2706"></a>Errore del compilatore C2706
 
-except non valido senza corrispondente \_try (non presente '}' in \_blocco try?)
+__except non valido senza \__try corrispondenti ('}' mancante nel blocco \__try?)
 
-Il compilatore non trovato una parentesi graffa di chiusura per un `__try` blocco.
+Il compilatore non ha trovato una parentesi graffa di chiusura per un blocco di `__try`.
 
-L'esempio seguente genera l'errore C2706:
+L'esempio seguente genera l'C2706:
 
-```
+```cpp
 // C2706.cpp
 int main() {
    __try {

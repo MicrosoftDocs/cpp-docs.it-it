@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2798
 ms.assetid: fb0cd861-b228-4f81-8090-e28344a727e0
-ms.openlocfilehash: f3e8f0ac260e49866d1c654f89d34bf57a8ffbc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eed1f1aad0783f9e1d5f4126847b54f6b7278e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152475"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739204"
 ---
 # <a name="compiler-error-c2798"></a>Errore del compilatore C2798
 
-'super:: membro' è ambiguo
+' Super:: Member ' è ambiguo
 
-Più strutture ereditate contengono il membro è stato fatto riferimento con [super](../../cpp/super.md). È possibile correggere l'errore in uno dei modi:
+Più strutture ereditate contengono il membro a cui si fa riferimento con [Super](../../cpp/super.md). Per correggere l'errore, effettuare una delle operazioni seguenti:
 
-- Rimozione B1 o B2 dall'elenco di ereditarietà di D.
+- Rimuovere B1 o B2 dall'elenco di ereditarietà di D.
 
-- Modifica del nome del membro dati in B2 o B1.
+- Modifica del nome del membro dati in B1 o B2.
 
-L'esempio seguente genera l'errore C2798:
+L'esempio seguente genera l'C2798:
 
-```
+```cpp
 // C2798.cpp
 struct B1 {
    int i;

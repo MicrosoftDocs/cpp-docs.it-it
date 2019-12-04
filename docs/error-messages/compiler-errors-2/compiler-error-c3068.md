@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
-ms.openlocfilehash: 4790c9caafd28722f3631104cfe5cfc762cf6426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e20333a4fc18219f7f2514f3aefe73b81f284a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406886"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759490"
 ---
 # <a name="compiler-error-c3068"></a>Errore del compilatore C3068
 
-'function': una funzione 'naked' non può contenere oggetti che dovrebbero essere rimossi se si è verificata un'eccezione C++
+' Function ': una funzione ' Naked ' non può contenere oggetti che richiedono la rimozione se si è C++ verificata un'eccezione
 
-Il compilatore non è riuscito a eseguire la rimozione dello stack in un [naked](../../cpp/naked-cpp.md) funzione che ha generato un'eccezione perché un oggetto temporaneo è stato creato nella funzione e la gestione delle eccezioni C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) è stato specificato.
+Il compilatore non è riuscito a eseguire la rimozione dello stack su una funzione [naked](../../cpp/naked-cpp.md) che ha generato un'eccezione perché è stato creato un oggetto temporaneo nella C++ funzione ed è stata specificata la gestione delle eccezioni ([/EHsc](../../build/reference/eh-exception-handling-model.md)).
 
-Per risolvere questo errore, eseguire almeno una delle operazioni seguenti:
+Per correggere l'errore, eseguire almeno una delle operazioni seguenti:
 
-- Non compilare con /EHsc.
+- Non compilare con/EHsc.
 
-- Non si contrassegna la funzione come `naked`.
+- Non contrassegnare la funzione come `naked`.
 
 - Non creare un oggetto temporaneo nella funzione.
 
-Se una funzione crea un oggetto temporaneo nello stack, se la funzione genera un'eccezione e la gestione delle eccezioni C++ è abilitato, il compilatore eseguirà la pulizia dello stack se viene generata un'eccezione.
+Se una funzione crea un oggetto temporaneo nello stack, se la funzione genera un'eccezione e se C++ è abilitata la gestione delle eccezioni, il compilatore eliminerà lo stack se viene generata un'eccezione.
 
-Quando viene generata un'eccezione, codice, il prologo della query denominata generata dal compilatore e di epilogo e cui non sono presenti in una funzione naked, viene eseguita per una funzione.
+Quando viene generata un'eccezione, il codice generato dal compilatore, denominato prologo e epilogo e che non sono presenti in una funzione naked, viene eseguito per una funzione.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3068:
+L'esempio seguente genera l'C3068:
 
-```
+```cpp
 // C3068.cpp
 // compile with: /EHsc
 // processor: x86

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2808
 ms.assetid: 3d745102-d3b3-4735-a7d2-ad42d5bf3cfa
-ms.openlocfilehash: 84135288255c806e644e153a4d8f678fc13d2787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5be25e8606329589e1ac3a215f30fe6ce74c594
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281885"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760595"
 ---
 # <a name="compiler-error-c2808"></a>Errore del compilatore C2808
 
-''operatore operatore unario ha troppi parametri formali
+' operator Operator ' unario ha troppi parametri formali
 
-L'operatore unario con un elenco di parametri non void.
+L'operatore unario ha un elenco di parametri non void.
 
-L'esempio seguente genera l'errore C2808:
+L'esempio seguente genera l'C2808:
 
-```
+```cpp
 // C2808.cpp
 // compile with: /c
 class X {

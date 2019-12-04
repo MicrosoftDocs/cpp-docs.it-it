@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3189
 ms.assetid: b254de79-931e-4a59-a9f4-1c690d90ca5e
-ms.openlocfilehash: b2de290178657ae427b5ad7999c511ae7ff9f1eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b53056cf8a7b4b9b49720ef17e8f9318390059a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300642"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761621"
 ---
 # <a name="compiler-error-c3189"></a>Errore del compilatore C3189
 
-' typeid\<digitare astratti declarator >': questa sintassi non è più supportata, usare:: typeid invece
+' TypeId\<Type abstract dichiarator >': questa sintassi non è più supportata. usare:: typeid
 
-Un formato obsoleto del [typeid](../../extensions/typeid-cpp-component-extensions.md) è stata usata, usare il nuovo form.
+È stata utilizzata una forma obsoleta di [typeid](../../extensions/typeid-cpp-component-extensions.md) , utilizzare il nuovo form.
 
-L'esempio seguente genera l'errore C3189:
+L'esempio seguente genera l'C3189:
 
-```
+```cpp
 // C3189.cpp
 // compile with: /clr
 int main() {

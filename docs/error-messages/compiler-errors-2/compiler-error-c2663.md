@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
-ms.openlocfilehash: d74326e49edd980896276e2c6e67526d8d769cb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07b63202d8f171dfb69f4bb294b392152b9290b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360294"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756032"
 ---
 # <a name="compiler-error-c2663"></a>Errore del compilatore C2663
 
-'function': numero overload non presentano conversioni valide per puntatore 'this'
+' Function ': gli overload dei numeri non hanno conversioni legali per il puntatore ' This '
 
-Il compilatore non è stato possibile convertire `this` a una delle versioni di overload della funzione membro.
+Il compilatore non è riuscito a convertire `this` in nessuna delle versioni di overload della funzione membro.
 
-Questo errore può dipendere da richiamare non -`const` funzione membro su un `const` oggetto.  Possibili risoluzioni:
+Questo errore può essere causato dalla chiamata di una funzione membro non`const` su un oggetto `const`.  Di seguito vengono riportate alcune soluzioni possibili:
 
-1. Rimuovere il `const` dalla dichiarazione dell'oggetto.
+1. Rimuovere l'`const` dalla dichiarazione dell'oggetto.
 
-1. Aggiungere `const` su uno degli overload di funzione del membro.
+1. Aggiungere `const` a uno degli overload della funzione membro.
 
-L'esempio seguente genera l'errore C2663:
+L'esempio seguente genera l'C2663:
 
-```
+```cpp
 // C2663.cpp
 struct C {
    void f() volatile {}

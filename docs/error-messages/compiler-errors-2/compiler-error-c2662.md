@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: fefd523ca3b9a3406afc307150322f9d431aa730
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360346"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760452"
 ---
 # <a name="compiler-error-c2662"></a>Errore del compilatore C2662
 
-'function': Impossibile convertire il puntatore 'this' da 'type1' a 'type2'
+' Function ': Impossibile convertire il puntatore ' This ' da' tipo1' a' tipo2'
 
-Il compilatore non è stato possibile convertire le `this` puntatore da `type1` a `type2`.
+Il compilatore non è riuscito a convertire il puntatore `this` da `type1` a `type2`.
 
-Questo errore può dipendere da richiamare non -`const` funzione membro su un `const` oggetto.  Possibili risoluzioni:
+Questo errore può essere causato dalla chiamata di una funzione membro non`const` su un oggetto `const`.  Di seguito vengono riportate alcune soluzioni possibili:
 
-- Rimuovere il `const` dalla dichiarazione dell'oggetto.
+- Rimuovere l'`const` dalla dichiarazione dell'oggetto.
 
 - Aggiungere `const` alla funzione membro.
 
-L'esempio seguente genera l'errore C2662:
+L'esempio seguente genera l'C2662:
 
-```
+```cpp
 // C2662.cpp
 class C {
 public:
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-Durante la compilazione con **/clr**, è possibile chiamare una funzione in un `const` o `volatile` qualificato tipo gestito. È possibile dichiarare una funzione membro const di una classe gestita, in modo che non è possibile chiamare metodi su oggetti gestiti const.
+Quando si esegue la compilazione con **/CLR**, non è possibile chiamare una funzione in un `const` o `volatile` tipo gestito qualificato. Non è possibile dichiarare una funzione membro const di una classe gestita, pertanto non è possibile chiamare metodi su oggetti const gestiti.
 
-```
+```cpp
 // C2662_b.cpp
 // compile with: /c /clr
 ref struct M {
@@ -67,9 +67,9 @@ ref struct N {
 };
 ```
 
-L'esempio seguente genera l'errore C2662:
+L'esempio seguente genera l'C2662:
 
-```
+```cpp
 // C2662_c.cpp
 // compile with: /c
 // C2662 expected

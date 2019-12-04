@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: 2fb2aa86a1fd8f8e0710d787682fdd44abd941ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d51d4c7873d43a655dc11fa8e0fa297b8a69bff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408667"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735944"
 ---
 # <a name="compiler-error-c2059"></a>Errore del compilatore C2059
 
-Errore di sintassi: 'token'
+errore di sintassi:' token '
 
 Il token ha causato un errore di sintassi.
 
-L'esempio seguente genera un messaggio di errore per la riga che dichiara `j`.
+Nell'esempio seguente viene generato un messaggio di errore per la riga che dichiara `j`.
 
-```
+```cpp
 // C2059e.cpp
 // compile with: /c
 // C2143 expected
@@ -29,11 +29,11 @@ L'esempio seguente genera un messaggio di errore per la riga che dichiara `j`.
    int j*; // C2059
 ```
 
-Per determinare la causa dell'errore, esaminare non solo la riga che è elencata nel messaggio di errore, ma anche le righe sopra di esso. Se l'esame delle righe senza alcuna indicazione sul problema, provare a impostare come commento la riga che è elencata nel messaggio di errore e probabilmente più righe sopra di esso.
+Per determinare la motivo dell'errore, esaminare non solo la riga elencata nel messaggio di errore, ma anche le righe sopra di esso. Se l'analisi delle righe non restituisce alcun indizio sul problema, provare a impostare come commento la riga elencata nel messaggio di errore e forse più righe sopra.
 
-Se il messaggio di errore si verifica un simbolo che segue immediatamente un `typedef` variabile, assicurarsi che la variabile viene definita nel codice sorgente.
+Se il messaggio di errore si verifica in un simbolo che segue immediatamente una variabile di `typedef`, assicurarsi che la variabile sia definita nel codice sorgente.
 
-L'errore C2059 viene generato quando un nome di simbolo del preprocessore viene riutilizzato come identificatore. Nell'esempio seguente, il compilatore rileva `DIGITS.ONE` il numero 1, che non è valido come nome di un elemento di enumerazione:
+C2059 viene generato quando un nome di simbolo del preprocessore viene riutilizzato come identificatore. Nell'esempio seguente il compilatore vede `DIGITS.ONE` come numero 1, che non è valido come nome di elemento enum:
 
 ```cpp
 #define ONE 1
@@ -44,9 +44,9 @@ enum class DIGITS {
 };
 ```
 
-L'errore C2059 se un simbolo non restituisce alcun valore, come può verificarsi quando si **/D**_simbolo_ **=** viene usato per compilare.
+È possibile ottenere C2059 se un simbolo non restituisce alcun valore, come può verificarsi quando si usa **/d**_Symbol_ **=** per la compilazione.
 
-```
+```cpp
 // C2059a.cpp
 // compile with: /DTEST=
 #include <stdio.h>
@@ -60,11 +60,11 @@ int main() {
 }
 ```
 
-Un altro caso in cui può verificarsi l'errore C2059 è quando si compila un'applicazione che specifica una struttura in argomenti predefiniti per una funzione. Il valore predefinito per un argomento deve essere un'espressione. Un elenco di inizializzatori, ad esempio, uno che consente di inizializzare una struttura, ovvero non è un'espressione.  Per risolvere questo problema, definire un costruttore per eseguire l'inizializzazione richiesta.
+Un altro caso in cui può verificarsi C2059 è quando si compila un'applicazione che specifica una struttura negli argomenti predefiniti per una funzione. Il valore predefinito per un argomento deve essere un'espressione. Un elenco di inizializzatori, ad esempio quello utilizzato per inizializzare una struttura, non è un'espressione.  Per risolvere questo problema, definire un costruttore per eseguire l'inizializzazione richiesta.
 
-Nell'esempio seguente genera l'errore C2059:
+L'esempio seguente genera l'C2059:
 
-```
+```cpp
 // C2059b.cpp
 // compile with: /c
 struct ag_type {
@@ -78,11 +78,11 @@ void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK
 ```
 
-L'errore C2059 può verificarsi per un cast non valido.
+C2059 può verificarsi per un cast con formato non valido.
 
-L'esempio seguente genera l'errore C2059:
+L'esempio seguente genera l'C2059:
 
-```
+```cpp
 // C2059c.cpp
 // compile with: /clr
 using namespace System;
@@ -96,11 +96,11 @@ int main() {
 }
 ```
 
-L'errore C2059 può verificarsi anche se si prova a creare uno spazio dei nomi che contiene un punto.
+C2059 può verificarsi anche se si tenta di creare un nome di spazio dei nomi che contiene un punto.
 
-L'esempio seguente genera l'errore C2059:
+L'esempio seguente genera l'C2059:
 
-```
+```cpp
 // C2059d.cpp
 // compile with: /c
 namespace A.B {}   // C2059
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-L'errore C2059 può verificarsi quando un operatore che può qualificare un nome (`::`, `->`, e `.`) deve essere seguita dalla parola chiave `template`, come illustrato in questo esempio:
+C2059 può verificarsi quando un operatore che può qualificare un nome (`::`, `->`e `.`) deve essere seguito dalla parola chiave `template`, come illustrato nell'esempio seguente:
 
 ```cpp
 template <typename T> struct Allocator {

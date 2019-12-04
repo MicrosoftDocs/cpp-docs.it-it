@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2735
 ms.assetid: 6ce45600-7148-4bc0-8699-af0ef137571e
-ms.openlocfilehash: 73d5f61b5f86153db74a970d97b4656fb662bdad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81ae9353709ddb5ab0d878e6dc157511d95a94fd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152449"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755759"
 ---
 # <a name="compiler-error-c2735"></a>Errore del compilatore C2735
 
-parola chiave 'keyword' non è consentito nell'identificatore di tipo di parametro formale
+parola chiave ' keyword ' non consentita nell'identificatore di tipo di parametro formale
 
 La parola chiave non è valida in questo contesto.
 
-L'esempio seguente genera l'errore C2735:
+L'esempio seguente genera l'C2735:
 
-```
+```cpp
 // C2735.cpp
 void f(inline int){}   // C2735
 ```

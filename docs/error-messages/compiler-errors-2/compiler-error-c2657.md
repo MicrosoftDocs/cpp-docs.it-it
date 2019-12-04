@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2657
 ms.assetid: f7cf29a9-684a-4605-9469-ecfee9ba4b03
-ms.openlocfilehash: 4e2816092b3c0c210ae2c544e9bf9a823a9c5d18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e060c2b9a38866a898a3c5ada9e595464050877e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360437"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756097"
 ---
 # <a name="compiler-error-c2657"></a>Errore del compilatore C2657
 
-' classe:: *' trovata all'inizio di un'istruzione (si è omesso di specificare un tipo di?)
+' Class::*' trovato all'inizio di un'istruzione. si è omesso di specificare un tipo?
 
-La riga inizia con un identificatore di puntatore a membro.
+La riga inizia con un identificatore puntatore a membro.
 
 Questo errore può essere causato da un identificatore di tipo mancante nella dichiarazione di un puntatore a un membro.
 
-L'esempio seguente genera l'errore C2657:
+L'esempio seguente genera l'C2657:
 
-```
+```cpp
 // C2657.cpp
 class C {};
 int main() {

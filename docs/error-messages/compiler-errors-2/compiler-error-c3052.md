@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3052
 ms.assetid: 87480c42-1ceb-4775-8d20-88c54a7bb6a6
-ms.openlocfilehash: ed9c27e1602f9372cb9137615ef66932a8df960c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 618fac69078987b0322739733c403e5b2cd36486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265776"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761218"
 ---
 # <a name="compiler-error-c3052"></a>Errore del compilatore C3052
 
@@ -21,7 +21,7 @@ Se viene usato [default(none)](../../parallel/openmp/reference/default-openmp.md
 
 L'esempio seguente genera l'errore C3052:
 
-```
+```cpp
 // C3052.cpp
 // compile with: /openmp /c
 int main() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3185
 ms.assetid: 5bf96279-043c-4981-9d02-b4550071b192
-ms.openlocfilehash: 45afe70b454f72dd8c9b8ce9771ce1f5aef6a10e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36f350287a1cfaf937ee739800042aaf99f31769
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366082"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761634"
 ---
 # <a name="compiler-error-c3185"></a>Errore del compilatore C3185
 
 'typeid' utilizzato nel tipo gestito o WinRT 'type'; utilizzare 'operator'
 
-Non è possibile applicare il [typeid](../../cpp/typeid-operator.md) operatore in un oggetto gestito o WinRT tipo; utilizzare [typeid](../../extensions/typeid-cpp-component-extensions.md) invece.
+Non è possibile applicare l'operatore [typeid](../../cpp/typeid-operator.md) a un tipo gestito o WinRT; usare [typeid](../../extensions/typeid-cpp-component-extensions.md) in alternativa.
 
 L'esempio seguente genera l'errore C3185 e mostra come risolverlo:
 
-```
+```cpp
 // C3185a.cpp
 // compile with: /clr
 ref class Base {};

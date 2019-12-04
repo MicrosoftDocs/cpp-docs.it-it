@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2902
 ms.assetid: 89d78d0e-78e5-4c2c-a0f9-a60110e9395e
-ms.openlocfilehash: 09a418d5a6f8b95ed55f1dc5d573b2176d0d0ccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43ba7f6ddb18d86410de852ffc3e2834083f031c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378557"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735877"
 ---
 # <a name="compiler-error-c2902"></a>Errore del compilatore C2902
 
@@ -21,7 +21,7 @@ Il token che segue la parola chiave `template` non è un identificatore.
 
 L'esempio seguente genera l'errore C2902:
 
-```
+```cpp
 // C2902.cpp
 // compile with: /c
 namespace N {
@@ -39,7 +39,7 @@ void f() {
 
 C2902 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C2902b.cpp
 // compile with: /clr /c
 namespace N {

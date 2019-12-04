@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2780
 ms.assetid: 423793d8-a3b2-4f35-85f8-ae1d043e2b69
-ms.openlocfilehash: 9a427bbd79570a2646447d5326e034035306fac6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf327852da325940b1090e4f6199ac10c83ea09b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257452"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739961"
 ---
 # <a name="compiler-error-c2780"></a>Errore del compilatore C2780
 
@@ -21,7 +21,7 @@ Un modello di funzione dispone di argomenti in numero insufficiente o eccessivo.
 
 L'esempio seguente genera l'errore C2780 e mostra come risolverlo:
 
-```
+```cpp
 // C2780.cpp
 template<typename T>
 void f(T, T){}

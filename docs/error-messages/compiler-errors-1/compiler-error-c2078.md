@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2078
 ms.assetid: 9bead850-4123-46cf-a634-5c77ba974b2b
-ms.openlocfilehash: a800a6efa6e02f323b4b6597f1aa983f13674e83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 514776c0feb12c46dea56dd8e85043345754a229
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182808"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756448"
 ---
 # <a name="compiler-error-c2078"></a>Errore del compilatore C2078
 
@@ -23,7 +23,7 @@ Il compilatore può dedurre la corretta assegnazione degli inizializzatori agli 
 
 L'esempio seguente genera l'errore C2078 e mostra come risolverlo:
 
-```
+```cpp
 // C2078.cpp
 // Compile by using: cl /c /W4 C2078.cpp
 struct S {

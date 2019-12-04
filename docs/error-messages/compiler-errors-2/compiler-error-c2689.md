@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2689
 ms.assetid: b5216fba-524d-4194-9168-26e9dc5210ce
-ms.openlocfilehash: fb9a45f775da582daa0fbe421f29b6e469a91197
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3b35d8f68087c9f10d7f2a5d219800fc7a9084a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266010"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760220"
 ---
 # <a name="compiler-error-c2689"></a>Errore del compilatore C2689
 
-'function': una funzione friend non può essere definita all'interno di una classe locale
+' Function ': una funzione Friend non può essere definita all'interno di una classe locale
 
-È possibile dichiarare ma non definire una funzione friend in una classe locale.
+È possibile dichiarare ma non definire una funzione Friend in una classe locale.
 
-L'esempio seguente genera l'errore C2689:
+L'esempio seguente genera l'C2689:
 
-```
+```cpp
 // C2689.cpp
 // compile with: /c
 void g() {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2942
 ms.assetid: 13abf744-8fa1-450d-886d-e5717c04956e
-ms.openlocfilehash: 8a594b9d1d8374caa972f6bfdafe5d691e634a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98bb0d9945068042e00c7c48c0304314e281fa8f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366641"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758359"
 ---
 # <a name="compiler-error-c2942"></a>Errore del compilatore C2942
 
@@ -36,7 +36,7 @@ void f(TC2 i) {}
 
 L'errore C2942 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C2942b.cpp
 // compile with: /clr /c
 generic<class T>

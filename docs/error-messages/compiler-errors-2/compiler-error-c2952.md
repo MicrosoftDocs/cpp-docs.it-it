@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2952
 ms.assetid: a40e18a2-d02c-4511-854f-6c6fd6789a1a
-ms.openlocfilehash: e0d48c7ce52a87a0d33d2407ef0188ef37b3b9f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a76fc1718941ec5043f14064fa8c2609829ede3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395352"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755967"
 ---
 # <a name="compiler-error-c2952"></a>Errore del compilatore C2952
 
@@ -21,7 +21,7 @@ Una dichiarazione di modello non è stata creata nel formato corretto.
 
 L'esempio seguente genera l'errore C2952:
 
-```
+```cpp
 // C2952.cpp
 // compile with: /c
 template <class T>
@@ -42,7 +42,7 @@ void S<T>::S1<T1>::f() {}
 
 C2952 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C2952b.cpp
 // compile with: /clr /c
 generic <class T>

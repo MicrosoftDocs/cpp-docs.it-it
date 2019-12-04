@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3219
 ms.assetid: 9c9757b0-1256-4cdf-9d8c-a3a72f300ce5
-ms.openlocfilehash: a93e9ed1a8e00eaecc664bda02a70c81b6c81ded
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72d5c3737dd2059dff46369b87d0e2caecef5a4f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243037"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737959"
 ---
 # <a name="compiler-error-c3219"></a>Errore del compilatore C3219
 
@@ -21,7 +21,7 @@ Vincolare un parametro generico per due o più classi gestite non è consentito.
 
 L'esempio seguente genera l'errore C3219:
 
-```
+```cpp
 // C3219.cpp
 // compile with: /clr
 ref class A {};
@@ -34,7 +34,7 @@ ref class E {};   // C3219
 
 L'esempio seguente illustra una possibile soluzione:
 
-```
+```cpp
 // C3219b.cpp
 // compile with: /clr /c
 ref class A {};

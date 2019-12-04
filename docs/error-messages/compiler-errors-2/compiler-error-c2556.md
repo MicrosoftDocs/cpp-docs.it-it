@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2556
 ms.assetid: fc4399ad-45b3-49fd-be1f-0b13956a595a
-ms.openlocfilehash: 4a2b4dc9dcd71d518845651dee97c566b778eb0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6f08ac52eff355f0857968817a681818e3c3dc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353066"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756773"
 ---
 # <a name="compiler-error-c2556"></a>Errore del compilatore C2556
 
-'identifier': le funzioni in overload si differenziano solo per il tipo restituito
+' Identifier ': le funzioni in overload sono diverse solo per il tipo restituito
 
-Le funzioni in overload hanno tipi restituiti diversi ma lo stesso elenco di parametri. Ogni funzione in overload deve avere un elenco di parametri formali distinti.
+Le funzioni in overload hanno tipi restituiti diversi, ma lo stesso elenco di parametri. Ogni funzione in overload deve avere un elenco di parametri formali distinti.
 
-L'esempio seguente genera l'errore C2556:
+L'esempio seguente genera l'C2556:
 
-```
+```cpp
 // C2556.cpp
 // compile with: /c
 class C {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2835
 ms.assetid: 41c70630-983f-4da2-8342-513cf48b0519
-ms.openlocfilehash: 069514d1a5d2b16e1175bbc1ce0c796bee64110a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17c0ecdb516b35cb0d00745a33704bae52350d57
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406834"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757865"
 ---
 # <a name="compiler-error-c2835"></a>Errore del compilatore C2835
 
-conversione definita dall'utente 'type' non accetta parametri formali
+la conversione definita dall'utente ' type ' non accetta parametri formali
 
-Conversioni di tipi definiti dall'utente non possono accettare parametri formali.
+Le conversioni di tipi definite dall'utente non possono assumere parametri formali.
 
-L'esempio seguente genera l'errore C2835:
+L'esempio seguente genera l'C2835:
 
-```
+```cpp
 // C2835.cpp
 class A {
 public:

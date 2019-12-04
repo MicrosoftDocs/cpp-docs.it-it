@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3707
 ms.assetid: ac63a5dd-7a4b-48d2-9f2a-be9cb090134c
-ms.openlocfilehash: 8a1525539c84ea427815a03057bb6d2f9213fec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6faf035c0f4f68b10b187c56bea4cafc776998cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328523"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757956"
 ---
 # <a name="compiler-error-c3707"></a>Errore del compilatore C3707
 
-'function': il metodo di interfaccia dispatch deve avere un dispid
+' Function ': il metodo di interfaccia dispatch deve avere un DISPID
 
-Se si usa un' `dispinterface` metodo, è necessario assegnargli un `dispid`. Per correggere questo errore, assegnare un `dispid` per il `dispinterface` metodo, ad esempio, rimuovendo il `id` attributo del metodo nell'esempio seguente. Per altre informazioni, vedere gli attributi [dispinterface](../../windows/dispinterface.md) e [id](../../windows/id.md).
+Se si usa un metodo di `dispinterface`, è necessario assegnargli una `dispid`. Per correggere l'errore, assegnare un `dispid` al metodo `dispinterface`, ad esempio rimuovendo il commento dall'attributo `id` nel metodo nell'esempio riportato di seguito. Per ulteriori informazioni, vedere l' [interfaccia dispatch](../../windows/dispinterface.md) e l' [ID](../../windows/id.md)degli attributi.
 
-L'esempio seguente genera l'errore C3707:
+L'esempio seguente genera l'C3707:
 
-```
+```cpp
 // C3707.cpp
 #include <atlbase.h>
 #include <atlcom.h>

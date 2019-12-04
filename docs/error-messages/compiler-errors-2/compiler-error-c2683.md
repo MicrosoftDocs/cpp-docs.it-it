@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
-ms.openlocfilehash: 49e4897ad5db866aa1ca42589859bedff12718df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8526dc1fe3cacc872aa91ca058677d15318fd703
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266868"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760270"
 ---
 # <a name="compiler-error-c2683"></a>Errore del compilatore C2683
 
-'cast': 'type' non è un tipo polimorfico
+' cast ':' type ' non è un tipo polimorfico
 
-Non è possibile usare [dynamic_cast](../../cpp/dynamic-cast-operator.md) da convertire da una classe non polimorfico (una classe con le funzioni non virtuali).
+Non è possibile usare [dynamic_cast](../../cpp/dynamic-cast-operator.md) per eseguire la conversione da una classe non polimorfica (una classe senza funzioni virtuali).
 
-È possibile usare [static_cast](../../cpp/static-cast-operator.md) per eseguire le conversioni di tipi non polimorfici. Tuttavia, `static_cast` non esegue un controllo in fase di esecuzione.
+È possibile utilizzare [static_cast](../../cpp/static-cast-operator.md) per eseguire conversioni di tipi non polimorfici. Tuttavia, `static_cast` non esegue un controllo della fase di esecuzione.
 
-L'esempio seguente genera l'errore C2683:
+L'esempio seguente genera l'C2683:
 
-```
+```cpp
 // C2683.cpp
 // compile with: /c
 class B { };

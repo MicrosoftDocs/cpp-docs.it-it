@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: 85357d94c7bc2d709e852daa60caf269949ad1b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc64852523b6b56bc506260576e3c79164628340
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408693"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735931"
 ---
 # <a name="compiler-error-c2061"></a>Errore del compilatore C2061
 
-Errore di sintassi: identificatore 'identifier'
+errore di sintassi: identificatore ' Identifier '
 
-Il compilatore ha rilevato un identificatore in cui non era previsto. Verificare che l'opzione `identifier` viene dichiarata prima di usarla.
+Il compilatore ha trovato un identificatore dove non era previsto. Assicurarsi che `identifier` venga dichiarata prima di usarla.
 
-Un inizializzatore di può essere racchiusi tra parentesi. Per evitare questo problema, racchiudere il dichiaratore tra parentesi o renderlo un `typedef`.
+Un inizializzatore può essere racchiuso tra parentesi. Per evitare questo problema, racchiudere il dichiaratore tra parentesi o impostarlo come `typedef`.
 
-Questo errore potrebbe essere causato anche quando il compilatore rileva un'espressione come argomento di modello di classe; usare [typename](../../cpp/typename.md) per indicare al compilatore è un tipo.
+Questo errore può essere causato anche quando il compilatore rileva un'espressione come argomento di modello di classe; usare [typeName](../../cpp/typename.md) per indicare al compilatore che si tratta di un tipo.
 
-L'esempio seguente genera l'errore C2061:
+L'esempio seguente genera l'C2061:
 
-```
+```cpp
 // C2061.cpp
 // compile with: /c
 template < A a >   // C2061
@@ -34,9 +34,9 @@ template < A a >   // C2061
 class c{};
 ```
 
-L'errore C2061 può verificarsi se si passa il nome di un'istanza di [typeid](../../extensions/typeid-cpp-component-extensions.md):
+C2061 può verificarsi se si passa un nome di istanza a [typeid](../../extensions/typeid-cpp-component-extensions.md):
 
-```
+```cpp
 // C2061b.cpp
 // compile with: /clr
 ref struct G {

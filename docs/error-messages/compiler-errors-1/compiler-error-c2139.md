@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
-ms.openlocfilehash: 15813216399c0f00fea036cd95443235e7acf4c3
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 38e2fd090f3a2b2222658c5fd491c84dd70fd5ea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344896"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756422"
 ---
 # <a name="compiler-error-c2139"></a>Errore del compilatore C2139
 
-'type': una classe non definita non è consentita come argomento al tratto di tipo intrinseco del compilatore 'tratto'
+' type ': una classe non definita non è consentita come argomento per il tratto di tipo intrinseco del compilatore ' tratto '
 
-Un argomento non valido passato a un tratto di tipo.
+Un argomento non valido è stato passato a un tratto di tipo.
 
-Per altre informazioni, vedere [supporto del compilatore per tratti di tipo](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
+Per altre informazioni, vedere [Supporto del compilatore per caratteristiche di tipo](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2139.
+L'esempio seguente genera l'C2139.
 
-```
+```cpp
 // C2139.cpp
 // compile with: /EHsc
 #include <iostream>

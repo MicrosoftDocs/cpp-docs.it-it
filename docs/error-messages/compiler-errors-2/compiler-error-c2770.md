@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2770
 ms.assetid: 100001b5-80b0-4971-8ff6-9023f443c926
-ms.openlocfilehash: 9397b52838f61449f0475a31d5bb4077dad7f587
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f6c82823dc619982ff148a83e2cc3316b42cfab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257401"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759776"
 ---
 # <a name="compiler-error-c2770"></a>Errore del compilatore C2770
 
-argomenti espliciti per 'template'
+argomento/i template_or_generic esplicito non valido per ' template '
 
-Candidati di modello di funzione con argomenti generici o modello espliciti ha prodotto i tipi di funzione non consentiti.
+I candidati del modello di funzione con modello esplicito o argomenti generici hanno generato tipi di funzione non consentiti.
 
-L'esempio seguente genera l'errore C2770:
+L'esempio seguente genera l'C2770:
 
-```
+```cpp
 // C2770.cpp
 #include <stdio.h>
 template <class T>

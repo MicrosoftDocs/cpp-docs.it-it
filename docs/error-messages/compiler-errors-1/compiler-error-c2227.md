@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2227
 ms.assetid: d470e8b8-7e15-468b-84fa-37d1a0132271
-ms.openlocfilehash: 8f9fc435682eb400574eea61a6f90392fa679233
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: affc500208644cebbef1da93a0eafabd4aeaa094
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404325"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759295"
 ---
 # <a name="compiler-error-c2227"></a>Errore del compilatore C2227
 
@@ -21,7 +21,7 @@ L'operando a sinistra di `->` non è un puntatore a una classe, a una struttura 
 
 L'esempio seguente genera l'errore C2227:
 
-```
+```cpp
 // C2227.cpp
 int *pInt;
 struct S {

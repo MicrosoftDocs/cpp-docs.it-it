@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
-ms.openlocfilehash: a9fe72501152891d3f82567f09922dda9a9b711a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b52f58f47027d88d9b0e150ebd2bf4588161553
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214951"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758125"
 ---
 # <a name="compiler-error-c3670"></a>Errore del compilatore C3670
 
-'override': Impossibile eseguire l'override di metodo di classe di base inaccessibile 'method'
+' override ': non è possibile eseguire l'override del metodo ' Method ' della classe di base inaccessibile
 
-Override può avvenire solo su una funzione il cui livello di accesso lo rende disponibile in un tipo derivato. Per altre informazioni, vedere [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Una sostituzione può essere eseguita solo su una funzione il cui livello di accesso lo rende disponibile in un tipo derivato. Per ulteriori informazioni, vedere [override espliciti](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-L'esempio seguente genera l'errore C3670:
+L'esempio seguente genera l'C3670:
 
-```
+```cpp
 // C3670.cpp
 // compile with: /clr /c
 public ref class C {
