@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
-ms.openlocfilehash: 54543225144ed0187f6c1e68e7236d886c026860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b1b769ed7e27e9c8c3edbe6b08452f3ec964727
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385602"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756357"
 ---
 # <a name="compiler-error-c3650"></a>Errore del compilatore C3650
 
-'metodo_interfaccia': non è utilizzabile come override esplicito, deve essere una funzione membro virtuale di una classe di base
+' interface_method ': non può essere usato come override esplicito. deve essere una funzione membro virtuale di una classe base
 
-È stato effettuato il tentativo di eseguire l'override esplicito su un membro non virtuale.
+È stato effettuato un tentativo di eseguire un override esplicito su un membro non virtuale.
 
-Per altre informazioni, vedere [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Per ulteriori informazioni, vedere [override espliciti](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-L'esempio seguente genera l'errore C3650:
+L'esempio seguente genera l'C3650:
 
-```
+```cpp
 // C3650.cpp
 // compile with: /clr
 public interface struct I {

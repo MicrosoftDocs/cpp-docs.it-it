@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2162
 ms.assetid: 34923628-d35e-48ab-9072-b95e3b5f6b45
-ms.openlocfilehash: 02c0101324b28ebe548c38c6dc617faaa62315b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b4efd609aaa1f1c5bc50460ff653b36b12061e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174783"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755694"
 ---
 # <a name="compiler-error-c2162"></a>Errore del compilatore C2162
 
-Previsto parametro formale macro
+previsto parametro formale macro
 
-Il token dopo un operatore per (#) non è un nome di parametro formale.
+Il token che segue un operatore per (#) non è un nome di parametro formale.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2162:
+L'esempio seguente genera l'C2162:
 
-```
+```cpp
 // C2162.cpp
 // compile with: /c
 #include <stdio.h>

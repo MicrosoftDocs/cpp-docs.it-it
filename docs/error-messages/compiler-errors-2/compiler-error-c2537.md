@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2537
 ms.assetid: aee81d8e-300e-4a8b-b6c4-b3828398b34e
-ms.openlocfilehash: 437727b334087aef496dbb0a1f3f1c8cf2b45458
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0dfe9f88fcdfda1325150d480670777a4d42d896
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345595"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758632"
 ---
 # <a name="compiler-error-c2537"></a>Errore del compilatore C2537
 
-'identificatore': le specifiche di collegamento non valido
+' specifier ': specifica di collegamento non valida
 
-Possibili cause:
+Cause possibili:
 
-1. L'identificatore di collegamento non è supportato. È supportata solo l'identificatore di collegamento "C".
+1. L'identificatore di collegamento non è supportato. È supportato solo l'identificatore di collegamento "C".
 
-1. Collegamento "C" è specificato più di una funzione in un set di funzioni in overload. ma questa operazione non è consentita.
+1. Il collegamento "C" è specificato per più di una funzione in un set di funzioni in overload. Ciò non è consentito.
 
-L'esempio seguente genera l'errore C2537:
+L'esempio seguente genera l'C2537:
 
-```
+```cpp
 // C2537.cpp
 // compile with: /c
 extern "c" void func();   // C2537

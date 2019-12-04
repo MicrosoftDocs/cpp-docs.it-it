@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3454
 ms.assetid: dc4e6d57-5b4d-4114-8d6f-22f9ae62925b
-ms.openlocfilehash: 94c50ccd223567281e02c407e7ee22df75f859d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1909dc772413c16d39271dc839a0ec0db206da03
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328601"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756682"
 ---
 # <a name="compiler-error-c3454"></a>Errore del compilatore C3454
 
@@ -25,7 +25,7 @@ Per altre informazioni, vedere [attribute](../../windows/attributes/attribute.md
 
 L'esempio seguente genera l'errore C3454.
 
-```
+```cpp
 // C3454.cpp
 // compile with: /clr /c
 using namespace System;

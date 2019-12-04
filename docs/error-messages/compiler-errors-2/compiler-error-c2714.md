@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2714
 ms.assetid: 401a5a42-660c-4bad-9d63-1a2d092bc489
-ms.openlocfilehash: feba363a7cd15d92bf850e8cba457ff310d15490
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5bfa56ca95cc93680c7eab227d658134b248976
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386798"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760556"
 ---
 # <a name="compiler-error-c2714"></a>Errore del compilatore C2714
 
-non è consentito __alignof(void)
+__alignof (void) non è consentito
 
-Un valore non valido passato a un operatore.
+Un valore non valido è stato passato a un operatore.
 
-Visualizzare [operatore alignof](../../cpp/alignof-operator.md) per altre informazioni.
+Per ulteriori informazioni, vedere [operatore __alignof](../../cpp/alignof-operator.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2714.
+L'esempio seguente genera l'C2714.
 
-```
+```cpp
 // C2714.cpp
 int main() {
    return __alignof(void);   // C2714

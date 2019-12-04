@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2250
 ms.assetid: f990986f-5c7d-4af4-a25c-b35540f1e217
-ms.openlocfilehash: ea426e071eecb09359c3a99a6f569f628595784a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 472aabf00fecd000f274d97b5753ed8460ff867f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301357"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758866"
 ---
 # <a name="compiler-error-c2250"></a>Errore del compilatore C2250
 
-'identifier': ereditarietà ambigua di 'member'
+' Identifier ': ereditarietà ambigua di ' Class:: Member '
 
 La classe derivata eredita più di un override di una funzione virtuale di una classe base virtuale. Queste sostituzioni sono ambigue nella classe derivata.
 
 L'esempio seguente genera l'errore C2286:
 
-```
+```cpp
 // C2250.cpp
 // compile with: /c
 // C2250 expected

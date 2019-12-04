@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386876"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755993"
 ---
 # <a name="compiler-error-c2666"></a>Errore del compilatore C2666
 
-'identifier': numero overload presentano conversioni simili
+' Identifier ': gli overload dei numeri hanno conversioni simili
 
-Una funzione in overload o un operatore è ambiguo.   Gli elenchi di parametri formali potrebbero essere troppo simili per il compilatore risolvere l'ambiguità.  Per risolvere questo errore, eseguire il cast esplicito uno o più parametri effettivi.
+Una funzione o un operatore di overload è ambiguo.   Gli elenchi di parametri formali potrebbero essere troppo simili per la risoluzione dell'ambiguità da parte del compilatore.  Per correggere l'errore, eseguire il cast esplicito di uno o più parametri effettivi.
 
-L'esempio seguente genera l'errore C2666:
+L'esempio seguente genera l'C2666:
 
-```
+```cpp
 // C2666.cpp
 struct complex {
    complex(double);
@@ -35,19 +35,19 @@ int main() {
 }
 ```
 
-Questo errore può essere generato anche in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003:
+Questo errore può essere generato anche in seguito alle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003:
 
-- gli operatori binari e le conversioni definite dall'utente in tipi di puntatore
+- operatori binari e conversioni definite dall'utente in tipi di puntatore
 
-- conversione di qualificazione non è quello utilizzato per la conversione di identità
+- la conversione delle qualifiche non corrisponde alla conversione di identità
 
-Per gli operatori binari \<, >, \<= e > =, passato un parametro è ora implicitamente convertito nel tipo dell'operando se il tipo di parametro definisce un operatore di conversione definita dall'utente in cui convertire il tipo dell'operando. È ora disponibile per ambiguità potenziali.
+Per gli operatori binari \<, >, \<= e > =, un parametro passato viene ora convertito in modo implicito nel tipo dell'operando se il tipo del parametro definisce un operatore di conversione definito dall'utente per la conversione nel tipo dell'operando. È ora possibile ambiguità.
 
-Per il codice sia valido in entrambe le Visual Studio .NET 2003 e versioni di Visual Studio .NET di Visual C++, chiamare l'operatore di classe in modo esplicito tramite sintassi della funzione.
+Per il codice valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++studio, chiamare l'operatore Class in modo esplicito usando la sintassi della funzione.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // C2666b.cpp
 #include <string.h>
 #include <stdio.h>
@@ -104,9 +104,9 @@ int main()
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2666
+L'esempio seguente genera C2666
 
-```
+```cpp
 // C2666c.cpp
 // compile with: /c
 

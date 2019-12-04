@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3057
 ms.assetid: b0b2ba88-9c74-4bec-bf60-8fc72eade34c
-ms.openlocfilehash: b2b827ec8d6b6ac21d80ded43e70f72098b3f367
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7742a8268adfd2345c0606e2f60dae4e58887c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265516"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761142"
 ---
 # <a name="compiler-error-c3057"></a>Errore del compilatore C3057
 
@@ -21,7 +21,7 @@ Il valore inizializzato di un simbolo usato in una clausola [threadprivate](../.
 
 L'esempio seguente genera l'errore C3057:
 
-```
+```cpp
 // C3057.cpp
 // compile with: /openmp /c
 extern int f();
@@ -47,7 +47,7 @@ int main() {
 
 L'esempio seguente genera l'errore C3057:
 
-```
+```cpp
 // C3057b.cpp
 // compile with: /openmp /c
 extern int Initialize();

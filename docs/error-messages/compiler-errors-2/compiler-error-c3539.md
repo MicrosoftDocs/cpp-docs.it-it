@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: be1051859ebbcbdc22a9b71f8c5adba2e75c4e92
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 85381b237480b86b59c33f02601a1b9dc644a5a4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344652"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761530"
 ---
 # <a name="compiler-error-c3539"></a>Errore del compilatore C3539
 
-'type': un argomento di modello non può essere un tipo che contiene 'auto'
+' type ': un argomento di modello non può essere un tipo che contiene ' auto '
 
-Il tipo di argomento di modello specificato non può contenere un utilizzo del `auto` (parola chiave).
+Il tipo di argomento del modello indicato non può contenere un utilizzo della parola chiave `auto`.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Non si specifica l'argomento di modello con il `auto` (parola chiave).
+1. Non specificare l'argomento di modello con la parola chiave `auto`.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente generato l'errore C3539.
+Nell'esempio seguente viene restituito C3539.
 
-```
+```cpp
 // C3539.cpp
 // Compile with /Zc:auto
 template<class T> class C{};

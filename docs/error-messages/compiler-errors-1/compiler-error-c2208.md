@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2208
 ms.assetid: 9ae704bc-bf70-45f1-8e47-0470f21edd4e
-ms.openlocfilehash: 7970ba5d8d2b19bd6e330fad1879880fc5cbf32d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208e15e98a05089c0e9b1c98400f5267e4f3a48f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400448"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758931"
 ---
 # <a name="compiler-error-c2208"></a>Errore del compilatore C2208
 
-'type': nessun membro definito mediante questo tipo
+' type ': nessun membro definito utilizzando questo tipo
 
-È un identificatore che si risolve in un nome di tipo in una dichiarazione di aggregazione, ma il compilatore non può dichiarare un membro.
+Un identificatore che risolve in un nome di tipo si trova in una dichiarazione di aggregazione, ma il compilatore non può dichiarare un membro.
 
-L'esempio seguente genera l'errore C2208:
+L'esempio seguente genera l'C2208:
 
-```
+```cpp
 // C2208.cpp
 class C {
    C;   // C2208

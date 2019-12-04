@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3240
 ms.assetid: 1a8dc213-b80c-47ae-ada0-e9554b635d1e
-ms.openlocfilehash: a8334b4f95ccadcce73a79d787669cba9f911199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e38ac53d0473c4fe5daace0f8c674c06b2ae0161
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174172"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756383"
 ---
 # <a name="compiler-error-c3240"></a>Errore del compilatore C3240
 
-'function': deve essere una funzione membro astratta non in overload di 'type'
+' Function ': deve essere una funzione membro astratta non di overload di ' type '
 
-Un tipo di base contiene una funzione definita in precedenza. Funzione deve essere virtuale.
+Un tipo di base contiene una funzione definita. La funzione deve essere virtuale.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3240.
+L'esempio seguente genera l'C3240.
 
-```
+```cpp
 // C3240.cpp
 // compile with: /c
 __interface I {

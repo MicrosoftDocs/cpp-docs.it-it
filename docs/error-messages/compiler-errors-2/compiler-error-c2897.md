@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
-ms.openlocfilehash: 264ad52a10c6cf19d1105561f1140cf2d3e2f8e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1433faade0a41ad8b63a3b40cb5d02f724bde658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378843"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760774"
 ---
 # <a name="compiler-error-c2897"></a>Errore del compilatore C2897
 
-un distruttore/finalizzatore non può essere un modello di funzione
+un distruttore o un finalizzatore non può essere un modello di funzione
 
-I distruttori o i finalizzatori non possono essere sottoposti a overload, in modo che non è consentito dichiarare un distruttore come modello (che definisce un set di distruttori).
+I distruttori o i finalizzatori non possono essere sottoposti a overload, quindi la dichiarazione di un distruttore come modello (che definisce un set di distruttori) non è consentita.
 
-L'esempio seguente genera l'errore C2897:
+L'esempio seguente genera l'C2897:
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2897.
+L'esempio seguente genera l'C2897.
 
-```
+```cpp
 // C2897.cpp
 // compile with: /c
 class X {
@@ -36,9 +36,9 @@ public:
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2897.
+L'esempio seguente genera l'C2897.
 
-```
+```cpp
 // C2897_b.cpp
 // compile with: /c /clr
 ref struct R2 {

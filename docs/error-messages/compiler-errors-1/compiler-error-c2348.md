@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-ms.openlocfilehash: 379bcc7f37ff8942e4e45c6a6188438400937875
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bded618c481e59f60c5528510c757dec7226acc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187906"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759997"
 ---
 # <a name="compiler-error-c2348"></a>Errore del compilatore C2348
 
-'type name': non è una funzione di aggregazione di tipo C, Impossibile esportarlo nell'IDL incorporato
+' type name ': non è un'aggregazione di tipo C e non può essere esportata in Embedded-IDL
 
-Per inserire un `struct` in un file con estensione idl con il [esportare](../../windows/export.md) attributo, il `struct` deve contenere solo i dati.
+Per inserire un `struct` in un file con estensione IDL con l'attributo [Export](../../windows/export.md) , il `struct` deve contenere solo dati.
 
-L'esempio seguente genera l'errore C2348:
+L'esempio seguente genera l'C2348:
 
-```
+```cpp
 // C2348.cpp
 // C2348 error expected
 [ module(name="SimpleMidlTest") ];

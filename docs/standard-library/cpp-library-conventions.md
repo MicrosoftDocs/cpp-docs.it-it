@@ -11,12 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: 8747ef490c0997b1fa3fd5186618b7189fa00970
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d92636a7ed63e09396ff68749560cde9d1f8639c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450691"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755707"
 ---
 # <a name="c-library-conventions"></a>Convenzioni della libreria C++
 
@@ -24,7 +24,7 @@ La libreria C++ segue in gran parte le stesse convenzioni della libreria standar
 
 Un'implementazione ha una certa libertà di azione nella modalità di dichiarazione di tipi e funzioni nella libreria C++:
 
-- I nomi delle funzioni nella libreria standard C potrebbero avere un collegamento esterno #"C++" o "C". Includere l'intestazione C standard appropriata anziché dichiarare un'entità di libreria inline.
+- I nomi delle funzioni nella libreria C standard possono avere il collegamento externC++"" o extern "C". Includere l'intestazione C standard appropriata anziché dichiarare un'entità di libreria inline.
 
 - Il nome di una funzione membro in una classe di libreria potrebbe avere firme delle funzioni aggiuntive oltre a quelle elencate in questo documento. È possibile assicurarsi che una chiamata di funzione qui descritta si comporti come previsto, ma non si può considerare completamente affidabile l'indirizzo della funzione membro di libreria. Il tipo potrebbe infatti non essere quello previsto.
 

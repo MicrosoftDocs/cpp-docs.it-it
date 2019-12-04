@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2921
 ms.assetid: 323642a0-bfc4-4942-9f41-c3adf5c54296
-ms.openlocfilehash: 47f348f6c30d96e8c4ae40e0c26a8ebade14c8ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82042b851282e686719ed54ccad0a2802afda22b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385875"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761019"
 ---
 # <a name="compiler-error-c2921"></a>Errore del compilatore C2921
 
@@ -21,7 +21,7 @@ Un generico o un modello di classe dispone di più dichiarazioni che non sono eq
 
 L'esempio seguente genera l'errore C2921:
 
-```
+```cpp
 // C2921.cpp
 // compile with: /c
 template <class T> struct TC2 {};
@@ -32,7 +32,7 @@ typedef int TC2;   // C2921
 
 C2921 può verificarsi anche quando si usano i generics.
 
-```
+```cpp
 // C2921b.cpp
 // compile with: /clr /c
 generic <class T> ref struct GC2 {};

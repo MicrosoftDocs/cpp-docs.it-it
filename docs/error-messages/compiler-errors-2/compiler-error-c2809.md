@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2809
 ms.assetid: ce796b8e-1a8c-4074-995d-1ad09afd0e93
-ms.openlocfilehash: d9dffabf318d51a97c172ecee2e4b2d4183a81f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04f875d4ff32cfad425be5bb28bea8ef92c508eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281898"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758996"
 ---
 # <a name="compiler-error-c2809"></a>Errore del compilatore C2809
 
-'operator operator' non ha parametri formali
+' operator Operator ' non ha parametri formali
 
-L'operatore non ha parametri obbligatori.
+L'operatore non dispone dei parametri obbligatori.
 
-L'esempio seguente genera l'errore C2809:
+L'esempio seguente genera l'C2809:
 
-```
+```cpp
 // C2809.cpp
 // compile with: /c
 class A{};

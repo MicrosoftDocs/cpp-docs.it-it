@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2658
 ms.assetid: 638368e8-7893-4a14-abec-13c768a9543a
-ms.openlocfilehash: 792fd497ad7cdb98ae72f3e6451780dad487624d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77a9122d20561ceee4f211394b3b81900d5580ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360411"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756084"
 ---
 # <a name="compiler-error-c2658"></a>Errore del compilatore C2658
 
-'member': ridefinizione in struct/union anonima
+' member ': ridefinizione in struct/union anonima
 
-Due strutture o unioni anonime contenevano le dichiarazioni dei membri con lo stesso identificatore ma con tipi diversi. Sotto [/Za](../../build/reference/za-ze-disable-language-extensions.md), si otterrà anche l'errore per i membri con lo stesso identificatore e tipo.
+Due strutture anonime o unioni contengono dichiarazioni di membri con lo stesso identificatore ma con tipi diversi. In [/za](../../build/reference/za-ze-disable-language-extensions.md)si otterrà anche questo errore per i membri con lo stesso identificatore e tipo.
 
-L'esempio seguente genera l'errore C2658:
+L'esempio seguente genera l'C2658:
 
-```
+```cpp
 // C2658.cpp
 // compile with: /c
 struct X {

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-ms.openlocfilehash: a16c5bd46d806d09861d5734b637c2c9d9b2f9d0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a140847b642ac2437b67aa957328c3b8fbfc592d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345496"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761569"
 ---
 # <a name="compiler-error-c3536"></a>Errore del compilatore C3536
 
-'symbol': non è possibile usare prima che venga inizializzata
+' symbol ': non può essere usato prima dell'inizializzazione
 
-Impossibile utilizzare il simbolo indicato prima che venga inizializzata. In pratica, ciò significa che una variabile non può essere usata per inizializzare se stessa.
+Impossibile utilizzare il simbolo indicato prima dell'inizializzazione. In pratica, ciò significa che una variabile non può essere usata per inizializzare se stessa.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Non si Inizializza una variabile con se stesso.
+1. Non inizializzare una variabile con se stessa.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente generato l'errore C3536 perché ogni variabile viene inizializzata con se stesso.
+L'esempio seguente restituisce C3536 perché ogni variabile è inizializzata con se stessa.
 
-```
+```cpp
 // C3536.cpp
 // Compile with /Zc:auto
 int main()

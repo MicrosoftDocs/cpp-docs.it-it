@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360372"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756058"
 ---
 # <a name="compiler-error-c2660"></a>Errore del compilatore C2660
 
-'function': funzione non accetta parametri relativi ai numeri
+' Function ': la funzione non accetta parametri numerici
 
 La funzione viene chiamata con un numero errato di parametri.
 
-C2660 può verificarsi se si chiama accidentalmente una funzione Windows API anziché una funzione membro MFC lo stesso nome. Per risolvere questo problema:
+C2660 può verificarsi se si chiama accidentalmente una funzione API Windows anziché una funzione membro MFC con lo stesso nome. Per risolvere il problema:
 
-- Modificare la chiamata di funzione per essere conforme al formato della chiamata di funzione membro.
+- Modificare la chiamata di funzione per conformarsi al formato della chiamata di funzione membro.
 
-- Usare l'operatore di risoluzione ambito (`::`) per indicare al compilatore di cercare il nome di funzione nello spazio dei nomi globale.
+- Usare l'operatore di risoluzione dell'ambito (`::`) per indicare al compilatore di cercare il nome della funzione nello spazio dei nomi globale.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2660.
+L'esempio seguente genera l'C2660.
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-C2660 può verificarsi anche se si prova a chiamare direttamente il metodo Dispose di un tipo gestito. Per altre informazioni, vedere [distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). L'esempio seguente genera l'errore C2660.
+C2660 può anche verificarsi se si tenta di chiamare direttamente il metodo Dispose di un tipo gestito. Per ulteriori informazioni, vedere [distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). L'esempio seguente genera l'C2660.
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-C2660 verificherà se una classe derivata nasconde una funzione.
+C2660 si verificherà se una classe derivata nasconde una funzione.
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -94,9 +94,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-C2660 può verificarsi se si richiama in modo errato una proprietà indicizzata.
+C2660 può verificarsi se si richiama una proprietà indicizzata in modo errato.
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -119,9 +119,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-C2660 può verificarsi se si richiama in modo errato una proprietà indicizzata.
+C2660 può verificarsi se si richiama una proprietà indicizzata in modo errato.
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -142,9 +142,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-C2660 può verificarsi se si definisce un nuovo operatore in una classe modello, ma in cui l'operatore new crea un oggetto il cui tipo è diverso dal tipo di inclusione.
+C2660 può verificarsi se si definisce un nuovo operatore in una classe modello, ma il nuovo operatore crea un oggetto il cui tipo è diverso dal tipo di inclusione.
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2258
 ms.assetid: 105eaa87-befb-4ecb-9a3f-e09e14d2f5bf
-ms.openlocfilehash: 99936026929bbaad321abfaa106df41b99c5d19d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916ccf444bf82c9d6c0c9ad290afb65353a4f5b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387046"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758801"
 ---
 # <a name="compiler-error-c2258"></a>Errore del compilatore C2258
 
@@ -21,7 +21,7 @@ Una funzione virtuale pura è stata dichiarata con una sintassi non corretta.
 
 L'esempio seguente genera l'errore C2258:
 
-```
+```cpp
 // C2258.cpp
 // compile with: /c
 class A {

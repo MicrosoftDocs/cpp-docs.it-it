@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2277
 ms.assetid: 15a83b07-8731-4524-810b-267f65a7844f
-ms.openlocfilehash: 5b20594df8a250a54a0fd5902e0453f7438cbbfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1c39203d8733b3992ed73172bb58fd7431e110a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389027"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759191"
 ---
 # <a name="compiler-error-c2277"></a>Errore del compilatore C2277
 
-'identifier': Impossibile accettare l'indirizzo di questa funzione membro
+' Identifier ': impossibile prendere l'indirizzo di questa funzione membro
 
-È possibile accettare l'indirizzo di una funzione membro.
+Non è possibile prendere l'indirizzo di una funzione membro.
 
-L'esempio seguente genera l'errore C2277:
+L'esempio seguente genera l'C2277:
 
-```
+```cpp
 // C2277.cpp
 class A {
 public:

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3059
 ms.assetid: 57220324-8286-4cab-a1ab-45385eb1eae0
-ms.openlocfilehash: df1f65f231f72f2efa90458fe9b21339dda80080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 897ed2beb7634cec787f0776616d9a60596a979f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404247"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756461"
 ---
 # <a name="compiler-error-c3059"></a>Errore del compilatore C3059
 
@@ -21,7 +21,7 @@ Un simbolo [threadprivate](../../parallel/openmp/reference/threadprivate.md) è 
 
 L'esempio seguente genera l'errore C3059:
 
-```
+```cpp
 // C3059.cpp
 // compile with: /openmp
 #include "omp.h"
@@ -38,7 +38,7 @@ int main() {
 
 Possibile soluzione:
 
-```
+```cpp
 // C3059b.cpp
 // compile with: /openmp
 #include "omp.h"

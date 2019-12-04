@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2548
 ms.assetid: 01e9c835-9bf3-4020-9295-5ee448c519f3
-ms.openlocfilehash: 2c680d86a0ea69d67f9e53a481f2f096f4cc7878
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f89208314c1d2e8ddb5100da72aa600a411b4608
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353469"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756799"
 ---
 # <a name="compiler-error-c2548"></a>Errore del compilatore C2548
 
-'member': manca un parametro predefinito per il parametro parameter
+' Class:: Member ': parametro predefinito mancante per il parametro Parameter
 
-Elenco di parametri predefinito manca un parametro. Se si specifica un parametro predefinito in un punto qualsiasi in un elenco di parametri, è necessario definire i parametri predefiniti per tutti i parametri successivi.
+Manca un parametro nell'elenco di parametri predefinito. Se si specifica un parametro predefinito in un punto qualsiasi di un elenco di parametri, è necessario definire i parametri predefiniti per tutti i parametri successivi.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2548:
+L'esempio seguente genera l'C2548:
 
-```
+```cpp
 // C2548.cpp
 // compile with: /c
 void func( int = 1, int, int = 3);  // C2548

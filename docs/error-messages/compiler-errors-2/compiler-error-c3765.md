@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3765
 ms.assetid: feadee7a-fcfb-402c-af2f-0e656f814a13
-ms.openlocfilehash: 86c043889c5342ed4f3edfc4d8a298bcbd345b3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a12bdfaf0931fb0a94dafc289f9ae39aef61f23
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400240"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757235"
 ---
 # <a name="compiler-error-c3765"></a>Errore del compilatore C3765
 
-'event': non è possibile definire un evento in una classe/struct 'type' contrassegnate come event_receiver
+' Event ': non è possibile definire un evento in una classe/struct ' type ' contrassegnata come event_receiver
 
-Se una classe è contrassegnata con il [event_receiver](../../windows/event-receiver.md) attributo, la classe non può contenere un' [event](../../cpp/event.md) dichiarazione.
+Se una classe è contrassegnata con l'attributo [event_receiver](../../windows/event-receiver.md) , la classe non può contenere una dichiarazione di [__event](../../cpp/event.md) .
 
-L'esempio seguente genera l'errore C3765:
+L'esempio seguente genera l'C3765:
 
-```
+```cpp
 // C3765.cpp
 [event_receiver(native)]
 struct ER2 {

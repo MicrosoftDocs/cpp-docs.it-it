@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3030
 ms.assetid: de92fd7e-29ba-46e8-b43b-f4b985cd74de
-ms.openlocfilehash: 31ae3f55cd0bf7a15dbea2cf941b00dc048d825d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9f22c01eb60ead22027cad2f59d9d2e95e01521
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375535"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757319"
 ---
 # <a name="compiler-error-c3030"></a>Errore del compilatore C3030
 
@@ -21,7 +21,7 @@ I parametri di valore possono essere passati solo a determinate clausole, ad ese
 
 L'esempio seguente genera l'errore C3030:
 
-```
+```cpp
 // C3030.cpp
 // compile with: /openmp /link vcomps.lib
 #include "omp.h"

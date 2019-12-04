@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447387"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758788"
 ---
 # <a name="compiler-error-c2259"></a>Errore del compilatore C2259
 
-'class': Impossibile creare un'istanza di classe astratta
+' Class ': Impossibile creare un'istanza di una classe astratta
 
-Codice dichiara un'istanza di una struttura o classe astratta.
+Il codice dichiara un'istanza di una classe o di una struttura astratta.
 
-È possibile creare istanze di una classe o struttura con uno o più funzioni virtuali pure. Per creare istanze degli oggetti di una classe derivata, la classe derivata deve eseguire l'override di ogni funzione virtuale pura.
+Non è possibile creare un'istanza di una classe o di una struttura con una o più funzioni virtuali pure. Per creare un'istanza di oggetti di una classe derivata, la classe derivata deve eseguire l'override di ogni funzione virtuale pura.
 
-Per altre informazioni, vedere [classi astratte implicite](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
+Per ulteriori informazioni, vedere [classi astratte implicite](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
 
-L'esempio seguente genera l'errore C2259:
+L'esempio seguente genera l'C2259:
 
-```
+```cpp
 // C2259.cpp
 // compile with: /c
 class V {
@@ -42,19 +42,19 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()
 ```
 
-Ogni volta che si deriva da un'interfaccia e implementano i metodi di interfaccia nella classe derivata con autorizzazioni di accesso diverso da public, si potrebbe ricevere C2259.  Ciò si verifica perché il compilatore prevede che i metodi di interfaccia implementati nella classe derivata per avere l'accesso pubblico. Quando si implementano le funzioni membro per un'interfaccia con le autorizzazioni di accesso più restrittive, il compilatore non considera le implementazioni per i metodi definiti nell'interfaccia, che a sua volta la classe derivata una classe astratta.
+Ogni volta che si esegue la derivazione da un'interfaccia e si implementano i metodi di interfaccia nella classe derivata con autorizzazioni di accesso diverse da Public, è possibile che venga visualizzato C2259.  Questo problema si verifica perché il compilatore prevede che i metodi di interfaccia implementati nella classe derivata dispongano di accesso pubblico. Quando si implementano le funzioni membro per un'interfaccia con autorizzazioni di accesso più restrittive, il compilatore non le considera come implementazioni per i metodi di interfaccia definiti nell'interfaccia, che a sua volta rende la classe derivata una classe astratta.
 
-Esistono due possibili soluzioni alternative per il problema:
+Esistono due possibili soluzioni per il problema:
 
-- Verificare le autorizzazioni di accesso pubblico per i metodi implementati.
+- Rendere pubbliche le autorizzazioni di accesso per i metodi implementati.
 
-- Usare l'operatore di risoluzione dell'ambito per i metodi di interfaccia implementati nella classe derivata per qualificare il nome di metodo implementato con il nome dell'interfaccia.
+- Utilizzare l'operatore di risoluzione dell'ambito per i metodi di interfaccia implementati nella classe derivata per qualificare il nome del metodo implementato con il nome dell'interfaccia.
 
-C2259 può verificarsi anche in seguito a operazioni di conformità che in Visual Studio 2005, è stata eseguita **/Zc: wchar_t** ora è attivata per impostazione predefinita. In questo caso, può essere risolto eseguendo la compilazione con C2599 **/Zc:wchar_t-**, per ottenere il comportamento rispetto alle versioni precedenti, o preferibilmente aggiornando i tipi in modo che siano compatibili. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2259 può anche verificarsi in seguito alle operazioni di conformità eseguite in Visual Studio 2005, **/Zc: wchar_t** è ora attiva per impostazione predefinita. In questa situazione, C2599 può essere risolto eseguendo la compilazione con **/Zc: wchar_t-** , per ottenere il comportamento da versioni precedenti o preferibilmente aggiornando i tipi in modo che siano compatibili. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-L'esempio seguente genera l'errore C2259:
+L'esempio seguente genera l'C2259:
 
-```
+```cpp
 // C2259b.cpp
 // compile with: /c
 #include <windows.h>
@@ -90,9 +90,9 @@ public:
 MyClass4 y;
 ```
 
-L'esempio seguente genera l'errore C2259:
+L'esempio seguente genera l'C2259:
 
-```
+```cpp
 // C2259c.cpp
 // compile with: /clr
 interface class MyInterface {

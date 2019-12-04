@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2594
 ms.assetid: 68cd708f-266e-44b0-a211-3e3ab63b11bf
-ms.openlocfilehash: 75e3b438dd69f8879fdc2273a8f0357229941340
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ade657f9ada2a2249d2f96b7caada7b9719195d1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386902"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759334"
 ---
 # <a name="compiler-error-c2594"></a>Errore del compilatore C2594
 
-'operator': conversioni ambigue da 'type1' a 'type2'
+' operator ': conversioni ambigue da' tipo1' a' tipo2'
 
-Nessuna conversione da *type1* al *type2* è stata più diretta rispetto a qualsiasi altro. Si suggeriscono due possibili soluzioni per la conversione da *type1* al *type2*. La prima opzione consiste nel definire una conversione diretta dalle *type1* al *type2*, e la seconda opzione consiste nello specificare una sequenza di conversioni da *type1* a  *type2*.
+Nessuna conversione da *tipo1* a *tipo2* è più diretta di qualsiasi altra. Sono suggerite due possibili soluzioni per la conversione da *tipo1* a *tipo2*. La prima opzione consiste nel definire una conversione diretta da *tipo1* a *tipo2*e la seconda opzione consiste nel specificare una sequenza di conversioni da *tipo1* a *tipo2*.
 
-L'esempio seguente genera l'errore C2594. La risoluzione suggerita per l'errore è una sequenza di conversioni:
+L'esempio seguente genera l'C2594. La risoluzione consigliata per l'errore è una sequenza di conversioni:
 
-```
+```cpp
 // C2594.cpp
 // compile with: /c
 struct A{};

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: ab9c9450b6e906a47a66f6c28c42ca016c98381b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759074"
 ---
 # <a name="compiler-error-c2296"></a>Errore del compilatore C2296
 
-'operator': operando sinistro non valido
+' operator ': operando sinistro non valido
 
-Il secondo operando usato con `operator` non è valido.
+L'operando sinistro utilizzato con `operator` non è valido.
 
-Ad esempio, il compilatore potrebbe vedere una dichiarazione in cui è destinata una chiamata di funzione.
+Il compilatore, ad esempio, può visualizzare una dichiarazione in cui si intende una chiamata di funzione.
 
-L'esempio seguente genera l'errore C2296:
+L'esempio seguente genera l'C2296:
 
-```
+```cpp
 // C2296.cpp
 struct MyStruct {
    struct Help {

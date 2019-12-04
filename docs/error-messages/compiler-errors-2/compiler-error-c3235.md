@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3235
 ms.assetid: 0554d6c7-e1dc-4c99-8934-cbcf491c8203
-ms.openlocfilehash: 1e74d479e75aee98dada16107b7e33d5cfe0c0cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e284cf0d7742e60ceb5d381777ac68e9d0ea89be
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174146"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759399"
 ---
 # <a name="compiler-error-c3235"></a>Errore del compilatore C3235
 
@@ -23,7 +23,7 @@ Le classi generiche non possono essere usate per le specializzazioni esplicite o
 
 L'esempio seguente genera l'errore C3235.
 
-```
+```cpp
 // C3235.cpp
 // compile with: /clr
 generic<class T>

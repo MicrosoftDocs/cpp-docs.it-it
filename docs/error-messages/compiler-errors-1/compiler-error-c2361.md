@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: ca03a42cbf746a1ef32d9c79c23de637f05b56fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364363"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759893"
 ---
 # <a name="compiler-error-c2361"></a>Errore del compilatore C2361
 
-inizializzazione di 'identifier' ignorata da un'etichetta 'default'
+l'inizializzazione di ' Identifier ' è stata ignorata dall'etichetta ' default '
 
-L'inizializzazione di `identifier` può essere ignorato un `switch` istruzione. Non è possibile iniziare oltre una dichiarazione con un inizializzatore a meno che non la dichiarazione è racchiuso in un blocco. (A meno che non è dichiarato all'interno di un blocco, la variabile è nell'ambito fino alla fine del `switch` istruzione.)
+L'inizializzazione di `identifier` può essere ignorata in un'istruzione `switch`. Non è possibile passare oltre una dichiarazione con un inizializzatore, a meno che la dichiarazione non sia racchiusa in un blocco. A meno che non sia dichiarato all'interno di un blocco, la variabile rientra nell'ambito fino alla fine dell'istruzione `switch`.
 
-L'esempio seguente genera l'errore C2361:
+L'esempio seguente genera l'C2361:
 
-```
+```cpp
 // C2361.cpp
 void func( void ) {
    int x;
@@ -37,7 +37,7 @@ void func( void ) {
 
 Possibile soluzione:
 
-```
+```cpp
 // C2361b.cpp
 // compile with: /c
 void func( void ) {

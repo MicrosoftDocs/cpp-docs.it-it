@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2748
 ms.assetid: b63ac78b-a200-499c-afea-15af1a1e819e
-ms.openlocfilehash: 251492b736ba3325ed263a9a8754fc8fa480c664
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e43defbf28c76dadcc7921ca76778413c41490a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360229"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759633"
 ---
 # <a name="compiler-error-c2748"></a>Errore del compilatore C2748
 
@@ -21,7 +21,7 @@ Una matrice gestita o WinRT è in formato non valido. Per altre informazioni, ve
 
 L'esempio seguente genera l'errore C2748 e mostra come risolverlo:
 
-```
+```cpp
 // C2748.cpp
 // compile with: /clr
 int main() {

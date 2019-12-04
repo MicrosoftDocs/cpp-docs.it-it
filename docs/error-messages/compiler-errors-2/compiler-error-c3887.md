@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
-ms.openlocfilehash: 85434cb8daba0db82843c09e2d1bb09d98960272
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f64b72fe5d546550c32f60a27360d8a77c8255bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344507"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736581"
 ---
 # <a name="compiler-error-c3887"></a>Errore del compilatore C3887
 
-'var': l'inizializzatore per un membro dati literal deve essere un'espressione costante
+' var ': l'inizializzatore per un membro dati literal deve essere un'espressione costante
 
-Oggetto [letterale](../../extensions/literal-cpp-component-extensions.md) membro dati può essere inizializzato solo con un'espressione costante.
+Un membro dati [literal](../../extensions/literal-cpp-component-extensions.md) può essere inizializzato solo con un'espressione costante.
 
-L'esempio seguente genera l'errore C3887:
+L'esempio seguente genera l'C3887:
 
-```
+```cpp
 // C3887.cpp
 // compile with: /clr
 ref struct Y1 {
@@ -33,7 +33,7 @@ ref struct Y1 {
 
 Possibile soluzione:
 
-```
+```cpp
 // C3887b.cpp
 // compile with: /clr /c
 ref struct Y1 {
