@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3202
 ms.assetid: 23528a0c-5493-4804-9789-cd3c38e49fb9
-ms.openlocfilehash: 5a81da1ee67d897b7a38d9968f7715be7b5af3d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c0ab49e94c2e4e001f394a3394935a8085cbddb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402749"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738726"
 ---
 # <a name="compiler-error-c3202"></a>Errore del compilatore C3202
 
@@ -21,7 +21,7 @@ ms.locfileid: "62402749"
 
 L'esempio seguente genera l'errore C3202:
 
-```
+```cpp
 // C3202.cpp
 template<typename T>
 class X

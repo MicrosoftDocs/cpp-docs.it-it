@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2612
 ms.assetid: 6faacfd6-4455-41a2-808e-0f6799f84d6d
-ms.openlocfilehash: b2d4888c1be39c4f48f0ca674426c7af612b9bb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630e5b1cc6e99ffda28f50c09bccbbc2fea07172
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379025"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737699"
 ---
 # <a name="compiler-error-c2612"></a>Errore del compilatore C2612
 
-finali 'char' non valido nell'elenco di inizializzatori di basi/membri
+' Char ' finale non valido nell'elenco di inizializzatori di base/membro
 
 Un carattere viene visualizzato dopo l'ultima base o membro in un elenco di inizializzatori.
 
-L'esempio seguente genera l'errore C2612:
+L'esempio seguente genera l'C2612:
 
-```
+```cpp
 // C2612.cpp
 class A {
 public:

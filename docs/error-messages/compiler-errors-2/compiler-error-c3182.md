@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3182
 ms.assetid: f3681266-308e-4990-a979-8eef8920e186
-ms.openlocfilehash: 6866c7bbcee0a4097e490b344c79a6eec7f94570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6b183eb30dd0e617e69ab9aac58bea5cb721591
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382414"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761660"
 ---
 # <a name="compiler-error-c3182"></a>Errore del compilatore C3182
 
-'class': una dichiarazione di accesso o dichiarazione using di membro non valida all'interno di un oggetto gestito o WinRTtype
+' Class ': la dichiarazione using o la dichiarazione di accesso di un membro non è valida all'interno di un oggetto gestito o WinRTtype
 
-Oggetto [usando](../../cpp/using-declaration.md) dichiarazione è valida all'interno di tutte le forme di classi gestite.
+Una Dichiarazione [using](../../cpp/using-declaration.md) non è valida all'interno di tutte le forme di classi gestite.
 
 L'esempio seguente genera l'errore C3182 e mostra come risolverlo.
 
-```
+```cpp
 // C3182a.cpp
 // compile with: /clr /c
 ref struct B {

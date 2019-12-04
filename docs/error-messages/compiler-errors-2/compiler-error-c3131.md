@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3131
 ms.assetid: 38f20fac-83c9-4cd9-b7b5-74ca8f650ea6
-ms.openlocfilehash: 082839c01a2da4b0d149962367b9719932d2b272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fe217a14b75ddedec8e1c703c36a66f747f79c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349932"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760192"
 ---
 # <a name="compiler-error-c3131"></a>Errore del compilatore C3131
 
-progetto deve avere un attributo 'module' con una proprietà 'name'
+il progetto deve avere un attributo ' Module ' con una proprietà' name '
 
-Il [modulo](../../windows/module-cpp.md) attributo deve avere un nome di parametro.
+L'attributo [Module](../../windows/module-cpp.md) deve avere un parametro Name.
 
-L'esempio seguente genera l'errore C3131:
+L'esempio seguente genera l'C3131:
 
-```
+```cpp
 // C3131.cpp
 [emitidl];
 [module];   // C3131

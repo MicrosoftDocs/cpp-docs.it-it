@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3212
 ms.assetid: 9e271bb6-a51f-4b96-b26b-9f4ca28fca0a
-ms.openlocfilehash: ac3e632894d269bb37860492c2bc63881fabe665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4881100cd76473f87b597989010376e8809ef7ff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243063"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736737"
 ---
 # <a name="compiler-error-c3212"></a>Errore del compilatore C3212
 
@@ -21,7 +21,7 @@ Una specializzazione esplicita non è stata creata nel formato corretto.
 
 L'esempio seguente genera l'errore C3212:
 
-```
+```cpp
 // C3212.cpp
 // compile with: /LD
 template <class T>

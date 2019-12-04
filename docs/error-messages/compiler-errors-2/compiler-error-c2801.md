@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C2801
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
-ms.openlocfilehash: 44f7988f9fedb882972b2823f2fe70d9512d4e87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d2ea3677d883fa4843c37a41d733872b23cbba0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408680"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760673"
 ---
 # <a name="compiler-error-c2801"></a>Errore del compilatore C2801
 
-'operator operator' deve essere un membro non statica
+' operator Operator ' deve essere un membro non statico
 
-Solo come membri non statici possono essere sottoposti a overload gli operatori seguenti:
+È possibile eseguire l'overload degli operatori seguenti solo come membri non statici:
 
-- Assegnazione `=`
+- `=` di assegnazione
 
-- Accesso ai membri di classe `->`
+- `->` di accesso ai membri di classe
 
-- Indice `[]`
+- `[]` di indice
 
 - Chiamata di funzione `()`
 
-Possibili cause C2801:
+Possibili cause di C2801:
 
-- Operatore di overload non è una classe, struttura o membro di unione.
+- L'operatore di overload non è un membro di classe, struttura o Unione.
 
-- Operatore di overload è dichiarato `static`.
+- L'operatore di overload è dichiarato `static`.
 
-- L'esempio seguente genera l'errore C2801:
+- L'esempio seguente genera l'C2801:
 
-```
+```cpp
 // C2801.cpp
 // compile with: /c
 operator[]();   // C2801 not a member

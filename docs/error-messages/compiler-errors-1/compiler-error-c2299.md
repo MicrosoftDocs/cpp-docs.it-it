@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2299
 ms.assetid: d001c2bc-f6fd-47aa-8e42-0eb824d6441d
-ms.openlocfilehash: 39659baebf7dc1859a69021f60ed452964ae61af
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 009a441ec610053176e79126d9f2663f29b26bc6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447954"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759048"
 ---
 # <a name="compiler-error-c2299"></a>Errore del compilatore C2299
 
-'function': modifica del comportamento: una specializzazione esplicita non può essere un costruttore di copia o operatore di assegnazione di copia
+' Function ': modifica del comportamento: una specializzazione esplicita non può essere un costruttore di copia o un operatore di assegnazione di copia
 
-Questo errore può anche essere generato in seguito a operazioni di conformità del compilatore eseguite per Visual Studio 2005: le versioni precedenti di oggetto visivo C++ consentito specializzazioni esplicite per un costruttore di copia o un operatore di assegnazione di copia.
+Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: le versioni precedenti di Visual C++ consentivano specializzazioni esplicite per un costruttore di copia o un operatore di assegnazione di copia.
 
-Per risolvere C2299, non dovrà inserire il costruttore di copia o operatore di assegnazione di una funzione di modello, ma piuttosto una funzione non basata su modello che accetta un tipo di classe. Qualsiasi codice chiami il costruttore di copia o operatore di assegnazione specificando esplicitamente gli argomenti di modello che deve rimuovere gli argomenti di modello.
+Per risolvere C2299, non rendere il costruttore di copia o l'operatore di assegnazione una funzione di modello, ma piuttosto una funzione non modello che accetta un tipo di classe. Qualsiasi codice che chiama il costruttore di copia o l'operatore di assegnazione specificando in modo esplicito gli argomenti del modello deve rimuovere gli argomenti del modello.
 
-L'esempio seguente genera l'errore C2299:
+L'esempio seguente genera l'C2299:
 
-```
+```cpp
 // C2299.cpp
 // compile with: /c
 class C {

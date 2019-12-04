@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2785
 ms.assetid: d8d13360-0d00-4815-8475-b49c7f0dc0f3
-ms.openlocfilehash: fcf2bbb01f2aac668ff52884a6ccfb36c66aa89d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aff2e5c96e3c79fc748d8a95779d6a08647ab03
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395378"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739623"
 ---
 # <a name="compiler-error-c2785"></a>Errore del compilatore C2785
 
-'dichiarazione1' e 'dichiarazione2' hanno tipi restituiti diversi
+' dichiarazione1' è dichiarazione2' hanno tipi restituiti diversi
 
-Il tipo restituito di specializzazione di modello di funzione differisce dal tipo restituito del modello di funzione primaria.
+Il tipo restituito della specializzazione del modello di funzione è diverso dal tipo restituito del modello di funzione primario.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Controllare tutte le specializzazioni del modello di funzione per la coerenza.
+1. Verificare la coerenza di tutte le specializzazioni del modello di funzione.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2785:
+L'esempio seguente genera l'C2785:
 
-```
+```cpp
 // C2785.cpp
 // compile with: /c
 template<class T> void f(T);

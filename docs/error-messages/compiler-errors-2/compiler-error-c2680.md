@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
-ms.openlocfilehash: 7a0f58ae16baee00a86038c633f996a7d27a1019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37535c9ffbafd0d312646d5f3cfdb0c4411bc790
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386811"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760309"
 ---
 # <a name="compiler-error-c2680"></a>Errore del compilatore C2680
 
-'type': tipo di destinazione non è valido per nome
+' type ': tipo di destinazione non valido per il nome
 
-Un operatore di cast ha provato a convertire un tipo che non è un puntatore o riferimento. Il [dynamic_cast](../../cpp/dynamic-cast-operator.md) operatore può essere usato solo per i puntatori o riferimenti.
+Un operatore di cast ha tentato di eseguire la conversione in un tipo che non è un puntatore o un riferimento. L'operatore [dynamic_cast](../../cpp/dynamic-cast-operator.md) può essere utilizzato solo per i puntatori o i riferimenti.
 
-L'esempio seguente genera l'errore C2680:
+L'esempio seguente genera l'C2680:
 
-```
+```cpp
 // C2680.cpp
 // compile with: /c
 class A { virtual void f(); };
@@ -36,7 +36,7 @@ void g(B b) {
 
 C2680 può verificarsi anche quando la destinazione non è definita:
 
-```
+```cpp
 // C2680b.cpp
 // compile with: /clr /c
 // C2680 expected

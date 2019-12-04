@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2931
 ms.assetid: 33430407-b149-4ba3-baf8-b0dae1ea3a5d
-ms.openlocfilehash: 8fffa6e272da64ca7baa35af635b2b0a7d40c6f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03c5c1865343afdc0fd7a67ce393c7e1a5d2966f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385745"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757696"
 ---
 # <a name="compiler-error-c2931"></a>Errore del compilatore C2931
 
@@ -23,7 +23,7 @@ Questo errore può verificarsi quando le parentesi graffe non corrispondono.
 
 L'esempio seguente genera l'errore C2931:
 
-```
+```cpp
 // C2931.cpp
 // compile with: /c
 template<class T>
@@ -40,7 +40,7 @@ struct MyStruct2 {
 
 C2931 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C2931b.cpp
 // compile with: /clr /c
 generic<class T> ref struct GC {};

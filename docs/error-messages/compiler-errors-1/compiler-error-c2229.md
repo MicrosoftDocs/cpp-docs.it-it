@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
-ms.openlocfilehash: 998067e9af178c1898c3443c4e84da965c22fa81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d974c4f0630a592daad956448bf21cea21efb7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301734"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759269"
 ---
 # <a name="compiler-error-c2229"></a>Errore del compilatore C2229
 
-tipo 'identifier' ha una matrice di dimensioni zero non valida
+il tipo ' Identifier ' ha una matrice di dimensioni zero non valida
 
-Un membro di un campo di bit o struttura contiene una matrice con dimensione zero che non è l'ultimo membro.
+Un membro di una struttura o di un campo di bit contiene una matrice di dimensioni zero che non è l'ultimo membro.
 
-Poiché si può essere una matrice di dimensioni zero come ultimo membro dello struct, è necessario specificare le dimensioni quando si esegue l'allocazione dello struct.
+Poiché è possibile avere una matrice di dimensioni zero come ultimo membro dello struct, è necessario specificarne le dimensioni quando si alloca lo struct.
 
-Se la matrice di dimensioni zero non è l'ultimo membro di struct, il compilatore non è possibile calcolare l'offset per i campi rimanenti.
+Se la matrice di dimensioni zero non è l'ultimo membro dello struct, il compilatore non può calcolare l'offset per i campi rimanenti.
 
-L'esempio seguente genera l'errore C2229:
+L'esempio seguente genera l'C2229:
 
-```
+```cpp
 // C2229.cpp
 struct S {
    int a[0];  // C2229  zero-sized array

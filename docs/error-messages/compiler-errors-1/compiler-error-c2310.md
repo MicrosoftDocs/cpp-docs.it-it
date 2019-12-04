@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2310
 ms.assetid: 1969c682-b97e-43fb-b9a9-f783e7ff1710
-ms.openlocfilehash: 8bd885a730bfe4890e99fa9ec7beb83169aca4d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13558be562206c491d0f4b0a08f0d5763ba463e7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302124"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759022"
 ---
 # <a name="compiler-error-c2310"></a>Errore del compilatore C2310
 
 i gestori catch devono specificare un tipo
 
-Un gestore catch è specificato alcun tipo o più tipi.
+Un gestore catch non ha specificato alcun tipo o più tipi.
 
-L'esempio seguente genera l'errore C2310:
+L'esempio seguente genera l'C2310:
 
-```
+```cpp
 // C2310.cpp
 // compile with: /EHsc
 #include <eh.h>

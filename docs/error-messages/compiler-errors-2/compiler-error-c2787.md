@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2787
 ms.assetid: 34cb57e6-cafe-4ce7-bcc6-53d194629bd0
-ms.openlocfilehash: 656fcd8a1a0429546189de8c3f01ab928c6333ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00f2097dc556055f0becf1d81d784c9126c66f63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256867"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739597"
 ---
 # <a name="compiler-error-c2787"></a>Errore del compilatore C2787
 
-'identifier': nessun GUID è stato associato a questo oggetto
+' Identifier ': nessun GUID associato a questo oggetto
 
-Il [uuidof](../../cpp/uuidof-operator.md) operatore accetta un tipo definito dall'utente con un GUID collegato o un oggetto di un tipo definito dall'utente. Questo errore si verifica quando l'argomento è un tipo definito dall'utente con nessun GUID.
+L'operatore [__uuidof](../../cpp/uuidof-operator.md) accetta un tipo definito dall'utente con un GUID collegato o un oggetto di tale tipo definito dall'utente. Questo errore si verifica quando l'argomento è un tipo definito dall'utente senza GUID.
 
-L'esempio seguente genera l'errore C2787:
+L'esempio seguente genera l'C2787:
 
-```
+```cpp
 // C2787.cpp
 #include <windows.h>
 struct F {};

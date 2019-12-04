@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: 2c2d2f2598d06ca228a96f2786fcb02888e29a1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386616"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758489"
 ---
 # <a name="compiler-error-c3918"></a>Errore del compilatore C3918
 
-'member' sia un membro dati necessarie per l'uso
+per l'utilizzo è necessario che ' member ' sia un membro dati
 
 C3918 può verificarsi per diversi motivi correlati agli eventi.
 
 ## <a name="example"></a>Esempio
 
-C3918 può verificarsi perché un membro di classe è obbligatorio nel contesto corrente. L'esempio seguente genera il C3918.
+C3918 può verificarsi perché un membro di classe è necessario nel contesto corrente. L'esempio seguente genera l'C3918.
 
-```
+```cpp
 // C3918.cpp
 // compile with: /clr /c
 public ref class C {
@@ -43,11 +43,11 @@ public:
 
 ## <a name="example"></a>Esempio
 
-C3918 viene causato anche se si tenta di archiviare un evento semplice i valori null (il nome dell'evento non sarà più disponibile l'accesso diretto al delegato dell'archivio di backup per l'evento).
+C3918 viene inoltre generato se si tenta di verificare un evento Trivial per null (il nome dell'evento non fornirà più l'accesso diretto al delegato dell'archivio di backup per l'evento).
 
-L'esempio seguente genera il C3918.
+L'esempio seguente genera l'C3918.
 
-```
+```cpp
 // C3918_2.cpp
 // compile with: /clr /c
 using namespace System;
@@ -68,9 +68,9 @@ ref struct EventSource : public IEFace {
 
 ## <a name="example"></a>Esempio
 
-C3918 può verificarsi anche se si sottoscrive un evento in modo non corretto. L'esempio seguente genera il C3918.
+C3918 può anche verificarsi se si sottoscrive erroneamente un evento. L'esempio seguente genera l'C3918.
 
-```
+```cpp
 // C3918_3.cpp
 // compile with: /clr /c
 using namespace System;

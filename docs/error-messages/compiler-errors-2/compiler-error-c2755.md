@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2755
 ms.assetid: 8ee4eeb6-4757-4efe-9100-38ff4a96f1de
-ms.openlocfilehash: c2238058dc4b7df6bbe33e98d6ccde996f36b782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd4bb5d49f6f6e807ad240c377debb220138c93
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227972"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759555"
 ---
 # <a name="compiler-error-c2755"></a>Errore del compilatore C2755
 
-'param': parametro non di tipo di una specializzazione parziale deve essere un identificatore semplice
+' param ': il parametro non di tipo di una specializzazione parziale deve essere un identificatore semplice
 
-Il parametro di tipo non deve essere un identificatore semplice, che il compilatore può risolvere in fase di compilazione per un singolo identificatore o un valore costante.
+Il parametro non di tipo deve essere un identificatore semplice, un elemento che il compilatore può risolvere in fase di compilazione in un identificatore singolo o in un valore costante.
 
-L'esempio seguente genera l'errore C2755:
+L'esempio seguente genera l'C2755:
 
-```
+```cpp
 // C2755.cpp
 template<int I, int J>
 struct A {};

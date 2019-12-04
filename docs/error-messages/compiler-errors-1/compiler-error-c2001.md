@@ -1,35 +1,35 @@
 ---
-title: Errore del compilatore C2001
+title: Errore del compilatore da C2001
 ms.date: 11/04/2016
 f1_keywords:
 - C2001
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 03b54fe2373063c8c0f9905da93822928392998d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bf9bd322812764b2f63493d4b22b58d853a25fa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209023"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756838"
 ---
-# <a name="compiler-error-c2001"></a>Errore del compilatore C2001
+# <a name="compiler-error-c2001"></a>Errore del compilatore da C2001
 
 nuova riga nella costante
 
-Impossibile continuare una costante di stringa sulla seconda riga, a meno che procedere nel modo seguente:
+Una costante di stringa non può proseguire in una seconda riga, a meno che non si esegua le operazioni seguenti:
 
-- La prima riga con una barra rovesciata finale.
+- Termina la prima riga con una barra rovesciata.
 
-- Chiudere la stringa nella prima riga con un segno di virgolette doppie e aprire la stringa nella riga successiva con un altro segno di virgolette doppie.
+- Chiudere la stringa nella prima riga con le virgolette doppie e aprire la stringa nella riga successiva con altre virgolette doppie.
 
-La prima riga con \n finale non è sufficiente.
+La fine della prima riga con \n non è sufficiente.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2001:
+L'esempio seguente genera l'da C2001:
 
-```
+```cpp
 // C2001.cpp
 // C2001 expected
 #include <stdio.h>
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Esempio
 
-Sono inclusi gli spazi all'inizio della riga successiva dopo un carattere di continuazione di riga nella costante di stringa. Nessuno degli esempi indicati sopra incorporare un carattere di nuova riga nella costante di stringa. È possibile incorporare un carattere di nuova riga come illustrato di seguito:
+Gli spazi all'inizio della riga successiva dopo un carattere di continuazione di riga vengono inclusi nella costante di stringa. Nessuno degli esempi illustrati in precedenza incorpora un carattere di nuova riga nella costante di stringa. È possibile incorporare un carattere di nuova riga come illustrato di seguito:
 
-```
+```cpp
 // C2001b.cpp
 #include <stdio.h>
 

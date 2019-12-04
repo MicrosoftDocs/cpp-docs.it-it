@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
-ms.openlocfilehash: ff795a551c091deb73c5fae1e3b67a61d9966ff0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67c64de676c624369fb5a8bc07b9b5de4833fe7f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266855"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757683"
 ---
 # <a name="compiler-error-c2039"></a>Errore del compilatore C2039
 
-'identifier1': non è un membro di 'identifier2'
+' identificatore1': non è un membro di ' identifier2'
 
-Il codice chiama in modo non corretto o fa riferimento a un membro di una struttura, classe o un'unione.
+Il codice chiama erroneamente o fa riferimento a un membro di una struttura, di una classe o di un'Unione.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2039.
+L'esempio seguente genera l'C2039.
 
-```
+```cpp
 // C2039.cpp
 struct S {
    int mem0;
@@ -37,9 +37,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2039.
+L'esempio seguente genera l'C2039.
 
-```
+```cpp
 // C2039_b.cpp
 // compile with: /clr
 using namespace System;
@@ -52,9 +52,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2039.
+L'esempio seguente genera l'C2039.
 
-```
+```cpp
 // C2039_c.cpp
 // compile with: /clr /c
 ref struct S {
@@ -70,7 +70,7 @@ int S::Count::get() { return 0; }   // OK
 
 ## <a name="example"></a>Esempio
 
-Errore C2039 può verificarsi anche se si tenta di accedere in modo non corretto di un indicizzatore predefinito. L'esempio seguente definisce un componente creato in c#.
+C2039 può verificarsi anche se si tenta di accedere in modo errato a un indicizzatore predefinito. Nell'esempio seguente viene definito un componente creato in C#.
 
 ```
 // C2039_d.cs
@@ -87,9 +87,9 @@ public class B {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2039.
+L'esempio seguente genera l'C2039.
 
-```
+```cpp
 // C2039_e.cpp
 // compile with: /clr
 using namespace System;
@@ -106,9 +106,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Errore C2039 può verificarsi anche se si usano i generics. L'esempio seguente genera l'errore C2039.
+C2039 può verificarsi anche se si usano i generics. L'esempio seguente genera l'C2039.
 
-```
+```cpp
 // C2039_f.cpp
 // compile with: /clr
 interface class I {};
@@ -131,11 +131,11 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Errore C2039 può verificarsi quando si tenta di rilasciare le risorse gestite o non gestite. Per altre informazioni, vedere [distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+C2039 può verificarsi quando si prova a rilasciare risorse gestite o non gestite. Per ulteriori informazioni, vedere [distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
-L'esempio seguente genera l'errore C2039.
+L'esempio seguente genera l'C2039.
 
-```
+```cpp
 // C2039_g.cpp
 // compile with: /clr
 using namespace System;

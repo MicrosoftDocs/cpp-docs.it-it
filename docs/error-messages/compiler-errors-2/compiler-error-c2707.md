@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: ce86f69b36b915b3e757b5d18430c99cb288e4e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161004"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760439"
 ---
 # <a name="compiler-error-c2707"></a>Errore del compilatore C2707
 
-'identifier': contesto non valido per la funzione intrinseca
+' Identifier ': contesto non valido per la funzione intrinseca
 
-Funzioni intrinseche di gestione delle eccezioni strutturate non sono valide in determinati contesti:
+Le funzioni intrinseche di gestione delle eccezioni strutturate non sono valide in determinati contesti:
 
-- `_exception_code()` all'esterno di un filtro eccezioni o `__except` blocco
+- `_exception_code()` esterno a un filtro eccezioni o a un blocco di `__except`
 
-- `_exception_info()` all'esterno di un filtro eccezioni
+- `_exception_info()` esterno a un filtro eccezioni
 
-- `_abnormal_termination()` all'esterno una `__finally` blocco
+- `_abnormal_termination()` all'esterno di un blocco `__finally`
 
-Per risolvere l'errore, assicurarsi che le funzioni intrinseche di gestione delle eccezioni vengono inserite nel contesto appropriato.
+Per risolvere l'errore, assicurarsi che le funzioni intrinseche di gestione delle eccezioni siano inserite nel contesto appropriato.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2707.
+L'esempio seguente genera l'C2707.
 
-```
+```cpp
 // C2707.cpp
 #include <windows.h>
 #include <stdio.h>

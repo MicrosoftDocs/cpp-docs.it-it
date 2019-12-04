@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2486
 ms.assetid: 436da349-6461-4e32-bfca-4f3e620108e2
-ms.openlocfilehash: 8d745c03530f331da83b45c765a2cb4bb7d76d8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75705bd8ecc850839e22fccbed1abf08687b3823
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364350"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743510"
 ---
 # <a name="compiler-error-c2486"></a>Errore del compilatore C2486
 
-LOCAL_SIZE' consentito solo nella funzione con l'attributo 'naked'
+' __LOCAL_SIZE ' consentito solo nella funzione con l'attributo ' Naked '
 
-Nelle funzioni di assembly inline, il nome `__LOCAL_SIZE` è riservato per le funzioni dichiarate con il [naked](../../cpp/naked-cpp.md) attributo.
+Nelle funzioni di assembly inline il nome `__LOCAL_SIZE` è riservato alle funzioni dichiarate con l'attributo [naked](../../cpp/naked-cpp.md) .
 
-L'esempio seguente genera l'errore C2486:
+L'esempio seguente genera l'C2486:
 
-```
+```cpp
 // C2486.cpp
 // processor: x86
 void __declspec(naked) f1() {

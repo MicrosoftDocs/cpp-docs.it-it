@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3634
 ms.assetid: fd09f10c-f863-483b-9756-71c16b760b02
-ms.openlocfilehash: 2acd76fee5e7ca309991e639044a45ea83ed112b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2abf5191035e450dca72777cdc2b2675ac9b90de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385667"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742587"
 ---
 # <a name="compiler-error-c3634"></a>Errore del compilatore C3634
 
-'function': non è possibile definire un metodo astratto di un oggetto gestito o WinRTclass
+' Function ': Impossibile definire un metodo astratto di un oggetto gestito o WinRTclass
 
 È possibile dichiarare un metodo astratto in una classe gestita o WinRT, ma non definirlo.
 
@@ -23,7 +23,7 @@ ms.locfileid: "62385667"
 
 L'esempio seguente genera l'errore C3634:
 
-```
+```cpp
 // C3634.cpp
 // compile with: /clr
 ref class C {

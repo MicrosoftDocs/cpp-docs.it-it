@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3195
 ms.assetid: 97e4f681-812b-49e8-ba57-24b7817e3cd8
-ms.openlocfilehash: 4a54a9c629a1abaa4f1c5d15d06448e82cf25561
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8274e121e953c3e51a0f2ff8c68c315759ce3e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329101"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760426"
 ---
 # <a name="compiler-error-c3195"></a>Errore del compilatore C3195
 
 'operator': è riservata e non può essere utilizzata come membro di una classe di riferimento o un tipo di valore. Gli operatori CLR o WinRT devono essere definiti usando la parola chiave 'operator'
 
-Il compilatore ha rilevato una definizione dell'operatore che usa la sintassi di Estensioni gestite per C++. È necessario utilizzare la sintassi di C++ per gli operatori.
+Il compilatore ha rilevato una definizione dell'operatore che usa la sintassi di Estensioni gestite per C++. È necessario utilizzare la C++ sintassi per gli operatori.
 
 L'esempio seguente genera l'errore C3195 e mostra come risolverlo:
 
-```
+```cpp
 // C3195.cpp
 // compile with: /clr /LD
 #using <mscorlib.dll>

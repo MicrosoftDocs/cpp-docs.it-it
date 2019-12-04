@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3623
 ms.assetid: a0341b45-062a-4f67-beb9-ba74201ed1ed
-ms.openlocfilehash: dd12e64e775807220b4ece1f4c26a2f52437c69e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d83e75d46fb078db3e74bf389563ca2ff34bb61
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221905"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740871"
 ---
 # <a name="compiler-error-c3623"></a>Errore del compilatore C3623
 
@@ -21,7 +21,7 @@ L'uso dei campi di bit non è consentito per le variabili in una classe gestita 
 
 L'esempio seguente genera l'errore C3623:
 
-```
+```cpp
 // C3623.cpp
 // compile with: /clr
 using namespace System;

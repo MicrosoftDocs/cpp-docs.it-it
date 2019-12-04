@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3493
 ms.assetid: 734b4257-12a3-436f-8488-c8c55ec81634
-ms.openlocfilehash: 1bbf9b269075717ae397b7d29ee28c278b1e4ec8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 178d1221886dc62edd9785d211e2189fa50962f4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381046"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738297"
 ---
 # <a name="compiler-error-c3493"></a>Errore del compilatore C3493
 
@@ -29,7 +29,7 @@ L'acquisizione di espressioni lambda vuota, `[]`, specifica che l'espressione la
 
 L'esempio seguente genera l'errore C3493 perché modifica una variabile esterna ma specifica la clausola di acquisizione vuota:
 
-```
+```cpp
 // C3493a.cpp
 
 int main()
@@ -43,7 +43,7 @@ int main()
 
 L'esempio seguente risolve l'errore C3493 specificando la modalità di acquisizione predefinita mediante riferimento.
 
-```
+```cpp
 // C3493b.cpp
 
 int main()

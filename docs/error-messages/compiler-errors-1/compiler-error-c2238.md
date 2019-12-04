@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2238
 ms.assetid: 3d53060c-d6b7-4603-b9cf-d7c65eb64cd2
-ms.openlocfilehash: dde413c2c38e97fe47a0063953d64b0381d313a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32b9633a1478206bb7ee5d132754fec48925d16d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301422"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759217"
 ---
 # <a name="compiler-error-c2238"></a>Errore del compilatore C2238
 
@@ -21,7 +21,7 @@ token imprevisti prima di 'token'
 
 L'esempio seguente genera l'errore C2238:
 
-```
+```cpp
 // C2238.cpp
 // compile with: /c
 class v {

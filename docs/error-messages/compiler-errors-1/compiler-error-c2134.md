@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 f1_keywords:
 - C2134
 ms.assetid: d45cb3e8-0be4-4bd6-8be9-5f8d2384363f
-ms.openlocfilehash: 8bb472cc7864e597404394ac7c80468e1cd59f5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a50a94e195c823176e8463f9d0471530b81734c4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397551"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757501"
 ---
 # <a name="compiler-error-c2134"></a>Errore del compilatore C2134
 
-'function': chiamata non produce un'espressione costante
+' Function ': la chiamata non genera un'espressione costante
 
-Una funzione dichiarata come constexpr può solo chiamare altre funzioni dichiarate come constexpr.
+Una funzione dichiarata come constExpr può chiamare solo altre funzioni dichiarate come constExpr.
 
-L'esempio seguente genera l'errore C2134:
+L'esempio seguente genera l'C2134:
 
-```
+```cpp
 // C2134.cpp
 // compile with: /c
 int A() {
@@ -33,7 +33,7 @@ constexpr int B() {
 
 Possibile soluzione:
 
-```
+```cpp
 // C2134b.cpp
 constexpr int A() {  // add constexpr to A, since it meets the requirements of constexpr.
     return 42;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2345
 ms.assetid: e1cc88b0-0223-4d07-975b-fa99956a82bd
-ms.openlocfilehash: ceb2a835ca94399f27640628105afcde986af1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85d9e312bafe0cf6c9390f7484281e1aefb22aab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188309"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760023"
 ---
 # <a name="compiler-error-c2345"></a>Errore del compilatore C2345
 
@@ -21,7 +21,7 @@ Alla parola chiave [align](../../cpp/align-cpp.md) è stato passato un valore ch
 
 Il codice seguente genera l'errore C2345
 
-```
+```cpp
 // C2345.cpp
 // compile with: /c
 __declspec(align(0)) int a;   // C2345

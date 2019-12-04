@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2914
 ms.assetid: fc6a0592-f53e-4f5a-88cb-780bbed4acf2
-ms.openlocfilehash: 2500736f799032aea71173931139404b4406a16a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bed9e31d7d1de069ee708f8f482d26b37bc16833
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384348"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761058"
 ---
 # <a name="compiler-error-c2914"></a>Errore del compilatore C2914
 
-'identifier': non è possibile dedurre l'argomento di tipo come argomento della funzione è ambiguo
+' Identifier ': Impossibile dedurre l'argomento di tipo perché l'argomento di funzione è ambiguo
 
-Il compilatore non può determinare che funzioni da usare per un argomento di modello o generica in overload.
+Il compilatore non è in grado di determinare le funzioni di overload da usare per un argomento generico o di modello.
 
-L'esempio seguente genera l'errore C2914:
+L'esempio seguente genera l'C2914:
 
-```
+```cpp
 // C2914.cpp
 // compile with: /c
 void f(int);
@@ -32,9 +32,9 @@ void h() { g(f); }   // C2914
 // void h() { g<int>(f); }
 ```
 
-C2914 può verificarsi anche quando si usano i generics.  L'esempio seguente genera l'errore C2914:
+C2914 può verificarsi anche quando si usano i generics.  L'esempio seguente genera l'C2914:
 
-```
+```cpp
 // C2914b.cpp
 // compile with: /clr /c
 void f(int);

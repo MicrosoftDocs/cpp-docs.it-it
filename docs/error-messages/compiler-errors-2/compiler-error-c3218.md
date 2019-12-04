@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3218
 ms.assetid: 0eea19e0-503e-4e07-ae8b-2cb2e95922cd
-ms.openlocfilehash: 87084f9751b1593ec93a3062f23714bba403da9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386a0c180dd01161ebccdd2b04e899e0cc999614
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182522"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737985"
 ---
 # <a name="compiler-error-c3218"></a>Errore del compilatore C3218
 
-'type': tipo non consentito come vincolo
+' type ': tipo non consentito come vincolo
 
-Per un tipo può essere un vincolo, deve essere un tipo di valore o riferimento a una classe gestita o un'interfaccia.
+Affinché un tipo sia un vincolo, è necessario che sia un tipo di valore o un riferimento a una classe o a un'interfaccia gestita.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3218.
+L'esempio seguente genera l'C3218.
 
-```
+```cpp
 // C3218.cpp
 // compile with: /clr /c
 class A {};

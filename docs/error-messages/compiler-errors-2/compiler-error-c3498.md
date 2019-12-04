@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-ms.openlocfilehash: 463e210e5a1ac5eb6d197062ed8921f9bbae4ad2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771e8c72ab4386bb45a11983318f412e784f5bc9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381007"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738102"
 ---
 # <a name="compiler-error-c3498"></a>Errore del compilatore C3498
 
-'var': non è possibile acquisire una variabile che dispone di un oggetto gestito o WinRTtype
+' var ': Impossibile acquisire una variabile con un oggetto gestito o WinRTtype
 
 Non è possibile acquisire una variabile con un tipo gestito o un tipo Windows Runtime in un'espressione lambda.
 
@@ -27,7 +27,7 @@ Non è possibile acquisire una variabile con un tipo gestito o un tipo Windows R
 
 L'esempio seguente genera l'errore C3498 perché una variabile con un tipo gestito viene visualizzata nell'elenco di acquisizione di un'espressione lambda:
 
-```
+```cpp
 // C3498a.cpp
 // compile with: /clr
 using namespace System;
@@ -44,7 +44,7 @@ int main()
 
 L'esempio seguente risolve l'errore C3498 passando la variabile gestita `s` all'elenco di parametri dell'espressione lambda:
 
-```
+```cpp
 // C3498b.cpp
 // compile with: /clr
 using namespace System;

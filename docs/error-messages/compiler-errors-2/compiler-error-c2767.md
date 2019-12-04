@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2767
 ms.assetid: e8f84178-a160-4d71-a236-07e4fcc11e96
-ms.openlocfilehash: 78b171b634aea66115c4029c696fec042593bb30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 259e8a58abfa2dc5eacaa6c9f6e3d47b852f5c1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258097"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759815"
 ---
 # <a name="compiler-error-c2767"></a>Errore del compilatore C2767
 
-gestita o mancata corrispondenza della dimensione WinRTarray: previsto di argomenti di N - forniti M
+dimensione gestita o WinRTarray non corrispondente: previsto N argomenti-M specificati
 
 Una dichiarazione di matrice gestita o WinRT è in formato non valido. Per altre informazioni, vedere [matrice](../../extensions/arrays-cpp-component-extensions.md).
 
 L'esempio seguente genera l'errore C2767 e mostra come risolverlo:
 
-```
+```cpp
 // C2767.cpp
 // compile with: /clr
 int main() {

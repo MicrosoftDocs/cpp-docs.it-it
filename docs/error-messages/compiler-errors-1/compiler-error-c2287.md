@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2287
 ms.assetid: 64556299-4e1f-4437-88b7-2464fc0b95bb
-ms.openlocfilehash: f5493220c4380d1fd67b38995414f48a2ef72a41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 234d0e85d0d6772340797fb6880e0ef79d4191ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385823"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759139"
 ---
 # <a name="compiler-error-c2287"></a>Errore del compilatore C2287
 
-'class': rappresentazione di ereditarietà: 'representation1' è meno generica obbligatorio 'representation2'
+' Class ': rappresentazione di ereditarietà:' representation1' è meno generale del necessario ' representation2'
 
-Una classe viene dichiarata con una rappresentazione in forma più semplice rispetto a quelle necessarie.
+Una classe viene dichiarata con una rappresentazione più semplice del necessario.
 
-L'esempio seguente genera l'errore C2287:
+L'esempio seguente genera l'C2287:
 
-```
+```cpp
 // C2287.cpp
 // compile with: /vmg /c
 class __single_inheritance X;
