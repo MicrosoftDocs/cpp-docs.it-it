@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: e80fa62db9795838980c63e113300a554afabef3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b487c0f94a00ec64e0c2178265c5a8c27544a51
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376237"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761556"
 ---
 # <a name="compiler-error-c3535"></a>Errore del compilatore C3535
 
-non è possibile dedurre il tipo per 'type1' da 'type2'
+non è possibile dedurre il tipo per ' tipo1' da' tipo2'
 
-Il tipo della variabile dichiarata dal `auto` parola chiave non può essere dedotto dal tipo dell'espressione di inizializzazione. Ad esempio, questo errore si verifica se l'espressione di inizializzazione viene valutata `void`, che non è un tipo.
+Non è possibile dedurre il tipo della variabile dichiarata dalla parola chiave `auto` dal tipo dell'espressione di inizializzazione. Questo errore si verifica, ad esempio, se l'espressione di inizializzazione restituisce `void`, che non è un tipo.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Verificare che il tipo dell'espressione di inizializzazione non `void`.
+1. Verificare che il tipo dell'espressione di inizializzazione non sia `void`.
 
-1. Assicurarsi che la dichiarazione non è un puntatore a un tipo fondamentale. Per altre informazioni, vedere [tipi fondamentali](../../cpp/fundamental-types-cpp.md).
+1. Assicurarsi che la dichiarazione non sia un puntatore a un tipo fondamentale. Per altre informazioni, vedere [tipi fondamentali](../../cpp/fundamental-types-cpp.md).
 
 1. Assicurarsi che se la dichiarazione è un puntatore a un tipo, l'espressione di inizializzazione è un tipo di puntatore.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente generato l'errore C3535 poiché restituisce l'espressione di inizializzazione `void`.
+Nell'esempio seguente viene restituito C3535 perché l'espressione di inizializzazione restituisce `void`.
 
-```
+```cpp
 // C3535a.cpp
 // Compile with /Zc:auto
 void f(){}
@@ -44,9 +44,9 @@ int main()
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente generato l'errore C3535 perché l'istruzione dichiara una variabile `x` come puntatore a un tipo dedotto, ma il tipo dell'inizializzatore di espressione è double. Di conseguenza, il compilatore non è possibile dedurre il tipo della variabile.
+Nell'esempio seguente viene restituito C3535 perché l'istruzione dichiara la variabile `x` come puntatore a un tipo dedotto, ma il tipo dell'espressione dell'inizializzatore è Double. Di conseguenza, il compilatore non può dedurre il tipo della variabile.
 
-```
+```cpp
 // C3535b.cpp
 // Compile with /Zc:auto
 int main()
@@ -58,9 +58,9 @@ int main()
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente generato l'errore C3535 poiché variabile `p` dichiara un puntatore a un tipo dedotto, ma l'espressione di inizializzazione non è un tipo di puntatore.
+Nell'esempio seguente viene restituito C3535 perché la variabile `p` dichiara un puntatore a un tipo dedotto, ma l'espressione di inizializzazione non è un tipo di puntatore.
 
-```
+```cpp
 // C3535c.cpp
 // Compile with /Zc:auto
 class A { };

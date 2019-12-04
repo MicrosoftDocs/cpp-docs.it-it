@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3668
 ms.assetid: 53a96698-bde4-4447-95b5-b5108291f60c
-ms.openlocfilehash: 770294eb58c09024ddfb4269357b77de7b7ea7d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e949a1251fcbebfd9e8fe47caf190e81b8b9f99
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215061"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758164"
 ---
 # <a name="compiler-error-c3668"></a>Errore del compilatore C3668
 
-'method': metodo con identificatore di override 'override' non hanno eseguito l'override a qualsiasi metodo di classe di base
+' Method ': il metodo con identificatore di override ' override ' non ha eseguito l'override di alcun metodo della classe base
 
-Una funzione ha tentata di eseguire l'override di una funzione non esistente.
+Una funzione ha tentato di eseguire l'override di una funzione non esistente.
 
-Per altre informazioni, vedere [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Per ulteriori informazioni, vedere [override espliciti](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3668.
+L'esempio seguente genera l'C3668.
 
-```
+```cpp
 // C3668.cpp
 // compile with: /c
 __interface I {

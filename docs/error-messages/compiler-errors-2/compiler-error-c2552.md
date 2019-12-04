@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
-ms.openlocfilehash: ddd3755a4fcabf8c097c359f31c9cc189b36f79a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f3e4cfc46655c5201e7a79a9333f532a8fcab9c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353131"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740806"
 ---
 # <a name="compiler-error-c2552"></a>Errore del compilatore C2552
 
@@ -19,9 +19,9 @@ ms.locfileid: "62353131"
 
 L'identificatore di aggregazione è stato inizializzato in modo non corretto.
 
-[Funzioni di aggregazione](../../c-language/initializing-aggregate-types.md) sono definite come:
+Le [aggregazioni](../../c-language/initializing-aggregate-types.md) sono definite come segue:
 
-- Matrici
+- Array
 
 - Classi, strutture e unioni che non includono:
 
@@ -51,7 +51,7 @@ Di seguito sono indicati i motivi per cui può venire generato un avviso C2552 q
 
 Il seguente codice di esempio genera l'errore C2552:
 
-```
+```cpp
 // C2552.cpp
 // compile with: /clr
 #include <string>

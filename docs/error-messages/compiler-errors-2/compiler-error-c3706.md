@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400292"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757982"
 ---
 # <a name="compiler-error-c3706"></a>Errore del compilatore C3706
 
-'function': deve essere un'interfaccia COM può generare eventi COM
+' Function ': deve essere un'interfaccia COM per generare eventi COM
 
-L'interfaccia di eventi che consente di generare eventi COM deve essere un'interfaccia COM. In questo caso, l'interfaccia deve essere definita usando un oggetto visivo C++ attributo o importati con [#import](../../preprocessor/hash-import-directive-cpp.md) da una libreria dei tipi con l'attributo embedded_idl del #import.
+L'interfaccia evento utilizzata per generare eventi COM deve essere un'interfaccia COM. In questa situazione, l'interfaccia deve essere definita utilizzando un attributo visivo C++ oppure importata utilizzando [#import](../../preprocessor/hash-import-directive-cpp.md) da una libreria dei tipi con l'attributo embedded_idl di #import.
 
-Si noti che il `#include` righe del file di intestazione ATL illustrati nell'esempio riportato di seguito sono necessarie per l'uso di eventi COM. Per correggere questo errore, apportare `IEvents` (l'interfaccia di gestione degli eventi) un'interfaccia COM applicando uno dei seguenti attributi per la definizione dell'interfaccia: [oggetto](../../windows/object-cpp.md), [doppio](../../windows/dual.md), o [ interfaccia dispatch](../../windows/dispinterface.md).
+Si noti che le righe `#include` dei file di intestazione ATL mostrati nell'esempio seguente sono necessarie per l'utilizzo di eventi COM. Per correggere l'errore, rendere `IEvents` (l'interfaccia di eventi) un'interfaccia COM applicando uno degli attributi seguenti alla definizione dell'interfaccia: [Object](../../windows/object-cpp.md), [Dual](../../windows/dual.md)o [Dispatch](../../windows/dispinterface.md).
 
-Se un'interfaccia proviene da un file di intestazione generato da MIDL, compilatore verrà non riconosciuto come un'interfaccia COM.
+Se un'interfaccia è da un file di intestazione generato da MIDL, il compilatore non lo riconosce come interfaccia COM.
 
-L'esempio seguente genera l'errore C3706:
+L'esempio seguente genera l'C3706:
 
-```
+```cpp
 // C3706.cpp
 // compile with: /c
 // C3706 expected

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447694"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760928"
 ---
 # <a name="compiler-error-c2885"></a>Errore del compilatore C2885
 
-'identificatore': dichiarazione using non valida nell'ambito di classe non
+' Class:: Identifier ': dichiarazione using non valida nell'ambito non di classe
 
-È stata usata un' [usando](../../cpp/using-declaration.md) dichiarazione in modo non corretto.
+È stata usata una Dichiarazione [using](../../cpp/using-declaration.md) in modo errato.
 
 ## <a name="example"></a>Esempio
 
-Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual Studio 2005: non è più valido per avere una `using` dichiarazione per un tipo annidato, è necessario qualificare in modo esplicito ogni riferimento apportate al tipo annidato, inserire il tipo in un n amespace, o creare un typedef.
+Questo errore può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: non è più valido avere una dichiarazione `using` a un tipo annidato; è necessario qualificare in modo esplicito ogni riferimento creato al tipo annidato, inserire il tipo in uno spazio dei nomi o creare un typedef.
 
-L'esempio seguente genera l'errore C2885.
+L'esempio seguente genera l'C2885.
 
-```
+```cpp
 // C2885.cpp
 namespace MyNamespace {
    class X1 {};
@@ -54,11 +54,11 @@ int main () {
 
 ## <a name="example"></a>Esempio
 
-Se si usa il `using` richiede la parola chiave con un membro di C++ è possibile definire tale membro all'interno di un'altra classe (una classe derivata).
+Se si usa la parola chiave `using` con un membro di C++ classe, è necessario definire tale membro all'interno di un'altra classe (una classe derivata).
 
-L'esempio seguente genera l'errore C2885.
+L'esempio seguente genera l'C2885.
 
-```
+```cpp
 // C2885_b.cpp
 // compile with: /c
 class A {

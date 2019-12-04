@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2783
 ms.assetid: 1ce94a11-bb8b-4be3-a222-f1f105da74b3
-ms.openlocfilehash: 539eeebc39fa7fc061cc615f29d87d3e6bcfc5c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: adba87853bac764d4975d6b6fa9aa44940ced03c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408433"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739675"
 ---
 # <a name="compiler-error-c2783"></a>Errore del compilatore C2783
 
-'declaration': Impossibile dedurre un argomento di modello per 'identifier'
+' declaration ': non è stato possibile dedurre l'argomento di modello per ' Identifier '
 
-Il compilatore non può determinare un argomento di modello. Gli argomenti predefiniti non sono utilizzabile per dedurre un argomento di modello.
+Il compilatore non è in grado di determinare un argomento di modello. Non è possibile usare gli argomenti predefiniti per dedurre un argomento di modello.
 
-L'esempio seguente genera l'errore C2783:
+L'esempio seguente genera l'C2783:
 
-```
+```cpp
 // C2783.cpp
 template<typename T1, typename T2>
 T1 f(T2) {
@@ -37,7 +37,7 @@ int main() {
 
 C2783 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C2783b.cpp
 // compile with: /clr
 using namespace System;

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2749
 ms.assetid: a81aef36-cdca-4d78-89d5-b72eff2500b2
-ms.openlocfilehash: 80ac01eaba8e5291ee5558d226ebea2c3d8ff47e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71c2f3d3a297d70501c675ac6a9f750cbdf0d421
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360216"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759620"
 ---
 # <a name="compiler-error-c2749"></a>Errore del compilatore C2749
 
-'type': può solo generare o intercettare su un handle a una classe gestita con /CLR: safe
+' type ': può solo generare o intercettare un handle per una classe gestita con/CLR: safe
 
-Quando si usa **/CLR: safe**, si può solo generare o intercettare un tipo di riferimento.
+Quando si usa **/CLR: safe**, è possibile generare o intercettare solo un tipo di riferimento.
 
 Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2749:
+L'esempio seguente genera l'C2749:
 
-```
+```cpp
 // C2749.cpp
 // compile with: /clr:safe
 ref struct MyStruct {

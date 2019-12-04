@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
-ms.openlocfilehash: d524c49075c400caa345dd26ed681734ea0cfb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c3f9f05bf04c9a1c20fff7910836e7b50468a8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385618"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742457"
 ---
 # <a name="compiler-error-c3642"></a>Errore del compilatore C3642
 
-' return_type/args': non è possibile chiamare una funzione con clrcall convenzione di chiamata da codice nativo
+' return_type/args ': Impossibile chiamare una funzione con __clrcall convenzione di chiamata dal codice nativo
 
-Una funzione contrassegnata con il [clrcall](../../cpp/clrcall.md) convenzione di chiamata non può essere chiamato da codice nativo (non gestito).
+Una funzione contrassegnata con la convenzione di chiamata [__clrcall](../../cpp/clrcall.md) non può essere chiamata dal codice nativo (non gestito).
 
-*return_type/args* è il nome della funzione o il tipo del `__clrcall` (funzione) si intende chiamare.  Un tipo viene usato quando si chiamano tramite un puntatore a funzione.
+*return_type/args* è il nome della funzione o il tipo della funzione di `__clrcall` che si sta tentando di chiamare.  Un tipo viene usato quando si esegue una chiamata tramite un puntatore a funzione.
 
-Per chiamare una funzione gestita da un contesto nativo, è possibile aggiungere una funzione "wrapper" che verrà usato il `__clrcall` (funzione). In alternativa, utilizzare il meccanismo di marshalling CLR; vedere [come: Effettuare il marshalling PInvoke usando puntatori di funzione](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) per altre informazioni.
+Per chiamare una funzione gestita da un contesto nativo, è possibile aggiungere una funzione "wrapper" che chiamerà la funzione `__clrcall`. In alternativa, è possibile utilizzare il meccanismo di marshalling CLR; Per ulteriori informazioni, vedere [procedura: effettuare il marshalling di puntatori a funzione utilizzando PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) .
 
-L'esempio seguente genera l'errore C3642:
+L'esempio seguente genera l'C3642:
 
-```
+```cpp
 // C3642.cpp
 // compile with: /clr
 using namespace System;

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-ms.openlocfilehash: 61f7479986cccfa3851d85bf8e7bc0e9da3d1cea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 994b235b4775c28126d92c241a7e42dc837d4493
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400201"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757202"
 ---
 # <a name="compiler-error-c3767"></a>Errore del compilatore C3767
 
-funzione o funzioni candidate 'function' non è accessibile
+funzione o funzioni candidate ' Function ' non accessibili
 
-Funzioni friend definite in una classe non deve essere considerata come se fosse definito e dichiarata nell'ambito dello spazio dei nomi globale. È possibile, tuttavia essere trovato dalla ricerca dipendente dall'argomento.
+Una funzione friend definita in una classe non deve essere trattata come se fosse stata definita e dichiarata nell'ambito dello spazio dei nomi globale. Può tuttavia essere trovato dalla ricerca dipendente dall'argomento.
 
-L'errore C3767 può anche essere causato da una modifica di rilievo: i tipi nativi sono ora privati per impostazione predefinita in un **/clr** compilazione, vedere [digitare visibilità](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) per altre informazioni.
+L'errore C3767 può anche essere causato da una modifica di rilievo: i tipi nativi sono ora privati per impostazione predefinita in una compilazione **/CLR** . Per ulteriori informazioni, vedere [visibilità del tipo](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3767:
+L'esempio seguente genera l'l'errore C3767:
 
-```
+```cpp
 // C3767a.cpp
 // compile with: /clr
 using namespace System;
@@ -54,9 +54,9 @@ int main() {
 };
 ```
 
-L'esempio seguente genera l'errore C3767:
+L'esempio seguente genera l'l'errore C3767:
 
-```
+```cpp
 // C3767c.cpp
 // compile with: /clr /c
 

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
-ms.openlocfilehash: 2df788efd93fb531822d858ea5aee1722487db81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23c2a38f8e4d6781af73fb70a25cf4737e2c4e8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387041"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758775"
 ---
 # <a name="compiler-error-c2261"></a>Errore del compilatore C2261
 
-'string': riferimento all'assembly non è valido e non può essere risolto
+' String ': il riferimento all'assembly non è valido e non può essere risolto
 
-Un valore non valido.
+Valore non valido.
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Consente di specificare un assembly friend. Ad esempio, se vuole specificare la DLL come assembly friend DLL, si specificherà (in a. dll): InternalsVisibleTo. Il runtime consente quindi di DLL accedere a tutti gli elementi di DLL (eccetto i tipi privati).
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> viene usato per specificare un assembly Friend. Se, ad esempio, un file con estensione dll desidera specificare b. dll come assembly Friend, è necessario specificare (in un file con estensione dll): InternalsVisibleTo ("b"). Il runtime consente quindi a b. dll di accedere a tutti gli elementi in un file con estensione dll (eccetto i tipi privati).
 
-Per altre informazioni sulla sintassi corretta quando si specificano gli assembly friend, vedere [gli assembly Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
+Per ulteriori informazioni sulla sintassi corretta quando si specificano gli assembly Friend, vedere [assembly Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2261.
+L'esempio seguente genera l'C2261.
 
-```
+```cpp
 // C2261.cpp
 // compile with: /clr /c
 using namespace System::Runtime::CompilerServices;

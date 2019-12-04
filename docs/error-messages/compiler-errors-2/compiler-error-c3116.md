@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3116
 ms.assetid: 597463e1-a5cc-4ed3-a917-eae9a61d3312
-ms.openlocfilehash: 3f587bc677d64bda0fb5eea0b7ebc8d5761a2e75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0c8e7cab936171f89b33c90b4134a97c40b2c81
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376068"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741183"
 ---
 # <a name="compiler-error-c3116"></a>Errore del compilatore C3116
 
-'identificatore di archiviazione': classe di archiviazione non è valido per il metodo di interfaccia
+' storage specifier ': classe di archiviazione non valida per il metodo di interfaccia
 
-È stata usata `typedef`, `register`, o `static` come classe di archiviazione per un metodo di interfaccia. Queste classi di archiviazione non sono consentite nei membri di interfaccia.
+È stato usato `typedef`, `register`o `static` come classe di archiviazione per un metodo di interfaccia. Queste classi di archiviazione non sono consentite nei membri di interfaccia.
 
-L'esempio seguente genera l'errore C3116:
+L'esempio seguente genera l'C3116:
 
-```
+```cpp
 // C3116.cpp
 __interface ImyInterface
 {

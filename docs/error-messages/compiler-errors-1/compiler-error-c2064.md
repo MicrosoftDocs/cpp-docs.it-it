@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
-ms.openlocfilehash: 8af20c5172cddd0194ed018c13960bbed7859674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd62ea825e3ae7d9e4acc1cb6d93d4bc102be0eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386031"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737322"
 ---
 # <a name="compiler-error-c2064"></a>Errore del compilatore C2064
 
@@ -21,7 +21,7 @@ Viene effettuata una chiamata a una funzione tramite un'espressione. L'espressio
 
 In questo esempio, il codice tenta di chiamare non funzioni come funzioni. L'esempio seguente generato l'errore C2064:
 
-```
+```cpp
 // C2064.cpp
 int i, j;
 char* p;
@@ -33,7 +33,7 @@ void func() {
 
 È necessario chiamare i puntatori a funzioni membro non statiche dal contesto dell'istanza di un oggetto. L'esempio seguente genera l'errore C2064 e mostra come risolverlo:
 
-```
+```cpp
 // C2064b.cpp
 struct C {
    void func1(){}
@@ -52,7 +52,7 @@ int main() {
 
 All'interno di una classe, i puntatori a funzioni membro devono indicare anche il contesto dell'oggetto chiamante. L'esempio seguente genera l'errore C2064 e mostra come risolverlo:
 
-```
+```cpp
 // C2064d.cpp
 // Compile by using: cl /c /W4 C2064d.cpp
 struct C {

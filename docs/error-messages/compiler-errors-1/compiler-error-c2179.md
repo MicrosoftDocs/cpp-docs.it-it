@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2179
 ms.assetid: f929bfc6-3964-4e54-87d6-7529b9b6c0b9
-ms.openlocfilehash: 4a8abd8d862d4d6b08b1d0efd1d47d0413b60a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b9b5382ab934f8d870e58189a447775a1e9a415
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385992"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737166"
 ---
 # <a name="compiler-error-c2179"></a>Errore del compilatore C2179
 
-'type': un argomento di attributo non è possibile usare i parametri di tipo
+' type ': un argomento di attributo non può usare parametri di tipo
 
-Un parametro di tipo generico viene risolto in fase di esecuzione. Tuttavia, un parametro di attributo deve essere risolto in fase di compilazione. Pertanto, è possibile utilizzare un parametro di tipo generico come argomento a un attributo.
+Un parametro di tipo generico viene risolto in fase di esecuzione. Tuttavia, un parametro dell'attributo deve essere risolto in fase di compilazione. Non è quindi possibile usare un parametro di tipo generico come argomento di un attributo.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2179.
+L'esempio seguente genera l'c2179.
 
-```
+```cpp
 // C2179.cpp
 // compile with: /clr
 using namespace System;
