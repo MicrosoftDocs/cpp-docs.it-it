@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2698
 ms.assetid: 3ebfe395-c20b-4c56-9980-ca9ed8653382
-ms.openlocfilehash: f643b7d8c035b4d1d7d8806feb5b121cf76d7796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6129ff691f804b31fdb8cb487ac4609e4bca6ef2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367577"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755187"
 ---
 # <a name="compiler-error-c2698"></a>Errore del compilatore C2698
 
-la dichiarazione using per ' dichiarazione 1' non può coesistere con la dichiarazione using per ' dichiarazione 2'
+la dichiarazione using per ' Declaration 1' non può coesistere con la dichiarazione using esistente per ' Declaration 2'
 
-Dopo aver creato un [dichiarazione using](../../cpp/using-declaration.md) per un membro, dati qualsiasi tramite dichiarazione nello stesso ambito che usa lo stesso nome non è consentito, perché solo le funzioni possono essere sottoposti a overload.
+Quando si dispone di una [dichiarazione using](../../cpp/using-declaration.md) per un membro dati, qualsiasi dichiarazione using nello stesso ambito che usa lo stesso nome non è consentita, perché è possibile eseguire l'overload solo delle funzioni.
 
-L'esempio seguente genera l'errore C2698:
+L'esempio seguente genera l'C2698:
 
-```
+```cpp
 // C2698.cpp
 struct A {
    int x;

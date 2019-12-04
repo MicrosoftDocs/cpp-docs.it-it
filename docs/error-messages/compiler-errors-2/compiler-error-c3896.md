@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3896
 ms.assetid: eb8be0f6-5b4e-4d71-8285-8a2a94f8ba29
-ms.openlocfilehash: 00e103720dc666b17566b67da19d4e908bb3addd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f15cd73465f4210ed5e5e34bebe2122c0b88f722
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385524"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749269"
 ---
 # <a name="compiler-error-c3896"></a>Errore del compilatore C3896
 
-'member': inizializzatore non valido: questo membro dati literal può essere inizializzato solo con 'nullptr'
+' member ': inizializzatore non corretto: questo membro dati literal può essere inizializzato solo con ' nullptr '
 
-Oggetto [letterale](../../extensions/literal-cpp-component-extensions.md) membro dati è stato inizializzato in modo non corretto.  Visualizzare [nullptr](../../extensions/nullptr-cpp-component-extensions.md) per altre informazioni.
+Un membro dati [literal](../../extensions/literal-cpp-component-extensions.md) è stato inizializzato in modo errato.  Per ulteriori informazioni, vedere [nullptr](../../extensions/nullptr-cpp-component-extensions.md) .
 
-L'esempio seguente genera l'errore C3896:
+L'esempio seguente genera l'C3896:
 
-```
+```cpp
 // C3896.cpp
 // compile with: /clr /c
 ref class R{};

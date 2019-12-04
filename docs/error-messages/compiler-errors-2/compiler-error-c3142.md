@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3142
 ms.assetid: 795137ad-d00a-4a9c-9665-0cd8bfb5da8b
-ms.openlocfilehash: 38bf40b6e1b7495232d7c33317408b872081e9f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e23ab20cb147ea8113e1f92f8e24d55b72faa71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374950"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746019"
 ---
 # <a name="compiler-error-c3142"></a>Errore del compilatore C3142
 
-'property_name': è possibile accettare l'indirizzo di una proprietà
+' property_name ': non è possibile prendere l'indirizzo di una proprietà
 
-L'indirizzo di una proprietà non è disponibile per gli sviluppatori.
+L'indirizzo di una proprietà non è disponibile per lo sviluppatore.
 
-L'esempio seguente genera l'errore C3142:
+L'esempio seguente genera l'C3142:
 
-```
+```cpp
 // C3142_2.cpp
 // compile with: /clr
 using namespace System;

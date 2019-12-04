@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2939
 ms.assetid: 455b050b-f2dc-4b5b-bd6a-e1f81d3d1644
-ms.openlocfilehash: 59b2f63ba12a644f13b3586fbf6eec4d5bfa8be5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97aa24eccb5cec7d74f7f7660260fa8b5f6d8d7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302657"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754615"
 ---
 # <a name="compiler-error-c2939"></a>Errore del compilatore C2939
 
@@ -23,7 +23,7 @@ Questo errore può verificarsi quando le parentesi graffe non corrispondono.
 
 L'esempio seguente genera l'errore C2939:
 
-```
+```cpp
 // C2939.cpp
 template<class T>
 struct TC { };
@@ -35,7 +35,7 @@ int main() {
 
 L'errore C2939 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C2939b.cpp
 // compile with: /clr
 generic<class T>

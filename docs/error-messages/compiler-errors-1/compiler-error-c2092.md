@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2092
 ms.assetid: 037e44ae-16c8-489a-a512-dcdf7f7795a6
-ms.openlocfilehash: d3d0b0e62fbc5f8ad90b3fee5fe39c6bdaba7c2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b530663cae2292ebeab1b871e495e9a45e4633cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376009"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754667"
 ---
 # <a name="compiler-error-c2092"></a>Errore del compilatore C2092
 
-TYP prvku pole 'nome della matrice' non può essere (funzione)
+il tipo di elemento di matrice ' nome matrice ' non può essere una funzione
 
-Le matrici di funzioni non sono consentite. Usare una matrice di puntatori a funzioni.
+Non sono consentite matrici di funzioni. Usare una matrice di puntatori a funzioni.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2092:
+L'esempio seguente genera l'C2092:
 
-```
+```cpp
 // C2092.cpp
 typedef void (F) ();
 typedef F AT[10];   // C2092
@@ -33,7 +33,7 @@ typedef F AT[10];   // C2092
 
 Possibile soluzione:
 
-```
+```cpp
 // C2092b.cpp
 // compile with: /c
 typedef void (F) ();

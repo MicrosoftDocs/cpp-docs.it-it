@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2628
 ms.assetid: 19a25e77-d5be-4107-88d5-0745b6281f98
-ms.openlocfilehash: 90df41ba8ae85e57e40848f8b50f4c1df7c7b541
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4198d6ff0552f5280904ed1fea5e185df1a9c804
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222923"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754719"
 ---
 # <a name="compiler-error-c2628"></a>Errore del compilatore C2628
 
-'type1' seguito da 'type2' non è valido (si è omesso un';'?)
+' tipo1' seguito da' tipo2' non è valido (si è omesso un';'?)
 
-Potrebbe mancare un punto e virgola.
+È possibile che manchi un punto e virgola.
 
-L'esempio seguente genera l'errore C2628:
+L'esempio seguente genera l'C2628:
 
-```
+```cpp
 // C2628.cpp
 class CMyClass {}
 int main(){}   // C2628 error
@@ -29,7 +29,7 @@ int main(){}   // C2628 error
 
 Possibile soluzione:
 
-```
+```cpp
 // C2628b.cpp
 class CMyClass {};
 int main(){}

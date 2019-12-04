@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
-ms.openlocfilehash: e313c7d66bc030183e330dd961fad2fb35f02ac2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffefa0eff23e11412573b8062fa15bb5679923e7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327808"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752769"
 ---
 # <a name="compiler-error-c3738"></a>Errore del compilatore C3738
 
-'convenzione_chiamata': la convenzione di chiamata di creazione di istanza esplicita deve corrispondere a quello del modello viene creata un'istanza di
+' calling_convention ': la convenzione di chiamata della creazione di istanza esplicita deve corrispondere a quella del modello di cui viene creata un'istanza
 
-È consigliabile che non si specifica una convenzione di chiamata su una creazione esplicita di istanza. Se necessario, tuttavia, le convenzioni di chiamata devono corrispondere.
+Si consiglia di non specificare una convenzione di chiamata su una creazione di istanza esplicita. Se è necessario, tuttavia, le convenzioni di chiamata devono corrispondere.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3738.
+L'esempio seguente genera l'C3738.
 
-```
+```cpp
 // C3738.cpp
 // compile with: /clr
 // processor: x86

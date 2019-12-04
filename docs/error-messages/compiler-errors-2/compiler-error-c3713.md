@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
-ms.openlocfilehash: 8c8c3b5e6016c7f4af471a163463c91d478fea91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d78d1fb3028e8618035c1c6f7bb3eb0f65409dd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328380"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753354"
 ---
 # <a name="compiler-error-c3713"></a>Errore del compilatore C3713
 
-'method': un metodo del gestore eventi deve avere gli stessi parametri di funzione come origine di 'method'
+' Method ': un metodo del gestore eventi deve avere gli stessi parametri di funzione dell'origine ' Method '
 
-È definito un metodo del gestore eventi che non usa gli stessi parametri del metodo di eventi di origine. Per correggere questo errore, fornire il metodo del gestore eventi gli stessi parametri del metodo dell'origine eventi.
+È stato definito un metodo del gestore eventi che non usa gli stessi parametri del metodo dell'evento di origine. Per correggere l'errore, assegnare al metodo del gestore dell'evento gli stessi parametri di quelli del metodo dell'evento di origine.
 
-L'esempio seguente genera l'errore C3713:
+L'esempio seguente genera l'C3713:
 
-```
+```cpp
 // C3713.cpp
 // compile with: /c
 [event_source(native)]

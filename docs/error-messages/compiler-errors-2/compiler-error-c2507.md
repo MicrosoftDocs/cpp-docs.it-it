@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2507
 ms.assetid: f102aff5-de7d-4c3f-9cac-2ddf9ce02b14
-ms.openlocfilehash: 63f9594eb9ee8a251faafe7323418b343c03063c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23433dccd7fc4f86c2e848359ac50c796fcccab0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165229"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746799"
 ---
 # <a name="compiler-error-c2507"></a>Errore del compilatore C2507
 
-'identifier': troppi modificatori virtual nella classe di base
+' Identifier ': troppi modificatori virtuali nella classe di base
 
-Una classe o struttura è dichiarato come `virtual` più volte. Un solo `virtual` modificatore può essere visualizzato per ogni classe in un elenco delle classi base.
+Una classe o una struttura viene dichiarata come `virtual` più di una volta. È possibile visualizzare solo un modificatore di `virtual` per ogni classe in un elenco di classi di base.
 
-L'esempio seguente genera l'errore C2507:
+L'esempio seguente genera l'C2507:
 
-```
+```cpp
 // C2507.cpp
 // compile with: /c
 class A {};

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
-ms.openlocfilehash: 5d161dfab8dff48a1ddd5a8a5036c0bb4d5549aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c895def372fd74f077725479112873020264371f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173249"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754264"
 ---
 # <a name="compiler-error-c3253"></a>Errore del compilatore C3253
 
-'function': errore dell'override esplicito
+' Function ': errore con override esplicito
 
-Override esplicito è stato specificato correttamente. Ad esempio, è possibile specificare un'implementazione per una sostituzione che è anche possibile specificare come pure. Per altre informazioni, vedere [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Un override esplicito è stato specificato in modo errato. Ad esempio, non è possibile specificare un'implementazione per una sostituzione specificata anche come pure. Per ulteriori informazioni, vedere [override espliciti](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-L'esempio seguente genera l'errore C3253:
+L'esempio seguente genera l'C3253:
 
-```
+```cpp
 // C3253.cpp
 // compile with: /clr
 public interface struct I {

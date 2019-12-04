@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: c3c00d1d07306a9e8dc67d3f75a5cb25d8f03aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bccfc723a9d62b794fa657e399bd94549448490
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400084"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755291"
 ---
 # <a name="compiler-error-c3804"></a>Errore del compilatore C3804
 
-'property_accessor': i metodi della funzione di accesso di una proprietà devono essere tutti statici o tutti non statici
+' property_accessor ': i metodi della funzione di accesso per una proprietà devono essere tutti statici o tutti non statici
 
-Quando si definisce una proprietà non è semplice, le funzioni di accesso possono essere statico o istanza, ma non entrambi.
+Quando si definisce una proprietà non semplice, le funzioni di accesso possono essere statiche o di istanza, ma non entrambe.
 
 Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3804.
+L'esempio seguente genera l'C3804.
 
-```
+```cpp
 // C3804.cpp
 // compile with: /c /clr
 ref struct A {

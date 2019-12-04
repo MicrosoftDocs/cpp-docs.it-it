@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2633
 ms.assetid: a7aceb65-4255-42d6-a8fb-e3cb6c4d2270
-ms.openlocfilehash: 746f01706c7c0ec09a64c5faee748f9582ac9a14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2e4ca81194968fb50a5442cab3d229a25b8be1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367759"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754680"
 ---
 # <a name="compiler-error-c2633"></a>Errore del compilatore C2633
 
-'identifier': la classe di archiviazione consentiti solo per i costruttori è 'inline'
+' Identifier ':' inline ' è l'unica classe di archiviazione valida per i costruttori
 
-Un costruttore viene dichiarato come una classe di archiviazione diverso da in linea.
+Un costruttore viene dichiarato come una classe di archiviazione diversa da inline.
 
-L'esempio seguente genera l'errore C2633:
+L'esempio seguente genera l'C2633:
 
-```
+```cpp
 // C2633.cpp
 // compile with: /c
 class C {

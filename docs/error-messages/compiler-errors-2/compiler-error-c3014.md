@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3014
 ms.assetid: af1c5b0c-dbf9-4274-b06a-c6c2cdcf2a52
-ms.openlocfilehash: c87c63641fc8071f7a1f29874ae7ae6dbffd4f70
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 08b8fc2eef4aa3a94ec615ad236cd3f9bebc4883
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344668"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749883"
 ---
 # <a name="compiler-error-c3014"></a>Errore del compilatore C3014
 
@@ -21,7 +21,7 @@ Per tutti gli elementi diversi da un ciclo `for` è un errore seguire immediatam
 
 L'esempio seguente genera l'errore C3014:
 
-```
+```cpp
 // C3014.cpp
 // compile with: /openmp
 int main()

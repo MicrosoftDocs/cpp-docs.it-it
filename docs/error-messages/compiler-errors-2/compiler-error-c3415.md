@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3415
 ms.assetid: fa2db8ab-2820-4ec3-a740-fb5e2adcfb29
-ms.openlocfilehash: 3d4163fac83e24d30f29aed92e7a1ec1fc9e362f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7b49d30866b9fa5ab27a93357fd2812aaa2806
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242864"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742925"
 ---
 # <a name="compiler-error-c3415"></a>Errore del compilatore C3415
 
@@ -42,7 +42,7 @@ Nei pragma [section](../../preprocessor/section.md) sono stati specificati valor
 
 L'esempio seguente genera l'errore C3415:
 
-```
+```cpp
 // C3415.cpp
 #pragma section("mysec1",write)
 #pragma section("mysec1",read)   // C3415

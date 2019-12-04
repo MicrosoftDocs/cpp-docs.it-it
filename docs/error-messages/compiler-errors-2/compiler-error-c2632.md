@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
-ms.openlocfilehash: b92d44bcfd04d4de7b39c5bdab5ee146d9b6693b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f69d43bf50f5f13957e49d1e9ffa798a3db5a7b3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257634"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754693"
 ---
 # <a name="compiler-error-c2632"></a>Errore del compilatore C2632
 
-'type1' seguito da 'type2' non è valido
+' tipo1' seguito da' tipo2' non è valido
 
-Questo errore può essere causato mancanza di codice tra due identificatori di tipi.
+Questo errore può essere causato dal mancato codice tra due identificatori di tipo.
 
-L'esempio seguente genera l'errore C2632:
+L'esempio seguente genera l'C2632:
 
-```
+```cpp
 // C2632.cpp
 int float i;   // C2632
 ```
 
-Questo errore può essere generato anche in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003. `bool` è ora un tipo appropriato. Nelle versioni precedenti, `bool` era un typedef, ed era possibile creare identificatori con lo stesso nome.
+Questo errore può essere generato anche in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003. `bool` è ora un tipo appropriato. Nelle versioni precedenti, `bool` era un typedef ed è possibile creare identificatori con tale nome.
 
-L'esempio seguente genera l'errore C2632:
+L'esempio seguente genera l'C2632:
 
-```
+```cpp
 // C2632_2.cpp
 // compile with: /LD
 void f(int bool);   // C2632
 ```
 
-Per risolvere questo errore, in modo che il codice è valido nelle versioni di Visual Studio .NET 2003 e Visual Studio .NET di Visual C++, rinominare l'identificatore.
+Per correggere l'errore in modo che il codice sia valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di C++Visual Studio, rinominare l'identificatore.

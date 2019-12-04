@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3031
 ms.assetid: 7e621e7e-eda7-45b5-8836-29599cd05255
-ms.openlocfilehash: 848577239d24df3f6af38438fb42c372ef34b1ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a892ff2bdbefbf6034da58c45c499fd6f65ad965
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265856"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748320"
 ---
 # <a name="compiler-error-c3031"></a>Errore del compilatore C3031
 
@@ -21,7 +21,7 @@ Una variabile di tipo errato è stata passata a una clausola reduction.
 
 L'esempio seguente genera l'errore C3031:
 
-```
+```cpp
 // C3031.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

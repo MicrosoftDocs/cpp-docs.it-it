@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25023277258d33ab77bde18f6cdfabc862f50a63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384231"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741742"
 ---
 # <a name="compiler-error-c3821"></a>Errore del compilatore C3821
 
-'function': tipo gestito o una funzione non può essere utilizzato in una funzione non gestita
+' Function ': Impossibile utilizzare un tipo o una funzione gestita in una funzione non gestita
 
-Funzioni con assembly inline oppure [setjmp](../../c-runtime-library/reference/setjmp.md) non può contenere i tipi di valore o classi gestite. Per correggere questo errore, rimuovere l'assembly inline e `setjmp` o rimuovere gli oggetti gestiti.
+Le funzioni con assembly inline o [setjmp](../../c-runtime-library/reference/setjmp.md) non possono contenere tipi di valore o classi gestite. Per correggere l'errore, rimuovere l'assembly inline e `setjmp` o rimuovere gli oggetti gestiti.
 
-C3821 può verificarsi anche se si prova a usare l'archiviazione automatica in una funzione vararg.  Per altre informazioni, vedere [elenchi di argomenti variabili (...) (C++/CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) e [ C++ la semantica dello Stack per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+C3821 può verificarsi anche se si tenta di usare l'archiviazione automatica in una funzione vararg.  Per altre informazioni, vedere [elenchi di argomenti variabili (...)C++(/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) e [ C++ semantica dello stack per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3821.
+L'esempio seguente genera l'C3821.
 
-```
+```cpp
 // C3821a.cpp
 // compile with: /clr /c
 public ref struct R {};
@@ -36,9 +36,9 @@ void test1(...) {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3821.
+L'esempio seguente genera l'C3821.
 
-```
+```cpp
 // C3821b.cpp
 // compile with: /clr
 // processor: /x86

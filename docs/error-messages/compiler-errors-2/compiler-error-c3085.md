@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3085
 ms.assetid: 1ac40bf2-f63e-439e-8921-47e6dadc8354
-ms.openlocfilehash: 01ebfa0007b9acc08742c57cc0528216eabb0441
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ebb4d52316c7143e63074f81f9950f92340a004
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243271"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751430"
 ---
 # <a name="compiler-error-c3085"></a>Errore del compilatore C3085
 
@@ -23,7 +23,7 @@ Un costruttore è stato dichiarato in modo non corretto. Per altre informazioni,
 
 L'esempio seguente genera l'errore C3085.
 
-```
+```cpp
 // C3085.cpp
 // compile with: /c /clr
 ref struct S {

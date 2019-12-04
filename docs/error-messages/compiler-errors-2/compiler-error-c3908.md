@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3908
 ms.assetid: 3c322482-c79e-4197-a578-2ad9bc379d1a
-ms.openlocfilehash: e11d830c3d662ea424caadeb50df669700f8c78f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b57f3346427ff548d11fe776e909eca99433a81
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406552"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749035"
 ---
 # <a name="compiler-error-c3908"></a>Errore del compilatore C3908
 
-livello di accesso meno restrittivo di 'construct'
+livello di accesso meno restrittivo rispetto a' construct '
 
-Un metodo della funzione di accesso di proprietà (get o set) non può avere accesso meno restrittivo rispetto all'accesso specificato nella proprietà stessa.  Analogamente, per i metodi della funzione di accesso eventi.
+Un metodo della funzione di accesso alle proprietà (Get o set) non può avere un accesso meno restrittivo rispetto a quello specificato nella proprietà stessa.  Analogamente, per i metodi della funzione di accesso eventi.
 
-Per altre informazioni, vedere [proprietà](../../extensions/property-cpp-component-extensions.md) e [evento](../../extensions/event-cpp-component-extensions.md).
+Per ulteriori informazioni, vedere [Proprietà](../../extensions/property-cpp-component-extensions.md) ed [evento](../../extensions/event-cpp-component-extensions.md).
 
-L'esempio seguente genera l'errore C3908:
+L'esempio seguente genera l'C3908:
 
-```
+```cpp
 // C3908.cpp
 // compile with: /clr
 ref class X {

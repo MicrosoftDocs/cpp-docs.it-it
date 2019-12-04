@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3032
 ms.assetid: 6a92bd8e-319f-4a99-aef4-a9021f6f9928
-ms.openlocfilehash: 8e103d36bf3e49cfbb0a3724c044794601aabcee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9ea9d1baa0bab1141b1a0f3882df78f32208d0b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256841"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748307"
 ---
 # <a name="compiler-error-c3032"></a>Errore del compilatore C3032
 
@@ -21,7 +21,7 @@ I tipi passati a determinate clausole devono essere completamente visibili al co
 
 L'esempio seguente genera l'errore C3032:
 
-```
+```cpp
 // C3032.cpp
 // compile with: /openmp /link vcomps.lib
 #include "omp.h"

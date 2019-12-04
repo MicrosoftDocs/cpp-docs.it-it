@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2943
 ms.assetid: ede6565e-d892-44c0-8eee-c69545f3be2e
-ms.openlocfilehash: 53340611ef92aac7c9bed30f364fed424fdfe140
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac704c06ac0e455cccdb2b035d0947ae9ec04bd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366277"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755395"
 ---
 # <a name="compiler-error-c2943"></a>Errore del compilatore C2943
 
@@ -21,7 +21,7 @@ Non è possibile usare una classe generica o una classe modello al posto di un s
 
 L'esempio seguente genera l'errore C2943:
 
-```
+```cpp
 // C2943.cpp
 // compile with: /c
 template<class T>

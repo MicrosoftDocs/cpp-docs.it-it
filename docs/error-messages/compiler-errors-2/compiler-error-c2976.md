@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2976
 ms.assetid: d9bf9836-325e-4f72-a7e3-a67cf19d32e7
-ms.openlocfilehash: 02771d7419c58ee4f0b6d7db46ba91fde253d9a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76fd2363b6139bc1bc04aa4d4949a12522e31aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395365"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751794"
 ---
 # <a name="compiler-error-c2976"></a>Errore del compilatore C2976
 
-'identifier': argomenti di tipo insufficienti
+' Identifier ': argomenti di tipo insufficienti
 
-Un oggetto generico o modello mancano uno o più argomenti effettivi. Controllare la dichiarazione generica o di modello per trovare il numero corretto di parametri.
+Uno o più argomenti effettivi mancano in un modello o in un modello generico. Controllare la dichiarazione generica o di modello per trovare il numero corretto di parametri.
 
-Questo errore può essere causato dalla mancanza di argomenti di modello nei componenti della libreria Standard C++.
+Questo errore può essere causato dagli argomenti di modello mancanti C++ nei componenti della libreria standard.
 
-L'esempio seguente genera l'errore C2976:
+L'esempio seguente genera l'C2976:
 
-```
+```cpp
 // C2976.cpp
 template <class T>
 struct TC {
@@ -37,7 +37,7 @@ int main() {
 
 C2976 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C2976b.cpp
 // compile with: /clr
 generic <class T>

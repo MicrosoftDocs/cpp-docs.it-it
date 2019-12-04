@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2570
 ms.assetid: d65d0b32-2fac-464a-bcdf-0ebcedf3bf32
-ms.openlocfilehash: 447869b029df41219f71dcc633e9ae8a3934e0ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9f94b1b17aad85aab37659565e6e0827b5a824
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408485"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755512"
 ---
 # <a name="compiler-error-c2570"></a>Errore del compilatore C2570
 
-'identifier': un'unione non può avere classi di base
+' Identifier ': l'Unione non può avere classi base
 
-Un'unione derivata da una classe, struttura o unione. ma questa operazione non è consentita. Dichiarare il tipo derivato come una classe o struttura.
+Un'Unione deriva da una classe, una struttura o un'Unione. Ciò non è consentito. Dichiarare invece il tipo derivato come una classe o una struttura.
 
-L'esempio seguente genera l'errore C2570:
+L'esempio seguente genera l'C2570:
 
-```
+```cpp
 // C2570.cpp
 // compile with: /c
 class base {};

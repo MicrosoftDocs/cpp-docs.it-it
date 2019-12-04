@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3509
 ms.assetid: cc2db39a-2f98-4e40-b803-496e585494e6
-ms.openlocfilehash: e5e3c48581b5225bf1cf6777c9891c458034e11f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d91bbdf67b49e5722491f562b5eced2c5af10837
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187489"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753744"
 ---
 # <a name="compiler-error-c3509"></a>Errore del compilatore C3509
 
-'type': tipo di automazione restituito non valido. Quando un parametro è contrassegnato 'retval', il tipo restituito deve essere 'void', 'HRESULT' o 'SCODE'
+' type ': tipo restituito di automazione non valido. Quando un parametro è contrassegnato come ' retval ', il tipo restituito deve essere ' void ',' HRESULT ' o ' SCODE '
 
-Un metodo in un'interfaccia COM deve restituire void o HRESULT.
+Un metodo in un'interfaccia COM deve restituire void o un valore HRESULT.
 
-L'esempio seguente genera l'errore C3509:
+L'esempio seguente genera l'C3509:
 
-```
+```cpp
 // C3509.cpp
 #define _ATL_DEBUG_QI
 

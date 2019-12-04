@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3274
 ms.assetid: 1f03f18e-b569-48eb-9249-11c70122a305
-ms.openlocfilehash: a44a7d471e7e079ee43afa8bf58fd590be2f4bf8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d28deea0729a091ce0829187323a0d5a2d184944
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382216"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753822"
 ---
 # <a name="compiler-error-c3274"></a>Errore del compilatore C3274
 
@@ -21,7 +21,7 @@ Nel codice è contenuta un'istruzione [__finally](../../cpp/try-finally-statemen
 
 L'esempio seguente genera l'errore C3274:
 
-```
+```cpp
 // C3274.cpp
 // compile with: /clr
 // C3274 expected

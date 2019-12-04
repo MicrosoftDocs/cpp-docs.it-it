@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
-ms.openlocfilehash: c2282196d045ffd88696149f7d22d4ed7f9603ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef6a57b7528a07756a5a9034482bf99ed3f8cc87
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265477"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754862"
 ---
 # <a name="compiler-error-c3853"></a>Errore del compilatore C3853
 
-'=': non è valido inizializzare di nuovo un riferimento o un'assegnazione mediante una riferimento a funzione
+' =': non è consentito reinizializzare un riferimento o un'assegnazione mediante un riferimento a funzione
 
-Impossibile assegnare a un riferimento tramite una funzione perché le funzioni non sono lvalue.
+Non è possibile assegnare a un riferimento tramite una funzione perché le funzioni non sono lvalue.
 
 Gli esempi seguenti generano C3853:
 
-```
+```cpp
 // C3853.cpp
 // compile with: /EHsc
 #include <iostream>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2577
 ms.assetid: fc79ef83-8362-40a2-9257-8037c3195ce4
-ms.openlocfilehash: 4406aa90b26bc517308132ae9cccd003d44a9aad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acb42f9b792b3908a153737bcec93a449b656147
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408459"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755447"
 ---
 # <a name="compiler-error-c2577"></a>Errore del compilatore C2577
 
-'member': finalizzatore/un distruttore non può avere un tipo restituito
+' member ': il distruttore/finalizzatore non può avere un tipo restituito
 
-Un distruttore o un finalizzatore non può restituire un valore di `void` o qualsiasi altro tipo. Rimuovere il `return` istruzione dalla definizione del distruttore.
+Un distruttore o un finalizzatore non può restituire un valore di `void` o di un altro tipo. Rimuovere l'istruzione `return` dalla definizione del distruttore.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2577.
+L'esempio seguente genera l'C2577.
 
-```
+```cpp
 // C2577.cpp
 // compile with: /c
 class A {

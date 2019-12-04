@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3745
 ms.assetid: 1e64aec5-7e53-47e5-bc7d-3905230cfc66
-ms.openlocfilehash: da80a10cbf7246ad0aeaecffe20992d2050abb3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7e6bde7ce07edf7a75f38c37f3e4cbb3c6c3486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208256"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752457"
 ---
 # <a name="compiler-error-c3745"></a>Errore del compilatore C3745
 
-'function': possibile 'generare' un solo evento
+' Function ': solo un evento può essere ' raised '
 
-Solo una funzione definita con il [event](../../cpp/event.md) parola chiave può essere passato per il [Raise](../../cpp/raise.md) (parola chiave).
+Alla parola chiave [__raise](../../cpp/raise.md) può essere passata solo una funzione definita con la parola chiave [__event](../../cpp/event.md) .
 
-L'esempio seguente genera l'errore C3745:
+L'esempio seguente genera l'C3745:
 
-```
+```cpp
 // C3745.cpp
 struct E {
    __event void func();

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3254
 ms.assetid: 93427b10-fa72-4e43-80d1-1a6e122f9f40
-ms.openlocfilehash: 7e051c6c44d3b85f6f3faaf5380ecf54cba5d73c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9ff41fb4f45d9570869ca90e3c6091cc03a58a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173503"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754251"
 ---
 # <a name="compiler-error-c3254"></a>Errore del compilatore C3254
 
-'override esplicito': classe contiene override esplicito 'override', ma non deriva da un'interfaccia che contiene la dichiarazione di funzione
+' Explicit override ': la classe contiene un override esplicito ' override ' ma non deriva da un'interfaccia che contiene la dichiarazione di funzione
 
-Quando si [eseguire l'override esplicito](../../cpp/explicit-overrides-cpp.md) un metodo, la classe che contiene la sostituzione deve derivare, direttamente o indirettamente, dal tipo che contiene la funzione che si esegue l'override.
+Quando si [esegue l'override esplicito](../../cpp/explicit-overrides-cpp.md) di un metodo, la classe che contiene l'override deve derivare, direttamente o indirettamente, dal tipo che contiene la funzione di cui si esegue l'override.
 
-L'esempio seguente genera l'errore C3254:
+L'esempio seguente genera l'C3254:
 
-```
+```cpp
 // C3254.cpp
 __interface I
 {

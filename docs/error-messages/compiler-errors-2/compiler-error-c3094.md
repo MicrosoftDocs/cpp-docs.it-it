@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3094
 ms.assetid: 10da9b7c-e72d-4013-9925-c83e1bb142db
-ms.openlocfilehash: 2147320aeb662c46421f953eeb99c5cab0f5cd5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9d3aaf8911e74734bb6a8ac03dfd6ebe5bc7a8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243232"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751326"
 ---
 # <a name="compiler-error-c3094"></a>Errore del compilatore C3094
 
@@ -23,7 +23,7 @@ Un ambito dell'attributo non è stato specificato correttamente.  Per altre info
 
 L'esempio seguente genera l'errore C3094.
 
-```
+```cpp
 // C3094.cpp
 // compile with: /clr /c
 using namespace System;

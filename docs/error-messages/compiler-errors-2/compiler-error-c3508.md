@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3508
 ms.assetid: 16d08f89-2f32-44eb-9421-68acecddf49b
-ms.openlocfilehash: 1d868a8f7ab8a69054844c5c8e101d661e295a37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1478753f78a54c712e6f18f09b45645dc8f7ed37
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187365"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753770"
 ---
 # <a name="compiler-error-c3508"></a>Errore del compilatore C3508
 
-'type': non è un tipo di automazione valido
+' type ': non è un tipo di automazione valido
 
 È stato specificato un tipo non valido.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3508:
+L'esempio seguente genera l'C3508:
 
-```
+```cpp
 // C3508.cpp
 #define _ATL_DEBUG_QI
 

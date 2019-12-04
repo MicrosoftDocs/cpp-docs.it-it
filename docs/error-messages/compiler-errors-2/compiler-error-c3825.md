@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
-ms.openlocfilehash: ddb665dab303b3133d4018910c2142a20a889bb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98d9dbee8b3d290af0ddd1851380758290a21d4a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390581"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741716"
 ---
 # <a name="compiler-error-c3825"></a>Errore del compilatore C3825
 
-'class': un oggetto gestito o WinRTclass può solo supporto gestito o WinRTevents
+' Class ': un oggetto gestito o WinRTclass può supportare solo Managed o WinRTevents
 
 Solo gli eventi .NET sono supportati nelle classi gestite. Solo gli eventi Windows Runtime sono supportati nelle classi di Windows Runtime. Per correggere l'errore nel codice gestito, cambiare il parametro di tipo di `event_source` e `event_receiver` da `native` a `managed`. In alternativa, rimuovere l'attributo.
 
@@ -23,7 +23,7 @@ Solo gli eventi .NET sono supportati nelle classi gestite. Solo gli eventi Windo
 
 L'esempio seguente genera l'errore C3825 e mostra come risolverlo:
 
-```
+```cpp
 // C3825a.cpp
 // compile with: /clr
 public delegate void del1();

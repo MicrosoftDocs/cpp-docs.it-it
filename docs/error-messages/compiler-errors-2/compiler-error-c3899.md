@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
-ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022bc1a37f7d9cfdb2c206592dd303a9c3c95080
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376029"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749113"
 ---
 # <a name="compiler-error-c3899"></a>Errore del compilatore C3899
 
-'var': utilizzo l-value del membro dati initonly non è consentito direttamente in un'area parallela nella classe 'class'
+' var ': utilizzo l-value del membro dati initonly non consentito direttamente in un'area parallela della classe ' Class '
 
-Un' [initonly (C + c++ /CLI CLI)](../../dotnet/initonly-cpp-cli.md) Impossibile inizializzare il membro dati all'interno di tale parte di un costruttore che si trova in un [parallele](../../parallel/openmp/reference/parallel.md) area.  Questo è perché il compilatore esegue una rilocazione interna di tale codice, tale che, in modo efficace non è più parte del costruttore.
+Un membro dati [initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) non può essere inizializzato all'interno di una parte di un costruttore che si trova in un'area [parallela](../../parallel/openmp/reference/parallel.md) .  Questo è dovuto al fatto che il compilatore esegue una rilocazione interna di tale codice, in modo che non fa più parte del costruttore.
 
-Per risolvere, inizializzare il membro dati initonly nel costruttore, ma all'esterno dell'area parallela.
+Per risolvere il tentativo, inizializzare il membro dati initonly nel costruttore, ma all'esterno dell'area parallela.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3899.
+L'esempio seguente genera l'C3899.
 
-```
+```cpp
 // C3899.cpp
 // compile with: /clr /openmp
 #include <omp.h>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-ms.openlocfilehash: 5977d9bf41d55ef6db8409e0187153fdbf91149e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15fa4a19cdd791ddb3636f30a636cc084bdc4a5f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393597"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745005"
 ---
 # <a name="compiler-error-c2392"></a>Errore del compilatore C2392
 
-'method1': restituiti di covariante non sono supportati in gestiti o WinRTtypes, in caso contrario 'method2' verrebbe eseguito l'override
+' Method1': i tipi restituiti di covariante non sono supportati in Managed o WinRTtypes; in caso contrario, è possibile eseguire l'override di ' Method2'
 
-Tipi restituiti di covariante non sono consentiti per le funzioni membro di Windows Runtime o durante la compilazione con il [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opzione.
+I tipi restituiti covarianti non sono consentiti per Windows Runtime funzioni membro o durante la compilazione con l'opzione [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) .
 
 ## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore C2392 e mostra come risolverlo.
 
-```
+```cpp
 // C2392.cpp
 // compile with: /clr
 public ref struct B {

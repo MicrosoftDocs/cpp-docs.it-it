@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3732
 ms.assetid: 2d55a7e1-9c39-4379-a093-2f7beb27e2ca
-ms.openlocfilehash: c71cca3643f6337060de6e4bb56ac64d8f0d6e4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30ade41ae463923cc5cc9911469e587decacbc64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327990"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752925"
 ---
 # <a name="compiler-error-c3732"></a>Errore del compilatore C3732
 
-'interface': un'interfaccia personalizzata che genera eventi COM non può ereditare da IDispatch
+' Interface ': un'interfaccia personalizzata che genera eventi COM non può ereditare da IDispatch
 
-Un'interfaccia che supporta gli eventi COM non può ereditare da `IDispatch`. Per altre informazioni, vedere [gestione degli eventi in COM](../../cpp/event-handling-in-com.md).
+Un'interfaccia che supporta gli eventi COM non può ereditare da `IDispatch`. Per ulteriori informazioni, vedere [gestione degli eventi in com](../../cpp/event-handling-in-com.md).
 
-L'errore seguente genera l'errore C3732:
+L'errore seguente genera C3732:
 
-```
+```cpp
 // C3732.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

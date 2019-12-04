@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2862
 ms.assetid: c04d8499-b799-48a1-9fb4-7902a0b0ac8e
-ms.openlocfilehash: a3e2dba20c5283d87b6e98c2f8c9aba83c2d3cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd14f310a00202dce73f091dee46a4605858b698
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227689"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755083"
 ---
 # <a name="compiler-error-c2862"></a>Errore del compilatore C2862
 
-'interface': un'interfaccia può avere solo membri pubblici
+' Interface ': un'interfaccia può avere solo membri pubblici
 
-Protetti e i membri privati sono accessibili solo da altre funzioni membro. Tali membri non sono utili in un'interfaccia, poiché potrebbe non fornire implementazioni per i relativi membri.
+È possibile accedere ai membri protetti e privati solo da altre funzioni membro. Tali membri non vengono utilizzati in un'interfaccia, poiché potrebbero non fornire implementazioni per nessuno dei relativi membri.
 
-L'esempio seguente genera C2862:
+Nell'esempio seguente viene generato C2862:
 
-```
+```cpp
 // C2862.cpp
 // compile with: /c
 #include <unknwn.h>

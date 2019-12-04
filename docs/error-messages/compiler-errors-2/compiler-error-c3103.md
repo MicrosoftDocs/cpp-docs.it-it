@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3103
 ms.assetid: 7984bd3e-d51d-43e4-b6f4-08c1e9fb9704
-ms.openlocfilehash: 6a68e39ac92433eadacd666861f9e00431e4a34a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecbbb3f7e9d173957c35e76cbec407aab9ebfafe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404182"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749935"
 ---
 # <a name="compiler-error-c3103"></a>Errore del compilatore C3103
 
-'argument': argomento denominato ripetuto
+' argument ': argomento denominato ripetuto
 
 Un attributo non può ripetere gli argomenti denominati.
 
@@ -23,9 +23,9 @@ Per altre informazioni, vedere [User-Defined Attributes](../../extensions/user-d
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3103.
+L'esempio seguente genera l'C3103.
 
-```
+```cpp
 // C3103.cpp
 // compile with: /clr /c
 using namespace System;

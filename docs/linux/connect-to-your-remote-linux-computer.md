@@ -3,12 +3,12 @@ title: Connettersi al sistema Linux di destinazione in Visual Studio
 description: Come connettersi a un computer Linux remoto o a un sottosistema Windows per Linux dall'interno di un C++ progetto di Visual Studio.
 ms.date: 11/09/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6f7116ab5dc6c77f88d0787beac32d1c1e0a4716
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966579"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755278"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connettersi al sistema Linux di destinazione in Visual Studio
 
@@ -82,7 +82,7 @@ Per configurare la connessione remota:
 
 ## <a name="tcp-port-forwarding"></a>Porting porta TCP
 
-Il supporto Linux di Visual Studio presenta una dipendenza dall'invio della porta TCP. **Rsync** e **gdbserver** saranno interessati se l'invio della porta TCP è disabilitato nel sistema remoto. 
+Il supporto Linux di Visual Studio presenta una dipendenza dall'invio della porta TCP. **Rsync** e **gdbserver** saranno interessati se l'invio della porta TCP è disabilitato nel sistema remoto. Se si è interessati da questa dipendenza, è possibile votare questo ticket di [Suggerimento](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) sulla community degli sviluppatori.
 
 rsync viene usato dai progetti Linux basati su MSBuild e dai progetti CMake per [copiare le intestazioni dal sistema remoto a Windows per l'uso da parte di IntelliSense](configure-a-linux-project.md#remote_intellisense). Quando non è possibile abilitare l'invio della porta TCP, disabilitare il download automatico delle intestazioni remote. Per disabilitarlo, utilizzare **strumenti > opzioni > multipiattaforma > gestione connessione > gestione IntelliSense per le intestazioni remote**. Se nel sistema remoto non è abilitato l'invio della porta TCP, questo errore viene visualizzato quando viene avviato il download delle intestazioni remote per IntelliSense:
 

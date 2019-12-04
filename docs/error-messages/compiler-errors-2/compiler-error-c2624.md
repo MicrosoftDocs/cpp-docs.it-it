@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2624
 ms.assetid: 32f2ec15-a7cd-4049-a64b-131746d3152b
-ms.openlocfilehash: 407629ad2eecd0d3ca6081fefa59ddd60702f913
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c8e33e3760a29e8bff4280cdb4452c15cd32f94
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395482"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754758"
 ---
 # <a name="compiler-error-c2624"></a>Errore del compilatore C2624
 
-le classi locali non possono essere usate per dichiarare le variabili 'extern'
+non è possibile usare le classi locali per dichiarare variabili ' extern '
 
-Una classe locale o una struttura non può essere usato per dichiarare `extern` variabili.
+Non è possibile usare una classe o una struttura locale per dichiarare `extern` variabili.
 
-L'esempio seguente genera l'errore C2624:
+L'esempio seguente genera l'C2624:
 
-```
+```cpp
 // C2624.cpp
 int main() {
    struct C {};

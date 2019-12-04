@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2332
 ms.assetid: fb05cd68-e271-4bea-9fb7-ef4edb0a26ac
-ms.openlocfilehash: c9b8fe3665199e4a502de965fd1e592252e97bf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74b0045b70a68e182025976f84f8a709c3a30064
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300862"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747761"
 ---
 # <a name="compiler-error-c2332"></a>Errore del compilatore C2332
 
-'(typedef)': nome tag mancante
+' typedef ': nome di tag mancante
 
-Il compilatore ha rilevato una definizione di tipo incompleto.
+Il compilatore ha trovato una definizione di tipo incompleta.
 
-L'esempio seguente genera l'errore C2332:
+L'esempio seguente genera l'C2332:
 
-```
+```cpp
 // C2332.cpp
 // compile with: /c
 struct S {

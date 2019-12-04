@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2561
 ms.assetid: 0abe955b-53a6-4a3c-8362-b1a8eb40e8d1
-ms.openlocfilehash: 8350c5baf129b88c178be280d2da7fe856c6cf57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4a14be9cd32c752e2ab889417494e80b935e31b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368422"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755564"
 ---
 # <a name="compiler-error-c2561"></a>Errore del compilatore C2561
 
-'identifier': funzione deve restituire un valore
+' Identifier ': la funzione deve restituire un valore
 
-La funzione è stata dichiarata come restituire un valore, ma la definizione di funzione non contiene un `return` istruzione.
+La funzione è stata dichiarata come la restituzione di un valore, ma la definizione della funzione non contiene un'istruzione `return`.
 
-Questo errore può essere causato da un prototipo di funzione non corretta:
+Questo errore può essere causato da un prototipo di funzione errato:
 
-1. Se la funzione non restituisce un valore, dichiarare la funzione con tipo restituito [void](../../cpp/void-cpp.md).
+1. Se la funzione non restituisce un valore, dichiarare la funzione con il tipo restituito [void](../../cpp/void-cpp.md).
 
-1. Verificare che tutti i rami possibili della funzione restituiscano il valore del tipo dichiarato nel prototipo.
+1. Verificare che tutti i rami possibili della funzione restituiscano un valore del tipo dichiarato nel prototipo.
 
-1. Le funzioni C++ che contiene le routine di assembly inline che archiviano il valore restituito nel `AX` register potrebbe essere necessario un'istruzione return. Copiare il valore in `AX` a una variabile temporanea e restituire tale variabile dalla funzione.
+1. C++le funzioni contenenti routine di assembly inline che archiviano il valore restituito nel registro `AX` possono richiedere un'istruzione return. Copiare il valore di `AX` in una variabile temporanea e restituire la variabile dalla funzione.
 
-L'esempio seguente genera l'errore C2561:
+L'esempio seguente genera l'C2561:
 
-```
+```cpp
 // C2561.cpp
 int Test(int x) {
    if (x) {

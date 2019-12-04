@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2477
 ms.assetid: 60bc324b-6605-4833-8099-a291efc712e7
-ms.openlocfilehash: 73d8daa9576e4edc29958918c107e9edf18cc579
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: aa276ea839f11574609b183d78b46e08581a1b51
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447966"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743653"
 ---
 # <a name="compiler-error-c2477"></a>Errore del compilatore C2477
 
-'member': membro dati statici non possa essere inizializzato tramite classi derivate
+' member ': Impossibile inizializzare il membro dati statici tramite la classe derivata
 
-Un membro dati statici di una classe modello è stato inizializzato in modo non corretto. Si tratta di una modifica importante riguardo le versioni di Microsoft C++ compilatore precedenti a Visual Studio .NET 2003, per essere conforme a ISO C++ standard.
+Un membro dati statici di una classe modello è stato inizializzato in modo errato. Si tratta di una modifica di rilievo con le versioni C++ del compilatore Microsoft precedenti a Visual Studio .NET 2003, in modo da essere conformi allo standard ISO C++ .
 
-L'esempio seguente genera l'errore C2477:
+L'esempio seguente genera l'C2477:
 
-```
+```cpp
 // C2477.cpp
 // compile with: /Za /c
 template <class T>

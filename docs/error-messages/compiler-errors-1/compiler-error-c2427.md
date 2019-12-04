@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2427
 ms.assetid: a7d421af-6180-40b4-b7a6-9f3bc7dfaaf9
-ms.openlocfilehash: b794b90a476f7712c80e7617ec3c0696afb290ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d92f3bce54a4558702d2a6d3870323eb0edd5d4d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402827"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744615"
 ---
 # <a name="compiler-error-c2427"></a>Errore del compilatore C2427
 
-'class': Impossibile definire la classe in questo ambito
+' Class ': Impossibile definire la classe in questo ambito
 
-È stato effettuato un tentativo per definire una classe annidata, ma la classe annidata è un membro di una classe base, non la classe principale che la contiene.
+È stato effettuato un tentativo di definire una classe annidata, ma la classe annidata è un membro di una classe di base, non della classe più contenitore.
 
-L'esempio seguente genera l'errore C2427:
+L'esempio seguente genera l'C2427:
 
-```
+```cpp
 // C2427.cpp
 // compile with: /c
 template <class T>

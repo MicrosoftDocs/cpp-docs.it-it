@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2387
 ms.assetid: 6847b8e1-ffac-458d-ab88-0c92f72f2527
-ms.openlocfilehash: df9e92bfa333be88e860bbdecd5acaa64ec80440
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a884099c7407113d7ef7604f4eec28e0fa86d87e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393675"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745100"
 ---
 # <a name="compiler-error-c2387"></a>Errore del compilatore C2387
 
-'type': classe di base ambigua
+' type ': classe di base ambigua
 
-Il compilatore Impossibile risolvere in modo non ambiguo una chiamata di funzione perché la funzione esiste in più di una classe di base.
+Il compilatore non è riuscito a risolvere in modo non ambiguo una chiamata di funzione perché la funzione esiste in più di una classe di base.
 
-Per risolvere questo errore, rimuovere una delle classi di base di ereditarietà, o qualificare in modo esplicito la chiamata di funzione.
+Per correggere l'errore, rimuovere una delle classi base dall'ereditarietà o qualificare in modo esplicito la chiamata di funzione.
 
-L'esempio seguente genera l'errore C2387:
+L'esempio seguente genera l'C2387:
 
-```
+```cpp
 // C2387.cpp
 namespace N1 {
    struct B {

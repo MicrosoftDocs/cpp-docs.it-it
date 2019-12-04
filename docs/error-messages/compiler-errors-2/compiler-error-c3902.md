@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3902
 ms.assetid: feb3bb29-f836-4d77-ba71-3876f7f4f216
-ms.openlocfilehash: d90bf299c566ce72e3d1cbfeb545def0a43d6cbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd98bc46e28fe54362de442a433736787cd0d07
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375990"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749061"
 ---
 # <a name="compiler-error-c3902"></a>Errore del compilatore C3902
 
-'accessor': tipo dell'ultimo parametro deve essere 'type'
+' accessor ': il tipo dell'ultimo parametro deve essere ' type '
 
 Il tipo dell'ultimo parametro di almeno un metodo set deve corrispondere al tipo della proprietà. Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md).
 
-L'esempio seguente genera l'errore C3902:
+L'esempio seguente genera l'C3902:
 
-```
+```cpp
 // C3902.cpp
 // compile with: /clr /c
 using namespace System;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2386
 ms.assetid: aaaa1284-34a0-4da2-8547-9fcbb559dae0
-ms.openlocfilehash: a75ccd9824106f2b954cd090a0e00ab11786d243
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ac58d63498df32488c1a0743aa6ad9f7b77b7ca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393688"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745109"
 ---
 # <a name="compiler-error-c2386"></a>Errore del compilatore C2386
 
@@ -21,7 +21,7 @@ Si è provato a creare un alias dello spazio dei nomi, ma il nome scelto è già
 
 L'esempio seguente genera l'errore C2386:
 
-```
+```cpp
 // C2386.cpp
 namespace A {
    int k;

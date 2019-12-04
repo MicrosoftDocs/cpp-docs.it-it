@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2431
 ms.assetid: 88a5b648-c89f-47d1-a20e-63231ab4f0f7
-ms.openlocfilehash: 6298748b341d58c5d931566f714530a4858e46ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 135f73490cf23313d4ac4e2a5f568f2b6100422b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165879"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744524"
 ---
 # <a name="compiler-error-c2431"></a>Errore del compilatore C2431
 
-Registro di indice non valido in 'identifier'
+Registro di indice non valido in ' Identifier '
 
-Registro ESP viene ridimensionato o utilizzato come indice e registro base. Di pari livello di codifica per x86 processore non supporta uno.
+Il registro ESP viene ridimensionato o usato sia come indice che come registro di base. La codifica SIB per il processore x86 non consente neanche.
 
-L'esempio seguente genera l'errore C2431:
+L'esempio seguente genera l'C2431:
 
-```
+```cpp
 // C2431.cpp
 // processor: x86
 int main() {

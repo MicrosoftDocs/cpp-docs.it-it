@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3858
 ms.assetid: 46e178d5-a55f-4ac6-a9dc-561fbcba5c1f
-ms.openlocfilehash: b4246ba76b453e8cc841062a4184dc2cb02df479
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7fcc59ed6708cdf9d20db8d24e008f081e3eb6c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265451"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754797"
 ---
 # <a name="compiler-error-c3858"></a>Errore del compilatore C3858
 
-'type': non può essere ridichiarato nell'ambito corrente
+' type ': non può essere ridichiarato nell'ambito corrente
 
 Il tipo non può essere dichiarato due volte nello stesso ambito.
 
-L'esempio seguente genera l'errore C3858:
+L'esempio seguente genera l'C3858:
 
-```
+```cpp
 // C3858.cpp
 // compile with: /LD
 template <class T>

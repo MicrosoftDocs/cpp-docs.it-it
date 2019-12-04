@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2617
 ms.assetid: d6a435d2-7d95-4dbf-ad4a-abe4744f63e8
-ms.openlocfilehash: 21add86e37d32525b69a02e848444919fe2a79f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60dd4e7de083bc4258eb7289d7b1c90d90871655
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208518"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754784"
 ---
 # <a name="compiler-error-c2617"></a>Errore del compilatore C2617
 
-'function': istruzione return non coerente
+' Function ': istruzione return non coerente
 
-La funzione specificata non è un tipo restituito dichiarato e un precedente restituisce l'istruzione non ha fornito un valore.
+La funzione specificata non ha un tipo restituito dichiarato e un'istruzione return precedente non ha fornito un valore.
 
-L'esempio seguente genera l'errore C2617:
+L'esempio seguente genera l'C2617:
 
-```
+```cpp
 // C2617.cpp
 int i;
 func() {   // no return type prototype
@@ -32,7 +32,7 @@ func() {   // no return type prototype
 
 Possibile soluzione:
 
-```
+```cpp
 // C2617b.cpp
 // compile with: /c
 int i;

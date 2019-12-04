@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3018
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
-ms.openlocfilehash: 7a16c81cf2b9c2a815d2e35d10ae82d5a75547b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d61bcb7364e90f5b5137f549989da769223a04f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386720"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742197"
 ---
 # <a name="compiler-error-c3018"></a>Errore del compilatore C3018
 
-'variabile1': 'For' test o l'incremento OpenMP deve utilizzare la variabile dell'indice 'variabile2'
+'variabile1': il test o l'incremento di 'for' OpenMP deve utilizzare la variabile di indice 'variabile2'
 
 Per il test e l'incremento di un ciclo `for` in un'istruzione OpenMP è necessario usare la stessa variabile usata per l'indice.
 
 L'esempio seguente genera l'errore C3018:
 
-```
+```cpp
 // C3018.cpp
 // compile with: /openmp
 int main()

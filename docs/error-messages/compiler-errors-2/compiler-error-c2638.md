@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2638
 ms.assetid: 9d4275e8-406d-455e-afee-3a37799230e0
-ms.openlocfilehash: 0c4c1e73c97f51bb0e52a618829ffb0bed417a45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6053e9bcf49159e8ceefe9264d30319493c4cf1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395430"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748346"
 ---
 # <a name="compiler-error-c2638"></a>Errore del compilatore C2638
 
-'identifier': based non valido di modificatore su un puntatore a membro
+' Identifier ': modificatore __based non valido sul puntatore al membro
 
-Il `__based` modificatore non può essere usato per i puntatori ai membri.
+Impossibile utilizzare il modificatore `__based` per i puntatori ai membri.
 
-L'esempio seguente genera l'errore C2638:
+L'esempio seguente genera l'C2638:
 
-```
+```cpp
 // C2638.cpp
 void *a;
 

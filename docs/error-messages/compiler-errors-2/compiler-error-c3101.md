@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
-ms.openlocfilehash: d39afc548010df95bdf31b2c7708bc4fa0310bcd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dca91b9359417b8c4cce9329e2aa25107016c086
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404195"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750000"
 ---
 # <a name="compiler-error-c3101"></a>Errore del compilatore C3101
 
-espressione non valida per l'attributo denominato argomento 'field'
+espressione non valida per l'argomento dell'attributo denominato ' Field '
 
-Durante l'inizializzazione di un argomento denominato dell'attributo, il valore deve essere una costante in fase di compilazione.
+Quando si Inizializza un argomento di attributo denominato, il valore deve essere una costante in fase di compilazione.
 
-Per altre informazioni sugli attributi, vedere [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Per ulteriori informazioni sugli attributi, vedere [attributi definiti dall'utente](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3101.
+L'esempio seguente genera l'C3101.
 
-```
+```cpp
 // C3101.cpp
 // compile with: /clr /c
 ref class AAttribute : System::Attribute {

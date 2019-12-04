@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: 4d935e140d89cb5c3714450597677a7a02a245e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385485"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749438"
 ---
 # <a name="compiler-error-c3894"></a>Errore del compilatore C3894
 
-'var': utilizzo l-value del membro dati statico initonly è consentita solo nel costruttore della classe 'class'
+' var ': l'utilizzo l-value del membro dati statico initonly è consentito solo nel costruttore della classe ' Class '
 
-Statica [initonly](../../dotnet/initonly-cpp-cli.md) membri dati possono essere utilizzati solo come l-value al momento della dichiarazione o in un costruttore statico.
+I membri dati statici [initonly](../../dotnet/initonly-cpp-cli.md) possono essere usati solo come l-value in corrispondenza del punto di dichiarazione o in un costruttore statico.
 
-Membro dati initonly (non statici) di istanza utilizzabile solo come l-value al momento della dichiarazione, o nei costruttori di istanza (non statico).
+Istanza (non statica) i membri dati initonly possono essere usati solo come l-value in corrispondenza del punto di dichiarazione o nei costruttori di istanza (non statici).
 
-L'esempio seguente genera l'errore C3894:
+L'esempio seguente genera l'C3894:
 
-```
+```cpp
 // C3894.cpp
 // compile with: /clr
 ref struct Y1 {

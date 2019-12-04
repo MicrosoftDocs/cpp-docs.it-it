@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2464
 ms.assetid: ace953d6-b414-49ee-bfef-90578a8da00c
-ms.openlocfilehash: a00ac997f73175eeab08a0132128e48e8fc58feb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4952f4702d871ecf1c818b1fc7394e54a1a295f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338896"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743887"
 ---
 # <a name="compiler-error-c2464"></a>Errore del compilatore C2464
 
-'identifier': Impossibile utilizzare 'new' per allocare un riferimento
+' Identifier ': non è possibile usare ' New ' per allocare un riferimento
 
-Un identificatore di riferimento è stato allocato con il `new` operatore. I riferimenti non sono oggetti di memoria, pertanto `new` non può restituire un puntatore a essi. Usare la sintassi di dichiarazione di variabile standard per dichiarare un riferimento.
+Identificatore di riferimento allocato con l'operatore `new`. I riferimenti non sono oggetti memoria, quindi `new` non possono restituire un puntatore. Usare la sintassi di dichiarazione delle variabili standard per dichiarare un riferimento.
 
-L'esempio seguente genera l'errore C2464:
+L'esempio seguente genera l'C2464:
 
-```
+```cpp
 // C2464.cpp
 int main() {
    new ( int& ir );   // C2464

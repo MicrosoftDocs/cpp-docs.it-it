@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2107
 ms.assetid: 2866a121-884e-4bb5-8613-36de5817000e
-ms.openlocfilehash: 2b388495c6ce31452bd3f8e8bfc6c26a6bfbdbe8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e492f58717a8356da54f7f26bd0d5db905f858a0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364792"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745876"
 ---
 # <a name="compiler-error-c2107"></a>Errore del compilatore C2107
 
-indice non valido. riferimento indiretto non consentito
+Indice non valido, riferimento indiretto non consentito
 
-Un indice viene applicato a un'espressione che restituisce un puntatore.
+Un indice viene applicato a un'espressione che non restituisce un puntatore.
 
 ## <a name="example"></a>Esempio
 
-C2107 può verificarsi se si usa in modo errato il `this` puntatore di un tipo di valore per accedere all'indicizzatore del tipo predefinito. Per altre informazioni, vedere [semantica di questo puntatore](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
+C2107 può verificarsi se si usa erroneamente il puntatore `this` di un tipo di valore per accedere all'indicizzatore predefinito del tipo. Per ulteriori informazioni, vedere [semantica del puntatore this](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
 
-L'esempio seguente genera l'errore C2107.
+L'esempio seguente genera l'C2107.
 
-```
+```cpp
 // C2107.cpp
 // compile with: /clr
 using namespace System;

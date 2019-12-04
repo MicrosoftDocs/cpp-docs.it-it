@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2582
 ms.assetid: ee1b9378-8bcd-4792-b87e-6d7a466d29ed
-ms.openlocfilehash: 2becaf3cf955a9ed8dbbc22cbf11728bcc5bec34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102682e64602d06b2ee5449ac5b71852cfa33af3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366732"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748671"
 ---
 # <a name="compiler-error-c2582"></a>Errore del compilatore C2582
 
-la funzione 'function' non è disponibile in 'type'
+funzione ' Function ' non disponibile in ' type '
 
-È stato effettuato il tentativo di assegnare a un oggetto che non dispone di un operatore di assegnazione.
+È stato effettuato un tentativo di assegnare a un oggetto che non ha un operatore di assegnazione.
 
-L'esempio seguente genera l'errore C2582:
+L'esempio seguente genera l'C2582:
 
-```
+```cpp
 // C2582.cpp
 // compile with: /clr
 using namespace System;
