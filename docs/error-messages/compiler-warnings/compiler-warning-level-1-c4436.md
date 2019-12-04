@@ -1,13 +1,17 @@
 ---
 title: Avviso del compilatore (livello 1) C4436
 ms.date: 11/04/2016
+f1_keywords:
+- C4436
+helpviewer_keywords:
+- C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 487fb8c804ac34ba52661774c2552199c764f6b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 762a458072a0a1104cd1af55ef1f61772485b6c9
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408186"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810619"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Avviso del compilatore (livello 1) C4436
 

@@ -1,15 +1,17 @@
 ---
 title: Avviso del compilatore (livello 4) C4985
 ms.date: 11/04/2016
+f1_keywords:
+- C4985
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-ms.openlocfilehash: 73abb166910cc421f042d22d67efc122e416bceb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75feda6fb2c88b663aa6ade0efdfffc7def1568f
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280191"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810728"
 ---
 # <a name="compiler-warning-level-4-c4985"></a>Avviso del compilatore (livello 4) C4985
 

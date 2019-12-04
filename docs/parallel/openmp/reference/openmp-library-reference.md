@@ -1,13 +1,13 @@
 ---
 title: Riferimento alla libreria OpenMP
-ms.date: 07/30/2019
+ms.date: 12/02/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: c63ae5ba7f04d8ee6bd02418792804373fa71e6b
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: b61eb356b782b3cd17557827734a706e0761a2a8
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72348216"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810747"
 ---
 # <a name="openmp-library-reference"></a>Riferimento alla libreria OpenMP
 
@@ -15,7 +15,7 @@ Fornisce collegamenti a costrutti utilizzati nell'API OpenMP.
 
 L'implementazione C++ visiva dello standard OpenMP include i costrutti seguenti.
 
-|Costrutto|Descrizione|
+|Costruzione|Descrizione|
 |---------------|-----------------|
 |[Direttive](openmp-directives.md)|Fornisce collegamenti alle direttive utilizzate nell'API OpenMP.|
 |[Clausole](openmp-clauses.md)|Fornisce collegamenti a clausole utilizzate nell'API OpenMP.|
@@ -26,10 +26,10 @@ Le funzioni C++ della libreria di runtime di Visual OpenMP sono contenute nelle 
 
 |Libreria di runtime OpenMP|Caratteristiche|
 |------------------------------|---------------------|
-|VCOMP. LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMP. LIB).|
-|VCOMPD. LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMPD. COPERCHIO) (debug)|
+|VCOMP.LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMP140. DLL).|
+|VCOMPD.LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMP140D. DLL) (debug)|
 
-Se _ debug è definito in una compilazione e se `#include <omp.h>` si trova nel codice sorgente, VCOMPD. LIB sarà la lib predefinita, in caso contrario, VCOMP. Verrà utilizzato LIB.
+Se _DEBUG viene definito in una compilazione e se `#include <omp.h>` si trova nel codice sorgente, VCOMPD. LIB sarà la lib predefinita, in caso contrario, VCOMP. Verrà utilizzato LIB.
 
 È possibile utilizzare [/NODEFAULTLIB (Ignora librerie)](../../../build/reference/nodefaultlib-ignore-libraries.md) per rimuovere la lib predefinita e collegarsi in modo esplicito al lib scelto.
 

@@ -1,25 +1,25 @@
 ---
 title: Componente aggiuntivo DLL MBCS MFC
-ms.date: 05/08/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - MBCS
 - MFC
-ms.openlocfilehash: 20145b200a0f8bac8ccb461331d4d233a3b0251e
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: fe74e0639664b6a6a86a4c3269f174de441002f4
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524824"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810364"
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>Componente aggiuntivo DLL MBCS MFC
 
-Supporto di MFC e dalle librerie di set (MBCS) carattere multibyte prevede un passaggio aggiuntivo durante l'installazione di Visual Studio in Visual Studio 2013 e versioni successive.
+Il supporto per MFC e le relative librerie di Multibyte Character Set (MBCS) richiede un passaggio aggiuntivo durante l'installazione di Visual Studio in Visual Studio 2013 e versioni successive.
 
-**Visual Studio 2013**: Per impostazione predefinita, le librerie MFC installate in Visual Studio 2013 supportano solo lo sviluppo di Unicode. Le DLL MBCS è necessario per compilare un progetto MFC in Visual Studio 2013 con il **del Set di caratteri** impostata su **utilizza Set caratteri multibyte** o **Nenastaveno**. Scaricare la DLL in [libreria MFC Multibyte per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770).
+**Visual Studio 2013**: per impostazione predefinita, le librerie MFC installate in Visual Studio 2013 supportano solo lo sviluppo Unicode. Sono necessarie le DLL MBCS per compilare un progetto MFC in Visual Studio 2013 con la proprietà set di **caratteri** impostata su **utilizza set di caratteri multibyte** o **non impostato**. Scaricare la DLL nella [libreria MFC multibyte per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770).
 
-**Visual Studio 2015**: Unicode e MBCS MFC (DLL) sono inclusi nei componenti di installazione di Visual C++, ma il supporto per MFC non è installato per impostazione predefinita. Visual C++ e MFC sono configurazioni di installazione facoltative nel programma di installazione di Visual Studio. Per assicurarsi che MFC venga installato, scegliere **Personalizzato** nel programma di installazione in **Linguaggi di programmazione**, assicurarsi che **Visual C++** e **Microsoft Foundation Classes per C++** siano selezionati. Se Visual Studio è già installato, verrà richiesto di installare Visual C++ e/o MFC quando si prova a creare un progetto MFC.
+**Visual Studio 2015**: le DLL MFC Unicode e MBCS sono incluse nei componenti di C++ installazione visivi, ma il supporto per MFC non è installato per impostazione predefinita. Visual C++ e MFC sono configurazioni di installazione facoltative nel programma di installazione di Visual Studio. Per assicurarsi che MFC venga installato, scegliere **Personalizzato** nel programma di installazione in **Linguaggi di programmazione**, assicurarsi che **Visual C++** e **Microsoft Foundation Classes per C++** siano selezionati. Se Visual Studio è già installato, verrà richiesto di installare Visual C++ e/o MFC quando si prova a creare un progetto MFC.
 
-**Visual Studio 2017 e versioni successive**: Unicode e le DLL MBCS MFC vengono installate con il **sviluppo di applicazioni Desktop con C++** carico di lavoro quando si seleziona **ATL e MFC supportano** dal **componenti facoltativi** riquadro. Se l'installazione non include questi componenti, passare al **File | I nuovi progetti** finestra di dialogo e fare clic sui **aperto Visual Studio Installer** collegamento.
+**Visual Studio 2017 e versioni successive**: le DLL MFC Unicode e MBCS vengono installate con il carico di lavoro **sviluppo C++**  di applicazioni desktop quando si seleziona il **supporto MFC e ATL** dal riquadro **componenti facoltativi** del programma programma di installazione di Visual Studio. Se l'installazione non include questi componenti, passare al **file |** Finestra di dialogo nuovo progetto e fare clic sul collegamento **Apri programma di installazione di Visual Studio** . Per altre informazioni, vedere [installare Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="see-also"></a>Vedere anche
 
