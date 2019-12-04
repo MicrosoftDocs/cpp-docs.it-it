@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300739"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742873"
 ---
 # <a name="compiler-error-c2955"></a>Errore del compilatore C2955
 
@@ -19,11 +19,11 @@ ms.locfileid: "62300739"
 
 Non è possibile usare un modello di classe o una classe generica come identificatore senza un elenco di argomenti di modello o generici.
 
-Per altre informazioni, vedere [modelli di classe](../../cpp/class-templates.md).
+Per ulteriori informazioni, vedere [modelli di classe](../../cpp/class-templates.md).
 
 L'esempio seguente genera l'errore C2955 e mostra come risolverlo:
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -35,7 +35,7 @@ X<int> x2;   // OK - this is how to fix it.
 
 L'errore C2955 può verificarsi anche quando si tenta una definizione non inline per una funzione dichiarata in un modello di classe:
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -54,7 +54,7 @@ void CT<T>::CTFunc2() {}
 
 C2955 può verificarsi anche quando si usano i generics:
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-**Visual Studio 2017 e versioni successiva:** Il compilatore esegue correttamente la diagnostica elenchi di argomenti di modello mancanti quando il modello viene visualizzato in un elenco di parametri di modello (ad esempio come parte di un argomento di modello predefinito o un parametro di modello non di tipo). Il codice seguente viene compilato in Visual Studio 2015 ma genera un errore in Visual Studio 2017.
+**Visual Studio 2017 e versioni successive:** Il compilatore diagnostica correttamente gli elenchi di argomenti di modello mancanti quando il modello viene visualizzato in un elenco di parametri di modello, ad esempio come parte di un argomento di modello predefinito o di un parametro di modello non di tipo. Il codice seguente viene compilato in Visual Studio 2015 ma genera un errore in Visual Studio 2017.
 
 ```
 template <class T> class ListNode;

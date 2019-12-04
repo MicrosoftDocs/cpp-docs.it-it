@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2503
 ms.assetid: da86cc89-fd04-400b-aa8d-a5ffaf7e3918
-ms.openlocfilehash: c481a27f19a92f47a19f0cfaa7b59cd509bb3c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cfe574f79eae2e45dc62315245a1b8b773d04df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164943"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746903"
 ---
 # <a name="compiler-error-c2503"></a>Errore del compilatore C2503
 
-'class': le classi di base non possono contenere matrici con dimensione zero
+' Class ': le classi base non possono contenere matrici di dimensioni zero
 
-Una classe di base o una struttura contiene una matrice di dimensioni zero. Matrice in una classe deve avere almeno un elemento.
+Una classe o una struttura di base contiene una matrice di dimensioni zero. Una matrice in una classe deve contenere almeno un elemento.
 
-L'esempio seguente genera l'errore C2503:
+L'esempio seguente genera l'C2503:
 
-```
+```cpp
 // C2503.cpp
 // compile with: /c
 class A {

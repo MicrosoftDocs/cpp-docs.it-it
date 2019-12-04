@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
-ms.openlocfilehash: a5753fc99efcdb1064a21981c62faaba84d44189
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152546fce8f3ee63f8b95595bff052f18cd4ebda
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165586"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746968"
 ---
 # <a name="compiler-error-c2500"></a>Errore del compilatore C2500
 
-'identifier1': 'identifier2' è già una classe base diretta
+' identificatore1':' identifier2' è già una classe di base diretta
 
-Una classe o struttura viene visualizzata più volte in un elenco di classi di base.
+Una classe o una struttura viene visualizzata più di una volta in un elenco di classi di base.
 
-Una classe base diretta è quello indicato nell'elenco di base. Base indiretta è una classe di base di una delle classi nell'elenco di base.
+Una base diretta è indicata nell'elenco di base. Una base indiretta è una classe di base di una delle classi nell'elenco di base.
 
-Una classe non può essere specificata più volte come una classe base diretta. Una classe utilizzabile come una classe base indiretta più volte.
+Non è possibile specificare una classe come classe di base diretta più di una volta. Una classe può essere utilizzata come classe base indiretta più volte.
 
-L'esempio seguente genera l'errore C2500:
+L'esempio seguente genera l'C2500:
 
-```
+```cpp
 // C2500.cpp
 // compile with: /c
 class A {};

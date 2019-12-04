@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3272
 ms.assetid: 7cdf254d-f207-4116-a1bf-7386f3b82a6f
-ms.openlocfilehash: 3e4348dcce0cfd04234b515877d788e5330f8e4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14eefa303a8148b79ca7bc0d1777688ffce176f1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365689"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753848"
 ---
 # <a name="compiler-error-c3272"></a>Errore del compilatore C3272
 
@@ -21,7 +21,7 @@ Quando `StructLayout(LayoutKind::Explicit)` è applicato, i campi devono essere 
 
 L'esempio seguente genera l'errore C3272:
 
-```
+```cpp
 // C3272_2.cpp
 // compile with: /clr /c
 using namespace System;

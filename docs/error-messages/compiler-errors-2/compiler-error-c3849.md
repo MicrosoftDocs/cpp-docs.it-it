@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8492f108b57fbc63bd171276b1aa601f96a28b24
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381059"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754888"
 ---
 # <a name="compiler-error-c3849"></a>Errore del compilatore C3849
 
-chiamata di funzione di tipo in un'espressione di tipo 'type' perderebbe qualificatori const e/o volatili per tutti i numeri overload di operatore disponibili
+la chiamata di tipo funzione su un'espressione di tipo ' type ' comporta la perdita di qualificatori const e/o volatili per tutti gli overload di operatori disponibili per tutti i numeri
 
-Una variabile con un tipo const volatile specificato può chiamare solo funzioni membro definite con qualificazione const-volatile uguale o superiore.
+Una variabile con un tipo const-volatile specificato può chiamare solo funzioni membro definite con le stesse o più qualifiche const-volatile.
 
-Per correggere questo errore, fornire una funzione membro appropriato. Quando la conversione causi una perdita di qualificazione non è possibile eseguire una conversione in un oggetto const o volatile completo. È possibile ottenere qualificatori ma non perderli della conversione.
+Per correggere l'errore, specificare una funzione membro appropriata. Non è possibile eseguire una conversione su un oggetto const o volatile qualificato quando la conversione causa una perdita di qualificazione. È possibile ottenere i qualificatori, ma non è possibile perdere i qualificatori in una conversione.
 
 Gli esempi seguenti generano C3849:
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

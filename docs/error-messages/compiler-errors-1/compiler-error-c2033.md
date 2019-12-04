@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2033
 ms.assetid: fd5a1637-9db2-4c98-a7cc-b63b39737cd9
-ms.openlocfilehash: 8147c707c70e6c3f21ed81b2acf0a59b72065408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fec222117f28e885d6187e6733559433f4943d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400487"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750962"
 ---
 # <a name="compiler-error-c2033"></a>Errore del compilatore C2033
 
@@ -21,7 +21,7 @@ Il campo di bit è stato dichiarato come puntatore, ma non è consentito.
 
 L'esempio seguente genera l'errore C2033:
 
-```
+```cpp
 // C2033.cpp
 struct S {
    int *b : 1;  // C2033
@@ -30,7 +30,7 @@ struct S {
 
 Possibile soluzione:
 
-```
+```cpp
 // C2033b.cpp
 // compile with: /c
 struct S {

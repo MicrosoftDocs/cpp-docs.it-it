@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2118
 ms.assetid: bf4315d0-f085-4323-b813-96ee61a13bde
-ms.openlocfilehash: 71b8273aaee52420f8a9c9c2dd2d015bea72ddf6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 944109ba3531f2e3fca50300f26000fdaf850d19
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338909"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755200"
 ---
 # <a name="compiler-error-c2118"></a>Errore del compilatore C2118
 
 indice negativo
 
-Il valore che definisce la dimensione della matrice è minore di zero o maggiore della dimensione massima della matrice.
+Il valore che definisce la dimensione della matrice è maggiore della dimensione massima della matrice o minore di zero.
 
-L'esempio seguente genera l'errore C2118:
+L'esempio seguente genera l'C2118:
 
-```
+```cpp
 // C2118.cpp
 int main() {
    int array1[-1];   // C2118

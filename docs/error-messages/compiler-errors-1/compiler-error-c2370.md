@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2370
 ms.assetid: 03403e8f-f393-47c4-bd25-5c1c7ea7d5cd
-ms.openlocfilehash: 28c337a5cadfaeced39ee6ed73601338941029fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab7b19799925f9aa02f67ffdbec181628391e495
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188039"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745655"
 ---
 # <a name="compiler-error-c2370"></a>Errore del compilatore C2370
 
@@ -23,7 +23,7 @@ L'identificatore è già dichiarato con una classe di archiviazione diversa.
 
 L'esempio seguente genera l'errore C2370:
 
-```
+```cpp
 // C2370.cpp
 // compile with: /Za /c
 extern int i;
@@ -35,7 +35,7 @@ int i;   // OK
 
 L'esempio seguente genera l'errore C2370:
 
-```
+```cpp
 // C2370b.cpp
 #define Thread __declspec( thread )
 extern int tls_i;

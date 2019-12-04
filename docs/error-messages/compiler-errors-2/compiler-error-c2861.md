@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2861
 ms.assetid: 012bb44d-6c9b-4def-b54e-b19f1f8ddd1b
-ms.openlocfilehash: bb61272b5a8d94a26096bd05260de331e853bf0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d6cab186d4acf229a32620f33c9c86e807459dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329076"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751989"
 ---
 # <a name="compiler-error-c2861"></a>Errore del compilatore C2861
 
-'nome della funzione': non è possibile definire una funzione membro di interfaccia
+' function name ': Impossibile definire una funzione membro di interfaccia
 
-Il compilatore ha rilevato la parola chiave interfaccia o dedotto uno struct come un'interfaccia, ma allora trovato un membro definizione di funzione.  Un'interfaccia non può contenere una definizione per una funzione membro.
+Il compilatore ha rilevato la parola chiave Interface o ha dedotto uno struct come interfaccia ma ha quindi trovato una definizione di funzione membro.  Un'interfaccia non può contenere una definizione per una funzione membro.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2861:
+L'esempio seguente genera l'C2861:
 
-```
+```cpp
 // C2861.cpp
 // compile with: /c
 #include <objbase.h>   // required for IUnknown definition

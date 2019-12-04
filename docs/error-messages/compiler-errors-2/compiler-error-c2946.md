@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2946
 ms.assetid: c86dfbfc-7702-4f09-8a53-d205710e99c2
-ms.openlocfilehash: 0f61d047fcd070f3deea662cd3bd193f8e133659
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0ea10b3614e20e7f47c8f6632843544b4842751
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187620"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755369"
 ---
 # <a name="compiler-error-c2946"></a>Errore del compilatore C2946
 
@@ -23,7 +23,7 @@ Non è possibile creare un'istanza esplicita di una classe non basata su modello
 
 L'esempio seguente genera l'errore C2946.
 
-```
+```cpp
 // C2946.cpp
 class C {};
 template C;  // C2946

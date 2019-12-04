@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2979
 ms.assetid: 98bd9043-ec44-451e-a482-3a8e35fc7464
-ms.openlocfilehash: e9b0af0d17ef57f19e051165b16632e3180159cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71953b360739765810fa047d65be9828d7d483da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395313"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751553"
 ---
 # <a name="compiler-error-c2979"></a>Errore del compilatore C2979
 
 le specializzazioni esplicite non sono supportate in generics
 
-Una classe generica è stata dichiarata in modo non corretto.  Visualizzare [Generics](../../extensions/generics-cpp-component-extensions.md) per altre informazioni.
+Una classe generica è stata dichiarata in modo non corretto.  Per ulteriori informazioni, vedere [generics](../../extensions/generics-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore C2979.
 
-```
+```cpp
 // C2979.cpp
 // compile with: /clr /c
 generic <>

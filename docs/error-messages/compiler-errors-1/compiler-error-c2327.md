@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300849"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747774"
 ---
 # <a name="compiler-error-c2327"></a>Errore del compilatore C2327
 
-'symbol': non è un nome di tipo, statica o enumeratore
+' symbol ': non è un nome di tipo, statico o enumeratore
 
-Codice all'interno di una classe annidata tenta di accedere a un membro della classe contenitore che non è un nome di tipo, un membro statico o un enumeratore.
+Il codice all'interno di una classe annidata tenta di accedere a un membro della classe che lo contiene, che non è un nome di tipo, un membro statico o un enumeratore.
 
-Durante la compilazione con **/clr**, una causa comune degli C2327 è una proprietà con lo stesso nome del tipo di proprietà.
+Quando si esegue la compilazione con **/CLR**, una delle cause comuni di l'errore C2327 è una proprietà con lo stesso nome del tipo di proprietà.
 
-L'esempio seguente genera l'errore C2327:
+L'esempio seguente genera l'l'errore C2327:
 
-```
+```cpp
 // C2327.cpp
 int x;
 class enclose {
@@ -40,9 +40,9 @@ public:
 };
 ```
 
-C2327 può verificarsi anche se il nome di un tipo è nascosto dal nome del membro:
+L'errore C2327 può anche verificarsi se il nome di un tipo è nascosto dal nome di un membro:
 
-```
+```cpp
 // C2327b.cpp
 class X {};
 
@@ -54,9 +54,9 @@ class S {
 };
 ```
 
-C2327 può essere attivato anche in questo caso, in cui è necessario per specificare completamente il tipo di dati del parametro:
+In questa situazione è inoltre possibile attivare l'errore C2327, in cui è necessario specificare completamente il tipo di dati del parametro:
 
-```
+```cpp
 // C2327c.cpp
 // compile with: /c
 struct A {};
@@ -69,9 +69,9 @@ struct B {
 };
 ```
 
-L'esempio seguente genera l'errore C2327:
+L'esempio seguente genera l'l'errore C2327:
 
-```
+```cpp
 // C2327d.cpp
 // compile with: /clr /c
 using namespace System;
@@ -103,9 +103,9 @@ namespace NA {
 }
 ```
 
-L'esempio seguente mostra C2327 quando una proprietà ha lo stesso nome del tipo di proprietà:
+L'esempio seguente mostra l'errore C2327 quando una proprietà ha lo stesso nome del tipo di proprietà:
 
-```
+```cpp
 // C2327f.cpp
 // compile with: /clr /c
 public value class Address {};

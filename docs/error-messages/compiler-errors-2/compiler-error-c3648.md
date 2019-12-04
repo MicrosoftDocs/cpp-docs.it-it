@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3648
 ms.assetid: 5d042989-41cb-4cd0-aa50-976b70146aaf
-ms.openlocfilehash: 7394f6b9789caa09ffc2ad6c2cf56f037b5d57b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b26be9890bbbdf6276c61023e6867160528e236
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385576"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751833"
 ---
 # <a name="compiler-error-c3648"></a>Errore del compilatore C3648
 
-Questa sintassi di override esplicita richiede /CLR: oldSyntax
+Questa sintassi di override esplicita richiede/CLR: oldSyntax
 
-Durante la compilazione per la versione più recente sintassi gestita, il compilatore ha trovato esplicito eseguire l'override della sintassi per le versioni precedenti che non è più supportata.
+Quando si esegue la compilazione per la sintassi gestita più recente, il compilatore ha trovato la sintassi di override esplicita per le versioni precedenti che non sono più supportate.
 
-Per altre informazioni, vedere [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Per ulteriori informazioni, vedere [override espliciti](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3648:
+L'esempio seguente genera l'C3648:
 
-```
+```cpp
 // C3648.cpp
 // compile with: /clr
 public interface struct I {

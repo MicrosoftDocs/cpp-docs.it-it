@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3830
 ms.assetid: c9798f88-5001-4067-9fb1-09957ddc6fa8
-ms.openlocfilehash: 25f2b86e21d4672c9e0907c366da17072bafa183
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14272d2c0b0f8de63f55d2ba3d1c01cf04e0dfbd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390542"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741638"
 ---
 # <a name="compiler-error-c3830"></a>Errore del compilatore C3830
 
-'type1': non può ereditare da 'type2'. valore tipi possono ereditare solo da classi di interfaccia
+' tipo1': Impossibile ereditare da' tipo2'. i tipi di valore possono ereditare solo da classi di interfaccia
 
-Un tipo di valore non può ereditare una classe di base.  Per altre informazioni, vedere [classi e struct](../../extensions/classes-and-structs-cpp-component-extensions.md).
+Un tipo di valore non può ereditare una classe base.  Per altre informazioni, vedere [Classes and Structs](../../extensions/classes-and-structs-cpp-component-extensions.md) (Classi e struct).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3830:
+L'esempio seguente genera l'C3830:
 
-```
+```cpp
 // C3830a.cpp
 // compile with: /clr /c
 public value struct MyStruct4 {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2430
 ms.assetid: 07c20f76-63e1-4d22-b2a9-98b0d45c5cac
-ms.openlocfilehash: 754758e652539e4f2d9b12e568b8ef5ccf41d8db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f82eb4914ec36aa513822964f551a05fbb77aa97
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165697"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744576"
 ---
 # <a name="compiler-error-c2430"></a>Errore del compilatore C2430
 
-registrare più di un indice in 'identifier'
+più di un registro di indice in ' Identifier '
 
-Più di un registro viene ridimensionato. Il compilatore supporta l'indicizzazione in scala, ma è possibile ridimensionare soltanto un registratore di cassa.
+Viene ridimensionato più di un registro. Il compilatore supporta l'indicizzazione ridimensionata, ma è possibile ridimensionare un solo registro.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2430.
+L'esempio seguente genera l'c2430.
 
-```
+```cpp
 // C2430.cpp
 // processor: x86
 int main() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3803
 ms.assetid: bad5fb9a-ed9a-4c15-96e7-cf06e200a50d
-ms.openlocfilehash: f6c255ec18d6dcf94f3ec022f09b173c2c66a1dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771530c2d05d378b86732938aa7a2b7881608446
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400097"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755304"
 ---
 # <a name="compiler-error-c3803"></a>Errore del compilatore C3803
 
-'property': proprietà ha un tipo che non è compatibile con una delle relative funzioni di accesso 'della funzione di accesso'
+' Property ': la proprietà ha un tipo incompatibile con una delle relative funzioni di accesso ' funzione di accesso '
 
-Il tipo di una proprietà definita con [proprietà](../../cpp/property-cpp.md) non corrisponde al tipo restituito per una delle funzioni di accesso.
+Il tipo di una proprietà definita con la [Proprietà](../../cpp/property-cpp.md) non corrisponde al tipo restituito per una delle funzioni di accesso.
 
-L'esempio seguente genera l'errore C3803:
+L'esempio seguente genera l'C3803:
 
-```
+```cpp
 // C3803.cpp
 struct A
 {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3740
 ms.assetid: edb17a90-2307-4df6-943d-580460d26d2b
-ms.openlocfilehash: dd493e4759b2fb70918bf94f14f4ada022e326b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e32c37853f4c877e6260e38daa0c8357ca54a25
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227001"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752665"
 ---
 # <a name="compiler-error-c3740"></a>Errore del compilatore C3740
 
-i modelli non è possibile generare o ricevere eventi
+i modelli non possono eseguire origini o ricevere eventi
 
-Una classe basata su modelli o uno struct non può contenere [eventi](../../cpp/event-handling.md).
+Una classe o uno struct basato su modelli non può contenere [eventi](../../cpp/event-handling.md).
 
-L'esempio seguente genera l'errore C3740:
+L'esempio seguente genera l'C3740:
 
-```
+```cpp
 // C3740.cpp
 template <typename T>   // Delete the template specification
 struct E {

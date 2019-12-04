@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2017
 ms.assetid: 1083eed9-9906-4a97-883c-54e52d7e82cd
-ms.openlocfilehash: f4a17557e5e4ca1eb3f69561c964c9bbe24bb70d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3911ef9af2eb0fab7d0f9296ddce8a0f9b32ae0d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303783"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751053"
 ---
 # <a name="compiler-error-c2017"></a>Errore del compilatore C2017
 
 sequenza di escape non valida
 
-Una sequenza di escape, ad esempio \t, viene visualizzato di fuori di un carattere o una stringa costante.
+Una sequenza di escape, ad esempio \t, viene visualizzata all'esterno di un carattere o di una costante di stringa.
 
-L'esempio seguente genera l'errore C2017:
+L'esempio seguente genera l'C2017:
 
-```
+```cpp
 // C2017.cpp
 int main() {
    char test1='a'\n;   // C2017
@@ -29,11 +29,11 @@ int main() {
 }
 ```
 
-C2017 può verificarsi quando l'operatore stringize viene utilizzato con stringhe contenenti sequenze di escape.
+C2017 può verificarsi quando l'operatore stringize viene usato con stringhe che includono sequenze di escape.
 
-L'esempio seguente genera l'errore C2017:
+L'esempio seguente genera l'C2017:
 
-```
+```cpp
 // C2017b.cpp
 #define TestDfn(x) AfxMessageBox(#x)
 TestDfn(CString("\\") + CString(".h\"\n\n"));   // C2017

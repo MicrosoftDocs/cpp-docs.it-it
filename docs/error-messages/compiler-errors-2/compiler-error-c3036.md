@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3036
 ms.assetid: 10c6993e-bc42-4a07-85c7-cdc34ac30906
-ms.openlocfilehash: c1dc060a5d198b78e652a1b6b239655439209f66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: daf3730f6ad294dcdb3d1d944c320862d5fb80da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350218"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755005"
 ---
 # <a name="compiler-error-c3036"></a>Errore del compilatore C3036
 
@@ -21,7 +21,7 @@ Una clausola [reduction](../../parallel/openmp/reference/reduction.md) non è st
 
 L'esempio seguente genera l'errore C3036:
 
-```
+```cpp
 // C3036.cpp
 // compile with: /openmp
 static float a[1000], b[1000], c[1000];

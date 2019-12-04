@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2694
 ms.assetid: 8dc2cec2-67ae-4e16-8c0c-374425aca8bc
-ms.openlocfilehash: 4897512f6bd27465b7281d7a27757918128202d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca378c3e0ce88b454cb89fc08470a277a7be6f47
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367746"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755226"
 ---
 # <a name="compiler-error-c2694"></a>Errore del compilatore C2694
 
-'override': funzione virtual in override ha eccezioni meno restrittive rispetto a classe base virtuale membro funzione 'base'
+' override ': la funzione virtuale che esegue l'override presenta una specifica di eccezione meno restrittiva della funzione membro virtuale ' base ' della classe di base
 
-Una funzione virtuale è stato sottoposto a override, ma in [/Za](../../build/reference/za-ze-disable-language-extensions.md), la funzione override aveva un meno restrittiva [specifica di eccezione](../../cpp/exception-specifications-throw-cpp.md).
+Una funzione virtuale è stata sottoposta a override, ma in [/za](../../build/reference/za-ze-disable-language-extensions.md)la funzione che esegue l'override presenta una [specifica di eccezione](../../cpp/exception-specifications-throw-cpp.md)meno restrittiva.
 
-L'esempio seguente genera l'errore C2694:
+L'esempio seguente genera l'C2694:
 
-```
+```cpp
 // C2694.cpp
 // compile with: /Za /c
 class MyBase {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3216
 ms.assetid: bbab1efe-8779-4489-8bb0-b11e45f5cbe5
-ms.openlocfilehash: 80435c38ff4130938c996b1144aa71300f96eca1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b4f51dc0e27381ef64fc6cd1e4e279736a725aa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311540"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751261"
 ---
 # <a name="compiler-error-c3216"></a>Errore del compilatore C3216
 
@@ -21,7 +21,7 @@ Un vincolo non è stato creato nel formato corretto.
 
 L'esempio seguente genera l'errore C3216:
 
-```
+```cpp
 // C3216.cpp
 // compile with: /clr
 interface struct A {};
@@ -35,7 +35,7 @@ ref class C {};
 
 L'esempio seguente illustra una possibile soluzione:
 
-```
+```cpp
 // C3216b.cpp
 // compile with: /clr /c
 interface struct A {};

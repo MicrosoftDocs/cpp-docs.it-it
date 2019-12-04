@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2432
 ms.assetid: 0e3326e8-cab1-45a5-b48d-61edd33793e8
-ms.openlocfilehash: e2983d966a6290ce19713c63feb502c8ffc74bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4234626bc246d6da87be68b03d44562dd5990ff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166841"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744511"
 ---
 # <a name="compiler-error-c2432"></a>Errore del compilatore C2432
 
-riferimento non valido per i dati a 16 bit in 'identifier'
+riferimento non valido ai dati a 16 bit in ' Identifier '
 
-Un registro a 16 bit viene utilizzato come un indice o un registro base. Il compilatore non supporta che fanno riferimento a dati a 16 bit. non sono utilizzabile a 16 registri come registro base o di indice durante la compilazione di codice a 32 bit.
+Un registro a 16 bit viene utilizzato come indice o come registro di base. Il compilatore non supporta il riferimento a dati a 16 bit. i registri a 16 bit non possono essere usati come registri di indice o di base durante la compilazione per il codice a 32 bit.
 
-L'esempio seguente genera l'errore C2432:
+L'esempio seguente genera l'C2432:
 
-```
+```cpp
 // C2432.cpp
 // processor: x86
 int main() {

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2334
 ms.assetid: 36142855-e00b-4bbf-80f5-a301edeff46e
-ms.openlocfilehash: 4f068792193fd22ccddc39f9afc555e7c8672d8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8a096a89bdb076b857e5adc49ad8162551612f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188369"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747696"
 ---
 # <a name="compiler-error-c2334"></a>Errore del compilatore C2334
 
-token imprevisti prima ': o {'; verrà ignorato corpo apparente della funzione
+token imprevisti prima di ': o {'; verrà ignorato il corpo della funzione apparente
 
-L'esempio seguente genera l'errore C2334. Questo errore si verifica dopo l'errore C2059:
+L'esempio seguente genera l'C2334. Questo errore si verifica dopo l'errore C2059:
 
-```
+```cpp
 // C2334.cpp
 // compile with: /c
 // C2059 expected

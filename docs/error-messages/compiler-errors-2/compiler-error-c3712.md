@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
-ms.openlocfilehash: 0b84f4562dcc0dd5dcc3ecb647316772efab6b38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51772f22f83cff5c602bd2310d7913c0d317ba66
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328406"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753367"
 ---
 # <a name="compiler-error-c3712"></a>Errore del compilatore C3712
 
-'method': un metodo del gestore eventi deve restituire lo stesso tipo di origine 'method'
+' Method ': un metodo del gestore eventi deve restituire lo stesso tipo dell'origine ' Method '
 
-È definito un metodo del gestore eventi che non ha restituito lo stesso tipo del metodo di eventi di origine. Per correggere questo errore, assegnare il metodo del gestore eventi lo stesso tipo restituito del metodo dell'origine eventi.
+È stato definito un metodo del gestore eventi che non ha restituito lo stesso tipo del metodo dell'evento di origine. Per correggere l'errore, assegnare al metodo del gestore dell'evento lo stesso tipo restituito del metodo dell'evento di origine.
 
-L'esempio seguente genera l'errore C3712:
+L'esempio seguente genera l'C3712:
 
-```
+```cpp
 // C3712.cpp
 // compile with: /c
 [event_source(native)]

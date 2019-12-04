@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2506
 ms.assetid: cfed21cd-2404-46f2-985e-d0c2c3820830
-ms.openlocfilehash: 02f0a81204c4bc1c41111d32bae1c6946dee09ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 593fbbc6b561e6390624aa79af14dc665a552990
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164865"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746838"
 ---
 # <a name="compiler-error-c2506"></a>Errore del compilatore C2506
 
-'member': '__declspec(modifier)' non è possibile applicare a questo simbolo
+' member ': non è possibile applicare ' __declspec (modificatore)' a questo simbolo
 
-È possibile dichiarare per processo o per ogni appdomain per i membri statici di una classe gestita.
+Non è possibile dichiarare i membri statici di una classe gestita per processo o per dominio di applicazione.
 
 Per altre informazioni, vedere [appdomain](../../cpp/appdomain.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2506.
+L'esempio seguente genera l'C2506.
 
-```
+```cpp
 // C2506.cpp
 // compile with: /clr /c
 ref struct R {

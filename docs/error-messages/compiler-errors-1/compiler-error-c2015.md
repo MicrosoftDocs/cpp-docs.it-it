@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2015
 ms.assetid: 8f40af0a-3a5a-4d6a-8ed7-125966e6bfed
-ms.openlocfilehash: d761dfde26cce9c99ccd4c3e6fd86ae1d6e16ddc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b78336d74037b9f9f52da8327479f506db1ffc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351092"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751070"
 ---
 # <a name="compiler-error-c2015"></a>Errore del compilatore C2015
 
-Troppi caratteri nella costante
+troppi caratteri nella costante
 
-Una costante carattere contiene più di due caratteri. Il limite è un singolo carattere per le costanti carattere standard e due caratteri per le costanti di tipo carattere long.
+Una costante carattere contiene più di due caratteri. Il limite è un carattere per le costanti carattere standard e due caratteri per le costanti carattere lungo.
 
-Una sequenza di escape, ad esempio, \t viene convertita in un singolo carattere.
+Una sequenza di escape, ad esempio \t, viene convertita in un singolo carattere.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2015:
+L'esempio seguente genera l'C2015:
 
-```
+```cpp
 // C2015.cpp
 // compile with: /c
 
@@ -35,9 +35,9 @@ char test2 = 'e';   // OK
 
 ## <a name="example"></a>Esempio
 
-C2015 può verificarsi anche quando si usa un'estensione Microsoft, le costanti carattere vengono convertite in numeri interi.  L'esempio seguente genera l'errore C2015:
+C2015 può verificarsi anche quando si usa un'estensione Microsoft, le costanti carattere vengono convertite in numeri interi.  L'esempio seguente genera l'C2015:
 
-```
+```cpp
 // C2015b.cpp
 #include <stdio.h>
 

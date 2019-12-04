@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2395
 ms.assetid: 2d9e3b28-8c2c-4f41-a57f-61ef88fc2af0
-ms.openlocfilehash: dd3bd922e2bfa61da2da87d368bb4b28237161f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ac59856770b04dd3c4ea14360e0a83dd99f2150
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303661"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744940"
 ---
 # <a name="compiler-error-c2395"></a>Errore del compilatore C2395
 
-' your_type ': Operatore CLR o WinRT non valido. Almeno un parametro deve essere dei tipi seguenti: L ' ', l ' %', l ' &', l ' ^', ' t ^ %', ' t ^ &', dove T = 'your_type'
+'your_type::operator'op'': operatore CLR o WinRT non valido. Almeno un parametro deve essere dei tipi seguenti:' T',' t%',' t &',' t ^',' t ^%',' t ^ &', dove T =' your_type '
 
 Un operatore in un tipo Windows Runtime o gestito non dispone nemmeno di un parametro il cui tipo sia uguale al tipo del valore restituito dell'operatore.
 
 L'esempio seguente genera l'errore C2395 e mostra come risolverlo:
 
-```
+```cpp
 // C2395.cpp
 // compile with: /clr /c
 value struct V {

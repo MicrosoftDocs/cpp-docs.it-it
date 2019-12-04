@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3034
 ms.assetid: 49db8bac-2720-4622-94e3-7988f1603fa3
-ms.openlocfilehash: d0a5da87feeabc5d3d5b558ce0dd6bdfe3869d53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56ae2ddf35148fe263e406f48526cd68c4f91352
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165567"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748294"
 ---
 # <a name="compiler-error-c3034"></a>Errore del compilatore C3034
 
@@ -21,7 +21,7 @@ Alcune direttive non possono essere annidate. Per correggere questo errore, è p
 
 L'esempio seguente genera l'errore C3034:
 
-```
+```cpp
 // C3034.cpp
 // compile with: /openmp /link vcomps.lib
 int main() {

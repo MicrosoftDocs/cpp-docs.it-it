@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2574
 ms.assetid: 3e1c5c18-ee8b-4dbb-bfc0-d3b8991af71b
-ms.openlocfilehash: 764ff36441c563edd538c41be5c23c12f80e2537
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0959d875065f7548706b07b032798a68bb4639b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300807"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755473"
 ---
 # <a name="compiler-error-c2574"></a>Errore del compilatore C2574
 
-'distruttore': non può essere dichiarato statico
+' distruttore ': non può essere dichiarato static
 
-I distruttori, né i costruttori possono essere dichiarati `static`.
+Non è possibile dichiarare né i distruttori né i costruttori `static`.
 
-L'esempio seguente genera l'errore C2574:
+L'esempio seguente genera l'C2574:
 
-```
+```cpp
 // C2574.cpp
 // compile with: /c
 class A {

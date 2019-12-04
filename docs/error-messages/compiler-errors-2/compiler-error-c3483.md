@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3483
 ms.assetid: 18b3a2c5-dfc9-4661-9653-08a5798474cf
-ms.openlocfilehash: acbe89b5183d0991fb8d4a571a9595d6f6bafc6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d6c1467575e7fae7d5e4862f36e733a68210f8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381353"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743094"
 ---
 # <a name="compiler-error-c3483"></a>Errore del compilatore C3483
 
@@ -27,7 +27,7 @@ ms.locfileid: "62381353"
 
 L'esempio seguente genera l'errore C3483 perché la variabile `n` è visualizzata più volte nell'elenco di acquisizione di un'espressione lambda:
 
-```
+```cpp
 // C3483.cpp
 
 int main()

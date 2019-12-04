@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3368
 ms.assetid: 5bfd5be4-dfa9-4b33-9612-010561b40955
-ms.openlocfilehash: f027e2707dc677d93567f91307e9dcfcb8dd682f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e67655e90b571ea099572cdc34bc39124fc3271
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300518"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751872"
 ---
 # <a name="compiler-error-c3368"></a>Errore del compilatore C3368
 
@@ -21,7 +21,7 @@ La convenzione di chiamata [__stdcall](../../cpp/stdcall.md) o [__cdecl](../../c
 
 L'esempio seguente genera l'errore C3368:
 
-```
+```cpp
 // C3368.cpp
 // processor: x86
 [idl_module(name="Name", dllname="Some.dll")];
