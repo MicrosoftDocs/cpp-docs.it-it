@@ -10,12 +10,12 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: 3f781e59672764dc518f3c6fad61d4021720362a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148140"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857034"
 ---
 # <a name="return-type"></a>Tipo restituito
 
@@ -26,7 +26,7 @@ Il tipo restituito di una funzione determina la dimensione e il tipo del valore 
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* è specifico di Microsoft \*/
+/\* *attribute-seq* è \*specifico di Microsoft /
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -38,10 +38,10 @@ Il tipo restituito di una funzione determina la dimensione e il tipo del valore 
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8** /\* Specifico di Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16** /\* Specifico di Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32** /\* Specifico di Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64** /\* Specifico di Microsoft \*/<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int8 /\*** \*specifiche di Microsoft /<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int16 /\*** \*specifiche di Microsoft /<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int32 /\*** \*specifiche di Microsoft /<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int64 /\*** \*specifiche di Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>

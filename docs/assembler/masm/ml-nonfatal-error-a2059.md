@@ -1,24 +1,24 @@
 ---
 title: Errore ML non irreversibile A2059
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2059
 helpviewer_keywords:
 - A2059
 ms.assetid: fadabbce-3054-4758-aeae-34d8540ce410
-ms.openlocfilehash: 137196e24530a7d7c7987fab1917d72dcd16d706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32419e8e91a8f20efc72c79d90be996335fc4bc0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177591"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856512"
 ---
 # <a name="ml-nonfatal-error-a2059"></a>Errore ML non irreversibile A2059
 
-**forzato errore: le stringhe uguale**
+**errore forzato: stringhe uguali**
 
-La direttiva condizionale-error [. ERRIDN](../../assembler/masm/dot-erridn.md) o **. ERRIDNI** usata per generare questo errore.
+Direttiva di errore condizionale [. ERRIDN](../../assembler/masm/dot-erridn.md) o **. ERRIDNI** è stato usato per generare questo errore.
 
 ## <a name="see-also"></a>Vedere anche
 

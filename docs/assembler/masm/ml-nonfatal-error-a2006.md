@@ -1,38 +1,38 @@
 ---
 title: Errore ML non irreversibile A2006
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 80283bde4dff36e32d276c998f6797b6eeed8160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c55cb66d6eaeaf620aeedc1dd924f6618cbf817
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202323"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856783"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Errore ML non irreversibile A2006
 
 **simbolo non definito: identificatore**
 
-È stato effettuato il tentativo di utilizzare un simbolo che non è stato definito.
+È stato effettuato un tentativo di utilizzare un simbolo non definito.
 
-Potrebbe essersi verificato uno dei seguenti:
+È possibile che si sia verificata una delle condizioni seguenti:
 
-- Non è stato definito un simbolo.
+- Simbolo non definito.
 
 - Un campo non è un membro della struttura specificata.
 
-- È stato definito un simbolo in un file di inclusione che non è stato fornito.
+- Un simbolo è stato definito in un file di inclusione non incluso.
 
-- Un simbolo esterno è stato utilizzato senza un' [EXTERN](../../assembler/masm/extern-masm.md) oppure [EXTERNDEF](../../assembler/masm/externdef.md) direttiva.
+- Un simbolo esterno è stato usato senza una direttiva [extern](../../assembler/masm/extern-masm.md) o [EXTERNDEF](../../assembler/masm/externdef.md) .
 
-- Un nome di simbolo è stato digitato correttamente.
+- Il nome di un simbolo non è stato digitato correttamente.
 
-- Un'etichetta del codice locale viene fatto riferimento all'esterno del relativo ambito.
+- È stato fatto riferimento a un'etichetta di codice locale all'esterno del relativo ambito.
 
 ## <a name="see-also"></a>Vedere anche
 

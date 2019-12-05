@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: 61662caf28fad2f961a580cf280799711a6909bb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147685"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857138"
 ---
 # <a name="c-function-definitions"></a>Definizioni di funzioni C
 
@@ -36,7 +36,7 @@ Una definizione di funzione specifica il nome della funzione, i tipi e il numero
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* è specifico di Microsoft \*/
+/\* *attribute-seq* è \*specifico di Microsoft /
 
 I parametri del prototipo sono:
 
@@ -53,8 +53,8 @@ I parametri del prototipo sono:
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* Dichiaratore di funzione \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* Dichiaratore nuovo stile \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Dichiaratore stile obsoleto \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Dichiaratore nuovo stile \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Dichiaratore stile obsoleto \*/
 
 L'elenco di parametri in una definizione utilizza questa sintassi:
 
@@ -79,7 +79,7 @@ L'elenco di parametri in una definizione di funzione obsoleta utilizza questa si
 La sintassi per il corpo della funzione è:
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 Gli unici identificatori della classe di archiviazione che consentono di modificare una dichiarazione di funzione sono **extern** e **static**. L'identificatore **extern** significa che è possibile far riferimento alla funzione da altri file; ovvero il nome della funzione viene esportato nel linker. L'identificatore **static** significa che non è possibile far riferimento alla funzione da altri file, ovvero che il nome non viene esportato dal linker. Se in una definizione di funzione non viene visualizzata alcuna classe di archiviazione, viene presupposto **extern**. Tuttavia, la funzione è sempre visibile dal punto della definizione fino alla fine del file.
 

@@ -1,38 +1,38 @@
 ---
 title: Errore ML irreversibile A1007
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1007
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: 98933c3a24da22f447174a3b51c4855690aba83e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01633b4fa084b7d5e14af5a5c6e51e3dca684d2a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177903"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856917"
 ---
 # <a name="ml-fatal-error-a1007"></a>Errore ML irreversibile A1007
 
-**livello di nidificazione troppo profonda**
+**livello di annidamento troppo profondo**
 
-L'assembler raggiunto il limite di nidificazione. Il limite è 20 livelli altrimenti indicato.
+L'assembler ha raggiunto il limite di annidamento. Il limite è di 20 livelli, tranne nei casi in cui diversamente specificato.
 
-Uno dei seguenti era eccessivamente annidato:
+Uno degli elementi seguenti è troppo profondamente annidato:
 
-- Una direttiva di alto livello, ad esempio [. IF](../../assembler/masm/dot-if.md), [. Ripetere](../../assembler/masm/dot-repeat.md), o [. MENTRE](../../assembler/masm/dot-while.md).
+- Una direttiva di alto livello, ad esempio [. SE](../../assembler/masm/dot-if.md), [. Ripetere](../../assembler/masm/dot-repeat.md)o [. MENTRE](../../assembler/masm/dot-while.md).
 
-- Una definizione della struttura.
+- Definizione della struttura.
 
-- Una direttiva condizionale-assembly.
+- Una direttiva di assembly condizionale.
 
-- Una definizione della procedura.
+- Definizione di una routine.
 
-- Oggetto [PUSHCONTEXT](../../assembler/masm/pushcontext.md) (direttiva) (il limite è 10).
+- Una direttiva [PushContext](../../assembler/masm/pushcontext.md) (il limite è 10).
 
-- Una definizione del segmento.
+- Definizione di segmento.
 
 - Un file di inclusione.
 

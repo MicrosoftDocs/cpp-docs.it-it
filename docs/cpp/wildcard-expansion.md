@@ -11,20 +11,20 @@ helpviewer_keywords:
 - command-line wildcards
 - question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
-ms.openlocfilehash: 2d495f94f2e3fb7b88d235edc7b98f8e90775393
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fdea297bb45a06a08bde4f63f90eabef6ddb539
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209515"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857177"
 ---
 # <a name="wildcard-expansion"></a>Espansione di caratteri jolly
 
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft
+**Sezione specifica Microsoft**
 
 È possibile usare caratteri jolly, ovvero il punto interrogativo (?) e l'asterisco (*), per specificare gli argomenti del percorso e del nome del file nella riga di comando.
 
-Gli argomenti della riga di comando vengono gestiti da una routine denominata `_setargv` (o `_wsetargv` nell'ambiente di caratteri "wide"), che per impostazione predefinita non espande i caratteri jolly in stringhe separate nella `argv` matrice di stringhe. Per altre informazioni sull'abilitazione dell'espansione di caratteri jolly, consultare [espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md).
+Gli argomenti della riga di comando vengono gestiti da una routine denominata `_setargv` (o `_wsetargv` nell'ambiente a caratteri wide), che per impostazione predefinita non espande i caratteri jolly in stringhe separate nella matrice di `argv` stringa. Per ulteriori informazioni sull'abilitazione dell'espansione dei caratteri jolly, vedere l'argomento relativo all' [espansione degli argomenti jolly](../c-language/expanding-wildcard-arguments.md).
 
 **Fine sezione specifica Microsoft**
 

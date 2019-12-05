@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 439bc878bbcd1c9778fb74738cb3b32b908a5943
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 0ffda6522e632533b0aaa4ba146e8fad082ed435
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148348"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857060"
 ---
 # <a name="overview-of-declarations"></a>Cenni preliminari sulle dichiarazioni
 
@@ -19,9 +19,9 @@ Una "dichiarazione" consente di specificare l'interpretazione e gli attributi di
 ## <a name="syntax"></a>Sintassi
 
 *declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> è specifico di Microsoft */
+/\* *attributo-Seq*<sub>opt</sub> è specifico di Microsoft */
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -43,7 +43,7 @@ Le dichiarazioni nel componente *init-declarator-list* contengono gli identifica
 
 Le dichiarazioni possono contenere uno o più degli attributi facoltativi elencati in *attribute-seq*; *seq* è l'abbreviazione di sequenza. Questi attributi specifici di Microsoft eseguono una varietà di funzioni, che saranno discusse più dettagliatamente nel resto di questo manuale.
 
-Nella forma generale di una dichiarazione di variabili, *type-specifier* restituisce il tipo di dati della variabile. *type-specifier* può essere un'istruzione composta, ad esempio quando il tipo viene modificato da **const** o da `volatile`. `declarator` fornisce il nome della variabile, possibilmente modificato in modo da dichiarare un tipo di matrice o puntatore. Ad esempio,
+Nella forma generale di una dichiarazione di variabili, *type-specifier* restituisce il tipo di dati della variabile. *type-specifier* può essere un'istruzione composta, ad esempio quando il tipo viene modificato da **const** o da `volatile`. `declarator` fornisce il nome della variabile, possibilmente modificato in modo da dichiarare un tipo di matrice o puntatore. Di seguito è riportato un esempio:
 
 ```C
 int const *fp;
@@ -51,7 +51,7 @@ int const *fp;
 
 dichiara una variabile denominata `fp` come puntatore a un valore `int` non modificabile (**const**). È possibile definire più variabili in una dichiarazione usando più dichiaratori, separati da virgole.
 
-Una dichiarazione deve avere almeno un dichiaratore oppure il relativo identificatore di tipi deve dichiarare un tag della struttura, un tag di unione o i membri di un'enumerazione. I dichiaratori forniscono le eventuali informazioni rimanenti su un identificatore. Un dichiaratore è un identificatore che può essere modificato con parentesi quadre (**[ ]**), asterischi (<strong>\*</strong>) o parentesi tonde (**( )** ) per dichiarare rispettivamente un tipo di matrice, di puntatore o di funzione. Quando si dichiarano variabili semplici (ad esempio caratteri, integri ed elementi a virgola mobile) o strutture e unioni di variabili semplici, `declarator` è solo un identificatore. Per altre informazioni sui dichiaratori, vedere [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md).
+Una dichiarazione deve avere almeno un dichiaratore oppure il relativo identificatore di tipi deve dichiarare un tag della struttura, un tag di unione o i membri di un'enumerazione. I dichiaratori forniscono le eventuali informazioni rimanenti su un identificatore. Un dichiaratore è un identificatore che può essere modificato con parentesi quadre ( **[ ]** ), asterischi (<strong>\*</strong>) o parentesi tonde ( **( )** ) per dichiarare rispettivamente un tipo di matrice, di puntatore o di funzione. Quando si dichiarano variabili semplici (ad esempio caratteri, integri ed elementi a virgola mobile) o strutture e unioni di variabili semplici, `declarator` è solo un identificatore. Per altre informazioni sui dichiaratori, vedere [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md).
 
 Tutte le definizioni sono implicitamente dichiarazioni, ma non tutte le dichiarazioni sono definizioni. Ad esempio, le dichiarazioni di variabili che iniziano con l'identificatore di classi di archiviazione `extern` fanno "riferimento" alle dichiarazioni, piuttosto che "definirle". Se è necessario fare riferimento a una variabile esterna prima che sia definita oppure se viene definita in un altro file di origine da quello in cui è usata, è necessaria una dichiarazione `extern`. Le risorse di archiviazione non vengono allocate "facendo riferimento" alle dichiarazioni, né è possibile inizializzare le variabili nelle dichiarazioni.
 

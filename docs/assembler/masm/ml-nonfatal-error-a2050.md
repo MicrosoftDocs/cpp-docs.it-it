@@ -1,32 +1,32 @@
 ---
 title: Errore ML non irreversibile A2050
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2050
 helpviewer_keywords:
 - A2050
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
-ms.openlocfilehash: 59d08b9c2743a3b45633527bcc54b3e1c4d6a58c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15c6449ff4207c92dee28120d4f61be641cf01c8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177552"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856577"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>Errore ML non irreversibile A2050
 
-**reale o un numero di BCD non consentito**
+**numero reale o BCD non consentito**
 
-Un numero a virgola mobile (VERO) o binary coded decimal (BCD) costante utilizzato diverso da come un inizializzatore di dati.
+È stato usato un numero a virgola mobile (reale) o una costante BCD (Binary Coded Decimal) diversa da un inizializzatore di dati.
 
-Si è verificata una delle operazioni seguenti:
+Si è verificata una delle condizioni seguenti:
 
-- Un numero reale o un archivio BCD è stato usato in un'espressione.
+- In un'espressione è stato utilizzato un numero reale o un BCD.
 
-- Un numero reale è stato utilizzato per inizializzare diverso da una direttiva [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), o [TBYTE](../../assembler/masm/tbyte.md).
+- È stato usato un numero reale per inizializzare una direttiva diversa da [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md)o [Tbyte](../../assembler/masm/tbyte.md).
 
-- Un archivio BCD è stato utilizzato per inizializzare diverso da una direttiva `TBYTE`.
+- Un BCD è stato utilizzato per inizializzare una direttiva diversa da `TBYTE`.
 
 ## <a name="see-also"></a>Vedere anche
 

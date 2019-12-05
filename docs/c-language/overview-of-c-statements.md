@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 1b5863a021fd74bb80162d589af7c2a1a5b36f9b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147048"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857073"
 ---
 # <a name="overview-of-c-statements"></a>Cenni preliminari sulle istruzioni C
 
@@ -33,11 +33,11 @@ Le istruzioni C sono costituite da token, espressioni e altre istruzioni. Un'ist
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-statement](../c-language/try-except-statement-c.md)
+[try-except-Statement](../c-language/try-except-statement-c.md) /* \*specifico di Microsoft /
 
-/* Specifica di Microsoft \*/[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Specifica di Microsoft \*/
+[try-finally-statement](../c-language/try-finally-statement-c.md) /\* \*specifico di Microsoft /
 
-Il corpo dell'istruzione è spesso un'istruzione composta costituita da altre istruzioni che possono includere parole chiave. L'istruzione composta è racchiusa tra parentesi graffe (**{ }**). Tutte le altre istruzioni in linguaggio C terminano con un punto e virgola (**;**). Il punto e virgola è un terminatore dell'istruzione.
+Il corpo dell'istruzione è spesso un'istruzione composta costituita da altre istruzioni che possono includere parole chiave. L'istruzione composta è racchiusa tra parentesi graffe ( **{ }** ). Tutte le altre istruzioni in linguaggio C terminano con un punto e virgola ( **;** ). Il punto e virgola è un terminatore dell'istruzione.
 
 L'istruzione di espressione include un'espressione C che può contenere gli operatori aritmetici o logici presentati in [Espressioni e assegnazioni](../c-language/expressions-and-assignments.md). L'istruzione null è un'istruzione vuota.
 

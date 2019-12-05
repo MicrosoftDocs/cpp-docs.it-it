@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148804"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857086"
 ---
 # <a name="function-prototypes"></a>Prototipi di funzioni
 
@@ -24,7 +24,7 @@ Una dichiarazione di funzione precede la definizione di funzione e specifica il 
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> è specifico di Microsoft \*/
+/\* *attributo-Seq*<sub>opt</sub> è \*specifico di Microsoft /
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -43,14 +43,14 @@ Una dichiarazione di funzione precede la definizione di funzione e specifica il 
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* Dichiaratore di funzione \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Dichiaratore nuovo stile \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Dichiaratore stile obsoleto \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* Dichiaratore nuovo stile \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Dichiaratore stile obsoleto \*/
 
 Il prototipo ha lo stesso form della definizione di funzione, ma viene terminato da un punto e virgola immediatamente dopo la parentesi di chiusura e pertanto non ha corpo. In entrambi i casi, il tipo restituito deve corrispondere al tipo restituito specificato nella definizione di funzione.
 
 I prototipi di funzione hanno gli utilizzi importanti elencati di seguito:
 
-- Stabiliscono il tipo restituito per funzioni che restituiscono tipi diversi da **int**. Sebbene le funzioni che restituiscono valori **int** non richiedano prototipi, i prototipi sono consigliati.
+- Stabiliscono il tipo restituito per le funzioni che restituiscono tipi diversi da **int**. Sebbene le funzioni che restituiscono valori **int** non richiedano prototipi, i prototipi sono consigliati.
 
 - Senza prototipi completi, le conversioni standard vengono effettuate, ma non viene eseguito alcun tentativo di controllare il tipo o il numero di argomenti con il numero di parametri.
 

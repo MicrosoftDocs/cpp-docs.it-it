@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146957"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857151"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Attributi di classi di archiviazione estesi C
 
@@ -27,13 +27,13 @@ La sintassi degli attributi estesa per specificare le informazioni relative alla
 ## <a name="syntax"></a>Sintassi
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Specifico di Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-Modifier-Seq* **)**  /\* \*specifiche di Microsoft /
 
-*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Sezione specifica Microsoft \*/<br/>
+*Extended-decl-Modifier-Seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*specifiche di Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Sezione specifica Microsoft \*/<br/>
+*Extended-decl-Modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*specifiche di Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>

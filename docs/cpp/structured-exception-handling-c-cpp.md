@@ -9,12 +9,12 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245122"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857268"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -25,10 +25,10 @@ Gestione delle eccezioni strutturata (SEH) è un'estensione Microsoft a C per ge
 ## <a name="grammar"></a>Grammatica
 
 *try-except-Statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*composte* **__try dell'** *istruzione* **composta __except** **(** *Expression* **)**
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally-Statement* :<br/>
-&nbsp;&nbsp; &nbsp;l' *istruzione composta* **__try** &nbsp; **__finally**
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>Note
 
@@ -140,7 +140,7 @@ Executing SEH __except block
 
 Per altre informazioni, vedere [/EH (Modello di gestione delle eccezioni)](../build/reference/eh-exception-handling-model.md).
 
-**Fine sezione specifica Microsoft**
+**FINE specifica di Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

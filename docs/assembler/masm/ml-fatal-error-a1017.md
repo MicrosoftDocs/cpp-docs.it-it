@@ -1,28 +1,28 @@
 ---
 title: Errore ML irreversibile A1017
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1017
 helpviewer_keywords:
 - A1017
 ms.assetid: bef0b312-5431-4e5a-b637-c19919acf01b
-ms.openlocfilehash: 22a16569364760d0cb1d01011405f7a11dd21cac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fb0835cca135fc994866dc2453734d7b3012a64
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177773"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856826"
 ---
 # <a name="ml-fatal-error-a1017"></a>Errore ML irreversibile A1017
 
-**manca un nome di file di origine**
+**nome file di origine mancante**
 
-Machine Learning non è riuscito a trovare un file per assemblare o passare al linker.
+ML non è riuscito a trovare un file da assemblare o passare al linker.
 
-Questo errore viene generato quando si assegnano le opzioni della riga di comando ML senza specificare un nome di file su cui intervenire. Per assemblare i file che non è un'estensione asm, utilizzare il **/Ta** opzione della riga di comando.
+Questo errore viene generato quando si assegnano le opzioni della riga di comando di ML senza specificare un nome file su cui agire. Per assemblare i file che non hanno un'estensione ASM, usare l'opzione della riga di comando **/TA** .
 
-Questo errore può essere generato anche tramite la chiamata ML senza parametri se la variabile di ambiente di Machine Learning contiene le opzioni della riga di comando.
+Questo errore può essere generato anche richiamando ML senza parametri se la variabile di ambiente ML contiene opzioni della riga di comando.
 
 ## <a name="see-also"></a>Vedere anche
 

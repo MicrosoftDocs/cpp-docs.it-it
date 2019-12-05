@@ -7,27 +7,27 @@ helpviewer_keywords:
 - __declspec keyword [C++], noreturn
 - noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
-ms.openlocfilehash: 1d78e8f5116eabf9073205b938156197bf1001a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9ca61c9d734ccdd6b8d8374ed3a7c4128ee3d5e
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245245"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857372"
 ---
 # <a name="noreturn"></a>noreturn
 
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft
+**Sezione specifica Microsoft**
 
-Ciò **declspec** attributo indica al compilatore che non restituisce una funzione. Di conseguenza, il compilatore sa che il codice che segue una chiamata a un **__declspec(noreturn)** funzione non è raggiungibile.
+Questo attributo **__declspec** indica al compilatore che una funzione non restituisce alcun risultato. Di conseguenza, il compilatore sa che il codice che segue una chiamata a una funzione **__declspec (noreturn)** non è raggiungibile.
 
-Se il compilatore rileva una funzione con un percorso di controllo che non restituisce un valore, viene generato un avviso (C4715) o un messaggio di errore (C2202). Se il percorso del controllo non è raggiungibile a causa di una funzione che non restituisce alcun risultato, è possibile usare **__declspec(noreturn)** per evitare questo avviso o errore.
+Se il compilatore rileva una funzione con un percorso di controllo che non restituisce un valore, viene generato un avviso (C4715) o un messaggio di errore (C2202). Se non è possibile raggiungere il percorso del controllo a causa di una funzione che non restituisce mai, è possibile usare **__declspec (noreturn)** per evitare questo avviso o errore.
 
 > [!NOTE]
->  Aggiunta **__declspec(noreturn)** a una funzione che deve restituire può causare un comportamento indefinito.
+>  L'aggiunta di **__declspec (noreturn)** a una funzione che dovrebbe restituire può causare un comportamento indefinito.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente, il **else** clausola non contiene un'istruzione return.  La dichiarazione `fatal` come **__declspec(noreturn)** evita un errore o un messaggio di avviso.
+Nell'esempio seguente la clausola **else** non contiene un'istruzione return.  La dichiarazione di `fatal` come **__declspec (noreturn)** evita un messaggio di errore o di avviso.
 
 ```cpp
 // noreturn2.cpp
@@ -42,6 +42,8 @@ int main() {
      fatal();
 }
 ```
+
+**Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
