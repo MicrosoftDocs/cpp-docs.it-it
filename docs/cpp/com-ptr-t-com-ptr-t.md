@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498704"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857593"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -21,7 +21,7 @@ Costruisce un oggetto **_com_ptr_t** .
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,13 +133,13 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *pInterface*<br/>
 Puntatore a interfaccia raw.
 
 *fAddRef*<br/>
-Se true, `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.
+Se TRUE, `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.
 
 *cp*<br/>
 Oggetto **_com_ptr_t** .
@@ -148,19 +148,21 @@ Oggetto **_com_ptr_t** .
 Puntatore a interfaccia raw, il cui tipo è diverso dal tipo di puntatore intelligente di questo oggetto **_com_ptr_t** .
 
 *varSrc*<br/>
-Oggetto `_variant_t`.
+Un oggetto `_variant_t`.
 
 *clsid*<br/>
-`CLSID` Di una coclasse.
+`CLSID` di una coclasse.
 
 *dwClsContext*<br/>
 Contesto del codice eseguibile in esecuzione.
 
 *lpcStr*<br/>
-Stringa multibyte che include un oggetto `CLSID` (a partire da " **{** `ProgID`") o.
+Stringa multibyte che include un `CLSID` (a partire da " **{** ") o una `ProgID`.
 
 *pOuter*<br/>
 Oggetto sconosciuto esterno per l' [aggregazione](/windows/win32/com/aggregation).
+
+**Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

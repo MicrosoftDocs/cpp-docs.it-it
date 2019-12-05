@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267376"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857307"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regole e limitazioni per le funzioni naked
 
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft
+**Sezione specifica Microsoft**
 
 Le seguenti regole e limitazioni si applicano alle funzioni naked:
 
-- Il **restituire** istruzione non è consentita.
+- Istruzione **return** non consentita.
 
 - I costrutti di gestione delle eccezioni C++ e di gestione strutturata delle eccezioni non sono consentiti in quanto è necessario rimuoverli nello stack frame.
 
@@ -31,9 +31,9 @@ Le seguenti regole e limitazioni si applicano alle funzioni naked:
 
 - Non è possibile dichiarare gli oggetti di classe C++ nell'ambito lessicale della funzione. È possibile, tuttavia, dichiarare gli oggetti in un blocco annidato.
 
-- Il **naked** parola chiave viene ignorato durante la compilazione con [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+- La parola chiave **naked** viene ignorata durante la compilazione con [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Per la [fastcall](../cpp/fastcall.md) le funzioni naked, ogni volta che vi è un riferimento in C /C++ codice a uno degli argomenti di registro, il codice di prologo deve archiviare i valori di tale registro nel percorso dello stack per tale variabile. Ad esempio:
+- Per [__fastcall](../cpp/fastcall.md) funzioni naked, ogni volta che è presente un riferimento inC++ C/codice a uno degli argomenti di registro, il codice di prologo deve archiviare i valori di tale registro nel percorso dello stack per tale variabile. Ad esempio:
 
 ```cpp
 // nkdfastcl.cpp

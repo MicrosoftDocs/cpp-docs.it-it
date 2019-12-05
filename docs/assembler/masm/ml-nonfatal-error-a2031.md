@@ -1,26 +1,26 @@
 ---
 title: Errore ML non irreversibile A2031
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2031
 helpviewer_keywords:
 - A2031
 ms.assetid: d5b11f58-4a00-42be-9062-8fa8728e6306
-ms.openlocfilehash: 794fb31fbc22bdefddf9f19e6efcb3c34bbc1861
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f964c67ba7bf399e9a3761e4e201662a6a712a1b
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177682"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856701"
 ---
 # <a name="ml-nonfatal-error-a2031"></a>Errore ML non irreversibile A2031
 
-**deve essere registro dell'indice o di base**
+**deve essere un registro di indice o di base**
 
-Usare un registro che non è un registro base o un indice in un'espressione di memoria è stato effettuato il tentativo.
+È stato effettuato un tentativo di utilizzare un registro che non era un registro di base o di indice in un'espressione di memoria.
 
-Questo errore è causato ad esempio, le espressioni seguenti:
+Ad esempio, le seguenti espressioni generano questo errore:
 
 ```asm
 [ax]

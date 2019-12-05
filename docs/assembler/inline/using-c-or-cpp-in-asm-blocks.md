@@ -14,16 +14,16 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 0949eba769bed33da8fe39bb41500a2ba02af224
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16b298b92a4ba40d9091499a1821ad4f3c413d6c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166555"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854524"
 ---
-# <a name="using-c-or-c-in-asm-blocks"></a>Utilizzo di C o C++ in blocchi __asm
+# <a name="using-c-or-c-in-__asm-blocks"></a>Utilizzo di C o C++ in blocchi __asm
 
-* * Specifica di Microsoft * *
+**Sezione specifica Microsoft**
 
 Poiché le istruzioni assembly inline possono essere combinate con le istruzioni C++ o C, le stesse possono riferirsi alle variabili C++ o C indicandole per nome e utilizzare molti altri elementi di tali linguaggi.
 
@@ -35,11 +35,11 @@ Un blocco `__asm` può utilizzare i seguenti elementi di linguaggio:
 
 - Direttive per il preprocessore e macro
 
-- Commenti (entrambe __/ \* \* /__ e __//__ )
+- Commenti (sia __/\* \*/__ che __//__ )
 
 - Nomi dei tipi (laddove sia possibile utilizzare i tipi MASM)
 
-- `typedef` i nomi, in genere usati con gli operatori, ad esempio **PTR** e **tipo** oppure per specificare i membri di struttura o unione
+- `typedef` nomi, usati in genere con operatori quali **ptr** e **Type** oppure per specificare membri di struttura o di Unione
 
 All'interno di un blocco `__asm` è possibile specificare le costanti Integer sia con la notazione C che con la notazione base dell'assembler (ad esempio, 0x100 e 100h sono equivalenti). Ciò consente di definire (utilizzando `#define`) una costante in C e utilizzarla in seguito nelle parti dell'assembly del programma C o C++. È inoltre possibile specificare le costanti nel formato ottale precedendole con 0. Ad esempio, 0777 specifica una costante ottale.
 
@@ -47,7 +47,7 @@ All'interno di un blocco `__asm` è possibile specificare le costanti Integer si
 
 - [Uso degli operatori in blocchi __asm](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [Con C o C++ blocchi ASM simboli](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [Uso di blocchi C++ di __asm C o Symbols_in](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [Accesso a dati C o C++ in blocchi __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 
