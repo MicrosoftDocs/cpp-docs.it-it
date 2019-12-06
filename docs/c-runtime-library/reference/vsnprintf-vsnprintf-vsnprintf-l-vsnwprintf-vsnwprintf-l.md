@@ -55,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945317"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857710"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -161,9 +161,9 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 ## <a name="return-value"></a>Valore restituito
 
-La funzione **vsnprintf** restituisce il numero di caratteri scritti, senza contare il carattere null di terminazione. Se le dimensioni del buffer specificate da *count* non sono sufficientemente grandi per contenere l'output specificato da *Format* e *argptr*, il valore restituito di **vsnprintf** è il numero di caratteri che verrebbero scritti, senza contare null carattere, se il *conteggio* è sufficientemente grande. Se il valore restituito è maggiore di *count* -1, l'output è stato troncato. Un valore restituito -1 indica che si è verificato un errore di codifica.
+La funzione **vsnprintf** restituisce il numero di caratteri scritti, senza contare il carattere null di terminazione. Se le dimensioni del buffer specificate da *count* non sono sufficientemente grandi per contenere l'output specificato *da format* e *argptr*, il valore restituito di **vsnprintf** è il numero di caratteri che verrebbero scritti, senza contare il carattere null, se il *conteggio* era sufficientemente grande. Se il valore restituito è maggiore di *count* -1, l'output è stato troncato. Un valore restituito -1 indica che si è verificato un errore di codifica.
 
-Entrambe le funzioni **_vsnprintf** e **_vsnwprintf** restituiscono il numero di caratteri scritti se il numero di caratteri da scrivere è minore o uguale al *conteggio*; Se il numero di caratteri da scrivere è maggiore di *count*, queste funzioni restituiscono-1 che indica che l'output è stato troncato.
+Sia **_vsnprintf** che **_vsnwprintf** funzioni restituiscono il numero di caratteri scritti se il numero di caratteri da scrivere è minore o uguale al *conteggio*; Se il numero di caratteri da scrivere è maggiore di *count*, queste funzioni restituiscono-1 che indica che l'output è stato troncato.
 
 Il valore restituito da tutte queste funzioni non include il carattere di Null di terminazione, indipendentemente dal fatto che venga scritto o meno. Quando *count* è zero, il valore restituito è il numero di caratteri che verranno scritti dalle funzioni, escluso il valore null di terminazione. È possibile usare questo risultato per allocare spazio nel buffer sufficiente per la stringa e il carattere Null di terminazione e quindi chiamare di nuovo la funzione per riempire il buffer.
 
@@ -177,15 +177,15 @@ Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi 
 > Per evitare determinati tipi di rischi per la sicurezza, assicurarsi che *Format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Per assicurarsi che sia presente spazio per il carattere null di terminazione durante la chiamata a **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l**, assicurarsi che *count* sia rigorosamente minore della lunghezza del buffer e inizializzare il buffer su null prima di chiamare la funzione.
+> Per assicurarsi che sia presente spazio per il carattere null di terminazione durante la chiamata di **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l**, assicurarsi che *count* sia rigorosamente minore della lunghezza del buffer e inizializzare il buffer su null prima di chiamare la funzione.
 >
 > Poiché **vsnprintf** scrive sempre il valore null di terminazione, il parametro *count* può essere uguale alla dimensione del buffer.
 
-A partire da UCRT in Visual Studio 2015 e Windows 10, **vsnprintf** non è più identico a **_vsnprintf**. La funzione **vsnprintf** è conforme allo standard C99; **_vnsprintf** viene mantenuto per compatibilità con le versioni precedenti di Visual Studio Code.
+A partire da UCRT in Visual Studio 2015 e Windows 10, **vsnprintf** non è più identico a **_vsnprintf**. La funzione **vsnprintf** è conforme allo standard C99; **_vnsprintf** viene mantenuta per compatibilità con le versioni precedenti di Visual Studio Code.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
-In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -194,14 +194,14 @@ In C++ queste funzioni presentano overload di modello che richiamano le relative
 |**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
 |**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------------|-------------------------------|
 |**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> o \<cstdio>|
 |**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> o \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> o \<cwchar>|
 
-Le funzioni **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l** sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Le funzioni **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l** sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

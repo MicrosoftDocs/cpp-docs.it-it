@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939924"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857853"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -80,16 +80,16 @@ Le funzioni **ABS**, **Labs**, **llabs** e **_abs64** restituiscono il valore as
 
 Poiché C++ consente l'overload, è possibile chiamare overload di **ABS** che accettano e restituiscono valori **Long** **, Long** **Long**, **float**, **Double**e **Long** **Double** . Questi overload sono definiti nell'intestazione \<cmath>. In un programma C, **ABS** accetta e restituisce sempre un valore **int**.
 
-**Specifico di Microsoft**: Poiché l'intervallo di interi negativi che possono essere rappresentati usando qualsiasi tipo integrale è maggiore dell'intervallo di interi positivi che possono essere rappresentati usando lo stesso tipo, è possibile fornire a queste funzioni un argomento che non può essere convertito. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, le funzioni **ABS** restituiscono il valore dell'argomento invariato. In particolare, `abs(INT_MIN)` restituisce `INT_MIN`, `labs(LONG_MIN)` restituisce `LONG_MIN`, `llabs(LLONG_MIN)` restituisce `LLONG_MIN` e `_abs64(_I64_MIN)` restituisce `_I64_MIN`. Ciò significa che non è possibile usare le funzioni **ABS** per garantire un valore positivo.
+**Specifico di Microsoft**: poiché l'intervallo di numeri interi negativi che possono essere rappresentati usando qualsiasi tipo integrale è maggiore dell'intervallo di numeri interi positivi che possono essere rappresentati usando tale tipo, è possibile fornire un argomento a queste funzioni che non possono essere convertite. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, le funzioni **ABS** restituiscono il valore dell'argomento invariato. In particolare, `abs(INT_MIN)` restituisce `INT_MIN`, `labs(LONG_MIN)` restituisce `LONG_MIN`, `llabs(LLONG_MIN)` restituisce `LLONG_MIN` e `_abs64(_I64_MIN)` restituisce `_I64_MIN`. Ciò significa che non è possibile usare le funzioni **ABS** per garantire un valore positivo.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Routine|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |-------------|-----------------------|---------------------------|
 |**abs**, **labs**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> o \<stdlib.h>|
 
-Per usare le versioni di overload di **ABS** in C++, è necessario includere l' \<intestazione cmath >.
+Per usare le versioni di overload di **ABS** in C++, è necessario includere l'intestazione \<cmath >.
 
 ## <a name="example"></a>Esempio
 

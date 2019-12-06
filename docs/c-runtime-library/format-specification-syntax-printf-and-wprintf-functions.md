@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778382"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857866"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
@@ -46,12 +46,12 @@ Una specifica di conversione semplice contiene solo il segno di percentuale e un
 
 Il carattere identificatore di conversione *tipo* specifica se l'argomento corrispondente deve essere interpretato come un carattere, una stringa, un puntatore, un numero intero o un numero a virgola mobile. Il carattere *tipo* è l'unico campo di specifica conversione obbligatorio e viene visualizzato dopo tutti i campi facoltativi.
 
-Gli argomenti che seguono la stringa di formato vengono interpretati a seconda del carattere *tipo* corrispondente e del prefisso [dimensione](#size) facoltativo. Le conversioni dei tipi di carattere `char` e `wchar_t` vengono specificate con **c** o **C** e le stringhe di caratteri estesi a byte singolo e multibyte vengono specificate con **s** o **S**, a seconda della funzione di formattazione usata. Gli argomenti di tipo stringa e carattere che vengono specificati usando **c** e **s** vengono interpretati come `char` e `char*` dalle funzioni della famiglia `printf` o come `wchar_t` e `wchar_t*` dalle funzioni della famiglia `wprintf`. Gli argomenti di tipo stringa e carattere che vengono specificati usando **C** e **S** vengono interpretati come `wchar_t` e `wchar_t*` dalle funzioni della famiglia `printf` o come `char` e `char*` dalle funzioni della famiglia `wprintf`. Questa funzionalità è specifica di Microsoft.
+Gli argomenti che seguono la stringa di formato vengono interpretati a seconda del carattere *tipo* corrispondente e del prefisso [dimensione](#size) facoltativo. Le conversioni dei tipi di carattere `char` e `wchar_t` vengono specificate con **c** o **C** e le stringhe di caratteri estesi a byte singolo e multibyte vengono specificate con **s** o **S**, a seconda della funzione di formattazione usata. Gli argomenti di tipo stringa e carattere che vengono specificati usando **c** e **s** vengono interpretati come `char` e `char*` dalle funzioni della famiglia `printf` o come `wchar_t` e `wchar_t*` dalle funzioni della famiglia `wprintf`. Gli argomenti di tipo stringa e carattere che vengono specificati usando **C** e **S** vengono interpretati come `wchar_t` e `wchar_t*` dalle funzioni della famiglia `printf` o come `char` e `char*` dalle funzioni della famiglia `wprintf`. Questo comportamento è specifico di Microsoft.
 
-I tipi Integer, ad esempio `short`, `int`, `long`, `long long` e le relative varianti di `unsigned`, vengono specificati tramite **d**, **i**, **o**, **u**, **x**e **x**. I tipi a virgola mobile, ad esempio 1, 2 e 3, vengono specificati **usando**, **a, e**, **e**, **f**, **f**, **g**e **g**. Per impostazione predefinita, a meno che non vengano modificati da un prefisso di *dimensione* , gli argomenti Integer vengono assegnati al tipo 3 e gli argomenti a virgola mobile vengono assegnati al 4. Nei sistemi a 64 bit, un `int` è un valore a 32 bit; di conseguenza gli interi a 64 bit vengono troncati quando vengono formattati per l'output, a meno che non venga usato un prefisso *dimensione* **ll** o **I64**. I tipi di puntatore specificati da **p** usano le dimensioni puntatore predefinite per la piattaforma.
+I tipi Integer, ad esempio `short`, `int`, `long`, `long long`e le relative varianti di `unsigned`, vengono specificati tramite **d**, **i**, **o**, **u**, **x**e **x**. I tipi a virgola mobile, ad esempio `float`, `double`e `long double`, vengono specificati **usando**, **a, e**, **e**, **f**, **f**, **g**e **g**. Per impostazione predefinita, a meno che non vengano modificati da un prefisso di *dimensione* , gli argomenti Integer vengono assegnati al tipo `int` e gli argomenti a virgola mobile vengono assegnati al `double`. Nei sistemi a 64 bit, un `int` è un valore a 32 bit; di conseguenza gli interi a 64 bit vengono troncati quando vengono formattati per l'output, a meno che non venga usato un prefisso *dimensione* **ll** o **I64**. I tipi di puntatore specificati da **p** usano le dimensioni puntatore predefinite per la piattaforma.
 
 > [!NOTE]
-> **Sezione specifica Microsoft** Il carattere tipo **Z** e il comportamento dei caratteri tipo **c**, **C**, **s** e **S** usati con le funzioni `printf` e `wprintf` sono estensioni Microsoft. Lo standard ISO C usa **c** e **s** in modo coerente per i caratteri e le stringhe narrow e **C** e **S** per i caratteri e le stringhe wide in tutte le funzioni di formattazione.
+> **Specifico di Microsoft:** Il carattere di tipo **Z** e il comportamento dei caratteri di tipo **c**, **c**, **s**e **s** quando vengono usati con le funzioni `printf` e `wprintf` sono estensioni Microsoft. Lo standard ISO C usa **c** e **s** in modo coerente per i caratteri e le stringhe narrow e **C** e **S** per i caratteri e le stringhe wide in tutte le funzioni di formattazione.
 
 ### <a name="type-field-characters"></a>Caratteri del campo tipo
 
@@ -81,7 +81,7 @@ I tipi Integer, ad esempio `short`, `int`, `long`, `long long` e le relative var
 
 A partire da Visual Studio 2015, se l'argomento che corrisponde a un identificatore di conversione a virgola mobile (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) è infinito, non definito o NaN, l'output formattato è conforme allo standard C99. Questa tabella elenca l'output formattato:
 
-|Value|Output|
+|Valore|Output|
 |-----------|------------|
 |infinity|`inf`|
 |NaN non interattivo|`nan`|
@@ -92,7 +92,7 @@ Qualsiasi valore tra questi può essere preceduto da un segno. Se un carattere i
 
 Prima di Visual Studio 2015, la libreria CRT usava un formato diverso, non standard per l'output di valori infinite, indefinite e NaN:
 
-|Value|Output|
+|Valore|Output|
 |-----------|------------|
 |+ infinito|`1.#INF` *random-digits*|
 |- infinito|`-1.#INF` *random-digits*|
@@ -160,7 +160,7 @@ Il carattere *tipo* determina l'interpretazione di *precisione* o la precisione 
 
 ### <a name="how-precision-values-affect-type"></a>Effetti del tipo sui valori di precisione
 
-|Digitare|Significato|Impostazione predefinita|
+|Tipo di|Significato|Impostazione predefinita|
 |----------|-------------|-------------|
 |**a**, **A**|La precisione indica il numero di cifre dopo il punto.|La precisione predefinita è 13. Se la precisione è 0 non viene stampato alcun separatore decimale, a meno che non venga usato il flag **#** .|
 |**c**, **C**|La precisione non ha alcun effetto.|Viene stampato il carattere.|
@@ -204,7 +204,7 @@ In Visual C++, anche se `long double` è un tipo distinto, ha la stessa rapprese
 Un identificatore di tipo **hc** o **hC** è sinonimo di **c** nelle funzioni `printf` e di **C** nelle funzioni `wprintf`. Un identificatore di tipo **lc**, **lC**, **wc** o **wC** è sinonimo di **C** nelle funzioni `printf` e di **c** nelle funzioni `wprintf`. Un identificatore di tipo **hs** o **hS** è sinonimo di **s** nelle funzioni `printf` e di **S** nelle funzioni `wprintf`. Un identificatore di tipo **ls**, **lS**, **ws** o **wS** è sinonimo di **S** nelle funzioni `printf` e di **s** nelle funzioni `wprintf`.
 
 > [!NOTE]
-> **Sezione specifica Microsoft** I prefissi di modifica dimensione argomento **I** (i maiuscola), **I32**, **I64** e **w** sono estensioni Microsoft e non sono compatibili con ISO C. Il prefisso **h** usato con dati di tipo `char` e il prefisso **l** (L minuscola) usato con dati di tipo `double` sono estensioni Microsoft.
+> **Specifico di Microsoft:** I prefissi dei modificatori di dimensioni **argomento i (** i maiuscole), **i32**, **I64**e **w** sono estensioni Microsoft e non sono compatibili con ISO C. Il prefisso **h** usato con dati di tipo `char` e il prefisso **l** (L minuscola) usato con dati di tipo `double` sono estensioni Microsoft.
 
 ## <a name="see-also"></a>Vedere anche
 

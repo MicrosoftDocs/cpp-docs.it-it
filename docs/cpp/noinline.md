@@ -7,22 +7,22 @@ helpviewer_keywords:
 - noinline __declspec keyword
 - __declspec keyword [C++], noinline
 ms.assetid: f259d55b-dec7-4bde-8cf9-14521e4fdc42
-ms.openlocfilehash: e155726ad1f2f3f6f0501d3aebf7fa14e620d6bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e424846c46dd50852b62008c4f1f38827da849c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377400"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857411"
 ---
 # <a name="noinline"></a>noinline
 
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft
+**Sezione specifica Microsoft**
 
-**noinline** indica al compilatore di non incorporare mai una funzione membro specifica (funzione in una classe).
+**__declspec (noinline)** indica al compilatore di non incorporare mai una particolare funzione membro (funzione in una classe).
 
 Può essere preferibile non incorporare una funzione se è ridotta e non fondamentale per le prestazioni del codice. Ovvero se la funzione è di piccole dimensioni e probabilmente non viene chiamata spesso, ad esempio una funzione che gestisce una condizione di errore.
 
-Tenere presente che se una funzione è contrassegnata **noinline**, la funzione chiamante sarà più piccoli e, pertanto, se stesso un candidato per l'incorporamento del compilatore.
+Tenere presente che se una funzione è contrassegnata come **noinline**, la funzione chiamante sarà più piccola e, di conseguenza, un candidato per l'incorporamento del compilatore.
 
 ```cpp
 class X {

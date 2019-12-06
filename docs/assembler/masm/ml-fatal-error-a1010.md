@@ -1,38 +1,38 @@
 ---
 title: Errore ML irreversibile A1010
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1010
 helpviewer_keywords:
 - A1010
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
-ms.openlocfilehash: eb4d77b856e93a8d64ee6c51bec63ceae59b22e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ec82f7f6d559d977a9aa039ed91689a0ef4d49a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202065"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856878"
 ---
 # <a name="ml-fatal-error-a1010"></a>Errore ML irreversibile A1010
 
-**annidamento di blocco senza corrispondenza:**
+**annidamento blocchi senza corrispondenza:**
 
-Un inizio blocco non è corrispondente end oppure una fine del blocco non è un inizio corrisponda. Uno dei seguenti potrebbe essere interessato:
+Un blocco che inizia non ha un elemento End corrispondente o un elemento End di blocco non ha un inizio corrispondente. È possibile che sia necessario uno dei seguenti elementi:
 
-- Una direttiva di alto livello, ad esempio [. IF](../../assembler/masm/dot-if.md), [. Ripetere](../../assembler/masm/dot-repeat.md), o [. MENTRE](../../assembler/masm/dot-while.md).
+- Una direttiva di alto livello, ad esempio [. SE](../../assembler/masm/dot-if.md), [. Ripetere](../../assembler/masm/dot-repeat.md)o [. MENTRE](../../assembler/masm/dot-while.md).
 
-- Una direttiva condizionale, assembly, ad esempio [IF](../../assembler/masm/if-masm.md), [ripetere](../../assembler/masm/repeat.md), o **mentre**.
+- Una direttiva di assembly condizionale, ad esempio [if](../../assembler/masm/if-masm.md), [Repeat](../../assembler/masm/repeat.md)o **while**.
 
-- Una definizione di struttura o unione.
+- Una struttura o una definizione di Unione.
 
-- Una definizione della procedura.
+- Definizione di una routine.
 
-- Una definizione del segmento.
+- Definizione di segmento.
 
-- Oggetto [POPCONTEXT](../../assembler/masm/popcontext.md) direttiva.
+- Direttiva [PopContext](../../assembler/masm/popcontext.md) .
 
-- Un assembly di condizionale direttiva, ad esempio un [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), o **ENDIF** senza il corrispondente [IF](../../assembler/masm/if-masm.md).
+- Una direttiva di assembly condizionale, ad esempio [else](../../assembler/masm/else-masm.md), [ElseIf](../../assembler/masm/elseif-masm.md)o **endif** senza un oggetto [if](../../assembler/masm/if-masm.md)corrispondente.
 
 ## <a name="see-also"></a>Vedere anche
 

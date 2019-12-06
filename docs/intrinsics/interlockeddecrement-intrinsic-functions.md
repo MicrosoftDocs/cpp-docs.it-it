@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217685"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857918"
 ---
 # <a name="_interlockeddecrement-intrinsic-functions"></a>Funzioni intrinseche _InterlockedDecrement
 
@@ -100,14 +100,14 @@ __int64 _InterlockedDecrement64_nf(
 
 ### <a name="parameters"></a>Parametri
 
-*lpAddend*\
+\ *lpAddend*
 [in, out] Puntatore alla variabile da decrementare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Il valore restituito è il valore ridotto risultante.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Funzione intrinseca|Architettura|
 |---------------|------------------|
@@ -115,7 +115,7 @@ Il valore restituito è il valore ridotto risultante.
 |`_InterlockedDecrement64`|ARM, x64, ARM64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin. h >
 
 ## <a name="remarks"></a>Note
 
@@ -123,7 +123,7 @@ Ci sono diverse varianti di `_InterlockedDecrement` che variano in base ai tipi 
 
 Mentre la funzione `_InterlockedDecrement` opera su valori integer a 32 bit, `_InterlockedDecrement16` opera su valori integer a 16 bit e `_InterlockedDecrement64` opera su valori integer a 64 bit.
 
-Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche con `_nf` suffisso ("nessun limite") non fungono da barriera di memoria.
+Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche con un suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.
 
 La variabile a cui punta il parametro `lpAddend` deve essere allineata a un limite a 32 bit; in caso contrario, questa funzione non andrà a buon fine su sistemi x86 multiprocessore e su qualsiasi sistema non x86. Per ulteriori informazioni, vedere [align](../cpp/align-cpp.md).
 
@@ -196,6 +196,8 @@ void __cdecl SimpleThread(void* pParam) {
    printf_s("Thread %d complete: %d\n", threadNum, data);
 }
 ```
+
+**Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

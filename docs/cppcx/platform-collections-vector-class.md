@@ -1,6 +1,6 @@
 ---
 title: Classe Platform::Collections::Vector
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816571"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857892"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -84,14 +84,14 @@ Se si tenta di usare un tipo **vector** in un valore restituito pubblico o in un
 |[Vector:: GetMany](#getmany)|Recupera una sequenza di elementi dall'oggetto Vector corrente, a partire dall'indice specificato.|
 |[Vector:: GetView](#getview)|Restituisce una visualizzazione di sola lettura di un oggetto Vector, ovvero [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
 |[Vector::IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto Vector corrente e, se lo trova, restituisce l'indice dell'elemento.|
-|[Vector:: InsertAt](#insertat)|Inserisce l'elemento specificato nell'oggetto Vector corrente dopo l'elemento identificato dall'indice specificato.|
+|[Vector:: InsertAt](#insertat)|Inserisce l'elemento specificato nel vettore corrente in corrispondenza dell'elemento identificato dall'indice specificato.|
 |[Vector::ReplaceAll](#replaceall)|Elimina gli elementi nell'oggetto Vector corrente, quindi li inserisce dalla matrice specificata.|
 |[Vector::RemoveAt](#removeat)|Elimina l'elemento identificato dall'indice specificato dall'oggetto Vector corrente.|
 |[Vector:: RemoveAtEnd](#removeatend)|Elimina l'elemento alla fine dell'oggetto Vector corrente.|
 |[Vector::SetAt](#setat)|Assegna il valore specificato all'elemento nell'oggetto Vector corrente che è identificato dall'indice specificato.|
 |[Vector::Size](#size)|Restituisce il numero di elementi nell'oggetto Vector corrente.|
 
-### <a name="events"></a>Events
+### <a name="events"></a>eventi
 
 |||
 |-|-|
@@ -102,7 +102,7 @@ Se si tenta di usare un tipo **vector** in un valore restituito pubblico o in un
 
 `Vector`
 
-### <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti di
 
 **Intestazione:** collection.h
 
@@ -244,7 +244,7 @@ IndexOf usa std::find_if per trovare l'elemento. I tipi di elemento personalizza
 
 ##  <a name="insertat"></a>Metodo Vector:: InsertAt
 
-Inserisce l'elemento specificato nell'oggetto Vector corrente dopo l'elemento identificato dall'indice specificato.
+Inserisce l'elemento specificato nel vettore corrente in corrispondenza dell'elemento identificato dall'indice specificato.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -258,7 +258,7 @@ virtual void InsertAt(unsigned int index, T item)
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 *item*<br/>
-Elemento da inserire nel vettore dopo l'elemento specificato da *index*. Il tipo di *elemento* è definito dal TypeName *T* .
+Elemento da inserire nel vettore in corrispondenza dell'elemento specificato da *index*. Il tipo di *elemento* è definito dal TypeName *T* .
 
 ## <a name="removeat"></a>Metodo Vector:: RemoveAt
 

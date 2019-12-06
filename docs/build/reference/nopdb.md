@@ -1,18 +1,18 @@
 ---
 title: /NOPDB
 description: L'opzione/NOPDB impedisce a DUMPBIN di caricare e cercare informazioni sui simboli nei file PDB.
-ms.date: 10/29/2019
+ms.date: 12/04/2019
 f1_keywords:
 - /NOPDB
 helpviewer_keywords:
 - /NOPDB dumpbin option
 - /NOPDB
-ms.openlocfilehash: 3b745049517888d13de245d4e29be3985c122ada
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 7b0c01e59b52bcec6ddf09416dd6aac9999527a6
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73145735"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856969"
 ---
 # <a name="nopdb"></a>/NOPDB
 
@@ -24,7 +24,7 @@ Indica a DUMPBIN di non caricare e cercare le informazioni sui simboli nei file 
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita, DUMPBIN tenta di caricare i file PDB per i file oggetto, le librerie o i file eseguibili di destinazione. DUMPBIN utilizza queste informazioni per trovare una corrispondenza tra gli indirizzi e i nomi dei simboli. Il processo può richiedere molto tempo se i file PDB sono di grandi dimensioni o devono essere caricati da un server remoto. L'opzione **/NOPDB** indica a DUMPBIN di ignorare questo passaggio. Vengono stampati solo gli indirizzi e le informazioni sui simboli disponibili nel file oggetto, nella libreria o nell'eseguibile.
+Per impostazione predefinita, DUMPBIN tenta di caricare i file PDB per i relativi file eseguibili di destinazione. DUMPBIN utilizza queste informazioni per trovare una corrispondenza tra gli indirizzi e i nomi dei simboli. Il processo può richiedere molto tempo se i file PDB sono di grandi dimensioni o devono essere caricati da un server remoto. L'opzione **/NOPDB** indica a DUMPBIN di ignorare questo passaggio. Vengono stampati solo gli indirizzi e le informazioni sui simboli disponibili nell'eseguibile.
 
 ### <a name="to-set-the-nopdb-linker-option-in-visual-studio"></a>Per impostare l'opzione del linker/NOPDB in Visual Studio
 
