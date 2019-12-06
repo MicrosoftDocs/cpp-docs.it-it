@@ -4,12 +4,12 @@ description: Opzioni per l'I/O di stringa formattato C++disponibili nella modern
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: facb0b62cc1e92ed09a9ba729d766e5db7404282
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 7ea858a8a8126d3754783edee0dd3ea5409e5f73
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74308175"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898820"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formattazione di stringhe e I/O (C++ moderno)
 
@@ -49,13 +49,13 @@ Di seguito sono elencati alcuni vantaggi di `Boost.Format`:
 
 - Safe: indipendente dai tipi e genera un'eccezione per gli errori, ad esempio la specifica di un numero eccessivo di elementi o troppi.
 
-- Estendibile: funziona per qualsiasi tipo che può essere trasmesso.
+- Estensibile: funziona per qualsiasi tipo che può essere trasmesso.
 
 - Praticità: standard POSIX e stringhe di formato simili.
 
-Sebbene `Boost.Format` sia basato sulle C++ funzionalità di [> di\<iostream](../standard-library/iostream-programming.md) , che sono sicure ed estendibili, non sono ottimizzate per le prestazioni. Quando è necessaria l'ottimizzazione delle prestazioni, prendere in considerazione la funzione C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) e [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), che sono veloci e facili da usare. Tuttavia, non sono estendibili o sicure da vulnerabilità. (Le versioni sicure esistono, ma comportano una lieve riduzione delle prestazioni. Per ulteriori informazioni, vedere [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) e [sprintf_s, _sprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md), swprintf_s _swprintf_s_l).
+Sebbene `Boost.Format` sia basato sulle C++ funzionalità di [> di\<iostream](../standard-library/iostream-programming.md) , che sono sicure ed estendibili, non sono ottimizzate per le prestazioni. Quando è necessaria l'ottimizzazione delle prestazioni, prendere in considerazione la funzione C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) e [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), che sono veloci e facili da usare. Tuttavia, non sono estendibili o sicure da vulnerabilità. Le versioni sicure esistono, ma comportano una lieve riduzione delle prestazioni. Per ulteriori informazioni, vedere [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) e [sprintf_s, _sprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md), swprintf_s _swprintf_s_l).
 
-Il codice seguente illustra alcune delle funzionalità di formattazione Boost.
+Nel codice seguente vengono illustrate alcune delle funzionalità di formattazione Boost.
 
 ```cpp
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );

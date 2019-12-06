@@ -5,18 +5,18 @@ f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: d870101c80c8a1f6164e7c89dfbb452fb0a3f9a2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7587261c81739bf19aa0dc4bb80459efa617ad6a
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246224"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898757"
 ---
-# <a name="ltsystemerrorgt-enums"></a>Enumerazioni &lt;system_error&gt;
+# <a name="ltsystem_errorgt-enums"></a>Enumerazioni &lt;system_error&gt;
 
-## <a name="errc"></a> errc
+## <a name="errc"></a>ERRC
 
-Fornisce i nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>`.
+Fornisce nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>`.
 
 ```
 class errc {
@@ -103,7 +103,7 @@ class errc {
 
 ### <a name="remarks"></a>Note
 
-## <a name="io_errc"></a> io_errc
+## <a name="io_errc"></a>io_errc
 
 Fornisce nomi simbolici per le condizioni di errore in \<iostream>. Può essere usata creare gli oggetti [error_condition](../standard-library/error-condition-class.md) da confrontare con il valore restituito dalla funzione [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()`.
 

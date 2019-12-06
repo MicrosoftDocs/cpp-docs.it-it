@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683336"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898769"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Avviso del compilatore (livello 3) C4996
 
@@ -23,7 +23,7 @@ Il codice usa una funzione, un membro di classe, una variabile o un TypeDef cont
 
 ## <a name="remarks"></a>Note
 
-Molte funzioni, funzioni membro, funzioni di modello e variabili globali nelle librerie di Visual Studio sono *deprecate*. Alcune, ad esempio le funzioni POSIX, sono deprecate perché hanno un nome preferito diverso. Alcune funzioni della libreria di runtime C sono deprecate perché non sono sicure e hanno una variante più sicura. Altre sono deprecate perché sono obsolete. I messaggi di deprecazione includono in genere una sostituzione suggerita per la funzione o la variabile globale deprecata.
+Molte funzioni, funzioni membro, funzioni di modello e variabili globali nelle librerie di Visual Studio sono *deprecate*. Alcune, ad esempio le funzioni POSIX e specifiche di Microsoft, sono deprecate perché ora hanno un nome preferito diverso. Alcune funzioni della libreria di runtime C sono deprecate perché non sono sicure e hanno una variante più sicura. Altre sono deprecate perché sono obsolete. I messaggi di deprecazione includono in genere una sostituzione suggerita per la funzione o la variabile globale deprecata.
 
 ## <a name="turn-off-the-warning"></a>Disattiva avviso
 
@@ -61,9 +61,9 @@ Di seguito sono riportate alcune delle fonti comuni di avvisi ed errori di C4996
 
 **Il nome POSIX per questo elemento è deprecato. In alternativa, usare ISO C e C++ il nome conforme:** *New-Name*. **Per informazioni dettagliate, vedere la guida online.**
 
-Microsoft ha rinominato alcune funzioni POSIX in CRT per conformarsi alle regole C99 e C++ 03 per i nomi delle funzioni globali definite dall'implementazione. Solo i nomi sono deprecati, non le funzioni. Nella maggior parte dei casi, un carattere di sottolineatura principale è stato aggiunto al nome della funzione POSIX per creare un nome conforme agli standard. Il compilatore genera un avviso di deprecazione per il nome della funzione originale e suggerisce il nome preferito.
+Microsoft ha rinominato alcune funzioni di libreria specifiche di POSIX e Microsoft in CRT per conformarsi ai vincoli C99 e C++ 03 sui nomi definiti dall'implementazione globale e riservati. *Solo i nomi sono deprecati, non le funzioni*. Nella maggior parte dei casi, un carattere di sottolineatura principale è stato aggiunto al nome della funzione per creare un nome conforme. Il compilatore genera un avviso di deprecazione per il nome della funzione originale e suggerisce il nome preferito.
 
-Per risolvere questo problema, in genere è consigliabile modificare il codice per usare invece i nomi di funzione suggeriti. Tuttavia, i nomi aggiornati sono specifici di Microsoft. Se è necessario usare i nomi di funzione esistenti per motivi di portabilità, è possibile disattivare questi avvisi. Le funzioni POSIX sono ancora disponibili nella libreria con i rispettivi nomi originali.
+Per risolvere questo problema, in genere è consigliabile modificare il codice per usare invece i nomi di funzione suggeriti. Tuttavia, i nomi aggiornati sono specifici di Microsoft. Se è necessario usare i nomi di funzione esistenti per motivi di portabilità, è possibile disattivare questi avvisi. Le funzioni sono ancora disponibili nella libreria con i rispettivi nomi originali.
 
 Per disattivare gli avvisi di deprecazione per queste funzioni, definire la macro del preprocessore **\_CRT\_NONSTDC\_nessun avviso\_** . È possibile definire questa macro dalla riga di comando includendo l'opzione `/D_CRT_NONSTDC_NO_WARNINGS`.
 

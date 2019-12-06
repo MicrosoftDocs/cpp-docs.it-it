@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449754"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898857"
 ---
-# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+# <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Includere l'intestazione \<system_error > per definire la classe `system_error` di eccezione e i modelli correlati per l'elaborazione degli errori di sistema di basso livello.
+Includere l'intestazione \<system_error > per definire la classe di eccezione `system_error` e i modelli correlati per l'elaborazione degli errori di sistema di basso livello.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Intestazione:** \<system_error>
 
@@ -26,7 +26,7 @@ Includere l'intestazione \<system_error > per definire la classe `system_error` 
 
 ## <a name="members"></a>Members
 
-### <a name="objects"></a>Oggetti
+### <a name="objects"></a>Oggetti di
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Includere l'intestazione \<system_error > per definire la classe `system_error` 
 
 |||
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|Fornisce i nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>`.|
+|[errc](../standard-library/system-error-enums.md#errc)|Fornisce nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>`.|
 
 ### <a name="classes-and-structs"></a>Classi e struct
 
