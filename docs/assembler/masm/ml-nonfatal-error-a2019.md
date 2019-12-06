@@ -1,26 +1,26 @@
 ---
 title: Errore ML non irreversibile A2019
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2019
 helpviewer_keywords:
 - A2019
 ms.assetid: 7dff209b-6d91-4e39-88a3-5d6329bac537
-ms.openlocfilehash: 48a80c643bb42ce39df00297c7f5579445c99df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23412ccd6dc84d889b62acfb4ba09cb1bde8b82a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201936"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856727"
 ---
 # <a name="ml-nonfatal-error-a2019"></a>Errore ML non irreversibile A2019
 
-**operando deve essere il tipo di RECORD o campo**
+**l'operando deve essere un tipo di RECORD o un campo**
 
-Nell'esempio di operando il [larghezza](../../assembler/masm/operator-width.md) o [maschera](../../assembler/masm/operator-mask.md) operatore non è valido.
+L'operando che segue l'operatore [Width](../../assembler/masm/operator-width.md) o [mask](../../assembler/masm/operator-mask.md) non è valido.
 
-Il [larghezza](../../assembler/masm/operator-width.md) operatore accetta un operando che costituisce il nome di un campo o un record. Il [MASK](../../assembler/masm/operator-mask.md) operatore accetta un operando che costituisce il nome di un campo o un tipo di record.
+L'operatore [Width](../../assembler/masm/operator-width.md) accetta un operando che corrisponde al nome di un campo o di un record. L'operatore [mask](../../assembler/masm/operator-mask.md) accetta un operando che corrisponde al nome di un campo o di un tipo di record.
 
 ## <a name="see-also"></a>Vedere anche
 
