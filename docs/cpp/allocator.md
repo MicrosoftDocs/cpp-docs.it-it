@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: f9c8de7c8686b89a2ab9570a2558e3f649e545b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e2615829f6491bf660859fbc86ebcd07a56c5fe
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155238"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857684"
 ---
 # <a name="allocator"></a>allocator
 
 **Sezione specifica Microsoft**
 
-Il **allocatore** identificatore di dichiarazione può essere applicata alle funzioni di allocazione della memoria personalizzati per visualizzare le allocazioni tramite Event Tracing for Windows (ETW).
+L'identificatore di dichiarazione dell' **allocatore** può essere applicato alle funzioni di allocazione della memoria personalizzate per rendere visibili le allocazioni tramite Event Tracing for Windows (ETW).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,10 +27,12 @@ Il **allocatore** identificatore di dichiarazione può essere applicata alle fun
 
 ## <a name="remarks"></a>Note
 
-Il profiler della memoria nativa in Visual Studio funziona mediante la raccolta di allocazione dati di eventi ETW generati in fase di runtime. Gli allocatori in CRT e Windows SDK sono stati annotati a livello di origine in modo che sia possibile acquisirne i dati di allocazione. Se la scrittura degli allocatori, quindi qualsiasi funzione che restituisce un puntatore alla memoria heap appena allocata possono essere decorate con `__declspec(allocator)`, come illustrato in questo esempio per myMalloc:
+Il profiler della memoria nativa in Visual Studio funziona raccogliendo i dati degli eventi ETW di allocazione generati da durante il Runtime. Gli allocatori in CRT e Windows SDK sono stati annotati a livello di origine in modo che sia possibile acquisirne i dati di allocazione. Se si scrivono allocatori personalizzati, tutte le funzioni che restituiscono un puntatore alla memoria heap appena allocata possono essere decorate con `__declspec(allocator)`, come illustrato in questo esempio per malloc:
 
 ```cpp
 __declspec(allocator) void* myMalloc(size_t size)
 ```
 
-Per altre informazioni, vedere [misurare l'utilizzo della memoria in Visual Studio](/visualstudio/profiling/memory-usage) e [gli eventi dell'heap ETW nativi Custom](/visualstudio/profiling/custom-native-etw-heap-events).
+Per altre informazioni, vedere [misurare l'utilizzo della memoria in Visual Studio](/visualstudio/profiling/memory-usage) e [eventi heap ETW nativi personalizzati](/visualstudio/profiling/custom-native-etw-heap-events).
+
+**Fine sezione specifica Microsoft**

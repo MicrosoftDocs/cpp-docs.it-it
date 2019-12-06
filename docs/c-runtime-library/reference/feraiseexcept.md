@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941124"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857827"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -52,9 +52,9 @@ Se tutte le eccezioni specificate vengono generate correttamente, restituisce 0.
 
 ## <a name="remarks"></a>Note
 
-La funzione **feraiseexcept** tenta di generare le eccezioni a virgola mobile specificate da *excepts*.   La funzione **feraiseexcept** supporta queste macro di eccezioni, definite \<in fenv. h >:
+La funzione **feraiseexcept** tenta di generare le eccezioni a virgola mobile specificate da *excepts*.   La funzione **feraiseexcept** supporta queste macro di eccezioni, definite in \<fenv. h >:
 
-|Macro di eccezioni|DESCRIZIONE|
+|Macro di eccezioni|Descrizione|
 |---------------------|-----------------|
 |FE_DIVBYZERO|Si è verificato un errore di singolarità o polo in un'operazione precedente a virgola mobile. È stato creato un valore di infinità.|
 |FE_INEXACT|La funzione è stata forzata ad arrotondare il risultato archiviato di un'operazione precedente a virgola mobile.|
@@ -67,15 +67,15 @@ L'argomento *excepts* può essere zero, uno dei valori di macro di eccezione o l
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 
-**Specifico di Microsoft:** Le eccezioni specificate in *excepts* vengono generate nell'ordine FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Tuttavia, FE_INEXACT può essere generato quando viene generato FE_OVERFLOW o FE_UNDERFLOW, anche se non è specificato in *excepts*. **Fine sezione specifica Microsoft**
+**Specifico di Microsoft:** Le eccezioni specificate in *excepts* vengono generate nell'ordine FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW FE_INEXACT. Tuttavia, FE_INEXACT può essere generato quando viene generato FE_OVERFLOW o FE_UNDERFLOW, anche se non è specificato in *excepts*.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

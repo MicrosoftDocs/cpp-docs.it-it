@@ -13,12 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6cfbcd325dc895719bad5dccc9c19bcda90cdaa0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222295"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858074"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Direttive pragma e parola chiave __pragma
 
@@ -79,9 +79,7 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>Parola chiave __pragma ()
 
-**Specifico di Microsoft**
-
-Il compilatore supporta inoltre la parola chiave **__pragma** , che ha la stessa funzionalità della direttiva **#pragma** . La differenza è che la parola chiave **__pragma** può essere utilizzata inline in una definizione di macro. La direttiva **#pragma** non è utilizzabile in una definizione di macro, perché il compilatore interpreta il carattere di cancelletto (' #') nella direttiva come [operatore per (#)](../preprocessor/stringizing-operator-hash.md).
+Il compilatore supporta inoltre la parola chiave **__pragma** specifica di Microsoft, che ha la stessa funzionalità della direttiva **#pragma** . La differenza è che la parola chiave **__pragma** può essere utilizzata inline in una definizione di macro. La direttiva **#pragma** non è utilizzabile in una definizione di macro, perché il compilatore interpreta il carattere di cancelletto (' #') nella direttiva come [operatore per (#)](../preprocessor/stringizing-operator-hash.md).
 
 Nell'esempio di codice riportato di seguito viene illustrato come utilizzare la parola chiave **__pragma** in una macro. Questo codice è stato estratto dall'intestazione mfcdual.h presente nell'esempio ACDUAL in "Esempi di supporto COM per il compilatore":
 
@@ -102,8 +100,6 @@ _hr = DualHandleException(_riidSource, e); \
 END_CATCH_ALL \
 return _hr; \
 ```
-
-**Termina specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

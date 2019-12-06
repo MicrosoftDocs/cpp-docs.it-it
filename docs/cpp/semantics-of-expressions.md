@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331213"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857320"
 ---
 # <a name="semantics-of-expressions"></a>Semantica delle espressioni
 
-Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei relativi operatori ([Precedenza e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md) nelle [convenzioni lessicali](../cpp/lexical-conventions.md), vengono illustrate le relazioni di C++ operatori impongono sulle espressioni.)
+Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei relativi operatori ([Precedenza e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md) degli operatori nelle [convenzioni lessicali](../cpp/lexical-conventions.md), Mostra C++ le relazioni imposte dagli operatori sulle espressioni).
 
 ## <a name="order-of-evaluation"></a>Ordine di valutazione
 
@@ -43,7 +43,7 @@ int main()
 54
 ```
 
-![Ordine di valutazione di un'espressione](../cpp/media/vc38zv1.gif "ordine di valutazione di un'espressione") <br/>
+![Ordine di valutazione in un'espressione](../cpp/media/vc38zv1.gif "Ordine di valutazione di un'espressione") <br/>
 Ordine di valutazione delle espressioni
 
 L'ordine in cui viene valutata l'espressione nella figura riportata sopra è determinato dalla precedenza e dall'associatività degli operatori:
@@ -52,27 +52,27 @@ L'ordine in cui viene valutata l'espressione nella figura riportata sopra è det
 
 1. L'addizione (+) ha la precedenza più elevata successiva, pertanto `a` viene aggiunto al prodotto di `b` e `c`.
 
-1. Spostamento a sinistra (<<) ha la precedenza più bassa nell'espressione, ma esistono due occorrenze. Poiché l'operatore di spostamento a sinistra raggruppa gli elementi da sinistra verso destra, viene prima valutata la sottoespressione sinistra, quindi la sottoespressione destra.
+1. Lo spostamento a sinistra (< <) presenta la precedenza più bassa nell'espressione, ma sono presenti due occorrenze. Poiché l'operatore di spostamento a sinistra raggruppa gli elementi da sinistra verso destra, viene prima valutata la sottoespressione sinistra, quindi la sottoespressione destra.
 
 Quando per raggruppare le sottoespressioni vengono utilizzate le parentesi, queste alterano la precedenza e anche l'ordine in cui l'espressione viene valutata, come illustrato di seguito.
 
-![Ordine di valutazione dell'espressione tra parentesi](../cpp/media/vc38zv2.gif "ordine di valutazione dell'espressione con parentesi") <br/>
-Ordine di valutazione dell'espressione con parentesi
+![Ordine di valutazione dell'espressione con parentesi](../cpp/media/vc38zv2.gif "Ordine di valutazione di un'espressione con parentesi") <br/>
+Ordine di valutazione delle espressioni tra parentesi
 
 Le espressioni come quelle nella figura riportata sopra vengono valutate esclusivamente per i relativi effetti collaterali (in questo caso, per trasferire le informazioni del dispositivo di uscita di output standard).
 
 ## <a name="notation-in-expressions"></a>Annotazioni nelle espressioni
 
-Il linguaggio C++ specifica determinate compatibilità quando specifica gli operandi. Nella tabella seguente mostra i tipi di operandi accettabili dagli operatori che richiedono gli operandi di tipo *tipo*.
+Il linguaggio C++ specifica determinate compatibilità quando specifica gli operandi. Nella tabella seguente sono illustrati i tipi di operandi accettabili dagli operatori che richiedono operandi di tipo *Type*.
 
 ### <a name="operand-types-acceptable-to-operators"></a>Tipi di operando accettabili dagli operatori
 
 |Tipo previsto|Tipi consentiti|
 |-------------------|-------------------|
-|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
-|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
-|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
-|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
+|*type*|*tipo* di `const`<br /> *tipo* di `volatile`<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> *tipo* di `volatile const`<br /> `volatile const` *type*&|
+|*type* \*|*type* \*<br /> `const` *tipo* \*<br /> `volatile` *tipo* \*<br /> `volatile const` *tipo* \*|
+|*tipo* di `const`|*type*<br /> *tipo* di `const`<br />`const` *type*&|
+|*tipo* di `volatile`|*type*<br /> *tipo* di `volatile`<br /> `volatile` *type*&|
 
 Poiché le regole precedenti possono essere sempre utilizzate in combinazione, qualora sia previsto un puntatore, è possibile fornire un puntatore di tipo const a un oggetto di tipo volatile.
 
@@ -88,7 +88,7 @@ func( i, ++i );
 
 Il linguaggio C++ non garantisce l'ordine in cui gli argomenti a una chiamata di funzione vengano valutati. Pertanto, nell'esempio precedente, `func` potrebbe ottenere i valori 7 e 8 o 8 e 8 per i relativi parametri, a seconda se i parametri vengono valutati da sinistra verso destra o da destra verso sinistra.
 
-## <a name="c-sequence-points-microsoft-specific"></a>Punti di sequenza C++ (Specifica di Microsoft)
+## <a name="c-sequence-points-microsoft-specific"></a>C++punti di sequenza (specifici di Microsoft)
 
 Un'espressione può modificare il valore di un oggetto una sola volta tra "punti di sequenza" consecutivi.
 

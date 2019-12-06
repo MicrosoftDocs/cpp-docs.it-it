@@ -9,24 +9,24 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244220"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857333"
 ---
 # <a name="references-c"></a>Riferimenti (C++)
 
-Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto che si trova in un'altra posizione in memoria. A differenza di un puntatore, dopo l'inizializzazione non è possibile impostare un riferimento in modo che indichi un oggetto diverso o che sia impostato su Null. Esistono due tipi di riferimenti: i riferimenti lvalue che fanno riferimento a un nome variabile e i riferimenti rvalue che fanno riferimento a un [oggetto temporaneo](../cpp/temporary-objects.md). I & operatore indica un riferimento lvalue e & & operatore indica un riferimento rvalue o un riferimento universale (rvalue o lvalue) a seconda del contesto.
+Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto che si trova in un'altra posizione in memoria. A differenza di un puntatore, dopo l'inizializzazione non è possibile impostare un riferimento in modo che indichi un oggetto diverso o che sia impostato su Null. Esistono due tipi di riferimento: i riferimenti lvalue che fanno riferimento a una variabile denominata e a riferimenti rvalue che fanno riferimento a un [oggetto temporaneo](../cpp/temporary-objects.md). L'operatore & indica un riferimento lvalue e l'operatore & & indica un riferimento rvalue o un riferimento universale (rvalue o lvalue), a seconda del contesto.
 
 È possibile dichiarare i riferimenti tramite la seguente sintassi:
 
-> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
+> \[*Storage-Class-Specifiers*] \[*CV-Qualifiers*] *Type-Specifiers* \[*ms-modifier*] *dichiaratore* \[*espressione* **=** ] **;**
 
 È possibile utilizzare qualsiasi dichiaratore valido che specifica un riferimento. A meno che il riferimento non sia un riferimento al tipo di funzione o di matrice, si applica la sintassi seguente semplificata:
 
-> \[*identificatori di classi di archiviazione*] \[ *elementi cv-Qualifier*] *gli identificatori di tipo* \[ **&** o **&&**] \[ *elementi cv-Qualifier*] *identificatore* \[ **=** *espressione*]**;**
+> \[*Storage-Class-Specifiers*] \[*CV-Qualifiers*] *type-specifiers* \[ **&** o **&&** ] \[*CV-Qualifiers*] *identificatore* \[ *espressione*=] **;**
 
 I riferimenti vengono dichiarati tramite la seguente sequenza:
 
@@ -34,23 +34,23 @@ I riferimenti vengono dichiarati tramite la seguente sequenza:
 
    - Identificatore della classe di archiviazione facoltativo.
 
-   - Facoltativo **const** e/o **volatile** qualificatori.
+   - Qualificatori **const** e/o **volatile** facoltativi.
 
    - Il tipo di identificatore: il nome di un tipo.
 
 1. Dichiaratore:
 
-   - Un modificatore facoltativo specifico di Microsoft. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Modificatore specifico di Microsoft facoltativo. Per ulteriori informazioni, vedere [modificatori specifici di Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-   - Il **&** operatore o **&&** operatore.
+   - Operatore **&** o operatore **&&** .
 
-   - Facoltativo **const** e/o **volatile** qualificatori.
+   - Qualificatori facoltativo **const** e/o **volatile** .
 
    - Identificatore.
 
 1. Inizializzatore facoltativo.
 
-Le forme più complesse dichiaratore per puntatori a matrici e funzioni si applicano anche ai riferimenti a matrici e funzioni. Per altre informazioni, vedere [puntatori](../cpp/pointers-cpp.md).
+I form dei dichiaratori più complessi per i puntatori a matrici e funzioni si applicano anche ai riferimenti a matrici e funzioni. Per ulteriori informazioni, vedere [puntatori](../cpp/pointers-cpp.md).
 
 Più dichiaratori e inizializzatori possono essere visualizzati in un elenco separato da virgola che segue un singolo identificatore di dichiarazione. Ad esempio:
 

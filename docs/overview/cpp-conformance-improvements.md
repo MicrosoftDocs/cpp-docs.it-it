@@ -1,16 +1,16 @@
 ---
 title: Miglioramenti della conformità di C++
-ms.date: 10/04/2019
+ms.date: 12/04/2019
 description: Microsoft C++ in Visual Studio si avvicina alla conformità completa con lo standard di linguaggio C++20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627081"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858035"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Miglioramenti della conformità di C++ in Visual Studio 2017
 
@@ -461,11 +461,250 @@ Per evitare gli errori nell'esempio precedente, usare **bool** anziché **bool**
 
 Sono state rimosse le intestazioni non standard \<stdexcpt. h > e \<TypeInfo. h >. Il codice che li include deve invece includere le intestazioni standard \<Exception > e \<TypeInfo > rispettivamente.
 
+## <a name="improvements_164"></a>Miglioramenti della conformità in Visual Studio 2019 versione 16,4
+
+### <a name="better-enforcement-of-two-phase-name-lookup-for-qualified-ids-in-permissive-"></a>Miglioramento dell'applicazione della ricerca del nome in due fasi per gli ID qualificati in/permissive-
+
+La ricerca del nome in due fasi richiede che i nomi non dipendenti usati nel corpo di modelli siano visibili per il modello in fase di definizione. In precedenza, tali nomi potrebbero essere stati trovati quando viene creata un'istanza del modello. Questa modifica rende più semplice la scrittura di codice conforme portabile in MSVC sotto il flag [/permissive-](../build/reference/permissive-standards-conformance.md) .
+
+In Visual Studio 2019 versione 16,4, con il flag **/permissive-** impostato, l'esempio seguente genera un errore perché `N::f` non è visibile quando viene definito il modello di `f<T>`:
+
+```cpp
+template <class T>
+int f() {
+    return N::f() + T{}; // error C2039: 'f': is not a member of 'N'
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+In genere, questo problema può essere risolto includendo intestazioni mancanti o funzioni o variabili di dichiarazione in diretta, come illustrato nell'esempio seguente:
+
+```cpp
+namespace N {
+    int f();
+}
+
+template <class T>
+int f() {
+    return N::f() + T{};
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+### <a name="implicit-conversion-of-integral-constant-expressions-to-null-pointer"></a>Conversione implicita di espressioni costanti integrali in un puntatore null
+
+Il compilatore MSVC ora implementa [GLC Issue 903](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#903) in modalità di conformità (/permissive-). Questa regola impedisce la conversione implicita di espressioni costanti integrali (ad eccezione del valore letterale integer ' 0') in costanti puntatore null. L'esempio seguente produce C2440 in modalità di conformità:
+
+```cpp
+int* f(bool* p) {
+    p = false; // error C2440: '=': cannot convert from 'bool' to 'bool *'
+    p = 0; // OK
+    return false; // error C2440: 'return': cannot convert from 'bool' to 'int *'
+}
+```
+
+Per correggere l'errore, utilizzare **nullptr** invece di **false**. Si noti che il valore letterale 0 è ancora consentito:
+
+```cpp
+int* f(bool* p) {
+    p = nullptr; // OK
+    p = 0; // OK
+    return nullptr; // OK
+}
+```
+
+### <a name="standard-rules-for-types-of-integer-literals"></a>Regole standard per i tipi di valori letterali integer
+
+In modalità di conformità (abilitata da [/permissive-](../build/reference/permissive-standards-conformance.md)), MSVC usa le regole standard per i tipi di valori letterali integer. In precedenza, i valori letterali decimali troppo grandi per essere inclusi in un'int ' con segno venivano assegnati al tipo ' unsigned int '. A questo punto, a tali valori letterali viene assegnato il tipo integer con segno più grande successivo, "Long Long". Inoltre, i valori letterali con suffisso ' s'troppo grande per adattarsi a un tipo con segno vengono assegnati al tipo ' Unsigned Long Long '.
+
+Questo può comportare la generazione di diversi tipi di diagnostica di avviso e le differenze di comportamento per le operazioni aritmetiche eseguite sui valori letterali.
+
+Nell'esempio seguente viene illustrato il nuovo comportamento in Visual Studio 2019, versione 16,4. Il `i` variabile è di tipo **unsigned int** e pertanto viene generato l'avviso. I bit più significativi della variabile `j` vengono impostati su 0.
+
+```cpp
+void f(int r) {
+    int i = 2964557531; // warning C4309: truncation of constant value
+    long long j = 0x8000000000000000ll >> r; // literal is now unsigned, shift will fill high-order bits with 0
+}
+```
+
+Nell'esempio seguente viene illustrato come conservare il comportamento precedente, evitando così gli avvisi e la modifica del comportamento in fase di esecuzione:
+
+```cpp
+void f(int r) {
+int i = 2964557531u; // OK
+long long j = (long long)0x8000000000000000ll >> r; // shift will keep high-order bits
+}
+```
+
+### <a name="function-parameters-that-shadow-template-parameters"></a>Parametri di funzione che ombreggiano i parametri di modello
+
+Il compilatore MSVC genera ora un errore quando un parametro di funzione nasconde un parametro di modello:
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T(&buffer)[Size], int& Size) // error C7576: declaration of 'Size' shadows a template parameter
+{
+    return f(buffer, Size, Size);
+}
+```
+
+Per correggere l'errore, modificare il nome di uno dei parametri:
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T (&buffer)[Size], int& size_read)
+{
+    return f(buffer, Size, size_read);
+}
+```
+
+### <a name="user-provided-specializations-of-type-traits"></a>Specializzazioni fornite dall'utente di tratti di tipo
+
+In conformità con la sottoclausola *meta. rqmts* dello standard, il compilatore MSVC genera ora un errore quando rileva una specializzazione definita dall'utente di uno dei modelli di type_traits specificati nello spazio dei nomi `std`. Se non diversamente specificato, le specializzazioni generano un comportamento non definito. L'esempio seguente presenta un comportamento non definito perché viola la regola e il `static_assert` ha esito negativo con errore **C2338**.
+
+```cpp
+#include <type_traits>
+struct S;
+
+template<>
+struct std::is_fundamental<S> : std::true_type {};
+
+static_assert(std::is_fundamental<S>::value, "fail");
+```
+
+Per evitare l'errore, definire uno struct che erediti dalla type_trait desiderata e specializzarlo:
+
+```cpp
+#include <type_traits>
+
+struct S;
+
+template<typename T>
+struct my_is_fundamental : std::is_fundamental<T> {};
+
+template<>
+struct my_is_fundamental<S> : std::true_type { };
+
+static_assert(my_is_fundamental<S>::value, "fail");
+```
+
+### <a name="changes-to-compiler-provided-comparison-operators"></a>Modifiche agli operatori di confronto forniti dal compilatore
+
+Il compilatore MSVC implementa ora le seguenti modifiche agli operatori di confronto per [P1630R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1630r1.html) quando è abilitata l'opzione di [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) :
+
+Il compilatore non riscriverà più le espressioni con `operator==` se coinvolgono un tipo restituito che non è **bool**. Il codice seguente genera ora l' *errore C2088:'! =': non valido per struct*:
+
+```cpp
+struct U {
+  operator bool() const;
+};
+
+struct S {
+  U operator==(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+  return lhs != rhs;
+}
+```
+
+Per evitare l'errore, è necessario definire in modo esplicito l'operatore necessario:
+
+```cpp
+struct U {
+    operator bool() const;
+};
+
+struct S {
+    U operator==(const S&) const;
+    U operator!=(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+Il compilatore non definirà più un operatore di confronto predefinito se è un membro di una classe di tipo Unione. L'esempio seguente produce ora *C2120:' void ' non valido con tutti i tipi*:
+
+```cpp
+#include <compare>
+
+union S {
+    int a;
+    char b;
+    auto operator<=>(const S&) const = default;
+};
+
+bool lt(const S& lhs, const S& rhs) {
+    return lhs < rhs;
+}
+```
+
+Per evitare l'errore, definire un corpo per l'operatore:
+
+```cpp
+#include <compare>
+
+union S {
+  int a;
+  char b;
+  auto operator<=>(const S&) const { ... }
+}; 
+
+bool lt(const S& lhs, const S& rhs) {
+  return lhs < rhs;
+}
+```
+
+Il compilatore non definirà più un operatore di confronto predefinito se la classe contiene un membro di riferimento. Il codice seguente genera ora l' *errore C2120:' void ' non valido con tutti i tipi*:
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const = default;
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
+
+Per evitare l'errore, definire un corpo per l'operatore:
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const { ... };
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
+
 ## <a name="update_160"></a>Correzioni di bug e modifiche del comportamento in Visual Studio 2019
 
 ### <a name="reinterpret_cast-in-a-constexpr-function"></a>Reinterpret_cast in una funzione constExpr
 
-Un **reinterpret_cast** non è valido in una funzione **constExpr** . Il compilatore C++ Microsoft rifiuterà in precedenza **reinterpret_cast** solo se è stato usato in un contesto **constExpr** . In Visual Studio 2019, in tutte le modalità standard del linguaggio, il compilatore diagnostica correttamente un **reinterpret_cast** nella definizione di una funzione **constExpr** . Il codice seguente genera ora la *funzione C3615: constExpr ' f ' non può produrre un'espressione costante*.
+Una **reinterpret_cast** non è valida in una funzione **constExpr** . Il compilatore C++ Microsoft rifiuterà in precedenza **reinterpret_cast** solo se fosse usato in un contesto **constExpr** . In Visual Studio 2019, in tutte le modalità standard del linguaggio, il compilatore diagnostica correttamente un **reinterpret_cast** nella definizione di una funzione **constExpr** . Il codice seguente genera ora la *funzione C3615: constExpr ' f ' non può produrre un'espressione costante*.
 
 ```cpp
 long long i = 0;
@@ -2820,7 +3059,7 @@ struct S
 {
     constexpr void f();
 };
- 
+
 template<>
 constexpr void S<int>::f()
 {

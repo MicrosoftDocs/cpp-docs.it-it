@@ -10,23 +10,20 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 0a0435aa89e4cf744a5bc3c6dc72a715ed55f954
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 393fe8f8d12266650740942d0605152b6548d146
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498792"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857697"
 ---
 # <a name="based-pointers-c"></a>Puntatori based (C++)
 
-**Sezione specifica Microsoft**
-
-La parola chiave **__based** consente di dichiarare i puntatori in base ai puntatori (puntatori che sono offset da puntatori esistenti).
+La parola chiave **__based** consente di dichiarare i puntatori in base ai puntatori (puntatori che sono offset da puntatori esistenti). La parola chiave **__based** è specifica di Microsoft.
 
 ## <a name="syntax"></a>Sintassi
 
 ```
-
 type __based( base ) declarator
 ```
 

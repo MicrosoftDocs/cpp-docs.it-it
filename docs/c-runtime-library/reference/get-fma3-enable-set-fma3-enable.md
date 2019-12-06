@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-ms.openlocfilehash: e18db90779ed59a6ca6976f69a5993d94d61c6bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dee75bf5b16b5fe5b619444f7f2736010bb42a84
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955939"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857810"
 ---
 # <a name="_get_fma3_enable-_set_fma3_enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
@@ -55,7 +55,7 @@ Usare la funzione **_set_FMA3_enable** per abilitare o disabilitare l'uso di ist
 
 Poiché le implementazioni FMA3 utilizzano algoritmi diversi, le piccole differenze nel risultato dei calcoli possono essere osservabili quando le implementazioni di FMA3 sono abilitate o disabilitate oppure tra computer che eseguono o non supportano FMA3. Per ulteriori informazioni, vedere la pagina relativa ai [problemi di migrazione a virgola mobile](../../porting/floating-point-migration-issues.md).
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 Le funzioni **_set_FMA3_enable** e **_get_FMA3_enable** sono disponibili solo nelle versioni x64 di CRT.
 

@@ -1,42 +1,42 @@
 ---
 title: Errore ML irreversibile A1000
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1000
 helpviewer_keywords:
 - A1000
 ms.assetid: 4fc77a83-8796-4dcf-9c37-6395d635b817
-ms.openlocfilehash: c1149bb4362995c1f63a268deab276b5887b5614
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b403c75b4e27f8b673b262952c286995ae3f935
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178540"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856930"
 ---
 # <a name="ml-fatal-error-a1000"></a>Errore ML irreversibile A1000
 
-**Impossibile aprire il file: nomefile**
+**non è possibile aprire il file: nomefile**
 
-L'assembler non ha potuto aprire un'origine, includere o file di output.
+L'assembler non è in grado di aprire un file di origine, di inclusione o di output.
 
-Una causa potrebbe essere una delle operazioni seguenti:
+Una delle possibili cause è la seguente:
 
 - Il file specificato non esiste.
 
 - Il file è in uso da un altro processo.
 
-- Il nome del file non è valido.
+- Il nome file non è valido.
 
-- Esiste già un file di sola lettura con il nome di file di output.
+- Esiste già un file di sola lettura con il nome file di output.
 
-- L'unità corrente è pieno.
+- L'unità corrente è piena.
 
-- La directory corrente è la radice ed è pieno.
+- La directory corrente è la radice ed è piena.
 
-- Impossibile scrivere il dispositivo.
+- Non è possibile scrivere nel dispositivo.
 
-- L'unità non è pronto.
+- L'unità non è pronta.
 
 ## <a name="see-also"></a>Vedere anche
 

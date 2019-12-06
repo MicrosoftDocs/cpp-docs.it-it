@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957035"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857840"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -65,7 +65,7 @@ Valore a virgola mobile da verificare.
 
 Le funzioni **_fpclass** e **_fpclassf** restituiscono un valore intero che indica la classificazione a virgola mobile dell'argomento *x*. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Segnalazione NaN|
 |**_FPCLASS_QNAN**|NaN non interattivo|
@@ -82,7 +82,7 @@ Le funzioni **_fpclass** e **_fpclassf** restituiscono un valore intero che indi
 
 Le funzioni **_fpclass** e **_fpclassf** sono specifiche di Microsoft. Sono simili a [fpclassify](fpclassify.md), ma restituiscono informazioni più dettagliate sull'argomento. La funzione **_fpclassf** è disponibile solo quando viene compilata per la piattaforma x64.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
