@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890163"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898834"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -108,7 +108,7 @@ messages<char>
 messages<wchar_t>
 ```
 
-L'ultima categoria viene richiesta da POSIX, ma non dallo standard C.
+(L'ultima categoria è richiesta da POSIX, ma non dallo standard C).
 
 Alcuni di questi facet predefiniti vengono utilizzati dalle classi `iostream` per controllare la conversione dei valori numerici da e in sequenze di testo.
 
@@ -120,7 +120,7 @@ In questa implementazione è inoltre possibile chiamare la funzione membro stati
 static locale empty();
 ```
 
-per costruire un oggetto delle impostazioni locali privo di facet. Si tratta anche di impostazioni locali trasparenti. Se le funzioni di modello [has_facet](../standard-library/locale-functions.md#has_facet) e [use_facet](../standard-library/locale-functions.md#use_facet) non riescono a trovare il facet richiesto nelle impostazioni locali trasparenti, consultano prima le impostazioni locali globali e quindi, se sono trasparenti, le impostazioni locali classiche. Quindi, è possibile scrivere:
+per costruire un oggetto delle impostazioni locali privo di facet. Si tratta anche di impostazioni locali trasparenti. Se le funzioni modello [has_facet](../standard-library/locale-functions.md#has_facet) e [use_facet](../standard-library/locale-functions.md#use_facet) non riescono a trovare il facet richiesto nelle impostazioni locali trasparenti, consultano prima le impostazioni locali globali e quindi, se sono trasparenti, le impostazioni locali classiche. Quindi, è possibile scrivere:
 
 ```cpp
 cout.imbue(locale::empty());
@@ -175,12 +175,12 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 ### <a name="classes"></a>Classi
 
-|Class|Descrizione|
+|Classe|Descrizione|
 |-|-|
 |[facet](#facet_class)|Classe utilizzata come classe base per tutti i facet delle impostazioni locali.|
 |[`id`](#id_class)|La classe di membro fornisce un'identificazione dei facet univoca utilizzata come indice per cercare i facet nelle impostazioni locali.|
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Intestazione:** \<locale>
 
@@ -224,7 +224,7 @@ Altri due valori utili sono:
 
 - `all`, corrispondente all'Unione C di tutte le categorie LC_ALL
 
-È possibile rappresentare un gruppo arbitrario di categorie usando `OR` con queste costanti, come in `monetary` &#124;`time`.
+È possibile rappresentare un gruppo arbitrario di categorie usando `OR` con queste costanti, come in `monetary` &#124; `time`.
 
 ## <a name="classic"></a>  locale::classic
 
@@ -292,7 +292,7 @@ locale combine(const locale& source_locale) const;
 
 ### <a name="parameters"></a>Parametri
 
-\ *source_locale*
+*source_locale*\
 Impostazioni locali contenenti il facet da inserire nelle impostazioni locali di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -360,7 +360,7 @@ static locale global(const locale& new_default_locale);
 
 ### <a name="parameters"></a>Parametri
 
-\ *new_default_locale*
+*new_default_locale*\
 Impostazioni locali che devono essere usate come predefinite dal programma.
 
 ### <a name="return-value"></a>Valore restituito
@@ -437,19 +437,19 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 ### <a name="parameters"></a>Parametri
 
-\ *locale_name*
+*locale_name*\
 Nome delle impostazioni locali.
 
-\ *from_locale*
+*from_locale*\
 Impostazioni locali che devono essere copiate per la costruzione delle nuove impostazioni locali.
 
-*Altri* \
+*Altri*\
 Impostazioni locali da cui selezionare una categoria.
 
-\ *new_category*
+*new_category*\
 Categoria da sostituire nelle impostazioni locali costruite.
 
-\ *new_facet*
+*new_facet*\
 Facet da sostituire nelle impostazioni locali costruite.
 
 ### <a name="remarks"></a>Note
@@ -468,7 +468,7 @@ sostituisce da `locale(locale_name, all)` i facet corrispondenti a una categoria
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-sostituisce in (o aggiunge a) *from_locale* il facet *new_facet*se *new_facet* non è un puntatore null.
+sostituisce in (o aggiunge a) *from_locale* facet *new_facet*se *new_facet* non è un puntatore null.
 
 Se il nome delle impostazioni locali *locale_name* è un puntatore null o altrimenti non valido, la funzione genera [runtime_error](../standard-library/runtime-error-class.md).
 

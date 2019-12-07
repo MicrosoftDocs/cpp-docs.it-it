@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457027"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898810"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,7 +29,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Al momento del rilascio di Visual Studio 2017, l' \<intestazione filesystem > non era ancora uno C++ standard. C++in Visual Studio 2017 (MSVC V141) implementa lo standard Draft finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Al momento del rilascio di Visual Studio 2017, l'intestazione \<filesystem > non era ancora uno C++ standard. C++in Visual Studio 2017 (MSVC V141) implementa lo standard Draft finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Questa intestazione supporta i filesystem per una delle due ampie classi di sistemi operativi host: Microsoft Windows e POSIX.
 
@@ -37,13 +37,13 @@ Mentre la maggior parte delle funzionalità sono comuni a entrambi i sistemi ope
 
 - Windows supporta più nomi radice, ad esempio c: o \\\nome_rete. Un file system è costituito da una foresta di alberi, ognuno con una propria directory radice, ad esempio c:\ o \\\nome_rete\\ e con una propria directory corrente, per il completamento di un percorso relativo (non un percorso assoluto).
 
-- Posix supporta un singolo albero, senza nome radice, la singola directory radice / e una singola directory corrente.
+- POSIX supporta un singolo albero, senza nome radice, la singola directory radice/e una singola directory corrente.
 
 Un'altra differenza significativa è la rappresentazione nativa dei nomi di percorso:
 
 - Windows usa una sequenza con terminazione Null di wchar_t, codificata come UTF-16 (uno o due elementi per ogni carattere).
 
-- Posix usa una sequenza con terminazione Null di char, codificata come UTF-8 (uno o più elementi per ogni carattere).
+- POSIX usa una sequenza con terminazione null di Char, codificata come UTF-8 (uno o più elementi per ogni carattere).
 
 - Un oggetto di classe path archivia il percorso nel modulo nativo, ma supporta la semplice conversione tra questo modulo archiviato e diversi moduli esterni.
 
@@ -63,7 +63,7 @@ Un'altra differenza sta nel dettaglio con cui ogni sistema operativo consente di
 
 1. Windows registra se un file è in sola lettura o scrivibile, un attributo che non ha significato per le directory.
 
-1. Posix registra se un file può essere letto, scritto o eseguito (analizzato nel caso di una directory), dal proprietario, dal gruppo del proprietario o da tutti gli utenti, più alcune altre autorizzazioni.
+1. POSIX registra se un file può essere letto, scritto o eseguito (analizzato se una directory), dal proprietario, dal gruppo del proprietario o da tutti gli utenti, più alcune altre autorizzazioni.
 
 Comuni a entrambi i sistemi è la struttura imposta a un percorso dopo aver ignorato il nome radice. Per il percorso c:/abc/xyz/def.ext:
 
@@ -102,7 +102,7 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 |[Classe recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)|Descrive un iteratore di input sequenziato attraverso i nomi file in una directory del file system. L'iteratore può anche accedere alle sottodirectory.|
 |[Classe file_status](../standard-library/file-status-class.md)|Esegue il wrapping di un `file_type`.|
 
-### <a name="structs"></a>Struct
+### <a name="structs"></a>Strutture
 
 |||
 |-|-|

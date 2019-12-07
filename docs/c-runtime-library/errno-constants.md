@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 0e11c11b468ff6e058ccf5c75b000396e0473bfa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747640"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898753"
 ---
 # <a name="errno-constants"></a>Costanti errno
 
@@ -56,7 +56,7 @@ ms.locfileid: "57747640"
 #include <errno.h>
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 I valori di **errno** sono costanti assegnate a [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) in caso di varie condizioni di errore.
 
@@ -66,7 +66,7 @@ I valori di **errno** in un sistema operativo Windows a 32 bit sono un subset de
 
 Sono supportati i valori **errno** seguenti:
 
-|Costante|Description|
+|Costante|Descrizione|
 |-|-|
 |**ECHILD**|Nessun processo generato.|
 |**EAGAIN**|Nessun altro processo. Un tentativo di creare un nuovo processo non è riuscito in quanto non esistono altri slot di processo, oppure la memoria è insufficiente o il massimo livello di annidamento è stato raggiunto.|
@@ -78,7 +78,7 @@ Sono supportati i valori **errno** seguenti:
 |**EEXIST**|File esistenti. Si è tentato di creare un file già esistente. Ad esempio, i flag **_O_CREAT** e **_O_EXCL** vengono specificati in una chiamata **_open**, ma il file denominato esiste già.|
 |**EILSEQ**|Sequenza non valida di byte (ad esempio, in una stringa MBCS).|
 |**EINVAL**|Argomento non valido. Un valore non valido è stato fornito per uno degli argomenti a una funzione. Ad esempio, il valore specificato per l'origine quando si posiziona il puntatore del file (mediante una chiamata a **fseek**) è antecedente l'inizio del file.|
-|**EMFILE**|Troppi file aperti. Non esistono descrittori di file disponibili, pertanto nessun altro file può essere aperto.|
+|**EMFILE**|troppi file aperti. Non esistono descrittori di file disponibili, pertanto nessun altro file può essere aperto.|
 |**ENOENT**|Nessun file o directory di questo tipo. Il file o la directory specificata non esiste o non viene trovata. Questo messaggio può essere visualizzato ogni volta che un file specificato non esiste o una parte di un percorso non specifica una directory esistente.|
 |**ENOEXEC**|Errore di formato exec. Si è tentato di eseguire un file che non è eseguibile o con un formato di file eseguibile non valido.|
 |**ENOMEM**|Core insufficiente. Memoria insufficiente per l'operatore desiderato. Ad esempio, questo messaggio può verificarsi quando la memoria è insufficiente per eseguire un processo figlio o quando la richiesta di allocazione in una chiamata **_getcwd** non può essere soddisfatta.|
@@ -87,7 +87,7 @@ Sono supportati i valori **errno** seguenti:
 |**EXDEV**|Collegamento incrociato dispositivo. Si è tentato di spostare un file in un dispositivo diverso (tramite la funzione **rinomina**).|
 |**STRUNCATE**|Una copia o una concatenazione di stringhe ha comportato un troncamento di stringa. Vedere [_TRUNCATE](../c-runtime-library/truncate.md).
 
-I valori seguenti sono supportati per la compatibilità con POSIX. Sono valori richiesti nei sistemi non POSIX.
+Per la compatibilità con POSIX sono supportati i valori seguenti. Sono valori richiesti nei sistemi non POSIX.
 
 ```C
 #define E2BIG /* argument list too long */
