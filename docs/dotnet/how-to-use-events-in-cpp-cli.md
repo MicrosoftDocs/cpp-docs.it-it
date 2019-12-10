@@ -1,25 +1,25 @@
 ---
-title: 'Procedura: Usare gli eventi in C++/CLI'
+title: 'Procedura: utilizzare eventi in C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387175"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988416"
 ---
-# <a name="how-to-use-events-in-ccli"></a>Procedura: Usare gli eventi in C++/CLI
+# <a name="how-to-use-events-in-ccli"></a>Procedura: utilizzare eventi in C++/CLI
 
-Questo articolo illustra come usare un'interfaccia che dichiara un evento e una funzione da richiamare tale evento e il classe e il gestore eventi che implementano l'interfaccia.
+Questo articolo illustra come usare un'interfaccia che dichiara un evento e una funzione per richiamare l'evento e la classe e il gestore eventi che implementano l'interfaccia.
 
 ## <a name="interface-events"></a>Eventi di interfaccia
 
-Esempio di codice seguente aggiunge un gestore dell'evento, richiama l'evento, in modo che il gestore eventi scrivere il proprio nome nella console e quindi rimuove il gestore dell'evento.
+Nell'esempio di codice seguente viene aggiunto un gestore eventi, viene richiamato l'evento, che fa in modo che il gestore eventi scriva il nome nella console, quindi rimuove il gestore eventi.
 
-```
+```cpp
 // mcppv2_events2.cpp
 // compile with: /clr
 using namespace System;
@@ -71,11 +71,11 @@ int main () {
 EventReceiver::Handler
 ```
 
-## <a name="custom-accessor-methods"></a>Metodi di funzione di accesso personalizzata
+## <a name="custom-accessor-methods"></a>Metodi delle funzioni di accesso personalizzate
 
-L'esempio seguente viene illustrato come definire il comportamento di un evento quando i gestori vengono aggiunte o rimosse e quando viene generato un evento.
+Nell'esempio seguente viene illustrato come definire il comportamento di un evento quando vengono aggiunti o rimossi gestori e quando viene generato un evento.
 
-```
+```cpp
 // mcppv2_events6.cpp
 // compile with: /clr
 using namespace System;
@@ -163,11 +163,11 @@ In event handler H1
 In event handler H2 with args 1 and 2.2
 ```
 
-## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Accesso predefinito di override in aggiunta, rimozione e generazione di funzioni di accesso
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Eseguire l'override dell'accesso predefinito per le funzioni di accesso Add, Remove e raise
 
-Questo esempio viene illustrato come eseguire l'override dell'accesso predefinito sui add, remove e raise eventi metodi:
+Questo esempio illustra come eseguire l'override dell'accesso predefinito nei metodi di aggiunta, rimozione e generazione di eventi:
 
-```
+```cpp
 // mcppv2_events3.cpp
 // compile with: /clr
 public delegate void f(int);
@@ -223,9 +223,9 @@ int main() {
 
 ## <a name="multiple-event-handlers"></a>Più gestori eventi
 
-Un ricevitore di eventi o qualsiasi altro codice client, è possibile aggiungere uno o più gestori a un evento.
+Un ricevitore di eventi, o qualsiasi altro codice client, può aggiungere uno o più gestori a un evento.
 
-```
+```cpp
 // mcppv2_events4.cpp
 // compile with: /clr
 using namespace System;
@@ -302,9 +302,9 @@ DblClickAgain(s=System.Char[])
 
 ## <a name="static-events"></a>Eventi statici
 
-L'esempio seguente viene illustrato come definire e usare eventi statici.
+Nell'esempio seguente viene illustrato come definire e utilizzare eventi statici.
 
-```
+```cpp
 // mcppv2_events7.cpp
 // compile with: /clr
 using namespace System;
@@ -392,9 +392,9 @@ In event handler H2 with args 22 and 22.22
 
 ## <a name="virtual-events"></a>Eventi virtuali
 
-In questo esempio implementa eventi virtuali gestiti in un'interfaccia e una classe:
+Questo esempio implementa eventi virtuali, gestiti in un'interfaccia e una classe:
 
-```
+```cpp
 // mcppv2_events5.cpp
 // compile with: /clr
 using namespace System;
@@ -476,9 +476,9 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-Non è possibile specificare un evento semplice per eseguire l'override o nascondere un evento di classe di base.  È necessario definire tutte le funzioni di accesso dell'evento e quindi specificare il `new` o `override` (parola chiave) su ogni funzione di accesso.
+Non è possibile specificare un evento semplice per eseguire l'override o nascondere un evento della classe base.  È necessario definire tutte le funzioni di accesso dell'evento, quindi specificare la parola chiave `new` o `override` su ogni funzione di accesso.
 
-```
+```cpp
 // mcppv2_events5_a.cpp
 // compile with: /clr /c
 delegate void Del();
@@ -510,9 +510,9 @@ ref struct C : B {
 
 ## <a name="abstract-events"></a>Eventi astratti
 
-L'esempio seguente viene illustrato come implementare un evento astratto.
+Nell'esempio seguente viene illustrato come implementare un evento astratto.
 
-```
+```cpp
 // mcppv2_events10.cpp
 // compile with: /clr /W1
 using namespace System;
@@ -595,9 +595,9 @@ hello from Event2
 
 ## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>Generazione di eventi definiti in un assembly diverso
 
-Un evento e un gestore eventi può essere definiti in un unico assembly e utilizzati da un altro assembly.
+Un evento e un gestore eventi possono essere definiti in un assembly e utilizzati da un altro assembly.
 
-```
+```cpp
 // mcppv2_events8.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -613,9 +613,9 @@ public:
 };
 ```
 
-Questo codice client usa l'evento:
+Questo codice client utilizza l'evento:
 
-```
+```cpp
 // mcppv2_events9.cpp
 // compile with: /clr
 #using "mcppv2_events8.dll"

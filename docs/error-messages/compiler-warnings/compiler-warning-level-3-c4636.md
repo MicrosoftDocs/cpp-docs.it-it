@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4636
 ms.assetid: 59112a0f-850f-41c6-bd84-8ae8dc84706a
-ms.openlocfilehash: a1ee63b813c8ef468291eea4575286f40f96ff6a
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: a77579b741238547691289fa85a57a0b284ec7e9
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189126"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991900"
 ---
 # <a name="compiler-warning-level-3-c4636"></a>Avviso del compilatore (livello 3) C4636
 

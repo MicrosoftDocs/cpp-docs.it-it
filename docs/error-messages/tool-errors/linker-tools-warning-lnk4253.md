@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
-ms.openlocfilehash: d2fd7238a3f57b11b91813bd40b66cb3e9f47202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3f45880571e5c06f76d5f063ff993e2f6b2be9b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352522"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988094"
 ---
 # <a name="linker-tools-warning-lnk4253"></a>Avviso degli strumenti del linker LNK4253
 
-sezione 'sezione1' non è unita in 'sezione2'; già unita in 'sezione3'
+la sezione ' sezione1' non è stata unita in ' sezione2'; Unione già in ' sezione3'
 
-Il linker ha rilevato più richieste di unione in conflitto. Verrà ignorata una delle richieste.
+Il linker ha rilevato più richieste di merge in conflitto. Il linker ignorerà una delle richieste.
 
-Oggetto **/UNIRE** viene rilevata l'opzione o una direttiva e il `from` sezione già unita in un'altra sezione a causa di una precedente **/MERGE** opzione o una direttiva (o a causa di un'unione implicita dal il linker).
+È stata rilevata un'opzione o una direttiva **/merge** e la sezione `from` è già stata unita in un'altra sezione a causa di un'opzione o di una direttiva **/merge** precedente oppure a causa di un'Unione implicita dal linker.
 
-Per risolvere LNK4253, rimuovere una delle richieste di unione.
+Per risolvere LNK4253, rimuovere una delle richieste di Unione.
 
-Quando la destinazione è x86 macchine e le destinazioni Windows CE (ARM, MIPS, SH4 e controllo Thumb) con Visual C++, il. Sezione CRT diventa di sola lettura. Se il codice dipende dal comportamento precedente (. CRT sono di lettura/scrittura), si potrebbe verificare un comportamento imprevisto.
+Quando si fa riferimento a computer x86 e a destinazioni Windows CE (ARM, MIPS, SH4 e Thumb) C++con Visual, il. La sezione CRT è ora di sola lettura. Se il codice dipende dal comportamento precedente (. Le sezioni CRT sono di lettura/scrittura), è possibile che si verifichi un comportamento imprevisto.
 
 Per ulteriori informazioni, vedere,
 
@@ -33,9 +33,9 @@ Per ulteriori informazioni, vedere,
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente, il linker viene richiesto di unire il `.rdata` sezione due volte, ma in sezioni diverse. L'esempio seguente genera l'errore LNK4253.
+Nell'esempio seguente viene indicato al linker di unire la sezione `.rdata` due volte, ma in sezioni diverse. L'esempio seguente genera l'LNK4253.
 
-```
+```cpp
 // LNK4253.cpp
 // compile with: /W1 /link /merge:.rdata=text2
 // LNK4253 expected

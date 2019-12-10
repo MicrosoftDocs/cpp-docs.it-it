@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: be75ec497dff79d75c22bda3b7d24389db2c9c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153236"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988117"
 ---
-# <a name="lockwhen-enum"></a>Enumerazione lock_when
+# <a name="lock_when-enum"></a>Enumerazione lock_when
 
-Specifica il blocco posticipata.
+Specifica il blocco posticipato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,13 +30,13 @@ enum lock_when {
 
 ## <a name="remarks"></a>Note
 
-Quando viene passato a [lock::lock](../dotnet/lock-lock.md), `lock_later` specifica che il blocco non deve essere impiegato a questo punto.
+Quando viene passato a [Lock:: Lock](../dotnet/lock-lock.md), `lock_later` specifica che il blocco non deve essere riassunto.
 
 ## <a name="example"></a>Esempio
 
-Questo esempio Usa una singola istanza di una classe in più thread.  La classe Usa un blocco su se stesso per garantire la coerenza per ogni thread che accede ai propri dati interni.  Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se qualsiasi thread di lavoro continuano a esistere e attese per uscire dalla finché tutti thread di lavoro completate le attività.
+In questo esempio viene usata una singola istanza di una classe in più thread.  La classe utilizza un blocco su se stesso per assicurarsi che gli accessi ai relativi dati interni siano coerenti per ogni thread.  Il thread dell'applicazione principale usa un blocco sulla stessa istanza della classe per controllare periodicamente se sono ancora presenti thread di lavoro e attende di uscire finché tutti i thread di lavoro non hanno completato le attività.
 
-```
+```cpp
 // msl_lock_lock_when.cpp
 // compile with: /clr
 #include <msclr/lock.h>
@@ -122,11 +122,11 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **File di intestazione** \<msclr\lock.h >
 
-**Namespace** msclr
+**Spazio dei nomi** msclr
 
 ## <a name="see-also"></a>Vedere anche
 

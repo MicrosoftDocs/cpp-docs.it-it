@@ -8,36 +8,36 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89cca9ef42910d295cbae8bb677fb51927dbcdd2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404481"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988530"
 ---
 # <a name="double-thunking-c"></a>Doppio thunk (C++)
 
-Doppio thunk si intende la perdita di prestazioni che possono verificarsi quando una chiamata di funzione in un contesto gestito chiama un Visual C++ gestito (funzione) e l'esecuzione del programma in cui viene chiamato punto di ingresso nativo della funzione per chiamare la funzione gestita. Questo argomento illustra in cui si è il doppio thunk e come si può evitare in modo da migliorare le prestazioni.
+Il doppio thunk si riferisce alla perdita di prestazioni che è possibile riscontrare quando una chiamata di funzione in un C++ contesto gestito chiama una funzione gestita visiva e dove l'esecuzione del programma chiama il punto di ingresso nativo della funzione per chiamare la funzione gestita. In questo argomento viene illustrato dove si verifica il doppio thunk e come è possibile evitarlo per migliorare le prestazioni.
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita, durante la compilazione con **/clr**, la definizione di una funzione gestita indica al compilatore di generare un punto di ingresso nativo e un punto di ingresso gestito. In questo modo la funzione gestita da chiamare da siti di chiamata nativi e gestiti. Tuttavia, in presenza di un punto di ingresso nativo, può essere il punto di ingresso per tutte le chiamate alla funzione. Se una funzione chiamante è gestita, il punto di ingresso nativo chiamerà quindi il punto di ingresso gestito. In effetti, sono necessarie due chiamate per richiamare la funzione (di conseguenza, fare doppio thunk). Ad esempio, le funzioni virtuali vengono chiamate sempre tramite un punto di ingresso nativo.
+Per impostazione predefinita, quando si esegue la compilazione con **/CLR**, la definizione di una funzione gestita fa in modo che il compilatore generi un punto di ingresso gestito e un punto di ingresso nativo. Ciò consente la chiamata della funzione gestita da siti di chiamata nativi e gestiti. Tuttavia, quando esiste un punto di ingresso nativo, può essere il punto di ingresso per tutte le chiamate alla funzione. Se viene gestita una funzione chiamante, il punto di ingresso nativo chiamerà il punto di ingresso gestito. In effetti, per richiamare la funzione sono necessarie due chiamate, quindi il doppio thunk. Ad esempio, le funzioni virtuali vengono sempre chiamate tramite un punto di ingresso nativo.
 
-Una possibile soluzione consiste nell'indicare al compilatore di non generare un punto di ingresso nativo per una funzione non gestita, che la funzione di essere chiamata solo da un contesto gestito, tramite il [clrcall](../cpp/clrcall.md) convenzione di chiamata.
+Una soluzione consiste nel indicare al compilatore di non generare un punto di ingresso nativo per una funzione gestita, che la funzione verrà chiamata solo da un contesto gestito, usando la convenzione di chiamata [__clrcall](../cpp/clrcall.md) .
 
-Analogamente, se si esportano ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) una funzione non gestita, viene generato un punto di ingresso nativo e qualsiasi funzione che importa e chiama tale funzione chiamerà tramite il punto di ingresso nativo. Per evitare il doppio thunk in questo caso, non usare la semantica di esportazione/importazione nativa; è sufficiente fare riferimento ai metadati tramite `#using` (vedere [# direttiva using](../preprocessor/hash-using-directive-cpp.md)).
+Analogamente, se si esporta ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) una funzione gestita, viene generato un punto di ingresso nativo e qualsiasi funzione che importa e chiama tale funzione chiamerà tramite il punto di ingresso nativo. Per evitare il doppio thunk in questa situazione, non usare la semantica di esportazione/importazione nativa; è sufficiente fare riferimento ai metadati tramite `#using` (vedere la [direttiva #using](../preprocessor/hash-using-directive-cpp.md)).
 
-Il compilatore è stato aggiornato in modo da ridurre il doppio thunk non necessari. Ad esempio, qualsiasi funzione con un tipo gestito nella firma (incluso il tipo restituito) in modo implicito essere contrassegnato come `__clrcall`.
+Il compilatore è stato aggiornato per ridurre il doppio thunk non necessario. Ogni funzione con un tipo gestito nella firma (incluso il tipo restituito), ad esempio, verrà contrassegnata in modo implicito come `__clrcall`.
 
 ## <a name="example"></a>Esempio
 
 ### <a name="description"></a>Descrizione
 
-L'esempio seguente viene illustrato il doppio thunk. Durante la compilazione nativa (senza **/clr**), la chiamata alla funzione virtuale in `main` genera una chiamata a `T`della copia di costruttore e una sola chiamata al distruttore. Comportamento analogo si ottiene quando la funzione virtuale viene dichiarata con **/clr** e `__clrcall`. Tuttavia, al termine della compilazione con **/clr**, la chiamata di funzione genera una chiamata al costruttore di copia, ma non vi è un'altra chiamata al costruttore di copia a causa il thunk nativo a gestito.
+Nell'esempio seguente viene illustrato il doppio thunk. Quando viene compilato native (senza **/CLR**), la chiamata alla funzione virtuale in `main` genera una chiamata al costruttore di copia di `T`e una chiamata al distruttore. Si otterrà un comportamento simile quando la funzione virtuale viene dichiarata con **/CLR** e `__clrcall`. Tuttavia, quando viene appena compilato con **/CLR**, la chiamata di funzione genera una chiamata al costruttore di copia, ma esiste un'altra chiamata al costruttore di copia a causa del thunk nativo a gestito.
 
 ### <a name="code"></a>Codice
 
-```
+```cpp
 // double_thunking.cpp
 // compile with: /clr
 #include <stdio.h>
@@ -91,11 +91,11 @@ __thiscall T::~T(void)
 
 ### <a name="description"></a>Descrizione
 
-L'esempio precedente ha dimostrato l'esistenza del doppio thunk. In questo esempio mostra l'effetto. Il `for` loop chiama la funzione virtuale e il programma segnala il tempo di esecuzione. Il tempo più lento viene segnalato quando il programma viene compilato con **/clr**. I tempi più rapidi vengono segnalati durante la compilazione senza **/clr** o se la funzione virtuale viene dichiarata con `__clrcall`.
+Nell'esempio precedente è stata illustrata l'esistenza del doppio thunk. Questo esempio mostra l'effetto. Il ciclo `for` chiama la funzione virtuale e il programma segnala il tempo di esecuzione. Il tempo più lento viene segnalato quando il programma viene compilato con **/CLR**. Quando si esegue la compilazione senza **/CLR** o se la funzione virtuale viene dichiarata con `__clrcall`, vengono segnalate le ore più veloci.
 
 ### <a name="code"></a>Codice
 
-```
+```cpp
 // double_thunking_2.cpp
 // compile with: /clr
 #include <time.h>

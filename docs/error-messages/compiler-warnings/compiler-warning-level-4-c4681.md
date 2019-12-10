@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4681
 ms.assetid: a4e6d85f-3e21-4b45-a551-c23d3c554d3f
-ms.openlocfilehash: b2f89948ddf77dda88e8ef94231ac9ba1e9ee85c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 543034c9b5369b5ceac082ebc4133faf29397c8b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345370"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990372"
 ---
 # <a name="compiler-warning-level-4-c4681"></a>Avviso del compilatore (livello 4) C4681
 
@@ -21,7 +21,7 @@ Un'interfaccia [di origine](../../windows/source-cpp.md) non è stata specificat
 
 L'esempio seguente genera l'errore C4681:
 
-```
+```cpp
 // C4681.cpp
 // compile with: /W4 /c
 #define _ATL_ATTRIBUTES 1

@@ -1,25 +1,25 @@
 ---
-title: "Procedura: Eseguire il wrapping di classe nativa per l'uso daC#"
+title: 'Procedura: eseguire il wrapping di una classe nativa affinché possa essere utilizzata in C#'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65a1b11578565e08f0be7aa04f96d3da4cbfbf7a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387123"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988128"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Procedura: Eseguire il wrapping di classe nativa per l'uso daC#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Procedura: eseguire il wrapping di una classe nativa affinché possa essere utilizzata in C#
 
-Questo esempio viene illustrato come eseguire il wrapping di una classe C++ nativa in modo che possa essere utilizzata dal codice creato in c#, o altri linguaggi .NET.
+In questo esempio viene illustrato come eseguire il C++ wrapping di una classe nativa in modo che possa essere utilizzata C#dal codice creato in o in un altro linguaggio .NET.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>

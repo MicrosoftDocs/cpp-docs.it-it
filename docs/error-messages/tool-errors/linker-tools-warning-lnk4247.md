@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-ms.openlocfilehash: cd4108f8bd06ec7a0b2d2eb9fab13917174b797b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 344c219fa1f3daa1e5f9c31431e608f5e7036400
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346960"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991150"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>Avviso degli strumenti del linker LNK4247
 
-punto di ingresso 'voce nome_funzione_decorato' esiste già un attributo di thread. 'attribute' ignorata
+il punto di ingresso ' decorated_function_name ' ha già un attributo thread; ' attribute ' ignorato
 
-Un punto di ingresso, specificato con [/ENTRY (simbolo del punto di ingresso)](../../build/reference/entry-entry-point-symbol.md), ha un attributo threading, ma [/CLRTHREADATTRIBUTE (Imposta attributo Thread di CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) è stata anche specificata, con un modello di threading diverso.
+Un punto di ingresso, specificato con [/entry (simbolo del punto di ingresso)](../../build/reference/entry-entry-point-symbol.md), presenta un attributo threading, ma è stato specificato anche [/CLRTHREADATTRIBUTE (Set CLR Thread Attribute)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) con un modello di threading diverso.
 
-Il valore specificato con /CLRTHREADATTRIBUTE ignorati dal linker.
+Il linker ha ignorato il valore specificato con/CLRTHREADATTRIBUTE.
 
 Per risolvere il problema:
 
-- Rimuovere /CLRTHREADATTRIBUTE dalla compilazione.
+- Rimuovere/CLRTHREADATTRIBUTE dalla compilazione.
 
-- Rimuovere attributi dal file del codice sorgente.
+- Rimuovere l'attributo dal file di codice sorgente.
 
-- Rimuovere entrambi l'attributo di origine e /CLRTHREADATTRIBUTE dalla compilazione e accettare il modello di threading CLR predefinito.
+- Rimuovere l'attributo da source e/CLRTHREADATTRIBUTE dalla compilazione e accettare il modello di threading CLR predefinito.
 
-- Modificare il valore passato a /CLRTHREADATTRIBUTE in tal modo coincida con l'attributo di origine.
+- Modificare il valore passato a/CLRTHREADATTRIBUTE, in modo che accetti l'attributo nell'origine.
 
-- Modificare l'attributo di origine, tale che coincidono con il valore passato a /CLRTHREADATTRIBUTE.
+- Modificare l'attributo nell'origine, in modo che accetti il valore passato a/CLRTHREADATTRIBUTE.
 
-L'esempio seguente genera l'errore LNK4247
+L'esempio seguente genera LNK4247
 
-```
+```cpp
 // LNK4247.cpp
 // compile with: /clr /c
 // post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console

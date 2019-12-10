@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: db9432c505b7348c9bef5ed34aac1cb4edecb17b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352521"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988107"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>Avviso degli strumenti del linker LNK4248
 
-token typeref non risolto (token) per 'type'; immagine non venga eseguita
+token TypeRef non risolto (token) per ' type '; l'immagine potrebbe non essere eseguita
 
 Un tipo non ha una definizione nei metadati MSIL.
 
-LNK4248 può verificarsi quando è presente solo una dichiarazione con prototipo per un tipo in un modulo MSIL (compilati con **/clr**), dove il tipo fa riferimento al modulo MSIL, nonché il modulo MSIL viene collegato a un modulo nativo che contiene una definizione del il tipo.
+LNK4248 può verificarsi quando è presente una sola dichiarazione con esecuzione per un tipo in un modulo MSIL (compilata con **/CLR**), in cui al tipo viene fatto riferimento nel modulo MSIL e dove il modulo MSIL è collegato a un modulo nativo con una definizione per il tipo.
 
-In questo caso, il linker fornirà la definizione di tipo nativo nei metadati del codice MSIL e questo può fornire per il corretto funzionamento.
+In questa situazione, il linker fornirà la definizione di tipo nativo nei metadati MSIL e questo potrebbe fornire il comportamento corretto.
 
-Tuttavia, se una dichiarazione di tipo inoltro è un tipo CLR, quindi definizione di tipo nativo del linker potrebbe non essere corretta
+Tuttavia, se una dichiarazione di tipo in diretta è un tipo CLR, la definizione del tipo nativo del linker potrebbe non essere corretta.
 
 Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Fornire la definizione di tipo nel modulo MSIL.
+1. Fornire la definizione del tipo nel modulo MSIL.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore LNK4248. Definire la struttura di risolvere.
+L'esempio seguente genera l'LNK4248. Definire struct a da risolvere.
 
-```
+```cpp
 // LNK4248.cpp
 // compile with: /clr /W1
 // LNK4248 expected
@@ -49,9 +49,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente è una definizione in avanti di un tipo.
+Nell'esempio seguente viene illustrata una definizione di tipo.
 
-```
+```cpp
 // LNK4248_2.cpp
 // compile with: /clr /c
 class A;   // provide a definition for A here to resolve
@@ -66,9 +66,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore LNK4248.
+L'esempio seguente genera l'LNK4248.
 
-```
+```cpp
 // LNK4248_3.cpp
 // compile with: /c
 // post-build command: link LNK4248_2.obj LNK4248_3.obj

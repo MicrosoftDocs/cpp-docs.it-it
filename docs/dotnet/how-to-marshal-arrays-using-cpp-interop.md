@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Interoperabilità di marshalling di matrici usando C++'
+title: "Procedura: effettuare il marshalling di matrici utilizzando l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fddb8b4fa645d6fee3597d098fc67a3006603b9f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324922"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988197"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>Procedura: Interoperabilità di marshalling di matrici usando C++
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Procedura: effettuare il marshalling di matrici utilizzando l'interoperabilità C++
 
-In questo argomento viene illustrato un facet di interoperabilità di Visual C++. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+In questo argomento viene illustrato un facet di interoperabilità visiva C++ . Per ulteriori informazioni, vedere [utilizzo C++ dell'interoperabilità (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/managed-unmanaged.md) #pragma direttive per implementare funzioni gestite e nello stesso file, ma queste funzioni interagiscono nello stesso modo se definiti in file separati. Non è necessario essere compilato con file contenenti solo funzioni non gestite [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Negli esempi di codice seguenti vengono utilizzate le direttive #pragma [gestite e non gestite](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file, ma queste funzioni interagiscono nello stesso modo se definite in file distinti. I file che contengono solo funzioni non gestite non devono essere compilati con [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come passare una matrice gestita a una funzione non gestita. Usa la funzione gestita [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per disattivare la garbage collection per la matrice prima di chiamare la funzione non gestita. Fornendo la funzione non gestita con un puntatore bloccato nell'heap del Garbage Collector, è possibile evitare il sovraccarico di creazione di una copia della matrice. Per dimostrare che la funzione non gestita accede alla memoria dell'heap di Garbage Collection, modifica il contenuto della matrice e le modifiche vengono applicate quando la funzione gestita riprende il controllo.
+Nell'esempio seguente viene illustrato come passare una matrice gestita a una funzione non gestita. La funzione gestita USA [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per disattivare Garbage Collection per la matrice prima di chiamare la funzione non gestita. Se si specifica la funzione non gestita con un puntatore bloccato nell'heap GC, è possibile evitare il sovraccarico dovuto alla creazione di una copia della matrice. Per dimostrare che la funzione non gestita sta accedendo alla memoria heap GC, modifica il contenuto della matrice e le modifiche vengono riflesse quando la funzione gestita riprende il controllo.
 
-```
+```cpp
 // PassArray1.cpp
 // compile with: /clr
 #ifndef _CRT_RAND_S
@@ -83,9 +83,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato il passaggio di una matrice non gestita di una funzione gestita. La funzione gestita accede alla memoria matrice direttamente (anziché creando una matrice gestita e copiando il contenuto della matrice), che consente le modifiche apportate dalla funzione gestita a essere applicate anche la funzione non gestita quando acquisisca di nuovo controllo.
+Nell'esempio seguente viene illustrato il passaggio di una matrice non gestita a una funzione gestita. La funzione gestita accede direttamente alla memoria dell'Array (anziché creare una matrice gestita e copiando il contenuto della matrice), che consente di riflettere le modifiche apportate dalla funzione gestita nella funzione non gestita quando il controllo viene recuperato.
 
-```
+```cpp
 // PassArray2.cpp
 // compile with: /clr
 #include <iostream>

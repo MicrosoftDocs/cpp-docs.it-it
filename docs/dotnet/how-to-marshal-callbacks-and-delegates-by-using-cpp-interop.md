@@ -10,28 +10,28 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 592eae0ff59baddb79b810d46669b78ecc801155
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344948"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988185"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Procedura: Effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++
 
-In questo argomento viene illustrato il marshalling di callback e delegati (la versione gestita di un callback) tra codice gestito e usare Visual C++.
+In questo argomento viene illustrato il marshalling di callback e delegati (la versione gestita di un callback) tra codice gestito e non gestito C++mediante Visual.
 
-Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/managed-unmanaged.md) #pragma direttive per implementare funzioni gestite e nello stesso file, ma le funzioni può anche essere definite in file separati. I file contenenti solo funzioni non gestite non sono necessario essere compilato con il [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Negli esempi di codice seguenti vengono utilizzate le direttive #pragma [gestite e non gestite](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file, ma anche le funzioni possono essere definite in file distinti. I file che contengono solo funzioni non gestite non devono essere compilati con [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come configurare un'API non gestita per attivare un delegato gestito. Viene creato un delegato gestito e uno dei metodi di interoperabilità <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, viene usato per recuperare il punto di ingresso sottostante per il delegato. Questo indirizzo viene quindi passato alla funzione non gestita, che chiama il delegato con alcuna conoscenza del fatto che viene implementato come una funzione gestita.
+Nell'esempio seguente viene illustrato come configurare un'API non gestita per attivare un delegato gestito. Viene creato un delegato gestito e uno dei metodi di interoperabilità, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, viene usato per recuperare il punto di ingresso sottostante per il delegato. Questo indirizzo viene quindi passato alla funzione non gestita, che lo chiama senza conoscere il fatto che viene implementato come funzione gestita.
 
-Si noti che viene possibile, ma non indispensabile, è possibile bloccare il delegato tramite [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per evitare che venga rilocato o eliminati dal garbage collector. È necessaria una protezione da prematura garbage collection, il blocco fornisce altre funzionalità di protezione superiore a quella necessaria, poiché impedisce la raccolta, ma impedisce anche la rilocazione.
+Si noti che è possibile, ma non necessario, aggiungere il delegato utilizzando [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per impedire che venga rilocato o eliminato dall'Garbage Collector. La protezione da Garbage Collection prematura è necessaria, ma l'aggiunta garantisce una maggiore protezione del necessario, poiché impedisce la raccolta, ma impedisce anche la rilocazione.
 
-Se un delegato viene rilocato da un'operazione di garbage collection, non influirà sulla callback gestita, pertanto <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> viene usato per aggiungere un riferimento al delegato, consentendo la rilocazione del delegato, ma impedendone l'eliminazione. L'uso di GCHandle anziché pin_ptr riduce la potenziale frammentazione dell'heap gestito.
+Se un delegato viene rilocato da un Garbage Collection, non influirà sul callback gestito della sottodisposizione, quindi <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> viene usato per aggiungere un riferimento al delegato, consentendo la rilocazione del delegato, evitando però l'eliminazione. L'uso di GCHandle invece di pin_ptr riduce il potenziale di frammentazione dell'heap gestito.
 
-```
+```cpp
 // MarshalDelegate1.cpp
 // compile with: /clr
 #include <iostream>
@@ -79,9 +79,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente è simile all'esempio precedente, ma in questo caso è archiviato il puntatore a funzione fornita dall'API non gestita, in modo che può essere richiamato in qualsiasi momento, che richiedono che è possibile eliminare la garbage collection per un periodo di tempo arbitrario. Di conseguenza, l'esempio seguente usa un'istanza globale di <xref:System.Runtime.InteropServices.GCHandle> per impedire che il delegato venga rilocato, indipendentemente dall'ambito della funzione. Come illustrato nel primo esempio, usando pin_ptr non è necessaria per questi esempi, ma in questo caso funzionerebbe in ogni caso, poiché l'ambito di pin_ptr è limitato a una singola funzione.
+L'esempio seguente è simile all'esempio precedente, ma in questo caso il puntatore a funzione fornito viene archiviato dall'API non gestita, in modo che possa essere richiamato in qualsiasi momento, richiedendo che Garbage Collection venga eliminato per un periodo di tempo arbitrario. Di conseguenza, nell'esempio seguente viene utilizzata un'istanza globale di <xref:System.Runtime.InteropServices.GCHandle> per impedire che il delegato venga rilocato, indipendentemente dall'ambito della funzione. Come illustrato nel primo esempio, l'uso di pin_ptr non è necessario per questi esempi, ma in questo caso non funzionerebbe comunque, perché l'ambito di una pin_ptr è limitato a una singola funzione.
 
-```
+```cpp
 // MarshalDelegate2.cpp
 // compile with: /clr
 #include <iostream>

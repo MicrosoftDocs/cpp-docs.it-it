@@ -6,22 +6,22 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384595"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988112"
 ---
 # <a name="stlclr-containers"></a>Contenitori STL/CLR
 
-La libreria STL/CLR è costituito da contenitori che sono simili a quelle disponibili nella libreria Standard C++, ma funziona nell'ambiente gestito di .NET Framework. Non viene mantenuto aggiornato con la libreria Standard C++ effettivo e conservato per il supporto legacy.
+La libreria STL/CLR è costituita da contenitori simili a quelli presenti nella libreria C++ standard, ma che vengono eseguiti all'interno dell'ambiente gestito del .NET Framework. Non viene mantenuta aggiornata con la libreria standard effettiva C++ e viene mantenuta per il supporto legacy.
 
-In questo documento viene fornita una panoramica dei contenitori in STL/CLR, ad esempio i requisiti per gli elementi contenitore, i tipi di elementi che è possibile inserire nei contenitori e i problemi di proprietà con gli elementi nei contenitori. Dove appropriato, sono riportate le differenze tra la libreria Standard C++ e STL/CLR nativi.
+In questo documento viene fornita una panoramica dei contenitori in STL/CLR, ad esempio i requisiti per gli elementi contenitore, i tipi di elementi che è possibile inserire nei contenitori e i problemi di proprietà con gli elementi nei contenitori. Laddove appropriato, vengono indicate le differenze C++ tra la libreria standard nativa e STL/CLR.
 
 ## <a name="requirements-for-container-elements"></a>Requisiti per gli elementi contenitore
 
-Tutti gli elementi inseriti nei contenitori STL/CLR è necessario rispettare alcune linee guida. Per altre informazioni, vedere [i requisiti degli elementi del contenitore STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
+Tutti gli elementi inseriti nei contenitori STL/CLR devono rispettare determinate linee guida. Per ulteriori informazioni, vedere [requisiti per gli elementi del contenitore STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
 
 ## <a name="valid-container-elements"></a>Elementi di contenitore validi
 
@@ -37,13 +37,13 @@ Non è possibile inserire i tipi valore boxed nei contenitori STL/CLR.
 
 ### <a name="handles-to-reference-types"></a>Handle a tipi di riferimento
 
-È possibile inserire un handle per un tipo di riferimento in un contenitore STL/CLR. Un handle in C++ destinato a CLR è analogo a un puntatore in C++ nativo. Per altre informazioni, vedere [operatore Handle a oggetto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
+È possibile inserire un handle per un tipo di riferimento in un contenitore STL/CLR. Un handle in C++ destinato a CLR è analogo a un puntatore in C++ nativo. Per ulteriori informazioni, vedere [operatore handle a oggetto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come inserire un handle a un oggetto dipendente in un [cliext:: set](../dotnet/set-stl-clr.md).
+Nell'esempio seguente viene illustrato come inserire un handle per un oggetto Employee in [cliext:: set](../dotnet/set-stl-clr.md).
 
-```
+```cpp
 // cliext_container_valid_reference_handle.cpp
 // compile with: /clr
 
@@ -138,7 +138,7 @@ int main()
 
 Nell'esempio seguente viene illustrato come inserire un oggetto Dipendente in un oggetto `cliext::set`.
 
-```
+```cpp
 // cliext_container_valid_reference.cpp
 // compile with: /clr
 
@@ -227,7 +227,7 @@ int main()
 
 ### <a name="unboxed-value-types"></a>Tipi di valore unboxed
 
-È inoltre possibile inserire un tipo di valore unboxed in un contenitore STL/CLR. Un tipo di valore unboxed è un tipo di valore che non è stata *sottoposto a boxing* in un tipo di riferimento.
+È inoltre possibile inserire un tipo di valore unboxed in un contenitore STL/CLR. Un tipo di valore unboxed è un tipo di valore che non è stato sottomesso a *Boxing* in un tipo di riferimento.
 
 Un elemento di tipo valore può essere uno dei tipi di valore standard, come ad esempio `int`, oppure può essere un tipo di valore definito dall'utente, ad esempio `value class`. Per altre informazioni, vedere [classi e struct](../extensions/classes-and-structs-cpp-component-extensions.md)
 
@@ -235,7 +235,7 @@ Un elemento di tipo valore può essere uno dei tipi di valore standard, come ad 
 
 Nell'esempio seguente viene modificato il primo esempio rendendo la classe Employee un tipo di valore. Questo tipo di valore viene quindi inserito in un oggetto `cliext::set` come nel primo esempio.
 
-```
+```cpp
 // cliext_container_valid_valuetype.cpp
 // compile with: /clr
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-Se si prova a inserire un handle a un tipo valore in un contenitore [errore del compilatore C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) viene generato.
+Se si tenta di inserire un handle per un tipo di valore in un contenitore, viene generato l' [errore del compilatore C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) .
 
 ### <a name="performance-and-memory-implications"></a>Implicazioni con le prestazioni e la memoria
 
@@ -312,4 +312,4 @@ Quando si chiama il metodo clear o il metodo erase di un contenitore di oggetti 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)

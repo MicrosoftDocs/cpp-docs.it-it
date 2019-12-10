@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Il marshalling delle stringhe Unicode utilizzando l'interoperabilità C++"
+title: "Procedura: Effettuare il marshalling di stringhe Unicode utilizzando l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400552"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988166"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procedura: Il marshalling delle stringhe Unicode utilizzando l'interoperabilità C++
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procedura: Effettuare il marshalling di stringhe Unicode utilizzando l'interoperabilità C++
 
-In questo argomento viene illustrato un facet di interoperabilità di Visual C++. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+In questo argomento viene illustrato un facet di interoperabilità visiva C++ . Per ulteriori informazioni, vedere [utilizzo C++ dell'interoperabilità (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/managed-unmanaged.md) #pragma direttive per implementare funzioni gestite e nello stesso file, ma queste funzioni interagiscono nello stesso modo se definiti in file separati. Non è necessario essere compilato con file contenenti solo funzioni non gestite [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Negli esempi di codice seguenti vengono utilizzate le direttive #pragma [gestite e non gestite](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file, ma queste funzioni interagiscono nello stesso modo se definite in file distinti. I file che contengono solo funzioni non gestite non devono essere compilati con [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
-In questo argomento viene illustrato come le stringhe di Unicode possono essere passati da un oggetto gestito a una funzione non gestita e viceversa. Per informazioni sull'interoperabilità con altri tipi di stringhe, vedere gli argomenti seguenti:
+In questo argomento viene illustrato come passare le stringhe Unicode da una funzione gestita a una funzione non gestita e viceversa. Per l'interoperabilità con altri tipi di stringhe, vedere gli argomenti seguenti:
 
 - [Procedura: Effettuare il marshalling di stringhe ANSI tramite l'interoperabilità C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
@@ -30,9 +30,9 @@ In questo argomento viene illustrato come le stringhe di Unicode possono essere 
 
 ## <a name="example"></a>Esempio
 
-Per passare una stringa Unicode da un oggetto gestito a una funzione non gestita, la funzione PtrToStringChars (dichiarata in Vcclr. h) può essere usata per l'accesso in memoria in cui è archiviata la stringa gestita. Poiché questo indirizzo viene passato a una funzione nativa, è importante che la memoria venga bloccata con [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per impedire che vengano spostati in altri dati di tipo stringa, un ciclo di garbage collection verranno eseguiti durante il esecuzione di funzione non gestita.
+Per passare una stringa Unicode da una funzione gestita a una funzione non gestita, è possibile usare la funzione PtrToStringChars (dichiarata in Vcclr. h) per accedere alla memoria in cui è archiviata la stringa gestita. Poiché questo indirizzo verrà passato a una funzione nativa, è importante che la memoria venga bloccata con [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per impedire che i dati di stringa vengano rilocati, se si verifica un ciclo di Garbage Collection mentre viene eseguita la funzione non gestita.
 
-```
+```cpp
 // MarshalUnicode1.cpp
 // compile with: /clr
 #include <iostream>
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato il marshalling dei dati necessarie per accedere a una stringa Unicode in una funzione gestita chiamata da una funzione non gestita. Funzione non gestita, quando riceve la stringa Unicode nativa, lo converte in una stringa gestita usando il <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> (metodo).
+Nell'esempio seguente viene illustrato il marshalling dei dati richiesto per accedere a una stringa Unicode in una funzione gestita chiamata da una funzione non gestita. La funzione gestita, alla ricezione della stringa Unicode nativa, la converte in una stringa gestita usando il metodo <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>.
 
-```
+```cpp
 // MarshalUnicode2.cpp
 // compile with: /clr
 #include <iostream>

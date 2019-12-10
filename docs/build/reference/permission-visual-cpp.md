@@ -1,5 +1,5 @@
 ---
-title: '&lt;autorizzazione > (commenti relativi alla documentazione di C++)'
+title: '> di autorizzazione &lt;C++ (commenti sulla documentazione)'
 ms.date: 11/04/2016
 f1_keywords:
 - permission
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 764048f7bc579afa6862bdff40968588955dc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f0a59c85e3fa28d24e44953e207151c3afa0f4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319941"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988673"
 ---
 # <a name="ltpermissiongt"></a>&lt;permission&gt;
 
@@ -41,11 +41,11 @@ Descrizione dell'accesso al membro.
 
 Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 
-Il compilatore MSVC tenterà di risolvere i riferimenti cref in un unico passaggio tramite i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto. Per altre informazioni, vedere [\<seealso>](seealso-visual-cpp.md).
+Il compilatore MSVC tenterà di risolvere i riferimenti CREF in un passaggio attraverso i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto. Per altre informazioni, vedere [\<seealso>](seealso-visual-cpp.md).
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // xml_permission_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_permission_tag.dll

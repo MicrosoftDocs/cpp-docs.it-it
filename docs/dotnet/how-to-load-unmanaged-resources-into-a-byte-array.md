@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Caricare le risorse non gestite in una matrice di Byte'
+title: 'Procedura: caricare risorse non gestite in una matrice di byte'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344961"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988201"
 ---
-# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Procedura: Caricare le risorse non gestite in una matrice di Byte
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Procedura: caricare risorse non gestite in una matrice di byte
 
-In questo argomento vengono illustrati alcuni modi per caricare le risorse non gestite in un <xref:System.Byte> matrice.
+In questo argomento vengono illustrati diversi modi per caricare le risorse non gestite in una matrice di <xref:System.Byte>.
 
 ## <a name="example"></a>Esempio
 
-Se si conosce la dimensione della risorsa non gestita, è possibile preallocare una matrice CLR e quindi caricare la risorsa nella matrice usando un puntatore al blocco di matrice della matrice CLR.
+Se si conoscono le dimensioni della risorsa non gestita, è possibile preallocare una matrice CLR e quindi caricare la risorsa nella matrice utilizzando un puntatore al blocco di matrice della matrice CLR.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -56,9 +56,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-In questo esempio viene illustrato come copiare dati da un blocco di memoria non gestita a una matrice gestita.
+Questo esempio illustra come copiare dati da un blocco di memoria non gestita a una matrice gestita.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
 // compile with: /clr
 using namespace System;

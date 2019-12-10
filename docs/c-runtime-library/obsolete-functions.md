@@ -1,6 +1,7 @@
 ---
 title: Funzioni obsolete
-ms.date: 01/22/2019
+description: Elenca le funzioni obsolete deprecate e rimosse dalla libreria di runtime di Microsoft C (CRT).
+ms.date: 12/09/2019
 api_name:
 - _beep
 - _sleep
@@ -53,23 +54,23 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c913e44a4f0d06813e877645bd01855baa6fd4dc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940132"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988776"
 ---
 # <a name="obsolete-functions"></a>Funzioni obsolete
 
-Alcune funzioni di libreria sono obsolete e hanno equivalenti più recenti. Si consiglia di sostituire queste funzioni con le versioni aggiornate. Altre funzioni obsolete sono state rimosse da CRT. Questo argomento elenca le funzioni deprecate come obsolete e le funzioni rimosse in specifiche versioni di Visual Studio.
+Alcune funzioni di libreria sono obsolete e hanno equivalenti più recenti. È consigliabile modificare queste funzioni nelle versioni aggiornate. Altre funzioni obsolete sono state rimosse da CRT. Questo articolo elenca le funzioni deprecate come obsolete e le funzioni rimosse in una determinata versione di Visual Studio.
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Funzione deprecata come obsoleta in Visual Studio 2015
 
 |Funzione obsoleta|Alternativa|
 |-----------------------|-----------------|
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
-|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)o [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) o [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
 |`_unloaddll`|[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
 |`_seterrormode`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
@@ -84,14 +85,12 @@ Alcune funzioni di libreria sono obsolete e hanno equivalenti più recenti. Si c
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|Nessuna|
-|[_heapadd](../c-runtime-library/heapadd.md)|Nessuna|
-|[_heapset](../c-runtime-library/heapset.md)|Nessuna|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Nessuna|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Nessuna|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Nessuna|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Nessuna|
-|[_set_output_format](../c-runtime-library/set-output-format.md)|Nessuna|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|nessuna|
+|[_heapadd](../c-runtime-library/heapadd.md)|nessuna|
+|[_heapset](../c-runtime-library/heapset.md)|nessuna|
+|[INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|nessuna|
+|[outp, outpw, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|nessuna|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|nessuna|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Funzione rimossa da CRT nelle versioni precedenti di Visual Studio
 

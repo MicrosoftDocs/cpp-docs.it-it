@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: 6a82d7756f1460c56d87a3d7b1360c140de19827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160607"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990932"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Errore degli strumenti del linker LNK1301
 
-Moduli clr LTCG incompatibile con /LTCG: parametro
+Sono stati trovati moduli CLR LTCG, incompatibili con/LTCG: Parameter
 
-Un modulo compilato con /GL e /clr è stato passato al linker insieme a uno delle ottimizzazioni PGO parametri (PGO) di /LTCG.
+Un modulo compilato con/CLR e/GL è stato passato al linker insieme a uno dei parametri PGO (profile PGO Optimization) di/LTCG.
 
-Ottimizzazione PGO non sono supportati per i moduli /clr.
+Le ottimizzazioni PGO non sono supportate per i moduli/CLR.
 
 Per altre informazioni, vedere:
 
@@ -33,13 +33,13 @@ Per altre informazioni, vedere:
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Non compilare con /clr o non si collega con uno dei parametri di ottimizzazione PGO di /LTCG.
+1. Non eseguire la compilazione con/CLR o non collegarsi con uno dei parametri PGO a/LTCG.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore LNK1301:
+L'esempio seguente genera l'LNK1301:
 
-```
+```cpp
 // LNK1301.cpp
 // compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
 // LNK1301 expected

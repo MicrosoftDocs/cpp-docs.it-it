@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C++"
+title: "Procedura: effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345731"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988180"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Procedura: Effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C++
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Procedura: effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C++
 
-Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/managed-unmanaged.md) #pragma direttive per implementare funzioni gestite e nello stesso file, ma queste funzioni interagiscono nello stesso modo se definiti in file separati. Non è necessario essere compilato con file contenenti solo funzioni non gestite [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Negli esempi di codice seguenti vengono utilizzate le direttive #pragma [gestite e non gestite](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file, ma queste funzioni interagiscono nello stesso modo se definite in file distinti. I file che contengono solo funzioni non gestite non devono essere compilati con [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come una funzione non gestita che accetta una struttura che contiene puntatori può essere chiamata da una funzione gestita. La funzione gestita crea un'istanza della struttura e inizializza il puntatore incorporato con la parola chiave new (anziché il [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) parola chiave). Perché consente di allocare la memoria nell'heap nativo, non è necessario aggiungere la matrice per impedire operazioni di garbage collection. Tuttavia, la memoria deve essere eliminata esplicitamente per evitare la perdita di memoria.
+Nell'esempio seguente viene illustrato come una funzione non gestita che accetta una struttura contenente i puntatori può essere chiamata da una funzione gestita. La funzione gestita crea un'istanza della struttura e inizializza il puntatore incorporato con la parola chiave New, invece della parola chiave [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) . Poiché questa operazione consente di allocare la memoria nell'heap nativo, non è necessario aggiungere la matrice per non visualizzare Garbage Collection. Tuttavia, la memoria deve essere eliminata in modo esplicito per evitare perdite di memoria.
 
-```
+```cpp
 // marshal_embedded_pointer.cpp
 // compile with: /clr
 #include <iostream>

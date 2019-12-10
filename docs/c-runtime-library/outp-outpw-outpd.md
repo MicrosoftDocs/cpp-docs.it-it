@@ -1,10 +1,13 @@
 ---
-title: _outp, _outpw, _outpd
-ms.date: 11/04/2016
+title: outp, outpw, _outp, _outpw, _outpd
+description: Descrive le funzioni outp, outpw, _outp, _outpw e _outpd obsolete e rimosse della libreria di runtime Microsoft C (CRT).
+ms.date: 12/09/2019
 api_name:
 - _outpd
 - _outp
 - _outpw
+- outp
+- outpw
 api_location:
 - msvcrt.dll
 - msvcr100.dll
@@ -21,6 +24,8 @@ f1_keywords:
 - _outpw
 - _outpd
 - _outp
+- outp
+- outpw
 - outpd
 helpviewer_keywords:
 - outpw function
@@ -36,46 +41,44 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: d1e7028ae833e1358ce3199b7e7079535c84d135
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944124"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988381"
 ---
-# <a name="_outp-_outpw-_outpd"></a>_outp, _outpw, _outpd
+# <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
-Restituisce, in una porta, un byte (`_outp`), una parola (`_outpw`) o una parola doppia (`_outpd`).
-
-> [!IMPORTANT]
->  Queste funzioni sono obsolete. A partire da Visual Studio 2015 non sono disponibili in CRT.
+Restituisce, in una porta, un byte (`outp`, `_outp`), una parola (`outpw`, `_outpw`) o una parola doppia (`_outpd`).
 
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Queste funzioni sono obsolete. A partire da Visual Studio 2015 non sono disponibili in CRT.  
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
-```
-
-      int _outp(
-unsigned short port,
-int databyte
+```cpp
+int _outp(
+   unsigned short port,
+   int databyte
 );
 unsigned short _outpw(
-unsigned short port,
-unsigned short dataword
+   unsigned short port,
+   unsigned short dataword
 );
 unsigned long _outpd(
-unsigned short port,
-unsigned long dataword
+   unsigned short port,
+   unsigned long dataword
 );
 ```
 
-#### <a name="parameters"></a>Parametri
-*port*<br/>
-Numero porta.
+### <a name="parameters"></a>Parametri
 
-*databyte, dataword*<br/>
+\ *porta*
+Numero della porta.
+
+*databyte, dataword*\
 Valori di output.
 
 ## <a name="return-value"></a>Valore restituito
@@ -88,7 +91,9 @@ Le funzioni `_outp`, `_outpw`e `_outpd` scrivono un byte, una parola e una parol
 
 Dato che queste funzioni leggono direttamente da una porta I/O, non possono essere usate nel codice utente. Per informazioni sull'uso delle porte I/O in questi sistemi operativi, cercare "Comunicazioni Seriali in Win32" su MSDN.
 
-## <a name="requirements"></a>Requisiti
+I nomi di `outp` e `outpw` sono nomi obsoleti, deprecati per le funzioni `_outp` e `_outpw`. Per altre informazioni, vedere [nomi di funzioni POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+
+## <a name="requirements"></a>Requisiti di
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
@@ -96,7 +101,7 @@ Dato che queste funzioni leggono direttamente da una porta I/O, non possono esse
 |`_outpw`|\<conio.h>|
 |`_outpd`|\<conio.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -104,5 +109,5 @@ Tutte le versioni delle [librerie di runtime C](../c-runtime-library/crt-library
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[Console e porta I/O](../c-runtime-library/console-and-port-i-o.md)\
+[INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
