@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4521
 ms.assetid: 057d770c-ebcf-44cd-b943-1b1bb1ceaa8c
-ms.openlocfilehash: 362fd3c14037fa62ab73c928a45eaf7808de66bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: 79e0866262b2db18424355de0702288d0f24592d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189354"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992070"
 ---
 # <a name="compiler-warning-level-3-c4521"></a>Avviso del compilatore (livello 3) C4521
 

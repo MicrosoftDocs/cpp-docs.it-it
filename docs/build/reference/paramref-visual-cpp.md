@@ -1,5 +1,5 @@
 ---
-title: '&lt;paramref > (commenti relativi alla documentazione di C++)'
+title: '&lt;> paramref (C++ commenti sulla documentazione)'
 ms.date: 11/04/2016
 f1_keywords:
 - paramref
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - paramref C++ XML tag
 - <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-ms.openlocfilehash: cee35ddb5fd5cd811e45f0aa49e94dd9c4b8b180
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f4e9cb0e6b39e4da78e78048342dac2ecc9deea
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319993"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988684"
 ---
 # <a name="ltparamrefgt"></a>&lt;paramref&gt;
 
@@ -36,7 +36,7 @@ Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare 
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // xml_paramref_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_paramref_tag.dll

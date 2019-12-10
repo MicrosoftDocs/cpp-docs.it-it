@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Effettuare il marshalling di stringhe COM tramite l'interoperabilità C++"
+title: "Procedura: effettuare il marshalling di stringhe COM utilizzando l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dfdad892261d5ae2d3494734458e1447f8ebd7c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325481"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988462"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>Procedura: Effettuare il marshalling di stringhe COM tramite l'interoperabilità C++
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Procedura: effettuare il marshalling di stringhe COM utilizzando l'interoperabilità C++
 
-In questo argomento viene illustrato come può essere un oggetto BSTR (il formato di base su stringhe preferito nella programmazione COM) passato da un oggetto gestito a una funzione non gestita e viceversa. Per informazioni sull'interoperabilità con altri tipi di stringhe, vedere gli argomenti seguenti:
+In questo argomento viene illustrato come un BSTR (il formato di stringa di base favorito nella programmazione COM) può essere passato da una funzione gestita a una funzione non gestita e viceversa. Per l'interoperabilità con altri tipi di stringhe, vedere gli argomenti seguenti:
 
 - [Procedura: Effettuare il marshalling di stringhe Unicode tramite l'interoperabilità C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [Procedura: Effettuare il marshalling di stringhe ANSI tramite l'interoperabilità C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/managed-unmanaged.md) #pragma direttive per implementare funzioni gestite e nello stesso file, ma queste funzioni interagiscono nello stesso modo se definiti in file separati. Non è necessario essere compilato con file contenenti solo funzioni non gestite [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Negli esempi di codice seguenti vengono utilizzate le direttive #pragma [gestite e non gestite](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file, ma queste funzioni interagiscono nello stesso modo se definite in file distinti. I file che contengono solo funzioni non gestite non devono essere compilati con [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come un oggetto BSTR (un formato di stringa usato nella programmazione COM) possono essere passati da un oggetto gestito da una funzione non gestita. Funzione gestita il chiamante utilizza <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> per ottenere l'indirizzo di una rappresentazione di BSTR dei contenuti di .NET System. String. Puntatore ' this ' è bloccata tramite [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per verificare che il relativo indirizzo fisico non è modificato durante un ciclo di garbage collection mentre è in esecuzione la funzione non gestita. Il garbage collector viene impedito lo spostamento della memoria finché il [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) esce dall'ambito.
+Nell'esempio seguente viene illustrato come un BSTR (un formato stringa utilizzato nella programmazione COM) può essere passato da una funzione gestita a una funzione non gestita. La funzione gestita chiamante usa <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> per ottenere l'indirizzo di una rappresentazione BSTR del contenuto di un oggetto System. String .NET. Questo puntatore viene bloccato utilizzando [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per assicurarsi che l'indirizzo fisico non venga modificato durante un ciclo di Garbage Collection mentre viene eseguita la funzione non gestita. Non è consentito Garbage Collector lo trasferimento della memoria fino a quando l' [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) non esce dall'ambito.
 
-```
+```cpp
 // MarshalBSTR1.cpp
 // compile with: /clr
 #define WINVER 0x0502
@@ -65,9 +65,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come può essere passato un oggetto BSTR da una funzione non gestita a una funzione non gestita. La ricezione funzione gestita possa usare la stringa in BSTR oppure usare <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> per convertirlo in un <xref:System.String> per l'uso con altre funzioni gestite. Poiché la memoria che rappresenta la stringa BSTR viene allocata nell'heap non gestito, è necessario, alcun blocco perché non vi è alcuna operazione di garbage collection nell'heap non gestito.
+Nell'esempio seguente viene illustrato come un BSTR può essere passato da una funzione non gestita a una funzione non gestita. La funzione gestita di ricezione può usare la stringa in come BSTR o usare <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> per convertirla in una <xref:System.String> da usare con altre funzioni gestite. Poiché la memoria che rappresenta il BSTR viene allocata nell'heap non gestito, non è necessario alcun blocco, perché non è presente alcun Garbage Collection nell'heap non gestito.
 
-```
+```cpp
 // MarshalBSTR2.cpp
 // compile with: /clr
 #define WINVER 0x0502

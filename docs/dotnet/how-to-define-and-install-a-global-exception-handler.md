@@ -1,25 +1,25 @@
 ---
-title: 'Procedura: Definire e installare un gestore eccezioni globale'
+title: 'Procedura: definire e installare un gestore eccezioni globale'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: d1b8452d19172bf16817c36032189accfd855539
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387396"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988309"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>Procedura: Definire e installare un gestore eccezioni globale
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Procedura: definire e installare un gestore eccezioni globale
 
-L'esempio di codice seguente illustra le eccezioni non gestite come possono essere acquisite. Il form di esempio contiene un pulsante che, quando premuti, esegue un riferimento null, causando un'eccezione generata. Questa funzionalità rappresenta un errore di codice tipico. L'eccezione viene intercettata dal gestore di eccezioni a livello di applicazione installato per la funzione principale.
+Nell'esempio di codice riportato di seguito viene illustrato come è possibile acquisire le eccezioni non gestite. Il form di esempio contiene un pulsante che, quando premuto, esegue un riferimento null, causando la generazione di un'eccezione. Questa funzionalità rappresenta un normale errore del codice. L'eccezione risultante viene rilevata dal gestore di eccezioni a livello di applicazione installato dalla funzione Main.
 
-Questa operazione viene eseguita associando un delegato per il <xref:System.Windows.Forms.Application.ThreadException> evento. In questo caso, eccezioni successive vengono quindi inviate per la `App::OnUnhandled` (metodo).
+Questa operazione viene eseguita associando un delegato all'evento <xref:System.Windows.Forms.Application.ThreadException>. In questo caso, le eccezioni successive vengono quindi inviate al metodo `App::OnUnhandled`.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // global_exception_handler.cpp
 // compile with: /clr
 #using <system.dll>

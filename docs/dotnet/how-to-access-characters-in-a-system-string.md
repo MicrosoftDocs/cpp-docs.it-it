@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Caratteri di accesso in un System:: String'
+title: 'Procedura: accedere ai caratteri in System::String'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222936"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988641"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: Caratteri di accesso in un System:: String
+# <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: accedere ai caratteri in System::String
 
-È possibile accedere ai caratteri di una <xref:System.String> oggetto per chiamate a prestazioni elevate a non gestito le funzioni che accettano `wchar_t*` stringhe. Il metodo restituisce un puntatore interno per il primo carattere del <xref:System.String> oggetto. Puntatore ' this ' possono essere manipolati direttamente o aggiunti e passato a una funzione è previsto un normale `wchar_t` stringa.
+È possibile accedere ai caratteri di un oggetto <xref:System.String> per le chiamate a prestazioni elevate a funzioni non gestite che accettano `wchar_t*` stringhe. Il metodo produce un puntatore interno al primo carattere dell'oggetto <xref:System.String>. Questo puntatore può essere modificato direttamente o aggiunto e passato a una funzione che prevede una stringa di `wchar_t` ordinata.
 
 ## <a name="example"></a>Esempio
 
-`PtrToStringChars` Restituisce un <xref:System.Char>, che è un puntatore interno (noto anche come un `byref`). Di conseguenza, è sottoposte a garbage collection. Non è necessario aggiungere questo puntatore a meno che non si intende passare a una funzione nativa.
+`PtrToStringChars` restituisce un <xref:System.Char>, ovvero un puntatore interno (noto anche come `byref`). Di conseguenza, è soggetto a Garbage Collection. Non è necessario aggiungere questo puntatore a meno che non lo si passi a una funzione nativa.
 
-Si consideri il codice seguente.  L'aggiunta non è necessaria perché `ppchar` è un puntatore interno e se il garbage collector Sposta la stringa che punta a, verrà aggiornato anche `ppchar`. Senza una [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), il codice sarà valido e non è la potenziale riduzione delle prestazioni causato dal blocco.
+Si consideri il codice seguente.  L'aggiunta non è necessaria perché `ppchar` è un puntatore interno e se il Garbage Collector sposta la stringa a cui punta, aggiornerà anche `ppchar`. Senza un [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), il codice funzionerà e non avrà il potenziale impatto sulle prestazioni causato dall'aggiunta.
 
-Se si passa `ppchar` a una funzione nativa, quindi deve essere un puntatore di blocco, il garbage collector non sarà in grado di aggiornare tutti i puntatori sul frame dello stack non gestito.
+Se si passa `ppchar` a una funzione nativa, deve essere un puntatore di blocco; il Garbage Collector non sarà in grado di aggiornare i puntatori sulla stack frame non gestita.
 
-```
+```cpp
 // PtrToStringChars.cpp
 // compile with: /clr
 #include<vcclr.h>
@@ -48,9 +48,9 @@ abcdefg
 
 ## <a name="example"></a>Esempio
 
-Questo esempio viene illustrato in cui il blocco necessario.
+Questo esempio mostra dove è necessario aggiungere il blocco.
 
-```
+```cpp
 // PtrToStringChars_2.cpp
 // compile with: /clr
 #include <string.h>
@@ -77,9 +77,9 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Un puntatore interno ha tutte le proprietà del puntatore C++ nativo. Ad esempio, è possibile utilizzare per spostarsi di una struttura di dati collegato ed eseguire inserimenti ed eliminazioni utilizzando solo un puntatore:
+Un puntatore interno ha tutte le proprietà di un puntatore C++ nativo. Ad esempio, è possibile usarlo per esaminare una struttura di dati collegata ed eseguire inserimenti ed eliminazioni usando un solo puntatore:
 
-```
+```cpp
 // PtrToStringChars_3.cpp
 // compile with: /clr /LD
 using namespace System;

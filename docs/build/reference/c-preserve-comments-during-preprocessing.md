@@ -12,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: c5854fd1255ab509d8778828de25638dd821d74b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d0cf8e5f628f3f5301f54d7c853bfc2ab63cb7e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272832"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988365"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Conserva i commenti durante la pre-elaborazione)
 
@@ -31,17 +31,17 @@ Conserva i commenti durante la pre-elaborazione.
 
 ## <a name="remarks"></a>Note
 
-Questa opzione del compilatore richiede la **/E**, **/P**, o **/EP** opzione.
+Questa opzione del compilatore richiede l'opzione **/e**, **/p**o **/EP** .
 
-Esempio di codice seguente visualizzerà il commento del codice sorgente.
+Nell'esempio di codice seguente viene visualizzato il commento del codice sorgente.
 
-```
+```cpp
 // C_compiler_option.cpp
 // compile with: /E /C /c
 int i;   // a variable
 ```
 
-In questo esempio verrà generato l'output seguente.
+Questo esempio produrrà il seguente output.
 
 ```
 #line 1 "C_compiler_option.cpp"
@@ -50,13 +50,13 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
-1. Scegliere il **preprocessore** pagina delle proprietà.
+1. Fare clic sulla pagina delle proprietà del **preprocessore** .
 
-1. Modificare il **Mantieni commenti** proprietà.
+1. Modificare la proprietà **Mantieni commenti** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 

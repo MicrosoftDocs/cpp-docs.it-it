@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2574ba5a10bbf5eddc68d6e0265d5dfc99c6d8fc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223014"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988339"
 ---
 # <a name="finally"></a>finally
 
-Oltre a `try` e `catch` clausole, eccezioni Common Language Runtime supporta un `finally` clausola. La semantica è identica al `__finally` blocco (SEH) di gestione strutturata delle eccezioni. Oggetto `__finally` blocco può seguire un `try` o `catch` blocco.
+Oltre alle clausole `try` e `catch`, la gestione delle eccezioni CLR supporta una clausola `finally`. La semantica è identica a quella del blocco `__finally` nella gestione delle eccezioni strutturata (SEH). Un blocco di `__finally` può seguire un blocco `try` o `catch`.
 
 ## <a name="remarks"></a>Note
 
-Lo scopo del `finally` blocco consiste nella pulizia delle risorse dopo che si è verificata l'eccezione a sinistra. Si noti che il `finally` blocco viene sempre eseguito, anche se è stata generata alcuna eccezione. Il `catch` blocco viene eseguito solo se viene generata un'eccezione gestita all'interno associato `try` blocco.
+Lo scopo del blocco `finally` consiste nel pulire le risorse rimaste dopo l'eccezione. Si noti che il blocco `finally` viene sempre eseguito, anche se non è stata generata alcuna eccezione. Il blocco `catch` viene eseguito solo se viene generata un'eccezione gestita all'interno del blocco di `try` associato.
 
-`finally` è una parola chiave sensibile al contesto. visualizzare [parole chiave sensibili al contesto](../extensions/context-sensitive-keywords-cpp-component-extensions.md) per altre informazioni.
+`finally` è una parola chiave sensibile al contesto; Per ulteriori informazioni, vedere [parole chiave sensibili al contesto](../extensions/context-sensitive-keywords-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra un semplice `finally` blocco:
+Nell'esempio seguente viene illustrato un blocco di `finally` semplice:
 
-```
+```cpp
 // keyword__finally.cpp
 // compile with: /clr
 using namespace System;

@@ -1,40 +1,40 @@
 ---
-title: 'Procedura: Conversione da una raccolta .NET a un contenitore STL/CLR'
+title: 'Procedura: conversione da raccolta .NET a contenitore STL/CLR'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 836623f6d539b7b28765763a3dc36d477f8c1499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 156b4162f742915939ebdfaec6a84d77afaad8cd
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387552"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988277"
 ---
-# <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Procedura: Conversione da una raccolta .NET a un contenitore STL/CLR
+# <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Procedura: conversione da raccolta .NET a contenitore STL/CLR
 
-In questo argomento viene illustrato come convertire le raccolte di .NET per i relativi contenitori STL/CLR equivalente. Ad esempio viene illustrato come convertire un .NET <xref:System.Collections.Generic.List%601> a un STL/CLR [vettore](../dotnet/vector-stl-clr.md) e su come convertire un .NET <xref:System.Collections.Generic.Dictionary%602> a un STL/CLR [mappa](../dotnet/map-stl-clr.md), ma la procedura è simile per tutte le raccolte e i contenitori .
+In questo argomento viene illustrato come convertire le raccolte .NET nei contenitori STL/CLR equivalenti. Come esempio viene illustrato come convertire un <xref:System.Collections.Generic.List%601> .NET in un [vettore](../dotnet/vector-stl-clr.md) STL/CLR e come convertire una <xref:System.Collections.Generic.Dictionary%602> .NET in una [mappa](../dotnet/map-stl-clr.md)STL/CLR, ma la procedura è simile per tutte le raccolte e i contenitori.
 
 ### <a name="to-create-a-container-from-a-collection"></a>Per creare un contenitore da una raccolta
 
-1. Per convertire un'intera raccolta, creare un contenitore STL/CLR e passare insieme al costruttore.
+1. Per convertire un'intera raccolta, creare un contenitore STL/CLR e passare la raccolta al costruttore.
 
    Nel primo esempio viene illustrata questa procedura.
 
 OPPURE
 
-1. Creare un contenitore STL/CLR generico creando un [collection_adapter](../dotnet/collection-adapter-stl-clr.md) oggetto. Questa classe modello accetta un'interfaccia di raccolta .NET come argomento. Per verificare quali interfacce sono supportate, vedere [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
+1. Creare un contenitore STL/CLR generico creando un oggetto [collection_adapter](../dotnet/collection-adapter-stl-clr.md) . Questa classe modello accetta un'interfaccia di raccolta .NET come argomento. Per verificare quali interfacce sono supportate, vedere [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
 
-1. Copiare il contenuto della raccolta .NET a contenitore. Questa operazione può essere eseguita usando un STL/CLR [algoritmo](../dotnet/algorithm-stl-clr.md), o mediante lo scorrimento della raccolta .NET e l'inserimento di una copia di ogni elemento nel contenitore STL/CLR.
+1. Copiare il contenuto della raccolta .NET nel contenitore. Questa operazione può essere eseguita usando un [algoritmo](../dotnet/algorithm-stl-clr.md)STL/CLR oppure eseguendo l'iterazione sulla raccolta .NET e inserendo una copia di ogni elemento nel contenitore STL/CLR.
 
    Nel secondo esempio viene illustrata questa procedura.
 
 ## <a name="example"></a>Esempio
 
-In questo esempio, si crea un oggetto generico <xref:System.Collections.Generic.List%601> e aggiungervi 5 elementi. Quindi, creiamo un `vector` utilizzando il costruttore che accetta un <xref:System.Collections.Generic.IEnumerable%601> come argomento.
+In questo esempio viene creata una <xref:System.Collections.Generic.List%601> generica e vengono aggiunti 5 elementi. Viene quindi creata una `vector` usando il costruttore che accetta un <xref:System.Collections.Generic.IEnumerable%601> come argomento.
 
-```
+```cpp
 // cliext_convert_list_to_vector.cpp
 // compile with: /clr
 
@@ -78,9 +78,9 @@ The contents of the cliext::vector are:
 
 ## <a name="example"></a>Esempio
 
-In questo esempio, si crea un oggetto generico <xref:System.Collections.Generic.Dictionary%602> e aggiungervi 5 elementi. Quindi, creiamo un `collection_adapter` per eseguire il wrapping di <xref:System.Collections.Generic.Dictionary%602> come un semplice contenitore STL/CLR. Infine, si crea un `map` e copiare il contenuto del <xref:System.Collections.Generic.Dictionary%602> per il `map` mediante l'iterazione di `collection_adapter`. Durante questo processo, viene creata una nuova coppia mediante il `make_pair` funzione e inserire la nuova coppia direttamente nel `map`.
+In questo esempio viene creata una <xref:System.Collections.Generic.Dictionary%602> generica e vengono aggiunti 5 elementi. Viene quindi creata una `collection_adapter` per eseguire il wrapping del <xref:System.Collections.Generic.Dictionary%602> come contenitore STL/CLR semplice. Infine, si crea una `map` e si copia il contenuto del <xref:System.Collections.Generic.Dictionary%602> nel `map` scorrendo il `collection_adapter`. Durante questo processo, viene creata una nuova coppia usando la funzione `make_pair` e viene inserita la nuova coppia direttamente nel `map`.
 
-```
+```cpp
 // cliext_convert_dictionary_to_map.cpp
 // compile with: /clr
 
@@ -132,4 +132,4 @@ Key: 74.00 Value: 74
 
 [Riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)<br/>
-[Procedura: Convertire da contenitore STL/CLR a raccolta .NET](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)
+[Procedura: Convertire da contenitore STL/CLR a raccolta di .NET](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)

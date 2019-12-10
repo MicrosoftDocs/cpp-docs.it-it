@@ -1,6 +1,7 @@
 ---
 title: '&lt;atomic&gt;'
-ms.date: 11/04/2016
+description: Descrive i tipi e le funzioni disponibili nell'intestazione atomica della libreria standard C++ .
+ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -48,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688454"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991171"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,17 +69,17 @@ Definisce classi e modelli di classe da utilizzare per creare tipi che supportan
 ## <a name="remarks"></a>Note
 
 > [!NOTE]
-> Nel codice compilato utilizzando **/CLR**, questa intestazione è bloccata.
+> Nel codice compilato usando [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md)questa intestazione è bloccata. Entrambe le versioni **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2017 e versioni successive.
 
 Un'operazione atomica ha due proprietà chiave che consentono di usare più thread per gestire correttamente un oggetto senza usare blocchi mutex.
 
-- Poiché un'operazione atomica è indivisibile, una seconda operazione atomica sullo stesso oggetto da un altro thread può ottenere lo stato dell'oggetto solo prima o dopo la prima operazione atomica.
+- Poiché un'operazione atomica è indivisibile, una seconda operazione atomica sullo stesso oggetto da un thread diverso può ottenere lo stato dell'oggetto solo prima o dopo la prima operazione atomica.
 
 - In base al relativo argomento [memory_order](../standard-library/atomic-enums.md#memory_order_enum), un'operazione atomica stabilisce i requisiti di ordinamento per la visibilità degli effetti di altre operazioni atomiche nello stesso thread. Di conseguenza, impedisce le ottimizzazioni del compilatore che violano i requisiti di ordinamento.
 
 In alcune piattaforme, potrebbe non essere possibile implementare in modo efficiente operazioni atomiche per alcuni tipi senza usare blocchi `mutex`. Un tipo atomico è *senza blocco* se nessuna operazione atomica su tale tipo usa i blocchi.
 
-**C++11**: nei gestori di segnale è possibile eseguire operazioni atomiche su un oggetto `obj` se `obj.is_lock_free()` o `atomic_is_lock_free(x)` sono true.
+**C++ 11**: nei gestori di segnale è possibile eseguire operazioni atomiche su un oggetto `obj` se `obj.is_lock_free()` o `atomic_is_lock_free(x)` sono true.
 
 La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornisce un tipo atomico minimo che contiene un flag **bool** . Le operazioni sono sempre senza blocco.
 
@@ -92,11 +93,11 @@ Le specializzazioni parziali `atomic<T *>` si applicano a tutti i tipi di puntat
 
 ## <a name="integral-specializations"></a>Specializzazioni integrali
 
-Le specializzazioni `atomic<integral>` si applicano a tutti i tipi integrali. Queste specializzazioni forniscono operazioni aggiuntive che non sono disponibili tramite il modello principale.
+Le specializzazioni `atomic<integral>` si applicano a tutti i tipi integrali. Forniscono operazioni aggiuntive che non sono disponibili tramite il modello primario.
 
 Ogni tipo `atomic<integral>` ha una macro corrispondente che è possibile usare in una `if directive` per determinare in fase di compilazione se le operazioni su tale tipo sono senza blocco. Se il valore della macro è zero, le operazioni sul tipo non sono senza blocco. Se il valore è 1, le operazioni potrebbero essere senza blocco ed è necessario un controllo di runtime. Se il valore è 2, le operazioni sono senza blocco. È possibile usare la funzione `atomic_is_lock_free` per determinare in fase di esecuzione se le operazioni sul tipo sono senza blocco.
 
-Per ogni tipo integrale esiste un tipo atomico denominato corrispondente che gestisce un oggetto dello stesso tipo integrale. Ogni tipo `atomic_integral` ha lo stesso set di funzioni membro dell'istanza corrispondente di `atomic<T>` e può essere passato a qualsiasi funzione atomica non membro.
+Per ogni tipo integrale, esiste un tipo atomico denominato corrispondente che gestisce un oggetto di quel tipo integrale. Ogni tipo `atomic_integral` ha lo stesso set di funzioni membro dell'istanza corrispondente di `atomic<T>` e può essere passato a qualsiasi funzione atomica non membro.
 
 |Tipo `atomic_integral`|Tipo integrale|`atomic_is_lock_free` Macro|
 |----------------------------|-------------------|---------------------------------|
@@ -165,7 +166,7 @@ I nomi di typedef esistono per specializzazioni del modello atomico per alcuni d
 
 ## <a name="functions"></a>Funzioni
 
-Nell'elenco seguente le funzioni che non terminano con `_explicit` hanno la semantica del `_explicit` corrispondente, ad eccezione del fatto che hanno gli argomenti [memory_order](../standard-library/atomic-enums.md#memory_order_enum) impliciti di `memory_order_seq_cst`.
+Nell'elenco seguente, le funzioni che non terminano con `_explicit` hanno la semantica del `_explicit`corrispondente, ad eccezione del fatto che hanno gli argomenti [memory_order](../standard-library/atomic-enums.md#memory_order_enum) impliciti di `memory_order_seq_cst`.
 
 |Name|Descrizione|
 |----------|-----------------|

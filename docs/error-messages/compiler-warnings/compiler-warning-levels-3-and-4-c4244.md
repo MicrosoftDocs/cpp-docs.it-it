@@ -2,28 +2,28 @@
 title: Avviso del compilatore (livelli 3 e 4) C4244
 ms.date: 11/04/2016
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
-ms.openlocfilehash: af06dbf5bb4a1dd133c277d63c40da2a8a54770b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a12bee4591df8a7a952dc741c4b26c637bb5256c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359930"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991082"
 ---
 # <a name="compiler-warning-levels-3-and-4-c4244"></a>Avviso del compilatore (livelli 3 e 4) C4244
 
 'conversion': conversione da 'type1' a 'type2'. Possibile perdita di dati
 
-Un tipo integer viene convertito in un tipo integer di dimensioni minori. Si tratta di un avviso di livello 4 se *type1* viene `int` e *type2* inferiori `int`. In caso contrario, è un livello 3 (assegnato un valore di tipo [__int64](../../cpp/int8-int16-int32-int64.md) a una variabile di tipo `unsigned int`). Potrebbe essersi verificata una perdita di dati.
+Un tipo integer viene convertito in un tipo integer di dimensioni minori. Si tratta di un avviso di livello 4 Se *tipo1* è `int` e *tipo2* è minore di `int`. In caso contrario, è un livello 3 (assegnato un valore di tipo [__int64](../../cpp/int8-int16-int32-int64.md) a una variabile di tipo `unsigned int`). Potrebbe essersi verificata una perdita di dati.
 
 Se viene visualizzato l'errore C4244, è consigliabile modificare il programma per poter usare tipi compatibili o aggiungere al codice la logica, per assicurarsi che l'intervallo di valori possibili sia sempre compatibili con i tipi usati.
 
-L'errore C4244 possono inoltre attivare livello 2. visualizzare [avviso del compilatore (livello 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) per altre informazioni.
+C4244 può anche essere attivato al livello 2. Per ulteriori informazioni, vedere [Avviso del compilatore (livello 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) .
 
 La conversione potrebbe presentare un problema dovuto alle conversioni implicite.
 
 L'esempio seguente genera l'errore C4244:
 
-```
+```cpp
 // C4244_level4.cpp
 // compile with: /W4
 int aa;
@@ -39,9 +39,9 @@ int main() {
 }
 ```
 
-Per altre informazioni, vedere [conversioni aritmetiche comuni](../../c-language/usual-arithmetic-conversions.md).
+Per ulteriori informazioni, vedere [conversioni aritmetiche consuete](../../c-language/usual-arithmetic-conversions.md).
 
-```
+```cpp
 // C4244_level3.cpp
 // compile with: /W3
 int main() {
@@ -54,7 +54,7 @@ L'avviso C4244 può verificarsi quando si compila un codice per destinazioni a 6
 
 L'esempio seguente genera l'errore C4244 quando viene compilato per destinazioni a 64 bit:
 
-```
+```cpp
 // C4244_level3_b.cpp
 // compile with: /W3
 int main() {

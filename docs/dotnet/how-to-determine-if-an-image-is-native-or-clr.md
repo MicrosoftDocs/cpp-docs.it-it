@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Determinare se un'immagine è nativa o CLR"
+title: "Procedura: determinare se un'immagine è nativa o CLR"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5149440e172b764278c5ee816827c2d13e2b4c0e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387344"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988504"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Procedura: Determinare se un'immagine è nativa o CLR
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Procedura: determinare se un'immagine è nativa o CLR
 
 Un modo per determinare se è stata compilata un'immagine per common language runtime consiste nell'usare **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).
 
-Anche a livello di codice, è possibile controllare se un'immagine è stata compilata per common language runtime. Per altre informazioni, vedere [Procedura: Rilevare compilazioni /clr](../dotnet/how-to-detect-clr-compilation.md).
+È anche possibile verificare a livello di codice se un'immagine è stata compilata per la Common Language Runtime. Per altre informazioni, vedere [procedura: rilevare la compilazione/clr](../dotnet/how-to-detect-clr-compilation.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente determina se è stata compilata un'immagine per l'esecuzione in common language runtime.
+Nell'esempio seguente viene determinato se un'immagine è stata compilata per essere eseguita nel Common Language Runtime.
 
-```
+```cpp
 // detect_image_type.cpp
 // compile with: /clr
 using namespace System;

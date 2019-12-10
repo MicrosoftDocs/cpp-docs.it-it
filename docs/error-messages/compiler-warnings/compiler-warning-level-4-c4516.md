@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4516
 ms.assetid: 6677bb1f-d26e-4ab9-8644-6b5a2a8f4ff8
-ms.openlocfilehash: 23e1ec488a661e68d5b53fba50661354182a1015
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 47e278bbc69b972f6acc391d6b3278ab8d159c08
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683173"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990694"
 ---
 # <a name="compiler-warning-level-4-c4516"></a>Avviso del compilatore (livello 4) C4516
 

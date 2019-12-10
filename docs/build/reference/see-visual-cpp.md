@@ -1,5 +1,5 @@
 ---
-title: '&lt;vedere > (commenti relativi alla documentazione di C++)'
+title: '&lt;vedere > (C++ commenti sulla documentazione)'
 ms.date: 11/04/2016
 f1_keywords:
 - <see>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-ms.openlocfilehash: be99d3ac156c587888a7c56997d82531cf86ccec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8693646fa37648d1b20c791d99d159f2c81b8ec1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318901"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988625"
 ---
 # <a name="ltseegt"></a>&lt;see&gt;
 
@@ -38,13 +38,13 @@ Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare 
 
 Per un esempio dell'uso di \<see>, vedere [\<summary>](summary-visual-cpp.md).
 
-Il compilatore MSVC tenterà di risolvere i riferimenti cref in un unico passaggio tramite i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto. Per altre informazioni, vedere [\<seealso>](seealso-visual-cpp.md).
+Il compilatore MSVC tenterà di risolvere i riferimenti CREF in un passaggio attraverso i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto. Per altre informazioni, vedere [\<seealso>](seealso-visual-cpp.md).
 
 ## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene illustrato come generare i riferimenti cref in un tipo generico, in modo che il compilatore risolva il riferimento.
 
-```
+```cpp
 // xml_see_cref_example.cpp
 // compile with: /LD /clr /doc
 // the following cref shows how to specify the reference, such that,

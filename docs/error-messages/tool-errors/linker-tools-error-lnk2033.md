@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2033
 ms.assetid: d61db467-9328-4788-bf54-e2a20537f13f
-ms.openlocfilehash: 7e95823e23215848ff3e5d201171523c9009eb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 407f5eaf94a0e2da43425c3bbdd1955a88c95f14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298906"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991184"
 ---
 # <a name="linker-tools-error-lnk2033"></a>Errore degli strumenti del linker LNK2033
 
-token typeref non risolto (token) per 'type'
+token TypeRef non risolto (token) per ' type '
 
 Un tipo non ha una definizione nei metadati MSIL.
 
-Errore LNK2033 possono verificarsi durante la compilazione con **/CLR: safe** e in cui è presente solo una dichiarazione con prototipo per un tipo in un modulo MSIL, in cui il tipo fa riferimento al modulo MSIL.
+LNK2033 può verificarsi quando si esegue la compilazione con **/CLR: safe** e dove esiste solo una dichiarazione con esecuzione per un tipo in un modulo MSIL, in cui al tipo viene fatto riferimento nel modulo MSIL.
 
 Il tipo deve essere definito in **/CLR: safe**.
 
@@ -27,9 +27,9 @@ Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore LNK2033.
+L'esempio seguente genera l'LNK2033.
 
-```
+```cpp
 // LNK2033.cpp
 // compile with: /clr:safe
 // LNK2033 expected

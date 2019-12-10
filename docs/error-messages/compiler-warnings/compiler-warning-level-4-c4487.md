@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 1583da44368225eabd8181be970f69f6582111e1
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: b83b3b33727db300367156e10f902aaa6ff4bfdb
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74682974"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990781"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>Avviso del compilatore (livello 4) C4487
 
