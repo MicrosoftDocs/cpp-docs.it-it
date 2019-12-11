@@ -6370,6 +6370,8 @@
                   expanded: false
                   items:
                     - name: File e flussi
+                      href: c-runtime-library/files-and-streams.md
+                    - name: Flussi di testo e binari
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Flussi di byte e "wide"
                       href: c-runtime-library/byte-and-wide-streams.md
@@ -10418,7 +10420,7 @@
                           href: parallel/concrt/reference/task-continuation-context-class.md
                         - name: Classe task_group
                           href: parallel/concrt/reference/task-group-class.md
-                        - name: Classe task_handle
+                        - name: task_handle (classe)
                           href: parallel/concrt/reference/task-handle-class.md
                         - name: Classe task_options (runtime di concorrenza)
                           href: parallel/concrt/reference/task-options-class-concurrency-runtime.md
