@@ -1,30 +1,43 @@
 ---
-title: Set di caratteri
-ms.date: 05/06/2019
+title: Token e set di caratteri
+ms.date: 12/10/2019
 helpviewer_keywords:
+- Tokens (C++)
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1f6dbe2faa6348d61ec00b411cc35e8ef5ceb57a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222529"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301613"
 ---
-# <a name="character-sets"></a>Set di caratteri
+# <a name="tokens-and-character-sets"></a>Token e set di caratteri
 
-Il testo di un programma C++ viene archiviato in file di origine che usano una particolare codifica dei caratteri. Lo standard C++ specifica un set di caratteri di origine base per i file di origine e un set di caratteri di esecuzione di base per i file compilati. Microsoft C++ del compilatore (MSVC) consente a un set aggiuntivo di caratteri specifici delle impostazioni locali da usare nei file di origine e i file compilati.
+Il testo di un C++ programma è costituito da token e da *spazi vuoti*. Un token è il più piccolo elemento di un programma C++ significativo per il compilatore. Il C++ parser riconosce questi tipi di token:
 
-## <a name="character-sets"></a>Set di caratteri
+- [Parole chiave](../cpp/keywords-cpp.md)
+- [Identificatori](../cpp/identifiers-cpp.md)
+- [Valori letterali numerici, booleani e puntatore](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [Valori letterali stringa e carattere](../cpp/string-and-character-literals-cpp.md)
+- [Valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)
+- [Operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [Segni di punteggiatura](../cpp/punctuators-cpp.md)
 
-Lo standard C++ specifica un *set di caratteri di origine di base* che possono essere usati nei file di origine. Per rappresentare i caratteri esterni a questo set, è possibile specificare i caratteri aggiuntivi usando un *nome di carattere universale*. Quando vengono compilati, il *set di caratteri di esecuzione di base* e *set di caratteri wide di esecuzione di base* rappresentano i caratteri e le stringhe che possono essere visualizzati in un programma. L'implementazione di MSVC consente caratteri aggiuntivi nel codice sorgente e il codice compilato.
+I token sono in genere separati da *spazi vuoti*, che possono essere uno o più:
 
-### <a name="basic-source-character-set"></a>Set di caratteri di origine di base
+- Valori vuoti
+- Tabulazioni orizzontali o verticali
+- Nuove righe
+- Feed di form
+- Comments
 
-Il *set di caratteri di origine di base* è costituito da 96 caratteri che possono essere usati nei file di origine. Questo set include il carattere di spazio, la tabulazione orizzontale, la tabulazione verticale, l'avanzamento modulo e i caratteri di controllo di nuova riga, e questo set di caratteri grafici:
+## <a name="basic-source-character-set"></a>Set di caratteri di origine di base
+
+Lo C++ standard specifica un *set di caratteri di origine di base* che può essere usato nei file di origine. Per rappresentare i caratteri esterni a questo set, è possibile specificare i caratteri aggiuntivi usando un *nome di carattere universale*. L'implementazione di MSVC consente caratteri aggiuntivi. Il *set di caratteri di origine di base* è costituito da 96 caratteri che possono essere usati nei file di origine. Questo set include il carattere di spazio, la tabulazione orizzontale, la tabulazione verticale, l'avanzamento modulo e i caratteri di controllo di nuova riga, e questo set di caratteri grafici:
 
 `a b c d e f g h i j k l m n o p q r s t u v w x y z`
 
@@ -36,7 +49,7 @@ Il *set di caratteri di origine di base* è costituito da 96 caratteri che posso
 
 **Sezione specifica Microsoft**
 
-MSVC include la `$` carattere come membro del set di caratteri di origine di base. MSVC consente anche un set aggiuntivo di caratteri da utilizzare nei file di origine, in base alla codifica di file. Per impostazione predefinita, Visual Studio archivia i file di origine usando la tabella codici predefinita. Quando vengono salvati i file di origine usando una tabella codici dalle impostazioni locali o una tabella codici Unicode, MSVC consente di usare i caratteri della tabella codici nel codice sorgente, ad eccezione dei codici di controllo non esplicitamente consentiti nel carattere di origine di base. Ad esempio, è possibile inserire caratteri giapponesi nei commenti, negli identificatori o nei valori letterali stringa se si salva il file usando una tabella codici giapponese. MSVC non consente sequenze di caratteri che non possono essere convertite in caratteri multibyte validi o punti di codice Unicode. A seconda delle opzioni del compilatore, non tutti i caratteri consentiti potrebbero apparire negli identificatori. Per altre informazioni, vedere [Identifiers](../cpp/identifiers-cpp.md).
+MSVC include il carattere `$` come membro del set di caratteri di origine di base. MSVC consente inoltre di usare un set di caratteri aggiuntivo nei file di origine, in base alla codifica dei file. Per impostazione predefinita, Visual Studio archivia i file di origine usando la tabella codici predefinita. Quando i file di origine vengono salvati usando una tabella codici specifica delle impostazioni locali o una tabella codici Unicode, MSVC consente di usare qualsiasi carattere di tale tabella codici nel codice sorgente, ad eccezione dei codici di controllo non esplicitamente consentiti nel set di caratteri di origine di base. Ad esempio, è possibile inserire caratteri giapponesi nei commenti, negli identificatori o nei valori letterali stringa se si salva il file usando una tabella codici giapponese. MSVC non consente sequenze di caratteri che non possono essere convertite in caratteri multibyte o punti di codice Unicode validi. A seconda delle opzioni del compilatore, non tutti i caratteri consentiti potrebbero apparire negli identificatori. Per altre informazioni, vedere [Identifiers](../cpp/identifiers-cpp.md).
 
 **Fine sezione specifica Microsoft**
 
@@ -48,7 +61,7 @@ Siccome i programmi in C++ possono usare molti più caratteri rispetto a quelli 
 
 **Sezione specifica Microsoft**
 
-Microsoft C++ compilatore considera un carattere nel formato nome di carattere universale e formato letterale in modo intercambiabile. Ad esempio, è possibile dichiarare un identificatore usando il formato di nome di carattere universale e usarlo nel formato di valore letterale:
+Il compilatore C++ Microsoft tratta un carattere nel formato nome di carattere universale e il formato letterale interscambiabile. Ad esempio, è possibile dichiarare un identificatore usando il formato di nome di carattere universale e usarlo nel formato di valore letterale:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'
@@ -59,6 +72,6 @@ Il formato dei caratteri estesi negli Appunti di Windows è specifico delle impo
 
 **Fine sezione specifica Microsoft**
 
-### <a name="basic-execution-character-set"></a>set di caratteri di esecuzione di base
+### <a name="execution-character-sets"></a>Set di caratteri di esecuzione
 
-Il *set di caratteri di esecuzione di base* e il *set di caratteri wide di esecuzione di base* sono costituiti da tutti i caratteri inclusi nel set di caratteri di origine di base e dai caratteri di controllo che rappresentano avviso, backspace, ritorno a capo e il carattere Null. Il *set di caratteri di esecuzione* e il *set di caratteri wide di esecuzione* sono superset dei set di base. Includono i caratteri di origine definiti dall'implementazione all'esterno del set di caratteri di origine di base. Il set di caratteri di esecuzione ha una rappresentazione specifica delle impostazioni locali.
+I *set di caratteri di esecuzione* rappresentano i caratteri e le stringhe che possono essere visualizzati in un programma compilato. Questi set di caratteri sono costituiti da tutti i caratteri consentiti in un file di origine, nonché i caratteri di controllo che rappresentano avviso, BACKSPACE, ritorno a capo e il carattere null. Il set di caratteri di esecuzione ha una rappresentazione specifica delle impostazioni locali.

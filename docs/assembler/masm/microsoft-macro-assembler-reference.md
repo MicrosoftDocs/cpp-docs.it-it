@@ -1,45 +1,49 @@
 ---
 title: Guida di riferimento a Microsoft Macro Assembler
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), reference
 - MASM (Microsoft Macro Assembler), overview
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-ms.openlocfilehash: ffd885115448a822131f01c4d27197ab735b238c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a9804d3212c6b4d24167478d9a9a12168c3677d5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397208"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312651"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Guida di riferimento a Microsoft Macro Assembler
 
 Microsoft Macro Assembler (MASM) offre diversi vantaggi rispetto all'assembly inline. MASM contiene un linguaggio macro che dispone di funzionalità per l'elaborazione di cicli, calcoli aritmetici e stringhe di testo. MASM offre inoltre un maggiore controllo sull'hardware, perché supporta i set di istruzioni dei processori 386, 486 e Pentium. Usando MASM, è anche possibile ridurre il tempo e l'overhead di memoria.
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
-[Opzione della riga di comando ml e ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md)\
+[Opzione della riga di comando ml e ML64](ml-and-ml64-command-line-reference.md)\
 Vengono descritte le opzioni della riga di comando di ML.exe e ML64.exe.
 
-[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)\
+[Messaggi di errore ML](ml-error-messages.md)\
 Vengono descritti gli avvisi e i messaggi di errore irreversibili e non irreversibili di ML.exe.
 
 [Riferimento alle direttive](directives-reference.md)\
 Vengono forniti collegamenti ad articoli che illustrano l'uso delle direttive in MASM.
 
-[Riferimento ai simboli](../../assembler/masm/symbols-reference.md)\
+[Riferimento ai simboli](symbols-reference.md)\
 Vengono forniti collegamenti ad articoli che illustrano l'uso dei simboli in MASM.
 
-Guida di [riferimento agli operatori](../../assembler/masm/operators-reference.md)\
+Guida di [riferimento agli operatori](operators-reference.md)\
 Vengono forniti collegamenti ad articoli che illustrano l'uso degli operatori in MASM.
 
-[Manuali di programmazione del produttore del processore](../../assembler/masm/processor-manufacturer-programming-manuals.md)\
+[Manuali di programmazione del produttore del processore](processor-manufacturer-programming-manuals.md)\
 Vengono forniti collegamenti a siti Web che possono contenere informazioni sulla programmazione relative a processori che non sono prodotti, venduti o supportati da Microsoft.
 
-[MASM per x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)\
+[MASM per x64 (ml64. exe)](masm-for-x64-ml64-exe.md)\
 Informazioni su come creare i file di output per x64.
+
+[Grammatica BNF di MASM](masm-bnf-grammar.md)
+
+Descrizione formale BNF di MASM per x64.
 
 ## <a name="related-sections"></a>Sezioni correlate
 

@@ -1,18 +1,19 @@
 ---
 title: /NXCOMPAT (compatibile con Protezione esecuzione programmi)
-ms.date: 12/29/2017
+description: Descrive l'opzione del linker Microsoft C/C++ (MSVC)/NXCOMPAT, che contrassegna un eseguibile come compatibile con protezione esecuzione programmi (DEP).
+ms.date: 12/17/2019
 f1_keywords:
 - /NXCOMPAT
 helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: 7c788f5ec499f0edf0c44f1ff269af9767af6c08
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f3a0906a49e3524fff3e1ef1643d1eceee28f169
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492669"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298987"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatibile con Protezione esecuzione programmi)
 
@@ -30,8 +31,6 @@ Per impostazione predefinita, **/NXCOMPAT** è on.
 
 Per ulteriori informazioni sulla prevenzione dell'esecuzione dei dati, vedere i seguenti articoli:
 
-- [Descrizione dettagliata della funzionalità di prevenzione esecuzione programmi (DEP)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
-
 - [Prevenzione dell'esecuzione dei dati](/windows/win32/Memory/data-execution-prevention)
 
 - [Protezione esecuzione programmi (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
@@ -40,7 +39,7 @@ Per ulteriori informazioni sulla prevenzione dell'esecuzione dei dati, vedere i 
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Scegliere la pagina delle proprietà della**riga di comando** del**linker** >  **Proprietà** > di configurazione.
+1. Scegliere **proprietà di configurazione** > **linker** > pagina delle proprietà **riga di comando** .
 
 1. Immettere l'opzione nella casella **Opzioni aggiuntive** . Scegliere **OK** o **applica** per applicare la modifica.
 
@@ -50,5 +49,5 @@ Per ulteriori informazioni sulla prevenzione dell'esecuzione dei dati, vedere i 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Riferimento al linker MSVC](linking.md)\
 [Opzioni del linker MSVC](linker-options.md)

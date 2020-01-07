@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151780"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299078"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Riepilogo di durata e di visibilità
 
@@ -18,15 +18,15 @@ Nella tabella seguente è riportato un riepilogo delle caratteristiche di visibi
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Riepilogo di durata e di visibilità
 
-|Attributi:<br /><br /> Livello|Elemento|Classe di archiviazione<br /><br /> Identificatore|Risultato:<br /><br /> Durata|Visibilità|
+|Attributi:<br /><br /> Livello|Elemento|Classe di archiviazione<br /><br /> Identificatore|Result:<br /><br /> Durata|Visibility|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |Ambito di tipo file|Definizione di variabile|**static**|Global|Resto del file di origine in cui si verifica|
 ||Dichiarazione di variabile|**extern**|Global|Resto del file di origine in cui si verifica|
 ||Prototipo o definizione di funzione|**static**|Global|File di origine singolo|
 ||Prototipo di funzione|**extern**|Global|Resto del file di origine|
-|Ambito blocco|Dichiarazione di variabile|**extern**|Global|Blocco|
-||Definizione di variabile|**static**|Global|Blocco|
-||Definizione di variabile|**auto** o **register**|Locale|Blocco|
+|Ambito del blocco|Dichiarazione di variabile|**extern**|Global|Blocca|
+||Definizione di variabile|**static**|Global|Blocca|
+||Definizione di variabile|**auto** o **register**|Locale|Blocca|
 
 ## <a name="example"></a>Esempio
 
@@ -36,7 +36,7 @@ Nell'esempio seguente vengono illustrati i blocchi, l'annidamento e la visibilit
 
 ### <a name="code"></a>Codice
 
-```
+```c
 // Lifetime_and_Visibility.c
 
 #include <stdio.h>
@@ -62,7 +62,7 @@ int main()  // main function defined at external level
 }
 ```
 
-### <a name="comments"></a>Commenti
+### <a name="comments"></a>Comments
 
 In questo esempio, sono disponibili quattro livelli di visibilità: il livello esterno e tre livelli di blocco. I valori vengono visualizzati sullo schermo come indicato nei commenti che seguono ogni istruzione.
 

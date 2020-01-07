@@ -1,6 +1,6 @@
 ---
 title: Operatore OFFSET
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - Offset
 - operator OFFSET
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OFFSET operator
 - operator OFFSET
 ms.assetid: d93ca835-cd25-4b26-9bdf-8cc43185e03c
-ms.openlocfilehash: 7d2aa20de3e4194bb44f914c131c10fd3dd3980c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 7522da6a7e383dca49cebc9a1e83883ef48e65a5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396572"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319060"
 ---
 # <a name="operator-offset"></a>Operatore OFFSET
 
@@ -25,4 +25,5 @@ Restituisce l'offset nel segmento di *espressione*pertinente.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento agli operatori](operators-reference.md)
+Guida di [riferimento agli operatori](operators-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

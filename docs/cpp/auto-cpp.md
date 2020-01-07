@@ -1,22 +1,25 @@
 ---
 title: auto (C++)
-ms.date: 11/04/2016
+ms.date: 12/10/2019
 f1_keywords:
 - auto_CPP
 - auto
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0991c836d1ade663be3e1b734ec4745796b91abd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303385"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301652"
 ---
 # <a name="auto-c"></a>auto (C++)
 
 Deduce il tipo di una variabile dichiarata dall'espressione di inizializzazione.
+
+> [!NOTE]
+> Lo C++ standard definisce un significato originale e un significato modificato per questa parola chiave. Prima di Visual Studio 2010, la parola chiave **auto** dichiara una variabile nella classe di archiviazione *automatica* ; ovvero una variabile con una durata locale. A partire da Visual Studio 2010, la parola chiave **auto** dichiara una variabile il cui tipo viene dedotto dall'espressione di inizializzazione nella relativa dichiarazione. L'opzione [/Zc:&#91;auto&#93; -](../build/reference/zc-auto-deduce-variable-type.md) Compiler controlla il significato della parola chiave **auto** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -224,7 +227,7 @@ int main()
 [Auto (parola chiave)](../cpp/auto-keyword.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (deduzione del tipo di variabile)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[sizeof Operator](../cpp/sizeof-operator.md) (Operatore sizeof)<br/>
+[Operatore sizeof](../cpp/sizeof-operator.md)<br/>
 [typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operator new](new-operator-cpp.md)<br/>
 [Dichiarazioni e definizioni](declarations-and-definitions-cpp.md)<br/>
