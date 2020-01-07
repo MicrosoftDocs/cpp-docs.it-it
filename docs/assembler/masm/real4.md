@@ -1,17 +1,17 @@
 ---
 title: REAL4
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - REAL4
 helpviewer_keywords:
 - REAL4 directive
 ms.assetid: b41d584b-6c9d-4bea-9d31-a2c70b292d50
-ms.openlocfilehash: 1b7c3816ff32efbf6bc61d05db3909ef07c04cfe
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5a2c64607c94e232f7a36a2bb5d1b77b62fb6038
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394629"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318540"
 ---
 # <a name="real4"></a>REAL4
 
@@ -23,4 +23,5 @@ Alloca ed eventualmente Inizializza un numero a virgola mobile a precisione sing
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento alle direttive](../../assembler/masm/directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)
