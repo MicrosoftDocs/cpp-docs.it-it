@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313584"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298714"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Causa della possibile perdita di precisione dei numeri a virgola mobile
 
-Valori a virgola mobile decimali in genere non è una rappresentazione binaria esatta. Si tratta di un effetto collaterale del modo in cui la CPU rappresenta dati a virgola mobile. Per questo motivo, che si verifichi una perdita di precisione e alcune operazioni a virgola mobile possono produrre risultati imprevisti.
+I valori decimali a virgola mobile non dispongono in genere di una rappresentazione binaria esatta. Questo è un effetto collaterale del modo in cui la CPU rappresenta i dati a virgola mobile. Per questo motivo, è possibile che si verifichi una perdita di precisione e che alcune operazioni a virgola mobile possano produrre risultati imprevisti.
 
-Questo comportamento è il risultato di una delle operazioni seguenti:
+Questo comportamento è il risultato di uno degli elementi seguenti:
 
 - La rappresentazione binaria del numero decimale potrebbe non essere esatta.
 
-- È presente un tipo non corrispondente tra i numeri utilizzati (ad esempio, combinazione float e double).
+- Mancata corrispondenza del tipo tra i numeri usati, ad esempio la combinazione di float e Double.
 
-Per risolvere il problema, molti programmatori che assicurano che il valore è maggiore o minore di ciò che serve, oppure ottenere e usare una libreria Binary Coded Decimal (BCD) che manterrà la precisione.
+Per risolvere il problema, la maggior parte dei programmatori assicurano che il valore sia maggiore o minore di quello necessario oppure che ottengano e usino una libreria BCD (Binary Coded Decimal) che manterrà la precisione.
 
-Rappresentazione binaria di valori a virgola mobile influisce sulla precisione e accuratezza dei calcoli a virgola mobile. Microsoft Visual C++ vengono usati [formato a virgola mobile IEEE](ieee-floating-point-representation.md).
+La rappresentazione binaria dei valori a virgola mobile influiscono sulla precisione e sull'accuratezza dei calcoli a virgola mobile. Microsoft Visual C++ usa il [formato a virgola mobile IEEE](ieee-floating-point-representation.md).
 
 ## <a name="example"></a>Esempio
 
-```
+```c
 // Floating-point_number_precision.c
 // Compile options needed: none. Value of c is printed with a decimal
 // point precision of 10 and 6 (printf rounded value by default) to
@@ -58,9 +58,9 @@ int main() {
 They are not equal! The value of c is  2.4679999352 or 2.468000
 ```
 
-## <a name="comments"></a>Commenti
+## <a name="comments"></a>Comments
 
-Per EPSILON, è possibile usare le costanti FLT_EPSILON, che viene definito per float come 1.192092896e-07F o DBL_EPSILON, che viene definito per la doppia come 2.2204460492503131e-016. È necessario includere float. h per queste costanti. Queste costanti sono definite come positivo più piccolo maggiore numero x, tale che x + 1.0 non è uguale a 1.0. Poiché si tratta di un numero molto ridotto, è consigliabile utilizzare tolleranza definita dall'utente per i calcoli che coinvolgono un numero molto elevato.
+Per EPSILON, è possibile usare le costanti FLT_EPSILON, che è definito per float come 1.192092896 e-07F, o DBL_EPSILON, che è definito per Double come 2.2204460492503131 e-016. Per queste costanti è necessario includere float. h. Queste costanti sono definite come il numero positivo più piccolo x, in modo che x + 1.0 non sia uguale a 1,0. Poiché si tratta di un numero molto ridotto, è consigliabile utilizzare la tolleranza definita dall'utente per i calcoli che coinvolgono numeri molto grandi.
 
 ## <a name="see-also"></a>Vedere anche
 

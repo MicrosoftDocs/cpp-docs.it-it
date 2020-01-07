@@ -4,12 +4,12 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), symbols reference
 ms.assetid: 96ed59cc-dafa-4299-bb2e-9c7c3f496491
-ms.openlocfilehash: a07b7bcc46a27e019c53a2aafcd9529763ea61fd
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 27b0ce8d2fb107146801afe15bb2d39322219b25
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393562"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319151"
 ---
 # <a name="symbols-reference"></a>Riferimenti ai simboli
 
@@ -17,45 +17,46 @@ ms.locfileid: "74393562"
 
 |||
 |-|-|
-|[Data \@](../../assembler/masm/at-date.md)|[\@tempo](../../assembler/masm/at-time.md)|
+|[Data \@](at-date.md)|[\@tempo](at-time.md)|
 
 ## <a name="environment-information"></a>Informazioni sull'ambiente
 
 |||
 |-|-|
-|[CPU \@](../../assembler/masm/at-cpu.md)|[\@environ](../../assembler/masm/at-environ.md)|
-|[Interfaccia \@](../../assembler/masm/at-interface.md)|[Versione \@](../../assembler/masm/at-version.md)|
+|[CPU \@](at-cpu.md)|[\@environ](at-environ.md)|
+|[Interfaccia \@](at-interface.md)|[\@Versione](at-version.md)|
 
 ## <a name="file-information"></a>Informazioni sui file
 
 |||
 |-|-|
-|[\@FileCur](../../assembler/masm/at-filecur.md)|[Nome file \@](../../assembler/masm/at-filename.md)|
-|[Riga di \@](../../assembler/masm/at-line.md)||
+|[\@FileCur](at-filecur.md)|[\@FileName](at-filename.md)|
+|[Riga di \@](at-line.md)||
 
 ## <a name="macro-functions"></a>Funzioni macro
 
 |||
 |-|-|
-|[\@Catstr (](../../assembler/masm/at-catstr.md)|[InStr \@](../../assembler/masm/at-instr.md)|
-|[\@SIZESTR (](../../assembler/masm/at-sizestr.md)|[\@substr](../../assembler/masm/at-substr.md)|
+|[\@CatStr](at-catstr.md)|[\@InStr](at-instr.md)|
+|[\@SizeStr](at-sizestr.md)|[\@SubStr](at-substr.md)|
 
 ## <a name="miscellaneous"></a>Varie
 
 ||||
 |-|-|-|
-|[\$](../../assembler/masm/dollar.md)|[\?](../../assembler/masm/q.md)|[\@\@:](../../assembler/masm/at-at.md)|
-|[\@B](../../assembler/masm/at-b.md)|[\@F](../../assembler/masm/at-f.md)||
+|[\$](dollar.md)|[\?](q.md)|[\@\@:](at-at.md)|
+|[\@B](at-b.md)|[\@F](at-f.md)||
 
 ## <a name="segment-information"></a>Informazioni sul segmento
 
 ||||
 |-|-|-|
-|[codice \@](../../assembler/masm/at-code.md)|[\@codeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
-|[dati \@](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
-|[\@fardata?](../../assembler/masm/at-fardata-q.md)|[Modello di \@](../../assembler/masm/at-model.md)|[stack di \@](../../assembler/masm/at-stack.md)|
-|[\@WordSize](../../assembler/masm/at-wordsize.md)|||
+|[codice \@](at-code.md)|[\@codeSize](at-codesize.md)|[\@CurSeg](at-curseg.md)|
+|[dati \@](at-data.md)|[\@DataSize](at-datasize.md)|[\@fardata](at-fardata.md)|
+|[\@fardata?](at-fardata-q.md)|[Modello di \@](at-model.md)|[stack di \@](at-stack.md)|
+|[\@WordSize](at-wordsize.md)|||
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento a Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+Guida di [riferimento a Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)
