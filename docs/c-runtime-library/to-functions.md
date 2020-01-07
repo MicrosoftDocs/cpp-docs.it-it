@@ -23,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944818"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301691"
 ---
 # <a name="to-functions"></a>Funzioni to
 
@@ -39,19 +39,19 @@ Ognuna delle funzioni **to** e le relative macro associate, se presenti, convert
 |[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
 |[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Le conversioni delle funzioni **to** e delle macro sono le seguenti.
 
-|Routine|Macro|DESCRIZIONE|
+|Routine|Macro|Descrizione|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|Converte `c` in un carattere ASCII|
 |`tolower`|`tolower`|Converte `c` in minuscolo se appropriato|
 |`_tolower`|`_tolower`|Converte `c` in minuscolo|
-|`towlower`|Nessuna|Converte `c` nella lettera minuscola con carattere wide corrispondente|
+|`towlower`|nessuna|Converte `c` nella lettera minuscola con carattere wide corrispondente|
 |`toupper`|`toupper`|Converte `c` in maiuscolo se appropriato|
 |`_toupper`|`_toupper`|Converte `c` in maiuscolo|
-|`towupper`|Nessuna|Converte c nella lettera maiuscola con carattere wide corrispondente|
+|`towupper`|nessuna|Converte c nella lettera maiuscola con carattere wide corrispondente|
 
 Per usare le versioni funzione delle routine **to** definite anche come macro, rimuovere le definizioni di macro con le direttive `#undef` o non includere CTYPE.H. Se si usa l'opzione del compilatore /Za, il compilatore usa la versione funzione di `toupper` o `tolower`. Le dichiarazioni delle funzioni `toupper` e `tolower` sono in STDLIB.H.
 
@@ -79,7 +79,7 @@ Le funzioni `towlower` e `towupper` restituiscono una copia convertita di `c` se
 
 ## <a name="example"></a>Esempio
 
-```
+```c
 // crt_toupper.c
 /* This program uses toupper and tolower to
  * analyze all characters between 0x0 and 0x7F. It also

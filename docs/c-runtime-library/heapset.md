@@ -25,12 +25,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 65b74798c4b3b513acea0b51ecc0cb7df98391c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944314"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300261"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -54,7 +54,7 @@ Carattere di riempimento.
 
 ## <a name="return-value"></a>Valore restituito
 
-`_heapset` restituisce una delle costanti manifeste di tipo Integer seguenti definite in Malloc.h.
+`_heapset` restituisce una delle costanti manifesto integer seguenti definite in Malloc.h.
 
 |||
 |-|-|
@@ -69,19 +69,19 @@ Inoltre, se si verifica un errore, `_heapset` imposta `errno` su `ENOSYS`.
 
 La funzione `_heapset` mostra i nodi o le posizioni di memoria disponibili che sono stati sovrascritti accidentalmente.
 
-`_heapset` verifica la coerenza minima nell'heap e quindi imposta ogni byte delle voci disponibili dell'heap sul valore `fill` . Questo valore noto mostra le posizioni di memoria dell'heap che contengono nodi disponibili e quelle che contengono dati scritti accidentalmente nella memoria liberata. Se il sistema operativo non supporta `_heapset`(ad esempio, Windows 98), la funzione restituisce `_HEAPOK` e imposta `errno` su `ENOSYS`.
+`_heapset` verifica la coerenza minima nell'heap e quindi imposta ogni byte delle voci disponibili dell'heap sul valore `fill`. Questo valore noto mostra le posizioni di memoria dell'heap che contengono nodi disponibili e quelle che contengono dati scritti accidentalmente nella memoria liberata. Se il sistema operativo non supporta `_heapset`(ad esempio, Windows 98), la funzione restituisce `_HEAPOK` e imposta `errno` su `ENOSYS`.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../c-runtime-library/compatibility.md) nell'introduzione.
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../c-runtime-library/compatibility.md) nell'introduzione.
 
 ## <a name="example"></a>Esempio
 
-```
+```c
 // crt_heapset.c
 // This program checks the heap and
 // fills in free entries with the character 'Z'.
