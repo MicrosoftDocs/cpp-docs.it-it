@@ -6,12 +6,12 @@ ms.author: mblome
 ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
-ms.translationtype: HT
+ms.openlocfilehash: ce28d42fd3452a5e8195f3ced6bbbb06430b1d14
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837013"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676951"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux e MacOS
 
@@ -19,7 +19,7 @@ vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifi
 
 ## <a name="simple-yet-flexible"></a>Semplice ma flessibile
 
-Basta un unico comando per scaricare le origini e compilare una libreria. vcpkg è a sua volta un progetto open source, disponibile in GitHub. È possibile personalizzare i cloni privati nel modo preferito, ad esempio specificando librerie diverse o versioni diverse di librerie, rispetto a quelle disponibili nel catalogo pubblico. È possibile creare più cloni di vcpkg in un singolo computer e ognuno potrà produrre set personalizzati di librerie e/o opzioni di compilazione e così via. Ogni clone è un ambiente indipendente che contiene una copia propria di vcpkg.exe che opera solo sulla gerarchia specifica. vcpkg non viene aggiunto ad alcuna variabile di ambiente e non ha dipendenze dal Registro di sistema di Windows o da Visual Studio.
+Basta un unico comando per scaricare le origini e compilare una libreria. vcpkg è a sua volta un progetto open source, disponibile in GitHub. È possibile personalizzare i cloni privati nel modo preferito, ad esempio specificando librerie diverse o versioni diverse di librerie, rispetto a quelle disponibili nel catalogo pubblico. È possibile avere più cloni di vcpkg in un singolo computer, ognuno dei quali produce set personalizzati di librerie e/o commutatori di compilazione e così via. Ogni clone è un ambiente autonomo con una copia di vcpkg. exe che opera solo sulla propria gerarchia. vcpkg non viene aggiunto ad alcuna variabile di ambiente e non ha dipendenze dal Registro di sistema di Windows o da Visual Studio.
 
 ## <a name="sources-not-binaries"></a>Origini e non file binari
 
@@ -27,9 +27,9 @@ Per le librerie del catalogo Windows, vcpkg scarica origini anziché file binari
 
 Se si crea un clone di vcpkg con librerie private nella raccolta di port, è possibile aggiungere un port che scarica file binari precompilati e intestazioni, quindi scrivere un file portfile.cmake che copia semplicemente questi file nella posizione desiderata.
 
-[1] *Nota: per alcune librerie proprietarie, le origini non sono disponibili. In questi casi, vcpkg scaricherà file binari precompilati compatibili.*
+[1] *Nota: per alcune librerie proprietarie, le origini non sono disponibili. In questi casi, vcpkg scaricherà i file binari predefiniti compatibili.*
 
-## <a name="installation"></a>Installazione
+## <a name="installation"></a>Installazione di
 
 Clonare il repository vcpkg da GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). È possibile scaricarlo nel percorso di cartella preferito.
 
@@ -111,7 +111,7 @@ Eseguire **vcpkg integrate install** per configurare Visual Studio per individua
 
 È ora possibile usare #include per le intestazioni, digitando semplicemente cartella/intestazione. La funzionalità di completamento automatico faciliterà questa operazione. Non sono necessari ulteriori passaggi per il collegamento alle librerie o l'aggiunta di riferimenti a progetti. La figura seguente mostra come Visual Studio trova le intestazioni azure-storage-cpp. vcpkg inserisce le intestazioni nella sottocartella **\installed**, partizionata in base alla piattaforma di destinazione. Il diagramma seguente mostra l'elenco dei file di inclusione nella sottocartella **\was** per la libreria:
 
-![Integrazione di IntelliSense in vcpkg](media/vcpkg-intellisense.png "vcpkg e IntelliSense")
+![integrazione con IntelliSense vcpkg](media/vcpkg-intellisense.png "vcpkg e IntelliSense")
 
 ### <a name="per-project"></a>Per progetto
 
@@ -182,7 +182,7 @@ Digitare **vcpkg remove** per rimuovere una libreria installata. Se sono present
 
 ## <a name="uninstall-vcpkg"></a>Disinstallare vcpkg
 
-È sufficiente eliminare la directory.
+È sufficiente eliminare la directory vcpkg. L'eliminazione di questa directory Disinstalla la distribuzione di vcpkg e tutte le librerie installate da vcpkg.
 
 ## <a name="send-feedback-about-vcpkg"></a>Inviare commenti e suggerimenti su vcpkg
 
@@ -206,7 +206,7 @@ Il contenuto di un'istanza di vcpkg è:
 
 ## <a name="command-line-reference"></a>Riferimenti alla riga di comando
 
-|Comando|Description|
+|Comando|Descrizione|
 |---------|---------|
 |**vcpkg search [pat]**|Cerca i pacchetti disponibili da installare|
 |**vcpkg install \<pacchetto>...**|Installa un pacchetto|
@@ -226,9 +226,9 @@ Il contenuto di un'istanza di vcpkg è:
 |**vcpkg version**|Visualizza le informazioni sulla versione|
 |**vcpkg contact --survey**|Visualizza informazioni di contatto per l'invio di commenti e suggerimenti.|
 
-### <a name="options"></a>Opzioni
+### <a name="options"></a>Options
 
-|Opzione|Description|
+|Opzione|Descrizione|
 |---------|---------|
 |**--triplet \<t>**|Specifica la tripletta dell'architettura di destinazione (impostazione predefinita: `%VCPKG_DEFAULT_TRIPLET%`, vedere anche **vcpkg help triplet**)|
 |**--vcpkg-root \<percorso>**|Specifica la directory radice di vcpkg (impostazione predefinita: `%VCPKG_ROOT%`)|

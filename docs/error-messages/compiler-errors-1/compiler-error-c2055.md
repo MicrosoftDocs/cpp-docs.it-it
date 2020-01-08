@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2055
 ms.assetid: 6cec79cc-6bec-443f-9897-fbf5452718c7
-ms.openlocfilehash: 3c198168b4445e619148e5611621fa3ddba95d6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cb6e4d5891c5aefc9d66e7d70a5cd7685ccd393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408787"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302042"
 ---
 # <a name="compiler-error-c2055"></a>Errore del compilatore C2055
 
-previsto elenco di parametri formali, non un elenco di tipi
+è previsto un elenco di parametri formali, non un elenco di tipi
 
-Una definizione di funzione contiene un elenco di tipo di parametro anziché un elenco di parametri formali. ANSI C richiede i parametri formali chiamarsi a meno che non siano void o i puntini di sospensione (`...`).
+Una definizione di funzione contiene un elenco di tipi di parametro anziché un elenco di parametri formali. ANSI C richiede il nome dei parametri formali a meno che non siano vuoti o i puntini di sospensione (`...`).
 
-L'esempio seguente genera l'errore C2055:
+L'esempio seguente genera l'C2055:
 
-```
+```c
 // C2055.c
 // compile with: /c
 void func(int, char) {}  // C2055
