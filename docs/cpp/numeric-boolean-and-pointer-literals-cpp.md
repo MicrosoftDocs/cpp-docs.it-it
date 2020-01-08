@@ -1,21 +1,21 @@
 ---
-title: Numerici, booleani e valori letterali di puntatore (C++)
+title: Valori letterali numerici, booleani eC++puntatore ()
 ms.date: 11/04/2016
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 467300501ffbbf8063e203d4c7395af34a954ed0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245102"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301366"
 ---
-# <a name="numeric-boolean-and-pointer-literals--c"></a>Numerici, booleani e valori letterali di puntatore (C++)
+# <a name="numeric-boolean-and-pointer-literals"></a>Valori letterali numerici, booleani e puntatore
 
-Un valore letterale è un elemento del programma che rappresenta direttamente un valore. Questo articolo illustra i valori letterali di tipo Integer, a virgola mobile, booleano e puntatore. Per informazioni sui valori letterali stringa e carattere, vedere [stringa e valori letterali carattere (C++)](../cpp/string-and-character-literals-cpp.md). È anche possibile definire valori letterali personalizzati basati su uno qualsiasi di queste categorie. per altre informazioni vedere [valori letterali definiti dall'utente (C++)](../cpp/user-defined-literals-cpp.md)
+Un valore letterale è un elemento del programma che rappresenta direttamente un valore. Questo articolo illustra i valori letterali di tipo Integer, a virgola mobile, booleano e puntatore. Per informazioni sui valori letterali stringa e carattere, vedere [valori letterali stringa eC++carattere ()](../cpp/string-and-character-literals-cpp.md). È anche possibile definire valori letterali personalizzati in base a una di queste categorie. Per ulteriori informazioni [, vedere valori letterali definiti dall'C++utente ()](../cpp/user-defined-literals-cpp.md)
 
 . È possibile usare i valori letterali in molti contesti, ma in genere vengono usati per inizializzare le variabili denominate e passare argomenti alle funzioni:
 
@@ -26,15 +26,13 @@ bool b = true;              // boolean literal
 MyClass* mc = nullptr;      // pointer literal
 ```
 
-In alcuni casi è importante indicare al compilatore come interpretare un valore letterale o il tipo specifico da assegnare a tale valore. Per ottenere questo risultato, aggiungere prefissi o suffissi al valore letterale. Ad esempio, il prefisso 0x indica al compilatore di interpretare il numero che lo segue come valore esadecimale, ad esempio 0x35. Il suffisso ULL indica al compilatore di considerare il valore un **long long senza segno** tipo, 5894345ull. Per un elenco completo di prefissi e suffissi per ogni tipo di valore letterale, vedere le sezioni seguenti.
-
-## <a name="syntax"></a>Sintassi
+In alcuni casi è importante indicare al compilatore come interpretare un valore letterale o il tipo specifico da assegnare a tale valore. Per ottenere questo risultato, aggiungere prefissi o suffissi al valore letterale. Ad esempio, il prefisso 0x indica al compilatore di interpretare il numero che lo segue come valore esadecimale, ad esempio 0x35. Il suffisso ULL indica al compilatore di trattare il valore come tipo **Long Long senza segno** , come in 5894345ULL. Per un elenco completo di prefissi e suffissi per ogni tipo di valore letterale, vedere le sezioni seguenti.
 
 ## <a name="integer-literals"></a>Valori letterali Integer
 
 I valori letterali Integer iniziano con una cifra e non includono parti frazionarie o esponenti. È possibile specificare valori letterali Integer in formato decimale, ottale o esadecimale. Possono specificare tipi con o senza segno e tipi long o short.
 
-Quando non è presente alcun prefisso o suffisso, il compilatore genererà un tipo di valore letterale integrale **int** (32 bit), se il valore rientra, in caso contrario verrà assegnato il tipo **long long** (64 bit).
+Se non è presente alcun prefisso o suffisso, il compilatore fornirà un valore letterale integrale di tipo **int** (32 bits), se il valore si adatta, in caso contrario fornirà il tipo **long long** (64 bit).
 
 Per specificare un valore letterale integrale decimale, iniziare la specifica con un numero diverso da zero. Ad esempio:
 
@@ -60,7 +58,7 @@ int i = 0x3fff;   // Hexadecimal literal
 int j = 0X3FFF;        // Equal to i
 ```
 
-Per specificare un tipo unsigned, usare il `u` o `U` suffisso. Per specificare un tipo long, usare il `l` o `L` suffisso. Per specificare un tipo integrale a 64 bit, usare il suffisso LL o ll. Il suffisso i64 è ancora supportato ma è consigliabile evitarlo, poiché è specifico per Microsoft e non è portabile. Ad esempio:
+Per specificare un tipo senza segno, utilizzare il suffisso `u` o `U`. Per specificare un tipo Long, utilizzare il suffisso `l` o `L`. Per specificare un tipo integrale a 64 bit, usare il suffisso LL o ll. Il suffisso i64 è ancora supportato ma è consigliabile evitarlo, poiché è specifico per Microsoft e non è portabile. Ad esempio:
 
 ```cpp
 unsigned val_1 = 328u;             // Unsigned value
@@ -71,7 +69,7 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long
 ```
 
-**Separatori di cifre**: È possibile usare il carattere di virgoletta singola (apostrofo) per separare i valori sul posto nei numeri grandi per semplificarne la lettura per gli utenti. I separatori non hanno effetto sulla compilazione.
+**Separatori di cifre**: è possibile usare il carattere virgoletta singola (apostrofo) per separare i valori di posizione in numeri maggiori per facilitarne la lettura da parte degli utenti. I separatori non hanno effetto sulla compilazione.
 
 ```cpp
 long long i = 24'847'458'121
@@ -79,7 +77,7 @@ long long i = 24'847'458'121
 
 ## <a name="floating-point-literals"></a>Valori letterali a virgola mobile
 
-I valori letterali a virgola mobile specificano valori che devono avere una parte decimale. Questi valori contengono separatori decimali (**.**) e possono contenere gli esponenti.
+I valori letterali a virgola mobile specificano valori che devono avere una parte decimale. Questi valori contengono punti decimali ( **.** ) e possono contenere esponenti.
 
 I valori letterali a virgola mobile hanno una "mantissa" che specifica il valore del numero, un "esponente" che specifica la grandezza del numero e un suffisso facoltativo che specifica il tipo del valore letterale. La mantissa è specificata come una sequenza di cifre seguita da un punto, seguito da una sequenza facoltativa di cifre che rappresentano la parte decimale del numero. Ad esempio:
 
@@ -95,11 +93,11 @@ L'esponente, se presente, specifica la grandezza del numero come potenza di 10, 
 18.46e1           // 184.6
 ```
 
-L'esponente può essere specificato usando `e` o `E`, che hanno lo stesso significato, seguito da un segno facoltativo (+ o -) e una sequenza di cifre.  Se un esponente è presente, il separatore decimale finale è inutile in numeri interi come `18E0`.
+L'esponente può essere specificato usando `e` o `E`, che hanno lo stesso significato, seguito da un segno facoltativo (+ o-) e da una sequenza di cifre.  Se un esponente è presente, il separatore decimale finale è inutile in numeri interi come `18E0`.
 
-Valori letterali a virgola mobile come tipo predefinito **doppie**. Con i suffissi `f` oppure `l` (o `F` o `L` , il suffisso non viene fatta distinzione tra maiuscole e minuscole), il valore letterale può essere specificato come **float** o **long double**, rispettivamente.
+Per impostazione predefinita, i valori letterali a virgola mobile sono di tipo **Double**. Usando i suffissi `f` o `l` (o `F` o `L`-il suffisso non fa distinzione tra maiuscole e minuscole), il valore letterale può essere specificato rispettivamente come **float** o **long double**.
 
-Sebbene **long double** e **double** hanno la stessa rappresentazione, non sono dello stesso tipo. Ad esempio, è possibile eseguire l'overload di funzioni quali
+Sebbene **long double** e **Double** abbiano la stessa rappresentazione, non sono dello stesso tipo. Ad esempio, è possibile eseguire l'overload di funzioni quali
 
 ```cpp
 void func( double );
@@ -113,11 +111,11 @@ void func( long double );
 
 ## <a name="boolean-literals"></a>Valori letterali booleani
 
-Sono i valori letterali booleani **true** e **false**.
+I valori letterali booleani sono **true** e **false**.
 
 ## <a name="pointer-literal-c11"></a>Valore letterale puntatore (C + + 11)
 
-C++ introduce la [nullptr](../cpp/nullptr.md) letterale per specificare un puntatore a inizializzazione zero. Nel codice portabile **nullptr** invece dello zero di tipo integrale o delle macro quali NULL.
+C++introduce il valore letterale [nullptr](../cpp/nullptr.md) per specificare un puntatore inizializzato a zero. Nel codice portabile è consigliabile usare **nullptr** invece di zero di tipo integrale o macro come null.
 
 ## <a name="binary-literals-c14"></a>Valori letterali binari (C++14)
 
@@ -142,5 +140,5 @@ Nell'esempio precedente potrebbe essere meglio usare una costante denominata che
 ## <a name="see-also"></a>Vedere anche
 
 [Convenzioni lessicali](../cpp/lexical-conventions.md)<br/>
-[Valori letterali stringa C++](../cpp/string-and-character-literals-cpp.md)<br/>
-[Valori letterali definiti dall'utente C++](../cpp/user-defined-literals-cpp.md)
+[C++Valori letterali stringa](../cpp/string-and-character-literals-cpp.md)<br/>
+[C++Valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)

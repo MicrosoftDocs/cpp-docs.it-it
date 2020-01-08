@@ -1,18 +1,18 @@
 ---
 title: Errore ML non irreversibile A2050
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2050
 helpviewer_keywords:
 - A2050
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
-ms.openlocfilehash: 15c6449ff4207c92dee28120d4f61be641cf01c8
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 311aedd0cc739fd862efb0a18cc444b3fb75b165
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856577"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316980"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>Errore ML non irreversibile A2050
 
@@ -24,10 +24,10 @@ Si è verificata una delle condizioni seguenti:
 
 - In un'espressione è stato utilizzato un numero reale o un BCD.
 
-- È stato usato un numero reale per inizializzare una direttiva diversa da [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md)o [Tbyte](../../assembler/masm/tbyte.md).
+- È stato usato un numero reale per inizializzare una direttiva diversa da [DWORD](dword.md), [QWORD](qword.md)o [Tbyte](tbyte.md).
 
 - Un BCD è stato utilizzato per inizializzare una direttiva diversa da `TBYTE`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Messaggi di errore ML](ml-error-messages.md)

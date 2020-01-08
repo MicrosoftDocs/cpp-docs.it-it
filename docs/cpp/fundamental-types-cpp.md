@@ -1,6 +1,6 @@
 ---
-title: Tipi fondamentali (C++)
-ms.date: 11/04/2016
+title: Tipi incorporati (C++)
+ms.date: 12/11/2019
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -43,32 +43,32 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857541"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301496"
 ---
-# <a name="fundamental-types--c"></a>Tipi fondamentali (C++)
+# <a name="built-in-types-c"></a>Tipi incorporati (C++)
 
-I tipi fondamentali in C++ sono suddivisi in tre categorie: integrali, a virgola mobile e void. I tipi integrali possono gestire numeri interi. I tipi a virgola mobile possono specificare i valori che possono contenere parti frazionarie.
+I tipi incorporati (detti anche *tipi fondamentali*) sono specificati dallo standard C++ del linguaggio e sono incorporati nel compilatore. I tipi incorporati non sono definiti in alcun file di intestazione. I tipi incorporati sono divisi in tre categorie: integrale, a virgola mobile e void. I tipi integrali possono gestire numeri interi. I tipi a virgola mobile possono specificare i valori che possono contenere parti frazionarie.
 
-I tipi [void](../cpp/void-cpp.md) descrivono un set di valori vuoto. Non è possibile specificare alcuna variabile di tipo **void** . viene usata principalmente per dichiarare le funzioni che non restituiscono valori o per dichiarare puntatori generici a dati non tipizzati o tipizzati in modo arbitrario. Qualsiasi espressione può essere convertita in modo esplicito o sottoposta a cast nel tipo **void**. Tuttavia, l'uso di tali espressioni è limitato ai seguenti elementi:
+I tipi [void](void-cpp.md) descrivono un set di valori vuoto. Non è possibile specificare alcuna variabile di tipo **void** . viene usata principalmente per dichiarare le funzioni che non restituiscono valori o per dichiarare puntatori generici a dati non tipizzati o tipizzati in modo arbitrario. Qualsiasi espressione può essere convertita in modo esplicito o sottoposta a cast nel tipo **void**. Tuttavia, l'uso di tali espressioni è limitato ai seguenti elementi:
 
-- L'istruzione di un'espressione (per altre informazioni, vedere [Espressioni](../cpp/expressions-cpp.md)).
+- L'istruzione di un'espressione Per ulteriori informazioni, vedere [espressioni](expressions-cpp.md).
 
-- L'operando sinistro dell'operatore virgola (per altre informazioni, vedere [Operatore virgola](../cpp/comma-operator.md) ).
+- L'operando sinistro dell'operatore virgola Per ulteriori informazioni, vedere [operatore virgola](comma-operator.md).
 
-- Il secondo o il terzo operando dell'operatore condizionale (`? :`) (per altre informazioni, vedere [Espressioni con operatore condizionale](../cpp/conditional-operator-q.md) ).
+- Il secondo o il terzo operando dell'operatore condizionale (`? :`) Per ulteriori informazioni, vedere [espressioni con l'operatore condizionale](conditional-operator-q.md).
 
-La tabella seguente illustra le restrizioni relative alle dimensioni dei tipi. Queste restrizioni sono indipendenti dell'implementazione Microsoft.
+La tabella seguente illustra le restrizioni relative alle dimensioni dei tipi in relazione. Queste restrizioni sono obbligatorie dallo C++ standard e sono indipendenti dall'implementazione di Microsoft. La dimensione assoluta di determinati tipi incorporati non è specificata nello standard.
 
-### <a name="fundamental-types-of-the-c-language"></a>Tipi fondamentali del linguaggio C++
+### <a name="built-in-type-size-restrictions"></a>Limitazioni relative alle dimensioni del tipo predefinite
 
-|Category|Tipo di|Contenuto|
+|Categoria|Tipo di|Contenuto|
 |--------------|----------|--------------|
-|Integrale|**char**|Il tipo **char** è un tipo integrale che in genere contiene i membri del set di caratteri di esecuzione di base, per impostazione predefinita C++è ASCII in Microsoft.<br /><br /> Il C++ compilatore considera le variabili di tipo **char**, **signed char**e **unsigned char** come aventi tipi diversi. Le variabili di tipo **char** vengono promosse a **int** come se fossero di tipo **signed char** per impostazione predefinita, a meno che non venga utilizzata l'opzione di compilazione/J. In questo caso vengono considerati come tipo **unsigned char** e vengono promossi a **int** senza estensione Sign.|
+|Integrale|**char**|Il tipo **char** è un tipo integrale che in genere contiene i membri del set di caratteri di esecuzione di base, per impostazione predefinita C++è ASCII in Microsoft.<br /><br /> Il C++ compilatore considera le variabili di tipo **char**, **signed char**e **unsigned char** come aventi tipi diversi. Le variabili di tipo **char** vengono promosse a **int** come se fossero di tipo **signed char** per impostazione predefinita, a meno che non venga utilizzata l'opzione di compilazione/J. In questo caso, vengono considerati come tipo **unsigned char** e vengono promossi a **int** senza estensione Sign.|
 ||**bool**|Il tipo **bool** è un tipo integrale che può avere uno dei due valori **true** o **false**. La relativa dimensione non è specificata.|
 ||**short**|Il tipo **short int** (o semplicemente **short**) è un tipo integrale che è maggiore o uguale alla dimensione di tipo **char**e minore o uguale alla dimensione del tipo **int**.<br /><br /> Gli oggetti di tipo **short** possono essere dichiarati come **signed** short o **unsigned short**. **Signed short** è un sinonimo di **short**.|
 ||**int**|Il tipo **int** è un tipo integrale che è maggiore o uguale alla dimensione del tipo **short int**e minore o uguale alla dimensione del tipo **Long**.<br /><br /> Gli oggetti di tipo **int** possono essere dichiarati come **signed int** o **unsigned int**. **Signed int** è un sinonimo di **int**.|
@@ -82,9 +82,9 @@ La tabella seguente illustra le restrizioni relative alle dimensioni dei tipi. Q
 
 **Sezione specifica Microsoft**
 
-La tabella seguente riporta la quantità spazio di archiviazione richiesta per i tipi fondamentali di Microsoft C++.
+La tabella seguente elenca la quantità di spazio di archiviazione necessaria per i tipi incorporati C++in Microsoft. In particolare, si noti che **Long** è di 4 byte anche in sistemi operativi a 64 bit.
 
-### <a name="sizes-of-fundamental-types"></a>Dimensioni dei tipi fondamentali
+### <a name="sizes-of-built-in-types"></a>Dimensioni dei tipi incorporati
 
 |Tipo di|Dimensioni|
 |----------|----------|
@@ -95,10 +95,10 @@ La tabella seguente riporta la quantità spazio di archiviazione richiesta per i
 
 **Fine sezione specifica Microsoft**
 
-Per un riepilogo dell'intervallo di valori di ogni tipo, vedere [Intervalli dei tipi di dati](../cpp/data-type-ranges.md) .
+Per un riepilogo dell'intervallo di valori di ogni tipo, vedere [Intervalli dei tipi di dati](data-type-ranges.md) .
 
-Per altre informazioni sulla conversione dei tipi, vedere [Conversioni standard](../cpp/standard-conversions.md).
+Per altre informazioni sulla conversione dei tipi, vedere [Conversioni standard](standard-conversions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intervalli dei tipi di dati](../cpp/data-type-ranges.md)
+[Intervalli dei tipi di dati](data-type-ranges.md)

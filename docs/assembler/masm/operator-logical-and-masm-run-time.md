@@ -1,22 +1,22 @@
 ---
 title: operatore &amp;&amp; (tempo di esecuzione MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator &&
 helpviewer_keywords:
 - operator &&
 - '&& operator'
 ms.assetid: 0a633a40-114c-48f5-88ff-09bc8d9b281a
-ms.openlocfilehash: 210b2bcfc1321c9c828803a8da1546b018181782
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a180b072860bbabe06faaa26b3136d5198dec165
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396776"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317903"
 ---
 # <a name="operator-ampamp-masm-run-time"></a>operatore &amp;&amp; (tempo di esecuzione MASM)
 
-**And**logico. Utilizzato solo all'interno di [. SE](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)o [. Ripetere](../../assembler/masm/dot-repeat.md) i blocchi e valutati in fase di esecuzione, non in fase di assembly.
+**And**logico. Utilizzato solo all'interno di [. SE](dot-if.md), [. WHILE](dot-while.md)o [. Ripetere](dot-repeat.md) i blocchi e valutati in fase di esecuzione, non in fase di assembly.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,4 +24,5 @@ ms.locfileid: "74396776"
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento agli operatori](operators-reference.md)
+Guida di [riferimento agli operatori](operators-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

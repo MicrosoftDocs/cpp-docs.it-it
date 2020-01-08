@@ -1,17 +1,17 @@
 ---
 title: .NOCREF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .NOCREF
 helpviewer_keywords:
 - .NOCREF directive
 ms.assetid: 696a6a71-7e88-4b60-8550-7857d772ed20
-ms.openlocfilehash: 4a79591db0cb5e6b05d5d7f927bcb0b1a3c8bf0e
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 05eafa1718c17930a974eb44b704835e750f1bf6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398102"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317617"
 ---
 # <a name="nocref"></a>.NOCREF
 
@@ -19,12 +19,13 @@ Disattiva l'elenco di simboli nella tabella dei simboli e nel file del browser.
 
 ## <a name="syntax"></a>Sintassi
 
-> **. NOCREF** ⟦*nome*⟦ __,__ *nome* ... ⟧⟧
+> **. NOCREF** ⟦*nome*⟦__,__ *nome* ... ⟧⟧
 
 ## <a name="remarks"></a>Note
 
-Se vengono specificati i nomi, vengono eliminati solo i nomi specificati. Uguale a [. XCREF](../../assembler/masm/dot-xcref.md).
+Se vengono specificati i nomi, vengono eliminati solo i nomi specificati. Uguale a [. XCREF](dot-xcref.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

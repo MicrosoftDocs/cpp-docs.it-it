@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IF2 directive
 - IF2 directive
 ms.assetid: a0f75564-b51b-4e39-ad3b-f7421e7ecad6
-ms.openlocfilehash: f1b5126d9294c229d773acd29af463164bb46536
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 60f8b0dcedb61ac06de929aff300845e342d7cfc
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397451"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317318"
 ---
 # <a name="if1-and-if2"></a>IF1 e IF2
 
@@ -29,7 +29,7 @@ Il blocco **IF2** viene valutato in ogni assembly Pass se **Option: SETIF2** è 
 
 ## <a name="remarks"></a>Note
 
-Per [la](../../assembler/masm/if-masm.md) sintassi completa, vedere.
+Per [la](if-masm.md) sintassi completa, vedere.
 
 A differenza della versione 5,1, MASM 6,1 e versioni successive eseguono la maggior parte delle operazioni sul primo passaggio, quindi esegue il numero di passaggi successivi necessari. Invece, MASM 5,1 assembla sempre in due passaggi di origine. Di conseguenza, potrebbe essere necessario modificare o eliminare alcuni costrutti dipendenti dal passaggio in MASM 6,1 e versioni successive.
 
@@ -45,4 +45,5 @@ MASM 6,1 e versioni successive gestiscono costrutti di primo passaggio in modo d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento alle direttive](directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

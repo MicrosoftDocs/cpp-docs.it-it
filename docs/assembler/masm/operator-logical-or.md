@@ -1,22 +1,22 @@
 ---
 title: Operatore ||
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator ||
 helpviewer_keywords:
 - '|| operator'
 - operator ||
 ms.assetid: 50b15b63-649c-4bcf-a663-a10ee3cb3db6
-ms.openlocfilehash: ab602c494ef3be27d4225446b4224600cd74994d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: cec4b98dcbbcef4d0ffdc9393cca067db97e1e87
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396732"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317890"
 ---
 # <a name="operator-"></a>Operatore ||
 
-OR logico. Utilizzato solo all'interno di [. SE](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)o [. Ripetere](../../assembler/masm/dot-repeat.md) i blocchi e valutati in fase di esecuzione, non in fase di assembly.
+OR logico. Utilizzato solo all'interno di [. SE](dot-if.md), [. WHILE](dot-while.md)o [. Ripetere](dot-repeat.md) i blocchi e valutati in fase di esecuzione, non in fase di assembly.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,4 +24,5 @@ OR logico. Utilizzato solo all'interno di [. SE](../../assembler/masm/dot-if.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento agli operatori](operators-reference.md)
+Guida di [riferimento agli operatori](operators-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

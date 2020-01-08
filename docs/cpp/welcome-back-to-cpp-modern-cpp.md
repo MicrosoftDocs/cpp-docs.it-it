@@ -3,12 +3,12 @@ title: C++ (C++ moderno)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303335"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301743"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ (C++ moderno)
 
@@ -47,7 +47,7 @@ Quando possibile, usare un puntatore intelligente quando si alloca la memoria he
 
 ## <a name="stdstring-and-stdstring_view"></a>STD:: String e std:: string_view
 
-Le stringhe di tipo C sono un'altra fonte principale di bug. Usando [std:: String e std:: wstring](../standard-library/basic-string-class.md) è possibile eliminare praticamente tutti gli errori associati alle stringhe di tipo C e ottenere i vantaggi delle funzioni membro per la ricerca, l'accodamento, la presospensione e così via. Entrambi sono altamente ottimizzati per la velocità. Quando si passa una stringa a una funzione che richiede solo l'accesso in sola lettura, in (C++ 17) è possibile usare [std:: string_view](../standard-library/basic-string-view-class.md) per migliorare ulteriormente le prestazioni.
+Le stringhe di tipo C sono un'altra fonte principale di bug. Usando [std:: String e std:: wstring](../standard-library/basic-string-class.md) è possibile eliminare praticamente tutti gli errori associati alle stringhe di tipo C e ottenere i vantaggi delle funzioni membro per la ricerca, l'accodamento, la presospensione e così via. Entrambi sono altamente ottimizzati per la velocità. Quando si passa una stringa a una funzione che richiede solo l'accesso in sola lettura, in C++ 17 è possibile usare [std:: string_view](../standard-library/basic-string-view-class.md) per migliorare ulteriormente le prestazioni.
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>STD:: Vector e altri contenitori della libreria standard
 
@@ -213,7 +213,7 @@ Le unioni vengono comunemente utilizzate nella programmazione di tipo C per cons
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Riferimenti del linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Espressioni lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [Tabella C++ di conformità del linguaggio Microsoft](../overview/visual-cpp-language-conformance.md)

@@ -1,6 +1,6 @@
 ---
 title: operatore &amp;
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '&'
 - operator &
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - AND operator
 - '& operator'
 ms.assetid: f3c51a54-48ba-4b99-afed-5c45177bf694
-ms.openlocfilehash: e42279961d2ac1fe7a67f5fc7039461c2c41e472
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ca16534000706340441ad0cac0ec77e23d67d843
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397095"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311845"
 ---
 # <a name="operator-amp"></a>operatore &amp;
 
-**And**bit per bit. Utilizzato solo all'interno di [. SE](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)o [. Ripetere](../../assembler/masm/dot-repeat.md) i blocchi e valutati in fase di esecuzione, non in fase di assembly.
+**And**bit per bit. Utilizzato solo all'interno di [. SE](dot-if.md), [. WHILE](dot-while.md)o [. Ripetere](dot-repeat.md) i blocchi e valutati in fase di esecuzione, non in fase di assembly.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,4 +26,5 @@ ms.locfileid: "74397095"
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a operatori](../../assembler/masm/operators-reference.md)
+Guida di [riferimento agli operatori](operators-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

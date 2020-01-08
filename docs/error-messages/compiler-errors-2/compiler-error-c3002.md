@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3002
 ms.assetid: 2d4241a7-c8eb-4d43-a128-dca255d137bc
-ms.openlocfilehash: 9f48021f5a32006c6a78a69500b0701cb7612d96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 677c88747198a2ac95a84e788a5fd16456b6372b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300700"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302198"
 ---
 # <a name="compiler-error-c3002"></a>Errore del compilatore C3002
 
@@ -21,7 +21,7 @@ Non sono consentiti più nomi di direttiva.
 
 L'esempio seguente genera l'errore C3002:
 
-```
+```c
 // C3002.c
 // compile with: /openmp
 int main()

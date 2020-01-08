@@ -1,25 +1,25 @@
 ---
 title: Guida di riferimento agli operatori MASM
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395204"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318761"
 ---
 # <a name="masm-operators-reference"></a>Guida di riferimento agli operatori MASM
 
-## <a name="arithmetic"></a>Aritmetico
+## <a name="arithmetic"></a>Operazioni aritmetiche
 
 ||||
 |-|-|-|
 |[* (moltiplicazione)](operator-multiply.md)|[+ (Aggiungi)](operator-add.md)|[-(sottrazione o negazione)](operator-subtract-2.md)|
-|[. campo](operator-dot.md)|[/(divisione)](operator-subtract-1.md)|[&#91;&#93;Indice](operator-brackets.md)|
+|[. campo](operator-dot.md)|[/(divisione)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
 |[MOD (resto)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Flusso di controllo
@@ -68,7 +68,7 @@ ms.locfileid: "74395204"
 |[EQ (uguale a)](operator-eq.md)|[GE (maggiore o uguale)](operator-ge.md)|[GT (maggiore di)](operator-gt.md)|
 |[LE (minore o uguale)](operator-le.md)|[LT (minore di)](operator-lt.md)|[NE (non uguale)](operator-ne.md)|
 
-## <a name="segment"></a>Segmento
+## <a name="segment"></a>Segment
 
 |||
 |-|-|
@@ -77,7 +77,7 @@ ms.locfileid: "74395204"
 |[OFFSET (offset relativo del segmento)](operator-offset.md)|[SECTIONREL (offset relativo sezione)](operator-sectionrel.md)|
 |[SEG (Get Segment)](operator-seg.md)||
 
-## <a name="type"></a>Type
+## <a name="type"></a>Tipo di
 
 ||||
 |-|-|-|
@@ -90,4 +90,5 @@ ms.locfileid: "74395204"
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)<br/>
+Guida di [riferimento a Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

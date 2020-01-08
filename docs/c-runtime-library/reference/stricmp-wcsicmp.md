@@ -1,6 +1,6 @@
 ---
 title: stricmp, wcsicmp
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - stricmp
 - wcsicmp
@@ -26,13 +26,15 @@ helpviewer_keywords:
 - stricmp function
 - wcsicmp function
 ms.assetid: 2e3c6703-2635-4961-a253-e2c4c5029ed8
-ms.openlocfilehash: 8288aa8c9b631b9c4d5317fb13fdbbfcd9cad40a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d47249a3b41c76bf87ece8ed2e8a0fbbfc05ff09
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958120"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300508"
 ---
 # <a name="stricmp-wcsicmp"></a>stricmp, wcsicmp
 
-Queste funzioni POSIX sono deprecate. In alternativa usare le funzioni [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) conformi a ISO C++.
+I nomi di funzione specifici di Microsoft `stricmp` e `wcsicmp` sono alias deprecati per le funzioni [_stricmp e _wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) . Per impostazione predefinita, generano un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). I nomi sono deprecati perché non seguono le regole C standard per i nomi specifici dell'implementazione. Tuttavia, le funzioni sono ancora supportate.
+
+È consigliabile usare invece [_stricmp o _wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) . In alternativa, è possibile continuare a usare questi nomi di funzione e disabilitare l'avviso. Per altre informazioni, vedere [disabilitare i](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [nomi di funzione](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)di avviso e POSIX.

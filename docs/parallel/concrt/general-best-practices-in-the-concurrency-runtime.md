@@ -4,46 +4,46 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413918"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302224"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Procedure consigliate generali nel runtime di concorrenza
 
-Questo documento descrive le procedure consigliate che si applicano a più aree del Runtime di concorrenza.
+Questo documento descrive le procedure consigliate che si applicano a più aree del runtime di concorrenza.
 
 ##  <a name="top"></a> Sezioni
 
 Questo documento contiene le seguenti sezioni:
 
-- [Utilizzare la sincronizzazione cooperativa costrutti quando possibile](#synchronization)
+- [Usare costrutti di sincronizzazione cooperativa quando possibile](#synchronization)
 
-- [Evitare le attività di lunga durata che non restituiscono](#yield)
+- [Evitare le attività di lunga durata che non producono](#yield)
 
-- [Usare l'Oversubscription per compensare le operazioni che bloccano o avere una latenza elevata](#oversubscription)
+- [Usare l'oversubscription per eseguire l'offset di operazioni che bloccano o hanno latenza elevata](#oversubscription)
 
-- [Usare funzioni di gestione della memoria simultanei quando possibile](#memory)
+- [Usare le funzioni di gestione della memoria simultanee quando possibile](#memory)
 
-- [Utilizzare il modello RAII per gestire la durata degli oggetti di concorrenza](#raii)
+- [Usare RAII per gestire la durata degli oggetti di concorrenza](#raii)
 
 - [Non creare oggetti di concorrenza in ambito globale](#global-scope)
 
-- [Non usare gli oggetti di concorrenza in segmenti di dati condivisi](#shared-data)
+- [Non usare oggetti di concorrenza nei segmenti di dati condivisi](#shared-data)
 
-##  <a name="synchronization"></a> Utilizzare la sincronizzazione cooperativa costrutti quando possibile
+##  <a name="synchronization"></a>Usare costrutti di sincronizzazione cooperativa quando possibile
 
-Il Runtime di concorrenza fornisce numerosi costrutti indipendente dalla concorrenza che non richiedono un oggetto di sincronizzazione esterni. Ad esempio, il [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) classe fornisce accodare indipendente dalla concorrenza ed elemento di accedere alle operazioni. Tuttavia, per casi in cui si richiede l'accesso esclusivo a una risorsa, il runtime fornisce il [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md), e [concorrenza :: evento](../../parallel/concrt/reference/event-class.md) classi. Questi tipi si comportano in modo cooperativo; Pertanto, l'utilità di pianificazione può riassegnare le risorse di elaborazione a un altro contesto come la prima attività resta in attesa per i dati. Quando possibile, usare questi tipi di sincronizzazione anziché altri meccanismi di sincronizzazione, ad esempio quelle fornite dall'API di Windows, che non si comportano in modo cooperativo. Per altre informazioni su questi tipi di sincronizzazione e un esempio di codice, vedere [strutture di dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md) e [confronto delle strutture di dati sincronizzazione per l'API Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
+Il runtime di concorrenza fornisce molti costrutti indipendenti dalla concorrenza che non richiedono un oggetto di sincronizzazione esterno. La classe [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) , ad esempio, fornisce operazioni di Accodamento e accesso agli elementi indipendenti dalla concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico. Tuttavia, per i casi in cui è necessario l'accesso esclusivo a una risorsa, il runtime fornisce le classi Concurrency [:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)e [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) . Questi tipi si comportano in modo cooperativo; l'utilità di pianificazione può pertanto riallocare le risorse di elaborazione a un altro contesto, perché la prima attività resta in attesa di dati. Quando possibile, usare questi tipi di sincronizzazione invece di altri meccanismi di sincronizzazione, ad esempio quelli forniti dall'API Windows, che non si comportano in modo cooperativo. Per ulteriori informazioni su questi tipi di sincronizzazione e un esempio di codice, vedere la pagina relativa alle [strutture di dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md) e [confronto tra le strutture di dati di sincronizzazione e l'API Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)
 
 [[Torna all'inizio](#top)]
 
-##  <a name="yield"></a> Evitare le attività di lunga durata che non restituiscono
+##  <a name="yield"></a>Evitare le attività di lunga durata che non producono
 
-Poiché l'utilità di pianificazione si comporta in modo cooperativo, non fornisce l'equità tra attività. Pertanto, un'attività può impedire le altre attività di avvio. Sebbene ciò sia accettabile in alcuni casi, in altri casi questo può causare deadlock o esaurimento delle risorse.
+Poiché l'utilità di pianificazione si comporta in modo cooperativo, non fornisce l'equità tra le attività. Pertanto, un'attività può impedire l'avvio di altre attività. Sebbene questo sia accettabile in alcuni casi, in altri casi ciò può causare un deadlock o una mancanza di risorse.
 
-Nell'esempio seguente esegue più attività rispetto al numero di risorse di elaborazione allocato. La prima attività non viene prodotta l'utilità di pianificazione e pertanto la seconda attività non viene avviato fino a quando non viene completata la prima.
+Nell'esempio seguente vengono eseguite più attività rispetto al numero di risorse di elaborazione allocate. La prima attività non viene restituita all'utilità di pianificazione e pertanto la seconda attività non viene avviata fino al completamento della prima attività.
 
 [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]
 
@@ -51,7 +51,7 @@ Questo esempio produce il seguente output:
 
 1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
 
-Esistono diversi modi per abilitare la cooperazione tra le due attività. Uno consiste nel cedere l'utilità di pianificazione in un'attività a esecuzione prolungata. L'esempio seguente modifica il `task` funzione da chiamare il [Concurrency](reference/context-class.md#yield) metodo per l'esecuzione con frequenza per l'utilità di pianificazione in modo che è possibile eseguire un'altra attività.
+Esistono diversi modi per abilitare la collaborazione tra le due attività. Un modo consiste nel cedere occasionalmente all'utilità di pianificazione in un'attività a esecuzione prolungata. Nell'esempio seguente viene modificata la funzione `task` per chiamare il metodo [Concurrency:: context:: Yield](reference/context-class.md#yield) per restituire l'esecuzione all'utilità di pianificazione in modo che sia possibile eseguire un'altra attività.
 
 [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_2.cpp)]
 
@@ -68,47 +68,47 @@ Questo esempio produce il seguente output:
 2: 1000000000
 ```
 
-Il `Context::Yield` metodo produce solo un altro thread attivo nell'utilità di pianificazione a cui appartiene il thread corrente, un'attività leggera o un altro thread del sistema operativo. Questo metodo non passato al lavoro pianificato per l'esecuzione in un [Concurrency:: task_group](reference/task-group-class.md) oppure [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) dell'oggetto, ma non è ancora stata avviata.
+Il metodo `Context::Yield` restituisce solo un altro thread attivo nell'utilità di pianificazione a cui appartiene il thread corrente, un'attività leggera o un altro thread del sistema operativo. Questo metodo non viene restituito a lavoro pianificato per essere eseguito in un oggetto [Concurrency:: task_group](reference/task-group-class.md) o [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) ma non è ancora stato avviato.
 
-Esistono altri modi per abilitare la cooperazione tra attività con esecuzione prolungata. È possibile interrompere un'attività di grandi dimensioni in sottoattività più piccole. È anche possibile abilitare l'oversubscription durante un'attività di lunga durata. L'oversubscription consente di creare un numero di thread superiore a quello dei thread hardware disponibili. L'oversubscription è particolarmente utile quando un'attività di lunga durata contiene una quantità elevata di latenza, ad esempio, la lettura dei dati dal disco o da una connessione di rete. Per altre informazioni sulle attività leggera e l'oversubscription, vedere [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Esistono altri modi per abilitare la collaborazione tra le attività a esecuzione prolungata. È possibile suddividere un'attività di grandi dimensioni in sottoattività più piccole. È anche possibile abilitare l'oversubscription durante un'attività di lunga durata. L'oversubscription consente di creare un numero di thread superiore a quello dei thread hardware disponibili. L'oversubscription è particolarmente utile quando un'attività di lunga durata contiene una quantità elevata di latenza, ad esempio la lettura di dati dal disco o da una connessione di rete. Per ulteriori informazioni sulle attività leggere e sull'oversubscription, vedere [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
 [[Torna all'inizio](#top)]
 
-##  <a name="oversubscription"></a> Usare l'Oversubscription per compensare le operazioni che bloccano o avere una latenza elevata
+##  <a name="oversubscription"></a>Usare l'oversubscription per eseguire l'offset di operazioni che bloccano o hanno latenza elevata
 
-Il Runtime di concorrenza fornisce le primitive di sincronizzazione, ad esempio [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), che consentono l'attività di bloccarsi in modo cooperativo e tra loro. Quando un'attività in modo cooperativo blocca o genera, l'utilità di pianificazione può riassegnare le risorse di elaborazione in un altro contesto come la prima attività resta in attesa per i dati.
+Il runtime di concorrenza fornisce le primitive di sincronizzazione, ad esempio [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), che consentono alle attività di bloccarsi e cedere in modo cooperativo. Quando un'attività si blocca o cede in modo cooperativo, l'utilità di pianificazione può riallocare le risorse di elaborazione a un altro contesto, perché la prima attività resta in attesa di dati.
 
-Vi sono casi in cui non è possibile utilizzare il meccanismo di blocco cooperativo fornita dal Runtime di concorrenza. Ad esempio, una libreria esterna che utilizza potrebbe usare un meccanismo di sincronizzazione diversi. Un altro esempio è quando si esegue un'operazione che potrebbe presentare un elevato livello di latenza, ad esempio, quando si usa l'API Windows `ReadFile` funzione leggere i dati da una connessione di rete. In questi casi, l'oversubscription possibile abilitare altre attività da eseguire quando un'altra attività è inattiva. L'oversubscription consente di creare un numero di thread superiore a quello dei thread hardware disponibili.
+In alcuni casi non è possibile utilizzare il meccanismo di blocco cooperativo fornito dal runtime di concorrenza. Ad esempio, una libreria esterna utilizzata può utilizzare un meccanismo di sincronizzazione diverso. Un altro esempio è quando si esegue un'operazione che potrebbe avere una latenza elevata, ad esempio quando si usa l'API Windows `ReadFile` funzione per leggere i dati da una connessione di rete. In questi casi, l'oversubscription può consentire l'esecuzione di altre attività quando un'altra attività è inattiva. L'oversubscription consente di creare un numero di thread superiore a quello dei thread hardware disponibili.
 
-Si consideri la seguente funzione `download`, che consente di scaricare il file all'URL dato. Questo esempio Usa la [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodo per aumentare temporaneamente il numero di thread attivi.
+Si consideri la funzione seguente, `download`, che Scarica il file nell'URL specificato. In questo esempio viene utilizzato il metodo [Concurrency:: context:: Oversubscribe](reference/context-class.md#oversubscribe) per aumentare temporaneamente il numero di thread attivi.
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Poiché il `GetHttpFile` funzione esegue un'operazione potenzialmente latente, oversubscription possa attivare altre operazioni da eseguire quando l'attività corrente è in attesa per i dati. Per la versione completa di questo esempio, vedere [come: Usare l'Oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Poiché la funzione `GetHttpFile` esegue un'operazione potenzialmente latente, l'oversubscription può consentire l'esecuzione di altre attività mentre l'attività corrente è in attesa dei dati. Per la versione completa di questo esempio, vedere [procedura: usare l'oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Torna all'inizio](#top)]
 
-##  <a name="memory"></a> Usare funzioni di gestione della memoria simultanei quando possibile
+##  <a name="memory"></a>Usare le funzioni di gestione della memoria simultanee quando possibile
 
-Usare le funzioni di gestione della memoria, [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) e [Concurrency:: Free](reference/concurrency-namespace-functions.md#free), quando si dispone di attività dettagliate tramite cui vengono allocati spesso piccoli oggetti la cui dispongono è relativamente breve. Il Runtime di concorrenza mantiene una cache di memoria separati per ogni thread in esecuzione. Il `Alloc` e `Free` funzioni allocano e liberano memoria da queste cache senza l'utilizzo di blocchi o le barriere di memoria.
+Utilizzare le funzioni di gestione della memoria, [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) e [Concurrency:: Free](reference/concurrency-namespace-functions.md#free), quando si dispone di attività con granularità fine che allocano spesso oggetti piccoli che hanno una durata relativamente breve. Il runtime di concorrenza include una cache di memoria separata per ogni thread in esecuzione. Le funzioni `Alloc` e `Free` allocano e liberano memoria da queste cache senza usare blocchi o barriere di memoria.
 
-Per altre informazioni su queste funzioni di gestione della memoria, vedere [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Per un esempio che Usa queste funzioni, vedere [come: Usare Alloc e Free per migliorare le prestazioni della memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Per ulteriori informazioni su queste funzioni di gestione della memoria, vedere [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Per un esempio che usa queste funzioni, vedere [procedura: usare Alloc e Free per migliorare le prestazioni di memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
 [[Torna all'inizio](#top)]
 
-##  <a name="raii"></a> Utilizzare il modello RAII per gestire la durata degli oggetti di concorrenza
+##  <a name="raii"></a>Usare RAII per gestire la durata degli oggetti di concorrenza
 
-Il Runtime di concorrenza Usa per implementare funzionalità, ad esempio l'annullamento di gestione delle eccezioni. Pertanto, scrivere codice indipendente dalle eccezioni quando si effettuano chiamate nel runtime o chiamare un'altra libreria che viene chiamato in fase di esecuzione.
+Il runtime di concorrenza utilizza la gestione delle eccezioni per implementare funzionalità come l'annullamento. Pertanto, scrivere codice indipendente dalle eccezioni quando si effettua una chiamata al runtime o si chiama un'altra libreria che chiama nel Runtime.
 
-Il *Resource Acquisition Is Initialization* modello (RAII) è un modo per gestire in modo sicuro la durata di un oggetto di concorrenza in un determinato ambito. Sotto il modello RAII, una struttura di dati viene allocata nello stack. La struttura dei dati consente di inizializzare o acquisisce una risorsa quando viene creato e distrugge o rilascia tale risorsa quando viene eliminata la struttura dei dati. Il modello RAII garantisce che il distruttore viene chiamato prima che l'ambito di inclusione viene chiuso. Questo modello è utile quando una funzione contiene più `return` istruzioni. Questo modello consente inoltre di scrivere codice indipendente dalle eccezioni. Quando un `throw` istruzione causa il rimozione dello stack, il distruttore per l'oggetto RAII è definita; pertanto, la risorsa viene sempre correttamente eliminata o rilasciata.
+Il modello di *inizializzazione della risorsa* (RAII) è un modo per gestire in modo sicuro la durata di un oggetto di concorrenza in un ambito specifico. Nel modello RAII, viene allocata una struttura di dati nello stack. La struttura dei dati Inizializza o acquisisce una risorsa quando viene creata ed Elimina o rilascia la risorsa quando la struttura dei dati viene distrutta. Il modello RAII garantisce che il distruttore venga chiamato prima che l'ambito di inclusione venga chiuso. Questo modello è utile quando una funzione contiene più istruzioni `return`. Questo modello consente inoltre di scrivere codice indipendente dalle eccezioni. Quando un'istruzione `throw` causa la rimozione dello stack, viene chiamato il distruttore per l'oggetto RAII; quindi, la risorsa viene sempre eliminata o rilasciata correttamente.
 
-Il runtime definisce diverse classi che usano il modello RAII, ad esempio, [concurrency::critical_section::scoped_lock](../../parallel/concrt/reference/critical-section-class.md#critical_section__scoped_lock_class) e [concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class). Queste classi helper sono dette *scoped blocchi*. Queste classi forniscono numerosi vantaggi quando si lavora [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) oppure [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) oggetti. Il costruttore di queste classi acquisisce l'accesso al parametro fornito `critical_section` o `reader_writer_lock` oggetto; l'accesso di versioni distruttore per quell'oggetto. Poiché un blocco con ambito rilascia automaticamente l'accesso al relativo oggetto di esclusione reciproca quando viene eliminato definitivamente, si sblocca manualmente l'oggetto sottostante.
+Il runtime definisce diverse classi che usano il modello RAII, ad esempio [Concurrency:: critical_section:: scoped_lock](../../parallel/concrt/reference/critical-section-class.md#critical_section__scoped_lock_class) e [Concurrency:: reader_writer_lock:: scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class). Queste classi helper sono note come *blocchi con ambito*. Queste classi offrono diversi vantaggi quando si utilizzano gli oggetti [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) o [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) . Il costruttore di queste classi acquisisce l'accesso all'oggetto `critical_section` o `reader_writer_lock` fornito; il distruttore rilascia l'accesso a tale oggetto. Poiché un blocco con ambito rilascia automaticamente l'accesso all'oggetto di esclusione reciproca quando viene eliminato definitivamente, l'oggetto sottostante non viene sbloccato manualmente.
 
-Si consideri la seguente classe `account`, cui è definito da una libreria esterna e pertanto non può essere modificato.
+Si consideri la classe seguente, `account`, che è definita da una libreria esterna e pertanto non può essere modificata.
 
 [!code-cpp[concrt-account-transactions#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_4.h)]
 
-Nell'esempio seguente consente di eseguire più transazioni in un `account` oggetti in parallelo. Nell'esempio viene usato un `critical_section` oggetto per sincronizzare l'accesso per il `account` dell'oggetto perché il `account` classe non è indipendente dalla concorrenza. Ogni operazione parallela Usa un' `critical_section::scoped_lock` oggetto per garantire che il `critical_section` oggetto viene sbloccato quando l'operazione ha esito positivo o negativo. Quando il saldo del conto è negativo, il `withdraw` operazione ha esito negativo generando un'eccezione.
+Nell'esempio seguente vengono eseguite più transazioni in un oggetto `account` in parallelo. Nell'esempio viene utilizzato un oggetto `critical_section` per sincronizzare l'accesso all'oggetto `account` perché la classe `account` non è indipendente dalla concorrenza. Ogni operazione parallela utilizza un oggetto `critical_section::scoped_lock` per garantire che l'oggetto `critical_section` venga sbloccato quando l'operazione ha esito positivo o negativo. Quando il saldo dell'account è negativo, l'operazione di `withdraw` non riesce generando un'eccezione.
 
 [!code-cpp[concrt-account-transactions#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_5.cpp)]
 
@@ -124,27 +124,27 @@ Error details:
     negative balance: -76
 ```
 
-Per altri esempi che usano il modello RAII per gestire la durata degli oggetti di concorrenza, vedere [procedura dettagliata: Rimozione di lavoro da un Thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [come: Usare la classe Context per implementare una classe semaforo di cooperazione](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), e [come: Usare l'Oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Per altri esempi in cui si usa il modello RAII per gestire la durata degli oggetti di concorrenza, vedere [procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [procedura: usare la classe Context per implementare un semaforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)e [procedura: usare l'oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Torna all'inizio](#top)]
 
-##  <a name="global-scope"></a> Non creare oggetti di concorrenza in ambito globale
+##  <a name="global-scope"></a>Non creare oggetti di concorrenza in ambito globale
 
 Quando si crea un oggetto di concorrenza in ambito globale, nell'applicazione si possono verificare problemi come il deadlock o violazioni di accesso alla memoria.
 
 Ad esempio, quando si crea un oggetto runtime di concorrenza, tramite il runtime viene creata un'utilità di pianificazione predefinita, se non è già disponibile. Un oggetto runtime creato durante la costruzione di un oggetto globale comporta la creazione di questa utilità di pianificazione predefinita da parte del runtime. Tuttavia, questo processo prevede un blocco interno, che può interferire con l'inizializzazione di altri oggetti che supportano l'infrastruttura del runtime di concorrenza. Questo blocco interno potrebbe essere richiesto da un altro oggetto dell'infrastruttura che non è ancora stato inizializzato e potrebbe verificarsi un deadlock nell'applicazione.
 
-L'esempio seguente illustra la creazione di un globali [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) oggetto. Questo modello viene applicato non solo alla classe `Scheduler`, ma anche a tutti gli altri tipi forniti dal runtime di concorrenza. È consigliabile non seguire questo modello, poiché potrebbe causare un comportamento imprevisto nell'applicazione.
+Nell'esempio seguente viene illustrata la creazione di un oggetto [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) globale. Questo modello viene applicato non solo alla classe `Scheduler`, ma anche a tutti gli altri tipi forniti dal runtime di concorrenza. È consigliabile non seguire questo modello, poiché potrebbe causare un comportamento imprevisto nell'applicazione.
 
 [!code-cpp[concrt-global-scheduler#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_6.cpp)]
 
-Per esempi del modo corretto per creare `Scheduler` oggetti, vedere [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Per esempi del modo corretto per creare oggetti `Scheduler`, vedere [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
 [[Torna all'inizio](#top)]
 
-##  <a name="shared-data"></a> Non usare gli oggetti di concorrenza in segmenti di dati condivisi
+##  <a name="shared-data"></a>Non usare oggetti di concorrenza nei segmenti di dati condivisi
 
-Il Runtime di concorrenza non supporta l'uso di oggetti di concorrenza in una sezione di dati condivisi, ad esempio, una sezione di dati creato dal [data_seg](../../preprocessor/data-seg.md) `#pragma` direttiva. Un oggetto di concorrenza è condiviso tra i limiti dei processi è stato possibile inserire il runtime in uno stato incoerente o non valido.
+Il runtime di concorrenza non supporta l'utilizzo di oggetti di concorrenza in una sezione di dati condivisa, ad esempio una sezione di dati creata dalla direttiva [data_seg](../../preprocessor/data-seg.md)`#pragma`. Un oggetto di concorrenza condiviso tra i limiti del processo potrebbe impostare il runtime in uno stato incoerente o non valido.
 
 [[Torna all'inizio](#top)]
 
@@ -159,6 +159,6 @@ Il Runtime di concorrenza non supporta l'uso di oggetti di concorrenza in una se
 [Procedura: Usare Alloc e Free per migliorare le prestazioni di memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
 [Procedura: Usare l'oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
 [Procedura: Usare la classe Context per implementare una classe semaforo di cooperazione](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[Procedura dettagliata: Rimozione di lavoro da un thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
+[Procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 [Procedure consigliate nella libreria PPL (Parallel Patterns Library)](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Procedure consigliate nella libreria di agenti asincroni](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

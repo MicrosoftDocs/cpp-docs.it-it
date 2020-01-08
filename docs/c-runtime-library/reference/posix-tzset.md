@@ -1,6 +1,6 @@
 ---
 title: tzset
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - tzset
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - tzset function
 ms.assetid: c3afa5d0-cb15-4163-9181-fafb962c95aa
-ms.openlocfilehash: 63a61a81a0441f2594daff1898997e5a769f981e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 981f9bc92879bf12e8c49b12190cbe8091d0141b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950362"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300807"
 ---
 # <a name="tzset"></a>tzset
 
-Questa funzione POSIX è deprecata. In alternativa, usare [_tzset](tzset.md) conforme a ISO C++.
+Il nome della funzione POSIX implementato da Microsoft `tzset` è un alias deprecato per la funzione di [_tzset](tzset.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
+
+Si consiglia di usare invece [_tzset](tzset.md) . In alternativa, è possibile continuare a usare il nome della funzione e disabilitare l'avviso. Per altre informazioni, vedere [disabilitare i](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [nomi di funzione](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)di avviso e POSIX.
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

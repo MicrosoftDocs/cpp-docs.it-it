@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c31d317cd7b9c6465362e3e532db2128303f602
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633105"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298740"
 ---
 # <a name="get-started-with-c-build-insights"></a>Introduzione a C++ Build Insights
 
@@ -39,7 +39,9 @@ Una versione di WPA che supporta C++ Build Insights è attualmente disponibile s
 
 ### <a name="to-download-and-install-wpa"></a>Per scaricare e installare WPA
 
-1. Passare alla [pagina di download](https://www.microsoft.com/software-download/windowsinsiderpreviewADK)di Windows ADK Insider Preview.
+Nota: per l'installazione di Windows Performance Analyzer è necessario Windows 8 o versione successiva.
+
+1. Passare alla [pagina di download](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)di Windows ADK Insider Preview.
 
 1. Scaricare Windows ADK Insider Preview. Si tratta di un'immagine del disco.
 
@@ -101,8 +103,8 @@ Di seguito viene illustrata una tipica sequenza di comandi *vcperf. exe* in una 
 
 Avviare WPA e aprire la traccia appena raccolta. Il protocollo WPA dovrebbe riconoscerlo come traccia di C++ Build Insights e le visualizzazioni seguenti verranno visualizzate nel pannello Graph Explorer a sinistra:
 
-- Esplora compilazione
-- File
+- Build Explorer
+- Files
 - Funzione
 
 Se non è possibile visualizzare queste visualizzazioni, verificare che WPA sia configurato correttamente, come descritto nel [passaggio 1](#configuration-steps). È possibile visualizzare i dati di compilazione trascinando le visualizzazioni nella finestra analisi vuota a destra, come illustrato di seguito:

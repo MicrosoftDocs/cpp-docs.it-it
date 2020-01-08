@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: f4bef0ef4f3cad0411f6da54ce5e2d8883913754
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940354"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300305"
 ---
 # <a name="_exec-_wexec-functions"></a>Funzioni _exec, _wexec
 
@@ -118,7 +118,7 @@ Le chiamate `_execl`, `_execle`, `_execlp` e `_execlpe` vengono in genere usate 
 
 Le chiamate `_execv`, `_execve`, `_execvp` e `_execvpe` sono utili quando il numero di parametri per il nuovo processo è variabile. I puntatori ai parametri vengono passati come matrice, `argv`. Il parametro `argv`[0] è generalmente un puntatore a `cmdname`. I parametri da `argv`[1] a `argv`[`n`] puntano alle stringhe di caratteri che costituiscono il nuovo elenco di parametri. Il parametro `argv`[`n`+1] deve essere un puntatore **NULL** per contrassegnare la fine dell'elenco dei parametri.
 
-I file che vengono aperti quando viene effettuata una chiamata `_exec` rimangono aperti nel nuovo processo. Nelle chiamate `_execl`, `_execlp`, `_execv` e `_execvp` il nuovo processo eredita l'ambiente del processo chiamante. Le chiamate `_execle`, `_execlpe`, `_execve` e `_execvpe` alterano l'ambiente del nuovo processo passando un elenco delle impostazioni di ambiente tramite il parametro `envp`. `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. (Notare che `value` non è racchiuso tra virgolette doppie.) L'elemento finale della matrice `envp` deve essere **NULL**. Quando `envp` stesso è **NULL**, il nuovo processo eredita le impostazioni di ambiente del processo chiamante.
+I file che vengono aperti quando viene effettuata una chiamata `_exec` rimangono aperti nel nuovo processo. Nelle chiamate `_execl`, `_execlp`, `_execv` e `_execvp` il nuovo processo eredita l'ambiente del processo chiamante. Le chiamate `_execle`, `_execlpe`, `_execve` e `_execvpe` alterano l'ambiente del nuovo processo passando un elenco delle impostazioni di ambiente tramite il parametro `envp`. `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. Si noti che `value` non è racchiuso tra virgolette doppie. L'elemento finale della matrice di `envp` deve essere **null**. Quando `envp` stesso è **NULL**, il nuovo processo eredita le impostazioni di ambiente del processo chiamante.
 
 Un programma eseguito tramite una delle funzioni `_exec` viene sempre caricato in memoria come se il campo di allocazione massima nell'intestazione del file .exe fosse stato impostato sul valore predefinito 0xFFFFH.
 
@@ -126,7 +126,7 @@ Le chiamate `_exec` non mantengono le modalità di conversione dei file aperti. 
 
 ## <a name="example"></a>Esempio
 
-```
+```c
 // crt_args.c
 // Illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -157,7 +157,7 @@ char **envp )       // Array of environment variable strings
 
 Eseguire il programma seguente per eseguire Crt_args.exe:
 
-```
+```c
 // crt_exec.c
 // Illustrates the different versions of exec, including
 //      _execl          _execle          _execlp          _execlpe
@@ -232,7 +232,7 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Intestazione:** process.h
 
@@ -243,5 +243,5 @@ int main( int ac, char* av[] )
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[Funzioni _spawn, _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn Functions](../c-runtime-library/spawn-wspawn-functions.md) (Funzioni _spawn, _wspawn)<br/>
 [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

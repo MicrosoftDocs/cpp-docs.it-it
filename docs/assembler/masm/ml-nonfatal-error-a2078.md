@@ -1,18 +1,18 @@
 ---
 title: Errore ML non irreversibile A2078
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2078
 helpviewer_keywords:
 - A2078
 ms.assetid: 42ac48fd-ac7f-4e74-a11e-20181d443faf
-ms.openlocfilehash: 1bb5293eb9e8d3ed626d1d8511884702ee77a676
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: ad679fa2d9835c23c53cc1e53f8b6f86037028c3
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74855849"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317942"
 ---
 # <a name="ml-nonfatal-error-a2078"></a>Errore ML non irreversibile A2078
 
@@ -22,4 +22,4 @@ Un salto o un ciclo condizionale non può assumere un operando di memoria. A ess
 
 ## <a name="see-also"></a>Vedere anche
 
-[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Messaggi di errore ML](ml-error-messages.md)

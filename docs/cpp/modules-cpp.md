@@ -1,16 +1,16 @@
 ---
 title: Panoramica dei moduli in C++
-ms.date: 07/23/2019
+ms.date: 12/13/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: I moduli in C++ 20 forniscono un'alternativa moderna ai file di intestazione.
-ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273677"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301379"
 ---
 # <a name="overview-of-modules-in-c"></a>Panoramica dei moduli in C++
 
@@ -20,7 +20,7 @@ I moduli possono essere usati affiancati con i file di intestazione. Un C++ file
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Abilitare i moduli nel compilatore C++ Microsoft
 
-A partire da Visual Studio 2019 versione 16,2, i moduli non sono completamente implementati C++ nel compilatore Microsoft. È possibile utilizzare la funzionalità moduli per creare moduli a partizione singola e per importare i moduli di libreria standard forniti da Microsoft. Per abilitare il supporto per i moduli, compilare con [/Experimental: module](../build/reference/experimental-module.md) e [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md). In un progetto di Visual Studio fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**. Impostare l'elenco a discesa **configurazione** su **tutte le configurazioni**, quindi scegliere **proprietà** > di configurazione > **C/C++** **lingua** >  **C++ Abilita moduli ( sperimentale)** .
+A partire da Visual Studio 2019 versione 16,2, i moduli non sono completamente implementati C++ nel compilatore Microsoft. È possibile utilizzare la funzionalità moduli per creare moduli a partizione singola e per importare i moduli di libreria standard forniti da Microsoft. Per abilitare il supporto per i moduli, compilare con [/Experimental: module](../build/reference/experimental-module.md) e [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md). In un progetto di Visual Studio fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**. Impostare l'elenco a discesa **configurazione** su **tutte le configurazioni**, quindi scegliere **proprietà di configurazione** > **linguaggio** **C/C++**  >  > **Abilita C++ moduli (sperimentale)** .
 
 Un modulo e il codice che lo utilizza devono essere compilati con le stesse opzioni del compilatore.
 
@@ -29,23 +29,23 @@ Un modulo e il codice che lo utilizza devono essere compilati con le stesse opzi
 Sebbene non sia specificato dallo standard C++ 20, Microsoft consente di importare come moduli C++ la relativa implementazione della libreria standard. Importando C++ la libreria standard come moduli anziché #including tramite i file di intestazione, è possibile velocizzare i tempi di compilazione in base alle dimensioni del progetto. La libreria viene suddivisa in componenti nei moduli seguenti:
 
 - STD. Regex fornisce il contenuto dell'intestazione \<Regex >
-- STD. FileSystem fornisce il contenuto del file \<System di intestazione >
-- STD. memory fornisce il contenuto della memoria \<dell'intestazione >
-- STD. Threading fornisce il contenuto delle intestazioni \<Atomic >, \<condition_variable >, \<future >, \<mutex >, \<shared_mutex > e \<thread >
+- STD. FileSystem fornisce il contenuto dell'intestazione \<file System >
+- STD. memory fornisce il contenuto dell'intestazione \<memoria >
+- STD. Threading fornisce il contenuto delle intestazioni \<Atomic >, \<condition_variable > \<future >, \<mutex >, \<shared_mutex > e \<thread >
 - STD. Core fornisce tutti gli altri elementi C++ nella libreria standard
 
-Per utilizzare questi moduli, è sufficiente aggiungere un'istruzione import all'inizio del file di codice sorgente. Ad esempio:
+Per utilizzare questi moduli, è sufficiente aggiungere una dichiarazione Import all'inizio del file di codice sorgente. Ad esempio:
 
 ```cpp
 import std.core;
 import std.regex;
 ```
 
-Per utilizzare il modulo della libreria standard Microsoft, è necessario compilare il programma con le opzioni [/EHsc](../build/reference/eh-exception-handling-model.md) e [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
+Per utilizzare il modulo della libreria standard Microsoft, compilare il programma con le opzioni [/EHsc](../build/reference/eh-exception-handling-model.md) e [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
 
 ## <a name="basic-example"></a>Esempio di base
 
-Nell'esempio seguente viene illustrata una semplice definizione di modulo in un file di origine denominato **foo. IXX**. L'estensione **IXX** è necessaria per i file dell'interfaccia del modulo in Visual Studio. In questo esempio il file di interfaccia contiene la definizione della funzione e la dichiarazione. Tuttavia, le definizioni possono essere inserite anche in uno o più file distinti, come illustrato in un esempio successivo. L'istruzione **Export Module foo** indica che questo file è l'interfaccia principale per un modulo chiamato `Foo`. Il modificatore di `f()` esportazione su indica che questa funzione sarà visibile `Foo` quando viene importato da un altro programma o modulo. Si noti che il modulo fa riferimento `Bar`a uno spazio dei nomi.
+Nell'esempio seguente viene illustrata una semplice definizione di modulo in un file di origine denominato **foo. IXX**. L'estensione **IXX** è necessaria per i file dell'interfaccia del modulo in Visual Studio. In questo esempio il file di interfaccia contiene la definizione della funzione e la dichiarazione. Tuttavia, le definizioni possono essere inserite anche in uno o più file distinti, come illustrato in un esempio successivo. L'istruzione **Export Module foo** indica che questo file è l'interfaccia principale per un modulo denominato `Foo`. Il modificatore **Export** in `f()` indica che questa funzione sarà visibile quando `Foo` viene importato da un altro programma o modulo. Si noti che il modulo fa riferimento a uno spazio dei nomi `Bar`.
 
 ```cpp
 export module Foo;
@@ -64,7 +64,7 @@ namespace Bar
 }
 ```
 
-Il file **Program. cpp** utilizza l'istruzione **Import** per accedere al nome esportato da `Foo`. Si noti che il `Bar` nome è visibile qui, ma non tutti i relativi membri. Si noti inoltre che la `ANSWER` macro non è visibile.
+Il file **Program. cpp** utilizza la dichiarazione di **importazione** per accedere al nome esportato da `Foo`. Si noti che il nome `Bar` è visibile qui, ma non tutti i relativi membri. Si noti inoltre che la macro `ANSWER` non è visibile.
 
 ```cpp
 
@@ -132,7 +132,7 @@ L'unità di interfaccia primaria può importare i file di implementazione della 
 
 ## <a name="modules-and-header-files"></a>Moduli e file di intestazione
 
-È possibile includere i file di intestazione in un file di origine del `#include` modulo inserendo la direttiva prima della dichiarazione del modulo. Questi file sono considerati nel *frammento di modulo globale*. Un modulo può visualizzare solo i nomi del *frammento di modulo globale* presenti nelle intestazioni che include in modo esplicito. Il frammento di modulo globale contiene solo i simboli effettivamente utilizzati.
+È possibile includere i file di intestazione in un file di origine del modulo inserendo la direttiva `#include` prima della dichiarazione del modulo. Questi file sono considerati nel *frammento di modulo globale*. Un modulo può visualizzare solo i nomi del *frammento di modulo globale* presenti nelle intestazioni che include in modo esplicito. Il frammento di modulo globale contiene solo i simboli effettivamente utilizzati.
 
 ```cpp
 // MyModuleA.cpp

@@ -1,18 +1,18 @@
 ---
 title: File di intestazioneC++()
-ms.date: 04/20/2018
+ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 98d37944f8c037f3ba25d80c7d35b3560ad11d40
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: ca5036ee53372f44e53b5a6452d4ab220fc3977d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980479"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301483"
 ---
 # <a name="header-files-c"></a>File di intestazioneC++()
 
-Prima di poter utilizzare i nomi degli elementi di programma, ad esempio variabili, funzioni, classi e così via, devono essere dichiarati. Ad esempio, non è possibile scrivere `x = 42` semplicemente senza prima dichiarare ' x '.
+Prima di poter utilizzare i nomi degli elementi di programma, ad esempio variabili, funzioni, classi e così via, devono essere dichiarati. Non è ad esempio possibile scrivere solo `x = 42` senza prima dichiarare ' x '.
 
 ```cpp
 int x; // declaration
@@ -23,9 +23,12 @@ La dichiarazione indica al compilatore se l'elemento è un **int**, una **doppia
 
 Per ridurre al minimo il rischio di errori C++ , ha adottato la convenzione di utilizzo dei *file di intestazione* per contenere le dichiarazioni. Le dichiarazioni vengono apportate in un file di intestazione, quindi si utilizza la direttiva #include in ogni file con estensione cpp o in un altro file di intestazione che richiede la dichiarazione. La direttiva #include inserisce una copia del file di intestazione direttamente nel file con estensione cpp prima della compilazione.
 
+> [!NOTE]
+> In Visual Studio 2019 la funzionalità *moduli* c++ 20 è stata introdotta come miglioramento e sostituzione finale per i file di intestazione. Per ulteriori informazioni, vedere [Cenni preliminari sui C++moduli in ](modules-cpp.md).
+
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato un modo comune per dichiarare una classe e quindi utilizzarla in un file di origine diverso. Si inizierà con il file `my_class.h`di intestazione. Contiene una definizione di classe, ma si noti che la definizione è incompleta; la funzione `do_something` membro non è definita:
+Nell'esempio seguente viene illustrato un modo comune per dichiarare una classe e quindi utilizzarla in un file di origine diverso. Si inizierà con il file di intestazione `my_class.h`. Contiene una definizione di classe, ma si noti che la definizione è incompleta; la funzione membro `do_something` non è definita:
 
 ```cpp
 // my_class.h
@@ -40,7 +43,7 @@ namespace N
 }
 ```
 
-Successivamente, creare un file di implementazione (in genere con estensione cpp o simile). Si chiamerà il file my_class. cpp e si fornirà una definizione per la dichiarazione del membro. Viene aggiunta una `#include` direttiva per il file "my_class. h" per fare in modo che la dichiarazione my_class venga inserita in questo punto nel file con estensione cpp e `<iostream>` includa per eseguire il pull `std::cout`della dichiarazione per. Si noti che le virgolette vengono usate per i file di intestazione nella stessa directory del file di origine e le parentesi angolari vengono usate per le intestazioni della libreria standard. Inoltre, molte intestazioni della libreria standard non hanno. h o qualsiasi altra estensione di file.
+Successivamente, creare un file di implementazione (in genere con estensione cpp o simile). Si chiamerà il file my_class. cpp e si fornirà una definizione per la dichiarazione del membro. Si aggiunge una direttiva `#include` per il file "my_class. h" per fare in modo che la dichiarazione di my_class venga inserita in questo punto nel file con estensione cpp e includa `<iostream>` per eseguire il pull della dichiarazione per `std::cout`. Si noti che le virgolette vengono usate per i file di intestazione nella stessa directory del file di origine e le parentesi angolari vengono usate per le intestazioni della libreria standard. Inoltre, molte intestazioni della libreria standard non hanno. h o qualsiasi altra estensione di file.
 
 Nel file di implementazione, è possibile usare facoltativamente un'istruzione **using** per evitare di dover qualificare ogni menzione di "my_class" o "cout" con "N::" o "STD::".  Non inserire istruzioni **using** nei file di intestazione.
 
@@ -58,7 +61,7 @@ void my_class::do_something()
 }
 ```
 
-A questo punto è `my_class` possibile usare in un altro file cpp. Si #include il file di intestazione in modo che il compilatore estraa la dichiarazione. Tutto il compilatore deve essere a conoscenza che my_class è una classe che dispone di una funzione membro pubblica `do_something()`denominata.
+A questo punto è possibile usare `my_class` in un altro file cpp. Si #include il file di intestazione in modo che il compilatore estraa la dichiarazione. È necessario che tutto il compilatore sappia che my_class è una classe che dispone di una funzione membro pubblica denominata `do_something()`.
 
 ```cpp
 // my_program.cpp
@@ -78,7 +81,7 @@ Al termine della compilazione di ogni file con estensione cpp in file obj, il co
 
 ## <a name="include-guards"></a>Includi protezioni
 
-In genere, i file di intestazione *includono* un GUARD `#pragma once` o una direttiva per assicurarsi che non vengano inseriti più volte in un unico file con estensione cpp.
+In genere, i file di intestazione includono una direttiva *include Guard* o `#pragma once` per assicurarsi che non vengano inseriti più volte in un unico file con estensione cpp.
 
 ```cpp
 // my_class.h

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - POPCONTEXT directive
 ms.assetid: 19f59290-a54d-477d-88d8-97d3f63ed417
-ms.openlocfilehash: a1d4106c8f627698fa1df8f810f7c8689c0f5e39
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 31c9bf4b6bb77adecc7a3475d72725617427a0b9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988151"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318683"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 
-Ripristina parte o tutto il *contesto* corrente (salvato dalla direttiva [PushContext](../../assembler/masm/pushcontext.md) ). Il *contesto* può essere **presupposto** (solo a 32 bit), **radice**, **Listato**, **CPU** (solo per l'uso di massa a 32 bit) o **tutti**.
+Ripristina parte o tutto il *contesto* corrente (salvato dalla direttiva [PushContext](pushcontext.md) ). Il *contesto* può essere **presupposto** (solo a 32 bit), **radice**, **Listato**, **CPU** (solo per l'uso di massa a 32 bit) o **tutti**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,4 +23,5 @@ Ripristina parte o tutto il *contesto* corrente (salvato dalla direttiva [PushCo
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento alle direttive](directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

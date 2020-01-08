@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151949"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299117"
 ---
 # <a name="goto-and-labeled-statements-c"></a>Istruzioni goto e con etichetta (C)
 
@@ -26,10 +26,10 @@ L'istruzione `goto` trasferisce il controllo a un'etichetta. L'etichetta specifi
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+&nbsp;&nbsp;&nbsp;&nbsp;l'identificatore **goto** **;**
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*Identifier* **:** *Statement*
 
 Un'etichetta dell'istruzione è significativa solo a un'istruzione `goto`; in qualsiasi altro contesto, un'istruzione contrassegnata viene eseguita indipendentemente dall'etichetta.
 
@@ -39,7 +39,7 @@ Per uno stile di programmazione ottimale è consigliabile preferire le istruzion
 
 In questo esempio viene illustrata l'istruzione `goto`:
 
-```
+```c
 // goto.c
 #include <stdio.h>
 

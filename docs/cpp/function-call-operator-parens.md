@@ -10,16 +10,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154152"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301522"
 ---
 # <a name="function-call-operator-"></a>Operatore di chiamata di funzione: ()
 
-Un'espressione di suffisso seguita dall'operatore di chiamata di funzione, **()**, specifica una chiamata di funzione.
+Un'espressione suffissa seguita dall'operatore di chiamata di funzione, **()** , specifica una chiamata di funzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,9 +32,9 @@ postfix-expression
 
 Gli argomenti nell'operatore di chiamata di funzione sono uguali a zero o a più espressioni separate da virgole, ossia sono gli argomenti effettivi della funzione.
 
-Il *postfix-expression* devono restituire un indirizzo della funzione (ad esempio, un identificatore di funzione o il valore di un puntatore a funzione), e *argument-expression-list* è riportato un elenco di espressioni (separate dal punto e virgola) i cui valori (argomenti) vengono passati alla funzione. L'argomento *argument-expression-list* può essere vuoto.
+Il *suffisso-espressione* deve restituire un indirizzo di funzione (ad esempio, un identificatore di funzione o il valore di un puntatore a funzione) e *argument-expression-list* è un elenco di espressioni (separate da virgole) i cui valori (gli argomenti) vengono passati alla funzione. L'argomento *argument-expression-list* può essere vuoto.
 
-Il *postfix-expression* deve essere uno dei seguenti tipi:
+L' *espressione suffisso* deve essere di uno dei seguenti tipi:
 
 - Funzione che restituisce il tipo `T`. Una dichiarazione di esempio è
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-Il codice precedente definisce una classe denominata `Point`, che contiene i dati privati, gli oggetti che rappresentano *x* e *y* coordinate. È necessario modificare tali oggetti e recuperare i relativi valori. Questo programma rappresenta una delle diverse progettazioni possibili per tale classe. Un'altra progettazione valida consiste nell'utilizzo delle funzioni `GetX` e `SetX` o `GetY` e `SetY`.
+Il codice precedente definisce una classe denominata `Point`, che contiene oggetti dati privati che rappresentano le coordinate *x* e *y* . È necessario modificare tali oggetti e recuperare i relativi valori. Questo programma rappresenta una delle diverse progettazioni possibili per tale classe. Un'altra progettazione valida consiste nell'utilizzo delle funzioni `GetX` e `SetX` o `GetY` e `SetY`.
 
 Le funzioni che restituiscono tipi di classe, i puntatori ai tipi di classe o i riferimenti ai tipi di classe possono essere utilizzati come operando a sinistra degli operatori di selezione dei membri. Pertanto, il codice seguente è valido:
 
@@ -174,10 +174,10 @@ int main() {
 }
 ```
 
-Le funzioni possono essere chiamate in modo ricorsivo. Per altre informazioni sulle dichiarazioni di funzione, vedere [funzioni](functions-cpp.md). Altro materiale correlato [programma e collegamento](../cpp/program-and-linkage-cpp.md).
+Le funzioni possono essere chiamate in modo ricorsivo. Per ulteriori informazioni sulle dichiarazioni di funzione, vedere [funzioni](functions-cpp.md). Il materiale correlato è in [unità di conversione e collegamento](../cpp/program-and-linkage-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Espressioni di suffissi](../cpp/postfix-expressions.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Chiamata di funzione](../c-language/function-call-c.md)

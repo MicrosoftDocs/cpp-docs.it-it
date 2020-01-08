@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940375"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300308"
 ---
 # <a name="filename-search-functions"></a>Funzioni di ricerca dei nomi file
 
@@ -67,7 +67,7 @@ Nei file system che non supportano le ore di creazione e di ultimo accesso di un
 Non è possibile specificare gli attributi di destinazione (ad esempio `_A_RDONLY`) per limitare l'operazione di ricerca. Questi attributi vengono restituiti nel campo `attrib` della struttura `_finddata_t` e possono includere i valori seguenti (definiti in IO.h). Gli utenti non devono considerarli gli unici valori possibili per il campo `attrib` .
 
 `_A_ARCH`<br/>
-Archiviazione. Viene impostato ogni volta che il file viene modificato ed eliminato dal comando **BACKUP** . Valore: 0x20.
+Archivio. Viene impostato ogni volta che il file viene modificato ed eliminato dal comando **BACKUP** . Valore: 0x20.
 
 `_A_HIDDEN`<br/>
 File nascosto. In genere non viene visualizzato con il comando DIR, a meno che non venga usata l'opzione **/AH** . Restituisce informazioni sui file con questo attributo e sui file normali. Valore: 0x02.
@@ -96,7 +96,7 @@ Anche le funzioni `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`e `_wfi
 
 `_finddata_t` è una macro che restituisce `_finddata64i32_t` (o `_finddata32_t` se `_USE_32BIT_TIME_T` è definito). La tabella seguente riepiloga le variazioni in `_finddata_t`:
 
-|Struttura|Tipo Time|Tipo File size|
+|Struttura|Tipo time|Tipo File size|
 |---------------|---------------|--------------------|
 |`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
 |`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
@@ -108,7 +108,7 @@ Anche le funzioni `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`e `_wfi
 
 ## <a name="example"></a>Esempio
 
-```
+```c
 // crt_find.c
 // This program uses the 32-bit _find functions to print
 // a list of all files (and their attributes) with a .C extension

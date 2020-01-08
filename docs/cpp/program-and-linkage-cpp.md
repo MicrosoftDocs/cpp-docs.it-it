@@ -1,61 +1,64 @@
 ---
-title: Programmi e collegamento (C++)
-ms.date: 04/09/2018
+title: Unità di conversione e collegamentoC++()
+ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: 4f509979a293f194333e610fbdae7be9d32ec121
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcd66b454da3758996fe827581fe4a73a641407f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301513"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301353"
 ---
-# <a name="program-and-linkage-c"></a>Programma e collegamento (C++)
+# <a name="translation-units-and-linkage"></a>Unità di conversione e collegamento
 
-In un programma C++, un *simbolo*, ad esempio un nome di variabile o una funzione, può essere dichiarato un numero qualsiasi di volte in cui all'interno dell'ambito, ma può essere definito una sola volta. Si tratta di una definizione di regola (ODR). Oggetto *dichiarazione* introduce un nome nel programma (o reintroduce). Oggetto *definizione* introduce un nome e, nel caso di una variabile, in modo esplicito la inizializza. Oggetto *definizione di funzione* comprende la firma e il corpo della funzione.
+In un C++ programma, un *simbolo*, ad esempio una variabile o un nome di funzione, può essere dichiarato un numero qualsiasi di volte all'interno del proprio ambito, ma può essere definito una sola volta. Questa regola è "una regola di definizione" (ODR). Una *dichiarazione* introduce (o introduce nuovamente) un nome nel programma. Una *definizione* introduce un nome. Se il nome rappresenta una variabile, viene inizializzata in modo esplicito da una definizione. Una *definizione di funzione* è costituita dalla firma e dal corpo della funzione. Una definizione di classe è costituita dal nome della classe seguito da un blocco in cui sono elencati tutti i membri della classe. I corpi delle funzioni membro possono facoltativamente essere definiti separatamente in un altro file.
 
-Questi sono dichiarazioni:
+Nell'esempio seguente vengono illustrate alcune dichiarazioni:
 
 ```cpp
 int i;
 int f(int x);
+class C;
 ```
 
-Questi sono definizioni:
+Nell'esempio seguente vengono illustrate alcune definizioni:
 
 ```cpp
 int i{42};
 int f(int x){ return x * i; }
+class C {
+public:
+   void DoSomething();
+};
 ```
 
-Un programma è costituito da uno o più *unità di conversione*. Un'unità di conversione è costituito da un file di implementazione (. cpp,. cxx, e così via) e tutte le intestazioni (con estensione h, .hpp e così via) che include direttamente o indirettamente. Ogni unità di conversione viene compilata in modo indipendente dal compilatore, dopo il quale il linker unisce le unità di conversione compilata in un unico *programma*. Le violazioni della regola ODR in genere visualizzati come errori del linker quando lo stesso nome ha due definizioni diverse in unità di conversione diversa.
+Un programma è costituito da una o più *unità di conversione*. Un'unità di conversione è costituita da un file di implementazione e da tutte le intestazioni che include direttamente o indirettamente. I file di implementazione in genere hanno un'estensione di file *cpp* o *cxx*. I file di intestazione hanno in genere un'estensione di *h* o *HPP*. Ogni unità di conversione viene compilata in modo indipendente dal compilatore. Al termine della compilazione, il linker unisce le unità di conversione compilate in un unico *programma*. Le violazioni della regola ODR vengono in genere visualizzate come errori del linker. Si verificano errori del linker quando lo stesso nome ha due definizioni diverse in unità di conversione diverse.
 
-In generale, il modo migliore per rendere visibile una variabile su più file è di inserirlo in un file di intestazione e aggiungere un #include (direttiva) in ogni file con estensione cpp che richiede la dichiarazione. Aggiungendo *Guard include* intorno al contenuto dell'intestazione, assicurarsi che i nomi dichiara sono definiti solo una volta.
+In generale, il modo migliore per rendere visibile una variabile tra più file consiste nell'inserirlo in un file di intestazione. Aggiungere quindi una direttiva #include in ogni file *cpp* che richiede la dichiarazione. Con l'aggiunta di *Protezioni di inclusione* intorno al contenuto dell'intestazione, si garantisce che i nomi dichiarati siano definiti una sola volta.
 
-Tuttavia, in alcuni casi potrebbe essere necessario dichiarare una variabile globale o una classe in un file con estensione cpp. In questi casi, è necessario un modo per indicare il compilatore e linker indica se il nome dell'oggetto si applica solo a un file o a tutti i file.
+In C++ 20 i [moduli](modules-cpp.md) vengono introdotti come alternativa migliorata ai file di intestazione.
 
-## <a name="linkage-vs-scope"></a>Collegamento e ambito
+In alcuni casi potrebbe essere necessario dichiarare una variabile globale o una classe in un file *cpp* . In questi casi, è necessario un modo per indicare al compilatore e al linker il tipo di *collegamento* del nome. Il tipo di collegamento specifica se il nome dell'oggetto si applica solo a un file o a tutti i file. Il concetto di collegamento si applica solo ai nomi globali. Il concetto di collegamento non si applica ai nomi dichiarati all'interno di un ambito. Un ambito viene specificato da un set di parentesi graffe di inclusione, ad esempio nelle definizioni di funzione o di classe.
 
-Il concetto di *collegamento* si intende la visibilità dei simboli globali (ad esempio variabili, i nomi dei tipi e i nomi delle funzioni) all'interno del programma nel suo complesso tra unità di conversione. Il concetto di *ambito* fa riferimento ai simboli dichiarati all'interno di un blocco, ad esempio un spazio dei nomi, classe o corpo della funzione. Questi simboli sono visibili solo all'interno dell'ambito in cui sono definiti; il concetto di un collegamento non è applicabile ad essi.
+## <a name="external-vs-internal-linkage"></a>Collegamento esterno rispetto a quello interno
 
-## <a name="external-vs-internal-linkage"></a>Esterno rispetto al collegamento interno
+Una *funzione Free* è una funzione definita nell'ambito globale o dello spazio dei nomi. Per impostazione predefinita, le variabili globali non const e le funzioni gratuite hanno un *collegamento esterno*. sono visibili da qualsiasi unità di conversione del programma. Pertanto, nessun altro oggetto globale può avere tale nome. Un simbolo con *collegamento interno* o *nessun collegamento* è visibile solo all'interno dell'unità di conversione in cui è dichiarato. Quando un nome dispone di un collegamento interno, lo stesso nome può essere presente in un'altra unità di conversione. Le variabili dichiarate con le definizioni di classe o i corpi di funzione non hanno collegamenti.
 
-Oggetto *funzione libera* è una funzione che viene definita a globale o un ambito dello spazio dei nomi. Le variabili globali non-const e le funzioni disponibili per impostazione predefinita hanno *collegamento esterno*; sono visibili da qualsiasi unità di conversione nel programma. Di conseguenza, nessun altro oggetto globale (variabile, definizione di classe e così via) può avere tale nome. Un simbolo con *collegamenti interni* oppure *Nessun collegamento* è visibile solo nell'unità di conversione in cui è dichiarata. Quando un nome con collegamento interno, lo stesso nome può esistere in un'altra unità di conversione. Le variabili dichiarate con le definizioni di classe o i corpi delle funzioni non dispongono di collegamento.
+È possibile forzare il collegamento interno di un nome globale dichiarando in modo esplicito come **static**. Questo limita la visibilità alla stessa unità di conversione in cui è dichiarata. In questo contesto, **static** significa qualcosa di diverso da quando applicato alle variabili locali.
 
-È possibile forzare un nome globale in modo che un collegamento interno dichiarandolo in modo esplicito come **statici**. Questo limita la visibilità per la stessa unità di conversione in cui è dichiarata. Si noti che in questo contesto **statici** ha un significato diverso rispetto a quando applicato alle variabili locali.
-
-Gli oggetti seguenti dispongono di collegamento interno per impostazione predefinita:
+Per impostazione predefinita, gli oggetti seguenti hanno un collegamento interno:
 - oggetti const
-- oggetti di constexpr
+- oggetti constExpr
 - typedef
 - oggetti statici nell'ambito dello spazio dei nomi
 
-Per fornire un collegamento esterno a oggetti const, dichiararla **extern** e assegnarle un valore:
+Per assegnare un collegamento esterno a un oggetto const, dichiararlo come **extern** e assegnargli un valore:
 
 ```cpp
 extern const int value = 42;
 ```
 
-Visualizzare [extern](extern-cpp.md) per altre informazioni.
+Per ulteriori informazioni, vedere [extern](extern-cpp.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

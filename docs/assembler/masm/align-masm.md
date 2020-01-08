@@ -1,25 +1,25 @@
 ---
 title: ALIGN (MASM)
-ms.date: 01/02/2019
+ms.date: 12/17/2019
 f1_keywords:
 - align
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: 22b18f2e238c780377b84fc2be3eb6678686bb73
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 700721768deaf92e88b32a97e68c6e017219d19d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399279"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316590"
 ---
-# <a name="align-masm"></a>ALIGN (MASM)
+# <a name="align"></a>ALIGN
 
 La direttiva **align** allinea l'elemento dati successivo o l'istruzione su un indirizzo che è un multiplo del relativo parametro. Il parametro deve essere una potenza di 2 (ad esempio 1, 2, 4 e così via) minore o uguale all'allineamento del segmento.
 
 ## <a name="syntax"></a>Sintassi
 
-> **Allinea** *numero*⟦ ⟧
+> **Align** ⟦*constantExpression*⟧
 
 ## <a name="remarks"></a>Note
 
@@ -32,4 +32,5 @@ Quando i dati sono allineati, lo spazio ignorato viene riempito con zeri. Quando
 ## <a name="see-also"></a>Vedere anche
 
 [Anche](even.md)\
-[Guida di riferimento alle direttive](directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

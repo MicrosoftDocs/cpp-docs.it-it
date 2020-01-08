@@ -12,14 +12,14 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: 6991dfe90e58352b26d7c914e1601a68674b8a5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749867"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300157"
 ---
-# <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
+# <a name="_pgmptr-_wpgmptr"></a>_pgmptr, _wpgmptr
 
 Percorso del file eseguibile. Deprecate. Usare [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) e [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).
 
@@ -30,7 +30,7 @@ extern char *_pgmptr;
 extern wchar_t *_wpgmptr;
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Quando un programma viene eseguito dall'interprete dei comandi (Cmd.exe), `_pgmptr` viene automaticamente inizializzato al percorso completo del file eseguibile. Ad esempio, se Hello.exe è in C:\BIN e C:\BIN nel percorso, `_pgmptr` è impostato su C:\BIN\Hello.exe quando si esegue:
 
@@ -48,9 +48,9 @@ Quando un programma non viene eseguito dalla riga di comando, `_pgmptr` potrebbe
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
-|Variabile|Intestazione obbligatoria|
+|Variable|Intestazione obbligatoria|
 |--------------|---------------------|
 |`_pgmptr`, `_wpgmptr`|\<stdlib.h>|
 
@@ -58,7 +58,7 @@ Quando un programma non viene eseguito dalla riga di comando, `_pgmptr` potrebbe
 
 Nel programma seguente viene illustrato l'utilizzo di `_pgmptr`.
 
-```
+```c
 // crt_pgmptr.c
 // compile with: /W3
 // The following program demonstrates the use of _pgmptr.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDIF directive
 ms.assetid: b9f25ed5-6634-40f7-bcbc-d3135f09cce6
-ms.openlocfilehash: bc09f72b272435b542ac7f6390a6b7ccf4d887c3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bcd8b5b2423abf982f999548a50208dfe8e83f6e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398475"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313821"
 ---
 # <a name="endif-32-bit-masm"></a>. ENDIF (MASM a 32 bit)
 
@@ -21,8 +21,9 @@ ms.locfileid: "74398475"
 
 ## <a name="remarks"></a>Note
 
-(solo MASM a 32 bit). Vedere [. SE](../../assembler/masm/dot-if.md).
+(solo MASM a 32 bit). Vedere [. SE](dot-if.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

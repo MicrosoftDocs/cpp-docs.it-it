@@ -5,12 +5,12 @@ description: Microsoft C++ in Visual Studio si avvicina alla conformità complet
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858035"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546432"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Miglioramenti della conformità di C++ in Visual Studio 2017
 
@@ -1131,11 +1131,11 @@ Nelle versioni precedenti di Visual Studio, il compilatore dava sempre un colleg
 
 ### `not_fn()`
 
-[P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` sostituisce `not1` e `not2`.
+[P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` è una sostituzione di `not1` e `not2`.
 
 ### <a name="rewording-enable_shared_from_this"></a>Riformulazione di `enable_shared_from_this`
 
-[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` era stato aggiunto in C++11. Lo standard C++17 aggiorna la specifica per gestire meglio determinati casi limite. [14]
+[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` è stato aggiunto in c++ 11. Lo standard C++17 aggiorna la specifica per gestire meglio determinati casi limite. [14]
 
 ### <a name="splicing-maps-and-sets"></a>Splicing di mappe e set
 
@@ -1241,13 +1241,11 @@ Per altre informazioni, vedere [Costruttori](../cpp/constructors-cpp.md#inheriti
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-Se il costruttore di una classe di base è non pubblico ma accessibile a una classe derivata, in modalità **/std:c++17** in Visual Studio versione 15.7 non è più possibile usare parentesi graffe vuote per inizializzare un oggetto di tipo derivato.
-
+Se il costruttore di una classe di base non è pubblico, ma è accessibile a una classe derivata, in modalità **/std: c++ 17** in Visual Studio 2017 versione 15,7 non è più possibile usare le parentesi graffe vuote per inizializzare un oggetto del tipo derivato.
 L'esempio seguente illustra il comportamento conforme di C++14:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 In C++17, `Derived` è ora considerato un tipo di aggregazione. Di conseguenza, l'inizializzazione di `Base` tramite il costruttore predefinito privato si verifica direttamente come parte della regola di inizializzazione delle aggregazioni estesa. In precedenza, il costruttore privato `Base` veniva chiamato tramite il costruttore `Derived` e aveva esito positivo a causa della dichiarazione Friend.
-
 L'esempio seguente illustra il comportamento di C++17 in Visual Studio versione 15.7 in modalità **/std:c++17**:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```
@@ -1928,7 +1920,7 @@ Per risolvere il problema, inserire prima `extern "C"`:
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
 
-Questo avviso è disattivato per impostazione predefinita nella versione 15.3, ma è attivato per impostazione predefinita nella versione 15.5 e influisce solo su codice compilato con **/Wall** **/WX**.
+Questo avviso è disattivato per impostazione predefinita in 15,3, ma per impostazione predefinita in 15,5 e influisca solo sul codice compilato con **/Wall** **/WX**.
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>**decltype** e chiamate ai distruttori eliminati
 
@@ -2179,7 +2171,7 @@ Il codice seguente consente di evitare l'errore:
 catch (int (*)[1]) {}
 ```
 
-### <a name="tr1"></a> Lo spazio dei nomi `std::tr1` è deprecato
+### <a name="tr1"></a>spazio dei nomi `std::tr1` deprecato
 
 Lo spazio dei nomi `std::tr1` non standard è ora contrassegnato come deprecato in entrambe le modalità C++14 e C++17. In Visual Studio 2017 versione 15.5 il codice seguente genera l'errore C4996:
 

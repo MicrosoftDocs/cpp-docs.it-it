@@ -1,17 +1,17 @@
 ---
 title: Costruttori (C++)
-ms.date: 11/19/2019
+ms.date: 12/27/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 6cdf6241542c3f93484097c65015181a91647d49
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246611"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546393"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
@@ -477,6 +477,52 @@ Se un costruttore genera un'eccezione, l'ordine di eliminazione permanente è l'
 1. Gli oggetti classe base e membro vengono eliminati definitivamente nell'ordine inverso rispetto alla dichiarazione.
 
 1. Se il costruttore non è delegante, tutti i membri e gli oggetti di classe base completamente costruiti vengono eliminati definitivamente. Tuttavia, poiché l'oggetto stesso non viene costruito completamente, il distruttore non viene eseguito.
+
+## <a name="extended_aggregate"></a>Costruttori derivati e inizializzazione aggregata estesa
+
+Se il costruttore di una classe di base non è pubblico, ma è accessibile a una classe derivata, in modalità **/std: c++ 17** in Visual Studio 2017 e versioni successive non è possibile usare le parentesi graffe vuote per inizializzare un oggetto del tipo derivato.
+
+L'esempio seguente illustra il comportamento conforme di C++14:
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {};
+
+Derived d1; // OK. No aggregate init involved.
+Derived d2 {}; // OK in C++14: Calls Derived::Derived()
+               // which can call Base ctor.
+```
+
+In C++17, `Derived` è ora considerato un tipo di aggregazione. Di conseguenza, l'inizializzazione di `Base` tramite il costruttore predefinito privato si verifica direttamente come parte della regola di inizializzazione delle aggregazioni estesa. In precedenza, il costruttore privato `Base` veniva chiamato tramite il costruttore `Derived` e aveva esito positivo a causa della dichiarazione Friend.
+
+L'esempio seguente illustra il comportamento di C++ 17 in Visual Studio 2017 e versioni successive in modalità **/std: c++ 17** :
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {
+    Derived() {} // add user-defined constructor
+                 // to call with {} initialization
+};
+
+Derived d1; // OK. No aggregate init involved.
+
+Derived d2 {}; // error C2248: 'Base::Base': cannot access
+               // private member declared in class 'Base'
+```
 
 ### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Costruttori per classi con ereditarietà multipla
 

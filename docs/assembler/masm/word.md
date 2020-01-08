@@ -1,21 +1,21 @@
 ---
 title: WORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - WORD
 helpviewer_keywords:
 - WORD directive
 ms.assetid: 36f7ac49-480d-4d67-8967-3a62acb8f4df
-ms.openlocfilehash: 6adae9f04130e3b7bd03d7af9e1ae96855d19f8b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ba441c33dcd028407c9ab5623a8863171429a7df
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74392826"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319125"
 ---
 # <a name="word"></a>WORD
 
-Alloca ed eventualmente Inizializza una parola (2 byte) di archiviazione per ogni *inizializzatore*. Può essere usato anche come identificatore di tipo in qualsiasi punto in cui un tipo è valido.
+Alloca ed eventualmente Inizializza una parola (2 byte) di archiviazione per ogni *inizializzatore*. Può essere usato anche come identificatore di tipo in qualsiasi punto in cui un tipo è valido. [DW](dw.md) è un sinonimo di **Word**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,6 +23,7 @@ Alloca ed eventualmente Inizializza una parola (2 byte) di archiviazione per ogn
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alle direttive](../../assembler/masm/directives-reference.md)\
-\ a [spada](../../assembler/masm/sword.md)
-[DW](../../assembler/masm/dw.md)
+[Riferimento alle direttive](directives-reference.md)\
+\ a [spada](sword.md)
+\ [DW](dw.md)
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

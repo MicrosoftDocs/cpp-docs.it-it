@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .PUSHFRAME directive
 ms.assetid: 17b123d0-4c6d-4fd2-85eb-798e8ad0a73c
-ms.openlocfilehash: 5f951396291ecb12dab500a364f176106c5daa8b
-ms.sourcegitcommit: 2cac0150ab3bc8260f866451019b8e22c7e1ac11
+ms.openlocfilehash: 0aaec119d26d87fddb1eba505458da1250a5926e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945852"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317578"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 
@@ -24,10 +24,11 @@ Genera una voce di codice di rimozione `UWOP_PUSH_MACHFRAME`. Se viene specifica
 
 ## <a name="remarks"></a>Note
 
-. PUSHFRAME consente agli utenti di ml64. exe di specificare la modalità di rimozione di una funzione frame. È consentito solo all'interno del prologo, che si estende dalla dichiarazione del frame [proc](../../assembler/masm/proc.md) a [. Direttiva ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Queste direttive non generano codice; generano solo `.xdata` e `.pdata`. **. PUSHFRAME** deve essere preceduto da istruzioni che implementano effettivamente le azioni da riportare. È consigliabile eseguire il wrapping di entrambe le direttive di rimozione e del codice di cui si intende eseguire la rimozione in una macro per garantire l'accordo.
+. PUSHFRAME consente agli utenti di ml64. exe di specificare la modalità di rimozione di una funzione frame. È consentito solo all'interno del prologo, che si estende dalla dichiarazione del frame [proc](proc.md) a [. Direttiva ENDPROLOG](dot-endprolog.md) . Queste direttive non generano codice; generano solo `.xdata` e `.pdata`. **. PUSHFRAME** deve essere preceduto da istruzioni che implementano effettivamente le azioni da riportare. È consigliabile eseguire il wrapping di entrambe le direttive di rimozione e del codice di cui si intende eseguire la rimozione in una macro per garantire l'accordo.
 
-Per ulteriori informazioni, vedere [MASM per x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Per ulteriori informazioni, vedere [MASM per x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento alle direttive](directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

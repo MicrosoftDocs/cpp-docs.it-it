@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398104"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317630"
 ---
 # <a name="model-32-bit-masm"></a>. MODEL (MASM a 32 bit)
 
@@ -38,14 +38,14 @@ Se si specifica **NEARSTACK** , il segmento dello stack viene raggruppato in un 
 
 ## <a name="remarks"></a>Note
 
-**. Il modello** non viene utilizzato in [MASM per x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. Il modello** non viene utilizzato in [MASM per x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 La tabella seguente elenca i valori possibili per ogni parametro quando la destinazione è rappresentata da piattaforme a 16 bit e a 32 bit:
 
 |Parametro|Valori a 32 bit|Valori a 16 bit (supporto per lo sviluppo di versioni precedenti a 16 bit)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*modello di memoria*|**PIATTO**|**Tiny**, **small**, **Compact**, **medium**, **large**, **huge**, **Flat**|
-|*tipo di linguaggio*|**C**, **stdcall**|**C**, **Basic**, **FORTRAN**, **Pascal**, **syscall**, **stdcall**|
+|*tipo di linguaggio*|**C**, **stdcall**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
 |*opzione stack*|Non utilizzato|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Codice
@@ -88,4 +88,5 @@ end
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

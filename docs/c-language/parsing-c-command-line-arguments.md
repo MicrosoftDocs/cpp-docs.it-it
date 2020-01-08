@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151208"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299091"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analisi di argomenti della riga di comando C
 
@@ -23,15 +23,15 @@ Il codice di avvio C di Microsoft utilizza le regole seguenti quando interpreta 
 
 - Gli argomenti sono delimitati da spazi vuoti, ovvero da uno spazio o da una tabulazione.
 
-- Una stringa racchiusa tra virgolette doppie viene interpretata come argomento singolo, indipendentemente dalla presenza di spazi al suo interno. Una stringa tra virgolette può essere incorporata in un argomento. Si noti che l'accento circonflesso (**^**) non viene riconosciuto come carattere di escape o delimitatore.
+- Una stringa racchiusa tra virgolette doppie viene interpretata come argomento singolo, indipendentemente dalla presenza di spazi al suo interno. Una stringa tra virgolette può essere incorporata in un argomento. Si noti che l'accento circonflesso ( **^** ) non viene riconosciuto come carattere di escape o delimitatore.
 
-- Le virgolette doppie precedute da una barra rovesciata (**\\"**) vengono interpretate letteralmente come virgolette doppie (**"**).
+- Le virgolette doppie precedute da una barra rovesciata ( **\\"** ) vengono interpretate letteralmente come virgolette doppie ( **"** ).
 
 - Le barre rovesciate vengono interpretate letteralmente, a meno che non precedano virgolette doppie.
 
-- Se le virgolette doppie seguono un numero pari di barre rovesciate, per ogni coppia di barre rovesciate (**\\\\**) viene inserita nella matrice `argv` una barra rovesciata (**\\**) e le virgolette doppie (**"**) vengono interpretate come delimitatori di stringa.
+- Se le virgolette doppie seguono un numero pari di barre rovesciate, per ogni coppia di barre rovesciate ( **\\\\** ) viene inserita nella matrice `argv` una barra rovesciata ( **\\** ) e le virgolette doppie ( **"** ) vengono interpretate come delimitatori di stringa.
 
-- Se un numero dispari di barre rovesciate è seguito da un segno di virgolette doppie, viene inserita una barra rovesciata (**\\**) nella matrice `argv` per ogni coppia di barre rovesciate (**\\\\**) e le virgolette doppie vengono interpretate come sequenza di escape dalla barra rovesciata rimanente, causando l'inserimento di virgolette doppie (**"**) letterali in `argv`.
+- Se un numero dispari di barre rovesciate è seguito da un segno di virgolette doppie, viene inserita una barra rovesciata ( **\\** ) nella matrice `argv` per ogni coppia di barre rovesciate ( **\\\\** ) e le virgolette doppie vengono interpretate come sequenza di escape dalla barra rovesciata rimanente, causando l'inserimento di virgolette doppie ( **"** ) letterali in `argv`.
 
 In questo elenco vengono illustrate le regole precedenti per visualizzare il risultato interpretato come passato a `argv` per alcuni esempi di argomenti della riga di comando. L'output elencato nella seconda, terza e quarta colonna viene dal programma ARGS.C che segue l'elenco.
 
@@ -47,7 +47,7 @@ In questo elenco vengono illustrate le regole precedenti per visualizzare il ris
 
 ### <a name="code"></a>Codice
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -76,7 +76,7 @@ char **envp )      // Array of environment variable strings
 }
 ```
 
-## <a name="comments"></a>Commenti
+## <a name="comments"></a>Comments
 
 Un esempio di output del programma è:
 

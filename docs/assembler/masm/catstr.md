@@ -1,17 +1,17 @@
 ---
 title: CATSTR
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - CATSTR
 helpviewer_keywords:
 - CATSTR directive
 ms.assetid: ae893190-8247-4435-a74e-de2f00db052f
-ms.openlocfilehash: 3dc888e29c8db173a7624e41ccb9904cd27552e9
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ca2cee09f0fd109028178c4fbbc88ac15f859675
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398853"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315186"
 ---
 # <a name="catstr"></a>CATSTR
 
@@ -27,4 +27,5 @@ Ogni elemento di testo può essere una stringa letterale, una costante preceduta
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

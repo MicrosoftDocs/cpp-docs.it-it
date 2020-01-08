@@ -1,19 +1,19 @@
 ---
 title: FOR (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - for
 helpviewer_keywords:
 - FOR directive
 ms.assetid: 99872e61-f503-4d34-b305-59f8556ba6b7
-ms.openlocfilehash: 75e27948a523cb23c42df6f7691d54c3170c656e
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c92e909b62331a630a9a09be6193f400ad32dc30
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397517"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318079"
 ---
-# <a name="for-masm"></a>FOR (MASM)
+# <a name="for"></a>FOR
 
 Contrassegna un blocco che verrà ripetuto una volta per ogni *argomento*, con l' *argomento* corrente che sostituisce il *parametro* per ogni ripetizione.
 
@@ -25,8 +25,9 @@ Contrassegna un blocco che verrà ripetuto una volta per ogni *argomento*, con l
 
 ## <a name="remarks"></a>Note
 
-Uguale a [IRP](../../assembler/masm/irp.md).
+Uguale a [IRP](irp.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento alle direttive](directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

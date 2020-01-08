@@ -1,18 +1,18 @@
 ---
 title: Errore ML non irreversibile A2096
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2096
 helpviewer_keywords:
 - A2096
 ms.assetid: bab0b5ee-b39f-4e44-a41a-3f949fab4297
-ms.openlocfilehash: 14fb30214cf7badf51368672dc52635d50a067f1
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 425e99c1dc6675e8b970433948e0cc09b8d54485
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74855474"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312664"
 ---
 # <a name="ml-nonfatal-error-a2096"></a>Errore ML non irreversibile A2096
 
@@ -24,8 +24,8 @@ Si è verificata una delle condizioni seguenti:
 
 - L'operando di sinistra specificato con l'operatore di override del segmento ( **:** ) non è un registro di segmento (CS, DS, SS, es, FS o GS), il nome del gruppo, il nome del segmento o l'espressione di segmento.
 
-- Alla direttiva [presume](../../assembler/masm/assume.md) è stato assegnato un registro di segmento senza un indirizzo di segmento valido, un registro di segmento, un gruppo o il gruppo **Flat** speciale.
+- Alla direttiva [presume](assume.md) è stato assegnato un registro di segmento senza un indirizzo di segmento valido, un registro di segmento, un gruppo o il gruppo **Flat** speciale.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Messaggi di errore ML](ml-error-messages.md)
