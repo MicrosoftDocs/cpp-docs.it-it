@@ -1,17 +1,17 @@
 ---
 title: .SETFRAME
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .SETFRAME
 helpviewer_keywords:
 - .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-ms.openlocfilehash: a21dda496d32abcfeb4692d0228afdbcfd4e5ebb
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 8c491a811634995398a37aa001cc1c93f8434114
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397924"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318241"
 ---
 # <a name="setframe"></a>.SETFRAME
 
@@ -23,9 +23,9 @@ Inserisce il campo Registro frame e l'offset nelle informazioni di rimozione uti
 
 ## <a name="remarks"></a>Note
 
-**. Seframe** consente agli utenti di ml64. exe di specificare la modalità di rimozione di una funzione di frame ed è consentita solo all'interno del prologo, che si estende dalla dichiarazione del frame [proc](../../assembler/masm/proc.md) a [. Direttiva ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Queste direttive non generano codice; generano solo `.xdata` e `.pdata`. **. Il segramma** deve essere preceduto da istruzioni che implementano effettivamente le azioni da riportare. È consigliabile eseguire il wrapping di entrambe le direttive di rimozione e del codice di cui si intende rimuovere la rimozione in una macro per garantire l'accordo.
+**. Seframe** consente agli utenti di ml64. exe di specificare la modalità di rimozione di una funzione di frame ed è consentita solo all'interno del prologo, che si estende dalla dichiarazione del frame [proc](proc.md) a [. Direttiva ENDPROLOG](dot-endprolog.md) . Queste direttive non generano codice; generano solo `.xdata` e `.pdata`. **. Il segramma** deve essere preceduto da istruzioni che implementano effettivamente le azioni da riportare. È consigliabile eseguire il wrapping di entrambe le direttive di rimozione e del codice di cui si intende rimuovere la rimozione in una macro per garantire l'accordo.
 
-Per ulteriori informazioni, vedere [MASM per x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Per ulteriori informazioni, vedere [MASM per x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Esempio
 
@@ -64,4 +64,5 @@ END
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento alle direttive](directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

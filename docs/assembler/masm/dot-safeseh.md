@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: df9798800da293e5e0b4f545a8442380b7ff9408
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5953ad6bdf1d9d1b0070ce83dd1d764799b7440a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397989"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317565"
 ---
 # <a name="safeseh-32-bit-masm"></a>. SAFESEH (MASM a 32 bit)
 
@@ -25,7 +25,7 @@ Registra una funzione come gestore di eccezioni strutturate. (solo MASM a 32 bit
 
 ## <a name="remarks"></a>Note
 
-l' *identificatore* deve essere l'ID di una procedura [EXTRN](../../assembler/masm/extrn.md) [o proc](../../assembler/masm/proc.md) definita localmente. Un' [etichetta](../../assembler/masm/label-masm.md) non è consentita. Il. Per la direttiva SAFESEH è richiesta l'opzione della riga di comando [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
+l' *identificatore* deve essere l'ID di una procedura [EXTRN](extrn.md) [o proc](proc.md) definita localmente. Un' [etichetta](label-masm.md) non è consentita. Il. Per la direttiva SAFESEH è richiesta l'opzione della riga di comando [/SAFESEH](ml-and-ml64-command-line-reference.md) ml. exe.
 
 Per ulteriori informazioni sui gestori di eccezioni strutturate, vedere [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
@@ -41,4 +41,5 @@ end
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento alle direttive](directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

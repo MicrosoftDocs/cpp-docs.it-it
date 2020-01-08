@@ -1,17 +1,17 @@
 ---
 title: PAGE
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - PAGE
 helpviewer_keywords:
 - Page directive
 ms.assetid: 6654c094-c1f7-4d10-8d9d-902ddd1ac27e
-ms.openlocfilehash: 40e2bf0f35e80a8e2dc04f2095c3e56048988e28
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: db2f229ffba2f32557daa9ae4817e8581b255035
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395122"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318709"
 ---
 # <a name="page"></a>PAGE
 
@@ -25,4 +25,5 @@ La prima direttiva imposta la *lunghezza* della riga e la *larghezza* dei caratt
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento alle direttive](../../assembler/masm/directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)
