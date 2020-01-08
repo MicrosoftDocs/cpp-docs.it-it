@@ -16,14 +16,14 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 0e979ed51f9c34700cef75113018c23e69a304f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244463"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301327"
 ---
-# <a name="ptr32-ptr64"></a>__ptr32, __ptr64
+# <a name="__ptr32-__ptr64"></a>__ptr32, __ptr64
 
 **Sezione specifica Microsoft**
 
@@ -39,13 +39,13 @@ int * __ptr64 p64;
 In un sistema a 32 bit, un puntatore dichiarato con **__ptr64** viene troncato a un puntatore a 32 bit. In un sistema a 64 bit, un puntatore dichiarato con **__ptr32** viene assegnato a un puntatore a 64 bit.
 
 > [!NOTE]
-> Non è possibile usare **__ptr32** oppure **__ptr64** durante la compilazione con **/clr: pure**. In caso contrario, verrà generato errore del compilatore C2472. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
+> Non è possibile usare **__ptr32** o **__ptr64** durante la compilazione con **/CLR: pure**. In caso contrario, verrà generato un errore del compilatore C2472. Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
-Per garantire la compatibilità con versioni precedenti **_ptr32** e **_ptr64** sono sinonimi per **__ptr32** e **__ptr64** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
+Per compatibilità con le versioni precedenti, **_ptr32** e **_ptr64** sono sinonimi per **__ptr32** e **__ptr64** a meno che non sia specificata l'opzione del compilatore [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come dichiarare e allocare i puntatori con le **__ptr32** e **__ptr64** parole chiave.
+Nell'esempio seguente viene illustrato come dichiarare e allocare i puntatori con le parole chiave **__ptr32** e **__ptr64** .
 
 ```cpp
 #include <cstdlib>
@@ -77,4 +77,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tipi fondamentali](../cpp/fundamental-types-cpp.md)
+[Tipi incorporati](../cpp/fundamental-types-cpp.md)

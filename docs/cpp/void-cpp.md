@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: 7d01d5b50cb347736bbd2a42fb76811bdfdb546c
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 8a2c74e9ace77e38587209a0ad6fdc03b07cc3ad
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245200"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301756"
 ---
 # <a name="void-c"></a>void (C++)
 
@@ -42,4 +42,4 @@ int main() {
 ## <a name="see-also"></a>Vedere anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Tipi fondamentali](../cpp/fundamental-types-cpp.md)
+[Tipi incorporati](../cpp/fundamental-types-cpp.md)

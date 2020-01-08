@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5de4fc2305ef2ac6e523dcb02782455245b99429
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857970"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302341"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -57,7 +57,7 @@ La specializzazione esplicita del modello di classe `complex` a una classe compl
 
 Per ulteriori informazioni sul modello di classe `complex` e sui relativi membri, vedere [classe Complex](../standard-library/complex-class.md).
 
-**Specifico di Microsoft**: i tipi **long double** e **Double** hanno la stessa rappresentazione, ma sono tipi distinti. Per altre informazioni, vedere [tipi fondamentali](../cpp/fundamental-types-cpp.md).
+**Specifico di Microsoft**: i tipi **long double** e **Double** hanno la stessa rappresentazione, ma sono tipi distinti. Per ulteriori informazioni, vedere [tipi incorporati](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Esempio
 
@@ -124,4 +124,4 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ## <a name="see-also"></a>Vedere anche
 
 [Classe complex](../standard-library/complex-class.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

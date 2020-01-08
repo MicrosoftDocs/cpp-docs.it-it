@@ -3,12 +3,12 @@ title: Sistema di tipi C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5755c7818182c5e26c5b3df6407fbe259bfdbcf3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246606"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301574"
 ---
 # <a name="c-type-system"></a>Sistema di tipi C++
 
@@ -24,9 +24,7 @@ Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è 
 
 ## <a name="specifying-variable-and-function-types"></a>Specificare tipi di funzione e di variabile
 
-C++è un linguaggio *fortemente tipizzato* ed è anche *tipizzato*in modo statico; ogni oggetto ha un tipo e tale tipo non viene mai modificato (da non confondere con gli oggetti dati statici).
-**Quando si dichiara una variabile** nel codice, è necessario specificarne il tipo in modo esplicito oppure usare la parola chiave **auto** per indicare al compilatore di dedurre il tipo dall'inizializzatore.
-**Quando si dichiara una funzione** nel codice, è necessario specificare il tipo di ciascun argomento e il relativo valore restituito oppure **void** se la funzione non restituisce alcun valore. Si verifica un'eccezione quando si utilizzano modelli di funzione che consentono l'utilizzo di argomenti di tipi arbitrari.
+C++è un linguaggio *fortemente tipizzato* ed è anche *tipizzato*in modo statico; ogni oggetto ha un tipo e tale tipo non viene mai modificato (da non confondere con gli oggetti dati statici). Quando si dichiara una variabile nel codice, è necessario specificarne il tipo in modo esplicito oppure usare la parola chiave **auto** per indicare al compilatore di dedurre il tipo dall'inizializzatore. Quando si dichiara una funzione nel codice, è necessario specificare il tipo di ciascun argomento e il relativo valore restituito oppure **void** se la funzione non restituisce alcun valore. Si verifica un'eccezione quando si utilizzano modelli di funzione che consentono l'utilizzo di argomenti di tipi arbitrari.
 
 Dopo aver dichiarato una variabile, non è più possibile modificarne il tipo. È tuttavia possibile copiare il valore della variabile o il valore restituito di una funzione in un'altra variabile di un tipo diverso. Tali operazioni sono denominate *conversioni di tipi*, che talvolta sono necessarie, ma sono anche potenziali fonti di perdita o di incorrettezza dei dati.
 
@@ -55,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 A differenza di alcuni linguaggi, C++ non presenta alcun tipo di base universale da cui derivano tutti gli altri tipi. Il linguaggio include molti *tipi fondamentali*, noti anche come *tipi incorporati*. Sono inclusi i tipi numerici, ad esempio **int**, **Double**, **Long**, **bool**, oltre ai tipi **char** e **wchar_t** per i caratteri ASCII e Unicode, rispettivamente. La maggior parte dei tipi fondamentali (ad eccezione di **bool**, **Double**, **wchar_t** e i tipi correlati) include tutte le versioni non firmate, che modificano l'intervallo di valori che la variabile può archiviare. Ad esempio, un **int**, che archivia un Signed integer a 32 bit, può rappresentare un valore compreso tra-2.147.483.648 e 2.147.483.647. Un **int senza segno**, anch ' esso archiviato come 32 bit, può archiviare un valore compreso tra 0 e 4.294.967.295. Il numero totale di valori possibili è in ogni caso lo stesso, solo l'intervallo è diverso.
 
-I tipi fondamentali sono riconosciuti dal compilatore che ha regole predefinite che stabiliscono quali operazioni è possibile eseguire su di essi e come possono essere convertiti in altri tipi fondamentali. Per un elenco completo dei tipi predefiniti e delle relative dimensioni e limiti numerici, vedere [tipi fondamentali](../cpp/fundamental-types-cpp.md).
+I tipi fondamentali sono riconosciuti dal compilatore che ha regole predefinite che stabiliscono quali operazioni è possibile eseguire su di essi e come possono essere convertiti in altri tipi fondamentali. Per un elenco completo dei tipi predefiniti e delle relative dimensioni e limiti numerici, vedere [tipi incorporati](../cpp/fundamental-types-cpp.md).
 
 Di seguito vengono mostrate le dimensioni relative dei tipi predefiniti:
 
@@ -63,10 +61,10 @@ Di seguito vengono mostrate le dimensioni relative dei tipi predefiniti:
 
 Nella tabella seguente sono elencati i tipi fondamentali di uso più comune:
 
-|Type|Dimensione|Commento|
+|Tipo di|Dimensioni|Commento|
 |----------|----------|-------------|
 |int|4 byte|Scelta predefinita per i valori integrali.|
-|double|8 byte|Scelta predefinita per i valori a virgola mobile.|
+|doppio|8 byte|Scelta predefinita per i valori a virgola mobile.|
 |bool|1 byte|Rappresenta i valori che possono essere true o false.|
 |char|1 byte|Utilizzare i caratteri ASCII negli oggetti std::string o nelle stringhe di tipo C precedenti che non dovranno mai essere convertiti in UNICODE.|
 |wchar_t|2 byte|Rappresenta valori a caratteri "wide" che è possibile codificare in formato Unicode (UTF-16 in Windows, per altri sistemi operativi potrebbe essere diverso). Si tratta del tipo di carattere utilizzato in stringhe di tipo `std::wstring`.|
@@ -163,11 +161,11 @@ Per ulteriori informazioni sul sistema di tipi di C++, vedere gli argomenti segu
 
 |||
 |-|-|
-|[Tipi di valore](../cpp/value-types-modern-cpp.md)|Vengono descritti i *tipi di valore* con i problemi relativi all'utilizzo.|
+|[Tipi valore](../cpp/value-types-modern-cpp.md)|Vengono descritti i *tipi di valore* con i problemi relativi all'utilizzo.|
 |[Conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md)|Vengono descritti i problemi di conversione dei tipi comuni e i modi per evitarli.|
 
 ## <a name="see-also"></a>Vedere anche
 
 [BentornatiC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Riferimenti del linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

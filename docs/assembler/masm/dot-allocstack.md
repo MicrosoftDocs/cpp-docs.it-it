@@ -1,17 +1,17 @@
 ---
 title: .ALLOCSTACK
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ALLOCSTACK
 helpviewer_keywords:
 - .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-ms.openlocfilehash: 6d9d86371503992d1bebe738fb6e6773581b10e3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bcc94619dfa24ab5c8b5d23a60825641290ef176
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398626"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314185"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
@@ -25,11 +25,11 @@ Genera un **UWOP_ALLOC_SMALL** o un **UWOP_ALLOC_LARGE** con le dimensioni speci
 
 MASM sceglierà la codifica più efficiente per una determinata dimensione.
 
-**. ALLOCSTACK** consente agli utenti di ml64. exe di specificare il modo in cui una funzione frame viene rilasciata ed è consentita solo all'interno del prologo, che si estende dalla dichiarazione del frame [proc](../../assembler/masm/proc.md) a [. Direttiva ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Queste direttive non generano codice; generano solo `.xdata` e `.pdata`. **. ALLOCSTACK** deve essere preceduto da istruzioni che implementano effettivamente le azioni da riportare. È consigliabile eseguire il wrapping di entrambe le direttive di rimozione e del codice di cui si intende rimuovere la rimozione in una macro per garantire l'accordo.
+**. ALLOCSTACK** consente agli utenti di ml64. exe di specificare il modo in cui una funzione frame viene rilasciata ed è consentita solo all'interno del prologo, che si estende dalla dichiarazione del frame [proc](proc.md) a [. Direttiva ENDPROLOG](dot-endprolog.md) . Queste direttive non generano codice; generano solo `.xdata` e `.pdata`. **. ALLOCSTACK** deve essere preceduto da istruzioni che implementano effettivamente le azioni da riportare. È consigliabile eseguire il wrapping di entrambe le direttive di rimozione e del codice di cui si intende rimuovere la rimozione in una macro per garantire l'accordo.
 
 L'operando *size* deve essere un multiplo di 8.
 
-Per ulteriori informazioni, vedere [MASM per x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Per ulteriori informazioni, vedere [MASM per x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Esempio
 
@@ -65,4 +65,5 @@ END
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)

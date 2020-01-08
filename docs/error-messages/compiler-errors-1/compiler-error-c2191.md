@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2191
 ms.assetid: 051b8350-e5de-4f51-ab6e-96d32366bcef
-ms.openlocfilehash: 23dfe1d95ab75f253fc2a7b4b00dfcd1aaaa3bbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7d70b9010855ada7b9d24fba80915450a685b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302970"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301873"
 ---
 # <a name="compiler-error-c2191"></a>Errore del compilatore C2191
 
@@ -21,9 +21,9 @@ Una funzione C è stata dichiarata una seconda volta con un elenco di parametri 
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2191:
+L'esempio seguente genera l'C2191:
 
-```
+```c
 // C2191.c
 // compile with: /Za /c
 void func( int );

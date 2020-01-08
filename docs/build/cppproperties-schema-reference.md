@@ -1,18 +1,18 @@
 ---
-title: Informazioni di riferimento sullo schema CppProperties.json
+title: Informazioni di riferimento su CppProperties. JSON
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 06029157b4b3826bc9c34a4434ab390f3eaa5a44
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69975928"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556669"
 ---
-# <a name="cpppropertiesjson-schema-reference"></a>Informazioni di riferimento sullo schema CppProperties.json
+# <a name="cpppropertiesjson-reference"></a>Informazioni di riferimento su CppProperties. JSON
 
-Aprire i progetti di cartella che non usano CMake può archiviare le impostazioni di configurazione del progetto per IntelliSense in un file *CppProperties. JSON* . I progetti CMake usano un file [CMakeSettings.json](customize-cmake-settings.md). Una configurazione è costituita da coppie nome/valore e definisce i percorsi #include, le opzioni del compilatore e altri parametri. Per ulteriori informazioni su come aggiungere configurazioni in un progetto di cartella aperta, vedere [progetti di C++ cartelle aperte](open-folder-projects-cpp.md) .
+Aprire i progetti di cartella che non usano CMake può archiviare le impostazioni di configurazione del progetto per IntelliSense in un file *CppProperties. JSON* . I progetti CMake usano un file [CMakeSettings. JSON](customize-cmake-settings.md) . Una configurazione è costituita da coppie nome/valore e definisce #include percorsi, commutatori del compilatore e altri parametri. Per ulteriori informazioni su come aggiungere configurazioni in un progetto di cartella aperta, vedere [progetti di C++ cartelle aperte](open-folder-projects-cpp.md) . Le sezioni seguenti riepilogano le varie impostazioni. Per una descrizione completa dello schema, passare a *CppProperties_schema. JSON*, il cui percorso completo viene fornito nella parte superiore dell'editor di codice quando *CppProperties. JSON* è aperto.
 
 ## <a name="configuration-properties"></a>Proprietà di configurazione
 
@@ -28,13 +28,13 @@ Una configurazione può avere una delle proprietà seguenti:
 |`forcedInclude`|L'intestazione da includere automaticamente in ogni unità di compilazione (con mapping a /FI per MSVC o -include per Clang)|
 |`undefines`|L'elenco delle macro la cui definizione deve essere rimossa (con mapping a /U per MSVC)|
 |`intelliSenseMode`|Il motore IntelliSense da usare. È possibile specificare una delle varianti specifiche dell'architettura predefinite per MSVC, gcc o Clang.|
-|`environments`|Set di variabili definiti dall'utente che si comportano come variabili di ambiente in un prompt dei comandi e a cui è<VARIABLE>possibile accedere con $ {ENV.} macro.|
+|`environments`|Set di variabili definiti dall'utente che si comportano come variabili di ambiente in un prompt dei comandi e a cui è possibile accedere con $ {ENV.<VARIABLE>} macro.|
 
 ### <a name="intellisensemode-values"></a>valori intelliSenseMode
 
 L'editor di codice mostra le opzioni disponibili quando si inizia a digitare:
 
-![IntelliSense di Apri cartella](media/open-folder-intellisense-mode.png "IntelliSense di Apri cartella")
+![Apri cartella IntelliSense](media/open-folder-intellisense-mode.png "Apri cartella IntelliSense")
 
 Questi sono i valori supportati:
 
@@ -58,11 +58,11 @@ Questi sono i valori supportati:
 - linux-gcc-x64
 - linux-gcc-arm
 
-Nota: i valori `msvc-x86` e `msvc-x64` sono supportati solo per motivi di compatibilità con le versioni precedenti. Usare invece `windows-msvc-*` le varianti.
+Nota: i valori `msvc-x86` e `msvc-x64` sono supportati solo per i motivi legacy. Usare invece le varianti `windows-msvc-*`.
 
 ## <a name="pre-defined-environments"></a>Ambienti predefiniti
 
-Visual Studio fornisce gli ambienti predefiniti seguenti per Microsoft C++ , che vengono mappati al prompt dei comandi per gli sviluppatori corrispondente. Quando si eredita uno di questi ambienti, è possibile fare riferimento a qualsiasi variabile di ambiente utilizzando la proprietà `env` globale con questa sintassi macro: $ {ENV.\< > Variabile}.
+Visual Studio fornisce gli ambienti predefiniti seguenti per Microsoft C++ , che vengono mappati al prompt dei comandi per gli sviluppatori corrispondente. Quando si eredita uno di questi ambienti, è possibile fare riferimento a una delle variabili di ambiente usando la proprietà globale `env` con questa sintassi della macro: $ {ENV.\<VARIABLE >}.
 
 |Nome variabile|Descrizione|
 |-----------|-----------------|
@@ -85,9 +85,11 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
 
 ## <a name="user_defined_environments"></a>Ambienti definiti dall'utente
 
-Facoltativamente, è possibile usare `environments` la proprietà per definire set di variabili in *CppProperties. JSON* sia globalmente che per configurazione. Queste variabili si comportano come variabili di ambiente nel contesto di un progetto di cartella aperta ed è possibile accedervi con\< $ {ENV. VARIABILE >} sintassi di *Tasks. vs. JSON* e *Launch. vs. JSON* dopo che sono stati definiti qui. Tuttavia, non vengono necessariamente impostati come variabili di ambiente effettive in qualsiasi prompt dei comandi usato internamente da Visual Studio.
+Facoltativamente, è possibile usare la proprietà `environments` per definire set di variabili in *CppProperties. JSON* sia globalmente che per configurazione. Queste variabili si comportano come variabili di ambiente nel contesto di un progetto di cartella aperta ed è possibile accedervi con la sintassi $ {ENV.\<VARIABLE >} di *Tasks. vs. JSON* e *Launch. vs. JSON* dopo che sono stati definiti qui. Tuttavia, non vengono necessariamente impostati come variabili di ambiente effettive in qualsiasi prompt dei comandi usato internamente da Visual Studio.
 
-Quando si utilizza un ambiente, è necessario specificarlo nella `inheritsEnvironments` proprietà anche se l'ambiente viene definito come parte della stessa configurazione; la `environment` proprietà specifica il nome dell'ambiente. Nell'esempio seguente viene illustrata una configurazione di esempio per l'abilitazione di IntelliSense per GCC in un'installazione MSYS2. Si noti in che modo la configurazione definisce ed `mingw_64` eredita l'ambiente e il `includePath` modo in cui la `INCLUDE` proprietà può accedere alla variabile.
+**Visual Studio 2019 versione 16,4 e successive:** Le variabili specifiche della configurazione definite in *CppProperties. JSON* vengono prelevate automaticamente dalle destinazioni e dalle attività di debug senza la necessità di impostare `inheritEnvironments`. Le destinazioni di debug vengono avviate automaticamente con l'ambiente specificato in *CppProperties. JSON*.
+
+**Visual Studio 2019 versione 16,3 e versioni precedenti:** Quando si utilizza un ambiente, è necessario specificarlo nella proprietà `inheritsEnvironments` anche se l'ambiente è definito come parte della stessa configurazione; la proprietà `environment` specifica il nome dell'ambiente. Nell'esempio seguente viene illustrata una configurazione di esempio per l'abilitazione di IntelliSense per GCC in un'installazione MSYS2. Si noti il modo in cui la configurazione definisce ed eredita l'ambiente `mingw_64` e il modo in cui la proprietà `includePath` può accedere alla variabile `INCLUDE`.
 
 ```json
 "configurations": [
@@ -117,7 +119,7 @@ Quando si utilizza un ambiente, è necessario specificarlo nella `inheritsEnviro
   ]
 ```
 
-Quando si definisce una proprietà environments all'interno di una configurazione, viene eseguito l'override di tutte le variabili globali con lo stesso nome.
+Quando si definisce una proprietà **environments** all'interno di una configurazione, viene eseguito l'override di tutte le variabili globali con lo stesso nome.
 
 ## <a name="built-in-macros"></a>Macro predefinite
 
@@ -158,10 +160,10 @@ Se il progetto include una cartella di inclusione e include anche *Windows. h* e
 
 ## <a name="troubleshoot-intellisense-errors"></a>Risolvere gli errori di IntelliSense
 
-Se non viene visualizzato il**messaggio** > IntelliSense previsto, è possibile risolvere i problemi passando a **strumenti** > **Opzioni** > editor di testo > **C/C++** **Avanzate** e impostazione **Abilita registrazione** su **true**. Per iniziare, provare a impostare il **livello di registrazione** su 5 e registrare i **filtri** su 8.
+Se non viene visualizzato il messaggio IntelliSense previsto, è possibile risolvere i problemi selezionando **strumenti** > **Opzioni** > **editor di testo** > **C/C++**  > **Avanzate** e impostando **Abilita registrazione** su **true**. Per iniziare, provare a impostare il **livello di registrazione** su 5 e registrare i **filtri** su 8.
 
 ![Registrazione diagnostica](media/diagnostic-logging.png)
 
-L'output viene reindirizzato al **finestra di output** ed è visibile quando si **sceglie Mostra output da: C++ Log**visivo. L'output contiene, tra le altre cose, l'elenco dei percorsi di inclusione effettivi che IntelliSense sta tentando di usare. Se i percorsi non corrispondono a quelli in *CppProperties. JSON*, provare a chiudere la cartella ed eliminare la sottocartella *. vs* che contiene i dati di esplorazione memorizzati nella cache.
+L'output viene reindirizzato al **finestra di output** ed è visibile quando si sceglie **Mostra output da: C++ log Visual**. L'output contiene, tra le altre cose, l'elenco dei percorsi di inclusione effettivi che IntelliSense sta tentando di usare. Se i percorsi non corrispondono a quelli in *CppProperties. JSON*, provare a chiudere la cartella ed eliminare la sottocartella *. vs* che contiene i dati di esplorazione memorizzati nella cache.
 
 Per risolvere i problemi di IntelliSense causati dalla mancanza di percorsi di inclusione, aprire l'**Elenco errori** e filtrare l'output specificando "Solo IntelliSense" e il codice di errore E1696 "Impossibile aprire il file di origine...".

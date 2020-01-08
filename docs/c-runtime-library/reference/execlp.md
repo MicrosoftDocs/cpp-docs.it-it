@@ -1,6 +1,6 @@
 ---
 title: execlp
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - execlp
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - execlp function
 ms.assetid: 68b19143-e7b1-49c6-89b5-084d0d66de9c
-ms.openlocfilehash: fffccbbabf9fb55fc9ca8f0d5139632e8d1d00d9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1abcbb2c67820a8d56f5cb3a532cc2efadeda7cb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941925"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299741"
 ---
 # <a name="execlp"></a>execlp
 
-Questa funzione POSIX è deprecata. In alternativa usare [_execlp](execlp-wexeclp.md) conforme a ISO C++.
+Il nome della funzione POSIX implementato da Microsoft `execlp` è un alias deprecato per la funzione di [_execlp](execlp-wexeclp.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
+
+Si consiglia di usare invece [_execlp](execlp-wexeclp.md) . In alternativa, è possibile continuare a usare il nome della funzione e disabilitare l'avviso. Per altre informazioni, vedere [disabilitare i](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [nomi di funzione](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)di avviso e POSIX.
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

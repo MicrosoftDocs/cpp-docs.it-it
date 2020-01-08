@@ -1,18 +1,18 @@
 ---
 title: Errore ML non irreversibile A2006
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 6c55cb66d6eaeaf620aeedc1dd924f6618cbf817
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 058100984acbd42ac2993732ab619c0a27c0edd2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856783"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317084"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Errore ML non irreversibile A2006
 
@@ -28,7 +28,7 @@ ms.locfileid: "74856783"
 
 - Un simbolo è stato definito in un file di inclusione non incluso.
 
-- Un simbolo esterno è stato usato senza una direttiva [extern](../../assembler/masm/extern-masm.md) o [EXTERNDEF](../../assembler/masm/externdef.md) .
+- Un simbolo esterno è stato usato senza una direttiva [extern](extern-masm.md) o [EXTERNDEF](externdef.md) .
 
 - Il nome di un simbolo non è stato digitato correttamente.
 
@@ -36,4 +36,4 @@ ms.locfileid: "74856783"
 
 ## <a name="see-also"></a>Vedere anche
 
-[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Messaggi di errore ML](ml-error-messages.md)

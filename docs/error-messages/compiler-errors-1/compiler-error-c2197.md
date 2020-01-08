@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2197
 ms.assetid: 6dd5a6ec-bc80-41b9-a4ac-46f80eaca42d
-ms.openlocfilehash: 8999edcf37277e2e05a92a6601d60d34a675719c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16bc1b17b13cb9c7507a769f644eb34faa4989de
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182847"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301847"
 ---
 # <a name="compiler-error-c2197"></a>Errore del compilatore C2197
 
@@ -21,7 +21,7 @@ Il compilatore ha rilevato troppi parametri per una chiamata alla funzione o una
 
 L'esempio seguente genera l'errore C2197:
 
-```
+```c
 // C2197.c
 // compile with: /Za /c
 void func( int );

@@ -48,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957268"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301704"
 ---
 # <a name="_spawn-_wspawn-functions"></a>Funzioni _spawn, _wspawn
 
@@ -130,7 +130,7 @@ Le chiamate `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe` sono utili quando es
 
 ## <a name="environment-of-the-spawned-process"></a>Ambiente del processo generato
 
-I file che vengono aperti quando viene effettuata una chiamata `_spawn` rimangono aperti nel nuovo processo. Nelle chiamate `_spawnl`, `_spawnlp`, `_spawnv` e `_spawnvp`, il nuovo processo eredita l'ambiente del processo chiamante. È possibile utilizzare le chiamate `_spawnle`, `_spawnlpe`, `_spawnve` e `_spawnvpe` per modificare l'ambiente per il nuovo processo passando un elenco delle impostazioni di ambiente tramite l'argomento `envp`. L'argomento `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. (Notare che `value` non è racchiuso tra virgolette doppie.) L'elemento finale della matrice `envp` deve essere **NULL**. Quando la stessa `envp` è **NULL**, il processo generato eredita le impostazioni di ambiente del processo padre.
+I file che vengono aperti quando viene effettuata una chiamata `_spawn` rimangono aperti nel nuovo processo. Nelle chiamate `_spawnl`, `_spawnlp`, `_spawnv` e `_spawnvp`, il nuovo processo eredita l'ambiente del processo chiamante. È possibile utilizzare le chiamate `_spawnle`, `_spawnlpe`, `_spawnve` e `_spawnvpe` per modificare l'ambiente per il nuovo processo passando un elenco delle impostazioni di ambiente tramite l'argomento `envp`. L'argomento `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. Si noti che `value` non è racchiuso tra virgolette doppie. L'elemento finale della matrice di `envp` deve essere **null**. Quando la stessa `envp` è **NULL**, il processo generato eredita le impostazioni di ambiente del processo padre.
 
 Le funzioni `_spawn` possono passare tutte le informazioni sui file aperti, inclusa la modalità di traduzione, al nuovo processo. Queste informazioni vengono passate in modalità reale tramite la voce `C_FILE_INFO` nell'ambiente. Il codice di avvio in genere elabora questa voce, quindi la elimina dall'ambiente. Tuttavia, se una funzione `_spawn` genera un processo non C, questa voce rimane nell'ambiente. La stampa dell'ambiente indica i caratteri grafici nella stringa di definizione per la voce poiché le informazioni sull'ambiente vengono passate in forma binaria in modalità reale. Non dovrebbe avere altri effetti sulle operazioni normali. In modalità protetta, le informazioni sull'ambiente vengono passate in forma di testo e pertanto non contengono caratteri grafici.
 
@@ -148,7 +148,7 @@ Se si chiama `_spawn` da un'applicazione DLL o GUI e si desidera reindirizzare l
 
 ## <a name="example"></a>Esempio
 
-```
+```c
 // crt_spawn.c
 // This program accepts a number in the range
 // 1-8 from the command line. Based on the number it receives,

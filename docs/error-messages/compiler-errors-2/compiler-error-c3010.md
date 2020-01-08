@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3010
 ms.assetid: e959d038-bba6-432a-9c0a-0470474de7d9
-ms.openlocfilehash: c5f0d33632cb155b8365c8de421fa5eaf91421c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbce65840280d3171ea84638b968686fa65633be
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350335"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302250"
 ---
 # <a name="compiler-error-c3010"></a>Errore del compilatore C3010
 
@@ -21,7 +21,7 @@ Il codice non può passare all'interno o all'esterno di un blocco OpenMP.
 
 L'esempio seguente genera l'errore C3010:
 
-```
+```c
 // C3010.c
 // compile with: /openmp
 int main() {

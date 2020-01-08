@@ -1,17 +1,17 @@
 ---
 title: .ERRNZ
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERRNZ
 helpviewer_keywords:
 - .ERRNZ directive
 ms.assetid: 373a9222-140f-4505-8dec-ef370a069ebf
-ms.openlocfilehash: 7367e614b46221b32efce35a92f83179d8e8bc54
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a53bf013e02c4a7d541b7574e5ab38cc7257591b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398300"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313886"
 ---
 # <a name="errnz"></a>**.ERRNZ**
 
@@ -23,4 +23,5 @@ Genera un errore se *Expression* è true (diverso da zero).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)
+[Riferimento alle direttive](directives-reference.md)\
+[Grammatica BNF di MASM](masm-bnf-grammar.md)
