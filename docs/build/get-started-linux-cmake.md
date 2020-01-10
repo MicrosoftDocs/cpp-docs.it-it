@@ -1,15 +1,14 @@
 ---
 title: Creare progetti multipiattaforma C++ in Visual Studio
 description: Come configurare, compilare ed eseguire il debug di un C++ progetto CMake open source in Visual Studio destinato a Linux e Windows.
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303259"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791763"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Esercitazione: creare C++ progetti multipiattaforma in Visual Studio
 
@@ -44,10 +43,10 @@ In questa esercitazione si imparerà a:
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * È possibile visualizzare le opzioni per l'esecuzione dello script con `-–help`. Si consiglia di usare l'opzione `–prefix` per specificare l'installazione nel percorso **/usr/local** , perché si tratta del percorso predefinito in cui Visual Studio cerca CMake. L'esempio seguente illustra lo script Linux-x86_64. Modificarlo in base alle esigenze se si usa una piattaforma di destinazione diversa.
+  * È possibile visualizzare le opzioni per l'esecuzione dello script con `-–help`. Si consiglia di usare l'opzione `–prefix` per specificare l'installazione nel percorso **/usr** , perché **/usr/bin** è il percorso predefinito in cui Visual Studio cerca CMake. L'esempio seguente illustra lo script Linux-x86_64. Modificarlo in base alle esigenze se si usa una piattaforma di destinazione diversa.
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * GIT per Windows installato nel computer Windows.

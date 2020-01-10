@@ -3,14 +3,12 @@ title: Novità di C++ in Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754129"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793971"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novità di C++ in Visual Studio
 
@@ -312,7 +310,7 @@ L'opzione [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) può esse
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM (versione 15.0)
 
-- Miglioramenti secondari della diagnostica `basic_string` `_ITERATOR_DEBUG_LEVEL != 0`. L'attivazione di un controllo IDL in una struttura basata su stringhe ora segnalerà il comportamento specifico che ha causato l'attivazione. Ad esempio, anziché un messaggio del tipo "iteratore stringa non dereferenziabile" se ne otterrà uno del tipo "impossibile dereferenziare l'iteratore stringa perché non compreso nell'intervallo (potrebbe trattarsi ad esempio di un iteratore di fine)".
+- Miglioramenti della diagnostica `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` secondari. L'attivazione di un controllo IDL in una struttura basata su stringhe ora segnalerà il comportamento specifico che ha causato l'attivazione. Ad esempio, anziché un messaggio del tipo "iteratore stringa non dereferenziabile" se ne otterrà uno del tipo "impossibile dereferenziare l'iteratore stringa perché non compreso nell'intervallo (potrebbe trattarsi ad esempio di un iteratore di fine)".
 - È stato corretto l'operatore di assegnazione di spostamento di `std::promise`, che in precedenza causava il blocco irreversibile del codice.
 - Sono stati corretti gli errori del compilatore relativi alla conversione implicita di `atomic<T*>` in `T*`.
 - `pointer_traits<Ptr>` ora rileva correttamente `Ptr::rebind<U>`.
@@ -517,7 +515,7 @@ Diverse operazioni C++ che usano il motore IntelliSense per il refactoring e lo 
 
 |||
 |-|-|
-|Funzionalità|Miglioramento delle prestazioni|
+|Caratteristica|Miglioramento delle prestazioni|
 |Rinomina|5.3x|
 |Modifica firma |4.5x|
 |Trova tutti i riferimenti|4.7x|
