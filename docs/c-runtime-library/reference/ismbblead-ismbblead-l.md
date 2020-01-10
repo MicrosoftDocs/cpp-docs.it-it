@@ -1,6 +1,7 @@
 ---
 title: _ismbblead, _ismbblead_l
-ms.date: 11/04/2016
+description: Descrive le funzioni della libreria di runtime Microsoft C (CRT) _ismbblead e _ismbblead_l.
+ms.date: 01/08/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954058"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755046"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
-Testa un carattere per determinare se è il byte di apertura di un carattere multibyte.
+Testa un carattere per determinare se si tratta di un byte iniziale di un carattere multibyte.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -60,10 +61,10 @@ int _ismbblead_l(
 
 ### <a name="parameters"></a>Parametri
 
-*c*<br/>
+\ *c*
 Valore Integer da testare.
 
-*locale*<br/>
+*impostazioni locali*\
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -76,13 +77,17 @@ I caratteri multibyte sono costituiti da un byte di apertura seguito da un byte 
 
 **_ismbblead** usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. **_ismbblead_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
+Quando le impostazioni locali sono UTF-8, **_ismbblead** e **_ismbblead_l** restituiscono sempre 0 (false), indipendentemente dal fatto che *c* sia un byte iniziale o meno.
+
+**_ismbblead** e **_ismbblead_l** sono specifici di Microsoft e non fanno parte della libreria C standard. Non è consigliabile usarli in cui si vuole usare il codice portatile. Per la compatibilità con il linguaggio C standard, usare invece **mbrlen** .
+
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istlead**|Restituisce sempre false|**_ismbblead**|Restituisce sempre false|
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|
 |-------------|---------------------|---------------------|
@@ -91,9 +96,10 @@ I caratteri multibyte sono costituiti da un byte di apertura seguito da un byte 
 
 \* Per le costanti manifeste per le condizioni di test.
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
-[Routine _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+\ [classificazione byte](../../c-runtime-library/byte-classification.md)
+[routine di _ismbb](../../c-runtime-library/ismbb-routines.md)\
+[mbrlen](mbrlen.md)
