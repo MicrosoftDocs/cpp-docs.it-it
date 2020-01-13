@@ -1,6 +1,7 @@
 ---
 title: Classe CFileTimeSpan
-ms.date: 01/06/2020
+description: La classe di Active Template Library (ATL) e Microsoft Foundation Classes (MFC) CFileTimeSpan gestisce gli intervalli di tempo nelle unità FILETIME.
+ms.date: 01/10/2020
 f1_keywords:
 - CFileTimeSpan
 - ATLTIME/ATL::CFileTimeSpan
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 9220ed8373e78db727b43ecb59880dcfbcc98f96
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 89d95759b11ff7e52c2a8fa75cf94f7b7b81fa36
+ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755059"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75914386"
 ---
 # <a name="cfiletimespan-class"></a>Classe CFileTimeSpan
 
@@ -61,7 +62,7 @@ class CFileTimeSpan
 
 ## <a name="remarks"></a>Note
 
-Questa classe fornisce metodi per gestire i periodi di tempo relativi nelle unità utilizzate dal file system. Queste unità vengono spesso usate nelle operazioni relative al momento della creazione, dell'ultimo accesso o dell'Ultima modifica di un file. I metodi di questa classe vengono spesso usati insieme agli oggetti della [classe CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md) .
+La classe `CFileTimeSpan` fornisce metodi per gestire i periodi di tempo relativi nelle unità utilizzate dal file system. Queste unità vengono spesso usate nelle operazioni sui file, ad esempio quando è stato creato un file, l'ultimo accesso o l'ultima modifica. I metodi di questa classe vengono spesso usati insieme agli oggetti della [classe CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md) .
 
 ## <a name="example"></a>Esempio
 
@@ -87,11 +88,11 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 Oggetto `CFileTimeSpan` esistente.
 
 \ *nSpan*
-Un periodo di tempo in millisecondi.
+Un periodo di tempo nelle unità FILETIME.
 
 ### <a name="remarks"></a>Note
 
-È possibile creare l'oggetto `CFileTimeSpan` usando un oggetto `CFileTimeSpan` esistente o espresso come valore a 64 bit. Il costruttore predefinito imposta l'intervallo di tempo su 0.
+È possibile creare l'oggetto `CFileTimeSpan` usando un oggetto `CFileTimeSpan` esistente o espresso come valore a 64 bit in unità di tempo di 100-nanosecondi. Per ulteriori informazioni, vedere [CFileTime](cfiletime-class.md). Il costruttore predefinito imposta l'intervallo di tempo su 0.
 
 ## <a name="gettimespan"></a>CFileTimeSpan:: GetTimeSpan
 
@@ -103,7 +104,7 @@ LONGLONG GetTimeSpan() const throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce l'intervallo di tempo in millisecondi.
+Restituisce l'intervallo di tempo nelle unità FILETIME di 100-nanosecondi. Per ulteriori informazioni, vedere [CFileTime](cfiletime-class.md).
 
 ## <a name="operator_-"></a>Operatore CFileTimeSpan:: operator-
 
@@ -303,7 +304,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 ### <a name="parameters"></a>Parametri
 
 \ *nSpan*
-Nuovo valore per l'intervallo di tempo in unità 100-nanosecondi. Per ulteriori informazioni, vedere [CFileTime](cfiletime-class.md).
+Nuovo valore per l'intervallo di tempo in unità di tempo di 100-nanosecondi. Per ulteriori informazioni, vedere [CFileTime](cfiletime-class.md).
 
 ## <a name="see-also"></a>Vedere anche
 
