@@ -2,12 +2,12 @@
 title: Configurare un progetto C++ Linux in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960686"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031376"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
@@ -51,13 +51,13 @@ Per modificare le impostazioni relative al computer Linux remoto, configurare le
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 versione 16.1**: Per impostare come destinazione il sottosistema Windows per Linux, fare clic sulla freccia giù per **Set di strumenti della piattaforma** e scegliere **WSL_1_0**. Le altre opzioni remote scompariranno e al loro posto verrà visualizzato il percorso alla shell WSL predefinita:
+   **Visual Studio 2019 versione 16,1**: per fare riferimento al sottosistema Windows per Linux, fare clic sulla freccia verso il basso per il **set di strumenti della piattaforma** e scegliere **WSL_1_0**. Le altre opzioni remote scompariranno e al loro posto verrà visualizzato il percorso alla shell WSL predefinita:
 
    ![Computer di generazione WSL](media/wsl-remote-vs2019.png)
 
    Se si hanno installazioni WSL side-by-side, è possibile specificare un percorso diverso. Per altre informazioni sulla gestione di più distribuzioni, vedere [Gestire e configurare il sottosistema Windows per Linux](/windows/wsl/wsl-config#set-a-default-distribution).
 
-   È possibile specificare una destinazione diversa per il debug nella pagina **Proprietà di configurazione** > **Debug**.
+   È possibile specificare una destinazione diversa per il debug nella pagina **proprietà di configurazione** > **debug** .
 
    ::: moniker-end
 
@@ -95,6 +95,9 @@ Poiché tutta la compilazione avviene in un computer remoto (o WSL), sono stati 
 ## <a name="remote_intellisense"></a> IntelliSense per le intestazioni nei sistemi remoti
 
 Quando si aggiunge una nuova connessione in **Gestione connessione**, Visual Studio rileva automaticamente le directory di inclusione per il compilatore nel sistema remoto. Visual Studio quindi comprime e copia i file in una directory nel computer Windows locale. Successivamente, ogni volta che si usa la connessione in un progetto Visual Studio o CMake, le intestazioni in tali directory vengono usate per gestire IntelliSense.
+
+> [!NOTE]
+> In Visual Studio 2019 versione 16,5 e successive la copia dell'intestazione remota è stata ottimizzata. Le intestazioni vengono ora copiate su richiesta quando si apre un progetto Linux o si configura CMake per una destinazione Linux. La copia viene eseguita in background per ogni progetto, in base ai compilatori specificati del progetto. Per altre informazioni, vedere [miglioramenti all'accuratezza e alle prestazioni di IntelliSense per Linux](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
 
 Questa funzionalità dipende dal computer Linux in cui è installato il file ZIP. Per installare lo ZIP usare questo comando apt-get:
 
