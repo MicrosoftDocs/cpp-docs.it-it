@@ -1,5 +1,6 @@
 ---
 title: __argc, __argv, __wargv
+description: Descrive le costanti globali della libreria di runtime Microsoft C __argc, __argve __wargv.
 ms.date: 11/04/2016
 api_name:
 - __wargv
@@ -20,20 +21,26 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: 59ab1f5ba52e6dc84d44e8cb5465cfa412d01895
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- __argc
+- __argv
+- __wargv
+- main
+- wmain
+ms.openlocfilehash: 86a22a7391c7bde34d7734631a2970a45851dda3
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940628"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123981"
 ---
-# <a name="__argc-__argv-__wargv"></a>__argc, __argv, __wargv
+# <a name="opno-loc__argc-opno-loc__argv-opno-loc__wargv"></a>__argc, __argv, __wargv
 
 La variabile globale `__argc` è un conteggio del numero di argomenti da riga di comando passati al programma. `__argv` è un puntatore a una matrice di caratteri a byte singolo o di stringhe di caratteri multibyte che includono gli argomenti del programma e `__wargv` è un puntatore a una matrice di stringhe di caratteri wide che contengono gli argomenti del programma. Queste variabili globali forniscono gli argomenti per `main` o `wmain`.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 extern int __argc;
 extern char ** __argv;
 extern wchar_t ** __wargv;
@@ -51,7 +58,7 @@ Nel caso del codice portabile, è consigliabile usare gli argomenti passati a `m
 |---------------------|---------------------------|-----------------------|
 |`__targv`|`__argv`|`__wargv`|
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Variabile globale|Intestazione obbligatoria|
 |---------------------|---------------------|
@@ -61,6 +68,6 @@ Nel caso del codice portabile, è consigliabile usare gli argomenti passati a `m
 
 ## <a name="see-also"></a>Vedere anche
 
-[Variabili globali](../c-runtime-library/global-variables.md)<br/>
-[main: avvio del programma](../cpp/main-program-startup.md)<br/>
-[Uso di wmain anziché di main](../cpp/using-wmain-instead-of-main.md)
+[Variabili globali](../c-runtime-library/global-variables.md)\
+[main funzione e argomenti della riga di comandoC++()](../cpp/main-function-command-line-args.md)\
+[Utilizzo di wmain anziché main](../cpp/using-wmain-instead-of-main.md)

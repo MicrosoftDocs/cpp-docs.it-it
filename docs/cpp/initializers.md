@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661608"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123968"
 ---
 # <a name="initializers"></a>Inizializzatori
 
@@ -81,7 +81,7 @@ L'inizializzazione zero è l'impostazione di una variabile su un valore zero con
 
 - Le variabili numeriche vengono inizializzate su 0 o 0,0 oppure 0,0000000000 e così via.
 
-- Le variabili char vengono inizializzate in `'\0'`.
+- Le variabili char vengono inizializzate `'\0'`.
 
 - I puntatori vengono inizializzati in **nullptr**.
 
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-Per ulteriori informazioni sull'inizializzazione di oggetti statici globali, vedere [considerazioni di avvio aggiuntive](../cpp/additional-startup-considerations.md).
+Per ulteriori informazioni sull'inizializzazione di oggetti statici globali, vedere la [funzione principale e gli argomenti della riga di comando](main-function-command-line-args.md).
 
 ### <a name="value-initialization"></a>Inizializzazione valore
 
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> I membri della matrice dichiarati ma non inizializzati in modo esplicito durante l'inizializzazione aggregata vengono inizializzati a zero, come descritto in `myArr3` precedenza.
+> I membri della matrice dichiarati ma non inizializzati in modo esplicito durante l'inizializzazione aggregata vengono inizializzati a zero, come in `myArr3` sopra.
 
 #### <a name="initializing-unions-and-structs"></a>Inizializzazione di unioni e struct
 
@@ -534,9 +534,9 @@ Nell'inizializzare una variabile di tipo riferimento, il compilatore utilizza il
 ![Grafico decisionale per l'inizializzazione dei tipi di riferimento](../cpp/media/vc38s71.gif "Grafico decisionale per l'inizializzazione dei tipi di riferimento") <br/>
 Grafico decisionale per l'inizializzazione dei tipi di riferimento
 
-I riferimenti a tipi **volatili** (dichiarati come *identificatori* *typeName* <strong>&</strong> **volatili** ) possono essere inizializzati con oggetti **volatili** dello stesso tipo o con oggetti che non sono stati dichiarati come **volatili** . Non possono, tuttavia, essere inizializzati con oggetti const di quel tipo. Analogamente, i riferimenti ai tipi const (dichiarati come **const** *typeName* <strong>&</strong> *Identifier*) possono essere inizializzati con oggetti **const** dello stesso tipo (o qualsiasi elemento che abbia una conversione a quel tipo o con oggetti che non sono stati dichiarati come **const**). Non possono, tuttavia, essere inizializzati con oggetti **volatili** di quel tipo.
+I riferimenti a tipi **volatili** (dichiarati come *identificatore*<strong>&</strong> *typeName* **volatile** ) possono essere inizializzati con oggetti **volatili** dello stesso tipo o con oggetti che non sono stati dichiarati come **volatili**. Non possono, tuttavia, essere inizializzati con oggetti **const** di quel tipo. Analogamente, i riferimenti ai tipi **const** (dichiarati come **const** *typeName* <strong>&</strong> *Identifier*) possono essere inizializzati con oggetti **const** dello stesso tipo (o qualsiasi elemento che abbia una conversione a quel tipo o con oggetti che non sono stati dichiarati come **const**). Non possono, tuttavia, essere inizializzati con oggetti **volatili** di quel tipo.
 
-I riferimenti che non sono qualificati con la parola chiave const o **volatile** possono essere inizializzati solo con oggetti dichiarati come né **const** né **volatile**.
+I riferimenti che non sono qualificati con la parola chiave **const** o **volatile** possono essere inizializzati solo con oggetti dichiarati come né **const** né **volatile**.
 
 ### <a name="initialization-of-external-variables"></a>Inizializzazione di variabili esterne
 

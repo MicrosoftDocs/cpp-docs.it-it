@@ -1,26 +1,42 @@
 ---
-title: funzione Main e argomenti della riga di comandoC++()
-description: La funzione Main è il punto di ingresso di C++ un programma.
-ms.date: 12/10/2019
+title: main funzione e argomenti della riga di comandoC++()
+description: La funzione main è il punto di ingresso di C++ un programma.
+ms.date: 01/15/2019
 ms.assetid: c6568ee6-40ab-4ae8-aa44-c99e232f64ac
-ms.openlocfilehash: 95e774700c63dc815f6d814bfda84a38a38d4e6e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- main
+- wmain
+- inline
+- static
+- _tmain
+- void
+- exit
+- argc
+- argv
+- envp
+- CreateProcess
+- GetModuleFileName
+- char
+- wchar_t
+- extern
+ms.openlocfilehash: 33753e30304a9bb63c135979d3f20098e6b6401a
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302398"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123903"
 ---
-# <a name="main-function-and-command-line-arguments"></a>funzione Main e argomenti della riga di comando
+# <a name="opno-locmain-function-and-command-line-arguments"></a>main funzione e argomenti della riga di comando
 
-Tutti C++ i programmi devono disporre di una funzione `main`. Se si tenta di compilare un C++ progetto con *estensione exe* senza una funzione Main, il compilatore genererà un errore. (Le librerie a collegamento dinamico e le librerie statiche non hanno una funzione `main`). La funzione `main` è il punto in cui inizia l'esecuzione del codice sorgente, ma prima che un programma entri nella funzione `main`, tutti i membri di classe statici senza inizializzatori espliciti vengono impostati su zero. In Microsoft C++, gli oggetti statici globali vengono inizializzati anche prima della voce `main`. Diverse restrizioni si applicano alla funzione `main` che non si applicano ad C++ altre funzioni. La funzione `main`:
+Tutti C++ i programmi devono disporre di una funzione `main`. Se si tenta di compilare un C++ progetto *exe* senza una funzione main, il compilatore genererà un errore. (Le librerie a collegamento dinamico e le librerie di static non hanno una funzione `main`). La funzione `main` è il punto in cui inizia l'esecuzione del codice sorgente, ma prima che un programma entri nella funzione `main`, tutti i membri della classe static senza inizializzatori espliciti vengono impostati su zero. In Microsoft C++, gli oggetti static globali vengono inizializzati anche prima della voce `main`. Diverse restrizioni si applicano alla funzione `main` che non si applicano ad C++ altre funzioni. La funzione `main`:
 
 - Non è possibile eseguire l'overload (vedere [Overload della funzione](function-overloading.md)).
-- Non può essere dichiarata come **inline**.
-- Non può essere dichiarato come **static**.
+- Non può essere dichiarato come **inline** .
+- Non può essere dichiarato come **static** .
 - Non è possibile accettarne l'indirizzo.
 - Non può essere chiamato.
 
-La sintassi di dichiarazione per `main` è la seguente:
+La funzione main non dispone di una dichiarazione perché è incorporata nel linguaggio. In caso affermativo, la sintassi di dichiarazione per `main` avrà un aspetto simile al seguente:
 
 ```cpp
 int main();
@@ -38,7 +54,7 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 
 È inoltre possibile utilizzare `_tmain`, definito in TCHAR. h. `_tmain` risolve `main` a meno che non sia stato definito _UNICODE. In tal caso, `_tmain` si risolve in `wmain`.
 
-Se non viene specificato alcun valore restituito, il compilatore fornisce un valore restituito pari a zero. In alternativa, le funzioni `main` e `wmain` possono essere dichiarate come restituendo **void** (nessun valore restituito). Se si dichiara `main` o `wmain` come restituire **void**, non è possibile restituire un codice di uscita al processo padre o al sistema operativo usando un'istruzione [Return](../cpp/return-statement-in-program-termination-cpp.md) . Per restituire un codice di uscita quando `main` o `wmain` viene dichiarato come **void**, è necessario usare la funzione [Exit](../cpp/exit-function.md) .
+Se non viene specificato alcun valore restituito, il compilatore fornisce un valore restituito pari a zero. In alternativa, le funzioni `main` e `wmain` possono essere dichiarate come restituzione **void** (nessun valore restituito). Se si dichiara `main` o `wmain` come restituzione **void** , non è possibile restituire un codice exit al processo padre o al sistema operativo usando un'istruzione [Return](../cpp/return-statement-in-program-termination-cpp.md) . Per restituire un codice exit quando `main` o `wmain` viene dichiarato come **void** , è necessario utilizzare la funzione [exit](../cpp/exit-function.md) .
 
 **Fine sezione specifica Microsoft**
 
@@ -54,7 +70,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 Le definizioni degli argomenti sono le seguenti:
 
 *argc*<br/>
-Intero contenente il conteggio degli argomenti seguiti da *argv*. Il parametro *argc* è sempre maggiore o uguale a 1.
+Intero contenente il numero di argomenti che seguono in *argv* . Il *argc* parametro è sempre maggiore o uguale a 1.
 
 *argv*<br/>
 Una matrice di stringhe con terminazione null che rappresentano gli argomenti della riga di comando immessi dall'utente del programma. Per convenzione, `argv[0]` è il comando con cui il programma viene richiamato, `argv[1]` è il primo argomento della riga di comando e così via, fino a quando non viene `argv[argc]`, che è sempre NULL. Per informazioni sull'eliminazione dell'elaborazione da riga di comando, vedere [personalizzazione dell'elaborazione della riga](../cpp/customizing-cpp-command-line-processing.md) di comando.
@@ -62,18 +78,18 @@ Una matrice di stringhe con terminazione null che rappresentano gli argomenti de
 Il primo argomento della riga di comando è sempre `argv[1]` e l'ultimo è `argv[argc - 1]`.
 
 > [!NOTE]
-> Per convenzione, `argv[0]` è il comando con cui viene richiamato il programma. Tuttavia, è possibile generare un processo usando [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) e se si usano sia il primo che il secondo argomento (*lpApplicationName* e *lpCommandLine*), `argv[0]` potrebbe non essere il nome eseguibile; usare [GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) per recuperare il nome dell'eseguibile e il percorso completo.
+> Per convenzione, `argv[0]` è il comando con cui viene richiamato il programma. Tuttavia, è possibile generare un processo usando [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) e se si usano sia il primo che il secondo argomento (*lpApplicationName* e *lpCommandLine*), `argv[0]` non può essere il nome eseguibile; usare [GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) per recuperare il nome dell'eseguibile e il percorso completo.
 
 **Sezione specifica Microsoft**
 
 *envp*<br/>
-La matrice *envp* , che è un'estensione comune in molti sistemi UNIX, viene utilizzata in Microsoft C++. È una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente. Questa matrice viene terminata da una voce NULL. Può essere dichiarato come una matrice di puntatori a **char** (`char *envp[]`) o come puntatore a puntatori a **char** (`char **envp`). Se il programma usa `wmain` anziché `main`, usare il tipo di dati **wchar_t** anziché **char**. Il blocco di ambiente passato a `main` e `wmain` è una copia "bloccata" dell'ambiente corrente. Se successivamente si modifica l'ambiente tramite una chiamata a `putenv` o `_wputenv`, l'ambiente corrente (come restituito da `getenv` o `_wgetenv` e la variabile `_environ` o `_wenviron`) cambierà, ma il blocco a cui punta envp non cambierà. Per informazioni sull'eliminazione dell'elaborazione dell'ambiente, vedere [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) . Questo argomento è compatibile con ANSI in C, ma non in C++.
+La matrice di *envp* , che è un'estensione comune in molti sistemi UNIX, viene utilizzata in C++Microsoft. È una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente. Questa matrice viene terminata da una voce NULL. Può essere dichiarato come una matrice di puntatori a **char** (`char *envp[]`) o come puntatore a puntatori a **char** (`char **envp`). Se il programma utilizza `wmain` anziché `main`, utilizzare il tipo di dati **wchar_t** anziché **char** . Il blocco di ambiente passato a `main` e `wmain` è una copia "bloccata" dell'ambiente corrente. Se successivamente si modifica l'ambiente tramite una chiamata a `putenv` o `_wputenv`, l'ambiente corrente (come restituito da `getenv` o `_wgetenv` e la variabile `_environ` o `_wenviron`) cambierà, ma il blocco a cui punta envp non cambierà. Per informazioni sull'eliminazione dell'elaborazione dell'ambiente, vedere [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) . Questo argomento è compatibile con ANSI in C, ma non in C++.
 
 **Fine sezione specifica Microsoft**
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare gli argomenti *argc*, *argv*e *envp* per `main`:
+Nell'esempio seguente viene illustrato come utilizzare gli argomenti *argc* , *argv* e *envp* per `main`:
 
 ```cpp
 // argument_definitions.cpp
@@ -172,9 +188,9 @@ Gli argomenti della riga di comando vengono gestiti da una routine denominata `_
 
 Se il programma non accetta argomenti della riga di comando, è possibile salvare una piccola quantità di spazio eliminando l'utilizzo della routine di libreria che esegue l'elaborazione della riga di comando. Questa routine viene chiamata `_setargv` ed è descritta in [espansione con caratteri jolly](../cpp/wildcard-expansion.md). Per evitarne l'utilizzo, definire una routine che non esegue alcuna operazione nel file contenente la funzione `main` e denominarla `_setargv`. La chiamata a `_setargv` viene quindi soddisfatta dalla definizione di `_setargv`e la versione della libreria non è caricata.
 
-Analogamente, se non si accede mai alla tabella dell'ambiente tramite l'argomento `envp`, è possibile fornire la propria routine vuota da usare al posto di `_setenvp`, la routine di elaborazione dell'ambiente. Analogamente alla funzione `_setargv`, `_setenvp` deve essere dichiarata come **extern "C"** .
+Analogamente, se non si accede mai alla tabella dell'ambiente tramite l'argomento `envp`, è possibile fornire la propria routine vuota da usare al posto di `_setenvp`, la routine di elaborazione dell'ambiente. Come per la funzione `_setargv`, `_setenvp` deve essere dichiarata come **extern "C"** .
 
-Il programma potrebbe effettuare chiamate al `spawn` o `exec` famiglia di routine nella libreria di runtime del linguaggio C. In questo caso, non si deve eliminare la routine di elaborazione dell'ambiente, dato che questa routine viene utilizzata per passare un ambiente dal processo padre al processo figlio.
+Il programma potrebbe effettuare chiamate al `spawn` o `exec` famiglia di routine nella libreria di runtime del linguaggio C. In tal caso, non è necessario disattivare la routine di elaborazione dell'ambiente, perché questa routine viene utilizzata per passare un ambiente dal processo padre al processo figlio.
 
 **Fine sezione specifica Microsoft**
 

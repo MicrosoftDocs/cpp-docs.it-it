@@ -1,44 +1,52 @@
 ---
 title: C++terminazione programma
-ms.date: 12/10/2019
+description: Vengono descritte le modalità di exit C++un programma in lingua.
+ms.date: 01/15/2020
 helpviewer_keywords:
 - terminating execution
 - quitting applications
 - exiting applications
 - programs [C++], terminating
 ms.assetid: fa0ba9de-b5f1-4e7b-aa65-e7932068b48c
-ms.openlocfilehash: a0e86cacd951327d39296a183be5ee4fbc36fd15
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- exit
+- abort
+- return
+- main
+- atexit
+- void
+ms.openlocfilehash: f83c9d5da5b0a1127603a97fd7946e9cca43a7a5
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301340"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123955"
 ---
 # <a name="c-program-termination"></a>C++terminazione programma
 
-In C++è possibile uscire da un programma nei modi seguenti:
+In C++è possibile exit un programma nei modi seguenti:
 
-- Chiamare la funzione [Exit](exit-function.md) .
-- Chiamare la funzione [Abort](abort-function.md) .
+- Chiamare la funzione [exit](exit-function.md) .
+- Chiamare la funzione [abort](abort-function.md) .
 - Eseguire un'istruzione [return](return-statement-cpp.md) da `main`.
 
-## <a name="exit-function"></a>Funzione exit
+## <a name="opno-locexit-function"></a>Funzione exit
 
-La funzione [Exit](../c-runtime-library/reference/exit-exit-exit.md) , dichiarata in \<stdlib. h >, termina C++ un programma. Il valore fornito come argomento per `exit` viene restituito al sistema operativo come codice restituito o codice di uscita del programma. Per convenzione, un codice restituito uguale a zero indica che il programma è stato completato correttamente. Per indicare l'esito positivo o negativo del programma, è possibile utilizzare le costanti EXIT_FAILURE e EXIT_SUCCESS, definite anche in \<stdlib. h >.
+La funzione [exit](../c-runtime-library/reference/exit-exit-exit.md) , dichiarata in \<stdlib. h >, termina C++ un programma. Il valore fornito come argomento per `exit` viene restituito al sistema operativo come codice return o exit codice del programma. Per convenzione, un codice return zero indica che il programma è stato completato correttamente. Per indicare l'esito positivo o negativo del programma, è possibile utilizzare le costanti EXIT_FAILURE e EXIT_SUCCESS, definite anche in \<stdlib. h >.
 
-Il rilascio di un'istruzione **return** dalla funzione `main` equivale alla chiamata della funzione `exit` con il valore restituito come argomento.
+Il rilascio di un'istruzione **return** dalla funzione `main` equivale alla chiamata della funzione `exit` con il valore di return come argomento.
 
-## <a name="abort-function"></a>abort (funzione)
+## <a name="opno-locabort-function"></a>Funzione abort
 
-La funzione [Abort](../c-runtime-library/reference/abort.md) , dichiarata anche nel file di inclusione standard \<stdlib. h >, C++ termina un programma. La differenza tra `exit` e `abort` è che `exit` consente l' C++ elaborazione della terminazione in fase di esecuzione (i distruttori di oggetti globali verranno chiamati), mentre `abort` termina immediatamente il programma. La funzione `abort` ignora il processo di distruzione normale per gli oggetti statici globali inizializzati. Ignora inoltre qualsiasi elaborazione speciale specificata mediante la funzione [atexit](../c-runtime-library/reference/atexit.md) .
+La funzione [abort](../c-runtime-library/reference/abort.md) , dichiarata anche nel file di inclusione standard \<stdlib. h >, C++ termina un programma. La differenza tra `exit` e `abort` è che `exit` consente l' C++ elaborazione della terminazione in fase di esecuzione (i distruttori di oggetti globali verranno chiamati), mentre `abort` termina immediatamente il programma. La funzione `abort` ignora il processo di distruzione normale per gli oggetti statici globali inizializzati. Ignora inoltre qualsiasi elaborazione speciale specificata mediante la funzione [atexit](../c-runtime-library/reference/atexit.md) .
 
-## <a name="atexit-function"></a>atexit (funzione)
+## <a name="opno-locatexit-function"></a>Funzione atexit
 
-Utilizzare la funzione [atexit](../c-runtime-library/reference/atexit.md) per specificare le azioni che vengono eseguite prima della terminazione del programma. Nessun oggetto statico globale inizializzato prima della chiamata a **atexit** viene eliminato definitivamente prima dell'esecuzione della funzione di elaborazione di uscita.
+Utilizzare la funzione [atexit](../c-runtime-library/reference/atexit.md) per specificare le azioni che vengono eseguite prima della terminazione del programma. Nessun oggetto statico globale inizializzato prima della chiamata a **atexit** viene eliminato definitivamente prima dell'esecuzione della funzione di elaborazione del exit.
 
-## <a name="return-statement-in-main"></a>return (istruzione) in Main
+## <a name="opno-locreturn-statement-in-opno-locmain"></a>istruzione return in main
 
-Il rilascio di un'istruzione [return](return-statement-cpp.md) da `main` è equivalente dal punto di vista funzionale alla chiamata della funzione `exit`. Si consideri l'esempio seguente:
+Il rilascio di un'istruzione [return](return-statement-cpp.md) da `main` è funzionalmente equivalente alla chiamata della funzione `exit`. Si consideri l'esempio seguente:
 
 ```cpp
 // return_statement.cpp
@@ -50,7 +58,7 @@ int main()
 }
 ```
 
-Le istruzioni `exit` e **return** nell'esempio precedente sono funzionalmente identiche. Tuttavia, C++ richiede che le funzioni con tipi restituiti diversi da **void** restituiscano un valore. L'istruzione **return** consente di restituire un valore da `main`.
+Le istruzioni `exit` e **return** nell'esempio precedente sono funzionalmente identiche. Tuttavia, C++ richiede che funzioni con return tipi diversi da **void** return un valore. L'istruzione **return** consente di return un valore da `main`.
 
 ## <a name="destruction-of-static-objects"></a>Distruzione di oggetti statici
 
@@ -107,7 +115,6 @@ int main() {
 }
 ```
 
-
 ## <a name="see-also"></a>Vedere anche
 
-[main: avvio del programma](main-program-startup.md)
+[main funzione e argomenti della riga di comando](main-function-command-line-args.md)
