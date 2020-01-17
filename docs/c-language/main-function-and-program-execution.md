@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151040"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123942"
 ---
 # <a name="main-function-and-program-execution"></a>Funzione main ed esecuzione di programmi
 
@@ -26,7 +26,7 @@ Ogni programma C Ha una funzione principale che deve essere denominata **main**.
 main( int argc, char *argv[ ], char *envp[ ] )
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Le funzioni nel programma di origine eseguono una o più attività specifiche. La funzione **main** può chiamare queste funzioni per eseguire le attività corrispondenti. Se **main** chiama un'altra funzione, passa il controllo dell'esecuzione a tale funzione, che viene eseguita a partire dalla sua prima istruzione. Una funzione restituisce il controllo a **main** quando viene eseguita un'istruzione `return` o quando viene raggiunta la fine della funzione.
 
@@ -38,5 +38,5 @@ Vedere [Uso di wmain](../c-language/using-wmain.md) per una descrizione della ve
 
 ## <a name="see-also"></a>Vedere anche
 
-[main: avvio del programma](../cpp/main-program-startup.md)<br/>
+[funzione Main e argomenti della riga di comandoC++()](../cpp/main-function-command-line-args.md)\
 [Analisi di argomenti della riga di comando C](../c-language/parsing-c-command-line-arguments.md)
