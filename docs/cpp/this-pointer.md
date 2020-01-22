@@ -1,6 +1,7 @@
 ---
 title: Puntatore this
-ms.date: 11/04/2016
+description: Il puntatore this è un puntatore generato dal compilatore all'oggetto corrente nelle funzioni membro non statiche.
+ms.date: 01/22/2020
 f1_keywords:
 - this_cpp
 helpviewer_keywords:
@@ -8,16 +9,24 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- this
+- class
+- struct
+- union
+- sizeof
+- const
+- volatile
+ms.openlocfilehash: 58bba2edd7a457c624b747b5a65d209995852848
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330479"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518335"
 ---
-# <a name="this-pointer"></a>Puntatore this
+# <a name="opno-locthis-pointer"></a>Puntatore this
 
-Il **ciò** puntatore è un puntatore accessibile solo all'interno di funzioni membro non statico di una **classe**, **struct**, o **unione** tipo. Viene puntato l'oggetto per il quale è chiamata la funzione membro. Le funzioni membro statiche non hanno una **ciò** puntatore.
+Il puntatore **this** è un puntatore accessibile solo all'interno delle funzioni membro non statiche di un tipo **class** , **struct** o **union** . Viene puntato l'oggetto per il quale è chiamata la funzione membro. Le funzioni membro statiche non hanno un puntatore **this** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,19 +37,19 @@ this->member-identifier
 
 ## <a name="remarks"></a>Note
 
-Un oggetto **ciò** puntatore non fa parte dell'oggetto stesso; e non viene rilevato nel risultato di una **sizeof** istruzione sull'oggetto. Al contrario, quando una funzione membro non statica viene chiamata per un oggetto, l'indirizzo dell'oggetto viene passato dal compilatore alla funzione come argomento nascosto. Ad esempio, la seguente chiamata di funzione:
+Il puntatore **this** di un oggetto non fa parte dell'oggetto stesso. Non si riflette nel risultato di un'istruzione **sizeof** sull'oggetto. Quando una funzione membro non statica viene chiamata per un oggetto, il compilatore passa l'indirizzo dell'oggetto alla funzione come argomento nascosto. Ad esempio, la seguente chiamata di funzione:
 
 ```cpp
 myDate.setMonth( 3 );
 ```
 
-può essere interpretata come segue:
+può essere interpretato come:
 
 ```cpp
 setMonth( &myDate, 3 );
 ```
 
-L'indirizzo dell'oggetto è disponibile all'interno della funzione membro come il **ciò** puntatore. La maggior parte degli utilizzi degli **ciò** sono implicite. È possibile, sebbene non sia necessario, usare in modo esplicito **ciò** quando si fa riferimento ai membri della classe. Ad esempio:
+L'indirizzo dell'oggetto è disponibile all'interno della funzione membro come puntatore **this** . La maggior parte degli utilizzi del puntatore **this** è implicita. È lecito, anche se non necessario, utilizzare una **this** esplicita per fare riferimento ai membri del class. Ad esempio:
 
 ```cpp
 void Date::setMonth( int mn )
@@ -57,7 +66,7 @@ L'espressione `*this` viene in genere utilizzata per restituire l'oggetto corren
 return *this;
 ```
 
-Il **ciò** puntatore viene usato anche per autoriferimenti:
+Il puntatore **this** viene usato anche per evitare il riferimento automatico:
 
 ```cpp
 if (&Object != this) {
@@ -65,9 +74,9 @@ if (&Object != this) {
 ```
 
 > [!NOTE]
->  Poiché il **ciò** puntatore non è modificabile, le assegnazioni ai **ciò** non sono consentiti. Precedenti implementazioni di C++ consentivano le assegnazioni ai **ciò**.
+> Poiché il puntatore **this** non è modificabile, le assegnazioni al puntatore **this** non sono consentite. Implementazioni precedenti dell' C++ assegnazione consentita a **this** .
 
-In alcuni casi, il **ciò** puntatore viene utilizzato direttamente, ad esempio, per manipolare dati autoreferenziali strutture, in cui è necessario l'indirizzo dell'oggetto corrente.
+Occasionalmente, il puntatore **this** viene usato direttamente, ad esempio per modificare le strutture di dati autoreferenziali, in cui l'indirizzo dell'oggetto corrente è obbligatorio.
 
 ## <a name="example"></a>Esempio
 
@@ -139,11 +148,11 @@ my buffer
 your buffer
 ```
 
-## <a name="type-of-the-this-pointer"></a>Tipo di puntatore this
+## <a name="type-of-the-opno-locthis-pointer"></a>Tipo di puntatore this
 
-Il **ciò** tipo di puntatore può essere modificato nella dichiarazione di funzione per il **const** e **volatile** parole chiave. Per dichiarare una funzione con associati gli attributi di una o più di queste parole chiave, aggiungere le parole chiave dopo l'elenco di argomenti della funzione.
+Il tipo di puntatore **this** può essere modificato nella dichiarazione di funzione dalle parole chiave **const** e **volatile** . Per dichiarare una funzione con uno di questi attributi, aggiungere la parola chiave (s) dopo l'elenco di argomenti della funzione.
 
-Si consideri l'esempio seguente:
+Si consideri un esempio:
 
 ```cpp
 // type_of_this_pointer1.cpp
@@ -156,7 +165,7 @@ int main()
 }
 ```
 
-Il codice precedente dichiara una funzione membro, `X`, in cui la **ciò** puntatore viene considerato come un **const** puntatore a un **const** oggetto. Combinazioni di *cv-mod-list* opzioni possono essere usate, ma viene sempre modificato l'oggetto a cui punta **ciò**, non il **ciò** puntatore stesso. Di conseguenza, la dichiarazione seguente dichiara funzione `X`; il **questo** puntatore è un **const** puntatore a un **const** oggetto:
+Il codice precedente dichiara una funzione membro, `X`, in cui il puntatore **this** viene considerato come un puntatore **const** a un oggetto **const** . È possibile utilizzare combinazioni di opzioni *CV-mod-list* , ma è sempre necessario modificare l'oggetto a cui punta il puntatore **this** , non il puntatore stesso. Nella dichiarazione seguente viene dichiarata la funzione `X`, in cui il puntatore **this** è un puntatore **const** a un oggetto **const** :
 
 ```cpp
 // type_of_this_pointer2.cpp
@@ -169,27 +178,29 @@ int main()
 }
 ```
 
-Il tipo della **ciò** in un funzione membro è descritto dalla sintassi seguente, dove *cv-qualifier-list* è determinato dal dichiaratore di funzioni membro e può essere **const**oppure **volatile** (o entrambi), e *di tipo classe* è il nome della classe:
+Il tipo di **this** in una funzione membro è descritto dalla sintassi seguente. *CV-Qualifier-list* è determinato dal dichiaratore della funzione membro. Può essere **const** o **volatile** (o entrambi). *class-Type* è il nome del class:
 
-*tipo di classe [cv-qualifier-list]* **&#42; const questo**
+[*CV-Qualifier-list*] const *di tipoclass* **\* this**
 
-In altre parole, **ciò** è sempre un puntatore const; non può essere riassegnato.  Il **const** oppure **volatile** qualificatori utilizzati nella dichiarazione di funzione membro si applicano all'istanza della classe a cui fa riferimento **questo** nell'ambito di tale funzione.
+In altre parole, il puntatore **this** è sempre un puntatore di const. Non può essere riassegnata.  I qualificatori **const** o **volatile** usati nella dichiarazione di funzione membro si applicano all'istanza di class a cui punta il puntatore **this** nell'ambito di tale funzione.
 
 Nella tabella seguente vengono descritto in modo più dettagliato il funzionamento di tali modificatori.
 
-### <a name="semantics-of-this-modifiers"></a>Semantica dei modificatori this
+### <a name="semantics-of-opno-locthis-modifiers"></a>Semantica dei modificatori di this
 
 |Modificatore|Significato|
 |--------------|-------------|
-|**const**|Non è possibile modificare i dati dei membri; non è possibile richiamare funzioni membro che non sono **const**.|
-|**volatile**|I dati dei membri vengono caricati dalla memoria tutte le volte in cui si accede alla memoria stessa e determinate ottimizzazioni vengono disabilitate.|
+|**const**|Impossibile modificare i dati dei membri. non è possibile richiamare funzioni membro che non sono **const** .|
+|**volatile**|I dati dei membri vengono caricati dalla memoria ogni volta che viene eseguito l'accesso; Disabilita determinate ottimizzazioni.|
 
-È un errore per passare un **const** oggetto a una funzione membro che non è **const**. Analogamente, è possibile passare un **volatili** oggetto a una funzione membro che non è **volatile**.
+È un errore passare un oggetto **const** a una funzione membro che non è **const** .
 
-Funzioni membro dichiarate come **const** non è possibile modificare i dati dei membri, ovvero in tali funzioni, il **ciò** puntatore è un puntatore a una **const** oggetto.
+Analogamente, è anche un errore passare un oggetto **volatile** a una funzione membro che non è **volatile** .
+
+Le funzioni membro dichiarate come **const** non possono modificare i dati dei membri, in tali funzioni, il puntatore **this** è un puntatore a un oggetto **const** .
 
 > [!NOTE]
->  Costruttori e distruttori non possono essere dichiarati come **const** oppure **volatile**. Possono, tuttavia, essere richiamati su **const** oppure **volatile** oggetti.
+> I costruttori e i distruttori non possono essere dichiarati come **const** o **volatile** . Tuttavia, possono essere richiamati su oggetti **const** o **volatile** .
 
 ## <a name="see-also"></a>Vedere anche
 

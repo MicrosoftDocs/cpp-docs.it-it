@@ -1,15 +1,15 @@
 ---
 title: Opzioni del compilatore elencate per categoria
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685201"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518413"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opzioni del compilatore elencate per categoria
 
@@ -64,6 +64,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Genera funzioni trascendenti veloci.|
 |[/QIfist](qifist-suppress-ftol.md)|Deprecato. Disattiva la chiamata della funzione helper `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale. (solo x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Rimuove i comandi `fwait` all'interno dei blocchi `try` .|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Attenua l'effetto sulle prestazioni dell'aggiornamento di microcodice cui all'errata Intel CCM.|
 |[/Qpar](qpar-auto-parallelizer.md)|Abilita la parallelizzazione automatica dei cicli.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Abilita livelli di creazione rapporti per la parallelizzazione automatica.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Usa istruzioni di spostamento Integer per i valori a virgola mobile e disabilita determinate ottimizzazioni di carico a virgola mobile.|
@@ -105,7 +106,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/u](u-u-undefine-symbols.md)|Rimuove tutte le macro predefinite.|
 |[/X](x-ignore-standard-include-paths.md)|Ignora la directory di inclusione standard.|
 
-## <a name="language"></a>Linguaggio
+## <a name="language"></a>Lingua:
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -126,7 +127,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/ZI](z7-zi-zi-debug-information-format.md)|Include informazioni di debug in un database di programma compatibile con Modifica e continuazione. (solo x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera informazioni di debug complete.|
 |[/Zl](zl-omit-default-library-name.md)|Rimuove il nome di libreria predefinito dal file obj.|
-|[/Zp](zp-struct-member-alignment.md) *n*|Comprime i membri della struttura.|
+|[/ZP](zp-struct-member-alignment.md) *n*|Comprime i membri della struttura.|
 |[/Zs](zs-syntax-check-only.md)|Controlla solo la sintassi.|
 |[/ZW](zw-windows-runtime-compilation.md)|Produce un file di output da eseguire nel Windows Runtime.|
 
@@ -144,7 +145,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/MT](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare un file eseguibile con multithreading, usando LIBCMT.lib.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare un file eseguibile con multithreading di debug, usando LIBCMTD.lib.|
 
-## <a name="miscellaneous"></a>Miscellaneous
+## <a name="miscellaneous"></a>Varie
 
 |Opzione|Scopo|
 |------------|-------------|

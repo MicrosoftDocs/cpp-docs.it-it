@@ -1,14 +1,14 @@
 ---
 title: Opzioni del compilatore elencate in ordine alfabetico
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 72441692869dbed806474a7054fedff53b923d42
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685328"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518374"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -109,6 +109,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Genera funzioni trascendenti veloci.|
 |[/QIfist](qifist-suppress-ftol.md)|Deprecato. Elimina `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale (solo x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Rimuove i comandi `fwait` all'interno dei blocchi `try` .|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Attenua l'effetto sulle prestazioni dell'aggiornamento di microcodice cui all'errata Intel CCM.|
 |[/Qpar (parallelizzazione automatica)](qpar-auto-parallelizer.md)|Abilita la parallelizzazione automatica dei cicli contrassegnati con la direttiva [#pragma loop()](../../preprocessor/loop.md) .|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Usa istruzioni di spostamento Integer per i valori a virgola mobile e disabilita determinate ottimizzazioni di carico a virgola mobile.|
 |[/Qspectre](qspectre.md)|Specifica la generazione di istruzioni del compilatore per mitigare determinate vulnerabilità di sicurezza di Spectre variante 1.|
