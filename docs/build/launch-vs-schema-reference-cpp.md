@@ -3,16 +3,16 @@ title: riferimento allo schema Launch. vs. JSONC++()
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556643"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518231"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>riferimento allo schema Launch. vs. JSONC++()
 
-Usare il file *Launch. vs. JSON* per configurare i parametri di debug. Per creare il file. fare clic con il pulsante destro del mouse su un file eseguibile in **Esplora soluzioni** e scegliere **debug e avvia Impostazioni**. Scegliere l'opzione che corrisponde maggiormente al progetto e quindi usare le proprietà seguenti per modificare la configurazione in base alle esigenze:
+Usare il file *Launch. vs. JSON* per configurare i parametri di debug. Per creare il file. fare clic con il pulsante destro del mouse su un file eseguibile in **Esplora soluzioni** e scegliere **debug e avvia Impostazioni**. Scegliere l'opzione che corrisponde maggiormente al progetto e quindi usare le proprietà seguenti per modificare la configurazione in base alle esigenze. Per altre informazioni sul debug di progetti CMake, vedere [configurare sessioni di debug CMake](/cpp/build/configure-cmake-debugging-sessions).
 
 ## <a name="default-properties"></a>Proprietà predefinite
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
-ms.openlocfilehash: 6115db7611de521d66df3b1f555349891d72cc03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5033490550f318cab65f984cab81b08102641c9d
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395235"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518361"
 ---
 # <a name="compiler-warning-level-4-c4703"></a>Avviso del compilatore (livello 4) C4703
 
 utilizzata variabile puntatore locale non inizializzata 'nome'
 
-La variabile puntatore locale *nome* potrebbe essere stato usato senza essere assegnato un valore. Questo potrebbe causare risultati imprevisti.
+È possibile che sia stato usato il *nome* della variabile puntatore locale senza che sia stato assegnato un valore. Questo può causare risultati imprevedibili.
 
 ## <a name="example"></a>Esempio
 
@@ -37,7 +37,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -64,7 +64,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -73,4 +73,4 @@ void main()
 ## <a name="see-also"></a>Vedere anche
 
 [Avviso del compilatore (livello 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)<br/>
-[Gli avvisi, /sdl e miglioramento del rilevamento della variabile non inizializzato](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)
+[Avvisi,/SDL e miglioramento del rilevamento di variabili non inizializzate](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)

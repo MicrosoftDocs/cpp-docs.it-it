@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890153"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518465"
 ---
 # <a name="ltiomanipgt-functions"></a>Funzioni &lt;iomanip&gt;
 
@@ -56,12 +56,12 @@ T7 get_money(Money& amount, bool use_intl);
 *importo*\
 Valore monetario estratto.
 
-\ *use_intl*
+*use_intl*\
 Se **true**, usare il formato internazionale. Il valore predefinito è **false**.
 
 ### <a name="remarks"></a>Note
 
-Il manipolatore restituisce un oggetto che, se estratto dal flusso `str`, si comporta come un `formatted input function` che chiama la funzione membro `get` per il facet delle impostazioni locali `money_get` associato a `str`, usando *use_intl* per indicare il formato internazionale . In caso di esito positivo, la chiamata archivia il valore monetario estratto in *quantità* . Il manipolatore restituisce quindi `str`.
+Il manipolatore restituisce un oggetto che, se estratto dal flusso `str`, si comporta come un `formatted input function` che chiama la funzione membro `get` per il facet delle impostazioni locali `money_get` associato a `str`, utilizzando *use_intl* per indicare il formato internazionale. In caso di esito positivo, la chiamata archivia il valore monetario estratto in *quantità* . Il manipolatore restituisce quindi `str`.
 
 `Money` deve essere di tipo `long double` o un'istanza di `basic_string` con gli stessi parametri di elemento e dei tratti di `str`.
 
@@ -76,10 +76,10 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 
 ### <a name="parameters"></a>Parametri
 
-\ *time_ptr*
+*time_ptr*\
 Ora nella forma di una struttura temporale.
 
-\ *time_format*
+*time_format*\
 Formato desiderato da usare per ottenere il valore di ora.
 
 ### <a name="remarks"></a>Note
@@ -100,16 +100,16 @@ T8 put_money(const Money& amount, bool use_intl);
 *importo*\
 Importo monetario da inserire nel flusso.
 
-\ *use_intl*
+*use_intl*\
 Impostare su **true** se il manipolatore deve usare il formato internazionale, **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce `str`.
+Restituisce un valore `str`.
 
 ### <a name="remarks"></a>Note
 
-Il manipolatore restituisce un oggetto che, se inserito nel flusso `str`, si comporta come una funzione di output formattata che chiama la funzione membro `put` per il facet delle impostazioni locali `money_put` associato a `str`. Se ha esito positivo, la chiamata inserisce `amount` opportunamente formattata, usando *use_intl* per indicare il formato internazionale e `str.fill()`, come elemento Fill. Il manipolatore restituisce quindi `str`.
+Il manipolatore restituisce un oggetto che, se inserito nel flusso `str`, si comporta come una funzione di output formattata che chiama la funzione membro `put` per il facet delle impostazioni locali `money_put` associato a `str`. Se ha esito positivo, la chiamata inserisce `amount` opportunamente formattata, usando *use_intl* per indicare il formato internazionale e `str.fill()`come elemento Fill. Il manipolatore restituisce quindi `str`.
 
 `Money` deve essere di tipo `long double` o un'istanza di `basic_string` con gli stessi parametri di elemento e dei tratti di `str`.
 
@@ -124,15 +124,15 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 ### <a name="parameters"></a>Parametri
 
-\ *time_ptr*
+*time_ptr*\
 Valore di ora da scrivere nel flusso, fornito in una struttura temporale.
 
-\ *time_format*
+*time_format*\
 Formato in cui scrivere il valore di ora.
 
 ### <a name="remarks"></a>Note
 
-Il manipolatore restituisce un oggetto che, se inserito nel flusso `str`, si comporta come un oggetto `formatted output function`. La funzione di output chiama la funzione membro `put` per il facet delle impostazioni locali `time_put` associato a `str`. La funzione di output utilizza *time_ptr* per indicare la struttura temporale e *time_format* per indicare l'inizio di una stringa di formato con terminazione null. Se ha esito positivo, la chiamata inserisce testo letterale ottenuto dalla stringa di formato e i valori convertiti dalla struttura temporale. Il manipolatore restituisce quindi `str`.
+Il manipolatore restituisce un oggetto che, se inserito nel flusso `str`, si comporta come un oggetto `formatted output function`. La funzione di output chiama la funzione membro `put` per il facet delle impostazioni locali `time_put` associato a `str`. La funzione output USA *time_ptr* per indicare la struttura temporale e *time_format* per indicare l'inizio di una stringa di formato con terminazione null. Se ha esito positivo, la chiamata inserisce testo letterale ottenuto dalla stringa di formato e i valori convertiti dalla struttura temporale. Il manipolatore restituisce quindi `str`.
 
 ## <a name="quoted"></a>  quoted
 
@@ -195,7 +195,7 @@ void show_quoted_v_nonquoted()
     cout << "Quoted          : " << extracted_quoted << endl;
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     show_quoted_v_nonquoted();
 
@@ -271,7 +271,7 @@ void show_custom_escape()
     // after round-tripping.
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     cout << "Custom delimiter:" << endl;
     show_custom_delimiter();

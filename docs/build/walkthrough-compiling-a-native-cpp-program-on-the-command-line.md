@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando'
+title: 'Procedura dettagliata: compilazione di un programma nativo C++ da riga di comando'
 description: Usare il compilatore C++ Microsoft da un prompt dei comandi.
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: d002fd4c4edc99775e62023dda7998fba2c6a44f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051520"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518173"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procedura dettagliata: compilazione di un programma nativo C++ da riga di comando
 
 Visual Studio include un compilatore da riga C++ di comando che è possibile usare per creare tutti gli elementi, dalle app console di base alle app piattaforma UWP (Universal Windows Platform), alle app desktop, ai driver di dispositivo e ai componenti .NET.
 
@@ -24,7 +24,7 @@ In questa procedura dettagliata viene creato un programma di tipo C++ "Hello, Wo
 
 In questa procedura dettagliata è possibile usare il proprio programma Visual C++ anziché digitare quello riportato nell'esempio oppure usare esempi di codice Visual C++ di altri articoli della Guida.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa procedura dettagliata, è necessario aver installato Visual Studio e lo **sviluppo di desktop facoltativo C++ con** carico di lavoro oppure gli strumenti di compilazione da riga di comando per Visual Studio.
 
@@ -78,7 +78,7 @@ Prima di poter compilare un programma C C++ o nella riga di comando, è necessar
    ```cpp
    #include <iostream>
    using namespace std;
-   void main()
+   int main()
    {
        cout << "Hello, world, from Visual C++!" << endl;
    }
@@ -172,6 +172,6 @@ Il compilatore MSVC include una libreria di runtime C (CRT) compatibile con lo s
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Riferimenti del linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Progetti e sistemi di compilazione](projects-and-build-systems-cpp.md)<br/>
 [Opzioni del compilatore MSVC](reference/compiler-options.md)

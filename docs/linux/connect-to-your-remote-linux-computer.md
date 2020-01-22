@@ -1,34 +1,74 @@
 ---
 title: Connettersi al sistema Linux di destinazione in Visual Studio
 description: Come connettersi a un computer Linux remoto o a un sottosistema Windows per Linux dall'interno di un C++ progetto di Visual Studio.
-ms.date: 11/09/2019
-ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.date: 01/17/2020
+ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755278"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518218"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connettersi al sistema Linux di destinazione in Visual Studio
 
 ::: moniker range="vs-2015"
 
-Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+È possibile configurare un progetto Linux destinato a un computer remoto o al sottosistema Windows per Linux (WSL). Per i computer remoti e per WSL, è necessario configurare una connessione remota in Visual Studio 2017.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+È possibile configurare un progetto Linux destinato a un computer remoto o al sottosistema Windows per Linux (WSL). Per un computer remoto, è necessario configurare una connessione remota in Visual Studio. Per connettersi a WSL, passare alla sezione [connessione a WSL](#connect-to-wsl) .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-È possibile configurare un progetto Linux destinato a un computer remoto o al sottosistema Windows per Linux (WSL). Per i computer remoti, e per WSL in Visual Studio 2017, è necessario configurare una connessione remota.
+Quando si usa una connessione remota, Visual Studio C++ compila i progetti Linux nel computer remoto. Non è importante se si tratta di un computer fisico, di una macchina virtuale nel cloud o di WSL.
+Per compilare il progetto, Visual Studio copia il codice sorgente nel computer Linux remoto. Quindi, il codice viene compilato in base alle impostazioni di Visual Studio.
 
-## <a name="connect-to-a-remote-linux-computer"></a>Connettersi a un computer Linux remoto
+::: moniker-end
 
-Quando si compila C++ un progetto Linux per un sistema Linux remoto (macchina virtuale o computer fisico), il codice sorgente Linux viene copiato nel computer Linux remoto. Viene quindi compilato in base alle impostazioni di Visual Studio.
+::: moniker range="vs-2019"
 
-Per configurare la connessione remota:
+> [!NOTE]
+> Visual Studio 2019 versione 16,5 e versioni successive supporta anche connessioni crittografiche compatibili con FIPS (Secure, Federal Information Processing Standard (FIPS) 140-2 a sistemi Linux per lo sviluppo remoto. Per utilizzare una connessione conforme a FIPS, attenersi alla procedura descritta in [configurare lo sviluppo di Linux remoto protetto con FIPS](set-up-fips-compliant-secure-remote-linux-development.md) .
 
-1. Compilare il progetto per la prima volta. In alternativa, è possibile creare una nuova voce manualmente. Selezionare **strumenti > opzioni**, aprire il nodo **multipiattaforma > Gestione connessione** , quindi scegliere il pulsante **Aggiungi** .
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="set-up-the-ssh-server-on-the-remote-system"></a>Configurare il server SSH nel sistema remoto
+
+Se ssh non è già configurato e in esecuzione nel sistema Linux, attenersi alla procedura seguente per installarlo. Gli esempi in questo articolo usano Ubuntu 18,04 LTS con OpenSSH server versione 7,6. Tuttavia, le istruzioni devono essere le stesse per qualsiasi distribuzione usando una versione moderatamente recente di OpenSSH.
+
+1. Nel sistema Linux installare e avviare il server OpenSSH:
+
+   ```bash
+   sudo apt install openssh-server
+   sudo service ssh start
+   ```
+
+1. Se si vuole che il server SSH venga avviato automaticamente all'avvio del sistema, abilitarlo usando systemctl:
+
+   ```bash
+   sudo systemctl enable ssh
+   ```
+
+## <a name="set-up-the-remote-connection"></a>Configurare la connessione remota
+
+1. In Visual Studio scegliere **strumenti > opzioni** nella barra dei menu per aprire la finestra di dialogo **Opzioni** . Selezionare quindi **multipiattaforma > gestione connessione** per aprire la finestra di dialogo Gestione connessione.
+
+   Se non è stata configurata una connessione in Visual Studio prima, quando si compila il progetto per la prima volta, Visual Studio apre la finestra di dialogo Gestione connessione.
+
+1. Nella finestra di dialogo Gestione connessione scegliere il pulsante **Aggiungi** per aggiungere una nuova connessione.
 
    ![Gestione connessioni](media/settings_connectionmanager.png)
 
@@ -48,19 +88,11 @@ Per configurare la connessione remota:
    | **File di chiave privata**    | File di chiave privata creato per la connessione SSH
    | **Passphrase**          | Passphrase usata con la chiave privata selezionata in precedenza
 
-   È possibile usare una password o un file di chiave e una passphrase per l'autenticazione. Per molti scenari di sviluppo, l'autenticazione della password è sufficiente. Se si preferisce usare un file di chiavi pubblica/privata, è possibile crearne uno nuovo oppure [usarne uno esistente](https://security.stackexchange.com/questions/10203/reusing-private-public-keys). Sono attualmente supportate solo le chiavi RSA e DSA.
-
-   È possibile creare un file di chiavi RSA privato seguendo questa procedura:
-
-   1. Nel computer Windows creare la coppia di chiavi ssh con `ssh-keygen -t rsa`. Il comando crea una chiave pubblica e una chiave privata. Per impostazione predefinita, inserisce le chiavi in `C:\Users\%USERNAME%\.ssh`, usando i nomi `id_rsa.pub` e `id_rsa`.
-
-   1. Da Windows, copiare la chiave pubblica nel computer Linux: `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`.
-
-   1. Nel sistema Linux aggiungere la chiave all'elenco delle chiavi autorizzate e assicurarsi che il file abbia le autorizzazioni corrette: `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+   È possibile usare una password o un file di chiave e una passphrase per l'autenticazione. Per molti scenari di sviluppo, l'autenticazione della password è sufficiente, ma i file di chiave sono più sicuri. Se si dispone già di una coppia di chiavi, è possibile riutilizzarla. Attualmente Visual Studio supporta solo le chiavi RSA e DSA per le connessioni remote.
 
 1. Scegliere il pulsante **Connetti** per tentare una connessione al computer remoto.
 
-   Se la connessione ha esito positivo, Visual Studio inizierà a configurare IntelliSense per usare le intestazioni remote. Per altre informazioni, vedere [IntelliSense per le intestazioni nei sistemi remoti](configure-a-linux-project.md#remote_intellisense).
+   Se la connessione ha esito positivo, Visual Studio configura IntelliSense per l'uso delle intestazioni remote. Per altre informazioni, vedere [IntelliSense per le intestazioni nei sistemi remoti](configure-a-linux-project.md#remote_intellisense).
 
    Se la connessione non riesce, le caselle delle voci che devono essere modificate sono evidenziate in rosso.
 
@@ -72,31 +104,41 @@ Per configurare la connessione remota:
 
    ::: moniker range="vs-2019"
 
-   Passare a **Strumenti > Opzioni > Multipiattaforma > Registrazione** per abilitare la registrazione per la risoluzione dei problemi di connessione:
+## <a name="logging-for-remote-connections"></a>Registrazione per le connessioni remote
+
+   È possibile abilitare la registrazione per risolvere i problemi di connessione. Nella barra dei menu selezionare **strumenti > opzioni**. Nella finestra di dialogo **Opzioni** selezionare **multipiattaforma > registrazione**:
 
    ![Registrazione remota](media/remote-logging-vs2019.png)
 
    I log includono le connessioni, tutti i comandi inviati al computer remoto (testo, codice di uscita e tempo di esecuzione) e tutto l'output da Visual Studio alla shell. La registrazione funziona per qualsiasi progetto CMake multipiattaforma o per un progetto Linux basato su MSBuild in Visual Studio.
 
-   È possibile configurare l'output in modo che venga indirizzato a un file o al riquadro **Registrazione multipiattaforma** nella finestra di output. Per i progetti Linux basati su MSBuild, i comandi MSBuild inviati al computer remoto non vengono indirizzati al **finestra di output** perché vengono emessi out-of-process. Vengono invece registrati in un file con prefisso "msbuild_".
+   È possibile configurare l'output per passare a un file o al riquadro **registrazione multipiattaforma** nella finestra output. Per i progetti Linux basati su MSBuild, i comandi MSBuild inviati al computer remoto non vengono indirizzati al **finestra di output** perché vengono emessi out-of-process. Vengono invece registrati in un file con prefisso "msbuild_".
+
+## <a name="command-line-utility-for-the-connection-manager"></a>Utilità della riga di comando per la gestione connessione  
+
+**Visual studio 2019 versione 16,5 o successiva**: ConnectionManager. exe è un'utilità da riga di comando per gestire le connessioni di sviluppo remoto all'esterno di Visual Studio. È utile per attività come il provisioning di un nuovo computer di sviluppo. In alternativa, è possibile usarlo per configurare Visual Studio per l'integrazione continua. Per esempi e un riferimento completo al comando ConnectionManager, vedere [ConnectionManager Reference](connectionmanager-reference.md).  
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="tcp-port-forwarding"></a>Porting porta TCP
 
-Il supporto Linux di Visual Studio presenta una dipendenza dall'invio della porta TCP. **Rsync** e **gdbserver** saranno interessati se l'invio della porta TCP è disabilitato nel sistema remoto. Se si è interessati da questa dipendenza, è possibile votare questo ticket di [Suggerimento](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) sulla community degli sviluppatori.
+Il supporto Linux di Visual Studio presenta una dipendenza dall'invio della porta TCP. **Rsync** e **gdbserver** sono interessati se l'invio della porta TCP è disabilitato nel sistema remoto. Se si è interessati da questa dipendenza, è possibile votare questo ticket di [Suggerimento](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) sulla community degli sviluppatori.
 
 rsync viene usato dai progetti Linux basati su MSBuild e dai progetti CMake per [copiare le intestazioni dal sistema remoto a Windows per l'uso da parte di IntelliSense](configure-a-linux-project.md#remote_intellisense). Quando non è possibile abilitare l'invio della porta TCP, disabilitare il download automatico delle intestazioni remote. Per disabilitarlo, utilizzare **strumenti > opzioni > multipiattaforma > gestione connessione > gestione IntelliSense per le intestazioni remote**. Se nel sistema remoto non è abilitato l'invio della porta TCP, questo errore viene visualizzato quando viene avviato il download delle intestazioni remote per IntelliSense:
 
 ![Errore intestazioni](media/port-forwarding-headers-error.png)
 
-Rsync viene usato anche dal supporto CMake di Visual Studio per copiare i file di origine nel sistema remoto. Se non è possibile abilitare l'invio porta TCP, è possibile usare SFTP come metodo per le origini di copia remote. SFTP è spesso più lento rispetto a rsync, ma non ha una dipendenza dall'invio della porta TCP. È possibile gestire il metodo di origini di copia remote con la proprietà **remoteCopySourcesMethod** nell' [Editor delle impostazioni CMake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Se l'invio della porta TCP è disabilitato nel sistema remoto, verrà visualizzato un errore nella finestra di output di CMake la prima volta che richiama rsync.
+rsync viene usato anche dal supporto CMake di Visual Studio per copiare i file di origine nel sistema remoto. Se non è possibile abilitare l'invio porta TCP, è possibile usare SFTP come metodo per le origini di copia remote. SFTP è spesso più lento rispetto a rsync, ma non ha una dipendenza dall'invio della porta TCP. È possibile gestire il metodo di origini di copia remote con la proprietà **remoteCopySourcesMethod** nell' [Editor delle impostazioni CMake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Se l'invio della porta TCP è disabilitato nel sistema remoto, verrà visualizzato un errore nella finestra di output di CMake la prima volta che richiama rsync.
 
 ![Errore rsync](media/port-forwarding-copy-error.png)
 
-Gdbserver può essere usato per eseguire il debug su dispositivi incorporati. Se non è possibile abilitare l'invio della porta TCP, è necessario usare gdb per tutti gli scenari di debug remoto. Per impostazione predefinita, GDB viene usato per il debug di progetti in un sistema remoto.
-
-::: moniker-end
+gdbserver può essere usato per eseguire il debug su dispositivi incorporati. Se non è possibile abilitare l'invio della porta TCP, è necessario usare gdb per tutti gli scenari di debug remoto. per impostazione predefinita, GDB viene usato per il debug di progetti in un sistema remoto.
 
 ## <a name="connect-to-wsl"></a>Connettersi a WSL
+
+::: moniker-end
 
 ::: moniker range="vs-2017"
 

@@ -1,38 +1,40 @@
 ---
 title: Opzioni /Q (Operazioni di basso livello)
-ms.date: 01/23/2018
+ms.date: 01/08/2020
 f1_keywords:
 - /q
 helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 6348226aa38d1f2eefdf9e19e27c4c87bd2f0812
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 9dd3675f200be4f0ec66620bcf3cf05706991b66
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927663"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518172"
 ---
 # <a name="q-options-low-level-operations"></a>Opzioni /Q (Operazioni di basso livello)
 
 È possibile usare le opzioni del compilatore **/q** per eseguire le operazioni seguenti del compilatore di basso livello:
 
-- [/Qfast_transcendentals (forza i trascendenti veloci)](qfast-transcendentals-force-fast-transcendentals.md): Genera funzioni trascendenti veloci.
+- [/Qfast_transcendentals (forza i trascendenti veloci)](qfast-transcendentals-force-fast-transcendentals.md): genera trascendenti veloci.
 
-- [/QIfist (Disattiva _ftol)](qifist-suppress-ftol.md): Viene eliminato `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo Integer (solo x86).
+- [/QIfist (non viene eliminato _ftol)](qifist-suppress-ftol.md): Disattiva `_ftol` quando è necessaria una conversione da un tipo a virgola mobile a un tipo Integer (solo x86).
 
-- [/Qimprecise_fwaits (rimuove comandi fwait all'interno di blocchi try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Rimuove i comandi `fwait` all'interno dei blocchi `try` .
+- [/Qimprecise_fwaits (Rimuovi comandi fwait all'interno di blocchi try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): rimuove i comandi di `fwait` all'interno di `try` blocchi.
 
-- [/QPAR (parallelizzazione automatica automatico)](qpar-auto-parallelizer.md): Abilita la parallelizzazione automatica dei cicli contrassegnati con la direttiva [#pragma loop()](../../preprocessor/loop.md) .
+- [/QIntel-JCC-erratum](qintel-jcc-erratum.md): mitiga l'effetto sulle prestazioni causato dall'aggiornamento del microcodice cui all'errata di Intel Jump Conditional code (CCM).
 
-- [/Qpar-report (livello di segnalazione parallelizzazione automatica automatica)](qpar-report-auto-parallelizer-reporting-level.md): Abilita livelli di creazione rapporti per la parallelizzazione automatica.
+- [/QPAR (auto-parallelizzazione automatica)](qpar-auto-parallelizer.md): Abilita la parallelizzazione automatica dei cicli contrassegnati con la direttiva [#pragma loop ()](../../preprocessor/loop.md) .
 
-- [/Qsafe_fp_loads](qsafe-fp-loads.md): Disattiva le ottimizzazioni per i caricamenti del registro a virgola mobile e per gli spostamenti tra la memoria e i registri MMX.
+- [/Qpar-report (livello di segnalazione parallelizzazione automatica automatica)](qpar-report-auto-parallelizer-reporting-level.md): Abilita i livelli di report per la parallelizzazione automatica.
 
-- [/Qspectre](qspectre.md): Genera istruzioni per attenuare alcune vulnerabilità di sicurezza di Spectre.
+- [/Qsafe_fp_loads](qsafe-fp-loads.md): disattiva le ottimizzazioni per i caricamenti del registro a virgola mobile e per lo spostamento tra i registri di memoria e MMX.
 
-- [/Qvec-report (livello di segnalazione Vectorizer automatica)](qvec-report-auto-vectorizer-reporting-level.md): Abilita livelli di creazione rapporti per la vettorializzazione automatica.
+- [/Qspectre](qspectre.md): genera istruzioni per attenuare alcune vulnerabilità di sicurezza di Spectre.
+
+- [/Qvec-report (livello di segnalazione Vectorizer automatica)](qvec-report-auto-vectorizer-reporting-level.md): Abilita i livelli di report per la vettorizzazione automatica.
 
 ## <a name="see-also"></a>Vedere anche
 
