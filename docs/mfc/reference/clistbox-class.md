@@ -1,6 +1,7 @@
 ---
 title: Classe CListBox
-ms.date: 11/04/2016
+description: Descrizione della classe CListBox MFC e delle relative funzioni membro.
+ms.date: 01/22/2020
 f1_keywords:
 - CListBox
 - AFXWIN/CListBox
@@ -102,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: e47a580e786572b0741700721a9d1ba4ac925fcd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505685"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518426"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -119,22 +120,22 @@ Fornisce la funzionalità di una casella di riepilogo di Windows.
 class CListBox : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CListBox::CListBox](#clistbox)|Costruisce un oggetto `CListBox`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|Aggiunge una stringa a una casella di riepilogo.|
-|[CListBox::CharToItem](#chartoitem)|Eseguire l'override di per fornire la gestione personalizzata di WM_CHAR per le caselle di riepilogo del proprietario che non hanno stringhe.|
+|[CListBox::CharToItem](#chartoitem)|Eseguire l'override di per fornire la gestione personalizzata dei WM_CHAR per le caselle di riepilogo con il proprietario, che non hanno stringhe.|
 |[CListBox::CompareItem](#compareitem)|Chiamato dal Framework per determinare la posizione di un nuovo elemento in una casella di riepilogo ordinata dal proprietario.|
-|[CListBox:: create](#create)|Crea la casella di riepilogo di Windows e la collega all' `CListBox` oggetto.|
+|[CListBox:: create](#create)|Crea la casella di riepilogo di Windows e la collega all'oggetto `CListBox`.|
 |[CListBox::DeleteItem](#deleteitem)|Chiamata eseguita dal framework quando l'utente elimina un elemento da una casella di riepilogo creata dal proprietario.|
 |[CListBox::DeleteString](#deletestring)|Elimina una stringa da una casella di riepilogo.|
 |[CListBox::Dir](#dir)|Aggiunge nomi di file, unità o entrambi dalla directory corrente a una casella di riepilogo.|
@@ -177,7 +178,7 @@ class CListBox : public CWnd
 |[CListBox::SetSel](#setsel)|Seleziona o deseleziona un elemento casella di riepilogo in una casella di riepilogo a selezione multipla.|
 |[CListBox::SetTabStops](#settabstops)|Imposta le posizioni di interruzione di tabulazione in una casella di riepilogo.|
 |[CListBox::SetTopIndex](#settopindex)|Imposta l'indice in base zero della prima stringa visibile in una casella di riepilogo.|
-|[CListBox:: VKeyToItem](#vkeytoitem)|Eseguire l'override per fornire la gestione WM_KEYDOWN personalizzata per le caselle di riepilogo con il set di stili LBS_WANTKEYBOARDINPUT.|
+|[CListBox:: VKeyToItem](#vkeytoitem)|Eseguire l'override di per fornire la gestione WM_KEYDOWN personalizzata per le caselle di riepilogo con il set di stili di LBS_WANTKEYBOARDINPUT.|
 
 ## <a name="remarks"></a>Note
 
@@ -185,9 +186,9 @@ In una casella di riepilogo viene visualizzato un elenco di elementi, ad esempio
 
 In una casella di riepilogo a selezione singola, l'utente può selezionare un solo elemento. In una casella di riepilogo a selezione multipla è possibile selezionare un intervallo di elementi. Quando l'utente seleziona un elemento, viene evidenziato e la casella di riepilogo Invia un messaggio di notifica alla finestra padre.
 
-È possibile creare una casella di riepilogo da un modello di finestra di dialogo o direttamente nel codice. Per crearla direttamente, costruire l' `CListBox` oggetto, quindi chiamare la funzione membro [create](#create) per creare il controllo casella di riepilogo di Windows e `CListBox` collegarlo all'oggetto. Per utilizzare una casella di riepilogo in un modello di finestra di dialogo, dichiarare una variabile della casella di riepilogo nella classe della `DDX_Control` finestra di dialogo, quindi utilizzare `DoDataExchange` nella funzione della classe della finestra di dialogo per connettere la variabile membro al controllo. Questa operazione viene eseguita automaticamente quando si aggiunge una variabile di controllo alla classe della finestra di dialogo.
+È possibile creare una casella di riepilogo da un modello di finestra di dialogo o direttamente nel codice. Per crearla direttamente, costruire l'oggetto `CListBox`, quindi chiamare la funzione membro [create](#create) per creare il controllo casella di riepilogo di Windows e collegarlo all'oggetto `CListBox`. Per utilizzare una casella di riepilogo in un modello di finestra di dialogo, dichiarare una variabile della casella di riepilogo nella classe della finestra di dialogo, quindi utilizzare `DDX_Control` nella funzione `DoDataExchange` della classe della finestra di dialogo per connettere la variabile membro al controllo. Questa operazione viene eseguita automaticamente quando si aggiunge una variabile di controllo alla classe della finestra di dialogo.
 
-La costruzione può essere un processo in un unico passaggio in una classe `CListBox`derivata da. Scrivere un costruttore per la classe derivata e chiamare `Create` dall'interno del costruttore.
+La costruzione può essere un processo in un unico passaggio in una classe derivata da `CListBox`. Scrivere un costruttore per la classe derivata e chiamare `Create` dall'interno del costruttore.
 
 Se si desidera gestire i messaggi di notifica di Windows inviati da una casella di riepilogo al relativo elemento padre (in genere una classe derivata da [CDialog](../../mfc/reference/cdialog-class.md)), aggiungere una voce della mappa messaggi e una funzione membro del gestore del messaggio alla classe padre per ogni messaggio.
 
@@ -195,7 +196,7 @@ Ogni voce della mappa messaggi assume il formato seguente:
 
 `ON_Notification( id, memberFxn )`
 
-dove `id` specifica l'ID della finestra figlio del controllo casella di riepilogo che invia la notifica `memberFxn` e è il nome della funzione membro padre scritta per gestire la notifica.
+dove `id` specifica l'ID della finestra figlio del controllo casella di riepilogo che invia la notifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.
 
 Il prototipo di funzione del padre è il seguente:
 
@@ -209,21 +210,21 @@ Di seguito è riportato un elenco di potenziali voci della mappa messaggi e una 
 
 - ON_LBN_KILLFOCUS la casella di riepilogo sta perdendo lo stato attivo per l'input.
 
-- ON_LBN_SELCANCEL la selezione della casella di riepilogo corrente viene annullata. Questo messaggio viene inviato solo quando una casella di riepilogo presenta lo stile LBS_NOTIFY.
+- ON_LBN_SELCANCEL la selezione della casella di riepilogo corrente viene annullata. Questo messaggio viene inviato solo quando una casella di riepilogo dispone dello stile LBS_NOTIFY.
 
-- ON_LBN_SELCHANGE la selezione nella casella di riepilogo è cambiata. Questa notifica non viene inviata se la selezione viene modificata dalla funzione membro [CListBox:: cursel](#setcursel) . Questa notifica si applica solo a una casella di riepilogo con lo stile LBS_NOTIFY. Il messaggio di notifica LBN_SELCHANGE viene inviato per una casella di riepilogo a selezione multipla ogni volta che l'utente preme un tasto di direzione, anche se la selezione non cambia.
+- ON_LBN_SELCHANGE la selezione nella casella di riepilogo è stata modificata. Questa notifica non viene inviata se la selezione viene modificata dalla funzione membro [CListBox:: cursel](#setcursel) . Questa notifica si applica solo a una casella di riepilogo con lo stile LBS_NOTIFY. Il messaggio di notifica LBN_SELCHANGE viene inviato per una casella di riepilogo a selezione multipla ogni volta che l'utente preme un tasto di direzione, anche se la selezione non cambia.
 
 - ON_LBN_SETFOCUS la casella di riepilogo riceve lo stato attivo per l'input.
 
-- ON_WM_CHARTOITEM. una casella di riepilogo creata dal proprietario senza stringhe riceve un messaggio WM_CHAR.
+- ON_WM_CHARTOITEM una casella di riepilogo creata dal proprietario priva di stringhe riceve un messaggio di WM_CHAR.
 
-- ON_WM_VKEYTOITEM una casella di riepilogo con lo stile LBS_WANTKEYBOARDINPUT riceve un messaggio WM_KEYDOWN.
+- ON_WM_VKEYTOITEM una casella di riepilogo con lo stile LBS_WANTKEYBOARDINPUT riceve un messaggio di WM_KEYDOWN.
 
-Se si crea un `CListBox` oggetto in una finestra di dialogo (tramite una risorsa della finestra di `CListBox` dialogo), l'oggetto viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
+Se si crea un oggetto `CListBox` in una finestra di dialogo (tramite una risorsa della finestra di dialogo), l'oggetto `CListBox` viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
 
-Se si crea un `CListBox` oggetto all'interno di una finestra, potrebbe essere necessario eliminare `CListBox` l'oggetto. Se si crea l' `CListBox` oggetto nello stack, questo viene eliminato automaticamente. Se si crea l' `CListBox` oggetto nell'heap usando la **nuova** funzione, è necessario chiamare **Delete** nell'oggetto per eliminarlo quando l'utente chiude la finestra padre.
+Se si crea un oggetto `CListBox` all'interno di una finestra, potrebbe essere necessario eliminare l'oggetto `CListBox`. Se si crea l'oggetto `CListBox` nello stack, questo viene eliminato automaticamente. Se si crea l'oggetto `CListBox` nell'heap usando la **nuova** funzione, è necessario chiamare **Delete** nell'oggetto per eliminarlo quando l'utente chiude la finestra padre.
 
-Se si alloca memoria nell' `CListBox` oggetto, eseguire l'override del `CListBox` distruttore per eliminare l'allocazione.
+Se si alloca memoria nell'oggetto `CListBox`, eseguire l'override del distruttore `CListBox` per eliminare l'allocazione.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -235,7 +236,7 @@ Se si alloca memoria nell' `CListBox` oggetto, eseguire l'override del `CListBox
 
 `CListBox`
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Intestazione:** afxwin.h
 
@@ -254,11 +255,11 @@ Punta alla stringa con terminazione null da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice in base zero della stringa nella casella di riepilogo. Se si verifica un errore, il valore restituito è LB_ERR. Se non è disponibile spazio sufficiente per archiviare la nuova stringa, il valore restituito è LB_ERRSPACE.
+Indice in base zero della stringa nella casella di riepilogo. Il valore restituito è LB_ERR se si verifica un errore. il valore restituito è LB_ERRSPACE se non è disponibile spazio sufficiente per archiviare la nuova stringa.
 
 ### <a name="remarks"></a>Note
 
-Se la casella di riepilogo non è stata creata con lo stile [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , la stringa viene aggiunta alla fine dell'elenco. In caso contrario, la stringa viene inserita nell'elenco e l'elenco viene ordinato. Se la casella di riepilogo è stata creata con lo stile LBS_SORT ma non con lo stile [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , il framework ordina l'elenco in base a una `CompareItem` o più chiamate alla funzione membro.
+Se la casella di riepilogo non è stata creata con lo stile [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , la stringa viene aggiunta alla fine dell'elenco. In caso contrario, la stringa viene inserita nell'elenco e l'elenco viene ordinato. Se la casella di riepilogo è stata creata con lo stile LBS_SORT ma non con lo stile [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , il framework ordina l'elenco in base a una o più chiamate alla funzione membro `CompareItem`.
 
 Usare [InsertString](#insertstring) per inserire una stringa in una posizione specifica all'interno della casella di riepilogo.
 
@@ -268,7 +269,7 @@ Usare [InsertString](#insertstring) per inserire una stringa in una posizione sp
 
 ##  <a name="chartoitem"></a>CListBox:: CharToItem
 
-Chiamata eseguita dal framework quando la finestra padre della casella di riepilogo riceve un messaggio WM_CHARTOITEM dalla casella di riepilogo.
+Chiamata eseguita dal framework quando la finestra padre della casella di riepilogo riceve un messaggio di WM_CHARTOITEM dalla casella di riepilogo.
 
 ```
 virtual int CharToItem(
@@ -290,11 +291,11 @@ Restituisce-1 o-2 per nessuna ulteriore azione o un numero non negativo per spec
 
 ### <a name="remarks"></a>Note
 
-Il messaggio WM_CHARTOITEM viene inviato dalla casella di riepilogo quando riceve un messaggio WM_CHAR, ma solo se la casella di riepilogo soddisfa tutti i criteri seguenti:
+Il messaggio WM_CHARTOITEM viene inviato dalla casella di riepilogo quando riceve un messaggio di WM_CHAR, ma solo se la casella di riepilogo soddisfa tutti i criteri seguenti:
 
 - Casella di riepilogo creata dal proprietario.
 
-- In non è impostato lo stile [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+- Lo stile del [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) non è impostato.
 
 - Contiene almeno un elemento.
 
@@ -318,7 +319,7 @@ CListBox();
 
 ### <a name="remarks"></a>Note
 
-Si costruisce `CListBox` un oggetto in due passaggi. Chiamare innanzitutto il costruttore `ClistBox` e quindi chiamare `Create`, che inizializza la casella di riepilogo di Windows e la `CListBox`collega a.
+Si costruisce un oggetto `CListBox` in due passaggi. Chiamare innanzitutto il costruttore `ClistBox` e quindi chiamare `Create`, che inizializza la casella di riepilogo di Windows e la collega al `CListBox`.
 
 ### <a name="example"></a>Esempio
 
@@ -335,19 +336,19 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpCompareItemStruct*<br/>
-Puntatore lungo a una `COMPAREITEMSTRUCT` struttura.
+Puntatore long a una struttura `COMPAREITEMSTRUCT`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Indica la posizione relativa dei due elementi descritti nella struttura [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) . Può trattarsi di uno dei valori seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |-1|L'elemento 1 Ordina prima dell'elemento 2.|
 |0|Gli elementi 1 e 2 vengono ordinati allo stesso modo.|
 |1|L'elemento 1 Ordina dopo l'elemento 2.|
 
-Per una descrizione della `COMPAREITEMSTRUCT` struttura, vedere [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) .
+Per una descrizione della struttura `COMPAREITEMSTRUCT`, vedere [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) .
 
 ### <a name="remarks"></a>Note
 
@@ -359,7 +360,7 @@ Per impostazione predefinita, questa funzione membro non esegue alcuna operazion
 
 ##  <a name="create"></a>CListBox:: create
 
-Crea la casella di riepilogo di Windows e la collega all' `CListBox` oggetto.
+Crea la casella di riepilogo di Windows e la collega all'oggetto `CListBox`.
 
 ```
 virtual BOOL Create(
@@ -375,10 +376,10 @@ virtual BOOL Create(
 Specifica lo stile della casella di riepilogo. Applicare qualsiasi combinazione di [stili di casella di riepilogo](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) alla casella.
 
 *rect*<br/>
-Specifica la posizione e le dimensioni della casella di riepilogo. Può essere un `CRect` oggetto o una `RECT` struttura.
+Specifica la posizione e le dimensioni della casella di riepilogo. Può essere un oggetto `CRect` o una struttura `RECT`.
 
 *pParentWnd*<br/>
-Specifica la finestra padre della casella di riepilogo (in `CDialog` genere un oggetto). Non deve essere NULL.
+Specifica la finestra padre della casella di riepilogo (in genere un oggetto `CDialog`). Non deve essere NULL.
 
 *nID*<br/>
 Specifica l'ID del controllo della casella di riepilogo.
@@ -389,11 +390,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Si costruisce `CListBox` un oggetto in due passaggi. Chiamare innanzitutto il costruttore e quindi chiamare `Create`, che inizializza la casella `CListBox` di riepilogo di Windows e la collega all'oggetto.
+Si costruisce un oggetto `CListBox` in due passaggi. Chiamare prima di tutto il costruttore, quindi chiamare `Create`, che inizializza la casella di riepilogo di Windows e la collega all'oggetto `CListBox`.
 
-Quando `Create` viene eseguito, Windows invia i messaggi [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)e [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) al controllo casella di riepilogo.
+Quando `Create` viene eseguito, Windows invia i messaggi di [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)e [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) al controllo casella di riepilogo.
 
-Questi messaggi vengono gestiti per impostazione predefinita dalle funzioni membro [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)e [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) nella classe `CWnd` di base. Per estendere la gestione dei messaggi predefinita, derivare una `CListBox`classe da, aggiungere una mappa messaggi alla nuova classe ed eseguire l'override delle funzioni membro del gestore di messaggi precedenti. Eseguire `OnCreate`l'override, ad esempio, per eseguire l'inizializzazione necessaria per una nuova classe.
+Questi messaggi vengono gestiti per impostazione predefinita dalle funzioni membro [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)e [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) nella classe di base `CWnd`. Per estendere la gestione dei messaggi predefinita, derivare una classe da `CListBox`, aggiungere una mappa messaggi alla nuova classe ed eseguire l'override delle funzioni membro del gestore di messaggi precedenti. Eseguire l'override `OnCreate`, ad esempio, per eseguire l'inizializzazione necessaria per una nuova classe.
 
 Applicare gli [stili della finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) seguenti a un controllo casella di riepilogo.
 
@@ -407,7 +408,7 @@ Applicare gli [stili della finestra](../../mfc/reference/styles-used-by-mfc.md#w
 
 - WS_HSCROLL aggiungere una barra di scorrimento orizzontale
 
-- WS_GROUP per raggruppare i controlli
+- WS_GROUP ai controlli di gruppo
 
 - WS_TABSTOP per consentire la tabulazione a questo controllo
 
@@ -417,7 +418,7 @@ Applicare gli [stili della finestra](../../mfc/reference/styles-used-by-mfc.md#w
 
 ##  <a name="deleteitem"></a>CListBox::D eleteItem
 
-Chiamata eseguita dal framework quando l'utente elimina un elemento da un oggetto disegnato `CListBox` dal proprietario o Elimina la casella di riepilogo.
+Chiamata eseguita dal framework quando l'utente elimina un elemento da un oggetto `CListBox` di traccia del proprietario o Elimina la casella di riepilogo.
 
 ```
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
@@ -432,7 +433,7 @@ Puntatore long a una struttura [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-
 
 L'implementazione predefinita di questa funzione non esegue alcuna operazione. Eseguire l'override di questa funzione per ricreare una casella di riepilogo creata dal proprietario in base alle esigenze.
 
-Per una descrizione della `DELETEITEMSTRUCT` struttura, vedere [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) .
+Per una descrizione della struttura `DELETEITEMSTRUCT`, vedere [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) .
 
 ### <a name="example"></a>Esempio
 
@@ -476,9 +477,9 @@ int Dir(
 ### <a name="parameters"></a>Parametri
 
 *attr*<br/>
-Può essere qualsiasi combinazione dei valori **enum** descritti in `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)o di qualsiasi combinazione dei valori seguenti:
+Può essere qualsiasi combinazione dei valori **enum** descritti in `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)o qualsiasi combinazione dei valori seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0x0000|Il file può essere letto o scritto.|
 |0x0001|Il file può essere letto, ma non scritto in.|
@@ -490,11 +491,11 @@ Può essere qualsiasi combinazione dei valori **enum** descritti in `CFile::GetS
 |0x8000|Flag esclusivo. Se viene impostato il flag exclusive, vengono elencati solo i file del tipo specificato. In caso contrario, i file del tipo specificato vengono elencati oltre ai file "normali".|
 
 *lpszWildCard*<br/>
-Punta a una stringa di specifica del file. La stringa può contenere caratteri jolly, ad esempio *.\*
+Punta a una stringa di specifica del file. La stringa può contenere caratteri jolly, ad esempio *.\*.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice in base zero dell'ultimo nome file aggiunto all'elenco. Se si verifica un errore, il valore restituito è LB_ERR. il valore restituito è LB_ERRSPACE se non è disponibile spazio sufficiente per archiviare le nuove stringhe.
+Indice in base zero dell'ultimo nome file aggiunto all'elenco. Il valore restituito è LB_ERR se si verifica un errore. il valore restituito è LB_ERRSPACE se non è disponibile spazio sufficiente per archiviare le nuove stringhe.
 
 ### <a name="example"></a>Esempio
 
@@ -515,11 +516,11 @@ Puntatore long a una struttura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-wi
 
 ### <a name="remarks"></a>Note
 
-I `itemAction` membri `itemState` e della`DRAWITEMSTRUCT` struttura definiscono l'azione di disegno da eseguire.
+I membri `itemAction` e `itemState` della struttura `DRAWITEMSTRUCT` definiscono l'azione di disegno da eseguire.
 
-Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro per implementare il disegno per `CListBox` un oggetto disegnato dal proprietario. L'applicazione deve ripristinare tutti gli oggetti GDI (Graphics Device Interface) selezionati per il contesto di visualizzazione fornito in *lpDrawItemStruct* prima che questa funzione membro venga terminata.
+Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro per implementare il disegno per un oggetto `CListBox` di disegno del proprietario. L'applicazione deve ripristinare tutti gli oggetti GDI (Graphics Device Interface) selezionati per il contesto di visualizzazione fornito in *lpDrawItemStruct* prima che questa funzione membro venga terminata.
 
-Per una descrizione della `DRAWITEMSTRUCT` struttura, vedere [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) .
+Per una descrizione della struttura `DRAWITEMSTRUCT`, vedere [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) .
 
 ### <a name="example"></a>Esempio
 
@@ -595,7 +596,7 @@ int GetAnchorIndex() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice dell'elemento di ancoraggio corrente, se ha esito positivo; in caso contrario, LB_ERR.
+Indice dell'elemento di ancoraggio corrente, se ha esito positivo; in caso contrario LB_ERR.
 
 ### <a name="remarks"></a>Note
 
@@ -655,7 +656,7 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice in base zero dell'elemento attualmente selezionato se si tratta di una casella di riepilogo a selezione singola. È LB_ERR se non è attualmente selezionato alcun elemento.
+Indice in base zero dell'elemento attualmente selezionato se si tratta di una casella di riepilogo a selezione singola. Viene LB_ERR se non è attualmente selezionato alcun elemento.
 
 In una casella di riepilogo a selezione multipla, l'indice dell'elemento con lo stato attivo.
 
@@ -744,11 +745,11 @@ int GetItemHeight(int nIndex) const;
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Specifica l'indice in base zero dell'elemento nella casella di riepilogo. Questo parametro viene utilizzato solo se la casella di riepilogo presenta lo stile LBS_OWNERDRAWVARIABLE. in caso contrario, deve essere impostato su 0.
+Specifica l'indice in base zero dell'elemento nella casella di riepilogo. Questo parametro viene utilizzato solo se la casella di riepilogo presenta lo stile LBS_OWNERDRAWVARIABLE; in caso contrario, deve essere impostato su 0.
 
 ### <a name="return-value"></a>Valore restituito
 
-Altezza, in pixel, degli elementi nella casella di riepilogo. Se la casella di riepilogo ha lo stile [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , il valore restituito è l'altezza dell'elemento specificato da *nIndex*. Se si verifica un errore, il valore restituito è LB_ERR.
+Altezza, in pixel, degli elementi nella casella di riepilogo. Se la casella di riepilogo presenta lo stile [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , il valore restituito è l'altezza dell'elemento specificato da *nIndex*. Se si verifica un errore, il valore restituito viene LB_ERR.
 
 ### <a name="example"></a>Esempio
 
@@ -790,11 +791,11 @@ DWORD GetListBoxInfo() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Numero di elementi per colonna dell' `CListBox` oggetto.
+Numero di elementi per colonna dell'oggetto `CListBox`.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità del messaggio [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo) , come descritto nel Windows SDK.
+Questa funzione membro emula la funzionalità del messaggio di [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo) , come descritto nel Windows SDK.
 
 ##  <a name="getlocale"></a>CListBox:: GetLocale
 
@@ -831,7 +832,7 @@ Specifica l'indice in base zero dell'elemento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Numero positivo se l'elemento specificato è selezionato; in caso contrario, è 0. Se si verifica un errore, il valore restituito è LB_ERR.
+Numero positivo se l'elemento specificato è selezionato; in caso contrario, è 0. Il valore restituito è LB_ERR se si verifica un errore.
 
 ### <a name="remarks"></a>Note
 
@@ -853,7 +854,7 @@ int GetSelCount() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Numero di elementi selezionati in una casella di riepilogo. Se la casella di riepilogo è una casella di riepilogo a selezione singola, il valore restituito è LB_ERR.
+Numero di elementi selezionati in una casella di riepilogo. Se la casella di riepilogo è una casella di riepilogo a selezione singola, il valore restituito sarà LB_ERR.
 
 ### <a name="example"></a>Esempio
 
@@ -879,7 +880,7 @@ Specifica un puntatore a un buffer sufficientemente grande per il numero di nume
 
 ### <a name="return-value"></a>Valore restituito
 
-Numero effettivo di elementi inseriti nel buffer. Se la casella di riepilogo è una casella di riepilogo a selezione singola, il valore `LB_ERR`restituito è.
+Numero effettivo di elementi inseriti nel buffer. Se la casella di riepilogo è una casella di riepilogo a selezione singola, il valore restituito sarà `LB_ERR`.
 
 ### <a name="example"></a>Esempio
 
@@ -905,18 +906,18 @@ void GetText(
 Specifica l'indice in base zero della stringa da recuperare.
 
 *lpszBuffer*<br/>
-Punta al buffer che riceve la stringa. Il buffer deve contenere spazio sufficiente per la stringa e un carattere null di terminazione. La dimensione della stringa può essere determinata in anticipo chiamando la `GetTextLen` funzione membro.
+Punta al buffer che riceve la stringa. Il buffer deve contenere spazio sufficiente per la stringa e un carattere null di terminazione. La dimensione della stringa può essere determinata in anticipo chiamando la funzione membro `GetTextLen`.
 
 *rString*<br/>
 Riferimento a un oggetto `CString`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Lunghezza, in byte, della stringa, escluso il carattere null di terminazione. Se *nIndex* non specifica un indice valido, il valore restituito è LB_ERR.
+Lunghezza, in byte, della stringa, escluso il carattere null di terminazione. Se *nIndex* non specifica un indice valido, il valore restituito viene LB_ERR.
 
 ### <a name="remarks"></a>Note
 
-Il secondo formato di questa funzione membro compila un `CString` oggetto con il testo della stringa.
+Il secondo formato di questa funzione membro compila un oggetto `CString` con il testo della stringa.
 
 ### <a name="example"></a>Esempio
 
@@ -937,7 +938,7 @@ Specifica l'indice in base zero della stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
-Lunghezza della stringa in caratteri, escluso il carattere null di terminazione. Se *nIndex* non specifica un indice valido, il valore restituito è LB_ERR.
+Lunghezza della stringa in caratteri, escluso il carattere null di terminazione. Se *nIndex* non specifica un indice valido, il valore restituito viene LB_ERR.
 
 ### <a name="example"></a>Esempio
 
@@ -953,7 +954,7 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice in base zero del primo elemento visibile in una casella di riepilogo se ha esito positivo, LB_ERR in caso contrario.
+Indice in base zero del primo elemento visibile in una casella di riepilogo in caso di esito positivo, LB_ERR in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -983,15 +984,15 @@ Specifica la quantità di memoria, in byte, da allocare per le stringhe di eleme
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, il numero massimo di elementi che la casella di riepilogo può archiviare prima che sia necessaria una riallocazione della memoria. in caso contrario, LB_ERRSPACE, che significa che non è disponibile memoria sufficiente.
+In caso di esito positivo, il numero massimo di elementi che la casella di riepilogo può archiviare prima che sia necessaria una riallocazione della memoria, in caso contrario LB_ERRSPACE, ovvero non è disponibile memoria sufficiente.
 
 ### <a name="remarks"></a>Note
 
-Chiamare questa funzione prima di aggiungere un numero elevato di elementi a `CListBox`un.
+Chiamare questa funzione prima di aggiungere un numero elevato di elementi a un `CListBox`.
 
 Questa funzione consente di velocizzare l'inizializzazione di caselle di riepilogo con un numero elevato di elementi (più di 100). Viene preallocata la quantità di memoria specificata in modo che le funzioni [AddString](#addstring), [InsertString](#insertstring)e [dir](#dir) successive importino il tempo più breve possibile. È possibile utilizzare le stime per i parametri. Se si esegue la sovrastima, viene allocata una memoria aggiuntiva; Se si sottovaluta, l'allocazione normale viene utilizzata per gli elementi che superano la quantità preallocata.
 
-Solo Windows 95/98: Il parametro *nItems* è limitato ai valori a 16 bit. Ciò significa che le caselle di riepilogo non possono contenere più di 32.767 elementi. Sebbene il numero di elementi sia limitato, le dimensioni totali degli elementi in una casella di riepilogo sono limitate solo dalla memoria disponibile.
+Solo Windows 95/98: il parametro *nItems* è limitato ai valori a 16 bit. Ciò significa che le caselle di riepilogo non possono contenere più di 32.767 elementi. Sebbene il numero di elementi sia limitato, le dimensioni totali degli elementi in una casella di riepilogo sono limitate solo dalla memoria disponibile.
 
 ### <a name="example"></a>Esempio
 
@@ -1017,7 +1018,7 @@ Punta a una stringa con terminazione null da inserire.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice in base zero della posizione in cui è stata inserita la stringa. Se si verifica un errore, il valore restituito è LB_ERR. Se non è disponibile spazio sufficiente per archiviare la nuova stringa, il valore restituito è LB_ERRSPACE.
+Indice in base zero della posizione in cui è stata inserita la stringa. Il valore restituito è LB_ERR se si verifica un errore. il valore restituito è LB_ERRSPACE se non è disponibile spazio sufficiente per archiviare la nuova stringa.
 
 ### <a name="remarks"></a>Note
 
@@ -1043,7 +1044,7 @@ UINT ItemFromPoint(
 Punto per il quale trovare l'elemento più vicino, specificato in relazione all'angolo superiore sinistro dell'area client della casella di riepilogo.
 
 *bOutside*<br/>
-Riferimento a una variabile BOOL che verrà impostata su TRUE se *PT* si trova all'esterno dell'area client dell'elemento della casella di riepilogo più vicino, false se *PT* si trova all'interno dell'area client dell'elemento della casella di riepilogo più vicino.
+Riferimento a una variabile BOOL che verrà impostata su TRUE se *PT* si trova all'esterno dell'area client della casella di riepilogo, false se *PT* si trova all'interno dell'area client della casella di riepilogo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1072,11 +1073,11 @@ Puntatore long a una struttura [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns
 
 ### <a name="remarks"></a>Note
 
-Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro e `MEASUREITEMSTRUCT` compilare la struttura per informare le finestre delle dimensioni della casella di riepilogo. Se la casella di riepilogo viene creata con lo stile [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , il Framework chiama questa funzione membro per ogni elemento nella casella di riepilogo. In caso contrario, questo membro viene chiamato una sola volta.
+Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro e compilare la struttura `MEASUREITEMSTRUCT` per informare le finestre delle dimensioni della casella di riepilogo. Se la casella di riepilogo viene creata con lo stile [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , il Framework chiama questa funzione membro per ogni elemento nella casella di riepilogo. In caso contrario, questo membro viene chiamato una sola volta.
 
-Per ulteriori informazioni sull'utilizzo dello stile [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) in una casella di riepilogo creata dal proprietario creata con `SubclassDlgItem` la funzione membro `CWnd`di, vedere la discussione nella [Nota tecnica 14](../../mfc/tn014-custom-controls.md).
+Per ulteriori informazioni sull'utilizzo dello stile [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) in una casella di riepilogo creata dal proprietario con la funzione membro `SubclassDlgItem` di `CWnd`, vedere la discussione nella [Nota tecnica 14](../../mfc/tn014-custom-controls.md).
 
-Per una descrizione della `MEASUREITEMSTRUCT` struttura, vedere [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) .
+Per una descrizione della struttura `MEASUREITEMSTRUCT`, vedere [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) .
 
 ### <a name="example"></a>Esempio
 
@@ -1120,11 +1121,11 @@ Indice dell'elemento selezionato se la ricerca ha avuto esito positivo. Se la ri
 
 Se necessario, viene visualizzata la casella di riepilogo per visualizzare l'elemento selezionato.
 
-Questa funzione membro non può essere usata con una casella di riepilogo con stile [LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+Questa funzione membro non può essere usata con una casella di riepilogo con lo stile [LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 Un elemento viene selezionato solo se i caratteri iniziali (dal punto iniziale) corrispondono ai caratteri nella stringa specificata da *lpszItem*.
 
-Usare la `FindString` funzione membro per trovare una stringa senza selezionare l'elemento.
+Usare la funzione membro `FindString` per trovare una stringa senza selezionare l'elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1280,7 +1281,7 @@ Se la dimensione della casella di riepilogo è inferiore a questo valore, la bar
 
 Per rispondere a una chiamata a `SetHorizontalExtent`, è necessario che la casella di riepilogo sia stata definita con lo stile [WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles) .
 
-Questa funzione membro non è utile per le caselle di riepilogo a più colonne. Per le caselle di riepilogo a più colonne `SetColumnWidth` , chiamare la funzione membro.
+Questa funzione membro non è utile per le caselle di riepilogo a più colonne. Per le caselle di riepilogo a più colonne, chiamare la funzione membro `SetColumnWidth`.
 
 ### <a name="example"></a>Esempio
 
@@ -1355,7 +1356,7 @@ int SetItemHeight(
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Specifica l'indice in base zero dell'elemento nella casella di riepilogo. Questo parametro viene utilizzato solo se la casella di riepilogo presenta lo stile LBS_OWNERDRAWVARIABLE. in caso contrario, deve essere impostato su 0.
+Specifica l'indice in base zero dell'elemento nella casella di riepilogo. Questo parametro viene utilizzato solo se la casella di riepilogo presenta lo stile LBS_OWNERDRAWVARIABLE; in caso contrario, deve essere impostato su 0.
 
 *cyItemHeight*<br/>
 Specifica l'altezza, in pixel, dell'elemento.
@@ -1366,7 +1367,7 @@ LB_ERR se l'indice o l'altezza non è valido.
 
 ### <a name="remarks"></a>Note
 
-Se la casella di riepilogo ha lo stile [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , questa funzione imposta l'altezza dell'elemento specificato da *nIndex*. In caso contrario, questa funzione imposta l'altezza di tutti gli elementi nella casella di riepilogo.
+Se la casella di riepilogo dispone dello stile [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , questa funzione imposta l'altezza dell'elemento specificato da *nIndex*. In caso contrario, questa funzione imposta l'altezza di tutti gli elementi nella casella di riepilogo.
 
 ### <a name="example"></a>Esempio
 
@@ -1451,7 +1452,7 @@ Le tabulazioni vengono impostate in ogni unità di dialogo *cxEachStop* . Per un
 Specifica il numero di tabulazioni da includere nella casella di riepilogo.
 
 *rgTabStops*<br/>
-Punta al primo membro di una matrice di numeri interi contenenti le posizioni di interruzione di tabulazione nelle unità di dialogo. Un'unità di dialogo è una distanza orizzontale o verticale. Un'unità della finestra di dialogo orizzontale è uguale a un quarto dell'unità di larghezza di base della finestra di dialogo corrente e un'unità di dialogo verticale è uguale a un ottavo dell'unità di altezza di base della finestra di dialogo corrente. Le unità di base della finestra di dialogo vengono calcolate in base all'altezza e alla larghezza del tipo di carattere del sistema corrente. La `GetDialogBaseUnits` funzione Windows restituisce le unità di base della finestra di dialogo correnti in pixel. Il numero di tabulazioni deve essere ordinato in ordine crescente. non sono consentite schede back.
+Punta al primo membro di una matrice di numeri interi contenenti le posizioni di interruzione di tabulazione nelle unità di dialogo. Un'unità di dialogo è una distanza orizzontale o verticale. Un'unità della finestra di dialogo orizzontale è uguale a un quarto dell'unità di larghezza di base della finestra di dialogo corrente e un'unità di dialogo verticale è uguale a un ottavo dell'unità di altezza di base della finestra di dialogo corrente. Le unità di base della finestra di dialogo vengono calcolate in base all'altezza e alla larghezza del tipo di carattere del sistema corrente. La funzione `GetDialogBaseUnits` Windows restituisce le unità di base della finestra di dialogo correnti in pixel. Il numero di tabulazioni deve essere ordinato in ordine crescente. non sono consentite schede back.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1463,7 +1464,7 @@ Per impostare le tabulazioni sulle dimensioni predefinite di 2 unità di dialogo
 
 Per impostare le tabulazioni su una matrice di dimensioni, usare la versione con gli argomenti *rgTabStops* e *nTabStops* . Verrà impostata una tabulazione per ogni valore in *rgTabStops*, fino al numero specificato da *nTabStops*.
 
-Per rispondere a una chiamata alla `SetTabStops` funzione membro, è necessario che la casella di riepilogo sia stata creata con lo stile [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+Per rispondere a una chiamata alla funzione membro `SetTabStops`, è necessario che la casella di riepilogo sia stata creata con lo stile [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 ### <a name="example"></a>Esempio
 
@@ -1496,7 +1497,7 @@ Il sistema scorre la casella di riepilogo finché l'elemento specificato da *nIn
 
 ##  <a name="vkeytoitem"></a>CListBox:: VKeyToItem
 
-Chiamata eseguita dal framework quando la finestra padre della casella di riepilogo riceve un messaggio WM_VKEYTOITEM dalla casella di riepilogo.
+Chiamata eseguita dal framework quando la finestra padre della casella di riepilogo riceve un messaggio di WM_VKEYTOITEM dalla casella di riepilogo.
 
 ```
 virtual int VKeyToItem(
@@ -1518,9 +1519,9 @@ Restituisce-2 per nessuna azione ulteriore,-1 per l'azione predefinita o un nume
 
 ### <a name="remarks"></a>Note
 
-Il messaggio WM_VKEYTOITEM viene inviato dalla casella di riepilogo quando riceve un messaggio WM_KEYDOWN, ma solo se la casella di riepilogo soddisfa i requisiti seguenti:
+Il messaggio WM_VKEYTOITEM viene inviato dalla casella di riepilogo quando riceve un messaggio di WM_KEYDOWN, ma solo se la casella di riepilogo soddisfa i requisiti seguenti:
 
-- È impostato lo stile [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+- Dispone del set di stili [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 - Contiene almeno un elemento.
 
@@ -1544,6 +1545,6 @@ Un valore restituito pari a 0 o superiore specifica l'indice di un elemento nell
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Classe CButton](../../mfc/reference/cbutton-class.md)<br/>
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
-[Classe CEdit](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [Classe CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Classe CStatic](../../mfc/reference/cstatic-class.md)
