@@ -1,6 +1,7 @@
 ---
 title: _popen, _wpopen
-ms.date: 11/04/2016
+description: Un riferimento per le funzioni della libreria Microsoft C Runtime (CRT) _popen e _wpopen.
+ms.date: 01/28/2020
 api_name:
 - _popen
 - _wpopen
@@ -36,12 +37,21 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- _popen
+- _wpopen
+- _tpopen
+- _doserrno
+- errno
+- _sys_errlist
+- _sys_nerr
+- EINVAL
+ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950990"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894320"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -65,21 +75,21 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>Parametri
 
-*command*<br/>
+\ *comando*
 Comando da eseguire.
 
-*mode*<br/>
+\ *modalità*
 Modalità del flusso restituito.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un flusso associato a un'estremità della pipe creata. L'altra estremità della pipe viene associata all'input standard o all'output standard del comando generato. Le funzioni restituiscono **NULL** in caso di errore. Se l'errore è un parametro non valido, ad esempio se il *comando* o la *modalità* è un puntatore null o la *modalità* non è una modalità valida, **errno** viene impostato su **EINVAL**. Per informazioni sulle modalità valide, vedere la sezione Note.
+Restituisce un flusso associato a un'estremità della pipe creata. L'altra estremità della pipe viene associata all'input standard o all'output standard del comando generato. Le funzioni restituiscono **NULL** in caso di errore. Se l'errore è causato da un parametro non valido, **errno** viene impostato su **EINVAL**. Per informazioni sulle modalità valide, vedere la sezione Note.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-La funzione **_popen** crea una pipe e esegue in modo asincrono una copia generata del processore dei comandi con il *comando*stringa specificato. La stringa di caratteri *mode* specifica il tipo di accesso richiesto, come segue.
+La funzione **_popen** crea una pipe. Esegue quindi in modo asincrono una copia generata del processore dei comandi e usa il *comando* come riga di comando. La stringa di caratteri *mode* specifica il tipo di accesso richiesto, come segue.
 
 |Modalità di accesso|Descrizione|
 |-|-|
@@ -99,14 +109,14 @@ La funzione **_popen** crea una pipe e esegue in modo asincrono una copia genera
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -141,7 +151,7 @@ int main( void )
 
    while(fgets(psBuffer, 128, pPipe))
    {
-      printf(psBuffer);
+      puts(psBuffer);
    }
 
    /* Close pipe and print return value of pPipe. */
@@ -156,9 +166,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Esempio di output
-
-Questo output presuppone che esista un solo file nella directory corrente con estensione c.
+Questo output presuppone che sia presente un solo file nella directory corrente con l'estensione del nome di file `.c`.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -175,6 +183,6 @@ Process returned 0
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_pclose](pclose.md)<br/>
-[_pipe](pipe.md)<br/>
+\ [controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)
+[_pclose](pclose.md)\
+[_pipe](pipe.md)
