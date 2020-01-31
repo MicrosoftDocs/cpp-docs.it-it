@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 2212f9e40c78932b63eebfc221ad2f07fa3d3f9d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943703"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821434"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -52,30 +52,30 @@ Byte da allocare dallo stack.
 
 ## <a name="return-value"></a>Valore restituito
 
-La routine **alloca** restituisce un puntatore **void** allo spazio allocato, che è sicuramente allineato per l'archiviazione di qualsiasi tipo di oggetto. Se *size* è 0, **alloca** alloca un elemento di lunghezza zero e restituisce un puntatore valido a tale elemento.
+La routine **_alloca** restituisce un puntatore **void** allo spazio allocato, che è sicuramente allineato in modo adeguato per l'archiviazione di qualsiasi tipo di oggetto. Se *size* è 0, **_alloca** alloca un elemento di lunghezza zero e restituisce un puntatore valido a tale elemento.
 
 Se lo spazio non può essere allocato viene generata un'eccezione di overflow dello stack. L'eccezione di overflow dello stack non è un'eccezione C++; si tratta di un'eccezione strutturata. Invece di usare la gestione delle eccezioni C++, è necessario usare la [gestione delle eccezioni strutturata](../../cpp/structured-exception-handling-c-cpp.md).
 
 ## <a name="remarks"></a>Note
 
-**alloca** alloca i byte di *dimensioni* dallo stack del programma. Lo spazio allocato viene liberato automaticamente al termine della funzione chiamante, non quando l'allocazione passa semplicemente fuori dall'ambito. Non passare quindi il valore del puntatore restituito da **alloca** come argomento a [Free](free.md).
+**_alloca** alloca i byte di *dimensioni* dallo stack del programma. Lo spazio allocato viene liberato automaticamente al termine della funzione chiamante, non quando l'allocazione passa semplicemente fuori dall'ambito. Non passare quindi il valore del puntatore restituito da **_alloca** come argomento a [Free](free.md).
 
-Esistono restrizioni per chiamare in modo esplicito **alloca** in un gestore di eccezioni (eh). Le routine EH eseguite su processori x86 operano nel relativo frame di memoria: Eseguono le attività nello spazio di memoria che non è basato sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, chiamando in modo esplicito **alloca** in uno degli scenari seguenti, si verifica un errore di programma durante la restituzione alla routine eh chiamante:
+Esistono restrizioni per chiamare in modo esplicito **_alloca** in un gestore di eccezioni (eh). Le routine EH in esecuzione su processori x86 operano nel relativo frame di memoria: eseguono le attività nello spazio di memoria che non è basato sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, chiamando in modo esplicito **_alloca** in uno degli scenari seguenti, si verifica un errore di programma durante la restituzione alla routine eh chiamante:
 
-- Espressione di filtro eccezioni Windows NT SEH:`__except ( _alloca() )`
+- Espressione di filtro eccezioni Windows NT SEH: `__except ( _alloca() )`
 
-- Gestore eccezioni finale SEH Windows NT:`__finally { _alloca() }`
+- Gestore eccezioni finale SEH Windows NT: `__finally { _alloca() }`
 
 - Espressione della clausola catch EH C++
 
-Tuttavia, **alloca** può essere chiamato direttamente dall'interno di una routine eh o da un callback fornito dall'applicazione che viene richiamato da uno degli scenari eh elencati in precedenza.
+Tuttavia, **_alloca** può essere chiamato direttamente dall'interno di una routine eh o da un callback fornito dall'applicazione che viene richiamato da uno degli scenari eh elencati in precedenza.
 
 > [!IMPORTANT]
-> In Windows XP, se **alloca** viene chiamato all'interno di un blocco try/catch, è necessario chiamare [resetstkoflw](resetstkoflw.md) nel blocco catch.
+> In Windows XP, se **_alloca** viene chiamato all'interno di un blocco try/catch, è necessario chiamare [_resetstkoflw](resetstkoflw.md) nel blocco catch.
 
-Oltre alle restrizioni precedenti, quando si usa l'opzione[/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) , non è possibile usare **alloca** nei blocchi **__except** . Per altre informazioni, vedere [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Oltre alle restrizioni precedenti, quando si usa l'opzione[/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) , non è possibile usare **_alloca** nei blocchi di **__except** . Per altre informazioni, vedere [Limitazioni di /clr](../../build/reference/clr-restrictions.md).
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
@@ -119,7 +119,7 @@ int main()
         }
     }
 
-    // If an exception occured with the _alloca function
+    // If an exception occurred with the _alloca function
     __except( GetExceptionCode() == STATUS_STACK_OVERFLOW )
     {
         printf_s("_alloca failed!\n");

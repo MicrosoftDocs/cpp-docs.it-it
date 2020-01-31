@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516676"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821637"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Override espliciti (C++/CLI e C++/CX)
 
@@ -33,31 +33,31 @@ Elenco di tipi, nomi e argomenti restituiti della funzione di override.  Si noti
 *type*<br/>
 Tipo di base che contiene una funzione di cui eseguire l'override.
 
-*function*<br/>
+*funzione*<br/>
 Elenco delimitato da virgole di uno o più nomi di funzione di cui eseguire l'override.
 
 *overriding-function-definition*<br/>
 Istruzioni del corpo della funzione che definiscono la funzione di override.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
-Usare override espliciti per creare un alias per una firma del metodo o per specificare implementazioni diverse per metodi con la stessa firma.
+Utilizzare override espliciti per creare un alias per una firma del metodo o per fornire implementazioni diverse per i metodi con la stessa firma.
 
 Per informazioni sulla modifica del comportamento di tipi ereditati e membri di tipi ereditati, vedere [Identificatori di override](override-specifiers-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti di
 
 Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Per informazioni sugli override espliciti in codice nativo o codice compilato con `/clr:oldSyntax`, vedere [Override espliciti](../cpp/explicit-overrides-cpp.md).
 
-### <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti di
 
 Opzione del compilatore: `/clr`
 

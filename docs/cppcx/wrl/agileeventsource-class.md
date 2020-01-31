@@ -7,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223040"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821740"
 ---
 # <a name="agileeventsource-class"></a>Classe AgileEventSource
 
-Rappresenta un evento generato da un componente di agile, che è un componente che è possibile accedere da qualsiasi thread. Eredita da [EventSource](eventsource-class.md) ed esegue l'override di `Add` funzione membro con un parametro di tipo aggiuntivi per specificare le opzioni richiamare l'evento agile.
+Rappresenta un evento generato da un componente agile, ovvero un componente a cui è possibile accedere da qualsiasi thread. Eredita da [EventSource](eventsource-class.md) ed esegue l'override della funzione membro `Add` con un parametro di tipo aggiuntivo per specificare le opzioni per la modalità di richiamo dell'evento agile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,14 +33,14 @@ class AgileEventSource :
 ## <a name="parameters"></a>Parametri
 
 *TDelegateInterface*<br/>
-L'interfaccia a un delegato che rappresenta un gestore eventi.
+Interfaccia per un delegato che rappresenta un gestore eventi.
 
 *TEventSourceOptions*<br/>
-Un' [InvokeModeOptions](invokemodeoptions-structure.md) il cui campo invokeMode è impostato su struttura `InvokeMode::StopOnFirstError` o `InvokeMode::FireAll`.
+Struttura [InvokeModeOptions](invokemodeoptions-structure.md) il cui campo invokeMode è impostato su `InvokeMode::StopOnFirstError` o `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Note
 
-La maggior parte dei componenti di runtime di Windows sono agili componenti. Per altre informazioni, vedere [Threading e marshalling (C++ c++ /CX)](../../cppcx/threading-and-marshaling-c-cx.md).
+La maggior parte dei componenti del Windows Runtime sono componenti agile. Per ulteriori informazioni, vedere [Threading e marshalling (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -48,7 +48,7 @@ La maggior parte dei componenti di runtime di Windows sono agili componenti. Per
 
 `AgileEventSource`
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Intestazione:** Event. h
 
@@ -58,13 +58,13 @@ La maggior parte dei componenti di runtime di Windows sono agili componenti. Per
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[Metodo AgileEventSource::Add](#add)|Aggiunge il gestore dell'evento agile rappresentato dall'interfaccia del delegato specificato all'insieme di gestori di eventi per l'oggetto corrente **AgileEventSource** oggetto.|
+|[Metodo AgileEventSource:: Add](#add)|Accoda il gestore eventi agile rappresentato dall'interfaccia del delegato specificata al set di gestori eventi per l'oggetto **AgileEventSource** corrente.|
 
-## <a name="add"></a> Metodo AgileEventSource::Add
+## <a name="add"></a>Metodo AgileEventSource:: Add
 
-Aggiunge il gestore dell'evento rappresentato dall'interfaccia del delegato specificato all'insieme di gestori di eventi per l'oggetto corrente [EventSource](eventsource-class.md) oggetto.
+Accoda il gestore eventi rappresentato dall'interfaccia del delegato specificata al set di gestori eventi per l'oggetto [EventSource](eventsource-class.md) corrente.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -78,10 +78,10 @@ HRESULT Add(
 ### <a name="parameters"></a>Parametri
 
 *delegateInterface*<br/>
-L'interfaccia per un oggetto delegato, che rappresenta un gestore eventi.
+Interfaccia per un oggetto delegato, che rappresenta un gestore eventi.
 
 *token*<br/>
-Quando questa operazione viene completata, un handle che rappresenta l'evento. Usare questo token come parametro per il `Remove()` metodo rimuovere il gestore dell'evento.
+Al termine di questa operazione, un handle che rappresenta l'evento. Utilizzare questo token come parametro per il metodo `Remove()` per rimuovere il gestore eventi.
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -1,18 +1,18 @@
 ---
-title: "Procedura dettagliata: Creazione di un'applicazione Ribbon utilizzando MFC"
+title: "Procedura dettagliata: creazione di un'applicazione barra multifunzione utilizzando MFC"
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
-- creating a ribbon aplication (MFC)
+- creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 41084a78287521610ba400deab32d1052c9217c1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907386"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821922"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procedura dettagliata: Creazione di un'applicazione Ribbon utilizzando MFC
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procedura dettagliata: creazione di un'applicazione barra multifunzione utilizzando MFC
 
 In questa procedura dettagliata viene illustrato come utilizzare la **creazione guidata applicazione MFC** per creare un'applicazione con una barra multifunzione per impostazione predefinita. È quindi possibile espandere la barra multifunzione aggiungendo una categoria della barra multifunzione **personalizzata** con un pannello della barra multifunzione **Preferiti** , quindi aggiungere alcuni comandi utilizzati di frequente al pannello.
 
@@ -22,7 +22,7 @@ In questa procedura dettagliata si presuppone che Visual Studio sia stato impost
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Per creare un'applicazione MFC con una barra multifunzione
 
-1. Utilizzare la **creazione guidata applicazione MFC** per creare un'applicazione MFC con una barra multifunzione. Vedere [Procedura dettagliata: Uso dei nuovi controlli](walkthrough-using-the-new-mfc-shell-controls.md) della shell MFC per istruzioni su come aprire la procedura guidata per la versione di Visual Studio.
+1. Utilizzare la **creazione guidata applicazione MFC** per creare un'applicazione MFC con una barra multifunzione. Vedere [procedura dettagliata: uso dei nuovi controlli della shell MFC](walkthrough-using-the-new-mfc-shell-controls.md) per istruzioni su come aprire la procedura guidata per la versione di Visual Studio.
 
 1. Impostare le opzioni seguenti nella **creazione guidata applicazione MFC**:
 
@@ -54,7 +54,7 @@ In questa procedura dettagliata si presuppone che Visual Studio sia stato impost
 
     Fare clic con il pulsante destro del mouse su **Categoria1** e quindi scegliere **Proprietà**. Nella finestra **Proprietà** modificare **didascalia** in *personalizzata*.
 
-    Le proprietà **large images** e **small images** specificano le bitmap utilizzate come icone per gli elementi della barra multifunzione di questa categoria. La creazione di bitmap personalizzate non rientra nell'ambito di questa procedura dettagliata, pertanto riutilizza le bitmap create dalla procedura guidata. Le bitmap piccole sono 16 x 16 pixel. Per le immagini di piccole dimensioni, usare le bitmap a cui si `IDB_FILESMALL` accede tramite l'ID di risorsa. Le bitmap grandi sono 32 x 32 pixel. Per le immagini di grandi dimensioni, usare le bitmap a cui si `IDB_FILELARGE` accede tramite l'ID di risorsa.
+    Le proprietà **large images** e **small images** specificano le bitmap utilizzate come icone per gli elementi della barra multifunzione di questa categoria. La creazione di bitmap personalizzate non rientra nell'ambito di questa procedura dettagliata, pertanto riutilizza le bitmap create dalla procedura guidata. Le bitmap piccole sono 16 x 16 pixel. Per le immagini di piccole dimensioni, usare le bitmap a cui si accede tramite l'ID di risorsa `IDB_FILESMALL`. Le bitmap grandi sono 32 x 32 pixel. Per le immagini di grandi dimensioni, usare le bitmap a cui si accede tramite l'ID di risorsa `IDB_FILELARGE`.
 
     > [!NOTE]
     > Sugli schermi HDPI, vengono usate automaticamente le versioni HDPI delle immagini.
@@ -75,11 +75,11 @@ In questa procedura dettagliata si presuppone che Visual Studio sia stato impost
 
     Nella finestra **Proprietà** modificare la proprietà **ID** in **ID_FILE_PRINT**, che dovrebbe essere già definito. Modificare la **didascalia** in *stampa*. Modificare l' **indice dell'immagine** in *4*.
 
-    Per creare il pulsante **Stampa rapida** , fare clic sulla colonna valore proprietà accanto a **voci di menu**, quindi fare clic sui puntini di sospensione ( **...** ). **Nell'Editor elementi**fare clic sul pulsante **Aggiungi** senza etichetta per creare una voce di menu. Nella finestra **Proprietà** impostare **didascalia** su *Stampa rapida*, **ID** su *ID_FILE_PRINT_DIRECT*e **immagine** su *5*. La proprietà Image specifica l'icona di **Stampa rapida** nella `IDB_FILESMALL` risorsa bitmap.
+    Per creare il pulsante **Stampa rapida** , fare clic sulla colonna valore proprietà accanto a **voci di menu**, quindi fare clic sui puntini di sospensione ( **...** ). **Nell'Editor elementi**fare clic sul pulsante **Aggiungi** senza etichetta per creare una voce di menu. Nella finestra **Proprietà** impostare **didascalia** su *stampa rapida*, **ID** su *ID_FILE_PRINT_DIRECT*e **immagine** su *5*. La proprietà Image specifica l'icona di **Stampa rapida** nella `IDB_FILESMALL` risorsa bitmap.
 
 1. Per verificare che i pulsanti siano stati aggiunti al pannello della barra multifunzione, compila l'applicazione ed eseguila. Per compilare l'applicazione, scegliere **Compila soluzione**dal menu **Compila** . Se l'applicazione viene compilata correttamente, eseguire l'applicazione scegliendo **Avvia debug** dal menu **debug** . Verranno visualizzati il pulsante **stampa** e la casella combinata nel pannello **Preferiti** della scheda **personalizzata** sulla barra multifunzione.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 [Procedura: Personalizzare la barra di accesso rapido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 

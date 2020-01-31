@@ -2,22 +2,22 @@
 title: Enumerazioni (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: 3bdcff03872dcfe83f0be5752cec4f567fbc6b72
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: be11d8d8f38a92fbe4be00eed53dd5226bab0b59
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740217"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821753"
 ---
 # <a name="enums-ccx"></a>Enumerazioni (C++/CX)
 
-C++/CX supporta la `public enum class` parola chiave, che è analogo a uno C++ `scoped  enum`standard. Quando utilizzi un enumeratore dichiarato tramite la parola chiave `public enum class` , è necessario che utilizzi l'identificatore di enumerazione per limitare l'ambito di ogni valore dell'enumeratore.
+C++/CX supporta la parola chiave `public enum class`, che è analoga a C++ una `scoped  enum`standard. Quando utilizzi un enumeratore dichiarato tramite la parola chiave `public enum class` , è necessario che utilizzi l'identificatore di enumerazione per limitare l'ambito di ogni valore dell'enumeratore.
 
 ### <a name="remarks"></a>Note
 
 Un oggetto `public enum class` che non dispone di un identificatore di accesso, ad esempio `public`, viene considerata un' [enumerazione con ambito](../cpp/enumerations-cpp.md)C++ standard.
 
-Una `public enum class` Dichiarazione `public enum struct` o può avere un tipo sottostante di qualsiasi tipo integrale sebbene il Windows Runtime stesso richieda che il tipo sia Int32 o UInt32 per un'enumerazione Flags. Nella sintassi seguente vengono descritte le parti di `public enum class` o di `public enum struct`.
+Una dichiarazione `public enum class` o `public enum struct` può avere un tipo sottostante di qualsiasi tipo integrale sebbene il Windows Runtime stesso richieda che il tipo sia Int32 o UInt32 per un'enumerazione Flags. Nella sintassi seguente vengono descritte le parti di `public enum class` o di `public enum struct`.
 
 Nell'esempio riportato di seguito viene mostrato come definire una classe enum pubblica:
 

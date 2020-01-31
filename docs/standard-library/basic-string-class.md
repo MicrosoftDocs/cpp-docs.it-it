@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 6919f2ece4ed846cd80f791af91797373dea33b2
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 08620e0ae6b54b106daba8e0b0a392ceb1a6577d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051496"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821909"
 ---
 # <a name="basic_string-class"></a>Classe basic_string
 
@@ -139,7 +139,7 @@ class basic_string;
 \ *CharType*
 Tipo di dati di un singolo carattere da archiviare nella stringa. La C++ libreria standard fornisce le specializzazioni di questo modello di classe, con la [stringa](../standard-library/string-typedefs.md#string) delle definizioni dei tipi per gli elementi di tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), per **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) per `char16_t`e [u32string](../standard-library/string-typedefs.md#u32string) per `char32_t`.
 
-*Tratti* \
+*Tratti*\
 Diverse proprietà importanti degli elementi `CharType` in una specializzazione basic_string sono descritte dalla classe `Traits`. Il valore predefinito è `char_traits`< `CharType`>.
 
 \ *allocatore*
@@ -230,9 +230,9 @@ Se a una funzione viene richiesto di generare una sequenza più lunga di [max_si
 
 I riferimenti, i puntatori e gli iteratori che definiscono gli elementi della sequenza controllata possono diventare non validi dopo una chiamata a una funzione che modifica la sequenza controllata o dopo la prima chiamata a una funzione membro non **const**.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
-**Intestazione:** \<string>
+**Intestazione:** \<stringa >
 
 **Spazio dei nomi:** std
 
@@ -316,16 +316,16 @@ La stringa i cui caratteri devono essere aggiunti.
 *offset*\
 Indice della parte della stringa di origine che fornisce i caratteri da aggiungere.
 
-*conteggio* \
+*conteggio*\
 Il numero massimo di caratteri da aggiungere dalla stringa di origine.
 
 *char_value*\
 Il valore di caratteri da aggiungere.
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo da aggiungere.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input, const_pointer o const_iterator che punta alla posizione dell'elemento immediatamente successivo all'ultimo elemento nell'intervallo da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -471,7 +471,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 \ *ptr*
 Un puntatore ai caratteri della stringa C da assegnare alla stringa di destinazione.
 
-*conteggio* \
+*conteggio*\
 Numero di caratteri da assegnare dalla stringa di origine.
 
 \ *Str*
@@ -480,10 +480,10 @@ La stringa di origine i cui caratteri devono essere assegnati alla stringa di de
 *char_value*\
 Il valore di caratteri da assegnare.
 
-*primo* \
+*primo*\
 Un iteratore di input, const_pointer o const_iterator che punta al primo carattere dell'intervallo della stringa di origine da assegnare all'intervallo di destinazione.
 
-*ultimo* \
+*ultimo*\
 Un iteratore di input, const_pointer o const_iterator che punta al carattere immediatamente successivo all'ultimo carattere dell'intervallo della stringa di origine da assegnare all'intervallo di destinazione.
 
 \ *off*
@@ -753,7 +753,7 @@ Stringa C i cui caratteri devono essere usati per inizializzare l'oggetto `strin
 *alloc_type*\
 Classe allocatore di archiviazione per l'oggetto stringa costruito.
 
-*conteggio* \
+*conteggio*\
 Numero dei caratteri da inizializzare.
 
 \ a *destra*
@@ -765,10 +765,10 @@ Indice di un carattere in una stringa che è il primo da usare per inizializzare
 *char_value*\
 Valore di carattere da copiare nella stringa costruita.
 
-*primo* \
+*primo*\
 Iteratore di input, const_pointer o const_iterator che punta al primo elemento nell'intervallo di origine da inserire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input, const_pointer o const_iterator che punta alla posizione di quello oltre l'ultimo elemento nell'intervallo di origine da inserire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1171,7 +1171,7 @@ Il numero massimo di caratteri della stringa parametro da confrontare.
 *offset*\
 L'indice della stringa parametro da cui inizia il confronto.
 
-*conteggio* \
+*conteggio*\
 Il numero massimo di caratteri della stringa parametro da confrontare.
 
 \ *ptr*
@@ -1860,7 +1860,7 @@ int main( )
    str1_Iter--;
    str1_Iter--;
    cout << "The last character-letter of the string str1 is: " << *str1_Iter << endl;
-   cout << "The full orginal string str1 is: " << str1 << endl;
+   cout << "The full original string str1 is: " << str1 << endl;
 
    // end used to test when an iterator has reached the end of its string
    cout << "The string is now: ";
@@ -1887,7 +1887,7 @@ int main( )
 
 ```Output
 The last character-letter of the string str1 is: t
-The full orginal string str1 is: No way out.
+The full original string str1 is: No way out.
 The string is now: No way out.
 The last character-letter of the modified str1 is now: T
 The modified string str1 is now: No way ouT.
@@ -1913,10 +1913,10 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore che punta alla posizione del primo elemento nell'intervallo da cancellare.
 
-*ultimo* \
+*ultimo*\
 Iteratore che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cancellare.
 
 \ *iter*
@@ -1925,7 +1925,7 @@ Iteratore che punta alla posizione dell'elemento nella stringa da cancellare.
 *offset*\
 Indice del primo carattere della stringa da rimuovere.
 
-*conteggio* \
+*conteggio*\
 Il numero di elementi che verranno rimossi se sono presenti tanti nell'intervallo della stringa che inizia con *offset*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2031,7 +2031,7 @@ Indice della posizione da cui partirà la ricerca.
 \ *ptr*
 Stringa C che la funzione membro deve cercare.
 
-*conteggio* \
+*conteggio*\
 Numero di caratteri nella stringa C, a partire dal primo, che deve essere ricercato dalla funzione membro.
 
 \ *Str*
@@ -2206,7 +2206,7 @@ Indice della posizione da cui partirà la ricerca.
 \ *ptr*
 Stringa C che la funzione membro deve cercare.
 
-*conteggio* \
+*conteggio*\
 Numero di caratteri nella stringa C, a partire dal primo, che deve essere ricercato dalla funzione membro.
 
 \ *Str*
@@ -2394,7 +2394,7 @@ Indice della posizione da cui partirà la ricerca.
 \ *ptr*
 Stringa C che la funzione membro deve cercare.
 
-*conteggio* \
+*conteggio*\
 Numero di caratteri nella stringa C, a partire dal primo, che deve essere ricercato dalla funzione membro.
 
 \ *Str*
@@ -2581,7 +2581,7 @@ Indice della posizione in cui finirà la ricerca.
 \ *ptr*
 Stringa C che la funzione membro deve cercare.
 
-*conteggio* \
+*conteggio*\
 Numero di caratteri nella stringa C, a partire dal primo, che deve essere ricercato dalla funzione membro.
 
 \ *Str*
@@ -2770,7 +2770,7 @@ Indice della posizione in cui finirà la ricerca.
 \ *ptr*
 Stringa C che la funzione membro deve cercare.
 
-*conteggio* \
+*conteggio*\
 Numero di caratteri nella stringa C, a partire dal primo, che deve essere ricercato dalla funzione membro.
 
 \ *Str*
@@ -3034,7 +3034,7 @@ Indice della posizione dietro il punto di inserimento di nuovi caratteri.
 \ *ptr*
 Stringa C da inserire interamente o parzialmente nella stringa.
 
-*conteggio* \
+*conteggio*\
 Numero dei caratteri da inserire.
 
 \ *Str*
@@ -3049,10 +3049,10 @@ Valore di carattere degli elementi da inserire.
 \ *iter*
 Iteratore che punta alla posizione sotto la quale deve essere inserito un carattere.
 
-*primo* \
+*primo*\
 Iteratore di input, const_pointer o const_iterator che punta al primo elemento nell'intervallo di origine da inserire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input, const_pointer o const_iterator che punta alla posizione di quello oltre l'ultimo elemento nell'intervallo di origine da inserire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3127,7 +3127,7 @@ int main( )
    cout << "The string with a character inserted from a range is: "
         << str7a << endl;
 
-   // The eigth member function inserts a number of
+   // The eighth member function inserts a number of
    // characters at a specified position in the string
    string str8 ( "ABCDHIJ" );
    basic_string <char>::iterator str8_Iter = ( str8.begin ( ) + 4 );
@@ -3527,7 +3527,7 @@ Il primo elemento della stringa ha un indice zero e agli elementi seguenti vengo
 
 Il riferimento restituito può essere invalidato da riallocazioni o modifiche delle stringhe per le stringhe non **const**.
 
-Durante la compilazione con [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) impostato su 1 o 2, se si tenta di accedere a un elemento all'esterno dei limiti della stringa si verifica un errore di runtime. Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md).
+Durante la compilazione con [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) impostato su 1 o 2, se si tenta di accedere a un elemento all'esterno dei limiti della stringa si verifica un errore di runtime. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Esempio
 
@@ -3951,13 +3951,13 @@ Un iteratore che punta al primo carattere da rimuovere nella stringa operando.
 \ *last0*
 Un iteratore che punta all'ultimo carattere da rimuovere nella stringa operando.
 
-*primo* \
+*primo*\
 Iteratore, const_pointer o const_iterator che punta al primo carattere da copiare nella stringa parametro.
 
-*ultimo* \
+*ultimo*\
 Iteratore, const_pointer o const_iterator che punta all'ultimo carattere da copiare nella stringa parametro.
 
-*conteggio* \
+*conteggio*\
 Il numero di volte in cui *char_value* viene copiato nella stringa dell'operando.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4153,7 +4153,7 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*conteggio* \
+*conteggio*\
 Il numero di caratteri per il quale viene riservata la memoria.
 
 ### <a name="remarks"></a>Note
@@ -4248,7 +4248,7 @@ void resize(
 
 ### <a name="parameters"></a>Parametri
 
-*conteggio* \
+*conteggio*\
 La nuova dimensione della stringa.
 
 *char_value*\
@@ -4393,7 +4393,7 @@ Indice della posizione da cui partirà la ricerca.
 \ *ptr*
 Stringa C che la funzione membro deve cercare.
 
-*conteggio* \
+*conteggio*\
 Numero di caratteri nella stringa C, a partire dal primo, che deve essere ricercato dalla funzione membro.
 
 \ *Str*
@@ -4481,7 +4481,7 @@ int main( )
    const char *cstr3b = "am";
    indexCh3b = str3.rfind ( cstr3b , indexCh3a + 25 , 2 );
    if ( indexCh3b != npos )
-      cout << "The index of the next occurrance of 'am' in "
+      cout << "The index of the next occurrence of 'am' in "
            << "str3 begins at: " << indexCh3b << endl << endl;
    else
       cout << "There is no next occurrence of 'am' in str3 ."
@@ -4527,7 +4527,7 @@ The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
 The index of the 1st element of 'nice' in str3 is: 8
-The index of the next occurrance of 'am' in str3 begins at: 20
+The index of the next occurrence of 'am' in str3 begins at: 20
 
 The original string str4 is: This perfectly unclear.
 The substring 'clear' was not found in str4 before the 15th position.
@@ -4670,7 +4670,7 @@ basic_string<CharType, Traits, Allocator> substr(
 *offset*\
 Indice che individua l'elemento nella posizione da cui viene eseguita la copia della stringa, con un valore predefinito di 0.
 
-*conteggio* \
+*conteggio*\
 Il numero di caratteri che devono essere copiati se sono presenti.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4834,4 +4834,4 @@ The character ch2 is: H.
 ## <a name="see-also"></a>Vedere anche
 
 [\<string>](../standard-library/string.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

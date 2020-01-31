@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
+ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703129"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821512"
 ---
 # <a name="math-and-floating-point-support"></a>Supporto delle funzioni matematiche e a virgola mobile
 
@@ -25,7 +25,7 @@ Le versioni precedenti a 16 bit di Microsoft C/C++ e Microsoft Visual C++ suppor
 
 ## <a name="supported-math-and-floating-point-routines"></a>Routine matematiche e a virgola mobile supportate
 
-|Routine|Usa|
+|Routine|Utilizza|
 |-|-|
 [abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Calcola il valore assoluto di un tipo Integer
 [acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Calcola l'arcocoseno
@@ -72,7 +72,7 @@ Le versioni precedenti a 16 bit di Microsoft C/C++ e Microsoft Visual C++ suppor
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Calcola il limite minimo
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Calcola un'operazione congiunta di moltiplicazione e addizione
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Calcola il valore massimo degli argomenti
-[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Calcola il valore minimo degli argomenti
+[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Calcola il numero minimo di argomenti
 [fmod, fmodf, fmodl](../c-runtime-library/reference/fmod-fmodf.md)|Calcola il resto a virgola mobile
 [_fpclass, _fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)|Restituisce la classificazione di un valore a virgola mobile
 [fpclassify](../c-runtime-library/reference/fpclassify.md)|Restituisce la classificazione di un valore a virgola mobile
@@ -127,7 +127,7 @@ Le versioni precedenti a 16 bit di Microsoft C/C++ e Microsoft Visual C++ suppor
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcola la radice quadrata
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Ottiene la parola di stato nelle operazioni a virgola mobile
 [strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Converte una stringa in un valore **float**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Converte una stringa in un valore **long** **double**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Converte una stringa in un valore **Long** **Double**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Calcola la tangente
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Calcola la tangente iperbolica
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Calcola la funzione gamma

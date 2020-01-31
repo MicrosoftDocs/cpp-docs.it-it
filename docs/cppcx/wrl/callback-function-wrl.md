@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398901"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821688"
 ---
 # <a name="callback-function-wrl"></a>Funzione di callback (WRL)
 
@@ -233,7 +233,7 @@ Oggetto che rappresenta l'oggetto di callback e la relativa funzione membro.
 *object*<br/>
 L'oggetto di cui la funzione membro viene chiamata quando si verifica un evento.
 
-*method*<br/>
+*Metodo*<br/>
 La funzione membro da chiamare quando si verifica un evento.
 
 ## <a name="return-value"></a>Valore restituito
@@ -244,7 +244,7 @@ Oggetto la cui funzione membro è il metodo di callback specificato.
 
 La base di un oggetto delegato deve essere `IUnknown`, non `IInspectable`.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Intestazione:** Event. h
 
