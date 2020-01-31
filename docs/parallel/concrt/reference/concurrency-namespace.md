@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160072"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821844"
 ---
 # <a name="concurrency-namespace"></a>Spazio dei nomi concurrency
 
-Lo spazio dei nomi `Concurrency` fornisce classi e funzioni che consentono l'accesso al runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md) (Runtime di concorrenza).
+Lo spazio dei nomi `Concurrency` fornisce classi e funzioni che consentono l'accesso al runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,7 +41,7 @@ namespace concurrency;
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |`runtime_object_identity`|Ogni istanza del messaggio ha un'identità che lo segue quando viene duplicato e viene passato tra i componenti della messaggistica. Non può corrispondere all'indirizzo dell'oggetto del messaggio.|
 |`task_status`|Un tipo che rappresenta lo stato terminale di un'attività. I valori validi sono `completed` e `canceled`.|
@@ -50,7 +50,7 @@ namespace concurrency;
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Classe affinity_partitioner](affinity-partitioner-class.md)|La classe `affinity_partitioner` è simile alla classe `static_partitioner`, ma migliora l'affinità della cache offrendo la scelta di mappare sottointervalli ai thread di lavoro. Può migliorare notevolmente le prestazioni quando un ciclo viene eseguito di nuovo sullo stesso insieme di dati e i dati si adattano nella cache. Si noti che lo stesso oggetto `affinity_partitioner` deve essere usato con le iterazioni successive di un ciclo parallelo che viene eseguito su un particolare set di dati, per trarre vantaggio dalla località dei dati.|
 |[Classe agent](agent-class.md)|Classe destinata a essere usata come classe di base per tutti gli agenti indipendenti. Consente di nascondere lo stato ad altri agenti e di interagire attraverso il passaggio di messaggi.|
@@ -66,8 +66,8 @@ namespace concurrency;
 |[Classe concurrent_queue](concurrent-queue-class.md)|La classe `concurrent_queue` è una classe contenitore di sequenze che consente l'accesso di tipo First in First out ai relativi elementi. Abilita un set limitato di operazioni sicure per concorrenza, ad esempio `push` e `try_pop`.|
 |[Classe concurrent_unordered_map](concurrent-unordered-map-class.md)|La classe `concurrent_unordered_map` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo `std::pair<const K, _Element_type>`. La sequenza viene rappresentata in un modo che abilita le operazioni di accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
 |[Classe concurrent_unordered_multimap](concurrent-unordered-multimap-class.md)|La classe `concurrent_unordered_multimap` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo `std::pair<const K, _Element_type>`. La sequenza viene rappresentata in un modo che abilita le operazioni di accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
-|[Classe concurrent_unordered_multiset](concurrent-unordered-multiset-class.md)|Il `concurrent_unordered_multiset` classe è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in modo indipendente dalla concorrenza Abilita accodamento, accesso agli elementi, accesso iteratori e operazioni traversali di iterazione.|
-|[Classe concurrent_unordered_set](concurrent-unordered-set-class.md)|Il `concurrent_unordered_set` classe è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in modo indipendente dalla concorrenza Abilita accodamento, accesso agli elementi, accesso iteratori e operazioni traversali di iterazione.|
+|[Classe concurrent_unordered_multiset](concurrent-unordered-multiset-class.md)|La classe `concurrent_unordered_multiset` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in un modo che Abilita le operazioni di Accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
+|[Classe concurrent_unordered_set](concurrent-unordered-set-class.md)|La classe `concurrent_unordered_set` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in un modo che Abilita le operazioni di Accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
 |[Classe concurrent_vector](concurrent-vector-class.md)|La classe `concurrent_vector` è una classe contenitore di sequenze che consente un accesso casuale a qualsiasi elemento. Abilita accodamento, accesso elementi, accesso iteratori e operazioni traversali di iterazione indipendenti dalla concorrenza.|
 |[Classe Context](context-class.md)|Rappresenta un'astrazione per un contesto di esecuzione.|
 |[Classe context_self_unblock](context-self-unblock-class.md)|Questa classe descrive un'eccezione generata quando il metodo `Unblock` di un oggetto `Context` viene chiamato dallo stesso contesto. Potrebbe indicare un tentativo da parte di un contesto specificato di sbloccarsi.|
@@ -120,9 +120,9 @@ namespace concurrency;
 |[Classe structured_task_group](structured-task-group-class.md)|La classe `structured_task_group` rappresenta una raccolta altamente strutturata di lavoro parallelo. È possibile mettere in coda attività parallele singole a un `structured_task_group` usando gli oggetti `task_handle`, e attenderne il completamento, oppure annullare il gruppo di attività prima di aver terminato l'esecuzione, interrompendo in tal modo qualsiasi attività che non abbia avviato l'esecuzione.|
 |[Classe target_block](target-block-class.md)|La classe `target_block` corrisponde a una classe base astratta che mette a disposizione la funzionalità di gestione dei collegamenti di base e il controllo degli errori per blocchi di sola destinazione.|
 |[Classe task (runtime di concorrenza)](task-class.md)|Classe `task` Parallel Patterns Library (PPL). Un oggetto `task` rappresenta il lavoro che può essere eseguito in modo asincrono e contemporaneamente con altre attività e il lavoro parallelo prodotto da algoritmi paralleli nel runtime di concorrenza. Produce un risultato di tipo `_ResultType` dopo il corretto completamento. Le attività di tipo `task<void>` non producono risultati. È possibile attendere il completamento di un'attività e annullarla indipendentemente da altre attività. È anche possibile comporla con altre attività usando i criteri continuations(`then`), join(`when_all`) e choice(`when_any`).|
-|[Classe task_canceled](task-canceled-class.md)|Questa classe descrive un'eccezione generata dal livello di attività PPL per forzare l'annullamento dell'attività corrente. Viene inoltre generata per il `get()` metodo sul [attività](task-class.md), per un'attività annullata.|
+|[Classe task_canceled](task-canceled-class.md)|Questa classe descrive un'eccezione generata dal livello di attività PPL per forzare l'annullamento dell'attività corrente. Viene inoltre generata dal metodo `get()` sull' [attività](task-class.md), per un'attività annullata.|
 |[Classe task_completion_event](task-completion-event-class.md)|La classe `task_completion_event` consente di ritardare l'esecuzione di un'attività fino a quando non viene soddisfatta una condizione oppure di avviare un'attività in risposta a un evento esterno.|
-|[Classe task_continuation_context](task-continuation-context-class.md)|La classe `task_continuation_context` consente di specificare dove eseguire una continuazione. È utile solo utilizzare questa classe da un'app UWP. Per le app non di Windows Runtime, il contesto di esecuzione della continuazione attività è determinato dal runtime e non è configurabile.|
+|[Classe task_continuation_context](task-continuation-context-class.md)|La classe `task_continuation_context` consente di specificare dove eseguire una continuazione. È utile usare questa classe solo da un'app UWP. Per le app non Windows Runtime, il contesto di esecuzione della continuazione dell'attività è determinato dal runtime e non è configurabile.|
 |[Classe task_group](task-group-class.md)|La classe `task_group` rappresenta una raccolta di lavoro parallelo che può essere messa in attesa o annullata.|
 |[Classe task_handle](task-handle-class.md)|La classe `task_handle` rappresenta un elemento di lavoro parallelo individuale. Incapsula le istruzioni e i dati richiesti per eseguire un lavoro.|
 |[Classe task_options (runtime di concorrenza)](task-options-class-concurrency-runtime.md)|Rappresenta le opzioni consentite per la creazione di un'attività|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Strutture
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Struttura DispatchState](dispatchstate-structure.md)|La struttura `DispatchState` è usata per trasferire lo stato al metodo `IExecutionContext::Dispatch`. Descrive le circostanze in cui il metodo `Dispatch` viene richiamato su un'interfaccia `IExecutionContext`.|
 |[Struttura IExecutionContext](iexecutioncontext-structure.md)|Un'interfaccia a un contesto di esecuzione che può essere in esecuzione su un processore virtuale specificato e il cui contesto può essere cambiato cooperativamente.|
@@ -145,73 +145,73 @@ namespace concurrency;
 |[Struttura ITopologyExecutionResource](itopologyexecutionresource-structure.md)|Interfaccia a una risorsa di esecuzione come definita da Gestione risorse.|
 |[Struttura ITopologyNode](itopologynode-structure.md)|Interfaccia a un nodo di topologia come definito da Gestione risorse. Un nodo contiene una o più risorse di esecuzione.|
 |[Struttura IUMSCompletionList](iumscompletionlist-structure.md)|Rappresenta un elenco di completamento UMS. Quando si blocca il thread UMS, il contesto di pianificazione definito dell'utilità di pianificazione viene inviato per decidere cosa pianificare sulla radice del processore virtuale sottostante mentre il thread originale è bloccato. Quando il thread originale si sblocca, il sistema operativo lo mette in coda nell'elenco di completamento accessibile tramite l'interfaccia. L'utilità di pianificazione può eseguire una query nell'elenco di completamento sul contesto di pianificazione designato o in qualsiasi altra posizione alla ricerca di lavoro.|
-|[Struttura IUMSScheduler](iumsscheduler-structure.md)|Interfaccia a un'astrazione di un'utilità di pianificazione di lavoro che vuole che Gestione risorse del runtime di concorrenza passi thread UMS pianificabili in modalità utente. Gestione risorse usa questa interfaccia per comunicare con le utilità di pianificazione dei thread UMS.  L'interfaccia `IUMSScheduler` eredita dall'interfaccia `IScheduler` .|
+|[Struttura IUMSScheduler](iumsscheduler-structure.md)|Interfaccia a un'astrazione di un'utilità di pianificazione di lavoro che vuole che Gestione risorse del runtime di concorrenza passi thread UMS pianificabili in modalità utente. Gestione risorse usa questa interfaccia per comunicare con le utilità di pianificazione dei thread UMS. L'interfaccia `IUMSScheduler` eredita dall'interfaccia `IScheduler` .|
 |[Struttura IUMSThreadProxy](iumsthreadproxy-structure.md)|Astrazione per un thread di esecuzione. Se si vuole che all'utilità di pianificazione siano concessi thread UMS, impostare il valore per l'elemento dei criteri dell'utilità di pianificazione `SchedulerKind` su `UmsThreadDefault` e implementare l'interfaccia `IUMSScheduler`. I thread UMS sono supportati solo su sistemi operativi a 64 bit con Windows 7 e versioni successive.|
 |[Struttura IUMSUnblockNotification](iumsunblocknotification-structure.md)|Rappresenta una notifica di Gestione risorse indicante che un proxy del thread, che si è bloccato e ha attivato un valore restituito al contesto di pianificazione definito dell'utilità di pianificazione, si è sbloccato ed è pronto per essere pianificato. Questa interfaccia non è valida una volta riprogrammato il contesto di esecuzione associato del proxy del thread, restituito dal metodo `GetContext`.|
 |[Struttura IVirtualProcessorRoot](ivirtualprocessorroot-structure.md)|Un'astrazione per un thread hardware sulla quale un proxy del thread può eseguire.|
 |[Struttura scheduler_interface](scheduler-interface-structure.md)|Interfaccia dell'utilità di pianificazione|
-|[Struttura scheduler_ptr (runtime di concorrenza)](scheduler-ptr-structure-concurrency-runtime.md)|Rappresenta un puntatore a un'utilità di pianificazione. Questa classe esiste per consentire la specifica di una durata condivisa utilizzando shared_ptr o semplicemente un riferimento normale utilizzando puntatore non elaborato.|
+|[Struttura scheduler_ptr (runtime di concorrenza)](scheduler-ptr-structure-concurrency-runtime.md)|Rappresenta un puntatore a un'utilità di pianificazione. Questa classe esiste per consentire la specifica di una durata condivisa utilizzando shared_ptr o semplicemente un riferimento normale utilizzando un puntatore non elaborato.|
 
 ### <a name="enumerations"></a>Enumerazioni
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Stati validi per un `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Tipi di eventi che possono essere tracciati mediante la funzionalità di tracciatura offerta dalla libreria di agenti.|
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|Tipi di eventi che possono essere tracciati mediante la funzionalità di tracciatura offerta dal runtime di concorrenza.|
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|Flag di analisi per i tipi di evento|
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|Tipo di area critica in cui si trova un contesto.|
-|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|Usato dai criteri `DynamicProgressFeedback` per descrivere se le risorse per l'utilità di pianificazione saranno ribilanciate sulla base di informazioni statistiche raccolte dall'utilità di pianificazione o solo sulla base di processori virtuali che passano allo stato inattivo e viceversa tramite chiamate ai metodi `Activate` e `Deactivate` sull'interfaccia `IVirtualProcessorRoot`. Per altre informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
+|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|Usato dai criteri `DynamicProgressFeedback` per descrivere se le risorse per l'utilità di pianificazione saranno ribilanciate sulla base di informazioni statistiche raccolte dall'utilità di pianificazione o solo sulla base di processori virtuali che passano allo stato inattivo e viceversa tramite chiamate ai metodi `Activate` e `Deactivate` sull'interfaccia `IVirtualProcessorRoot`. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
 |[join_type](concurrency-namespace-enums.md#join_type)|Tipo di un blocco della messaggistica `join`.|
 |[message_status](concurrency-namespace-enums.md#message_status)|Risposte valide per un'offerta di un oggetto `message` a un blocco.|
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|Chiavi dei criteri che descrivono aspetti del comportamento dell'utilità di pianificazione. Ciascun elemento dei criteri è descritto da una coppia chiave-valore. Per altre informazioni sui criteri dell'utilità di pianificazione e il relativo impatto sulle utilità di pianificazione, vedere [utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|
-|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|Usato dai criteri `SchedulerKind` per descrivere il tipo di thread che l'utilità di pianificazione deve usare per i contesti di esecuzione sottostanti. Per altre informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
-|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|Usato dai criteri `SchedulingProtocol` per descrivere quale algoritmo di pianificazione sarà usato per l'utilità di pianificazione. Per altre informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|Chiavi dei criteri che descrivono aspetti del comportamento dell'utilità di pianificazione. Ciascun elemento dei criteri è descritto da una coppia chiave-valore. Per ulteriori informazioni sui criteri dell'utilità di pianificazione e il relativo effetto sulle utilità di pianificazione, vedere [utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|
+|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|Usato dai criteri `SchedulerKind` per descrivere il tipo di thread che l'utilità di pianificazione deve usare per i contesti di esecuzione sottostanti. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
+|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|Usato dai criteri `SchedulingProtocol` per descrivere quale algoritmo di pianificazione sarà usato per l'utilità di pianificazione. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|Usato per indicare lo stato in cui si trova un proxy del thread, quando è in esecuzione uno scambio di contesto cooperativo per un proxy del thread diverso.|
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|Descrive lo stato di esecuzione di un oggetto `task_group` o `structured_task_group`. Un valore di questo tipo viene restituito da numerosi metodi che attendono attività pianificate a un gruppo di attività da completare.|
-|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|Utilizzata dai criteri `WinRTInitialization` per descrivere se e come Windows Runtime verrà inizializzato nei thread dell'utilità di pianificazione per un'applicazione eseguita nei sistemi operativi con la versione Windows 8 o superiore. Per altre informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
+|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|Utilizzata dai criteri `WinRTInitialization` per descrivere se e come Windows Runtime verrà inizializzato nei thread dell'utilità di pianificazione per un'applicazione eseguita nei sistemi operativi con la versione Windows 8 o superiore. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[Funzione Alloc](concurrency-namespace-functions.md#alloc)|Assegna un blocco di memoria dalle dimensioni specificate dal suballocatore di cache del runtime di concorrenza.|
+|[Alloc (funzione)](concurrency-namespace-functions.md#alloc)|Assegna un blocco di memoria dalle dimensioni specificate dal suballocatore di cache del runtime di concorrenza.|
 |[Funzione asend](concurrency-namespace-functions.md#asend)|Di overload. Un'operazione di invio asincrona che pianifica un'attività per propagare i dati nel blocco di destinazione.|
 |[Funzione cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Annulla l'attività attualmente in esecuzione. Questa funzione può essere chiamata dal corpo di un'attività per interrompere l'esecuzione dell'attività e forzarne il passaggio allo stato `canceled`.<br /><br /> Chiamare questa funzione non è uno scenario supportato se non si è all'interno del corpo di un oggetto `task`. Questa operazione provocherà un comportamento non definito, ad esempio un arresto anomalo o un blocco nell'applicazione.|
 |[Funzione create_async](concurrency-namespace-functions.md#create_async)|Crea un costrutto asincrono di Windows Runtime in base a un'espressione lambda o un oggetto funzione fornito dall'utente. Il tipo restituito `create_async` è uno tra `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` o `IAsyncOperationWithProgress<TResult, TProgress>^` in base alla firma dell'espressione lambda passata al metodo.|
-|[Funzione create_task](concurrency-namespace-functions.md#create_task)|Di overload. Crea una libreria PPL [attività](task-class.md) oggetto. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per comodità, in quanto consente l'uso della parola chiave `auto` durante la creazione delle attività.|
-|[Funzione CreateResourceManager](concurrency-namespace-functions.md#createresourcemanager)|Restituisce un'interfaccia che rappresenta l'istanza singleton di Gestione risorse del runtime di concorrenza. Gestione risorse è responsabile dell'assegnazione di risorse a utilità di pianificazione che vogliono cooperare tra loro.|
-|[Funzione DisableTracing](concurrency-namespace-functions.md#disabletracing)|Disabilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW non viene registrata per impostazione predefinita.|
-|[Funzione EnableTracing](concurrency-namespace-functions.md#enabletracing)|Abilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW è ora attivata per impostazione predefinita.|
+|[Funzione create_task](concurrency-namespace-functions.md#create_task)|Di overload. Crea un oggetto [attività](task-class.md) ppl. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per comodità, in quanto consente l'uso della parola chiave `auto` durante la creazione delle attività.|
+|[CreateResourceManager (funzione)](concurrency-namespace-functions.md#createresourcemanager)|Restituisce un'interfaccia che rappresenta l'istanza singleton di Gestione risorse del runtime di concorrenza. Gestione risorse è responsabile dell'assegnazione di risorse a utilità di pianificazione che vogliono cooperare tra loro.|
+|[DisableTracing (funzione)](concurrency-namespace-functions.md#disabletracing)|Disabilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW non viene registrata per impostazione predefinita.|
+|[EnableTracing (funzione)](concurrency-namespace-functions.md#enabletracing)|Abilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW è ora attivata per impostazione predefinita.|
 |[Free (funzione)](concurrency-namespace-functions.md#free)|Rilascia un blocco di memoria precedentemente allocato dal metodo `Alloc` al suballocatore di cache del runtime di concorrenza.|
-|[Funzione get_ambient_scheduler (Runtime di concorrenza)](concurrency-namespace-functions.md#get_ambient_scheduler)||
-|[Funzione GetExecutionContextId](concurrency-namespace-functions.md#getexecutioncontextid)|Restituisce un identificatore univoco che può essere assegnato a un contesto di esecuzione che implementa l'interfaccia `IExecutionContext`.|
-|[Funzione GetOSVersion](concurrency-namespace-functions.md#getosversion)|Restituisce la versione del sistema operativo.|
-|[Funzione GetProcessorCount](concurrency-namespace-functions.md#getprocessorcount)|Restituisce il numero dei thread hardware sul sistema sottostante.|
-|[Funzione GetProcessorNodeCount](concurrency-namespace-functions.md#getprocessornodecount)|Restituisce il numero di nodi NUMA o pacchetti del processore sul sistema sottostante.|
-|[Funzione GetSchedulerId](concurrency-namespace-functions.md#getschedulerid)|Restituisce un identificatore univoco che può essere assegnato a un'utilità di pianificazione che implementa l'interfaccia `IScheduler`.|
+|[Funzione get_ambient_scheduler (runtime di concorrenza)](concurrency-namespace-functions.md#get_ambient_scheduler)||
+|[GetExecutionContextId (funzione)](concurrency-namespace-functions.md#getexecutioncontextid)|Restituisce un identificatore univoco che può essere assegnato a un contesto di esecuzione che implementa l'interfaccia `IExecutionContext`.|
+|[GetOSVersion (funzione)](concurrency-namespace-functions.md#getosversion)|Restituisce la versione del sistema operativo.|
+|[GetProcessorCount (funzione)](concurrency-namespace-functions.md#getprocessorcount)|Restituisce il numero dei thread hardware sul sistema sottostante.|
+|[GetProcessorNodeCount (funzione)](concurrency-namespace-functions.md#getprocessornodecount)|Restituisce il numero di nodi NUMA o pacchetti del processore sul sistema sottostante.|
+|[GetSchedulerId (funzione)](concurrency-namespace-functions.md#getschedulerid)|Restituisce un identificatore univoco che può essere assegnato a un'utilità di pianificazione che implementa l'interfaccia `IScheduler`.|
 |[Funzione interruption_point](concurrency-namespace-functions.md#interruption_point)|Crea un punto di interruzione per l'annullamento. Se un annullamento è in corso nel contesto in cui questa funzione viene chiamata, questa genererà un'eccezione interna che interrompe l'esecuzione del lavoro parallelo in esecuzione. Se l'annullamento non è in corso, la funzione non esegue alcuna operazione.|
 |[Funzione is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Restituisce un'informazione che indica se il gruppo di attività attualmente in esecuzione inline sul contesto corrente si trova nel mezzo di un annullamento attivo (o lo sarà a breve). Si noti che se non è presente alcun gruppo di attività in esecuzione inline sul contesto corrente, sarà restituito `false`.|
 |[Funzione make_choice](concurrency-namespace-functions.md#make_choice)|Di overload. Costruisce un blocco della messaggistica `choice` da un oggetto `Scheduler` o `ScheduleGroup` facoltativo e due o più origini di input.|
 |[Funzione make_greedy_join](concurrency-namespace-functions.md#make_greedy_join)|Di overload. Costruisce un blocco della messaggistica `greedy multitype_join` da un oggetto `Scheduler` o `ScheduleGroup` facoltativo e due o più origini di input.|
 |[Funzione make_join](concurrency-namespace-functions.md#make_join)|Di overload. Costruisce un blocco della messaggistica `non_greedy multitype_join` da un oggetto `Scheduler` o `ScheduleGroup` facoltativo e due o più origini di input.|
-|[make_task (funzione)](concurrency-namespace-functions.md#make_task)|Un metodo factory per la creazione di un oggetto `task_handle`.|
+|[Funzione make_task](concurrency-namespace-functions.md#make_task)|Un metodo factory per la creazione di un oggetto `task_handle`.|
 |[Funzione parallel_buffered_sort](concurrency-namespace-functions.md#parallel_buffered_sort)|Di overload. Dispone gli elementi in un intervallo specificato in un ordine non decrescente, o secondo un criterio di ordinamento specificato da un predicato binario, in parallelo. Questa funzione è semanticamente simile a `std::sort` in quanto si tratta di un ordinamento basato sul confronto, instabile, sul posto, ma richiede uno spazio aggiuntivo pari `O(n)` e l'inizializzazione predefinita per gli elementi in fase di ordinamento.|
-|[parallel_for (funzione)](concurrency-namespace-functions.md#parallel_for)|Di overload. `parallel_for` viene iterato su un intervallo di indici ed esegue una funzione fornita dall'utente a ogni iterazione, in parallelo.|
-|[parallel_for_each (funzione)](concurrency-namespace-functions.md#parallel_for_each)|Di overload. `parallel_for_each` applica una funzione specificata a ogni elemento all'interno di un intervallo, in parallelo. È semanticamente equivalente alla funzione `for_each` nello spazio dei nomi `std`, fatta eccezione per l'iterazione sugli elementi, che viene eseguita in parallelo, e per l'ordine di iterazione, che non è specificato. L'argomento `_Func` deve supportare un operatore di chiamata della funzione del form `operator()(T)` laddove il parametro `T` è il tipo di elemento del contenitore su cui viene eseguita l'iterazione.|
-|[parallel_invoke (funzione)](concurrency-namespace-functions.md#parallel_invoke)|Di overload. Esegue gli oggetti funzione forniti come parametri in parallelo e blocca fino al termine dell'esecuzione. Ogni oggetto funzione potrebbe essere un'espressione lambda, un puntatore a funzione o qualsiasi oggetto che supporta l'operatore della chiamata di funzione con la firma `void operator()()`.|
+|[Funzione parallel_for](concurrency-namespace-functions.md#parallel_for)|Di overload. `parallel_for` viene iterato su un intervallo di indici ed esegue una funzione fornita dall'utente a ogni iterazione, in parallelo.|
+|[Funzione parallel_for_each](concurrency-namespace-functions.md#parallel_for_each)|Di overload. `parallel_for_each` applica una funzione specificata a ogni elemento all'interno di un intervallo, in parallelo. È semanticamente equivalente alla funzione `for_each` nello spazio dei nomi `std`, fatta eccezione per l'iterazione sugli elementi, che viene eseguita in parallelo, e per l'ordine di iterazione, che non è specificato. L'argomento `_Func` deve supportare un operatore di chiamata della funzione del form `operator()(T)` laddove il parametro `T` è il tipo di elemento del contenitore su cui viene eseguita l'iterazione.|
+|[Funzione parallel_invoke](concurrency-namespace-functions.md#parallel_invoke)|Di overload. Esegue gli oggetti funzione forniti come parametri in parallelo e blocca fino al termine dell'esecuzione. Ogni oggetto funzione potrebbe essere un'espressione lambda, un puntatore a funzione o qualsiasi oggetto che supporta l'operatore della chiamata di funzione con la firma `void operator()()`.|
 |[Funzione parallel_radixsort](concurrency-namespace-functions.md#parallel_radixsort)|Di overload. Dispone gli elementi in un intervallo specificato in un ordine non decrescente usando l'algoritmo Radix Sort. Si tratta di una funzione stabile di ordinamento che richiede una funzione di proiezione affinché che consente agli elementi del progetto di essere ordinati nelle chiavi di tipo intero senza segno. L'inizializzazione predefinita è necessaria per gli elementi da ordinare.|
 |[Funzione parallel_reduce](concurrency-namespace-functions.md#parallel_reduce)|Di overload. Calcola la somma di tutti gli elementi in un intervallo specificato elaborando le somme parziali successive, o calcola il risultato dei risultati parziali successivi ottenuti analogamente tramite l'uso di un'operazione binaria specificata diversa da quella di somma, in parallelo. `parallel_reduce` è semanticamente simile a `std::accumulate`, con la differenza che richiede all'operazione binaria di essere associativa e richiede un valore di identità anziché un valore iniziale.|
 |[Funzione parallel_sort](concurrency-namespace-functions.md#parallel_sort)|Di overload. Dispone gli elementi in un intervallo specificato in un ordine non decrescente, o secondo un criterio di ordinamento specificato da un predicato binario, in parallelo. Questa funzione è semanticamente simile a `std::sort` in quanto si tratta di un ordinamento basato sul confronto, instabile, sul posto.|
 |[Funzione parallel_transform](concurrency-namespace-functions.md#parallel_transform)|Di overload. Applica un oggetto funzione specificato ad ogni elemento di un intervallo di origine o a una coppia di elementi di due intervalli di origine e copia i valori restituiti dell'oggetto funzione in un intervallo di destinazione, in parallelo. Questa funzione è semanticamente equivalente a `std::transform`.|
-|[Funzione Receive](concurrency-namespace-functions.md#receive)|Di overload. Un'implementazione di ricezione generale, che consente a un contesto di attendere i dati esattamente da un'origine e di filtrare i valori accettati.|
+|[Receive (funzione)](concurrency-namespace-functions.md#receive)|Di overload. Un'implementazione di ricezione generale, che consente a un contesto di attendere i dati esattamente da un'origine e di filtrare i valori accettati.|
 |[Funzione run_with_cancellation_token](concurrency-namespace-functions.md#run_with_cancellation_token)|Esegue un oggetto funzione immediatamente e in modo sincrono nel contesto di uno specifico token di annullamento.|
 |[Funzione Send](concurrency-namespace-functions.md#send)|Di overload. Un'operazione di invio sincrona che attende fino a quando la destinazione accetta o rifiuta il messaggio.|
-|[Funzione set_ambient_scheduler (Runtime di concorrenza)](concurrency-namespace-functions.md#set_ambient_scheduler)||
+|[Funzione set_ambient_scheduler (runtime di concorrenza)](concurrency-namespace-functions.md#set_ambient_scheduler)||
 |[Funzione set_task_execution_resources](concurrency-namespace-functions.md#set_task_execution_resources)|Di overload. Limita le risorse di esecuzione usate dai thread di lavoro interni del runtime di concorrenza al set di affinità specificato.<br /><br /> È valido chiamare questo metodo solo prima della creazione di Gestione risorse o tra due cicli di vita di Gestione risorse. Può essere chiamato più volte a condizione che Gestione risorse non esista al momento della chiamata. Dopo aver impostato un limite di affinità, rimane attiva fino alla successiva chiamata al metodo `set_task_execution_resources`.<br /><br /> La maschera di affinità fornita non deve essere un sottoinsieme della maschera di affinità del processo. L'affinità del processo verrà aggiornata, se necessario.|
 |[Funzione swap](concurrency-namespace-functions.md#swap)|Scambia gli elementi di due oggetti `concurrent_vector`.|
-|[Funzione task_from_exception (Runtime di concorrenza)](concurrency-namespace-functions.md#task_from_exception)||
-|[Funzione task_from_result (Runtime di concorrenza)](concurrency-namespace-functions.md#task_from_result)||
+|[Funzione task_from_exception (runtime di concorrenza)](concurrency-namespace-functions.md#task_from_exception)||
+|[Funzione task_from_result (runtime di concorrenza)](concurrency-namespace-functions.md#task_from_result)||
 |[Funzione Trace_agents_register_name](concurrency-namespace-functions.md#trace_agents_register_name)|Associa il nome specificato con il blocco di messaggi o l'agente nella traccia ETW.|
 |[Funzione try_receive](concurrency-namespace-functions.md#try_receive)|Di overload. Un'implementazione di ricezione try generale, che consente a un contesto di cercare i dati esattamente da un'origine e di filtrare i valori accettati. Se i dati non sono pronti, il metodo restituirà false.|
 |[Wait (funzione)](concurrency-namespace-functions.md#wait)|Consente di sospendere il contesto corrente per un intervallo di tempo specificato.|
@@ -220,10 +220,10 @@ namespace concurrency;
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore non è uguale all'oggetto `concurrent_vector` sul lato destro.|
-|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|Di overload. Crea un'attività che verrà completata correttamente quando entrambe le attività fornite come argomenti verranno completate.|
+|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|Di overload. Crea un'attività che verrà completata correttamente quando entrambe le attività fornite come argomenti vengono completate correttamente.|
 |[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|Di overload. Crea un'attività che verrà completata correttamente quando una delle attività fornite come argomenti verranno completate correttamente.|
 |[operator<](concurrency-namespace-operators.md#operator_lt)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore dell'oggetto `concurrent_vector` sul lato destro.|
 |[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore o uguale all'oggetto `concurrent_vector` sul lato destro.|
@@ -233,7 +233,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>Costanti
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|Un GUID di categoria ({B9B5B78C-0713-4898-A21A-C67949DCED07}) che descrive gli eventi ETW generati dalla libreria di agenti nel runtime di concorrenza.|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati ad attività di routine o attività.|
@@ -254,10 +254,10 @@ namespace concurrency;
 |[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati all'attività dell'utilità di pianificazione.|
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati a processori virtuali.|
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
-**Intestazione:** Agents. h, concrt. h, concrtrm. h, concurrent_priority_queue. h, concurrent_queue, concurrent_unordered_map. h, internal_split_ordered_list, concurrent_vector.h, concurrent_vector, internal_split_ordered_ List.h, pplcancellation_token,. h, pplconcrt. h, pplinterface. h, ppltasks. h
+**Intestazione:** Agents. h, concrt. h, concrtrm. h, concurrent_priority_queue. h, concurrent_queue. h, concurrent_unordered_map. h, concurrent_unordered_set. h, concurrent_vector. h, internal_concurrent_hash. h, internal_split_ordered_list. h, ppl. h, pplcancellation_token. h, pplconcrt. h, pplinterface. h, ppltasks. h
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento](reference-concurrency-runtime.md)
+[Reference](reference-concurrency-runtime.md)

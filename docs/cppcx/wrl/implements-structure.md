@@ -1,5 +1,5 @@
 ---
-title: Implementa la struttura
+title: Struttura Implements
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Implements::FillArrayWithIid method
 - Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-ms.openlocfilehash: 63cac6931428644cc5ddec7d87e49007e95e039d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ce6e9193107cbd0d033d99b257e41004b4343a8
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398251"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821857"
 ---
-# <a name="implements-structure"></a>Implementa la struttura
+# <a name="implements-structure"></a>Struttura Implements
 
-Implements `QueryInterface` e `GetIid` per le interfacce specificate.
+Implementa `QueryInterface` e `GetIid` per le interfacce specificate.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -77,65 +77,65 @@ struct __declspec(novtable) Implements<
 ### <a name="parameters"></a>Parametri
 
 *I0*<br/>
-L'ID di interfaccia di zero. (Obbligatorio)
+ID dell'interfaccia zero. Obbligatorio
 
 *I1*<br/>
-Il primo ID di interfaccia (facoltativo)
+Primo ID di interfaccia. (facoltativo)
 
 *I2*<br/>
-Il secondo ID di interfaccia (facoltativo)
+Secondo ID di interfaccia. (facoltativo)
 
 *I3*<br/>
-Il terzo ID di interfaccia (facoltativo)
+Terzo ID di interfaccia. (facoltativo)
 
 *I4*<br/>
-Il quarto ID di interfaccia (facoltativo)
+Quarto ID di interfaccia. (facoltativo)
 
 *I5*<br/>
-Il quinto ID di interfaccia (facoltativo)
+ID di interfaccia quinto. (facoltativo)
 
 *I6*<br/>
-Il sesto ID di interfaccia (facoltativo)
+Sesto ID di interfaccia. (facoltativo)
 
 *I7*<br/>
-Il settimo ID di interfaccia (facoltativo)
+Settimo ID di interfaccia. (facoltativo)
 
 *I8*<br/>
-L'ottavo ID di interfaccia (facoltativo)
+Ottavo ID di interfaccia. (facoltativo)
 
 *I9*<br/>
-Il nono ID di interfaccia (facoltativo)
+Nono ID di interfaccia. (facoltativo)
 
 *flags*<br/>
-Flag di configurazione per la classe. Uno o più [RuntimeClassType](runtimeclasstype-enumeration.md) enumerazioni che vengono specificate in un [RuntimeClassFlags](runtimeclassflags-structure.md) struttura.
+Flag di configurazione per la classe. Una o più enumerazioni [RuntimeClassType](runtimeclasstype-enumeration.md) specificate in una struttura [RuntimeClassFlags](runtimeclassflags-structure.md) .
 
 ## <a name="remarks"></a>Note
 
 Deriva dall'elenco di interfacce specificate e implementa i modelli di supporto per `QueryInterface` e `GetIid`.
 
-Ogni *I0* attraverso *I9* parametro di interfaccia deve derivare da `IUnknown`, `IInspectable`, oppure il [ChainInterfaces](chaininterfaces-structure.md) modello. Il *flags* parametro determina se il supporto viene generato per `IUnknown` o `IInspectable`.
+Ogni *I0* tramite il parametro dell'interfaccia *i9* deve derivare da `IUnknown`, `IInspectable`o dal modello [ChainInterfaces](chaininterfaces-structure.md) . Il parametro *Flags* determina se viene generato il supporto per `IUnknown` o `IInspectable`.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-| Nome        | Descrizione                               |
+| Name        | Descrizione                               |
 | ----------- | ----------------------------------------- |
 | `ClassFlags`| Sinonimo di `RuntimeClassFlags<WinRt>`. |
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-| Nome                                              | Descrizione                                                                                                   |
+| Name                                              | Descrizione                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [Implements::CanCastTo](#cancastto)               | Ottiene un puntatore all'interfaccia specificata.                                                                    |
-| [Implements::CastToUnknown](#casttounknown)       | Ottiene un puntatore sottostante `IUnknown` interfaccia.                                                        |
-| [Implements::FillArrayWithIid](#fillarraywithiid) | Inserisce l'ID di interfaccia specificato dal parametro di modello iniziale corrente nell'elemento di matrice specificato. |
+| [Implementa:: CanCastTo](#cancastto)               | Ottiene un puntatore all'interfaccia specificata.                                                                    |
+| [Implementa:: CastToUnknown](#casttounknown)       | Ottiene un puntatore all'interfaccia `IUnknown` sottostante.                                                        |
+| [Implements::FillArrayWithIid](#fillarraywithiid) | Inserisce l'ID di interfaccia specificato dal parametro del modello zero corrente nell'elemento di matrice specificato. |
 
 ### <a name="protected-constants"></a>Costanti protette
 
-| Nome                              | Descrizione                                    |
+| Name                              | Descrizione                                    |
 | --------------------------------- | ---------------------------------------------- |
-| [Implements::IidCount](#iidcount) | Contiene il numero di ID di interfaccia implementata. |
+| [Implementa:: IidCount](#iidcount) | Include il numero di ID di interfaccia implementati. |
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -151,13 +151,13 @@ Ogni *I0* attraverso *I9* parametro di interfaccia deve derivare da `IUnknown`, 
 
 `Implements`
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 **Intestazione:** Implements. h
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="cancastto"></a>Implements:: cancastto
+## <a name="cancastto"></a>Implementa:: CanCastTo
 
 Ottiene un puntatore all'interfaccia specificata.
 
@@ -171,22 +171,22 @@ __forceinline HRESULT CanCastTo(
 ### <a name="parameters"></a>Parametri
 
 *riid*<br/>
-Un riferimento all'ID di interfaccia.
+Riferimento a un ID di interfaccia.
 
 *ppv*<br/>
-Se ha esito positivo, un puntatore all'interfaccia specificata da *riid*.
+In caso di esito positivo, puntatore all'interfaccia specificata da *riid*.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK se l'esito positivo. in caso contrario, HRESULT che indica l'errore, ad esempio E_NOINTERFACE.
+S_OK in caso di esito positivo; in caso contrario, un valore HRESULT che indica l'errore, ad esempio E_NOINTERFACE.
 
 ### <a name="remarks"></a>Note
 
-Si tratta di una funzione helper interna che esegue un'operazione QueryInterface.
+Si tratta di una funzione di supporto interna che esegue un'operazione QueryInterface.
 
-## <a name="casttounknown"></a>Implements::CastToUnknown
+## <a name="casttounknown"></a>Implementa:: CastToUnknown
 
-Ottiene un puntatore sottostante `IUnknown` interfaccia.
+Ottiene un puntatore all'interfaccia `IUnknown` sottostante.
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -194,15 +194,15 @@ __forceinline IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>Valore restituito
 
-Questa operazione ha esito positivo e restituisce sempre il `IUnknown` puntatore.
+Questa operazione ha sempre esito positivo e restituisce il puntatore `IUnknown`.
 
 ### <a name="remarks"></a>Note
 
-Funzione di supporto interno.
+Funzione helper interna.
 
 ## <a name="fillarraywithiid"></a>Implements::FillArrayWithIid
 
-Inserisce l'ID di interfaccia specificato dal parametro di modello iniziale corrente nell'elemento di matrice specificato.
+Inserisce l'ID di interfaccia specificato dal parametro del modello zero corrente nell'elemento di matrice specificato.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -214,18 +214,18 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>Parametri
 
 *index*<br/>
-Indice in base zero che indica l'elemento di matrice iniziale per questa operazione. Al termine, questa operazione *indice* viene incrementato di 1.
+Indice in base zero che indica l'elemento di matrice iniziale per questa operazione. Al termine dell'operazione, l' *Indice* viene incrementato di 1.
 
-*iids*<br/>
+*IID*<br/>
 Matrice di tipo IID.
 
 ### <a name="remarks"></a>Note
 
-Funzione di supporto interno.
+Funzione helper interna.
 
-## <a name="iidcount"></a>Implements:: iidcount
+## <a name="iidcount"></a>Implementa:: IidCount
 
-Contiene il numero di ID di interfaccia implementata.
+Include il numero di ID di interfaccia implementati.
 
 ```cpp
 static const unsigned long IidCount;
