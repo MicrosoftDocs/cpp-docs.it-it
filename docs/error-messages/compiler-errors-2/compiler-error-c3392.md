@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4109a59f093740c9e0865cef6a31f3b09127c747
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243024"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912812"
 ---
 # <a name="compiler-error-c3392"></a>Errore del compilatore C3392
 
 'type_arg': argomento di tipo non valido per il parametro generico 'param' del 'generic_type' generico. Deve avere un costruttore pubblico senza parametri
 
-L'istanza di un tipo generico è stata creata in modo non corretto. Controllare la definizione del tipo. Per altre informazioni, vedere [Generics](../../extensions/generics-cpp-component-extensions.md).
+L'istanza di un tipo generico è stata creata in modo non corretto. Controllare la definizione del tipo. Per ulteriori informazioni, vedere [generics](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente usa C# per creare un componente che contiene un tipo generico con vincoli che non sono supportati durante la creazione di tipi generici in C++/CLI. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Nell'esempio seguente viene C# usato per creare un componente che contiene un tipo generico con determinati vincoli non supportati per la creazione di tipi generici in C++/cli. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3392.cs
 // Compile by using: csc /target:library C3392.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-Quando il componente C3392.dll è disponibile, l'esempio seguente genera l'errore C3392.
+Quando il componente C3392. dll è disponibile, l'esempio seguente genera l'C3392.
 
 ```cpp
 // C3392_b.cpp

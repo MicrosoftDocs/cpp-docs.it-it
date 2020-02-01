@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400318"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912867"
 ---
 # <a name="compiler-error-c3390"></a>Errore del compilatore C3390
 
@@ -21,9 +21,9 @@ L'istanza di un tipo generico è stata creata in modo non corretto.  Controllare
 
 ## <a name="example"></a>Esempio
 
-Il primo esempio viene utilizzato C# per creare un componente che contiene un tipo generico con vincoli che non sono supportati durante la creazione di tipi generici in C++/CLR. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Nel primo esempio viene C# usato per creare un componente che contiene un tipo generico con determinati vincoli non supportati durante la creazione di tipi generici in C++/CLR. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3390.cs
 // Compile by using: csc /target:library C3390.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-Quando il componente C3390.dll è disponibile, l'esempio seguente genera l'errore C3390.
+Quando il componente C3390. dll è disponibile, l'esempio seguente genera l'C3390.
 
 ```cpp
 // C3390_b.cpp

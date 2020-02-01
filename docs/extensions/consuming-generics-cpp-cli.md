@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 116d12b301af2769c4d4571a07ce604f18f67152
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a4307213341ff7c20be273e52aa4d44dee926e84
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516116"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912797"
 ---
 # <a name="consuming-generics-ccli"></a>Utilizzo dei generics (C++/CLI)
 
@@ -18,13 +18,13 @@ I generics creati con un linguaggio .NET (o per la piattaforma UWP) possono esse
 
 ## <a name="example"></a>Esempio
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 
 In questo esempio viene illustrata una classe generica definita in C#.
 
 ### <a name="code"></a>Codice
 
-```cs
+```csharp
 // consuming_generics_from_other_NET_languages.cs
 // compile with: /target:library
 // a C# program
@@ -82,7 +82,7 @@ public class CircularList<ItemType> {
 
 ## <a name="example"></a>Esempio
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 
 In questo viene utilizzato l'assembly creato in C#.
 

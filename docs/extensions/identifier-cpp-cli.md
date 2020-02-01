@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 80aade53bf1d1c9aa30c4b8c8fe59c2247fe3cfb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 395f1443f4eef16d9eea44c23a6e3288daf03d14
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515786"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912841"
 ---
-# <a name="identifier-ccli"></a>__identifier (C++/CLI)
+# <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
 Consente di usare parole chiave C++ come identificatori.
 
@@ -27,13 +27,13 @@ Consente di usare parole chiave C++ come identificatori.
 __identifier(C++_keyword)
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 L'uso della parola chiave **__identifier** per gli identificatori che non sono parole chiave è consentito, ma è sconsigliato per una questione di stile.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti di
 
 Opzione del compilatore: `/ZW`
 
@@ -43,7 +43,7 @@ Opzione del compilatore: `/ZW`
 
 Nell'esempio seguente una classe denominata **template** viene creata in C# e distribuita come DLL. Nel programma C++/CLI che usa la classe **template**, la parola chiave **__identifier** nasconde il fatto che **template** è una parola chiave C++ standard.
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
@@ -63,11 +63,11 @@ int main() {
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La parola chiave **__identifier** è valida con l'opzione del compilatore `/clr`.
 
-### <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti di
 
 Opzione del compilatore: `/clr`
 
@@ -75,7 +75,7 @@ Opzione del compilatore: `/clr`
 
 Nell'esempio seguente una classe denominata **template** viene creata in C# e distribuita come DLL. Nel programma C++/CLI che usa la classe **template**, la parola chiave **__identifier** nasconde il fatto che **template** è una parola chiave C++ standard.
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
