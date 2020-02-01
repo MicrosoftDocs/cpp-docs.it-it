@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515676"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912834"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI e C++/CX)
 
@@ -21,23 +21,23 @@ Una variabile (membro dati) contrassegnata come **literal** in una compilazione 
 
 ## <a name="all-platforms"></a>Tutte le piattaforme
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.
 
-### <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti di
 
 Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Un membro dati contrassegnato come **literal** deve essere inizializzato quando dichiarato e il valore deve essere un tipo integrale, enumerazione o stringa. Per la conversione dal tipo dell'espressione di inizializzazione al tipo del membro dati const statico non deve essere richiesta una conversione definita dall'utente.
 
@@ -92,7 +92,7 @@ Si noti la differenza nei metadati per `sc` e `lit`: la direttiva `modopt` viene
 
 L'esempio seguente, creato in C#, fa riferimento ai metadati creati nell'esempio precedente e mostra l'effetto delle variabili **literal** e **static const**:
 
-```cs
+```csharp
 // mcppv2_literal3.cs
 // compile with: /reference:mcppv2_literal2.dll
 // A C# program
@@ -121,7 +121,7 @@ class B {
 }
 ```
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 Opzione del compilatore: `/clr`
 

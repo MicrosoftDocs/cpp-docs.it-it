@@ -6,26 +6,26 @@ helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 5f0b462e672de4408d50bf95d65c749bf1881078
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 4bd6ad1d3009adcc124bdeb90d9d67de07112de2
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988434"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912790"
 ---
 # <a name="how-to-specify-an-out-parameter"></a>Procedura: specificare un parametro out
 
-In questo esempio viene illustrato come specificare che un parametro di funzione è un parametro out e come chiamare tale funzione da C# un programma.
+In questo esempio viene illustrato come specificare che un parametro di funzione è un parametro di `out` e come chiamare tale funzione da C# un programma.
 
-Un parametro out viene specificato in Visual C++ con <xref:System.Runtime.InteropServices.OutAttribute>.
+Un parametro `out` viene specificato in C++ utilizzando <xref:System.Runtime.InteropServices.OutAttribute>.
 
 ## <a name="example"></a>Esempio
 
-La prima parte di questo esempio è una dll C++ visiva con un tipo che contiene una funzione con un parametro out.
+Nella prima parte di questo esempio viene creata C++ una dll. Definisce un tipo che contiene una funzione con un parametro `out`.
 
 ```cpp
 // cpp_out_param.cpp
-// compile with: /LD /clr:safe
+// compile with: /LD /clr
 using namespace System;
 public value struct TestStruct {
    static void Test([Runtime::InteropServices::Out] String^ %s) {
@@ -34,11 +34,9 @@ public value struct TestStruct {
 };
 ```
 
-## <a name="example"></a>Esempio
+Questo file di origine è C# un client che utilizza il C++ componente creato nell'esempio precedente.
 
-Si tratta di C# un client che utilizza il componente C++ visivo creato nell'esempio precedente.
-
-```
+```csharp
 // cpp_out_param_2.cs
 // compile with: /reference:cpp_out_param.dll
 using System;
