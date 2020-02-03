@@ -1,13 +1,14 @@
 ---
 title: Eventi (C++/CX)
-ms.date: 07/15/2019
+description: Come usare C++/CX per creare e usare i gestori eventi nel Windows Runtime.
+ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740532"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972195"
 ---
 # <a name="events-ccx"></a>Eventi (C++/CX)
 
@@ -27,7 +28,7 @@ Nell'esempio riportato di seguito viene illustrato come dichiarare e generare un
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Utilizzo
+### <a name="usage"></a>Usage
 
 L'esempio riportato di seguito mostra in che modo una classe di sottoscrizione usa l'operatore `+=` per sottoscrivere l'evento e come fornire un gestore eventi da richiamare al momento della generazione dell'evento. La funzione fornita corrisponde alla firma del delegato definito sul lato editore nello spazio dei nomi `EventTest` .
 
@@ -48,7 +49,7 @@ Nell'esempio successivo viene illustrato come aggiungere a un evento metodi di a
 
 ## <a name="removing-an-event-handler-from-the-subscriber-side"></a>Rimozione di un gestore eventi dal lato del sottoscrittore
 
-In alcuni casi rari, potrebbe essere necessario rimuovere un gestore eventi per un evento precedentemente sottoscritto. Potresti ad esempio volerlo sostituire con un altro gestore eventi oppure potresti voler eliminare alcune risorse da esso dipendenti. Per rimuovere un gestore, devi archiviare l'oggetto EventRegistrationToken restituito dall'operazione `+=` . A questo punto puoi utilizzare l'operatore `-=` sul token per rimuovere il gestore eventi.  Il gestore originale potrebbe essere comunque richiamato anche dopo la rimozione. Pertanto, se intendi rimuovere un gestore eventi, crea un flag di membro e impostalo se l'evento viene rimosso, quindi nel gestore eventi controlla il flag e verifica immediatamente se è impostato. Nell'esempio successivo viene illustrato il modello di base.
+In alcuni casi rari, potrebbe essere necessario rimuovere un gestore eventi per un evento precedentemente sottoscritto. Potresti ad esempio volerlo sostituire con un altro gestore eventi oppure potresti voler eliminare alcune risorse da esso dipendenti. Per rimuovere un gestore, devi archiviare l'oggetto EventRegistrationToken restituito dall'operazione `+=` . A questo punto puoi utilizzare l'operatore `-=` sul token per rimuovere il gestore eventi.  Il gestore originale potrebbe essere comunque richiamato anche dopo la rimozione. Ad esempio, un race condition può verificarsi quando l'origine evento ottiene un elenco di gestori e inizia a richiamarli. Se un gestore eventi viene rimosso quando si verifica questa situazione, l'elenco diventa obsoleto. Quindi, se si intende rimuovere un gestore eventi, creare un flag di membro. Impostarlo se l'evento viene rimosso, quindi nel gestore eventi, controllare il flag e restituire immediatamente se è impostato. Nell'esempio successivo viene illustrato il modello di base.
 
 [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]
 
