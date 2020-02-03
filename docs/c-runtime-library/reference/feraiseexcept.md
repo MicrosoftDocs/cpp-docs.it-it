@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857827"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972214"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -61,7 +61,7 @@ La funzione **feraiseexcept** tenta di generare le eccezioni a virgola mobile sp
 |FE_INVALID|Si è verificato un errore di dominio in un'operazione precedente a virgola mobile.|
 |FE_OVERFLOW|Si è verificato un errore di intervallo. Un risultato dell'operazione precedente a virgola mobile era troppo grande per essere rappresentato.|
 |FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|
-|FE_ALLEXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
+|FE_ALL_EXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
 
 L'argomento *excepts* può essere zero, uno dei valori di macro di eccezione o l'operatore OR bit per bit di due o più macro di eccezioni supportate. Se una delle macro di eccezioni specificata è FE_OVERFLOW o FE_UNDERFLOW, può essere generata l'eccezione FE_INEXACT come effetto collaterale.
 
@@ -75,11 +75,11 @@ Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>
 [feholdexcept](feholdexcept2.md)<br/>
 [fetestexcept](fetestexcept1.md)<br/>
