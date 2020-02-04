@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e70ae1b74420b8186cccd8fc8a817423df618adf
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941005"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972152"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -55,7 +55,7 @@ Se l'esito è positivo, restituisce una maschera di bit che contiene OR bit per 
 
 ## <a name="remarks"></a>Note
 
-Usare la funzione fetestexcept per determinare le eccezioni generate da un'operazione a virgola mobile. Usare il parametro *excepts* per specificare i flag di stato delle eccezioni da testare. La funzione **fetestexcept** usa queste macro di eccezioni definite \<in fenv. h > in *excepts* e il valore restituito:
+Usare la funzione fetestexcept per determinare le eccezioni generate da un'operazione a virgola mobile. Usare il parametro *excepts* per specificare i flag di stato delle eccezioni da testare. La funzione **fetestexcept** usa queste macro di eccezioni definite in \<fenv. h > in *excepts* e il valore restituito:
 
 |Macro di eccezioni|Descrizione|
 |---------------------|-----------------|
@@ -64,13 +64,13 @@ Usare la funzione fetestexcept per determinare le eccezioni generate da un'opera
 |FE_INVALID|Si è verificato un errore di dominio in un'operazione precedente a virgola mobile.|
 |FE_OVERFLOW|Si è verificato un errore di intervallo. Un risultato dell'operazione precedente a virgola mobile era troppo grande per essere rappresentato.|
 |FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|
-|FE_ALLEXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
+|FE_ALL_EXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
 
 L'argomento *excepts* specificato può essere 0, una delle macro di eccezioni a virgola mobile supportate o l'operatore OR bit per bit di due o più macro. L'effetto di qualsiasi altro valore di argomento *excepts non* è definito.
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
@@ -80,6 +80,6 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
 [feclearexcept](feclearexcept1.md)<br/>
 [feraiseexcept](feraiseexcept.md)<br/>
