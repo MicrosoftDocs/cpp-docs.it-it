@@ -4,18 +4,18 @@ ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518413"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034584"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opzioni del compilatore elencate per categoria
 
 In questo articolo viene fornito un elenco organizzato per categorie delle opzioni del compilatore. Per un elenco alfabetico, vedere [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
 
-## <a name="optimization"></a>Ottimizzazione
+## <a name="optimization"></a>Optimization
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -69,6 +69,8 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Abilita livelli di creazione rapporti per la parallelizzazione automatica.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Usa istruzioni di spostamento Integer per i valori a virgola mobile e disabilita determinate ottimizzazioni di carico a virgola mobile.|
 |[/Qspectre](qspectre.md)|Abilitare le mitigazioni per CVE 2017-5753, per una classe di attacchi Spectre.|
+|[/Qspectre-load](qspectre-load.md)|Genera istruzioni di serializzazione per ogni istruzione di caricamento.|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|Genera istruzioni di serializzazione per ogni istruzione del flusso di controllo che carica la memoria.|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Abilita livelli di creazione rapporti per la vettorializzazione automatica.|
 |[/RTC](rtc-run-time-error-checks.md)|Attiva il controllo degli errori di runtime.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Seleziona la modalità di interpretazione della parola chiave volatile.|
@@ -86,7 +88,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Fm](fm-name-mapfile.md)|Crea un file MAP.|
 |[/Fo](fo-object-file-name.md)|Crea un file oggetto.|
 |[/Fp](fp-name-dot-pch-file.md)|Specifica un nome del file di intestazione precompilato.|
-|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|Nome generato file del browser SBR.|
+|[/FR,/fr](fr-fr-create-dot-sbr-file.md)|Nome generato file del browser SBR.|
 
 ## <a name="preprocessor"></a>Preprocessore
 
@@ -110,7 +112,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 
 |Opzione|Scopo|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Controllare la valutazione di constExpr in fase di compilazione.|
+|[/constExpr](constexpr-control-constexpr-evaluation.md)|Controllare la valutazione di constExpr in fase di compilazione.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Attiva [#pragma omp](../../preprocessor/omp.md) nel codice sorgente.|
 |[/vd](vd-disable-construction-displacements.md)|Disabilita o abilita i membri della classe `vtordisp` nascosti.|
 |[/vmb](vmb-vmg-representation-method.md)|Usa la base migliore per i puntatori ai membri.|
@@ -122,7 +124,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Za](za-ze-disable-language-extensions.md)|Disabilita le estensioni del linguaggio C89.|
 |[/Zc](zc-conformance.md)|Specifica il comportamento standard in [/Ze](za-ze-disable-language-extensions.md).|
 |[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Abilita le estensioni del linguaggio C89.|
-|[/Zf](zf.md)|Migliora il tempo di generazione PDB nelle compilazioni parallele.|
+|[/ZF](zf.md)|Migliora il tempo di generazione PDB nelle compilazioni parallele.|
 |[/ZH](zh.md)|Specifica MD5, SHA-1 o SHA-256 per i checksum nelle informazioni di debug.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Include informazioni di debug in un database di programma compatibile con Modifica e continuazione. (solo x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera informazioni di debug complete.|
@@ -190,12 +192,12 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Specifica il limite di allocazione di memoria delle intestazioni precompilate.|
 |[/await](await-enable-coroutine-support.md)|Abilita le estensioni delle coroutine (funzioni ripristinabili).|
 |[/source-charset](source-charset-set-source-character-set.md)|Imposta il set di caratteri di origine.|
-|[/execution-charset](execution-charset-set-execution-character-set.md)|Impostare il set di caratteri di esecuzione.|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Imposta i set di caratteri di esecuzione e di origine su UTF-8.|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Convalidare i file UTF-8 solo per i caratteri compatibili.|
-|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Controlla il formato dei messaggi di diagnostica.|
+|[/Execution-charset](execution-charset-set-execution-character-set.md)|Impostare il set di caratteri di esecuzione.|
+|[/UTF-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Imposta i set di caratteri di esecuzione e di origine su UTF-8.|
+|[/Validate-charset](validate-charset-validate-for-compatible-characters.md)|Convalidare i file UTF-8 solo per i caratteri compatibili.|
+|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Controlla il formato dei messaggi di diagnostica.|
 |[/permissive-](permissive-standards-conformance.md)|Impostare la modalità di conformità standard.|
-|[/std](std-specify-language-standard-version.md)|C++selettore di compatibilità della versione standard.|
+|[/STD](std-specify-language-standard-version.md)|C++selettore di compatibilità della versione standard.|
 
 ## <a name="experimental-options"></a>Opzioni sperimentali
 
@@ -220,7 +222,7 @@ Le opzioni sperimentali possono essere supportate solo da determinate versioni d
 |[/Og](og-global-optimizations.md)|Deprecato. Usa le ottimizzazioni globali.|
 |[/QIfist](qifist-suppress-ftol.md)|Deprecato. Usato in passato per specificare come eseguire la conversione da un tipo a virgola mobile a un tipo integrale.|
 |[/V](v-version-number.md)|Deprecato. Imposta la stringa di versione del file OBJ.|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleta. Rileva i problemi di portabilità a 64 bit.|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Rileva i problemi di portabilità a 64 bit.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Deprecato. Inserisce informazioni di debug complete in tutti i file oggetto. Usare [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Deprecato. Disattiva la conformità nell'ambito di un ciclo For.|
 |[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Attiva le estensioni del linguaggio.|

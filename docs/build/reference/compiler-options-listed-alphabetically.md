@@ -3,12 +3,12 @@ title: Opzioni del compilatore elencate in ordine alfabetico
 ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 72441692869dbed806474a7054fedff53b923d42
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518374"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034597"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -27,15 +27,15 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/c](c-compile-without-linking.md)|Effettua la compilazione senza collegamento.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Specifica il numero di thread cl.exe da usare per l'ottimizzazione e la generazione di codice.|
 |[/clr](clr-common-language-runtime-compilation.md)|Genera un file di output da eseguire in Common Language Runtime.|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Controllare la valutazione di constExpr in fase di compilazione.|
+|[/constExpr](constexpr-control-constexpr-evaluation.md)|Controllare la valutazione di constExpr in fase di compilazione.|
 |[/D](d-preprocessor-definitions.md)|Definisce costanti e macro.|
-|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Controlla il formato dei messaggi di diagnostica.|
+|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Controlla il formato dei messaggi di diagnostica.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Elabora commenti per la documentazione in un file XML.|
 |[/E](e-preprocess-to-stdout.md)|Copia l'output del preprocessore in un output standard.|
 |[/EH](eh-exception-handling-model.md)|Specifica il modello di gestione delle eccezioni.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia l'output del preprocessore in un output standard.|
 |[/errorReport](errorreport-report-internal-compiler-errors.md)|Consente di fornire informazioni sugli errori interni del compilatore (ICE) direttamente al team C++ Microsoft.|
-|[/execution-charset](execution-charset-set-execution-character-set.md)|Impostare il set di caratteri di esecuzione.|
+|[/Execution-charset](execution-charset-set-execution-character-set.md)|Impostare il set di caratteri di esecuzione.|
 |[/Experimental: modulo](experimental-module.md)|Abilita il supporto del modulo sperimentale.|
 |[/Experimental: preprocessore](experimental-preprocessor.md)|Abilita il supporto per il preprocessore conforme sperimentale.|
 |[/F](f-set-stack-size.md)|Imposta la dimensione dello stack.|
@@ -113,21 +113,23 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Qpar (parallelizzazione automatica)](qpar-auto-parallelizer.md)|Abilita la parallelizzazione automatica dei cicli contrassegnati con la direttiva [#pragma loop()](../../preprocessor/loop.md) .|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Usa istruzioni di spostamento Integer per i valori a virgola mobile e disabilita determinate ottimizzazioni di carico a virgola mobile.|
 |[/Qspectre](qspectre.md)|Specifica la generazione di istruzioni del compilatore per mitigare determinate vulnerabilità di sicurezza di Spectre variante 1.|
+|[/Qspectre-load](qspectre-load.md)|Specifica la generazione del compilatore di istruzioni di serializzazione per attenuare le vulnerabilità della sicurezza Spectre basate sulle istruzioni di caricamento.|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|Specifica la generazione del compilatore di istruzioni di serializzazione per attenuare le vulnerabilità della sicurezza Spectre basate sulle istruzioni del flusso di controllo che caricano la memoria.|
 |[/Qvec/report (livello di segnalazione vettorizzazione automatica)](qvec-report-auto-vectorizer-reporting-level.md)|Abilita livelli di creazione rapporti per la vettorializzazione automatica.|
 |[/RTC](rtc-run-time-error-checks.md)|Attiva il controllo degli errori di runtime.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Abilita funzionalità e avvisi di sicurezza aggiuntivi.|
 |[/showIncludes](showincludes-list-include-files.md)|Visualizza un elenco di file di inclusione durante la compilazione.|
 |[/source-charset](source-charset-set-source-character-set.md)|Imposta il set di caratteri di origine.|
-|[/std](std-specify-language-standard-version.md)|C++selettore di compatibilità della versione standard.|
+|[/STD](std-specify-language-standard-version.md)|C++selettore di compatibilità della versione standard.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Specifica un file di origine C.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Specifica che tutti i file di origine sono C.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Specifica un file di origine C++.|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Specifica che tutti i file C++di origine sono.|
 |[/U](u-u-undefine-symbols.md)|Rimuove una macro predefinita.|
 |[/u](u-u-undefine-symbols.md)|Rimuove tutte le macro predefinite.|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Imposta i set di caratteri di esecuzione e di origine su UTF-8.|
+|[/UTF-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Imposta i set di caratteri di esecuzione e di origine su UTF-8.|
 |[/V](v-version-number.md)|Deprecato. Imposta la stringa di versione del file OBJ.|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Convalidare i file UTF-8 solo per i caratteri compatibili.|
+|[/Validate-charset](validate-charset-validate-for-compatible-characters.md)|Convalidare i file UTF-8 solo per i caratteri compatibili.|
 |[/vd](vd-disable-construction-displacements.md)|Disabilita o abilita i membri della classe vtordisp nascosti.|
 |[/vmb](vmb-vmg-representation-method.md)|Usa la base migliore per i puntatori ai membri.|
 |[/vmg](vmb-vmg-representation-method.md)|Usa la generalità completa per i puntatori ai membri.|
@@ -143,7 +145,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/we](compiler-option-warning-level.md)|Considera l'avviso specificato come un errore.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Attiva la diagnostica a riga singola dei messaggi di errore e di avviso durante la compilazione del codice sorgente C++ dalla riga di comando.|
 |[/wo](compiler-option-warning-level.md)|Visualizza l'avviso specificato una sola volta.|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleta. Rileva i problemi di portabilità a 64 bit.|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Rileva i problemi di portabilità a 64 bit.|
 |[/Wv](compiler-option-warning-level.md)|Non visualizza avvisi introdotti dopo la versione specificata del compilatore.|
 |[/WX](compiler-option-warning-level.md)|Considera tutti gli avvisi come errori.|
 |[/X](x-ignore-standard-include-paths.md)|Ignora la directory di inclusione standard.|
@@ -156,7 +158,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Za](za-ze-disable-language-extensions.md)|Disabilita le estensioni del linguaggio.|
 |[/Zc](zc-conformance.md)|Specifica il comportamento standard in [/ze](za-ze-disable-language-extensions.md). [/Za,/ze (Disabilita estensioni linguaggio)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Attiva le estensioni del linguaggio.|
-|[/Zf](zf.md)|Migliora il tempo di generazione PDB nelle compilazioni parallele.|
+|[/ZF](zf.md)|Migliora il tempo di generazione PDB nelle compilazioni parallele.|
 |[/Zg](zg-generate-function-prototypes.md)|Rimosso in Visual Studio 2015. Genera prototipi di funzione.|
 |[/ZH](zh.md)|Specifica MD5, SHA-1 o SHA-256 per i checksum nelle informazioni di debug.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Include informazioni di debug in un database di programma compatibile con Modifica e continuazione.|
