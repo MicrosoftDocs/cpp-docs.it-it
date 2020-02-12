@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1db089110904ab88eb9c0c111d9da4e4e6869c82
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508934"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127907"
 ---
 # <a name="clipboard"></a>Appunti
 
@@ -21,7 +21,7 @@ In questa famiglia di articoli viene illustrato come implementare il supporto pe
 
 - Implementazione dei comandi di menu di modifica standard, ad esempio taglia, copia e incolla.
 
-- Implementazione del trasferimento di dati uniformi con trascinamento della selezione (OLE).
+- Implementazione del trasferimento dati uniforme con trascinamento della selezione OLE.
 
 Gli Appunti sono il metodo standard di Windows per il trasferimento di dati tra un'origine e una destinazione. Può anche essere molto utile nelle operazioni OLE. Con l'avvento di OLE, in Windows sono disponibili due meccanismi per gli Appunti. L'API degli Appunti di Windows standard è ancora disponibile, ma è stata integrata con il meccanismo di trasferimento dei dati OLE. L'UDT (Uniform Data Transfer) OLE supporta le operazioni Taglia, copia e incolla con gli appunti e il trascinamento della selezione.
 
@@ -41,7 +41,7 @@ Gli Appunti sono un servizio di sistema condiviso dall'intera sessione di Window
 
 - [Appunti di Windows](/windows/win32/dataxchg/clipboard)
 
-- [Implementazione del trascinamento della selezione (OLE)](../mfc/drag-and-drop-ole.md)
+- [Trascinamento della selezione OLE](../mfc/drag-and-drop-ole.md)
 
 ## <a name="see-also"></a>Vedere anche
 

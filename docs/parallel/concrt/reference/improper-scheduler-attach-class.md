@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
-ms.openlocfilehash: 2d6a7b53269d305c976bcc596fe85dc018442332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85adf3f919d94a82f5a68a5cd9e5f44cdca10006
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262476"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141232"
 ---
-# <a name="improperschedulerattach-class"></a>Classe improper_scheduler_attach
+# <a name="improper_scheduler_attach-class"></a>Classe improper_scheduler_attach
 
 Questa classe descrive un'eccezione generata quando il metodo `Attach` viene chiamato su un oggetto `Scheduler` già allegato al contesto corrente.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class improper_scheduler_attach : public std::exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -45,11 +45,11 @@ class improper_scheduler_attach : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="ctor"></a> improper_scheduler_attach
+## <a name="ctor"></a>improper_scheduler_attach
 
 Costruisce un oggetto `improper_scheduler_attach`.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_attach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_attach() throw();

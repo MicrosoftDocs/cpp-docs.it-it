@@ -4,123 +4,123 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e9b8124254084ac30191d37d49f2ef72bd677e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180167"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142288"
 ---
 # <a name="scheduler-instances"></a>Istanze dell'utilità di pianificazione
 
-Questo documento viene descritto il ruolo delle istanze dell'utilità di pianificazione nel Runtime di concorrenza e come usare il [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) e [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classi per creare e gestire istanze dell'utilità di pianificazione. Le istanze dell'utilità di pianificazione sono utili quando si desidera associare i criteri di pianificazione espliciti a specifici tipi di carichi di lavoro. È possibile ad esempio creare un'istanza dell'utilità di pianificazione per eseguire alcune attività con una priorità di thread elevata e usare l'utilità di pianificazione predefinita per eseguire altre attività con una priorità di thread normale.
+Questo documento descrive il ruolo delle istanze dell'utilità di pianificazione nel runtime di concorrenza e come usare le classi [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) e [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) per creare e gestire le istanze dell'utilità di pianificazione. Le istanze dell'utilità di pianificazione sono utili quando si desidera associare criteri di pianificazione espliciti a tipi specifici di carichi di lavoro. È possibile ad esempio creare un'istanza dell'utilità di pianificazione per eseguire alcune attività con una priorità di thread elevata e usare l'utilità di pianificazione predefinita per eseguire altre attività con una priorità di thread normale.
 
 > [!TIP]
->  Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita, pertanto non è necessario crearne una nell'applicazione. Poiché l'utilità di pianificazione consente di ottimizzare le prestazioni delle applicazioni, è consigliabile iniziare con il [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) o nella [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) se si è familiarità con il Runtime di concorrenza.
+> Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita, pertanto non è necessario crearne una nell'applicazione. Poiché il Utilità di pianificazione consente di ottimizzare le prestazioni delle applicazioni, è consigliabile iniziare con la libreria [PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) o la [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md) se non si ha familiarità con l'runtime di concorrenza.
 
-##  <a name="top"></a> Sezioni
+## <a name="top"></a> Sezioni
 
-- [L'utilità di pianificazione e le classi CurrentScheduler](#classes)
+- [Classi di utilità di pianificazione e CurrentScheduler](#classes)
 
 - [Creazione di un'istanza dell'utilità di pianificazione](#creating)
 
 - [Gestione della durata di un'istanza dell'utilità di pianificazione](#managing)
 
-- [I metodi e funzionalità](#features)
+- [Metodi e funzionalità](#features)
 
 - [Esempio](#example)
 
-##  <a name="classes"></a> L'utilità di pianificazione e le classi CurrentScheduler
+## <a name="classes"></a>Classi di utilità di pianificazione e CurrentScheduler
 
-L'utilità di pianificazione consente alle applicazioni di usare uno o più *le istanze dell'utilità di pianificazione* per pianificare il lavoro. Il [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) classe rappresenta un'istanza dell'utilità di pianificazione e incapsula la funzionalità correlata alla pianificazione delle attività.
+Il Utilità di pianificazione consente alle applicazioni di usare una o più *istanze dell'utilità di pianificazione* per pianificare il lavoro. La classe [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) rappresenta un'istanza dell'utilità di pianificazione e incapsula la funzionalità correlata alle attività di pianificazione.
 
-Un thread in cui è collegato a un'utilità di pianificazione è noto come un *contesto di esecuzione*, o semplicemente *contesto*. Un'utilità di pianificazione può essere attivo nel contesto corrente in qualsiasi momento. È noto anche come l'utilità di pianificazione attivi il *utilità di pianificazione corrente*. Il Runtime di concorrenza Usa la [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classe per fornire l'accesso all'utilità di pianificazione corrente. L'utilità di pianificazione corrente per un contesto può essere diverso dall'utilità di pianificazione corrente per un altro contesto. Il runtime non fornisce una rappresentazione a livello di processo dell'utilità di pianificazione corrente.
+Un thread associato a un'utilità di pianificazione è noto come contesto di *esecuzione*oppure solo come *contesto*. Un'utilità di pianificazione può essere attiva nel contesto corrente in qualsiasi momento. L'utilità di pianificazione attiva è nota anche come *utilità di pianificazione corrente*. Il runtime di concorrenza usa la classe [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) per fornire l'accesso all'utilità di pianificazione corrente. L'utilità di pianificazione corrente per un contesto può differire dall'utilità di pianificazione corrente per un altro contesto. Il runtime non fornisce una rappresentazione a livello di processo dell'utilità di pianificazione corrente.
 
-In genere, il `CurrentScheduler` classe viene utilizzata per accedere a utilità di pianificazione corrente. Il `Scheduler` classe è utile quando è necessario gestire un'utilità di pianificazione che non corrisponde a quello corrente.
+In genere, la classe `CurrentScheduler` viene utilizzata per accedere all'utilità di pianificazione corrente. La classe `Scheduler` è utile quando è necessario gestire un'utilità di pianificazione che non corrisponde a quella corrente.
 
-Le sezioni seguenti descrivono come creare e gestire un'istanza dell'utilità di pianificazione. Per un esempio completo che illustra queste attività, vedere [come: Gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
-
-[[Torna all'inizio](#top)]
-
-##  <a name="creating"></a> Creazione di un'istanza dell'utilità di pianificazione
-
-Questi tre modi per creare un `Scheduler` oggetto:
-
-- Se non esiste alcuna utilità di pianificazione, il runtime crea un'utilità di pianificazione predefinita per l'utente quando si usa la funzionalità di runtime, ad esempio, un algoritmo parallelo, per eseguire operazioni. L'utilità di pianificazione predefinita diventa l'utilità di pianificazione corrente per il contesto che avvia il lavoro parallelo.
-
-- Il [CurrentScheduler](reference/currentscheduler-class.md#create) metodo crea un `Scheduler` oggetto che usa un criterio specifico e utilità in questione viene associato al contesto corrente.
-
-- Il [Concurrency](reference/scheduler-class.md#create) metodo crea un `Scheduler` oggetto che usa un criterio specifico, ma non si associa il contesto corrente.
-
-Consentendo il runtime creare un'utilità di pianificazione predefinita consente tutte le attività simultanee condividere la stessa utilità di pianificazione. In genere, la funzionalità fornita dal [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) o il [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) consente di eseguire attività in parallelo. Pertanto, non è necessario lavorare direttamente con l'utilità di pianificazione per controllare i criteri o un ciclo di vita. Quando si usa la libreria PPL o la libreria di agenti, il runtime crea l'utilità di pianificazione predefinita se non esiste e rende l'utilità di pianificazione corrente per ogni contesto. Quando si crea un'utilità di pianificazione e impostarlo come utilità di pianificazione corrente, il runtime usa l'utilità di pianificazione per pianificare le attività. Creare istanze dell'utilità di pianificazione aggiuntive solo quando è necessario un criterio di pianificazione specifico. Per altre informazioni sui criteri associati a un'utilità di pianificazione, vedere [criteri dell'utilità di pianificazione](../../parallel/concrt/scheduler-policies.md).
+Nelle sezioni seguenti viene descritto come creare e gestire un'istanza dell'utilità di pianificazione. Per un esempio completo in cui vengono illustrate queste attività, vedere [procedura: gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 [[Torna all'inizio](#top)]
 
-##  <a name="managing"></a> Gestione della durata di un'istanza dell'utilità di pianificazione
+## <a name="creating"></a>Creazione di un'istanza dell'utilità di pianificazione
 
-Il runtime usa un meccanismo di conteggio dei riferimenti per controllare la durata di `Scheduler` oggetti.
+Esistono tre modi per creare un oggetto `Scheduler`:
 
-Quando si usa la `CurrentScheduler::Create` metodo o il `Scheduler::Create` metodo per creare un `Scheduler` dell'oggetto, il runtime imposta il conteggio di riferimento iniziale dell'unità di pianificazione a uno. Il runtime il conteggio dei riferimenti viene incrementato quando si chiama il [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) (metodo). Il `Scheduler::Attach` metodo associa il `Scheduler` oggetto al contesto corrente. Ciò rende l'utilità di pianificazione corrente. Quando si chiama il `CurrentScheduler::Create` metodo, il runtime crea un `Scheduler` dell'oggetto e lo collega al contesto corrente (e imposta il conteggio dei riferimenti a uno). È anche possibile usare la [concurrency::Scheduler::Reference](reference/scheduler-class.md#reference) metodo incrementare il conteggio dei riferimenti di un `Scheduler` oggetto.
+- Se non esiste alcuna utilità di pianificazione, il runtime crea automaticamente un'utilità di pianificazione predefinita quando si usa la funzionalità di runtime, ad esempio un algoritmo parallelo, per eseguire il lavoro. L'utilità di pianificazione predefinita diventa l'utilità di pianificazione corrente per il contesto che avvia il lavoro parallelo.
 
-Il runtime decrementa il conteggio riferimenti quando si chiama il [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) metodo per scollegare l'utilità di pianificazione corrente oppure chiamare il [concurrency::Scheduler::Release](reference/scheduler-class.md#release) (metodo). Quando il conteggio dei riferimenti arriva a zero, il runtime elimina definitivamente il `Scheduler` oggetto Dopotutto pianificata termina le attività. Un'attività in esecuzione può incrementare il conteggio dei riferimenti dell'utilità di pianificazione corrente. Pertanto, se il conteggio dei riferimenti arriva a zero e il conteggio dei riferimenti viene incrementato di un'attività, il runtime non elimina definitivamente il `Scheduler` oggetto finché il conteggio dei riferimenti raggiunge nuovamente da zero e completare tutte le attività.
+- Il metodo [Concurrency:: CurrentScheduler:: create](reference/currentscheduler-class.md#create) crea un oggetto `Scheduler` che utilizza un criterio specifico e associa tale utilità di pianificazione al contesto corrente.
 
-Il runtime gestisce uno stack interno di `Scheduler` oggetti per ogni contesto. Quando si chiama il `Scheduler::Attach` oppure `CurrentScheduler::Create` metodo, il runtime effettua il push che `Scheduler` oggetto nello stack per il contesto corrente. Ciò rende l'utilità di pianificazione corrente. Quando si chiama `CurrentScheduler::Detach`, il runtime viene visualizzata l'utilità di pianificazione corrente dallo stack per il contesto corrente e imposta quello precedente come utilità di pianificazione corrente.
+- Il metodo [Concurrency:: Scheduler:: create](reference/scheduler-class.md#create) crea un `Scheduler` oggetto che utilizza un criterio specifico, ma non lo associa al contesto corrente.
 
-Il runtime offre diversi modi per gestire la durata di un'istanza dell'utilità di pianificazione. La tabella seguente illustra il metodo appropriato che rilascia DLL o scollegato l'utilità di pianificazione nel contesto corrente per ogni metodo che crea o collega un'utilità di pianificazione per il contesto corrente.
+Consentire al runtime di creare un'utilità di pianificazione predefinita consente a tutte le attività simultanee di condividere la stessa utilità di pianificazione. In genere, la funzionalità fornita dalla libreria PPL ( [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) ) o dalla [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md) viene utilizzata per eseguire operazioni parallele. Pertanto, non è necessario collaborare direttamente con l'utilità di pianificazione per controllare i criteri o la durata. Quando si usa la libreria PPL o la libreria di agenti, il runtime crea l'utilità di pianificazione predefinita se non esiste e la rende l'utilità di pianificazione corrente per ogni contesto. Quando si crea un'utilità di pianificazione e la si imposta come utilità di pianificazione corrente, il runtime usa tale utilità di pianificazione per pianificare le attività. Creare istanze dell'utilità di pianificazione aggiuntive solo quando sono necessari criteri di pianificazione specifici. Per ulteriori informazioni sui criteri associati a un'utilità di pianificazione, vedere criteri dell' [utilità di pianificazione](../../parallel/concrt/scheduler-policies.md).
 
-|Creare o attach (metodo)|Metodo detach o di rilascio|
+[[Torna all'inizio](#top)]
+
+## <a name="managing"></a>Gestione della durata di un'istanza dell'utilità di pianificazione
+
+Il runtime usa un meccanismo di conteggio dei riferimenti per controllare la durata degli oggetti `Scheduler`.
+
+Quando si usa il metodo `CurrentScheduler::Create` o il metodo `Scheduler::Create` per creare un oggetto `Scheduler`, il runtime imposta su uno il conteggio dei riferimenti iniziali di tale utilità di pianificazione. Il runtime incrementa il conteggio dei riferimenti quando si chiama il metodo [Concurrency:: Scheduler:: alconnessione](reference/scheduler-class.md#attach) . Il metodo `Scheduler::Attach` associa l'oggetto `Scheduler` insieme al contesto corrente. Questo lo rende l'utilità di pianificazione corrente. Quando si chiama il metodo `CurrentScheduler::Create`, il runtime crea un oggetto `Scheduler` e lo connette al contesto corrente (e imposta il conteggio dei riferimenti su uno). È anche possibile usare il metodo [Concurrency:: Scheduler:: Reference](reference/scheduler-class.md#reference) per incrementare il conteggio dei riferimenti di un oggetto `Scheduler`.
+
+Il runtime decrementa il conteggio dei riferimenti quando si chiama il metodo [Concurrency:: CurrentScheduler::D etach](reference/currentscheduler-class.md#detach) per scollegare l'utilità di pianificazione corrente o chiamare il metodo [Concurrency:: Scheduler:: Release](reference/scheduler-class.md#release) . Quando il conteggio dei riferimenti raggiunge zero, il runtime elimina l'oggetto `Scheduler` dopo il completamento di tutte le attività pianificate. Un'attività in esecuzione può incrementare il conteggio dei riferimenti dell'utilità di pianificazione corrente. Di conseguenza, se il conteggio dei riferimenti raggiunge zero e un'attività incrementa il conteggio dei riferimenti, il runtime non elimina definitivamente l'oggetto `Scheduler` fino a quando il conteggio dei riferimenti non raggiunge di nuovo zero e tutte le attività vengono completate.
+
+Il runtime mantiene uno stack interno di oggetti `Scheduler` per ogni contesto. Quando si chiama il metodo `Scheduler::Attach` o `CurrentScheduler::Create`, il runtime effettua il push dell'oggetto `Scheduler` nello stack per il contesto corrente. Questo lo rende l'utilità di pianificazione corrente. Quando si chiama `CurrentScheduler::Detach`, il runtime estrae l'utilità di pianificazione corrente dallo stack per il contesto corrente e imposta quello precedente come utilità di pianificazione corrente.
+
+Il runtime offre diversi modi per gestire la durata di un'istanza dell'utilità di pianificazione. La tabella seguente illustra il metodo appropriato che rilascia o scollega l'utilità di pianificazione dal contesto corrente per ogni metodo che crea o connette un'utilità di pianificazione al contesto corrente.
+
+|Metodo di creazione o di associazione|Metodo di rilascio o scollegamento|
 |-----------------------------|------------------------------|
 |`CurrentScheduler::Create`|`CurrentScheduler::Detach`|
 |`Scheduler::Create`|`Scheduler::Release`|
 |`Scheduler::Attach`|`CurrentScheduler::Detach`|
 |`Scheduler::Reference`|`Scheduler::Release`|
 
-La chiamata di inappropriato di rilascio o scollegare metodo produce un comportamento non specificato in fase di esecuzione.
+La chiamata al metodo di rilascio o scollegamento non appropriato produce un comportamento non specificato nel Runtime.
 
-Quando si usa la funzionalità, ad esempio, la libreria PPL, che fa sì che il runtime creare l'utilità di pianificazione predefinita per l'utente, non rilasciare o scollegare questa utilità di pianificazione. Il runtime gestisce la durata di qualsiasi utilità di pianificazione che viene creato.
+Quando si usa la funzionalità, ad esempio la libreria PPL, che fa in modo che il runtime crei automaticamente l'utilità di pianificazione predefinita, non rilasciare o scollegare l'utilità di pianificazione. Il runtime gestisce la durata di tutte le utilità di pianificazione create.
 
-Perché il runtime non elimina definitivamente un `Scheduler` oggetto prima di aver completato tutte le attività, è possibile usare il [concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) metodo o il [Concurrency:: CurrentScheduler:: RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) metodo per ricevere una notifica quando un `Scheduler` oggetto viene eliminato definitivamente. Ciò è utile quando è necessario attendere il completamento di tutte le attività che sono pianificata per un `Scheduler` oggetto alla fine.
-
-[[Torna all'inizio](#top)]
-
-##  <a name="features"></a> I metodi e funzionalità
-
-Questa sezione vengono riepilogati i metodi importanti della `CurrentScheduler` e `Scheduler` classi.
-
-Può essere considerata il `CurrentScheduler` classe come supporto per la creazione di un'utilità di pianificazione per l'utilizzo nel contesto corrente. Il `Scheduler` classe consente di controllare un'utilità di pianificazione che appartiene a un altro contesto.
-
-La tabella seguente illustra i metodi importanti che sono definiti dal `CurrentScheduler` classe.
-
-|Metodo|Descrizione|
-|------------|-----------------|
-|[creare](reference/currentscheduler-class.md#create)|Crea un `Scheduler` oggetto che utilizza i criteri specificati e lo associa al contesto corrente.|
-|[Get](reference/currentscheduler-class.md#get)|Recupera un puntatore al `Scheduler` oggetto associato al contesto corrente. Questo metodo non incrementa il conteggio dei riferimenti di `Scheduler` oggetto.|
-|[Detach](reference/currentscheduler-class.md#detach)|Consente di scollegare l'utilità di pianificazione corrente dal contesto corrente e imposta quello precedente come utilità di pianificazione corrente.|
-|[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Registra un evento che viene impostato dal runtime quando viene eliminato definitivamente l'utilità di pianificazione corrente.|
-|[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|Crea una [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) oggetto nell'utilità di pianificazione corrente.|
-|[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|Aggiunge un'attività leggera per la coda dell'utilità di pianificazione corrente.|
-|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|Recupera una copia del criterio associato con l'utilità di pianificazione corrente.|
-
-La tabella seguente illustra i metodi importanti che sono definiti dal `Scheduler` classe.
-
-|Metodo|Descrizione|
-|------------|-----------------|
-|[creare](reference/scheduler-class.md#create)|Crea un `Scheduler` oggetto che usa i criteri specificati.|
-|[Attach](reference/scheduler-class.md#attach)|Associa il `Scheduler` oggetto al contesto corrente.|
-|[Riferimento](reference/scheduler-class.md#reference)|Il contatore dei riferimenti viene incrementato il `Scheduler` oggetto.|
-|[Rilascio](reference/scheduler-class.md#release)|Decrementa il contatore dei riferimenti di `Scheduler` oggetto.|
-|[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|Registra un evento che viene impostato dal runtime quando il `Scheduler` oggetto viene eliminato definitivamente.|
-|[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|Crea una [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) dell'oggetto nel `Scheduler` oggetto.|
-|[ScheduleTask](reference/scheduler-class.md#scheduletask)|Consente di pianificare un'attività leggera dal `Scheduler` oggetto.|
-|[GetPolicy](reference/scheduler-class.md#getpolicy)|Recupera una copia dei criteri che sono associato il `Scheduler` oggetto.|
-|[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|Imposta i criteri per il runtime da utilizzare durante la creazione di utilità di pianificazione predefinita.|
-|[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|Consente di ripristinare il criterio predefinito a quello che era attivo prima della chiamata a `SetDefaultSchedulerPolicy`. Se l'utilità di pianificazione predefinita viene creato dopo questa chiamata, il runtime Usa le impostazioni di criteri predefinite per creare l'utilità di pianificazione.|
+Poiché il runtime non elimina definitivamente un oggetto `Scheduler` prima del completamento di tutte le attività, è possibile utilizzare il metodo [Concurrency:: Scheduler:: RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) o il metodo [Concurrency:: CurrentScheduler:: RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) per ricevere una notifica quando un oggetto `Scheduler` viene eliminato definitivamente. Questa operazione è utile quando è necessario attendere il completamento di ogni attività pianificata da un oggetto `Scheduler`.
 
 [[Torna all'inizio](#top)]
 
-##  <a name="example"></a> Esempio
+## <a name="features"></a>Metodi e funzionalità
 
-Per esempi di base di come creare e gestire un'istanza dell'utilità di pianificazione, vedere [come: Gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+In questa sezione vengono riepilogati i metodi importanti delle classi `CurrentScheduler` e `Scheduler`.
+
+Si pensi alla classe `CurrentScheduler` come helper per la creazione di un'utilità di pianificazione per l'utilizzo nel contesto corrente. La classe `Scheduler` consente di controllare un'utilità di pianificazione che appartiene a un altro contesto.
+
+La tabella seguente illustra i metodi importanti definiti dalla classe `CurrentScheduler`.
+
+|Metodo|Descrizione|
+|------------|-----------------|
+|[Creare](reference/currentscheduler-class.md#create)|Crea un `Scheduler` oggetto che utilizza il criterio specificato e lo associa al contesto corrente.|
+|[GET](reference/currentscheduler-class.md#get)|Recupera un puntatore all'oggetto `Scheduler` associato al contesto corrente. Questo metodo non incrementa il conteggio dei riferimenti dell'oggetto `Scheduler`.|
+|[Scollega](reference/currentscheduler-class.md#detach)|Scollega l'utilità di pianificazione corrente dal contesto corrente e imposta quella precedente come utilità di pianificazione corrente.|
+|[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Registra un evento impostato dal runtime quando l'utilità di pianificazione corrente viene distrutta.|
+|[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|Crea un oggetto [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) nell'utilità di pianificazione corrente.|
+|[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|Aggiunge un'attività leggera alla coda di pianificazione dell'utilità di pianificazione corrente.|
+|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|Recupera una copia del criterio associato all'utilità di pianificazione corrente.|
+
+La tabella seguente illustra i metodi importanti definiti dalla classe `Scheduler`.
+
+|Metodo|Descrizione|
+|------------|-----------------|
+|[Creare](reference/scheduler-class.md#create)|Crea un `Scheduler` oggetto che utilizza i criteri specificati.|
+|[Collega](reference/scheduler-class.md#attach)|Associa l'oggetto `Scheduler` insieme al contesto corrente.|
+|[Riferimento](reference/scheduler-class.md#reference)|Incrementa il contatore dei riferimenti dell'oggetto `Scheduler`.|
+|[Versione](reference/scheduler-class.md#release)|Decrementa il contatore dei riferimenti dell'oggetto `Scheduler`.|
+|[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|Registra un evento impostato dal runtime quando l'oggetto `Scheduler` viene eliminato definitivamente.|
+|[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|Crea un oggetto [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) nell'oggetto `Scheduler`.|
+|[ScheduleTask](reference/scheduler-class.md#scheduletask)|Pianifica un'attività leggera dall'oggetto `Scheduler`.|
+|[GetPolicy](reference/scheduler-class.md#getpolicy)|Recupera una copia del criterio associato all'oggetto `Scheduler`.|
+|[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|Imposta i criteri per il runtime da usare quando crea l'utilità di pianificazione predefinita.|
+|[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|Ripristina il criterio predefinito in quello che era attivo prima della chiamata a `SetDefaultSchedulerPolicy`. Se dopo questa chiamata viene creata l'utilità di pianificazione predefinita, il runtime usa le impostazioni predefinite dei criteri per creare l'utilità di pianificazione.|
+
+[[Torna all'inizio](#top)]
+
+## <a name="example"></a>Esempio
+
+Per esempi di base su come creare e gestire un'istanza dell'utilità di pianificazione, vedere [procedura: gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 ## <a name="see-also"></a>Vedere anche
 

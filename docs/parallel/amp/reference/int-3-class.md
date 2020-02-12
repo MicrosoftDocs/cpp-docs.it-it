@@ -72,24 +72,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc35562466ee33585be03739695d24da043415c2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180245"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127816"
 ---
-# <a name="int3-class"></a>Classe int_3
+# <a name="int_3-class"></a>Classe int_3
 
-Rappresenta un vettore short di tre numeri interi.
+Rappresenta un vettore breve di tre numeri interi.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class int_3;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -101,7 +101,7 @@ class int_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore int_3](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore int_3](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -159,7 +159,7 @@ class int_3;
 |int_3::operator~||
 |int_3::operator++||
 |int_3::operator+=||
-|int_3::operator<\<=||
+|int_3:: operator <\<=||
 |int_3::operator=||
 |int_3::operator-=||
 |int_3::operator>>=||
@@ -168,7 +168,7 @@ class int_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#size)||
+|[dimensioni costanti](#size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -211,17 +211,17 @@ class int_3;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="ctor"></a> int_3
+## <a name="ctor"></a>int_3
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 int_3() restrict(amp,cpu);
 int_3(
    int _V0,
@@ -254,25 +254,25 @@ explicit inline int_3(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-## <a name="size"></a> Dimensioni
+## <a name="size"></a>dimensioni
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 static const int size = 3;
 ```
 

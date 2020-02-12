@@ -9,30 +9,30 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: dac74085278418153ddec502f6257ce13885704d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd8f50a8c9829ff9de3e2412b89aa4de88d90db6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394377"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138764"
 ---
-# <a name="progressreporter-class"></a>Classe progress_reporter
+# <a name="progress_reporter-class"></a>Classe progress_reporter
 
 La classe del reporter dello stato di avanzamento consente la segnalazione di notifiche di stato di un tipo specifico. Ogni oggetto progress_reporter è associato a una particolare operazione o azione asincrona.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template<typename _ProgressType>
 class progress_reporter;
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *_ProgressType*<br/>
 Il tipo di payload di ogni notifica dello stato di avanzamento segnalato tramite il reporter dello stato di avanzamento.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -44,11 +44,11 @@ Il tipo di payload di ogni notifica dello stato di avanzamento segnalato tramite
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[report](#report)|Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.|
+|[relazione](#report)|Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questo tipo è disponibile solo per le app di Windows Runtime.
+Questo tipo è disponibile solo per le app Windows Runtime.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -60,24 +60,24 @@ Questo tipo è disponibile solo per le app di Windows Runtime.
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="ctor"></a> progress_reporter
+## <a name="ctor"></a>progress_reporter
 
-```
+```cpp
 progress_reporter();
 ```
 
-##  <a name="report"></a> Report
+## <a name="report"></a>relazione
 
 Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.
 
-```
+```cpp
 void report(const _ProgressType& val) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *val*<br/>
-Il payload da segnalare con una notifica di stato di avanzamento.
+Payload da segnalare tramite una notifica di stato.
 
 ## <a name="see-also"></a>Vedere anche
 
