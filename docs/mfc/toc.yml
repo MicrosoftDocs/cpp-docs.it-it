@@ -323,7 +323,7 @@
           items:
             - name: automazione
               href: automation.md
-            - name: Client di automazione
+            - name: client di automazione
               expanded: false
               items:
                 - name: Client di automazione
@@ -333,7 +333,7 @@
             - name: Server di automazione
               expanded: false
               items:
-                - name: Server di automazione
+                - name: server di automazione
                   href: automation-servers.md
                 - name: 'Server di automazione: problemi di durata degli oggetti'
                   href: automation-servers-object-lifetime-issues.md
@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: 'Oggetti dati e origini dati: modifica'
               href: data-objects-and-data-sources-manipulation.md
-        - name: Trascinamento della selezione (OLE)
-          expanded: false
-          items:
-            - name: Trascinamento della selezione (OLE)
-              href: drag-and-drop-ole.md
-            - name: 'Trascinamento della selezione: implementazione di un''origine di rilascio'
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 'Trascinamento della selezione: implementazione di una destinazione di rilascio'
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 'Trascinamento della selezione: personalizzazione'
-              href: drag-and-drop-customizing.md
+        - name: Trascinamento della selezione OLE
+          href: drag-and-drop-ole.md
         - name: Menu e risorse (OLE)
           expanded: false
           items:
@@ -523,7 +514,7 @@
             - name: Controlli ActiveX MFC
               expanded: false
               items:
-                - name: Controlli ActiveX MFC
+                - name: controlli ActiveX MFC
                   href: mfc-activex-controls.md
                 - name: 'Controlli ActiveX MFC: Ottimizzazione'
                   expanded: false
@@ -546,7 +537,7 @@
                       href: optimizing-control-drawing.md
                 - name: 'Controlli ActiveX MFC: disegno di un controllo ActiveX'
                   href: mfc-activex-controls-painting-an-activex-control.md
-                - name: 'Controlli ActiveX MFC: Eventi'
+                - name: 'Controlli ActiveX MFC: Events'
                   href: mfc-activex-controls-events.md
                 - name: 'Controlli ActiveX MFC: aggiunta di eventi predefiniti a un controllo ActiveX'
                   href: mfc-activex-controls-adding-stock-events-to-an-activex-control.md
@@ -1304,7 +1295,7 @@
                 - name: Eliminazione di oggetti finestra
                   expanded: false
                   items:
-                    - name: Eliminazione di oggetti finestra
+                    - name: Eliminazione permanente di oggetti finestra
                       href: destroying-window-objects.md
                     - name: Sequenza di eliminazione di finestre
                       href: window-destruction-sequence.md
@@ -1473,7 +1464,7 @@
       href: tn014-custom-controls.md
     - name: 'TN016: Uso dell''ereditarietà multipla C++ con MFC'
       href: tn016-using-cpp-multiple-inheritance-with-mfc.md
-    - name: 'TN017: Eliminazione di oggetti finestra'
+    - name: 'TN017: Eliminazione permanente di oggetti finestra'
       href: tn017-destroying-window-objects.md
     - name: 'TN020: Convenzioni di numerazione e denominazione degli ID'
       href: tn020-id-naming-and-numbering-conventions.md
@@ -1666,7 +1657,7 @@
     - name: Classi OLE
       expanded: false
       items:
-        - name: Classi OLE
+        - name: classi OLE
           href: ole-classes.md
         - name: Classi di contenitore OLE
           href: ole-container-classes.md
@@ -1711,7 +1702,7 @@
     - name: Classi MFC
       expanded: false
       items:
-        - name: Classi MFC
+        - name: MFC (classi)
           href: reference/mfc-classes.md
         - name: Classe CAccelerateDecelerateTransition
           href: reference/cacceleratedeceleratetransition-class.md
@@ -2749,7 +2740,7 @@
               href: reference/cdaoquerydefinfo-structure.md
             - name: Struttura CDaoRelationInfo
               href: reference/cdaorelationinfo-structure.md
-            - name: CDaoRelationFieldInfo (struttura)
+            - name: Struttura CDaoRelationFieldInfo
               href: reference/cdaorelationfieldinfo-structure.md
             - name: Struttura CDaoTableDefInfo
               href: reference/cdaotabledefinfo-structure.md
