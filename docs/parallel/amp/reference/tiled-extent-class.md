@@ -13,20 +13,20 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2248c770c7eedde59d1cb592f7d5d7c1bfbde9a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352281"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126422"
 ---
-# <a name="tiledextent-class"></a>Classe tiled_extent
+# <a name="tiled_extent-class"></a>Classe tiled_extent
 
-Oggetto `tiled_extent` oggetto è un `extent` oggetto di tre dimensioni che suddivide lo spazio dell'extent in una, due o riquadri tridimensionali.
+Un oggetto `tiled_extent` è un oggetto `extent` da una a tre dimensioni che suddivide lo spazio dell'extent in riquadri a una, due o tre dimensioni.
 
-### <a name="syntax"></a>Sintassi
+## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template <
     int _Dim0,
     int _Dim1,
@@ -49,15 +49,15 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ### <a name="parameters"></a>Parametri
 
 *_Dim0*<br/>
-La lunghezza della dimensione più significativa.
+Lunghezza della dimensione più significativa.
 
 *_Dim1*<br/>
-La lunghezza della dimensione significativa next-a-la maggior parte.
+Lunghezza della dimensione più vicina alla dimensione più significativa.
 
 *_Dim2*<br/>
 Lunghezza della dimensione meno significativa.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -69,29 +69,29 @@ Lunghezza della dimensione meno significativa.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[get_tile_extent](#get_tile_extent)|Restituisce un `extent` che acquisisce i valori dell'oggetto di `tiled_extent` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.|
-|[pad](#pad)|Restituisce un nuovo `tiled_extent` oggetto con gli extent regolati per essere agevolmente divisibili per le dimensioni della sezione.|
-|[truncate](#truncate)|Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati verso il basso per essere agevolmente divisibili per le dimensioni della sezione.|
+|[get_tile_extent](#get_tile_extent)|Restituisce un `extent` oggetto che acquisisce i valori degli argomenti del modello `tiled_extent` `_Dim0`, `_Dim1`e `_Dim2`.|
+|[Pad](#pad)|Restituisce un nuovo oggetto `tiled_extent` con gli extent adattati per essere divisibile in modo uniforme dalle dimensioni del riquadro.|
+|[truncate](#truncate)|Restituisce un nuovo oggetto `tiled_extent` con gli extent modificati in modo da essere divisibile in modo uniforme dalle dimensioni del riquadro.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `tiled_index` in questo oggetto.|
+|[operator=](#operator_eq)|Copia il contenuto dell'oggetto `tiled_index` specificato in questo oggetto.|
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[tile_dim0 Constant](#tile_dim0)|Archivia la lunghezza della dimensione più significativa.|
-|[tile_dim1 (costante)](#tile_dim1)|Archivia la lunghezza della dimensione significativa next-a-la maggior parte.|
-|[tile_dim2 (costante)](#tile_dim2)|Archivia la lunghezza della dimensione meno significativa.|
+|[Costante tile_dim0](#tile_dim0)|Archivia la lunghezza della dimensione più significativa.|
+|[Costante tile_dim1](#tile_dim1)|Archivia la lunghezza della dimensione più vicina alla dimensione più significativa.|
+|[Costante tile_dim2](#tile_dim2)|Archivia la lunghezza della dimensione meno significativa.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|Ottiene un' `extent` che acquisisce i valori dell'oggetto di `tiled_extent` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.|
+|[tile_extent](#tile_extent)|Ottiene un oggetto `extent` che acquisisce i valori degli argomenti del modello `tiled_extent` `_Dim0`, `_Dim1`e `_Dim2`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -103,15 +103,15 @@ Lunghezza della dimensione meno significativa.
 
 **Intestazione:** amp.h
 
-**Spazio dei nomi:** Concorrenza
+**Spazio dei nomi:** Concurrency
 
-## <a name="ctor"> </a>  Costruttore tiled_extent
+## <a name="ctor"></a> Costruttore tiled_extent
 
 Inizializza una nuova istanza della classe `tiled_extent`.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 tiled_extent();
 
 tiled_extent(
@@ -124,56 +124,56 @@ tiled_extent(
 ### <a name="parameters"></a>Parametri
 
 *_Other*<br/>
-Il `extent` o `tiled_extent` oggetto da copiare.
+`extent` o `tiled_extent` oggetto da copiare.
 
-## <a name="get_tile_extent"> </a>  get_tile_extent
+## <a name="get_tile_extent"></a> get_tile_extent
 
-Restituisce un `extent` che acquisisce i valori dell'oggetto di `tiled_extent` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.
+Restituisce un `extent` oggetto che acquisisce i valori degli argomenti del modello `tiled_extent` `_Dim0`, `_Dim1`e `_Dim2`.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Un' `extent` che acquisisce le dimensioni di questo oggetto `tiled_extent` istanza.
+Oggetto `extent` che acquisisce le dimensioni di questa istanza di `tiled_extent`.
 
-## <a name="pad"> </a>  pad
+## <a name="pad"></a> riquadro
 
-Restituisce un nuovo `tiled_extent` oggetto con gli extent regolati per essere agevolmente divisibili per le dimensioni della sezione.
+Restituisce un nuovo oggetto `tiled_extent` con gli extent adattati per essere divisibile in modo uniforme dalle dimensioni del riquadro.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 tiled_extent pad() const;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il nuovo `tiled_extent` oggetto per valore.
-## <a name="truncate"> </a>  truncate
+Nuovo oggetto `tiled_extent`, in base al valore.
+## <a name="truncate"></a> tronca
 
-Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati verso il basso per essere agevolmente divisibili per le dimensioni della sezione.
+Restituisce un nuovo oggetto `tiled_extent` con gli extent modificati in modo da essere divisibile in modo uniforme dalle dimensioni del riquadro.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 tiled_extent truncate() const;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati verso il basso per essere agevolmente divisibili per le dimensioni della sezione.
+Restituisce un nuovo oggetto `tiled_extent` con gli extent modificati in modo da essere divisibile in modo uniforme dalle dimensioni del riquadro.
 
-## <a name="operator_eq"> </a>  operator=
+## <a name="operator_eq"></a> operatore =
 
-Copia il contenuto dell'oggetto specificato `tiled_index` in questo oggetto.
+Copia il contenuto dell'oggetto `tiled_index` specificato in questo oggetto.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 tiled_extent&  operator= (
     const tiled_extent& _Other ) restrict (amp, cpu);
 ```
@@ -181,48 +181,48 @@ tiled_extent&  operator= (
 ### <a name="parameters"></a>Parametri
 
 *_Other*<br/>
-Il `tiled_index` da copiare dall'oggetto.
+Oggetto `tiled_index` da cui eseguire la copia.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento a questo `tiled_index` istanza.
+Riferimento a questa istanza di `tiled_index`.
 
-## <a name="tile_dim0"> </a>  tile_dim0
+## <a name="tile_dim0"></a> tile_dim0
 
 Archivia la lunghezza della dimensione più significativa.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 static const int tile_dim0 = _Dim0;
 ```
 
-## <a name="tile_dim1"> </a>  tile_dim1
+## <a name="tile_dim1"></a> tile_dim1
 
-Archivia la lunghezza della dimensione significativa next-a-la maggior parte.
+Archivia la lunghezza della dimensione più vicina alla dimensione più significativa.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 static const int tile_dim1 = _Dim1;
 ```
 
-## <a name="tile_dim2"> </a>  tile_dim2
+## <a name="tile_dim2"></a> tile_dim2
 
 Archivia la lunghezza della dimensione meno significativa.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 static const int tile_dim2 = _Dim2;
 ```
 
-## <a name="tile_extent"> </a>  tile_extent
-  Ottiene un' `extent` che acquisisce i valori dell'oggetto di `tiled_extent` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.
+## <a name="tile_extent"></a> tile_extent
+  Ottiene un oggetto `extent` che acquisisce i valori degli argomenti del modello `tiled_extent` `_Dim0`, `_Dim1`e `_Dim2`.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent;
 ```
 

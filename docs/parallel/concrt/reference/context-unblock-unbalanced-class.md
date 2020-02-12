@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-ms.openlocfilehash: f4f385cde2a27665afa5eb9869eb52bc42c70111
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 261ec96c1a83fbec423e6dbbfe403c4db53a2962
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296216"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143105"
 ---
-# <a name="contextunblockunbalanced-class"></a>Classe context_unblock_unbalanced
+# <a name="context_unblock_unbalanced-class"></a>Classe context_unblock_unbalanced
 
 Questa classe descrive un'eccezione generata quando le chiamate ai metodi `Block` e `Unblock` di un oggetto `Context` non sono abbinate correttamente.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class context_unblock_unbalanced : public std::exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -33,9 +33,9 @@ class context_unblock_unbalanced : public std::exception;
 |----------|-----------------|
 |[context_unblock_unbalanced](#ctor)|Di overload. Costruisce un oggetto `context_unblock_unbalanced`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le chiamate al `Block` e `Unblock` metodi di un `Context` oggetto deve sempre essere abbinato correttamente. Il Runtime di concorrenza consente le operazioni a verificarsi in qualsiasi ordine. Ad esempio, una chiamata a `Block` può essere seguita da una chiamata a `Unblock` o viceversa. Questa eccezione viene generata se, ad esempio, due chiamate al `Unblock` metodo sono stati eseguiti in una riga, in un `Context` oggetto che non è stato bloccato.
+Le chiamate ai metodi `Block` e `Unblock` di un oggetto `Context` devono essere sempre abbinate correttamente. Il runtime di concorrenza consente di eseguire le operazioni in qualsiasi ordine. Ad esempio, una chiamata a `Block` può essere seguita da una chiamata a `Unblock` o viceversa. Questa eccezione viene generata se, ad esempio, due chiamate al metodo `Unblock` sono state effettuate in una riga, in un oggetto `Context` che non è stato bloccato.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -49,11 +49,11 @@ Le chiamate al `Block` e `Unblock` metodi di un `Context` oggetto deve sempre es
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="ctor"></a> context_unblock_unbalanced
+## <a name="ctor"></a>context_unblock_unbalanced
 
 Costruisce un oggetto `context_unblock_unbalanced`.
 
-```
+```cpp
 explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
 
 context_unblock_unbalanced() throw();

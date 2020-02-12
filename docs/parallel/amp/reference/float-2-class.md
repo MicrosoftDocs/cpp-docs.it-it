@@ -28,24 +28,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-ms.openlocfilehash: 94a0936c1e5630ae53af9d9386d3c9248061ed71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af5116118c9821f5c1801789bff13f3de8d4026a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180272"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126656"
 ---
-# <a name="float2-class"></a>Classe float_2
+# <a name="float_2-class"></a>Classe float_2
 
-Rappresenta un vettore short di due valori a virgola mobile.
+Rappresenta un vettore breve di due float.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class float_2;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -57,7 +57,7 @@ class float_2;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore float_2](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore float_2](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -93,7 +93,7 @@ class float_2;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#float_2__size)||
+|[dimensioni costanti](#float_2__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -114,15 +114,15 @@ class float_2;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> float_2
+## <a name="ctor"></a>float_2
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 float_2() restrict(amp,
     cpu);
 
@@ -163,20 +163,20 @@ explicit inline float_2(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="float_2__size"></a> Dimensioni
+## <a name="float_2__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 2;
 ```
 

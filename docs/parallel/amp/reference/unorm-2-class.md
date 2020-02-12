@@ -28,24 +28,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 33411511809fc9798f6fdf65f5331e2e587990ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405495"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126202"
 ---
-# <a name="unorm2-class"></a>Classe unorm_2
+# <a name="unorm_2-class"></a>Classe unorm_2
 
-Rappresenta un vettore short di due numeri normali senza segno.
+Rappresenta un breve vettore di due numeri normali senza segno.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class unorm_2;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -57,7 +57,7 @@ class unorm_2;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore unorm_2](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore unorm_2](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -113,15 +113,15 @@ class unorm_2;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> unorm_2
+## <a name="ctor"></a>unorm_2
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 unorm_2() restrict(amp,
     cpu);
 
@@ -171,20 +171,20 @@ explicit inline unorm_2(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="unorm_2__size"></a> Dimensioni
+## <a name="unorm_2__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 2;
 ```
 

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 9f8f5c5629e9794ca8ee2cc6bedbc4ba6bfdb24d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40799d1ed6e21e6932f1adfbad117c436918b792
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262515"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141281"
 ---
 # <a name="iexecutionresource-structure"></a>Struttura IExecutionResource
 
@@ -24,24 +24,24 @@ Un'astrazione per un thread hardware.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 struct IExecutionResource;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Restituisce il numero di processori virtuali attivato radici e sottoscritti esterni thread attualmente associato al thread di hardware sottostante che rappresenta questa risorsa di esecuzione.|
-|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Restituisce un identificatore univoco per il thread di hardware che rappresenta questa risorsa di esecuzione.|
-|[IExecutionResource::GetNodeId](#getnodeid)|Restituisce un identificatore univoco per il nodo del processore a cui appartiene questa risorsa di esecuzione.|
-|[IExecutionResource::Remove](#remove)|Restituisce la risorsa di esecuzione a Resource Manager.|
+|[IExecutionResource:: CurrentSubscriptionLevel](#currentsubscriptionlevel)|Restituisce il numero di radici del processore virtuale attivato e i thread esterni sottoscritti attualmente associati al thread hardware sottostante rappresentato da questa risorsa di esecuzione.|
+|[IExecutionResource:: GetExecutionResourceId](#getexecutionresourceid)|Restituisce un identificatore univoco per il thread hardware rappresentato da questa risorsa di esecuzione.|
+|[IExecutionResource:: GetNodeId](#getnodeid)|Restituisce un identificatore univoco per il nodo del processore a cui appartiene questa risorsa di esecuzione.|
+|[IExecutionResource:: Remove](#remove)|Restituisce la risorsa di esecuzione al Gestione risorse.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Risorse di esecuzione possono essere autonome o associate le radici del processore virtuale. Quando un thread nell'applicazione viene creata una sottoscrizione di thread, viene creata una risorsa di esecuzione autonomo. I metodi [ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) e [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) creare sottoscrizioni di thread e restituire un `IExecutionResource` interfaccia che rappresenta il sottoscrizione. Creazione di una sottoscrizione di thread è un modo per informare il gestore di risorse che un determinato thread farà parte il lavoro nella coda di un'utilità di pianificazione, con radici del processore virtuale di Resource Manager viene assegnato all'utilità di pianificazione. Resource Manager usa le informazioni per evitare la sovrascrittura della thread hardware quando possibile.
+Le risorse di esecuzione possono essere autonome o associate a radici del processore virtuale. Una risorsa di esecuzione autonoma viene creata quando un thread nell'applicazione crea una sottoscrizione di thread. I metodi [ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) e [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) creano sottoscrizioni di thread e restituiscono un'interfaccia `IExecutionResource` che rappresenta la sottoscrizione. La creazione di una sottoscrizione di thread è un modo per informare il Gestione risorse che un determinato thread parteciperà al lavoro accodato a un'utilità di pianificazione, insieme alle radici del processore virtuale Gestione risorse assegnato all'utilità di pianificazione. Il Gestione risorse utilizza le informazioni per evitare l'oversubscriptioning dei thread hardware dove possibile.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -53,49 +53,49 @@ Risorse di esecuzione possono essere autonome o associate le radici del processo
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="currentsubscriptionlevel"></a>  Metodo IExecutionResource:: CurrentSubscriptionLevel
+## <a name="currentsubscriptionlevel"></a>Metodo IExecutionResource:: CurrentSubscriptionLevel
 
-Restituisce il numero di processori virtuali attivato radici e sottoscritti esterni thread attualmente associato al thread di hardware sottostante che rappresenta questa risorsa di esecuzione.
+Restituisce il numero di radici del processore virtuale attivato e i thread esterni sottoscritti attualmente associati al thread hardware sottostante rappresentato da questa risorsa di esecuzione.
 
-```
+```cpp
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il livello di abbonamento corrente.
+Livello di sottoscrizione corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il livello di abbonamento indica il numero di thread in esecuzione è associato al thread hardware. Include solo i thread di Resource Manager è a conoscenza del sotto forma di thread sottoscritto e radici di processori virtuali sono attivamente in esecuzione il proxy thread.
+Il livello di sottoscrizione indica il numero di thread in esecuzione associati al thread hardware. Sono inclusi solo i thread di cui Gestione risorse è a conoscenza sotto forma di thread sottoscritti e le radici del processore virtuale che eseguono attivamente i proxy di thread.
 
-La chiamata al metodo [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), o il metodo [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) con il parametro `doSubscribeCurrentThread` impostata sul valore **true** incrementa il livello di abbonamento di un thread di hardware di uno. Restituiscono anche un `IExecutionResource` interfaccia che rappresenta la sottoscrizione. Una chiamata corrispondente per il [IExecutionResource:: Remove](#remove) decrementa a livello di sottoscrizione del thread hardware da uno.
+Se si chiama il metodo [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread)o il metodo [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) con il parametro `doSubscribeCurrentThread` impostato sul valore **true** , il livello di sottoscrizione di un thread hardware viene incrementato di uno. Restituiscono inoltre un'interfaccia `IExecutionResource` che rappresenta la sottoscrizione. Una chiamata corrispondente a [IExecutionResource:: Remove](#remove) decrementa di uno il livello di sottoscrizione del thread hardware.
 
-L'atto di attivazione di una radice del processore virtuale usando il metodo [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate) incrementa il livello di abbonamento di un thread di hardware di uno. I metodi [IVirtualProcessorRoot:: Deactivate](ivirtualprocessorroot-structure.md#deactivate), o [IExecutionResource:: Remove](#remove) decrementa il livello di sottoscrizione di uno quando viene richiamato su una radice del processore virtuale attivata.
+L'azione di attivazione di una radice del processore virtuale tramite il metodo [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate) incrementa il livello di sottoscrizione di un thread hardware di uno. I metodi [IVirtualProcessorRoot::D ttiva](ivirtualprocessorroot-structure.md#deactivate)o [IExecutionResource:: Remove](#remove) decrementano di uno il livello di sottoscrizione quando viene richiamato su una radice del processore virtuale attivata.
 
-Resource Manager Usa informazioni a livello di sottoscrizione come uno dei modi in cui si desidera determinare il momento di spostare le risorse tra le utilità di pianificazione.
+Il Gestione risorse utilizza informazioni sul livello di sottoscrizione come uno dei modi in cui determinare quando spostare le risorse tra le utilità di pianificazione.
 
-##  <a name="getexecutionresourceid"></a>  Metodo IExecutionResource:: GetExecutionResourceId
+## <a name="getexecutionresourceid"></a>Metodo IExecutionResource:: GetExecutionResourceId
 
-Restituisce un identificatore univoco per il thread di hardware che rappresenta questa risorsa di esecuzione.
+Restituisce un identificatore univoco per il thread hardware rappresentato da questa risorsa di esecuzione.
 
-```
+```cpp
 virtual unsigned int GetExecutionResourceId() const = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Identificatore univoco per il thread di hardware sottostante di questa risorsa di esecuzione.
+Identificatore univoco per il thread hardware sottostante a questa risorsa di esecuzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Ogni thread di hardware viene assegnato un identificatore univoco per il Runtime di concorrenza. Se più risorse di esecuzione sono associati hardware thread, tutti hanno lo stesso identificatore di risorsa di esecuzione.
+A ogni thread hardware viene assegnato un identificatore univoco da parte del runtime di concorrenza. Se a più risorse di esecuzione è associato un thread hardware, tutti avranno lo stesso identificatore di risorsa di esecuzione.
 
-##  <a name="getnodeid"></a>  Metodo IExecutionResource:: GetNodeId
+## <a name="getnodeid"></a>Metodo IExecutionResource:: GetNodeId
 
 Restituisce un identificatore univoco per il nodo del processore a cui appartiene questa risorsa di esecuzione.
 
-```
+```cpp
 virtual unsigned int GetNodeId() const = 0;
 ```
 
@@ -103,36 +103,36 @@ virtual unsigned int GetNodeId() const = 0;
 
 Identificatore univoco per un nodo del processore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il Runtime di concorrenza rappresenta thread hardware sul sistema in gruppi di nodi del processore. I nodi vengono in genere derivati dalla topologia hardware del sistema. Ad esempio, tutti i processori in un socket specifico o un nodo NUMA specifico possono appartenere allo stesso nodo del processore. Il gestore di risorse assegna identificatori univoci a questi nodi partire `0` fino a e includendo `nodeCount - 1`, dove `nodeCount` rappresenta il numero totale di nodi di processori nel sistema.
+Il runtime di concorrenza rappresenta i thread hardware del sistema in gruppi di nodi del processore. I nodi vengono in genere derivati dalla topologia hardware del sistema. Ad esempio, tutti i processori in un socket specifico o in uno specifico nodo NUMA possono appartenere allo stesso nodo del processore. Il Gestione risorse assegna identificatori univoci a questi nodi a partire da `0` fino al `nodeCount - 1`incluso, dove `nodeCount` rappresenta il numero totale di nodi del processore nel sistema.
 
 Il numero di nodi può essere ottenuto dalla funzione [GetProcessorNodeCount](concurrency-namespace-functions.md).
 
-##  <a name="remove"></a>  Metodo IExecutionResource:: Remove
+## <a name="remove"></a>Metodo IExecutionResource:: Remove
 
-Restituisce la risorsa di esecuzione a Resource Manager.
+Restituisce la risorsa di esecuzione al Gestione risorse.
 
-```
+```cpp
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *pScheduler*<br/>
-Interfaccia per l'utilità di pianificazione effettua la richiesta per rimuovere questa risorsa di esecuzione.
+Interfaccia all'utilità di pianificazione che effettua la richiesta di rimozione della risorsa di esecuzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Utilizzare questo metodo per restituire le risorse di esecuzione indipendente, nonché le risorse di esecuzione associate le radici del processore virtuale per Resource Manager.
+Utilizzare questo metodo per restituire le risorse di esecuzione autonoma, nonché le risorse di esecuzione associate alle radici del processore virtuale al Gestione risorse.
 
-Se si tratta di una risorsa di esecuzione autonoma ricevuto da uno dei metodi [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread) oppure [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors), chiamando il metodo `Remove` terminerà la sottoscrizione di thread che la risorsa è stata creata per rappresentare. È necessario terminare tutte le sottoscrizioni di thread prima della chiusura di un proxy dell'utilità di pianificazione e deve chiamare `Remove` dal thread che ha creato la sottoscrizione.
+Se si tratta di una risorsa di esecuzione autonoma ricevuta da uno dei metodi [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread) o [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors), chiamando il metodo `Remove` terminerà la sottoscrizione del thread che la risorsa è stata creata per rappresentare. È necessario terminare tutte le sottoscrizioni di thread prima di arrestare un proxy di utilità di pianificazione e chiamare `Remove` dal thread che ha creato la sottoscrizione.
 
-Anche le radici del processore virtuale possono essere restituite a Gestione risorse richiamando il metodo `Remove`, poiché l'interfaccia `IVirtualProcessorRoot` eredita dall'interfaccia `IExecutionResource`. Potrebbe essere necessario restituire una radice del processore virtuale in risposta a una chiamata ai [IScheduler:: RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) metodo, o dopo avere effettuato con una radice del processore virtuale in condizione di oversubscription ottenuto dal [ ISchedulerProxy:: CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber) (metodo). Per le radici del processore virtuale, non sono previste restrizioni sul thread che può richiamare il `Remove` (metodo).
+Anche le radici del processore virtuale possono essere restituite a Gestione risorse richiamando il metodo `Remove`, poiché l'interfaccia `IVirtualProcessorRoot` eredita dall'interfaccia `IExecutionResource`. Potrebbe essere necessario restituire una radice del processore virtuale in risposta a una chiamata al metodo [IScheduler:: RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) oppure al termine di una radice del processore virtuale con oversubscription ottenuta dal metodo [ISchedulerProxy:: CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber) . Per le radici del processore virtuale, non esistono restrizioni sul thread che può richiamare il metodo `Remove`.
 
-`invalid_argument` viene generata se il parametro `pScheduler` è impostata su `NULL`.
+`invalid_argument` viene generata se il parametro `pScheduler` è impostato su `NULL`.
 
-`invalid_operation` viene generata se il parametro `pScheduler` è diverso dall'utilità di pianificazione che questa risorsa di esecuzione sia stata creata per oppure, con una risorsa di esecuzione autonomi, se il thread corrente è diverso dal thread che ha creato la sottoscrizione di thread.
+`invalid_operation` viene generata se il parametro `pScheduler` è diverso dall'utilità di pianificazione per la quale è stata creata la risorsa di esecuzione oppure con una risorsa di esecuzione autonoma, se il thread corrente è diverso dal thread che ha creato la sottoscrizione del thread.
 
 ## <a name="see-also"></a>Vedere anche
 

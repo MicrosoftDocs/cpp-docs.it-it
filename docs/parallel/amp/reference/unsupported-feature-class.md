@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525421"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127712"
 ---
-# <a name="unsupportedfeature-class"></a>Classe unsupported_feature
+# <a name="unsupported_feature-class"></a>Classe unsupported_feature
 
 Eccezione generata quando viene utilizzata una funzionalità non supportata.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore unsupported_feature](#unsupported_feature)|Costruisce una nuova istanza di `unsupported_feature` eccezione.|
+|[Costruttore unsupported_feature](#unsupported_feature)|Costruisce una nuova istanza dell'eccezione `unsupported_feature`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
-  Costruisce una nuova istanza di `unsupported_feature` eccezione.
+  Costruisce una nuova istanza dell'eccezione `unsupported_feature`.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -67,7 +67,7 @@ Oggetto `unsupported_feature`.
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concorrenza
+**Spazio dei nomi:** Concurrency
 
 ## <a name="see-also"></a>Vedere anche
 

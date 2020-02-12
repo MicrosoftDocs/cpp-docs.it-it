@@ -8,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: 88a027a24f8ab817f793f101f9f128e1fc0c61c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 874c8372074838cd614d1fe17727871ca6e5f21a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389151"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127644"
 ---
 # <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
 
-L'esempio seguente illustra l'accesso al database di semplice e rapido che non prevede l'utilizzo di comandi. Il codice del consumer, in un progetto ATL, recupera i record da una tabella denominata *alle creazioni degli artisti* in Microsoft Access database utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un [CTable](../../data/oledb/ctable-class.md) oggetto di tabella con una funzione di accesso basato sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e la tabella viene aperta nella sessione.
+Nell'esempio seguente viene illustrato l'accesso ai database rapido e semplice che non riguarda i comandi. Il codice consumer seguente, in un progetto ATL, recupera i record da una tabella denominata *Artists* in un database di Microsoft Access utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un oggetto tabella [CTable](../../data/oledb/ctable-class.md) con una funzione di accesso basata sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e apre la tabella nella sessione.
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-Il record dell'utente, `CArtists`, in questo esempio è simile:
+Il record utente, `CArtists`, ha un aspetto simile a questo esempio:
 
 ```cpp
 class CArtists

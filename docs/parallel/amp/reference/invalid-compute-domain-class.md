@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 51fcd9e42bc4497131da5adb3dff72efb46537b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351719"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126461"
 ---
-# <a name="invalidcomputedomain-class"></a>invalid_compute_domain (classe)
+# <a name="invalid_compute_domain-class"></a>invalid_compute_domain (classe)
 
-L'eccezione generata quando il runtime non è possibile avviare un kernel con il dominio di calcolo specificato al [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) sito di chiamata.
+Eccezione generata quando il runtime non è in grado di avviare un kernel utilizzando il dominio di calcolo specificato nel sito di chiamata [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) .
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class invalid_compute_domain : public runtime_exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -45,15 +45,15 @@ class invalid_compute_domain : public runtime_exception;
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concorrenza
+**Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a> invalid_compute_domain
+## <a name="ctor"></a>invalid_compute_domain
 
 Inizializza una nuova istanza della classe.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 explicit invalid_compute_domain(
     const char * _Message ) throw();
 
@@ -67,7 +67,7 @@ Descrizione dell'errore.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un'istanza di `invalid_compute_domain` classe
+Istanza della classe `invalid_compute_domain`
 
 ## <a name="see-also"></a>Vedere anche
 

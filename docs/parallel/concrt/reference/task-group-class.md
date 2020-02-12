@@ -7,47 +7,47 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60c147f38ddc3936f47aea0cfd1ab1548b382441
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180180"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142571"
 ---
-# <a name="taskgroup-class"></a>Classe task_group
+# <a name="task_group-class"></a>Classe task_group
 
 La classe `task_group` rappresenta una raccolta di lavoro parallelo che può essere messa in attesa o annullata.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class task_group;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[task_group](#ctor)|Di overload. Costruisce un nuovo oggetto `task_group`.|
-|[~ task_group distruttore](#dtor)|Elimina un oggetto `task_group`. È prevista la chiamata al `wait` o `run_and_wait` metodo sull'oggetto prima dell'esecuzione del distruttore, a meno che il distruttore è in esecuzione come risultato della rimozione a causa di un'eccezione dello stack.|
+|[task_group](#ctor)|Di overload. Costruisce un oggetto `task_group` nuovo.|
+|[distruttore ~ task_group](#dtor)|Elimina un oggetto `task_group`. Si prevede di chiamare il metodo `wait` o `run_and_wait` sull'oggetto prima dell'esecuzione del distruttore, a meno che il distruttore non sia in esecuzione come risultato della rimozione dello stack a causa di un'eccezione.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[cancel](#cancel)|Tenta di annullare la sottostruttura ad albero di lavoro che ha origine nel gruppo di attività. Ogni attività pianificata nel gruppo di attività sarà transitivamente annullata se possibile.|
-|[is_canceling](#is_canceling)|Indica al chiamante se il gruppo di attività è attualmente in corso di annullamento. Ciò non indica necessariamente che il `cancel` metodo è stato chiamato sul `task_group` oggetto (anche se tale qualifica sicuramente questo metodo per restituire `true`). Potrebbe essere il caso che la `task_group` oggetto è in esecuzione inline e un gruppo di attività più in alto nell'albero del lavoro viene annullato. In casi come questi in cui il runtime può determinare in anticipo che annullamento passerà attraverso questa `task_group` oggetti, `true` verranno anche restituiti.|
-|[run](#run)|Di overload. Pianifica un'attività nel `task_group` oggetto. Se un `task_handle` oggetto viene passato come parametro al `run`, il chiamante è responsabile della gestione della durata del `task_handle` oggetto. La versione del metodo che accetta un riferimento a un oggetto funzione come parametro comporta l'allocazione di heap all'interno del runtime che potrà essere ottimali rispetto all'uso la versione che accetta un riferimento a un `task_handle` oggetto. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata da quel parametro.|
-|[run_and_wait](#run_and_wait)|Di overload. Pianifica un'attività in esecuzione inline sul contesto di chiamata con l'assistenza del `task_group` oggetto per il supporto per l'annullamento completo. La funzione quindi attende che tutti si cimentano il `task_group` oggetto ha completato o annullato. Se un `task_handle` oggetto viene passato come parametro al `run_and_wait`, il chiamante è responsabile della gestione della durata del `task_handle` oggetto.|
-|[wait](#wait)|Attende che tutti si cimentano il `task_group` oggetto ha completato o annullato.|
+|[cancel](#cancel)|Tenta di annullare il sottoalbero di lavoro radice in questo gruppo di attività. Ogni attività pianificata nel gruppo di attività viene annullata in modo transitivo, se possibile.|
+|[is_canceling](#is_canceling)|Informa il chiamante se il gruppo di attività è attualmente in fase di annullamento. Questa operazione non indica necessariamente che il metodo di `cancel` è stato chiamato sull'oggetto `task_group` (sebbene tale metodo possa certamente essere restituito `true`). È possibile che l'oggetto `task_group` sia in esecuzione inline e che un gruppo di attività più in alto nell'albero di lavoro sia stato annullato. Nei casi in cui il runtime è in grado di determinare in anticipo il flusso dell'annullamento attraverso questo `task_group` oggetto, verrà restituito anche `true`.|
+|[run](#run)|Di overload. Pianifica un'attività nell'oggetto `task_group`. Se un oggetto `task_handle` viene passato come parametro a `run`, il chiamante è responsabile della gestione della durata dell'oggetto `task_handle`. La versione del metodo che accetta un riferimento a un oggetto funzione come parametro comporta l'allocazione dell'heap all'interno del runtime, che può essere eseguita in modo meno efficace rispetto all'utilizzo della versione che accetta un riferimento a un oggetto `task_handle`. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata da quel parametro.|
+|[run_and_wait](#run_and_wait)|Di overload. Pianifica un'attività da eseguire inline sul contesto chiamante con l'assistenza dell'oggetto `task_group` per il supporto completo dell'annullamento. La funzione attende quindi che tutto il lavoro nell'oggetto `task_group` sia stato completato o annullato. Se un oggetto `task_handle` viene passato come parametro a `run_and_wait`, il chiamante è responsabile della gestione della durata dell'oggetto `task_handle`.|
+|[attendere](#wait)|Attende che tutto il lavoro nell'oggetto `task_group` sia stato completato o annullato.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-A differenza di frequente con restrizioni `structured_task_group` (classe), il `task_group` è un costrutto molto più generale. Non dispone di alcuna delle restrizioni descritte da [structured_task_group](structured-task-group-class.md). `task_group` gli oggetti in modo sicuro possono essere usati tra thread e utilizzati in formato libero modi. Lo svantaggio del `task_group` costrutto è che potrebbero non funzionare così come il `structured_task_group` costruire per le attività che consentono di eseguire piccole quantità di lavoro.
+A differenza della classe `structured_task_group` con restrizioni molto limitate, la classe `task_group` è un costrutto molto più generale. Non presenta alcuna restrizione descritta da [structured_task_group](structured-task-group-class.md). `task_group` oggetti possono essere usati in modo sicuro tra i thread e utilizzati in modi in formato libero. Lo svantaggio del costrutto `task_group` è che potrebbe non essere eseguito e il costrutto di `structured_task_group` per le attività che eseguono piccole quantità di lavoro.
 
-Per altre informazioni, vedere [Task Parallelism](../task-parallelism-concurrency-runtime.md).
+Per altre informazioni, vedere [parallelismo delle attività](../task-parallelism-concurrency-runtime.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -55,43 +55,43 @@ Per altre informazioni, vedere [Task Parallelism](../task-parallelism-concurrenc
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** PPL
+**Intestazione:** ppl. h
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="cancel"></a> Annulla
+## <a name="cancel"></a>Annulla
 
-Tenta di annullare la sottostruttura ad albero di lavoro che ha origine nel gruppo di attività. Ogni attività pianificata nel gruppo di attività sarà transitivamente annullata se possibile.
+Tenta di annullare il sottoalbero di lavoro radice in questo gruppo di attività. Ogni attività pianificata nel gruppo di attività viene annullata in modo transitivo, se possibile.
 
-```
+```cpp
 void cancel();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per altre informazioni, vedere [annullamento](../cancellation-in-the-ppl.md).
+Per ulteriori informazioni, vedere [annullamento](../cancellation-in-the-ppl.md).
 
-##  <a name="is_canceling"></a> is_canceling
+## <a name="is_canceling"></a>is_canceling
 
-Indica al chiamante se il gruppo di attività è attualmente in corso di annullamento. Ciò non indica necessariamente che il `cancel` metodo è stato chiamato sul `task_group` oggetto (anche se tale qualifica sicuramente questo metodo per restituire `true`). Potrebbe essere il caso che la `task_group` oggetto è in esecuzione inline e un gruppo di attività più in alto nell'albero del lavoro viene annullato. In casi come questi in cui il runtime può determinare in anticipo che annullamento passerà attraverso questa `task_group` oggetti, `true` verranno anche restituiti.
+Informa il chiamante se il gruppo di attività è attualmente in fase di annullamento. Questa operazione non indica necessariamente che il metodo di `cancel` è stato chiamato sull'oggetto `task_group` (sebbene tale metodo possa certamente essere restituito `true`). È possibile che l'oggetto `task_group` sia in esecuzione inline e che un gruppo di attività più in alto nell'albero di lavoro sia stato annullato. Nei casi in cui il runtime è in grado di determinare in anticipo il flusso dell'annullamento attraverso questo `task_group` oggetto, verrà restituito anche `true`.
 
-```
+```cpp
 bool is_canceling();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore che indica se il `task_group` oggetto è in corso di annullamento (o è garantito che sia a breve).
+Indica se l'oggetto `task_group` si trova nel periodo di annullamento (o è sicuramente breve).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per altre informazioni, vedere [annullamento](../cancellation-in-the-ppl.md).
+Per ulteriori informazioni, vedere [annullamento](../cancellation-in-the-ppl.md).
 
-##  <a name="run"></a> Correre
+## <a name="run"></a>Correre
 
-Pianifica un'attività nel `task_group` oggetto. Se un `task_handle` oggetto viene passato come parametro al `run`, il chiamante è responsabile della gestione della durata del `task_handle` oggetto. La versione del metodo che accetta un riferimento a un oggetto funzione come parametro comporta l'allocazione di heap all'interno del runtime che potrà essere ottimali rispetto all'uso la versione che accetta un riferimento a un `task_handle` oggetto. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata da quel parametro.
+Pianifica un'attività nell'oggetto `task_group`. Se un oggetto `task_handle` viene passato come parametro a `run`, il chiamante è responsabile della gestione della durata dell'oggetto `task_handle`. La versione del metodo che accetta un riferimento a un oggetto funzione come parametro comporta l'allocazione dell'heap all'interno del runtime, che può essere eseguita in modo meno efficace rispetto all'utilizzo della versione che accetta un riferimento a un oggetto `task_handle`. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata da quel parametro.
 
-```
+```cpp
 template<
    typename _Function
 >
@@ -126,30 +126,30 @@ void run(
 ### <a name="parameters"></a>Parametri
 
 *_Function*<br/>
-Il tipo dell'oggetto funzione che verrà richiamato per eseguire il corpo dell'handle di attività.
+Tipo dell'oggetto funzione che verrà richiamato per eseguire il corpo dell'handle dell'attività.
 
 *_Func*<br/>
-Una funzione che verrà chiamata per richiamare il corpo dell'attività. Potrebbe trattarsi di un'espressione lambda o un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.
+Funzione che verrà chiamata per richiamare il corpo dell'attività. Può trattarsi di un'espressione lambda o di un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.
 
 *_Placement*<br/>
 Riferimento alla posizione in cui deve essere eseguita l'attività rappresentata dal parametro `_Func`.
 
 *_Task_handle*<br/>
-Handle per il lavoro pianificato. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino a quando non le `wait` oppure `run_and_wait` metodo è stato chiamato su questo `task_group` oggetto.
+Handle per il lavoro pianificato. Si noti che il chiamante è responsabile della durata dell'oggetto. Il runtime continuerà a aspettarsi che sia attivo fino a quando non viene chiamato il metodo `wait` o `run_and_wait` su questo oggetto `task_group`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il runtime consente di pianificare la funzione lavoro fornita per l'esecuzione in un secondo momento, che può essere dopo che restituisce la funzione chiamante. Questo metodo Usa una [task_handle](task-handle-class.md) oggetto per contenere una copia della funzione lavoro fornita. Di conseguenza, le modifiche di stato che si verificano in un oggetto funzione passato a questo metodo non compariranno nella propria copia di tale oggetto funzione. Inoltre, assicurarsi che la durata di tutti gli oggetti che si passano il puntatore o riferimento alla funzione lavoro rimanga valida finché non restituisce la funzione lavoro.
+Il runtime pianifica la funzione lavoro fornita in modo da essere eseguita in un secondo momento, che può essere successiva alla restituzione della funzione chiamante. Questo metodo usa un oggetto [task_handle](task-handle-class.md) per conservare una copia della funzione lavoro specificata. Tutte le modifiche di stato che si verificano in un oggetto funzione passato a questo metodo non verranno pertanto visualizzate nella copia dell'oggetto funzione. Assicurarsi inoltre che la durata di tutti gli oggetti passati in base al puntatore o al riferimento alla funzione lavoro rimanga valida fino a quando la funzione lavoro non restituisce.
 
-Se il `task_group` distrugge come risultato di rimozione dello stack da un'eccezione, non è necessario garantire che è stata effettuata una chiamata al metodo il `wait` o `run_and_wait` (metodo). In questo caso, il distruttore sarà in modo appropriato annullare e attendere l'attività rappresentata dal `_Task_handle` parametro per il completamento.
+Se il `task_group` viene distrutto come risultato della rimozione dello stack da un'eccezione, non è necessario garantire che sia stata effettuata una chiamata al metodo `wait` o `run_and_wait`. In questo caso, il distruttore verrà annullato in modo appropriato e attenderà il completamento dell'attività rappresentata dal parametro `_Task_handle`.
 
-Il metodo genera un' [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) eccezione se l'attività di gestione fornito dal `_Task_handle` parametro è già stato pianificato su un oggetto gruppo di attività tramite la `run` (metodo) e si è verificato alcun chiamata intermedia a entrambi i `wait` o `run_and_wait` metodo su quel gruppo di attività.
+Il metodo genera un'eccezione [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) se l'handle di attività fornito dal parametro `_Task_handle` è già stato pianificato in un oggetto gruppo di attività tramite il metodo `run` e non è stata chiamata al metodo `wait` o `run_and_wait` per tale gruppo di attività.
 
-##  <a name="run_and_wait"></a> run_and_wait
+## <a name="run_and_wait"></a>run_and_wait
 
-Pianifica un'attività in esecuzione inline sul contesto di chiamata con l'assistenza del `task_group` oggetto per il supporto per l'annullamento completo. La funzione quindi attende che tutti si cimentano il `task_group` oggetto ha completato o annullato. Se un `task_handle` oggetto viene passato come parametro al `run_and_wait`, il chiamante è responsabile della gestione della durata del `task_handle` oggetto.
+Pianifica un'attività da eseguire inline sul contesto chiamante con l'assistenza dell'oggetto `task_group` per il supporto completo dell'annullamento. La funzione attende quindi che tutto il lavoro nell'oggetto `task_group` sia stato completato o annullato. Se un oggetto `task_handle` viene passato come parametro a `run_and_wait`, il chiamante è responsabile della gestione della durata dell'oggetto `task_handle`.
 
-```
+```cpp
 template<
    class _Function
 >
@@ -171,30 +171,30 @@ task_group_status run_and_wait(
 Tipo dell'oggetto funzione che sarà richiamato per eseguire il corpo dell'attività.
 
 *_Task_handle*<br/>
-Handle per l'attività che verrà eseguita inline sul contesto di chiamata. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino al `run_and_wait` metodo completa l'esecuzione.
+Handle per l'attività che verrà eseguito inline nel contesto chiamante. Si noti che il chiamante è responsabile della durata dell'oggetto. Il runtime continuerà a aspettarsi che sia attivo fino al termine dell'esecuzione del `run_and_wait` metodo.
 
 *_Func*<br/>
-Una funzione che verrà chiamata per richiamare il corpo del lavoro. Potrebbe trattarsi di un'espressione lambda o un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.
+Funzione che verrà chiamata per richiamare il corpo dell'attività. Può trattarsi di un'espressione lambda o di un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un'indicazione del fatto che l'attesa è stata soddisfatta o il gruppo di attività è stato annullato a causa di un'operazione di annullamento esplicito o un'eccezione generata da una delle relative attività. Per altre informazioni, vedere [task_group_status](concurrency-namespace-enums.md#task_group_status).
+Indica se l'attesa è stata soddisfatta o se il gruppo di attività è stato annullato a causa di un'operazione di annullamento esplicita o di un'eccezione generata da una delle attività. Per ulteriori informazioni, vedere [task_group_status](concurrency-namespace-enums.md#task_group_status).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si noti che uno o più delle attività pianificate per questa `task_group` oggetto può essere eseguita inline sul contesto di chiamata.
+Si noti che una o più delle attività pianificate a questo oggetto `task_group` possono essere eseguite inline nel contesto chiamante.
 
-Se uno o più delle attività pianificate a questo `task_group` oggetto genera un'eccezione, il runtime selezionerà un'eccezione di questo tipo di a scelta e propagarlo dalla chiamata al `run_and_wait` (metodo).
+Se una o più delle attività pianificate in questo `task_group` oggetto genera un'eccezione, il runtime seleziona una di queste eccezioni e la propaga dalla chiamata al metodo `run_and_wait`.
 
-Alla restituzione da parte di `run_and_wait` metodo su un `task_group` dell'oggetto, il runtime Reimposta l'oggetto allo stato originario in cui può essere riutilizzato. Include il caso in cui il `task_group` oggetto è stato annullato.
+Al ritorno dal metodo `run_and_wait` su un oggetto `task_group`, il Runtime reimposta l'oggetto su uno stato pulito in cui può essere riutilizzato. Ciò include il caso in cui l'oggetto `task_group` è stato annullato.
 
-Nel percorso di esecuzione senza eccezioni, si dispone di un mandato di chiamare questo metodo o la `wait` metodo prima del distruttore del `task_group` esegue.
+Nel percorso di esecuzione non eccezionale, è necessario chiamare questo metodo o il metodo `wait` prima che il distruttore del `task_group` venga eseguito.
 
-##  <a name="ctor"></a> task_group
+## <a name="ctor"></a>task_group
 
-Costruisce un nuovo oggetto `task_group`.
+Costruisce un oggetto `task_group` nuovo.
 
-```
+```cpp
 task_group();
 
 task_group(
@@ -207,43 +207,43 @@ task_group(
 *_CancellationToken*<br/>
 Token di annullamento da associare a questo gruppo di attività. Il gruppo di attività verrà annullato quando il token viene annullato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tramite il costruttore che accetta un token di annullamento viene creato un oggetto `task_group` che verrà annullato quando l'origine associata al token viene annullata. Fornire un token di annullamento esplicito permette di isolare questo gruppo di attività dalla partecipazione a un annullamento implicito di un gruppo padre con un token diverso o senza token.
 
-##  <a name="dtor"></a> ~task_group
+## <a name="dtor"></a>~ task_group
 
-Elimina un oggetto `task_group`. È prevista la chiamata al `wait` o `run_and_wait` metodo sull'oggetto prima dell'esecuzione del distruttore, a meno che il distruttore è in esecuzione come risultato della rimozione a causa di un'eccezione dello stack.
+Elimina un oggetto `task_group`. Si prevede di chiamare il metodo `wait` o `run_and_wait` sull'oggetto prima dell'esecuzione del distruttore, a meno che il distruttore non sia in esecuzione come risultato della rimozione dello stack a causa di un'eccezione.
 
-```
+```cpp
 ~task_group();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il distruttore viene eseguito come risultato dell'esecuzione normale (ad esempio, non la rimozione dello stack a causa di un'eccezione) e né la `wait` né `run_and_wait` è stato chiamato, il distruttore venga generata una [missing_wait](missing-wait-class.md) eccezione.
+Se il distruttore viene eseguito come risultato della normale esecuzione (ad esempio, non di rimozione dello stack a causa di un'eccezione) e non sono stati chiamati i metodi `wait` e `run_and_wait`, il distruttore può generare un'eccezione [missing_wait](missing-wait-class.md) .
 
-##  <a name="wait"></a> Attendere
+## <a name="wait"></a>attendere
 
-Attende che tutti si cimentano il `task_group` oggetto ha completato o annullato.
+Attende che tutto il lavoro nell'oggetto `task_group` sia stato completato o annullato.
 
-```
+```cpp
 task_group_status wait();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Un'indicazione del fatto che l'attesa è stata soddisfatta o il gruppo di attività è stato annullato a causa di un'operazione di annullamento esplicito o un'eccezione generata da una delle relative attività. Per altre informazioni, vedere [task_group_status](concurrency-namespace-enums.md#task_group_status).
+Indica se l'attesa è stata soddisfatta o se il gruppo di attività è stato annullato a causa di un'operazione di annullamento esplicita o di un'eccezione generata da una delle attività. Per ulteriori informazioni, vedere [task_group_status](concurrency-namespace-enums.md#task_group_status).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si noti che uno o più delle attività pianificate per questa `task_group` oggetto può essere eseguita inline sul contesto di chiamata.
+Si noti che una o più delle attività pianificate a questo oggetto `task_group` possono essere eseguite inline nel contesto chiamante.
 
-Se uno o più delle attività pianificate a questo `task_group` oggetto genera un'eccezione, il runtime selezionerà un'eccezione di questo tipo di a scelta e propagarlo dalla chiamata al `wait` (metodo).
+Se una o più delle attività pianificate in questo `task_group` oggetto genera un'eccezione, il runtime seleziona una di queste eccezioni e la propaga dalla chiamata al metodo `wait`.
 
-La chiamata `wait` su un `task_group` oggetto ripristinarne uno stato originario in cui può essere riutilizzato. Include il caso in cui il `task_group` oggetto è stato annullato.
+La chiamata di `wait` su un oggetto `task_group` lo reimposta su uno stato pulito in cui è possibile riutilizzarla. Ciò include il caso in cui l'oggetto `task_group` è stato annullato.
 
-Nel percorso di esecuzione senza eccezioni, si dispone di un mandato di chiamare questo metodo o la `run_and_wait` metodo prima del distruttore del `task_group` esegue.
+Nel percorso di esecuzione non eccezionale, è necessario chiamare questo metodo o il metodo `run_and_wait` prima che il distruttore del `task_group` venga eseguito.
 
 ## <a name="see-also"></a>Vedere anche
 

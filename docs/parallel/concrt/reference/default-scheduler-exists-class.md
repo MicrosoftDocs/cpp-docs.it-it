@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-ms.openlocfilehash: 326a2dfc6837665adb4d46a6aaa8780052ad2b22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eed5dd242beb4c4cd481f22635e0d5f71c28d7e6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296098"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139182"
 ---
-# <a name="defaultschedulerexists-class"></a>Classe default_scheduler_exists
+# <a name="default_scheduler_exists-class"></a>Classe default_scheduler_exists
 
 Questa classe descrive un'eccezione generata quando il metodo `Scheduler::SetDefaultSchedulerPolicy` viene chiamato quando esiste già un'utilità di pianificazione predefinita all'interno del processo.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class default_scheduler_exists : public std::exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -45,11 +45,11 @@ class default_scheduler_exists : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="ctor"></a> default_scheduler_exists
+## <a name="ctor"></a>default_scheduler_exists
 
 Costruisce un oggetto `default_scheduler_exists`.
 
-```
+```cpp
 explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
 
 default_scheduler_exists() throw();

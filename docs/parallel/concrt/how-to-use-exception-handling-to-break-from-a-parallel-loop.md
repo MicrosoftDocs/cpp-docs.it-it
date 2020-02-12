@@ -1,56 +1,56 @@
 ---
-title: 'Procedura: Utilizzare eccezioni per interrompere un ciclo Parallel'
+title: 'Procedura: Usare la gestione delle eccezioni per interrompere un ciclo Parallel'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: 19d732d98f24172471d96cd5e2962b2a99ab0203
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5576e8f2416804cac89f5ec34005f4e08b99c47
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409993"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142105"
 ---
-# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Procedura: Utilizzare eccezioni per interrompere un ciclo Parallel
+# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Procedura: Usare la gestione delle eccezioni per interrompere un ciclo Parallel
 
-Questo argomento illustra come scrivere un algoritmo di ricerca per una struttura ad albero di base.
+In questo argomento viene illustrato come scrivere un algoritmo di ricerca per una struttura ad albero di base.
 
-L'argomento [annullamento](cancellation-in-the-ppl.md) viene illustrato il ruolo dell'annullamento nella libreria PPL. L'uso di gestione delle eccezioni è un modo meno efficiente per annullare un lavoro parallelo rispetto all'utilizzo dei [concurrency::task_group::cancel](reference/task-group-class.md#cancel) e [Concurrency](reference/structured-task-group-class.md#cancel) metodi. Tuttavia, uno scenario in cui l'uso di gestione delle eccezioni per annullare il lavoro è appropriata è quando si chiama una libreria di terze parti che usa gli algoritmi paralleli o attività, ma non è incluso un `task_group` o `structured_task_group` oggetto da annullare.
+Nell'argomento [annullamento](cancellation-in-the-ppl.md) viene illustrato il ruolo dell'annullamento nella libreria di modelli paralleli. L'uso della gestione delle eccezioni è un metodo meno efficiente per annullare il lavoro parallelo rispetto all'uso dei metodi [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) e [Concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) . Tuttavia, uno scenario in cui l'utilizzo della gestione delle eccezioni per annullare il lavoro è appropriato è quando si effettua una chiamata in una libreria di terze parti che utilizza attività o algoritmi paralleli, ma non fornisce un `task_group` o `structured_task_group` oggetto da annullare.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra una semplice `tree` tipo che contiene un elemento dati e un elenco di nodi figlio. La sezione seguente illustra il corpo del `for_all` metodo, che in modo ricorsivo esegue una funzione lavoro in ogni nodo figlio.
+Nell'esempio seguente viene illustrato un tipo di `tree` di base che contiene un elemento dati e un elenco di nodi figlio. Nella sezione seguente viene illustrato il corpo del metodo `for_all`, che esegue in modo ricorsivo una funzione lavoro in ogni nodo figlio.
 
 [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra il `for_all` (metodo). Usa il [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo per eseguire una funzione lavoro in ogni nodo della struttura ad albero in parallelo.
+Nell'esempio seguente viene illustrato il metodo `for_all`. Usa l'algoritmo [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) per eseguire una funzione lavoro in ogni nodo dell'albero in parallelo.
 
 [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrata la funzione `search_for_value` che cerca un valore nell'oggetto `tree` fornito. Questa funzione passa la `for_all` metodo una funzione lavoro che genera un'eccezione quando viene trovato un nodo dell'albero che contiene il valore specificato.
+Nell'esempio seguente viene illustrata la funzione `search_for_value` che cerca un valore nell'oggetto `tree` fornito. Questa funzione passa al metodo `for_all` una funzione lavoro che genera un'eccezione quando trova un nodo della struttura ad albero che contiene il valore fornito.
 
-Si supponga che il `tree` classe viene fornita da una libreria di terze parti e che è possibile modificarla. In questo caso, l'uso di gestione delle eccezioni è appropriato perché le `for_all` metodo non fornisce un `task_group` o `structured_task_group` oggetto al chiamante. Pertanto, la funzione lavoro non riesce a direttamente annullare il gruppo di attività padre.
+Si supponga che la classe `tree` venga fornita da una libreria di terze parti e che non sia possibile modificarla. In questo caso, l'utilizzo della gestione delle eccezioni è appropriato perché il metodo `for_all` non fornisce un oggetto `task_group` o `structured_task_group` al chiamante. Pertanto, la funzione lavoro non è in grado di annullare direttamente il gruppo di attività padre.
 
-Quando la funzione lavoro che viene fornito a un gruppo di attività genera un'eccezione, il runtime arresta tutte le attività che fanno parte del gruppo di attività (inclusi i gruppi di attività figlio) ed Elimina tutte le attività che non sono ancora stata avviata. Il `search_for_value` funzione Usa un `try` - `catch` blocco da acquisire l'eccezione e stampare il risultato nella console.
+Quando la funzione lavoro fornita a un gruppo di attività genera un'eccezione, il runtime arresta tutte le attività presenti nel gruppo di attività (inclusi i gruppi di attività figlio) ed Elimina tutte le attività non ancora avviate. La funzione `search_for_value` usa un blocco `try`-`catch` per acquisire l'eccezione e stampare il risultato nella console.
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente crea un `tree` dell'oggetto e vi cerca valori diversi in parallelo. Il `build_tree` funzione è illustrata più avanti in questo argomento.
+Nell'esempio seguente viene creato un oggetto `tree` e la ricerca viene eseguita in parallelo per diversi valori. La funzione `build_tree` viene illustrata più avanti in questo argomento.
 
 [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]
 
-Questo esempio Usa la [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo per cercare i valori in parallelo. Per altre informazioni su questo algoritmo, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
+In questo esempio viene utilizzato l'algoritmo [Concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) per cercare i valori in parallelo. Per ulteriori informazioni su questo algoritmo, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio completo seguente usa la gestione delle eccezioni per cercare i valori in una struttura ad albero di base.
+Nell'esempio completo seguente viene utilizzata la gestione delle eccezioni per la ricerca di valori in una struttura ad albero di base.
 
 [!code-cpp[concrt-task-tree-search#5](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_5.cpp)]
 
@@ -64,9 +64,9 @@ Did not find node with value 17522.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `task-tree-search.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `task-tree-search.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
 
-**cl.exe /EHsc task-tree-search.cpp**
+> **CL. exe/EHsc Task-tree-search. cpp**
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -76,4 +76,4 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Classe task_group](reference/task-group-class.md)<br/>
 [Classe structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)<br/>
-[parallel_for_each (funzione)](reference/concurrency-namespace-functions.md#parallel_for_each)
+[Funzione parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)

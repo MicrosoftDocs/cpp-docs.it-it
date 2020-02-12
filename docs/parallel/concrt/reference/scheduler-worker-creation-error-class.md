@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: 66e7485787606c22aba2970dbe481a7d29e66621
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337362"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142762"
 ---
-# <a name="schedulerworkercreationerror-class"></a>Classe scheduler_worker_creation_error
+# <a name="scheduler_worker_creation_error-class"></a>Classe scheduler_worker_creation_error
 
 Questa classe descrive un'eccezione generata a causa di un errore nella creazione di un contesto di esecuzione del lavoro nel runtime di concorrenza.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -33,7 +33,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 |----------|-----------------|
 |[scheduler_worker_creation_error](#ctor)|Di overload. Costruisce un oggetto `scheduler_worker_creation_error`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questa eccezione viene generata soprattutto nel caso in cui una chiamata al sistema operativo per creare contesti di esecuzione nel runtime di concorrenza abbia esito negativo. I contesti di esecuzione sono thread tramite cui vengono eseguite attività nel runtime di concorrenza. Il codice di errore generalmente restituito da una chiamata al metodo Win32 `GetLastError` viene convertito in un valore di tipo `HRESULT` e può essere recuperato utilizzando il metodo della classe base `get_error_code`.
 
@@ -51,11 +51,11 @@ Questa eccezione viene generata soprattutto nel caso in cui una chiamata al sist
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="ctor"></a> scheduler_worker_creation_error
+## <a name="ctor"></a>scheduler_worker_creation_error
 
 Costruisce un oggetto `scheduler_worker_creation_error`.
 
-```
+```cpp
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -70,7 +70,7 @@ explicit _CRTIMP scheduler_worker_creation_error(
 Messaggio descrittivo dell'errore.
 
 *_Hresult*<br/>
-Il `HRESULT` valore dell'errore che ha causato l'eccezione.
+Valore `HRESULT` dell'errore che ha causato l'eccezione.
 
 ## <a name="see-also"></a>Vedere anche
 

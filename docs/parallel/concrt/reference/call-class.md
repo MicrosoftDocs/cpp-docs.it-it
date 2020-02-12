@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 445e368ced9d9c8faf30351ecaeecc4e1b8a59f2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337908"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142844"
 ---
 # <a name="call-class"></a>Classe call
 
@@ -26,39 +26,39 @@ Un blocco della messaggistica `call` è un oggetto `target_block` multi-origine 
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template<class T, class _FunctorType = std::function<void(T const&)>>
 class call : public target_block<multi_link_registry<ISource<T>>>;
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Il tipo di payload dei messaggi propagati da questo blocco.
+Tipo di payload dei messaggi propagati in questo blocco.
 
 *_FunctorType*<br/>
-La firma delle funzioni che questo blocco può accettare.
+Firma delle funzioni che questo blocco può accettare.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[call](#ctor)|Di overload. Costruisce un blocco della messaggistica `call` .|
-|[~ chiamare distruttore](#dtor)|Elimina definitivamente il `call` blocco della messaggistica.|
+|[chiamare](#ctor)|Di overload. Costruisce un blocco della messaggistica `call` .|
+|[~ distruttore di chiamate](#dtor)|Elimina definitivamente il blocco della messaggistica `call`.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[process_input_messages](#process_input_messages)|Esegue la chiamata di funzione nei messaggi di input.|
-|[process_message](#process_message)|Elabora un messaggio che è stato accettato da questo `call` blocco della messaggistica.|
-|[propagate_message](#propagate_message)|Consente di passare in modo asincrono un messaggio da un `ISource` a questo blocco `call` blocco della messaggistica. Viene richiamato per la `propagate` metodo, quando viene chiamato da un blocco di origine.|
-|[send_message](#send_message)|Consente di passare in modo sincrono un messaggio da un `ISource` a questo blocco `call` blocco della messaggistica. Viene richiamato per la `send` metodo, quando viene chiamato da un blocco di origine.|
-|[supports_anonymous_source](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. (Esegue l'override [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
+|[process_input_messages](#process_input_messages)|Esegue la funzione di chiamata sui messaggi di input.|
+|[process_message](#process_message)|Elabora un messaggio accettato da questo blocco di messaggistica `call`.|
+|[propagate_message](#propagate_message)|Passa in modo asincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `call`. Viene richiamato dal metodo `propagate`, quando viene chiamato da un blocco di origine.|
+|[send_message](#send_message)|Passa in modo sincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `call`. Viene richiamato dal metodo `send`, quando viene chiamato da un blocco di origine.|
+|[supports_anonymous_source](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. Esegue l'override di [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).
 
@@ -76,11 +76,11 @@ Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="ctor"></a> Chiamata
+## <a name="ctor"></a>chiamare
 
 Costruisce un blocco della messaggistica `call` .
 
-```
+```cpp
 call(
     _Call_method const& _Func);
 
@@ -110,10 +110,10 @@ call(
 ### <a name="parameters"></a>Parametri
 
 *_Func*<br/>
-Una funzione che verrà richiamata per ogni messaggio accettato.
+Funzione che verrà richiamata per ogni messaggio accettato.
 
 *_Filter*<br/>
-Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
+Funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
 Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `call` .
@@ -121,53 +121,53 @@ Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagaz
 *_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `call` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se non si specificano i parametri `_PScheduler` o `_PScheduleGroup` , il runtime usa l'utilità di pianificazione predefinita.
 
-Il tipo `_Call_method` è un funtore con firma `void (T const &)` che viene richiamato da questo `call` blocco della messaggistica per elaborare un messaggio.
+Il tipo `_Call_method` è un functor con `void (T const &)` di firma richiamato da questo blocco di messaggistica `call` per elaborare un messaggio.
 
-Il tipo `filter_method` è un funtore con firma `bool (T const &)` che viene richiamato da questo `call` blocco della messaggistica per determinare se è necessario accettare un messaggio offerto.
+Il tipo `filter_method` è un functor con `bool (T const &)` di firma richiamato da questo blocco di messaggistica `call` per determinare se deve accettare o meno un messaggio offerto.
 
-##  <a name="dtor"></a> ~call
+## <a name="dtor"></a>~ chiamata
 
-Elimina definitivamente il `call` blocco della messaggistica.
+Elimina definitivamente il blocco della messaggistica `call`.
 
-```
+```cpp
 ~call();
 ```
 
-##  <a name="process_input_messages"></a> process_input_messages
+## <a name="process_input_messages"></a>process_input_messages
 
-Esegue la chiamata di funzione nei messaggi di input.
+Esegue la funzione di chiamata sui messaggi di input.
 
-```
+```cpp
 virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_PMessage*<br/>
-Puntatore al messaggio che deve essere gestito.
+Puntatore al messaggio da gestire.
 
-##  <a name="process_message"></a> process_message
+## <a name="process_message"></a>process_message
 
-Elabora un messaggio che è stato accettato da questo `call` blocco della messaggistica.
+Elabora un messaggio accettato da questo blocco di messaggistica `call`.
 
-```
+```cpp
 virtual void process_message(_Inout_ message<T>* _PMessage);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_PMessage*<br/>
-Puntatore al messaggio che deve essere gestito.
+Puntatore al messaggio da gestire.
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Consente di passare in modo asincrono un messaggio da un `ISource` a questo blocco `call` blocco della messaggistica. Viene richiamato per la `propagate` metodo, quando viene chiamato da un blocco di origine.
+Passa in modo asincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `call`. Viene richiamato dal metodo `propagate`, quando viene chiamato da un blocco di origine.
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -179,17 +179,17 @@ virtual message_status propagate_message(
 Puntatore all'oggetto `message`.
 
 *_PSource*<br/>
-Un puntatore al blocco di origine offrendo il messaggio.
+Puntatore al blocco di origine che offre il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [message_status](concurrency-namespace-enums.md) indicazione di cosa ha deciso di destinazione a che fare con il messaggio.
+[Message_status](concurrency-namespace-enums.md) indicazione della decisione da parte della destinazione con il messaggio.
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-Consente di passare in modo sincrono un messaggio da un `ISource` a questo blocco `call` blocco della messaggistica. Viene richiamato per la `send` metodo, quando viene chiamato da un blocco di origine.
+Passa in modo sincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `call`. Viene richiamato dal metodo `send`, quando viene chiamato da un blocco di origine.
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -201,23 +201,23 @@ virtual message_status send_message(
 Puntatore all'oggetto `message`.
 
 *_PSource*<br/>
-Un puntatore al blocco di origine offrendo il messaggio.
+Puntatore al blocco di origine che offre il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [message_status](concurrency-namespace-enums.md) indicazione di cosa ha deciso di destinazione a che fare con il messaggio.
+[Message_status](concurrency-namespace-enums.md) indicazione della decisione da parte della destinazione con il messaggio.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
 Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** perché il blocco non vengono posticipati i messaggi offerti.
+**true** perché il blocco non posticipa i messaggi offerti.
 
 ## <a name="see-also"></a>Vedere anche
 

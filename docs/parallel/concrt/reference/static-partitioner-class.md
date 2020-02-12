@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
-ms.openlocfilehash: 5120e3c53dc00ba9d5c3a4218efe1dcfb8f92e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a58daa27bc7a2f51f78a3068a2f152979ffdd72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337388"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142686"
 ---
-# <a name="staticpartitioner-class"></a>Classe static_partitioner
+# <a name="static_partitioner-class"></a>Classe static_partitioner
 
-La classe `static_partitioner` rappresenta il partizionamento statico dell'intervallo iterato da `parallel_for`. Il partitioner divide l'intervallo nello stesso numero di blocchi delle unità di lavoro disponibili all'utilità di pianificazione sottostante.
+La classe `static_partitioner` rappresenta il partizionamento statico dell'intervallo iterato da `parallel_for`. Il partitioner divide l'intervallo in tutti i blocchi quanti sono i thread di lavoro disponibili per l'utilità di pianificazione sottostante.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class static_partitioner;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[static_partitioner](#ctor)|Costruisce un oggetto `static_partitioner`.|
-|[~ static_partitioner distruttore](#dtor)|Elimina un oggetto `static_partitioner`.|
+|[Distruttore ~ static_partitioner](#dtor)|Elimina un oggetto `static_partitioner`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -40,23 +40,23 @@ class static_partitioner;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** PPL
+**Intestazione:** ppl. h
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="dtor"></a> ~static_partitioner
+## <a name="dtor"></a>~ static_partitioner
 
 Elimina un oggetto `static_partitioner`.
 
-```
+```cpp
 ~static_partitioner();
 ```
 
-##  <a name="ctor"></a> static_partitioner
+## <a name="ctor"></a>static_partitioner
 
 Costruisce un oggetto `static_partitioner`.
 
-```
+```cpp
 static_partitioner();
 ```
 

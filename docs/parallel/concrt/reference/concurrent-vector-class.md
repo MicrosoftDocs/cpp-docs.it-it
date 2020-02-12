@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 415dc9bd89346d9b5bddb2cdc52e10276646aa1f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 002f1e3f691de3315810efed8f7d8f6c547cf653
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302120"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143141"
 ---
 # <a name="concurrent_vector-class"></a>Classe concurrent_vector
 
@@ -46,14 +46,14 @@ La classe `concurrent_vector` è una classe contenitore di sequenze che consente
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template<typename T, class _Ax>
 class concurrent_vector: protected details::_Allocator_base<T,
     _Ax>,
 private details::_Concurrent_vector_base_v4;
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *T*<br/>
 Tipo di dati degli elementi da archiviare nel vettore.
@@ -61,11 +61,11 @@ Tipo di dati degli elementi da archiviare nel vettore.
 *_Ax*<br/>
 Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione e alla deallocazione della memoria per il vettore simultaneo. Questo argomento è facoltativo e il valore predefinito è `allocator<T>`.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`allocator_type`|Tipo che rappresenta la classe allocator per il vettore simultaneo.|
 |`const_iterator`|Tipo che fornisce un iteratore ad accesso casuale che può leggere un elemento `const` in un vettore simultaneo.|
@@ -82,14 +82,14 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[concurrent_vector](#ctor)|Di overload. Costruisce un vettore simultaneo.|
 |[distruttore ~ concurrent_vector](#dtor)|Cancella tutti gli elementi ed Elimina il vettore simultaneo.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[assign](#assign)|Di overload. Cancella gli elementi del vettore simultaneo e vi assegna un `_N` copie di `_Item`o i valori specificati dall'intervallo di iteratore [`_Begin`, `_End`). Questo metodo non è indipendente dalla concorrenza.|
 |[at](#at)|Di overload. Fornisce l'accesso all'elemento in corrispondenza dell'indice specificato nel vettore simultaneo. Questo metodo è indipendente dalla concorrenza per le operazioni di lettura e anche durante la crescita del vettore, purché sia stato verificato che il valore `_Index` è inferiore alla dimensione del vettore simultaneo.|
@@ -98,7 +98,7 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 |[capacity](#capacity)|Restituisce le dimensioni massime consentite per l'aumento del vettore simultaneo senza dover allocare ulteriore memoria. Questo metodo è indipendente dalla concorrenza.|
 |[cbegin](#cbegin)|Restituisce un iteratore di tipo `const_iterator` all'inizio del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.|
 |[cend](#cend)|Restituisce un iteratore di tipo `const_iterator` alla fine del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.|
-|[clear](#clear)|Cancella tutti gli elementi nel vettore simultaneo. Questo metodo non è indipendente dalla concorrenza.|
+|[deselezionare](#clear)|Cancella tutti gli elementi nel vettore simultaneo. Questo metodo non è indipendente dalla concorrenza.|
 |[crbegin](#crbegin)|Restituisce un iteratore di tipo `const_reverse_iterator` all'inizio del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.|
 |[crend](#crend)|Restituisce un iteratore di tipo `const_reverse_iterator` alla fine del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.|
 |[empty](#empty)|Verifica se il vettore simultaneo è vuoto nel momento in cui viene chiamato questo metodo. Questo metodo è indipendente dalla concorrenza.|
@@ -119,12 +119,12 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[operator\[\]](#operator_at)|Di overload. Fornisce l'accesso all'elemento in corrispondenza dell'indice specificato nel vettore simultaneo. Questo metodo è indipendente dalla concorrenza per le operazioni di lettura e anche durante la crescita del vettore, purché l'utente abbia verificato che il valore `_Index` sia minore della dimensione del vettore simultaneo.|
 |[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_vector` oggetto a questo. Questo metodo non è indipendente dalla concorrenza.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per informazioni dettagliate sulla classe `concurrent_vector`, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).
 
@@ -136,17 +136,17 @@ Per informazioni dettagliate sulla classe `concurrent_vector`, vedere [contenito
 
 `concurrent_vector`
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 **Intestazione:** concurrent_vector. h
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="assign"></a>assegnare
+## <a name="assign"></a>assegnare
 
 Cancella gli elementi del vettore simultaneo e vi assegna un `_N` copie di `_Item`o i valori specificati dall'intervallo di iteratore [`_Begin`, `_End`). Questo metodo non è indipendente dalla concorrenza.
 
-```
+```cpp
 void assign(
     size_type _N,
     const_reference _Item);
@@ -173,15 +173,15 @@ Iteratore per il primo elemento dell'intervallo di origine.
 *_End*<br/>
 Iteratore successivo all'ultimo elemento dell'intervallo di origine.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `assign` non è indipendente dalla concorrenza. Quando si chiama questo metodo, è necessario assicurarsi che nessun altro thread richiami metodi sul vettore simultaneo.
 
-##  <a name="at"></a>a
+## <a name="at"></a>a
 
 Fornisce l'accesso all'elemento in corrispondenza dell'indice specificato nel vettore simultaneo. Questo metodo è indipendente dalla concorrenza per le operazioni di lettura e anche durante la crescita del vettore, purché sia stato verificato che il valore `_Index` è inferiore alla dimensione del vettore simultaneo.
 
-```
+```cpp
 reference at(size_type _Index);
 
 const_reference at(size_type _Index) const;
@@ -196,17 +196,17 @@ Indice dell'elemento da recuperare.
 
 Riferimento all'elemento in corrispondenza dell'indice specificato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La versione della funzione `at` che restituisce un riferimento non `const` non può essere utilizzata per scrivere contemporaneamente nell'elemento da thread diversi. È necessario utilizzare un oggetto di sincronizzazione diverso per sincronizzare le operazioni di lettura e scrittura simultanee con lo stesso elemento dati.
 
 Il metodo genera `out_of_range` se `_Index` è maggiore o uguale alla dimensione del vettore simultaneo e `range_error` se l'indice è per una parte interrotta del vettore. Per informazioni dettagliate su come un vettore può essere danneggiato, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).
 
-##  <a name="back"></a>Indietro
+## <a name="back"></a>Indietro
 
 Restituisce un riferimento o un riferimento `const` all'ultimo elemento nel vettore simultaneo. Se il vettore simultaneo è vuoto, il valore restituito non è definito. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 reference back();
 
 const_reference back() const;
@@ -216,11 +216,11 @@ const_reference back() const;
 
 Un riferimento o un riferimento `const` all'ultimo elemento nel vettore simultaneo.
 
-##  <a name="begin"></a>iniziare
+## <a name="begin"></a>iniziare
 
 Restituisce un iteratore di tipo `iterator` o `const_iterator` all'inizio del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 iterator begin();
 
 const_iterator begin() const;
@@ -230,11 +230,11 @@ const_iterator begin() const;
 
 Iteratore di tipo `iterator` o `const_iterator` all'inizio del vettore simultaneo.
 
-##  <a name="capacity"></a>capacità
+## <a name="capacity"></a>capacità
 
 Restituisce le dimensioni massime consentite per l'aumento del vettore simultaneo senza dover allocare ulteriore memoria. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 size_type capacity() const;
 ```
 
@@ -242,15 +242,15 @@ size_type capacity() const;
 
 Dimensione massima raggiungibile dal vettore simultaneo senza dover allocare altra memoria.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 A differenza di C++ una libreria standard `vector`, un oggetto `concurrent_vector` non sposta gli elementi esistenti se alloca una maggiore quantità di memoria.
 
-##  <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a>cbegin
 
 Restituisce un iteratore di tipo `const_iterator` all'inizio del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 const_iterator cbegin() const;
 ```
 
@@ -258,11 +258,11 @@ const_iterator cbegin() const;
 
 Un iteratore di tipo `const_iterator` all'inizio del vettore simultaneo.
 
-##  <a name="cend"></a>cend
+## <a name="cend"></a>cend
 
 Restituisce un iteratore di tipo `const_iterator` alla fine del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 const_iterator cend() const;
 ```
 
@@ -270,23 +270,23 @@ const_iterator cend() const;
 
 Un iteratore di tipo `const_iterator` alla fine del vettore simultaneo.
 
-##  <a name="clear"></a>deselezionare
+## <a name="clear"></a>deselezionare
 
 Cancella tutti gli elementi nel vettore simultaneo. Questo metodo non è indipendente dalla concorrenza.
 
-```
+```cpp
 void clear();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `clear` non è indipendente dalla concorrenza. Quando si chiama questo metodo, è necessario assicurarsi che nessun altro thread richiami metodi sul vettore simultaneo. `clear` non libera le matrici interne. Per liberare matrici interne, chiamare la funzione `shrink_to_fit` dopo la `clear`.
 
-##  <a name="ctor"></a>concurrent_vector
+## <a name="ctor"></a>concurrent_vector
 
 Costruisce un vettore simultaneo.
 
-```
+```cpp
 explicit concurrent_vector(
     const allocator_type& _Al = allocator_type());
 
@@ -342,7 +342,7 @@ Posizione del primo elemento nell'intervallo di elementi da copiare.
 *_End*<br/>
 Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tutti i costruttori archiviano un oggetto allocatore `_Al` e inizializzano il vettore.
 
@@ -358,19 +358,19 @@ Il sesto costruttore specifica una ripetizione di elementi (`_N`) di valore `_It
 
 L'ultimo costruttore specifica i valori forniti dall'intervallo dell'iteratore [`_Begin`, `_End`).
 
-##  <a name="dtor"></a> ~concurrent_vector
+## <a name="dtor"></a>~ concurrent_vector
 
 Cancella tutti gli elementi ed Elimina il vettore simultaneo.
 
-```
+```cpp
 ~concurrent_vector();
 ```
 
-##  <a name="crbegin"></a>crbegin
+## <a name="crbegin"></a>crbegin
 
 Restituisce un iteratore di tipo `const_reverse_iterator` all'inizio del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 const_reverse_iterator crbegin() const;
 ```
 
@@ -378,11 +378,11 @@ const_reverse_iterator crbegin() const;
 
 Un iteratore di tipo `const_reverse_iterator` all'inizio del vettore simultaneo.
 
-##  <a name="crend"></a>crend
+## <a name="crend"></a>crend
 
 Restituisce un iteratore di tipo `const_reverse_iterator` alla fine del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 const_reverse_iterator crend() const;
 ```
 
@@ -390,11 +390,11 @@ const_reverse_iterator crend() const;
 
 Un iteratore di tipo `const_reverse_iterator` alla fine del vettore simultaneo.
 
-##  <a name="empty"></a>vuoto
+## <a name="empty"></a>vuoto
 
 Verifica se il vettore simultaneo è vuoto nel momento in cui viene chiamato questo metodo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 bool empty() const;
 ```
 
@@ -402,11 +402,11 @@ bool empty() const;
 
 **true** se il vettore è vuoto nel momento in cui la funzione è stata chiamata; in caso contrario, **false** .
 
-##  <a name="end"></a>fine
+## <a name="end"></a>fine
 
 Restituisce un iteratore di tipo `iterator` o `const_iterator` alla fine del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 iterator end();
 
 const_iterator end() const;
@@ -416,11 +416,11 @@ const_iterator end() const;
 
 Un iteratore di tipo `iterator` o `const_iterator` alla fine del vettore simultaneo.
 
-##  <a name="front"></a>fronte
+## <a name="front"></a>fronte
 
 Restituisce un riferimento o un riferimento `const` al primo elemento nel vettore simultaneo. Se il vettore simultaneo è vuoto, il valore restituito non è definito. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 reference front();
 
 const_reference front() const;
@@ -430,11 +430,11 @@ const_reference front() const;
 
 Riferimento o riferimento `const` al primo elemento nel vettore simultaneo.
 
-##  <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Restituisce una copia dell'allocatore usato per costruire il vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -442,11 +442,11 @@ allocator_type get_allocator() const;
 
 Copia dell'allocatore utilizzato per costruire l'oggetto `concurrent_vector`.
 
-##  <a name="grow_by"></a> grow_by
+## <a name="grow_by"></a>grow_by
 
 Cresce questo vettore simultaneo per `_Delta` elementi. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 iterator grow_by(
     size_type _Delta);
 
@@ -467,15 +467,15 @@ Valore con cui inizializzare i nuovi elementi.
 
 Iteratore al primo elemento accodato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se `_Item` viene omesso, i nuovi elementi vengono costruiti per impostazione predefinita.
 
-##  <a name="grow_to_at_least"></a> grow_to_at_least
+## <a name="grow_to_at_least"></a>grow_to_at_least
 
 Cresce questo vettore simultaneo fino a avere almeno `_N` elementi. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 iterator grow_to_at_least(size_type _N);
 ```
 
@@ -488,11 +488,11 @@ Nuove dimensioni minime per l'oggetto `concurrent_vector`.
 
 Iteratore che punta all'inizio della sequenza accodata o all'elemento in corrispondenza dell'indice `_N` se non è stato aggiunto alcun elemento.
 
-##  <a name="max_size"></a> max_size
+## <a name="max_size"></a>max_size
 
 Restituisce il numero massimo di elementi che possono essere mantenuti nel vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 size_type max_size() const;
 ```
 
@@ -500,11 +500,11 @@ size_type max_size() const;
 
 Numero massimo di elementi che possono essere contenuti nell'oggetto `concurrent_vector`.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operatore =
 
 Assegna il contenuto di un altro `concurrent_vector` oggetto a questo. Questo metodo non è indipendente dalla concorrenza.
 
-```
+```cpp
 concurrent_vector& operator= (
     const concurrent_vector& _Vector);
 
@@ -528,11 +528,11 @@ Oggetto `concurrent_vector` di origine.
 
 Riferimento a questo oggetto `concurrent_vector`.
 
-##  <a name="operator_at"></a>operator []
+## <a name="operator_at"></a>operator []
 
 Fornisce l'accesso all'elemento in corrispondenza dell'indice specificato nel vettore simultaneo. Questo metodo è indipendente dalla concorrenza per le operazioni di lettura e anche durante la crescita del vettore, purché l'utente abbia verificato che il valore `_Index` sia minore della dimensione del vettore simultaneo.
 
-```
+```cpp
 reference operator[](size_type _index);
 
 const_reference operator[](size_type _index) const;
@@ -547,17 +547,17 @@ Indice dell'elemento da recuperare.
 
 Riferimento all'elemento in corrispondenza dell'indice specificato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La versione di `operator []` che restituisce un riferimento non `const` non può essere utilizzata per scrivere contemporaneamente nell'elemento da thread diversi. È necessario utilizzare un oggetto di sincronizzazione diverso per sincronizzare le operazioni di lettura e scrittura simultanee con lo stesso elemento dati.
 
 Non viene eseguito alcun controllo dei limiti per garantire che `_Index` sia un indice valido nel vettore simultaneo.
 
-##  <a name="push_back"></a> push_back
+## <a name="push_back"></a>push_back
 
 Aggiunge l'elemento specificato alla fine del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 iterator push_back(const_reference _Item);
 
 iterator push_back(T&& _Item);
@@ -572,11 +572,11 @@ Valore da accodare.
 
 Iteratore all'elemento accodato.
 
-##  <a name="rbegin"></a>rbegin
+## <a name="rbegin"></a>rbegin
 
 Restituisce un iteratore di tipo `reverse_iterator` o `const_reverse_iterator` all'inizio del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 reverse_iterator rbegin();
 
 const_reverse_iterator rbegin() const;
@@ -586,11 +586,11 @@ const_reverse_iterator rbegin() const;
 
 Iteratore di tipo `reverse_iterator` o `const_reverse_iterator` all'inizio del vettore simultaneo.
 
-##  <a name="rend"></a>rend
+## <a name="rend"></a>rend
 
 Restituisce un iteratore di tipo `reverse_iterator` o `const_reverse_iterator` alla fine del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 reverse_iterator rend();
 
 const_reverse_iterator rend() const;
@@ -600,11 +600,11 @@ const_reverse_iterator rend() const;
 
 Un iteratore di tipo `reverse_iterator` o `const_reverse_iterator` alla fine del vettore simultaneo.
 
-##  <a name="reserve"></a>riserva
+## <a name="reserve"></a>riserva
 
 Alloca spazio sufficiente per aumentare il vettore simultaneo per ridimensionare `_N` senza dover allocare più memoria in un secondo momento. Questo metodo non è indipendente dalla concorrenza.
 
-```
+```cpp
 void reserve(size_type _N);
 ```
 
@@ -613,15 +613,15 @@ void reserve(size_type _N);
 *_N*<br/>
 Numero di elementi per i quali riservare spazio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `reserve` non è indipendente dalla concorrenza. Quando si chiama questo metodo, è necessario assicurarsi che nessun altro thread richiami metodi sul vettore simultaneo. La capacità del vettore simultaneo dopo la restituzione del metodo può essere maggiore della prenotazione richiesta.
 
-##  <a name="resize"></a>ridimensionare
+## <a name="resize"></a>ridimensionare
 
 Modifica la dimensione del vettore simultaneo alla dimensione richiesta, eliminando o aggiungendo elementi se necessario. Questo metodo non è indipendente dalla concorrenza.
 
-```
+```cpp
 void resize(
     size_type _N);
 
@@ -638,29 +638,29 @@ Nuova dimensione di concurrent_vector.
 *val*<br/>
 Valore di nuovi elementi aggiunti al vettore se la nuova dimensione è maggiore di quella originale. Se il valore viene omesso, ai nuovi oggetti viene assegnato il valore predefinito per il relativo tipo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se le dimensioni del contenitore sono inferiori alla dimensione richiesta, gli elementi vengono aggiunti al vettore fino a raggiungere le dimensioni richieste. Se le dimensioni del contenitore sono maggiori della dimensione richiesta, gli elementi più vicini alla fine del contenitore vengono eliminati finché il contenitore non raggiunge la dimensione `_N`. Se la dimensione attuale del contenitore corrisponde a quella richiesta, non viene eseguita alcuna azione.
 
 `resize` non è sicuro per la concorrenza. Quando si chiama questo metodo, è necessario assicurarsi che nessun altro thread richiami metodi sul vettore simultaneo.
 
-##  <a name="shrink_to_fit"></a> shrink_to_fit
+## <a name="shrink_to_fit"></a>shrink_to_fit
 
 Compatta la rappresentazione interna del vettore simultaneo per ridurre la frammentazione e ottimizzare l'utilizzo della memoria. Questo metodo non è indipendente dalla concorrenza.
 
-```
+```cpp
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo allocherà internamente gli elementi di spostamento della memoria in modo da invalidare tutti gli iteratori. `shrink_to_fit` non è indipendente dalla concorrenza. Quando si chiama questa funzione, è necessario assicurarsi che nessun altro thread richiami metodi sul vettore simultaneo.
 
-##  <a name="size"></a>dimensioni
+## <a name="size"></a>dimensioni
 
 Restituisce il numero di elementi nel vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
-```
+```cpp
 size_type size() const;
 ```
 
@@ -668,15 +668,15 @@ size_type size() const;
 
 Numero di elementi in questo oggetto `concurrent_vector`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Alla dimensione restituita è garantita l'inclusione di tutti gli elementi accodati dalle chiamate alla funzione `push_back`o l'aumento delle operazioni completate prima di richiamare questo metodo. Tuttavia, può includere anche elementi allocati ma ancora in fase di costruzione dalle chiamate simultanee a uno dei metodi di crescita.
 
-##  <a name="swap"></a> swap
+## <a name="swap"></a>scambio
 
 Scambia il contenuto di due vettori simultanei. Questo metodo non è indipendente dalla concorrenza.
 
-```
+```cpp
 void swap(concurrent_vector& _Vector);
 ```
 

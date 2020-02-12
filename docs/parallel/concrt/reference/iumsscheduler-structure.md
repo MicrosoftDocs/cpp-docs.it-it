@@ -8,38 +8,38 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-ms.openlocfilehash: f377d6079017266630434ce71602a7e70e58ae21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45df744a9850510006e4bf887c8ed61b000a8e5c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301864"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139987"
 ---
 # <a name="iumsscheduler-structure"></a>Struttura IUMSScheduler
 
-Interfaccia a un'astrazione di un'utilità di pianificazione di lavoro che vuole che Gestione risorse del runtime di concorrenza passi thread UMS pianificabili in modalità utente. Gestione risorse usa questa interfaccia per comunicare con le utilità di pianificazione dei thread UMS.  L'interfaccia `IUMSScheduler` eredita dall'interfaccia `IScheduler` .
+Interfaccia a un'astrazione di un'utilità di pianificazione di lavoro che vuole che Gestione risorse del runtime di concorrenza passi thread UMS pianificabili in modalità utente. Gestione risorse usa questa interfaccia per comunicare con le utilità di pianificazione dei thread UMS. L'interfaccia `IUMSScheduler` eredita dall'interfaccia `IScheduler` .
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 struct IUMSScheduler : public IScheduler;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IUMSScheduler::SetCompletionList](#setcompletionlist)|Assegna un `IUMSCompletionList` interfaccia a un'utilità di pianificazione di thread UMS.|
+|[IUMSScheduler:: Tocomplete](#setcompletionlist)|Assegna un'interfaccia `IUMSCompletionList` a un'utilità di pianificazione del thread UMS.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Se si sta implementando un'utilità di pianificazione personalizzate che comunica con Resource Manager e si vuole che i thread UMS da passare all'utilità di pianificazione anziché dei thread Win32 normale, è necessario fornire un'implementazione del `IUMSScheduler` interfaccia. Inoltre, è necessario impostare il valore dei criteri per la chiave dei criteri dell'utilità di pianificazione `SchedulerKind` essere `UmsThreadDefault`. Se i criteri specificano thread UMS, il `IScheduler` passata come parametro per il [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) metodo deve essere un `IUMSScheduler` interfaccia.
+Se si implementa un'utilità di pianificazione personalizzata che comunica con il Gestione risorse e si desidera che i thread UMS vengano passati all'utilità di pianificazione anziché ai normali thread Win32, è necessario fornire un'implementazione dell'interfaccia `IUMSScheduler`. Inoltre, è necessario impostare il valore dei criteri per la chiave dei criteri dell'utilità di pianificazione `SchedulerKind` essere `UmsThreadDefault`. Se il criterio specifica un thread UMS, l'interfaccia `IScheduler` passata come parametro al metodo [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) deve essere un'interfaccia `IUMSScheduler`.
 
-Il gestore di risorse è in grado di passare è thread UMS solo nei sistemi operativi con la funzionalità UMS. sistemi operativi a 64 bit con la versione Windows 7 e versioni successive supportano i thread UMS. Se si crea un criterio di utilità di pianificazione con il `SchedulerKind` chiave impostata sul valore `UmsThreadDefault` e la piattaforma sottostante non supporta UMS, il valore della `SchedulerKind` verrà modificato il valore chiave su tale criterio `ThreadScheduler`. Ti consigliamo di leggere nuovamente questo valore del criterio prima dell'attesa di ricevere i thread UMS.
+Il Gestione risorse è in grado di distribuire i thread UMS solo nei sistemi operativi con la funzionalità UMS. i sistemi operativi a 64 bit con Windows 7 e versioni successive supportano i thread UMS. Se si crea un criterio dell'utilità di pianificazione con la chiave di `SchedulerKind` impostata sul valore `UmsThreadDefault` e la piattaforma sottostante non supporta UMS, il valore della chiave `SchedulerKind` nel criterio verrà modificato nel valore `ThreadScheduler`. È consigliabile leggere sempre questo valore del criterio prima di prevedere la ricezione di thread UMS.
 
-Il `IUMSScheduler` interfaccia è un'estremità di un canale di comunicazione tra un'utilità di pianificazione e Gestione risorse bidirezionale. L'altra estremità è rappresentata dal `IResourceManager` e `ISchedulerProxy` interfacce che vengono implementate da Resource Manager.
+L'interfaccia `IUMSScheduler` è una estremità di un canale bidirezionale di comunicazione tra un'utilità di pianificazione e l'Gestione risorse. L'altra estremità è rappresentata dalle interfacce `IResourceManager` e `ISchedulerProxy`, che vengono implementate dal Gestione risorse.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -53,22 +53,22 @@ Il `IUMSScheduler` interfaccia è un'estremità di un canale di comunicazione tr
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="setcompletionlist"></a>  Metodo IUMSScheduler:: SetCompletionList
+## <a name="setcompletionlist"></a>Metodo IUMSScheduler:: SetValue
 
-Assegna un `IUMSCompletionList` interfaccia a un'utilità di pianificazione di thread UMS.
+Assegna un'interfaccia `IUMSCompletionList` a un'utilità di pianificazione del thread UMS.
 
-```
+```cpp
 virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *pCompletionList*<br/>
-L'interfaccia dell'elenco di completamento per l'utilità di pianificazione. È disponibile un unico elenco per ogni utilità di pianificazione.
+Interfaccia dell'elenco di completamento per l'utilità di pianificazione. È presente un unico elenco per ogni utilità di pianificazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il gestore di risorse richiama questo metodo in un'utilità di pianificazione che specifica che i thread UMS, la richiesta dopo che l'utilità di pianificazione ha richiesto un'allocazione iniziale di risorse. L'utilità di pianificazione è possibile usare il `IUMSCompletionList` interfaccia per determinare quando sono stati sbloccati proxy del thread UMS. È valido solo per accedere all'interfaccia da un proxy del thread in esecuzione in una radice del processore virtuale assegnata all'utilità di pianificazione UMS.
+Il Gestione risorse richiamerà questo metodo su un'utilità di pianificazione che specifica che desidera i thread UMS, dopo che l'utilità di pianificazione ha richiesto un'allocazione iniziale delle risorse. L'utilità di pianificazione può utilizzare l'interfaccia `IUMSCompletionList` per determinare quando i proxy di thread UMS sono sbloccati. È valido solo per accedere a questa interfaccia da un proxy di thread in esecuzione su una radice del processore virtuale assegnata all'utilità di pianificazione UMS.
 
 ## <a name="see-also"></a>Vedere anche
 

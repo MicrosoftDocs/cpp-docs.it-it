@@ -19,62 +19,62 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0f2f81957ee88d4263c6acd879bd286c95631eb
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407835"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142327"
 ---
-# <a name="unboundedbuffer-class"></a>Classe unbounded_buffer
+# <a name="unbounded_buffer-class"></a>Classe unbounded_buffer
 
 Un blocco della messaggistica `unbounded_buffer` è un `propagator_block` multi-origine a destinazione singola, in grado di archiviare un numero non associato di messaggi di un tipo diverso.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template<
    class             _Type
 >
 class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<            _Type>>, multi_link_registry<ISource<            _Type>>>;
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *_Type*<br/>
-Il tipo di payload dei messaggi archiviati e propagati dal buffer.
+Tipo di payload dei messaggi archiviati e propagati dal buffer.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[unbounded_buffer](#ctor)|Di overload. Costruisce un `unbounded_buffer` blocco della messaggistica.|
-|[~ unbounded_buffer distruttore](#dtor)|Elimina definitivamente il `unbounded_buffer` blocco della messaggistica.|
+|[unbounded_buffer](#ctor)|Di overload. Costruisce un blocco di messaggistica `unbounded_buffer`.|
+|[Distruttore ~ unbounded_buffer](#dtor)|Elimina definitivamente il blocco della messaggistica `unbounded_buffer`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dequeue](#dequeue)|Rimuove un elemento dal `unbounded_buffer` blocco della messaggistica.|
-|[enqueue](#enqueue)|Aggiunge un elemento per il `unbounded_buffer` blocco della messaggistica.|
+|[Dequeue](#dequeue)|Rimuove un elemento dal blocco della messaggistica `unbounded_buffer`.|
+|[Accodamento](#enqueue)|Aggiunge un elemento al blocco della messaggistica `unbounded_buffer`.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[accept_message](#accept_message)|Accetta un messaggio in cui è stato offerto da questo `unbounded_buffer` blocco della messaggistica, trasferimento di proprietà al chiamante.|
-|[consume_message](#consume_message)|Utilizza un messaggio offerto in precedenza dal `unbounded_buffer` blocco della messaggistica e riservate dalla destinazione, trasferimento di proprietà al chiamante.|
-|[link_target_notification](#link_target_notification)|Un callback che invia una notifica che una nuova destinazione è stata collegata a questa `unbounded_buffer` blocco della messaggistica.|
-|[process_input_messages](#process_input_messages)|Decimali di `message` `_PMessage` in questo `unbounded_buffer` blocco della messaggistica e cerca di metterlo a disposizione tutte le destinazioni collegate.|
-|[propagate_message](#propagate_message)|Consente di passare in modo asincrono un messaggio da un `ISource` a questo blocco `unbounded_buffer` blocco della messaggistica. Viene richiamato per la `propagate` metodo, quando viene chiamato da un blocco di origine.|
-|[propagate_output_messages](#propagate_output_messages)|Decimali di `message` `_PMessage` in questo `unbounded_buffer` blocco della messaggistica e cerca di metterlo a disposizione tutte le destinazioni collegate. (Esegue l'override [source_block:: propagate_output_messages](source-block-class.md#propagate_output_messages).)|
-|[release_message](#release_message)|Rilascia una prenotazione messaggio precedente. (Esegue l'override [source_block:: release_message](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Consente di riservare un messaggio offerto in precedenza da questo `unbounded_buffer` blocco della messaggistica. (Esegue l'override [source_block:: reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Riprende la propagazione dopo il rilascio di una prenotazione. (Esegue l'override [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
-|[send_message](#send_message)|Consente di passare in modo sincrono un messaggio da un `ISource` a questo blocco `unbounded_buffer` blocco della messaggistica. Viene richiamato per la `send` metodo, quando viene chiamato da un blocco di origine.|
-|[supports_anonymous_source](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. (Esegue l'override [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
+|[accept_message](#accept_message)|Accetta un messaggio offerto da questo blocco di messaggistica `unbounded_buffer`, trasferendo la proprietà al chiamante.|
+|[consume_message](#consume_message)|Utilizza un messaggio precedentemente offerto dal blocco di messaggistica `unbounded_buffer` e riservato dalla destinazione, trasferendo la proprietà al chiamante.|
+|[link_target_notification](#link_target_notification)|Callback che notifica che una nuova destinazione è stata collegata a questo blocco di messaggistica del `unbounded_buffer`.|
+|[process_input_messages](#process_input_messages)|Inserisce il `message` `_PMessage` in questo blocco di messaggistica `unbounded_buffer` e tenta di offrirlo a tutte le destinazioni collegate.|
+|[propagate_message](#propagate_message)|Passa in modo asincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `unbounded_buffer`. Viene richiamato dal metodo `propagate`, quando viene chiamato da un blocco di origine.|
+|[propagate_output_messages](#propagate_output_messages)|Inserisce il `message` `_PMessage` in questo blocco di messaggistica `unbounded_buffer` e tenta di offrirlo a tutte le destinazioni collegate. (Esegue l'override di [source_block::p ropagate_output_messages](source-block-class.md#propagate_output_messages).)|
+|[release_message](#release_message)|Rilascia una prenotazione del messaggio precedente. Esegue l'override di [source_block:: release_message](source-block-class.md#release_message).|
+|[reserve_message](#reserve_message)|Riserva un messaggio precedentemente offerto da questo blocco di messaggistica `unbounded_buffer`. Esegue l'override di [source_block:: reserve_message](source-block-class.md#reserve_message).|
+|[resume_propagation](#resume_propagation)|Riprende la propagazione dopo che una prenotazione è stata rilasciata. Esegue l'override di [source_block:: resume_propagation](source-block-class.md#resume_propagation).|
+|[send_message](#send_message)|Passa in modo sincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `unbounded_buffer`. Viene richiamato dal metodo `send`, quando viene chiamato da un blocco di origine.|
+|[supports_anonymous_source](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. Esegue l'override di [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).|
 
 Per altre informazioni, vedere [blocchi di messaggi asincroni](../asynchronous-message-blocks.md).
 
@@ -96,11 +96,11 @@ Per altre informazioni, vedere [blocchi di messaggi asincroni](../asynchronous-m
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Accetta un messaggio in cui è stato offerto da questo `unbounded_buffer` blocco della messaggistica, trasferimento di proprietà al chiamante.
+Accetta un messaggio offerto da questo blocco di messaggistica `unbounded_buffer`, trasferendo la proprietà al chiamante.
 
-```
+```cpp
 virtual message<_Type> * accept_message(
    runtime_object_identity                 _MsgId
 );
@@ -109,17 +109,17 @@ virtual message<_Type> * accept_message(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-Il `runtime_object_identity` proposto `message` oggetto.
+`runtime_object_identity` dell'oggetto `message` fornito.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore al `message` che il chiamante ora possiede la proprietà dell'oggetto.
+Puntatore all'oggetto `message` cui il chiamante è ora proprietario.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Utilizza un messaggio offerto in precedenza dal `unbounded_buffer` blocco della messaggistica e riservate dalla destinazione, trasferimento di proprietà al chiamante.
+Utilizza un messaggio precedentemente offerto dal blocco di messaggistica `unbounded_buffer` e riservato dalla destinazione, trasferendo la proprietà al chiamante.
 
-```
+```cpp
 virtual message<_Type> * consume_message(
    runtime_object_identity                 _MsgId
 );
@@ -128,33 +128,33 @@ virtual message<_Type> * consume_message(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-Il `runtime_object_identity` del `message` consumata dell'oggetto.
+`runtime_object_identity` dell'oggetto `message` utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore al `message` che il chiamante ora possiede la proprietà dell'oggetto.
+Puntatore all'oggetto `message` cui il chiamante è ora proprietario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Simile a `accept`, ma viene sempre preceduta da una chiamata a `reserve`.
+Simile a `accept`, ma è sempre preceduto da una chiamata a `reserve`.
 
-##  <a name="dequeue"></a> rimozione dalla coda
+## <a name="dequeue"></a>Dequeue
 
-Rimuove un elemento dal `unbounded_buffer` blocco della messaggistica.
+Rimuove un elemento dal blocco della messaggistica `unbounded_buffer`.
 
-```
+```cpp
 _Type dequeue();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il payload del messaggio rimosso dal `unbounded_buffer`.
+Payload del messaggio rimosso dal `unbounded_buffer`.
 
-##  <a name="enqueue"></a> enqueue
+## <a name="enqueue"></a>Accodamento
 
-Aggiunge un elemento per il `unbounded_buffer` blocco della messaggistica.
+Aggiunge un elemento al blocco della messaggistica `unbounded_buffer`.
 
-```
+```cpp
 bool enqueue(
    _Type const&                 _Item
 );
@@ -167,13 +167,13 @@ Elemento da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento è stato accettato **false** in caso contrario.
+**true** se l'elemento è stato accettato, in caso contrario **false** .
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a>link_target_notification
 
-Un callback che invia una notifica che una nuova destinazione è stata collegata a questa `unbounded_buffer` blocco della messaggistica.
+Callback che notifica che una nuova destinazione è stata collegata a questo blocco di messaggistica del `unbounded_buffer`.
 
-```
+```cpp
 virtual void link_target_notification(
    _Inout_ ITarget<_Type> *                 _PTarget
 );
@@ -182,13 +182,13 @@ virtual void link_target_notification(
 ### <a name="parameters"></a>Parametri
 
 *_PTarget*<br/>
-Puntatore alla destinazione appena collegato.
+Puntatore alla destinazione appena collegata.
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Consente di passare in modo asincrono un messaggio da un `ISource` a questo blocco `unbounded_buffer` blocco della messaggistica. Viene richiamato per la `propagate` metodo, quando viene chiamato da un blocco di origine.
+Passa in modo asincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `unbounded_buffer`. Viene richiamato dal metodo `propagate`, quando viene chiamato da un blocco di origine.
 
-```
+```cpp
 virtual message_status propagate_message(
    _Inout_ message<_Type> *                 _PMessage,
    _Inout_ ISource<_Type> *                 _PSource
@@ -201,29 +201,29 @@ virtual message_status propagate_message(
 Puntatore all'oggetto `message`.
 
 *_PSource*<br/>
-Un puntatore al blocco di origine offrendo il messaggio.
+Puntatore al blocco di origine che offre il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [message_status](concurrency-namespace-enums.md#message_status) indicazione di cosa ha deciso di destinazione a che fare con il messaggio.
+[Message_status](concurrency-namespace-enums.md#message_status) indicazione della decisione da parte della destinazione con il messaggio.
 
-##  <a name="propagate_output_messages"></a> propagate_output_messages
+## <a name="propagate_output_messages"></a>propagate_output_messages
 
-Decimali di `message` `_PMessage` in questo `unbounded_buffer` blocco della messaggistica e cerca di metterlo a disposizione tutte le destinazioni collegate.
+Inserisce il `message` `_PMessage` in questo blocco di messaggistica `unbounded_buffer` e tenta di offrirlo a tutte le destinazioni collegate.
 
-```
+```cpp
 virtual void propagate_output_messages();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se un altro messaggio è già avanti rispetto a quella indicata di `unbounded_buffer`, alle destinazioni collegate non si verificherà la propagazione fino a quando i messaggi precedenti sono stati accettati o utilizzati. La prima destinazione collegata correttamente `accept` o `consume` il messaggio diventa proprietario e non altre destinazioni possono ottenere il messaggio.
+Se un altro messaggio è già avanti rispetto a questo `unbounded_buffer`, la propagazione alle destinazioni collegate non verrà eseguita fino a quando non vengono accettati o utilizzati messaggi precedenti. La prima destinazione collegata per `accept` o `consume` il messaggio diventa proprietà e nessun'altra destinazione può quindi ottenere il messaggio.
 
-##  <a name="process_input_messages"></a> process_input_messages
+## <a name="process_input_messages"></a>process_input_messages
 
-Decimali di `message` `_PMessage` in questo `unbounded_buffer` blocco della messaggistica e cerca di metterlo a disposizione tutte le destinazioni collegate.
+Inserisce il `message` `_PMessage` in questo blocco di messaggistica `unbounded_buffer` e tenta di offrirlo a tutte le destinazioni collegate.
 
-```
+```cpp
 virtual void process_input_messages(
    _Inout_ message<_Type> *                 _PMessage
 );
@@ -232,13 +232,13 @@ virtual void process_input_messages(
 ### <a name="parameters"></a>Parametri
 
 *_PMessage*<br/>
-Puntatore al messaggio che deve essere elaborato.
+Puntatore al messaggio da elaborare.
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Rilascia una prenotazione messaggio precedente.
+Rilascia una prenotazione del messaggio precedente.
 
-```
+```cpp
 virtual void release_message(
    runtime_object_identity                 _MsgId
 );
@@ -247,13 +247,13 @@ virtual void release_message(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-Il `runtime_object_identity` del `message` oggetto rilasciato.
+`runtime_object_identity` dell'oggetto `message` da rilasciare.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Consente di riservare un messaggio offerto in precedenza da questo `unbounded_buffer` blocco della messaggistica.
+Riserva un messaggio precedentemente offerto da questo blocco di messaggistica `unbounded_buffer`.
 
-```
+```cpp
 virtual bool reserve_message(
    runtime_object_identity                 _MsgId
 );
@@ -262,29 +262,29 @@ virtual bool reserve_message(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-Il `runtime_object_identity` del `message` oggetto riservato.
+`runtime_object_identity` dell'oggetto `message` da riservare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il messaggio è stato riservato, **false** in caso contrario.
+**true** se il messaggio è stato riservato correttamente; in caso contrario, **false** .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Dopo aver `reserve` viene chiamato, se viene restituito **true**, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
+Una volta chiamato il metodo `reserve`, se restituisce **true**, è necessario chiamare `consume` o `release` per prendere o rilasciare la proprietà del messaggio.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Riprende la propagazione dopo il rilascio di una prenotazione.
+Riprende la propagazione dopo che una prenotazione è stata rilasciata.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-Consente di passare in modo sincrono un messaggio da un `ISource` a questo blocco `unbounded_buffer` blocco della messaggistica. Viene richiamato per la `send` metodo, quando viene chiamato da un blocco di origine.
+Passa in modo sincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `unbounded_buffer`. Viene richiamato dal metodo `send`, quando viene chiamato da un blocco di origine.
 
-```
+```cpp
 virtual message_status send_message(
    _Inout_ message<_Type> *                 _PMessage,
    _Inout_ ISource<_Type> *                 _PSource
@@ -297,29 +297,29 @@ virtual message_status send_message(
 Puntatore all'oggetto `message`.
 
 *_PSource*<br/>
-Un puntatore al blocco di origine offrendo il messaggio.
+Puntatore al blocco di origine che offre il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [message_status](concurrency-namespace-enums.md#message_status) indicazione di cosa ha deciso di destinazione a che fare con il messaggio.
+[Message_status](concurrency-namespace-enums.md#message_status) indicazione della decisione da parte della destinazione con il messaggio.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
 Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** perché il blocco non vengono posticipati i messaggi offerti.
+**true** perché il blocco non posticipa i messaggi offerti.
 
-##  <a name="ctor"></a> unbounded_buffer
+## <a name="ctor"></a>unbounded_buffer
 
-Costruisce un `unbounded_buffer` blocco della messaggistica.
+Costruisce un blocco di messaggistica `unbounded_buffer`.
 
-```
+```cpp
 unbounded_buffer();
 
 unbounded_buffer(
@@ -348,7 +348,7 @@ unbounded_buffer(
 ### <a name="parameters"></a>Parametri
 
 *_Filter*<br/>
-Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
+Funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
 Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `unbounded_buffer` .
@@ -356,17 +356,17 @@ Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagaz
 *_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `unbounded_buffer` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se non si specificano i parametri `_PScheduler` o `_PScheduleGroup` , il runtime usa l'utilità di pianificazione predefinita.
 
-Il tipo `filter_method` è un funtore con firma `bool (_Type const &)` che viene richiamato da questo `unbounded_buffer` blocco della messaggistica per determinare se è necessario accettare un messaggio offerto.
+Il tipo `filter_method` è un functor con `bool (_Type const &)` di firma richiamato da questo blocco di messaggistica `unbounded_buffer` per determinare se deve accettare o meno un messaggio offerto.
 
-##  <a name="dtor"></a> ~unbounded_buffer
+## <a name="dtor"></a>~ unbounded_buffer
 
-Elimina definitivamente il `unbounded_buffer` blocco della messaggistica.
+Elimina definitivamente il blocco della messaggistica `unbounded_buffer`.
 
-```
+```cpp
 ~unbounded_buffer();
 ```
 

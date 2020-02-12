@@ -72,24 +72,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efca9b51f44a9eb64e6e9d89cc156ab0b2df5ae5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405521"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126188"
 ---
-# <a name="unorm3-class"></a>Classe unorm_3
+# <a name="unorm_3-class"></a>Classe unorm_3
 
-Rappresenta un vettore short di tre numeri normali senza segno.
+Rappresenta un breve vettore di tre numeri normali senza segno.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class unorm_3;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -101,7 +101,7 @@ class unorm_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore unorm_3](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore unorm_3](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -160,7 +160,7 @@ class unorm_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#unorm_3__size)||
+|[dimensioni costanti](#unorm_3__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -203,15 +203,15 @@ class unorm_3;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> unorm_3
+## <a name="ctor"></a>unorm_3
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 unorm_3() restrict(amp,
     cpu);
 
@@ -263,23 +263,23 @@ explicit inline unorm_3(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="unorm_3__size"></a> Dimensioni
+## <a name="unorm_3__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 3;
 ```
 

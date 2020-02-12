@@ -5,36 +5,36 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: 6ea7a0ae0c0a9be87fe507e6b934bd046c9ffe4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df89837e8f453443dc092a1b96e9c3f395fa2353
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250827"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127380"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Modifica del codice del disegno (Esercitazione di ATL, parte 4)
 
-Per impostazione predefinita, codice di disegno del controllo Visualizza il testo e un quadrato **PolyCtl**. In questo passaggio si modificherà il codice per visualizzare un elemento più interessante. Le attività seguenti sono necessari:
+Per impostazione predefinita, il codice di disegno del controllo Visualizza un quadrato e il testo **PolyCtl**. In questo passaggio il codice verrà modificato per visualizzare un elemento più interessante. Sono incluse le attività seguenti:
 
-- Modifica del File di intestazione
+- Modifica del file di intestazione
 
-- Modifica il `OnDraw` (funzione)
+- Modifica della funzione `OnDraw`
 
 - Aggiunta di un metodo per calcolare i punti del poligono
 
-- Inizializzazione in corso il colore di riempimento
+- Inizializzazione del colore di riempimento
 
-## <a name="modifying-the-header-file"></a>Modifica del File di intestazione
+## <a name="modifying-the-header-file"></a>Modifica del file di intestazione
 
-Iniziare aggiungendo il supporto per le funzioni matematiche `sin` e `cos`, che consentirà di calcolare i punti del poligono e creando una matrice per archiviare le posizioni.
+Per iniziare, aggiungere il supporto per le funzioni matematiche `sin` e `cos`, che verranno usate per calcolare i punti del poligono e creando una matrice per archiviare le posizioni.
 
 ### <a name="to-modify-the-header-file"></a>Per modificare il file di intestazione
 
-1. Aggiungere la riga `#include <math.h>` all'inizio del PolyCtl. H. L'inizio del file dovrebbe essere simile al seguente:
+1. Aggiungere la riga `#include <math.h>` all'inizio di PolyCtl. h. La parte superiore del file dovrebbe essere simile alla seguente:
 
     [!code-cpp[NVC_ATL_Windowing#47](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_1.cpp)]
 
-1. Implementare il `IProvideClassInfo` interfaccia per fornire informazioni sul metodo per il controllo, aggiungendo il codice seguente al PolyCtl. H. Nel `CPolyCtl` classe, sostituire riga:
+1. Implementare l'interfaccia `IProvideClassInfo` per fornire informazioni sul metodo per il controllo, aggiungendo il codice seguente a PolyCtl. h. Nella classe `CPolyCtl` sostituire riga:
 
     ```cpp
     public CComControl<CPolyCtl>
@@ -47,70 +47,70 @@ Iniziare aggiungendo il supporto per le funzioni matematiche `sin` e `cos`, che 
     public IProvideClassInfo2Impl<&CLSID_PolyCtl, &DIID__IPolyCtlEvents, &LIBID_PolygonLib>
     ```
 
-    e in `BEGIN_COM_MAP(CPolyCtl)`, aggiungere le righe:
+    in `BEGIN_COM_MAP(CPolyCtl)`aggiungere le righe:
 
     ```cpp
     COM_INTERFACE_ENTRY(IProvideClassInfo)
     COM_INTERFACE_ENTRY(IProvideClassInfo2)
     ```
 
-1. Una volta che vengono calcolati i punti del poligono, essi verranno archiviati in una matrice di tipo `POINT`, quindi aggiungere la matrice dopo l'istruzione di definizione `short m_nSides;` in PolyCtl. H:
+1. Una volta calcolati i punti del poligono, questi verranno archiviati in una matrice di tipo `POINT`, quindi aggiungere la matrice dopo l'istruzione di definizione `short m_nSides;` in PolyCtl. h:
 
     [!code-cpp[NVC_ATL_Windowing#48](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_2.h)]
 
-## <a name="modifying-the-ondraw-method"></a>Se si modifica il metodo OnDraw
+## <a name="modifying-the-ondraw-method"></a>Modifica del metodo onpare
 
-A questo punto è necessario modificare il `OnDraw` metodo in PolyCtl. H. Il codice si aggiungerà una nuova penna e un pennello con cui disegnare il poligono e quindi chiama il `Ellipse` e `Polygon` funzioni API Win32 per eseguire il disegno effettivo.
+A questo punto è necessario modificare il metodo `OnDraw` in PolyCtl. h. Il codice che verrà aggiunto crea una nuova penna e un pennello con cui disegnare il poligono, quindi chiama il `Ellipse` e `Polygon` le funzioni dell'API Win32 per eseguire il disegno effettivo.
 
-### <a name="to-modify-the-ondraw-function"></a>Per modificare la funzione OnDraw
+### <a name="to-modify-the-ondraw-function"></a>Per modificare la funzione onpare
 
-1. Sostituire il `OnDraw` metodo in PolyCtl. H con il codice seguente:
+1. Sostituire il metodo `OnDraw` esistente in PolyCtl. h con il codice seguente:
 
     [!code-cpp[NVC_ATL_Windowing#49](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_3.cpp)]
 
 ## <a name="adding-a-method-to-calculate-the-polygon-points"></a>Aggiunta di un metodo per calcolare i punti del poligono
 
-Aggiungere un metodo, denominato `CalcPoints`, che calcola le coordinate dei punti che compongono il perimetro del poligono. Questi calcoli si baseranno sulla variabile RECT che viene passata alla funzione.
+Aggiungere un metodo, denominato `CalcPoints`, che calcolerà le coordinate dei punti che compongono il perimetro del poligono. Questi calcoli saranno basati sulla variabile RECT passata nella funzione.
 
 ### <a name="to-add-the-calcpoints-method"></a>Per aggiungere il metodo CalcPoints
 
-1. Aggiungere la dichiarazione della `CalcPoints` per il `IPolyCtl` sezione pubblica del `CPolyCtl` classe in PolyCtl. H:
+1. Aggiungere la dichiarazione di `CalcPoints` alla sezione `IPolyCtl` public della classe `CPolyCtl` in PolyCtl. h:
 
     [!code-cpp[NVC_ATL_Windowing#50](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_4.h)]
 
-    L'ultima parte della sezione pubblica del `CPolyCtl` classe avrà un aspetto simile al seguente:
+    L'ultima parte della sezione public della classe `CPolyCtl` sarà simile alla seguente:
 
     [!code-cpp[NVC_ATL_Windowing#51](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_5.h)]
 
-1. Aggiungere questa implementazione del `CalcPoints` funzione alla fine della PolyCtl:
+1. Aggiungere questa implementazione della funzione `CalcPoints` alla fine di PolyCtl. cpp:
 
     [!code-cpp[NVC_ATL_Windowing#52](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_6.cpp)]
 
-## <a name="initializing-the-fill-color"></a>Inizializzazione in corso il colore di riempimento
+## <a name="initializing-the-fill-color"></a>Inizializzazione del colore di riempimento
 
 Inizializzare `m_clrFillColor` con un colore predefinito.
 
 ### <a name="to-initialize-the-fill-color"></a>Per inizializzare il colore di riempimento
 
-1. Utilizzare il verde come colore predefinito aggiungendo questa riga per il `CPolyCtl` costruttore in PolyCtl. H:
+1. Usare verde come colore predefinito aggiungendo questa riga al costruttore `CPolyCtl` in PolyCtl. h:
 
     [!code-cpp[NVC_ATL_Windowing#53](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_7.h)]
 
-Il costruttore sarà simile al seguente:
+Il costruttore ha ora un aspetto simile al seguente:
 
 [!code-cpp[NVC_ATL_Windowing#54](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_8.h)]
 
 ## <a name="building-and-testing-the-control"></a>Compilazione e test del controllo
 
-Ricompilare il controllo. Assicurarsi che il file PolyCtl viene chiuso se è ancora aperta e quindi fare clic su **poligono compilare** nel **compilazione** menu. È stato possibile visualizzare il controllo ancora una volta dalla pagina PolyCtl. htm, ma questa volta usare il controllo ActiveX Test Container.
+Ricompilare il controllo. Verificare che il file PolyCtl. htm sia chiuso, se è ancora aperto, quindi fare clic su **Compila poligono** nel menu **Compila** . È possibile visualizzare di nuovo il controllo dalla pagina PolyCtl. htm, ma questa volta usare il contenitore di test del controllo ActiveX.
 
-### <a name="to-use-the-activex-control-test-container"></a>Usare il controllo ActiveX Test Container
+### <a name="to-use-the-activex-control-test-container"></a>Per utilizzare il contenitore di test del controllo ActiveX
 
-1. Compilare e avviare il controllo ActiveX Test Container. Il [esempio TSTCON: ActiveX Control Test Container](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) sono disponibili su GitHub.
+1. Compilare e avviare il contenitore di test del controllo ActiveX. [Esempio TSTCON: il contenitore di test del controllo ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) è disponibile in GitHub.
 
     > [!NOTE]
-    > Per gli errori che interessano `ATL::CW2AEX`, in Script.Cpp, sostituire riga `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` con `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`e di riga `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` con `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
-    > Per gli errori che interessano `HMONITOR`, aprire stdafx. H nel `TCProps` del progetto e sostituire:
+    > Per gli errori che coinvolgono `ATL::CW2AEX`, in script. cpp, sostituire `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` di riga con `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`e `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` di riga con `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
+    > Per gli errori che comportano `HMONITOR`, aprire StdAfx. h nel progetto `TCProps` e sostituire:
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0400
@@ -124,37 +124,37 @@ Ricompilare il controllo. Assicurarsi che il file PolyCtl viene chiuso se è anc
     > #endif
     > ```
 
-1. Nelle **Test Container**via il **modificare** dal menu fare clic su **Inserisci nuovo controllo**.
+1. In **test container**scegliere **Inserisci nuovo controllo**dal menu **modifica** .
 
-1. Individuare il controllo, che verrà chiamato `PolyCtl class`, fare clic su **OK**. Si noterà un triangolo verde all'interno di un cerchio.
+1. Individuare il controllo, che verrà chiamato `PolyCtl class`e fare clic su **OK**. Viene visualizzato un triangolo verde all'interno di un cerchio.
 
-Provare a modificare il numero di lati seguendo la procedura successiva. Per modificare le proprietà in un'interfaccia duale dall'interno **Test Container**, usare **richiama metodi**.
+Provare a modificare il numero di lati attenendosi alla procedura successiva. Per modificare le proprietà di un'interfaccia duale dall'interno di un **contenitore di test**, usare i **metodi Invoke**.
 
-### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>Per modificare una proprietà del controllo all'interno del contenitore di Test
+### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>Per modificare la proprietà di un controllo dall'interno del contenitore di test
 
-1. Nella **Test Container**, fare clic su **richiama metodi** sul **controllo** menu.
+1. In **test container**fare clic su **richiama metodi** dal menu di **controllo** .
 
-    Il **Richiama metodo** verrà visualizzata la finestra di dialogo.
+    Verrà visualizzata la finestra di dialogo **Richiama metodo** .
 
-1. Selezionare il **PropPut** versione del **i lati** proprietà dal **nome del metodo** casella di riepilogo a discesa.
+1. Selezionare la versione **propput** della proprietà **lati** dalla casella di riepilogo a discesa **nome metodo** .
 
-1. Tipo di `5` nella **valore del parametro** fare clic su **Imposta valore**, fare clic su **Invoke**.
+1. Digitare `5` nella casella **valore parametro** , fare clic su **Imposta valore**, quindi fare clic su **richiama**.
 
-Si noti che il controllo non cambiano. Anche se è stato modificato il numero di lati internamente impostando il `m_nSides` variabili, ciò non produceva ridisegnare il controllo. Se si passa a un'altra applicazione e quindi tornare a **Test Container**, si noterà che il controllo stato ridisegnato e presenta il numero corretto di lati.
+Si noti che il controllo non cambia. Sebbene sia stato modificato il numero di lati internamente impostando la variabile di `m_nSides`, questo non ha causato la ridisegno del controllo. Se si passa a un'altra applicazione e quindi si torna a **test container**, si noterà che il controllo è stato ridisegnato e ha il numero corretto di lati.
 
-Per risolvere questo problema, aggiungere una chiamata per il `FireViewChange` funzione definita in `IViewObjectExImpl`, dopo aver impostato il numero di lati. Se il controllo è in esecuzione nella propria finestra `FireViewChange` chiamerà il `InvalidateRect` direttamente al metodo. Se il controllo è in esecuzione senza finestra, il `InvalidateRect` metodo verrà chiamato sull'interfaccia del sito del contenitore. In tal modo il controllo a ridisegnarsi.
+Per risolvere il problema, aggiungere una chiamata alla funzione `FireViewChange`, definita in `IViewObjectExImpl`, dopo aver impostato il numero di lati. Se il controllo viene eseguito in una finestra specifica, `FireViewChange` chiamerà direttamente il metodo `InvalidateRect`. Se il controllo viene eseguito senza finestra, il metodo `InvalidateRect` verrà chiamato sull'interfaccia del sito del contenitore. Questa operazione impone al controllo di ridisegnare se stesso.
 
 ### <a name="to-add-a-call-to-fireviewchange"></a>Per aggiungere una chiamata a FireViewChange
 
-1. Aggiornare PolyCtl aggiungendo la chiamata a `FireViewChange` per il `put_Sides` (metodo). Al termine, il `put_Sides` metodo sarà simile al seguente:
+1. Aggiornare PolyCtl. cpp aggiungendo la chiamata a `FireViewChange` al metodo `put_Sides`. Al termine, il metodo `put_Sides` avrà un aspetto simile al seguente:
 
     [!code-cpp[NVC_ATL_Windowing#55](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_9.cpp)]
 
-Dopo aver aggiunto `FireViewChange`, ricompilare e provare di nuovo il controllo di ActiveX Control Test Container. Questo tempo quando si modifica il numero di lati e fare clic su `Invoke`, si dovrebbe essere modificare immediatamente il controllo.
+Dopo aver aggiunto `FireViewChange`, ricompilare e riprovare il controllo nel contenitore di test del controllo ActiveX. Questa volta, quando si modifica il numero di lati e si fa clic su `Invoke`, il controllo verrà immediatamente visualizzato.
 
-Nel passaggio successivo, si aggiungerà un evento.
+Nel passaggio successivo verrà aggiunto un evento.
 
-[Tornare al passaggio 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [al passaggio 5](../atl/adding-an-event-atl-tutorial-part-5.md)
+[Tornare al passaggio 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; al [passaggio 5](../atl/adding-an-event-atl-tutorial-part-5.md)
 
 ## <a name="see-also"></a>Vedere anche
 

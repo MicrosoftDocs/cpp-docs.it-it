@@ -10,72 +10,72 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1374acbd7061afaba372100cf6e69d9d717da8a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405482"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127033"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Spazio dei nomi Concurrency::direct3d
 
-Il `direct3d` dello spazio dei nomi fornisce funzioni che supportano l'interoperabilità D3D. Abilita il solo utilizzo delle risorse D3D per il calcolo in codice AMP nonché consentire l'utilizzo delle risorse create in AMP nel codice D3D, senza creare copie intermedie ridondanti. In modo incrementale, è possibile accelerare le sezioni con utilizzo intensivo di calcolo delle applicazioni DirectX utilizzando C++ AMP e usare le API D3D sui dati prodotti dai calcoli AMP.
+Lo spazio dei nomi `direct3d` fornisce funzioni che supportano l'interoperabilità D3D. Consente di usare le risorse D3D per il calcolo in codice AMP. Consente inoltre di utilizzare le risorse create in AMP nel codice D3D, senza creare copie intermedie ridondanti. È possibile accelerare gradualmente le sezioni con utilizzo intensivo di calcolo delle applicazioni DirectX usando C++ amp e usare l'API D3D sui dati prodotti da calcoli amp.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 namespace direct3d;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>Classi
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Classe scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Wrapper RAII per un blocco di accesso di D3D su un `accelerator_view` oggetto.|
+|[Classe scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Wrapper RAII per un blocco di accesso D3D su un oggetto `accelerator_view`.|
 
 ### <a name="structures"></a>Strutture
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Struttura adopt_d3d_access_lock_t](adopt-d3d-access-lock-t-structure.md)|Tipo di tag per indicare il blocco di accesso di D3D dovrebbe essere adottato anziché acquisito.|
+|[Struttura adopt_d3d_access_lock_t](adopt-d3d-access-lock-t-structure.md)|Tipo di tag per indicare che è necessario adottare il blocco di accesso D3D anziché acquisire.|
 
 ### <a name="functions"></a>Funzioni
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Restituisce il valore assoluto dell'argomento|
-|[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Di overload. Fissa x nell'intervallo specificato di Min e max|
-|[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Conta il numero di bit impostati in x|
-|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Crea un' [classe accelerator_view](accelerator-view-class.md) da un puntatore a un'interfaccia del dispositivo Direct3D|
-|[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Acquisisce un blocco in un accelerator_view per eseguire in modo sicuro le operazioni D3D sulle risorse condivise con accelerator_view|
-|[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|Tentativo di acquisire il blocco di accesso di D3D su un accelerator_view senza bloccare.|
-|[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|Rilasciare il blocco di accesso di D3D sull'oggetto accelerator_view specificato.|
-|[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Ottiene la posizione del primo bit impostato in x, a partire dal bit di ordine più elevato e l'utilizzo verso il basso|
-|[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Ottiene la posizione del primo bit impostato in x, a partire dal bit di ordine inferiore e andando|
-|[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Ottenere l'interfaccia del buffer D3D sottostante a un array.|
-|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Confronta due valori, restituendo il valore è maggiore.|
-|[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Confronta due valori, restituendo il valore è inferiore.|
-|[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Restituisce un flag booleano che indica se il timeout è disabilitato per l'oggetto accelerator_view specificato.|
-|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Di overload. Esegue un'operazione aritmetica di moltiplicazione/somma su tre argomenti: x \* y + z|
-|[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Creare una matrice da un puntatore di interfaccia del buffer di D3D.|
-|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Genera un valore casuale usando l'algoritmo Perlin noise|
-|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x da gradi a radianti|
-|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcola un reciproco veloce e approssimativo dell'argomento|
-|[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverte l'ordine dei bit in x|
-|[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Fissa x all'interno dell'intervallo da 0 a 1|
-|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Di overload. Restituisce il segno dell'argomento|
-|[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Restituisce un'interpolazione continua di Hermite tra 0 e 1, se x è compreso nell'intervallo [ min, max].|
-|[step](concurrency-direct3d-namespace-functions-amp.md#step)|Confronta due valori, restituendo 0 o basato su quale valore è maggiore di 1|
-|[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Confronta due valori senza segno, restituendo il valore è maggiore.|
-|[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Confronta due valori senza segno, restituendo il valore è inferiore.|
+|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Restituisce il valore assoluto dell'argomento.|
+|[morsetto](concurrency-direct3d-namespace-functions-amp.md#clamp)|Di overload. Clamp _X al _Min e all'intervallo di _Max specificati|
+|[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Conta il numero di bit impostati in _X|
+|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Crea una [classe di accelerator_view](accelerator-view-class.md) da un puntatore a un'interfaccia del dispositivo Direct3D|
+|[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Acquisisce un blocco su un accelerator_view per eseguire in modo sicuro le operazioni D3D sulle risorse condivise con l'accelerator_view|
+|[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|Tentativo di acquisire il blocco di accesso D3D su un accelerator_view senza blocco.|
+|[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|Rilascia il blocco di accesso D3D sul accelerator_view specificato.|
+|[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Ottiene la posizione del primo bit impostato in _X, iniziando dal bit di ordine più elevato e lavorando verso il basso|
+|[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Ottiene la posizione del primo bit impostato in _X, a partire dal bit di ordine più basso e lavorando verso l'alto|
+|[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Ottiene l'interfaccia del buffer D3D sottostante a una matrice.|
+|[IMAX](concurrency-direct3d-namespace-functions-amp.md#imax)|Confronta due valori, restituendo il valore maggiore.|
+|[Imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Confronta due valori, restituendo il valore più piccolo.|
+|[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Restituisce un flag booleano che indica se il timeout è disabilitato per il accelerator_view specificato.|
+|[pazzo](concurrency-direct3d-namespace-functions-amp.md#mad)|Di overload. Esegue un'operazione di moltiplicazione/aggiunta aritmetica su tre argomenti: _X \* _Y + _Z|
+|[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Crea una matrice da un puntatore all'interfaccia del buffer D3D.|
+|[rumore](concurrency-direct3d-namespace-functions-amp.md#noise)|Genera un valore casuale usando l'algoritmo di disturbo Perlin|
+|[radianti](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte _X da gradi a radianti|
+|[RCP](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcola un reciproco veloce e approssimativo dell'argomento|
+|[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverte l'ordine dei bit in _X|
+|[saturare](concurrency-direct3d-namespace-functions-amp.md#saturate)|Clamp _X nell'intervallo compreso tra 0 e 1|
+|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Di overload. Restituisce il segno dell'argomento.|
+|[SmoothStep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Restituisce un'interpolazione dell'eremita smussata tra 0 e 1, se _X è compreso nell'intervallo [_Min, _Max].|
+|[passo](concurrency-direct3d-namespace-functions-amp.md#step)|Confronta due valori, restituendo 0 o 1 in base al valore maggiore.|
+|[Umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Confronta due valori senza segno, restituendo il valore maggiore.|
+|[Umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Confronta due valori senza segno, restituendo il valore più piccolo.|
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** amp.h
 
-**Spazio dei nomi:** Concorrenza
+**Spazio dei nomi:** Concurrency
 
 ## <a name="see-also"></a>Vedere anche
 

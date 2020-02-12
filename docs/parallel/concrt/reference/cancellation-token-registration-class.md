@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-ms.openlocfilehash: c6ca8061181ec057110282fa297666235e898ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9342841e207c93b66521c2fc742c1b1114682f78
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414191"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142245"
 ---
-# <a name="cancellationtokenregistration-class"></a>Classe cancellation_token_registration
+# <a name="cancellation_token_registration-class"></a>Classe cancellation_token_registration
 
 La classe `cancellation_token_registration` rappresenta una notifica di callback da `cancellation_token`. Quando il metodo `register` in `cancellation_token` viene utilizzato per ricevere la notifica dell'annullamento, un oggetto `cancellation_token_registration` viene restituito al callback come handle, in modo che da parte del chiamante possa essere richiesto di non eseguire più un callback specifico tramite l'utilizzo del metodo `deregister`.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class cancellation_token_registration;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[cancellation_token_registration](#ctor)||
-|[~ cancellation_token_registration distruttore](#dtor)||
+|[Distruttore ~ cancellation_token_registration](#dtor)||
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -48,19 +48,19 @@ class cancellation_token_registration;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** . h
+**Intestazione:** pplcancellation_token. h
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="dtor"></a> ~cancellation_token_registration
+## <a name="dtor"></a>~ cancellation_token_registration
 
-```
+```cpp
 ~cancellation_token_registration();
 ```
 
-##  <a name="ctor"></a> cancellation_token_registration
+## <a name="ctor"></a>cancellation_token_registration
 
-```
+```cpp
 cancellation_token_registration();
 
 cancellation_token_registration(const cancellation_token_registration& _Src);
@@ -71,11 +71,11 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ### <a name="parameters"></a>Parametri
 
 *_Src*<br/>
-Il `cancellation_token_registration` per copiare o spostare.
+`cancellation_token_registration` da copiare o spostare.
 
-##  <a name="operator_neq"></a> operator!=
+## <a name="operator_neq"></a>operatore! =
 
-```
+```cpp
 bool operator!= (const cancellation_token_registration& _Rhs) const;
 ```
 
@@ -86,9 +86,9 @@ Oggetto `cancellation_token_registration` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operatore =
 
-```
+```cpp
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
 
 cancellation_token_registration& operator= (cancellation_token_registration&& _Src);
@@ -97,13 +97,13 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ### <a name="parameters"></a>Parametri
 
 *_Src*<br/>
-Il `cancellation_token_registration` da assegnare.
+`cancellation_token_registration` da assegnare.
 
 ### <a name="return-value"></a>Valore restituito
 
-##  <a name="operator_eq_eq"></a> operator==
+## <a name="operator_eq_eq"></a>operatore = =
 
-```
+```cpp
 bool operator== (const cancellation_token_registration& _Rhs) const;
 ```
 

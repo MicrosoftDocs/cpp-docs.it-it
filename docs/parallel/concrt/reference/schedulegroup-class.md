@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337544"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143274"
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 
@@ -24,25 +24,25 @@ Rappresenta un'astrazione per un gruppo di pianificazione. I gruppi di pianifica
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class ScheduleGroup;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[~ Distruttore ScheduleGroup](#dtor)||
+|[Distruttore ~ ScheduleGroup](#dtor)||
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Id](#id)|Restituisce un identificatore per il gruppo di pianificazione che è univoco all'interno di utilità di pianificazione a cui appartiene il gruppo.|
+|[Id](#id)|Restituisce un identificatore per il gruppo di pianificazione che è univoco all'interno dell'utilità di pianificazione a cui appartiene il gruppo.|
 |[Riferimento](#reference)|Incrementa il conteggio riferimenti del gruppo di pianificazione.|
-|[Rilascio](#release)|Decrementa il conteggio dei riferimenti del gruppo di pianificazione.|
+|[Versione](#release)|Decrementa il conteggio dei riferimenti del gruppo di pianificazione.|
 |[ScheduleTask](#scheduletask)|Pianifica un'attività leggera all'interno del gruppo di pianificazione.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
@@ -55,23 +55,23 @@ class ScheduleGroup;
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="id"></a> Id
+## <a name="id"></a>ID
 
-Restituisce un identificatore per il gruppo di pianificazione che è univoco all'interno di utilità di pianificazione a cui appartiene il gruppo.
+Restituisce un identificatore per il gruppo di pianificazione che è univoco all'interno dell'utilità di pianificazione a cui appartiene il gruppo.
 
-```
+```cpp
 virtual unsigned int Id() const = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Un identificatore per il gruppo di pianificazione che è univoco all'interno di utilità di pianificazione a cui appartiene il gruppo.
+Identificatore per il gruppo di pianificazione che è univoco all'interno dell'utilità di pianificazione a cui appartiene il gruppo.
 
-##  <a name="operator_delete"></a> operatore delete
+## <a name="operator_delete"></a>operatore delete
 
-Oggetto `ScheduleGroup` oggetto viene eliminato definitivamente internamente dal runtime quando vengono rilasciati tutti i riferimenti esterni. Non è possibile eliminarlo in modo esplicito.
+Un oggetto `ScheduleGroup` viene eliminato internamente dal runtime quando vengono rilasciati tutti i riferimenti esterni. Non è possibile eliminarlo in modo esplicito.
 
-```
+```cpp
 void operator delete(
     void* _PObject);
 
@@ -85,53 +85,53 @@ const char *,
 ### <a name="parameters"></a>Parametri
 
 *_PObject*<br/>
-Un puntatore all'oggetto da eliminare.
+Puntatore all'oggetto da eliminare.
 
-##  <a name="reference"></a> Riferimento
+## <a name="reference"></a>Riferimento
 
 Incrementa il conteggio riferimenti del gruppo di pianificazione.
 
-```
+```cpp
 virtual unsigned int Reference() = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il conteggio dei riferimenti appena incrementato.
+Conteggio dei riferimenti appena incrementato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Ciò in genere viene usato per gestire la durata del gruppo di pianificazione per la composizione. Quando il conteggio dei riferimenti di un gruppo di pianificazione scende a zero, il gruppo di pianificazione viene eliminato dal runtime. Un gruppo di pianificazione creato usando il [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) metodo, o il [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) metodo inizia con un conteggio dei riferimenti di uno.
+Questa operazione viene in genere utilizzata per gestire la durata del gruppo di pianificazione per la composizione. Quando il conteggio dei riferimenti di un gruppo di pianificazione scende a zero, il gruppo di pianificazione viene eliminato dal runtime. Un gruppo di pianificazione creato tramite il metodo [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) o il metodo [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) inizia con un conteggio dei riferimenti di uno.
 
-##  <a name="release"></a> Versione
+## <a name="release"></a>Versione
 
 Decrementa il conteggio dei riferimenti del gruppo di pianificazione.
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il conteggio dei riferimenti appena decrementato.
+Conteggio dei riferimenti appena decrementato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Ciò in genere viene usato per gestire la durata del gruppo di pianificazione per la composizione. Quando il conteggio dei riferimenti di un gruppo di pianificazione scende a zero, il gruppo di pianificazione viene eliminato dal runtime. Dopo aver chiamato il metodo `Release` per il numero specifico di volte per rimuovere il conteggio riferimenti di creazione e qualsiasi riferimento aggiuntivo inserito utilizzando il metodo `Reference`, non è possibile utilizzare ulteriormente il gruppo di pianificazione. In questo modo, è determineranno un comportamento non definito.
+Questa operazione viene in genere utilizzata per gestire la durata del gruppo di pianificazione per la composizione. Quando il conteggio dei riferimenti di un gruppo di pianificazione scende a zero, il gruppo di pianificazione viene eliminato dal runtime. Dopo aver chiamato il metodo `Release` per il numero specifico di volte per rimuovere il conteggio riferimenti di creazione e qualsiasi riferimento aggiuntivo inserito utilizzando il metodo `Reference`, non è possibile utilizzare ulteriormente il gruppo di pianificazione. Questa operazione comporterà un comportamento indefinito.
 
-Un gruppo di pianificazione è associato a un'istanza di utilità di pianificazione specifica. È necessario assicurarsi che tutti i riferimenti al gruppo di pianificazione vengano rilasciati prima del rilascio di tutti i riferimenti all'utilità di pianificazione, poiché questi ultimi potrebbero provocare la distruzione dell'utilità di pianificazione. In caso contrario potrebbe un comportamento indefinito.
+Un gruppo di pianificazione è associato a una particolare istanza dell'utilità di pianificazione. È necessario assicurarsi che tutti i riferimenti al gruppo di pianificazione vengano rilasciati prima del rilascio di tutti i riferimenti all'utilità di pianificazione, poiché questi ultimi potrebbero provocare la distruzione dell'utilità di pianificazione. In caso contrario, viene restituito un comportamento non definito.
 
-##  <a name="dtor"></a> ~ScheduleGroup
+## <a name="dtor"></a>~ ScheduleGroup
 
-```
+```cpp
 virtual ~ScheduleGroup();
 ```
 
-##  <a name="scheduletask"></a> ScheduleTask
+## <a name="scheduletask"></a>ScheduleTask
 
 Pianifica un'attività leggera all'interno del gruppo di pianificazione.
 
-```
+```cpp
 virtual void ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data) = 0;
@@ -140,14 +140,14 @@ virtual void ScheduleTask(
 ### <a name="parameters"></a>Parametri
 
 *_Proc*<br/>
-Puntatore alla funzione da eseguire per utilizzare il corpo dell'attività leggera.
+Puntatore alla funzione da eseguire per eseguire il corpo dell'attività leggera.
 
 *_Data*<br/>
-Un puntatore void per i dati che verranno passati come parametro al corpo dell'attività.
+Puntatore void ai dati che verranno passati come parametro al corpo dell'attività.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La chiamata di `ScheduleTask` metodo posiziona in modo implicito un conteggio dei riferimenti nel gruppo di pianificazione che è stata rimossa dal runtime in un momento appropriato dopo l'esecuzione dell'attività.
+La chiamata al metodo `ScheduleTask` inserisce in modo implicito un conteggio dei riferimenti nel gruppo di pianificazione che viene rimosso dal runtime in un momento appropriato dopo l'esecuzione dell'attività.
 
 ## <a name="see-also"></a>Vedere anche
 

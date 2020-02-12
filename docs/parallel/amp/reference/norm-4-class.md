@@ -268,24 +268,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08d19d25c3f9309553972e752daee75c9896a071
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351576"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126474"
 ---
-# <a name="norm4-class"></a>Classe norm_4
+# <a name="norm_4-class"></a>Classe norm_4
 
-Rappresenta un vettore short di quattro numeri normale.
+Rappresenta un breve vettore di quattro numeri normali.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class norm_4;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -297,7 +297,7 @@ class norm_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore norm_4](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore norm_4](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -457,7 +457,7 @@ class norm_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#norm_4__size)||
+|[dimensioni costanti](#norm_4__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -533,7 +533,7 @@ class norm_4;
 |norm_4::wxyz||
 |norm_4::wxz||
 |norm_4::wxzy||
-|norm_4::wy||
+|norm_4:: WY||
 |norm_4::wyx||
 |norm_4::wyxz||
 |norm_4::wyz||
@@ -598,15 +598,15 @@ class norm_4;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> norm_4
+## <a name="ctor"></a>norm_4
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 norm_4() restrict(amp,
     cpu);
 
@@ -667,26 +667,26 @@ explicit inline norm_4(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V3*<br/>
-Il valore per inizializzare l'elemento 3.
+Valore per l'inizializzazione dell'elemento 3.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="norm_4__size"></a> Dimensioni
+## <a name="norm_4__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 4;
 ```
 

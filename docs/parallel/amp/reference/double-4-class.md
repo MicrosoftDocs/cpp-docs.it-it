@@ -268,24 +268,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ca413573ebd741ea2a9a813a25ec2679aff5b7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180323"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139360"
 ---
-# <a name="double4-class"></a>Classe double_4
+# <a name="double_4-class"></a>Classe double_4
 
-Rappresenta un vettore short di quattro valori Double.
+Rappresenta un vettore breve di quattro doppi.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class double_4;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -297,7 +297,7 @@ class double_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore double_4](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore double_4](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -457,7 +457,7 @@ class double_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#double_4__size)||
+|[dimensioni costanti](#double_4__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -598,15 +598,15 @@ class double_4;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> double_4
+## <a name="ctor"></a>double_4
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 double_4() restrict(amp,
     cpu);
 
@@ -649,26 +649,26 @@ explicit inline double_4(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V3*<br/>
-Il valore per inizializzare l'elemento 3.
+Valore per l'inizializzazione dell'elemento 3.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="double_4__size"></a> Dimensioni
+## <a name="double_4__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 4;
 ```
 
