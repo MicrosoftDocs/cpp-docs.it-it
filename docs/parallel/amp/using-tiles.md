@@ -2,12 +2,12 @@
 title: Utilizzo di sezioni
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518257"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126266"
 ---
 # <a name="using-tiles"></a>Utilizzo di sezioni
 
@@ -15,7 +15,7 @@ ms.locfileid: "76518257"
 
 - variabili `tile_static`. Il vantaggio principale dell'affiancamento è il miglioramento delle prestazioni dall'accesso `tile_static`. L'accesso ai dati in `tile_static` memoria può essere notevolmente più veloce rispetto all'accesso ai dati nello spazio globale (`array` o `array_view` oggetti). Viene creata un'istanza di una variabile di `tile_static` per ogni sezione e tutti i thread nel riquadro hanno accesso alla variabile. In un tipico algoritmo affiancato, i dati vengono copiati in `tile_static` memoria una sola volta dalla memoria globale e quindi a cui si accede più volte dalla memoria del `tile_static`.
 
-- [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait). Una chiamata a `tile_barrier::wait` sospende l'esecuzione del thread corrente fino a quando tutti i thread nello stesso riquadro raggiungono la chiamata al `tile_barrier::wait`. Non è possibile garantire l'ordine in cui i thread vengono eseguiti, ma solo che nessun thread nel riquadro verrà eseguito oltre la chiamata a `tile_barrier::wait` finché tutti i thread non hanno raggiunto la chiamata. Ciò significa che, usando il metodo `tile_barrier::wait`, è possibile eseguire le attività su un elemento affiancato anziché una base thread per thread. Un algoritmo di affiancamento tipico contiene codice per inizializzare la memoria `tile_static` per l'intero riquadro seguito da una chiamata a `tile_barrer::wait`. Il codice che segue `tile_barrier::wait` contiene calcoli che richiedono l'accesso a tutti i valori di `tile_static`.
+- [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait). Una chiamata a `tile_barrier::wait` sospende l'esecuzione del thread corrente fino a quando tutti i thread nello stesso riquadro raggiungono la chiamata al `tile_barrier::wait`. Non è possibile garantire l'ordine in cui i thread vengono eseguiti, ma solo che nessun thread nel riquadro verrà eseguito oltre la chiamata a `tile_barrier::wait` finché tutti i thread non hanno raggiunto la chiamata. Ciò significa che, usando il metodo `tile_barrier::wait`, è possibile eseguire le attività su un elemento affiancato anziché una base thread per thread. Un algoritmo di affiancamento tipico contiene codice per inizializzare la memoria `tile_static` per l'intero riquadro seguito da una chiamata a `tile_barrier::wait`. Il codice che segue `tile_barrier::wait` contiene calcoli che richiedono l'accesso a tutti i valori di `tile_static`.
 
 - Indicizzazione locale e globale. È possibile accedere all'indice del thread in relazione all'intero `array_view` o `array` oggetto e all'indice relativo alla sezione. Utilizzando l'indice locale è possibile semplificare la lettura e il debug del codice. In genere, si usa l'indicizzazione locale per accedere alle variabili `tile_static` e l'indicizzazione globale per accedere alle variabili `array` e `array_view`.
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5

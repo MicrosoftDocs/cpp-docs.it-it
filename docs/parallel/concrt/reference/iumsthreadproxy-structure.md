@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4fb43a4223cad8cc63049d2a0f8345e48b90f17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345513"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139967"
 ---
 # <a name="iumsthreadproxy-structure"></a>Struttura IUMSThreadProxy
 
@@ -25,21 +25,21 @@ Astrazione per un thread di esecuzione. Se si vuole che all'utilità di pianific
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 struct IUMSThreadProxy : public IThreadProxy;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Chiamato per entrare in un'area critica. All'interno di un'area critica, l'utilità di pianificazione non verrà considerato dalla operazioni di blocco asincrone che si verificano durante l'area. Ciò significa che l'utilità di pianificazione non verrà essere riattivato per gli errori di pagina, sospensioni di thread, le chiamate asincrone di procedura del kernel (Inizializza) e così via, per un thread UMS.|
-|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Chiamato per entrare in un'area di hyper-critical. All'interno di un'area di hyper-critical, l'utilità di pianificazione non rispetterà eventuali operazioni di blocco che si verificano durante l'area. Pertanto l'utilità di pianificazione non sarà nuovamente immessa per bloccare le chiamate di funzione, i tentativi di acquisizione di blocchi tramite cui vengono eseguiti blocchi, gli errori di pagina, le sospensioni di thread, le chiamate asincrone di procedura del kernel (APC, Asynchronous Procedure Call) e così via, per un thread UMS.|
-|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Chiamato per uscire da un'area critica.|
-|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Chiamato per uscire da un'area di hyper-critical.|
-|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Restituisce il tipo di area critica il proxy thread si trova all'interno. Poiché aree hyper critiche sono un soprainsieme di aree critiche, se un'area critica e quindi un'area, hyper-critical è diventata codice `InsideHyperCriticalRegion` verranno restituiti.|
+|[IUMSThreadProxy:: EnterCriticalRegion](#entercriticalregion)|Chiamato per accedere a un'area critica. Quando si trova all'interno di un'area critica, l'utilità di pianificazione non osserverà le operazioni di blocco asincrone che si verificano durante l'area. Ciò significa che l'utilità di pianificazione non verrà nuovamente immessa per errori di pagina, sospensioni di thread, chiamate di procedure asincrone del kernel (APC) e così via per un thread UMS.|
+|[IUMSThreadProxy:: EnterHyperCriticalRegion](#enterhypercriticalregion)|Chiamato per accedere a un'area ipercritica. All'interno di un'area ipercritica, l'utilità di pianificazione non osserverà le operazioni di blocco che si verificano durante l'area. Pertanto l'utilità di pianificazione non sarà nuovamente immessa per bloccare le chiamate di funzione, i tentativi di acquisizione di blocchi tramite cui vengono eseguiti blocchi, gli errori di pagina, le sospensioni di thread, le chiamate asincrone di procedura del kernel (APC, Asynchronous Procedure Call) e così via, per un thread UMS.|
+|[IUMSThreadProxy:: ExitCriticalRegion](#exitcriticalregion)|Chiamato per uscire da un'area critica.|
+|[IUMSThreadProxy:: ExitHyperCriticalRegion](#exithypercriticalregion)|Chiamato per uscire da un'area ipercritica.|
+|[IUMSThreadProxy:: GetCriticalRegionType](#getcriticalregiontype)|Restituisce il tipo di area critica in cui si trova il proxy del thread. Poiché le aree ipercritiche sono un superset di aree critiche, se il codice è entrato in un'area critica e quindi un'area ipercritica, viene restituito `InsideHyperCriticalRegion`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -53,69 +53,69 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="entercriticalregion"></a>  Metodo IUMSThreadProxy:: EnterCriticalRegion
+## <a name="entercriticalregion"></a>Metodo IUMSThreadProxy:: EnterCriticalRegion
 
-Chiamato per entrare in un'area critica. All'interno di un'area critica, l'utilità di pianificazione non verrà considerato dalla operazioni di blocco asincrone che si verificano durante l'area. Ciò significa che l'utilità di pianificazione non verrà essere riattivato per gli errori di pagina, sospensioni di thread, le chiamate asincrone di procedura del kernel (Inizializza) e così via, per un thread UMS.
+Chiamato per accedere a un'area critica. Quando si trova all'interno di un'area critica, l'utilità di pianificazione non osserverà le operazioni di blocco asincrone che si verificano durante l'area. Ciò significa che l'utilità di pianificazione non verrà nuovamente immessa per errori di pagina, sospensioni di thread, chiamate di procedure asincrone del kernel (APC) e così via per un thread UMS.
 
-```
+```cpp
 virtual int EnterCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-La nuova profondità dell'area critica. Aree critiche sono rientranti.
+Nuova profondità dell'area critica. Le aree critiche sono rientranti.
 
-##  <a name="enterhypercriticalregion"></a>  Metodo IUMSThreadProxy:: EnterHyperCriticalRegion
+## <a name="enterhypercriticalregion"></a>Metodo IUMSThreadProxy:: EnterHyperCriticalRegion
 
-Chiamato per entrare in un'area di hyper-critical. All'interno di un'area di hyper-critical, l'utilità di pianificazione non rispetterà eventuali operazioni di blocco che si verificano durante l'area. Pertanto l'utilità di pianificazione non sarà nuovamente immessa per bloccare le chiamate di funzione, i tentativi di acquisizione di blocchi tramite cui vengono eseguiti blocchi, gli errori di pagina, le sospensioni di thread, le chiamate asincrone di procedura del kernel (APC, Asynchronous Procedure Call) e così via, per un thread UMS.
+Chiamato per accedere a un'area ipercritica. All'interno di un'area ipercritica, l'utilità di pianificazione non osserverà le operazioni di blocco che si verificano durante l'area. Pertanto l'utilità di pianificazione non sarà nuovamente immessa per bloccare le chiamate di funzione, i tentativi di acquisizione di blocchi tramite cui vengono eseguiti blocchi, gli errori di pagina, le sospensioni di thread, le chiamate asincrone di procedura del kernel (APC, Asynchronous Procedure Call) e così via, per un thread UMS.
 
-```
+```cpp
 virtual int EnterHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-La nuova profondità dell'area di hyper-critical. Aree Hyper critica sono rientranti.
+Nuova profondità dell'area ipercritica. Le aree ipercritiche sono rientranti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'utilità di pianificazione deve essere particolarmente attenta ciò che chiama i metodi e ai blocchi che acquisisce in tali aree. Se i blocchi di codice in un'area di questo tipo in un blocco che viene mantenuto da un elemento che l'utilità di pianificazione è responsabile della pianificazione, potrebbe verificarsi deadlock.
+L'utilità di pianificazione deve prestare particolare attenzione ai metodi che chiama e a quali blocchi acquisisce in tali aree. Se il codice in tale area si blocca in un blocco che è gestito da un elemento che l'utilità di pianificazione è responsabile della pianificazione, è possibile che si verifichi un deadlock.
 
-##  <a name="exitcriticalregion"></a>  Metodo IUMSThreadProxy:: ExitCriticalRegion
+## <a name="exitcriticalregion"></a>Metodo IUMSThreadProxy:: ExitCriticalRegion
 
 Chiamato per uscire da un'area critica.
 
-```
+```cpp
 virtual int ExitCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-La nuova profondità dell'area critica. Aree critiche sono rientranti.
+Nuova profondità dell'area critica. Le aree critiche sono rientranti.
 
-##  <a name="exithypercriticalregion"></a>  Metodo IUMSThreadProxy:: ExitHyperCriticalRegion
+## <a name="exithypercriticalregion"></a>Metodo IUMSThreadProxy:: ExitHyperCriticalRegion
 
-Chiamato per uscire da un'area di hyper-critical.
+Chiamato per uscire da un'area ipercritica.
 
-```
+```cpp
 virtual int ExitHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-La nuova profondità dell'area di hyper-critical. Aree Hyper critica sono rientranti.
+Nuova profondità dell'area ipercritica. Le aree ipercritiche sono rientranti.
 
-##  <a name="getcriticalregiontype"></a>  Metodo IUMSThreadProxy:: GetCriticalRegionType
+## <a name="getcriticalregiontype"></a>Metodo IUMSThreadProxy:: GetCriticalRegionType
 
-Restituisce il tipo di area critica il proxy thread si trova all'interno. Poiché aree hyper critiche sono un soprainsieme di aree critiche, se un'area critica e quindi un'area, hyper-critical è diventata codice `InsideHyperCriticalRegion` verranno restituiti.
+Restituisce il tipo di area critica in cui si trova il proxy del thread. Poiché le aree ipercritiche sono un superset di aree critiche, se il codice è entrato in un'area critica e quindi un'area ipercritica, viene restituito `InsideHyperCriticalRegion`.
 
-```
+```cpp
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il tipo di area critica che il proxy thread si trova all'interno.
+Tipo di area critica in cui si trova il proxy del thread.
 
 ## <a name="see-also"></a>Vedere anche
 

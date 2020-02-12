@@ -5,32 +5,32 @@ helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-ms.openlocfilehash: 0d31f9bd16aaa70cc773e60e4f1193e66ec520f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75ecac8dd0e8845401e3e287e8c95ea614055970
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205642"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142480"
 ---
 # <a name="how-to-select-among-completed-tasks"></a>Procedura: Effettuare una scelta tra le attività completate
 
-Questo esempio illustra come usare il [Concurrency:: Choice](../../parallel/concrt/reference/choice-class.md) e [Concurrency:: join](../../parallel/concrt/reference/join-class.md) classi per selezionare la prima attività per completare un algoritmo di ricerca.
+In questo esempio viene illustrato come utilizzare le classi [Concurrency:: Choice](../../parallel/concrt/reference/choice-class.md) e [Concurrency:: join](../../parallel/concrt/reference/join-class.md) per selezionare la prima attività per completare un algoritmo di ricerca.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente esegue due algoritmi di ricerca in parallelo e seleziona l'algoritmo primo completamento. Questo esempio viene definito il `employee` tipo, che contiene un identificatore numerico e uno stipendio di un dipendente. Il `find_employee` funzione trova il primo dipendente con l'identificatore specificato o lo stipendio specificato. Il `find_employee` funzione gestisce anche il caso in cui nessun dipendente è l'identificatore specificato o lo stipendio. Il `wmain` funzione crea una matrice di `employee` oggetti e le ricerche per diversi valori dell'identificatore e stipendio.
+Nell'esempio seguente vengono eseguiti due algoritmi di ricerca in parallelo e viene selezionato il primo algoritmo da completare. Questo esempio definisce il tipo di `employee`, che include un identificatore numerico e uno stipendio per un dipendente. La funzione `find_employee` trova il primo dipendente con l'identificatore fornito o lo stipendio fornito. La funzione `find_employee` gestisce anche il caso in cui nessun dipendente ha l'identificatore o lo stipendio fornito. La funzione `wmain` crea una matrice di oggetti `employee` e cerca diversi valori di identificatore e stipendio.
 
-Nell'esempio viene usato un `choice` oggetto da selezionare tra i casi seguenti:
+Nell'esempio viene usato un oggetto `choice` per selezionare tra i casi seguenti:
 
 1. Un dipendente con l'identificatore specificato esiste.
 
-1. Un dipendente che ha lo stipendio specificato esiste.
+1. Un dipendente con lo stipendio specificato esiste.
 
-1. È presente alcun dipendente con l'identificatore specificato o lo stipendio.
+1. Nessun dipendente con l'identificatore o lo stipendio specificato esiste.
 
-Per i primi due casi, l'esempio Usa un' [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) che include l'identificatore e l'altro `single_assignment` oggetto per contenere le retribuzioni. Nell'esempio viene usato un `join` oggetto per il terzo caso. Il `join` oggetto è costituito da due ulteriori `single_assignment` oggetti, uno per il caso in cui è presente alcun dipendente con l'identificatore specificato e uno per il caso in cui è presente alcun dipendente con lo stipendio specificato. Il `join` oggetto invia un messaggio quando ognuno dei relativi membri riceve un messaggio. In questo esempio, il `join` oggetto invia un messaggio quando alcun dipendente con l'identificatore specificato non esiste o Salario.
+Per i primi due casi, nell'esempio viene utilizzato un oggetto [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) per conservare l'identificatore e un altro oggetto `single_assignment` per mantenere lo stipendio. Nell'esempio viene utilizzato un oggetto `join` per il terzo caso. L'oggetto `join` è costituito da due oggetti `single_assignment` aggiuntivi, uno per il caso in cui non esiste alcun dipendente con l'identificatore specificato e uno per il caso in cui non esista alcun dipendente con lo stipendio fornito. L'oggetto `join` Invia un messaggio quando ogni membro riceve un messaggio. In questo esempio, l'oggetto `join` Invia un messaggio quando non esiste alcun dipendente con l'identificatore o lo stipendio fornito.
 
-L'esempio Usa un' [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) oggetto per l'esecuzione di entrambi gli algoritmi di ricerca in parallelo. Ogni attività di ricerca scrive in uno del `single_assignment` oggetti per indicare se il dipendente specificato esiste. L'esempio Usa la [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) funzione per ottenere l'indice del primo buffer che contiene un messaggio e un `switch` blocco per stampare il risultato.
+Nell'esempio viene utilizzato un oggetto [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) per eseguire entrambi gli algoritmi di ricerca in parallelo. Ogni attività di ricerca scrive in uno degli oggetti `single_assignment` per indicare se il dipendente specificato esiste. Nell'esempio viene utilizzata la funzione [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) per ottenere l'indice del primo buffer contenente un messaggio e un blocco di `switch` per stampare il risultato.
 
 [!code-cpp[concrt-find-employee#1](../../parallel/concrt/codesnippet/cpp/how-to-select-among-completed-tasks_1.cpp)]
 
@@ -43,13 +43,13 @@ Employee with id 61935 has salary 29905.00.
 No employee has id 899 or salary 31223.00.
 ```
 
-Questo esempio Usa la [Concurrency:: make_choice](reference/concurrency-namespace-functions.md#make_choice) funzione helper per creare `choice` oggetti e il [Concurrency:: make_join](reference/concurrency-namespace-functions.md#make_join) funzione helper per creare `join` oggetti.
+In questo esempio viene utilizzata la funzione helper [Concurrency:: make_choice](reference/concurrency-namespace-functions.md#make_choice) per creare oggetti `choice` e la funzione di supporto [Concurrency:: make_join](reference/concurrency-namespace-functions.md#make_join) per creare oggetti `join`.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `find-employee.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `find-employee.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
 
-**find-employee. CL.exe /EHsc**
+> **CL. exe/EHsc Find-Employee. cpp**
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,30 +6,30 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 272ac3685539eb03f773c8bc60d5938ed6c53876
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351563"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126513"
 ---
 # <a name="norm-class"></a>Classe norm
 
-Rappresenta un numero di norma. Ogni elemento è mobile punto numero compreso nell'intervallo [-1.0f, 1.0f].
+Rappresenta un numero norm. Ogni elemento è un numero a virgola mobile compreso nell'intervallo [-1.0 f, 1.0 f].
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class norm;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore Norm](#ctor)|Di overload. Costruttore predefinito. L'inizializzazione su 0.0f.|
+|[Costruttore Norm](#ctor)|Di overload. Costruttore predefinito. Inizializzare su 0,0 f.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -37,7 +37,7 @@ class norm;
 |----------|-----------------|
 |norm::operator-||
 |norm::operator--||
-|NORM::operator float|Operatore di conversione. Convertire il numero di norma in Mobile valore del punto.|
+|Norm:: operator float|Operatore di conversione. Converte il numero di norma in un valore a virgola mobile.|
 |norm::operator*=||
 |norm::operator/=||
 |norm::operator++||
@@ -51,15 +51,15 @@ class norm;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> Norm
+## <a name="ctor"></a>norma
 
-Costruttore predefinito. L'inizializzazione su 0.0f.
+Costruttore predefinito. Inizializzare su 0,0 f.
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);
@@ -92,7 +92,7 @@ norm(
 ### <a name="parameters"></a>Parametri
 
 *_V*<br/>
-Il valore utilizzato per inizializzare.
+Valore utilizzato per inizializzare.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.

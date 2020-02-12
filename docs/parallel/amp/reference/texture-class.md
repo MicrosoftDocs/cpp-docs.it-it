@@ -17,33 +17,33 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7a38c84c5def629c7a42b2c05bf1ed04441593b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351534"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127777"
 ---
 # <a name="texture-class"></a>Classe texture
 
-Una texture è un aggregato di dati in un `accelerator_view` nel dominio dell'extent. È una raccolta di variabili, una per ogni elemento in un dominio di extent. Ogni variabile contiene un valore che corrisponde al tipo primitivo C++ ( `unsigned int`, `int`, `float`, `double`), un tipo scalare ( `norm`, o `unorm`), o un tipo vettore short.
+Una trama è un'aggregazione di dati in un `accelerator_view` nel dominio extent. Si tratta di una raccolta di variabili, una per ogni elemento in un dominio extent. Ogni variabile include un valore corrispondente a C++ un tipo primitivo (`unsigned int`, `int`, `float`, `double`), un tipo scalare (`norm`o `unorm`) o un tipo di vettore breve.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template <typename value_type,  int _Rank>
 class texture;
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *value_type*<br/>
-Il tipo degli elementi nella trama.
+Tipo degli elementi nella trama.
 
 *_Rank*<br/>
-Numero di dimensioni della trama.
+Rango della trama.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -56,19 +56,19 @@ Numero di dimensioni della trama.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore texture](#ctor)|Inizializza una nuova istanza della classe `texture`.|
-|[~ texture distruttore](#ctor)|Elimina definitivamente il `texture` oggetto.|
+|[Costruttore di trama](#ctor)|Inizializza una nuova istanza della classe `texture`.|
+|[~ distruttore trama](#ctor)|Elimina definitivamente l'oggetto `texture`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[copy_to](#copy_to)|Copie di `texture` oggetto nella destinazione, eseguendo una copia completa.|
-|[data](#data)|Restituisce un puntatore della CPU per i dati non elaborati della trama.|
+|[copy_to](#copy_to)|Copia l'oggetto `texture` nella destinazione, eseguendo una copia completa.|
+|[data](#data)|Restituisce un puntatore CPU ai dati non elaborati di questa trama.|
 |[get](#get)|Restituisce il valore dell'elemento in corrispondenza dell'indice specificato.|
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|Restituisce il [accelerator_view](accelerator-view-class.md) vale a dire la destinazione preferita per questa trama da copiare.|
-|[get_depth_pitch](#get_depth_pitch)|Restituisce il numero di byte tra ciascuna sezione di profondità in una trama sulla CPU di gestione temporanea 3D.|
-|[get_row_pitch](#get_row_pitch)|Restituisce il numero di byte tra ciascuna riga in un 2D o 3D sulla CPU trama di gestione temporanea.|
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Restituisce la [accelerator_view](accelerator-view-class.md) che rappresenta la destinazione preferita per la copia della trama.|
+|[get_depth_pitch](#get_depth_pitch)|Restituisce il numero di byte tra ciascuna sezione di profondità in una trama di gestione temporanea 3D sulla CPU.|
+|[get_row_pitch](#get_row_pitch)|Restituisce il numero di byte tra ogni riga in una trama di staging 2D o 3D sulla CPU.|
 |[set](#set)|Imposta il valore dell'elemento in corrispondenza dell'indice specificato.|
 
 ### <a name="public-operators"></a>Operatori pubblici
@@ -77,21 +77,21 @@ Numero di dimensioni della trama.
 |----------|-----------------|
 |[operator()](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|
 |[operator\[\]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|
-|[operator=](#operator_eq)|Copia l'oggetto specificato [trama](texture-class.md) a questo oggetto.|
+|[operator=](#operator_eq)|Copia l'oggetto [texture](texture-class.md) specificato in questo oggetto.|
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Rank (costante)](#rank)|Ottiene il rango del `texture` oggetto.|
+|[Costante di rango](#rank)|Ottiene il rango dell'oggetto `texture`.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[associated_accelerator_view](#associated_accelerator_view)|Ottiene il [accelerator_view](accelerator-view-class.md) vale a dire la destinazione preferita per questa trama da copiare.|
+|[associated_accelerator_view](#associated_accelerator_view)|Ottiene l' [accelerator_view](accelerator-view-class.md) che rappresenta la destinazione preferita per la copia della trama.|
 |[depth_pitch](#depth_pitch)|Ottiene il numero di byte tra ciascuna sezione di profondità in una trama di gestione temporanea 3D sulla CPU.|
-|[row_pitch](#row_pitch)|Ottiene il numero di byte tra ciascuna riga in un 2D o 3D trama di gestione temporanea nella CPU.|
+|[row_pitch](#row_pitch)|Ottiene il numero di byte tra ogni riga in una trama di staging 2D o 3D sulla CPU.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -103,29 +103,29 @@ Numero di dimensioni della trama.
 
 **Intestazione:** amp_graphics. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="dtor"></a> ~texture
+## <a name="dtor"></a>~ trama
 
-Elimina definitivamente il `texture` oggetto.
+Elimina definitivamente l'oggetto `texture`.
 
-```
+```cpp
 ~texture() restrict(cpu);
 ```
 
-##  <a name="associated_accelerator_view"></a> associated_accelerator_view
+## <a name="associated_accelerator_view"></a>associated_accelerator_view
 
-Ottiene il [accelerator_view](accelerator-view-class.md) vale a dire la destinazione preferita per questa trama da copiare.
+Ottiene l' [accelerator_view](accelerator-view-class.md) che rappresenta la destinazione preferita per la copia della trama.
 
-```
+```cpp
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-##  <a name="copy_to"></a> copy_to
+## <a name="copy_to"></a>copy_to
 
-Copie di `texture` oggetto nella destinazione, eseguendo una copia completa.
+Copia l'oggetto `texture` nella destinazione, eseguendo una copia completa.
 
-```
+```cpp
 void copy_to(texture& _Dest) const;
 void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 ```
@@ -133,19 +133,19 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 ### <a name="parameters"></a>Parametri
 
 *_Dest*<br/>
-Oggetto da copiare.
+Oggetto in cui copiare.
 
 *_Rank*<br/>
-Numero di dimensioni della trama.
+Rango della trama.
 
 *value_type*<br/>
-Il tipo degli elementi nella trama.
+Tipo degli elementi nella trama.
 
-##  <a name="data"></a> Dati
+## <a name="data"></a>dati
 
-Restituisce un puntatore della CPU per i dati non elaborati della trama.
+Restituisce un puntatore CPU ai dati non elaborati di questa trama.
 
-```
+```cpp
 void* data() restrict(cpu);
 
 const void* data() const restrict(cpu);
@@ -155,72 +155,72 @@ const void* data() const restrict(cpu);
 
 Puntatore ai dati non elaborati della trama.
 
-##  <a name="depth_pitch"></a> depth_pitch
+## <a name="depth_pitch"></a>depth_pitch
 
 Ottiene il numero di byte tra ciascuna sezione di profondità in una trama di gestione temporanea 3D sulla CPU.
 
-```
+```cpp
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;
 ```
 
-##  <a name="get"></a> get
+## <a name="get"></a>Ottieni
 
 Restituisce il valore dell'elemento in corrispondenza dell'indice specificato.
 
-```
+```cpp
 const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_Index*<br/>
-L'indice dell'elemento.
+Indice dell'elemento.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore dell'elemento in corrispondenza dell'indice specificato.
 
-##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
 
-Restituisce l'oggetto accelerator_view di destinazione preferita per questa trama da copiare.
+Restituisce la accelerator_view che rappresenta la destinazione preferita per la copia della trama.
 
-```
+```cpp
 Concurrency::accelerator_view get_associated_accelerator_view() const restrict(cpu);
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il [accelerator_view](accelerator-view-class.md) vale a dire la destinazione preferita per questa trama da copiare.
+[Accelerator_view](accelerator-view-class.md) che rappresenta la destinazione preferita per la copia della trama.
 
-##  <a name="get_depth_pitch"></a> get_depth_pitch
+## <a name="get_depth_pitch"></a>get_depth_pitch
 
-Restituisce il numero di byte tra ciascuna sezione di profondità in una trama sulla CPU di gestione temporanea 3D.
+Restituisce il numero di byte tra ciascuna sezione di profondità in una trama di gestione temporanea 3D sulla CPU.
 
-```
+```cpp
 unsigned int get_depth_pitch() const restrict(cpu);
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di byte tra ciascuna sezione di profondità in una trama sulla CPU di gestione temporanea 3D.
+Numero di byte tra ciascuna sezione di profondità in una trama di gestione temporanea 3D sulla CPU.
 
-##  <a name="get_row_pitch"></a> get_row_pitch
+## <a name="get_row_pitch"></a>get_row_pitch
 
-Restituisce il numero di byte tra ogni riga in una trama di gestione temporanea 2-dimensionale, o tra ogni riga di una sezione di profondità in a trama di gestione temporanea 3D.
+Restituisce il numero di byte tra ogni riga in una trama di gestione temporanea bidimensionale o tra ogni riga di una sezione di profondità in una trama di staging tridimensionale.
 
-```
+```cpp
 unsigned int get_row_pitch() const restrict(cpu);
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di byte tra ogni riga in una trama di gestione temporanea 2-dimensionale, o tra ogni riga di una sezione di profondità in a trama di gestione temporanea 3D.
+Il numero di byte tra ogni riga in una trama di gestione temporanea bidimensionale o tra ogni riga di una sezione di profondità in una trama di gestione temporanea 3D.
 
-##  <a name="operator_call"></a> operator()
+## <a name="operator_call"></a>operatore ()
 
 Restituisce il valore dell'elemento specificato dai parametri.
 
-```
+```cpp
 const value_type operator() (
     const index<_Rank>& _Index) const restrict(amp);
 
@@ -243,26 +243,26 @@ const value_type operator() (
 Indice.
 
 *_I0*<br/>
-Il componente più significativo dell'indice.
+Componente più significativo dell'indice.
 
 *_I1*<br/>
-Il componente successivo-a-più significativo dell'indice.
+Componente successivo a quello più significativo dell'indice.
 
 *_I2*<br/>
-Il componente meno significativo dell'indice.
+Componente meno significativo dell'indice.
 
 *_Rank*<br/>
-Numero di dimensioni dell'indice.
+Rango dell'indice.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore dell'elemento specificato dai parametri.
+Valore dell'elemento specificato dai parametri.
 
-##  <a name="operator_at"></a> operator[]
+## <a name="operator_at"></a>operator []
 
 Restituisce l'elemento in corrispondenza dell'indice specificato.
 
-```
+```cpp
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
 
 const value_type operator[] (int _I0) const restrict(amp);
@@ -278,13 +278,13 @@ Indice.
 
 ### <a name="return-value"></a>Valore restituito
 
-L'elemento in corrispondenza dell'indice specificato.
+Elemento in corrispondenza dell'indice specificato.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operatore =
 
-Copia l'oggetto specificato [trama](texture-class.md) a questo oggetto.
+Copia l'oggetto [texture](texture-class.md) specificato in questo oggetto.
 
-```
+```cpp
 texture& operator= (
     const texture& _Other);
 
@@ -295,33 +295,33 @@ texture& operator= (
 ### <a name="parameters"></a>Parametri
 
 *_Other*<br/>
-Il `texture` da copiare dall'oggetto.
+Oggetto `texture` da cui eseguire la copia.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento a questo `texture` oggetto.
+Riferimento a questo oggetto `texture`.
 
-##  <a name="rank"></a> numero di dimensioni
+## <a name="rank"></a>Rank
 
-Ottiene il rango del `texture` oggetto.
+Ottiene il rango dell'oggetto `texture`.
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-##  <a name="row_pitch"></a> row_pitch
+## <a name="row_pitch"></a>row_pitch
 
-Ottiene il numero di byte tra ciascuna riga in un 2D o 3D trama di gestione temporanea nella CPU.
+Ottiene il numero di byte tra ogni riga in una trama di staging 2D o 3D sulla CPU.
 
-```
+```cpp
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-##  <a name="set"></a> set
+## <a name="set"></a>set
 
 Imposta il valore dell'elemento in corrispondenza dell'indice specificato.
 
-```
+```cpp
 void set(
     const index<_Rank>& _Index,
     const value_type& value) restrict(amp);
@@ -330,19 +330,19 @@ void set(
 ### <a name="parameters"></a>Parametri
 
 *_Index*<br/>
-L'indice dell'elemento.
+Indice dell'elemento.
 
 *_Rank*<br/>
-Numero di dimensioni dell'indice.
+Rango dell'indice.
 
 *value*<br/>
 Nuovo valore dell'elemento.
 
-##  <a name="ctor"></a> Trama
+## <a name="ctor"></a>trama
 
 Inizializza una nuova istanza della classe `texture`.
 
-```
+```cpp
 texture(const Concurrency::extent<_Rank>& _Ext) restrict(cpu);
 
 texture(int _E0) restrict(cpu);
@@ -541,25 +541,25 @@ texture(
 ### <a name="parameters"></a>Parametri
 
 *_Acc_view*<br/>
-Il [accelerator_view](accelerator-view-class.md) che specifica il percorso della trama.
+[Accelerator_view](accelerator-view-class.md) che specifica la posizione della trama.
 
 *_Av*<br/>
-Il [accelerator_view](accelerator-view-class.md) che specifica il percorso della trama.
+[Accelerator_view](accelerator-view-class.md) che specifica la posizione della trama.
 
 *_Associated_av*<br/>
-Un accelerator_view che specifica la destinazione preferita per la copia da o verso questa trama.
+Accelerator_view che specifica la destinazione preferita per le copie da o verso questa trama.
 
 *_Bits_per_scalar_element*<br/>
-Il numero di bit per ogni elemento scalare nel tipo scalare sottostante della trama. In generale, valore supportato è 8, 16, 32 e 64. Se si specifica 0, il numero di bit è lo stesso come il scalar_type sottostante. 64 è valido solo per le trame con base doppia.
+Numero di bit per ogni elemento scalare nel tipo scalare sottostante della trama. In generale, il valore supportato è 8, 16, 32 e 64. Se viene specificato 0, il numero di bit corrisponde al scalar_type sottostante. 64 è valido solo per le trame basate su due.
 
 *_Ext*<br/>
-L'extent in ogni dimensione della trama.
+Extent in ogni dimensione della trama.
 
 *_E0*<br/>
 Componente più significativo della trama.
 
 *_E1*<br/>
-Il componente più vicino per la maggior parte-significativo della trama.
+Componente successivo a quello più significativo della trama.
 
 *_E2*<br/>
 Componente meno significativo dell'extent della trama.
@@ -568,31 +568,31 @@ Componente meno significativo dell'extent della trama.
 Tipo di iteratore di input.
 
 *_Mipmap_levels*<br/>
-Il numero di livelli mipmap nella trama sottostante. Se si specifica 0, la trama disporrà l'intera gamma di livelli di mipmap fino a dimensioni minori per l'estensione specificata.
+Il numero di livelli di mipmap nella trama sottostante. Se si specifica 0, la trama avrà la gamma completa di livelli di mipmap fino alla dimensione minima possibile per l'extent specificato.
 
 *_Rank*<br/>
-Numero di dimensioni dell'extent.
+Rango dell'extent.
 
 *_Source*<br/>
-Un puntatore a un buffer host.
+Puntatore a un buffer dell'host.
 
 *_Src*<br/>
 Alla trama da copiare.
 
 *_Src_byte_size*<br/>
-Il numero di byte nel buffer di origine.
+Numero di byte nel buffer di origine.
 
 *_Src_first*<br/>
-Un iteratore iniziale nel contenitore di origine.
+Iteratore iniziale nel contenitore di origine.
 
 *_Src_last*<br/>
-Iteratore di fine del contenitore sorgente.
+Iteratore finale nel contenitore di origine.
 
 *_Other*<br/>
 Altra origine dati.
 
 *_Rank*<br/>
-Numero di dimensioni della sezione.
+Rango della sezione.
 
 ## <a name="see-also"></a>Vedere anche
 

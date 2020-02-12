@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-ms.openlocfilehash: 26d09610c6bb9e0c87852c9804e094617b021273
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b6c2fd853ae19c48ae04d6601eb47e5afcb71944
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341093"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143031"
 ---
-# <a name="invalidschedulerpolicythreadspecification-class"></a>Classe invalid_scheduler_policy_thread_specification
+# <a name="invalid_scheduler_policy_thread_specification-class"></a>Classe invalid_scheduler_policy_thread_specification
 
 Questa classe descrive un'eccezione generata quando si tenta di impostare i limiti di concorrenza di un oggetto `SchedulerPolicy` in modo che il valore della chiave `MinConcurrency` sia inferiore a quella della chiave `MaxConcurrency`.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class invalid_scheduler_policy_thread_specification : public std::exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -42,11 +42,12 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 **Intestazione:** concrt. h
 
 **Spazio dei nomi:** Concurrency
-##  <a name="ctor"></a> invalid_scheduler_policy_thread_specification
+
+## <a name="ctor"></a>invalid_scheduler_policy_thread_specification
 
 Costruisce un oggetto `invalid_scheduler_policy_value`.
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_thread_specification(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_thread_specification() throw();

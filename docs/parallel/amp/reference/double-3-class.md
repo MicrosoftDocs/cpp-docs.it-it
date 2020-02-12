@@ -72,24 +72,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180362"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126695"
 ---
-# <a name="double3-class"></a>Classe double_3
+# <a name="double_3-class"></a>Classe double_3
 
-Rappresenta un vettore short di tre valori Double.
+Rappresenta un vettore breve di tre valori Double.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class double_3;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -101,7 +101,7 @@ class double_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore double_3](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore double_3](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -161,7 +161,7 @@ class double_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#double_3__size)||
+|[dimensioni costanti](#double_3__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -204,15 +204,15 @@ class double_3;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> double_3
+## <a name="ctor"></a>double_3
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 double_3() restrict(amp,
     cpu);
 
@@ -254,23 +254,23 @@ explicit inline double_3(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="double_3__size"></a> Dimensioni
+## <a name="double_3__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 3;
 ```
 

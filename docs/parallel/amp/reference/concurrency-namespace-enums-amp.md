@@ -5,12 +5,12 @@ f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4feb2f98fc288fa79c0f9d81e4ed882027eddf8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180453"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126952"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Enumerazioni dello spazio dei nomi Concurrency (AMP)
 
@@ -18,11 +18,11 @@ ms.locfileid: "62180453"
 |-|-|
 |[Enumerazione access_type](#access_type)|[Enumerazione queuing_mode](#queuing_mode)|
 
-##  <a name="access_type"></a>  Enumerazione access_type
+## <a name="access_type"></a>Enumerazione access_type
 
 Tipo di enumerazione utilizzato per indicare i vari tipi di accesso ai dati.
 
-```
+```cpp
 enum access_type;
 ```
 
@@ -30,17 +30,17 @@ enum access_type;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`access_type_auto`|Scegliere automaticamente il migliore `access_type` all'acceleratore.|
+|`access_type_auto`|Scegliere automaticamente il `access_type` migliore per il tasto di scelta rapida.|
 |`access_type_none`|Dedicato. L'allocazione è accessibile solo sul tasto di scelta rapida e non sulla CPU.|
-|`access_type_read`|Condiviso. L'allocazione è accessibile nell'acceleratore e viene letta sulla CPU.|
-|`access_type_read_write`|Condiviso. L'allocazione è accessibile nell'acceleratore e viene scritta sulla CPU.|
-|`access_type_write`|Condiviso. L'allocazione è accessibile nel tasto di scelta rapida ed è sia letta che scritta sulla CPU.|
+|`access_type_read`|Condiviso. L'allocazione è accessibile sul tasto di scelta rapida ed è leggibile sulla CPU.|
+|`access_type_read_write`|Condiviso. L'allocazione è accessibile sul tasto di scelta rapida ed è scrivibile sulla CPU.|
+|`access_type_write`|Condiviso. L'allocazione è accessibile sul tasto di scelta rapida ed è leggibile e scrivibile sulla CPU.|
 
-##  <a name="queuing_mode"></a>  Enumerazione queuing_mode
+## <a name="queuing_mode"></a>Enumerazione queuing_mode
 
-Specifica la modalità di accodamento sono supportate dall'acceleratore.
+Specifica le modalità di accodamento supportate nel tasto di scelta rapida.
 
-```
+```cpp
 enum queuing_mode;
 ```
 
@@ -48,8 +48,8 @@ enum queuing_mode;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`queuing_mode_immediate`|Una modalità di accodamento che specifica che tutti i comandi, ad esempio, [parallel_for_each (funzione) (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), vengono inviati al dispositivo acceleratore corrispondente non appena ritornano al chiamante.|
-|`queuing_mode_automatic`|Una modalità di accodamento che specifica che i comandi sono messi in una coda di comandi corrispondente per il [accelerator_view](accelerator-view-class.md) oggetto. I comandi vengono inviati al dispositivo quando [accelerator_view:: Flush](accelerator-view-class.md#flush) viene chiamato.|
+|`queuing_mode_immediate`|Modalità di accodamento che specifica che tutti i comandi, ad esempio [Parallel_for_each funzione (C++ amp)](concurrency-namespace-functions-amp.md#parallel_for_each), vengono inviati al dispositivo acceleratore corrispondente non appena vengono restituiti al chiamante.|
+|`queuing_mode_automatic`|Modalità di accodamento che specifica che i comandi devono essere accodati in una coda di comandi che corrisponde all'oggetto [accelerator_view](accelerator-view-class.md) . Quando viene chiamato [accelerator_view:: Flush](accelerator-view-class.md#flush) , i comandi vengono inviati al dispositivo.|
 
 ## <a name="see-also"></a>Vedere anche
 

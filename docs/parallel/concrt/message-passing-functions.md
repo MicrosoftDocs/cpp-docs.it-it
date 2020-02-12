@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: 1a1790a08403bcc1d016a39e27c7a121c288af4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e1052a59f355c4ad5a7c6b57724268c24a209b4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185998"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143289"
 ---
 # <a name="message-passing-functions"></a>Funzioni di passaggio dei messaggi
 
-Asynchronous Agents Library offre diverse funzioni che consentono di passare messaggi tra i componenti.
+La libreria di agenti asincroni fornisce diverse funzioni che consentono di passare messaggi tra i componenti.
 
-Queste funzioni di passaggio dei messaggi vengono usate con i vari tipi di blocco dei messaggi. Per altre informazioni sui tipi di blocco dei messaggi che sono definiti dal Runtime di concorrenza, vedere [blocchi di messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md).
+Queste funzioni di passaggio dei messaggi vengono usate con i vari tipi di blocchi di messaggi. Per ulteriori informazioni sui tipi di blocchi di messaggi definiti dalla runtime di concorrenza, vedere [blocchi di messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md).
 
-##  <a name="top"></a> Sezioni
+## <a name="top"></a> Sezioni
 
-Questo argomento descrive le funzioni di passaggio dei messaggi seguenti:
+In questo argomento vengono descritte le funzioni di passaggio dei messaggi seguenti:
 
-- [trasmissione e asend](#send)
+- [Send e asend](#send)
 
-- [ricevere e try_receive](#receive)
+- [ricezione e try_receive](#receive)
 
-- [Esempi](#examples)
+- [esempi](#examples)
 
-##  <a name="send"></a> trasmissione e asend
+## <a name="send"></a>Send e asend
 
-Il [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) funzione Invia un messaggio alla destinazione specificata in modo sincrono e il [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) funzione Invia un messaggio alla destinazione specificata in modo asincrono. Sia la `send` e `asend` funzioni attendere fino a quando la destinazione indica che verrà infine accettare o rifiutare il messaggio.
+La funzione [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Invia un messaggio alla destinazione specificata in modo sincrono e la funzione [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) Invia un messaggio alla destinazione specificata in modo asincrono. Entrambe le funzioni `send` e `asend` attendono che la destinazione indichi che il messaggio verrà accettato o rifiutato.
 
-Il `send` funzione attende fino a quando la destinazione accetta o rifiuta il messaggio prima della restituzione. Il `send` funzione restituisce **true** se il messaggio è stato recapitato e **false** in caso contrario. Poiché il `send` funzione funziona in modo sincrono, il `send` funzione attende che la destinazione ricevere il messaggio prima della restituzione.
+La funzione `send` attende fino a quando la destinazione accetta o rifiuta il messaggio prima che venga restituito. La funzione `send` restituisce **true** se il messaggio è stato recapitato e **false** in caso contrario. Poiché la funzione `send` funziona in modo sincrono, la funzione `send` attende che la destinazione riceva il messaggio prima che venga restituito.
 
-Al contrario, il `asend` funzione non attende la destinazione di accettare o rifiutare il messaggio prima della restituzione. Al contrario, il `asend` funzione restituisce **true** se la destinazione accetta il messaggio e alla fine richiederà lo. In caso contrario, `asend` restituisce **false** per indicare che la destinazione ha rifiutato il messaggio o la decisione sulla possibilità di estrarre il messaggio posticipato.
-
-[[Torna all'inizio](#top)]
-
-##  <a name="receive"></a> ricevere e try_receive
-
-Il [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) e [Concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) funzioni leggono i dati da un'origine specificata. Il `receive` funzione attende che i dati diventino disponibili, mentre il `try_receive` funzione restituisce immediatamente.
-
-Usare il `receive` funzione quando è necessario avere i dati per continuare. Usare il `try_receive` funzionare se non è necessario bloccare il contesto corrente o non è necessario avere i dati per continuare.
+Viceversa, la funzione `asend` non attende che la destinazione accetti o rifiuti il messaggio prima che venga restituito. Al contrario, la funzione `asend` restituisce **true** se la destinazione accetta il messaggio e la riprenderà. In caso contrario, `asend` restituisce **false** per indicare che la destinazione ha rifiutato il messaggio o ha posticipato la decisione di accettare il messaggio.
 
 [[Torna all'inizio](#top)]
 
-##  <a name="examples"></a> Esempi
+## <a name="receive"></a>ricezione e try_receive
 
-Per esempi che usano il `send` e `asend`, e `receive` funzioni, vedere gli argomenti seguenti:
+Le funzioni [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) e [Concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) leggono i dati da un'origine specificata. La funzione `receive` attende che i dati diventino disponibili, mentre la funzione `try_receive` restituisce immediatamente un risultato.
+
+Utilizzare la funzione `receive` quando è necessario disporre dei dati per continuare. Utilizzare la funzione `try_receive` se non è necessario bloccare il contesto corrente o se non è necessario che i dati continuino.
+
+[[Torna all'inizio](#top)]
+
+## <a name="examples"></a> Esempi
+
+Per esempi che usano le funzioni `send` e `asend`e `receive`, vedere gli argomenti seguenti:
 
 - [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -71,5 +71,5 @@ Per esempi che usano il `send` e `asend`, e `receive` funzioni, vedere gli argom
 [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Funzione Send](reference/concurrency-namespace-functions.md#send)<br/>
 [Funzione asend](reference/concurrency-namespace-functions.md#asend)<br/>
-[Funzione Receive](reference/concurrency-namespace-functions.md#receive)<br/>
+[Receive (funzione)](reference/concurrency-namespace-functions.md#receive)<br/>
 [Funzione try_receive](reference/concurrency-namespace-functions.md#try_receive)

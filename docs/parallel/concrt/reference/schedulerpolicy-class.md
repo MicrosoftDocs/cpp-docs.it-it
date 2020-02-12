@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fed33c198502b75e824bcaf698227d283f4b85f9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337329"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142742"
 ---
 # <a name="schedulerpolicy-class"></a>Classe SchedulerPolicy
 
@@ -24,26 +24,26 @@ La classe `SchedulerPolicy` contiene un set di coppie chiave/valore, uno per ogn
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class SchedulerPolicy;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[SchedulerPolicy](#ctor)|Di overload. Costruisce un nuovo criterio dell'utilità di pianificazione e la popola con i valori per [chiavi dei criteri](concurrency-namespace-enums.md) supportati dall'utilità di pianificazione di Runtime di concorrenza e Resource Manager.|
-|[~ Distruttore SchedulerPolicy](#dtor)|Elimina un criterio di utilità di pianificazione.|
+|[SchedulerPolicy](#ctor)|Di overload. Costruisce un nuovo criterio dell'utilità di pianificazione e lo popola con i valori per le [chiavi dei criteri](concurrency-namespace-enums.md) supportate dalle utilità di pianificazione runtime di concorrenza e dalla gestione risorse.|
+|[Distruttore ~ SchedulerPolicy](#dtor)|Elimina i criteri dell'utilità di pianificazione.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[GetPolicyValue](#getpolicyvalue)|Recupera il valore della chiave del criterio fornito come il `key` parametro.|
-|[SetConcurrencyLimits](#setconcurrencylimits)|Imposta simultaneamente il `MinConcurrency` e `MaxConcurrency` i criteri durante il `SchedulerPolicy` oggetto.|
-|[SetPolicyValue](#setpolicyvalue)|Imposta il valore della chiave del criterio fornito come il `key` parametro e restituisce il valore precedente.|
+|[GetPolicyValue](#getpolicyvalue)|Recupera il valore della chiave dei criteri fornita come parametro del `key`.|
+|[SetConcurrencyLimits](#setconcurrencylimits)|Imposta contemporaneamente i criteri di `MinConcurrency` e di `MaxConcurrency` nell'oggetto `SchedulerPolicy`.|
+|[SetPolicyValue](#setpolicyvalue)|Imposta il valore della chiave dei criteri fornita come `key` parametro e restituisce il valore precedente.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -51,9 +51,9 @@ class SchedulerPolicy;
 |----------|-----------------|
 |[operator=](#operator_eq)|Assegna i criteri dell'utilità di pianificazione da un altro criterio dell'utilità di pianificazione.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per altre informazioni sui criteri che possono essere controllate utilizzando la `SchedulerPolicy` classe, vedere [PolicyElementKey](concurrency-namespace-enums.md).
+Per ulteriori informazioni sui criteri che possono essere controllati utilizzando la classe `SchedulerPolicy`, vedere [PolicyElementKey](concurrency-namespace-enums.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -65,53 +65,53 @@ Per altre informazioni sui criteri che possono essere controllate utilizzando la
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="getpolicyvalue"></a> GetPolicyValue
+## <a name="getpolicyvalue"></a>GetPolicyValue
 
-Recupera il valore della chiave del criterio fornito come il `key` parametro.
+Recupera il valore della chiave dei criteri fornita come parametro del `key`.
 
-```
+```cpp
 unsigned int GetPolicyValue(PolicyElementKey key) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
-La chiave dei criteri per recuperare un valore per.
+Chiave dei criteri per la quale recuperare un valore.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la chiave specificata per il `key` parametro è supportato, il valore dei criteri per la chiave di cui è stato eseguito il cast a un `unsigned int`.
+Se la chiave specificata dal parametro `key` è supportata, il valore dei criteri per il cast della chiave a una `unsigned int`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il metodo genererà [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) la chiave dei criteri non valida.
+Il metodo genererà [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) per una chiave dei criteri non valida.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operatore =
 
 Assegna i criteri dell'utilità di pianificazione da un altro criterio dell'utilità di pianificazione.
 
-```
+```cpp
 SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_RhsPolicy*<br/>
-Il criterio da assegnare a questo criterio.
+Criteri da assegnare a questo criterio.
 
 ### <a name="return-value"></a>Valore restituito
 
 Riferimento ai criteri dell'utilità di pianificazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Spesso, il modo più semplice per definire nuovi criteri dell'utilità di pianificazione consiste nel copiare i criteri esistenti e nel modificarli tramite i metodi `SetPolicyValue` o `SetConcurrencyLimits`.
 
-##  <a name="ctor"></a> SchedulerPolicy
+## <a name="ctor"></a>SchedulerPolicy
 
-Costruisce un nuovo criterio dell'utilità di pianificazione e la popola con i valori per [chiavi dei criteri](concurrency-namespace-enums.md) supportati dall'utilità di pianificazione di Runtime di concorrenza e Resource Manager.
+Costruisce un nuovo criterio dell'utilità di pianificazione e lo popola con i valori per le [chiavi dei criteri](concurrency-namespace-enums.md) supportate dalle utilità di pianificazione runtime di concorrenza e dalla gestione risorse.
 
-```
+```cpp
 SchedulerPolicy();
 
 SchedulerPolicy(
@@ -125,32 +125,32 @@ SchedulerPolicy(
 ### <a name="parameters"></a>Parametri
 
 *_PolicyKeyCount*<br/>
-Il numero di chiave/valore coppie che seguono il `_PolicyKeyCount` parametro.
+Numero di coppie chiave/valore che seguono il parametro `_PolicyKeyCount`.
 
 *_SrcPolicy*<br/>
-I criteri di origine da copiare.
+Criteri di origine da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il primo costruttore crea un nuovo criterio dell'utilità di pianificazione in cui tutti i criteri verranno inizializzati ai valori predefiniti.
+Il primo costruttore crea un nuovo criterio dell'utilità di pianificazione in cui tutti i criteri verranno inizializzati sui relativi valori predefiniti.
 
-Il secondo costruttore crea un nuovo criterio dell'utilità di pianificazione che utilizza uno stile di parametro denominato di inizializzazione. I valori dopo la `_PolicyKeyCount` parametro vengono forniti come coppie chiave/valore. Qualsiasi chiave dei criteri che non è specificato in questo costruttore avrà il valore predefinito. Questo costruttore è stato possibile generare le eccezioni [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) o [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).
+Il secondo costruttore crea un nuovo criterio dell'utilità di pianificazione che utilizza uno stile di inizializzazione del parametro denominato. I valori dopo il parametro `_PolicyKeyCount` vengono specificati come coppie chiave/valore. Qualsiasi chiave dei criteri non specificata in questo costruttore avrà il valore predefinito. Questo costruttore potrebbe generare eccezioni [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) o [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).
 
 Il terzo costruttore è un costruttore di copia. Spesso, il modo più semplice per definire nuovi criteri dell'utilità di pianificazione consiste nel copiare i criteri esistenti e nel modificarli tramite i metodi `SetPolicyValue` o `SetConcurrencyLimits`.
 
-##  <a name="dtor"></a> ~SchedulerPolicy
+## <a name="dtor"></a>~ SchedulerPolicy
 
-Elimina un criterio di utilità di pianificazione.
+Elimina i criteri dell'utilità di pianificazione.
 
-```
+```cpp
 ~SchedulerPolicy();
 ```
 
-##  <a name="setconcurrencylimits"></a> SetConcurrencyLimits
+## <a name="setconcurrencylimits"></a>SetConcurrencyLimits
 
-Imposta simultaneamente il `MinConcurrency` e `MaxConcurrency` i criteri durante il `SchedulerPolicy` oggetto.
+Imposta contemporaneamente i criteri di `MinConcurrency` e di `MaxConcurrency` nell'oggetto `SchedulerPolicy`.
 
-```
+```cpp
 void SetConcurrencyLimits(
     unsigned int _MinConcurrency,
     unsigned int _MaxConcurrency = MaxExecutionResources);
@@ -159,22 +159,22 @@ void SetConcurrencyLimits(
 ### <a name="parameters"></a>Parametri
 
 *_MinConcurrency*<br/>
-Il valore per il `MinConcurrency` chiave dei criteri.
+Valore per la chiave dei criteri `MinConcurrency`.
 
 *_MaxConcurrency*<br/>
-Il valore per il `MaxConcurrency` chiave dei criteri.
+Valore per la chiave dei criteri `MaxConcurrency`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il metodo genererà [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) se il valore specificato per il `MinConcurrency` criterio è maggiore di quello specificato per il `MaxConcurrency` criteri.
+Il metodo genererà [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) se il valore specificato per il criterio di `MinConcurrency` è maggiore di quello specificato per i criteri di `MaxConcurrency`.
 
-Il metodo può anche generare [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) per gli altri valori non validi.
+Il metodo può inoltre generare [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) per altri valori non validi.
 
-##  <a name="setpolicyvalue"></a> SetPolicyValue
+## <a name="setpolicyvalue"></a>SetPolicyValue
 
-Imposta il valore della chiave del criterio fornito come il `key` parametro e restituisce il valore precedente.
+Imposta il valore della chiave dei criteri fornita come `key` parametro e restituisce il valore precedente.
 
-```
+```cpp
 unsigned int SetPolicyValue(
     PolicyElementKey key,
     unsigned int value);
@@ -183,22 +183,22 @@ unsigned int SetPolicyValue(
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
-La chiave di criterio per impostare un valore per.
+Chiave dei criteri per cui impostare un valore.
 
 *value*<br/>
-Il valore su cui impostare la chiave del criterio.
+Valore su cui impostare la chiave dei criteri.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la chiave specificata per il `key` parametro è supportato, il valore precedente dei criteri per la chiave di cui è stato eseguito il cast a un `unsigned int`.
+Se la chiave specificata dal parametro `key` è supportata, il valore dei criteri obsoleti per il cast della chiave a una `unsigned int`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il metodo genererà [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) per una chiave di criteri non validi o un tasto qualsiasi criterio il cui valore non può essere impostato tramite la `SetPolicyValue` (metodo).
+Il metodo genererà [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) per una chiave dei criteri non valida o per qualsiasi chiave del criterio il cui valore non può essere impostato dal metodo `SetPolicyValue`.
 
-Il metodo genererà [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) per un valore che non è supportato per la chiave specificata dal `key` parametro.
+Il metodo genererà [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) per un valore non supportato per la chiave specificata dal parametro `key`.
 
-Si noti che questo metodo non è consentito impostare il `MinConcurrency` o `MaxConcurrency` criteri. Per impostare questi valori, usare il [SetConcurrencyLimits](#setconcurrencylimits) (metodo).
+Si noti che questo metodo non è autorizzato a impostare i criteri di `MinConcurrency` o `MaxConcurrency`. Per impostare questi valori, usare il metodo [SetConcurrencyLimits](#setconcurrencylimits) .
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,37 +6,37 @@ f1_keywords:
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-ms.openlocfilehash: e36c3c2cfa9d1b617e377a7e340f98875457bdf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a2d9dab9cba7b19fa0d0b1627f653f2c7fdc57
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352871"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126396"
 ---
-# <a name="scopedd3daccesslock-class"></a>Classe scoped_d3d_access_lock
+# <a name="scoped_d3d_access_lock-class"></a>Classe scoped_d3d_access_lock
 
-Wrapper RAII per un blocco di accesso di D3D su un oggetto accelerator_view.
+Wrapper RAII per un blocco di accesso D3D su un oggetto accelerator_view.
 
-### <a name="syntax"></a>Sintassi
+## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class scoped_d3d_access_lock;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore scoped_d3d_access_lock](#ctor)|Di overload. Costruisce un oggetto `scoped_d3d_access_lock`. Il blocco viene rilasciato quando questo oggetto esce dall'ambito.|
-|[~ Distruttore scoped_d3d_access_lock](#dtor)|Rilascia il blocco di accesso di D3D sull'oggetto associato `accelerator_view` oggetto.|
+|[Costruttore scoped_d3d_access_lock](#ctor)|Di overload. Costruisce un oggetto `scoped_d3d_access_lock`. Il blocco viene rilasciato quando l'oggetto esce dall'ambito.|
+|[distruttore ~ scoped_d3d_access_lock](#dtor)|Rilascia il blocco di accesso D3D sull'oggetto `accelerator_view` associato.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator=](#operator_eq)|Acquisisce la proprietà di un blocco da un'altra `scoped_d3d_access_lock`.|
+|[operator=](#operator_eq)|Acquisisce la proprietà di un blocco da un altro `scoped_d3d_access_lock`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -46,13 +46,13 @@ class scoped_d3d_access_lock;
 
 **Intestazione:** amprt. h
 
-**Namespace:** concurrency::direct3d
+**Spazio dei nomi:** Concurrency::d irect3d
 
-##  <a name="ctor"></a> scoped_d3d_access_lock
+## <a name="ctor"></a>scoped_d3d_access_lock
 
-Costruisce un oggetto `scoped_d3d_access_lock`. Il blocco viene rilasciato quando questo oggetto esce dall'ambito.
+Costruisce un oggetto `scoped_d3d_access_lock`. Il blocco viene rilasciato quando l'oggetto esce dall'ambito.
 
-```
+```cpp
 explicit scoped_d3d_access_lock(// [1] constructor
     accelerator_view& _Av);
 
@@ -67,46 +67,46 @@ scoped_d3d_access_lock(// [3] move constructor
 ### <a name="parameters"></a>Parametri
 
 *_Av*<br/>
-Il `accelerator_view` per il blocco da adottare.
+`accelerator_view` per il blocco da adottare.
 
 *_T*<br/>
 Oggetto `adopt_d3d_access_lock_t`.
 
 *_Other*<br/>
-Il `scoped_d3d_access_lock` oggetto da cui spostare un blocco esistente.
+Oggetto `scoped_d3d_access_lock` da cui spostare un blocco esistente.
 
-## <a name="construction"></a>Costruzione
+## <a name="construction"></a>Costruzioni
 
-[1] costruttore acquisisce un blocco di accesso di D3D sul dato [accelerator_view](accelerator-view-class.md) oggetto. La costruzione viene bloccata fino a quando non viene acquisito il blocco.
+[1] il costruttore acquisisce un blocco di accesso D3D sull'oggetto [accelerator_view](accelerator-view-class.md) specificato. La costruzione si blocca fino a quando non viene acquisito il blocco.
 
-[2] costruttore adottare un blocco di accesso di D3D dal dato [accelerator_view](accelerator-view-class.md) oggetto.
+[2] il costruttore adotta un blocco di accesso D3D dall'oggetto [accelerator_view](accelerator-view-class.md) specificato.
 
-[3] costruttore di spostamento richiede un blocco di accesso di D3D esistente da un altro `scoped_d3d_access_lock` oggetto. Costruzione non viene impedita.
+[3] il costruttore di spostamento accetta un blocco di accesso D3D esistente da un altro oggetto `scoped_d3d_access_lock`. La costruzione non si blocca.
 
-##  <a name="dtor"></a> ~scoped_d3d_access_lock
+## <a name="dtor"></a>~ scoped_d3d_access_lock
 
-Rilascia il blocco di accesso di D3D sull'oggetto associato `accelerator_view` oggetto.
+Rilascia il blocco di accesso D3D sull'oggetto `accelerator_view` associato.
 
-```
+```cpp
 ~scoped_d3d_access_lock();
 ```
 
-## <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operatore =
 
-Acquisisce la proprietà di un blocco di accesso di D3D da un altro `scoped_d3d_access_lock` oggetto, rilasciando il blocco precedente.
+Acquisisce la proprietà di un blocco di accesso D3D da un altro `scoped_d3d_access_lock` oggetto, rilasciando il blocco precedente.
 
-```
+```cpp
 scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_Other*<br/>
-L'oggetto accelerator_view da cui spostare il blocco di accesso di D3D.
+Accelerator_view da cui spostare il blocco di accesso D3D.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento a questo `scoped_accelerator_view_lock`.
+Riferimento a questo `scoped_accelerator_view_lock`.
 
 ## <a name="see-also"></a>Vedere anche
 

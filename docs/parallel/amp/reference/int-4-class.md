@@ -268,24 +268,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ca8eb4c93b3e9cd9108712727d1f83421c9d679
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180212"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126669"
 ---
-# <a name="int4-class"></a>Classe int_4
+# <a name="int_4-class"></a>Classe int_4
 
-Rappresenta un vettore short di quattro valori integer.
+Rappresenta un vettore breve di quattro numeri interi.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class int_4;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -297,7 +297,7 @@ class int_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore int_4](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore int_4](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -455,7 +455,7 @@ class int_4;
 |int_4::operator~||
 |int_4::operator++||
 |int_4::operator+=||
-|int_4::operator<\<=||
+|int_4:: operator <\<=||
 |int_4::operator=||
 |int_4::operator-=||
 |int_4::operator>>=||
@@ -464,7 +464,7 @@ class int_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#int_4__size)||
+|[dimensioni costanti](#int_4__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -605,15 +605,15 @@ class int_4;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> int_4
+## <a name="ctor"></a>int_4
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 int_4() restrict(amp,
     cpu);
 
@@ -656,26 +656,26 @@ explicit inline int_4(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V3*<br/>
-Il valore per inizializzare l'elemento 3.
+Valore per l'inizializzazione dell'elemento 3.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="int_4__size"></a> Dimensioni
+## <a name="int_4__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 4;
 ```
 

@@ -72,24 +72,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351654"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142157"
 ---
-# <a name="norm3-class"></a>Classe norm_3
+# <a name="norm_3-class"></a>Classe norm_3
 
-Rappresenta un vettore short di tre numeri normale.
+Rappresenta un breve vettore di tre numeri normali.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class norm_3;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -101,7 +101,7 @@ class norm_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore norm_3](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore norm_3](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -161,7 +161,7 @@ class norm_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#size)||
+|[dimensioni costanti](#size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -204,17 +204,17 @@ class norm_3;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="ctor"></a> Costruttore norm_3
+## <a name="ctor"></a>Costruttore norm_3
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,28 +257,28 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-## <a name="a-namesize-size-constant"></a><a name="size"> dimensioni (costante)
+## <a name="a-namesize-size-constant"></a>Costante dimensioni <a name="size">
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 static const int size = 3;
 ```
 

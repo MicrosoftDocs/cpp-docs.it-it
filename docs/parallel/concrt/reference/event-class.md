@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c72b4b086e932f4fe404259c25f8d2c8be2be31
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262391"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138851"
 ---
 # <a name="event-class"></a>Classe event
 
@@ -25,26 +25,26 @@ Un evento di reimpostazione manuale che tiene conto in modo esplicito del runtim
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class event;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[~ evento distruttore](#dtor)|Elimina un evento.|
+|[~ distruttore eventi](#dtor)|Elimina definitivamente un evento.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[reset](#reset)|Reimposta l'evento a uno stato non segnalato.|
+|[reset](#reset)|Reimposta l'evento su uno stato non segnalato.|
 |[set](#set)|Segnala l'evento.|
-|[wait](#wait)|Attende l'evento venga segnalato.|
-|[wait_for_multiple](#wait_for_multiple)|Attende più eventi venga segnalato.|
+|[attendere](#wait)|Attende che l'evento venga segnalato.|
+|[wait_for_multiple](#wait_for_multiple)|Attende che vengano segnalati più eventi.|
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
@@ -52,9 +52,9 @@ class event;
 |----------|-----------------|
 |[timeout_infinite](#timeout_infinite)|Valore indicante un'attesa che non deve terminare mai.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per altre informazioni, vedere [strutture di dati di sincronizzazione](../../../parallel/concrt/synchronization-data-structures.md).
+Per altre informazioni, vedere [Synchronization Data Structures](../../../parallel/concrt/synchronization-data-structures.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -66,81 +66,81 @@ Per altre informazioni, vedere [strutture di dati di sincronizzazione](../../../
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="ctor"></a> Evento
+## <a name="ctor"></a>evento
 
 Costruisce un nuovo evento.
 
-```
+```cpp
 _CRTIMP event();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="dtor"></a> ~ evento
+## <a name="dtor"></a>evento ~
 
-Elimina un evento.
+Elimina definitivamente un evento.
 
-```
+```cpp
 ~event();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-È previsto che non sono presenti thread in attesa dell'evento quando viene eseguito il distruttore. Se si consente all'evento di eseguire la distruzione quando i thread sono ancora in attesa si verificherà un comportamento non definito.
+Si prevede che non siano presenti thread in attesa dell'evento durante l'esecuzione del distruttore. Se si consente all'evento di eseguire la distruzione quando i thread sono ancora in attesa si verificherà un comportamento non definito.
 
-##  <a name="reset"></a> reimpostare
+## <a name="reset"></a>reimpostazione
 
-Reimposta l'evento a uno stato non segnalato.
+Reimposta l'evento su uno stato non segnalato.
 
-```
+```cpp
 void reset();
 ```
 
-##  <a name="set"></a> set
+## <a name="set"></a>set
 
 Segnala l'evento.
 
-```
+```cpp
 void set();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Segnalare l'evento potrebbe causare un numero arbitrario di contesti in attesa che l'evento diventi eseguibile.
 
-##  <a name="timeout_infinite"></a> timeout_infinite
+## <a name="timeout_infinite"></a>timeout_infinite
 
 Valore indicante un'attesa che non deve terminare mai.
 
-```
+```cpp
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-##  <a name="wait"></a> Attendere
+## <a name="wait"></a>attendere
 
-Attende l'evento venga segnalato.
+Attende che l'evento venga segnalato.
 
-```
+```cpp
 size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_Timeout*<br/>
-Indica il numero di millisecondi prima del timeout dell'attesa. Il valore `COOPERATIVE_TIMEOUT_INFINITE` indica che non vi è alcun timeout.
+Indica il numero di millisecondi prima del timeout di attesa. Il valore `COOPERATIVE_TIMEOUT_INFINITE` indica che non è previsto alcun timeout.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se è stato soddisfatto l'attesa, il valore `0` viene restituita; in caso contrario, il valore `COOPERATIVE_WAIT_TIMEOUT` per indicare che si è verificato il timeout di attesa senza che l'evento diventa segnalato.
+Se l'attesa è stata soddisfatta, viene restituito il valore `0`; in caso contrario, il valore `COOPERATIVE_WAIT_TIMEOUT` per indicare che si è verificato il timeout dell'attesa senza che l'evento venga segnalato.
 
 > [!IMPORTANT]
->  In un'app Universal Windows Platform (UWP), non chiamare `wait` sul thread ASTA poiché questa chiamata può bloccare il thread corrente e può provocare la mancata risposta da parte dell'app.
+> In un'app piattaforma UWP (Universal Windows Platform) (UWP) non chiamare `wait` sul thread ASTA perché questa chiamata può bloccare il thread corrente e può causare la mancata risposta dell'app.
 
-##  <a name="wait_for_multiple"></a> wait_for_multiple
+## <a name="wait_for_multiple"></a>wait_for_multiple
 
-Attende più eventi venga segnalato.
+Attende che vengano segnalati più eventi.
 
-```
+```cpp
 static size_t __cdecl wait_for_multiple(
     _In_reads_(count) event** _PPEvents,
     size_t count,
@@ -151,27 +151,27 @@ static size_t __cdecl wait_for_multiple(
 ### <a name="parameters"></a>Parametri
 
 *_PPEvents*<br/>
-Matrice di eventi per restare in attesa. Viene indicato il numero di eventi all'interno della matrice dal `count` parametro.
+Matrice di eventi da attendere. Il numero di eventi all'interno della matrice è indicato dal parametro `count`.
 
 *count*<br/>
-Il numero di eventi all'interno della matrice fornita nel `_PPEvents` parametro.
+Il numero di eventi all'interno della matrice specificata nel parametro `_PPEvents`.
 
 *_FWaitAll*<br/>
-Se impostato sul valore **true**, il parametro specifica che tutti gli eventi all'interno della matrice fornita nel `_PPEvents` parametro deve diventare segnalato per soddisfare il tempo di attesa. Se impostato sul valore **false**, specifica che qualsiasi evento all'interno della matrice fornita nel `_PPEvents` parametro che diventa segnalato potrà soddisfare l'attesa.
+Se impostato sul valore **true**, il parametro specifica che tutti gli eventi all'interno della matrice specificata nel parametro `_PPEvents` devono essere segnalati per soddisfare l'attesa. Se è impostato sul valore **false**, viene specificato che qualsiasi evento all'interno della matrice fornita nel parametro `_PPEvents` diventa segnalato soddisferà l'attesa.
 
 *_Timeout*<br/>
-Indica il numero di millisecondi prima del timeout dell'attesa. Il valore `COOPERATIVE_TIMEOUT_INFINITE` indica che non vi è alcun timeout.
+Indica il numero di millisecondi prima del timeout di attesa. Il valore `COOPERATIVE_TIMEOUT_INFINITE` indica che non è previsto alcun timeout.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se è stato soddisfatto l'attesa, l'indice all'interno della matrice fornita nel `_PPEvents` parametro che ha soddisfatto la condizione di attesa; in caso contrario, il valore `COOPERATIVE_WAIT_TIMEOUT` per indicare che si è verificato il timeout di attesa senza la condizione viene soddisfatta.
+Se l'attesa è stata soddisfatta, l'indice all'interno della matrice specificata nel parametro `_PPEvents` che ha soddisfatto la condizione di attesa; in caso contrario, il valore `COOPERATIVE_WAIT_TIMEOUT` per indicare che si è verificato il timeout dell'attesa senza che la condizione venga soddisfatta.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il parametro `_FWaitAll` è impostata sul valore `true` per indicare che tutti gli eventi devono diventano segnalati per soddisfare il tempo di attesa, l'indice restituito dalla funzione non esegue alcun significato speciale non per il fatto che non è il valore `COOPERATIVE_WAIT_TIMEOUT`.
+Se il parametro `_FWaitAll` è impostato sul valore `true` per indicare che tutti gli eventi devono essere segnalati per soddisfare l'attesa, l'indice restituito dalla funzione non ha un significato speciale diverso dal fatto che non si tratta del valore `COOPERATIVE_WAIT_TIMEOUT`.
 
 > [!IMPORTANT]
-> In un'app Universal Windows Platform (UWP), non chiamare `wait_for_multiple` sul thread ASTA poiché questa chiamata può bloccare il thread corrente e può provocare la mancata risposta da parte dell'app.
+> In un'app piattaforma UWP (Universal Windows Platform) (UWP) non chiamare `wait_for_multiple` sul thread ASTA perché questa chiamata può bloccare il thread corrente e può causare la mancata risposta dell'app.
 
 ## <a name="see-also"></a>Vedere anche
 

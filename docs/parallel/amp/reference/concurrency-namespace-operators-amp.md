@@ -1,15 +1,15 @@
 ---
-title: Operatori dello spazio dei nomi di concorrenza (AMP)
+title: Operatori dello spazio dei nomi Concurrency (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: e2957aa84ffbf420dcf2672359a442b754866649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180414"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126918"
 ---
-# <a name="concurrency-namespace-operators-amp"></a>Operatori dello spazio dei nomi di concorrenza (AMP)
+# <a name="concurrency-namespace-operators-amp"></a>Operatori dello spazio dei nomi Concurrency (AMP)
 
 ||||
 |-|-|-|
@@ -17,11 +17,11 @@ ms.locfileid: "62180414"
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
 |[operator==](#operator_eq_eq)|
 
-##  <a name="operator_eq_eq"></a>  operator==
+## <a name="operator_eq_eq"></a>  operator==
 
 Determina se gli argomenti specificati sono uguali.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -34,7 +34,7 @@ bool operator== (
 ### <a name="parameters"></a>Parametri
 
 *_Rank*<br/>
-Il rango della tupla argomenti.
+Rango degli argomenti della tupla.
 
 *_Lhs*<br/>
 Una delle tuple da confrontare.
@@ -44,13 +44,13 @@ Una delle tuple da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se le tuple sono uguali; in caso contrario, **false**.
+**true** se le tuple sono uguali. in caso contrario, **false**.
 
-##  <a name="operator_neq"></a>  operator!=
+## <a name="operator_neq"></a>  operator!=
 
 Determina se gli argomenti specificati non sono uguali.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -63,7 +63,7 @@ bool operator!= (
 ### <a name="parameters"></a>Parametri
 
 *_Rank*<br/>
-Il rango della tupla argomenti.
+Rango degli argomenti della tupla.
 
 *_Lhs*<br/>
 Una delle tuple da confrontare.
@@ -73,13 +73,13 @@ Una delle tuple da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se le tuple non sono uguali; in caso contrario, **false**.
+**true** se le tuple non sono uguali. in caso contrario, **false**.
 
-##  <a name="operator_add"></a>  operator+
+## <a name="operator_add"></a>  operator+
 
-Calcola la somma per componente degli argomenti specificati.
+Calcola la somma dei componenti degli argomenti specificati.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -108,7 +108,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="parameters"></a>Parametri
 
 *_Rank*<br/>
-Il rango della tupla argomenti.
+Rango degli argomenti della tupla.
 
 *_Lhs*<br/>
 Uno degli argomenti da aggiungere.
@@ -118,13 +118,13 @@ Uno degli argomenti da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
 
-La somma per componente degli argomenti specificati.
+Somma dei componenti degli argomenti specificati.
 
-##  <a name="operator-"></a>  operator-
+## <a name="operator-"></a>  operator-
 
-Calcola la differenza per componente tra gli argomenti specificati.
+Calcola la differenza in termini di componente tra gli argomenti specificati.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -153,7 +153,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="parameters"></a>Parametri
 
 *_Rank*<br/>
-Il rango della tupla argomenti.
+Rango degli argomenti della tupla.
 
 *_Lhs*<br/>
 Argomento da sottrarre.
@@ -163,13 +163,13 @@ Argomento da sottrarre.
 
 ### <a name="return-value"></a>Valore restituito
 
-La differenza per componente tra gli argomenti specificati.
+Differenza relativa ai componenti tra gli argomenti specificati.
 
-##  <a name="operator_star"></a>  operator*
+## <a name="operator_star"></a>  operator*
 
 Calcola il prodotto per componente degli argomenti specificati.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -190,7 +190,7 @@ _Tuple_type<_Rank>   operator*(
 ### <a name="parameters"></a>Parametri
 
 *_Rank*<br/>
-Il rango della tupla argomenti.
+Rango degli argomenti della tupla.
 
 *_Lhs*<br/>
 Una delle tuple da moltiplicare.
@@ -200,13 +200,13 @@ Una delle tuple da moltiplicare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il prodotto per componente degli argomenti specificati.
+Prodotto componente per gli argomenti specificati.
 
-##  <a name="operator_div"></a>  operator/
+## <a name="operator_div"></a>  operator/
 
 Calcola il quoziente per componente degli argomenti specificati.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -227,23 +227,23 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="parameters"></a>Parametri
 
 *_Rank*<br/>
-Il rango della tupla argomenti.
+Rango degli argomenti della tupla.
 
 *_Lhs*<br/>
 Tupla da dividere.
 
 *_Rhs*<br/>
-Tupla da dividere.
+Tupla in base alla quale dividere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il quoziente per componente degli argomenti specificati.
+Quoziente per componente degli argomenti specificati.
 
-##  <a name="operator_mod"></a>  operator%
+## <a name="operator_mod"></a>  operator%
 
-Calcola il modulo del primo argomento specificato dal secondo argomento specificato.
+Calcola il modulo del primo argomento specificato in base al secondo argomento specificato.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -264,18 +264,18 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="parameters"></a>Parametri
 
 *_Rank*<br/>
-Il rango della tupla argomenti.
+Rango degli argomenti della tupla.
 
 *_Lhs*<br/>
-Tupla da cui il modulo viene calcolato.
+Tupla da cui viene calcolato il modulo.
 
 *_Rhs*<br/>
-La tupla per modulo.
+Tupla in base a cui eseguire il modulo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il risultato del modulo della primo argomento specificato, il secondo argomento specificato.
+Risultato del primo modulo dell'argomento specificato il secondo argomento specificato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[concorrenza Namespace ](concurrency-namespace-cpp-amp.md)
+[Spazio dei nomi Concurrency](concurrency-namespace-cpp-amp.md)

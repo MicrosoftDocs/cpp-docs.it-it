@@ -11,50 +11,50 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88944b2d935eebd0e031be1431c2a0f4efa3d760
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409954"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139477"
 ---
-# <a name="messageprocessor-class"></a>Classe message_processor
+# <a name="message_processor-class"></a>Classe message_processor
 
 La classe `message_processor` rappresenta la classe base astratta per l'elaborazione degli oggetti `message`. Non esiste garanzia sull'ordinamento dei messaggi.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template<class T>
 class message_processor;
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Il tipo di dati del payload all'interno di messaggi gestito da questo `message_processor` oggetto.
+Tipo di dati del payload all'interno dei messaggi gestiti da questo oggetto `message_processor`.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`type`|Un alias del tipo per `T`.|
+|`type`|Alias di tipo per `T`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[async_send](#async_send)|Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo asincrono nel blocco.|
-|[sync_send](#sync_send)|Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo sincrono nel blocco.|
-|[wait](#wait)|Quando sottoposto a override in una classe derivata, attende che tutte le operazioni asincrone completare.|
+|[async_send](#async_send)|Quando sottoposto a override in una classe derivata, inserisce i messaggi nel blocco in modo asincrono.|
+|[sync_send](#sync_send)|Quando sottoposto a override in una classe derivata, inserisce i messaggi nel blocco in modo sincrono.|
+|[attendere](#wait)|Quando sottoposto a override in una classe derivata, attende il completamento di tutte le operazioni asincrone.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|Quando sottoposto a override in una classe derivata, esegue l'elaborazione futura dei messaggi nel blocco. Chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.|
+|[process_incoming_message](#process_incoming_message)|Quando sottoposto a override in una classe derivata, esegue l'elaborazione diretta dei messaggi nel blocco. Viene chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -66,61 +66,61 @@ Il tipo di dati del payload all'interno di messaggi gestito da questo `message_p
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
-Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo asincrono nel blocco.
+Quando sottoposto a override in una classe derivata, inserisce i messaggi nel blocco in modo asincrono.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_Msg*<br/>
-Oggetto `message` oggetto da inviare in modo asincrono.
+Oggetto `message` da inviare in modo asincrono.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le implementazioni del processore devono eseguire l'override di questo metodo.
 
-##  <a name="process_incoming_message"></a> process_incoming_message
+## <a name="process_incoming_message"></a>process_incoming_message
 
-Quando sottoposto a override in una classe derivata, esegue l'elaborazione futura dei messaggi nel blocco. Chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.
+Quando sottoposto a override in una classe derivata, esegue l'elaborazione diretta dei messaggi nel blocco. Viene chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.
 
-```
+```cpp
 virtual void process_incoming_message() = 0;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le implementazioni del blocco di messaggio deve eseguire l'override di questo metodo.
+Le implementazioni del blocco di messaggi devono eseguire l'override di questo metodo.
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
-Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo sincrono nel blocco.
+Quando sottoposto a override in una classe derivata, inserisce i messaggi nel blocco in modo sincrono.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_Msg*<br/>
-Oggetto `message` oggetto da inviare in modo sincrono.
+Oggetto `message` da inviare in modo sincrono.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le implementazioni del processore devono eseguire l'override di questo metodo.
 
-##  <a name="wait"></a> Attendere
+## <a name="wait"></a>attendere
 
-Quando sottoposto a override in una classe derivata, attende che tutte le operazioni asincrone completare.
+Quando sottoposto a override in una classe derivata, attende il completamento di tutte le operazioni asincrone.
 
-```
+```cpp
 virtual void wait() = 0;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le implementazioni del processore devono eseguire l'override di questo metodo.
 

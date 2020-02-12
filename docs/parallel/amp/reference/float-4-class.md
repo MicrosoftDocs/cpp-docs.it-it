@@ -268,24 +268,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180284"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142172"
 ---
-# <a name="float4-class"></a>Classe float_4
+# <a name="float_4-class"></a>Classe float_4
 
-Rappresenta un vettore short di quattro valori a virgola mobile.
+Rappresenta un vettore breve di quattro float.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class float_4;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -297,7 +297,7 @@ class float_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore float_4](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore float_4](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -457,7 +457,7 @@ class float_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#float_4__size)||
+|[dimensioni costanti](#float_4__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -598,15 +598,15 @@ class float_4;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -649,26 +649,26 @@ explicit inline float_4(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V3*<br/>
-Il valore per inizializzare l'elemento 3.
+Valore per l'inizializzazione dell'elemento 3.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="float_4__size"></a> Dimensioni
+## <a name="float_4__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 4;
 ```
 

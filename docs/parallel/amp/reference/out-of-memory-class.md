@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: ab498935039fad584220a84c388e337ee090c57d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4edc1db3c1a70a41f9a0493bd3dc484e27f99b44
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351183"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126448"
 ---
-# <a name="outofmemory-class"></a>out_of_memory (classe)
+# <a name="out_of_memory-class"></a>out_of_memory (classe)
 
-Eccezione generata quando un metodo ha esito negativo a causa della mancanza di memoria di sistema o dispositivo.
+Eccezione generata quando un metodo ha esito negativo a causa della mancanza di memoria del sistema o del dispositivo.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class out_of_memory : public runtime_exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -45,14 +45,14 @@ class out_of_memory : public runtime_exception;
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concorrenza
-## <a name="ctor"></a> out_of_memory
+**Spazio dei nomi:** Concurrency
+## <a name="ctor"></a>out_of_memory
 
 Inizializza una nuova istanza della classe.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 explicit out_of_memory(
     const char * _Message ) throw();
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 3a1e27ca6c1019eb8716194b3b7711238d015d6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d93eb3de87b50f337f0d3edad65f5dc3013e8327
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503994"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127457"
 ---
 # <a name="coledropsource-class"></a>Classe COleDropSource
 
@@ -41,19 +41,19 @@ class COleDropSource : public CCmdTarget
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleDropSource:: GiveFeedback](#givefeedback)|Modifica il cursore durante un'operazione di trascinamento della selezione.|
 |[COleDropSource:: OnBeginDrag](#onbegindrag)|Gestisce l'acquisizione del mouse durante un'operazione di trascinamento della selezione.|
 |[COleDropSource:: QueryContinueDrag](#querycontinuedrag)|Verifica se il trascinamento deve continuare.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La classe [COleDropTarget](../../mfc/reference/coledroptarget-class.md) gestisce la parte di ricezione dell'operazione di trascinamento della selezione. L' `COleDropSource` oggetto è responsabile di determinare l'inizio di un'operazione di trascinamento, fornire commenti e suggerimenti durante l'operazione di trascinamento e determinare quando termina l'operazione di trascinamento.
+La classe [COleDropTarget](../../mfc/reference/coledroptarget-class.md) gestisce la parte di ricezione dell'operazione di trascinamento della selezione. L'oggetto `COleDropSource` è responsabile di determinare quando inizia un'operazione di trascinamento, fornendo commenti e suggerimenti durante l'operazione di trascinamento e determinando la fine dell'operazione di trascinamento.
 
-Per usare un `COleDropSource` oggetto, è sufficiente chiamare il costruttore. Questo semplifica il processo di individuazione degli eventi, ad esempio un clic del mouse, per iniziare un'operazione di trascinamento usando [COleDataSource::D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)o [COleServerItem::D funzione odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) . Queste funzioni creeranno un `COleDropSource` oggetto per l'utente. Potrebbe essere necessario modificare il comportamento predefinito delle funzioni sottoponibili a `COleDropSource` override. Queste funzioni membro verranno chiamate al momento appropriato dal Framework.
+Per usare un oggetto `COleDropSource`, è sufficiente chiamare il costruttore. Questo semplifica il processo di individuazione degli eventi, ad esempio un clic del mouse, per iniziare un'operazione di trascinamento usando [COleDataSource::D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)o [COleServerItem::D funzione odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) . Queste funzioni creeranno un oggetto `COleDropSource`. Potrebbe essere necessario modificare il comportamento predefinito della `COleDropSource` funzioni sottoponibili a override. Queste funzioni membro verranno chiamate al momento appropriato dal Framework.
 
-Per ulteriori informazioni sulle operazioni di trascinamento della selezione tramite OLE, vedere l'articolo trascinamento della [selezione (OLE)](../../mfc/drag-and-drop-ole.md).
+Per altre informazioni sulle operazioni di trascinamento della selezione usando OLE, vedere l'articolo [trascinamento della selezione OLE](../../mfc/drag-and-drop-ole.md).
 
 Per ulteriori informazioni, vedere [IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) nel Windows SDK.
 
@@ -90,23 +90,23 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 *dropEffect*<br/>
 L'effetto che si desidera visualizzare all'utente, in genere indicando che cosa accadrebbe se si verificasse un rilascio a questo punto con i dati selezionati. Si tratta in genere del valore restituito dalla chiamata più recente a [CView:: OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) o [CView:: OnDragOver](../../mfc/reference/cview-class.md#ondragover). Può essere uno o più degli elementi seguenti:
 
-- DROPEFFECT_NONE un drop non è consentito.
+- DROPEFFECT_NONE un rilascio non è consentito.
 
-- DROPEFFECT_COPY verrà eseguita un'operazione di copia.
+- DROPEFFECT_COPY viene eseguita un'operazione di copia.
 
-- DROPEFFECT_MOVE un'operazione di spostamento verrebbe eseguita.
+- DROPEFFECT_MOVE viene eseguita un'operazione di spostamento.
 
 - DROPEFFECT_LINK viene stabilito un collegamento tra i dati eliminati e i dati originali.
 
-- DROPEFFECT_SCROLL un'operazione di trascinamento di scorrimento sta per verificarsi o si sta verificando nella destinazione.
+- DROPEFFECT_SCROLL un'operazione di scorrimento di trascinamento sta per verificarsi o si sta verificando nella destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce DRAGDROP_S_USEDEFAULTCURSORS se il trascinamento è in corso, NOERROR in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione per fornire commenti e suggerimenti all'utente su cosa accadrebbe se si verificasse un calo a questo punto. Nell'implementazione predefinita vengono utilizzati i cursori OLE predefiniti. Per ulteriori informazioni sulle operazioni di trascinamento della selezione tramite OLE, vedere l'articolo trascinamento della [selezione (OLE)](../../mfc/drag-and-drop-ole.md).
+Eseguire l'override di questa funzione per fornire commenti e suggerimenti all'utente su cosa accadrebbe se si verificasse un calo a questo punto. Nell'implementazione predefinita vengono utilizzati i cursori OLE predefiniti. Per altre informazioni sulle operazioni di trascinamento della selezione usando OLE, vedere l'articolo [trascinamento della selezione OLE](../../mfc/drag-and-drop-ole.md).
 
 Per ulteriori informazioni, vedere [IDropSource:: GiveFeedback](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)e [IDropTarget::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) nella Windows SDK.
 
@@ -127,7 +127,7 @@ Punta alla finestra che contiene i dati selezionati.
 
 Diverso da zero se il trascinamento è consentito; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questa funzione se si desidera modificare la modalità di avvio del processo di trascinamento. L'implementazione predefinita acquisisce il mouse e rimane in modalità di trascinamento fino a quando l'utente non fa clic sul pulsante sinistro o destro del mouse o preme ESC, a quel punto rilascia il mouse.
 
@@ -144,16 +144,16 @@ virtual SCODE QueryContinueDrag(
 ### <a name="parameters"></a>Parametri
 
 *bEscapePressed*<br/>
-Indica se è stato premuto il tasto ESC dall'ultima chiamata a `COleDropSource::QueryContinueDrag`.
+Indica se il tasto ESC è stato premuto dopo l'ultima chiamata a `COleDropSource::QueryContinueDrag`.
 
 *dwKeyState*<br/>
 Contiene lo stato dei tasti di modifica sulla tastiera. Si tratta di una combinazione di un numero qualsiasi dei seguenti elementi: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
 ### <a name="return-value"></a>Valore restituito
 
-DRAGDROP_S_CANCEL se il tasto ESC o il pulsante destro è premuto oppure il pulsante sinistro viene generato prima dell'avvio del trascinamento. DRAGDROP_S_DROP se deve verificarsi un'operazione di rilascio. In caso contrario, S_OK.
+DRAGDROP_S_CANCEL se il tasto ESC o il pulsante destro è premuto oppure il pulsante sinistro viene generato prima dell'avvio del trascinamento. DRAGDROP_S_DROP se deve verificarsi un'operazione di rilascio. In caso contrario S_OK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questa funzione se si desidera modificare il punto in cui il trascinamento viene annullato o si verifica un trascinamento.
 

@@ -28,24 +28,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 000bda3a6ecc5b1ebf9be4e07ce8d703b6cd9194
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180258"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126643"
 ---
-# <a name="int2-class"></a>Classe int_2
+# <a name="int_2-class"></a>Classe int_2
 
-Rappresenta un vettore short di due numeri interi.
+Rappresenta un vettore breve di due Integer.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class int_2;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -57,7 +57,7 @@ class int_2;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore int_2](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore int_2](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -91,7 +91,7 @@ class int_2;
 |int_2::operator~||
 |int_2::operator++||
 |int_2::operator+=||
-|int_2::operator<\<=||
+|int_2:: operator <\<=||
 |int_2::operator=||
 |int_2::operator-=||
 |int_2::operator>>=||
@@ -100,7 +100,7 @@ class int_2;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#int_2__size)||
+|[dimensioni costanti](#int_2__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -121,15 +121,15 @@ class int_2;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> int_2
+## <a name="ctor"></a>int_2
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 int_2() restrict(amp,
     cpu);
 
@@ -170,20 +170,20 @@ explicit inline int_2(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="int_2__size"></a> Dimensioni
+## <a name="int_2__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 2;
 ```
 

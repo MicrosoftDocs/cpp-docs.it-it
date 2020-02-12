@@ -9,31 +9,31 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 8ed3fb5edd861eaecd0bf9a39687a2a63fdfe695
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 6ad784720833d2ae5de7d653d132ba144aec2677
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975186"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126378"
 ---
-# <a name="runtimeexception-class"></a>runtime_exception (classe)
+# <a name="runtime_exception-class"></a>runtime_exception (classe)
 
-Il tipo di base per le eccezioni nella libreria C++ Accelerated Massive Parallelism (AMP).
+Tipo di base per le eccezioni nella C++ libreria amp (Accelerated Massive Parallelism).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class runtime_exception : public std::exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[Costruttore runtime_exception](#ctor)|Inizializza una nuova istanza della classe `runtime_exception`.|
-|[~runtime_exception Destructor](#dtor)|Elimina definitivamente il `runtime_exception` oggetto.|
+|[Distruttore ~ runtime_exception](#dtor)|Elimina definitivamente l'oggetto `runtime_exception`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -45,7 +45,7 @@ class runtime_exception : public std::exception;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `runtime_exception` in questo oggetto.|
+|[operator=](#operator_eq)|Copia il contenuto dell'oggetto `runtime_exception` specificato in questo oggetto.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -57,15 +57,15 @@ class runtime_exception : public std::exception;
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concorrenza
+**Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>  Costruttore runtime_exception
+## <a name="ctor"></a>Costruttore runtime_exception
 
 Inizializza una nuova istanza della classe.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 runtime_exception(
     const char * _Message,
     HRESULT _Hresult ) throw();
@@ -83,56 +83,56 @@ runtime_exception(
 Descrizione dell'errore che ha causato l'eccezione.
 
 *_Hresult*<br/>
-Il valore HRESULT dell'errore che ha causato l'eccezione.
+HRESULT di errore che ha causato l'eccezione.
 
 *_Other*<br/>
-Il `runtime_exception` oggetto da copiare.
+Oggetto `runtime_exception` da copiare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Oggetto `runtime_exception`.
 
-## <a name="dtor"></a>  ~runtime_exception Destructor
+## <a name="dtor"></a>Distruttore ~ runtime_exception
 
 Elimina l'oggetto.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
 Restituisce il codice di errore che ha causato l'eccezione.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore HRESULT dell'errore che ha causato l'eccezione.
+HRESULT di errore che ha causato l'eccezione.
 
 ## <a name="operator_eq"></a>  operator=
-  Copia il contenuto dell'oggetto specificato `runtime_exception` in questo oggetto.
+  Copia il contenuto dell'oggetto `runtime_exception` specificato in questo oggetto.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_Other*<br/>
-Il `runtime_exception` oggetto da copiare.
+Oggetto `runtime_exception` da copiare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento a questo `runtime_exception` oggetto.
+Riferimento a questo oggetto `runtime_exception`.
 
 ## <a name="see-also"></a>Vedere anche
 

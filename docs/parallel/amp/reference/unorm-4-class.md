@@ -268,24 +268,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0164f595ba44999718895f5221250f12bd6b7344
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405404"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142944"
 ---
-# <a name="unorm4-class"></a>Classe unorm_4
+# <a name="unorm_4-class"></a>Classe unorm_4
 
-Rappresenta un vettore short di quattro numeri normali senza segno.
+Rappresenta un breve vettore di quattro numeri normali senza segno.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class unorm_4;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -297,7 +297,7 @@ class unorm_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore unorm_4](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore unorm_4](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -321,7 +321,7 @@ class unorm_4;
 |unorm_4::get_wzyx||
 |unorm_4::get_x||
 |unorm_4::get_xw||
-|unorm_4::get_xwy||
+|unorm_4:: get_xwy||
 |unorm_4::get_xwyz||
 |unorm_4::get_xwz||
 |unorm_4::get_xwzy||
@@ -457,7 +457,7 @@ class unorm_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#unorm_4__size)||
+|[dimensioni costanti](#unorm_4__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -533,7 +533,7 @@ class unorm_4;
 |unorm_4::wxyz||
 |unorm_4::wxz||
 |unorm_4::wxzy||
-|unorm_4::wy||
+|unorm_4:: WY||
 |unorm_4::wyx||
 |unorm_4::wyxz||
 |unorm_4::wyz||
@@ -598,15 +598,15 @@ class unorm_4;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> unorm_4
+## <a name="ctor"></a>unorm_4
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 unorm_4() restrict(amp,
     cpu);
 
@@ -660,26 +660,26 @@ explicit inline unorm_4(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V3*<br/>
-Il valore per inizializzare l'elemento 3.
+Valore per l'inizializzazione dell'elemento 3.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="unorm_4__size"></a> Dimensioni
+## <a name="unorm_4__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 4;
 ```
 

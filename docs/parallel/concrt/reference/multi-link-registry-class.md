@@ -14,48 +14,48 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22df5ee65d0219a46065044385dca46aac297a3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394455"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142365"
 ---
-# <a name="multilinkregistry-class"></a>Classe multi_link_registry
+# <a name="multi_link_registry-class"></a>Classe multi_link_registry
 
 L'oggetto `multi_link_registry` è un `network_link_registry` che gestisce più blocchi di origine o più blocchi di destinazione.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template<class _Block>
 class multi_link_registry : public network_link_registry<_Block>;
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *_Block*<br/>
-Tipo di dati di blocco vengano archiviate nel `multi_link_registry` oggetto.
+Tipo di dati Block archiviato nell'oggetto `multi_link_registry`.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[multi_link_registry](#ctor)|Costruisce un oggetto `multi_link_registry`.|
-|[~ multi_link_registry distruttore](#dtor)|Elimina definitivamente il `multi_link_registry` oggetto.|
+|[Distruttore ~ multi_link_registry](#dtor)|Elimina definitivamente l'oggetto `multi_link_registry`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[add](#add)|Aggiunge un collegamento per il `multi_link_registry` oggetto. (Esegue l'override [network_link_registry:: Add](network-link-registry-class.md#add).)|
-|[begin](#begin)|Restituisce un iteratore al primo elemento nel file di `multi_link_registry` oggetto. (Esegue l'override [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
-|[contains](#contains)|Le ricerche di `multi_link_registry` oggetto per un blocco specificato. (Esegue l'override [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
-|[count](#count)|Conta il numero di elementi nel `multi_link_registry` oggetto. (Esegue l'override [network_link_registry:: Count](network-link-registry-class.md#count).)|
-|[remove](#remove)|Rimuove un collegamento dal `multi_link_registry` oggetto. (Esegue l'override [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
-|[set_bound](#set_bound)|Impostare un limite superiore al numero di collegamenti che i `multi_link_registry` oggetto può contenere.|
+|[add](#add)|Aggiunge un collegamento all'oggetto `multi_link_registry`. Esegue l'override di [network_link_registry:: Add](network-link-registry-class.md#add).|
+|[begin](#begin)|Restituisce un iteratore al primo elemento dell'oggetto `multi_link_registry`. Esegue l'override di [network_link_registry:: Begin](network-link-registry-class.md#begin).|
+|[contains](#contains)|Cerca un blocco specificato nell'oggetto `multi_link_registry`. (Esegue l'override di [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[count](#count)|Conta il numero di elementi nell'oggetto `multi_link_registry`. Esegue l'override di [network_link_registry:: count](network-link-registry-class.md#count).|
+|[remove](#remove)|Rimuove un collegamento dall'oggetto `multi_link_registry`. Esegue l'override di [network_link_registry:: Remove](network-link-registry-class.md#remove).|
+|[set_bound](#set_bound)|Imposta un limite superiore per il numero di collegamenti che l'oggetto `multi_link_registry` può mantenere.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -69,119 +69,119 @@ Tipo di dati di blocco vengano archiviate nel `multi_link_registry` oggetto.
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="add"></a> Aggiungere
+## <a name="add"></a>aggiungere
 
-Aggiunge un collegamento per il `multi_link_registry` oggetto.
+Aggiunge un collegamento all'oggetto `multi_link_registry`.
 
-```
+```cpp
 virtual void add(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_Link*<br/>
-Un puntatore a un blocco da aggiungere.
+Puntatore a un blocco da aggiungere.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il metodo genera un' [invalid_link_target](invalid-link-target-class.md) eccezione se il collegamento è già presente nel Registro di sistema o se un limite è già stata impostata con il `set_bound` (funzione) e un collegamento è stato rimosso.
+Il metodo genera un'eccezione [invalid_link_target](invalid-link-target-class.md) se il collegamento è già presente nel registro di sistema o se è già stato impostato un binding con la funzione `set_bound` e dopo la rimozione di un collegamento.
 
-##  <a name="begin"></a> begin
+## <a name="begin"></a>iniziare
 
-Restituisce un iteratore al primo elemento nel file di `multi_link_registry` oggetto.
+Restituisce un iteratore al primo elemento dell'oggetto `multi_link_registry`.
 
-```
+```cpp
 virtual iterator begin();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Un iteratore che punta al primo elemento di `multi_link_registry` oggetto.
+Iteratore che punta al primo elemento dell'oggetto `multi_link_registry`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo stato finale è indicato da un `NULL` collegamento.
+Lo stato finale è indicato da un collegamento `NULL`.
 
-##  <a name="contains"></a> Contiene
+## <a name="contains"></a>contiene
 
-Le ricerche di `multi_link_registry` oggetto per un blocco specificato.
+Cerca un blocco specificato nell'oggetto `multi_link_registry`.
 
-```
+```cpp
 virtual bool contains(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_Link*<br/>
-Un puntatore a un blocco che deve essere eseguita la ricerca nel `multi_link_registry` oggetto.
+Puntatore a un blocco che deve essere cercato nell'oggetto `multi_link_registry`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il blocco specificato è stato trovato **false** in caso contrario.
+**true** se il blocco specificato è stato trovato; in caso contrario, **false** .
 
-##  <a name="count"></a> count
+## <a name="count"></a>conteggio
 
-Conta il numero di elementi nel `multi_link_registry` oggetto.
+Conta il numero di elementi nell'oggetto `multi_link_registry`.
 
-```
+```cpp
 virtual size_t count();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di elementi nel `multi_link_registry` oggetto.
+Il numero di elementi nell'oggetto `multi_link_registry`.
 
-##  <a name="ctor"></a> multi_link_registry
+## <a name="ctor"></a>multi_link_registry
 
 Costruisce un oggetto `multi_link_registry`.
 
-```
+```cpp
 multi_link_registry();
 ```
 
-##  <a name="dtor"></a> ~multi_link_registry
+## <a name="dtor"></a>~ multi_link_registry
 
-Elimina definitivamente il `multi_link_registry` oggetto.
+Elimina definitivamente l'oggetto `multi_link_registry`.
 
-```
+```cpp
 virtual ~multi_link_registry();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il metodo genera un' [invalid_operation](invalid-operation-class.md) eccezione se viene chiamato prima che vengano rimossi tutti i collegamenti.
+Il metodo genera un'eccezione [invalid_operation](invalid-operation-class.md) se viene chiamato prima della rimozione di tutti i collegamenti.
 
-##  <a name="remove"></a> Rimuovi
+## <a name="remove"></a>rimuovere
 
-Rimuove un collegamento dal `multi_link_registry` oggetto.
+Rimuove un collegamento dall'oggetto `multi_link_registry`.
 
-```
+```cpp
 virtual bool remove(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_Link*<br/>
-Un puntatore a un blocco deve essere rimosso, se trovato.
+Puntatore a un blocco da rimuovere, se trovato.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se è stato trovato e rimosso, il collegamento **false** in caso contrario.
+**true** se il collegamento è stato trovato e rimosso; in caso contrario, **false** .
 
-##  <a name="set_bound"></a> set_bound
+## <a name="set_bound"></a>set_bound
 
-Impostare un limite superiore al numero di collegamenti che i `multi_link_registry` oggetto può contenere.
+Imposta un limite superiore per il numero di collegamenti che l'oggetto `multi_link_registry` può mantenere.
 
-```
+```cpp
 void set_bound(size_t _MaxLinks);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_MaxLinks*<br/>
-Il numero massimo di collegamenti che i `multi_link_registry` oggetto può contenere.
+Numero massimo di collegamenti che l'oggetto `multi_link_registry` può mantenere.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Una volta impostato un limite, lo scollegamento di una voce comporta l'impostazione dello stato non modificabile per l'oggetto `multi_link_registry`, pertanto tramite le chiamate successive a `add` verrà generata un'eccezione `invalid_link_target`.
 

@@ -12,16 +12,16 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f47bf6e9b88dba1e94e9e2ed2b93c8d2d3f9b8c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352593"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126353"
 ---
 # <a name="sampler-class"></a>Classe sampler
 
-La classe del campionatore aggrega le informazioni di configurazione di campionamento da utilizzare per il campionamento della trama.
+La classe Sampler aggrega le informazioni di configurazione del campionamento da utilizzare per il campionamento della trama.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,21 +29,21 @@ La classe del campionatore aggrega le informazioni di configurazione di campiona
 class sampler;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore sampler](#ctor)|Di overload. Crea un'istanza del campionatore.|
+|[Costruttore Sampler](#ctor)|Di overload. Costruisce un'istanza del campionatore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[get_address_mode](#get_address_mode)|Restituisce il `address_mode` che ha associato l'oggetto campionatore.|
-|[get_border_color](#get_border_color)|Restituisce il colore del bordo che ha associato l'oggetto campionatore.|
-|[get_filter_mode](#get_filter_mode)|Restituisce il `filter_mode` che ha associato l'oggetto campionatore.|
+|[get_address_mode](#get_address_mode)|Restituisce il `address_mode` associato all'oggetto campionatore.|
+|[get_border_color](#get_border_color)|Restituisce il colore del bordo associato all'oggetto campionatore.|
+|[get_filter_mode](#get_filter_mode)|Restituisce il `filter_mode` associato all'oggetto campionatore.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -55,9 +55,9 @@ class sampler;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[address_mode](#address_mode)|Ottiene la modalità di indirizzamento del `sampler` oggetto.|
-|[border_color](#border_color)|Ottiene il colore del bordo di `sampler` oggetto.|
-|[filter_mode](#filter_mode)|Ottiene la modalità di filtro del `sampler` oggetto.|
+|[address_mode](#address_mode)|Ottiene la modalità di indirizzamento dell'oggetto `sampler`.|
+|[border_color](#border_color)|Ottiene il colore del bordo dell'oggetto `sampler`.|
+|[filter_mode](#filter_mode)|Ottiene la modalità di filtro dell'oggetto `sampler`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -67,11 +67,11 @@ class sampler;
 
 **Intestazione:** amp_graphics. h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> campionatore
+## <a name="ctor"></a>campionatore
 
-Costruisce un'istanza di [classe sampler](sampler-class.md).
+Costruisce un'istanza della [classe Sampler](sampler-class.md).
 
 ```cpp
 sampler() restrict(cpu);    // [1] default constructor
@@ -106,46 +106,46 @@ sampler(                    // [6] move constructor
 ### <a name="parameters"></a>Parametri
 
 *_Filter_mode*<br/>
-La modalità di filtro da utilizzare nel campionamento.
+Modalità di filtro da utilizzare per il campionamento.
 
 *_Address_mode*<br/>
-Modalità di indirizzamento da utilizzare nel campionamento per tutte le dimensioni.
+Modalità di indirizzamento da utilizzare per il campionamento per tutte le dimensioni.
 
 *_Border_color*<br/>
-Il colore del bordo da utilizzare se la modalità di indirizzo è address_border. Il valore predefinito è `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
+Colore del bordo da utilizzare se la modalità di indirizzo è address_border. Il valore predefinito è `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
 *_Other*<br/>
-[5] costruttore della copia di `sampler` oggetto da copiare nel nuovo `sampler` istanza.
+[5] costruttore di copia l'oggetto `sampler` da copiare nella nuova istanza di `sampler`.
 
-[6] costruttore di spostamento il `sampler` oggetto da spostare nella nuova `sampler` istanza.
+[6] spostare il costruttore `sampler` oggetto da spostare nella nuova istanza di `sampler`.
 
-##  <a name="address_mode"></a> address_mode
+## <a name="address_mode"></a>address_mode
 
-Ottiene la modalità di indirizzamento del `sampler` oggetto.
+Ottiene la modalità di indirizzamento dell'oggetto `sampler`.
 
 ```cpp
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;
 ```
 
-##  <a name="border_color"></a> border_color
+## <a name="border_color"></a>border_color
 
-Ottiene il colore del bordo di `sampler` oggetto.
+Ottiene il colore del bordo dell'oggetto `sampler`.
 
 ```cpp
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;
 ```
 
-##  <a name="filter_mode"></a> filter_mode
+## <a name="filter_mode"></a>filter_mode
 
-Ottiene la modalità di filtro del `sampler` oggetto.
+Ottiene la modalità di filtro dell'oggetto `sampler`.
 
 ```cpp
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;
 ```
 
-##  <a name="get_address_mode"></a> get_address_mode
+## <a name="get_address_mode"></a>get_address_mode
 
-Restituisce la modalità filtro configurata per l'oggetto `sampler`.
+Restituisce la modalità di filtro configurata per questo `sampler`.
 
 ```cpp
 Concurrency::graphics::address_mode get_address_mode() const __GPU;
@@ -153,11 +153,11 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 
 ### <a name="return-value"></a>Valore restituito
 
-La modalità di indirizzo configurata per il campionatore.
+Modalità di indirizzo configurata per il campionatore.
 
-##  <a name="get_border_color"></a> get_border_color
+## <a name="get_border_color"></a>get_border_color
 
-Restituisce il colore del bordo configurato per l'oggetto `sampler`.
+Restituisce il colore del bordo configurato per questo `sampler`.
 
 ```cpp
 Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
@@ -165,11 +165,11 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Valore restituito
 
-Un float_4 che contiene il colore del bordo.
+Float_4 che contiene il colore del bordo.
 
-##  <a name="get_filter_mode"></a> get_filter_mode
+## <a name="get_filter_mode"></a>get_filter_mode
 
-Restituisce la modalità filtro configurata per l'oggetto `sampler`.
+Restituisce la modalità di filtro configurata per questo `sampler`.
 
 ```cpp
 Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
@@ -177,11 +177,11 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Valore restituito
 
-Modalità filtro configurata per il campionatore.
+Modalità di filtro configurata per il campionatore.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>operatore =
 
-Assegna il valore di un altro oggetto campionatore a un campionatore esistente.
+Assegna il valore di un altro oggetto sampler a un campionatore esistente.
 
 ```cpp
 sampler& operator= (    // [1] copy assignment operator
@@ -194,13 +194,13 @@ sampler& operator= (    // [2] move assignment operator
 ### <a name="parameters"></a>Parametri
 
 *_Other*<br/>
-[1] operatore di assegnazione di copia il `sampler` da copiare in questo oggetto `sampler`.
+[1] operatore di assegnazione di copia `sampler` oggetto da copiare in questo `sampler`.
 
-[2] operatore di assegnazione spostamento il `sampler` da spostare in questo oggetto `sampler`.
+[2] operatore di assegnazione di spostamento `sampler` oggetto da spostare in questa `sampler`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento all'istanza del campionatore.
+Riferimento a questa istanza del campionatore.
 
 ## <a name="see-also"></a>Vedere anche
 

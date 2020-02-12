@@ -5,40 +5,40 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d
 - amp_short_vectors/Concurrency::graphics::direct3d
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
-ms.openlocfilehash: 8fb03edd63c612fd070e50e2f5d229cd8e207812
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4911787fd17877769eb723cf1e61e29fe626a783
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405690"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139429"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Spazio dei nomi Concurrency::graphics::direct3d
 
-Fornisce il [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) e [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) metodi.
+Fornisce i metodi [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) e [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) .
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 namespace direct3d;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="functions"></a>Funzioni
 
 |Nome<br /><br /> Descrizione|
 |--------------------------|
-|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Ottenere l'interfaccia dello stato campionatore Direct3D dell'acceleratore fornita visualizzazione che rappresenta l'oggetto campionatore specificato.|
-|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Ottiene l'interfaccia di trama Direct3D sottostante l'oggetto specificato [trama](texture-class.md) oggetto.|
-|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Creare un campionatore da un puntatore a interfaccia dello stato campionatore Direct3D.|
-|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Crea una [trama](texture-class.md) oggetto utilizzando i parametri specificati.|
-|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Confronta un valore di riferimento di 4 byte e un valore di origine di 8 byte e accumula un vettore di 4 somme.|
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Ottiene l'interfaccia dello stato del campionatore Direct3D nella visualizzazione acceleratore specificata che rappresenta l'oggetto campionatore specificato.|
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Ottiene l'interfaccia di trama Direct3D sottostante all'oggetto [texture](texture-class.md) specificato.|
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Creare un campionatore da un puntatore all'interfaccia dello stato del campionatore Direct3D.|
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Crea un oggetto [trama](texture-class.md) usando i parametri specificati.|
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Confronta un valore di riferimento di 4 byte e un valore di origine a 8 byte e accumula un vettore di 4 somme.|
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** amp_graphics. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
 ## <a name="see-also"></a>Vedere anche
 

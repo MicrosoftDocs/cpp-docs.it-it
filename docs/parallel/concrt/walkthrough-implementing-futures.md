@@ -5,43 +5,43 @@ helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 00ad8bbe6f950ad531bad751686393dce66643bb
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 2b9d889dac195bb60651cbb76110d54b6231a5fd
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857059"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141983"
 ---
 # <a name="walkthrough-implementing-futures"></a>Procedura dettagliata: Implementazione di future
 
-In questo argomento viene illustrato come implementare i future nell'applicazione. L'argomento viene illustrato come combinare le funzionalità esistenti nel Runtime di concorrenza in un elemento ancora più avanzate.
+In questo argomento viene illustrato come implementare future nell'applicazione. Nell'argomento viene illustrato come combinare le funzionalità esistenti nel runtime di concorrenza in un elemento che consente di eseguire altre operazioni.
 
 > [!IMPORTANT]
->  In questo argomento viene illustrato il concetto di future a scopo dimostrativo. È consigliabile usare [std:: future](../../standard-library/future-class.md) oppure [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) quando è necessario utilizzare un'attività asincrona che calcola un valore per un uso successivo.
+> In questo argomento viene illustrato il concetto di future a scopo dimostrativo. Si consiglia di usare [std:: future](../../standard-library/future-class.md) o [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) quando è necessaria un'attività asincrona che calcola un valore per un uso successivo.
 
-Oggetto *attività* è riportato un calcolo che può essere scomposto in ulteriori calcoli più accurati. Oggetto *future* è un'attività asincrona che calcola un valore per un uso successivo.
+Un' *attività* è un calcolo che può essere scomposto in calcoli aggiuntivi, più specifici. Un *futuro* è un'attività asincrona che calcola un valore per un uso successivo.
 
-Per implementare il ritardo, questo argomento viene definito il `async_future` classe. Il `async_future` classe utilizza questi componenti del Runtime di concorrenza: il [Concurrency:: task_group](reference/task-group-class.md) classe e il [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) classe. Il `async_future` classe Usa il `task_group` classe per calcolare in modo asincrono un valore e il `single_assignment` classe per archiviare il risultato del calcolo. Il costruttore del `async_future` classe accetta una funzione lavoro che calcola il risultato e `get` metodo recupera il risultato.
+Per implementare future, questo argomento definisce la classe `async_future`. La classe `async_future` utilizza questi componenti della runtime di concorrenza: la classe [Concurrency:: task_group](reference/task-group-class.md) e la classe [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) . La classe `async_future` usa la classe `task_group` per calcolare un valore in modo asincrono e la classe `single_assignment` per archiviare il risultato del calcolo. Il costruttore della classe `async_future` accetta una funzione lavoro che calcola il risultato e il metodo `get` Recupera il risultato.
 
-### <a name="to-implement-the-asyncfuture-class"></a>Per implementare la classe async_future
+### <a name="to-implement-the-async_future-class"></a>Per implementare la classe async_future
 
-1. Dichiarare una classe di modello denominata `async_future` contenente i parametri del tipo di calcolo risultante. Aggiungere `public` e `private` sezioni a questa classe.
+1. Dichiarare una classe modello denominata `async_future` parametrizzata sul tipo del calcolo risultante. Aggiungere `public` e `private` sezioni a questa classe.
 
 [!code-cpp[concrt-futures#2](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_1.cpp)]
 
-1. Nel `private` sezione il `async_future` classe, dichiarare un `task_group` e un `single_assignment` (membro dati).
+1. Nella sezione `private` della classe `async_future` dichiarare un `task_group` e un membro dati `single_assignment`.
 
 [!code-cpp[concrt-futures#3](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_2.cpp)]
 
-1. Nel `public` sezione il `async_future` classe, implementare il costruttore. Il costruttore è un modello contenente i parametri per la funzione lavoro che calcola il risultato. Il costruttore esegue in modo asincrono la funzione lavoro nel `task_group` (membro dati) e viene utilizzato il [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) funzione per scrivere il risultato per il `single_assignment` (membro dati).
+1. Nella sezione `public` della classe `async_future` implementare il costruttore. Il costruttore è un modello parametrizzato nella funzione lavoro che calcola il risultato. Il costruttore esegue in modo asincrono la funzione lavoro nel membro dati `task_group` e utilizza la funzione [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) per scrivere il risultato nel membro dati `single_assignment`.
 
 [!code-cpp[concrt-futures#4](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_3.cpp)]
 
-1. Nel `public` sezione il `async_future` classe, implementare il distruttore. Il distruttore attende il completamento dell'attività.
+1. Nella sezione `public` della classe `async_future` implementare il distruttore. Il distruttore attende il completamento dell'attività.
 
 [!code-cpp[concrt-futures#5](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_4.cpp)]
 
-1. Nel `public` sezione il `async_future` classe, implementare il `get` (metodo). Questo metodo Usa il [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) funzione per recuperare il risultato della funzione lavoro.
+1. Nella sezione `public` della classe `async_future` implementare il metodo `get`. Questo metodo utilizza la funzione [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) per recuperare il risultato della funzione lavoro.
 
 [!code-cpp[concrt-futures#6](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_5.cpp)]
 
@@ -49,7 +49,7 @@ Per implementare il ritardo, questo argomento viene definito il `async_future` c
 
 ### <a name="description"></a>Descrizione
 
-L'esempio seguente illustra l'intero `async_future` classe e un esempio d'uso. Il `wmain` funzione crea un oggetto std::[vettore](../../standard-library/vector-class.md) contenente i valori integer casuale 10.000. Quindi, utilizza `async_future` gli oggetti per trovare i valori minimo e massimo sono contenuti nel `vector` oggetto.
+Nell'esempio seguente viene illustrata la classe `async_future` completa e un esempio di utilizzo. La funzione `wmain` crea un oggetto std::[vector](../../standard-library/vector-class.md) che contiene 10.000 valori integer casuali. USA quindi `async_future` oggetti per trovare i valori più piccoli e più grandi contenuti nell'oggetto `vector`.
 
 ### <a name="code"></a>Codice
 
@@ -57,7 +57,7 @@ L'esempio seguente illustra l'intero `async_future` classe e un esempio d'uso. I
 
 ### <a name="comments"></a>Commenti
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```Output
 smallest: 0
@@ -65,29 +65,29 @@ largest:  9999
 average:  4981
 ```
 
-Nell'esempio viene usato il `async_future::get` metodo per recuperare i risultati del calcolo. Il `async_future::get` metodo attende il completamento se il calcolo è ancora attivo.
+Nell'esempio viene utilizzato il metodo `async_future::get` per recuperare i risultati del calcolo. Il metodo `async_future::get` attende il completamento del calcolo se il calcolo è ancora attivo.
 
 ## <a name="robust-programming"></a>Programmazione efficiente
 
-Per estendere il `async_future` classe per gestire le eccezioni generate dalla funzione lavoro, modificare il `async_future::get` metodo da chiamare il [Concurrency:: Canceled](reference/task-group-class.md#wait) (metodo). Il `task_group::wait` metodo avvia eventuali eccezioni generate dalla funzione lavoro.
+Per estendere la classe `async_future` per gestire le eccezioni generate dalla funzione lavoro, modificare il metodo `async_future::get` per chiamare il metodo [Concurrency:: task_group:: wait](reference/task-group-class.md#wait) . Il metodo `task_group::wait` genera tutte le eccezioni generate dalla funzione lavoro.
 
-L'esempio seguente illustra la versione modificata del `async_future` classe. Il `wmain` funzione Usa un `try` - `catch` blocco per stampare il risultato del `async_future` oggetto o per stampare il valore dell'eccezione generata dalla funzione lavoro.
+Nell'esempio seguente viene illustrata la versione modificata della classe `async_future`. La funzione `wmain` utilizza un blocco `try`-`catch` per stampare il risultato dell'oggetto `async_future` o per stampare il valore dell'eccezione generata dalla funzione lavoro.
 
 [!code-cpp[concrt-futures-with-eh#1](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_7.cpp)]
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```Output
 caught exception: error
 ```
 
-Per altre informazioni sul modello di gestione delle eccezioni nel Runtime di concorrenza, vedere [gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+Per ulteriori informazioni sul modello di gestione delle eccezioni nel runtime di concorrenza, vedere [gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `futures.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `futures.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
 
-**CL.exe /EHsc Futures. cpp**
+**CL. exe/EHsc futures. cpp**
 
 ## <a name="see-also"></a>Vedere anche
 
