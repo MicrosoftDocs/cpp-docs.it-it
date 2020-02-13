@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
-ms.openlocfilehash: 8277827aa8713ef57731a3e0da0898829b9fa9fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 253cd76182e1b6f85be3701663bd10c86c10e6ba
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186366"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142349"
 ---
-# <a name="unsupportedos-class"></a>Classe unsupported_os
+# <a name="unsupported_os-class"></a>Classe unsupported_os
 
 Tramite questa classe viene descritta un'eccezione generata quando viene utilizzato un sistema operativo non supportato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class unsupported_os : public std::exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -45,11 +45,13 @@ class unsupported_os : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="ctor"></a> unsupported_os
+## <a name="ctor"></a>unsupported_os
 
 Costruisce un oggetto `unsupported_os`.
 
-```
+### <a name="syntax"></a>Sintassi
+
+```cpp
 explicit _CRTIMP unsupported_os(_In_z_ const char* _Message) throw();
 
 unsupported_os() throw();

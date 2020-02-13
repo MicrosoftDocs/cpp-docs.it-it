@@ -5,43 +5,43 @@ helpviewer_keywords:
 - combinable class, example
 - improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
-ms.openlocfilehash: c8f4c40be84b2204e5b5632fe6d3d5a5d22b8719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db27a791b2b92102118606712db4cbd2920f9619
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410006"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142433"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>Procedura: Usare la classe combinable per migliorare le prestazioni
 
-Questo esempio illustra come usare il [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) classe per calcolare la somma dei numeri in un [std:: Array](../../standard-library/array-class-stl.md) oggetto primi. Il `combinable` classe migliora le prestazioni eliminando lo stato condiviso.
+In questo esempio viene illustrato come utilizzare la classe [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) per calcolare la somma dei numeri in un oggetto [std:: Array](../../standard-library/array-class-stl.md) che è primo. La classe `combinable` migliora le prestazioni eliminando lo stato condiviso.
 
 > [!TIP]
->  In alcuni casi, i mapping parallelo ([Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_transform)) e ridurre ([concorrenza:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)) possono offrire miglioramenti delle prestazioni sui `combinable`. Per un esempio che Usa mapping e riduzione delle operazioni per produrre gli stessi risultati di questo esempio, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
+> In alcuni casi, la mappa parallela ([concorrenza::p arallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)) e reduce ([Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)) possono offrire miglioramenti delle prestazioni rispetto `combinable`. Per un esempio in cui vengono utilizzate le operazioni di mapping e riduzione per produrre gli stessi risultati di questo esempio, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="example"></a>Esempio
+## <a name="example---accumulate"></a>Esempio-accumulo
 
-L'esempio seguente usa il [std:: accumulate](../../standard-library/numeric-functions.md#accumulate) funzione per calcolare la somma degli elementi in una matrice di numeri primi. In questo esempio `a` è un `array` oggetto e il `is_prime` funzione determina se il valore di input è un numero primo.
+Nell'esempio seguente viene usata la funzione [std:: Accumule](../../standard-library/numeric-functions.md#accumulate) per calcolare la somma degli elementi di una matrice che sono primi. In questo esempio `a` è un oggetto `array` e la funzione `is_prime` determina se il valore di input è primo.
 
 [!code-cpp[concrt-parallel-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_1.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example---parallel_for_each"></a>Esempio: parallel_for_each
 
-Nell'esempio seguente viene illustrato un modo semplice per parallelizzare l'esempio precedente. Questo esempio Usa il [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo per elaborare la matrice in parallelo e una [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) oggetto per sincronizzare l'accesso per il `prime_sum` variabile . In questo esempio non è scalabile poiché ogni thread deve attendere che la risorsa condivisa diventi disponibile.
+Nell'esempio seguente viene illustrato un modo ingenuo per parallelizzare l'esempio precedente. In questo esempio viene utilizzato l'algoritmo [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) per elaborare la matrice in parallelo e un oggetto [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) per sincronizzare l'accesso alla variabile `prime_sum`. Questo esempio non viene ridimensionato perché ogni thread deve attendere che la risorsa condivisa diventi disponibile.
 
 [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_2.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example---combinable"></a>Esempio: combinabile
 
-L'esempio seguente usa un `combinable` oggetto per migliorare le prestazioni dell'esempio precedente. In questo esempio elimina la necessità per gli oggetti di sincronizzazione. la scalabilità perché il `combinable` oggetto consente a ogni thread eseguire le attività in modo indipendente.
+Nell'esempio seguente viene usato un oggetto `combinable` per migliorare le prestazioni dell'esempio precedente. Questo esempio elimina la necessità di oggetti di sincronizzazione. si ridimensiona perché l'oggetto `combinable` consente a ogni thread di eseguire l'attività in modo indipendente.
 
-Oggetto `combinable` oggetto viene in genere usato in due passaggi. In primo luogo, produrre una serie di calcoli accurati effettuando operazioni in parallelo. Successivamente, combinare o ridurre i calcoli in un risultato finale. Questo esempio Usa la [concurrency::combinable::local](reference/combinable-class.md#local) metodo per ottenere un riferimento alla somma locale. Quindi, utilizza il [concurrency::combinable::combine](reference/combinable-class.md#combine) (metodo) e una [std:: Plus](../../standard-library/plus-struct.md) oggetto per combinare i calcoli locali nel risultato finale.
+Un oggetto `combinable` viene in genere usato in due passaggi. Prima di tutto, produrre una serie di calcoli granulari eseguendo il lavoro in parallelo. Successivamente, combinare (o ridurre) i calcoli in un risultato finale. In questo esempio viene utilizzato il metodo [Concurrency:: combinable:: local](reference/combinable-class.md#local) per ottenere un riferimento alla somma locale. USA quindi il metodo [Concurrency:: combinable:: combine](reference/combinable-class.md#combine) e un oggetto [std::p unità logiche](../../standard-library/plus-struct.md) per combinare i calcoli locali nel risultato finale.
 
 [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_3.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example---serial-and-parallel"></a>Esempio: seriale e parallelo
 
-L'esempio completo seguente calcola la somma dei numeri primi sia in modo seriale e in parallelo. Nell'esempio viene stampato nella console il tempo necessario per eseguire entrambi i calcoli.
+Nell'esempio completo seguente viene calcolata la somma dei numeri primi sia in modo seriale che in parallelo. Nell'esempio viene stampato nella console il tempo necessario per eseguire entrambi i calcoli.
 
 [!code-cpp[concrt-parallel-sum-of-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_4.cpp)]
 
@@ -57,13 +57,13 @@ parallel time: 1638 ms
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `parallel-sum-of-primes.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
+Per compilare il codice, copiarlo e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `parallel-sum-of-primes.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
 
-**CL.exe /EHsc parallelo-sum-of-primes. cpp**
+> **CL. exe/EHsc parallel-sum-of-primes. cpp**
 
 ## <a name="robust-programming"></a>Programmazione efficiente
 
-Per un esempio che usa il mapping e riduzione delle operazioni per produrre gli stessi risultati, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
+Per un esempio in cui vengono utilizzate le operazioni di mapping e riduzione per produrre gli stessi risultati, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="see-also"></a>Vedere anche
 

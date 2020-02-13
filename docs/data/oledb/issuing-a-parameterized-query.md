@@ -4,16 +4,16 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4964d63846e14c0eaf4ff7c7fc80e14237673f69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390659"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127637"
 ---
 # <a name="issuing-a-parameterized-query"></a>Esecuzione di una query con parametri
 
-Nell'esempio seguente esegue una query con parametri semplice che consente di recuperare i record con un campo age (che è maggiore di 30) da una tabella in un database Microsoft Access. Per supportare il parametro, il record dell'utente deve disporre di una mappa aggiuntiva. Il codice seguente, in un progetto ATL, Usa la `CCommand` classe anziché il `CTable` classe usata nell'esempio precedente [scorrimento di un Rowset semplice](../../data/oledb/traversing-a-simple-rowset.md).
+Nell'esempio seguente viene eseguita una query con parametri semplice che recupera i record con un campo Age (maggiore di 30) da una tabella di un database di Microsoft Access. Per supportare il parametro, è necessario che il record utente disponga di una mappa aggiuntiva. Il codice seguente, in un progetto ATL, usa la classe `CCommand` anziché la classe `CTable` usata nell'esempio precedente, [attraversando un semplice set di righe](../../data/oledb/traversing-a-simple-rowset.md).
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-Il record dell'utente, `CArtists`, in questo esempio è simile:
+Il record utente, `CArtists`, ha un aspetto simile a questo esempio:
 
 ```cpp
 class CArtists

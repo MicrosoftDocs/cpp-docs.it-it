@@ -2,12 +2,12 @@
 title: 3. Funzioni della libreria di runtime
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 553c9ff2ceff02dc7b72e9f11899dac9d1f0f612
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857957"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142951"
 ---
 # <a name="3-run-time-library-functions"></a>3. funzioni della libreria run-time
 
@@ -59,8 +59,8 @@ Per ulteriori informazioni, vedere [omp_set_dynamic](#317-omp_set_dynamic-functi
 
 #### <a name="cross-references"></a>Riferimenti incrociati
 
-- [omp_set_dynamic](#317-omp_set_dynamic-function) function
-- [omp_get_dynamic](#318-omp_get_dynamic-function) function
+- funzione [omp_set_dynamic](#317-omp_set_dynamic-function)
+- funzione [omp_get_dynamic](#318-omp_get_dynamic-function)
 - Variabile di ambiente [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
 - clausola [num_threads](2-directives.md#23-parallel-construct)
 
@@ -96,13 +96,9 @@ int omp_get_max_threads(void);
 
 Il codice seguente esprime un limite inferiore per il valore di `omp_get_max_threads`:
 
-```
+> *thread-used-for-next-team* <= `omp_get_max_threads`
 
-threads-used-for-next-team
-<= omp_get_max_threads
-```
-
-Si noti che se un'altra area parallela usa la clausola `num_threads` per richiedere un numero specifico di thread, la garanzia sul limite inferiore del risultato di `omp_get_max_threads` non è presente.
+Si noti che se un'altra area parallela usa la clausola `num_threads` per richiedere un numero specifico di thread, la garanzia sul limite inferiore del risultato di `omp_get_max_threads` non include più.
 
 Il valore restituito della funzione `omp_get_max_threads` può essere usato per allocare in modo dinamico spazio di archiviazione sufficiente per tutti i thread del team formato nell'area parallela successiva.
 
@@ -171,7 +167,7 @@ L'impostazione predefinita per la regolazione dinamica dei thread è definita da
 
 #### <a name="microsoft-specific"></a>Specifico di Microsoft
 
-Il supporto corrente di `omp_get_dynamic` e `omp_set_dynamic` è il seguente: 
+Il supporto corrente di `omp_get_dynamic` e `omp_set_dynamic` è il seguente:
 
 Il parametro di input per `omp_set_dynamic` non influisce sui criteri di threading e non modifica il numero di thread. `omp_get_num_threads` restituisce sempre il numero definito dall'utente, se impostato, o il numero di thread predefinito. Nell'implementazione corrente di Microsoft, `omp_set_dynamic(0)` disattiva il threading dinamico, in modo che il set di thread esistente possa essere riutilizzato per la seguente area parallela. `omp_set_dynamic(1)` attiva il threading dinamico ignorando il set di thread esistente e creando un nuovo set per l'area parallela successiva. Il numero di thread nel nuovo set è uguale al set precedente ed è basato sul valore restituito di `omp_get_num_threads`. Pertanto, per ottenere prestazioni ottimali, utilizzare `omp_set_dynamic(0)` per riutilizzare i thread esistenti.
 

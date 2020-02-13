@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: a977957fcb28a7f4c6c849c954026e2bda4e728c
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: ef7ded0bf925d3430b70064c4979b75e08f9cf45
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975153"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127699"
 ---
-# <a name="uninitializedobject-class"></a>uninitialized_object (classe)
+# <a name="uninitialized_object-class"></a>uninitialized_object (classe)
 
 Eccezione generata quando viene utilizzato un oggetto non inizializzato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class uninitialized_object : public runtime_exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[uninitialized_object, costruttore](#uninitialized_object)|Inizializza una nuova istanza della classe `uninitialized_object`.|
+|[Costruttore uninitialized_object](#uninitialized_object)|Inizializza una nuova istanza della classe `uninitialized_object`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -45,15 +45,15 @@ class uninitialized_object : public runtime_exception;
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concorrenza
+**Spazio dei nomi:** Concurrency
 
-## <a name="uninitialized_object"></a> uninitialized_object
+## <a name="uninitialized_object"></a>uninitialized_object
 
-Costruisce una nuova istanza di `uninitialized_object` eccezione.
+Costruisce una nuova istanza dell'eccezione `uninitialized_object`.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 explicit uninitialized_object(
     const char * _Message ) throw();
 
@@ -67,7 +67,7 @@ Descrizione dell'errore.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il `uninitialized_object` oggetto eccezione.
+Oggetto eccezione `uninitialized_object`.
 
 ## <a name="see-also"></a>Vedere anche
 

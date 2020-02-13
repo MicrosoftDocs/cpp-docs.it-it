@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512822"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141337"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Confronto tra runtime di concorrenza e altri modelli di concorrenza
 
@@ -19,7 +19,7 @@ Se si sta usando un altro modello di programmazione, ad esempio il pool di threa
 
 È possibile usare le funzionalità e i vantaggi di produttività del runtime di concorrenza come complemento dell'applicazione esistente basata su un altro modello di concorrenza. Il runtime di concorrenza non può garantire il bilanciamento del carico quando più utilità di pianificazione delle attività competono per le stesse risorse di elaborazione. Nei casi in cui i carichi di lavoro non si sovrappongono, tuttavia, questo effetto è minimo.
 
-##  <a name="top"></a> Sezioni
+## <a name="top"></a> Sezioni
 
 - [Confronto tra la pianificazione di tipo preemptive e la pianificazione cooperativa](#models)
 
@@ -27,7 +27,7 @@ Se si sta usando un altro modello di programmazione, ad esempio il pool di threa
 
 - [Confronto tra il runtime di concorrenza e OpenMP](#openmp)
 
-##  <a name="models"></a> Confronto tra la pianificazione di tipo preemptive e la pianificazione cooperativa
+## <a name="models"></a> Confronto tra la pianificazione di tipo preemptive e la pianificazione cooperativa
 
 I modelli di pianificazione di tipo preemptive e cooperativa rappresentano due modalità comuni che consentono a più attività di condividere risorse di elaborazione come, ad esempio, processori o thread di hardware.
 
@@ -51,7 +51,7 @@ La pianificazione cooperativa non risolve tutti i problemi di pianificazione. Le
 
 [[Torna all'inizio](#top)]
 
-##  <a name="winapi"></a> Confronto tra il runtime di concorrenza e l'API Windows
+## <a name="winapi"></a> Confronto tra il runtime di concorrenza e l'API Windows
 
 L'API (Application Programming Interface) di Microsoft Windows, definita in genere API Windows, e precedentemente nota come Win32, offre un modello di programmazione che consente la concorrenza nelle applicazioni. Il runtime di concorrenza si basa sull'API Windows per offrire modelli di programmazione aggiuntivi che non sono resi disponibili dal sistema operativo sottostante.
 
@@ -81,7 +81,7 @@ In Windows 7 e Windows Server 2008 R2, il sistema operativo supporta anche la co
 
 [[Torna all'inizio](#top)]
 
-##  <a name="openmp"></a> Confronto tra il runtime di concorrenza e OpenMP
+## <a name="openmp"></a> Confronto tra il runtime di concorrenza e OpenMP
 
 Il runtime di concorrenza consente diversi modelli di programmazione. Questi modelli possono sovrapporsi ai modelli di altre librerie o integrarsi con essi. Questa sezione confronta il runtime di concorrenza e [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).
 
@@ -98,7 +98,7 @@ Per altre informazioni sul confronto tra il runtime di concorrenza e OpenMP e su
 ## <a name="see-also"></a>Vedere anche
 
 [Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)<br/>
-[Panoramica](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Overview](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

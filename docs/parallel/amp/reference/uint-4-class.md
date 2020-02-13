@@ -268,24 +268,24 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a795ed3c04f114b6e15d5d9161605988bab2778a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405443"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142407"
 ---
-# <a name="uint4-class"></a>Classe uint_4
+# <a name="uint_4-class"></a>Classe uint_4
 
-Rappresenta un vettore short di interi senza segno a quattro.
+Rappresenta un vettore breve di quattro interi senza segno.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class uint_4;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -297,7 +297,7 @@ class uint_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore uint_4](#uint_4__ctor) |Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore uint_4](#uint_4__ctor) |Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -457,7 +457,7 @@ class uint_4;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#size)||
+|[dimensioni costanti](#size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -598,17 +598,17 @@ class uint_4;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="uint_4__ctor"></a> uint_4
+## <a name="uint_4__ctor"></a>uint_4
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 uint_4() restrict(amp,cpu);
 uint_4(
    unsigned int _V0,
@@ -639,22 +639,22 @@ explicit inline uint_4(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V3*<br/>
-Il valore per inizializzare l'elemento 3.
+Valore per l'inizializzazione dell'elemento 3.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
@@ -663,7 +663,7 @@ Oggetto utilizzato per inizializzare.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 static const int size = 4;
 ```
 

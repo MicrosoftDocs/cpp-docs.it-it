@@ -74,24 +74,24 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: ff9d9391efaeef5051424675dacf1f14c35b30df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 259d008c9819eed631026fd106c01644bb1179cc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180310"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126682"
 ---
-# <a name="float3-class"></a>Classe float_3
+# <a name="float_3-class"></a>Classe float_3
 
-Rappresenta un vettore short di tre valori a virgola mobile.
+Rappresenta un vettore breve di tre float.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class float_3;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -103,7 +103,7 @@ class float_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore float_3](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|
+|[Costruttore float_3](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -163,7 +163,7 @@ class float_3;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[dimensioni (costante)](#float_3__size)||
+|[dimensioni costanti](#float_3__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -206,15 +206,15 @@ class float_3;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp_short_vectors.h
+**Intestazione:** amp_short_vectors. h
 
-**Spazio dei nomi:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: graphics
 
-##  <a name="ctor"></a> float_3
+## <a name="ctor"></a>float_3
 
-Default costruttore inizializza tutti gli elementi con 0.
+Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
-```
+```cpp
 float_3() restrict(amp,
     cpu);
 
@@ -256,23 +256,23 @@ explicit inline float_3(
 ### <a name="parameters"></a>Parametri
 
 *_V0*<br/>
-Il valore per inizializzare l'elemento 0.
+Valore per inizializzare l'elemento 0.
 
 *_V1*<br/>
-Il valore per inizializzare l'elemento 1.
+Valore per l'inizializzazione dell'elemento 1.
 
 *_V2*<br/>
-Il valore per inizializzare l'elemento 2.
+Valore per l'inizializzazione dell'elemento 2.
 
 *_V*<br/>
-Il valore di inizializzazione.
+Valore per l'inizializzazione.
 
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-##  <a name="float_3__size"></a> Dimensioni
+## <a name="float_3__size"></a>dimensioni
 
-```
+```cpp
 static const int size = 3;
 ```
 

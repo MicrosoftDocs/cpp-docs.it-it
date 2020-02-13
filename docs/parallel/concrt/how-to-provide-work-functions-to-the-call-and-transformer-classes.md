@@ -6,24 +6,24 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2b7b3c88b51003a96526ef14d9940a8c26c3b3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205790"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142493"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Procedura: Fornire funzioni lavoro alle classi call e transformer
 
-In questo argomento vengono illustrati vari modi per fornire funzioni lavoro per le [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) e [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) classi.
+In questo argomento vengono illustrati diversi modi per fornire funzioni lavoro alle classi [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) e [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) .
 
-Nel primo esempio viene illustrato come passare un'espressione lambda a un `call` oggetto. Nel secondo esempio viene illustrato come passare un oggetto funzione a un `call` oggetto. Il terzo esempio illustra come associare un metodo della classe per un `call` oggetto.
+Nel primo esempio viene illustrato come passare un'espressione lambda a un oggetto `call`. Nel secondo esempio viene illustrato come passare un oggetto funzione a un oggetto `call`. Nel terzo esempio viene illustrato come associare un metodo di classe a un oggetto `call`.
 
-A scopo illustrativo, ogni esempio in questo argomento viene usato il `call` classe. Per un esempio che usa il `transformer` classe, vedere [come: Usare la classe transformer in una Pipeline di dati](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+Per illustrazione, in ogni esempio di questo argomento viene usata la classe `call`. Per un esempio che usa la classe `transformer`, vedere [procedura: usare Transformer in una pipeline di dati](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato un modo comune per utilizzare il `call` classe. Questo esempio passa una funzione lambda di `call` costruttore.
+Nell'esempio seguente viene illustrato un modo comune per utilizzare la classe `call`. Questo esempio passa una funzione lambda al costruttore `call`.
 
 [!code-cpp[concrt-call-lambda#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_1.cpp)]
 
@@ -35,27 +35,27 @@ Questo esempio produce il seguente output:
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente è simile a quello precedente, ad eccezione del fatto che usi il `call` classe insieme a un oggetto funzione (functor).
+L'esempio seguente è simile a quello precedente, ad eccezione del fatto che usa la classe `call` insieme a un oggetto funzione (functor).
 
 [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente è simile a quello precedente, ad eccezione del fatto che usa il [std::bind1st](../../standard-library/functional-functions.md#bind1st) e [std:: mem_fun](../../standard-library/functional-functions.md#mem_fun) funzioni per associare un `call` oggetto da un metodo della classe.
+L'esempio seguente è simile a quello precedente, ad eccezione del fatto che usa le funzioni [std:: bind1st](../../standard-library/functional-functions.md#bind1st) e [std:: mem_fun](../../standard-library/functional-functions.md#mem_fun) per associare un oggetto `call` a un metodo della classe.
 
-Usare questa tecnica, se è necessario associare un `call` oppure `transformer` a un metodo di classe specifico anziché l'operatore di chiamata di funzione, oggetto `operator()`.
+Usare questa tecnica se è necessario associare un oggetto `call` o `transformer` a un metodo della classe specifico anziché l'operatore di chiamata di funzione, `operator()`.
 
 [!code-cpp[concrt-call-method#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_3.cpp)]
 
-È anche possibile assegnare il risultato del `bind1st` funzionare per un [std:: Function](../../standard-library/function-class.md) dell'oggetto oppure usare il `auto` (parola chiave), come illustrato nell'esempio seguente.
+È anche possibile assegnare il risultato della funzione `bind1st` a un oggetto [std:: Function](../../standard-library/function-class.md) oppure usare la parola chiave `auto`, come illustrato nell'esempio seguente.
 
 [!code-cpp[concrt-call-method#2](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_4.cpp)]
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `call.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `call.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
 
-**CL.exe /EHsc Call. cpp**
+> **CL. exe/EHsc Call. cpp**
 
 ## <a name="see-also"></a>Vedere anche
 

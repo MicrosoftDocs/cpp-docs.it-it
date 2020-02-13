@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: dc9eacad744536e640417a4ebf51b975bd05bcc7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339533"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142038"
 ---
 # <a name="itarget-class"></a>Classe ITarget
 
@@ -26,48 +26,48 @@ La classe `ITarget` corrisponde all'interfaccia per tutti i blocchi di destinazi
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template<class T>
 class ITarget;
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Il tipo di dati del payload all'interno di messaggi accettati dal blocco di destinazione.
+Tipo di dati del payload all'interno dei messaggi accettati dal blocco di destinazione.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`filter_method`|La firma di qualsiasi metodo usato dal blocco che restituisce un `bool` valore per determinare se deve essere accettato un messaggio offerto.|
-|`type`|Un alias del tipo per `T`.|
+|`filter_method`|Firma di qualsiasi metodo utilizzato dal blocco che restituisce un `bool` valore per determinare se un messaggio offerto deve essere accettato.|
+|`type`|Alias di tipo per `T`.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[~ Distruttore ITarget](#dtor)|Elimina definitivamente il `ITarget` oggetto.|
+|[Distruttore ~ ITarget](#dtor)|Elimina definitivamente l'oggetto `ITarget`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[propagate](#propagate)|Quando sottoposto a override in una classe derivata, passa in modo asincrono un messaggio da un blocco di origine per questo blocco di destinazione.|
-|[send](#send)|Quando sottoposto a override in una classe derivata, passa in modo sincrono un messaggio al blocco di destinazione.|
-|[supports_anonymous_source](#supports_anonymous_source)|Quando viene sottoposto a override in una classe derivata, restituisce true o false a seconda che il blocco dei messaggi accetti messaggi offerti da un'origine che non è collegata a esso. Se il metodo sottoposto a override restituisce **true**, la destinazione non è possibile posticipare un messaggio offerto, in quanto l'origine sia identificata nel relativo Registro di sistema collegamento sourse richiede l'utilizzo di un messaggio posticipato in un secondo momento.|
+|[propagare](#propagate)|Quando sottoposto a override in una classe derivata, passa in modo asincrono un messaggio da un blocco di origine a questo blocco di destinazione.|
+|[send](#send)|Quando ne viene eseguito l'override in una classe derivata, passa in modo sincrono un messaggio al blocco di destinazione.|
+|[supports_anonymous_source](#supports_anonymous_source)|Quando viene sottoposto a override in una classe derivata, restituisce true o false a seconda che il blocco dei messaggi accetti messaggi offerti da un'origine che non è collegata a esso. Se il metodo sottoposto a override restituisce **true**, la destinazione non può posticipare un messaggio offerto, in quanto l'uso di un messaggio posticipato in un secondo momento richiede l'identificazione dell'origine nel registro di sistema dei collegamenti di origine.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[link_source](#link_source)|Quando sottoposto a override in una classe derivata, è possibile collegare un blocco di origine specificato a questo `ITarget` blocco.|
-|[unlink_source](#unlink_source)|Quando sottoposto a override in una classe derivata, consente di scollegare un blocco di origine specificato da questo `ITarget` blocco.|
-|[unlink_sources](#unlink_sources)|Quando sottoposto a override in una classe derivata, consente di scollegare tutti i blocchi di origine dal `ITarget` blocco.|
+|[link_source](#link_source)|Quando sottoposto a override in una classe derivata, collega un blocco di origine specificato a questo blocco di `ITarget`.|
+|[unlink_source](#unlink_source)|Quando sottoposto a override in una classe derivata, scollega un blocco di origine specificato da questo blocco di `ITarget`.|
+|[unlink_sources](#unlink_sources)|Quando sottoposto a override in una classe derivata, scollega tutti i blocchi di origine dal blocco `ITarget`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).
 
@@ -81,36 +81,36 @@ Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="dtor"></a> ~ITarget
+## <a name="dtor"></a>~ ITarget
 
-Elimina definitivamente il `ITarget` oggetto.
+Elimina definitivamente l'oggetto `ITarget`.
 
-```
+```cpp
 virtual ~ITarget();
 ```
 
-##  <a name="link_source"></a> link_source
+## <a name="link_source"></a>link_source
 
-Quando sottoposto a override in una classe derivata, è possibile collegare un blocco di origine specificato a questo `ITarget` blocco.
+Quando sottoposto a override in una classe derivata, collega un blocco di origine specificato a questo blocco di `ITarget`.
 
-```
+```cpp
 virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_PSource*<br/>
-Il `ISource` bloccare da collegare a questa `ITarget` blocco.
+Blocco di `ISource` collegato a questo blocco di `ITarget`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione non deve essere chiamata direttamente su un `ITarget` blocco. I blocchi devono essere connesse tra loro tramite il `link_target` metodo sul `ISource` blocchi, che verranno richiamato il `link_source` metodo nella destinazione corrispondente.
+Questa funzione non deve essere chiamata direttamente in un blocco `ITarget`. I blocchi devono essere collegati insieme usando il metodo `link_target` nei blocchi `ISource`, che richiameranno il metodo `link_source` sulla destinazione corrispondente.
 
-##  <a name="propagate"></a> propagate
+## <a name="propagate"></a>propagare
 
-Quando sottoposto a override in una classe derivata, passa in modo asincrono un messaggio da un blocco di origine per questo blocco di destinazione.
+Quando sottoposto a override in una classe derivata, passa in modo asincrono un messaggio da un blocco di origine a questo blocco di destinazione.
 
-```
+```cpp
 virtual message_status propagate(
     _Inout_opt_ message<T>* _PMessage,
     _Inout_opt_ ISource<T>* _PSource) = 0;
@@ -122,21 +122,21 @@ virtual message_status propagate(
 Puntatore all'oggetto `message`.
 
 *_PSource*<br/>
-Un puntatore al blocco di origine offrendo il messaggio.
+Puntatore al blocco di origine che offre il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [message_status](concurrency-namespace-enums.md) indicazione di cosa ha deciso di destinazione a che fare con il messaggio.
+[Message_status](concurrency-namespace-enums.md) indicazione della decisione da parte della destinazione con il messaggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il metodo genera un' [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione se il valore di `_PMessage` o `_PSource` parametro è `NULL`.
+Il metodo genera un'eccezione [invalid_argument](../../../standard-library/invalid-argument-class.md) se il parametro `_PMessage` o `_PSource` è `NULL`.
 
-##  <a name="send"></a> Invia
+## <a name="send"></a>Invia
 
-Quando sottoposto a override in una classe derivata, passa in modo sincrono un messaggio al blocco di destinazione.
+Quando ne viene eseguito l'override in una classe derivata, passa in modo sincrono un messaggio al blocco di destinazione.
 
-```
+```cpp
 virtual message_status send(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource) = 0;
@@ -148,54 +148,54 @@ virtual message_status send(
 Puntatore all'oggetto `message`.
 
 *_PSource*<br/>
-Un puntatore al blocco di origine offrendo il messaggio.
+Puntatore al blocco di origine che offre il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [message_status](concurrency-namespace-enums.md) indicazione di cosa ha deciso di destinazione a che fare con il messaggio.
+[Message_status](concurrency-namespace-enums.md) indicazione della decisione da parte della destinazione con il messaggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il metodo genera un' [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione se il valore di `_PMessage` o `_PSource` parametro è `NULL`.
+Il metodo genera un'eccezione [invalid_argument](../../../standard-library/invalid-argument-class.md) se il parametro `_PMessage` o `_PSource` è `NULL`.
 
-Uso di `send` metodo all'esterno di inizio del messaggio e per propagare i messaggi all'interno di una rete è un'operazione rischiosa e può causare un deadlock.
+L'utilizzo del metodo `send` al di fuori dell'avvio del messaggio e della propagazione dei messaggi all'interno di una rete è pericoloso e può causare un deadlock.
 
-Quando `send` termina, il messaggio sia già accettato e trasferito nel blocco di destinazione o è stato rifiutato dalla destinazione.
+Quando `send` restituisce, il messaggio è già stato accettato e trasferito nel blocco di destinazione oppure è stato rifiutato dalla destinazione.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Quando viene sottoposto a override in una classe derivata, restituisce true o false a seconda che il blocco dei messaggi accetti messaggi offerti da un'origine che non è collegata a esso. Se il metodo sottoposto a override restituisce **true**, la destinazione non è possibile posticipare un messaggio offerto, in quanto l'origine sia identificata nel relativo Registro di sistema collegamento sourse richiede l'utilizzo di un messaggio posticipato in un secondo momento.
+Quando viene sottoposto a override in una classe derivata, restituisce true o false a seconda che il blocco dei messaggi accetti messaggi offerti da un'origine che non è collegata a esso. Se il metodo sottoposto a override restituisce **true**, la destinazione non può posticipare un messaggio offerto, in quanto l'uso di un messaggio posticipato in un secondo momento richiede l'identificazione dell'origine nel registro di collegamento Soure.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il blocco può accettare messaggi da un'origine che non è collegata a esso **false** in caso contrario.
+**true** se il blocco può accettare il messaggio da un'origine non collegata a **false** in caso contrario.
 
-##  <a name="unlink_source"></a> unlink_source
+## <a name="unlink_source"></a>unlink_source
 
-Quando sottoposto a override in una classe derivata, consente di scollegare un blocco di origine specificato da questo `ITarget` blocco.
+Quando sottoposto a override in una classe derivata, scollega un blocco di origine specificato da questo blocco di `ITarget`.
 
-```
+```cpp
 virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *_PSource*<br/>
-Il `ISource` bloccare da scollegare dal `ITarget` blocco.
+Il blocco di `ISource` viene scollegato da questo blocco di `ITarget`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione non deve essere chiamata direttamente su un `ITarget` blocco. Blocchi devono essere disconnesso utilizzando il `unlink_target` o `unlink_targets` metodi sul `ISource` blocchi, che verranno richiamato il `unlink_source` metodo nella destinazione corrispondente.
+Questa funzione non deve essere chiamata direttamente in un blocco `ITarget`. I blocchi devono essere disconnessi usando i metodi `unlink_target` o `unlink_targets` sui blocchi `ISource`, che richiameranno il metodo `unlink_source` sulla destinazione corrispondente.
 
-##  <a name="unlink_sources"></a> unlink_sources
+## <a name="unlink_sources"></a>unlink_sources
 
-Quando sottoposto a override in una classe derivata, consente di scollegare tutti i blocchi di origine dal `ITarget` blocco.
+Quando sottoposto a override in una classe derivata, scollega tutti i blocchi di origine dal blocco `ITarget`.
 
-```
+```cpp
 virtual void unlink_sources() = 0;
 ```
 
