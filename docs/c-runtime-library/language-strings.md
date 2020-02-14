@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
 ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69500067"
@@ -74,7 +74,7 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |spagnolo el salvador|es-SV|
 |spagnolo guatemala|es-GT|
 |spagnolo honduras|es-HN|
-|spagnolo messicano|es-MX|
+|spagnolo (Messico)|es-MX|
 |spagnolo moderno|es-ES|
 |spagnolo nicaragua|es-NI|
 |spagnolo panama|es-PA|
