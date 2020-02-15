@@ -1,90 +1,88 @@
 ---
 title: Riferimenti alla riga di comando dell'assembler ARM
-ms.date: 08/30/2018
+description: Guida di riferimento per le opzioni della riga di comando dell'assembler ARM Microsoft.
+ms.date: 02/09/2020
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-ms.openlocfilehash: f49b59a81fbe5f11c0f219d1e1fe83a4ee811c7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63273e8d21e7a28574ec79d62c15f29ee59cd50
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62162135"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257379"
 ---
 # <a name="arm-assembler-command-line-reference"></a>Riferimenti alla riga di comando dell'assembler ARM
 
-Questo articolo fornisce informazioni della riga di comando dell'assembler ARM Microsoft, *armasm*, che viene compilato in linguaggio assembly ARMv7 Thumb nell'implementazione Microsoft del File di formato COFF (Common Object). Il linker può collegare codice COFF con codice oggetto generato dall'assembler ARM o dal compilatore C, insieme alle librerie di oggetti creati da Gestione librerie.
+Questo articolo fornisce informazioni sulla riga di comando relative all'assembler ARM Microsoft, **Armas**. **armast** assembla il linguaggio assembly Thumb ARMv7 nell'implementazione Microsoft del formato COFF (Common Object File Format). Il linker può collegare oggetti di codice COFF prodotti sia dall'assembler ARM che dal compilatore C. Può collegarsi insieme alle librerie di oggetti create dal bibliotecario.
 
 ## <a name="syntax"></a>Sintassi
 
-> **armasm** [*options*] *sourcefile* *objectfile*
-> **armasm** [*options*] **-o** *objectfile* *sourcefile*
+> **`armasm`** [*opzioni*] *source_file* *object_file*\
+> **`armasm`** [*opzioni*] **`-o`** *object_file* *source_file*
 
 ### <a name="parameters"></a>Parametri
 
-*options*<br/>
-Una combinazione di zero o più delle operazioni seguenti:
+*opzioni*\
+Una combinazione di zero o più delle opzioni seguenti:
 
-- **-errori** *nomefile*<br/>
-   Reindirizzare i messaggi di errore e avviso per *filename*.
+- **`-errors`** *filename*\
+   Reindirizza i messaggi di errore e di avviso al *nome file*.
 
-- **-i** *dir*[**;**<em>dir</em>]<br/>
-   Aggiungere la directory specificata al percorso di ricerca di inclusione.
+- *dir*`-i`[ **`;`** <em>dir</em>] \
+   Aggiungere le directory specificate al percorso di ricerca di inclusione.
 
-- **-predefinire** *(direttiva)*<br/>
-   Specificare una direttiva di impostare, SETL o set di predefinire un simbolo.<br/>
-   Esempio: **armasm.exe-predefinire source.asm "Impostare 150 conteggio"**<br/>
-   Per altre informazioni, vedere la [del compilatore ARM armasm Guida di riferimento](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
+- **`-predefine`** *direttiva*\
+   Specificare una direttiva SETA, SETL o set per predefinire un simbolo. \
+   Esempio: `armasm.exe -predefine "COUNT SETA 150" source.asm`\
+   Per ulteriori informazioni, vedere la [Guida di riferimento per il compilatore ARM](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
 
-- **-nowarn**<br/>
+- **`-nowarn`**\
    Disabilitare tutti i messaggi di avviso.
 
-- **-ignore** *warning*<br/>
-   Disabilitare l'avviso specificato. Per i valori possibili, vedere la sezione sugli avvisi.
+- *avviso*`-ignore`\
+   Disabilitare l'avviso specificato. Per i valori possibili, vedere la sezione relativa agli avvisi.
 
-- **-help**<br/>
-   Stampa il messaggio della Guida della riga di comando.
+- **`-help`**\
+   Stampare il messaggio della guida della riga di comando.
 
-- **-machine** *machine*<br/>
-   Specificare il tipo di computer da impostare nell'intestazione del PE.  I possibili valori per *machine* sono:<br/>
-   **ARM**: imposta il tipo di computer su IMAGE_FILE_MACHINE_ARMNT. Questa è l'impostazione predefinita.<br/>
-   **THUMB**: imposta il tipo di computer su IMAGE_FILE_MACHINE_THUMB.
+- *computer*`-machine`\
+   Specificare il tipo di computer da impostare nell'intestazione PE.  I valori possibili per il *computer* sono: \
+   **ARM**: imposta il tipo di computer su IMAGE_FILE_MACHINE_ARMNT. Questa opzione è l'impostazione predefinita. \
+   **Thumb**: imposta il tipo di computer su IMAGE_FILE_MACHINE_THUMB.
 
-- **-oldit**<br/>
-   Genera stile ARMv7 blocchi IT.  Per impostazione predefinita, compatibile con ARMv8 vengono generati blocchi IT.
+- **`-oldit`**\
+   Genera blocchi IT di tipo ARMv7.  Per impostazione predefinita, vengono generati blocchi IT compatibili con ARMv8.
 
-- **-via** *filename*<br/>
-   Argomenti della riga di comando aggiuntivi da leggere *filename*.
+- **`-via`** *filename*\
+   Leggere argomenti aggiuntivi della riga di comando dal *nome file*.
 
-- **-16**<br/>
-   Assemblare origine come istruzioni Thumb 16 bit.  Questa è l'impostazione predefinita.
+- **`-16`**\
+   Assemblare l'origine come istruzioni Thumb a 16 bit.  Questa opzione è l'impostazione predefinita.
 
-- **-32**<br/>
-   Assemblare origine come istruzioni ARM a 32 bit.
+- **`-32`**\
+   Assemblare l'origine come istruzioni ARM a 32 bit.
 
-- **-g**<br/>
+- **`-g`**\
    Genera informazioni di debug.
 
-- **-errorReport:** *option*<br/>
-   Specificare la modalità interna dell'assembler gli errori vengono segnalati a Microsoft.  I possibili valori per *opzione* sono:<br/>
-   **Nessuno**: non inviare rapporti.<br/>
-   **prompt dei comandi**, richiedere all'utente per inviarle immediatamente.<br/>
-   **coda**, richiedere all'utente di inviare segnalazioni al successivo accesso amministratore. Questa è l'impostazione predefinita.<br/>
-   **inviare**: inviare automaticamente report.
+- *opzione*`-errorReport:`\
+   Questa opzione è deprecata. A partire da Windows Vista, la segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-*sourcefile*<br/>
-Il nome del file di origine.
+*source_file*\
+Nome del file di origine.
 
-*objectfile*<br/>
-Il nome del file oggetto (output).
+*object_file*\
+Nome del file oggetto (output).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Nell'esempio seguente viene illustrato come utilizzare armasm in uno scenario tipico. Prima di tutto usare armasm per creare un file di origine (asm) in linguaggio assembly in un file oggetto (obj). Quindi, usare il compilatore C della riga di comando di CL per compilare un file di origine (c) e anche specificare l'opzione del linker di collegare file oggetto ARM.
+Nell'esempio seguente viene illustrato come utilizzare il metodo Armas in uno scenario tipico. Per prima cosa, usare armaso per compilare un file di origine (con estensione ASM) del linguaggio assembly in un file oggetto (con estensione obj). Usare quindi il compilatore C della riga di comando CL per compilare un file di origine (con estensione C) e specificare anche l'opzione del linker per collegare il file oggetto ARM.
 
-**armasm myasmcode.asm -o myasmcode.obj**
-
-**cl myccode.c /link myasmcode.obj**
+```cmd
+armasm myasmcode.asm -o myasmcode.obj
+cl myccode.c /link myasmcode.obj
+```
 
 ## <a name="see-also"></a>Vedere anche
 
-[Messaggi di diagnostica assembler ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>
-[Direttive assembly ARM](../../assembler/arm/arm-assembler-directives.md)<br/>
+[Messaggi di diagnostica dell'assembler ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)\
+[Direttive assembler ARM](../../assembler/arm/arm-assembler-directives.md)

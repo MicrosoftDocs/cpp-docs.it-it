@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference method
 ms.assetid: ab85a9fb-c628-4761-9a5f-a0231fad7690
-ms.openlocfilehash: ccd944e433e332ddd75f8a26e8db919c26d6e35b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a9a28b37f8fa175d5768b215f5eca5183d31708b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453311"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257871"
 ---
 # <a name="container-classreference"></a>Container Class::reference
 
@@ -20,14 +20,13 @@ Descrive un oggetto che può essere usato come riferimento a un elemento della s
 
 ## <a name="syntax"></a>Sintassi
 
-```
-
+```cpp
 typedef T2 reference;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Viene descritta come un sinonimo del tipo `T2` non specificato (in genere `Alloc::reference`). È possibile eseguire il `reference` cast di un oggetto di tipo a un oggetto di tipo [const_reference](../standard-library/container-class-const-reference.md).
+Viene descritta come un sinonimo del tipo non specificato `T2` (in genere `Alloc::reference`). È possibile eseguire il cast di un oggetto di tipo `reference` a un oggetto di tipo [const_reference](../standard-library/container-class-const-reference.md).
 
 ## <a name="see-also"></a>Vedere anche
 

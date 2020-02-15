@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449034"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257806"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -32,9 +32,9 @@ Dichiara gli oggetti che controllano la lettura e la scrittura nei flussi standa
 ```
 
 > [!NOTE]
-> La \<libreria > iostream utilizza le `#include <ios>`istruzioni `#include <streambuf>`, `#include <istream>`, e `#include <ostream>` .
+> La libreria > \<iostream utilizza le istruzioni `#include <ios>`, `#include <streambuf>`, `#include <istream>`e `#include <ostream>`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Gli oggetti rientrano in due gruppi:
 
@@ -44,7 +44,7 @@ Gli oggetti rientrano in due gruppi:
 
 Quando si eseguono determinate operazioni in un flusso, ad esempio l'input standard, non è possibile eseguire operazioni di un orientamento diverso nello stesso flusso. Pertanto, un programma non può funzionare in modo interscambiabile sia per [cin](#cin) che per [wcin](#wcin), ad esempio.
 
-Tutti gli oggetti dichiarati in questa intestazione condividono una particolare proprietà: è possibile presupporre che siano costruiti prima di qualsiasi oggetto statico definito, in un'unità \<di conversione che include iostream >. Allo stesso modo, si può presupporre che questi oggetti non vengono eliminati definitivamente prima dei distruttori per gli oggetti statici definiti. I flussi di output vengono, tuttavia, scaricati durante la chiusura del programma. Di conseguenza, è possibile leggere o scrivere nei flussi standard prima dell'avvio del programma e dopo la chiusura dello stesso.
+Tutti gli oggetti dichiarati in questa intestazione condividono una particolare proprietà: è possibile presupporre che siano costruiti prima di qualsiasi oggetto statico definito, in un'unità di conversione che include \<> iostream. Allo stesso modo, si può presupporre che questi oggetti non vengono eliminati definitivamente prima dei distruttori per gli oggetti statici definiti. I flussi di output vengono, tuttavia, scaricati durante la terminazione del programma. Pertanto, è possibile leggere o scrivere nei flussi standard prima dell'avvio del programma e dopo la chiusura del programma.
 
 Questa garanzia non è tuttavia universale. Un costruttore statico potrebbe chiamare una funzione in un'altra unità di conversione. La funzione chiamata non può presumere che gli oggetti dichiarati in questa intestazione siano stati costruiti, dato l'ordine incerto in cui le unità di conversione partecipano alla costruzione statica. Per usare questi oggetti in un contesto di questo tipo, è necessario prima creare un oggetto della classe [ios_base::Init](../standard-library/ios-base-class.md#init).
 
@@ -73,9 +73,9 @@ extern ostream cerr;
 
 Oggetto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
-L'oggetto controlla eventuali inserimenti senza buffer nell'output di errore standard come un flusso di byte. Al termine della creazione dell'oggetto, l'espressione `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) è diversa da zero e `cerr.tie() == &cout`.
+L'oggetto controlla eventuali inserimenti senza buffer nell'output di errore standard come un flusso di byte. Una volta costruito l'oggetto, l'espressione `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) è diverso da zero e `cerr.tie() == &cout`.
 
 #### <a name="example"></a>Esempio
 
@@ -119,13 +119,13 @@ extern istream cin;
 
 Un oggetto [istream](../standard-library/istream-typedefs.md#istream).
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 L'oggetto controlla eventuali estrazioni dall'input standard come un flusso di byte. Al termine della creazione dell'oggetto, la chiamata `cin.`[tie](../standard-library/basic-ios-class.md#tie) restituisce `&`[cout](#cout).
 
 #### <a name="example"></a>Esempio
 
-In questo esempio, `cin` imposta il bit di errore sul flusso quando si trova in caratteri non numerici. Il programma cancella il bit di errore e rimuove il carattere non valido dal flusso per continuare.
+In questo esempio `cin` imposta il bit di errore sul flusso quando si trova in caratteri non numerici. Il programma cancella il bit di errore e rimuove il carattere non valido dal flusso per continuare.
 
 ```cpp
 // iostream_cin.cpp
@@ -170,7 +170,7 @@ extern ostream clog;
 
 Oggetto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 L'oggetto controlla eventuali inserimenti con buffer nell'output di errore standard come un flusso di byte.
 
@@ -190,7 +190,7 @@ extern ostream cout;
 
 Oggetto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 L'oggetto controlla eventuali inserimenti nell'output standard come un flusso di byte.
 
@@ -210,9 +210,9 @@ extern wostream wcerr;
 
 Oggetto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
-L'oggetto controlla gli inserimenti senza buffer nell'output di errore standard come un flusso wide. Al termine della creazione dell'oggetto, l'espressione `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) è diversa da zero.
+L'oggetto controlla gli inserimenti senza buffer nell'output di errore standard come un flusso wide. Una volta costruito l'oggetto, l'espressione `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) è diverso da zero.
 
 #### <a name="example"></a>Esempio
 
@@ -230,7 +230,7 @@ extern wistream wcin;
 
 Oggetto [wistream](../standard-library/istream-typedefs.md#wistream).
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 L'oggetto controlla eventuali estrazioni dall'input standard come un flusso wide. Al termine della creazione dell'oggetto, la chiamata `wcin.`[tie](../standard-library/basic-ios-class.md#tie) restituisce `&`[wcout](#wcout).
 
@@ -250,7 +250,7 @@ extern wostream wclog;
 
 Oggetto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 L'oggetto controlla eventuali inserimenti con buffer nell'output di errore standard come un flusso wide.
 
@@ -270,7 +270,7 @@ extern wostream wcout;
 
 Oggetto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 L'oggetto controlla gli inserimenti nell'output standard come flusso wide.
 
@@ -280,7 +280,7 @@ Vedere [cerr](#cerr) per un esempio d'uso di `wcout`.
 
 Il cast delle istanze `CString` in un'istruzione `wcout` deve essere eseguite in `const wchar_t*`, come mostrato nel seguente esempio.
 
-```
+```cpp
 CString cs("meow");
 
 wcout <<(const wchar_t*) cs <<endl;
@@ -290,7 +290,7 @@ Per altre informazioni, vedere [Operazioni CString di base](../atl-mfc-shared/ba
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\ (Riferimento file di intestazione)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
-[Convenzioni di iostream](../standard-library/iostreams-conventions.md)
+[iostreams Conventions](../standard-library/iostreams-conventions.md) (Convenzioni di iostream)

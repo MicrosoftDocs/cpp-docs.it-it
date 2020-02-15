@@ -1,19 +1,20 @@
 ---
 title: Opzioni del compilatore elencate per categoria
-ms.date: 01/08/2020
+description: Elenco di riferimento per categoria delle opzioni della rigaC++ di comando di Microsoft C/Compiler.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034584"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257715"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opzioni del compilatore elencate per categoria
 
-In questo articolo viene fornito un elenco organizzato per categorie delle opzioni del compilatore. Per un elenco alfabetico, vedere [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
+In questo articolo viene fornito un elenco organizzato per categorie delle opzioni del compilatore. Per un elenco alfabetico, vedere [Opzioni del compilatore elencate in ordine alfabetico](compiler-options-listed-alphabetically.md).
 
 ## <a name="optimization"></a>Optimization
 
@@ -23,7 +24,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Effettua creazioni in base alla velocità del codice.|
 |[/Ob](ob-inline-function-expansion.md)|Controlla l'espansione inline.|
 |[/Od](od-disable-debug.md)|Disabilita l'ottimizzazione.|
-|[/Og](og-global-optimizations.md)|Deprecato. Usa le ottimizzazioni globali.|
+|[/Og](og-global-optimizations.md)|Operazione deprecata. Usa le ottimizzazioni globali.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Genera funzioni intrinseche.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per dimensione codice.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per velocità codice.|
@@ -41,12 +42,12 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/fp](fp-specify-floating-point-behavior.md)|Specifica il comportamento a virgola mobile.|
 |[/GA](ga-optimize-for-windows-application.md)|Ottimizza per le applicazioni Windows.|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|Usa la convezione di chiamata `__cdecl` . (solo x86)|
-|[/Ge](ge-enable-stack-probes.md)|Deprecato. Attiva le ricerche dello stack.|
+|[/Ge](ge-enable-stack-probes.md)|Operazione deprecata. Attiva le ricerche dello stack.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Attiva la condivisione delle stringhe.|
 |[/Gh](gh-enable-penter-hook-function.md)|Chiama la funzione hook `_penter`.|
 |[/GH](gh-enable-pexit-hook-function.md)|Chiama la funzione hook `_pexit`.|
 |[/GL](gl-whole-program-optimization.md)|Attiva l'ottimizzazione dell'intero programma.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Deprecato. Attiva una ricompilazione minima.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Operazione deprecata. Attiva una ricompilazione minima.|
 |[/GR](gr-enable-run-time-type-information.md)|Attiva RTTI (Run-Time Type Information).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa la convezione di chiamata `__fastcall` . (solo x86)|
 |[/GS](gs-buffer-security-check.md)|Controlla la sicurezza del buffer.|
@@ -55,14 +56,14 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/guard:cf](guard-enable-control-flow-guard.md)|Aggiunge controlli di sicurezza guard del flusso di controllo.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Usa la convezione di chiamata `__vectorcall` . (solo x86 e x64)|
 |[/Gw](gw-optimize-global-data.md)|Abilita l'ottimizzazione dei dati globale per l'intero programma|
-|[/GX](gx-enable-exception-handling.md)|Deprecato. Attiva la gestione sincrona delle eccezioni. Usare [/EH](eh-exception-handling-model.md) .|
+|[/GX](gx-enable-exception-handling.md)|Operazione deprecata. Attiva la gestione sincrona delle eccezioni. Usare [/EH](eh-exception-handling-model.md) .|
 |[/Gy](gy-enable-function-level-linking.md)|Attiva il collegamento a livello di funzione.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Deprecato. Abilita controlli veloci. Equivale a [/RTC1](rtc-run-time-error-checks.md).|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Operazione deprecata. Abilita controlli veloci. Equivale a [/RTC1](rtc-run-time-error-checks.md).|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Usa la convezione di chiamata `__stdcall` . (solo x86)|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Forza la scrittura di parametri passati nei registri nei rispettivi percorsi nello stack quando vengono immesse funzioni. Questa opzione del compilatore è solo per i compilatori x64 (compilazione nativa e incrociata).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crea un'immagine su cui è applicabile una hot patch|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Genera funzioni trascendenti veloci.|
-|[/QIfist](qifist-suppress-ftol.md)|Deprecato. Disattiva la chiamata della funzione helper `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale. (solo x86)|
+|[/QIfist](qifist-suppress-ftol.md)|Operazione deprecata. Disattiva la chiamata della funzione helper `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale. (solo x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Rimuove i comandi `fwait` all'interno dei blocchi `try` .|
 |[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Attenua l'effetto sulle prestazioni dell'aggiornamento di microcodice cui all'errata Intel CCM.|
 |[/Qpar](qpar-auto-parallelizer.md)|Abilita la parallelizzazione automatica dei cicli.|
@@ -88,7 +89,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Fm](fm-name-mapfile.md)|Crea un file MAP.|
 |[/Fo](fo-object-file-name.md)|Crea un file oggetto.|
 |[/Fp](fp-name-dot-pch-file.md)|Specifica un nome del file di intestazione precompilato.|
-|[/FR,/fr](fr-fr-create-dot-sbr-file.md)|Nome generato file del browser SBR.|
+|[/FR,/fr](fr-fr-create-dot-sbr-file.md)|Nome generato *`.sbr`* file del browser.|
 
 ## <a name="preprocessor"></a>Preprocessore
 
@@ -108,11 +109,11 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/u](u-u-undefine-symbols.md)|Rimuove tutte le macro predefinite.|
 |[/X](x-ignore-standard-include-paths.md)|Ignora la directory di inclusione standard.|
 
-## <a name="language"></a>Lingua:
+## <a name="language"></a>Linguaggio
 
 |Opzione|Scopo|
 |------------|-------------|
-|[/constExpr](constexpr-control-constexpr-evaluation.md)|Controllare la valutazione di constExpr in fase di compilazione.|
+|[/constExpr](constexpr-control-constexpr-evaluation.md)|Controllare la valutazione di **constExpr** in fase di compilazione.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Attiva [#pragma omp](../../preprocessor/omp.md) nel codice sorgente.|
 |[/vd](vd-disable-construction-displacements.md)|Disabilita o abilita i membri della classe `vtordisp` nascosti.|
 |[/vmb](vmb-vmg-representation-method.md)|Usa la base migliore per i puntatori ai membri.|
@@ -123,12 +124,12 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Z7](z7-zi-zi-debug-information-format.md)|Genera informazioni di debug compatibili con C 7,0.|
 |[/Za](za-ze-disable-language-extensions.md)|Disabilita le estensioni del linguaggio C89.|
 |[/Zc](zc-conformance.md)|Specifica il comportamento standard in [/Ze](za-ze-disable-language-extensions.md).|
-|[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Abilita le estensioni del linguaggio C89.|
+|[/Ze](za-ze-disable-language-extensions.md)|Operazione deprecata. Abilita le estensioni del linguaggio C89.|
 |[/ZF](zf.md)|Migliora il tempo di generazione PDB nelle compilazioni parallele.|
 |[/ZH](zh.md)|Specifica MD5, SHA-1 o SHA-256 per i checksum nelle informazioni di debug.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Include informazioni di debug in un database di programma compatibile con Modifica e continuazione. (solo x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera informazioni di debug complete.|
-|[/Zl](zl-omit-default-library-name.md)|Rimuove il nome di libreria predefinito dal file obj.|
+|[/Zl](zl-omit-default-library-name.md)|Rimuove il nome di libreria predefinito dal file di *`.obj`* .|
 |[/ZP](zp-struct-member-alignment.md) *n*|Comprime i membri della struttura.|
 |[/Zs](zs-syntax-check-only.md)|Controlla solo la sintassi.|
 |[/ZW](zw-windows-runtime-compilation.md)|Produce un file di output da eseguire nel Windows Runtime.|
@@ -142,10 +143,10 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/LDd](md-mt-ld-use-run-time-library.md)|Crea una libreria a collegamento dinamico di debug.|
 |[/link](link-pass-options-to-linker.md)|Passa l'opzione specificata a LINK.|
 |[/LN](ln-create-msil-module.md)|Crea un modulo MSIL|
-|[/MD](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare una DLL con multithreading, usando MSVCRT.lib.|
-|[/MDd](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare una DLL con multithreading di debug, usando MSVCRTD.lib.|
-|[/MT](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare un file eseguibile con multithreading, usando LIBCMT.lib.|
-|[/MTd](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare un file eseguibile con multithreading di debug, usando LIBCMTD.lib.|
+|[/MD](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare una DLL con multithreading usando *Msvcrt. lib*.|
+|[/MDd](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare una DLL con multithreading di debug, usando *msvcrtd. lib*.|
+|[/MT](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare un file eseguibile con multithreading, usando *LIBCMT. lib*.|
+|[/MTd](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare un file eseguibile con multithreading di debug usando *libcmtd. lib*.|
 
 ## <a name="miscellaneous"></a>Varie
 
@@ -156,11 +157,11 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/analyze](analyze-code-analysis.md)|Attiva l'analisi del codice|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Aumenta il numero di sezioni indirizzabili in un file con estensione obj.|
 |[/c](c-compile-without-linking.md)|Effettua la compilazione senza collegamento.|
-|[/cgthreads](cgthreads-code-generation-threads.md)|Specifica il numero di thread cl.exe da usare per l'ottimizzazione e la generazione di codice.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Consente di fornire informazioni sugli errori interni del compilatore (ICE) direttamente al team C++ Microsoft.|
-|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Visualizza il percorso completo dei file di codice sorgente passati a cl.exe nel testo contenente informazioni di diagnostica.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|Forza scritture nel file del database di programma (PDB) per la serializzazione tramite MSPDBSRV.EXE.|
-|[/H](h-restrict-length-of-external-names.md)|Deprecato. Limita la lunghezza dei nomi esterni (pubblici).|
+|[/cgthreads](cgthreads-code-generation-threads.md)|Specifica il numero di thread *CL. exe* da usare per l'ottimizzazione e la generazione di codice.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Operazione deprecata. La segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Visualizza il percorso completo dei file di codice sorgente passati a *CL. exe* nel testo di diagnostica.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Forza le scritture nel file PDB da serializzare tramite *mspdbsrv. File EXE*.|
+|[/H](h-restrict-length-of-external-names.md)|Operazione deprecata. Limita la lunghezza dei nomi esterni (pubblici).|
 |[/HELP](help-compiler-command-line-help.md)|Elenca le opzioni del compilatore.|
 |[/J](j-default-char-type-is-unsigned.md)|Modifica il tipo `char` predefinito.|
 |[/JMC](jmc.md)|Supporta il C++ debug Just My Code nativo.|
@@ -173,7 +174,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Specifica che tutti i file di origine sono C.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Specifica un file di origine C++.|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Specifica che tutti i file C++di origine sono.|
-|[/V](v-version-number.md)|Deprecato. Imposta la stringa di versione.|
+|[/V](v-version-number.md)|Operazione deprecata. Imposta la stringa di versione.|
 |[/w](compiler-option-warning-level.md)|Disabilita tutti gli avvisi.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Imposta il livello di avviso di output.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Imposta il livello di avviso per l'avviso specificato.|
@@ -184,8 +185,8 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/wo](compiler-option-warning-level.md)|Visualizza l'avviso specificato una sola volta.|
 |[/Wv](compiler-option-warning-level.md)|Disattiva gli avvisi introdotti dalle versioni più recenti del compilatore.|
 |[/WX](compiler-option-warning-level.md)|Considera gli avvisi come errori.|
-|[/Yc](yc-create-precompiled-header-file.md)|Creare. File PCH.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|Deprecato. Inserisce informazioni di debug complete in tutti i file oggetto. Usare [/Zi](z7-zi-zi-debug-information-format.md) .|
+|[/Yc](yc-create-precompiled-header-file.md)|Creare *`.PCH`* file.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|Operazione deprecata. Inserisce informazioni di debug complete in tutti i file oggetto. Usare [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Inserisce un riferimento PCH durante la creazione di una libreria di debug.|
 |[/Yu](yu-use-precompiled-header-file.md)|Usa un file di intestazione precompilato durante la compilazione.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Ignora tutte le altre opzioni del compilatore dell'intestazione precompilata nella generazione corrente.|
@@ -201,7 +202,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 
 ## <a name="experimental-options"></a>Opzioni sperimentali
 
-Le opzioni sperimentali possono essere supportate solo da determinate versioni del compilatore e possono comportarsi in modo diverso nelle diverse versioni del compilatore. Spesso la documentazione migliore o solo per le opzioni sperimentali è disponibile nel [Blog C++ del team Microsoft](https://devblogs.microsoft.com/cppblog/).
+Le opzioni sperimentali possono essere supportate solo da determinate versioni del compilatore. Possono anche comportarsi in modo diverso nelle diverse versioni del compilatore. Spesso la documentazione migliore o solo per le opzioni sperimentali è disponibile nel [Blog C++ del team Microsoft](https://devblogs.microsoft.com/cppblog/).
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -212,24 +213,25 @@ Le opzioni sperimentali possono essere supportate solo da determinate versioni d
 
 |Opzione|Scopo|
 |------------|-------------|
-|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Deprecato. In alternativa, usare [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
-|[/Fr](fr-fr-create-dot-sbr-file.md)|Deprecato. Crea un file informazioni di visualizzazione senza variabili locali.|
-|[/Ge](ge-enable-stack-probes.md)|Deprecato. Attiva le ricerche dello stack. Attivazione per impostazione predefinita.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Deprecato. Attiva una ricompilazione minima.|
-|[/GX](gx-enable-exception-handling.md)|Deprecato. Attiva la gestione sincrona delle eccezioni. Usare [/EH](eh-exception-handling-model.md) .|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Deprecato. Abilita controlli veloci. Usare [/RTC1](rtc-run-time-error-checks.md) .|
-|[/H](h-restrict-length-of-external-names.md)|Deprecato. Limita la lunghezza dei nomi esterni (pubblici).|
-|[/Og](og-global-optimizations.md)|Deprecato. Usa le ottimizzazioni globali.|
-|[/QIfist](qifist-suppress-ftol.md)|Deprecato. Usato in passato per specificare come eseguire la conversione da un tipo a virgola mobile a un tipo integrale.|
-|[/V](v-version-number.md)|Deprecato. Imposta la stringa di versione del file OBJ.|
+|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Operazione deprecata. In alternativa, usare [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Operazione deprecata. La segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+|[/Fr](fr-fr-create-dot-sbr-file.md)|Operazione deprecata. Crea un file informazioni di visualizzazione senza variabili locali.|
+|[/Ge](ge-enable-stack-probes.md)|Operazione deprecata. Attiva le ricerche dello stack. Attivazione per impostazione predefinita.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Operazione deprecata. Attiva una ricompilazione minima.|
+|[/GX](gx-enable-exception-handling.md)|Operazione deprecata. Attiva la gestione sincrona delle eccezioni. Usare [/EH](eh-exception-handling-model.md) .|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Operazione deprecata. Abilita controlli veloci. Usare [/RTC1](rtc-run-time-error-checks.md) .|
+|[/H](h-restrict-length-of-external-names.md)|Operazione deprecata. Limita la lunghezza dei nomi esterni (pubblici).|
+|[/Og](og-global-optimizations.md)|Operazione deprecata. Usa le ottimizzazioni globali.|
+|[/QIfist](qifist-suppress-ftol.md)|Operazione deprecata. Usato in passato per specificare come eseguire la conversione da un tipo a virgola mobile a un tipo integrale.|
+|[/V](v-version-number.md)|Operazione deprecata. Imposta la stringa di versione del file di *`.obj`* .|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Rileva i problemi di portabilità a 64 bit.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|Deprecato. Inserisce informazioni di debug complete in tutti i file oggetto. Usare [/Zi](z7-zi-zi-debug-information-format.md) .|
-|[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Deprecato. Disattiva la conformità nell'ambito di un ciclo For.|
-|[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Attiva le estensioni del linguaggio.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|Operazione deprecata. Inserisce informazioni di debug complete in tutti i file oggetto. Usare [/Zi](z7-zi-zi-debug-information-format.md) .|
+|[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Operazione deprecata. Disattiva la conformità nell'ambito di un ciclo For.|
+|[/Ze](za-ze-disable-language-extensions.md)|Operazione deprecata. Attiva le estensioni del linguaggio.|
 |[/Zg](zg-generate-function-prototypes.md)|Rimosso in Visual Studio 2015. Genera prototipi di funzione.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)<br/>
-[Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[C/C++ compilazione di riferimenti](c-cpp-building-reference.md)\
+[Opzioni del compilatore MSVC](compiler-options.md)\
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

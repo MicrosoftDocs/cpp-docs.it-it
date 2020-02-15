@@ -1,6 +1,7 @@
 ---
 title: /ERRORREPORT (dumpbin.exe)
-ms.date: 11/04/2016
+description: Riferimento per l'opzione della riga di comando/ERRORREPORT dell'utilità Microsoft DUMPBIN.
+ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
 helpviewer_keywords:
@@ -8,24 +9,25 @@ helpviewer_keywords:
 - ERRORREPORT dumpbin option
 - /ERRORREPORT dumpbin option
 ms.assetid: 51178c43-4f95-4fda-8f97-50a257d1c948
-ms.openlocfilehash: 02c8ee07264c21669c3adad2cf9bd8f57a13fc99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 665b4b1e7c01de4a1fcd848a9e6b36ddbf2944c9
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293002"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257676"
 ---
 # <a name="errorreport-dumpbinexe"></a>/ERRORREPORT (dumpbin.exe)
 
-```
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
-```
+> [!NOTE]
+> L'opzione/ERRORREPORT è deprecata. A partire da Windows Vista, la segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-## <a name="remarks"></a>Note
+## <a name="syntax"></a>Sintassi
 
-Se dumpbin.exe ha esito negativo in fase di esecuzione, è possibile usare **/ERRORREPORT** per inviare informazioni a Microsoft informazioni su questi errori interni.
+> **/Errorreport**\[**NONE** \| **prompt** \| **coda** \| **Send** ]
 
-Per altre informazioni sulle **/ERRORREPORT**, vedere [/errorReport (segnala interni del compilatore gli errori)](errorreport-report-internal-compiler-errors.md).
+## <a name="remarks"></a>Osservazioni
+
+Gli argomenti **/errorreport** vengono sottoposti a override dalle impostazioni del servizio Segnalazione errori Windows. DUMPBIN invia automaticamente i report degli errori interni a Microsoft, se la creazione di report è abilitata da Segnalazione errori Windows. Non viene inviato alcun report se disabilitato da Segnalazione errori Windows.
 
 ## <a name="see-also"></a>Vedere anche
 

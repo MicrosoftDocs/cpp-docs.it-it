@@ -1,6 +1,7 @@
 ---
 title: Esecuzione di NMAKE
-ms.date: 10/29/2019
+description: Guida di riferimento per le opzioni della riga di comando di Microsoft NMAKE.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: ed56b7cd69b683caa84f184d9d72e70aac12add3
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144536"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257592"
 ---
 # <a name="running-nmake"></a>Esecuzione di NMAKE
 
@@ -23,7 +24,7 @@ ms.locfileid: "73144536"
 
 > **NMAKE** [*opzione* ...] [*macro* ...] [*destinazioni* ...] [ **\@** _file di comando_ ...]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 NMAKE compila solo le *destinazioni* specificate oppure, quando non viene specificato alcun valore, la prima destinazione nel makefile. La prima destinazione del makefile può essere un [pseudo-destinazione](description-blocks.md#pseudotargets) che compila altre destinazioni. NMAKE usa i makefile specificati con **/f**, oppure se **/f** non è specificato, il file Makefile nella directory corrente. Se non viene specificato alcun makefile, vengono utilizzate le regole di inferenza per compilare le *destinazioni*della riga di comando.
 
@@ -40,7 +41,7 @@ Le opzioni di NMAKE sono descritte nella tabella seguente. Le opzioni sono prece
 | **/C** | Disattiva l'output predefinito, inclusi gli errori o gli avvisi NMAKE non irreversibili, i timestamp e il messaggio di copyright NMAKE. Elimina gli avvisi rilasciati da **/K**. |
 | **/D** | Visualizza i timestamp di ogni destinazione e dipendente valutati e un messaggio quando non esiste una destinazione. Utile con **/p** per il debug di un makefile. Utilizzare `!CMDSWITCHES` per impostare o deselezionare **/d** per una parte di un makefile. |
 | **/E** | Consente alle variabili di ambiente di eseguire l'override delle definizioni delle macro Makefile. |
-| **/errorreport** [ **Nessuna** &#124; &#124; coda &#124; messaggi di richiesta- **invio** ] | Se NMAKE. exe non riesce in fase di esecuzione, è possibile utilizzare **/errorreport** per inviare informazioni a Microsoft su questi errori interni.<br /><br /> Per altre informazioni, vedere [/errorReport (Segnala gli errori interni del compilatore)](errorreport-report-internal-compiler-errors.md). |
+| **/errorreport** [ **Nessuna** &#124; &#124; coda &#124; messaggi di richiesta- **invio** ] | Operazione deprecata. [Segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) impostazioni di gestione rapporti. |
 | **/F** *nomefile* | Specifica il *nome del file* come Makefile. Spazi o tabulazioni possono precedere il *nome del file*. Specificare **/f** una volta per ogni makefile. Per fornire un makefile dall'input standard, specificare un trattino (`-`) per *filename*e l'input della tastiera finale con **F6** o **CTRL + Z**. |
 | **/G** | Consente di visualizzare i makefile inclusi nella direttiva `!INCLUDE`. Per altre informazioni, vedere [direttive di pre-elaborazione di makefile](makefile-preprocessing-directives.md). |
 | **/Help**, **/?** | Visualizza un breve riepilogo della sintassi della riga di comando NMAKE. |

@@ -1,6 +1,7 @@
 ---
 title: /ERRORREPORT (Segnala gli errori interni del linker)
-ms.date: 12/28/2017
+description: Guida di riferimento per le opzioni della riga di comando di Microsoft NMAKE.
+ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
 - VC.Project.VCLinkerTool.ErrorReporting
@@ -9,44 +10,32 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e919d4f7eb59524b9145c8e3e59613e60aef1d2
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271729"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257689"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Segnala gli errori interni del linker)
 
-> **/errorreport:**[ **none** | **prompt** | **coda** | **inviare** ]
+L'opzione **/errorreport** è deprecata. A partire da Windows Vista, la segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-## <a name="arguments"></a>Argomenti
+## <a name="syntax"></a>Sintassi
 
-**none**<br/>
-Le segnalazioni sugli errori interni del compilatore non verranno raccolte o inviate a Microsoft.
+> **/Errorreport:** \[ **none** \| **prompt** \| **coda** \| **Send** ]
 
-**prompt**<br/>
-Chiede di inviare una segnalazione quando si riceve un errore interno del compilatore. **prompt dei comandi** è l'impostazione predefinita quando viene compilata un'applicazione nell'ambiente di sviluppo.
+## <a name="remarks"></a>Osservazioni
 
-**queue**<br/>
-Accoda la segnalazione errori. Quando si accede con privilegi di amministratore, viene visualizzata una finestra in modo che è possibile segnalare gli eventuali errori dall'ultima volta si fosse connessi in (non verrà richiesto di inviare segnalazioni errori più di una volta ogni tre giorni). **coda** è l'impostazione predefinita quando si compila un'applicazione da un prompt dei comandi.
-
-**send**<br/>
-Se reporting è abilitato per le impostazioni del servizio Segnalazione errori Windows, invia automaticamente i report di errori interni del compilatore a Microsoft.
-
-## <a name="remarks"></a>Note
-
-Il **/ERRORREPORT** opzione consente di fornire informazioni sugli errori interni del compilatore direttamente a Microsoft.
-
-L'opzione **/errorreport: Send** invia automaticamente le informazioni sugli errori a Microsoft, se abilitata per le impostazioni del servizio Segnalazione errori Windows.
+Gli argomenti **/errorreport** vengono sottoposti a override dalle impostazioni del servizio Segnalazione errori Windows. Il linker invia automaticamente i report degli errori interni a Microsoft, se la creazione di report è abilitata da Segnalazione errori Windows. Non viene inviato alcun report se disabilitato da Segnalazione errori Windows.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Aprire il **le proprietà di configurazione** > **Linker** > **avanzate** pagina delle proprietà.
+1. Aprire la pagina delle proprietà proprietà di **configurazione** > **linker** > **Avanzate** .
 
-1. Modificare il **segnalazione errori** proprietà.
+1. Modificare la proprietà **segnalazione errori** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
@@ -54,6 +43,5 @@ L'opzione **/errorreport: Send** invia automaticamente le informazioni sugli err
 
 ## <a name="see-also"></a>Vedere anche
 
-[/errorReport (segnala gli errori interni del compilatore)](errorreport-report-internal-compiler-errors.md)<br/>
-[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Riferimento al linker MSVC](linking.md)\
 [Opzioni del linker MSVC](linker-options.md)

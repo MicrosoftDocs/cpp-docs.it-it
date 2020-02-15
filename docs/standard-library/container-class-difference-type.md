@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - difference_type typedef
 ms.assetid: fae52485-d424-484e-9856-13505cfe528c
-ms.openlocfilehash: a62e5094a7994ac70df65f609a1822de9fd24b01
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f685c899593d5483e2c8cd619466eb226e4dc36
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457090"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258198"
 ---
-# <a name="container-classdifferencetype"></a>Container Class::difference_type
+# <a name="container-classdifference_type"></a>Container Class::difference_type
 
 > [!NOTE]
 > Questo argomento è disponibile nella documentazione C++ di Microsoft come esempio non funzionale dei contenitori usati nella libreria C++ standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
@@ -20,14 +20,13 @@ Descrive un oggetto che può rappresentare la differenza tra gli indirizzi di du
 
 ## <a name="syntax"></a>Sintassi
 
-```
-
+```cpp
 typedef T1 difference_type;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Viene descritta come un sinonimo del tipo `T1` non specificato (in genere `Alloc::difference_type`).
+Viene descritta come un sinonimo del tipo non specificato `T1` (in genere `Alloc::difference_type`).
 
 ## <a name="see-also"></a>Vedere anche
 

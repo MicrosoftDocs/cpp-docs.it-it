@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688868"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257104"
 ---
 # <a name="tuple-class"></a>Classe tuple
 
@@ -20,7 +20,7 @@ Esegue il wrapping di una sequenza di elementi di lunghezza fissa.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class tuple {
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
@@ -41,10 +41,10 @@ class tuple {
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *TN*
+\ *TN*
 Tipo dell'ennesimo elemento tupla.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il modello di classe descrive un oggetto che archivia N oggetti di tipo `T1`, `T2`,... `TN`, rispettivamente, dove `0 <= N <= Nmax`. L'ambito di un'istanza di tupla `tuple<T1, T2, ..., TN>` è il numero `N` degli argomenti di modello. L'indice dell'argomento del modello `Ti` e del valore archiviato corrispondente di quel tipo è `i - 1`. Pertanto, mentre i tipi sono numerati da 1 a N in questa documentazione, i valori di indice corrispondenti variano da 0 a N-1.
 
@@ -137,13 +137,13 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *un*
+\ *un*
 Il tipo dell'ennesimo elemento tupla copiato.
 
 \ a *destra*
 Tupla da cui eseguire la copia.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I primi due operatori membro assegnano gli elementi di *right* agli elementi corrispondenti di `*this`. Il terzo operatore membro assegna `right.first` all'elemento in corrispondenza dell'indice 0 di `*this` e `right.second` all'elemento in corrispondenza dell'indice 1. Tutti e tre gli operatori membro restituiscono `*this`.
 
@@ -215,7 +215,7 @@ Tupla i cui elementi devono essere scambiati con quelli della tupla a *destra*.
 \ a *destra*
 Tupla i cui elementi devono essere scambiati con quelli della tupla a *sinistra*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione esegue `left.swap(right)`.
 
@@ -246,13 +246,13 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *un*
+\ *un*
 Il tipo dell'ennesimo elemento tupla copiato.
 
 \ a *destra*
 Tupla da cui eseguire la copia.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo costruttore crea un oggetto i cui elementi sono costruiti per impostazione predefinita.
 

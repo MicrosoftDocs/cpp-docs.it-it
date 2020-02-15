@@ -6,12 +6,12 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: e586a933c2a80b7e611bcd4b4714e300eb21a0ad
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6bb2ca0cc14bcc4a9b9df9877902de9181e0a768
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689566"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258146"
 ---
 # <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
@@ -22,7 +22,7 @@ Definisce i modelli di classe del contenitore hash_map e hash_multimap e i relat
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 #include <hash_map>
 ```
 
@@ -41,21 +41,21 @@ Definisce i modelli di classe del contenitore hash_map e hash_multimap e i relat
 
 ### <a name="classes"></a>Classi
 
-|Class|Descrizione|
+|Classe|Descrizione|
 |-|-|
-|[Classe hash_compare](hash-compare-class.md)|Descrive un oggetto che può essere usato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come oggetto predefinito `Traits` parametro per ordinare ed eseguire l'hashing degli elementi in essi contenuti.|
+|[Classe hash_compare](hash-compare-class.md)|Descrive un oggetto che può essere usato da uno qualsiasi dei contenitori associativi hash, ovvero hash_map, hash_multimap, hash_set o hash_multiset, come oggetto parametro di `Traits` predefinito per ordinare ed eseguire l'hashing degli elementi in essi contenuti.|
 |[Classe value_compare](value-compare-class.md)|Fornisce un oggetto funzione in grado di confrontare gli elementi di un oggetto hash_map comparando i valori delle chiavi per determinarne l'ordine relativo nell'oggetto hash_map.|
 |[Classe hash_map](hash-map-class.md)|Usata per archiviare e recuperare rapidamente i dati da una raccolta in cui ogni elemento è una coppia che ha una chiave di ordinamento con valore univoco e un valore di dati associato.|
 |[Classe hash_multimap](hash-multimap-class.md)|Usata per archiviare e recuperare rapidamente i dati da una raccolta in cui ogni elemento è una coppia con una chiave di ordinamento il cui valore non deve essere univoco e un valore di dati associato.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<hash_map>
+**Intestazione:** \<hash_map >
 
 **Spazio dei nomi:** stdext
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](cpp-standard-library-header-files.md)\
+[Header Files Reference](cpp-standard-library-header-files.md)\ (Riferimento file di intestazione)
 [Thread Safety in the C++ Standard Library](thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
-[C++ Standard Library Reference](cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)
+[Riferimento per la libreria standard C++](cpp-standard-library-reference.md)

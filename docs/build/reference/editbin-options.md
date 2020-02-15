@@ -1,34 +1,35 @@
 ---
 title: Opzioni di EDITBIN
-ms.date: 11/04/2016
+description: Guida di riferimento per le opzioni della riga di comando di Microsoft EDITBIN) Utility.
+ms.date: 02/09/2020
 f1_keywords:
 - editbin
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c27172522ceabeccd06d7b957aa791edc49beec8
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271853"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257702"
 ---
 # <a name="editbin-options"></a>Opzioni di EDITBIN
 
-È possibile usare EDITBIN per modificare i file oggetto, i file eseguibili e librerie a collegamento dinamico (DLL). Le opzioni specificano le modifiche che EDITBIN apporta.
+È possibile utilizzare EDITBIN) per modificare i file oggetto, i file eseguibili e le librerie a collegamento dinamico (dll). Le opzioni specificano le modifiche che EDITBIN apporta.
 
-Un'opzione è costituito da un identificatore di opzione, che può essere un trattino (-) o una barra (/), seguito dal nome dell'opzione. I nomi di opzione non possono essere abbreviati. Per alcune opzioni è possibile specificare argomenti, preceduti da due punti ( : ). Spazi o tabulazioni non sono consentite all'interno di una specifica opzione. Usare uno o più spazi o tabulazioni per separare le specifiche di opzione nella riga di comando. Per i nomi delle opzioni e i corrispondenti argomenti parola chiave o nome file, non viene rilevata la distinzione tra maiuscole e minuscole. Ad esempio, -bind e /BIND hanno lo stesso significato.
+Un'opzione è costituita da un identificatore di opzione, che può essere un trattino (`-`) o una barra (`/`), seguita dal nome dell'opzione. I nomi di opzione non possono essere abbreviati. Alcune opzioni accettano argomenti specificati dopo i due punti (`:`). Non sono consentiti spazi o tabulazioni all'interno di una specifica Option. Usare uno o più spazi o schede per separare le specifiche delle opzioni nella riga di comando. I nomi delle opzioni e gli argomenti di parole chiave o di nome file non fanno distinzione tra maiuscole e minuscole Ad esempio, `-bind` e `/BIND` significano la stessa cosa.
 
-EDITBIN dispone delle opzioni seguenti:
+In EDITBIN) sono disponibili le opzioni seguenti:
 
 |Opzione|Scopo|
 |------------|-------------|
 |[/ALLOWBIND](allowbind.md)|Specifica se una DLL può essere associata.|
 |[/ALLOWISOLATION](allowisolation.md)|Specifica il comportamento di ricerca nel manifest di file eseguibile o DLL.|
-|[/APPCONTAINER](appcontainer.md)|Specifica se l'app deve essere eseguita in un AppContainer, ad esempio, un'app UWP.|
+|[/APPCONTAINER](appcontainer.md)|Specifica se l'app deve essere eseguita all'interno di un AppContainer, ad esempio un'app UWP.|
 |[/BIND](bind.md)|Imposta gli indirizzi per i punti di ingresso negli oggetti specificati per ridurre il tempo di caricamento.|
 |[/DYNAMICBASE](dynamicbase.md)|Specifica se l'immagine eseguibile o DLL può essere riassegnata in modo casuale in fase di caricamento utilizzando la funzionalità ASLR (Address Space Layout Randomization).|
-|[/ERRORREPORT](errorreport-editbin-exe.md)|Segnala a Microsoft gli errori interni.|
+|[/ERRORREPORT](errorreport-editbin-exe.md)| Operazione deprecata. La segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/HEAP](heap.md)|Imposta la dimensione dell'heap dell'immagine eseguibile in byte.|
 |[/HIGHENTROPYVA](highentropyva.md)|Specifica se l'immagine eseguibile o DLL supporta un'entropia elevata (64 bit) per ASLR (Address Space Layout Randomization).|
 |[/INTEGRITYCHECK](integritycheck.md)|Specifica se verificare la firma digitale al momento del caricamento.|
@@ -40,11 +41,11 @@ EDITBIN dispone delle opzioni seguenti:
 |[/SECTION](section-editbin.md)|Esegue l'override gli attributi di una sezione.|
 |[/STACK](stack.md)|Imposta la dimensione dello stack dell'immagine eseguibile in byte.|
 |[/SUBSYSTEM](subsystem.md)|Specifica l'ambiente di esecuzione.|
-|[/SWAPRUN](swaprun.md)|Specifica che l'immagine eseguibile deve essere copiata nel file di scambio e quindi eseguita da li.|
+|[/SWAPRUN](swaprun.md)|Specifica che l'immagine eseguibile viene copiata nel file di scambio e quindi eseguita da tale posizione.|
 |[/TSAWARE](tsaware.md)|Specifica che l'applicazione è progettata per funzionare in un ambiente multiutente.|
 |[/VERSION](version.md)|Imposta il numero di versione nell'intestazione.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Strumenti di compilazione MSVC aggiuntive](c-cpp-build-tools.md)<br/>
+[Ulteriori strumenti di compilazione MSVC](c-cpp-build-tools.md)\
 [Riferimento a EDITBIN](editbin-reference.md)
