@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - end method
 ms.assetid: 6fa38a20-3798-4387-9c6e-20fc3e90d813
-ms.openlocfilehash: db2563fff62d05765ad98c3405f1a658f5ce23e9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c947ecb0dd81aa805cefd0b5861c80e5bc1cf90b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453348"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258185"
 ---
 # <a name="container-classend"></a>Container Class::end
 
@@ -20,9 +20,8 @@ Restituisce un iteratore che punta poco oltre la fine della sequenza.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-
-    const_iterator end() const;
+```cpp
+const_iterator end() const;
 
 iterator end();
 ```

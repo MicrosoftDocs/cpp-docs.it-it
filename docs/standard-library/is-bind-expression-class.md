@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
-ms.openlocfilehash: 6cd6d45788ec36f6827d1403ce3f7e5057004433
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 9d83ff978ccbaec5e66509ac94f22cf29bc20866
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245205"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258082"
 ---
-# <a name="isbindexpression-class"></a>Classe is_bind_expression
+# <a name="is_bind_expression-class"></a>Classe is_bind_expression
 
 Verifica se il tipo viene generato chiamando `bind`.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template<class Ty>
 struct is_bind_expression {
    static const bool value;
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il membro costante `value` è true se `Ty` è un tipo restituito da una chiamata a `bind`; in caso contrario, è false.
 

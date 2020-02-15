@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - const_reference method
 ms.assetid: 7a5cfddb-3abf-4c98-b4ad-bbe4da9a5c1b
-ms.openlocfilehash: 03bd3971778c01362fa72d2cbcf79dc5ebe273c2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3960934b075ae43db0dd14a7754fface5a8d44cf
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457164"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258211"
 ---
-# <a name="container-classconstreference"></a>Container Class::const_reference
+# <a name="container-classconst_reference"></a>Container Class::const_reference
 
 > [!NOTE]
 > Questo argomento è disponibile nella documentazione C++ di Microsoft come esempio non funzionale dei contenitori usati nella libreria C++ standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
@@ -20,14 +20,13 @@ Descrive un oggetto che può essere usato come riferimento costante a un element
 
 ## <a name="syntax"></a>Sintassi
 
-```
-
+```cpp
 typedef T3 const_reference;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Viene descritta come un sinonimo del tipo `T3` non specificato (in genere `Alloc::const_reference`).
+Viene descritta come un sinonimo del tipo non specificato `T3` (in genere `Alloc::const_reference`).
 
 ## <a name="see-also"></a>Vedere anche
 

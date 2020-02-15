@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890134"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257988"
 ---
 # <a name="ltbitsetgt-operators"></a>Operatori &lt;bitset&gt;
 
@@ -77,7 +77,7 @@ bitset 3: 0001
 
 Inserisce una rappresentazione di testo della sequenza di bit nel flusso di output.
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -93,7 +93,7 @@ Un oggetto di tipo **bitset\<N>** che deve essere inserito nel flusso di output 
 
 Rappresentazione testuale della sequenza di bit in `ostr`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione di modello consente di eseguire l'overload di `operator<<`, consentendo di scrivere un bit senza prima convertirlo in una stringa. La funzione di modello consente di gestire in modo efficace quanto segue:
 
@@ -134,7 +134,7 @@ int main( )
 
 Legge una stringa di caratteri di bit in un bitset.
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
@@ -143,7 +143,7 @@ basic_istream<CharType, Traits>& operator>> (
 
 ### <a name="parameters"></a>Parametri
 
-\ *i_str*
+*i_str*\
 La immessa nel flusso di input da inserire nel bitset.
 
 \ a *destra*
@@ -153,7 +153,7 @@ Il bitset che riceve i bit dal flusso di input.
 
 La funzione di modello restituisce la stringa *i_str*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione di modello viene *sottoposto* a overload `operator>>` per archiviare il bit a destra del valore `bitset(str)`, dove `str` è un oggetto di tipo [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` Estratto da *i_str*.
 

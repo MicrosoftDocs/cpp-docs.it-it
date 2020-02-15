@@ -1,18 +1,18 @@
 ---
 title: Cenni preliminari su LIB
 description: Panoramica dell'utilizzo e delle opzioni dello strumento libreria, lib. exe.
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 7223ef0a624cf15c43bd067db8a7919efd27df17
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 5829a65ab0dc4ef193236c9ae480856a17c5874c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685493"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257612"
 ---
 # <a name="overview-of-lib"></a>Cenni preliminari su LIB
 
@@ -35,7 +35,7 @@ Nella tabella seguente sono elencate le opzioni di lib. exe, con un collegamento
 |Opzione|Descrizione|
 |-|-|
 |**/DEF**|Creare una libreria di importazione e un file di esportazione.<br/><br/>Per ulteriori informazioni, vedere [compilazione di una libreria di importazione e di un file di esportazione](building-an-import-library-and-export-file.md).|
-|**/ERRORREPORT**|   Inviare informazioni a Microsoft sugli errori interni con lib. exe.<br/><br/>Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
+|**/ERRORREPORT**| Operazione deprecata. Per altre informazioni, vedere [Esecuzione di LIB](running-lib.md).|
 |**/EXPORT**|   Esporta una funzione dal programma.<br/><br/>Per ulteriori informazioni, vedere [compilazione di una libreria di importazione e di un file di esportazione](building-an-import-library-and-export-file.md).|
 |**/EXTRACT**|   Creare un file oggetto (. obj) contenente una copia di un membro di una libreria esistente.<br/><br/>Per ulteriori informazioni, vedere [estrazione di un membro di libreria](extracting-a-library-member.md).|
 |**/INCLUDE**|   Aggiunge un simbolo alla tabella dei simboli.<br/><br/>Per ulteriori informazioni, vedere [compilazione di una libreria di importazione e di un file di esportazione](building-an-import-library-and-export-file.md).|
@@ -56,8 +56,8 @@ Nella tabella seguente sono elencate le opzioni di lib. exe, con un collegamento
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a LIB](lib-reference.md)<br/>
-[File di input LIB](lib-input-files.md)<br/>
-[File di output di LIB](lib-output-files.md)<br/>
-[Altri output di LIB](other-lib-output.md)<br/>
+\ di [riferimento lib](lib-reference.md)
+[File di input LIB](lib-input-files.md)\
+[File di output di LIB](lib-output-files.md)\
+[Altri](other-lib-output.md)\ di output di lib
 [Struttura di una libreria](structure-of-a-library.md)
