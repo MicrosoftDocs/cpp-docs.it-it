@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683350"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416196"
 ---
 # <a name="warning-pragma"></a>warning (pragma)
 
@@ -37,8 +37,8 @@ Sono disponibili i seguenti parametri identificatore-avviso.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Applica il livello specificato agli avvisi specificati. Attiva anche un avviso specificato che è disattivato per impostazione predefinita.|
 |*default*|Reimposta il comportamento dell'avviso sul valore predefinito. Attiva anche un avviso specificato che è disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per ulteriori informazioni, vedere [avvisi del compilatore disattivati per impostazione predefinita](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*disabilitare*|Non emettere i messaggi di avviso specificati.|
-|*errore*|Segnala gli avvisi specificati come errori.|
+|*disable*|Non emettere i messaggi di avviso specificati.|
+|*error*|Segnala gli avvisi specificati come errori.|
 |*once*|Visualizza i messaggi specificati solo una volta.|
 |*sopprimere*|Inserisce lo stato corrente del pragma nello stack, disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che venga ripristinato lo stato del pragma.|
 
@@ -54,10 +54,10 @@ Questa direttiva è funzionalmente equivalente al codice seguente:
 // Disable warning messages 4507 and 4034.
 #pragma warning( disable : 4507 34 )
 
-// Issue warning 4385 only once.
+// Issue warning C4385 only once.
 #pragma warning( once : 4385 )
 
-// Report warning 4164 as an error.
+// Report warning C4164 as an error.
 #pragma warning( error : 164 )
 ```
 

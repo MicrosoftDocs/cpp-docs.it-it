@@ -3,12 +3,12 @@ title: Novità di C++ in Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793971"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415718"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novità di C++ in Visual Studio
 
@@ -231,7 +231,7 @@ Il componente sperimentale Clang/C2 è stato rimosso. Usare il set di strumenti 
 
 - Nuove correzioni rapide per controlli di variabili non inizializzate. Per altre informazioni, vedere [New code analysis quick fixes for uninitialized memory (C6001) and use before init (C26494) warnings](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/) (Nuove correzioni rapide di analisi del codice per avvisi di memoria non inizializzata (C6001) and use-before-init (C26494)).
 
-## <a name="unit-testing"></a>Unit test
+## <a name="unit-testing"></a>Testing unità
 
 Il modello di progetto di test C++ gestito non è più disponibile. È possibile continuare a usare il framework di test C++ gestito nei progetti esistenti. Per i nuovi unit test, è consigliabile usare uno dei framework di test nativi per cui Visual Studio fornisce modelli (MSTest, Google Test) o il modello di progetto di test C# gestito.
 
@@ -339,7 +339,7 @@ Per l'elenco completo dei miglioramenti apportati alla libreria standard in Visu
 - Molte operazioni `vector<bool>` sono ora contrassegnate con `noexcept`.
 - La libreria standard impone ora la corrispondenza di `value_type` dell'allocatore (in modalità C++17) con un'opzione di emergenza per il rifiuto esplicito.
 - Sono state corrette alcune condizioni nelle quali un'operazione self-range-insert in `basic_string` compromette il contenuto delle stringhe. (Nota: lo standard proibisce ancora le operazioni self-range-insert in vettori.)
-- `propagate_on_container_swap` dell'allocatore non influisce più su `basic_string::shrink_to_fit()`.
+- `basic_string::shrink_to_fit()` dell'allocatore non influisce più su `propagate_on_container_swap`.
 - `std::decay` gestisce ora i tipi di funzione abominable, ovvero i tipi di funzione qualificati con cv e/o ref.
 - Modifica delle direttive include per l'uso corretto della distinzione tra maiuscole e minuscole e delle barre, con miglioramento della portabilità.
 - È stato corretto l'avviso C4061, relativo all'enumeratore '*enumerator*' nell'opzione dell'enum *enumeration*' non gestito da un'etichetta case in modo esplicito. Questo avviso è disattivato per impostazione predefinita ed è stato risolto come eccezione alle norme generali della libreria standard per gli avvisi. (La libreria standard garantisce il livello **/W4**, ma non tenta di garantire il livello **/Wall**. Molti avvisi disattivati per impostazione predefinita sono estremamente fastidiosi e non sono progettati per essere usati regolarmente.)
@@ -515,8 +515,8 @@ Diverse operazioni C++ che usano il motore IntelliSense per il refactoring e lo 
 
 |||
 |-|-|
-|Caratteristica|Miglioramento delle prestazioni|
-|Rinomina|5.3x|
+|Funzionalità|Miglioramento delle prestazioni|
+|Rinominare|5.3x|
 |Modifica firma |4.5x|
 |Trova tutti i riferimenti|4.7x|
 
@@ -647,7 +647,7 @@ Il set di strumenti Clang/C2 incluso in Visual Studio 2017 supporta ora l'opzion
 
 ## <a name="c-code-analysis"></a>Analisi del codice C++
 
-I controlli di base per C++ per l'applicazione delle [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) (Linee guida di base per C++) ora sono distribuiti con Visual Studio. È sufficiente abilitare i controlli nella pagina **Code Analysis Extensions** (Estensioni di analisi del codice) nelle pagine delle proprietà del progetto per includere le estensioni durante l'esecuzione dell'analisi del codice. Per altre informazioni, vedere [Using the C++ Core Guidelines checkers](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers) (Uso dei controlli delle linee guida di base per C++).
+I controlli di base per C++ per l'applicazione delle [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) (Linee guida di base per C++) ora sono distribuiti con Visual Studio. È sufficiente abilitare i controlli nella pagina **Code Analysis Extensions** (Estensioni di analisi del codice) nelle pagine delle proprietà del progetto per includere le estensioni durante l'esecuzione dell'analisi del codice. Per altre informazioni, vedere [Using the C++ Core Guidelines checkers](/cpp/code-quality/using-the-cpp-core-guidelines-checkers) (Uso dei controlli delle linee guida di base per C++).
 
 ![CppCoreCheck](media/CppCoreCheck.png "Pagina delle proprietà di CppCoreCheck")
 
@@ -668,9 +668,9 @@ I controlli di base per C++ per l'applicazione delle [C++ Core Guidelines](https
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versione 15.7
 
 - Aggiunto il supporto per [/analyze: ruleset](../build/reference/analyze-code-analysis.md) che consente di specificare le regole di analisi codice da eseguire.
-- Aggiunto il supporto per le regole aggiuntive delle Linee guida di base di C++.  Per altre informazioni, vedere [Using the C++ Core Guidelines checkers](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers) (Uso dei controlli delle linee guida di base per C++).
+- Aggiunto il supporto per le regole aggiuntive delle Linee guida di base di C++.  Per altre informazioni, vedere [Using the C++ Core Guidelines checkers](/cpp/code-quality/using-the-cpp-core-guidelines-checkers) (Uso dei controlli delle linee guida di base per C++).
 
-## <a name="unit-testing"></a>Unit test
+## <a name="unit-testing"></a>Testing unità
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versione 15.5
 
@@ -697,7 +697,7 @@ Diagnostica della grafica di Visual Studio è un set di strumenti per la registr
 
 - **Ricerca e filtro nella tabella degli oggetti:** un modo rapido e semplice per individuare le risorse che si stanno cercando.
 
-  ![Cerca](media/search.png)
+  ![Ricerca](media/search.png)
 
 - **Cronologia risorse:** consente di visualizzare con facilità l'intera cronologia delle modifiche di una risorsa usata durante il rendering di un frame acquisito. Per richiamare la cronologia per una risorsa, basta fare clic sull'icona orologio accanto al collegamento ipertestuale della risorsa.
 

@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793788"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416094"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -82,7 +82,7 @@ Come usare le funzionalità di produttività disponibili nell'editor di C++ per 
 [Debug del codice nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Usare il debugger di Visual Studio con i progetti C++.
 
-[Panoramica dell'analisi codice per C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Panoramica dell'analisi codice per C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Usare le annotazioni SAL o le verifiche di Linee guida di base di C++ per eseguire l'analisi statica.
 
 [Scrivere unit test per C/C++ in Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -122,7 +122,7 @@ Informazioni sull'uso di formati di testo e stringa diversi e sulle codifiche pe
 
 ## <a name="languages-reference"></a>Informazioni di riferimento sui linguaggi
 
-[Riferimenti del linguaggio C++](../cpp/cpp-language-reference.md)
+[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
 
 [Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
 
@@ -134,7 +134,7 @@ Informazioni sull'uso di formati di testo e stringa diversi e sulle codifiche pe
 
 Nelle sezioni seguenti vengono fornite informazioni sulle varie librerie C e C++ incluse in Visual Studio.
 
-[Riferimenti della libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Include alternative migliorate dal punto di vista della sicurezza alle funzioni note per causare problemi di sicurezza.
 
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -176,5 +176,5 @@ Informazioni su come ottenere assistenza, segnalare bug e fornire suggerimenti p
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)
-- [Riferimenti della libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)
+- [Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)
 - [Intrinseci del compilatore e linguaggio assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)

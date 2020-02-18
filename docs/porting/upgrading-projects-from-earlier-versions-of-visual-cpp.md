@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725721"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416116"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Aggiornare C++ i progetti da versioni precedenti di Visual Studio
 
@@ -47,7 +47,7 @@ Alcuni progetti e soluzioni aggiornati possono essere compilati correttamente se
 
 1. Impostare il set di strumenti C++ della piattaforma, lo standard del linguaggio e la versione del Windows SDK (se applicabile) sulle versioni preferite. ( **Proprietà** **progetto** >  > **proprietà di configurazione** > **generale**)
 
-1. Se si verificano molti errori, è possibile disattivare temporaneamente alcune opzioni durante la correzione. Per disattivare l'opzione [/permissive-](../build/reference/permissive-standards-conformance.md) , usare le **proprietà** del > di **progetto** > **proprietà di configurazione** > **linguaggio** **C/C++**  > . Per disattivare l'opzione [di analisi del codice](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) , usare le **proprietà** di **Project** >  > le **proprietà di configurazione** > l'analisi del **codice**.
+1. Se si verificano molti errori, è possibile disattivare temporaneamente alcune opzioni durante la correzione. Per disattivare l'opzione [/permissive-](../build/reference/permissive-standards-conformance.md) , usare le **proprietà** del > di **progetto** > **proprietà di configurazione** > **linguaggio** **C/C++**  > . Per disattivare l'opzione [di analisi del codice](/cpp/code-quality/code-analysis-for-c-cpp-overview) , usare le **proprietà** di **Project** >  > le **proprietà di configurazione** > l'analisi del **codice**.
 
 1. Verificare che tutte le dipendenze siano presenti e che i percorsi di inclusione o di libreria siano corretti. ( **Proprietà** **progetto** >  > **proprietà di configurazione** > **directory di VC + +** )
 
@@ -63,7 +63,7 @@ Alcuni progetti e soluzioni aggiornati possono essere compilati correttamente se
 
 Per gli errori difficili da correggere, provare a cercare o pubblicare una domanda in stack overflow o [ C++ nella community degli sviluppatori](https://developercommunity.visualstudio.com/spaces/62/index.html).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Panoramica dei potenziali problemi di aggiornamento](overview-of-potential-upgrade-issues-visual-cpp.md)\
 [Aggiornare il codice a Universal CRT](upgrade-your-code-to-the-universal-crt.md)\

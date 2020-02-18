@@ -2,12 +2,12 @@
 title: Attributi inC++
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 5967974d419299778e4aadaa235ee21c62e16d34
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: b3ed21b033c0e606d02d3aa845f09f72118a3c5e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518296"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416079"
 ---
 # <a name="attributes-in-c"></a>Attributi inC++
 
@@ -65,12 +65,12 @@ Gli attributi rappresentano un'alternativa standardizzata alle estensioni specif
     ```cpp
     int main()
     {
-        int arr[10]; // GSL warning 26494 will be fired
-        int* p = arr; // GSL warning 26485 will be fired
+        int arr[10]; // GSL warning C26494 will be fired
+        int* p = arr; // GSL warning C26485 will be fired
         [[gsl::suppress(bounds.1)]] // This attribute suppresses Bounds rule #1
         {
-            int* q = p + 1; // GSL warning 26481 suppressed
-            p = q--; // GSL warning 26481 suppressed
+            int* q = p + 1; // GSL warning C26481 suppressed
+            p = q--; // GSL warning C26481 suppressed
         }
     }
     ```

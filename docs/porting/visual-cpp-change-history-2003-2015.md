@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821805"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415691"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
 
@@ -22,7 +22,7 @@ Per informazioni sulla versione più recente di Visual Studio, vedere [Novità d
 
 Quando si esegue l'aggiornamento a una nuova versione di Visual Studio, potrebbero verificarsi errori di compilazione e/o runtime nel codice precedentemente compilato ed eseguito correttamente. Le modifiche apportate alla nuova versione che provocano questi problemi sono note come *modifiche importanti*e in genere sono richieste dalle modifiche nel linguaggio C++ standard, nelle firme di funzione o nel layout degli oggetti in memoria.
 
-Per evitare errori di runtime difficili da rilevare e diagnosticare, è consigliabile evitare di collegarsi in modo statico a file binari compilati usando una versione diversa del compilatore. Inoltre, quando si esegue l'aggiornamento a un progetto EXE o DLL, assicurarsi di aggiornare anche le librerie collegate. Evitare di passare tipi CRT (runtime C) o C++ Standard Library (libreria di C++ standard) tra file binari (inclusi i file con estensione dll) compilati usando versioni diverse del compilatore. Per altre informazioni, vedere [Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Per evitare errori di runtime difficili da rilevare e diagnosticare, è consigliabile evitare di collegarsi in modo statico a file binari compilati usando una versione diversa del compilatore. Inoltre, quando si esegue l'aggiornamento a un progetto EXE o DLL, assicurarsi di aggiornare anche le librerie collegate. Evitare di passare tipi CRT (runtime C) o C++ Standard Library (libreria di C++ standard) tra file binari (inclusi i file con estensione dll) compilati usando versioni diverse del compilatore. Per altre informazioni, vedere [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
 Evitare di scrivere codice che dipende da un layout specifico per un oggetto diverso da un'interfaccia COM o un oggetto POD. Se si scrive codice di questo tipo, è necessario assicurarsi che funzioni dopo l'aggiornamento. Per altre informazioni, vedere [Portabilità in base ai limiti ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
@@ -108,7 +108,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
 #### <a name="stdio_and_conio"></a>\<stdio. h > e \<conio. h >
 
-- **La famiglia di funzioni di printf e scanf vengono ora definite inline.**
+- **La famiglia di funzioni di printf e scanf ora viene definita inline.**
 
    Le definizioni di tutte le funzioni `printf` e `scanf` sono state spostate inline in \<stdio.h>, \<conio.h> e altre intestazioni CRT. Questa modifica sostanziale genera un errore del linker (LNK2019, simbolo esterno non risolto) per tutti i programmi che hanno dichiarato localmente queste funzioni senza includere le intestazioni CRT appropriate. Se possibile, aggiornare il codice per includere le intestazioni CRT, ovvero aggiungere `#include <stdio.h>`, e le funzioni inline. Se invece non si vuole modificare il codice per includere questi file di intestazione, una soluzione alternativa consiste nell'aggiungere una libreria aggiuntiva all'input del linker legacy_stdio_definitions.lib.
 
@@ -257,7 +257,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
 - **smallheap**
 
-   L'opzione di collegamento `smallheap` è stata rimossa. Vedere [Opzioni collegamento](../c-runtime-library/link-options.md).
+   L'opzione di collegamento `smallheap` è stata rimossa. Vedere [Link Options](../c-runtime-library/link-options.md).
 
 #### <a name="stringh"></a>\<string.h>
 
@@ -287,13 +287,13 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
 - **asctime**
 
-   Nelle versioni precedenti la funzione [asctime](../c-runtime-library/reference/asctime-wasctime.md) avrebbe riempito i giorni a una cifra con uno zero iniziale, ad esempio: `Fri Jun 06 08:00:00 2014`. La specifica richiede che tali giorni vengano riempiti con uno spazio iniziale, ad esempio `Fri Jun  6 08:00:00 2014`. Questo problema è stato risolto.
+   Nelle versioni precedenti la funzione [asctime](../c-runtime-library/reference/asctime-wasctime.md) avrebbe riempito i giorni a una cifra con uno zero iniziale, ad esempio: `Fri Jun 06 08:00:00 2014`. La specifica richiede che tali giorni vengano riempiti con uno spazio iniziale, ad esempio `Fri Jun  6 08:00:00 2014`. Il problema è stato risolto.
 
 - **strftime e wcsftime**
 
    Le funzioni `strftime` e `wcsftime` supportano ora gli identificatori di formato %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u e %V. I modificatori E e O inoltre vengono analizzati, ma ignorati.
 
-   L'identificatore di formato %c viene specificato poiché produce una "rappresentazione appropriata di data e ora" per le impostazioni locali correnti. Nelle impostazioni locali C questa rappresentazione deve corrispondere a `%a %b %e %T %Y`, lo stesso formato prodotto da `asctime`. Nelle versioni precedenti l'identificatore di formato %c formattava in modo errato le ore usando una rappresentazione `MM/DD/YY HH:MM:SS`. Questo problema è stato risolto.
+   L'identificatore di formato %c viene specificato poiché produce una "rappresentazione appropriata di data e ora" per le impostazioni locali correnti. Nelle impostazioni locali C questa rappresentazione deve corrispondere a `%a %b %e %T %Y`, lo stesso formato prodotto da `asctime`. Nelle versioni precedenti l'identificatore di formato %c formattava in modo errato le ore usando una rappresentazione `MM/DD/YY HH:MM:SS`. Il problema è stato risolto.
 
 - **timespec e TIME_UTC**
 
@@ -309,7 +309,7 @@ Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Vis
 
 - **File di inclusione libreria standard C++**
 
-   Sono state apportate alcune modifiche alla struttura di inclusione nelle intestazioni della libreria standard C++. Le intestazioni della libreria standard C++ possono ora includersi reciprocamente in modi non specificati. In generale è consigliabile scrivere il codice in modo che includa accuratamente tutte le intestazioni necessarie in base allo standard C++ e non si basi su quali intestazioni della libreria standard C++ includono altre intestazioni della libreria standard C++. In questo modo il codice diventa portabile tra versioni e piattaforme. Almeno due modifiche di intestazione in Visual Studio 2015 influiscono sul codice utente. Per prima cosa \<string> non include più \<iterator>. Secondo, \<tuple> ora dichiara \< senza includere tutti i valori `std::array`array>, cosa che può interrompere il codice attraverso la combinazione seguente di costrutti di codice: il codice include una variabile denominata "array", si ha una direttiva using "using namespace std;" e si include un'intestazione della libreria standard C++ (ad esempio \<functional>) che include \<tuple>, che ora dichiara `std::array`.
+   Sono state apportate alcune modifiche alla struttura di inclusione nelle intestazioni della libreria standard C++. Le intestazioni della libreria standard C++ possono ora includersi reciprocamente in modi non specificati. In generale è consigliabile scrivere il codice in modo che includa accuratamente tutte le intestazioni necessarie in base allo standard C++ e non si basi su quali intestazioni della libreria standard C++ includono altre intestazioni della libreria standard C++. In questo modo il codice diventa portabile tra versioni e piattaforme. Almeno due modifiche di intestazione in Visual Studio 2015 influiscono sul codice utente. Per prima cosa \<string> non include più \<iterator>. Secondo, \<tuple> ora dichiara `std::array` senza includere tutti i valori \<array>, cosa che può interrompere il codice attraverso la combinazione seguente di costrutti di codice: il codice include una variabile denominata "array", si ha una direttiva using "using namespace std;" e si include un'intestazione della libreria standard C++ (ad esempio \<functional>) che include \<tuple>, che ora dichiara `std::array`.
 
 - **steady_clock**
 
@@ -383,7 +383,7 @@ Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Vis
 
 - **criteri launch::any e launch::sync**
 
-   I criteri `launch::any` e `launch::sync` non standard sono stati rimossi. In alternativa, per `launch::any` usare `launch:async | launch:deferred`. Per `launch::sync`, utilizzare `launch::deferred`. Vedere [Enumerazione launch](../standard-library/future-enums.md#launch).
+   I criteri `launch::any` e `launch::sync` non standard sono stati rimossi. In alternativa, per `launch::any` usare `launch:async | launch:deferred`. Per `launch::sync`, usare `launch::deferred`. Vedere [Enumerazione launch](../standard-library/future-enums.md#launch).
 
 ####  <a name="BK_MFC"></a> MFC e ATL
 
@@ -431,7 +431,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
     ```
 
-   L'opzione veniva in genere usata per consentire codice non standard che usa variabili di ciclo dopo il punto in cui, in base allo standard, tali variabili dovevano essere considerate fuori ambito. L'opzione era necessaria solo quando si eseguiva la compilazione con l'opzione `/Za`, poiché senza `/Za` era sempre consentito l'uso di una variabile di ciclo dopo la fine del ciclo. Se non è rilevante la conformità agli standard, ad esempio se il codice non è destinato a essere portabile in altri compilatori, è possibile disattivare l'opzione `/Za` o impostare la proprietà **Disabilita estensioni linguaggio** su **No**. Se si vuole scrivere codice portabile, conforme agli standard, è necessario riscrivere il codice affinché sia conforme allo standard spostando la dichiarazione di tali variabili in un punto esterno al ciclo.
+   L'opzione veniva in genere usata per consentire codice non standard che usa variabili di ciclo dopo il punto in cui, in base allo standard, tali variabili dovevano essere considerate fuori ambito. L'opzione era necessaria solo quando si eseguiva la compilazione con l'opzione `/Za`, poiché senza `/Za` era sempre consentito l'uso di una variabile di ciclo dopo la fine del ciclo. Se non è rilevante la conformità agli standard, ad esempio, se il codice non è destinato a essere portabile in altri compilatori, è possibile disattivare l'opzione `/Za` o impostare la proprietà **Disabilita estensioni linguaggio** su **No**. Se si vuole scrivere codice portabile, conforme agli standard, è necessario riscrivere il codice affinché sia conforme allo standard spostando la dichiarazione di tali variabili in un punto esterno al ciclo.
 
     ```cpp
     // C2065 expected
@@ -551,7 +551,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     }
     ```
 
-   Il problema è che il costruttore di copia è privato e quindi l'oggetto non può essere copiato, come accade durante la gestione normale di un'eccezione. La stessa cosa accade quando il costruttore di copia viene dichiarato **explicit**.
+   Il problema è che il costruttore di copia è privato e quindi l'oggetto non può essere copiato, come accade durante la gestione normale di un'eccezione. Lo stesso vale quando il costruttore di copia viene dichiarato **explicit**.
 
     ```cpp
     struct S
@@ -641,11 +641,11 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Operatore new e delete di posizionamento**
 
-   È stata apportata una modifica all'operatore **delete** per fare in modo che sia conforme allo standard C++14. Per informazioni dettagliate sulla modifica agli standard, vedere [Deallocazione con dimensione C++](https://isocpp.org/files/papers/n3778.html). Le modifiche aggiungono una forma di operatore **delete** globale che accetta un parametro di dimensione. La differenza sostanziale è che se in precedenza si usava un operatore **delete** con la stessa firma (per la corrispondenza con un operatore **new di posizionamento**, ora si riceve un errore del compilatore (C2956, che si verifica nel punto in cui viene usato l'operatore new di posizionamento, poiché è la posizione nel codice in cui il compilatore tenta di identificare un operatore **delete** corrispondente appropriato).
+   È stata apportata una modifica all'operatore **delete** per fare in modo che sia conforme allo standard C++14. Per informazioni dettagliate sulla modifica agli standard, vedere [Deallocazione con dimensione C++](https://isocpp.org/files/papers/n3778.html). Le modifiche aggiungono un modulo dell'operatore **delete** globale che accetta un parametro di dimensione. La differenza sostanziale è che se in precedenza si usava un operatore **delete** con la stessa firma (per la corrispondenza con un operatore **new di posizionamento**, ora si riceve un errore del compilatore (C2956, che si verifica nel punto in cui viene usato l'operatore new di posizionamento, poiché è la posizione nel codice in cui il compilatore tenta di identificare un operatore **delete** corrispondente appropriato).
 
    La funzione `void operator delete(void *, size_t)` era un operatore **delete di posizionamento** corrispondente alla funzione **new di posizionamento**`void * operator new(size_t, size_t)` in C++11. Con la deallocazione dimensionata di C++14, questa funzione delete è ora una *funzione di deallocazione consueta* (operatore **delete** globale). Lo standard richiede che, se l'uso di un operatore new cerca una funzione delete corrispondente e trova una funzione di deallocazione consueta, il programma non ha un formato corretto.
 
-   Si supponga, ad esempio, che il codice definisca un operatore **new** e **delete di posizionamento**:
+   Si supponga, ad esempio, che il codice definisca un operatore **new di posizionamento** e **delete di posizionamento**:
 
     ```cpp
     void * operator new(std::size_t, std::size_t);
@@ -658,7 +658,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     enum class my_type : size_t {};
     ```
 
-   Modificare quindi la definizione dell'operatore **new** e **delete** di posizionamento in modo che venga usato questo tipo come secondo argomento anziché `size_t`. È necessario anche aggiornare le chiamate all'operatore new di posizionamento per passare il nuovo tipo, ad esempio usando `static_cast<my_type>` per la conversione dal valore integer, e aggiornare la definizione di **new** e **delete** per eseguire di nuovo il cast al tipo integer. Non è necessario usare un **enum**; funzionerebbe anche un tipo classe con un membro `size_t`.
+   Modificare quindi la definizione dell'operatore **new** e **delete** di posizionamento in modo che venga usato questo tipo come secondo argomento anziché `size_t`. È necessario anche aggiornare le chiamate all'operatore new di posizionamento per passare il nuovo tipo, ad esempio usando `static_cast<my_type>` per la conversione dal valore integer, e aggiornare la definizione di **new** e **delete** per eseguire di nuovo il cast al tipo integer. Non è necessario usare un **enum**; è anche possibile usare un tipo di classe con un membro `size_t`.
 
    Una soluzione alternativa potrebbe essere l'eliminazione totale dell'operatore **new di posizionamento**. Se il codice usa l'operatore **new di posizionamento** per implementare un pool di memoria dove l'argomento di posizionamento è la dimensione dell'oggetto allocato o eliminato, la funzionalità di deallocazione dimensionata potrebbe essere adatta a sostituire il codice del pool di memoria personalizzato consentendo quindi di eliminare le funzioni di posizionamento e usare semplicemente il proprio operatore **delete** a due argomenti.
 
@@ -1739,7 +1739,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     }
     ```
 
-   \- oppure -
+   \- - oppure -
 
     ```cpp
     class base;  // as above
@@ -2122,7 +2122,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Avviso di #pragma senza corrispondenza (push)** (influiscono solo `/Wall` `/WX`)
 
-   Le versioni precedenti del compilatore non rilevavano modifiche di stato `#pragma warning(push)` senza corrispondenza alla fine di un'unità di conversione. Il compilatore ora rileva e invia una notifica al programmatore riguardo al codice scritto in questo modo e genera l'avviso facoltativo C5032 del compilatore nella posizione della direttiva `#pragma warning(push)` senza corrispondenza, se abilitato. Questo avviso viene generato solo se non sono presenti errori di compilazione nell'unità di conversione.
+   Le versioni precedenti del compilatore non rilevavano modifiche di stato `#pragma warning(push)` senza corrispondenza alla fine di un'unità di conversione. Il compilatore ora rileva e invia una notifica al programmatore riguardo al codice scritto in questo modo e genera un avviso del compilatore C5032 facoltativo nella posizione di `#pragma warning(push)` non corrispondente, se abilitata. Questo avviso viene generato solo se non sono presenti errori di compilazione nell'unità di conversione.
 
     ```Output
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)
@@ -2825,7 +2825,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     char c = {static_cast<char>(i)};
     ```
 
-- La seguente inizializzazione non è più consentita::
+- La seguente inizializzazione non è più consentita:
 
     ```cpp
     void *p = {{0}};
@@ -2854,7 +2854,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    In Visual Studio 2012, `E1` nell'espressione `E1::b` viene risolto in `::E1` nell'ambito globale. In Visual Studio 2013, `E1` nell'espressione `E1::b` viene risolto nella definizione `typedef E2` in `main()` e ha il tipo `::E2`.
 
-- Il layout dell'oggetto è stato modificato. In x64 il layout degli oggetti di una classe può cambiare rispetto alle versioni precedenti. Se ha una funzione **virtuale** ma non una classe di base con una funzione **virtuale**, il modello a oggetti del compilatore inserisce un puntatore a una tabella di funzioni **virtuali** dopo il layout dei membri dati. Ciò significa che il layout potrebbe non essere ottimale in tutti i casi. Nelle versioni precedenti, un'ottimizzazione per x64 tentava di migliorare automaticamente il layout, ma poiché non funzionava correttamente in situazioni di codice complesse, è stata rimossa in Visual Studio 2013. Si consideri, ad esempio, il seguente codice:
+- Il layout dell'oggetto è stato modificato. In x64, il layout degli oggetti di una classe può cambiare rispetto alle versioni precedenti. Se ha una funzione **virtuale** ma non una classe di base con una funzione **virtuale**, il modello a oggetti del compilatore inserisce un puntatore a una tabella di funzioni **virtuali** dopo il layout dei membri dati. Ciò significa che il layout potrebbe non essere ottimale in tutti i casi. Nelle versioni precedenti, un'ottimizzazione per x64 tentava di migliorare automaticamente il layout, ma poiché non funzionava correttamente in situazioni di codice complesse, è stata rimossa in Visual Studio 2013. Si consideri ad esempio questo codice:
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2883,7 +2883,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     };
     ```
 
-   Per individuare i punti del codice che una versione precedente avrebbe cercato di ottimizzare, utilizzare un compilatore della suddetta versione insieme all'opzione del compilatore `/W3` e attivare l'avviso 4370. Ad esempio:
+   Per trovare le posizioni nel codice che una versione precedente avrebbe cercato di ottimizzare, usare un compilatore di tale versione insieme all'opzione del compilatore `/W3` e attivare l'avviso C4370. Ad esempio:
 
     ```cpp
     #pragma warning(default:4370)
@@ -2952,7 +2952,7 @@ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _IT
 
    Come effetto collaterale di questa modifica, il case di identità non funziona più (common_type\<T> non restituisce sempre il tipo T). Questo comportamento è conforme alla Proposta, ma interrompe qualsiasi codice basato sul comportamento precedente.
 
-   Se è necessario un tratto di tipo identità, non usare l'elemento `std::identity` non standard definito in \<type_traits> perché non funzionerà con \<void>. Diversamente, implementare un tratto di tipo di identità per le proprie esigenze. Di seguito è riportato un esempio:
+   Se è necessario un tratto di tipo identità, non usare l'elemento `std::identity` non standard definito in \<type_traits> perché non funzionerà con \<void>. Diversamente, implementare un tratto di tipo di identità per le proprie esigenze. Ad esempio:
 
     ```cpp
     template < typename T> struct Identity {
@@ -2970,7 +2970,7 @@ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _IT
 
 - La firma di `CWnd::OnPowerBroadcast` è stata modificata. La firma di questo gestore messaggi è stata modificata per accettare un LPARAM come secondo parametro.
 
-- Le firme sono state modificate per includere i gestori di messaggi. Gli elenchi di parametri delle seguenti funzioni sono stati modificati per consentire l'uso dei gestori di messaggi ON_WM_* aggiunti recentemente:
+- Le firme sono state modificate per includere i gestori di messaggi. Gli elenchi di parametri delle seguenti funzioni sono stati modificati per utilizzare i gestori di messaggi ON_WM_* aggiunti recentemente:
 
    - `CWnd::OnDisplayChange` è stato modificato in (UINT, int, int) anziché (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_DISPLAYCHANGE possa essere usata nella mappa messaggi.
 
@@ -3080,7 +3080,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Modificata la firma di `CMFCEditBrowseCtrl::EnableBrowseButton`.
 
-- Rimossi `m_fntTabs` e `m_fntTabsBold` da `CMFCBaseTabCtrl`.
+- Rimozione di `m_fntTabs` e `m_fntTabsBold` da `CMFCBaseTabCtrl`.
 
 - Aggiunto un parametro ai costruttori `CMFCRibbonStatusBarPane`. È un parametro predefinito che non rappresenta una modifica essenziale per il codice sorgente.
 
@@ -3252,7 +3252,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - In Visual Studio 2010, RuntimeLibrary = MultiThreaded (`/MD`) e DebugInformationFormat = ProgramDatabase (`/Zi`). In Visual C++ 9.0, RuntimeLibrary = MultiThreaded (`/MT`) e DebugInformationFormat = Disabled.
 
-### <a name="clr"></a>CLR per
+### <a name="clr"></a>CLR
 
 - I compilatori Microsoft C# e Visual Basic ora sono in grado di produrre un assembly senza interoperabilità primaria (no-PIA). Un assembly no-PIA è in grado di usare i tipi COM senza la distribuzione del relativo assembly di interoperabilità primario (PIA). Quando si consumano assembly no-PIA prodotti da Visual C# o Visual Basic, è necessario fare riferimento all'assembly PIA nel comando di compilazione prima di fare riferimento a qualsiasi assembly no-PIA che usa la libreria.
 
@@ -3414,7 +3414,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Classe `CWnd` e classe `CFrameWnd`: il metodo `CWnd::GetMenuBarInfo` è stato rimosso.
 
-   Il metodo `CFrameWnd::GetMenuBarInfo` è ora un metodo non virtuale. Per altre informazioni, vedere la **funzione GetMenuBarInfo**  in Windows SDK.
+   Il metodo `CFrameWnd::GetMenuBarInfo` è ora un metodo non virtuale. Per altre informazioni, vedere la **funzione GetMenuBarInfo** in Windows SDK.
 
 - Supporto MFC per ISAPI: MFC non supporta più la compilazione di applicazioni con ISAPI (Internet Server Application Programming Interface). Per compilare un'applicazione ISAPI, chiamare direttamente le estensioni ISAPI.
 
@@ -3490,9 +3490,9 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Un membro dati statico non può essere inizializzato usando una classe derivata ([Errore del compilatore C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).
 
-- L'inizializzazione di un oggetto [typedef](../error-messages/compiler-errors-2/compiler-error-c2513.md) non è consentita dallo standard e ora genera un errore del compilatore (**Errore del compilatore C2513**).
+- L'inizializzazione di un oggetto **typedef** non è consentita dallo standard e ora genera un errore del compilatore ([Errore del compilatore C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).
 
-- [bool](../error-messages/compiler-errors-2/compiler-error-c2632.md) è ora un tipo appropriato (**Errore del compilatore C2632**).
+- **bool** è ora un tipo appropriato ([Errore del compilatore C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).
 
 - Un UDC ora può creare ambiguità con gli operatori di overload ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).
 

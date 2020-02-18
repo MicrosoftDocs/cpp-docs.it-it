@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988082"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416160"
 ---
 # <a name="security-best-practices-for-c"></a>Procedure di sicurezza consigliate per C++
 
@@ -35,7 +35,7 @@ Indica al linker di includere nell'immagine di output una tabella contenente l'i
 [/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (compatibile con protezione esecuzione programmi)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) queste opzioni del compilatore e del linker abilitano la compatibilità DEP (Data Execution Prevention). Protezione esecuzione programmi protegge la CPU dall'esecuzione di pagine non di codice.
 
 [/analyze (analisi codice)](../build/reference/analyze-code-analysis.md)<br/>
-Questa opzione del compilatore attiva l'analisi codice che segnala i potenziali problemi di sicurezza, ad esempio sovraccarico del buffer, memoria non inizializzata, dereferenziazione puntatore Null e perdite di memoria. Per impostazione predefinita, questa opzione è impostata su OFF. Per altre informazioni, vedere [analisi del codice per CC++ /Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Questa opzione del compilatore attiva l'analisi codice che segnala i potenziali problemi di sicurezza, ad esempio sovraccarico del buffer, memoria non inizializzata, dereferenziazione puntatore Null e perdite di memoria. Per impostazione predefinita, questa opzione è impostata su OFF. Per altre informazioni, vedere [analisi del codice per CC++ /Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 [/DYNAMICBASE (uso della funzionalità ASLR)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Questa opzione del linker consente la compilazione di un'immagine eseguibile che può essere caricata in posizioni diverse in memoria all'inizio dell'esecuzione. Questa opzione rende inoltre il percorso dello stack in memoria molto meno prevedibile.
@@ -68,7 +68,7 @@ L'analisi del codice gestito, nota anche come FxCop, controlla la conformità de
 
 - Prestazioni
 
-- Sicurezza -
+- Sicurezza
 
 ## <a name="windows-application-verifier"></a>Windows Application Verifier
 
@@ -95,5 +95,5 @@ Per informazioni su come identificare e mitigare le vulnerabilità hardware del 
 ## <a name="see-also"></a>Vedere anche
 
 <xref:System.Security> <br/>
-[Security](/dotnet/standard/security/index)<br/>
+[Sicurezza](/dotnet/standard/security/index)<br/>
 [Effetti del Controllo dell'account utente sull'applicazione](how-user-account-control-uac-affects-your-application.md)
