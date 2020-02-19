@@ -1,5 +1,5 @@
 ---
-title: Debug Iterator Support
+title: Supporto degli iteratori di debug
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450584"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416209"
 ---
-# <a name="debug-iterator-support"></a>Debug Iterator Support
+# <a name="debug-iterator-support"></a>Supporto degli iteratori di debug
 
 La libreria di runtime di Visual C++ rileva l'uso non corretto dell'iteratore, esegue un'asserzione e visualizza una finestra di dialogo in fase di esecuzione. Per abilitare il supporto degli iteratori di debug, è necessario usare le versioni di debug della libreria standard C++ e della libreria di runtime C per compilare il programma. Per altre informazioni, vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md). Per informazioni sull'uso degli iteratori verificati, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Uso di _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>Utilizzo di _ITERATOR_DEBUG_LEVEL
 
 È possibile usare la macro del preprocessore [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) per disattivare la funzionalità di debug dell'iteratore in una build di debug. Questo programma non esegue asserzioni, ma attiva un comportamento non definito.
 
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()

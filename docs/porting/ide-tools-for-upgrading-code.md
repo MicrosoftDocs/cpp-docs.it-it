@@ -3,12 +3,12 @@ title: Strumenti IDE di Visual Studio per C++ l'aggiornamento del codice
 description: L' C++ editor di codice e gli strumenti di analisi del codice in Visual Studio consentono di C++ modernizzare la codebase.
 ms.date: 11/13/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3f85b955b688489bfc04c4bfc0605201e883e3d4
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 409fc0a2fa6cd39c7751dc34b20b231ffbea3956
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119533"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416157"
 ---
 # <a name="visual-studio-ide-tools-for-upgrading-c-code"></a>Strumenti IDE di Visual Studio per C++ l'aggiornamento del codice
 
@@ -24,7 +24,7 @@ Visual Studio consente di aggiornare il C++ codice legacy con opzioni del compil
 
 - Il codice conforme a tutte le versioni dello standard, ma non è più considerato la procedura consigliata C++per la moderna.
 
-   Per identificare il codice in cui sono consigliate le modifiche, eseguire l' [analisi del codice](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+   Per identificare il codice in cui sono consigliate le modifiche, eseguire l' [analisi del codice](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="open-and-convert-a-legacy-project"></a>Aprire e convertire un progetto legacy
 
@@ -74,7 +74,7 @@ Gli errori e gli avvisi di analisi del codice vengono visualizzati anche nella *
 
 ![Avvisi di analisi del codice in Elenco errori](media/code-analysis-error-list.png "Avvisi di analisi del codice in Elenco errori")
 
-È possibile modificare le regole attive e creare RuleSet personalizzati. Per altre informazioni sull'uso dell'analisi del codice, vedere [analisi del codiceC++ per C/Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+È possibile modificare le regole attive e creare RuleSet personalizzati. Per altre informazioni sull'uso dell'analisi del codice, vedere [analisi del codiceC++ per C/Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="use-quick-actions-to-modernize-code"></a>Usare azioni rapide per modernizzare il codice
 
@@ -101,7 +101,7 @@ La chiamata a `AVERAGE` ora viene colorata come chiamata di funzione e la descri
 
 ![chiamata di funzione constExpr](media/constexpr-function-call.png "chiamata di funzione constExpr")
 
-### <a name="initialize-variables"></a>Inizializzare variabili
+### <a name="initialize-variables"></a>Inizializzare le variabili
 
 Le variabili non inizializzate possono conservare valori casuali che comportano gravi bug. L'analisi del codice contrassegna queste istanze e l'editor fornisce un'azione rapida:
 

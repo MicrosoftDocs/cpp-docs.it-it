@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810628"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415715"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Panoramica dello sviluppo con C++ in Visual Studio
 
@@ -19,7 +19,7 @@ Microsoft C++ (MSVC) fa parte dell'ambiente di sviluppo integrato (IDE, Integrat
 
 Oltre agli strumenti condivisi nell'IDE di Visual Studio, MSVC include diversi strumenti specifici per lo sviluppo di codice nativo. Tali strumenti sono elencati in questo articolo. Per un elenco degli strumenti disponibili in ogni edizione di Visual Studio, vedere [Strumenti e funzionalità C++ nelle versioni di Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md).
 
-## <a name="create-projects"></a>Creazione di progetti
+## <a name="create-projects"></a>Creare progetti
 
 Un *progetto* è fondamentalmente un set di file di codice sorgente e risorse, ad esempio immagini o file di dati, incorporati in un programma eseguibile o una libreria.
 
@@ -47,7 +47,7 @@ Visual Studio offre il supporto per qualsiasi sistema di progetto o strumento di
 
 ## <a name="add-to-source-control"></a>Aggiungi al controllo del codice sorgente
 
-Il controllo del codice sorgente consente di coordinare il lavoro tra più sviluppatori, di isolare i lavori in corso dal codice di produzione e di eseguire il backup del codice sorgente. Visual Studio supporta Git e il [controllo della versione di Team Foundation \(TFVC\)](/azure/devops/repos/tfvc/) tramite la finestra **Team Explorer**. 
+Il controllo del codice sorgente consente di coordinare il lavoro tra più sviluppatori, di isolare i lavori in corso dal codice di produzione e di eseguire il backup del codice sorgente. Visual Studio supporta Git e il [controllo della versione di Team Foundation \(TFVC\)](/azure/devops/repos/tfvc/) tramite la finestra **Team Explorer**.
 
 ::: moniker range="vs-2019"
 
@@ -105,7 +105,7 @@ Per altre informazioni sulla configurazione delle build, vedere [Uso delle propr
 
 ![Sessione di debug](media/vs2017-debug-watch.png "Sessione di debug di Visual Studio 2017")
 
-Per altre informazioni, vedere [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
+Per altre informazioni, vedere [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
 ## <a name="test"></a>Test
 
@@ -115,9 +115,9 @@ Visual Studio include il framework di unit test Microsoft per C++, nonché il su
 
 Per altre informazioni, vedere [Verifying Code by Using Unit Tests ](/visualstudio/test/unit-test-your-code) (Verifica del codice tramite unit test) e [Scrivere unit test per C/C++ in Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
-## <a name="analyze"></a>Analizza
+## <a name="analyze"></a>Analisi
 
-Visual Studio include strumenti statici di analisi del codice in grado di rilevare potenziali problemi nel codice sorgente. Questi strumenti includono un'implementazione degli strumenti di controllo delle regole [Linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Per altre informazioni, vedere [Code analysis for C/C++ overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) (Panoramica dell'analisi codice per C/C++).
+Visual Studio include strumenti statici di analisi del codice in grado di rilevare potenziali problemi nel codice sorgente. Questi strumenti includono un'implementazione degli strumenti di controllo delle regole [Linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Per altre informazioni, vedere [Code analysis for C/C++ overview](/cpp/code-quality/code-analysis-for-c-cpp-overview) (Panoramica dell'analisi codice per C/C++).
 
 ## <a name="deploy-completed-applications"></a>Distribuire le applicazioni completate
 

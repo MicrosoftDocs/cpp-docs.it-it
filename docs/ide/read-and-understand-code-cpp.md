@@ -2,12 +2,12 @@
 title: Leggere e comprendere il codice C++ in Visual Studio
 description: Usare l'editor di codice C++ in Visual Studio per formattare e comprendere il codice.
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303031"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416122"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Leggere e comprendere il codice C++ in Visual Studio
 
@@ -19,9 +19,9 @@ Visual Studio colora gli elementi della sintassi per distinguere tra loro i tipi
 
 ![Colorazione del codice](../ide/media/code-outline-colorization.png "C++colorazione")
 
- Il codice non usato, ad esempio il codice sotto un #if 0, ha un colore più sbiadito.
+Il codice non usato, ad esempio il codice sotto un #if 0, ha un colore più sbiadito.
 
- ![Codice inattivo](../ide/media/inactive-code-cpp.png "C++codice inattivo")
+![Codice inattivo](../ide/media/inactive-code-cpp.png "C++codice inattivo")
 
 È possibile personalizzare i colori digitando "Tipi di carattere" in **Avvio veloce** e quindi scegliendo **Tipi di carattere e colori**. Nella finestra di dialogo **Tipi di carattere e colori** scorrere verso il basso fino alle opzioni di C/C++, quindi scegliere un tipo di carattere e/o un colore personalizzato.
 
@@ -35,7 +35,7 @@ Quando si posiziona il cursore davanti a una parentesi graffa, '{' o '}', l'edit
 
 Altre opzioni relative alla struttura si trovano sotto **Modifica** > **Struttura** nel menu principale.
 
-## <a name="line-numbers"></a>numeri di riga
+## <a name="line-numbers"></a>Numeri di riga
 
 È possibile aggiungere numeri di riga al progetto passando a **strumenti** > **Opzioni** > **editor di testo** > **tutti i linguaggi** > **generale** o cercando "numero di riga" con **avvio veloce (CTRL + Q)** . I numeri riga possono essere impostati per tutti i linguaggi o solo per determinati linguaggi, tra cui C++.
 
