@@ -2,12 +2,12 @@
 title: Gestione delle eccezioni ARM64
 description: Descrive le convenzioni e i dati di gestione delle eccezioni usati da Windows su ARM64.
 ms.date: 11/19/2018
-ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276842"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504486"
 ---
 # <a name="arm64-exception-handling"></a>Gestione delle eccezioni ARM64
 
@@ -23,7 +23,7 @@ Le convenzioni dei dati di rimozione dell'eccezione e la descrizione sono destin
 
    - L'analisi del codice è complessa. il compilatore deve prestare attenzione a generare solo le istruzioni che possono essere decodificate dall'autorimozione.
 
-   - Se non è possibile descrivere completamente la rimozione tramite l'uso di codici di rimozione, in alcuni casi è necessario eseguire il fallback alla decodifica delle istruzioni. Questo aumenta la complessità complessiva e, idealmente, verrebbe evitata.
+   - Se non è possibile descrivere completamente la rimozione tramite l'uso di codici di rimozione, in alcuni casi è necessario eseguire il fallback alla decodifica delle istruzioni. Ciò aumenta la complessità complessiva e idealmente deve essere evitato.
 
 1. Supporto della rimozione in prologo e Mid-epilogo.
 
@@ -39,7 +39,7 @@ Le convenzioni dei dati di rimozione dell'eccezione e la descrizione sono destin
 
 Questi presupposti vengono creati nella descrizione della gestione delle eccezioni:
 
-1. I Prolog e epilogo tendono a eseguire il mirroring di altri. Sfruttando questo tratto comune, le dimensioni dei metadati necessari per descrivere la rimozione possono essere notevolmente ridotte. All'interno del corpo della funzione, non importa se le operazioni del prologo vengono annullate o se le operazioni dell'epilogo vengono eseguite in modo diretto. Entrambi devono produrre risultati identici.
+1. I Prolog e epilogo tendono a reciprocamente il mirroring. Sfruttando questo tratto comune, le dimensioni dei metadati necessari per descrivere la rimozione possono essere notevolmente ridotte. All'interno del corpo della funzione, non importa se le operazioni del prologo vengono annullate o se le operazioni dell'epilogo vengono eseguite in modo diretto. Entrambi devono produrre risultati identici.
 
 1. Le funzioni tendono a essere relativamente piccole. Diverse ottimizzazioni per lo spazio si basano su questo fatto per ottenere la compressione dei dati più efficiente.
 
@@ -53,7 +53,7 @@ Questi presupposti vengono creati nella descrizione della gestione delle eccezio
 
 ## <a name="arm64-stack-frame-layout"></a>Layout stack frame ARM64
 
-layout(media/arm64-exception-handling-stack-frame.png "stack frame") layout ![stack frame]
+![layout stack frame](media/arm64-exception-handling-stack-frame.png "layout di stack frame")
 
 Per le funzioni concatenate ai frame, la coppia FP e LR può essere salvata in qualsiasi posizione nell'area della variabile locale, a seconda delle considerazioni sull'ottimizzazione. L'obiettivo è quello di ottimizzare il numero di variabili locali che possono essere raggiunte da una singola istruzione basata sul puntatore al frame (x29) o sul puntatore dello stack (SP). Per `alloca` funzioni, tuttavia, deve essere concatenato e x29 deve puntare al lato inferiore dello stack. Per consentire una migliore copertura della modalità di indirizzamento delle coppie Register, le aree di salvataggio dei registri non volatili vengono posizionate nella parte superiore dello stack dell'area locale. Di seguito sono riportati alcuni esempi che illustrano diverse sequenze di prologo più efficienti. Per maggiore chiarezza e una migliore località della cache, l'ordine di archiviazione dei registri salvati dal chiamato in tutti i registri canonici è in ordine di crescita. `#framesz` riportato di seguito rappresenta le dimensioni dell'intero stack, esclusa l'area alloca. `#localsz` e `#outsz` indicano le dimensioni dell'area locale (inclusa l'area di salvataggio per le \<x29, LR > Pair) e le dimensioni del parametro in uscita rispettivamente.
 
@@ -188,7 +188,7 @@ I record. pData sono una matrice ordinata di elementi a lunghezza fissa che desc
 
 Ogni record. pData per ARM64 ha una lunghezza di 8 byte. Il formato generale di ogni record posiziona il RVA a 32 bit della funzione all'inizio nella prima parola, seguito da una seconda parola che contiene un puntatore a un blocco XData a lunghezza variabile o da una parola compressa che descrive una sequenza di rimozione di una funzione canonica.
 
-![layout del record. pData](media/arm64-exception-handling-pdata-record.png ". il layout del record pData")
+![layout del record. pData](media/arm64-exception-handling-pdata-record.png "layout del record. pData")
 
 I campi sono i seguenti:
 
@@ -204,7 +204,7 @@ I campi sono i seguenti:
 
 Quando il formato di rimozione compresso non è sufficiente per descrivere la rimozione di una funzione, è necessario creare un record .xdata a lunghezza variabile. L'indirizzo di questo record è archiviato nella seconda parola del record .pdata. Il formato di. XData è un set di parole di lunghezza variabile compresso:
 
-layout del record ![. XData layout](media/arm64-exception-handling-xdata-record.png ". XData")
+![layout del record. XData](media/arm64-exception-handling-xdata-record.png "layout del record. XData")
 
 Questi dati sono suddivisi in quattro sezioni:
 
@@ -336,7 +336,7 @@ Per le funzioni i cui Prolog e epilogo seguono la forma canonica descritta di se
 
 Il formato di un record. pdata con dati di rimozione compressi ha un aspetto simile al seguente:
 
-![record. pdata con dati di rimozione compressi](media/arm64-exception-handling-packed-unwind-data.png ". pdata con dati di rimozione compressi")
+![record. pdata con dati di rimozione compressi](media/arm64-exception-handling-packed-unwind-data.png "record. pdata con dati di rimozione compressi")
 
 I campi sono i seguenti:
 
@@ -371,13 +371,13 @@ Passaggio 4: salvare gli argomenti di input nell'area dei parametri Home.
 
 Passaggio 5: allocare lo stack rimanente, inclusa l'area locale, \<x29, la coppia LR > e l'area parametri in uscita. 5a corrisponde a canonico di tipo 1. 5b e 5C sono per i tipi canonici 2. 5D e 5e sono per il tipo 3 e il tipo 4.
 
-Passo #|Valori di flag|istruzioni|Codice operativo|Codice di rimozione
+Passo #|Valori di flag|istruzioni|Opcode|Codice di rimozione
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+1|0 < **RegI** < = 10|RegI/2 + **regi** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
 3|0 < **RegF** < = 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
 5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** = = 11 & &<br/>512 < #locsz < = 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5c|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`

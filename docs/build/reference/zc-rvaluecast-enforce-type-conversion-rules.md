@@ -1,6 +1,6 @@
 ---
 title: /Zc:rvalueCast (Applicare regole di conversione dei tipi)
-ms.date: 03/06/2018
+ms.date: 02/18/2020
 f1_keywords:
 - rvaluecast
 - /Zc:rvalueCast
@@ -12,28 +12,29 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
-ms.openlocfilehash: e5a6abd3b85136b05ae58ebc8750aa9120cabc33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac74192cad8a62e4c82b480038e727b114362cdd
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315781"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504567"
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (Applicare regole di conversione dei tipi)
 
-Quando la **/Zc: rvaluecast** opzione è specificata, il compilatore identifica correttamente un tipo di riferimento rvalue come risultato di un'operazione cast conforme con c++11 standard. Quando l'opzione non è specificata, il comportamento è uguale a quello in Visual Studio 2012.
+Quando si specifica l'opzione **`/Zc:rvalueCast`** , il compilatore identifica correttamente un tipo di riferimento rvalue come risultato di un'operazione cast. Il comportamento è conforme allo standard C++ 11. Quando l'opzione non è specificata, il comportamento del compilatore è identico a quello di Visual Studio 2012.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Zc:rvalueCast**[**-**]
+> **`/Zc:rvalueCast`**\
+> **`/Zc:rvalueCast-`**
 
 ## <a name="remarks"></a>Note
 
-Se **/Zc: rvaluecast** è specificato, il compilatore segue la sezione 5.4 di c++11 standard e considera solo le espressioni cast che daranno luogo a tipi non di riferimento e le espressioni cast che risultato riferimenti rvalue a tipi non di funzione come tipi rvalue. Per impostazione predefinita, oppure se **/Zc:rvalueCast-** è specificato, il compilatore non sarà conforme e considera tutte le espressioni cast che risultato riferimenti rvalue come rvalue. Per verificare la conformità e per eliminare gli errori nell'utilizzo di cast, è consigliabile usare **/Zc: rvaluecast**.
+Se **`/Zc:rvalueCast`** è specificato, il compilatore segue la sezione 5,4 dello standard c++ 11 e considera solo le espressioni cast che generano tipi non di riferimento e espressioni cast che generano riferimenti rvalue a tipi non di funzione come tipi rvalue. Per impostazione predefinita, o se viene specificato **`/Zc:rvalueCast-`** , il compilatore non è conforme e considera tutte le espressioni cast che generano riferimenti rvalue come RValues. Per la conformità e per eliminare gli errori nell'uso dei cast, è consigliabile usare **`/Zc:rvalueCast`** .
 
-Per impostazione predefinita **/Zc: rvaluecast** è disattivata (**/Zc:rvalueCast-**). Il [/PERMISSIVE--](permissive-standards-conformance.md) l'opzione del compilatore in modo implicito imposta questa opzione, ma può essere sottoposto a override utilizzando **/Zc:rvalueCast-**.
+Per impostazione predefinita, **`/Zc:rvalueCast`** è disattivato ( **`/Zc:rvalueCast-`** ). L'opzione del compilatore [/permissive-](permissive-standards-conformance.md) imposta in modo implicito questa opzione, ma è possibile eseguirne l'override usando **`/Zc:rvalueCast-`** .
 
-Uso **/Zc: rvaluecast** se si passa un'espressione cast come argomento a una funzione che accetta un tipo di riferimento rvalue. Il comportamento predefinito provoca un errore del compilatore [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) quando il compilatore determina in modo errato il tipo dell'espressione cast. Questo esempio mostra un errore del compilatore corretto codice quando **/Zc: rvaluecast** non viene specificato:
+Utilizzare **`/Zc:rvalueCast`** se si passa un'espressione cast come argomento a una funzione che accetta un tipo di riferimento rvalue. Il comportamento predefinito provoca l'errore del compilatore [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) quando il compilatore determina in modo errato il tipo dell'espressione cast. Questo esempio mostra un errore del compilatore nel codice corretto quando non è specificato **`/Zc:rvalueCast`** :
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -71,7 +72,7 @@ struct Test1 {
 };
 ```
 
-È possibile che il comportamento predefinito del compilatore non segnali l'errore C2102 quando appropriato. In questo esempio, il compilatore non segnala un errore se l'indirizzo di un rvalue creato da un cast di identità è accettato quando **/Zc: rvaluecast** non viene specificato:
+È possibile che il comportamento predefinito del compilatore non segnali l'errore C2102 quando appropriato. In questo esempio, il compilatore non segnala un errore se l'indirizzo di un rvalue creato da un cast di identità viene eseguito quando **`/Zc:rvalueCast`** non è specificato:
 
 ```cpp
 int main() {
@@ -86,12 +87,12 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
+1. Selezionare le **proprietà di configurazione** > pagina delle proprietà **lingua** **CC++ /**  > .
 
-1. Modificare il **opzioni aggiuntive** proprietà da includere **/Zc: rvaluecast** e quindi scegliere **OK**.
+1. Impostare la proprietà **Applica regole di conversione del tipo** su **`/Zc:rvalueCast`** o **`/Zc:rvalueCast-`** . Scegliere **OK** o **applica** per salvare le modifiche.
 
 ## <a name="see-also"></a>Vedere anche
 
-[/Zc (conformità)](zc-conformance.md)<br/>
+[/Zc (conformità)](zc-conformance.md)

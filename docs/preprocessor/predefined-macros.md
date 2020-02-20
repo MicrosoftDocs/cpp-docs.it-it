@@ -226,12 +226,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305471"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473852"
 ---
 # <a name="predefined-macros"></a>Macro predefinite
 
@@ -477,6 +477,9 @@ MSVC supporta queste macro predefinite aggiuntive.
    |Visual Studio 2019 versione 16.1|1921|
    |Visual Studio 2019 versione 16.2|1922|
    |Visual Studio 2019 versione 16,3|1923|
+   |Visual Studio 2019 versione 16,4|1924|
+   |Visual Studio 2019 versione 16,5|1925|
+   |Visual Studio 2019 versione 16,6|1926|
 
    Per testare le versioni del compilatore o gli aggiornamenti in una determinata versione di Visual Studio o dopo, usare l'operatore `>=`. È possibile usarlo in una direttiva condizionale per confrontare `_MSC_VER` rispetto a quella versione nota. Se si dispone di diverse versioni che si escludono a vicenda, ordinare i confronti in ordine decrescente in base al numero di versione. Questo codice, ad esempio, consente di verificare la presenza di compilatori rilasciati in Visual Studio 2017 e versioni successive. Quindi, verifica i compilatori rilasciati in o dopo Visual Studio 2015. Verifica quindi la presenza di tutti i compilatori rilasciati prima di Visual Studio 2015:
 
