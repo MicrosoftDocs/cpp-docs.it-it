@@ -37,12 +37,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894346"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473867"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -118,7 +118,7 @@ All'avvio del programma, viene eseguito l'equivalente dell'istruzione seguente:
 
 `setlocale( LC_ALL, "C" );`
 
-L'argomento delle *impostazioni locali* può assumere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e un codice paese/area geografica, una tabella codici o una stringa di lingua, un codice paese e una tabella codici. Il set dei nomi delle impostazioni locali disponibili, le lingue, i codici paese e le tabelle codici include tutti quelli supportati dalle API NLS di Windows, ad eccezione delle tabelle codici che richiedono più di due byte per carattere, ad esempio UTF-7 e UTF-8. Se si fornisce un valore di tabella codici di UTF-7 o UTF-8, **setlocale** avrà esito negativo, restituendo **null**. Il set di nomi delle impostazioni locali supportato da **setlocale** è descritto in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe per lingua e paese/area geografica supportate da **setlocale** è elencato in stringhe di [lingua](../../c-runtime-library/language-strings.md) e [stringhe di paese/area geografica](../../c-runtime-library/country-region-strings.md). Ai fini delle prestazioni e delle manutenibilità delle stringhe delle impostazioni locali, è consigliabile incorporare il nome delle impostazioni locali nel codice o serializzarlo nell'archiviazione. È più probabile che in seguito a un aggiornamento del sistema operativo venga modificato il formato del nome della lingua e del paese e non le stringhe del nome delle impostazioni locali.
+L'argomento delle *impostazioni locali* può assumere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e un codice paese/area geografica, una tabella codici o una stringa di lingua, un codice paese e una tabella codici. Il set di nomi delle impostazioni locali disponibili, le lingue, i codici paese e le tabelle codici include tutti quelli supportati da Windows NLS API. Il set di nomi delle impostazioni locali supportato da **setlocale** è descritto in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe per lingua e paese/area geografica supportate da **setlocale** è elencato in stringhe di [lingua](../../c-runtime-library/language-strings.md) e [stringhe di paese/area geografica](../../c-runtime-library/country-region-strings.md). Ai fini delle prestazioni e delle manutenibilità delle stringhe delle impostazioni locali, è consigliabile incorporare il nome delle impostazioni locali nel codice o serializzarlo nell'archiviazione. È più probabile che in seguito a un aggiornamento del sistema operativo venga modificato il formato del nome della lingua e del paese e non le stringhe del nome delle impostazioni locali.
 
 Un puntatore NULL passato come argomento delle *impostazioni locali* indica a **setlocale** di eseguire query anziché impostare l'ambiente internazionale. Se l'argomento delle *impostazioni locali* è un puntatore null, le impostazioni locali correnti del programma non vengono modificate. Invece, **setlocale** restituisce un puntatore alla stringa associata alla *categoria* delle impostazioni locali correnti del thread. Se l'argomento *Category* è **LC_ALL**, la funzione restituisce una stringa che indica l'impostazione corrente di ogni categoria, separate da punti e virgola. Ad esempio, la sequenza di chiamate
 
@@ -162,7 +162,7 @@ Gli esempi seguenti riguardano la categoria **LC_ALL** . Una delle stringhe ". O
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Imposta le impostazioni locali sulla lingua, il paese/area geografica e la tabella codici indicati dalla *lingua\<* , *\<country >* e *\<* code_page stringhe >. È possibile utilizzare varie combinazioni di lingua, paese e tabella codici. Questa chiamata imposta ad esempio le impostazioni locali sulla lingua francese del Canada con la tabella codici 1252:
+   Imposta le impostazioni locali sulla lingua, il paese/area geografica e la tabella codici indicati dalla *lingua\<>* , *\<country >* e *\<* code_page stringhe >. È possibile utilizzare varie combinazioni di lingua, paese e tabella codici. Questa chiamata imposta ad esempio le impostazioni locali sulla lingua francese del Canada con la tabella codici 1252:
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -200,14 +200,14 @@ Per altre informazioni, vedere la direttiva pragma [setlocale](../../preprocesso
 
 La funzione [_configthreadlocale](configthreadlocale.md) viene utilizzata per **controllare se setlocale influisca sulle impostazioni** locali di tutti i thread di un programma o solo sulle impostazioni locali del thread chiamante.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**setlocale**|\<locale.h>|
 |**_wsetlocale**|\<locale.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 
@@ -318,14 +318,14 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 [Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)\
-[Impostazioni locali](../../c-runtime-library/locale.md)\
+[Locale](../../c-runtime-library/locale.md)\ (Impostazioni locali)
 [localeconv](localeconv.md)\
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)\
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)\
 [_setmbcp](setmbcp.md)\
-[strcoll Functions](../../c-runtime-library/strcoll-functions.md)\
+[Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)\
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\
