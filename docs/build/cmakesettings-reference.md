@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518205"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600042"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informazioni di riferimento sullo schema CMakeSettings.json
 
@@ -31,7 +31,7 @@ La matrice di `configurations` contiene tutte le configurazioni per un progetto 
 
 `configuration` ha le proprietà seguenti:
 
-- `addressSDanitizerEnabled`: se `true` compila il programma con l'igienizzatore di indirizzi (sperimentale in Windows). In Linux compilare con-fno-omette-frame-pointer e il livello di ottimizzazione del compilatore-OS o-oo per ottenere risultati ottimali.
+- `addressSanitizerEnabled`: se `true` compila il programma con l'igienizzatore di indirizzi (sperimentale in Windows). In Linux compilare con-fno-omette-frame-pointer e il livello di ottimizzazione del compilatore-OS o-oo per ottenere risultati ottimali.
 - `addressSanitizerRuntimeFlags`: flag di runtime passati a AddressSanitizer tramite la variabile di ambiente ASAN_OPTIONS. Formato: organizzazione1 = valore: organizzazione2 = value2.
 - `buildCommandArgs`: specifica opzioni di compilazione nativa passate a CMake dopo --build --. Ad esempio, il passaggio di -v quando si usa il generatore Ninja forza Ninja a restituire le righe di comando. Vedere [Argomenti della riga di comando Ninja](#ninja) per altre informazioni sui comandi Ninja.
 - `buildRoot`: specifica la directory in cui CMake genera script di compilazione per il generatore selezionato.  Esegue il mapping all'opzione **-DCMAKE_BINARY_DIR** e specifica la posizione in cui verrà creato *CMakeCache. txt* . Se la cartella non esiste, verrà creata. Le macro supportate includono `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
@@ -44,7 +44,7 @@ La matrice di `configurations` contiene tutte le configurazioni per un progetto 
 - `configurationType`: specifica la configurazione del tipo di compilazione per il generatore selezionato. Può essere uno dei seguenti:
 
   - Debug
-  - Release
+  - Versione
   - MinSizeRel
   - RelWithDebInfo
   
@@ -279,7 +279,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |--------------|------------|
 | --versione  | versione ninja per la stampa ("1.7.1")|
 |   -C DIR   | passa a DIR prima di eseguire qualunque altra operazione|
