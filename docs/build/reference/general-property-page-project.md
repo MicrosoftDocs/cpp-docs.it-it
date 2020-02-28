@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299776"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166758"
 ---
 # <a name="general-property-page-project"></a>Pagina delle proprietà Generale (Progetto)
 
 ::: moniker range=">=vs-2019"
 
-Questo argomento si applica ai progetti di Visual Studio per Windows. Per i progetti Linux, vedere informazioni di [riferimento sulla pagina delle proprietà di Linux C++ ](../../linux/prop-pages-linux.md). Per i progetti CMake, vedere [progetti CMake in Visual Studio](../cmake-projects-in-visual-studio.md).
+Questo argomento si applica ai progetti di Visual Studio per Windows. Per i progetti Linux, vedere informazioni di [riferimento sulla pagina delle proprietà di Linux C++ ](../../linux/prop-pages-linux.md). Per i progetti CMake, vedere [progetti CMake in Visual Studio](../cmake-projects-in-visual-studio.md). Per i progetti Android, vedere [Proprietà generali del progetto C++(Android)](/cpp/cross-platform/general-android-prop-page). Per i progetti makefile Android, vedere [Proprietà generali del progetto C++ (makefile Android)](/cpp/cross-platform/general-makefile-android-prop-page)
 
 Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Esplora soluzioni e si seleziona **Proprietà**, nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro sinistro vengono visualizzate le proprietà seguenti:
 
@@ -52,7 +52,7 @@ Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Es
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
 
-- **Nome di destinazione**
+- **Nome destinazione**
 
    Specifica il nome file generato dal progetto. Per impostazione predefinita, questa proprietà corrisponde al nome file specificato dalla macro $(ProjectName).
 
@@ -92,7 +92,7 @@ Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Es
 
 - **Set di strumenti della piattaforma**
 
-   Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. I progetti C++ di Visual Studio possono avere come destinazione il set di strumenti predefinito installato da Visual Studio o uno dei set di strumenti installati da diverse versioni precedenti di Visual Studio, inclusi i set di strumenti per la creazione di file eseguibili che possono essere eseguiti in Windows XP. Per informazioni sulla modifica del set di strumenti della [piattaforma, vedere Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. I progetti C++ di Visual Studio possono avere come destinazione il set di strumenti predefinito installato da Visual Studio o uno dei set di strumenti installati da diverse versioni precedenti di Visual Studio, inclusi i set di strumenti per la creazione di file eseguibili che possono essere eseguiti in Windows XP. Per informazioni sulla modifica del set di strumenti della piattaforma, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **C++Standard del linguaggio**
 
@@ -102,7 +102,7 @@ Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Es
 
 ::: moniker range="<=vs-2017"
 
-In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante destro del mouse su un nodo del progetto in **Esplora soluzioni**e si seleziona **Proprietà**, nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro a sinistra viene visualizzato due sezioni di proprietà:
+In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante destro del mouse su un nodo del progetto in **Esplora soluzioni**e si seleziona **Proprietà**, nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro sinistro vengono visualizzate due sezioni di proprietà:
 
 - Generale
 
@@ -140,7 +140,7 @@ In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante de
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
 
-- **Nome di destinazione**
+- **Nome destinazione**
 
    Specifica il nome file generato dal progetto. Per impostazione predefinita, questa proprietà corrisponde al nome file specificato dalla macro $(ProjectName).
 
@@ -162,14 +162,14 @@ In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante de
 
 - **Set di strumenti della piattaforma**
 
-   Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. I progetti C++ di Visual Studio possono avere come destinazione il set di strumenti predefinito installato da Visual Studio o uno dei set di strumenti installati da diverse versioni precedenti di Visual Studio, inclusi i set di strumenti per la creazione di file eseguibili che possono essere eseguiti in Windows XP. Per informazioni sulla modifica del set di strumenti della [piattaforma, vedere Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. I progetti C++ di Visual Studio possono avere come destinazione il set di strumenti predefinito installato da Visual Studio o uno dei set di strumenti installati da diverse versioni precedenti di Visual Studio, inclusi i set di strumenti per la creazione di file eseguibili che possono essere eseguiti in Windows XP. Per informazioni sulla modifica del set di strumenti della piattaforma, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Abilita compilazione incrementale gestita**
 
    Per i progetti gestiti, consente il rilevamento della visibilità esterna quando si generano assembly. Se una modifica a un progetto gestito non è visibile in altri progetti, i progetti dipendenti non saranno ricompilati. È così possibile migliorare considerevolmente i tempi di compilazione di soluzioni che includono progetti gestiti.
 
 ## <a name="project-defaults"></a>Impostazioni predefinite progetto
- 
+
 Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresentano proprietà predefinite che è possibile modificare. La definizione di queste proprietà è disponibile nei file con estensione props in *Directory di installazione*\VC\VCProjectDefaults.
 
 - **Tipo configurazione**
@@ -200,13 +200,13 @@ Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresent
 
 - **Uso di MFC**
 
-   Specifica se il progetto sarà collegato staticamente o dinamicamente alla DLL MFC. Per i progetti non MFC, è possibile selezionare **Usa librerie standard di Windows** per consentire il collegamento a diverse librerie Win32 incluse quando si usa MFC.
+   Consente di specificare se il progetto MFC si collega in modo statico o dinamico alla DLL MFC. Per i progetti non MFC, è possibile selezionare **Usa librerie standard di Windows** per consentire il collegamento a diverse librerie Win32 incluse quando si usa MFC.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>.
 
 - **Set di caratteri**
 
-   Definisce se deve essere impostato _UNICODE o _MBCS. Influisce anche sul punto di ingresso del linker nei casi appropriati.
+   Consente di specificare se è necessario impostare _UNICODE o _MBCS. Influisce anche sul punto di ingresso del linker nei casi appropriati.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>.
 
