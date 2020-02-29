@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 0c9caea5ba35a55a53f7b9340cf9bfd2cce80561
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305501"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166784"
 ---
 # <a name="float_control-pragma"></a>float_control (pragma)
 
@@ -30,10 +30,10 @@ Specifica il comportamento a virgola mobile per una funzione.
 ## <a name="options"></a>Opzioni
 
 **preciso**, **in** | **off**, **push**\
-Specifica se abilitare o disabilitare la semantica a virgola mobile precisa. Per informazioni su come questa opzione differisce dall'opzione del compilatore **/FP: precise** simile, vedere la sezione Osservazioni. Il token **push** facoltativo indica al compilatore di effettuare il push dell'impostazione corrente per **float_control** nello stack interno del compilatore.
+Specifica se abilitare o disabilitare la semantica a virgola mobile precisa. Per informazioni sulle differenze con l'opzione del compilatore **/FP: precise** , vedere la sezione Osservazioni. Il token **push** facoltativo inserisce l'impostazione corrente per **float_control** nello stack interno del compilatore.
 
 **ad eccezione** **di** , | **disattivato**\ **push**
-Specifica se abilitare o disabilitare la semantica delle eccezioni**a**virgola mobile. Per informazioni sul modo in cui questa opzione è diversa dall'opzione del compilatore **/FP: except** denominata in modo analogo, vedere la sezione Osservazioni. Il token **push** facoltativo indica al compilatore di effettuare il push dell'impostazione corrente per **float_control** nello stack interno del compilatore.
+Specifica se abilitare o disabilitare la semantica delle eccezioni**a**virgola mobile. Il token **push** facoltativo inserisce l'impostazione corrente per **float_control** nello stack interno del compilatore.
 
 **except** può essere impostato **su on** **solo quando è** impostato **su on**.
 
@@ -45,17 +45,15 @@ Rimuove l'impostazione del **float_control** dall'inizio dello stack interno del
 
 ## <a name="remarks"></a>Note
 
-Le opzioni **precise** e **except** non hanno esattamente lo stesso comportamento delle opzioni del compilatore [/FP](../build/reference/fp-specify-floating-point-behavior.md) con gli stessi nomi. Il pragma **float_control** regola solo parte del comportamento della virgola mobile. È necessario combinarlo con [fp_contract](../preprocessor/fp-contract.md) e [fenv_access](../preprocessor/fenv-access.md) pragma per ricreare le opzioni del compilatore **/FP** . La tabella seguente illustra le impostazioni pragma equivalenti per ogni opzione del compilatore:
+Il pragma **float_control** non ha lo stesso comportamento dell'opzione del compilatore [/FP](../build/reference/fp-specify-floating-point-behavior.md) . Il pragma **float_control** regola solo parte del comportamento della virgola mobile. È necessario combinarlo con [fp_contract](../preprocessor/fp-contract.md) e [fenv_access](../preprocessor/fenv-access.md) pragma per ricreare le opzioni del compilatore **/FP** . La tabella seguente illustra le impostazioni pragma equivalenti per ogni opzione del compilatore:
 
 | | float_control (preciso, \*) | float_control (eccetto, \*) | fp_contract (\*) | fenv_access (\*) |
 |-|-|-|-|-|
-| /fp:strict             | in  | in  | off | in  |
-| /fp:strict /fp:except- | in  | off | off | in  |
-| /fp:precise            | in  | off | in  | off |
-| /FP: precise/FP: except | in  | in  | in  | off |
-| /fp:fast               | off | off | in  | off |
+| /fp:strict             | in  | in  | spento | in  |
+| /fp:precise            | in  | spento | in  | spento |
+| /fp:fast               | spento | spento | in  | spento |
 
-In altre parole, è necessario usare diversi pragma in combinazione per emulare le opzioni di riga di comando **/FP: Fast**, **/FP: precise**, **/FP: Strict**e **/FP: except** .
+In altre parole, potrebbe essere necessario usare diversi pragma in combinazione per emulare le opzioni della riga di comando **/FP: Fast**, **/FP: precise**e **/FP: Strict** .
 
 Esistono restrizioni sui modi in cui è possibile usare la **float_control** e **fenv_access** pragma a virgola mobile in combinazione:
 
@@ -67,7 +65,7 @@ Esistono restrizioni sui modi in cui è possibile usare la **float_control** e *
 
 - Non è possibile usare **float_control** per disattivare la **precisione** quando **fenv_access** è abilitato.
 
-Queste restrizioni indicano che l'ordine di alcuni pragma a virgola mobile è significativo. Per passare da un modello rapido a un modello rigoroso usando il **float_control** e i pragma correlati, usare il codice seguente:
+Queste restrizioni indicano che l'ordine di alcuni pragma a virgola mobile è significativo. Per passare da un modello rapido a un modello rigoroso usando pragmas, usare il codice seguente:
 
 ```cpp
 #pragma float_control(precise, on)  // enable precise semantics
@@ -82,7 +80,7 @@ Per passare da un modello rigoroso a un modello rapido usando il **float_control
 #pragma float_control(except, off)  // disable exception semantics
 #pragma fenv_access(off)            // disable environment sensitivity
 #pragma float_control(precise, off) // disable precise semantics
-#pragma fp_contract(on)             // ensable contractions
+#pragma fp_contract(on)             // enable contractions
 ```
 
 Se non viene specificata alcuna opzione, **float_control** non ha alcun effetto.
