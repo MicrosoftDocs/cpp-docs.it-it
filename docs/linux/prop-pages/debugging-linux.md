@@ -2,26 +2,26 @@
 title: Proprietà del debugger (Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: d76e398d648db7c5cf65e4ca2bb1665aef4359ad
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
-ms.translationtype: HT
+ms.openlocfilehash: 8a57e983a32e1ef1eca2bf2452df2cd39d453467
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821406"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883707"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Proprietà di debug C++ (Linux C++)
 
 ::: moniker range="vs-2015"
 
-Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Proprietà | Description | Scelte
+Proprietà | Descrizione | Opzioni
 --- | ---| ---
-Computer di debug remoto | **Visual Studio 2019 versione 16.1**: specifica il computer sul quale eseguire il debug del programma. Può essere diverso dal computer di compilazione remoto specificato nella pagina [Generale](general-linux.md).
+Computer di debug remoto | **Visual Studio 2019 versione 16,1**: specifica il computer in cui eseguire il debug del programma. Può essere diverso dal computer di compilazione remoto specificato nella pagina [Generale](general-linux.md). È possibile aggiungere o modificare una connessione computer di destinazione tramite **strumenti** > **Opzioni** > **gestione connessione** **multipiattaforma** > .
 Comando di pre-avvio | Comando eseguito nella shell prima dell'avvio del debugger. Può essere usato per influire sull'ambiente di debug.
 Programma | Percorso completo nel sistema remoto al programma di cui eseguire il debug. Se viene lasciato vuoto o non viene modificato, viene impostato automaticamente sull'output del progetto corrente.
 Argomenti del programma | Argomenti della riga di comando da passare al programma di cui è in corso il debug.
