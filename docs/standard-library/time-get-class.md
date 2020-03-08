@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685495"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876191"
 ---
 # <a name="time_get-class"></a>Classe time_get
 
@@ -59,15 +59,15 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-@No__t_1 *InputIterator*
+\ *InputIterator*
 Iteratore da cui vengono letti i valori temporali.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id.**
+Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id**.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -75,9 +75,9 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 |-|-|
 |[time_get](#time_get)|Costruttore per oggetti di tipo `time_get`.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[iter_type](#iter_type)|Tipo che descrive un iteratore di input.|
@@ -103,7 +103,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:** \<impostazioni locali >
 
 **Spazio dei nomi:** std
 
@@ -115,7 +115,7 @@ Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello **CharType**.
 
@@ -131,7 +131,7 @@ dateorder date_order() const;
 
 Ordine della data usato da un facet.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_date_order](#do_date_order).
 
@@ -191,7 +191,7 @@ virtual dateorder do_date_order() const;
 
 Ordine della data usato da un facet.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro virtuale protetta restituisce un valore di tipo **time_base::dateorder**, che descrive l'ordine in cui i componenti data vengono messi in corrispondenza da [do_get_date](#do_get_date). In questa implementazione, il valore è **time_base::mdy**, corrispondente a date nel formato Dicembre 2, 1979.
 
@@ -217,10 +217,10 @@ iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza.
 
 \ *iosbase*
@@ -242,7 +242,7 @@ Carattere facoltativo del modificatore.
 
 Restituisce un iteratore che definisce il primo elemento non convertito. Un errore di conversione imposta `ios_base::failbit` in `state` e viene restituito per *primo*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro virtuale converte e ignora uno o più elementi di input nell'intervallo [`first`, `last`) per determinare i valori archiviati in uno o più membri di `*pt`. Un errore di conversione imposta `ios_base::failbit` in `state` e viene restituito per *primo*. In caso contrario, la funzione restituisce un iteratore che definisce il primo elemento non convertito.
 
@@ -310,10 +310,10 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
@@ -329,9 +329,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sulla data.
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire da first nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo data completo e non vuoto. Se ha esito positivo, questo campo viene convertito nel valore equivalente dei componenti **TM:: tm \_mon**, **TM:: TM \_day**e **TM:: TM \_year**e i risultati vengono archiviati rispettivamente in `ptm->tm_mon`, `ptm->tm_day` e `ptm->tm_year`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo data. In caso contrario, la funzione imposta `iosbase::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo data valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
+La funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire da first nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo data completo e non vuoto. Se ha esito positivo, questo campo viene convertito nel valore equivalente dei componenti **TM:: tm\_lun**, **TM:: TM\_Day**e **TM:: TM\_Year**e i risultati vengono archiviati rispettivamente in `ptm->tm_mon`, `ptm->tm_day`e `ptm->tm_year`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo data. In caso contrario, la funzione imposta `iosbase::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo data valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
 
 Il formato del campo di input di tipo data dipende dalle impostazioni locali. Per le impostazioni locali predefinite, il campo di input di tipo data ha il formato MMM GG, AAAA, dove:
 
@@ -361,14 +361,14 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
-Non usato.
+Non utilizzato.
 
 \ di *stato*
 Parametro di output che imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
@@ -380,9 +380,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sul mese.
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire da first nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo mese completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: tm \_mon**e archivia il risultato in `ptm->tm_mon`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo mese. In caso contrario, la funzione imposta `ios_base::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo mese valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
+La funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire da first nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo mese completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: tm\_lun**e archivia il risultato in `ptm->tm_mon`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo mese. In caso contrario, la funzione imposta `ios_base::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo mese valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
 
 Il campo di input di tipo mese è una sequenza corrispondente alla sequenza più lunga di un set di sequenze specifiche delle impostazioni locali, ad esempio Gen, Gennaio, Feb, Febbraio e così via. Il valore convertito è il numero di mesi a partire da Gennaio.
 
@@ -404,14 +404,14 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
-Non usato.
+Non utilizzato.
 
 \ di *stato*
 Imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
@@ -423,9 +423,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sulla data.
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire da first nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo ora completo e non vuoto. Se ha esito positivo, questo campo viene convertito nel valore equivalente dei componenti `tm::tm_hour`, `tm::tm_min` e `tm::tm_sec` e i risultati vengono archiviati rispettivamente in `ptm->tm_hour`, `ptm->tm_min` e `ptm->tm_sec`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo ora. In caso contrario, la funzione imposta `ios_base::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo ora valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
+La funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire da first nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo ora completo e non vuoto. Se ha esito positivo, questo campo viene convertito nel valore equivalente dei componenti `tm::tm_hour`, `tm::tm_min`e `tm::tm_sec`e i risultati vengono archiviati rispettivamente in `ptm->tm_hour`, `ptm->tm_min`e `ptm->tm_sec`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo ora. In caso contrario, la funzione imposta `ios_base::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo ora valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
 
 In questa implementazione, il campo di input di tipo ora ha il formato HH:MM:SS, dove:
 
@@ -455,10 +455,10 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
@@ -474,9 +474,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sul giorno de
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro virtuale protetta tenta di trovare la corrispondenza con elementi sequenziali a partire da *First* nella sequenza [`first`, `last`) fino a quando non viene riconosciuto un campo di input giorno della settimana completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: tm \_wday**e archivia il risultato in `ptm->tm_wday`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo giorno della settimana. In caso contrario, la funzione imposta `ios_base::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo giorno della settimana valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
+La funzione membro virtuale protetta tenta di trovare la corrispondenza con elementi sequenziali a partire da *First* nella sequenza [`first`, `last`) fino a quando non viene riconosciuto un campo di input giorno della settimana completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: tm\_wDay**e archivia il risultato in `ptm->tm_wday`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo giorno della settimana. In caso contrario, la funzione imposta `ios_base::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo giorno della settimana valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
 
 Il campo di input di tipo giorno della settimana è una sequenza corrispondente alla sequenza più lunga di un set di sequenze specifiche delle impostazioni locali, ad esempio Dom, Domenica, Lun, Lunedì e così via. Il valore convertito è il numero di giorni a partire da Domenica.
 
@@ -498,10 +498,10 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
@@ -517,9 +517,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sull'anno.
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro virtuale protetta tenta di trovare la corrispondenza con elementi sequenziali a partire da *First* nella sequenza [`first`, `last`) fino a quando non viene riconosciuto un campo di input anno completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: tm \_year**e archivia il risultato in `ptm->tm_year`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo anno. In caso contrario, la funzione imposta `ios_base::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo anno valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
+La funzione membro virtuale protetta tenta di trovare la corrispondenza con elementi sequenziali a partire da *First* nella sequenza [`first`, `last`) fino a quando non viene riconosciuto un campo di input anno completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: tm\_anno**e archivia il risultato in `ptm->tm_year`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo anno. In caso contrario, la funzione imposta `ios_base::failbit` nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo anno valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la funzione imposta `ios_base::eofbit` nello *stato*.
 
 Il campo di input di tipo anno è una sequenza di cifre decimali il cui valore numerico corrispondente deve essere compreso nell'intervallo [1900, 2036). Il valore archiviato è questo valore meno 1900. In questa implementazione i valori compresi nell'intervallo [69, 136) rappresentano l'intervallo di anni [1969, 2036). Sono consentiti anche i valori compresi nell'intervallo [0, 69). Tali valori, tuttavia, possono rappresentare l'intervallo di anni [1900, 1969) o l'intervallo di anni [2000, 2069), a seconda dell'ambiente di conversione specifico.
 
@@ -553,10 +553,10 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica il punto di inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
@@ -574,17 +574,17 @@ Carattere dell'identificatore di conversione.
 \ *mod*
 Carattere facoltativo del modificatore.
 
-\ *Fmt_first*
+*fmt_first*\
 Punta alla posizione iniziale delle direttive di formato.
 
-\ *Fmt_last*
+*fmt_last*\
 Punta alla posizione finale delle direttive di formato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce un iteratore al primo carattere dopo i dati utilizzati per assegnare lo struct dell'ora `*ptm`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La prima funzione membro restituisce `do_get(first, last, iosbase, state, ptm, fmt, mod)`.
 
@@ -610,10 +610,10 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
@@ -629,9 +629,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sulla data.
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [do_get_date](#do_get_date)(`first`, `last`, `iosbase`, `state` `ptm`).
+La funzione membro restituisce [do_get_date](#do_get_date)(`first`, `last`, `iosbase`, `state``ptm`).
 
 Si noti che i mesi vengono conteggiati da 0 a 11.
 
@@ -704,14 +704,14 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
-Non usato.
+Non utilizzato.
 
 \ di *stato*
 Parametro di output che imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
@@ -723,9 +723,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sul mese.
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [do_get_monthname](#do_get_monthname)(`first`, `last`, `iosbase`, `state` `ptm`).
+La funzione membro restituisce [do_get_monthname](#do_get_monthname)(`first`, `last`, `iosbase`, `state``ptm`).
 
 ### <a name="example"></a>Esempio
 
@@ -796,14 +796,14 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
-Non usato.
+Non utilizzato.
 
 \ di *stato*
 Imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
@@ -815,9 +815,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sulla data.
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [do_get_time](#do_get_time)(`first`, `last`, `iosbase`, `state` `ptm`).
+La funzione membro restituisce [do_get_time](#do_get_time)(`first`, `last`, `iosbase`, `state``ptm`).
 
 ### <a name="example"></a>Esempio
 
@@ -877,10 +877,10 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
@@ -896,9 +896,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sul giorno de
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [do_get_weekday](#do_get_weekday)(`first`, `last`, `iosbase`, `state` `ptm`).
+La funzione membro restituisce [do_get_weekday](#do_get_weekday)(`first`, `last`, `iosbase`, `state``ptm`).
 
 ### <a name="example"></a>Esempio
 
@@ -954,10 +954,10 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 \ *iosbase*
@@ -973,9 +973,9 @@ Puntatore alla posizione in cui vengono archiviate le informazioni sull'anno.
 
 Iteratore di input che punta al primo elemento oltre il campo di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [do_get_year](#do_get_year)(`first`, `last`, `iosbase`, `state` `ptm`).
+La funzione membro restituisce [do_get_year](#do_get_year)(`first`, `last`, `iosbase`, `state``ptm`).
 
 ### <a name="example"></a>Esempio
 
@@ -1026,7 +1026,7 @@ Tipo che descrive un iteratore di input.
 typedef InputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello **InputIterator**.
 
@@ -1043,7 +1043,7 @@ explicit time_get(size_t refs = 0);
 \ *refs*
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I valori possibili per il parametro *refs* e il relativo significato sono:
 
@@ -1061,4 +1061,4 @@ Il costruttore inizializza l'oggetto di base con **locale::** [facet](../standar
 
 [\<locale>](../standard-library/locale.md)\
 [Classe time_base](../standard-library/time-base-class.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)
