@@ -15,11 +15,11 @@ helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
 ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257806"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856539"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -291,6 +291,6 @@ Per altre informazioni, vedere [Operazioni CString di base](../atl-mfc-shared/ba
 ## <a name="see-also"></a>Vedere anche
 
 [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\ (Riferimento file di intestazione)
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [iostreams Conventions](../standard-library/iostreams-conventions.md) (Convenzioni di iostream)

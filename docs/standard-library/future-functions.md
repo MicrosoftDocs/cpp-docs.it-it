@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447318"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865174"
 ---
 # <a name="ltfuturegt-functions"></a>Funzioni &lt;future&gt;
 
@@ -44,10 +44,10 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parametri
 
-*politica*\
+\ di *criteri*
 Valore [launch](../standard-library/future-enums.md#launch).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Definizioni delle abbreviazioni:
 
@@ -63,9 +63,9 @@ La seconda funzione restituisce un oggetto `future<Ty>` il cui *stato asincrono 
 
 A meno che `decay<Fn>::type` non sia un tipo diverso da launch, la seconda funzione non fa parte della risoluzione dell'overload.
 
-Lo C++ standard indica che se il criterio è launch:: async, la funzione crea un nuovo thread. Tuttavia, l'implementazione Microsoft è attualmente non conforme. Ottiene i thread dal pool di thread di Windows, che in alcuni casi può fornire un thread riciclato anziché uno nuovo. Ciò significa che il `launch::async` criterio è effettivamente implementato come `launch::async|launch::deferred`.  Un'altra implicazione dell'implementazione basata su ThreadPool è che non esiste alcuna garanzia che le variabili thread-local vengano distrutte al completamento del thread. Se il thread viene riciclato e fornito a una nuova chiamata `async`a, le variabili obsolete saranno ancora disponibili. Si consiglia pertanto di non utilizzare variabili locali di thread con `async`.
+Lo C++ standard indica che se il criterio è launch:: async, la funzione crea un nuovo thread. Tuttavia, l'implementazione Microsoft è attualmente non conforme. Ottiene i thread dal pool di thread di Windows, che in alcuni casi può fornire un thread riciclato anziché uno nuovo. Ciò significa che i criteri di `launch::async` vengono effettivamente implementati come `launch::async|launch::deferred`.  Un'altra implicazione dell'implementazione basata su ThreadPool è che non esiste alcuna garanzia che le variabili thread-local vengano distrutte al completamento del thread. Se il thread viene riciclato e fornito a una nuova chiamata a `async`, le variabili obsolete saranno ancora disponibili. Si consiglia pertanto di non utilizzare variabili locali di thread con `async`.
 
-Se  il criterio `launch::deferred`è, la funzione contrassegna lo stato asincrono associato come contenente una *funzione posticipata* e restituisce. La prima chiamata a qualsiasi funzione non temporizzata che attende che lo stato asincrono associato sia ready in effetti chiama la funzione posticipata valutando `INVOKE(dfn, dargs..., Ty)`.
+Se il *criterio* è `launch::deferred`, la funzione contrassegna lo stato asincrono associato come contenente una *funzione posticipata* e restituisce. La prima chiamata a qualsiasi funzione non temporizzata che attende che lo stato asincrono associato sia ready in effetti chiama la funzione posticipata valutando `INVOKE(dfn, dargs..., Ty)`.
 
 In tutti i casi, lo stato asincrono associato dell'oggetto `future` non viene impostato su *ready* fino al completamento della valutazione di `INVOKE(dfn, dargs..., Ty)`, indipendentemente dal fatto che venga generata un'eccezione o che la procedura termini normalmente. Il risultato dello stato asincrono associato è un'eccezione se ne è stata generata una oppure qualsiasi valore restituito dalla valutazione.
 
@@ -130,10 +130,10 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+\ a *sinistra*
 L'oggetto `promise` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `promise` corretto.
 
 ## <a name="see-also"></a>Vedere anche

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
-ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600042"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865574"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informazioni di riferimento sullo schema CMakeSettings.json
 
@@ -279,9 +279,9 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opzione|Description|
+|Opzione|Descrizione|
 |--------------|------------|
-| --versione  | versione ninja per la stampa ("1.7.1")|
+| --version  | versione ninja per la stampa ("1.7.1")|
 |   -C DIR   | passa a DIR prima di eseguire qualunque altra operazione|
 |   -f FILE  | specifica il file di compilazione di input (predefinito=build.ninja)|
 |   -j N     | esegue le operazioni N in parallelo (predefinito=14, derivato dalle CPU disponibili)|

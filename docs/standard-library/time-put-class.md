@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685427"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867313"
 ---
 # <a name="time_put-class"></a>Classe time_put
 
@@ -35,15 +35,15 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-@No__t_1 *OutputIterator*
+\ *OutputIterator*
 Tipo di iteratore in cui le funzioni temporali put scrivono il proprio output.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id.**
+Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id**.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -51,9 +51,9 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 |-|-|
 |[time_put](#time_put)|Costruttore per oggetti di tipo `time_put`.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[iter_type](#iter_type)|Tipo che descrive un iteratore di output.|
@@ -67,7 +67,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:** \<impostazioni locali >
 
 **Spazio dei nomi:** std
 
@@ -79,7 +79,7 @@ Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello `CharType`.
 
@@ -101,23 +101,23 @@ virtual iter_type do_put(
 \ *successivo*
 Iteratore di output in cui deve essere inserita la sequenza di caratteri che rappresenta la data e l'ora.
 
-@No__t_1 *_Iosbase*
-Non usato.
+*_Iosbase*\
+Non utilizzato.
 
-@No__t_1 *_pt*
+*_Pt*\
 Informazioni di tipo data e ora da visualizzare in output.
 
-@No__t_1 *_Fmt*
+*_Fmt*\
 Formato dell'output. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
-@No__t_1 *_Mod*
+*_Mod*\
 Modificatore del formato. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
 ### <a name="return-value"></a>Valore restituito
 
 Iteratore alla prima posizione dopo l'ultimo elemento inserito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro virtuale protetta genera elementi sequenziali a partire da `next` dai valori di ora archiviati nell'oggetto \* `_Pt`, di tipo `tm`. La funzione restituisce un iteratore che designa la posizione in cui inserire un elemento immediatamente successiva all'output generato.
 
@@ -125,7 +125,7 @@ L'output viene generato dalle stesse regole usate da `strftime`, con l'ultimo ar
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo a [put](#put), che chiama `do_put`.
+Vedere l'esempio per [put](#put), che chiama `do_put`.
 
 ## <a name="iter_type"></a>  time_put::iter_type
 
@@ -135,7 +135,7 @@ Tipo che descrive un iteratore di output.
 typedef OutputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello `OutputIterator`.
 
@@ -164,34 +164,34 @@ iter_type put(iter_type next,
 \ *successivo*
 Iteratore di output in cui deve essere inserita la sequenza di caratteri che rappresenta la data e l'ora.
 
-@No__t_1 *_Iosbase*
-Non usato.
+*_Iosbase*\
+Non utilizzato.
 
-@No__t_1 *_Fill*
+*_Fill*\
 Il carattere di tipo `CharType` usato per la spaziatura.
 
-@No__t_1 *_pt*
+*_Pt*\
 Informazioni di tipo data e ora da visualizzare in output.
 
-@No__t_1 *_Fmt*
+*_Fmt*\
 Formato dell'output. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
-@No__t_1 *_Mod*
+*_Mod*\
 Modificatore del formato. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
-*primo* \
+*primo*\
 Inizio della stringa di formattazione per l'output. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
-*ultimo* \
+*ultimo*\
 Fine della stringa di formattazione per l'output. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
 ### <a name="return-value"></a>Valore restituito
 
 Iteratore alla prima posizione dopo l'ultimo elemento inserito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro restituisce [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt` `_Mod`). La seconda funzione membro copia in \* `next` ++ qualsiasi elemento compreso nell'intervallo [ `first`, `last`) diverso da una percentuale (%). Per una percentuale seguita da un carattere *C* nell'intervallo [`first`, `last`), la funzione restituisce invece `next`  =  `do_put` (`next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) e ignora l'ultima *C*. Se, tuttavia, *C* è un carattere qualificatore del set EOQ #, seguito da un carattere 3 nell'intervallo [4 5), la funzione restituisce invece 6 7 8 (9, 0 , 1, 2, 3, *C*) e ignora 5 precedenti.
+La prima funzione membro restituisce [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt``_Mod`). La seconda funzione membro copia in \* `next` + + qualsiasi elemento nell'intervallo [`first`, `last`) diverso da una percentuale (%). Per una percentuale seguita da un carattere *C* nell'intervallo [`first`, `last`), la funzione restituisce invece `next` = `do_put`(`next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) e ignora l'ultima *C*. Se, tuttavia, *C* è un carattere qualificatore del set EOQ #, seguito da un carattere `C2` nell'intervallo [`first``last`), la funzione restituisce invece `next` = `do_put`(`next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) e ignora `C2`precedenti.
 
 ### <a name="example"></a>Esempio
 
@@ -247,12 +247,12 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I valori possibili per il parametro *_Refs* e il relativo significato sono:
+I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -266,4 +266,4 @@ Il costruttore inizializza l'oggetto di base con [locale:: facet](../standard-li
 
 [\<locale>](../standard-library/locale.md)\
 [Classe time_base](../standard-library/time-base-class.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)

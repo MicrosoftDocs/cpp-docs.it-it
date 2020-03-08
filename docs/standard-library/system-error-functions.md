@@ -13,15 +13,15 @@ helpviewer_keywords:
 - std::make_error_condition
 - std::system_category
 ms.openlocfilehash: ab4d0d1ee810df8f719bba762262eb03bf899408
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245110"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876270"
 ---
-# <a name="ltsystemerrorgt-functions"></a>Funzioni &lt;system_error&gt;
+# <a name="ltsystem_errorgt-functions"></a>Funzioni &lt;system_error&gt;
 
-## <a name="generic_category"></a> generic_category
+## <a name="generic_category"></a>generic_category
 
 Rappresenta la categoria di errori generici.
 
@@ -29,25 +29,25 @@ Rappresenta la categoria di errori generici.
 const error_category& generic_category() noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il `generic_category` oggetto è un'implementazione di [error_category](../standard-library/error-category-class.md).
+L'oggetto `generic_category` è un'implementazione di [error_category](../standard-library/error-category-class.md).
 
-## <a name="is_error_code_enum_v"></a> is_error_code_enum_v
+## <a name="is_error_code_enum_v"></a>is_error_code_enum_v
 
 ```cpp
 template <class T> 
     inline constexpr bool is_error_code_enum_v = is_error_code_enum<T>::value;
 ```
 
-## <a name="is_error_condition_enum_v"></a> is_error_condition_enum_v
+## <a name="is_error_condition_enum_v"></a>is_error_condition_enum_v
 
 ```cpp
 template <class T> 
     inline constexpr bool is_error_condition_enum_v = is_error_condition_enum<T>::value;
 ```
 
-## <a name="make_error_code"></a> make_error_code
+## <a name="make_error_code"></a>make_error_code
 
 Crea un oggetto codice di errore.
 
@@ -57,16 +57,16 @@ error_code make_error_code(std::errc error) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*error*\
+*errore*\
 Il `std::errc` valore di enumerazione da archiviare nell'oggetto codice di errore.
 
 ### <a name="return-value"></a>Valore restituito
 
 Oggetto codice di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-## <a name="make_error_condition"></a> make_error_condition
+## <a name="make_error_condition"></a>make_error_condition
 
 Crea un oggetto condizione di errore.
 
@@ -76,16 +76,16 @@ error_condition make_error_condition(std::errc error) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*error*\
+*errore*\
 Il `std::errc` valore di enumerazione da archiviare nell'oggetto codice di errore.
 
 ### <a name="return-value"></a>Valore restituito
 
 Oggetto condizione di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-## <a name="system_category"></a> system_category
+## <a name="system_category"></a>system_category
 
 Rappresenta la categoria di errori causati da un overflow di basso livello del sistema.
 
@@ -93,6 +93,6 @@ Rappresenta la categoria di errori causati da un overflow di basso livello del s
 const error_category& system_category() noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il `system_category` oggetto è un'implementazione di [error_category](../standard-library/error-category-class.md).
+L'oggetto `system_category` è un'implementazione di [error_category](../standard-library/error-category-class.md).
