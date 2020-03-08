@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
 ms.openlocfilehash: ccc673d665d6d5beb92f398b21e6ffd313a58fc9
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741353"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855570"
 ---
 # <a name="cprintdialog-class"></a>Classe CPrintDialog
 
@@ -61,68 +61,68 @@ class CPrintDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Name|Descrizione|
 |----------|-----------------|
-|[CPrintDialog::CPrintDialog](#cprintdialog)|Costruisce un oggetto `CPrintDialog`.|
+|[CPrintDialog:: CPrintDialog](#cprintdialog)|Costruisce un oggetto `CPrintDialog`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CPrintDialog::CreatePrinterDC](#createprinterdc)|Crea un contesto di dispositivo stampante senza visualizzare la finestra di dialogo Stampa.|
-|[CPrintDialog::DoModal](#domodal)|Visualizza la finestra di dialogo e consente all'utente di effettuare una selezione.|
+|[CPrintDialog:: CreatePrinterDC](#createprinterdc)|Crea un contesto di dispositivo stampante senza visualizzare la finestra di dialogo Stampa.|
+|[CPrintDialog::D oModal](#domodal)|Visualizza la finestra di dialogo e consente all'utente di effettuare una selezione.|
 |[CPrintDialog:: getcopies](#getcopies)|Recupera il numero di copie richieste.|
 |[CPrintDialog:: GetDefaults](#getdefaults)|Recupera le impostazioni predefinite del dispositivo senza visualizzare una finestra di dialogo.|
-|[CPrintDialog::GetDeviceName](#getdevicename)|Recupera il nome del dispositivo di stampa attualmente selezionato.|
-|[CPrintDialog::GetDevMode](#getdevmode)|Recupera la `DEVMODE` struttura.|
-|[CPrintDialog::GetDriverName](#getdrivername)|Recupera il nome del driver della stampante attualmente selezionato.|
-|[CPrintDialog::GetFromPage](#getfrompage)|Recupera la pagina iniziale dell'intervallo di stampa.|
-|[CPrintDialog::GetPortName](#getportname)|Recupera il nome della porta stampante attualmente selezionata.|
-|[CPrintDialog::GetPrinterDC](#getprinterdc)|Recupera un handle per il contesto di dispositivo stampante.|
-|[CPrintDialog::GetToPage](#gettopage)|Recupera la pagina finale dell'intervallo di stampa.|
-|[CPrintDialog::PrintAll](#printall)|Determina se stampare tutte le pagine del documento.|
-|[CPrintDialog::PrintCollate](#printcollate)|Determina se le copie fascicolate sono richieste.|
-|[CPrintDialog::PrintRange](#printrange)|Determina se stampare solo un intervallo di pagine specificato.|
-|[CPrintDialog::PrintSelection](#printselection)|Determina se stampare solo gli elementi attualmente selezionati.|
+|[CPrintDialog:: GetDeviceName](#getdevicename)|Recupera il nome del dispositivo di stampa attualmente selezionato.|
+|[CPrintDialog:: getdevmode](#getdevmode)|Recupera la struttura `DEVMODE`.|
+|[CPrintDialog:: getDriverName](#getdrivername)|Recupera il nome del driver della stampante attualmente selezionato.|
+|[CPrintDialog:: GetFromPage](#getfrompage)|Recupera la pagina iniziale dell'intervallo di stampa.|
+|[CPrintDialog:: getportaname](#getportname)|Recupera il nome della porta stampante attualmente selezionata.|
+|[CPrintDialog:: GetPrinterDC](#getprinterdc)|Recupera un handle per il contesto di dispositivo stampante.|
+|[CPrintDialog:: GetToPage](#gettopage)|Recupera la pagina finale dell'intervallo di stampa.|
+|[CPrintDialog::P rintAll](#printall)|Determina se stampare tutte le pagine del documento.|
+|[CPrintDialog::P rintCollate](#printcollate)|Determina se le copie fascicolate sono richieste.|
+|[CPrintDialog::P rintRange](#printrange)|Determina se stampare solo un intervallo di pagine specificato.|
+|[CPrintDialog::P rintSelection](#printselection)|Determina se stampare solo gli elementi attualmente selezionati.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|NOME|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CPrintDialog::m_pd](#m_pd)|Struttura utilizzata per personalizzare un `CPrintDialog` oggetto.|
+|[CPrintDialog:: m_pd](#m_pd)|Struttura utilizzata per personalizzare un oggetto `CPrintDialog`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le finestre di dialogo di stampa comuni rappresentano un modo semplice per implementare le finestre di dialogo di stampa e di stampa in modo coerente con gli standard di Windows.
 
 > [!NOTE]
->  La `CPrintDialogEx` classe incapsula i servizi forniti dalla finestra delle proprietà di stampa di Windows. Per altre informazioni, vedere Panoramica di [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) .
+>  La classe `CPrintDialogEx` incapsula i servizi forniti dalla finestra delle proprietà di stampa di Windows. Per altre informazioni, vedere Panoramica di [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) .
 
-`CPrintDialog`la funzionalità di è sostituita da quella di [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), progettata per fornire una finestra di dialogo comune per la configurazione di stampa e la configurazione della pagina.
+la funzionalità di `CPrintDialog`viene sostituita da quella di [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), progettata per fornire una finestra di dialogo comune per la configurazione di stampa e la configurazione della pagina.
 
 È possibile fare affidamento sul Framework per gestire molti aspetti del processo di stampa per l'applicazione. In questo caso, il Framework Visualizza automaticamente la finestra di dialogo comune di Windows per la stampa. È anche possibile fare in che il Framework gestisca la stampa per l'applicazione, ma eseguire l'override della finestra di dialogo Stampa comune con la finestra di dialogo Stampa. Per ulteriori informazioni sull'utilizzo del Framework per gestire le attività di stampa, vedere l'articolo relativo alla [stampa](../../mfc/printing.md).
 
-Se si vuole che l'applicazione gestisca la stampa senza il coinvolgimento del Framework, è possibile `CPrintDialog` usare la classe "così com'è" con il costruttore fornito oppure è possibile derivare la propria `CPrintDialog` classe di finestra di dialogo da e scrivere un costruttore in base alle esigenze. In entrambi i casi, queste finestre di dialogo si comporteranno come le finestre di dialogo MFC standard `CCommonDialog`perché derivano dalla classe.
+Se si vuole che l'applicazione gestisca la stampa senza il coinvolgimento del Framework, è possibile usare la classe `CPrintDialog` "così com'è" con il costruttore fornito oppure è possibile derivare la propria classe di finestra di dialogo da `CPrintDialog` e scrivere un costruttore in base alle esigenze. In entrambi i casi, queste finestre di dialogo si comporteranno come le finestre di dialogo MFC standard, perché derivano dalla classe `CCommonDialog`.
 
-Per utilizzare un `CPrintDialog` oggetto, creare innanzitutto l'oggetto utilizzando il `CPrintDialog` costruttore. Una volta creata la finestra di dialogo, è possibile impostare o modificare i valori nella struttura [m_pd](#m_pd) per inizializzare i valori dei controlli della finestra di dialogo. La `m_pd` struttura è di tipo [PrintDlg](/windows/win32/api/commdlg/ns-commdlg-printdlga). Per ulteriori informazioni su questa struttura, vedere la Windows SDK.
+Per utilizzare un oggetto `CPrintDialog`, creare innanzitutto l'oggetto utilizzando il costruttore di `CPrintDialog`. Una volta creata la finestra di dialogo, è possibile impostare o modificare i valori della struttura [m_pd](#m_pd) per inizializzare i valori dei controlli della finestra di dialogo. La struttura `m_pd` è di tipo [PrintDlg](/windows/win32/api/commdlg/ns-commdlg-printdlga). Per ulteriori informazioni su questa struttura, vedere la Windows SDK.
 
-Se non si forniscono `m_pd` handle personalizzati in per i `hDevMode` membri e `hDevNames` , assicurarsi di chiamare la funzione `GlobalFree` Windows per questi handle al termine della finestra di dialogo. Quando si usa l'implementazione dell'installazione di stampa del `CWinApp::OnFilePrintSetup`Framework fornita da, non è necessario liberare questi handle. Gli handle vengono gestiti da `CWinApp` e vengono liberati `CWinApp`nel distruttore di. È necessario liberare questi handle solo quando si usa `CPrintDialog` autonomamente.
+Se non si forniscono handle personalizzati in `m_pd` per i membri `hDevMode` e `hDevNames`, assicurarsi di chiamare la funzione di Windows `GlobalFree` per questi handle al termine della finestra di dialogo. Quando si usa l'implementazione dell'installazione di stampa del Framework fornita da `CWinApp::OnFilePrintSetup`, non è necessario liberare questi handle. Gli handle vengono gestiti da `CWinApp` e vengono liberati nel distruttore di `CWinApp`. È necessario liberare questi handle solo quando si usa `CPrintDialog` autonomo.
 
-Dopo l'inizializzazione dei controlli della finestra di `DoModal` dialogo, chiamare la funzione membro per visualizzare la finestra di dialogo e consentire all'utente di selezionare le opzioni di stampa. `DoModal`Restituisce un valore che indica se l'utente ha selezionato il pulsante OK (IDOK) o Annulla (IDCANCEL).
+Dopo l'inizializzazione dei controlli della finestra di dialogo, chiamare la funzione membro `DoModal` per visualizzare la finestra di dialogo e consentire all'utente di selezionare le opzioni di stampa. `DoModal` restituisce un valore che indica se l'utente ha selezionato il pulsante OK (IDOK) o Annulla (IDCANCEL).
 
-Se `DoModal` restituisce IDOK, è possibile usare una delle `CPrintDialog`funzioni membro di per recuperare l'input di informazioni da parte dell'utente.
+Se `DoModal` restituisce IDOK, è possibile usare una delle funzioni membro di `CPrintDialog`per recuperare l'input di informazioni da parte dell'utente.
 
-La `CPrintDialog::GetDefaults` funzione membro è utile per recuperare le impostazioni predefinite della stampante correnti senza visualizzare una finestra di dialogo. Questa funzione membro non richiede alcuna interazione da parte dell'utente.
+La funzione membro `CPrintDialog::GetDefaults` è utile per recuperare le impostazioni predefinite della stampante correnti senza visualizzare una finestra di dialogo. Questa funzione membro non richiede alcuna interazione da parte dell'utente.
 
-È possibile utilizzare la funzione `CommDlgExtendedError` Windows per determinare se si è verificato un errore durante l'inizializzazione della finestra di dialogo e per ottenere ulteriori informazioni sull'errore. Per ulteriori informazioni su questa funzione, vedere la Windows SDK.
+È possibile utilizzare la funzione Windows `CommDlgExtendedError` per determinare se si è verificato un errore durante l'inizializzazione della finestra di dialogo e per ottenere ulteriori informazioni sull'errore. Per ulteriori informazioni su questa funzione, vedere la Windows SDK.
 
-`CPrintDialog`si basa su COMMDLG. File DLL fornito con le versioni di Windows 3,1 e successive.
+`CPrintDialog` si basa su COMMDLG. File DLL fornito con le versioni di Windows 3,1 e successive.
 
-Per personalizzare la finestra di dialogo, derivare una `CPrintDialog`classe da, fornire un modello di finestra di dialogo personalizzato e aggiungere una mappa messaggi per elaborare i messaggi di notifica dai controlli estesi. Tutti i messaggi non elaborati devono essere passati alla classe di base. Non è necessario personalizzare la funzione hook.
+Per personalizzare la finestra di dialogo, derivare una classe da `CPrintDialog`, fornire un modello di finestra di dialogo personalizzato e aggiungere una mappa messaggi per elaborare i messaggi di notifica dai controlli estesi. Tutti i messaggi non elaborati devono essere passati alla classe di base. Non è necessario personalizzare la funzione hook.
 
-Per elaborare lo stesso messaggio in modo diverso a seconda che la finestra di dialogo sia impostata su stampa o stampa, è necessario derivare una classe per ogni finestra di dialogo. È inoltre necessario eseguire l'override `AttachOnSetup` della funzione Windows, che gestisce la creazione di una nuova finestra di dialogo quando viene selezionato il pulsante Stampa installazione in una finestra di dialogo Stampa.
+Per elaborare lo stesso messaggio in modo diverso a seconda che la finestra di dialogo sia impostata su stampa o stampa, è necessario derivare una classe per ogni finestra di dialogo. È inoltre necessario eseguire l'override della funzione Windows `AttachOnSetup`, che gestisce la creazione di una nuova finestra di dialogo quando viene selezionato il pulsante Stampa installazione in una finestra di dialogo Stampa.
 
-Per ulteriori informazioni sull'utilizzo `CPrintDialog`di, vedere [Common Dialog Classes](../../mfc/common-dialog-classes.md).
+Per ulteriori informazioni sull'utilizzo di `CPrintDialog`, vedere [Common Dialog Classes](../../mfc/common-dialog-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -142,7 +142,7 @@ Per ulteriori informazioni sull'utilizzo `CPrintDialog`di, vedere [Common Dialog
 
 **Intestazione:** afxdlgs. h
 
-##  <a name="cprintdialog"></a>  CPrintDialog::CPrintDialog
+##  <a name="cprintdialog"></a>CPrintDialog:: CPrintDialog
 
 Costruisce un oggetto finestra di dialogo di stampa o di installazione di stampa di Windows.
 
@@ -164,17 +164,17 @@ Uno o più flag che è possibile utilizzare per personalizzare le impostazioni d
 *pParentWnd*<br/>
 Puntatore alla finestra padre o proprietaria della finestra di dialogo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro costruisce solo l'oggetto. Utilizzare la `DoModal` funzione membro per visualizzare la finestra di dialogo.
+Questa funzione membro costruisce solo l'oggetto. Utilizzare la funzione membro `DoModal` per visualizzare la finestra di dialogo.
 
-Si noti che quando si chiama il costruttore con *bPrintSetupOnly* impostato su false, viene usato automaticamente il flag PD_RETURNDC. Dopo aver `DoModal`chiamato `GetDefaults`, o `GetPrinterDC`, verrà restituito un controller di dominio della `m_pd.hDC`stampante in. Il controller di dominio deve essere liberato con una chiamata a [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) da `CPrintDialog`parte del chiamante di.
+Si noti che quando si chiama il costruttore con *bPrintSetupOnly* impostato su false, viene usato automaticamente il flag PD_RETURNDC. Dopo la chiamata di `DoModal`, `GetDefaults`o `GetPrinterDC`, viene restituito un controller di dominio della stampante in `m_pd.hDC`. Il controller di dominio deve essere liberato con una chiamata a [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) da parte del chiamante del `CPrintDialog`.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#174](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]
 
-##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC
+##  <a name="createprinterdc"></a>CPrintDialog:: CreatePrinterDC
 
 Crea un contesto di dispositivo stampante (DC) dalle strutture [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) e [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
@@ -186,7 +186,7 @@ HDC CreatePrinterDC();
 
 Handle per il contesto di dispositivo stampante appena creato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Si presuppone che il controller di dominio sia il controller di dominio corrente della stampante ed è necessario eliminare tutti gli altri controller di dominio delle stampanti ottenuti in precedenza dall'utente. Questa funzione può essere chiamata e il controller di dominio risultante viene usato senza visualizzare mai la finestra di dialogo Stampa.
 
@@ -194,7 +194,7 @@ Si presuppone che il controller di dominio sia il controller di dominio corrente
 
 [!code-cpp[NVC_MFCDocView#106](../../mfc/codesnippet/cpp/cprintdialog-class_2.cpp)]
 
-##  <a name="domodal"></a>  CPrintDialog::DoModal
+##  <a name="domodal"></a>CPrintDialog::D oModal
 
 Visualizza la finestra di dialogo Stampa comune di Windows e consente all'utente di selezionare varie opzioni di stampa, ad esempio il numero di copie, l'intervallo di pagine e l'eventuale confronto tra le copie.
 
@@ -208,19 +208,19 @@ IDOK o IDCANCEL. Se viene restituito IDCANCEL, chiamare la funzione [CommDlgExte
 
 IDOK e IDCANCEL sono costanti che indicano se l'utente ha selezionato il pulsante OK o Annulla.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se si desidera inizializzare le varie opzioni della finestra di dialogo di stampa impostando i membri della `m_pd` struttura, è necessario eseguire questa operazione prima di chiamare `DoModal`, ma dopo la costruzione dell'oggetto finestra di dialogo.
+Se si desidera inizializzare le varie opzioni della finestra di dialogo di stampa impostando i membri della struttura `m_pd`, è necessario eseguire questa operazione prima di chiamare `DoModal`, ma dopo la costruzione dell'oggetto finestra di dialogo.
 
-Dopo aver `DoModal`chiamato, è possibile chiamare altre funzioni membro per recuperare le impostazioni o l'input di informazioni da parte dell'utente nella finestra di dialogo.
+Dopo la chiamata di `DoModal`, è possibile chiamare altre funzioni membro per recuperare le impostazioni o l'input di informazioni da parte dell'utente nella finestra di dialogo.
 
-Si noti che quando si chiama il costruttore con *bPrintSetupOnly* impostato su false, viene usato automaticamente il flag PD_RETURNDC. Dopo aver `DoModal`chiamato `GetDefaults`, o `GetPrinterDC`, verrà restituito un controller di dominio della `m_pd.hDC`stampante in. Il controller di dominio deve essere liberato con una chiamata a [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) da `CPrintDialog`parte del chiamante di.
+Si noti che quando si chiama il costruttore con *bPrintSetupOnly* impostato su false, viene usato automaticamente il flag PD_RETURNDC. Dopo la chiamata di `DoModal`, `GetDefaults`o `GetPrinterDC`, viene restituito un controller di dominio della stampante in `m_pd.hDC`. Il controller di dominio deve essere liberato con una chiamata a [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) da parte del chiamante del `CPrintDialog`.
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio per [CPrintDialog:: CreatePrinterDC](#createprinterdc).
 
-##  <a name="getcopies"></a>  CPrintDialog::GetCopies
+##  <a name="getcopies"></a>CPrintDialog:: getcopies
 
 Recupera il numero di copie richieste.
 
@@ -232,9 +232,9 @@ int GetCopies() const;
 
 Numero di copie richieste.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo la `DoModal` chiamata a per recuperare il numero di copie richieste.
+Chiamare questa funzione dopo aver chiamato `DoModal` per recuperare il numero di copie richieste.
 
 ### <a name="example"></a>Esempio
 
@@ -252,13 +252,13 @@ BOOL GetDefaults();
 
 Diverso da zero se la funzione ha avuto esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I valori recuperati vengono inseriti nella `m_pd` struttura.
+I valori recuperati vengono inseriti nella struttura `m_pd`.
 
-In alcuni casi, una chiamata a questa funzione chiamerà il [Costruttore](#cprintdialog) per `CPrintDialog` con *bPrintSetupOnly* impostato su false. In questi casi, i controller di dominio `hDevNames` di `hDevMode` una stampante e e ( `m_pd` due handle presenti nel membro dati) vengono allocati automaticamente.
+In alcuni casi, una chiamata a questa funzione chiamerà il [Costruttore](#cprintdialog) per `CPrintDialog` con *BPRINTSETUPONLY* impostato su false. In questi casi, vengono allocati automaticamente un controller di dominio della stampante e `hDevNames` e `hDevMode` (due handle presenti nel membro dati `m_pd`).
 
-Se il costruttore per `CPrintDialog` è stato chiamato *con bPrintSetupOnly* impostato su false, questa funzione non solo `hDevNames` restituirà `hDevMode` e si `m_pd.hDevNames` troverà `m_pd.hDevMode`in e nel chiamante, ma restituirà anche un controller di dominio della stampante in `m_pd.hDC`. Al termine `CPrintDialog` dell'oggetto, è responsabilità del chiamante eliminare il controller di dominio della stampante e chiamare la funzione [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) di Windows sugli handle.
+Se il costruttore per `CPrintDialog` è stato chiamato con *bPrintSetupOnly* impostato su false, questa funzione non solo restituirà `hDevNames` e `hDevMode` presenti in `m_pd.hDevNames` e `m_pd.hDevMode`) al chiamante, ma restituirà anche un controller di dominio della stampante in `m_pd.hDC`. È responsabilità del chiamante eliminare il controller di dominio della stampante e chiamare la funzione [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) di Windows sugli handle al termine dell'oggetto `CPrintDialog`.
 
 ### <a name="example"></a>Esempio
 
@@ -266,7 +266,7 @@ Questo frammento di codice ottiene il contesto di dispositivo della stampante pr
 
 [!code-cpp[NVC_MFCDocView#107](../../mfc/codesnippet/cpp/cprintdialog-class_3.cpp)]
 
-##  <a name="getdevicename"></a>  CPrintDialog::GetDeviceName
+##  <a name="getdevicename"></a>CPrintDialog:: GetDeviceName
 
 Recupera il nome del dispositivo di stampa attualmente selezionato.
 
@@ -278,19 +278,19 @@ CString GetDeviceName() const;
 
 Nome della stampante attualmente selezionata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo la chiamata a [DoModal](#domodal) per recuperare il nome della stampante attualmente selezionata o dopo aver chiamato [GetDefaults](#getdefaults) per recuperare le impostazioni predefinite correnti del dispositivo della stampante predefinita. `CString` Utilizzare un puntatore all'oggetto restituito da `GetDeviceName` come valore di `lpszDeviceName` in una chiamata a [CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
+Chiamare questa funzione dopo la chiamata a [DoModal](#domodal) per recuperare il nome della stampante attualmente selezionata o dopo aver chiamato [GetDefaults](#getdefaults) per recuperare le impostazioni predefinite correnti del dispositivo della stampante predefinita. Utilizzare un puntatore all'oggetto `CString` restituito da `GetDeviceName` come valore di `lpszDeviceName` in una chiamata a [CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
 ### <a name="example"></a>Esempio
 
-Questo frammento di codice mostra il nome della stampante predefinita dell'utente e la porta a cui è connessa, insieme al nome dello spooler utilizzato dalla stampante. Il codice potrebbe visualizzare una finestra di messaggio che indica che la stampante predefinita è HP LaserJet IIIP in \\\server\share con winspool. ", ad esempio.
+Questo frammento di codice mostra il nome della stampante predefinita dell'utente e la porta a cui è connessa, insieme al nome dello spooler utilizzato dalla stampante. Il codice potrebbe visualizzare una finestra di messaggio che indica che la stampante predefinita è HP LaserJet IIIP in \\\server\share usando winspool. ", ad esempio.
 
 [!code-cpp[NVC_MFCDocView#108](../../mfc/codesnippet/cpp/cprintdialog-class_4.cpp)]
 
-##  <a name="getdevmode"></a>  CPrintDialog::GetDevMode
+##  <a name="getdevmode"></a>CPrintDialog:: getdevmode
 
-Recupera la `DEVMODE` struttura.
+Recupera la struttura `DEVMODE`.
 
 ```
 LPDEVMODE GetDevMode() const;
@@ -300,7 +300,7 @@ LPDEVMODE GetDevMode() const;
 
 Struttura dei dati [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , che contiene informazioni sull'inizializzazione del dispositivo e sull'ambiente di un driver di stampa. È necessario sbloccare la memoria utilizzata da questa struttura con la funzione [funzione GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) di Windows, descritta nella Windows SDK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questa funzione dopo avere chiamato [DoModal](#domodal) o [GetDefaults](#getdefaults) per recuperare le informazioni sul dispositivo di stampa.
 
@@ -308,7 +308,7 @@ Chiamare questa funzione dopo avere chiamato [DoModal](#domodal) o [GetDefaults]
 
   Vedere l'esempio per [CPrintDialog::P rintcollate](#printcollate).
 
-##  <a name="getdrivername"></a>  CPrintDialog::GetDriverName
+##  <a name="getdrivername"></a>CPrintDialog:: getDriverName
 
 Recupera il nome del driver della stampante attualmente selezionato.
 
@@ -318,17 +318,17 @@ CString GetDriverName() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `CString` che specifica il nome del driver definito dal sistema.
+`CString` che specifica il nome del driver definito dal sistema.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo avere chiamato [DoModal](#domodal) o [GetDefaults](#getdefaults) per recuperare il nome del driver di dispositivo della stampante definito dal sistema. `CString` Utilizzare un puntatore all'oggetto restituito da `GetDriverName` come valore di `lpszDriverName` in una chiamata a [CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
+Chiamare questa funzione dopo avere chiamato [DoModal](#domodal) o [GetDefaults](#getdefaults) per recuperare il nome del driver di dispositivo della stampante definito dal sistema. Utilizzare un puntatore all'oggetto `CString` restituito da `GetDriverName` come valore di `lpszDriverName` in una chiamata a [CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio per [CPrintDialog:: GetDeviceName](#getdevicename).
 
-##  <a name="getfrompage"></a>  CPrintDialog::GetFromPage
+##  <a name="getfrompage"></a>CPrintDialog:: GetFromPage
 
 Recupera la pagina iniziale dell'intervallo di stampa.
 
@@ -340,15 +340,15 @@ int GetFromPage() const;
 
 Numero della pagina iniziale nell'intervallo di pagine da stampare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo la `DoModal` chiamata a per recuperare il numero di pagina iniziale nell'intervallo di pagine da stampare.
+Chiamare questa funzione dopo aver chiamato `DoModal` per recuperare il numero di pagina iniziale nell'intervallo di pagine da stampare.
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio per [CPrintDialog:: m_pd](#m_pd).
 
-##  <a name="getportname"></a>  CPrintDialog::GetPortName
+##  <a name="getportname"></a>CPrintDialog:: getportaname
 
 Recupera il nome della porta stampante attualmente selezionata.
 
@@ -360,7 +360,7 @@ CString GetPortName() const;
 
 Nome della porta stampante attualmente selezionata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questa funzione dopo avere chiamato [DoModal](#domodal) o [GetDefaults](#getdefaults) per recuperare il nome della porta stampante attualmente selezionata.
 
@@ -368,7 +368,7 @@ Chiamare questa funzione dopo avere chiamato [DoModal](#domodal) o [GetDefaults]
 
   Vedere l'esempio per [CPrintDialog:: GetDeviceName](#getdevicename).
 
-##  <a name="getprinterdc"></a>  CPrintDialog::GetPrinterDC
+##  <a name="getprinterdc"></a>CPrintDialog:: GetPrinterDC
 
 Recupera un handle per il contesto di dispositivo stampante.
 
@@ -380,15 +380,15 @@ HDC GetPrinterDC() const;
 
 Handle per il contesto di periferica della stampante, se ha esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il parametro *bPrintSetupOnly* del `CPrintDialog` costruttore è false (che indica che è `GetPrinterDC` visualizzata la finestra di dialogo Stampa), restituisce un handle per il contesto di dispositivo stampante. È necessario chiamare la funzione [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) di Windows per eliminare il contesto di dispositivo al termine dell'utilizzo.
+Se il parametro *bPrintSetupOnly* del costruttore `CPrintDialog` è false (che indica che è visualizzata la finestra di dialogo Stampa), `GetPrinterDC` restituisce un handle per il contesto di dispositivo stampante. È necessario chiamare la funzione [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) di Windows per eliminare il contesto di dispositivo al termine dell'utilizzo.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]
 
-##  <a name="gettopage"></a>  CPrintDialog::GetToPage
+##  <a name="gettopage"></a>CPrintDialog:: GetToPage
 
 Recupera la pagina finale dell'intervallo di stampa.
 
@@ -400,15 +400,15 @@ int GetToPage() const;
 
 Numero di pagina finale nell'intervallo di pagine da stampare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo la `DoModal` chiamata a per recuperare il numero di pagina finale nell'intervallo di pagine da stampare.
+Chiamare questa funzione dopo aver chiamato `DoModal` per recuperare il numero di pagina finale nell'intervallo di pagine da stampare.
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio per [CPrintDialog:: m_pd](#m_pd).
 
-##  <a name="m_pd"></a>  CPrintDialog::m_pd
+##  <a name="m_pd"></a>CPrintDialog:: m_pd
 
 Struttura i cui membri archiviano le caratteristiche dell'oggetto finestra di dialogo.
 
@@ -416,17 +416,17 @@ Struttura i cui membri archiviano le caratteristiche dell'oggetto finestra di di
 PRINTDLG& m_pd;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Dopo la costruzione di `CPrintDialog` un oggetto, è possibile `m_pd` utilizzare per impostare vari aspetti della finestra di dialogo prima di chiamare la funzione membro [DoModal](#domodal) . Per ulteriori informazioni sulla `m_pd` struttura, vedere [PrintDlg](/windows/win32/api/commdlg/ns-commdlg-printdlga) nel Windows SDK.
+Dopo la costruzione di un oggetto `CPrintDialog`, è possibile utilizzare `m_pd` per impostare vari aspetti della finestra di dialogo prima di chiamare la funzione membro [DoModal](#domodal) . Per ulteriori informazioni sulla struttura `m_pd`, vedere [PrintDlg](/windows/win32/api/commdlg/ns-commdlg-printdlga) nella Windows SDK.
 
-Se si modifica direttamente `m_pd` il membro dati, si eseguirà l'override di qualsiasi comportamento predefinito.
+Se si modifica direttamente il membro dati `m_pd`, si eseguirà l'override di eventuali comportamenti predefiniti.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#111](../../mfc/codesnippet/cpp/cprintdialog-class_6.cpp)]
 
-##  <a name="printall"></a>  CPrintDialog::PrintAll
+##  <a name="printall"></a>CPrintDialog::P rintAll
 
 Determina se stampare tutte le pagine del documento.
 
@@ -438,15 +438,15 @@ BOOL PrintAll() const;
 
 Diverso da zero se tutte le pagine del documento devono essere stampate; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo la `DoModal` chiamata a per determinare se stampare tutte le pagine del documento.
+Chiamare questa funzione dopo aver chiamato `DoModal` per determinare se stampare tutte le pagine del documento.
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio per [CPrintDialog:: m_pd](#m_pd).
 
-##  <a name="printcollate"></a>  CPrintDialog::PrintCollate
+##  <a name="printcollate"></a>CPrintDialog::P rintCollate
 
 Determina se le copie fascicolate sono richieste.
 
@@ -458,15 +458,15 @@ BOOL PrintCollate() const;
 
 Diverso da zero se l'utente seleziona la casella di controllo COLLATE nella finestra di dialogo; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo la `DoModal` chiamata a per determinare se la stampante deve raccogliere tutte le copie stampate del documento.
+Chiamare questa funzione dopo la chiamata di `DoModal` per determinare se la stampante deve raccogliere tutte le copie stampate del documento.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#110](../../mfc/codesnippet/cpp/cprintdialog-class_7.cpp)]
 
-##  <a name="printrange"></a>  CPrintDialog::PrintRange
+##  <a name="printrange"></a>CPrintDialog::P rintRange
 
 Determina se stampare solo un intervallo di pagine specificato.
 
@@ -478,15 +478,15 @@ BOOL PrintRange() const;
 
 Diverso da zero se deve essere stampato solo un intervallo di pagine nel documento; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo la `DoModal` chiamata a per determinare se stampare solo un intervallo di pagine nel documento.
+Chiamare questa funzione dopo aver chiamato `DoModal` per determinare se stampare solo un intervallo di pagine nel documento.
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio per [CPrintDialog:: m_pd](#m_pd).
 
-##  <a name="printselection"></a>  CPrintDialog::PrintSelection
+##  <a name="printselection"></a>CPrintDialog::P rintSelection
 
 Determina se stampare solo gli elementi attualmente selezionati.
 
@@ -498,9 +498,9 @@ BOOL PrintSelection() const;
 
 Diverso da zero se solo gli elementi selezionati devono essere stampati; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo la `DoModal` chiamata a per determinare se stampare solo gli elementi attualmente selezionati.
+Chiamare questa funzione dopo aver chiamato `DoModal` per determinare se stampare solo gli elementi attualmente selezionati.
 
 ### <a name="example"></a>Esempio
 

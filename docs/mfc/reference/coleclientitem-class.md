@@ -165,11 +165,11 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 9f97f117f0fd8570855079aca7bdfd7a63118bc5
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740873"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855557"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem (classe)
 
@@ -185,34 +185,34 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[COleClientItem::COleClientItem](#coleclientitem)|Costruisce un oggetto `COleClientItem`.|
+|[COleClientItem:: COleClientItem](#coleclientitem)|Costruisce un oggetto `COleClientItem`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[COleClientItem:: Activate](#activate)|Apre l'elemento OLE per un'operazione, quindi esegue il verbo specificato.|
 |[COleClientItem:: activates](#activateas)|Attiva l'elemento come un altro tipo.|
-|[COleClientItem::AttachDataObject](#attachdataobject)|Accede ai dati nell'oggetto OLE.|
+|[COleClientItem:: AttachDataObject](#attachdataobject)|Accede ai dati nell'oggetto OLE.|
 |[COleClientItem:: CanCreateFromData](#cancreatefromdata)|Indica se un'applicazione contenitore può creare un oggetto incorporato.|
-|[COleClientItem::CanCreateLinkFromData](#cancreatelinkfromdata)|Indica se un'applicazione contenitore può creare un oggetto collegato.|
+|[COleClientItem:: CanCreateLinkFromData](#cancreatelinkfromdata)|Indica se un'applicazione contenitore può creare un oggetto collegato.|
 |[COleClientItem:: CanPaste](#canpaste)|Indica se gli Appunti contengono un elemento OLE incorporato o statico.|
-|[COleClientItem::CanPasteLink](#canpastelink)|Indica se gli Appunti contengono un elemento OLE collegabile.|
+|[COleClientItem:: CanPasteLink](#canpastelink)|Indica se gli Appunti contengono un elemento OLE collegabile.|
 |[COleClientItem:: Close](#close)|Chiude un collegamento a un server ma non elimina definitivamente l'elemento OLE.|
 |[COleClientItem:: ConvertTo](#convertto)|Converte l'elemento in un altro tipo.|
 |[COleClientItem:: CopyToClipboard](#copytoclipboard)|Copia l'elemento OLE negli Appunti.|
 |[COleClientItem:: CreateCloneFrom](#createclonefrom)|Crea un duplicato di un elemento esistente.|
 |[COleClientItem:: CreateFromClipboard](#createfromclipboard)|Crea un elemento incorporato dagli Appunti.|
 |[COleClientItem:: CreateFromData](#createfromdata)|Crea un elemento incorporato da un oggetto dati.|
-|[COleClientItem::CreateFromFile](#createfromfile)|Crea un elemento incorporato da un file.|
-|[COleClientItem::CreateLinkFromClipboard](#createlinkfromclipboard)|Crea un elemento collegato dagli Appunti.|
-|[COleClientItem::CreateLinkFromData](#createlinkfromdata)|Crea un elemento collegato da un oggetto dati.|
-|[COleClientItem::CreateLinkFromFile](#createlinkfromfile)|Crea un elemento collegato da un file.|
-|[COleClientItem::CreateNewItem](#createnewitem)|Consente di creare un nuovo elemento incorporato avviando l'applicazione server.|
+|[COleClientItem:: CreateFromFile](#createfromfile)|Crea un elemento incorporato da un file.|
+|[COleClientItem:: CreateLinkFromClipboard](#createlinkfromclipboard)|Crea un elemento collegato dagli Appunti.|
+|[COleClientItem:: CreateLinkFromData](#createlinkfromdata)|Crea un elemento collegato da un oggetto dati.|
+|[COleClientItem:: CreateLinkFromFile](#createlinkfromfile)|Crea un elemento collegato da un file.|
+|[COleClientItem:: CreateNewItem](#createnewitem)|Consente di creare un nuovo elemento incorporato avviando l'applicazione server.|
 |[COleClientItem:: CreateStaticFromClipboard](#createstaticfromclipboard)|Crea un elemento statico dagli Appunti.|
-|[COleClientItem::CreateStaticFromData](#createstaticfromdata)|Crea un elemento statico da un oggetto dati.|
+|[COleClientItem:: CreateStaticFromData](#createstaticfromdata)|Crea un elemento statico da un oggetto dati.|
 |[COleClientItem::D ttiva](#deactivate)|Disattiva l'elemento.|
 |[COleClientItem::D eactivateUI](#deactivateui)|Ripristina lo stato originale dell'interfaccia utente dell'applicazione contenitore.|
 |[COleClientItem::D Elimina](#delete)|Elimina o chiude l'elemento OLE se è un elemento collegato.|
@@ -220,74 +220,74 @@ class COleClientItem : public CDocItem
 |[COleClientItem::D oVerb](#doverb)|Esegue il verbo specificato.|
 |[COleClientItem::D RAW](#draw)|Disegna l'elemento OLE.|
 |[COleClientItem:: GetActiveView](#getactiveview)|Ottiene la visualizzazione in cui l'elemento viene attivato sul posto.|
-|[COleClientItem::GetCachedExtent](#getcachedextent)|Restituisce i limiti del rettangolo dell'elemento OLE.|
-|[COleClientItem::GetClassID](#getclassid)|Ottiene l'ID di classe dell'elemento corrente.|
-|[COleClientItem::GetClipboardData](#getclipboarddata)|Ottiene i dati da inserire negli Appunti chiamando la `CopyToClipboard` funzione membro.|
-|[COleClientItem::GetDocument](#getdocument)|Restituisce l' `COleDocument` oggetto che contiene l'elemento corrente.|
-|[COleClientItem::GetDrawAspect](#getdrawaspect)|Ottiene la visualizzazione corrente dell'elemento per il rendering.|
+|[COleClientItem:: GetCachedExtent](#getcachedextent)|Restituisce i limiti del rettangolo dell'elemento OLE.|
+|[COleClientItem:: GetClassID](#getclassid)|Ottiene l'ID di classe dell'elemento corrente.|
+|[COleClientItem:: GetClipboardData](#getclipboarddata)|Ottiene i dati da inserire negli Appunti chiamando la funzione membro `CopyToClipboard`.|
+|[COleClientItem:: GetDocument](#getdocument)|Restituisce l'oggetto `COleDocument` contenente l'elemento corrente.|
+|[COleClientItem:: GetDrawAspect](#getdrawaspect)|Ottiene la visualizzazione corrente dell'elemento per il rendering.|
 |[COleClientItem:: GetExtent](#getextent)|Restituisce i limiti del rettangolo dell'elemento OLE.|
-|[COleClientItem::GetIconFromRegistry](#geticonfromregistry)|Recupera un handle per un'icona associata al server di un particolare CLSID.|
+|[COleClientItem:: GetIconFromRegistry](#geticonfromregistry)|Recupera un handle per un'icona associata al server di un particolare CLSID.|
 |[COleClientItem:: GetIconicMetafile](#geticonicmetafile)|Ottiene il metafile utilizzato per disegnare l'icona dell'elemento.|
-|[COleClientItem::GetInPlaceWindow](#getinplacewindow)|Restituisce un puntatore alla finestra di modifica sul posto dell'elemento.|
+|[COleClientItem:: GetInPlaceWindow](#getinplacewindow)|Restituisce un puntatore alla finestra di modifica sul posto dell'elemento.|
 |[COleClientItem:: GetItemState](#getitemstate)|Ottiene lo stato corrente dell'elemento.|
 |[COleClientItem:: GetLastStatus](#getlaststatus)|Restituisce lo stato dell'ultima operazione OLE.|
-|[COleClientItem::GetLinkUpdateOptions](#getlinkupdateoptions)|Restituisce la modalità di aggiornamento per un elemento collegato (funzionalità avanzata).|
-|[COleClientItem::GetType](#gettype)|Restituisce il tipo (incorporato, collegato o statico) dell'elemento OLE.|
-|[COleClientItem::GetUserType](#getusertype)|Ottiene una stringa che descrive il tipo dell'elemento.|
-|[COleClientItem::IsInPlaceActive](#isinplaceactive)|Restituisce TRUE se l'elemento è attivo sul posto.|
-|[COleClientItem::IsLinkUpToDate](#islinkuptodate)|Restituisce TRUE se un elemento collegato è aggiornato con il documento di origine.|
-|[COleClientItem::IsModified](#ismodified)|Restituisce TRUE se l'elemento è stato modificato dopo l'ultimo salvataggio.|
-|[COleClientItem::IsOpen](#isopen)|Restituisce TRUE se l'elemento è attualmente aperto nell'applicazione server.|
-|[COleClientItem::IsRunning](#isrunning)|Restituisce TRUE se l'applicazione server dell'elemento è in esecuzione.|
-|[COleClientItem::OnActivate](#onactivate)|Chiamato dal Framework per notificare all'elemento che è attivato.|
-|[COleClientItem::OnActivateUI](#onactivateui)|Viene chiamato dal Framework per notificare all'elemento che è attivato e che deve visualizzare l'interfaccia utente.|
+|[COleClientItem:: GetLinkUpdateOptions](#getlinkupdateoptions)|Restituisce la modalità di aggiornamento per un elemento collegato (funzionalità avanzata).|
+|[COleClientItem:: GetType](#gettype)|Restituisce il tipo (incorporato, collegato o statico) dell'elemento OLE.|
+|[COleClientItem:: GetUserType](#getusertype)|Ottiene una stringa che descrive il tipo dell'elemento.|
+|[COleClientItem:: IsInPlaceActive](#isinplaceactive)|Restituisce TRUE se l'elemento è attivo sul posto.|
+|[COleClientItem:: IsLinkUpToDate](#islinkuptodate)|Restituisce TRUE se un elemento collegato è aggiornato con il documento di origine.|
+|[COleClientItem:: modified](#ismodified)|Restituisce TRUE se l'elemento è stato modificato dopo l'ultimo salvataggio.|
+|[COleClientItem:: Open](#isopen)|Restituisce TRUE se l'elemento è attualmente aperto nell'applicazione server.|
+|[COleClientItem:: outrunning](#isrunning)|Restituisce TRUE se l'applicazione server dell'elemento è in esecuzione.|
+|[COleClientItem:: OnActivate](#onactivate)|Chiamato dal Framework per notificare all'elemento che è attivato.|
+|[COleClientItem:: OnActivateUI](#onactivateui)|Viene chiamato dal Framework per notificare all'elemento che è attivato e che deve visualizzare l'interfaccia utente.|
 |[COleClientItem:: OnChange](#onchange)|Chiamato quando il server modifica l'elemento OLE. Implementazione richiesta.|
 |[COleClientItem:: OnDeactivate](#ondeactivate)|Chiamata eseguita dal framework quando un elemento viene disattivato.|
-|[COleClientItem::OnDeactivateUI](#ondeactivateui)|Chiamata eseguita dal framework quando il server ha rimosso l'interfaccia utente sul posto.|
-|[COleClientItem::OnGetClipboardData](#ongetclipboarddata)|Chiamato dal Framework per ottenere i dati da copiare negli Appunti.|
-|[COleClientItem::OnInsertMenus](#oninsertmenus)|Chiamato dal Framework per creare un menu composito.|
+|[COleClientItem:: OnDeactivateUI](#ondeactivateui)|Chiamata eseguita dal framework quando il server ha rimosso l'interfaccia utente sul posto.|
+|[COleClientItem:: OnGetClipboardData](#ongetclipboarddata)|Chiamato dal Framework per ottenere i dati da copiare negli Appunti.|
+|[COleClientItem:: OnInsertMenus](#oninsertmenus)|Chiamato dal Framework per creare un menu composito.|
 |[COleClientItem:: OnRemoveMenus](#onremovemenus)|Chiamato dal Framework per rimuovere i menu del contenitore da un menu composito.|
-|[COleClientItem::OnSetMenu](#onsetmenu)|Chiamata eseguita dal Framework per installare e rimuovere un menu composito.|
+|[COleClientItem:: OnSetMenu](#onsetmenu)|Chiamata eseguita dal Framework per installare e rimuovere un menu composito.|
 |[COleClientItem:: OnShowControlBars](#onshowcontrolbars)|Chiamata eseguita dal Framework per mostrare e nascondere le barre di controllo.|
-|[COleClientItem::OnUpdateFrameTitle](#onupdateframetitle)|Chiamata eseguita dal Framework per aggiornare la barra del titolo della finestra cornice.|
-|[COleClientItem::ReactivateAndUndo](#reactivateandundo)|Riattiva l'elemento e Annulla l'ultima operazione di modifica sul posto.|
+|[COleClientItem:: OnUpdateFrameTitle](#onupdateframetitle)|Chiamata eseguita dal Framework per aggiornare la barra del titolo della finestra cornice.|
+|[COleClientItem:: ReactivateAndUndo](#reactivateandundo)|Riattiva l'elemento e Annulla l'ultima operazione di modifica sul posto.|
 |[COleClientItem:: Release](#release)|Rilascia la connessione a un elemento collegato OLE e la chiude se è stata aperta. Non elimina definitivamente l'elemento client.|
 |[COleClientItem:: Reload](#reload)|Ricarica l'elemento dopo una chiamata a `ActivateAs`.|
-|[COleClientItem::Run](#run)|Esegue l'applicazione associata all'elemento.|
-|[COleClientItem::SetDrawAspect](#setdrawaspect)|Imposta la visualizzazione corrente dell'elemento per il rendering.|
-|[COleClientItem::SetExtent](#setextent)|Imposta il rettangolo di delimitazione dell'elemento OLE.|
+|[COleClientItem:: Run](#run)|Esegue l'applicazione associata all'elemento.|
+|[COleClientItem:: SetDrawAspect](#setdrawaspect)|Imposta la visualizzazione corrente dell'elemento per il rendering.|
+|[COleClientItem:: seextent](#setextent)|Imposta il rettangolo di delimitazione dell'elemento OLE.|
 |[COleClientItem:: sehostnames](#sethostnames)|Imposta i nomi visualizzati dal server quando si modifica l'elemento OLE.|
-|[COleClientItem::SetIconicMetafile](#seticonicmetafile)|Memorizza nella cache il metafile utilizzato per disegnare l'icona dell'elemento.|
-|[COleClientItem::SetItemRects](#setitemrects)|Imposta il rettangolo di delimitazione dell'elemento.|
-|[COleClientItem::SetLinkUpdateOptions](#setlinkupdateoptions)|Imposta la modalità di aggiornamento per un elemento collegato (funzionalità avanzata).|
-|[COleClientItem::SetPrintDevice](#setprintdevice)|Imposta il dispositivo di destinazione di stampa per questo elemento client.|
+|[COleClientItem:: SetIconicMetafile](#seticonicmetafile)|Memorizza nella cache il metafile utilizzato per disegnare l'icona dell'elemento.|
+|[COleClientItem:: SetItemRects](#setitemrects)|Imposta il rettangolo di delimitazione dell'elemento.|
+|[COleClientItem:: SetLinkUpdateOptions](#setlinkupdateoptions)|Imposta la modalità di aggiornamento per un elemento collegato (funzionalità avanzata).|
+|[COleClientItem:: SetPrintDevice](#setprintdevice)|Imposta il dispositivo di destinazione di stampa per questo elemento client.|
 |[COleClientItem:: UpdateLink](#updatelink)|Aggiorna la cache di presentazione di un elemento.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Name|Descrizione|
 |----------|-----------------|
-|[COleClientItem::CanActivate](#canactivate)|Chiamato dal Framework per determinare se è consentita l'attivazione sul posto.|
-|[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Chiamata eseguita dal framework quando viene modificata la posizione di un elemento.|
-|[COleClientItem::OnDeactivateAndUndo](#ondeactivateandundo)|Chiamato dal Framework per annullare l'operazione dopo l'attivazione.|
-|[COleClientItem::OnDiscardUndoState](#ondiscardundostate)|Chiamata eseguita dal Framework per eliminare le informazioni sullo stato di annullamento dell'elemento.|
-|[COleClientItem::OnGetClipRect](#ongetcliprect)|Chiamato dal Framework per ottenere le coordinate del rettangolo di ritaglio dell'elemento.|
+|[COleClientItem:: CanActivate](#canactivate)|Chiamato dal Framework per determinare se è consentita l'attivazione sul posto.|
+|[COleClientItem:: OnChangeItemPosition](#onchangeitemposition)|Chiamata eseguita dal framework quando viene modificata la posizione di un elemento.|
+|[COleClientItem:: OnDeactivateAndUndo](#ondeactivateandundo)|Chiamato dal Framework per annullare l'operazione dopo l'attivazione.|
+|[COleClientItem:: OnDiscardUndoState](#ondiscardundostate)|Chiamata eseguita dal Framework per eliminare le informazioni sullo stato di annullamento dell'elemento.|
+|[COleClientItem:: OnGetClipRect](#ongetcliprect)|Chiamato dal Framework per ottenere le coordinate del rettangolo di ritaglio dell'elemento.|
 |[COleClientItem:: OnGetItemPosition](#ongetitemposition)|Chiamato dal Framework per ottenere la posizione dell'elemento rispetto alla visualizzazione.|
-|[COleClientItem::OnGetWindowContext](#ongetwindowcontext)|Chiamato dal framework quando un elemento viene attivato sul posto.|
-|[COleClientItem::OnScrollBy](#onscrollby)|Chiamato dal Framework per scorrere l'elemento nella visualizzazione.|
+|[COleClientItem:: OnGetWindowContext](#ongetwindowcontext)|Chiamato dal framework quando un elemento viene attivato sul posto.|
+|[COleClientItem:: OnScrollBy](#onscrollby)|Chiamato dal Framework per scorrere l'elemento nella visualizzazione.|
 |[COleClientItem:: OnShowItem](#onshowitem)|Chiamata eseguita dal Framework per visualizzare l'elemento OLE.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un elemento OLE rappresenta i dati, creati e gestiti da un'applicazione server, che possono essere incorporati in un documento in modo che l'utente sia un singolo documento. Il risultato è un "documento composto" costituito dall'elemento OLE e da un documento contenitore.
 
 Un elemento OLE può essere incorporato o collegato. Se è incorporata, i relativi dati vengono archiviati come parte del documento composto. Se è collegato, i relativi dati vengono archiviati come parte di un file separato creato dall'applicazione server e solo un collegamento a tale file viene archiviato nel documento composto. Tutti gli elementi OLE contengono informazioni che specificano l'applicazione server che deve essere chiamata per modificarli.
 
-`COleClientItem`definisce diverse funzioni sottoponibili a override chiamate in risposta alle richieste dall'applicazione server. questi sottoponibili a override in genere fungono da notifiche. Ciò consente all'applicazione server di informare il contenitore delle modifiche apportate dall'utente durante la modifica dell'elemento OLE o di recuperare le informazioni necessarie durante la modifica.
+`COleClientItem` definisce diverse funzioni sottoponibili a override chiamate in risposta alle richieste dall'applicazione server. questi sottoponibili a override in genere fungono da notifiche. Ciò consente all'applicazione server di informare il contenitore delle modifiche apportate dall'utente durante la modifica dell'elemento OLE o di recuperare le informazioni necessarie durante la modifica.
 
-`COleClientItem`può essere usato con la classe [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)o [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) . Per usare `COleClientItem`, derivare una classe da essa e implementare la funzione membro [OnChange](#onchange) , che definisce il modo in cui il contenitore risponde alle modifiche apportate all'elemento. Per supportare l'attivazione sul posto, eseguire l'override della funzione membro [OnGetItemPosition](#ongetitemposition) . Questa funzione fornisce informazioni sulla posizione visualizzata dell'elemento OLE.
+`COleClientItem` può essere utilizzato con la classe [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)o [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) . Per utilizzare `COleClientItem`, derivare una classe e implementare la funzione membro [OnChange](#onchange) , che definisce il modo in cui il contenitore risponde alle modifiche apportate all'elemento. Per supportare l'attivazione sul posto, eseguire l'override della funzione membro [OnGetItemPosition](#ongetitemposition) . Questa funzione fornisce informazioni sulla posizione visualizzata dell'elemento OLE.
 
-Per ulteriori informazioni sull'utilizzo dell'interfaccia contenitore, vedere gli articoli [contenitori: Implementazione di un](../../mfc/containers-implementing-a-container.md) contenitore e di un' [attivazione](../../mfc/activation-cpp.md).
+Per altre informazioni sull'uso dell'interfaccia contenitore, vedere gli articoli [contenitori: implementazione di un contenitore](../../mfc/containers-implementing-a-container.md) e [attivazione](../../mfc/activation-cpp.md).
 
 > [!NOTE]
 >  Il Windows SDK fa riferimento a elementi incorporati e collegati come "oggetti" e fa riferimento a tipi di elementi come "classi". Questo riferimento utilizza il termine "Item" per distinguere l'entità OLE dall'oggetto corrispondente C++ e il termine "Type" per distinguere la categoria OLE dalla C++ classe.
@@ -320,12 +320,12 @@ void Activate(
 ### <a name="parameters"></a>Parametri
 
 *nVerb*<br/>
-Specifica il verbo da eseguire. Può essere uno dei seguenti:
+Specifica il verbo da eseguire. I possibili valori sono i seguenti:
 
-|Value|Significato|Simbolo|
+|valore|Significato|Simbolo|
 |-----------|-------------|------------|
 |- 0|verbo primario|OLEIVERB_PRIMARY|
-|- 1|Verbo secondario|(Nessuno)|
+|- 1|Verbo secondario|(nessuna)|
 |- 1|Elemento visualizzato per la modifica|OLEIVERB_SHOW|
 |- 2|Modifica elemento in una finestra separata|OLEIVERB_OPEN|
 |- 3|Nascondi elemento|OLEIVERB_HIDE|
@@ -338,7 +338,7 @@ Puntatore alla finestra di visualizzazione del contenitore che contiene l'elemen
 *lpMsg*<br/>
 Puntatore al messaggio che ha causato l'attivazione dell'elemento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se l'applicazione server è stata scritta utilizzando la libreria Microsoft Foundation Class, questa funzione determina l'esecuzione della funzione membro [OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb) dell'oggetto `COleServerItem` corrispondente.
 
@@ -372,7 +372,7 @@ Riferimento all'ID della classe di destinazione.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo viene chiamato automaticamente da [COleConvertDialog::D oconvert](../../mfc/reference/coleconvertdialog-class.md#doconvert). Non viene in genere chiamato direttamente.
 
@@ -387,7 +387,7 @@ void AttachDataObject(COleDataObject& rDataObject) const;
 ### <a name="parameters"></a>Parametri
 
 *rDataObject*<br/>
-Riferimento a un `COleDataObject` oggetto che verrà inizializzato per consentire l'accesso ai dati nell'elemento OLE.
+Riferimento a un oggetto `COleDataObject` che verrà inizializzato per consentire l'accesso ai dati nell'elemento OLE.
 
 ##  <a name="canactivate"></a>COleClientItem:: CanActivate
 
@@ -401,7 +401,7 @@ virtual BOOL CanActivate();
 
 Diverso da zero se è consentita l'attivazione sul posto; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita consente l'attivazione sul posto se il contenitore dispone di una finestra valida. Eseguire l'override di questa funzione per implementare la logica speciale per accettare o rifiutare la richiesta di attivazione. Una richiesta di attivazione, ad esempio, può essere rifiutata se l'elemento OLE è troppo piccolo o non è attualmente visibile.
 
@@ -409,7 +409,7 @@ Per ulteriori informazioni, vedere [IOleInPlaceSite:: CanInPlaceActivate](/windo
 
 ##  <a name="cancreatefromdata"></a>COleClientItem:: CanCreateFromData
 
-Verifica se un'applicazione contenitore può creare un oggetto incorporato dall'oggetto specificato `COleDataObject` .
+Verifica se un'applicazione contenitore può creare un oggetto incorporato dall'oggetto `COleDataObject` specificato.
 
 ```
 static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
@@ -422,11 +422,11 @@ Puntatore all'oggetto [COleDataObject](../../mfc/reference/coledataobject-class.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il contenitore può creare un oggetto incorporato dall' `COleDataObject` oggetto; in caso contrario, 0.
+Diverso da zero se il contenitore può creare un oggetto incorporato dall'oggetto `COleDataObject`; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La `COleDataObject` classe viene utilizzata nei trasferimenti di dati per il recupero di dati in vari formati dagli Appunti, tramite il trascinamento della selezione o da un elemento OLE incorporato.
+La classe `COleDataObject` viene utilizzata nei trasferimenti di dati per il recupero di dati in vari formati dagli Appunti, tramite il trascinamento della selezione o da un elemento OLE incorporato.
 
 I contenitori possono usare questa funzione per decidere di abilitare o disabilitare i comandi di modifica incolla e modifica incolla speciale.
 
@@ -434,7 +434,7 @@ Per ulteriori informazioni, vedere l'articolo [oggetti dati e origini dati (OLE)
 
 ##  <a name="cancreatelinkfromdata"></a>COleClientItem:: CanCreateLinkFromData
 
-Verifica se un'applicazione contenitore può creare un oggetto collegato dall'oggetto specificato `COleDataObject` .
+Verifica se un'applicazione contenitore può creare un oggetto collegato dall'oggetto `COleDataObject` specificato.
 
 ```
 static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
@@ -447,11 +447,11 @@ Puntatore all'oggetto [COleDataObject](../../mfc/reference/coledataobject-class.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il contenitore può creare un oggetto collegato dall' `COleDataObject` oggetto.
+Diverso da zero se il contenitore può creare un oggetto collegato dall'oggetto `COleDataObject`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La `COleDataObject` classe viene utilizzata nei trasferimenti di dati per il recupero di dati in vari formati dagli Appunti, tramite il trascinamento della selezione o da un elemento OLE incorporato.
+La classe `COleDataObject` viene utilizzata nei trasferimenti di dati per il recupero di dati in vari formati dagli Appunti, tramite il trascinamento della selezione o da un elemento OLE incorporato.
 
 I contenitori possono usare questa funzione per decidere di abilitare o disabilitare i comandi di modifica incolla speciale e modifica Incolla collegamento.
 
@@ -469,7 +469,7 @@ static BOOL PASCAL CanPaste();
 
 Diverso da zero se un elemento OLE incorporato può essere incollato dagli Appunti; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [OleGetClipboard](/windows/win32/api/ole2/nf-ole2-olegetclipboard) e [OleQueryCreateFromData](/windows/win32/api/ole2/nf-ole2-olequerycreatefromdata) nel Windows SDK.
 
@@ -485,7 +485,7 @@ static BOOL PASCAL CanPasteLink();
 
 Diverso da zero se un elemento OLE collegato può essere incollato dagli Appunti; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [OleGetClipboard](/windows/win32/api/ole2/nf-ole2-olegetclipboard) e [OleQueryLinkFromData](/windows/win32/api/ole2/nf-ole2-olequerylinkfromdata) nel Windows SDK.
 
@@ -504,11 +504,11 @@ Flag che specifica le circostanze in cui l'elemento OLE viene salvato quando tor
 
 - OLECLOSE_SAVEIFDIRTY salvare l'elemento OLE.
 
-- OLECLOSE_NOSAVE non salva l'elemento OLE.
+- OLECLOSE_NOSAVE non salvare l'elemento OLE.
 
-- OLECLOSE_PROMPTSAVE chiede all'utente se salvare l'elemento OLE.
+- OLECLOSE_PROMPTSAVE chiedere all'utente se salvare l'elemento OLE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non ha effetto se l'elemento OLE non è in esecuzione.
 
@@ -516,7 +516,7 @@ Per ulteriori informazioni, vedere [IOleObject:: Close](/windows/win32/api/oleid
 
 ##  <a name="coleclientitem"></a>COleClientItem:: COleClientItem
 
-Costruisce un `COleClientItem` oggetto e lo aggiunge alla raccolta di elementi del documento del contenitore che costruisce solo l' C++ oggetto e non esegue alcuna inizializzazione OLE.
+Costruisce un oggetto `COleClientItem` e lo aggiunge alla raccolta di elementi del documento del contenitore, che costruisce solo l' C++ oggetto e non esegue alcuna inizializzazione OLE.
 
 ```
 COleClientItem(COleDocument* pContainerDoc = NULL);
@@ -527,7 +527,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 *pContainerDoc*<br/>
 Puntatore al documento del contenitore che conterrà questo elemento. Può trattarsi di qualsiasi derivato [COleDocument](../../mfc/reference/coledocument-class.md) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se si passa un puntatore NULL, non viene apportata alcuna aggiunta al documento del contenitore. È necessario chiamare in modo esplicito [COleDocument:: AddItem](../../mfc/reference/coledocument-class.md#additem).
 
@@ -570,7 +570,7 @@ ID classe del tipo di destinazione.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo viene chiamato automaticamente da [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md). Non è necessario chiamarlo direttamente.
 
@@ -587,7 +587,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 *bIncludeLink*<br/>
 TRUE se le informazioni di collegamento devono essere copiate negli Appunti, consentendo di incollare un elemento collegato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 In genere, questa funzione viene chiamata durante la scrittura di gestori di messaggi per i comandi copia o taglia dal menu Modifica. È necessario implementare la selezione degli elementi nell'applicazione contenitore se si desidera implementare i comandi Copy o cut.
 
@@ -610,7 +610,7 @@ Puntatore all'elemento OLE da duplicare.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La copia è identica all'elemento di origine. È possibile utilizzare questa funzione per supportare le operazioni di annullamento.
 
@@ -627,20 +627,20 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Parametri
 
-*render*<br/>
+*rendering*<br/>
 Flag che specifica il modo in cui il server eseguirà il rendering dell'elemento OLE. Per i valori possibili, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-oleidl-olerender) nel Windows SDK.
 
 *cfFormat*<br/>
 Specifica il formato dati degli Appunti da memorizzare nella cache durante la creazione dell'elemento OLE.
 
 *lpFormatEtc*<br/>
-Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione viene in genere chiamata dal gestore di messaggi per il comando Incolla del menu Modifica. Il comando Incolla viene abilitato dal Framework se la funzione membro [CanPaste](#canpaste) restituisce un valore diverso da zero.
 
@@ -648,7 +648,7 @@ Per ulteriori informazioni, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-ole
 
 ##  <a name="createfromdata"></a>COleClientItem:: CreateFromData
 
-Chiamare questa funzione per creare un elemento incorporato da un `COleDataObject` oggetto.
+Chiamare questa funzione per creare un elemento incorporato da un oggetto `COleDataObject`.
 
 ```
 BOOL CreateFromData(
@@ -663,20 +663,20 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Puntatore all'oggetto [COleDataObject](../../mfc/reference/coledataobject-class.md) da cui deve essere creato l'elemento OLE.
 
-*render*<br/>
+*rendering*<br/>
 Flag che specifica il modo in cui il server eseguirà il rendering dell'elemento OLE. Per i valori possibili, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-oleidl-olerender) nel Windows SDK.
 
 *cfFormat*<br/>
 Specifica il formato dati degli Appunti da memorizzare nella cache durante la creazione dell'elemento OLE.
 
 *lpFormatEtc*<br/>
-Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le operazioni di trasferimento dei dati, ad esempio l'incollatura dagli Appunti o le operazioni di trascinamento della selezione, forniscono `COleDataObject` oggetti contenenti le informazioni offerte da un'applicazione server. Viene in genere usato nell'override di [CView:: OnDrop](../../mfc/reference/cview-class.md#ondrop).
 
@@ -700,23 +700,23 @@ BOOL CreateFromFile(
 *lpszFileName*<br/>
 Puntatore al nome del file da cui deve essere creato l'elemento OLE.
 
-*clsid*<br/>
-Riservato per usi futuri.
+*CLSID*<br/>
+Riservato per utilizzi futuri.
 
-*render*<br/>
+*rendering*<br/>
 Flag che specifica il modo in cui il server eseguirà il rendering dell'elemento OLE. Per i valori possibili, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-oleidl-olerender) nel Windows SDK.
 
 *cfFormat*<br/>
 Specifica il formato dati degli Appunti da memorizzare nella cache durante la creazione dell'elemento OLE.
 
 *lpFormatEtc*<br/>
-Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il Framework chiama questa funzione da [COleInsertDialog:: CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem) se l'utente sceglie OK nella finestra di dialogo Inserisci oggetto quando viene selezionato il pulsante Crea da file.
 
@@ -735,20 +735,20 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Parametri
 
-*render*<br/>
+*rendering*<br/>
 Flag che specifica il modo in cui il server eseguirà il rendering dell'elemento OLE. Per i valori possibili, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-oleidl-olerender) nel Windows SDK.
 
 *cfFormat*<br/>
 Specifica il formato dati degli Appunti da memorizzare nella cache durante la creazione dell'elemento OLE.
 
 *lpFormatEtc*<br/>
-Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione viene in genere chiamata dal gestore di messaggi per il comando Incolla collegamento nel menu Modifica. Il comando Incolla collegamento è abilitato nell'implementazione predefinita di [COleDocument](../../mfc/reference/coledocument-class.md) se gli Appunti contengono un elemento OLE a cui è possibile collegarsi.
 
@@ -756,7 +756,7 @@ Per ulteriori informazioni, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-ole
 
 ##  <a name="createlinkfromdata"></a>COleClientItem:: CreateLinkFromData
 
-Chiamare questa funzione per creare un elemento collegato da un `COleDataObject` oggetto.
+Chiamare questa funzione per creare un elemento collegato da un oggetto `COleDataObject`.
 
 ```
 BOOL CreateLinkFromData(
@@ -771,20 +771,20 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Puntatore all'oggetto [COleDataObject](../../mfc/reference/coledataobject-class.md) da cui deve essere creato l'elemento OLE.
 
-*render*<br/>
+*rendering*<br/>
 Flag che specifica il modo in cui il server eseguirà il rendering dell'elemento OLE. Per i valori possibili, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-oleidl-olerender) nel Windows SDK.
 
 *cfFormat*<br/>
 Specifica il formato dati degli Appunti da memorizzare nella cache durante la creazione dell'elemento OLE.
 
 *lpFormatEtc*<br/>
-Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questo oggetto durante un'operazione DROP quando l'utente indica che è necessario creare un collegamento. Può essere usato anche per gestire il comando modifica incolla. Viene chiamato dal Framework in `COleClientItem::CreateLinkFromClipboard` e in [COlePasteSpecialDialog:: CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem) quando è stata selezionata l'opzione di collegamento.
 
@@ -807,20 +807,20 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Puntatore al nome del file da cui deve essere creato l'elemento OLE.
 
-*render*<br/>
+*rendering*<br/>
 Flag che specifica il modo in cui il server eseguirà il rendering dell'elemento OLE. Per i valori possibili, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-oleidl-olerender) nel Windows SDK.
 
 *cfFormat*<br/>
 Specifica il formato dati degli Appunti da memorizzare nella cache durante la creazione dell'elemento OLE.
 
 *lpFormatEtc*<br/>
-Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il Framework chiama questa funzione se l'utente sceglie OK nella finestra di dialogo Inserisci oggetto quando viene selezionato il pulsante Crea da file e la casella di controllo collega è selezionata. Viene chiamato da [COleInsertDialog:: CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem).
 
@@ -840,23 +840,23 @@ BOOL CreateNewItem(
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 ID che identifica in modo univoco il tipo di elemento OLE da creare.
 
-*render*<br/>
+*rendering*<br/>
 Flag che specifica il modo in cui il server eseguirà il rendering dell'elemento OLE. Per i valori possibili, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-oleidl-olerender) nel Windows SDK.
 
 *cfFormat*<br/>
 Specifica il formato dati degli Appunti da memorizzare nella cache durante la creazione dell'elemento OLE.
 
 *lpFormatEtc*<br/>
-Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il Framework chiama questa funzione se l'utente sceglie OK nella finestra di dialogo Inserisci oggetto quando viene selezionato il pulsante Crea nuovo.
 
@@ -875,20 +875,20 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Parametri
 
-*render*<br/>
+*rendering*<br/>
 Flag che specifica il modo in cui il server eseguirà il rendering dell'elemento OLE. Per i valori possibili, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-oleidl-olerender) nel Windows SDK.
 
 *cfFormat*<br/>
 Specifica il formato dati degli Appunti da memorizzare nella cache durante la creazione dell'elemento OLE.
 
 *lpFormatEtc*<br/>
-Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un elemento statico contiene i dati di presentazione ma non i dati nativi. di conseguenza, non può essere modificato. Questa funzione viene in genere chiamata se la funzione membro [CreateFromClipboard](#createfromclipboard) ha esito negativo.
 
@@ -896,7 +896,7 @@ Per ulteriori informazioni, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-ole
 
 ##  <a name="createstaticfromdata"></a>COleClientItem:: CreateStaticFromData
 
-Chiamare questa funzione per creare un elemento statico da un `COleDataObject` oggetto.
+Chiamare questa funzione per creare un elemento statico da un oggetto `COleDataObject`.
 
 ```
 BOOL CreateStaticFromData(
@@ -911,22 +911,22 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Puntatore all'oggetto [COleDataObject](../../mfc/reference/coledataobject-class.md) da cui deve essere creato l'elemento OLE.
 
-*render*<br/>
+*rendering*<br/>
 Flag che specifica il modo in cui il server eseguirà il rendering dell'elemento OLE. Per i valori possibili, vedere [OLERENDERe](/windows/win32/api/oleidl/ne-oleidl-olerender) nel Windows SDK.
 
 *cfFormat*<br/>
 Specifica il formato dati degli Appunti da memorizzare nella cache durante la creazione dell'elemento OLE.
 
 *lpFormatEtc*<br/>
-Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) utilizzata se *il rendering* è olerender_format o OLERENDER_DRAW. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se si omette questo parametro, vengono usati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Un elemento statico contiene i dati di presentazione ma non i dati nativi. di conseguenza, non può essere modificato. Questo è essenzialmente lo stesso di [CreateStaticFromClipboard](#createstaticfromclipboard) `COleDataObject`, ad eccezione del fatto che un elemento statico può essere creato da un arbitrario, non solo dagli Appunti.
+Un elemento statico contiene i dati di presentazione ma non i dati nativi. di conseguenza, non può essere modificato. Questo è essenzialmente lo stesso di [CreateStaticFromClipboard](#createstaticfromclipboard) , con la differenza che è possibile creare un elemento statico da un `COleDataObject`arbitrario, non solo dagli Appunti.
 
 Usato in [COlePasteSpecialDialog:: CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem) quando è selezionato static.
 
@@ -940,11 +940,11 @@ Chiamare questa funzione per disattivare l'elemento OLE e liberare tutte le riso
 void Deactivate();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 In genere si disattiva un elemento OLE attivo sul posto quando l'utente fa clic con il mouse sull'area client all'esterno dei limiti dell'elemento. Si noti che la disattivazione dell'elemento OLE eliminerà lo stato di annullamento, rendendo impossibile la chiamata alla funzione membro [ReactivateAndUndo](#reactivateandundo) .
 
-Se l'applicazione supporta l'annullamento, non chiamare `Deactivate`, bensì chiamare [DeactivateUI](#deactivateui).
+Se l'applicazione supporta l'annullamento, non chiamare `Deactivate`; in alternativa, chiamare [DeactivateUI](#deactivateui).
 
 Per ulteriori informazioni, vedere [IOleInPlaceObject:: InPlaceDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) nella Windows SDK.
 
@@ -956,7 +956,7 @@ Chiamare questa funzione quando l'utente disattiva un elemento attivato sul post
 void DeactivateUI();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione Ripristina lo stato originale dell'interfaccia utente dell'applicazione contenitore, nascondendo tutti i menu e altri controlli creati per l'attivazione sul posto.
 
@@ -977,13 +977,13 @@ void Delete(BOOL bAutoDelete = TRUE);
 *bAutoDelete*<br/>
 Specifica se l'elemento deve essere rimosso dal documento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione chiama la funzione membro [Release](#release) , che a sua volta Elimina C++ l'oggetto per l'elemento, rimuovendo definitivamente l'elemento OLE dal documento. Se l'elemento OLE è incorporato, i dati nativi per l'elemento vengono eliminati. Chiude sempre un server in esecuzione; Pertanto, se l'elemento è un collegamento aperto, la funzione la chiude.
 
 ##  <a name="dodragdrop"></a>COleClientItem::D oDragDrop
 
-Chiamare la `DoDragDrop` funzione membro per eseguire un'operazione di trascinamento della selezione.
+Chiamare la funzione membro `DoDragDrop` per eseguire un'operazione di trascinamento della selezione.
 
 ```
 DROPEFFECT DoDragDrop(
@@ -996,7 +996,7 @@ DROPEFFECT DoDragDrop(
 
 ### <a name="parameters"></a>Parametri
 
-*lpItemRect*<br/>
+*lpItemRect in*<br/>
 Il rettangolo dell'elemento sullo schermo in coordinate client (pixel).
 
 *ptOffset*<br/>
@@ -1015,13 +1015,13 @@ Puntatore al rettangolo che definisce la posizione in cui inizia effettivamente 
 
 Valore DROPEFFECT. Se è DROPEFFECT_MOVE, i dati originali devono essere rimossi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'operazione di trascinamento della selezione non viene avviata immediatamente. Attende fino a quando il cursore del mouse lascia il rettangolo specificato da *lpRectStartDrag* o fino a quando non viene superato il numero di millisecondi specificato. Se *lpRectStartDrag* è null, le dimensioni del rettangolo sono pari a un pixel.
 
 Il tempo di ritardo viene specificato da un'impostazione della chiave del registro di sistema. È possibile modificare l'ora di ritardo chiamando [CWinApp:: WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) o [CWinApp:: WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Se non si specifica il tempo di ritardo, viene usato un valore predefinito di 200 millisecondi. Il tempo di trascinamento del ritardo viene archiviato come segue:
 
-- Il tempo di ritardi di trascinamento di Windows NT è archiviato in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.
+- Il tempo di ritardi di trascinamento di Windows NT è archiviato in HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.
 
 - Il tempo di ritardo di trascinamento di Windows 3. x viene archiviato nella vittoria. File INI, nella sezione [Windows}.
 
@@ -1045,10 +1045,10 @@ virtual BOOL DoVerb(
 *nVerb*<br/>
 Specifica il verbo da eseguire. Può includere uno degli elementi seguenti:
 
-|Value|Significato|Simbolo|
+|valore|Significato|Simbolo|
 |-----------|-------------|------------|
 |- 0|verbo primario|OLEIVERB_PRIMARY|
-|- 1|Verbo secondario|(Nessuno)|
+|- 1|Verbo secondario|(nessuna)|
 |- 1|Elemento visualizzato per la modifica|OLEIVERB_SHOW|
 |- 2|Modifica elemento in una finestra separata|OLEIVERB_OPEN|
 |- 3|Nascondi elemento|OLEIVERB_HIDE|
@@ -1065,7 +1065,7 @@ Puntatore al messaggio che ha causato l'attivazione dell'elemento.
 
 Diverso da zero se il verbo è stato eseguito correttamente. in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione chiama la funzione membro [Activate](#activate) per eseguire il verbo. Rileva inoltre le eccezioni e visualizza una finestra di messaggio all'utente se ne viene generata una.
 
@@ -1097,11 +1097,11 @@ Specifica l'aspetto dell'elemento OLE, ovvero la modalità di visualizzazione. S
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione può utilizzare la rappresentazione del metafile dell'elemento OLE creato dalla funzione membro [onpare](../../mfc/reference/coleserveritem-class.md#ondraw) di `COleServerItem`.
+La funzione può utilizzare la rappresentazione metafile dell'elemento OLE creato dalla funzione membro [onpare](../../mfc/reference/coleserveritem-class.md#ondraw) di `COleServerItem`.
 
-In genere si `Draw` USA per la visualizzazione schermo, passando il contesto del dispositivo della schermata come *PDC*. In questo caso, è necessario specificare solo i primi due parametri.
+In genere si usa `Draw` per la visualizzazione dello schermo, passando il contesto del dispositivo della schermata come *PDC*. In questo caso, è necessario specificare solo i primi due parametri.
 
 Il parametro *lpBounds* identifica il rettangolo nel contesto di dispositivo di destinazione (relativo alla modalità di mapping corrente). Il rendering può comportare il ridimensionamento dell'immagine e può essere utilizzato dalle applicazioni contenitore per imporre una visualizzazione che si ridimensiona tra la visualizzazione visualizzata e l'immagine stampata finale.
 
@@ -1132,7 +1132,7 @@ BOOL GetCachedExtent(
 ### <a name="parameters"></a>Parametri
 
 *lpSize*<br/>
-Puntatore a una `SIZE` struttura o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) che riceverà le informazioni sulle dimensioni.
+Puntatore a una struttura `SIZE` o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) che riceverà le informazioni sulle dimensioni.
 
 *nDrawAspect*<br/>
 Specifica l'aspetto dell'elemento OLE di cui devono essere recuperati i limiti. Per i valori possibili, vedere [SetDrawAspect](#setdrawaspect).
@@ -1141,11 +1141,11 @@ Specifica l'aspetto dell'elemento OLE di cui devono essere recuperati i limiti. 
 
 Diverso da zero se ha esito positivo; 0 se l'elemento OLE è vuoto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione fornisce le stesse informazioni di [GetExtent](#getextent). Tuttavia, è possibile chiamare `GetCachedExtent` per ottenere informazioni sull'extent durante l'elaborazione di altri gestori OLE, ad esempio [OnChange](#onchange). Le dimensioni si trovano in unità MM_HIMETRIC.
 
-Questo è possibile perché `GetCachedExtent` utilizza l'interfaccia [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2) anziché utilizzare l'interfaccia [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) per ottenere l'ambito di questo elemento. L' `IViewObject2` oggetto com memorizza nella cache le informazioni sull'extent utilizzate nella precedente chiamata a [IViewObject::D RAW](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw).
+Questo è possibile perché `GetCachedExtent` utilizza l'interfaccia [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2) anziché utilizzare l'interfaccia [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) per ottenere l'ambito di questo elemento. Il `IViewObject2` oggetto COM memorizza nella cache le informazioni sull'extent utilizzate nella precedente chiamata a [IViewObject::D RAW](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw).
 
 Per ulteriori informazioni, vedere [IViewObject2:: GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) nel Windows SDK.
 
@@ -1162,7 +1162,7 @@ void GetClassID(CLSID* pClassID) const;
 *pClassID*<br/>
 Puntatore a un identificatore di tipo [CLSID](/windows/win32/com/clsid-key-hklm) per recuperare l'ID di classe. Per informazioni su CLSID, vedere la Windows SDK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'ID di classe è un numero a 128 bit che identifica in modo univoco l'applicazione che modifica l'elemento.
 
@@ -1170,7 +1170,7 @@ Per ulteriori informazioni, vedere [IPersist:: GetClassID](/windows/win32/api/ob
 
 ##  <a name="getclipboarddata"></a>COleClientItem:: GetClipboardData
 
-Chiamare questa funzione per ottenere un `COleDataSource` oggetto contenente tutti i dati che verrebbero inseriti negli Appunti da una chiamata alla funzione membro [CopyToClipboard](#copytoclipboard) .
+Chiamare questa funzione per ottenere un oggetto `COleDataSource` contenente tutti i dati che verrebbero inseriti negli Appunti da una chiamata alla funzione membro [CopyToClipboard](#copytoclipboard) .
 
 ```
 void GetClipboardData(
@@ -1194,9 +1194,9 @@ Offset del cursore del mouse dall'origine dell'oggetto in pixel.
 *lpSize*<br/>
 Dimensioni dell'oggetto in pixel.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`GetClipboardData`viene chiamato come implementazione predefinita di [OnGetClipboardData](#ongetclipboarddata). Eseguire `OnGetClipboardData` l'override solo se si desidera offrire formati di dati oltre a quelli offerti `CopyToClipboard`da. `COleDataSource` Inserire i formati nell'oggetto prima o dopo la chiamata `CopyToClipboard`a, quindi passare l' `COleDataSource` oggetto alla funzione [COleDataSource::](../../mfc/reference/coledatasource-class.md#setclipboard) selettore. Se, ad esempio, si desidera che la posizione dell'elemento OLE nel relativo documento contenitore venga accompagnata negli Appunti, è necessario definire un formato personalizzato per passare le informazioni e inserirle `COleDataSource` in prima `CopyToClipboard`di chiamare.
+`GetClipboardData` viene chiamato come implementazione predefinita di [OnGetClipboardData](#ongetclipboarddata). Eseguire l'override `OnGetClipboardData` solo se si desidera offrire formati di dati oltre a quelli offerti da `CopyToClipboard`. Inserire i formati nell'oggetto `COleDataSource` prima o dopo aver chiamato `CopyToClipboard`, quindi passare l'oggetto `COleDataSource` alla funzione [COleDataSource:: seclipboard](../../mfc/reference/coledatasource-class.md#setclipboard) . Se, ad esempio, si desidera che la posizione dell'elemento OLE nel relativo documento contenitore venga accompagnata negli Appunti, è necessario definire un formato personalizzato per passare le informazioni e inserirle nel `COleDataSource` prima di chiamare `CopyToClipboard`.
 
 ##  <a name="getdocument"></a>COleClientItem:: GetDocument
 
@@ -1210,13 +1210,13 @@ COleDocument* GetDocument() const;
 
 Puntatore al documento che contiene l'elemento OLE. NULL se l'elemento non fa parte di un documento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo puntatore consente l'accesso all' `COleDocument` oggetto passato come argomento `COleClientItem` al costruttore.
+Questo puntatore consente l'accesso all'oggetto `COleDocument` passato come argomento al costruttore di `COleClientItem`.
 
 ##  <a name="getdrawaspect"></a>COleClientItem:: GetDrawAspect
 
-Chiamare la `GetDrawAspect` funzione membro per determinare l'aspetto o la visualizzazione corrente dell'elemento.
+Chiamare la funzione membro `GetDrawAspect` per determinare l'aspetto o la visualizzazione corrente dell'elemento.
 
 ```
 DVASPECT GetDrawAspect() const;
@@ -1226,7 +1226,7 @@ DVASPECT GetDrawAspect() const;
 
 Valore dell'enumerazione DVASPECT i cui valori sono elencati nel riferimento per [SetDrawAspect](#setdrawaspect).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'aspetto specifica il modo in cui deve essere eseguito il rendering dell'elemento.
 
@@ -1243,7 +1243,7 @@ BOOL GetExtent(
 ### <a name="parameters"></a>Parametri
 
 *lpSize*<br/>
-Puntatore a una `SIZE` struttura o a `CSize` un oggetto che riceverà le informazioni sulle dimensioni.
+Puntatore a una struttura di `SIZE` o a un oggetto `CSize` che riceverà le informazioni sulle dimensioni.
 
 *nDrawAspect*<br/>
 Specifica l'aspetto dell'elemento OLE di cui devono essere recuperati i limiti. Per i valori possibili, vedere [SetDrawAspect](#setdrawaspect).
@@ -1252,7 +1252,7 @@ Specifica l'aspetto dell'elemento OLE di cui devono essere recuperati i limiti. 
 
 Diverso da zero se ha esito positivo; 0 se l'elemento OLE è vuoto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se l'applicazione server è stata scritta utilizzando la libreria Microsoft Foundation Class, questa funzione causa la chiamata della funzione membro [OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent) dell'oggetto `COleServerItem` corrispondente. Si noti che le dimensioni recuperate potrebbero essere diverse da quelle dell'ultima impostazione della funzione membro [seextent](#setextent) . la dimensione specificata da `SetExtent` viene considerata come un suggerimento. Le dimensioni si trovano in unità MM_HIMETRIC.
 
@@ -1273,14 +1273,14 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 Riferimento al CLSID per il server associato all'icona.
 
 ### <a name="return-value"></a>Valore restituito
 
 Handle valido per la risorsa icona oppure NULL se l'icona del server o un'icona predefinita non è stata trovata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro non avvierà il server o otterrà un'icona dinamicamente, anche se il server è già in esecuzione. Questa funzione membro apre invece l'immagine eseguibile del server e recupera l'icona statica associata al server come è stata registrata.
 
@@ -1296,15 +1296,15 @@ HGLOBAL GetIconicMetafile();
 
 Handle per il metafile in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se non è presente alcuna icona corrente, viene restituita un'icona predefinita. Questo metodo viene chiamato automaticamente dalle finestre di dialogo MFC/OLE e in genere non viene chiamato direttamente.
 
 Questa funzione chiama anche [SetIconicMetafile](#seticonicmetafile) per memorizzare nella cache il metafile per un uso successivo.
 
-##  <a name="getinplacewindow"></a>  COleClientItem::GetInPlaceWindow
+##  <a name="getinplacewindow"></a>COleClientItem:: GetInPlaceWindow
 
-Chiamare la `GetInPlaceWindow` funzione membro per ottenere un puntatore alla finestra in cui l'elemento è stato aperto per la modifica sul posto.
+Chiamare la funzione membro `GetInPlaceWindow` per ottenere un puntatore alla finestra in cui l'elemento è stato aperto per la modifica sul posto.
 
 ```
 CWnd* GetInPlaceWindow();
@@ -1314,7 +1314,7 @@ CWnd* GetInPlaceWindow();
 
 Puntatore alla finestra di modifica sul posto dell'elemento; NULL se l'elemento non è attivo o se il server non è disponibile.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione deve essere chiamata solo per gli elementi attivi sul posto.
 
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`activeState` `loadedState` `emptyState` `activeUIState` `openState`Valore enumerato, che può essere uno dei seguenti:,,,,. `COleClientItem::ItemState` Per informazioni su questi Stati, vedere l'articolo [contenitori: Stati degli](../../mfc/containers-client-item-states.md)elementi client.
+Un `COleClientItem::ItemState` valore enumerato, che può essere uno dei seguenti: `emptyState`, `loadedState`, `openState`, `activeState``activeUIState`. Per informazioni su questi Stati, vedere l'articolo [contenitori: Stati degli elementi client](../../mfc/containers-client-item-states.md).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ricevere una notifica quando viene modificato lo stato dell'elemento OLE, usare la funzione membro [OnChange](#onchange) .
 
-Per ulteriori informazioni, vedere l'articolo [contenitori: Stati degli](../../mfc/containers-client-item-states.md)elementi client.
+Per ulteriori informazioni, vedere l'articolo [contenitori: Stati degli elementi client](../../mfc/containers-client-item-states.md).
 
 ##  <a name="getlaststatus"></a>COleClientItem:: GetLastStatus
 
@@ -1348,9 +1348,9 @@ SCODE GetLastStatus() const;
 
 Valore SCODE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per le funzioni membro che restituiscono un valore bool di false o altre funzioni membro che restituiscono `GetLastStatus` null, restituisce informazioni più dettagliate sugli errori. Tenere presente che la maggior parte delle funzioni membro OLE genera eccezioni per errori più gravi. Le informazioni specifiche sull'interpretazione di SCODE dipendono dalla chiamata OLE sottostante che ha restituito per ultimo un valore SCODE.
+Per le funzioni membro che restituiscono un valore BOOL FALSE o altre funzioni membro che restituiscono NULL, `GetLastStatus` restituisce informazioni più dettagliate sugli errori. Tenere presente che la maggior parte delle funzioni membro OLE genera eccezioni per errori più gravi. Le informazioni specifiche sull'interpretazione di SCODE dipendono dalla chiamata OLE sottostante che ha restituito per ultimo un valore SCODE.
 
 Per ulteriori informazioni su SCODE, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes) nella documentazione Windows SDK.
 
@@ -1366,11 +1366,11 @@ OLEUPDATE GetLinkUpdateOptions();
 
 Uno dei valori seguenti:
 
-- OLEUPDATE_ALWAYS aggiorna l'elemento collegato quando possibile. Questa opzione supporta il pulsante di opzione collegamento-aggiornamento automatico nella finestra di dialogo collegamenti.
+- Quando possibile, OLEUPDATE_ALWAYS aggiornare l'elemento collegato. Questa opzione supporta il pulsante di opzione collegamento-aggiornamento automatico nella finestra di dialogo collegamenti.
 
-- OLEUPDATE_ONCALL aggiorna l'elemento collegato solo su richiesta dall'applicazione contenitore (quando viene chiamata la funzione membro [UpdateLink](#updatelink) ). Questa opzione supporta il pulsante di opzione collegamento manuale-aggiornamento nella finestra di dialogo collegamenti.
+- OLEUPDATE_ONCALL aggiornare l'elemento collegato solo su richiesta dall'applicazione contenitore (quando viene chiamata la funzione membro [UpdateLink](#updatelink) ). Questa opzione supporta il pulsante di opzione collegamento manuale-aggiornamento nella finestra di dialogo collegamenti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Si tratta di un'operazione avanzata.
 
@@ -1415,12 +1415,12 @@ Valore che indica la variante desiderata della stringa che descrive il tipo dell
 
 - USERCLASSTYPE_SHORT un nome breve (massimo 15 caratteri) da usare nei menu a comparsa e nella finestra di dialogo Modifica collegamenti.
 
-- Nome USERCLASSTYPE_APPNAME dell'applicazione per la manutenzione della classe.
+- USERCLASSTYPE_APPNAME nome dell'applicazione che gestisce la classe.
 
 *rString*<br/>
 Riferimento a un oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) in cui deve essere restituita la stringa che descrive il tipo dell'elemento OLE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Si tratta spesso della voce nel database di registrazione del sistema.
 
@@ -1428,7 +1428,7 @@ Se il nome completo del tipo è richiesto ma non disponibile, viene utilizzato i
 
 Per ulteriori informazioni, vedere [IOleObject:: GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) nel Windows SDK.
 
-##  <a name="isinplaceactive"></a>  COleClientItem::IsInPlaceActive
+##  <a name="isinplaceactive"></a>COleClientItem:: IsInPlaceActive
 
 Chiamare questa funzione per verificare se l'elemento OLE è attivo sul posto.
 
@@ -1440,9 +1440,9 @@ BOOL IsInPlaceActive() const;
 
 Diverso da zero se l'elemento OLE è attivo sul posto; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-È normale eseguire una logica diversa a seconda che l'elemento venga modificato sul posto. La funzione verifica se lo stato dell'elemento corrente è uguale a `activeState` `activeUIState`o.
+È normale eseguire una logica diversa a seconda che l'elemento venga modificato sul posto. La funzione controlla se lo stato dell'elemento corrente è uguale all'`activeState` o al `activeUIState`.
 
 ##  <a name="islinkuptodate"></a>COleClientItem:: IsLinkUpToDate
 
@@ -1456,7 +1456,7 @@ BOOL IsLinkUpToDate() const;
 
 Diverso da zero se l'elemento OLE è aggiornato; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un elemento collegato può non essere aggiornato se il documento di origine è stato aggiornato. Un elemento incorporato che contiene collegamenti al suo interno può diventare non aggiornato. La funzione esegue un controllo ricorsivo dell'elemento OLE. Si noti che determinare se un elemento OLE non è aggiornato può risultare costoso quanto l'esecuzione di un aggiornamento.
 
@@ -1476,7 +1476,7 @@ BOOL IsModified() const;
 
 Diverso da zero se l'elemento OLE è modificato; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [IPersistStorage:: IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) nell'Windows SDK.
 
@@ -1492,7 +1492,7 @@ BOOL IsOpen() const;
 
 Diverso da zero se l'elemento OLE è aperto; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Viene usato per determinare quando creare l'oggetto con un motivo di tratteggio. Un oggetto aperto deve avere un modello di tratteggio disegnato sulla parte superiore dell'oggetto. Per eseguire questa operazione, è possibile usare un oggetto [CRectTracker](../../mfc/reference/crecttracker-class.md) .
 
@@ -1508,7 +1508,7 @@ BOOL IsRunning() const;
 
 Diverso da zero se l'elemento OLE è in esecuzione; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [OleIsRunning](/windows/win32/api/ole2/nf-ole2-oleisrunning) nel Windows SDK.
 
@@ -1520,9 +1520,9 @@ Chiamato dal Framework per notificare all'elemento che è stato appena attivato 
 virtual void OnActivate();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si noti che questa funzione viene chiamata per indicare che il server è in esecuzione e non per indicare che l'interfaccia utente è stata installata nell'applicazione contenitore. A questo punto, l'oggetto non dispone di un'interfaccia utente attiva (non `activeUIState`è). Non ha installato i menu o la barra degli strumenti. Quando si verifica questa situazione, viene chiamata la funzione membro [OnActivateUI](#onactivateui) .
+Si noti che questa funzione viene chiamata per indicare che il server è in esecuzione e non per indicare che l'interfaccia utente è stata installata nell'applicazione contenitore. A questo punto, l'oggetto non dispone di un'interfaccia utente attiva (non `activeUIState`). Non ha installato i menu o la barra degli strumenti. Quando si verifica questa situazione, viene chiamata la funzione membro [OnActivateUI](#onactivateui) .
 
 L'implementazione predefinita chiama la funzione membro [OnChange](#onchange) con OLE_CHANGEDSTATE come parametro. Eseguire l'override di questa funzione per eseguire un'elaborazione personalizzata quando un elemento diventa attivo sul posto.
 
@@ -1534,11 +1534,11 @@ Il Framework chiama `OnActivateUI` quando l'oggetto è entrato nello stato attiv
 virtual void OnActivateUI();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto ha ora installato la barra degli strumenti e i menu.
 
-L'implementazione predefinita memorizza l'HWND del server per le chiamate successive `GetServerWindow` .
+L'implementazione predefinita memorizza l'HWND del server per le successive chiamate di `GetServerWindow`.
 
 ##  <a name="onchange"></a>COleClientItem:: OnChange
 
@@ -1564,11 +1564,11 @@ Motivo per cui il server ha modificato l'elemento. Può avere uno dei valori seg
 - OLE_CHANGED_STATE l'elemento OLE è stato modificato da uno stato a un altro.
 
 *dwParam*<br/>
-Se *nCode* è OLE_SAVED o OLE_CLOSED, questo parametro non viene utilizzato. Se *nCode* è OLE_CHANGED, questo parametro specifica l'aspetto dell'elemento OLE che è stato modificato. Per i valori possibili, vedere il parametro *dwParam* di [COleClientItem::D RAW](#draw). Se *nCode* è OLE_CHANGED_STATE, questo parametro è un `COleClientItem::ItemState` valore enumerato e descrive lo stato immesso. Può avere uno dei valori seguenti: `emptyState` `openState`, `loadedState`,, `activeState`o `activeUIState`.
+Se *nCode* è OLE_SAVED o OLE_CLOSED, questo parametro non viene utilizzato. Se *nCode* è OLE_CHANGED, questo parametro specifica l'aspetto dell'elemento OLE che è stato modificato. Per i valori possibili, vedere il parametro *dwParam* di [COleClientItem::D RAW](#draw). Se *nCode* è OLE_CHANGED_STATE, questo parametro è un valore enumerato `COleClientItem::ItemState` e descrive lo stato immesso. Può avere uno dei valori seguenti: `emptyState`, `loadedState`, `openState`, `activeState`o `activeUIState`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se l'applicazione server viene scritta utilizzando la libreria Microsoft Foundation Class, questa funzione viene chiamata in risposta alle `Notify` funzioni membro di `COleServerDoc` o `COleServerItem`. L'implementazione predefinita contrassegna il documento del contenitore come modificato se *nCode* è OLE_CHANGED o OLE_SAVED.
+Se l'applicazione server viene scritta utilizzando la libreria Microsoft Foundation Class, questa funzione viene chiamata in risposta alle funzioni membro `Notify` di `COleServerDoc` o `COleServerItem`. L'implementazione predefinita contrassegna il documento del contenitore come modificato se *nCode* è OLE_CHANGED o OLE_SAVED.
 
 Per OLE_CHANGED_STATE, lo stato corrente restituito da [GetItemState](#getitemstate) sarà ancora lo stato precedente, ovvero lo stato corrente prima di questa modifica dello stato.
 
@@ -1591,7 +1591,7 @@ Indica la posizione dell'elemento rispetto all'area client dell'applicazione con
 
 Diverso da zero se la posizione dell'elemento viene modificata correttamente; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita determina il nuovo rettangolo visibile dell'elemento OLE e chiama [SetItemRects](#setitemrects) con i nuovi valori. L'implementazione predefinita calcola il rettangolo visibile per l'elemento e passa tali informazioni al server.
 
@@ -1599,13 +1599,13 @@ Eseguire l'override di questa funzione per applicare regole speciali all'operazi
 
 ##  <a name="ondeactivate"></a>COleClientItem:: OnDeactivate
 
-Chiamata eseguita dal framework quando l'elemento OLE passa dallo stato attivo sul posto ( `activeState`) allo stato Loaded, ovvero viene disattivato dopo un'attivazione sul posto.
+Chiamata eseguita dal framework quando l'elemento OLE passa dallo stato attivo sul posto (`activeState`) allo stato Loaded, il che significa che viene disattivato dopo un'attivazione sul posto.
 
 ```
 virtual void OnDeactivate();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Si noti che questa funzione viene chiamata per indicare che l'elemento OLE è chiuso e non che l'interfaccia utente è stata rimossa dall'applicazione contenitore. In tal caso, viene chiamata la funzione membro [OnDeactivateUI](#ondeactivateui) .
 
@@ -1619,7 +1619,7 @@ Chiamato dal framework quando l'utente richiama il comando Annulla dopo aver att
 virtual void OnDeactivateAndUndo();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita chiama [DeactivateUI](#deactivateui) per disattivare l'interfaccia utente del server. Eseguire l'override di questa funzione se si sta implementando il comando Undo nell'applicazione contenitore. Nell'override chiamare la versione della classe base della funzione e quindi annullare l'ultimo comando eseguito nell'applicazione.
 
@@ -1638,7 +1638,7 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 *bUndoable*<br/>
 Specifica se le modifiche di modifica sono annullabili.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione Ripristina lo stato originale dell'interfaccia utente dell'applicazione contenitore, nascondendo tutti i menu e altri controlli creati per l'attivazione sul posto.
 
@@ -1652,7 +1652,7 @@ Chiamato dal framework quando l'utente esegue un'azione che elimina lo stato di 
 virtual void OnDiscardUndoState();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione se si sta implementando il comando Undo nell'applicazione contenitore. Nella sostituzione ignorare lo stato di annullamento dell'applicazione contenitore.
 
@@ -1662,7 +1662,7 @@ Per ulteriori informazioni, vedere [IOleInPlaceSite::D iscardundostate](/windows
 
 ##  <a name="ongetclipboarddata"></a>COleClientItem:: OnGetClipboardData
 
-Chiamata eseguita dal Framework per ottenere un `COleDataSource` oggetto contenente tutti i dati che verrebbero inseriti negli Appunti da una chiamata a [CopyToClipboard](#copytoclipboard) o alla funzione membro [DoDragDrop](#dodragdrop) .
+Chiamata eseguita dal Framework per ottenere un oggetto `COleDataSource` contenente tutti i dati che verrebbero inseriti negli Appunti da una chiamata a [CopyToClipboard](#copytoclipboard) o alla funzione membro [DoDragDrop](#dodragdrop) .
 
 ```
 virtual COleDataSource* OnGetClipboardData(
@@ -1686,13 +1686,13 @@ Puntatore alla dimensione dell'oggetto in pixel.
 
 Puntatore a un oggetto [COleDataSource](../../mfc/reference/coledatasource-class.md) che contiene i dati degli Appunti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita di questa funzione chiama [GetClipboardData](#getclipboarddata).
 
-##  <a name="ongetcliprect"></a>  COleClientItem::OnGetClipRect
+##  <a name="ongetcliprect"></a>COleClientItem:: OnGetClipRect
 
-Il Framework chiama la `OnGetClipRect` funzione membro per ottenere le coordinate del rettangolo di ritaglio dell'elemento che viene modificato sul posto.
+Il Framework chiama la funzione membro `OnGetClipRect` per ottenere le coordinate del rettangolo di ritaglio dell'elemento che viene modificato sul posto.
 
 ```
 virtual void OnGetClipRect(CRect& rClipRect);
@@ -1703,7 +1703,7 @@ virtual void OnGetClipRect(CRect& rClipRect);
 *rClipRect*<br/>
 Puntatore a un oggetto della classe [CRect](../../atl-mfc-shared/reference/crect-class.md) che conterrà le coordinate del rettangolo di ritaglio dell'elemento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le coordinate sono espresse in pixel rispetto all'area client della finestra dell'applicazione contenitore.
 
@@ -1711,7 +1711,7 @@ L'implementazione predefinita restituisce semplicemente il rettangolo client del
 
 ##  <a name="ongetitemposition"></a>COleClientItem:: OnGetItemPosition
 
-Il Framework chiama la `OnGetItemPosition` funzione membro per ottenere le coordinate dell'elemento che viene modificato sul posto.
+Il Framework chiama la funzione membro `OnGetItemPosition` per ottenere le coordinate dell'elemento che viene modificato sul posto.
 
 ```
 virtual void OnGetItemPosition(CRect& rPosition);
@@ -1722,7 +1722,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
 *rPosition*<br/>
 Riferimento all'oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che conterrà le coordinate della posizione dell'elemento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le coordinate sono espresse in pixel rispetto all'area client della finestra dell'applicazione contenitore.
 
@@ -1754,7 +1754,7 @@ Puntatore a una struttura [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-ole
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione viene utilizzata per recuperare informazioni sulla finestra padre dell'elemento OLE.
 
@@ -1780,9 +1780,9 @@ virtual void OnInsertMenus(
 Punta a un menu vuoto.
 
 *lpMenuWidths*<br/>
-Punta a una matrice di sei valori LONG che indica il numero di menu presenti in ognuno dei gruppi di menu seguenti: File, modifica, contenitore, oggetto, finestra, guida. L'applicazione contenitore è responsabile dei gruppi di menu file, contenitore e finestra, corrispondenti agli elementi 0, 2 e 4 di questa matrice.
+Punta a una matrice di sei valori LONG che indica il numero di menu presenti in ognuno dei gruppi di menu seguenti: file, modifica, contenitore, oggetto, finestra, guida. L'applicazione contenitore è responsabile dei gruppi di menu file, contenitore e finestra, corrispondenti agli elementi 0, 2 e 4 di questa matrice.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo menu viene quindi passato al server, che inserisce i propri menu, creando un menu composito. Questa funzione può essere chiamata ripetutamente per compilare diversi menu compositi.
 
@@ -1803,11 +1803,11 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
 *pMenuShared*<br/>
 Punta al menu composito costruito dalle chiamate alla funzione membro [OnInsertMenus](#oninsertmenus) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita rimuove da *pMenuShared* i menu del contenitore sul posto, ovvero i gruppi di menu file, contenitore e finestra. Eseguire l'override di questa funzione se l'implementazione predefinita non è appropriata per l'applicazione. ad esempio, se l'applicazione non usa modelli di documento per associare le risorse ai tipi di documento. Se si esegue l'override di questa funzione, è probabile che si esegua l'override anche di [OnInsertMenus](#oninsertmenus) e [OnSetMenu](#onsetmenu) . Si tratta di un oggetto avanzato sottoponibile a override.
 
-I sottomenu in *pMenuShared* possono essere condivisi da più di un menu composito se il server ha chiamato `OnInsertMenus`ripetutamente. Pertanto, non è necessario eliminare alcun sottomenu nell'override di `OnRemoveMenus`. è necessario scollegarli.
+I sottomenu in *pMenuShared* possono essere condivisi da più di un menu composito se il server ha chiamato ripetutamente `OnInsertMenus`. Non è pertanto consigliabile eliminare i sottomenu nell'override di `OnRemoveMenus`; è consigliabile scollegarli.
 
 Per ulteriori informazioni, vedere [IOleInPlaceFrame:: RemoveMenus](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceframe-removemenus) nella Windows SDK.
 
@@ -1828,7 +1828,7 @@ Specifica le distanze, in pixel, per scorrere nelle direzioni x e y.
 
 Diverso da zero se è stato eseguito lo scorrimento dell'elemento; 0 se non è stato possibile scorrere l'elemento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se, ad esempio, l'elemento OLE è parzialmente visibile e l'utente si sposta al di fuori dell'area visibile durante l'esecuzione della modifica sul posto, questa funzione viene chiamata per rendere visibile il cursore. L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per scorrere l'elemento in base al valore specificato. Si noti che, in seguito allo scorrimento, la parte visibile dell'elemento OLE può cambiare. Chiamare [SetItemRects](#setitemrects) per aggiornare il rettangolo visibile dell'elemento.
 
@@ -1848,15 +1848,15 @@ virtual void OnSetMenu(
 ### <a name="parameters"></a>Parametri
 
 *pMenuShared*<br/>
-Puntatore al menu composito costruito dalle chiamate alla funzione membro [OnInsertMenus](#oninsertmenus) e alla `InsertMenu` funzione.
+Puntatore al menu composito costruito dalle chiamate alla funzione membro [OnInsertMenus](#oninsertmenus) e alla funzione `InsertMenu`.
 
 *holemenu*<br/>
-Handle per il descrittore di menu `OleCreateMenuDescriptor` restituito dalla funzione o null se il codice di invio deve essere rimosso.
+Handle per il descrittore di menu restituito dalla funzione `OleCreateMenuDescriptor` o NULL se il codice di invio deve essere rimosso.
 
 *hwndActiveObject*<br/>
 Handle per la finestra di modifica per l'elemento OLE. Si tratta della finestra che riceverà i comandi di modifica da OLE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita installa o rimuove il menu composito, quindi chiama la funzione [OleSetMenuDescriptor](/windows/win32/api/ole2/nf-ole2-olesetmenudescriptor) per installare o rimuovere il codice di invio. Eseguire l'override di questa funzione se l'implementazione predefinita non è appropriata per l'applicazione. Se si esegue l'override di questa funzione, è probabile che si esegua l'override anche di [OnInsertMenus](#oninsertmenus) e [OnRemoveMenus](#onremovemenus) . Si tratta di un oggetto avanzato sottoponibile a override.
 
@@ -1884,7 +1884,7 @@ Specifica se le barre di controllo devono essere visualizzate o nascoste.
 
 Diverso da zero se la chiamata di funzione causa una modifica nello stato della barra di controllo; 0 se la chiamata non causa alcuna modifica o se *pFrameWnd* non punta alla finestra cornice del contenitore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione restituisce 0 se le barre di controllo si trovano già nello stato specificato da *bShow.* Questa situazione si verifica, ad esempio, se le barre di controllo sono nascoste e *bShow* è false.
 
@@ -1898,7 +1898,7 @@ Chiamata eseguita dal Framework per visualizzare l'elemento OLE, rendendolo comp
 virtual void OnShowItem();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Viene usato quando l'applicazione contenitore supporta collegamenti a elementi incorporati, ovvero se la classe del documento è stata derivata da [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Questa funzione viene chiamata durante l'attivazione sul posto o quando l'elemento OLE è un'origine di collegamento e l'utente vuole modificarlo. L'implementazione predefinita attiva la prima visualizzazione del documento contenitore. Eseguire l'override di questa funzione per scorrere il documento in modo che l'elemento OLE sia visibile.
 
@@ -1914,11 +1914,11 @@ virtual BOOL OnUpdateFrameTitle();
 
 Diverso da zero se la funzione ha aggiornato correttamente il titolo del frame; in caso contrario, zero.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita non modifica il titolo della finestra cornice. Eseguire l'override di questa funzione se si desidera un titolo di frame diverso per l'applicazione, ad esempio "*elemento* *app* - server in *Nomedoc*" (come in, "Microsoft Excel-foglio di calcolo nel report. DOC "). Si tratta di un oggetto avanzato sottoponibile a override.
+L'implementazione predefinita non modifica il titolo della finestra cornice. Eseguire l'override di questa funzione se si desidera un titolo di frame diverso per l'applicazione, ad esempio "elemento *server* - *elemento* in *Nomedoc*" (come in, "Microsoft Excel-foglio di calcolo nel report. DOC "). Si tratta di un oggetto avanzato sottoponibile a override.
 
-##  <a name="reactivateandundo"></a>  COleClientItem::ReactivateAndUndo
+##  <a name="reactivateandundo"></a>COleClientItem:: ReactivateAndUndo
 
 Chiamare questa funzione per riattivare l'elemento OLE e annullare l'ultima operazione eseguita dall'utente durante la modifica sul posto.
 
@@ -1930,7 +1930,7 @@ BOOL ReactivateAndUndo();
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se l'applicazione contenitore supporta il comando Annulla, chiamare questa funzione se l'utente sceglie il comando Annulla immediatamente dopo la disattivazione dell'elemento OLE.
 
@@ -1951,9 +1951,9 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 *dwCloseOption*<br/>
 Flag che specifica le circostanze in cui l'elemento OLE viene salvato quando torna allo stato Loaded. Per un elenco di valori possibili, vedere [COleClientItem:: Close](#close).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`Release`viene chiamato dal `COleClientItem` distruttore.
+`Release` viene chiamato dal distruttore `COleClientItem`.
 
 Per ulteriori informazioni, vedere [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) nella Windows SDK.
 
@@ -1969,9 +1969,9 @@ BOOL Reload();
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare la `Reload` funzione dopo aver attivato l'elemento come un elemento di un altro tipo mediante una chiamata a [Activate](#activateas).
+Chiamare la funzione `Reload` dopo aver attivato l'elemento come un elemento di un altro tipo mediante una chiamata a [Activate](#activateas).
 
 ##  <a name="run"></a>COleClientItem:: Run
 
@@ -1981,13 +1981,13 @@ Esegue l'applicazione associata a questo elemento.
 void Run();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare la `Run` funzione membro per avviare l'applicazione server prima di attivare l'elemento. Questa operazione viene eseguita automaticamente da [Activate](#activate) e [DoVerb](#doverb), pertanto in genere non è necessario chiamare questa funzione. Chiamare questa funzione se è necessario eseguire il server per impostare un attributo dell'elemento, ad esempio [seextent](#setextent), prima di eseguire [DoVerb](#doverb).
+Chiamare la funzione membro `Run` per avviare l'applicazione server prima di attivare l'elemento. Questa operazione viene eseguita automaticamente da [Activate](#activate) e [DoVerb](#doverb), pertanto in genere non è necessario chiamare questa funzione. Chiamare questa funzione se è necessario eseguire il server per impostare un attributo dell'elemento, ad esempio [seextent](#setextent), prima di eseguire [DoVerb](#doverb).
 
 ##  <a name="setdrawaspect"></a>COleClientItem:: SetDrawAspect
 
-Chiamare la `SetDrawAspect` funzione membro per impostare l'aspetto o la visualizzazione dell'elemento.
+Chiamare la funzione membro `SetDrawAspect` per impostare "aspect" o View, dell'elemento.
 
 ```
 virtual void SetDrawAspect(DVASPECT nDrawAspect);
@@ -1998,15 +1998,15 @@ virtual void SetDrawAspect(DVASPECT nDrawAspect);
 *nDrawAspect*<br/>
 Valore dell'enumerazione DVASPECT. Per il parametro è possibile specificare uno dei valori riportati di seguito:
 
-- L'elemento DVASPECT_CONTENT è rappresentato in modo tale che possa essere visualizzato come oggetto incorporato all'interno del relativo contenitore.
+- DVASPECT_CONTENT elemento viene rappresentato in modo tale che possa essere visualizzato come oggetto incorporato all'interno del relativo contenitore.
 
-- Viene eseguito il rendering dell'elemento DVASPECT_THUMBNAIL in una rappresentazione "thumbnail" in modo che possa essere visualizzato in uno strumento di esplorazione.
+- Viene eseguito il rendering di DVASPECT_THUMBNAIL elemento in una rappresentazione "thumbnail" in modo che possa essere visualizzato in uno strumento di esplorazione.
 
-- L'elemento DVASPECT_ICON è rappresentato da un'icona.
+- DVASPECT_ICON elemento è rappresentato da un'icona.
 
-- L'elemento DVASPECT_DOCPRINT è rappresentato come se fosse stato stampato usando il comando stampa del menu file.
+- DVASPECT_DOCPRINT elemento viene rappresentato come se fosse stampato usando il comando stampa del menu file.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'aspetto specifica il modo in cui l'elemento deve essere sottoposto a rendering tramite il metodo di [traccia](#draw) quando viene usato il valore predefinito per l'argomento *nDrawAspect* della funzione.
 
@@ -2030,7 +2030,7 @@ Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) che contiene le i
 *nDrawAspect*<br/>
 Specifica l'aspetto dell'elemento OLE di cui devono essere impostati i limiti. Per i valori possibili, vedere [SetDrawAspect](#setdrawaspect).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se l'applicazione server è stata scritta utilizzando la libreria Microsoft Foundation Class, in questo modo viene chiamata la funzione membro [OnSetExtent](../../mfc/reference/coleserveritem-class.md#onsetextent) dell'oggetto `COleServerItem` corrispondente. L'elemento OLE può quindi regolare la visualizzazione di conseguenza. Le dimensioni devono essere in unità MM_HIMETRIC. Chiamare questa funzione quando l'utente ridimensiona l'elemento OLE o se si supporta una forma di negoziazione del layout.
 
@@ -2054,9 +2054,9 @@ Puntatore al nome visibile dall'utente dell'applicazione contenitore.
 *lpszHostObj*<br/>
 Puntatore a una stringa di identificazione del contenitore che contiene l'elemento OLE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se l'applicazione server è stata scritta utilizzando la libreria Microsoft Foundation Class, questa funzione chiama la funzione membro [OnSetHostNames](../../mfc/reference/coleserverdoc-class.md#onsethostnames) del `COleServerDoc` documento che contiene l'elemento OLE. Queste informazioni vengono utilizzate nei titoli delle finestre quando l'elemento OLE viene modificato. Ogni volta che viene caricato un documento contenitore, il Framework chiama questa funzione per tutti gli elementi OLE nel documento. `SetHostNames`si applica solo agli elementi incorporati. Non è necessario chiamare questa funzione ogni volta che un elemento OLE incorporato viene attivato per la modifica.
+Se l'applicazione server è stata scritta utilizzando la libreria Microsoft Foundation Class, questa funzione chiama la funzione membro [OnSetHostNames](../../mfc/reference/coleserverdoc-class.md#onsethostnames) del documento `COleServerDoc` contenente l'elemento OLE. Queste informazioni vengono utilizzate nei titoli delle finestre quando l'elemento OLE viene modificato. Ogni volta che viene caricato un documento contenitore, il Framework chiama questa funzione per tutti gli elementi OLE nel documento. `SetHostNames` è applicabile solo agli elementi incorporati. Non è necessario chiamare questa funzione ogni volta che un elemento OLE incorporato viene attivato per la modifica.
 
 Viene anche chiamato automaticamente con il nome dell'applicazione e il nome del documento quando un oggetto viene caricato o quando un file viene salvato con un nome diverso. Di conseguenza, in genere non è necessario chiamare direttamente questa funzione.
 
@@ -2079,7 +2079,7 @@ Handle per il metafile utilizzato per disegnare l'icona dell'elemento.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare [GetIconicMetafile](#geticonicmetafile) per recuperare il metafile.
 
@@ -2107,13 +2107,13 @@ Puntatore al rettangolo contenente i limiti della parte visibile dell'elemento O
 
 Diverso da zero se ha esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione viene chiamata dall'implementazione predefinita della funzione membro [OnChangeItemPosition](#onchangeitemposition) . È necessario chiamare questa funzione ogni volta che la posizione o la parte visibile dell'elemento OLE viene modificata. In genere ciò significa che è possibile chiamarlo dalle funzioni membro [OnSize](../../mfc/reference/cwnd-class.md#onsize) e [OnScrollBy](../../mfc/reference/cview-class.md#onscrollby) della visualizzazione.
 
 Per ulteriori informazioni, vedere [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) nella Windows SDK.
 
-##  <a name="setlinkupdateoptions"></a>  COleClientItem::SetLinkUpdateOptions
+##  <a name="setlinkupdateoptions"></a>COleClientItem:: SetLinkUpdateOptions
 
 Chiamare questa funzione per impostare l'opzione di aggiornamento del collegamento per la presentazione dell'elemento collegato specificato.
 
@@ -2126,11 +2126,11 @@ void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 *dwUpdateOpt*<br/>
 Il valore dell'opzione di aggiornamento del collegamento per questo elemento. Questo valore deve essere uno dei seguenti:
 
-- OLEUPDATE_ALWAYS aggiorna l'elemento collegato quando possibile. Questa opzione supporta il pulsante di opzione collegamento-aggiornamento automatico nella finestra di dialogo collegamenti.
+- Quando possibile, OLEUPDATE_ALWAYS aggiornare l'elemento collegato. Questa opzione supporta il pulsante di opzione collegamento-aggiornamento automatico nella finestra di dialogo collegamenti.
 
-- OLEUPDATE_ONCALL aggiorna l'elemento collegato solo su richiesta dall'applicazione contenitore (quando viene chiamata la funzione membro [UpdateLink](#updatelink) ). Questa opzione supporta il pulsante di opzione collegamento manuale-aggiornamento nella finestra di dialogo collegamenti.
+- OLEUPDATE_ONCALL aggiornare l'elemento collegato solo su richiesta dall'applicazione contenitore (quando viene chiamata la funzione membro [UpdateLink](#updatelink) ). Questa opzione supporta il pulsante di opzione collegamento manuale-aggiornamento nella finestra di dialogo collegamenti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 In genere, non è consigliabile modificare le opzioni di aggiornamento scelte dall'utente nella finestra di dialogo collegamenti.
 
@@ -2147,21 +2147,21 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 
 ### <a name="parameters"></a>Parametri
 
-*ptd*<br/>
+*PTD*<br/>
 Puntatore a una struttura di dati [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) , che contiene informazioni sul nuovo dispositivo di destinazione di stampa. Può essere NULL.
 
-*ppd*<br/>
+*PPD*<br/>
 Puntatore a una struttura di dati [PrintDlg](/windows/win32/api/commdlg/ns-commdlg-printdlga) , che contiene informazioni sul nuovo dispositivo di destinazione di stampa. Può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se la funzione ha avuto esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione aggiorna il dispositivo di destinazione di stampa per l'elemento, ma non aggiorna la cache di presentazione. Per aggiornare la cache di presentazione per un elemento, chiamare [UpdateLink](#updatelink).
 
-Gli argomenti di questa funzione contengono informazioni utilizzate dal sistema OLE per identificare il dispositivo di destinazione. La `PRINTDLG` struttura contiene informazioni utilizzate da Windows per inizializzare la finestra di dialogo Stampa comune. Dopo che l'utente ha chiuso la finestra di dialogo, Windows restituisce informazioni sulle selezioni dell'utente nella struttura. Il `m_pd` membro di un oggetto [CPrintDialog](../../mfc/reference/cprintdialog-class.md) è una `PRINTDLG` struttura.
+Gli argomenti di questa funzione contengono informazioni utilizzate dal sistema OLE per identificare il dispositivo di destinazione. La struttura `PRINTDLG` contiene informazioni utilizzate da Windows per inizializzare la finestra di dialogo Stampa comune. Dopo che l'utente ha chiuso la finestra di dialogo, Windows restituisce informazioni sulle selezioni dell'utente nella struttura. Il `m_pd` membro di un oggetto [CPrintDialog](../../mfc/reference/cprintdialog-class.md) è una struttura di `PRINTDLG`.
 
 Per ulteriori informazioni su questa struttura, vedere [PrintDlg](/windows/win32/api/commdlg/ns-commdlg-printdlga) nel Windows SDK.
 
@@ -2179,7 +2179,7 @@ BOOL UpdateLink();
 
 Diverso da zero in caso di esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per gli elementi collegati, la funzione trova l'origine del collegamento per ottenere una nuova presentazione per l'elemento OLE. Questo processo può comportare l'esecuzione di una o più applicazioni server, che potrebbero richiedere molto tempo. Per gli elementi incorporati, la funzione funziona in modo ricorsivo, verificando se l'elemento incorporato contiene collegamenti che potrebbero non essere aggiornati e aggiornarli. L'utente può anche aggiornare manualmente singoli collegamenti tramite la finestra di dialogo collegamenti.
 

@@ -14,25 +14,25 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241667"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866192"
 ---
 # <a name="lttuplegt-functions"></a>Funzioni &lt;tuple&gt;
 
-## <a name="apply"></a> Applicare
+## <a name="apply"></a>applicare
 
 ```cpp
 template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiama funzione *F* con una tupla *t*.
+Chiama la funzione *F* con una tupla *t*.
 
-## <a name="forward"></a> forward_as_tuple
+## <a name="forward"></a>forward_as_tuple
 
 ```cpp
 template <class... TTypes>
@@ -43,11 +43,11 @@ template <class... TTypes>
 
 Restituisce `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Costruisce una tupla di riferimenti agli argomenti in *t* adatto per l'inoltro come argomenti a una funzione.
+Costruisce una tupla di riferimenti agli argomenti in *t* idonei per l'invio come argomenti a una funzione.
 
-## <a name="get"></a> get
+## <a name="get"></a>Ottieni
 
 Consente di visualizzare un elemento dall'oggetto `tuple` , in base all'indice o (in C++14) in base al tipo.
 
@@ -81,21 +81,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parametri
 
-*Indice*\
+*Index*\ (Indice)
 L'indice dell'elemento da visualizzare.
 
 *Tipi*\
 La sequenza relativa ai tipi dichiarati nella tupla, in ordine di dichiarazione.
 
-*T*\
+\ *T*
 Il tipo di elemento da visualizzare.
 
-*Tupla*\
-Oggetto `std::tuple` che contiene un numero qualsiasi di elementi.
+\ *tupla*
+`std::tuple` contenente un numero qualsiasi di elementi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le funzioni di modello restituiscono un riferimento al valore in corrispondenza dell'indice *indice*, o di tipo *T* nel `tuple` oggetto.
+Le funzioni modello restituiscono un riferimento al valore in corrispondenza dell' *Indice*index o di tipo *T* nell'oggetto `tuple`.
 
 La chiamata `get<T>(Tuple)` genera un errore del compilatore, nel caso in cui la tupla contenga più di un elemento o non contenga elementi di tipo T.
 
@@ -128,17 +128,17 @@ int main() {
 0 1.42 Call me Tuple
 ```
 
-## <a name="make_from_tuple"></a> make_from_tuple
+## <a name="make_from_tuple"></a>make_from_tuple
 
 ```cpp
 template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Uguale a `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})`.
+Come per `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})`.
 
-## <a name="make_tuple"></a> make_tuple
+## <a name="make_tuple"></a>make_tuple
 
 Genera un oggetto `tuple` da valori di elemento.
 
@@ -149,15 +149,15 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+\ *TN*
 Tipo del parametro di funzione Nth.
 
-*TN*\
+\ *TN*
 Valore del parametro di funzione Nth.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione modello restituisce `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, dove ciascun tipo `Vi` è `X&` quando il corrispondente tipo `Ti` è `cv` `reference_wrapper<X>`; in caso contrario, è `Ti`.
+La funzione modello restituisce `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, in cui ogni tipo `Vi` viene `X&` quando il tipo corrispondente `Ti` è `cv` `reference_wrapper<X>`; in caso contrario, viene `Ti`.
 
 Un vantaggio di `make_tuple` consiste nel fatto che i tipi di oggetti archiviati vengono determinati automaticamente dal compilatore e non devono essere specificati in modo esplicito. Non utilizzare gli argomenti di modello espliciti come `make_tuple<int, int>(1, 2)` quando si usa `make_tuple` perché è inutilmente dettagliato e aggiunge problemi complessi relativi ai riferimenti rvalue che potrebbero provocare un errore di compilazione.
 
@@ -196,14 +196,14 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>scambio
 
 ```cpp
 template <class... Types>
     void swap(tuple<Types...>& x, tuple<Types...>& y) noexcept(see below );
 ```
 
-## <a name="tie"></a> tie
+## <a name="tie"></a>Tie
 
 Genera un oggetto `tuple` da riferimenti di elemento.
 
@@ -214,10 +214,10 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+\ *TN*
 Tipo di base dell'ennesimo elemento tupla.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione modello restituisce `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
 
@@ -262,7 +262,7 @@ int main() {
 0 1 2 3
 ```
 
-## <a name="tuple_cat"></a> tuple_cat
+## <a name="tuple_cat"></a>tuple_cat
 
 ```cpp
 template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
@@ -270,16 +270,16 @@ template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto tupla costruito dall'inizializzazione di ogni elemento di tipo.
+Oggetto tupla costruito inizializzando ogni elemento Type.
 
-## <a name="tuple_element_t"></a> tuple_element_t
+## <a name="tuple_element_t"></a>tuple_element_t
 
 ```cpp
 template <size_t I, class T>
     using tuple_element_t = typename tuple_element<I, T>::type;
 ```
 
-## <a name="tuple_size_v"></a> tuple_size_v
+## <a name="tuple_size_v"></a>tuple_size_v
 
 ```cpp
 template <class T>

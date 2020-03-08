@@ -11,15 +11,15 @@ f1_keywords:
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243826"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884073"
 ---
 # <a name="ltmemorygt-operators"></a>Operatori &lt;memory&gt;
 
-## <a name="op_neq"></a> operatore! =
+## <a name="op_neq"></a>operatore! =
 
 Verifica la disuguaglianza tra oggetti.
 
@@ -42,25 +42,25 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Uno degli oggetti di cui verificare la disuguaglianza.
 
-*Ok*\
+\ a *destra*
 Uno degli oggetti di cui verificare la disuguaglianza.
 
-*Ty1*\
+\ *Ty1*
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*\
+\ *Ty2*
 Tipo controllato dal puntatore condiviso destro.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il primo operatore modello restituisce false Tutti gli allocatori predefiniti sono uguali.
+Il primo operatore modello restituisce false (tutti gli allocatori predefiniti sono uguali).
 
 Il secondo e il terzo operatore modello restituiscono `!(left == right)`.
 
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>operatore = =
 
 Verifica l'uguaglianza tra oggetti.
 
@@ -143,25 +143,25 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Uno degli oggetti di cui verificare l'uguaglianza.
 
-*Ok*\
+\ a *destra*
 Uno degli oggetti di cui verificare l'uguaglianza.
 
-*Ty1*\
+\ *Ty1*
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*\
+\ *Ty2*
 Tipo controllato dal puntatore condiviso destro.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti sono uguali **false** se gli oggetti non sono uguali.
+**true** se gli oggetti sono uguali, **false** se gli oggetti non sono uguali.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il primo operatore modello restituisce true Tutti gli allocatori predefiniti sono uguali.
+Il primo operatore modello restituisce true (tutti gli allocatori predefiniti sono uguali).
 
 Il secondo e il terzo operatore modello restituiscono `left.get() ==  right.get()`.
 
@@ -232,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> Operatore&gt;=
+## <a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se un oggetto è maggiore o uguale a un secondo oggetto.
 
@@ -250,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Uno degli oggetti da confrontare.
 
-*Ok*\
+\ a *destra*
 Uno degli oggetti da confrontare.
 
-*Ty1*\
+\ *Ty1*
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*\
+\ *Ty2*
 Tipo controllato dal puntatore condiviso destro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'operatore modello restituiscono `left.get() >= right.get()`.
+Gli operatori di modello restituiscono `left.get() >= right.get()`.
 
-## <a name="op_lt"></a> Operatore&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Verifica se un oggetto è minore di un secondo oggetto.
 
@@ -284,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Uno degli oggetti da confrontare.
 
-*Ok*\
+\ a *destra*
 Uno degli oggetti da confrontare.
 
-*Ty1*\
+\ *Ty1*
 Tipo controllato dal puntatore sinistro.
 
-*Ty2*\
+\ *Ty2*
 Tipo controllato dal puntatore destro.
 
-## <a name="op_lt_eq"></a> Operatore&lt;=
+## <a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se un oggetto è minore o uguale a un secondo oggetto.
 
@@ -314,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Uno degli oggetti da confrontare.
 
-*Ok*\
+\ a *destra*
 Uno degli oggetti da confrontare.
 
-*Ty1*\
+\ *Ty1*
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*\
+\ *Ty2*
 Tipo controllato dal puntatore condiviso destro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'operatore modello restituiscono `left.get() <= right.get()`
+Gli operatori di modello restituiscono `left.get() <= right.get()`
 
-## <a name="op_gt"></a> Operatore&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 Verifica se un oggetto è maggiore di un secondo oggetto.
 
@@ -348,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Uno degli oggetti da confrontare.
 
-*Ok*\
+\ a *destra*
 Uno degli oggetti da confrontare.
 
-*Ty1*\
+\ *Ty1*
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*\
+\ *Ty2*
 Tipo controllato dal puntatore condiviso destro.
 
-## <a name="op_lt_lt"></a> Operatore&lt;&lt;
+## <a name="op_lt_lt"></a>operatore&lt;&lt;
 
 Scrive il puntatore condiviso nel flusso.
 
@@ -375,19 +375,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 *Elem*\
 Tipo dell'elemento flusso.
 
-*TR*\
+\ *TR*
 Tipo dei tratti dell'elemento flusso.
 
-*Ty*\
+\ *Ty*
 Tipo controllato dal puntatore condiviso.
 
 *out*\
 Flusso di output.
 
-*SP*\
+\ *SP*
 Puntatore condiviso.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione modello restituisce `out << sp.get()`.
 

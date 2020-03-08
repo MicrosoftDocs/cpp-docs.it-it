@@ -5,11 +5,11 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869702"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857020"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: gestione C++ pacchetti per Windows, Linux e MacOS
 
@@ -27,7 +27,7 @@ Per le librerie nel catalogo di Windows, vcpkg Scarica le origini anziché i fil
 
 <sup>1</sup> *Nota: le origini non sono disponibili per alcune librerie proprietarie. In questi casi, vcpkg Scarica i file binari predefiniti compatibili.*
 
-## <a name="installation"></a>Installazione di
+## <a name="installation"></a>Installazione
 
 Clonare il repository vcpkg da GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). È possibile scaricarlo nel percorso di cartella preferito.
 
@@ -79,7 +79,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-Per i progetti CMAKE, usare CMAKE_TOOLCHAIN_FILE per rendere disponibili le librerie con `find_package()`. Ad esempio:
+Per i progetti CMAKE, usare CMAKE_TOOLCHAIN_FILE per rendere disponibili le librerie con `find_package()`. Ad esempio,
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -224,7 +224,7 @@ Il contenuto di un'istanza di vcpkg è:
 |**vcpkg version**|Visualizza le informazioni sulla versione|
 |**vcpkg contact --survey**|Visualizza informazioni di contatto per l'invio di commenti e suggerimenti.|
 
-### <a name="options"></a>Options
+### <a name="options"></a>Opzioni
 
 |Opzione|Descrizione|
 |---------|---------|

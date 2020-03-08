@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: becf038678f4abbe285e719e4d1cc1f3f12de982
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689542"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865133"
 ---
 # <a name="hash_set-class"></a>Classe hash_set
 
@@ -111,16 +111,16 @@ class hash_set
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *chiave*
+\ *chiave*
 Il tipo di dati elemento da archiviare in hash_set.
 
-*Tratti* \
-Tipo che include due oggetti funzione, uno della classe compare che è un predicato binario in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash che è un predicato unario che mappa i valori di chiave degli elementi a unsigned Integer di tipo `size_t`. Questo argomento è facoltativo e il valore predefinito è `hash_compare<Key, less<Key> >`.
+*Tratti*\
+Tipo che include due oggetti funzione, uno della classe compare che è un predicato binario in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash che è un predicato unario che mappa i valori di chiave degli elementi a interi senza segno di tipo `size_t`. Questo argomento è facoltativo e il valore predefinito è `hash_compare<Key, less<Key> >`.
 
-@No__t_1 *allocatore*
+\ *allocatore*
 Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di hash_set e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<Key>`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 hash_set è:
 
@@ -140,7 +140,7 @@ La scelta del tipo di contenitore deve essere basata in genere sul tipo di ricer
 
 hash_set deve essere il contenitore associativo da preferire quando le condizioni che consentono di associare i valori alle relative chiavi vengono soddisfatte dall'applicazione. Gli elementi di un hash_set sono univoci e vengono usati come personali chiavi di ordinamento. Un modello relativo a questo tipo di struttura è ad esempio un elenco ordinato di parole in cui ogni parola deve essere presente una sola volta. Se sono state consentite più occorrenze delle parole, la struttura di contenitore appropriata è il hash_multiset. Se i valori devono essere associati a un elenco di parole chiave univoche, un hash_map rappresenta la struttura appropriata per contenere questi dati. Se invece le chiavi non sono univoche, è preferibile scegliere come contenitore un hash_multimap.
 
-Hash_set Ordina la sequenza che controlla chiamando un oggetto hash archiviato `Traits` di tipo [value_compare](#value_compare). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [key_comp](#key_comp). Un oggetto funzione di questo tipo deve comportarsi come un oggetto della classe *hash_compare<Key, less\<Key> >.* In particolare, per tutti i valori `key` di tipo Key, il tratto di chiamata (`key`) produce una distribuzione di valori di tipo size_t.
+Il hash_set Ordina la sequenza che controlla chiamando un oggetto hash archiviato `Traits` di tipo [value_compare](#value_compare). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [key_comp](#key_comp). Un oggetto funzione di questo tipo deve comportarsi come un oggetto della classe *hash_compare<Key, less\<Key> >.* In particolare, per tutti i valori `key` di tipo Key, il tratto di chiamata (`key`) produce una distribuzione di valori di tipo size_t.
 
 In genere, gli elementi devono essere confrontabili come "minore di" per stabilire questo ordine: in modo che, dati qualsiasi due elementi, sia possibile determinare che sono equivalenti (ovvero che uno non è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. A un livello più tecnico, la funzione di confronto è un predicato binario che provoca un ordinamento di tipo "strict weak" nel senso matematico standard. Un predicato binario *f*( *x*, *y*) è un oggetto funzione che dispone di due oggetti argomento x e y e di un valore restituito true o false. Un ordinamento imposto a un oggetto hash_set è un ordinamento di tipo "strict weak" se il predicato binario è irriflessivo, antisimmetrico e transitivo e se l'equivalenza è transitiva, in cui due oggetti *x* e *y* vengono definiti equivalenti quando sia *f*( *x*, *y*) che *f*( *y*, *x*) sono false. Se la condizione di uguaglianza più forte tra le chiavi sostituisce quella di equivalenza, l'ordinamento diventa totale, in quanto tutti gli elementi vengono ordinati l'uno rispetto all'altro e le chiavi accoppiate saranno indistinguibili l'una dall'altra.
 
@@ -154,9 +154,9 @@ L'iteratore fornito dalla classe hash_set è un iteratore bidirezionale, ma le f
 |-|-|
 |[hash_set](#hash_set)|Costruisce un `hash_set` vuoto o che rappresenta una copia totale o parziale di un altro `hash_set`.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe `allocator` per l'oggetto `hash_set`.|
 |[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento `const` nel `hash_set`.|
@@ -181,7 +181,7 @@ L'iteratore fornito dalla classe hash_set è un iteratore bidirezionale, ma le f
 |[begin](#begin)|Restituisce un iteratore che punta al primo elemento in `hash_set`.|
 |[cbegin](#cbegin)|Restituisce un iteratore const che punta al primo elemento del `hash_set`.|
 |[cend](#cend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un `hash_set`.|
-|[clear](#clear)|Cancella tutti gli elementi di un `hash_set`.|
+|[deselezionare](#clear)|Cancella tutti gli elementi di un `hash_set`.|
 |[count](#count)|Restituisce il numero di elementi di un `hash_set` la cui chiave corrisponde a una chiave specificata dal parametro.|
 |[crbegin](#crbegin)|Restituisce un iteratore const che punta al primo elemento di un `hash_set` invertito.|
 |[crend](#crend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un set `hash_set` invertito.|
@@ -206,13 +206,13 @@ L'iteratore fornito dalla classe hash_set è un iteratore bidirezionale, ma le f
 
 ### <a name="operators"></a>Operatori
 
-|??|Descrizione|
+|Operatore|Descrizione|
 |-|-|
 |[hash_set::operator=](#op_eq)|Sostituisce gli elementi di un `hash_set` con una copia di un altro `hash_set`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<hash_set>
+**Intestazione:** \<hash_set >
 
 **Spazio dei nomi:** stdext
 
@@ -227,11 +227,11 @@ Tipo che rappresenta la classe allocator per l'oggetto hash_set.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `allocator_type` è un sinonimo del parametro di modello *allocator*.
 
-Per ulteriori informazioni sull' *allocatore*, vedere la sezione Note dell'argomento [classe hash_set](../standard-library/hash-set-class.md) .
+Per ulteriori informazioni sull' *allocatore*, vedere la sezione Osservazioni dell'argomento [classe hash_set](../standard-library/hash-set-class.md) .
 
 ### <a name="example"></a>Esempio
 
@@ -254,7 +254,7 @@ iterator begin();
 
 Iteratore bidirezionale che punta al primo elemento dell'oggetto hash_set o alla posizione successiva a un oggetto hash_set vuoto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se il valore restituito di `begin` viene assegnato a una `const_iterator`, non è possibile modificare gli elementi dell'oggetto hash_set. Se il valore restituito di `begin` viene assegnato a una `iterator`, è possibile modificare gli elementi dell'oggetto hash_set.
 
@@ -313,7 +313,7 @@ const_iterator cbegin() const;
 
 Iteratore bidirezionale const che punta al primo elemento dell'oggetto [hash_set](../standard-library/hash-set-class.md) o alla posizione successiva a un oggetto `hash_set` vuoto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Con il valore restituito di `cbegin`, gli elementi dell'oggetto `hash_set` non possono essere modificati.
 
@@ -360,7 +360,7 @@ const_iterator cend() const;
 
 Iteratore bidirezionale const che punta alla posizione successiva all'ultimo elemento di un oggetto [hash_set](../standard-library/hash-set-class.md). Se l'oggetto `hash_set` è vuoto, `hash_set::cend == hash_set::begin`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `cend` viene usato per verificare se un iteratore ha raggiunto la fine del relativo oggetto `hash_set`. Non è consigliabile dereferenziare il valore restituito da `cend`.
 
@@ -404,7 +404,7 @@ Cancella tutti gli elementi di un oggetto hash_set.
 void clear();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -448,7 +448,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento **c
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_iterator` non può essere usato per modificare il valore di un elemento.
 
@@ -467,7 +467,7 @@ Tipo che fornisce un puntatore a un elemento **const** di un oggetto hash_set.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_pointer` non può essere usato per modificare il valore di un elemento.
 
@@ -484,7 +484,7 @@ Tipo che fornisce un riferimento a un elemento **const** archiviato in un oggett
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -531,7 +531,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi eleme
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione sull'oggetto hash_set in ordine inverso.
 
@@ -561,11 +561,11 @@ La chiave degli elementi per cui trovare un corrispondenza nell'hash_set.
 
 0 se l'hash_set non contiene un elemento con una chiave corrispondente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce il numero di elementi nell'intervallo seguente:
 
-\[ lower_bound (*Key*), upper_bound (*Key*)).
+\[ lower_bound (*chiave*) upper_bound (*chiave*).
 
 ### <a name="example"></a>Esempio
 
@@ -618,7 +618,7 @@ const_reverse_iterator crbegin() const;
 
 Iteratore bidirezionale const inverso che punta al primo elemento di un oggetto [hash_set](../standard-library/hash-set-class.md) invertito o a quello che è stato l'ultimo elemento dell'oggetto `hash_set` non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `crbegin` viene usato con un oggetto hash_set invertito proprio come [hash_set::begin](#begin) viene usato con un oggetto hash_set.
 
@@ -670,7 +670,7 @@ const_reverse_iterator crend() const;
 
 Iteratore bidirezionale const inverso che punta alla posizione successiva all'ultimo elemento di un oggetto [hash_set](../standard-library/hash-set-class.md) invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto `hash_set` non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `crend` viene usato con un oggetto `hash_set` invertito proprio come [hash_set::end](#end) viene usato con un oggetto `hash_set`.
 
@@ -719,7 +719,7 @@ Tipo Signed Integer che può essere usato per rappresentare il numero di element
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `difference_type` è il tipo restituito quando si sottrae o si incrementa tramite gli iteratori del contenitore. `difference_type` viene in genere usato per rappresentare il numero di elementi nell'intervallo [ `first`, `last`) tra gli iteratori `first` e `last`, includendo l'elemento a cui punta `first` e l'intervallo di elementi fino all'elemento a cui punta `last`, escluso tale elemento.
 
@@ -807,9 +807,9 @@ emplace(
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro `emplace` restituisce una coppia il cui componente **bool** restituisce **true** se è stato creato un inserimento e **false** se il `hash_set` già contiene un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui iteratore Component restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.
+La funzione membro `emplace` restituisce una coppia il cui componente **bool** restituisce **true** se è stato creato un inserimento e **false** se il `hash_set` già contiene un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui componente iteratore restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -856,15 +856,15 @@ iterator emplace(
 |Parametro|Descrizione|
 |-|-|
 |*val*|Valore di un elemento da inserire nell'oggetto [hash_set](../standard-library/hash-set-class.md), a meno che l'oggetto `hash_set` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
-|*_Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. L'inserimento può essere eseguito in un tempo costante ammortizzato, invece che in un tempo logaritmico, se il punto di inserimento segue immediatamente *_Where*.|
+|*_Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. (L'inserimento può essere eseguito in un tempo costante ammortizzato, invece che in tempo logaritmico, se il punto di inserimento segue immediatamente *_Where*).|
 
 ### <a name="return-value"></a>Valore restituito
 
 La funzione membro [hash_set::emplace](#emplace) restituisce un iteratore che punta alla posizione in cui il nuovo elemento è stato inserito nell'oggetto `hash_set` o in cui si trova l'elemento esistente con ordinamento equivalente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'inserimento può essere eseguito in un tempo costante ammortizzato, anziché in un'ora logaritmica, se il punto di inserimento segue immediatamente *_Where*.
+L'inserimento può essere eseguito in un tempo costante ammortizzato, invece che in tempo logaritmico, se il punto di inserimento segue immediatamente *_Where*.
 
 ### <a name="example"></a>Esempio
 
@@ -907,7 +907,7 @@ bool empty() const;
 
 **true** se l'oggetto hash_set è vuoto; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -958,9 +958,9 @@ iterator end();
 
 Un iteratore bidirezionale che punta alla posizione successiva all'ultimo elemento di un oggetto hash_set. Se l'oggetto hash_set è vuoto, hash_set::end == hash_set::begin.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`end` viene usato per verificare se un iteratore ha raggiunto la fine del relativo oggetto hash_set. Non è consigliabile dereferenziare il valore restituito da `end`.
+`end` viene usato per verificare se un iteratore ha raggiunto la fine del relativo hash_set. Non è consigliabile dereferenziare il valore restituito da `end`.
 
 ### <a name="example"></a>Esempio
 
@@ -1028,7 +1028,7 @@ Coppia di iteratori in cui il primo è l'elemento [lower_bound](../standard-libr
 
 Per accedere al secondo iteratore di una coppia pr restituita dalla funzione membro, usare `pr`. **first** e per dereferenziare l'iteratore del limite inferiore, usare \*( `pr`. **first**). Per accedere al secondo iteratore di una coppia `pr` restituita dalla funzione membro, usare `pr`. **second** e per dereferenziare l'iteratore del limite superiore, usare \*( `pr`. **second**).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -1106,13 +1106,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Where*
+*_Where*\
 Posizione dell'elemento da rimuovere dall'hash_set.
 
-*primo* \
+*primo*\
 Posizione del primo elemento rimosso dall'hash_set.
 
-*ultimo* \
+*ultimo*\
 Posizione oltre l'ultimo elemento rimosso dall'hash_set.
 
 \ *chiave*
@@ -1122,7 +1122,7 @@ La chiave degli elementi da rimuovere dall'hash_set.
 
 Per le prime due funzioni, iteratore bidirezionale che definisce il primo elemento rimanente successivo a tutti gli elementi eliminati o un puntatore al termine dell'hash_set se tali elementi non sono presenti. Per la terza funzione membro, il numero di elementi rimossi dall'hash_set.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le funzioni membro non generano mai un'eccezione.
 
@@ -1229,11 +1229,11 @@ Chiave dell'argomento per cui trovare una corrispondenza in base alla chiave di 
 
 ### <a name="return-value"></a>Valore restituito
 
-@No__t_0 o `const_iterator` che punta alla posizione di un elemento equivalente a una chiave specificata o che punta alla posizione successiva all'ultimo elemento dell'oggetto hash_set se non viene trovata alcuna corrispondenza per la chiave.
+`iterator` o `const_iterator` che punta alla posizione di un elemento equivalente a una chiave specificata o che punta alla posizione successiva all'ultimo elemento della hash_set se non viene trovata alcuna corrispondenza per la chiave.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce un iteratore che punta a un elemento nell'oggetto hash_set la cui chiave di ordinamento è `equivalent` alla chiave dell'argomento in un predicato binario che provoca un ordinamento basato su una relazione di comparabilità minore di.
+La funzione membro restituisce un iteratore che punta a un elemento nel hash_set la cui chiave di ordinamento viene `equivalent` alla chiave dell'argomento in un predicato binario che provoca un ordinamento basato su una relazione di comparabilità minore di.
 
 Se il valore restituito di `find` viene assegnato a una `const_iterator`, l'oggetto hash_set non può essere modificato. Se il valore restituito di `find` viene assegnato a una `iterator`, l'oggetto hash_set può essere modificato.
 
@@ -1300,13 +1300,13 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Allocatore usato da hash_set per gestire la memoria, che corrisponde al parametro di modello *allocator*.
+Allocatore usato dalla hash_set per gestire la memoria, che corrisponde al parametro di modello *allocator*.
 
-Per ulteriori informazioni sull' *allocatore*, vedere la sezione Note dell'argomento [classe hash_set](../standard-library/hash-set-class.md) .
+Per ulteriori informazioni sull' *allocatore*, vedere la sezione Osservazioni dell'argomento [classe hash_set](../standard-library/hash-set-class.md) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Gli allocatori per la classe hash_set specificano il modo in cui la classe gestisce la memoria. Gli allocatori predefiniti forniti con le classi dei contenitori della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
+Gli allocatori per la classe hash_set specificano il modo in cui la classe gestisce la memoria. Gli allocatori predefiniti forniti con le classi contenitore della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
 
 ### <a name="example"></a>Esempio
 
@@ -1423,11 +1423,11 @@ hash_set(
 |-|-|
 |*Al*|Classe dell'allocatore di memoria da usare per l'oggetto `hash_set`. Per impostazione predefinita è `Allocator`.|
 |*Comp*|Funzione di confronto di tipo `const Traits` usata per ordinare gli elementi nell'oggetto `hash_set`. Per impostazione predefinita è `hash_compare`.|
-|*A destra*|Oggetto `hash_set` di cui l'oggetto `hash_set` costruito deve essere una copia.|
-|*Prima*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
-|*Ultima*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
+|*Right*|Oggetto `hash_set` di cui l'oggetto `hash_set` costruito deve essere una copia.|
+|*Primo*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
+|*Ultimo*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tutti i costruttori archiviano un tipo di oggetto allocatore che gestisce la memoria per l'oggetto `hash_set` e che può essere restituito in un secondo momento chiamando [hash_set::get_allocator](#get_allocator). Il parametro allocator viene spesso omesso nelle dichiarazioni di classe e vengono usate macro di pre-elaborazione per introdurre allocatori alternativi.
 
@@ -1476,19 +1476,19 @@ void insert(
 |-|-|
 |*Val*|Valore di un elemento da inserire nell'oggetto `hash_set`, a meno che l'oggetto `hash_set` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
 |*Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. Se il punto di inserimento è immediatamente successivo a `_Where`, l'inserimento può avvenire in tempo costante ammortizzato anziché in tempo logaritmico.|
-|*Prima*|Posizione del primo elemento da copiare da un oggetto `hash_set`.|
-|*Ultima*|Posizione immediatamente dopo l'ultimo elemento da copiare da un oggetto `hash_set`.|
-|*IList*|initializer_list da cui copiare gli elementi.|
+|*Primo*|Posizione del primo elemento da copiare da un oggetto `hash_set`.|
+|*Ultimo*|Posizione immediatamente dopo l'ultimo elemento da copiare da un oggetto `hash_set`.|
+|*IList*|Oggetto initializer_list da cui copiare gli elementi.|
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione membro `insert` restituisce una coppia il cui componente **bool** restituisce **true** se è stato creato un inserimento e **false** se il `hash_set` già contiene un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui iteratore Component restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.
+La prima funzione membro `insert` restituisce una coppia il cui componente **bool** restituisce **true** se è stato creato un inserimento e **false** se il `hash_set` già contiene un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui componente iteratore restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.
 
-Per accedere al componente iterator di una coppia `pr` restituita da questa funzione membro, usare `pr.first` e per dereferenziarlo, usare `*(pr.first)`. Per accedere al componente **bool** di una coppia `pr` restituito da questa funzione membro, utilizzare `pr.second` e per dereferenziarlo, utilizzare `*(pr.second)`.
+Per accedere al componente iterator di una coppia `pr` restituita da questa funzione membro, usare `pr.first` e per dereferenziarlo, usare `*(pr.first)`. Per accedere al componente **bool** di una coppia `pr` restituito da questa funzione membro, utilizzare `pr.second`e per dereferenziarlo, utilizzare `*(pr.second)`.
 
 La seconda funzione membro `insert` restituisce un iteratore che punta alla posizione in cui è stato inserito il nuovo elemento nell'oggetto `hash_set`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La terza funzione membro inserisce gli elementi in un oggetto initializer_list.
 
@@ -1505,7 +1505,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qu
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile utilizzare un tipo `iterator` per modificare il valore di un elemento.
 
@@ -1526,13 +1526,13 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce l'oggetto funzione usato da un hash_set per ordinare gli elementi, ovvero i *tratti*del parametro di modello.
+Restituisce l'oggetto funzione utilizzato da un hash_set per ordinare gli elementi, ovvero i *tratti*del parametro di modello.
 
 Per ulteriori informazioni sui *tratti* , vedere l'argomento relativo alla [classe hash_set](../standard-library/hash-set-class.md) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'oggetto archiviato definisce la funzione membro:
+L'oggetto archiviato definisce la funzione membro
 
 `bool operator( const Key& _xVal, const Key& _yVal );`
 
@@ -1600,7 +1600,7 @@ Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordi
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `key_compare` è un sinonimo dei *tratti*di parametro di modello.
 
@@ -1623,11 +1623,11 @@ Tipo che descrive un oggetto archiviato come elemento di un oggetto hash_set in 
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `key_type` è un sinonimo della *chiave*del parametro di modello.
 
-Per ulteriori informazioni sulla *chiave*, vedere la sezione Note dell'argomento [classe hash_set](../standard-library/hash-set-class.md) .
+Per ulteriori informazioni sulla *chiave*, vedere la sezione Osservazioni dell'argomento [classe hash_set](../standard-library/hash-set-class.md) .
 
 Si noti che `key_type` e [value_type](#value_type) sono sinonimi per il parametro di modello *Key*. Entrambi i tipi vengono forniti per le classi hash_set e hash_multiset, dove sono identici, per la compatibilità con le classi hash_map e hash_multimap, dove sono distinti.
 
@@ -1655,9 +1655,9 @@ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordina
 
 ### <a name="return-value"></a>Valore restituito
 
-@No__t_0 o `const_iterator` che punta alla posizione di un elemento di un oggetto hash_set con una chiave uguale o maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento dell'oggetto hash_set se non viene trovata alcuna corrispondenza per la chiave.
+`iterator` o `const_iterator` che punta alla posizione di un elemento in un hash_set con una chiave uguale o maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento della hash_set se non viene trovata alcuna corrispondenza per la chiave.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -1724,7 +1724,7 @@ size_type max_size() const;
 
 Lunghezza massima possibile dell'oggetto hash_set.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -1766,7 +1766,7 @@ hash_set& operator=(hash_set&& right);
 |-|-|
 |*right*|[Classe hash_set](../standard-library/hash-set-class.md) copiata nell'oggetto `hash_set`.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Dopo la cancellazione di tutti gli elementi esistenti in un `hash_set`, `operator=` copia o sposta il contenuto di *direttamente* nella `hash_set`.
 
@@ -1819,7 +1819,7 @@ Tipo che fornisce un puntatore a un elemento di un oggetto hash_set.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::pointer pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile utilizzare un tipo `pointer` per modificare il valore di un elemento.
 
@@ -1842,7 +1842,7 @@ reverse_iterator rbegin();
 
 Iteratore bidirezionale inverso che punta al primo elemento di un oggetto hash_set invertito o a quello che è stato l'ultimo elemento dell'oggetto hash_set non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rbegin` viene usato con un oggetto hash_set invertito proprio come [begin](#begin) viene usato con un oggetto hash_set.
 
@@ -1919,7 +1919,7 @@ Tipo che fornisce un riferimento a un elemento archiviato in un oggetto hash_set
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reference reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -1975,7 +1975,7 @@ reverse_iterator rend();
 
 Iteratore bidirezionale inverso che punta alla posizione successiva all'ultimo elemento di un oggetto hash_set invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto hash_set non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rend` viene usato con un oggetto hash_set invertito proprio come [end](#end) viene usato con un oggetto hash_set.
 
@@ -2055,13 +2055,13 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `reverse_iterator` viene usato per eseguire l'iterazione sull'oggetto hash_set in ordine inverso.
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio per [rbegin](#rbegin) per un esempio di dichiarazione e utilizzo di `reverse_iterator`.
+Vedere l'esempio relativo a [rbegin](#rbegin) per indicazioni su come dichiarare e usare `reverse_iterator`.
 
 ## <a name="size"></a>  hash_set::size
 
@@ -2078,7 +2078,7 @@ size_type size() const;
 
 Lunghezza corrente dell'oggetto hash_set.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -2121,7 +2121,7 @@ Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un ogge
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::size_type size_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -2143,7 +2143,7 @@ void swap(hash_set& right);
 \ a *destra*
 Argomento di tipo hash_set che fornisce gli elementi da scambiare con l'oggetto hash_set di destinazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro non invalida riferimenti, puntatori o iteratori che designano gli elementi dei due oggetti hash_set di cui vengono scambiati gli elementi.
 
@@ -2221,9 +2221,9 @@ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordina
 
 ### <a name="return-value"></a>Valore restituito
 
-@No__t_0 o `const_iterator` che punta alla posizione di un elemento di un oggetto hash_set con una chiave uguale o maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento dell'oggetto hash_set se non viene trovata alcuna corrispondenza per la chiave.
+`iterator` o `const_iterator` che punta alla posizione di un elemento in un hash_set con una chiave uguale o maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento della hash_set se non viene trovata alcuna corrispondenza per la chiave.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -2288,19 +2288,19 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce l'oggetto funzione usato da un hash_set per ordinare gli elementi, ovvero il *confronto*del parametro di modello.
+Restituisce l'oggetto funzione utilizzato da un hash_set per ordinare gli elementi, ovvero il *confronto*del parametro di modello.
 
 Per ulteriori informazioni sul *confronto*, vedere la sezione Osservazioni dell'argomento [classe hash_set](../standard-library/hash-set-class.md) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'oggetto archiviato definisce la funzione membro:
+L'oggetto archiviato definisce la funzione membro
 
 `bool operator( const Key& _xVal, const Key& _yVal );`
 
 che restituisce **true** se `_xVal` precede e non è uguale a `_yVal` nell'ordinamento.
 
-Si noti che [value_compare](../standard-library/set-class.md#value_compare) e [key_compare](../standard-library/set-class.md#key_compare) sono sinonimi per il parametro di modello *compare*. Entrambi i tipi vengono forniti per le classi hash_set e hash_multiset, dove sono identici, per la compatibilità con le classi hash_map e hash_multimap, dove sono distinti.
+Si noti che sia [value_compare](../standard-library/set-class.md#value_compare) che [key_compare](../standard-library/set-class.md#key_compare) sono sinonimi per il parametro di modello *compare*. Entrambi i tipi vengono forniti per le classi hash_set e hash_multiset, dove sono identici, per la compatibilità con le classi hash_map e hash_multimap, dove sono distinti.
 
 ### <a name="example"></a>Esempio
 
@@ -2362,7 +2362,7 @@ Tipo che fornisce due oggetti funzione, un predicato binario della classe compar
 typedef key_compare value_compare;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `value_compare` è un sinonimo dei *tratti*di parametro di modello.
 
@@ -2423,5 +2423,5 @@ The hash_set has elements: 10 20.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: f4174369620f14f2d1ac410aa5d756c75097ad0f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503771"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855605"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
 
@@ -49,17 +49,17 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[COlePasteSpecialDialog:: COlePasteSpecialDialog](#colepastespecialdialog)|Costruisce un oggetto `COlePasteSpecialDialog`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Name|Descrizione|
 |----------|-----------------|
 |[COlePasteSpecialDialog:: AddFormat](#addformat)|Aggiunge formati personalizzati all'elenco di formati che possono essere incollati nell'applicazione.|
 |[COlePasteSpecialDialog:: AddLinkEntry](#addlinkentry)|Aggiunge una nuova voce all'elenco dei formati degli Appunti supportati.|
-|[COlePasteSpecialDialog:: AddStandardFormats](#addstandardformats)|Aggiunge CF_BITMAP, CF_DIB, CF_METAFILEPICT e, facoltativamente, CF_LINKSOURCE all'elenco dei formati che possono essere incollati nell'applicazione.|
+|[COlePasteSpecialDialog:: AddStandardFormats](#addstandardformats)|Aggiunge CF_BITMAP, CF_DIB, CF_METAFILEPICT e, facoltativamente, CF_LINKSOURCE all'elenco dei formati che possono essere incollati dall'applicazione.|
 |[COlePasteSpecialDialog:: CreateItem](#createitem)|Crea l'elemento nel documento contenitore utilizzando il formato specificato.|
 |[COlePasteSpecialDialog::D oModal](#domodal)|Consente di visualizzare la finestra di dialogo OLE Incolla speciale.|
 |[COlePasteSpecialDialog:: GetDrawAspect](#getdrawaspect)|Indica se creare o meno un elemento come icona.|
@@ -69,13 +69,13 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|NOME|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[COlePasteSpecialDialog:: m_ps](#m_ps)|Struttura di tipo OLEUIPASTESPECIAL che controlla la funzione della finestra di dialogo.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Creare un oggetto della classe `COlePasteSpecialDialog` quando si desidera chiamare questa finestra di dialogo. Dopo che `COlePasteSpecialDialog` un oggetto è stato creato, è possibile utilizzare le funzioni membro [AddFormat](#addformat) e [AddStandardFormats](#addstandardformats) per aggiungere i formati degli Appunti alla finestra di dialogo. È inoltre possibile utilizzare la struttura [m_ps](#m_ps) per inizializzare i valori o gli Stati dei controlli nella finestra di dialogo. La `m_ps` struttura è di tipo OLEUIPASTESPECIAL.
+Creare un oggetto della classe `COlePasteSpecialDialog` quando si desidera chiamare questa finestra di dialogo. Dopo aver creato un oggetto `COlePasteSpecialDialog`, è possibile utilizzare le funzioni membro [AddFormat](#addformat) e [AddStandardFormats](#addstandardformats) per aggiungere i formati degli Appunti alla finestra di dialogo. È inoltre possibile utilizzare la struttura [m_ps](#m_ps) per inizializzare i valori o gli Stati dei controlli nella finestra di dialogo. La struttura `m_ps` è di tipo OLEUIPASTESPECIAL.
 
 Per ulteriori informazioni, vedere la struttura [OleUIPasteSpecial](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw) nel Windows SDK.
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Parametri
 
-*fmt*<br/>
+*FMT*<br/>
 Riferimento al tipo di dati da aggiungere.
 
 *lpszFormat*<br/>
@@ -134,10 +134,10 @@ Stringa che descrive il risultato se questo formato viene scelto nella finestra 
 *flags*<br/>
 Diverse opzioni di collegamento e incorporamento disponibili per questo formato. Questo flag è una combinazione bit per bit di uno o più valori diversi nel tipo enumerato OLEUIPASTEFLAG.
 
-*cf*<br/>
+*CF*<br/>
 Formato degli Appunti da aggiungere.
 
-*tymed*<br/>
+*TYMED*<br/>
 Tipi di supporti disponibili in questo formato. Si tratta di una combinazione bit per bit di uno o più valori del tipo enumerato TYMED.
 
 *nFormatID*<br/>
@@ -146,12 +146,12 @@ ID della stringa che identifica il formato. Il formato di questa stringa è cost
 *bEnableIcon*<br/>
 Flag che determina se la casella di controllo Visualizza come icona è abilitata quando questo formato viene scelto nella casella di riepilogo.
 
-*bLink*<br/>
+*Lampeggiamento*<br/>
 Flag che determina se il pulsante di opzione Incolla collegamento è abilitato quando questo formato viene scelto nella casella di riepilogo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione può essere chiamata per aggiungere formati standard, ad esempio CF_TEXT o CF_TIFF, o formati personalizzati che l'applicazione ha registrato con il sistema. Per ulteriori informazioni su come incollare oggetti dati nell'applicazione, vedere l'articolo [oggetti dati e origini dati: Manipolazione](../../mfc/data-objects-and-data-sources-manipulation.md).
+Questa funzione può essere chiamata per aggiungere formati standard, ad esempio CF_TEXT o CF_TIFF o formati personalizzati che l'applicazione ha registrato con il sistema. Per ulteriori informazioni su come incollare oggetti dati nell'applicazione, vedere l'articolo [oggetti dati e origini dati: manipolazione](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Per ulteriori informazioni, vedere il tipo di enumerazione [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) e la struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) nell'Windows SDK.
 
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Parametri
 
-*cf*<br/>
+*CF*<br/>
 Formato degli Appunti da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -187,7 +187,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
 *bEnableLink*<br/>
 Flag che determina se aggiungere CF_LINKSOURCE all'elenco di formati che possono essere incollati nell'applicazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 - CF_BITMAP
 
@@ -217,7 +217,7 @@ COlePasteSpecialDialog(
 *dwFlags*<br/>
 Flag di creazione, contiene un numero qualsiasi di flag seguenti combinati tramite l'operatore OR bit per bit:
 
-- PSF_SELECTPASTE specifica che il pulsante di opzione Incolla verrà selezionato inizialmente quando viene chiamata la finestra di dialogo. Non può essere usato in combinazione con PSF_SELECTPASTELINK. Questa è l'impostazione predefinita.
+- PSF_SELECTPASTE specifica che il pulsante di opzione Incolla verrà selezionato inizialmente quando viene chiamata la finestra di dialogo. Non può essere usato in combinazione con PSF_SELECTPASTELINK. Questa è la modalità predefinita.
 
 - PSF_SELECTPASTELINK specifica che il pulsante di opzione Incolla collegamento verrà selezionato inizialmente quando viene chiamata la finestra di dialogo. Non può essere usato in combinazione con PSF_SELECTPASTE.
 
@@ -226,14 +226,14 @@ Flag di creazione, contiene un numero qualsiasi di flag seguenti combinati trami
 - PSF_SHOWHELP specifica che il pulsante della guida viene visualizzato quando viene chiamata la finestra di dialogo.
 
 *pDataObject*<br/>
-Punta a [COleDataObject](../../mfc/reference/coledataobject-class.md) per incollare. Se questo valore è null, ottiene l'oggetto `COleDataObject` dagli Appunti.
+Punta a [COleDataObject](../../mfc/reference/coledataobject-class.md) per incollare. Se questo valore è NULL, ottiene il `COleDataObject` dagli Appunti.
 
 *pParentWnd*<br/>
-Punta all'oggetto padre o alla finestra proprietaria (di `CWnd`tipo) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre della finestra di dialogo viene impostata sulla finestra principale dell'applicazione.
+Punta all'oggetto padre o alla finestra proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre della finestra di dialogo viene impostata sulla finestra principale dell'applicazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione costruisce solo un `COlePasteSpecialDialog` oggetto. Per visualizzare la finestra di dialogo, chiamare la funzione [DoModal](#domodal) .
+Questa funzione costruisce solo un oggetto `COlePasteSpecialDialog`. Per visualizzare la finestra di dialogo, chiamare la funzione [DoModal](#domodal) .
 
 Per ulteriori informazioni, vedere il tipo enumerato [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) nel Windows SDK.
 
@@ -248,13 +248,13 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="parameters"></a>Parametri
 
 *pNewItem*<br/>
-Punta a un' `COleClientItem` istanza di. Non può essere NULL.
+Punta a un'istanza di `COleClientItem`. Non può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se l'elemento è stato creato correttamente; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione deve essere chiamata solo dopo che [DoModal](#domodal) restituisce IDOK.
 
@@ -274,11 +274,11 @@ Stato di completamento della finestra di dialogo. Uno dei valori seguenti:
 
 - IDCANCEL se l'utente ha annullato la finestra di dialogo.
 
-- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare la `COleDialog::GetLastError` funzione membro per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco di possibili errori, vedere la funzione [OleUIPasteSpecial](/windows/win32/api/oledlg/nf-oledlg-oleuipastespecialw) nella Windows SDK.
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare la funzione membro `COleDialog::GetLastError` per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco di possibili errori, vedere la funzione [OleUIPasteSpecial](/windows/win32/api/oledlg/nf-oledlg-oleuipastespecialw) nella Windows SDK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se si desidera inizializzare i vari controlli della finestra di dialogo impostando i membri della struttura [m_ps](#m_ps) , è necessario eseguire questa `DoModal`operazione prima di chiamare, ma dopo la costruzione dell'oggetto finestra di dialogo.
+Se si desidera inizializzare i vari controlli della finestra di dialogo impostando i membri della struttura [m_ps](#m_ps) , è necessario eseguire questa operazione prima di chiamare `DoModal`, ma dopo la costruzione dell'oggetto finestra di dialogo.
 
 Se `DoModal` restituisce IDOK, è possibile chiamare altre funzioni membro per recuperare le impostazioni o l'input di informazioni da parte dell'utente nella finestra di dialogo.
 
@@ -296,9 +296,9 @@ Metodo necessario per eseguire il rendering dell'oggetto.
 
 - DVASPECT_CONTENT restituito se la casella di controllo Visualizza come icona non è stata selezionata quando la finestra di dialogo è stata rilasciata.
 
-- DVASPECT_ICON restituito se la casella di controllo Visualizza come icona è stata selezionata quando la finestra di dialogo è stata rilasciata.
+- DVASPECT_ICON restituito se è stata selezionata la casella di controllo Visualizza come icona quando la finestra di dialogo è stata rilasciata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questa funzione solo dopo che [DoModal](#domodal) restituisce IDOK.
 
@@ -326,9 +326,9 @@ int GetPasteIndex() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice nella matrice di `OLEUIPASTEENTRY` strutture selezionata dall'utente. Quando si esegue l'operazione Incolla, è necessario utilizzare il formato corrispondente all'indice selezionato.
+Indice nella matrice di strutture `OLEUIPASTEENTRY` selezionate dall'utente. Quando si esegue l'operazione Incolla, è necessario utilizzare il formato corrispondente all'indice selezionato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere la struttura [OLEUIPASTEENTRY](/windows/win32/api/oledlg/ns-oledlg-oleuipasteentryw) nel Windows SDK.
 
@@ -344,9 +344,9 @@ UINT GetSelectionType() const;
 
 Restituisce il tipo di selezione eseguita.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I valori dei tipi restituiti sono specificati dal `Selection` tipo di enumerazione dichiarato `COlePasteSpecialDialog` nella classe.
+I valori dei tipi restituiti sono specificati dal tipo di enumerazione `Selection` dichiarati nella classe `COlePasteSpecialDialog`.
 
 ```
 enum Selection {
@@ -359,13 +359,13 @@ enum Selection {
 
 Il Brief desccriptions di questi valori è il seguente:
 
-- `COlePasteSpecialDialog::pasteLink`Il pulsante di opzione Incolla collegamento è stato selezionato e il formato scelto era un formato OLE standard.
+- `COlePasteSpecialDialog::pasteLink` è stato selezionato il pulsante di opzione Incolla collegamento e il formato scelto era un formato OLE standard.
 
-- `COlePasteSpecialDialog::pasteNormal`Il pulsante di opzione Incolla è stato selezionato e il formato scelto era un formato OLE standard.
+- `COlePasteSpecialDialog::pasteNormal` è stato selezionato il pulsante di opzione Incolla e il formato scelto era un formato OLE standard.
 
-- `COlePasteSpecialDialog::pasteOther`Il formato selezionato non è un formato OLE standard.
+- `COlePasteSpecialDialog::pasteOther` il formato selezionato non è un formato OLE standard.
 
-- `COlePasteSpecialDialog::pasteStatic`Il formato scelto era un metafile.
+- `COlePasteSpecialDialog::pasteStatic` il formato scelto era un metafile.
 
 ##  <a name="m_ps"></a>COlePasteSpecialDialog:: m_ps
 
@@ -375,7 +375,7 @@ Struttura di tipo OLEUIPASTESPECIAL utilizzata per controllare il comportamento 
 OLEUIPASTESPECIAL m_ps;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.
 

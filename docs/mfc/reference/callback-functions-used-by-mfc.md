@@ -8,11 +8,11 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507707"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855525"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funzioni di callback utilizzate da MFC
 
@@ -50,9 +50,9 @@ Punta ai dati forniti dall'applicazione passati alla funzione `EnumObjects`.
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione di callback restituisce un valore **int**. Il valore restituito è definito dall'utente. Se la funzione di callback restituisce 0, `EnumObjects` arresta l'enumerazione prima.
+La funzione di callback restituisce un valore **int**. Il valore di questo valore restituito è definito dall'utente. Se la funzione di callback restituisce 0, `EnumObjects` arresta l'enumerazione prima.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il nome effettivo deve essere esportato.
 
@@ -72,7 +72,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="parameters"></a>Parametri
 
 *hDC*<br/>
-Identifica un contesto di dispositivo di memoria con una bitmap di almeno la larghezza e l'altezza `nWidth` specificate `nHeight` da `GrayString`e a.
+Identifica un contesto di dispositivo di memoria con una bitmap di almeno la larghezza e l'altezza specificate da `nWidth` e `nHeight` `GrayString`.
 
 *lpData*<br/>
 Punta alla stringa di caratteri da tracciare.
@@ -84,7 +84,7 @@ Specifica il numero di caratteri da restituire.
 
 Il valore restituito della funzione di callback deve essere TRUE per indicare l'esito positivo; in caso contrario, è FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione di callback (*OutputFunc*) deve creare un'immagine relativa alle coordinate (0, 0) anziché (*x*, *y*).
 
@@ -105,14 +105,14 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 Identifica il contesto di dispositivo.
 
-*codice*<br/>
-Specifica se si è verificato un errore. È 0 se non si è verificato alcun errore. È SP_OUTOFDISK se lo spazio su disco del gestore di stampa è esaurito e se l'applicazione è in attesa sarà disponibile più spazio su disco. Se il *codice* è SP_OUTOFDISK, l'applicazione non deve interrompere il processo di stampa. In caso contrario, deve restituire al gestore di stampa chiamando la `PeekMessage` funzione o `GetMessage` Windows.
+*code*<br/>
+Specifica se si è verificato un errore. È 0 se non si è verificato alcun errore. È SP_OUTOFDISK se lo spazio su disco del gestore di stampa è esaurito e se l'applicazione è in attesa, sarà disponibile più spazio su disco. Se il *codice* è SP_OUTOFDISK, l'applicazione non deve interrompere il processo di stampa. In caso contrario, deve restituire al gestore di stampa chiamando il `PeekMessage` o `GetMessage` funzione Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
 Il valore restituito dalla funzione del gestore di interruzione è diverso da zero se il processo di stampa deve continuare e 0 se è stato annullato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il nome effettivo deve essere esportato, come descritto nella sezione Note di [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
 
@@ -120,5 +120,5 @@ Il nome effettivo deve essere esportato, come descritto nella sezione Note di [C
 
 [Strutture, stili, callback e mappe messaggi](structures-styles-callbacks-and-message-maps.md)<br/>
 [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
-[CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
+[CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
 [CDC:: GrayString](../../mfc/reference/cdc-class.md#graystring)

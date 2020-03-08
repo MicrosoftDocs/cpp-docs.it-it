@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
 ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372049"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874024"
 ---
 # <a name="cruntimeclass-structure"></a>Struttura CRuntimeClass
 
-Ogni classe derivata da `CObject` è associato un `CRuntimeClass` struttura che è possibile usare per ottenere informazioni su un oggetto o la relativa classe base in fase di esecuzione.
+Ogni classe derivata da `CObject` è associata a una struttura di `CRuntimeClass` che è possibile utilizzare per ottenere informazioni su un oggetto o sulla relativa classe di base in fase di esecuzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,36 +26,36 @@ Ogni classe derivata da `CObject` è associato un `CRuntimeClass` struttura che 
 struct CRuntimeClass
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CRuntimeClass::CreateObject](#createobject)|Crea un oggetto durante la fase di esecuzione.|
-|[CRuntimeClass::FromName](#fromname)|Crea un oggetto durante la fase di esecuzione usando il nome della classe familiare.|
-|[CRuntimeClass::IsDerivedFrom](#isderivedfrom)|Determina se la classe è derivata dalla classe specificata.|
+|[CRuntimeClass:: CreateObject](#createobject)|Crea un oggetto in fase di esecuzione.|
+|[CRuntimeClass:: FromName](#fromname)|Crea un oggetto in fase di esecuzione usando il nome della classe familiare.|
+|[CRuntimeClass:: IsDerivedFrom](#isderivedfrom)|Determina se la classe è derivata dalla classe specificata.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CRuntimeClass::m_lpszClassName](#m_lpszclassname)|Nome della classe.|
-|[CRuntimeClass::m_nObjectSize](#m_nobjectsize)|Dimensione dell'oggetto in byte.|
-|[CRuntimeClass::m_pBaseClass](#m_pbaseclass)|Un puntatore al `CRuntimeClass` struttura della classe di base.|
-|[CRuntimeClass::m_pfnCreateObject](#m_pfncreateobject)|Puntatore alla funzione che crea dinamicamente l'oggetto.|
-|[CRuntimeClass::m_pfnGetBaseClass](#m_pfngetbaseclass)|Restituisce il `CRuntimeClass` struttura (solo disponibile quando in modo dinamico collegato).|
-|[CRuntimeClass::m_wSchema](#m_wschema)|Il numero di schema della classe.|
+|[CRuntimeClass:: m_lpszClassName](#m_lpszclassname)|Nome della classe.|
+|[CRuntimeClass:: m_nObjectSize](#m_nobjectsize)|Dimensione dell'oggetto in byte.|
+|[CRuntimeClass:: m_pBaseClass](#m_pbaseclass)|Puntatore alla struttura `CRuntimeClass` della classe di base.|
+|[CRuntimeClass:: m_pfnCreateObject](#m_pfncreateobject)|Puntatore alla funzione che crea dinamicamente l'oggetto.|
+|[CRuntimeClass:: m_pfnGetBaseClass](#m_pfngetbaseclass)|Restituisce la struttura di `CRuntimeClass` (disponibile solo quando collegato dinamicamente).|
+|[CRuntimeClass:: m_wSchema](#m_wschema)|Numero dello schema della classe.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`CRuntimeClass` è una struttura e pertanto non ha una classe di base.
+`CRuntimeClass` è una struttura e pertanto non dispone di una classe base.
 
-La possibilità di determinare la classe di un oggetto in fase di esecuzione è utile quando è necessario il controllo degli argomenti della funzione di tipo aggiuntivo o quando è necessario scrivere codice speciale in base alla classe di un oggetto. Informazioni sulle classi di runtime non è supportate direttamente dal linguaggio C++.
+La possibilità di determinare la classe di un oggetto in fase di esecuzione è utile quando è necessario il controllo dei tipi aggiuntivi degli argomenti della funzione o quando è necessario scrivere codice per scopi specifici in base alla classe di un oggetto. Le C++ informazioni sulle classi in fase di esecuzione non sono supportate direttamente dal linguaggio.
 
-`CRuntimeClass` vengono fornite informazioni sull'oggetto correlato, C++, ad esempio un puntatore al `CRuntimeClass` della classe base e il nome della classe ASCII della classe correlata. Questa struttura implementa anche varie funzioni utilizzabili per creare dinamicamente gli oggetti, che specifica il tipo di oggetto utilizzando un nome familiare e determinare se la classe correlata è derivata da una classe specifica.
+`CRuntimeClass` fornisce informazioni sull'oggetto correlato C++ , ad esempio un puntatore al `CRuntimeClass` della classe di base e il nome della classe ASCII della classe correlata. Questa struttura implementa inoltre varie funzioni che possono essere utilizzate per creare dinamicamente oggetti, specificando il tipo di oggetto utilizzando un nome familiare e determinando se la classe correlata è derivata da una classe specifica.
 
-Per altre informazioni sull'uso `CRuntimeClass`, vedere l'articolo [l'accesso a informazioni sulle classi di Run-Time](../../mfc/accessing-run-time-class-information.md).
+Per ulteriori informazioni sull'utilizzo di `CRuntimeClass`, vedere l'articolo relativo all' [accesso alle informazioni sulle classi in fase di esecuzione](../../mfc/accessing-run-time-class-information.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -65,9 +65,9 @@ Per altre informazioni sull'uso `CRuntimeClass`, vedere l'articolo [l'accesso a 
 
 **Intestazione:** afx.h
 
-##  <a name="createobject"></a>  CRuntimeClass::CreateObject
+##  <a name="createobject"></a>CRuntimeClass:: CreateObject
 
-Chiamare questa funzione per creare in modo dinamico la classe specificata durante la fase di esecuzione.
+Chiamare questa funzione per creare dinamicamente la classe specificata durante la fase di esecuzione.
 
 ```
 CObject* CreateObject();
@@ -80,23 +80,23 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="parameters"></a>Parametri
 
 *lpszClassName*<br/>
-Il nome della classe da creare.
+Nome familiare della classe da creare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore all'oggetto appena creato, o NULL se il nome della classe non viene trovato o memoria insufficiente per creare l'oggetto.
+Puntatore all'oggetto appena creato oppure NULL se il nome della classe non viene trovato o la memoria disponibile non è sufficiente per creare l'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le classi derivate da `CObject` può supportare la creazione dinamica, che è la possibilità di creare un oggetto di una classe specificata in fase di esecuzione. Documento vista e le classi di frame, ad esempio, devono supportare la creazione dinamica. Per ulteriori informazioni sulla creazione dinamica e il `CreateObject` membro, vedere [classe CObject](../../mfc/using-cobject.md) e [classe CObject: Specifica dei livelli di funzionalità](../../mfc/specifying-levels-of-functionality.md).
+Le classi derivate da `CObject` possono supportare la creazione dinamica, ovvero la possibilità di creare un oggetto di una classe specificata in fase di esecuzione. Le classi Document, View e frame, ad esempio, devono supportare la creazione dinamica. Per altre informazioni sulla creazione dinamica e il membro `CreateObject`, vedere [classe CObject](../../mfc/using-cobject.md) e [classe CObject: specifica dei livelli di funzionalità](../../mfc/specifying-levels-of-functionality.md).
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [IsDerivedFrom](#isderivedfrom).
+  Vedere l'esempio per [IsDerivedFrom](#isderivedfrom).
 
-##  <a name="fromname"></a>  CRuntimeClass::FromName
+##  <a name="fromname"></a>CRuntimeClass:: FromName
 
-Chiamare questa funzione per recuperare il `CRuntimeClass` struttura associato al nome familiare.
+Chiamare questa funzione per recuperare la struttura di `CRuntimeClass` associata al nome familiare.
 
 ```
 static CRuntimeClass* PASCAL FromName(LPCSTR lpszClassName);
@@ -107,19 +107,19 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ### <a name="parameters"></a>Parametri
 
 *lpszClassName*<br/>
-Il nome di una classe derivata da `CObject`.
+Nome familiare di una classe derivata da `CObject`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CRuntimeClass` oggetti, corrispondente al nome di base a quanto passato *lpszClassName*. La funzione restituisce NULL se è stato trovato alcun nome di classe corrispondente.
+Puntatore a un oggetto `CRuntimeClass`, corrispondente al nome come passato in *lpszClassName*. La funzione restituisce NULL se non è stato trovato alcun nome di classe corrispondente.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]
 
-##  <a name="isderivedfrom"></a>  CRuntimeClass::IsDerivedFrom
+##  <a name="isderivedfrom"></a>CRuntimeClass:: IsDerivedFrom
 
-Chiamare questa funzione per determinare se il chiamante viene derivata dalla classe specificata nel *pBaseClass* parametro.
+Chiamare questa funzione per determinare se la classe chiamante è derivata dalla classe specificata nel parametro *pBaseClass* .
 
 ```
 BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
@@ -128,98 +128,98 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="parameters"></a>Parametri
 
 *pBaseClass*<br/>
-Il nome di una classe derivata da `CObject`.
+Nome familiare di una classe derivata da `CObject`.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la chiamata di classi `IsDerivedFrom` è derivata dalla base classe cui `CRuntimeClass` struttura è specificato come parametro; in caso contrario, FALSE.
+TRUE se la classe che chiama `IsDerivedFrom` viene derivata dalla classe di base la cui struttura `CRuntimeClass` viene fornita come parametro. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La relazione è determinata dal "analisi" dalla classe del membro fino alla catena di classi derivate fino alla parte superiore. Questa funzione restituisce FALSE solo se viene trovata alcuna corrispondenza per la classe di base.
+La relazione viene determinata da "Walking" dalla classe del membro fino alla catena di classi derivate fino alla parte superiore. Questa funzione restituisce FALSE solo se non viene trovata alcuna corrispondenza per la classe base.
 
 > [!NOTE]
->  Usare il `CRuntimeClass` struttura, è necessario includere la macro IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE o IMPLEMENT_SERIAL nell'implementazione della classe per cui si desidera recuperare le informazioni sull'oggetto in fase di esecuzione.
+>  Per utilizzare la struttura di `CRuntimeClass`, è necessario includere la macro IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE o IMPLEMENT_SERIAL nell'implementazione della classe per la quale si desidera recuperare informazioni sull'oggetto in fase di esecuzione.
 
-Per altre informazioni sull'uso `CRuntimeClass`, vedere l'articolo [classe CObject: Accesso alle informazioni sulle classi di runtime](../../mfc/accessing-run-time-class-information.md).
+Per ulteriori informazioni sull'utilizzo di `CRuntimeClass`, vedere l'articolo relativo alla [classe CObject: accesso alle informazioni sulle classi in fase di esecuzione](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]
 
-##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName
+##  <a name="m_lpszclassname"></a>CRuntimeClass:: m_lpszClassName
 
-Stringa con terminazione null contenente il nome della classe ASCII.
+Stringa con terminazione null che contiene il nome della classe ASCII.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo nome può essere usato per creare un'istanza della classe utilizzando il `FromName` funzione membro.
-
-### <a name="example"></a>Esempio
-
-  Vedere l'esempio relativo [IsDerivedFrom](#isderivedfrom).
-
-##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize
-
-Le dimensioni dell'oggetto, in byte.
-
-### <a name="remarks"></a>Note
-
-Se l'oggetto ha membri dati di tale punto alla memoria allocata, le dimensioni della memoria non sono inclusa.
+Questo nome può essere utilizzato per creare un'istanza della classe utilizzando la funzione membro `FromName`.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [IsDerivedFrom](#isderivedfrom).
+  Vedere l'esempio per [IsDerivedFrom](#isderivedfrom).
 
-##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass
+##  <a name="m_nobjectsize"></a>CRuntimeClass:: m_nObjectSize
 
-Se l'applicazione è collegato in modo statico a MFC, questo membro dati contiene un puntatore al `CRuntimeClass` struttura della classe di base.
+Dimensioni, in byte, dell'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se l'applicazione è collegato in modo dinamico alla libreria MFC, vedere [m_pfnGetBaseClass](#m_pfngetbaseclass).
-
-### <a name="example"></a>Esempio
-
-  Vedere l'esempio relativo [IsDerivedFrom](#isderivedfrom).
-
-##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject
-
-Un puntatore a funzione al costruttore predefinito che crea un oggetto della classe.
-
-### <a name="remarks"></a>Note
-
-Puntatore ' this ' è valida solo se la classe supporta la creazione dinamica. in caso contrario, la funzione restituisce NULL.
-
-##  <a name="m_pfngetbaseclass"></a>  CRuntimeClass::m_pfnGetBaseClass
-
-Se l'applicazione usa la libreria MFC come una DLL condivisa, questo membro dati punta a una funzione che restituisce il `CRuntimeClass` struttura della classe di base.
-
-### <a name="remarks"></a>Note
-
-Se l'applicazione in modo statico collegata alla libreria MFC, vedere [m_pBaseClass](#m_pbaseclass).
+Se l'oggetto dispone di membri dati che puntano a memoria allocata, le dimensioni della memoria non vengono incluse.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [IsDerivedFrom](#isderivedfrom).
+  Vedere l'esempio per [IsDerivedFrom](#isderivedfrom).
 
-##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema
+##  <a name="m_pbaseclass"></a>CRuntimeClass:: m_pBaseClass
 
-Il numero di schema (-1 per le classi non serializzabili).
+Se l'applicazione si collega a MFC in modo statico, questo membro dati contiene un puntatore alla struttura `CRuntimeClass` della classe di base.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per altre informazioni sui numeri di schema, vedere la [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro.
+Se l'applicazione si collega in modo dinamico alla libreria MFC, vedere [m_pfnGetBaseClass](#m_pfngetbaseclass).
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [IsDerivedFrom](#isderivedfrom).
+  Vedere l'esempio per [IsDerivedFrom](#isderivedfrom).
+
+##  <a name="m_pfncreateobject"></a>CRuntimeClass:: m_pfnCreateObject
+
+Puntatore a funzione per il costruttore predefinito che crea un oggetto della classe.
+
+### <a name="remarks"></a>Osservazioni
+
+Questo puntatore è valido solo se la classe supporta la creazione dinamica. in caso contrario, la funzione restituisce NULL.
+
+##  <a name="m_pfngetbaseclass"></a>CRuntimeClass:: m_pfnGetBaseClass
+
+Se l'applicazione usa la libreria MFC come DLL condivisa, questo membro dati punta a una funzione che restituisce la struttura `CRuntimeClass` della classe di base.
+
+### <a name="remarks"></a>Osservazioni
+
+Se l'applicazione si collega in modo statico alla libreria MFC, vedere [m_pBaseClass](#m_pbaseclass).
+
+### <a name="example"></a>Esempio
+
+  Vedere l'esempio per [IsDerivedFrom](#isderivedfrom).
+
+##  <a name="m_wschema"></a>CRuntimeClass:: m_wSchema
+
+Numero dello schema (-1 per le classi non serializzabili).
+
+### <a name="remarks"></a>Osservazioni
+
+Per ulteriori informazioni sui numeri di schema, vedere la [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro.
+
+### <a name="example"></a>Esempio
+
+  Vedere l'esempio per [IsDerivedFrom](#isderivedfrom).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)<br/>
-[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)<br/>
+[CObject:: GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)<br/>
+[CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)<br/>
 [RUNTIME_CLASS](run-time-object-model-services.md#runtime_class)<br/>
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>

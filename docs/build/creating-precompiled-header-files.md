@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920101"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884092"
 ---
 # <a name="precompiled-header-files"></a>File di intestazione precompilata
 
@@ -122,7 +122,7 @@ Questa tabella elenca le opzioni del compilatore che potrebbero attivare un avvi
 |/E o/EP|Copia l'output del preprocessore nell'output standard|Le intestazioni precompilate non funzionano con l'opzione/E o/EP.|
 |/Fr o/FR|Genera informazioni sul browser Microsoft Source|Affinché le opzioni/FR e/FR siano valide con l'opzione/Yu, devono essere attive anche al momento della creazione dell'intestazione precompilata. Le compilazioni successive che usano l'intestazione precompilata generano anche informazioni sul browser di origine. Le informazioni del browser vengono inserite in un singolo file SBR a cui fanno riferimento altri file allo stesso modo delle informazioni CodeView. Non è possibile eseguire l'override del posizionamento delle informazioni del browser di origine.|
 |/GA,/GD,/GE,/GW o/GW|Opzioni del protocollo Windows|Deve essere lo stesso tra la compilazione che ha creato l'intestazione precompilata e la compilazione corrente. Se queste opzioni sono diverse, viene restituito un messaggio di avviso.|
-|/Zi|Genera informazioni di debug complete|Se questa opzione è attiva al momento della creazione dell'intestazione precompilata, le compilazioni successive che usano la precompilazione possono usare tali informazioni di debug. Se/Zi non è attivo al momento della creazione dell'intestazione precompilata, le compilazioni successive che usano la precompilazione e l'opzione/Zi attivano un avviso. Le informazioni di debug vengono inserite nel file oggetto corrente e i simboli locali definiti nell'intestazione precompilata non sono disponibili per il debugger.|
+|/ZI|Genera informazioni di debug complete|Se questa opzione è attiva al momento della creazione dell'intestazione precompilata, le compilazioni successive che usano la precompilazione possono usare tali informazioni di debug. Se/Zi non è attivo al momento della creazione dell'intestazione precompilata, le compilazioni successive che usano la precompilazione e l'opzione/Zi attivano un avviso. Le informazioni di debug vengono inserite nel file oggetto corrente e i simboli locali definiti nell'intestazione precompilata non sono disponibili per il debugger.|
 
 > [!NOTE]
 >  La funzionalità di intestazione precompilata è destinata all'uso solo nei C++ file C e di origine.

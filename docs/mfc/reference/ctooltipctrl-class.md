@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
 ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741414"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865450"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -93,58 +93,58 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|Costruisce un oggetto `CToolTipCtrl`.|
+|[CToolTipCtrl:: CToolTipCtrl](#ctooltipctrl)|Costruisce un oggetto `CToolTipCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CToolTipCtrl::Activate](#activate)|Attiva e disattiva il controllo ToolTip.|
-|[CToolTipCtrl::AddTool](#addtool)|Registra uno strumento con il controllo descrizione comando.|
-|[CToolTipCtrl::AdjustRect](#adjustrect)|Esegue la conversione tra il rettangolo di visualizzazione del testo di un controllo ToolTip e il relativo rettangolo della finestra.|
-|[CToolTipCtrl::Create](#create)|Crea un controllo ToolTip e lo collega a un `CToolTipCtrl` oggetto.|
-|[CToolTipCtrl::CreateEx](#createex)|Crea un controllo descrizione comando con gli stili estesi di Windows specificati e lo collega a `CToolTipCtrl` un oggetto.|
-|[CToolTipCtrl::DelTool](#deltool)|Rimuove uno strumento dal controllo ToolTip.|
-|[CToolTipCtrl::GetBubbleSize](#getbubblesize)|Recupera le dimensioni della descrizione comando.|
-|[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|Recupera le informazioni, ad esempio le dimensioni, la posizione e il testo, della finestra della descrizione comando visualizzata dal controllo ToolTip corrente.|
-|[CToolTipCtrl::GetDelayTime](#getdelaytime)|Recupera le durate iniziali, di popup e di rivisualizzazione attualmente impostate per un controllo di descrizione comandi.|
-|[CToolTipCtrl::GetMargin](#getmargin)|Recupera i margini superiore, sinistro, inferiore e destro impostati per una finestra di descrizione comando.|
-|[CToolTipCtrl::GetMaxTipWidth](#getmaxtipwidth)|Recupera la larghezza massima per una finestra di descrizione comando.|
-|[CToolTipCtrl::GetText](#gettext)|Recupera il testo mantenuto da un controllo descrizione comando per uno strumento.|
-|[CToolTipCtrl::GetTipBkColor](#gettipbkcolor)|Recupera il colore di sfondo in una finestra descrizione comando.|
-|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|Recupera il colore del testo in una finestra descrizione comando.|
-|[CToolTipCtrl::GetTitle](#gettitle)|Recupera il titolo del controllo ToolTip corrente.|
-|[CToolTipCtrl::GetToolCount](#gettoolcount)|Recupera un conteggio degli strumenti gestiti da un controllo di descrizione comandi.|
-|[CToolTipCtrl::GetToolInfo](#gettoolinfo)|Recupera le informazioni che un controllo ToolTip gestisce su uno strumento.|
-|[CToolTipCtrl::HitTest](#hittest)|Verifica un punto per determinare se si trova all'interno del rettangolo di delimitazione dello strumento specificato. In tal caso, recupera le informazioni sullo strumento.|
-|[CToolTipCtrl::Pop](#pop)|Rimuove dalla visualizzazione una finestra del suggerimento dello strumento visualizzata.|
-|[CToolTipCtrl::Popup](#popup)|Determina la visualizzazione del controllo ToolTip corrente in corrispondenza delle coordinate dell'ultimo messaggio del mouse.|
-|[CToolTipCtrl::RelayEvent](#relayevent)|Passa un messaggio del mouse a un controllo descrizione comando per l'elaborazione.|
-|[CToolTipCtrl::SetDelayTime](#setdelaytime)|Imposta le durate iniziali, popup e reshow per un controllo descrizione comando.|
-|[CToolTipCtrl::SetMargin](#setmargin)|Imposta i margini superiore, sinistro, inferiore e destro per una finestra di descrizione comando.|
-|[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Imposta la larghezza massima per una finestra di descrizione comando.|
-|[CToolTipCtrl::SetTipBkColor](#settipbkcolor)|Imposta il colore di sfondo in una finestra descrizione comando.|
-|[CToolTipCtrl::SetTipTextColor](#settiptextcolor)|Imposta il colore del testo in una finestra descrizione comando.|
-|[CToolTipCtrl::SetTitle](#settitle)|Aggiunge un'icona standard e una stringa del titolo a una descrizione comando.|
-|[CToolTipCtrl::SetToolInfo](#settoolinfo)|Imposta le informazioni che una descrizione comando gestisce per uno strumento.|
-|[CToolTipCtrl::SetToolRect](#settoolrect)|Imposta un nuovo rettangolo di delimitazione per uno strumento.|
-|[CToolTipCtrl::SetWindowTheme](#setwindowtheme)|Imposta lo stile di visualizzazione della finestra descrizione comando.|
-|[CToolTipCtrl::Update](#update)|Impone il ridisegnato dello strumento corrente.|
-|[CToolTipCtrl::UpdateTipText](#updatetiptext)|Imposta il testo della descrizione comando per uno strumento.|
+|[CToolTipCtrl:: Activate](#activate)|Attiva e disattiva il controllo ToolTip.|
+|[CToolTipCtrl:: AddTool](#addtool)|Registra uno strumento con il controllo descrizione comando.|
+|[CToolTipCtrl:: AdjustRect](#adjustrect)|Esegue la conversione tra il rettangolo di visualizzazione del testo di un controllo ToolTip e il relativo rettangolo della finestra.|
+|[CToolTipCtrl:: create](#create)|Crea un controllo descrizione comandi e lo collega a un oggetto `CToolTipCtrl`.|
+|[CToolTipCtrl:: CreateEx](#createex)|Crea un controllo descrizione comando con gli stili estesi di Windows specificati e lo collega a un oggetto `CToolTipCtrl`.|
+|[CToolTipCtrl::D elTool](#deltool)|Rimuove uno strumento dal controllo ToolTip.|
+|[CToolTipCtrl:: GetBubbleSize](#getbubblesize)|Recupera le dimensioni della descrizione comando.|
+|[CToolTipCtrl:: GetCurrentTool](#getcurrenttool)|Recupera le informazioni, ad esempio le dimensioni, la posizione e il testo, della finestra della descrizione comando visualizzata dal controllo ToolTip corrente.|
+|[CToolTipCtrl:: GetDelayTime](#getdelaytime)|Recupera le durate iniziali, di popup e di rivisualizzazione attualmente impostate per un controllo di descrizione comandi.|
+|[CToolTipCtrl:: GetMargin](#getmargin)|Recupera i margini superiore, sinistro, inferiore e destro impostati per una finestra di descrizione comando.|
+|[CToolTipCtrl:: GetMaxTipWidth](#getmaxtipwidth)|Recupera la larghezza massima per una finestra di descrizione comando.|
+|[CToolTipCtrl:: GetText](#gettext)|Recupera il testo mantenuto da un controllo descrizione comando per uno strumento.|
+|[CToolTipCtrl:: GetTipBkColor](#gettipbkcolor)|Recupera il colore di sfondo in una finestra descrizione comando.|
+|[CToolTipCtrl:: GetTipTextColor](#gettiptextcolor)|Recupera il colore del testo in una finestra descrizione comando.|
+|[CToolTipCtrl:: getTitle](#gettitle)|Recupera il titolo del controllo ToolTip corrente.|
+|[CToolTipCtrl:: GetToolCount](#gettoolcount)|Recupera un conteggio degli strumenti gestiti da un controllo di descrizione comandi.|
+|[CToolTipCtrl:: GetToolInfo](#gettoolinfo)|Recupera le informazioni che un controllo ToolTip gestisce su uno strumento.|
+|[CToolTipCtrl:: HitTest](#hittest)|Verifica un punto per determinare se si trova all'interno del rettangolo di delimitazione dello strumento specificato. In tal caso, recupera le informazioni sullo strumento.|
+|[CToolTipCtrl::P op](#pop)|Rimuove dalla visualizzazione una finestra del suggerimento dello strumento visualizzata.|
+|[CToolTipCtrl::P opup](#popup)|Determina la visualizzazione del controllo ToolTip corrente in corrispondenza delle coordinate dell'ultimo messaggio del mouse.|
+|[CToolTipCtrl:: RelayEvent](#relayevent)|Passa un messaggio del mouse a un controllo descrizione comando per l'elaborazione.|
+|[CToolTipCtrl:: SetDelayTime](#setdelaytime)|Imposta le durate iniziali, popup e reshow per un controllo descrizione comando.|
+|[CToolTipCtrl:: semargin](#setmargin)|Imposta i margini superiore, sinistro, inferiore e destro per una finestra di descrizione comando.|
+|[CToolTipCtrl:: SetMaxTipWidth](#setmaxtipwidth)|Imposta la larghezza massima per una finestra di descrizione comando.|
+|[CToolTipCtrl:: SetTipBkColor](#settipbkcolor)|Imposta il colore di sfondo in una finestra descrizione comando.|
+|[CToolTipCtrl:: SetTipTextColor](#settiptextcolor)|Imposta il colore del testo in una finestra descrizione comando.|
+|[CToolTipCtrl:: toTitle](#settitle)|Aggiunge un'icona standard e una stringa del titolo a una descrizione comando.|
+|[CToolTipCtrl:: SetToolInfo](#settoolinfo)|Imposta le informazioni che una descrizione comando gestisce per uno strumento.|
+|[CToolTipCtrl:: SetToolRect](#settoolrect)|Imposta un nuovo rettangolo di delimitazione per uno strumento.|
+|[CToolTipCtrl:: SetWindowTheme](#setwindowtheme)|Imposta lo stile di visualizzazione della finestra descrizione comando.|
+|[CToolTipCtrl:: Update](#update)|Impone il ridisegnato dello strumento corrente.|
+|[CToolTipCtrl:: UpdateTipText](#updatetiptext)|Imposta il testo della descrizione comando per uno strumento.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Uno "strumento" è una finestra, ad esempio una finestra o un controllo figlio oppure un'area rettangolare definita dall'applicazione all'interno dell'area client di una finestra. Una descrizione comando è nascosta per la maggior parte del tempo, che viene visualizzata solo quando l'utente posiziona il cursore su uno strumento e lo lascia per circa un mezzo secondo. La descrizione comando viene visualizzata accanto al cursore e scompare quando l'utente fa clic su un pulsante del mouse o sposta il cursore dallo strumento.
 
-`CToolTipCtrl`fornisce la funzionalità per controllare il tempo e la durata iniziali della descrizione comandi, le larghezze dei margini che racchiudono il testo della descrizione comando, la larghezza della finestra della descrizione comandi e lo sfondo e il colore del testo della descrizione comando. Un singolo controllo descrizione comando può fornire informazioni per più di uno strumento.
+`CToolTipCtrl` fornisce la funzionalità per controllare il tempo e la durata iniziali della descrizione comandi, le larghezze dei margini che racchiudono il testo della descrizione comando, la larghezza della finestra della descrizione comandi e lo sfondo e il colore del testo della descrizione comando. Un singolo controllo descrizione comando può fornire informazioni per più di uno strumento.
 
-La `CToolTipCtrl` classe fornisce la funzionalità del controllo ToolTip comune di Windows. Questo controllo (e pertanto la `CToolTipCtrl` classe) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3,51 e successive.
+La classe `CToolTipCtrl` fornisce la funzionalità del controllo ToolTip comune di Windows. Questo controllo (e pertanto la classe `CToolTipCtrl`) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3,51 e successive.
 
 Per ulteriori informazioni sull'abilitazione delle descrizioni comandi, vedere descrizioni [comandi in Windows non derivate da CFrameWnd](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
-Per altre informazioni sull'uso `CToolTipCtrl`di, vedere [controlli](../../mfc/controls-mfc.md) e [uso di CToolTipCtrl](../../mfc/using-ctooltipctrl.md).
+Per altre informazioni sull'uso di `CToolTipCtrl`, vedere [controlli](../../mfc/controls-mfc.md) e [uso di CToolTipCtrl](../../mfc/using-ctooltipctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -173,7 +173,7 @@ void Activate(BOOL bActivate);
 *bActivate*<br/>
 Specifica se il controllo descrizione comando deve essere attivato o disattivato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se *bActivate* è true, il controllo viene attivato; Se FALSE, viene disattivato.
 
@@ -216,20 +216,20 @@ Puntatore a una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) che con
 ID dello strumento.
 
 *lpszText*<br/>
-Puntatore al testo per lo strumento. Se questo parametro contiene il valore LPSTR_TEXTCALLBACK, i messaggi di notifica TTN_NEEDTEXT passano all'elemento padre della finestra a cui punta *pWnd* .
+Puntatore al testo per lo strumento. Se questo parametro contiene il valore LPSTR_TEXTCALLBACK, TTN_NEEDTEXT i messaggi di notifica passano all'elemento padre della finestra a cui punta *pWnd* .
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I parametri *lpRectTool* e *nIDTool* devono essere entrambi validi o se *lpRectTool* è null, *nIDTool* deve essere 0.
 
 Un controllo descrizione comando può essere associato a più di uno strumento. Chiamare questa funzione per registrare uno strumento con il controllo descrizione comando, in modo che le informazioni archiviate nella descrizione comandi vengano visualizzate quando il cursore si trova sullo strumento.
 
 > [!NOTE]
->  Non è possibile impostare una descrizione comando su un controllo statico `AddTool`usando.
+>  Non è possibile impostare una descrizione comando su un controllo statico usando `AddTool`.
 
 ### <a name="example"></a>Esempio
 
@@ -247,7 +247,7 @@ BOOL AdjustRect(
 
 ### <a name="parameters"></a>Parametri
 
-*lprc*<br/>
+*LPRC*<br/>
 Puntatore a una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) che include un rettangolo della finestra di descrizione comando o un rettangolo di visualizzazione del testo.
 
 *bLarger*<br/>
@@ -257,15 +257,15 @@ Se è TRUE, *LPRC* viene usato per specificare un rettangolo di visualizzazione 
 
 Diverso da zero se il rettangolo viene regolato correttamente; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro calcola il rettangolo di visualizzazione del testo di un controllo ToolTip dal relativo rettangolo della finestra o il rettangolo della finestra descrizione comando necessario per visualizzare un rettangolo di visualizzazione del testo specificato.
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="create"></a>CToolTipCtrl:: create
 
-Crea un controllo ToolTip e lo collega a un `CToolTipCtrl` oggetto.
+Crea un controllo descrizione comandi e lo collega a un oggetto `CToolTipCtrl`.
 
 ```
 virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
@@ -274,29 +274,29 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ### <a name="parameters"></a>Parametri
 
 *pParentWnd*<br/>
-Specifica la finestra padre del controllo ToolTip, in genere `CDialog`. Non deve essere NULL.
+Specifica la finestra padre del controllo ToolTip, in genere un `CDialog`. Non deve essere NULL.
 
 *dwStyle*<br/>
 Specifica lo stile del controllo ToolTip. Per ulteriori informazioni, vedere la sezione **osservazioni** .
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se `CToolTipCtrl` l'oggetto viene creato correttamente; in caso contrario, 0.
+Diverso da zero se l'oggetto `CToolTipCtrl` è stato creato correttamente; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si costruisce `CToolTipCtrl` un in due passaggi. Chiamare innanzitutto il costruttore per costruire l' `CToolTipCtrl` oggetto, quindi chiamare `Create` per creare il controllo descrizione comando `CToolTipCtrl` e collegarlo all'oggetto.
+Si costruisce un `CToolTipCtrl` in due passaggi. Chiamare innanzitutto il costruttore per costruire l'oggetto `CToolTipCtrl`, quindi chiamare `Create` per creare il controllo descrizione comando e collegarlo all'oggetto `CToolTipCtrl`.
 
 Il parametro *dwStyle* può essere costituito da qualsiasi combinazione di [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles). Inoltre, un controllo descrizione comando ha due stili specifici della classe: TTS_ALWAYSTIP e TTS_NOPREFIX.
 
 |Style|Significato|
 |-----------|-------------|
 |TTS_ALWAYSTIP|Specifica che la descrizione comando verrà visualizzata quando il cursore si trova in uno strumento, indipendentemente dal fatto che la finestra proprietaria del controllo ToolTip sia attiva o inattiva. Senza questo stile, il controllo descrizione comando viene visualizzato quando la finestra proprietaria dello strumento è attiva, ma non quando è inattiva.|
-|TTS_NOPREFIX|Questo stile impedisce al sistema di estrarre il carattere e commerciale (&) da una stringa. Se un controllo descrizione comando non ha lo stile TTS_NOPREFIX, il sistema rimuove automaticamente i caratteri e commerciale, consentendo a un'applicazione di usare la stessa stringa sia come voce di menu che come testo in un controllo di descrizione comandi.|
+|TTS_NOPREFIX|Questo stile impedisce al sistema di estrarre il carattere e commerciale (&) da una stringa. Se un controllo descrizione comando non ha lo stile TTS_NOPREFIX, il sistema rimuove automaticamente i caratteri e, consentendo a un'applicazione di usare la stessa stringa sia come voce di menu che come testo in un controllo descrizione comando.|
 
 Un controllo descrizione comando ha gli stili della finestra WS_POPUP e WS_EX_TOOLWINDOW, indipendentemente dal fatto che vengano specificati quando si crea il controllo.
 
-Per creare un controllo descrizione comando con gli stili Windows estesi, chiamare [CToolTipCtrl:: CreateEx](#createex) anziché `Create`.
+Per creare un controllo descrizione comando con gli stili di Windows estesi, chiamare [CToolTipCtrl:: CreateEx](#createex) anziché `Create`.
 
 ### <a name="example"></a>Esempio
 
@@ -304,7 +304,7 @@ Per creare un controllo descrizione comando con gli stili Windows estesi, chiama
 
 ##  <a name="createex"></a>CToolTipCtrl:: CreateEx
 
-Crea un controllo (una finestra figlio) e lo associa `CToolTipCtrl` all'oggetto.
+Crea un controllo (una finestra figlio) e lo associa all'oggetto `CToolTipCtrl`.
 
 ```
 virtual BOOL CreateEx(
@@ -328,9 +328,9 @@ Specifica lo stile esteso del controllo da creare. Per un elenco degli stili Win
 
 Diverso da zero se ha esito positivo, altrimenti 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare `CreateEx`anziché per applicare gli stili estesi di Windows, specificato dalla prefazione WS_EX_ di Windows Extended Style. `Create`
+Utilizzare `CreateEx` anziché `Create` per applicare gli stili di Windows estesi, specificati dall' **WS_EX_** di prefazione dello stile esteso di Windows.
 
 ##  <a name="ctooltipctrl"></a>CToolTipCtrl:: CToolTipCtrl
 
@@ -340,7 +340,7 @@ Costruisce un oggetto `CToolTipCtrl`.
 CToolTipCtrl();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È necessario chiamare `Create` dopo la costruzione dell'oggetto.
 
@@ -383,9 +383,9 @@ Puntatore alla struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-ttto
 
 Dimensione della descrizione comando.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="getcurrenttool"></a>CToolTipCtrl:: GetCurrentTool
 
@@ -405,9 +405,9 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 TRUE se le informazioni vengono recuperate correttamente; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool) , descritto nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -415,7 +415,7 @@ Nell'esempio di codice seguente vengono recuperate informazioni sulla finestra d
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]
 
-##  <a name="getdelaytime"></a>  CToolTipCtrl::GetDelayTime
+##  <a name="getdelaytime"></a>CToolTipCtrl:: GetDelayTime
 
 Recupera le durate iniziali, di popup e di rivisualizzazione attualmente impostate per un controllo di descrizione comandi.
 
@@ -430,7 +430,7 @@ Flag che specifica quale valore Duration verrà recuperato. Questo parametro pu�
 
 - TTDT_AUTOPOP recuperare l'intervallo di tempo durante il quale la finestra di descrizione comando rimane visibile se il puntatore è fermo all'interno del rettangolo di delimitazione di uno strumento.
 
-- TTDT_INITIAL recuperare il periodo di tempo durante il quale il puntatore deve rimanere fermo all'interno del rettangolo di delimitazione di uno strumento prima che venga visualizzata la finestra descrizione comando.
+- TTDT_INITIAL recuperare il periodo di tempo in cui il puntatore deve rimanere fermo nel rettangolo di delimitazione di uno strumento prima che venga visualizzata la finestra descrizione comando.
 
 - TTDT_RESHOW recuperare il tempo necessario per la visualizzazione delle finestre di descrizione comando successive quando il puntatore passa da uno strumento all'altro.
 
@@ -438,9 +438,9 @@ Flag che specifica quale valore Duration verrà recuperato. Questo parametro pu�
 
 Tempo di ritardo specificato, in millisecondi
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="getmargin"></a>CToolTipCtrl:: GetMargin
 
@@ -452,19 +452,19 @@ void GetMargin(LPRECT lprc) const;
 
 ### <a name="parameters"></a>Parametri
 
-*lprc*<br/>
-Indirizzo di una `RECT` struttura che riceverà le informazioni sul margine. I membri della struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) non definiscono un rettangolo di delimitazione. Ai fini di questo messaggio, i membri della struttura vengono interpretati nel modo seguente:
+*LPRC*<br/>
+Indirizzo di una struttura `RECT` che riceverà le informazioni sui margini. I membri della struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) non definiscono un rettangolo di delimitazione. Ai fini di questo messaggio, i membri della struttura vengono interpretati nel modo seguente:
 
-|Member|Rappresentazione|
+|Membro|Rappresentazione|
 |------------|--------------------|
 |`top`|Distanza tra il bordo superiore e il testo della descrizione comando, in pixel.|
 |`left`|Distanza tra il bordo sinistro e il lato sinistro del testo del suggerimento, in pixel.|
 |`bottom`|Distanza tra il bordo inferiore e il testo del suggerimento, in pixel.|
 |`right`|Distanza tra il bordo destro e l'estremità destra del testo del suggerimento, in pixel.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="getmaxtipwidth"></a>CToolTipCtrl:: GetMaxTipWidth
 
@@ -478,11 +478,11 @@ int GetMaxTipWidth() const;
 
 Larghezza massima per una finestra di descrizione comando.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth)del messaggio Win32, come descritto nel Windows SDK.
 
-##  <a name="gettext"></a>  CToolTipCtrl::GetText
+##  <a name="gettext"></a>CToolTipCtrl:: GetText
 
 Recupera il testo mantenuto da un controllo descrizione comando per uno strumento.
 
@@ -496,7 +496,7 @@ void GetText(
 ### <a name="parameters"></a>Parametri
 
 *str*<br/>
-Riferimento a un `CString` oggetto che riceve il testo dello strumento.
+Riferimento a un oggetto `CString` che riceve il testo dello strumento.
 
 *pWnd*<br/>
 Puntatore alla finestra che contiene lo strumento.
@@ -504,11 +504,11 @@ Puntatore alla finestra che contiene lo strumento.
 *nIDTool*<br/>
 ID dello strumento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I parametri *pWnd* e *nIDTool* identificano lo strumento. Se lo strumento è stato precedentemente registrato con il controllo ToolTip tramite una precedente chiamata a, `CToolTipCtrl::AddTool`all'oggetto a cui fa riferimento il parametro *Str* viene assegnato il testo dello strumento.
+I parametri *pWnd* e *nIDTool* identificano lo strumento. Se lo strumento è stato precedentemente registrato con il controllo descrizione comando tramite una chiamata precedente a `CToolTipCtrl::AddTool`, all'oggetto a cui fa riferimento il parametro *Str* viene assegnato il testo dello strumento.
 
-##  <a name="gettipbkcolor"></a>  CToolTipCtrl::GetTipBkColor
+##  <a name="gettipbkcolor"></a>CToolTipCtrl:: GetTipBkColor
 
 Recupera il colore di sfondo in una finestra descrizione comando.
 
@@ -520,11 +520,11 @@ COLORREF GetTipBkColor() const;
 
 Valore [COLORREF](/windows/win32/gdi/colorref) che rappresenta il colore di sfondo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor)del messaggio Win32, come descritto nel Windows SDK.
 
-##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor
+##  <a name="gettiptextcolor"></a>CToolTipCtrl:: GetTipTextColor
 
 Recupera il colore del testo in una finestra descrizione comando.
 
@@ -536,9 +536,9 @@ COLORREF GetTipTextColor() const;
 
 Valore [COLORREF](/windows/win32/gdi/colorref) che rappresenta il colore del testo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="gettitle"></a>CToolTipCtrl:: getTitle
 
@@ -550,13 +550,13 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*pttgt*|out Puntatore a una struttura [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) che contiene informazioni sul controllo ToolTip. Quando questo metodo viene restituito, il membro *pszTitle* della struttura [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) punta al testo del titolo.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle) , descritto nel Windows SDK.
 
 ##  <a name="gettoolcount"></a>CToolTipCtrl:: GetToolCount
 
@@ -584,7 +584,7 @@ BOOL GetToolInfo(
 ### <a name="parameters"></a>Parametri
 
 *ToolInfo*<br/>
-Riferimento a un `TOOLINFO` oggetto che riceve il testo dello strumento.
+Riferimento a un oggetto `TOOLINFO` che riceve il testo dello strumento.
 
 *pWnd*<br/>
 Puntatore alla finestra che contiene lo strumento.
@@ -596,9 +596,9 @@ ID dello strumento.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I `hwnd` membri `uId` e della struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) a cui fa riferimento *CToolInfo* identificano lo strumento. Se lo strumento è stato registrato con il controllo descrizione comando tramite una precedente chiamata a `AddTool`, la `TOOLINFO` struttura viene riempita con informazioni sullo strumento.
+I membri `hwnd` e `uId` della struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) a cui fa riferimento *CToolInfo* identificano lo strumento. Se lo strumento è stato registrato con il controllo descrizione comando tramite una chiamata precedente a `AddTool`, la struttura `TOOLINFO` viene compilata con informazioni sullo strumento.
 
 ##  <a name="hittest"></a>CToolTipCtrl:: HitTest
 
@@ -617,7 +617,7 @@ BOOL HitTest(
 Puntatore alla finestra che contiene lo strumento.
 
 *pt*<br/>
-Puntatore a un `CPoint` oggetto contenente le coordinate del punto da testare.
+Puntatore a un oggetto `CPoint` contenente le coordinate del punto da testare.
 
 *lpToolInfo*<br/>
 Puntatore alla struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) che contiene informazioni sullo strumento.
@@ -626,11 +626,11 @@ Puntatore alla struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-ttto
 
 Diverso da zero se il punto specificato dalle informazioni di hit test si trova all'interno del rettangolo di delimitazione dello strumento; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se questa funzione restituisce un valore diverso da zero, la struttura a cui punta *lpToolInfo* viene riempita con informazioni sullo strumento all'interno del quale è presente il rettangolo in cui si trova il punto.
 
-La `TTHITTESTINFO` struttura viene definita nel modo seguente:
+La struttura `TTHITTESTINFO` viene definita nel modo seguente:
 
 ```cpp
 typedef struct _TT_HITTESTINFO { // tthti
@@ -650,7 +650,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 - `ti`
 
-   Informazioni sullo strumento. Per ulteriori informazioni sulla `TOOLINFO` struttura, vedere [CToolTipCtrl:: GetToolInfo](#gettoolinfo).
+   Informazioni sullo strumento. Per ulteriori informazioni sulla struttura `TOOLINFO`, vedere [CToolTipCtrl:: GetToolInfo](#gettoolinfo).
 
 ##  <a name="pop"></a>CToolTipCtrl::P op
 
@@ -660,9 +660,9 @@ Rimuove una finestra del suggerimento dello strumento visualizzata dalla visuali
 void Pop();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_POP](/windows/win32/Controls/ttm-pop), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_POP](/windows/win32/Controls/ttm-pop)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="popup"></a>CToolTipCtrl::P opup
 
@@ -672,9 +672,9 @@ Determina la visualizzazione del controllo ToolTip corrente in corrispondenza de
 void Popup();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [TTM_POPUP](/windows/win32/Controls/ttm-popup) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [TTM_POPUP](/windows/win32/Controls/ttm-popup) , descritto nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -695,7 +695,7 @@ void RelayEvent(LPMSG lpMsg);
 *lpMsg*<br/>
 Puntatore a una struttura di [messaggi](/windows/win32/api/winuser/ns-winuser-msg) contenente il messaggio da inoltrare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un controllo descrizione comando elabora solo i messaggi seguenti, che vengono inviati da `RelayEvent`:
 
@@ -709,7 +709,7 @@ Un controllo descrizione comando elabora solo i messaggi seguenti, che vengono i
 
   Vedere l'esempio per [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="setdelaytime"></a>  CToolTipCtrl::SetDelayTime
+##  <a name="setdelaytime"></a>CToolTipCtrl:: SetDelayTime
 
 Imposta il tempo di ritardo per il controllo di una descrizione comandi.
 
@@ -732,7 +732,7 @@ Flag che specifica quale valore Duration verrà recuperato. Per una descrizione 
 *iTime*<br/>
 Tempo di ritardo specificato, in millisecondi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tempo di ritardo indica il periodo di tempo durante il quale il cursore deve rimanere in uno strumento prima che venga visualizzata la finestra descrizione comando. Il tempo di ritardo predefinito è pari a 500 millisecondi.
 
@@ -746,12 +746,12 @@ void SetMargin(LPRECT lprc);
 
 ### <a name="parameters"></a>Parametri
 
-*lprc*<br/>
-Indirizzo di una `RECT` struttura che contiene le informazioni sui margini da impostare. I membri della `RECT` struttura non definiscono un rettangolo di delimitazione. Per una descrizione delle informazioni sul margine, vedere [CToolTipCtrl:: GetMargin](#getmargin) .
+*LPRC*<br/>
+Indirizzo di una struttura `RECT` contenente le informazioni sui margini da impostare. I membri della struttura `RECT` non definiscono un rettangolo di delimitazione. Per una descrizione delle informazioni sul margine, vedere [CToolTipCtrl:: GetMargin](#getmargin) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="setmaxtipwidth"></a>CToolTipCtrl:: SetMaxTipWidth
 
@@ -763,18 +763,18 @@ int SetMaxTipWidth(int iWidth);
 
 ### <a name="parameters"></a>Parametri
 
-*iWidth*<br/>
+*Larghezza*<br/>
 Larghezza massima della finestra descrizione comando da impostare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Larghezza massima del suggerimento precedente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth)del messaggio Win32, come descritto nel Windows SDK.
 
-##  <a name="settipbkcolor"></a>  CToolTipCtrl::SetTipBkColor
+##  <a name="settipbkcolor"></a>CToolTipCtrl:: SetTipBkColor
 
 Imposta il colore di sfondo in una finestra descrizione comando.
 
@@ -787,11 +787,11 @@ void SetTipBkColor(COLORREF clr);
 *clr*<br/>
 Nuovo colore di sfondo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor)del messaggio Win32, come descritto nel Windows SDK.
 
-##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor
+##  <a name="settiptextcolor"></a>CToolTipCtrl:: SetTipTextColor
 
 Imposta il colore del testo in una finestra descrizione comando.
 
@@ -804,9 +804,9 @@ void SetTipTextColor(COLORREF clr);
 *clr*<br/>
 Nuovo colore del testo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="settitle"></a>CToolTipCtrl:: toTitle
 
@@ -821,7 +821,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>Parametri
 
 *uIcon*<br/>
-Vedere l' *icona* in [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) nel Windows SDK.
+Vedere l'icona [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) nel Windows SDK.
 
 *lpstrTitle*<br/>
 Puntatore alla stringa del titolo.
@@ -830,11 +830,11 @@ Puntatore alla stringa del titolo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)del messaggio Win32, come descritto nel Windows SDK.
 
-##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo
+##  <a name="settoolinfo"></a>CToolTipCtrl:: SetToolInfo
 
 Imposta le informazioni che una descrizione comando gestisce per uno strumento.
 
@@ -886,9 +886,9 @@ Puntatore a una stringa Unicode che contiene lo stile di visualizzazione da impo
 
 Il valore restituito non viene utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro emula la funzionalità del messaggio [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme) , come descritto nel Windows SDK.
+Questa funzione membro emula la funzionalità del messaggio di [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme) , come descritto nel Windows SDK.
 
 ##  <a name="update"></a>CToolTipCtrl:: Update
 

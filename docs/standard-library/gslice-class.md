@@ -13,17 +13,17 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448892"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866251"
 ---
 # <a name="gslice-class"></a>Classe gslice
 
 Classe di utilità per valarray usata per definire subset multidimensionali di valarray. Se valarray viene considerato come matrice multidimensionale con tutti gli elementi in una matrice, la sezione estrae un vettore dalla matrice multidimensionale.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La classe archivia i parametri che caratterizzano un oggetto di tipo [gslice_array](../standard-library/gslice-array-class.md). Il subset di un oggetto valarray viene costruito indirettamente quando un oggetto di classe gslice appare come argomento per un oggetto di classe [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . I valori archiviati che specificano il subset selezionato da valarray padre includono:
 
@@ -41,7 +41,7 @@ Le operazioni sui valarray sono consentite solo se i subset di origine e di dest
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|DESCRIZIONE|
+|Costruttore|Descrizione|
 |-|-|
 |[gslice](#gslice)|Definisce un subset di un `valarray` formato da più sezioni del `valarray`, che iniziano tutte dall'elemento specificato.|
 
@@ -55,7 +55,7 @@ Le operazioni sui valarray sono consentite solo se i subset di origine e di dest
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<valarray>
+**Intestazione:** \<valarray >
 
 **Spazio dei nomi:** std
 
@@ -85,9 +85,9 @@ Matrice che specifica lo stride in ogni sezione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il costruttore predefinito archivia zero per l'indice iniziale e vettori di lunghezza zero per i vettori di lunghezza e stride. Il secondo costruttore archivia *_StartIndex* per l'indice iniziale, *_LenArray* per la matrice di lunghezza e *_IncArray* per la matrice stride.
+Il costruttore predefinito archivia zero per l'indice iniziale e vettori di lunghezza zero per i vettori di lunghezza e stride. Il secondo costruttore archivia *_StartIndex* per l'indice iniziale, *_LenArray* per la matrice di lunghezza e *_IncArray* per la matrice di stride.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **gslice** definisce un subset di un oggetto valarray costituito da più sezioni di tale oggetto, ognuna delle quali inizia in corrispondenza dello stesso elemento specificato. La possibilità di usare matrici per definire più sezioni costituisce l'unica differenza tra `gslice` e [slice::slice](../standard-library/slice-class.md#slice). La prima sezione ha un primo elemento con un indice di *_StartIndex*, un numero di elementi specificato dal primo elemento di *_LenArray*e uno stride fornito dal primo elemento di *_IncArray*. Nel successivo set di sezioni ortogonali i primi elementi vengono forniti dalla prima sezione. Il secondo elemento di *_LenArray* specifica il numero di elementi. Lo stride viene fornito dal secondo elemento di *_IncArray*. Una terza dimensione delle sezioni usa gli elementi della matrice bidimensionale come elementi iniziali e procede in modo analogo.
 
@@ -150,7 +150,7 @@ valarray<size_t> size() const;
 
 Oggetto valarray che specifica il numero di elementi in ogni sezione di una sezione generale di un oggetto valarray.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce le lunghezze archiviate delle sezioni.
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)

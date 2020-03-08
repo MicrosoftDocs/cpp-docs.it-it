@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689215"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856636"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
@@ -50,12 +50,12 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id.**
+Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id**.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -63,9 +63,9 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 |-|-|
 |[numpunct](#numpunct)|Costruttore per oggetti di tipo `numpunct`.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[string_type](#string_type)|Tipo che descrive una stringa contenente caratteri di tipo `CharType`.|
@@ -87,7 +87,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:** \<impostazioni locali >
 
 **Spazio dei nomi:** std
 
@@ -99,7 +99,7 @@ Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello **CharType.**
 
@@ -115,7 +115,7 @@ CharType decimal_point() const;
 
 Elemento specifico delle impostazioni locali da usare come virgola decimale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_decimal_point](#do_decimal_point).
 
@@ -174,7 +174,7 @@ virtual string_type do_falsename() const;
 
 Stringa contenente una sequenza da usare come rappresentazione testo del valore **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce la stringa "false" per rappresentare il valore **false** in tutte le impostazioni locali.
 
@@ -194,7 +194,7 @@ virtual string do_grouping() const;
 
 Regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra della virgola decimale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra di un separatore decimale. La codifica è uguale a quella per **lconv::grouping**.
 
@@ -214,7 +214,7 @@ virtual CharType do_thousands_sep() const;
 
 Restituisce un elemento specifico delle impostazioni locali da utilizzare come separatore delle migliaia.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro virtuale protetta restituisce un elemento specifico delle impostazioni locali di tipo `CharType` da usare come separatore di gruppo a sinistra di un separatore decimale.
 
@@ -230,7 +230,7 @@ Funzione membro virtuale protetta chiamata per restituire una stringa da usare c
 virtual string_type do_truename() const;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Stringa da usare come rappresentazione testo del valore **true**.
 
@@ -252,7 +252,7 @@ string_type falsename() const;
 
 Stringa contenente una sequenza di `CharType`s da utilizzare come rappresentazione testo del valore **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce la stringa "false" per rappresentare il valore **false** in tutte le impostazioni locali.
 
@@ -301,7 +301,7 @@ string grouping() const;
 
 Regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra della virgola decimale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_grouping](#do_grouping).
 
@@ -345,12 +345,12 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I valori possibili per il parametro *_Refs* e il relativo significato sono:
+I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -370,7 +370,7 @@ Tipo che descrive una stringa contenente caratteri di tipo **CharType**.
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie delle sequenze di punteggiatura.
 
@@ -386,7 +386,7 @@ CharType thousands_sep() const;
 
 Elemento specifico delle impostazioni locali da usare come separatore delle migliaia.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_thousands_sep](#do_thousands_sep).
 
@@ -429,7 +429,7 @@ string_type falsename() const;
 
 Stringa da usare come rappresentazione testo del valore **true**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_truename](#do_truename).
 
@@ -469,5 +469,5 @@ French_France.1252 falsename false
 ## <a name="see-also"></a>Vedere anche
 
 [\<locale>](../standard-library/locale.md)\
-[Classe facet](../standard-library/locale-class.md#facet_class)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[facet Class](../standard-library/locale-class.md#facet_class)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)

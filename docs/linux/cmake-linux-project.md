@@ -4,11 +4,11 @@ description: Come creare, configurare, modificare e compilare un progetto CMake 
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416082"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865655"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Creare e configurare un progetto CMake per Linux
 
