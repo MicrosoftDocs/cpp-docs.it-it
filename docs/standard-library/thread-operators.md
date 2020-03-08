@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458434"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876171"
 ---
 # <a name="ltthreadgt-operators"></a>Operatori &lt;thread&gt;
 
@@ -45,17 +45,17 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+\ a *sinistra*
 L'oggetto `thread::id` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
 `!(Left < Right)`
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non genera eccezioni.
 
@@ -71,17 +71,17 @@ bool operator> (
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+\ a *sinistra*
 L'oggetto `thread::id` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
 `Right < Left`
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non genera eccezioni.
 
@@ -97,17 +97,17 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+\ a *sinistra*
 L'oggetto `thread::id` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
 `!(Right < Left)`
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non genera eccezioni.
 
@@ -123,17 +123,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+\ a *sinistra*
 L'oggetto `thread::id` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se *Left* precede *direttamente* nell'ordine totale; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'operatore definisce un ordinamento totale per tutti gli oggetti `thread::id`. Questi oggetti possono essere usati come chiavi in contenitori associativi.
 
@@ -151,17 +151,17 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+\ a *sinistra*
 L'oggetto `thread::id` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
 `!(Left == Right)`
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non genera eccezioni.
 
@@ -177,17 +177,17 @@ bool operator== (
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+\ a *sinistra*
 L'oggetto `thread::id` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se i due oggetti rappresentano lo stesso thread di esecuzione oppure se nessun oggetto rappresenta un thread di esecuzione. in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non genera eccezioni.
 
@@ -203,17 +203,17 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*OSTR*\
+\ *OSTR*
 Oggetto [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*ID*\
-Oggetto `thread::id`.
+*Id*\
+Oggetto `thread::id` .
 
 ### <a name="return-value"></a>Valore restituito
 
 *OSTR*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione inserisce l' *ID* in *OSTR*.
 
