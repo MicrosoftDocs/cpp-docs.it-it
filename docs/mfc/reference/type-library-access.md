@@ -5,28 +5,28 @@ helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611540"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867033"
 ---
 # <a name="type-library-access"></a>Accesso alla libreria dei tipi
 
-Librerie dei tipi espongono le interfacce di un controllo OLE ad altre applicazioni compatibili con OLE. Ogni controllo OLE deve avere una libreria dei tipi se una o più interfacce devono essere esposti.
+Le librerie dei tipi espongono le interfacce di un controllo OLE ad altre applicazioni in grado di riconoscere OLE. Ogni controllo OLE deve disporre di una libreria di tipi se devono essere esposte una o più interfacce.
 
-Le macro seguenti consentono un controllo OLE fornire l'accesso per la propria libreria dei tipi:
+Le macro seguenti consentono a un controllo OLE di fornire accesso alla propria libreria dei tipi:
 
 ### <a name="type-library-access"></a>Accesso alla libreria dei tipi
 
 |||
 |-|-|
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Dichiara un `GetTypeLib` funzione membro di un controllo OLE (deve essere usato nella dichiarazione di classe).|
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa un `GetTypeLib` funzione membro di un controllo OLE (che sarà utilizzata nell'implementazione della classe).|
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Dichiara una funzione membro `GetTypeLib` di un controllo OLE (deve essere utilizzata nella dichiarazione di classe).|
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa una funzione membro `GetTypeLib` di un controllo OLE (deve essere utilizzata nell'implementazione della classe).|
 
-##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB
+##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
 
-Dichiara il `GetTypeLib` funzione membro di classe del controllo.
+Dichiara la funzione membro `GetTypeLib` della classe del controllo.
 
 ```
 DECLARE_OLETYPELIB(class_name)
@@ -35,19 +35,19 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="parameters"></a>Parametri
 
 *class_name*<br/>
-Il nome della classe del controllo correlata alla libreria dei tipi.
+Nome della classe del controllo correlato alla libreria dei tipi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare questa macro in file di intestazione classe del controllo.
+Usare questa macro nel file di intestazione della classe del controllo.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxdisp.h
 
-##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB
+##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
 
-Implementa il controllo `GetTypeLib` funzione membro.
+Implementa la funzione membro `GetTypeLib` del controllo.
 
 ```
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
@@ -56,20 +56,20 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ### <a name="parameters"></a>Parametri
 
 *class_name*<br/>
-Il nome della classe del controllo correlata alla libreria dei tipi.
+Nome della classe del controllo correlato alla libreria dei tipi.
 
 *tlid*<br/>
-Il numero di ID della libreria dei tipi.
+Numero ID della libreria dei tipi.
 
 *wVerMajor*<br/>
-Il numero di versione principale della libreria di tipo.
+Numero di versione principale della libreria dei tipi.
 
 *wVerMinor*<br/>
-Il numero di versione secondaria della libreria di tipo.
+Numero della versione secondaria della libreria dei tipi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa macro deve essere presente nel file di implementazione per qualsiasi classe di controllo che usa declare_oletypelib (macro).
+Questa macro deve essere visualizzata nel file di implementazione per qualsiasi classe del controllo che usa la macro DECLARE_OLETYPELIB.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -77,4 +77,4 @@ Questa macro deve essere presente nel file di implementazione per qualsiasi clas
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+[Macro e globali](../../mfc/reference/mfc-macros-and-globals.md)

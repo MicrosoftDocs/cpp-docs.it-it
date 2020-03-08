@@ -5,11 +5,11 @@ f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453525"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874817"
 ---
 # <a name="ltostreamgt-operators"></a>Operatori &lt;ostream&gt;
 
@@ -87,22 +87,22 @@ Carattere.
 Tipo dell'elemento.
 
 *_Ostr*\
-Oggetto `basic_ostream`.
+Oggetto `basic_ostream` .
 
-*Str*\
+\ *Str*
 Stringa di caratteri.
 
 *_Tr*\
 Tratti di carattere.
 
-*Val*\
+\ *Val*
 Tipo
 
 ### <a name="return-value"></a>Valore restituito
 
 Flusso.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La classe `basic_ostream` definisce inoltre diversi operatori di inserimento. Per altre informazioni, vedere [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-determina la lunghezza N = `traits_type::` [length](../standard-library/char-traits-struct.md#length)(`str`) della sequenza che inizia con *Str*e inserisce la sequenza. Se N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la funzione inserisce anche una ripetizione di caratteri di riempimento `_Ostr.width` - N. La ripetizione precede la sequenza se (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). In caso contrario, la ripetizione segue la sequenza. La funzione restituisce *_Ostr*.
+determina la lunghezza N = `traits_type::`[lunghezza](../standard-library/char-traits-struct.md#length)(`str`) della sequenza che inizia con *Str*e inserisce la sequenza. Se N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la funzione inserisce anche una ripetizione di caratteri di riempimento `_Ostr.width` - N. La ripetizione precede la sequenza se (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). In caso contrario, la ripetizione segue la sequenza. La funzione restituisce *_Ostr*.
 
 La funzione modello
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-ad eccezione del fatto che ogni elemento *_Ch* della sequenza a partire da *Str* viene convertito in un `Elem` oggetto di `_Ostr.`tipo chiamando`_Ostr.` [put](../standard-library/basic-ostream-class.md#put)(`_Ch`[Widen](../standard-library/basic-ios-class.md#widen)()).
+ad eccezione del fatto che ogni elemento *_Ch* della sequenza a partire da *Str* viene convertito in un oggetto di tipo `Elem` chiamando `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[Wide](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 La funzione modello
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-ad eccezione del fatto che *_Ch* viene convertito in un `Elem` oggetto di `_Ostr.put`tipo `_Ostr.widen`chiamando `_Ch`(()).
+ad eccezione del fatto che *_Ch* viene convertito in un oggetto di tipo `Elem` chiamando `_Ostr.put`(`_Ostr.widen`(`_Ch`)).
 
 La funzione modello
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-restituisce `_Ostr` < < (`const char *`) `str`.
+Restituisce `_Ostr` `str`< < (`const char *`).
 
 La funzione modello
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-restituisce `_Ostr` < < (`char`) `_Ch`.
+Restituisce `_Ostr` `_Ch`< < (`char`).
 
 La funzione modello:
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-restituisce `_Ostr` < < (`const char *`) `str`.
+Restituisce `_Ostr` `str`< < (`const char *`).
 
 La funzione modello:
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-restituisce `_Ostr` < < (`char`) `_Ch`.
+Restituisce `_Ostr` `_Ch`< < (`char`).
 
 La funzione modello:
 
@@ -261,7 +261,7 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```
 
-restituisce `_Ostr` `<<` `val` e converte un [riferimento RValue](../cpp/rvalue-reference-declarator-amp-amp.md) in `_Ostr` in un oggetto lvalue nel processo.
+Restituisce `_Ostr` `<<` `val` (e converte un [riferimento rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) in `_Ostr` in un lvalue nel processo).
 
 ### <a name="example"></a>Esempio
 

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Gestisci risorseC++()'
+title: 'Procedura: gestire le risorse (C++)'
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740656"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890928"
 ---
-# <a name="how-to-manage-resources-c"></a>Procedura: Gestisci risorseC++()
+# <a name="how-to-manage-resources-c"></a>Procedura: gestire le risorse (C++)
 
 ## <a name="copy-and-edit-resources"></a>Copiare e modificare le risorse
 
@@ -46,7 +46,7 @@ ms.locfileid: "70740656"
 È possibile copiare facilmente le risorse da un file eseguibile o da una risorsa esistente nel file di risorse corrente. Per copiare le risorse, si aprono contemporaneamente entrambi i file contenenti risorse e si trascinano gli elementi da un file a un altro oppure si copiano e si incollano tra i due file. Questo metodo funziona per i file di script di risorse (con estensione RC) e i file di modello di risorse (con estensione RCT) e come file eseguibili (exe).
 
 > [!NOTE]
-> Visual C++ include i file di risorse di esempio che è possibile usare nella propria applicazione. Per ulteriori informazioni, vedere [ClipArt: Risorse](https://github.com/Microsoft/VCSamples)comuni.
+> Visual C++ include i file di risorse di esempio che è possibile usare nella propria applicazione. Per altre informazioni, vedere [ClipArt: risorse comuni](https://github.com/Microsoft/VCSamples).
 
 Non è possibile trascinare, copiare, tagliare o incollare tra i file di risorse nel progetto (**visualizzazione risorse**) e i file RC autonomi aperti nelle finestre dei documenti. Questa operazione può essere eseguita nelle versioni precedenti del prodotto. Usare solo il metodo di trascinamento della selezione tra i file RC aperti all'esterno del progetto.
 
@@ -129,5 +129,5 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
-[Procedura: Crea risorse](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Procedura: creare risorse](../windows/how-to-create-a-resource-script-file.md)<br/>
 [Procedura: Includere risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)<br/>

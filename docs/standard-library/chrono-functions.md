@@ -6,15 +6,15 @@ f1_keywords:
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244910"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865199"
 ---
 # <a name="ltchronogt-functions"></a>Funzioni &lt;chrono&gt;
 
-## <a name="duration_cast"></a> duration_cast
+## <a name="duration_cast"></a>duration_cast
 
 Esegue il cast di un oggetto `duration` in un tipo specificato.
 
@@ -34,11 +34,11 @@ constexpr ToDuration round(const duration<Rep, Period>& d);
 
 Oggetto `duration` di tipo `To` che rappresenta l'intervallo di tempo `Dur`, che viene troncato se deve rientrare nel tipo di destinazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se `To` rappresenta una creazione di istanza di `duration`, questa funzione non fa parte della risoluzione dell'overload.
 
-## <a name="time_point_cast"></a> time_point_cast
+## <a name="time_point_cast"></a>time_point_cast
 
 Esegue il cast di un oggetto [time_point](../standard-library/time-point-class.md) in un tipo specificato.
 
@@ -61,6 +61,6 @@ round(const time_point<Clock, Duration>& tp);
 
 Un oggetto `time_point` con durata di tipo `To`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 A meno che `To` sia una creazione di istanza di [duration](../standard-library/duration-class.md), questa funzione non fa parte della risoluzione dell'overload.

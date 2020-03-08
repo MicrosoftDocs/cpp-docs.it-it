@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143071"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867133"
 ---
 # <a name="currentscheduler-class"></a>Classe CurrentScheduler
 
@@ -38,7 +38,7 @@ class CurrentScheduler;
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Creare](#create)|Crea una nuova utilità di pianificazione il cui comportamento è descritto dal parametro `_Policy` e lo collega al contesto chiamante. L'utilità di pianificazione appena creata diventerà l'utilità di pianificazione corrente per il contesto chiamante.|
 |[CreateScheduleGroup](#createschedulegroup)|Di overload. Crea un nuovo gruppo di pianificazione nell'utilità di pianificazione associato al contesto chiamante. La versione che accetta il parametro `_Placement` causa la distorsione delle attività all'interno del gruppo di pianificazione appena creato per l'esecuzione nella posizione specificata dal parametro.|

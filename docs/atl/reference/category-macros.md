@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497847"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864446"
 ---
 # <a name="category-macros"></a>Macro di categoria
 
@@ -29,7 +29,7 @@ Queste macro definiscono le mappe delle categorie.
 
 **Intestazione:** atlcom. h
 
-##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 Contrassegna l'inizio della mappa delle categorie.
 
@@ -42,7 +42,7 @@ BEGIN_CATEGORY_MAP(theClass)
 *theClass*<br/>
 in Nome della classe che contiene la mappa delle categorie.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La mappa delle categorie viene utilizzata per specificare quali categorie di componenti verrà implementata dalla classe COM e quali categorie sono necessarie dal relativo contenitore.
 
@@ -59,7 +59,7 @@ Per ulteriori informazioni sulle categorie di componenti, vedere [che cosa sono 
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+##  <a name="end_category_map"></a>END_CATEGORY_MAP
 
 Contrassegna la fine della mappa delle categorie.
 
@@ -71,7 +71,7 @@ END_CATEGORY_MAP()
 
 Vedere l'esempio per [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
 Aggiungere una macro IMPLEMENTED_CATEGORY alla [mappa delle categorie](#begin_category_map) del componente per specificare che deve essere registrata come implementazione della categoria identificata dal parametro *CATID* .
 
@@ -84,9 +84,9 @@ IMPLEMENTED_CATEGORY(catID)
 *catID*<br/>
 in Una costante o una variabile CATId che contiene l'identificatore univoco globale (GUID) per la categoria implementata. L'indirizzo di *CATID* verrà accettato e aggiunto alla mappa. Vedere la tabella seguente per una selezione delle categorie azionarie.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le categorie di componenti elencate nella mappa verranno registrate automaticamente quando il modulo viene registrato se alla classe è associata una macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Le categorie di componenti elencate nella mappa verranno registrate automaticamente quando il modulo viene registrato se alla classe è associato un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro.
 
 I client possono utilizzare le informazioni sulla categoria registrate per la classe per determinarne le funzionalità e i requisiti senza dover creare un'istanza di tale classe.
 
@@ -121,9 +121,9 @@ REQUIRED_CATEGORY( catID )
 *catID*<br/>
 in Una costante o una variabile CATId che contiene l'identificatore univoco globale (GUID) per la categoria richiesta. L'indirizzo di *CATID* verrà accettato e aggiunto alla mappa. Vedere la tabella seguente per una selezione delle categorie azionarie.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le categorie di componenti elencate nella mappa verranno registrate automaticamente quando il modulo viene registrato se alla classe è associata una macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Le categorie di componenti elencate nella mappa verranno registrate automaticamente quando il modulo viene registrato se alla classe è associato un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro.
 
 I client possono utilizzare le informazioni sulla categoria registrate per la classe per determinarne le funzionalità e i requisiti senza dover creare un'istanza di tale classe. Ad esempio, un controllo può richiedere che un contenitore supporti data binding. Il contenitore può determinare se dispone delle funzionalità necessarie per ospitare il controllo eseguendo una query su Gestione categorie per le categorie richieste da tale controllo. Se il contenitore non supporta una funzionalità obbligatoria, può rifiutare di ospitare l'oggetto COM.
 
@@ -131,7 +131,7 @@ Per ulteriori informazioni sulle categorie di componenti, incluso un elenco di e
 
 ### <a name="a-selection-of-stock-categories"></a>Selezione di categorie predefinite
 
-|DESCRIZIONE|Simbolo|GUID del registro di sistema|
+|Descrizione|Simbolo|GUID del registro di sistema|
 |-----------------|------------|-------------------|
 |Sicurezza per gli script|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Safe per l'inizializzazione|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|

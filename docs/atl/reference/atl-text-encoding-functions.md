@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375887"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865031"
 ---
 # <a name="atl-text-encoding-functions"></a>Funzioni di codifica del testo ATL
 
@@ -66,7 +66,7 @@ Queste funzioni supportano la codifica e la decodifica del testo.
 
 **Intestazione:** atlenc. h
 
-## <a name="atlgethexvalue"></a> AtlGetHexValue
+## <a name="atlgethexvalue"></a>AtlGetHexValue
 
 Chiamare questa funzione per ottenere il valore numerico di una cifra esadecimale.
 
@@ -76,7 +76,7 @@ inline char AtlGetHexValue(char chIn) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*chIn*<br/>
+*Mento*<br/>
 Il carattere esadecimale ' 0'-' 9',' a-'F ' o ' a-'F '.
 
 ### <a name="return-value"></a>Valore restituito
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>Parametri
 
-*pReserved*<br/>
+*Mantenuto*<br/>
 Puntatore riservato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -187,11 +187,11 @@ Puntatore a una variabile che contiene la lunghezza in caratteri di *szDest*. Se
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Ogni byte di dati di origine è codificato come 2 caratteri esadecimali.
 
-## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
 
 Chiamare questa funzione per ottenere la dimensione in caratteri di un buffer contenente una stringa codificata da dati della lunghezza specificata.
 
@@ -218,14 +218,14 @@ inline short AtlHexValue(char chIn) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*chIn*<br/>
+*Mento*<br/>
 Il carattere esadecimale ' 0'-' 9',' a-'F ' o ' a-'F '.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore numerico del carattere di input interpretato come cifra esadecimale. Ad esempio, un input di ' 0' restituisce un valore pari a 0 e un input di ' A ' restituisce un valore pari a 10. Se il carattere di input non è una cifra esadecimale, questa funzione restituisce-1.
 
-## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
 
 Chiamare questa funzione per convertire una stringa Unicode in UTF-8.
 
@@ -255,7 +255,7 @@ Lunghezza, in byte, del buffer.
 
 Restituisce il numero di caratteri per la stringa convertita.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per determinare le dimensioni del buffer necessarie per la stringa convertita, chiamare questa funzione passando 0 per *szDest* e *nDest*.
 
@@ -293,11 +293,11 @@ Set di caratteri da utilizzare per la conversione.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo schema di codifica "B" è descritto nella specifica RFC[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)2047 ().
+Lo schema di codifica "B" è descritto nella specifica RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength
+## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength
 
 Chiamare questa funzione per ottenere la dimensione in caratteri di un buffer contenente una stringa codificata da dati della lunghezza specificata.
 
@@ -317,9 +317,9 @@ Lunghezza in caratteri del set di caratteri da utilizzare per la conversione.
 
 Il numero di caratteri necessari per un buffer che può conservare dati codificati di *nSrcLen* byte.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo schema di codifica "B" è descritto nella specifica RFC[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)2047 ().
+Lo schema di codifica "B" è descritto nella specifica RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="escapexml"></a>EscapeXML
 
@@ -349,20 +349,20 @@ Buffer allocato dal chiamante per ricevere la stringa convertita.
 Lunghezza in caratteri del buffer allocato dal chiamante.
 
 *dwFlags*<br/>
-Flag ATL_ESC che descrivono come eseguire la conversione.
+ATL_ESC flag che descrivono il modo in cui deve essere eseguita la conversione.
 
-- Comportamento predefinito di ATL_ESC_FLAG_NONE. Le virgolette e gli apostrofi non vengono convertiti.
-- Le virgolette ATL_ESC_FLAG_ATTR e gli apostrofi vengono `&quot;` convertiti rispettivamente in e `&apos;` .
+- ATL_ESC_FLAG_NONE comportamento predefinito. Le virgolette e gli apostrofi non vengono convertiti.
+- ATL_ESC_FLAG_ATTR virgolette e gli apostrofi vengono convertiti rispettivamente in `&quot;` e `&apos;`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Lunghezza in caratteri della stringa convertita.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le conversioni possibili eseguite da questa funzione sono illustrate nella tabella:
 
-|Source|Destination|
+|Source (Sorgente)|Destination|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -390,7 +390,7 @@ Lunghezza della stringa in caratteri.
 
 Restituisce il numero di caratteri estesi trovati all'interno della stringa come determinato da [IsExtendedChar](#isextendedchar).
 
-## <a name="isextendedchar"></a> IsExtendedChar
+## <a name="isextendedchar"></a>IsExtendedChar
 
 Chiamare questa funzione per verificare se un carattere specificato è un carattere esteso (minore di 32, maggiore di 126 e non una tabulazione, un avanzamento riga o un ritorno a capo)
 
@@ -407,7 +407,7 @@ Carattere da testare
 
 TRUE se il carattere è esteso; in caso contrario, FALSE.
 
-## <a name="qencode"></a> QEncode
+## <a name="qencode"></a>QEncode
 
 Chiamare questa funzione per convertire alcuni dati utilizzando la codifica "Q".
 
@@ -445,11 +445,11 @@ Un puntatore a una variabile che restituisce un valore contenente il numero di c
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo schema di codifica "Q" è descritto nella specifica RFC[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)2047 ().
+Lo schema di codifica "Q" è descritto nella specifica RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength
+## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength
 
 Chiamare questa funzione per ottenere la dimensione in caratteri di un buffer contenente una stringa codificata da dati della lunghezza specificata.
 
@@ -469,11 +469,11 @@ Lunghezza in caratteri del set di caratteri da utilizzare per la conversione.
 
 Il numero di caratteri necessari per un buffer che può conservare dati codificati di *nSrcLen* byte.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo schema di codifica "Q" è descritto nella specifica RFC[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)2047 ().
+Lo schema di codifica "Q" è descritto nella specifica RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="qpdecode"></a> QPDecode
+## <a name="qpdecode"></a>QPDecode
 
 Decodifica una stringa di dati codificata in formato stampabile tra virgolette, ad esempio da una precedente chiamata a [QPEncode](#qpencode).
 
@@ -501,17 +501,17 @@ out Buffer allocato dal chiamante per ricevere i dati decodificati.
 out Puntatore a una variabile che contiene la lunghezza, in byte, di *szDest*. Se la funzione ha esito positivo, la variabile riceve il numero di byte scritti nel buffer. Se la funzione ha esito negativo, la variabile riceve la lunghezza necessaria in byte del buffer.
 
 *dwFlags*<br/>
-in Flag ATLSMTP_QPENCODE che descrivono come eseguire la conversione.
+in ATLSMTP_QPENCODE flag che descrivono il modo in cui deve essere eseguita la conversione.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)2045 ().
+Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
 
 Chiamare questa funzione per ottenere la dimensione in byte di un buffer contenente dati decodificati da una stringa codificata stampabile tra virgolette della lunghezza specificata.
 
@@ -528,11 +528,11 @@ Numero di caratteri nella stringa codificata.
 
 Numero di byte necessari per un buffer che potrebbe memorizzare una stringa decodificata di caratteri *nSrcLen* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)2045 ().
+Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="qpencode"></a> QPEncode
+## <a name="qpencode"></a>QPEncode
 
 Chiamare questa funzione per codificare alcuni dati nel formato stampabile tra virgolette.
 
@@ -560,7 +560,7 @@ Buffer allocato dal chiamante per ricevere i dati codificati.
 Puntatore a una variabile che contiene la lunghezza in caratteri di *szDest*. Se la funzione ha esito positivo, la variabile riceve il numero di caratteri scritti nel buffer. Se la funzione ha esito negativo, la variabile riceve la lunghezza necessaria in caratteri del buffer.
 
 *dwFlags*<br/>
-Flag ATLSMTP_QPENCODE che descrivono come eseguire la conversione.
+ATLSMTP_QPENCODE flag che descrivono il modo in cui deve essere eseguita la conversione.
 
 - ATLSMTP_QPENCODE_DOT se un punto viene visualizzato all'inizio di una riga, viene aggiunto all'output e codificato.
 
@@ -572,11 +572,11 @@ Lo schema di codifica racchiuso tra virgolette è descritto nella [specifica RFC
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)2045 ().
+Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
 
 Chiamare questa funzione per ottenere la dimensione in caratteri di un buffer contenente una stringa codificata da dati della lunghezza specificata.
 
@@ -593,9 +593,9 @@ Numero di byte di dati da codificare.
 
 Il numero di caratteri necessari per un buffer che può conservare dati codificati di *nSrcLen* byte.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)2045 ().
+Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="uudecode"></a>UUDecode
 
@@ -627,7 +627,7 @@ Puntatore a una variabile che contiene la lunghezza, in byte, di *pbDest*. Se la
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa implementazione di uuencoding segue la specifica POSIX P 1003.2 b/D11.
 
@@ -648,7 +648,7 @@ Numero di caratteri nella stringa codificata.
 
 Numero di byte necessari per un buffer che potrebbe memorizzare una stringa decodificata di caratteri *nSrcLen* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa implementazione di uuencoding segue la specifica POSIX P 1003.2 b/D11.
 
@@ -688,19 +688,19 @@ Flag che controllano il comportamento di questa funzione.
 
 - ATLSMTP_UUENCODE_HEADE l'intestazione verrà codificata.
 
-- ATLSMTP_UUENCODE_END il termine verrà codificato.
+- ATLSMTP_UUENCODE_END verrà codificata la fine.
 
-- Verranno eseguite le operazioni di ATLSMTP_UUENCODE_DOT dei dati.
+- Verranno eseguite ATLSMTP_UUENCODE_DOT informazioni sui dati.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa implementazione di uuencoding segue la specifica POSIX P 1003.2 b/D11.
 
-## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
 
 Chiamare questa funzione per ottenere la dimensione in caratteri di un buffer contenente una stringa codificata da dati della lunghezza specificata.
 
@@ -717,7 +717,7 @@ Numero di byte di dati da codificare.
 
 Il numero di caratteri necessari per un buffer che può conservare dati codificati di *nSrcLen* byte.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa implementazione di uuencoding segue la specifica POSIX P 1003.2 b/D11.
 

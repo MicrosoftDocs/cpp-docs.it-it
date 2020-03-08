@@ -1,5 +1,5 @@
 ---
-title: Macro della mappa servizio
+title: Macro Mapping dei servizi
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -8,28 +8,28 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274564"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862514"
 ---
-# <a name="service-map-macros"></a>Macro della mappa servizio
+# <a name="service-map-macros"></a>Macro Mapping dei servizi
 
-Queste macro definiscono le mappe dei servizi e le voci.
+Queste macro definiscono le mappe e le voci del servizio.
 
 |||
 |-|-|
-|[BEGIN_SERVICE_MAP](#begin_service_map)|Contrassegna l'inizio di un elenco dei servizi ATL.|
-|[END_SERVICE_MAP](#end_service_map)|Contrassegna la fine di un elenco dei servizi ATL.|
-|[SERVICE_ENTRY](#service_entry)|Indica che l'oggetto supporta un ID di servizio specifico.|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Istruisce [IServiceProviderImpl::QueryService](#queryservice) alla catena per l'oggetto specificato.|
+|[BEGIN_SERVICE_MAP](#begin_service_map)|Contrassegna l'inizio di una mappa del servizio ATL.|
+|[END_SERVICE_MAP](#end_service_map)|Contrassegna la fine di una mappa del servizio ATL.|
+|[SERVICE_ENTRY](#service_entry)|Indica che l'oggetto supporta un ID del servizio specifico.|
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Indica a [IServiceProviderImpl:: QueryService](#queryservice) di concatenare all'oggetto specificato.|
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlcom. h
 
-##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP
+##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP
 
 Contrassegna l'inizio della mappa del servizio.
 
@@ -40,21 +40,21 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="parameters"></a>Parametri
 
 *theClass*<br/>
-[in] Specifica la classe che contiene la mappa del servizio.
+in Specifica la classe che contiene la mappa dei servizi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare la mappa del servizio per implementare funzionalità del provider del servizio per l'oggetto COM. In primo luogo, è necessario derivare la classe da [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md). Esistono due tipi di voci:
+Utilizzare l'elenco dei servizi per implementare la funzionalità del provider di servizi nell'oggetto COM. In primo luogo, è necessario derivare la classe da [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md). Esistono due tipi di voci:
 
-- [SERVICE_ENTRY](#service_entry) indica il supporto per ID (SID) del servizio specificato.
+- [SERVICE_ENTRY](#service_entry)   Indica il supporto per l'ID servizio specificato (SID).
 
-- [SERVICE_ENTRY_CHAIN](#service_entry_chain) indica [IServiceProviderImpl::QueryService](#queryservice) concatenarsi a un altro oggetto specificato.
+- [SERVICE_ENTRY_CHAIN](#service_entry_chain)   Indica a [IServiceProviderImpl:: QueryService](#queryservice) di concatenare a un altro oggetto specificato.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]
 
-##  <a name="end_service_map"></a>  END_SERVICE_MAP
+##  <a name="end_service_map"></a>END_SERVICE_MAP
 
 Contrassegna la fine della mappa del servizio.
 
@@ -64,11 +64,11 @@ END_SERVICE_MAP()
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [BEGIN_SERVICE_MAP](#begin_service_map).
+Vedere l'esempio per [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="service_entry"></a>  SERVICE_ENTRY
+##  <a name="service_entry"></a>SERVICE_ENTRY
 
-Indica che l'oggetto supporta l'id del servizio specificato da *SID*.
+Indica che l'oggetto supporta l'ID servizio specificato da *SID*.
 
 ```
 SERVICE_ENTRY( SID )
@@ -77,15 +77,15 @@ SERVICE_ENTRY( SID )
 ### <a name="parameters"></a>Parametri
 
 *SID*<br/>
-ID del servizio.
+L'ID del servizio.
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [BEGIN_SERVICE_MAP](#begin_service_map).
+Vedere l'esempio per [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN
+##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN
 
-Istruisce [IServiceProviderImpl::QueryService](#queryservice) concatenarsi all'oggetto specificato da *punk*.
+Indica a [IServiceProviderImpl:: QueryService](#queryservice) di concatenare all'oggetto specificato da *punk*.
 
 ```
 SERVICE_ENTRY_CHAIN( punk )
@@ -94,13 +94,13 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="parameters"></a>Parametri
 
 *punk*<br/>
-Un puntatore per il **IUnknown** interfaccia alla quale a catena.
+Puntatore all'interfaccia **IUnknown** a cui concatenare.
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [BEGIN_SERVICE_MAP](#begin_service_map).
+Vedere l'esempio per [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
+##  <a name="queryservice"></a>IServiceProviderImpl:: QueryService
 
 Crea o accede al servizio specificato e restituisce un puntatore a interfaccia per l'interfaccia specificata per il servizio.
 
@@ -114,13 +114,13 @@ STDMETHOD(QueryService)(
 ### <a name="parameters"></a>Parametri
 
 *guidService*<br/>
-[in] Puntatore a un identificatore di servizio (SID).
+in Puntatore a un identificatore del servizio (SID).
 
 *riid*<br/>
-[in] Identificatore dell'interfaccia a cui il chiamante è per ottenere l'accesso.
+in Identificatore dell'interfaccia a cui il chiamante deve ottenere l'accesso.
 
 *ppvObj*<br/>
-[out] Puntatore indiretto all'interfaccia richiesta.
+out Puntatore indiretto all'interfaccia richiesta.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -128,27 +128,27 @@ Il valore HRESULT restituito è uno dei seguenti:
 
 |Valore restituito|Significato|
 |------------------|-------------|
-|S_OK|Il servizio è stata correttamente creato o recuperato.|
+|S_OK|Il servizio è stato creato o recuperato correttamente.|
 |E_INVALIDARG|Uno o più argomenti non sono validi.|
-|E_OUTOFMEMORY|La memoria è insufficiente per creare il servizio.|
+|E_OUTOFMEMORY|Memoria insufficiente per la creazione del servizio.|
 |E_UNEXPECTED|Si è verificato un errore sconosciuto.|
-|E_NOINTERFACE|L'interfaccia richiesta non fa parte di questo servizio, o il servizio è sconosciuto.|
+|E_NOINTERFACE|L'interfaccia richiesta non fa parte di questo servizio o il servizio è sconosciuto.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`QueryService` Restituisce un puntatore indiretto all'interfaccia richiesta nel servizio specificato. Il chiamante è responsabile del rilascio di questo puntatore quando non è più necessaria.
+`QueryService` restituisce un puntatore indiretto all'interfaccia richiesta nel servizio specificato. Il chiamante è responsabile del rilascio di questo puntatore quando non è più necessario.
 
-Quando si chiama `QueryService`, si passa sia un identificatore del servizio (*guidService*) e un identificatore di interfaccia (*riid*). Il *guidService* specifica il servizio a cui si desidera l'accesso, e il *riid* identifica un'interfaccia che fa parte del servizio. In cambio, si riceve un puntatore indiretto all'interfaccia.
+Quando si chiama `QueryService`, viene passato un identificatore del servizio (*guidService*) e un identificatore di interfaccia (*riid*). *GuidService* specifica il servizio a cui si desidera accedere e *riid* identifica un'interfaccia che fa parte del servizio. In return si riceve un puntatore indiretto all'interfaccia.
 
-L'oggetto che implementa l'interfaccia potrebbe essere inoltre implementano interfacce che fanno parte di altri servizi. Si consideri quanto segue.
+L'oggetto che implementa l'interfaccia può implementare anche interfacce che fanno parte di altri servizi. Valutare gli aspetti seguenti:
 
-- Alcune di queste interfacce potrebbero essere facoltativo. Non tutte le interfacce definite nella descrizione del servizio sono necessariamente presenti in ogni implementazione del servizio o in ogni oggetto restituito.
+- Alcune di queste interfacce potrebbero essere facoltative. Non tutte le interfacce definite nella descrizione del servizio sono necessariamente presenti in ogni implementazione del servizio o in ogni oggetto restituito.
 
-- A differenza delle chiamate a `QueryInterface`, passando un identificatore di servizio diverso non significa necessariamente che venga restituito un oggetto modello COM (Component Object) diverso.
+- A differenza delle chiamate a `QueryInterface`, il passaggio di un identificatore del servizio diverso non significa necessariamente che venga restituito un oggetto Component Object Model (COM) diverso.
 
 - L'oggetto restituito potrebbe avere interfacce aggiuntive che non fanno parte della definizione del servizio.
 
-Due servizi diversi, ad esempio SID_SMyService e SID_SYourService, possono entrambi specificano l'uso dell'interfaccia stessa, anche se l'implementazione dell'interfaccia può avere nulla in comune tra i due servizi. Questo procedimento funziona perché una chiamata a `QueryService` (SID_SMyService, IID_IDispatch) può restituire un oggetto diverso da quello `QueryService` (SID_SYourService, IID_IDispatch). Identità dell'oggetto non viene considerato come quando si specifica un identificatore di servizio diverso.
+Due servizi diversi, ad esempio SID_SMyService e SID_SYourService, possono entrambi specificare l'uso della stessa interfaccia, anche se l'implementazione dell'interfaccia potrebbe non avere nulla in comune tra i due servizi. Questa operazione funziona perché una chiamata a `QueryService` (SID_SMyService, IID_IDispatch) può restituire un oggetto diverso da `QueryService` (SID_SYourService, IID_IDispatch). L'identità dell'oggetto non viene presupposta quando si specifica un identificatore del servizio diverso.
 
 ## <a name="see-also"></a>Vedere anche
 

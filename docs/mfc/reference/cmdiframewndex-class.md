@@ -157,11 +157,11 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741588"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866695"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (classe)
 
@@ -177,100 +177,100 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Ricalcola il layout dell'elemento attivo.|
+|[CMDIFrameWndEx:: ActiveItemRecalcLayout](#activeitemrecalclayout)|Ricalcola il layout dell'elemento attivo.|
 |`CMDIFrameWndEx::AddDockSite`|Questo metodo non viene utilizzato.|
-|[CMDIFrameWndEx::AddPane](#addpane)|Registra un riquadro con il gestore di ancoraggio.|
-|[CMDIFrameWndEx::AdjustClientArea](#adjustclientarea)|Riduce l'area client per consentire un bordo.|
+|[CMDIFrameWndEx:: AddPane](#addpane)|Registra un riquadro con il gestore di ancoraggio.|
+|[CMDIFrameWndEx:: AdjustClientArea](#adjustclientarea)|Riduce l'area client per consentire un bordo.|
 |[CMDIFrameWndEx:: AdjustDockingLayout](#adjustdockinglayout)|Ricalcola il layout di tutti i riquadri ancorati.|
 |[CMDIFrameWndEx:: AreMDITabs](#aremditabs)|Determina se la funzionalità schede MDI o i gruppi MDI a schede sono abilitati.|
-|[CMDIFrameWndEx::CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|Chiamata eseguita dal Framework per determinare se la finestra cornice può convertire i riquadri ancorati in documenti a schede.|
-|[CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument)|Converte il riquadro ancorato specificato in un documento a schede.|
-|[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)|Crea una finestra del documento figlio.|
-|[CMDIFrameWndEx::CreateNewWindow](#createnewwindow)|Chiamata eseguita dal Framework per creare una nuova finestra.|
+|[CMDIFrameWndEx:: CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|Chiamata eseguita dal Framework per determinare se la finestra cornice può convertire i riquadri ancorati in documenti a schede.|
+|[CMDIFrameWndEx:: ControlBarToTabbedDocument](#controlbartotabbeddocument)|Converte il riquadro ancorato specificato in un documento a schede.|
+|[CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow)|Crea una finestra del documento figlio.|
+|[CMDIFrameWndEx:: CreateNewWindow](#createnewwindow)|Chiamata eseguita dal Framework per creare una nuova finestra.|
 |`CMDIFrameWndEx::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
 |[CMDIFrameWndEx::D ockPane](#dockpane)|Ancora il riquadro specificato alla finestra cornice.|
-|[CMDIFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Ancora un riquadro a sinistra di un altro riquadro.|
-|[CMDIFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Abilita la modalità Nascondi automaticamente per i riquadri quando sono ancorati ai lati specificati della finestra cornice principale.|
-|[CMDIFrameWndEx::EnableDocking](#enabledocking)|Consente l'ancoraggio dei riquadri che appartengono alla finestra cornice MDI.|
-|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Consente di visualizzare o nascondere il menu principale in modalità schermo intero.|
-|[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Abilita la modalità schermo intero per la finestra cornice.|
-|[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Abilita o Disabilita il caricamento dello stato di ancoraggio.|
+|[CMDIFrameWndEx::D ockPaneLeftOf](#dockpaneleftof)|Ancora un riquadro a sinistra di un altro riquadro.|
+|[CMDIFrameWndEx:: EnableAutoHidePanes](#enableautohidepanes)|Abilita la modalità Nascondi automaticamente per i riquadri quando sono ancorati ai lati specificati della finestra cornice principale.|
+|[CMDIFrameWndEx:: EnableDocking](#enabledocking)|Consente l'ancoraggio dei riquadri che appartengono alla finestra cornice MDI.|
+|[CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Consente di visualizzare o nascondere il menu principale in modalità schermo intero.|
+|[CMDIFrameWndEx:: EnableFullScreenMode](#enablefullscreenmode)|Abilita la modalità schermo intero per la finestra cornice.|
+|[CMDIFrameWndEx:: EnableLoadDockState](#enableloaddockstate)|Abilita o Disabilita il caricamento dello stato di ancoraggio.|
 |[CMDIFrameWndEx:: EnableMDITabbedGroups](#enablemditabbedgroups)|Abilita o Disabilita la funzionalità relativa ai gruppi a schede MDI.|
 |[CMDIFrameWndEx:: EnableMDITabs](#enablemditabs)|Abilita o Disabilita la funzionalità schede MDI. Se abilitata, la finestra cornice Visualizza una scheda per ogni finestra figlio MDI.|
 |[CMDIFrameWndEx:: EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|Specifica se l'ultima scheda attiva deve essere attivata quando l'utente chiude la scheda corrente.|
-|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Abilita o Disabilita la creazione e la gestione automatiche del menu popup, che visualizza un elenco di riquadri dell'applicazione.  .|
+|[CMDIFrameWndEx:: EnablePaneMenu](#enablepanemenu)|Abilita o Disabilita la creazione e la gestione automatiche del menu popup, che visualizza un elenco di riquadri dell'applicazione.  .|
 |[CMDIFrameWndEx:: EnableWindowsDialog](#enablewindowsdialog)|Inserisce una voce di menu il cui ID di comando chiama una finestra di dialogo [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) .|
-|[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|Restituisce un puntatore al menu di scelta rapida attualmente visualizzato.|
+|[CMDIFrameWndEx:: GetActivePopup](#getactivepopup)|Restituisce un puntatore al menu di scelta rapida attualmente visualizzato.|
 |[CMDIFrameWndEx:: GetPane](#getpane)|Restituisce un puntatore al riquadro con l'ID di controllo specificato.|
-|[CMDIFrameWndEx::GetDefaultResId](#getdefaultresid)|Restituisce l'ID delle risorse condivise della finestra cornice MDI.|
+|[CMDIFrameWndEx:: GetDefaultResId](#getdefaultresid)|Restituisce l'ID delle risorse condivise della finestra cornice MDI.|
 |[CMDIFrameWndEx:: GetMDITabGroups](#getmditabgroups)|Restituisce un elenco di finestre a schede MDI.|
 |[CMDIFrameWndEx:: GetMDITabs](#getmditabs)|Restituisce un riferimento alla finestra a schede sottolineata.|
-|[CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|Restituisce una combinazione di flag che determina quali voci del menu di scelta rapida sono valide quando è abilitata la funzionalità gruppi a schede MDI.|
-|[CMDIFrameWndEx::GetMenuBar](#getmenubar)|Restituisce un puntatore a un oggetto della barra dei menu collegato alla finestra cornice.|
-|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|Recupera il controllo barra multifunzione per il frame.|
+|[CMDIFrameWndEx:: GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|Restituisce una combinazione di flag che determina quali voci del menu di scelta rapida sono valide quando è abilitata la funzionalità gruppi a schede MDI.|
+|[CMDIFrameWndEx:: getbarra dei menu](#getmenubar)|Restituisce un puntatore a un oggetto della barra dei menu collegato alla finestra cornice.|
+|[CMDIFrameWndEx:: GetRibbonBar](#getribbonbar)|Recupera il controllo barra multifunzione per il frame.|
 |[CMDIFrameWndEx:: GetTearOffBars](#gettearoffbars)|Restituisce un elenco di oggetti derivati da [CPane](../../mfc/reference/cpane-class.md)che si trovano in uno stato di strappo.|
 |`CMDIFrameWndEx::GetThisClass`|Chiamato dal Framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
 |[CMDIFrameWndEx:: GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Chiamata eseguita dal framework quando l'applicazione Visualizza la descrizione comando per un pulsante della barra degli strumenti.|
 |[CMDIFrameWndEx:: InsertPane](#insertpane)|Registra il riquadro specificato con il gestore di ancoraggio.|
-|[CMDIFrameWndEx::IsFullScreen](#isfullscreen)|Determina se la finestra cornice è in modalità schermo intero.|
+|[CMDIFrameWndEx:: FullScreen](#isfullscreen)|Determina se la finestra cornice è in modalità schermo intero.|
 |[CMDIFrameWndEx:: IsMDITabbedGroup](#ismditabbedgroup)|Determina se la funzionalità dei gruppi MDI a schede è abilitata.|
-|[CMDIFrameWndEx::IsMemberOfMDITabGroup](#ismemberofmditabgroup)|Determina se la finestra a schede specificata si trova nell'elenco di finestre che si trovano in gruppi a schede MDI.|
-|[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Determina se la finestra cornice dispone di una barra dei menu.|
-|[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Determina se un punto specificato si trova vicino al sito di ancoraggio.|
-|[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|Determina se la finestra cornice è in modalità anteprima di stampa.|
-|[CMDIFrameWndEx:: LoadFrame](#loadframe)|Crea una finestra cornice dalle informazioni sulle risorse. Esegue l'override di `CMDIFrameWnd::LoadFrame`.|
+|[CMDIFrameWndEx:: IsMemberOfMDITabGroup](#ismemberofmditabgroup)|Determina se la finestra a schede specificata si trova nell'elenco di finestre che si trovano in gruppi a schede MDI.|
+|[CMDIFrameWndEx:: IsMenuBarAvailable](#ismenubaravailable)|Determina se la finestra cornice dispone di una barra dei menu.|
+|[CMDIFrameWndEx:: IsPointNearDockSite](#ispointneardocksite)|Determina se un punto specificato si trova vicino al sito di ancoraggio.|
+|[CMDIFrameWndEx:: IsPrintPreview](#isprintpreview)|Determina se la finestra cornice è in modalità anteprima di stampa.|
+|[CMDIFrameWndEx:: LoadFrame](#loadframe)|Crea una finestra cornice dalle informazioni sulle risorse. (Esegue l'override di `CMDIFrameWnd::LoadFrame`.)|
 |[CMDIFrameWndEx:: LoadMDIState](#loadmdistate)|Carica il layout specificato di gruppi a schede MDI e l'elenco dei documenti aperti in precedenza.|
-|[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Sposta la scheda attiva dalla finestra a schede attualmente attiva al gruppo a schede successivo o precedente.|
+|[CMDIFrameWndEx:: MDITabMoveToNextGroup](#mditabmovetonextgroup)|Sposta la scheda attiva dalla finestra a schede attualmente attiva al gruppo a schede successivo o precedente.|
 |[CMDIFrameWndEx:: MDITabNewGroup](#mditabnewgroup)|Crea un nuovo gruppo a schede con una singola finestra.|
-|[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Negozia lo spazio del bordo in una finestra cornice durante l'attivazione sul posto OLE.|
+|[CMDIFrameWndEx:: NegotiateBorderSpace](#negotiateborderspace)|Negozia lo spazio del bordo in una finestra cornice durante l'attivazione sul posto OLE.|
 |[CMDIFrameWndEx:: OnCloseDockingPane](#onclosedockingpane)|Chiamata eseguita dal framework quando l'utente fa clic sul pulsante **Chiudi** in un riquadro ancorabile.|
 |[CMDIFrameWndEx:: OnCloseMiniFrame](#oncloseminiframe)|Chiamata eseguita dal framework quando l'utente fa clic sul pulsante **Chiudi** in una finestra con mini-cornice a virgola mobile.|
 |[CMDIFrameWndEx:: OnClosePopupMenu](#onclosepopupmenu)|Chiamato dal framework quando un menu a comparsa attivo elabora un messaggio WM_DESTROY.|
 |[CMDIFrameWndEx:: OnCmdMsg](#oncmdmsg)|Chiamata eseguita dal Framework per indirizzare e inviare messaggi di comando e per aggiornare gli oggetti dell'interfaccia utente del comando.|
 |[CMDIFrameWndEx:: OnDrawMenuImage](#ondrawmenuimage)|Chiamato dal framework quando viene disegnata l'immagine associata a una voce di menu.|
-|[CMDIFrameWndEx:: OnDrawMenuLogo](#ondrawmenulogo)|Chiamata eseguita dal framework quando un [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)elabora un messaggio WM_PAINT.|
-|[CMDIFrameWndEx:: OnEraseMDIClientBackground](#onerasemdiclientbackground)|Chiamata eseguita dal framework quando la finestra cornice MDI elabora un messaggio WM_ERASEBKGND.|
-|[CMDIFrameWndEx:: OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Chiamata eseguita dal framework quando un oggetto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)elabora un messaggio WM_NCHITTEST.|
+|[CMDIFrameWndEx:: OnDrawMenuLogo](#ondrawmenulogo)|Chiamata eseguita dal framework quando un [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)elabora un messaggio di WM_PAINT.|
+|[CMDIFrameWndEx:: OnEraseMDIClientBackground](#onerasemdiclientbackground)|Chiamata eseguita dal framework quando la finestra cornice MDI elabora un messaggio di WM_ERASEBKGND.|
+|[CMDIFrameWndEx:: OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Chiamata eseguita dal framework quando un oggetto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)elabora un messaggio di WM_NCHITTEST.|
 |[CMDIFrameWndEx:: OnMoveMiniFrame](#onmoveminiframe)|Chiamata eseguita dal Framework per spostare una finestra con mini-cornice.|
 |[CMDIFrameWndEx:: OnSetPreviewMode](#onsetpreviewmode)|Imposta la modalità di anteprima di stampa della finestra cornice principale dell'applicazione. Esegue l'override di [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).|
 |[CMDIFrameWndEx:: OnShowCustomizePane](#onshowcustomizepane)|Chiamata eseguita dal framework quando viene attivato un riquadro di personalizzazione rapida.|
 |[CMDIFrameWndEx:: OnShowMDITabContextMenu](#onshowmditabcontextmenu)|Chiamata eseguita dal framework quando un menu di scelta rapida deve essere visualizzato su una delle schede. (Valido solo per i gruppi MDI a schede).|
 |[CMDIFrameWndEx:: OnShowPanes](#onshowpanes)|Chiamata eseguita dal Framework per mostrare o nascondere i riquadri.|
 |[CMDIFrameWndEx:: OnShowPopupMenu](#onshowpopupmenu)|Chiamato dal framework durante l'attivazione di un menu a comparsa.|
-|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|Chiamata eseguita dal framework quando la dimensione della finestra MDI del client sta cambiando.|
+|[CMDIFrameWndEx:: OnSizeMDIClient](#onsizemdiclient)|Chiamata eseguita dal framework quando la dimensione della finestra MDI del client sta cambiando.|
 |[CMDIFrameWndEx:: OnTearOffMenu](#ontearoffmenu)|Chiamato dal framework durante l'attivazione di un menu con barra a comparsa.|
-|[CMDIFrameWndEx:: OnUpdateFrameMenu](#onupdateframemenu)|Chiamato dal Framework per aggiornare il menu frame. Esegue l'override di `CMDIFrameWnd::OnUpdateFrameMenu`.|
-|[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Restituisce il riquadro di ancoraggio che contiene il punto specificato.|
-|`CMDIFrameWndEx::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) .  Esegue l'override di `CMDIFrameWnd::PreTranslateMessage`.|
-|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Chiamata eseguita dal Framework per ricalcolare il layout della finestra cornice. Esegue l'override di [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).|
+|[CMDIFrameWndEx:: OnUpdateFrameMenu](#onupdateframemenu)|Chiamato dal Framework per aggiornare il menu frame. (Esegue l'override di `CMDIFrameWnd::OnUpdateFrameMenu`.)|
+|[CMDIFrameWndEx::P aneFromPoint](#panefrompoint)|Restituisce il riquadro di ancoraggio che contiene il punto specificato.|
+|`CMDIFrameWndEx::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) .  (Esegue l'override di `CMDIFrameWnd::PreTranslateMessage`.)|
+|[CMDIFrameWndEx:: RecalcLayout](#recalclayout)|Chiamata eseguita dal Framework per ricalcolare il layout della finestra cornice. Esegue l'override di [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).|
 |[CMDIFrameWndEx:: RemovePaneFromDockManager](#removepanefromdockmanager)|Annulla la registrazione di un riquadro e lo rimuove dal gestore di ancoraggio.|
-|[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Salva il layout corrente dei gruppi a schede MDI e l'elenco dei documenti aperti in precedenza.|
-|[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Imposta la finestra cornice anteprima di stampa.|
+|[CMDIFrameWndEx:: SaveMDIState](#savemdistate)|Salva il layout corrente dei gruppi a schede MDI e l'elenco dei documenti aperti in precedenza.|
+|[CMDIFrameWndEx:: SetPrintPreviewFrame](#setprintpreviewframe)|Imposta la finestra cornice anteprima di stampa.|
 |[CMDIFrameWndEx:: SetupToolbarMenu](#setuptoolbarmenu)|Modifica un oggetto barra degli strumenti cercando elementi fittizi e sostituendoli con gli elementi definiti dall'utente specificati.|
 |[CMDIFrameWndEx:: ShowFullScreen](#showfullscreen)|Passa il frame principale dalla modalità normale alla modalità schermo intero.|
-|[CMDIFrameWndEx::ShowPane](#showpane)|Consente di visualizzare o nascondere il riquadro specificato.|
+|[CMDIFrameWndEx:: ShowPane](#showpane)|Consente di visualizzare o nascondere il riquadro specificato.|
 |[CMDIFrameWndEx:: ShowWindowsDialog](#showwindowsdialog)|Crea una casella [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) e la apre.|
-|[CMDIFrameWndEx::TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|Converte il documento a schede specificato in un riquadro ancorato.|
-|[CMDIFrameWndEx::UpdateCaption](#updatecaption)|Chiamata eseguita dal Framework per aggiornare la didascalia della cornice della finestra.|
-|[CMDIFrameWndEx::UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|Imposta l'icona per ogni riquadro a schede MDI.|
+|[CMDIFrameWndEx:: TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|Converte il documento a schede specificato in un riquadro ancorato.|
+|[CMDIFrameWndEx:: UpdateCaption](#updatecaption)|Chiamata eseguita dal Framework per aggiornare la didascalia della cornice della finestra.|
+|[CMDIFrameWndEx:: UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|Imposta l'icona per ogni riquadro a schede MDI.|
 |[CMDIFrameWndEx:: WinHelp](#winhelp)|Chiamato dal framework per avviare l'applicazione WinHelp o la Guida sensibile al contesto. Esegue l'override di [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).|
 
-### <a name="data-members"></a>Membri di dati
+### <a name="data-members"></a>Membri dei dati
 
-|NOME|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Determina se i riquadri di ancoraggio possono essere convertiti in finestre figlio MDI.|
-|[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Abilita o Disabilita l'ottimizzazione di riestrazione per le finestre figlio MDI.|
+|[CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Determina se i riquadri di ancoraggio possono essere convertiti in finestre figlio MDI.|
+|[CMDIFrameWndEx:: m_bDisableSetRedraw](#m_bdisablesetredraw)|Abilita o Disabilita l'ottimizzazione di riestrazione per le finestre figlio MDI.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per sfruttare le funzionalità di personalizzazione estese nell'applicazione MDI, derivare la classe della finestra cornice MDI dell'applicazione `CMDIFrameWndEx` da `CMDIFrameWnd`anziché da.
+Per sfruttare le funzionalità di personalizzazione estese nell'applicazione MDI, derivare la classe della finestra cornice MDI dell'applicazione da `CMDIFrameWndEx` anziché `CMDIFrameWnd`.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene derivata una classe da `CMDIFrameWndEx`. Questo frammento di codice deriva [dall'esempio DrawClient: Applicazione](../../overview/visual-cpp-samples.md)per il disegno di oggetti OLE basata su barra multifunzione MFC.
+Nell'esempio seguente viene derivata una classe da `CMDIFrameWndEx`. Questo frammento di codice deriva dall' [esempio DrawClient: applicazione di disegno oggetto OLE basata su barra multifunzione MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -322,7 +322,7 @@ in Specifica se aggiungere questo riquadro alla fine dell'elenco.
 
 Restituisce un valore diverso da zero se il riquadro è stato registrato correttamente. Restituisce 0 se il riquadro è già registrato con il gestore di ancoraggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Ogni riquadro deve essere registrato con la [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) prima di poter prendere parte al layout di ancoraggio. Utilizzare questo metodo per notificare al gestore di ancoraggio che si desidera ancorare un riquadro specifico. Una volta registrato, il gestore di ancoraggio lo allinea in base all'impostazione e alla posizione dell'allineamento nell'elenco dei riquadri gestiti dal gestore di ancoraggio.
 
@@ -347,7 +347,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 *hdwp*<br/>
 in Identifica la struttura di posizione a più finestre. È possibile ottenere questo valore chiamando `BeginDeferWindowPos`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questa funzione membro per ricalcolare il layout di tutti i riquadri ancorati alla finestra cornice.
 
@@ -364,11 +364,11 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 *pnMDITabsType*<br/>
 out Puntatore a una variabile integer che indica quali funzionalità sono abilitate:
 
-- 0: Tutte le funzionalità sono disabilitate.
+- 0: tutte le funzionalità sono disabilitate.
 
-- 1: Le schede MDI sono abilitate.
+- 1: le schede MDI sono abilitate.
 
-- 2: I gruppi MDI a schede sono abilitati.
+- 2: i gruppi a schede MDI sono abilitati.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -376,7 +376,7 @@ Restituisce TRUE se le schede MDI o i gruppi MDI a schede sono abilitati.
 
 Restituisce FALSE se nessuna delle funzionalità sopra indicate è abilitata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare questa funzione per determinare se le schede MDI o i gruppi MDI a schede sono abilitati per la finestra cornice. Usare [CMDIFrameWndEx:: EnableMDITabs](#enablemditabs) per abilitare o disabilitare la funzionalità schede MDI.
 
@@ -394,7 +394,7 @@ virtual BOOL CanCovertControlBarToMDIChild();
 
 Restituisce TRUE se la finestra cornice può convertire i riquadri ancorati in documenti a schede; in caso contrario, restituisce FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo in una classe derivata e restituire TRUE per consentire la conversione dei riquadri di ancoraggio in documenti a schede. In alternativa, è possibile impostare [CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) su true.
 
@@ -415,7 +415,7 @@ Puntatore al riquadro di ancoraggio da convertire.
 
 Restituisce un puntatore alla nuova finestra figlio MDI che contiene il riquadro di ancoraggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo converte un riquadro ancorato in un documento a schede. Quando si chiama questo metodo, il Framework crea un oggetto della [classe CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md) , rimuove il riquadro di ancoraggio dal gestore di ancoraggio e aggiunge il riquadro di ancoraggio alla nuova finestra figlio MDI. La finestra figlio MDI ridimensiona il riquadro di ancoraggio per coprire l'intera area client
 
@@ -441,7 +441,7 @@ in Puntatore a un oggetto definito dall'utente. Uno sviluppatore può, ad esempi
 
 Puntatore a `CMDIChildWndEx`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il Framework chiama questo metodo quando carica l'elenco dei documenti precedentemente salvati nel registro di sistema.
 
@@ -449,9 +449,9 @@ Eseguire l'override di questo metodo per creare documenti quando vengono caricat
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `CreateDocumentWindow` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `CreateDocumentWindow` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
-In questo esempio, `g_strStartViewName` potrebbe essere il nome di un "documento virtuale", ad esempio "pagina iniziale", che non viene effettivamente caricato da un file su disco. Per gestire questo caso, è quindi necessaria un'elaborazione speciale.
+In questo esempio `g_strStartViewName` potrebbe essere il nome di un "documento virtuale", ad esempio "pagina iniziale", che non viene effettivamente caricato da un file su disco. Per gestire questo caso, è quindi necessaria un'elaborazione speciale.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -471,7 +471,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
 in Nome del documento.
 
 *pObj*<br/>
-in Riservato per usi futuri.
+[in] Riservato per un utilizzo futuro.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -497,15 +497,15 @@ in Puntatore al riquadro da ancorare.
 in Specifica i lati della finestra cornice da ancorare a.
 
 *lpRect*<br/>
-in Non utilizzato.
+[in] Non utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo ancora il riquadro specificato a uno dei lati della finestra cornice specificata durante la chiamata di [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) e [CMDIFrameWndEx:: EnableDocking](#enabledocking) .
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato l'uso del metodo `DockPane`. Questo frammento di codice deriva [dall'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato l'uso del metodo `DockPane`. Questo frammento di codice deriva dall' [esempio VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -529,15 +529,15 @@ in Puntatore al riquadro che funge da sito di ancoraggio. .
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se l'operazione ha esito positivo. In caso contrario, restituisce FALSE.
+Restituisce TRUE se l'operazione ha esito positivo. In caso contrario restituisce FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questo metodo per ancorare più oggetti riquadro in un ordine predefinito. Questo metodo ancora il riquadro specificato da *pBar* a sinistra del riquadro specificato da *pLeftOf*.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come `DockPaneLeftOf` utilizzare il metodo [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare il metodo `DockPaneLeftOf` nell' [esempio VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,11 +568,11 @@ Chiamare questa funzione per abilitare la modalità Nascondi automaticamente per
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come `EnableAutoHidePanes` utilizzare il metodo [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare il metodo `EnableAutoHidePanes` nell' [esempio VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="enabledocking"></a>CMDIFrameWndEx:: EnableDocking
 
@@ -589,13 +589,13 @@ in Specifica lo stile di ancoraggio che si desidera applicare.
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione per abilitare l' `CMDIFrameWndEx` ancoraggio dei riquadri che appartengono all'oggetto.
+Chiamare questa funzione per abilitare l'ancoraggio dei riquadri che appartengono all'oggetto `CMDIFrameWndEx`.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come `EnableDocking` utilizzare il metodo [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare il metodo `EnableDocking` nell' [esempio VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -612,7 +612,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 *bEnableMenu*<br/>
 in TRUE per visualizzare il menu principale in modalità schermo intero oppure FALSE per nasconderlo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="enablefullscreenmode"></a>CMDIFrameWndEx:: EnableFullScreenMode
 
@@ -627,9 +627,9 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 *uiFullScreenCmd*<br/>
 in ID di un comando che Abilita o Disabilita la modalità a schermo intero.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-In modalità schermo intero, tutte le barre di controllo ancorate, le barre degli strumenti e i menu sono nascosti e la visualizzazione attiva viene ridimensionata in modo da occupare lo schermo intero. Quando si Abilita la modalità schermo intero, è necessario specificare un ID del comando che lo Abilita o lo Disabilita. È possibile chiamare `EnableFullScreenMode` dalla `OnCreate` funzione del frame principale. Quando una finestra cornice passa alla modalità schermo intero, il Framework crea una barra degli strumenti mobile con un pulsante con l'ID di comando specificato. Se si desidera lasciare il menu principale sullo schermo, chiamare [CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu).
+In modalità schermo intero, tutte le barre di controllo ancorate, le barre degli strumenti e i menu sono nascosti e la visualizzazione attiva viene ridimensionata in modo da occupare lo schermo intero. Quando si Abilita la modalità schermo intero, è necessario specificare un ID del comando che lo Abilita o lo Disabilita. È possibile chiamare `EnableFullScreenMode` dalla funzione `OnCreate` del frame principale. Quando una finestra cornice passa alla modalità schermo intero, il Framework crea una barra degli strumenti mobile con un pulsante con l'ID di comando specificato. Se si desidera lasciare il menu principale sullo schermo, chiamare [CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu).
 
 ##  <a name="enableloaddockstate"></a>CMDIFrameWndEx:: EnableLoadDockState
 
@@ -644,7 +644,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 *bEnable*<br/>
 in TRUE per abilitare il caricamento dello stato di ancoraggio, FALSE per disabilitare il caricamento dello stato di ancoraggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="enablemditabbedgroups"></a>CMDIFrameWndEx:: EnableMDITabbedGroups
 
@@ -664,7 +664,7 @@ in Se TRUE, la funzionalità dei gruppi MDI a schede è abilitata; Se FALSE, la 
 *params*<br/>
 in Specifica i parametri che il framework applica alle finestre figlio create nell'area client MDI.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare questo metodo per abilitare o disabilitare la funzionalità relativa ai gruppi a schede MDI. Questa funzionalità consente alle applicazioni MDI di visualizzare le finestre figlio come finestre a schede allineate verticalmente o orizzontalmente all'interno dell'area client MDI. I gruppi di finestre a schede sono separati da barre di divisione. L'utente può ridimensionare i gruppi a schede utilizzando una barra di divisione.
 
@@ -680,13 +680,13 @@ Utilizzare questo metodo per abilitare o disabilitare la funzionalità relativa 
 
 Se si chiama questo metodo con *bEnable* impostato su false, *params* viene ignorato.
 
-Anche se i gruppi MDI a schede sono già abilitati, è possibile chiamare nuovamente questo metodo per modificare le impostazioni per le finestre figlio. Chiamare il metodo con *bEnable* impostato su true e modificare i membri dell' `CMDITabInfo` oggetto specificato dal parametro *params* .
+Anche se i gruppi MDI a schede sono già abilitati, è possibile chiamare nuovamente questo metodo per modificare le impostazioni per le finestre figlio. Chiamare il metodo con *bEnable* impostato su true e modificare i membri dell'oggetto `CMDITabInfo` specificati dal parametro *params* .
 
 Per altre informazioni su come usare i gruppi a schede MDI, vedere [gruppi a schede MDI](../../mfc/mdi-tabbed-groups.md).
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `EnableMDITabbedGroups` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `EnableMDITabbedGroups` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -710,7 +710,7 @@ void EnableMDITabs(
 *bEnable*<br/>
 Specifica se le schede sono abilitate.
 
-*bIcons*<br/>
+*biconst*<br/>
 Specifica se le icone devono essere visualizzate nelle schede.
 
 *tabLocation*<br/>
@@ -728,17 +728,17 @@ Specifica se sono abilitate le descrizioni comandi personalizzate.
 *bActiveTabCloseButton*<br/>
 Se è TRUE, verrà visualizzato un pulsante **Chiudi** nella scheda attiva anziché nell'angolo destro dell'area della scheda.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questo metodo per abilitare o disabilitare la funzionalità schede MDI per la finestra cornice MDI. Se abilitata, tutte le finestre figlio vengono visualizzate come tabulazioni.
 
 Le etichette delle schede possono essere posizionate nella parte superiore o inferiore del frame, a seconda dell'impostazione del parametro *tabLocation*. È possibile specificare `CMFCTabCtrl::LOCATION_BOTTOM` (impostazione predefinita) o `CMFCTabCtrl::LOCATION_TOP`.
 
-Se *bTabCustomTooltips* è true, verrà inviato un messaggio AFX_WM_ON_GET_TAB_TOOLTIP alla finestra cornice principale. Il codice può gestire questo messaggio e fornire al Framework descrizioni comando personalizzate per le schede MDI.
+Se *bTabCustomTooltips* è true, verrà inviato un messaggio di AFX_WM_ON_GET_TAB_TOOLTIP alla finestra cornice principale. Il codice può gestire questo messaggio e fornire al Framework descrizioni comando personalizzate per le schede MDI.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `EnableMDITabs` come usare [nell'esempio MDITabsDemo: Applicazione](../../overview/visual-cpp-samples.md)MDI a schede MFC.
+Nell'esempio seguente viene illustrato come utilizzare `EnableMDITabs` nell'esempio [MDITabsDemo: applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -755,7 +755,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 *bLastActiveTab*<br/>
 in Se TRUE, abilitare l'attivazione dell'ultima scheda attiva. Se FALSE, disabilitare l'attivazione dell'ultima scheda attiva.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Esistono due modi per aprire una scheda quando la scheda attiva è chiusa:
 
@@ -801,13 +801,13 @@ in Se è TRUE, nel menu del riquadro viene visualizzato solo un elenco di barre 
 *bViewMenuShowsToolbarsOnly*<br/>
 in Se è TRUE, nel menu del riquadro viene visualizzato solo un elenco di barre degli strumenti. Se FALSE, il menu Visualizza un elenco di barre degli strumenti e barre di ancoraggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il menu del riquadro popup Visualizza l'elenco dei riquadri dell'applicazione e consente all'utente di visualizzare o nascondere i singoli riquadri.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `EnablePaneMenu` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `EnablePaneMenu` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -843,13 +843,13 @@ in Consente di specificare se visualizzare **un pulsante** ? nella finestra di d
 *uiMenuTextResId*<br/>
 in Identificatore della risorsa di stringa che contiene la stringa di testo dell'elemento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Utilizzare questo metodo per inserire una voce di menu il cui comando chiama una finestra di dialogo di gestione della finestra figlio MDI ( [classe CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Il nuovo elemento viene inserito nel menu specificato da *uiMenuId*. Chiamare `EnableWindowsDialog` quando si elabora il messaggio WM_CREATE.
+Utilizzare questo metodo per inserire una voce di menu il cui comando chiama una finestra di dialogo di gestione della finestra figlio MDI ( [classe CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Il nuovo elemento viene inserito nel menu specificato da *uiMenuId*. Chiamare `EnableWindowsDialog` quando si elabora il messaggio di WM_CREATE.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `EnableWindowsDialog` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `EnableWindowsDialog` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -865,7 +865,7 @@ CMFCPopupMenu* GetActivePopup() const;
 
 Puntatore al menu popup attivo; NULL se non è attivo alcun menu popup.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare questa funzione per ottenere un puntatore all'oggetto della [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) attualmente visualizzato.
 
@@ -881,7 +881,7 @@ UINT GetDefaultResId() const;
 
 Valore dell'ID di risorsa. 0 se la finestra cornice non dispone di alcuna barra dei menu.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo restituisce l'ID di risorsa specificato quando la finestra cornice MDI è stata caricata da [CFrameWnd:: LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe).
 
@@ -897,7 +897,7 @@ const CObList& GetMDITabGroups() const;
 
 Riferimento a un oggetto della [classe CObList](../../mfc/reference/coblist-class.md) contenente un elenco di finestre a schede. Non archiviare o modificare l'elenco.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare questo metodo per accedere all'elenco delle finestre a schede. Può essere utile se si desidera modificare o eseguire una query su alcuni parametri delle singole finestre a schede.
 
@@ -925,15 +925,15 @@ DWORD GetMDITabsContextMenuAllowedItems();
 
 Una combinazione OR bit per bit dei flag seguenti:
 
-- BCGP_MDI_CREATE_VERT_GROUP: consente di creare un gruppo di schede verticali.
+- BCGP_MDI_CREATE_VERT_GROUP: è possibile creare un gruppo di schede verticali.
 
-- BCGP_MDI_CREATE_HORZ_GROUP: consente di creare un gruppo di schede orizzontali.
+- BCGP_MDI_CREATE_HORZ_GROUP: è possibile creare un gruppo di schede orizzontali.
 
 - BCGP_MDI_CAN_MOVE_PREV: può spostare una scheda nel gruppo di schede precedente.
 
 - BCGP_MDI_CAN_MOVE_NEXT: può spostare una scheda nel gruppo di schede successivo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando è abilitata la funzionalità gruppi a schede MDI, è necessario sapere quali operazioni sono consentite nelle schede di una particolare finestra. Questo metodo analizza il layout corrente delle finestre a schede e restituisce una combinazione di flag che possono essere utilizzati per compilare, ad esempio, un menu di scelta rapida.
 
@@ -986,7 +986,7 @@ CMFCRibbonBar* GetRibbonBar();
 
 Puntatore alla [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) per il frame.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="gettearoffbars"></a>CMDIFrameWndEx:: GetTearOffBars
 
@@ -998,11 +998,11 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento a un oggetto della [classe CObList](../../mfc/reference/coblist-class.md) che contiene una raccolta di puntatori a `CPane`oggetti derivati da che si trovano in uno stato di strappo.
+Riferimento a un oggetto della [classe CObList](../../mfc/reference/coblist-class.md) che contiene una raccolta di puntatori a oggetti derivati da `CPane`che si trovano in uno stato di strappo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`CMDIFrameWndEx`mantiene una raccolta di menu a comparsa. Utilizzare questo metodo per recuperare un riferimento a questo elenco.
+`CMDIFrameWndEx` gestisce una raccolta di menu a comparsa. Utilizzare questo metodo per recuperare un riferimento a questo elenco.
 
 ##  <a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx:: GetToolbarButtonToolTipText
 
@@ -1016,7 +1016,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 ### <a name="parameters"></a>Parametri
 
-*pButton*<br/>
+*p*<br/>
 in Puntatore a un pulsante della barra degli strumenti.
 
 *strTTText*<br/>
@@ -1026,7 +1026,7 @@ in Testo della descrizione comando da visualizzare per il pulsante.
 
 TRUE se la descrizione comando è stata visualizzata. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="insertpane"></a>CMDIFrameWndEx:: InsertPane
 
@@ -1047,14 +1047,14 @@ in Puntatore al riquadro da inserire.
 *pTarget*<br/>
 in Puntatore al riquadro prima o dopo il quale inserire il riquadro.
 
-*bAfter*<br/>
+*bDopo*<br/>
 in Se è TRUE, *pControlBar* viene inserito dopo *PTarget*. Se FALSE, *pControlBar* viene inserito prima di *PTarget*.
 
 ### <a name="return-value"></a>Valore restituito
 
 TRUE se il metodo registra correttamente il riquadro, FALSE se il riquadro è già stato registrato con il gestore di ancoraggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare questo metodo per indicare a docking Manager informazioni su un riquadro specificato da *pControlBar*. Il gestore di ancoraggio allinea questo riquadro in base all'allineamento e alla posizione del riquadro nell'elenco interno del gestore di ancoraggio.
 
@@ -1070,7 +1070,7 @@ BOOL IsFullScreen() const;
 
 TRUE se la finestra cornice è in modalità schermo intero; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile impostare la modalità schermo intero chiamando il metodo [CMDIFrameWndEx:: EnableFullScreenMode](#enablefullscreenmode) .
 
@@ -1086,7 +1086,7 @@ BOOL IsMDITabbedGroup() const;
 
 TRUE se è abilitata la funzionalità gruppi a schede MDI. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per determinare se le schede MDI regolari o la funzionalità gruppi a schede MDI sono abilitate, utilizzare [CMDIFrameWndEx:: AreMDITabs](#aremditabs).
 
@@ -1145,7 +1145,7 @@ in TRUE se il punto si trova vicino al bordo esterno del sito di ancoraggio. In 
 
 TRUE se il punto si trova vicino al sito di ancoraggio. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il punto si trova vicino al sito di ancoraggio quando si trova all'interno del set di sensibilità nel gestore di ancoraggio. La sensibilità predefinita è 15 pixel.
 
@@ -1161,7 +1161,7 @@ BOOL IsPrintPreview();
 
 TRUE se la finestra cornice è in modalità anteprima di stampa. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="loadframe"></a>CMDIFrameWndEx:: LoadFrame
 
@@ -1210,21 +1210,21 @@ in Specifica il nome del profilo.
 
 TRUE se il caricamento è riuscito; FALSE se il caricamento non è riuscito o non sono presenti dati da caricare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per caricare o salvare lo stato di schede e gruppi MDI e l'elenco dei documenti aperti, procedere come segue:
 
 - Chiamare [CMDIFrameWndEx:: SaveMDIState](#savemdistate) quando viene chiuso il frame principale
 
-- Chiamare [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) quando viene creato il frame principale. La posizione consigliata per questa chiamata è prima che il fotogramma principale venga visualizzato per la prima volta. Aggiungere `CWinAppEx::EnableLoadWindowPlacement` primadi`pMainFrame->LoadFrame (IDR_MAINFRAME);.` Aggiungi dopola`(pMainFrame);` chiamata a`LoadMDIState` per visualizzare il fotogramma principale in corrispondenza della posizione archiviata nel registro di sistema. `CBCGPWorkspace::ReloadWindowPlacement` `(FALSE);`
+- Chiamare [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) quando viene creato il frame principale. La posizione consigliata per questa chiamata è prima che il fotogramma principale venga visualizzato per la prima volta. Aggiungere `CWinAppEx::EnableLoadWindowPlacement` `(FALSE);` prima di `pMainFrame->LoadFrame (IDR_MAINFRAME);.` aggiungere `CBCGPWorkspace::ReloadWindowPlacement` `(pMainFrame);` dopo la chiamata a `LoadMDIState` per visualizzare il frame principale in corrispondenza della posizione archiviata nel registro di sistema.
 
-- Eseguire `GetDocumentName` l'override `CMDIChildWndEx`nella classe derivata da se l'applicazione Visualizza documenti non archiviati come file. La stringa restituita verrà salvata nel registro di sistema come identificatore del documento. L'implementazione di base di [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) restituisce un valore ottenuto da [CDocument:: GetPathName](../../mfc/reference/cdocument-class.md#getpathname).
+- Eseguire l'override `GetDocumentName` nella classe derivata da `CMDIChildWndEx`se l'applicazione Visualizza documenti non archiviati come file. La stringa restituita verrà salvata nel registro di sistema come identificatore del documento. L'implementazione di base di [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) restituisce un valore ottenuto da [CDocument:: GetPathName](../../mfc/reference/cdocument-class.md#getpathname).
 
-- Eseguire l'override di [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) per creare correttamente i documenti quando vengono caricati dal registro di sistema. Il primo parametro è la stringa restituita da `GetDocumentName` .
+- Eseguire l'override di [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) per creare correttamente i documenti quando vengono caricati dal registro di sistema. Il primo parametro è la stringa restituita `GetDocumentName`.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `LoadMDIState` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `LoadMDIState` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1254,17 +1254,17 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 *bVert*<br/>
 in Specifica il nuovo allineamento del gruppo. Se TRUE, il nuovo gruppo è allineato verticalmente. Se FALSE, il nuovo gruppo è allineato orizzontalmente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare questa funzione per creare una nuova finestra a schede (nuovo gruppo a schede) e aggiungere la prima scheda.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `MDITabNewGroup` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `MDITabNewGroup` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
-##  <a name="m_bcancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild
+##  <a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild
 
 Specifica se i riquadri di ancoraggio possono essere convertiti in finestre figlio MDI.
 
@@ -1272,19 +1272,19 @@ Specifica se i riquadri di ancoraggio possono essere convertiti in finestre figl
 BOOL m_bCanCovertControlBarToMDIChild;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Indica se le barre di controllo di ancoraggio possono essere convertite in finestre figlio MDI. Se questo flag è TRUE, il Framework gestisce automaticamente la conversione quando l'utente seleziona il comando a **schede del documento** . Il flag è protetto ed è necessario abilitare `m_bCanCovertControlBarToMDIChild` in modo esplicito questa opzione impostando in un costruttore di una `CMDIFrameWndEx`classe derivata da o eseguendo l'override `CanConvertControlBarToMDIChild`di.
+Indica se le barre di controllo di ancoraggio possono essere convertite in finestre figlio MDI. Se questo flag è TRUE, il Framework gestisce automaticamente la conversione quando l'utente seleziona il comando a **schede del documento** . Il flag è protetto ed è necessario abilitare in modo esplicito questa opzione impostando `m_bCanCovertControlBarToMDIChild` in un costruttore di una classe derivata da `CMDIFrameWndEx`oppure eseguendo l'override di `CanConvertControlBarToMDIChild`.
 
 Il valore predefinito è `FALSE`.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `m_bCanCovertControlBarToMDIChild` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `m_bCanCovertControlBarToMDIChild` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
-##  <a name="m_bdisablesetredraw"></a>  CMDIFrameWndEx::m_bDisableSetRedraw
+##  <a name="m_bdisablesetredraw"></a>CMDIFrameWndEx:: m_bDisableSetRedraw
 
 Abilita o Disabilita l'ottimizzazione di riestrazione per le finestre figlio MDI.
 
@@ -1292,7 +1292,7 @@ Abilita o Disabilita l'ottimizzazione di riestrazione per le finestre figlio MDI
 AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il valore predefinito è TRUE.
 
@@ -1300,7 +1300,7 @@ Impostare questo flag su FALSE se si desidera ottimizzare il ridisegno degli ele
 
 Questo flag può causare effetti indesiderati (ad esempio applicazioni in background che diventano visibili). È pertanto consigliabile modificare l'impostazione predefinita solo se si verifica un tremolio evidente durante l'attivazione della scheda MDI.
 
-##  <a name="negotiateborderspace"></a>  CMDIFrameWndEx::NegotiateBorderSpace
+##  <a name="negotiateborderspace"></a>CMDIFrameWndEx:: NegotiateBorderSpace
 
 Negozia lo spazio del bordo in una finestra cornice durante l'attivazione sul posto OLE.
 
@@ -1313,7 +1313,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="parameters"></a>Parametri
 
 *nBorderCmd*<br/>
-in Contiene uno dei valori seguenti dell'enumerazione `CFrameWnd::BorderCmd`:
+in Contiene uno dei valori seguenti della `CFrameWnd::BorderCmd`enum:
 
 - `borderGet` = 1
 
@@ -1328,7 +1328,7 @@ in Contiene uno dei valori seguenti dell'enumerazione `CFrameWnd::BorderCmd`:
 
 Diverso da zero se il metodo ha avuto esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo è un'implementazione della negoziazione dello spazio del bordo OLE.
 
@@ -1349,7 +1349,7 @@ in Puntatore al riquadro da chiudere.
 
 TRUE se il riquadro di ancoraggio può essere chiuso. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo per gestire il nascondimento dei riquadri ancorati. Restituisce FALSE se si desidera impedire che un riquadro ancorato venga nascosto.
 
@@ -1372,7 +1372,7 @@ in Puntatore alla finestra con mini-cornice da chiudere.
 
 TRUE se la finestra con mini-cornice mobile può essere chiusa. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo per gestire il nascondere le finestre con mini-cornice mobili. Restituisce FALSE se si desidera impedire che una finestra con mini-cornice mobile venga nascosta.
 
@@ -1391,9 +1391,9 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 *pMenuPopup*<br/>
 in Puntatore a un menu a comparsa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo se si desidera elaborare notifiche da oggetti della [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) che appartengono alla finestra cornice MDI quando questi oggetti elaborano i messaggi WM_DESTROY.
+Eseguire l'override di questo metodo se si desidera elaborare notifiche da oggetti della [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) che appartengono alla finestra cornice MDI quando tali oggetti elaborano WM_DESTROY messaggi.
 
 ##  <a name="oncmdmsg"></a>CMDIFrameWndEx:: OnCmdMsg
 
@@ -1419,7 +1419,7 @@ in Identifica il codice di notifica del comando. Per ulteriori informazioni sui 
 in Utilizzato in base al valore di *nCode*. Per ulteriori informazioni su *pExtra*, vedere [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) .
 
 *pHandlerInfo*<br/>
-[in, out] In genere, questo parametro deve essere NULL. Se non è null `OnCmdMsg` , Compila `pTarget` i membri e `pmf` della struttura *pHandlerInfo* anziché inviare il comando.
+[in, out] In genere, questo parametro deve essere NULL. Se non è NULL, `OnCmdMsg` compila i membri `pTarget` e `pmf` della struttura *pHandlerInfo* anziché inviare il comando.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1451,13 +1451,13 @@ in Rettangolo di delimitazione dell'immagine.
 
 TRUE se il metodo consente di disegnare l'immagine. L'implementazione predefinita restituisce FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo se si desidera personalizzare il rendering delle immagini per le voci di menu che appartengono alla barra `CMDIFrameWndEx`dei menu di proprietà dell'oggetto derivato da. L'implementazione predefinita non esegue alcuna operazione.
+Eseguire l'override di questo metodo se si desidera personalizzare il rendering delle immagini per le voci di menu che appartengono alla barra dei menu di proprietà dell'oggetto derivato da `CMDIFrameWndEx`. L'implementazione predefinita non esegue alcuna operazione.
 
 ##  <a name="ondrawmenulogo"></a>CMDIFrameWndEx:: OnDrawMenuLogo
 
-Chiamata eseguita dal framework quando un [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)elabora un messaggio WM_PAINT.
+Chiamata eseguita dal framework quando un [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)elabora un messaggio di WM_PAINT.
 
 ```
 virtual void OnDrawMenuLogo(
@@ -1466,13 +1466,13 @@ virtual void OnDrawMenuLogo(
     const CRect&);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione per visualizzare un logo nel menu popup che appartiene alla barra dei menu di proprietà dell' `CMDIFrameWndEx`oggetto derivato da. L'implementazione predefinita non esegue alcuna operazione.
+Eseguire l'override di questa funzione per visualizzare un logo nel menu popup che appartiene alla barra dei menu di proprietà dell'oggetto derivato da `CMDIFrameWndEx`. L'implementazione predefinita non esegue alcuna operazione.
 
 ##  <a name="onerasemdiclientbackground"></a>CMDIFrameWndEx:: OnEraseMDIClientBackground
 
-Chiamata eseguita dal framework quando la finestra cornice MDI elabora un messaggio WM_ERASEBKGND.
+Chiamata eseguita dal framework quando la finestra cornice MDI elabora un messaggio di WM_ERASEBKGND.
 
 ```
 virtual BOOL OnEraseMDIClientBackground(CDC*);
@@ -1482,13 +1482,13 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
 
 TRUE se l'applicazione elabora il messaggio e cancella lo sfondo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione membro se si desidera elaborare il messaggio WM_ERASEBKGND `CMDIFrameWndEx`in una classe derivata da.
+Eseguire l'override di questa funzione membro se si desidera elaborare il messaggio di WM_ERASEBKGND in una classe derivata da `CMDIFrameWndEx`.
 
 ##  <a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx:: OnMenuButtonToolHitTest
 
-Chiamata eseguita dal framework quando un oggetto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)elabora un messaggio WM_NCHITTEST.
+Chiamata eseguita dal framework quando un oggetto [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)elabora un messaggio di WM_NCHITTEST.
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1498,7 +1498,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 ### <a name="parameters"></a>Parametri
 
-*pButton*<br/>
+*p*<br/>
 in Pulsante della barra degli strumenti.
 
 *pTI*<br/>
@@ -1508,7 +1508,7 @@ out Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl
 
 TRUE se l'applicazione compila il parametro *PTI* . L'implementazione predefinita restituisce FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo se si desidera fornire informazioni sulle voci di menu specifiche a una descrizione comando. L'implementazione predefinita non esegue alcuna operazione.
 
@@ -1545,9 +1545,9 @@ virtual void OnSetPreviewMode(
 in Se TRUE, imposta la modalità di anteprima di stampa. Se FALSE, Annulla la modalità di anteprima.
 
 *pState*<br/>
-in Puntatore a una `CPrintPreviewState` struttura.
+in Puntatore a una struttura `CPrintPreviewState`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo esegue l'override di [CFrameWnd:: OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).
 
@@ -1573,7 +1573,7 @@ in ID del controllo della barra degli strumenti da personalizzare.
 
 Questo metodo restituisce sempre TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il riquadro di personalizzazione rapida è un menu che viene visualizzato quando l'utente fa clic su **Personalizza** su una barra degli strumenti.
 
@@ -1598,15 +1598,15 @@ in Posizione del menu nelle coordinate dello schermo.
 *dwAllowedItems*<br/>
 in Combinazione OR bit per bit di flag che indica le azioni consentite per la scheda corrente:
 
-- BCGP_MDI_CREATE_VERT_GROUP: consente di creare un gruppo di schede verticali.
+- BCGP_MDI_CREATE_VERT_GROUP: è possibile creare un gruppo di schede verticali.
 
-- BCGP_MDI_CREATE_HORZ_GROUP: consente di creare un gruppo di schede orizzontali.
+- BCGP_MDI_CREATE_HORZ_GROUP: è possibile creare un gruppo di schede orizzontali.
 
 - BCGP_MDI_CAN_MOVE_PREV: può spostare una scheda nel gruppo di schede precedente.
 
 - BCGP_MDI_CAN_MOVE_NEXT: può spostare una scheda nel gruppo di schede successivo.
 
-- BCGP_MDI_CAN_BE_DOCKED: consente di passare da un documento a schede a uno stato ancorato (pertinente solo per i documenti a schede).
+- BCGP_MDI_CAN_BE_DOCKED-passare a un documento a schede nello stato ancorato (pertinente solo per i documenti a schede).
 
 *bTabDrop*<br/>
 in TRUE per visualizzare il menu come risultato del trascinamento della scheda su un altro gruppo a schede. FALSE per visualizzare il menu come menu di scelta rapida nella scheda attualmente attiva.
@@ -1615,13 +1615,13 @@ in TRUE per visualizzare il menu come risultato del trascinamento della scheda s
 
 Eseguire l'override di questo metodo in una classe derivata da [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se non si elabora `OnShowMDITabContextMenu`, il menu di scelta rapida non verrà visualizzato. Questa funzione viene generata dalla **creazione guidata applicazione MFC** quando si Abilita la funzionalità gruppi a schede MDI.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `OnShowMDITabContextMenu` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `OnShowMDITabContextMenu` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1642,7 +1642,7 @@ in TRUE per visualizzare i riquadri, FALSE per nascondere i riquadri.
 
 TRUE se lo stato dei riquadri cambia in seguito alla chiamata a questo metodo, FALSE se i riquadri sono già nello stato specificato da *bShow*. Se, ad esempio, i riquadri sono nascosti e *bShow* è false, il valore restituito è false.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita rimuove la barra degli strumenti dalla finestra cornice di primo livello.
 
@@ -1660,7 +1660,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 
 TRUE se il menu di scelta rapida deve essere visualizzato. In caso contrario, FALSE. L'implementazione predefinita restituisce TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo se si desidera implementare un'elaborazione speciale all'attivazione del menu popup. Ad esempio, se si desidera modificare le voci di menu normali in pulsanti di menu colore, impostare barre di strappo e così via.
 
@@ -1684,7 +1684,7 @@ in Dimensioni correnti della finestra del client MDI.
 *rectNew*<br/>
 in Nuova dimensione della finestra del client MDI.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="ontearoffmenu"></a>CMDIFrameWndEx:: OnTearOffMenu
 
@@ -1708,7 +1708,7 @@ in Puntatore alla barra di strappo.
 
 TRUE per consentire l'attivazione del menu a comparsa con la barra di strappo; in caso contrario, FALSE. Il valore predefinito è TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questa funzione quando si desidera implementare una configurazione speciale per la barra di strappo. L'implementazione predefinita non esegue alcuna operazione.
 
@@ -1764,7 +1764,7 @@ out Se viene trovato un riquadro, questo parametro consente di specificare quale
 
 Puntatore a un riquadro ancorato o NULL se nessun controllo contiene il punto specificato in base al *punto*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La chiamata viene reindirizzata alla [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md). Per ulteriori informazioni, vedere [CDockingManager:: ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) .
 
@@ -1781,7 +1781,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 *bNotify*<br/>
 in Determina se l'elemento attivo sul posto per la finestra cornice riceve la notifica della modifica del layout. Se TRUE, l'elemento riceve una notifica. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo esegue l'override di [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).
 
@@ -1803,7 +1803,7 @@ void RemovePaneFromDockManager(
 *pControlBar*<br/>
 in Puntatore a un riquadro da rimuovere.
 
-*bDestroy*<br/>
+*bdistrutto*<br/>
 in TRUE per eliminare definitivamente il riquadro rimosso. FALSE per non eliminarlo definitivamente.
 
 *bAdjustLayout*<br/>
@@ -1815,7 +1815,7 @@ in TRUE per rimuovere il riquadro dall'elenco dei riquadri nascondi automaticame
 *pBarReplacement*<br/>
 in Puntatore a un riquadro che sostituisce il riquadro rimosso.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È necessario registrare ogni riquadro con gestione ancoraggio per partecipare al layout di ancoraggio. Usare [CMDIFrameWndEx:: AddPane](#addpane) o [CMDIFrameWndEx:: InsertPane](#insertpane) per registrare i riquadri.
 
@@ -1838,29 +1838,29 @@ in Specifica il nome del profilo.
 
 TRUE se il salvataggio ha avuto esito positivo; FALSE se il salvataggio non è riuscito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per caricare o salvare lo stato di schede e gruppi MDI e l'elenco dei documenti aperti, procedere come segue:
 
-- Chiamare `SaveMDIState` quando il frame principale viene chiuso
+- Chiama `SaveMDIState` quando il frame principale viene chiuso
 
 - Chiamare [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) quando viene creato il frame principale. La posizione consigliata per questa chiamata è prima che il fotogramma principale venga visualizzato per la prima volta.
 
-- Chiama `CWinAppEx::EnableLoadWindowPlacement(FALSE);` prima`pMainFrame->LoadFrame (IDR_MAINFRAME);`
+- Chiama `CWinAppEx::EnableLoadWindowPlacement(FALSE);` prima `pMainFrame->LoadFrame (IDR_MAINFRAME);`
 
-- Chiamare `CWinAppEx::ReloadWindowPlacement(pMainFrame)` after`LoadMDIState` per visualizzare il frame principale in corrispondenza della posizione archiviata nel registro di sistema.
+- Chiamare `CWinAppEx::ReloadWindowPlacement(pMainFrame)` dopo `LoadMDIState` per visualizzare il frame principale in corrispondenza della posizione archiviata nel registro di sistema.
 
-- Eseguire `GetDocumentName` l'override `CMDIChildWndEx`nella classe derivata da se l'applicazione Visualizza documenti non archiviati come file. La stringa restituita verrà salvata nel registro di sistema come identificatore del documento. Per ulteriori informazioni, vedere [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
+- Eseguire l'override `GetDocumentName` nella classe derivata da `CMDIChildWndEx`se l'applicazione Visualizza documenti non archiviati come file. La stringa restituita verrà salvata nel registro di sistema come identificatore del documento. Per ulteriori informazioni, vedere [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
 
-- Eseguire l'override di [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) per creare correttamente i documenti quando vengono caricati dal registro di sistema. Il parametro in `CreateDocumentWindow` è la `GetDocumentName` stringa restituita in precedenza.
+- Eseguire l'override di [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) per creare correttamente i documenti quando vengono caricati dal registro di sistema. Il parametro da `CreateDocumentWindow` è la stringa che `GetDocumentName` restituita in precedenza.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `SaveMDIState` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `SaveMDIState` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
-##  <a name="setprintpreviewframe"></a>  CMDIFrameWndEx::SetPrintPreviewFrame
+##  <a name="setprintpreviewframe"></a>CMDIFrameWndEx:: SetPrintPreviewFrame
 
 Imposta la finestra cornice anteprima di stampa.
 
@@ -1873,7 +1873,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 *pWnd*<br/>
 in Puntatore a una finestra cornice di anteprima di stampa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="setuptoolbarmenu"></a>CMDIFrameWndEx:: SetupToolbarMenu
 
@@ -1905,7 +1905,7 @@ Passa il frame principale dalla modalità normale alla modalità schermo intero.
 void ShowFullScreen();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="showpane"></a>CMDIFrameWndEx:: ShowPane
 
@@ -1933,13 +1933,13 @@ in TRUE per ritardare il ricalcolo del layout di ancoraggio. FALSE per ricalcola
 *bActivate*<br/>
 in TRUE per mostrare che il riquadro dovrebbe essere attivo. FALSE per visualizzare il riquadro come inattivo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questo metodo per mostrare o nascondere il riquadro. Non usare `ShowWindow` per i riquadri ancorati.
+Chiamare questo metodo per mostrare o nascondere il riquadro. Non utilizzare `ShowWindow` per i riquadri ancorati.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `ShowPane` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `ShowPane` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `ShowWindowsDialog` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `ShowWindowsDialog` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1974,13 +1974,13 @@ Puntatore alla finestra figlio MDI che contiene un riquadro ancorato.
 
 TRUE se il metodo è stato eseguito correttamente, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare questo metodo per convertire un documento a schede in un riquadro ancorato. Il documento a schede deve essere stato creato con [CMDIFrameWndEx:: ControlBarToTabbedDocument](#controlbartotabbeddocument).
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato `TabbedDocumentToControlBar` come usare [nell'esempio VisualStudioDemo: Applicazione](../../overview/visual-cpp-samples.md)MFC di Visual Studio.
+Nell'esempio seguente viene illustrato come usare `TabbedDocumentToControlBar` nell'esempio [VisualStudioDemo: applicazione MFC di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 
@@ -1992,7 +1992,7 @@ Chiamata eseguita dal Framework per aggiornare la didascalia della cornice della
 void UpdateCaption();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="updatemditabbedbarsicons"></a>CMDIFrameWndEx:: UpdateMDITabbedBarsIcons
 
@@ -2020,7 +2020,7 @@ in Specifica i dati necessari per il tipo di Guida specificato da *nCmd*.
 *nCmd*<br/>
 in Specifica il tipo di guida richiesto. Per un elenco dei valori possibili e il modo in cui influiscono sul parametro *dwData* , vedere la [funzione WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) nell'Windows SDK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo esegue l'override di [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 

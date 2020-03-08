@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
 ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741634"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883657"
 ---
 # <a name="coledataobject-class"></a>Classe COleDataObject
 
@@ -49,32 +49,32 @@ class COleDataObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[COleDataObject:: COleDataObject](#coledataobject)|Costruisce un oggetto `COleDataObject`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Name|Descrizione|
 |----------|-----------------|
-|[COleDataObject:: Connetti](#attach)|Connette l'oggetto dati OLE specificato a `COleDataObject`.|
+|[COleDataObject:: Connetti](#attach)|Connette l'oggetto dati OLE specificato all'`COleDataObject`.|
 |[COleDataObject:: AttachClipboard](#attachclipboard)|Connette l'oggetto dati presente negli Appunti.|
-|[COleDataObject:: BeginEnumFormats](#beginenumformats)|Prepara una o più chiamate successive `GetNextFormat` .|
-|[COleDataObject::D etach](#detach)|Disconnette l'oggetto associato `IDataObject` .|
+|[COleDataObject:: BeginEnumFormats](#beginenumformats)|Prepara una o più chiamate di `GetNextFormat` successive.|
+|[COleDataObject::D etach](#detach)|Disconnette l'oggetto `IDataObject` associato.|
 |[COleDataObject:: GetData](#getdata)|Copia i dati dall'oggetto dati OLE collegato in un formato specificato.|
-|[COleDataObject:: GetFileData](#getfiledata)|Copia i dati dall'oggetto dati OLE collegato in un `CFile` puntatore nel formato specificato.|
-|[COleDataObject:: GetGlobalData](#getglobaldata)|Copia i dati dall'oggetto dati OLE associato in un `HGLOBAL` oggetto nel formato specificato.|
+|[COleDataObject:: GetFileData](#getfiledata)|Copia i dati dall'oggetto dati OLE associato in un puntatore `CFile` nel formato specificato.|
+|[COleDataObject:: GetGlobalData](#getglobaldata)|Copia i dati dall'oggetto dati OLE associato in un `HGLOBAL` nel formato specificato.|
 |[COleDataObject:: GetNextFormat](#getnextformat)|Restituisce il formato dati successivo disponibile.|
 |[COleDataObject:: IsDataAvailable](#isdataavailable)|Verifica se i dati sono disponibili in un formato specificato.|
-|[COleDataObject:: Release](#release)|Scollega e rilascia l'oggetto associato `IDataObject` .|
+|[COleDataObject:: Release](#release)|Scollega e rilascia l'oggetto `IDataObject` associato.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`COleDataObject`non dispone di una classe base.
+`COleDataObject` non dispone di una classe di base.
 
-Questi tipi di trasferimenti di dati includono un'origine e una destinazione. L'origine dati viene implementata come un oggetto della classe [COleDataSource](../../mfc/reference/coledatasource-class.md) . Ogni volta che a un'applicazione di destinazione sono stati rilasciati dati o viene richiesto di eseguire un'operazione Incolla dagli Appunti, `COleDataObject` è necessario creare un oggetto della classe.
+Questi tipi di trasferimenti di dati includono un'origine e una destinazione. L'origine dati viene implementata come un oggetto della classe [COleDataSource](../../mfc/reference/coledatasource-class.md) . Ogni volta che a un'applicazione di destinazione sono stati rilasciati dati o viene richiesto di eseguire un'operazione Incolla dagli Appunti, è necessario creare un oggetto della classe `COleDataObject`.
 
-Questa classe consente di determinare se i dati esistono in un formato specificato. È anche possibile enumerare i formati di dati disponibili o controllare se è disponibile un determinato formato, quindi recuperare i dati nel formato preferito. Il recupero di oggetti può essere eseguito in diversi modi, tra cui l'uso di un [CFile](../../mfc/reference/cfile-class.md), di un HGLOBAL o `STGMEDIUM` di una struttura.
+Questa classe consente di determinare se i dati esistono in un formato specificato. È anche possibile enumerare i formati di dati disponibili o controllare se è disponibile un determinato formato, quindi recuperare i dati nel formato preferito. Il recupero di oggetti può essere eseguito in diversi modi, tra cui l'uso di un [CFile](../../mfc/reference/cfile-class.md), di un HGLOBAL o di una struttura `STGMEDIUM`.
 
 Per ulteriori informazioni, vedere la struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) nella Windows SDK.
 
@@ -90,7 +90,7 @@ Per ulteriori informazioni sull'utilizzo di oggetti dati nell'applicazione, vede
 
 ##  <a name="attach"></a>COleDataObject:: Connetti
 
-Chiamare questa funzione per associare l' `COleDataObject` oggetto a un oggetto dati OLE.
+Chiamare questa funzione per associare l'oggetto `COleDataObject` a un oggetto dati OLE.
 
 ```
 void Attach(
@@ -104,15 +104,15 @@ void Attach(
 Punta a un oggetto dati OLE.
 
 *bAutoRelease*<br/>
-TRUE se l'oggetto dati OLE deve essere rilasciato quando l' `COleDataObject` oggetto viene eliminato definitivamente; in caso contrario, false.
+TRUE se l'oggetto dati OLE deve essere rilasciato quando viene eliminato definitivamente l'oggetto `COleDataObject`; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) nella Windows SDK.
 
 ##  <a name="attachclipboard"></a>COleDataObject:: AttachClipboard
 
-Chiamare questa funzione per alleghi all' `COleDataObject` oggetto l'oggetto dati attualmente presente negli Appunti.
+Chiamare questa funzione per alleghi l'oggetto dati attualmente negli Appunti all'oggetto `COleDataObject`.
 
 ```
 BOOL AttachClipboard();
@@ -122,10 +122,10 @@ BOOL AttachClipboard();
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
->  La chiamata di questa funzione blocca gli Appunti finché questo oggetto dati non viene rilasciato. L'oggetto dati viene rilasciato nel distruttore per `COleDataObject`. Per ulteriori informazioni, vedere [OpenClipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) e [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) nella documentazione di Win32.
+>  La chiamata di questa funzione blocca gli Appunti finché questo oggetto dati non viene rilasciato. L'oggetto dati viene rilasciato nel distruttore per il `COleDataObject`. Per ulteriori informazioni, vedere [OpenClipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) e [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) nella documentazione di Win32.
 
 ##  <a name="beginenumformats"></a>COleDataObject:: BeginEnumFormats
 
@@ -135,7 +135,7 @@ Chiamare questa funzione per preparare le chiamate successive a `GetNextFormat` 
 void BeginEnumFormats();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Dopo una chiamata a `BeginEnumFormats`, viene archiviata la posizione del primo formato supportato da questo oggetto dati. Le chiamate successive a `GetNextFormat` enumerano l'elenco dei formati disponibili nell'oggetto dati.
 
@@ -151,16 +151,16 @@ Costruisce un oggetto `COleDataObject`.
 COleDataObject();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Prima di chiamare altre `COleDataObject` funzioni, è necessario effettuare una chiamata a [COleDataObject:: Connetti](#attach) o [COleDataObject:: AttachClipboard](#attachclipboard) .
+Prima di chiamare altre funzioni `COleDataObject`, è necessario effettuare una chiamata a [COleDataObject:: Connetti](#attach) o [COleDataObject:: AttachClipboard](#attachclipboard) .
 
 > [!NOTE]
->  Poiché uno dei parametri ai gestori di trascinamento della selezione è un puntatore a `COleDataObject`, non è necessario chiamare questo costruttore per supportare il trascinamento della selezione.
+>  Poiché uno dei parametri ai gestori di trascinamento della selezione è un puntatore a un `COleDataObject`, non è necessario chiamare questo costruttore per supportare il trascinamento della selezione.
 
 ##  <a name="detach"></a>COleDataObject::D etach
 
-Chiamare questa funzione per scollegare l' `COleDataObject` oggetto dall'oggetto dati OLE associato senza rilasciare l'oggetto dati.
+Chiamare questa funzione per scollegare l'oggetto `COleDataObject` dall'oggetto dati OLE associato senza rilasciare l'oggetto dati.
 
 ```
 LPDATAOBJECT Detach();
@@ -170,7 +170,7 @@ LPDATAOBJECT Detach();
 
 Puntatore all'oggetto dati OLE che è stato scollegato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="getdata"></a>COleDataObject:: GetData
 
@@ -192,13 +192,13 @@ Formato in cui devono essere restituiti i dati. Questo parametro può essere uno
 Punta a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) che riceverà i dati.
 
 *lpFormatEtc*<br/>
-Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui devono essere restituiti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è null, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui devono essere restituiti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono utilizzati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)e [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) nel Windows SDK.
 
@@ -206,7 +206,7 @@ Per ulteriori informazioni, vedere [RegisterClipboardFormat](/windows/win32/api/
 
 ##  <a name="getfiledata"></a>COleDataObject:: GetFileData
 
-Chiamare questa funzione per creare un `CFile` oggetto `CFile`derivato da o e recuperare i dati nel formato specificato in un `CFile` puntatore.
+Chiamare questa funzione per creare un oggetto `CFile` o derivato da `CFile`e per recuperare i dati nel formato specificato in un puntatore di `CFile`.
 
 ```
 CFile* GetFileData(
@@ -220,18 +220,18 @@ CFile* GetFileData(
 Formato in cui devono essere restituiti i dati. Questo parametro può essere uno dei formati degli appunti predefiniti oppure il valore restituito dalla funzione nativa [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) di Windows.
 
 *lpFormatEtc*<br/>
-Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui devono essere restituiti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è null, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui devono essere restituiti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono utilizzati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore al nuovo `CFile` oggetto derivato `CFile`da o che contiene i dati in caso di esito positivo; in caso contrario, null.
+Puntatore al nuovo `CFile` o oggetto derivato da `CFile`contenente i dati in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-A seconda del supporto in cui vengono archiviati i dati, il tipo effettivo a cui fa riferimento il valore restituito può `CFile`essere `CSharedFile`, o `COleStreamFile`.
+A seconda del supporto in cui vengono archiviati i dati, il tipo effettivo a cui fa riferimento il valore restituito può essere `CFile`, `CSharedFile`o `COleStreamFile`.
 
 > [!NOTE]
->  L' `CFile` oggetto a cui si accede tramite il valore restituito di questa funzione è di proprietà del chiamante. È responsabilità del chiamante **eliminare** l' `CFile` oggetto, chiudendo quindi il file.
+>  Il `CFile` oggetto a cui si accede tramite il valore restituito di questa funzione è di proprietà del chiamante. È responsabilità del chiamante **eliminare** l'oggetto `CFile`, chiudendo quindi il file.
 
 Per ulteriori informazioni, vedere [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) nella Windows SDK.
 
@@ -253,13 +253,13 @@ HGLOBAL GetGlobalData(
 Formato in cui devono essere restituiti i dati. Questo parametro può essere uno dei formati degli appunti predefiniti oppure il valore restituito dalla funzione nativa [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) di Windows.
 
 *lpFormatEtc*<br/>
-Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui devono essere restituiti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è null, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui devono essere restituiti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono utilizzati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Handle del blocco di memoria globale contenente i dati in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) nella Windows SDK.
 
@@ -282,7 +282,7 @@ Punta alla struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 
 
 Diverso da zero se è disponibile un altro formato; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Dopo una chiamata a [COleDataObject:: BeginEnumFormats](#beginenumformats), viene archiviata la posizione del primo formato supportato da questo oggetto dati. Le chiamate successive a `GetNextFormat` enumerano l'elenco dei formati disponibili nell'oggetto dati. Usare queste funzioni per elencare i formati disponibili.
 
@@ -306,15 +306,15 @@ BOOL IsDataAvailable(
 Formato di dati degli Appunti da utilizzare nella struttura a cui punta *lpFormatEtc*. Questo parametro può essere uno dei formati degli appunti predefiniti oppure il valore restituito dalla funzione nativa [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) di Windows.
 
 *lpFormatEtc*<br/>
-Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato desiderato. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è null, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
+Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato desiderato. Fornire un valore per questo parametro solo se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono utilizzati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se i dati sono disponibili nel formato specificato; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione è utile prima di `GetData`chiamare `GetFileData`, o `GetGlobalData`.
+Questa funzione è utile prima di chiamare `GetData`, `GetFileData`o `GetGlobalData`.
 
 Per ulteriori informazioni, vedere [IDataObject:: QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) e [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) nel Windows SDK.
 
@@ -326,15 +326,15 @@ Per ulteriori informazioni, vedere [RegisterClipboardFormat](/windows/win32/api/
 
 ##  <a name="release"></a>COleDataObject:: Release
 
-Chiamare questa funzione per rilasciare la proprietà dell'oggetto [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) precedentemente associato `COleDataObject` all'oggetto.
+Chiamare questa funzione per rilasciare la proprietà dell'oggetto [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) precedentemente associato all'oggetto `COleDataObject`.
 
 ```
 void Release();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L' `IDataObject` oggetto è stato associato `COleDataObject` a `Attach` chiamando o `AttachClipboard` in modo esplicito o dal Framework. Se il parametro *bAutoRelease* di `Attach` è false, l' `IDataObject` oggetto non verrà rilasciato. In questo caso, il chiamante è responsabile del rilascio `IDataObject` di chiamando [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
+Il `IDataObject` è stato associato al `COleDataObject` chiamando `Attach` o `AttachClipboard` in modo esplicito o dal Framework. Se il parametro *bAutoRelease* di `Attach` è false, l'oggetto `IDataObject` non verrà rilasciato. In questo caso, il chiamante è responsabile del rilascio del `IDataObject` chiamando [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
 
 ## <a name="see-also"></a>Vedere anche
 

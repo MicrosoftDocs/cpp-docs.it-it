@@ -1,5 +1,5 @@
 ---
-title: Macro di controlli compositi
+title: Macro di controllo composito
 ms.date: 05/06/2019
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 ms.openlocfilehash: 685bf55910d4746463de30b17b71aa6d246db199
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221112"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857119"
 ---
-# <a name="composite-control-macros"></a>Macro di controlli compositi
+# <a name="composite-control-macros"></a>Macro di controllo composito
 
-Queste macro definiscono mappe sink di evento e le voci.
+Queste macro definiscono le mappe e le voci del sink di evento.
 
 |||
 |-|-|
-|[BEGIN_SINK_MAP](#begin_sink_map)|Contrassegna l'inizio della mappa eventi sink per il controllo composito.|
-|[END_SINK_MAP](#end_sink_map)|Contrassegna la fine della mappa eventi sink per il controllo composito.|
-|[SINK_ENTRY](#sink_entry)|Voce per la mappa di sink di evento.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Voce alla mappa eventi sink con un parametro aggiuntivo.|
-|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Simile a SINK_ENTRY_EX con la differenza che accetta un puntatore a iid.|
-|[SINK_ENTRY_INFO](#sink_entry_info)|Voce alla mappa eventi sink con informazioni sul tipo manualmente fornito per l'uso con [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
-|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Simile alla macro SINK_ENTRY_INFO ad eccezione del fatto che accetta un puntatore a iid.|
+|[BEGIN_SINK_MAP](#begin_sink_map)|Contrassegna l'inizio della mappa del sink di evento per il controllo composito.|
+|[END_SINK_MAP](#end_sink_map)|Contrassegna la fine della mappa del sink di evento per il controllo composito.|
+|[SINK_ENTRY](#sink_entry)|Voce della mappa di sink di evento.|
+|[SINK_ENTRY_EX](#sink_entry_ex)|Voce alla mappa di sink di evento con un parametro aggiuntivo.|
+|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Simile a SINK_ENTRY_EX ad eccezione del fatto che accetta un puntatore a IID.|
+|[SINK_ENTRY_INFO](#sink_entry_info)|Voce alla mappa di sink di evento con informazioni sul tipo fornite manualmente per l'uso con [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
+|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Simile a SINK_ENTRY_INFO ad eccezione del fatto che accetta un puntatore a IID.|
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlcom. h
 
-##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP
 
-Dichiara l'inizio della mappa eventi sink per il controllo composito.
+Dichiara l'inizio della mappa del sink di evento per il controllo composito.
 
 ```
 BEGIN_SINK_MAP(_class)
@@ -44,19 +44,19 @@ BEGIN_SINK_MAP(_class)
 ### <a name="parameters"></a>Parametri
 
 *_class*<br/>
-[in] Specifica il controllo.
+in Specifica il controllo.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Implementazione di ATL CE di ActiveX evento sink solo supporta valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il comportamento sarà indefinito.
+L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
-##  <a name="end_sink_map"></a>  END_SINK_MAP
+##  <a name="end_sink_map"></a>END_SINK_MAP
 
-Dichiara la fine della mappa eventi sink per il controllo composito.
+Dichiara la fine della mappa del sink di evento per il controllo composito.
 
 ```
 END_SINK_MAP()
@@ -66,13 +66,13 @@ END_SINK_MAP()
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Implementazione di ATL CE di ActiveX evento sink solo supporta valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il comportamento sarà indefinito.
+L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
-##  <a name="sink_entry"></a>  SINK_ENTRY
+##  <a name="sink_entry"></a>SINK_ENTRY
 
-Dichiara la funzione del gestore (*fn*) per l'evento specificato (*dispid*), del controllo identificato dalla *id*.
+Dichiara la funzione del gestore (*FN*) per l'evento specificato (*DISPID*) del controllo identificato dall' *ID*.
 
 ```
 SINK_ENTRY( id, dispid, fn )
@@ -80,26 +80,26 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] Identifica il controllo.
+*id*<br/>
+in Identifica il controllo.
 
-*dispid*<br/>
-[in] Identifica l'evento specificato.
+*DISPID*<br/>
+in Identifica l'evento specificato.
 
-*fn*<br/>
-[in] Nome della funzione del gestore eventi. Questa funzione deve usare il `_stdcall` convenzione di chiamata e avere la firma dell'interfaccia dispatch-stile appropriato.
+*FN*<br/>
+in Nome della funzione del gestore eventi. Questa funzione deve usare la convenzione di chiamata `_stdcall` e avere la firma di tipo interfaccia dispatch appropriata.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Implementazione di ATL CE di ActiveX evento sink solo supporta valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il comportamento sarà indefinito.
+L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
-##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX e SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX e SINK_ENTRY_EX_P
 
-Dichiara la funzione del gestore (*fn*) per l'evento specificato (*dispid*), dell'interfaccia dispatch (*iid*), per il controllo identificato dalla *id*.
+Dichiara la funzione del gestore (*FN*) per l'evento specificato (*DISPID*), dell'interfaccia dispatch (*IID*), per il controllo identificato dall' *ID*.
 
 ```
 SINK_ENTRY_EX( id, iid, dispid, fn )
@@ -108,32 +108,32 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] Identifica il controllo.
+*id*<br/>
+in Identifica il controllo.
 
-*iid*<br/>
-[in] Identifica l'interfaccia dispatch.
+*IID*<br/>
+in Identifica l'interfaccia dispatch.
 
-*piid*<br/>
-[in] Puntatore all'interfaccia di dispatch.
+*pIID*<br/>
+in Puntatore all'interfaccia dispatch.
 
-*dispid*<br/>
-[in] Identifica l'evento specificato.
+*DISPID*<br/>
+in Identifica l'evento specificato.
 
-*fn*<br/>
-[in] Nome della funzione del gestore eventi. Questa funzione deve usare il `_stdcall` convenzione di chiamata e avere la firma dell'interfaccia dispatch-stile appropriato.
+*FN*<br/>
+in Nome della funzione del gestore eventi. Questa funzione deve usare la convenzione di chiamata `_stdcall` e avere la firma di tipo interfaccia dispatch appropriata.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_ATL_Windowing#136](../../atl/codesnippet/cpp/composite-control-macros_2.h)]
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Implementazione di ATL CE di ActiveX evento sink solo supporta valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il comportamento sarà indefinito.
+L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
-##  <a name="sink_entry_info"></a>  Macro SINK_ENTRY_INFO e SINK_ENTRY_INFO_P
+##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO e SINK_ENTRY_INFO_P
 
-Utilizzare la macro macro SINK_ENTRY_INFO all'interno di una mappa di sink di eventi per fornire le informazioni necessarie dal [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) per instradare gli eventi alla funzione di gestione pertinenti.
+Usare la macro SINK_ENTRY_INFO all'interno di una mappa di sink di evento per fornire le informazioni necessarie a [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) per indirizzare gli eventi alla funzione del gestore pertinente.
 
 ```
 SINK_ENTRY_INFO( id, iid, dispid, fn, info )
@@ -142,27 +142,27 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] Unsigned integer che identifica l'origine dell'evento. Questo valore deve corrispondere il *nID* parametro di modello utilizzato in correlato [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) classe di base.
+*id*<br/>
+in Intero senza segno che identifica l'origine evento. Questo valore deve corrispondere al parametro di modello *NID* usato nella classe di base [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) correlata.
 
-*iid*<br/>
-[in] IID che identifica l'interfaccia dispatch.
+*IID*<br/>
+in IID che identifica l'interfaccia dispatch.
 
-*piid*<br/>
-[in] Puntatore a IID che identifica l'interfaccia dispatch.
+*pIID*<br/>
+in Puntatore a IID che identifica l'interfaccia dispatch.
 
-*dispid*<br/>
-[in] DISPID che identifica l'evento specificato.
+*DISPID*<br/>
+in DISPID che identifica l'evento specificato.
 
-*fn*<br/>
-[in] Nome della funzione del gestore eventi. Questa funzione deve usare il `_stdcall` convenzione di chiamata e avere la firma dell'interfaccia dispatch-stile appropriato.
+*FN*<br/>
+in Nome della funzione del gestore eventi. Questa funzione deve usare la convenzione di chiamata `_stdcall` e avere la firma di tipo interfaccia dispatch appropriata.
 
 *info*<br/>
-[in] Informazioni sul tipo per la funzione del gestore eventi. Questo tipo di informazioni viene fornito sotto forma di un puntatore a un `_ATL_FUNC_INFO` struttura. CC_CDECL è l'unica opzione supportata in Windows CE per il campo di convenzione di chiamata del `_ATL_FUNC_INFO` struttura. Qualsiasi altro valore non è supportato in questo modo il comportamento non definito.
+in Informazioni sul tipo per la funzione del gestore eventi. Queste informazioni sul tipo vengono fornite sotto forma di puntatore a una struttura `_ATL_FUNC_INFO`. CC_CDECL è l'unica opzione supportata in Windows CE per il campo CALLCONV della struttura `_ATL_FUNC_INFO`. Qualsiasi altro valore non è supportato, pertanto il comportamento non è definito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I parametri di macro primi quattro sono identici a quelli per il [SINK_ENTRY_EX](#sink_entry_ex) macro. Il parametro finale fornisce informazioni sul tipo per l'evento. Implementazione di ATL CE di ActiveX evento sink solo supporta valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il comportamento sarà indefinito.
+I primi quattro parametri macro sono identici a quelli per la macro [SINK_ENTRY_EX](#sink_entry_ex) . Il parametro finale fornisce informazioni sul tipo per l'evento. L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (queue)
 - std::operator== (queue)
 ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240286"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854887"
 ---
 # <a name="ltqueuegt-operators"></a>Operatori &lt;queue&gt;
 
-## <a name="op_neq"></a> operatore! =
+## <a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto queue a sinistra dell'operatore non è uguale all'oggetto queue a destra.
 
@@ -35,17 +35,17 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `queue`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti queue non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. Due oggetti queue sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -92,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a> Operatore&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Verifica se l'oggetto queue a sinistra dell'operatore è minore dell'oggetto queue a destra.
 
@@ -102,17 +102,17 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `queue`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto queue a sinistra dell'operatore è minore ma non uguale all'oggetto queue a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. La relazione minore di tra due oggetti queue si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -155,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a> Operatore&lt;=
+## <a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto queue a sinistra dell'operatore è minore o uguale all'oggetto queue a destra.
 
@@ -165,17 +165,17 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `queue`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto queue a sinistra dell'operatore è rigorosamente minore dell'oggetto queue a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. La relazione minore di o uguale a tra due oggetti queue si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -220,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto queue a sinistra dell'operatore è uguale all'oggetto queue a destra.
 
@@ -230,17 +230,17 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `queue`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti queue non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. Due oggetti queue sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -286,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a> Operatore&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 Verifica se l'oggetto queue a sinistra dell'operatore è maggiore dell'oggetto queue a destra.
 
@@ -296,17 +296,17 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `queue`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto queue a sinistra dell'operatore è rigorosamente minore dell'oggetto queue a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. La relazione maggiore di tra due oggetti queue si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -352,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a> Operatore&gt;=
+## <a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto queue a sinistra dell'operatore è maggiore o uguale all'oggetto queue a destra.
 
@@ -362,17 +362,17 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `queue`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto queue a sinistra dell'operatore è rigorosamente minore dell'oggetto queue a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. Due oggetti queue sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 

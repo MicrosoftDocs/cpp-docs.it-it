@@ -5,34 +5,34 @@ helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 ms.openlocfilehash: ad880c5302fd2274c5d46719e912461fd7497f10
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611017"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854065"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formattazione CString e visualizzazione finestre di messaggio
 
-Viene fornita una serie di funzioni per formattare e analizzare `CString` oggetti. È possibile usare queste funzioni ogni volta che è necessario manipolare `CString` oggetti, ma sono particolarmente utili per la formattazione di stringhe che appariranno in formato testo finestra di messaggio.
+Sono disponibili numerose funzioni per formattare e analizzare `CString` oggetti. È possibile utilizzare queste funzioni ogni volta che è necessario modificare `CString` oggetti, ma sono particolarmente utili per la formattazione di stringhe che verranno visualizzate nel testo della finestra di messaggio.
 
 Questo gruppo di funzioni include anche una routine globale per la visualizzazione di una finestra di messaggio.
 
-### <a name="cstring-functions"></a>Funzioni di CString
+### <a name="cstring-functions"></a>Funzioni CString
 
 |||
 |-|-|
-|[AfxExtractSubString](#afxextractsubstring)|Consente di estrarre sottostringhe separate da un singolo carattere da una stringa di origine specificato.|
-|[AfxFormatString1](#afxformatstring1)|Sostituisce una stringa specificata per i caratteri di formato "%1" in una stringa contenuta nella tabella di stringhe.|
-|[AfxFormatString2](#afxformatstring2)|Le stringhe di due sostituzioni per il formato di caratteri "%1" e "%2" in una stringa contenuta nella tabella di stringhe.|
+|[AfxExtractSubString](#afxextractsubstring)|Estrae le sottostringhe separate da un singolo carattere da una stringa di origine specificata.|
+|[AfxFormatString1](#afxformatstring1)|Sostituisce una determinata stringa per i caratteri di formato "%1" in una stringa contenuta nella tabella di stringhe.|
+|[AfxFormatString2](#afxformatstring2)|Sostituisce due stringhe per i caratteri di formato "%1" e "%2" in una stringa contenuta nella tabella di stringhe.|
 |[AfxMessageBox](#afxmessagebox)|Visualizza una finestra di messaggio.|
 
 ### <a name="requirements"></a>Requisiti
 
   **Intestazione** AFXWIN. h
 
-##  <a name="afxextractsubstring"></a>  AfxExtractSubString
+##  <a name="afxextractsubstring"></a>AfxExtractSubString
 
-Questa funzione globale può essere utilizzata per estrarre una sottostringa da una stringa di origine specificato.
+Questa funzione globale può essere usata per estrarre una sottostringa da una stringa di origine specificata.
 
 ```
 BOOL AFXAPI AfxExtractSubString (
@@ -45,26 +45,26 @@ BOOL AFXAPI AfxExtractSubString (
 ### <a name="parameters"></a>Parametri
 
 *rString*<br/>
-Fare riferimento a un [CString](../../atl-mfc-shared/using-cstring.md) oggetto che riceverà una sottostringa singoli.
+Riferimento a un oggetto [CString](../../atl-mfc-shared/using-cstring.md) che riceverà una singola sottostringa.
 
 *lpszFullString*<br/>
-Stringa contenente il testo completo della stringa da estrarre da.
+Stringa contenente il testo completo della stringa da cui estrarre.
 
 *iSubString*<br/>
-Indice in base zero della sottostringa da estrarre dal *lpszFullString*.
+Indice in base zero della sottostringa da estrarre da *lpszFullString*.
 
 *chSep*<br/>
-Carattere separatore usato per delimitare le sottostringhe.
+Carattere separatore utilizzato per delimitare le sottostringhe.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la funzione è stata estratta la sottostringa in corrispondenza dell'indice specificato. in caso contrario, FALSE.
+TRUE se la funzione ha estratto correttamente la sottostringa in corrispondenza dell'indice specificato. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione è utile per l'estrazione più sottostringhe da una stringa di origine quando un singolo carattere noto separa ogni sottostringa. Questa funzione esegue la ricerca dall'inizio del *lpszFullString* parametro ogni volta che viene chiamato.
+Questa funzione è utile per estrarre più sottostringhe da una stringa di origine quando un singolo carattere noto separa ogni sottostringa. Questa funzione esegue la ricerca dall'inizio del parametro *lpszFullString* ogni volta che viene chiamato.
 
-Questa funzione restituisce FALSE se entrambi *lpszFullString* è impostato su NULL o funzione raggiunge la fine del *lpszFullString* senza ricerca *iSubString*+ 1 occorrenze del carattere separatore specificato. Il *rString* parametro non verrà modificato dal suo valore originale se *lpszFullString* è stato impostato su NULL; in caso contrario, il *rString* parametro è impostato su una stringa vuota se Impossibile estrarre la sottostringa per l'indice specificato.
+Questa funzione restituirà FALSE se *lpszFullString* è impostato su null o la funzione raggiunge la fine di *lpszFullString* senza trovare le occorrenze *iSubString*+ 1 del carattere separatore specificato. Il parametro *rString* non verrà modificato dal valore originale se *lpszFullString* è stato impostato su null. in caso contrario, il parametro *rString* viene impostato sulla stringa vuota se non è stato possibile estrarre la sottostringa per l'indice specificato.
 
 ### <a name="example"></a>Esempio
 
@@ -74,9 +74,9 @@ Questa funzione restituisce FALSE se entrambi *lpszFullString* è impostato su N
 
   **Intestazione** AFXWIN. h
 
-##  <a name="afxformatstring1"></a>  AfxFormatString1
+##  <a name="afxformatstring1"></a>AfxFormatString1
 
-Sostituisce la stringa a cui punta *lpsz1* per tutte le istanze dei caratteri "%1" nella risorsa di stringa di modello identificata dal *nIDS*.
+Sostituisce la stringa a cui punta *lpsz1* per tutte le istanze dei caratteri "%1" nella risorsa della stringa di modello identificata da *nIDS*.
 
 ```
 void  AfxFormatString1(
@@ -96,9 +96,9 @@ ID della risorsa della stringa di modello in cui verrà eseguita la sostituzione
 *lpsz1*<br/>
 Stringa che sostituirà i caratteri di formato "%1" nella stringa di modello.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La nuova stringa creata viene archiviata *rString*. Ad esempio, se la stringa nella tabella di stringhe è "File" %1 non trovato", e *lpsz1* è uguale a"C:\MYFILE. TXT", quindi *rString* conterrà la stringa"File C:\MYFILE. TXT non trovato". Questa funzione è utile per la formattazione di stringhe inviate alle finestre di messaggio e ad altre finestre.
+La stringa appena formata viene archiviata in *rString*. Ad esempio, se la stringa nella tabella di stringhe è "file %1 non trovato" e *lpsz1* è uguale a "C:\MyFile. TXT ", quindi *rString* conterrà la stringa" file C:\MyFile. TXT non trovato ". Questa funzione è utile per la formattazione di stringhe inviate alle finestre di messaggio e ad altre finestre.
 
 Se i caratteri di formato "%1" vengono visualizzati più volte nella stringa, verranno eseguite più sostituzioni.
 
@@ -110,9 +110,9 @@ Se i caratteri di formato "%1" vengono visualizzati più volte nella stringa, ve
 
   **Intestazione** AFXWIN. h
 
-##  <a name="afxformatstring2"></a>  AfxFormatString2
+##  <a name="afxformatstring2"></a>AfxFormatString2
 
-Sostituisce la stringa a cui punta *lpsz1* per tutte le istanze dei caratteri "%1" e la stringa a cui punta *lpsz2* per tutte le istanze dei caratteri "%2", la risorsa di stringa di modello identificato da *nIDS*.
+Sostituisce la stringa a cui punta *lpsz1* per tutte le istanze dei caratteri "%1" e la stringa a cui punta *lpsz2* per tutte le istanze dei caratteri "%2", nella risorsa di stringa del modello identificata da *nIDS*.
 
 ```
 void AfxFormatString2(
@@ -125,22 +125,22 @@ void AfxFormatString2(
 ### <a name="parameters"></a>Parametri
 
 *rString*<br/>
-Un riferimento al `CString` che conterrà la stringa risultante dopo che viene eseguita la sostituzione.
+Riferimento all'`CString` che conterrà la stringa risultante dopo l'esecuzione della sostituzione.
 
 *nIDS*<br/>
-L'ID di tabella della stringa della stringa del modello in cui verrà eseguita la sostituzione.
+ID della tabella di stringhe della stringa di modello in cui verrà eseguita la sostituzione.
 
 *lpsz1*<br/>
 Stringa che sostituirà i caratteri di formato "%1" nella stringa di modello.
 
 *lpsz2*<br/>
-Stringa che sostituirà il formato di caratteri "%2" nella stringa di modello.
+Stringa che sostituirà i caratteri di formato "%2" nella stringa del modello.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La nuova stringa creata viene archiviata *rString*. Se la stringa nella tabella di stringhe è "File" %1 non trovato nella directory %2", ad esempio *lpsz1* punta al"MYFILE. TXT", e *lpsz2* punta a"C:\MYDIR", quindi *rString* conterrà la stringa"File MYFILE. Non trovato nella directory C:\MYDIR TXT"
+La stringa appena formata viene archiviata in *rString*. Ad esempio, se la stringa nella tabella di stringhe è "file %1 non trovato nella directory %2", *lpsz1* punta a "MyFile. TXT "e *lpsz2* puntano a" C:\MyDir ", quindi *rString* conterrà la stringa" file MyFile. TXT non è stato trovato nella directory C:\MYDIR "
 
-Se il formato di caratteri "%1" o "%2" è presente nella stringa di più di una volta, verranno eseguite più sostituzioni. Non è in ordine numerico.
+Se i caratteri di formato "%1" o "%2" vengono visualizzati più volte nella stringa, verranno effettuate più sostituzioni. Non è necessario che siano in ordine numerico.
 
 ### <a name="example"></a>Esempio
 
@@ -150,7 +150,7 @@ Se il formato di caratteri "%1" o "%2" è presente nella stringa di più di una 
 
   **Intestazione** AFXWIN. h
 
-##  <a name="afxmessagebox"></a>  AfxMessageBox
+##  <a name="afxmessagebox"></a>AfxMessageBox
 
 Visualizza una finestra di messaggio sullo schermo.
 
@@ -169,44 +169,44 @@ int AFXAPI AfxMessageBox(
 ### <a name="parameters"></a>Parametri
 
 *lpszText*<br/>
-Punta a un `CString` oggetto o una stringa a terminazione null che contiene il messaggio da visualizzare nella finestra di messaggio.
+Punta a un oggetto `CString` o a una stringa con terminazione null contenente il messaggio da visualizzare nella finestra di messaggio.
 
 *nType*<br/>
-Lo stile della finestra di messaggio. Applicare qualsiasi il [stili message-box](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) alla casella.
+Stile della finestra di messaggio. Applicare uno degli [stili della finestra di messaggio](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) alla casella.
 
 *nIDHelp*<br/>
-L'ID del contesto della Guida per il messaggio. 0 indica che il contesto dell'applicazione predefinito della Guida verrà usato.
+ID del contesto della Guida per il messaggio. 0 indica che verrà utilizzato il contesto della Guida predefinito dell'applicazione.
 
 *nIDPrompt*<br/>
 ID univoco usato per fare riferimento a una stringa nella tabella di stringhe.
 
 ### <a name="return-value"></a>Valore restituito
 
-Zero se non vi è memoria sufficiente per visualizzare la finestra di messaggio; in caso contrario, viene restituito uno dei valori seguenti:
+Zero se la memoria disponibile non è sufficiente per visualizzare la finestra di messaggio; in caso contrario, viene restituito uno dei valori seguenti:
 
-- IDABORT il pulsante Interrompi è stato selezionato.
+- IDABORT è stato selezionato il pulsante Interrompi.
 
-- IDCANCEL il pulsante Annulla è stato selezionato.
+- IDCANCEL è stato selezionato il pulsante Annulla.
 
-- IDIGNORE il pulsante Ignora è stato selezionato.
+- IDIGNORE è stato selezionato il pulsante Ignora.
 
-- IDNO il pulsante No è stato selezionato.
+- IDNO è stato selezionato il pulsante No.
 
-- IDOK il pulsante OK è stato selezionato.
+- IDOK è stato selezionato il pulsante OK.
 
-- È stato selezionato IDRETRY il pulsante Riprova.
+- IDRETRY è stato selezionato il pulsante Riprova.
 
-- IDYES il pulsante Sì è stato selezionato.
+- IDYES è stato selezionato il pulsante Sì.
 
-Se una finestra di messaggio ha un pulsante Annulla, verrà restituito il valore IDCANCEL se viene premuto il tasto ESC o si seleziona il pulsante Annulla. Se la finestra di messaggio non dispone di alcun pulsante Annulla, premendo il tasto ESC non ha alcun effetto.
+Se una finestra di messaggio contiene un pulsante Annulla, verrà restituito il valore IDCANCEL se il tasto ESC è premuto o se è selezionato il pulsante Annulla. Se la finestra di messaggio non dispone di un pulsante Annulla, la pressione del tasto ESC non ha alcun effetto.
 
-Le funzioni [AfxFormatString1](#afxformatstring1) e [AfxFormatString2](#afxformatstring2) può essere utile per la formattazione del testo visualizzato in una finestra di messaggio.
+Le funzioni [AfxFormatString1](#afxformatstring1) e [AfxFormatString2](#afxformatstring2) possono essere utili per la formattazione del testo visualizzato in una finestra di messaggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il primo form di questa funzione in overload Visualizza una stringa di testo a cui punta *lpszText* nella finestra di messaggio e utilizza *nIDHelp* per descrivere un contesto della Guida. Il contesto della Guida viene utilizzato per passare a un argomento della Guida associato quando l'utente preme il tasto della Guida (in genere F1).
+Il primo form di questa funzione in overload Visualizza una stringa di testo a cui punta *lpszText* nella finestra di messaggio e USA *nIDHelp* per descrivere un contesto della guida. Il contesto della guida viene utilizzato per passare a un argomento della Guida associato quando l'utente preme il tasto guida (in genere F1).
 
-La seconda forma della funzione Usa la risorsa di stringa con l'ID *nIDPrompt* per visualizzare un messaggio nella finestra di messaggio. La pagina della Guida associata è stata individuata tramite il valore di *nIDHelp*. Se il valore predefinito di *nIDHelp* viene usato (-1), l'ID di risorsa, stringa *nIDPrompt*, viene usato per il contesto della Guida. Per altre informazioni sulla definizione dei contesti della Guida, vedere [Nota tecnica 28](../../mfc/tn028-context-sensitive-help-support.md).
+Il secondo formato della funzione usa la risorsa di tipo stringa con l'ID *nIDPrompt* per visualizzare un messaggio nella finestra di messaggio. La pagina della Guida associata viene individuata tramite il valore di *nIDHelp*. Se viene usato il valore predefinito di *nIDHelp* (-1), viene usato l'ID di risorsa di stringa *nIDPrompt*per il contesto della guida. Per ulteriori informazioni sulla definizione dei contesti della guida, vedere la [Nota tecnica 28](../../mfc/tn028-context-sensitive-help-support.md).
 
 ### <a name="example"></a>Esempio
 
@@ -214,5 +214,5 @@ La seconda forma della funzione Usa la risorsa di stringa con l'ID *nIDPrompt* p
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)<br/>
+[Macro e globali](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Classe CStringT](../../atl-mfc-shared/reference/cstringt-class.md)

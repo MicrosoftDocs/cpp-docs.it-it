@@ -10,21 +10,21 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524792"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856800"
 ---
 # <a name="mfc-library-versions"></a>Versioni di librerie MFC
 
-La libreria MFC è disponibile nelle versioni che supportano ANSI a byte singolo e set di caratteri multibyte (MBCS), codice, nonché le versioni che supportano i caratteri Unicode (codificato come UTF-16LE, il set di caratteri nativi di Windows). Ogni versione MFC è disponibile come una libreria statica o come una DLL condivisa. È inoltre disponibile una versione di libreria statica MFC più piccola che esclude i controlli MFC per le finestre di dialogo per le applicazioni che sono molto sensibili per le dimensioni e non richiedono tali controlli. Le librerie MFC sono disponibili in entrambe le modalità di debug e rilascio di versioni per le architetture supportate che includono i processori ARM, x64 e x86. È possibile creare entrambe le applicazioni (file .exe) e DLL con le versioni delle librerie MFC. È presente anche un set di librerie MFC compilato per interfacciarsi con codice gestito. DLL condivise MFC include un numero di versione per indicare la compatibilità binaria della libreria.
+La libreria MFC è disponibile nelle versioni che supportano il codice ANSI a byte singolo e Multibyte Character Set (MBCS), nonché le versioni che supportano Unicode (codificata come UTF-16LE, il set di caratteri nativo di Windows). Ogni versione MFC è disponibile come libreria statica o come DLL condivisa. Esiste anche una versione di libreria statica MFC più piccola che lascia i controlli MFC per le finestre di dialogo, per le applicazioni che sono molto sensibili alle dimensioni e non richiedono tali controlli. Le librerie MFC sono disponibili nelle versioni di debug e di rilascio per le architetture supportate che includono processori x86, x64 e ARM. È possibile creare entrambe le applicazioni (file con estensione exe) e le dll con qualsiasi versione delle librerie MFC. È inoltre disponibile un set di librerie MFC compilate per l'interazione con codice gestito. Le DLL condivise MFC includono un numero di versione per indicare la compatibilità binaria della libreria.
 
-## <a name="automatic-linking-of-mfc-library-versions"></a>Collegamento automatico della versioni di librerie MFC
+## <a name="automatic-linking-of-mfc-library-versions"></a>Collegamento automatico di versioni della libreria MFC
 
-File di intestazione MFC determinano automaticamente la versione corretta della libreria MFC per creare un collegamento, in base ai valori definiti nell'ambiente di compilazione. File di intestazione MFC aggiungono le direttive del compilatore che indicano al linker il collegamento in una versione specifica della libreria MFC.
+I file di intestazione MFC determinano automaticamente la versione corretta della libreria MFC da collegare, in base ai valori definiti nell'ambiente di compilazione. I file di intestazione MFC aggiungono direttive del compilatore che indicano al linker di collegarsi a una versione specifica della libreria MFC.
 
-Ad esempio, file di intestazione AFX. File di intestazione H indica al linker di collegare in statica completo, limitata dalla static o shared versione DLL di MFC. Versione ANSI/MBCS o Unicode; e la versione di debug o di vendita al dettaglio, a seconda della configurazione di compilazione:
+Ad esempio, AFX. Il file di intestazione H indica al linker di collegarsi alla versione statica completa, statica limitata o DLL condivisa di MFC; ANSI/MBCS o versione Unicode; e la versione finale o di debug, a seconda della configurazione della build:
 
 ```cpp
 #ifndef _AFXDLL
@@ -71,31 +71,31 @@ Ad esempio, file di intestazione AFX. File di intestazione H indica al linker di
 #endif
 ```
 
-File di intestazione MFC anche includono le direttive per collegare tutte le librerie richieste, incluse le librerie MFC, le librerie Win32, le librerie OLE, le librerie OLE costruite dagli esempi, le librerie ODBC e così via.
+I file di intestazione MFC includono inoltre le direttive per il collegamento di tutte le librerie necessarie, incluse le librerie MFC, le librerie Win32, le librerie OLE, le librerie OLE compilate da esempi, le librerie ODBC e così via.
 
 ## <a name="ansi-mbcs-and-unicode"></a>ANSI, MBCS e Unicode
 
-Le versioni della libreria ANSI/MBCS di MFC supportano entrambi gli insiemi di carattere a byte singolo, ad esempio ASCII e set di caratteri multibyte, ad esempio Shift-JIS. Le versioni della libreria MFC Unicode supportano Unicode nel formato con codifica UTF-16LE caratteri "wide". Usare le versioni della libreria ANSI/MBCS di MFC per il supporto per Unicode con codifica UTF-8.
+Le versioni della libreria ANSI/MBCS MFC supportano sia i set di caratteri a byte singolo, ad esempio ASCII, sia i set di caratteri multibyte come Shift-JIS. Le versioni della libreria Unicode MFC supportano Unicode nel formato con codifica caratteri wide UTF-16LE. Utilizzare le versioni della libreria ANSI/MBCS di MFC per il supporto Unicode con codifica UTF-8.
 
-Per impostare la configurazione del progetto da utilizzare a un byte, multibyte o caratteri wide Unicode stringa e carattere supporto nell'IDE, usare il **proprietà del progetto** finestra di dialogo. Nel **le proprietà di configurazione** > **generali** pagina, impostare il **Set di caratteri** proprietà **non impostato** da utilizzare un set di caratteri a byte singolo. Impostare la proprietà su **usare Multi-Byte Character Set** da usare un set di caratteri multibyte o a **usare Set di caratteri Unicode** utilizzare codificata come UTF-16 Unicode.
+Per impostare la configurazione del progetto in modo da utilizzare la stringa Unicode a byte singolo, multibyte o a caratteri wide e il supporto dei caratteri nell'IDE, utilizzare la finestra di dialogo **Proprietà progetto** . Nella pagina **proprietà di configurazione** > **generale** impostare la proprietà **set di caratteri** su **non impostato** per l'utilizzo di un set di caratteri a byte singolo. Impostare la proprietà in modo da **usare un set di caratteri multibyte** per usare un multibyte character set o per usare il **set di caratteri Unicode** per usare Unicode con codifica UTF-16.
 
-I progetti MFC usano il simbolo del preprocessore \_UNICODE per indicare il supporto di Unicode UTF-16 caratteri "wide", e \_supporto MBCS per indicare il formato MBCS. Queste opzioni si escludono a vicenda in un progetto.
+I progetti MFC utilizzano il simbolo del preprocessore \_UNICODE per indicare il supporto Unicode UTF-16 a caratteri wide e \_MBCS per indicare il supporto MBCS. Queste opzioni si escludono a vicenda in un progetto.
 
-## <a name="mfc-static-library-naming-conventions"></a>Convenzioni di denominazione libreria statica di MFC
+## <a name="mfc-static-library-naming-conventions"></a>Convenzioni di denominazione delle librerie statiche MFC
 
-Librerie statiche per MFC utilizzano le seguenti convenzioni di denominazione. I nomi delle librerie si presentano come
+Le librerie statiche per MFC utilizzano le convenzioni di denominazione seguenti. I nomi delle librerie si presentano come
 
-> <em>u</em>AFX<em>cd</em>.LIB
+> <em>u</em> AFX<em>CD</em>. LIB
 
 dove le lettere mostrate in minuscolo corsivo sono dei segnaposti per gli identificatori i cui significati sono mostrati nella tabella seguente:
 
 |Identificatore|Valori e significati|
 |---------------|-------------------------|
 |*u*|ANSI/MBCS (N) o Unicode (U); omettere per la versione senza controlli MFC nelle finestre di dialogo|
-|*c*|Versione con controlli MFC nelle finestre di dialogo (CW Closest) o senza (NMCD)|
-|*d*|Debug o Release: 1!d = Debug; omettere l'identificatore per il rilascio|
+|*c*|Versione con controlli MFC nelle finestre di dialogo (CW) o senza (NMCD)|
+|*d*|Debug o Release: D=Debug; omettere l'identificatore per le versioni di rilascio|
 
-Tutte le librerie elencate nella tabella seguente sono incluse precompilate nella directory \atlmfc\lib per le architetture di compilazione supportati.
+Tutte le librerie elencate nella tabella seguente sono incluse nella directory \atlmfc\lib per le architetture di compilazione supportate.
 
 |Libreria|Descrizione|
 |-------------|-----------------|
@@ -103,41 +103,41 @@ Tutte le librerie elencate nella tabella seguente sono incluse precompilate nell
 |NAFXCWD.LIB|Libreria a collegamento statico MFC, versione di debug|
 |UAFXCW.LIB|Libreria a collegamento statico MFC con supporto Unicode, versione di rilascio|
 |UAFXCWD.LIB|Libreria a collegamento statico MFC con supporto Unicode, versione di debug|
-|AFXNMCD.LIB|Libreria a collegamento statico MFC senza controlli di finestra di dialogo MFC, versione di rilascio|
-|AFXNMCDD.LIB|Libreria a collegamento statico MFC senza controlli di finestra di dialogo MFC, versione di Debug|
+|AFXNMCD.LIB|Libreria a collegamento statico MFC senza controlli della finestra di dialogo MFC, versione di rilascio|
+|AFXNMCDD.LIB|Libreria a collegamento statico MFC senza controlli della finestra di dialogo MFC, versione di debug|
 
-File di debugger che hanno lo stesso nome di base e un'estensione di file PDB sono anche disponibili per ognuna delle librerie statiche.
+Per ognuna delle librerie statiche sono disponibili anche i file del debugger con lo stesso nome di base e l'estensione pdb.
 
 ## <a name="mfc-shared-dll-naming-conventions"></a>Convenzioni di denominazione DLL condivise MFC
 
-MFC DLL condivise anche seguire una convenzione di denominazione strutturata. Questo rende più facile sapere quali DLL o della libreria è consigliabile usare per un determinato scopo.
+Anche le DLL condivise MFC seguono una convenzione di denominazione strutturata. In questo modo è più semplice individuare la DLL o la libreria da utilizzare per scopi specifici.
 
-Le DLL di MFC hanno *versione* numeri che indicano la compatibilità binaria. Usare le DLL di MFC che abbia la stessa versione di altre librerie e set di strumenti del compilatore per garantire la compatibilità all'interno di un progetto.
+Le DLL MFC includono numeri di *versione* che indicano la compatibilità binaria. Utilizzare le DLL MFC con la stessa versione delle librerie e del set di strumenti del compilatore per garantire la compatibilità all'interno di un progetto.
 
 |DLL|Descrizione|
 |---------|-----------------|
-|MFC*version*.DLL|Versione finale di MBCS, ANSI o DLL MFC|
-|MFC*versione*U.DLL|DLL MFC, versione finale di Unicode|
-|MFC*version*D.DLL|Versione DLL MFC, ANSI o eseguire il Debug di MBCS|
-|MFC*versione*UD. DLL|DLL MFC, versione di Debug di Unicode|
-|MFCM*version*.DLL|DLL MFC con controlli Windows Form, versione finale di MBCS o ANSI|
-|MFCM*version*U.DLL|DLL MFC con controlli Windows Form, versione finale di Unicode|
-|MFCM*version*D.DLL|DLL MFC con controlli Windows Form, la versione ANSI o eseguire il Debug di MBCS|
-|MFCM*version*UD.DLL|DLL MFC con controlli Windows Form, versione di Debug di Unicode|
+|*Versione*MFC. DLL|DLL MFC, versione di rilascio ANSI o MBCS|
+|*Versione*MFC U. dll|DLL MFC, versione di rilascio Unicode|
+|*Versione*di MFC D. dll|DLL MFC, versione di debug ANSI o MBCS|
+|*Versione*MFC UD. DLL|DLL MFC, versione di debug Unicode|
+|*Versione*di MFCM. DLL|DLL MFC con controlli di Windows Forms, versione di rilascio ANSI o MBCS|
+|MFCM*versione*U. dll|DLL MFC con controlli di Windows Forms, versione di rilascio Unicode|
+|MFCM*versione*D. dll|DLL MFC con controlli di Windows Forms, versione di debug ANSI o MBCS|
+|MFCM*versione*UD. DLL|DLL MFC con controlli di Windows Forms, versione di debug Unicode|
 
-Le librerie di importazione necessarie per creare applicazioni o MFC di estensione dll che utilizzano queste DLL condivise con lo stesso nome di base della DLL, ma hanno un'estensione di file con estensione LIB. Quando si usano le DLL condivise, una piccola libreria statica ancora deve essere collegata con il codice. Questa libreria è denominata MFCS*versione*lib {U} {D}.
+Le librerie di importazione necessarie per compilare applicazioni o dll di estensione MFC che usano queste DLL condivise hanno lo stesso nome di base della DLL, ma hanno un'estensione di file. lib. Quando si usano le DLL condivise, una piccola libreria statica deve essere ancora collegata al codice. Questa libreria è denominata MFC*versione*{U} {D}. lib.
 
-Se si collegano dinamicamente la versione DLL condivisa di MFC, se si tratta di un'applicazione o da una DLL di estensione MFC, è necessario includere la corrispondenza MFC*versione*. File DLL o MFC*versione*U.DLL quando si distribuisce il prodotto.
+Se si collega in modo dinamico alla versione DLL condivisa di MFC, sia che si tratti di un'applicazione o di una DLL di estensione MFC, è necessario includere la*versione*MFC corrispondente. DLL o*versione*MFC U. dll quando si distribuisce il prodotto.
 
-Per un elenco di oggetto visivo C++ le DLL che può essere distribuito con le applicazioni, vedere [codice distribuibile per Microsoft Visual Studio 2017 SDK (include utilità e file del server di compilazione) e Microsoft Visual Studio 2017](/visualstudio/productinfo/2017-redistribution-vs) o[ Codice distribuibile per Visual Studio 2019](/visualstudio/releases/2019/redistribution).
+Per un elenco di dll C++ visive che possono essere distribuite con le applicazioni, vedere il [codice distribuibile per Microsoft Visual Studio 2017 e Microsoft Visual Studio 2017 SDK (inclusi utilità e file BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) o il [codice distribuibile per Visual Studio 2019](/visualstudio/releases/2019/redistribution).
 
-Per altre informazioni sul supporto Unicode e MBCS in MFC, vedere [supporto Unicode e Set di caratteri Multibyte (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
+Per ulteriori informazioni sul supporto MBCS e Unicode in MFC, vedere [supporto di Unicode e set di caratteri multibyte (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 
-## <a name="dynamic-link-library-support"></a>Supporto di libreria a collegamento dinamico
+## <a name="dynamic-link-library-support"></a>Supporto della libreria a collegamento dinamico
 
-È possibile utilizzare entrambi statiche o shared dinamiche librerie MFC per creare DLL che può essere utilizzata dagli eseguibili MFC e non MFC. Questi sono denominati "DLL regolari" o "DLL MFC regolari", per distinguerli dalle DLL che può essere solo di estensione MFC utilizzate da applicazioni MFC e MFC DLL. Una DLL compilata con le librerie MFC statiche viene talvolta chiamata un USRDLL nei riferimenti meno recenti, perché i progetti di DLL MFC definiscono il simbolo del preprocessore  **\_USRDLL**. Una DLL che Usa MFC condivisi DLL viene talvolta denominata AFXDLL nei riferimenti meno recenti, in quanto definisce il simbolo del preprocessore  **\_AFXDLL**.
+È possibile utilizzare le librerie MFC dinamiche statiche o condivise per creare DLL che possono essere utilizzate da file eseguibili sia MFC che non MFC. Queste sono denominate "DLL regolari" o "DLL MFC regolari" per distinguerle dalle DLL di estensione MFC che possono essere usate solo dalle app MFC e dalle DLL MFC. Una DLL compilata utilizzando le librerie statiche MFC viene talvolta denominata USRDLL nei riferimenti precedenti, perché i progetti DLL MFC definiscono il simbolo del preprocessore **\_USRDLL**. Una DLL che usa le DLL condivise MFC viene talvolta denominata AFXDLL nei riferimenti precedenti, perché definisce il simbolo del preprocessore **\_AFXDLL**.
 
-Quando si crea il progetto DLL mediante il collegamento alle librerie statiche di MFC, la DLL può essere distribuita senza DLL condivise di MFC. Quando il progetto DLL è collegato a librerie di importazione MFC*versione*. LIB o MFC*versione*U.LIB, è necessario distribuire la corrispondenza MFC condivisa DLL MFC*versione*. File DLL o MFC*versione*U.DLL contestualmente le DLL. Per altre informazioni, vedere [DLL](../build/dlls-in-visual-cpp.md).
+Quando si crea il progetto di DLL tramite il collegamento alle librerie statiche MFC, la DLL può essere distribuita senza le DLL condivise MFC. Quando il progetto DLL viene collegato alla*versione*di importazione librerie MFC. LIB o MFC*versione*U. lib, è necessario distribuire la corrispondente*versione*MFC della DLL condivisa MFC. DLL o*versione*MFC U. dll insieme alla dll. Per ulteriori informazioni, vedere [dll](../build/dlls-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

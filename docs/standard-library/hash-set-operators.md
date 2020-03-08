@@ -6,13 +6,13 @@ f1_keywords:
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452024"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883844"
 ---
-# <a name="lthashsetgt-operators"></a>Operatori &lt;hash_set&gt;
+# <a name="lthash_setgt-operators"></a>Operatori &lt;hash_set&gt;
 
 ||||
 |-|-|-|
@@ -32,21 +32,21 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `hash_set`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `hash_set`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti hash_set non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti hash_set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
-I membri dei file di intestazione [< hash_map >](../standard-library/hash-map.md) e [< hash_set >](../standard-library/hash-set.md) si trovano nello [spazio dei nomi stdext](../standard-library/stdext-namespace.md).
+I membri della [< hash_map >](../standard-library/hash-map.md) e [<](../standard-library/hash-set.md) i file di intestazione hash_set > si trovano nello [spazio dei nomi stdext](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Esempio
 
@@ -100,17 +100,17 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `hash_set`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `hash_set`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto hash_set a sinistra dell'operatore è uguale all'oggetto hash_set a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti hash_set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -166,17 +166,17 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `hash_multiset`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti hash_multiset non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti hash_multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -232,17 +232,17 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `hash_multiset`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto hash_multiset a sinistra dell'operatore è uguale all'oggetto hash_multiset a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti hash_multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 

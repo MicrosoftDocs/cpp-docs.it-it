@@ -10,11 +10,11 @@ helpviewer_keywords:
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661645"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884156"
 ---
 # <a name="if-else-statement-c"></a>Istruzione if-else (C++)
 
@@ -23,7 +23,7 @@ Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco If* ve
 - TRUE
 - un puntatore non null,
 - qualsiasi valore aritmetico diverso da zero, oppure
-- tipo di classe che definisce una conversione non ambigua a un tipo aritmetico, booleano o puntatore. Per informazioni sulle conversioni, vedere conversioni [standard](../cpp/standard-conversions.md).
+- tipo di classe che definisce una conversione non ambigua a un tipo aritmetico, booleano o puntatore. Per informazioni sulle conversioni, vedere [conversioni standard](../cpp/standard-conversions.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a>istruzione if con un inizializzatore
 
-**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Un'istruzione **if** può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questo formato dell'istruzione If-quando la variabile è necessaria solo nell'ambito del blocco If.
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): un'istruzione **if** può anche contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questo formato dell'istruzione If-quando la variabile è necessaria solo nell'ambito del blocco If.
 
 ## <a name="example"></a>Esempio
 
@@ -161,11 +161,11 @@ int main()
 
 In tutte le forme dell'istruzione **if** , l' *espressione*, che può avere qualsiasi valore tranne una struttura, viene valutata, inclusi tutti gli effetti collaterali. Il controllo passa dall'istruzione **if** all'istruzione successiva nel programma, a meno che una delle *istruzioni*s non includa [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md).
 
-La clausola **else** di un' `if...else` istruzione viene associata all'istruzione **if** precedente più vicina nello stesso ambito che non dispone di un'istruzione **else** corrispondente.
+La clausola **else** di un'istruzione `if...else` viene associata all'istruzione **if** precedente più vicina nello stesso ambito che non dispone di un'istruzione **else** corrispondente.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">Se istruzioni constExpr
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> se le istruzioni constExpr
 
-**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Nei modelli di funzione è possibile usare un'istruzione **if constExpr** per eseguire decisioni di diramazione in fase di compilazione senza dover ricorrere a più overload di funzione. Ad esempio, è possibile scrivere una singola funzione che gestisce la decompressione del parametro (non è necessario alcun overload di parametro zero):
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione è possibile usare un'istruzione **if constExpr** per eseguire decisioni di diramazione in fase di compilazione senza dover ricorrere a più overload di funzione. Ad esempio, è possibile scrivere una singola funzione che gestisce la decompressione del parametro (non è necessario alcun overload di parametro zero):
 
 ```cpp
 template <class T, class... Rest>

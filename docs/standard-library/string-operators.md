@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686002"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890902"
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 
@@ -113,9 +113,9 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
 La stringa che rappresenta la concatenazione delle stringhe di input.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le funzioni di ogni overload `operator+` per concatenare due oggetti della classe [basic_string](../standard-library/basic-string-class.md)del modello di classe. Tutti effettivamente restituiscono `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Per ulteriori informazioni, vedere [Append](../standard-library/basic-string-class.md#append).
+Le funzioni di ogni overload `operator+` per concatenare due oggetti della classe template [basic_string Class](../standard-library/basic-string-class.md). Tutti effettivamente restituiscono `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Per ulteriori informazioni, vedere [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Esempio
 
@@ -202,7 +202,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **true** se l'oggetto stringa a sinistra dell'operatore non è uguale, dal punto di vista lessicografico, all'oggetto stringa a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti stringa è basato su un confronto lessicografico a coppie dei relativi caratteri. Due stringhe sono uguali se contengono lo stesso numero di caratteri e se i rispettivi caratteri hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -293,7 +293,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **true** se l'oggetto stringa a sinistra dell'operatore è uguale, dal punto di vista lessicografico, all'oggetto stringa a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti stringa è basato su un confronto lessicografico a coppie dei relativi caratteri. Due stringhe sono uguali se contengono lo stesso numero di caratteri e se i rispettivi caratteri hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -384,7 +384,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **true** se l'oggetto stringa a sinistra dell'operatore è minore, dal punto di vista lessicografico, dell'oggetto stringa a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un confronto lessicografico tra stringhe le confronta carattere per carattere fino a quando:
 
@@ -480,7 +480,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **true** se l'oggetto stringa a sinistra dell'operatore è minore o uguale, dal punto di vista lessicografico, all'oggetto stringa a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un confronto lessicografico tra stringhe le confronta carattere per carattere fino a quando:
 
@@ -563,7 +563,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Ostr*
+*_Ostr*\
 Flusso di output in cui scrivere.
 
 \ *Str*
@@ -573,9 +573,9 @@ Stringa da immettere nel flusso di output.
 
 Scrive il valore della stringa specificata nel flusso di output *_Ostr*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione di modello consente di eseguire l'overload di **operator < <** per inserire un oggetto *Str* del modello di classe [basic_string](../standard-library/basic-string-class.md) nel flusso *\_Ostr*. La funzione restituisce effettivamente `_Ostr.write( str.c_str, str.size )`.
+La funzione di modello consente di eseguire l'overload di **operator < <** per inserire un oggetto *Str* del modello di classe [basic_string](../standard-library/basic-string-class.md) nel flusso *\_OSTR*. La funzione restituisce effettivamente `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -610,7 +610,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **true** se l'oggetto stringa a sinistra dell'operatore è maggiore, dal punto di vista lessicografico, dell'oggetto stringa a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un confronto lessicografico tra stringhe le confronta carattere per carattere fino a quando:
 
@@ -713,7 +713,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **true** se l'oggetto stringa a sinistra dell'operatore è maggiore o uguale, dal punto di vista lessicografico, all'oggetto stringa a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un confronto lessicografico tra stringhe le confronta carattere per carattere fino a quando:
 
@@ -796,7 +796,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Istr*
+*_Istr*\
 Flusso di input usato per estrarre la sequenza
 
 \ a *destra*
@@ -806,7 +806,7 @@ Stringa da estrarre dal flusso di input.
 
 Legge il valore della stringa specificata da *_Istr* e lo restituisce a *destra*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'operatore ignora gli spazi iniziali a meno che il flag `skipws` non sia impostato. Legge tutti i caratteri successivi fino a quando incontra uno spazio vuoto o arriva alla fine del file.
 
@@ -818,9 +818,9 @@ La funzione di modello consente di eseguire l'overload di **operator > >** per s
 
 Dopo che la funzione ha estratto elementi `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size).
 
-- Dopo che la funzione ha estratto un elemento *ch* per cui [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) è true, nel qual caso il carattere viene reinserito.
+- Dopo che la funzione estrae un elemento *ch* per il quale [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType**\< **CharType**> > (`getloc`). **is**( **ctype**\< **CharType**>:: **Space**, *ch*) è true, nel qual caso viene restituito il carattere.
 
-Se la funzione non estrae alcun elemento, chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). In tutti i casi, chiama **istr**. **width**(0) e restituisce \* **this**.
+Se la funzione non estrae alcun elemento, chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). In tutti i casi, chiama **istr**. **Width**(0) e **restituisce \*.**
 
 ### <a name="example"></a>Esempio
 

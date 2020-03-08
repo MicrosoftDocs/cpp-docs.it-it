@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689288"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884006"
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 
@@ -66,15 +66,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-@No__t_1 *Intl*
+\ *Intl*
 Flag che specifica se devono essere rispettate le convenzioni internazionali.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id.**
+Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id**.
 
 L'oggetto statico const intl archivia il valore del parametro di modello *Intl*.
 
@@ -84,9 +84,9 @@ L'oggetto statico const intl archivia il valore del parametro di modello *Intl*.
 |-|-|
 |[moneypunct](#moneypunct)|Costruttore di oggetti di tipo `moneypunct`.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[string_type](#string_type)|Tipo che descrive una stringa contenente caratteri di tipo `CharType`.|
@@ -116,7 +116,7 @@ L'oggetto statico const intl archivia il valore del parametro di modello *Intl*.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:** \<impostazioni locali >
 
 **Spazio dei nomi:** std
 
@@ -128,7 +128,7 @@ Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello **CharType**.
 
@@ -144,7 +144,7 @@ string_type curr_symbol() const;
 
 Stringa contenente il simbolo di valuta.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_curr_symbol](#do_curr_symbol).
 
@@ -181,7 +181,7 @@ CharType decimal_point() const;
 
 Sequenza di elementi specifica delle impostazioni locali da usare come simbolo di separatore decimale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_decimal_point](#do_decimal_point).
 
@@ -301,9 +301,9 @@ La funzione membro virtuale protetta restituisce una regola specifica delle impo
 
 - `value` la corrispondenza o la generazione di un valore monetario.
 
-I componenti di un campo di output di tipo valuta vengono generati e i componenti di un campo di input di tipo valuta corrispondono nell'ordine in cui questi elementi vengono visualizzati in `pattern::field`. Ogni valore `sign`, `symbol`, `value` e `none` o `space` deve essere visualizzato esattamente una volta. Il valore `none` non deve essere visualizzato per primo. Il valore **space** non deve comparire come primo o ultimo. Se `Intl` è true, l'ordine è `symbol`, `sign` `none`, quindi `value`.
+I componenti di un campo di output di tipo valuta vengono generati e i componenti di un campo di input di tipo valuta corrispondono nell'ordine in cui questi elementi vengono visualizzati in `pattern::field`. Ogni valore `sign`, `symbol`, `value`e `none` o `space` deve essere visualizzato esattamente una volta. Il valore `none` non deve essere visualizzato per primo. Il valore **space** non deve comparire come primo o ultimo. Se `Intl` è true, l'ordine è `symbol`, `sign``none`, quindi `value`.
 
-La versione del modello di `moneypunct`\< **CharType**, **Intl**> restituisce `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+La versione del modello di `moneypunct`\< **CharType**, **Intl**> restituisce **`{`money_base:: Symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: None**`}`.
 
 ### <a name="example"></a>Esempio
 
@@ -335,9 +335,9 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo positivo. Determina inoltre la modalità di corrispondenza tra i componenti di un campo di input di tipo valuta. La codifica è identica a quella di [do_neg_format](#do_neg_format).
+La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo positivo. Determina inoltre la modalità di corrispondenza tra i componenti di un campo di input di tipo valuta. La codifica è identica a quella per [do_neg_format](#do_neg_format).
 
-La versione del modello di moneypunct\< **CharType**, **Inputlterator**> restituisce `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+La versione del modello di moneypunct\< **CharType**, **Inputlterator**> restituisce **`{`money_base:: Symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: None**`}`.
 
 ### <a name="example"></a>Esempio
 
@@ -387,7 +387,7 @@ int frac_digits() const;
 
 Conteggio del numero di cifre specifico delle impostazioni locali da visualizzare a destra di un separatore decimale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_frac_digits](#do_frac_digits).
 
@@ -456,7 +456,7 @@ string grouping() const;
 
 Regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra della virgola decimale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_grouping](#do_grouping).
 
@@ -523,12 +523,12 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I valori possibili per il parametro *_Refs* e il relativo significato sono:
+I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -552,7 +552,7 @@ pattern neg_format() const;
 
 Regola specifica delle impostazioni locali per la formattazione degli output con importi negativi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_neg_format](#do_neg_format).
 
@@ -600,7 +600,7 @@ string_type negative_sign() const;
 
 Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di segno negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_negative_sign](#do_negative_sign).
 
@@ -662,7 +662,7 @@ pattern pos_format() const;
 
 Regola specifica delle impostazioni locali per la formattazione degli output con importi positivi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_pos_format](#do_pos_format).
 
@@ -710,7 +710,7 @@ string_type positive_sign() const;
 
 Sequenza di elementi specifica delle impostazioni locali da usare come simbolo di segno positivo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_positive_sign](#do_positive_sign).
 
@@ -768,7 +768,7 @@ Tipo che descrive una stringa contenente caratteri di tipo **CharType**.
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie delle sequenze di punteggiatura.
 
@@ -784,7 +784,7 @@ CharType thousands_sep() const;
 
 Sequenza di elementi specifica delle impostazioni locali da usare come separatore delle migliaia.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_thousands_sep](#do_thousands_sep).
 
@@ -836,4 +836,4 @@ English_Canada.1252 domestic thousands separator: ,
 ## <a name="see-also"></a>Vedere anche
 
 [\<locale>](../standard-library/locale.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)

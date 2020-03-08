@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898834"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856541"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -38,7 +38,7 @@ Classe che descrive un oggetto delle impostazioni locali che incapsula le inform
 class locale;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un facet è un puntatore a un oggetto di una classe derivata dalla classe [facet](#facet_class) con un oggetto pubblico nel formato seguente:
 
@@ -144,9 +144,9 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 |-|-|
 |[locale](#locale)|Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[category](#category)|Tipo Integer che fornisce i valori della maschera di bit per indicare le famiglie di facet standard.|
 
@@ -155,18 +155,18 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 |Funzione membro|Descrizione|
 |-|-|
 |[combine](#combine)|Inserisce un facet delle impostazioni locali specificate nelle impostazioni locali di destinazione.|
-|[name](#name)|Restituisce il nome delle impostazioni locali archiviate.|
+|[nome](#name)|Restituisce il nome delle impostazioni locali archiviate.|
 
 ### <a name="static-functions"></a>Funzioni statiche
 
 |||
 |-|-|
-|[classic](#classic)|La funzione membro statica restituisce un oggetto delle impostazioni locali che rappresenta le impostazioni locali C classiche.|
+|[classico](#classic)|La funzione membro statica restituisce un oggetto delle impostazioni locali che rappresenta le impostazioni locali C classiche.|
 |[global](#global)|Reimposta le impostazioni locali predefinite per il programma.|
 
 ### <a name="operators"></a>Operatori
 
-|??|Descrizione|
+|Operatore|Descrizione|
 |-|-|
 |[operator=](#op_eq)|Assegna impostazioni locali.|
 |[operator!=](#op_neq)|Verifica l'ineguaglianza di due impostazioni locali.|
@@ -180,9 +180,9 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 |[facet](#facet_class)|Classe utilizzata come classe base per tutti i facet delle impostazioni locali.|
 |[`id`](#id_class)|La classe di membro fornisce un'identificazione dei facet univoca utilizzata come indice per cercare i facet nelle impostazioni locali.|
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:** \<impostazioni locali >
 
 **Spazio dei nomi:** std
 
@@ -202,7 +202,7 @@ static const int all = LC_ALL;
 static const int none = 0;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo di un tipo **int** che può rappresentare un gruppo di elementi distinti di un tipo di maschera di maschera locale per le impostazioni locali della classe oppure può essere usato per rappresentare qualsiasi categoria di impostazioni locali C corrispondenti. Gli elementi sono i seguenti:
 
@@ -238,7 +238,7 @@ static const locale& classic();
 
 Riferimento alle impostazioni locali C.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le impostazioni locali C classiche sono le impostazioni locali ASCII per la lingua inglese (Stati Uniti) all'interno della libreria C standard. Si tratta delle impostazioni locali usate in modo implicito nei programmi che non sono internazionali.
 
@@ -344,7 +344,7 @@ private:
 };
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Non è possibile copiare o assegnare un oggetto della classe `facet`. È possibile creare e distruggere oggetti derivati dalla classe `locale::facet` ma non oggetti della classe di base proper. In genere, si costruisce un oggetto `_Myfac` derivato da `facet` quando si costruisce un `locale`, come in `locale loc(locale::classic(), new _Myfac);`
 
@@ -367,7 +367,7 @@ Impostazioni locali che devono essere usate come predefinite dal programma.
 
 Impostazioni locali precedenti alla reimpostazione delle impostazioni locali predefinite.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 All'avvio del programma, le impostazioni locali globali coincidono con le impostazioni locali classiche. La funzione `global()` chiama `setlocale( LC_ALL, loc.name. c_str())` per definire delle impostazioni locali corrispondenti nella libreria C standard.
 
@@ -412,7 +412,7 @@ class id
 };
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Non è possibile copiare o assegnare un oggetto della classe `id`.
 
@@ -452,7 +452,7 @@ Categoria da sostituire nelle impostazioni locali costruite.
 *new_facet*\
 Facet da sostituire nelle impostazioni locali costruite.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo costruttore inizializza l'oggetto in modo che corrisponda alle impostazioni locali globali. Il secondo e il terzo costruttore inizializzano tutte le categorie delle impostazioni locali affinché il comportamento sia coerente con il nome delle impostazioni locali *locale_name*. I costruttori rimanenti copiano *from_locale*, con le eccezioni indicate:
 
@@ -576,7 +576,7 @@ Una delle impostazioni locali di cui verificare la disuguaglianza.
 
 Valore booleano che è **true** se le impostazioni locali non sono copie delle stesse impostazioni locali. È **false** se le impostazioni locali sono copie delle stesse impostazioni locali.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Due impostazioni locali sono uguali se le impostazioni locali sono uguali, se una è una copia dell'altra o se hanno nomi identici.
 
@@ -645,11 +645,11 @@ La funzione membro restituisce:
 
 - \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- +1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro gestisce in modo efficace quanto segue:
 
@@ -709,7 +709,7 @@ Una delle impostazioni locali di cui verificare l'uguaglianza.
 
 Valore booleano che è **true** se le impostazioni locali sono copie delle stesse impostazioni locali. È **false** se le impostazioni locali non sono copie delle stesse impostazioni locali.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Due impostazioni locali sono uguali se le impostazioni locali sono uguali, se una è una copia dell'altra o se hanno nomi identici.
 
@@ -762,4 +762,4 @@ and loc3 (English_United States.1252) are not equal.
 [\<locale>](../standard-library/locale.md)\
 [Tabelle codici](../c-runtime-library/code-pages.md)\
 [Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)

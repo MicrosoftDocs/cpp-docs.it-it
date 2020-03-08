@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627455"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854099"
 ---
 # <a name="ltnumericgt-functions"></a>Funzioni &lt;numeric&gt;
 
@@ -61,23 +61,23 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo da sommare o combinare usando *Binary_op*.
 
-*ultimo* \
-Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, che è una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
+*ultimo*\
+Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, ovvero una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
 
 \ *init*
 Valore iniziale a cui ogni elemento viene a sua volta aggiunto o combinato utilizzando *Binary_op*.
 
-\ *Binary_op*
+*binary_op*\
 Operazione binaria da applicare a ogni elemento nell'intervallo specificato e il risultato delle applicazioni precedenti.
 
 ### <a name="return-value"></a>Valore restituito
 
-Somma di *init* e di tutti gli elementi nell'intervallo specificato per la prima funzione di modello o per la seconda funzione di modello, il risultato dell'applicazione dell'operazione binaria *Binary_op* invece dell'operazione SUM, a (* PartialResult, *in_ iter*), dove *PartialResult* è il risultato delle applicazioni precedenti dell'operazione e *in_iter* è un iteratore che punta all'elemento successivo nell'intervallo.
+Somma di *init* e di tutti gli elementi nell'intervallo specificato per la prima funzione di modello o per la seconda funzione di modello, il risultato dell'applicazione dell'operazione binaria *Binary_op* al posto dell'operazione SUM, a (* PartialResult, *in_iter*), dove *PartialResult* è il risultato delle applicazioni precedenti dell'operazione e *in_iter* è un iteratore che punta all'elemento successivo nell'intervallo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il valore iniziale assicura che sia presente un risultato ben definito quando l'intervallo è vuoto, nel qual caso viene restituito *init* . Non è necessario che l'operazione binaria sia associativa o commutativa. Il risultato viene inizializzato sul valore iniziale *init* , quindi *result* = *Binary_op*(*result*, *in_iter*) viene calcolato in modo iterativo nell'intervallo, dove *in_iter* è un iteratore che punta a ogni elemento successivo nell'intervallo. L'intervallo deve essere valido e la complessità è lineare con le dimensioni dell'intervallo. Il tipo restituito dell'operatore binario deve essere convertibile in **Type** per garantire la chiusura durante l'iterazione.
 
@@ -220,31 +220,31 @@ ForwardIterator2 adjacent_difference(
 \ *Exec*
 Criteri di esecuzione.
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo di input i cui elementi devono essere differenziati dai rispettivi predecessori o sulla cui coppia di valori deve operare un'altra operazione binaria specificata.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che punta all'ultimo elemento dell'intervallo di input in cui gli elementi devono essere differenziati con i rispettivi predecessori o in cui sulla coppia di valori deve operare un'altra operazione binaria specificata.
 
 *risultato*\
 Iteratore di output che punta al primo elemento di un intervallo di destinazione in cui devono essere archiviati la serie di differenze o i risultati dell'operazione specificata.
 
-\ *Binary_op*
+*binary_op*\
 Operazione binaria da applicare nell'operazione generalizzata, sostituendo l'operazione di sottrazione nella procedura di differenziazione.
 
 ### <a name="return-value"></a>Valore restituito
 
 Iteratore di output che punta alla fine dell'intervallo di destinazione: `result` + (`last` - `first`).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il *risultato* dell'iteratore di output può essere lo stesso iteratore *prima*dell'iteratore di input, in modo che i valori `adjacent_difference` possano essere calcolati sul posto.
 
 Per una sequenza di valori *a*1, *a*2, *a*3, in un intervallo di input, la prima funzione di modello archivia i valori`adjacent_difference` successivi a *1, a*2- *a*1, a3- *a*2, nell'intervallo di destinazione.
 
-Per una sequenza di valori *a*1, *a*2, *a*3, in un intervallo di input, la seconda funzione di modello archivia i valori `adjacent_difference` successivi *a*1, *a*2 *Binary_op* *a*1, *a*3 *Binary_op* *a*2, in intervallo di destinazione.
+Per una sequenza di valori *a*1, *a*2, *a*3, in un intervallo di input, la seconda funzione di modello archivia i valori `adjacent_difference` successivi *a*1, *a*2 *Binary_op* *a*1, *a*3 *Binary_op* *a*2, nell'intervallo di destinazione.
 
-L'operazione binaria *Binary_op* non deve essere associativa o commutativa perché l'ordine delle operazioni applicate è specificato.
+Non è necessario che l' *Binary_op* operazione binaria sia associativa o commutativa perché l'ordine delle operazioni applicate è specificato.
 
 ### <a name="example"></a>Esempio
 
@@ -350,11 +350,11 @@ ForwardIterator2 exclusive_scan(
 \ *Exec*
 Criteri di esecuzione.
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo da sommare o combinare usando *Binary_op*.
 
-*ultimo* \
-Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, che è una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
+*ultimo*\
+Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, ovvero una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
 
 *risultato*\
 Iteratore di output che punta al primo elemento di un intervallo di destinazione in cui devono essere archiviati la serie di somme o i risultati dell'operazione specificata.
@@ -362,7 +362,7 @@ Iteratore di output che punta al primo elemento di un intervallo di destinazione
 \ *init*
 Valore iniziale a cui ogni elemento viene a sua volta aggiunto o combinato utilizzando *Binary_op*.
 
-\ *Binary_op*
+*binary_op*\
 Operazione binaria da applicare a ogni elemento nell'intervallo specificato e il risultato delle applicazioni precedenti.
 
 ### <a name="return-value"></a>Valore restituito
@@ -445,11 +445,11 @@ ForwardIterator2 inclusive_scan(
 \ *Exec*
 Criteri di esecuzione.
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo da sommare o combinare usando *Binary_op*.
 
-*ultimo* \
-Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, che è una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
+*ultimo*\
+Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, ovvero una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
 
 *risultato*\
 Iteratore di output che punta al primo elemento di un intervallo di destinazione in cui devono essere archiviati la serie di somme o i risultati dell'operazione specificata.
@@ -457,7 +457,7 @@ Iteratore di output che punta al primo elemento di un intervallo di destinazione
 \ *init*
 Valore iniziale a cui ogni elemento viene a sua volta aggiunto o combinato utilizzando *Binary_op*.
 
-\ *Binary_op*
+*binary_op*\
 Operazione binaria da applicare a ogni elemento nell'intervallo specificato e il risultato delle applicazioni precedenti.
 
 ### <a name="return-value"></a>Valore restituito
@@ -500,10 +500,10 @@ Iteratore di input che punta al primo elemento del secondo intervallo di cui è 
 \ *init*
 Valore iniziale a cui è necessario aggiungere il prodotto interno o il prodotto interno generalizzato tra gli intervalli.
 
-\ *Binary_op1*
+*binary_op1*\
 Operazione binaria che sostituisce l'operazione del prodotto interno di somma applicata ai prodotti tra gli elementi nella generalizzazione del prodotto interno.
 
-\ *binary_op2*
+*binary_op2*\
 Operazione binaria che sostituisce l'operazione tra gli elementi del prodotto interno di moltiplicazione nella generalizzazione del prodotto interno.
 
 ### <a name="return-value"></a>Valore restituito
@@ -516,11 +516,11 @@ sostituendo in modo iterativo *init* con *init* + (*a*i \* *b*i).
 
 La seconda funzione membro restituisce:
 
-*init* *Binary_op1* (*a*1 *binary_op2* *b*1) *Binary_op1* (*a*2 *binary_op2* *b*2) *Binary_op1* ... *Binary_op1* (*a*n *binary_op2* *b*n)
+*init* *binary_op1* (*1* *binary_op2* *b*1) *Binary_op1* (*a*2 *binary_op2* *b*2) *Binary_op1* ... *Binary_op1* (*a*n *binary_op2* *b*n)
 
 sostituendo in modo iterativo *init* con *init* *Binary_op1* (*a*i *binary_op2* *b*i).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il valore iniziale assicura che sia presente un risultato ben definito quando l'intervallo è vuoto. In tal caso, viene restituito *init* . Non è necessario che le operazioni binarie siano associativa o commutativa. L'intervallo deve essere valido e la complessità è lineare con le dimensioni dell'intervallo. Il tipo restituito dell'operatore binario deve essere convertibile in **Type** per garantire la chiusura durante l'iterazione.
 
@@ -625,10 +625,10 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento nel intervallo da compilare.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che punta all'ultimo elemento nel intervallo da compilare.
 
 *value*\
@@ -704,31 +704,31 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo perché venga parzialmente sommato o combinato secondo un'operazione binaria specificata.
 
-*ultimo* \
+*ultimo*\
 Iteratore di input che punta all'ultimo elemento dell'intervallo perché venga parzialmente sommato o combinato secondo un'operazione binaria specificata immediatamente successiva all'ultimo elemento incluso nella somma iterata.
 
 *risultato*\
 Iteratore di output che punta al primo elemento di un intervallo di destinazione per archiviare la serie di somme parziali o i risultati successivi dell'operazione binaria specificata.
 
-\ *Binary_op*
+*binary_op*\
 Operazione binaria da applicare nell'operazione generalizzata, sostituendo l'operazione di Sum nella procedura di somma parziale.
 
 ### <a name="return-value"></a>Valore restituito
 
 Iteratore di output che punta alla fine dell'intervallo di destinazione: *result* + (*Last* - *First*).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il *risultato* dell'iteratore di output può essere lo stesso iteratore dell'iteratore di *input, in*modo che le somme parziali possano essere calcolate sul posto.
 
 Per una sequenza di valori *a*1, *a*2,... *x, in un intervallo*di input, la prima funzione di modello archivia le somme parziali successive nell'intervallo di destinazione. Il *n*esimo elemento viene fornito da (*a*1 + *a*2 + *a*3 +... + *a*n).
 
-Per una sequenza di valori *a*1, *a*2, *a*3, in un intervallo di input, la seconda funzione di modello archivia i risultati parziali successivi nell'intervallo di destinazione. Il *n*esimo elemento viene fornito da ((... ((*a*1 *Binary_op* *a*2) *Binary_op* *a*3) *Binary_op* ...) *Binary_op* *a*n).
+Per una sequenza di valori *a*1, *a*2, *a*3, in un intervallo di input, la seconda funzione di modello archivia i risultati parziali successivi nell'intervallo di destinazione. Il *n*esimo elemento viene fornito da ((... ((*a*1 *binary_op* *2)* *Binary_op* *a*3) *Binary_op* ...) *Binary_op* *a*n).
 
-L'operazione binaria *Binary_op* non deve essere associativa o commutativa perché l'ordine delle operazioni applicate è specificato.
+Non è necessario che l' *Binary_op* operazione binaria sia associativa o commutativa perché l'ordine delle operazioni applicate è specificato.
 
 ### <a name="example"></a>Esempio
 
@@ -840,11 +840,11 @@ Type reduce(
 \ *Exec*
 Criteri di esecuzione.
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo da sommare o combinare usando *Binary_op*.
 
-*ultimo* \
-Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, che è una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
+*ultimo*\
+Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, ovvero una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
 
 *risultato*\
 Iteratore di output che punta al primo elemento di un intervallo di destinazione in cui devono essere archiviati la serie di somme o i risultati dell'operazione specificata.
@@ -852,16 +852,16 @@ Iteratore di output che punta al primo elemento di un intervallo di destinazione
 \ *init*
 Valore iniziale a cui ogni elemento viene a sua volta aggiunto o combinato utilizzando *Binary_op*.
 
-\ *Binary_op*
+*binary_op*\
 Operazione binaria da applicare a ogni elemento nell'intervallo specificato e il risultato delle applicazioni precedenti.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il risultato dell'applicazione di *Binary_op* o `std::plus<>()` a *init* e di tutti gli elementi nell'intervallo specificato a (* PartialResult, *in_iter*), dove *PartialResult* è il risultato delle applicazioni precedenti dell'operazione e *in_iter* iteratore che punta a un elemento nell'intervallo. Negli overload che non specificano *init*, il valore *init* usato equivale a `typename iterator_traits<InputIterator>::value_type{}`.
+Il risultato dell'applicazione di *Binary_op* o `std::plus<>()` a *init* e di tutti gli elementi nell'intervallo specificato a (* PartialResult, *in_iter*), dove *PartialResult* è il risultato delle applicazioni precedenti dell'operazione e *in_iter* è un iteratore che punta a un elemento nell'intervallo. Negli overload che non specificano *init*, il valore *init* usato equivale a `typename iterator_traits<InputIterator>::value_type{}`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`reduce` comportamento è non deterministico a meno che *Binary_op* non sia associativo e commutativo. Il comportamento non è definito se *Binary_op* modifica qualsiasi elemento o invalida qualsiasi iteratore nell'intervallo \[*First*, *Last*], inclusive.
+`reduce` comportamento è non deterministico a meno che non *Binary_op* sia associativo e commutativo. Il comportamento non è definito se *Binary_op* modifica qualsiasi elemento o invalida qualsiasi iteratore nell'intervallo \[*primo*, *ultimo*], inclusivo.
 
 ## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
@@ -893,11 +893,11 @@ ForwardIterator2 transform_exclusive_scan(
 \ *Exec*
 Criteri di esecuzione.
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo da sommare o combinare usando *Binary_op*.
 
-*ultimo* \
-Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, che è una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
+*ultimo*\
+Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, ovvero una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
 
 *risultato*\
 Iteratore di output che punta al primo elemento di un intervallo di destinazione in cui devono essere archiviati la serie di somme o i risultati dell'operazione specificata.
@@ -905,10 +905,10 @@ Iteratore di output che punta al primo elemento di un intervallo di destinazione
 \ *init*
 Valore iniziale a cui ogni elemento viene a sua volta aggiunto o combinato utilizzando *Binary_op*.
 
-\ *Binary_op*
+*binary_op*\
 Operazione binaria da applicare a ogni elemento nell'intervallo specificato e il risultato delle applicazioni precedenti.
 
-\ *Unary_op*
+*unary_op*\
 Operazione unaria da applicare a ogni elemento nell'intervallo specificato.
 
 ## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
@@ -958,19 +958,19 @@ ForwardIterator2 transform_inclusive_scan(
 \ *Exec*
 Criteri di esecuzione.
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo da sommare o combinare usando *Binary_op*.
 
-*ultimo* \
-Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, che è una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
+*ultimo*\
+Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, ovvero una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
 
 *risultato*\
 Iteratore di output che punta al primo elemento di un intervallo di destinazione in cui devono essere archiviati la serie di somme o i risultati dell'operazione specificata.
 
-\ *Binary_op*
+*binary_op*\
 Operazione binaria da applicare a ogni elemento nell'intervallo specificato e il risultato delle applicazioni precedenti.
 
-\ *Unary_op*
+*unary_op*\
 Operazione unaria da applicare a ogni elemento nell'intervallo specificato.
 
 \ *init*
@@ -1038,17 +1038,17 @@ Type transform_reduce(
 \ *Exec*
 Criteri di esecuzione.
 
-*primo* \
+*primo*\
 Iteratore di input che punta al primo elemento dell'intervallo da sommare o combinare usando *Binary_op*.
 
 \ *First1*
 Iteratore di input che punta al primo elemento dell'intervallo da sommare o combinare usando *Binary_op1*.
 
-*ultimo* \
-Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, che è una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
+*ultimo*\
+Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op*, ovvero una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
 
 \ *Last1*
-Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op1*, che è una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
+Iteratore di input che punta all'ultimo elemento dell'intervallo da sommare o combinare usando *Binary_op1*, ovvero una posizione oltre l'elemento finale effettivamente incluso nell'accumulo iterato.
 
 *risultato*\
 Iteratore di output che punta al primo elemento di un intervallo di destinazione in cui devono essere archiviati la serie di somme o i risultati dell'operazione specificata.
@@ -1056,10 +1056,10 @@ Iteratore di output che punta al primo elemento di un intervallo di destinazione
 \ *init*
 Valore iniziale a cui ogni elemento viene a sua volta aggiunto o combinato utilizzando *Binary_op*.
 
-\ *Binary_op*
+*binary_op*\
 Operazione binaria da applicare a ogni elemento nell'intervallo specificato e il risultato delle applicazioni precedenti.
 
-\ *Unary_op*
+*unary_op*\
 Operazione unaria da applicare a ogni elemento nell'intervallo specificato.
 
 ### <a name="return-value"></a>Valore restituito
