@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451661"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876139"
 ---
-# <a name="regexconstants-namespace"></a>Spazio dei nomi regex_constants
+# <a name="regex_constants-namespace"></a>Spazio dei nomi regex_constants
 
 Spazio dei nomi per i flag dell'espressione regolare.
 
@@ -103,7 +103,7 @@ namespace regex_constants {
 }
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Lo spazio dei nomi `regex_constants` incapsula molti tipi di flag e i valori dei relativi flag associati.
 
@@ -115,7 +115,7 @@ Lo spazio dei nomi `regex_constants` incapsula molti tipi di flag e i valori dei
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<regex>
+**Intestazione:** \<Regex >
 
 **Spazio dei nomi:** std
 
@@ -144,7 +144,7 @@ enum error_type
     };
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un tipo enumerato che descrive un oggetto che può contenere flag di errore. I valori flag distinti sono:
 
@@ -204,7 +204,7 @@ enum match_flag_type
     };
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un tipo di maschera di bit che descrive le opzioni da usare quando esiste una corrispondenza tra una sequenza di testo e un'espressione regolare e i flag di formato da usare quando si sostituisce il testo. Le opzioni possono essere usate in combinazione con `|`.
 
@@ -260,7 +260,7 @@ enum syntax_option_type
     };
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un tipo di maschera di bit che descrive gli identificatori di lingua e i modificatori di sintassi da usare durante la compilazione di un'espressione regolare. Le opzioni possono essere usate in combinazione con `|`. Non deve essere usato più di un identificatore di lingua per volta.
 
@@ -291,10 +291,10 @@ I modificatori di sintassi sono:
 ## <a name="see-also"></a>Vedere anche
 
 [\<regex>](../standard-library/regex.md)\
-[Classe regex_error](../standard-library/regex-error-class.md)\
-[\<funzioni > Regex](../standard-library/regex-functions.md)\
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operatori > Regex](../standard-library/regex-operators.md)\
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[classe regex_error](../standard-library/regex-error-class.md)\
+[\<funzioni > regex](../standard-library/regex-functions.md)\
+[classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operatori > regex](../standard-library/regex-operators.md)\
+[classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[classe regex_traits](../standard-library/regex-traits-class.md)\
 [Typedef \<regex>](../standard-library/regex-typedefs.md)

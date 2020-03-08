@@ -1,28 +1,28 @@
 ---
-title: '&lt;nuovo&gt; operatori ed enumerazioni'
+title: '&lt;nuovi operatori di&gt; ed enumerazioni'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243674"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854940"
 ---
-# <a name="ltnewgt-operators-and-enums"></a>&lt;nuovo&gt; operatori ed enumerazioni
+# <a name="ltnewgt-operators-and-enums"></a>&lt;nuovi operatori di&gt; ed enumerazioni
 
-## <a name="op_align_val_t"></a> align_val_t enum
+## <a name="op_align_val_t"></a>align_val_t enum
 
 ```cpp
 enum class align_val_t : size_t {};
 ```
 
-## <a name="op_delete"></a> operatore delete
+## <a name="op_delete"></a>operatore delete
 
-La funzione chiamata da un'espressione delete per deallocare la memoria di singoli oggetti.
+Funzione chiamata da un'espressione delete per deallocare lo spazio di archiviazione per i singoli oggetti.
 
 ```cpp
 void operator delete(void* ptr) throw();
@@ -32,24 +32,24 @@ void operator delete(void* ptr, const std::nothrow_t&) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*PTR*\
+\ *ptr*
 Puntatore il cui valore deve essere reso non valido dall'eliminazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La prima funzione viene chiamata da un'espressione delete per il rendering del valore di *ptr* non valido. Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto consiste nell'accettare un valore di *ptr* che è null o che è stato restituito da una precedente chiamata a [operatore new](../standard-library/new-operators.md#op_new)(**size_t**).
+La prima funzione viene chiamata da un'espressione delete per eseguire il rendering del valore di *ptr* non valido. Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto consiste nell'accettare un valore di *ptr* che è null o che è stato restituito da una precedente chiamata a [operator new](../standard-library/new-operators.md#op_new)(**size_t**).
 
-Il comportamento predefinito per un valore null di *ptr* consiste nel non fare nulla. Qualsiasi altro valore di *ptr* deve essere un valore restituito in precedenza da una chiamata come descritta in precedenza. Il comportamento predefinito per tale valore non null del *ptr* consiste nel recuperare la memoria allocata dalla precedente chiamata. Non è specificato in quali condizioni o parte di memoria recuperata viene allocata da una chiamata successiva al `operator new`(**size_t**), or a uno dei `calloc`( **size_t**), `malloc`( **size_t**), oppure `realloc`( **void**<strong>\*</strong>, **size_t**).
+Il comportamento predefinito per un valore null di *ptr* è quello di non eseguire alcuna operazione. Qualsiasi altro valore di *ptr* deve essere un valore restituito in precedenza da una chiamata come descritto in precedenza. Il comportamento predefinito per un valore non null di *ptr* consiste nel recuperare l'archiviazione allocata dalla chiamata precedente. Non è specificato in base alle condizioni che vengono allocate da una chiamata successiva a `operator new`(**size_t**) o a uno qualsiasi dei `calloc`( **size_t**), `malloc`( **size_t**) o `realloc`( **void** <strong>\*</strong> **size_t).**
 
 La seconda funzione viene chiamata da un'espressione delete di posizionamento corrispondente a un'espressione new nel formato **new**( **std::size_t**). Non esegue alcuna operazione.
 
-La terza funzione viene chiamata da un'espressione delete di posizionamento corrispondente a un'espressione new nel formato **new**( **std::size_t**, **conststd::nothrow_t&** ). Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto consiste nell'accettare un valore di `ptr` che è Null o che è stato restituito da una precedente chiamata a `operator new`( **size_t**). Il comportamento predefinito consiste nel valutare **eliminare**(`ptr`).
+La terza funzione viene chiamata da un'espressione delete di posizionamento corrispondente a un'espressione new nel formato **new**( **std::size_t**, **conststd::nothrow_t&** ). Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto consiste nell'accettare un valore di `ptr` che è Null o che è stato restituito da una precedente chiamata a `operator new`( **size_t**). Il comportamento predefinito consiste nel valutare **Delete**(`ptr`).
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [operatore new](../standard-library/new-operators.md#op_new) per un esempio che usano **operatore delete**.
+Vedere [operator new](../standard-library/new-operators.md#op_new) per un esempio che usa **operator delete**.
 
-## <a name="op_delete_arr"></a> operatore delete]
+## <a name="op_delete_arr"></a>operator delete []
 
 Funzione chiamata da un'espressione delete per deallocare memoria per una matrice di oggetti.
 
@@ -61,22 +61,22 @@ void operator delete[](void* ptr, const std::nothrow_t&) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*PTR*\
+\ *ptr*
 Puntatore il cui valore deve essere reso non valido dall'eliminazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La prima funzione viene chiamata da un' `delete[]` espressione per il rendering del valore di *ptr* non valido. La funzione è sostituibile perché il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto consiste nell'accettare un valore di *ptr* che è null o che è stato restituito da una precedente chiamata a [operatore new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**). Il comportamento predefinito per un valore null di *ptr* consiste nel non fare nulla. Qualsiasi altro valore di *ptr* deve essere un valore restituito in precedenza da una chiamata come descritta in precedenza. Il comportamento predefinito per tale valore non null del *ptr* consiste nel recuperare la memoria allocata dalla precedente chiamata. Non è specificato in quali condizioni o parte di memoria recuperata viene allocata da una chiamata successiva al [operatore new](../standard-library/new-operators.md#op_new)(**size_t**), o a qualsiasi `calloc`(**size_t**), `malloc`(**size_t**), o `realloc`( **void**<strong>\*</strong>, **size_t**) .
+La prima funzione viene chiamata da un'espressione `delete[]` per eseguire il rendering del valore di *ptr* non valido. La funzione è sostituibile perché il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto consiste nell'accettare un valore di *ptr* che è null o che è stato restituito da una precedente chiamata a [Operator&#91;new](../standard-library/new-operators.md#op_new_arr)(**size_t**). Il comportamento predefinito per un valore null di *ptr* è quello di non eseguire alcuna operazione. Qualsiasi altro valore di *ptr* deve essere un valore restituito in precedenza da una chiamata come descritto in precedenza. Il comportamento predefinito per un valore non null di *ptr* consiste nel recuperare l'archiviazione allocata dalla chiamata precedente. Non è specificato in base alle condizioni in cui la parte o tutte le risorse di archiviazione recuperate vengono allocate da una chiamata successiva a [operator new](../standard-library/new-operators.md#op_new)(**size_t**) o a qualsiasi `calloc`(**size_t**), `malloc`(**size_t**) o `realloc`( **void** <strong>\*</strong> **size_t).**
 
-La seconda funzione viene chiamata da un posizionamento `delete[]` espressione corrispondente a un `new[]` espressione nel formato `new[]`(**std:: size_t**). Non esegue alcuna operazione.
+La seconda funzione viene chiamata da un posizionamento `delete[]` espressione corrispondente a un'espressione `new[]` nel formato `new[]`(**std:: size_t**). Non esegue alcuna operazione.
 
-La terza funzione viene chiamata da un'espressione delete di posizionamento corrispondente a un'espressione `new[]` nel formato `new[]`( **std::size_t**, **const std::nothrow_t&** ). Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto consiste nell'accettare un valore di *ptr* che è null o che è stato restituito da una precedente chiamata all'operatore `new[]`(**size_t**). Il comportamento predefinito consiste nel valutare `delete[]`( `ptr`).
+La terza funzione viene chiamata da un'espressione delete di posizionamento corrispondente a un'espressione `new[]` nel formato `new[]`( **std::size_t**, **const std::nothrow_t&** ). Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto consiste nell'accettare un valore di *ptr* che è null o che è stato restituito da una precedente chiamata a operator `new[]`(**size_t**). Il comportamento predefinito consiste nel valutare `delete[]`( `ptr`).
 
 ### <a name="example"></a>Esempio
 
 Vedere [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) per esempi d'uso di `operator delete[]`.
 
-## <a name="op_new"></a> operatore new
+## <a name="op_new"></a>operatore New
 
 Funzione chiamata da un'espressione new per allocare memoria per singoli oggetti.
 
@@ -91,14 +91,14 @@ void* operator new(std::size_t count, void* ptr) throw();
 *conteggio*\
 Numero di byte di memoria da allocare.
 
-*PTR*\
+\ *ptr*
 Puntatore da restituire.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'indirizzo di byte più basso della memoria appena allocata. Oppure *ptr*.
+Puntatore all'indirizzo di byte più basso della memoria appena allocata. O *ptr*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La prima funzione viene chiamata da un'espressione new per allocare `count` byte di memoria allineati correttamente per rappresentare qualsiasi oggetto di tale dimensione. Il programma può definire una funzione alternativa con questa firma che sostituisce la versione predefinita della libreria standard C++ ed è quindi sostituibile.
 
@@ -110,23 +110,23 @@ Il comportamento richiesto per un nuovo gestore consiste nell'eseguire una delle
 
 - Rendere disponibile altra memoria per l'allocazione e quindi restituire un risultato.
 
-- Chiameranno **abort** oppure **uscire**(`int`).
+- Chiamare **Abort** o **Exit**(`int`).
 
 - Generare un oggetto di tipo **bad_alloc**.
 
 Il comportamento predefinito di un puntatore [new_handler](../standard-library/new-typedefs.md#new_handler) prevede la generazione di un oggetto di tipo `bad_alloc`. Un puntatore Null designa il nuovo gestore predefinito.
 
-L'ordine e la contiguità della memoria allocata dalle chiamate successive a `operator new`(**size_t**) non è specificato, perché sono i valori iniziali presenti.
+L'ordine e il contiguità di spazio di archiviazione allocato dalle chiamate successive a `operator new`(**size_t**) non sono specificati, così come i valori iniziali archiviati.
 
 La seconda funzione viene chiamata da un'espressione new di posizionamento per allocare `count` byte di memoria allineati correttamente per rappresentare qualsiasi oggetto di tale dimensione. Il programma può definire una funzione alternativa con questa firma che sostituisce la versione predefinita della libreria standard C++ ed è quindi sostituibile.
 
-Il comportamento predefinito consiste nel restituire `operator new`(`count`) se tale funzione ha esito positivo. In caso contrario, viene restituito un puntatore Null.
+Il comportamento predefinito prevede la restituzione di `operator new`(`count`) se la funzione ha esito positivo. In caso contrario, viene restituito un puntatore Null.
 
 La terza funzione viene chiamata da un'espressione **new** di posizionamento nel formato **new** ( *args*) T, dove *args* è costituito da un puntatore a un singolo oggetto. Questo può essere utile per costruire un oggetto in corrispondenza di un indirizzo noto. La funzione restituisce *ptr*.
 
-Per liberare la memoria allocata dalle **operatore new**, chiamare [operatore delete](../standard-library/new-operators.md#op_delete).
+Per liberare spazio di archiviazione allocato dall' **operatore New**, chiamare [operator delete](../standard-library/new-operators.md#op_delete).
 
-Per informazioni sulla generazione o il comportamento non generare eccezioni di nuovi, vedere [la nuova ed eliminare operatori](../cpp/new-and-delete-operators.md).
+Per informazioni sul comportamento di generazione o non generazione di nuovi, vedere [operatori new e Delete](../cpp/new-and-delete-operators.md).
 
 ### <a name="example"></a>Esempio
 
@@ -171,7 +171,7 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a> operatore new]
+## <a name="op_new_arr"></a>operator new []
 
 Funzione di allocazione chiamata da un'espressione new per allocare memoria per una matrice di oggetti.
 
@@ -186,18 +186,18 @@ void* operator new[](std::size_t count, void* ptr) throw();
 *conteggio*\
 Numero di byte di memoria da allocare per l'oggetto matrice.
 
-*PTR*\
+\ *ptr*
 Puntatore da restituire.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'indirizzo di byte più basso della memoria appena allocata. Oppure *ptr*.
+Puntatore all'indirizzo di byte più basso della memoria appena allocata. O *ptr*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La prima funzione viene chiamata da un'espressione `new[]` per allocare `count` byte di memoria allineati correttamente in modo da rappresentare qualsiasi oggetto matrice di dimensione uguale o minore. Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto consiste uguali a quelle per [operatore new](../standard-library/new-operators.md#op_new)(**size_t**). Il comportamento predefinito consiste nel restituire `operator new`( `count`).
+La prima funzione viene chiamata da un'espressione `new[]` per allocare `count` byte di memoria allineati correttamente in modo da rappresentare qualsiasi oggetto matrice di dimensione uguale o minore. Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento richiesto è identico a quello di [operator new](../standard-library/new-operators.md#op_new)(**size_t**). Il comportamento predefinito consiste nel restituire `operator new`( `count`).
 
-La seconda funzione viene chiamata da un'espressione `new[]` di posizionamento per allocare `count` byte di memoria allineati correttamente in modo da rappresentare qualsiasi oggetto matrice di tale dimensione. Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento predefinito consiste nel restituire **operatornew**(`count`) se tale funzione ha esito positivo. In caso contrario, viene restituito un puntatore Null.
+La seconda funzione viene chiamata da un'espressione `new[]` di posizionamento per allocare `count` byte di memoria allineati correttamente in modo da rappresentare qualsiasi oggetto matrice di tale dimensione. Il programma può definire una funzione con questa firma che sostituisce la versione predefinita della libreria standard C++. Il comportamento predefinito prevede la restituzione di **operatornew**(`count`) se la funzione ha esito positivo. In caso contrario, viene restituito un puntatore Null.
 
 La terza funzione viene chiamata da un'espressione `new[]` di posizionamento, nel formato **new** ( *args*) **T**[ **N**]. In questo caso, *args* è costituito da un puntatore a un singolo oggetto. La funzione restituisce `ptr`.
 

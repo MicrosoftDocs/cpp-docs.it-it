@@ -6,13 +6,13 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448723"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856696"
 ---
-# <a name="lthashmapgt-operators"></a>Operatori &lt;hash_map&gt;
+# <a name="lthash_mapgt-operators"></a>Operatori &lt;hash_map&gt;
 
 |||
 |-|-|
@@ -32,21 +32,21 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `hash_map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `hash_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti hash_map non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti hash_map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
-I membri del [< hash_map >](hash-map.md) e [< hash_set >](hash-set.md) file di intestazione nello [spazio dei nomi stdext](stdext-namespace.md).
+I membri della [< hash_map >](hash-map.md) e [< hash_set](hash-set.md) i file di intestazione > nello [spazio dei nomi stdext](stdext-namespace.md).
 
 ### <a name="example"></a>Esempio
 
@@ -101,17 +101,17 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `hash_map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `hash_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto hash_map a sinistra dell'operatore è uguale all'oggetto hash_map a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti hash_map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -155,10 +155,10 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>  operator!= (hash_multimap)
+## <a name="op_neq_mm"></a>operatore! = (hash_multimap)
 
 > [!NOTE]
-> Questa API è obsoleta. L'alternativa è la [classe unordered_multimap](unordered-multimap-class.md).
+> Questa API è obsoleta. L'alternativa è [unordered_multimap Class](unordered-multimap-class.md).
 
 Verifica se l'oggetto hash_multimap a sinistra dell'operatore non è uguale all'oggetto hash_multimap a destra.
 
@@ -168,17 +168,17 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `hash_multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti hash_multimap non sono uguali; **false** in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti hash_multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -222,10 +222,10 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>  operator==  (hash_multimap)
+## <a name="op_eq_eq_mm"></a>operatore = = (hash_multimap)
 
 > [!NOTE]
-> Questa API è obsoleta. L'alternativa è la [classe unordered_multimap](unordered-multimap-class.md).
+> Questa API è obsoleta. L'alternativa è [unordered_multimap Class](unordered-multimap-class.md).
 
 Verifica se l'oggetto hash_multimap a sinistra dell'operatore è uguale all'oggetto hash_multimap a destra.
 
@@ -235,17 +235,17 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `hash_multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto hash_multimap a sinistra dell'operatore è uguale all'oggetto hash_multimap a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti hash_multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
 ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690058"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875923"
 ---
 # <a name="ltallocatorsgt-macros"></a>Macro &lt;allocators&gt;
 
@@ -36,7 +36,7 @@ Restituisce un modello di classe allocator.
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La macro restituisce una definizione di modello `template <class Type> class name {.....}` e una specializzazione `template <> class name<void> {.....}` che insieme definiscono un modello di classe allocator che utilizza il filtro di sincronizzazione `sync` e una cache di tipo `cache`.
 
@@ -76,7 +76,7 @@ Restituisce `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="cache_freelist"></a>  CACHE_FREELIST
 
@@ -86,7 +86,7 @@ Restituisce `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
 
@@ -96,7 +96,7 @@ Restituisce `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="sync_default"></a>  SYNC_DEFAULT
 
@@ -106,7 +106,7 @@ Restituisce un filtro di sincronizzazione.
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se un compilatore supporta la compilazione di applicazioni a thread singolo e multithread, per le applicazioni a thread singolo la macro restituisce `stdext::allocators::sync_none`; in tutti gli altri casi, restituisce `stdext::allocators::sync_shared`.
 
