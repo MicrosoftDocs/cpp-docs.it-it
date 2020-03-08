@@ -6,15 +6,15 @@ f1_keywords:
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245362"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876028"
 ---
 # <a name="ltlimitsgt-enums"></a>Enumerazioni &lt;limits&gt;
 
-## <a name="float_denorm_style"></a> float_denorm_style
+## <a name="float_denorm_style"></a>float_denorm_style
 
 L'enumerazione descrive i vari metodi che un'implementazione può scegliere per la rappresentazione di un valore a virgola mobile denormalizzato, ovvero troppo piccolo per essere rappresentato come valore normalizzato.
 
@@ -29,17 +29,17 @@ enum float_denorm_style {
 
 L'enumerazione restituisce:
 
-- `denorm_indeterminate` Se la presenza o assenza di form denormalizzato non può essere determinato al momento della conversione.
+- `denorm_indeterminate` se non è possibile determinare la presenza o l'assenza di form denormalizzati in fase di conversione.
 
-- `denorm_absent` Se non sono presenti form denormalizzati.
+- `denorm_absent` se i moduli denormalizzati sono assenti.
 
-- `denorm_present` Se sono presenti form denormalizzati.
+- `denorm_present` se sono presenti form denormalizzati.
 
 ### <a name="example"></a>Esempio
 
 Vedere [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm) per un esempio in cui è possibile accedere ai valori di questa enumerazione.
 
-## <a name="float_round_style"></a> float_round_style
+## <a name="float_round_style"></a>float_round_style
 
 L'enumerazione descrive i vari metodi che un'implementazione può scegliere per l'arrotondamento di un valore a virgola mobile in un valore intero.
 
@@ -56,15 +56,15 @@ enum float_round_style {
 
 L'enumerazione restituisce:
 
-- `round_indeterminate` Se non è possibile determinare il metodo di arrotondamento.
+- `round_indeterminate` se non è possibile determinare il metodo di arrotondamento.
 
-- `round_toward_zero` Se l'arrotondamento verso lo zero.
+- `round_toward_zero` se il ciclo viene arrotondato verso lo zero.
 
-- `round_to_nearest` Se l'arrotondamento al numero intero più vicino.
+- `round_to_nearest` se l'arrotondamento al numero intero più vicino.
 
-- `round_toward_infinity` Se l'arrotondamento si allontana da zero.
+- `round_toward_infinity` se il round away è zero.
 
-- `round_toward_neg_infinity` Se l'arrotondamento al numero intero negativo.
+- `round_toward_neg_infinity` se l'arrotondamento a un numero intero negativo.
 
 ### <a name="example"></a>Esempio
 

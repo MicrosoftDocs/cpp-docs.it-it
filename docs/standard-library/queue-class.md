@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458349"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890862"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -45,22 +45,22 @@ class queue
 *Tipo*\
 Tipo di dati degli elementi da archiviare nell'oggetto queue
 
-*Contenitore*\
+\ *contenitore*
 Tipo del contenitore sottostante usato per implementare l'oggetto queue.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Gli elementi della classe `Type` stipulati nel primo parametro di modello di un oggetto Queue sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento nella classe `Container` di contenitore sottostante prevista dal secondo modello parametro. L' `Type` oggetto deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
+Gli elementi della classe `Type` specificati nel primo parametro di modello di un oggetto Queue sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento nella classe di contenitore sottostante `Container` stipulata dal secondo parametro di modello. Il `Type` deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
 
-Le classi contenitore sottostanti appropriate per la coda includono [deque](../standard-library/deque-class.md) ed [elenco](../standard-library/list-class.md)o qualsiasi altro contenitore sequenza che supporta le `front`operazioni `back` `push_back`di,, `pop_front`e. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
+Le classi contenitore sottostanti appropriate per la coda includono [deque](../standard-library/deque-class.md) ed [elenco](../standard-library/list-class.md)o qualsiasi altro contenitore sequenza che supporta le operazioni di `front`, `back`, `push_back`e `pop_front`. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
 
-Gli oggetti Queue sono confrontabili tra uguaglianza se e solo se gli elementi `Type` della classe sono confrontabili con l'uguaglianza e sono meno di confrontabili se e solo se `Type` gli elementi della classe sono confrontabili con minore.
+Gli oggetti Queue sono confrontabili con l'uguaglianza se e solo se gli elementi della classe `Type` sono confrontabili con l'uguaglianza e sono meno di confrontabili se e solo se gli elementi della classe `Type` sono confrontabili con minore.
 
 Esistono tre tipi di adattatori di contenitori definiti nella libreria standard C++: stack, queue e priority_queue. Ognuno di essi limita la funzionalità di una classe contenitore sottostante per fornire un'interfaccia controllata con precisione a una struttura di dati standard.
 
 - La [classe stack](../standard-library/stack-class.md) supporta una struttura di dati LIFO (Last-In, First-Out). Una buona analogia è costituita da una pila di piatti. Gli elementi (piatti) possono essere inseriti, ispezionati o rimossi solo dalla cima della pila/stack, ovvero l'ultimo elemento alla fine del contenitore di base. La restrizione relativa alla possibilità di accedere solo al primo elemento è il motivo per l'uso della classe stack.
 
-- La classe queue supporta una struttura di dati FIFO (First-In, First-Out). Una buona analogia è costituita da persone in coda davanti allo sportello di una banca. Gli elementi (persone) possono essere aggiunti alla fine della fila e vengono rimossi dalla parte iniziale della fila. È possibile ispezionare sia l'inizio che la fine della fila. La restrizione relativa alla possibilità di accedere solo agli elementi iniziali e finali in questo modo costituisce il motivo per l'uso della classe queue.
+- La classe queue supporta una struttura dei dati FIFO (First-In, First-Out). Una buona analogia è costituita da persone in coda davanti allo sportello di una banca. Gli elementi (persone) possono essere aggiunti alla fine della fila e vengono rimossi dalla parte iniziale della fila. È possibile ispezionare sia l'inizio che la fine della fila. La restrizione relativa alla possibilità di accedere solo agli elementi iniziali e finali in questo modo costituisce il motivo per l'uso della classe queue.
 
 - La [classe priority_queue](../standard-library/priority-queue-class.md) ordina gli elementi in modo che l'elemento più grande sia sempre in posizione iniziale. Supporta l'inserimento di un elemento e l'ispezione e la rimozione del primo elemento. Una buona analogia è costituita da una fila di persone disposte in base a età, altezza o qualche altro criterio.
 
@@ -72,7 +72,7 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 |-|-|
 |[queue](#queue)|Costruisce un `queue` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
 |||
 |-|-|
@@ -105,9 +105,9 @@ const_reference back() const;
 
 Ultimo elemento dell'oggetto queue. Se l'oggetto queue è vuoto, il valore restituito è indefinito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il valore restituito di `back` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `back` viene assegnato a un `reference`, l'oggetto Queue può essere modificato.
+Se il valore restituito di `back` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `back` viene assegnato a una `reference`, l'oggetto Queue può essere modificato.
 
 Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
 
@@ -145,7 +145,7 @@ Tipo che fornisce il contenitore di base da adattare.
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello `Container`. Due classi contenitore sequenziale della libreria standard C++, ovvero la classe list e la classe deque predefinita, soddisfano i requisiti da usare come contenitore di base per un oggetto queue. È anche possibile usare tipi definiti dall'utente che soddisfano i requisiti.
 
@@ -215,11 +215,11 @@ const_reference front() const;
 
 Primo elemento dell'oggetto queue. Se l'oggetto queue è vuoto, il valore restituito è indefinito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il valore restituito di `front` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `front` viene assegnato a un `reference`, l'oggetto Queue può essere modificato.
+Se il valore restituito di `front` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `front` viene assegnato a una `reference`, l'oggetto Queue può essere modificato.
 
-La funzione membro restituisce un `reference` oggetto al primo elemento della sequenza controllata, che non deve essere vuoto.
+La funzione membro restituisce un `reference` al primo elemento della sequenza controllata, che non deve essere vuoto.
 
 Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
 
@@ -261,7 +261,7 @@ Rimuove un elemento dall'inizio dell'oggetto queue.
 void pop();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto queue non deve essere vuoto per applicare la funzione membro. L'inizio dell'oggetto queue è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.
 
@@ -319,10 +319,10 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-*Val*\
+\ *Val*
 Elemento aggiunto alla fine dell'oggetto queue.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La fine dell'oggetto queue è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.
 
@@ -370,10 +370,10 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ok*\
+\ a *destra*
 Il contenitore **const** di cui l'oggetto queue costruito deve essere una copia.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il contenitore di base predefinito per l'oggetto queue è deque. È anche possibile specificare un elenco come contenitore di base, ma non è possibile specificare un vettore, perché non è presente la funzione membro `pop_front` necessaria.
 
@@ -474,7 +474,7 @@ Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un ogge
 typedef typename Container::size_type size_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del `size_type` del contenitore di base adattato dall'oggetto queue.
 
@@ -482,7 +482,7 @@ Il tipo è un sinonimo del `size_type` del contenitore di base adattato dall'ogg
 
 Vedere l'esempio relativo a [queue::front](#front) per indicazioni su come dichiarare e usare `size_type`.
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Tipo che rappresenta il tipo di oggetto archiviato come elemento in un oggetto queue.
 
@@ -490,7 +490,7 @@ Tipo che rappresenta il tipo di oggetto archiviato come elemento in un oggetto q
 typedef typename Container::value_type value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del `value_type` del contenitore di base adattato dall'oggetto queue.
 
