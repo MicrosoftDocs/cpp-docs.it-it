@@ -10,15 +10,15 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241653"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866193"
 ---
 # <a name="lttuplegt-operators"></a>Operatori &lt;tuple&gt;
 
-## <a name="op_neq"></a> operatore! =
+## <a name="op_neq"></a>operatore! =
 
 Confronta oggetti `tuple` per verificarne la disuguaglianza.
 
@@ -31,10 +31,10 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+\ *TN*
 Tipo dell'ennesimo elemento tupla.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione restituisce false quando `N` è 0; in caso contrario, restituisce `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
@@ -83,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a> Operatore&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Confronta oggetti `tuple` per verificare se sono minori di un certo valore.
 
@@ -96,10 +96,10 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+\ *TN*
 Tipo dell'ennesimo elemento tupla.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione restituisce true quando `N` è maggiore di 0 e il primo valore differente in `tpl1` è minore del corrispondente valore in `tpl2`; in caso contrario, restituisce false.
 
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> Operatore&lt;=
+## <a name="op_lt_eq"></a>operatore&lt;=
 
 Confronta oggetti `tuple` per verificare se sono minori o uguali a un certo valore.
 
@@ -161,10 +161,10 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+\ *TN*
 Tipo dell'ennesimo elemento tupla.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione restituisce `!(tpl2 < tpl1)`.
 
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>operatore = =
 
 Confronta oggetti `tuple` per verificarne l'uguaglianza.
 
@@ -226,10 +226,10 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+\ *TN*
 Tipo dell'ennesimo elemento tupla.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione restituisce true quando `N` è 0; in caso contrario, restituisce `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
@@ -278,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a> Operatore&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 Confronta oggetti `tuple` per verificare qual è il maggiore.
 
@@ -291,10 +291,10 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+\ *TN*
 Tipo dell'ennesimo elemento tupla.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione restituisce `tpl2 < tpl1`.
 
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> Operatore&gt;=
+## <a name="op_gt_eq"></a>operatore&gt;=
 
 Confronta oggetti `tuple` per verificare se sono uguali o stabilire qual è il maggiore.
 
@@ -356,10 +356,10 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*\
+\ *TN*
 Tipo dell'ennesimo elemento tupla.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione restituisce `!(tpl1 < tpl2)`.
 

@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 ms.openlocfilehash: a0ca4cbad48c420250fe39e131de5504b1ae70f3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502473"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875858"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 
@@ -95,52 +95,52 @@ class CTabCtrl : public CWnd
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CTabCtrl::CTabCtrl](#ctabctrl)|Costruisce un oggetto `CTabCtrl`.|
+|[CTabCtrl:: CTabCtrl](#ctabctrl)|Costruisce un oggetto `CTabCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CTabCtrl::AdjustRect](#adjustrect)|Calcola l'area di visualizzazione di un controllo scheda in base a un rettangolo della finestra oppure calcola il rettangolo della finestra che corrisponderebbe a un'area di visualizzazione specificata.|
-|[CTabCtrl::Create](#create)|Crea un controllo struttura a schede e lo collega a un'istanza di `CTabCtrl` un oggetto.|
-|[CTabCtrl::CreateEx](#createex)|Crea un controllo struttura a schede con gli stili estesi di Windows specificati e lo collega a un' `CTabCtrl` istanza di un oggetto.|
-|[CTabCtrl::DeleteAllItems](#deleteallitems)|Rimuove tutti gli elementi da un controllo struttura a schede.|
-|[CTabCtrl::DeleteItem](#deleteitem)|Rimuove un elemento da un controllo struttura a schede.|
-|[CTabCtrl::DeselectAll](#deselectall)|Reimposta gli elementi in un controllo struttura a schede, cancellando gli elementi che sono stati premuti.|
-|[CTabCtrl::DrawItem](#drawitem)|Disegna un elemento specificato di un controllo struttura a schede.|
-|[CTabCtrl::GetCurFocus](#getcurfocus)|Recupera la scheda con lo stato attivo corrente di un controllo struttura a schede.|
-|[CTabCtrl::GetCurSel](#getcursel)|Determina la scheda attualmente selezionata in un controllo struttura a schede.|
-|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Recupera gli stili estesi attualmente in uso per il controllo struttura a schede.|
-|[CTabCtrl::GetImageList](#getimagelist)|Recupera l'elenco di immagini associato a un controllo struttura a schede.|
-|[CTabCtrl::GetItem](#getitem)|Recupera le informazioni su una scheda in un controllo struttura a schede.|
-|[CTabCtrl::GetItemCount](#getitemcount)|Recupera il numero di schede nel controllo Struttura a schede.|
-|[CTabCtrl::GetItemRect](#getitemrect)|Recupera il rettangolo di delimitazione di una scheda in un controllo struttura a schede.|
-|[CTabCtrl::GetItemState](#getitemstate)|Recupera lo stato dell'elemento di controllo scheda indicato.|
-|[CTabCtrl::GetRowCount](#getrowcount)|Recupera il numero corrente di righe di schede in un controllo struttura a schede.|
-|[CTabCtrl::GetToolTips](#gettooltips)|Recupera l'handle del controllo descrizione comando associato a un controllo struttura a schede.|
-|[CTabCtrl::HighlightItem](#highlightitem)|Imposta lo stato di evidenziazione di un elemento di scheda.|
-|[CTabCtrl::HitTest](#hittest)|Determina la scheda, se presente, che si trova in una posizione dello schermo specificata.|
-|[CTabCtrl::InsertItem](#insertitem)|Inserisce una nuova scheda in un controllo struttura a schede.|
-|[CTabCtrl::RemoveImage](#removeimage)|Rimuove un'immagine dall'elenco di immagini di un controllo struttura a schede.|
-|[CTabCtrl::SetCurFocus](#setcurfocus)|Imposta lo stato attivo su una scheda specificata in un controllo struttura a schede.|
-|[CTabCtrl::SetCurSel](#setcursel)|Seleziona una scheda in un controllo struttura a schede.|
-|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Imposta gli stili estesi per un controllo struttura a schede.|
-|[CTabCtrl::SetImageList](#setimagelist)|Assegna un elenco di immagini a un controllo struttura a schede.|
-|[CTabCtrl::SetItem](#setitem)|Imposta alcuni o tutti gli attributi di una scheda.|
-|[CTabCtrl::SetItemExtra](#setitemextra)|Imposta il numero di byte per tabulazione riservata ai dati definiti dall'applicazione in un controllo struttura a schede.|
-|[CTabCtrl::SetItemSize](#setitemsize)|Imposta la larghezza e l'altezza di un elemento.|
-|[CTabCtrl::SetItemState](#setitemstate)|Imposta lo stato dell'elemento di controllo scheda indicato.|
-|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Imposta la larghezza minima degli elementi in un controllo struttura a schede.|
-|[CTabCtrl::SetPadding](#setpadding)|Imposta la quantità di spazio (riempimento) intorno all'icona e all'etichetta di ogni scheda in un controllo struttura a schede.|
-|[CTabCtrl::SetToolTips](#settooltips)|Assegna un controllo descrizione comando a un controllo struttura a schede.|
+|[CTabCtrl:: AdjustRect](#adjustrect)|Calcola l'area di visualizzazione di un controllo scheda in base a un rettangolo della finestra oppure calcola il rettangolo della finestra che corrisponderebbe a un'area di visualizzazione specificata.|
+|[CTabCtrl:: create](#create)|Crea un controllo struttura a schede e lo collega a un'istanza di un oggetto `CTabCtrl`.|
+|[CTabCtrl:: CreateEx](#createex)|Crea un controllo struttura a schede con gli stili estesi di Windows specificati e lo collega a un'istanza di un oggetto `CTabCtrl`.|
+|[CTabCtrl::D eleteAllItems](#deleteallitems)|Rimuove tutti gli elementi da un controllo struttura a schede.|
+|[CTabCtrl::D eleteItem](#deleteitem)|Rimuove un elemento da un controllo struttura a schede.|
+|[CTabCtrl::D eselectAll](#deselectall)|Reimposta gli elementi in un controllo struttura a schede, cancellando gli elementi che sono stati premuti.|
+|[CTabCtrl::D rawItem](#drawitem)|Disegna un elemento specificato di un controllo struttura a schede.|
+|[CTabCtrl:: GetCurFocus](#getcurfocus)|Recupera la scheda con lo stato attivo corrente di un controllo struttura a schede.|
+|[CTabCtrl:: GetCurSel](#getcursel)|Determina la scheda attualmente selezionata in un controllo struttura a schede.|
+|[CTabCtrl:: GetExtendedStyle](#getextendedstyle)|Recupera gli stili estesi attualmente in uso per il controllo struttura a schede.|
+|[CTabCtrl:: GetImages](#getimagelist)|Recupera l'elenco di immagini associato a un controllo struttura a schede.|
+|[CTabCtrl:: GetItem](#getitem)|Recupera le informazioni su una scheda in un controllo struttura a schede.|
+|[CTabCtrl:: GetItemCount](#getitemcount)|Recupera il numero di schede nel controllo Struttura a schede.|
+|[CTabCtrl:: GetItemRect](#getitemrect)|Recupera il rettangolo di delimitazione di una scheda in un controllo struttura a schede.|
+|[CTabCtrl:: GetItemState](#getitemstate)|Recupera lo stato dell'elemento di controllo scheda indicato.|
+|[CTabCtrl:: GetRowCount](#getrowcount)|Recupera il numero corrente di righe di schede in un controllo struttura a schede.|
+|[CTabCtrl:: GetToolTips](#gettooltips)|Recupera l'handle del controllo descrizione comando associato a un controllo struttura a schede.|
+|[CTabCtrl:: HighlightItem](#highlightitem)|Imposta lo stato di evidenziazione di un elemento di scheda.|
+|[CTabCtrl:: HitTest](#hittest)|Determina la scheda, se presente, che si trova in una posizione dello schermo specificata.|
+|[CTabCtrl:: InsertItem](#insertitem)|Inserisce una nuova scheda in un controllo struttura a schede.|
+|[CTabCtrl:: RemoveImage](#removeimage)|Rimuove un'immagine dall'elenco di immagini di un controllo struttura a schede.|
+|[CTabCtrl:: SetCurFocus](#setcurfocus)|Imposta lo stato attivo su una scheda specificata in un controllo struttura a schede.|
+|[CTabCtrl:: CurSel](#setcursel)|Seleziona una scheda in un controllo struttura a schede.|
+|[CTabCtrl:: SetExtendedStyle](#setextendedstyle)|Imposta gli stili estesi per un controllo struttura a schede.|
+|[CTabCtrl:: seimagine](#setimagelist)|Assegna un elenco di immagini a un controllo struttura a schede.|
+|[CTabCtrl:: SetItem](#setitem)|Imposta alcuni o tutti gli attributi di una scheda.|
+|[CTabCtrl:: SetItemExtra](#setitemextra)|Imposta il numero di byte per tabulazione riservata ai dati definiti dall'applicazione in un controllo struttura a schede.|
+|[CTabCtrl:: SetItemSize](#setitemsize)|Imposta la larghezza e l'altezza di un elemento.|
+|[CTabCtrl:: SetItemState](#setitemstate)|Imposta lo stato dell'elemento di controllo scheda indicato.|
+|[CTabCtrl:: SetMinTabWidth](#setmintabwidth)|Imposta la larghezza minima degli elementi in un controllo struttura a schede.|
+|[CTabCtrl:: sepadding](#setpadding)|Imposta la quantità di spazio (riempimento) intorno all'icona e all'etichetta di ogni scheda in un controllo struttura a schede.|
+|[CTabCtrl:: setooltips](#settooltips)|Assegna un controllo descrizione comando a un controllo struttura a schede.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un "controllo struttura a schede" è analogo ai separatori in un notebook o alle etichette in un file CAB. L'uso del controllo Struttura a schede consente a un'applicazione di definire più pagine per la stessa area di una finestra o una finestra di dialogo. Ogni pagina è costituita da un set di informazioni o da un gruppo di controlli che l'applicazione visualizza quando l'utente seleziona la scheda corrispondente. Un tipo speciale di controllo struttura a schede Visualizza le schede simili ai pulsanti. Fare clic su un pulsante per eseguire immediatamente un comando anziché visualizzare una pagina.
 
-Questo controllo (e pertanto la `CTabCtrl` classe) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3,51 e successive.
+Questo controllo (e pertanto la classe `CTabCtrl`) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3,51 e successive.
 
-Per altre informazioni sull'uso `CTabCtrl`di, vedere [controlli](../../mfc/controls-mfc.md) e [uso di CTabCtrl](../../mfc/using-ctabctrl.md).
+Per altre informazioni sull'uso di `CTabCtrl`, vedere [controlli](../../mfc/controls-mfc.md) e [uso di CTabCtrl](../../mfc/using-ctabctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -156,7 +156,7 @@ Per altre informazioni sull'uso `CTabCtrl`di, vedere [controlli](../../mfc/contr
 
 **Intestazione:** afxcmn.h
 
-##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect
+##  <a name="adjustrect"></a>CTabCtrl:: AdjustRect
 
 Calcola l'area di visualizzazione di un controllo scheda in base a un rettangolo della finestra oppure calcola il rettangolo della finestra che corrisponderebbe a un'area di visualizzazione specificata.
 
@@ -178,7 +178,7 @@ Puntatore a una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) che spe
 
 ##  <a name="create"></a>CTabCtrl:: create
 
-Crea un controllo struttura a schede e lo collega a un'istanza di `CTabCtrl` un oggetto.
+Crea un controllo struttura a schede e lo collega a un'istanza di un oggetto `CTabCtrl`.
 
 ```
 virtual BOOL Create(
@@ -197,7 +197,7 @@ Specifica lo stile del controllo Tab. Applicare qualsiasi combinazione di [stili
 Specifica la posizione e le dimensioni del controllo Tab. Può essere un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
 *pParentWnd*<br/>
-Specifica la finestra padre del controllo Tab, in genere `CDialog`. Non deve essere NULL.
+Specifica la finestra padre del controllo Tab, in genere un `CDialog`. Non deve essere NULL.
 
 *nID*<br/>
 Specifica l'ID del controllo scheda.
@@ -206,9 +206,9 @@ Specifica l'ID del controllo scheda.
 
 TRUE se l'inizializzazione dell'oggetto è stata completata. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si costruisce `CTabCtrl` un oggetto in due passaggi. Chiamare innanzitutto il costruttore, quindi chiamare `Create`, che crea il controllo struttura `CTabCtrl` a schede e lo collega all'oggetto.
+Si costruisce un oggetto `CTabCtrl` in due passaggi. Chiamare innanzitutto il costruttore, quindi chiamare `Create`, che crea il controllo struttura a schede e lo collega all'oggetto `CTabCtrl`.
 
 Oltre agli stili del controllo struttura a schede, è possibile applicare gli stili della finestra seguenti a un controllo struttura a schede:
 
@@ -222,7 +222,7 @@ Oltre agli stili del controllo struttura a schede, è possibile applicare gli st
 
 - WS_TABSTOP specifica uno dei diversi controlli tramite i quali l'utente può spostarsi usando il tasto TAB. Il tasto TAB consente di spostare l'utente sul controllo successivo specificato dallo stile WS_TABSTOP.
 
-Per creare un controllo struttura a schede con gli stili estesi della `Create`finestra, chiamare [CTabCtrl:: CreateEx](#createex) anziché.
+Per creare un controllo struttura a schede con gli stili estesi della finestra, chiamare [CTabCtrl:: CreateEx](#createex) anziché `Create`.
 
 ### <a name="example"></a>Esempio
 
@@ -230,7 +230,7 @@ Per creare un controllo struttura a schede con gli stili estesi della `Create`fi
 
 ##  <a name="createex"></a>CTabCtrl:: CreateEx
 
-Crea un controllo (una finestra figlio) e lo associa `CTabCtrl` all'oggetto.
+Crea un controllo (una finestra figlio) e lo associa all'oggetto `CTabCtrl`.
 
 ```
 virtual BOOL CreateEx(
@@ -262,11 +262,11 @@ ID della finestra figlio del controllo.
 
 Diverso da zero se ha esito positivo, altrimenti 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificato dalla prefazione **WS_EX_** di Windows Extended Style.
+Usare `CreateEx` anziché [create](#create) per applicare gli stili di Windows estesi, specificati dall' **WS_EX_** di prefazione dello stile esteso di Windows.
 
-`CreateEx`Crea il controllo con gli stili Windows estesi specificati da *dwExStyle*. Impostare gli stili estesi specifici di un controllo usando [SetExtendedStyle](#setextendedstyle). Ad esempio, usare `CreateEx` per impostare tali stili come WS_EX_CONTEXTHELP, ma usare `SetExtendedStyle` per impostare tali stili come TCS_EX_FLATSEPARATORS. Per ulteriori informazioni, vedere gli stili descritti in [controllo scheda stili estesi](/windows/win32/Controls/tab-control-extended-styles) nel Windows SDK.
+`CreateEx` crea il controllo con gli stili Windows estesi specificati da *dwExStyle*. Impostare gli stili estesi specifici di un controllo usando [SetExtendedStyle](#setextendedstyle). Utilizzare ad esempio `CreateEx` per impostare tali stili come WS_EX_CONTEXTHELP, ma utilizzare `SetExtendedStyle` per impostare tali stili come TCS_EX_FLATSEPARATORS. Per ulteriori informazioni, vedere gli stili descritti in [controllo scheda stili estesi](/windows/win32/Controls/tab-control-extended-styles) nel Windows SDK.
 
 ##  <a name="ctabctrl"></a>CTabCtrl:: CTabCtrl
 
@@ -276,7 +276,7 @@ Costruisce un oggetto `CTabCtrl`.
 CTabCtrl();
 ```
 
-##  <a name="deleteallitems"></a>  CTabCtrl::DeleteAllItems
+##  <a name="deleteallitems"></a>CTabCtrl::D eleteAllItems
 
 Rimuove tutti gli elementi da un controllo struttura a schede.
 
@@ -288,7 +288,7 @@ BOOL DeleteAllItems();
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-##  <a name="deleteitem"></a>  CTabCtrl::DeleteItem
+##  <a name="deleteitem"></a>CTabCtrl::D eleteItem
 
 Rimuove l'elemento specificato da un controllo struttura a schede.
 
@@ -298,7 +298,7 @@ BOOL DeleteItem(int nItem);
 
 ### <a name="parameters"></a>Parametri
 
-*nItem*<br/>
+*nIten*<br/>
 Valore in base zero dell'elemento da eliminare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -309,7 +309,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]
 
-##  <a name="deselectall"></a>  CTabCtrl::DeselectAll
+##  <a name="deselectall"></a>CTabCtrl::D eselectAll
 
 Reimposta gli elementi in un controllo struttura a schede, cancellando gli elementi che sono stati premuti.
 
@@ -322,7 +322,7 @@ void DeselectAll(BOOL fExcludeFocus);
 *fExcludeFocus*<br/>
 Flag che specifica l'ambito della deselezione dell'elemento. Se questo parametro è impostato su FALSE, verranno reimpostati tutti i pulsanti di tabulazione. Se è impostato su TRUE, tutti gli elementi della scheda eccetto quello attualmente selezionato verranno reimpostati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro implementa il comportamento del messaggio Win32, [TCM_DESELECTALL](/windows/win32/Controls/tcm-deselectall), come descritto nel Windows SDK.
 
@@ -339,15 +339,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 Puntatore a una struttura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) che descrive l'elemento da disegnare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il `itemAction` membro`DRAWITEMSTRUCT` della struttura definisce l'azione di disegno da eseguire.
+Il membro `itemAction` della struttura `DRAWITEMSTRUCT` definisce l'azione di disegno da eseguire.
 
-Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro per implementare il disegno per `CTabCtrl` un oggetto disegnato dal proprietario.
+Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro per implementare il disegno per un oggetto `CTabCtrl` di disegno del proprietario.
 
 L'applicazione deve ripristinare tutti gli oggetti GDI (Graphics Device Interface) selezionati per il contesto di visualizzazione fornito in *lpDrawItemStruct* prima che questa funzione membro venga terminata.
 
-##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus
+##  <a name="getcurfocus"></a>CTabCtrl:: GetCurFocus
 
 Recupera l'indice della scheda con lo stato attivo corrente.
 
@@ -383,9 +383,9 @@ DWORD GetExtendedStyle();
 
 Rappresenta gli stili estesi attualmente in uso per il controllo struttura a schede. Questo valore è una combinazione di [stili estesi del controllo](/windows/win32/Controls/tab-control-extended-styles)struttura a schede, come descritto nel Windows SDK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_GETEXTENDEDSTYLE](/windows/win32/Controls/tcm-getextendedstyle), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TCM_GETEXTENDEDSTYLE](/windows/win32/Controls/tcm-getextendedstyle)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="getimagelist"></a>CTabCtrl:: GetImages
 
@@ -397,7 +397,7 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-In caso di esito positivo, puntatore all'elenco di immagini del controllo Tab; in caso contrario, NULL.
+Se ha esito positivo, viene restituito un puntatore all'elenco di immagini di una struttura a schede; in caso contrario viene restituito NULL.
 
 ##  <a name="getitem"></a>CTabCtrl:: GetItem
 
@@ -409,33 +409,33 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nItem*<br/>
+*nIten*<br/>
 Indice in base zero della scheda.
 
 *pTabCtrlItem*<br/>
-Puntatore a una struttura [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) , utilizzato per specificare le informazioni da recuperare. Utilizzato anche per ricevere informazioni sulla scheda. Questa struttura viene utilizzata con le `InsertItem`funzioni `GetItem`membro, `SetItem` e.
+Puntatore a una struttura [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) , utilizzato per specificare le informazioni da recuperare. Utilizzato anche per ricevere informazioni sulla scheda. Questa struttura viene utilizzata con le funzioni membro `InsertItem`, `GetItem`e `SetItem`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE se l'operazione ha esito positivo; In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Quando il messaggio viene inviato, il `mask` membro specifica gli attributi da restituire. Se il `mask` membro specifica il valore TCIF_TEXT, il `pszText` membro deve contenere l'indirizzo del buffer che riceve il testo dell'elemento e il `cchTextMax` membro deve specificare le dimensioni del buffer.
+Quando il messaggio viene inviato, il membro `mask` specifica gli attributi da restituire. Se il membro `mask` specifica il valore TCIF_TEXT, il membro `pszText` deve contenere l'indirizzo del buffer che riceve il testo dell'elemento e il membro `cchTextMax` deve specificare le dimensioni del buffer.
 
 - `mask`
 
-   Valore che `TCITEM` specifica i membri della struttura da recuperare o impostare. Questo membro può essere zero o una combinazione dei valori seguenti:
+   Valore che specifica i membri della struttura `TCITEM` da recuperare o impostare. Questo membro può essere zero o una combinazione dei valori seguenti:
 
-   - TCIF_TEXT il `pszText` membro è valido.
+   - TCIF_TEXT il membro `pszText` è valido.
 
-   - TCIF_IMAGE il `iImage` membro è valido.
+   - TCIF_IMAGE il membro `iImage` è valido.
 
-   - TCIF_PARAM il `lParam` membro è valido.
+   - TCIF_PARAM il membro `lParam` è valido.
 
-   - TCIF_RTLREADING il testo di `pszText` viene visualizzato utilizzando l'ordine di lettura da destra a sinistra nei sistemi ebraici o arabi.
+   - TCIF_RTLREADING il testo della `pszText` viene visualizzato con l'ordine di lettura da destra a sinistra nei sistemi ebraici o arabi.
 
-   - TCIF_STATE il `dwState` membro è valido.
+   - TCIF_STATE il membro `dwState` è valido.
 
 - `pszText`
 
@@ -443,13 +443,13 @@ Quando il messaggio viene inviato, il `mask` membro specifica gli attributi da r
 
 - `cchTextMax`
 
-   Dimensioni del buffer a cui `pszText`punta. Questo membro viene ignorato se la struttura non riceve informazioni.
+   Dimensioni del buffer a cui punta `pszText`. Questo membro viene ignorato se la struttura non riceve informazioni.
 
-- `iImage`Indicizzare nell'elenco immagini del controllo TAB oppure-1 se non è presente alcuna immagine per la scheda.
+- `iImage` indice nell'elenco immagini del controllo scheda oppure-1 se non è presente alcuna immagine per la scheda.
 
 - `lParam`
 
-   Dati definiti dall'applicazione associati alla scheda. Se sono presenti più di quattro byte di dati definiti dall'applicazione per scheda, un'applicazione deve definire una struttura e usarla invece della `TCITEM` struttura. Il primo membro della struttura definita dall'applicazione deve essere una struttura [TCITEMHEADER](/windows/win32/api/commctrl/ns-commctrl-tcitemheaderw). La `TCITEMHEADER` struttura è identica `TCITEM` alla struttura, ma senza il `lParam` membro. La differenza tra le dimensioni della struttura e le dimensioni della `TCITEMHEADER` struttura deve essere uguale al numero di byte aggiuntivi per scheda.
+   Dati definiti dall'applicazione associati alla scheda. Se sono presenti più di quattro byte di dati definiti dall'applicazione per scheda, un'applicazione deve definire una struttura e usarla invece della struttura `TCITEM`. Il primo membro della struttura definita dall'applicazione deve essere una struttura [TCITEMHEADER](/windows/win32/api/commctrl/ns-commctrl-tcitemheaderw). La struttura del `TCITEMHEADER` è identica alla struttura `TCITEM`, ma senza il membro `lParam`. La differenza tra le dimensioni della struttura e le dimensioni della struttura di `TCITEMHEADER` deve essere uguale al numero di byte aggiuntivi per scheda.
 
 ### <a name="example"></a>Esempio
 
@@ -471,7 +471,7 @@ Numero di elementi nel controllo struttura a schede.
 
   Vedere l'esempio per [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="getitemrect"></a>  CTabCtrl::GetItemRect
+##  <a name="getitemrect"></a>CTabCtrl:: GetItemRect
 
 Recupera il rettangolo di delimitazione per la scheda specificata in un controllo struttura a schede.
 
@@ -481,7 +481,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nItem*<br/>
+*nIten*<br/>
 Indice in base zero dell'elemento di scheda.
 
 *lpRect*<br/>
@@ -507,7 +507,7 @@ DWORD GetItemState(
 
 ### <a name="parameters"></a>Parametri
 
-*nItem*<br/>
+*nIten*<br/>
 Numero di indice in base zero dell'elemento per il quale recuperare le informazioni sullo stato.
 
 *dwMask*<br/>
@@ -515,16 +515,16 @@ Maschera che specifica quale dei flag di stato dell'elemento restituire. Per un 
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento a un valore DWORD che riceve le informazioni sullo stato. Il valore può essere uno dei seguenti:
+Riferimento a un valore DWORD che riceve le informazioni sullo stato. I possibili valori sono i seguenti:
 
-|Value|Descrizione|
+|valore|Descrizione|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|L'elemento di controllo Tab è selezionato.|
 |TCIS_HIGHLIGHTED|L'elemento di controllo Tab è evidenziato e la scheda e il testo vengono disegnati utilizzando il colore di evidenziazione corrente. Quando si usa il colore di evidenziazione, si tratta di un'interpolazione vera, non di un colore con stato.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo stato di un elemento è specificato dal `dwState` membro `TCITEM` della struttura.
+Lo stato di un elemento è specificato dal membro `dwState` della struttura di `TCITEM`.
 
 ##  <a name="getrowcount"></a>CTabCtrl:: GetRowCount
 
@@ -538,7 +538,7 @@ int GetRowCount() const;
 
 Numero di righe di schede nel controllo struttura a schede.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Solo i controlli struttura a schede con lo stile TCS_MULTILINE possono avere più righe di schede.
 
@@ -554,9 +554,9 @@ CToolTipCtrl* GetToolTips() const;
 
 Handle del controllo descrizione comando, se ha esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Un controllo struttura a schede crea un controllo descrizione comando se presenta lo stile TCS_TOOLTIPS. È anche possibile assegnare un controllo descrizione comando a un controllo struttura a schede usando `SetToolTips` la funzione membro.
+Un controllo struttura a schede crea un controllo descrizione comando se presenta lo stile TCS_TOOLTIPS. È anche possibile assegnare un controllo descrizione comando a un controllo struttura a schede usando la funzione membro `SetToolTips`.
 
 ##  <a name="highlightitem"></a>CTabCtrl:: HighlightItem
 
@@ -578,11 +578,11 @@ Valore che specifica lo stato di evidenziazione da impostare. Se questo valore �
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il messaggio Win32 [TCM_HIGHLIGHTITEM](/windows/win32/Controls/tcm-highlightitem), come descritto nel Windows SDK.
+Questa funzione membro implementa la [TCM_HIGHLIGHTITEM](/windows/win32/Controls/tcm-highlightitem)del messaggio Win32, come descritto nel Windows SDK.
 
-##  <a name="hittest"></a>  CTabCtrl::HitTest
+##  <a name="hittest"></a>CTabCtrl:: HitTest
 
 Determina la scheda, se presente, che si trova nella posizione dello schermo specificata.
 
@@ -636,7 +636,7 @@ LONG InsertItem(
 
 ### <a name="parameters"></a>Parametri
 
-*nItem*<br/>
+*nIten*<br/>
 Indice in base zero della nuova scheda.
 
 *pTabCtrlItem*<br/>
@@ -649,15 +649,15 @@ Indirizzo di una stringa con terminazione null che contiene il testo della sched
 Indice in base zero di un'immagine da inserire da un elenco di immagini.
 
 *nMask*<br/>
-Specifica gli attributi di strutturadaimpostare.`TCITEM` Può essere zero o una combinazione dei valori seguenti:
+Specifica quali attributi della struttura di `TCITEM` impostare. Può essere zero o una combinazione dei valori seguenti:
 
-- TCIF_TEXT il `pszText` membro è valido.
+- TCIF_TEXT il membro `pszText` è valido.
 
-- TCIF_IMAGE il `iImage` membro è valido.
+- TCIF_IMAGE il membro `iImage` è valido.
 
 - TCIF_PARAM il membro *lParam* è valido.
 
-- TCIF_RTLREADING il testo di `pszText` viene visualizzato utilizzando l'ordine di lettura da destra a sinistra nei sistemi ebraici o arabi.
+- TCIF_RTLREADING il testo della `pszText` viene visualizzato con l'ordine di lettura da destra a sinistra nei sistemi ebraici o arabi.
 
 - TCIF_STATE il membro *dwState* è valido.
 
@@ -691,11 +691,11 @@ void RemoveImage(int nImage);
 *nImage*<br/>
 Indice in base zero dell'immagine da rimuovere.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il controllo struttura a schede aggiorna l'indice dell'immagine di ogni scheda in modo che ogni scheda rimanga associata alla stessa immagine.
 
-##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus
+##  <a name="setcurfocus"></a>CTabCtrl:: SetCurFocus
 
 Imposta lo stato attivo su una scheda specificata in un controllo struttura a schede.
 
@@ -705,14 +705,14 @@ void SetCurFocus(int nItem);
 
 ### <a name="parameters"></a>Parametri
 
-*nItem*<br/>
+*nIten*<br/>
 Specifica l'indice della scheda che ottiene lo stato attivo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_SETCURFOCUS](/windows/win32/Controls/tcm-setcurfocus), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TCM_SETCURFOCUS](/windows/win32/Controls/tcm-setcurfocus)del messaggio Win32, come descritto nel Windows SDK.
 
-##  <a name="setcursel"></a>  CTabCtrl::SetCurSel
+##  <a name="setcursel"></a>CTabCtrl:: CurSel
 
 Seleziona una scheda in un controllo struttura a schede.
 
@@ -722,18 +722,18 @@ int SetCurSel(int nItem);
 
 ### <a name="parameters"></a>Parametri
 
-*nItem*<br/>
+*nIten*<br/>
 Indice in base zero dell'elemento da selezionare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Indice in base zero della scheda selezionata in precedenza, se ha esito positivo; in caso contrario,-1.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un controllo struttura a schede non invia un messaggio di notifica TCN_SELCHANGING o TCN_SELCHANGE quando viene selezionata una scheda tramite questa funzione. Queste notifiche vengono inviate, usando WM_NOTIFY, quando l'utente fa clic o usa la tastiera per modificare le schede.
 
-##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle
+##  <a name="setextendedstyle"></a>CTabCtrl:: SetExtendedStyle
 
 Imposta gli stili estesi per un controllo struttura a schede.
 
@@ -755,7 +755,7 @@ Valore DWORD che contiene gli [stili estesi del controllo scheda](/windows/win32
 
 ### <a name="return-value"></a>Valore restituito
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_SETEXTENDEDSTYLE](/windows/win32/Controls/tcm-setextendedstyle), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TCM_SETEXTENDEDSTYLE](/windows/win32/Controls/tcm-setextendedstyle)del messaggio Win32, come descritto nel Windows SDK.
 
 ##  <a name="setimagelist"></a>CTabCtrl:: seimagine
 
@@ -784,11 +784,11 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 
 ### <a name="parameters"></a>Parametri
 
-*nItem*<br/>
+*nIten*<br/>
 Indice in base zero dell'elemento.
 
 *pTabCtrlItem*<br/>
-Puntatore a una struttura [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) che contiene gli attributi del nuovo elemento. Il `mask` membro specifica gli attributi da impostare. Se il `mask` membro specifica il valore TCIF_TEXT, il `pszText` membro è l'indirizzo di una stringa con terminazione null e `cchTextMax` il membro viene ignorato.
+Puntatore a una struttura [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) che contiene gli attributi del nuovo elemento. Il membro `mask` specifica gli attributi da impostare. Se il membro `mask` specifica il valore TCIF_TEXT, il membro `pszText` è l'indirizzo di una stringa con terminazione null e il membro `cchTextMax` viene ignorato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -798,7 +798,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
   Vedere l'esempio relativo a [GetItem](#getitem).
 
-##  <a name="setitemextra"></a>  CTabCtrl::SetItemExtra
+##  <a name="setitemextra"></a>CTabCtrl:: SetItemExtra
 
 Imposta il numero di byte per tabulazione riservata ai dati definiti dall'applicazione in un controllo struttura a schede.
 
@@ -815,11 +815,11 @@ Numero di byte aggiuntivi da impostare.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_SETITEMEXTRA](/windows/win32/Controls/tcm-setitemextra), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TCM_SETITEMEXTRA](/windows/win32/Controls/tcm-setitemextra)del messaggio Win32, come descritto nel Windows SDK.
 
-##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize
+##  <a name="setitemsize"></a>CTabCtrl:: SetItemSize
 
 Imposta la larghezza e l'altezza degli elementi di controllo della scheda.
 
@@ -836,7 +836,7 @@ La nuova larghezza e altezza, in pixel, degli elementi di controllo della scheda
 
 Restituisce la larghezza e l'altezza precedenti degli elementi di controllo della scheda.
 
-##  <a name="setitemstate"></a>  CTabCtrl::SetItemState
+##  <a name="setitemstate"></a>CTabCtrl:: SetItemState
 
 Imposta lo stato dell'elemento di controllo Tab identificato da *nitet*.
 
@@ -849,16 +849,16 @@ BOOL SetItemState(
 
 ### <a name="parameters"></a>Parametri
 
-*nItem*<br/>
+*nIten*<br/>
 Numero di indice in base zero dell'elemento per il quale impostare le informazioni sullo stato.
 
 *dwMask*<br/>
 Maschera che specifica i flag di stato dell'elemento da impostare. Per un elenco di valori, vedere il membro mask della struttura [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) , come descritto nella Windows SDK.
 
 *dwState*<br/>
-Riferimento a un valore DWORD contenente le informazioni sullo stato. Il valore può essere uno dei seguenti:
+Riferimento a un valore DWORD contenente le informazioni sullo stato. I possibili valori sono i seguenti:
 
-|Value|Descrizione|
+|valore|Descrizione|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|L'elemento di controllo Tab è selezionato.|
 |TCIS_HIGHLIGHTED|L'elemento di controllo Tab è evidenziato e la scheda e il testo vengono disegnati utilizzando il colore di evidenziazione corrente. Quando si usa il colore di evidenziazione, si tratta di un'interpolazione vera, non di un colore con stato.|
@@ -867,7 +867,7 @@ Riferimento a un valore DWORD contenente le informazioni sullo stato. Il valore 
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-##  <a name="setmintabwidth"></a>  CTabCtrl::SetMinTabWidth
+##  <a name="setmintabwidth"></a>CTabCtrl:: SetMinTabWidth
 
 Imposta la larghezza minima degli elementi in un controllo struttura a schede.
 
@@ -886,9 +886,9 @@ Larghezza minima della scheda precedente.
 
 ### <a name="return-value"></a>Valore restituito
 
-Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_SETMINTABWIDTH](/windows/win32/Controls/tcm-setmintabwidth), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento del [TCM_SETMINTABWIDTH](/windows/win32/Controls/tcm-setmintabwidth)del messaggio Win32, come descritto nel Windows SDK.
 
-##  <a name="setpadding"></a>  CTabCtrl::SetPadding
+##  <a name="setpadding"></a>CTabCtrl:: sepadding
 
 Imposta la quantità di spazio (riempimento) intorno all'icona e all'etichetta di ogni scheda in un controllo struttura a schede.
 
@@ -914,9 +914,9 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 *pWndTip*<br/>
 Handle del controllo descrizione comando.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-È possibile ottenere il controllo descrizione comando associato a un controllo struttura a schede effettuando una `GetToolTips`chiamata a.
+È possibile ottenere il controllo descrizione comando associato a un controllo struttura a schede effettuando una chiamata a `GetToolTips`.
 
 ### <a name="example"></a>Esempio
 
