@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491048"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856442"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributi di C++ per COM e .NET
 
@@ -34,7 +34,7 @@ Gli attributi C++ si estendono in direzioni che non sono attualmente possibili s
 
 - Sostituisce la grande quantità di codice IDL richiesta da un componente COM con pochi attributi concisi.
 
-Per implementare, ad esempio, un sink di evento semplice per una classe ATL generica, è possibile applicare l'attributo [event_receiver](event-receiver.md) a una classe `CMyReceiver`specifica, ad esempio. L' `event_receiver` attributo viene quindi compilato dal compilatore Microsoft C++ , che inserisce il codice corretto nel file oggetto.
+Per implementare, ad esempio, un sink di evento semplice per una classe ATL generica, è possibile applicare l'attributo [event_receiver](event-receiver.md) a una classe specifica, ad esempio `CMyReceiver`. L'attributo `event_receiver` viene quindi compilato dal compilatore Microsoft C++ , che inserisce il codice corretto nel file oggetto.
 
 ```cpp
 [event_receiver(com)]
@@ -45,7 +45,7 @@ class CMyReceiver
 }
 ```
 
-È quindi possibile configurare `CMyReceiver` i metodi `handler1` e `handler2` per gestire gli eventi (usando la funzione intrinseca [__hook](../../cpp/hook.md)) da un'origine evento, che è possibile creare usando [event_source](event-source.md).
+È quindi possibile configurare i metodi di `CMyReceiver` `handler1` e `handler2` per gestire gli eventi (usando la funzione intrinseca [__hook](../../cpp/hook.md)) da un'origine evento, che è possibile creare utilizzando [event_source](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Meccanismi di base degli attributi
 
@@ -55,7 +55,7 @@ Come prima, quando il progetto viene compilato, il compilatore analizza ogni C++
 
 Nella figura seguente viene illustrata la relazione tra il compilatore e il provider di attributi.
 
-![Comunicazione degli attributi di componente](../media/vccompattrcomm.gif "Comunicazione degli attributi di componente")
+![Comunicazione degli attributi di componente](../media/vccompattrcomm.gif "Comunicazione degli attributi di un componente")
 
 > [!NOTE]
 > L'utilizzo degli attributi non modifica il contenuto del file di origine. L'unica volta in cui il codice dell'attributo generato è visibile è durante le sessioni di debug. Inoltre, per ogni file di origine nel progetto, è possibile generare un file di testo in cui vengono visualizzati i risultati della sostituzione dell'attributo. Per ulteriori informazioni su questa procedura, vedere [/FX (merge del codice inserito)](../../build/reference/fx-merge-injected-code.md) e [debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).
@@ -80,7 +80,7 @@ Inoltre, in Visual C++ linker tutte le informazioni sugli attributi correlati a 
 
 ## <a name="contexts"></a>Contesti di attributi
 
-C++gli attributi possono essere descritti usando quattro campi di base: la destinazione a cui possono essere applicati (**si applica a**), se sono ripetibili o meno (**ripetibili**), la presenza richiesta di altri attributi (**attributi obbligatori**) e le incompatibilità con altri attributi (**attributi non validi**). Questi campi sono elencati in una tabella associata nell'argomento di riferimento di ogni attributo. Ognuno di questi campi è descritto di seguito.
+C++gli attributi possono essere descritti usando quattro campi di base: la destinazione a cui possono essere applicati (**si applica a**), se sono ripetibili o meno (**ripetibili**), la presenza richiesta di altri attributi (**attributi obbligatori**) e incompatibilità con altri attributi (**attributi non validi**). Questi campi sono elencati in una tabella associata nell'argomento di riferimento di ogni attributo. Ognuno di questi campi è descritto di seguito.
 
 ### <a name="applies-to"></a>Si applica a
 
@@ -100,7 +100,7 @@ In questo campo sono elencati altri attributi che devono essere presenti, ovvero
 
 In questo campo sono elencati altri attributi incompatibili con l'attributo specificato. Per un attributo non è comune avere voci per questo campo.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Domande frequenti sulla programmazione con attributi](attribute-programming-faq.md)<br/>
 [Attributi per gruppo](attributes-by-group.md)<br/>
