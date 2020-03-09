@@ -47,11 +47,11 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
 ms.openlocfilehash: 3652e02d9f3ff7b09ee7334dba20188e40344cb5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127007"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865470"
 ---
 # <a name="concurrencyfast_math-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency::fast_math
 

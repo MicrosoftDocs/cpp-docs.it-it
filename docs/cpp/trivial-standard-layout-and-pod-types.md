@@ -3,11 +3,11 @@ title: Tipi semplici, layout standard, POD e letterali
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
 ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934208"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865781"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Tipi semplici, layout standard, POD e letterali
 
