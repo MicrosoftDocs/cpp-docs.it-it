@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; (typedef)'
+title: '&lt;string_view&gt; typedef'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/std::string_view
@@ -7,13 +7,13 @@ f1_keywords:
 - xstring/std::u32string_view
 - xstring/std::wstring_view
 ms.openlocfilehash: c3367afe1353ac70abb74a59658a255614ac8470
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459174"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865847"
 ---
-# <a name="ltstringviewgt-typedefs"></a>&lt;string_view&gt; (typedef)
+# <a name="ltstring_viewgt-typedefs"></a>&lt;string_view&gt; typedef
 
 ||||
 |-|-|-|
@@ -22,7 +22,7 @@ ms.locfileid: "68459174"
 
 ## <a name="string_view"></a>string_view
 
-Tipo che descrive una specializzazione del modello di classe [basic_string_view](../standard-library/basic-string-view-class.md) con elementi di tipo **char**.
+Tipo che descrive una specializzazione del modello di classe [basic_string_view](../standard-library/basic-string-view-class.md) con gli elementi di tipo **char**.
 
 ```cpp
 typedef basic_string_view<char, char_traits<char>> string_view;
@@ -64,7 +64,7 @@ typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="wstring_view"></a>  wstring_view
+## <a name="wstring_view"></a>wstring_view
 
 Tipo che descrive una specializzazione del modello di classe [basic_string_view](../standard-library/basic-string-view-class.md) con elementi di tipo **wchar_t**.
 
@@ -85,8 +85,8 @@ basic_string_view<wchar_t> wstr(L"Hello");
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Le dimensioni di **wchar_t** sono due byte in Windows, ma questo non è necessariamente il caso per tutte le piattaforme. Se è necessario un tipo di carattere wide string_view con una larghezza che deve rimanere invariata in tutte le piattaforme, usare [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) o [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
+> Le dimensioni di **wchar_t** sono due byte in Windows, ma ciò non è necessariamente il caso per tutte le piattaforme. Se è necessario un tipo di carattere wide string_view con una larghezza garantita che rimanga lo stesso in tutte le piattaforme, usare [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) o [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<> string_view](../standard-library/string-view.md)
+[\<string_view >](../standard-library/string-view.md)

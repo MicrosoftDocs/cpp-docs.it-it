@@ -7,11 +7,11 @@ helpviewer_keywords:
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123968"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865782"
 ---
 # <a name="initializers"></a>Inizializzatori
 
@@ -224,7 +224,7 @@ L'inizializzazione per copia è l'inizializzazione di un oggetto usando un ogget
 
 - Un membro dati non statico viene inizializzato con un segno di uguale.
 
-- I membri di classi, struct e unioni vengono inizializzati tramite l'inizializzazione per copia durante l'inizializzazione aggregata. Per esempi, vedere [inizializzazione aggregata](#agginit).
+- I membri di classi, struct e unioni vengono inizializzati tramite l'inizializzazione per copia durante l'inizializzazione aggregata. Per esempi, vedere [inizializzazione aggregata](#agginit) .
 
 Il codice seguente mostra alcuni esempi di inizializzazione per copia:
 
@@ -417,7 +417,7 @@ int main() {
 }
 ```
 
-È necessario visualizzare il seguente output:
+Dovrebbe venire visualizzato l'output seguente.
 
 ```Output
 agg1: c: 1
@@ -480,7 +480,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>Inizializzazione di riferimento
 
-Variabili di tipo riferimento devono essere inizializzate con un oggetto del tipo da cui il tipo riferimento viene derivato o con un oggetto di un tipo che possa essere convertito nel tipo da cui il tipo riferimento viene derivato. Ad esempio:
+Variabili di tipo riferimento devono essere inizializzate con un oggetto del tipo da cui il tipo riferimento viene derivato o con un oggetto di un tipo che possa essere convertito nel tipo da cui il tipo riferimento viene derivato. Ad esempio,
 
 ```cpp
 // initializing_references.cpp
@@ -505,25 +505,25 @@ Poiché sia il passare un argomento di tipo riferimento a una funzione che la re
 
 Variabili di tipo riferimento possono essere dichiarate senza inizializzatori solo in quanto segue:
 
-- Dichiarazioni di funzione (prototipi). Ad esempio:
+- Dichiarazioni di funzione (prototipi). Ad esempio,
 
     ```cpp
     int func( int& );
     ```
 
-- Dichiarazioni del tipo restituito dalla funzione. Ad esempio:
+- Dichiarazioni del tipo restituito dalla funzione. Ad esempio,
 
     ```cpp
     int& func( int& );
     ```
 
-- Dichiarazione di un membro della classe di tipo riferimento. Ad esempio:
+- Dichiarazione di un membro della classe di tipo riferimento. Ad esempio,
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- Dichiarazione di una variabile specificata in modo esplicito come **extern**. Ad esempio:
+- Dichiarazione di una variabile specificata in modo esplicito come **extern**. Ad esempio,
 
     ```cpp
     extern int& iVal;

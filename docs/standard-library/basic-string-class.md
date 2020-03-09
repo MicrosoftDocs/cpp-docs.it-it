@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: 08620e0ae6b54b106daba8e0b0a392ceb1a6577d
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821909"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856637"
 ---
 # <a name="basic_string-class"></a>Classe basic_string
 
@@ -151,9 +151,9 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 |-|-|
 |[basic_string](#basic_string)|Costruisce una stringa vuota o inizializzata in base a caratteri specifici oppure che rappresenta una copia di tutto o parte di un altro oggetto stringa o stringa C.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe `allocator` per un oggetto stringa.|
 |[const_iterator](#const_iterator)|Tipo che fornisce un iteratore ad accesso casuale in grado di accedere e leggere un elemento **const** nella stringa.|
@@ -183,9 +183,9 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 |[capacity](#capacity)|Restituisce il numero massimo di elementi che è possibile archiviare in una stringa senza aumentare l'allocazione di memoria della stringa.|
 |[cbegin](#cbegin)|Restituisce un iteratore const che punta al primo elemento nella stringa.|
 |[cend](#cend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento in una stringa.|
-|[clear](#clear)|Cancella tutti gli elementi di una stringa.|
+|[deselezionare](#clear)|Cancella tutti gli elementi di una stringa.|
 |[compare](#compare)|Confronta una stringa con una stringa specificata per determinare se le due stringhe sono uguali oppure se una è minore dell'altra a livello lessicografico.|
-|[copy](#copy)|Copia al massimo un numero specificato di caratteri da una posizione indicizzata all'interno di una stringa di origine in una matrice di caratteri di destinazione. Deprecato. Usare [basic_string::_Copy_s](#copy_s).|
+|[copy](#copy)|Copia al massimo un numero specificato di caratteri da una posizione indicizzata all'interno di una stringa di origine in una matrice di caratteri di destinazione. Operazione deprecata. Usare [basic_string::_Copy_s](#copy_s).|
 |[crbegin](#crbegin)|Restituisce un iteratore const che punta al primo elemento in una stringa invertita.|
 |[crend](#crend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento in una stringa invertita.|
 |[_Copy_s](#copy_s)|Copia al massimo un numero specificato di caratteri da una posizione indicizzata all'interno di una stringa di origine in una matrice di caratteri di destinazione.|
@@ -218,19 +218,19 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 
 ### <a name="operators"></a>Operatori
 
-|??|Descrizione|
+|Operatore|Descrizione|
 |-|-|
 |[operator+=](#op_add_eq)|Aggiunge caratteri a una stringa.|
 |[operator=](#op_eq)|Assegna nuovi valori di caratteri al contenuto di una stringa.|
 |[operator&#91;&#93;](#op_at)|Fornisce un riferimento al carattere con un indice specificato in una stringa.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Se a una funzione viene richiesto di generare una sequenza più lunga di [max_size](#max_size) elementi, la funzione segnala un errore di lunghezza generando un oggetto di tipo [length_error](../standard-library/length-error-class.md).
 
 I riferimenti, i puntatori e gli iteratori che definiscono gli elementi della sequenza controllata possono diventare non validi dopo una chiamata a una funzione che modifica la sequenza controllata o dopo la prima chiamata a una funzione membro non **const**.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 **Intestazione:** \<stringa >
 
@@ -244,7 +244,7 @@ Tipo che rappresenta la classe allocatore per un oggetto stringa.
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello `Allocator`.
 
@@ -332,7 +332,7 @@ Iteratore di input, const_pointer o const_iterator che punta alla posizione dell
 
 Un riferimento all'oggetto stringa che viene aggiunto con i caratteri passati dalla funzione membro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I caratteri possono essere aggiunti a una stringa usando [operator + =](#op_add_eq) o le funzioni membro `append` o [push_back](#push_back). `operator+=` aggiunge valori a argomento singolo mentre la funzione membro `append` a più argomenti consente di specificare una parte specifica di una stringa per l'aggiunta.
 
@@ -493,7 +493,7 @@ La posizione da cui si inizia ad assegnare i nuovi caratteri.
 
 Un riferimento all'oggetto stringa cui vengono assegnati nuovi caratteri dalla funzione membro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile assegnare alle stringhe nuovi valori di caratteri. Il nuovo valore può essere una stringa e una stringa C o un singolo carattere. [Operator =](#op_eq) può essere usato se il nuovo valore può essere descritto da un singolo parametro. in caso contrario, la funzione membro `assign`, che ha più parametri, può essere usata per specificare quale parte della stringa deve essere assegnata a una stringa di destinazione.
 
@@ -608,7 +608,7 @@ L'indice della posizione dell'elemento a cui fare riferimento.
 
 Un riferimento al carattere della stringa in corrispondenza della posizione specificata dall'indice di parametro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo elemento della stringa ha un indice zero e gli elementi seguenti vengono indicizzati consecutivamente da numeri interi positivi, in modo che una stringa di lunghezza *n* includa un elemento *n*indicizzato dal numero *n-* 1.
 
@@ -671,7 +671,7 @@ reference back();
 
 Riferimento all'ultimo elemento della stringa, che deve essere non vuoto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="basic_string"></a>  basic_string::basic_string
 
@@ -775,7 +775,7 @@ Iteratore di input, const_pointer o const_iterator che punta alla posizione di q
 
 Riferimento all'oggetto stringa costruito dai costruttori.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tutti i costruttori archiviano [basic_string::allocator_type](#allocator_type) e inizializzano la sequenza controllata. L'oggetto allocatore è l'argomento `al`, se presente. Per il costruttore di copia, è `right.`[basic_string:: get_allocator](#get_allocator)`()`. In caso contrario, l'allocatore viene `Alloc()`.
 
@@ -892,7 +892,7 @@ const value_type *c_str() const;
 
 Puntatore alla versione in formato C della stringa di richiamo.  Il valore del puntatore non è valido dopo la chiamata a una funzione non const, incluso il distruttore, nella classe basic_string sull'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Gli oggetti di tipo String appartenenti al modello di classe basic_string\<char > non sono necessariamente terminati con null. Il carattere null ' \0 ' viene usato come carattere speciale in una stringa C per contrassegnare la fine della stringa ma non ha alcun significato particolare in un oggetto di tipo string e può essere parte della stringa come qualsiasi altro carattere. Viene eseguita una conversione automatica da **const char** <strong>\*</strong> in stringhe, ma la classe String non fornisce conversioni automatiche da stringhe di tipo C a oggetti di tipo **basic_string\<char >** .
 
@@ -956,7 +956,7 @@ size_type capacity() const;
 
 Le dimensioni dello spazio di archiviazione attualmente allocato in memoria per contenere la stringa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce lo spazio di archiviazione attualmente allocato per contenere la sequenza controllata, un valore almeno pari a [size](#size).
 
@@ -1026,7 +1026,7 @@ const_iterator cbegin() const;
 
 Iteratore **const** ad accesso casuale che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
@@ -1052,7 +1052,7 @@ const_iterator cend() const;
 
 Iteratore **const** ad accesso casuale che punta appena oltre la fine dell'intervallo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
@@ -1076,7 +1076,7 @@ Cancella tutti gli elementi di una stringa.
 void clear();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La stringa in cui viene chiamata la funzione membro sarà vuota.
 
@@ -1181,7 +1181,7 @@ La stringa C da confrontare con la stringa operando.
 
 Un valore negativo se la stringa operando è minore della stringa parametro, 0 se le due stringhe sono uguali o un valore positivo se la stringa operando è maggiore della stringa parametro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le funzioni membro `compare` confrontano interamente o in parte le stringhe del parametro e dell'operando, a seconda del valore in uso.
 
@@ -1388,7 +1388,7 @@ Tipo che fornisce un iteratore ad accesso casuale in grado di accedere e leggere
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_iterator` non può essere usato per modificare il valore di un carattere e viene usato per scorrere una stringa in avanti.
 
@@ -1404,7 +1404,7 @@ Tipo che fornisce un puntatore a un elemento **const** in una stringa.
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è sinonimo di `allocator_type::const_pointer`.
 
@@ -1444,7 +1444,7 @@ Tipo che fornisce un riferimento a un elemento **const** archiviato in una strin
 typedef typename allocator_type::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_reference` non può essere usato per modificare il valore di un elemento.
 
@@ -1462,19 +1462,19 @@ Tipo che fornisce un iteratore ad accesso casuale che può leggere qualsiasi ele
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_reverse_iterator` non può modificare il valore di un carattere e viene usato per scorrere la stringa in ordine inverso.
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio per [rbegin](#rbegin) per un esempio di dichiarazione e utilizzo di `const_reverse_iterator`.
+Vedere l'esempio relativo a [rbegin](#rbegin) per indicazioni su come dichiarare e usare `const_reverse_iterator`.
 
 ## <a name="copy"></a>  basic_string::copy
 
 Copia al massimo un numero specificato di caratteri da una posizione indicizzata all'interno di una stringa di origine in una matrice di caratteri di destinazione.
 
-Questo metodo è potenzialmente pericoloso poiché si basa sul controllo dei valori passati effettuato dal chiamante. In alternativa è possibile usare [basic_string::_Copy_s](#copy_s).
+Questo metodo è potenzialmente non sicuro, poiché si basa sul chiamante per verificare che i valori passati siano corretti. In alternativa è possibile usare [basic_string::_Copy_s](#copy_s).
 
 ```cpp
 size_type copy(
@@ -1497,7 +1497,7 @@ Posizione iniziale nella stringa di origine da cui effettuare le copie.
 
 Numero di caratteri attualmente copiati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un carattere null non viene aggiunto alla fine della copia.
 
@@ -1574,7 +1574,7 @@ const_reverse_iterator crend() const;
 
 Iteratore const inverso che punta alla posizione successiva all'ultimo elemento in una stringa invertita, ovvero la posizione che precedeva il primo elemento nella stringa non invertita.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="copy_s"></a>  basic_string::_Copy_s
 
@@ -1605,7 +1605,7 @@ Posizione iniziale nella stringa di origine da cui effettuare le copie.
 
 Numero di caratteri attualmente copiati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un carattere null non viene aggiunto alla fine della copia.
 
@@ -1669,7 +1669,7 @@ value_type *data() noexcept;
 
 Puntatore al primo elemento della matrice con terminazione null che contiene il contenuto della stringa. Per una stringa vuota, il puntatore punta a un singolo carattere null uguale a `value_type()`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il puntatore restituito da `data` punta a un intervallo valido `[data(), data() + size()]`. Ogni elemento nell'intervallo corrisponde ai dati correnti nella stringa. Ovvero per ogni offset valido *n* nell'intervallo `data() + n == addressof(operator[](n))`.
 
@@ -1733,7 +1733,7 @@ Tipo che fornisce la differenza tra due iteratori che fanno riferimento agli ele
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo di valore integer con segno descrive un oggetto che può rappresentare la differenza tra gli indirizzi di due elementi qualsiasi della sequenza controllata.
 
@@ -1785,7 +1785,7 @@ bool empty() const;
 
 **true** se l'oggetto stringa non contiene caratteri; **false** se contiene almeno un carattere.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro è equivalente a [size](#size) == 0.
 
@@ -1835,7 +1835,7 @@ iterator end();
 
 Restituisce un iteratore ad accesso casuale che punta alla posizione successiva all'ultimo elemento in una stringa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `end` viene spesso usato per verificare se un iteratore ha raggiunto la fine della relativa stringa. Non è necessario dereferenziare il valore restituito da `end`.
 
@@ -1932,7 +1932,7 @@ Il numero di elementi che verranno rimossi se sono presenti tanti nell'intervall
 
 Per le prime due funzioni membro, un iteratore che punta al primo carattere dopo l'ultimo carattere rimosso dalla funzione membro. Per la terza funzione membro, un riferimento all'oggetto stringa da cui gli elementi devono essere cancellati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La terza funzione membro restituisce **\*this**.
 
@@ -2924,7 +2924,7 @@ reference front();
 
 Riferimento al primo elemento della stringa, che deve essere non vuoto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="get_allocator"></a>  basic_string::get_allocator
 
@@ -2938,7 +2938,7 @@ allocator_type get_allocator() const;
 
 Allocatore usato dalla stringa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce l'oggetto allocatore archiviato.
 
@@ -3156,7 +3156,7 @@ Tipo che fornisce un iteratore ad accesso casuale in grado di accedere e leggere
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `iterator` può essere usato per modificare il valore di un carattere e viene usato per scorrere una stringa in avanti.
 
@@ -3172,7 +3172,7 @@ Restituisce il numero corrente di elementi in una stringa.
 size_type length() const;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro è uguale a [size](#size).
 
@@ -3242,7 +3242,7 @@ size_type max_size() const;
 
 Il numero massimo di caratteri che una stringa può contenere.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un'eccezione di tipo [length_error Class](../standard-library/length-error-class.md) viene generata quando un'operazione produce una stringa con una lunghezza maggiore della lunghezza massima.
 
@@ -3308,7 +3308,7 @@ Valore integrale senza segno inizializzato su-1 che indica "non trovato" o "tutt
 static const size_type npos = -1;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando il valore restituito deve essere verificato per il valore `npos`, potrebbe non funzionare a meno che il valore restituito non sia di tipo [size_type](#size_type) e non **int** o **unsigned**.
 
@@ -3346,7 +3346,7 @@ I caratteri della stringa da aggiungere.
 
 Un riferimento all'oggetto stringa che viene aggiunto con i caratteri passati dalla funzione membro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I caratteri possono essere aggiunti a una stringa usando `operator+=` o la funzione membro [append](#append) o [push_back](#push_back). `operator+=` aggiunge valori con un solo argomento mentre la funzione membro append con più argomenti consente di specificare una determinata parte della stringa da aggiungere.
 
@@ -3438,7 +3438,7 @@ La stringa di origine i cui caratteri devono essere assegnati alla stringa di de
 
 Un riferimento all'oggetto stringa cui vengono assegnati nuovi caratteri dalla funzione membro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile assegnare alle stringhe nuovi valori di caratteri. Il nuovo valore può essere una stringa e una stringa C o un singolo carattere. È possibile usare `operator=` se il nuovo valore può essere descritto da un singolo parametro; in caso contrario, è possibile usare la funzione membro [assign](#assign) con più parametri per specificare la parte di stringa da assegnare alla stringa di destinazione.
 
@@ -3517,7 +3517,7 @@ L'indice della posizione dell'elemento a cui fare riferimento.
 
 Un riferimento al carattere della stringa in corrispondenza della posizione specificata dall'indice di parametro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo elemento della stringa ha un indice zero e agli elementi seguenti vengono assegnati indici basati su interi positivi consecutivi in modo che una stringa di lunghezza *n* includa un elemento *n* indicizzato con il numero *n* - 1.
 
@@ -3527,7 +3527,7 @@ Il primo elemento della stringa ha un indice zero e agli elementi seguenti vengo
 
 Il riferimento restituito può essere invalidato da riallocazioni o modifiche delle stringhe per le stringhe non **const**.
 
-Durante la compilazione con [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) impostato su 1 o 2, se si tenta di accedere a un elemento all'esterno dei limiti della stringa si verifica un errore di runtime. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Durante la compilazione con [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) impostato su 1 o 2, se si tenta di accedere a un elemento all'esterno dei limiti della stringa si verifica un errore di runtime. Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Esempio
 
@@ -3576,7 +3576,7 @@ Tipo che fornisce un puntatore a un elemento carattere in una matrice di stringh
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è sinonimo di `allocator_type::pointer`.
 
@@ -3613,7 +3613,7 @@ Cancella l'ultimo elemento della stringa.
 void pop_back();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro chiama `erase(size() - 1)` per cancellare l'ultimo elemento della sequenza, che non deve essere vuoto.
 
@@ -3630,7 +3630,7 @@ void push_back(value_type char_value);
 *char_value*\
 Carattere da aggiungere alla fine della stringa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro chiama effettivamente [Insert](#insert)( [end](#end), *char_value* ).
 
@@ -3686,7 +3686,7 @@ reverse_iterator rbegin();
 
 Restituisce un iteratore ad accesso casuale al primo elemento in una stringa invertita, puntando all'ultimo elemento nella stringa corrispondente non invertita.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rbegin` viene usato con una stringa invertita come [begin](#begin) viene usato con una stringa.
 
@@ -3756,7 +3756,7 @@ Tipo che fornisce un riferimento a un elemento archiviato in una stringa.
 typedef typename allocator_type::reference reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile utilizzare un tipo `reference` per modificare il valore di un elemento.
 
@@ -3782,7 +3782,7 @@ reverse_iterator rend();
 
 Un iteratore ad accesso casuale inverso che punta alla posizione successiva all'ultimo elemento di una stringa invertita.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rend` viene usato con una stringa invertita come [end](#end) viene usato con una stringa.
 
@@ -4156,7 +4156,7 @@ void reserve(size_type count = 0);
 *conteggio*\
 Il numero di caratteri per il quale viene riservata la memoria.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La disponibilità di una capacità sufficiente è importante poiché le riallocazioni richiedono tempo e invalidano tutti i riferimenti, i puntatori e gli iteratori che fanno riferimento ai caratteri in una stringa.
 
@@ -4254,7 +4254,7 @@ La nuova dimensione della stringa.
 *char_value*\
 Valore con cui vengono inizializzati i caratteri aggiunti se sono necessari elementi aggiuntivi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se la dimensione risultante supera il numero massimo di caratteri, il form genera `length_error`.
 
@@ -4351,13 +4351,13 @@ Tipo che fornisce un riferimento a un elemento archiviato in una stringa.
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `reverse_iterator` può essere usato per modificare il valore di un carattere e viene usato per scorrere la stringa in ordine inverso.
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio per [rbegin](#rbegin) per un esempio di dichiarazione e utilizzo di `reverse_iterator`.
+Vedere l'esempio relativo a [rbegin](#rbegin) per indicazioni su come dichiarare e usare `reverse_iterator`.
 
 ## <a name="rfind"></a>  basic_string::rfind
 
@@ -4542,7 +4542,7 @@ Rimuove la capacità in eccesso della stringa.
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro elimina qualsiasi archiviazione non necessaria nel contenitore.
 
@@ -4620,7 +4620,7 @@ Tipo intero senza segno che può rappresentare il numero di elementi e indici in
 typedef typename allocator_type::size_type size_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 equivale a `allocator_type::size_type`.
 
@@ -4728,7 +4728,7 @@ void swap(
 \ *Str*
 La stringa di origine i cui elementi sono da scambiare con quelli nella stringa di destinazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se le stringhe che vengono scambiate hanno lo stesso oggetto allocatore, la funzione membro `swap`:
 
@@ -4783,7 +4783,7 @@ Tipo per i tratti dei caratteri degli elementi archiviati in una stringa.
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del secondo parametro di modello `Traits`.
 
@@ -4791,7 +4791,7 @@ Per il tipo `string`, equivale a **char_traits\<char >** .
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio per [copy](../standard-library/char-traits-struct.md#copy) per un esempio di dichiarazione e utilizzo di `traits_type`.
+Vedere l'esempio di [copy](../standard-library/char-traits-struct.md#copy) per informazioni su come dichiarare e usare `traits_type`.
 
 ## <a name="value_type"></a>  basic_string::value_type
 
@@ -4801,7 +4801,7 @@ Tipo che rappresenta il tipo di caratteri archiviati in una stringa.
 typedef typename allocator_type::value_type value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Equivale a `traits_type::char_type` ed equivale a **char** per gli oggetti di tipo `string`.
 
@@ -4834,4 +4834,4 @@ The character ch2 is: H.
 ## <a name="see-also"></a>Vedere anche
 
 [\<string>](../standard-library/string.md)\
-[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)
