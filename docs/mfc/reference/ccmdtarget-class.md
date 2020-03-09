@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816345"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867034"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (classe)
 
@@ -69,31 +69,31 @@ class CCmdTarget : public CObject
 
 |Name|Descrizione|
 |----------|-----------------|
-|[CCmdTarget::CCmdTarget](#ccmdtarget)|Costruisce un oggetto `CCmdTarget`.|
+|[CCmdTarget:: CCmdTarget](#ccmdtarget)|Costruisce un oggetto `CCmdTarget`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Name|Descrizione|
 |----------|-----------------|
-|[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Visualizza il cursore come cursore a forma di clessidra.|
-|[CCmdTarget::DoOleVerb](#dooleverb)|Determina l'esecuzione di un'azione specificata da un verbo OLE.|
-|[CCmdTarget::EnableAutomation](#enableautomation)|Consente l'automazione OLE per l'oggetto `CCmdTarget`.|
-|[CCmdTarget::EnableConnections](#enableconnections)|Abilita la generazione di eventi su punti di connessione.|
-|[CCmdTarget::EnableTypeLib](#enabletypelib)|Abilita la libreria dei tipi di un oggetto.|
-|[CCmdTarget::EndWaitCursor](#endwaitcursor)|Restituisce al cursore precedente.|
-|[CCmdTarget::EnumOleVerbs](#enumoleverbs)|Enumera i verbi OLE di un oggetto.|
-|[CCmdTarget::FromIDispatch](#fromidispatch)|Restituisce un puntatore all'oggetto `CCmdTarget` associato al puntatore di `IDispatch`.|
-|[CCmdTarget::GetDispatchIID](#getdispatchiid)|Ottiene l'ID dell'interfaccia di invio primario.|
-|[CCmdTarget::GetIDispatch](#getidispatch)|Restituisce un puntatore all'oggetto `IDispatch` associato all'oggetto `CCmdTarget`.|
-|[CCmdTarget::GetTypeInfoCount](#gettypeinfocount)|Recupera il numero di interfacce di informazioni sul tipo fornite da un oggetto.|
-|[CCmdTarget::GetTypeInfoOfGuid](#gettypeinfoofguid)|Recupera la descrizione del tipo che corrisponde al GUID specificato.|
-|[CCmdTarget::GetTypeLib](#gettypelib)|Ottiene un puntatore a una libreria di tipi.|
-|[CCmdTarget::GetTypeLibCache](#gettypelibcache)|Ottiene la cache della libreria dei tipi.|
-|[CCmdTarget::IsInvokeAllowed](#isinvokeallowed)|Abilita la chiamata al metodo di automazione.|
-|[CCmdTarget::IsResultExpected](#isresultexpected)|Restituisce un valore diverso da zero se una funzione di automazione deve restituire un valore.|
-|[CCmdTarget::OnCmdMsg](#oncmdmsg)|Instrada e invia i messaggi di comando.|
+|[CCmdTarget:: BeginWaitCursor](#beginwaitcursor)|Visualizza il cursore come cursore a forma di clessidra.|
+|[CCmdTarget::D oOleVerb](#dooleverb)|Determina l'esecuzione di un'azione specificata da un verbo OLE.|
+|[CCmdTarget:: EnableAutomation](#enableautomation)|Consente l'automazione OLE per l'oggetto `CCmdTarget`.|
+|[CCmdTarget:: EnableConnections](#enableconnections)|Abilita la generazione di eventi su punti di connessione.|
+|[CCmdTarget:: EnableTypeLib](#enabletypelib)|Abilita la libreria dei tipi di un oggetto.|
+|[CCmdTarget:: EndWaitCursor](#endwaitcursor)|Restituisce al cursore precedente.|
+|[CCmdTarget:: EnumOleVerbs](#enumoleverbs)|Enumera i verbi OLE di un oggetto.|
+|[CCmdTarget:: FromIDispatch](#fromidispatch)|Restituisce un puntatore all'oggetto `CCmdTarget` associato al puntatore di `IDispatch`.|
+|[CCmdTarget:: GetDispatchIID](#getdispatchiid)|Ottiene l'ID dell'interfaccia di invio primario.|
+|[CCmdTarget:: GetIDispatch](#getidispatch)|Restituisce un puntatore all'oggetto `IDispatch` associato all'oggetto `CCmdTarget`.|
+|[CCmdTarget:: GetTypeInfoCount](#gettypeinfocount)|Recupera il numero di interfacce di informazioni sul tipo fornite da un oggetto.|
+|[CCmdTarget:: GetTypeInfoOfGuid](#gettypeinfoofguid)|Recupera la descrizione del tipo che corrisponde al GUID specificato.|
+|[CCmdTarget:: GetTypeLib](#gettypelib)|Ottiene un puntatore a una libreria di tipi.|
+|[CCmdTarget:: GetTypeLibCache](#gettypelibcache)|Ottiene la cache della libreria dei tipi.|
+|[CCmdTarget:: IsInvokeAllowed](#isinvokeallowed)|Abilita la chiamata al metodo di automazione.|
+|[CCmdTarget:: IsResultExpected](#isresultexpected)|Restituisce un valore diverso da zero se una funzione di automazione deve restituire un valore.|
+|[CCmdTarget:: OnCmdMsg](#oncmdmsg)|Instrada e invia i messaggi di comando.|
 |[CCmdTarget:: OnFinalRelease](#onfinalrelease)|Esegue la pulizia dopo che è stato rilasciato l'ultimo riferimento OLE.|
-|[CCmdTarget::RestoreWaitCursor](#restorewaitcursor)|Ripristina il cursore a clessidra.|
+|[CCmdTarget:: RestoreWaitCursor](#restorewaitcursor)|Ripristina il cursore a clessidra.|
 
 ## <a name="remarks"></a>Note
 
@@ -145,7 +145,7 @@ Costruisce un oggetto `CCmdTarget`.
 CCmdTarget();
 ```
 
-##  <a name="dooleverb"></a>  CCmdTarget::DoOleVerb
+##  <a name="dooleverb"></a>CCmdTarget::D oOleVerb
 
 Determina l'esecuzione di un'azione specificata da un verbo OLE.
 
@@ -191,7 +191,7 @@ void EnableAutomation();
 
 Questa funzione viene in genere chiamata dal costruttore dell'oggetto e deve essere chiamata solo se è stata dichiarata una mappa di invio per la classe. Per altre informazioni sull'automazione, vedere gli articoli [client di automazione](../../mfc/automation-clients.md) e server di [automazione](../../mfc/automation-servers.md).
 
-##  <a name="enableconnections"></a>  CCmdTarget::EnableConnections
+##  <a name="enableconnections"></a>CCmdTarget:: EnableConnections
 
 Abilita la generazione di eventi su punti di connessione.
 
@@ -203,7 +203,7 @@ void EnableConnections();
 
 Per abilitare i punti di connessione, chiamare questa funzione membro nel costruttore della classe derivata.
 
-##  <a name="enabletypelib"></a>  CCmdTarget::EnableTypeLib
+##  <a name="enabletypelib"></a>CCmdTarget:: EnableTypeLib
 
 Abilita la libreria dei tipi di un oggetto.
 
@@ -252,7 +252,7 @@ TRUE se l'oggetto supporta almeno un verbo OLE (nel qual caso \* *ppenumOleVerb*
 
 Questa funzione membro è fondamentalmente un'implementazione di [IOleObject:: EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs).
 
-##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch
+##  <a name="fromidispatch"></a>CCmdTarget:: FromIDispatch
 
 Chiamare questa funzione per eseguire il mapping di un puntatore `IDispatch`, ricevuto dalle funzioni membro di automazione di una classe, nell'oggetto `CCmdTarget` che implementa le interfacce dell'oggetto `IDispatch`.
 
@@ -273,7 +273,7 @@ Puntatore all'oggetto `CCmdTarget` associato a *LPDISPATCH*. Questa funzione res
 
 Il risultato di questa funzione è l'inverso di una chiamata alla funzione membro `GetIDispatch`.
 
-##  <a name="getdispatchiid"></a>  CCmdTarget::GetDispatchIID
+##  <a name="getdispatchiid"></a>CCmdTarget:: GetDispatchIID
 
 Ottiene l'ID dell'interfaccia di invio primario.
 
@@ -385,7 +385,7 @@ Valore HRESULT che indica l'esito positivo o negativo della chiamata. In caso di
 
 Le classi derivate devono eseguire l'override di questa funzione membro (se non sottoposta a override, `GetTypeLib` restituisce TYPE_E_CANTLOADLIBRARY). Usare la macro [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , che implementa anche `GetTypeInfoCount` e `GetTypeLibCache`.
 
-##  <a name="gettypelibcache"></a>  CCmdTarget::GetTypeLibCache
+##  <a name="gettypelibcache"></a>CCmdTarget:: GetTypeLibCache
 
 Ottiene la cache della libreria dei tipi.
 
@@ -401,7 +401,7 @@ Puntatore a un oggetto `CTypeLibCache` .
 
 Le classi derivate devono eseguire l'override di questa funzione membro (se non sottoposta a override, `GetTypeLibCache` restituisce NULL). Usare la macro [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , che implementa anche `GetTypeInfoCount` e `GetTypeLib`.
 
-##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed
+##  <a name="isinvokeallowed"></a>CCmdTarget:: IsInvokeAllowed
 
 Questa funzione viene chiamata dall'implementazione di MFC di `IDispatch::Invoke` per determinare se è possibile richiamare un determinato metodo di automazione (identificato da *DISPID*).
 
@@ -411,7 +411,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>Parametri
 
-*dispid*<br/>
+*DISPID*<br/>
 ID dispatch.
 
 ### <a name="return-value"></a>Valore restituito
@@ -424,7 +424,7 @@ Se `IsInvokeAllowed` restituisce TRUE, `Invoke` continua a chiamare il metodo; i
 
 Le classi derivate possono eseguire l'override di questa funzione per restituire valori appropriati (se non sottoposta a override, `IsInvokeAllowed` restituisce TRUE). Vedere in particolare [COleControl:: IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).
 
-##  <a name="isresultexpected"></a>  CCmdTarget::IsResultExpected
+##  <a name="isresultexpected"></a>CCmdTarget:: IsResultExpected
 
 Utilizzare `IsResultExpected` per verificare se un client prevede un valore restituito dalla relativa chiamata a una funzione di automazione.
 
@@ -486,10 +486,10 @@ Se si esegue l'override di `OnCmdMsg`, è necessario specificare il valore appro
 
 |valore *nCode*|valore *pExtra*|
 |-------------------|--------------------|
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
+|CN_COMMAND|\* [CCmdUI](../../mfc/reference/ccmdui-class.md)|
 |CN_EVENT|AFX_EVENT\*|
 |CN_UPDATE_COMMAND_UI|\* CCmdUI|
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|
+|CN_OLECOMMAND|\* [COleCmdUI](../../mfc/reference/colecmdui-class.md)|
 |CN_OLE_UNREGISTER|NULL|
 
 ### <a name="example"></a>Esempio
@@ -510,7 +510,7 @@ virtual void OnFinalRelease();
 
 Eseguire l'override di questa funzione per fornire una gestione speciale per questa situazione. L'implementazione predefinita consente di eliminare l'oggetto.
 
-##  <a name="restorewaitcursor"></a>  CCmdTarget::RestoreWaitCursor
+##  <a name="restorewaitcursor"></a>CCmdTarget:: RestoreWaitCursor
 
 Chiamare questa funzione per ripristinare il cursore a clessidra appropriato dopo che il cursore di sistema è stato modificato (ad esempio, dopo l'apertura e la chiusura di una finestra di messaggio durante un'operazione di lunga durata).
 

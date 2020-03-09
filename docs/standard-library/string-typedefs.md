@@ -8,11 +8,11 @@ f1_keywords:
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 ms.openlocfilehash: 950ca5ae34b6469c3d79b7297d4fe7b7644d2fcf
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688924"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856608"
 ---
 # <a name="ltstringgt-typedefs"></a>Typedefs &lt;string&gt;
 
@@ -23,7 +23,7 @@ ms.locfileid: "72688924"
 
 ## <a name="string"></a>  string
 
-Tipo che descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) con elementi di tipo **char**.
+Tipo che descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) con gli elementi di tipo **char**.
 
 Altri typedef che specializzano `basic_string` sono [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string) e [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -31,7 +31,7 @@ Altri typedef che specializzano `basic_string` sono [wstring](../standard-librar
 typedef basic_string<char, char_traits<char>, allocator<char>> string;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le dichiarazioni seguenti sono equivalenti:
 
@@ -53,7 +53,7 @@ Altri typedef che specializzano `basic_string` sono [wstring](../standard-librar
 typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16string;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
@@ -67,7 +67,7 @@ Altri typedef che specializzano `basic_string` sono [string](../standard-library
 typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32string;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
@@ -81,7 +81,7 @@ Altri typedef che specializzano `basic_string` sono [string](../standard-library
 typedef basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t>> wstring;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le dichiarazioni seguenti sono equivalenti:
 
@@ -94,7 +94,7 @@ basic_string<wchar_t> wstr(L"");
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Le dimensioni di **wchar_t** sono definite dall'implementazione. Se il codice dipende da **wchar_t** per una determinata dimensione, verificare l'implementazione della piattaforma, ad esempio con `sizeof(wchar_t)`. Se è necessario un tipo di carattere stringa con una larghezza che deve rimanere uguale in tutte le piattaforme, usare [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) o [u32string](../standard-library/string-typedefs.md#u32string).
+> Le dimensioni del **wchar_t** sono definite dall'implementazione. Se il codice dipende da **wchar_t** avere dimensioni specifiche, verificare l'implementazione della piattaforma, ad esempio con `sizeof(wchar_t)`. Se è necessario un tipo di carattere stringa con una larghezza che deve rimanere uguale in tutte le piattaforme, usare [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) o [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>Vedere anche
 
