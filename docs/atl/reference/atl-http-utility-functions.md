@@ -3,11 +3,11 @@ title: Funzioni di utilità HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497966"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865030"
 ---
 # <a name="atl-http-utility-functions"></a>Funzioni di utilità HTTP ATL
 
@@ -28,7 +28,7 @@ Queste funzioni supportano la manipolazione degli URL.
 
 **Intestazione:** atlutil. h
 
-## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 Chiamare questa funzione per convertire in formato canonico un URL, inclusa la conversione dei caratteri e degli spazi non sicuri nelle sequenze di escape.
 
@@ -54,7 +54,7 @@ Puntatore a una variabile che contiene la lunghezza in caratteri di *szCanonical
 *dwFlags*<br/>
 ATL_URL flag che controllano il comportamento di questa funzione.
 
-- ATL_URL_BROWSER_MODE non codifica o decodifica i caratteri dopo "#" o "?" e non rimuove lo spazio vuoto finale dopo "?". Se questo valore non viene specificato, l'intero URL viene codificato e gli spazi vuoti finali vengono rimossi.
+- ATL_URL_BROWSER_MODE non codifica né decodifica i caratteri dopo "#" o "?" e non rimuove lo spazio vuoto finale dopo "?". Se questo valore non viene specificato, l'intero URL viene codificato e gli spazi vuoti finali vengono rimossi.
 
 - ATL_URL_DECODE converte tutte le sequenze% XX in caratteri, incluse le sequenze di escape, prima dell'analisi dell'URL.
 
@@ -66,17 +66,17 @@ ATL_URL flag che controllano il comportamento di questa funzione.
 
 - ATL_URL_NO_ENCODE non converte i caratteri unsafe in sequenze di escape.
 
-- ATL_URL_NO_META non rimuove i metadati (ad esempio "." e "..") dall'URL.
+- ATL_URL_NO_META non rimuove le metasequenze (ad esempio "." e "..") dall'URL.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Si comporta come la versione corrente di [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) , ma non richiede l'installazione di WinInet o Internet Explorer.
 
-## <a name="atlcombineurl"></a> AtlCombineUrl
+## <a name="atlcombineurl"></a>AtlCombineUrl
 
 Chiamare questa funzione per combinare un URL di base e un URL relativo all'interno di un singolo URL canonico.
 
@@ -110,11 +110,11 @@ Flag che controllano il comportamento di questa funzione. Vedere [AtlCanonicaliz
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Si comporta come la versione corrente di [InternetCombineUrl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw) , ma non richiede l'installazione di WinInet o Internet Explorer.
 
-## <a name="atlescapeurl"></a> AtlEscapeUrl
+## <a name="atlescapeurl"></a>AtlEscapeUrl
 
 Chiamare questa funzione per convertire tutti i caratteri non sicuri in sequenze di escape.
 
@@ -155,7 +155,7 @@ ATL_URL flag che controllano il comportamento di questa funzione. Per i valori p
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-## <a name="atlgetdefaulturlport"></a> AtlGetDefaultUrlPort
+## <a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
 
 Chiamare questa funzione per ottenere il numero di porta predefinito associato a uno schema o a un protocollo Internet specifico.
 
@@ -170,9 +170,9 @@ Valore [ATL_URL_SCHEME](atl-url-scheme-enum.md) che identifica lo schema per il 
 
 ### <a name="return-value"></a>Valore restituito
 
-[ATL_URL_PORT](atl-typedefs.md#atl_url_port) associato allo schema specificato o ATL_URL_INVALID_PORT_NUMBER se lo schema non è riconosciuto.
+Il [ATL_URL_PORT](atl-typedefs.md#atl_url_port) associato allo schema o al ATL_URL_INVALID_PORT_NUMBER specificato se lo schema non è riconosciuto.
 
-## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
 
 Chiamare questa funzione per verificare se un carattere può essere utilizzato in sicurezza in un URL.
 
@@ -182,14 +182,14 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*chIn*<br/>
+*Mento*<br/>
 Carattere di cui verificare la sicurezza.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE se il carattere di input non è sicuro; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I caratteri che non devono essere usati negli URL possono essere testati usando questa funzione e convertiti usando [AtlCanonicalizeUrl](#atlcanonicalizeurl).
 
@@ -229,11 +229,11 @@ Dimensione del buffer *lpszStringOut*.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Inverte il processo di conversione applicato da [AtlEscapeUrl](#atlescapeurl).
 
-## <a name="rgbtohtml"></a> RGBToHtml
+## <a name="rgbtohtml"></a>RGBToHtml
 
 Converte un valore [COLORREF](/windows/win32/gdi/colorref) nel testo HTML corrispondente a tale valore di colore.
 
@@ -259,11 +259,11 @@ Dimensioni in byte del buffer (incluso lo spazio per il carattere di terminazion
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un valore di colore HTML è un segno di cancelletto seguito da un valore esadecimale a 6 cifre che usa 2 cifre per ogni componente rosso, verde e blu del colore, ad esempio #FFFFFF è bianco.
 
-## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 
 Chiamare questa funzione per convertire l'ora di sistema in una stringa in un formato appropriato da utilizzare nelle intestazioni HTTP.
 
@@ -275,11 +275,11 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Parametri
 
-*st*<br/>
+*St*<br/>
 Ora di sistema da ottenere come stringa di formato HTTP.
 
 *strTime*<br/>
-Riferimento a una variabile di stringa per ricevere la data e l'ora http come definito in RFC[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)2616 () e RFC[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)1123 ().
+Riferimento a una variabile di stringa per la ricezione dell'ora di data HTTP come definito in RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) e RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
 
 ## <a name="see-also"></a>Vedere anche
 

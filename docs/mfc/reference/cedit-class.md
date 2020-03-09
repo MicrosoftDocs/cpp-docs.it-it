@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506796"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876361"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -115,75 +115,75 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CEdit::CEdit](#cedit)|Costruisce un `CEdit` oggetto controllo.|
+|[CEdit:: CEdit](#cedit)|Costruisce un oggetto `CEdit` controllo.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CEdit::CanUndo](#canundo)|Determina se un'operazione di modifica del controllo può essere annullata.|
+|[CEdit:: CanUndo](#canundo)|Determina se un'operazione di modifica del controllo può essere annullata.|
 |[CEdit:: CharFromPos](#charfrompos)|Recupera gli indici di riga e di caratteri per il carattere più vicino a una posizione specificata.|
 |[CEdit:: Clear](#clear)|Elimina (Cancella) la selezione corrente (se presente) nel controllo di modifica.|
 |[CEdit:: Copy](#copy)|Copia la selezione corrente (se presente) nel controllo di modifica negli Appunti nel formato CF_TEXT.|
-|[CEdit:: create](#create)|Crea il controllo di modifica di Windows e lo collega all' `CEdit` oggetto.|
-|[CEdit::Cut](#cut)|Elimina (taglia) la selezione corrente (se presente) nel controllo di modifica e copia il testo eliminato negli Appunti nel formato CF_TEXT.|
-|[CEdit::EmptyUndoBuffer](#emptyundobuffer)|Reimposta (Cancella) il flag di annullamento di un controllo di modifica.|
+|[CEdit:: create](#create)|Crea il controllo di modifica di Windows e lo connette all'oggetto `CEdit`.|
+|[CEdit:: Cut](#cut)|Elimina (taglia) la selezione corrente (se presente) nel controllo di modifica e copia il testo eliminato negli Appunti nel formato CF_TEXT.|
+|[CEdit:: EmptyUndoBuffer](#emptyundobuffer)|Reimposta (Cancella) il flag di annullamento di un controllo di modifica.|
 |[CEdit:: FmtLines](#fmtlines)|Imposta l'inclusione di caratteri di interruzione di riga soft in un controllo di modifica a più righe.|
-|[CEdit::GetCueBanner](#getcuebanner)|Recupera il testo visualizzato come spunto di testo, o suggerimento, in un controllo di modifica quando il controllo è vuoto e non ha lo stato attivo.|
-|[CEdit::GetFirstVisibleLine](#getfirstvisibleline)|Determina la riga visibile in primo piano in un controllo di modifica.|
+|[CEdit:: GetCueBanner](#getcuebanner)|Recupera il testo visualizzato come spunto di testo, o suggerimento, in un controllo di modifica quando il controllo è vuoto e non ha lo stato attivo.|
+|[CEdit:: GetFirstVisibleLine](#getfirstvisibleline)|Determina la riga visibile in primo piano in un controllo di modifica.|
 |[CEdit:: GetHandle](#gethandle)|Recupera un handle per la memoria attualmente allocata per un controllo di modifica a più righe.|
-|[CEdit::GetHighlight](#gethighlight)|Ottiene gli indici dei caratteri iniziale e finale in un intervallo di testo evidenziato nel controllo di modifica corrente.|
-|[CEdit::GetLimitText](#getlimittext)|Ottiene la quantità massima di testo `CEdit` che può contenere.|
-|[CEdit::GetLine](#getline)|Recupera una riga di testo da un controllo di modifica.|
-|[CEdit::GetLineCount](#getlinecount)|Recupera il numero di righe in un controllo di modifica a più righe.|
-|[CEdit:: GetMargins](#getmargins)|Ottiene i margini sinistro e destro per questo `CEdit`oggetto.|
-|[CEdit::GetModify](#getmodify)|Determina se il contenuto di un controllo di modifica è stato modificato.|
-|[CEdit::GetPasswordChar](#getpasswordchar)|Recupera il carattere della password visualizzato in un controllo di modifica quando l'utente immette il testo.|
-|[CEdit::GetRect](#getrect)|Ottiene il rettangolo di formattazione di un controllo di modifica.|
-|[CEdit::GetSel](#getsel)|Ottiene la prima e l'ultima posizione dei caratteri della selezione corrente in un controllo di modifica.|
-|[CEdit::HideBalloonTip](#hideballoontip)|Nasconde qualsiasi suggerimento del fumetto associato al controllo di modifica corrente.|
-|[CEdit::LimitText](#limittext)|Limita la lunghezza del testo che l'utente può immettere in un controllo di modifica.|
-|[CEdit::LineFromChar](#linefromchar)|Recupera il numero di riga della riga che contiene l'indice dei caratteri specificato.|
+|[CEdit:: gethighlight](#gethighlight)|Ottiene gli indici dei caratteri iniziale e finale in un intervallo di testo evidenziato nel controllo di modifica corrente.|
+|[CEdit:: GetLimitText](#getlimittext)|Ottiene la quantità massima di testo che può contenere questo `CEdit`.|
+|[CEdit:: getline](#getline)|Recupera una riga di testo da un controllo di modifica.|
+|[CEdit:: GetLineCount](#getlinecount)|Recupera il numero di righe in un controllo di modifica a più righe.|
+|[CEdit:: GetMargins](#getmargins)|Ottiene i margini sinistro e destro per questo `CEdit`.|
+|[CEdit:: GetModify](#getmodify)|Determina se il contenuto di un controllo di modifica è stato modificato.|
+|[CEdit:: GetPasswordChar](#getpasswordchar)|Recupera il carattere della password visualizzato in un controllo di modifica quando l'utente immette il testo.|
+|[CEdit:: GetRect](#getrect)|Ottiene il rettangolo di formattazione di un controllo di modifica.|
+|[CEdit:: GetSel](#getsel)|Ottiene la prima e l'ultima posizione dei caratteri della selezione corrente in un controllo di modifica.|
+|[CEdit:: HideBalloonTip](#hideballoontip)|Nasconde qualsiasi suggerimento del fumetto associato al controllo di modifica corrente.|
+|[CEdit:: LimitText](#limittext)|Limita la lunghezza del testo che l'utente può immettere in un controllo di modifica.|
+|[CEdit:: LineFromChar](#linefromchar)|Recupera il numero di riga della riga che contiene l'indice dei caratteri specificato.|
 |[CEdit:: LineIndex](#lineindex)|Recupera l'indice dei caratteri di una riga all'interno di un controllo di modifica a più righe.|
 |[CEdit:: LineLength](#linelength)|Recupera la lunghezza di una riga in un controllo di modifica.|
-|[CEdit::LineScroll](#linescroll)|Scorre il testo di un controllo di modifica a più righe.|
-|[CEdit::Paste](#paste)|Inserisce i dati dagli Appunti nel controllo di modifica in corrispondenza della posizione corrente del cursore. I dati vengono inseriti solo se gli Appunti contengono dati nel formato CF_TEXT.|
-|[CEdit::PosFromChar](#posfromchar)|Recupera le coordinate dell'angolo superiore sinistro di un indice dei caratteri specificato.|
+|[CEdit:: LineScroll](#linescroll)|Scorre il testo di un controllo di modifica a più righe.|
+|[CEdit::P incolla](#paste)|Inserisce i dati dagli Appunti nel controllo di modifica in corrispondenza della posizione corrente del cursore. I dati vengono inseriti solo se gli Appunti contengono dati nel formato CF_TEXT.|
+|[CEdit::P osFromChar](#posfromchar)|Recupera le coordinate dell'angolo superiore sinistro di un indice dei caratteri specificato.|
 |[CEdit:: ReplaceSel](#replacesel)|Sostituisce la selezione corrente in un controllo di modifica con il testo specificato.|
-|[CEdit::SetCueBanner](#setcuebanner)|Imposta il testo visualizzato come spunto di testo, o suggerimento, in un controllo di modifica quando il controllo è vuoto e non ha lo stato attivo.|
+|[CEdit:: SetCueBanner](#setcuebanner)|Imposta il testo visualizzato come spunto di testo, o suggerimento, in un controllo di modifica quando il controllo è vuoto e non ha lo stato attivo.|
 |[CEdit:: filehandle](#sethandle)|Imposta l'handle sulla memoria locale che verrà utilizzata da un controllo di modifica a più righe.|
-|[CEdit::SetHighlight](#sethighlight)|Evidenzia un intervallo di testo visualizzato nel controllo di modifica corrente.|
-|[CEdit::SetLimitText](#setlimittext)|Imposta la quantità massima di testo `CEdit` che può contenere.|
-|[CEdit:: semargini](#setmargins)|Imposta i margini sinistro e destro per questo `CEdit`oggetto.|
-|[CEdit::SetModify](#setmodify)|Imposta o cancella il flag di modifica per un controllo di modifica.|
-|[CEdit::SetPasswordChar](#setpasswordchar)|Imposta o rimuove un carattere di password visualizzato in un controllo di modifica quando l'utente immette il testo.|
-|[CEdit::SetReadOnly](#setreadonly)|Imposta lo stato di sola lettura di un controllo di modifica.|
-|[CEdit::SetRect](#setrect)|Imposta il rettangolo di formattazione di un controllo di modifica a più righe e aggiorna il controllo.|
-|[CEdit::SetRectNP](#setrectnp)|Imposta il rettangolo di formattazione di un controllo di modifica a più righe senza ridisegnare la finestra del controllo.|
-|[CEdit::SetSel](#setsel)|Seleziona un intervallo di caratteri in un controllo di modifica.|
-|[CEdit::SetTabStops](#settabstops)|Imposta la tabulazione in un controllo di modifica a più righe.|
-|[CEdit::ShowBalloonTip](#showballoontip)|Visualizza un fumetto suggerimento associato al controllo di modifica corrente.|
-|[CEdit::Undo](#undo)|Inverte l'ultima operazione di modifica del controllo.|
+|[CEdit:: sehighlight](#sethighlight)|Evidenzia un intervallo di testo visualizzato nel controllo di modifica corrente.|
+|[CEdit:: SetLimitText](#setlimittext)|Imposta la quantità massima di testo che può contenere questo `CEdit`.|
+|[CEdit:: semargini](#setmargins)|Imposta i margini sinistro e destro per questo `CEdit`.|
+|[CEdit:: semodify](#setmodify)|Imposta o cancella il flag di modifica per un controllo di modifica.|
+|[CEdit:: SetPasswordChar](#setpasswordchar)|Imposta o rimuove un carattere di password visualizzato in un controllo di modifica quando l'utente immette il testo.|
+|[CEdit:: sereadonly](#setreadonly)|Imposta lo stato di sola lettura di un controllo di modifica.|
+|[CEdit:: serect](#setrect)|Imposta il rettangolo di formattazione di un controllo di modifica a più righe e aggiorna il controllo.|
+|[CEdit:: SetRectNP](#setrectnp)|Imposta il rettangolo di formattazione di un controllo di modifica a più righe senza ridisegnare la finestra del controllo.|
+|[CEdit:: SetSel](#setsel)|Seleziona un intervallo di caratteri in un controllo di modifica.|
+|[CEdit:: SetTabStops](#settabstops)|Imposta la tabulazione in un controllo di modifica a più righe.|
+|[CEdit:: ShowBalloonTip](#showballoontip)|Visualizza un fumetto suggerimento associato al controllo di modifica corrente.|
+|[CEdit:: Undo](#undo)|Inverte l'ultima operazione di modifica del controllo.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un controllo di modifica è una finestra figlio rettangolare in cui l'utente può immettere testo.
 
-È possibile creare un controllo di modifica da un modello di finestra di dialogo o direttamente nel codice. In entrambi i casi, chiamare prima il `CEdit` costruttore per costruire `CEdit` l'oggetto, quindi chiamare la funzione membro [create](#create) per creare il controllo di `CEdit` modifica di Windows e collegarlo all'oggetto.
+È possibile creare un controllo di modifica da un modello di finestra di dialogo o direttamente nel codice. In entrambi i casi, chiamare prima il costruttore `CEdit` per costruire l'oggetto `CEdit`, quindi chiamare la funzione membro [create](#create) per creare il controllo di modifica di Windows e collegarlo all'oggetto `CEdit`.
 
-La costruzione può essere un processo in un unico passaggio in una classe `CEdit`derivata da. Scrivere un costruttore per la classe derivata e chiamare `Create` dall'interno del costruttore.
+La costruzione può essere un processo in un unico passaggio in una classe derivata da `CEdit`. Scrivere un costruttore per la classe derivata e chiamare `Create` dall'interno del costruttore.
 
-`CEdit`eredita funzionalità significative `CWnd`da. Per impostare e recuperare testo da un `CEdit` oggetto, usare le `CWnd` funzioni membro [SetWindowText](cwnd-class.md#setwindowtext) e [GetWindowText](cwnd-class.md#getwindowtext), che consentono di impostare o ottenere l'intero contenuto di un controllo di modifica, anche se si tratta di un controllo su più righe. Le righe di testo in un controllo su più righe sono separate dalle sequenze di caratteri ' \r\n '. Inoltre, se un controllo di modifica è su più righe, ottenere e impostare parte del testo del controllo chiamando le funzioni membro `CEdit` [GetLine](#getline), [SetSel](#setsel), [GetSel](#getsel) e [ReplaceSel](#replacesel).
+`CEdit` eredita funzionalità significative da `CWnd`. Per impostare e recuperare testo da un oggetto `CEdit`, usare le funzioni membro `CWnd` [SetWindowText](cwnd-class.md#setwindowtext) e [GetWindowText](cwnd-class.md#getwindowtext), che consentono di impostare o ottenere l'intero contenuto di un controllo di modifica, anche se si tratta di un controllo su più righe. Le righe di testo in un controllo su più righe sono separate dalle sequenze di caratteri ' \r\n '. Inoltre, se un controllo di modifica è su più righe, ottenere e impostare parte del testo del controllo chiamando le funzioni membro `CEdit` [getline](#getline), [SetSel](#setsel), [GetSel](#getsel)e [ReplaceSel](#replacesel).
 
-Se si desidera gestire i messaggi di notifica di Windows inviati da un controllo di modifica al relativo elemento padre (in `CDialog`genere una classe derivata da), aggiungere una voce della mappa messaggi e una funzione membro del gestore del messaggio alla classe padre per ogni messaggio.
+Se si desidera gestire i messaggi di notifica di Windows inviati da un controllo di modifica al relativo elemento padre (in genere una classe derivata da `CDialog`), aggiungere una voce della mappa messaggi e una funzione membro del gestore del messaggio alla classe padre per ogni messaggio.
 
 Ogni voce della mappa messaggi assume il formato seguente:
 
-  **ON_** _Notifica_ di **(** _ID_ **,** _memberFxn_ **)**
+  **Notifica ON_** **(** _ID_ **,** _memberFxn_ **)**
 
-dove `id` specifica l'ID della finestra figlio del controllo di modifica che invia la notifica `memberFxn` e è il nome della funzione membro padre scritta per gestire la notifica.
+dove `id` specifica l'ID della finestra figlio del controllo di modifica che invia la notifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.
 
 Il prototipo di funzione del padre è il seguente:
 
@@ -193,13 +193,13 @@ Di seguito è riportato un elenco di potenziali voci della mappa messaggi e una 
 
 - ON_EN_CHANGE l'utente ha effettuato un'azione che potrebbe aver modificato il testo in un controllo di modifica. A differenza del messaggio di notifica EN_UPDATE, questo messaggio di notifica viene inviato dopo che Windows ha aggiornato la visualizzazione.
 
-- ON_EN_ERRSPACE il controllo di modifica non può allocare memoria sufficiente per soddisfare una richiesta specifica.
+- ON_EN_ERRSPACE il controllo di modifica non è in grado di allocare memoria sufficiente per soddisfare una richiesta specifica.
 
 - ON_EN_HSCROLL l'utente fa clic sulla barra di scorrimento orizzontale di un controllo di modifica. La finestra padre riceve una notifica prima che lo schermo venga aggiornato.
 
 - ON_EN_KILLFOCUS il controllo di modifica perde lo stato attivo per l'input.
 
-- ON_EN_MAXTEXT l'inserimento corrente ha superato il numero di caratteri specificato per il controllo di modifica ed è stato troncato. Inviato anche quando un controllo di modifica non ha lo stile ES_AUTOHSCROLL e il numero di caratteri da inserire supera la larghezza del controllo di modifica. Inviato anche quando un controllo di modifica non ha lo stile ES_AUTOVSCROLL e il numero totale di righe risultante da un inserimento di testo supera l'altezza del controllo di modifica.
+- ON_EN_MAXTEXT l'inserimento corrente ha superato il numero di caratteri specificato per il controllo di modifica ed è stato troncato. Viene inoltre inviato quando un controllo di modifica non dispone dello stile ES_AUTOHSCROLL e il numero di caratteri da inserire supera la larghezza del controllo di modifica. Inviato anche quando un controllo di modifica non ha lo stile ES_AUTOVSCROLL e il numero totale di righe risultante da un inserimento di testo supera l'altezza del controllo di modifica.
 
 - ON_EN_SETFOCUS inviato quando un controllo di modifica riceve lo stato attivo per l'input.
 
@@ -207,13 +207,13 @@ Di seguito è riportato un elenco di potenziali voci della mappa messaggi e una 
 
 - ON_EN_VSCROLL l'utente fa clic sulla barra di scorrimento verticale di un controllo di modifica. La finestra padre riceve una notifica prima che lo schermo venga aggiornato.
 
-Se si crea un `CEdit` oggetto in una finestra di dialogo, `CEdit` l'oggetto viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
+Se si crea un oggetto `CEdit` in una finestra di dialogo, l'oggetto `CEdit` viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
 
-Se si crea un `CEdit` oggetto da una risorsa finestra di dialogo mediante l'editor finestre `CEdit` , l'oggetto viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
+Se si crea un `CEdit` oggetto da una risorsa finestra di dialogo mediante l'editor finestre, l'oggetto `CEdit` viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
 
-Se si crea un `CEdit` oggetto all'interno di una finestra, potrebbe essere necessario eliminarlo. Se si crea l' `CEdit` oggetto nello stack, questo viene eliminato automaticamente. Se si crea l' `CEdit` oggetto nell'heap usando la **nuova** funzione, è necessario chiamare **Delete** nell'oggetto per eliminarlo quando l'utente termina il controllo di modifica di Windows. Se si alloca memoria nell' `CEdit` oggetto, eseguire l'override del `CEdit` distruttore per eliminare le allocazioni.
+Se si crea un oggetto `CEdit` all'interno di una finestra, potrebbe essere necessario eliminarlo. Se si crea l'oggetto `CEdit` nello stack, questo viene eliminato automaticamente. Se si crea l'oggetto `CEdit` nell'heap usando la **nuova** funzione, è necessario chiamare **Delete** nell'oggetto per eliminarlo quando l'utente termina il controllo di modifica di Windows. Se si alloca memoria nell'oggetto `CEdit`, eseguire l'override del distruttore `CEdit` per eliminare le allocazioni.
 
-Per modificare determinati stili in un controllo di modifica, ad esempio ES_READONLY, è necessario inviare messaggi specifici al controllo anziché utilizzare [ModifyStyle](cwnd-class.md#modifystyle). Vedere [modificare gli stili dei controlli](/windows/win32/Controls/edit-control-styles) nella Windows SDK.
+Per modificare determinati stili in un controllo di modifica, ad esempio ES_READONLY, è necessario inviare messaggi specifici al controllo anziché usare [ModifyStyle](cwnd-class.md#modifystyle). Vedere [modificare gli stili dei controlli](/windows/win32/Controls/edit-control-styles) nella Windows SDK.
 
 Per ulteriori informazioni su `CEdit`, vedere [controlli](../../mfc/controls-mfc.md).
 
@@ -231,7 +231,7 @@ Per ulteriori informazioni su `CEdit`, vedere [controlli](../../mfc/controls-mfc
 
 **Intestazione:** afxwin.h
 
-##  <a name="canundo"></a>  CEdit::CanUndo
+##  <a name="canundo"></a>CEdit:: CanUndo
 
 Chiamare questa funzione per determinare se l'ultima operazione di modifica può essere annullata.
 
@@ -241,9 +241,9 @@ BOOL CanUndo() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se l'ultima operazione di modifica può essere annullata da una `Undo` chiamata alla funzione membro; 0 se non è possibile annullarla.
+Diverso da zero se l'ultima operazione di modifica può essere annullata da una chiamata alla funzione membro `Undo`; 0 se non può essere annullato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [EM_CANUNDO](/windows/win32/Controls/em-canundo) nel Windows SDK.
 
@@ -251,7 +251,7 @@ Per ulteriori informazioni, vedere [EM_CANUNDO](/windows/win32/Controls/em-canun
 
   Vedere l'esempio per [CEdit:: Undo](#undo).
 
-##  <a name="cedit"></a>  CEdit::CEdit
+##  <a name="cedit"></a>CEdit:: CEdit
 
 Costruisce un oggetto `CEdit`.
 
@@ -259,7 +259,7 @@ Costruisce un oggetto `CEdit`.
 CEdit();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare [create](#create) per costruire il controllo di modifica di Windows.
 
@@ -267,9 +267,9 @@ Usare [create](#create) per costruire il controllo di modifica di Windows.
 
 [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]
 
-##  <a name="charfrompos"></a>  CEdit::CharFromPos
+##  <a name="charfrompos"></a>CEdit:: CharFromPos
 
-Chiamare questa funzione per recuperare gli indici di riga e di caratteri in base zero del carattere più vicino al punto specificato in `CEdit` questo controllo.
+Chiamare questa funzione per recuperare gli indici di riga e di caratteri in base zero del carattere più vicino al punto specificato in questo controllo `CEdit`
 
 ```
 int CharFromPos(CPoint pt) const;
@@ -278,13 +278,13 @@ int CharFromPos(CPoint pt) const;
 ### <a name="parameters"></a>Parametri
 
 *pt*<br/>
-Coordinate di un punto nell'area client di questo `CEdit` oggetto.
+Coordinate di un punto nell'area client di questo oggetto `CEdit`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Indice dei caratteri nella parola di basso livello e indice di riga nella parola più ordinata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
 >  Questa funzione membro è disponibile a partire da Windows 95 e Windows NT 4,0.
@@ -295,7 +295,7 @@ Per ulteriori informazioni, vedere [EM_CHARFROMPOS](/windows/win32/Controls/em-c
 
 [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]
 
-##  <a name="clear"></a>  CEdit::Clear
+##  <a name="clear"></a>CEdit:: Clear
 
 Chiamare questa funzione per eliminare (cancellare) la selezione corrente (se presente) nel controllo di modifica.
 
@@ -303,7 +303,7 @@ Chiamare questa funzione per eliminare (cancellare) la selezione corrente (se pr
 void Clear();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'eliminazione eseguita da `Clear` può essere annullata chiamando la funzione membro [Undo](#undo) .
 
@@ -315,7 +315,7 @@ Per ulteriori informazioni, vedere [WM_CLEAR](/windows/win32/dataxchg/wm-clear) 
 
 [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]
 
-##  <a name="copy"></a>  CEdit::Copy
+##  <a name="copy"></a>CEdit:: Copy
 
 Chiamare questa funzione per fare in modo che la selezione corrente (se presente) nel controllo di modifica venga annullata negli Appunti nel formato CF_TEXT.
 
@@ -323,7 +323,7 @@ Chiamare questa funzione per fare in modo che la selezione corrente (se presente
 void Copy();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [WM_COPY](/windows/win32/dataxchg/wm-copy) nel Windows SDK.
 
@@ -331,9 +331,9 @@ Per ulteriori informazioni, vedere [WM_COPY](/windows/win32/dataxchg/wm-copy) ne
 
 [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]
 
-##  <a name="create"></a>  CEdit::Create
+##  <a name="create"></a>CEdit:: create
 
-Crea il controllo di modifica di Windows e lo collega all' `CEdit` oggetto.
+Crea il controllo di modifica di Windows e lo connette all'oggetto `CEdit`.
 
 ```
 virtual BOOL Create(
@@ -349,10 +349,10 @@ virtual BOOL Create(
 Specifica lo stile del controllo di modifica. Applicare qualsiasi combinazione di [stili di modifica](styles-used-by-mfc.md#edit-styles) al controllo.
 
 *rect*<br/>
-Specifica la posizione e le dimensioni del controllo di modifica. Può essere un `CRect` oggetto o `RECT` una struttura.
+Specifica la posizione e le dimensioni del controllo di modifica. Può essere un oggetto `CRect` o una struttura di `RECT`.
 
 *pParentWnd*<br/>
-Specifica la finestra padre del controllo di modifica (in `CDialog`genere un oggetto). Non deve essere NULL.
+Specifica la finestra padre del controllo di modifica (in genere un `CDialog`). Non deve essere NULL.
 
 *nID*<br/>
 Specifica l'ID del controllo di modifica.
@@ -361,13 +361,13 @@ Specifica l'ID del controllo di modifica.
 
 Diverso da zero se l'inizializzazione ha esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si costruisce `CEdit` un oggetto in due passaggi. Chiamare innanzitutto il `CEdit` costruttore e quindi chiamare `Create`, che crea il controllo di modifica di Windows e lo `CEdit` collega all'oggetto.
+Si costruisce un oggetto `CEdit` in due passaggi. Chiamare innanzitutto il costruttore `CEdit` e quindi chiamare `Create`, che crea il controllo di modifica di Windows e lo collega all'oggetto `CEdit`.
 
-Quando `Create` viene eseguito, Windows invia i messaggi [WM_NCCREATE](/windows/win32/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/win32/winmsg/wm-nccalcsize), [WM_CREATE](/windows/win32/winmsg/wm-create)e [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) al controllo di modifica.
+Quando `Create` viene eseguito, Windows invia i messaggi di [WM_NCCREATE](/windows/win32/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/win32/winmsg/wm-nccalcsize), [WM_CREATE](/windows/win32/winmsg/wm-create)e [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) al controllo di modifica.
 
-Questi messaggi vengono gestiti per impostazione predefinita dalle funzioni membro [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate) e [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) nella classe di base `CWnd`. Per estendere la gestione dei messaggi predefinita, derivare una `CEdit`classe da, aggiungere una mappa messaggi alla nuova classe ed eseguire l'override delle funzioni membro del gestore di messaggi sopra indicate. Eseguire `OnCreate`l'override, ad esempio, per eseguire l'inizializzazione necessaria per la nuova classe.
+Questi messaggi vengono gestiti per impostazione predefinita dalle funzioni membro [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate)e [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) nella classe di base `CWnd`. Per estendere la gestione dei messaggi predefinita, derivare una classe da `CEdit`, aggiungere una mappa messaggi alla nuova classe ed eseguire l'override delle funzioni membro del gestore di messaggi sopra indicate. Eseguire l'override `OnCreate`, ad esempio, per eseguire l'inizializzazione necessaria per la nuova classe.
 
 Applicare gli [stili della finestra](styles-used-by-mfc.md#window-styles) seguenti a un controllo di modifica.
 
@@ -377,7 +377,7 @@ Applicare gli [stili della finestra](styles-used-by-mfc.md#window-styles) seguen
 
 - WS_DISABLED raramente
 
-- WS_GROUP per raggruppare i controlli
+- WS_GROUP ai controlli di gruppo
 
 - WS_TABSTOP includere il controllo di modifica nell'ordine di tabulazione
 
@@ -385,7 +385,7 @@ Applicare gli [stili della finestra](styles-used-by-mfc.md#window-styles) seguen
 
 [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]
 
-##  <a name="cut"></a>  CEdit::Cut
+##  <a name="cut"></a>CEdit:: Cut
 
 Chiamare questa funzione per eliminare (tagliare) la selezione corrente (se presente) nel controllo di modifica e copiare il testo eliminato negli Appunti nel formato CF_TEXT.
 
@@ -393,7 +393,7 @@ Chiamare questa funzione per eliminare (tagliare) la selezione corrente (se pres
 void Cut();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'eliminazione eseguita da `Cut` può essere annullata chiamando la funzione membro [Undo](#undo) .
 
@@ -405,7 +405,7 @@ Per ulteriori informazioni, vedere [WM_CUT](/windows/win32/dataxchg/wm-cut) nel 
 
 [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]
 
-##  <a name="emptyundobuffer"></a>  CEdit::EmptyUndoBuffer
+##  <a name="emptyundobuffer"></a>CEdit:: EmptyUndoBuffer
 
 Chiamare questa funzione per reimpostare (cancellare) il flag di annullamento di un controllo di modifica.
 
@@ -413,11 +413,11 @@ Chiamare questa funzione per reimpostare (cancellare) il flag di annullamento di
 void EmptyUndoBuffer();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il controllo di modifica ora non sarà in grado di annullare l'ultima operazione. Il flag di annullamento viene impostato ogni volta che un'operazione all'interno del controllo di modifica può essere annullata.
 
-Il flag di annullamento viene cancellato automaticamente ogni volta che vengono chiamate le funzioni membro [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) o [SetHandle](#sethandle)`CWnd`.
+Il flag di annullamento viene cancellato automaticamente ogni volta che vengono chiamate le funzioni [membro`CWnd` o](#sethandle) [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) .
 
 Per ulteriori informazioni, vedere [EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) nel Windows SDK.
 
@@ -425,7 +425,7 @@ Per ulteriori informazioni, vedere [EM_EMPTYUNDOBUFFER](/windows/win32/Controls/
 
 [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]
 
-##  <a name="fmtlines"></a>  CEdit::FmtLines
+##  <a name="fmtlines"></a>CEdit:: FmtLines
 
 Chiamare questa funzione per impostare l'inclusione dei caratteri di interruzione di riga soft in un controllo di modifica a più righe.
 
@@ -442,11 +442,11 @@ Specifica se devono essere inseriti caratteri di interruzioni di riga soft. Il v
 
 Diverso da zero se si verifica una formattazione; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Un'interruzione di riga flessibile è costituita da due ritorni a capo e un avanzamento riga inserito alla fine di una riga che è interrotta a causa del ritorno a capo automatico. Un'interruzioni di riga dura è costituita da un ritorno a capo e da un avanzamento riga. Le righe che terminano con un'interruzioni di riga rigida non sono interessate da `FmtLines`.
+Un'interruzione di riga flessibile è costituita da due ritorni a capo e un avanzamento riga inserito alla fine di una riga che è interrotta a causa del ritorno a capo automatico. Un'interruzioni di riga dura è costituita da un ritorno a capo e da un avanzamento riga. Le righe che terminano con un'interruzioni di riga rigida non sono interessate dal `FmtLines`.
 
-Windows risponderà solo se l' `CEdit` oggetto è un controllo di modifica a più righe.
+Windows risponderà solo se l'oggetto `CEdit` è un controllo di modifica a più righe.
 
 `FmtLines` influiscono solo sul buffer restituito da [GetHandle](#gethandle) e sul testo restituito da [WM_GETTEXT](/windows/win32/winmsg/wm-gettext). Non ha alcun effetto sulla visualizzazione del testo all'interno del controllo di modifica.
 
@@ -456,7 +456,7 @@ Per ulteriori informazioni, vedere [EM_FMTLINES](/windows/win32/Controls/em-fmtl
 
 [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]
 
-##  <a name="getcuebanner"></a>  CEdit::GetCueBanner
+##  <a name="getcuebanner"></a>CEdit:: GetCueBanner
 
 Recupera il testo visualizzato come spunto di testo, o suggerimento, in un controllo di modifica quando il controllo è vuoto.
 
@@ -482,11 +482,11 @@ Per il primo overload, TRUE se il metodo ha esito positivo; in caso contrario, F
 
 Per il secondo overload, [CString](../../atl-mfc-shared/using-cstring.md) che contiene il testo del CUE se il metodo ha esito positivo; in caso contrario, stringa vuota ("").
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [EM_GETCUEBANNER](/windows/win32/Controls/em-getcuebanner) , descritto nella Windows SDK. Per ulteriori informazioni, vedere la macro [Edit_GetCueBannerText](/windows/win32/api/commctrl/nf-commctrl-edit_getcuebannertext) .
+Questo metodo invia il messaggio di [EM_GETCUEBANNER](/windows/win32/Controls/em-getcuebanner) , descritto nel Windows SDK. Per ulteriori informazioni, vedere la [Edit_GetCueBannerText](/windows/win32/api/commctrl/nf-commctrl-edit_getcuebannertext) macro.
 
-##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine
+##  <a name="getfirstvisibleline"></a>CEdit:: GetFirstVisibleLine
 
 Chiamare questa funzione per determinare la riga più in alto visibile in un controllo di modifica.
 
@@ -498,7 +498,7 @@ int GetFirstVisibleLine() const;
 
 Indice in base zero della riga visibile in primo piano. Per i controlli di modifica a riga singola, il valore restituito è 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) nel Windows SDK.
 
@@ -506,7 +506,7 @@ Per ulteriori informazioni, vedere [EM_GETFIRSTVISIBLELINE](/windows/win32/Contr
 
 [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]
 
-##  <a name="gethandle"></a>  CEdit::GetHandle
+##  <a name="gethandle"></a>CEdit:: GetHandle
 
 Chiamare questa funzione per recuperare un handle per la memoria attualmente allocata per un controllo di modifica a più righe.
 
@@ -518,16 +518,16 @@ HLOCAL GetHandle() const;
 
 Handle di memoria locale che identifica il buffer che contiene il contenuto del controllo di modifica. Se si verifica un errore, ad esempio l'invio del messaggio a un controllo di modifica a riga singola, il valore restituito è 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'handle è un handle di memoria locale e può essere usato da qualsiasi funzione **locale** di memoria di Windows che accetta un handle di memoria locale come parametro.
 
-`GetHandle`viene elaborato solo da controlli di modifica su più righe.
+`GetHandle` viene elaborato solo da controlli di modifica su più righe.
 
-Chiamare `GetHandle` per un controllo di modifica a più righe in una finestra di dialogo solo se la finestra di dialogo è stata creata con il flag di stile DS_LOCALEDIT impostato. Se lo stile DS_LOCALEDIT non è impostato, si otterrà comunque un valore restituito diverso da zero, ma non sarà possibile usare il valore restituito.
+Chiamare `GetHandle` per un controllo di modifica a più righe in una finestra di dialogo solo se la finestra di dialogo è stata creata con il flag di stile DS_LOCALEDIT impostato. Se lo stile del DS_LOCALEDIT non è impostato, si otterrà comunque un valore restituito diverso da zero, ma non sarà possibile usare il valore restituito.
 
 > [!NOTE]
-> `GetHandle`non funzionerà con Windows 95/98. Se si chiama `GetHandle` in Windows 95/98, viene restituito null. `GetHandle`funzionerà come descritto in Windows NT, versioni 3,51 e successive.
+> `GetHandle` non funzionerà con Windows 95/98. Se si chiama `GetHandle` in Windows 95/98, viene restituito NULL. `GetHandle` funzionerà come descritto in Windows NT, versioni 3,51 e successive.
 
 Per ulteriori informazioni, vedere [EM_GETHANDLE](/windows/win32/Controls/em-gethandle) nel Windows SDK.
 
@@ -535,7 +535,7 @@ Per ulteriori informazioni, vedere [EM_GETHANDLE](/windows/win32/Controls/em-get
 
 [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]
 
-##  <a name="gethighlight"></a>  CEdit::GetHighlight
+##  <a name="gethighlight"></a>CEdit:: gethighlight
 
 Ottiene gli indici del primo e dell'ultimo carattere di un intervallo di testo evidenziato nel controllo di modifica corrente.
 
@@ -547,7 +547,7 @@ BOOL GetHighlight(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*pichStart*|out Indice in base zero del primo carattere nell'intervallo di testo evidenziato.|
 |*pichEnd*|out Indice in base zero dell'ultimo carattere nell'intervallo di testo evidenziato.|
@@ -556,13 +556,13 @@ BOOL GetHighlight(
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [EM_GETHILITE](/windows/win32/Controls/em-gethilite) , descritto nella Windows SDK. Sia `SetHighlight` che `GetHighlight` attualmente sono abilitate solo per le compilazioni Unicode.
+Questo metodo invia il messaggio di [EM_GETHILITE](/windows/win32/Controls/em-gethilite) , descritto nel Windows SDK. Sia `SetHighlight` che `GetHighlight` sono attualmente abilitate solo per le compilazioni UNICODE.
 
-##  <a name="getlimittext"></a>  CEdit::GetLimitText
+##  <a name="getlimittext"></a>CEdit:: GetLimitText
 
-Chiamare questa funzione membro per ottenere il limite di testo per `CEdit` questo oggetto.
+Chiamare questa funzione membro per ottenere il limite di testo per questo oggetto `CEdit`.
 
 ```
 UINT GetLimitText() const;
@@ -570,9 +570,9 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Limite di testo corrente, in TCHARs, per questo `CEdit` oggetto.
+Limite di testo corrente, in TCHARs, per questo oggetto `CEdit`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il limite di testo è la quantità massima di testo, in TCHARs, che il controllo di modifica può accettare.
 
@@ -585,7 +585,7 @@ Per ulteriori informazioni, vedere [EM_GETLIMITTEXT](/windows/win32/Controls/em-
 
 [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]
 
-##  <a name="getline"></a>  CEdit::GetLine
+##  <a name="getline"></a>CEdit:: getline
 
 Chiamare questa funzione per recuperare una riga di testo da un controllo di modifica e posizionarla in *lpszBuffer*.
 
@@ -609,13 +609,13 @@ Specifica il numero di riga da recuperare da un controllo di modifica a più rig
 Punta al buffer che riceve una copia della riga. La prima parola del buffer deve specificare il numero massimo di TCHARs che possono essere copiati nel buffer.
 
 *nMaxLength*<br/>
-Specifica il numero massimo di caratteri TCHAR che possono essere copiati nel buffer. `GetLine`inserisce questo valore nella prima parola di *lpszBuffer* prima di effettuare la chiamata a Windows.
+Specifica il numero massimo di caratteri TCHAR che possono essere copiati nel buffer. `GetLine` inserisce questo valore nella prima parola di *lpszBuffer* prima di effettuare la chiamata a Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
 Numero di caratteri attualmente copiati. Il valore restituito è 0 se il numero di riga specificato da *nIndex* è maggiore del numero di righe nel controllo di modifica.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La riga copiata non contiene un carattere di terminazione null.
 
@@ -625,7 +625,7 @@ Per ulteriori informazioni, vedere [EM_GETLINE](/windows/win32/Controls/em-getli
 
   Vedere l'esempio per [CEdit:: GetLineCount](#getlinecount).
 
-##  <a name="getlinecount"></a>  CEdit::GetLineCount
+##  <a name="getlinecount"></a>CEdit:: GetLineCount
 
 Chiamare questa funzione per recuperare il numero di righe in un controllo di modifica a più righe.
 
@@ -637,9 +637,9 @@ int GetLineCount() const;
 
 Intero contenente il numero di righe nel controllo di modifica a più righe. Se nel controllo di modifica non è stato immesso testo, il valore restituito è 1.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`GetLineCount`viene elaborato solo da controlli di modifica su più righe.
+`GetLineCount` viene elaborato solo da controlli di modifica su più righe.
 
 Per ulteriori informazioni, vedere [EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) nel Windows SDK.
 
@@ -647,7 +647,7 @@ Per ulteriori informazioni, vedere [EM_GETLINECOUNT](/windows/win32/Controls/em-
 
 [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]
 
-##  <a name="getmargins"></a>  CEdit::GetMargins
+##  <a name="getmargins"></a>CEdit:: GetMargins
 
 Chiamare questa funzione membro per recuperare i margini sinistro e destro di questo controllo di modifica.
 
@@ -659,7 +659,7 @@ DWORD GetMargins() const;
 
 Larghezza del margine sinistro nella parola di ordine inferiore e larghezza del margine destro nella parola più alta.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I margini sono misurati in pixel.
 
@@ -672,7 +672,7 @@ Per ulteriori informazioni, vedere [EM_GETMARGINS](/windows/win32/Controls/em-ge
 
   Vedere l'esempio per [CEditView:: GetEditCtrl](ceditview-class.md#geteditctrl).
 
-##  <a name="getmodify"></a>  CEdit::GetModify
+##  <a name="getmodify"></a>CEdit:: GetModify
 
 Chiamare questa funzione per determinare se il contenuto di un controllo di modifica è stato modificato.
 
@@ -684,9 +684,9 @@ BOOL GetModify() const;
 
 Diverso da zero se il contenuto del controllo di modifica è stato modificato. 0 se rimangono invariati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Windows mantiene un flag interno che indica se il contenuto del controllo di modifica è stato modificato. Questo flag viene cancellato quando il controllo di modifica viene creato per la prima volta e può anche essere cancellato chiamando la funzione membro [SetModify](#setmodify).
+Windows mantiene un flag interno che indica se il contenuto del controllo di modifica è stato modificato. Questo flag viene cancellato quando il controllo di modifica viene creato per la prima volta e può anche essere cancellato chiamando la funzione membro [semodify](#setmodify) .
 
 Per ulteriori informazioni, vedere [EM_GETMODIFY](/windows/win32/Controls/em-getmodify) nel Windows SDK.
 
@@ -694,7 +694,7 @@ Per ulteriori informazioni, vedere [EM_GETMODIFY](/windows/win32/Controls/em-get
 
 [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]
 
-##  <a name="getpasswordchar"></a>  CEdit::GetPasswordChar
+##  <a name="getpasswordchar"></a>CEdit:: GetPasswordChar
 
 Chiamare questa funzione per recuperare il carattere della password visualizzato in un controllo di modifica quando l'utente immette il testo.
 
@@ -706,11 +706,11 @@ TCHAR GetPasswordChar() const;
 
 Specifica il carattere da visualizzare anziché il carattere digitato dall'utente. Il valore restituito è NULL se non esiste alcun carattere di password.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se si crea il controllo di modifica con lo stile ES_PASSWORD, la DLL che supporta il controllo determina il carattere della password predefinito. Il manifesto o il metodo [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) determina quale dll supporta il controllo di modifica. Se user32. dll supporta il controllo di modifica, il carattere della password predefinito è asterisco (' *', U + 002A). Se Comctl32. dll versione 6 supporta il controllo di modifica, il carattere predefinito è il cerchio nero (' ●', U + 25CF). Per ulteriori informazioni su quali DLL e versione supportano i controlli comuni, vedere la pagina relativa alle [versioni dei controlli comuni](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))e della shell.
+Se si crea il controllo di modifica con lo stile di ES_PASSWORD, la DLL che supporta il controllo determina il carattere della password predefinito. Il manifesto o il metodo [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) determina quale dll supporta il controllo di modifica. Se user32. dll supporta il controllo di modifica, il carattere della password predefinito è asterisco (' *', U + 002A). Se Comctl32. dll versione 6 supporta il controllo di modifica, il carattere predefinito è il cerchio nero (' ●', U + 25CF). Per ulteriori informazioni su quali DLL e versione supportano i controlli comuni, vedere la pagina relativa alle [versioni dei controlli comuni](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))e della shell.
 
-Questo metodo invia il messaggio [EM_GETPASSWORDCHAR](/windows/win32/Controls/em-getpasswordchar) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [EM_GETPASSWORDCHAR](/windows/win32/Controls/em-getpasswordchar) , descritto nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -727,13 +727,13 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta alla `RECT` struttura che riceve il rettangolo di formattazione.
+Punta alla struttura `RECT` che riceve il rettangolo di formattazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il rettangolo di formattazione è il rettangolo di limitazione del testo, che è indipendente dalle dimensioni della finestra di modifica del controllo.
 
-Il rettangolo di formattazione di un controllo di modifica a più righe può essere modificato dalle funzioni membro [SetRect](#setrect) e [SetRectNP](#setrectnp)
+Il rettangolo di formattazione di un controllo di modifica a più righe può essere modificato dalle funzioni membro [serect](#setrect) e [SetRectNP](#setrectnp) .
 
 Per ulteriori informazioni, vedere [EM_GETRECT](/windows/win32/Controls/em-getrect) nel Windows SDK.
 
@@ -741,7 +741,7 @@ Per ulteriori informazioni, vedere [EM_GETRECT](/windows/win32/Controls/em-getre
 
   Vedere l'esempio per [CEdit:: LimitText](#limittext).
 
-##  <a name="getsel"></a>  CEdit::GetSel
+##  <a name="getsel"></a>CEdit:: GetSel
 
 Chiamare questa funzione per ottenere le posizioni dei caratteri iniziali e finali della selezione corrente (se presente) in un controllo di modifica, usando il valore restituito o i parametri.
 
@@ -765,7 +765,7 @@ Riferimento a un intero che riceverà la posizione del primo carattere non selez
 
 La versione che restituisce un valore DWORD restituisce un valore che contiene la posizione iniziale nella parola di basso livello e la posizione del primo carattere non selezionato dopo la fine della selezione nella parola più ordinata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [EM_GETSEL](/windows/win32/Controls/em-getsel) nel Windows SDK.
 
@@ -773,7 +773,7 @@ Per ulteriori informazioni, vedere [EM_GETSEL](/windows/win32/Controls/em-getsel
 
 [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]
 
-##  <a name="hideballoontip"></a>  CEdit::HideBalloonTip
+##  <a name="hideballoontip"></a>CEdit:: HideBalloonTip
 
 Nasconde qualsiasi suggerimento del fumetto associato al controllo di modifica corrente.
 
@@ -785,11 +785,11 @@ BOOL HideBalloonTip();
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione Invia il messaggio [EM_HIDEBALLOONTIP](/windows/win32/Controls/em-hideballoontip) , descritto nella Windows SDK.
+Questa funzione Invia il messaggio di [EM_HIDEBALLOONTIP](/windows/win32/Controls/em-hideballoontip) , descritto nel Windows SDK.
 
-##  <a name="limittext"></a>  CEdit::LimitText
+##  <a name="limittext"></a>CEdit:: LimitText
 
 Chiamare questa funzione per limitare la lunghezza del testo che l'utente può immettere in un controllo di modifica.
 
@@ -800,11 +800,11 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>Parametri
 
 *nChars*<br/>
-Specifica la lunghezza (in TCHARs) del testo che l'utente può immettere. Se questo parametro è 0, la lunghezza del testo è impostata su UINT_MAX bytes. Comportamento predefinito.
+Specifica la lunghezza (in TCHARs) del testo che l'utente può immettere. Se questo parametro è 0, la lunghezza del testo viene impostata su UINT_MAX byte. Questo è il comportamento predefinito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La modifica del limite di testo limita solo il testo che l'utente può immettere. Non ha alcun effetto su nessun testo già presente nel controllo di modifica né sulla lunghezza del testo copiato nel controllo di modifica da parte della funzione membro [SetWindowText](cwnd-class.md#setwindowtext) in `CWnd`. Se un'applicazione usa la `SetWindowText` funzione per inserire più testo in un controllo di modifica rispetto a quanto specificato nella chiamata `LimitText`a, l'utente può eliminare qualsiasi testo all'interno del controllo di modifica. Tuttavia, il limite di testo impedisce all'utente di sostituire il testo esistente con il nuovo testo, a meno che l'eliminazione della selezione corrente provochi il calo del testo al di sotto del limite di testo.
+La modifica del limite di testo limita solo il testo che l'utente può immettere. Non ha alcun effetto su nessun testo già presente nel controllo di modifica né influisce sulla lunghezza del testo copiato nel controllo di modifica da parte della funzione membro [SetWindowText](cwnd-class.md#setwindowtext) in `CWnd`. Se un'applicazione usa la funzione `SetWindowText` per inserire più testo in un controllo di modifica rispetto a quanto specificato nella chiamata a `LimitText`, l'utente può eliminare qualsiasi testo all'interno del controllo di modifica. Tuttavia, il limite di testo impedisce all'utente di sostituire il testo esistente con il nuovo testo, a meno che l'eliminazione della selezione corrente provochi il calo del testo al di sotto del limite di testo.
 
 > [!NOTE]
 >  In Win32 (Windows NT e Windows 95/98), [SetLimitText](#setlimittext) sostituisce questa funzione.
@@ -815,7 +815,7 @@ Per ulteriori informazioni, vedere [EM_LIMITTEXT](/windows/win32/Controls/em-lim
 
 [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]
 
-##  <a name="linefromchar"></a>  CEdit::LineFromChar
+##  <a name="linefromchar"></a>CEdit:: LineFromChar
 
 Chiamare questa funzione per recuperare il numero di riga della riga che contiene l'indice dei caratteri specificato.
 
@@ -832,7 +832,7 @@ Contiene il valore di indice in base zero per il carattere desiderato nel testo 
 
 Numero di riga in base zero della riga che contiene l'indice del carattere specificato da *nIndex*. Se *nIndex* è-1, viene restituito il numero della riga che contiene il primo carattere della selezione. Se non è presente alcuna selezione, viene restituito il numero di riga corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un indice dei caratteri è il numero di caratteri a partire dall'inizio del controllo di modifica.
 
@@ -844,7 +844,7 @@ Per ulteriori informazioni, vedere [EM_LINEFROMCHAR](/windows/win32/Controls/em-
 
 [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]
 
-##  <a name="lineindex"></a>  CEdit::LineIndex
+##  <a name="lineindex"></a>CEdit:: LineIndex
 
 Chiamare questa funzione per recuperare l'indice dei caratteri di una riga all'interno di un controllo di modifica a più righe.
 
@@ -861,7 +861,7 @@ Contiene il valore di indice per la riga desiderata nel testo del controllo di m
 
 Indice dei caratteri della riga specificata in *nLine* o-1 se il numero di riga specificato è maggiore del numero di righe nel controllo di modifica.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'indice dei caratteri è il numero di caratteri dall'inizio del controllo di modifica alla riga specificata.
 
@@ -898,15 +898,15 @@ Se il parametro *nLine* è-1, il valore restituito è il numero di caratteri non
 
 Per ulteriori informazioni sul tipo TCHAR, vedere la riga TCHAR nella tabella nei tipi di [dati di Windows](/windows/win32/WinProg/windows-data-types).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo è supportato dal messaggio [EM_LINELENGTH](/windows/win32/Controls/em-linelength) , descritto nella Windows SDK.
+Questo metodo è supportato dal messaggio di [EM_LINELENGTH](/windows/win32/Controls/em-linelength) , descritto nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio per [CEdit:: LineIndex](#lineindex).
 
-##  <a name="linescroll"></a>  CEdit::LineScroll
+##  <a name="linescroll"></a>CEdit:: LineScroll
 
 Chiamare questa funzione per scorrere il testo di un controllo di modifica a più righe.
 
@@ -924,13 +924,13 @@ Specifica il numero di righe da scorrere verticalmente.
 *nChars*<br/>
 Specifica il numero di posizioni dei caratteri da scorrere orizzontalmente. Questo valore viene ignorato se il controllo di modifica dispone dello stile ES_RIGHT o ES_CENTER.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro viene elaborata solo da controlli di modifica su più righe.
 
 Il controllo di modifica non scorre verticalmente oltre l'ultima riga di testo nel controllo di modifica. Se la riga corrente più il numero di righe specificato da *nLines* supera il numero totale di righe nel controllo di modifica, il valore viene regolato in modo che l'ultima riga del controllo di modifica venga spostata all'inizio della finestra di modifica del controllo.
 
-`LineScroll`può essere usato per scorrere orizzontalmente oltre l'ultimo carattere di una riga.
+è possibile utilizzare `LineScroll` per scorrere orizzontalmente oltre l'ultimo carattere di una riga.
 
 Per ulteriori informazioni, vedere [EM_LINESCROLL](/windows/win32/Controls/em-linescroll) nel Windows SDK.
 
@@ -938,15 +938,15 @@ Per ulteriori informazioni, vedere [EM_LINESCROLL](/windows/win32/Controls/em-li
 
   Vedere l'esempio per [CEdit:: GetFirstVisibleLine](#getfirstvisibleline).
 
-##  <a name="paste"></a>  CEdit::Paste
+##  <a name="paste"></a>CEdit::P incolla
 
-Chiamare questa funzione per inserire i dati dagli Appunti nell'oggetto `CEdit` in corrispondenza del punto di inserimento.
+Chiamare questa funzione per inserire i dati dagli Appunti nella `CEdit` nel punto di inserimento.
 
 ```
 void Paste();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I dati vengono inseriti solo se gli Appunti contengono dati nel formato CF_TEXT.
 
@@ -956,9 +956,9 @@ Per ulteriori informazioni, vedere [WM_PASTE](/windows/win32/dataxchg/wm-paste) 
 
 [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]
 
-##  <a name="posfromchar"></a>  CEdit::PosFromChar
+##  <a name="posfromchar"></a>CEdit::P osFromChar
 
-Chiamare questa funzione per ottenere la posizione (angolo superiore sinistro) di un carattere specificato all'interno di `CEdit` questo oggetto.
+Chiamare questa funzione per ottenere la posizione (angolo superiore sinistro) di un carattere specificato all'interno di questo oggetto `CEdit`.
 
 ```
 CPoint PosFromChar(UINT nChar) const;
@@ -973,9 +973,9 @@ Indice in base zero del carattere specificato.
 
 Coordinate dell'angolo superiore sinistro del carattere specificato da *nchar*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il carattere viene specificato assegnando il relativo valore di indice in base zero. Se *nchar* è maggiore dell'indice dell'ultimo carattere in questo `CEdit` oggetto, il valore restituito specifica le coordinate della posizione del carattere subito dopo l'ultimo carattere in questo `CEdit` oggetto.
+Il carattere viene specificato assegnando il relativo valore di indice in base zero. Se *nchar* è maggiore dell'indice dell'ultimo carattere in questo `CEdit` oggetto, il valore restituito specifica le coordinate della posizione del carattere subito dopo l'ultimo carattere in questo oggetto `CEdit`.
 
 > [!NOTE]
 >  Questa funzione membro è disponibile a partire da Windows 95 e Windows NT 4,0.
@@ -986,7 +986,7 @@ Per ulteriori informazioni, vedere [EM_POSFROMCHAR](/windows/win32/Controls/em-p
 
   Vedere l'esempio per [CEdit:: LineFromChar](#linefromchar).
 
-##  <a name="replacesel"></a>  CEdit::ReplaceSel
+##  <a name="replacesel"></a>CEdit:: ReplaceSel
 
 Chiamare questa funzione per sostituire la selezione corrente in un controllo di modifica con il testo specificato da *lpszNewText*.
 
@@ -1002,7 +1002,7 @@ Punta a una stringa con terminazione null che contiene il testo di sostituzione.
 *bCanUndo*<br/>
 Per specificare che questa funzione può essere annullata, impostare il valore di questo parametro su TRUE. Il valore predefinito è FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Sostituisce solo una parte del testo in un controllo di modifica. Se si vuole sostituire tutto il testo, usare la funzione membro [CWnd:: SetWindowText](cwnd-class.md#setwindowtext) .
 
@@ -1014,7 +1014,7 @@ Per ulteriori informazioni, vedere [EM_REPLACESEL](/windows/win32/Controls/em-re
 
   Vedere l'esempio per [CEdit:: LineIndex](#lineindex).
 
-##  <a name="setcuebanner"></a>  CEdit::SetCueBanner
+##  <a name="setcuebanner"></a>CEdit:: SetCueBanner
 
 Imposta il testo visualizzato come spunto di testo, o suggerimento, in un controllo di modifica quando il controllo è vuoto.
 
@@ -1042,9 +1042,9 @@ Il valore predefinito è FALSE.
 
 TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [EM_SETCUEBANNER](/windows/win32/Controls/em-setcuebanner) , descritto nella Windows SDK. Per ulteriori informazioni, vedere la macro [Edit_SetCueBannerTextFocused](/windows/win32/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) .
+Questo metodo invia il messaggio di [EM_SETCUEBANNER](/windows/win32/Controls/em-setcuebanner) , descritto nel Windows SDK. Per ulteriori informazioni, vedere la [Edit_SetCueBannerTextFocused](/windows/win32/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) macro.
 
 ### <a name="example"></a>Esempio
 
@@ -1052,7 +1052,7 @@ Nell'esempio seguente viene illustrato il metodo [CEdit:: SetCueBanner](#setcueb
 
 [!code-cpp[NVC_MFC_CEdit_s1#2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]
 
-##  <a name="sethandle"></a>  CEdit::SetHandle
+##  <a name="sethandle"></a>CEdit:: filehandle
 
 Chiamare questa funzione per impostare l'handle sulla memoria locale che verrà utilizzata da un controllo di modifica a più righe.
 
@@ -1063,30 +1063,30 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="parameters"></a>Parametri
 
 *hBuffer*<br/>
-Contiene un handle per la memoria locale. Questo handle deve essere stato creato da una chiamata precedente alla funzione di Windows [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) usando il flag LMEM_MOVEABLE. Si presuppone che la memoria contenga una stringa con terminazione null. In caso contrario, il primo byte della memoria allocata deve essere impostato su 0.
+Contiene un handle per la memoria locale. Questo handle deve essere stato creato da una chiamata precedente alla funzione Windows [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) usando il flag LMEM_MOVEABLE. Si presuppone che la memoria contenga una stringa con terminazione null. In caso contrario, il primo byte della memoria allocata deve essere impostato su 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il controllo di modifica utilizzerà quindi questo buffer per archiviare il testo attualmente visualizzato anziché allocare il proprio buffer.
 
 Questa funzione membro viene elaborata solo da controlli di modifica su più righe.
 
-Prima che un'applicazione imposti un nuovo handle di memoria, deve usare la funzione membro [GetHandle](#gethandle) per ottenere l'handle per il buffer di memoria corrente e liberare tale memoria usando la funzione di Windows `LocalFree`.
+Prima che un'applicazione imposti un nuovo handle di memoria, è consigliabile utilizzare la funzione membro [GetHandle](#gethandle) per ottenere l'handle per il buffer di memoria corrente e liberare tale memoria utilizzando la funzione `LocalFree` Windows.
 
-`SetHandle` cancella il buffer di annullamento (la funzione membro [CanUndo](#canundo) quindi restituisce 0) e il flag di modifica interno (la funzione membro [GetModify](#getmodify) restituisce 0). La finestra di modifica del controllo viene ridisegnato.
+`SetHandle` Cancella il buffer di annullamento (la funzione membro [CanUndo](#canundo) restituisce 0) e il flag di modifica interno (la funzione membro [GetModify](#getmodify) restituisce quindi 0). La finestra di modifica del controllo viene ridisegnato.
 
 È possibile utilizzare questa funzione membro in un controllo di modifica a più righe in una finestra di dialogo solo se è stata creata la finestra di dialogo con il flag di stile DS_LOCALEDIT impostato.
 
 > [!NOTE]
-> `GetHandle`non funzionerà con Windows 95/98. Se si chiama `GetHandle` in Windows 95/98, viene restituito null. `GetHandle`funzionerà come descritto in Windows NT, versioni 3,51 e successive.
+> `GetHandle` non funzionerà con Windows 95/98. Se si chiama `GetHandle` in Windows 95/98, viene restituito NULL. `GetHandle` funzionerà come descritto in Windows NT, versioni 3,51 e successive.
 
-Per ulteriori informazioni, vedere [EM_SETHANDLE](/windows/win32/Controls/em-sethandle), [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)e [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree) nella Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETHANDLE](/windows/win32/Controls/em-sethandle), [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)e [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]
 
-##  <a name="sethighlight"></a>  CEdit::SetHighlight
+##  <a name="sethighlight"></a>CEdit:: sehighlight
 
 Evidenzia un intervallo di testo visualizzato nel controllo di modifica corrente.
 
@@ -1103,13 +1103,13 @@ void SetHighlight(
 |*ichStart*|in Indice in base zero del primo carattere nell'intervallo di testo da evidenziare.|
 |*ichEnd*|in Indice in base zero dell'ultimo carattere nell'intervallo di testo da evidenziare.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , descritto nella Windows SDK.  Questo metodo invia il messaggio [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , descritto nella Windows SDK. E sono `GetHighlight` abilitati solo per le compilazioni Unicode. `SetHighlight`
+Questo metodo invia il messaggio di [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , descritto nel Windows SDK.  Questo metodo invia il messaggio di [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , descritto nel Windows SDK. Sia `SetHighlight` che `GetHighlight` sono abilitati solo per le compilazioni UNICODE.
 
-##  <a name="setlimittext"></a>  CEdit::SetLimitText
+##  <a name="setlimittext"></a>CEdit:: SetLimitText
 
-Chiamare questa funzione membro per impostare il limite di testo per `CEdit` questo oggetto.
+Chiamare questa funzione membro per impostare il limite di testo per questo oggetto `CEdit`.
 
 ```
 void SetLimitText(UINT nMax);
@@ -1120,11 +1120,11 @@ void SetLimitText(UINT nMax);
 *nMax*<br/>
 Il nuovo limite di testo, in caratteri.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il limite di testo è la quantità massima di testo, in caratteri, che il controllo di modifica può accettare.
 
-La modifica del limite di testo limita solo il testo che l'utente può immettere. Non ha alcun effetto su nessun testo già presente nel controllo di modifica né sulla lunghezza del testo copiato nel controllo di modifica da parte della funzione membro [SetWindowText](cwnd-class.md#setwindowtext) in `CWnd`. Se un'applicazione usa la `SetWindowText` funzione per inserire più testo in un controllo di modifica rispetto a quanto specificato nella chiamata `LimitText`a, l'utente può eliminare qualsiasi testo all'interno del controllo di modifica. Tuttavia, il limite di testo impedisce all'utente di sostituire il testo esistente con il nuovo testo, a meno che l'eliminazione della selezione corrente provochi il calo del testo al di sotto del limite di testo.
+La modifica del limite di testo limita solo il testo che l'utente può immettere. Non ha alcun effetto su nessun testo già presente nel controllo di modifica né influisce sulla lunghezza del testo copiato nel controllo di modifica da parte della funzione membro [SetWindowText](cwnd-class.md#setwindowtext) in `CWnd`. Se un'applicazione usa la funzione `SetWindowText` per inserire più testo in un controllo di modifica rispetto a quanto specificato nella chiamata a `LimitText`, l'utente può eliminare qualsiasi testo all'interno del controllo di modifica. Tuttavia, il limite di testo impedisce all'utente di sostituire il testo esistente con il nuovo testo, a meno che l'eliminazione della selezione corrente provochi il calo del testo al di sotto del limite di testo.
 
 Questa funzione sostituisce [LimitText](#limittext) in Win32.
 
@@ -1134,7 +1134,7 @@ Per ulteriori informazioni, vedere [EM_SETLIMITTEXT](/windows/win32/Controls/em-
 
   Vedere l'esempio per [CEditView:: GetEditCtrl](ceditview-class.md#geteditctrl).
 
-##  <a name="setmargins"></a>  CEdit::SetMargins
+##  <a name="setmargins"></a>CEdit:: semargini
 
 Chiamare questo metodo per impostare i margini sinistro e destro di questo controllo di modifica.
 
@@ -1152,7 +1152,7 @@ Larghezza del nuovo margine sinistro, in pixel.
 *nRight*<br/>
 Larghezza, in pixel, del nuovo margine destro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
 >  Questa funzione membro è disponibile a partire da Windows 95 e Windows NT 4,0.
@@ -1163,7 +1163,7 @@ Per ulteriori informazioni, vedere [EM_SETMARGINS](/windows/win32/Controls/em-se
 
   Vedere l'esempio per [CEditView:: GetEditCtrl](ceditview-class.md#geteditctrl).
 
-##  <a name="setmodify"></a>  CEdit::SetModify
+##  <a name="setmodify"></a>CEdit:: semodify
 
 Chiamare questa funzione per impostare o deselezionare il flag modificato per un controllo di modifica.
 
@@ -1176,9 +1176,9 @@ void SetModify(BOOL bModified = TRUE);
 *bModified*<br/>
 Il valore TRUE indica che il testo è stato modificato e il valore FALSE indica che non è stato modificato. Per impostazione predefinita, viene impostato il flag modificato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il flag modificato indica se il testo all'interno del controllo di modifica è stato modificato. Viene impostato automaticamente ogni volta che l'utente modifica il testo. Il relativo valore può essere recuperato con la funzione membro [GetModify](#getmodify).
+Il flag modificato indica se il testo all'interno del controllo di modifica è stato modificato. Viene impostato automaticamente ogni volta che l'utente modifica il testo. Il relativo valore può essere recuperato con la funzione membro [GetModify](#getmodify) .
 
 Per ulteriori informazioni, vedere [EM_SETMODIFY](/windows/win32/Controls/em-setmodify) nel Windows SDK.
 
@@ -1186,7 +1186,7 @@ Per ulteriori informazioni, vedere [EM_SETMODIFY](/windows/win32/Controls/em-set
 
   Vedere l'esempio per [CEdit:: GetModify](#getmodify).
 
-##  <a name="setpasswordchar"></a>  CEdit::SetPasswordChar
+##  <a name="setpasswordchar"></a>CEdit:: SetPasswordChar
 
 Chiamare questa funzione per impostare o rimuovere un carattere della password visualizzato in un controllo di modifica quando l'utente digita il testo.
 
@@ -1199,15 +1199,15 @@ void SetPasswordChar(TCHAR ch);
 *ch*<br/>
 Specifica il carattere da visualizzare al posto del carattere digitato dall'utente. Se *ch* è 0, vengono visualizzati i caratteri effettivi digitati dall'utente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando viene impostato un carattere di password, tale carattere viene visualizzato per ogni carattere che l'utente digita.
 
 Questa funzione membro non ha alcun effetto su un controllo di modifica a più righe.
 
-Quando viene `SetPasswordChar` chiamata la funzione membro, `CEdit` in vengono ridisegnato tutti i caratteri visibili usando il carattere specificato da *ch*.
+Quando viene chiamata la funzione membro `SetPasswordChar`, `CEdit` ridisegnierà tutti i caratteri visibili usando il carattere specificato da *ch*.
 
-Se il controllo di modifica viene creato con lo stile [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) , il carattere predefinito della password viene impostato su un <strong>\*</strong>asterisco (). Questo stile viene rimosso se `SetPasswordChar` viene chiamato con *ch* impostato su 0.
+Se il controllo di modifica viene creato con lo stile [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) , il carattere della password predefinito viene impostato su un asterisco ( <strong>\*</strong>). Questo stile viene rimosso se `SetPasswordChar` viene chiamato con *ch* impostato su 0.
 
 Per ulteriori informazioni, vedere [EM_SETPASSWORDCHAR](/windows/win32/Controls/em-setpasswordchar) nel Windows SDK.
 
@@ -1215,7 +1215,7 @@ Per ulteriori informazioni, vedere [EM_SETPASSWORDCHAR](/windows/win32/Controls/
 
 [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]
 
-##  <a name="setreadonly"></a>  CEdit::SetReadOnly
+##  <a name="setreadonly"></a>CEdit:: sereadonly
 
 Chiama questa funzione per impostare lo stato di sola lettura di un controllo di modifica.
 
@@ -1232,7 +1232,7 @@ Specifica se impostare o rimuovere lo stato di sola lettura del controllo di mod
 
 Diverso da zero se l'operazione ha esito positivo oppure 0 se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile trovare l'impostazione corrente testando il flag [ES_READONLY](styles-used-by-mfc.md#edit-styles) nel valore restituito di [CWnd:: GetStyle](cwnd-class.md#getstyle).
 
@@ -1242,7 +1242,7 @@ Per ulteriori informazioni, vedere [EM_SETREADONLY](/windows/win32/Controls/em-s
 
 [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]
 
-##  <a name="setrect"></a>  CEdit::SetRect
+##  <a name="setrect"></a>CEdit:: serect
 
 Chiamare questa funzione per impostare le dimensioni di un rettangolo usando le coordinate specificate.
 
@@ -1253,17 +1253,17 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta alla `RECT` struttura o `CRect` all'oggetto che specifica le nuove dimensioni del rettangolo di formattazione.
+Punta alla struttura `RECT` o `CRect` oggetto che specifica le nuove dimensioni del rettangolo di formattazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo membro viene elaborato solo da controlli di modifica su più righe.
 
-Utilizzare `SetRect` per impostare il rettangolo di formattazione di un controllo di modifica a più righe. Il rettangolo di formattazione è il rettangolo di limitazione del testo, che è indipendente dalle dimensioni della finestra di modifica del controllo. Quando il controllo di modifica viene creato per la prima volta, il rettangolo di formattazione corrisponde all'area client della finestra modifica-controllo. Utilizzando la `SetRect` funzione membro, un'applicazione può rendere il rettangolo di formattazione più grande o più piccolo della finestra di modifica del controllo.
+Utilizzare `SetRect` per impostare il rettangolo di formattazione di un controllo di modifica a più righe. Il rettangolo di formattazione è il rettangolo di limitazione del testo, che è indipendente dalle dimensioni della finestra di modifica del controllo. Quando il controllo di modifica viene creato per la prima volta, il rettangolo di formattazione corrisponde all'area client della finestra modifica-controllo. Utilizzando la funzione membro `SetRect`, un'applicazione può rendere il rettangolo di formattazione più grande o più piccolo della finestra di modifica del controllo.
 
-Se il controllo di modifica non dispone di una barra di scorrimento, il testo verrà ritagliato, non sottoposto a incapsulamento, se il rettangolo di formattazione viene reso più grande della finestra. Se il controllo di modifica contiene un bordo, il rettangolo di formattazione viene ridotto in base alle dimensioni del bordo. Se si modifica il rettangolo restituito dalla `GetRect` funzione membro, è necessario rimuovere le dimensioni del bordo prima di passare il rettangolo a. `SetRect`
+Se il controllo di modifica non dispone di una barra di scorrimento, il testo verrà ritagliato, non sottoposto a incapsulamento, se il rettangolo di formattazione viene reso più grande della finestra. Se il controllo di modifica contiene un bordo, il rettangolo di formattazione viene ridotto in base alle dimensioni del bordo. Se si modifica il rettangolo restituito dalla funzione membro `GetRect`, è necessario rimuovere le dimensioni del bordo prima di passare il rettangolo a `SetRect`.
 
-Quando `SetRect` viene chiamato il metodo, anche il testo del controllo di modifica viene riformattato e visualizzato nuovamente.
+Quando viene chiamato `SetRect`, anche il testo del controllo di modifica viene riformattato e visualizzato nuovamente.
 
 Per ulteriori informazioni, vedere [EM_SETRECT](/windows/win32/Controls/em-setrect) nel Windows SDK.
 
@@ -1271,7 +1271,7 @@ Per ulteriori informazioni, vedere [EM_SETRECT](/windows/win32/Controls/em-setre
 
 [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]
 
-##  <a name="setrectnp"></a>  CEdit::SetRectNP
+##  <a name="setrectnp"></a>CEdit:: SetRectNP
 
 Chiamare questa funzione per impostare il rettangolo di formattazione di un controllo di modifica a più righe.
 
@@ -1282,15 +1282,15 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta a una `RECT` struttura o `CRect` a un oggetto che specifica le nuove dimensioni del rettangolo.
+Punta a una struttura `RECT` o a un oggetto `CRect` che specifica le nuove dimensioni del rettangolo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il rettangolo di formattazione è il rettangolo di limitazione del testo, che è indipendente dalle dimensioni della finestra di modifica del controllo.
 
-`SetRectNP`è identico alla `SetRect` funzione membro, tranne per il fatto che la finestra di modifica del controllo non è ridisegnato.
+`SetRectNP` è identico alla funzione membro `SetRect` ad eccezione del fatto che la finestra di modifica del controllo non è ridisegnato.
 
-Quando il controllo di modifica viene creato per la prima volta, il rettangolo di formattazione corrisponde all'area client della finestra modifica-controllo. Chiamando la `SetRectNP` funzione membro, un'applicazione può rendere il rettangolo di formattazione più grande o più piccolo della finestra di modifica del controllo.
+Quando il controllo di modifica viene creato per la prima volta, il rettangolo di formattazione corrisponde all'area client della finestra modifica-controllo. Chiamando la funzione membro `SetRectNP`, un'applicazione può rendere il rettangolo di formattazione più grande o più piccolo della finestra di modifica del controllo.
 
 Se il controllo di modifica non dispone di una barra di scorrimento, il testo verrà ritagliato, non sottoposto a incapsulamento, se il rettangolo di formattazione viene reso più grande della finestra.
 
@@ -1302,7 +1302,7 @@ Per ulteriori informazioni, vedere [EM_SETRECTNP](/windows/win32/Controls/em-set
 
   Vedere l'esempio per [CEdit:: serect](#setrect).
 
-##  <a name="setsel"></a>  CEdit::SetSel
+##  <a name="setsel"></a>CEdit:: SetSel
 
 Chiamare questa funzione per selezionare un intervallo di caratteri in un controllo di modifica.
 
@@ -1331,7 +1331,7 @@ Specifica la posizione iniziale. Se *nStartChar* è 0 e *nEndChar* è-1, viene s
 *nEndChar*<br/>
 Specifica la posizione finale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [EM_SETSEL](/windows/win32/Controls/em-setsel) nel Windows SDK.
 
@@ -1361,13 +1361,13 @@ Specifica che le tabulazioni devono essere impostate in ogni unità di dialogo *
 Specifica il numero di arresti di tabulazione contenuti in *rgTabStops*. Questo numero deve essere maggiore di 1.
 
 *rgTabStops*<br/>
-Punta a una matrice di interi senza segno che specifica le tabulazioni nelle unità della finestra di dialogo. Un'unità di dialogo è una distanza orizzontale o verticale. Un'unità della finestra di dialogo orizzontale è uguale a un quarto dell'unità di larghezza di base della finestra di dialogo corrente e 1 unità di dialogo verticale è uguale a un ottavo dell'unità di altezza di base della finestra di dialogo corrente. Le unità di base della finestra di dialogo vengono calcolate in base all'altezza e alla larghezza del tipo di carattere del sistema corrente. La `GetDialogBaseUnits` funzione Windows restituisce le unità di base della finestra di dialogo correnti in pixel.
+Punta a una matrice di interi senza segno che specifica le tabulazioni nelle unità della finestra di dialogo. Un'unità di dialogo è una distanza orizzontale o verticale. Un'unità della finestra di dialogo orizzontale è uguale a un quarto dell'unità di larghezza di base della finestra di dialogo corrente e 1 unità di dialogo verticale è uguale a un ottavo dell'unità di altezza di base della finestra di dialogo corrente. Le unità di base della finestra di dialogo vengono calcolate in base all'altezza e alla larghezza del tipo di carattere del sistema corrente. La funzione `GetDialogBaseUnits` Windows restituisce le unità di base della finestra di dialogo correnti in pixel.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se le schede sono state impostate; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando il testo viene copiato in un controllo di modifica a più righe, qualsiasi carattere di tabulazione nel testo provocherà la generazione di spazio fino alla tabulazione successiva.
 
@@ -1375,15 +1375,15 @@ Per impostare le tabulazioni sulle dimensioni predefinite delle unità di dialog
 
 Questa funzione membro viene elaborata solo da controlli di modifica su più righe.
 
-`SetTabStops`non ridisegnato automaticamente la finestra di modifica. Se si modifica la tabulazione per il testo già presente nel controllo di modifica, chiamare [CWnd:: InvalidateRect](cwnd-class.md#invalidaterect) per ricreare la finestra di modifica.
+`SetTabStops` non ridisegni automaticamente la finestra di modifica. Se si modifica la tabulazione per il testo già presente nel controllo di modifica, chiamare [CWnd:: InvalidateRect](cwnd-class.md#invalidaterect) per ricreare la finestra di modifica.
 
-Per ulteriori informazioni, vedere [EM_SETTABSTOPS](/windows/win32/Controls/em-settabstops) e [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETTABSTOPS](/windows/win32/Controls/em-settabstops) e [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) nell'Windows SDK.
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio per [CEditView:: SetTabStops](ceditview-class.md#settabstops).
 
-##  <a name="showballoontip"></a>  CEdit::ShowBalloonTip
+##  <a name="showballoontip"></a>CEdit:: ShowBalloonTip
 
 Visualizza un fumetto suggerimento associato al controllo di modifica corrente.
 
@@ -1403,19 +1403,19 @@ BOOL ShowBalloonTip(
 |*pEditBalloonTip*|in Puntatore a una struttura [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) che descrive il fumetto suggerimento.|
 |*lpszTitle*|in Puntatore a una stringa Unicode che contiene il titolo del fumetto suggerimento.|
 |*lpszText*|in Puntatore a una stringa Unicode che contiene il testo del fumetto suggerimento.|
-|*ttiIcon*|in Valore **int** che specifica il tipo di icona da associare al fumetto suggerimento. Il valore predefinito è TTI_NONE. Per ulteriori informazioni, vedere il `ttiIcon` membro della struttura [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) .|
+|*ttiIcon*|in Valore **int** che specifica il tipo di icona da associare al fumetto suggerimento. Il valore predefinito è TTI_NONE. Per ulteriori informazioni, vedere il membro `ttiIcon` della struttura [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) .|
 
 ### <a name="return-value"></a>Valore restituito
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione Invia il messaggio [EM_SHOWBALLOONTIP](/windows/win32/Controls/em-showballoontip) , descritto nella Windows SDK. Per ulteriori informazioni, vedere la macro [Edit_ShowBalloonTip](/windows/win32/api/commctrl/nf-commctrl-edit_showballoontip) .
+Questa funzione Invia il messaggio di [EM_SHOWBALLOONTIP](/windows/win32/Controls/em-showballoontip) , descritto nel Windows SDK. Per ulteriori informazioni, vedere la [Edit_ShowBalloonTip](/windows/win32/api/commctrl/nf-commctrl-edit_showballoontip) macro.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio di codice seguente viene definita una `m_cedit`variabile,, che viene utilizzata per accedere al controllo di modifica corrente. Questa variabile viene usata nell'esempio riportato di seguito.
+Nell'esempio di codice seguente viene definita una variabile, `m_cedit`, utilizzata per accedere al controllo di modifica corrente. Questa variabile viene usata nell'esempio riportato di seguito.
 
 [!code-cpp[NVC_MFC_CEdit_s1#1](../../mfc/reference/codesnippet/cpp/cedit-class_25.h)]
 
@@ -1425,7 +1425,7 @@ Nell'esempio di codice seguente viene visualizzato un fumetto suggerimento per u
 
 [!code-cpp[NVC_MFC_CEdit_s1#3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]
 
-##  <a name="undo"></a>  CEdit::Undo
+##  <a name="undo"></a>CEdit:: Undo
 
 Chiamare questa funzione per annullare l'ultima operazione di modifica del controllo.
 
@@ -1437,9 +1437,9 @@ BOOL Undo();
 
 Per un controllo di modifica a riga singola, il valore restituito è sempre diverso da zero. Per un controllo di modifica a più righe, il valore restituito è diverso da zero se l'operazione di annullamento ha esito positivo oppure 0 se l'operazione di annullamento ha esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Un'operazione di annullamento può anche essere annullata. Ad esempio, è possibile ripristinare il testo eliminato con la prima chiamata `Undo`a. Fino a quando non viene eseguita alcuna operazione di modifica, è possibile rimuovere nuovamente il testo con una seconda chiamata a `Undo`.
+Un'operazione di annullamento può anche essere annullata. Ad esempio, è possibile ripristinare il testo eliminato con la prima chiamata a `Undo`. Fino a quando non viene eseguita alcuna operazione di modifica, è possibile rimuovere nuovamente il testo con una seconda chiamata a `Undo`.
 
 Per ulteriori informazioni, vedere [EM_UNDO](/windows/win32/Controls/em-undo) nel Windows SDK.
 
