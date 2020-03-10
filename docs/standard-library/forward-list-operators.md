@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689682"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874756"
 ---
 # <a name="ltforward_listgt-operators"></a>Operatori &lt;forward_list&gt;
 
@@ -99,7 +99,7 @@ Oggetto di tipo `forward_list`.
 
 Questa funzione di modello consente di eseguire l'overload di `operator<` per confrontare due oggetti della classe modello `forward_list`. La funzione restituisce `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>operatore &lt; =
+## <a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è minore o uguale all'oggetto elenco di inoltro a destra.
 
@@ -151,7 +151,7 @@ Oggetto di tipo `forward_list`.
 
 Questa funzione modello restituisce `right < left`.
 
-## <a name="op_gt_eq"></a>operatore &gt; =
+## <a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è maggiore o uguale all'oggetto elenco di inoltro a destra.
 
