@@ -1,5 +1,5 @@
 ---
-title: '&lt;facoltativo&gt; operatori'
+title: operatori&gt; facoltativi &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
 ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268923"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854063"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;facoltativo&gt; operatori
+# <a name="ltoptionalgt-operators"></a>operatori&gt; facoltativi &lt;
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è uguale all'oggetto `optional` sul lato destro.
 
@@ -39,13 +39,13 @@ template <class T, class U> constexpr bool operator==(const U&, const optional<T
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *sinistra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
-*Ok*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *destra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
-## <a name="op_neq"></a> operatore! =
+## <a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore non è uguale all'oggetto `optional` sul lato destro.
 
@@ -59,17 +59,17 @@ template <class T, class U> constexpr bool operator!=(const U&, const optional<T
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *sinistra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
-*Ok*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *destra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
 ### <a name="remarks"></a>Note
 
 Questa funzione modello restituisce `!(left == right)`.
 
-## <a name="op_lt"></a> Operatore&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è minore dell'oggetto `optional` sul lato destro.
 
@@ -83,11 +83,11 @@ template <class T, class U> constexpr bool operator<(const U&, const optional<T>
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *sinistra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
-*Ok*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *destra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -107,11 +107,11 @@ template <class T, class U> constexpr bool operator<=(const U&, const optional<T
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *sinistra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
-*Ok*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *destra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -121,7 +121,7 @@ Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
 
 Questa funzione modello restituisce `!(right < left)`.
 
-## <a name="op_gt"></a> Operatore&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è maggiore dell'oggetto `optional` sul lato destro.
 
@@ -135,11 +135,11 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *sinistra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
-*Ok*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *destra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -149,7 +149,7 @@ Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
 
 Questa funzione modello restituisce `right < left`.
 
-## <a name="op_gt_eq"></a> Operatore&gt;=
+## <a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è maggiore o uguale all'oggetto `optional` sul lato destro.
 
@@ -163,11 +163,11 @@ template <class T, class U> constexpr bool operator>=(const U&, const optional<T
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *sinistra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
-*Ok*\
-Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
+\ a *destra*
+Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
 ### <a name="return-value"></a>Valore restituito
 
