@@ -5,15 +5,15 @@ f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244894"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865200"
 ---
 # <a name="ltchronogt-operators"></a>Operatori &lt;chrono&gt;
 
-## <a name="operator-"></a> Operatore operator-
+## <a name="operator-"></a>operatore
 
 Operatore di sottrazione o negazione degli oggetti [duration](../standard-library/duration-class.md) e [time_point](../standard-library/time-point-class.md).
 
@@ -39,27 +39,27 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` o `time_point` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` o `time_point` a destra.
 
-*Ora*\
-Oggetto `time_point`.
+\ *tempo*
+Oggetto `time_point` .
 
-*Rim*\
-Oggetto `duration`.
+\ *dur*
+Oggetto `duration` .
 
 ### <a name="return-value"></a>Valore restituito
 
 La prima funzione restituisce un oggetto `duration`, la cui lunghezza di intervallo corrisponde alla differenza tra gli intervalli dei due argomenti.
 
-La seconda funzione restituisce un `time_point` oggetto che rappresenta un punto nel tempo che viene spostato dalla negazione dell'intervallo di tempo rappresentato da *Rim*, dal punto nel tempo specificato da *ora*.
+La seconda funzione restituisce un oggetto `time_point` che rappresenta un punto nel tempo che viene spostato dalla negazione dell'intervallo di tempo rappresentato da *dur*, dal punto nel tempo specificato da *Time*.
 
-La terza funzione restituisce un `duration` oggetto che rappresenta l'intervallo di tempo tra *a sinistra* e *destra*.
+La terza funzione restituisce un oggetto `duration` che rappresenta l'intervallo di tempo tra *Left* e *right*.
 
-## <a name="op_neq"></a> operatore! =
+## <a name="op_neq"></a>operatore! =
 
 Operatore di disuguaglianza per oggetti [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md).
 
@@ -77,17 +77,17 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` o `time_point` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` o `time_point` a destra.
 
 ### <a name="return-value"></a>Valore restituito
 
 Ogni funzione restituisce `!(Left == Right)`.
 
-## <a name="op_star"></a> operatore *
+## <a name="op_star"></a>operatore
 
 Operatore di moltiplicazione per oggetti [duration](../standard-library/chrono-operators.md#op_star).
 
@@ -108,21 +108,21 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Parametri
 
-*Rim*\
-Oggetto `duration`.
+\ *dur*
+Oggetto `duration` .
 
-*Mult*\
+\ *mult*
 Valore integrale.
 
 ### <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce un `duration` oggetto la cui lunghezza dell'intervallo è *Mult* moltiplicato per la lunghezza del *Rim*.
+Ogni funzione restituisce un oggetto `duration` la cui lunghezza dell'intervallo è *mult* moltiplicata per la lunghezza di *dur*.
 
-A meno che l'oggetto `is_convertible<Rep2, common_type<Rep1, Rep2>>` *resti valido*, la prima funzione non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
+A meno che l'oggetto `is_convertible<Rep2, common_type<Rep1, Rep2>>`*resti valido*, la prima funzione non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
-A meno che l'oggetto `is_convertible<Rep1, common_type<Rep1, Rep2>>` *resti valido*, la seconda funzione non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
+A meno che l'oggetto `is_convertible<Rep1, common_type<Rep1, Rep2>>`*resti valido*, la seconda funzione non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="op_div"></a> operatore /
+## <a name="op_div"></a>operatore
 
 Operatore di divisione per gli oggetti [duration](../standard-library/chrono-operators.md#op_star).
 
@@ -142,27 +142,27 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Parametri
 
-*Rim*\
-Oggetto `duration`.
+\ *dur*
+Oggetto `duration` .
 
-*div*\
+\ *div*
 Valore integrale.
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il primo operatore restituisce un oggetto duration il cui intervallo di lunghezza è la lunghezza di *Rim* diviso per il valore *Div*.
+Il primo operatore restituisce un oggetto Duration la cui lunghezza dell'intervallo è la lunghezza di *dur* divisa per il valore *div*.
 
-Il secondo operatore restituisce il rapporto tra la lunghezza dell'intervallo di *sinistra* e *destra*.
+Il secondo operatore restituisce il rapporto tra le lunghezze di intervallo di *sinistra* e *destra*.
 
-A meno che l'oggetto `is_convertible<Rep2, common_type<Rep1, Rep2>>` *resti valido* e `Rep2` non sia una creazione di istanza di `duration`, il primo operatore non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
+A meno che l'oggetto `is_convertible<Rep2, common_type<Rep1, Rep2>>`*resti valido* e `Rep2` non sia una creazione di istanza di `duration`, il primo operatore non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="op_add"></a> Operatore operator +
+## <a name="op_add"></a>operatore +
 
 Consente di aggiungere oggetti [duration](../standard-library/duration-class.md) e [time_point](../standard-library/time-point-class.md).
 
@@ -188,25 +188,25 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` o `time_point` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` o `time_point` a destra.
 
-*Ora*\
-Oggetto `time_point`.
+\ *tempo*
+Oggetto `time_point` .
 
-*Rim*\
-Oggetto `duration`.
+\ *dur*
+Oggetto `duration` .
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione restituisce un `duration` oggetto che ha un intervallo di tempo uguale alla somma degli intervalli del *a sinistra* e *destra*.
+La prima funzione restituisce un oggetto `duration` con un intervallo di tempo equivalente alla somma degli intervalli di *Left* e *right*.
 
-La seconda e terza funzione restituiscono un `time_point` oggetto che rappresenta un punto nel tempo che viene spostato, in base all'intervallo *Rim*, dal punto nel tempo *ora*.
+La seconda e la terza funzione restituiscono un oggetto `time_point` che rappresenta un punto *nel tempo che*viene spostato, dall'intervallo *dur*, dal punto nel tempo.
 
-## <a name="op_lt"></a> Operatore &lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Determina se un oggetto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) è minore di un altro oggetto `duration` o `time_point`.
 
@@ -224,19 +224,19 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` o `time_point` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` o `time_point` a destra.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione restituisce **true** se la lunghezza dell'intervallo di *sinistra* è minore della lunghezza di intervallo del *destra*. In caso contrario, la funzione restituisce **false**.
+La prima funzione restituisce **true** se la lunghezza dell'intervallo di *sinistra* è minore della lunghezza dell'intervallo di *destra*. In caso contrario, la funzione restituisce **false**.
 
-La seconda funzione restituisce **true** se *sinistra* precede *destra*. In caso contrario, la funzione restituisce **false**.
+La seconda funzione restituisce **true** se *Left* precede *right*. In caso contrario, la funzione restituisce **false**.
 
-## <a name="op_lt_eq"></a> Operatore&lt;=
+## <a name="op_lt_eq"></a>operatore&lt;=
 
 Determina se un oggetto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) è minore o uguale a un altro oggetto `duration` o `time_point`.
 
@@ -254,17 +254,17 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` o `time_point` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` o `time_point` a destra.
 
 ### <a name="return-value"></a>Valore restituito
 
 Ogni funzione restituisce `!(Right < Left)`.
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>operatore = =
 
 Determina se due oggetti `duration` rappresentano gli intervalli di tempo che hanno la stessa lunghezza, o se due oggetti `time_point` rappresentano lo stesso punto nel tempo.
 
@@ -282,17 +282,17 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` o `time_point` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` o `time_point` a destra.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione restituisce **true** se *sinistra* e *destra* rappresentano gli intervalli di tempo che hanno la stessa lunghezza. In caso contrario, la funzione restituisce **false**.
+La prima funzione restituisce **true** se *Left* e *right* rappresentano gli intervalli di tempo che hanno la stessa lunghezza. In caso contrario, la funzione restituisce **false**.
 
-La seconda funzione restituisce **true** se *sinistra* e *destra* rappresentano lo stesso punto nel tempo. In caso contrario, la funzione restituisce **false**.
+La seconda funzione restituisce **true** se *Left* e *right* rappresentano lo stesso punto nel tempo. In caso contrario, la funzione restituisce **false**.
 
 ## <a name="op_gt">Operatore </a>&gt;
 
@@ -312,17 +312,17 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` o `time_point` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` o `time_point` a destra.
 
 ### <a name="return-value"></a>Valore restituito
 
 Ogni funzione restituisce `Right < Left`.
 
-## <a name="op_gt_eq"></a> Operatore&gt;=
+## <a name="op_gt_eq"></a>operatore&gt;=
 
 Determina se un oggetto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) è maggiore o uguale a un altro oggetto `duration` o `time_point`.
 
@@ -340,17 +340,17 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` o `time_point` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` o `time_point` a destra.
 
 ### <a name="return-value"></a>Valore restituito
 
 Ogni funzione restituisce `!(Left < Right)`.
 
-## <a name="op_modulo"></a> operatore modulo
+## <a name="op_modulo"></a>operatore modulo
 
 Operatore per le operazioni modulo sugli oggetti [duration](../standard-library/duration-class.md).
 
@@ -370,20 +370,20 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Parametri
 
-*Rim*\
-Oggetto `duration`.
+\ *dur*
+Oggetto `duration` .
 
-*div*\
+\ *div*
 Valore integrale.
 
-*A sinistra*\
+\ a *sinistra*
 L'oggetto `duration` a sinistra.
 
-*Ok*\
+\ a *destra*
 L'oggetto `duration` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione restituisce un `duration` oggetto la cui lunghezza dell'intervallo è *Rim* modulo *Div*.
+La prima funzione restituisce un oggetto `duration` la cui lunghezza dell'intervallo è *dur* modulo *div*.
 
-La seconda funzione restituisce un valore che rappresenta *sinistra* modulo *destra*.
+La seconda funzione restituisce un valore che rappresenta il *diritto*a *sinistra* del modulo.

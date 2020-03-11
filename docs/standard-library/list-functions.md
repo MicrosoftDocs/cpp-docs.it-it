@@ -6,15 +6,15 @@ ms.topic: reference
 f1_keywords:
 - list/std::swap
 ms.openlocfilehash: 04f00a9274018432cd03917ae5485f2d395649e4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269023"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874428"
 ---
 # <a name="ltlistgt-functions"></a>&lt;elenco&gt; funzioni
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>scambio
 
 Scambia gli elementi di due elenchi.
 
@@ -25,12 +25,12 @@ template <class T, class Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `list`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `list`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello esegue `left.swap(right)`.

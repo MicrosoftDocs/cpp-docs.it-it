@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
 ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497745"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857146"
 ---
 # <a name="catlmodule-class"></a>Classe CAtlModule
 
@@ -51,24 +51,24 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements)|Eseguire l'override di questo metodo per aggiungere parametri alla mappa di sostituzione del componente del registro di sistema ATL (Registrar).|
-|[CAtlModule::AddTermFunc](#addtermfunc)|Aggiunge una nuova funzione da chiamare al termine del modulo.|
+|[CAtlModule:: AddTermFunc](#addtermfunc)|Aggiunge una nuova funzione da chiamare al termine del modulo.|
 |[CAtlModule:: GetGITPtr](#getgitptr)|Restituisce il puntatore a interfaccia globale.|
 |[CAtlModule:: GetLockCount](#getlockcount)|Restituisce il conteggio dei blocchi.|
 |[CAtlModule:: Lock](#lock)|Incrementa il conteggio dei blocchi.|
 |[CAtlModule:: term](#term)|Rilascia tutti i membri dati.|
 |[CAtlModule:: Unlock](#unlock)|Consente di diminuire il conteggio dei blocchi.|
-|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto.|
-|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Questo metodo viene chiamato da `UpdateRegistryFromResourceD` per eseguire l'aggiornamento del registro di sistema.|
-|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto. Questo metodo collega in modo statico il componente del registro di sistema ATL.|
+|[CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto.|
+|[CAtlModule:: UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Questo metodo viene chiamato da `UpdateRegistryFromResourceD` per eseguire l'aggiornamento del registro di sistema.|
+|[CAtlModule:: UpdateRegistryFromResourceS](#updateregistryfromresources)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto. Questo metodo collega in modo statico il componente del registro di sistema ATL.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|NOME|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAtlModule:: m_libid](#m_libid)|Contiene il GUID del modulo corrente.|
 |[CAtlModule:: m_pGIT](#m_pgit)|Puntatore alla tabella dell'interfaccia globale.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questa classe viene usata dalla classe [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md), dalla [classe CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)e dalla [classe funzione CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) per fornire il supporto rispettivamente per le applicazioni dll, le applicazioni exe e i servizi Windows.
 
@@ -103,7 +103,7 @@ Riservato.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I parametri sostituibili consentono a un client del registrar di specificare i dati in fase di esecuzione. A tale scopo, il registrar mantiene una mappa sostitutiva in cui immette i valori associati ai parametri sostituibili nello script. Il registrar esegue queste voci in fase di esecuzione.
 
@@ -137,7 +137,7 @@ Costruttore.
 CAtlModule() throw();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Inizializza i membri dati e avvia una sezione critica intorno al thread del modulo.
 
@@ -149,7 +149,7 @@ Distruttore.
 ~CAtlModule() throw();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Rilascia tutti i membri dati.
 
@@ -170,7 +170,7 @@ Puntatore alla variabile che riceverà il puntatore alla tabella dell'interfacci
 
 Restituisce S_OK in caso di esito positivo o un codice di errore in caso di errore. Se *ppGIT* è uguale a null, viene restituito E_POINTER.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se l'oggetto tabella dell'interfaccia globale non esiste, viene creato e il relativo indirizzo viene archiviato nella variabile membro [CAtlModule:: m_pGIT](#m_pgit).
 
@@ -226,7 +226,7 @@ Rilascia tutti i membri dati.
 void Term() throw();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Rilascia tutti i membri dati. Questo metodo viene chiamato dal distruttore.
 
@@ -276,7 +276,7 @@ Puntatore alla mappa sostitutiva che archivia i valori associati ai parametri so
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Esegue lo script contenuto nella risorsa specificata da *lpszRes o nResID*. Se *bRegister* è true, questo metodo registra l'oggetto nel registro di sistema. in caso contrario, rimuove l'oggetto dal registro di sistema.
 
@@ -310,7 +310,7 @@ Puntatore alla mappa sostitutiva che archivia i valori associati ai parametri so
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo fornisce l'implementazione di [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced).
 
@@ -348,9 +348,9 @@ Puntatore alla mappa sostitutiva che archivia i valori associati ai parametri so
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Analogamente a [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) tranne `CAtlModule::UpdateRegistryFromResourceS` crea un collegamento statico al componente del registro di sistema ATL (Registrar).
+Analogamente a [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) ad eccezione di `CAtlModule::UpdateRegistryFromResourceS` crea un collegamento statico al componente del registro di sistema ATL (Registrar).
 
 ## <a name="see-also"></a>Vedere anche
 

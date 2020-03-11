@@ -8,11 +8,11 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062048"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875734"
 ---
 # <a name="unions"></a>Unioni
 
@@ -31,13 +31,13 @@ union [name]  { member-list };
 
 ### <a name="parameters"></a>Parametri
 
-*name*<br/>
+*nome*<br/>
 Nome del tipo assegnato all'unione.
 
-*member-list*<br/>
+*elenco membri*<br/>
 Membri che possono essere inclusi nell'unione. Vedere la sezione Osservazioni.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 ## <a name="declaring-a-union"></a>Dichiarazione di un'unione
 

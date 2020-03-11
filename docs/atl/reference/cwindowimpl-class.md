@@ -19,11 +19,11 @@ helpviewer_keywords:
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
 ms.openlocfilehash: b8b633dcf4ea14e899ee00552b553476cf697689
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496191"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862970"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 
@@ -56,7 +56,7 @@ Classe base della classe. Per impostazione predefinita, la classe base è [CWind
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CWindowImpl::Create](#create)|Crea una finestra.|
+|[CWindowImpl:: create](#create)|Crea una finestra.|
 
 ### <a name="cwindowimplbaset-methods"></a>Metodi CWindowImplBaseT
 
@@ -76,17 +76,17 @@ Classe base della classe. Per impostazione predefinita, la classe base è [CWind
 |[GetWndClassInfo](#getwndclassinfo)|Restituisce un'istanza statica di [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md), che gestisce le informazioni sulla classe della finestra.|
 |[WindowProc](#windowproc)|Elabora i messaggi inviati alla finestra.|
 
-### <a name="data-members"></a>Membri di dati
+### <a name="data-members"></a>Membri dei dati
 
 |||
 |-|-|
 |[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|Punta alla procedura della finestra originale della classe della finestra.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-È possibile usare `CWindowImpl` per creare una finestra o una sottoclasse di una finestra esistente. nella `CWindowImpl` procedura della finestra viene utilizzata una mappa messaggi per indirizzare i messaggi ai gestori appropriati.
+È possibile usare `CWindowImpl` per creare una finestra o una sottoclasse di una finestra esistente. nella procedura `CWindowImpl` finestra viene utilizzata una mappa messaggi per indirizzare i messaggi ai gestori appropriati.
 
-`CWindowImpl::Create`Crea una finestra basata sulle informazioni sulla classe della finestra gestita da [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl`contiene la macro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , che indica `CWndClassInfo` la registrazione di una nuova classe di finestra. Se si vuole eseguire la superclasse di una classe di finestra esistente, derivare la classe da `CWindowImpl` e includere la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . In questo caso, `CWndClassInfo` registra una classe della finestra basata su una classe esistente, ma utilizza `CWindowImpl::WindowProc`. Ad esempio:
+`CWindowImpl::Create` crea una finestra basata sulle informazioni sulla classe della finestra gestita da [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl` contiene la macro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , il che significa che `CWndClassInfo` registra una nuova classe di finestra. Se si vuole eseguire la superclasse di una classe di finestra esistente, derivare la classe da `CWindowImpl` e includere la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . In questo caso, `CWndClassInfo` registra una classe della finestra basata su una classe esistente, ma utilizza `CWindowImpl::WindowProc`. Ad esempio:
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]
 
@@ -96,13 +96,13 @@ Classe base della classe. Per impostazione predefinita, la classe base è [CWind
 `CWindowImpl` supporta inoltre la creazione di una sottoclasse della finestra. Il metodo `SubclassWindow` associa una finestra esistente all'oggetto `CWindowImpl` e modifica la procedura della finestra in `CWindowImpl::WindowProc`. Ogni istanza di `CWindowImpl` può creare una sottoclasse di una finestra diversa.
 
 > [!NOTE]
->  Per qualsiasi oggetto `CWindowImpl` specificato, `Create` chiamare o `SubclassWindow`. Non richiamare entrambi i metodi sullo stesso oggetto.
+>  Per qualsiasi oggetto `CWindowImpl` specificato, chiamare `Create` o `SubclassWindow`. Non richiamare entrambi i metodi sullo stesso oggetto.
 
-In aggiunta a `CWindowImpl`, ATL fornisce [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) per creare una finestra contenuta in un altro oggetto.
+Oltre a `CWindowImpl`, ATL fornisce [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) per creare una finestra contenuta in un altro oggetto.
 
-Il distruttore della classe base (~ `CWindowImplRoot`) assicura che la finestra sia stata eliminata prima dell'eliminazione dell'oggetto.
+Il distruttore della classe base (~ `CWindowImplRoot`) garantisce che la finestra sia già stata eliminata prima dell'eliminazione dell'oggetto.
 
-`CWindowImpl`deriva da `CWindowImplRoot` `TBase` , che deriva da, che deriva da e [CMessageMap.](../../atl/reference/cmessagemap-class.md) `CWindowImplBaseT`
+`CWindowImpl` deriva da `CWindowImplBaseT`, che deriva da `CWindowImplRoot`che deriva da `TBase` e [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
 |Per altre informazioni su|Vedere|
 |--------------------------------|---------|
@@ -126,7 +126,7 @@ Il distruttore della classe base (~ `CWindowImplRoot`) assicura che la finestra 
 
 **Intestazione:** atlwin. h
 
-##  <a name="create"></a>  CWindowImpl::Create
+##  <a name="create"></a>CWindowImpl:: create
 
 Crea una finestra basata su una nuova classe di finestra.
 
@@ -147,7 +147,7 @@ HWND Create(
 in Handle per la finestra padre o proprietario.
 
 *rect*<br/>
-in Struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) che specifica la posizione della finestra. L' `RECT` oggetto può essere passato tramite un puntatore o un riferimento.
+in Struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) che specifica la posizione della finestra. Il `RECT` può essere passato tramite un puntatore o un riferimento.
 
 *szWindowName*<br/>
 in Specifica il nome della finestra. Il valore predefinito è NULL.
@@ -168,19 +168,19 @@ in Puntatore ai dati di creazione di finestre. Per una descrizione completa, ved
 
 In caso di esito positivo, l'handle per la finestra appena creata. In caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`Create`prima registra la classe della finestra se non è stata ancora registrata. La finestra appena creata viene automaticamente collegata all' `CWindowImpl` oggetto.
+`Create` prima registra la classe della finestra, se non è stata ancora registrata. La finestra appena creata viene automaticamente collegata all'oggetto `CWindowImpl`.
 
 > [!NOTE]
 >  Non chiamare `Create` se è già stato chiamato [SubclassWindow](#subclasswindow).
 
-Per usare una classe della finestra basata su una classe di finestra esistente, derivare la classe `CWindowImpl` da e includere la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . La routine della finestra della classe della finestra esistente viene salvata in [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Per ulteriori informazioni, vedere Panoramica di [CWindowImpl](../../atl/reference/cwindowimpl-class.md) .
+Per usare una classe della finestra basata su una classe di finestra esistente, derivare la classe da `CWindowImpl` e includere la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . La routine della finestra della classe della finestra esistente viene salvata in [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Per ulteriori informazioni, vedere Panoramica di [CWindowImpl](../../atl/reference/cwindowimpl-class.md) .
 
 > [!NOTE]
 >  Se viene usato 0 come valore per il parametro *MenuOrID* , deve essere specificato come 0U (valore predefinito) per evitare un errore del compilatore.
 
-##  <a name="defwindowproc"></a>  CWindowImpl::DefWindowProc
+##  <a name="defwindowproc"></a>CWindowImpl::D efWindowProc
 
 Chiamato da [WindowProc](#windowproc) per elaborare i messaggi non gestiti dalla mappa messaggi.
 
@@ -208,15 +208,15 @@ in Informazioni aggiuntive specifiche del messaggio.
 
 Risultato dell'elaborazione del messaggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita `DefWindowProc` , chiama la funzione Win32 [CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) per inviare le informazioni sul messaggio alla routine della finestra specificata in [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+Per impostazione predefinita, `DefWindowProc` chiama la funzione Win32 [CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) per inviare le informazioni sul messaggio alla routine della finestra specificata nel [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 La funzione senza parametri recupera automaticamente i parametri necessari dal messaggio corrente.
 
-##  <a name="getcurrentmessage"></a>  CWindowImpl::GetCurrentMessage
+##  <a name="getcurrentmessage"></a>CWindowImpl:: GetCurrentMessage
 
-Restituisce il messaggio corrente, incluso nella `MSG` struttura.
+Restituisce il messaggio corrente, incluso in un pacchetto nella struttura `MSG`.
 
 ```
 const MSG* GetCurrentMessage();
@@ -224,9 +224,9 @@ const MSG* GetCurrentMessage();
 
 ### <a name="return-value"></a>Valore restituito
 
-Messaggio corrente.
+Il messaggio corrente.
 
-##  <a name="getwindowproc"></a>  CWindowImpl::GetWindowProc
+##  <a name="getwindowproc"></a>CWindowImpl:: GetWindowProc
 
 Restituisce `WindowProc`, la routine della finestra corrente.
 
@@ -238,11 +238,11 @@ virtual WNDPROC GetWindowProc();
 
 Routine della finestra corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo per sostituire la routine della finestra con la propria.
 
-##  <a name="getwndclassinfo"></a>  CWindowImpl::GetWndClassInfo
+##  <a name="getwndclassinfo"></a>CWindowImpl:: GetWndClassInfo
 
 Chiamato da [create](#create) per accedere alle informazioni sulla classe della finestra.
 
@@ -254,15 +254,15 @@ static CWndClassInfo& GetWndClassInfo();
 
 Istanza statica di [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita `CWindowImpl` , ottiene questo metodo tramite la macro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , che specifica una nuova classe di finestra.
+Per impostazione predefinita, `CWindowImpl` ottiene questo metodo tramite la macro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , che specifica una nuova classe di finestra.
 
-Per superclasse una classe di finestra esistente, derivare la `CWindowImpl` classe da e includere la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) per eseguire l'override `GetWndClassInfo`. Per ulteriori informazioni, vedere Panoramica di [CWindowImpl](../../atl/reference/cwindowimpl-class.md) .
+Per superclasse una classe di finestra esistente, derivare la classe da `CWindowImpl` e includere la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) per eseguire l'override `GetWndClassInfo`. Per ulteriori informazioni, vedere Panoramica di [CWindowImpl](../../atl/reference/cwindowimpl-class.md) .
 
-Oltre a usare le macro DECLARE_WND_CLASS e DECLARE_WND_SUPERCLASS, è possibile `GetWndClassInfo` eseguire l'override con la propria implementazione.
+Oltre a usare le macro DECLARE_WND_CLASS e DECLARE_WND_SUPERCLASS, è possibile eseguire l'override di `GetWndClassInfo` con la propria implementazione.
 
-##  <a name="m_pfnsuperwindowproc"></a>  CWindowImpl::m_pfnSuperWindowProc
+##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl:: m_pfnSuperWindowProc
 
 A seconda della finestra, punta a una delle seguenti routine della finestra.
 
@@ -270,7 +270,7 @@ A seconda della finestra, punta a una delle seguenti routine della finestra.
 WNDPROC m_pfnSuperWindowProc;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 |Tipo di finestra|Routine della finestra|
 |--------------------|----------------------|
@@ -278,7 +278,7 @@ WNDPROC m_pfnSuperWindowProc;
 |Finestra basata su una classe della finestra che modifica una classe esistente, specificata tramite la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) .|Routine della finestra della classe della finestra esistente.|
 |Finestra sottoclassata.|Procedura della finestra originale della finestra sottoclassata.|
 
-[CWindowImpl::D efwindowproc](#defwindowproc) invia informazioni sul messaggio alla routine della finestra salvata in `m_pfnSuperWindowProc`.
+[CWindowImpl::D efwindowproc](#defwindowproc) Invia le informazioni sul messaggio alla routine della finestra salvata in `m_pfnSuperWindowProc`.
 
 ##  <a name="onfinalmessage"></a>CWindowImpl:: OnFinalMessage
 
@@ -293,13 +293,13 @@ virtual void OnFinalMessage(HWND hWnd);
 *hWnd*<br/>
 in Handle per la finestra da eliminare definitivamente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita di `OnFinalMessage` non esegue alcuna operazione, ma è possibile eseguire l'override di questa funzione per gestire la pulizia prima di eliminare una finestra. Se si desidera eliminare automaticamente l'oggetto durante la distruzione della finestra, è possibile chiamare **delete this;** in questa funzione.
 
 ##  <a name="subclasswindow"></a>CWindowImpl:: SubclassWindow
 
-Sottoclassi la finestra identificata da *HWND* e la collega all' `CWindowImpl` oggetto.
+Sottoclassi la finestra identificata da *HWND* e la collega all'oggetto `CWindowImpl`.
 
 ```
 BOOL SubclassWindow(HWND hWnd);
@@ -314,7 +314,7 @@ in Handle per la finestra sottoclassata.
 
 TRUE se la finestra è stata sottoclassata correttamente; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La finestra sottoclassata ora usa [CWindowImpl:: WindowProc](#windowproc). La procedura della finestra originale viene salvata in [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
@@ -323,7 +323,7 @@ La finestra sottoclassata ora usa [CWindowImpl:: WindowProc](#windowproc). La pr
 
 ##  <a name="unsubclasswindow"></a>CWindowImpl:: UnsubclassWindow
 
-Scollega la finestra sottoclassata dall' `CWindowImpl` oggetto e ripristina la routine della finestra originale, salvata in [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+Scollega la finestra sottoclassata dall'oggetto `CWindowImpl` e ripristina la routine della finestra originale, salvata in [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 ```
 HWND UnsubclassWindow();
@@ -333,7 +333,7 @@ HWND UnsubclassWindow();
 
 Handle della finestra precedentemente sottoclassata.
 
-##  <a name="windowproc"></a>  CWindowImpl::WindowProc
+##  <a name="windowproc"></a>CWindowImpl:: WindowProc
 
 Questa funzione statica implementa la routine della finestra.
 
@@ -363,17 +363,17 @@ in Informazioni aggiuntive specifiche del messaggio.
 
 Risultato dell'elaborazione del messaggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`WindowProc`Usa la mappa messaggi predefinita (dichiarata con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) per indirizzare i messaggi ai gestori appropriati. Se necessario, `WindowProc` chiama [DefWindowProc](#defwindowproc) per l'elaborazione di messaggi aggiuntiva. Se il messaggio finale non viene gestito, `WindowProc` esegue le operazioni seguenti:
+`WindowProc` utilizza la mappa messaggi predefinita (dichiarata con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) per indirizzare i messaggi ai gestori appropriati. Se necessario, `WindowProc` chiama [DefWindowProc](#defwindowproc) per l'elaborazione di messaggi aggiuntiva. Se il messaggio finale non viene gestito, `WindowProc` esegue le operazioni seguenti:
 
 - Esegue la declassazione se è stata annullata la sottoclasse della finestra.
 
-- `m_hWnd`Cancella.
+- Cancella `m_hWnd`.
 
 - Chiama [OnFinalMessage](#onfinalmessage) prima che la finestra venga eliminata definitivamente.
 
-È possibile eseguire `WindowProc` l'override di per fornire un meccanismo diverso per la gestione dei messaggi.
+È possibile eseguire l'override di `WindowProc` per fornire un meccanismo diverso per la gestione dei messaggi.
 
 ## <a name="see-also"></a>Vedere anche
 

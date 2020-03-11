@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
 ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346353"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866276"
 ---
 # <a name="cfieldexchange-class"></a>Classe CFieldExchange
 
@@ -27,35 +27,35 @@ Supporta le routine RFX (record field exchange) e RFX di massa (bulk record fiel
 class CFieldExchange
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CFieldExchange::IsFieldType](#isfieldtype)|Restituisce diversi da zero se l'operazione corrente è appropriato per il tipo di campo da aggiornare.|
-|[CFieldExchange::SetFieldType](#setfieldtype)|Specifica il tipo di membro dati del recordset, ovvero una colonna o parametro, rappresentato da tutte le chiamate seguenti per le funzioni RFX fino alla successiva chiamata a `SetFieldType`.|
+|[CFieldExchange:: IsFieldType](#isfieldtype)|Restituisce un valore diverso da zero se l'operazione corrente è appropriata per il tipo di campo da aggiornare.|
+|[CFieldExchange:: SetFieldType](#setfieldtype)|Specifica il tipo di membro dati del recordset, ovvero la colonna o il parametro, rappresentato da tutte le chiamate successive alle funzioni RFX fino alla chiamata successiva a `SetFieldType`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`CFieldExchange` non è una classe di base.
+`CFieldExchange` non dispone di una classe di base.
 
-Utilizzare questa classe se si scrivono routine di scambio dei dati per i tipi di dati personalizzati o quando si implementa il recupero di righe bulk; in caso contrario, non direttamente userai questa classe. RFX e RFX di massa consente di scambiare dati tra i membri di dati del campo dell'oggetto recordset e i campi corrispondenti del record corrente nell'origine dati.
+Usare questa classe se si scrivono routine di scambio di dati per tipi di dati personalizzati o quando si implementa il recupero di righe BULK. in caso contrario, non verrà utilizzata direttamente questa classe. RFX e RFX di massa scambiano i dati tra i membri dati del campo dell'oggetto recordset e i campi corrispondenti del record corrente nell'origine dati.
 
 > [!NOTE]
->  Se si lavora con le classi di oggetti DAO (Data Access) anziché le classi di Open Database Connectivity (ODBC), usare una classe [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) invece. Per altre informazioni, vedere l'articolo [Overview: Database programmazione](../../data/data-access-programming-mfc-atl.md).
+>  Se si utilizzano le classi DAO (Data Access Objects) anziché le classi Open Database Connectivity (ODBC), utilizzare invece la classe [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) . Per ulteriori informazioni, vedere l'articolo [Cenni preliminari sulla programmazione di database](../../data/data-access-programming-mfc-atl.md).
 
-Oggetto `CFieldExchange` oggetto fornisce le informazioni sul contesto necessarie per campi di record o lo scambio di campi di record in blocco da eseguire inserire. `CFieldExchange` gli oggetti supportano un numero di operazioni, tra cui i parametri di associazione e i membri dati di campo e l'impostazione vari flag nei campi del record corrente. RFX e RFX di massa operazioni vengono eseguite su membri dati classe recordset di tipi definiti dal **enum** **FieldType** in `CFieldExchange`. Possibili **FieldType** i valori sono:
+Un oggetto `CFieldExchange` fornisce le informazioni sul contesto necessarie per l'esecuzione dello scambio di campi di record o di un campo di record bulk. gli oggetti `CFieldExchange` supportano una serie di operazioni, inclusi i parametri di associazione e i membri dati di campo e l'impostazione di diversi flag sui campi del record corrente. Le operazioni RFX e RFX di massa vengono eseguite sui membri dati della classe recordset dei tipi definiti dall' **enumerazione** **FieldType** in `CFieldExchange`. I possibili valori di **FieldType** sono:
 
-- `CFieldExchange::outputColumn` per i membri dati di campo.
+- `CFieldExchange::outputColumn` per i membri dati del campo.
 
-- `CFieldExchange::inputParam` o `CFieldExchange::param` per i membri dati di parametro di input.
+- `CFieldExchange::inputParam` o `CFieldExchange::param` per i membri dati del parametro di input.
 
-- `CFieldExchange::outputParam` i membri dati di parametro di output.
+- `CFieldExchange::outputParam` per i membri dati del parametro di output.
 
-- `CFieldExchange::inoutParam` per i membri dati di parametro di input/output.
+- `CFieldExchange::inoutParam` per i membri dati del parametro di input/output.
 
-La maggior parte dei membri di dati e funzioni membro della classe sono disponibili per la scrittura di routine RFX personalizzate. Si userà `SetFieldType` frequentemente. Per altre informazioni, vedere gli articoli [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md) e [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). Per informazioni sul recupero di righe bulk, vedere l'articolo [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Per informazioni dettagliate sulle funzioni RFX e RFX di massa globale, vedere [funzioni RFX](../../mfc/reference/record-field-exchange-functions.md) nella sezione delle macro MFC e variabili globali della Guida di riferimento.
+La maggior parte delle funzioni membro e dei membri dati della classe viene fornita per la scrittura di routine RFX personalizzate. Si utilizzeranno `SetFieldType` di frequente. Per ulteriori informazioni, vedere gli articoli relativa a [RFX (record Field Exchange](../../data/odbc/record-field-exchange-rfx.md) ) e [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). Per informazioni sul recupero di righe bulk, vedere l'articolo [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Per informazioni dettagliate sulle funzioni globali RFX e RFX di massa, vedere [funzioni di scambio di campi di record](../../mfc/reference/record-field-exchange-functions.md) nella sezione macro e globali MFC di questo riferimento.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -65,9 +65,9 @@ La maggior parte dei membri di dati e funzioni membro della classe sono disponib
 
 **Intestazione:** AFXDB. h
 
-##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType
+##  <a name="isfieldtype"></a>CFieldExchange:: IsFieldType
 
-Se si scrive una funzione RFX, chiamare `IsFieldType` all'inizio della funzione per determinare se l'operazione corrente può essere eseguito su un particolare campo o un parametro dati membro tipo (una `CFieldExchange::outputColumn`, `CFieldExchange::inputParam`, `CFieldExchange::param`, `CFieldExchange::outputParam`, o `CFieldExchange::inoutParam`).
+Se si scrive una funzione RFX personalizzata, chiamare `IsFieldType` all'inizio della funzione per determinare se l'operazione corrente può essere eseguita su un determinato tipo di membro dati del campo o del parametro (`CFieldExchange::outputColumn`, `CFieldExchange::inputParam`, `CFieldExchange::param`, `CFieldExchange::outputParam`o `CFieldExchange::inoutParam`).
 
 ```
 BOOL IsFieldType(UINT* pnField);
@@ -76,19 +76,19 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="parameters"></a>Parametri
 
 *pnField*<br/>
-In questo parametro viene restituito il numero sequenziale del membro dati del parametro o del campo. Questo numero corrisponde all'ordine del membro dati nel [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) oppure [CRecordset::DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) (funzione).
+Il numero sequenziale del membro dati del campo o del parametro viene restituito in questo parametro. Questo numero corrisponde all'ordine del membro dati nella funzione [CRecordset::D ofieldexchange](../../mfc/reference/crecordset-class.md#dofieldexchange) o [CRecordset::D obulkfieldexchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) .
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se l'operazione corrente può essere eseguito nel tipo di parametro o del campo corrente.
+Diverso da zero se l'operazione corrente può essere eseguita sul tipo di parametro o del campo corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Seguire il modello delle funzioni RFX esistente.
+Seguire il modello delle funzioni RFX esistenti.
 
-##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType
+##  <a name="setfieldtype"></a>CFieldExchange:: SetFieldType
 
-Necessaria una chiamata a `SetFieldType` della classe del recordset [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) oppure [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) eseguire l'override.
+È necessaria una chiamata a `SetFieldType` nell'override [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) o [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) della classe recordset.
 
 ```
 void SetFieldType(UINT nFieldType);
@@ -97,7 +97,7 @@ void SetFieldType(UINT nFieldType);
 ### <a name="parameters"></a>Parametri
 
 *nFieldType*<br/>
-Valore di `enum FieldType`, dichiarati in `CFieldExchange`, che può essere uno dei seguenti:
+Valore della `enum FieldType`, dichiarato in `CFieldExchange`, che può essere uno dei seguenti:
 
 - `CFieldExchange::outputColumn`
 
@@ -109,26 +109,26 @@ Valore di `enum FieldType`, dichiarati in `CFieldExchange`, che può essere uno 
 
 - `CFieldExchange::inoutParam`
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per i membri dati di campo, è necessario chiamare `SetFieldType` con il parametro `CFieldExchange::outputColumn`, seguito dalle chiamate alle funzioni RFX e RFX di massa. Se non è stato implementato il recupero di righe bulk, ClassWizard passa poi ciò `SetFieldType` chiamare automaticamente nella sezione di mapping dei campi di `DoFieldExchange`.
+Per i membri dati di campo, è necessario chiamare `SetFieldType` con un parametro di `CFieldExchange::outputColumn`, seguito da chiamate alle funzioni RFX o RFX di massa. Se non è stato implementato il recupero di righe bulk, ClassWizard inserisce questa `SetFieldType` chiamata per l'utente nella sezione mappa dei campi di `DoFieldExchange`.
 
-Se si imposta parametri per la classe del recordset, è necessario chiamare `SetFieldType` anche in questo caso, all'esterno di qualsiasi sezione di mapping di campo, seguito da RFX chiamate per tutti i membri di dati di parametro. Ogni tipo di membro dati di parametro deve avere un proprio `SetFieldType` chiamare. Nella tabella seguente consente di distinguere i diversi valori è possibile passare a `SetFieldType` per rappresentare i membri di dati del parametro della classe:
+Se si parametrizza la classe recordset, è necessario chiamare di nuovo `SetFieldType`, al di fuori di qualsiasi sezione della mappa dei campi, seguito da chiamate RFX per tutti i membri dati del parametro. Ogni tipo di membro dati del parametro deve avere una propria chiamata `SetFieldType`. La tabella seguente consente di distinguere i diversi valori che è possibile passare a `SetFieldType` per rappresentare i membri dati del parametro della classe:
 
-|Valore del parametro SetFieldType|Tipo di membro dati di parametro|
+|Valore del parametro SetFieldType|Tipo di membro dati parametro|
 |----------------------------------|-----------------------------------|
-|`CFieldExchange::inputParam`|Parametro di input. Un valore che viene passato nella query o stored procedure del recordset.|
-|`CFieldExchange::param` | Uguale allo `CFieldExchange::inputParam`.|
-|`CFieldExchange::outputParam`|Parametro di output. Valore restituito della stored procedure del recordset.|
-|`CFieldExchange::inoutParam`|Parametro di input/output. Un valore che viene passato e restituito dalla stored procedure del recordset.|
+|`CFieldExchange::inputParam`|parametro di input. Valore passato nella query o nel stored procedure del recordset.|
+|`CFieldExchange::param` | uguale a `CFieldExchange::inputParam`.|
+|`CFieldExchange::outputParam`|parametro di output. Valore restituito dell'stored procedure del recordset.|
+|`CFieldExchange::inoutParam`|Parametro di input/output. Valore passato e restituito dall'stored procedure del recordset.|
 
-In generale, ogni gruppo di funzioni RFX associati membri dati di campi o membri dati di parametro deve essere preceduto da una chiamata a `SetFieldType`. Il *nFieldType* parametro della ognuno `SetFieldType` chiamata identifica il tipo dei membri dati rappresentata da chiamate alle funzioni RFX che seguono il `SetFieldType` chiamare.
+In generale, ogni gruppo di chiamate di funzione RFX associate a membri dati di campo o a membri dati di parametri deve essere preceduto da una chiamata a `SetFieldType`. Il parametro *nFieldType* di ogni chiamata di `SetFieldType` identifica il tipo dei membri dati rappresentati dalle chiamate di funzione RFX che seguono la chiamata `SetFieldType`.
 
-Per altre informazioni sulla gestione di output e parametri di input/output, vedere la `CRecordset` funzione membro [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Per altre informazioni sulle funzioni RFX e RFX di massa, vedere l'argomento [funzioni RFX](../../mfc/reference/record-field-exchange-functions.md). Per informazioni correlate sul recupero di righe bulk, vedere l'articolo [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Per ulteriori informazioni sulla gestione di output e parametri di input/output, vedere la `CRecordset` funzione membro [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Per ulteriori informazioni sulle funzioni RFX e RFX di massa, vedere l'argomento [funzioni di trasferimento di campi di record](../../mfc/reference/record-field-exchange-functions.md). Per informazioni correlate sul recupero di righe in blocco, vedere l'articolo [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Esempio
 
-Questo esempio illustra diverse chiamate a funzioni RFX con le relative chiamate a `SetFieldType`. Si noti che `SetFieldType` viene chiamato tramite il `pFX` puntatore a un `CFieldExchange` oggetto.
+In questo esempio vengono illustrate diverse chiamate alle funzioni RFX con chiamate associate a `SetFieldType`. Si noti che `SetFieldType` viene chiamato tramite il puntatore `pFX` a un oggetto `CFieldExchange`.
 
 [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]
 

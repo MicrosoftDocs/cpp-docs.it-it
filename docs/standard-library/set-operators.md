@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (set)
 - std::operator== (set)
 ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246396"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875767"
 ---
 # <a name="ltsetgt-operators"></a>Operatori &lt;set&gt;
 
-## <a name="op_neq"></a> operatore! = (set)
+## <a name="op_neq"></a>operatore! = (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore non è uguale all'oggetto set a destra.
 
@@ -35,17 +35,17 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `set`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `set`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti set non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -86,7 +86,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="op_lt"></a> operatore&lt; (set)
+## <a name="op_lt"></a>operatore&lt; (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è minore dell'oggetto set a destra.
 
@@ -96,17 +96,17 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `set`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `set`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto set a sinistra dell'operatore è rigorosamente minore dell'oggetto set a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -147,7 +147,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="op_lt_eq"></a> operatore&lt;= (set)
+## <a name="op_lt_eq"></a>operatore&lt;= (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è minore o uguale all'oggetto set a destra.
 
@@ -157,17 +157,17 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `set`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `set`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto set a sinistra dell'operatore è minore o uguale all'oggetto set a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -216,7 +216,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="op_eq_eq"></a> operatore = = (set)
+## <a name="op_eq_eq"></a>operatore = = (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è uguale all'oggetto set a destra.
 
@@ -226,17 +226,17 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `set`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `set`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto set a sinistra dell'operatore è uguale all'oggetto set a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -278,7 +278,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a> operatore&gt; (set)
+## <a name="op_gt"></a>operatore&gt; (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è maggiore dell'oggetto set a destra.
 
@@ -288,17 +288,17 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `set`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `set`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto set a sinistra dell'operatore è maggiore dell'oggetto set a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -339,7 +339,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="op_gt_eq"></a> operatore&gt;= (set)
+## <a name="op_gt_eq"></a>operatore&gt;= (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è maggiore o uguale all'oggetto set a destra.
 
@@ -349,17 +349,17 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `set`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `set`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto set a sinistra dell'operatore è maggiore o uguale all'oggetto set a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -408,7 +408,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="op_neq_multiset"></a> operatore! = (multiset)
+## <a name="op_neq_multiset"></a>operatore! = (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore non è uguale all'oggetto multiset a destra.
 
@@ -418,17 +418,17 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multiset`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti set o multiset non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -470,7 +470,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_lt_multiset"></a> operatore&lt; (multiset)
+## <a name="op_lt_multiset"></a>operatore&lt; (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è minore dell'oggetto multiset a destra.
 
@@ -480,17 +480,17 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multiset`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto multiset a sinistra dell'operatore è rigorosamente minore dell'oggetto multiset a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -536,7 +536,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="op_lt_eq_multiset"></a> operatore&lt;= (multiset)
+## <a name="op_lt_eq_multiset"></a>operatore&lt;= (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è minore o uguale all'oggetto multiset a destra.
 
@@ -546,17 +546,17 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multiset`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto multiset a sinistra dell'operatore è minore o uguale all'oggetto multiset a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -611,7 +611,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="op_eq_eq_multiset"></a> operatore = = (multiset)
+## <a name="op_eq_eq_multiset"></a>operatore = = (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è uguale all'oggetto multiset a destra.
 
@@ -621,17 +621,17 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multiset`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto multiset a sinistra dell'operatore è uguale all'oggetto multiset a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -673,7 +673,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_gt_multiset"></a> operatore&gt; (multiset)
+## <a name="op_gt_multiset"></a>operatore&gt; (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è maggiore dell'oggetto multiset a destra.
 
@@ -683,17 +683,17 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multiset`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto multiset a sinistra dell'operatore è maggiore dell'oggetto multiset a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -739,7 +739,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="op_gt_eq_multiset"></a> operatore&gt;= (multiset)
+## <a name="op_gt_eq_multiset"></a>operatore&gt;= (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è maggiore o uguale all'oggetto multiset a destra.
 
@@ -749,17 +749,17 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multiset`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto multiset a sinistra dell'operatore è maggiore o uguale all'oggetto multiset a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 

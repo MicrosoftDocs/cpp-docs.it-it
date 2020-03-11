@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898769"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865222"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Avviso del compilatore (livello 3) C4996
 
@@ -21,7 +21,7 @@ Il codice usa una funzione, un membro di classe, una variabile o un TypeDef cont
 > [!IMPORTANT]
 > Questo avviso è sempre un messaggio intenzionale dell'autore del file di intestazione che dichiara il simbolo. Non usare il simbolo deprecato senza conoscere le conseguenze.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Molte funzioni, funzioni membro, funzioni di modello e variabili globali nelle librerie di Visual Studio sono *deprecate*. Alcune, ad esempio le funzioni POSIX e specifiche di Microsoft, sono deprecate perché ora hanno un nome preferito diverso. Alcune funzioni della libreria di runtime C sono deprecate perché non sono sicure e hanno una variante più sicura. Altre sono deprecate perché sono obsolete. I messaggi di deprecazione includono in genere una sostituzione suggerita per la funzione o la variabile globale deprecata.
 

@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890064"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856540"
 ---
 # <a name="ltiosgt-functions"></a>Funzioni &lt;ios&gt;
 
@@ -82,7 +82,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, le variabili di tipo **bool** vengono visualizzate come 1 o 0.
 
@@ -134,7 +134,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, le variabili Integer vengono visualizzate in base 10.
 
@@ -180,12 +180,12 @@ ios_base& defaultfloat(ios_base& iosbase);
 
 ### <a name="parameters"></a>Parametri
 
-\ *_Iosbase*
+*_Iosbase*\
 Oggetto `ios_base`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il manipolatore chiama in modo efficace `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, quindi restituisce *iosbase*.
+Il manipolatore chiama in modo efficace `iosbase.``(ios_base::floatfield)`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf) , quindi restituisce *iosbase*.
 
 ## <a name="fixed"></a>fissa
 
@@ -204,7 +204,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `fixed` è la notazione di visualizzazione predefinita per i numeri a virgola mobile. [scientific](../standard-library/ios-functions.md#scientific) fa sì che i numeri a virgola mobile vengano visualizzati usando la notazione scientifica.
 
@@ -252,7 +252,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, le variabili Integer vengono visualizzate nella notazione in base 10. [dec](../standard-library/ios-functions.md#dec) e [oct](../standard-library/ios-functions.md#oct) modificano anche il modo in cui vengono visualizzate le variabili Integer.
 
@@ -293,11 +293,11 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 [showpos](../standard-library/ios-functions.md#showpos) determina il segno da visualizzare per i numeri positivi.
 
-Il manipolatore chiama in modo efficace `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: Internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`e quindi restituisce *STR*.
+Il manipolatore chiama in modo efficace `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: Internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`, quindi restituisce *STR*.
 
 ### <a name="example"></a>Esempio
 
@@ -351,7 +351,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il manipolatore chiama `str.``(ios_base::left, ios_base::adjustfield)`[setf](../standard-library/ios-base-class.md#setf) , quindi restituisce *Str*.
 
@@ -406,7 +406,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, l'opzione `noboolalpha` è attiva.
 
@@ -435,9 +435,9 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'opzione `noshowbase` è abilitata per impostazione predefinita. Usare [showbase](../standard-library/ios-functions.md#showbase) per indicare la base notazionale dei numeri.
+`noshowbase` è attivato per impostazione predefinita. Usare [showbase](../standard-library/ios-functions.md#showbase) per indicare la base notazionale dei numeri.
 
 Il manipolatore chiama `str.``(ios_base::showbase)`[unsetf](../standard-library/ios-base-class.md#unsetf) , quindi restituisce *Str*.
 
@@ -462,7 +462,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `noshowpoint` è attivo per impostazione predefinita; usare [showpoint](../standard-library/ios-functions.md#showpoint) e [precision](../standard-library/ios-base-class.md#precision) per visualizzare zeri dopo la virgola decimale.
 
@@ -509,9 +509,9 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'opzione `noshowpos` è abilitata per impostazione predefinita.
+`noshowpos` è attivato per impostazione predefinita.
 
 Il manipolatore chiama `str.``(ios_base::showps)`[unsetf](../standard-library/ios-base-class.md#unsetf) , quindi restituisce *Str*.
 
@@ -536,7 +536,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, l'opzione [skipws](../standard-library/ios-functions.md#skipws) è attiva. Quando nel flusso di input viene letto uno spazio, segnala la fine del buffer.
 
@@ -578,7 +578,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf) fa sì che il buffer venga elaborato quando non è vuoto.
 
@@ -601,7 +601,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il manipolatore chiama `str.``(ios_base::uppercase)`[unsetf](../standard-library/ios-base-class.md#unsetf) , quindi restituisce *Str*.
 
@@ -626,7 +626,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, le variabili Integer vengono visualizzate nella notazione in base 10. [dec](../standard-library/ios-functions.md#dec) e [hex](../standard-library/ios-functions.md#hex) modificano anche il modo in cui vengono visualizzate le variabili Integer.
 
@@ -653,7 +653,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 [left](../standard-library/ios-functions.md#left) modifica anche la giustificazione del testo.
 
@@ -710,7 +710,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, la notazione [fixed](../standard-library/ios-functions.md#fixed) è attiva per i numeri a virgola mobile.
 
@@ -755,7 +755,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La base notazionale di un numero può essere modificata con [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct) o [hex](../standard-library/ios-functions.md#hex).
 
@@ -809,7 +809,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, l'opzione [noshowpoint](../standard-library/ios-functions.md#noshowpoint) è attiva.
 
@@ -836,7 +836,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione predefinita è [noshowpos](../standard-library/ios-functions.md#noshowpos).
 
@@ -881,7 +881,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, l'opzione `skipws` è attiva. [noskipws](../standard-library/ios-functions.md#noskipws) fa sì che gli spazi vengano letti dal flusso di input.
 
@@ -933,13 +933,13 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tenere presente che `endl` scarica anche il buffer.
 
 L'opzione [nounitbuf](../standard-library/ios-functions.md#nounitbuf) è attiva per impostazione predefinita.
 
-Il manipolatore chiama in modo efficace `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`, quindi restituisce *Str*.
+Il manipolatore chiama in modo efficace `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`e quindi restituisce *Str*.
 
 ## <a name="uppercase"></a>  uppercase
 
@@ -958,11 +958,11 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, l'opzione [nouppercase](../standard-library/ios-functions.md#nouppercase) è attiva.
 
-Il manipolatore chiama in modo efficace `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: maiuscolo](../standard-library/ios-base-class.md#fmtflags)`)`, quindi restituisce *Str*.
+Il manipolatore chiama in modo efficace `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: maiuscole](../standard-library/ios-base-class.md#fmtflags)`)`e quindi restituisce *Str*.
 
 ### <a name="example"></a>Esempio
 

@@ -6,13 +6,13 @@ f1_keywords:
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454773"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873978"
 ---
-# <a name="ltunorderedmapgt-operators"></a>Operatori &lt;unordered_map&gt;
+# <a name="ltunordered_mapgt-operators"></a>Operatori &lt;unordered_map&gt;
 
 |||||
 |-|-|-|-|
@@ -28,17 +28,17 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `unordered_map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se unordered_maps non sono uguali. **false** se sono uguali.
+**true** se i unordered_maps non sono uguali. **false** se sono uguali.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra oggetti unordered_map non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_map sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 
@@ -92,17 +92,17 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `unordered_map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se i unordered_maps sono uguali. **false** se non sono uguali.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra oggetti unordered_map non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_map sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 
@@ -156,17 +156,17 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `unordered_multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se unordered_multimaps non sono uguali. **false** se sono uguali.
+**true** se i unordered_multimaps non sono uguali. **false** se sono uguali.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra oggetti unordered_multimap non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_multimap sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 
@@ -221,17 +221,17 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `unordered_multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se i unordered_multimaps sono uguali. **false** se non sono uguali.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra oggetti unordered_multimap non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_multimap sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 

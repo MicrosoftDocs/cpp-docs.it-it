@@ -1,5 +1,5 @@
 ---
-title: numeric_limits (classe)
+title: Classe numeric_limits
 ms.date: 11/04/2016
 f1_keywords:
 - limits/std::numeric_limits
@@ -71,13 +71,13 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687615"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876029"
 ---
-# <a name="numeric_limits-class"></a>numeric_limits (classe)
+# <a name="numeric_limits-class"></a>Classe numeric_limits
 
 Il modello di classe descrive le proprietà aritmetiche dei tipi numerici incorporati.
 
@@ -90,12 +90,12 @@ template <class Type>
 
 ### <a name="parameters"></a>Parametri
 
-*Digitare* \
+*Tipo*\
 Il tipo di dati elemento fondamentale le cui proprietà vengono testate, sottoposte a query o impostate. Il *tipo* può anche essere dichiarato **const**, **volatile**o **const volatile**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'intestazione definisce specializzazioni esplicite per i tipi **wchar_t**, **bool**, **char**, **signed char**, **unsigned char**, **short**, **unsigned short**, **int**, **unsigned int**, **Long**, **unsigned long**, **float**, **Double**, **long double**, **Long Long**, **unsigned long long**, **char16_t**e **char32_t**. Per queste specializzazioni esplicite, il membro [numeric_limits:: is_specialized](#is_specialized) è **true**e tutti i membri rilevanti hanno valori significativi. Il programma può fornire ulteriori specializzazioni esplicite. La maggior parte delle funzioni membro della classe descrive o testa le implementazioni possibili di **float**.
+L'intestazione definisce specializzazioni esplicite per i **tipi wchar_t**, **bool**, **char**, **signed char**, **unsigned char**, **short**, **unsigned short**, **int**, **unsigned int**, **Long**, **unsigned long**, **float**, **Double**, **long double**, **Long Long**, **unsigned long long**, **char16_t**e **char32_t**. Per queste specializzazioni esplicite, il membro [numeric_limits:: is_specialized](#is_specialized) è **true**e tutti i membri rilevanti hanno valori significativi. Il programma può fornire ulteriori specializzazioni esplicite. La maggior parte delle funzioni membro della classe descrive o testa le implementazioni possibili di **float**.
 
 Per una specializzazione arbitraria, nessun membro dispone di valori significativi. Un oggetto membro che non dispone di un valore significativo archivia zero (o **false**) e una funzione membro che non restituisce un valore significativo restituisce `Type(0)`.
 
@@ -104,7 +104,7 @@ Per una specializzazione arbitraria, nessun membro dispone di valori significati
 |||
 |-|-|
 |[denorm_min](#denorm_min)|Restituisce il più piccolo valore denormalizzato diverso da zero.|
-|[digits](#digits)|Restituisce il numero di cifre radice che il tipo può rappresentare senza perdita di precisione.|
+|[cifre](#digits)|Restituisce il numero di cifre radice che il tipo può rappresentare senza perdita di precisione.|
 |[digits10](#digits10)|Restituisce il numero di cifre decimali che il tipo può rappresentare senza perdita di precisione.|
 |[epsilon](#epsilon)|Restituisce la differenza tra 1 e il valore più piccolo maggiore di 1 che il tipo di dati può rappresentare.|
 |[has_denorm](#has_denorm)|Verifica se un tipo consente valori denormalizzati.|
@@ -148,7 +148,7 @@ static constexpr Type denorm_min() throw();
 
 Il più piccolo valore denormalizzato diverso da zero.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 il **valore long double** è uguale a **Double** per C++ il compilatore.
 
@@ -207,7 +207,7 @@ static constexpr int digits = 0;
 
 Numero di cifre radice che il tipo può rappresentare senza perdita di precisione.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il membro archivia il numero di cifre radice che il tipo può rappresentare senza modifiche, ovvero il numero di bit diverso da qualsiasi bit più significativo per un tipo Integer predefinito oppure il numero di cifre mantissa per un tipo a virgola mobile predefinito.
 
@@ -295,7 +295,7 @@ static constexpr Type epsilon() throw();
 
 Differenza tra 1 e il valore più piccolo maggiore di 1 rappresentabile per il tipo di dati.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il valore è FLT_EPSILON per il tipo **float**. `epsilon` per un tipo è il più piccolo numero positivo a virgola mobile *N* tale che *N* + `epsilon` + *N* è rappresentabile.
 
@@ -347,7 +347,7 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 Valore di enumerazione di tipo **const**`float_denorm_style` che indica se il tipo consente valori denormalizzati.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il membro archivia `denorm_present` per un tipo a virgola mobile con valori denormalizzati, in effetti un numero variabile di bit dell'esponente.
 
@@ -393,7 +393,7 @@ static constexpr bool has_denorm_loss = false;
 
 **true** se la perdita di precisione viene rilevata come perdita di denormalizzazione; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il membro archivia true per un tipo che determina se un valore ha perso precisione perché viene fornito come risultato denormalizzato (troppo piccolo per essere rappresentato come un valore normalizzato) o perché è inesatto (non è lo stesso, di conseguenza non è soggetto alla precisione e alle limitazioni dell'intervallo di esponenti), un'opzione con le rappresentazioni a virgola mobile IEC 559 che possono influenzare alcuni risultati.
 
@@ -439,7 +439,7 @@ static constexpr bool has_infinity = false;
 
 **true** se il tipo ha una rappresentazione di un numero infinito positivo; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il membro restituisce **true** se [is_iec559](#is_iec559) è **true**.
 
@@ -485,7 +485,7 @@ static constexpr bool has_quiet_NaN = false;
 
 **true** se il **tipo** ha una rappresentazione di un numero (NaN) non interattivo; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Un numero (NaN) non interattivo è una codifica di un valore NaN, che non ne indica la presenza in un'espressione. Il valore restituito è **true** se [is_iec559](#is_iec559) è true.
 
@@ -531,7 +531,7 @@ static constexpr bool has_signaling_NaN = false;
 
 **true** se il tipo ha una rappresentazione di un numero (NaN) con segnalazione; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Un numero (NaN) con segnalazione è una codifica di un valore NaN, che ne indica la presenza in un'espressione. Il valore restituito è **true** se [is_iec559](#is_iec559) è true.
 
@@ -577,7 +577,7 @@ static constexpr Type infinity() throw();
 
 Rappresentazione di un numero infinito positivo per un tipo, se disponibile.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il valore restituito è significativo solo se [has_infinity](#has_infinity) è **true**.
 
@@ -631,7 +631,7 @@ static constexpr bool is_bounded = false;
 
 **true** se il tipo ha una rappresentazione di un numero (NaN) con segnalazione; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Tutti i tipi predefiniti hanno un set di valori rappresentabili delimitato e restituiscono **true**.
 
@@ -685,7 +685,7 @@ static constexpr bool is_exact = false;
 
 **true** se i calcoli sono privi di errori di arrotondamento; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Tutti i tipi Integer predefiniti hanno rappresentazioni esatte dei relativi valori e restituiscono **true**. Anche una rappresentazione a virgola fissa o razionale è considerata esatta, al contrario di una rappresentazione a virgola mobile.
 
@@ -739,7 +739,7 @@ static constexpr bool is_iec559 = false;
 
 **true** se il tipo è conforme agli standard IEC 559; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Lo standard IEC 559 è uno standard internazionale per la rappresentazione di valori a virgola mobile e negli Stati Uniti è noto anche come IEEE 754.
 
@@ -789,7 +789,7 @@ static constexpr bool is_integer = false;
 
 **true** se il tipo ha una rappresentazione in forma di Integer; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Tutti i tipi Integer predefiniti hanno una rappresentazione esatta.
 
@@ -839,7 +839,7 @@ static constexpr bool is_modulo = false;
 
 **true** se il tipo ha una rappresentazione in forma di modulo; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Una rappresentazione in forma di modulo è una rappresentazione in cui tutti i risultati vengono ridotti in forma di modulo. Tutti i tipi Integer senza segno predefiniti hanno una rappresentazione in forma di modulo.
 
@@ -889,7 +889,7 @@ static constexpr bool is_signed = false;
 
 **true** se il tipo ha una rappresentazione firmata; in caso contrario, **false**.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il membro archivia true per un tipo che ha una rappresentazione firmata, ovvero per tutti i tipi Integer con segno e a virgola mobile predefiniti.
 
@@ -939,7 +939,7 @@ static constexpr bool is_specialized = false;
 
 **true** se il tipo ha una specializzazione esplicita definita nel modello di classe. in caso contrario, **false** .
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Tutti i tipi scalari diversi dai puntatori hanno una specializzazione esplicita definita per il modello di classe `numeric_limits`.
 
@@ -993,7 +993,7 @@ static constexpr Type lowest() throw();
 
 Restituisce il valore finito più negativo.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Restituisce il valore finito più negativo per il tipo, che in genere è `min()` per i tipi integer e `-max()` per i tipi a virgola mobile. Il valore restituito è significativo se `is_bounded` è **true**.
 
@@ -1009,9 +1009,9 @@ static constexpr Type max() throw();
 
 Valore massimo finito per un tipo.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
-Il valore massimo finito è INT_MAX per il tipo **int** e FLT_MAX per il tipo **float**. Il valore restituito è significativo se [is_bounded](#is_bounded) è **true**.
+Il valore finito massimo è INT_MAX per il tipo **int** e FLT_MAX per il tipo **float**. Il valore restituito è significativo se [is_bounded](#is_bounded) è **true**.
 
 #### <a name="example"></a>Esempio
 
@@ -1051,7 +1051,7 @@ static constexpr int max_digits10 = 0;
 
 Restituisce il numero di cifre decimali richiesto per garantire che due valori distinti del tipo abbiano rappresentazioni decimali distinte.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il membro archivia il numero di cifre decimali richiesto per garantire che due valori distinti del tipo abbiano rappresentazioni decimali distinte.
 
@@ -1067,7 +1067,7 @@ static constexpr int max_exponent = 0;
 
 Esponente integrale massimo basato su radice che il tipo può rappresentare.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituita è significativa solo per i tipi a virgola mobile. `max_exponent` è il valore FLT_MAX_EXP per il tipo **float**.
 
@@ -1113,7 +1113,7 @@ static constexpr int max_exponent10 = 0;
 
 Esponente in base 10 integrale massimo che il tipo può rappresentare.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituita è significativa solo per i tipi a virgola mobile. `max_exponent` è il valore FLT_MAX_10 per il tipo **float**.
 
@@ -1159,7 +1159,7 @@ static constexpr Type min() throw();
 
 Valore normalizzato minimo per il tipo.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il valore normalizzato minimo è INT_MIN per il tipo **int** e FLT_MIN per il tipo **float**. Il valore restituito è significativo se [is_bounded](#is_bounded) è **true** o se [is_signed](#is_signed) è **false**.
 
@@ -1209,7 +1209,7 @@ static constexpr int min_exponent = 0;
 
 Esponente integrale minimo basato su radice che il tipo può rappresentare.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 La funzione membro è significativa solo per i tipi a virgola mobile. `min_exponent` è il valore FLT_MIN_EXP per il tipo **float**.
 
@@ -1255,7 +1255,7 @@ static constexpr int min_exponent10 = 0;
 
 Esponente in base 10 integrale minimo che il tipo può rappresentare.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 La funzione membro è significativa solo per i tipi a virgola mobile. `min_exponent10` è il valore FLT_MIN_10_EXP per il tipo **float**.
 
@@ -1301,7 +1301,7 @@ static constexpr Type quiet_NaN() throw();
 
 Rappresentazione di un numero (NaN) non interattivo per il tipo.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il valore restituito è significativo solo se [has_quiet_NaN](#has_quiet_nan) è **true**.
 
@@ -1347,7 +1347,7 @@ static constexpr int radix = 0;
 
 Base integrale per la rappresentazione del tipo.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 La base è 2 per i tipi Integer predefiniti e la base a cui viene elevato l'esponente, o FLT_RADIX, per i tipi a virgola mobile predefiniti.
 
@@ -1435,7 +1435,7 @@ static constexpr float_round_style round_style = round_toward_zero;
 
 Valore dell'enumerazione `float_round_style` che descrive lo stile di arrotondamento.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il membro archivia un valore che descrive i vari metodi che un'implementazione può scegliere per l'arrotondamento di un valore a virgola mobile in un valore integer.
 
@@ -1482,7 +1482,7 @@ static constexpr Type signaling_NaN() throw();
 
 Rappresentazione di un numero (NaN) non con segnalazione per il tipo.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 Il valore restituito è significativo solo se [has_signaling_NaN](#has_signaling_nan) è **true**.
 
@@ -1522,7 +1522,7 @@ static constexpr bool tinyness_before = false;
 
 **true** se il tipo può rilevare valori piccoli prima dell'arrotondamento; **false** in caso contrario.
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
 I tipi in grado di rilevare valori di piccole dimensioni erano inclusi come opzione con le rappresentazioni IEC 559 a virgola mobile e la relativa implementazione può influenzare alcuni risultati.
 

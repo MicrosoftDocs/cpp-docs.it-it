@@ -3,11 +3,11 @@ title: 'Guida al porting: Spy++'
 ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
 ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627224"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890941"
 ---
 # <a name="porting-guide-spy"></a>Guida al porting: Spy++
 
@@ -29,7 +29,7 @@ Dopo l'aggiornamento dei due progetti, la soluzione era simile alla seguente:
 
 Sono disponibili due progetti: uno con un ingente numero di file C++, l'altro rappresentato da una DLL scritta in C.
 
-##  <a name="header_file_problems"></a>Passaggio 2. Problemi del file di intestazione
+##  <a name="header_file_problems"></a> Passaggio 2. Problemi del file di intestazione
 
 Durante la compilazione di un progetto appena convertito, uno dei primi aspetti spesso osservati è che i file di intestazione usati dal progetto non vengono rilevati.
 
@@ -667,7 +667,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 }
 ```
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Il porting di Spy++ dal codice Visual C++ 6.0 originale al compilatore più recente ha richiesto circa 20 ore di codifica in meno nel corso di circa una settimana. L'aggiornamento è stato effettuato direttamente su otto versioni del prodotto, passando da Visual Studio 6.0 a Visual Studio 2015. Questo è l'approccio consigliato per tutti gli aggiornamenti in progetti di qualsiasi dimensione.
 

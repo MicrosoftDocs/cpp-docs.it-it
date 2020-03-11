@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
 ms.openlocfilehash: 83980094562e1c0083a879d1dc9aab591dc52d02
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689273"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873982"
 ---
 # <a name="multiset-class"></a>Classe multiset
 
@@ -106,18 +106,18 @@ class multiset
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *chiave*
+\ *chiave*
 Tipo di dati degli elementi da archiviare nel multiset.
 
-*Confronta* \
+*Confronta*\
 Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel multiset. Il predicato binario **less**\<Key> rappresenta il valore predefinito.
 
 In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato `std::less<>` o `std::greater<>` che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#sequence_containers).
 
-@No__t_1 *allocatore*
+\ *allocatore*
 Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione del multiset e alla deallocazione della memoria. Il valore predefinito è `allocator<Key>`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La classe multiset della libreria standard C++ è:
 
@@ -149,9 +149,9 @@ In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato
 |-|-|
 |[multiset](#multiset)|Costruisce un `multiset` vuoto o che rappresenta una copia totale o parziale di un `multiset` specificato.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[allocator_type](#allocator_type)|typedef per la classe `allocator` dell'oggetto `multiset`.|
 |[const_iterator](#const_iterator)|Typedef per un iteratore bidirezionale in grado di leggere un elemento **const** nell'`multiset`.|
@@ -176,7 +176,7 @@ In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato
 |[begin](#begin)|Restituisce un iteratore che punta al primo elemento del `multiset`.|
 |[cbegin](#cbegin)|Restituisce un iteratore const che punta al primo elemento del `multiset`.|
 |[cend](#cend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un `multiset`.|
-|[clear](#clear)|Cancella tutti gli elementi di un `multiset`.|
+|[deselezionare](#clear)|Cancella tutti gli elementi di un `multiset`.|
 |[count](#count)|Restituisce il numero di elementi di un `multiset` la cui chiave corrisponde alla chiave specificata come parametro.|
 |[crbegin](#crbegin)|Restituisce un iteratore const che punta al primo elemento di un set invertito.|
 |[crend](#crend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un set invertito.|
@@ -201,13 +201,13 @@ In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato
 
 ### <a name="operators"></a>Operatori
 
-|??|Descrizione|
+|Operatore|Descrizione|
 |-|-|
 |[operator=](#op_eq)|Sostituisce gli elementi di un `multiset` con una copia di un altro `multiset`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<set>
+**Intestazione:** set di \<>
 
 **Spazio dei nomi:** std
 
@@ -219,7 +219,7 @@ Tipo che rappresenta la classe allocator per l'oggetto multiset.
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `allocator_type` è un sinonimo per il parametro di modello `Allocator`.
 
@@ -294,7 +294,7 @@ const_iterator cbegin() const;
 
 Iteratore di accesso bidirezionale **const** che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
@@ -320,7 +320,7 @@ const_iterator cend() const;
 
 Iteratore di accesso bidirezionale **const** che punta appena oltre la fine dell'intervallo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
@@ -382,7 +382,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento **c
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_iterator` non può essere usato per modificare il valore di un elemento.
 
@@ -398,7 +398,7 @@ Tipo che fornisce un puntatore a un elemento **const** di un oggetto multiset.
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_pointer` non può essere usato per modificare il valore di un elemento.
 
@@ -453,7 +453,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi eleme
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione sull'oggetto multiset in ordine inverso.
 
@@ -478,11 +478,11 @@ La chiave degli elementi per cui trovare un corrispondenza nel multiset.
 
 Il numero di elementi nel multiset la cui chiave di ordinamento corrisponde alla chiave del parametro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce il numero di elementi *x* nell'intervallo
 
-\[ lower_bound (*Key*), upper_bound (*Key*))
+\[ lower_bound (*chiave*), upper_bound (*chiave*)
 
 ### <a name="example"></a>Esempio
 
@@ -538,7 +538,7 @@ const_reverse_iterator crbegin() const;
 
 Iteratore bidirezionale const inverso che punta al primo elemento in un multiset invertito o che punta a quello che era stato l'ultimo elemento nel multiset non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `crbegin` viene usato con un oggetto multiset invertito proprio come begin viene usato con un oggetto multiset.
 
@@ -586,7 +586,7 @@ const_reverse_iterator crend() const;
 
 Iteratore bidirezionale const inverso che punta alla posizione successiva all'ultimo elemento di un oggetto multiset invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto multiset non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `crend` viene usato con un oggetto multiset invertito proprio come [end](#end) viene usato con un oggetto multiset.
 
@@ -628,7 +628,7 @@ Tipo Signed Integer che può essere usato per rappresentare il numero di element
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `difference_type` è il tipo restituito quando si sottrae o si incrementa tramite gli iteratori del contenitore. `difference_type` viene in genere usato per rappresentare il numero di elementi nell'intervallo [ `first`, `last`) tra gli iteratori `first` e `last`, includendo l'elemento a cui punta `first` e l'intervallo di elementi fino all'elemento a cui punta `last`, escluso tale elemento.
 
@@ -711,7 +711,7 @@ iterator emplace(Args&&... args);
 
 Iteratore all'elemento appena inserito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non invalida alcun riferimento a elementi del contenitore, ma potrebbe invalidare tutti gli iteratori per il contenitore.
 
@@ -780,7 +780,7 @@ iterator emplace_hint(
 
 Iteratore all'elemento appena inserito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non invalida alcun riferimento a elementi del contenitore, ma potrebbe invalidare tutti gli iteratori per il contenitore.
 
@@ -845,7 +845,7 @@ iterator end();
 
 Iteratore successivo all'ultimo valore. Se il multiset è vuoto, verrà restituito `multiset::end() == multiset::begin()`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **end** viene usato per verificare se un iteratore ha superato la fine del relativo oggetto multiset.
 
@@ -950,16 +950,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametri
 
-*Dove* \
+*Dove*\
 Posizione dell'elemento che deve essere rimosso.
 
-*Primo* \
+*Primo*\
 Posizione del primo elemento che deve essere rimosso.
 
-*Ultimo* \
+*Ultimo*\
 Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
-@No__t_1 *chiave*
+\ *chiave*
 Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
@@ -968,7 +968,7 @@ Per le prime due funzioni membro, iteratore bidirezionale che definisce il primo
 
 Per la terza funzione membro, restituisce il numero di elementi rimossi dall'oggetto multiset.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per un esempio di codice, vedere [set::erase](../standard-library/set-class.md#erase).
 
@@ -991,7 +991,7 @@ Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di
 
 Iteratore che fa riferimento alla posizione di un elemento con una chiave specificata o alla posizione successiva all'ultimo elemento dell'oggetto multiset (`multiset::end()`) se non viene trovata alcuna corrispondenza per la chiave.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce un iteratore che fa riferimento a un elemento del multiset la cui chiave è equivalente alla *chiave* dell'argomento in un predicato binario che provoca un ordinamento basato su una relazione di comparabilità minore di.
 
@@ -1070,9 +1070,9 @@ allocator_type get_allocator() const;
 
 Allocatore usato dall'oggetto multiset.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Gli allocatori per la classe multiset specificano il modo in cui la classe gestisce la memoria. Gli allocatori predefiniti forniti con le classi dei contenitori della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
+Gli allocatori per la classe multiset specificano il modo in cui la classe gestisce la memoria. Gli allocatori predefiniti forniti con le classi contenitore della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
 
 ### <a name="example"></a>Esempio
 
@@ -1170,9 +1170,9 @@ IList);
 |-|-|
 |*Val*|Valore di un elemento da inserire nel multiset.|
 |*Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. Se il punto precede immediatamente la *posizione*, l'inserimento può essere eseguito in tempo costante ammortizzato anziché in tempo logaritmico.|
-|*ValTy*|Parametro di modello che specifica il tipo di argomento che può essere usato dall'oggetto multiset per costruire un elemento di [value_type](../standard-library/map-class.md#value_type)e che prevede l'avanzamento perfetto di *Val* come argomento.|
-|*Prima*|Posizione del primo elemento da copiare.|
-|*Ultima*|Posizione immediatamente dopo l'ultimo elemento da copiare.|
+|*ValTy*|Parametro di modello che specifica il tipo di argomento che può essere usato dall'oggetto multiset per costruire un elemento di [value_type](../standard-library/map-class.md#value_type)e che consente di eseguire l'avanzamento perfetto di *Val* come argomento.|
+|*Primo*|Posizione del primo elemento da copiare.|
+|*Ultimo*|Posizione immediatamente dopo l'ultimo elemento da copiare.|
 |*InputIterator*|Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|Oggetto [initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|
 
@@ -1182,7 +1182,7 @@ Le funzioni membro di inserimento a elemento singolo, (1) e (2), restituiscono u
 
 Le funzioni membro a elemento singolo con suggerimento, (3) e (4), restituiscono un iteratore che punta alla posizione in cui il nuovo elemento è stato inserito nel multiset.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non invalida alcun puntatore o riferimento, ma potrebbe invalidare tutti gli iteratori per il contenitore.
 
@@ -1308,15 +1308,15 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto funzione che viene usato da un oggetto multiset per ordinare gli elementi, corrispondente al parametro di modello `Compare`.
+Restituisce l'oggetto funzione che viene usato da un oggetto multiset per ordinare gli elementi, corrispondente al parametro di modello `Compare`.
 
 Per altre informazioni su `Compare`, vedere la sezione Note dell'argomento [Classe multiset](../standard-library/multiset-class.md).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'oggetto archiviato definisce la funzione membro:
+L'oggetto archiviato definisce la funzione membro
 
-**bool operator**( **const Key&** *x*, **const Key&** *y*);
+**operatore bool**( **const Key &** *x*, **const Key &** *y*);
 
 che restituisce true se *x* precede rigorosamente *y* nell'ordinamento.
 
@@ -1381,7 +1381,7 @@ Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordi
 typedef Compare key_compare;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `key_compare` è un sinonimo per il parametro di modello `Compare`.
 
@@ -1399,7 +1399,7 @@ Tipo che fornisce un oggetto funzione in grado di confrontare le chiavi di ordin
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `key_type` è un sinonimo per il parametro di modello `Key`.
 
@@ -1426,7 +1426,7 @@ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordina
 
 ### <a name="return-value"></a>Valore restituito
 
-@No__t_0 o `const_iterator` che punta alla posizione di un elemento di un oggetto multiset con una chiave uguale o maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento dell'oggetto multiset se non viene trovata alcuna corrispondenza per la chiave.
+`iterator` o `const_iterator` che punta alla posizione di un elemento di un oggetto multiset con una chiave uguale o maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento dell'oggetto multiset se non viene trovata alcuna corrispondenza per la chiave.
 
 ### <a name="example"></a>Esempio
 
@@ -1566,12 +1566,12 @@ multiset (
 |-|-|
 |*Al*|Classe dell'allocatore di memoria da usare per l'oggetto multiset. Per impostazione predefinita è `Allocator`.|
 |*Comp*|Funzione di confronto di tipo `const Compare` usata per ordinare gli elementi nell'oggetto multiset. Per impostazione predefinita è `Compare`.|
-|*A destra*|Oggetto multiset di cui il multiset costruito deve essere una copia.|
-|*Prima*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
-|*Ultima*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
-|*IList*|initializer_list da cui copiare gli elementi.|
+|*Right*|Oggetto multiset di cui il multiset costruito deve essere una copia.|
+|*Primo*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
+|*Ultimo*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
+|*IList*|Oggetto initializer_list da cui copiare gli elementi.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tutti i costruttori archiviano un tipo di oggetto allocatore che gestisce la memoria per l'oggetto multiset e che può essere restituito in un secondo momento chiamando [get_allocator](#get_allocator). Il parametro allocator viene spesso omesso nelle dichiarazioni di classe e vengono usate macro di pre-elaborazione per introdurre allocatori alternativi.
 
@@ -1579,7 +1579,7 @@ Tutti i costruttori inizializzano il relativo oggetto multiset.
 
 Tutti i costruttori archiviano un oggetto funzione di tipo Compare che viene usato per stabilire un ordine tra le chiavi dell'oggetto multiset e che può essere restituito in un secondo momento chiamando [key_comp](#key_comp).
 
-I primi tre costruttori specificano un multiset iniziale vuoto, il secondo specifica il tipo di funzione di confronto (*comp*) da usare per stabilire l'ordine degli elementi e il terzo specifica in modo esplicito il tipo di allocatore (*al*) come utilizzato. La parola chiave **explicit** elimina alcuni tipi di conversione automatica del tipo.
+I primi tre costruttori specificano un multiset iniziale vuoto, il secondo specifica il tipo di funzione di confronto (*comp*) da usare per stabilire l'ordine degli elementi e il terzo specifica in modo esplicito il tipo di allocatore (*al*) da usare. La parola chiave **explicit** elimina alcuni tipi di conversione automatica del tipo.
 
 Il quarto costruttore specifica una copia dell'oggetto multiset *right*.
 
@@ -1706,7 +1706,7 @@ multiset& operator=(multiset&& right);
 |-|-|
 |*right*|Oggetto `multiset` da cui gli elementi vengono copiati o spostati.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `operator=` copia o sposta gli elementi in *destra* in questa `multiset`, a seconda del tipo di riferimento (lvalue o rvalue) utilizzato. Gli elementi presenti in questo oggetto `multiset` prima dell'esecuzione di `operator=` vengono eliminati.
 
@@ -1755,7 +1755,7 @@ Tipo che fornisce un puntatore a un elemento di un oggetto multiset.
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo **pointer** può essere usato per modificare il valore di un elemento.
 
@@ -1775,7 +1775,7 @@ reverse_iterator rbegin();
 
 Iteratore bidirezionale inverso che punta al primo elemento in un multiset invertito o che punta a quello che era stato l'ultimo elemento nel multiset non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rbegin` viene usato con un oggetto multiset invertito proprio come rbegin viene usato con un oggetto multiset.
 
@@ -1888,7 +1888,7 @@ reverse_iterator rend();
 
 Iteratore bidirezionale inverso che punta alla posizione successiva all'ultimo elemento di un oggetto multiset invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto multiset non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rend` viene usato con un oggetto multiset invertito proprio come [end](#end) viene usato con un oggetto multiset.
 
@@ -1955,7 +1955,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `reverse_iterator` viene usato per eseguire l'iterazione sull'oggetto multiset in ordine inverso.
 
@@ -2030,7 +2030,7 @@ void swap(
 \ a *destra*
 Argomento di tipo multiset che fornisce gli elementi da scambiare con l'oggetto multiset di destinazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro non invalida riferimenti, puntatori o iteratori che designano gli elementi dei due oggetti multiset di cui vengono scambiati gli elementi.
 
@@ -2162,13 +2162,13 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto funzione che viene usato da un oggetto multiset per ordinare gli elementi, corrispondente al parametro di modello `Compare`.
+Restituisce l'oggetto funzione che viene usato da un oggetto multiset per ordinare gli elementi, corrispondente al parametro di modello `Compare`.
 
 Per altre informazioni su `Compare`, vedere la sezione Note dell'argomento [Classe multiset](../standard-library/multiset-class.md).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'oggetto archiviato definisce la funzione membro:
+L'oggetto archiviato definisce la funzione membro
 
 **bool operator**( **const Key&** `_xVal`, **const Key&** `_yVal`);
 
@@ -2235,7 +2235,7 @@ Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordi
 typedef key_compare value_compare;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `value_compare` è un sinonimo per il parametro di modello `Compare`.
 
@@ -2255,7 +2255,7 @@ Tipo che descrive un oggetto archiviato come elemento di un oggetto multiset in 
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `value_type` è un sinonimo per il parametro di modello `Key`.
 
@@ -2301,5 +2301,5 @@ The multiset has elements: 10 20.
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori](../cpp/containers-modern-cpp.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

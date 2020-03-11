@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688161"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876309"
 ---
 # <a name="ctype-class"></a>Classe ctype
 
@@ -56,16 +56,16 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere al valore archiviato consente di archiviare un valore positivo univoco in `id`. I criteri di classificazione vengono forniti come tipo di maschera di bit annidata nella classe base ctype_base.
 
 La C++ libreria standard definisce due specializzazioni esplicite di questo modello di classe:
 
-- `ctype<char>`, una specializzazione esplicita le cui differenze vengono descritte separatamente. Per ulteriori informazioni, vedere [ctype &lt;char &gt; Class](../standard-library/ctype-char-class.md).
+- `ctype<char>`, una specializzazione esplicita le cui differenze vengono descritte separatamente. Per ulteriori informazioni, vedere [ctype&lt;char&gt; Class](../standard-library/ctype-char-class.md).
 
 - `ctype<wchar_t>`, che considera gli elementi come caratteri wide.
 
@@ -83,9 +83,9 @@ Tutte le altre operazioni vengono eseguite su valori **char** esattamente come p
 |-|-|
 |[ctype](#ctype)|Costruttore per gli oggetti della classe `ctype` utilizzati come facet delle impostazioni locali per i caratteri.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[char_type](#char_type)|Tipo che descrive un carattere utilizzato dalle impostazioni locali.|
 
@@ -110,7 +110,7 @@ Tutte le altre operazioni vengono eseguite su valori **char** esattamente come p
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:** \<impostazioni locali >
 
 **Spazio dei nomi:** std
 
@@ -122,7 +122,7 @@ Tipo che descrive un carattere utilizzato dalle impostazioni locali.
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello *CharType*.
 
@@ -140,12 +140,12 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I valori possibili per il parametro *_Refs* e il relativo significato sono:
+I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -180,10 +180,10 @@ Valore della maschera in base a cui il carattere deve essere sottoposto a test.
 \ *ch*
 Carattere i cui attributi devono essere sottoposti a test.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere dell'intervallo i cui attributi devono essere classificati.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo i cui attributi devono essere classificati.
 
 \ *dest*
@@ -195,7 +195,7 @@ La prima funzione membro restituisce un valore booleano che è **true** se il ca
 
 La seconda funzione membro restituisce una matrice contenente i valori della maschera che caratterizza gli attributi di ogni caratteri dell'intervallo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I valori della maschera che classificano gli attributi dei caratteri sono specificati dalla classe [ctype_base](../standard-library/ctype-base-class.md), da cui ctype deriva. La prima funzione membro può accettare espressioni per il primo parametro indicato come maschere di bit e formato dalla combinazione di valori della maschera dagli operatori logici bit per bit (&#124; , & , ^ , ~).
 
@@ -227,10 +227,10 @@ Carattere di tipo `Chartype` usato dalle impostazioni locali da convertire.
 \ *predefinito*
 Il valore predefinito da assegnare alla funzione membro ai caratteri di tipo `CharType` che non dispongono di caratteri corrispondenti di tipo **char**.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere in un intervallo di caratteri da convertire.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo dei caratteri da convertire.
 
 \ *dest*
@@ -242,9 +242,9 @@ La prima funzione membro protetto restituisce il carattere nativo di tipo char c
 
 La seconda funzione membro protetto restituisce un puntatore per l'intervallo di destinazione di caratteri nativi convertiti a partire da caratteri di tipo `CharType`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La seconda funzione del modello di membro protetto archivia in `dest` [`I`] il valore `do_narrow` (`first` [`I`], `default`), per `I` nell'intervallo [0, `last`  -  `first`).
+La seconda funzione del modello di membro protetto archivia in `dest`[`I`] il valore `do_narrow`(`first` [`I`], `default`), per `I` nell'intervallo [0, `last` - `first`).
 
 ### <a name="example"></a>Esempio
 
@@ -266,17 +266,17 @@ virtual const CharType *do_scan_is(
 \ *MaskVal*
 Valore della maschera da confrontare per carattere.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere nell'intervallo da analizzare.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo da analizzare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Puntatore al primo carattere in un intervallo che corrisponde a una maschera specificata. Se tale valore non esiste, la funzione restituisce l' *Ultima*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro protetto restituisce il più piccolo puntatore `ptr` nell'intervallo [`first`, `last`) per il quale [do_is](#do_is)(`maskVal`, \* `ptr`) è true.
 
@@ -300,17 +300,17 @@ virtual const CharType *do_scan_not(
 \ *MaskVal*
 Valore della maschera che non deve essere confrontata per carattere.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere nell'intervallo da analizzare.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo da analizzare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Puntatore al primo carattere in un intervallo che non corrisponde a una maschera specificata. Se tale valore non esiste, la funzione restituisce l' *Ultima*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro protetto restituisce il più piccolo puntatore `ptr` nell'intervallo [`first`, `last`) per il quale [do_is](#do_is)(`maskVal`, \* `ptr`) è false.
 
@@ -333,21 +333,21 @@ virtual const CharType *do_tolower(
 ### <a name="parameters"></a>Parametri
 
 \ *ch*
-Carattere da convertire in lettere minuscole.
+Carattere da convertire in minuscolo.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere in un intervallo di caratteri di cui deve essere convertita la combinazione di maiuscole/minuscole.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo dei caratteri di cui deve essere convertita la combinazione di maiuscole/minuscole.
 
 ### <a name="return-value"></a>Valore restituito
 
 La prima funzione membro protetto restituisce il formato minuscolo del parametro *ch*. Se non esiste alcuna forma minuscola, viene restituito *ch*. La seconda funzione membro protetto restituisce *l'ultima*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La seconda funzione del modello di membro protetto sostituisce ogni elemento `first` [`I`] per `I` nell'intervallo [0, `last`  -  `first`) con `do_tolower` (`first` [`I`]).
+La seconda funzione del modello di membro protetto sostituisce ogni elemento `first` [`I`] per `I` nell'intervallo [0, `last` - `first`) con `do_tolower`(`first` [`I`]).
 
 ### <a name="example"></a>Esempio
 
@@ -368,21 +368,21 @@ virtual const CharType *do_toupper(
 ### <a name="parameters"></a>Parametri
 
 \ *ch*
-Carattere da convertire in lettere maiuscole.
+Carattere da convertire in maiuscolo.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere in un intervallo di caratteri di cui deve essere convertita la combinazione di maiuscole/minuscole.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo dei caratteri di cui deve essere convertita la combinazione di maiuscole/minuscole.
 
 ### <a name="return-value"></a>Valore restituito
 
 La prima funzione membro protetto restituisce il formato maiuscolo del parametro *ch*. Se non esiste alcun form maiuscolo, viene restituito *ch*. La seconda funzione membro protetto restituisce *l'ultima*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La seconda funzione del modello di membro protetto sostituisce ogni elemento `first` [`I`] per `I` nell'intervallo [0, `last`  -  `first`) con `do_toupper` (`first` [`I`]).
+La seconda funzione del modello di membro protetto sostituisce ogni elemento `first` [`I`] per `I` nell'intervallo [0, `last` - `first`) con `do_toupper`(`first` [`I`]).
 
 ### <a name="example"></a>Esempio
 
@@ -406,10 +406,10 @@ virtual const char *do_widen(
 *byte*\
 Carattere di tipo **char** nel set di caratteri nativo da convertire.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere in un intervallo di caratteri da convertire.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo dei caratteri da convertire.
 
 \ *dest*
@@ -421,7 +421,7 @@ La prima funzione membro protetto restituisce il carattere di tipo `CharType` ch
 
 La seconda funzione membro protetto restituisce un puntatore all'intervallo di destinazione di caratteri di tipo `CharType` usato dalle impostazioni locali convertite da caratteri nativi di tipo **char**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La seconda funzione del modello membro protetto archivia in `dest`[ `I`] il valore `do_widen`( `first` [ `I`]), per `I` nell'intervallo [0, `last` - `first`).
 
@@ -450,10 +450,10 @@ Valore della maschera in base a cui il carattere deve essere sottoposto a test.
 \ *ch*
 Carattere i cui attributi devono essere sottoposti a test.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere dell'intervallo i cui attributi devono essere classificati.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo i cui attributi devono essere classificati.
 
 \ *dest*
@@ -465,7 +465,7 @@ La prima funzione membro restituisce **true** se il carattere testato ha l'attri
 
 La seconda funzione membro restituisce un puntatore all'ultimo carattere dell'intervallo i cui attributi devono essere classificati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I valori della maschera che classificano gli attributi dei caratteri sono specificati dalla classe [ctype_base](../standard-library/ctype-base-class.md), da cui deriva ctype. La prima funzione membro può accettare espressioni per il primo parametro indicato come maschere di bit e formato dalla combinazione di valori della maschera dagli operatori logici bit per bit (&#124; , & , ^ , ~).
 
@@ -530,10 +530,10 @@ Carattere di tipo `Chartype` usato dalle impostazioni locali da convertire.
 \ *predefinito*
 Il valore predefinito da assegnare alla funzione membro ai caratteri di tipo `CharType` che non dispongono di caratteri corrispondenti di tipo **char**.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere in un intervallo di caratteri da convertire.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo dei caratteri da convertire.
 
 \ *dest*
@@ -545,9 +545,9 @@ La prima funzione membro restituisce il carattere nativo di tipo **char** che co
 
 La seconda funzione membro restituisce un puntatore per l'intervallo di destinazione di caratteri nativi convertiti a partire da caratteri di tipo `CharType`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro restituisce [do_narrow](#do_narrow)(`ch`, `default`). La seconda funzione membro restituisce [do_narrow](#do_narrow) (`first`, `last`, `default` `dest`). Solo i caratteri d'origine di base hanno definitivamente un'immagine inversa univoca `CharType` in `narrow`. Per questi caratteri d'origine di base, l'invariabile seguente include: `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**.
+La prima funzione membro restituisce [do_narrow](#do_narrow)(`ch`, `default`). La seconda funzione membro restituisce [do_narrow](#do_narrow) (`first`, `last`, `default``dest`). Solo i caratteri d'origine di base hanno definitivamente un'immagine inversa univoca `CharType` in `narrow`. Per questi caratteri d'origine di base, l'invariabile seguente include: `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**.
 
 ### <a name="example"></a>Esempio
 
@@ -591,19 +591,19 @@ const CharType *scan_is(
 \ *MaskVal*
 Valore della maschera da confrontare per carattere.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere nell'intervallo da analizzare.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo da analizzare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Puntatore al primo carattere in un intervallo che corrisponde a una maschera specificata. Se tale valore non esiste, la funzione restituisce l' *Ultima*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [do_scan_is](#do_scan_is)(`maskVal`, `first`, `last`).
+La funzione membro restituisce [do_scan_is](#do_scan_is)(`maskVal`, `first``last`).
 
 ### <a name="example"></a>Esempio
 
@@ -647,19 +647,19 @@ const CharType *scan_not(
 \ *MaskVal*
 Valore della maschera che non deve essere confrontata per carattere.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere nell'intervallo da analizzare.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo da analizzare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Puntatore al primo carattere in un intervallo che non corrisponde a una maschera specificata. Se tale valore non esiste, la funzione restituisce l' *Ultima*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [do_scan_not](#do_scan_not)(`maskVal`, `first`, `last`).
+La funzione membro restituisce [do_scan_not](#do_scan_not)(`maskVal`, `first``last`).
 
 ### <a name="example"></a>Esempio
 
@@ -700,12 +700,12 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 ### <a name="parameters"></a>Parametri
 
 \ *ch*
-Carattere da convertire in lettere minuscole.
+Carattere da convertire in minuscolo.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere in un intervallo di caratteri di cui deve essere convertita la combinazione di maiuscole/minuscole.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo dei caratteri di cui deve essere convertita la combinazione di maiuscole/minuscole.
 
 ### <a name="return-value"></a>Valore restituito
@@ -714,7 +714,7 @@ La prima funzione membro restituisce il formato minuscolo del parametro *ch*. Se
 
 La seconda funzione membro restituisce *l'ultima*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La prima funzione membro restituisce [do_tolower](#do_tolower)(`ch`). La seconda funzione membro restituisce [do_tolower](#do_tolower)(`first`, `last`).
 
@@ -757,10 +757,10 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 \ *ch*
 Carattere da convertire in lettere maiuscole.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere in un intervallo di caratteri di cui deve essere convertita la combinazione di maiuscole/minuscole.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo dei caratteri di cui deve essere convertita la combinazione di maiuscole/minuscole.
 
 ### <a name="return-value"></a>Valore restituito
@@ -769,7 +769,7 @@ La prima funzione membro restituisce il formato maiuscolo del parametro *ch*. Se
 
 La seconda funzione membro restituisce *l'ultima*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La prima funzione membro restituisce [do_toupper](#do_toupper)(`ch`). La seconda funzione membro restituisce [do_toupper](#do_toupper)( `first`, `last`).
 
@@ -812,10 +812,10 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 *byte*\
 Carattere di tipo char nel set di caratteri nativo da convertire.
 
-*primo* \
+*primo*\
 Puntatore al primo carattere in un intervallo di caratteri da convertire.
 
-*ultimo* \
+*ultimo*\
 Puntatore al carattere immediatamente successivo all'ultimo carattere dell'intervallo dei caratteri da convertire.
 
 \ *dest*
@@ -827,9 +827,9 @@ La prima funzione membro restituisce il carattere di tipo `CharType` che corrisp
 
 La seconda funzione membro restituisce un puntatore all'intervallo di destinazione di caratteri di tipo `CharType` usato dalle impostazioni locali convertite da caratteri nativi di tipo **char**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro restituisce [do_widen](#do_widen)(`byte`). La seconda funzione membro restituisce [do_widen](#do_widen)(`first`, `last`, `dest`).
+La prima funzione membro restituisce [do_widen](#do_widen)(`byte`). La seconda funzione membro restituisce [do_widen](#do_widen)(`first`, `last``dest`).
 
 ### <a name="example"></a>Esempio
 
@@ -864,4 +864,4 @@ Hello everyone!
 ## <a name="see-also"></a>Vedere anche
 
 [\<locale>](../standard-library/locale.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)

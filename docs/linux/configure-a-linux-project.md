@@ -3,17 +3,17 @@ title: Configurare un progetto C++ Linux in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031376"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865654"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
 ::: moniker range="vs-2015"
 
-Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
@@ -35,7 +35,7 @@ Questo argomento illustra come configurare un progetto Linux C++ come descritto 
 
 Per visualizzare le opzioni di configurazione, selezionare il menu **Progetto > Proprietà** o fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Proprietà** dal menu di scelta rapida. Vengono visualizzate le impostazioni **Generale**.
 
-![Impostazioni di configurazione generali](media/settings_general.png)
+![Configurazione generale](media/settings_general.png)
 
 Per impostazione predefinita, viene generato un file eseguibile con estensione out. Per compilare una libreria statica o dinamica, o per usare un makefile esistente, usare l'impostazione **Tipo di configurazione**.
 
