@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518426"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865522"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -120,67 +120,67 @@ Fornisce la funzionalità di una casella di riepilogo di Windows.
 class CListBox : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CListBox::CListBox](#clistbox)|Costruisce un oggetto `CListBox`.|
+|[CListBox:: CListBox](#clistbox)|Costruisce un oggetto `CListBox`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|Aggiunge una stringa a una casella di riepilogo.|
-|[CListBox::CharToItem](#chartoitem)|Eseguire l'override di per fornire la gestione personalizzata dei WM_CHAR per le caselle di riepilogo con il proprietario, che non hanno stringhe.|
-|[CListBox::CompareItem](#compareitem)|Chiamato dal Framework per determinare la posizione di un nuovo elemento in una casella di riepilogo ordinata dal proprietario.|
+|[CListBox:: CharToItem](#chartoitem)|Eseguire l'override di per fornire la gestione personalizzata dei WM_CHAR per le caselle di riepilogo con il proprietario, che non hanno stringhe.|
+|[CListBox:: CompareItem](#compareitem)|Chiamato dal Framework per determinare la posizione di un nuovo elemento in una casella di riepilogo ordinata dal proprietario.|
 |[CListBox:: create](#create)|Crea la casella di riepilogo di Windows e la collega all'oggetto `CListBox`.|
-|[CListBox::DeleteItem](#deleteitem)|Chiamata eseguita dal framework quando l'utente elimina un elemento da una casella di riepilogo creata dal proprietario.|
-|[CListBox::DeleteString](#deletestring)|Elimina una stringa da una casella di riepilogo.|
-|[CListBox::Dir](#dir)|Aggiunge nomi di file, unità o entrambi dalla directory corrente a una casella di riepilogo.|
+|[CListBox::D eleteItem](#deleteitem)|Chiamata eseguita dal framework quando l'utente elimina un elemento da una casella di riepilogo creata dal proprietario.|
+|[CListBox::D eleteString](#deletestring)|Elimina una stringa da una casella di riepilogo.|
+|[CListBox::D IR](#dir)|Aggiunge nomi di file, unità o entrambi dalla directory corrente a una casella di riepilogo.|
 |[CListBox::D rawItem](#drawitem)|Chiamata eseguita dal framework quando viene modificato un aspetto visivo di una casella di riepilogo creata dal proprietario.|
-|[CListBox::FindString](#findstring)|Cerca una stringa in una casella di riepilogo.|
-|[CListBox::FindStringExact](#findstringexact)|Trova la prima stringa della casella di riepilogo che corrisponde a una stringa specificata.|
-|[CListBox::GetAnchorIndex](#getanchorindex)|Recupera l'indice in base zero dell'elemento di ancoraggio corrente in una casella di riepilogo.|
-|[CListBox::GetCaretIndex](#getcaretindex)|Determina l'indice dell'elemento con il rettangolo di attivazione in una casella di riepilogo a selezione multipla.|
-|[CListBox::GetCount](#getcount)|Restituisce il numero di stringhe in una casella di riepilogo.|
-|[CListBox::GetCurSel](#getcursel)|Restituisce l'indice in base zero della stringa attualmente selezionata in una casella di riepilogo.|
-|[CListBox::GetHorizontalExtent](#gethorizontalextent)|Restituisce la larghezza in pixel a cui è possibile scorrere orizzontalmente una casella di riepilogo.|
-|[CListBox::GetItemData](#getitemdata)|Restituisce un valore associato all'elemento della casella di riepilogo.|
-|[CListBox::GetItemDataPtr](#getitemdataptr)|Restituisce un puntatore a un elemento della casella di riepilogo.|
+|[CListBox:: FindString](#findstring)|Cerca una stringa in una casella di riepilogo.|
+|[CListBox:: FindExactString](#findstringexact)|Trova la prima stringa della casella di riepilogo che corrisponde a una stringa specificata.|
+|[CListBox:: GetAnchorIndex](#getanchorindex)|Recupera l'indice in base zero dell'elemento di ancoraggio corrente in una casella di riepilogo.|
+|[CListBox:: GetCaretIndex](#getcaretindex)|Determina l'indice dell'elemento con il rettangolo di attivazione in una casella di riepilogo a selezione multipla.|
+|[CListBox:: GetCount](#getcount)|Restituisce il numero di stringhe in una casella di riepilogo.|
+|[CListBox:: GetCurSel](#getcursel)|Restituisce l'indice in base zero della stringa attualmente selezionata in una casella di riepilogo.|
+|[CListBox:: GetHorizontalExtent](#gethorizontalextent)|Restituisce la larghezza in pixel a cui è possibile scorrere orizzontalmente una casella di riepilogo.|
+|[CListBox:: GetItemData](#getitemdata)|Restituisce un valore associato all'elemento della casella di riepilogo.|
+|[CListBox:: GetItemDataPtr](#getitemdataptr)|Restituisce un puntatore a un elemento della casella di riepilogo.|
 |[CListBox:: GetItemHeight](#getitemheight)|Determina l'altezza degli elementi in una casella di riepilogo.|
-|[CListBox::GetItemRect](#getitemrect)|Restituisce il rettangolo di delimitazione dell'elemento della casella di riepilogo come attualmente visualizzato.|
-|[CListBox::GetListBoxInfo](#getlistboxinfo)|Recupera il numero di elementi per colonna.|
-|[CListBox::GetLocale](#getlocale)|Recupera l'identificatore delle impostazioni locali per una casella di riepilogo.|
-|[CListBox::GetSel](#getsel)|Restituisce lo stato di selezione di un elemento della casella di riepilogo.|
-|[CListBox::GetSelCount](#getselcount)|Restituisce il numero di stringhe attualmente selezionate in una casella di riepilogo a selezione multipla.|
-|[CListBox::GetSelItems](#getselitems)|Restituisce gli indici delle stringhe attualmente selezionate in una casella di riepilogo.|
-|[CListBox::GetText](#gettext)|Copia un elemento della casella di riepilogo in un buffer.|
-|[CListBox::GetTextLen](#gettextlen)|Restituisce la lunghezza in byte di un elemento della casella di riepilogo.|
-|[CListBox::GetTopIndex](#gettopindex)|Restituisce l'indice della prima stringa visibile in una casella di riepilogo.|
-|[CListBox::InitStorage](#initstorage)|Prealloca i blocchi di memoria per gli elementi e le stringhe della casella di riepilogo.|
+|[CListBox:: GetItemRect](#getitemrect)|Restituisce il rettangolo di delimitazione dell'elemento della casella di riepilogo come attualmente visualizzato.|
+|[CListBox:: GetListBoxInfo](#getlistboxinfo)|Recupera il numero di elementi per colonna.|
+|[CListBox:: GetLocale](#getlocale)|Recupera l'identificatore delle impostazioni locali per una casella di riepilogo.|
+|[CListBox:: GetSel](#getsel)|Restituisce lo stato di selezione di un elemento della casella di riepilogo.|
+|[CListBox:: GetSelCount](#getselcount)|Restituisce il numero di stringhe attualmente selezionate in una casella di riepilogo a selezione multipla.|
+|[CListBox:: GetSelItems](#getselitems)|Restituisce gli indici delle stringhe attualmente selezionate in una casella di riepilogo.|
+|[CListBox:: GetText](#gettext)|Copia un elemento della casella di riepilogo in un buffer.|
+|[CListBox:: GetTextLen](#gettextlen)|Restituisce la lunghezza in byte di un elemento della casella di riepilogo.|
+|[CListBox:: GetTopIndex](#gettopindex)|Restituisce l'indice della prima stringa visibile in una casella di riepilogo.|
+|[CListBox:: InitStorage](#initstorage)|Prealloca i blocchi di memoria per gli elementi e le stringhe della casella di riepilogo.|
 |[CListBox::InsertString](#insertstring)|Inserisce una stringa in una posizione specifica in una casella di riepilogo.|
-|[CListBox::ItemFromPoint](#itemfrompoint)|Restituisce l'indice dell'elemento della casella di riepilogo più vicino a un punto.|
+|[CListBox:: ItemFromPoint](#itemfrompoint)|Restituisce l'indice dell'elemento della casella di riepilogo più vicino a un punto.|
 |[CListBox:: MeasureItem](#measureitem)|Chiamata eseguita dal framework quando viene creata una casella di riepilogo creata dal proprietario per determinare le dimensioni della casella di riepilogo.|
-|[CListBox::ResetContent](#resetcontent)|Cancella tutte le voci da una casella di riepilogo.|
-|[CListBox::SelectString](#selectstring)|Cerca e seleziona una stringa in una casella di riepilogo a selezione singola.|
-|[CListBox::SelItemRange](#selitemrange)|Seleziona o deseleziona un intervallo di stringhe in una casella di riepilogo a selezione multipla.|
-|[CListBox::SetAnchorIndex](#setanchorindex)|Imposta l'ancoraggio in una casella di riepilogo a selezione multipla per iniziare una selezione estesa.|
-|[CListBox::SetCaretIndex](#setcaretindex)|Imposta il rettangolo di attivazione sull'elemento in corrispondenza dell'indice specificato in una casella di riepilogo a selezione multipla.|
-|[CListBox::SetColumnWidth](#setcolumnwidth)|Imposta la larghezza della colonna di una casella di riepilogo a più colonne.|
-|[CListBox::SetCurSel](#setcursel)|Seleziona una stringa della casella di riepilogo.|
+|[CListBox:: ResetContent](#resetcontent)|Cancella tutte le voci da una casella di riepilogo.|
+|[CListBox:: SelectString](#selectstring)|Cerca e seleziona una stringa in una casella di riepilogo a selezione singola.|
+|[CListBox:: SelItemRange](#selitemrange)|Seleziona o deseleziona un intervallo di stringhe in una casella di riepilogo a selezione multipla.|
+|[CListBox:: SetAnchorIndex](#setanchorindex)|Imposta l'ancoraggio in una casella di riepilogo a selezione multipla per iniziare una selezione estesa.|
+|[CListBox:: SetCaretIndex](#setcaretindex)|Imposta il rettangolo di attivazione sull'elemento in corrispondenza dell'indice specificato in una casella di riepilogo a selezione multipla.|
+|[CListBox:: SetColumnWidth](#setcolumnwidth)|Imposta la larghezza della colonna di una casella di riepilogo a più colonne.|
+|[CListBox:: CurSel](#setcursel)|Seleziona una stringa della casella di riepilogo.|
 |[CListBox:: SetHorizontalExtent](#sethorizontalextent)|Imposta la larghezza in pixel a cui è possibile scorrere orizzontalmente una casella di riepilogo.|
-|[CListBox::SetItemData](#setitemdata)|Imposta un valore associato all'elemento della casella di riepilogo.|
-|[CListBox::SetItemDataPtr](#setitemdataptr)|Imposta un puntatore all'elemento della casella di riepilogo.|
+|[CListBox:: SetItemData](#setitemdata)|Imposta un valore associato all'elemento della casella di riepilogo.|
+|[CListBox:: SetItemDataPtr](#setitemdataptr)|Imposta un puntatore all'elemento della casella di riepilogo.|
 |[CListBox:: SetItemHeight](#setitemheight)|Imposta l'altezza degli elementi in una casella di riepilogo.|
-|[CListBox::SetLocale](#setlocale)|Imposta l'identificatore delle impostazioni locali per una casella di riepilogo.|
-|[CListBox::SetSel](#setsel)|Seleziona o deseleziona un elemento casella di riepilogo in una casella di riepilogo a selezione multipla.|
-|[CListBox::SetTabStops](#settabstops)|Imposta le posizioni di interruzione di tabulazione in una casella di riepilogo.|
-|[CListBox::SetTopIndex](#settopindex)|Imposta l'indice in base zero della prima stringa visibile in una casella di riepilogo.|
+|[CListBox:: setlocale](#setlocale)|Imposta l'identificatore delle impostazioni locali per una casella di riepilogo.|
+|[CListBox:: SetSel](#setsel)|Seleziona o deseleziona un elemento casella di riepilogo in una casella di riepilogo a selezione multipla.|
+|[CListBox:: SetTabStops](#settabstops)|Imposta le posizioni di interruzione di tabulazione in una casella di riepilogo.|
+|[CListBox:: SetTopIndex](#settopindex)|Imposta l'indice in base zero della prima stringa visibile in una casella di riepilogo.|
 |[CListBox:: VKeyToItem](#vkeytoitem)|Eseguire l'override di per fornire la gestione WM_KEYDOWN personalizzata per le caselle di riepilogo con il set di stili di LBS_WANTKEYBOARDINPUT.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 In una casella di riepilogo viene visualizzato un elenco di elementi, ad esempio i nomi file, che l'utente può visualizzare e selezionare.
 
@@ -236,7 +236,7 @@ Se si alloca memoria nell'oggetto `CListBox`, eseguire l'override del distruttor
 
 `CListBox`
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxwin.h
 
@@ -257,7 +257,7 @@ Punta alla stringa con terminazione null da aggiungere.
 
 Indice in base zero della stringa nella casella di riepilogo. Il valore restituito è LB_ERR se si verifica un errore. il valore restituito è LB_ERRSPACE se non è disponibile spazio sufficiente per archiviare la nuova stringa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se la casella di riepilogo non è stata creata con lo stile [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , la stringa viene aggiunta alla fine dell'elenco. In caso contrario, la stringa viene inserita nell'elenco e l'elenco viene ordinato. Se la casella di riepilogo è stata creata con lo stile LBS_SORT ma non con lo stile [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , il framework ordina l'elenco in base a una o più chiamate alla funzione membro `CompareItem`.
 
@@ -279,7 +279,7 @@ virtual int CharToItem(
 
 ### <a name="parameters"></a>Parametri
 
-*nKey*<br/>
+*nPer*<br/>
 Codice ANSI del carattere digitato dall'utente.
 
 *nIndex*<br/>
@@ -289,7 +289,7 @@ Posizione corrente del punto di inserimento della casella di riepilogo.
 
 Restituisce-1 o-2 per nessuna ulteriore azione o un numero non negativo per specificare un indice di un elemento della casella di riepilogo in cui eseguire l'azione predefinita per la sequenza di tasti. L'implementazione predefinita restituisce-1.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il messaggio WM_CHARTOITEM viene inviato dalla casella di riepilogo quando riceve un messaggio di WM_CHAR, ma solo se la casella di riepilogo soddisfa tutti i criteri seguenti:
 
@@ -317,7 +317,7 @@ Costruisce un oggetto `CListBox`.
 CListBox();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Si costruisce un oggetto `CListBox` in due passaggi. Chiamare innanzitutto il costruttore `ClistBox` e quindi chiamare `Create`, che inizializza la casella di riepilogo di Windows e la collega al `CListBox`.
 
@@ -342,7 +342,7 @@ Puntatore long a una struttura `COMPAREITEMSTRUCT`.
 
 Indica la posizione relativa dei due elementi descritti nella struttura [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) . Può trattarsi di uno dei valori seguenti:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |-1|L'elemento 1 Ordina prima dell'elemento 2.|
 |0|Gli elementi 1 e 2 vengono ordinati allo stesso modo.|
@@ -350,7 +350,7 @@ Indica la posizione relativa dei due elementi descritti nella struttura [COMPARE
 
 Per una descrizione della struttura `COMPAREITEMSTRUCT`, vedere [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Se si crea una casella di riepilogo creata dal proprietario con lo stile LBS_SORT, è necessario eseguire l'override di questa funzione membro per supportare il Framework nell'ordinamento dei nuovi elementi aggiunti alla casella di riepilogo.
 
@@ -388,7 +388,7 @@ Specifica l'ID del controllo della casella di riepilogo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Si costruisce un oggetto `CListBox` in due passaggi. Chiamare prima di tutto il costruttore, quindi chiamare `Create`, che inizializza la casella di riepilogo di Windows e la collega all'oggetto `CListBox`.
 
@@ -429,7 +429,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 *lpDeleteItemStruct*<br/>
 Puntatore long a una struttura [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) di Windows che contiene informazioni sull'elemento eliminato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita di questa funzione non esegue alcuna operazione. Eseguire l'override di questa funzione per ricreare una casella di riepilogo creata dal proprietario in base alle esigenze.
 
@@ -456,7 +456,7 @@ Specifica l'indice in base zero della stringa da eliminare.
 
 Conteggio delle stringhe rimaste nell'elenco. Il valore restituito è LB_ERR se *nIndex* specifica un indice maggiore del numero di elementi nell'elenco.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tutti gli elementi che seguono *nIndex* ora si spostano verso il basso di una posizione. Se, ad esempio, una casella di riepilogo contiene due elementi, l'eliminazione del primo elemento comporterà la prima posizione dell'elemento rimanente. *nIndex*= 0 per l'elemento nella prima posizione.
 
@@ -479,7 +479,7 @@ int Dir(
 *attr*<br/>
 Può essere qualsiasi combinazione dei valori **enum** descritti in `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)o qualsiasi combinazione dei valori seguenti:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |0x0000|Il file può essere letto o scritto.|
 |0x0001|Il file può essere letto, ma non scritto in.|
@@ -491,7 +491,7 @@ Può essere qualsiasi combinazione dei valori **enum** descritti in `CFile::GetS
 |0x8000|Flag esclusivo. Se viene impostato il flag exclusive, vengono elencati solo i file del tipo specificato. In caso contrario, i file del tipo specificato vengono elencati oltre ai file "normali".|
 
 *lpszWildCard*<br/>
-Punta a una stringa di specifica del file. La stringa può contenere caratteri jolly, ad esempio *.\*.
+Punta a una stringa di specifica del file. La stringa può contenere caratteri jolly, ad esempio *.\*
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -514,7 +514,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 Puntatore long a una struttura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) contenente informazioni sul tipo di disegno necessario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I membri `itemAction` e `itemState` della struttura `DRAWITEMSTRUCT` definiscono l'azione di disegno da eseguire.
 
@@ -526,7 +526,7 @@ Per una descrizione della struttura `DRAWITEMSTRUCT`, vedere [CWnd:: OnDrawItem]
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  CListBox::FindString
+##  <a name="findstring"></a>CListBox:: FindString
 
 Trova la prima stringa in una casella di riepilogo contenente il prefisso specificato senza modificare la selezione della casella di riepilogo.
 
@@ -548,7 +548,7 @@ Punta alla stringa con terminazione null che contiene il prefisso da ricercare. 
 
 Indice in base zero dell'elemento corrispondente o LB_ERR se la ricerca ha avuto esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare la funzione membro [SelectString](#selectstring) per trovare e selezionare una stringa.
 
@@ -556,7 +556,7 @@ Usare la funzione membro [SelectString](#selectstring) per trovare e selezionare
 
 [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]
 
-##  <a name="findstringexact"></a>  CListBox::FindStringExact
+##  <a name="findstringexact"></a>CListBox:: FindExactString
 
 Trova la prima stringa della casella di riepilogo che corrisponde alla stringa specificata in *lpszFind*.
 
@@ -578,15 +578,15 @@ Punta alla stringa con terminazione null da cercare. Questa stringa può contene
 
 Indice dell'elemento corrispondente o LB_ERR se la ricerca ha avuto esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se la casella di riepilogo è stata creata con uno stile di creazione del proprietario ma senza lo stile [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles), la funzione membro `FindStringExact` tenta di trovare una corrispondenza tra il valore di parola doppia e il valore di *lpszFind*.
+Se la casella di riepilogo è stata creata con uno stile di creazione del proprietario ma senza lo stile [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , la funzione membro `FindStringExact` tenta di trovare una corrispondenza tra il valore di parola doppia e il valore di *lpszFind*.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]
 
-##  <a name="getanchorindex"></a>  CListBox::GetAnchorIndex
+##  <a name="getanchorindex"></a>CListBox:: GetAnchorIndex
 
 Recupera l'indice in base zero dell'elemento di ancoraggio corrente nella casella di riepilogo.
 
@@ -598,7 +598,7 @@ int GetAnchorIndex() const;
 
 Indice dell'elemento di ancoraggio corrente, se ha esito positivo; in caso contrario LB_ERR.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 In una casella di riepilogo a selezione multipla, l'elemento di ancoraggio è il primo o l'ultimo elemento in un blocco di elementi selezionati contigui.
 
@@ -606,7 +606,7 @@ In una casella di riepilogo a selezione multipla, l'elemento di ancoraggio è il
 
   Vedere l'esempio per [CListBox:: SetAnchorIndex](#setanchorindex).
 
-##  <a name="getcaretindex"></a>  CListBox::GetCaretIndex
+##  <a name="getcaretindex"></a>CListBox:: GetCaretIndex
 
 Determina l'indice dell'elemento con il rettangolo di attivazione in una casella di riepilogo a selezione multipla.
 
@@ -618,7 +618,7 @@ int GetCaretIndex() const;
 
 Indice in base zero dell'elemento con il rettangolo di attivazione in una casella di riepilogo. Se la casella di riepilogo è una casella di riepilogo a selezione singola, il valore restituito è l'indice dell'elemento selezionato, se disponibile.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'elemento può essere selezionato o meno.
 
@@ -626,7 +626,7 @@ L'elemento può essere selezionato o meno.
 
   Vedere l'esempio per [CListBox:: SetCaretIndex](#setcaretindex).
 
-##  <a name="getcount"></a>  CListBox::GetCount
+##  <a name="getcount"></a>CListBox:: GetCount
 
 Recupera il numero di elementi in una casella di riepilogo.
 
@@ -638,7 +638,7 @@ int GetCount() const;
 
 Il numero di elementi nella casella di riepilogo o LB_ERR se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il conteggio restituito è maggiore di uno rispetto al valore di indice dell'ultimo elemento (l'indice è in base zero).
 
@@ -660,7 +660,7 @@ Indice in base zero dell'elemento attualmente selezionato se si tratta di una ca
 
 In una casella di riepilogo a selezione multipla, l'indice dell'elemento con lo stato attivo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Non chiamare `GetCurSel` per una casella di riepilogo a selezione multipla. Usare invece [CListBox:: GetSelItems](#getselitems) .
 
@@ -680,7 +680,7 @@ int GetHorizontalExtent() const;
 
 Larghezza scorrevole della casella di riepilogo, in pixel.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa operazione è applicabile solo se la casella di riepilogo presenta una barra di scorrimento orizzontale.
 
@@ -705,7 +705,7 @@ Specifica l'indice in base zero dell'elemento nella casella di riepilogo.
 
 Valore associato all'elemento o LB_ERR se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il valore parola doppia è il parametro *dwItemData* di una chiamata [SetItemData](#setitemdata) .
 
@@ -793,7 +793,7 @@ DWORD GetListBoxInfo() const;
 
 Numero di elementi per colonna dell'oggetto `CListBox`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro emula la funzionalità del messaggio di [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo) , come descritto nel Windows SDK.
 
@@ -809,7 +809,7 @@ LCID GetLocale() const;
 
 Valore dell'identificatore delle impostazioni locali (LCID) per le stringhe nella casella di riepilogo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le impostazioni locali vengono utilizzate, ad esempio, per determinare l'ordinamento delle stringhe in una casella di riepilogo ordinata.
 
@@ -834,7 +834,7 @@ Specifica l'indice in base zero dell'elemento.
 
 Numero positivo se l'elemento specificato è selezionato; in caso contrario, è 0. Il valore restituito è LB_ERR se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro funziona con caselle di riepilogo sia a selezione singola che a selezione multipla.
 
@@ -844,7 +844,7 @@ Per recuperare l'indice dell'elemento della casella di riepilogo attualmente sel
 
 [!code-cpp[NVC_MFC_CListBox#19](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]
 
-##  <a name="getselcount"></a>  CListBox::GetSelCount
+##  <a name="getselcount"></a>CListBox:: GetSelCount
 
 Recupera il numero totale di elementi selezionati in una casella di riepilogo a selezione multipla.
 
@@ -860,7 +860,7 @@ Numero di elementi selezionati in una casella di riepilogo. Se la casella di rie
 
   Vedere l'esempio per [CListBox:: GetSelItems](#getselitems).
 
-##  <a name="getselitems"></a>  CListBox::GetSelItems
+##  <a name="getselitems"></a>CListBox:: GetSelItems
 
 Riempie un buffer con una matrice di Integer che specifica i numeri degli elementi selezionati in una casella di riepilogo a selezione multipla.
 
@@ -886,7 +886,7 @@ Numero effettivo di elementi inseriti nel buffer. Se la casella di riepilogo è 
 
 [!code-cpp[NVC_MFC_CListBox#20](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]
 
-##  <a name="gettext"></a>  CListBox::GetText
+##  <a name="gettext"></a>CListBox:: GetText
 
 Ottiene una stringa da una casella di riepilogo.
 
@@ -915,7 +915,7 @@ Riferimento a un oggetto `CString`.
 
 Lunghezza, in byte, della stringa, escluso il carattere null di terminazione. Se *nIndex* non specifica un indice valido, il valore restituito viene LB_ERR.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il secondo formato di questa funzione membro compila un oggetto `CString` con il testo della stringa.
 
@@ -923,7 +923,7 @@ Il secondo formato di questa funzione membro compila un oggetto `CString` con il
 
 [!code-cpp[NVC_MFC_CListBox#21](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]
 
-##  <a name="gettextlen"></a>  CListBox::GetTextLen
+##  <a name="gettextlen"></a>CListBox:: GetTextLen
 
 Ottiene la lunghezza di una stringa in un elemento della casella di riepilogo.
 
@@ -956,7 +956,7 @@ int GetTopIndex() const;
 
 Indice in base zero del primo elemento visibile in una casella di riepilogo in caso di esito positivo, LB_ERR in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Inizialmente, l'elemento 0 si trova nella parte superiore della casella di riepilogo, ma se viene eseguito lo scorrimento della casella di riepilogo, è possibile che un altro elemento si trovi nella parte superiore.
 
@@ -986,7 +986,7 @@ Specifica la quantità di memoria, in byte, da allocare per le stringhe di eleme
 
 In caso di esito positivo, il numero massimo di elementi che la casella di riepilogo può archiviare prima che sia necessaria una riallocazione della memoria, in caso contrario LB_ERRSPACE, ovvero non è disponibile memoria sufficiente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questa funzione prima di aggiungere un numero elevato di elementi a un `CListBox`.
 
@@ -1020,7 +1020,7 @@ Punta a una stringa con terminazione null da inserire.
 
 Indice in base zero della posizione in cui è stata inserita la stringa. Il valore restituito è LB_ERR se si verifica un errore. il valore restituito è LB_ERRSPACE se non è disponibile spazio sufficiente per archiviare la nuova stringa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 A differenza della funzione membro [AddString](#addstring) , `InsertString` non determina l'ordinamento di un elenco con lo stile [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
@@ -1050,7 +1050,7 @@ Riferimento a una variabile BOOL che verrà impostata su TRUE se *PT* si trova a
 
 Indice dell'elemento più vicino al punto specificato in *PT*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile utilizzare questa funzione per determinare l'elemento della casella di riepilogo su cui si sposta il cursore del mouse.
 
@@ -1071,7 +1071,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 *lpMeasureItemStruct*<br/>
 Puntatore long a una struttura [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro e compilare la struttura `MEASUREITEMSTRUCT` per informare le finestre delle dimensioni della casella di riepilogo. Se la casella di riepilogo viene creata con lo stile [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , il Framework chiama questa funzione membro per ogni elemento nella casella di riepilogo. In caso contrario, questo membro viene chiamato una sola volta.
 
@@ -1083,7 +1083,7 @@ Per una descrizione della struttura `MEASUREITEMSTRUCT`, vedere [CWnd:: OnMeasur
 
 [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]
 
-##  <a name="resetcontent"></a>  CListBox::ResetContent
+##  <a name="resetcontent"></a>CListBox:: ResetContent
 
 Rimuove tutti gli elementi da una casella di riepilogo.
 
@@ -1117,7 +1117,7 @@ Punta alla stringa con terminazione null che contiene il prefisso da ricercare. 
 
 Indice dell'elemento selezionato se la ricerca ha avuto esito positivo. Se la ricerca ha avuto esito negativo, il valore restituito è LB_ERR e la selezione corrente non viene modificata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se necessario, viene visualizzata la casella di riepilogo per visualizzare l'elemento selezionato.
 
@@ -1131,7 +1131,7 @@ Usare la funzione membro `FindString` per trovare una stringa senza selezionare 
 
 [!code-cpp[NVC_MFC_CListBox#27](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]
 
-##  <a name="selitemrange"></a>  CListBox::SelItemRange
+##  <a name="selitemrange"></a>CListBox:: SelItemRange
 
 Seleziona più elementi consecutivi in una casella di riepilogo a selezione multipla.
 
@@ -1157,7 +1157,7 @@ Specifica l'indice in base zero dell'ultimo elemento da impostare.
 
 LB_ERR se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare questa funzione membro solo con caselle di riepilogo a selezione multipla. Se è necessario selezionare un solo elemento in una casella di riepilogo a selezione multipla, ovvero se *nFirstItem* è uguale a *nLastItem* , chiamare invece la funzione membro [SetSel](#setsel) .
 
@@ -1165,7 +1165,7 @@ Usare questa funzione membro solo con caselle di riepilogo a selezione multipla.
 
 [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]
 
-##  <a name="setanchorindex"></a>  CListBox::SetAnchorIndex
+##  <a name="setanchorindex"></a>CListBox:: SetAnchorIndex
 
 Imposta l'ancoraggio in una casella di riepilogo a selezione multipla per iniziare una selezione estesa.
 
@@ -1178,7 +1178,7 @@ void SetAnchorIndex(int nIndex);
 *nIndex*<br/>
 Specifica l'indice in base zero dell'elemento della casella di riepilogo che sarà l'ancoraggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 In una casella di riepilogo a selezione multipla, l'elemento di ancoraggio è il primo o l'ultimo elemento in un blocco di elementi selezionati contigui.
 
@@ -1186,7 +1186,7 @@ In una casella di riepilogo a selezione multipla, l'elemento di ancoraggio è il
 
 [!code-cpp[NVC_MFC_CListBox#29](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]
 
-##  <a name="setcaretindex"></a>  CListBox::SetCaretIndex
+##  <a name="setcaretindex"></a>CListBox:: SetCaretIndex
 
 Imposta il rettangolo di attivazione sull'elemento in corrispondenza dell'indice specificato in una casella di riepilogo a selezione multipla.
 
@@ -1208,7 +1208,7 @@ Se questo valore è 0, l'elemento viene spostato fino a quando non è completame
 
 LB_ERR se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se l'elemento non è visibile, viene spostato nella visualizzazione.
 
@@ -1243,14 +1243,14 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametri
 
-*nSelect*<br/>
+*nSelezionare*<br/>
 Specifica l'indice in base zero della stringa da selezionare. Se *nSelezionare* è-1, la casella di riepilogo è impostata su nessuna selezione.
 
 ### <a name="return-value"></a>Valore restituito
 
 LB_ERR se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando la nuova stringa è selezionata, la casella di riepilogo rimuove l'evidenziazione dalla stringa selezionata in precedenza.
 
@@ -1275,7 +1275,7 @@ void SetHorizontalExtent(int cxExtent);
 *cxExtent*<br/>
 Specifica il numero di pixel in base al quale è possibile scorrere orizzontalmente la casella di riepilogo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se la dimensione della casella di riepilogo è inferiore a questo valore, la barra di scorrimento orizzontale scorre orizzontalmente gli elementi nella casella di riepilogo. Se la casella di riepilogo è di grandi dimensioni o maggiore di questo valore, la barra di scorrimento orizzontale viene nascosta.
 
@@ -1335,7 +1335,7 @@ Specifica il puntatore da associare all'elemento.
 
 LB_ERR se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo puntatore rimane valido per tutta la durata della casella di riepilogo, anche se la posizione relativa dell'elemento all'interno della casella di riepilogo potrebbe cambiare quando gli elementi vengono aggiunti o rimossi. Di conseguenza, l'indice dell'elemento all'interno della casella può essere modificato, ma il puntatore rimane affidabile.
 
@@ -1365,7 +1365,7 @@ Specifica l'altezza, in pixel, dell'elemento.
 
 LB_ERR se l'indice o l'altezza non è valido.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se la casella di riepilogo dispone dello stile [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , questa funzione imposta l'altezza dell'elemento specificato da *nIndex*. In caso contrario, questa funzione imposta l'altezza di tutti gli elementi nella casella di riepilogo.
 
@@ -1390,7 +1390,7 @@ Nuovo valore dell'identificatore delle impostazioni locali (LCID) da impostare p
 
 Valore dell'identificatore delle impostazioni locali (LCID) precedente per questa casella di riepilogo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se `SetLocale` non viene chiamato, le impostazioni locali predefinite vengono ottenute dal sistema. Le impostazioni locali predefinite del sistema possono essere modificate tramite l'applicazione regionale (o internazionale) del pannello di controllo.
 
@@ -1398,7 +1398,7 @@ Se `SetLocale` non viene chiamato, le impostazioni locali predefinite vengono ot
 
 [!code-cpp[NVC_MFC_CListBox#37](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]
 
-##  <a name="setsel"></a>  CListBox::SetSel
+##  <a name="setsel"></a>CListBox:: SetSel
 
 Seleziona una stringa in una casella di riepilogo a selezione multipla.
 
@@ -1420,7 +1420,7 @@ Specifica come impostare la selezione. Se *bSelect* è true, la stringa viene se
 
 LB_ERR se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare questa funzione membro solo con caselle di riepilogo a selezione multipla.
 
@@ -1458,7 +1458,7 @@ Punta al primo membro di una matrice di numeri interi contenenti le posizioni di
 
 Diverso da zero se tutte le schede sono state impostate; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostare le tabulazioni sulle dimensioni predefinite di 2 unità di dialogo, chiamare la versione senza parametri di questa funzione membro. Per impostare le tabulazioni su una dimensione diversa da 2, chiamare la versione con l'argomento *cxEachStop* .
 
@@ -1487,7 +1487,7 @@ Specifica l'indice in base zero dell'elemento della casella di riepilogo.
 
 Zero in caso di esito positivo o LB_ERR se si verifica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il sistema scorre la casella di riepilogo finché l'elemento specificato da *nIndex* non viene visualizzato nella parte superiore della casella di riepilogo o se è stato raggiunto l'intervallo massimo di scorrimento.
 
@@ -1507,7 +1507,7 @@ virtual int VKeyToItem(
 
 ### <a name="parameters"></a>Parametri
 
-*nKey*<br/>
+*nPer*<br/>
 Codice della chiave virtuale della chiave che l'utente ha premuto. Per un elenco di codici chiave virtuali standard, vedere Winuser. h
 
 *nIndex*<br/>
@@ -1517,7 +1517,7 @@ Posizione corrente del punto di inserimento della casella di riepilogo.
 
 Restituisce-2 per nessuna azione ulteriore,-1 per l'azione predefinita o un numero non negativo per specificare un indice di un elemento della casella di riepilogo su cui eseguire l'azione predefinita per la sequenza di tasti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il messaggio WM_VKEYTOITEM viene inviato dalla casella di riepilogo quando riceve un messaggio di WM_KEYDOWN, ma solo se la casella di riepilogo soddisfa i requisiti seguenti:
 
@@ -1545,6 +1545,6 @@ Un valore restituito pari a 0 o superiore specifica l'indice di un elemento nell
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Classe CButton](../../mfc/reference/cbutton-class.md)<br/>
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[Classe CEdit](../../mfc/reference/cedit-class.md)<br/>
 [Classe CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Classe CStatic](../../mfc/reference/cstatic-class.md)
