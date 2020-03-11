@@ -9,11 +9,11 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
 ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495455"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863194"
 ---
 # <a name="server-registration-global-functions"></a>Funzioni globali di registrazione server
 
@@ -34,7 +34,7 @@ Queste funzioni forniscono supporto per la registrazione e l'annullamento della 
 
 **Intestazione:** atlbase. h
 
-##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer
+##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer
 
 Questa funzione viene chiamata per registrare ogni oggetto nella mappa oggetto.
 
@@ -60,13 +60,13 @@ Punta al CLSID dell'oggetto da registrare. Se NULL, verranno registrati tutti gl
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`AtlComModuleRegisterServer`esegue il mapping dell'oggetto generato automaticamente ATL e registra ogni oggetto della mappa. Se *pCLSID* non è null, viene registrato solo l'oggetto a cui fa riferimento *pCLSID* . in caso contrario, vengono registrati tutti gli oggetti.
+`AtlComModuleRegisterServer` esamina la mappa degli oggetti generata automaticamente da ATL e registra ogni oggetto nella mappa. Se *pCLSID* non è null, viene registrato solo l'oggetto a cui fa riferimento *pCLSID* . in caso contrario, vengono registrati tutti gli oggetti.
 
 Questa funzione viene chiamata da [CAtlComModule:: RegisterServer](catlcommodule-class.md#registerserver).
 
-##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
+##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer
 
 Questa funzione viene chiamata per annullare la registrazione di ogni oggetto nella mappa oggetto.
 
@@ -92,13 +92,13 @@ Punta al CLSID dell'oggetto di cui annullare la registrazione. Se viene annullat
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`AtlComModuleUnregisterServer`esamina la mappa dell'oggetto ATL e Annulla la registrazione di ogni oggetto nella mappa. Se *pCLSID* non è null, viene annullata la registrazione solo dell'oggetto a cui fa riferimento *pCLSID* . in caso contrario, viene annullata la registrazione di tutti gli oggetti.
+`AtlComModuleUnregisterServer` esamina la mappa dell'oggetto ATL e Annulla la registrazione di ogni oggetto nella mappa. Se *pCLSID* non è null, viene annullata la registrazione solo dell'oggetto a cui fa riferimento *pCLSID* . in caso contrario, viene annullata la registrazione di tutti gli oggetti.
 
 Questa funzione viene chiamata da [CAtlComModule:: UnregisterServer](catlcommodule-class.md#unregisterserver).
 
-##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects
+##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects
 
 Questa funzione viene chiamata per registrare gli oggetti della classe.
 
@@ -124,11 +124,11 @@ Determina i tipi di connessione all'oggetto classe. I valori possibili sono REGC
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione helper viene utilizzata da [CComModule:: RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsoleto in ATL 7,0) e [CAtlExeModuleT:: RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
 
-##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects
+##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects
 
 Questa funzione viene chiamata per rimuovere le class factory dalla tabella degli oggetti in esecuzione.
 
@@ -145,11 +145,11 @@ Puntatore al modulo COM.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione helper viene utilizzata da [CComModule:: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsoleto in ATL 7,0) e [CAtlExeModuleT:: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
 
-##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject
 
 Questa funzione viene chiamata per restituire la class factory.
 
@@ -172,14 +172,14 @@ CLSID dell'oggetto da creare.
 *riid*<br/>
 IID dell'interfaccia richiesta.
 
-*ppv*<br/>
+*PPV*<br/>
 Puntatore al puntatore a interfaccia identificato da *riid*. Se l'oggetto non supporta questa interfaccia, *PPV* viene impostato su null.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione helper viene utilizzata da [CComModule:: GetClassObject](ccommodule-class.md#getclassobject) (obsoleto in ATL 7,0) e [CAtlDllModuleT:: GetClassObject](catldllmodulet-class.md#getclassobject).
 

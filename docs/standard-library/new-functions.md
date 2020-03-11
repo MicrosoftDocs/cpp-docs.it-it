@@ -7,25 +7,25 @@ f1_keywords:
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243670"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854939"
 ---
 # <a name="ltnewgt-functions"></a>Funzioni &lt;new&gt;
 
-## <a name="get_new_handler"></a> get_new_handler
+## <a name="get_new_handler"></a>get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Restituisce l'attuale `new_handler`.
+Restituisce l'`new_handler`corrente.
 
-## <a name="launder"></a> riciclare
+## <a name="launder"></a>riciclare
 
 ```cpp
 template <class T>
@@ -34,18 +34,18 @@ template <class T>
 
 ### <a name="parameters"></a>Parametri
 
-*PTR*\
-L'indirizzo di un byte in memoria che contiene un oggetto il cui tipo è simile a *T*.
+\ *ptr*
+Indirizzo di un byte in memoria che include un oggetto il cui tipo è simile a *T*.
 
 ### <a name="return-value"></a>Valore restituito
 
-Hodnotu typu *T\**  che punta a X.
+Valore di tipo *T\** che punta a X.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Detta anche una barriera di ottimizzazione del puntatore.
+Definito anche barriera di ottimizzazione del puntatore.
 
-Quando il valore del relativo argomento può essere usato in un'espressione costante, usato come espressione costante. Un byte di spazio di archiviazione è raggiungibile tramite un valore del puntatore che punta a un oggetto se entro lo spazio di archiviazione occupata da un altro oggetto, un oggetto con un puntatore simile.
+Usato come espressione costante quando il valore del relativo argomento può essere usato in un'espressione costante. Un byte di archiviazione è raggiungibile tramite un valore di puntatore che punta a un oggetto se all'interno dell'archiviazione occupata da un altro oggetto, un oggetto con un puntatore simile.
 
 ### <a name="example"></a>Esempio
 
@@ -59,15 +59,15 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a> nothrow
+## <a name="nothrow"></a>nothrow
 
-Fornisce un oggetto da utilizzare come argomento per il **nothrow** le versioni di **nuove** e **Elimina**.
+Fornisce un oggetto da usare come argomento per le versioni **nothrow** di **New** e **Delete**.
 
 ```cpp
 extern const std::nothrow_t nothrow;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto viene usato come argomento di funzione in modo da stabilire una corrispondenza con il tipo di parametro [std::nothrow_t](../standard-library/nothrow-t-structure.md).
 
@@ -75,9 +75,9 @@ L'oggetto viene usato come argomento di funzione in modo da stabilire una corris
 
 Vedere [operator new](../standard-library/new-operators.md#op_new) e [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) per esempi relativi all'uso di `std::nothrow_t` come parametro di funzione.
 
-## <a name="set_new_handler"></a> set_new_handler
+## <a name="set_new_handler"></a>set_new_handler
 
-Installa una funzione utente che deve essere chiamato quando **operatore new** non riesce ad allocare memoria.
+Installa una funzione utente che deve essere chiamata quando l' **operatore New** non riesce nel tentativo di allocare memoria.
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -85,16 +85,16 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Pnew*\
-Il `new_handler` da installare.
+\ *Pnew*
+`new_handler` da installare.
 
 ### <a name="return-value"></a>Valore restituito
 
 0 nella prima chiamata e oggetto `new_handler` precedente nelle chiamate successive.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione Archivia *Pnew* in un valore statico [new_handler](../standard-library/new-typedefs.md#new_handler) puntatore gestito e quindi restituisce il valore archiviato in precedenza nel puntatore. Il nuovo gestore di è utilizzato da [operatore new](../standard-library/new-operators.md#op_new)(**size_t**).
+La funzione Archivia *Pnew* in un puntatore a un [nuovo gestore](../standard-library/new-typedefs.md#new_handler) statico che gestisce, quindi restituisce il valore archiviato in precedenza nel puntatore. Il nuovo gestore viene usato da [operator new](../standard-library/new-operators.md#op_new)(**size_t**).
 
 ### <a name="example"></a>Esempio
 

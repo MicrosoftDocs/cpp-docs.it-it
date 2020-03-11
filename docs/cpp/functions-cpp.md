@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301509"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884158"
 ---
 # <a name="functions-c"></a>Funzioni (C++)
 
@@ -408,7 +408,7 @@ Esistono diversi modi per restituire più di un valore da una funzione:
 
 C++ supporta i puntatori di funzione in modo analogo al linguaggio C. Un'alternativa più indipendente dai tipi consiste in genere nell'usare un oggetto di funzione.
 
-È consigliabile usare **typedef** per dichiarare un alias per il tipo di puntatore a funzione se si dichiara una funzione che restituisce un tipo di puntatore a funzione.  Esempio:
+È consigliabile usare **typedef** per dichiarare un alias per il tipo di puntatore a funzione se si dichiara una funzione che restituisce un tipo di puntatore a funzione.  Ad esempio:
 
 ```cpp
 typedef int (*fp)(int);

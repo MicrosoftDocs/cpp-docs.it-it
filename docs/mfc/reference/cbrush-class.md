@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507441"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876048"
 ---
 # <a name="cbrush-class"></a>Classe CBrush
 
@@ -45,32 +45,32 @@ class CBrush : public CGdiObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CBrush::CBrush](#cbrush)|Costruisce un oggetto `CBrush`.|
+|[CBrush:: CBrush](#cbrush)|Costruisce un oggetto `CBrush`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inizializza un pennello con lo stile, il colore e il criterio specificati in una struttura [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inizializza un pennello con un criterio specificato da una bitmap indipendente dal dispositivo (DIB).|
-|[CBrush::CreateHatchBrush](#createhatchbrush)|Inizializza un pennello con il motivo e il colore tratteggiato specificati.|
-|[CBrush::CreatePatternBrush](#createpatternbrush)|Inizializza un pennello con un criterio specificato da una bitmap.|
-|[CBrush::CreateSolidBrush](#createsolidbrush)|Inizializza un pennello con il colore a tinta unita specificato.|
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Crea un pennello che rappresenta il colore di sistema predefinito.|
-|[CBrush::FromHandle](#fromhandle)|Restituisce un puntatore a un `CBrush` oggetto quando viene fornito un handle a un `HBRUSH` oggetto di Windows.|
-|[CBrush::GetLogBrush](#getlogbrush)|Ottiene una struttura [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
+|[CBrush:: CreateBrushIndirect](#createbrushindirect)|Inizializza un pennello con lo stile, il colore e il criterio specificati in una struttura [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
+|[CBrush:: CreateDIBPatternBrush](#createdibpatternbrush)|Inizializza un pennello con un criterio specificato da una bitmap indipendente dal dispositivo (DIB).|
+|[CBrush:: CreateHatchBrush](#createhatchbrush)|Inizializza un pennello con il motivo e il colore tratteggiato specificati.|
+|[CBrush:: CreatePatternBrush](#createpatternbrush)|Inizializza un pennello con un criterio specificato da una bitmap.|
+|[CBrush:: CreateSolidBrush](#createsolidbrush)|Inizializza un pennello con il colore a tinta unita specificato.|
+|[CBrush:: CreateSysColorBrush](#createsyscolorbrush)|Crea un pennello che rappresenta il colore di sistema predefinito.|
+|[CBrush:: FromHandle](#fromhandle)|Restituisce un puntatore a un oggetto `CBrush` quando viene fornito un handle a un oggetto Windows `HBRUSH`.|
+|[CBrush:: GetLogBrush](#getlogbrush)|Ottiene una struttura [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBrush:: operator HBRUSH](#operator_hbrush)|Restituisce l'handle di Windows collegato all' `CBrush` oggetto.|
+|[CBrush:: operator HBRUSH](#operator_hbrush)|Restituisce l'handle di Windows collegato all'oggetto `CBrush`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per usare un `CBrush` oggetto, costruire un `CBrush` oggetto `CDC` e passarlo a una funzione membro che richiede un pennello.
+Per usare un oggetto `CBrush`, costruire un oggetto `CBrush` e passarlo a qualsiasi funzione membro `CDC` che richiede un pennello.
 
 I pennelli possono essere a tinta unita, tratteggiati o con modello.
 
@@ -107,38 +107,38 @@ Specifica il colore di primo piano del pennello come colore RGB. Se il pennello 
 *nIndex*<br/>
 Specifica lo stile di tratteggio del pennello. Può essere uno dei valori seguenti:
 
-- HS_BDIAGONAL il tratteggio verso il basso (da sinistra a destra) a 45 gradi
+- HS_BDIAGONAL tratteggio verso il basso (da sinistra a destra) a 45 gradi
 
 - Campitura orizzontale e verticale HS_CROSS
 
 - HS_DIAGCROSS campitura a 45 gradi
 
-- HS_FDIAGONAL verso l'alto (da sinistra a destra) a 45 gradi
+- HS_FDIAGONAL tratteggio verso l'alto (da sinistra a destra) a 45 gradi
 
-- Tratteggio orizzontale HS_HORIZONTAL
+- HS_HORIZONTAL tratteggio orizzontale
 
-- Tratteggio verticale HS_VERTICAL
+- HS_VERTICAL tratteggio verticale
 
 *pBitmap*<br/>
-Punta a un `CBitmap` oggetto che specifica una bitmap con cui disegnare il pennello.
+Punta a un oggetto `CBitmap` che specifica una bitmap con cui disegnare il pennello.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`CBrush`dispone di quattro costruttori di overload. Il costruttore senza argomenti costruisce un `CBrush` oggetto non inizializzato che deve essere inizializzato prima di poter essere utilizzato.
+`CBrush` dispone di quattro costruttori di overload. Il costruttore senza argomenti costruisce un oggetto `CBrush` non inizializzato che deve essere inizializzato prima di poter essere utilizzato.
 
-Se si usa il costruttore senza argomenti, è necessario inizializzare l'oggetto `CBrush` risultante con [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush)o [ CreateDIBPatternBrush](#createdibpatternbrush). Se si usa uno dei costruttori che accetta argomenti, non sono necessarie altre inizializzazioni. Se vengono rilevati errori, i costruttori con argomenti possono generare un'eccezione, mentre il costruttore senza argomenti avrà sempre esito positivo.
+Se si usa il costruttore senza argomenti, è necessario inizializzare l'oggetto `CBrush` risultante con [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush)o [CreateDIBPatternBrush](#createdibpatternbrush). Se si usa uno dei costruttori che accetta argomenti, non sono necessarie altre inizializzazioni. Se vengono rilevati errori, i costruttori con argomenti possono generare un'eccezione, mentre il costruttore senza argomenti avrà sempre esito positivo.
 
 Il costruttore con un singolo parametro [COLORREF](/windows/win32/gdi/colorref) costruisce un pennello a tinta unita con il colore specificato. Il colore specifica un valore RGB e può essere costruito con la macro RGB in WINDOWS. H.
 
 Il costruttore con due parametri costruisce un pennello di tratteggio. Il parametro *nIndex* specifica l'indice di un motivo tratteggiato. Il parametro *crColor* specifica il colore.
 
-Il costruttore con un `CBitmap` parametro costruisce un pennello con pattern. Il parametro identifica una bitmap. Si presuppone che la bitmap sia stata creata con [CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)o [CBitmap:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). La dimensione minima per una bitmap da usare in un modello di riempimento è 8 pixel per 8 pixel.
+Il costruttore con un parametro `CBitmap` costruisce un pennello con pattern. Il parametro identifica una bitmap. Si presuppone che la bitmap sia stata creata con [CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)o [CBitmap:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). La dimensione minima per una bitmap da usare in un modello di riempimento è 8 pixel per 8 pixel.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]
 
-##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect
+##  <a name="createbrushindirect"></a>CBrush:: CreateBrushIndirect
 
 Inizializza un pennello con uno stile, un colore e un criterio specificati in una struttura [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) .
 
@@ -155,7 +155,7 @@ Punta a una struttura [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) c
 
 Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il pennello può essere selezionato successivamente come pennello corrente per qualsiasi contesto di dispositivo.
 
@@ -165,7 +165,7 @@ Un pennello creato con una bitmap monocromatica (1 piano, 1 bit per pixel) viene
 
 [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]
 
-##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush
+##  <a name="createdibpatternbrush"></a>CBrush:: CreateDIBPatternBrush
 
 Inizializza un pennello con il criterio specificato da una bitmap indipendente dal dispositivo (DIB).
 
@@ -185,38 +185,38 @@ BOOL CreateDIBPatternBrush(
 Identifica un oggetto memoria globale contenente una bitmap (Device-Independent Bitmap) compressa.
 
 *nUsage*<br/>
-Specifica se i `bmiColors[]` campi della struttura di dati [BITMAPINFO](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) (una parte di "DIB compresso") contengono valori RGB espliciti o indici nella tavolozza logica attualmente realizzata. Il parametro deve essere uno dei valori seguenti:
+Specifica se i campi `bmiColors[]` della struttura di dati [BITMAPINFO](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) (una parte della "DIB compressa") contengono valori RGB espliciti o indici nella tavolozza logica attualmente realizzata. Il parametro deve essere uno dei valori seguenti:
 
 - DIB_PAL_COLORS la tabella dei colori è costituita da una matrice di indici a 16 bit.
 
 - DIB_RGB_COLORS la tabella dei colori contiene valori RGB letterali.
 
 *lpPackedDIB*<br/>
-Punta a un oggetto DIB compresso costituito da `BITMAPINFO` una struttura immediatamente seguita da una matrice di byte che definisce i pixel della bitmap.
+Punta a un oggetto DIB compresso costituito da una struttura di `BITMAPINFO` immediatamente seguita da una matrice di byte che definisce i pixel della bitmap.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il pennello può essere selezionato successivamente per qualsiasi contesto di dispositivo che supporta le operazioni raster.
 
 Le due versioni variano a seconda del modo in cui si gestisce la DIB:
 
-- Nella prima versione, per ottenere un handle per la DIB, chiamare la funzione Windows `GlobalAlloc` per allocare un blocco di memoria globale e quindi riempire la memoria con l'oggetto DIB compresso.
+- Nella prima versione, per ottenere un handle per la DIB, chiamare la funzione `GlobalAlloc` di Windows per allocare un blocco di memoria globale e quindi riempire la memoria con l'oggetto DIB compresso.
 
 - Nella seconda versione non è necessario chiamare `GlobalAlloc` per allocare memoria per l'oggetto DIB compresso.
 
-Una DIB compressa è costituita `BITMAPINFO` da una struttura di dati immediatamente seguita dalla matrice di byte che definisce i pixel della bitmap. Le bitmap utilizzate come modelli di riempimento devono essere 8 pixel per 8 pixel. Se la bitmap è più grande, Windows crea un modello di riempimento usando solo i bit corrispondenti alle prime 8 righe e 8 colonne di pixel nell'angolo superiore sinistro della bitmap.
+Una DIB compressa è costituita da una struttura di dati `BITMAPINFO` immediatamente seguita dalla matrice di byte che definisce i pixel della bitmap. Le bitmap utilizzate come modelli di riempimento devono essere 8 pixel per 8 pixel. Se la bitmap è più grande, Windows crea un modello di riempimento usando solo i bit corrispondenti alle prime 8 righe e 8 colonne di pixel nell'angolo superiore sinistro della bitmap.
 
 Quando un'applicazione seleziona un pennello di tipo DIB a due colori in un contesto di dispositivo monocromatico, Windows ignora i colori specificati nella DIB e visualizza invece il pennello del pattern usando il testo corrente e i colori di sfondo del contesto di dispositivo. I pixel di cui è stato eseguito il mapping al primo colore (in corrispondenza dell'offset 0 nella tabella dei colori DIB) della DIB vengono visualizzati utilizzando il colore del testo. I pixel con mapping al secondo colore (in corrispondenza dell'offset 1 nella tabella dei colori) vengono visualizzati utilizzando il colore di sfondo.
 
 Per informazioni sull'utilizzo delle funzioni di Windows seguenti, vedere la Windows SDK:
 
-- [CreateDIBPatternBrush](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrush) Questa funzione viene fornita solo per la compatibilità con le applicazioni scritte per le versioni di Windows precedenti alla 3,0; `CreateDIBPatternBrushPt` utilizzare la funzione.
+- [CreateDIBPatternBrush](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrush) (questa funzione viene fornita solo per la compatibilità con le applicazioni scritte per le versioni di Windows precedenti alla 3,0; usare la funzione `CreateDIBPatternBrushPt`).
 
-- [CreateDIBPatternBrushPt](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrushpt) Questa funzione deve essere utilizzata per le applicazioni basate su Win32.
+- [CreateDIBPatternBrushPt](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrushpt) (questa funzione deve essere usata per le applicazioni basate su Win32).
 
 - [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)
 
@@ -224,7 +224,7 @@ Per informazioni sull'utilizzo delle funzioni di Windows seguenti, vedere la Win
 
 [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]
 
-##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush
+##  <a name="createhatchbrush"></a>CBrush:: CreateHatchBrush
 
 Inizializza un pennello con il motivo e il colore tratteggiato specificati.
 
@@ -239,17 +239,17 @@ BOOL CreateHatchBrush(
 *nIndex*<br/>
 Specifica lo stile di tratteggio del pennello. Può essere uno dei valori seguenti:
 
-- HS_BDIAGONAL il tratteggio verso il basso (da sinistra a destra) a 45 gradi
+- HS_BDIAGONAL tratteggio verso il basso (da sinistra a destra) a 45 gradi
 
 - Campitura orizzontale e verticale HS_CROSS
 
 - HS_DIAGCROSS campitura a 45 gradi
 
-- HS_FDIAGONAL verso l'alto (da sinistra a destra) a 45 gradi
+- HS_FDIAGONAL tratteggio verso l'alto (da sinistra a destra) a 45 gradi
 
-- Tratteggio orizzontale HS_HORIZONTAL
+- HS_HORIZONTAL tratteggio orizzontale
 
-- Tratteggio verticale HS_VERTICAL
+- HS_VERTICAL tratteggio verticale
 
 *crColor*<br/>
 Specifica il colore di primo piano del pennello come colore RGB (il colore dei tratteggio). Per ulteriori informazioni, vedere [COLORREF](/windows/win32/gdi/colorref) nella Windows SDK.
@@ -258,7 +258,7 @@ Specifica il colore di primo piano del pennello come colore RGB (il colore dei t
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il pennello può essere selezionato successivamente come pennello corrente per qualsiasi contesto di dispositivo.
 
@@ -266,7 +266,7 @@ Il pennello può essere selezionato successivamente come pennello corrente per q
 
 [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]
 
-##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush
+##  <a name="createpatternbrush"></a>CBrush:: CreatePatternBrush
 
 Inizializza un pennello con un criterio specificato da una bitmap.
 
@@ -283,7 +283,7 @@ Identifica una bitmap.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il pennello può essere selezionato successivamente per qualsiasi contesto di dispositivo che supporta le operazioni raster. La bitmap identificata da *pBitmap* viene in genere inizializzata tramite la funzione [CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)o [CBitmap:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) .
 
@@ -299,7 +299,7 @@ Per informazioni sull'uso di [CreatePatternBrush](/windows/win32/api/wingdi/nf-w
 
 [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]
 
-##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush
+##  <a name="createsolidbrush"></a>CBrush:: CreateSolidBrush
 
 Inizializza un pennello con un colore a tinta unita specificato.
 
@@ -316,17 +316,17 @@ Struttura [COLORREF](/windows/win32/gdi/colorref) che specifica il colore del pe
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il pennello può essere selezionato successivamente come pennello corrente per qualsiasi contesto di dispositivo.
 
-Quando un'applicazione ha terminato di usare il pennello creato `CreateSolidBrush`da, deve selezionare il pennello al di fuori del contesto di dispositivo.
+Quando un'applicazione ha terminato di usare il pennello creato da `CreateSolidBrush`, deve selezionare il pennello al di fuori del contesto di dispositivo.
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio per [CBrush:: CBrush](#cbrush).
 
-##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush
+##  <a name="createsyscolorbrush"></a>CBrush:: CreateSysColorBrush
 
 Inizializza un colore del pennello.
 
@@ -343,11 +343,11 @@ Specifica un indice colori. Questo valore corrisponde al colore utilizzato per d
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il pennello può essere selezionato successivamente come pennello corrente per qualsiasi contesto di dispositivo.
 
-Quando un'applicazione ha terminato di usare il pennello creato `CreateSysColorBrush`da, deve selezionare il pennello al di fuori del contesto di dispositivo.
+Quando un'applicazione ha terminato di usare il pennello creato da `CreateSysColorBrush`, deve selezionare il pennello al di fuori del contesto di dispositivo.
 
 ### <a name="example"></a>Esempio
 
@@ -355,7 +355,7 @@ Quando un'applicazione ha terminato di usare il pennello creato `CreateSysColorB
 
 ##  <a name="fromhandle"></a>CBrush:: FromHandle
 
-Restituisce un puntatore a un `CBrush` oggetto quando viene fornito un handle a un oggetto [HBRUSH](#operator_hbrush) Windows.
+Restituisce un puntatore a un oggetto `CBrush` quando viene fornito un handle a un oggetto [HBRUSH](#operator_hbrush) Windows.
 
 ```
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
@@ -368,11 +368,11 @@ HANDLE per un pennello GDI di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a un `CBrush` oggetto in caso di esito positivo; in caso contrario null.
+Puntatore a un oggetto `CBrush` in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se un `CBrush` oggetto non è già collegato all'handle, viene creato e `CBrush` collegato un oggetto temporaneo. Questo oggetto `CBrush` temporaneo è valido solo fino alla successiva esecuzione del tempo di inattività nel ciclo di eventi dell'applicazione. A questo punto, vengono eliminati tutti gli oggetti grafici temporanei. In altre parole, l'oggetto temporaneo è valido solo durante l'elaborazione di un messaggio di finestra.
+Se un oggetto `CBrush` non è ancora collegato all'handle, viene creato e collegato un oggetto `CBrush` temporaneo. Questo oggetto `CBrush` temporaneo è valido solo fino alla successiva esecuzione del tempo di inattività nel ciclo di eventi dell'applicazione. A questo punto, vengono eliminati tutti gli oggetti grafici temporanei. In altre parole, l'oggetto temporaneo è valido solo durante l'elaborazione di un messaggio di finestra.
 
 Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere [oggetti grafici](/windows/win32/gdi/graphic-objects) nell'Windows SDK.
 
@@ -380,9 +380,9 @@ Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere [oggetti gra
 
   Vedere l'esempio per [CBrush:: CBrush](#cbrush).
 
-##  <a name="getlogbrush"></a>  CBrush::GetLogBrush
+##  <a name="getlogbrush"></a>CBrush:: GetLogBrush
 
-Chiamare questa funzione membro per recuperare la `LOGBRUSH` struttura.
+Chiamare questa funzione membro per recuperare la struttura del `LOGBRUSH`.
 
 ```
 int GetLogBrush(LOGBRUSH* pLogBrush);
@@ -401,11 +401,11 @@ Se la funzione ha esito positivo e *pLogBrush* è null, il valore restituito è 
 
 Se la funzione ha esito negativo, il valore restituito è 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La `LOGBRUSH` struttura definisce lo stile, il colore e il modello di un pennello.
+La struttura `LOGBRUSH` definisce lo stile, il colore e il modello di un pennello.
 
-Ad esempio, chiamare `GetLogBrush` per trovare la corrispondenza con il colore o lo schema di una bitmap.
+Ad esempio, chiamare `GetLogBrush` per trovare la corrispondenza con il colore o il motivo specifico di una bitmap.
 
 ### <a name="example"></a>Esempio
 
@@ -413,7 +413,7 @@ Ad esempio, chiamare `GetLogBrush` per trovare la corrispondenza con il colore o
 
 ##  <a name="operator_hbrush"></a>CBrush:: operator HBRUSH
 
-Utilizzare questo operatore per ottenere l'handle di Windows GDI associato dell' `CBrush` oggetto.
+Utilizzare questo operatore per ottenere l'handle GDI di Windows collegato dell'oggetto `CBrush`.
 
 ```
 operator HBRUSH() const;
@@ -421,9 +421,9 @@ operator HBRUSH() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, un handle per l'oggetto GDI Windows `CBrush` rappresentato dall'oggetto; in caso contrario, null.
+In caso di esito positivo, un handle per l'oggetto GDI di Windows rappresentato dall'oggetto `CBrush`; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo operatore è un operatore di cast, che supporta l'uso diretto di un oggetto HBRUSH.
 
