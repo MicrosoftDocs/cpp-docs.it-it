@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303888"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867301"
 ---
 # <a name="cdaofieldexchange-class"></a>Classe CDaoFieldExchange
 
@@ -37,19 +37,19 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDaoFieldExchange:: IsValidOperation](#isvalidoperation)|Restituisce un valore diverso da zero se l'operazione corrente è appropriata per il tipo di campo da aggiornare.|
 |[CDaoFieldExchange:: SetFieldType](#setfieldtype)|Specifica il tipo di membro dati del recordset, ovvero la colonna o il parametro, rappresentato da tutte le chiamate successive alle funzioni DFX fino alla chiamata successiva a `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDaoFieldExchange:: m_nOperation](#m_noperation)|Operazione DFX eseguita dalla chiamata corrente alla funzione membro `DoFieldExchange` del recordset.|
 |[CDaoFieldExchange:: m_prs](#m_prs)|Puntatore al recordset in cui vengono eseguite le operazioni di DFX.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 `CDaoFieldExchange` non dispone di una classe di base.
 
@@ -89,7 +89,7 @@ BOOL IsValidOperation();
 
 Diverso da zero se l'operazione corrente è appropriata per il tipo di campo da aggiornare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Alcune delle operazioni eseguite dal meccanismo DFX si applicano solo a uno dei tipi di campo possibili. Seguire il modello delle funzioni DFX esistenti.
 
@@ -99,7 +99,7 @@ Per ulteriori informazioni sulla scrittura di routine DFX personalizzate, vedere
 
 Identifica l'operazione da eseguire sull'oggetto [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) associato all'oggetto di scambio del campo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto `CDaoFieldExchange` fornisce il contesto per una serie di operazioni DFX diverse sul recordset.
 
@@ -130,7 +130,7 @@ I valori possibili di `m_nOperation` sono:
 
 Contiene un puntatore all'oggetto [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) associato all'oggetto `CDaoFieldExchange`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="setfieldtype"></a>CDaoFieldExchange:: SetFieldType
 
@@ -149,7 +149,7 @@ Valore dell' **Enumerazione FieldType**, dichiarata in `CDaoFieldExchange`, che 
 
 - `CDaoFieldExchange::param`
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 In genere, ClassWizard scrive questa chiamata. Se si scrive una funzione personalizzata e si usa la procedura guidata per scrivere la funzione di `DoFieldExchange`, aggiungere chiamate alla propria funzione al di fuori della mappa dei campi. Se non si utilizza la procedura guidata, non sarà presente una mappa dei campi. La chiamata precede le chiamate alle funzioni DFX, una per ogni membro dati di campo della classe e identifica il tipo di campo come `CDaoFieldExchange::outputColumn`.
 

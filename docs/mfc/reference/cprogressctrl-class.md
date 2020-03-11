@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 9d63a1113e521eb73c99c47b335eb7ab00ccd753
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502857"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866324"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 
@@ -65,37 +65,37 @@ class CProgressCtrl : public CWnd
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CProgressCtrl::CProgressCtrl](#cprogressctrl)|Costruisce un oggetto `CProgressCtrl`.|
+|[CProgressCtrl:: CProgressCtrl](#cprogressctrl)|Costruisce un oggetto `CProgressCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CProgressCtrl::Create](#create)|Crea un controllo indicatore di stato e lo collega a un `CProgressCtrl` oggetto.|
-|[CProgressCtrl::CreateEx](#createex)|Crea un controllo di stato con gli stili estesi di Windows specificati e lo associa `CProgressCtrl` a un oggetto.|
-|[CProgressCtrl::GetBarColor](#getbarcolor)|Ottiene il colore della barra dell'indicatore di stato per il controllo indicatore di stato corrente.|
-|[CProgressCtrl::GetBkColor](#getbkcolor)|Ottiene il colore di sfondo dell'indicatore di stato corrente.|
-|[CProgressCtrl::GetPos](#getpos)|Ottiene la posizione corrente dell'indicatore di stato.|
-|[CProgressCtrl::GetRange](#getrange)|Ottiene i limiti inferiore e superiore dell'intervallo del controllo indicatore di stato.|
-|[CProgressCtrl::GetState](#getstate)|Ottiene lo stato del controllo indicatore di stato corrente.|
-|[CProgressCtrl::GetStep](#getstep)|Recupera l'incremento del passaggio per l'indicatore di stato del controllo indicatore di stato corrente.|
-|[CProgressCtrl::OffsetPos](#offsetpos)|Sposta in avanti la posizione corrente di un controllo indicatore di stato in base a un incremento specificato e ridisegnato la barra per riflettere la nuova posizione.|
-|[CProgressCtrl::SetBarColor](#setbarcolor)|Imposta il colore della barra indicatore di stato nel controllo indicatore di stato corrente.|
-|[CProgressCtrl::SetBkColor](#setbkcolor)|Imposta il colore di sfondo per l'indicatore di stato.|
-|[CProgressCtrl::SetMarquee](#setmarquee)|Attiva o disattiva la modalità marquee per il controllo indicatore di stato corrente.|
-|[CProgressCtrl::SetPos](#setpos)|Imposta la posizione corrente per un controllo indicatore di stato e ridisegnato la barra in modo da riflettere la nuova posizione.|
-|[CProgressCtrl::SetRange](#setrange)|Imposta gli intervalli minimo e massimo per un controllo indicatore di stato e ridisegnato la barra in modo da riflettere i nuovi intervalli.|
-|[CProgressCtrl::SetState](#setstate)|Imposta lo stato del controllo indicatore di stato corrente.|
-|[CProgressCtrl::SetStep](#setstep)|Specifica l'incremento del passaggio per un controllo indicatore di stato.|
-|[CProgressCtrl::StepIt](#stepit)|Sposta in avanti la posizione corrente per un controllo indicatore di stato in base all'incremento del passaggio [(vedere il passaggio)](#setstep)e ridisegnato la barra per riflettere la nuova posizione.|
+|[CProgressCtrl:: create](#create)|Crea un controllo indicatore di stato e lo collega a un oggetto `CProgressCtrl`.|
+|[CProgressCtrl:: CreateEx](#createex)|Crea un controllo di stato con gli stili estesi di Windows specificati e lo collega a un oggetto `CProgressCtrl`.|
+|[CProgressCtrl:: GetBarColor](#getbarcolor)|Ottiene il colore della barra dell'indicatore di stato per il controllo indicatore di stato corrente.|
+|[CProgressCtrl:: GetBkColor](#getbkcolor)|Ottiene il colore di sfondo dell'indicatore di stato corrente.|
+|[CProgressCtrl:: GetPos](#getpos)|Ottiene la posizione corrente dell'indicatore di stato.|
+|[CProgressCtrl:: GetRange](#getrange)|Ottiene i limiti inferiore e superiore dell'intervallo del controllo indicatore di stato.|
+|[CProgressCtrl:: GetState](#getstate)|Ottiene lo stato del controllo indicatore di stato corrente.|
+|[CProgressCtrl:: getstep](#getstep)|Recupera l'incremento del passaggio per l'indicatore di stato del controllo indicatore di stato corrente.|
+|[CProgressCtrl:: OffsetPos](#offsetpos)|Sposta in avanti la posizione corrente di un controllo indicatore di stato in base a un incremento specificato e ridisegnato la barra per riflettere la nuova posizione.|
+|[CProgressCtrl:: SetBarColor](#setbarcolor)|Imposta il colore della barra indicatore di stato nel controllo indicatore di stato corrente.|
+|[CProgressCtrl:: SetBkColor](#setbkcolor)|Imposta il colore di sfondo per l'indicatore di stato.|
+|[CProgressCtrl:: semarquee](#setmarquee)|Attiva o disattiva la modalità marquee per il controllo indicatore di stato corrente.|
+|[CProgressCtrl:: SetPos](#setpos)|Imposta la posizione corrente per un controllo indicatore di stato e ridisegnato la barra in modo da riflettere la nuova posizione.|
+|[CProgressCtrl:: SetRange](#setrange)|Imposta gli intervalli minimo e massimo per un controllo indicatore di stato e ridisegnato la barra in modo da riflettere i nuovi intervalli.|
+|[CProgressCtrl:: sestate](#setstate)|Imposta lo stato del controllo indicatore di stato corrente.|
+|[CProgressCtrl:: sestep](#setstep)|Specifica l'incremento del passaggio per un controllo indicatore di stato.|
+|[CProgressCtrl:: StepIt](#stepit)|Sposta in avanti la posizione corrente per un controllo indicatore di stato in base all'incremento del passaggio [(vedere il passaggio)](#setstep)e ridisegnato la barra per riflettere la nuova posizione.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un controllo indicatore di stato è una finestra che può essere utilizzata da un'applicazione per indicare lo stato di avanzamento di un'operazione di lunga durata. È costituito da un rettangolo che viene riempito gradualmente, da sinistra a destra, con il colore di evidenziazione del sistema durante l'avanzamento di un'operazione.
 
 Un controllo indicatore di stato ha un intervallo e una posizione corrente. L'intervallo rappresenta la durata totale dell'operazione e la posizione corrente rappresenta lo stato di avanzamento dell'applicazione verso il completamento dell'operazione. La routine della finestra usa l'intervallo e la posizione corrente per determinare la percentuale dell'indicatore di stato da riempire con il colore di evidenziazione. Poiché i valori di intervallo e posizione corrente sono espressi come interi con segno, il possibile intervallo di valori di posizione correnti è compreso tra-2.147.483.648 e 2.147.483.647 inclusi.
 
-Per altre informazioni sull'uso `CProgressCtrl`di, vedere [controlli](../../mfc/controls-mfc.md) e [uso di CProgressCtrl](../../mfc/using-cprogressctrl.md).
+Per altre informazioni sull'uso di `CProgressCtrl`, vedere [controlli](../../mfc/controls-mfc.md) e [uso di CProgressCtrl](../../mfc/using-cprogressctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -119,9 +119,9 @@ Costruisce un oggetto `CProgressCtrl`.
 CProgressCtrl();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Dopo la costruzione dell' `CProgressCtrl` oggetto, chiamare `CProgressCtrl::Create` per creare il controllo indicatore di stato.
+Dopo la costruzione dell'oggetto `CProgressCtrl`, chiamare `CProgressCtrl::Create` per creare il controllo indicatore di stato.
 
 ### <a name="example"></a>Esempio
 
@@ -129,7 +129,7 @@ Dopo la costruzione dell' `CProgressCtrl` oggetto, chiamare `CProgressCtrl::Crea
 
 ##  <a name="create"></a>CProgressCtrl:: create
 
-Crea un controllo indicatore di stato e lo collega a un `CProgressCtrl` oggetto.
+Crea un controllo indicatore di stato e lo collega a un oggetto `CProgressCtrl`.
 
 ```
 virtual BOOL Create(
@@ -152,18 +152,18 @@ Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combin
 Specifica la posizione e le dimensioni del controllo indicatore di stato. Può essere un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) . Poiché il controllo deve essere una finestra figlio, le coordinate specificate sono relative all'area client di *pParentWnd*.
 
 *pParentWnd*<br/>
-Specifica la finestra padre del controllo indicatore di stato, in `CDialog`genere. Non deve essere NULL.
+Specifica la finestra padre del controllo indicatore di stato, in genere un `CDialog`. Non deve essere NULL.
 
 *nID*<br/>
 Specifica l'ID del controllo indicatore di stato.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l' `CProgressCtrl` oggetto è stato creato correttamente; in caso contrario, false.
+TRUE se l'oggetto `CProgressCtrl` è stato creato correttamente. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si costruisce `CProgressCtrl` un oggetto in due passaggi. Chiamare innanzitutto il costruttore, che crea l' `CProgressCtrl` oggetto, quindi chiamare `Create`, che crea il controllo indicatore di stato.
+Si costruisce un oggetto `CProgressCtrl` in due passaggi. Chiamare innanzitutto il costruttore, che crea l'oggetto `CProgressCtrl`, quindi chiamare `Create`, che crea il controllo indicatore di stato.
 
 ### <a name="example"></a>Esempio
 
@@ -171,7 +171,7 @@ Si costruisce `CProgressCtrl` un oggetto in due passaggi. Chiamare innanzitutto 
 
 ##  <a name="createex"></a>CProgressCtrl:: CreateEx
 
-Crea un controllo (una finestra figlio) e lo associa `CProgressCtrl` all'oggetto.
+Crea un controllo (una finestra figlio) e lo associa all'oggetto `CProgressCtrl`.
 
 ```
 virtual BOOL CreateEx(
@@ -203,11 +203,11 @@ ID della finestra figlio del controllo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificato dalla prefazione **WS_EX_** di Windows Extended Style.
+Usare `CreateEx` anziché [create](#create) per applicare gli stili di Windows estesi, specificati dall' **WS_EX_** di prefazione dello stile esteso di Windows.
 
-##  <a name="getbarcolor"></a>  CProgressCtrl::GetBarColor
+##  <a name="getbarcolor"></a>CProgressCtrl:: GetBarColor
 
 Ottiene il colore della barra dell'indicatore di stato per il controllo indicatore di stato corrente.
 
@@ -217,13 +217,13 @@ COLORREF GetBarColor() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Colore dell'indicatore di stato corrente, rappresentato come valore [COLORREF](/windows/win32/gdi/colorref) , oppure CLR_DEFAULT se il colore della barra indicatore di stato è il colore predefinito.
+Il colore dell'indicatore di stato corrente, rappresentato come valore [COLORREF](/windows/win32/gdi/colorref) , o CLR_DEFAULT se il colore della barra dell'indicatore di stato è il colore predefinito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [PBM_GETBARCOLOR](/windows/win32/Controls/pbm-getbarcolor) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [PBM_GETBARCOLOR](/windows/win32/Controls/pbm-getbarcolor) , descritto nel Windows SDK.
 
-##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor
+##  <a name="getbkcolor"></a>CProgressCtrl:: GetBkColor
 
 Ottiene il colore di sfondo dell'indicatore di stato corrente.
 
@@ -235,9 +235,9 @@ COLORREF GetBkColor() const;
 
 Colore di sfondo dell'indicatore di stato corrente, rappresentato come valore [COLORREF](/windows/win32/gdi/colorref) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [PBM_GETBKCOLOR](/windows/win32/Controls/pbm-getbkcolor) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [PBM_GETBKCOLOR](/windows/win32/Controls/pbm-getbkcolor) , descritto nel Windows SDK.
 
 ##  <a name="getpos"></a>CProgressCtrl:: GetPos
 
@@ -251,7 +251,7 @@ int GetPos();
 
 Posizione del controllo indicatore di stato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La posizione del controllo indicatore di stato non è la posizione fisica sullo schermo, bensì tra l'intervallo superiore e inferiore indicato in [SetRange](#setrange).
 
@@ -259,7 +259,7 @@ La posizione del controllo indicatore di stato non è la posizione fisica sullo 
 
 [!code-cpp[NVC_MFC_CProgressCtrl#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_3.cpp)]
 
-##  <a name="getrange"></a>  CProgressCtrl::GetRange
+##  <a name="getrange"></a>CProgressCtrl:: GetRange
 
 Ottiene i limiti inferiore e superiore correnti, o l'intervallo, del controllo indicatore di stato.
 
@@ -277,7 +277,7 @@ Riferimento a un Integer che riceve il limite inferiore del controllo indicatore
 *nUpper*<br/>
 Riferimento a un Integer che riceve il limite superiore del controllo indicatore di stato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione copia i valori dei limiti inferiore e superiore negli Integer a cui fa riferimento rispettivamente *nLower* e *nUpper*.
 
@@ -285,7 +285,7 @@ Questa funzione copia i valori dei limiti inferiore e superiore negli Integer a 
 
 [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]
 
-##  <a name="getstate"></a>  CProgressCtrl::GetState
+##  <a name="getstate"></a>CProgressCtrl:: GetState
 
 Ottiene lo stato del controllo indicatore di stato corrente.
 
@@ -297,15 +297,15 @@ int GetState() const;
 
 Stato del controllo indicatore di stato corrente, ovvero uno dei valori seguenti:
 
-|Value|Stato|
+|valore|State|
 |-----------|-----------|
 |PBST_NORMAL|In corso|
 |PBST_ERROR|Errore|
-|PBST_PAUSED|In pausa|
+|PBST_PAUSED|Paused|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [PBM_GETSTATE](/windows/win32/Controls/pbm-getstate) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [PBM_GETSTATE](/windows/win32/Controls/pbm-getstate) , descritto nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -319,7 +319,7 @@ Nell'esempio di codice seguente viene recuperato lo stato del controllo indicato
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_6.cpp)]
 
-##  <a name="getstep"></a>  CProgressCtrl::GetStep
+##  <a name="getstep"></a>CProgressCtrl:: getstep
 
 Recupera l'incremento del passaggio per l'indicatore di stato del controllo indicatore di stato corrente.
 
@@ -331,11 +331,11 @@ int GetStep() const;
 
 Incremento del passaggio dell'indicatore di stato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'incremento del passaggio è la quantità in base alla quale una chiamata a [CProgressCtrl:: StepIt](#stepit) aumenta la posizione corrente dell'indicatore di stato.
 
-Questo metodo invia il messaggio [PBM_GETSTEP](/windows/win32/Controls/pbm-getstep) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [PBM_GETSTEP](/windows/win32/Controls/pbm-getstep) , descritto nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -349,7 +349,7 @@ Nell'esempio di codice seguente viene recuperato l'incremento del passaggio del 
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]
 
-##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos
+##  <a name="offsetpos"></a>CProgressCtrl:: OffsetPos
 
 Sposta la posizione corrente del controllo indicatore di stato in base all'incremento specificato da *nPos* e ridisegnato la barra in modo da riflettere la nuova posizione.
 
@@ -370,7 +370,7 @@ Posizione precedente del controllo indicatore di stato.
 
 [!code-cpp[NVC_MFC_CProgressCtrl#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_8.cpp)]
 
-##  <a name="setbarcolor"></a>  CProgressCtrl::SetBarColor
+##  <a name="setbarcolor"></a>CProgressCtrl:: SetBarColor
 
 Imposta il colore della barra indicatore di stato nel controllo indicatore di stato corrente.
 
@@ -382,17 +382,17 @@ COLORREF SetBarColor(COLORREF clrBar);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*clrBar*|in Valore [COLORREF](/windows/win32/gdi/colorref) che specifica il nuovo colore della barra dell'indicatore di stato. Specificare CLR_DEFAULT per fare in modo che l'indicatore di stato usi il colore predefinito.|
+|*clrBar*|in Valore [COLORREF](/windows/win32/gdi/colorref) che specifica il nuovo colore della barra dell'indicatore di stato. Specificare CLR_DEFAULT per fare in modo che l'indicatore di stato utilizzi il colore predefinito.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Colore precedente della barra indicatore di stato, rappresentato come valore [COLORREF](/windows/win32/gdi/colorref) , oppure CLR_DEFAULT se il colore della barra indicatore di stato è il colore predefinito.
+Il colore precedente della barra indicatore di stato, rappresentato come valore [COLORREF](/windows/win32/gdi/colorref) , o CLR_DEFAULT se il colore della barra indicatore di stato è il colore predefinito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il `SetBarColor` metodo imposta il colore dell'indicatore di stato solo se non è attivo un [tema](/windows/win32/Controls/visual-styles-overview) di Windows Vista.
+Il metodo `SetBarColor` imposta il colore dell'indicatore di stato solo se non è attivo un [tema](/windows/win32/Controls/visual-styles-overview) di Windows Vista.
 
-Questo metodo invia il messaggio [PBM_SETBARCOLOR](/windows/win32/Controls/pbm-setbarcolor) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [PBM_SETBARCOLOR](/windows/win32/Controls/pbm-setbarcolor) , descritto nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -406,7 +406,7 @@ Nell'esempio di codice seguente il colore dell'indicatore di stato viene modific
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_9.cpp)]
 
-##  <a name="setbkcolor"></a>  CProgressCtrl::SetBkColor
+##  <a name="setbkcolor"></a>CProgressCtrl:: SetBkColor
 
 Imposta il colore di sfondo per l'indicatore di stato.
 
@@ -421,7 +421,7 @@ Valore COLORREF che specifica il nuovo colore di sfondo. Specificare il valore C
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore [COLORREF](/windows/win32/gdi/colorref) che indica il colore di sfondo precedente oppure CLR_DEFAULT se il colore di sfondo è il colore predefinito.
+Valore [COLORREF](/windows/win32/gdi/colorref) che indica il colore di sfondo precedente o CLR_DEFAULT se il colore di sfondo è il colore predefinito.
 
 ### <a name="example"></a>Esempio
 
@@ -442,17 +442,17 @@ BOOL SetMarquee(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*fMarqueeMode*|in TRUE per attivare la modalità marquee o FALSE per disattivare la modalità marquee.|
-|*nInterval*|in Tempo in millisecondi tra gli aggiornamenti dell'animazione Marquee.|
+|*nIntervallo*|in Tempo in millisecondi tra gli aggiornamenti dell'animazione Marquee.|
 
 ### <a name="return-value"></a>Valore restituito
 
 Questo metodo restituisce sempre TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando la modalità Marquee è attivata, l'indicatore di stato viene animato e scorre come un segno in un Marquee del teatro.
 
-Questo metodo invia il messaggio [PBM_SETMARQUEE](/windows/win32/Controls/pbm-setmarquee) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [PBM_SETMARQUEE](/windows/win32/Controls/pbm-setmarquee) , descritto nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -483,7 +483,7 @@ Nuova posizione del controllo indicatore di stato.
 
 Posizione precedente del controllo indicatore di stato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La posizione del controllo indicatore di stato non è la posizione fisica sullo schermo, bensì tra l'intervallo superiore e inferiore indicato in [SetRange](#setrange).
 
@@ -491,7 +491,7 @@ La posizione del controllo indicatore di stato non è la posizione fisica sullo 
 
 [!code-cpp[NVC_MFC_CProgressCtrl#7](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_12.cpp)]
 
-##  <a name="setrange"></a>  CProgressCtrl::SetRange
+##  <a name="setrange"></a>CProgressCtrl:: SetRange
 
 Imposta i limiti superiore e inferiore dell'intervallo del controllo indicatore di stato e ridisegnato la barra in modo da riflettere i nuovi intervalli.
 
@@ -513,15 +513,15 @@ Specifica il limite inferiore dell'intervallo (il valore predefinito è zero).
 *nUpper*<br/>
 Specifica il limite superiore dell'intervallo (il valore predefinito è 100).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione `SetRange32` membro imposta l'intervallo di 32 bit per il controllo dello stato di avanzamento.
+La funzione membro `SetRange32` imposta l'intervallo di 32 bit per il controllo dello stato di avanzamento.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CProgressCtrl#8](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_13.cpp)]
 
-##  <a name="setstate"></a>  CProgressCtrl::SetState
+##  <a name="setstate"></a>CProgressCtrl:: sestate
 
 Imposta lo stato del controllo indicatore di stato corrente.
 
@@ -533,15 +533,15 @@ int SetState(int iState);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*iState*|in Stato per impostare l'indicatore di stato. Usare uno dei valori indicati di seguito.<br /><br /> -PBST_NORMAL-in corso<br />-PBST_ERROR-Error<br />-PBST_PAUSED-sospeso|
+|*iState*|in Stato per impostare l'indicatore di stato. Usare uno dei valori seguenti:<br /><br /> -PBST_NORMAL-in corso<br />-PBST_ERROR-Error<br />-PBST_PAUSED-sospeso|
 
 ### <a name="return-value"></a>Valore restituito
 
 Stato precedente del controllo indicatore di stato corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo invia il messaggio [PBM_SETSTATE](/windows/win32/Controls/pbm-setstate) , descritto nella Windows SDK.
+Questo metodo invia il messaggio di [PBM_SETSTATE](/windows/win32/Controls/pbm-setstate) , descritto nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -555,7 +555,7 @@ Nell'esempio di codice seguente lo stato del controllo indicatore di stato corre
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_14.cpp)]
 
-##  <a name="setstep"></a>  CProgressCtrl::SetStep
+##  <a name="setstep"></a>CProgressCtrl:: sestep
 
 Specifica l'incremento del passaggio per un controllo indicatore di stato.
 
@@ -572,9 +572,9 @@ Incremento nuovo passaggio.
 
 Incremento del passaggio precedente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'incremento del passaggio è la quantità in base alla quale `CProgressCtrl::StepIt` una chiamata a aumenta la posizione corrente dell'indicatore di stato.
+L'incremento del passaggio è la quantità in base alla quale una chiamata a `CProgressCtrl::StepIt` aumenta la posizione corrente dell'indicatore di stato.
 
 L'incremento predefinito del passaggio è 10.
 
@@ -594,9 +594,9 @@ int StepIt();
 
 Posizione precedente del controllo indicatore di stato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'incremento del passaggio viene impostato dalla `CProgressCtrl::SetStep` funzione membro.
+L'incremento del passaggio viene impostato dalla funzione membro `CProgressCtrl::SetStep`.
 
 ### <a name="example"></a>Esempio
 

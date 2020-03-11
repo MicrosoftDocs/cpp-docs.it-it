@@ -5,11 +5,11 @@ f1_keywords:
 - typeindex/std::hash
 ms.assetid: e5a41202-ef3b-45d0-b3a7-4c2dbdc0487a
 ms.openlocfilehash: 4f73d1bfe7f3370d76b39b95f740a4d3a759b908
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687961"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876272"
 ---
 # <a name="hash-structure"></a>Struttura hash
 

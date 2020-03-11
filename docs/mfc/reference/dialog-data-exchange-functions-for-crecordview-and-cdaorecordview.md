@@ -21,11 +21,11 @@ helpviewer_keywords:
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303445"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866594"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
 
@@ -82,7 +82,7 @@ Riferimento a un membro dati di campo nell'oggetto `CRecordset` o `CDaoRecordset
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando si trasferiscono dati dal recordset al controllo, questa funzione imposta la selezione nel controllo in base al valore specificato in *index*. In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, MFC imposta il valore dell'indice su 0. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto o se non è selezionato alcun elemento, il campo del recordset viene impostato su 0.
 
@@ -124,13 +124,13 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID di un controllo nell'oggetto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valore*<br/>
+*value*<br/>
 Riferimento a un membro dati di campo nell'oggetto `CRecordset` o `CDaoRecordset` associato.
 
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando si trasferiscono dati dal recordset al controllo, questa funzione imposta la selezione corrente nella casella combinata sulla prima riga che inizia con i caratteri nella stringa specificata in *valore*. In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, qualsiasi selezione viene rimossa dalla casella combinata e il controllo di modifica della casella combinata viene impostato su vuoto. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto, il campo recordset viene impostato su null se il campo lo consente.
 
@@ -172,13 +172,13 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID di un controllo nell'oggetto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valore*<br/>
+*value*<br/>
 Riferimento a un membro dati di campo nell'oggetto `CRecordset` o `CDaoRecordset` associato.
 
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando si trasferiscono dati dal recordset al controllo, questa funzione imposta la selezione corrente nella casella combinata sulla prima riga che corrisponde esattamente alla stringa specificata in *valore*. In caso di trasferimento dal recordset al controllo, se il campo del recordset è NULL, qualsiasi selezione viene rimossa dalla casella combinata e la casella di modifica della casella combinata è impostata su Empty. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto, il campo del recordset viene impostato su NULL.
 
@@ -220,13 +220,13 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID risorsa del controllo casella di controllo associato alla proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando viene chiamato `DDX_FieldCheck`, il *valore* viene impostato sullo stato corrente del controllo casella di controllo oppure lo stato del controllo viene impostato su *value*, a seconda della direzione del trasferimento.
 
@@ -268,7 +268,7 @@ Riferimento a un membro dati di campo nell'oggetto `CRecordset` o `CDaoRecordset
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando si trasferiscono dati dal recordset al controllo, questa funzione imposta la selezione nel controllo in base al valore specificato in *index*. In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, MFC imposta il valore dell'indice su 0. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto, il campo del recordset viene impostato su 0.
 
@@ -310,13 +310,13 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID di un controllo nell'oggetto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valore*<br/>
+*value*<br/>
 Riferimento a un membro dati di campo nell'oggetto `CRecordset` o `CDaoRecordset` associato.
 
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Nella direzione inversa questa funzione imposta la selezione corrente nella casella di riepilogo sulla prima riga che inizia con i caratteri nella stringa specificata per *valore*. In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, qualsiasi selezione viene rimossa dalla casella di riepilogo. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto, il campo del recordset viene impostato su null.
 
@@ -358,13 +358,13 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID di un controllo nell'oggetto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valore*<br/>
+*value*<br/>
 Riferimento a un membro dati di campo nell'oggetto `CRecordset` o `CDaoRecordset` associato.
 
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Nella direzione inversa questa funzione imposta la selezione corrente nella casella di riepilogo sulla prima riga che corrisponde esattamente alla stringa specificata in *valore*. In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, qualsiasi selezione viene rimossa dalla casella di riepilogo. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto, il campo del recordset viene impostato su null.
 
@@ -406,13 +406,13 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID del primo in un gruppo (con lo stile WS_GROUP) dei controlli pulsante di opzione adiacenti nell'oggetto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valore*<br/>
+*value*<br/>
 Riferimento a un membro dati di campo nell'oggetto `CRecordset` o `CDaoRecordset` associato.
 
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando si esegue il trasferimento dal campo recordset alla visualizzazione, questa funzione attiva l' *ennesimo* pulsante di opzione (in base zero) e disattiva gli altri pulsanti. Nella direzione inversa questa funzione imposta il campo recordset sul numero ordinale del pulsante di opzione attualmente attivo (selezionato). In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, non è selezionato alcun pulsante. In caso di trasferimento dal controllo al recordset, se non è selezionato alcun controllo, il campo recordset viene impostato su null se il campo lo consente.
 
@@ -454,13 +454,13 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID del primo in un gruppo (con lo stile WS_GROUP) dei controlli pulsante di opzione adiacenti nell'oggetto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valore*<br/>
+*value*<br/>
 Riferimento a un membro dati di campo nell'oggetto `CRecordset` o `CDaoRecordset` associato.
 
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando si spostano i dati dal recordset al controllo, questa funzione imposta la posizione di scorrimento del controllo barra di scorrimento sul valore specificato in *valore*. In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, il controllo barra di scorrimento viene impostato su 0. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto, il valore del campo recordset è 0.
 
@@ -503,13 +503,13 @@ Puntatore a un oggetto [CDataExchange](cdataexchange-class.md) . Il framework fo
 *nIDC*<br/>
 ID risorsa del controllo dispositivo di scorrimento.
 
-*valore*<br/>
+*value*<br/>
 Riferimento al valore da scambiare. Questo parametro include o verrà usato per impostare la posizione del Thumb corrente del controllo dispositivo di scorrimento.
 
 *pRecordset*<br/>
 Puntatore all'oggetto `CRecordset` o `CDaoRecordset` associato con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando si spostano i dati dal recordset al dispositivo di scorrimento, questa funzione imposta la posizione del dispositivo di scorrimento sul valore specificato in *valore*. In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, la posizione del controllo dispositivo di scorrimento è impostata su 0. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto, il valore del campo recordset è 0.
 
@@ -649,13 +649,13 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID di un controllo nell'oggetto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valore*<br/>
+*value*<br/>
 Riferimento a un membro dati di campo nell'oggetto `CRecordset` o `CDaoRecordset` associato. Il tipo di dati del valore dipende da quali versioni di overload di `DDX_FieldText` si utilizza.
 
 *pRecordset*<br/>
 Puntatore all'oggetto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con cui vengono scambiati i dati. Questo puntatore consente `DDX_FieldText` di rilevare e impostare i valori null.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per gli oggetti [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), `DDX_FieldText` gestisce anche il trasferimento dei valori [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) e [COleCurrency](../../mfc/reference/colecurrency-class.md). Un controllo casella di modifica vuoto indica un valore null. In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, la casella di modifica è impostata su Empty. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto, il campo del recordset viene impostato su null.
 

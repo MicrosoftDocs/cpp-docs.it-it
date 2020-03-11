@@ -85,15 +85,15 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898705"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875825"
 ---
 # <a name="ltfilesystemgt-functions"></a>Funzioni &lt;filesystem&gt;
 
-Queste funzioni gratuite nell' [\<file system >](../standard-library/filesystem.md) header modificano ed eseguono query su percorsi, file, collegamenti simbolici, directory e volumi. Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)](../standard-library/file-system-navigation.md) (Esplorazione del file system (C++)).
+Queste funzioni gratuite nell' [\<file system >](../standard-library/filesystem.md) header modificano ed eseguono query su percorsi, file, collegamenti simbolici, directory e volumi. Per altre informazioni ed esempi di codice, vedere [Esplorazione del file system (C++)](../standard-library/file-system-navigation.md).
 
 ## <a name="absolute"></a>assoluto
 
@@ -184,7 +184,7 @@ In caso contrario, se `is_regular_file(f)`:
 
 - In caso contrario, se `is_directory(f)`, `copy_file(from, to` / `from.filename(), opts)`.
 
-- in caso contrario, `copy_file(from, to, opts)`.
+- In caso contrario, `copy_file(from, to, opts)`.
 
 In caso contrario, se `is_directory(f) && (opts & copy_options::recursive || !opts)`:
 
@@ -541,7 +541,7 @@ bool status_known(file_status stat) noexcept;
 
 La funzione restituisce `stat.type() != file_type::none`
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>scambio
 
 ```cpp
 void swap(path& left, path& right) noexcept;

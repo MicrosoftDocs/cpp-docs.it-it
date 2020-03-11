@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051486"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856787"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Usare il set C++ di strumenti Microsoft dalla riga di comando
 
@@ -135,13 +135,13 @@ Questo argomento facoltativo specifica l'architettura host e di destinazione da 
 |*architecture*|Compilatore|Architettura del computer host|Architettura dell'output di compilazione (destinazione)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 nativo a 32 bit|x86, x64|x86|
-|**x86\_amd64** o **x86\_x64**|x64 su x86 (incrociato)|x86, x64|X64|
+|**x86\_amd64** o **x86\_x64**|x64 su x86 (incrociato)|x86, x64|x64|
 |**x86_arm**|ARM su x86 (incrociato)|x86, x64|ARM|
 |**x86_arm64**|ARM64 su x86 (incrociato)|x86, x64|ARM64|
-|**amd64** o **x64**|x64 nativo a 64 bit|X64|X64|
-|**amd64\_x86** o **x64\_x86**|x86 su x64 (incrociato)|X64|x86|
-|**amd64\_arm** o **x64\_arm**|ARM su x64 (incrociato)|X64|ARM|
-|**amd64\_arm64** o **x64\_arm64**|ARM64 su x64 (incrociato)|X64|ARM64|
+|**amd64** o **x64**|x64 nativo a 64 bit|x64|x64|
+|**amd64\_x86** o **x64\_x86**|x86 su x64 (incrociato)|x64|x86|
+|**amd64\_arm** o **x64\_arm**|ARM su x64 (incrociato)|x64|ARM|
+|**amd64\_arm64** o **x64\_arm64**|ARM64 su x64 (incrociato)|x64|ARM64|
 
 *platform_type*<br/>
 Questo argomento facoltativo consente di specificare **store** o **uwp** come tipo di piattaforma. Per impostazione predefinita, l'ambiente è impostato per la compilazione di app desktop o console.
@@ -221,7 +221,7 @@ I file batch specifici dell'architettura impostano il parametro *architecture* e
 
 Modificare il percorso in modo da riflettere la directory di installazione di Visual Studio. Il file vcvarsall.bat contiene altre informazioni sui numeri di versione specifici.
 
-## <a name="command-line-tools"></a>Strumenti della riga di comando
+## <a name="command-line-tools"></a>Strumenti da riga di comando
 
 Per compilare un progetto CC++ /a al prompt dei comandi, Visual Studio fornisce gli strumenti da riga di comando seguenti:
 
@@ -242,7 +242,7 @@ Usare NMAKE (nmake.exe) in Windows per compilare progetti C++ basati su un makef
 
 Quando si esegue la compilazione nella riga di comando, il comando F1 non è disponibile per la guida immediata. In alternativa, è possibile usare un motore di ricerca per ottenere informazioni su avvisi, errori e messaggi oppure è possibile usare i file della Guida offline. Per utilizzare la ricerca in [docs.Microsoft.com](https://docs.microsoft.com/cpp/), utilizzare la casella di ricerca nella parte superiore della pagina.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 Questi articoli illustrano come creare app dalla riga di comando e come personalizzare l'ambiente di compilazione da riga di comando. Alcuni illustrano come usare i set di strumenti a 64 bit e come destinazione piattaforme x86, x64, ARM e ARM64. Viene inoltre descritto l'utilizzo degli strumenti di compilazione da riga di comando MSBuild e NMAKE.
 

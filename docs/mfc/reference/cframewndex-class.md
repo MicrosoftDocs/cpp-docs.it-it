@@ -179,11 +179,11 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
 ms.openlocfilehash: 1565a2eef681cbf36a0e166f59cde0320843e8aa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506394"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78869903"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 
@@ -199,66 +199,66 @@ class CFrameWndEx : public CFrameWnd
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Regola il layout dell'elemento client OLE e dell'area client del frame.|
+|[CFrameWndEx:: ActiveItemRecalcLayout](#activeitemrecalclayout)|Regola il layout dell'elemento client OLE e dell'area client del frame.|
 |`CFrameWndEx::AddDockSite`|Questo metodo non viene utilizzato.|
-|[CFrameWndEx::AddPane](#addpane)|Registra una barra di controllo con il gestore di ancoraggio.|
+|[CFrameWndEx:: AddPane](#addpane)|Registra una barra di controllo con il gestore di ancoraggio.|
 |[CFrameWndEx:: AdjustDockingLayout](#adjustdockinglayout)|Ricalcola il layout di tutti i riquadri ancorati alla finestra cornice.|
-|[CFrameWndEx::DelayUpdateFrameMenu](#delayupdateframemenu)|Imposta il menu cornice, quindi lo aggiorna quando l'elaborazione del comando è inattiva.|
+|[CFrameWndEx::D elayUpdateFrameMenu](#delayupdateframemenu)|Imposta il menu cornice, quindi lo aggiorna quando l'elaborazione del comando è inattiva.|
 |[CFrameWndEx::D ockPane](#dockpane)|Ancora il riquadro specificato alla finestra cornice.|
-|[CFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Ancora un riquadro a sinistra di un altro riquadro.|
-|[CFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Abilita la modalità Nascondi automaticamente per i riquadri quando sono ancorati ai lati specificati della finestra cornice principale.|
-|[CFrameWndEx::EnableDocking](#enabledocking)|Abilita l'ancoraggio dei riquadri che appartengono alla finestra cornice.|
-|[CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Consente di visualizzare o nascondere il menu principale in modalità schermo intero.|
+|[CFrameWndEx::D ockPaneLeftOf](#dockpaneleftof)|Ancora un riquadro a sinistra di un altro riquadro.|
+|[CFrameWndEx:: EnableAutoHidePanes](#enableautohidepanes)|Abilita la modalità Nascondi automaticamente per i riquadri quando sono ancorati ai lati specificati della finestra cornice principale.|
+|[CFrameWndEx:: EnableDocking](#enabledocking)|Abilita l'ancoraggio dei riquadri che appartengono alla finestra cornice.|
+|[CFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Consente di visualizzare o nascondere il menu principale in modalità schermo intero.|
 |[CFrameWndEx:: EnableFullScreenMode](#enablefullscreenmode)|Abilita la modalità schermo intero per la finestra cornice.|
-|[CFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Abilita o Disabilita il caricamento dello stato di ancoraggio.|
+|[CFrameWndEx:: EnableLoadDockState](#enableloaddockstate)|Abilita o Disabilita il caricamento dello stato di ancoraggio.|
 |[CFrameWndEx:: EnablePaneMenu](#enablepanemenu)|Abilita o Disabilita la gestione automatica del menu del riquadro.|
-|[CFrameWndEx::GetActivePopup](#getactivepopup)|Restituisce un puntatore al menu di scelta rapida attualmente visualizzato.|
-|[CFrameWndEx::GetDefaultResId](#getdefaultresid)|Restituisce l'ID di risorsa specificato quando il Framework ha caricato la finestra cornice.|
-|[CFrameWndEx::GetDockingManager](#getdockingmanager)|Recupera l'oggetto della [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) per la finestra cornice.|
-|[CFrameWndEx::GetMenuBar](#getmenubar)|Restituisce un puntatore all'oggetto della barra dei menu collegato alla finestra cornice.|
+|[CFrameWndEx:: GetActivePopup](#getactivepopup)|Restituisce un puntatore al menu di scelta rapida attualmente visualizzato.|
+|[CFrameWndEx:: GetDefaultResId](#getdefaultresid)|Restituisce l'ID di risorsa specificato quando il Framework ha caricato la finestra cornice.|
+|[CFrameWndEx:: GetDockingManager](#getdockingmanager)|Recupera l'oggetto della [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) per la finestra cornice.|
+|[CFrameWndEx:: getbarra dei menu](#getmenubar)|Restituisce un puntatore all'oggetto della barra dei menu collegato alla finestra cornice.|
 |[CFrameWndEx:: GetPane](#getpane)|Restituisce un puntatore al riquadro con l'ID specificato.|
-|[CFrameWndEx::GetRibbonBar](#getribbonbar)|Recupera il controllo barra multifunzione per il frame.|
+|[CFrameWndEx:: GetRibbonBar](#getribbonbar)|Recupera il controllo barra multifunzione per il frame.|
 |[CFrameWndEx:: GetTearOffBars](#gettearoffbars)|Restituisce un elenco di oggetti del riquadro che si trovano in uno stato a comparsa.|
 |[CFrameWndEx:: GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Chiamata eseguita dal framework quando l'applicazione Visualizza la descrizione comando per un pulsante della barra degli strumenti.|
 |[CFrameWndEx:: InsertPane](#insertpane)|Registra un riquadro con il gestore di ancoraggio.|
-|[CFrameWndEx::IsFullScreen](#isfullscreen)|Determina se la finestra cornice è in modalità schermo intero.|
-|[CFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Determina se il puntatore all'oggetto della barra dei menu è valido.|
-|[CFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Indica se il punto si trova in una zona di allineamento.|
-|[CFrameWndEx::IsPrintPreview](#isprintpreview)|Indica se la finestra cornice è in modalità anteprima di stampa.|
+|[CFrameWndEx:: FullScreen](#isfullscreen)|Determina se la finestra cornice è in modalità schermo intero.|
+|[CFrameWndEx:: IsMenuBarAvailable](#ismenubaravailable)|Determina se il puntatore all'oggetto della barra dei menu è valido.|
+|[CFrameWndEx:: IsPointNearDockSite](#ispointneardocksite)|Indica se il punto si trova in una zona di allineamento.|
+|[CFrameWndEx:: IsPrintPreview](#isprintpreview)|Indica se la finestra cornice è in modalità anteprima di stampa.|
 |[CFrameWndEx:: LoadFrame](#loadframe)|Questo metodo viene chiamato dopo la costruzione per creare la finestra cornice e caricare le relative risorse.|
-|[CFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Implementa la negoziazione del bordo client OLE.|
+|[CFrameWndEx:: NegotiateBorderSpace](#negotiateborderspace)|Implementa la negoziazione del bordo client OLE.|
 |[CFrameWndEx:: OnActivate](#onactivate)|Il Framework chiama questo metodo quando l'input dell'utente viene attivato o disattivato dal frame.|
-|[CFrameWndEx::OnActivateApp](#onactivateapp)|Chiamata eseguita dal framework quando l'applicazione viene selezionata o deselezionata.|
+|[CFrameWndEx:: OnActivateApp](#onactivateapp)|Chiamata eseguita dal framework quando l'applicazione viene selezionata o deselezionata.|
 |[CFrameWndEx:: OnChangeVisualManager](#onchangevisualmanager)|Chiamata eseguita dal framework quando una modifica al frame richiede una modifica al gestore di visualizzazione.|
 |[CFrameWndEx:: OnClose](#onclose)|Il Framework chiama questo metodo per chiudere il frame.|
-|[CFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Chiamata eseguita dal framework quando l'utente fa clic sul pulsante **Chiudi** in un riquadro ancorato.|
+|[CFrameWndEx:: OnCloseDockingPane](#onclosedockingpane)|Chiamata eseguita dal framework quando l'utente fa clic sul pulsante **Chiudi** in un riquadro ancorato.|
 |[CFrameWndEx:: OnCloseMiniFrame](#oncloseminiframe)|Chiamata eseguita dal framework quando l'utente fa clic sul pulsante **Chiudi** in una finestra con mini-cornice a virgola mobile.|
 |[CFrameWndEx:: OnClosePopupMenu](#onclosepopupmenu)|Chiamato dal framework quando un menu a comparsa attivo elabora un messaggio WM_DESTROY.|
-|[CFrameWndEx::OnCmdMsg](#oncmdmsg)|Invia i messaggi di comando.|
-|[CFrameWndEx::OnContextHelp](#oncontexthelp)|Chiamata eseguita dal Framework per visualizzare la guida correlata al contesto.|
+|[CFrameWndEx:: OnCmdMsg](#oncmdmsg)|Invia i messaggi di comando.|
+|[CFrameWndEx:: OnContextHelp](#oncontexthelp)|Chiamata eseguita dal Framework per visualizzare la guida correlata al contesto.|
 |[CFrameWndEx:: OnCreate](#oncreate)|Chiamata eseguita dal Framework dopo la creazione del frame.|
 |[CFrameWndEx:: OnDestroy](#ondestroy)|Chiamata eseguita dal framework quando il frame viene eliminato definitivamente.|
-|[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Chiamata eseguita dal framework quando l'applicazione disegna l'immagine associata a una voce di menu.|
-|[CFrameWndEx:: OnDrawMenuLogo](#ondrawmenulogo)|Chiamata eseguita dal framework quando un `CMFCPopupMenu` oggetto elabora un messaggio [WM_PAINT](/windows/win32/gdi/wm-paint) .|
-|[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Chiamata eseguita dal framework quando la composizione di Gestione finestre desktop (DWM) è stata abilitata o disabilitata.|
-|[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Chiamata eseguita dal framework quando il frame smette di essere spostato o ridimensionato.|
-|[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Chiamata eseguita dal framework quando il frame viene ridimensionato per impostare i limiti della dimensione della finestra.|
-|[CFrameWndEx::OnIdleUpdateCmdUI](#onidleupdatecmdui)|Chiamata eseguita dal Framework per aggiornare la visualizzazione frame quando l'elaborazione del comando è inattiva.|
-|[CFrameWndEx::OnLButtonDown](#onlbuttondown)|Il Framework chiama questo metodo quando l'utente preme il pulsante sinistro del mouse.|
+|[CFrameWndEx:: OnDrawMenuImage](#ondrawmenuimage)|Chiamata eseguita dal framework quando l'applicazione disegna l'immagine associata a una voce di menu.|
+|[CFrameWndEx:: OnDrawMenuLogo](#ondrawmenulogo)|Chiamata eseguita dal framework quando un oggetto `CMFCPopupMenu` elabora un messaggio di [WM_PAINT](/windows/win32/gdi/wm-paint) .|
+|[CFrameWndEx:: OnDWMCompositionChanged](#ondwmcompositionchanged)|Chiamata eseguita dal framework quando la composizione di Gestione finestre desktop (DWM) è stata abilitata o disabilitata.|
+|[CFrameWndEx:: OnExitSizeMove](#onexitsizemove)|Chiamata eseguita dal framework quando il frame smette di essere spostato o ridimensionato.|
+|[CFrameWndEx:: OnGetMinMaxInfo](#ongetminmaxinfo)|Chiamata eseguita dal framework quando il frame viene ridimensionato per impostare i limiti della dimensione della finestra.|
+|[CFrameWndEx:: OnIdleUpdateCmdUI](#onidleupdatecmdui)|Chiamata eseguita dal Framework per aggiornare la visualizzazione frame quando l'elaborazione del comando è inattiva.|
+|[CFrameWndEx:: OnLButtonDown](#onlbuttondown)|Il Framework chiama questo metodo quando l'utente preme il pulsante sinistro del mouse.|
 |[CFrameWndEx:: OnLButtonUp](#onlbuttonup)|Il Framework chiama questo metodo quando l'utente rilascia il pulsante sinistro del mouse.|
-|[CFrameWndEx:: OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Chiamata eseguita dal framework quando un `CMFCToolBarButton` oggetto elabora un messaggio WM_NCHITTEST.|
+|[CFrameWndEx:: OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Chiamata eseguita dal framework quando un oggetto `CMFCToolBarButton` elabora un messaggio di WM_NCHITTEST.|
 |[CFrameWndEx:: OnMenuChar](#onmenuchar)|Chiamata eseguita dal framework quando un menu viene visualizzato e l'utente preme un tasto che non corrisponde a un comando.|
 |[CFrameWndEx:: OnMouseMove](#onmousemove)|Il Framework chiama questo metodo quando il puntatore viene spostato.|
 |[CFrameWndEx:: OnMoveMiniFrame](#onmoveminiframe)|Chiamata eseguita dal framework quando viene spostata una finestra del riquadro.|
-|[CFrameWndEx::OnNcActivate](#onncactivate)|Chiamata eseguita dal framework quando è necessario ricreare l'area non client del frame per indicare una modifica nello stato attivo.|
-|[CFrameWndEx::OnNcCalcSize](#onnccalcsize)|Chiamata eseguita dal framework quando è necessario calcolare le dimensioni e la posizione dell'area client.|
-|[CFrameWndEx::OnNcHitTest](#onnchittest)|Chiamata eseguita dal framework quando il puntatore si sposta o quando un pulsante del mouse viene premuto o rilasciato.|
-|[CFrameWndEx::OnNcMouseMove](#onncmousemove)|Chiamata eseguita dal framework quando il puntatore si sposta in un'area non client.|
-|[CFrameWndEx::OnNcPaint](#onncpaint)|Chiamata eseguita dal framework quando l'area non client deve essere disegnata.|
+|[CFrameWndEx:: OnNcActivate](#onncactivate)|Chiamata eseguita dal framework quando è necessario ricreare l'area non client del frame per indicare una modifica nello stato attivo.|
+|[CFrameWndEx:: OnNcCalcSize](#onnccalcsize)|Chiamata eseguita dal framework quando è necessario calcolare le dimensioni e la posizione dell'area client.|
+|[CFrameWndEx:: OnNcHitTest](#onnchittest)|Chiamata eseguita dal framework quando il puntatore si sposta o quando un pulsante del mouse viene premuto o rilasciato.|
+|[CFrameWndEx:: OnNcMouseMove](#onncmousemove)|Chiamata eseguita dal framework quando il puntatore si sposta in un'area non client.|
+|[CFrameWndEx:: OnNcPaint](#onncpaint)|Chiamata eseguita dal framework quando l'area non client deve essere disegnata.|
 |[CFrameWndEx:: OnPaneCheck](#onpanecheck)|Chiamata eseguita dal Framework per controllare la visibilità di un riquadro.|
-|[CFrameWndEx::OnPostPreviewFrame](#onpostpreviewframe)|Chiamata eseguita dal framework quando l'utente ha modificato la modalità di anteprima di stampa.|
+|[CFrameWndEx:: OnPostPreviewFrame](#onpostpreviewframe)|Chiamata eseguita dal framework quando l'utente ha modificato la modalità di anteprima di stampa.|
 |[CFrameWndEx:: OnPowerBroadcast](#onpowerbroadcast)|Chiamato dal framework quando si verifica un evento di risparmio energia.|
 |[CFrameWndEx:: OnSetMenu](#onsetmenu)|Chiamata eseguita dal Framework per sostituire il menu della finestra cornice.|
 |[CFrameWndEx:: OnSetPreviewMode](#onsetpreviewmode)|Chiamata eseguita dal Framework per impostare la modalità di anteprima di stampa per il frame.|
@@ -266,9 +266,9 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx:: OnShowCustomizePane](#onshowcustomizepane)|Chiamata eseguita dal framework quando è abilitato un riquadro di personalizzazione rapida.|
 |[CFrameWndEx:: OnShowPanes](#onshowpanes)|Chiamata eseguita dal Framework per mostrare o nascondere i riquadri.|
 |[CFrameWndEx:: OnShowPopupMenu](#onshowpopupmenu)|Chiamata eseguita dal framework quando è abilitato un menu a comparsa.|
-|[CFrameWndEx::OnSize](#onsize)|Il Framework chiama questo metodo dopo la modifica delle dimensioni del frame.|
-|[CFrameWndEx::OnSizing](#onsizing)|Il Framework chiama questo metodo quando l'utente ridimensiona il frame.|
-|[CFrameWndEx::OnSysColorChange](#onsyscolorchange)|Chiamata eseguita dal Framework in caso di modifica dei colori di sistema.|
+|[CFrameWndEx:: OnSize](#onsize)|Il Framework chiama questo metodo dopo la modifica delle dimensioni del frame.|
+|[CFrameWndEx:: ondimensionament](#onsizing)|Il Framework chiama questo metodo quando l'utente ridimensiona il frame.|
+|[CFrameWndEx:: OnSysColorChange](#onsyscolorchange)|Chiamata eseguita dal Framework in caso di modifica dei colori di sistema.|
 |[CFrameWndEx:: OnTearOffMenu](#ontearoffmenu)|Chiamata eseguita dal framework quando è abilitato un menu con una barra di strappo.|
 |[CFrameWndEx:: OnToolbarContextMenu](#ontoolbarcontextmenu)|Chiamata eseguita dal Framework per creare un menu di scelta rapida della barra degli strumenti.|
 |[CFrameWndEx:: OnToolbarCreateNew](#ontoolbarcreatenew)|Il Framework chiama questo metodo per creare una nuova barra degli strumenti.|
@@ -276,22 +276,22 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx:: OnUpdateFrameMenu](#onupdateframemenu)|Chiamato dal Framework per impostare il menu frame.|
 |[CFrameWndEx:: OnUpdateFrameTitle](#onupdateframetitle)|Il Framework chiama questo metodo per aggiornare la barra del titolo della finestra cornice.|
 |[CFrameWndEx:: OnUpdatePaneMenu](#onupdatepanemenu)|Chiamata eseguita dal Framework per aggiornare il menu del riquadro.|
-|[CFrameWndEx::OnWindowPosChanged](#onwindowposchanged)|Chiamata eseguita dal Framework in caso di modifica delle dimensioni del frame, della posizione o dell'ordine z a causa di una chiamata a un metodo di gestione della finestra.|
-|[CFrameWndEx::PaneFromPoint](#panefrompoint)|Restituisce il riquadro di ancoraggio che contiene il punto specificato.|
-|[CFrameWndEx::PreTranslateMessage](#pretranslatemessage)|Gestisce messaggi specifici della finestra prima che vengano inviati.|
-|[CFrameWndEx::RecalcLayout](#recalclayout)|Regola il layout del frame e delle finestre figlio.|
+|[CFrameWndEx:: OnWindowPosChanged](#onwindowposchanged)|Chiamata eseguita dal Framework in caso di modifica delle dimensioni del frame, della posizione o dell'ordine z a causa di una chiamata a un metodo di gestione della finestra.|
+|[CFrameWndEx::P aneFromPoint](#panefrompoint)|Restituisce il riquadro di ancoraggio che contiene il punto specificato.|
+|[CFrameWndEx::P reTranslateMessage](#pretranslatemessage)|Gestisce messaggi specifici della finestra prima che vengano inviati.|
+|[CFrameWndEx:: RecalcLayout](#recalclayout)|Regola il layout del frame e delle finestre figlio.|
 |[CFrameWndEx:: RemovePaneFromDockManager](#removepanefromdockmanager)|Annulla la registrazione di un riquadro e lo rimuove dall'elenco interno di docking Manager.|
 |[CFrameWndEx:: SetDockState](#setdockstate)|Ripristina il layout di ancoraggio nello stato di ancoraggio archiviato nel registro di sistema.|
-|[CFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Imposta la finestra cornice anteprima di stampa.|
+|[CFrameWndEx:: SetPrintPreviewFrame](#setprintpreviewframe)|Imposta la finestra cornice anteprima di stampa.|
 |[CFrameWndEx:: SetupToolbarMenu](#setuptoolbarmenu)|Inserisce i comandi definiti dall'utente in un menu della barra degli strumenti.|
 |[CFrameWndEx:: ShowFullScreen](#showfullscreen)|Passa il fotogramma principale tra lo schermo intero e le modalità normali.|
-|[CFrameWndEx::ShowPane](#showpane)|Consente di visualizzare o nascondere il riquadro specificato.|
-|[CFrameWndEx::UpdateCaption](#updatecaption)|Chiamata eseguita dal Framework per aggiornare la didascalia della cornice della finestra.|
-|[CFrameWndEx:: WinHelp](#winhelp)|Richiama la guida correlata all' `WinHelp` applicazione o al contesto.|
+|[CFrameWndEx:: ShowPane](#showpane)|Consente di visualizzare o nascondere il riquadro specificato.|
+|[CFrameWndEx:: UpdateCaption](#updatecaption)|Chiamata eseguita dal Framework per aggiornare la didascalia della cornice della finestra.|
+|[CFrameWndEx:: WinHelp](#winhelp)|Richiama l'applicazione `WinHelp` o la guida correlata al contesto.|
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come ereditare una classe dalla `CFrameWndEx` classe. Nell'esempio vengono illustrate le firme del metodo nella sottoclasse e come eseguire l' `OnShowPopupMenu` override del metodo. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come ereditare una classe dalla classe `CFrameWndEx`. Nell'esempio vengono illustrate le firme del metodo nella sottoclasse e viene illustrato come eseguire l'override del metodo `OnShowPopupMenu`. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#3](../../mfc/reference/codesnippet/cpp/cframewndex-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#4](../../mfc/reference/codesnippet/cpp/cframewndex-class_2.cpp)]
@@ -312,7 +312,7 @@ Nell'esempio seguente viene illustrato come ereditare una classe dalla `CFrameWn
 
 **Intestazione:** afxframewndex.h
 
-##  <a name="activeitemrecalclayout"></a>  CFrameWndEx::ActiveItemRecalcLayout
+##  <a name="activeitemrecalclayout"></a>CFrameWndEx:: ActiveItemRecalcLayout
 
 Regola il layout dell'elemento client OLE e dell'area client del frame.
 
@@ -320,9 +320,9 @@ Regola il layout dell'elemento client OLE e dell'area client del frame.
 void ActiveItemRecalcLayout();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="addpane"></a>  CFrameWndEx::AddPane
+##  <a name="addpane"></a>CFrameWndEx:: AddPane
 
 Registra una barra di controllo con il gestore di ancoraggio.
 
@@ -357,11 +357,11 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 *hdwp*<br/>
 Handle per una struttura che contiene le posizioni di più finestre. .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La struttura hdwp viene inizializzata dal metodo [BeginDeferWindowPos](/windows/win32/api/winuser/nf-winuser-begindeferwindowpos) .
 
-##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu
+##  <a name="delayupdateframemenu"></a>CFrameWndEx::D elayUpdateFrameMenu
 
 Imposta il menu cornice, quindi lo aggiorna quando l'elaborazione del comando è inattiva.
 
@@ -374,7 +374,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 *hMenuAlt*<br/>
 in Handle per un menu alternativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="dockpane"></a>CFrameWndEx::D ockPane
 
@@ -398,7 +398,7 @@ in ID del lato della finestra cornice da ancorare a.
 *lpRect*<br/>
 in Puntatore a una struttura di Rect costante che specifica la posizione e le dimensioni dello schermo della finestra.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il parametro *nDockBarID* può avere uno dei valori seguenti:
 
@@ -410,7 +410,7 @@ Il parametro *nDockBarID* può avere uno dei valori seguenti:
 
 - AFX_IDW_DOCKBAR_RIGHT
 
-##  <a name="dockpaneleftof"></a>  CFrameWndEx::DockPaneLeftOf
+##  <a name="dockpaneleftof"></a>CFrameWndEx::D ockPaneLeftOf
 
 Ancora il riquadro specificato a sinistra di un altro riquadro.
 
@@ -432,7 +432,7 @@ in Puntatore al riquadro a sinistra di cui ancorare il riquadro specificato da *
 
 TRUE se *pBar* è ancorato correttamente. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il metodo accetta la barra degli strumenti specificata dal parametro *pBar* e la inserisce sul lato sinistro della barra degli strumenti specificata dal parametro *pLeftOf* .
 
@@ -453,11 +453,11 @@ in Specifica il lato della finestra cornice principale in cui ancorare il riquad
 
 TRUE se un riquadro a barre viene ancorato al lato della finestra cornice specificato da *dwDockStyle*; in caso contrario, false.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 *dwDockStyle* può avere uno dei valori seguenti:
 
-- CBRS_ALIGN_TOP: consente di ancorare la barra di controllo alla parte superiore dell'area client di una finestra cornice.
+- CBRS_ALIGN_TOP: consente l'ancoraggio della barra di controllo nella parte superiore dell'area client di una finestra cornice.
 
 - CBRS_ALIGN_BOTTOM: consente l'ancoraggio della barra di controllo nella parte inferiore dell'area client di una finestra cornice.
 
@@ -482,7 +482,7 @@ in Specifica il lato della finestra cornice principale in cui la barra del riqua
 
 TRUE se un riquadro a barre può essere ancorato correttamente sul lato specificato. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il parametro *dwDockStyle* può avere uno dei valori seguenti:
 
@@ -520,15 +520,15 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 *uiFullScreenCmd*<br/>
 in ID di un comando che Abilita e Disabilita la modalità schermo intero.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 In modalità schermo intero, tutte le barre di controllo ancorate, le barre degli strumenti e il menu sono nascoste e la visualizzazione attiva viene ridimensionata in modo da occupare lo schermo intero.
 
-Quando si Abilita la modalità schermo intero, è necessario specificare un ID del comando che Abilita o Disabilita la modalità schermo intero. È possibile chiamare `EnableFullScreenMode` dalla `OnCreate` funzione del frame principale. Quando una finestra cornice passa a una modalità a schermo intero, il Framework crea una barra degli strumenti mobile con un pulsante con l'ID di comando specificato.
+Quando si Abilita la modalità schermo intero, è necessario specificare un ID del comando che Abilita o Disabilita la modalità schermo intero. È possibile chiamare `EnableFullScreenMode` dalla funzione `OnCreate` del frame principale. Quando una finestra cornice passa a una modalità a schermo intero, il Framework crea una barra degli strumenti mobile con un pulsante con l'ID di comando specificato.
 
 Se si desidera lasciare il menu principale sullo schermo, chiamare [CFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu).
 
-##  <a name="enableloaddockstate"></a>  CFrameWndEx::EnableLoadDockState
+##  <a name="enableloaddockstate"></a>CFrameWndEx:: EnableLoadDockState
 
 Abilita o Disabilita il caricamento dello stato di ancoraggio.
 
@@ -587,7 +587,7 @@ CMFCPopupMenu* GetActivePopup() const;
 
 Puntatore al menu di scelta rapida attualmente visualizzato; in caso contrario, NULL.
 
-##  <a name="getdefaultresid"></a>  CFrameWndEx::GetDefaultResId
+##  <a name="getdefaultresid"></a>CFrameWndEx:: GetDefaultResId
 
 Restituisce l'ID di risorsa specificato quando il Framework ha caricato la finestra cornice.
 
@@ -599,7 +599,7 @@ UINT GetDefaultResId() const;
 
 Valore dell'ID risorsa specificato dall'utente quando il Framework ha caricato la finestra cornice. Zero se la finestra cornice non dispone di una barra dei menu.
 
-##  <a name="getdockingmanager"></a>  CFrameWndEx::GetDockingManager
+##  <a name="getdockingmanager"></a>CFrameWndEx:: GetDockingManager
 
 Recupera l'oggetto della [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) per la finestra cornice.
 
@@ -611,11 +611,11 @@ CDockingManager* GetDockingManager();
 
 Puntatore alla [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La finestra cornice crea e usa un oggetto della [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) per gestire l'ancoraggio della finestra figlio.
 
-##  <a name="getmenubar"></a>  CFrameWndEx::GetMenuBar
+##  <a name="getmenubar"></a>CFrameWndEx:: getbarra dei menu
 
 Restituisce un puntatore all'oggetto della barra dei menu collegato alla finestra cornice.
 
@@ -644,7 +644,7 @@ in ID del controllo.
 
 Puntatore al riquadro con l'ID specificato. NULL se non esiste alcun riquadro di questo tipo.
 
-##  <a name="getribbonbar"></a>  CFrameWndEx::GetRibbonBar
+##  <a name="getribbonbar"></a>CFrameWndEx:: GetRibbonBar
 
 Recupera il controllo barra multifunzione per il frame.
 
@@ -656,7 +656,7 @@ CMFCRibbonBar* GetRibbonBar();
 
 Puntatore alla [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) per il frame.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="gettearoffbars"></a>CFrameWndEx:: GetTearOffBars
 
@@ -668,7 +668,7 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento a `CObList` un oggetto che contiene una raccolta di puntatori agli oggetti del riquadro che si trovano in uno stato di strappo.
+Riferimento a `CObList` oggetto che contiene una raccolta di puntatori agli oggetti del riquadro che si trovano in uno stato di strappo.
 
 ##  <a name="gettoolbarbuttontooltiptext"></a>CFrameWndEx:: GetToolbarButtonToolTipText
 
@@ -682,7 +682,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 ### <a name="parameters"></a>Parametri
 
-*pButton*<br/>
+*p*<br/>
 in Puntatore a un pulsante della barra degli strumenti.
 
 *strTTText*<br/>
@@ -692,7 +692,7 @@ in Testo della descrizione comando da visualizzare per il pulsante.
 
 TRUE se la descrizione comando è stata visualizzata. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questo metodo non effettua alcuna operazione. Eseguire l'override di questo metodo se si desidera visualizzare la descrizione comando per il pulsante della barra degli strumenti.
 
@@ -715,18 +715,18 @@ Puntatore a una barra di controllo da inserire nell'elenco di barre di controllo
 *pTarget*<br/>
 Puntatore a una barra di controllo prima o dopo cui inserire il riquadro.
 
-*bAfter*<br/>
+*bDopo*<br/>
 TRUE se si desidera inserire *pControlBar* dopo *PTarget*; in caso contrario, false.
 
 ### <a name="return-value"></a>Valore restituito
 
 TRUE se la barra di controllo è stata inserita e registrata correttamente; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È necessario registrare ogni barra di controllo usando [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) per partecipare a un layout di ancoraggio.
 
-##  <a name="isfullscreen"></a>  CFrameWndEx::IsFullScreen
+##  <a name="isfullscreen"></a>CFrameWndEx:: FullScreen
 
 Determina se la finestra cornice è in modalità schermo intero.
 
@@ -738,11 +738,11 @@ BOOL IsFullScreen() const;
 
 TRUE se la finestra cornice è in modalità schermo intero; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile impostare la modalità schermo intero chiamando il metodo [CFrameWndEx:: EnableFullScreenMode](#enablefullscreenmode) .
 
-##  <a name="ismenubaravailable"></a>  CFrameWndEx::IsMenuBarAvailable
+##  <a name="ismenubaravailable"></a>CFrameWndEx:: IsMenuBarAvailable
 
 Determina se il puntatore all'oggetto della barra dei menu è valido.
 
@@ -780,7 +780,7 @@ out TRUE se il punto si trova vicino al bordo del frame; FALSE se il punto si tr
 
 TRUE se il punto si trova in una zona di allineamento; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Nella tabella seguente sono elencati i valori possibili per il parametro *dwBarAlignment* .
 
@@ -791,7 +791,7 @@ Nella tabella seguente sono elencati i valori possibili per il parametro *dwBarA
 |CBRS_ALIGN_BOTTOM|Allineato alla parte inferiore.  |
 |CBRS_ALIGN_LEFT|Allineato a sinistra.  |
 
-##  <a name="isprintpreview"></a>  CFrameWndEx::IsPrintPreview
+##  <a name="isprintpreview"></a>CFrameWndEx:: IsPrintPreview
 
 Determina se la finestra cornice è in modalità anteprima di stampa.
 
@@ -803,7 +803,7 @@ BOOL IsPrintPreview();
 
 TRUE se la finestra cornice è in modalità anteprima di stampa. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="loadframe"></a>CFrameWndEx:: LoadFrame
 
@@ -835,9 +835,9 @@ in Puntatore a una classe di [struttura CCreateContext](../../mfc/reference/ccre
 
 TRUE se il metodo ha avuto esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="negotiateborderspace"></a>  CFrameWndEx::NegotiateBorderSpace
+##  <a name="negotiateborderspace"></a>CFrameWndEx:: NegotiateBorderSpace
 
 Implementa la negoziazione del bordo client OLE.
 
@@ -859,7 +859,7 @@ in Comando di negoziazione del bordo. Per i valori possibili, vedere la sezione 
 
 TRUE se il layout deve essere ricalcolato. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Nella tabella seguente sono elencati i valori possibili per il parametro *nBorderCmd* .
 
@@ -869,7 +869,7 @@ Ottiene lo spazio client OLE disponibile.
 *borderRequest*<br/>
 Richiedere lo spazio client OLE.
 
-*borderSet*<br/>
+*Bordo*<br/>
 Imposta lo spazio client OLE.
 
 ##  <a name="onactivate"></a>CFrameWndEx:: OnActivate
@@ -894,7 +894,7 @@ in Puntatore a un'altra finestra che sta cambiando l'input dell'utente con quell
 *bMinimized*<br/>
 in Stato ridotto a icona del frame. TRUE se il frame è ridotto a icona; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Nella tabella seguente sono elencati i valori possibili per il parametro *nState* .
 
@@ -922,7 +922,7 @@ in TRUE se l'applicazione è selezionata. FALSE se l'applicazione non è selezio
 *dwThreadID*<br/>
 in Questo parametro non viene utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onchangevisualmanager"></a>CFrameWndEx:: OnChangeVisualManager
 
@@ -946,7 +946,7 @@ in Questo parametro non viene utilizzato.
 
 Restituisce sempre 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onclose"></a>CFrameWndEx:: OnClose
 
@@ -956,7 +956,7 @@ Il Framework chiama questo metodo per chiudere il frame.
 afx_msg void OnClose();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se il frame è in modalità anteprima di stampa, viene inviato un messaggio di Windows per chiudere l'anteprima di stampa. in caso contrario, se il frame ospita un client OLE, il client viene disattivato.
 
@@ -972,7 +972,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 
 TRUE se la barra di ancoraggio può essere chiusa. FALSE in caso contrario
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questo metodo se si vuole gestire il nascondiglio della barra di ancoraggio.
 
@@ -988,7 +988,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
 
 TRUE se è possibile chiudere una finestra cornice a virgola mobile. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questo metodo se si desidera elaborare l'occultamento di una finestra con mini-cornice a virgola mobile.
 
@@ -1005,9 +1005,9 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 *pMenuPopup*<br/>
 Puntatore a un menu a comparsa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il framework invia un messaggio WM_DESTROY quando sta per chiudere la finestra. Eseguire l'override di questo metodo se si desidera gestire `CMFCPopupMenu` le notifiche da oggetti che appartengono alla finestra cornice `CMFCPopupMenu` quando un oggetto elabora un messaggio WM_DESTROY inviato dal framework quando la finestra viene chiusa.
+Il framework invia un messaggio di WM_DESTROY quando sta per chiudere la finestra. Eseguire l'override di questo metodo se si desidera gestire le notifiche da oggetti `CMFCPopupMenu` che appartengono alla finestra cornice quando un oggetto `CMFCPopupMenu` elabora un messaggio WM_DESTROY inviato dal framework quando la finestra viene chiusa.
 
 ##  <a name="oncmdmsg"></a>CFrameWndEx:: OnCmdMsg
 
@@ -1039,9 +1039,9 @@ in Categoria del messaggio di comando.
 
 TRUE se il messaggio del comando è stato gestito. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="oncontexthelp"></a>  CFrameWndEx::OnContextHelp
+##  <a name="oncontexthelp"></a>CFrameWndEx:: OnContextHelp
 
 Chiamata eseguita dal Framework per visualizzare la guida relativa al contesto.
 
@@ -1049,7 +1049,7 @@ Chiamata eseguita dal Framework per visualizzare la guida relativa al contesto.
 afx_msg void OnContextHelp();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="oncreate"></a>CFrameWndEx:: OnCreate
 
@@ -1068,7 +1068,7 @@ in Puntatore alla [struttura struttura CREATESTRUCT](/windows/win32/api/winuser/
 
 0 per continuare con la creazione del frame; -1 per eliminare definitivamente il frame.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="ondestroy"></a>CFrameWndEx:: OnDestroy
 
@@ -1078,7 +1078,7 @@ Chiamata eseguita dal framework quando il frame viene eliminato definitivamente.
 afx_msg void OnDestroy();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La tabella di tasti di scelta rapida e tutte le finestre vengono distrutte.
 
@@ -1102,19 +1102,19 @@ in Puntatore a un contesto di dispositivo.
 in Puntatore a un pulsante di menu di cui viene eseguito il rendering dell'immagine.
 
 *rectImage*<br/>
-in Puntatore a una `Rect` struttura che specifica la posizione dello schermo e le dimensioni dell'immagine.
+in Puntatore a una struttura `Rect` che specifica la posizione e le dimensioni dello schermo dell'immagine.
 
 ### <a name="return-value"></a>Valore restituito
 
 TRUE se il Framework esegue correttamente il rendering dell'immagine; In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo se si desidera personalizzare il rendering dell'immagine per le voci di menu che appartengono alla barra dei `CFrameWndEx` menu di proprietà dell'oggetto derivato.
+Eseguire l'override di questo metodo se si desidera personalizzare il rendering dell'immagine per le voci di menu che appartengono alla barra dei menu di proprietà del `CFrameWndEx` oggetto derivato.
 
 ##  <a name="ondrawmenulogo"></a>CFrameWndEx:: OnDrawMenuLogo
 
-Chiamata eseguita dal framework quando un `CMFCPopupMenu` oggetto elabora un messaggio WM_PAINT.
+Chiamata eseguita dal framework quando un oggetto `CMFCPopupMenu` elabora un messaggio di WM_PAINT.
 
 ```
 virtual void OnDrawMenuLogo(
@@ -1132,13 +1132,13 @@ in Puntatore a un contesto di dispositivo.
 in Puntatore alla voce di menu.
 
 *rectLogo*<br/>
-in Riferimento a una struttura costante `CRect` che specifica la posizione e le dimensioni dello schermo del logo di menu.
+in Riferimento a una struttura di `CRect` costante che specifica la posizione e le dimensioni dello schermo del logo di menu.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione se si desidera visualizzare un logo nel menu popup che appartiene alla barra dei menu di proprietà dell' `CFrameWndEx` oggetto derivato.
+Eseguire l'override di questa funzione se si desidera visualizzare un logo nel menu popup che appartiene alla barra dei menu di proprietà del `CFrameWndEx` oggetto derivato.
 
-##  <a name="ondwmcompositionchanged"></a>  CFrameWndEx::OnDWMCompositionChanged
+##  <a name="ondwmcompositionchanged"></a>CFrameWndEx:: OnDWMCompositionChanged
 
 Chiamata eseguita dal framework quando la composizione di Gestione finestre desktop (DWM) è stata abilitata o disabilitata.
 
@@ -1150,19 +1150,19 @@ afx_msg LRESULT OnDWMCompositionChanged(
 
 ### <a name="parameters"></a>Parametri
 
-*wp*<br/>
+*WP*<br/>
 in Questo parametro non viene utilizzato.
 
-*lp*<br/>
+*LP*<br/>
 in Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce sempre 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onexitsizemove"></a>  CFrameWndEx::OnExitSizeMove
+##  <a name="onexitsizemove"></a>CFrameWndEx:: OnExitSizeMove
 
 Chiamata eseguita dal framework quando il frame smette di essere spostato o ridimensionato.
 
@@ -1174,19 +1174,19 @@ LRESULT OnExitSizeMove(
 
 ### <a name="parameters"></a>Parametri
 
-*wp*<br/>
+*WP*<br/>
 in Questo parametro non viene utilizzato.
 
-*lp*<br/>
+*LP*<br/>
 in Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce sempre 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="ongetminmaxinfo"></a>  CFrameWndEx::OnGetMinMaxInfo
+##  <a name="ongetminmaxinfo"></a>CFrameWndEx:: OnGetMinMaxInfo
 
 Chiamata eseguita dal framework quando il frame viene ridimensionato per impostare i limiti della dimensione della finestra.
 
@@ -1199,9 +1199,9 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 *lpMMI*<br/>
 in Puntatore a una struttura [MINMAXINFO](/windows/win32/api/winuser/ns-winuser-minmaxinfo) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onidleupdatecmdui"></a>  CFrameWndEx::OnIdleUpdateCmdUI
+##  <a name="onidleupdatecmdui"></a>CFrameWndEx:: OnIdleUpdateCmdUI
 
 Chiamata eseguita dal Framework per aggiornare la visualizzazione frame quando l'elaborazione del comando è inattiva.
 
@@ -1223,7 +1223,7 @@ in Questo parametro non viene utilizzato.
 
 Restituisce sempre 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onlbuttondown"></a>CFrameWndEx:: OnLButtonDown
 
@@ -1243,7 +1243,7 @@ in Indica se l'utente ha premuto i tasti di modifica. Per i valori possibili, ve
 *point*<br/>
 in Specifica le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onlbuttonup"></a>CFrameWndEx:: OnLButtonUp
 
@@ -1263,11 +1263,11 @@ in Indica se l'utente ha premuto i tasti di modifica. Per i valori possibili, ve
 *point*<br/>
 in Specifica le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onmenubuttontoolhittest"></a>CFrameWndEx:: OnMenuButtonToolHitTest
 
-Chiamata eseguita dal framework quando un `CMFCToolBarButton` oggetto elabora un messaggio WM_NCHITTEST.
+Chiamata eseguita dal framework quando un oggetto `CMFCToolBarButton` elabora un messaggio di WM_NCHITTEST.
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1277,7 +1277,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 ### <a name="parameters"></a>Parametri
 
-*pButton*<br/>
+*p*<br/>
 in Puntatore al pulsante della barra degli strumenti.
 
 *pTI*<br/>
@@ -1287,7 +1287,7 @@ out Puntatore a una struttura di informazioni sugli strumenti.
 
 TRUE se l'applicazione compila il parametro *PTI* . In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo se si desidera fornire informazioni sulla descrizione comando per una voce di menu specifica.
 
@@ -1308,7 +1308,7 @@ afx_msg LRESULT OnMenuChar(
 in Codice carattere del tasto premuto.
 
 *nFlags*<br/>
-in Contiene il flag MF_POPUP se il menu visualizzato è un sottomenu; contiene il flag MF_SYSMENU se il menu visualizzato è un menu di controllo.
+in Contiene il flag di MF_POPUP se il menu visualizzato è un sottomenu; contiene il flag di MF_SYSMENU se il menu visualizzato è un menu di controllo.
 
 *pMenu*<br/>
 in Puntatore a un menu.
@@ -1341,7 +1341,7 @@ in Indica se un utente ha premuto i tasti di modifica. Per i valori possibili, v
 *point*<br/>
 in Specifica le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onmoveminiframe"></a>CFrameWndEx:: OnMoveMiniFrame
 
@@ -1360,7 +1360,7 @@ in Puntatore alla finestra del riquadro della [classe CPaneFrameWnd](../../mfc/r
 
 TRUE se la finestra del riquadro non è ancorata; FALSE se la finestra del riquadro è ancorata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onncactivate"></a>CFrameWndEx:: OnNcActivate
 
@@ -1379,9 +1379,9 @@ in TRUE per creare il frame attivo; FALSE per creare il frame inattivo.
 
 Diverso da zero per continuare l'elaborazione predefinita; 0 per impedire la disattivazione dell'area non client.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onnccalcsize"></a>  CFrameWndEx::OnNcCalcSize
+##  <a name="onnccalcsize"></a>CFrameWndEx:: OnNcCalcSize
 
 Chiamata eseguita dal framework quando è necessario calcolare le dimensioni e la posizione dell'area client.
 
@@ -1397,11 +1397,11 @@ afx_msg void OnNcCalcSize(
 in TRUE se l'applicazione deve specificare un'area client valida. in caso contrario, FALSE.
 
 *lpncsp*<br/>
-in Puntatore a una `NCCALCSIZE_PARAMS` struttura che contiene le modifiche della dimensione del frame.
+in Puntatore a una struttura `NCCALCSIZE_PARAMS` che contiene le modifiche della dimensione del frame.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onnchittest"></a>  CFrameWndEx::OnNcHitTest
+##  <a name="onnchittest"></a>CFrameWndEx:: OnNcHitTest
 
 Chiamata eseguita dal framework quando il puntatore si sposta o quando un pulsante del mouse viene premuto o rilasciato.
 
@@ -1416,11 +1416,11 @@ in Posizione del puntatore nelle coordinate dello schermo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore enumerato di hit puntatore. Per un elenco di valori possibili, vedere [notifica WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest).
+Valore enumerato di hit puntatore. Per un elenco di valori possibili, vedere [WM_NCHITTEST notifica](/windows/win32/inputdev/wm-nchittest).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onncmousemove"></a>  CFrameWndEx::OnNcMouseMove
+##  <a name="onncmousemove"></a>CFrameWndEx:: OnNcMouseMove
 
 Chiamata eseguita dal framework quando il puntatore si sposta in un'area non client.
 
@@ -1433,14 +1433,14 @@ afx_msg void OnNcMouseMove(
 ### <a name="parameters"></a>Parametri
 
 *nHitTest*<br/>
-in Valore enumerato di hit puntatore. Per un elenco di valori possibili, vedere [notifica WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest).
+in Valore enumerato di hit puntatore. Per un elenco di valori possibili, vedere [WM_NCHITTEST notifica](/windows/win32/inputdev/wm-nchittest).
 
 *point*<br/>
 in Posizione del puntatore nelle coordinate dello schermo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onncpaint"></a>  CFrameWndEx::OnNcPaint
+##  <a name="onncpaint"></a>CFrameWndEx:: OnNcPaint
 
 Chiamata eseguita dal framework quando l'area non client deve essere disegnata.
 
@@ -1448,7 +1448,7 @@ Chiamata eseguita dal framework quando l'area non client deve essere disegnata.
 afx_msg void OnNcPaint();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onpanecheck"></a>CFrameWndEx:: OnPaneCheck
 
@@ -1467,9 +1467,9 @@ in ID del controllo di un riquadro.
 
 TRUE se il comando è stato gestito; FALSE per continuare l'elaborazione del comando.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onpostpreviewframe"></a>  CFrameWndEx::OnPostPreviewFrame
+##  <a name="onpostpreviewframe"></a>CFrameWndEx:: OnPostPreviewFrame
 
 Chiamata eseguita dal framework quando l'utente modifica la modalità di anteprima di stampa.
 
@@ -1491,7 +1491,7 @@ in TRUE se il frame è in modalità anteprima di stampa. FALSE quando la modalit
 
 Restituisce sempre 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onpowerbroadcast"></a>CFrameWndEx:: OnPowerBroadcast
 
@@ -1505,17 +1505,17 @@ afx_msg LRESULT OnPowerBroadcast(
 
 ### <a name="parameters"></a>Parametri
 
-*wp*<br/>
+*WP*<br/>
 in Evento di risparmio energia. Per un elenco di valori possibili, vedere [WM_POWERBROADCAST Message](/windows/win32/Power/wm-powerbroadcast).
 
-*lp*<br/>
+*LP*<br/>
 in Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Risultato della chiamata alla routine della finestra predefinita.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onsetmenu"></a>CFrameWndEx:: OnSetMenu
 
@@ -1531,10 +1531,10 @@ BOOL OnSetMenu(HMENU hmenu);
 
 ### <a name="parameters"></a>Parametri
 
-*wp*<br/>
+*WP*<br/>
 in Handle per il nuovo menu della finestra cornice.
 
-*lp*<br/>
+*LP*<br/>
 in Handle per il menu nuova finestra.
 
 *HMENU*<br/>
@@ -1546,7 +1546,7 @@ LRESULT è il risultato della chiamata alla routine della finestra predefinita.
 
 BOOL è TRUE se l'evento è stato gestito. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onsetpreviewmode"></a>CFrameWndEx:: OnSetPreviewMode
 
@@ -1564,9 +1564,9 @@ virtual void OnSetPreviewMode(
 in TRUE per abilitare l'anteprima di stampa. FALSE per disabilitare l'anteprima di stampa.
 
 *pState*<br/>
-in Puntatore a una `CPrintPreviewState` struttura di stato del frame.
+in Puntatore a una struttura di stato del frame `CPrintPreviewState`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onsettext"></a>CFrameWndEx:: OnSetText
 
@@ -1590,11 +1590,11 @@ in Puntatore al testo per la finestra.
 
 Valore restituito da una chiamata a [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onshowcustomizepane"></a>CFrameWndEx:: OnShowCustomizePane
 
-Chiamata eseguita dal framework quando viene visualizzato un `QuickCustomizePane`oggetto.
+Chiamato dal framework quando viene visualizzato un `QuickCustomizePane`.
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -1614,7 +1614,7 @@ in ID del controllo della barra degli strumenti da personalizzare.
 
 Questo metodo restituisce sempre TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il menu di personalizzazione rapida è un menu a comparsa visualizzato quando si fa clic sul pulsante Personalizza della barra degli strumenti
 
@@ -1635,7 +1635,7 @@ in TRUE se l'applicazione Visualizza i riquadri. In caso contrario, FALSE.
 
 Questo metodo restituisce sempre FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita Mostra i riquadri se *bShow* è true e i riquadri sono nascosti oppure quando *bShow* è false e i riquadri sono visibili.
 
@@ -1660,7 +1660,7 @@ in Puntatore a un menu a comparsa.
 
 TRUE se il menu di scelta rapida è visibile; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo in una classe derivata per eseguire codice personalizzato quando il Framework Visualizza un menu a comparsa. Ad esempio, eseguire l'override di questo metodo per modificare il colore di sfondo dei comandi in un menu a comparsa.
 
@@ -1683,12 +1683,12 @@ in Tipo di ridimensionamento. Per i valori possibili, vedere il parametro *wPara
 *cx*<br/>
 in Nuova larghezza del fotogramma in pixel.
 
-*cy*<br/>
+*CY*<br/>
 in Nuova altezza del frame in pixel.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onsizing"></a>  CFrameWndEx::OnSizing
+##  <a name="onsizing"></a>CFrameWndEx:: ondimensionament
 
 Chiamata eseguita dal framework quando l'utente ridimensiona il frame.
 
@@ -1701,14 +1701,14 @@ afx_msg void OnSizing(
 ### <a name="parameters"></a>Parametri
 
 *fwSide*<br/>
-in Bordo del frame che viene spostato. Vedere il parametro *wParam* nella [notifica WM_SIZING](/windows/win32/winmsg/wm-sizing).
+in Bordo del frame che viene spostato. Vedere il parametro *wParam* in [WM_SIZING notifica](/windows/win32/winmsg/wm-sizing).
 
 *pRect*<br/>
 [in, out] Puntatore a una struttura [CRect](../../atl-mfc-shared/reference/crect-class.md) o [Rect](/windows/win32/api/windef/ns-windef-rect) che contiene le coordinate del frame.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onsyscolorchange"></a>  CFrameWndEx::OnSysColorChange
+##  <a name="onsyscolorchange"></a>CFrameWndEx:: OnSysColorChange
 
 Chiamata eseguita dal Framework in caso di modifica dei colori di sistema.
 
@@ -1716,7 +1716,7 @@ Chiamata eseguita dal Framework in caso di modifica dei colori di sistema.
 void OnSysColorChange();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="ontearoffmenu"></a>CFrameWndEx:: OnTearOffMenu
 
@@ -1740,7 +1740,7 @@ in Puntatore a una barra di strappo.
 
 TRUE se il menu di scelta rapida con la barra di strappo è abilitato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo in una classe derivata per eseguire codice personalizzato quando il Framework Visualizza una barra di controllo.
 
@@ -1758,17 +1758,17 @@ afx_msg LRESULT OnToolbarContextMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*wp*<br/>
+*WP*<br/>
 in Questo parametro non viene utilizzato.
 
-*lp*<br/>
+*LP*<br/>
 in Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce sempre 1.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="ontoolbarcreatenew"></a>CFrameWndEx:: OnToolbarCreateNew
 
@@ -1782,17 +1782,17 @@ afx_msg LRESULT OnToolbarCreateNew(
 
 ### <a name="parameters"></a>Parametri
 
-*wp*<br/>
+*WP*<br/>
 in Questo parametro non viene utilizzato.
 
-*lp*<br/>
+*LP*<br/>
 in Puntatore al testo per la barra del titolo della barra degli strumenti.
 
 ### <a name="return-value"></a>Valore restituito
 
 Puntatore alla nuova barra degli strumenti; o NULL se non è stata creata una barra degli strumenti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="ontoolbardelete"></a>CFrameWndEx:: OnToolbarDelete
 
@@ -1806,17 +1806,17 @@ afx_msg LRESULT OnToolbarDelete(
 
 ### <a name="parameters"></a>Parametri
 
-*unused*<br/>
+*inutilizzati*<br/>
 in Questo parametro non viene utilizzato.
 
-*lp*<br/>
+*LP*<br/>
 in Puntatore a una barra degli strumenti.
 
 ### <a name="return-value"></a>Valore restituito
 
 TRUE se la barra degli strumenti è stata eliminata. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onupdateframemenu"></a>CFrameWndEx:: OnUpdateFrameMenu
 
@@ -1831,7 +1831,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 *hMenuAlt*<br/>
 in Handle per il menu alternativo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onupdateframetitle"></a>CFrameWndEx:: OnUpdateFrameTitle
 
@@ -1846,7 +1846,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 *bAddToTitle*<br/>
 in TRUE per aggiungere il titolo del documento attivo alla barra del titolo della finestra cornice; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onupdatepanemenu"></a>CFrameWndEx:: OnUpdatePaneMenu
 
@@ -1861,9 +1861,9 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 *pCmdUI*<br/>
 in Puntatore all'oggetto interfaccia utente del riquadro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onwindowposchanged"></a>  CFrameWndEx::OnWindowPosChanged
+##  <a name="onwindowposchanged"></a>CFrameWndEx:: OnWindowPosChanged
 
 Chiamata eseguita dal Framework in caso di modifica delle dimensioni del frame, della posizione o dell'ordine z a causa di una chiamata a un metodo di gestione della finestra.
 
@@ -1876,7 +1876,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 *lpwndpos*<br/>
 in Puntatore a una struttura [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) che contiene le nuove dimensioni e la posizione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="panefrompoint"></a>CFrameWndEx::P aneFromPoint
 
@@ -1917,13 +1917,13 @@ out Se ha esito positivo, questo parametro contiene il lato della barra di contr
 
 Puntatore a una barra di controllo che contiene il *punto*; NULL se non viene trovato alcun controllo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo esegue la ricerca di un *punto*in tutte le barre di controllo nell'applicazione.
 
 Usare *nSensitivity* per aumentare le dimensioni dell'area di ricerca. Usare *pRTCBarType* per limitare i tipi di barre di controllo che il metodo esegue la ricerca.
 
-##  <a name="pretranslatemessage"></a>  CFrameWndEx::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CFrameWndEx::P reTranslateMessage
 
 Gestisce messaggi specifici della finestra prima che vengano inviati.
 
@@ -1940,7 +1940,7 @@ in Puntatore a una struttura [msg](/windows/win32/api/winuser/ns-winuser-msg) ch
 
 Diverso da zero se il messaggio è stato gestito e non deve essere inviato. 0 se il messaggio non è stato gestito e deve essere inviato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="recalclayout"></a>CFrameWndEx:: RecalcLayout
 
@@ -1955,7 +1955,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 *bNotify*<br/>
 in Specifica se inviare una notifica all'elemento client OLE sulla modifica del layout.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo viene chiamato quando vengono modificate le dimensioni della finestra cornice o quando le barre di controllo vengono visualizzate o nascoste.
 
@@ -1977,7 +1977,7 @@ void RemovePaneFromDockManager(
 *pControlBar*<br/>
 in Puntatore al riquadro della barra di controllo da rimuovere.
 
-*bDestroy*<br/>
+*bdistrutto*<br/>
 in TRUE per eliminare definitivamente la barra di controllo dopo la rimozione. In caso contrario, FALSE.
 
 *bAdjustLayout*<br/>
@@ -1989,7 +1989,7 @@ in TRUE se la barra di controllo è in modalità Nascondi automaticamente; In ca
 *pBarReplacement*<br/>
 in Puntatore a un riquadro che sostituisce il riquadro rimosso.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare questo metodo per rimuovere una barra di controllo dal layout di ancoraggio della finestra cornice.
 
@@ -2008,7 +2008,7 @@ void SetDockState(const CDockState& state);
 *state*<br/>
 Stato di ancoraggio. Questo parametro viene ignorato.
 
-##  <a name="setprintpreviewframe"></a>  CFrameWndEx::SetPrintPreviewFrame
+##  <a name="setprintpreviewframe"></a>CFrameWndEx:: SetPrintPreviewFrame
 
 Imposta la finestra cornice anteprima di stampa.
 
@@ -2021,7 +2021,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 *pWnd*<br/>
 in Puntatore a una finestra cornice di anteprima di stampa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="setuptoolbarmenu"></a>CFrameWndEx:: SetupToolbarMenu
 
@@ -2037,7 +2037,7 @@ void SetupToolbarMenu(
 ### <a name="parameters"></a>Parametri
 
 *menu*<br/>
-in `CMenu` Oggetto da modificare.
+in Oggetto `CMenu` da modificare.
 
 *uiViewUserToolbarCmdFirst*<br/>
 in Primo comando definito dall'utente.
@@ -2045,7 +2045,7 @@ in Primo comando definito dall'utente.
 *uiViewUserToolbarCmdLast*<br/>
 in Ultimo comando definito dall'utente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il Framework archivia i comandi definiti dall'utente in un elenco. Usare *uiViewUserToolbarCmdFirst* e *uiViewUserToolbarCmdList* per specificare gli indici dei comandi da inserire.
 
@@ -2083,7 +2083,7 @@ in Se TRUE, ritardare la regolazione del layout di ancoraggio fino a quando il F
 *bActivate*<br/>
 in Se TRUE, rendere attiva la barra di controllo. In caso contrario, visualizzare la barra di controllo in uno stato inattivo.
 
-##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption
+##  <a name="updatecaption"></a>CFrameWndEx:: UpdateCaption
 
 Chiamata eseguita dal Framework per aggiornare la didascalia della cornice della finestra.
 
@@ -2091,7 +2091,7 @@ Chiamata eseguita dal Framework per aggiornare la didascalia della cornice della
 void UpdateCaption();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="winhelp"></a>CFrameWndEx:: WinHelp
 
@@ -2111,7 +2111,7 @@ Dati che dipendono dal parametro *nCmd* . Per un elenco di valori possibili, ved
 *nCmd*<br/>
 Comando della guida. Per un elenco di valori possibili, vedere [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 

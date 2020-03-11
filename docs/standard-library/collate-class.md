@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689816"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866155"
 ---
 # <a name="collate-class"></a>Classe collate
 
@@ -42,10 +42,10 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere al valore archiviato consente di archiviare un valore positivo univoco in `id`. In alcuni linguaggi i caratteri vengono raggruppati e considerati come singoli caratteri, mentre in altri linguaggi i singoli caratteri vengono considerati come se fossero due caratteri. I servizi di ordinamento forniti dalla classe di ordinamento forniscono una modalità di ordinamento per questi casi.
 
@@ -55,9 +55,9 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 |-|-|
 |[collate](#collate)|Costruttore per gli oggetti della classe `collate` utilizzato come facet delle impostazioni locali per gestire le convenzioni di ordinamento delle stringhe.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[char_type](#char_type)|Tipo che descrive un carattere di tipo `CharType`.|
 |[string_type](#string_type)|Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo `CharType`.|
@@ -75,7 +75,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:** \<impostazioni locali >
 
 **Spazio dei nomi:** std
 
@@ -87,7 +87,7 @@ Tipo che descrive un carattere di tipo `CharType`.
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello `CharType`.
 
@@ -108,15 +108,15 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-@No__t_1 *_Locname*
+*_Locname*\
 Nome delle impostazioni locali.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I valori possibili per il parametro *_Refs* e il relativo significato sono:
+I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -157,11 +157,11 @@ La funzione membro restituisce:
 
 - \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- +1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
 
@@ -223,11 +223,11 @@ La funzione membro restituisce:
 
 - \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- +1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro virtuale protetta confronta la sequenza in [* first1, last1) * con la sequenza in *[first2, last2*). Confronta i valori applicando `operator<` tra coppie di elementi corrispondenti di tipo `CharType`. La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
 
@@ -245,17 +245,17 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*ultimo* \
+*ultimo*\
 Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore hash di tipo **long** per la sequenza.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un valore hash può essere utile, ad esempio, per distribuire le sequenze in modo pseudo-casuale all'interno di una matrice di elenchi.
 
@@ -273,19 +273,19 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Puntatore al primo carattere nella sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito
 
 Stringa corrispondente alla sequenza di caratteri trasformata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione del membro virtuale protetto restituisce un oggetto della classe [string_type](#string_type) la cui sequenza controllata è una copia della sequenza [ `first`, `last`). Se una classe derivata da collate\< **CharType**> esegue l'override di [do_compare](#do_compare), per corrispondere deve anche eseguire l'override di `do_transform`. Quando vengono passate a `collate::compare`, due stringhe trasformate devono produrre lo stesso risultato che si otterrebbe dal passaggio delle stringhe non trasformate per il confronto nella classe derivata.
+La funzione del membro virtuale protetto restituisce un oggetto della classe [string_type](#string_type) la cui sequenza controllata è una copia della sequenza [ `first`, `last`). Se una classe derivata da COLLATE\< **CharType**> esegue l'override [do_compare](#do_compare), deve anche eseguire l'override di `do_transform` per trovare una corrispondenza. Quando vengono passate a `collate::compare`, due stringhe trasformate devono produrre lo stesso risultato che si otterrebbe dal passaggio delle stringhe non trasformate per il confronto nella classe derivata.
 
 ### <a name="example"></a>Esempio
 
@@ -301,17 +301,17 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*ultimo* \
+*ultimo*\
 Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore hash di tipo **long** per la sequenza.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_hash](#do_hash)( `first`, `last`).
 
@@ -353,7 +353,7 @@ Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tip
 typedef basic_string<CharType> string_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie della sequenza di origine.
 
@@ -371,17 +371,17 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Puntatore al primo carattere nella sequenza da convertire.
 
-*ultimo* \
+*ultimo*\
 Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito
 
 Stringa contenente la sequenza di caratteri trasformata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce [do_transform](#do_transform)(`first`, `last`).
 
@@ -430,4 +430,4 @@ int main( )
 ## <a name="see-also"></a>Vedere anche
 
 [\<locale>](../standard-library/locale.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)

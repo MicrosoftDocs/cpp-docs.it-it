@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821831"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865730"
 ---
 # <a name="eventsource-class"></a>Classe EventSource
 
@@ -46,28 +46,28 @@ class EventSource;
 *TDelegateInterface*<br/>
 Interfaccia per un delegato che rappresenta un gestore eventi.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-| Name                                     | Descrizione                                            |
+| Nome                                     | Descrizione                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource:: EventSource](#eventsource) | Inizializza una nuova istanza della classe `EventSource` . |
+| [EventSource:: EventSource](#eventsource) | Inizializza una nuova istanza della classe `EventSource`. |
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-| Name                                 | Descrizione                                                                                                                                                      |
+| Nome                                 | Descrizione                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource:: Add](#add)             | Accoda il gestore eventi rappresentato dall'interfaccia del delegato specificata al set di gestori eventi per l'oggetto `EventSource` corrente.                     |
-| [EventSource::GetSize](#getsize)     | Recupera il numero di gestori eventi associati all'oggetto `EventSource` corrente.                                                                         |
-| [EventSource::InvokeAll](#invokeall) | Chiama ogni gestore eventi associato all'oggetto `EventSource` corrente usando i tipi di argomento e gli argomenti specificati.                                      |
-| [EventSource::Remove](#remove)       | Elimina il gestore eventi rappresentato dal token di registrazione dell'evento specificato dal set di gestori eventi associati all'oggetto `EventSource` corrente. |
+| [EventSource:: GetSize](#getsize)     | Recupera il numero di gestori eventi associati all'oggetto `EventSource` corrente.                                                                         |
+| [EventSource:: InvokeAll](#invokeall) | Chiama ogni gestore eventi associato all'oggetto `EventSource` corrente usando i tipi di argomento e gli argomenti specificati.                                      |
+| [EventSource:: Remove](#remove)       | Elimina il gestore eventi rappresentato dal token di registrazione dell'evento specificato dal set di gestori eventi associati all'oggetto `EventSource` corrente. |
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-| Name                                                    | Descrizione                                                                                                                       |
+| Nome                                                    | Descrizione                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | Sincronizza l'accesso alla matrice di [targets_](#targets) durante l'aggiunta, la rimozione o la chiamata di gestori eventi.                          |
+| [EventSource:: addRemoveLock_](#addremovelock)           | Sincronizza l'accesso alla matrice di [targets_](#targets) durante l'aggiunta, la rimozione o la chiamata di gestori eventi.                          |
 | [EventSource:: targets_](#targets)                       | Matrice di uno o più gestori eventi.                                                                                           |
 | [EventSource:: targetsPointerLock_](#targetspointerlock) | Sincronizza l'accesso ai membri dati interni anche durante l'aggiunta, la rimozione o la chiamata di gestori eventi per questo EventSource. |
 
@@ -75,7 +75,7 @@ Interfaccia per un delegato che rappresenta un gestore eventi.
 
 `EventSource`
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 **Intestazione:** Event. h
 
@@ -104,7 +104,7 @@ Al termine di questa operazione, un handle che rappresenta l'evento. Utilizzare 
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-## <a name="addremovelock"></a>EventSource::addRemoveLock_
+## <a name="addremovelock"></a>EventSource:: addRemoveLock_
 
 Sincronizza l'accesso alla matrice di [targets_](#targets) durante l'aggiunta, la rimozione o la chiamata di gestori eventi.
 
@@ -114,7 +114,7 @@ Wrappers::SRWLock addRemoveLock_;
 
 ## <a name="eventsource"></a>EventSource:: EventSource
 
-Inizializza una nuova istanza della classe `EventSource` .
+Inizializza una nuova istanza della classe `EventSource`.
 
 ```cpp
 EventSource();
@@ -331,10 +331,10 @@ Primo argomento del gestore eventi.
 *arg2*<br/>
 Secondo argomento del gestore dell'evento.
 
-*arg3*<br/>
+*Arg3*<br/>
 Terzo argomento del gestore eventi.
 
-*arg4*<br/>
+*Arg4*<br/>
 Quarto argomento del gestore eventi.
 
 *arg5*<br/>
@@ -371,7 +371,7 @@ Handle che rappresenta un gestore eventi. Questo token è stato restituito quand
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni sulla struttura `EventRegistrationToken`, vedere l'argomento relativo alla **struttura Windows:: Foundation:: EventRegistrationToken** nella documentazione di riferimento di **Windows Runtime** .
 
@@ -383,7 +383,7 @@ Matrice di uno o più gestori eventi.
 ComPtr<Details::EventTargetArray> targets_;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando si verifica l'evento rappresentato dall'oggetto `EventSource` corrente, vengono chiamati i gestori eventi.
 

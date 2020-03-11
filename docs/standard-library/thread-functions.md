@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458507"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876172"
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 
@@ -55,9 +55,9 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 *Rel_time*\
 Oggetto [duration](../standard-library/duration-class.md) che specifica un intervallo di tempo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione blocca il thread chiamante per almeno l'ora specificata da *Rel_time*. Questa funzione non genera eccezioni.
+La funzione blocca il thread chiamante per almeno il tempo specificato da *Rel_time*. Questa funzione non genera eccezioni.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -75,7 +75,7 @@ void sleep_until(const xtime *Abs_time);
 *Abs_time*\
 Rappresenta un punto nel tempo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione non genera eccezioni.
 
@@ -89,13 +89,13 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+\ a *sinistra*
 Oggetto **thread** di sinistra.
 
-*Ok*\
+\ a *destra*
 Oggetto **thread** a destra.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione chiama `Left.swap(Right)`.
 

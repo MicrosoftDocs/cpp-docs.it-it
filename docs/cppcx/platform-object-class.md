@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
 ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183209"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865743"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 
-Fornisce il comportamento comune per le classi e struct di riferimento nelle app di Windows Runtime. Tutte le istanze delle classi e degli struct di riferimento sono implicitamente convertibili a Platform::Object^ e possono eseguire l'override del relativo metodo ToString virtuale.
+Fornisce il comportamento comune per le classi di riferimento e gli struct di riferimento nelle app Windows Runtime. Tutte le istanze delle classi e degli struct di riferimento sono implicitamente convertibili a Platform::Object^ e possono eseguire l'override del relativo metodo ToString virtuale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,21 +29,21 @@ Fornisce il comportamento comune per le classi e struct di riferimento nelle app
 public ref class Object : Object
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Object::Object](#ctor)|Inizializza una nuova istanza della classe Object.|
+|[Object:: Object](#ctor)|Inizializza una nuova istanza della classe Object.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Object::Equals](#equals)|Determina se l'oggetto specificato è uguale all'oggetto corrente.|
-|[Object::GetHashCode](#gethashcode)|Restituisce il codice hash per l'istanza.|
-|[Object::ReferenceEquals](#referenceequals)|Determina se le istanze di Object specificate rappresentano la stessa istanza.|
+|[Object:: Equals](#equals)|Determina se l'oggetto specificato è uguale all'oggetto corrente.|
+|[Object:: GetHashCode](#gethashcode)|Restituisce il codice hash relativo a questa istanza.|
+|[Oggetto:: ReferenceEquals](#referenceequals)|Determina se le istanze di Object specificate rappresentano la stessa istanza.|
 |[ToString](#tostring)|Restituisce una stringa che rappresenta l'oggetto corrente. È possibile eseguirne l'override.|
 |[GetType](#gettype)|Ottiene un oggetto [Platform::Type](../cppcx/platform-type-class.md) che descrive l'istanza corrente.|
 
@@ -57,9 +57,9 @@ public ref class Object : Object
 
 **Intestazione:** vccorlib.h
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
-## <a name="equals"></a> Metodo Object:: Equals
+## <a name="equals"></a>Metodo Object:: Equals
 
 Determina se l'oggetto specificato è uguale all'oggetto corrente.
 
@@ -78,9 +78,9 @@ Oggetto da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti sono uguali, in caso contrario **false**.
+**true** se gli oggetti sono uguali; in caso contrario, **false**.
 
-## <a name="gethashcode"></a>  Metodo Object:: GetHashCode
+## <a name="gethashcode"></a>Metodo Object:: GetHashCode
 
 Restituisce il valore di identità `IUnknown`* per questa istanza se è un oggetto COM, oppure un valore hash calcolato se non è un oggetto COM.
 
@@ -94,13 +94,13 @@ public:int GetHashCode();
 
 Valore numerico che identifica in modo univoco l'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Puoi usare GetHashCode per creare chiavi per gli oggetti nella mappa. È possibile confrontare i codici hash usando [Object:: Equals](#equals). Se il percorso del codice è estremamente critico e `GetHashCode` e `Equals` non sono sufficientemente veloci, puoi passare al livello COM sottostante ed effettuare confronti tra puntatori `IUnknown` nativi.
 
-## <a name="gettype"></a>  Metodo Object:: GetType
+## <a name="gettype"></a>Metodo Object:: GetType
 
-Restituisce un [platform:: Type](../cppcx/platform-type-class.md) oggetto che descrive il tipo di runtime di un oggetto.
+Restituisce un oggetto [Platform:: Type](../cppcx/platform-type-class.md) che descrive il tipo di runtime di un oggetto.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -110,21 +110,21 @@ Object::GetType();
 
 ### <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito
 
-Oggetto [platform:: Type](../cppcx/platform-type-class.md) oggetto che descrive il tipo di runtime dell'oggetto.
+Oggetto [Platform:: Type](../cppcx/platform-type-class.md) che descrive il tipo di runtime dell'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il metodo statico [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) può essere utilizzato per ottenere un [enumerazione platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) valore che rappresenta il tipo corrente. Questa funzionalità è particolarmente utile per i tipi predefiniti. Il codice del tipo per qualsiasi classe di riferimento oltre [platform:: String](../cppcx/platform-string-class.md) è Object (1).
+Il [tipo statico:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) può essere usato per ottenere un valore di [enumerazione Platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) che rappresenta il tipo corrente. Questa funzionalità è particolarmente utile per i tipi predefiniti. Il codice del tipo per qualsiasi classe di riferimento oltre a [Platform:: String](../cppcx/platform-string-class.md) è Object (1).
 
-Il [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) classe viene usata nelle API Windows come modo indipendente dal linguaggio passando informazioni sul tipo tra componenti di Windows e delle app. L'elemento T[classe platform:: Type](../cppcx/platform-type-class.md) dispone di operatori per la conversione tra `Type` e `TypeName`.
+La classe [Windows:: UI:: XAML:: Interop:: typeName](/uwp/api/windows.ui.xaml.interop.typename) viene usata nelle API Windows come modo indipendente dal linguaggio per passare le informazioni sul tipo tra componenti e app di Windows. La[classe T Platform:: Type](../cppcx/platform-type-class.md) dispone di operatori per la conversione tra `Type` e `TypeName`.
 
-Usare la [typeid](../extensions/typeid-cpp-component-extensions.md) operatore per restituire un `Platform::Type` oggetto per un nome di classe, ad esempio quando si sposti tra pagine XAML:
+Utilizzare l'operatore [typeid](../extensions/typeid-cpp-component-extensions.md) per restituire un oggetto `Platform::Type` per un nome di classe, ad esempio durante lo spostamento tra pagine XAML:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="ctor"></a>  Costruttore Object:: Object
+## <a name="ctor"></a>Costruttore Object:: Object
 
 Inizializza una nuova istanza della classe Object.
 
@@ -134,7 +134,7 @@ Inizializza una nuova istanza della classe Object.
 public:Object();
 ```
 
-## <a name="referenceequals"></a>  Metodo Object:: ReferenceEquals
+## <a name="referenceequals"></a>Metodo Object:: ReferenceEquals
 
 Determina se le istanze di Object specificate rappresentano la stessa istanza.
 
@@ -154,9 +154,9 @@ Secondo oggetto da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i due oggetti sono uguali; in caso contrario, **false**.
+**true** se i due oggetti sono uguali. in caso contrario, **false**.
 
-## <a name="tostring"></a>  Metodo Object:: ToString (C + c++ /CX)
+## <a name="tostring"></a>Metodo Object:: ToStringC++(/CX)
 
 Restituisce una stringa che rappresenta l'oggetto corrente.
 
@@ -185,6 +185,6 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Platform Namespace](platform-namespace-c-cx.md)<br/>
+[Spazio dei nomi Platform](platform-namespace-c-cx.md)<br/>
 [Classe Platform::Type](platform-type-class.md)<br/>
 [Sistema di tipi](type-system-c-cx.md)

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956950"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883961"
 ---
 # <a name="ltmapgt-operators"></a>Operatori &lt;map&gt;
 
@@ -37,17 +37,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti map non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_lt"></a> Operatore&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Verifica se l'oggetto map a sinistra dell'operatore è minore dell'oggetto map a destra.
 
@@ -102,17 +102,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto map a sinistra dell'operatore è rigorosamente minore dell'oggetto map a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti map si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -167,10 +167,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto map a sinistra dell'operatore è uguale all'oggetto map a destra.
 
@@ -235,17 +235,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto map a sinistra dell'operatore è uguale all'oggetto map a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_gt"></a> Operatore&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 Verifica se l'oggetto map a sinistra dell'operatore è maggiore dell'oggetto map a destra.
 
@@ -300,17 +300,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto map a sinistra dell'operatore è maggiore dell'oggetto map a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti map si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -364,10 +364,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `map`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -432,17 +432,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se gli oggetti multimap non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="op_lt_multimap"></a> Operatore&lt;
+## <a name="op_lt_multimap">Operatore </a>&lt;
 
 Verifica se l'oggetto multimap a sinistra dell'operatore è minore dell'oggetto multimap a destra.
 
@@ -497,17 +497,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto multimap a sinistra dell'operatore è rigorosamente minore dell'oggetto multimap a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multimap si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -562,10 +562,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -618,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="op_eq_eq_multimap"></a> operator==
+## <a name="op_eq_eq_multimap"></a>operatore = =
 
 Verifica se l'oggetto multimap a sinistra dell'operatore è uguale all'oggetto multimap a destra.
 
@@ -630,17 +630,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto multimap a sinistra dell'operatore è uguale all'oggetto multimap a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="op_gt_multimap"></a> Operatore&gt;
+## <a name="op_gt_multimap">Operatore </a>&gt;
 
 Verifica se l'oggetto multimap a sinistra dell'operatore è maggiore dell'oggetto multimap a destra.
 
@@ -695,17 +695,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se l'oggetto multimap a sinistra dell'operatore è maggiore dell'oggetto multimap a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti multimap si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -760,10 +760,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*sinistra*\
+\ a *sinistra*
 Oggetto di tipo `multimap`.
 
-*Ok*\
+\ a *destra*
 Oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito

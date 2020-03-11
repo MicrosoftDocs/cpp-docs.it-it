@@ -7,11 +7,11 @@ f1_keywords:
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 ms.openlocfilehash: aba17b7bf052b6974bf849f60ff895b8e84a1092
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501952"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854907"
 ---
 # <a name="ltexceptiongt-typedefs"></a>Typedef &lt;exception&gt;
 
@@ -23,7 +23,7 @@ Tipo che descrive un puntatore a un'eccezione.
 typedef unspecified exception_ptr;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Classe interna non specificata utilizzata per implementare il tipo `exception_ptr`.
 
@@ -31,7 +31,7 @@ Utilizzare un oggetto `exception_ptr` per fare riferimento all'eccezione corrent
 
 Quando si dichiara una variabile `exception_ptr`, la variabile non è associata ad alcuna eccezione. Ciò significa che il campo di riferimento all'eccezione è NULL. Questo oggetto `exception_ptr` è denominato *null exception_ptr*.
 
-Utilizzare la funzione `current_exception` o `make_exception_ptr` per assegnare un'eccezione a un oggetto `exception_ptr`. Quando si assegna un'eccezione a una variabile `exception_ptr`, il campo di riferimento all'eccezione punta a una copia dell'eccezione. Se la memoria disponibile non è sufficiente per consentire la copia dell'eccezione, il campo di riferimento all'eccezione punta a una copia di un'eccezione [std::bad_alloc](../standard-library/bad-alloc-class.md). Se la `current_exception` funzione `make_exception_ptr` o non è in grado di copiare l'eccezione per qualsiasi altro motivo, `terminate` la funzione chiama la funzione CRT per uscire dal processo corrente.
+Utilizzare la funzione `current_exception` o `make_exception_ptr` per assegnare un'eccezione a un oggetto `exception_ptr`. Quando si assegna un'eccezione a una variabile `exception_ptr`, il campo di riferimento all'eccezione punta a una copia dell'eccezione. Se la memoria disponibile non è sufficiente per consentire la copia dell'eccezione, il campo di riferimento all'eccezione punta a una copia di un'eccezione [std::bad_alloc](../standard-library/bad-alloc-class.md). Se la funzione `current_exception` o `make_exception_ptr` non è in grado di copiare l'eccezione per qualsiasi altro motivo, la funzione chiama la funzione `terminate` CRT per uscire dal processo corrente.
 
 Malgrado il nome, un oggetto `exception_ptr` non è un puntatore. Non obbedisce alla semantica dei puntatori e non può essere usato con gli operatori di accesso ai membri del puntatore (`->`) o gli operatori di riferimento indiretto (*). L'oggetto `exception_ptr` non dispone di membri dati pubblici o di funzioni membro.
 
@@ -47,13 +47,13 @@ Il tipo descrive un puntatore a una funzione che è possibile utilizzare come `t
 typedef void (*terminate_handler)();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo descrive un puntatore a una funzione che è possibile utilizzare come gestore di terminazione.
 
 ### <a name="example"></a>Esempio
 
-Per un esempio dell'utilizzo di `terminate_handler`, vedere [set_terminate](../standard-library/exception-functions.md#set_terminate).
+Per un esempio dell'utilizzo di [, vedere ](../standard-library/exception-functions.md#set_terminate)set_terminate`terminate_handler`.
 
 ## <a name="unexpected_handler"></a>unexpected_handler
 
@@ -65,4 +65,4 @@ typedef void (*unexpected_handler)();
 
 ### <a name="example"></a>Esempio
 
-Per un esempio dell'utilizzo di `unexpected_handler`, vedere [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+Per un esempio dell'utilizzo di [, vedere ](../standard-library/exception-functions.md#set_unexpected)set_unexpected`unexpected_handler`.

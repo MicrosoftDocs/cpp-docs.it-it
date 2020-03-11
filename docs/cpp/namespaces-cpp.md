@@ -8,15 +8,15 @@ helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866045"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856670"
 ---
 # <a name="namespaces-c"></a>Spazi dei nomi (C++)
 
-Uno spazio dei nomi è un'area dichiarativa che fornisce un ambito per gli identificatori (nomi di tipi, funzioni, variabili e così via) al suo interno. Gli spazi dei nomi vengono usati per organizzare il codice in gruppi logici e per evitare conflitti tra nomi, che si possono verificare in particolare quando la codebase include più librerie. Tutti gli identificatori nell'ambito dello spazio dei nomi sono visibili tra loro senza qualifica. Gli identificatori esterni allo spazio dei nomi possono accedere ai membri utilizzando il nome completo per ogni identificatore, ad `std::vector<std::string> vec;`esempio, oppure tramite una [dichiarazione using](../cpp/using-declaration.md) per un identificatore singolo (`using std::string`) o una [direttiva using](../cpp/namespaces-cpp.md#using_directives) per All identificatori nello spazio dei nomi (`using namespace std;`). È consigliabile che il codice nel file di intestazione usi sempre il nome completo dello spazio dei nomi.
+Uno spazio dei nomi è un'area dichiarativa che fornisce un ambito per gli identificatori (nomi di tipi, funzioni, variabili e così via) al suo interno. Gli spazi dei nomi vengono usati per organizzare il codice in gruppi logici e per evitare conflitti tra nomi, che si possono verificare in particolare quando la codebase include più librerie. Tutti gli identificatori nell'ambito dello spazio dei nomi sono visibili tra loro senza qualifica. Gli identificatori esterni allo spazio dei nomi possono accedere ai membri utilizzando il nome completo per ogni identificatore, ad esempio `std::vector<std::string> vec;`, oppure tramite una [dichiarazione using](../cpp/using-declaration.md) per un identificatore singolo (`using std::string`) o una [direttiva using](../cpp/namespaces-cpp.md#using_directives) per tutti gli identificatori nello spazio dei nomi (`using namespace std;`). È consigliabile che il codice nel file di intestazione usi sempre il nome completo dello spazio dei nomi.
 
 L'esempio seguente illustra una dichiarazione dello spazio dei nomi e tre modi in cui il codice esterno allo spazio dei nomi può accedere ai rispettivi membri.
 
@@ -98,7 +98,7 @@ int ContosoDataServer::Bar(){return 0;}
 
 Uno spazio dei nomi può essere dichiarato in più blocchi di un singolo file e in più file. Il compilatore riunisce le parti durante la pre-elaborazione e lo spazio dei nomi risultante include tutti i membri dichiarati in tutte le parti. Un esempio è costituito dallo spazio dei nomi std, dichiarato in ogni file di intestazione della libreria standard.
 
-I membri di uno spazio dei nomi denominato possono essere definiti all'esterno dello spazio dei nomi in cui sono dichiarati in base alla qualificazione esplicita del nome definito. La definizione deve tuttavia apparire dopo la posizione della dichiarazione di uno spazio dei nomi che racchiude lo spazio dei nomi della dichiarazione stessa. Ad esempio:
+I membri di uno spazio dei nomi possono essere definiti all'esterno dello spazio dei nomi in cui sono dichiarati da qualifica esplicita del nome definito. La definizione deve tuttavia apparire dopo la posizione della dichiarazione di uno spazio dei nomi che racchiude lo spazio dei nomi della dichiarazione stessa. Ad esempio:
 
 ```cpp
 // defining_namespace_members.cpp
@@ -123,7 +123,7 @@ Se un identificatore non viene dichiarato in uno spazio dei nomi esplicito, far�
 
 ## <a name="the-std-namespace"></a>Spazio dei nomi standard
 
-Tutti C++ i tipi e le funzioni della `std` libreria standard sono dichiarati nello spazio dei nomi o negli `std`spazi dei nomi annidati in.
+Tutti C++ i tipi e le funzioni della libreria standard sono dichiarati nello spazio dei nomi `std` o negli spazi dei nomi annidati all'interno `std`
 
 ## <a name="nested-namespaces"></a>Spazi dei nomi annidati
 

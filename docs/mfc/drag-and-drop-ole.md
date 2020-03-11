@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: c601e8f0324510346513dc8da48dd1a83c95bceb
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127868"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855509"
 ---
 # <a name="ole-drag-and-drop"></a>trascinamento della selezione OLE
 
@@ -53,7 +53,7 @@ Richiede un po' più di lavoro per implementare un obiettivo di rilascio rispett
 
 1. Eseguire l'override delle funzioni seguenti. Se si vuole lo stesso comportamento nell'intera applicazione, eseguire l'override di queste funzioni nella classe di visualizzazione. Se si vuole modificare il comportamento in casi isolati o si vuole abilitare l'eliminazione in Windows non`CView`, eseguire l'override di queste funzioni nella classe derivata da `COleDropTarget`.
 
-   | Sostituisci | Per consentire |
+   | Sostituzione | Per consentire |
    | -------- | -------- |
    | `OnDragEnter` | Elimina le operazioni da eseguire nella finestra. Chiamato quando il cursore entra per la prima volta nella finestra. |
    | `OnDragLeave` | Comportamento speciale quando l'operazione di trascinamento lascia la finestra specificata. |
@@ -75,7 +75,7 @@ Facoltativamente, è possibile creare un oggetto `COleDropSource` per controllar
 
 È possibile eseguire l'override delle seguenti funzioni per personalizzare le operazioni di trascinamento e rilascio:
 
-| Sostituisci | Per personalizzare |
+| Sostituzione | Per personalizzare |
 | -------- | ------------ |
 | `OnBeginDrag` | Modalità di inizio dell'operazione di trascinamento dopo la chiamata di `DoDragDrop`. |
 | `GiveFeedback` | Feedback visivo, come appare il cursore, per risultati di rilascio diversi. |
