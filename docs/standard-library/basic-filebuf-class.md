@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 16d485320eb3970bd5c1e4a7a7fabb0602149e6f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: HT
+ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856581"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79128955"
 ---
 # <a name="basic_filebuf-class"></a>Classe basic_filebuf
 
@@ -66,7 +66,7 @@ L'elemento di base del buffer di file.
 \ *TR*
 Tratti dell'elemento di base del buffer di file (in genere `char_traits<Char_T>`).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Il modello di classe descrive un buffer del flusso che controlla la trasmissione di elementi di tipo *Char_T*, i cui tratti di carattere sono determinati dalla classe *TR*, verso e da una sequenza di elementi archiviati in un file esterno.
 
@@ -196,13 +196,13 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|Description|
 |-|-|
 |[basic_filebuf](#basic_filebuf)|Costruisce un oggetto di tipo `basic_filebuf`.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome del tipo|Description|
 |-|-|
 |[char_type](#char_type)|Associa un nome di tipo al parametro di modello `Char_T`.|
 |[int_type](#int_type)|Rende questo tipo all'interno dell'ambito di `basic_filebuf` equivalente al tipo con lo stesso nome nell'ambito `Tr`.|
@@ -212,7 +212,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|Description|
 |-|-|
 |[close](#close)|Chiude un file.|
 |[is_open](#is_open)|Indica se un file è aperto.|
@@ -243,7 +243,7 @@ basic_filebuf();
 basic_filebuf(basic_filebuf&& right);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il primo costruttore archivia un puntatore null in tutti i puntatori che controllano il buffer di input e il buffer di output. Archivia anche un puntatore null nel puntatore del file.
 
@@ -269,7 +269,7 @@ basic_filebuf<Char_T, Tr> *close();
 
 La funzione membro restituisce un puntatore null se il puntatore del file è un puntatore null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 `close` chiama `fclose(fp)`. Se la funzione restituisce un valore diverso da zero, la funzione restituisce un puntatore null. In caso contrario, restituisce **this** per indicare che il file è stato chiuso.
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il puntatore del file non è un puntatore null.
+**true** se il puntatore del file non è null.
 
 ### <a name="example"></a>Esempio
 
@@ -413,9 +413,9 @@ La protezione predefinita per l'apertura dei file, equivalente al parametro *shf
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il puntatore del file è un puntatore null, la funzione restituisce un puntatore null. In caso contrario, restituisce **this**.
+Se il buffer è già aperto o se il puntatore del file è un puntatore null, la funzione restituisce un puntatore null. In caso contrario, restituisce **this**.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La funzione membro apre il file con nome *filename*, chiamando [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`. `strmode` è determinato da `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode)` | `[`binary``)`:](../standard-library/ios-base-class.md#openmode)
 
@@ -458,7 +458,7 @@ Riferimento rvalue a un oggetto [basic_filebuf](../standard-library/basic-filebu
 
 Restituisce __* this__.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 L'operatore membro sostituisce il contenuto dell'oggetto utilizzando il contenuto di *right*, considerato come riferimento rvalue. Per altre informazioni, vedere [dichiaratore di riferimento rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -479,7 +479,7 @@ Carattere da inserire nel buffer o `traits_type::eof`.
 
 Se la funzione non riesce, restituisce `traits_type::eof`. In caso contrario, restituisce `traits_type::``(_Meta)`[`not_eof`](../standard-library/char-traits-struct.md#not_eof) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Se `_Meta != traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof), la funzione membro virtuale protetta tenta di inserire l'elemento `ch = traits_type::`[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(_Meta)` nel buffer di output. La funzione può eseguire questa operazione in vari modi:
 
@@ -506,7 +506,7 @@ Carattere da inserire nel buffer o `traits_type::eof`.
 
 Se la funzione non riesce, restituisce `traits_type::eof`. In caso contrario, restituisce `traits_type::``(_Meta)`[`not_eof`](../standard-library/char-traits-struct.md#not_eof) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La funzione membro virtuale protetta reinserisce un elemento nel buffer di input e quindi lo imposta come elemento corrente (a cui punta il puntatore successivo). Se `_Meta == traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof), l'elemento di cui eseguire il push è effettivamente quello già presente nel flusso prima dell'elemento corrente. In caso contrario, l'elemento viene sostituito da `ch = traits_type::`[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(_Meta)`. La funzione può reinserire un elemento in vari modi:
 
@@ -550,7 +550,7 @@ Specifica la modalità per la posizione del puntatore. L'impostazione predefinit
 
 Restituisce la nuova posizione o una posizione di flusso non valida.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La funzione membro virtuale protetta tenta di modificare le posizioni correnti per i flussi controllati. Per un oggetto della classe [`basic_filebuf`](../standard-library/basic-filebuf-class.md)`<Char_T, Tr>`, una posizione di flusso può essere rappresentata da un oggetto di tipo `fpos_t`, che archivia un offset e le informazioni sullo stato necessarie per analizzare un flusso Wide. Offset zero si riferisce al primo elemento del flusso. Un oggetto di tipo [`pos_type`](../standard-library/basic-streambuf-class.md#pos_type) archivia almeno un oggetto `fpos_t`.
 
@@ -580,7 +580,7 @@ Specifica la modalità per la posizione del puntatore. L'impostazione predefinit
 
 Se il puntatore del file `fp` è un puntatore null, la funzione ha esito negativo. In caso contrario, tenta di modificare la posizione del flusso chiamando `fsetpos(fp, &fposn)`, dove `fposn` è l'oggetto `fpos_t` archiviato in `pos`. Se tale funzione ha esito positivo, la funzione restituisce `pos`. In caso contrario, restituisce una posizione di flusso non valida. Per stabilire se la posizione del flusso non è valida, confrontare il valore restituito con `pos_type(off_type(-1))`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La funzione membro virtuale protetta tenta di modificare le posizioni correnti per i flussi controllati. Per un oggetto della classe [`basic_filebuf`](../standard-library/basic-filebuf-class.md)`<Char_T, Tr>`, una posizione di flusso può essere rappresentata da un oggetto di tipo `fpos_t`, che archivia un offset e le informazioni sullo stato necessarie per analizzare un flusso Wide. Offset zero si riferisce al primo elemento del flusso. (Un oggetto di tipo `pos_type` archivia almeno un oggetto `fpos_t`).
 
@@ -604,13 +604,13 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 Puntatore a un buffer.
 
 *conteggio*\
-Dimensione del buffer.
+Dimensioni del buffer.
 
 ### <a name="return-value"></a>Valore restituito
 
 La funzione membro protetto restituisce zero se il puntatore del file `fp` è un puntatore null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 `setbuf` chiama `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` per offrire la matrice di elementi `count` a partire da *_Buffer* come buffer per il flusso. Se la funzione restituisce un valore diverso da zero, la funzione restituisce un puntatore null. In caso contrario, restituisce **this** per il successo di segnale.
 
@@ -659,7 +659,7 @@ virtual int_type underflow();
 
 Se la funzione non riesce, restituisce `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof). In caso contrario, restituisce `ch`, convertito come descritto nella sezione Osservazioni.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La funzione membro virtuale protetta tenta di estrarre l'elemento corrente `ch` dal flusso di input e restituisce l'elemento come `traits_type::`[`to_int_type`](../standard-library/char-traits-struct.md#to_int_type)`(ch)`. La funzione può eseguire questa operazione in vari modi:
 
