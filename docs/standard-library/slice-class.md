@@ -13,17 +13,17 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78937434"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79094843"
 ---
 # <a name="slice-class"></a>Classe slice
 
 Classe di utilità per valarray usata per definire subset unidimensionali di un elemento valarray padre. Se valarray viene considerato come una matrice bidimensionale con tutti gli elementi di una matrice, slice estrae un vettore di una dimensione all'esterno della matrice bidimensionale.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 La classe archivia i parametri che caratterizzano un oggetto di tipo [slice_array](../standard-library/slice-array-class.md). Il subset di valarray viene costruito indirettamente quando un oggetto della classe slice viene visualizzato come argomento per un oggetto della classe [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . I valori archiviati che specificano il subset selezionato da valarray padre includono:
 
@@ -149,7 +149,7 @@ Distanza tra gli elementi del subset.
 
 Il costruttore predefinito archivia zero per l'indice iniziale, la lunghezza totale e lo stride. Il secondo costruttore archivia *_StartIndex* per l'indice iniziale, *_Len* per la lunghezza totale e *stride* per lo stride.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Lo stride non può essere negativo.
 
