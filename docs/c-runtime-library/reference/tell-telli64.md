@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946264"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443682"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -68,7 +67,7 @@ Un valore restituito di-1L indica un errore. Se *handle* è un descrittore di fi
 
 Per altre informazioni su questo e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **_tell** ottiene la posizione corrente del puntatore del file (se presente) associato all'argomento dell' *handle* . La posizione viene espressa come numero di byte dall'inizio del file. Per la funzione **_telli64** , questo valore è espresso come intero a 64 bit.
 
@@ -78,7 +77,7 @@ La funzione **_tell** ottiene la posizione corrente del puntatore del file (se p
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

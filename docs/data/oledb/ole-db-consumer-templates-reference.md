@@ -1,144 +1,136 @@
 ---
 title: Riferimenti ai modelli consumer OLE DB
 ms.date: 11/04/2016
-f1_keywords:
-- vc-attr.db_param
-- vc-attr.db_column
-- vc-attr.db_accessor
-- vc-attr.db_command
-- vc-attr.db_table
-- vc.templates.ole
-- vc-attr.db_source
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52fe3df7e872c257aa8802f84c548ad57d21be27
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361490"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447402"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Riferimenti ai modelli consumer OLE DB
 
-I modelli Consumer OLE DB contiene le classi seguenti. Il materiale di riferimento sono inoltre inclusi argomenti in di [macro per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).
+I modelli consumer OLE DB contengono le classi seguenti. Il materiale di riferimento include anche argomenti sulle [macro per i modelli di consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).
 
 ## <a name="session-classes"></a>Classi di sessione
 
 [CDataConnection](../../data/oledb/cdataconnection-class.md)<br/>
-Gestisce la connessione con l'origine dati. Si tratta di una classe utile per la creazione di client perché incapsula gli oggetti necessari (origine dati e sessione) e alcune operazioni da eseguire quando ci si connette a un'origine dati.
+Gestisce la connessione con l'origine dati. Si tratta di una classe utile per la creazione di client perché incapsula gli oggetti necessari (origine dati e sessione) e alcune delle operazioni che è necessario eseguire quando ci si connette a un'origine dati.
 
 [CDataSource](../../data/oledb/cdatasource-class.md)<br/>
-Corrisponde a un oggetto di origine dati OLE DB, che rappresenta una connessione tramite un provider a un'origine dati. Uno o più sessioni di database, ciascuno dei quali rappresentato da un `CSession` oggetto, possono essere eseguite in un'unica connessione.
+Corrisponde a un oggetto origine dati OLE DB, che rappresenta una connessione tramite un provider a un'origine dati. Una o più sessioni di database, ognuna rappresentata da un oggetto `CSession`, possono essere applicate a una singola connessione.
 
 [CEnumerator](../../data/oledb/cenumerator-class.md)<br/>
-Corrisponde a un oggetto enumeratore OLE DB, che recupera set di righe informazioni sulle origini dati disponibili.
+Corrisponde a un oggetto OLE DB enumeratore, che recupera le informazioni sui set di righe sulle origini dati disponibili.
 
 [CEnumeratorAccessor](../../data/oledb/cenumeratoraccessor-class.md)<br/>
-Usato da `CEnumerator` per accedere ai dati dal set di righe di enumeratore. Questo set di righe è costituito da origini dati e gli enumeratori visibili dell'enumeratore corrente.
+Utilizzato da `CEnumerator` per accedere ai dati dal set di righe dell'enumeratore. Questo set di righe è costituito dalle origini dati e dagli enumeratori visibili dall'enumeratore corrente.
 
 [CSession](../../data/oledb/csession-class.md)<br/>
-Rappresenta una sessione di accesso singolo database. Una o più sessioni possono essere associati a ogni `CDataSource` oggetto.
+Rappresenta una singola sessione di accesso al database. Una o più sessioni possono essere associate a ogni oggetto `CDataSource`.
 
-## <a name="accessor-classes"></a>Classi di funzione di accesso
+## <a name="accessor-classes"></a>Classi della funzione di accesso
 
 [CAccessor](../../data/oledb/caccessor-class.md)<br/>
-Utilizzato per i record che sono associati in modo statico a un'origine dati. Utilizzare questa classe di funzione di accesso quando si conosce la struttura dell'origine dati.
+Utilizzato per i record associati in modo statico a un'origine dati. Usare questa classe della funzione di accesso quando si conosce la struttura dell'origine dati.
 
 [CAccessorBase](../../data/oledb/caccessorbase-class.md)<br/>
-Classe di base per tutte le classi di funzione di accesso.
+Classe di base per tutte le classi della funzione di accesso.
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
-Una funzione di accesso che possono essere create in fase di esecuzione, in base alle informazioni di colonna del set di righe. Utilizzare questa classe per recuperare i dati se non si conosce la struttura dell'origine dati.
+Funzione di accesso che può essere creata in fase di esecuzione, in base alle informazioni sulla colonna del set di righe. Utilizzare questa classe per recuperare i dati se non si conosce la struttura dell'origine dati.
 
 [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-Una funzione di accesso che può essere usato quando i tipi di comandi sono sconosciuti. Ottiene le informazioni sui parametri, chiamando il `ICommandWithParameters` interfaccia, se il provider supporta l'interfaccia.
+Funzione di accesso che può essere utilizzata quando i tipi di comando sono sconosciuti. Ottiene le informazioni sul parametro chiamando l'interfaccia `ICommandWithParameters`, se il provider supporta l'interfaccia.
 
 [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
-Consente di accedere a un'origine dati quando non si dispone di alcuna conoscenza della struttura sottostante del database.
+Consente di accedere a un'origine dati quando non si conosce la struttura sottostante del database.
 
 [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
-Simile a `CDynamicStringAccessor` ad eccezione del fatto che questa classe richiede i dati dall'archivio dati come dati stringa ANSI.
+Simile a `CDynamicStringAccessor` ad eccezione del fatto che questa classe richiede l'accesso ai dati dall'archivio dati come dati stringa ANSI.
 
 [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
-Simile a `CDynamicStringAccessor` ad eccezione del fatto che questa classe richiede i dati dall'archivio dati come dati stringa UNICODE.
+Simile a `CDynamicStringAccessor` ad eccezione del fatto che questa classe richiede l'accesso ai dati dall'archivio dati come dati stringa UNICODE.
 
 [CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>
-Una funzione di accesso con i metodi per gestire le colonne e parametri del comando. Questa classe, è possibile utilizzare qualsiasi tipo di dati, purché il provider può convertire il tipo.
+Una funzione di accesso con metodi per gestire sia le colonne che i parametri di comando. Con questa classe è possibile usare qualsiasi tipo di dati purché il provider possa convertire il tipo.
 
 [CNoAccessor](../../data/oledb/cnoaccessor-class.md)<br/>
-Può essere utilizzato come argomento di modello quando non si desidera la classe per supportare i parametri o colonne di output.
+Può essere usato come argomento di modello quando non si vuole che la classe supporti parametri o colonne di output.
 
 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)<br/>
-Simile a `CDynamicStringAccessor` ad eccezione del fatto che questa classe converte tutti i dati dall'archivio dati come dati in formato XML (tag).
+Simile a `CDynamicStringAccessor` ad eccezione del fatto che questa classe converte tutti i dati a cui si accede dall'archivio dati come dati in formato XML (con tag).
 
 ## <a name="rowset-classes"></a>Classi rowset
 
 [CAccessorRowset](../../data/oledb/caccessorrowset-class.md)<br/>
-Incapsula un set di righe e delle relative funzioni di accesso associati.
+Incapsula un set di righe e le funzioni di accesso associate.
 
 [CArrayRowset](../../data/oledb/carrayrowset-class.md)<br/>
-Utilizzato per accedere agli elementi di un set di righe utilizzando la sintassi della matrice.
+Utilizzato per accedere agli elementi di un set di righe utilizzando la sintassi di matrice.
 
 [CBulkRowset](../../data/oledb/cbulkrowset-class.md)<br/>
-Utilizzato per recuperare e modificare le righe in blocco tramite il recupero più handle di riga con una singola chiamata.
+Utilizzato per recuperare e modificare le righe in blocco recuperando più handle di riga con una singola chiamata.
 
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
-Può essere utilizzato come argomento di modello se il comando non restituisce un set di righe.
+Può essere usato come argomento di modello se il comando non restituisce un set di righe.
 
 [CRestrictions](../../data/oledb/crestrictions-class.md)<br/>
 Utilizzato per specificare le restrizioni per i set di righe dello schema.
 
 [CRowset](../../data/oledb/crowset-class.md)<br/>
-Consente di modificare, impostare e recuperare i dati di set di righe.
+Utilizzato per modificare, impostare e recuperare i dati dei set di righe.
 
 [CStreamRowset](../../data/oledb/cstreamrowset-class.md)<br/>
-Restituisce un `ISequentialStream` invece di un set di righe dell'oggetto; è quindi possibile usare il `Read` metodo per recuperare i dati in formato XML. (SQL Server 2000 è la formattazione; si noti che questa funzionalità funziona solo con SQL Server 2000).
+Restituisce un oggetto `ISequentialStream` anziché un set di righe; si usa quindi il metodo `Read` per recuperare i dati in formato XML. (SQL Server 2000 esegue la formattazione. si noti che questa funzionalità funziona solo con SQL Server 2000.)
 
 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)<br/>
-Fornisce un'implementazione fittizia per `IRowsetNotify`, con le funzioni vuote per il `IRowsetNotify` metodi `OnFieldChange`, `OnRowChange`, e `OnRowsetChange`.
+Fornisce un'implementazione fittizia per `IRowsetNotify`, con funzioni vuote per i metodi di `IRowsetNotify` `OnFieldChange`, `OnRowChange`e `OnRowsetChange`.
 
 [Classi Rowset dello schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
 
-I modelli OLE DB forniscono un set di classi che corrispondono ai set di righe dello schema OLE DB.
+I modelli di OLE DB forniscono un set di classi che corrispondono ai set di righe dello schema di OLE DB.
 
-## <a name="command-classes"></a>Classi di comandi
+## <a name="command-classes"></a>Classi di comando
 
 [CCommand](../../data/oledb/ccommand-class.md)<br/>
-Utilizzato per impostare ed eseguire un comando OLE DB in base al parametro. Per aprire semplicemente un rowset semplice, usare `CTable` invece.
+Utilizzato per impostare ed eseguire un comando di OLE DB basato su parametri. Per aprire semplicemente un set di righe semplice, usare invece `CTable`.
 
 [CMultipleResults](../../data/oledb/cmultipleresults-class.md)<br/>
-Utilizzato come argomento di modello per il `CCommand` modello quando si desidera che il comando gestisca più set di risultati.
+Usato come argomento di modello per il modello di `CCommand` quando si vuole che il comando gestisca più set di risultati.
 
 [CNoAccessor](../../data/oledb/cnoaccessor-class.md)<br/>
-Utilizzato come argomento di modello per le classi modello, ad esempio `CCommand` e `CTable`, che accettano un argomento di classe della funzione di accesso. Usare `CNoAccessor` se non si desidera la classe per supportare i parametri o colonne di output.
+Usato come argomento di modello per le classi modello, ad esempio `CCommand` e `CTable`, che accettano un argomento della classe della funzione di accesso. Utilizzare `CNoAccessor` se non si desidera che la classe supporti parametri o colonne di output.
 
 [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)<br/>
-Utilizzato come argomento di modello per il `CCommand` modello quando si desidera che il comando per gestire un singolo set di righe. `CNoMultipleResults` è il valore predefinito per l'argomento di modello.
+Usato come argomento di modello per il modello di `CCommand` quando si vuole che il comando gestisca un singolo set di righe. `CNoMultipleResults` è il valore predefinito per l'argomento di modello.
 
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
-Utilizzato come argomento di modello per `CCommand` o `CTable` se il comando o la tabella non restituisce un set di righe.
+Usato come argomento di modello per `CCommand` o `CTable` se il comando o la tabella non restituisce un set di righe.
 
 [CTable](../../data/oledb/ctable-class.md)<br/>
-Utilizzato per accedere a un rowset semplice senza parametri.
+Utilizzato per accedere a un semplice set di righe senza parametri.
 
-## <a name="property-classes"></a>Classi delle proprietà
+## <a name="property-classes"></a>Classi di proprietà
 
 [CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-Utilizzato per passare una matrice di ID proprietà di cui il consumer richiede informazioni sulla proprietà. La proprietà appartiene al set di una proprietà.
+Utilizzato per passare una matrice di ID di proprietà per cui il consumer desidera ottenere informazioni sulle proprietà. Le proprietà appartengono a un set di proprietà.
 
 [CDBPropSet](../../data/oledb/cdbpropset-class.md)<br/>
-Utilizzato per impostare le proprietà in un provider.
+Utilizzato per impostare le proprietà di un provider.
 
-## <a name="bookmark-class"></a>Classe di segnalibro
+## <a name="bookmark-class"></a>Classe Bookmark
 
 [CBookmark](../../data/oledb/cbookmark-class.md)<br/>
-Utilizzato come un indice per l'accesso ai dati in un set di righe.
+Utilizzato come indice per l'accesso ai dati in un set di righe.
 
-## <a name="error-class"></a>Error-classe
+## <a name="error-class"></a>Classe Error
 
 [CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)<br/>
-Utilizzato per recuperare le informazioni sugli errori OLE DB.
+Utilizzato per recuperare OLE DB informazioni sull'errore.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,7 +3,6 @@ title: /C (Conserva i commenti durante la pre-elaborazione)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.KeepComments
-- /c
 - VC.Project.VCCLWCECompilerTool.KeepComments
 helpviewer_keywords:
 - comments, not stripping during preprocessing
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: 6d0cf8e5f628f3f5301f54d7c853bfc2ab63cb7e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: f80ebf45dd396a3f92d9b755c56522d4731bb2d0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988365"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440269"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Conserva i commenti durante la pre-elaborazione)
 
@@ -29,7 +28,7 @@ Conserva i commenti durante la pre-elaborazione.
 /C
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questa opzione del compilatore richiede l'opzione **/e**, **/p**o **/EP** .
 

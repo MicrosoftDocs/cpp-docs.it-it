@@ -3,16 +3,15 @@ title: '&lt;list&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <list>
-- std::<list>
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6b67434d36146de87a124fc02f49971425943dc5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689434"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447286"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -25,7 +24,7 @@ Definisce l'elenco di modelli di classe del contenitore e diversi modelli di sup
 ```
 
 > [!NOTE]
-> Anche la libreria \<list > USA l'istruzione `#include <initializer_list>`.
+> Il \<elenco > libreria usa anche l'istruzione `#include <initializer_list>`.
 
 ## <a name="members"></a>Members
 
@@ -54,6 +53,6 @@ Definisce l'elenco di modelli di classe del contenitore e diversi modelli di sup
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\ (Riferimento file di intestazione)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

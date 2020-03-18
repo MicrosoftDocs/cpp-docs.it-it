@@ -1,8 +1,6 @@
 ---
-title: 'Menu e risorse: Aggiunte di server'
+title: 'Menu e risorse: aggiunte di server'
 ms.date: 11/04/2016
-f1_keywords:
-- IDP_OLE_INIT_FAILED
 helpviewer_keywords:
 - OLE visual editing servers [MFC]
 - accelerator tables [MFC], server applications
@@ -17,58 +15,58 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1dfd059572c433e8fd7ccaf6e5c48e880f59cad
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225422"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445194"
 ---
-# <a name="menus-and-resources-server-additions"></a>Menu e risorse: Aggiunte di server
+# <a name="menus-and-resources-server-additions"></a>Menu e risorse: aggiunte di server
 
-Questo articolo vengono illustrate le modifiche da apportare ai menu e altre risorse in un'applicazione server (componente) modifica visiva. Un'applicazione server richiede molti aggiunte alla struttura di menu e altre risorse, perché può essere avviato in una delle tre modalità: autonoma, incorporati, o sul posto. Come descritto nel [menu e risorse (OLE)](../mfc/menus-and-resources-ole.md) articolo, sono presenti un massimo di quattro set di menu. Tutti e quattro vengono usate per un'applicazione MDI server completo, mentre vengono utilizzati per un server ridotto solo tre. La creazione guidata applicazione creerà il layout del menu necessari per il tipo di server desiderato. Alcune personalizzazioni possono essere necessarie.
+Questo articolo illustra le modifiche che devono essere apportate ai menu e ad altre risorse in un'applicazione del server di modifica visiva (componente). Un'applicazione server richiede molte aggiunte alla struttura dei menu e ad altre risorse perché può essere avviata in una delle tre modalità seguenti: autonoma, incorporata o sul posto. Come descritto nell'articolo [menu e risorse (OLE)](../mfc/menus-and-resources-ole.md) , sono disponibili al massimo quattro set di menu. Tutte e quattro vengono utilizzate per un'applicazione server MDI completa, mentre solo tre vengono utilizzate per un miniserver. La creazione guidata applicazione creerà il layout di menu necessario per il tipo di server desiderato. Potrebbe essere necessaria una personalizzazione.
 
-Se non si utilizza la creazione guidata applicazione, è possibile esaminare HIERSVR. RC, lo script di risorsa per l'applicazione di esempio MFC [HIERSVR](../overview/visual-cpp-samples.md), per vedere come vengono implementate queste modifiche.
+Se non si utilizza la creazione guidata applicazione, è consigliabile esaminare HIERSVR. RC, lo script di risorsa per l'applicazione di esempio MFC [HIERSVR](../overview/visual-cpp-samples.md), per vedere come vengono implementate queste modifiche.
 
 Gli argomenti trattati in questo articolo includono:
 
-- [Aggiunte al Menu di server](#_core_server_menu_additions)
+- [Aggiunte al menu Server](#_core_server_menu_additions)
 
-- [Tasti di scelta rapida aggiunte alla tabella](#_core_server_application_accelerator_table_additions)
+- [Aggiunte a tabella Accelerator](#_core_server_application_accelerator_table_additions)
 
-- [Aggiunte alla tabella delle stringhe](../mfc/menus-and-resources-container-additions.md)
+- [Aggiunte di tabelle di stringhe](../mfc/menus-and-resources-container-additions.md)
 
-- [Aggiunte di server ridotto](#_core_mini.2d.server_additions)
+- [Aggiunte miniserver](#_core_mini.2d.server_additions)
 
-##  <a name="_core_server_menu_additions"></a> Aggiunte al Menu di server
+##  <a name="_core_server_menu_additions"></a>Aggiunte al menu Server
 
-Le applicazioni server, componente, devono disporre di risorse di menu aggiunte per supportare la modifica visiva OLE. I menu utilizzati quando l'applicazione viene eseguita in modalità autonoma non deve essere modificata, ma è necessario aggiungere due nuove risorse di menu prima di compilare l'applicazione: una per il supporto di attivazione sul posto e l'altra per supportare il server è completamente aperto. Entrambe le risorse di menu vengono usate dalle applicazioni ridotto e full.
+Per supportare la modifica visiva OLE, per le applicazioni server (componente) è necessario aggiungere risorse di menu. I menu usati quando l'applicazione viene eseguita in modalità autonoma non devono essere modificati, ma è necessario aggiungere due nuove risorse di menu prima di compilare l'applicazione: una per il supporto dell'attivazione sul posto e una per il supporto del server aperto completamente. Entrambe le risorse di menu vengono usate dalle applicazioni complete e miniserver.
 
-- Per supportare l'attivazione sul posto, è necessario creare una risorsa di menu che è molto simile alla risorsa di menu usata durante l'esecuzione in modalità autonoma. La differenza in questo menu è che le voci di File e finestra e altre voci di menu che gestiscono l'applicazione e non i dati sono mancanti. L'applicazione contenitore fornirà queste voci di menu. Per altre informazioni su e un esempio di, questa tecnica di unione di menu, vedere l'articolo [menu e risorse: Menu Merging](../mfc/menus-and-resources-menu-merging.md).
+- Per supportare l'attivazione sul posto, è necessario creare una risorsa di menu molto simile alla risorsa di menu utilizzata quando viene eseguita in modalità autonoma. La differenza in questo menu è che mancano gli elementi file e finestra (e tutte le altre voci di menu che gestiscono l'applicazione e non i dati). L'applicazione contenitore fornirà queste voci di menu. Per ulteriori informazioni su e un esempio di questa tecnica di Unione dei menu, vedere l'articolo [menu e risorse: Unione di menu](../mfc/menus-and-resources-menu-merging.md).
 
-- Per supportare l'attivazione completamente aperto, è necessario creare una risorsa di menu quasi identica alla risorsa di menu usata quando è stata eseguita in modalità autonoma. L'unica modifica a questa risorsa di menu è che alcuni elementi sono riformulate per rispecchiare il fatto che il server opera su un elemento incorporato in un documento composito.
+- Per supportare l'attivazione completamente aperta, è necessario creare una risorsa di menu quasi identica alla risorsa di menu utilizzata quando viene eseguita in modalità autonoma. L'unica modifica a questa risorsa di menu è che alcuni elementi vengono riformulati per riflettere il fatto che il server opera su un elemento incorporato in un documento composto.
 
-Oltre alle modifiche elencate in questo articolo, il file di risorse deve includere AFXOLESV. RC, è necessario per l'implementazione della libreria Microsoft Foundation Class. Questo file si trova nella sottodirectory MFC\Include.
+Oltre alle modifiche elencate in questo articolo, è necessario che il file di risorse includa AFXOLESV. RC, necessario per l'implementazione del libreria Microsoft Foundation Class. Questo file si trova nella sottodirectory MFC\Include
 
-##  <a name="_core_server_application_accelerator_table_additions"></a> Aggiunta di server applicazioni tasti di scelta rapida tabella
+##  <a name="_core_server_application_accelerator_table_additions"></a>Aggiunta tabella acceleratore applicazione server
 
-Due nuove risorse di tabella di tasti di scelta rapida devono essere aggiunto per le applicazioni server; corrispondono direttamente alle nuove risorse di menu descritte in precedenza. La prima tabella di tasti di scelta rapida viene usata quando l'applicazione server è attivata sul posto. Costituita da tutte le voci nella tabella di tasti di scelta rapida della visualizzazione tranne quelle associate al File e una finestra del menu.
+È necessario aggiungere due nuove risorse della tabella dei tasti di scelta rapida alle applicazioni server. corrispondono direttamente alle nuove risorse di menu descritte in precedenza. La prima tabella dei tasti di scelta rapida viene utilizzata quando l'applicazione server viene attivata sul posto. È costituito da tutte le voci della tabella dei tasti di scelta rapida della visualizzazione, ad eccezione di quelle associate ai menu file e finestra.
 
-Nella seconda tabella è quasi una copia esatta della tabella di tasti di scelta rapida della visualizzazione. Eventuali differenze in parallelo le modifiche apportate nel menu di scelta completamente aperti indicato nella [aggiunte al Menu di Server](#_core_server_menu_additions).
+La seconda tabella è quasi una copia esatta della tabella dei tasti di scelta rapida della visualizzazione. Eventuali differenze tra le modifiche parallele apportate nel menu di apertura completa indicato in [aggiunte al menu Server](#_core_server_menu_additions).
 
-Per un esempio di queste modifiche nella tabella di tasti di scelta rapida, confrontare le tabelle di tasti di scelta rapida IDR_HIERSVRTYPE_SRVR_IP e IDR_HIERSVRTYPE_SRVR_EMB con IDR_MAINFRAME in HIERSVR. File RC inclusi nell'esempio OLE MFC [HIERSVR](../overview/visual-cpp-samples.md). I File e finestra di scelta rapida non sono presenti nella tabella sul posto e nella tabella incorporata sono copie esatte di essi.
+Per un esempio di queste modifiche della tabella dei tasti di scelta rapida, confrontare le tabelle IDR_HIERSVRTYPE_SRVR_IP e IDR_HIERSVRTYPE_SRVR_EMB Accelerator con IDR_MAINFRAME in HIERSVR. File RC incluso nell'esempio OLE MFC [HIERSVR](../overview/visual-cpp-samples.md). Gli acceleratori di file e finestre non sono presenti nella tabella sul posto e le loro copie esatte si trovano nella tabella incorporata.
 
-##  <a name="_core_string_table_additions_for_server_applications"></a> Aggiunte alla tabella delle stringhe per le applicazioni Server
+##  <a name="_core_string_table_additions_for_server_applications"></a>Aggiunte di tabelle di stringhe per le applicazioni server
 
-Aggiungere alla tabella solo una stringa è necessaria in un'applicazione server, ovvero una stringa per indicare che l'inizializzazione OLE non riuscita. Ad esempio, ecco la voce della tabella di stringhe che genera la creazione guidata applicazione:
+In un'applicazione server è necessaria una sola tabella di stringhe, ovvero una stringa per indicare che l'inizializzazione OLE non è riuscita. Ecco ad esempio la voce della tabella di stringhe generata dalla procedura guidata dell'applicazione:
 
-|Id|Stringa|
+|ID|string|
 |--------|------------|
-|IDP_OLE_INIT_FAILED|Inizializzazione OLE non riuscita. Assicurarsi che le librerie OLE sono la versione corretta.|
+|IDP_OLE_INIT_FAILED|Inizializzazione OLE non riuscita. Verificare che la versione delle librerie OLE sia corretta.|
 
-##  <a name="_core_mini.2d.server_additions"></a> Aggiunte di server ridotto
+##  <a name="_core_mini.2d.server_additions"></a>Aggiunte miniserver
 
-Si applicano le stesse aggiunte per i server ridotti a quelli elencati in precedenza per i server completi. Poiché un server ridotto non può essere eseguito in modalità autonoma, il relativo menu principale è molto più piccolo. Nel menu principale creato dalla procedura guidata dell'applicazione sono disponibili solo un menu di File, contenente solo le voci di uscita e circa. Sul posto e incorporati menu e tasti di scelta rapida per i server ridotti sono identici a quelli per i server completi.
+Le stesse aggiunte si applicano a miniservers come quelle elencate in precedenza per i server completi. Poiché un miniserver non può essere eseguito in modalità autonoma, il menu principale è molto più piccolo. Il menu principale creato dalla creazione guidata applicazione dispone solo di un menu file, che contiene solo gli elementi Exit e about. I menu incorporati e i tasti di scelta rapida per miniservers sono uguali a quelli dei server completi.
 
 ## <a name="see-also"></a>Vedere anche
 

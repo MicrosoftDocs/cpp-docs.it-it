@@ -12,7 +12,6 @@ f1_keywords:
 - ATL.CArrayRowset.CArrayRowset
 - ATL.CArrayRowset<TAccessor>.CArrayRowset
 - CArrayRowset::CArrayRowset
-- CArrayRowset
 - CArrayRowset<TAccessor>::CArrayRowset
 - ATL::CArrayRowset<TAccessor>::CArrayRowset
 - CArrayRowset<TAccessor>.Snapshot
@@ -43,16 +42,16 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176161"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441719"
 ---
 # <a name="carrayrowset-class"></a>Classe CArrayRowset
 
-Elementi gli accessi di un set di righe utilizzando la sintassi della matrice.
+Accede agli elementi di un set di righe utilizzando la sintassi di matrice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -66,13 +65,13 @@ class CArrayRowset :
 ### <a name="parameters"></a>Parametri
 
 *TAccessor*<br/>
-Il tipo di classe della funzione di accesso che si desidera che il set di righe da utilizzare.
+Tipo di classe della funzione di accesso che si desidera venga utilizzata dal set di righe.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
@@ -85,15 +84,15 @@ Il tipo di classe della funzione di accesso che si desidera che il set di righe 
 
 |||
 |-|-|
-|[Operator&#91;&#93;](#operator)|Accede a un elemento del set di righe.|
+|[Operatore&#91;&#93;](#operator)|Accede a un elemento del set di righe.|
 
-### <a name="data-members"></a>Membri di dati
+### <a name="data-members"></a>Membri dei dati
 
 |||
 |-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|Il numero di righe già lette.|
+|[CArrayRowset::m_nRowsRead](#nrowsread)|Numero di righe già lette.|
 
-## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+## <a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
 
 Crea un nuovo oggetto `CArrayRowset`.
 
@@ -108,7 +107,7 @@ CArrayRowset(int nMax = 100000);
 *nMax*<br/>
 [in] Numero massimo di righe nel rowset.
 
-## <a name="snapshot"></a> CArrayRowset:: snapshot
+## <a name="snapshot"></a>CArrayRowset:: snapshot
 
 Legge l'intero rowset in memoria, creandone un'immagine o uno snapshot.
 
@@ -118,9 +117,9 @@ Legge l'intero rowset in memoria, creandone un'immagine o uno snapshot.
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset::operator
+## <a name="operator"></a>Operatore CArrayRowset::
 
-Fornisce una sintassi simile a matrice per l'accesso a una riga nel set di righe.
+Fornisce la sintassi di tipo matrice per l'accesso a una riga nel set di righe.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -131,22 +130,22 @@ TAccessor & operator[](int nrow);
 #### <a name="parameters"></a>Parametri
 
 *TAccessor*<br/>
-Un parametro basato su modelli che specifica il tipo di funzione di accesso archiviati nel set di righe.
+Parametro basato su modelli che specifica il tipo di funzione di accesso archiviato nel set di righe.
 
 *nRow*<br/>
-[in] Numero di riga (elemento della matrice) si desidera accedere.
+in Numero della riga (elemento della matrice) a cui si vuole accedere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il contenuto della riga richiesta.
+Contenuto della riga richiesta.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se *nRow* supera il numero di righe nel set di righe, viene generata un'eccezione.
+Se *nrow* supera il numero di righe nel set di righe, viene generata un'eccezione.
 
-## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+## <a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
 
-Contiene il numero di righe nel set di righe che sono già stati letti.
+Contiene il numero di righe nel set di righe già lette.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -156,6 +155,6 @@ ULONG m_nRowsRead;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CRowset](../../data/oledb/crowset-class.md)

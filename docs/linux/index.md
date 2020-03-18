@@ -3,16 +3,18 @@ layout: LandingPage
 title: Documentazione per lo sviluppo per Linux con C++
 description: Creare ed eseguire il debug di applicazioni in esecuzione su Linux.
 ms.topic: landing-page
-ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9c09e9bd590ece013a2ee7d85017b3e046394232
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216111"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441512"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentazione per lo sviluppo per Linux con C++
 
 Utilizzare Visual Studio 2017 e versioni successive per creare e sottoporre a debug le applicazioni eseguite su computer Linux remoti o su Windows Subsystem for Linux.
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsF">
     <li>
@@ -57,7 +59,7 @@ Utilizzare Visual Studio 2017 e versioni successive per creare e sottoporre a de
 
 ---
 
-<h2>Riferimenti</h2>
+<h2>Riferimento</h2>
 
 <ul class="panelContent cardsW">
     <li>

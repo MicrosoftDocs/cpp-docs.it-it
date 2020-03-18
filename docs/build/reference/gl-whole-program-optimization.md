@@ -3,19 +3,18 @@ title: /GL (Ottimizzazione intero programma)
 ms.date: 11/04/2016
 f1_keywords:
 - /gl
-- VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 helpviewer_keywords:
 - /GL compiler option [C++]
 - whole program optimizations and C++ compiler
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 875865a32dcb80cb8a6d8fa53646260f3d9413a5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292133"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439660"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Ottimizzazione intero programma)
 
@@ -27,37 +26,37 @@ Attiva l'ottimizzazione dell'intero programma.
 /GL[-]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Ottimizzazione intero programma consente al compilatore di eseguire ottimizzazioni con informazioni su tutti i moduli del programma. Senza ottimizzazione intero programma, le ottimizzazioni vengono eseguite su una base di modulo (compilando).
+L'ottimizzazione dell'intero programma consente al compilatore di eseguire ottimizzazioni con informazioni su tutti i moduli del programma. Senza l'ottimizzazione dell'intero programma, le ottimizzazioni vengono eseguite in base al modulo (modulo).
 
-Ottimizzazione intero programma è disattivato per impostazione predefinita e deve essere abilitato in modo esplicito. Tuttavia, è anche possibile disabilitarla in modo esplicito con **/GL-**.
+L'ottimizzazione dell'intero programma è disattivata per impostazione predefinita e deve essere abilitata in modo esplicito. Tuttavia, è anche possibile disabilitarlo in modo esplicito con **/GL-** .
 
-Informazioni su tutti i moduli, il compilatore può:
+Con informazioni su tutti i moduli, il compilatore può:
 
-- Ottimizzare l'uso di registri attraverso i limiti di funzione.
+- Ottimizzare l'uso dei registri tra i limiti di funzione.
 
-- Ottenere una migliore rilevamento delle modifiche apportate ai dati globali, consentendo una riduzione del numero di caricamento e archiviazione.
+- Eseguire un processo migliore per tenere traccia delle modifiche apportate ai dati globali, consentendo una riduzione del numero di caricamenti e archivi.
 
-- Ottenere una migliore del rilevamento dereferenziare il set di elementi modificati da un puntatore, riducendo le operazioni di caricamento e archiviazione.
+- Eseguire un processo migliore per tenere traccia del possibile set di elementi modificato da una dereferenziazione del puntatore, riducendo il numero di caricamenti e archivi.
 
 - Inline una funzione in un modulo anche quando la funzione è definita in un altro modulo.
 
-i file con estensione obj generati con **/GL** non sarà disponibile per utilità del linker come [EDITBIN](editbin-reference.md) e [DUMPBIN](dumpbin-reference.md).
+i file con estensione obj prodotti con **/GL** non saranno disponibili per le utilità del linker come [editbin)](editbin-reference.md) e [dumpbin](dumpbin-reference.md).
 
-Se si esegue la compilazione del programma con **/GL** e [/c](c-compile-without-linking.md), è consigliabile usare l'opzione del linker /LTCG per creare il file di output.
+Se si compila il programma con **/GL** e [/c](c-compile-without-linking.md), è necessario usare l'opzione del linker/LTCG per creare il file di output.
 
-[/Zi](z7-zi-zi-debug-information-format.md) non può essere usato con **/GL**
+Impossibile utilizzare [/Zi](z7-zi-zi-debug-information-format.md) con **/GL**
 
-Il formato dei file creati con **/GL** nella versione corrente potrebbero non essere leggibili nelle versioni successive di Visual C++. Non è necessario fornire un file con estensione LIB costituito dai file con estensione obj che sono stati realizzati grazie **/GL** a meno che non si è disposti a fornire le copie del file con estensione LIB per tutte le versioni di Visual C++ si prevede che gli utenti all'uso, ora e in futuro.
+Il formato dei file prodotti con **/GL** nella versione corrente potrebbe non essere leggibile dalle versioni successive di Visual C++. Non è necessario fornire un file con estensione LIB costituito da file obj creati con **/GL** , a meno che non si sia disposti a inviare copie del file con estensione LIB per tutte le versioni C++ di visuale che si prevede vengano usate dagli utenti, ora e in futuro.
 
-i file con estensione obj generati con **/GL** e i file di intestazione precompilata non devono essere utilizzati per compilare un file con estensione LIB, a meno che il file con estensione LIB verrà essere collegato nello stesso computer che ha prodotto il **/GL** file con estensione obj. Saranno necessarie in fase di collegamento informazioni dal file di intestazione precompilata del file con estensione obj.
+i file con estensione obj prodotti con **/GL** e i file di intestazione precompilata non devono essere usati per compilare un file con estensione LIB, a meno che il file con estensione LIB non sia collegato nello stesso computer che ha generato il file **/GL** . obj. Le informazioni del file di intestazione precompilata del file con estensione obj saranno necessarie in fase di collegamento.
 
-Per altre informazioni sulle ottimizzazioni disponibili e i limiti di Ottimizzazione intero programma, vedere [/LTCG](ltcg-link-time-code-generation.md).  **/GL** inoltre rende disponibile l'ottimizzazione PGO; vedere /LTCG.  Quando si compila per ottimizzazioni PGO e se si desidera che le ottimizzazioni PGO ordinamento delle funzioni, è necessario compilare con [/Gy](gy-enable-function-level-linking.md) o un'opzione del compilatore, che implica /Gy.
+Per ulteriori informazioni sulle ottimizzazioni disponibili con e sulle limitazioni dell'ottimizzazione dell'intero programma, vedere [/LTCG](ltcg-link-time-code-generation.md).  **/GL** rende disponibile anche l'ottimizzazione PGO; vedere/LTCG.  Quando si esegue la compilazione per le ottimizzazioni PGO e si vuole ordinare la funzione dalle ottimizzazioni PGO, è necessario compilare con [/Gy](gy-enable-function-level-linking.md) o un'opzione del compilatore che implica/Gy.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Visualizzare [/LTCG (generazione di codice in fase di collegamento)](ltcg-link-time-code-generation.md) per informazioni su come specificare **/GL** nell'ambiente di sviluppo.
+1. Vedere [/LTCG (generazione di codice in fase di collegamento)](ltcg-link-time-code-generation.md) per informazioni su come specificare **/GL** nell'ambiente di sviluppo.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
