@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 7f28b9e64c88a5be440417dd9d22f129ee7d6edf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e57c575ed778184cf319bb84e61f585fcfa2111
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495260"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509341"
 ---
 # <a name="worker-archetype"></a>Archetipo del ruolo di lavoro
 
-Le classi conformi all'archetipo del ruolo di lavoro forniscono il codice per l'elaborazione degli elementi di lavoro accodati in un pool di thread.
+Le classi conformi *all'archetipo del ruolo di lavoro forniscono* il codice per l'elaborazione degli elementi di lavoro accodati in un pool di thread.
 
 **Implementazione**
 
@@ -22,7 +22,7 @@ Per implementare una classe conforme a questo archetipo, la classe deve fornire 
 |Metodo|Descrizione|
 |------------|-----------------|
 |[Initialize](#initialize)|Chiamato per inizializzare l'oggetto di lavoro prima che vengano passate richieste da [eseguire](#execute).|
-|[Execute](#execute)|Chiamato per elaborare un elemento di lavoro.|
+|[Eseguire](#execute)|Chiamato per elaborare un elemento di lavoro.|
 |[Terminate](#terminate)|Chiamato per annullare l'inizializzazione dell'oggetto di lavoro dopo che tutte le richieste sono state passate per l' [esecuzione](#execute).|
 
 |Typedef|Descrizione|
@@ -45,7 +45,7 @@ Queste classi sono conformi a questo archetipo:
 
 Questi parametri di modello si aspettano che la classe sia conforme a questo archetipo:
 
-|Nome parametro|Utilizzata da|
+|Nome parametro|Usato da|
 |--------------------|-------------|
 |*Lavoro*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
 |*Lavoro*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
@@ -68,7 +68,7 @@ void Execute(
 #### <a name="parameters"></a>Parametri
 
 *request*<br/>
-Elemento di lavoro da elaborare. L'elemento di lavoro è dello stesso tipo `RequestType`di.
+Elemento di lavoro da elaborare. L'elemento di lavoro è dello stesso tipo di `RequestType`.
 
 *pvWorkerParam*<br/>
 Parametro personalizzato riconosciuto dalla classe Worker. Passato anche a `WorkerArchetype::Initialize` e `Terminate`.
@@ -78,7 +78,8 @@ Puntatore alla struttura [sovrapposta](/windows/win32/api/minwinbase/ns-minwinba
 
 ## <a name="initialize"></a>WorkerArchetype:: Initialize
 
-Chiamato per inizializzare l'oggetto di lavoro prima che vengano passate `WorkerArchetype::Execute`richieste a.
+Chiamato per inizializzare l'oggetto di lavoro prima che vengano passate richieste a `WorkerArchetype::Execute`.
+
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
@@ -92,7 +93,7 @@ Parametro personalizzato riconosciuto dalla classe Worker. Passato anche a `Work
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-## <a name="requesttype"></a> WorkerArchetype::RequestType
+## <a name="requesttype"></a>WorkerArchetype:: RequestType
 
 Typedef per il tipo di elemento di lavoro che può essere elaborato dalla classe Worker.
 
@@ -102,11 +103,11 @@ typedef MyRequestType RequestType;
 
 ### <a name="remarks"></a>Note
 
-Questo tipo deve essere utilizzato come primo parametro di `WorkerArchetype::Execute` e deve essere in grado di eseguire il cast a e da un ULONG_PTR.
+Questo tipo deve essere utilizzato come primo parametro di `WorkerArchetype::Execute` e deve essere in grado di eseguire il cast da e verso una ULONG_PTR.
 
 ## <a name="terminate"></a>WorkerArchetype:: terminate
 
-Chiamata eseguita per annullare l'inizializzazione dell'oggetto di lavoro dopo che tutte `WorkerArchetype::Execute`le richieste sono state passate a.
+Chiamato per annullare l'inizializzazione dell'oggetto di lavoro dopo che tutte le richieste sono state passate a `WorkerArchetype::Execute`).
 
 ```
 void Terminate(void* pvParam) throw();

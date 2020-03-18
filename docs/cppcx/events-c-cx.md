@@ -3,12 +3,12 @@ title: Eventi (C++/CX)
 description: Come usare C++/CX per creare e usare i gestori eventi nel Windows Runtime.
 ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: b40f71b183561b52047c1f7316def3d895465d2a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972195"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509370"
 ---
 # <a name="events-ccx"></a>Eventi (C++/CX)
 
@@ -28,7 +28,7 @@ Nell'esempio riportato di seguito viene illustrato come dichiarare e generare un
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Usage
+### <a name="usage"></a>Utilizzo
 
 L'esempio riportato di seguito mostra in che modo una classe di sottoscrizione usa l'operatore `+=` per sottoscrivere l'evento e come fornire un gestore eventi da richiamare al momento della generazione dell'evento. La funzione fornita corrisponde alla firma del delegato definito sul lato editore nello spazio dei nomi `EventTest` .
 
