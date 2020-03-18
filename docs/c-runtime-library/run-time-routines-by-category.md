@@ -1,20 +1,18 @@
 ---
 title: Routine di Universal C Runtime per categoria
 ms.date: 04/06/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - routines, run-time
 - functions [CRT], run-time
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: 0f81ad76a535cc4e4f5aa740e1501d3ffd323e2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 4da18db2278a38fd7c59010d2c64d5cb804ad4eb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499581"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444804"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>Routine di Universal C Runtime per categoria
 
@@ -29,7 +27,7 @@ Le categorie principali di routine di libreria UCRT sono:
 |[Accesso agli argomenti](../c-runtime-library/argument-access.md)|[Modifica del buffer](../c-runtime-library/buffer-manipulation.md)|
 |[Classificazione per byte](../c-runtime-library/byte-classification.md)|[Classificazione di caratteri](../c-runtime-library/character-classification.md)|
 |[Supporto di operazioni matematiche complesse](../c-runtime-library/complex-math-support.md)||
-|[Allineamento dati](../c-runtime-library/data-alignment.md)|[Conversione dei dati](../c-runtime-library/data-conversion.md)|
+|[Allineamento dati](../c-runtime-library/data-alignment.md)|[Conversione dati](../c-runtime-library/data-conversion.md)|
 |[Routine di debug](../c-runtime-library/debug-routines.md)|[Controllo delle directory](../c-runtime-library/directory-control.md)|
 |[Gestione degli errori](../c-runtime-library/error-handling-crt.md)|[Routine di gestione delle eccezioni](../c-runtime-library/exception-handling-routines.md)|
 |[Gestione di file](../c-runtime-library/file-handling.md)|[Supporto delle funzioni a virgola mobile](../c-runtime-library/floating-point-support.md)|

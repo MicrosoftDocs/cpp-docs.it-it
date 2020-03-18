@@ -1,9 +1,6 @@
 ---
 title: Costanti di autorizzazione file
 ms.date: 11/04/2016
-f1_keywords:
-- _S_IWRITE
-- _S_IREAD
 helpviewer_keywords:
 - S_IWRITE constant
 - constants [C++], file attributes
@@ -12,12 +9,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: 0e042cddce6edf079aa54f114130f9750412e327
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 9f6126b867e29ca37468c6ff383224a483639c78
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742700"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443283"
 ---
 # <a name="file-permission-constants"></a>Costanti di autorizzazione file
 
@@ -53,4 +50,4 @@ Una volta utilizzato come argomento `pmode` per `_umask`, la costante manifesto 
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
 [_umask](../c-runtime-library/reference/umask.md)<br/>
 [Tipi standard](../c-runtime-library/standard-types.md)<br/>
-[Costanti globali](../c-runtime-library/global-constants.md)
+[Global Constants](../c-runtime-library/global-constants.md) (Costanti globali)

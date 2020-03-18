@@ -21,15 +21,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _strnicmp
-- _wcsnicmp_l
 - _mbsnbicmp
 - mbsnbicmp
 - mbsnbicmp_l
-- _tcsnicmp
-- _strnicmp_l
-- _tcsnicmp_l
-- _wcsnicmp
 - _mbsnbicmp_l
 helpviewer_keywords:
 - _tcsnicmp_l function
@@ -43,12 +37,12 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952195"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442830"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -69,7 +63,7 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>Parametri
 
-*string1*, *string2*<br/>
+*String1*, *string2*<br/>
 Stringhe che terminano con Null da confrontare.
 
 *count*<br/>
@@ -85,9 +79,9 @@ Il valore restituito indica la relazione ordinale tra le sottostringhe.
 |0|sottostringa *String1* identica alla sottostringa *string2* .|
 |> 0|sottostringa *String1* maggiore della sottostringa *string2* .|
 
-In un errore, **_mbsnbicmp** restituisce **_NLSCMPERROR**, definito in String. h e mbstring. h.
+In un errore, **_mbsnbicmp** restituisce **_NLSCMPERROR**, che è definito in String. h e mbstring. h.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **_mbsnbicmp** esegue un confronto ordinale al massimo dei primi byte di *conteggio* di *String1* e *string2*. Il confronto viene eseguito convertendo ogni carattere in minuscolo; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) è una versione con distinzione tra maiuscole e minuscole di **_mbsnbicmp**. Il confronto termina se viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* . Se le stringhe sono uguali quando viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* , la stringa più corta è minore.
 
@@ -112,7 +106,7 @@ Se *String1* o *string2* è un puntatore null, **_mbsnbicmp** richiama il gestor
 |-------------|---------------------|
 |**_mbsnbicmp**|\<mbstring.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

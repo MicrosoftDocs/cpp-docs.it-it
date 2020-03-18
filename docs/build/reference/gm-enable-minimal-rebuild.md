@@ -4,7 +4,6 @@ ms.date: 11/12/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MinimalRebuild
 - /Gm
-- /FD
 - VC.Project.VCCLWCECompilerTool.MinimalRebuild
 helpviewer_keywords:
 - /Gm compiler option [C++]
@@ -13,16 +12,16 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-ms.openlocfilehash: 4a66dda37b84119a4b8bc23f7fc719d50e8786f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b928f3add0a2ec10257bf63fe61a824336c19b8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292068"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439636"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (Attiva ricompilazione minima)
 
-Deprecato. Abilita la ricompilazione minima, che determina se è necessario ricompilare i file di origine C++ che includono modifiche alle definizioni delle classi C++ archiviate nei file di intestazione con estensione h.
+Operazione deprecata. Abilita la ricompilazione minima, che determina se è necessario ricompilare i file di origine C++ che includono modifiche alle definizioni delle classi C++ archiviate nei file di intestazione con estensione h.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,24 +29,24 @@ Deprecato. Abilita la ricompilazione minima, che determina se è necessario rico
 /Gm
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**/Gm** è deprecata. Questa operazione potrebbe non attivare una compilazione per determinati tipi di modifiche ai file di intestazione. È possibile rimuovere questa opzione in modo sicuro dai progetti. Per migliorare i tempi di compilazione, è consigliabile si usano intestazioni precompilate e parallele e incrementali opzioni di compilazione invece. Per un elenco di opzioni del compilatore deprecate, vedere la **deprecate o rimosse le opzioni del compilatore** sezione [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
+**/GM** è deprecato. Potrebbe non attivare una compilazione per determinati tipi di modifiche del file di intestazione. Questa opzione può essere rimossa in modo sicuro dai progetti. Per migliorare i tempi di compilazione, si consiglia di usare le intestazioni precompilate e le opzioni di compilazione incrementali e parallele. Per un elenco delle opzioni del compilatore deprecate, vedere la sezione Opzioni del compilatore **deprecate e rimosse** in [Opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
-Il compilatore archivia le informazioni sulla dipendenza tra i file di origine e le definizioni delle classi nel file con estensione idb del progetto durante la prima compilazione. (Informazioni sulla dipendenza indicano quale file di origine dipende dalla definizione di classe, e il file h la definizione si trova in). Le compilazioni successive usano le informazioni archiviate nel file con estensione IDB per determinare se un file di origine deve essere compilata, anche se include un file con estensione h modificato.
+Il compilatore archivia le informazioni sulla dipendenza tra i file di origine e le definizioni delle classi nel file con estensione idb del progetto durante la prima compilazione. Le informazioni sulla dipendenza indicano quale file di origine è dipendente da una determinata definizione di classe e in quale file con estensione h si trova la definizione. Nelle compilazioni successive le informazioni archiviate nel file con estensione idb vengono usate per stabilire se occorre compilare un file di origine, anche se include un file con estensione h modificato.
 
 > [!NOTE]
 > La ricompilazione minima richiede che le definizioni delle classi non vengano modificate nei file di inclusione. Le definizioni delle classi devono essere globali per un progetto (dovrebbe esistere una sola definizione di una determinata classe) perché le informazioni sulla dipendenza nel file con estensione idb vengono create per l'intero progetto. Se esiste più di una definizione per una classe nel progetto, disabilitare la ricompilazione minima.
 
-Poiché il linker incrementale non supporta i metadati di Windows inclusi nei file obj usando il [/ZW (compilazione di Windows Runtime)](zw-windows-runtime-compilation.md) opzione, il **/Gm** opzione non è compatibile con  **/ZW**.
+Poiché il linker incrementale non supporta i metadati di Windows inclusi nei file con estensione obj utilizzando l'opzione [/ZW (compilazione Windows Runtime)](zw-windows-runtime-compilation.md) , l'opzione **/GM** non è compatibile con **/ZW**.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **C/C++** > **Code Generation** pagina delle proprietà.
+1. Selezionare le **proprietà di configurazione** > pagina delle proprietà di **generazione del codice** **C/C++**  > .
 
-1. Modificare il **Abilita ricompilazione minima** proprietà.
+1. Modificare la proprietà **Abilita ricompilazione minima** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 

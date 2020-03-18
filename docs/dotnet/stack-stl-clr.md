@@ -4,12 +4,6 @@ ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - cliext::stack
-- cliext::operator!=
-- cliext::operator<
-- cliext::operator<=
-- cliext::operator==
-- cliext::operator>
-- cliext::operator>=
 - cliext::stack::assign
 - cliext::stack::const_reference
 - cliext::stack::container_type
@@ -59,18 +53,18 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f1ae182573ca70a6983b9cd23e253ecf30731e4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384608"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441988"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
-La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone dell'accesso last-in, First Out. Si utilizza l'adapter contenitore `stack` per gestire un contenitore sottostante come stack di push-down.
+La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi con accesso in primo luogo. Usare l'adattatore del contenitore `stack` per gestire un contenitore sottostante come uno stack di push.
 
-Nella sezione successiva, `GValue` equivale a *valore* , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Value^`. Analogamente, `GContainer` equivale a *contenitore* , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Container^`.
+Nella descrizione seguente `GValue` corrisponde a *value* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Value^`. Analogamente, `GContainer` è uguale al *contenitore* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Container^`.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -89,14 +83,14 @@ template<typename Value,
 *Valore*<br/>
 Tipo di un elemento nella sequenza controllata.
 
-*Container*<br/>
+*Contenitore*<br/>
 Tipo del contenitore sottostante.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** \<cliext/stack >
 
-**Namespace:** cliext
+**Spazio dei nomi:** cliext
 
 ## <a name="declarations"></a>Dichiarazioni
 
@@ -105,8 +99,8 @@ Tipo del contenitore sottostante.
 |[stack::const_reference (STL/CLR)](#const_reference)|Tipo di un riferimento costante a un elemento.|
 |[stack::container_type (STL/CLR)](#container_type)|Tipo del contenitore sottostante.|
 |[stack::difference_type (STL/CLR)](#difference_type)|Tipo di una distanza Signed tra due elementi.|
-|[stack::generic_container (STL/CLR)](#generic_container)|Il tipo dell'interfaccia generica per l'adattatore del contenitore.|
-|[stack::generic_value (STL/CLR)](#generic_value)|Il tipo di un elemento per l'interfaccia generica per l'adattatore del contenitore.|
+|[stack::generic_container (STL/CLR)](#generic_container)|Tipo dell'interfaccia generica per l'adattatore del contenitore.|
+|[stack::generic_value (STL/CLR)](#generic_value)|Tipo di un elemento per l'interfaccia generica per l'adattatore del contenitore.|
 |[stack::reference (STL/CLR)](#reference)|Tipo di un riferimento a un elemento.|
 |[stack::size_type (STL/CLR)](#size_type)|Tipo di una distanza Signed tra due elementi.|
 |[stack::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|
@@ -117,7 +111,7 @@ Tipo del contenitore sottostante.
 |[stack::empty (STL/CLR)](#empty)|Verifica se sono presenti o meno degli elementi.|
 |[stack::get_container (STL/CLR)](#get_container)|Accede al contenitore sottostante.|
 |[stack::pop (STL/CLR)](#pop)|Rimuove l'ultimo elemento.|
-|[stack::push (STL/CLR)](#push)|Aggiunge un nuovo ultimo elemento.|
+|[stack::push (STL/CLR)](#push)|Aggiunge un nuovo elemento ultimo.|
 |[stack::size (STL/CLR)](#size)|Conta il numero di elementi.|
 |[stack::stack (STL/CLR)](#stack)|Costruisce un oggetto contenitore.|
 |[stack::top (STL/CLR)](#top)|Accede all'ultimo elemento.|
@@ -130,27 +124,27 @@ Tipo del contenitore sottostante.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |[stack::operator= (STL/CLR)](#op_as)|Sostituisce la sequenza controllata.|
-|[operator!= (stack) (STL/CLR)](#op_neq)|Determina se un `stack` non è uguale a un altro oggetto `stack` oggetto.|
-|[operator< (stack) (STL/CLR)](#op_lt)|Determina se un `stack` oggetto è minore di un altro `stack` oggetto.|
-|[operator<= (stack) (STL/CLR)](#op_lteq)|Determina se un `stack` oggetto è minore o uguale a un altro `stack` oggetto.|
-|[operator== (stack) (STL/CLR)](#op_eq)|Determina se un `stack` è uguale a un altro oggetto `stack` oggetto.|
-|[operator> (stack) (STL/CLR)](#op_gt)|Determina se un `stack` è maggiore di un altro oggetto `stack` oggetto.|
-|[operator>= (stack) (STL/CLR)](#op_gteq)|Determina se un `stack` oggetto è maggiore o uguale a un altro `stack` oggetto.|
+|[operator!= (stack) (STL/CLR)](#op_neq)|Determina se un oggetto `stack` non è uguale a un altro oggetto `stack`.|
+|[operator< (stack) (STL/CLR)](#op_lt)|Determina se un oggetto `stack` è minore di un altro `stack` oggetto.|
+|[operator<= (stack) (STL/CLR)](#op_lteq)|Determina se un oggetto `stack` è minore o uguale a un altro oggetto `stack`.|
+|[operator== (stack) (STL/CLR)](#op_eq)|Determina se un oggetto `stack` è uguale a un altro oggetto `stack`.|
+|[operator> (stack) (STL/CLR)](#op_gt)|Determina se un oggetto `stack` è maggiore di un altro oggetto `stack`.|
+|[operator>= (stack) (STL/CLR)](#op_gteq)|Determina se un oggetto `stack` è maggiore o uguale a un altro oggetto `stack`.|
 
 ## <a name="interfaces"></a>Interfacce
 
 |Interfaccia|Descrizione|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicare un oggetto.|
-|IStack\<Value, contenitore >|Mantenere la scheda di contenitore generico.|
+|Valore\<di, contenitore >|Gestire un adapter contenitore generico.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'oggetto alloca e libera la memoria per la sequenza da esso controllata tramite un contenitore sottostante, typu *contenitore*, che archivia *valore* elementi e cresce su richiesta. L'oggetto limita l'accesso per eseguire il push e si estraggono solo l'ultimo elemento, implementazione di una coda last-in, First Out (noto anche come una coda LIFO o dello stack).
+L'oggetto alloca e libera la memoria per la sequenza che controlla tramite un contenitore sottostante, di tipo *container*, che archivia gli elementi *valore* e aumenta su richiesta. L'oggetto limita l'accesso al push e al pop dell'ultimo elemento, implementando una coda LIFO (Last-in First-out), nota anche come coda o stack LIFO.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-## <a name="assign"></a> stack:: Assign (STL/CLR)
+## <a name="assign"></a>stack:: Assign (STL/CLR)
 
 Sostituisce tutti gli elementi.
 
@@ -163,11 +157,11 @@ void assign(stack<Value, Container>% right);
 #### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Adattatore del contenitore da inserire.
+Adattatore contenitore da inserire.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro assegna `right.get_container()` al contenitore sottostante. Usarlo per modificare l'intero contenuto dello stack.
+La funzione membro assegna `right.get_container()` al contenitore sottostante. Viene usato per modificare l'intero contenuto dello stack.
 
 ### <a name="example"></a>Esempio
 
@@ -204,7 +198,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a> stack::const_reference (STL/CLR)
+## <a name="const_reference"></a>stack:: const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -214,7 +208,7 @@ Tipo di un riferimento costante a un elemento.
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo descrive un riferimento costante a un elemento.
 
@@ -248,7 +242,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> stack::container_type (STL/CLR)
+## <a name="container_type"></a>stack:: container_type (STL/CLR)
 
 Tipo del contenitore sottostante.
 
@@ -258,7 +252,7 @@ Tipo del contenitore sottostante.
 typedef Container value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello *Container*.
 
@@ -290,9 +284,9 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> stack::difference_type (STL/CLR)
+## <a name="difference_type"></a>stack::d ifference_type (STL/CLR)
 
-I tipi di una distanza signed tra due elementi.
+Tipi di una distanza con segno tra due elementi.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -300,9 +294,9 @@ I tipi di una distanza signed tra due elementi.
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive un conteggio di elementi potenzialmente negativo.
+Il tipo descrive un conteggio di elementi probabilmente negativo.
 
 ### <a name="example"></a>Esempio
 
@@ -348,7 +342,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> stack:: Empty (STL/CLR)
+## <a name="empty"></a>stack:: Empty (STL/CLR)
 
 Verifica se sono presenti o meno degli elementi.
 
@@ -358,9 +352,9 @@ Verifica se sono presenti o meno degli elementi.
 bool empty();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [stack:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Usarlo per verificare se lo stack è vuoto.
+La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Viene usato per verificare se lo stack è vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -402,9 +396,9 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a> stack::generic_container (STL/CLR)
+## <a name="generic_container"></a>stack:: generic_container (STL/CLR)
 
-Il tipo dell'interfaccia generica per l'adattatore del contenitore.
+Tipo dell'interfaccia generica per l'adattatore del contenitore.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -413,9 +407,9 @@ typedef Microsoft::VisualC::StlClr::IStack<Value>
     generic_container;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive l'interfaccia generica per questa classe di adattatore di contenitori di modelli.
+Il tipo descrive l'interfaccia generica per questa classe dell'adattatore del contenitore del modello.
 
 ### <a name="example"></a>Esempio
 
@@ -465,9 +459,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a> stack::generic_value (STL/CLR)
+## <a name="generic_value"></a>stack:: generic_value (STL/CLR)
 
-Il tipo di elemento per l'uso con l'interfaccia generica per il contenitore.
+Tipo di un elemento da utilizzare con l'interfaccia generica per il contenitore.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -475,9 +469,9 @@ Il tipo di elemento per l'uso con l'interfaccia generica per il contenitore.
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato per l'uso con l'interfaccia generica per questa classe di contenitori di modelli. (`GValue` può essere `value_type` oppure `value_type^` se `value_type` è un tipo di riferimento.)
+Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato da usare con l'interfaccia generica per questa classe del contenitore del modello. `GValue` è `value_type` o `value_type^` se `value_type` è un tipo di riferimento.
 
 ### <a name="example"></a>Esempio
 
@@ -523,7 +517,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a> stack::get_container (STL/CLR)
+## <a name="get_container"></a>stack:: get_container (STL/CLR)
 
 Accede al contenitore sottostante.
 
@@ -533,9 +527,9 @@ Accede al contenitore sottostante.
 container_type^ get_container();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce un handle per il contenitore sottostante. È utilizzato per ignorare le restrizioni imposte dal wrapper del contenitore.
+La funzione membro restituisce un handle per il contenitore sottostante. Viene utilizzato per ignorare le restrizioni imposte dal wrapper del contenitore.
 
 ### <a name="example"></a>Esempio
 
@@ -565,7 +559,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> stack::operator= (STL/CLR)
+## <a name="op_as"></a>stack:: operator = (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -578,11 +572,11 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 #### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Adattatore del contenitore da copiare.
+Adattatore contenitore da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le copie di operatore membro *a destra* all'oggetto, quindi restituisce `*this`. Usarlo per sostituire la sequenza controllata con una copia della sequenza controllata nel *a destra*.
+L'operatore membro copia *right* nell'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -619,7 +613,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> stack:: POP (STL/CLR)
+## <a name="pop"></a>stack::p op (STL/CLR)
 
 Rimuove l'ultimo elemento.
 
@@ -629,9 +623,9 @@ Rimuove l'ultimo elemento.
 void pop();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro rimuove l'ultimo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per abbreviare lo stack di un elemento nella parte posteriore.
+La funzione membro rimuove l'ultimo elemento della sequenza controllata, che non deve essere vuoto. Viene utilizzato per abbreviare lo stack di un elemento nella parte posteriore.
 
 ### <a name="example"></a>Esempio
 
@@ -667,9 +661,9 @@ a b c
 a b
 ```
 
-## <a name="push"></a> stack:: push (STL/CLR)
+## <a name="push"></a>stack::p USH (STL/CLR)
 
-Aggiunge un nuovo ultimo elemento.
+Aggiunge un nuovo elemento ultimo.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -677,9 +671,9 @@ Aggiunge un nuovo ultimo elemento.
 void push(value_type val);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro inserisce un elemento con valore `val` alla fine della sequenza controllata. Usarlo per aggiungere un altro elemento allo stack.
+La funzione membro inserisce un elemento con un valore `val` alla fine della sequenza controllata. Viene usato per aggiungere un altro elemento allo stack.
 
 ### <a name="example"></a>Esempio
 
@@ -708,7 +702,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a> stack::reference (STL/CLR)
+## <a name="reference"></a>stack:: Reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -718,7 +712,7 @@ Tipo di un riferimento a un elemento.
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo descrive un riferimento a un elemento.
 
@@ -757,7 +751,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> stack::size (STL/CLR)
+## <a name="size"></a>stack:: size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -767,9 +761,9 @@ Conta il numero di elementi.
 size_type size();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce la lunghezza della sequenza controllata. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se si è interessati è se la sequenza ha dimensioni diverse da zero, vedere [stack:: Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.
+La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [stack:: Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Esempio
 
@@ -811,9 +805,9 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> stack::size_type (STL/CLR)
+## <a name="size_type"></a>stack:: size_type (STL/CLR)
 
-Il tipo di una distanza signed tra due elementi.
+Tipo di una distanza con segno tra due elementi.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -821,9 +815,9 @@ Il tipo di una distanza signed tra due elementi.
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive un conteggio di elementi non negativo.
+Il tipo descrive un conteggio di elementi non negativi.
 
 ### <a name="example"></a>Esempio
 
@@ -860,9 +854,9 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a> stack (STL/CLR)
+## <a name="stack"></a>stack:: stack (STL/CLR)
 
-Costruisce un oggetto scheda di contenitore.
+Costruisce un oggetto adattatore del contenitore.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -878,34 +872,34 @@ explicit stack(container_type% wrapped);
 *right*<br/>
 Oggetto da copiare.
 
-*wrapped*<br/>
-Sottoposta a wrapping contenitore da usare.
+*eseguito il wrapping*<br/>
+Contenitore di cui è stato eseguito il wrapper da usare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il costruttore:
 
 `stack();`
 
-Crea un contenitore vuoto sottoposta a wrapping. Utilizzarla per specificare una sequenza controllata iniziale vuota.
+Crea un contenitore di cui è stato eseguito il wrapper vuoto. Viene usato per specificare una sequenza controllata iniziale vuota.
 
 Il costruttore:
 
 `stack(stack<Value, Container>% right);`
 
-Crea un contenitore con wrapper è una copia di `right.get_container()`. È utilizzata per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack *a destra*.
+Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right.get_container()`. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack a *destra*.
 
 Il costruttore:
 
 `stack(stack<Value, Container>^ right);`
 
-Crea un contenitore con wrapper è una copia di `right->get_container()`. È utilizzata per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack `*right`.
+Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right->get_container()`. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack `*right`.
 
 Il costruttore:
 
 `explicit stack(container_type% wrapped);`
 
-Usa il contenitore esistente *incapsulati* come contenitore sottoposto a wrapping. Utilizzarlo per creare uno stack da un contenitore esistente.
+Usa il contenitore esistente *incluso* nel contenitore di cui è stato eseguito il wrapper. Viene usato per costruire uno stack da un contenitore esistente.
 
 ### <a name="example"></a>Esempio
 
@@ -953,7 +947,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a> stack::to_array (STL/CLR)
+## <a name="to_array"></a>stack:: to_array (STL/CLR)
 
 Copia la sequenza controllata in una nuova matrice.
 
@@ -963,9 +957,9 @@ Copia la sequenza controllata in una nuova matrice.
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce una matrice che contiene la sequenza controllata. È utilizzato per ottenere una copia della sequenza controllata in forma di matrice.
+La funzione membro restituisce una matrice che contiene la sequenza controllata. Viene usato per ottenere una copia della sequenza controllata in forma di matrice.
 
 ### <a name="example"></a>Esempio
 
@@ -1003,7 +997,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a> stack:: Top (STL/CLR)
+## <a name="top"></a>stack:: Top (STL/CLR)
 
 Accede all'ultimo elemento.
 
@@ -1013,9 +1007,9 @@ Accede all'ultimo elemento.
 reference top();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce un riferimento all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per accedere all'ultimo elemento, quando si è certi che esista.
+La funzione membro restituisce un riferimento all'ultimo elemento della sequenza controllata, che non deve essere vuoto. Viene usato per accedere all'ultimo elemento, quando si è certi che esista.
 
 ### <a name="example"></a>Esempio
 
@@ -1055,7 +1049,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a> stack::top_item (STL/CLR)
+## <a name="top_item"></a>stack:: top_item (STL/CLR)
 
 Accede all'ultimo elemento.
 
@@ -1065,9 +1059,9 @@ Accede all'ultimo elemento.
 property value_type top_item;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La proprietà accede all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per leggere o scrivere l'ultimo elemento, quando si è certi che esista.
+La proprietà accede all'ultimo elemento della sequenza controllata, che non deve essere vuota. Viene utilizzato per leggere o scrivere l'ultimo elemento, quando si è certi che esista.
 
 ### <a name="example"></a>Esempio
 
@@ -1107,7 +1101,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a> stack::value_type (STL/CLR)
+## <a name="value_type"></a>stack:: value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -1117,9 +1111,9 @@ Tipo di un elemento.
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo del parametro di modello *valore*.
+Il tipo è un sinonimo del *valore*del parametro di modello.
 
 ### <a name="example"></a>Esempio
 
@@ -1152,9 +1146,9 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a> operator!= (stack) (STL/CLR)
+## <a name="op_neq"></a>operator! = (stack) (STL/CLR)
 
-Stack di confronto non è uguale.
+Confronto dello stack non uguale.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1173,9 +1167,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione di operatore restituisce `!(left == right)`. Utilizzarla per testare se *a sinistra* non viene ordinato identico *a destra* quando i due stack vengono confrontato elemento per elemento.
+La funzione operator restituisce `!(left == right)`. Viene usato per verificare se *Left* non è ordinato come *right* quando i due stack vengono confrontati elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1223,9 +1217,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operator&lt; (stack) (STL/CLR)
+## <a name="op_lt"></a>operatore&lt; (stack) (STL/CLR)
 
-Stack di minore di confronto.
+Stack inferiore al confronto.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1244,9 +1238,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'operatore funzione restituisce true se, per la posizione più bassa `i` per il quale `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->` [stack:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` utilizzati per verificare se *a sinistra* viene ordinato prima *destro* i due stack quando vengono confrontato elemento per elemento.
+La funzione operator restituisce true se, per la posizione più bassa `i` per cui `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->`[stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() <` `right->size()` lo si utilizza per verificare se *Left* viene ordinato prima del *diritto* quando i due stack vengono confrontati elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1294,9 +1288,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operator&lt;= (stack) (STL/CLR)
+## <a name="op_lteq"></a>operatore&lt;= (stack) (STL/CLR)
 
-Stack minore o uguale confronto.
+Confronto di stack minore di o uguale a.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1315,9 +1309,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione di operatore restituisce `!(right < left)`. Utilizzarla per testare se *a sinistra* non viene ordinato dopo *a destra* quando i due stack vengono confrontato elemento per elemento.
+La funzione operator restituisce `!(right < left)`. Viene usato per verificare se *Left* non è ordinato dopo *right* quando i due stack vengono confrontati elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1365,9 +1359,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operator== (stack) (STL/CLR)
+## <a name="op_eq"></a>operator = = (stack) (STL/CLR)
 
-Confronto uguale dello stack.
+Confronto dello stack uguale.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1386,9 +1380,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione di operatore restituisce true solo se le sequenze controllate da *a sinistra* e *destro* abbiano la stessa lunghezza e, per ogni posizione `i`, `left[i] ==` `right[i]`. Utilizzarla per testare se *a sinistra* viene ordinata quella *a destra* quando i due stack vengono confrontato elemento per elemento.
+La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i``left[i] ==` `right[i]`. Viene usato per verificare se *Left* è ordinato come *right* quando i due stack vengono confrontati con l'elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1436,9 +1430,9 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operator&gt; (stack) (STL/CLR)
+## <a name="op_gt"></a>operatore&gt; (stack) (STL/CLR)
 
-Confronto maggiore di stack.
+Stack maggiore di confronto.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1457,9 +1451,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Restituisce la funzione dell'operatore `right` `<` `left`. Utilizzarla per testare se *a sinistra* viene ordinata dopo *a destra* quando i due stack vengono confrontato elemento per elemento.
+La funzione operator restituisce `right` `left``<`. Viene usato per verificare se *Left* viene ordinato dopo *right* quando i due stack vengono confrontati elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1507,9 +1501,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operator&gt;= (stack) (STL/CLR)
+## <a name="op_gteq"></a>operatore&gt;= (stack) (STL/CLR)
 
-Confronto uguale o maggiore di stack.
+Confronto dello stack maggiore o uguale a.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1528,9 +1522,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione di operatore restituisce `!(left < right)`. Utilizzarla per testare se *a sinistra* non viene ordinato prima *a destra* quando i due stack vengono confrontato elemento per elemento.
+La funzione operator restituisce `!(left < right)`. Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando i due stack vengono confrontati elemento per elemento.
 
 ### <a name="example"></a>Esempio
 

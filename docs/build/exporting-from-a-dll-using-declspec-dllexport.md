@@ -3,35 +3,34 @@ title: Esportazione da una DLL tramite __declspec(dllexport)
 ms.date: 05/06/2019
 f1_keywords:
 - dllexport
-- __declspec
 helpviewer_keywords:
 - __declspec(dllexport) keyword [C++]
 - names [C++], DLL exports by
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c84a8eca25c90e0790ec8c4991d9d5a116afa59f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220800"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442534"
 ---
-# <a name="exporting-from-a-dll-using-declspecdllexport"></a>Esportazione da una DLL tramite __declspec(dllexport)
+# <a name="exporting-from-a-dll-using-__declspecdllexport"></a>Esportazione da una DLL tramite __declspec(dllexport)
 
-È possibile esportare i dati, funzioni, classi o funzioni membro della classe da una DLL mediante il **dllexport** (parola chiave). **dllexport** aggiunge la direttiva di esportazione del file oggetto non è necessario usare un file con estensione def.
+È possibile esportare dati, funzioni, classi o funzioni membro di classe da una DLL usando la parola chiave **__declspec (dllexport)** . **__declspec (dllexport)** aggiunge la direttiva export al file oggetto, in modo che non sia necessario utilizzare un file def.
 
-La comodità è più evidente quando si tenta di esportare decorati i nomi delle funzioni C++. Poiché non è presente alcuna specifica standard per la decorazione dei nomi, il nome di una funzione esportata potrebbe cambiare tra versioni diverse del compilatore. Se si usa **dllexport**, la ricompilazione della DLL e file .exe dipendenti è necessaria solo per conto di eventuali modifiche delle convenzioni di denominazione.
+Questa praticità è più evidente quando si tenta di C++ esportare i nomi di funzioni decorate. Poiché non esiste alcuna specifica standard per la decorazione del nome, il nome di una funzione esportata potrebbe variare tra le versioni del compilatore. Se si utilizza **__declspec (dllexport)** , la ricompilazione della dll e dei file exe dipendenti è necessaria solo per tenere conto di eventuali modifiche alle convenzioni di denominazione.
 
-Molte direttive di esportazione, ad esempio numeri ordinali, NONAME e PRIVATE, possono essere definite solo in un file. def e non è possibile specificare questi attributi senza un file def. Se tuttavia si utilizza **dllexport** oltre a usare un def file non causa errori di compilazione.
+Molte direttive Export, ad esempio ordinali, NoName e PRIVATE, possono essere eseguite solo in un file def e non è possibile specificare questi attributi senza un file def. Tuttavia, l'utilizzo di **__declspec (dllexport)** oltre all'utilizzo di un file def non provoca errori di compilazione.
 
-Per esportare le funzioni, il **dllexport** parola chiave deve comparire a sinistra della parola chiave della convenzione di chiamata, se viene specificata una parola chiave. Ad esempio:
+Per esportare le funzioni, la parola chiave **__declspec (dllexport)** deve apparire a sinistra della parola chiave della convenzione di chiamata, se è specificata una parola chiave. Ad esempio:
 
 ```
 __declspec(dllexport) void __cdecl Function1(void);
 ```
 
-Per esportare tutti i membri dati pubblici e le funzioni membro in una classe, la parola chiave deve comparire a sinistra del nome della classe come indicato di seguito:
+Per esportare tutti i membri dati pubblici e le funzioni membro in una classe, la parola chiave deve apparire a sinistra del nome della classe come indicato di seguito:
 
 ```
 class __declspec(dllexport) CExampleExport : public CObject
@@ -39,27 +38,27 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 > [!NOTE]
->  `__declspec(dllexport)` non è possibile applicare a una funzione con il `__clrcall` convenzione di chiamata.
+>  non è possibile applicare `__declspec(dllexport)` a una funzione con la convenzione di chiamata `__clrcall`.
 
-Quando si compila la DLL, si crea in genere un file di intestazione che contiene i prototipi di funzione e/o le classi esportate e aggiungere **dllexport** alle dichiarazioni nel file di intestazione. Per rendere il codice più leggibile, definire una macro per **dllexport** e utilizzarla con ciascun simbolo da esportare:
+Quando si compila la DLL, si crea in genere un file di intestazione che contiene i prototipi di funzione e/o le classi da esportare e si aggiunge **__declspec (dllexport)** alle dichiarazioni nel file di intestazione. Per rendere il codice più leggibile, definire una macro per **__declspec (dllexport)** e usare la macro con ogni simbolo da esportare:
 
 ```
 #define DllExport   __declspec( dllexport )
 ```
 
-**dllexport** archivia i nomi nella tabella di esportazione della DLL delle funzioni. Se si desidera ottimizzare le dimensioni della tabella, vedere [esportazione di funzioni da una DLL per ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+**__declspec (dllexport)** archivia i nomi di funzione nella tabella di esportazione della dll. Se si desidera ottimizzare le dimensioni della tabella, vedere [esportazione di funzioni da una dll in base al numero ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Esportazione da una DLL tramite i file def](exporting-from-a-dll-using-def-files.md)
 
-- [Esportazione e importazione utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Esportare e importare utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Funzioni C++ di esportazione da usare nei file eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Esportare le funzioni C per l'utilizzo in C++eseguibili in linguaggio c o](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
 - [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
@@ -67,7 +66,7 @@ Quando si compila la DLL, si crea in genere un file di intestazione che contiene
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
-- [La parola chiave declspec](../cpp/declspec.md)
+- [Parola chiave __declspec](../cpp/declspec.md)
 
 - [Importazione ed esportazione di funzioni inline](importing-and-exporting-inline-functions.md)
 

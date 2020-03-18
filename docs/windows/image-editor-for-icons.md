@@ -9,11 +9,8 @@ f1_keywords:
 - vc.editors.bitmap
 - vc.editors.dialog.GridSettings
 - vc.editors.gridsettings
-- vc.editors.bitmap
 - vc.editors.icon
 - vc.editors.texttool
-- vc.editors.bitmap
-- vc.editors.icon
 helpviewer_keywords:
 - editors, images
 - resource editors [C++], graphics
@@ -42,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c1c09f8ffe0ef8d4759b9242ba30e8fafaaeb01
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514227"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443761"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor di immagini per leC++icone ()
 
@@ -86,8 +83,8 @@ Il menu **immagine** , visualizzato solo quando l' **editor di immagini** è att
 |**Opaco**|Quando questa opzione è selezionata, rende opaca la selezione corrente.<br/><br/>Quando è deselezionata, rende trasparente la selezione corrente.|
 |**Editor barra degli strumenti**|Apre la finestra di [dialogo nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md).|
 |**Impostazioni griglia**|Apre la finestra di dialogo **Impostazioni griglia** in cui è possibile specificare griglie per l'immagine.|
-|**Nuovo tipo di immagine**|Apre la finestra di [dialogo nuovo \<tipo di immagine > dispositivo](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Una singola risorsa icona può contenere diverse immagini di dimensioni diverse e Windows può usare le dimensioni dell'icona appropriate a seconda di come verrà visualizzato. Un nuovo tipo di dispositivo non modifica le dimensioni dell'icona, bensì crea una nuova immagine all'interno dell'icona. Si applica solo a icone e cursori.|
-|**Tipo di immagine icona/cursore corrente**|Apre un sottomenu che elenca le prime nove immagini del cursore o dell'icona disponibili. L'ultimo comando del sottomenu **più**, apre la finestra di [dialogo \<Apri immagine > dispositivo](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Nuovo tipo di immagine**|Apre la finestra di [dialogo nuovo tipo di immagine > \<dispositivo](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Una singola risorsa icona può contenere diverse immagini di dimensioni diverse e Windows può usare le dimensioni dell'icona appropriate a seconda di come verrà visualizzato. Un nuovo tipo di dispositivo non modifica le dimensioni dell'icona, bensì crea una nuova immagine all'interno dell'icona. Si applica solo a icone e cursori.|
+|**Tipo di immagine icona/cursore corrente**|Apre un sottomenu che elenca le prime nove immagini del cursore o dell'icona disponibili. L'ultimo comando del sottomenu **più**, apre la finestra di [dialogo apri \<dispositivo > immagine](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
 |**Elimina tipo di immagine**|Elimina l'immagine del dispositivo selezionata.|
 |**Strumenti**|Avvia un sottomenu che contiene tutti gli strumenti disponibili dalla barra degli strumenti dell' **editor di immagini** .|
 
@@ -100,11 +97,11 @@ La finestra di dialogo **Impostazioni griglia** consente di specificare le impos
 |**Width**|Specifica la larghezza di ogni blocco di sezioni.<br/><br/>Questa proprietà è utile quando si disegnano bitmap contenenti più immagini disposte a intervalli regolari.|
 |**Height**|Specifica l'altezza di ogni blocco di sezioni.<br/><br/>Questa proprietà è utile quando si disegnano bitmap contenenti più immagini disposte a intervalli regolari.|
 
-## <a name="toolbar"></a>ToolBar
+## <a name="toolbar"></a>Barra degli strumenti
 
 La barra degli strumenti dell' **editor di immagini** contiene gli strumenti per disegnare, disegnare, immettere testo, cancellare e modificare le visualizzazioni. Contiene anche un selettore di opzioni con cui è possibile selezionare le opzioni per l'uso di ogni strumento. Ad esempio, è possibile scegliere tra diverse larghezze del pennello, fattori di ingrandimento e stili di linea.
 
-Tutti gli strumenti disponibili sulla barra degli strumenti dell' **editor di immagini** sono disponibili anche dagli**strumenti**per le **Immagini** > dei menu. Per utilizzare la barra degli strumenti dell' **editor di immagini** e il selettore di **Opzioni** , selezionare lo strumento o l'opzione desiderata.
+Tutti gli strumenti disponibili sulla barra degli strumenti dell' **editor di immagini** sono disponibili anche nell' **immagine** del menu > **Tools**. Per utilizzare la barra degli strumenti dell' **editor di immagini** e il selettore di **Opzioni** , selezionare lo strumento o l'opzione desiderata.
 
 ![Barra degli strumenti Editor di immagini](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Barra degli strumenti **editor di immagini**
@@ -114,7 +111,7 @@ Barra degli strumenti **editor di immagini**
 
 Poiché molti degli strumenti di disegno sono disponibili sulla [tastiera](../windows/accelerator-keys-image-editor-for-icons.md), è talvolta utile nascondere la barra degli strumenti dell' **editor di immagini** .
 
-- Per visualizzare o nascondere la barra degli strumenti **editor di immagini** , passare a menu **visualizzazione** > **barre degli strumenti** e scegliere **editor di immagini**.
+- Per visualizzare o nascondere la barra degli strumenti **editor di immagini** , passare a **visualizzazione** menu > **barre degli strumenti** e scegliere **editor di immagini**.
 
 > [!NOTE]
 > Gli elementi di questa barra degli strumenti non saranno disponibili quando un file di immagine dal progetto o dalla soluzione corrente non è aperto nell' **editor di immagini**.
@@ -130,7 +127,7 @@ Selettore di **Opzioni** nella barra degli strumenti **editor di immagini**
 
 Utilizzare la finestra di dialogo **strumento testo** per aggiungere testo a una risorsa di cursore, bitmap o icona.
 
-Per accedere a questa finestra di dialogo, aprire l' **editor di immagini** e passare a menu **Image** > **Tools**, quindi selezionare il comando **strumento testo** .
+Per accedere a questa finestra di dialogo, aprire l' **editor di immagini** e passare a menu **immagine** > **strumenti**, quindi selezionare il comando **strumento testo** .
 
 > [!TIP]
 > È possibile fare clic con il pulsante destro del mouse sulla finestra di dialogo **strumento testo** per accedere a un menu di scelta rapida predefinito contenente un elenco di comandi standard di Windows.
@@ -141,7 +138,7 @@ Per accedere a questa finestra di dialogo, selezionare il pulsante **carattere**
 
 |Proprietà|Descrizione|
 |---|---|
-|**Tipo di carattere**|Elenca i tipi di carattere disponibili.|
+|**Carattere**|Elenca i tipi di carattere disponibili.|
 |**Stile carattere**|Elenca gli stili disponibili per il tipo di carattere specificato.|
 |**Dimensione**|Elenca le dimensioni dei punti disponibili per il tipo di carattere specificato.|
 |**Esempio**|Mostra un esempio di come verrà visualizzato il testo con le impostazioni del tipo di carattere specificate.|
@@ -151,11 +148,11 @@ Per accedere a questa finestra di dialogo, selezionare il pulsante **carattere**
 
 Di seguito è riportato un esempio di come aggiungere testo a un'icona in un'applicazione Windows e modificare il tipo di carattere del testo.
 
-1. Creare un' C++ applicazione Windows Forms. Per informazioni dettagliate, vedere [Procedura: Creare Windows Forms applicazioni](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Per impostazione predefinita, al progetto viene aggiunto un file *app. ico* .
+1. Creare un' C++ applicazione Windows Forms. Per informazioni dettagliate, vedere [procedura: creare Windows Forms applicazioni](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Per impostazione predefinita, al progetto viene aggiunto un file *app. ico* .
 
 1. In **Esplora soluzioni**fare doppio clic sul file *app. ico*. Si aprirà l' **editor di immagini** .
 
-1. Passare a**strumenti** **immagine** > menu e selezionare **strumento testo**.
+1. Passare a menu **immagine** > **strumenti** e selezionare **strumento testo**.
 
 1. Nella finestra di dialogo **strumento testo** Digitare *C++* l'area di testo vuota. Questo testo verrà visualizzato in una casella ridimensionabile posizionata nell'angolo superiore sinistro di *app. ico* nell' **editor di immagini**.
 
@@ -209,7 +206,7 @@ Per impostazione predefinita, l' **editor di immagini** Visualizza la visualizza
 
 Per tutti i riquadri dell' **editor di immagini** con un fattore di ingrandimento maggiore o uguale a 4, è possibile visualizzare una griglia che delimita i singoli pixel nell'immagine.
 
-1. Passare a menu **Immagini** > **griglia impostazioni**.
+1. Passare a **immagine** menu > **Impostazioni griglia**.
 
 1. Selezionare la casella di controllo **griglia in pixel** per visualizzare la griglia oppure deselezionare la casella per nascondere la griglia.
 

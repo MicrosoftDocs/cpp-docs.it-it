@@ -1,17 +1,15 @@
 ---
 title: IF (MASM)
 ms.date: 12/17/2019
-f1_keywords:
-- if
 helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
-ms.openlocfilehash: 38d366a3a41e7b08759594899cdcbb2cb84dfbfa
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 6e63f5c8075b3c94370ad8863d224c097cf0ecdf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317292"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440756"
 ---
 # <a name="if"></a>IF
 
@@ -27,7 +25,7 @@ Concede l'assembly di *ifstatements* se *expression1* è true (diverso da zero) 
 > *else-istruzioni*⟧ \
 > **ENDIF**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le direttive seguenti possono essere sostituite da [ElseIf](elseif-masm.md): **ELSEIFB**, **ELSEIFDEF (** , **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB e** **ELSEIFNDEF (** . Facoltativamente, assembla *Else-Statements* se l'espressione precedente è false. Si noti che le espressioni vengono valutate in fase di assembly.
 

@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 83d7c0223e2ca4a40560e29932beca1f17f74f80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418678"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442689"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -1381,6 +1381,7 @@ public:
 ### <a name="example"></a>Esempio
 
 Nell'esempio di codice riportato di seguito viene illustrato il metodo `GetGroupInfoByIndex`. In una sezione precedente di questo esempio di codice è stato creato un controllo di visualizzazione elenco che visualizza due colonne denominate "ClientID" e "Grade" in una visualizzazione report. Nell'esempio di codice seguente vengono recuperate le informazioni sul gruppo il cui indice è 0, se tale gruppo esiste.
+
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1457,6 +1458,7 @@ Questo metodo invia il messaggio di [LVM_GETGROUPRECT](/windows/win32/Controls/l
 ### <a name="example"></a>Esempio
 
 Nell'esempio di codice seguente viene definita una variabile, `m_listCtrl`, che viene utilizzata per accedere al controllo di visualizzazione elenco corrente. Questa variabile viene usata nell'esempio riportato di seguito.
+
 ```cpp
 public:
     // Variable used to access the list control.
@@ -4240,6 +4242,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 La funzione di confronto deve restituire un valore negativo se il primo elemento deve precedere il secondo, un valore positivo se il primo elemento deve seguire il secondo oppure zero se i due elementi sono uguali.
 
 Il parametro *lParam1* è il valore a 32 bit associato al primo elemento che viene confrontato e il parametro *lParam2* è il valore associato al secondo elemento. Questi sono i valori specificati nel membro *lParam* della struttura [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) degli elementi quando sono stati inseriti nell'elenco. Il parametro *lParamSort* è uguale al valore di *dwData* .
@@ -4300,6 +4303,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 Questo messaggio è come [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems), ad eccezione del tipo di informazioni passate alla funzione di confronto. In [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems), *lParam1* e *lParam2* sono i valori degli elementi da confrontare. In [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex), *lParam1* è l'indice corrente del primo elemento da confrontare e *lParam2* è l'indice corrente del secondo elemento. È possibile inviare un messaggio di [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext) per recuperare altre informazioni su un elemento.
 
 La funzione di confronto deve restituire un valore negativo se il primo elemento deve precedere il secondo, un valore positivo se il primo elemento deve seguire il secondo oppure zero se i due elementi sono uguali.

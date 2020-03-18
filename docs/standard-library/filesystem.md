@@ -3,11 +3,6 @@ title: '&lt;filesystem&gt;'
 description: Vengono descritti le classi, le funzioni e i tipi nell'intestazione filesystem della libreria C++ standard.
 ms.date: 01/22/2020
 f1_keywords:
-- filesystem/std::experimental::filesystem::directory_entry
-- filesystem/std::experimental::filesystem::recursive_directory_iterator
-- filesystem/std::experimental::filesystem::path
-- filesystem/std::experimental::filesystem::filesystem_error
-- filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
@@ -17,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: dbe6dc89d5460a08ffafd86aa3fcd01222c82166
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725682"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441704"
 ---
 # &lt;filesystem&gt;
 
@@ -86,7 +81,7 @@ Comuni a entrambi i sistemi è la struttura imposta a un percorso dopo aver igno
 
 - Il percorso padre è `c:/abc/xyz`.
 
-- Il nome del file è `def.ext`.
+- Il nome file è `def.ext` .
 
 - Il gambo è `def`.
 
@@ -98,7 +93,7 @@ Infine, `path` gli oggetti hanno una funzionalità importante: è possibile usar
 
 Per ulteriori informazioni ed esempi di codice, vedere [esplorazione del fileC++System ()](../standard-library/file-system-navigation.md).
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>Classi
 
@@ -111,7 +106,7 @@ Per ulteriori informazioni ed esempi di codice, vedere [esplorazione del fileC++
 |[Classe recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)|Descrive un iteratore di input sequenziato attraverso i nomi file in una directory del file system. L'iteratore può anche accedere alle sottodirectory.|
 |[Classe file_status](../standard-library/file-status-class.md)|Esegue il wrapping di un `file_type`.|
 
-### <a name="structs"></a>Strutture
+### <a name="structs"></a>Struct
 
 |||
 |-|-|
@@ -119,11 +114,11 @@ Per ulteriori informazioni ed esempi di codice, vedere [esplorazione del fileC++
 
 ## <a name="functions"></a>Funzioni
 
-[funzioni \<filesystem](../standard-library/filesystem-functions.md)
+[funzioni \<filesystem>](../standard-library/filesystem-functions.md)
 
 ## <a name="operators"></a>Operatori
 
-[operatori \<filesystem](../standard-library/filesystem-operators.md)
+[operatori \<filesystem>](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>Enumerazioni
 

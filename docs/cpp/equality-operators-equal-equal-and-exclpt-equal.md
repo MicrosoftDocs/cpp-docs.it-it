@@ -2,7 +2,6 @@
 title: 'Operatori di uguaglianza: == e !='
 ms.date: 11/04/2016
 f1_keywords:
-- not_eq
 - '!='
 - ==
 helpviewer_keywords:
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: d6248d4a31c478b62e5fbe304d9bde9b51b7cb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e42b66438579bc9be6274863366762b8b4ffbe9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392169"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444406"
 ---
 # <a name="equality-operators--and-"></a>Operatori di uguaglianza: == e !=
 
@@ -30,17 +29,17 @@ expression == expression
 expression != expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Gli operatori di uguaglianza binari confrontano i propri operandi per verificare identità o disuguaglianza.
 
-Gli operatori di uguaglianza, uguale a (`==`) e non uguale a (`!=`), hanno precedenza inferiore rispetto agli operatori relazionali, ma si comportano in modo analogo. Il tipo di risultato per questi operatori **bool**.
+Gli operatori di uguaglianza, uguale a (`==`) e non uguale a (`!=`), hanno precedenza inferiore rispetto agli operatori relazionali, ma si comportano in modo analogo. Il tipo di risultato per questi operatori è **bool**.
 
-L'operatore uguale a (`==`) restituisce **true** (1) se entrambi gli operandi hanno lo stesso valore; in caso contrario, restituisce **false** (0). L'operatore non uguale a (`!=`) restituisce **true** se gli operandi non è lo stesso valore; in caso contrario, restituisce **false**.
+L'operatore di uguaglianza (`==`) restituisce **true** (1) se entrambi gli operandi hanno lo stesso valore. in caso contrario, restituisce **false** (0). L'operatore not-equal-to (`!=`) restituisce **true** se gli operandi non hanno lo stesso valore. in caso contrario, restituisce **false**.
 
 ## <a name="operator-keyword-for-"></a>Parola chiave operator per !=
 
-L'operatore `not_eq` è il testo equivalente di `!=`. Esistono due modi per accedere la `not_eq` operatore nei programmi: includere il file di intestazione `iso646.h`, o eseguire la compilazione con il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).
+L'operatore `not_eq` è il testo equivalente di `!=`. Esistono due modi per accedere all'operatore `not_eq` nei programmi: includere il file di intestazione `iso646.h`o compilare con l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
 
 ## <a name="example"></a>Esempio
 
@@ -60,7 +59,7 @@ int main() {
 }
 ```
 
-Gli operatori di uguaglianza possono confrontare i puntatori ai membri dello stesso tipo. In tale confronto, vengono eseguite le conversioni puntatore a membro. I puntatori ai membri possono essere confrontati a un'espressione costante che restituisce 0.
+Gli operatori di uguaglianza possono confrontare i puntatori ai membri dello stesso tipo. In questo confronto vengono eseguite le conversioni da puntatore a membro. I puntatori ai membri possono essere confrontati a un'espressione costante che restituisce 0.
 
 ## <a name="see-also"></a>Vedere anche
 

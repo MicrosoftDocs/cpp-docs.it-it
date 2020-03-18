@@ -1,8 +1,6 @@
 ---
 title: I/O file modalità testo e binaria
 ms.date: 04/11/2018
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - files [C++], open functions
 - I/O [CRT], text files
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 75d302e625747d6e02e1d904c21542530d70d02f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738578"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444635"
 ---
 # <a name="text-and-binary-mode-file-io"></a>I/O file modalità testo e binaria
 
@@ -28,7 +26,7 @@ Le operazioni di I/O dei file vengono eseguite in una delle due modalità di con
 
 - Mantenere il valore predefinito corrente e specificare la modalità alternativa solo quando i file selezionati vengono aperti.
 
-- Usare la funzione [_set_fmode](../c-runtime-library/reference/set-fmode.md) per modificare la modalità predefinita per i file aperti di recente. Usare [_get_fmode](../c-runtime-library/reference/get-fmode.md) per individuare la modalità predefinita corrente. L'impostazione predefinita iniziale è la modalità testo (**_O_TEXT**).
+- Usare la funzione [_set_fmode](../c-runtime-library/reference/set-fmode.md) per modificare la modalità predefinita per i file aperti di recente. Usare [_get_fmode](../c-runtime-library/reference/get-fmode.md) per individuare la modalità predefinita corrente. L'impostazione predefinita iniziale è la modalità testo ( **_O_TEXT**).
 
 - Modificare la modalità di conversione predefinita direttamente impostando la variabile globale [_fmode](../c-runtime-library/fmode.md) nel programma. La funzione **_set_fmode** imposta il valore della variabile, che può anche essere impostata direttamente.
 

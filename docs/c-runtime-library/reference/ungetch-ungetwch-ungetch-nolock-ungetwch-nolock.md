@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,12 +46,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945912"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443755"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -87,9 +86,9 @@ Carattere da inserire.
 
 Entrambe le funzioni restituiscono il carattere *c* in caso di esito positivo. Se si verifica un errore, **_ungetch** restituisce il valore **EOF** e **_ungetwch** restituisce **WEOF**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Queste funzioni eseguono il push del carattere *c* di nuovo nella console *, causando* il carattere successivo letto da **_getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** e **_ungetwch** non riescono se vengono chiamati più di una volta prima della successiva lettura. L'argomento *c* non può essere **EOF** (o **WEOF**).
+Queste funzioni eseguono il push del carattere *c* di nuovo nella console *, causando* il carattere successivo letto da **_getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** e **_ungetwch** hanno esito negativo se vengono chiamati più di una volta prima della successiva lettura. L'argomento *c* non può essere **EOF** (o **WEOF**).
 
 Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
@@ -107,7 +106,7 @@ Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che 
 |**_ungetch**, **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**, **_ungetwch_nolock**|\<conio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

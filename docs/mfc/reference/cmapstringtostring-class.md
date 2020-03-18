@@ -5,49 +5,49 @@ f1_keywords:
 - CMapStringToString
 - AFXCOLL/CMapStringToString
 - AFXCOLL/CMapStringToString::CPair
-- AFXCOLL/CMapStringToOb::CMapStringToOb
-- AFXCOLL/CMapStringToOb::GetCount
-- AFXCOLL/CMapStringToOb::GetHashTableSize
-- AFXCOLL/CMapStringToOb::GetNextAssoc
-- AFXCOLL/CMapStringToOb::GetSize
-- AFXCOLL/CMapStringToOb::GetStartPosition
-- AFXCOLL/CMapStringToOb::HashKey
-- AFXCOLL/CMapStringToOb::InitHashTable
-- AFXCOLL/CMapStringToOb::IsEmpty
-- AFXCOLL/CMapStringToOb::Lookup
-- AFXCOLL/CMapStringToOb::LookupKey
+- AFXCOLL/CMapStringToString::CMapStringToString
+- AFXCOLL/CMapStringToString::GetCount
+- AFXCOLL/CMapStringToString::GetHashTableSize
+- AFXCOLL/CMapStringToString::GetNextAssoc
+- AFXCOLL/CMapStringToString::GetSize
+- AFXCOLL/CMapStringToString::GetStartPosition
+- AFXCOLL/CMapStringToString::HashKey
+- AFXCOLL/CMapStringToString::InitHashTable
+- AFXCOLL/CMapStringToString::IsEmpty
+- AFXCOLL/CMapStringToString::Lookup
+- AFXCOLL/CMapStringToString::LookupKey
 - AFXCOLL/CMapStringToString::PGetFirstAssoc
 - AFXCOLL/CMapStringToString::PGetNextAssoc
 - AFXCOLL/CMapStringToString::PLookup
-- AFXCOLL/CMapStringToOb::RemoveAll
-- AFXCOLL/CMapStringToOb::RemoveKey
-- AFXCOLL/CMapStringToOb::SetAt
+- AFXCOLL/CMapStringToString::RemoveAll
+- AFXCOLL/CMapStringToString::RemoveKey
+- AFXCOLL/CMapStringToString::SetAt
 helpviewer_keywords:
 - CMapStringToString [MFC], CPair
-- CMapStringToOb [MFC], CMapStringToOb
-- CMapStringToOb [MFC], GetCount
-- CMapStringToOb [MFC], GetHashTableSize
-- CMapStringToOb [MFC], GetNextAssoc
-- CMapStringToOb [MFC], GetSize
-- CMapStringToOb [MFC], GetStartPosition
-- CMapStringToOb [MFC], HashKey
-- CMapStringToOb [MFC], InitHashTable
-- CMapStringToOb [MFC], IsEmpty
-- CMapStringToOb [MFC], Lookup
-- CMapStringToOb [MFC], LookupKey
+- CMapStringToString [MFC], CMapStringToString
+- CMapStringToString [MFC], GetCount
+- CMapStringToString [MFC], GetHashTableSize
+- CMapStringToString [MFC], GetNextAssoc
+- CMapStringToString [MFC], GetSize
+- CMapStringToString [MFC], GetStartPosition
+- CMapStringToString [MFC], HashKey
+- CMapStringToString [MFC], InitHashTable
+- CMapStringToString [MFC], IsEmpty
+- CMapStringToString [MFC], Lookup
+- CMapStringToString [MFC], LookupKey
 - CMapStringToString [MFC], PGetFirstAssoc
 - CMapStringToString [MFC], PGetNextAssoc
 - CMapStringToString [MFC], PLookup
-- CMapStringToOb [MFC], RemoveAll
-- CMapStringToOb [MFC], RemoveKey
-- CMapStringToOb [MFC], SetAt
+- CMapStringToString [MFC], RemoveAll
+- CMapStringToString [MFC], RemoveKey
+- CMapStringToString [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a2ffcf7ce7ee6eccc56382501a5969ddec6c9e22
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346164"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442588"
 ---
 # <a name="cmapstringtostring-class"></a>Classe CMapStringToString
 
@@ -59,64 +59,64 @@ Supporta mappe di oggetti `CString` con chiave fornita da oggetti `CString` .
 class CMapStringToString : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-Le funzioni membro della `CMapStringToString` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che un `CObject` puntatore come valore restituito o "output", parametro della funzione puntatore a sostituire **char**. Ogni volta che un `CObject` puntatore come parametro di funzione "input", sostituire un puntatore a **char**.
+Le funzioni membro di `CMapStringToString` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che viene visualizzato un puntatore `CObject` come valore restituito o parametro di funzione "output", sostituire un puntatore a **char**. Ogni volta che viene visualizzato un puntatore `CObject` come parametro di funzione "input", sostituire un puntatore a **char**.
 
-`BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`
+`BOOL CMapStringToString::Lookup(LPCTSTR<key>, CString&<rValue>) const;`
 
 ad esempio, si converte in
 
-`BOOL CMapStringToString::Lookup(LPCTSTR<key>, CString&<rValue>) const;`
+`BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`
 
 ### <a name="public-structures"></a>Strutture pubbliche
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMapStringToString::CPair](#cpair)|Una struttura annidata che contiene un valore di chiave e il valore dell'oggetto string associato.|
+|[CMapStringToString:: CPair](#cpair)|Struttura annidata contenente un valore di chiave e il valore dell'oggetto stringa associato.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Costruttore.|
+|[CMapStringToString:: CMapStringToString](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Costruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Restituisce il numero di elementi in questa mappa.|
-|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determina il numero corrente di elementi nella tabella hash.|
-|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Ottiene l'elemento successivo per eseguire l'iterazione.|
-|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Restituisce il numero di elementi in questa mappa.|
-|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Restituisce la posizione del primo elemento.|
-|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcola il valore hash di una chiave specificata.|
-|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inizializza la tabella hash.|
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Verifica se la condizione vuota-map (nessun elemento).|
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Cerca un puntatore void in base alla chiave di puntatore void. Il valore del puntatore, non le entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|
-|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Restituisce un riferimento alla chiave associata al valore di chiave specificato.|
-|[CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)|Ottiene un puntatore al primo `CString` nella mappa.|
-|[CMapStringToString::PGetNextAssoc](#pgetnextassoc)|Ottiene un puntatore al successivo `CString` per eseguire l'iterazione.|
-|[CMapStringToString::PLookup](#plookup)|Restituisce un puntatore a un `CString` il cui valore corrisponde al valore specificato.|
-|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Rimuove tutti gli elementi da questa mappa.|
-|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Rimuove un elemento specificato da una chiave.|
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserisce un elemento nella mappa; sostituisce un elemento esistente se viene trovata una chiave corrispondente.|
+|[CMapStringToString:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Restituisce il numero di elementi in questa mappa.|
+|[CMapStringToString:: GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determina il numero corrente di elementi nella tabella hash.|
+|[CMapStringToString:: GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Ottiene l'elemento successivo per l'iterazione.|
+|[CMapStringToString:: GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Restituisce il numero di elementi in questa mappa.|
+|[CMapStringToString:: GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Restituisce la posizione del primo elemento.|
+|[CMapStringToString:: HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcola il valore hash di una chiave specificata.|
+|[CMapStringToString:: InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inizializza la tabella hash.|
+|[CMapStringToString:: IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Verifica la condizione di mappa vuota (nessun elemento).|
+|[CMapStringToString:: Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Cerca un puntatore void in base alla chiave del puntatore void. Il valore del puntatore, non l'entità a cui punta, viene usato per il confronto delle chiavi.|
+|[CMapStringToString:: LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Restituisce un riferimento alla chiave associata al valore di chiave specificato.|
+|[CMapStringToString::P GetFirstAssoc](#pgetfirstassoc)|Ottiene un puntatore al primo `CString` della mappa.|
+|[CMapStringToString::P GetNextAssoc](#pgetnextassoc)|Ottiene un puntatore al `CString` successivo per l'iterazione.|
+|[CMapStringToString: ricerca:P](#plookup)|Restituisce un puntatore a un `CString` il cui valore corrisponde al valore specificato.|
+|[CMapStringToString:: RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Rimuove tutti gli elementi dalla mappa.|
+|[CMapStringToString:: RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Rimuove un elemento specificato da una chiave.|
+|[CMapStringToString:: SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserisce un elemento nella mappa. sostituisce un elemento esistente se viene trovata una chiave corrispondente.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, la sostituzione di operatore per `SetAt`.|
+|[\[ CMapStringToString:: operator \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`CMapStringToString` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a turno se una mappa è archiviata in un archivio, con l'inserimento di overload ( **<<**) operatore o con il `Serialize` funzione membro.
+`CMapStringToString` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a sua volta se una mappa viene archiviata in un archivio, con l'operatore di inserimento ( **<<** ) di overload o con la funzione membro `Serialize`.
 
-Se è necessario un dump di singoli `CString` -  `CString` elementi, è necessario impostare la profondità del contesto di dump su 1 o versioni successive.
+Se è necessario un dump di singoli `CString`- elementi `CString`, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
-Quando un `CMapStringToString` oggetto viene eliminato o quando gli elementi vengono rimossi, il `CString` gli oggetti vengono rimossi come appropriato.
+Quando viene eliminato un oggetto `CMapStringToString` o quando vengono rimossi gli elementi, gli oggetti `CString` vengono rimossi in base alle esigenze.
 
-Per ulteriori informazioni sul `CMapStringToString`, vedere l'articolo [raccolte](../../mfc/collections.md).
+Per ulteriori informazioni su `CMapStringToString`, vedere le [raccolte](../../mfc/collections.md)di articoli.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -126,29 +126,29 @@ Per ulteriori informazioni sul `CMapStringToString`, vedere l'articolo [raccolte
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxcoll. h
+**Intestazione:** AFXCOLL. h
 
-##  <a name="cpair"></a>  CMapStringToString::CPair
+##  <a name="cpair"></a>CMapStringToString:: CPair
 
-Contiene un valore di chiave e il valore dell'oggetto string associato.
+Contiene un valore di chiave e il valore dell'oggetto stringa associato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si tratta di una struttura annidata all'interno di classi [CMapStringToString](../../mfc/reference/cmapstringtostring-class.md).
+Si tratta di una struttura annidata all'interno della classe [CMapStringToString](../../mfc/reference/cmapstringtostring-class.md).
 
 La struttura è costituita da due campi:
 
-- `key` Il valore effettivo del tipo di chiave.
+- `key` il valore effettivo del tipo di chiave.
 
-- `value` Il valore dell'oggetto associato.
+- `value` il valore dell'oggetto associato.
 
-Viene usato per archiviare i valori restituiti da [CMapStringToString::PLookup](#plookup), [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc), e [CMapStringToString::PGetNextAssoc](#pgetnextassoc).
+Viene usato per archiviare i valori restituiti da [CMapStringToString::P Lookup](#plookup), [CMapStringToString::P getfirstassoc](#pgetfirstassoc)e [CMapStringToString::P GetNextAssoc](#pgetnextassoc).
 
 ### <a name="example"></a>Esempio
 
-  Per un esempio di utilizzo, vedere l'esempio relativo [CMapStringToString::PLookup](#plookup).
+  Per un esempio di utilizzo, vedere l'esempio per [CMapStringToString: ricerca:P](#plookup).
 
-##  <a name="pgetfirstassoc"></a>  CMapStringToString::PGetFirstAssoc
+##  <a name="pgetfirstassoc"></a>CMapStringToString::P GetFirstAssoc
 
 Restituisce la prima voce dell'oggetto map.
 
@@ -160,17 +160,17 @@ CPair* PGetFirstAssoc();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore alla prima voce nella mappa; visualizzare [CMapStringToString::CPair](#cpair). Se la mappa è vuota, il valore è NULL.
+Puntatore alla prima voce della mappa; vedere [CMapStringToString:: CPair](#cpair). Se la mappa è vuota, il valore è NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione per restituire un puntatore al primo elemento nell'oggetto map.
+Chiamare questa funzione per restituire un puntatore al primo elemento dell'oggetto map.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]
 
-##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc
+##  <a name="pgetnextassoc"></a>CMapStringToString::P GetNextAssoc
 
 Recupera l'elemento della mappa a cui punta *pAssocRec*.
 
@@ -183,21 +183,21 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="parameters"></a>Parametri
 
 *pAssoc*<br/>
-Punta a una voce di mapping restituita da una precedente [PGetNextAssoc](#pgetnextassoc) oppure [PGetFirstAssoc](#pgetfirstassoc) chiamare.
+Punta a una voce della mappa restituita da una chiamata a [PGetNextAssoc](#pgetnextassoc) o [PGetFirstAssoc](#pgetfirstassoc) precedente.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore alla voce successiva nella mappa; visualizzare [CMapStringToString::CPair](#cpair). Se l'elemento è l'ultimo nella mappa, il valore è NULL.
+Puntatore alla voce successiva nella mappa; vedere [CMapStringToString:: CPair](#cpair). Se l'elemento è l'ultimo oggetto della mappa, il valore è NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questo metodo per scorrere tutti gli elementi della mappa. Recuperare il primo elemento con una chiamata a `PGetFirstAssoc` e quindi eseguire l'iterazione attraverso la mappa con le chiamate successive a `PGetNextAssoc`.
+Chiamare questo metodo per scorrere tutti gli elementi nella mappa. Recuperare il primo elemento con una chiamata a `PGetFirstAssoc` e quindi scorrere la mappa con le chiamate successive al `PGetNextAssoc`.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc).
+  Vedere l'esempio per [CMapStringToString::P getfirstassoc](#pgetfirstassoc).
 
-##  <a name="plookup"></a>  CMapStringToString::PLookup
+##  <a name="plookup"></a>CMapStringToString: ricerca:P
 
 Cerca il valore mappato a una chiave specificata.
 
@@ -210,13 +210,13 @@ CPair* PLookup(LPCTSTR key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
-Puntatore alla chiave per l'elemento da cercare.
+Puntatore alla chiave per l'elemento di cui eseguire la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
 Puntatore alla chiave specificata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questo metodo per cercare un elemento della mappa con una chiave che corrisponde esattamente alla chiave specificata.
 
@@ -226,6 +226,6 @@ Chiamare questo metodo per cercare un elemento della mappa con una chiave che co
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
+[Esempio di raccolta MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)

@@ -3,17 +3,17 @@ title: Interfaccia Platform::IBoxArray
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Value
+- VCCORLIB/Platform::IBoxArray
+- VCCORLIB/Platform::IBoxArray::Value
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 493770cab092c2bb719d47e5d3a9d6a9f0646489
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392076"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444163"
 ---
 # <a name="platformiboxarray-interface"></a>Interfaccia Platform::IBoxArray
 
@@ -31,11 +31,11 @@ interface class IBoxArray
 *T*<br/>
 Tipo di valore boxed in ogni elemento della matrice.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`IBoxArray` è il C++nome /CX `Windows::Foundation::IReferenceArray`.
+`IBoxArray` è il C++nome del/CX di `Windows::Foundation::IReferenceArray`.
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 L'interfaccia `IBoxArray` eredita dall'interfaccia `IValueType` . `IBoxArray` dispone anche di questi membri:
 
@@ -43,7 +43,7 @@ L'interfaccia `IBoxArray` eredita dall'interfaccia `IValueType` . `IBoxArray` di
 |------------|-----------------|
 |[Valore](#value)|Restituisce la matrice di tipo unboxed archiviata in precedenza in questa istanza di `IBoxArray` .|
 
-## <a name="value"></a> Proprietà iboxarray:: value
+## <a name="value"></a>Proprietà IBoxArray:: value
 
 Restituisce il valore memorizzato in origine in questo oggetto.
 
@@ -62,7 +62,7 @@ Tipo del valore boxed.
 
 Restituisce il valore memorizzato in origine in questo oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per un esempio, vedere [Boxing](../cppcx/boxing-c-cx.md).
 

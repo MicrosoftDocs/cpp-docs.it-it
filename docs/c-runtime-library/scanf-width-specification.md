@@ -1,28 +1,15 @@
 ---
 title: Specifica della larghezza per scanf
 ms.date: 10/22/2019
-api_location:
-- msvcr100.dll
-- msvcr120.dll
-- msvcr80.dll
-- msvcr110_clr0400.dll
-- msvcr110.dll
-- msvcr90.dll
-api_type:
-- DLLExport
-topic_type:
-- apiref
-f1_keywords:
-- scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ea0b2728021e3093ab7818af17e60c598f73587f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811114"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444715"
 ---
 # <a name="scanf-width-specification"></a>Specifica della larghezza per scanf
 
@@ -62,7 +49,7 @@ I prefissi facoltativi **h**, **HH**, **l**, **ll**, **I64**e **l** indicano le 
 |**int breve**|**h**|**d**, **i**, **o**, **x**, o **X**|
 |**short unsigned int**|**h**|**u**|
 |**char**|**hh**|**d**, **i**, **o**, **x**, o **X**|
-|**char senza segno**|**hh**|**u**|
+|**unsigned char**|**hh**|**u**|
 |**int64**|**I64**|**d**, **i**, **o**, **u**, **x** o **X**|
 |Carattere a byte singolo con `scanf`|**h**|**c** o **C**|
 |Carattere a byte singolo con `wscanf`|**h**|**c** o **C**|
