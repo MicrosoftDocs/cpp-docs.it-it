@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872447"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420862"
 ---
 # <a name="cwinformsview-class"></a>Classe CWinFormsView
 
@@ -31,19 +31,19 @@ class CWinFormsView : public CView;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinFormsView:: CWinFormsView](#cwinformsview)|Costruisce un oggetto `CWinFormsView`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinFormsView:: GetControl](#getcontrol)|Recupera un puntatore al controllo Windows Forms.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Name||
+|Nome||
 |----------|-|
 |[CWinFormsView:: operator (controllo) ^](#operator_control)|Esegue il cast di un tipo come puntatore a un controllo Windows Forms.|
 

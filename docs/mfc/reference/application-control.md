@@ -5,11 +5,11 @@ helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 ms.openlocfilehash: cb4ad19dfad06b793f226324d8e28c37c084ad67
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855689"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418902"
 ---
 # <a name="application-control"></a>Controllo Application
 
@@ -42,7 +42,7 @@ BOOL AFXAPI AfxOleCanExitApp();
 
 Diverso da zero se l'applicazione può essere chiusa; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un'applicazione non deve terminare se sono presenti riferimenti a oggetti in attesa. Le funzioni globali `AfxOleLockApp` e `AfxOleUnlockApp` rispettivamente incrementano e decrementano un contatore di riferimenti agli oggetti dell'applicazione. L'applicazione non deve terminare quando questo contatore è diverso da zero. Se il contatore è diverso da zero, quando l'utente sceglie Chiudi dal menu di sistema o Esci dal menu File la finestra principale dell'applicazione viene nascosta (non eliminata definitivamente). Il Framework chiama questa funzione in `CFrameWnd::OnClose`.
 
@@ -66,7 +66,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
 
 Puntatore al filtro messaggi corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questa funzione per accedere all'oggetto derivato da `COleMessageFilter` corrente, in modo analogo a come si utilizza `AfxGetApp` per accedere all'oggetto applicazione corrente.
 
@@ -92,7 +92,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 
 Diverso da zero se l'utente controlla l'applicazione; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'utente controlla l'applicazione quando apre o crea in modo esplicito un nuovo documento. L'utente controlla inoltre l'applicazione se l'applicazione non è stata avviata dalle DLL del sistema OL, in altre parole se l'utente ha avviato l'applicazione con la shell di sistema.
 
@@ -113,7 +113,7 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 *bUserCtrl*<br/>
 Specifica se è necessario impostare o deselezionare il flag di controllo utente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il Framework chiama questa funzione quando l'utente crea o carica un documento, ma non quando un documento viene caricato o creato tramite un'azione indiretta, ad esempio il caricamento di un oggetto incorporato da un'applicazione contenitore.
 
@@ -131,7 +131,7 @@ Incrementa il conteggio globale del Framework del numero di oggetti attivi nell'
 void AFXAPI AfxOleLockApp();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il Framework mantiene un conteggio del numero di oggetti attivi in un'applicazione. Le funzioni `AfxOleLockApp` e `AfxOleUnlockApp`, rispettivamente, incrementano e decrementano questo conteggio.
 
@@ -155,7 +155,7 @@ Decrementa il numero di oggetti attivi nell'applicazione del Framework.
 void AFXAPI AfxOleUnlockApp();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere `AfxOleLockApp`.
 
@@ -192,7 +192,7 @@ ID univoco del programma del controllo.
 
 Diverso da zero se la class factory del controllo è stata bloccata con successo; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Ciò può accelerare notevolmente la visualizzazione dei comandi. Ad esempio, una volta creato un controllo in una finestra di dialogo e bloccato il controllo con `AfxOleLockControl`, non è necessario crearlo e interromperne l'esecuzione ogni volta che la finestra di dialogo viene visualizzata o viene terminata in modo permanente. Se l'utente apre e chiude una finestra di dialogo ripetutamente, il blocco dei controlli può migliorare significativamente le prestazioni. Quando si è pronti per eliminare il controllo in modo permanente, chiamare `AfxOleUnlockControl`.
 
@@ -260,7 +260,7 @@ Matrice di puntatori alle stringhe che rappresentano le chiavi e i valori da agg
 
 Diverso da zero se la classe server è stata registrata correttamente. in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La maggior parte delle applicazioni può utilizzare `COleTemplateServer::Register` per registrare i tipi di documento dell'applicazione. Se il formato del registro di sistema dell'applicazione non rientra nel modello tipico, è possibile usare `AfxOleRegisterServerClass` per un maggiore controllo.
 
@@ -268,7 +268,7 @@ Il registro di sistema è costituito da un set di chiavi e valori. Gli argomenti
 
 I simboli vengono compilati come segue:
 
-|Simbolo|Valore|
+|Simbolo|valore|
 |------------|-----------|
 |%1|ID classe, formattato come stringa|
 |%2|Nome della classe|
@@ -314,7 +314,7 @@ ID del comando che corrisponde all'ultimo verbo.
 *nIDConvert*<br/>
 ID per la voce di menu Convert.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se il server riconosce solo un verbo primario, la voce di menu diventa "verbo *typeName* Object" e il comando *nIDVerbMin* viene inviato quando l'utente sceglie il comando. Se il server riconosce diversi verbi, la voce di menu diventa " *typeName* Object" e un sottomenu che elenca tutti i verbi viene visualizzato quando l'utente sceglie il comando. Quando l'utente sceglie un verbo dal sottomenu, viene inviato *nIDVerbMin* se viene scelto il primo verbo, viene inviato *nIDVerbMin* + 1 se il secondo verbo viene scelto e così via. L'implementazione `COleDocument` predefinita gestisce automaticamente questa funzionalità.
 
@@ -349,7 +349,7 @@ ID univoco del programma del controllo.
 
 Diverso da zero se la class factory del controllo è stata sbloccata correttamente; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un controllo è bloccato con `AfxOleLockControl`, in modo che i dati creati dinamicamente associati al controllo rimangano in memoria. Questo può velocizzare significativamente la visualizzazione del controllo perché non è necessario creare ed eliminare definitivamente il controllo ogni volta che viene visualizzato. Quando si è pronti per eliminare il controllo in modo permanente, chiamare `AfxOleUnlockControl`.
 

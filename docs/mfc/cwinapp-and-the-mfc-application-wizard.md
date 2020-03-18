@@ -1,35 +1,33 @@
 ---
 title: CWinApp e la Creazione guidata applicazione MFC
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - application wizards [MFC], and CWinApp
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: cb45c8ffae15628b0b99a1ebcd962d88d845f83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a46842d7b4d6a588da585d63e2ad56982bb0ff8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241581"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447035"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp e la Creazione guidata applicazione MFC
 
-Durante la creazione di una struttura applicazione, la creazione guidata applicazione MFC viene dichiarata una classe dell'applicazione derivata da [CWinApp](../mfc/reference/cwinapp-class.md). La creazione guidata applicazione MFC genera anche un file di implementazione che contiene gli elementi seguenti:
+Quando crea un'applicazione Skeleton, la creazione guidata applicazione MFC dichiara una classe dell'applicazione derivata da [CWinApp](../mfc/reference/cwinapp-class.md). La creazione guidata applicazione MFC genera inoltre un file di implementazione che contiene gli elementi seguenti:
 
-- Una mappa dei messaggi per la classe dell'applicazione.
+- Mappa messaggi per la classe dell'applicazione.
 
-- Un costruttore di classe vuota.
+- Costruttore di classe vuoto.
 
-- Una variabile che dichiara il l'unico oggetto della classe.
+- Variabile che dichiara l'unico oggetto della classe.
 
-- Implementazione standard del `InitInstance` funzione membro.
+- Implementazione standard della funzione membro `InitInstance`.
 
-La classe dell'applicazione viene inserita nell'intestazione di progetto e i file di origine principale. I nomi della classe e i file creati si basano sul nome del progetto che non è specificata la creazione guidata applicazione MFC. Il modo più semplice per visualizzare il codice per queste classi è attraverso [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code).
+La classe dell'applicazione viene inserita nell'intestazione del progetto e nei file di origine principale. I nomi della classe e dei file creati sono basati sul nome del progetto fornito nella creazione guidata applicazione MFC. Il modo più semplice per visualizzare il codice per queste classi consiste nel [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code).
 
-Le implementazioni standard e mappa dei messaggi forniti sono adeguate per molti scopi, ma è possibile modificarli in base alle esigenze. È la più interessante di queste implementazioni di `InitInstance` funzione membro. In genere, si aggiungerà codice all'implementazione di base di `InitInstance`.
+Le implementazioni standard e la mappa messaggi fornita sono appropriate per molti scopi, ma è possibile modificarle in base alle esigenze. L'aspetto più interessante di queste implementazioni è la funzione membro `InitInstance`. In genere, si aggiungerà codice all'implementazione scheletrica del `InitInstance`.
 
 ## <a name="see-also"></a>Vedere anche
 

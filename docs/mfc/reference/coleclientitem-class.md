@@ -165,11 +165,11 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 9f97f117f0fd8570855079aca7bdfd7a63118bc5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855557"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421723"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem (classe)
 
@@ -185,13 +185,13 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleClientItem:: COleClientItem](#coleclientitem)|Costruisce un oggetto `COleClientItem`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleClientItem:: Activate](#activate)|Apre l'elemento OLE per un'operazione, quindi esegue il verbo specificato.|
 |[COleClientItem:: activates](#activateas)|Attiva l'elemento come un altro tipo.|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleClientItem:: CanActivate](#canactivate)|Chiamato dal Framework per determinare se è consentita l'attivazione sul posto.|
 |[COleClientItem:: OnChangeItemPosition](#onchangeitemposition)|Chiamata eseguita dal framework quando viene modificata la posizione di un elemento.|

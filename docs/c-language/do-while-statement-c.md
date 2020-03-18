@@ -3,16 +3,15 @@ title: Istruzione do-while (C)
 ms.date: 11/04/2016
 f1_keywords:
 - do
-- while
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 052b02beca49f5de19c6f68cc475edb5f5daf6e2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147503"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438583"
 ---
 # <a name="do-while-statement-c"></a>Istruzione do-while (C)
 
@@ -20,11 +19,11 @@ L'istruzione *do-while* consente di ripetere un'istruzione o un'istruzione compo
 
 ## <a name="syntax"></a>Sintassi
 
-*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
+*iterazione-Statement*: &nbsp;&nbsp;&nbsp;**do***istruzione*do &nbsp;**while (** *espressione* **);**
 
 L'elemento *expression* in un'istruzione *do-while* viene valutato dopo l'esecuzione del corpo del ciclo. Di conseguenza, il corpo del ciclo viene eseguito sempre almeno una volta.
 
-*expression* deve presentare un tipo di puntatore o un tipo aritmetico. L'esecuzione procede nel modo seguente:
+*espressione* deve essere di tipo puntatore o aritmetico. L'esecuzione procede nel modo seguente:
 
 1. Viene eseguito il corpo dell'istruzione.
 

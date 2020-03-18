@@ -88,11 +88,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890865"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422395"
 ---
 # <a name="vector-class"></a>vector (classe)
 
@@ -2127,7 +2127,7 @@ Tutti i costruttori archiviano un oggetto allocatore (*allocator*) e inizializza
 
 I primi due costruttori specificano un vettore iniziale vuoto. Il secondo costruttore specifica in modo esplicito il tipo di allocatore (*allocatore*) da usare.
 
-Il terzo costruttore specifica una ripetizione di un numero specificato di elementi delvalore predefinito per la classe `Type`.
+Il terzo costruttore specifica una ripetizione di un numero specificato di elementi del*count*valore predefinito per la classe `Type`.
 
 Il quarto e il quinto costruttore specificano una ripetizione di (*count*) elementi del *valore*value.
 

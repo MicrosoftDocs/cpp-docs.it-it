@@ -1,8 +1,6 @@
 ---
 title: Utilizzo di VERIFY invece di ASSERT
 ms.date: 05/06/2019
-f1_keywords:
-- assert
 helpviewer_keywords:
 - ASSERT statements
 - debugging [MFC], ASSERT statements
@@ -11,22 +9,22 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-ms.openlocfilehash: 83ea24904c75d41f7c9c9b383f8b7cf8c39e328f
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: bfc0847677ae232fef67ab6200c626472f042bdb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217666"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438618"
 ---
 # <a name="using-verify-instead-of-assert"></a>Utilizzo di VERIFY invece di ASSERT
 
-Si supponga che quando si esegue la versione di debug dell'applicazione MFC, non esistono problemi. Tuttavia, la versione della stessa applicazione si blocca, restituisce risultati non corretti e/o presenta alcuni altri comportamenti anomali.
+Si supponga che, quando si esegue la versione di debug dell'applicazione MFC, non si verifichino problemi. Tuttavia, la versione finale della stessa applicazione si arresta in modo anomalo, restituisce risultati non corretti e/o presenta un altro comportamento anomalo.
 
-Questo problema può essere causato quando si inserisce codice importanti in un'istruzione ASSERT per verificare che venga eseguito correttamente. Poiché le istruzioni ASSERT impostare come commento in una build di rilascio di un programma MFC, il codice non viene eseguito in una build di rilascio.
+Questo problema può essere causato quando si inserisce codice importante in un'istruzione ASSERT per verificare che venga eseguito correttamente. Poiché le istruzioni ASSERT sono impostate come commento in una build di rilascio di un programma MFC, il codice non viene eseguito in una build di rilascio.
 
-Se si usa ASSERT per confermare che una chiamata di funzione ha avuto esito positivo, è consigliabile usare [VERIFY](../mfc/reference/diagnostic-services.md#verify) invece. La macro VERIFY valuta i propri argomenti in entrambe le modalità di debug e build di rilascio dell'applicazione.
+Se si usa ASSERT per confermare che una chiamata di funzione ha avuto esito positivo, provare a usare [Verify](../mfc/reference/diagnostic-services.md#verify) . La macro VERIFY valuta i propri argomenti nelle build di debug e di rilascio dell'applicazione.
 
-Un'altra preferita tecnica consiste nell'assegnare valore restituito della funzione a una variabile temporanea e quindi testare la variabile in un'istruzione ASSERT.
+Un'altra tecnica preferita consiste nell'assegnare il valore restituito della funzione a una variabile temporanea e quindi testare la variabile in un'istruzione ASSERT.
 
 Esaminare il frammento di codice seguente:
 
@@ -40,15 +38,15 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-Questo codice viene eseguito perfettamente in una versione di debug di un'applicazione MFC. Se la chiamata a `calloc( )` viene visualizzato un messaggio di diagnostica che include il numero di file e righe ha esito negativo. Tuttavia, in una build finale di un'applicazione MFC:
+Questo codice viene eseguito perfettamente in una versione di debug di un'applicazione MFC. Se la chiamata a `calloc( )` ha esito negativo, viene visualizzato un messaggio di diagnostica che include il file e il numero di riga. Tuttavia, in una build finale di un'applicazione MFC:
 
-- la chiamata a `calloc( )` non si verifica mai, lasciando `buf` non inizializzato, o
+- la chiamata a `calloc( )` non viene mai eseguita, lasciando `buf` non inizializzata o
 
-- `strcpy_s( )` copie "`Hello, World`" in una porzione di memoria, probabilmente un arresto anomalo dell'applicazione o il sistema smetterà di rispondere, causando casuale o
+- `strcpy_s( )` copia "`Hello, World`" in una porzione di memoria casuale, probabilmente bloccando l'applicazione o causando l'interruzione della risposta del sistema o
 
-- `free()` è stato effettuato un tentativo di liberare la memoria allocata mai.
+- `free()` tenta di liberare memoria che non è mai stata allocata.
 
-Per usare correttamente l'ASSERZIONE, il codice di esempio deve essere modificata in quanto segue:
+Per utilizzare ASSERT correttamente, è necessario modificare l'esempio di codice nel modo seguente:
 
 ```
 enum {
@@ -61,7 +59,7 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-In alternativa, è possibile usare invece verificare:
+In alternativa, è possibile utilizzare VERIFY:
 
 ```
 enum {

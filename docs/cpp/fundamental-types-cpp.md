@@ -5,6 +5,9 @@ f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
 - char_cpp
+- char8_t_cpp
+- char16_t_cpp
+- char32_t_cpp
 - double_cpp
 - float_cpp
 - int_cpp
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301496"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445318"
 ---
 # <a name="built-in-types-c"></a>Tipi incorporati (C++)
 
@@ -66,7 +69,7 @@ La tabella seguente illustra le restrizioni relative alle dimensioni dei tipi in
 
 ### <a name="built-in-type-size-restrictions"></a>Limitazioni relative alle dimensioni del tipo predefinite
 
-|Categoria|Tipo di|Contenuto|
+|Category|Type|Sommario|
 |--------------|----------|--------------|
 |Integrale|**char**|Il tipo **char** è un tipo integrale che in genere contiene i membri del set di caratteri di esecuzione di base, per impostazione predefinita C++è ASCII in Microsoft.<br /><br /> Il C++ compilatore considera le variabili di tipo **char**, **signed char**e **unsigned char** come aventi tipi diversi. Le variabili di tipo **char** vengono promosse a **int** come se fossero di tipo **signed char** per impostazione predefinita, a meno che non venga utilizzata l'opzione di compilazione/J. In questo caso, vengono considerati come tipo **unsigned char** e vengono promossi a **int** senza estensione Sign.|
 ||**bool**|Il tipo **bool** è un tipo integrale che può avere uno dei due valori **true** o **false**. La relativa dimensione non è specificata.|
@@ -76,7 +79,7 @@ La tabella seguente illustra le restrizioni relative alle dimensioni dei tipi in
 ||**long**|Il tipo **Long** (o **long int**) è un tipo integrale che è maggiore o uguale alla dimensione del tipo **int**. (In Windows **Long** ha le stesse dimensioni di **int**.)<br /><br /> Gli oggetti di tipo **Long** possono essere dichiarati come **signed** Long o **unsigned long**. **Signed long** è un sinonimo di **Long**.|
 ||**long long**|Maggiore di un oggetto **Long**senza segno.<br /><br /> Gli oggetti di **tipo Long Long possono** essere dichiarati come **signed** Long Long o **unsigned**Long Long. **signed** Long Long è un sinonimo di Long **Long**.|
 ||**wchar_t**, **__wchar_t**|Una variabile di tipo **wchar_t** designa un tipo di carattere wide o multibyte. Per impostazione predefinita, **wchar_t** è un tipo nativo, ma è possibile usare [/Zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per rendere **wchar_t** un typedef per **short senza segno**. Il tipo di **__wchar_t** è un sinonimo specifico di Microsoft per il tipo di **wchar_t** nativo.<br /><br /> Usare il prefisso L prima di un valore letterale carattere o stringa per designare il tipo di carattere wide.|
-|Virgola mobile|**float**|Il tipo **float** è il tipo a virgola mobile più piccolo.|
+|A virgola mobile|**float**|Il tipo **float** è il tipo a virgola mobile più piccolo.|
 ||**double**|Il tipo **Double** è un tipo a virgola mobile che è maggiore o uguale al tipo **float**, ma minore o uguale alla dimensione del tipo **long double**.<br /><br /> Specifico di Microsoft: la rappresentazione di **long double** e **Double** è identica. Tuttavia, **long double** e **Double** sono tipi distinti.|
 ||**long double**|Il tipo **long double** è un tipo a virgola mobile che è maggiore o uguale al tipo **Double**.|
 
@@ -86,7 +89,7 @@ La tabella seguente elenca la quantità di spazio di archiviazione necessaria pe
 
 ### <a name="sizes-of-built-in-types"></a>Dimensioni dei tipi incorporati
 
-|Tipo di|Dimensioni|
+|Type|Dimensione|
 |----------|----------|
 |**bool**, **char**, **unsigned char**, **signed char**, **__int8**|1 byte|
 |**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2 byte|

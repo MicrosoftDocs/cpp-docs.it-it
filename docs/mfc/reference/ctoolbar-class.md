@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
 ms.openlocfilehash: 4977cbe0b749724f999d6d7089d46f12d1e2963e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866436"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421485"
 ---
 # <a name="ctoolbar-class"></a>CToolBar (classe)
 
@@ -65,13 +65,13 @@ class CToolBar : public CControlBar
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CToolBar:: CToolBar](#ctoolbar)|Costruisce un oggetto `CToolBar`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CToolBar:: CommandToIndex](#commandtoindex)|Restituisce l'indice di un pulsante con l'ID di comando specificato.|
 |[CToolBar:: create](#create)|Crea la barra degli strumenti di Windows e la collega all'oggetto `CToolBar`.|

@@ -2,9 +2,8 @@
 title: /Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
 ms.date: 09/05/2018
 f1_keywords:
-- /gr
+- /Gr
 - /Gv
-- /gz
 - /Gd
 - VC.Project.VCCLCompilerTool.CallingConvention
 helpviewer_keywords:
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: eabb4e11715e03745e27911ccd654568d70b8352
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 92fd4f6ae4193e86edb114cc366e6d40e4208ca8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400505"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439673"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
 
@@ -39,7 +38,7 @@ Queste opzioni determinano l'ordine in cui gli argomenti della funzione vengono 
 > **/Gv**<br/>
 > **/Gz**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 **/Gd**, ossia l'impostazione predefinita, specifica la convenzione di chiamata di [__cdecl](../../cpp/cdecl.md) per tutte le funzioni ad eccezione delle funzioni membro di C++ e delle funzioni contrassegnate come [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md) o [__vectorcall](../../cpp/vectorcall.md).
 
@@ -47,7 +46,7 @@ Queste opzioni determinano l'ordine in cui gli argomenti della funzione vengono 
 
 **/Gz** specifica la convenzione di chiamata di `__stdcall` per tutte le funzioni ad eccezione delle funzioni membro di C++, delle funzioni denominate `main` e delle funzioni contrassegnate come `__cdecl`, `__fastcall` o `__vectorcall`. Tutte le funzioni `__stdcall` devono avere prototipi. Questa convenzione di chiamata è disponibile solo nei compilatori in x86 e viene ignorata dai compilatori che usano altre architetture.
 
-**/GV** specifica il `__vectorcall` convenzione di chiamata per tutte le funzioni ad eccezione di C++ funzioni membro, le funzioni denominate `main`, le funzioni con un `vararg` elenco di argomenti variabili o funzioni che sono contrassegnate con un conflitto `__cdecl`, `__stdcall`, o `__fastcall` attributo. Questa convenzione di chiamata è disponibile solo nelle architetture x86 e x64 che supportano /arch:SSE2 e versioni successive e viene ignorata dai compilatori che usano l'architettura ARM.
+**/GV** specifica la convenzione di chiamata `__vectorcall` per tutte le C++ funzioni eccetto le funzioni membro, le funzioni denominate `main`, le funzioni con un elenco di argomenti della variabile `vararg` o funzioni contrassegnate con un `__cdecl`in conflitto, un `__stdcall`o un attributo `__fastcall`. Questa convenzione di chiamata è disponibile solo nelle architetture x86 e x64 che supportano /arch:SSE2 e versioni successive e viene ignorata dai compilatori che usano l'architettura ARM.
 
 Le funzioni che accettano un numero variabile di argomenti devono essere contrassegnate come `__cdecl`.
 
@@ -62,13 +61,13 @@ Queste opzioni del compilatore non hanno effetto sulla decorazione dei nomi dei 
 
 Per altre informazioni sulle convenzioni di chiamata, vedere [Convenzioni di chiamata](../../cpp/calling-conventions.md).
 
-## <a name="cdecl-specifics"></a>Specifiche di __cdecl
+## <a name="__cdecl-specifics"></a>Specifiche di __cdecl
 
 Nei processori x86 tutti gli argomenti delle funzioni vengono passati allo stack da destra a sinistra. Nelle architetture ARM e x64 alcuni argomenti vengono passati per registro e i rimanenti vengono passati allo stack da destra a sinistra. La routine chiamante preleva gli argomenti dallo stack.
 
 Per C, la convenzione di denominazione di `__cdecl` usa il nome della funzione preceduto da un carattere di sottolineatura ( `_` ). Non viene effettuata alcuna conversione maiuscolo/minuscolo. A meno che non siano dichiarate come `extern "C"`, le funzioni C++ usano uno schema di decorazione dei nomi diverso. Per altre informazioni, vedere [Nomi decorati](decorated-names.md).
 
-## <a name="fastcall-specifics"></a>Specifiche di __fastcall
+## <a name="__fastcall-specifics"></a>Specifiche di __fastcall
 
 Alcuni degli argomenti di una funzione `__fastcall` vengono passati in registri (per i processori x86, ECX ed EDX) e i rimanenti vengono inseriti nello stack da destra a sinistra. La routine chiamata preleva questi argomenti dallo stack prima di restituire un valore. In genere **/Gr** riduce il tempo di esecuzione.
 
@@ -81,7 +80,7 @@ Per C, la convenzione di denominazione di `__fastcall` usa il nome della funzion
 
 Quando si usa la convenzione di denominazione di `__fastcall`, usare i file di inclusione standard. In caso contrario, si otterranno riferimenti esterni non risolti.
 
-## <a name="stdcall-specifics"></a>Specifiche di __stdcall
+## <a name="__stdcall-specifics"></a>Specifiche di __stdcall
 
 Gli argomenti di una funzione `__stdcall` vengono inseriti nello stack da destra a sinistra e la funzione chiamata preleva questi argomenti dallo stack prima di restituire un valore.
 
@@ -89,9 +88,9 @@ Per C, la convenzione di denominazione di `__stdcall` usa il nome della funzione
 
 `_functionname@number`
 
-## <a name="vectorcall-specifics"></a>Specifiche di __vectorcall
+## <a name="__vectorcall-specifics"></a>Specifiche di __vectorcall
 
-Gli argomenti integer di una funzione `__vectorcall` vengono passati per valore, usando un massimo di due (in x86) o quattro (in x64) registri di integer e un massimo di sei registri XMM per i valori a virgola mobile e del vettore, mentre gli argomenti rimanenti vengono passati allo stack da destra a sinistra. La funzione chiamata pulisce lo stack prima di restituire un risultato. I valori restituiti del vettore e a virgola mobile vengono restituiti in XMM0.
+Gli argomenti Integer di una funzione `__vectorcall` vengono passati per valore, usando un massimo di due registri (su x86) o quattro (su x64) Integer e fino a sei registri XMM per i valori a virgola mobile e vettori e il resto viene passato nello stack da destra a sinistra. La funzione chiamata pulisce lo stack prima di restituire un risultato. I valori restituiti del vettore e a virgola mobile vengono restituiti in XMM0.
 
 Per C, la convenzione di denominazione di `__vectorcall` usa il nome della funzione seguito da due simboli di chiocciola ( **\@\@** ) e dalle dimensioni degli argomenti della funzione in byte. Non viene effettuata alcuna conversione maiuscolo/minuscolo. Il compilatore usa questo modello per la convenzione di denominazione:
 
@@ -99,7 +98,7 @@ Per C, la convenzione di denominazione di `__vectorcall` usa il nome della funzi
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare la pagina delle proprietà **C/C++**  > **Avanzate**.
 
@@ -113,3 +112,4 @@ Per C, la convenzione di denominazione di `__vectorcall` usa il nome della funzi
 
 - [Opzioni del compilatore MSVC](compiler-options.md)
 - [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+ 

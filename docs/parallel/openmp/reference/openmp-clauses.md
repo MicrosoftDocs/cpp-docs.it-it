@@ -7,7 +7,6 @@ f1_keywords:
 - copyprivate
 - default
 - firstprivate
-- if
 - lastprivate
 - nowait
 - num_threads
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 92bd73fda5891b0bbf7393d1a7fda573d0f00263
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 37f86eeb172c5f8b496ed724142af002f5db8d41
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882906"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446336"
 ---
 # <a name="openmp-clauses"></a>Clausole OpenMP
 

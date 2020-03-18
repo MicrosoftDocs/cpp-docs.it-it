@@ -3,11 +3,11 @@ title: Uso dello stack x64
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
 ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856963"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417257"
 ---
 # <a name="x64-stack-usage"></a>Uso dello stack x64
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874756"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421793"
 ---
 # <a name="ltforward_listgt-operators"></a>Operatori &lt;forward_list&gt;
 
@@ -43,7 +43,7 @@ Oggetto di tipo `forward_list`.
 \ a *destra*
 Oggetto di tipo `forward_list`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello consente di eseguire l'overload di `operator==` per confrontare due oggetti della classe modello `forward_list`. La funzione restituisce `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
@@ -69,7 +69,7 @@ Oggetto di tipo `forward_list`.
 
 **true** se gli elenchi non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello restituisce `!(left == right)`.
 
@@ -95,7 +95,7 @@ Oggetto di tipo `forward_list`.
 
 **true** se l'elenco a sinistra dell'operatore è minore ma non uguale all'elenco a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello consente di eseguire l'overload di `operator<` per confrontare due oggetti della classe modello `forward_list`. La funzione restituisce `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
@@ -121,7 +121,7 @@ Oggetto di tipo `forward_list`.
 
 **true** se l'elenco a sinistra dell'operatore è minore o uguale all'elenco a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello restituisce `!(right < left)`.
 
@@ -147,7 +147,7 @@ Oggetto di tipo `forward_list`.
 
 **true** se l'elenco a sinistra dell'operatore è maggiore dell'elenco a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello restituisce `right < left`.
 
@@ -173,6 +173,6 @@ Oggetto di tipo `forward_list`.
 
 **true** se l'elenco di inoltri a sinistra dell'operatore è maggiore o uguale all'elenco di avanzamento sul lato destro dell'operatore; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione modello restituisce `!(left < right)`.

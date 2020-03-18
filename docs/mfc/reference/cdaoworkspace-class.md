@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883870"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420491"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
@@ -83,13 +83,13 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDaoWorkspace:: CDaoWorkspace](#cdaoworkspace)|Costruisce un oggetto dell'area di lavoro. In seguito, chiamare `Create` o `Open`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDaoWorkspace:: Append](#append)|Accoda un'area di lavoro appena creata alla raccolta di aree di lavoro del motore di database.|
 |[CDaoWorkspace:: BeginTrans](#begintrans)|Inizia una nuova transazione che si applica a tutti i database aperti nell'area di lavoro.|
@@ -120,7 +120,7 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDaoWorkspace:: m_pDAOWorkspace](#m_pdaoworkspace)|Punta all'oggetto area di lavoro DAO sottostante.|
 
@@ -131,7 +131,7 @@ Nella maggior parte dei casi, non è necessario disporre di più aree di lavoro 
 > [!NOTE]
 >  Le classi di database DAO sono diverse dalle classi di database MFC basate su Open Database Connectivity (ODBC). Tutti i nomi delle classi di database DAO hanno un prefisso "CDao". In generale, le classi MFC basate su DAO sono più idonee delle classi MFC basate su ODBC. Le classi basate su DAO accedono ai dati tramite il motore di database di Microsoft Jet, inclusi i driver ODBC. Supportano anche operazioni DDL (Data Definition Language), ad esempio la creazione di database e l'aggiunta di tabelle e campi tramite le classi, senza la necessità di chiamare direttamente DAO.
 
-## <a name="capabilities"></a>Funzionalità
+## <a name="capabilities"></a>Capabilities
 
 La classe `CDaoWorkspace` fornisce gli elementi seguenti:
 
@@ -143,7 +143,7 @@ La classe `CDaoWorkspace` fornisce gli elementi seguenti:
 
 - Accesso alla raccolta di aree di lavoro del motore di database, in cui sono archiviate tutte le aree di lavoro attive che sono state aggiunte. È inoltre possibile creare e utilizzare le aree di lavoro senza aggiungerle alla raccolta.
 
-## <a name="security"></a>Sicurezza
+## <a name="security"></a>Security
 
 MFC non implementa le raccolte utenti e gruppi in DAO, che vengono utilizzate per il controllo di sicurezza. Se sono necessari questi aspetti di DAO, è necessario programmarli autonomamente tramite chiamate dirette a interfacce DAO. Per informazioni, vedere la [Nota tecnica 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 

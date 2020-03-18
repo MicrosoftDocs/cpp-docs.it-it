@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 ms.openlocfilehash: 43154e1ec4c6b856ad203a4b9ac49e4f4bcf9576
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866562"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421415"
 ---
 # <a name="cwinthread-class"></a>CWinThread (classe)
 
@@ -71,13 +71,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinThread:: CWinThread](#cwinthread)|Costruisce un oggetto `CWinThread`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinThread:: CreateThread](#createthread)|Avvia l'esecuzione di un oggetto `CWinThread`.|
 |[CWinThread:: ExitInstance](#exitinstance)|Eseguire l'override di per eseguire la pulizia al termine del thread.|
@@ -98,13 +98,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[HANDLE CWinThread:: operator](#operator_handle)|Recupera l'handle dell'oggetto `CWinThread`.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinThread:: m_bAutoDelete](#m_bautodelete)|Specifica se eliminare definitivamente l'oggetto alla chiusura del thread.|
 |[CWinThread:: m_hThread](#m_hthread)|Handle per il thread corrente.|

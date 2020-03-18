@@ -21,7 +21,6 @@ f1_keywords:
 - ATL.CDBPropSet.SetGUID
 - CDBPropSet.SetGUID
 - ATL::CDBPropSet::SetGUID
-- SetGUID
 - CDBPropSet::SetGUID
 helpviewer_keywords:
 - CDBPropSet class
@@ -33,16 +32,16 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325026"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447448"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
 
-Eredita dal `DBPROPSET` strutturare e aggiunge un costruttore che inizializza i campi chiave, nonché `AddProperty` accedere al metodo.
+Eredita dalla struttura `DBPROPSET` e aggiunge un costruttore che Inizializza i campi chiave e il metodo di accesso `AddProperty`.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -54,29 +53,29 @@ class CDBPropSet : public tagDBPROPSET
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
 |||
 |-|-|
-|[AddProperty](#addproperty)|Aggiunge una proprietà per il set di proprietà.|
+|[AddProperty](#addproperty)|Aggiunge una proprietà al set di proprietà.|
 |[CDBPropSet](#cdbpropset)|Costruttore.|
-|[SetGUID](#setguid)|Imposta il `guidPropertySet` campo il `DBPROPSET` struttura.|
+|[SetGUID](#setguid)|Imposta il campo `guidPropertySet` della struttura `DBPROPSET`.|
 
 ### <a name="operators"></a>Operatori
 
 |||
 |-|-|
-|[operator =](#op_equal)|Assegna il contenuto di una proprietà impostata su un altro.|
+|[operatore =](#op_equal)|Assegna il contenuto di una proprietà impostata a un'altra.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Uso di consumer e provider OLE DB `DBPROPSET` per passare le matrici di strutture `DBPROP` strutture. Ogni `DBPROP` struttura rappresenta una singola proprietà che è possibile impostare.
+OLE DB provider e consumer utilizzano strutture `DBPROPSET` per passare matrici di strutture di `DBPROP`. Ogni struttura di `DBPROP` rappresenta una singola proprietà che può essere impostata.
 
-## <a name="addproperty"></a> CDBPropSet::
+## <a name="addproperty"></a>CDBPropSet:: AddProperty
 
-Aggiunge una proprietà per il set di proprietà.
+Aggiunge una proprietà al set di proprietà.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -98,36 +97,36 @@ bool AddProperty(DWORD dwPropertyID,
 #### <a name="parameters"></a>Parametri
 
 *dwPropertyID*<br/>
-[in] L'ID della proprietà da aggiungere. Consente di inizializzare il `dwPropertyID` del `DBPROP` struttura aggiunto al set di proprietà.
+in ID della proprietà da aggiungere. Utilizzato per inizializzare la `dwPropertyID` della struttura `DBPROP` aggiunta al set di proprietà.
 
 *var*<br/>
-[in] Una variante usata per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+in Variante utilizzata per inizializzare il valore della proprietà per la struttura `DBPROP` aggiunta al set di proprietà.
 
 *szValue*<br/>
-[in] Stringa utilizzata per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+in Stringa utilizzata per inizializzare il valore della proprietà per la struttura `DBPROP` aggiunta al set di proprietà.
 
 *bValue*<br/>
-[in] Oggetto `BYTE` o un valore booleano utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+in Valore `BYTE` o booleano utilizzato per inizializzare il valore della proprietà per la struttura `DBPROP` aggiunta al set di proprietà.
 
 *nValue*<br/>
-[in] Valore intero utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+in Valore integer utilizzato per inizializzare il valore della proprietà per la struttura `DBPROP` aggiunta al set di proprietà.
 
 *fltValue*<br/>
-[in] Valore a virgola mobile utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+in Valore a virgola mobile utilizzato per inizializzare il valore della proprietà per la struttura `DBPROP` aggiunta al set di proprietà.
 
 *dblValue*<br/>
-[in] Valore a virgola mobile a precisione doppia che consente di inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+in Valore a virgola mobile a precisione doppia utilizzato per inizializzare il valore della proprietà per la struttura `DBPROP` aggiunta al set di proprietà.
 
 *cyValue*<br/>
-[in] Valore di valuta CY utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+in Valore di valuta CY utilizzato per inizializzare il valore della proprietà per la struttura `DBPROP` aggiunta al set di proprietà.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se la proprietà è stata aggiunta correttamente. In caso contrario, **false**.
 
-## <a name="cdbpropset"></a> CDBPropSet:: CDBPropSet
+## <a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
 
-Costruttore. Inizializza la `rgProperties`, `cProperties`, e `guidPropertySet` campi del [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struttura.
+Costruttore. Inizializza i campi `rgProperties`, `cProperties`e `guidPropertySet` della struttura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="syntax"></a>Sintassi
 
@@ -142,14 +141,14 @@ CDBPropSet();
 #### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-[in] GUID utilizzato per inizializzare il `guidPropertySet` campo.
+in GUID utilizzato per inizializzare il campo `guidPropertySet`.
 
 *propset*<br/>
 [in] Altro oggetto `CDBPropSet` per la costruzione di copia.
 
-## <a name="setguid"></a> CDBPropSet:: SetGuid
+## <a name="setguid"></a>CDBPropSet:: Seguid
 
-Imposta il `guidPropertySet` campo il `DBPROPSET` struttura.
+Imposta il campo `guidPropertySet` nella struttura `DBPROPSET`.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -160,13 +159,13 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-[in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struttura.
+in GUID utilizzato per impostare il campo `guidPropertySet` della struttura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo campo può essere impostato il [costruttore](../../data/oledb/cdbpropset-cdbpropset.md) anche.
+Questo campo può essere impostato anche dal [Costruttore](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a> CDBPropSet:: operator =
+## <a name="op_equal"></a>CDBPropSet:: operator =
 
 Assegna il contenuto di un set di proprietà a un altro set di proprietà.
 
@@ -178,8 +177,8 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-[Struttura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
+Struttura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
 [struttura DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

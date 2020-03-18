@@ -2,18 +2,18 @@
 title: /ALLOWBIND
 ms.date: 11/04/2016
 f1_keywords:
-- /allowbind
+- /allowbind_bind
 helpviewer_keywords:
 - ALLOWBIND editbin option
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 4cb7e5a3627d865e2f2193dee096c72cced75f5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f5b662223914cbb4970188595afb52cc2500cd4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273196"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440384"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 
@@ -24,13 +24,13 @@ Specifica se una DLL può essere associata.
 /ALLOWBIND[:NO]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/ALLOWBIND** opzione imposta un bit nell'intestazione della DLL che indica a Bind.exe che l'immagine può essere associato. Associazione può consentire un'immagine da caricare più rapidamente quando il caricatore non occorre Riassegna ed eseguire la correzione dell'indirizzo per ogni DLL a cui viene fatto riferimento. È consigliabile non specificare un file DLL per essere associata se è stata firmata digitalmente, associazione rende la firma non valida. Associazione non ha alcun effetto se ASLR (ASLR) è abilitata per l'immagine usando **/DYNAMICBASE** nelle versioni di Windows che supporta ASLR.
+L'opzione **/ALLOWBIND** imposta un bit nell'intestazione di una dll che indica a bind. exe che l'immagine può essere associata. Il binding può consentire il caricamento di un'immagine più veloce quando il caricatore non deve riassegnare ed eseguire la correzione degli indirizzi per ogni DLL a cui si fa riferimento. È possibile che non si desideri associare una DLL se è stata firmata digitalmente, ovvero l'associazione invalida la firma. L'associazione non produce alcun effetto se la sequenza di ASLR (Address Space Layout) viene abilitata per l'immagine tramite **/DynamicBase** nelle versioni di Windows che supportano ASLR.
 
-Uso **/ALLOWBIND: No** per impedire l'associazione di DLL Bind.exe.
+Usare **/ALLOWBIND: No** per impedire a bind. exe di associare la dll.
 
-Per altre informazioni, vedere la [/ALLOWBIND](allowbind-prevent-dll-binding.md) l'opzione del linker.
+Per ulteriori informazioni, vedere l'opzione del linker [/ALLOWBIND](allowbind-prevent-dll-binding.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

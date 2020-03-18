@@ -2,12 +2,12 @@
 title: Spostarsi all'interno del codice C++ in Visual Studio
 description: Usare vari strumenti in Visual Studio per esplorare la codebase di C++.
 ms.date: 05/28/2019
-ms.openlocfilehash: c2d3a1aa4a26cb820ff4a1e87d6eae88b1b8e739
-ms.sourcegitcommit: 96f48079cdc402e4c2c1578d1f1eed4846a484dc
-ms.translationtype: HT
+ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67576532"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446688"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Spostarsi all'interno del codice C++ in Visual Studio
 
@@ -17,7 +17,7 @@ Visual Studio offre una suite di strumenti che consentono di esplorare la codeba
 
 Fare clic con il pulsante destro del mouse su una direttiva `#include` e quindi scegliere **Passa al documento**. In alternativa, selezionare **F12** con il cursore sulla riga per aprire il file.
 
-![Opzione di menu Passa al documento in C&#43;&#43;](../ide/media/go-to-document.png "Passa al documento")
+![C&#43; &#43; passare all'opzione di menu Document](../ide/media/go-to-document.png "Vai al documento")
 
 ## <a name="toggle-headercode-file"></a>Attiva/disattiva file di codice/intestazione
 
@@ -27,7 +27,7 @@ Fare clic con il pulsante destro del mouse su una direttiva `#include` e quindi 
 
 È possibile passare alla definizione di un simbolo di codice facendo clic con il pulsante destro del mouse nell'editor e scegliendo **Vai a definizione** o premendo **F12**. È possibile passare a una dichiarazione in modo analogo usando il menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse oppure premendo **CTRL+F12**.
 
-![Vai a definizione in C&#43;&#43;](../ide/media/go-to-def.png "Vai a definizione")
+![C&#43; &#43; Vai a definizione](../ide/media/go-to-def.png "Vai a definizione")
 
 ## <a name="go-to"></a>Vai a
 
@@ -35,12 +35,12 @@ Fare clic con il pulsante destro del mouse su una direttiva `#include` e quindi 
 
 È possibile aprire **Vai a** con **CTRL+,** . Questa azione crea una casella di ricerca sul documento che si sta modificando.
 
-![Vai a in C&#43;&#43;](../ide/media/go-to-cpp.png "Vai a")
+![C&#43; &#43; Vai a](../ide/media/go-to-cpp.png "Vai a")
 
 **Vai a** include questi filtri di ricerca:
 
-- **Vai alla riga** (**CTRL+G**): consente di passare rapidamente a una riga diversa nel documento corrente.
-- **Vai a tutti** (**CTRL+,** ) o (**CTRL+T**): i risultati della ricerca includono tutto ciò che segue.
+- **Vai alla riga** (**CTRL + G**): passa rapidamente a una riga diversa del documento corrente.
+- **Vai a tutti** (**CTRL +,** ) o (**CTRL + T**): i risultati della ricerca includono tutti gli elementi seguenti.
 - **Vai al file** (**CTRL 1, F**): consente di cercare i file nella soluzione.
 - **Vai al tipo** (**CTRL 1, T**): i risultati della ricerca includono:
   - Classi, struct ed enumerazioni.
@@ -57,7 +57,7 @@ Fare clic con il pulsante destro del mouse su una direttiva `#include` e quindi 
 
 Quando si richiama per la prima volta **Vai a** con **CTRL+** , **Vai a tutti** viene attivato senza filtri sui risultati della ricerca. È quindi possibile selezionare il filtro desiderato usando i pulsanti accanto alla casella di ricerca. Richiamare un filtro specifico usando i tasti di scelta rapida corrispondenti. Questa operazione apre la casella di ricerca **Vai a** con il filtro preselezionato. Tutti i tasti di scelta rapida sono configurabili.
 
-Per applicare un filtro di testo, avviare la query di ricerca con il carattere corrispondente del filtro seguito da uno spazio. Con **Vai alla riga** si può omettere lo spazio. Sono disponibili questi filtri di testo:
+Per applicare un filtro di testo, avviare la query di ricerca con il carattere corrispondente del filtro seguito da uno spazio. (**Vai alla riga** può facoltativamente omettere lo spazio). Questi filtri di testo sono disponibili:
 
 - Vai a tutti: (nessun filtro testo)
 - Vai alla riga numero: :
@@ -68,11 +68,11 @@ Per applicare un filtro di testo, avviare la query di ricerca con il carattere c
 
 L'esempio seguente mostra i risultati di un'operazione *Vai al file* con il filtro "f":
 
-![Menu Vai a in C&#43;&#43;](../ide/media/vs2017-go-to-results.png "Menu Vai a")
+![&#43; &#43; Menu Vai a](../ide/media/vs2017-go-to-results.png "Menu Vai a")
 
 Per vedere l'elenco dei filtri testo digitare ? seguito da uno spazio. È anche possibile accedere ai comandi **Vai a** con il menu **Modifica**. Si tratta di un altro modo per rammentarsi dei principali tasti di scelta rapida di **Vai a**.
 
-![Menu Vai a in C&#43;&#43;](../ide/media/go-to-menu-cpp.png "Menu Vai a")
+![&#43; &#43; Menu Vai a](../ide/media/go-to-menu-cpp.png "Menu Vai a")
 
 ## <a name="find-or-find-in-files"></a>Trova o Cerca nei file
 
@@ -80,15 +80,15 @@ Per vedere l'elenco dei filtri testo digitare ? seguito da uno spazio. È anche 
 
 **Trova** può essere applicato a una selezione, al documento corrente, a tutti i documenti aperti, al progetto corrente o all'intera soluzione. È possibile usare espressioni regolari e testo normale. Evidenzia automaticamente, inoltre, tutte le corrispondenze nell'IDE.
 
-![Trova in C&#43;&#43;](../ide/media/find-cpp.png "Trova")
+![C&#43; &#43; Find](../ide/media/find-cpp.png "Find")
 
 **Cerca nei file** è una versione più potente di **Trova** che consente di visualizzare i risultati nella finestra **Risultati ricerca**. È possibile cercare le dipendenze del codice esterne, filtrare per tipi di file e altro ancora. 
 
-![Cerca nei file in C&#43;&#43](../ide/media/find-in-files-cpp.png "Cerca nei file")
+![C&#43; &#43; ricerca nei file](../ide/media/find-in-files-cpp.png "Cerca nei file")
 
 È possibile organizzare i risultati di **Cerca nei file** in due finestre e accodare insieme i risultati di più ricerche. Selezionare un risultato per passare alla posizione corrispondente nel file.
 
-![Cerca nei file in C&#43;&#43](../ide/media/vs2017-find-in-files-results.png "Cerca nei file")
+![C&#43; &#43; ricerca nei file](../ide/media/vs2017-find-in-files-results.png "Cerca nei file")
 
 Per altre informazioni, vedere [Cerca nei file](/visualstudio/ide/find-in-files) nella documentazione di Visual Studio.
 
@@ -96,7 +96,7 @@ Per altre informazioni, vedere [Cerca nei file](/visualstudio/ide/find-in-files)
 
 Per trovare tutti gli utilizzi di un simbolo nella codebase, posizionare il cursore sul simbolo o subito dopo, fare clic con il pulsante destro del mouse e quindi scegliere **Trova tutti i riferimenti**. È possibile filtrare, ordinare o raggruppare i risultati in molti modi diversi. I risultati vengono popolati in modo incrementale. Sono classificati come letture o scritture per aiutare a distinguere che cosa fa parte della soluzione rispetto a cosa appartiene a intestazioni di sistema o altre librerie.
 
-![Trova tutti i riferimenti in C&#43;&#43;](../ide/media/find-all-references-results-cpp.png "Trova tutti i riferimenti")
+![C&#43; &#43; trova tutti i riferimenti](../ide/media/find-all-references-results-cpp.png "Trova tutti i riferimenti")
 
 I risultati sono raggruppati in base alle categorie seguenti:
 
@@ -106,19 +106,19 @@ I risultati sono raggruppati in base alle categorie seguenti:
 - Definizione, quindi percorso
 - Definizione, progetto, quindi percorso
 
- #### <a name="filter-results"></a>Filtrare i risultati
+#### <a name="filter-results"></a>Filtrare i risultati
 
 Per filtrare i risultati, passare il mouse su una colonna e selezionare l'icona del filtro che viene visualizzata. È possibile filtrare i risultati dalla prima colonna per nascondere elementi quali i riferimenti a stringhe e commenti che non è necessario visualizzare.
 
-![Filtri di Trova tutti i riferimenti in C&#43;&#43;](../ide/media/find-all-references-filters-cpp.png "Filtri di Trova tutti i riferimenti")
+![C&#43; &#43; trova tutti i filtri dei riferimenti](../ide/media/find-all-references-filters-cpp.png "Filtri trova tutti i riferimenti")
 
-- **Risultati Confirmed** (Confermati): riferimenti effettivi al simbolo cercato presenti nel codice. La ricerca di una funzione membro denominata `Size`, ad esempio, restituisce tutti i riferimenti a `Size` che corrispondono all'ambito della classe che definisce `Size`.
+- **Risultati confermati**: riferimenti al codice effettivo al simbolo cercato. La ricerca di una funzione membro denominata `Size`, ad esempio, restituisce tutti i riferimenti a `Size` che corrispondono all'ambito della classe che definisce `Size`.
 
-- **Risultati Disconfirmed** (Non confermati): filtro disattivato per impostazione predefinita perché mostra i simboli il cui nome corrisponde ma che non sono riferimenti effettivi al simbolo che si sta cercando. Se si dispone di due classi ognuna delle quali definisce una funzione membro denominata `Size`, ad esempio, e si esegue una ricerca di `Size` su un riferimento da un oggetto `Class1`, tutti i riferimenti a `Size` provenienti da `Class2` verranno visualizzati come non confermati.
+- **Risultati non confermati**: questo filtro è disattivato per impostazione predefinita perché Mostra i simboli il cui nome corrisponde a, ma non i riferimenti effettivi al simbolo che si sta cercando. Se si dispone di due classi ognuna delle quali definisce una funzione membro denominata `Size`, ad esempio, e si esegue una ricerca di `Size` su un riferimento da un oggetto `Class1`, tutti i riferimenti a `Size` provenienti da `Class2` verranno visualizzati come non confermati.
 
-- **Risultati Unprocessed** (Non elaborati): poiché le operazioni **Trova tutti i riferimenti** possono richiedere molto tempo se eseguite su codebase di grandi dimensioni, in questi casi l'elenco dei risultati mostra i risultati come non elaborati. Per i risultati non elaborati la corrispondenza al nome del simbolo cercato è stata confermata, ma non è stato ancora appurato se si tratta di riferimenti effettivi. È possibile attivare questo filtro per ottenere risultati più rapidi. Tenere semplicemente presente che alcuni risultati potrebbero non essere riferimenti effettivi.
+- **Risultati non elaborati**: le operazioni **Find All References** possono richiedere tempo per essere completate su codebase più grandi, quindi nell'elenco dei risultati vengono visualizzati i risultati "non elaborati". Per i risultati non elaborati la corrispondenza al nome del simbolo cercato è stata confermata, ma non è stato ancora appurato se si tratta di riferimenti effettivi. È possibile attivare questo filtro per ottenere risultati più rapidi. Tenere semplicemente presente che alcuni risultati potrebbero non essere riferimenti effettivi.
 
- #### <a name="sort-results"></a>Ordinare i risultati
+#### <a name="sort-results"></a>Ordinare i risultati
 
 È possibile ordinare i risultati in base a qualsiasi colonna selezionando la colonna. Per passare dall'ordine crescente all'ordine decrescente e viceversa, selezionare di nuovo la colonna.
 
@@ -126,7 +126,7 @@ Per filtrare i risultati, passare il mouse su una colonna e selezionare l'icona 
 
 È possibile passare alla definizione di un tipo in un file o ai membri del tipo usando la **barra di spostamento** che si trova sopra la finestra dell'editor.
 
-![Barra di spostamento in C&#43;&#43;](../ide/media/navbar-cpp.png "Barra di spostamento")
+![Barra&#43; &#43; di spostamento C](../ide/media/navbar-cpp.png "Barra di spostamento")
 
 ## <a name="see-also"></a>Vedere anche
 

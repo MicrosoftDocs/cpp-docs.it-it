@@ -1,8 +1,7 @@
 ---
-title: 'Procedura: Aggiunta, modifica o eliminazione di controlli (C++)'
+title: 'Procedura: aggiungere, modificare o eliminare controlli (C++)'
 ms.date: 02/15/2019
 f1_keywords:
-- vc.editors.dialog.dialog
 - vc.controls.activex
 - vc.editors.dialog.insertActiveXControls
 helpviewer_keywords:
@@ -43,14 +42,14 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b940e94faf710de8ae5bc604b47dc35a1bc290a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a42a64f93d334c0b5c63b0eca1567e6964d0a3ae
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491173"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447210"
 ---
-# <a name="how-to-add-edit-or-delete-controls-c"></a>Procedura: Aggiunta, modifica o eliminazione di controlli (C++)
+# <a name="how-to-add-edit-or-delete-controls-c"></a>Procedura: aggiungere, modificare o eliminare controlli (C++)
 
 Utilizzando l' **editor finestre**, è possibile aggiungere, ridimensionare, modificare ed eliminare controlli nelle finestre di dialogo. È anche possibile modificare le proprietà di un controllo, ad esempio l'ID, o se inizialmente è visibile in fase di esecuzione.
 
@@ -99,7 +98,7 @@ La scheda **editor finestre** viene visualizzata nella [finestra casella degli s
 
 ### <a name="to-add-a-custom-control"></a>Per aggiungere un controllo personalizzato
 
-È possibile aggiungere controlli personalizzati alla finestra di dialogo. Selezionare l'icona del **controllo personalizzato** nella **casella degli strumenti** e trascinarla nella finestra di dialogo. Per aggiungere un `Syslink` controllo, aggiungere un controllo personalizzato, quindi modificare la proprietà della **classe** del controllo `Syslink`in. Questa azione comporterà l'aggiornamento delle proprietà e la `Syslink` visualizzazione delle proprietà del controllo. Per informazioni sulla classe wrapper MFC, vedere [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+È possibile aggiungere controlli personalizzati alla finestra di dialogo. Selezionare l'icona del **controllo personalizzato** nella **casella degli strumenti** e trascinarla nella finestra di dialogo. Per aggiungere un controllo `Syslink`, aggiungere un controllo personalizzato, quindi impostare la proprietà della **classe** del controllo su `Syslink`. Questa azione comporterà l'aggiornamento delle proprietà e la visualizzazione delle proprietà del controllo `Syslink`. Per informazioni sulla classe wrapper MFC, vedere [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Controlli di modifica
 
@@ -147,7 +146,7 @@ Nella finestra di dialogo selezionare il controllo, quindi premere il tasto **Ca
 
 ## <a name="other-issues"></a>Altri problemi
 
-### <a name="troubleshooting"></a>Risoluzione dei problemi
+### <a name="troubleshooting"></a>risoluzione dei problemi
 
 Dopo aver aggiunto un controllo comune o un controllo Rich Edit a una finestra di dialogo, non verrà visualizzato quando si testa la finestra di dialogo. In alternativa, la finestra di dialogo non verrà visualizzata. Ad esempio:
 
@@ -170,19 +169,19 @@ Attualmente, l' **editor finestre** non aggiunge automaticamente codice al proge
 ||||
 |-|-|-|
 |Dispositivo di scorrimento|Controllo Tree|Selezione data e ora|
-|Controllo di selezione|Controllo Tab|Calendario mensile|
+|Controllo di selezione|Controllo Tab|Month Calendar|
 |Controllo dello stato di avanzamento|Controllo animazione|Controllo indirizzo IP|
 |Tasto di scelta|Controllo Rich Edit|Casella combinata estesa|
 |Controllo elenco|Controllo Rich Edit 2,0|Controllo personalizzato|
 
 Per utilizzare i controlli comuni in una finestra di dialogo, è necessario chiamare [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) o `AFXInitCommonControls` prima di creare la finestra di dialogo.
 
-Per usare i controlli RichEdit, `LoadLibrary`è necessario chiamare. Per ulteriori informazioni, vedere [informazioni sui controlli Rich Edit](/windows/win32/Controls/about-rich-edit-controls) nell'Windows SDK e [Panoramica del controllo Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
+Per usare i controlli RichEdit, è necessario chiamare `LoadLibrary`. Per ulteriori informazioni, vedere [informazioni sui controlli Rich Edit](/windows/win32/Controls/about-rich-edit-controls) nell'Windows SDK e [Panoramica del controllo Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
 
 > [!NOTE]
 > Per usare un controllo RichEdit con MFC, è prima necessario chiamare [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) per caricare il controllo richedit 2,0 (Riched20. DLL) oppure chiamare [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) per caricare il controllo richedit 1,0 precedente (Riched32. DLL).
 >
-> È possibile usare la classe [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) corrente con il controllo RichEdit 1,0 precedente `CRichEditCtrl` , ma è progettato solo per supportare il controllo RichEdit 2,0. Poiché RichEdit 1,0 e RichEdit 2,0 sono simili, la maggior parte dei metodi funzionerà. Tuttavia, esistono alcune differenze tra i controlli 1,0 e 2,0, quindi alcuni metodi potrebbero funzionare in modo errato o non funzionare affatto.
+> È possibile usare la classe [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) corrente con il controllo richedit 1,0 precedente, ma `CRichEditCtrl` è progettato solo per supportare il controllo richedit 2,0. Poiché RichEdit 1,0 e RichEdit 2,0 sono simili, la maggior parte dei metodi funzionerà. Tuttavia, esistono alcune differenze tra i controlli 1,0 e 2,0, quindi alcuni metodi potrebbero funzionare in modo errato o non funzionare affatto.
 
 ### <a name="activex-controls"></a>Controlli ActiveX
 
@@ -193,7 +192,7 @@ La finestra di dialogo **Inserisci controllo ActiveX** consente di inserire cont
 |Proprietà|Descrizione|
 |---|---|
 |**Controllo ActiveX**|Visualizza un elenco di controlli ActiveX.<br/><br/>L'inserimento di un controllo da questa finestra di dialogo non genera una classe wrapper. Se è necessaria una classe wrapper, usare [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code) per crearne una, vedere [aggiunta di una classe](../ide/adding-a-class-visual-cpp.md).<br/><br/>Se in questa finestra di dialogo non viene visualizzato un controllo ActiveX, provare a installare il controllo in base alle istruzioni del fornitore.|
-|**Path**|Consente di visualizzare il file in cui viene trovato il controllo ActiveX.|
+|**Percorso**|Consente di visualizzare il file in cui viene trovato il controllo ActiveX.|
 
 > [!CAUTION]
 > Potrebbe non essere legalmente consentito distribuire tutti i controlli ActiveX nel sistema. Fare riferimento al contratto di licenza del software che ha installato i controlli o contattare la società di software.
@@ -217,7 +216,7 @@ La finestra di dialogo **Inserisci controllo ActiveX** consente di inserire cont
 
 I controlli ActiveX forniti da fornitori indipendenti possono essere dotati di proprietà e caratteristiche specifiche. Queste proprietà vengono visualizzate nella finestra **Proprietà** . Tutte le pagine delle proprietà create dai writer del controllo ActiveX vengono visualizzate nella finestra di dialogo **pagine delle proprietà** . (Per visualizzare la **pagina delle proprietà** per un controllo ActiveX specifico, selezionare il pulsante della **pagina delle proprietà** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window)).
 
-- Selezionare la**pagina delle proprietà** controllo **ActiveX** e vai a **visualizzazione** > menu per visualizzare le proprietà. Apportare le modifiche necessarie nella pagina delle proprietà.
+- Selezionare il controllo **ActiveX** e passare a **visualizzazione** menu > **pagina delle proprietà** per visualizzare le proprietà. Apportare le modifiche necessarie nella pagina delle proprietà.
 
    Diverse schede vengono visualizzate nella pagina delle proprietà di un controllo ActiveX, a seconda delle finestre delle proprietà che provengono come parte del controllo ActiveX.
 
@@ -231,8 +230,8 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli della finestra di dialogo Gestisci](controls-in-dialog-boxes.md)<br/>
-[Procedura: Controlli di layout](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[Procedura: Definire l'accesso e i valori per i controlli](defining-mnemonics-access-keys.md)
+[Procedura: layout di controlli](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Procedura: definire l'accesso e i valori del controllo](defining-mnemonics-access-keys.md)
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

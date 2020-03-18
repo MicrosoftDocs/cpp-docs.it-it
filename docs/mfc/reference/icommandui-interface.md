@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866581"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445701"
 ---
 # <a name="icommandui-interface"></a>Interfaccia ICommandUI
 
@@ -60,6 +60,7 @@ Per ulteriori informazioni sulla gestione dei comandi dell'interfaccia utente in
 ## <a name="check"></a>ICommandUI:: check
 
 Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando 
 ## <a name="continuerouting"></a>ICommandUI:: ContinueRouting
 
 Indica al meccanismo di routing dei comandi di continuare il routing del messaggio corrente alla catena di gestori.
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ Si tratta di una funzione membro avanzata da usare insieme a un gestore di ON_CO
 ## <a name="enabled"></a>ICommandUI:: Enabled
 
 Abilita o Disabilita l'elemento dell'interfaccia utente per questo comando.
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ Questa proprietà Abilita o Disabilita l'elemento dell'interfaccia utente per qu
 ## <a name="id"></a>ICommandUI:: ID
 
 Ottiene l'ID dell'oggetto interfaccia utente rappresentato dall'oggetto ICommandUI.
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ Questa proprietà ottiene l'ID (un handle) della voce di menu, il pulsante della
 ## <a name="index"></a>ICommandUI:: index
 
 Ottiene l'indice dell'oggetto interfaccia utente rappresentato dall'oggetto ICommandUI.
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ Questa proprietà ottiene l'indice (un handle) della voce di menu, il pulsante d
 ## <a name="radio"></a>ICommandUI:: Radio
 
 Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando 
 ## <a name="text"></a>ICommandUI:: Text
 
 Imposta il testo dell'elemento dell'interfaccia utente per questo comando.
+
 ```
 property String^ Text;
 ```

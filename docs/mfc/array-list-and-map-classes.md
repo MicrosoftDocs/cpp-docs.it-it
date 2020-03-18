@@ -1,8 +1,6 @@
 ---
 title: Classi Array, List e Map
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - arrays [MFC], classes
 - list classes [MFC]
@@ -10,22 +8,22 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-ms.openlocfilehash: b89b99abb79fe689274f9e0b89a85bb33643d324
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5fe4acb35074e924555029d715ccbc23b55f49a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394624"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446504"
 ---
 # <a name="array-list-and-map-classes"></a>Classi Array, List e Map
 
-Per la gestione delle aggregazioni di dati, la libreria di classi fornisce un gruppo di classi collection, matrici, elenchi e mappe, che può contenere numerosi oggetti e tipi predefiniti. Le raccolte vengono ridimensionate in modo dinamico. Queste classi possono essere utilizzate in qualsiasi programma, se scritto per Windows o meno. Tuttavia, sono particolarmente utili per implementare le strutture di dati che definiscono le classi documento in framework dell'applicazione. È possibile derivare facilmente classi collection specializzato da questi oppure è possibile crearli basati sulle classi del modello. Per altre informazioni su questi approcci, vedere l'articolo [raccolte](../mfc/collections.md). Per un elenco delle classi di raccolta di modello, vedere l'articolo [classi modello per matrici, elenchi e mappe](../mfc/template-classes-for-arrays-lists-and-maps.md).
+Per la gestione di aggregazioni di dati, la libreria di classi fornisce un gruppo di classi di raccolta, ovvero matrici, elenchi e mappe, che possono ospitare un'ampia gamma di oggetti e tipi predefiniti. Le raccolte vengono ridimensionate dinamicamente. Queste classi possono essere usate in qualsiasi programma, se scritte per Windows o meno. Tuttavia, sono particolarmente utili per l'implementazione delle strutture di dati che definiscono le classi del documento nel Framework applicazione. È possibile derivare facilmente classi di raccolta specializzate da questi elementi oppure è possibile crearle in base alle classi modello. Per ulteriori informazioni su questi approcci, vedere le [raccolte](../mfc/collections.md)di articoli. Per un elenco delle classi di raccolte di modelli, vedere l'articolo [classi modello per matrici, elenchi e mappe](../mfc/template-classes-for-arrays-lists-and-maps.md).
 
-Le matrici sono strutture di dati unidimensionale che vengono archiviate in modo contiguo nella memoria. Supportano l'accesso casuale molto veloce perché l'indirizzo di memoria di qualsiasi elemento specificato può essere calcolato moltiplicando l'indice dell'elemento per le dimensioni di un elemento e aggiungendo il risultato all'indirizzo di base della matrice. Le matrici sono molto costose se si dispone per inserire elementi nella matrice, poiché l'intera matrice precedente l'elemento inserito deve essere spostata per liberare spazio per l'elemento da inserire. Le matrici possono allargarsi e restringersi base alle esigenze.
+Le matrici sono strutture di dati unidimensionali archiviate in modo contiguo nella memoria. Supportano l'accesso casuale molto veloce, poiché l'indirizzo di memoria di un dato elemento può essere calcolato moltiplicando l'indice dell'elemento per la dimensione di un elemento e aggiungendo il risultato all'indirizzo di base della matrice. Tuttavia, le matrici sono molto costose se è necessario inserire elementi nella matrice, perché l'intera matrice oltre l'elemento inserito deve essere spostata per fare spazio all'elemento da inserire. Le matrici possono aumentare e ridurre in modo necessario.
 
-Gli elenchi sono simili alle matrici, ma vengono archiviati in modo molto diverso. Ogni elemento in un elenco include anche un puntatore agli elementi precedenti e successivi, rendendolo un elenco a doppio collegamento. È molto veloce per aggiungere o eliminare elementi, poiché solo questa operazione comporta la modifica di alcune informazioni utili. Tuttavia, la ricerca di un elenco può essere costosa perché è necessario partire da una delle entità finali dell'elenco tutte le ricerche.
+Gli elenchi sono simili a matrici ma sono archiviati in modo molto diverso. Ogni elemento di un elenco include anche un puntatore agli elementi precedenti e successivi, che lo rendono un elenco con collegamento doppio. È molto veloce aggiungere o eliminare elementi perché questa operazione comporta solo la modifica di alcuni puntatori. Tuttavia, la ricerca in un elenco può essere costosa poiché tutte le ricerche devono iniziare da una delle estremità dell'elenco.
 
-Mappe di correlare un valore di chiave su un valore di dati. La chiave di una mappa, ad esempio, potrebbe essere una stringa e i dati di un puntatore in un elenco. Si potrebbe chiedere la mappa per offrirti il puntatore del mouse associata a una determinata stringa. Le ricerche di mappa sono veloci poiché mappe di utilizzano tabelle hash per le ricerche chiave. Aggiunta ed eliminazione di elementi anche è veloce. Le mappe vengono spesso utilizzate con altre strutture di dati come indici ausiliari. MFC utilizza un tipo speciale di mappa denominata un [mappa messaggi](../mfc/mapping-messages.md) per eseguire il mapping dei messaggi Windows a un puntatore alla funzione del gestore per il messaggio.
+Le mappe correlano un valore di chiave a un valore di dati. Ad esempio, la chiave di una mappa può essere una stringa e i dati un puntatore in un elenco. Si chiede alla mappa di fornire il puntatore associato a una determinata stringa. Le ricerche con mapping sono veloci perché le mappe usano tabelle hash per le ricerche chiave. Anche l'aggiunta e l'eliminazione di elementi è veloce. Le mappe vengono spesso usate con altre strutture di dati come indici ausiliari. MFC utilizza un tipo speciale di mapping denominato [mappa messaggi](../mfc/mapping-messages.md) per eseguire il mapping dei messaggi di Windows a un puntatore alla funzione del gestore per quel messaggio.
 
 ## <a name="see-also"></a>Vedere anche
 

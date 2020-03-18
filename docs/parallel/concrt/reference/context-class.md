@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
 ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865495"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422178"
 ---
 # <a name="context-class"></a>Classe Context
 
@@ -41,13 +41,13 @@ class Context;
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[~ Distruttore del contesto](#dtor)||
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Blocco](#block)|Blocca il contesto corrente.|
 |[CurrentContext](#currentcontext)|Restituisce un puntatore al contesto corrente.|

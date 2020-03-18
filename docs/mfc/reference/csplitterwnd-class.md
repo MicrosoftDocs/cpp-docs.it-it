@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: bee6deed3052d6cc923e432e97ad9a7904060cb6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890954"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447446"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -93,13 +93,13 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CSplitterWnd:: CSplitterWnd](#csplitterwnd)|Chiamare per costruire un oggetto `CSplitterWnd`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CSplitterWnd:: ActivateNext](#activatenext)|Esegue il comando riquadro successivo o riquadro precedente.|
 |[CSplitterWnd:: CanActivateNext](#canactivatenext)|Verifica se è attualmente possibile il comando riquadro successivo o riquadro precedente.|
@@ -133,7 +133,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CSplitterWnd:: onpare](#ondraw)|Chiamato dal Framework per creare la finestra con separatore.|
 |[CSplitterWnd:: OnDrawSplitter](#ondrawsplitter)|Esegue il rendering di un'immagine di una finestra divisa.|
@@ -522,17 +522,17 @@ Puntatore alla visualizzazione da cui ha origine il messaggio di scorrimento.
 *nScrollCode*<br/>
 Codice A barre di scorrimento che indica la richiesta di scorrimento dell'utente. Questo parametro è costituito da due parti: un byte di ordine inferiore, che determina il tipo di scorrimento che si verifica orizzontalmente e un byte di ordine superiore, che determina il tipo di scorrimento che si verifica verticalmente:
 
-    - SB_BOTTOM scorre verso il basso.
+- SB_BOTTOM scorre verso il basso.
 
-    - SB_LINEDOWN scorre una riga verso il basso.
+- SB_LINEDOWN scorre una riga verso il basso.
 
-    - SB_LINEUP scorre una riga verso l'alto.
+- SB_LINEUP scorre una riga verso l'alto.
 
-    - SB_PAGEDOWN scorre verso il basso di una pagina.
+- SB_PAGEDOWN scorre verso il basso di una pagina.
 
-    - SB_PAGEUP scorre una pagina verso l'alto.
+- SB_PAGEUP scorre una pagina verso l'alto.
 
-    - SB_TOP scorre verso l'alto.
+- SB_TOP scorre verso l'alto.
 
 *bDoScroll*<br/>
 Determina se l'azione di scorrimento specificata si verifica. Se *bDoScroll* è true (ovvero se è presente una finestra figlio e se le finestre divise hanno un intervallo di scorrimento), è possibile che venga eseguita l'azione di scorrimento specificata. Se *bDoScroll* è false (ovvero se non è presente alcuna finestra figlio o se le visualizzazioni suddivise non includono alcun intervallo di scorrimento), lo scorrimento non viene eseguito.
@@ -709,9 +709,9 @@ DWORD GetScrollStyle() const;
 
 Uno o più dei seguenti flag di stile di Windows, in caso di esito positivo:
 
-    - WS_HSCROLL se la barra di divisione gestisce attualmente le barre di scorrimento orizzontali condivise.
+- WS_HSCROLL se la barra di divisione gestisce attualmente le barre di scorrimento orizzontali condivise.
 
-    - WS_VSCROLL se la barra di divisione gestisce attualmente le barre di scorrimento verticali condivise.
+- WS_VSCROLL se la barra di divisione gestisce attualmente le barre di scorrimento verticali condivise.
 
 Se è zero, la finestra con separatore non gestisce attualmente alcuna barra di scorrimento condivisa.
 
@@ -810,13 +810,13 @@ Puntatore al contesto di dispositivo in cui eseguire il progetto. Se *PDC* è nu
 *nType*<br/>
 Valore della `enum ESplitType`, che può essere uno dei seguenti:
 
-    - `splitBox` casella di trascinamento della barra di divisione.
+- `splitBox` casella di trascinamento della barra di divisione.
 
-    - `splitBar` la barra visualizzata tra le due finestre divise.
+- `splitBar` la barra visualizzata tra le due finestre divise.
 
-    - `splitIntersection` l'intersezione delle finestre divise. Questo elemento non verrà chiamato quando viene eseguito in Windows 95/98.
+- `splitIntersection` l'intersezione delle finestre divise. Questo elemento non verrà chiamato quando viene eseguito in Windows 95/98.
 
-    - `splitBorder` i bordi della finestra divisa.
+- `splitBorder` i bordi della finestra divisa.
 
 *rect*<br/>
 Riferimento a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che specifica le dimensioni e la forma delle finestre divise.

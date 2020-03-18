@@ -1,24 +1,22 @@
 ---
 title: Classi Window, Dialog e Control
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - windows [MFC], dialog and control classes
 ms.assetid: b3610da6-9644-49b7-adbf-0e04f0d6d2b5
-ms.openlocfilehash: 3fc7d800cee7e3bf64f64028b2499935eb42a044
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e761c063e6c6e27943f9816d88b4d78718d3d18
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167621"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446302"
 ---
 # <a name="window-dialog-and-control-classes"></a>Classi Window, Dialog e Control
 
-Classe `CWnd` e le relative classi derivate incapsulano un `HWND`, un handle a una finestra di Windows. `CWnd` è utilizzabile da solo o come base per la derivazione di nuove classi. Le classi derivate fornite dalla libreria di classi rappresentano vari tipi di windows.
+La classe `CWnd` e le relative classi derivate incapsulano una `HWND`, un handle per una finestra di Windows. `CWnd` può essere usato da solo o come base per la derivazione di nuove classi. Le classi derivate fornite dalla libreria di classi rappresentano vari tipi di finestre.
 
 [CWnd](../mfc/reference/cwnd-class.md)<br/>
-Classe di base per tutte le finestre. È possibile usare una delle classi derivate dalla `CWnd` o derivare le classi direttamente da esso.
+Classe base per tutte le finestre. È possibile usare una delle classi derivate da `CWnd` o derivare le proprie classi direttamente da tale classe.
 
 ## <a name="see-also"></a>Vedere anche
 

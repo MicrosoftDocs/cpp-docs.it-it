@@ -1,25 +1,23 @@
 ---
 title: Framework applicazione
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - application framework [MFC], building applications
 - applications [MFC]
 - application framework [MFC]
 ms.assetid: 912684e6-4418-49dc-9877-a4cd19d69d20
-ms.openlocfilehash: fb8e19b7e8a305367e5265707bbef2801176c010
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b55635de322274ab02372251976d4ebb9511ade5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394650"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446527"
 ---
 # <a name="application-framework"></a>Framework applicazione
 
-Il nucleo della libreria di classi MFC (Microsoft Foundation) è un incapsulamento di gran parte delle API di Windows nel formato C++. Le classi della libreria rappresentano finestre, finestre di dialogo, contesti di dispositivo, gli oggetti GDI comuni, ad esempio pennelli e penne, controlli e altri elementi di Windows standard. Queste classi forniscono una comoda interfaccia funzione membro di C++ per le strutture di Windows che incapsulano. Per altre informazioni sull'uso di queste classi, vedere [negli argomenti di oggetti finestra](../mfc/window-objects.md).
+Il nucleo della libreria Microsoft Foundation Class (MFC) è un incapsulamento di un'ampia parte dell'API Windows in C++ formato. Le classi della libreria rappresentano finestre, finestre di dialogo, contesti di dispositivo, oggetti GDI comuni quali pennelli e penne, controlli e altri elementi Windows standard. Queste classi forniscono una comoda C++ interfaccia della funzione membro per le strutture di Windows incapsulate. Per ulteriori informazioni sull'utilizzo di queste classi, vedere l'argomento relativo agli [oggetti Window](../mfc/window-objects.md).
 
-Ma la libreria MFC fornisce anche un livello di funzionalità aggiuntive delle applicazioni basate sull'incapsulamento di C++ dell'API di Windows. Questo livello è un framework di applicazioni di lavoro per Windows che fornisce la maggior parte dell'interfaccia utente comune previsto dei programmi per Windows, tra cui le barre degli strumenti, barre di stato, stampa, anteprima di stampa, database, supporto e il supporto di ActiveX. [Utilizzo delle classi per scrivere applicazioni per Windows](../mfc/using-the-classes-to-write-applications-for-windows.md) illustra il framework in modo dettagliato.
+Tuttavia, la libreria MFC fornisce anche un livello di funzionalità aggiuntive dell'applicazione basate C++ sull'incapsulamento dell'API Windows. Questo livello è un Framework applicazione funzionante per Windows che fornisce la maggior parte dell'interfaccia utente comune prevista per i programmi per Windows, tra cui barre degli strumenti, barre di stato, stampa, anteprima di stampa, supporto del database e supporto ActiveX. L' [uso delle classi per scrivere applicazioni per Windows](../mfc/using-the-classes-to-write-applications-for-windows.md) illustra in dettaglio il Framework.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,27 +1,25 @@
 ---
 title: Utilizzo di CHotKeyCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CHotKeyCtrl
 helpviewer_keywords:
 - keys, hot and CHotKeyCtrl
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-ms.openlocfilehash: f52d676f68718cdd4d16cf93bf0d7e3fd6b03822
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2002d96a1eba913e260fa92281f730355a83ca5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349854"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447237"
 ---
 # <a name="using-chotkeyctrl"></a>Utilizzo di CHotKeyCtrl
 
-Un controllo tasto di scelta, rappresentato dalla classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), è una finestra che visualizza una rappresentazione di testo della combinazione di tasti l'utente digita in essa, ad esempio CTRL + MAIUSC + Q. Mantiene anche una rappresentazione interna di questa chiave sotto forma di un codice tasto virtuale e un set di flag che rappresentano lo stato di spostamento. Il controllo tasto di scelta non è impostata la chiave di accesso frequente, questa operazione è responsabilità del programma. (Per un elenco di codici di tasti virtuali standard, vedere winuser. h).
+Un controllo tasto di scelta, rappresentato dalla classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), è una finestra in cui viene visualizzata una rappresentazione testuale della combinazione di tasti a cui sono associati i tipi di utente, ad esempio CTRL + MAIUSC + Q. Mantiene inoltre una rappresentazione interna di questa chiave sotto forma di codice di chiave virtuale e di un set di flag che rappresentano lo stato di spostamento. Il controllo del tasto di scelta non imposta effettivamente il tasto di scelta, operazione che corrisponde al programma. Per un elenco di codici chiave virtuali standard, vedere Winuser. h.
 
-Usare un controllo tasto di scelta per ottenere l'input dell'utente per la quale tasto di scelta rapida da associare a una finestra o thread. Controlli tasto di scelta vengono spesso usati nelle finestre di dialogo, ad esempio potrebbe essere visualizzato quando si richiede all'utente di assegnare un tasto di scelta rapida. È responsabilità del programma per recuperare i valori che descrivono il tasto di scelta dal controllo tasto di scelta e per chiamare le funzioni appropriate per associare il tasto di scelta rapida a una finestra o thread.
+Utilizzare un controllo tasto di scelta rapida per ottenere l'input di un utente per il quale tasto di scelta da associare a una finestra o a un thread. I controlli tasto di scelta vengono spesso usati nelle finestre di dialogo, ad esempio quando si chiede all'utente di assegnare un tasto di scelta. È responsabilità del programma recuperare i valori che descrivono il tasto di scelta dal controllo del tasto di scelta e chiamare le funzioni appropriate per associare il tasto di scelta a una finestra o a un thread.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Uso di un controllo tasto di scelta rapida](../mfc/using-a-hot-key-control.md)
 

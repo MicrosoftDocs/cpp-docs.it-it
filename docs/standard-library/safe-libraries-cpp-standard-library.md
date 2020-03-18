@@ -1,21 +1,19 @@
 ---
-title: 'Librerie sicure: Libreria standard C++'
+title: 'Librerie protette: libreria standard C++'
 ms.date: 11/04/2016
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e352489ca12b5815aab5517defc72571abe177fb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454554"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446091"
 ---
-# <a name="safe-libraries-c-standard-library"></a>Librerie sicure: Libreria standard C++
+# <a name="safe-libraries-c-standard-library"></a>Librerie protette: libreria standard C++
 
 Sono stati apportati diversi miglioramenti alle librerie fornite con Microsoft C++, inclusa la C++ libreria standard, per renderle più sicure.
 
@@ -23,7 +21,7 @@ Nella libreria standard C++ vari metodi sono stati identificati come potenzialme
 
 Sono stati apportati anche vari miglioramenti per rendere gli iteratori e gli algoritmi più sicuri. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md), [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md) e [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La tabella seguente elenca i metodi della libreria standard C++ potenzialmente non sicuri, nonché il relativo equivalente più sicuro:
 
@@ -34,15 +32,15 @@ La tabella seguente elenca i metodi della libreria standard C++ potenzialmente n
 
 Se si chiama uno dei metodi potenzialmente non sicuri elencati qui sopra o se si usano gli iteratori in modo non corretto, il compilatore genererà l'[Avviso del compilatore (livello 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Per informazioni su come disabilitare questi avvisi, vedere [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)
 
 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)
 
-[Checked Iterators](../standard-library/checked-iterators.md)
+[Iteratori verificati](../standard-library/checked-iterators.md)
 
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)
+[Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md)
 
 ## <a name="see-also"></a>Vedere anche
 

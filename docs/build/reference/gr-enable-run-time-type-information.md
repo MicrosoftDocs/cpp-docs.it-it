@@ -2,7 +2,6 @@
 title: /GR (Attiva informazioni sui tipi in fase di esecuzione)
 ms.date: 11/04/2016
 f1_keywords:
-- /gr
 - VC.Project.VCCLWCECompilerTool.RuntimeTypeInfo
 - VC.Project.VCCLCompilerTool.RuntimeTypeInfo
 helpviewer_keywords:
@@ -12,16 +11,16 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-ms.openlocfilehash: 15ad453b10fd31de97bbc25f8062e628129076f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee1398b2f9ee78c62fb84aa591e77708cd0d9d83
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292120"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439591"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Attiva informazioni sui tipi in fase di esecuzione)
 
-Aggiunge il codice per controllare i tipi di oggetto in fase di esecuzione.
+Aggiunge codice per controllare i tipi di oggetto in fase di esecuzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,23 +28,23 @@ Aggiunge il codice per controllare i tipi di oggetto in fase di esecuzione.
 /GR[-]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando **/GR** è on, il compilatore definisce il `_CPPRTTI` macro del preprocessore. Per impostazione predefinita **/GR** si trova in. **/Gr-.** disabilita le informazioni sul tipo in fase di esecuzione.
+Quando **/gr** è on, il compilatore definisce la macro del preprocessore `_CPPRTTI`. Per impostazione predefinita, **/gr** è on. **/Gr-** Disabilita le informazioni sul tipo in fase di esecuzione.
 
-Uso **/GR** se il compilatore in modo statico non è possibile risolvere un tipo di oggetto nel codice. In genere è necessaria la **/GR** opzione quando il codice Usa [dynamic_cast Operator](../../cpp/dynamic-cast-operator.md) oppure [typeid](../../cpp/typeid-operator.md). Tuttavia **/GR** aumenta le dimensioni delle sezioni rdata dell'immagine. Se il codice non usa **dynamic_cast** oppure **typeid**, **/GR-.** potrebbero produrre un'immagine più piccola.
+Usare **/gr** se il compilatore non può risolvere in modo statico un tipo di oggetto nel codice. Quando il codice usa [dynamic_cast Operator](../../cpp/dynamic-cast-operator.md) o [typeid](../../cpp/typeid-operator.md), in genere è necessaria l'opzione **/gr** . Tuttavia, **/gr** aumenta le dimensioni delle sezioni. rdata dell'immagine. Se il codice non usa **dynamic_cast** o **typeid**, **/gr-** potrebbe produrre un'immagine più piccola.
 
-Per altre informazioni sul controllo dei tipi in fase di esecuzione, vedere [Run-Time Type Information](../../cpp/run-time-type-information.md) nel *riferimenti al linguaggio C++*.
+Per ulteriori informazioni sul controllo dei tipi in fase di esecuzione, vedere informazioni sui tipi in fase di [esecuzione nelle informazioni](../../cpp/run-time-type-information.md) di riferimento sul  *C++ linguaggio*.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
-1. Scegliere il **linguaggio** pagina delle proprietà.
+1. Fare clic sulla pagina delle proprietà **lingua** .
 
-1. Modificare il **Attiva informazioni sui tipi di Run-Time** proprietà.
+1. Modificare la proprietà **Abilita informazioni sul tipo in fase di esecuzione** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 

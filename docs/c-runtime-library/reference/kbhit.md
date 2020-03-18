@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _kbhit
-- kbhit
 - conio/_kbhit
 helpviewer_keywords:
 - keyboard input
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953520"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438099"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -56,11 +55,11 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-**_kbhit** restituisce un valore diverso da zero se è stato premuto un tasto. In caso contrario restituirà 0.
+**_kbhit** restituisce un valore diverso da zero se è stato premuto un tasto. In caso contrario, viene restituito 0.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_kbhit** controlla la console per una sequenza di tasti recente. Se la funzione restituisce un valore diverso da zero, una sequenza di tasti è in attesa nel buffer. Il programma può quindi chiamare **_getch** o **_getche** per ottenere la sequenza di tasti.
+La funzione **_kbhit** controlla la presenza di una sequenza di tasti recente nella console. Se la funzione restituisce un valore diverso da zero, una sequenza di tasti è in attesa nel buffer. Il programma può quindi chiamare **_getch** o **_getche** per ottenere la sequenza di tasti.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -68,7 +67,7 @@ La funzione **_kbhit** controlla la console per una sequenza di tasti recente. S
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="libraries"></a>Librerie
 
@@ -99,7 +98,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Esempio di output
+### <a name="sample-output"></a>Output di esempio
 
 ```Output
 Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!

@@ -7,11 +7,11 @@ f1_keywords:
 - xstring/std::u32string_view
 - xstring/std::wstring_view
 ms.openlocfilehash: c3367afe1353ac70abb74a59658a255614ac8470
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865847"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422381"
 ---
 # <a name="ltstring_viewgt-typedefs"></a>&lt;string_view&gt; typedef
 
@@ -28,7 +28,7 @@ Tipo che descrive una specializzazione del modello di classe [basic_string_view]
 typedef basic_string_view<char, char_traits<char>> string_view;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le dichiarazioni seguenti sono equivalenti:
 
@@ -48,7 +48,7 @@ Tipo che descrive una specializzazione del modello di classe [basic_string_view]
 typedef basic_string_view<char16_t, char_traits<char16_t>> u16string_view;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
@@ -60,7 +60,7 @@ Tipo che descrive una specializzazione del modello di classe [basic_string_view]
 typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
@@ -72,7 +72,7 @@ Tipo che descrive una specializzazione del modello di classe [basic_string_view]
 typedef basic_string_view<wchar_t, char_traits<wchar_t>> wstring_view;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le dichiarazioni seguenti sono equivalenti:
 

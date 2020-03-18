@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: e029752ebaae5debb33d8e4a3920c5572f4d923b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a20f76cf1657db2082fefadc03276b399235cbc9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302146"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446780"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabella di conformità al linguaggio C++ di Microsoft
 
@@ -120,7 +120,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 |&nbsp;&nbsp;[P1099R5 utilizzando enum](https://wg21.link/P1099R5)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P1186R3 quando si utilizza effettivamente \<=>](https://wg21.link/P1186R3)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[la spaziatura P1630R1 richiede una regolazione](https://wg21.link/P1630R1)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0641R2 Mancata corrispondenza tra costruttori con il costruttore di copia predefinito](https://wg21.link/P0641R2)|Partial|
+|&nbsp;&nbsp;[P0641R2 Mancata corrispondenza tra costruttori con il costruttore di copia predefinito](https://wg21.link/P0641R2)|Parziale|
 |&nbsp;&nbsp;[P0306R4 Aggiunta di \_\_VA_OPT\_\_ per omissione della virgola ed eliminazione della virgola](https://wg21.link/P0306R4)|No|
 |&nbsp;&nbsp;[P0315R4 Espressioni lambda consentite in contesti non valutati](https://wg21.link/P0315R4)|No|
 |&nbsp;&nbsp;[P0479R5 Attributi \[\[likely\]\] e \[\[unlikely\]\]](https://wg21.link/P0479R5)|No|
@@ -155,7 +155,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 |__Funzionalità della libreria standard C++20__|__Supportato__|
 |&nbsp;&nbsp;[P0809R0: confrontare contenitori non ordinati](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0858R0: requisiti di iteratore Constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0777R1 Come evitare il decadimento non necessario](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0777R1: evitare il decadimento non necessario](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1164R1 rendendo intuitivo create_directory ()](https://wg21.link/P1164R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0318R1 unwrap_reference, unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
@@ -172,13 +172,13 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 |&nbsp;&nbsp;[P0754R2 \<version>](https://wg21.link/p0754r2)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0771R1 noexcept per il costruttore di spostamento di std::function](https://wg21.link/P0771R1)|VS 2019 16,2 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0487R1 Correzione di operator>>(basic_istream&, CharT*)](https://wg21.link/P0487R1)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0616R0 Uso di move() in \<numeric>](https://wg21.link/p0616r0)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0616R0: usare move() in \<numeric>](https://wg21.link/p0616r0)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0898R3 Concetti della libreria standard](https://wg21.link/P0898R3)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0919R3 Ricerca eterogenea di contenitori non ordinati](https://wg21.link/P0919R3)|VS 2019 16,3 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P1754R1 rinominare i concetti standard_case](https://wg21.link/P1754R1)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|No|
-|&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 Modifiche osyncstream](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|No|
+|&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2: modifiche osyncstream](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|No|
 |&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|No|
 |&nbsp;&nbsp;[P0202R3 constexpr per \<algorithm> ed exchange()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|No|
 |&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|No|
@@ -189,26 +189,26 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 |&nbsp;&nbsp;[P0415R1 constexpr per \<complex> (ripetizione)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|No|
 |&nbsp;&nbsp;[P0439R0 enum class memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|No|
 |&nbsp;&nbsp;[P0475R1 Elisione copia garantita per una costruzione lineare a tratti](https://wg21.link/P0475R1)|No|
-|&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|No|
+|&nbsp;&nbsp;[P0476R2 \<bit > bit_cast](https://wg21.link/P0476R2)|No|
 |&nbsp;&nbsp;[P0528R3 Confronto e scambio atomico con bit di riempimento](https://wg21.link/P0528R3)|No|
-|&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|No|
+|&nbsp;&nbsp;[P0556R3 \<bit > ispow2 (), ceil2 (), floor2 (), log2p1 ()](https://wg21.link/P0556R3)|No|
 |&nbsp;&nbsp;[P0591R4 Funzioni di utilità per costruzioni uses-allocator](https://wg21.link/P0591R4)|No|
 |&nbsp;&nbsp;[P0608R3 Miglioramento del costruttore o dell'assegnazione di conversione della variante](https://wg21.link/P0608R3)|No|
 |&nbsp;&nbsp;[P0619R4 Rimozione delle funzionalità deprecate di C++17 in C++20](https://wg21.link/P0619R4)|No|
 |&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|No|
-|&nbsp;&nbsp;[P0655R1 visit<R>()](https://wg21.link/P0655R1)|No|
+|&nbsp;&nbsp;[P0655R1 visitare\<R > ()](https://wg21.link/P0655R1)|No|
 |&nbsp;&nbsp;[P0674R1 make_shared() per le matrici](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|No|
 |&nbsp;&nbsp;[P0718R2 atomic\<shared_ptr\<T>>, atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|No|
 |&nbsp;&nbsp;[P0738R2 Pulizia di istream_iterator](https://wg21.link/P0738R2)|No|
-|&nbsp;&nbsp;[P0767R1 Deprecamento di is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|No|
-|&nbsp;&nbsp;[P0768R1 Supporto libreria per l'operatore di confronto Spaceship \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|No|
+|&nbsp;&nbsp;[P0767R1: deprecare is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|No|
+|&nbsp;&nbsp;[P0768R1: supporto libreria per l'operatore di confronto Spaceship \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|No|
 |&nbsp;&nbsp;[P0811R3 midpoint(), lerp()](https://wg21.link/P0811R3)|No|
 |&nbsp;&nbsp;[P0879R0 constexpr per funzioni di scambio](https://wg21.link/P0879R0)|No|
 |&nbsp;&nbsp;[P0896R4 \<ranges\>](https://wg21.link/P0896R4)|No|
 |&nbsp;&nbsp;[P0912R5 Supporto di libreria per coroutine](https://wg21.link/P0912R5)|No|
 |&nbsp;&nbsp;[P0920R2 Ricerca di valori hash precalcolati](https://wg21.link/P0920R2)|No|
 |&nbsp;&nbsp;[P0935R0 Eliminazione di costruttori predefiniti inutilmente espliciti](https://wg21.link/P0935R0)|No|
-|&nbsp;&nbsp;[P0966R1 Non ridurre string::reserve()](https://wg21.link/P0966R1)|No|
+|&nbsp;&nbsp;[P0966R1: non ridurre string::reserve()](https://wg21.link/P0966R1)|No|
 |&nbsp;&nbsp;[P1001R2 execution::unseq](https://wg21.link/P1001R2)|No|
 |&nbsp;&nbsp;[P1006R1 constexpr per pointer_traits<T*>::pointer_to()](https://wg21.link/P1006R1)|No|
 |&nbsp;&nbsp;[P1007R3 assume_aligned()](https://wg21.link/P1007R3)|No|
@@ -354,15 +354,15 @@ __VS 2019 16,4__ indica le funzionalità supportate in Visual Studio 2019 versio
 
 <a name="note_A"></a>__A__ Nella modalità [/std:c++14](../build/reference/std-specify-language-standard-version.md) le specifiche di eccezione dinamiche non vengono implementate e `throw()` viene ancora considerato come sinonimo di `__declspec(nothrow)`. In C++17 le specifiche di eccezione dinamiche sono state per lo più rimosse da P0003R5. Vestige: `throw()` viene deprecato e si comporta come sinonimo di `noexcept`. In modalità [/std: c++ 17](../build/reference/std-specify-language-standard-version.md) , MSVC Ora è conforme allo standard assegnando `throw()` lo stesso comportamento `noexcept`, ovvero l'imposizione tramite terminazione.
 
-L'opzione del compilatore [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) richiede il comportamento precedente di `__declspec(nothrow)`. `throw()` sarà probabilmente rimosso in C++20. Per agevolare la migrazione del codice in risposta a queste modifiche nello standard e nell'implementazione Microsoft, sono stati aggiunti nuovi avvisi del compilatore per problemi relativi alle specifiche di eccezione in [/std:c++17](../build/reference/std-specify-language-standard-version.md) e [/permissive-](../build/reference/permissive-standards-conformance.md).
+L'opzione del compilatore [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) richiede il comportamento precedente di `__declspec(nothrow)`. È probabile che `throw()` verrà rimosso in C++ 20. Per agevolare la migrazione del codice in risposta a queste modifiche nello standard e nell'implementazione Microsoft, sono stati aggiunti nuovi avvisi del compilatore per problemi relativi alle specifiche di eccezione in [/std:c++17](../build/reference/std-specify-language-standard-version.md) e [/permissive-](../build/reference/permissive-standards-conformance.md).
 
 <a name="note_B"></a>__B__ Supporto nella modalità [/permissive-](../build/reference/permissive-standards-conformance.md) in Visual Studio 2017 versione 15.7. Per ulteriori informazioni, vedere il [supporto della ricerca nome in due fasi è MSVC](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/).
 
-<a name="note_C"></a>__C__ Il supporto del compilatore per le regole del preprocessore C99 è incompleto in Visual Studio 2017. Il preprocessore viene revisionato ed è iniziata la spedizione delle modifiche in Visual Studio 2017 versione 15,8 con l'opzione del compilatore [/Experimental: Preprocessor](../build/reference/experimental-preprocessor.md) .
+<a name="note_C"></a>__C__ il supporto del compilatore per le regole del preprocessore C99 è incompleto in Visual Studio 2017. Il preprocessore viene revisionato ed è iniziata la spedizione delle modifiche in Visual Studio 2017 versione 15,8 con l'opzione del compilatore [/Experimental: Preprocessor](../build/reference/experimental-preprocessor.md) .
 
 <a name="note_D"></a>__D__ Supporto disponibile in [/std:c++14](../build/reference/std-specify-language-standard-version.md) con un messaggio di avviso che può essere rimosso, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
-<a name="note_E"></a>__E__ si tratta di un'implementazione completamente nuova, incompatibile con la versione precedente di `std::experimental`, resa necessaria dal supporto di collegamento simbolico, correzioni di bug e modifiche nel comportamento standard-required. Attualmente, con \<filesystem > sono inclusi il nuovo `std::experimental::filesystem` e il precedente \<. Con `std::filesystem`experimental/filesystem> è inclusa solo la precedente implementazione sperimentale. L'implementazione sperimentale sarà RIMOSSA nella prossima versione delle librerie con modifiche di rilievo per l'ABI.
+<a name="note_E"></a>__E__ si tratta di un'implementazione completamente nuova, incompatibile con la versione precedente di `std::experimental`, resa necessaria dal supporto di collegamento simbolico, correzioni di bug e modifiche nel comportamento standard-required. Attualmente, con \<filesystem > sono inclusi il nuovo `std::filesystem` e il precedente `std::experimental::filesystem`. Con \<experimental/filesystem> è inclusa solo la precedente implementazione sperimentale. L'implementazione sperimentale sarà RIMOSSA nella prossima versione delle librerie con modifiche di rilievo per l'ABI.
 
 <a name="note_G"></a>__G__ Funzionalità supportata da una funzione intrinseca del compilatore.
 

@@ -1,21 +1,19 @@
 ---
 title: Language Strings
 ms.date: 11/04/2016
-f1_keywords:
-- c.strings
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 18a94d33f9ca382bb6c7cd77a4f2b33ed800f2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500067"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438256"
 ---
 # <a name="language-strings"></a>Language Strings
 
-Le funzioni [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) possono usare le lingue supportate dall'API NLS di Windows nei sistemi operativi che non usano la tabella codici Unicode. Per l'elenco delle lingue supportate dalle singole versioni del sistema operativo, vedere [Appendice A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Appendice A: Comportamento del prodotto) in [MS-LCID]: Windows Language Code Identifier (LCID) Reference (Informazioni di riferimento sugli identificatori LCID di Windows). La stringa di lingua può essere uno dei valori nelle colonne **Language** (Lingua) e **Language tag** (Tag lingua) dell'elenco delle lingue supportate. Per un esempio di codice che enumera i nomi delle impostazioni locali disponibili e i valori correlati, vedere [NLS: esempio di API basate sui nomi](/windows/win32/intl/nls--name-based-apis-sample).
+Le funzioni [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) possono usare le lingue supportate dall'API NLS di Windows nei sistemi operativi che non usano la tabella codici Unicode. Per un elenco delle lingue supportate in base alla versione del sistema operativo, vedere [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Appendice A: comportamento del prodotto) in "[MS-LCID]: Windows Language Code Identifier (LCID) Reference" (Informazioni di riferimento sugli identificatori di lingua (LCID) di Windows). La stringa di lingua può essere uno dei valori nelle colonne **Language** (Lingua) e **Language tag** (Tag lingua) dell'elenco delle lingue supportate. Per un esempio di codice che enumera i nomi delle impostazioni locali disponibili e i valori correlati, vedere [NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample) (NLS: esempio di API basate sui nomi).
 
 ## <a name="additional-supported-language-strings"></a>Stringhe di lingua aggiuntive supportate
 
@@ -23,21 +21,21 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 
 |Stringa lingua|Nome equivalente delle impostazioni locali|
 |---------------------|----------------------------|
-|americano|en-US|
-|inglese americano|en-US|
-|inglese americano|en-US|
-|australiano|en-AU|
-|belga|nl-BE|
-|canadese|en-CA|
+|american|it-IT|
+|inglese americano|it-IT|
+|inglese americano|it-IT|
+|australian|en-AU|
+|belgian|nl-BE|
+|canadian|en-CA|
 |chh|zh-HK|
 |chi|zh-SG|
-|cinese|zh|
+|chinese|zh|
 |cinese hongkong|zh-HK|
 |cinese semplificato|zh-CN|
 |cinese singapore|zh-SG|
 |cinese tradizionale|zh-TW|
 |olandese belga|nl-BE|
-|inglese americano|en-US|
+|inglese americano|it-IT|
 |inglese aus|en-AU|
 |inglese belize|en-BZ|
 |inglese can|en-CA|
@@ -48,8 +46,8 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |inglese sudafrica|en-ZA|
 |inglese trinidad y tobago|en-TT|
 |inglese regno unito|en-GB|
-|inglese stati uniti|en-US|
-|inglese stati uniti|en-US|
+|inglese stati uniti|it-IT|
+|inglese stati uniti|it-IT|
 |francese belga|fr-BE|
 |francese canadese|fr-CA|
 |francese lussemburgo|fr-LU|
@@ -60,7 +58,7 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |tedesco svizzero|de-CH|
 |irlandese inglese|en-IE|
 |italiano svizzero|it-CH|
-|norvegese|No|
+|norwegian|no|
 |norvegese bokmål|nb-NO|
 |norvegese nynorsk|nn-NO|
 |portoghese brasile|pt-BR|
@@ -84,10 +82,10 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |spagnolo uruguay|es-UY|
 |spagnolo venezuela|es-VE|
 |svedese finlandia|sv-FI|
-|svizzero|de-CH|
+|swiss|de-CH|
 |uk|en-GB|
-|us|en-US|
-|stati uniti|en-US|
+|us|it-IT|
+|stati uniti|it-IT|
 
 ## <a name="see-also"></a>Vedere anche
 

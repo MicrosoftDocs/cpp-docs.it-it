@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
 ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865450"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420904"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -93,13 +93,13 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CToolTipCtrl:: CToolTipCtrl](#ctooltipctrl)|Costruisce un oggetto `CToolTipCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CToolTipCtrl:: Activate](#activate)|Attiva e disattiva il controllo ToolTip.|
 |[CToolTipCtrl:: AddTool](#addtool)|Registra uno strumento con il controllo descrizione comando.|
@@ -821,7 +821,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>Parametri
 
 *uIcon*<br/>
-Vedere l'icona [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) nel Windows SDK.
+Vedere *icon* l'icona [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) nel Windows SDK.
 
 *lpstrTitle*<br/>
 Puntatore alla stringa del titolo.

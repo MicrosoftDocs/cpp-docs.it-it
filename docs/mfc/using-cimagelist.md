@@ -1,26 +1,24 @@
 ---
 title: Utilizzo di CImageList
 ms.date: 11/04/2016
-f1_keywords:
-- CImageList
 helpviewer_keywords:
 - image list control
 - CImageList class [MFC], using
 ms.assetid: 3d2a909e-d641-46b7-aada-81cab1a29b41
-ms.openlocfilehash: c3e4cec75ce23beb2a617d672170f86c608ca0a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09fd0e95ce2981afbebbfe10d87b26f88a7b5e13
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411838"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447229"
 ---
 # <a name="using-cimagelist"></a>Utilizzo di CImageList
 
-Un elenco di immagini, rappresentato dalla classe [CImageList](../mfc/reference/cimagelist-class.md), è una raccolta di immagini stessa dimensione, ognuno dei quali può essere indicato dal relativo indice. Elenchi di immagini consentono di gestire in modo efficiente grandi set di icone o bitmap. Elenchi di immagini non stessi sono controlli perché non sono finestre. Tuttavia, vengono usati con diversi tipi di controlli, inclusi i controlli di elenco ([CListCtrl](../mfc/reference/clistctrl-class.md)), i controlli di struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) e controlli ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).
+Un elenco di immagini, rappresentato dalla classe [CImageList](../mfc/reference/cimagelist-class.md), è una raccolta di immagini di dimensioni uguali, ciascuna delle quali può essere definita in base al relativo indice. Gli elenchi di immagini vengono utilizzati per gestire in modo efficiente grandi set di icone o bitmap. Gli elenchi di immagini non sono controlli perché non sono Windows; vengono tuttavia usati con diversi tipi di controlli, inclusi i controlli elenco ([CListCtrl](../mfc/reference/clistctrl-class.md)), i controlli struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) e i controlli di tabulazione ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).
 
-Tutte le immagini in un elenco di immagini sono contenute in una bitmap singola, ampia nel formato di dispositivo dello schermo. Un elenco di immagini può includere anche una bitmap monocromatica che contiene le maschere utilizzate per disegnare immagini in modo trasparente (stile icona). `CImageList` fornisce funzioni membro che consentono di disegnare immagini, creare e distruggere gli elenchi di immagini, aggiungere e rimuovere immagini, sostituire le immagini, immagini di tipo merge e trascinare le immagini.
+Tutte le immagini in un elenco di immagini sono contenute in un'unica bitmap a caratteri wide in formato schermo-dispositivo. Un elenco di immagini può includere anche una bitmap monocromatica che contiene le maschere usate per creare le immagini in modo trasparente (stile icona). `CImageList` fornisce funzioni membro che consentono di creare immagini, creare ed eliminare in modo permanente elenchi di immagini, aggiungere e rimuovere immagini, sostituire immagini, unire immagini e trascinare immagini.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Tipi di elenchi di immagini](../mfc/types-of-image-lists.md)
 

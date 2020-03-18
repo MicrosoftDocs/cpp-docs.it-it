@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 48ffe6f124b91ee8ad60452f26d895bc2698779b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866594"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447314"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
 
@@ -476,7 +476,8 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) . L
 
   **Intestazione** AFXDAO. h
 
-  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
+## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
+
 La funzione `DDX_FieldSlider` sincronizza la posizione Thumb di un controllo dispositivo di scorrimento in una visualizzazione di record e un membro dati del campo **int** di un recordset associato alla visualizzazione dei record (o con qualsiasi variabile di tipo Integer a cui si sceglie di eseguire il mapping).
 
 ### <a name="syntax"></a>Sintassi
