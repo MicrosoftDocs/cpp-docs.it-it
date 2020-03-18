@@ -3,18 +3,18 @@ title: Distribuire, eseguire ed eseguire il debug del progetto Linux C++ in Visu
 description: Descrive come compilare, eseguire ed eseguire il debug del codice nella destinazione remota all'interno di un progetto Linux C++ in Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
-ms.translationtype: HT
+ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042758"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441665"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Distribuire, eseguire e sottoporre a debug il progetto Linux
 
 ::: moniker range="vs-2015"
 
-Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
@@ -191,11 +191,12 @@ Se si vuole un controllo completo sulla distribuzione, è possibile aggiungere u
 ]
 
 ```
+
 ::: moniker-end
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per eseguire il debug dei dispositivi ARM in Linux, vedere il post di blog sul [debug di un dispositivo ARM incorporato in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Per eseguire il debug di dispositivi ARM in Linux, vedere questo post di blog relativo al [debug di un dispositivo ARM incorporato in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
 ## <a name="see-also"></a>Vedere anche
 

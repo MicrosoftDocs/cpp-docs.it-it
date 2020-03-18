@@ -1,8 +1,6 @@
 ---
 title: Due modi per creare un oggetto CArchive
 ms.date: 11/04/2016
-f1_keywords:
-- CArchive
 helpviewer_keywords:
 - CArchive class [MFC], closing CArchive objects
 - CArchive objects [MFC], closing
@@ -13,58 +11,58 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38642906b0973730149ed0de5381519f06d69fe5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181510"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442033"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Due modi per creare un oggetto CArchive
 
-Esistono due modi per creare un `CArchive` oggetto:
+Esistono due modi per creare un oggetto `CArchive`:
 
-- [Creazione implicita di un oggetto CArchive tramite il framework](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
+- [Creazione implicita di un oggetto CArchive tramite il Framework](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
 
 - [Creazione esplicita di un oggetto CArchive](#_core_explicit_creation_of_a_carchive_object)
 
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Creazione implicita di un oggetto CArchive tramite il Framework
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Creazione implicita di un oggetto CArchive tramite il Framework
 
-È il modo più comune e più semplice, per consentire il framework di creare un `CArchive` oggetto per il documento per conto di salvataggio, Salva con nome e comandi aperti dal menu File.
+Il modo più comune e più semplice consiste nel consentire al Framework di creare un oggetto `CArchive` per il documento per conto dei comandi Salva, Salva con nome e Apri nel menu file.
 
-Ecco cosa eseguite dal framework quando l'utente dell'applicazione esegue il comando Salva dal menu File:
+Ecco cosa fa il Framework quando l'utente dell'applicazione rilascia il comando Salva con nome dal menu file:
 
-1. Presenta la **Salva con nome** nella finestra di dialogo e ottiene il nome del file da parte dell'utente.
+1. Visualizza la finestra di dialogo **Salva con** nome e ottiene il nome del file dall'utente.
 
-1. Apre il file denominato dall'utente come un `CFile` oggetto.
+1. Apre il file denominato dall'utente come oggetto `CFile`.
 
-1. Crea una `CArchive` che fa riferimento a questo oggetto `CFile` oggetto. Nella creazione di `CArchive` dell'oggetto, il framework imposta la modalità "store" (scrittura, serializzare), invece di "caricamento" (lettura, la deserializzazione).
+1. Crea un `CArchive` oggetto che punta a questo oggetto `CFile`. Quando si crea l'oggetto `CArchive`, il Framework imposta la modalità su "Store" (Write, Serialize), anziché "Load" (Read, Deserialize).
 
-1. Chiama il `Serialize` funzione definita nel `CDocument`-derivato (classe), passare un riferimento al `CArchive` oggetto.
+1. Chiama la funzione `Serialize` definita nella classe derivata da `CDocument`, passando un riferimento all'oggetto `CArchive`.
 
-Il documento `Serialize` funzione scrive quindi i dati per il `CArchive` dell'oggetto, come illustrato tra breve. Al momento della restituzione dalle `Serialize` Elimina definitivamente il framework di funzione, il `CArchive` oggetto e quindi il `CFile` oggetto.
+La funzione `Serialize` del documento scrive quindi i dati nell'oggetto `CArchive`, come illustrato a breve. Al ritorno dalla funzione `Serialize`, il Framework Elimina l'oggetto `CArchive` e quindi l'oggetto `CFile`.
 
-Di conseguenza, se si lascia il framework crea il `CArchive` dell'oggetto per il documento, è sufficiente eseguire è l'implementazione del documento `Serialize` funzione che scrive e legge da e verso l'archivio. È inoltre necessario implementare `Serialize` per qualsiasi `CObject`-oggetti derivati che il documento `Serialize` funzione serializza a sua volta direttamente o indirettamente.
+Se quindi si lascia che il framework crei l'oggetto `CArchive` per il documento, è sufficiente implementare la funzione di `Serialize` del documento che scrive e legge da e verso l'archivio. È anche necessario implementare `Serialize` per tutti gli oggetti derivati da `CObject`che la funzione `Serialize` del documento a sua volta serializza direttamente o indirettamente.
 
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a> Creazione esplicita di un oggetto CArchive
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a>Creazione esplicita di un oggetto CArchive
 
-Oltre a potere serializzare un documento tramite il framework, esistono altre situazioni potrebbe essere necessario un `CArchive` oggetto. Potrebbe ad esempio, si desidera serializzare i dati da e verso gli Appunti, rappresentato da un `CSharedFile` oggetto. In alternativa, è possibile utilizzare un'interfaccia utente per il salvataggio di un file che è diverso da quello offerto dal framework. In questo caso, è possibile creare in modo esplicito un `CArchive` oggetto. A tale scopo allo stesso modo che il framework esegue, usando la procedura seguente.
+Oltre a serializzare un documento tramite il Framework, in altre occasioni potrebbe essere necessario un oggetto `CArchive`. È ad esempio possibile che si voglia serializzare i dati da e verso gli appunti, rappresentati da un oggetto `CSharedFile`. In alternativa, è consigliabile usare un'interfaccia utente per salvare un file diverso da quello offerto dal Framework. In questo caso, è possibile creare in modo esplicito un oggetto `CArchive`. Questa operazione viene eseguita nello stesso modo del Framework, usando la procedura seguente.
 
-#### <a name="to-explicitly-create-a-carchive-object"></a>Creare in modo esplicito un oggetto CArchive
+#### <a name="to-explicitly-create-a-carchive-object"></a>Per creare in modo esplicito un oggetto CArchive
 
-1. Creare un `CFile` oggetto o un oggetto derivato da `CFile`.
+1. Costruisce un oggetto `CFile` o un oggetto derivato da `CFile`.
 
-1. Passare il `CFile` al costruttore per oggetti `CArchive`, come illustrato nell'esempio seguente:
+1. Passare l'oggetto `CFile` al costruttore per `CArchive`, come illustrato nell'esempio seguente:
 
    [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-   Il secondo argomento di `CArchive` costruttore è un valore enumerato che specifica se l'archivio verrà usata per l'archiviazione o il caricamento di dati verso e dal file. Il `Serialize` funzione di un oggetto questo stato viene controllato tramite la chiamata di `IsStoring` funzione per l'oggetto di archiviazione.
+   Il secondo argomento del costruttore `CArchive` è un valore enumerato che specifica se l'archivio verrà usato per archiviare o caricare dati da o verso il file. La funzione `Serialize` di un oggetto controlla questo stato chiamando la funzione `IsStoring` per l'oggetto Archive.
 
-Dopo aver terminato l'archiviazione o il caricamento dei dati da o verso il `CArchive` dell'oggetto, chiuderlo. Anche se il `CArchive` (e `CFile`) oggetti chiuderà automaticamente l'archivio (e file), è consigliabile farlo in modo esplicito poiché semplifica il recupero da errori. Per altre informazioni sulla gestione degli errori, vedere l'articolo [alle eccezioni: Rilevamento ed eliminazione di eccezioni](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Al termine dell'archiviazione o del caricamento dei dati da o verso l'oggetto `CArchive`, chiuderlo. Sebbene gli oggetti `CArchive` (e `CFile`) chiudano automaticamente l'archivio (e il file), è consigliabile eseguire questa operazione in modo esplicito perché semplifica il ripristino dagli errori. Per ulteriori informazioni sulla gestione degli errori, vedere l'articolo [eccezioni: catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 #### <a name="to-close-the-carchive-object"></a>Per chiudere l'oggetto CArchive
 
-1. Nell'esempio seguente viene illustrato come chiudere il `CArchive` oggetto:
+1. Nell'esempio seguente viene illustrato come chiudere l'oggetto `CArchive`:
 
    [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 

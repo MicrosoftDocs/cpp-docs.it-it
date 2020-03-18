@@ -20,23 +20,19 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943417"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443045"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -57,11 +53,11 @@ Numero complesso.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, **_cabs** restituisce il valore assoluto dell'argomento. In overflow, **_cabs** restituisce **HUGE_VAL** e imposta **errno** su **ERANGE**. È possibile modificare la gestione degli errori con [_matherr](matherr.md).
+**_cabs** restituisce il valore assoluto dell'argomento in caso di esito positivo. In overflow, **_cabs** restituisce **HUGE_VAL** e imposta **errno** su **ERANGE**. È possibile modificare la gestione degli errori con [_matherr](matherr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_cabs** calcola il valore assoluto di un numero complesso che deve essere una struttura di tipo [_complex](../../c-runtime-library/standard-types.md). La struttura *z* è costituita da un componente reale *x* e da un componente immaginario *y*. Una chiamata a **_cabs** produce un valore equivalente a quello dell'espressione `sqrt( z.x * z.x + z.y * z.y )`.
+La funzione **_cabs** calcola il valore assoluto di un numero complesso, che deve essere una struttura di tipo [_complex](../../c-runtime-library/standard-types.md). La struttura *z* è costituita da un componente reale *x* e da un componente immaginario *y*. Una chiamata a **_cabs** produce un valore equivalente a quello dell'espressione `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -69,7 +65,7 @@ La funzione **_cabs** calcola il valore assoluto di un numero complesso che deve
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

@@ -1,20 +1,18 @@
 ---
 title: Gestione degli errori (CRT)
 ms.date: 11/04/2016
-f1_keywords:
-- c.errors
 helpviewer_keywords:
 - error handling, C routines for
 - logic errors
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-ms.openlocfilehash: 7b3a5676c9297b1d7805f92b3a15cc71518ecd65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d38aaf76a4901b12290782957db90049d815d278
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551216"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443313"
 ---
 # <a name="error-handling-crt"></a>Gestione degli errori (CRT)
 
@@ -22,7 +20,7 @@ Usare queste routine per gestire gli errori del programma.
 
 ## <a name="error-handling-routines"></a>Routine di gestione degli errori
 
-|Routine|Usa|
+|Routine|Uso|
 |-------------|---------|
 |Macro [assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Verifica la presenza di errori logici di programmazione ed è disponibile sia nelle versioni di rilascio sia nelle versioni di debug della libreria di runtime.|
 |Macro [_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Simile ad **assert**, ma disponibile solo nelle versioni di debug della libreria di runtime.|

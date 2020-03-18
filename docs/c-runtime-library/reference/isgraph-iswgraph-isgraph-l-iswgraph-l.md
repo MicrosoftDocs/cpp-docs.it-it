@@ -25,7 +25,6 @@ topic_type:
 f1_keywords:
 - _isgraph_l
 - _iswgraph_l
-- _ismbcgraph_l
 - Isgraph
 - _istgraph_l
 - _istgraph
@@ -40,12 +39,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 88219ca6dc4218fc13f7d7c0b5f2ba399c07d501
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 282f11dfa6a4545b672419d42fe960c0e5001fbf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954870"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442977"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -79,7 +78,7 @@ Valore Integer da testare.
 
 Ognuna di queste routine restituisce un valore diverso da zero se *c* è una rappresentazione particolare di un carattere stampabile diverso da uno spazio. l'oggetto **Graph** restituisce un valore diverso da zero se *c* è un carattere stampabile diverso da uno spazio. **iswgraph** restituisce un valore diverso da zero se *c* è un carattere Wide stampabile diverso da uno spazio di caratteri wide. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni che hanno il suffisso **suffisso** usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno il suffisso **_L** usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).
 
 Il comportamento di **Graph** e **_isgraph_l** non è definito se *c* non è EOF o nell'intervallo compreso tra 0 e 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
 
@@ -99,7 +98,7 @@ Il comportamento di **Graph** e **_isgraph_l** non è definito se *c* non è EOF
 |**_isgraph_l**|\<ctype.h>|
 |**_iswgraph_l**|\<ctype.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="see-also"></a>Vedere anche
 

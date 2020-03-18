@@ -1,30 +1,28 @@
 ---
 title: Utilizzo di descrizioni comandi in un oggetto CStatusBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - tool tips [MFC], using in status bars
 - status bars [MFC], tool tips
 - CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
-ms.openlocfilehash: 3f9a1fec7eb951fa76c542e09df751b4c58ddb16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a607a5fb8c9470df42d12c771865b924891b2dac
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411435"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442537"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Utilizzo di descrizioni comandi in un oggetto CStatusBarCtrl
 
-Per abilitare le descrizioni comandi per un controllo barra di stato, creare il `CStatusBarCtrl` oggetto con lo stile SBT_TOOLTIPS.
+Per abilitare le descrizioni comandi per un controllo barra di stato, creare l'oggetto `CStatusBarCtrl` con lo stile SBT_TOOLTIPS.
 
 > [!NOTE]
->  Se si usa un' `CStatusBar` oggetto per implementare la barra di stato, usare il `CStatusBar::CreateEx` (funzione). Consente di specificare gli stili aggiuntivi per l'oggetto incorporato `CStatusBarCtrl` oggetto.
+>  Se si usa un oggetto `CStatusBar` per implementare la barra di stato, usare la funzione `CStatusBar::CreateEx`. Consente di specificare stili aggiuntivi per l'oggetto `CStatusBarCtrl` incorporato.
 
-Una volta il `CStatusBarCtrl` oggetto è stato creato correttamente, usare [CStatusBarCtrl:: SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) e [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) per impostare e recuperare il testo del suggerimento per un riquadro specifico.
+Una volta creato correttamente l'oggetto `CStatusBarCtrl`, utilizzare [CStatusBarCtrl:: SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) e [CStatusBarCtrl:: GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) per impostare e recuperare il testo del suggerimento per un riquadro specifico.
 
-Dopo aver impostata la descrizione comando, viene visualizzato solo se la parte dispone di un'icona e alcun testo, o se tutto il testo non può essere visualizzata all'interno della parte. Descrizioni comandi non sono supportate nella modalità semplice.
+Una volta impostata la descrizione comando, questa viene visualizzata solo se la parte include un'icona e nessun testo oppure se non è possibile visualizzare tutto il testo all'interno della parte. Le descrizioni comandi non sono supportate in modalità semplice.
 
 ## <a name="see-also"></a>Vedere anche
 

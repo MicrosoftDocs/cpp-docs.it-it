@@ -1,8 +1,6 @@
 ---
 title: I/O a basso livello
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O [CRT], low-level
 - I/O [CRT], functions
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: 7812656bdcb3f58866f91009b6ad3de9fd67cebe
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740148"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443098"
 ---
 # <a name="low-level-io"></a>I/O a basso livello
 
@@ -23,7 +21,7 @@ Queste funzioni richiamano direttamente il sistema operativo per operazioni di l
 
 Le routine di basso livello possono accedere ai flussi standard aperti all'avvio del programma utilizzando i seguenti descrittori di file predefiniti.
 
-|Flusso|Descrittore del file|
+|STREAM|Descrittore del file|
 |------------|---------------------|
 |**stdin**|0|
 |**stdout**|1|
@@ -33,11 +31,11 @@ Le routine di I/O a basso livello impostano la variabile globale [errno](../c-ru
 
 ## <a name="low-level-io-functions"></a>Funzioni di I/O di basso livello
 
-|Funzione|Usa|
+|Funzione|Uso|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|Chiudere il file|
 |[_commit](../c-runtime-library/reference/commit.md)|Scaricare il file su disco|
-|[_creat, _wcreat](../c-runtime-library/reference/creat-wcreat.md)|Creare file|
+|[_creat, _wcreat](../c-runtime-library/reference/creat-wcreat.md)|Crea file|
 |[_dup](../c-runtime-library/reference/dup-dup2.md)|Restituire il descrittore del file successivo disponibile per il file specificato|
 |[_dup2](../c-runtime-library/reference/dup-dup2.md)|Creare il secondo descrittore per il file specificato|
 |[_eof](../c-runtime-library/reference/eof.md)|Test per la fine del file|

@@ -2,19 +2,19 @@
 title: /SECTION (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /section
+- /section_editbin
 helpviewer_keywords:
 - -SECTION editbin option
 - SECTION editbin option
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e1d1c1cf288a7fe68f5bd076791d43f5b8572
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318602"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438908"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -22,43 +22,43 @@ ms.locfileid: "62318602"
 /SECTION:name[=newname][,attributes][alignment]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa opzione consente di modificare gli attributi di una sezione, si esegue l'override gli attributi che sono stati impostati quando il file oggetto per la sezione è stato compilato o collegato.
+Questa opzione consente di modificare gli attributi di una sezione, sostituendo gli attributi impostati quando il file oggetto per la sezione è stato compilato o collegato.
 
-Dopo i due punti ( **:** ), specificare il *nome* della sezione. Per modificare il nome della sezione, seguire *name* con un segno di uguale (=) e una *newname* per la sezione.
+Dopo i due punti ( **:** ) specificare il *nome* della sezione. Per modificare il nome della sezione, seguire il *nome* con un segno di uguale (=) e un *newname* per la sezione.
 
-Per impostare o modificare la sezione `attributes`, specificare la virgola (**,**) seguito da uno o più caratteri di attributi. Per negare a un attributo, anteporre il carattere con un punto esclamativo (!). I caratteri seguenti specificano attributi della memoria:
+Per impostare o modificare la `attributes`della sezione, specificare una virgola ( **,** ) seguita da uno o più caratteri degli attributi. Per negare un attributo, anteporre al carattere un punto esclamativo (!). I caratteri seguenti specificano gli attributi di memoria:
 
 |Attributo|Impostazione|
 |---------------|-------------|
 |c|codice|
-|d|Scaricabile|
-|h|eseguibile|
+|d|annullabile|
+|e|eseguibile|
 |i|dati inizializzati|
-|k|memoria virtuale memorizzato nella cache|
-|m|rimozione del collegamento|
+|k|memoria virtuale memorizzata nella cache|
+|m|Rimuovi collegamento|
 |o|informazioni sul collegamento|
-|p|paging della memoria virtuale|
-|r|read|
-|s|shared|
+|p|memoria virtuale di paging|
+|r|leggere|
+|s|condiviso|
 |u|dati non inizializzati|
 |w|scrivere|
 
-Per controllare *allineamento*, specificare il carattere **oggetto** seguita da uno dei caratteri seguenti per impostare le dimensioni dell'allineamento in byte, come indicato di seguito:
+Per controllare l' *allineamento*, specificare il carattere **a** seguito da uno dei caratteri seguenti per impostare la dimensione dell'allineamento in byte, come indicato di seguito:
 
-|Carattere|Dimensione in byte di allineamento|
+|Carattere|Dimensioni allineamento in byte|
 |---------------|-----------------------------|
 |1|1|
 |2|2|
 |4|4|
 |8|8|
 |p|16|
-|u|32|
+|t|32|
 |s|64|
 |x|Nessun allineamento|
 
-Specificare il `attributes` e *allineamento* caratteri sotto forma di stringa senza spazi. I caratteri non sono tra maiuscole e minuscole.
+Specificare il `attributes` e i caratteri di *allineamento* come stringa senza spazi vuoti. I caratteri non fanno distinzione tra maiuscole e minuscole.
 
 ## <a name="see-also"></a>Vedere anche
 

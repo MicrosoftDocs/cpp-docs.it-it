@@ -20,7 +20,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- lfind
 - _lfind
 helpviewer_keywords:
 - linear searching
@@ -30,12 +29,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 8fd2141caf8311844a90a6d12226bb7797ac4734
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953390"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442925"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -61,7 +60,7 @@ Oggetto da cercare.
 *base*<br/>
 Puntatore alla base dei dati di ricerca.
 
-*numero*<br/>
+*number*<br/>
 Numero degli elementi della matrice.
 
 *width*<br/>
@@ -74,11 +73,11 @@ Puntatore alla routine di confronto. Il primo parametro è un puntatore alla chi
 
 Se la chiave viene trovata, **_lfind** restituisce un puntatore all'elemento della matrice in *base* che corrisponde alla *chiave*. Se la chiave non viene trovata, **_lfind** restituisce **null**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **_lfind** esegue una ricerca lineare per la *chiave* del valore in una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . A differenza di **bCerca**, **_lfind** non richiede che la matrice sia ordinata. L'argomento di *base* è un puntatore alla base della matrice in cui eseguire la ricerca. L'argomento *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che ne specifica la relazione. **_lfind** chiama la routine di *confronto* una o più volte durante la ricerca, passando i puntatori a due elementi di matrice per ogni chiamata. La routine di *confronto* deve confrontare gli elementi e quindi restituire un valore diverso da zero (ovvero gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).
 
-Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [Parameter Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**.
+Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -86,7 +85,7 @@ Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* �
 |-------------|---------------------|
 |**_lfind**|\<search.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

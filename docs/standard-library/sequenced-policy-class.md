@@ -2,17 +2,17 @@
 title: Classe sequenced_policy
 ms.date: 04/18/2019
 f1_keywords:
-- execution/std::execution::parallel_policy
-ms.openlocfilehash: 63be7166b84fa452f53baf6b6de16831eb657a23
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- execution/std::execution::sequenced_policy
+ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269193"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444923"
 ---
-# <a name="sequencedpolicy-class"></a>Classe sequenced_policy
+# <a name="sequenced_policy-class"></a>Classe sequenced_policy
 
-Utilizzato come un tipo univoco per risolvere l'ambiguità di overload di un algoritmo parallelo e richiedono che l'esecuzione di un algoritmo parallelo potrebbe non essere eseguite in parallelo.
+Utilizzato come tipo univoco per risolvere l'ambiguità dell'overload degli algoritmi paralleli e richiedere che l'esecuzione di un algoritmo parallelo non venga parallela.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -20,6 +20,6 @@ Utilizzato come un tipo univoco per risolvere l'ambiguità di overload di un alg
 class execution::sequenced_policy;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Durante l'esecuzione di un algoritmo parallelo con il `execution::sequenced_policy` dei criteri, se si conclude la chiamata della funzione di accesso elemento tramite un'eccezione non rilevata, `terminate()` deve essere chiamato.
+Durante l'esecuzione di un algoritmo parallelo con i criteri di `execution::sequenced_policy`, se la chiamata di una funzione di accesso agli elementi viene chiusa tramite un'eccezione non rilevata, viene chiamato `terminate()`.

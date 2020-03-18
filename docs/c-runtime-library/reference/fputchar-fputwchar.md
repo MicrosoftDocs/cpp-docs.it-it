@@ -25,7 +25,6 @@ f1_keywords:
 - _fputwchar
 - fputwchar
 - _fputtchar
-- fputchar
 - _fputchar
 helpviewer_keywords:
 - fputchar function
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b78c59b937a8854d7a36355173a1ccf4f219d541
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956930"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442957"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -65,13 +64,13 @@ Carattere da scrivere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il carattere scritto. Per **_fputchar**, un valore restituito di **EOF** indica un errore. Per **_fputwchar**, il valore restituito di **WEOF** indica un errore. Se c è **null**, queste funzioni generano un'eccezione di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **EOF** (o **WEOF**) e impostano **errno** su **EINVAL**.
+Ognuna di queste funzioni restituisce il carattere scritto. Per **_fputchar**, un valore restituito di **EOF** indica un errore. Per **_fputwchar**, un valore restituito di **WEOF** indica un errore. Se c è **null**, queste funzioni generano un'eccezione di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **EOF** (o **WEOF**) e impostano **errno** su **EINVAL**.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Entrambe queste funzioni scrivono il carattere singolo *c* in **stdout** e spostano l'indicatore in modo appropriato. **_fputchar** è equivalente a `fputc( stdout )`. È anche equivalente a **putchar**, ma implementata solo come funzione, anziché come funzione e macro. A differenza di **fputc** e **putchar**, queste funzioni non sono compatibili con lo standard ANSI.
+Entrambe queste funzioni scrivono il carattere singolo *c* in **stdout** e spostano l'indicatore in modo appropriato. **_fputchar** equivale a `fputc( stdout )`. È anche equivalente a **putchar**, ma implementata solo come funzione, anziché come funzione e macro. A differenza di **fputc** e **putchar**, queste funzioni non sono compatibili con lo standard ANSI.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -86,7 +85,7 @@ Entrambe queste funzioni scrivono il carattere singolo *c* in **stdout** e spost
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

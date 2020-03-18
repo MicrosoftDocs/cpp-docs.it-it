@@ -2,7 +2,6 @@
 title: Classi Rowset dello schema e classi Typedef
 ms.date: 11/04/2016
 f1_keywords:
-- vc.templates.ole
 - CAssertionInfo
 - CAssertions
 - CCatalogInfo
@@ -100,7 +99,6 @@ f1_keywords:
 - DEFAULT_COLLATE_NAME
 - DEFAULT_COLLATE_SCHEMA
 - DELETE_RULE
-- DELETE_RULE
 - DOMAIN_CATALOG
 - DOMAIN_NAME
 - DOMAIN_SCHEMA
@@ -138,7 +136,6 @@ f1_keywords:
 - m_bFixedPrecScale
 - m_bHasDefault
 - m_bInitiallyDeferred
-- m_bInitiallyDeferred
 - m_bIsDeferrable
 - m_bIsGrantable
 - m_bIsLong
@@ -153,7 +150,6 @@ f1_keywords:
 - m_guidPKColumn
 - m_guidTable
 - m_guidType
-- m_nCardinality
 - m_nCardinality
 - m_nCollation
 - m_nColumnFlags
@@ -180,7 +176,6 @@ f1_keywords:
 - m_nRowsetNumber
 - m_nScale
 - m_nSearchable
-- m_nType
 - m_szBindingStyle
 - m_szCatalog
 - m_szCharCatalog
@@ -226,8 +221,6 @@ f1_keywords:
 - m_szLiteralPrefix
 - m_szLocalTypeName
 - m_szMatchOption
-- m_szName
-- m_szName
 - m_szObjectCatalog
 - m_szObjectName
 - m_szObjectSchema
@@ -555,29 +548,29 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 3dee9844902928e5952a299caae34e29b3a6d72b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c47b167f12cd98a752806369df6281d5b20c696
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404520"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444143"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classi Rowset dello schema e classi Typedef
 
-Uno schema è una raccolta di oggetti di database che sono di proprietà oppure sono stati creati da un utente specifico. Un catalogo può contenere uno o più schemi, ma deve sempre contenere un schema denominato INFORMATION_SCHEMA, che contiene le viste e i domini a dello schema di informazioni. Le informazioni sullo schema in OLE DB viene recuperate utilizzando i set di righe dello schema predefinito e includono tipi, tabelle, colonne, indici, viste, le asserzioni e vincoli, le statistiche, set di caratteri, le regole di confronto e domini.
+Uno schema è una raccolta di oggetti di database di proprietà o creati da un determinato utente. Un catalogo può contenere uno o più schemi, ma deve sempre contenere uno schema denominato INFORMATION_SCHEMA, che contiene le viste e i domini dello schema delle informazioni. Le informazioni sullo schema nel OLE DB vengono recuperate utilizzando set di righe dello schema predefiniti e includono tipi, tabelle, colonne, indici, viste, asserzioni e vincoli, statistiche, set di caratteri, regole di confronto e domini.
 
-I set di righe dello schema sono i set di righe predefinito che rappresenta i metadati. I set di righe dello schema vengono in genere utilizzate nella programmazione dinamica, in cui la struttura del database non è noto in fase di compilazione. È possibile usare questi set di righe dello schema per ottenere informazioni su un database in fase di esecuzione.
+I set di righe dello schema sono set di righe predefiniti che rappresentano i metadati. I set di righe dello schema vengono in genere utilizzati nella programmazione dinamica, in cui la struttura del database non è nota in fase di compilazione. È possibile utilizzare questi set di righe dello schema per ottenere informazioni su un database in fase di esecuzione.
 
-Usare le classi typedef per creare un'istanza di righe dello schema. Il typedef corrispondenti e classi rowset dello schema sono elencate di seguito. È necessario chiamare [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) dopo aver creato un'istanza del set di righe dello schema. Questo metodo restituisce un set di risultati basato sulle restrizioni specificate. Visualizzare [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) per informazioni sulle colonne di restrizione associate a ogni set di righe dello schema.
+Utilizzare le classi typedef per creare un'istanza dei set di righe dello schema. Di seguito sono elencate le classi typedef e set di righe dello schema corrispondenti. Dopo aver creato un'istanza del set di righe dello schema, è necessario chiamare [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) . Questo metodo restituisce un set di risultati in base alle restrizioni specificate. Per informazioni sulle colonne di restrizione associate a ogni set di righe dello schema, vedere [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) .
 
-Nella tabella seguente consente di visualizzare ciascun Rowset dello Schema OLE DB e relativo valore corrispondente (classe typedef) modelli OLE DB e informazioni sulla classe.
+Nella tabella seguente vengono visualizzati tutti i set di righe dello schema OLE DB e la classe di informazioni e la classe typedef dei modelli di OLE DB corrispondenti.
 
-|Set di righe dello Schema OLE DB|(Classe typedef)|Classe Info|
+|Set di righe dello schema OLE DB|Typedef (classe)|Classe info|
 |--------------------------|-------------------|----------------|
 |[ASSERZIONI](/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
-|[CATALOGS](/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
+|[CATALOGHI](/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
 |[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638(v=vs.85))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
-|[REGOLE DI CONFRONTO](/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
+|[CONFRONTO](/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
 |[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800(v=vs.85))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|
 |[COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85))|[CColumns](#columns)|[CColumnsInfo](#columns)|
 |[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|
@@ -585,7 +578,7 @@ Nella tabella seguente consente di visualizzare ciascun Rowset dello Schema OLE 
 |[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845(v=vs.85))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|
 |[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240(v=vs.85))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|
 |[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276(v=vs.85))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|
-|[INDEXES](/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
+|[INDICI](/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
 |[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990(v=vs.85))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|
 |[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362(v=vs.85))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
 |[PROCEDURE](/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
@@ -599,23 +592,23 @@ Nella tabella seguente consente di visualizzare ciascun Rowset dello Schema OLE 
 |[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
 |[TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
 |[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
-|[TRANSLATIONS](/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
+|[Traduzioni](/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
 |[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743(v=vs.85))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
 |[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896(v=vs.85))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|
 |[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
-## <a name="assertion"></a> CAssertions, CAssertionInfo
+## <a name="assertion"></a>CAssertions, CAssertionInfo
 
 Chiamare la classe typedef `CAssertions` per implementare la classe di parametri `CAssertionInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le asserzioni definite nel catalogo appartenenti a un determinato utente.
+Questa classe identifica le asserzioni definite nel catalogo di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe per `CAssertionInfo` e le corrispondenti colonne BD OLE. Vedere [set di righe ASSERZIONI](/previous-versions/windows/desktop/ms719776(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe per `CAssertionInfo` e le colonne OLE DB corrispondenti. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe Asserts](/previous-versions/windows/desktop/ms719776(v=vs.85)) in *OLE DB Programmer ' s Reference* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -626,34 +619,34 @@ Nella tabella seguente sono elencati i membri dati della classe per `CAssertionI
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="catalog"></a> CCatalogs, CCatalogInfo
+## <a name="catalog"></a>CCatalogs, CCatalogInfo
 
 Chiamare la classe typedef `CCatalogs` per implementare la classe di parametri `CCatalogInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica gli attributi fisici associati a cataloghi accessibili dal sistema DBMS.
+Questa classe identifica gli attributi fisici associati ai cataloghi accessibili dal sistema DBMS.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [Rowset CATALOGS](/previous-versions/windows/desktop/ms721241(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe Catalogs](/previous-versions/windows/desktop/ms721241(v=vs.85)) in *OLE DB Programmer ' s Reference* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
 |m_szName|CATALOG_NAME|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="characterset"></a> CCharacterSets, CCharacterSetInfo
+## <a name="characterset"></a>CCharacterSets, CCharacterSetInfo
 
 Chiamare la classe typedef `CCharacterSets` per implementare la classe di parametri `CCharacterSetInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Questa classe identifica i set di caratteri definiti nel catalogo a cui un determinato utente può accedere.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [Rowset CHARACTER_SETS](/previous-versions/windows/desktop/ms722638(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [Character_Sets set di righe](/previous-versions/windows/desktop/ms722638(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -666,17 +659,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="checkconstraint"></a> CCheckConstraints, CCheckConstraintInfo
+## <a name="checkconstraint"></a>CCheckConstraints, CCheckConstraintInfo
 
 Chiamare la classe typedef `CCheckConstraints` per implementare la classe di parametri `CCheckConstraintInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica i vincoli check, definiti nel catalogo, di proprietà di un determinato utente. Un vincolo check specifica i valori di dati o i formati accettabili in una o più colonne in una tabella.
+Questa classe identifica i vincoli check, definiti nel catalogo, di proprietà di un determinato utente. Un vincolo check specifica i valori o i formati di dati accettabili in una o più colonne di una tabella.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [CHECK_CONSTRAINTS set di righe](/previous-versions/windows/desktop/ms712845(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -686,17 +679,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCheckClause|CHECK_CLAUSE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="collation"></a> CCollations, CCollationInfo
+## <a name="collation"></a>CCollations, CCollationInfo
 
 Chiamare la classe typedef `CCollations` per implementare la classe di parametri `CCollationInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica il confronto per caratteri, definite nel catalogo, che sono accessibili a un determinato utente.
+Questa classe identifica le regole di confronto dei caratteri, definite nel catalogo, accessibili a un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe di regole di confronto](/previous-versions/windows/desktop/ms715783(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe](/previous-versions/windows/desktop/ms715783(v=vs.85)) per le regole di confronto del *OLE DB Programmer ' s Reference* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -708,17 +701,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="columndomainusage"></a> CColumnDomainUsage, CColumnDomainUsageInfo
+## <a name="columndomainusage"></a>CColumnDomainUsage, CColumnDomainUsageInfo
 
 Chiamare la classe typedef `CColumnDomainUsage` per implementare la classe di parametri `CColumnDomainUsageInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le colonne, definite nel catalogo, che dipendono da un dominio definite nel catalogo e appartenenti a un determinato utente.
+Questa classe identifica le colonne, definite nel catalogo, che dipendono da un dominio definito nel catalogo e di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [Rowset COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [COLUMN_DOMAIN_USAGE set di righe](/previous-versions/windows/desktop/ms711240(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -732,17 +725,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="columnprivilege"></a> CColumnPrivileges, CColumnPrivilegeInfo
+## <a name="columnprivilege"></a>CColumnPrivileges, CColumnPrivilegeInfo
 
 Chiamare la classe typedef `CColumnPrivileges` per implementare la classe di parametri `CColumnPrivilegeInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica i privilegi sulle colonne di tabelle, definite nel catalogo, che sono disponibili o concessi da un determinato utente.
+Questa classe identifica i privilegi per le colonne di tabelle, definite nel catalogo, disponibili o concesse da un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [COLUMN_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms715800(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [COLUMN_PRIVILEGES set di righe](/previous-versions/windows/desktop/ms715800(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -757,17 +750,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="columns"></a> CColumns, CColumnsInfo
+## <a name="columns"></a>CColumns, CColumnsInfo
 
 Chiamare la classe typedef `CColumns` per implementare la classe di parametri `CColumnsInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le colonne di tabelle definite nel catalogo accessibile a un determinato utente.
+Questa classe identifica le colonne delle tabelle definite nel catalogo accessibili a un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)) in *OLE DB Programmer ' s Reference* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -800,17 +793,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szDomainName|DOMAIN_NAME|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="constraintcolumnusage"></a> CConstraintColumnUsage, CConstraintColumnUsageInfo
+## <a name="constraintcolumnusage"></a>CConstraintColumnUsage, CConstraintColumnUsageInfo
 
 Chiamare la classe typedef `CConstraintColumnUsage` per implementare la classe di parametri `CConstraintColumnUsageInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le colonne utilizzate da vincoli referenziali, vincoli unique, vincoli check e asserzioni, definite nel catalogo e appartenenti a un determinato utente.
+Questa classe identifica le colonne utilizzate da vincoli referenziali, vincoli univoci, vincoli check e asserzioni, definiti nel catalogo e di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [CONSTRAINT_COLUMN_USAGE Rowset](/previous-versions/windows/desktop/ms724522(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [CONSTRAINT_COLUMN_USAGE set di righe](/previous-versions/windows/desktop/ms724522(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -824,17 +817,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="constrainttableusage"></a> CConstraintTableUsage, CConstraintTableUsageInfo
+## <a name="constrainttableusage"></a>CConstraintTableUsage, CConstraintTableUsageInfo
 
 Chiamare la classe typedef `CConstraintTableUsage` per implementare la classe di parametri `CConstraintTableUsageInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le tabelle utilizzate da vincoli referenziali, vincoli unique, vincoli check e asserzioni, definite nel catalogo e appartenenti a un determinato utente.
+Questa classe identifica le tabelle utilizzate da vincoli referenziali, vincoli univoci, vincoli check e asserzioni, definiti nel catalogo e di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [CONSTRAINT_TABLE_USAGE Rowset](/previous-versions/windows/desktop/ms724522(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [Constraint_Table_Usage set di righe](/previous-versions/windows/desktop/ms724522(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -845,17 +838,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="foreignkeys"></a> CForeignKeys, CForeignKeysInfo
+## <a name="foreignkeys"></a>CForeignKeys, CForeignKeysInfo
 
 Chiamare la classe typedef `CForeignKeys` per implementare la classe di parametri `CForeignKeysInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le colonne chiave esterne definite nel catalogo da un determinato utente.
+Questa classe identifica le colonne di chiavi esterne definite nel catalogo da un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [nel set di righe](/previous-versions/windows/desktop/ms711276(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [foreign_keys set di righe](/previous-versions/windows/desktop/ms711276(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -871,21 +864,21 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szFKColumnName|FK_COLUMN_NAME|
 |m_guidFKColumn|FK_COLUMN_GUID|
 |m_nFKColumnPropID|FK_COLUMN_PROPID|
-|m_nOrdinal|NUMERO ORDINALE|
+|m_nOrdinal|ORDINALE|
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="index"></a> CIndexes, CIndexInfo
+## <a name="index"></a>CIndexes, CIndexInfo
 
 Chiamare la classe typedef `CIndexes` per implementare la classe di parametri `CIndexInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica gli indici, definiti nel catalogo, che appartengono a un determinato utente.
+Questa classe identifica gli indici, definiti nel catalogo, di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe INDEXES](/previous-versions/windows/desktop/ms709712(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe Indexes](/previous-versions/windows/desktop/ms709712(v=vs.85)) in *OLE DB Programmer ' s Reference* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -914,17 +907,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nPages|PAGES|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="keycolumn"></a> CKeyColumns, CKeyColumnInfo
+## <a name="keycolumn"></a>CKeyColumns, CKeyColumnInfo
 
 Chiamare la classe typedef `CKeyColumns` per implementare la classe di parametri `CKeyColumnInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le colonne, definite nel catalogo, che sono vincolate come chiavi di un determinato utente.
+Questa classe identifica le colonne, definite nel catalogo, che sono vincolate come chiavi da un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [KEY_COLUMN_USAGE Rowset](/previous-versions/windows/desktop/ms712990(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [KEY_COLUMN_USAGE set di righe](/previous-versions/windows/desktop/ms712990(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -939,17 +932,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="primarykey"></a> CPrimaryKeys, CPrimaryKeyInfo
+## <a name="primarykey"></a>CPrimaryKeys, CPrimaryKeyInfo
 
 Chiamare la classe typedef `CPrimaryKeys` per implementare la classe di parametri `CPrimaryKeyInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le colonne chiave primarie definite nel catalogo da un determinato utente.
+Questa classe identifica le colonne chiave primaria definite nel catalogo da un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [Primary_Keys set di righe](/previous-versions/windows/desktop/ms714362(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -959,19 +952,19 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szColumnName|COLUMN_NAME|
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
-|m_nOrdinal|NUMERO ORDINALE|
+|m_nOrdinal|ORDINALE|
 
-## <a name="procedurecolumn"></a> CProcedureColumns, CProcedureColumnInfo
+## <a name="procedurecolumn"></a>CProcedureColumns, CProcedureColumnInfo
 
 Chiamare la classe typedef `CProcedureColumns` per implementare la classe di parametri `CProcedureColumnInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe restituisce informazioni sulle colonne di set di righe restituiti dalle stored procedure.
+Questa classe restituisce informazioni sulle colonne dei set di righe restituiti dalle routine.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [PROCEDURE_COLUMNS Rowset](/previous-versions/windows/desktop/ms723092(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [Procedure_Columns set di righe](/previous-versions/windows/desktop/ms723092(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -992,17 +985,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
+## <a name="procedureparam"></a>CProcedureParamInfo CProcedureParameters
 
 Chiamare la classe typedef `CProcedureParameters` per implementare la classe di parametri `CProcedureParamInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe restituisce informazioni sui parametri e codici restituiti delle routine.
+Questa classe restituisce informazioni sui parametri e i codici restituiti delle procedure.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [PROCEDURE_PARAMETERS set di righe](/previous-versions/windows/desktop/ms713623(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1022,17 +1015,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="procedure"></a> CProcedures, CProcedureInfo
+## <a name="procedure"></a>CProcedures, CProcedureInfo
 
 Chiamare la classe typedef `CProcedures` per implementare la classe di parametri `CProcedureInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe sono incluse le procedure, definite nel catalogo, di proprietà di un determinato utente.
+Questa classe identifica le procedure, definite nel catalogo, di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [procedure Rowset](/previous-versions/windows/desktop/ms724021(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe Procedures](/previous-versions/windows/desktop/ms724021(v=vs.85)) nella Guida *di riferimento per i programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1043,17 +1036,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szDefinition|PROCEDURE_DEFINITION|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="provider"></a> CProviderTypes, CProviderInfo
+## <a name="provider"></a>CProviderTypes, CProviderInfo
 
 Chiamare la classe typedef `CProviderTypes` per implementare la classe di parametri `CProviderInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Questa classe identifica i tipi di dati (base) supportati dal provider di dati.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [PROVIDER_TYPES set di righe](/previous-versions/windows/desktop/ms709785(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1065,7 +1058,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCreateParams|CREATE_PARAMS|
 |m_bIsNullable|IS_NULLABLE|
 |m_bCaseSensitive|CASE_SENSITIVE|
-|m_nSearchable|RICERCABILE|
+|m_nSearchable|SEARCHABLE|
 |m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE|
 |m_bFixedPrecScale|FIXED_PREC_SCALE|
 |m_bAutoUniqueValue|AUTO_UNIQUE_VALUE|
@@ -1073,22 +1066,22 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nMinScale|MINIMUM_SCALE|
 |m_nMaxScale|MAXIMUM_SCALE|
 |m_guidType|GUID|
-|m_szTypeLib|LIBRERIA DEI TIPI|
+|m_szTypeLib|TYPELIB|
 |m_szVersion|VERSION|
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="referentialconstraint"></a> CReferentialConstraints, CReferentialConstraintInfo
+## <a name="referentialconstraint"></a>CReferentialConstraints, CReferentialConstraintInfo
 
 Chiamare la classe typedef `CReferentialConstraints` per implementare la classe di parametri `CReferentialConstraintInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Questa classe identifica i vincoli referenziali, definiti nel catalogo, di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [REFERENTIAL_CONSTRAINTS Rowset](/previous-versions/windows/desktop/ms719737(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [REFERENTIAL_CONSTRAINTS set di righe](/previous-versions/windows/desktop/ms719737(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1103,17 +1096,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szDeleteRule|DELETE_RULE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="schemata"></a> CSchemata, CSchemataInfo
+## <a name="schemata"></a>CSchemata, CSchemataInfo
 
 Chiamare la classe typedef `CSchemata` per implementare la classe di parametri `CSchemataInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Questa classe identifica gli schemi di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe degli schemi](/previous-versions/windows/desktop/ms716887(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe schemi](/previous-versions/windows/desktop/ms716887(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1124,17 +1117,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="sqllanguage"></a> CSQLLanguages, CSQLLanguageInfo
+## <a name="sqllanguage"></a>CSQLLanguages, CSQLLanguageInfo
 
 Chiamare la classe typedef `CSQLLanguages` per implementare la classe di parametri `CSQLLanguageInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica i livelli di conformità, le opzioni e i sottolinguaggi supportati dall'implementazione SQL con l'elaborazione dati definiti nel catalogo.
+Questa classe identifica i livelli di conformità, le opzioni e i dialetti supportati dai dati di elaborazione dell'implementazione SQL definiti nel catalogo.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [SQL_LANGUAGES Rowset](/previous-versions/windows/desktop/ms714374(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [Sql_Languages set di righe](/previous-versions/windows/desktop/ms714374(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1146,17 +1139,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="statistic"></a> CStatistics, CStatisticInfo
+## <a name="statistic"></a>CStatistics, CStatisticInfo
 
 Chiamare la classe typedef `CStatistics` per implementare la classe di parametri `CStatisticInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le statistiche definite nel catalogo, di proprietà di un determinato utente.
+Questa classe identifica le statistiche, definite nel catalogo, di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe di statistiche](/previous-versions/windows/desktop/ms715957(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe Statistics](/previous-versions/windows/desktop/ms715957(v=vs.85)) nella Guida *di riferimento per i programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1165,17 +1158,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|CARDINALITY|
 
-## <a name="tableconstraint"></a> CTableConstraints, CTableConstraintInfo
+## <a name="tableconstraint"></a>CTableConstraints, CTableConstraintInfo
 
 Chiamare la classe typedef `CTableConstraints` per implementare la classe di parametri `CTableConstraintInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Questa classe identifica i vincoli di tabella, definiti nel catalogo, di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [TABLE_CONSTRAINTS Rowset](/previous-versions/windows/desktop/ms715921(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [Table_Constraints set di righe](/previous-versions/windows/desktop/ms715921(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1190,17 +1183,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="tableprivilege"></a> CTablePrivileges, CTablePrivilegeInfo
+## <a name="tableprivilege"></a>CTablePrivileges, CTablePrivilegeInfo
 
 Chiamare la classe typedef `CTablePrivileges` per implementare la classe di parametri `CTablePrivilegeInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Questa classe identifica le tabelle definite nel catalogo accessibili a un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [TABLE_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms725428(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [TABLE_PRIVILEGES set di righe](/previous-versions/windows/desktop/ms725428(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1212,17 +1205,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="table"></a> CTables, CTableInfo
+## <a name="table"></a>CTables, CTableInfo
 
 Chiamare la classe typedef `CTables` per implementare la classe di parametri `CTableInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica i privilegi sulle tabelle, definiti nel catalogo, disponibili o concessi da un determinato utente.
+Questa classe identifica i privilegi per le tabelle, definiti nel catalogo, disponibili o concessi da un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe Tables](/previous-versions/windows/desktop/ms716980(v=vs.85)) in *OLE DB Programmer ' s Reference* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1233,17 +1226,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_guidTable|TABLE_GUID|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="translation"></a> CTranslations, CTranslationInfo
+## <a name="translation"></a>CTranslations, CTranslationInfo
 
 Chiamare la classe typedef `CTranslations` per implementare la classe di parametri `CTranslationInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le conversioni dei caratteri definite nel catalogo accessibili a un determinato utente.
+Questa classe identifica le conversioni di caratteri definite nel catalogo accessibili a un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [traduzioni Rowset](/previous-versions/windows/desktop/ms725365(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe translations](/previous-versions/windows/desktop/ms725365(v=vs.85)) in *OLE DB Programmer ' s Reference* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1257,17 +1250,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="usageprivilege"></a> CUsagePrivileges, CUsagePrivilegeInfo
+## <a name="usageprivilege"></a>CUsagePrivileges, CUsagePrivilegeInfo
 
 Chiamare la classe typedef `CUsagePrivileges` per implementare la classe di parametri `CUsagePrivilegeInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica i privilegi USAGE sugli oggetti definiti nel catalogo che disponibili o concessi da un determinato utente.
+Questa classe identifica i privilegi di utilizzo sugli oggetti definiti nel catalogo, disponibili o concessi da un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [USAGE_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms722743(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [Usage_Privileges set di righe](/previous-versions/windows/desktop/ms722743(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1276,21 +1269,21 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szObjectCatalog|OBJECT_CATALOG|
 |m_szObjectSchema|OBJECT_SCHEMA|
 |m_szObjectName|OBJECT_NAME|
-|m_szObjectType|OBJECT_TYPE|
+|m_szObjectType|Object_Type|
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="viewcolumn"></a> CViewColumnUsage, CViewColumnInfo
+## <a name="viewcolumn"></a>CViewColumnUsage, CViewColumnInfo
 
 Chiamare la classe typedef `CViewColumnUsage` per implementare la classe di parametri `CViewColumnInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le colonne su cui visualizzare le tabelle, definite nel catalogo e appartenenti a un determinato utente, sono dipendenti.
+Questa classe identifica le colonne sulle quali sono dipendenti le tabelle visualizzate, definite nel catalogo e di proprietà di un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [VIEW_COLUMN_USAGE Rowset](/previous-versions/windows/desktop/ms714896(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [View_Column_Usage set di righe](/previous-versions/windows/desktop/ms714896(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1304,17 +1297,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="view"></a> CViews, CViewInfo
+## <a name="view"></a>CViews, CViewInfo
 
 Chiamare la classe typedef `CViews` per implementare la classe di parametri `CViewInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica le tabelle in cui visualizzare le tabelle, definite nel catalogo e appartenenti a un determinato utente, sono dipendenti.
+Questa classe identifica le tabelle in cui le tabelle visualizzate, definite nel catalogo e di proprietà di un determinato utente, dipendono.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [viste di set di righe](/previous-versions/windows/desktop/ms723122(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [set di righe views](/previous-versions/windows/desktop/ms723122(v=vs.85)) nella Guida *di riferimento per i programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1326,17 +1319,17 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_bIsUpdatable|IS_UPDATABLE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="viewtable"></a> CViewTableUsage, CViewTableInfo
+## <a name="viewtable"></a>CViewTableUsage, CViewTableInfo
 
 Chiamare la classe typedef `CViewTableUsage` per implementare la classe di parametri `CViewTableInfo`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per altre informazioni sull'uso di classi typedef.
+Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Questa classe identifica il tabelle visualizzate, definite nel catalogo, che sono accessibili a un determinato utente.
+Questa classe identifica le tabelle visualizzate, definite nel catalogo, accessibili a un determinato utente.
 
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [VIEW_TABLE_USAGE Rowset](/previous-versions/windows/desktop/ms719727(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Per ulteriori informazioni sullo schema e sulle colonne, vedere [View_Table_Usage set di righe](/previous-versions/windows/desktop/ms719727(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 |Membri dati|Colonne OLE DB|
 |------------------|--------------------|
@@ -1349,7 +1342,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atldbsch. h
+**Intestazione:** Atldbsch. h
 
 ## <a name="see-also"></a>Vedere anche
 

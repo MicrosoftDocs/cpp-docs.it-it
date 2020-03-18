@@ -1,5 +1,5 @@
 ---
-title: Funzioni e variabili globali CRT interne
+title: Funzioni e globali CRT interni
 ms.date: 01/22/2019
 api_name:
 - __acrt_iob_func
@@ -301,7 +301,6 @@ topic_type:
 f1_keywords:
 - __acrt_iob_func
 - __AdjustPointer
-- _assert
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
@@ -330,7 +329,6 @@ f1_keywords:
 - __conio_common_vcwprintf_s
 - __conio_common_vcwscanf
 - __CppXcptFilter
-- __create_locale
 - _crt_at_quick_exit
 - _crt_atexit
 - _crtAssertBusy
@@ -375,26 +373,16 @@ f1_keywords:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
-- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
-- _dclass
 - __DestructExceptionObject
 - __doserrno
 - _dosmaperr
-- _dpcomp
-- _dsign
-- __dstbias
-- _dtest
 - _EH_prolog
 - _errno
 - _except_handler2
 - _except_handler4_common
 - _except1
-- _fdclass
-- _fdpcomp
-- _fdsign
-- _fdtest
 - _filbuf
 - _FindAndUnlinkFrame
 - _flsbuf
@@ -402,13 +390,10 @@ f1_keywords:
 - _FPE_Raise
 - __fpecode
 - __FrameUnwindFilter
-- _fread_nolock_s
 - _free_base
-- __free_locale
 - _freea_s
 - _freefls
 - _ftol
-- __get_current_locale
 - __get_flsindex
 - _get_initial_narrow_environment
 - _get_initial_wide_environment
@@ -428,16 +413,10 @@ f1_keywords:
 - _initialize_narrow_environment
 - _initialize_wide_environment
 - _initptd
-- _invalid_parameter
-- _invoke_watson
 - __iob_func
 - _IsExceptionObjectToBeDestroyed
 - __lconv
 - __lconv_init
-- _ldclass
-- _ldpcomp
-- _ldsign
-- _ldtest
 - __libm_sse2_acos
 - _libm_sse2_acos_precise
 - __libm_sse2_acosf
@@ -474,7 +453,6 @@ f1_keywords:
 - _lock_locales
 - _longjmpex
 - _malloc_base
-- _mbctype
 - _NLG_Dispatch2
 - _NLG_Return
 - _NLG_Return2
@@ -501,7 +479,6 @@ f1_keywords:
 - __p__wcmdln
 - __p__wenviron
 - __p__wpgmptr
-- _pctype
 - __pioinfo
 - _pwctype
 - __pwctype_func
@@ -512,8 +489,6 @@ f1_keywords:
 - __report_gsfailure
 - __RTCastToVoid
 - __RTtypeid
-- _seh_filter_dll
-- _seh_filter_exe
 - _seh_longjmp_unwind
 - _seh_longjmp_unwind4
 - _set_malloc_crt_max_wait
@@ -545,8 +520,6 @@ f1_keywords:
 - __STRINGTOLD
 - __STRINGTOLD_L
 - __strncnt
-- __sys_errlist
-- __sys_nerr
 - __threadhandle
 - __threadid
 - __timezone
@@ -556,7 +529,6 @@ f1_keywords:
 - __unDNameEx
 - __unDNameHelper
 - __unguarded_readlc_active
-- _unloaddll
 - _unlock_locales
 - _vacopy
 - _ValidateExecute
@@ -567,7 +539,6 @@ f1_keywords:
 - _W_Getdays
 - _W_Getmonths
 - _W_Getnames
-- _wassert
 - _Wcsftime
 - __wcsncnt
 - __winitenv
@@ -851,14 +822,14 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 252065039597b6176b42008b31b7082740bcc265
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eb31409de131923f6af86b4ec1c4ba02dbc11028
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940247"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443206"
 ---
-# <a name="internal-crt-globals-and-functions"></a>Funzioni e variabili globali CRT interne
+# <a name="internal-crt-globals-and-functions"></a>Funzioni e globali CRT interni
 
 La libreria di runtime C (CRT) include funzioni e variabili globali usate solo per il supporto dell'interfaccia della libreria pubblica. Alcune di esse vengono esposte in intestazioni pubbliche come dettagli relativi all'implementazione. Sebbene queste funzioni e variabili globali siano accessibili mediante esportazioni pubbliche, non sono destinate all'uso nel codice da parte degli sviluppatori. È consigliabile modificare eventuale codice che usa queste funzioni e variabili in modo da usare gli equivalenti dalla libreria pubblica. Queste funzioni possono variare a seconda della versione e sono elencate di seguito per facilitarne l'identificazione. Quando esiste documentazione aggiuntiva, vengono specificati i relativi collegamenti, ma in generale questi dettagli di implementazione non vengono documentati.
 
@@ -866,7 +837,7 @@ La libreria di runtime C (CRT) include funzioni e variabili globali usate solo p
 
 Queste variabili globali e definizioni di macro vengono usate per implementare CRT.
 
-|Name|
+|Nome|
 |----------|
 |__badioinfo|
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
@@ -885,7 +856,7 @@ Queste variabili globali e definizioni di macro vengono usate per implementare C
 
 Queste funzioni e macro di funzione vengono usate per implementare la libreria CRT e la libreria standard C++.
 
-|Name|
+|Nome|
 |----------|
 |__acrt_iob_func|
 |__AdjustPointer|

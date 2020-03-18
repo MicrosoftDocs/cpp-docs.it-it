@@ -2,7 +2,6 @@
 title: 'Procedura: creare risorse (C++)'
 ms.date: 02/14/2019
 f1_keywords:
-- vc.editors.resource
 - vc.resvw.add.MFC
 - vs.resourceview.F1
 - vc.editors.insertresource
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 93bee6319d356128f56c1886d395cf25db372e80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421205"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443879"
 ---
 # <a name="how-to-create-resources-c"></a>Procedura: creare risorse (C++)
 

@@ -1,44 +1,43 @@
 ---
-title: /NATVIS (aggiunge Natvis a PDB)
+title: /NATVIS (Aggiunge Natvis a PDB)
 ms.date: 08/10/2017
 f1_keywords:
 - /natvis
-- VC.Project.VCLinkerTool.ImportLIbrary
 helpviewer_keywords:
 - NATVIS linker option
 - /NATVIS linker option
 - -NATVIS linker option
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
-ms.openlocfilehash: e758a49b41a17d805b752947cd1944087c8ff852
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16e320a2f8f946912fef6a354f27f6514a67e29
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320617"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439283"
 ---
-# <a name="natvis-add-natvis-to-pdb"></a>/NATVIS (aggiunge Natvis a PDB)
+# <a name="natvis-add-natvis-to-pdb"></a>/NATVIS (Aggiunge Natvis a PDB)
 
-> /NATVIS:*filename*
+> /NATVIS:*nomefile*
 
 ## <a name="parameters"></a>Parametri
 
 *filename*<br/>
-Un file Natvis da aggiungere al file PDB. Incorpora le visualizzazioni del debugger nel file Natvis nel file PDB.
+File natvis da aggiungere al file PDB. Incorpora le visualizzazioni del debugger nel file natvis nel PDB.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'opzione /NATVIS incorpora le visualizzazioni debugger definite nel file Natvis *filename* nel file PDB generato dal collegamento. In questo modo il debugger visualizzare le visualizzazioni indipendentemente dal file con estensione natvis. È possibile usare più opzioni /NATVIS per incorporare più di un file Natvis nel file PDB generato.
+L'opzione/NATVIS incorpora le visualizzazioni del debugger definite nel *nome* file del file NATVIS nel file PDB generato da link. Ciò consente al debugger di visualizzare le visualizzazioni indipendentemente dal file con estensione natvis. È possibile usare più opzioni/NATVIS per incorporare più di un file natvis nel file PDB generato.
 
-LINK Ignora /NATVIS quando un file PDB non viene creato tramite un [/debug](debug-generate-debug-info.md) opzione. Per informazioni sulla creazione e l'utilizzo di file natvis, vedere [creare viste personalizzate di oggetti nativi nel debugger di Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
+Il collegamento Ignora/NATVIS quando un file PDB non viene creato usando un'opzione [/debug](debug-generate-debug-info.md) . Per informazioni sulla creazione e l'uso di file con estensione natvis, vedere [creare viste personalizzate di oggetti nativi nel debugger di Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
 
-1. Selezionare il **riga di comando** pagina delle proprietà di **Linker** cartella.
+1. Selezionare la pagina delle proprietà **riga di comando** nella cartella **linker** .
 
-1. Aggiungere l'opzione /NATVIS il **opzioni aggiuntive** casella di testo.
+1. Aggiungere l'opzione/NATVIS alla casella di testo **Opzioni aggiuntive** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

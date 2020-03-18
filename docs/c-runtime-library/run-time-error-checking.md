@@ -1,28 +1,26 @@
 ---
 title: Controllo degli errori di runtime
 ms.date: 11/04/2016
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-ms.openlocfilehash: ec07b9b0c6aa52187c3c24bff4cc51712dbf9fc8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: cf707cbd53e2285684d53d3f440db0f618343598
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746461"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444838"
 ---
 # <a name="run-time-error-checking"></a>Controllo degli errori di runtime
 
-La libreria di runtime C contiene le funzioni che supportano i controlli degli errori di runtime (RTC). Il controllo degli errori di runtime consente di compilare il programma in modo che determinati tipi di errori di runtime vengano segnalati. Specificare come gli errori vengono segnalati e quali tipi di errori vengono segnalati. Per altre informazioni, vedere [Procedura: Usare i controlli di runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
+La libreria di runtime C contiene le funzioni che supportano i controlli degli errori di runtime (RTC). Il controllo degli errori di runtime consente di compilare il programma in modo che determinati tipi di errori di runtime vengano segnalati. Specificare come gli errori vengono segnalati e quali tipi di errori vengono segnalati. Per altre informazioni, vedere [Procedura: Usare controlli run-time nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Utilizzare le seguenti funzioni per personalizzare il modo in cui il programma esegue il controllo degli errori di runtime.
 
 ## <a name="run-time-error-checking-functions"></a>Funzioni di controllo degli errori di runtime
 
-|Funzione|Usa|
+|Funzione|Uso|
 |--------------|---------|
 |[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Restituisce una breve descrizione di un tipo di controllo degli errori di runtime.|
 |[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Restituisce il numero totale di errori che possono essere rilevati dai controlli degli errori di runtime.|

@@ -1,24 +1,22 @@
 ---
 title: Utilizzo di CRichEditCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CRichEditCtrl
 helpviewer_keywords:
 - rich edit controls [MFC], using
 - CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
-ms.openlocfilehash: d935cb5282af16a189d091ee6f40d128a906d392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f718d58840eba5f7c1e41c1c337e6c779b51e3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411734"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441802"
 ---
 # <a name="using-cricheditctrl"></a>Utilizzo di CRichEditCtrl
 
-Un controllo rich edit è una finestra in cui l'utente può immettere e modificare il testo. Il testo può essere assegnato a carattere e formattazione di paragrafo e può includere oggetti OLE incorporati. Controllo rich edit è rappresentato in MFC per la [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) classe.
+Un controllo Rich Edit è una finestra in cui l'utente può immettere e modificare il testo. Al testo può essere assegnata la formattazione di caratteri e paragrafi e possono includere oggetti OLE incorporati. Il controllo Rich Edit è rappresentato in MFC dalla classe [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) .
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Panoramica del controllo Rich Edit](../mfc/overview-of-the-rich-edit-control.md)
 

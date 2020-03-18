@@ -1,24 +1,22 @@
 ---
 title: Utilizzo di CToolTipCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolTipCtrl
 helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-ms.openlocfilehash: 06f296fc21a6ad4480755289d30b5ff4ac27ca8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a750a9927f5cf36cb0232b3ce1bac1720f7020f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411623"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442207"
 ---
 # <a name="using-ctooltipctrl"></a>Utilizzo di CToolTipCtrl
 
-Il [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) classe incapsula la funzionalità di un controllo descrizione comandi, una piccola finestra popup che consente di visualizzare una singola riga di testo che descrive lo scopo di uno strumento in un'applicazione. Una descrizione comando viene nascosta la maggior parte dei casi, visualizzata solo quando l'utente posiziona il cursore del mouse su uno strumento e lascia in tale posizione per circa metà secondo. La descrizione comando viene visualizzata accanto al cursore e scomparirà quando l'utente fa clic su un pulsante del mouse o Sposta il cursore dallo strumento.
+La classe [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) incapsula la funzionalità di un controllo descrizione comando, una piccola finestra popup in cui viene visualizzata una singola riga di testo che descrive lo scopo di uno strumento in un'applicazione. Una descrizione comando è nascosta per la maggior parte del tempo, che viene visualizzata solo quando l'utente posiziona il cursore su uno strumento e lo lascia per circa un mezzo secondo. La descrizione comando viene visualizzata accanto al cursore e scompare quando l'utente fa clic su un pulsante del mouse o sposta il cursore dallo strumento.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Metodi di creazione di descrizioni comandi](../mfc/methods-of-creating-tool-tips.md)
 

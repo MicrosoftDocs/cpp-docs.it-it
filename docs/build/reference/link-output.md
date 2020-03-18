@@ -1,8 +1,6 @@
 ---
 title: Output di LINK
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - mapfiles [C++]
 - ILK files
@@ -17,38 +15,38 @@ helpviewer_keywords:
 - DLLs [C++], as linker output
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-ms.openlocfilehash: 183f83501d930188032ec4209623ef7cf1a30efa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8323723f2049d3db469e874c91b99f4cfb561c72
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269176"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439321"
 ---
 # <a name="link-output"></a>Output di LINK
 
-Output di link include file .exe, DLL, file map e i messaggi.
+L'output del collegamento include file con estensione exe, dll, file map e messaggi.
 
-##  <a name="_core_output_files"></a> File di output
+##  <a name="_core_output_files"></a>File di output
 
-Il file di output predefinito dal collegamento è un file .exe. Se il [/DLL](dll-build-a-dll.md) opzione viene specificata, viene generato un file con estensione dll. È possibile controllare il nome del file di output con il [nome File di Output (/out)](out-output-file-name.md) opzione.
+Il file di output predefinito dal collegamento è un file exe. Se viene specificata l'opzione [/dll](dll-build-a-dll.md) , il collegamento compila un file con estensione dll. È possibile controllare il nome del file di output con l'opzione [nome file di output (/out)](out-output-file-name.md) .
 
-Nella modalità incrementale, collegamento Crea un file ilk per contenere le informazioni di stato per le compilazioni incrementali sono in un secondo momento del programma. Per informazioni dettagliate sui file ilk, vedere [file ilk](dot-ilk-files-as-linker-input.md). Per altre informazioni sul collegamento incrementale, vedere la [collegamento incrementale (/Incremental)](incremental-link-incrementally.md) opzione.
+In modalità incrementale, collegamento crea un file. ilk per mantenere le informazioni sullo stato per le successive compilazioni incrementali del programma. Per informazioni dettagliate sui file ilk, vedere [file ilk](dot-ilk-files-as-linker-input.md). Per ulteriori informazioni sul collegamento incrementale, vedere l'opzione [collegamento incrementale (/Incremental)](incremental-link-incrementally.md) .
 
-Quando viene creato un programma che contiene esportazioni (in genere una DLL), ma genera anche un file con estensione LIB, a meno che non è stato usato un file. exp nella compilazione. È possibile controllare il nome di file di libreria di importazione con il [/IMPLIB](implib-name-import-library.md) opzione.
+Quando il collegamento crea un programma che contiene esportazioni (in genere una DLL), compila anche un file con estensione LIB, a meno che non sia stato usato un file con estensione exp nella compilazione. È possibile controllare il nome del file della libreria di importazione con l'opzione [/IMPLIB](implib-name-import-library.md) .
 
-Se il [genera file MAP (/Map)](map-generate-mapfile.md) opzione viene specificata, viene creato un file di mapping.
+Se viene specificata l'opzione [genera file map (/Map)](map-generate-mapfile.md) , il collegamento crea un file map.
 
-Se il [genera informazioni di Debug (/debug)](debug-generate-debug-info.md) opzione è specificata, viene creato un file PDB per contenere le informazioni di debug per il programma.
+Se viene specificata l'opzione [genera informazioni di debug (/debug)](debug-generate-debug-info.md) , il collegamento crea un PDB per contenere le informazioni di debug per il programma.
 
-##  <a name="_core_other_output"></a> Altri Output
+##  <a name="_core_other_output"></a>Altro output
 
-Quando si digita `link` senza altri input della riga di comando, collegamento, viene visualizzata un'istruzione di utilizzo che riepiloga le opzioni.
+Quando si digita `link` senza altri input della riga di comando, LINK Visualizza un'istruzione Usage che riepiloga le relative opzioni.
 
-COLLEGAMENTO viene visualizzato un messaggio di copyright e versione e restituisce i file di comando di input, a meno che il [eliminare il messaggio di avvio (/ NOLOGO)](nologo-suppress-startup-banner-linker.md) opzione viene utilizzata.
+LINK Visualizza un messaggio di copyright e di versione e restituisce l'input del file di comando, a meno che non venga utilizzata l'opzione non [visualizzare il banner di avvio (/nologo)](nologo-suppress-startup-banner-linker.md) .
 
-È possibile usare la [Stampa messaggi di stato (/verbose)](verbose-print-progress-messages.md) opzione per visualizzare dettagli aggiuntivi relativi alla compilazione.
+È possibile utilizzare l'opzione [Print Progress Messages (/verbose)](verbose-print-progress-messages.md) per visualizzare ulteriori dettagli sulla compilazione.
 
-COLLEGAMENTO genera messaggi di errore e di avviso nel formato LNK*nnnn*. Questo prefisso di errore e l'intervallo di numeri sono usate anche dai LIB e DUMPBIN EDITBIN.
+Il collegamento genera messaggi di errore e di avviso nel formato LNK*nnnn*. Il prefisso e l'intervallo di numeri di errore vengono utilizzati anche da LIB, DUMPBIN e EDITBIN).
 
 ## <a name="see-also"></a>Vedere anche
 

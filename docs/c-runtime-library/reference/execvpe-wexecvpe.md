@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - wexecvpe
-- execvpe
 - _wexecvpe
 - _execvpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49b7f4c55dd0c84807d6ed754ae9b45d63f37dcf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941732"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443016"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -86,11 +85,11 @@ Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valo
 
 Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando e una matrice di puntatori alle impostazioni di ambiente. Queste funzioni usano la variabile di ambiente **path** per trovare il file da eseguire.
 
-Le funzioni **_execvpe** convalidano i relativi parametri. Se *CmdName* è un puntatore null o se *argv* è un puntatore null, un puntatore a una matrice vuota o un puntatore a una matrice che contiene una stringa vuota come primo argomento, queste funzioni richiamano il gestore di parametri non validi, come descritto in [ Convalida del parametro](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1. Nessun processo viene avviato.
+Le funzioni **_execvpe** convalidano i relativi parametri. Se *CmdName* è un puntatore null o se *argv* è un puntatore null, un puntatore a una matrice vuota o un puntatore a una matrice che contiene una stringa vuota come primo argomento, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1. Nessun processo viene avviato.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -99,7 +98,7 @@ Le funzioni **_execvpe** convalidano i relativi parametri. Se *CmdName* è un pu
 |**_execvpe**|\<process.h>|\<errno.h>|
 |**_wexecvpe**|\<process.h> o \<wchar.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

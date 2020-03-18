@@ -1,30 +1,28 @@
 ---
 title: File di input LIB
 ms.date: 11/04/2016
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
-ms.openlocfilehash: 648871464dbc99972b8ca40579046347727e81cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 209ba04ea43116b39f28b0790b7a1e2b3fb5ccd7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269388"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439463"
 ---
 # <a name="lib-input-files"></a>File di input LIB
 
-I file di input previsti dal LIB dipendono dalla modalità in cui è utilizzato, come illustrato nella tabella seguente.
+I file di input previsti da LIB dipendono dalla modalità in cui viene utilizzata, come illustrato nella tabella seguente.
 
-|Modalità|Input|
+|Mode|Input|
 |----------|-----------|
-|Valore predefinito (creazione o modifica di una libreria)|File oggetto (obj) COFF, librerie COFF (con estensione LIB), file oggetto (obj) a 32 bit oggetto modello formato OMF)|
-|L'estrazione di un membro con /EXTRACT|Libreria COFF (con estensione LIB)|
-|Creazione di un'esportazione di file e di importazione della libreria con l'opzione /DEF|File di definizione moduli (def), file oggetto (obj) COFF, librerie COFF (con estensione LIB), file oggetto (obj) OMF a 32 bit|
+|Impostazione predefinita (compilazione o modifica di una libreria)|File oggetto COFF (. obj), librerie COFF (lib), oggetti OMF (Object Model Format) a 32 bit (file con estensione obj)|
+|Estrazione di un membro con/EXTRACT|Libreria COFF (lib)|
+|Compilazione di un file di esportazione e della libreria di importazione con/DEF|File di definizione moduli (con estensione def), file oggetto COFF (. obj), librerie COFF (lib), file oggetto OMF a 32 bit (obj)|
 
 > [!NOTE]
->  OMF (librerie) create con la versione a 16 bit non possono essere utilizzate come input per la versione a 32 bit di LIB.
+>  Le librerie OMF create dalla versione a 16 bit di LIB non possono essere usate come input per la versione a 32 bit di LIB.
 
 ## <a name="see-also"></a>Vedere anche
 
