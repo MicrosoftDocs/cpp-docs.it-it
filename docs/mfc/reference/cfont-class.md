@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
 ms.openlocfilehash: c37b2f657105e0065e0cddb2c508424bd6c89b0a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866607"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418622"
 ---
 # <a name="cfont-class"></a>Classe CFont
 
@@ -41,13 +41,13 @@ class CFont : public CGdiObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFont:: CFont](#cfont)|Costruisce un oggetto `CFont`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFont:: CreateFont](#createfont)|Inizializza un `CFont` con le caratteristiche specificate.|
 |[CFont:: CreateFontIndirect](#createfontindirect)|Inizializza un oggetto `CFont` con le caratteristiche fornite in una struttura di `LOGFONT`.|
@@ -58,11 +58,11 @@ class CFont : public CGdiObject
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFont:: operator HFONT](#operator_hfont)|Restituisce l'handle del tipo di carattere GDI di Windows collegato all'oggetto `CFont`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per usare un oggetto `CFont`, costruire un oggetto `CFont` e alleghirvi un tipo di carattere di Windows con [CreateFont](#createfont), [CreateFontIndirect](#createfontindirect), [CreatePointFont](#createpointfont)o [CreatePointFontIndirect](#createpointfontindirect)e quindi usare le funzioni membro dell'oggetto per modificare il tipo di carattere.
 
@@ -90,7 +90,7 @@ Costruisce un oggetto `CFont`.
 CFont();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto risultante deve essere inizializzato con `CreateFont`, `CreateFontIndirect`, `CreatePointFont`o `CreatePointFontIndirect` prima di poter essere utilizzato.
 
@@ -178,7 +178,7 @@ Un `CString` o un puntatore a una stringa con terminazione null che specifica il
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo di carattere può essere selezionato successivamente come tipo di carattere per qualsiasi contesto di dispositivo.
 
@@ -209,7 +209,7 @@ Punta a una struttura di `LOGFONT` che definisce le caratteristiche del tipo di 
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo di carattere può essere selezionato successivamente come tipo di carattere corrente per qualsiasi dispositivo.
 
@@ -247,7 +247,7 @@ Puntatore all'oggetto [CDC](../../mfc/reference/cdc-class.md) da usare per conve
 
 Diverso da zero se ha esito positivo, in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Converte automaticamente l'altezza in *nPointSize alle* in unità logiche usando l'oggetto CDC a cui fa riferimento *PDC*.
 
@@ -279,7 +279,7 @@ Puntatore all'oggetto [CDC](../../mfc/reference/cdc-class.md) da utilizzare per 
 
 Diverso da zero se ha esito positivo, in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione converte automaticamente l'altezza `lfHeight` in unità logiche utilizzando l'oggetto CDC a cui punta *PDC* prima di passare la struttura `LOGFONT` a Windows.
 
@@ -306,7 +306,7 @@ Handle HFONT per un tipo di carattere di Windows.
 
 Puntatore a un oggetto `CFont` in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se un oggetto `CFont` non è ancora collegato all'handle, viene creato e collegato un oggetto `CFont` temporaneo. Questo oggetto `CFont` temporaneo è valido solo fino alla successiva esecuzione del tempo di inattività dell'applicazione nel ciclo di eventi, al momento dell'eliminazione di tutti gli oggetti grafici temporanei. Un altro modo per indicare che l'oggetto temporaneo è valido solo durante l'elaborazione di un messaggio di finestra.
 
@@ -347,7 +347,7 @@ operator HFONT() const;
 
 Handle dell'oggetto del tipo di carattere GDI di Windows collegato a `CFont` in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Poiché questo operatore viene usato automaticamente per le conversioni da `CFont` a [tipi di carattere e testo](/windows/win32/gdi/fonts-and-text), è possibile passare `CFont` oggetti alle funzioni che prevedono HFONTS.
 

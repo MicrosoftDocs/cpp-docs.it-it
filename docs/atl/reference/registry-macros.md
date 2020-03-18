@@ -13,11 +13,11 @@ helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
 ms.openlocfilehash: c2a70c15473798ba6eb2ef35e0b7ded395708586
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857145"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417502"
 ---
 # <a name="registry-macros"></a>Macro del registro di sistema
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
 ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854063"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419693"
 ---
 # <a name="ltoptionalgt-operators"></a>operatori&gt; facoltativi &lt;
 
@@ -65,7 +65,7 @@ Oggetto di tipo `optional`, `nullopt_t`o `T`.
 \ a *destra*
 Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello restituisce `!(left == right)`.
 
@@ -117,7 +117,7 @@ Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
 **true** se l'elenco a sinistra dell'operatore è minore o uguale all'elenco a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello restituisce `!(right < left)`.
 
@@ -145,7 +145,7 @@ Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
 **true** se l'elenco a sinistra dell'operatore è maggiore dell'elenco a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello restituisce `right < left`.
 
@@ -173,6 +173,6 @@ Oggetto di tipo `optional`, `nullopt_t`o `T`.
 
 **true** se l'oggetto `optional` a sinistra dell'operatore è maggiore o uguale all'oggetto `optional` a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione modello restituisce `!(left < right)`.

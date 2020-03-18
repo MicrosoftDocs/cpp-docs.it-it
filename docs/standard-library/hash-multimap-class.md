@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 ms.openlocfilehash: b42dd5ba4aa3df12e3ef1aba930b2214dde19756
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856728"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419021"
 ---
 # <a name="hash_multimap-class"></a>Classe hash_multimap
 
@@ -124,7 +124,7 @@ Tipo che include due oggetti funzione, uno dei *tratti* della classe che è in g
 \ *allocatore*
 Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di multi_map e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair <const Key, Type>>`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 hash_multimap è:
 
@@ -233,7 +233,7 @@ Tipo che rappresenta la classe allocator per l'oggetto hash_multimap.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `allocator_type` è un sinonimo per il parametro di modello `Allocator`.
 
@@ -260,7 +260,7 @@ iterator begin();
 
 Iteratore bidirezionale che punta al primo elemento dell'oggetto hash_multimap o alla posizione successiva a un oggetto hash_multimap vuoto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se il valore restituito di `begin` viene assegnato a una `const_iterator`, non è possibile modificare gli elementi dell'oggetto hash_multimap. Se il valore restituito di `begin` viene assegnato a una `iterator`, è possibile modificare gli elementi dell'oggetto hash_multimap.
 
@@ -367,7 +367,7 @@ const_iterator cend() const;
 
 Iteratore bidirezionale const che punta alla posizione successiva all'ultimo elemento di un oggetto [hash_multimap](../standard-library/hash-multimap-class.md). Se l'oggetto `hash_multimap` è vuoto, `hash_multimap::cend == hash_multimap::begin`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `cend` viene usato per verificare se un iteratore ha raggiunto la fine del relativo oggetto hash_multimap.
 
@@ -414,7 +414,7 @@ Cancella tutti gli elementi di un hash_multimap.
 void clear();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -464,7 +464,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi eleme
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_iterator` non può essere usato per modificare il valore di un elemento.
 
@@ -489,7 +489,7 @@ Tipo che fornisce un puntatore a un elemento **const** di un oggetto hash_multim
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_pointer` non può essere usato per modificare il valore di un elemento.
 
@@ -506,7 +506,7 @@ Tipo che fornisce un riferimento a un elemento **const** archiviato in un oggett
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -562,7 +562,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi eleme
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione sull'oggetto hash_multimap in ordine inverso.
 
@@ -596,7 +596,7 @@ La chiave degli elementi per cui trovare un corrispondenza nell'hash_multimap.
 
 1 se hash_multimap contiene un elemento la cui chiave di ordinamento corrisponde alla chiave del parametro. 0 se hash_multimap non contiene un elemento con una chiave corrispondente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce il numero di elementi nell'intervallo
 
@@ -664,7 +664,7 @@ const_reverse_iterator crbegin() const;
 
 Iteratore bidirezionale const inverso che punta al primo elemento di un oggetto [hash_multimap](../standard-library/hash-multimap-class.md) invertito o a quello che è stato l'ultimo elemento dell'oggetto `hash_multimap` non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `crbegin` viene usato con un oggetto hash_multimap invertito proprio come [hash_multimap::begin](#begin) viene usato con un oggetto `hash_multimap`.
 
@@ -716,7 +716,7 @@ const_reverse_iterator crend() const;
 
 Iteratore bidirezionale const inverso che punta alla posizione successiva all'ultimo elemento di un oggetto [hash_multimap](../standard-library/hash-multimap-class.md) invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto `hash_multimap` non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `crend` viene usato con un oggetto hash_multimap invertito proprio come [hash_multimap::end](#end) viene usato con un oggetto hash_multimap.
 
@@ -767,7 +767,7 @@ Tipo Signed Integer che può essere usato per rappresentare il numero di element
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `difference_type` è il tipo restituito quando si sottrae o si incrementa tramite gli iteratori del contenitore. `difference_type` viene in genere usato per rappresentare il numero di elementi nell'intervallo *[ first,  last)* tra gli iteratori `first` e `last`, includendo l'elemento a cui punta `first` e l'intervallo di elementi fino all'elemento a cui punta `last`, escluso tale elemento.
 
@@ -855,7 +855,7 @@ iterator emplace(ValTy&& val);
 
 La funzione membro `emplace` restituisce un iteratore che punta alla posizione in cui è stato inserito il nuovo elemento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto [hash_multimap::value_type](#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dei dati dell'elemento.
 
@@ -913,7 +913,7 @@ iterator emplace_hint(
 
 La funzione membro [hash_multimap::emplace](#emplace) restituisce un iteratore che punta alla posizione in cui il nuovo elemento è stato inserito nell'oggetto `hash_multimap`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto [hash_multimap::value_type](#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dei dati dell'elemento.
 
@@ -963,7 +963,7 @@ bool empty() const;
 
 **true** se l'oggetto hash_multimap è vuoto; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -1016,7 +1016,7 @@ iterator end();
 
 Iteratore bidirezionale che punta alla posizione successiva all'ultimo elemento di un oggetto hash_multimap. Se l'oggetto hash_multimap è vuoto, hash_multimap::end == hash_multimap::begin.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `end` viene usato per verificare se un iteratore ha raggiunto la fine del relativo oggetto hash_multimap.
 
@@ -1094,7 +1094,7 @@ Coppia di iteratori in cui il primo è l'elemento [lower_bound](#lower_bound) e 
 
 Per accedere al primo iteratore di una coppia `pr` restituita dalla funzione membro, usare `pr`. **first** e per dereferenziare l'iteratore del limite inferiore, usare \*( `pr`. **first**). Per accedere al secondo iteratore di una coppia `pr` restituita dalla funzione membro, usare `pr`. **second** e per dereferenziare l'iteratore del limite superiore, usare \*( `pr`. **second**).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -1194,7 +1194,7 @@ Per le prime due funzioni membro, un iteratore bidirezionale che definisce il pr
 
 Per la terza funzione membro, restituisce il numero di elementi rimossi dall'hash_multimap.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le funzioni membro non generano mai un'eccezione.
 
@@ -1307,7 +1307,7 @@ Chiave per cui trovare una corrispondenza in base alla chiave di ordinamento di 
 
 Iteratore che punta alla prima posizione di un elemento con una chiave specificata o alla posizione successiva all'ultimo elemento dell'oggetto hash_multimap se non viene trovata alcuna corrispondenza per la chiave.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce un iteratore che punta a un elemento nel hash_multimap la cui chiave di ordinamento viene `equivalent` alla chiave dell'argomento in un predicato binario che provoca un ordinamento basato su una relazione di comparabilità minore di.
 
@@ -1396,7 +1396,7 @@ Allocator get_allocator() const;
 
 Allocatore usato dall'oggetto hash_multimap.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Gli allocatori per la classe hash_multimap specificano il modo in cui la classe gestisce la memoria. Gli allocatori predefiniti forniti con le classi contenitore della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
 
@@ -1522,7 +1522,7 @@ hash_multimap(
 |*Ultimo*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
 |*IList*|Oggetto Initializer_list da cui copiare.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tutti i costruttori archiviano un tipo di oggetto allocatore che gestisce la memoria per l'oggetto hash_multimap e che può essere restituito in un secondo momento chiamando [get_allocator](#get_allocator). Il parametro allocator viene spesso omesso nelle dichiarazioni di classe e vengono usate macro di pre-elaborazione per introdurre allocatori alternativi.
 
@@ -1590,7 +1590,7 @@ La quarta funzione membro inserisce la sequenza di valori di elemento in una map
 
 Il comportamento delle ultime due funzioni membro `insert` è uguale a quello delle prime due, con la differenza che move-construct viene usato per costruire il valore inserito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto [value_type](#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dati dell'elemento.
 
@@ -1607,7 +1607,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qu
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il `iterator` definito da hash_multimap punta a oggetti di [value_type](#value_type), che sono di tipo `pair`\< **chiave const, tipo**>, il cui primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato incluso nell'elemento.
 
@@ -1636,7 +1636,7 @@ key_compare key_comp() const;
 
 Oggetto funzione che viene usato da un oggetto hash_multimap per ordinare gli elementi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto archiviato definisce la funzione membro
 
@@ -1704,7 +1704,7 @@ Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordi
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `key_compare` è un sinonimo dei *tratti*di parametro di modello.
 
@@ -1725,7 +1725,7 @@ Tipo che descrive l'oggetto chiave di ordinamento di cui è costituito ogni elem
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `key_type` è un sinonimo della *chiave*del parametro di modello.
 
@@ -1759,7 +1759,7 @@ Tipo [iterator](#iterator) o [const_iterator](#const_iterator) che punta alla po
 
 Se il valore restituito di `lower_bound` viene assegnato a un `const_iterator`, l'oggetto hash_multimap non può essere modificato. Se il valore restituito di `lower_bound` viene assegnato a una `iterator`, l'oggetto hash_multimap può essere modificato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -1841,7 +1841,7 @@ Tipo che rappresenta il tipo di dati archiviato in un oggetto hash_multimap.
 typedef Type mapped_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `mapped_type` è sinonimo del parametro di modello *Type*.
 
@@ -1866,7 +1866,7 @@ size_type max_size() const;
 
 Lunghezza massima possibile dell'oggetto hash_multimap.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -1908,7 +1908,7 @@ hash_multimap& operator=(hash_multimap&& right);
 |-|-|
 |*right*|[Classe hash_multimap](../standard-library/hash-multimap-class.md) copiata nell'oggetto `hash_multimap`.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Dopo la cancellazione di tutti gli elementi esistenti in un `hash_multimap`, `operator=` copia o sposta il contenuto di *direttamente* nella `hash_multimap`.
 
@@ -1961,7 +1961,7 @@ Tipo che fornisce un puntatore a un elemento di un oggetto hash_multimap.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::pointer pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È possibile utilizzare un tipo `pointer` per modificare il valore di un elemento.
 
@@ -1984,7 +1984,7 @@ reverse_iterator rbegin();
 
 Iteratore bidirezionale inverso che punta al primo elemento di un oggetto hash_multimap invertito o a quello che è stato l'ultimo elemento dell'oggetto hash_multimap non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rbegin` viene usato con un oggetto hash_multimap invertito proprio come [begin](#begin) viene usato con un oggetto hash_multimap.
 
@@ -2063,7 +2063,7 @@ Tipo che fornisce un riferimento a un elemento archiviato in un oggetto hash_mul
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::reference reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -2132,7 +2132,7 @@ reverse_iterator rend();
 
 Iteratore bidirezionale const inverso che punta alla posizione successiva all'ultimo elemento di un oggetto hash_multimap invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto hash_multimap non invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rend` viene usato con un oggetto hash_multimap invertito proprio come [end](#end) viene usato con un oggetto hash_multimap.
 
@@ -2214,7 +2214,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un tipo `reverse_iterator` viene usato per eseguire l'iterazione sull'oggetto hash_multimap in ordine inverso.
 
@@ -2239,7 +2239,7 @@ size_type size() const;
 
 Lunghezza corrente di hash_multimap.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -2285,7 +2285,7 @@ Tipo Unsigned Integer in grado di contare il numero di elementi di un oggetto ha
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -2307,7 +2307,7 @@ void swap(hash_multimap& right);
 \ a *destra*
 Oggetto hash_multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto hash_multimap.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro non invalida riferimenti, puntatori o iteratori che designano gli elementi dei due oggetti hash_multimap di cui vengono scambiati gli elementi.
 
@@ -2387,7 +2387,7 @@ Tipo [iterator](#iterator) o [const_iterator](#const_iterator) che punta alla po
 
 Se il valore restituito di `upper_bound` viene assegnato a un `const_iterator`, l'oggetto hash_multimap non può essere modificato. Se il valore restituito di `upper_bound` viene assegnato a una `iterator`, l'oggetto hash_multimap può essere modificato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ### <a name="example"></a>Esempio
 
@@ -2464,7 +2464,7 @@ value_compare value_comp() const;
 
 Restituisce l'oggetto funzione di confronto che viene usato da un oggetto hash_multimap per ordinare gli elementi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per un hash_multimap *m*, se due elementi *E1* (*K1*, *D1*) ed *E2*(*K2*, *D2*) sono oggetti di tipo [value_type](#value_type), dove *K1* e *K2* sono le chiavi di tipo [key_type](#key_type) e *D1* e *D2* sono i dati di tipo [mapped_type](#mapped_type), `m.value_comp()(e1, e2)` è equivalente a `m.key_comp()(k1, k2)`. Un oggetto archiviato definisce la funzione membro
 
@@ -2530,7 +2530,7 @@ Tipo che rappresenta il tipo di oggetto archiviato in un oggetto hash_multimap.
 typedef pair<const Key, Type> value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `value_type` viene dichiarata come Pair\<const [key_type](#key_type), [mapped_type](#mapped_type)> e non Pair\<key_type, mapped_type > perché le chiavi di un contenitore associativo non possono essere modificate utilizzando un iteratore o un riferimento non costante.
 

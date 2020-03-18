@@ -3,11 +3,11 @@ title: 4. Variabili di ambiente
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
 ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882860"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417054"
 ---
 # <a name="4-environment-variables"></a>4. variabili di ambiente
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
 ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890787"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418573"
 ---
 # <a name="cftpconnection-class"></a>Classe CFtpConnection
 
@@ -51,13 +51,13 @@ class CFtpConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFtpConnection:: CFtpConnection](#cftpconnection)|Costruisce un oggetto `CFtpConnection`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Comando CFtpConnection::](#command)|Invia un comando direttamente a un server FTP.|
 |[CFtpConnection:: CreateDirectory](#createdirectory)|Crea una directory nel server.|
@@ -71,7 +71,7 @@ class CFtpConnection : public CInternetConnection
 |[CFtpConnection:: Rename](#rename)|Rinomina un file nel server.|
 |[CFtpConnection:: SetCurrentDirectory](#setcurrentdirectory)|Imposta la directory FTP corrente.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 FTP è uno dei tre servizi Internet riconosciuti dalle classi WinInet di MFC.
 
@@ -149,7 +149,7 @@ Numero che identifica la porta TCP/IP da utilizzare nel server.
 *bPassive*<br/>
 Specifica la modalità passiva o attiva per questa sessione FTP. Se impostato su TRUE, imposta l'API Win32 *dwFlag* su INTERNET_FLAG_PASSIVE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Non è mai possibile creare direttamente un oggetto `CFtpConnection`. Chiamare invece [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), che crea l'oggetto `CFptConnection`.
 
@@ -189,7 +189,7 @@ Puntatore a un valore contenente un valore definito dall'applicazione usato per 
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro emula la funzionalità della funzione [FtpCommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw) , come descritto nell'Windows SDK.
 
@@ -212,7 +212,7 @@ Puntatore a una stringa che contiene il nome della directory da creare.
 
 Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione di Windows [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare `GetCurrentDirectory` per determinare la directory di lavoro corrente per questa connessione al server. Non presupporre che il sistema remoto sia connesso alla directory radice.
 
@@ -250,7 +250,7 @@ Puntatore a un valore DWORD che contiene le informazioni seguenti:
 
 Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ottenere invece il nome di directory come URL, chiamare [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).
 
@@ -288,7 +288,7 @@ Puntatore a un valore DWORD che contiene le informazioni seguenti:
 
 Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `GetCurrentDirectoryAsURL` si comporta allo stesso modo di [GetCurrentDirectory](#getcurrentdirectory)
 
@@ -348,7 +348,7 @@ Identificatore di contesto per il recupero del file. Per ulteriori informazioni 
 
 Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `GetFile` è una routine di alto livello che gestisce tutto il sovraccarico associato alla lettura di un file da un server FTP e all'archiviazione locale. Le applicazioni che recuperano solo i dati dei file o che richiedono un controllo di chiusura sul trasferimento di file devono usare `OpenFile` e [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) .
 
@@ -392,7 +392,7 @@ Identificatore di contesto per l'apertura del file. Per ulteriori informazioni s
 
 Puntatore a un oggetto [CInternetFile](../../mfc/reference/cinternetfile-class.md) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `OpenFile` deve essere utilizzato nelle situazioni seguenti:
 
@@ -438,7 +438,7 @@ Identificatore di contesto per il posizionamento del file. Per ulteriori informa
 
 Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `PutFile` è una routine di alto livello che gestisce tutte le operazioni associate all'archiviazione di un file in un server FTP. Le applicazioni che inviano solo dati o che richiedono un controllo più stretto sul trasferimento di file devono usare [OpenFile](#openfile) e [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write).
 
@@ -461,7 +461,7 @@ Puntatore a una stringa contenente il nome file da rimuovere.
 
 Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il parametro *pstrFileName* può essere un nome di file parzialmente qualificato rispetto alla directory corrente o completo. Una barra rovesciata (\\) o una barra (/) può essere utilizzata come separatore di directory per entrambi i nomi. La funzione `Remove` converte i separatori dei nomi di directory nei caratteri appropriati prima di utilizzarli.
 
@@ -482,7 +482,7 @@ Puntatore a una stringa contenente la directory da rimuovere.
 
 Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare [GetCurrentDirectory](#getcurrentdirectory) per determinare la directory di lavoro corrente del server. Non presupporre che il sistema remoto sia connesso alla directory radice.
 
@@ -510,7 +510,7 @@ Puntatore a una stringa che contiene il nuovo nome del file.
 
 Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I parametri *pstrExisting* e *pstrNew* possono essere un nome di file parzialmente qualificato rispetto alla directory corrente o completo. Una barra rovesciata (\\) o una barra (/) può essere utilizzata come separatore di directory per entrambi i nomi. `Rename` converte i separatori dei nomi di directory nei caratteri appropriati prima di utilizzarli.
 
@@ -531,7 +531,7 @@ Puntatore a una stringa che contiene il nome della directory.
 
 Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il parametro *pstrDirName* può essere un nome di file parzialmente o completo relativo alla directory corrente. Una barra rovesciata (\\) o una barra (/) può essere utilizzata come separatore di directory per entrambi i nomi. `SetCurrentDirectory` converte i separatori dei nomi di directory nei caratteri appropriati prima di utilizzarli.
 

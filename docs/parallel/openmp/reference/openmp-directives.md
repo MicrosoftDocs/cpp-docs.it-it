@@ -30,11 +30,11 @@ helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
 ms.openlocfilehash: 4db341cf58884263e414e24aacf888c8c88e57cc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882907"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417040"
 ---
 # <a name="openmp-directives"></a>Direttive OpenMP
 
@@ -44,7 +44,7 @@ Visual C++ supporta le direttive OpenMP seguenti.
 
 Per la condivisione di lavoro parallela:
 
-|Directive|Descrizione|
+|Direttiva|Descrizione|
 |---------|-----------|
 |[parallel](#parallel)|Definisce un'area parallela, ovvero codice che verrà eseguito da più thread in parallelo.|
 |[for](#for-openmp)|Fa in modo che le operazioni eseguite in un ciclo di `for` all'interno di un'area parallela siano divise tra i thread.|
@@ -53,7 +53,7 @@ Per la condivisione di lavoro parallela:
 
 Per il master e la sincronizzazione:
 
-|Directive|Descrizione|
+|Direttiva|Descrizione|
 |---------|-----------|
 |[master](#master)|Specifica che solo il thread master deve eseguire una sezione del programma.|
 |[critical](#critical)|Specifica che il codice viene eseguito solo in un thread alla volta.|
@@ -64,7 +64,7 @@ Per il master e la sincronizzazione:
 
 Per l'ambiente dati:
 
-|Directive|Descrizione|
+|Direttiva|Descrizione|
 |---------|-----------|
 |[threadprivate](#threadprivate)|Specifica che una variabile è privata per un thread.|
 
@@ -82,7 +82,7 @@ Specifica la posizione di memoria che verrà aggiornata atomicamente.
 *expression*<br/>
 Istruzione con *lvalue*, la cui posizione di memoria si vuole proteggere da più di una scrittura.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `atomic` non supporta clausole.
 
@@ -121,7 +121,7 @@ Sincronizza tutti i thread in un team; tutti i thread vengono sospesi alla barri
 #pragma omp barrier
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `barrier` non supporta clausole.
 
@@ -144,10 +144,10 @@ Specifica che il codice viene eseguito solo in un thread alla volta.
 
 ### <a name="parameters"></a>Parametri
 
-*name*<br/>
+*nome*<br/>
 Opzionale Nome per identificare il codice critico. Il nome deve essere racchiuso tra parentesi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `critical` non supporta clausole.
 
@@ -224,7 +224,7 @@ Specifica che tutti i thread hanno la stessa visualizzazione della memoria per t
 *var*<br/>
 Opzionale Elenco delimitato da virgole di variabili che rappresentano gli oggetti che si desidera sincronizzare. Se *var* non è specificato, viene scaricata tutta la memoria.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `flush` non supporta clausole.
 
@@ -304,7 +304,7 @@ Opzionale Zero o più clausole, vedere la sezione **osservazioni** .
 *for_statement*<br/>
 Ciclo `for`. Se il codice utente nel ciclo `for` modifica la variabile di indice, viene generato un comportamento non definito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `for` supporta le clausole seguenti:
 
@@ -395,7 +395,7 @@ Specifica che solo il thread master deve eseguire una sezione del programma.
 }
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `master` non supporta clausole.
 
@@ -455,7 +455,7 @@ Specifica che il codice in un ciclo di `for` parallelo deve essere eseguito come
    structured-block
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `ordered` deve rientrare nell'extent dinamico di un costrutto [for](#for-openmp) o `parallel for` con una clausola `ordered`.
 
@@ -533,7 +533,7 @@ Definisce un'area parallela, ovvero codice che verrà eseguito da più thread in
 *clausole*<br/>
 Opzionale Zero o più clausole, vedere la sezione **osservazioni** .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `parallel` supporta le clausole seguenti:
 
@@ -595,7 +595,7 @@ Identifica le sezioni di codice che devono essere divise tra tutti i thread.
 *clausole*<br/>
 Opzionale Zero o più clausole, vedere la sezione **osservazioni** .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `sections` può contenere zero o più direttive di `section`.
 
@@ -650,7 +650,7 @@ Consente di specificare che una sezione di codice deve essere eseguita in un sin
 *clausole*<br/>
 Opzionale Zero o più clausole, vedere la sezione **osservazioni** .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `single` supporta le clausole seguenti:
 
@@ -708,7 +708,7 @@ Specifica che una variabile è privata per un thread.
 *var*<br/>
 Elenco delimitato da virgole di variabili che si desidera rendere private a un thread. *var* deve essere una variabile con ambito globale o con ambito spazio dei nomi o una variabile locale statica.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La direttiva `threadprivate` non supporta clausole.
 
@@ -716,7 +716,7 @@ La direttiva `threadprivate` è basata sull'attributo [thread](../../../cpp/thre
 
 È possibile usare `threadprivate` in una DLL caricata in modo statico all'avvio del processo. Tuttavia, non è possibile usare `threadprivate` in nessuna DLL che verrà caricata tramite [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) , ad esempio le DLL caricate con [/DELAYLOAD (importazione a caricamento ritardato)](../../../build/reference/delayload-delay-load-import.md), che usa anche `LoadLibrary`.
 
-Per una variabile `threadprivate` di un tipo *distruttibile* non è garantito che il relativo distruttore venga chiamato. Ad esempio,
+Per una variabile `threadprivate` di un tipo *distruttibile* non è garantito che il relativo distruttore venga chiamato. Ad esempio:
 
 ```cpp
 struct MyType

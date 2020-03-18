@@ -75,11 +75,11 @@ helpviewer_keywords:
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884105"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421086"
 ---
 # <a name="coleserveritem-class"></a>Classe COleServerItem
 
@@ -95,13 +95,13 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleServerItem:: COleServerItem](#coleserveritem)|Costruisce un oggetto `COleServerItem`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleServerItem:: AddOtherClipboardData](#addotherclipboarddata)|Inserisce i formati di presentazione e conversione in un oggetto `COleDataSource`.|
 |[COleServerItem:: CopyToClipboard](#copytoclipboard)|Copia l'elemento negli Appunti.|
@@ -134,7 +134,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleServerItem:: GetDataSource](#getdatasource)|Ottiene l'oggetto utilizzato per archiviare i formati di conversione.|
 |[COleServerItem:: OnHide](#onhide)|Chiamata eseguita dal Framework per nascondere l'elemento OLE.|
@@ -143,7 +143,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleServerItem:: m_sizeExtent](#m_sizeextent)|Informa il server della quantità di elemento OLE visibile.|
 

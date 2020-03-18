@@ -6,11 +6,11 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856696"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419014"
 ---
 # <a name="lthash_mapgt-operators"></a>Operatori &lt;hash_map&gt;
 
