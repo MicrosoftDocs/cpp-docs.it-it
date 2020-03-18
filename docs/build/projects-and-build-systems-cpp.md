@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: 1548f82b62163600b5220c553bebcea72020abbc
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: df3b768c139bc4dc000c185d7153fd4aa38ae94a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274735"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509451"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ progetti e sistemi di compilazione in Visual Studio
 
@@ -40,11 +40,12 @@ Il compilatore C++ Microsoft, il linker, le librerie standard e le utilità corr
 ```cmd
 cl /EHsc hello.cpp
 ```
+
 Si noti che qui il compilatore (cl. exe) richiama automaticamente il C++ preprocessore e il linker per produrre il file di output finale.  Per ulteriori informazioni, vedere [compilazione dalla riga di comando](building-on-the-command-line.md).
 
 ## <a name="build-systems-and-projects"></a>Sistemi e progetti di compilazione
 
-La maggior parte dei programmi reali usa un tipo di *sistema di compilazione* per gestire complessità di compilazione di più file di origine per più configurazioni (ad esempio debug e versione), più piattaforme (x86, x64, ARM e così via), procedure di compilazione personalizzate e persino più eseguibili che devono essere compilati in un determinato ordine. Le impostazioni vengono apportate in un file di configurazione della compilazione e il sistema di compilazione lo accetta come input prima di richiamare il compilatore. Il set di file di codice sorgente e i file di configurazione della build necessari per compilare un file eseguibile è denominato *progetto*. 
+La maggior parte dei programmi reali usa un tipo di *sistema di compilazione* per gestire le complessità della compilazione di più file di origine per più configurazioni (ad esempio, debug e versione), più piattaforme (x86, x64, ARM e così via), procedure di compilazione personalizzate e anche più file eseguibili che devono essere compilati in un determinato ordine. Le impostazioni vengono apportate in un file di configurazione della compilazione e il sistema di compilazione lo accetta come input prima di richiamare il compilatore. Il set di file di codice sorgente e i file di configurazione della build necessari per compilare un file eseguibile è denominato *progetto*. 
 
 L'elenco seguente mostra varie opzioni per i progetti di Visual C++Studio:
 
@@ -62,7 +63,7 @@ L'elenco seguente mostra varie opzioni per i progetti di Visual C++Studio:
 
 È possibile richiamare MSBuild dalla riga di comando passandogli un file con estensione vcxproj insieme alle opzioni della riga di comando. Questo approccio richiede una conoscenza corretta di MSBuild ed è consigliato solo quando è strettamente necessario. Per altre informazioni, vedere [MSBuild](msbuild-visual-cpp.md).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Progetti di Visual Studio](creating-and-managing-visual-cpp-projects.md) Come creare, configurare e compilare C++ progetti in Visual Studio usando il relativo sistema di compilazione nativo (MSBuild).
 
@@ -77,7 +78,7 @@ Viene illustrato come usare il compilatore CC++ /e gli strumenti di compilazione
 
 [Creazione di dll in Visual Studio](dlls-in-visual-cpp.md) Come creare, eseguire il debug e distribuire CC++ /dll (librerie condivise) in Visual Studio.
 
-[Procedura dettagliata: Creazione e utilizzo di una libreria](walkthrough-creating-and-using-a-static-library-cpp.md) statica come creare un file binario con estensione LIB.
+[Procedura dettagliata: creazione e utilizzo di una libreria statica](walkthrough-creating-and-using-a-static-library-cpp.md) Come creare un file binario con estensione LIB.
 
 [Compilazione di applicazioniC++ C/isolate e assembly affiancati](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Viene descritto il modello di distribuzione per le applicazioni desktop di Windows, in base al concetto di applicazioni isolate e assembly affiancati.
 

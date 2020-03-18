@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: 3988c5f062c1f30886dbaa4bca8502e2bd841dfc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624746"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509432"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Configurazioni della build predefinite CMake
 
@@ -351,6 +351,7 @@ Queste opzioni consentono di eseguire comandi nel sistema remoto prima e dopo la
   ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -367,7 +368,7 @@ In un progetto CMake le configurazioni della build vengono archiviate in un file
 - Versione x64 Clang
 - Linux-Debug
 - Linux-Release
-- Linux-Clang-debug
+- Linux-Clang-Debug
 - Linux-Clang-versione
 - Cache esistente (remota)
 - Cache esistente
