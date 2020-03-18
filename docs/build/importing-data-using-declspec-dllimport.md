@@ -1,24 +1,22 @@
 ---
 title: Importazione di dati tramite __declspec(dllimport)
 ms.date: 11/04/2016
-f1_keywords:
-- dllimport
 helpviewer_keywords:
 - importing data [C++]
 - dllimport attribute [C++], data imports
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
-ms.openlocfilehash: 74ad93e640a4e961f7670077227bb5c35a42c20f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c9dce798572a91bcb9721f022393abb669970131
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342099"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440452"
 ---
-# <a name="importing-data-using-declspecdllimport"></a>Importazione di dati tramite __declspec(dllimport)
+# <a name="importing-data-using-__declspecdllimport"></a>Importazione di dati tramite __declspec(dllimport)
 
-Nel caso dei dati mediante **declspec** DllImport consente di rimuovere un livello di riferimento indiretto. Quando si importano dati da una DLL, è necessario passare attraverso la tabella IAT. Prima di **declspec**, ciò significava era necessario ricordarsi di eseguire un ulteriore livello di riferimento indiretto durante l'accesso ai dati esportate dalla DLL:
+Nel caso dei dati, l'utilizzo di **__declspec (dllimport)** è un elemento pratico che rimuove un livello di riferimento indiretto. Quando si importano dati da una DLL, è comunque necessario passare attraverso la tabella di indirizzi di importazione. Prima di **__declspec (dllimport)** , ciò significava che era necessario ricordare di eseguire un ulteriore livello di riferimento indiretto durante l'accesso ai dati esportati dalla dll:
 
 ```
 // project.h
@@ -30,7 +28,7 @@ Nel caso dei dati mediante **declspec** DllImport consente di rimuovere un livel
 #endif
 ```
 
-È quindi necessario esportare i dati nel. File DEF:
+I dati verranno quindi esportati in. File DEF:
 
 ```
 // project.def
@@ -39,7 +37,7 @@ EXPORTS
    ulDataInDll   CONSTANT
 ```
 
-e accedervi all'esterno della DLL:
+e accedervi al di fuori della DLL:
 
 ```
 if (*ulDataInDll == 0L)
@@ -48,9 +46,9 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-Quando si contrassegnano i dati come **declspec**, il compilatore genera automaticamente il codice di riferimento indiretto per te. È non è più necessario preoccuparsi di passaggi precedenti. Come affermato in precedenza, non utilizzare **declspec** dichiarazione sui dati quando si compila la DLL. Le funzioni all'interno della DLL non utilizzano la tabella IAT per accedere all'oggetto dati; Pertanto, non si avrà un livello supplementare di riferimento indiretto presentano.
+Quando si contrassegnano i dati come **__declspec (dllimport)** , il compilatore genera automaticamente il codice di riferimento indiretto. Non è più necessario preoccuparsi dei passaggi precedenti. Come indicato in precedenza, non usare la Dichiarazione **__declspec (dllimport)** sui dati durante la compilazione della dll. Le funzioni all'interno della DLL non utilizzano la tabella di indirizzi di importazione per accedere all'oggetto dati. non sarà pertanto disponibile il livello aggiuntivo di riferimento indiretto.
 
-Per esportare i dati automaticamente dalla DLL, usare questa dichiarazione:
+Per esportare automaticamente i dati dalla DLL, usare questa dichiarazione:
 
 ```
 __declspec(dllexport) ULONG ulDataInDLL;

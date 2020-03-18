@@ -2,18 +2,15 @@
 title: property (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
-f1_keywords:
-- property_cpp
-- property
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311680"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445167"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI e C++/CX)
 
@@ -125,7 +122,7 @@ Parametri per il metodo raise; devono corrispondere alla firma del delegato.
 *index_list*<br/>
 Un elenco delimitato da virgole di uno o più indici, specificati tra parentesi quadrate (l'operatore di indice, ([])). Per ogni indice, specificare un tipo e, facoltativamente, un identificatore che può essere usato nel corpo del metodo di proprietà.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo esempio di sintassi mostra una *proprietà semplice*, che dichiara in modo esplicito entrambi i metodi `set` e `get`. Il compilatore crea automaticamente un campo privato per archiviare il valore della proprietà.
 

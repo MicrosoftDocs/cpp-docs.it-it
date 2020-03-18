@@ -4,7 +4,6 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
 - VC.Project.VCCLCompilerTool.BufferSecurityCheck
-- /GS
 helpviewer_keywords:
 - buffers [C++], buffer overruns
 - buffer overruns, compiler /GS switch
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92d296e8079a9ecd8d366c46bbdad8b2ee5dc313
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292172"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439570"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Controllo sicurezza buffer)
 
-Rileva alcuni sovraccarichi del buffer che sovrascrivono l'indirizzo restituito della funzione, l'indirizzo del gestore di eccezioni o determinati tipi di parametri. Causando un sovraccarico del buffer è una tecnica usata dagli utenti malintenzionati di sfruttare il codice che non applica le restrizioni della dimensione del buffer.
+Rileva alcuni sovraccarichi del buffer che sovrascrivono l'indirizzo restituito di una funzione, l'indirizzo del gestore di eccezioni o alcuni tipi di parametri. La causa di un sovraccarico del buffer è una tecnica usata dagli hacker per sfruttare il codice che non impone restrizioni sulle dimensioni del buffer.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,25 +30,25 @@ Rileva alcuni sovraccarichi del buffer che sovrascrivono l'indirizzo restituito 
 /GS[-]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**/GS** è attivata per impostazione predefinita. Se si prevede che l'applicazione in modo non presenti rischi di sicurezza, usare **/GS-**. Per altre informazioni sull'eliminazione dei sovraccarichi del buffer, vedere [safebuffers](../../cpp/safebuffers.md).
+**/GS** è on per impostazione predefinita. Se si prevede che l'applicazione non disponga di alcuna esposizione alla sicurezza, utilizzare **/GS-** . Per ulteriori informazioni sull'eliminazione del rilevamento del sovraccarico del buffer, vedere [safebuffers](../../cpp/safebuffers.md).
 
 ## <a name="security-checks"></a>Controlli di sicurezza
 
-Sulle funzioni che il compilatore riconosce come elementi soggetti a problemi di sovraccarico del buffer, il compilatore alloca spazio dello stack prima l'indirizzo del mittente. In ingresso nella funzione, lo spazio allocato viene caricato con un *cookie di sicurezza* che viene calcolata una sola volta al caricamento del modulo. In uscita dalla funzione e durante la rimozione del frame nei sistemi operativi a 64 bit, viene chiamata una funzione helper per assicurarsi che il valore del cookie è comunque lo stesso. Un altro valore indica che una sovrascrittura dello stack potrebbe essersi verificato. Se viene rilevato un valore diverso, il processo viene terminato.
+Sulle funzioni riconosciute dal compilatore come soggetto a problemi di sovraccarico del buffer, il compilatore alloca spazio nello stack prima dell'indirizzo mittente. Nella voce della funzione, lo spazio allocato viene caricato con un *cookie di sicurezza* calcolato una volta al caricamento del modulo. Alla chiusura della funzione e durante la rimozione dei frame nei sistemi operativi a 64 bit, viene chiamata una funzione di supporto per assicurarsi che il valore del cookie sia ancora lo stesso. Un valore diverso indica che è possibile che si sia verificata una sovrascrittura dello stack. Se viene rilevato un valore diverso, il processo viene terminato.
 
-## <a name="gs-buffers"></a>Buffer /GS
+## <a name="gs-buffers"></a>Buffer GS
 
-Un controllo di sicurezza di sovraccarico del buffer viene eseguito su un *buffer GS*. Un buffer GS può essere uno dei seguenti:
+Viene eseguito un controllo di sicurezza del sovraccarico del buffer su un *buffer GS*. Un buffer GS può essere uno dei seguenti:
 
-- Una matrice di dimensioni superiori a 4 byte, sono presenti più di due elementi e ha un tipo di elemento che non è un tipo di puntatore.
+- Una matrice di dimensioni maggiori di 4 byte, ha più di due elementi e ha un tipo di elemento che non è un tipo di puntatore.
 
-- Struttura di dati le cui dimensioni sono maggiori di 8 byte e non contiene puntatori.
+- Struttura di dati la cui dimensione è maggiore di 8 byte e non contiene puntatori.
 
-- Un buffer allocato usando il [alloca](../../c-runtime-library/reference/alloca.md) (funzione).
+- Buffer allocato utilizzando la funzione [_alloca](../../c-runtime-library/reference/alloca.md) .
 
-- Qualsiasi classe o struttura contenente un buffer GS.
+- Qualsiasi classe o struttura che contiene un buffer GS.
 
 Ad esempio, le istruzioni seguenti dichiarano i buffer GS.
 
@@ -60,7 +59,7 @@ struct { int a; int b; int c; int d; } myStruct;
 struct { int a; char buf[20]; };
 ```
 
-Le istruzioni seguenti, tuttavia, non dichiarano i buffer GS. Le prime due dichiarazioni contengono gli elementi di tipo puntatore. La terza e quarta istruzione dichiarano le matrici con dimensioni sono troppo piccolo. La quinta istruzione dichiara una struttura le cui dimensioni su x86 piattaforma non è più di 8 byte.
+Tuttavia, le istruzioni seguenti non dichiarano i buffer GS. Le prime due dichiarazioni contengono elementi di tipo puntatore. La terza e la quarta istruzione dichiarano matrici la cui dimensione è troppo piccola. La Quinta istruzione dichiara una struttura la cui dimensione su una piattaforma x86 non è superiore a 8 byte.
 
 ```cpp
 char *pBuf[20];
@@ -70,59 +69,59 @@ int buf[2];
 struct { int a; int b; };
 ```
 
-## <a name="initialize-the-security-cookie"></a>Inizializzare il Cookie di sicurezza
+## <a name="initialize-the-security-cookie"></a>Inizializza il cookie di sicurezza
 
-Il **/GS** opzione del compilatore richiede che il cookie di sicurezza sia inizializzata prima di eseguire qualsiasi funzione che usa i cookie. Il cookie di sicurezza deve essere inizializzato immediatamente all'ingresso in un file EXE o DLL. Questa operazione viene eseguita automaticamente se si usano i punti di ingresso VCRuntime predefinite: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, DllMainCRTStartup o. Se si usa un punto di ingresso alternativo, è necessario inizializzare il cookie di sicurezza manualmente chiamando [security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).
+L'opzione del compilatore **/GS** richiede che il cookie di sicurezza venga inizializzato prima dell'esecuzione di qualsiasi funzione che usa il cookie. Il cookie di sicurezza deve essere inizializzato immediatamente alla voce di un file EXE o DLL. Questa operazione viene eseguita automaticamente se si usano i punti di ingresso predefiniti VCRuntime: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup o _DllMainCRTStartup. Se si utilizza un punto di ingresso alternativo, è necessario inizializzare manualmente il cookie di sicurezza chiamando [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).
 
 ## <a name="what-is-protected"></a>Elementi protetti
 
-Il **/GS** opzione del compilatore consente di proteggere gli elementi seguenti:
+L'opzione del compilatore **/GS** protegge gli elementi seguenti:
 
-- L'indirizzo del mittente di una chiamata di funzione.
+- Indirizzo di ritorno di una chiamata di funzione.
 
-- L'indirizzo di un gestore di eccezioni per una funzione.
+- Indirizzo di un gestore di eccezioni per una funzione.
 
-- Parametri della funzione vulnerabile.
+- Parametri di funzione vulnerabili.
 
-In tutte le piattaforme, **/GS** tenta di rilevare i sovraccarichi del buffer nell'indirizzo di ritorno. I sovraccarichi del buffer sono più facilmente sfruttati su piattaforme, ad esempio x86 e x64, che usano convenzioni di chiamata che archiviano l'indirizzo del mittente di una chiamata di funzione nello stack.
+In tutte le piattaforme, **/GS** tenta di rilevare i sovraccarichi del buffer nell'indirizzo mittente. I sovraccarichi del buffer sono più facilmente sfruttabili su piattaforme come x86 e x64, che usano convenzioni di chiamata che archiviano l'indirizzo di ritorno di una chiamata di funzione nello stack.
 
-Su x86, se una funzione Usa un gestore di eccezioni, il compilatore inserisce un cookie di sicurezza per proteggere l'indirizzo del gestore di eccezioni. Il cookie viene controllato durante la rimozione del frame.
+In x86, se una funzione utilizza un gestore di eccezioni, il compilatore inserisce un cookie di sicurezza per proteggere l'indirizzo del gestore di eccezioni. Il cookie viene verificato durante la rimozione del frame.
 
-**/GS** protegge *parametri vulnerabili* che vengono passati in una funzione. Un parametro vulnerabile è un puntatore, un riferimento di C++, una C-struttura (tipo C++ POD) che contiene un puntatore o un buffer GS.
+**/GS** protegge i *parametri vulnerabili* passati in una funzione. Un parametro vulnerabile è un puntatore, un C++ riferimento, una struttura C (C++ tipo POD) che contiene un puntatore o un buffer GS.
 
-Prima del cookie e le variabili locali viene allocato un parametro vulnerabile. Un sovraccarico del buffer può sovrascrivere tali parametri. E codice nella funzione che usa questi parametri può causare un attacco prima che la funzione restituisce e viene eseguito il controllo di sicurezza. Per ridurre questo rischio, il compilatore crea una copia dei parametri vulnerabili durante il prologo della funzione e li inserisce sotto l'area di archiviazione di tutti i buffer.
+Un parametro vulnerabile viene allocato prima del cookie e delle variabili locali. Un sovraccarico del buffer può sovrascrivere questi parametri. E il codice nella funzione che usa questi parametri può causare un attacco prima che la funzione restituisca e viene eseguito il controllo di sicurezza. Per ridurre al minimo questo rischio, il compilatore crea una copia dei parametri vulnerabili durante il prologo della funzione e li inserisce sotto l'area di archiviazione per tutti i buffer.
 
-Il compilatore non esegue copie dei parametri esposti nelle situazioni seguenti:
+Il compilatore non esegue copie dei parametri vulnerabili nelle situazioni seguenti:
 
 - Funzioni che non contengono un buffer GS.
 
-- Le ottimizzazioni ([Opzioni /O](o-options-optimize-code.md)) non sono abilitati.
+- Le ottimizzazioni ([Opzioni/o](o-options-optimize-code.md)) non sono abilitate.
 
-- Funzioni che hanno un elenco di argomenti variabili (...).
+- Funzioni che dispongono di un elenco di argomenti variabili (...).
 
-- Le funzioni che sono contrassegnate con [naked](../../cpp/naked-cpp.md).
+- Funzioni contrassegnate con [naked](../../cpp/naked-cpp.md).
 
 - Funzioni che contengono codice assembly inline nella prima istruzione.
 
-- Un parametro viene utilizzato solo in modi che hanno meno probabili di essere sfruttabile in caso di un sovraccarico del buffer.
+- Un parametro viene utilizzato solo in modi con meno probabilità di essere sfruttabili in caso di sovraccarico del buffer.
 
-## <a name="what-is-not-protected"></a>Che cosa non è protetto
+## <a name="what-is-not-protected"></a>Elementi non protetti
 
-Il **/GS** opzione del compilatore non offre protezione contro attacchi alla sicurezza di tutti i sovraccarichi del buffer. Ad esempio, se si dispone di un buffer e un oggetto vtable in un oggetto, un sovraccarico del buffer potrebbe danneggiare la vtable.
+L'opzione del compilatore **/GS** non protegge da tutti gli attacchi di sicurezza del sovraccarico del buffer. Se, ad esempio, si dispone di un buffer e di un vtable in un oggetto, un sovraccarico del buffer potrebbe danneggiare il vtable.
 
-Anche se si usa **/GS**, tentano sempre di scrivere codice protetto che non dispone di alcun sovraccarichi del buffer.
+Anche se si usa **/GS**, provare sempre a scrivere codice protetto privo di sovraccarichi del buffer.
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Per impostare questa opzione del compilatore in Visual Studio
 
-1. Nelle **Esplora soluzioni**, fare clic sul progetto e quindi fare clic su **proprietà**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto, quindi scegliere **Proprietà**.
 
-   Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+   Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Nel **pagine delle proprietà** finestra di dialogo, fare clic sul **C/C++** cartella.
+1. Nella finestra di dialogo **pagine delle proprietà** fare clic sulla cartella **C/C++**  .
 
-1. Scegliere il **generazione di codice** pagina delle proprietà.
+1. Fare clic sulla pagina delle proprietà **generazione codice** .
 
-1. Modificare il **controllo sicurezza Buffer** proprietà.
+1. Modificare la proprietà del **controllo di sicurezza del buffer** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
@@ -130,7 +129,7 @@ Anche se si usa **/GS**, tentano sempre di scrivere codice protetto che non disp
 
 ## <a name="example"></a>Esempio
 
-In questo esempio i sovraccarichi del buffer. In questo modo l'applicazione avrà esito negativo in fase di esecuzione.
+Questo esempio esegue il overrun di un buffer. In questo modo l'applicazione avrà esito negativo in fase di esecuzione.
 
 ```C
 // compile with: /c /W1

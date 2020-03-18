@@ -1,8 +1,6 @@
 ---
 title: Tabelle codici
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - character sets [C++], code pages
 - ANSI [C++], code pages
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 13b31b7d7750158caf498d92db67fd3e61856c5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738574"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443495"
 ---
 # <a name="code-pages"></a>Tabelle codici
 
@@ -35,7 +33,7 @@ La libreria di runtime Microsoft utilizza i seguenti tipi di tabelle codici:
 
    imposta inoltre le impostazioni locali alla tabella codici ANSI predefinita del sistema.
 
-- Tabella codici delle impostazioni locali. Il comportamento di una serie di routine di runtime dipende dall'impostazione locale corrente, inclusa la tabella codici delle impostazioni locali. Per altre informazioni, vedere [Routine dipendenti dalle impostazioni locali](../c-runtime-library/locale.md). Per impostazione predefinita, tutte le routine dipendenti dalle impostazioni locali della libreria di runtime Microsoft utilizzano la tabella codici che corrisponde alle impostazioni locali "C". Durante il runtime è possibile modificare o eseguire una query nella tabella codici delle impostazioni locali in uso con una chiamata a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
+- Tabella codici delle impostazioni locali. Il comportamento di una serie di routine di runtime dipende dall'impostazione locale corrente, inclusa la tabella codici delle impostazioni locali. Per ulteriori informazioni, vedere [routine dipendenti dalle impostazioni locali](../c-runtime-library/locale.md). Per impostazione predefinita, tutte le routine dipendenti dalle impostazioni locali della libreria di runtime Microsoft utilizzano la tabella codici che corrisponde alle impostazioni locali "C". Durante il runtime è possibile modificare o eseguire una query nella tabella codici delle impostazioni locali in uso con una chiamata a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
 - Tabella codici multibyte. Il comportamento della maggior parte delle routine di caratteri multibyte nella libreria di runtime dipende dall'impostazione della tabella codici multibyte corrente. Per impostazione predefinita, queste routine utilizzano la tabella codici ANSI predefinita del sistema. Durante il runtime è possibile eseguire una query e modificare la tabella codici multibyte rispettivamente con [_getmbcp](../c-runtime-library/reference/getmbcp.md) e [_setmbcp](../c-runtime-library/reference/setmbcp.md).
 

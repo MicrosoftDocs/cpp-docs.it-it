@@ -1,29 +1,27 @@
 ---
 title: Utilizzo di CHeaderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CHeaderCtrl
 helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: bf99aad508aee52bc8d345ca084ef96ef40f803b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386408"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444005"
 ---
 # <a name="using-cheaderctrl"></a>Utilizzo di CHeaderCtrl
 
-Usare un controllo intestazione, rappresentato dalla classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), per visualizzare le intestazioni di colonna per un elenco di colonne. Ad esempio, un controllo intestazione risulta utile per implementare i controlli di colonna in un foglio di calcolo.
+Usare un controllo Header, rappresentato dalla classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), per visualizzare le intestazioni di colonna per un elenco a colonne. Ad esempio, un controllo intestazione può essere utile per l'implementazione di controlli colonna in un foglio di calcolo.
 
-Il controllo intestazione in genere è suddivisa in parti, denominate "elementi intestazione" ogni se includesse un titolo per la colonna associata del testo o numeri. A seconda degli stili impostati, è possibile fornire un numero di modi diretti agli utenti di modificare gli elementi dell'intestazione.
+Il controllo intestazione viene in genere suddiviso in parti, denominate "elementi intestazione", ognuna con un titolo per la colonna associata di testo o numeri. A seconda degli stili impostati, è possibile fornire agli utenti una serie di modi diretti per modificare gli elementi di intestazione.
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) fornisce un controllo intestazione incorporata, e [CListView](../mfc/reference/clistview-class.md) incapsula `CListCtrl` in una classe MFC. In generale, è opportuno utilizzare `CHeaderCtrl` agli elenchi di etichetta che si intendono disegnare manualmente.
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) fornisce un controllo intestazione incorporato e [CListView](../mfc/reference/clistview-class.md) incapsula `CListCtrl` in una classe MFC. In generale, si può pensare di usare `CHeaderCtrl` per etichettare gli elenchi che si intende creare manualmente.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Controllo Header e controllo List](../mfc/header-control-and-list-control.md)
 

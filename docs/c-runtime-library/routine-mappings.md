@@ -1,19 +1,17 @@
 ---
 title: Mapping di routine
 ms.date: 11/04/2016
-f1_keywords:
-- c.mappings
 helpviewer_keywords:
 - _tWinMain
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 60a05b8102df1ecb9bb6f66eda15ff10cb12b32a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746891"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444862"
 ---
 # <a name="routine-mappings"></a>Mapping di routine
 
@@ -268,4 +266,4 @@ Per informazioni correlate, vedere [Mappature di testo generico in Tchar.h](../t
 [Mapping dei tipi di dati](../c-runtime-library/data-type-mappings.md)<br/>
 [Mapping di costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [Programma di testo generico di esempio](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[Using Generic-Text Mappings](../c-runtime-library/using-generic-text-mappings.md) (Uso di mapping di testo generico)
+[Uso di mapping di testo generico](../c-runtime-library/using-generic-text-mappings.md)

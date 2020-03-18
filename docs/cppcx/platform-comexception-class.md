@@ -4,17 +4,17 @@ ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
-- VCCORLIB/Platform::Exception::HResult
-- VCCORLIB/Platform::Exception::Message
+- VCCORLIB/Platform::COMException::HResult
+- VCCORLIB/Platform::COMException::Message
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500540"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444303"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 
@@ -34,7 +34,7 @@ COMException include anche i seguenti tipi di membri.
 
 **Costruttori**
 
-|Member|Descrizione|
+|Membro|Descrizione|
 |------------|-----------------|
 |[COMException](#ctor)|Inizializza una nuova istanza della classe COMException.|
 
@@ -46,7 +46,7 @@ La classe COMException eredita i metodi Equals(), Finalize(), GetHashCode(), Get
 
 La classe COMException presenta le proprietà seguenti:
 
-|Member|DESCRIZIONE|
+|Membro|Descrizione|
 |------------|-----------------|
 |[Eccezione:: HResult](#hresult)|Valore HRESULT corrispondente all'eccezione.|
 |[Eccezione:: Message](#message)|Messaggio in cui viene descritta l'eccezione.|
@@ -55,7 +55,7 @@ La classe COMException presenta le proprietà seguenti:
 
 Le seguenti eccezioni predefinite sono derivate da COMException. Differiscono da COMException solo nel nome, nel nome del costruttore e nel valore di HRESULT sottostante.
 
-|Name|HRESULT sottostante|DESCRIZIONE|
+|Nome|HRESULT sottostante|Descrizione|
 |----------|------------------------|-----------------|
 |COMException|*HRESULT definito dall'utente*|Generata quando viene restituito un HRESULT non riconosciuto da una chiamata a un metodo COM.|
 |AccessDeniedException|E_ACCESSDENIED|Generata quando viene negato l'accesso a una risorsa o a una funzionalità.|
@@ -77,7 +77,7 @@ Le seguenti eccezioni predefinite sono derivate da COMException. Differiscono da
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
 **Metadati:** platform.winmd
 
@@ -111,7 +111,7 @@ public:
 
 Valore HRESULT che specifica l'errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni su come interpretare il valore HRESULT, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes).
 

@@ -1,19 +1,17 @@
 ---
 title: I/O di flusso
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746253"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444612"
 ---
 # <a name="stream-io"></a>I/O di flusso
 
@@ -21,7 +19,7 @@ Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli carat
 
 ## <a name="stream-io-routines"></a>Routine di I/O di flusso
 
-|Routine|Usa|
+|Routine|Uso|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Eliminare l'indicatore di errore per il flusso|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Chiudere il flusso|
@@ -66,7 +64,7 @@ Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli carat
 |[_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|Impostare un massimo per il numero dei file aperti contemporaneamente al livello del flusso I/O.|
 |[setvbuf](../c-runtime-library/reference/setvbuf.md)|Controllare il buffering del flusso e la dimensione del buffer|
 |[_snprintf, _snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|Scrivere dati formattati di lunghezza specificata in una stringa|
-|[_snscanf, _snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|Legge i dati formattati di lunghezza specificata dal flusso dello standard input|
+|[_snscanf, _snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|Leggere dati formattati di lunghezza specificata dal flusso dello standard input.|
 |[sprintf, swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Scrivere dati formattati in una stringa|
 |[sscanf, swscanf](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md), [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|Leggere dati formattati da una stringa|
 |[_tempnam, _wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|Creare il filename temporaneo nella directory specificata|

@@ -1,26 +1,24 @@
 ---
 title: Utilizzo di CTreeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CTreeCtrl
 helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-ms.openlocfilehash: ab73ea66af27e6c1de43ff09074a9539f7518700
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 443ad948e7d48eaefbb74165a0072966b22439b9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411656"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442184"
 ---
 # <a name="using-ctreectrl"></a>Utilizzo di CTreeCtrl
 
-Un controllo struttura ad albero, rappresentato dalla classe [CTreeCtrl](../mfc/reference/ctreectrl-class.md), è una finestra che visualizza un elenco gerarchico di elementi, ad esempio le intestazioni in un documento, le voci in un indice, o di file e directory in un disco. Ogni elemento è costituito da un'etichetta e un'immagine bitmap facoltativa e ogni elemento può avere un elenco di elementi secondari associati. Facendo clic su un elemento, l'utente può espandere e comprimere l'elenco di elementi secondari associato. Nell'albero di directory nel riquadro sinistro di Esplora File è un esempio di un controllo struttura ad albero.
+Un controllo struttura ad albero, rappresentato dalla classe [CTreeCtrl](../mfc/reference/ctreectrl-class.md), è una finestra che visualizza un elenco gerarchico di elementi, ad esempio le intestazioni in un documento, le voci in un indice o i file e le directory su un disco. Ogni elemento è costituito da un'etichetta e da un'immagine bitmap facoltativa e a ogni elemento può essere associato un elenco di elementi secondari. Facendo clic su un elemento, l'utente può espandere e comprimere l'elenco associato di elementi secondari. L'albero di directory nel riquadro a sinistra di Esplora file è un esempio di controllo di struttura ad albero.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [CTreeCtrl e CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
+- [Confronto tra CTreeCtrl e CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
 
 - [Uso di controlli Tree](../mfc/using-tree-controls.md)
 

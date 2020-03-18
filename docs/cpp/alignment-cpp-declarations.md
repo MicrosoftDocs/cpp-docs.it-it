@@ -1,19 +1,16 @@
 ---
-title: Allineamento
+title: Alignment
 description: Modalità di specifica dell'allineamento dei dati C++in modern.
 ms.date: 12/11/2019
-f1_keywords:
-- alignas_cpp
-- alignof_cpp
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 23c14d99e5f540a5065d01a31146b7334ac1c0b3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301665"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443662"
 ---
-# <a name="alignment"></a>Allineamento
+# <a name="alignment"></a>Alignment
 
 Una delle funzionalità di basso livello di C++ è costituita dalla possibilità di specificare l'allineamento preciso degli oggetti in memoria per sfruttare al massimo una specifica architettura hardware. Per impostazione predefinita, il compilatore allinea i membri della classe e dello struct sul valore di dimensione: `bool` e `char` sui limiti di 1 byte, `short` su limiti di 2 byte, `int`, `long`e `float` su limiti di 4 byte e `long long`, `double`e `long double` sui limiti di 8 byte. 
 

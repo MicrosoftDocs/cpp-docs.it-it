@@ -1,20 +1,18 @@
 ---
 title: Variabili globali e tipi standard
 ms.date: 11/04/2016
-f1_keywords:
-- c.variables
 helpviewer_keywords:
 - global variables, CRT
 - standard types, CRT
 - standard types
 - types [CRT]
 ms.assetid: 8f8bad6f-2b78-4068-a0dc-77d58d978920
-ms.openlocfilehash: 3d235640613b7232e190ccb0e1dfe98b657e0c65
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 46b0bf0ea9fd9671165e2d331ce1bb0787feaa3f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750075"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438241"
 ---
 # <a name="global-variables-and-standard-types"></a>Variabili globali e tipi standard
 
@@ -23,4 +21,4 @@ La libreria di runtime Microsoft contiene le definizioni per [variabili globali]
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)<br/>
-[Costanti globali](../c-runtime-library/global-constants.md)
+[Global Constants](../c-runtime-library/global-constants.md) (Costanti globali)

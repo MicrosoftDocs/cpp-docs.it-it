@@ -2,18 +2,18 @@
 title: Classe nested_exception
 ms.date: 11/04/2016
 f1_keywords:
-- exception/std::bad_exception
+- exception/std::nested_exception
 helpviewer_keywords:
-- bad_exception class
+- nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 5741b3aa255f915500f5fe79ab5374c8c86f8814
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460182"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441624"
 ---
-# <a name="nestedexception-class"></a>Classe nested_exception
+# <a name="nested_exception-class"></a>Classe nested_exception
 
 La classe descrive un'eccezione per l'utilizzo con ereditarietà multipla. Acquisisce l'eccezione attualmente gestita e la archivia per un uso successivo.
 
@@ -43,7 +43,7 @@ class nested_exception {
 |[rethrow_nested](#rethrow_nested)|Genera l'eccezione archiviata.|
 |[nested_ptr](#nested_ptr)|Restituisce l'eccezione archiviata.|
 
-### <a name="op_as"></a> operator=
+### <a name="op_as"></a>operatore =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
@@ -57,7 +57,7 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>Valore restituito
 
-Eccezione archiviata acquisita da `nested_exception` questo oggetto.
+Eccezione archiviata acquisita da questo oggetto `nested_exception`.
 
 ### <a name="rethrow_nested"></a>rethrow_nested
 
@@ -65,17 +65,17 @@ Eccezione archiviata acquisita da `nested_exception` questo oggetto.
 [[noreturn]] void rethrow_nested() const;
 ```
 
-#### <a name="remarks"></a>Note
+#### <a name="remarks"></a>Osservazioni
 
-Se `nested_ptr()` restituisce un puntatore null, la funzione chiama `std::terminate()`. In caso contrario, genera l'eccezione archiviata `*this`acquisita da.
+Se `nested_ptr()` restituisce un puntatore null, la funzione chiama `std::terminate()`. In caso contrario, genera l'eccezione archiviata acquisita da `*this`.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<exception>
+**Intestazione:** \<eccezione >
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe Exception](../standard-library/exception-class.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[classe exception](../standard-library/exception-class.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)

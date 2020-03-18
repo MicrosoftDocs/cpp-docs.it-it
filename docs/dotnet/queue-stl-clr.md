@@ -4,12 +4,6 @@ ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - cliext::queue
-- cliext::operator!=
-- cliext::operator<
-- cliext::operator<=
-- cliext::operator==
-- cliext::operator>
-- cliext::operator>=
 - cliext::queue::assign
 - cliext::queue::back
 - cliext::queue::back_item
@@ -63,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 2cf0467c2b4799c2009f866b7aa22be5e421f762
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08f90ef6be7a5eeb560add9c60a6578057fbb310
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384725"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447521"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
-La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone dell'accesso first in, First Out. Si utilizza l'adapter contenitore `queue` per gestire un contenitore sottostante come una coda.
+La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che hanno un accesso First-in First-out. Usare l'adattatore contenitore `queue` per gestire un contenitore sottostante come coda.
 
-Nella sezione successiva, `GValue` equivale a *valore* , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Value^`. Analogamente, `GContainer` equivale a *contenitore* , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Container^`.
+Nella descrizione seguente `GValue` corrisponde a *value* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Value^`. Analogamente, `GContainer` è uguale al *contenitore* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Container^`.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -93,14 +87,14 @@ template<typename Value,
 *Valore*<br/>
 Tipo di un elemento nella sequenza controllata.
 
-*Container*<br/>
+*Contenitore*<br/>
 Tipo del contenitore sottostante.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<cliext/coda >
+**Intestazione:** \<cliext/Queue >
 
-**Namespace:** cliext
+**Spazio dei nomi:** cliext
 
 ## <a name="declarations"></a>Dichiarazioni
 
@@ -109,8 +103,8 @@ Tipo del contenitore sottostante.
 |[queue::const_reference (STL/CLR)](#const_reference)|Tipo di un riferimento costante a un elemento.|
 |[queue::container_type (STL/CLR)](#container_type)|Tipo del contenitore sottostante.|
 |[queue::difference_type (STL/CLR)](#difference_type)|Tipo di una distanza Signed tra due elementi.|
-|[queue::generic_container (STL/CLR)](#generic_container)|Il tipo dell'interfaccia generica per l'adattatore del contenitore.|
-|[queue::generic_value (STL/CLR)](#generic_value)|Il tipo di un elemento per l'interfaccia generica per l'adattatore del contenitore.|
+|[queue::generic_container (STL/CLR)](#generic_container)|Tipo dell'interfaccia generica per l'adattatore del contenitore.|
+|[queue::generic_value (STL/CLR)](#generic_value)|Tipo di un elemento per l'interfaccia generica per l'adattatore del contenitore.|
 |[queue::reference (STL/CLR)](#reference)|Tipo di un riferimento a un elemento.|
 |[queue::size_type (STL/CLR)](#size_type)|Tipo di una distanza Signed tra due elementi.|
 |[queue::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|
@@ -123,7 +117,7 @@ Tipo del contenitore sottostante.
 |[queue::front (STL/CLR)](#front)|Accede al primo elemento.|
 |[queue::get_container (STL/CLR)](#get_container)|Accede al contenitore sottostante.|
 |[queue::pop (STL/CLR)](#pop)|Rimuove il primo elemento.|
-|[queue::push (STL/CLR)](#push)|Aggiunge un nuovo ultimo elemento.|
+|[queue::push (STL/CLR)](#push)|Aggiunge un nuovo elemento ultimo.|
 |[queue::queue (STL/CLR)](#queue)|Costruisce un oggetto contenitore.|
 |[queue::size (STL/CLR)](#size)|Conta il numero di elementi.|
 |[queue::to_array (STL/CLR)](#to_array)|Copia la sequenza controllata in una nuova matrice.|
@@ -136,27 +130,27 @@ Tipo del contenitore sottostante.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |[queue::operator= (STL/CLR)](#op_as)|Sostituisce la sequenza controllata.|
-|[operator!= (queue) (STL/CLR)](#op_neq)|Determina se un `queue` non è uguale a un altro oggetto `queue` oggetto.|
-|[operator< (queue) (STL/CLR)](#op_lt)|Determina se un `queue` oggetto è minore di un altro `queue` oggetto.|
-|[operator<= (queue) (STL/CLR)](#op_lteq)|Determina se un `queue` oggetto è minore o uguale a un altro `queue` oggetto.|
-|[operator== (queue) (STL/CLR)](#op_eq)|Determina se un `queue` è uguale a un altro oggetto `queue` oggetto.|
-|[operator> (queue) (STL/CLR)](#op_gt)|Determina se un `queue` è maggiore di un altro oggetto `queue` oggetto.|
-|[operator>= (queue) (STL/CLR)](#op_gteq)|Determina se un `queue` oggetto è maggiore o uguale a un altro `queue` oggetto.|
+|[operator!= (queue) (STL/CLR)](#op_neq)|Determina se un oggetto `queue` non è uguale a un altro oggetto `queue`.|
+|[operator< (queue) (STL/CLR)](#op_lt)|Determina se un oggetto `queue` è minore di un altro `queue` oggetto.|
+|[operator<= (queue) (STL/CLR)](#op_lteq)|Determina se un oggetto `queue` è minore o uguale a un altro oggetto `queue`.|
+|[operator== (queue) (STL/CLR)](#op_eq)|Determina se un oggetto `queue` è uguale a un altro oggetto `queue`.|
+|[operator> (queue) (STL/CLR)](#op_gt)|Determina se un oggetto `queue` è maggiore di un altro oggetto `queue`.|
+|[operator>= (queue) (STL/CLR)](#op_gteq)|Determina se un oggetto `queue` è maggiore o uguale a un altro oggetto `queue`.|
 
 ## <a name="interfaces"></a>Interfacce
 
 |Interfaccia|Descrizione|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicare un oggetto.|
-|ICoda\<Value, contenitore >|Mantenere la scheda di contenitore generico.|
+|Valore\<IQueue, > contenitore|Gestire un adapter contenitore generico.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'oggetto alloca e libera la memoria per la sequenza da esso controllata tramite un contenitore sottostante, typu `Container`, che archivia `Value` elementi e cresce su richiesta. L'oggetto limita l'accesso a sufficiente eseguire il push al primo elemento e si estraggono all'ultimo elemento, che implementa un first in First-Out mettere in coda (noto anche come una coda FIFO, o semplicemente una coda).
+L'oggetto alloca e libera la memoria per la sequenza che controlla tramite un contenitore sottostante, di tipo `Container`, che archivia gli elementi `Value` e cresce su richiesta. L'oggetto limita l'accesso al solo push del primo elemento e l'ultimo elemento, implementando una coda First-in First-out (nota anche come coda FIFO o semplicemente una coda).
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-## <a name="assign"></a> queue::assign (STL/CLR)
+## <a name="assign"></a>Queue:: Assign (STL/CLR)
 
 Sostituisce tutti gli elementi.
 
@@ -169,11 +163,11 @@ void assign(queue<Value, Container>% right);
 #### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Adattatore del contenitore da inserire.
+Adattatore contenitore da inserire.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro assegna `right.get_container()` al contenitore sottostante. Usarlo per modificare l'intero contenuto della coda.
+La funzione membro assegna `right.get_container()` al contenitore sottostante. Viene usato per modificare l'intero contenuto della coda.
 
 ### <a name="example"></a>Esempio
 
@@ -210,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="back"></a> queue::back (STL/CLR)
+## <a name="back"></a>Queue:: Back (STL/CLR)
 
 Accede all'ultimo elemento.
 
@@ -220,9 +214,9 @@ Accede all'ultimo elemento.
 reference back();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce un riferimento all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per accedere all'ultimo elemento, quando si è certi che esista.
+La funzione membro restituisce un riferimento all'ultimo elemento della sequenza controllata, che non deve essere vuoto. Viene usato per accedere all'ultimo elemento, quando si è certi che esista.
 
 ### <a name="example"></a>Esempio
 
@@ -262,7 +256,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> queue::back_item (STL/CLR)
+## <a name="back_item"></a>Queue:: back_item (STL/CLR)
 
 Accede all'ultimo elemento.
 
@@ -272,9 +266,9 @@ Accede all'ultimo elemento.
 property value_type back_item;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La proprietà accede all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per leggere o scrivere l'ultimo elemento, quando si è certi che esista.
+La proprietà accede all'ultimo elemento della sequenza controllata, che non deve essere vuota. Viene utilizzato per leggere o scrivere l'ultimo elemento, quando si è certi che esista.
 
 ### <a name="example"></a>Esempio
 
@@ -314,7 +308,7 @@ back_item = c
 a b x
 ```
 
-## <a name="const_reference"></a> queue::const_reference (STL/CLR)
+## <a name="const_reference"></a>Queue:: const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -324,7 +318,7 @@ Tipo di un riferimento costante a un elemento.
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo descrive un riferimento costante a un elemento.
 
@@ -358,7 +352,7 @@ int main()
 a b c
 ```
 
-## <a name="container_type"></a> queue::container_type (STL/CLR)
+## <a name="container_type"></a>Queue:: container_type (STL/CLR)
 
 Tipo del contenitore sottostante.
 
@@ -368,7 +362,7 @@ Tipo del contenitore sottostante.
 typedef Container value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello `Container`.
 
@@ -400,9 +394,9 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> queue::difference_type (STL/CLR)
+## <a name="difference_type"></a>Queue::d ifference_type (STL/CLR)
 
-I tipi di una distanza signed tra due elementi.
+Tipi di una distanza con segno tra due elementi.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -410,9 +404,9 @@ I tipi di una distanza signed tra due elementi.
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive un conteggio di elementi potenzialmente negativo.
+Il tipo descrive un conteggio di elementi probabilmente negativo.
 
 ### <a name="example"></a>Esempio
 
@@ -458,7 +452,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> Queue:: Empty (STL/CLR)
+## <a name="empty"></a>Queue:: Empty (STL/CLR)
 
 Verifica se sono presenti o meno degli elementi.
 
@@ -468,9 +462,9 @@ Verifica se sono presenti o meno degli elementi.
 bool empty();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [Queue:: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Usarlo per verificare se la coda è vuota.
+La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Viene utilizzato per verificare se la coda è vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -512,7 +506,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="front"></a> queue::front (STL/CLR)
+## <a name="front"></a>Queue:: Front (STL/CLR)
 
 Accede al primo elemento.
 
@@ -522,9 +516,9 @@ Accede al primo elemento.
 reference front();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce un riferimento al primo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per accedere al primo elemento, quando si è certi che esista.
+La funzione membro restituisce un riferimento al primo elemento della sequenza controllata, che non deve essere vuoto. Viene usato per accedere al primo elemento, quando si è certi che esista.
 
 ### <a name="example"></a>Esempio
 
@@ -564,7 +558,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> queue::front_item (STL/CLR)
+## <a name="front_item"></a>Queue:: front_item (STL/CLR)
 
 Accede al primo elemento.
 
@@ -574,9 +568,9 @@ Accede al primo elemento.
 property value_type front_item;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La proprietà accede al primo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per leggere o scrivere il primo elemento, quando si è certi che esista.
+La proprietà accede al primo elemento della sequenza controllata, che non deve essere vuota. Viene utilizzato per leggere o scrivere il primo elemento, quando si è certi che esista.
 
 ### <a name="example"></a>Esempio
 
@@ -616,9 +610,9 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a> queue::generic_container (STL/CLR)
+## <a name="generic_container"></a>Queue:: generic_container (STL/CLR)
 
-Il tipo dell'interfaccia generica per l'adattatore del contenitore.
+Tipo dell'interfaccia generica per l'adattatore del contenitore.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -627,9 +621,9 @@ typedef Microsoft::VisualC::StlClr::IQueue<Value>
     generic_container;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive l'interfaccia generica per questa classe di adattatore di contenitori di modelli.
+Il tipo descrive l'interfaccia generica per questa classe dell'adattatore del contenitore del modello.
 
 ### <a name="example"></a>Esempio
 
@@ -679,9 +673,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a> queue::generic_value (STL/CLR)
+## <a name="generic_value"></a>Queue:: generic_value (STL/CLR)
 
-Il tipo di elemento per l'uso con l'interfaccia generica per il contenitore.
+Tipo di un elemento da utilizzare con l'interfaccia generica per il contenitore.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -689,9 +683,9 @@ Il tipo di elemento per l'uso con l'interfaccia generica per il contenitore.
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato per l'uso con l'interfaccia generica per questa classe di contenitori di modelli. (`GValue` può essere `value_type` oppure `value_type^` se `value_type` è un tipo di riferimento.)
+Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato da usare con l'interfaccia generica per questa classe del contenitore del modello. `GValue` è `value_type` o `value_type^` se `value_type` è un tipo di riferimento.
 
 ### <a name="example"></a>Esempio
 
@@ -737,7 +731,7 @@ a b c
 a b c
 ```
 
-## <a name="get_container"></a> queue::get_container (STL/CLR)
+## <a name="get_container"></a>Queue:: get_container (STL/CLR)
 
 Accede al contenitore sottostante.
 
@@ -747,9 +741,9 @@ Accede al contenitore sottostante.
 container_type^ get_container();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce il contenitore sottostante. È utilizzato per ignorare le restrizioni imposte dal wrapper del contenitore.
+La funzione membro restituisce il contenitore sottostante. Viene utilizzato per ignorare le restrizioni imposte dal wrapper del contenitore.
 
 ### <a name="example"></a>Esempio
 
@@ -778,7 +772,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> queue::operator= (STL/CLR)
+## <a name="op_as"></a>Queue:: operator = (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -791,11 +785,11 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 #### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Adattatore del contenitore da copiare.
+Adattatore contenitore da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le copie di operatore membro *a destra* all'oggetto, quindi restituisce `*this`. Usarlo per sostituire la sequenza controllata con una copia della sequenza controllata nel *a destra*.
+L'operatore membro copia *right* nell'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -832,7 +826,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> Queue:: POP (STL/CLR)
+## <a name="pop"></a>Queue::p op (STL/CLR)
 
 Rimuove l'ultimo elemento.
 
@@ -842,9 +836,9 @@ Rimuove l'ultimo elemento.
 void pop();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro rimuove l'ultimo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per abbreviare la coda di un elemento nella parte posteriore.
+La funzione membro rimuove l'ultimo elemento della sequenza controllata, che non deve essere vuoto. Viene utilizzato per abbreviare la coda di un elemento nella parte posteriore.
 
 ### <a name="example"></a>Esempio
 
@@ -880,9 +874,9 @@ a b c
 b c
 ```
 
-## <a name="push"></a> Queue:: push (STL/CLR)
+## <a name="push"></a>coda::p USH (STL/CLR)
 
-Aggiunge un nuovo ultimo elemento.
+Aggiunge un nuovo elemento ultimo.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -890,9 +884,9 @@ Aggiunge un nuovo ultimo elemento.
 void push(value_type val);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro aggiunge un elemento con valore `val` alla fine della coda. Usarlo per aggiungere un elemento alla coda.
+La funzione membro aggiunge un elemento con il valore `val` alla fine della coda. Viene usato per aggiungere un elemento alla coda.
 
 ### <a name="example"></a>Esempio
 
@@ -921,9 +915,9 @@ int main()
 a b c
 ```
 
-## <a name="queue"></a> Queue:: Queue (STL/CLR)
+## <a name="queue"></a>Queue:: Queue (STL/CLR)
 
-Costruisce un oggetto scheda di contenitore.
+Costruisce un oggetto adattatore del contenitore.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -939,34 +933,34 @@ explicit queue(container_type% wrapped);
 *right*<br/>
 Oggetto da copiare.
 
-*wrapped*<br/>
-Sottoposta a wrapping contenitore da usare.
+*eseguito il wrapping*<br/>
+Contenitore di cui è stato eseguito il wrapper da usare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il costruttore:
 
 `queue();`
 
-Crea un contenitore vuoto sottoposta a wrapping. Utilizzarla per specificare una sequenza controllata iniziale vuota.
+Crea un contenitore di cui è stato eseguito il wrapper vuoto. Viene usato per specificare una sequenza controllata iniziale vuota.
 
 Il costruttore:
 
 `queue(queue<Value, Container>% right);`
 
-Crea un contenitore con wrapper è una copia di `right.get_container()`. È utilizzata per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto coda *a destra*.
+Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right.get_container()`. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto Queue *right*.
 
 Il costruttore:
 
 `queue(queue<Value, Container>^ right);`
 
-Crea un contenitore con wrapper è una copia di `right->get_container()`. È utilizzata per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto coda `*right`.
+Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right->get_container()`. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto Queue `*right`.
 
 Il costruttore:
 
 `explicit queue(container_type wrapped);`
 
-Usa il contenitore esistente *incapsulati* come contenitore sottoposto a wrapping. Utilizzarlo per creare una coda da un contenitore esistente.
+Usa il contenitore esistente *incluso* nel contenitore di cui è stato eseguito il wrapper. Viene usato per costruire una coda da un contenitore esistente.
 
 ### <a name="example"></a>Esempio
 
@@ -1014,7 +1008,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="reference"></a> queue::reference (STL/CLR)
+## <a name="reference"></a>Queue:: Reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -1024,7 +1018,7 @@ Tipo di un riferimento a un elemento.
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo descrive un riferimento a un elemento.
 
@@ -1063,7 +1057,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> queue::size (STL/CLR)
+## <a name="size"></a>Queue:: size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -1073,9 +1067,9 @@ Conta il numero di elementi.
 size_type size();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce la lunghezza della sequenza controllata. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se si è interessati è se la sequenza ha dimensioni diverse da zero, vedere [Queue:: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.
+La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [coda:: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Esempio
 
@@ -1117,9 +1111,9 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> queue::size_type (STL/CLR)
+## <a name="size_type"></a>Queue:: size_type (STL/CLR)
 
-Il tipo di una distanza signed tra due elementi.
+Tipo di una distanza con segno tra due elementi.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1127,9 +1121,9 @@ Il tipo di una distanza signed tra due elementi.
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive un conteggio di elementi non negativo.
+Il tipo descrive un conteggio di elementi non negativi.
 
 ### <a name="example"></a>Esempio
 
@@ -1166,7 +1160,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="to_array"></a> queue::to_array (STL/CLR)
+## <a name="to_array"></a>Queue:: to_array (STL/CLR)
 
 Copia la sequenza controllata in una nuova matrice.
 
@@ -1176,9 +1170,9 @@ Copia la sequenza controllata in una nuova matrice.
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce una matrice che contiene la sequenza controllata. È utilizzato per ottenere una copia della sequenza controllata in forma di matrice.
+La funzione membro restituisce una matrice che contiene la sequenza controllata. Viene usato per ottenere una copia della sequenza controllata in forma di matrice.
 
 ### <a name="example"></a>Esempio
 
@@ -1216,7 +1210,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> queue::value_type (STL/CLR)
+## <a name="value_type"></a>Queue:: value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -1226,9 +1220,9 @@ Tipo di un elemento.
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo del parametro di modello *valore*.
+Il tipo è un sinonimo del *valore*del parametro di modello.
 
 ### <a name="example"></a>Esempio
 
@@ -1261,9 +1255,9 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> operator!= (queue) (STL/CLR)
+## <a name="op_neq"></a>operatore! = (coda) (STL/CLR)
 
-Coda di confronto non uguale.
+Confronto coda non uguale.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1282,9 +1276,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione di operatore restituisce `!(left == right)`. Utilizzarla per testare se *a sinistra* non viene ordinato identico *a destra* quando due code vengono confrontato elemento per elemento.
+La funzione operator restituisce `!(left == right)`. Viene usato per verificare se *Left* non è ordinato come *right* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1332,9 +1326,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operator&lt; (queue) (STL/CLR)
+## <a name="op_lt"></a>operatore&lt; (Queue) (STL/CLR)
 
-Coda minore di confronto.
+Coda inferiore al confronto.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1353,9 +1347,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'operatore funzione restituisce true se, per la posizione più bassa `i` per il quale `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->` [Queue:: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` utilizzati per verificare se *a sinistra* viene ordinato prima *destro* Quando due code vengono confrontato elemento per elemento.
+La funzione operator restituisce true se, per la posizione più bassa `i` per cui `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->`[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() <` `right->size()` lo si utilizza per verificare se *Left* viene ordinato prima del *diritto* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1403,9 +1397,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operator&lt;= (queue) (STL/CLR)
+## <a name="op_lteq"></a>operatore&lt;= (coda) (STL/CLR)
 
-Minore o uguale della coda confronto.
+Coda di confronto minore o uguale a.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1424,9 +1418,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione di operatore restituisce `!(right < left)`. Utilizzarla per testare se *a sinistra* non viene ordinato dopo *a destra* quando due code vengono confrontato elemento per elemento.
+La funzione operator restituisce `!(right < left)`. Viene usato per verificare se *Left* non è ordinato dopo *right* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1474,9 +1468,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operator== (queue) (STL/CLR)
+## <a name="op_eq"></a>operatore = = (coda) (STL/CLR)
 
-Confronto uguale a coda.
+Confronto di uguaglianza della coda.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1495,9 +1489,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione di operatore restituisce true solo se le sequenze controllate da *a sinistra* e *destro* abbiano la stessa lunghezza e, per ogni posizione `i`, `left[i] ==` `right[i]`. Utilizzarla per testare se *a sinistra* viene ordinata quella *a destra* quando due code vengono confrontato elemento per elemento.
+La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i``left[i] ==` `right[i]`. Viene usato per verificare se *Left* è ordinato come *right* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1545,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operator&gt; (queue) (STL/CLR)
+## <a name="op_gt"></a>operatore&gt; (Queue) (STL/CLR)
 
 Coda maggiore di confronto.
 
@@ -1566,9 +1560,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Restituisce la funzione dell'operatore `right` `<` `left`. Utilizzarla per testare se *a sinistra* viene ordinata dopo *a destra* quando due code vengono confrontato elemento per elemento.
+La funzione operator restituisce `right` `left``<`. Viene usato per verificare se *Left* viene ordinato dopo *right* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1616,9 +1610,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operator&gt;= (queue) (STL/CLR)
+## <a name="op_gteq"></a>operatore&gt;= (coda) (STL/CLR)
 
-Confronto uguale o maggiore di coda.
+Coda di confronto maggiore o uguale a.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -1637,9 +1631,9 @@ Contenitore sinistro da confrontare.
 *right*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione di operatore restituisce `!(left < right)`. Utilizzarla per testare se *a sinistra* non viene ordinato prima *a destra* quando due code vengono confrontato elemento per elemento.
+La funzione operator restituisce `!(left < right)`. Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 

@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _wexeclpe
-- execlpe
 - wexeclpe
 - _execlpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: 960d148963aa9c6410fec03b5a6f265a6e4ab9d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0783e07c945de7d65a11247efc6346c5e315c900
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941903"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443023"
 ---
 # <a name="_execlpe-_wexeclpe"></a>_execlpe, _wexeclpe
 
@@ -69,7 +68,7 @@ intptr_t _wexeclpe(
 *cmdname*<br/>
 Percorso del file da eseguire.
 
-*arg0*, ... *argn*<br/>
+*arg0*,... *argN*<br/>
 Elenco di puntatori ai parametri.
 
 *envp*<br/>
@@ -91,7 +90,7 @@ Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valo
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passando ogni argomento della riga di comando come parametro separato e passando una matrice di puntatori alle impostazioni di ambiente. Queste funzioni usano la variabile di ambiente **path** per trovare il file da eseguire.
 
@@ -104,7 +103,7 @@ Le funzioni **_execlpe** convalidano i relativi parametri. Se *CmdName* o *arg0*
 |**_execlpe**|\<process.h>|\<errno.h>|
 |**_wexeclpe**|\<process.h> o \<wchar.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 
