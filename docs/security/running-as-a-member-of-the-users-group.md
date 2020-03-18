@@ -1,9 +1,6 @@
 ---
 title: Esecuzione come membro del gruppo Users
 ms.date: 11/04/2016
-f1_keywords:
-- PRJ0050
-- VCD0047
 helpviewer_keywords:
 - Users Group [C++]
 - security [C++], Users Group
@@ -12,24 +9,24 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411292"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445437"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Esecuzione come membro del gruppo Users
 
 In questo argomento viene illustrato come aumentare il livello di sicurezza e ridurre le possibilità di essere infettati da codice dannoso mediante la configurazione di account utente Windows come membri del gruppo Users, in contrapposizione al gruppo Administrators.
 
-## <a name="security-risks"></a>Rischi di sicurezza
+## <a name="security-risks"></a>Rischi per la sicurezza
 
 Se si accede con diritti di amministratore, il sistema è vulnerabile a diversi tipi di attacchi alla sicurezza, quali Trojan horse e sovraccarico del buffer. La semplice visita di un sito Web con diritti di amministratore può danneggiare il sistema, in quanto del codice dannoso scaricato dal sito potrebbe infettare il computer. Se l'attacco riesce, il codice infatti eredita le autorizzazioni di amministratore ed è in grado di eseguire operazioni quali l'eliminazione di tutti i file, la formattazione del disco rigido e la creazione di nuovi account utente con accesso di amministratore.
 
 ## <a name="non-administrator-user-groups"></a>Gruppi di utenti diversi dagli amministratori
 
-Gli account utente di Windows utilizzati normalmente dagli sviluppatori devono essere aggiunti ai gruppi Users o Power Users. Gli sviluppatori devono essere aggiunti anche al gruppo di debug. L'appartenenza al gruppo Users consente di effettuare attività comuni come eseguire programmi e visitare siti Web senza esporre il computer a rischi inutili. In qualità di membro del gruppo Power Users, è possibile inoltre eseguire attività come installare applicazioni, stampanti e la maggior parte delle operazioni disponibili dal Pannello di controllo. In caso sia necessario eseguire attività amministrative come l'aggiornamento del sistema operativo o la configurazione di parametri di sistema, è possibile accedere con un account di amministratore per il tempo necessario all'attività. In alternativa, di Windows **runas** comando può essere utilizzato per avviare applicazioni specifiche con accesso amministrativo.
+Gli account utente di Windows utilizzati normalmente dagli sviluppatori devono essere aggiunti ai gruppi Users o Power Users. Gli sviluppatori devono essere aggiunti anche al gruppo di debug. L'appartenenza al gruppo Users consente di effettuare attività comuni come eseguire programmi e visitare siti Web senza esporre il computer a rischi inutili. In qualità di membro del gruppo Power Users, è possibile inoltre eseguire attività come installare applicazioni, stampanti e la maggior parte delle operazioni disponibili dal Pannello di controllo. In caso sia necessario eseguire attività amministrative come l'aggiornamento del sistema operativo o la configurazione di parametri di sistema, è possibile accedere con un account di amministratore per il tempo necessario all'attività. In alternativa, è possibile utilizzare il comando **RunAs** di Windows per avviare applicazioni specifiche con accesso amministrativo.
 
 ## <a name="exposing-customers-to-security-risks"></a>Esposizione degli utenti a rischi di sicurezza
 

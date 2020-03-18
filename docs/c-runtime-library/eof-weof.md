@@ -1,19 +1,17 @@
 ---
 title: EOF, WEOF
 ms.date: 11/04/2016
-f1_keywords:
-- EOF
 helpviewer_keywords:
 - EOF function
 - WEOF function
 - end of file
 ms.assetid: a7150563-cdae-4cdf-9798-ad509990e505
-ms.openlocfilehash: f00c4003afebad580bd2ea5d6853edc3ca6e8c73
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 5ccb97b55cb61bd42d0487b22bd3e01413444ad3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740042"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438436"
 ---
 # <a name="eof-weof"></a>EOF, WEOF
 
@@ -39,4 +37,4 @@ WEOF produce il valore restituito, di tipo **wint_t**, usato per segnalare la fi
 [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>
 [_putch, _putwch](../c-runtime-library/reference/putch-putwch.md)<br/>
 [isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)<br/>
-[Costanti globali](../c-runtime-library/global-constants.md)
+[Global Constants](../c-runtime-library/global-constants.md) (Costanti globali)

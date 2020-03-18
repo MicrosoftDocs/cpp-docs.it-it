@@ -39,11 +39,11 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
 ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865886"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421093"
 ---
 # <a name="colepropertypage-class"></a>Classe COlePropertyPage
 
@@ -59,13 +59,13 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COlePropertyPage:: COlePropertyPage](#colepropertypage)|Costruisce un oggetto `COlePropertyPage`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COlePropertyPage:: GetControlStatus](#getcontrolstatus)|Indica se l'utente ha modificato il valore nel controllo.|
 |[COlePropertyPage:: GetObjectArray](#getobjectarray)|Restituisce la matrice di oggetti modificati dalla pagina delle proprietà.|

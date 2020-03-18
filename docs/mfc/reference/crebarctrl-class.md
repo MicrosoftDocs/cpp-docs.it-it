@@ -99,11 +99,11 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
 ms.openlocfilehash: 14befb819a30238abb5780b1bdcc6d74402e8976
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875747"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421520"
 ---
 # <a name="crebarctrl-class"></a>Classe CReBarCtrl
 
@@ -119,13 +119,13 @@ class CReBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CReBarCtrl:: CReBarCtrl](#crebarctrl)|Costruisce un oggetto `CReBarCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CReBarCtrl:: BeginDrag](#begindrag)|Posiziona il controllo Rebar in modalità di trascinamento della selezione.|
 |[CReBarCtrl:: create](#create)|Crea il controllo Rebar e lo connette all'oggetto `CReBarCtrl`.|

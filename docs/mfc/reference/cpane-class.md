@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: 9d6a408b6ed7e7ab6f3dd138a4222b262978fd6c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883927"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421072"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -154,13 +154,13 @@ class CPane : public CBasePane
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`CPane::~CPane`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPane:: AdjustSizeImmediate](#adjustsizeimmediate)|Ricalcola immediatamente il layout di un riquadro.|
 |[CPane:: AllocElements](#allocelements)|Alloca lo spazio di archiviazione per uso interno.|
@@ -228,7 +228,7 @@ class CPane : public CBasePane
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPane:: OnAfterDock](#onafterdock)|Chiamata eseguita dal framework quando un riquadro è stato ancorato.|
 |[CPane:: OnAfterFloat](#onafterfloat)|Chiamata eseguita dal framework quando è stato eseguito il float di un riquadro.|
@@ -237,7 +237,7 @@ class CPane : public CBasePane
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPane:: m_bHandleMinSize](#m_bhandleminsize)|Consente una gestione coerente delle dimensioni minime per i riquadri.|
 |[CPane:: m_recentDockInfo](#m_recentdockinfo)|Contiene informazioni di ancoraggio recenti.|

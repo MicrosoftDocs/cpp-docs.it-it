@@ -1,8 +1,6 @@
 ---
 title: Funzionalità libreria CRT
 ms.date: 08/20/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -18,12 +16,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.openlocfilehash: a350e2c45d9ccf83fb09a76f43b63a6b17273cff
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767691"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438545"
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT
 
@@ -64,7 +62,7 @@ Questa tabella elenca le librerie che implementano l'inizializzazione e la chius
 
 |Libreria|Caratteristiche|Opzione|Direttive per il preprocessore|
 |-------------|---------------------|------------|-----------------------------|
-|LIBCMT.lib|Collega in modo statico l'avvio della libreria UCRT nativa nel codice.|**/MT**|_MT|
+|libcmt.lib|Collega in modo statico l'avvio della libreria UCRT nativa nel codice.|**/MT**|_MT|
 |libcmtd.lib|Collega in modo statico la versione di Debug dell'avvio della libreria CRT nativa. Non ridistribuibile.|**/MTd**|_DEBUG, _MT|
 |msvcrt.lib|Libreria statica per l'avvio della libreria CRT nativa per l'uso con DLL UCRT e vcruntime.|**/MD**|_MT, _DLL|
 |msvcrtd.lib|Libreria statica per la versione di debug per l'avvio della libreria CRT nativa da usare con DLL UCRT e vcruntime. Non ridistribuibile.|**/MDd**|_DEBUG, _MT, _DLL|
@@ -79,7 +77,7 @@ L'uso di una libreria CRT collegata in modo statico implica che tutte le informa
 
 Poiché una DLL compilata con un collegamento a una libreria CRT statica avrà un proprio stato CRT, non si consiglia di effettuare un collegamento statico alla libreria CRT in una DLL a meno che gli effetti di questa azione non siano quelli desiderati e non siano compresi appieno. Ad esempio, se si chiama [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) in un file eseguibile che carica la DLL collegata alla relativa libreria CRT statica, le eccezioni hardware generate dal codice nella DLL non saranno rilevate dal convertitore, mentre saranno rilevate le eccezioni hardware generate dal codice nel file eseguibile principale.
 
-Se si usa l'opzione del compilatore **/clr** , il codice sarà collegato a una libreria statica, msvcmrt.lib. La libreria statica fornisce un proxy tra il codice gestito e la libreria CRT nativa. Non è possibile usare la libreria collegata staticamente CRT (opzioni **/MT** o **/MTd** ) con **/clr**. Usare invece le librerie collegate in modo dinamico (**/MD** o **/MDd**). Le librerie CRT gestite in modalità pure sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Se si usa l'opzione del compilatore **/clr** , il codice sarà collegato a una libreria statica, msvcmrt.lib. La libreria statica fornisce un proxy tra il codice gestito e la libreria CRT nativa. Non è possibile usare la libreria collegata staticamente CRT (opzioni **/MT** o **/MTd** ) con **/clr**. Usare invece le librerie collegate in modo dinamico ( **/MD** o **/MDd**). Le librerie CRT gestite in modalità pure sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
 Per altre informazioni sull'uso di CRT con **/clr**, vedere [Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md).
 
@@ -112,7 +110,7 @@ Ogni immagine di eseguibile (EXE o DLL) può avere un CRT proprio collegato stat
 
 È anche possibile evitare alcuni di questi problemi se tutte le immagini nel processo usano la stessa versione caricata in modo dinamico del CRT. Per assicurarsi che tutti i componenti usino la stessa versione DLL del CRT, crearli con l'opzione **/MD** e usare lo stesso set di strumenti del compilatore e le stesse impostazioni delle proprietà.
 
-È necessario prestare attenzione se il programma passa determinate risorse CRT (ad esempio, handle di file, impostazioni locali e variabili di ambiente) tra i limiti DLL, anche quando si usa la stessa versione del CRT. Per altre informazioni su questi problemi e su come risolverli, vedere [Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+È necessario prestare attenzione se il programma passa determinate risorse CRT (ad esempio, handle di file, impostazioni locali e variabili di ambiente) tra i limiti DLL, anche quando si usa la stessa versione del CRT. Per altre informazioni su questi problemi e su come risolverli, vedere [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
 ## <a name="see-also"></a>Vedere anche
 

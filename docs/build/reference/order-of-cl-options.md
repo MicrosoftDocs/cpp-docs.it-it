@@ -1,21 +1,19 @@
 ---
-title: Ordine delle opzioni CL (C++) - Visual Studio
+title: Ordine delle opzioni CL (C++)-Visual Studio
 ms.date: 12/14/2018
-f1_keywords:
-- cl
 helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 300908ce-ae00-4b45-964b-e4e69ff6777b
-ms.openlocfilehash: 93907265bed8141b5c63edd5e75d632e060351fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c57a68dd15d82a9d6a01bfe145374bda6eb1510
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320942"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439195"
 ---
 # <a name="order-of-cl-options"></a>Ordine delle opzioni CL
 
-Le opzioni possono apparire in un punto qualsiasi nella riga di comando CL, ad eccezione dell'opzione /link, che deve verificarsi ultima. Il compilatore inizia con le opzioni specificate nel [variabile di ambiente CL](cl-environment-variables.md) , quindi la riga di comando viene letto da sinistra a destra, ovvero l'elaborazione dei file di comando nell'ordine in cui li incontra. Ogni opzione si applica a tutti i file nella riga di comando. Se vengono rilevate CL opzioni in conflitto, viene usata l'opzione all'estrema destra.
+Le opzioni possono essere visualizzate in qualsiasi punto della riga di comando CL, ad eccezione dell'opzione/link, che deve essere eseguita per ultima. Il compilatore inizia con le opzioni specificate nella [variabile di ambiente CL](cl-environment-variables.md) , quindi legge la riga di comando da sinistra a destra, elaborando i file dei comandi nell'ordine in cui li rileva. Ogni opzione si applica a tutti i file nella riga di comando. Se CL rileva opzioni in conflitto, usa l'opzione più a destra.
 
 ## <a name="see-also"></a>Vedere anche
 

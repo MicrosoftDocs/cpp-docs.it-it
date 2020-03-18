@@ -5,17 +5,16 @@ ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
-- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856956"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438635"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase- (Disabilita la ricerca del nome in due fasi)
 
@@ -23,9 +22,9 @@ L'opzione **/Zc: twoPhase-** in **/permissive-** indica al compilatore di usare 
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Zc:twoPhase-**
+> **/Zc: twoPhase-**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Visual Studio 2017 versione 15,3 e successive: in [/permissive-](permissive-standards-conformance.md), il compilatore usa la ricerca del nome in due fasi per la risoluzione dei nomi di modello. Se si specifica anche **/Zc: twoPhase**, il compilatore ripristina il modello di classe non conforme precedente e il comportamento di sostituzione e risoluzione del nome del modello di funzione. Quando **/permissive-** non è specificato, il comportamento non conforme è l'impostazione predefinita.
 
@@ -51,7 +50,7 @@ Di conseguenza, se il corpo del modello presenta errori di sintassi, ma non vien
 
 Un altro effetto di questo comportamento è la risoluzione dell'overload. Il comportamento non standard si verifica a causa del modo in cui il flusso del token viene espanso nel sito di creazione dell'istanza. I simboli che non sono visibili nella dichiarazione del modello possono essere visibili nel punto di creazione dell'istanza. Ciò significa che possono partecipare alla risoluzione dell'overload. È possibile trovare il comportamento di modifica dei modelli in base al codice non visibile nella definizione del modello, contrariamente allo standard.
 
-Si consideri, ad esempio, il seguente codice:
+Si consideri ad esempio questo codice:
 
 ```cpp
 // zctwophase.cpp

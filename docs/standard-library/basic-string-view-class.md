@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 2f262ee238d8ee9b441f5bc1daebcf6a64f35a52
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416176"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445845"
 ---
 # <a name="basic_string_view-class"></a>Classe basic_string_view
 
@@ -195,7 +195,7 @@ Il valore predefinito è [char_traits](char-traits-struct.md)<> *CharType*.
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |**const_iterator**|Iteratore ad accesso casuale che può leggere gli elementi **const** .|
 |**const_pointer**|`using const_pointer = const value_type*;`|
@@ -252,7 +252,7 @@ Il valore predefinito è [char_traits](char-traits-struct.md)<> *CharType*.
 |[substr](#substr)|Restituisce una sottostringa di una lunghezza specificata a partire da un indice specificato.|
 |[swap](#swap)|Scambia il contenuto di due string_views.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Se a una funzione viene richiesto di generare una sequenza più lunga di [max_size](#max_size) elementi, la funzione segnala un errore di lunghezza generando un oggetto di tipo [length_error](../standard-library/length-error-class.md).
 
@@ -281,7 +281,7 @@ Indice dell'elemento a cui fare riferimento.
 
 Const_reference al carattere in corrispondenza della posizione specificata dall'indice del parametro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo elemento ha un indice di zero e gli elementi seguenti vengono indicizzati consecutivamente da numeri interi positivi, in modo che un string_view di lunghezza *n* includa un elemento *n*indicizzato dal numero *n-* 1. **at** genera un'eccezione per gli indici non validi, a differenza dell' [operatore\[\]](#op_at). 
 
@@ -318,7 +318,7 @@ constexpr const_reference back() const;
 
 Const_reference all'ultimo elemento nel string_view.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Genera un'eccezione se la string_view è vuota.
 
@@ -361,7 +361,7 @@ Puntatore ai valori di carattere.
 \ *Len*
 Numero di caratteri da includere nella visualizzazione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 I costruttori con un parametro charT * presuppongono che l'input sia con terminazione null, ma il valore null di terminazione non è incluso nell'string_view.
 
@@ -402,7 +402,7 @@ constexpr const_iterator cend() const noexcept;
 
 Iteratore **const** ad accesso casuale che punta appena oltre la fine dell'intervallo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Non è consigliabile dereferenziare il valore restituito da `cend`.
 
@@ -443,7 +443,7 @@ Stringa C da confrontare con questo string_view.
 
 Valore negativo se il string_view è minore di *Strv* o *ptr*; zero se le due sequenze di caratteri sono uguali; o un valore positivo se il string_view è maggiore di *Strv* o *ptr*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le funzioni membro `compare` eseguono un confronto con distinzione tra maiuscole e minuscole in tutte le sequenze di caratteri o in parte. 
 
@@ -578,7 +578,7 @@ Posizione iniziale nel string_view di origine da cui devono essere eseguite le c
 
 Numero di caratteri attualmente copiati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Non viene aggiunto un carattere null alla fine della copia.
 
@@ -611,7 +611,7 @@ Posizione iniziale nella stringa di origine da cui effettuare le copie.
 
 Numero di caratteri attualmente copiati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Non viene aggiunto un carattere null alla fine della copia.
 
@@ -653,7 +653,7 @@ constexpr value_type *data() const noexcept;
 
 Puntatore a const al primo elemento della sequenza di caratteri.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il puntatore non può modificare i caratteri.
 
@@ -671,7 +671,7 @@ constexpr bool empty() const noexcept;
 
 **true** se l'oggetto string_view non contiene caratteri; **false** se contiene almeno un carattere.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro è equivalente a [size](#size)() = = 0.
 
@@ -687,7 +687,7 @@ constexpr const_iterator end() const noexcept;
 
 Restituisce un const_iterator ad accesso casuale che punta a un oggetto dopo l'ultimo elemento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `end` viene usato per verificare se un const_iterator ha raggiunto la fine del string_view. Non è consigliabile dereferenziare il valore restituito da `end`.
 
@@ -863,7 +863,7 @@ constexpr const_reference front() const;
 
 Const_reference al primo elemento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Genera un'eccezione se la string_view è vuota.
 
@@ -875,7 +875,7 @@ Restituisce il numero corrente di elementi.
 constexpr size_type length() const noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro è uguale a [size](#size).
 
@@ -891,7 +891,7 @@ constexpr size_type max_size() const noexcept;
 
 Numero massimo di caratteri che possono essere contenuti in un string_view.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un'eccezione di tipo [length_error](../standard-library/length-error-class.md) viene generata quando un'operazione genera una string_view con una lunghezza maggiore di `max_size()`.
 
@@ -902,12 +902,14 @@ Assegna un string_view o un oggetto stringa convertibile a un altro string_view.
 ```cpp
 constexpr basic_string_view& operator=(const basic_string_view&) noexcept = default;
 ```
+
 ### <a name="example"></a>Esempio
 
 ```cpp
    string_view s = "Hello";
    string_view s2 = s;
 ```
+
 ## <a name="op_at"></a>basic_string_view:: operator []
 
 Fornisce un const_reference al carattere con un indice specificato.
@@ -925,7 +927,7 @@ Indice dell'elemento a cui fare riferimento.
 
 Const_reference al carattere in corrispondenza della posizione specificata dall'indice del parametro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo elemento ha un indice zero e gli elementi seguenti vengono indicizzati consecutivamente da numeri interi positivi, in modo che un string_view di lunghezza *n* includa un elemento *n*indicizzato dal numero *n* -1.
 
@@ -949,7 +951,7 @@ constexpr const_reverse_iterator rbegin() const noexcept;
 
 Restituisce un iteratore ad accesso casuale al primo elemento di un string_view invertito, indirizzando il quale sarebbe l'ultimo elemento nel string_view non invertito corrispondente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rbegin` viene usato con un string_view invertito proprio come [Begin](#begin) viene usato con un string_view. è possibile utilizzare `rbegin` per inizializzare un'iterazione all'indietro.
 
@@ -961,7 +963,7 @@ Sposta il puntatore in poi in base al numero di elementi specificato.
 constexpr void remove_prefix(size_type n);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Lascia invariati i dati sottostanti. Sposta il puntatore string_view in base a n elementi e imposta il membro dati `size` privato su size-n.
 
@@ -973,7 +975,7 @@ Riduce la dimensione della visualizzazione in base al numero specificato di elem
 constexpr void remove_suffix(size_type n);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Lascia invariato il puntatore e i dati sottostanti. Imposta il membro dati della `size` privata su size-n.
 
@@ -989,7 +991,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 Iteratore const inverso ad accesso casuale che punta a un elemento successivo all'ultimo elemento di un string_view invertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `rend` viene usato con un string_view invertito proprio come [end](#end) viene usato con un string_view. `rend` può essere usato per verificare se un iteratore inverso ha raggiunto la fine del relativo string_view. Non è consigliabile dereferenziare il valore restituito da `rend`.
 
@@ -1037,7 +1039,7 @@ constexpr size_type size() const noexcept;
 
 Lunghezza del string_view.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un string_view può modificarne la lunghezza, ad esempio per `remove_prefix` e `remove_suffix`. Poiché non modifica i dati di stringa sottostanti, la dimensione di un string_view non è necessariamente la dimensione dei dati sottostanti.
 
@@ -1077,4 +1079,4 @@ String_view di origine i cui valori di puntatore e dimensione devono essere scam
 ## <a name="see-also"></a>Vedere anche
 
 [\<string_view >](../standard-library/string-view.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)

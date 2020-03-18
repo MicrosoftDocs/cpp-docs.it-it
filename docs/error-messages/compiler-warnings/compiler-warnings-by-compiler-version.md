@@ -4,16 +4,16 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 7e0a2d9a342446acbb62ea64031e84e03855e026
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: bf42981396abf8e91077da5c1cc1f180891d2a63
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630813"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446559"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore per versione del compilatore
 
-Il compilatore può escludere gli avvisi introdotti dopo una versione specificata tramite l'opzione del compilatore [/WV](../../build/reference/compiler-option-warning-level.md) . Questa opzione è utile per gestire il processo di compilazione quando si introduce una nuova versione del set di strumenti e si desidera disattivare temporaneamente nuovi avvisi. Questa opzione consente di disattivare solo gli avvisi, non i nuovi messaggi di errore. Non eliminare tutti i nuovi avvisi in modo permanente. È consigliabile eseguire sempre la compilazione al livello di avviso normale più `/W4`elevato, e rimuovere `/Wv` l'opzione nella compilazione non appena possibile.
+Il compilatore può escludere gli avvisi introdotti dopo una versione specificata tramite l'opzione del compilatore [/WV](../../build/reference/compiler-option-warning-level.md) . Questa opzione è utile per gestire il processo di compilazione quando si introduce una nuova versione del set di strumenti e si desidera disattivare temporaneamente nuovi avvisi. Questa opzione consente di disattivare solo gli avvisi, non i nuovi messaggi di errore. Non eliminare tutti i nuovi avvisi in modo permanente. Si consiglia di compilare sempre al livello di avviso regolare più elevato, `/W4`e rimuovere l'opzione di `/Wv` nella compilazione non appena possibile.
 
 Queste versioni del compilatore hanno introdotto nuovi avvisi:
 
@@ -39,15 +39,15 @@ Queste versioni del compilatore hanno introdotto nuovi avvisi:
 | Visual Studio 2017 versione 15,9 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
 
-È possibile specificare solo il numero principale, i numeri principali e secondari oppure i numeri principale, secondario e Build per l' `/Wv` opzione. Il compilatore segnala tutti gli avvisi che corrispondono a versioni che iniziano con il numero specificato ed evita tutti gli avvisi per le versioni successive al numero specificato. Ad esempio, `/Wv:17` segnala gli avvisi introdotti in o prima di qualsiasi versione di Visual Studio 2012 e Elimina gli avvisi introdotti da qualsiasi compilatore da Visual Studio 2013 (versione 18) o versioni successive. Per non visualizzare gli avvisi introdotti in Visual Studio 2015 Update 2 e versioni successive `/Wv:19.00.23506`, è possibile usare. Usare `/Wv:19.11` per segnalare gli avvisi introdotti in qualsiasi versione di Visual Studio precedente a Visual Studio 2017 versione 15,5, ma non visualizzare gli avvisi introdotti in Visual Studio 2017 versione 15,5 e successive.
+È possibile specificare solo il numero principale, i numeri principali e secondari oppure i numeri principale, secondario e Build per l'opzione `/Wv`. Il compilatore segnala tutti gli avvisi che corrispondono a versioni che iniziano con il numero specificato ed evita tutti gli avvisi per le versioni successive al numero specificato. Ad esempio, `/Wv:17` segnala gli avvisi introdotti in o prima di qualsiasi versione di Visual Studio 2012 e Elimina gli avvisi introdotti da qualsiasi compilatore da Visual Studio 2013 (versione 18) o versioni successive. Per non visualizzare gli avvisi introdotti in Visual Studio 2015 Update 2 e versioni successive, è possibile usare `/Wv:19.00.23506`. Usare `/Wv:19.11` per segnalare gli avvisi introdotti in qualsiasi versione di Visual Studio precedente a Visual Studio 2017 versione 15,5, ma non visualizzare gli avvisi introdotti in Visual Studio 2017 versione 15,5 e successive.
 
-Le sezioni seguenti elencano gli avvisi introdotti da ogni versione C++ di visuale che è possibile escludere usando l' `/Wv` opzione del compilatore. L' `/Wv` opzione non può escludere gli avvisi che non sono elencati, che hanno predato le versioni specificate del compilatore.
+Le sezioni seguenti elencano gli avvisi introdotti da ogni versione C++ di Visual che è possibile escludere usando l'opzione del compilatore `/Wv`. L'opzione `/Wv` non può escludere gli avvisi non elencati, che prevedono le versioni specificate del compilatore.
 
 ::: moniker range=">= vs-2019"
 
 ## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Avvisi introdotti in Visual Studio 2019 RTW (versione del compilatore 19.20.27004.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.15`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.15`.
 
 |||
 |-|-|
@@ -59,7 +59,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Avvisi introdotti in Visual Studio 2017 versione 15,8 (compilatore versione 19.15.26726.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.14`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.14`.
 
 |||
 |-|-|
@@ -85,7 +85,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Avvisi introdotti in Visual Studio 2017 versione 15,7 (compilatore versione 19.14.26428.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.13`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.13`.
 
 |||
 |-|-|
@@ -94,7 +94,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Avvisi introdotti in Visual Studio 2017 versione 15,6 (compilatore versione 19.13.26128.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.12`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.12`.
 
 |||
 |-|-|
@@ -102,7 +102,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Avvisi introdotti in Visual Studio 2017 versione 15,5 (compilatore versione 19.12.25830.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.11`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.11`.
 
 |||
 |-|-|
@@ -116,7 +116,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Avvisi introdotti in Visual Studio 2017 versione 15,3 (compilatore versione 19.11.25506.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.10`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.10`.
 
 |||
 |-|-|
@@ -138,7 +138,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Avvisi introdotti in Visual Studio 2017 RTM (versione del compilatore 19.10.25017.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.00`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.00`.
 
 |||
 |-|-|
@@ -151,7 +151,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Avvisi introdotti in Visual Studio 2015 Update 3 (versione del compilatore 19.00.24215.1)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.00.23918`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.00.23918`.
 
 |||
 |-|-|
@@ -162,7 +162,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Avvisi introdotti in Visual Studio 2015 Update 2 (versione del compilatore 19.00.23918.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.00.23506`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.00.23506`.
 
 |||
 |-|-|
@@ -173,7 +173,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Avvisi introdotti in Visual Studio 2015 Update 1 (versione del compilatore 19.00.23506.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:19.00.23026`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.00.23026`.
 
 |||
 |-|-|
@@ -184,7 +184,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Avvisi introdotti in Visual Studio 2015 RTM (versione del compilatore 19.00.23026.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:18`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:18`.
 
 |||
 |-|-|
@@ -243,7 +243,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Avvisi introdotti in Visual Studio 2013 (versione del compilatore 18.00.21005.1)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:17`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:17`.
 
 |||
 |-|-|
@@ -272,7 +272,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Avvisi introdotti in Visual Studio 2012 (versione del compilatore 17.00.51106.1)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:16`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:16`.
 
 |||
 |-|-|
@@ -305,7 +305,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746|l'accesso volatile di ' name ' è soggetto a/volatile: < ISO | impostazione MS >; prendere in considerazione l'uso di funzioni intrinseche __iso_volatile_load/Store |
+| C4746| `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -315,7 +315,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Avvisi introdotti in Visual Studio 2010 (versione del compilatore 16.00.40219.01)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:15`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:15`.
 
 |||
 |-|-|
@@ -331,7 +331,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Avvisi introdotti in Visual Studio 2008 (versione del compilatore 15.00.21022.08)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:14`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:14`.
 
 |||
 |-|-|
@@ -346,7 +346,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Avvisi introdotti in Visual Studio 2005 (versione del compilatore 14.00.50727.762)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:13`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:13`.
 
 |||
 |-|-|
@@ -489,7 +489,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Avvisi introdotti in Visual Studio 2003 (versione del compilatore 13.10.3077)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:13.00.9466`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:13.00.9466`.
 
 |||
 |-|-|
@@ -525,7 +525,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Avvisi introdotti in Visual Studio 2002 (versione del compilatore 13.00.9466)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione `/Wv:12`del compilatore.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:12`.
 
 |||
 |-|-|
@@ -676,6 +676,6 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 [Errori eC++ avvisi di C/compilatore e strumenti di compilazione](../compiler-errors-1/c-cpp-build-errors.md) \
 [Avvisi del compilatore C4000-C5999](compiler-warnings-c4000-c5999.md) \
-[/WV (opzione del compilatore)](../../build/reference/compiler-option-warning-level.md) \
+ \ [opzione del compilatore/WV](../../build/reference/compiler-option-warning-level.md)
 [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
 [warning](../../preprocessor/warning.md)

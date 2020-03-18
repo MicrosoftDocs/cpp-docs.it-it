@@ -7,25 +7,23 @@ f1_keywords:
 - ATL::ICommandPropertiesImpl
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
-- GetProperties
 - ICommandPropertiesImpl.SetProperties
 - ICommandPropertiesImpl::SetProperties
-- SetProperties
 helpviewer_keywords:
 - ICommandPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408953"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447045"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
 
-Fornisce un'implementazione del [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) interfaccia.
+Fornisce un'implementazione dell'interfaccia [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,31 +36,31 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe, derivata da
+La classe, derivata da
 
 *PropClass*<br/>
-Classe di proprietà.
+Classe Properties.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|Restituisce l'elenco delle proprietà nel gruppo di proprietà set di righe che sono attualmente richiesti per il set di righe.|
-|[SetProperties](#setproperties)|Imposta le proprietà nel gruppo di proprietà set di righe.|
+|[GetProperties](#getproperties)|Restituisce l'elenco di proprietà nel gruppo di proprietà del set di righe attualmente richiesto per il set di righe.|
+|[SetProperties](#setproperties)|Imposta le proprietà nel gruppo di proprietà del set di righe.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questo campo è obbligatorio in comandi. L'implementazione è fornita da una funzione statica definita per il [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.
+Questa operazione è obbligatoria nei comandi. L'implementazione viene fornita da una funzione statica definita dalla [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.
 
-## <a name="getproperties"></a> Icommandpropertiesimpl:: GetProperties
+## <a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
 
-Restituisce tutti i set di proprietà richiesto tramite il mapping di proprietà del comando.
+Restituisce tutti i set di proprietà richiesti utilizzando la mappa delle proprietà del comando.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -75,15 +73,15 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [ICommandProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+## <a name="setproperties"></a>ICommandPropertiesImpl:: seproprietà
 
-Imposta le proprietà per l'oggetto comando.
+Imposta le proprietà per l'oggetto Command.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -94,9 +92,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [ICommandProperties:: seproperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

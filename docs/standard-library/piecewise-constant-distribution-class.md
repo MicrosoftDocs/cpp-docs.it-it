@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455236"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446193"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>Classe piecewise_constant_distribution
+# <a name="piecewise_constant_distribution-class"></a>Classe piecewise_constant_distribution
 
 Genera una distribuzione costante a tratti con intervalli di larghezza diversa e probabilità uniforme in ogni intervallo.
 
@@ -80,10 +80,10 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*\
+\ *RealType*
 Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questa distribuzione di campionamento ha intervalli di larghezza diversa e probabilità uniforme in ogni intervallo. Per informazioni su altre distribuzioni di campionamento, vedere [Classe piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md) e [discrete_distribution](../standard-library/discrete-distribution-class.md).
 
@@ -98,7 +98,7 @@ La funzione di proprietà `intervals()` restituisce una `vector<result_type>` co
 
 La funzione di proprietà `densities()` restituisce un `vector<result_type>` con le densità archiviate per ogni insieme di intervalli, calcolate in base ai pesi specificati nei parametri del costruttore.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto del parametro di distribuzione archiviato `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -214,7 +214,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<random>
+**Intestazione:** \<> casuale
 
 **Spazio dei nomi:** std
 
@@ -254,7 +254,7 @@ Iteratore di input del primo elemento dell'intervallo di distribuzioni.
 *ultimi*\
 Iteratore di input dell'ultimo elemento dell'intervallo di distribuzioni.
 
-*firstW*\
+\ *firstW*
 Iteratore di input del primo elemento dell'intervallo di pesi.
 
 *intervalli*\
@@ -266,20 +266,21 @@ Numero di elementi nell'intervallo di distribuzioni.
 *xmin*\
 Valore minimo dell'intervallo di distribuzioni.
 
-*Xmax*\
+*xmax*\
 Valore massimo dell'intervallo di distribuzioni. Deve essere maggiore di *xmin*.
 
-*weightfunc*\
+\ *weightfunc*
 Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il parametro e il valore restituito devono essere convertibili in **Double**.
 
-*parm*\
+\ di *parmigiana*
 Struttura di parametri usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il costruttore predefinito imposta i parametri archiviati in modo che sia disponibile un intervallo, da 0 a 1, con densità di probabilità pari a 1.
 
 Il costruttore di intervalli di iteratori
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -289,6 +290,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 costruisce un oggetto di distribuzione con intervalli da iteratori nella sequenza [`firstI`, `lastI`) e una sequenza di pesi corrispondente a partire da `firstW`.
 
 Il costruttore di elenchi di inizializzatori
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,20 +301,22 @@ intervals,
 costruisce un oggetto di distribuzione con intervalli dall'elenco di inizializzatori gli *intervalli* e i pesi generati dalla funzione *weightfunc*.
 
 Il costruttore definito come
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-costruisce un oggetto di distribuzione con intervalli di *conteggio* distribuiti in modo uniforme `xmin,xmax`su [], assegnando i pesi di ogni intervallo in base alla funzione *weightfunc*e *weightfunc* deve accettare un parametro e avere un valore restituito valore, entrambi convertibili in `double`. **Precondizione:** `xmin < xmax`
+costruisce un oggetto di distribuzione con intervalli di *conteggio* distribuiti in modo uniforme rispetto a [`xmin,xmax`], assegnando i pesi di ogni intervallo in base alla funzione *weightfunc*e *weightfunc* deve accettare un parametro e avere un valore restituito, entrambi convertibili in `double`. **Precondizione:** `xmin < xmax`
 
 Il costruttore definito come
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-costruisce un oggetto di distribuzione *utilizzando la* struttura di parametri archiviata.
+costruisce un *oggetto di distribuzione utilizzando la* struttura di parametri archiviata.
 
 ## <a name="param_type"></a>  piecewise_constant_distribution::param_type
 
@@ -338,7 +342,7 @@ struct param_type {
 
 Per la distribuzione [piecewise_constant_distribution](#piecewise_constant_distribution) vedere i parametri del costruttore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `xmin < xmax`
 

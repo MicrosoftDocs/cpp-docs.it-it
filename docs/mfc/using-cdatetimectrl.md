@@ -1,26 +1,24 @@
 ---
 title: Utilizzo di CDateTimeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CDateTimeCtrl
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-ms.openlocfilehash: 251528cafcbedb0352a1962d70452f8b8778f10b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c437c97ad6c6d377b3bc62099e569b29f03346
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348601"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447084"
 ---
 # <a name="using-cdatetimectrl"></a>Utilizzo di CDateTimeCtrl
 
-Il controllo di selezione data e ora ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementa un metodo intuitivo e riconoscibile di immettere o selezionare una data specifica. L'interfaccia principale del controllo è simile a una casella combinata. Tuttavia, se l'utente espande il controllo, viene visualizzato un controllo calendario mensile (per impostazione predefinita), che consente all'utente di specificare una data specifica. Quando si sceglie una data, viene rimosso automaticamente il controllo calendario mensile.
+Il controllo selezione data e ora ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementa un metodo intuitivo e riconoscibile per l'immissione o la selezione di una data specifica. L'interfaccia principale del controllo è simile alla funzionalità di una casella combinata. Tuttavia, se l'utente espande il controllo, viene visualizzato un controllo di calendario mensile (per impostazione predefinita), che consente all'utente di specificare una data specifica. Quando si sceglie una data, il controllo calendario mensile scompare automaticamente.
 
 > [!NOTE]
->  Per utilizzare sia la `CDateTimePicker` e `CMonthCalCtrl` classi nel progetto, è necessario includere AFXDTCTL. H, in genere in STDAFX del progetto. File H.
+>  Per usare le classi `CDateTimePicker` e `CMonthCalCtrl` nel progetto, è necessario includere AFXDTCTL. H, in genere nel STDAFX del progetto. File H.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Creazione del controllo selezione data e ora](../mfc/creating-the-date-and-time-picker-control.md)
 

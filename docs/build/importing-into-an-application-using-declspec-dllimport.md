@@ -1,25 +1,22 @@
 ---
-title: Importare in un'applicazione che usa declspec
+title: Importare in un'applicazione tramite __declspec(dllimport)
 ms.date: 11/04/2016
-f1_keywords:
-- __declspec
-- dllimport
 helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: 30e0f6517f2d749962c5cf49dddb1662c9ccf129
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fd7d42ec5a76b92aa789a3a20f38e6b2c0fd2cb1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341649"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440417"
 ---
-# <a name="import-into-an-application-using-declspecdllimport"></a>Importare in un'applicazione che usa declspec
+# <a name="import-into-an-application-using-__declspecdllimport"></a>Importare in un'applicazione tramite __declspec(dllimport)
 
-Si dice che un programma che utilizza i simboli pubblici definiti da una DLL di importarli. Quando si crea file di intestazione per le applicazioni che utilizzano le DLL per la compilazione, usare **declspec** nelle dichiarazioni dei simboli pubblici. La parola chiave **declspec** funziona se si esporta DEF (file) o con il **dllexport** (parola chiave).
+Un programma che usa i simboli pubblici definiti da una DLL viene detto importarli. Quando si creano file di intestazione per le applicazioni che usano le dll per la compilazione con, usare **__declspec (dllimport)** nelle dichiarazioni dei simboli pubblici. La parola chiave **__declspec (dllimport)** funziona sia che si esporti con i file def o con la parola chiave **__declspec (dllexport)** .
 
-Per rendere il codice più leggibile, definire una macro per **declspec** e quindi usare la macro per dichiarare ogni simbolo importato:
+Per rendere il codice più leggibile, definire una macro per **__declspec (dllimport)** e quindi usare la macro per dichiarare ogni simbolo importato:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -28,9 +25,9 @@ DllImport int  j;
 DllImport void func();
 ```
 
-Usando **declspec** è facoltativo in dichiarazioni di funzione, ma il compilatore produce codice più efficiente se si utilizza questa parola chiave. Tuttavia, è necessario utilizzare **declspec** eseguibile di importazione accedere agli oggetti e i simboli di dati pubblici della DLL. Si noti che gli utenti della DLL è comunque necessario eseguire il collegamento con una libreria di importazione.
+L'uso di **__declspec (dllimport)** è facoltativo per le dichiarazioni di funzione, ma il compilatore produce codice più efficiente se si usa questa parola chiave. Tuttavia, è necessario usare **__declspec (dllimport)** per l'eseguibile di importazione per accedere ai simboli e agli oggetti dei dati pubblici della dll. Si noti che gli utenti della DLL devono ancora collegarsi a una libreria di importazione.
 
-È possibile usare lo stesso file di intestazione per la DLL e l'applicazione client. A tale scopo, utilizzare un simbolo del preprocessore speciale che indica se si compila la DLL o compilazione dell'applicazione client. Ad esempio:
+È possibile utilizzare lo stesso file di intestazione sia per la DLL che per l'applicazione client. A tale scopo, utilizzare un simbolo del preprocessore speciale che indica se si sta compilando la DLL o compilando l'applicazione client. Ad esempio:
 
 ```
 #ifdef _EXPORTING
@@ -43,7 +40,7 @@ class CLASS_DECLSPEC CExampleA : public CObject
 { ... class definition ... };
 ```
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)
 

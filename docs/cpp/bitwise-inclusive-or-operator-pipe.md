@@ -1,8 +1,7 @@
 ---
-title: 'OR bit per bit operatore OR inclusivo: |'
+title: 'Operatore OR bit per bit inclusivo: |'
 ms.date: 06/14/2018
 f1_keywords:
-- bitor
 - '|'
 helpviewer_keywords:
 - OR operator [C++], bitwise inclusive
@@ -10,28 +9,28 @@ helpviewer_keywords:
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-ms.openlocfilehash: 848bf3b2ec61084b59ab5b1ee6807f6066a4675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0df3493930206d655c0d9bca8a2468151aa3c2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184293"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445517"
 ---
-# <a name="bitwise-inclusive-or-operator-"></a>OR bit per bit operatore OR inclusivo: |
+# <a name="bitwise-inclusive-or-operator-"></a>Operatore OR bit per bit inclusivo: |
 
 ## <a name="syntax"></a>Sintassi
 
 > *expression1* **|** *expression2*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'operatore OR inclusivo bit per bit (**&#124;**) confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se un bit è 1 bit, il bit di risultato corrispondente viene impostato su 1. In caso contrario, il bit di risultato corrispondente viene impostato su 0.
+L'operatore OR inclusivo bit **&#124;** per bit () confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se uno dei due bit ha valore 1, il bit del risultato verrà impostato su 1, altrimenti verrà impostato su 0.
 
-Entrambi gli operandi all'operatore OR bit per bit inclusivo devono essere tipi integrali. Le conversioni aritmetiche consuete analizzate [conversioni Standard](standard-conversions.md) vengono applicate agli operandi.
+Entrambi gli operandi all'operatore OR bit per bit inclusivo devono essere tipi integrali. Le conversioni aritmetiche consuete analizzate in [conversioni standard](standard-conversions.md) vengono applicate agli operandi.
 
 ## <a name="operator-keyword-for-124"></a>Parola chiave operator per&#124;
 
-Il **bitor** operatore è l'equivalente testuale di **&#124;**. Esistono due modi per accedere la **bitor** operatore nei programmi: includere il file di intestazione \<lt;iso646.h&gt >, o eseguire la compilazione con il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).
+L'operatore **BITOR** è il testo equivalente di **&#124;** . Esistono due modi per accedere all'operatore **BITOR** nei programmi: includere il file di intestazione \<iso646. h > oppure compilare con l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
 
 ## <a name="example"></a>Esempio
 

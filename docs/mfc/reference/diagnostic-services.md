@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 6880a6a3d25738bd0480168902044530d06f7e7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421401"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446208"
 ---
 # <a name="diagnostic-services"></a>Servizi diagnostici
 
@@ -109,6 +109,7 @@ Questo esempio di codice genera un avviso del compilatore se non sono state defi
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
+
 ```cpp
 CRichEditCtrl* pRichEdit = new CRichEditCtrl;
 pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
@@ -635,7 +636,8 @@ Per usare questa funzione correttamente:
 - File IMAGEHLP. La DLL deve trovarsi nel percorso. Se non si dispone di questa DLL, verrà visualizzato un messaggio di errore nella funzione. Per informazioni sul set di funzioni fornito da IMAGEHLP, vedere la pagina relativa alla [libreria della Guida](/windows/win32/Debug/image-help-library) .
 
 - I moduli con frame nello stack devono includere informazioni di debug. Se non contengono informazioni di debug, la funzione genererà comunque una traccia dello stack, ma la traccia sarà meno dettagliata.
-  ### <a name="requirements"></a>Requisiti
+
+### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afx.h
 

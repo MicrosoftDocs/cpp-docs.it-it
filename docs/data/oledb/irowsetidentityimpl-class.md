@@ -5,7 +5,6 @@ f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
 - IRowsetIdentityImpl
-- IsSameRow
 - IRowsetIdentityImpl.IsSameRow
 - ATL.IRowsetIdentityImpl.IsSameRow
 - IRowsetIdentityImpl::IsSameRow
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 51f8d7e832476619ccec277c9d73791041d146a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8c976fcb23bf41d88d88be3887db4dde52379d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390841"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446312"
 ---
 # <a name="irowsetidentityimpl-class"></a>Classe IRowsetIdentityImpl
 
-Implementa OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85)) interfaccia, che consente di eseguire test per l'identità di riga.
+Implementa l'interfaccia OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85)) , che consente di testare l'identità della riga.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,26 +35,26 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Una classe derivata da `IRowsetIdentityImpl`.
+Classe derivata da `IRowsetIdentityImpl`.
 
 *RowClass*<br/>
-L'unità di archiviazione per il `HROW`.
+Unità di archiviazione per il `HROW`.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
 |||
 |-|-|
-|[IsSameRow](#issamerow)|Confronta due handle di riga per vedere se fanno riferimento alla stessa riga.|
+|[IsSameRow](#issamerow)|Confronta due handle di riga per verificare se fanno riferimento alla stessa riga.|
 
-## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
+## <a name="issamerow"></a>IRowsetIdentityImpl:: IsSameRow
 
-Confronta due handle di riga per vedere se fanno riferimento alla stessa riga.
+Confronta due handle di riga per verificare se fanno riferimento alla stessa riga.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -66,13 +65,13 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per confrontare gli handle di riga, questo metodo viene eseguito il cast di `HROW` handle a `RowClass` membri e chiamate `memcmp` sugli indicatori di misura.
+Per confrontare gli handle di riga, questo metodo esegue il cast degli handle di `HROW` ai membri `RowClass` e chiama `memcmp` nei puntatori.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

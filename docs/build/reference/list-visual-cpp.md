@@ -1,19 +1,18 @@
 ---
-title: '&lt;elenco > (commenti relativi alla documentazione di C++)'
+title: elenco di &lt;>C++ (commenti sulla documentazione)
 ms.date: 11/04/2016
 f1_keywords:
 - list
-- <list>
 helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: fd5b97ac518bc4075697da7b6ed88ed46bdd8814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102cf9f7b1b867a012f662ce786d97012826abd1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305268"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439306"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -42,7 +41,7 @@ Termine da definire, che verrà definito in `description`.
 *description*<br/>
 Elemento di un elenco puntato o numerato oppure la definizione di un `term`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Ogni elemento dell'elenco viene specificato tramite un blocco \<item>. Quando si crea un elenco di definizioni, è necessario specificare sia `term` che `description`. Per le tabelle e gli elenchi puntati o numerati, tuttavia, è sufficiente fornire una voce per `description`.
 

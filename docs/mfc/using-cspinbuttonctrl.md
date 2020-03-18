@@ -1,20 +1,18 @@
 ---
 title: Utilizzo di CSpinButtonCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CSpinButtonCtrl
 helpviewer_keywords:
 - up-down controls [MFC], spin button control
 - up-down controls
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-ms.openlocfilehash: a2a12672f0e70248e135bdd177b76589b6197c75
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 775668426cd11e20a4c863f07a964935d0d5420f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513473"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447183"
 ---
 # <a name="using-cspinbuttonctrl"></a>Utilizzo di CSpinButtonCtrl
 
@@ -23,11 +21,11 @@ Il controllo *pulsante di selezione* (noto anche come controllo di *scorrimento*
 Il controllo pulsante di selezione è rappresentato in MFC dalla classe [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) .
 
 > [!NOTE]
->  Per impostazione predefinita, l'intervallo per il pulsante di selezione è impostato su zero (0) e il valore minimo è impostato su 100. Poiché il valore massimo è minore del valore minimo, facendo clic sulla freccia in su si diminuisce la posizione e si fa clic sulla freccia verso il basso per aumentarlo. Usare [CSpinButtonCtrl::](../mfc/reference/cspinbuttonctrl-class.md#setrange) SetRange per modificare questi valori.
+>  Per impostazione predefinita, l'intervallo per il pulsante di selezione è impostato su zero (0) e il valore minimo è impostato su 100. Poiché il valore massimo è minore del valore minimo, facendo clic sulla freccia in su si diminuisce la posizione e si fa clic sulla freccia verso il basso per aumentarlo. Usare [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) per modificare questi valori.
 
 In genere, la posizione corrente viene visualizzata in un controllo complementare. Il controllo complementare è noto come *finestra di Buddy*. Per un'illustrazione di un controllo pulsante di selezione, vedere [informazioni sui controlli di scorrimento](/windows/win32/Controls/up-down-controls) nel Windows SDK.
 
-Per creare un controllo di selezione e una finestra di dialogo di controllo di modifica, in Visual Studio, trascinare un controllo di modifica nella finestra o nella finestra di dialogo, quindi trascinare un controllo di selezione. Selezionare il controllo di selezione e impostare le proprietà **Buddy automatico** e **set Integer Buddy** su **true**. Impostare anche la proprietà **Alignment** ; L' **allineamento a destra** è più tipico. Con queste impostazioni, il controllo di modifica viene impostato come finestra di Buddy perché precede direttamente il controllo di modifica nell'ordine di tabulazione. Il controllo di modifica Visualizza numeri interi e il controllo di selezione è incorporato sul lato destro del controllo di modifica. Facoltativamente, è possibile impostare l'intervallo valido del controllo di selezione usando il metodo [CSpinButtonCtrl::](../mfc/reference/cspinbuttonctrl-class.md#setrange) SetRange. Non sono necessari gestori eventi per la comunicazione tra il controllo di selezione e la finestra di Buddy perché scambiano direttamente i dati. Se si usa un controllo di rotazione per altri scopi, ad esempio per passare da una sequenza di finestre o finestre di dialogo, aggiungere un gestore per il messaggio UDN_DELTAPOS ed eseguire l'azione personalizzata.
+Per creare un controllo di selezione e una finestra di dialogo di controllo di modifica, in Visual Studio, trascinare un controllo di modifica nella finestra o nella finestra di dialogo, quindi trascinare un controllo di selezione. Selezionare il controllo di selezione e impostare le proprietà **Buddy automatico** e **set Integer Buddy** su **true**. Impostare anche la proprietà **Alignment** ; L' **allineamento a destra** è più tipico. Con queste impostazioni, il controllo di modifica viene impostato come finestra di Buddy perché precede direttamente il controllo di modifica nell'ordine di tabulazione. Il controllo di modifica Visualizza numeri interi e il controllo di selezione è incorporato sul lato destro del controllo di modifica. Facoltativamente, è possibile impostare l'intervallo valido del controllo di selezione usando il metodo [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) . Non sono necessari gestori eventi per la comunicazione tra il controllo di selezione e la finestra di Buddy perché scambiano direttamente i dati. Se si usa un controllo di rotazione per altri scopi, ad esempio per passare da una sequenza di finestre o finestre di dialogo, aggiungere un gestore per il messaggio di UDN_DELTAPOS ed eseguire l'azione personalizzata.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 

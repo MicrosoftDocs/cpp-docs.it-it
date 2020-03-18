@@ -1,27 +1,24 @@
 ---
 title: Importazione di chiamate di funzione tramite __declspec(dllimport)
 ms.date: 11/04/2016
-f1_keywords:
-- __declspec
-- dllimport
 helpviewer_keywords:
 - importing function calls [C++]
 - dllimport attribute [C++], function call imports
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-ms.openlocfilehash: 8635cf5d389f72972f471a4fd53ed56c3497bfe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1743cbba8c3046ef844f16be8e78d43c61f62606
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188795"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442516"
 ---
-# <a name="importing-function-calls-using-declspecdllimport"></a>Importazione di chiamate di funzione tramite __declspec(dllimport)
+# <a name="importing-function-calls-using-__declspecdllimport"></a>Importazione di chiamate di funzione tramite __declspec(dllimport)
 
-Esempio di codice seguente viene illustrato come utilizzare **_declspec(dllimport)** per importare le chiamate di funzione da una DLL in un'applicazione. Si supponga che `func1` è una funzione che si trova in una DLL separata dal file .exe che contiene il **principale** (funzione).
+Nell'esempio di codice seguente viene illustrato come utilizzare **_declspec (dllimport)** per importare chiamate di funzioni da una dll in un'applicazione. Si supponga che `func1` sia una funzione che risiede in una DLL separata dal file exe che contiene la funzione **Main** .
 
-Senza **declspec**, dato il seguente codice:
+Senza **__declspec (dllimport)** , dato questo codice:
 
 ```
 int main(void)
@@ -30,29 +27,29 @@ int main(void)
 }
 ```
 
-il compilatore genera codice che si presenta come segue:
+il compilatore genera codice simile al seguente:
 
 ```
 call func1
 ```
 
-e il linker Converte la chiamata in qualcosa di simile al seguente:
+il linker converte la chiamata in un tipo simile al seguente:
 
 ```
 call 0x4000000         ; The address of 'func1'.
 ```
 
-Se `func1` presente in un'altra DLL, il linker non è possibile risolvere questo direttamente perché non contiene alcun modo per sapere quali l'indirizzo del `func1` è. In ambienti a 16 bit, il linker aggiunge questo indirizzo di codice per un elenco di file .exe il caricatore corregge fase di esecuzione con l'indirizzo corretto. Negli ambienti a 32 e 64 bit, il linker genera un thunk di cui conosce l'indirizzo. In un ambiente a 32 bit il thunk simile:
+Se `func1` è presente in un'altra DLL, il linker non è in grado di risolverlo direttamente perché non è in grado di conoscere l'indirizzo del `func1`. Negli ambienti a 16 bit il linker aggiunge questo indirizzo di codice a un elenco nel file con estensione exe che verrà patchato dal caricatore in fase di esecuzione con l'indirizzo corretto. Negli ambienti a 32 bit e a 64 bit, il linker genera un thunk di cui conosce l'indirizzo. In un ambiente a 32 bit il thunk ha un aspetto simile al seguente:
 
 ```
 0x40000000:    jmp DWORD PTR __imp_func1
 ```
 
-Di seguito `imp_func1` è l'indirizzo per il `func1` slot nella tabella di indirizzi di importazione del file .exe. Pertanto, tutti gli indirizzi sono noti al linker. Il caricatore deve solo aggiornare tabella IAT .exe del file in fase di caricamento per tutto il corretto funzionamento.
+Qui `imp_func1` è l'indirizzo dello slot di `func1` nella tabella degli indirizzi di importazione del file con estensione exe. Tutti gli indirizzi sono quindi noti al linker. Il caricatore deve solo aggiornare la tabella degli indirizzi di importazione del file con estensione exe in fase di caricamento affinché tutto funzioni correttamente.
 
-Pertanto, l'utilizzo **declspec** è migliore perché il linker genera un thunk se non è obbligatorio. Thunk rendere il codice più grandi (nei sistemi RISC, è possibile utilizzare diverse istruzioni) e può ridurre le prestazioni della cache. Se si indica al compilatore che la funzione è in una DLL, è possibile generare una chiamata indiretta per l'utente.
+Pertanto, l'utilizzo di **__declspec (dllimport)** è migliore perché il linker non genera un thunk se non è obbligatorio. I thunk rendono il codice più grande (nei sistemi RISC, possono essere diverse istruzioni) e possono peggiorare le prestazioni della cache. Se si indica al compilatore che la funzione si trova in una DLL, può generare una chiamata indiretta.
 
-A questo punto, il codice:
+A questo punto, questo codice:
 
 ```
 __declspec(dllimport) void func1(void);
@@ -62,15 +59,15 @@ int main(void)
 }
 ```
 
-Genera l'istruzione in questione:
+genera questa istruzione:
 
 ```
 call DWORD PTR __imp_func1
 ```
 
-C'è nessun thunk e no `jmp` (istruzione), in modo che il codice è più piccolo e più veloci.
+Non sono disponibili thunk e istruzioni `jmp`, quindi il codice è più piccolo e più veloce.
 
-D'altra parte, per le chiamate di funzione all'interno di una DLL, si preferisce non dover usare una chiamata indiretta. Si conosce già l'indirizzo della funzione. Poiché sono necessari tempo e lo spazio per caricare e archiviare l'indirizzo della funzione prima di una chiamata indiretta, una chiamata diretta è sempre più veloce e più piccoli. Si vuole solo usare **declspec** quando si chiamano le funzioni DLL dall'esterno della DLL stessa. Non utilizzare **declspec** sulle funzioni all'interno di una DLL durante la compilazione di tale DLL.
+D'altra parte, per le chiamate di funzione all'interno di una DLL, non è necessario usare una chiamata indiretta. Si conosce già l'indirizzo di una funzione. Poiché il tempo e lo spazio sono necessari per caricare e archiviare l'indirizzo della funzione prima di una chiamata indiretta, una chiamata diretta è sempre più veloce e più piccola. Si desidera utilizzare solo **__declspec (dllimport)** quando si richiamano funzioni DLL dall'esterno della dll. Non utilizzare **__declspec (dllimport)** sulle funzioni all'interno di una dll durante la compilazione di tale dll.
 
 ## <a name="see-also"></a>Vedere anche
 

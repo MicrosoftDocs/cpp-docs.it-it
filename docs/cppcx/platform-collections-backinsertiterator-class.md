@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 79854d8ead089aeba88fbdc151fdc0788dd181c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416067"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445789"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Classe Platform::Collections::BackInsertIterator
 
@@ -31,7 +31,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 *T*<br/>
 Tipo di elemento nella raccolta corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La classe BackInsertIterator implementa le regole richieste da [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md).
 
@@ -39,13 +39,13 @@ La classe BackInsertIterator implementa le regole richieste da [back_insert_iter
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[BackInsertIterator:: BackInsertIterator](#ctor)|Inizializza una nuova istanza della classe BackInsertIterator.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Operatore BackInsertIterator::operator*](#operator-dereference)|Recupera un riferimento all'oggetto BackInsertIterator corrente.|
 |[Operatore BackInsertIterator::operator++](#operator-increment)|Restituisce un riferimento all'oggetto BackInsertIterator corrente. L'iteratore è invariato.|
@@ -59,8 +59,8 @@ La classe BackInsertIterator implementa le regole richieste da [back_insert_iter
 
 **Intestazione:** collection.h
 
-<a name="namespace-platformcollections"></a>**Spazio dei nomi:** Platform::Collections
----
+**Spazio dei nomi:** Platform::Collections
+
 ## <a name="ctor"></a>Costruttore BackInsertIterator:: BackInsertIterator
 
 Inizializza una nuova istanza della classe `BackInsertIterator`.
@@ -68,7 +68,6 @@ Inizializza una nuova istanza della classe `BackInsertIterator`.
 ## <a name="syntax"></a>Sintassi
 
 ```
-
 explicit BackInsertIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
@@ -78,7 +77,7 @@ explicit BackInsertIterator(
 *v*<br/>
 Oggetto IVector\<T >.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un oggetto `BackInsertIterator` inserisce gli elementi dopo l'ultimo elemento dell'oggetto specificato dal parametro `v`.
 
@@ -115,7 +114,7 @@ BackInsertIterator& operator*();
 
 Riferimento all'oggetto BackInsertIterator corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo operatore restituisce un riferimento all'oggetto BackInsertIterator corrente, non a qualsiasi elemento nella raccolta corrente.
 
@@ -126,7 +125,6 @@ Restituisce un riferimento all'oggetto BackInsertIterator corrente. L'iteratore 
 ## <a name="syntax"></a>Sintassi
 
 ```
-
 BackInsertIterator& operator++();
 
 BackInsertIterator operator++(int);
@@ -136,7 +134,7 @@ BackInsertIterator operator++(int);
 
 Riferimento all'oggetto BackInsertIterator corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 In base alla progettazione, l'esempio della prima sintassi determina dei pre-incrementi dell'oggetto BackInsertIterator corrente e la seconda sintassi ne determina dei post-incrementi. Il tipo `int` nella seconda sintassi indica un'operazione di post-incremento, non un effettivo operando Integer.
 

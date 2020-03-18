@@ -2,18 +2,15 @@
 title: Funzione swap (auto_handle)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- msclr::swap
-- msclr.swap
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: c28082712bb1426c22ba563b7945861f90e819dc
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988392"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446870"
 ---
 # <a name="swap-function-auto_handle"></a>Funzione swap (auto_handle)
 
@@ -32,10 +29,10 @@ void swap(
 #### <a name="parameters"></a>Parametri
 
 *_left*<br/>
-Uno `auto_handle`.
+Valore `auto_handle`.
 
 *_right*<br/>
-Un altro `auto_handle`.
+Altro oggetto `auto_handle`.
 
 ## <a name="example"></a>Esempio
 
@@ -64,7 +61,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 **File di intestazione** \<msclr \ auto_handle. h >
 

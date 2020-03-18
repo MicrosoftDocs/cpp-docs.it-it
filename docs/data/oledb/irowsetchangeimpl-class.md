@@ -15,7 +15,6 @@ f1_keywords:
 - IRowsetChangeImpl.InsertRow
 - ATL::IRowsetChangeImpl::InsertRow
 - IRowsetChangeImpl::InsertRow
-- SetData
 - IRowsetChangeImpl::SetData
 - ATL.IRowsetChangeImpl.SetData
 - IRowsetChangeImpl.SetData
@@ -32,16 +31,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e07289a2d0fb283a20657797db5f915c06a39ad
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390763"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446320"
 ---
 # <a name="irowsetchangeimpl-class"></a>Classe IRowsetChangeImpl
 
-L'implementazione di modelli OLE DB del [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) interfaccia nella specifica OLE DB.
+L'implementazione dei modelli di OLE DB dell'interfaccia [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) nella specifica OLE DB.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -58,25 +57,25 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Una classe derivata da `IRowsetChangeImpl`.
+Classe derivata da `IRowsetChangeImpl`.
 
-*Archiviazione*<br/>
-Il record dell'utente.
+*Storage*<br/>
+Record utente.
 
 *BaseInterface*<br/>
-La classe di base per l'interfaccia, ad esempio `IRowsetChange`.
+Classe di base per l'interfaccia, ad esempio `IRowsetChange`.
 
 *RowClass*<br/>
-L'unità di archiviazione per l'handle di riga.
+Unità di archiviazione per l'handle di riga.
 
 *MapClass*<br/>
-L'unità di archiviazione per tutti gli handle di riga utilizzato dal provider.
+Unità di archiviazione per tutti gli handle di riga utilizzati dal provider.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="interface-methods-used-with-irowsetchange"></a>Metodi di interfaccia (utilizzati con IRowsetChange)
 
@@ -86,30 +85,30 @@ L'unità di archiviazione per tutti gli handle di riga utilizzato dal provider.
 |[InsertRow](#insertrow)|Inserisce una riga nel set di righe.|
 |[SetData](#setdata)|Imposta i valori dei dati in una o più colonne.|
 
-### <a name="implementation-method-callback"></a>Metodo di implementazione (Callback)
+### <a name="implementation-method-callback"></a>Metodo di implementazione (callback)
 
 |||
 |-|-|
-|[FlushData](#flushdata)|Sottoposto a override dal provider per eseguire il commit nel proprio archivio dati.|
+|[FlushData](#flushdata)|Sottoposto a override dal provider per eseguire il commit dei dati nell'archivio.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa interfaccia è responsabile delle operazioni di scrittura immediata a un archivio dati. "Immediati" significa che quando l'utente finale (l'utente che utilizza il consumer) effettua tutte le modifiche, tali modifiche vengono immediatamente trasmesse ai dati di archiviarla e non può essere annullata.
+Questa interfaccia è responsabile delle operazioni di scrittura immediate in un archivio dati. "Immediato" significa che quando l'utente finale (la persona che usa il consumer) apporta le modifiche, queste modifiche vengono immediatamente trasmesse all'archivio dati e non possono essere annullate.
 
-`IRowsetChangeImpl` implementa OLE DB `IRowsetChange` interfaccia, che consente l'aggiornamento dei valori delle colonne in righe esistenti, l'eliminazione delle righe e inserendo nuove righe.
+`IRowsetChangeImpl` implementa l'interfaccia OLE DB `IRowsetChange`, che consente l'aggiornamento dei valori delle colonne nelle righe esistenti, l'eliminazione di righe e l'inserimento di nuove righe.
 
-L'implementazione di modelli OLE DB supporta tutti i metodi di base (`SetData`, `InsertRow`, e `DeleteRows`).
+L'implementazione dei modelli di OLE DB supporta tutti i metodi di base (`SetData`, `InsertRow`e `DeleteRows`).
 
 > [!IMPORTANT]
->  È consigliabile leggere la documentazione seguente prima di tentare di implementare un provider:
+>  PRIMA di tentare di implementare il provider, è consigliabile leggere la seguente documentazione:
 
 - [Creazione di un provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md)
 
 - Capitolo 6 del *riferimento per programmatori OLE DB*
 
-- Vedere anche il `RUpdateRowset` classe viene utilizzata nel [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) esempio.
+- Vedere anche come viene usata la classe `RUpdateRowset` nell'esempio [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
+## <a name="deleterows"></a>IRowsetChangeImpl::D eleteRows
 
 Elimina le righe dal set di righe.
 
@@ -124,9 +123,9 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
+## <a name="insertrow"></a>IRowsetChangeImpl:: InsertRow
 
 Crea e Inizializza una nuova riga nel set di righe.
 
@@ -141,9 +140,9 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowsetChange:: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [IRowsetChange:: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="setdata"></a> IRowsetChangeImpl::SetData
+## <a name="setdata"></a>IRowsetChangeImpl:: SetData
 
 Imposta i valori dei dati in una o più colonne.
 
@@ -157,11 +156,11 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
+## <a name="flushdata"></a>IRowsetChangeImpl:: FlushData
 
-Sottoposto a override dal provider per eseguire il commit nel proprio archivio dati.
+Sottoposto a override dal provider per eseguire il commit dei dati nell'archivio.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -173,16 +172,16 @@ HRESULT FlushData(HROW hRowToFlush,
 #### <a name="parameters"></a>Parametri
 
 *hRowToFlush*<br/>
-[in] Handle per le righe per i dati. Il tipo di questa riga è determinato dal *RowClass* argomento di modello delle `IRowsetImpl` classe (`CSimpleRow` per impostazione predefinita).
+in Handle per le righe per i dati. Il tipo di questa riga è determinato dall'argomento del modello *RowClass* della classe `IRowsetImpl` (`CSimpleRow` per impostazione predefinita).
 
 *hAccessorToFlush*<br/>
-[in] Handle per la funzione di accesso, che contiene le informazioni di associazione e le informazioni sul tipo nel relativo `PROVIDER_MAP` (vedere [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).
+in Handle per la funzione di accesso che contiene informazioni sul binding e informazioni sul tipo nella relativa `PROVIDER_MAP` (vedere [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

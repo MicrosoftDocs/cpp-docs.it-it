@@ -7,18 +7,18 @@ f1_keywords:
 - VC.Project.VCConfiguration.Android.Makefile.IntermediateDirectory
 - VC.Project.VCConfiguration.Android.Makefile.BuildLogFile
 - VC.Project.VCConfiguration.Android.Makefile.ConfigurationType
-ms.openlocfilehash: a52cedb1f7f7af1d4a0ff8e1a0d766d6e769e2fa
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 0d03cff6b202f554e9829c51b35f069ae61576de
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177417"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446880"
 ---
 # <a name="general-project-properties-android-c-makefile"></a>Proprietà dei progetti generali (makefile di Android C++)
 
-Proprietà | Descrizione | Opzioni
---- | ---| ---
-Directory di output | Specifica un percorso relativo della directory dei file di output. Può includere variabili di ambiente.
-Directory intermedia | Specifica un percorso relativo della directory dei file intermedi. Può includere variabili di ambiente.
-File di log di compilazione | Specifica il file del log di compilazione in cui scrivere quando è abilitata la funzione di log di compilazione.
-Tipo di configurazione | Specifica il tipo di output generato da questa configurazione. | **Libreria dinamica (so)** : libreria dinamica (estensione *so*)<br>**Libreria statica (a)** : libreria statica (estensione *a*)<br>**Utilità**: utilità<br>**Makefile**: makefile<br>
+| Proprietà | Descrizione | Opzioni |
+|--|--|--|
+| Directory di output | Specifica un percorso relativo della directory dei file di output. Può includere variabili di ambiente. |
+| Directory intermedia | Specifica un percorso relativo della directory dei file intermedi. Può includere variabili di ambiente. |
+| File di log di compilazione | Specifica il file del log di compilazione in cui scrivere quando è abilitata la funzione di log di compilazione. |
+| Tipo configurazione | Specifica il tipo di output generato da questa configurazione. | **Libreria dinamica (so)** : libreria dinamica (estensione *so*)<br>**Libreria statica (a)** : libreria statica (estensione *a*)<br>**Utilità**: utilità<br>**Makefile**: makefile<br> |

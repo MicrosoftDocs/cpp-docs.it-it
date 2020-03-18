@@ -3,18 +3,17 @@ title: 'Operatore di negazione logica: !'
 ms.date: 08/27/2018
 f1_keywords:
 - '!'
-- Not
 helpviewer_keywords:
 - '! operator'
 - NOT operator
 - logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
-ms.openlocfilehash: 7b37e5108ca01d782c13508c0cd7a96b096cd745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06142ef15fcdbafdbae4b892772a04b117c087f6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216408"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446544"
 ---
 # <a name="logical-negation-operator-"></a>Operatore di negazione logica: !
 
@@ -24,15 +23,15 @@ ms.locfileid: "62216408"
 ! cast-expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'operatore di negazione logico (**!**) Inverte il significato dei relativi operandi. L'operando deve essere di tipo aritmetico o puntatore (o un'espressione che restituisce un tipo aritmetico o puntatore). L'operando verrà convertito in modo implicito nel tipo **bool**. Il risultato è TRUE se l'operando di conversione FALSE. Se l'operando di conversione è TRUE, il risultato è FALSE. Il risultato è di tipo **bool**.
+L'operatore di negazione logica ( **!** ) inverte il significato del relativo operando. L'operando deve essere di tipo aritmetico o puntatore (o un'espressione che restituisce un tipo aritmetico o puntatore). L'operando viene convertito in modo implicito nel tipo **bool**. Il risultato è TRUE se l'operando convertito è FALSE; il risultato è FALSE se l'operando convertito è TRUE. Il risultato è di tipo **bool**.
 
-Per un'espressione *elettronica*, l'espressione unaria `!e` equivale all'espressione `(e == 0)`, tranne dove gli operatori di overload sono coinvolti.
+Per un'espressione *e*, l'espressione unaria `!e` è equivalente all'espressione `(e == 0)`, tranne nei casi in cui sono interessati gli operatori di overload.
 
 ## <a name="operator-keyword-for-"></a>Parola chiave operator per !
 
-Il **non** operatore è un termine alternativo dei **!**. Esistono due modi per accedere la **non** operatore nei programmi: includere il file di intestazione \<lt;iso646.h&gt >, o eseguire la compilazione con il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).
+L'operatore **not** è un'ortografia alternativa **.** Esistono due modi per accedere all'operatore **not** nei programmi: includere il file di intestazione \<iso646. h > o compilare con l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
 
 ## <a name="example"></a>Esempio
 
