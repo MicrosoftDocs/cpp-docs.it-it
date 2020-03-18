@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier, constructor
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
 ms.openlocfilehash: 5fc1b8965bf8bf2f86dd30f2195fa825f85f6d7e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865587"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418286"
 ---
 # <a name="modulereleasenotifier-class"></a>Classe Module::ReleaseNotifier
 
@@ -36,14 +36,14 @@ class ReleaseNotifier;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-Name                                                                                | Descrizione
+Nome                                                                                | Descrizione
 ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------
 [Module:: ReleaseNotifier:: ~ ReleaseNotifier](#releasenotifier-tilde-releasenotifier) | Consente di deinizializzare l'istanza corrente della classe `Module::ReleaseNotifier`.
 [Module:: ReleaseNotifier:: ReleaseNotifier](#releasenotifier-releasenotifier)        | Inizializza una nuova istanza della classe `Module::ReleaseNotifier`.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Name                                                         | Descrizione
+Nome                                                         | Descrizione
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
 [Module:: ReleaseNotifier:: Invoke](#releasenotifier-invoke)   | Quando viene implementato, chiama un gestore eventi quando viene rilasciato l'ultimo oggetto in un modulo.
 [Module::ReleaseNotifier::Release](#releasenotifier-release) | Elimina l'oggetto `Module::ReleaseNotifier` corrente se l'oggetto è stato costruito con un parametro **true**.

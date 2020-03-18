@@ -35,11 +35,11 @@ helpviewer_keywords:
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
 ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866532"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418251"
 ---
 # <a name="crect-class"></a>Classe CRect
 
@@ -55,13 +55,13 @@ class CRect : public tagRECT
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CRect:: CRect](#crect)|Costruisce un oggetto `CRect`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CRect:: BottomRight](#bottomright)|Restituisce il punto inferiore destro del `CRect`.|
 |[CRect:: CenterPoint](#centerpoint)|Restituisce l'Centerpoint del `CRect`.|
@@ -89,7 +89,7 @@ class CRect : public tagRECT
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CRect:: operator-](#operator_-)|Sottrae gli offset specificati da `CRect` o deflats `CRect` e restituisce il `CRect`risultante.|
 |[CRect:: operator LPCRECT](#operator_lpcrect)|Converte `CRect` in `LPCRECT`.|

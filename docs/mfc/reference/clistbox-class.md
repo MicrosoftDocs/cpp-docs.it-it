@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865522"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420337"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -491,7 +491,7 @@ Può essere qualsiasi combinazione dei valori **enum** descritti in `CFile::GetS
 |0x8000|Flag esclusivo. Se viene impostato il flag exclusive, vengono elencati solo i file del tipo specificato. In caso contrario, i file del tipo specificato vengono elencati oltre ai file "normali".|
 
 *lpszWildCard*<br/>
-Punta a una stringa di specifica del file. La stringa può contenere caratteri jolly, ad esempio *.\*
+Punta a una stringa di specifica del file. La stringa può contenere caratteri jolly (ad esempio *.\*).
 
 ### <a name="return-value"></a>Valore restituito
 

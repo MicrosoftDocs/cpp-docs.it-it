@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876361"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420386"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ Se si desidera gestire i messaggi di notifica di Windows inviati da un controllo
 
 Ogni voce della mappa messaggi assume il formato seguente:
 
-  **Notifica ON_** **(** _ID_ **,** _memberFxn_ **)**
+  **Notifica ON_** _NOTIFICATION_ **(** _ID_ **,** _memberFxn_ **)**
 
 dove `id` specifica l'ID della finestra figlio del controllo di modifica che invia la notifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.
 

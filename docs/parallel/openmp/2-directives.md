@@ -3,11 +3,11 @@ title: 2. Direttive
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
 ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882859"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417089"
 ---
 # <a name="2-directives"></a>2. Direttive
 
@@ -153,13 +153,13 @@ La direttiva `for` impone restrizioni sulla struttura del ciclo `for` corrispond
 `for (` *init-expr* `;` *var Logical-op b* `;` *incr-expr* `)`
 
 *init-expr*<br/>
-Uno dei seguenti:
+I tipi validi sono:
 
 - *var* = *lb*
 - *var di tipo integer* = *lb*
 
 *incr-expr*<br/>
-Uno dei seguenti:
+I tipi validi sono:
 
 - `++` *var*
 - `++` *var*
@@ -175,7 +175,7 @@ Uno dei seguenti:
 Variabile di tipo integer con segno. Se questa variabile viene altrimenti condivisa, viene implicitamente privata per la durata del `for`. Non modificare questa variabile all'interno del corpo dell'istruzione `for`. A meno che la variabile non sia specificata `lastprivate`, il relativo valore dopo il ciclo è indeterminato.
 
 *operazione logica*<br/>
-Uno dei seguenti:
+I tipi validi sono:
 
 - `<`
 - `<=`
@@ -193,8 +193,8 @@ Tabella 2-1: valori *Kind* della clausola `schedule`
 
 |||
 |-|-|
-|statiche|Quando si specifica `schedule(static,` *chunk_size* `)`, le iterazioni vengono divise in blocchi di dimensioni specificate da *chunk_size*. I blocchi vengono assegnati staticamente ai thread del team in base a una modalità Round Robin nell'ordine del numero del thread. Quando non viene specificato alcun *chunk_size* , lo spazio di iterazione è diviso in blocchi di dimensioni approssimativamente uguali, con un blocco assegnato a ogni thread.|
-|dynamic|Quando si specifica `schedule(dynamic,` *chunk_size* `)`, le iterazioni sono divise in una serie di blocchi, ognuno dei quali contiene *chunk_size* iterazioni. Ogni blocco viene assegnato a un thread in attesa di un'assegnazione. Il thread esegue il blocco di iterazioni e quindi attende la successiva assegnazione, fino a quando non rimane alcun blocco da assegnare. L'ultimo blocco da assegnare può avere un numero inferiore di iterazioni. Quando non viene specificato alcun *chunk_size* , il valore predefinito è 1.|
+|Statica|Quando si specifica `schedule(static,` *chunk_size* `)`, le iterazioni vengono divise in blocchi di dimensioni specificate da *chunk_size*. I blocchi vengono assegnati staticamente ai thread del team in base a una modalità Round Robin nell'ordine del numero del thread. Quando non viene specificato alcun *chunk_size* , lo spazio di iterazione è diviso in blocchi di dimensioni approssimativamente uguali, con un blocco assegnato a ogni thread.|
+|dinamico|Quando si specifica `schedule(dynamic,` *chunk_size* `)`, le iterazioni sono divise in una serie di blocchi, ognuno dei quali contiene *chunk_size* iterazioni. Ogni blocco viene assegnato a un thread in attesa di un'assegnazione. Il thread esegue il blocco di iterazioni e quindi attende la successiva assegnazione, fino a quando non rimane alcun blocco da assegnare. L'ultimo blocco da assegnare può avere un numero inferiore di iterazioni. Quando non viene specificato alcun *chunk_size* , il valore predefinito è 1.|
 |guidato|Quando si specifica `schedule(guided,` *chunk_size* `)`, le iterazioni vengono assegnate ai thread in blocchi con dimensioni decrescenti. Quando un thread termina il blocco di iterazioni assegnato, viene assegnato dinamicamente a un altro blocco, fino a quando non ne viene lasciato nessuno. Per un *chunk_size* di 1, le dimensioni di ogni blocco corrispondono approssimativamente al numero di iterazioni non assegnate divise per il numero di thread. Queste dimensioni diminuiscono quasi esponenzialmente a 1. Per un *chunk_size* con valore *k* maggiore di 1, le dimensioni diminuiscono in modo quasi esponenziale fino a *k*, ad eccezione del fatto che l'ultimo blocco può contenere meno di *k* iterazioni. Quando non viene specificato alcun *chunk_size* , il valore predefinito è 1.|
 |runtime|Quando si specifica `schedule(runtime)`, la decisione relativa alla pianificazione viene posticipata fino al runtime. Il *tipo* di pianificazione e le dimensioni dei blocchi possono essere scelti in fase di esecuzione impostando la variabile di ambiente `OMP_SCHEDULE`. Se questa variabile di ambiente non è impostata, la pianificazione risultante è definita dall'implementazione. Quando si specifica `schedule(runtime)`, *chunk_size* non deve essere specificato.|
 
@@ -765,7 +765,7 @@ Il valore dell'oggetto originale diventa indeterminato quando il primo thread ra
 
 Nella tabella seguente sono elencati gli operatori validi e i rispettivi valori di inizializzazione canonici. Il valore di inizializzazione effettivo sarà coerente con il tipo di dati della variabile di riduzione.
 
-|Operatore|Initialization|
+|Operatore|Inizializzazione|
 |--------------|--------------------|
 |`+`|0|
 |`*`|1|

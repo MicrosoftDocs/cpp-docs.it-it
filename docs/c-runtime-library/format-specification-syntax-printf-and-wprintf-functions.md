@@ -10,11 +10,11 @@ helpviewer_keywords:
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865496"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417173"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
@@ -48,7 +48,7 @@ Il carattere identificatore di conversione *tipo* specifica se l'argomento corri
 
 Gli argomenti che seguono la stringa di formato vengono interpretati a seconda del carattere *tipo* corrispondente e del prefisso [dimensione](#size) facoltativo. Le conversioni dei tipi di carattere `char` e `wchar_t` vengono specificate con **c** o **C** e le stringhe di caratteri estesi a byte singolo e multibyte vengono specificate con **s** o **S**, a seconda della funzione di formattazione usata. Gli argomenti di tipo stringa e carattere che vengono specificati usando **c** e **s** vengono interpretati come `char` e `char*` dalle funzioni della famiglia `printf` o come `wchar_t` e `wchar_t*` dalle funzioni della famiglia `wprintf`. Gli argomenti di tipo stringa e carattere che vengono specificati usando **C** e **S** vengono interpretati come `wchar_t` e `wchar_t*` dalle funzioni della famiglia `printf` o come `char` e `char*` dalle funzioni della famiglia `wprintf`. Questo comportamento è specifico di Microsoft.
 
-I tipi Integer, ad esempio `short`, `int`, `long`, `long long`e le relative varianti di `unsigned`, vengono specificati tramite **d**, **i**, **o**, **u**, **x**e **x**. I tipi a virgola mobile, ad esempio `float`, `double`e `long double`, vengono specificati **usando**, **a, e**, **e**, **f**, **f**, **g**e **g**. Per impostazione predefinita, a meno che non vengano modificati da un prefisso di *dimensione* , gli argomenti Integer vengono assegnati al tipo `int` e gli argomenti a virgola mobile vengono assegnati al `double`. Nei sistemi a 64 bit, un `int` è un valore a 32 bit; di conseguenza gli interi a 64 bit vengono troncati quando vengono formattati per l'output, a meno che non venga usato un prefisso *dimensione***ll** o **I64**. I tipi di puntatore specificati da **p** usano le dimensioni puntatore predefinite per la piattaforma.
+I tipi Integer, ad esempio `short`, `int`, `long`, `long long`e le relative varianti di `unsigned`, vengono specificati tramite **d**, **i**, **o**, **u**, **x**e **x**. I tipi a virgola mobile, ad esempio `float`, `double`e `long double`, vengono specificati **usando**, **a, e**, **e**, **f**, **f**, **g**e **g**. **e** Per impostazione predefinita, a meno che non vengano modificati da un prefisso di *dimensione* , gli argomenti Integer vengono assegnati al tipo `int` e gli argomenti a virgola mobile vengono assegnati al `double`. Nei sistemi a 64 bit, un `int` è un valore a 32 bit; di conseguenza gli interi a 64 bit vengono troncati quando vengono formattati per l'output, a meno che non venga usato un prefisso *dimensione***ll** o **I64**. I tipi di puntatore specificati da **p** usano le dimensioni puntatore predefinite per la piattaforma.
 
 > [!NOTE]
 > **Specifico di Microsoft:** Il carattere di tipo **Z** e il comportamento dei caratteri di tipo **c**, **c**, **s**e **s** quando vengono usati con le funzioni `printf` e `wprintf` sono estensioni Microsoft. Lo standard ISO C usa **c** e **s** in modo coerente per i caratteri e le stringhe narrow e **C** e **S** per i caratteri e le stringhe wide in tutte le funzioni di formattazione.
@@ -75,13 +75,13 @@ I tipi Integer, ad esempio `short`, `int`, `long`, `long long`e le relative vari
 |**A**|A virgola mobile|Valore a virgola mobile a precisione doppia esadecimale con segno e con formato [-]0X*h.hhhh*__P±__*dd*, dove *h.hhhh* sono le cifre esadecimali (in maiuscolo) della mantissa, mentre *dd* sono una o più cifre dell'esponente. La precisione indica il numero di cifre dopo il punto.|
 |**n**|Puntatore a intero|Numero di caratteri che viene scritto correttamente fino al flusso o nel buffer. Questo valore viene archiviato nel valore intero in cui l'indirizzo viene fornito come argomento. Le dimensioni del numero intero al quale si fa riferimento possono essere controllate da un prefisso di indicazione delle dimensioni dell'argomento. L'identificatore **n** è disattivato per impostazione predefinita. Per informazioni vedere l'importante la nota sulla sicurezza.|
 |**p**|Tipo di puntatore|Visualizza l'argomento come indirizzo nelle cifre esadecimali.|
-|**s**|String|Una volta usato con funzioni `printf`, specifica una stringa di caratteri a byte singolo o multibyte; una volta usato con le funzioni `wprintf`, specifica una stringa di carattere wide. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
-|**S**|String|Una volta usato con funzioni `printf`, specifica una stringa di caratteri wide; una volta usato con le funzioni `wprintf`, specifica una stringa di caratteri a un byte singolo o multibyte. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
+|**s**|string|Una volta usato con funzioni `printf`, specifica una stringa di caratteri a byte singolo o multibyte; una volta usato con le funzioni `wprintf`, specifica una stringa di carattere wide. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
+|**S**|string|Una volta usato con funzioni `printf`, specifica una stringa di caratteri wide; una volta usato con le funzioni `wprintf`, specifica una stringa di caratteri a un byte singolo o multibyte. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
 |**Z**|Struttura `ANSI_STRING` o `UNICODE_STRING`|Quando l'indirizzo di una struttura [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) o [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) viene passato come argomento, visualizza la stringa contenuta nel buffer a cui fa riferimento il campo `Buffer` della struttura. Usare il prefisso modificatore *dimensione***w** per specificare un argomento `UNICODE_STRING`, per esempio `%wZ`. Il campo `Length` della struttura deve essere impostato sulla lunghezza, espressa in byte, della stringa. Il campo `MaximumLength` della struttura deve essere impostato sulla lunghezza, espressa in byte, del buffer.<br /><br /> In genere il carattere tipo **Z** viene usato solo nelle funzioni che usano una specifica di formato, come ad esempio `dbgPrint` e `kdPrint`.|
 
 A partire da Visual Studio 2015, se l'argomento che corrisponde a un identificatore di conversione a virgola mobile (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) è infinito, non definito o NaN, l'output formattato è conforme allo standard C99. Questa tabella elenca l'output formattato:
 
-|Valore|Output|
+|valore|Output|
 |-----------|------------|
 |infinity|`inf`|
 |NaN non interattivo|`nan`|
@@ -92,7 +92,7 @@ Qualsiasi valore tra questi può essere preceduto da un segno. Se un carattere i
 
 Prima di Visual Studio 2015, la libreria CRT usava un formato diverso, non standard per l'output di valori infinite, indefinite e NaN:
 
-|Valore|Output|
+|valore|Output|
 |-----------|------------|
 |+ infinito|`1.#INF` *cifre casuali*|
 |- infinito|`-1.#INF` *cifre casuali*|
@@ -118,7 +118,7 @@ Il primo campo facoltativo in una specifica di conversione contiene *direttive f
 
 ### <a name="flag-characters"></a>Caratteri flag
 
-|Flag|Significato|Default|
+|Flag|Significato|Predefinito|
 |----------|-------------|-------------|
 |**-**|Allinea a sinistra il risultato entro la larghezza del campo specificata.|Allinea a destra.|
 |**+**|Usa un segno (+ o -) come prefisso del valore di output se si tratta di un tipo con segno.|Il segno viene visualizzato solo per i valori con segno negativo (-).|
@@ -160,7 +160,7 @@ Il carattere *tipo* determina l'interpretazione di *precisione* o la precisione 
 
 ### <a name="how-precision-values-affect-type"></a>Effetti del tipo sui valori di precisione
 
-|Type|Significato|Default|
+|Type|Significato|Predefinito|
 |----------|-------------|-------------|
 |**a**, **A**|La precisione indica il numero di cifre dopo il punto.|La precisione predefinita è 13. Se la precisione è 0 non viene stampato alcun separatore decimale, a meno che non venga usato il flag **#** .|
 |**c**, **C**|La precisione non ha alcun effetto.|Viene stampato il carattere.|

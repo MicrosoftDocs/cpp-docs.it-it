@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883889"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418797"
 ---
 # <a name="cdaoquerydef-class"></a>Classe CDaoQueryDef
 
@@ -87,13 +87,13 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDaoQueryDef:: CDaoQueryDef](#cdaoquerydef)|Costruisce un oggetto `CDaoQueryDef`. Chiamare quindi `Open` o `Create`, a seconda delle esigenze.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDaoQueryDef:: Append](#append)|Accoda l'oggetto QueryDef alla raccolta QueryDefs del database come query salvata.|
 |[CDaoQueryDef:: CanUpdate](#canupdate)|Restituisce un valore diverso da zero se la query è in grado di aggiornare il database.|
@@ -125,7 +125,7 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDaoQueryDef:: m_pDAOQueryDef](#m_pdaoquerydef)|Puntatore all'interfaccia OLE per l'oggetto QueryDef DAO sottostante.|
 |[CDaoQueryDef:: m_pDatabase](#m_pdatabase)|Puntatore all'oggetto `CDaoDatabase` a cui è associato l'oggetto QueryDef. L'oggetto QueryDef potrebbe essere salvato nel database.|

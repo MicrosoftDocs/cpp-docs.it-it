@@ -34,11 +34,11 @@ helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
 ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866134"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417082"
 ---
 # <a name="source_block-class"></a>Classe source_block
 
@@ -63,20 +63,20 @@ Tipo di processore per l'elaborazione dei messaggi.
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`target_iterator`|Iteratore per esaminare le destinazioni connesse.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[source_block](#ctor)|Costruisce un oggetto `source_block`.|
 |[distruttore ~ source_block](#dtor)|Elimina definitivamente l'oggetto `source_block`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[accettare](#accept)|Accetta un messaggio offerto da questo oggetto `source_block`, trasferendo la proprietà al chiamante.|
 |[acquire_ref](#acquire_ref)|Acquisisce un conteggio di riferimenti in questo oggetto `source_block` per impedire l'eliminazione.|
@@ -90,7 +90,7 @@ Tipo di processore per l'elaborazione dei messaggi.
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[accept_message](#accept_message)|Quando sottoposto a override in una classe derivata, accetta un messaggio offerto dall'origine. I blocchi di messaggi devono eseguire l'override di questo metodo per convalidare il `_MsgId` e restituire un messaggio.|
 |[async_send](#async_send)|Accoda i messaggi in modo asincrono e avvia un'attività di propagazione, se non è già stata eseguita|

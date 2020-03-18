@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884092"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417376"
 ---
 # <a name="precompiled-header-files"></a>File di intestazione precompilata
 
@@ -116,7 +116,7 @@ Quando si usa un'intestazione precompilata creata con/Yc o/Yu, il compilatore co
 
 Questa tabella elenca le opzioni del compilatore che potrebbero attivare un avviso di incoerenza quando si usa un'intestazione precompilata:
 
-|Opzione|Name|Regola|
+|Opzione|Nome|Regola|
 |------------|----------|----------|
 |/D|Definire costanti e macro|Deve essere lo stesso tra la compilazione che ha creato l'intestazione precompilata e la compilazione corrente. Lo stato delle costanti definite non è selezionato, ma possono verificarsi risultati imprevedibili se i file dipendono dai valori delle costanti modificate.|
 |/E o/EP|Copia l'output del preprocessore nell'output standard|Le intestazioni precompilate non funzionano con l'opzione/E o/EP.|

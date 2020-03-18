@@ -12,11 +12,11 @@ helpviewer_keywords:
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
 ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856931"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417292"
 ---
 # <a name="running-nmake"></a>Esecuzione di NMAKE
 
@@ -41,7 +41,7 @@ Le opzioni di NMAKE sono descritte nella tabella seguente. Le opzioni sono prece
 | **/C** | Disattiva l'output predefinito, inclusi gli errori o gli avvisi NMAKE non irreversibili, i timestamp e il messaggio di copyright NMAKE. Elimina gli avvisi rilasciati da **/K**. |
 | **/D** | Visualizza i timestamp di ogni destinazione e dipendente valutati e un messaggio quando non esiste una destinazione. Utile con **/p** per il debug di un makefile. Utilizzare `!CMDSWITCHES` per impostare o deselezionare **/d** per una parte di un makefile. |
 | **/E** | Consente alle variabili di ambiente di eseguire l'override delle definizioni delle macro Makefile. |
-| **/errorreport** [ **Nessuna** &#124; &#124; coda &#124; messaggi di richiesta- **invio** ] | Operazione deprecata. [Segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) impostazioni di gestione rapporti. |
+| **/errorreport** [ **Nessuna** &#124; **PROMPT** &#124; **QUEUE** coda &#124; messaggi di richiesta- **invio** ] | Operazione deprecata. [Segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) impostazioni di gestione rapporti. |
 | **/F** *nomefile* | Specifica il *nome del file* come Makefile. Spazi o tabulazioni possono precedere il *nome del file*. Specificare **/f** una volta per ogni makefile. Per fornire un makefile dall'input standard, specificare un trattino (`-`) per *filename*e l'input della tastiera finale con **F6** o **CTRL + Z**. |
 | **/G** | Consente di visualizzare i makefile inclusi nella direttiva `!INCLUDE`. Per altre informazioni, vedere [direttive di pre-elaborazione di makefile](makefile-preprocessing-directives.md). |
 | **/Help**, **/?** | Visualizza un breve riepilogo della sintassi della riga di comando NMAKE. |

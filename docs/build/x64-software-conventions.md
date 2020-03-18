@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865600"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417194"
 ---
 # <a name="x64-software-conventions"></a>Convenzioni del software x64
 
@@ -193,7 +193,7 @@ Nella tabella seguente viene descritto il modo in cui ogni registro viene usato 
 
 ||||
 |-|-|-|
-|Registrazione|Stato|Utilizzo|
+|Register|Stato|Uso|
 |RAX|Volatile|Registro del valore restituito|
 |RCX|Volatile|Primo argomento Integer|
 |RDX|Volatile|Secondo argomento Integer|
