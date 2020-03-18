@@ -183,11 +183,11 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 6f15280943fce39bae4eebfb537f9a61d256d2e8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856417"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420918"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 
@@ -203,13 +203,13 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CToolBarCtrl:: CToolBarCtrl](#ctoolbarctrl)|Costruisce un oggetto `CToolBarCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CToolBarCtrl:: AddBitmap](#addbitmap)|Aggiunge una o più immagini dei pulsanti bitmap all'elenco di immagini dei pulsanti disponibili per un controllo Toolbar.|
 |[CToolBarCtrl:: AddButtons](#addbuttons)|Aggiunge uno o più pulsanti a un controllo Toolbar.|

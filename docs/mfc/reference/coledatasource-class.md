@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 5cd573590bc1adb303e0b4c5cd600b9fa6c685b2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855754"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421135"
 ---
 # <a name="coledatasource-class"></a>Classe COleDataSource
 
@@ -57,13 +57,13 @@ class COleDataSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleDataSource:: COleDataSource](#coledatasource)|Costruisce un oggetto `COleDataSource`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleDataSource:: CacheData](#cachedata)|Offre dati in un formato specificato utilizzando una struttura `STGMEDIUM`.|
 |[COleDataSource:: CacheGlobalData](#cacheglobaldata)|Offre dati in un formato specificato utilizzando un HGLOBAL.|
@@ -80,7 +80,7 @@ class COleDataSource : public CCmdTarget
 |[COleDataSource:: OnSetData](#onsetdata)|Chiamato per sostituire i dati nell'oggetto `COleDataSource`.|
 |[COleDataSource:: gli Appunti](#setclipboard)|Inserisce un oggetto `COleDataSource` negli Appunti.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È possibile creare direttamente origini dati OLE. In alternativa, le classi [COleClientItem](../../mfc/reference/coleclientitem-class.md) e [COleServerItem](../../mfc/reference/coleserveritem-class.md) creano origini dati OLE in risposta alle funzioni membro `CopyToClipboard` e `DoDragDrop`. Per una breve descrizione, vedere [COleServerItem:: CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) . Eseguire l'override della funzione membro `OnGetClipboardData` della classe elemento client o elemento server per aggiungere altri formati degli Appunti ai dati nell'origine dati OLE creata per la funzione membro `CopyToClipboard` o `DoDragDrop`.
 
@@ -122,7 +122,7 @@ Punta a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium
 *lpFormatEtc*<br/>
 Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui vengono offerti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono utilizzati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 È necessario fornire i dati, perché questa funzione lo fornisce usando il rendering immediato. I dati vengono memorizzati nella cache finché non sono necessari.
 
@@ -158,7 +158,7 @@ Handle per il blocco di memoria globale contenente i dati nel formato specificat
 *lpFormatEtc*<br/>
 Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui vengono offerti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono utilizzati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione fornisce i dati utilizzando il rendering immediato, pertanto è necessario fornire i dati quando si chiama la funzione; i dati vengono memorizzati nella cache finché non sono necessari. Usare la funzione membro `CacheData` se si fornisce una grande quantità di dati o se è necessario un supporto di archiviazione strutturato.
 
@@ -194,7 +194,7 @@ Formato degli Appunti in cui vengono offerti i dati. Questo parametro può esser
 *lpFormatEtc*<br/>
 Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui vengono offerti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono utilizzati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione fornisce i dati utilizzando il rendering ritardato, quindi i dati non vengono forniti immediatamente. Per richiedere i dati, viene chiamata la funzione membro [OnRenderData](#onrenderdata) o [OnRenderGlobalData](#onrenderglobaldata) .
 
@@ -224,7 +224,7 @@ Formato degli Appunti in cui vengono offerti i dati. Questo parametro può esser
 *lpFormatEtc*<br/>
 Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui vengono offerti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono utilizzati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione fornisce i dati utilizzando il rendering ritardato, quindi i dati non vengono forniti immediatamente. La funzione membro [OnRenderFileData](#onrenderfiledata) viene chiamata per richiedere i dati.
 
@@ -254,7 +254,7 @@ Formato degli Appunti in cui devono essere inseriti i dati. Questo parametro pu�
 *lpFormatEtc*<br/>
 Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui i dati devono essere sostituiti. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono utilizzati i valori predefiniti per gli altri campi nella struttura `FORMATETC`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando si verifica questa situazione, [OnSetData](#onsetdata) verrà chiamato dal Framework. Viene usato solo quando il Framework restituisce l'origine dati da [COleServerItem:: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Se `DelaySetData` non viene chiamata, la funzione `OnSetData` non verrà mai chiamata. `DelaySetData` deve essere chiamato per ogni Appunti o il formato `FORMATETC` supportato.
 
@@ -296,7 +296,7 @@ Punta a un'origine di rilascio. Se NULL, verrà utilizzata un'implementazione pr
 
 Effetto di rilascio generato dall'operazione di trascinamento della selezione; in caso contrario DROPEFFECT_NONE se l'operazione non viene mai avviata perché l'utente ha rilasciato il pulsante del mouse prima di lasciare il rettangolo specificato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'operazione di trascinamento della selezione non viene avviata immediatamente. Attende fino a quando il cursore del mouse lascia il rettangolo specificato da *lpRectStartDrag* o fino a quando non viene superato il numero di millisecondi specificato. Se *lpRectStartDrag* è null, le dimensioni del rettangolo sono pari a un pixel.
 
@@ -320,7 +320,7 @@ Chiamare questa funzione per svuotare il `COleDataSource` oggetto dei dati.
 void Empty();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Entrambi i formati di rendering memorizzati nella cache e ritardo vengono svuotati in modo che possano essere riutilizzati.
 
@@ -334,7 +334,7 @@ Esegue il rendering dei dati presenti negli Appunti e quindi consente di incolla
 static void PASCAL FlushClipboard();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare gli [Appunti](#setclipboard) per inserire i dati negli Appunti.
 
@@ -372,7 +372,7 @@ Punta a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il formato specificato è quello inserito in precedenza nell'oggetto `COleDataSource` usando la funzione membro [DelayRenderData](#delayrenderdata) o [DelayRenderData](#delayrenderfiledata) per il rendering ritardato. L'implementazione predefinita di questa funzione chiamerà [OnRenderFileData](#onrenderfiledata) o [OnRenderGlobalData](#onrenderglobaldata) se il supporto di archiviazione fornito è rispettivamente un file o una memoria. Se nessuno di questi formati viene specificato, l'implementazione predefinita restituirà 0 e non eseguirà alcuna operazione. Per ulteriori informazioni sul rendering ritardato gestito da MFC, vedere l'articolo [oggetti dati e origini dati: manipolazione](../../mfc/data-objects-and-data-sources-manipulation.md).
 
@@ -404,7 +404,7 @@ Punta a un oggetto [CFile](../../mfc/reference/cfile-class.md) in cui è necessa
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il formato specificato è quello inserito in precedenza nell'oggetto `COleDataSource` usando la funzione membro [DelayRenderData](#delayrenderdata) per il rendering ritardato. L'implementazione predefinita di questa funzione restituisce semplicemente FALSE.
 
@@ -434,7 +434,7 @@ Punta a un handle per la memoria globale in cui devono essere restituiti i dati.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il formato specificato è quello inserito in precedenza nell'oggetto `COleDataSource` usando la funzione membro [DelayRenderData](#delayrenderdata) per il rendering ritardato. L'implementazione predefinita di questa funzione restituisce semplicemente FALSE.
 
@@ -470,7 +470,7 @@ Indica chi ha la proprietà del supporto di archiviazione dopo aver completato l
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'origine dati non assume la proprietà dei dati fino a quando non viene ottenuta correttamente. Ovvero non assume la proprietà se `OnSetData` restituisce 0. Se l'origine dati acquisisce la proprietà, il supporto di archiviazione viene liberato chiamando la funzione [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) .
 

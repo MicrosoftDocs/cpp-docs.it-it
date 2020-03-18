@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
 ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78868990"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420505"
 ---
 # <a name="ccontextmenumanager-class"></a>Classe CContextMenuManager
 
@@ -49,14 +49,14 @@ class CContextMenuManager : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CContextMenuManager:: CContextMenuManager](#ccontextmenumanager)|Costruisce un oggetto `CContextMenuManager`.|
 |`CContextMenuManager::~CContextMenuManager`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CContextMenuManager:: AggiungiMenu](#addmenu)|Aggiunge un nuovo menu di scelta rapida.|
 |[CContextMenuManager:: GetMenuById](#getmenubyid)|Restituisce un handle per il menu associato all'ID di risorsa specificato.|

@@ -335,11 +335,11 @@ helpviewer_keywords:
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
 ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855755"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421590"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleControl:: COleControl](#colecontrol)|Crea un oggetto `COleControl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleControl:: AmbientAppearance](#ambientappearance)|Recupera l'aspetto corrente del controllo.|
 |[COleControl:: AmbientBackColor](#ambientbackcolor)|Restituisce il valore della proprietà BackColor dell'ambiente.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleControl::D rawContent](#drawcontent)|Chiamata eseguita dal framework quando è necessario aggiornare l'aspetto del controllo.|
 |[COleControl::D rawMetafile](#drawmetafile)|Chiamato dal framework quando viene utilizzato il contesto di dispositivo metafile.|
@@ -1989,7 +1989,7 @@ Puntatore all'interfaccia di `IDropTarget` dell'oggetto. Poiché non dispone di 
 
 ### <a name="remarks"></a>Osservazioni
 
-In genere, ciò richiede che la finestra del controllo sia stata registrata come obiettivo di rilascio. Tuttavia, poiché il controllo non ha una finestra propria, il contenitore utilizzerà la propria finestra come destinazione di rilascio. Il controllo deve semplicemente fornire un'implementazione dell'interfaccia `IDropTarget` a cui il contenitore può delegare le chiamate al momento appropriato. Ad esempio,
+In genere, ciò richiede che la finestra del controllo sia stata registrata come obiettivo di rilascio. Tuttavia, poiché il controllo non ha una finestra propria, il contenitore utilizzerà la propria finestra come destinazione di rilascio. Il controllo deve semplicemente fornire un'implementazione dell'interfaccia `IDropTarget` a cui il contenitore può delegare le chiamate al momento appropriato. Ad esempio:
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
@@ -2322,7 +2322,7 @@ virtual void OnClose(DWORD dwSaveOption);
 ### <a name="parameters"></a>Parametri
 
 *dwSaveOption*<br/>
-Flag che indica se l'oggetto deve essere salvato prima del caricamento. Valori validi:
+Flag che indica se l'oggetto deve essere salvato prima del caricamento. I valori validi sono:
 
 - OLECLOSE_SAVEIFDIRTY
 
@@ -2448,7 +2448,7 @@ Diverso da zero se la chiamata ha esito positivo; in caso contrario, 0.
 
 Questo ha lo stesso effetto di richiamare il verbo di OLEIVERB_UIACTIVATE del controllo.
 
-Questa funzione viene in genere utilizzata come funzione di gestione per una voce della mappa messaggi ON_OLEVERB. In questo modo viene reso disponibile un verbo "Edit" nel menu "Object" del controllo. Ad esempio,
+Questa funzione viene in genere utilizzata come funzione di gestione per una voce della mappa messaggi ON_OLEVERB. In questo modo viene reso disponibile un verbo "Edit" nel menu "Object" del controllo. Ad esempio:
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 

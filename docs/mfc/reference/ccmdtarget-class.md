@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867034"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420526"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (classe)
 
@@ -67,13 +67,13 @@ class CCmdTarget : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CCmdTarget:: CCmdTarget](#ccmdtarget)|Costruisce un oggetto `CCmdTarget`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CCmdTarget:: BeginWaitCursor](#beginwaitcursor)|Visualizza il cursore come cursore a forma di clessidra.|
 |[CCmdTarget::D oOleVerb](#dooleverb)|Determina l'esecuzione di un'azione specificata da un verbo OLE.|
@@ -95,7 +95,7 @@ class CCmdTarget : public CObject
 |[CCmdTarget:: OnFinalRelease](#onfinalrelease)|Esegue la pulizia dopo che è stato rilasciato l'ultimo riferimento OLE.|
 |[CCmdTarget:: RestoreWaitCursor](#restorewaitcursor)|Ripristina il cursore a clessidra.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Una mappa messaggi instrada i comandi o i messaggi alle funzioni membro scritte per gestirli. Un comando è un messaggio da una voce di menu, un pulsante di comando o un tasto di scelta rapida.
 
@@ -125,7 +125,7 @@ Chiamare questa funzione per visualizzare il cursore come una clessidra quando s
 void BeginWaitCursor();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il Framework chiama questa funzione per indicare che l'utente è occupato, ad esempio quando un oggetto `CDocument` carica o Salva se stesso in un file.
 
@@ -175,7 +175,7 @@ Puntatore alla struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) contenen
 
 TRUE se ha esito positivo, in caso contrario FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro è fondamentalmente un'implementazione di [IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb). Le azioni possibili sono enumerate da [CCmdTarget:: EnumOleVerbs](#enumoleverbs).
 
@@ -187,7 +187,7 @@ Chiamare questa funzione per abilitare l'automazione OLE per un oggetto.
 void EnableAutomation();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione viene in genere chiamata dal costruttore dell'oggetto e deve essere chiamata solo se è stata dichiarata una mappa di invio per la classe. Per altre informazioni sull'automazione, vedere gli articoli [client di automazione](../../mfc/automation-clients.md) e server di [automazione](../../mfc/automation-servers.md).
 
@@ -199,7 +199,7 @@ Abilita la generazione di eventi su punti di connessione.
 void EnableConnections();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per abilitare i punti di connessione, chiamare questa funzione membro nel costruttore della classe derivata.
 
@@ -211,7 +211,7 @@ Abilita la libreria dei tipi di un oggetto.
 void EnableTypeLib();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questa funzione membro nel costruttore dell'oggetto derivato da `CCmdTarget`se fornisce informazioni sul tipo.
 
@@ -223,7 +223,7 @@ Chiamare questa funzione dopo aver chiamato la funzione membro `BeginWaitCursor`
 void EndWaitCursor();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il Framework chiama anche questa funzione membro dopo aver chiamato il cursore a clessidra.
 
@@ -248,7 +248,7 @@ Puntatore a un puntatore a un'interfaccia [IEnumOLEVERB](/windows/win32/api/olei
 
 TRUE se l'oggetto supporta almeno un verbo OLE (nel qual caso \* *ppenumOleVerb* punta a un'interfaccia di enumeratore `IEnumOLEVERB`); in caso contrario, false.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro è fondamentalmente un'implementazione di [IOleObject:: EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs).
 
@@ -263,13 +263,13 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ### <a name="parameters"></a>Parametri
 
 *lpDispatch*<br/>
-Puntatore a un oggetto `IDispatch` .
+Puntatore a un oggetto `IDispatch`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Puntatore all'oggetto `CCmdTarget` associato a *LPDISPATCH*. Questa funzione restituisce NULL se l'oggetto `IDispatch` non è riconosciuto come oggetto `IDispatch` di Microsoft Foundation Class.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il risultato di questa funzione è l'inverso di una chiamata alla funzione membro `GetIDispatch`.
 
@@ -290,7 +290,7 @@ Puntatore a un ID di interfaccia (un [GUID](/previous-versions/cc317743(v%3dmsdn
 
 TRUE se ha esito positivo, in caso contrario FALSE. In caso di esito positivo, \* *pIID* viene impostato sull'ID dell'interfaccia di invio primario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le classi derivate devono eseguire l'override di questa funzione membro (se non sottoposta a override, `GetDispatchIID` restituisce FALSE). Vedere [COleControl](../../mfc/reference/colecontrol-class.md).
 
@@ -311,7 +311,7 @@ Specifica se incrementare il conteggio dei riferimenti per l'oggetto.
 
 Puntatore `IDispatch` associato all'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per gli oggetti che chiamano `EnableAutomation` nei rispettivi costruttori, rendendoli abilitati per l'automazione, questa funzione restituisce un puntatore all'implementazione della classe Foundation di `IDispatch` usata dai client che comunicano tramite l'interfaccia `IDispatch`. Se si chiama questa funzione, viene aggiunto automaticamente un riferimento al puntatore, pertanto non è necessario effettuare una chiamata a [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref).
 
@@ -327,7 +327,7 @@ virtual UINT GetTypeInfoCount();
 
 Numero di interfacce di informazioni sul tipo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro fondamentalmente implementa [IDispatch:: GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).
 
@@ -381,7 +381,7 @@ Puntatore a un puntatore all'interfaccia `ITypeLib`.
 
 Valore HRESULT che indica l'esito positivo o negativo della chiamata. In caso di esito positivo, \* *ppTypeLib* punta all'interfaccia della libreria dei tipi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le classi derivate devono eseguire l'override di questa funzione membro (se non sottoposta a override, `GetTypeLib` restituisce TYPE_E_CANTLOADLIBRARY). Usare la macro [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , che implementa anche `GetTypeInfoCount` e `GetTypeLibCache`.
 
@@ -395,9 +395,9 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a un oggetto `CTypeLibCache` .
+Puntatore a un oggetto `CTypeLibCache`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Le classi derivate devono eseguire l'override di questa funzione membro (se non sottoposta a override, `GetTypeLibCache` restituisce NULL). Usare la macro [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , che implementa anche `GetTypeInfoCount` e `GetTypeLib`.
 
@@ -418,7 +418,7 @@ ID dispatch.
 
 TRUE se il metodo può essere richiamato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se `IsInvokeAllowed` restituisce TRUE, `Invoke` continua a chiamare il metodo; in caso contrario, `Invoke` avrà esito negativo, restituendo E_UNEXPECTED.
 
@@ -436,7 +436,7 @@ BOOL IsResultExpected();
 
 Diverso da zero se una funzione di automazione deve restituire un valore; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'interfaccia OLE fornisce informazioni a MFC sul fatto che il client utilizzi o ignori il risultato di una chiamata di funzione e MFC a sua volta utilizza tali informazioni per determinare il risultato di una chiamata a `IsResultExpected`. Se la produzione di un valore restituito è a elevato utilizzo di risorse o di tempo, è possibile aumentare l'efficienza chiamando questa funzione prima di calcolare il valore restituito.
 
@@ -474,7 +474,7 @@ Se non è NULL, `OnCmdMsg` compila i membri *PTarget* e *PMF* della struttura *p
 
 Diverso da zero se il messaggio è gestito; in caso contrario, 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa è la routine di implementazione principale dell'architettura dei comandi del Framework.
 
@@ -506,7 +506,7 @@ Chiamato dal framework quando viene rilasciato l'ultimo riferimento OLE a o dall
 virtual void OnFinalRelease();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questa funzione per fornire una gestione speciale per questa situazione. L'implementazione predefinita consente di eliminare l'oggetto.
 

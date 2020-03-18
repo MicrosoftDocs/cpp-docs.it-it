@@ -13,11 +13,11 @@ helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
 ms.openlocfilehash: 757309a10da3e6d1c9c053430cce2cf603380b1f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855917"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422283"
 ---
 # <a name="tile_barrier-class"></a>Classe tile_barrier
 
@@ -33,13 +33,13 @@ class tile_barrier;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Costruttore tile_barrier](#ctor)|Inizializza una nuova istanza della classe `tile_barrier`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[attendere](#wait)|Indica a tutti i thread del gruppo di thread (riquadro) di arrestare l'esecuzione fino a quando tutti i thread nel riquadro non hanno terminato l'attesa.|
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione finché tutti gli accessi alla memoria non sono stati completati e tutti i thread nella sezione non hanno raggiunto questa chiamata.|

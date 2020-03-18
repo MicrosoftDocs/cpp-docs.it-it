@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
 ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865451"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421009"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -73,13 +73,13 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPropertySheet:: CPropertySheet](#cpropertysheet)|Costruisce un oggetto `CPropertySheet`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPropertySheet:: AddPage](#addpage)|Aggiunge una pagina alla finestra delle proprietà.|
 |[CPropertySheet:: Construct](#construct)|Costruisce un oggetto `CPropertySheet`.|
@@ -105,7 +105,7 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPropertySheet:: m_psh](#m_psh)|Struttura [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) di Windows. Fornisce l'accesso ai parametri della finestra delle proprietà di base.|
 

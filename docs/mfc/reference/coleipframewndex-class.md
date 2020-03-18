@@ -95,11 +95,11 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
 ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883928"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421555"
 ---
 # <a name="coleipframewndex-class"></a>Classe COleIPFrameWndEx
 
@@ -116,7 +116,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleIPFrameWndEx:: AddDockSite](#adddocksite)||
 |[COleIPFrameWndEx:: AddPane](#addpane)||
@@ -164,7 +164,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleIPFrameWndEx:: InitUserToobars](#initusertoobars)|Indica al framework di inizializzare un intervallo di ID dei controlli assegnati alle barre degli strumenti definite dall'utente.|
 
@@ -198,7 +198,7 @@ L'esempio seguente illustra come creare una sottoclasse per un'istanza della cla
 void AddDockSite();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="addpane"></a>COleIPFrameWndEx:: AddPane
 
@@ -215,7 +215,7 @@ in *bTail*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="adjustdockinglayout"></a>COleIPFrameWndEx:: AdjustDockingLayout
 
@@ -227,7 +227,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 in *hdwp*<br/>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="dockpane"></a>COleIPFrameWndEx::D ockPane
 
@@ -244,7 +244,7 @@ in *pBar*<br/>
 in *nDockBarID*<br/>
 in *lpRect*<br/>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="dockpaneleftof"></a>COleIPFrameWndEx::D ockPaneLeftOf
 
@@ -268,7 +268,7 @@ in Puntatore al riquadro che funge da origine.
 
 Restituisce TRUE se l'operazione ha esito positivo. In caso contrario restituisce FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questo metodo per ancorare più oggetti riquadro in un ordine predefinito. Questo metodo ancora il riquadro specificato da *pBar* a sinistra del riquadro specificato da *pLeftOf*.
 
@@ -284,7 +284,7 @@ in *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="enabledocking"></a>COleIPFrameWndEx:: EnableDocking
 
@@ -298,7 +298,7 @@ in *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="enablepanemenu"></a>COleIPFrameWndEx:: EnablePaneMenu
 
@@ -321,7 +321,7 @@ in *uiViewToolbarsMenuEntryID*<br/>
 in *bContextMenuShowsToolbarsOnly*<br/>
 in *bViewMenuShowsToolbarsOnly*<br/>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="getactivepopup"></a>COleIPFrameWndEx:: GetActivePopup
 
@@ -335,7 +335,7 @@ CMFCPopupMenu* GetActivePopup() const;
 
 Puntatore al menu di scelta rapida attivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare questo metodo per ottenere un puntatore all'oggetto della [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) attualmente visualizzato.
 
@@ -347,7 +347,7 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="getdefaultresid"></a>COleIPFrameWndEx:: GetDefaultResId
 
@@ -361,7 +361,7 @@ UINT GetDefaultResId() const;
 
 Restituisce l'ID risorsa del menu oppure 0 se la finestra cornice non dispone di una barra dei menu.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questa funzione per recuperare l'ID di risorsa specificato quando la finestra cornice ha caricato la risorsa di menu chiamando `COleIPFrameWndEx::LoadFrame`.
 
@@ -373,7 +373,7 @@ CFrameWnd* GetDockFrame();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="getdockingmanager"></a>COleIPFrameWndEx:: GetDockingManager
 
@@ -383,7 +383,7 @@ CDockingManager* GetDockingManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="getmainframe"></a>COleIPFrameWndEx:: getmainframe
 
@@ -393,7 +393,7 @@ CFrameWnd* GetMainFrame();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="getmenubar"></a>COleIPFrameWndEx:: getbarra dei menu
 
@@ -407,7 +407,7 @@ const CMFCMenuBar* GetMenuBar() const;
 
 Puntatore all'oggetto della barra dei menu.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Usare questa funzione per recuperare un puntatore all'oggetto della barra dei menu che appartiene all'oggetto `COleIPFrameWndEx`.
 
@@ -423,7 +423,7 @@ in *NID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="gettearoffbars"></a>COleIPFrameWndEx:: GetTearOffBars
 
@@ -437,7 +437,7 @@ const CObList& GetTearOffBars() const;
 
 Riferimento a un oggetto `CObList` contenente una raccolta di puntatori agli oggetti derivati dalla [classe CBasePane](../../mfc/reference/cbasepane-class.md).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto `COleIPFrameWndEx` gestisce la raccolta dei menu tear-off come elenco di oggetti derivati dalla [classe CBasePane](../../mfc/reference/cbasepane-class.md). Utilizzare questo metodo per recuperare un riferimento a questo elenco.
 
@@ -463,7 +463,7 @@ in Puntatore al testo della descrizione comando.
 
 L'implementazione predefinita restituisce 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questa funzione per personalizzare la visualizzazione delle descrizioni comandi sui pulsanti della barra degli strumenti.
 
@@ -489,7 +489,7 @@ in ID del controllo assegnato alla prima barra degli strumenti definita dall'ute
 *uiUserToolbarLast*<br/>
 in ID del controllo assegnato all'ultima barra degli strumenti definita dall'utente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare questa funzione per inizializzare un intervallo di ID di controllo per l'assegnazione alle barre degli strumenti definite dagli utenti in modo dinamico. I parametri *uiUserToolbarFirst* e *uiUserToolbarLast* definiscono un intervallo di ID di controllo della barra degli strumenti consentiti. Per disabilitare la creazione di barre degli strumenti definite dall'utente, impostare *uiUserToolbarFirst* o *uiUserToolbarLast* su-1.
 
@@ -510,7 +510,7 @@ in *bDopo*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="ismenubaravailable"></a>COleIPFrameWndEx:: IsMenuBarAvailable
 
@@ -524,7 +524,7 @@ BOOL IsMenuBarAvailable() const;
 
 Restituisce un valore diverso da zero se la finestra cornice presenta una barra dei menu. in caso contrario, restituisce 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare questo metodo per determinare se la finestra cornice mantiene un puntatore non NULL all'oggetto della barra dei menu.
 
@@ -545,7 +545,7 @@ in *bOuterEdge*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="loadframe"></a>COleIPFrameWndEx:: LoadFrame
 
@@ -566,7 +566,7 @@ in *pContext*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onclosedockingpane"></a>COleIPFrameWndEx:: OnCloseDockingPane
 
@@ -580,7 +580,7 @@ in *CDockablePane&#42;*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="oncloseminiframe"></a>COleIPFrameWndEx:: OnCloseMiniFrame
 
@@ -594,7 +594,7 @@ in *CPaneFrameWnd&#42;*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onclosepopupmenu"></a>COleIPFrameWndEx:: OnClosePopupMenu
 
@@ -609,7 +609,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 *pMenuPopup*<br/>
 in Puntatore all'oggetto menu di scelta rapida.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo per ricevere notifiche da oggetti `CMFCPopupMenu` quando elaborano WM_DESTROY messaggi.
 
@@ -632,7 +632,7 @@ in *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="ondrawmenuimage"></a>COleIPFrameWndEx:: OnDrawMenuImage
 
@@ -660,7 +660,7 @@ in Immagine associata alla voce di menu.
 
 L'implementazione predefinita non esegue alcuna operazione e restituisce 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo se si desidera personalizzare il disegno delle immagini per le voci di menu che appartengono alla barra dei menu di proprietà dell'oggetto derivato da `COleIPFrameWndEx`.
 
@@ -686,7 +686,7 @@ in Puntatore all'oggetto menu di scelta rapida.
 *rectLogo*<br/>
 in Puntatore al logo da visualizzare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo per visualizzare un logo nel menu a comparsa associato alla barra dei menu di proprietà dell'oggetto derivato da `COleIPFrameWndEx`. L'implementazione predefinita non esegue alcuna operazione.
 
@@ -710,7 +710,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 L'implementazione predefinita non esegue alcuna operazione e restituisce 0. Se riempie il parametro *PTI* , l'implementazione deve restituire un valore diverso da zero.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo per fornire informazioni sulla descrizione comando per una voce di menu specifica.
 
@@ -726,7 +726,7 @@ in *pFrame*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onsetpreviewmode"></a>COleIPFrameWndEx:: OnSetPreviewMode
 
@@ -741,7 +741,7 @@ virtual void OnSetPreviewMode(
 in *bPreview*<br/>
 in *pState*<br/>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onshowcustomizepane"></a>COleIPFrameWndEx:: OnShowCustomizePane
 
@@ -758,7 +758,7 @@ in *uiToolbarID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onshowpanes"></a>COleIPFrameWndEx:: OnShowPanes
 
@@ -772,7 +772,7 @@ in *bShow*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="onshowpopupmenu"></a>COleIPFrameWndEx:: OnShowPopupMenu
 
@@ -791,7 +791,7 @@ in Puntatore al menu di scelta rapida da visualizzare.
 
 L'implementazione predefinita non esegue alcuna operazione e restituisce un valore diverso da zero. Se non è possibile visualizzare il menu popup, l'implementazione deve restituire FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo per personalizzare la visualizzazione di un menu di scelta rapida. Ad esempio, è possibile modificare i pulsanti di menu in pulsanti di menu colori o inizializzare barre di strappo.
 
@@ -817,7 +817,7 @@ in Puntatore al riquadro che ospita il menu.
 
 TRUE se si desidera che il Framework attivi il menu di scelta rapida; in caso contrario, FALSE. Il valore predefinito è TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questa funzione se si desidera personalizzare l'impostazione della barra di strappo.
 
@@ -847,7 +847,7 @@ in *dwAlignment*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="pretranslatemessage"></a>COleIPFrameWndEx::P reTranslateMessage
 
@@ -861,7 +861,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="recalclayout"></a>COleIPFrameWndEx:: RecalcLayout
 
@@ -873,7 +873,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 in *bNotify*<br/>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="removepanefromdockmanager"></a>COleIPFrameWndEx:: RemovePaneFromDockManager
 
@@ -894,7 +894,7 @@ in *bAdjustLayout*<br/>
 in *bAutoHide*<br/>
 in *pBarReplacement*<br/>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="setdockstate"></a>COleIPFrameWndEx:: SetDockState
 
@@ -909,7 +909,7 @@ void SetDockState(const CDockState& state);
 *state*<br/>
 in Specifica lo stato di ancoraggio.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare questa funzione per specificare un nuovo stato di ancoraggio per i riquadri che appartengono all'oggetto `COleIPFrameWndEx`.
 
@@ -935,7 +935,7 @@ in Specifica il primo comando definito dall'utente.
 *uiViewUserToolbarCmdLast*<br/>
 in Specifica l'ultimo comando definito dall'utente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="showpane"></a>COleIPFrameWndEx:: ShowPane
 
@@ -954,7 +954,7 @@ in *bShow*<br/>
 in *bDelay*<br/>
 in *bActivate*<br/>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ##  <a name="winhelpa"></a>COleIPFrameWndEx:: WinHelpA
 
@@ -973,7 +973,7 @@ virtual void WinHelp(
 *nCmd*<br/>
 in Specifica il tipo di guida richiesto. Per un elenco dei valori possibili e il modo in cui influiscono sul parametro *dwData* , vedere la [funzione WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) nell'Windows SDK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 

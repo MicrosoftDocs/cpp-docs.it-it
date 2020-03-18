@@ -10,11 +10,11 @@ helpviewer_keywords:
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
 ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874024"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421443"
 ---
 # <a name="cruntimeclass-structure"></a>Struttura CRuntimeClass
 
@@ -30,7 +30,7 @@ struct CRuntimeClass
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CRuntimeClass:: CreateObject](#createobject)|Crea un oggetto in fase di esecuzione.|
 |[CRuntimeClass:: FromName](#fromname)|Crea un oggetto in fase di esecuzione usando il nome della classe familiare.|
@@ -38,7 +38,7 @@ struct CRuntimeClass
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CRuntimeClass:: m_lpszClassName](#m_lpszclassname)|Nome della classe.|
 |[CRuntimeClass:: m_nObjectSize](#m_nobjectsize)|Dimensione dell'oggetto in byte.|

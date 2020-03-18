@@ -6,11 +6,11 @@ helpviewer_keywords:
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
 ms.openlocfilehash: 310e4ffb3fc207d874e97ba1fac65f6f8cb41a31
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865808"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421303"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Globals e helper di analisi URL Internet
 
@@ -94,7 +94,7 @@ Determinato dalle parti del server o dell'oggetto dell'URL, se esistente.
 
 Diverso da zero se l'URL è stato analizzato correttamente. in caso contrario, 0 se è vuoto o non contiene un tipo di servizio Internet noto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Analizza una stringa URL e restituisce il tipo di servizio e i relativi componenti.
 
@@ -187,7 +187,7 @@ Riferimento a un oggetto `CString` contenente la password dell'utente.
 *dwFlags*<br/>
 Flag che controllano come analizzare l'URL. Può essere una combinazione dei valori seguenti:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |ICU_DECODE|Converte le sequenze di escape% XX in caratteri.|
 |ICU_NO_ENCODE|Non convertire i caratteri non sicuri nella sequenza di escape.|
@@ -201,7 +201,7 @@ Se si usa l'impostazione predefinita MFC, che non è un flag, la funzione conver
 
 Diverso da zero se l'URL è stato analizzato correttamente. in caso contrario, 0 se è vuoto o non contiene un tipo di servizio Internet noto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Analizza una stringa URL e restituisce il tipo di servizio e i relativi componenti, oltre a fornire il nome e la password dell'utente. I flag indicano come vengono gestiti i caratteri non sicuri.
 
@@ -231,7 +231,7 @@ Handle per una query Internet.
 
 Qualsiasi tipo di servizio Internet definito da WININET. H. Per un elenco di questi servizi Internet, vedere la sezione Osservazioni. Se l'handle è NULL o non riconosciuto, la funzione restituisce AFX_INET_SERVICE_UNK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Nell'elenco seguente sono inclusi i tipi Internet possibili restituiti da `AfxGetInternetHandleType`.
 
@@ -286,7 +286,7 @@ Identificatore di contesto per l'operazione che ha causato l'errore. Il valore p
 *dwError*<br/>
 Errore che ha causato l'eccezione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'utente è responsabile di determinare la causa in base al codice di errore del sistema operativo.
 

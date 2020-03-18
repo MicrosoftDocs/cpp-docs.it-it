@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855586"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421002"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -213,13 +213,13 @@ class CWinApp : public CWinThread
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinApp:: CWinApp](#cwinapp)|Costruisce un oggetto `CWinApp`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinApp:: AddDocTemplate](#adddoctemplate)|Aggiunge un modello di documento all'elenco di modelli di documenti disponibili nell'applicazione.|
 |[CWinApp:: AddToRecentFileList](#addtorecentfilelist)|Aggiunge un nome file all'elenco dei file usati di recente (MRU).|
@@ -287,7 +287,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinApp:: EnableShellOpen](#enableshellopen)|Consente all'utente di aprire i file di dati da Gestione file di Windows.|
 |[CWinApp:: LoadStdProfileSettings](#loadstdprofilesettings)|Carica standard. Le impostazioni del file INI e abilitano la funzionalità elenco di file MRU.|
@@ -306,7 +306,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinApp:: m_bHelpMode](#m_bhelpmode)|Indica se l'utente è in modalità di contesto della guida (in genere richiamato con MAIUSC + F1).|
 |[CWinApp:: m_eHelpType](#m_ehelptype)|Specifica il tipo di guida utilizzato dall'applicazione.|
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinApp:: m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Flag che determinano il comportamento della gestione riavvio.|
 |[CWinApp:: m_nAutosaveInterval](#m_nautosaveinterval)|Intervallo di tempo in millisecondi tra i salvataggio automatico.|
@@ -1437,7 +1437,7 @@ Il nome dell'applicazione può provenire dal parametro passato al costruttore [C
 Restituito dalla funzione globale [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName` è una variabile pubblica di tipo **const char** <strong>\*</strong>.
 
 > [!NOTE]
-> Se si assegna un valore a `m_pszAppName`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio,
+> Se si assegna un valore a `m_pszAppName`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio:
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1458,7 +1458,7 @@ LPCTSTR m_pszExeName;
 Diversamente da [m_pszAppName](#m_pszappname), questo nome non può contenere spazi vuoti. `m_pszExeName` è una variabile pubblica di tipo **const char** <strong>\*</strong>.
 
 > [!NOTE]
-> Se si assegna un valore a `m_pszExeName`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio,
+> Se si assegna un valore a `m_pszExeName`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio:
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1475,7 +1475,7 @@ LPCTSTR m_pszHelpFilePath;
 Per impostazione predefinita, il Framework inizializza `m_pszHelpFilePath` al nome dell'applicazione con ". HLP "accodato. Per modificare il nome del file della guida, impostare `m_pszHelpFilePath` in modo che punti a una stringa che contiene il nome completo del file della Guida desiderato. Una posizione comoda per eseguire questa operazione è la funzione [InitInstance](#initinstance) dell'applicazione. `m_pszHelpFilePath` è una variabile pubblica di tipo **const char** <strong>\*</strong>.
 
 > [!NOTE]
-> Se si assegna un valore a `m_pszHelpFilePath`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio,
+> Se si assegna un valore a `m_pszHelpFilePath`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio:
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
@@ -1492,7 +1492,7 @@ LPCTSTR m_pszProfileName;
 `m_pszProfileName` è una variabile pubblica di tipo **const char** <strong>\*</strong>.
 
 > [!NOTE]
-> Se si assegna un valore a `m_pszProfileName`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio,
+> Se si assegna un valore a `m_pszProfileName`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio:
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 
@@ -1510,7 +1510,7 @@ In genere, questo membro dati viene considerato di sola lettura.
 
 - Il valore viene archiviato in una chiave del registro di sistema. Il nome dell'impostazione del profilo dell'applicazione viene aggiunto alla chiave del registro di sistema seguente: HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/.
 
-Se si assegna un valore a `m_pszRegistryKey`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio,
+Se si assegna un valore a `m_pszRegistryKey`, deve essere allocato in modo dinamico nell'heap. Il distruttore `CWinApp` chiama **Free**() con questo puntatore. Si desidera utilizzare la funzione della libreria di runtime `_tcsdup`() per eseguire l'allocazione. Inoltre, liberare la memoria associata al puntatore corrente prima di assegnare un nuovo valore. Ad esempio:
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 

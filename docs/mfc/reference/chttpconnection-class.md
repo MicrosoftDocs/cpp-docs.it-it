@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 ms.openlocfilehash: 1941af1e16a897235dd90db509d6ed29c2d9a875
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890784"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420400"
 ---
 # <a name="chttpconnection-class"></a>Classe CHttpConnection
 
@@ -31,17 +31,17 @@ class CHttpConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CHttpConnection:: CHttpConnection](#chttpconnection)|Crea un oggetto `CHttpConnection`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CHttpConnection:: OpenRequest](#openrequest)|Apre una richiesta HTTP.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 HTTP è uno dei tre protocolli server Internet implementato dalle classi WinInet di MFC.
 
@@ -125,7 +125,7 @@ Puntatore a una stringa con terminazione null che specifica la password da usare
 *dwFlags*<br/>
 Qualsiasi combinazione dei flag di `INTERNET_FLAG_*`. Per una descrizione dei valori *dwFlags* , vedere la tabella nella sezione **osservazioni** di [CHttpConnection:: OpenRequest](#openrequest) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Non è mai possibile creare direttamente un `CHttpConnection`. Si crea invece un oggetto chiamando [CInternetSession:: GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).
 
@@ -177,7 +177,7 @@ Puntatore a una stringa che definisce la versione di HTTP. Se è NULL, viene usa
 Qualsiasi combinazione dei flag INTERNET_ FLAG_*. Per una descrizione dei possibili valori di *dwFlags* , vedere la sezione Osservazioni.
 
 *nVerb*<br/>
-Numero associato al tipo di richiesta HTTP. Può essere uno dei collegamenti seguenti:
+Numero associato al tipo di richiesta HTTP. Può essere uno dei valori seguenti:
 
 |Tipo di richiesta HTTP|valore *nVerb*|
 |-----------------------|-------------------|
@@ -193,7 +193,7 @@ Numero associato al tipo di richiesta HTTP. Può essere uno dei collegamenti seg
 
 Puntatore all'oggetto [CHttpFile](../../mfc/reference/chttpfile-class.md) richiesto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 *dwFlags* può essere uno dei seguenti:
 
