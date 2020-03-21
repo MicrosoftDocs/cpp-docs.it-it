@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: parametrizzazione di un recordset (ODBC)'
+title: 'Recordset: applicazione di parametri a un recordset (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - parameterizing recordsets
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: 499741693009fb27df58f0ed3cde046d5e6b8c2d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eaf95312b73b5165d64de7f9ded95db29d8909d0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707800"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075809"
 ---
-# <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: parametrizzazione di un recordset (ODBC)
+# <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: applicazione di parametri a un recordset (ODBC)
 
 Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
@@ -30,7 +30,7 @@ In questo argomento:
 
 - [Come passare le informazioni sui parametri a un oggetto recordset in fase di esecuzione](#_core_passing_parameter_values_at_run_time).
 
-##  <a name="_core_parameterized_recordsets"></a> Recordset con parametri
+##  <a name="parameterized-recordsets"></a><a name="_core_parameterized_recordsets"></a> Recordset con parametri
 
 Un recordset con parametri consente di passare le informazioni sui parametri in fase di esecuzione. Questo ha due effetti importanti:
 
@@ -40,13 +40,13 @@ Un recordset con parametri consente di passare le informazioni sui parametri in 
 
 Quando si chiama `Open` per eseguire la query, il recordset usa le informazioni sui parametri per completare l'istruzione **SQL SELECT**. È possibile impostare parametri per qualsiasi recordset.
 
-##  <a name="_core_when_to_use_parameters"></a> Quando usare i parametri
+##  <a name="when-to-use-parameters"></a><a name="_core_when_to_use_parameters"></a> Quando usare i parametri
 
 Gli usi tipici per i parametri includono:
 
 - Passaggio di argomenti in fase di esecuzione a una query predefinita.
 
-   Per passare parametri a una stored procedure, è necessario specificare un'istruzione ODBC **CALL** personalizzata completa (con segnaposto per i parametri) quando si chiama `Open`, eseguendo l'override dell'istruzione SQL predefinita del recordset. Per altre informazioni, vedere [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) nelle *informazioni di riferimento sulla libreria di classi*, [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) e [Recordset: dichiarazione di una classe per una query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+   Per passare parametri a una stored procedure, è necessario specificare un'istruzione ODBC **CALL** personalizzata completa (con segnaposto per i parametri) quando si chiama `Open`, eseguendo l'override dell'istruzione SQL predefinita del recordset. Per ulteriori informazioni, vedere [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) in *riferimenti alla libreria di classi* e [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) e [Recordset: dichiarazione di una classe per una query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 - Esecuzione efficiente di numerose ripetizioni di query con informazioni diverse sui parametri.
 
@@ -75,25 +75,25 @@ Gli usi tipici per i parametri includono:
                                        // for some drivers
     ```
 
-   Per informazioni su come usare in modo corretto le virgolette per le stringhe di filtro, vedere [Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+   Per informazioni su come usare le virgolette correttamente per le stringhe di filtro, vedere [Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
    Il valore del parametro è diverso ogni volta che viene ripetuta la query sul recordset per un nuovo ID studente.
 
    > [!TIP]
    > L'uso di un parametro è più efficiente di un semplice filtro. Per un recordset con parametri, il database deve elaborare un'istruzione SQL **SELECT** una sola volta. Per un recordset filtrato senza parametri, l'istruzione **SELECT** deve essere elaborata ogni volta che si esegue `Requery` con un nuovo valore di filtro.
 
-Per altre informazioni sui filtri, vedere [Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+Per ulteriori informazioni sui filtri, vedere [Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
-##  <a name="_core_parameterizing_your_recordset_class"></a> Impostazione dei parametri della classe recordset
+##  <a name="parameterizing-your-recordset-class"></a><a name="_core_parameterizing_your_recordset_class"></a> Impostazione dei parametri della classe recordset
 
 > [!NOTE]
-> Questa sezione si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se si usa il recupero di massa di righe, l'implementazione dei parametri è un processo simile. Per altre informazioni, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Questa sezione si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se si usa il recupero di massa di righe, l'implementazione dei parametri è un processo simile. Per ulteriori informazioni, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Prima di creare la classe recordset, determinare i parametri necessari, i relativi tipi di dati e come devono essere usati dal recordset.
 
 #### <a name="to-parameterize-a-recordset-class"></a>Per impostare i parametri della classe recordset
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata consumer ODBC MFC non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile creare questa funzionalità manualmente.
 
 1. Eseguire la [Creazione guidata consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) da **Aggiungi classe** per creare la classe.
@@ -117,7 +117,7 @@ Prima di creare la classe recordset, determinare i parametri necessari, i relati
 
    Aggiungere i membri dati di parametro dopo i membri dati di campo generati dalla procedura guidata. La convenzione consiste nell'aggiungere la parola "Param" a ogni nome di parametro definito dall'utente.
 
-1. Modificare la definizione della funzione membro [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nel file con estensione cpp. Aggiungere una chiamata di funzione RFX per ogni membro dati di parametro che è stato aggiunto alla classe. Per informazioni sulla scrittura di funzioni RFX, vedere [Trasferimento di campi di record: funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Anteporre alle chiamate RFX per i parametri una singola chiamata a:
+1. Modificare la definizione della funzione membro [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nel file con estensione cpp. Aggiungere una chiamata di funzione RFX per ogni membro dati di parametro che è stato aggiunto alla classe. Per informazioni sulla scrittura delle funzioni RFX, vedere [trasferimento di campi di record:](../../data/odbc/record-field-exchange-how-rfx-works.md)funzionamento di RFX. Anteporre alle chiamate RFX per i parametri una singola chiamata a:
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -126,7 +126,7 @@ Prima di creare la classe recordset, determinare i parametri necessari, i relati
 
 1. Nel costruttore della classe recordset incrementare il conteggio dei parametri, `m_nParams`.
 
-   Per informazioni, vedere [Trasferimento di campi di record: uso con il codice di procedure guidate](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
+   Per informazioni, vedere [scambio di campi di record: utilizzo del codice della procedura guidata](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
 
 1. Quando si scrive il codice che crea un oggetto recordset di questa classe, inserire "?" (punto interrogativo) in ogni posizione nelle stringhe delle istruzioni SQL in cui deve essere sostituito un parametro.
 
@@ -138,7 +138,7 @@ Prima di creare la classe recordset, determinare i parametri necessari, i relati
 > [!TIP]
 > La stringa usata più di frequente è quella (eventualmente) specificata per il membro dati [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) della classe, ma alcuni driver ODBC potrebbero consentire parametri in altre clausole SQL.
 
-##  <a name="_core_passing_parameter_values_at_run_time"></a> Passaggio dei valori dei parametri in fase di esecuzione
+##  <a name="passing-parameter-values-at-run-time"></a><a name="_core_passing_parameter_values_at_run_time"></a> Passaggio dei valori dei parametri in fase di esecuzione
 
 È necessario specificare i valori dei parametri prima di chiamare `Open` (per un nuovo oggetto recordset) o `Requery` (per uno esistente).
 

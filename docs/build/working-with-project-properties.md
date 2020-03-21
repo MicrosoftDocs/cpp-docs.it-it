@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 57414bd56c72b951d3f1948e658243e9036f0179
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6c05dd00324113819dd145e46bf10dfeb96a66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498131"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078242"
 ---
 # <a name="set-compiler-and-build-properties"></a>Impostare le proprietà del compilatore e della compilazione
 
-Nell'IDE tutte le informazioni necessarie per compilare un progetto vengono esposte come *proprietà*. Queste informazioni includono nome dell'applicazione, estensione (ad esempio DLL, LIB, EXE), opzioni del compilatore, opzioni del linker, impostazioni del debugger, istruzioni di compilazione personalizzate e molti altri elementi. In genere, è possibile utilizzare le *pagine delle proprietà* per visualizzare e modificare queste proprietà. Per accedere alle pagine delle proprietà, scegliere **Project** >  **_NomeProgetto_ Properties** dal menu principale oppure fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**.
+Nell'IDE tutte le informazioni necessarie per compilare un progetto vengono esposte come *proprietà*. Queste informazioni includono nome dell'applicazione, estensione (ad esempio DLL, LIB, EXE), opzioni del compilatore, opzioni del linker, impostazioni del debugger, istruzioni di compilazione personalizzate e molti altri elementi. In genere, è possibile utilizzare le *pagine delle proprietà* per visualizzare e modificare queste proprietà. Per accedere alle pagine delle proprietà, scegliere **progetto** > **proprietà _NomeProgetto_**  dal menu principale oppure fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**.
 
 ## <a name="default-properties"></a>Proprietà predefinite
 
 Quando si crea un progetto, il sistema assegna i valori per varie proprietà. Le impostazioni predefinite variano leggermente a seconda del tipo di progetto e delle opzioni selezionate nella procedura guidata app. Ad esempio, un progetto ATL ha proprietà relative a file MIDL, ma questi sono assenti in un'applicazione console di base. Le proprietà predefinite vengono visualizzate nel riquadro Generale nelle Pagine delle proprietà:
 
-![Impostazioni&#43; &#43; ](media/visual-c---project-defaults.png "predefinite progetto Visual C predefiniti C++ ")
+![Impostazioni predefinite&#43; &#43; del progetto Visual C](media/visual-c---project-defaults.png "Impostazioni C++ predefinite di Visual Project")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Applicazione delle proprietà per la compilazione di configurazioni e piattaforme di destinazione
 
@@ -31,11 +31,11 @@ Alcune proprietà, ad esempio il nome dell'applicazione, si applicano a tutte le
 
 Le pagine delle proprietà sono progettate in modo che sia sempre possibile visualizzare, e se necessario modificare, la piattaforma e la configurazione a cui applicare un valore della proprietà. Nella figura seguente vengono illustrate le pagine delle proprietà con le informazioni di configurazione e della piattaforma nelle caselle di riepilogo nella parte superiore. Quando la proprietà **Ottimizzazione** viene impostata in questo punto, verrà applicata solo per le build di debug Win32, ovvero la configurazione attiva, come indicato dalle frecce rosse.
 
-![Visual C&#43;&#43; Pagine delle proprietà con configurazione attiva](media/visual-c---property-pages-showing-active-configuration.png "Pagine delle proprietà di Visual C++ con configurazione attiva")
+![Pagine delle&#43; &#43; proprietà di Visual C che mostrano la configurazione attiva](media/visual-c---property-pages-showing-active-configuration.png "Pagine C++ delle proprietà visive che mostrano la configurazione attiva")
 
 Nella figura seguente viene illustrata la pagina delle proprietà dello stesso progetto, ma la configurazione è stata modificata su Versione. Si noti il valore diverso della proprietà Ottimizzazione. Si noti anche che la configurazione attiva è ancora Debug. È possibile impostare proprietà per qualsiasi configurazione, non necessariamente per quella attiva.
 
-![Visual C&#43;&#43; Pagine delle proprietà che visualizzano la configurazione per la versione](media/visual-c---property-pages-showing-release-config.png "Pagine delle proprietà di Visual C++ che visualizzano la configurazione per la versione")
+![Pagine delle&#43; &#43; proprietà di Visual C che mostrano la configurazione della versione](media/visual-c---property-pages-showing-release-config.png "Pagine C++ delle proprietà visive che mostrano la configurazione della versione")
 
 ## <a name="target-platforms"></a>Piattaforme di destinazione
 
@@ -47,20 +47,20 @@ Per ulteriori informazioni sull'impostazione delle proprietà per una compilazio
 
 - [Impostazioni di progetto per una configurazione di debug C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [Impostazioni di debug e preparazione](/visualstudio/debugger/debugger-settings-and-preparation)
-- [Preparazione al debug: Tipi C++ di progetto Visual](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+- [Preparazione al debug: tipi di progetto Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [Specificare file di simboli (PDB) e di origine nel debugger di Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
 ## <a name="c-compiler-and-linker-options"></a>C++opzioni del compilatore e del linker
 
-C++le opzioni del compilatore e del linker si trovano sotto i nodi **C/C++**  e **linker** nel riquadro sinistro in proprietà di **configurazione**. Questi vengono convertiti direttamente in opzioni della riga di comando che verranno passate al compilatore. Per leggere la documentazione relativa a un'opzione specifica, selezionare l'opzione nel riquadro centrale e premere **F1**. In alternativa, è possibile esplorare la documentazione per tutte le opzioni disponibili in [Opzioni del compilatore MSVC](reference/compiler-options.md) e [Opzioni del linker MSVC](reference/linker-options.md). 
+C++le opzioni del compilatore e del linker si trovano sotto i nodi **C/C++**  e **linker** nel riquadro sinistro in **proprietà di configurazione**. Questi vengono convertiti direttamente in opzioni della riga di comando che verranno passate al compilatore. Per leggere la documentazione relativa a un'opzione specifica, selezionare l'opzione nel riquadro centrale e premere **F1**. In alternativa, è possibile esplorare la documentazione per tutte le opzioni disponibili in [Opzioni del compilatore MSVC](reference/compiler-options.md) e [Opzioni del linker MSVC](reference/linker-options.md).
 
-La finestra di dialogo **pagine delle proprietà** Mostra solo le pagine delle proprietà rilevanti per il progetto corrente. Ad esempio, se il progetto non dispone di un file con estensione idl, la pagina delle proprietà MIDL non viene visualizzata. Per ulteriori informazioni sull'impostazione in ogni pagina delle proprietà, vedere [pagine delle proprietàC++()](reference/property-pages-visual-cpp.md). 
+La finestra di dialogo **pagine delle proprietà** Mostra solo le pagine delle proprietà rilevanti per il progetto corrente. Ad esempio, se il progetto non dispone di un file con estensione idl, la pagina delle proprietà MIDL non viene visualizzata. Per ulteriori informazioni sull'impostazione in ogni pagina delle proprietà, vedere [pagine delle proprietàC++()](reference/property-pages-visual-cpp.md).
 
 ## <a name="directory-and-path-values"></a>Valori di directory e percorso
 
-MSBuild supporta l'utilizzo di costanti in fase di compilazione denominate "macro" per determinati valori di stringa che includono directory e percorsi. Queste sono esposte nelle pagine delle proprietà, in cui è possibile fare riferimento e modificarle tramite l' [Editor delle proprietà](#property_editor). 
+MSBuild supporta l'utilizzo di costanti in fase di compilazione denominate "macro" per determinati valori di stringa che includono directory e percorsi. Queste sono esposte nelle pagine delle proprietà, in cui è possibile fare riferimento e modificarle tramite l' [Editor delle proprietà](#property_editor).
 
-La figura seguente mostra le pagine delle proprietà per un progetto C++ di Visual Studio. Nel riquadro sinistro è selezionata la **regola** *Directory di VC++* e nel riquadro destro vengono visualizzate le proprietà associate alla regola in questione. I `$(...)` valori sono denominati *macro*. Una *macro* è una costante in fase di compilazione che può fare riferimento a un valore definito da Visual Studio o dal sistema MSBuild o a un valore definito dall'utente. Usando le macro anziché i valori hardcoded come i percorsi di directory, è possibile condividere più facilmente le impostazioni delle proprietà tra i computer e tra le versioni di Visual Studio ed è possibile assicurarsi meglio che le impostazioni del progetto partecipino correttamente nella [Proprietà ereditarietà](project-property-inheritance.md). 
+La figura seguente mostra le pagine delle proprietà per un progetto C++ di Visual Studio. Nel riquadro sinistro è selezionata la *regola* **directory di VC + +** e nel riquadro destro sono elencate le proprietà associate a tale regola. I valori `$(...)` sono denominati *macro*. Una *macro* è una costante in fase di compilazione che può fare riferimento a un valore definito da Visual Studio o dal sistema MSBuild o a un valore definito dall'utente. Usando le macro anziché i valori hardcoded come i percorsi di directory, è possibile condividere più facilmente le impostazioni delle proprietà tra i computer e tra le versioni di Visual Studio ed è possibile assicurarsi meglio che le impostazioni del progetto partecipino correttamente nell' [ereditarietà della proprietà](project-property-inheritance.md).
 
 ![Pagine delle proprietà del progetto](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
@@ -82,17 +82,17 @@ Una macro definita dall'utente viene archiviata in una finestra delle proprietà
 
 #### <a name="to-create-a-user-defined-macro"></a>Per creare una macro definita dall'utente
 
-1. Aprire la finestra **Gestione proprietà** . Sulla barra dei menu scegliere **Visualizza** > **Gestione proprietà** o **Visualizza** > **altre** > **Gestione proprietà**di Windows. Aprire il menu di scelta rapida per una finestra delle proprietà (il nome termina con. User), quindi scegliere **Proprietà**. Viene aperta la finestra di dialogo **Pagine delle proprietà** per la finestra delle proprietà.
+1. Aprire la finestra **Gestione proprietà** . Sulla barra dei menu scegliere **visualizza** > **Gestione proprietà** o **Visualizza** > altre **Gestione proprietà** > di **Windows** . Aprire il menu di scelta rapida per una finestra delle proprietà (il nome termina con. User), quindi scegliere **Proprietà**. Viene aperta la finestra di dialogo **Pagine delle proprietà** per la finestra delle proprietà.
 
 1. Nel riquadro sinistro della finestra selezionare **Macro utente**. Nel riquadro destro scegliere il pulsante **Aggiungi macro** per aprire la finestra di dialogo **Aggiungi macro utente**.
 
 1. Nella finestra di dialogo specificare un nome e un valore per la macro. Se possibile, selezionare la casella di controllo **Imposta questa macro come variabile di ambiente nell'ambiente di compilazione**.
 
-## <a name="property_editor">Editor proprietà</a>
+## <a name=""></a><a name="property_editor">Editor proprietà</a>
 
 È possibile usare l'Editor della proprietà per modificare alcune proprietà stringa e selezionare le macro come valori. Per accedere all'Editor proprietà, selezionare una proprietà in una pagina delle proprietà, quindi scegliere il pulsante freccia in giù a destra. Se nell'elenco a discesa è contenuto **\<Modifica>** , è possibile sceglierlo per visualizzare l'Editor proprietà per tale proprietà.
 
-![Menu a discesa&#95;Editor&#95;proprietà](media/property_editor_dropdown.png "Property_Editor_Dropdown")
+![Elenco&#95;a&#95;discesa editor proprietà](media/property_editor_dropdown.png "Property_Editor_Dropdown")
 
 In Editor proprietà è possibile scegliere il pulsante **Macro** per visualizzare le macro disponibili e i relativi valori correnti. La figura seguente illustra l'Editor proprietà per la proprietà **Directory di inclusione aggiuntive** dopo aver scelto il pulsante **Macro**. Quando la casella di controllo **Eredita da padre o da impostazioni predefinite progetto** è selezionata e si aggiunge un nuovo valore, questo viene aggiunto a tutti i valori ereditati. Se si deseleziona la casella di controllo, il nuovo valore sostituisce i valori ereditati. Nella maggior parte dei casi lasciare selezionata la casella di controllo.
 
@@ -134,7 +134,7 @@ Come creare un file con estensione Props con impostazioni di compilazione person
 Descrive l'ordine di valutazione per i file. props,. targets,. vcxproj e le variabili di ambiente nel processo di compilazione.
 
 [Modificare le proprietà e le destinazioni senza modificare il file di progetto](modify-project-properties-without-changing-project-file.md)<br/>
-Come creare impostazioni di compilazione temporanee senza dover modificare un file di progetto. 
+Come creare impostazioni di compilazione temporanee senza dover modificare un file di progetto.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 3ece04811a75fba22db447875dc6ed08c22987b5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 25fffd018c45200571f99dc87ab8ffe29bb6667f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142047"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079999"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Procedura dettagliata: Creazione di un'applicazione basata sugli agenti
 
@@ -28,7 +28,7 @@ Per completare questa procedura dettagliata, è necessario comprendere gli argom
 
 - [Strutture di dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a> Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 In questa procedura dettagliata viene illustrato come eseguire le attività seguenti:
 
@@ -38,7 +38,7 @@ In questa procedura dettagliata viene illustrato come eseguire le attività segu
 
 - [Uso della classe file_reader nell'applicazione](#useagentclass)
 
-## <a name="createapplication"></a>Creazione dell'applicazione console
+## <a name="creating-the-console-application"></a><a name="createapplication"></a>Creazione dell'applicazione console
 
 In questa sezione viene illustrato come creare C++ un'applicazione console che fa riferimento ai file di intestazione che il programma utilizzerà. I passaggi iniziali variano a seconda della versione di Visual Studio in uso. Verificare che il selettore di versione sia impostato correttamente nell'angolo superiore sinistro della pagina.
 
@@ -48,7 +48,7 @@ In questa sezione viene illustrato come creare C++ un'applicazione console che f
 
 1. Dal menu principale scegliere **File** > **nuovo** **progetto** > per aprire la finestra di dialogo **Crea un nuovo progetto** .
 
-1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**. 
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
 
 1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**. Nella pagina successiva immettere `BasicAgent` come nome del progetto e specificare il percorso del progetto, se necessario.
 
@@ -80,7 +80,7 @@ In questa sezione viene illustrato come creare C++ un'applicazione console che f
 
 [[Torna all'inizio](#top)]
 
-## <a name="createagentclass"></a>Creazione della classe file_reader
+## <a name="creating-the-file_reader-class"></a><a name="createagentclass"></a>Creazione della classe file_reader
 
 In questa sezione viene illustrato come creare la classe `file_reader`. Il runtime pianifica ogni agente per eseguire il lavoro nel proprio contesto. Pertanto, è possibile creare un agente che esegue il lavoro in modo sincrono, ma interagisce con altri componenti in modo asincrono. La classe `file_reader` legge i dati da un file di input specificato e invia i dati da tale file a un determinato componente di destinazione.
 
@@ -128,7 +128,7 @@ Nell'esempio seguente viene illustrato il contenuto completo di file_reader. h.
 
 [[Torna all'inizio](#top)]
 
-## <a name="useagentclass"></a>Uso della classe file_reader nell'applicazione
+## <a name="using-the-file_reader-class-in-the-application"></a><a name="useagentclass"></a>Uso della classe file_reader nell'applicazione
 
 In questa sezione viene illustrato come utilizzare la classe `file_reader` per leggere il contenuto di un file di testo. Viene inoltre illustrato come creare un oggetto [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) che riceve i dati del file e calcola il checksum Adler-32.
 

@@ -2,12 +2,12 @@
 title: Spostarsi all'interno del codice C++ in Visual Studio
 description: Usare vari strumenti in Visual Studio per esplorare la codebase di C++.
 ms.date: 05/28/2019
-ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 932694db70019924557259d4defe802b53ef0f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446688"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079083"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Spostarsi all'interno del codice C++ in Visual Studio
 
@@ -31,7 +31,7 @@ Fare clic con il pulsante destro del mouse su una direttiva `#include` e quindi 
 
 ## <a name="go-to"></a>Vai a
 
-**Vai a** fa riferimento a un set di funzionalità di navigazione ognuna delle quali genera un determinato tipo di risultato in base ai filtri specificati. 
+**Vai a** fa riferimento a un set di funzionalità di navigazione ognuna delle quali genera un determinato tipo di risultato in base ai filtri specificati.
 
 È possibile aprire **Vai a** con **CTRL+,** . Questa azione crea una casella di ricerca sul documento che si sta modificando.
 
@@ -82,7 +82,7 @@ Per vedere l'elenco dei filtri testo digitare ? seguito da uno spazio. È anche 
 
 ![C&#43; &#43; Find](../ide/media/find-cpp.png "Find")
 
-**Cerca nei file** è una versione più potente di **Trova** che consente di visualizzare i risultati nella finestra **Risultati ricerca**. È possibile cercare le dipendenze del codice esterne, filtrare per tipi di file e altro ancora. 
+**Cerca nei file** è una versione più potente di **Trova** che consente di visualizzare i risultati nella finestra **Risultati ricerca**. È possibile cercare le dipendenze del codice esterne, filtrare per tipi di file e altro ancora.
 
 ![C&#43; &#43; ricerca nei file](../ide/media/find-in-files-cpp.png "Cerca nei file")
 

@@ -2,12 +2,12 @@
 title: Dichiarazioni e definizioni (C++)
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7aa9e07a471ed5a32ecc8f13690f1a1bf08b655f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301548"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077211"
 ---
 # <a name="declarations-and-definitions-c"></a>Dichiarazioni e definizioni (C++)
 
@@ -40,9 +40,9 @@ namespace N {
 }
 ```
 
-Alla riga 5, la funzione `main` viene dichiarata. Alla riga 7, una variabile **const** denominata `pi` viene dichiarata e *inizializzata*. Alla riga 8, un numero intero `i` viene dichiarato e inizializzato con il valore prodotto dalla funzione `f`. Il nome `f` è visibile al compilatore a causa della *dichiarazione in avanti* nella riga 3. 
+Alla riga 5, la funzione `main` viene dichiarata. Alla riga 7, una variabile **const** denominata `pi` viene dichiarata e *inizializzata*. Alla riga 8, un numero intero `i` viene dichiarato e inizializzato con il valore prodotto dalla funzione `f`. Il nome `f` è visibile al compilatore a causa della *dichiarazione in avanti* nella riga 3.
 
-Nella riga 9 viene dichiarata una variabile denominata `obj` di tipo `C`. Tuttavia, questa dichiarazione genera un errore perché `C` non viene dichiarata fino a un momento successivo nel programma e non viene dichiarata in avanti. Per correggere l'errore, è possibile spostare l'intera *definizione* di `C` prima di `main` altrimenti aggiungere una dichiarazione di tipo "Avanti". Questo comportamento è diverso da altri linguaggi C#, ad esempio, in cui le funzioni e le classi possono essere utilizzate prima del relativo punto di dichiarazione in un file di origine. 
+Nella riga 9 viene dichiarata una variabile denominata `obj` di tipo `C`. Tuttavia, questa dichiarazione genera un errore perché `C` non viene dichiarata fino a un momento successivo nel programma e non viene dichiarata in avanti. Per correggere l'errore, è possibile spostare l'intera *definizione* di `C` prima di `main` altrimenti aggiungere una dichiarazione di tipo "Avanti". Questo comportamento è diverso da altri linguaggi C#, ad esempio, in cui le funzioni e le classi possono essere utilizzate prima del relativo punto di dichiarazione in un file di origine.
 
 Nella riga 10 viene dichiarata una variabile denominata `str` di tipo `std::string`. Il nome `std::string` è visibile perché è stato introdotto nel file di [intestazione](header-files-cpp.md) `string` che viene unito al file di origine nella riga 1. `std` è lo spazio dei nomi in cui viene dichiarata la classe `string`.
 
@@ -94,7 +94,7 @@ Poiché i membri dati della classe statica sono variabili discrete condivise da 
 
 Un C++ programma può contenere più di un' [unità di compilazione](header-files-cpp.md). Per dichiarare un'entità definita in un'unità di compilazione separata, usare la parola chiave [extern](extern-cpp.md) . Le informazioni nella dichiarazione sono sufficienti per il compilatore, ma se non è possibile trovare la definizione dell'entità nel passaggio di collegamento, il linker genererà un errore.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Classi di archiviazione](storage-classes-cpp.md)<br/>
 [const](const-cpp.md)<br/>

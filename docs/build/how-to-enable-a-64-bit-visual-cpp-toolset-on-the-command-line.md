@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 9e8a671a7fe67150e1b867c62231173429f7b6ed
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 60399994cd5fc2f39efeadc6ffcf917138aada37
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415934"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078536"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Procedura: abilitare un set di strumenti MSVC ospitato a 64 bit per x64 nella riga di comando
 
@@ -25,7 +25,7 @@ Visual Studio include compilatori, linker e altri strumenti C++ con cui creare v
 
 ## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Usare un collegamento al prompt dei comandi per sviluppatori ospitato in una piattaforma a 64 bit
 
-Per accedere a questi prompt dei comandi in Windows 10, dal menu **Start** aprire la cartella della versione di Visual Studio installata, ad esempio **Visual Studio 2019**, e quindi scegliere uno dei prompt dei comandi per sviluppatori nativi per piattaforma x64 o con compilatore incrociato. 
+Per accedere a questi prompt dei comandi in Windows 10, dal menu **Start** aprire la cartella della versione di Visual Studio installata, ad esempio **Visual Studio 2019**, e quindi scegliere uno dei prompt dei comandi per sviluppatori nativi per piattaforma x64 o con compilatore incrociato.
 
 ![Prompt dei comandi degli strumenti nativi x64](media/x64-native-tools-command-prompt.png "Strumenti nativi x64 nel menu Start")
 

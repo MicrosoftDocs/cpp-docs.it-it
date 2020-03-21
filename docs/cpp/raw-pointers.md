@@ -4,12 +4,12 @@ description: Come utilizzare i puntatori non elaborati inC++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 9ea498c254bc37dc8dc550232127cb2db3bc0886
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250660"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077139"
 ---
 # <a name="raw-pointers-c"></a>Puntatori non elaborati (C++)
 
@@ -45,7 +45,7 @@ Un puntatore (se non è dichiarato come **const**) può essere incrementato o de
     const int* pconst = &c; // declare a non-const pointer to const int
     const int c2 = 2;
     pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c; 
+    const int* const pconst2 = &c;
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
@@ -168,7 +168,7 @@ int main()
 
 È possibile eseguire determinate operazioni aritmetiche su puntatori non const per fare in modo che puntino a una nuova posizione di memoria. Un puntatore può essere incrementato e decrementato utilizzando gli operatori **++** , **+=** , **-=** e **--** . Questa tecnica può essere utilizzata nelle matrici ed è particolarmente utile nei buffer di dati non tipizzati. Un **void\*** incrementi delle dimensioni di un **carattere** (1 byte). Un puntatore tipizzato viene incrementato in base alla dimensione del tipo a cui punta.
 
-Nell'esempio seguente viene illustrato come utilizzare l'aritmetica dei puntatori per accedere ai singoli pixel in una bitmap in Windows. Si noti l'uso di **New** e **Delete**e l'operatore di dereferenziazione. 
+Nell'esempio seguente viene illustrato come utilizzare l'aritmetica dei puntatori per accedere ai singoli pixel in una bitmap in Windows. Si noti l'uso di **New** e **Delete**e l'operatore di dereferenziazione.
 
 ```cpp
 #include <Windows.h>
@@ -235,7 +235,7 @@ int main()
 
 ## <a name="void-pointers"></a>puntatori void *
 
-Un puntatore a **void** fa semplicemente riferimento a una posizione di memoria non elaborata. A volte è necessario usare i puntatori **void\*** , ad esempio quando si passa C++ tra il codice e le funzioni C. 
+Un puntatore a **void** fa semplicemente riferimento a una posizione di memoria non elaborata. A volte è necessario usare i puntatori **void\*** , ad esempio quando si passa C++ tra il codice e le funzioni C.
 
 Quando viene eseguito il cast di un puntatore tipizzato a un puntatore void, il contenuto della posizione di memoria non viene modificato, ma le informazioni sul tipo vengono perse, in modo che non sia possibile eseguire operazioni di incremento o decremento. È possibile eseguire il cast di una posizione di memoria, ad esempio da MyClass * a void * e viceversa, a MyClass *. Tali operazioni sono intrinsecamente soggette a errori e richiedono molta attenzione per evitare errori. Modern C++ sconsiglia l'utilizzo di puntatori void, a meno che non sia assolutamente necessario.
 
@@ -290,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a>Puntatori a funzioni
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Puntatori a funzioni
 
 Nella programmazione di tipo C, i puntatori a funzione vengono usati principalmente per passare funzioni ad altre funzioni. In questo scenario, il chiamante può personalizzare il comportamento di una funzione senza modificarlo. Nel moderno C++, le [espressioni lambda](lambda-expressions-in-cpp.md) forniscono la stessa funzionalità con maggiore indipendenza dai tipi e altri vantaggi.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 97224380a591f4fa3fe23d25a898c112702f5a5c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630759"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078306"
 ---
 # <a name="project-files"></a>File di progetto
 
@@ -20,19 +20,18 @@ Un C++ file di progetto in Visual Studio è un file basato su XML con estensione
 
 ::: moniker range=">=vs-2019"
 
-Il file vcxproj di esempio seguente è stato prodotto scegliendo **creazione guidata desktop di Windows** nella finestra di dialogo **nuovo progetto** . Per elaborare un file di progetto usare lo strumento msbuild.exe dalla riga di comando, o il comando **Build** nell'IDE. Questo esempio non può essere elaborato perché i file di origine e di intestazione richiesti non sono stati specificati. Per altre informazioni sugli elementi XML di un file di progetto, vedere [Riferimenti dello schema del file di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+Il file vcxproj di esempio seguente è stato prodotto scegliendo **creazione guidata desktop di Windows** nella finestra di dialogo **nuovo progetto** . Per elaborare un file di progetto usare lo strumento msbuild.exe dalla riga di comando, o il comando **Build** nell'IDE. Questo esempio non può essere elaborato perché i file di origine e di intestazione necessari non sono stati specificati. Per ulteriori informazioni sugli elementi XML in un file di progetto, vedere [riferimento allo schema del file di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-L'esempio di file con estensione vcxproj seguente è stato generato specificando **Progetto console Win32** nella finestra di dialogo **Nuovo progetto**. Per elaborare un file di progetto usare lo strumento msbuild.exe dalla riga di comando, o il comando **Build** nell'IDE. Questo esempio non può essere elaborato perché i file di origine e di intestazione richiesti non sono stati specificati. Per altre informazioni sugli elementi XML di un file di progetto, vedere [Riferimenti dello schema del file di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+L'esempio di file con estensione vcxproj seguente è stato generato specificando **Progetto console Win32** nella finestra di dialogo **Nuovo progetto**. Per elaborare un file di progetto usare lo strumento msbuild.exe dalla riga di comando, o il comando **Build** nell'IDE. Questo esempio non può essere elaborato perché i file di origine e di intestazione necessari non sono stati specificati. Per ulteriori informazioni sugli elementi XML in un file di progetto, vedere [riferimento allo schema del file di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
-
 >[!NOTE]
-> Per i progetti in Visual Studio 2017 e versioni precedenti `pch.h` , `stdafx.h` modificare `pch.cpp` in `stdafx.cpp`e in.
+> Per i progetti in Visual Studio 2017 e versioni precedenti, modificare `pch.h` in `stdafx.h` e `pch.cpp` in `stdafx.cpp`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

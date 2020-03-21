@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a3223543dfa6c1b5b45fef2780cd11b558eab84
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209230"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078960"
 ---
 # <a name="comptr-class"></a>com::ptr Class
 
-Un wrapper per un oggetto COM che può essere utilizzato come membro di una classe CLR.  Il wrapper consente anche di automatizzare la gestione della durata dell'oggetto COM, rilasciando tutti i riferimenti di proprietà nell'oggetto quando viene chiamato il distruttore. Analogo a [classe CComPtr](../atl/reference/ccomptr-class.md).
+Un wrapper per un oggetto COM che può essere utilizzato come membro di una classe CLR.  Il wrapper consente anche di automatizzare la gestione della durata dell'oggetto COM, rilasciando tutti i riferimenti di proprietà nell'oggetto quando viene chiamato il distruttore. Analogo alla [classe CComPtr](../atl/reference/ccomptr-class.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,13 +39,13 @@ ref class ptr;
 *_interface_type*<br/>
 Interfaccia COM.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È possibile utilizzare `com::ptr` come variabile di funzione locale per semplificare le varie attività COM e automatizzare la gestione della durata.
 
-Oggetto `com::ptr` non può essere utilizzato direttamente come parametro di funzione; utilizzare un [operatore di riferimento di rilevamento](../extensions/tracking-reference-operator-cpp-component-extensions.md) o una [operatore Handle a oggetto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) invece.
+Non è possibile usare direttamente un `com::ptr` come parametro di funzione. usare invece un [operatore di riferimento di rilevamento](../extensions/tracking-reference-operator-cpp-component-extensions.md) o un [handle per l'operatore di oggetto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) .
 
-Oggetto `com::ptr` non può essere restituito direttamente da una funzione; utilizzare invece un handle.
+Un `com::ptr` non può essere restituito direttamente da una funzione. usare invece un handle.
 
 ## <a name="example"></a>Esempio
 
@@ -163,44 +163,42 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione| 
-|---------|-----------| 
-|[ptr::ptr](#ptr)|Costruisce un `com::ptr` per eseguire il wrapping di un oggetto COM.| 
-|[ptr::~ptr](#tilde-ptr)|Distrugge un `com::ptr`.| 
+|Nome|Descrizione|
+|---------|-----------|
+|[ptr::ptr](#ptr)|Costruisce un `com::ptr` per eseguire il wrapping di un oggetto COM.|
+|[ptr::~ptr](#tilde-ptr)|Distrugge un `com::ptr`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
-|---------|-----------| 
-|[ptr::Attach](#attach)|Associa un oggetto COM un `com::ptr`.| 
-|[ptr::CreateInstance](#createInstance)|Crea un'istanza di un oggetto COM all'interno di un `com::ptr`.| 
-|[ptr::Detach](#detach)|Offre il proprietario dell'oggetto COM, che restituisce un puntatore all'oggetto.| 
-|[ptr::GetInterface](#getInterface)|Crea un'istanza di un oggetto COM all'interno di un `com::ptr`.| 
-|[ptr::QueryInterface](#queryInterface)|Una query all'oggetto COM di proprietà per un'interfaccia e i risultati vengono allegati a un altro `com::ptr`.| 
+|---------|-----------|
+|[ptr::Attach](#attach)|Connette un oggetto COM a un `com::ptr`.|
+|[ptr::CreateInstance](#createInstance)|Crea un'istanza di un oggetto COM all'interno di un `com::ptr`.|
+|[ptr::Detach](#detach)|Consente di ottenere la proprietà dell'oggetto COM, restituendo un puntatore all'oggetto.|
+|[ptr::GetInterface](#getInterface)|Crea un'istanza di un oggetto COM all'interno di un `com::ptr`.|
+|[ptr::QueryInterface](#queryInterface)|Esegue una query sull'oggetto COM di proprietà per un'interfaccia e connette il risultato a un altro `com::ptr`.|
 |[ptr::Release](#release)|Rilascia tutti i riferimenti di proprietà nell'oggetto COM.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
-|---------|-----------| 
-|[ptr::operator-&gt;](#operator-arrow)|Operatore di accesso ai membri, utilizzato per chiamare i metodi sull'oggetto COM di proprietà.| 
-|[ptr::operator=](#operator-assign)|Associa un oggetto COM un `com::ptr`.| 
-|[ptr::operator&nbsp;bool](#operator-bool)|Operatore per l'uso di `com::ptr` in un'espressione condizionale.| 
-|[ptr::operator!](#operator-logical-not)|Operatore per determinare se l'oggetto COM di proprietà non è valido.| 
+|---------|-----------|
+|[operatore PTR:: operator-&gt;](#operator-arrow)|Operatore di accesso ai membri, usato per chiamare i metodi sull'oggetto COM di proprietà.|
+|[ptr::operator=](#operator-assign)|Connette un oggetto COM a un `com::ptr`.|
+|[ptr:: operator&nbsp;bool](#operator-bool)|Operatore per l'utilizzo di `com::ptr` in un'espressione condizionale.|
+|[ptr::operator!](#operator-logical-not)|Per determinare se l'oggetto COM di proprietà non è valido.|
 
 ## <a name="requirements"></a>Requisiti
 
 **File di intestazione** \<msclr\com\ptr.h >
 
-**Namespace** msclr:: com
+**Spazio dei nomi** msclr:: com
 
- 
-
-## <a name="ptr"></a>ptr::ptr
+## <a name="ptrptr"></a><a name="ptr"></a>ptr::p TR
 
 Restituisce un puntatore all'oggetto COM di proprietà.
 
@@ -216,13 +214,13 @@ ptr(
 *P*<br/>
 Puntatore a interfaccia COM.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il costruttore senza argomenti assegna `nullptr` all'handle dell'oggetto sottostante. Le chiamate successive al `com::ptr` verrà convalidato l'oggetto interno e verrà automaticamente esito negativo fino a quando un oggetto viene creato o collegato.
+Il costruttore di nessun argomento assegna `nullptr` all'handle di oggetto sottostante. Le chiamate future al `com::ptr` convalideranno l'oggetto interno e avranno esito negativo automaticamente fino a quando non viene creato o collegato un oggetto.
 
-Il costruttore di un solo argomento aggiunge un riferimento all'oggetto COM, ma non rilascia il riferimento del chiamante, in modo che il chiamante deve chiamare `Release` sull'oggetto COM per realmente rinunciare al controllo. Quando il `com::ptr`del distruttore viene chiamato automaticamente rilascerà i riferimenti all'oggetto COM.
+Il costruttore a un solo argomento aggiunge un riferimento all'oggetto COM, ma non rilascia il riferimento del chiamante, quindi il chiamante deve chiamare `Release` sull'oggetto COM per dare effettivamente il controllo. Quando il distruttore del `com::ptr`viene chiamato, i relativi riferimenti verranno rilasciati automaticamente nell'oggetto COM.
 
-Il passaggio `NULL` a questo costruttore equivale a chiamare tale versione senza argomenti.
+Il passaggio di `NULL` a questo costruttore equivale alla chiamata della versione senza argomenti.
 
 ### <a name="example"></a>Esempio
 
@@ -287,7 +285,7 @@ int main() {
 }
 ```
 
-## <a name="tilde-ptr"></a>PTR:: ~ ptr
+## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr:: ~ ptr
 
 Distrugge un `com::ptr`.
 
@@ -295,13 +293,13 @@ Distrugge un `com::ptr`.
 ~ptr();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-In caso di distruzione, il `com::ptr` rilascia tutti i riferimenti appartiene al relativo oggetto COM. Supponendo che non sono presenti altri riferimenti mantenuti all'oggetto COM, verrà eliminato l'oggetto COM e la relativa memoria liberata.
+In base alla distruzione, il `com::ptr` rilascia tutti i riferimenti che possiede al relativo oggetto COM. Supponendo che non siano presenti altri riferimenti all'oggetto COM, l'oggetto COM verrà eliminato e la relativa memoria verrà liberata.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Nel `main` (funzione), i due `XmlDocument` distruttori degli oggetti verranno chiamati quando escono dall'ambito delle `try` blocco, determinando sottostante `com::ptr` distruttore viene chiamato, il rilascio di riferimenti di tutte le proprietà per il modello COM oggetto.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Nella funzione `main`, i due distruttori degli oggetti `XmlDocument` verranno chiamati quando escono dall'ambito del blocco `try`, determinando la chiamata del distruttore `com::ptr` sottostante, rilasciando tutti i riferimenti di proprietà all'oggetto COM.
 
 ```cpp
 // comptr_dtor.cpp
@@ -362,9 +360,9 @@ int main() {
 }
 ```
 
-## <a name="attach"></a>ptr::Attach
+## <a name="ptrattach"></a><a name="attach"></a>ptr:: Connetti
 
-Associa un oggetto COM un `com::ptr`.
+Connette un oggetto COM a un `com::ptr`.
 
 ```cpp
 void Attach(
@@ -375,21 +373,21 @@ void Attach(
 ### <a name="parameters"></a>Parametri
 
 *_right*<br/>
-Puntatore a interfaccia COM da collegare.
+Puntatore all'interfaccia COM da collegare.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Se il `com::ptr` possiede già un riferimento a un oggetto COM `Attach` genera un'eccezione <xref:System.InvalidOperationException>.
+Se il `com::ptr` possiede già un riferimento a un oggetto COM, `Attach` genera <xref:System.InvalidOperationException>.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Una chiamata a `Attach` fa riferimento all'oggetto COM, ma non rilascia il riferimento del chiamante a esso.
+Una chiamata a `Attach` fa riferimento all'oggetto COM, ma non rilascia il riferimento del chiamante.
 
-Il passaggio `NULL` a `Attach` comporta viene eseguita alcuna azione.
+Se si passa `NULL` a `Attach`, non viene eseguita alcuna azione.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Il `ReplaceDocument` chiamate prima funzione membro `Release` su qualsiasi proprietà in precedenza e viene quindi chiamato `Attach` per collegare un nuovo oggetto documento.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. La funzione membro `ReplaceDocument` chiama prima `Release` su un oggetto di proprietà precedente, quindi chiama `Attach` per alleghi un nuovo oggetto documento.
 
 ```cpp
 // comptr_attach.cpp
@@ -463,7 +461,7 @@ int main() {
 }
 ```
 
-## <a name="createInstance"></a>ptr::CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr:: CreateInstance
 
 Crea un'istanza di un oggetto COM all'interno di un `com::ptr`.
 
@@ -511,28 +509,28 @@ void CreateInstance(
 *progid*<br/>
 Stringa `ProgID`.
 
-*pouter*<br/>
-Puntatore a interfaccia IUnknown dell'oggetto di aggregazione (interfaccia IUnknown di controllo). Se `pouter` non è specificato, `NULL` viene usato.
+*pOuter*<br/>
+Puntatore all'interfaccia IUnknown dell'oggetto aggregato (IUnknown di controllo). Se `pouter` non è specificato, viene utilizzato `NULL`.
 
 *cls_context*<br/>
-Contesto in cui verrà eseguito il codice che gestisce l'oggetto appena creato. I valori sono ricavati dalla `CLSCTX` enumerazione. Se `cls_context` non è specificato, il valore viene usato CLSCTX_ALL.
+Contesto in cui viene eseguito il codice che gestisce l'oggetto appena creato. I valori vengono ricavati dall'enumerazione `CLSCTX`. Se `cls_context` non è specificato, viene usato il valore CLSCTX_ALL.
 
 *rclsid*<br/>
-`CLSID` associato a dati e al codice che verrà utilizzato per creare l'oggetto.
+`CLSID` associato ai dati e al codice che verranno utilizzati per creare l'oggetto.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Se il `com::ptr` possiede già un riferimento a un oggetto COM `CreateInstance` genera un'eccezione <xref:System.InvalidOperationException>.
+Se il `com::ptr` possiede già un riferimento a un oggetto COM, `CreateInstance` genera <xref:System.InvalidOperationException>.
 
-Questa funzione chiama `CoCreateInstance` e Usa <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> per convertire qualsiasi errore `HRESULT` a un'eccezione appropriata.
+Questa funzione chiama `CoCreateInstance` e USA <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> per convertire eventuali `HRESULT` di errore in un'eccezione appropriata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`CreateInstance` Usa `CoCreateInstance` per creare una nuova istanza dell'oggetto specificato, identificato da un ProgID o CLSID. Il `com::ptr` fa riferimento all'oggetto appena creato e venga rilasciata automaticamente i riferimenti di tutte le proprietà di distruzione.
+`CreateInstance` utilizza `CoCreateInstance` per creare una nuova istanza dell'oggetto specificato, identificato da un ProgID o da un CLSID. Il `com::ptr` fa riferimento all'oggetto appena creato e rilascerà automaticamente tutti i riferimenti di proprietà al momento dell'eliminazione.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. I costruttori della classe usano due diverse forme di `CreateInstance` per creare l'oggetto del documento da un ProgID o da un CLSID e un CLSCTX.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. I costruttori della classe usano due diverse forme di `CreateInstance` per creare l'oggetto documento da un ProgID o da un CLSID più un CLSCTX.
 
 ```cpp
 // comptr_createinstance.cpp
@@ -581,9 +579,9 @@ int main() {
 }
 ```
 
-## <a name="detach"></a>ptr::Detach
+## <a name="ptrdetach"></a><a name="detach"></a>ptr::D etach
 
-Offre il proprietario dell'oggetto COM, che restituisce un puntatore all'oggetto.
+Consente di ottenere la proprietà dell'oggetto COM, restituendo un puntatore all'oggetto.
 
 ```cpp
 _interface_type * Detach();
@@ -591,21 +589,21 @@ _interface_type * Detach();
 
 ### <a name="return-value"></a>Valore restituito
 
-Il puntatore all'oggetto COM.
+Puntatore all'oggetto COM.
 
-Se nessun oggetto è di proprietà, viene restituito NULL.
+Se non è di proprietà di alcun oggetto, viene restituito NULL.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Internamente `QueryInterface` viene chiamato su proprietà oggetto COM e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+Internamente, `QueryInterface` viene chiamato sull'oggetto COM di proprietà e qualsiasi `HRESULT` di errore viene convertito in un'eccezione per <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`Detach` innanzitutto aggiunto un riferimento all'oggetto COM per conto del chiamante e quindi rilascia tutti i riferimenti di proprietà di `com::ptr`.  Il chiamante deve rilasciare in definitiva l'oggetto restituito per eliminarlo.
+`Detach` aggiunge prima di tutto un riferimento all'oggetto COM per conto del chiamante, quindi rilascia tutti i riferimenti di proprietà del `com::ptr`.  Il chiamante deve infine rilasciare l'oggetto restituito per eliminarlo.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Il `DetachDocument` funzione membro chiama `Detach` il proprietario dell'oggetto COM e restituire un puntatore al chiamante.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  La funzione membro `DetachDocument` chiama `Detach` per rinunciare alla proprietà dell'oggetto COM e restituire un puntatore al chiamante.
 
 ```cpp
 // comptr_detach.cpp
@@ -686,7 +684,7 @@ int main() {
 }
 ```
 
-## <a name="getInterface"></a>ptr::GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr:: GetInterface
 
 Restituisce un puntatore all'oggetto COM di proprietà.
 
@@ -696,19 +694,19 @@ _interface_type * GetInterface();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore all'oggetto COM di proprietà.
+Puntatore all'oggetto COM di proprietà.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Internamente `QueryInterface` viene chiamato su proprietà oggetto COM e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+Internamente, `QueryInterface` viene chiamato sull'oggetto COM di proprietà e qualsiasi `HRESULT` di errore viene convertito in un'eccezione per <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il `com::ptr` aggiunge un riferimento all'oggetto COM per conto del chiamante e mantiene il proprio riferimento all'oggetto COM. Il chiamante deve infine rilasciare il riferimento sull'oggetto restituito o è mai possibile eliminarlo.
+Il `com::ptr` aggiunge un riferimento all'oggetto COM per conto del chiamante e mantiene anche il proprio riferimento nell'oggetto COM. Il chiamante deve infine rilasciare il riferimento all'oggetto restituito o non verrà mai eliminato definitivamente.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Il `GetDocument` funzione membro Usa `GetInterface` per restituire un puntatore all'oggetto COM.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. La funzione membro `GetDocument` utilizza `GetInterface` per restituire un puntatore all'oggetto COM.
 
 ```cpp
 // comptr_getinterface.cpp
@@ -828,9 +826,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="queryInterface"></a>ptr::QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr:: QueryInterface
 
-Una query all'oggetto COM di proprietà per un'interfaccia e i risultati vengono allegati a un altro `com::ptr`.
+Esegue una query sull'oggetto COM di proprietà per un'interfaccia e connette il risultato a un altro `com::ptr`.
 
 ```cpp
 template<class _other_type>
@@ -842,19 +840,19 @@ void QueryInterface(
 ### <a name="parameters"></a>Parametri
 
 *other*<br/>
-Il `com::ptr` che verrà visualizzato l'interfaccia.
+`com::ptr` che otterrà l'interfaccia.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Internamente `QueryInterface` viene chiamato su proprietà oggetto COM e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+Internamente, `QueryInterface` viene chiamato sull'oggetto COM di proprietà e qualsiasi `HRESULT` di errore viene convertito in un'eccezione per <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare questo metodo per creare un wrapper COM per un'altra interfaccia dell'oggetto COM wrapper corrente di proprietà. Questo metodo chiama `QueryInterface` tramite l'oggetto COM di proprietà per richiedere un puntatore a un'interfaccia specifica del modello COM dell'oggetto e la collega il puntatore a interfaccia restituito passato `com::ptr`.
+Utilizzare questo metodo per creare un wrapper COM per un'interfaccia diversa dell'oggetto COM di proprietà del wrapper corrente. Questo metodo chiama `QueryInterface` tramite l'oggetto COM di proprietà per richiedere un puntatore a un'interfaccia specifica dell'oggetto COM e alleghi il puntatore di interfaccia restituito alla `com::ptr`passata.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Il `WriteTopLevelNode` funzione membro Usa `QueryInterface` per compilare una variabile locale `com::ptr` con un `IXMLDOMNode` e quindi passa il `com::ptr` (per riferimento di rilevamento) a una funzione membro privato che scrive le proprietà di nome e il testo del nodo nella console.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. La funzione membro `WriteTopLevelNode` utilizza `QueryInterface` per riempire un `com::ptr` locale con un `IXMLDOMNode` e quindi passa il `com::ptr` (tramite il riferimento di rilevamento) a una funzione membro privata che scrive le proprietà del nome e del testo del nodo nella console.
 
 ```cpp
 // comptr_queryinterface.cpp
@@ -959,7 +957,7 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="release"></a>PTR::Release
+## <a name="ptrrelease"></a><a name="release"></a>ptr:: Release
 
 Rilascia tutti i riferimenti di proprietà nell'oggetto COM.
 
@@ -967,13 +965,13 @@ Rilascia tutti i riferimenti di proprietà nell'oggetto COM.
 void Release();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione rilascia riferimenti di tutte le proprietà nell'oggetto COM e imposta l'handle interno per l'oggetto COM di `nullptr`.  Se è presente alcun altri riferimenti a oggetti COM, verrà eliminata.
+La chiamata di questa funzione rilascia tutti i riferimenti di proprietà nell'oggetto COM e imposta l'handle interno sull'oggetto COM su `nullptr`.  Se non esistono altri riferimenti sull'oggetto COM, verranno eliminati definitivamente.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Il `ReplaceDocument` funzione membro Usa `Release` per rilasciare qualsiasi oggetto del documento precedente prima di collegare il nuovo documento.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  La funzione membro `ReplaceDocument` utilizza `Release` per rilasciare eventuali oggetti documento precedenti prima di aggiungere il nuovo documento.
 
 ```cpp
 // comptr_release.cpp
@@ -1047,9 +1045,9 @@ int main() {
 }
 ```
 
-## <a name="operator-arrow"></a>ptr::operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>operatore PTR:: operator-&gt;
 
-Operatore di accesso ai membri, utilizzato per chiamare i metodi sull'oggetto COM di proprietà.
+Operatore di accesso ai membri, usato per chiamare i metodi sull'oggetto COM di proprietà.
 
 ```cpp
 _detail::smart_com_ptr<_interface_type> operator->();
@@ -1057,19 +1055,19 @@ _detail::smart_com_ptr<_interface_type> operator->();
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `smart_com_ptr` all'oggetto COM.
+`smart_com_ptr` all'oggetto COM.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Internamente `QueryInterface` viene chiamato su proprietà oggetto COM e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+Internamente, `QueryInterface` viene chiamato sull'oggetto COM di proprietà e qualsiasi `HRESULT` di errore viene convertito in un'eccezione per <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo operatore consente di chiamare i metodi dell'oggetto COM di proprietà. Restituisce una password temporanea `smart_com_ptr` che gestisce automaticamente la propria `AddRef` e `Release`.
+Questo operatore consente di chiamare i metodi dell'oggetto COM di proprietà. Restituisce un `smart_com_ptr` temporaneo che gestisce automaticamente i propri `AddRef` e `Release`.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Il `WriteDocument` funzione Usa `operator->` per chiamare il `get_firstChild` membro dell'oggetto documento.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. La funzione `WriteDocument` utilizza `operator->` per chiamare il membro `get_firstChild` dell'oggetto Document.
 
 ```cpp
 // comptr_op_member.cpp
@@ -1189,9 +1187,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="operator-assign"></a>ptr::operator=
+## <a name="ptroperator"></a><a name="operator-assign"></a>ptr:: operator =
 
-Associa un oggetto COM un `com::ptr`.
+Connette un oggetto COM a un `com::ptr`.
 
 ```cpp
 ptr<_interface_type> % operator=(
@@ -1202,25 +1200,25 @@ ptr<_interface_type> % operator=(
 ### <a name="parameters"></a>Parametri
 
 *_right*<br/>
-Puntatore a interfaccia COM da collegare.
+Puntatore all'interfaccia COM da collegare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento di traccia sul `com::ptr`.
+Riferimento di rilevamento nell'`com::ptr`.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Se il `com::ptr` possiede già un riferimento a un oggetto COM `operator=` genera un'eccezione <xref:System.InvalidOperationException>.
+Se il `com::ptr` possiede già un riferimento a un oggetto COM, `operator=` genera <xref:System.InvalidOperationException>.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Assegnazione di un oggetto COM un `com::ptr` fa riferimento all'oggetto COM, ma non rilascia il riferimento del chiamante a esso.
+L'assegnazione di un oggetto COM a un `com::ptr` fa riferimento all'oggetto COM, ma non rilascia il relativo riferimento al chiamante.
 
-Questo operatore ha lo stesso effetto `Attach`.
+Questo operatore ha lo stesso effetto di `Attach`.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Il `ReplaceDocument` chiamate prima funzione membro `Release` in qualsiasi precedentemente proprietà dell'oggetto e quindi Usa `operator=` per collegare un nuovo oggetto documento.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  La funzione membro `ReplaceDocument` chiama prima di tutto `Release` in un oggetto di proprietà precedente, quindi utilizza `operator=` per alleghire un nuovo oggetto documento.
 
 ```cpp
 // comptr_op_assign.cpp
@@ -1294,9 +1292,9 @@ int main() {
 }
 ```
 
-## <a name="operator-bool"></a> PTR::operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr:: operator bool
 
-Operatore per l'uso di `com::ptr` in un'espressione condizionale.
+Operatore per l'utilizzo di `com::ptr` in un'espressione condizionale.
 
 ```cpp
 operator bool();
@@ -1304,17 +1302,17 @@ operator bool();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto COM di proprietà è valida. `false` in caso contrario.
+`true` se l'oggetto COM di proprietà è valido; in caso contrario `false`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto COM di proprietà è valido se non è `nullptr`.
 
-Questo operatore converte `_detail_class::_safe_bool` che è più sicuro di `bool` perché non può essere convertito in un tipo integrale.
+Questo operatore converte in `_detail_class::_safe_bool` che è più sicuro di `bool` perché non può essere convertito in un tipo integrale.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Il `CreateInstance` funzione membro Usa `operator bool` dopo aver creato il nuovo oggetto di documento per determinare se è valido e scrive nella console se presente.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. La funzione membro `CreateInstance` utilizza `operator bool` dopo aver creato il nuovo oggetto documento per determinare se è valido e scrive nella console, se è.
 
 ```cpp
 // comptr_op_bool.cpp
@@ -1365,9 +1363,9 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="operator-logical-not"></a>ptr::operator!
+## <a name="ptroperator"></a><a name="operator-logical-not"></a>operatore PTR::
 
-Operatore per determinare se l'oggetto COM di proprietà non è valido.
+Per determinare se l'oggetto COM di proprietà non è valido.
 
 ```cpp
 bool operator!();
@@ -1375,15 +1373,15 @@ bool operator!();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto COM di proprietà è valido. `false` in caso contrario.
+`true` se l'oggetto COM di proprietà non è valido; in caso contrario `false`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'oggetto COM di proprietà è valido se non è `nullptr`.
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Il `CreateInstance` funzione membro Usa `operator!` per determinare se appartiene già a un oggetto documento e solo se l'oggetto non è valido, viene creata una nuova istanza.
+In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  La funzione membro `CreateInstance` utilizza `operator!` per determinare se un oggetto documento è già di proprietà e crea una nuova istanza solo se l'oggetto non è valido.
 
 ```cpp
 // comptr_op_not.cpp

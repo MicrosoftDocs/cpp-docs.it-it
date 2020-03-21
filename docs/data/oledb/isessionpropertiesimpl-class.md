@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 50052e13371482fa0a8b6d66ef666b9801837501
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c1a3539ea4ea705ad8bd1e40acda965ef66e2051
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444034"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077720"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Classe ISessionPropertiesImpl
 
@@ -28,7 +28,7 @@ Fornisce un'implementazione dell'interfaccia [ISessionProperties](/previous-vers
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE ISessionPropertiesImpl :
-   public ISessionProperties, 
+   public ISessionProperties,
    public CUtlProps<PropClass>
 ```
 
@@ -57,7 +57,7 @@ Classe di proprietà definibile dall'utente che per impostazione predefinita è 
 
 Interfaccia obbligatoria sulle sessioni. Questa classe implementa le proprietà della sessione chiamando una funzione statica definita dalla [mappa del set di proprietà](../../data/oledb/begin-propset-map.md). La mappa del set di proprietà deve essere specificata nella classe di sessione.
 
-## <a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
 
 Restituisce l'elenco di proprietà nel gruppo di proprietà `DBPROPSET_SESSION` attualmente impostato nella sessione.
 
@@ -74,7 +74,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 Vedere [ISessionProperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="setproperties"></a>ISessionPropertiesImpl:: seproprietà
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl:: seproprietà
 
 Imposta le proprietà nel gruppo di proprietà `DBPROPSET_SESSION`.
 

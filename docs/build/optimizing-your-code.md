@@ -8,35 +8,35 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: f44fb734c8441e10b656c5326c8df4bf6879499a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 00356cf50ca8e50c80e8a1142adf654816490c9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220184"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078501"
 ---
 # <a name="optimizing-your-code"></a>Ottimizzazione del codice
 
-Ottimizzazione di un file eseguibile, è possibile ottenere un equilibrio tra velocità di esecuzione e dimensione del codice. In questo argomento vengono illustrati alcuni dei meccanismi forniti da Visual Studio che consentono di ottimizzare il codice.
+Ottimizzando un eseguibile, è possibile ottenere un equilibrio tra la velocità di esecuzione rapida e le dimensioni del codice ridotto. In questo argomento vengono illustrati alcuni dei meccanismi forniti da Visual Studio per semplificare l'ottimizzazione del codice.
 
 ## <a name="language-features"></a>Funzionalità del linguaggio
 
-Gli argomenti seguenti descrivono alcune delle funzionalità di ottimizzazione del linguaggio C/C++.
+Negli argomenti seguenti vengono descritte alcune delle funzionalità di ottimizzazione del linguaggio CC++ /.
 
-[Ottimizzazione pragma e parole chiave](optimization-pragmas-and-keywords.md) \
+[Pragma e parole chiave di ottimizzazione](optimization-pragmas-and-keywords.md) \
 Elenco di parole chiave e pragma che è possibile usare nel codice per migliorare le prestazioni.
 
 [Opzioni del compilatore elencate per categoria](reference/compiler-options-listed-by-category.md) \
-Un elenco delle **/O** opzioni del compilatore che interessano in particolare le dimensioni di velocità o codice di esecuzione.
+Elenco di opzioni del compilatore **/o** che influiscono in modo specifico sulla velocità di esecuzione o sulle dimensioni del codice.
 
 [Dichiaratore di riferimento rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
-I riferimenti rvalue supportano l'implementazione di *semantica di spostamento*. Se la semantica viene utilizzata per implementare le librerie di modelli, le prestazioni delle applicazioni che usano i modelli di spostamento può migliorare significativamente.
+I riferimenti rvalue supportano l'implementazione della *semantica di spostamento*. Se per implementare le librerie di modelli vengono utilizzate semantiche di spostamento, le prestazioni delle applicazioni che utilizzano tali modelli possono migliorare significativamente.
 
-### <a name="the-optimize-pragma"></a>Il pragma optimize
+### <a name="the-optimize-pragma"></a>Pragma optimize
 
-Se una sezione di codice ottimizzata provoca un rallentamento o errori, è possibile usare la [ottimizzare](../preprocessor/optimize.md) pragma per disattivare l'ottimizzazione per quella sezione.
+Se una sezione ottimizzata del codice causa errori o rallentamenti, è possibile usare il pragma [optimize](../preprocessor/optimize.md) per disattivare l'ottimizzazione per tale sezione.
 
-Racchiudere il codice tra due direttive pragma, come illustrato di seguito:
+Racchiudere il codice tra due pragma, come illustrato di seguito:
 
 ```cpp
 #pragma optimize("", off)
@@ -44,25 +44,25 @@ Racchiudere il codice tra due direttive pragma, come illustrato di seguito:
 #pragma optimize("", on)
 ```
 
-## <a name="programming-practices"></a>Procedure consigliate di programmazione
+## <a name="programming-practices"></a>Procedure di programmazione
 
-È possibile notare altri messaggi di avviso quando si compila il codice con l'ottimizzazione. Questo comportamento è previsto perché alcuni avvisi riguardano solo il codice ottimizzato. Se consigliabile prestare attenzione questi avvisi, è possibile evitare numerosi problemi di ottimizzazione.
+Quando si compila il codice con l'ottimizzazione, è possibile che vengano visualizzati messaggi di avviso aggiuntivi. Questo comportamento è previsto perché alcuni avvisi si riferiscono solo al codice ottimizzato. Se si prestano attenzione a questi avvisi, è possibile evitare molti problemi di ottimizzazione.
 
-Ottimizzazione di un programma per la velocità di Paradossalmente, potrebbe causare codice rallenterà l'esecuzione. Questo avviene perché alcune ottimizzazioni per la velocità di aumento delle dimensioni del codice. Ad esempio, le funzioni inline Elimina il sovraccarico delle chiamate di funzione. Tuttavia, l'incorporamento troppa codice potrebbe rendere il programma talmente elevato che il numero di pagina di memoria virtuale aumento degli errori. Pertanto, la maggiore velocità ottenuta da eliminando le chiamate di funzione vadano perse per lo swapping di memoria.
+Paradossalmente, l'ottimizzazione di un programma per la velocità potrebbe causare un rallentamento dell'esecuzione del codice. Questo perché alcune ottimizzazioni per aumentare la dimensione del codice. Ad esempio, le funzioni di incorporamento eliminano l'overhead delle chiamate di funzione. Tuttavia, l'incorporamento di un numero eccessivo di codice potrebbe rendere il programma così grande da aumentare il numero di errori di pagina di memoria virtuale. Pertanto, la velocità ottenuta dall'eliminazione delle chiamate di funzione potrebbe andare persa per lo scambio di memoria.
 
-Gli argomenti seguenti descrivono le procedure di programmazione.
+Negli argomenti seguenti vengono illustrate le buone procedure di programmazione.
 
-[Suggerimenti per migliorare il codice critico](tips-for-improving-time-critical-code.md) \
-Codifica migliorata tecniche consentono di ottenere prestazioni migliori. Questo argomento verranno suggerite le tecniche che consentono di assicurarsi che le parti del codice critico eseguano in modo soddisfacente di codifica.
+[Suggerimenti per il miglioramento del codice critico per il tempo](tips-for-improving-time-critical-code.md) \
+Migliori tecniche di codifica possono produrre prestazioni migliori. Questo argomento suggerisce tecniche di codifica che consentono di assicurarsi che le parti cruciali del codice vengano eseguite in modo soddisfacente.
 
-[Le procedure consigliate di ottimizzazione](optimization-best-practices.md) \
-Vengono fornite indicazioni generali sul modo migliore per ottimizzare l'applicazione.
+[Procedure consigliate](optimization-best-practices.md) per l'ottimizzazione \
+Fornisce linee guida generali su come ottimizzare l'applicazione.
 
-## <a name="debugging-optimized-code"></a>Debug di codice ottimizzato
+## <a name="debugging-optimized-code"></a>Debug del codice ottimizzato
 
-Poiché l'ottimizzazione potrebbe modificare il codice creato dal compilatore, è consigliabile che il debug dell'applicazione e valutarne le prestazioni e quindi ottimizzare il codice.
+Poiché l'ottimizzazione potrebbe modificare il codice creato dal compilatore, è consigliabile eseguire il debug dell'applicazione e misurare le prestazioni e quindi ottimizzare il codice.
 
-Gli argomenti seguenti forniscono informazioni su come eseguire il debug a release compila.
+Negli argomenti seguenti vengono fornite informazioni su come eseguire il debug delle build di rilascio.
 
 - [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 
@@ -70,8 +70,7 @@ Gli argomenti seguenti forniscono informazioni su come eseguire il debug a relea
 
 - [Causa della possibile perdita di precisione dei numeri a virgola mobile](why-floating-point-numbers-may-lose-precision.md)
 
-
-Gli argomenti seguenti forniscono informazioni su come ottimizzare la compilazione, il caricamento e l'esecuzione del codice.
+Negli argomenti seguenti vengono fornite informazioni su come ottimizzare la compilazione, il caricamento e l'esecuzione del codice.
 
 - [Incremento dell'efficienza delle operazioni del compilatore](improving-compiler-throughput.md)
 
@@ -81,23 +80,22 @@ Gli argomenti seguenti forniscono informazioni su come ottimizzare la compilazio
 
 - [Impostazione dell'ottimizzazione del compilatore per un progetto ATL](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-- [Quali tecniche di ottimizzazione è necessario usare per migliorare le prestazioni dell'applicazione client durante il caricamento?](../build/dll-frequently-asked-questions.md#mfc_optimization)
-
+- [Quali tecniche di ottimizzazione è consigliabile utilizzare per migliorare le prestazioni dell'applicazione client durante il caricamento?](../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Ottimizzazione pragma e parole chiave](optimization-pragmas-and-keywords.md) \
+[Pragma e parole chiave di ottimizzazione](optimization-pragmas-and-keywords.md) \
 [Miglioramento della velocità effettiva del compilatore](improving-compiler-throughput.md) \
-[Il motivo per cui i numeri a virgola mobile possono perdita di precisione](why-floating-point-numbers-may-lose-precision.md) \
+[Perché i numeri a virgola mobile potrebbero perdere precisione](why-floating-point-numbers-may-lose-precision.md) \
 [Rappresentazione a virgola mobile IEEE](ieee-floating-point-representation.md) \
-[Suggerimenti per migliorare il codice critico](tips-for-improving-time-critical-code.md) \
-[Usa il nome di funzione senza () mancata generazione di codice](using-function-name-without-parens-produces-no-code.md) \
-[Le procedure consigliate di ottimizzazione](optimization-best-practices.md) \
-[Ottimizzazioni PGO](profile-guided-optimizations.md) \
-[Variabili di ambiente per le ottimizzazioni PGO](environment-variables-for-profile-guided-optimizations.md) \
-[PgoAutoSweep](pgoautosweep.md) \
-[pgomgr](pgomgr.md) \
-[pgosweep](pgosweep.md) \
+[Suggerimenti per il miglioramento del codice critico per il tempo](tips-for-improving-time-critical-code.md) \
+Se si [Usa il nome della funzione senza () non viene generato alcun codice](using-function-name-without-parens-produces-no-code.md) \
+[Procedure consigliate](optimization-best-practices.md) per l'ottimizzazione \
+[Ottimizzazioni](profile-guided-optimizations.md) PGO \
+[Variabili di ambiente per le ottimizzazioni pgo](environment-variables-for-profile-guided-optimizations.md) \
+ \ [PgoAutoSweep](pgoautosweep.md)
+ \ [pgomgr](pgomgr.md)
+ \ [pgosweep](pgosweep.md)
 [Procedura: Unire più profili PGO in un unico profilo](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Vedere anche

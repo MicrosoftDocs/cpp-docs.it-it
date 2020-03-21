@@ -3,12 +3,12 @@ title: Creazione del progetto (Esercitazione di ATL, parte 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: b4c18d83feb6c61b603bb1880960193cf9150f9b
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 31ecee084f620256820a685df1f0e6891046fb8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509393"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075336"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Creazione del progetto (Esercitazione di ATL, parte 1)
 
@@ -45,7 +45,7 @@ Questa esercitazione illustra in modo dettagliato un progetto ATL senza attribut
 
     Per impostazione predefinita, il percorso del codice sorgente \Users\\\<nomeutente > \source\repos e una nuova cartella verrà creata automaticamente.
 
-1. In Visual Studio 2019 accettare i valori predefiniti e fare clic su **OK**. 
+1. In Visual Studio 2019 accettare i valori predefiniti e fare clic su **OK**.
    In Visual Studio 2017 fare clic su **OK** per aprire la creazione guidata **progetto ATL** . Fare clic su **Impostazioni applicazione** per visualizzare le opzioni disponibili. Poiché questo progetto crea un controllo e un controllo deve essere un server in-process, lasciare il **tipo di applicazione** come dll. Fare clic su **OK**.
 
 Visual Studio creerà il progetto generando diversi file. È possibile visualizzare questi file in **Esplora soluzioni** espandendo l'oggetto `Polygon`. I file sono elencati di seguito.

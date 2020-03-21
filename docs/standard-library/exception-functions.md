@@ -24,16 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ede3c828437aab1759c6711fc40511c69646a133
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419126"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076573"
 ---
 # <a name="ltexceptiongt-functions"></a>Funzioni &lt;exception&gt;
 
-## <a name="current_exception"></a>current_exception
+## <a name="current_exception"></a><a name="current_exception"></a>current_exception
 
 Ottiene un puntatore intelligente all'eccezione corrente.
 
@@ -55,7 +55,7 @@ Il distruttore dell'eccezione corrente viene chiamato alla fine del blocco **cat
 
 Le chiamate successive alla funzione `current_exception` restituiscono oggetti `exception_ptr` che fanno riferimento a copie diverse dell'eccezione corrente. Di conseguenza, gli oggetti vengono considerati diversi perché fanno riferimento a copie diverse, anche se le copie presentano lo stesso valore binario.
 
-## <a name="make_exception_ptr"></a>make_exception_ptr
+## <a name="make_exception_ptr"></a><a name="make_exception_ptr"></a>make_exception_ptr
 
 Crea un oggetto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) contenente la copia di un'eccezione.
 
@@ -79,7 +79,7 @@ Chiamare la funzione `make_exception_ptr` equivale a generare una eccezione C++,
 
 In genere un'applicazione non richiede la funzione `make_exception_ptr` e se ne sconsiglia l'utilizzo.
 
-## <a name="rethrow_exception"></a>rethrow_exception
+## <a name="rethrow_exception"></a><a name="rethrow_exception"></a>rethrow_exception
 
 Genera un'eccezione passata come parametro.
 
@@ -96,7 +96,7 @@ Eccezione rilevata da generare nuovamente. Se *P* è un [exception_ptr](../stand
 
 Dopo aver archiviato un'eccezione intercettata in un oggetto `exception_ptr`, il thread principale può elaborare l'oggetto. Nel thread principale, chiamare la funzione `rethrow_exception` insieme all'oggetto `exception_ptr` come suo argomento. La funzione `rethrow_exception` estrae l'eccezione dall'oggetto `exception_ptr`, quindi genera l'eccezione nel contesto del thread principale.
 
-## <a name="get_terminate"></a>get_terminate
+## <a name="get_terminate"></a><a name="get_terminate"></a>get_terminate
 
 Ottiene la funzione `terminate_handler` corrente.
 
@@ -104,7 +104,7 @@ Ottiene la funzione `terminate_handler` corrente.
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>set_terminate
+## <a name="set_terminate"></a><a name="set_terminate"></a>set_terminate
 
 Crea un nuovo `terminate_handler` da chiamare al termine del programma.
 
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>get_unexpected
+## <a name="get_unexpected"></a><a name="get_unexpected"></a>get_unexpected
 
 Ottiene la funzione `unexpected_handler` corrente.
 
@@ -161,10 +161,10 @@ Ottiene la funzione `unexpected_handler` corrente.
 unexpected_handler get_unexpected();
 ```
 
-## <a name="rethrow_if_nested"></a>rethrow_if_nested
+## <a name="rethrow_if_nested"></a><a name="rethrow_if_nested"></a>rethrow_if_nested
 
 ```cpp
-template <class E> 
+template <class E>
     void rethrow_if_nested(const E& e);
 ```
 
@@ -172,7 +172,7 @@ template <class E>
 
 Se non è un tipo di classe polimorfico o se `nested_exception` è inaccessibile o ambiguo, non si verifica alcun effetto. In caso contrario, esegue un cast dinamico.
 
-## <a name="set_unexpected"></a>set_unexpected
+## <a name="set_unexpected"></a><a name="set_unexpected"></a>set_unexpected
 
 Stabilisce un nuovo `unexpected_handler` quando viene rilevata un'eccezione imprevista.
 
@@ -220,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>terminare
+## <a name="terminate"></a><a name="terminate"></a>terminare
 
 Chiama un gestore di terminazione.
 
@@ -238,7 +238,7 @@ Un gestore di terminazione potrebbe non restituire risultati al relativo chiaman
 
 Per un esempio dell'utilizzo di [, vedere ](../standard-library/exception-functions.md#set_unexpected)set_unexpected`terminate`.
 
-## <a name="throw_with_nested"></a>throw_with_nested
+## <a name="throw_with_nested"></a><a name="throw_with_nested"></a>throw_with_nested
 
 ```cpp
 template <class T> [[noreturn]]
@@ -249,7 +249,7 @@ template <class T> [[noreturn]]
 
 Genera un'eccezione con eccezioni nidificate.
 
-## <a name="uncaught_exception"></a>uncaught_exception
+## <a name="uncaught_exception"></a><a name="uncaught_exception"></a>uncaught_exception
 
 Restituisce **true** solo se un'eccezione generata è in corso di elaborazione.
 
@@ -314,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>inaspettato
+## <a name="unexpected"></a><a name="unexpected"></a>inaspettato
 
 Chiama il gestore imprevisto.
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: f234f9a05a871fe474b783a68f644cb4f2b1c2e7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f322d16bbbe91d229fb8efdfb5f2d35cb0a686ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498434"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079230"
 ---
 # <a name="c-project-templates"></a>Modelli di progetto C++
 
-I modelli di progetto di Visual Studio generano i file di codice sorgente, le opzioni del compilatore, i menu `#include` , le barre degli strumenti, le icone, i riferimenti e le istruzioni appropriati per il tipo di progetto che si vuole creare. Visual Studio include diversi tipi di C++ modelli di progetto e fornisce procedure guidate per molti di essi, in modo da poter personalizzare i progetti durante la creazione. Subito dopo aver creato un progetto, è possibile compilarlo ed eseguire l'applicazione. È consigliabile compilare l'applicazione gradualmente man mano che la si sviluppa.
+I modelli di progetto di Visual Studio generano i file di codice sorgente, le opzioni del compilatore, i menu, le barre degli strumenti, le icone, i riferimenti e le istruzioni `#include` appropriate per il tipo di progetto che si vuole creare. Visual Studio include diversi tipi di C++ modelli di progetto e fornisce procedure guidate per molti di essi, in modo da poter personalizzare i progetti durante la creazione. Subito dopo aver creato un progetto, è possibile compilarlo ed eseguire l'applicazione. È consigliabile compilare l'applicazione gradualmente man mano che la si sviluppa.
 
 > [!NOTE]
 > È possibile creare un progetto in linguaggio C usando i modelli di progetto C++. Nel progetto generato trovare i file con estensione cpp e modificarla con c. Quindi, nella pagina **Proprietà progetto** per il progetto (non per la soluzione) espandere **Proprietà di configurazione**, **C/C++** e selezionare **Avanzate**. Impostare l'opzione **Compila come** su **Compila come codice C (/TC)** .
@@ -83,11 +83,9 @@ Per una panoramica delle app universali di Windows in C++, vedere [App universal
 |App unit test|Progetto per creare un'app unit test per app della piattaforma UWP (Universal Windows Platform).|
 |DLL|Progetto per una libreria di collegamento dinamico (DLL) nativa che può essere usata in un'app della piattaforma UWP (Universal Windows Platform) o in un componente di runtime.|
 |Libreria statica|Progetto per una libreria di collegamento statico (LIB) nativa che può essere usata in un'app della piattaforma UWP (Universal Windows Platform) o in un componente di runtime.|
-|Componente Windows Runtime|Progetto per un componente Windows Runtime che può essere usato in un'app della piattaforma UWP (Universal Windows Platform), indipendentemente dal linguaggio di programmazione usato per scrivere l'app.|
+|Componente di Windows Runtime|Progetto per un componente Windows Runtime che può essere usato in un'app della piattaforma UWP (Universal Windows Platform), indipendentemente dal linguaggio di programmazione usato per scrivere l'app.|
 |Progetto di creazione pacchetti di applicazione Windows|Un progetto che crea un pacchetto UWP (Universal Windows Platform) che consente a un'applicazione desktop di essere caricata tramite sideload o distribuita tramite Microsoft Store.|
 
 ## <a name="todo-comments"></a>Commenti TODO
 
 Molti dei file generati da un modello di progetto contengono commenti TODO per consentire di trovare il punto in cui fornire il proprio codice sorgente. Per altre informazioni sull'aggiunta di codice, vedere [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md) e [Utilizzo di file di risorse](../../windows/working-with-resource-files.md).
-
-

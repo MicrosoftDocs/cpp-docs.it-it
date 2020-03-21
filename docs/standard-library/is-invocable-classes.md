@@ -1,5 +1,5 @@
 ---
-title: is_invocable, is_invocable_r, is_nothrow_invocable, classi is_nothrow_invocable_r
+title: classi is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::is_invocable
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 53394a10464e2688953cd1b5703530e2719b7593
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456223"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076460"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, classi is_nothrow_invocable_r
+# <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>classi is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 
-Questi modelli determinano se un tipo può essere richiamato con i tipi di argomento specificati. `is_invocable_r`Inoltre `is_nothrow_invocable_r` , determinare se il risultato della chiamata è convertibile in un tipo specifico. `is_nothrow_invocable`e `is_nothrow_invocable_r` determinano inoltre se la chiamata è nota come non generare eccezioni. Aggiunto in C++ 17.
+Questi modelli determinano se un tipo può essere richiamato con i tipi di argomento specificati. `is_invocable_r` e `is_nothrow_invocable_r` inoltre determinare se il risultato della chiamata è convertibile in un tipo specifico. `is_nothrow_invocable` e `is_nothrow_invocable_r` determinano inoltre se la chiamata è nota come non generare eccezioni. Aggiunto in C++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Parametri
 
-*Callable*\
+\ *chiamabili*
 Tipo chiamabile su cui eseguire una query.
 
-*Args*\
+*Argomenti*\
 Tipi di argomento su cui eseguire una query.
 
-*Convertibile*\
+\ *convertibili*
 Il tipo del risultato di *Callable* deve essere convertibile in.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il `is_invocable` predicato di tipo include true se il chiamabile del tipo chiamabile *può essere* richiamato usando gli argomenti *args* in un contesto non valutato.
+Il predicato di tipo `is_invocable` restituisce true se il tipo chiamabile *chiamabile può essere* richiamato usando gli argomenti *args* in un contesto non valutato.
 
-Il `is_invocable_r` predicato di tipo include true se il chiamabile del tipo chiamabile *può essere* richiamato usando gli argomenti *args* in un contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*.
+Il predicato di tipo `is_invocable_r` restituisce true se il tipo chiamabile *chiamabile può essere* richiamato usando gli argomenti *args* in un contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*.
 
-Il `is_nothrow_invocable` predicato di tipo include true se il chiamabile del tipo chiamabile *può essere* richiamato usando gli argomenti arguments *in un* contesto non valutato e tale chiamata è nota come not per generare un'eccezione.
+Il predicato di tipo `is_nothrow_invocable` restituisce true se il tipo chiamabile *chiamabile può essere* richiamato usando gli *argomenti arguments in un* contesto non valutato e tale chiamata è nota che non genera un'eccezione.
 
-Il `is_nothrow_invocable_r` predicato di tipo include true se il chiamabile del tipo chiamabile *può essere* richiamato usando gli argomenti arguments *in un* contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*e che tale chiamata non venga generata eccezione.
+Il predicato di tipo `is_nothrow_invocable_r` restituisce true se il tipo chiamabile *chiamabile può essere* richiamato usando gli argomenti arguments *in un* contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*e che tale chiamata non genera un'eccezione.
 
-Ognuno dei tipi convertibili, *richiamabili*e i tipi negli *argomenti* del pacchetto di parametri deve essere un tipo completo, una matrice di limiti sconosciuti o un **void**probabilmente qualificato da CV. In caso contrario, il comportamento del predicato non è definito.
+Ognuno dei tipi *convertibili*, *richiamabili*e i tipi negli *argomenti* del pacchetto di parametri deve essere un tipo completo, una matrice di limiti sconosciuti o un **void**probabilmente qualificato da CV. In caso contrario, il comportamento del predicato non è definito.
 
 ## <a name="example"></a>Esempio
 
@@ -103,7 +103,7 @@ int main()
 {
     static_assert( std::is_invocable<decltype(test1), short>::value );
 
-    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value ); 
+    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value );
     static_assert( std::is_invocable_r<long(*)(), decltype(test1), int>::value ); // fails
 
     static_assert( std::is_nothrow_invocable<decltype(test1), int>::value );
@@ -116,7 +116,7 @@ int main()
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:** \<type_traits >
 
 **Spazio dei nomi:** std
 

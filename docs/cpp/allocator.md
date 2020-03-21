@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: 2e2615829f6491bf660859fbc86ebcd07a56c5fe
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 39708e8cfff7f61c3a3f763f87e1a3da36f0d4b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857684"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077249"
 ---
 # <a name="allocator"></a>allocator
 
@@ -22,10 +22,10 @@ L'identificatore di dichiarazione dell' **allocatore** può essere applicato all
 ## <a name="syntax"></a>Sintassi
 
 ```
-   __declspec(allocator) 
+   __declspec(allocator)
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il profiler della memoria nativa in Visual Studio funziona raccogliendo i dati degli eventi ETW di allocazione generati da durante il Runtime. Gli allocatori in CRT e Windows SDK sono stati annotati a livello di origine in modo che sia possibile acquisirne i dati di allocazione. Se si scrivono allocatori personalizzati, tutte le funzioni che restituiscono un puntatore alla memoria heap appena allocata possono essere decorate con `__declspec(allocator)`, come illustrato in questo esempio per malloc:
 

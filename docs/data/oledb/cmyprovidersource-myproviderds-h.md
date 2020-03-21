@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 296e7848b1d756fe0aba6156be2501db45bb092b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60324ae914c9490144a715e06323ee6d184ce201
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230556"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079727"
 ---
-# <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
+# <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS. h)
 
-Le classi del provider utilizzano l'ereditarietà multipla. Il codice seguente mostra la catena di ereditarietà per l'oggetto origine dati:
+Le classi del provider utilizzano l'ereditarietà multipla. Nel codice seguente viene illustrata la catena di ereditarietà per l'oggetto origine dati:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -35,18 +35,18 @@ class ATL_NO_VTABLE CCustomSource :
    public IInternalConnectionImpl<CCustomSource>
 ```
 
-Tutti i componenti COM derivano da `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx` fornisce l'implementazione completa per il `IUnknown` interfaccia. Può gestire qualsiasi modello di threading. `CComCoClass` gestisce l'eventuale supporto necessario per l'errore. Se si desidera restituire informazioni più dettagliate sugli errori al client, è possibile usare alcune API di errore in `CComCoClass`.
+Tutti i componenti COM derivano da `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx` fornisce tutta l'implementazione per l'interfaccia di `IUnknown`. Consente di gestire qualsiasi modello di Threading. `CComCoClass` gestisce qualsiasi supporto di errore necessario. Se si desidera inviare al client informazioni dettagliate sugli errori, è possibile utilizzare alcune delle API di errore in `CComCoClass`.
 
-Eredita anche l'oggetto origine dati da diverse classi di 'Impl'. Ogni classe fornisce l'implementazione per un'interfaccia. L'origine dati oggetto implementa la `IPersist`, `IDBProperties`, `IDBInitialize`, e `IDBCreateSession` interfacce. Ogni interfaccia è necessaria da parte di OLE DB per implementare l'oggetto origine dati. È possibile scegliere di supportare o meno una funzionalità specifica che ereditano o che non eredita da una di queste classi di 'Impl'. Se si desidera supportare le `IDBDataSourceAdmin` interfaccia, si eredita dal `IDBDataSourceAdminImpl` classe per ottenere le funzionalità necessarie.
+L'oggetto origine dati eredita anche da diverse classi ' Impl '. Ogni classe fornisce l'implementazione di per un'interfaccia. L'oggetto origine dati implementa le interfacce `IPersist`, `IDBProperties`, `IDBInitialize`e `IDBCreateSession`. Ogni interfaccia è richiesta da OLE DB per implementare l'oggetto origine dati. È possibile scegliere di supportare o meno la funzionalità specifica ereditando o non ereditando da una di queste classi ' Impl '. Se si desidera supportare l'interfaccia di `IDBDataSourceAdmin`, è possibile ereditare dalla classe `IDBDataSourceAdminImpl` per ottenere la funzionalità necessaria.
 
 ## <a name="com-map"></a>Mappa COM
 
-Ogni volta che il client chiama `QueryInterface` per un'interfaccia sull'origine dati, la chiamata passa attraverso la mappa COM seguente:
+Ogni volta che il client chiama `QueryInterface` per un'interfaccia nell'origine dati, passa attraverso la mappa COM seguente:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
 // CCustomSource
-class ATL_NO_VTABLE CCustomSource : 
+class ATL_NO_VTABLE CCustomSource :
    public CComObjectRootEx<CComSingleThreadModel>,
    public CComCoClass<CCustomSource, &CLSID_Custom>,
    public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
@@ -56,13 +56,13 @@ class ATL_NO_VTABLE CCustomSource :
    public IInternalConnectionImpl<CCustomSource>
 ```
 
-Tutti i componenti COM derivano da `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx` fornisce l'implementazione completa per il `IUnknown` interfaccia. Può gestire qualsiasi modello di threading. `CComCoClass` gestisce l'eventuale supporto necessario per l'errore. Se si desidera restituire informazioni più dettagliate sugli errori al client, è possibile usare alcune API di errore in `CComCoClass`.
+Tutti i componenti COM derivano da `CComObjectRootEx` e `CComCoClass`. `CComObjectRootEx` fornisce tutta l'implementazione per l'interfaccia di `IUnknown`. Consente di gestire qualsiasi modello di Threading. `CComCoClass` gestisce qualsiasi supporto di errore necessario. Se si desidera inviare al client informazioni dettagliate sugli errori, è possibile utilizzare alcune delle API di errore in `CComCoClass`.
 
-Eredita anche l'oggetto origine dati da diverse classi di 'Impl'. Ogni classe fornisce l'implementazione per un'interfaccia. L'origine dati oggetto implementa la `IPersist`, `IDBProperties`, `IDBInitialize`, e `IDBCreateSession` interfacce. Ogni interfaccia è necessaria da parte di OLE DB per implementare l'oggetto origine dati. È possibile scegliere di supportare o meno una funzionalità specifica che ereditano o che non eredita da una di queste classi di 'Impl'. Se si desidera supportare le `IDBDataSourceAdmin` interfaccia, si eredita dal `IDBDataSourceAdminImpl` classe per ottenere le funzionalità necessarie.
+L'oggetto origine dati eredita anche da diverse classi ' Impl '. Ogni classe fornisce l'implementazione di per un'interfaccia. L'oggetto origine dati implementa le interfacce `IPersist`, `IDBProperties`, `IDBInitialize`e `IDBCreateSession`. Ogni interfaccia è richiesta da OLE DB per implementare l'oggetto origine dati. È possibile scegliere di supportare o meno la funzionalità specifica ereditando o non ereditando da una di queste classi ' Impl '. Se si desidera supportare l'interfaccia di `IDBDataSourceAdmin`, è possibile ereditare dalla classe `IDBDataSourceAdminImpl` per ottenere la funzionalità necessaria.
 
 ## <a name="com-map"></a>Mappa COM
 
-Ogni volta che il client chiama `QueryInterface` per un'interfaccia sull'origine dati, la chiamata passa attraverso la mappa COM seguente:
+Ogni volta che il client chiama `QueryInterface` per un'interfaccia nell'origine dati, passa attraverso la mappa COM seguente:
 
 ```cpp
 BEGIN_COM_MAP(CCustomSource)
@@ -74,11 +74,11 @@ BEGIN_COM_MAP(CCustomSource)
 END_COM_MAP()
 ```
 
-Le macro COM_INTERFACE_ENTRY sono compresi tra ATL e indicare l'implementazione di `QueryInterface` in `CComObjectRootEx` per restituire le interfacce appropriate.
+Le macro COM_INTERFACE_ENTRY provengono da ATL e indicano all'implementazione di `QueryInterface` in `CComObjectRootEx` di restituire le interfacce appropriate.
 
-## <a name="property-map"></a>Proprietà mappa
+## <a name="property-map"></a>Mappa delle proprietà
 
-Il mapping di proprietà specifica tutte le proprietà assegnate dal provider:
+Il mapping delle proprietà specifica tutte le proprietà assegnate dal provider:
 
 ```cpp
 BEGIN_PROPSET_MAP(CCustomSource)
@@ -148,9 +148,9 @@ BEGIN_PROPSET_MAP(CCustomSource)
 END_PROPSET_MAP()
 ```
 
-Le proprietà in OLE DB vengono raggruppate. L'oggetto origine dati dispone di due gruppi di proprietà: uno per il DBPROPSET_DATASOURCEINFO impostato e uno per il DBPROPSET_DBINIT impostato. Il set DBPROPSET_DATASOURCEINFO corrisponde alle proprietà sul provider e la relativa origine dati. Il set DBPROPSET_DBINIT corrisponde alla proprietà utilizzate in fase di inizializzazione. Questi set con le macro PROPERTY_SET di gestire i modelli di Provider OLE DB. Le macro di creano un blocco che contiene una matrice di proprietà. Ogni volta che il client chiama il `IDBProperties` interfaccia, il provider Usa il mapping di proprietà.
+Le proprietà in OLE DB sono raggruppate. L'oggetto origine dati dispone di due gruppi di proprietà: uno per il set di DBPROPSET_DATASOURCEINFO e uno per il set di DBPROPSET_DBINIT. Il set di DBPROPSET_DATASOURCEINFO corrisponde alle proprietà relative al provider e alla relativa origine dati. Il set di DBPROPSET_DBINIT corrisponde alle proprietà utilizzate in fase di inizializzazione. I modelli di provider OLE DB gestiscono questi set con le macro PROPERTY_SET. Le macro creano un blocco che contiene una matrice di proprietà. Ogni volta che il client chiama l'interfaccia `IDBProperties`, il provider utilizza il mapping delle proprietà.
 
-Non è necessario implementare tutte le proprietà nella specifica. Tuttavia, è necessario supportare le proprietà obbligatorie. vedere la specifica della conformità di livello 0 per altre informazioni. Se non si desidera supportare una proprietà, è possibile rimuoverlo dalla mappa. Se si desidera supportare una proprietà, aggiungerlo nell'oggetto map con un PROPERTY_INFO_ENTRY (macro). La macro corrisponde alla `UPROPINFO` struttura come illustrato nel codice seguente:
+Non è necessario implementare ogni proprietà nella specifica. Tuttavia, è necessario supportare le proprietà obbligatorie. Per ulteriori informazioni, vedere la specifica di conformità di livello 0. Se non si vuole supportare una proprietà, è possibile rimuoverla dalla mappa. Se si desidera supportare una proprietà, aggiungerla alla mappa utilizzando una macro PROPERTY_INFO_ENTRY. La macro corrisponde alla struttura `UPROPINFO` come illustrato nel codice seguente:
 
 ```cpp
 struct UPROPINFO
@@ -168,17 +168,17 @@ struct UPROPINFO
 };
 ```
 
-Ogni elemento nella struttura rappresenta le informazioni per la gestione della proprietà. Contiene un `DBPROPID` per determinare il GUID e l'ID della proprietà. Contiene inoltre le voci per determinare il tipo e il valore della proprietà.
+Ogni elemento nella struttura rappresenta le informazioni per la gestione della proprietà. Contiene un `DBPROPID` per determinare il GUID e l'ID per la proprietà. Contiene anche le voci per determinare il tipo e il valore della proprietà.
 
-Se si desidera modificare il valore predefinito di una proprietà (si noti che un utente può modificare il valore di una proprietà scrivibile in qualsiasi momento), è possibile usare macro PROPERTY_INFO_ENTRY_VALUE o PROPERTY_INFO_ENTRY_EX. Queste macro consentono di specificare un valore per una proprietà corrispondente. La macro PROPERTY_INFO_ENTRY_VALUE è una notazione a sintassi abbreviata che consente di modificare il valore. La macro PROPERTY_INFO_ENTRY_VALUE chiama il PROPERTY_INFO_ENTRY_EX (macro). Questa macro consente di aggiungere o modificare tutti gli attributi nel `UPROPINFO` struttura.
+Se si desidera modificare il valore predefinito di una proprietà (si noti che un consumer può modificare il valore di una proprietà scrivibile in qualsiasi momento), è possibile utilizzare la PROPERTY_INFO_ENTRY_VALUE o la macro PROPERTY_INFO_ENTRY_EX. Queste macro consentono di specificare un valore per una proprietà corrispondente. La macro PROPERTY_INFO_ENTRY_VALUE è una notazione abbreviata che consente di modificare il valore. La macro PROPERTY_INFO_ENTRY_VALUE chiama la macro PROPERTY_INFO_ENTRY_EX. Questa macro consente di aggiungere o modificare tutti gli attributi nella struttura `UPROPINFO`.
 
-Se si desidera definire il proprio set di proprietà, è possibile aggiungerne una combinazione di BEGIN_PROPSET_MAP/END_PROPSET_MAP aggiuntive. Definire un GUID per il set di proprietà e quindi definire le proprietà personalizzate. Se si dispone di proprietà specifiche del provider, aggiungerli a un nuovo insieme anziché uno esistente. Ciò evita i problemi nelle versioni più recenti di OLE DB.
+Se si desidera definire un set di proprietà personalizzato, è possibile aggiungerne uno creando una combinazione BEGIN_PROPSET_MAP/END_PROPSET_MAP aggiuntiva. Definire un GUID per il set di proprietà e quindi definire le proprie proprietà. Se si dispone di proprietà specifiche del provider, aggiungerle a un nuovo set di proprietà anziché utilizzarne una esistente. In questo modo si evitano problemi nelle versioni successive di OLE DB.
 
-## <a name="user-defined-property-sets"></a>Set di proprietà definito dall'utente
+## <a name="user-defined-property-sets"></a>Set di proprietà definiti dall'utente
 
-Visual C++ supporta i set di proprietà definito dall'utente. Non è necessario eseguire l'override `GetProperties` o `GetPropertyInfo`. Al contrario, i modelli di rilevare qualsiasi set di proprietà definito dall'utente e aggiungerlo all'oggetto appropriato.
+Visual C++ supporta set di proprietà definiti dall'utente. Non è necessario eseguire l'override di `GetProperties` o `GetPropertyInfo`. Al contrario, i modelli rilevano qualsiasi set di proprietà definito dall'utente e lo aggiungono all'oggetto appropriato.
 
-Se si dispone di un set di proprietà definito dall'utente che deve essere disponibile in fase di inizializzazione (vale a dire, prima che il consumer chiama `IDBInitialize::Initialize`), è possibile specificare questo usando il flag UPROPSET_USERINIT insieme BEGIN_PROPERTY_SET_EX (macro). Il set di proprietà deve essere l'oggetto origine dati per il corretto funzionamento (come richiede la specifica OLE DB). Ad esempio:
+Se si dispone di un set di proprietà definito dall'utente che deve essere disponibile in fase di inizializzazione (ovvero prima che il consumer chiami `IDBInitialize::Initialize`), è possibile specificarlo utilizzando il flag UPROPSET_USERINIT insieme alla macro BEGIN_PROPERTY_SET_EX. Il set di proprietà deve trovarsi nell'oggetto origine dati affinché questo funzioni, come richiesto dalla specifica OLE DB. Ad esempio:
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)

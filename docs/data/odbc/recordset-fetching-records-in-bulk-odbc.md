@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Recupero di record nel blocco (ODBC)'
+title: 'Recordset: recupero di massa di record (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,61 +14,61 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd9597da7ab4c405f90a145182d63945cef48c53
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397848"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079818"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset: Recupero di record nel blocco (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset: recupero di massa di record (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-Classe `CRecordset` fornisce il supporto per il recupero di righe bulk, il che significa che più record possono essere recuperati in una sola volta durante un'operazione di recupero singolo, anziché recuperare un record alla volta dall'origine dati. È possibile implementare il recupero di righe bulk solo in un oggetto derivato `CRecordset` classe. Il processo di trasferimento dei dati dall'origine dati per l'oggetto recordset è denominato exchange di massa di campi di record (RFX di massa). Si noti che se non si usa il recupero di righe bulk in una `CRecordset`-classe derivata, i dati verrà trasferiti mediante il trasferimento di campi di record (RFX). Per altre informazioni, vedere [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Classe `CRecordset` fornisce supporto per il recupero di righe bulk, il che significa che è possibile recuperare più record contemporaneamente durante una singola operazione di recupero, anziché recuperare un record alla volta dall'origine dati. È possibile implementare il recupero di righe BULK solo in una classe `CRecordset` derivata. Il processo di trasferimento dei dati dall'origine dati all'oggetto recordset è denominato Bulk Record Field Exchange (RFX bulk). Si noti che se non si utilizza il recupero di righe bulk in una classe derivata da `CRecordset`, i dati vengono trasferiti tramite RFX (record Field Exchange). Per altre informazioni, vedere [trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
-Questo argomento viene illustrato:
+In questo argomento:
 
-- [Come CRecordset supporta il recupero di righe bulk](#_core_how_crecordset_supports_bulk_row_fetching).
+- In [che modo CRecordset supporta il recupero di righe BULK](#_core_how_crecordset_supports_bulk_row_fetching).
 
-- [Alcune considerazioni speciali quando si usa bulk di recupero di righe](#_core_special_considerations).
+- [Alcune considerazioni speciali relative all'utilizzo del recupero di righe BULK](#_core_special_considerations).
 
-- [Come implementare il trasferimento di campi di record di operazioni bulk](#_core_how_to_implement_bulk_record_field_exchange).
+- [Come implementare lo scambio di campi di record in blocco](#_core_how_to_implement_bulk_record_field_exchange).
 
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> Come CRecordset supporta il recupero di righe Bulk
+##  <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Come CRecordset supporta il recupero di righe BULK
 
-Prima di aprire l'oggetto recordset, è possibile definire una dimensione del set di righe con la `SetRowsetSize` funzione membro. Le dimensioni del set di righe specifica il numero di record deve essere recuperato durante un'operazione di recupero singolo. Quando viene implementato il recupero di righe bulk, le dimensioni predefinite del set di righe sono 25. Se non è implementato il recupero di righe bulk, le dimensioni del set di righe rimangono fissa a 1.
+Prima di aprire l'oggetto recordset, è possibile definire le dimensioni di un set di righe con la funzione membro `SetRowsetSize`. Con le dimensioni del set di righe viene specificato il numero di record da recuperare durante una singola operazione di recupero. Quando si implementa il recupero di righe in blocco, la dimensione predefinita del set di righe è 25. Se il recupero di righe in blocco non è implementato, le dimensioni del set di righe restano fisse su 1.
 
-Dopo aver inizializzato la dimensione del set di righe, chiamare il [aperto](../../mfc/reference/crecordset-class.md#open) funzione membro. In questo caso è necessario specificare il `CRecordset::useMultiRowFetch` opzione del *dwOptions* parametro per implementare il recupero di righe bulk. È inoltre possibile impostare il `CRecordset::userAllocMultiRowBuffers` opzione. Il meccanismo di scambio di campi di record di massa Usa matrici per archiviare più righe di dati recuperati durante un'operazione di recupero. I buffer di archiviazione possono essere allocati automaticamente dal framework oppure è possibile allocarli manualmente. Specifica il `CRecordset::userAllocMultiRowBuffers` opzione significa che è necessario effettuare l'allocazione.
+Dopo aver inizializzato le dimensioni del set di righe, chiamare la funzione membro [Open](../../mfc/reference/crecordset-class.md#open) . Qui è necessario specificare l'opzione `CRecordset::useMultiRowFetch` del parametro *dwOptions* per implementare il recupero di righe BULK. È inoltre possibile impostare l'opzione `CRecordset::userAllocMultiRowBuffers`. Il meccanismo di scambio dei campi di record bulk utilizza matrici per archiviare più righe di dati recuperate durante un'operazione di recupero. Questi buffer di archiviazione possono essere allocati automaticamente dal Framework oppure è possibile allocarli manualmente. Se si specifica l'opzione `CRecordset::userAllocMultiRowBuffers`, l'allocazione sarà eseguita.
 
-La tabella seguente elenca le funzioni membro `CRecordset` per supportare il recupero di righe bulk.
+Nella tabella seguente sono elencate le funzioni membro fornite da `CRecordset` per supportare il recupero di righe BULK.
 
 |Funzione membro|Descrizione|
 |---------------------|-----------------|
 |[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|Funzione virtuale che gestisce gli errori che si verificano durante il recupero.|
-|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementa i campi di record di massa. Chiamato automaticamente per i trasferimenti di più righe di dati dall'origine dati per l'oggetto recordset.|
+|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementa lo scambio di campi di record in blocco. Chiamato automaticamente per trasferire più righe di dati dall'origine dati all'oggetto recordset.|
 |[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|Recupera l'impostazione corrente per le dimensioni del set di righe.|
-|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Indica il numero di righe effettivamente recuperato dopo un'operazione di recupero specificato. Nella maggior parte dei casi, questa è la dimensione del set di righe, a meno che non è stato recuperato un rowset incompleto.|
-|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Restituisce lo stato di recupero per una determinata riga all'interno di un set di righe.|
-|[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|Aggiorna i dati e lo stato di una riga specifica all'interno di un set di righe.|
-|[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Sposta il cursore a una riga specifica all'interno di un set di righe.|
-|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Funzione virtuale che modifica l'impostazione per le dimensioni del set di righe per il valore specificato.|
+|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Indica il numero di righe effettivamente recuperate dopo una determinata operazione di recupero. Nella maggior parte dei casi si tratta della dimensione del set di righe, a meno che non sia stato recuperato un set di righe incompleto.|
+|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Restituisce uno stato di recupero per una determinata riga all'interno di un set di righe.|
+|[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|Aggiorna i dati e lo stato di una determinata riga all'interno di un set di righe.|
+|[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Sposta il cursore in una determinata riga all'interno di un set di righe.|
+|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Funzione virtuale che modifica l'impostazione per la dimensione del set di righe sul valore specificato.|
 
-##  <a name="_core_special_considerations"></a> Considerazioni speciali
+##  <a name="special-considerations"></a><a name="_core_special_considerations"></a>Considerazioni speciali
 
-Anche se il recupero di righe bulk è un miglioramento delle prestazioni, alcune funzionalità di operare in modo diverso. Prima di decidere di implementare il recupero di righe bulk, considerare quanto segue:
+Sebbene il recupero di righe in blocco sia un miglioramento delle prestazioni, alcune funzionalità funzionano in modo diverso. Prima di decidere di implementare il recupero di righe bulk, tenere presente quanto segue:
 
-- Il framework chiama automaticamente il `DoBulkFieldExchange` funzione membro per trasferire i dati dall'origine dati per l'oggetto recordset. Tuttavia, dati non vengono trasferiti dal recordset all'origine dati. Chiama il `AddNew`, `Edit`, `Delete`, o `Update` risultati delle funzioni membro in un'asserzione non riuscita. Sebbene `CRecordset` attualmente non fornisce un meccanismo per l'aggiornamento di righe bulk di dati, è possibile scrivere funzioni personalizzate usando la funzione API ODBC `SQLSetPos`. Per altre informazioni sulle `SQLSetPos`, vedere la *riferimento per programmatori ODBC SDK* nella documentazione MSDN.
+- Il Framework chiama automaticamente la funzione membro `DoBulkFieldExchange` per trasferire i dati dall'origine dati all'oggetto recordset. Tuttavia, i dati non vengono trasferiti nuovamente dal recordset all'origine dati. La chiamata alle funzioni membro `AddNew`, `Edit`, `Delete`o `Update` genera un'asserzione non riuscita. Sebbene `CRecordset` attualmente non fornisca un meccanismo per l'aggiornamento di righe di dati bulk, è possibile scrivere funzioni personalizzate utilizzando la funzione API ODBC `SQLSetPos`. Per ulteriori informazioni su `SQLSetPos`, vedere la documentazione *di riferimento per programmatori ODBC SDK* nella documentazione di MSDN.
 
-- Le funzioni membro `IsDeleted`, `IsFieldDirty`, `IsFieldNull`, `IsFieldNullable`, `SetFieldDirty`, e `SetFieldNull` non possono essere utilizzati nei recordset che implementano il recupero di righe bulk. Tuttavia, è possibile chiamare `GetRowStatus` al posto di `IsDeleted`, e `GetODBCFieldInfo` invece di `IsFieldNullable`.
+- Le funzioni membro `IsDeleted`, `IsFieldDirty`, `IsFieldNull`, `IsFieldNullable`, `SetFieldDirty`e `SetFieldNull` non possono essere utilizzate nei recordset che implementano il recupero di righe BULK. Tuttavia, è possibile chiamare `GetRowStatus` al posto di `IsDeleted`e `GetODBCFieldInfo` al posto di `IsFieldNullable`.
 
-- Il `Move` operazioni Riposiziona il recordset dal set di righe. Si supponga, ad esempio, che si apre un oggetto recordset che include 100 record con una dimensione iniziale del set di righe pari a 10. `Open` Recupera righe da 1 a 10, con il record corrente posizionate sulla riga 1. Una chiamata a `MoveNext` recupera il successivo set di righe, non la riga successiva. Questo set di righe composto da righe 11 e 20, con il record corrente posizionate sulla riga 11. Si noti che `MoveNext` e `Move( 1 )` non sono equivalenti quando viene implementato il recupero di righe bulk. `Move( 1 )` Recupera il set di righe che inizia 1 riga del record corrente. In questo esempio, la chiamata `Move( 1 )` dopo la chiamata `Open` recupera il set di righe costituiti da righe 2 e 11, con il record corrente posizionato nella riga 2. Per altre informazioni, vedere la [spostare](../../mfc/reference/crecordset-class.md#move) funzione membro.
+- Il `Move` operazioni riposiziona il recordset in base al set di righe. Si supponga, ad esempio, di aprire un recordset con 100 record con una dimensione iniziale del set di righe pari a 10. `Open` recupera le righe da 1 a 10, con il record corrente posizionato nella riga 1. Una chiamata a `MoveNext` Recupera il set di righe successivo, non la riga successiva. Questo set di righe è costituito da righe da 11 a 20, con il record corrente posizionato sulla riga 11. Si noti che `MoveNext` e `Move( 1 )` non sono equivalenti quando si implementa il recupero di righe BULK. `Move( 1 )` Recupera il set di righe che inizia una riga dal record corrente. In questo esempio, chiamando `Move( 1 )` dopo aver chiamato `Open` Recupera il set di righe costituito da righe da 2 a 11, con il record corrente posizionato sulla riga 2. Per ulteriori informazioni, vedere la funzione membro [Move](../../mfc/reference/crecordset-class.md#move) .
 
-- A differenza di exchange di campi di record, le procedure guidate non supportano il trasferimento di campi di record di operazioni bulk. Ciò significa che è necessario dichiarare manualmente i membri di dati di campo ed eseguire l'override manuale `DoBulkFieldExchange` scrivendo le chiamate alle funzioni RFX di massa. Per altre informazioni, vedere [funzioni RFX](../../mfc/reference/record-field-exchange-functions.md) nel *Class Library Reference*.
+- A differenza dello scambio di campi di record, le procedure guidate non supportano lo scambio di campi di record in blocco. Ciò significa che è necessario dichiarare manualmente i membri dati del campo ed eseguire manualmente l'override `DoBulkFieldExchange` scrivendo chiamate alle funzioni RFX di massa. Per altre informazioni, vedere [funzioni di scambio di campi di record](../../mfc/reference/record-field-exchange-functions.md) nei *riferimenti alla libreria di classi*.
 
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> Come implementare Bulk Record Field Exchange
+##  <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>Come implementare lo scambio di campi di record bulk
 
-Trasferimento di campi di record di operazioni bulk trasferisce un set di righe di dati dall'origine dati per l'oggetto recordset. Le funzioni RFX di massa utilizzano matrici per archiviare i dati, nonché le matrici per archiviare la lunghezza di ogni elemento di dati nel set di righe. Nella definizione della classe, è necessario definire i membri dati del campo come puntatori a matrici di dati di accesso. Inoltre, è necessario definire un set di puntatori a matrici di lunghezze di accesso. Qualsiasi membro dati di parametro non deve essere dichiarato come puntatori. dichiara i membri dati di parametro quando si usa exchange di massa di campi di record è quello utilizzato per definirle quando si usa campi di record. Il codice seguente illustra un semplice esempio:
+Lo scambio di campi di record bulk trasferisce un set di righe di dati dall'origine dati all'oggetto recordset. Le funzioni RFX bulk utilizzano matrici per archiviare questi dati, nonché matrici per archiviare la lunghezza di ogni elemento di dati nel set di righe. Nella definizione della classe è necessario definire i membri dati del campo come puntatori per accedere alle matrici di dati. Inoltre, è necessario definire un set di puntatori per accedere alle matrici di lunghezze. I membri dati dei parametri non devono essere dichiarati come puntatori; dichiarare i membri dei dati dei parametri quando si usa lo scambio di campi di record in blocco equivale a dichiararli quando si usa lo scambio di campi di record. Il codice seguente illustra un semplice esempio:
 
 ```cpp
 class MultiRowSet : public CRecordset
@@ -93,7 +93,7 @@ public:
 }
 ```
 
-È possibile allocare i buffer di archiviazione manualmente o automaticamente tramite il framework dell'allocazione. Per allocare i buffer, è necessario specificare il `CRecordset::userAllocMultiRowBuffers` opzione del *dwOptions* parametri nel `Open` funzione membro. Assicurarsi di impostare le dimensioni delle matrici almeno pari alla dimensione del set di righe. Se si desidera che il framework di allocazione, è necessario inizializzare i puntatori a NULL. Questa operazione viene in genere eseguita nel costruttore dell'oggetto recordset:
+È possibile allocare questi buffer di archiviazione manualmente o fare in modo che il Framework esegua l'allocazione. Per allocare i buffer manualmente, è necessario specificare l'opzione `CRecordset::userAllocMultiRowBuffers` del parametro *dwOptions* nella funzione membro `Open`. Assicurarsi di impostare le dimensioni delle matrici almeno uguale alla dimensione del set di righe. Se si desidera che il Framework esegua l'allocazione, è necessario inizializzare i puntatori su NULL. Questa operazione viene in genere eseguita nel costruttore dell'oggetto Recordset:
 
 ```cpp
 MultiRowSet::MultiRowSet( CDatabase* pDB )
@@ -114,7 +114,7 @@ MultiRowSet::MultiRowSet( CDatabase* pDB )
 }
 ```
 
-Infine, è necessario eseguire l'override di `DoBulkFieldExchange` funzione membro. Per i membri di dati di campo, chiamare le funzioni RFX di massa; per tutti i membri dati di parametro, chiamare le funzioni RFX. Se il recordset aperto passando un'istruzione SQL o stored procedure da `Open`, l'ordine in cui vengono eseguite le chiamate di RFX di massa deve corrispondere all'ordine delle colonne nel set di record; Analogamente, l'ordine di RFX chiamate per i parametri devono corrispondere all'ordine dei parametri nell'istruzione SQL o stored procedure.
+Infine, è necessario eseguire l'override della funzione membro `DoBulkFieldExchange`. Per i membri dati del campo, chiamare le funzioni RFX di massa; per i membri dati dei parametri, chiamare le funzioni RFX. Se il recordset è stato aperto passando un'istruzione SQL o stored procedure al `Open`, l'ordine in cui si effettuano le chiamate a RFX bulk deve corrispondere all'ordine delle colonne nel recordset. Analogamente, l'ordine delle chiamate RFX per i parametri deve corrispondere all'ordine dei parametri nell'istruzione SQL o stored procedure.
 
 ```cpp
 void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
@@ -135,13 +135,12 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 ```
 
 > [!NOTE]
->  È necessario chiamare il `Close` funzione di membro prima derivata `CRecordset` classe esce dall'ambito. Ciò garantisce che qualsiasi memoria allocata dal framework vengono liberate. È buona norma chiamare sempre in modo esplicito `Close`, indipendentemente dal fatto che è stato implementato il recupero di righe bulk.
+>  È necessario chiamare la funzione membro `Close` prima che la classe `CRecordset` derivata esca dall'ambito. In questo modo si garantisce che la memoria allocata dal Framework venga liberata. È consigliabile chiamare sempre in modo esplicito `Close`, indipendentemente dal fatto che sia stato implementato il recupero di righe BULK.
 
-Per altre informazioni sui campi di record (RFX), vedere [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Per altre informazioni sull'utilizzo di parametri, vedere [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype) e [Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Per altre informazioni sullo scambio di campi di record (RFX), vedere [trasferimento di campi di record:](../../data/odbc/record-field-exchange-how-rfx-works.md)funzionamento di RFX. Per ulteriori informazioni sull'utilizzo dei parametri, vedere [CFieldExchange:: SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) e [Recordset: parametrizzazione un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[CRecordset::m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
-[CRecordset::m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)
-
+[CRecordset:: m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
+[CRecordset:: m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)

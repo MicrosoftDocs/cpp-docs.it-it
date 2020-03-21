@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fbc8b108ea958f526156e7f81a75a2918a0a8903
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418447"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076150"
 ---
 # <a name="functions-c"></a>Funzioni (C++)
 
@@ -261,7 +261,7 @@ Una variabile dichiarata all'interno di un corpo della funzione viene chiamata *
 
 In C++ una variabile locale può essere dichiarata come statica. La variabile è visibile solo all'interno del corpo della funzione, ma esiste una singola copia della variabile per tutte le istanze della funzione. Gli oggetti statici locali vengono eliminati definitivamente durante la chiusura specificata da `atexit`. Se un oggetto statico non è stato costruito perché il flusso di controllo del programma ne ha ignorato la dichiarazione, non viene eseguito alcun tentativo di eliminare tale oggetto.
 
-##  <a name="type_deduction"></a>Deduzione del tipo nei tipi restituiti (C++ 14)
+##  <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>Deduzione del tipo nei tipi restituiti (C++ 14)
 
 In C++ 14 è possibile usare **auto** per indicare al compilatore di dedurre il tipo restituito dal corpo della funzione senza dover fornire un tipo restituito finale. Si noti che **auto** deduce sempre un valore restituito per valore. Usare `auto&&` per indicare al compilatore di dedurre un riferimento.
 
@@ -277,7 +277,7 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 
 Si noti che **auto** non mantiene la const del tipo che deduce. Per le funzioni di invio il cui valore restituito deve conservare la const-ness o la Ref-Ness degli argomenti, è possibile usare la parola chiave **decltype (auto)** , che usa le regole di inferenza del tipo **decltype** e mantiene tutte le informazioni sul tipo. **decltype (auto)** può essere utilizzato come valore restituito normale sul lato sinistro o come valore restituito finale.
 
-Nell'esempio seguente, basato sul codice di [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html), viene mostrato **decltype (auto)** usato per abilitare l'invio perfetto degli argomenti della funzione in un tipo restituito che non è noto fino a quando non viene creata un'istanza del modello.
+Nell'esempio seguente, basato sul codice di [N3493](https://wg21.link/n3493), viene mostrato **decltype (auto)** usato per abilitare l'invio perfetto degli argomenti della funzione in un tipo restituito che non è noto fino a quando non viene creata un'istanza del modello.
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -295,7 +295,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="multi_val"></a>Restituzione di più valori da una funzione
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>Restituzione di più valori da una funzione
 
 Esistono diversi modi per restituire più di un valore da una funzione:
 

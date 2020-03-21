@@ -7,32 +7,32 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: a65ad69914b14e7b8b37c321fa7d06740af57e3a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a8cd13e27859d09bcaaca1f5f6f1c2750b908fe6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493379"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078777"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilizzo di librerie e componenti
 
-Un progetto deve C++ spesso chiamare funzioni o accedere ai dati in un file binario, ad esempio una libreria statica (file con estensione LIB), una dll, un componente Windows Runtime, un componente com o un assembly .NET. In questi casi, è necessario configurare il progetto in modo che possa trovare tale file binario in fase di compilazione. I passaggi specifici dipendono dal tipo di progetto, dal tipo di file binario e dal fatto che il file binario venga compilato nella stessa soluzione del progetto. 
+Un progetto deve C++ spesso chiamare funzioni o accedere ai dati in un file binario, ad esempio una libreria statica (file con estensione LIB), una dll, un componente Windows Runtime, un componente com o un assembly .NET. In questi casi, è necessario configurare il progetto in modo che possa trovare tale file binario in fase di compilazione. I passaggi specifici dipendono dal tipo di progetto, dal tipo di file binario e dal fatto che il file binario venga compilato nella stessa soluzione del progetto.
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Utilizzo delle librerie scaricate tramite vcpkg
 
-Per utilizzare una libreria scaricata tramite Gestione pacchetti **vcpkg** , è possibile ignorare le istruzioni riportate di seguito. Vedere [vcpkg: Una C++ gestione pacchetti per Windows, Linux e MacOS](vcpkg.md#integrate-with-visual-studio-windows) per altre informazioni.
+Per utilizzare una libreria scaricata tramite Gestione pacchetti **vcpkg** , è possibile ignorare le istruzioni riportate di seguito. Per altre informazioni [, C++ vedere vcpkg: Gestione pacchetti per Windows, Linux e MacOS](vcpkg.md#integrate-with-visual-studio-windows) .
 
 ## <a name="consuming-static-libraries"></a>Utilizzo di librerie statiche
 
 Se il progetto di libreria statica viene compilato nella stessa soluzione:
 
 1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>includere i file di intestazione per la libreria statica utilizzando le virgolette. In una soluzione tipica il percorso inizierà con `../<library project name>`. IntelliSense ti aiuterà a trovarlo.
-2. Aggiungere un riferimento al progetto di libreria statica. Fare clic con il pulsante destro del mouse su **riferimenti** nel nodo progetto applicazione in **Esplora soluzioni** e scegliere **Aggiungi riferimento**. 
+2. Aggiungere un riferimento al progetto di libreria statica. Fare clic con il pulsante destro del mouse su **riferimenti** nel nodo progetto applicazione in **Esplora soluzioni** e scegliere **Aggiungi riferimento**.
 
 Se la libreria statica non fa parte della soluzione:
 
-1. Fare clic con il pulsante destro del mouse sul nodo del progetto dell'applicazione in **Esplora soluzioni** , quindi scegliere **Proprietà**. 
-2. Nella pagina delle proprietà **directory di VC + +** aggiungere il percorso della directory in cui si trova il file con estensione lib nei **percorsi di libreria** e aggiungere il percorso dei file di intestazione della libreria nelle **directory**di inclusione.  
+1. Fare clic con il pulsante destro del mouse sul nodo del progetto dell'applicazione in **Esplora soluzioni** , quindi scegliere **Proprietà**.
+2. Nella pagina delle proprietà **directory di VC + +** aggiungere il percorso della directory in cui si trova il file con estensione lib nei **percorsi di libreria** e aggiungere il percorso dei file di intestazione della libreria nelle **directory di inclusione**.  
 3. Nella pagina delle proprietà di **input del linker >** aggiungere il nome del file con estensione LIB a **dipendenze aggiuntive**.
 
 ## <a name="dynamic-link-libraries"></a>Librerie a collegamento dinamico
@@ -46,11 +46,11 @@ Se la DLL non fa parte della soluzione dell'applicazione, sono necessari il file
 
 ## <a name="com-objects"></a>oggetti COM
 
-Se l'applicazione C++ nativa richiede l'utilizzo di un oggetto com e l'oggetto è *registrato*, è sufficiente chiamare COCREATEINSTANCE e passare il CLSID dell'oggetto. Il sistema lo troverà nel registro di sistema di Windows e lo caricherà. Un C++progetto/CLI può utilizzare un oggetto com nello stesso modo oppure aggiungendo un riferimento a esso dall'aggiunta di **riferimenti > elenco com** e utilizzandolo tramite il [Runtime Callable Wrapper](/dotnet/framework/interop/runtime-callable-wrapper). 
+Se l'applicazione C++ nativa richiede l'utilizzo di un oggetto com e l'oggetto è *registrato*, è sufficiente chiamare COCREATEINSTANCE e passare il CLSID dell'oggetto. Il sistema lo troverà nel registro di sistema di Windows e lo caricherà. Un C++progetto/CLI può utilizzare un oggetto com nello stesso modo oppure aggiungendo un riferimento a esso dall'aggiunta di **riferimenti > elenco com** e utilizzandolo tramite il [Runtime Callable Wrapper](/dotnet/framework/interop/runtime-callable-wrapper).
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>Assembly .NET e componenti Windows Runtime
 
-Nei progetti UWP C++o/CLI si utilizzano assembly .net o Windows Runtime componenti aggiungendo un *riferimento* all'assembly o al componente. Nel nodo **riferimenti** di un progetto UWP o C++/CLI è possibile visualizzare i riferimenti ai componenti di uso comune. Fare clic con il pulsante destro del mouse sul nodo **riferimenti** in **Esplora soluzioni** per visualizzare **Gestione riferimenti** e individuare i componenti aggiuntivi noti al sistema. Fare clic sul pulsante **Sfoglia** per passare alla cartella in cui si trova un componente personalizzato. Poiché gli assembly .NET e i componenti Windows Runtime contengono informazioni sul tipo predefinite, è possibile visualizzarne i metodi e le classi facendo clic con il pulsante destro del mouse e scegliendo **Visualizza nella Visualizzatore oggetti**. 
+Nei progetti UWP C++o/CLI si utilizzano assembly .net o Windows Runtime componenti aggiungendo un *riferimento* all'assembly o al componente. Nel nodo **riferimenti** di un progetto UWP o C++/CLI è possibile visualizzare i riferimenti ai componenti di uso comune. Fare clic con il pulsante destro del mouse sul nodo **riferimenti** in **Esplora soluzioni** per visualizzare **Gestione riferimenti** e individuare i componenti aggiuntivi noti al sistema. Fare clic sul pulsante **Sfoglia** per passare alla cartella in cui si trova un componente personalizzato. Poiché gli assembly .NET e i componenti Windows Runtime contengono informazioni sul tipo predefinite, è possibile visualizzarne i metodi e le classi facendo clic con il pulsante destro del mouse e scegliendo **Visualizza nella Visualizzatore oggetti**.
 
 ## <a name="reference-properties"></a>Proprietà riferimento
 
@@ -144,7 +144,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Per gli assembly .NET Framework, viene visualizzato il percorso completo. Per i componenti COM, viene visualizzato il GUID.
 
-- **Etichetta**
+- **Label**
 
    Visualizza l'etichetta del riferimento.
 
@@ -160,7 +160,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Impostato su`true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
 
-- **Versione**
+- **Version**
 
    Visualizza la versione dell'assembly di riferimento.
 

@@ -1,20 +1,20 @@
 ---
-title: Riferimenti per il linguaggio C++
+title: Riferimenti al linguaggio C++
 ms.custom: index-page
 ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f00d4eb5dc69ee0ab95ea864e63091b041a1853f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301587"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079928"
 ---
-# <a name="c-language-reference"></a>Riferimenti per il linguaggio C++
+# <a name="c-language-reference"></a>Riferimenti al linguaggio C++
 
-Questo riferimento illustra il C++ linguaggio di programmazione implementato nel compilatore Microsoft C++ . L'organizzazione si basa sul [*Manuale di C++ riferimento annotato*](http://www.stroustrup.com/arm.html) di Margaret Ellis e Bjarne Stroustrup e sullo standard internazionale ANSI C++ /iso (ISO/IEC FDIS 14882). Sono incluse le implementazioni specifiche di Microsoft delle funzionalità del linguaggio C++.
+Questo riferimento illustra il C++ linguaggio di programmazione implementato nel compilatore Microsoft C++ . L'organizzazione si basa sul *Manuale di C++ riferimento annotato* di Margaret Ellis e Bjarne Stroustrup e sullo standard internazionale ANSI C++ /iso (ISO/IEC FDIS 14882). Sono incluse le implementazioni specifiche di Microsoft delle funzionalità del linguaggio C++.
 
 Per una panoramica delle procedure C++ di programmazione moderne, vedere la pagina di [Benvenuto C++ ](welcome-back-to-cpp-modern-cpp.md).
 
@@ -24,7 +24,7 @@ Vedere le seguenti tabelle per individuare rapidamente una parola chiave o un op
 
 - [Operatori C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Convenzioni lessicali](../cpp/lexical-conventions.md)<br/>
 Elementi lessicali fondamentali del programma C++: token, commenti, operatori, parole chiave, puntatori, valori letterali. Inoltre, la conversione del file, la precedenza/associatività degli operatori.

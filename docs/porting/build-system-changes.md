@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626606"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076932"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild rispetto a MSBuild: modifiche del sistema di compilazione in Visual Studio 2010
 
@@ -63,7 +63,7 @@ Quando **Esplora soluzioni** viene usato per aggiungere un file a un progetto, i
 
 ## <a name="vc-directories-settings"></a>Impostazioni directory di VC + +
 
-Le impostazioni delle directory di Visual C++ vengono specificate nella [Pagina delle proprietà Directory di VC++](../ide/vcpp-directories-property-page.md). In Visual Studio 2008 e versioni precedenti le impostazioni delle directory si applicano per utente e l'elenco delle directory escluse viene specificato nel file *SYSINCL. dat* . 
+Le impostazioni delle directory di Visual C++ vengono specificate nella [Pagina delle proprietà Directory di VC++](../ide/vcpp-directories-property-page.md). In Visual Studio 2008 e versioni precedenti le impostazioni delle directory si applicano per utente e l'elenco delle directory escluse viene specificato nel file *SYSINCL. dat* .
 
 Le impostazioni delle directory di VC++ non possono essere modificate se si esegue [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) dalla riga di comando. Anche selezionando il menu **Strumenti**, facendo clic su **Importa/Esporta impostazioni** e quindi selezionando l'opzione **Reimposta tutte le impostazioni** non è possibile modificare le impostazioni.
 
@@ -71,7 +71,7 @@ Per eseguire la migrazione delle impostazioni delle directory di VC + + da un fi
 
 1. Aprire il menu **strumenti** , fare clic su **Importa/Esporta impostazioni** .
 2. Selezionare **Importa le impostazioni di ambiente selezionate**
-3. Seguire le istruzioni della procedura guidata.
+3. Seguire le indicazioni della procedura guidata.
 
 ## <a name="see-also"></a>Vedere anche
 

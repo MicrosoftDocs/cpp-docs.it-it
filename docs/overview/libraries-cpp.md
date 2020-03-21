@@ -1,16 +1,16 @@
 ---
 title: Librerie
 ms.date: 11/18/2018
-ms.openlocfilehash: 7eba3905fc0010f37b15b4af40f6135c4fd97f47
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.openlocfilehash: dc139fea346be8034fa80236844abb2303fa345d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400694"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075602"
 ---
 # <a name="libraries"></a>Librerie
 
-Quando si installano uno o più carichi di lavoro C++, Visual Studio include le librerie seguenti. Per informazioni sull'installazione di librerie di terze parti, vedere [vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux e MacOS](../build/vcpkg.md).
+Quando si installano uno o più carichi di lavoro C++, Visual Studio include le librerie seguenti. Per informazioni sull'installazione di librerie di terze parti, vedere [vcpkg C++ : Gestione pacchetti per Windows, Linux e MacOS](../build/vcpkg.md).
 
 ## <a name="standard-libraries"></a>Librerie standard
 
@@ -24,4 +24,3 @@ Quando si installano uno o più carichi di lavoro C++, Visual Studio include le 
 [MFC/ATL](../mfc/mfc-and-atl.md)<br/>
 [Librerie parallele](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 [Librerie di accesso ai dati](../data/data-access-in-cpp.md)
-

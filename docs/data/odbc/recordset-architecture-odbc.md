@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: 0edde640e0eebaf21216fc9ef37a8e31e2c1a210
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: e95250b5ef307eafdb334050fbace945355e0521
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707970"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079857"
 ---
 # <a name="recordset-architecture-odbc"></a>Recordset: architettura (ODBC)
 
@@ -33,11 +33,11 @@ In questo argomento vengono descritti i membri dati che costituiscono l'architet
 - [Uso di membri dati m_nFields e m_nParams](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se viene implementato il recupero di massa di righe, l'architettura è simile. Per informazioni sulle differenze, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se viene implementato il recupero di massa di righe, l'architettura è simile. Per comprendere le differenze, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-##  <a name="_core_a_sample_class"></a> Classe di esempio
+##  <a name="sample-class"></a><a name="_core_a_sample_class"></a> Classe di esempio
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata consumer ODBC MFC non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile creare manualmente un consumer.
 
 Quando si usa la [Creazione guidata consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) dalla procedura guidata **Aggiungi classe** per dichiarare una classe recordset derivata da `CRecordset`, la classe risultante ha la struttura generale illustrata nella semplice classe seguente:
@@ -56,7 +56,7 @@ public:
 
 All'inizio della classe, la procedura guidata scrive un set di [membri dati di campo](#_core_field_data_members). Quando si crea la classe, è necessario specificare uno o più membri dati di campo. Se la classe è con parametri, come nel caso della classe di esempio (con il membro dati `m_strIDParam`), è necessario aggiungere manualmente i [membri dati di parametro](#_core_parameter_data_members). La procedura guidata non supporta l'aggiunta di parametri a una classe.
 
-##  <a name="_core_field_data_members"></a> Membri dati di campo
+##  <a name="field-data-members"></a><a name="_core_field_data_members"></a> Membri dati di campo
 
 I membri più importanti della classe recordset sono i membri dati di campo. Per ogni colonna selezionata dall'origine dati, la classe contiene un membro dati del tipo di dati appropriato per la colonna. Ad esempio, la [classe di esempio](#_core_a_sample_class) riportata all'inizio di questo argomento contiene due membri dati di campo, entrambi di tipo `CString`, denominati `m_strCourseID` e `m_strCourseTitle`.
 
@@ -64,7 +64,7 @@ Quando il recordset seleziona un set di record, il framework associa automaticam
 
 Quando l'utente esegue lo scorrimento a un nuovo record, il framework usa i membri dati di campo per rappresentare il record corrente. Il framework aggiorna i membri dati di campo, sostituendo i valori del record precedente. I membri dati di campo vengono anche usati per l'aggiornamento del record corrente e per l'aggiunta di nuovi record. Nell'ambito del processo di aggiornamento di un record, è possibile specificare i valori di aggiornamento assegnando direttamente i valori a uno o più membri dati di campo appropriati.
 
-##  <a name="_core_parameter_data_members"></a> Membri dati di parametro
+##  <a name="parameter-data-members"></a><a name="_core_parameter_data_members"></a> Membri dati di parametro
 
 Se la classe è con parametri, dispone di uno o più membri dati di parametro. Una classe con parametri consente di basare una query recordset su informazioni ottenute o calcolate in fase di esecuzione.
 
@@ -86,13 +86,13 @@ Attraverso la definizione dei membri dati di parametro, è possibile indicare al
 >  MFC non esegue alcuna operazione con i parametri: in particolare, non esegue la sostituzione di testo. Al contrario, MFC indica a ODBC come ottenere il parametro. ODBC recupera quindi i dati ed esegue la parametrizzazione necessaria.
 
 > [!NOTE]
->  L'ordine dei parametri è importante. Per maggior dettagli in proposito e altre informazioni sui parametri, vedere [Recordset: parametrizzazione di un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+>  L'ordine dei parametri è importante. Per informazioni su questa e altre informazioni sui parametri, vedere [Recordset: parametrizzazione di un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-##  <a name="_core_using_m_nfields_and_m_nparams"></a> Uso di membri dati m_nFields e m_nParams
+##  <a name="using-m_nfields-and-m_nparams"></a><a name="_core_using_m_nfields_and_m_nparams"></a> Uso di membri dati m_nFields e m_nParams
 
 Quando una procedura guidata scrive un costruttore per la classe, inizializza anche il membro dati [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields), che specifica il numero di [membri dati di campo](#_core_field_data_members) nella classe. Se si aggiungono [parametri](#_core_parameter_data_members) alla classe, è necessario aggiungere anche un'inizializzazione per il membro dati [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams), che specifica il numero di membri dati di parametro. Il framework usa questi valori per lavorare con i membri dati.
 
-Per altre informazioni ed esempi, vedere [Trasferimento di campi di record: uso di RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Per ulteriori informazioni ed esempi, vedere [trasferimento di campi di record: utilizzo di RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927700"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076135"
 ---
 # <a name="midl-property-pages"></a>Pagine delle proprietà MIDL
 
@@ -62,15 +62,15 @@ Le pagine delle proprietà MIDL sono disponibili come proprietà Item in un ogge
 
 ### <a name="preprocessor-definitions"></a>Definizioni del preprocessore
 
-Specifica una o più definizioni, incluse le macro\]MIDL ([/d](/windows/win32/midl/-d))\[.
+Specifica una o più definizioni, incluse le macro MIDL ([/d](/windows/win32/midl/-d))\[macro\]).
 
 ### <a name="additional-include-directories"></a>Directory di inclusione aggiuntive
 
-Specifica una o più directory da aggiungere al percorso di inclusione ([/I](/windows/win32/midl/-i)\[percorso\]).
+Specifica una o più directory da aggiungere al percorso di inclusione ([/i](/windows/win32/midl/-i)\[percorso\]).
 
 ### <a name="additional-metadata-directories"></a>Directory di metadati aggiuntive
 
-Specificare la directory che contiene il file Windows. Foundation. winmd (percorso\][/metadata_dir](/windows/win32/midl/-metadata-dir) \[).
+Specificare la directory che contiene il file Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[percorso\]).
 
 ### <a name="enable-windows-runtime"></a>Abilita Windows Runtime
 
@@ -84,11 +84,11 @@ Ignorare le directory di INCLUSIone e correnti ([/no_def_idir](/windows/win32/mi
 
 Forza la compatibilità con mktyplib. exe versione 2,03 ([/mktyplib203](/windows/win32/midl/-mktyplib203)).
 
-### <a name="warning-level"></a>Livello avvisi
+### <a name="warning-level"></a>Livello di avviso
 
 Consente di selezionare la rigidità degli errori del codice MIDL ([/W](/windows/win32/midl/-w)).
 
-**Scelte**
+**Choices**
 
 - **1**
 - **1**
@@ -108,7 +108,7 @@ Impedisce la visualizzazione del messaggio di avvio e del messaggio informativo 
 
 Specifica il tipo di carattere predefinito del compilatore C che verrà usato per compilare il codice generato. ([/char](/windows/win32/midl/-char) firmato | senza segno | ascii7).
 
-**Scelte**
+**Choices**
 
 - Con firma **firmata**
 - **Senza segno** -senza segno
@@ -118,7 +118,7 @@ Specifica il tipo di carattere predefinito del compilatore C che verrà usato pe
 
 Specifica l'ambiente di destinazione ([/ENV](/windows/win32/midl/-env) ARM32 | Win32 | ia64 | x64).
 
-**Scelte**
+**Choices**
 
 - **Non impostato** -Win32
 - **Microsoft Windows 32-bit** -Win32
@@ -137,7 +137,7 @@ Non visualizzare i messaggi di avviso del compilatore ([/no_warn](/windows/win32
 
 ### <a name="application-configuration-mode"></a>Modalità di configurazione dell'applicazione
 
-Consente gli attributi ACF selezionati nel file IDL ([/app_config](/windows/win32/midl/-app-config)).
+Consenti gli attributi ACF selezionati nel file IDL ([/app_config](/windows/win32/midl/-app-config)).
 
 ### <a name="locale-id"></a>ID impostazioni locali
 
@@ -185,7 +185,7 @@ Specifica il nome del file della libreria dei tipi ([/tlb](/windows/win32/midl/-
 
 Genera solo file stub client ([/client](/windows/win32/midl/-client) [Stub | nessuno]).
 
-**Scelte**
+**Choices**
 
 - **Stub-Stub**
 - **Nessuno** -nessuno
@@ -194,7 +194,7 @@ Genera solo file stub client ([/client](/windows/win32/midl/-client) [Stub | nes
 
 Genera solo file stub server ([/Server](/windows/win32/midl/-server) [Stub | nessuno]).
 
-**Scelte**
+**Choices**
 
 - **Stub-Stub**
 - **Nessuno** -nessuno
@@ -211,7 +211,7 @@ Specificare il file stub del server ([/sstub](/windows/win32/midl/-sstub) [file]
 
 Specifica il formato del file della libreria dei tipi ([/oldtlb |/newtlb]).
 
-**Scelte**
+**Choices**
 
 - **NewFormat** -nuovo formato
 - **OldFormat** -formato precedente
@@ -220,7 +220,7 @@ Specifica il formato del file della libreria dei tipi ([/oldtlb |/newtlb]).
 
 ### <a name="c-preprocess-options"></a>Opzioni di pre-elaborazione C
 
-Specifica le opzioni da passare al preprocessore del compilatore C (opzioni[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
+Specifica le opzioni da passare al preprocessore del compilatore C ([/cpp_opt](/windows/win32/midl/-cpp-opt) opzioni).
 
 ### <a name="undefine-preprocessor-definitions"></a>Rimuovi definizioni per il preprocessore
 
@@ -230,7 +230,7 @@ Specifica uno o più undefines, incluse le macro MIDL ([/u](/windows/win32/midl/
 
 Selezionare l'opzione per il controllo degli errori ([/error all | None]).
 
-**Scelte**
+**Choices**
 
 - **EnableCustom** -tutto
 - **Tutto** -tutto
@@ -242,7 +242,7 @@ Verificare la presenza di errori di memoria insufficiente (allocazione[/Error](/
 
 ### <a name="check-bounds"></a>Controlla limiti
 
-Controllare le dimensioni rispetto alla specifica della lunghezza di trasmissione ([/Error](/windows/win32/midl/-error) bounds_check).
+Verificare le dimensioni rispetto alla specifica della lunghezza di trasmissione ([/error](/windows/win32/midl/-error) bounds_check).
 
 ### <a name="check-enum-range"></a>Controlla intervallo di enumerazione
 
@@ -254,7 +254,7 @@ Verificare che i puntatori Ref non siano null ([/Error](/windows/win32/midl/-err
 
 ### <a name="check-stub-data"></a>Controlla dati Stub
 
-Genera il controllo aggiuntivo per la validità dei dati dello stub sul lato server ([/Error](/windows/win32/midl/-error) stub_data).
+Genera un controllo aggiuntivo per la validità dei dati Stub sul lato server ([/error](/windows/win32/midl/-error) stub_data).
 
 ### <a name="prepend-with-abi-namespace"></a>Anteporre allo spazio dei nomi ' ABI '
 
@@ -268,7 +268,7 @@ Genera informazioni aggiuntive per la convalida dei parametri ([/robust](/window
 
 Specifica il livello di compressione delle strutture nel sistema di destinazione (/ZpN).
 
-**Scelte**
+**Choices**
 
 - **Non impostato** -non impostato
 - **1 byte** -Zp1
@@ -283,6 +283,3 @@ Reindirizza l'output dalla schermata a un file ([/o](/windows/win32/midl/-o) fil
 ### <a name="minimum-target-system"></a>Sistema di destinazione minimo
 
 Impostare il sistema di destinazione minimo ([/target](/windows/win32/midl/-target) String).
-
-
-

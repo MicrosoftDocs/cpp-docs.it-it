@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t [C++]
 ms.assetid: 46849455-371c-4d0f-bae4-c1f737d2ca4a
-ms.openlocfilehash: 95f1ff784a173731c847abc91c293c74d8d7afbe
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: e951e79c9cfc12401b6ee14ce623dc2434a18a6b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222469"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079489"
 ---
-# <a name="comptrtoperator-"></a>_com_ptr_t::operator =
+# <a name="_com_ptr_toperator-"></a>_com_ptr_t::operator =
 
 **Sezione specifica Microsoft**
 
@@ -39,7 +39,7 @@ _com_ptr_t& operator=(_InterfaceType* p );
 // AddRef is called to increment the reference count for the encapsulated
 // interface pointer, and Release is called to decrement the reference
 // count for the previously encapsulated pointer.
-template<> _com_ptr_t& 
+template<> _com_ptr_t&
 operator=( Interface* pInterface ) throw();
 
 // Sets a smart pointer to be a copy of another instance of the same
@@ -59,7 +59,7 @@ _com_ptr_t& operator=( int null );
 _com_ptr_t& operator=( const _variant_t& varSrc );
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Assegna un puntatore a interfaccia a questo oggetto `_com_ptr_t`.
 

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 68dbd0b5b2e9d4fc04821a7e7e0193840b55e312
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500512"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077137"
 ---
 # <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper (funzione)
 
-Verifica che il tipo dell'argomento specificato derivi dall' `IUnknown` interfaccia.
+Verifica che il tipo dell'argomento specificato derivi dall'interfaccia `IUnknown`.
 
 > [!IMPORTANT]
 > Questa specializzazione del modello supporta l'infrastruttura WRL e non può essere usata direttamente dal codice. In alternativa, usare [IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args) .
@@ -35,18 +35,17 @@ void** IID_PPV_ARGS_Helper(
 *T*<br/>
 Tipo di argomento *PP*.
 
-*pp*<br/>
+*PP*<br/>
 Puntatore A doppia indiretta.
 
 ## <a name="return-value"></a>Valore restituito
 
-Viene eseguito il cast dell'argomento in un puntatore a un puntatore a **void**.
+Viene *eseguito il* cast dell'argomento in un puntatore a un puntatore a **void**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Viene generato un errore in fase di compilazione se il parametro di modello *T* non deriva `IUnknown`da.
+Se il parametro di modello *T* non deriva da `IUnknown`, viene generato un errore in fase di compilazione.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** client.h
-

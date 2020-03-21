@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189012"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075201"
 ---
 # <a name="hint-files"></a>File dei suggerimenti
 
@@ -104,7 +104,7 @@ Per impostazione predefinita, la macro dannosa è evidenziata come un suggerimen
 
 Il comando di menu **Progetto** > **Visualizza errori del database di esplorazione** visualizza tutte le aree non analizzate nell'**Elenco errori**. Il comando è progettato per semplificare la creazione del file dei suggerimenti iniziale. Tuttavia, poiché il parser non indica se la causa dell'errore è stato una macro dannosa, sarà necessario valutare ogni errore. Eseguire il comando **Visualizza errori del database di esplorazione** e passare a ogni errore per caricare il file interessato nell'editor. Dopo aver caricato il file, le macro presenti all'interno dell'area vengono evidenziate. È possibile richiamare le azioni rapide per aggiungerle a un file dei suggerimenti. Dopo l'aggiornamento del file dei suggerimenti, l'elenco errori viene aggiornato automaticamente. In alternativa, se si modifica manualmente il file dei suggerimenti è possibile usare il comando **Ripeti analisi soluzione** per attivare un aggiornamento.
 
-## <a name="architecture"></a>Architettura
+## <a name="architecture"></a>Architecture
 
 I file dei suggerimenti riguardano le directory fisiche, non le directory logiche visualizzate in **Esplora soluzioni**. Non è necessario aggiungere un file dei suggerimenti al progetto perché il file abbia effetto. Il sistema di analisi usa i file dei suggerimenti solo quando analizza i file di origine.
 
@@ -150,12 +150,12 @@ I suggerimenti usano questa sintassi:
 
 |Sintassi|Significato|
 |------------|-------------|
-|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|Una direttiva del preprocessore che definisce un nuovo suggerimento o ridefinisce un suggerimento esistente. Dopo la direttiva, il preprocessore sostituisce ogni occorrenza di *hint-name* nel codice sorgente con *replacement-string*.<br /><br /> La seconda forma di sintassi definisce un suggerimento simile a una funzione. Se un suggerimento di tipo funzione si verifica nel codice sorgente, il preprocessore prima sostituisce ogni occorrenza di *parameter* in *replacement-string* con l'argomento corrispondente nel codice sorgente e quindi sostituisce *hint-name* con *replacement-string*.|
+|`#define` *hint-* *stringa di sostituzione* nome<br /><br /> `#define` *hint-name* `(` *parametro*,...`)`la *stringa di sostituzione*|Una direttiva del preprocessore che definisce un nuovo suggerimento o ridefinisce un suggerimento esistente. Dopo la direttiva, il preprocessore sostituisce ogni occorrenza di *hint-name* nel codice sorgente con *replacement-string*.<br /><br /> La seconda forma di sintassi definisce un suggerimento simile a una funzione. Se un suggerimento di tipo funzione si verifica nel codice sorgente, il preprocessore prima sostituisce ogni occorrenza di *parameter* in *replacement-string* con l'argomento corrispondente nel codice sorgente e quindi sostituisce *hint-name* con *replacement-string*.|
 |`@<`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica l'inizio di un set di elementi della mappa.|
 |`@=`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica un elemento intermedio della mappa. Una mappa può contenere più elementi.|
 |`@>`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica la fine di un set di elementi della mappa.|
-|`#undef` *hint-name*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è specificato dall'identificatore *hint-name*.|
-|`//` *comment*|Commento a riga singola.|
+|`#undef` *hint-Name*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è specificato dall'identificatore *hint-name*.|
+|*commento* `//`|Commento a riga singola.|
 |`/*` *commento* `*/`|Un commento su più righe.|
 
 ## <a name="example"></a>Esempio
@@ -248,4 +248,3 @@ Le note seguenti si applicano all'elenco precedente:
 [Direttiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [Direttiva #undef (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Annotazioni SAL](../../c-runtime-library/sal-annotations.md)<br>
-

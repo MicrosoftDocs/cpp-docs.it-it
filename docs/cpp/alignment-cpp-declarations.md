@@ -3,16 +3,16 @@ title: Alignment
 description: Modalità di specifica dell'allineamento dei dati C++in modern.
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443662"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076118"
 ---
 # <a name="alignment"></a>Alignment
 
-Una delle funzionalità di basso livello di C++ è costituita dalla possibilità di specificare l'allineamento preciso degli oggetti in memoria per sfruttare al massimo una specifica architettura hardware. Per impostazione predefinita, il compilatore allinea i membri della classe e dello struct sul valore di dimensione: `bool` e `char` sui limiti di 1 byte, `short` su limiti di 2 byte, `int`, `long`e `float` su limiti di 4 byte e `long long`, `double`e `long double` sui limiti di 8 byte. 
+Una delle funzionalità di basso livello di C++ è costituita dalla possibilità di specificare l'allineamento preciso degli oggetti in memoria per sfruttare al massimo una specifica architettura hardware. Per impostazione predefinita, il compilatore allinea i membri della classe e dello struct sul valore di dimensione: `bool` e `char` sui limiti di 1 byte, `short` su limiti di 2 byte, `int`, `long`e `float` su limiti di 4 byte e `long long`, `double`e `long double` sui limiti di 8 byte.
 
 Nella maggior parte degli scenari, non è mai necessario preoccuparsi dell'allineamento perché l'allineamento predefinito è già ottimale. In alcuni casi, tuttavia, è possibile ottenere miglioramenti significativi delle prestazioni o risparmi di memoria, specificando un allineamento personalizzato per le strutture di dati. Prima di Visual Studio 2015 è possibile usare le parole chiave specifiche di Microsoft `__alignof` e `declspec(alignas)` per specificare un allineamento maggiore rispetto a quello predefinito. A partire da Visual Studio 2015 è necessario usare le parole chiave standard C++ 11 **alignof** e **aligns** per la massima portabilità del codice. Le nuove parole chiave si comportano nello stesso modo in cui si trovino le estensioni specifiche di Microsoft. La documentazione relativa a tali estensioni si applica anche alle nuove parole chiave. Per ulteriori informazioni, vedere [operatore __alignof](../cpp/alignof-operator.md) e [Allinea](../cpp/align-cpp.md). Lo C++ standard non specifica il comportamento di compressione per l'allineamento sui limiti inferiori rispetto al valore predefinito del compilatore per la piattaforma di destinazione, quindi è comunque necessario usare Microsoft #pragma [Pack](../preprocessor/pack.md) in questo caso.
 

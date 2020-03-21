@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d91ee36d26e307577aa56560eb95bef5ed03305b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 1b4e7f0f188ce7b3003f12cb7acafaf15a03d86a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051522"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078248"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Procedura dettagliata: compilare un programma C dalla riga di comando
 
@@ -63,9 +63,8 @@ Se si esegue una versione diversa di Windows, cercare nel menu Start o nella pag
 Se è stato installato Microsoft Visual C++ build Tools 2015 in Windows 10, aprire il menu **Start** , quindi scorrere verso il basso e aprire la cartella  **C++ Visual Build Tools** . Scegliere **Visual C++ 2015 prompt dei comandi degli strumenti nativi x86** per aprire la finestra del prompt dei comandi.
 
 Se si esegue una versione diversa di Windows, cercare nel menu Start o nella pagina iniziale la cartella strumenti di Visual Studio che contiene un collegamento al prompt dei comandi per gli sviluppatori. È anche possibile usare la funzione di ricerca di Windows per cercare "prompt dei comandi per gli sviluppatori" e sceglierne uno che corrisponda alla versione installata di Visual Studio. Usare il collegamento per aprire la finestra del prompt dei comandi.
-   
-::: moniker-end
 
+::: moniker-end
 
 Verificare quindi che il prompt dei C++ comandi di Visual Developer sia configurato correttamente. Nella finestra del prompt dei comandi immettere `cl` e verificare che l'output abbia un aspetto simile al seguente:
 

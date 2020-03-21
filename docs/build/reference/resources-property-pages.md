@@ -14,12 +14,12 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 916b6615d80000d601c909f771a1ec8f1b947927
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 4f3688da4feb11f673e11372e5df086dc8c7e21a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177350"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078284"
 ---
 # <a name="resources-property-page"></a>Pagina delle proprietà risorse
 
@@ -35,7 +35,7 @@ Specifica una o più definizioni per il compilatore di risorse. (/d [macro])
 
 Annullare la definizione di un simbolo. /u
 
-## <a name="culture"></a>culture
+## <a name="culture"></a>Impostazioni cultura
 
 Elenca le impostazioni cultura, ad esempio inglese (Stati Uniti) o italiano, utilizzate nelle risorse. (/l [num])
 
@@ -59,7 +59,7 @@ Disattiva la visualizzazione del messaggio di avvio e del messaggio informativo 
 
 Specifica il nome del file di risorse (/fo [file])
 
-## <a name="null-terminate-strings"></a>Stringhe di terminazione null 
+## <a name="null-terminate-strings"></a>Stringhe di terminazione null
 
 Aggiungere null a tutte le stringhe nelle tabelle di stringhe. /n
 

@@ -4,12 +4,12 @@ description: Descrizione BNF di MASM per x64.
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322806"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075470"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Grammatica BNF Microsoft Macro Assembler
 
@@ -35,7 +35,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;+ | -
 
 \ *aExpr*
-&nbsp;&nbsp;&nbsp;*termine* *&nbsp; | * *aExpr*
+&nbsp;&nbsp;&nbsp;*termine* *&nbsp; | * *aExpr* && 
 
 \ *alti*
 &nbsp;&nbsp;&nbsp;*id* &nbsp;
@@ -51,7 +51,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;| **non presupporre nulla** ;;
 
 \ di *presupporre*
-&nbsp;&nbsp;&nbsp;&nbsp;*assumeRegister* |  *assumeRegister*\
+&nbsp;&nbsp;&nbsp;&nbsp;*assumeRegister* | *assumeList* *assumeRegister*\
 
 \ *assumeReg*
 &nbsp;&nbsp;&nbsp;*registro* &nbsp;: *assumeVal*
@@ -218,7 +218,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;*generalDir* | *segmentDef*
 
 \ di *direttive*
-&nbsp;&nbsp;&nbsp;direttiva *&nbsp;* Directive * | *
+&nbsp;&nbsp;&nbsp;direttiva *&nbsp;* Directive * | * *directive*
 
 \ *distanza*
 &nbsp;&nbsp;&nbsp;&nbsp;*nearfar* | **NEAR16** | **NEAR32** | **Far16** | **far32**
@@ -245,8 +245,8 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;*E07* *addOp* *E08* | *E08*
 
 \ *E08*
-&nbsp;&nbsp;&nbsp;&nbsp; *E09* elevata\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *E09* basso\
+&nbsp;&nbsp;&nbsp;&nbsp;**HIGH** *E09* elevata\
+&nbsp;&nbsp;&nbsp;&nbsp;| **LOW** *E09* basso\
 &nbsp;&nbsp;&nbsp;&nbsp;| **HIGHWORD** *E09*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **LOWWORD** *E09*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *E09*
@@ -269,12 +269,12 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 \ *E11*
 &nbsp;&nbsp;&nbsp;&nbsp;( *expr* ) \
 &nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *expr* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ID* larghezza\
+&nbsp;&nbsp;&nbsp;&nbsp;| **WIDTH** *ID* larghezza\
 &nbsp;&nbsp;&nbsp;&nbsp;| **mask** *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **dimensioni** *sizeArg*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **sizeof** *sizeArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ID* lunghezza\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ID* LENGTHOF\
+&nbsp;&nbsp;&nbsp;&nbsp;| **LENGTH** *ID* lunghezza\
+&nbsp;&nbsp;&nbsp;&nbsp;| **LENGTHOF** *ID* LENGTHOF\
 &nbsp;&nbsp;&nbsp;&nbsp;| *recordConst*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *stringa*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *costante*\
@@ -301,8 +301,8 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFE** *constExpr*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFB** *textItem*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFNB** *textItem*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ID* ELSEIFDEF (\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ID* ELSEIFNDEF (\
+&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDEF** *ID* ELSEIFDEF (\
+&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFNDEF** *ID* ELSEIFNDEF (\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDIF** *textItem* , *textItem*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDIFI** *textItem* , *textItem*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFIDN** *textItem* , *textItem*\
@@ -353,7 +353,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;E ⟦ *Sign* ⟧ *decNumber*
 
 *expr*\
-&nbsp;&nbsp;&nbsp;&nbsp; *E05* breve\
+&nbsp;&nbsp;&nbsp;&nbsp;**SHORT** *E05* breve\
 &nbsp;&nbsp;&nbsp;&nbsp;|  **. DIGITARE** E01 \
 &nbsp;&nbsp;&nbsp;&nbsp;| **OPATTR** *E01*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *E01*
@@ -442,7 +442,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;AX | EAX | CX | ECX | DX | EDX | BX | EBX | DI | EDI | SI | ESI | BP | EBP | SP | ESP | RSP | R8W | R8D | R9W | R9D | R12D | R13W | R13D | R14W | R14D
 
 \ *groupDir*
-&nbsp;&nbsp;&nbsp;&nbsp; **gruppo** GroupID *segIdList*
+&nbsp;&nbsp;&nbsp;&nbsp;*groupId* **gruppo** GroupID *segIdList*
 
 \ *GroupID*
 &nbsp;&nbsp;&nbsp;*id* &nbsp;
@@ -468,8 +468,8 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;| **IFE** *constExpr*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **IFB** *textItem*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **IFNB** *textItem*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ID* ifdef\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ID* ifndef\
+&nbsp;&nbsp;&nbsp;&nbsp;| **IFDEF** *ID* ifdef\
+&nbsp;&nbsp;&nbsp;&nbsp;| **IFNDEF** *ID* ifndef\
 &nbsp;&nbsp;&nbsp;&nbsp;| **IFDIF** *textItem* , *textItem*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **IFDIFI** *textItem* , *textItem*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **IFIDN** *textItem* , *textItem*\
@@ -560,10 +560,10 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;|  **.**  | LISTMACRO **.\ XALL**
 
 \ *localDef*
-&nbsp;&nbsp;&nbsp;&nbsp; *idlist* locale;;
+&nbsp;&nbsp;&nbsp;&nbsp;**LOCAL** *idlist* locale;;
 
 \ *localDir*
-&nbsp;&nbsp;&nbsp;&nbsp; *parmList* locale;;
+&nbsp;&nbsp;&nbsp;&nbsp;**LOCAL** *parmList* locale;;
 
 \ *localDirList*
 &nbsp;&nbsp;&nbsp;&nbsp;*localDir* | *localDirList* *localDir*
@@ -803,7 +803,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* **proto** *protoSpec*
 
 \ *pubDef*
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langType* ⟧
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langType* ⟧ *id*
 
 \ *publicDir*
 &nbsp;&nbsp;&nbsp;&nbsp;**public** *pubList* ;;
@@ -836,7 +836,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;*recordTag* { *oldRecordFieldList* } | *recordTag* < *oldRecordFieldList* >
 
 \ *recordDir*
-&nbsp;&nbsp;&nbsp;&nbsp; **record** recordTag *bitDefList* ;;
+&nbsp;&nbsp;&nbsp;&nbsp;*recordTag* **record** recordTag *bitDefList* ;;
 
 \ *recordFieldList*
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *constExpr* ⟧ | *recordFieldList* , ⟦;; ⟧ ⟦ *constExpr* ⟧
@@ -872,7 +872,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;*initValue* | *scalarInstList* , ⟦;; *initValue* ⟧
 
 \ *segAlign*
-&nbsp;&nbsp;&nbsp;&nbsp;**BYTE** | **Word** | **DWORD** | **para** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**BYTE** | **Word** | **DWORD** | **para** | **PAGE**
 
 \ *segAttrib*
 &nbsp;&nbsp;&nbsp;&nbsp;**STACK** | **pubblico** |  | di **memoria** | **comune** **in** *constExpr* | **privato**
@@ -960,10 +960,10 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;*stringChar* | *sText* *stringChar*
 
 *string*\
-&nbsp;&nbsp;&nbsp;&nbsp;*quote* ⟦ *sText* ⟧
+&nbsp;&nbsp;&nbsp;&nbsp;*quote* ⟦ *sText* ⟧ *quote*
 
 \ *stringChar*
-&nbsp;&nbsp;&nbsp; *virgolette* &nbsp;Qualsiasi carattere eccetto le virgolette.
+&nbsp;&nbsp;&nbsp;*quote* *virgolette* &nbsp;Qualsiasi carattere eccetto le virgolette.
 
 \ *structBody*
 &nbsp;&nbsp;&nbsp;&nbsp;*structItem* ;; \
@@ -1000,7 +1000,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 &nbsp;&nbsp;&nbsp;&nbsp;*simpleExpr* |! *simpleExpr*
 
 *text*\
-&nbsp;&nbsp;&nbsp;&nbsp;carattere di *testo* | *textLiteral* |! *testo* carattere | *carattere* |! *carattere*
+&nbsp;&nbsp;&nbsp;&nbsp;carattere di *testo* | *textLiteral* |! *character* *testo* carattere | *carattere* |! *carattere*
 
 \ *textDir*
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* *textMacroDir* ;;
@@ -1036,7 +1036,7 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 \ *titleType*
 &nbsp;&nbsp;&nbsp;**titolo** &nbsp; | **sottotitolo** | **SUBTTL**
 
-*type*\
+*digitare*\
 &nbsp;&nbsp;&nbsp;&nbsp;*structTag*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *unionTag*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *recordTag*\
@@ -1071,4 +1071,3 @@ La grammatica BNF consente le definizioni ricorsive. Ad esempio, la grammatica u
 
 \ *xmmRegister*
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
-

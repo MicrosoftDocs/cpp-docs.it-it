@@ -3,12 +3,12 @@ title: riferimento allo schema Launch. vs. JSONC++()
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 4ef83787856135faa430227d5c123c0b73a505d3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518231"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078506"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>riferimento allo schema Launch. vs. JSONC++()
 
@@ -18,34 +18,34 @@ Usare il file *Launch. vs. JSON* per configurare i parametri di debug. Per crear
 
 ||||
 |-|-|-|
-|**Property**|**Type**|**Descrizione**|
+|**Proprietà**|**Tipo**|**Descrizione**|
 |`name`|string|Specifica il nome della voce nell'elenco a discesa della destinazione di debug.|
 |`type`|string|Specifica se il progetto è un file dll o exe (il valore predefinito è exe)|
 |`project`|string|Specifica il percorso relativo del file di progetto.|
 |`projectTarget`|string|Specifica la destinazione facoltativa richiamata quando si compila `project`. Questo `projectTarget` deve esistere già e corrispondere al nome nell'elenco a discesa **destinazione di debug** .|
 |`debugType`|string|Specifica la modalità di debug in base al tipo di codice (nativo, gestito o misto). Questa funzione verrà rilevata automaticamente a meno che non sia impostato il parametro. Valori consentiti: "native", "Managed", "mixed".|
-|`inheritEnvironments`|Matrice di oggetti .|Specifica un set di variabili di ambiente ereditate da più origini. È possibile definire alcune variabili nei file come *CMakeSettings. JSON* o *CppProperties. JSON* e renderli disponibili per il contesto di debug.  **Visual Studio 16,4:** : specificare le variabili di ambiente per ogni singola destinazione usando la sintassi del `env.VARIABLE_NAME`. Per annullare una variabile, impostarla su "null".|
-|`args`|Matrice di oggetti .|Specifica gli argomenti della riga di comando passati al programma avviato.|
+|`inheritEnvironments`|array|Specifica un set di variabili di ambiente ereditate da più origini. È possibile definire alcune variabili nei file come *CMakeSettings. JSON* o *CppProperties. JSON* e renderli disponibili per il contesto di debug.  **Visual Studio 16,4:** : specificare le variabili di ambiente per ogni singola destinazione usando la sintassi del `env.VARIABLE_NAME`. Per annullare una variabile, impostarla su "null".|
+|`args`|array|Specifica gli argomenti della riga di comando passati al programma avviato.|
 |`currentDir`|string|Specifica il percorso completo della directory della destinazione di compilazione. Questa funzione verrà rilevata automaticamente a meno che non sia impostato il parametro.|
 |`noDebug`|boolean|Specifica se eseguire il debug del programma avviato. Il valore predefinito per questo parametro è `false` se non è specificato.|
 |`stopOnEntry`|boolean|Consente di specificare se interrompere l'operazione subito dopo l'avvio del processo e la connessione del debugger. Il valore predefinito per questo parametro è `false`.|
 |`remoteMachine`|string|Specifica il nome del computer remoto in cui viene avviato il programma.|
-|`env`|Matrice di oggetti .| Specifica un elenco di valori chiave-valore di variabili di ambiente personalizzate. ENV: {"myEnv": "myVal"}.|
+|`env`|array| Specifica un elenco di valori chiave-valore di variabili di ambiente personalizzate. ENV: {"myEnv": "myVal"}.|
 |`portName`|string|Specifica il nome della porta durante la connessione a un processo in esecuzione.|
-|`buildConfigurations`|Matrice di oggetti .| Coppia chiave-valore che specifica il nome della modalità di compilazione per l'applicazione delle configurazioni. Ad esempio, `Debug` o `Release` e le configurazioni da usare in base alla modalità di compilazione selezionata.
+|`buildConfigurations`|array| Coppia chiave-valore che specifica il nome della modalità di compilazione per l'applicazione delle configurazioni. Ad esempio, `Debug` o `Release` e le configurazioni da usare in base alla modalità di compilazione selezionata.
 
 ## <a name="c-linux-properties"></a>C++Proprietà di Linux
 
 ||||
 |-|-|-|
-|**Property**|**Type**|**Descrizione**|
+|**Proprietà**|**Tipo**|**Descrizione**|
 |`program`|string|Percorso completo dell'eseguibile del programma nel computer remoto. Quando si usa CMake, è possibile usare la macro `${debugInfo.fullTargetPath}` come valore di questo campo.|
-|`processId`|numero intero|ID processo facoltativo a cui connettersi il debugger.|
-|`sourceFileMap`|Oggetto di|Mapping dei file di origine facoltativi passati al motore di debug. Formato: `{ "\<Compiler source location>": "\<Editor source location>" }` o `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`. Esempio: `{ "/home/user/foo": "C:\\foo" }` o `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Vedere [Opzioni mappa file di origine](#source_file_map_options).|
+|`processId`|integer|ID processo facoltativo a cui connettersi il debugger.|
+|`sourceFileMap`|object|Mapping dei file di origine facoltativi passati al motore di debug. Formato: `{ "\<Compiler source location>": "\<Editor source location>" }` o `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`. Esempio: `{ "/home/user/foo": "C:\\foo" }` o `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Vedere [Opzioni mappa file di origine](#source_file_map_options).|
 |`additionalProperties`|string|Uno degli sourceFileMapOptions. come illustrato più avanti.|
 |`MIMode`|string|Indica il tipo di debugger della console abilitato per MI a cui si connetterà MIDebugEngine. I valori consentiti sono "GDB", "LLDB".|
-|`args`|Matrice di oggetti .|Argomenti della riga di comando passati al programma.|
-|`environment`|Matrice di oggetti .|Variabili di ambiente da aggiungere all'ambiente per il programma. Esempio: [{"Name": "squid", "value": "Clam"}].|
+|`args`|array|Argomenti della riga di comando passati al programma.|
+|`environment`|array|Variabili di ambiente da aggiungere all'ambiente per il programma. Esempio: [{"Name": "squid", "value": "Clam"}].|
 |`targetArchitecture`|string|Architettura dell'oggetto del debug. Questa funzione verrà rilevata automaticamente a meno che non sia impostato il parametro. I valori consentiti sono x86, ARM, ARM64, MIPS, x64, amd64, x86_64.|
 |`visualizerFile`|string|file con estensione natvis da utilizzare durante il debug del processo. Questa opzione non è compatibile con la stampa di GDB. Se si usa questa impostazione, vedere "showDisplayString".|
 |`showDisplayString`|boolean|Quando si specifica visualizerFile, showDisplayString Abilita la stringa di visualizzazione. L'attivazione di questa opzione può causare un rallentamento delle prestazioni durante il debug.|
@@ -53,18 +53,17 @@ Usare il file *Launch. vs. JSON* per configurare i parametri di debug. Per crear
 |`cwd`|string|Directory di lavoro della destinazione nel computer remoto. Quando si usa CMake, è possibile usare la macro `${debugInfo.defaultWorkingDirectory}` come valore di questo campo. Il valore predefinito è la radice dell'area di lavoro remota, a meno che non sia sottoposto a override nel file *CMakeLists. txt* .|
 |`miDebuggerPath`|string|Percorso del debugger abilitato per MI, ad esempio gdb. Quando non viene specificato, il percorso di ricerca viene innanzitutto cercato per il debugger.|
 |`miDebuggerServerAddress`|string|Indirizzo di rete del server debugger abilitato per la connessione a. Esempio: localhost: 1234.|
-|`setupCommands`|Matrice di oggetti .|Uno o più comandi GDB/LLDB da eseguire per configurare il debugger sottostante. Esempio: `"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`. Vedere [avviare i comandi di installazione](#launch_setup_commands).|
-|`customLaunchSetupCommands`|Matrice di oggetti .|Se specificato, sostituisce i comandi predefiniti usati per avviare una destinazione con altri comandi. Ad esempio, può essere "-target-alleghi" per potersi allungare a un processo di destinazione. Un elenco di comandi vuoto sostituisce i comandi Launch con Nothing, che può essere utile se al debugger vengono fornite opzioni di avvio come opzioni della riga di comando. Esempio: `"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`.|
+|`setupCommands`|array|Uno o più comandi GDB/LLDB da eseguire per configurare il debugger sottostante. Esempio: `"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`. Vedere [avviare i comandi di installazione](#launch_setup_commands).|
+|`customLaunchSetupCommands`|array|Se specificato, sostituisce i comandi predefiniti usati per avviare una destinazione con altri comandi. Ad esempio, può essere "-target-alleghi" per potersi allungare a un processo di destinazione. Un elenco di comandi vuoto sostituisce i comandi Launch con Nothing, che può essere utile se al debugger vengono fornite opzioni di avvio come opzioni della riga di comando. Esempio: `"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`.|
 |`launchCompleteCommand`|string|Il comando da eseguire dopo la configurazione completa del debugger determina l'esecuzione del processo di destinazione. I valori consentiti sono "Exec-Run", "Exec-continue", "None". Il valore predefinito è "Exec-Run".|
 |`debugServerPath`|string|Percorso completo facoltativo del server di debug da avviare. Il valore predefinito è null.|
 |`debugServerArgs`|string|Argomenti facoltativi del server di debug. Il valore predefinito è null.|
-|`filterStderr`|boolean|Cercare il modello avviato dal server e il registro stderr per eseguire il debug dell'output. Il valore predefinito è `false`.|
+|`filterStderr`|boolean|Cercare il modello avviato dal server e il registro stderr per eseguire il debug dell'output. L'impostazione predefinita è `false`.|
 |`coreDumpPath`|string|Percorso completo facoltativo di un file di dump di base per il programma specificato. Il valore predefinito è null.|
-externalConsole|boolean|Se true, viene avviata una console per l'oggetto del debug. Se `false`, non viene avviata alcuna console. Il valore predefinito è `false`. Nota: questa opzione viene ignorata in alcuni casi per motivi tecnici.|
+externalConsole|boolean|Se true, viene avviata una console per l'oggetto del debug. Se `false`, non viene avviata alcuna console. L'impostazione predefinita è `false`. Nota: questa opzione viene ignorata in alcuni casi per motivi tecnici.|
 |`pipeTransport`|string|Quando è presente, indica al debugger di connettersi a un computer remoto usando un altro eseguibile come pipe che inoltra l'input/output standard tra Visual Studio e il debugger abilitato per MI, ad esempio gdb. Valori consentiti: una o più [Opzioni di trasporto della pipe](#pipe_transport_options).|
 
-
-## <a name="launch_setup_commands"></a>Avviare i comandi di installazione
+## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a>Avviare i comandi di installazione
 
 Utilizzato con la proprietà `setupCommands`:
 
@@ -72,9 +71,9 @@ Utilizzato con la proprietà `setupCommands`:
 |-|-|-|
 |`text`|string|Comando del debugger da eseguire.|
 |`description`|string|Descrizione facoltativa del comando.|
-|`ignoreFailures`|boolean|Se true, gli errori del comando devono essere ignorati. Il valore predefinito è `false`.|
+|`ignoreFailures`|boolean|Se true, gli errori del comando devono essere ignorati. L'impostazione predefinita è `false`.|
 
-## <a name = "pipe_transport_options"></a>Opzioni di trasporto pipe
+## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a>Opzioni di trasporto pipe
 
 Utilizzato con la proprietà `pipeTransport`:
 
@@ -82,12 +81,12 @@ Utilizzato con la proprietà `pipeTransport`:
 |-|-|-|
 |`pipeCwd`|string|Percorso completo della directory di lavoro per il programma pipe.|
 |`pipeProgram`|string|Comando pipe completo da eseguire.|
-|`pipeArgs`|Matrice di oggetti .|Argomenti della riga di comando passati al programma pipe per configurare la connessione.|
+|`pipeArgs`|array|Argomenti della riga di comando passati al programma pipe per configurare la connessione.|
 |`debuggerPath`|string|Percorso completo del debugger nel computer di destinazione, ad esempio/usr/bin/gdb.|
-|`pipeEnv`|Oggetto di|Variabili di ambiente passate al programma pipe.|
+|`pipeEnv`|object|Variabili di ambiente passate al programma pipe.|
 |`quoteArgs`|boolean|Se i singoli argomenti contengono caratteri (ad esempio spazi o tabulazioni), devono essere racchiusi tra virgolette? Se `false`, il comando del debugger non verrà più racchiuso tra virgolette. Il valore predefinito è `true`.|
 
-## <a name="source_file_map_options"></a>Opzioni mapping file di origine
+## <a name="source-file-map-options"></a><a name="source_file_map_options"></a>Opzioni mapping file di origine
 
 Utilizzare con la proprietà `sourceFileMap`:
 

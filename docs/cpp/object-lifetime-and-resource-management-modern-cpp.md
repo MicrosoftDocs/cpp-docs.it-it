@@ -4,12 +4,12 @@ description: Seguire il principio di RAII in Modern C++ per evitare perdite di r
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303364"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078023"
 ---
 # <a name="object-lifetime-and-resource-management-raii"></a>Durata degli oggetti e gestione delle risorse (RAII)
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 Nell'esempio seguente `w` possiede una risorsa di memoria ed è quindi necessario che nel relativo distruttore sia presente codice per eliminare la memoria.
- 
+
 ```cpp
 class widget
 {

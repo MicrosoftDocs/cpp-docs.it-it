@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: cb77b2ce74f962df0a4c7472b037cb7a73effc2d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907482"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077705"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Aggiunta di funzionalità con creazioni guidate codice (C++)
 
@@ -26,7 +26,6 @@ Dopo aver creato un progetto, è possibile effettuare modifiche o aggiunte alla 
 - Consumer ODBC MFC
 - Classe MFC da controllo ActiveX
 - Classe MFC da libreria di tipi.
-
 
 > [!NOTE]
 >  È possibile aggiungere gestori di messaggi e mappare messaggi ad essi ed eseguire l'override delle funzioni virtuali MFC utilizzando la [creazione guidata classe MFC](../mfc/reference/mfc-class-wizard.md).
@@ -67,7 +66,7 @@ Dopo aver creato un progetto, è possibile effettuare modifiche o aggiunte alla 
 
    Per altre informazioni, vedere [Implementazione di un'interfaccia](../ide/implementing-an-interface-visual-cpp.md) e [Aggiunta di oggetti e controlli a un progetto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).
 
-   |Accesso alla creazione guidata codice da|DESCRIZIONE|
+   |Accesso alla creazione guidata codice da|Descrizione|
    |-----------------------------|-----------------|
    |Aggiungi nuovo elemento|Le creazioni guidate codice Aggiungi nuovo elemento consentono di aggiungere i file di origine al progetto. Se necessario, vengono create directory aggiuntive per inserire i file nella posizione in cui il motore di compilazione del progetto prevede di trovarli. Le creazioni guidate codice disponibili dall'icona Aggiungi elemento includono:<br /><br />- Aggiungere file di origine C++ (con estensione cpp, h, idl, rc, srf, def, rgs).<br />- Aggiungere file di sviluppo Web (con estensione html, asp, css, xml).<br />- Aggiungere file di utilità e risorse (con estensione bmp, cur, ico, rct, sql, txt).<br /><br />Le creazioni guidate codice in genere non richiedono l'inserimento di informazioni ma l'aggiunta di un file alla struttura di sviluppo. È possibile rinominare il file nella finestra delle proprietà.|
    |Esplora soluzioni|Le creazioni guidate codice disponibili in Esplora soluzioni variano a seconda della posizione in cui si trova il cursore quando si fa clic su un elemento. Se l'opzione **Aggiungi** non viene visualizzata quando si fa clic con il pulsante destro del mouse su un elemento, spostare il cursore al livello superiore nella struttura di sviluppo e riprovare. Le creazioni guidate codice inseriscono sempre il codice aggiuntivo nella posizione appropriata all'interno della struttura di sviluppo, indipendentemente dalla posizione in cui si trova il cursore. Le creazioni guidate codice disponibili in Esplora soluzioni consentono di:<br /><br />- Aggiungere una classe (aprire la finestra di dialogo **Aggiungi classe** contenente le creazioni guidate codice).<br />- Aggiungere una risorsa (nuova, importata o personalizzata).<br />- Aggiungere un riferimento Web.|

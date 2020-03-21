@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 5f3a24a46db1c9013e5458143812faa079ade013
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 16dbbc4a3b2e8927643d3612bec034f9f5da8d9c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108547"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077522"
 ---
 # <a name="creating-an-mfc-application"></a>Creazione di un'applicazione MFC
 
@@ -29,14 +29,13 @@ Un'applicazione MFC rappresenta un'applicazione eseguibile per Windows basata su
 
 La Creazione guidata applicazione MFC genera le classi e i file appropriati per ognuno di questi tipi di applicazione, a seconda delle opzioni selezionate all'interno della procedura guidata.
 
-
 Il modo più semplice per creare un'applicazione MFC consiste nell'usare la creazione guidata applicazione MFC (**progetto di app MFC** in Visual Studio 2019). Per creare un'applicazione console MFC (un programma da riga di comando che utilizza librerie MFC ma viene eseguita nella finestra della console), utilizzare la creazione guidata desktop di Windows e scegliere le opzioni **applicazione console** e **intestazioni MFC** .
 
 ::: moniker range=">=vs-2019"
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Per creare un'applicazione basata su finestre di dialogo o moduli MFC
 
-1. Dal menu principale scegliere **file** > **nuovo** > **progetto**.
+1. Dal menu principale scegliere **File** > **nuovo** > **progetto**.
 1. Immettere "MFC" nella casella di ricerca e quindi scegliere **app MFC** dall'elenco dei risultati.
 1. Modificare le impostazioni predefinite in base alle esigenze, quindi fare clic su **Crea** per aprire la **creazione guidata applicazione MFC**.
 1. Modificare i valori di configurazione in base alle esigenze, quindi fare clic su **fine**.
@@ -49,7 +48,7 @@ Per ulteriori informazioni, vedere [creazione di un'applicazione MFC basata su f
 
 Un'applicazione console MFC è un programma da riga di comando che utilizza librerie MFC, ma viene eseguito nella finestra della console.
 
-1. Dal menu principale scegliere **file** > **nuovo** > **progetto**.
+1. Dal menu principale scegliere **File** > **nuovo** > **progetto**.
 1. Immettere "desktop" nella casella di ricerca e quindi scegliere **creazione guidata desktop di Windows** dall'elenco dei risultati.
 1. Modificare il nome del progetto in base alle esigenze, quindi fare clic su **Avanti** per aprire la **creazione guidata desktop di Windows**.
 1. Controllare la casella **intestazioni MFC** e impostare gli altri valori in base alle esigenze, quindi fare clic su **fine**.
@@ -62,8 +61,8 @@ Un'applicazione console MFC è un programma da riga di comando che utilizza libr
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Per creare un'applicazione basata su finestre di dialogo o moduli MFC
 
-1. Dal menu principale scegliere **file** > **nuovo** > **progetto**.
-1. Nei modelli **installati** scegliere  >  **Visual C++**  **MFC/ATL**. Se queste informazioni non sono visibili, usare il Programma di installazione di Visual Studio per aggiungerle.
+1. Dal menu principale scegliere **File** > **nuovo** > **progetto**.
+1. Nei modelli **installati** scegliere **Visual C++**  > **MFC/ATL**. Se queste informazioni non sono visibili, usare il Programma di installazione di Visual Studio per aggiungerle.
 1. Scegliere **applicazione MFC** dal riquadro centrale.
 1. Modificare i valori di configurazione in base alle esigenze, quindi fare clic su **fine**.
 
@@ -75,8 +74,8 @@ Per ulteriori informazioni, vedere [creazione di un'applicazione MFC basata su f
 
 Un'applicazione console MFC è un programma da riga di comando che utilizza librerie MFC, ma viene eseguito nella finestra della console.
 
-1. Dal menu principale scegliere **file** > **nuovo** > **progetto**.
-1. Nei modelli **installati** scegliere > **Visual C++**  **Windows Desktop**.
+1. Dal menu principale scegliere **File** > **nuovo** > **progetto**.
+1. Nei modelli **installati** scegliere  **C++ Visual** > desktop di **Windows**.
 1. Scegliere **creazione guidata desktop di Windows** dal riquadro centrale.
 1. Modificare il nome del progetto in base alle esigenze, quindi fare clic su **OK** per aprire la **creazione guidata desktop di Windows**.
 1. Controllare la casella **intestazioni MFC** e impostare gli altri valori in base alle esigenze, quindi fare clic su **fine**.
@@ -89,8 +88,8 @@ Un'applicazione console MFC è un programma da riga di comando che utilizza libr
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Per creare un'applicazione basata su finestre di dialogo o moduli MFC
 
-1. Dal menu principale scegliere **file** > **nuovo** > **progetto**.
-1. Nei > modelli **installati** scegliere **Visual C++**  **MFC**.
+1. Dal menu principale scegliere **File** > **nuovo** > **progetto**.
+1. Nei modelli **installati** scegliere **Visual C++**  > **MFC**.
 1. Scegliere **applicazione MFC** dal riquadro centrale.
 1. Fare clic su **Avanti** per avviare la **creazione guidata applicazione MFC**.
 
@@ -102,8 +101,8 @@ Per ulteriori informazioni, vedere [creazione di un'applicazione MFC basata su f
 
 Un'applicazione console MFC è un programma da riga di comando che utilizza librerie MFC, ma viene eseguito nella finestra della console.
 
-1. Dal menu principale scegliere **file** > **nuovo** > **progetto**.
-1. Nei > modelli **installati** scegliere **Visual C++**  **Win32**.
+1. Dal menu principale scegliere **File** > **nuovo** > **progetto**.
+1. Nei modelli **installati** scegliere **Visual C++**  > **Win32**.
 1. Scegliere **applicazione console Win32** dal riquadro centrale.
 1. Modificare il nome del progetto in base alle esigenze, quindi fare clic su **OK**.
 1. Nella seconda pagina della procedura guidata, selezionare la casella **Aggiungi intestazioni comuni per MFC** e impostare gli altri valori in base alle esigenze, quindi fare clic su **fine**.

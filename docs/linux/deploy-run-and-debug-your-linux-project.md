@@ -3,12 +3,12 @@ title: Distribuire, eseguire ed eseguire il debug del progetto Linux C++ in Visu
 description: Descrive come compilare, eseguire ed eseguire il debug del codice nella destinazione remota all'interno di un progetto Linux C++ in Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441665"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077833"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Distribuire, eseguire e sottoporre a debug il progetto Linux
 
@@ -35,7 +35,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 ## <a name="debug-your-linux-project"></a>Eseguire il debug del progetto Linux
 
 1. Selezionare la modalità di debug nella pagina delle proprietà **Debug**.
-   
+
    ::: moniker range="vs-2019"
 
    Per il debug delle applicazioni in esecuzione su Linux viene usato GDB. Quando si esegue il debug in un sistema remoto (non WSL), è possibile eseguire GDB in due modi diversi selezionabili dall'opzione **Modalità di debug** nella pagina delle proprietà **Debug** del progetto:
@@ -51,7 +51,6 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
    ![Opzioni GDB](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - In modalità **gdbserver**, GDB viene eseguito in locale e si connette a gdbserver nel sistema remoto.  Si noti che questa è l'unica modalità supportata dalla finestra della console di Linux.
 
@@ -129,7 +128,7 @@ L'elemento **AttachOptionsForConnection** include la maggior parte degli attribu
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a> Specificare computer diversi per la compilazione e il debug
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> Specificare computer diversi per la compilazione e il debug
 
 In Visual Studio 2019 versione 16.1 è possibile separare il computer di compilazione remota dal computer di debug remoto per progetti Linux basati su MSBuild e progetti CMake destinati a un computer Linux remoto. Ad esempio, è ora possibile eseguire la compilazione su un sistema x64 e distribuire in un dispositivo ARM, quando si usano scenari IoT come destinazione.
 

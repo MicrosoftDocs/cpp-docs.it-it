@@ -6,16 +6,16 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 8388cd5c8c53a4595dc9b44430077421ee8680bf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707802"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079792"
 ---
 # <a name="selecting-and-manipulating-records"></a>Selezione e modifica di record
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata consumer ODBC MFC non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile creare manualmente un consumer.
 
 In genere, quando si selezionano i record da un'origine dati usando un'istruzione SQL **SELECT**, si ottiene un set di risultati, ovvero un set di record da una tabella o una query. Con le classi di database, si usa un oggetto recordset per selezionare e accedere al set di risultati. Si tratta di un oggetto di una classe specifica dell'applicazione che è possibile derivare dalla classe [CRecordset](../../mfc/reference/crecordset-class.md). Quando si definisce una classe recordset, è necessario specificare l'origine dati a cui associarla, la tabella da usare e le colonne della tabella. La Creazione guidata applicazione MFC o **Aggiungi classe** (come descritto in [Aggiunta di un consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) crea una classe con una connessione a un'origine dati specifica. Le procedure guidate scrivono la funzione membro [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) della classe `CRecordset` per restituire il nome della tabella.

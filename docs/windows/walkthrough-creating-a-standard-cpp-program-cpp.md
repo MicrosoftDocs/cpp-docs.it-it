@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 9b2d1f3bf1a229a0590553369e37bc07f35ada33
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 381fa347a4ca2872ef0697d76a1e788c97e8a014
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627135"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075432"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procedura dettagliata: creazione di C++ un programmaC++standard ()
 
@@ -34,9 +34,9 @@ I passaggi seguenti variano leggermente a seconda della versione di Visual Studi
 
 ### <a name="to-create-a-c-project-in-visual-studio-2019"></a>Per creare un C++ progetto in Visual Studio 2019
 
-1. Dal menu principale scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto**.
+1. Dal menu principale scegliere **File** > **nuovo** **progetto** > per aprire la finestra di dialogo **Crea un nuovo progetto** .
 
-1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**. 
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
 
 1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**. Nella pagina successiva immettere un nome per il progetto e specificare il percorso del progetto, se necessario.
 
@@ -72,11 +72,11 @@ I passaggi seguenti variano leggermente a seconda della versione di Visual Studi
 
 1. Fare clic su **OK** per creare il progetto.
 
-1. Completare la **creazione guidata applicazione Win32**. 
+1. Completare la **creazione guidata applicazione Win32**.
 
-1. Fare clic su **Avanti**, assicurarsi che l'opzione **applicazione console** sia selezionata e deselezionare la casella **intestazioni precompilate** . 
+1. Fare clic su **Avanti**, assicurarsi che l'opzione **applicazione console** sia selezionata e deselezionare la casella **intestazioni precompilate** .
 
-1. Scegliere **Fine**.
+1. Fare clic su **Fine**.
 
 ::: moniker-end
 
@@ -96,7 +96,7 @@ I passaggi seguenti variano leggermente a seconda della versione di Visual Studi
 
 1. Salvare il file.
 
-1. Scegliere **Compila soluzione** dal menu **Compila**.
+1. Nel menu **Compila** scegliere **Compila soluzione**.
 
    Nella finestra **output** vengono visualizzate informazioni sullo stato di avanzamento della compilazione, ad esempio il percorso del log di compilazione e un messaggio che indica lo stato della compilazione.
 

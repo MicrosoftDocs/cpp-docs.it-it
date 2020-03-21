@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416935"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076855"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
 
@@ -36,9 +36,9 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
 - [Modifiche importanti apportate al runtime di concorrenza](#BK_ConcRT)
 
-## <a name="VC_2015"></a> Modifiche della conformità di Visual Studio 2015
+## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a> Modifiche della conformità di Visual Studio 2015
 
-###  <a name="BK_CRT"></a> Libreria di runtime C (CRT)
+###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a> Libreria di runtime C (CRT)
 
 #### <a name="general-changes"></a>Modifiche generali
 
@@ -78,7 +78,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
 - **Conformità del punto a virgola mobile**
 
-   Sono state apportate numerose modifiche alla libreria matematica per migliorare la conformità alle specifiche IEEE 754 e C11 allegato F rispetto all'input per casi speciali, ad esempio NaN e infiniti. Ad esempio, gli input NaN non interattivi, che spesso venivano considerati errori nelle versioni precedenti della libreria, non vengono più considerati errori. Vedere [Standard IEEE 754](https://standards.ieee.org/standard/754-2008.html) e l'allegato F dello [Standard C11](http://www.iso-9899.info/wiki/The_Standard).
+   Sono state apportate numerose modifiche alla libreria matematica per migliorare la conformità alle specifiche IEEE 754 e C11 allegato F rispetto all'input per casi speciali, ad esempio NaN e infiniti. Ad esempio, gli input NaN non interattivi, che spesso venivano considerati errori nelle versioni precedenti della libreria, non vengono più considerati errori. Vedere [Standard IEEE 754](https://standards.ieee.org/standard/754-2008.html) e l'allegato F dello [Standard C11](https://www.iso.org/standard/57853.html).
 
    Queste modifiche non provocheranno errori in fase di compilazione, ma potrebbero causare un comportamento diverso da parte dei programmi, sebbene più corretto in base allo standard.
 
@@ -106,7 +106,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
    Quando si compila il codice C++, [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) ora verifica in fase di compilazione che l'argomento passato non è di tipo riferimento. Gli argomenti di tipo riferimento non sono consentiti dallo Standard C++.
 
-#### <a name="stdio_and_conio"></a>\<stdio. h > e \<conio. h >
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio. h > e \<conio. h >
 
 - **La famiglia di funzioni di printf e scanf ora viene definita inline.**
 
@@ -303,7 +303,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
    La macro CLOCKS_PER_SEC ora si espande in un numero intero di tipo `clock_t`, come richiesto dal linguaggio C.
 
-####  <a name="BK_STL"></a> Libreria standard C++
+####  <a name="c-standard-library"></a><a name="BK_STL"></a> Libreria standard C++
 
 Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Visual Studio della libreria standard C++ interrompe intenzionalmente la compatibilità binaria da una versione a quella successiva. Pertanto, se si usa la libreria standard C++, i file oggetto e le librerie statiche compilati usando versioni diverse non possono essere combinati in un file binario (EXE o DLL) e gli oggetti della libreria standard C++ non possono essere passati tra i file binari compilati usando versioni diverse. Tale combinazione genera errori del linker relativi a mancate corrispondenze di _MSC_VER. (_MSC_VER è la macro che contiene la versione principale del compilatore, ad esempio 1800 per Visual Studio 2013. Questo controllo non è in grado di rilevare la combinazione DLL e non è in grado di rilevare combinazioni che coinvolgono Visual Studio 2008 o versioni precedenti.
 
@@ -385,7 +385,7 @@ Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Vis
 
    I criteri `launch::any` e `launch::sync` non standard sono stati rimossi. In alternativa, per `launch::any` usare `launch:async | launch:deferred`. Per `launch::sync`, usare `launch::deferred`. Vedere [Enumerazione launch](../standard-library/future-enums.md#launch).
 
-####  <a name="BK_MFC"></a> MFC e ATL
+####  <a name="mfc-and-atl"></a><a name="BK_MFC"></a> MFC e ATL
 
 - **Microsoft Foundation Classes (MFC)**
 
@@ -393,7 +393,7 @@ Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Vis
 
    Il pacchetto ridistribuibile di Visual C++ include ancora questa libreria.
 
-####  <a name="BK_ConcRT"></a> Runtime di concorrenza
+####  <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a> Runtime di concorrenza
 
 - **Macro Yield di Windows.h in conflitto con concurrency::Context::Yield**
 
@@ -421,7 +421,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - [Miglioramenti della conformità in Update 3](#VS_Update3)
 
-###  <a name="VS_RTM"></a> Miglioramenti della conformità in Visual Studio 2015
+###  <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a> Miglioramenti della conformità in Visual Studio 2015
 
 - /Zc:forScope- option
 
@@ -658,11 +658,11 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     enum class my_type : size_t {};
     ```
 
-   Modificare quindi la definizione dell'operatore **new** e **delete** di posizionamento in modo che venga usato questo tipo come secondo argomento anziché `size_t`. È necessario anche aggiornare le chiamate all'operatore new di posizionamento per passare il nuovo tipo, ad esempio usando `static_cast<my_type>` per la conversione dal valore integer, e aggiornare la definizione di **new** e **delete** per eseguire di nuovo il cast al tipo integer. Non è necessario usare un **enum**; è anche possibile usare un tipo di classe con un membro `size_t`.
+   Modificare quindi la definizione dell'operatore **new** e **delete** di posizionamento in modo che venga usato questo tipo come secondo argomento anziché `size_t`. Sarà inoltre necessario aggiornare le chiamate al nuovo posizionamento per passare il nuovo tipo (ad esempio, utilizzando `static_cast<my_type>` per eseguire la conversione dal valore Integer) e aggiornare la definizione di **New** e **Delete** per eseguire il cast di nuovo al tipo Integer. Non è necessario usare un **enum** per questo oggetto; funzionerebbe anche un tipo di classe con un membro `size_t`.
 
    Una soluzione alternativa potrebbe essere l'eliminazione totale dell'operatore **new di posizionamento**. Se il codice usa l'operatore **new di posizionamento** per implementare un pool di memoria dove l'argomento di posizionamento è la dimensione dell'oggetto allocato o eliminato, la funzionalità di deallocazione dimensionata potrebbe essere adatta a sostituire il codice del pool di memoria personalizzato consentendo quindi di eliminare le funzioni di posizionamento e usare semplicemente il proprio operatore **delete** a due argomenti.
 
-   Se non si intende aggiornare immediatamente il codice, è possibile ripristinare il comportamento precedente usando l'opzione del compilatore `/Zc:sizedDealloc-`. Se si usa questa opzione, le funzioni delete a due argomenti non esistono e non provocheranno un conflitto con l'operatore **delete di posizionamento**.
+   Se non si intende aggiornare immediatamente il codice, è possibile ripristinare il comportamento precedente usando l'opzione del compilatore `/Zc:sizedDealloc-`. Se si usa questa opzione, le funzioni di eliminazione a due argomenti non esistono e non provocheranno un conflitto con l'operatore **Delete di posizionamento** .
 
 - **Membri dati di unioni**
 
@@ -1697,7 +1697,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     C c;
     ```
 
-###  <a name="VS_Update1"></a> Miglioramenti della conformità in Update 1
+###  <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Miglioramenti della conformità in Update 1
 
 - **Classi base virtuali private ed ereditarietà indiretta**
 
@@ -2201,7 +2201,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     }
     ```
 
-###  <a name="VS_Update2"></a> Miglioramenti della conformità in Update 2
+###  <a name="conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Miglioramenti della conformità in Update 2
 
 - **Errori e avvisi aggiuntivi potrebbero essere generati in seguito a un supporto parziale per l'espressione SFINAE**
 
@@ -2463,7 +2463,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    La correzione del codice scritto in questo modo potrebbe richiedere lo spostamento delle definizioni dell'operatore da un file di intestazione a un file di origine corrispondente.
 
-###  <a name="VS_Update3"></a> Miglioramenti della conformità in Update 3
+###  <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Miglioramenti della conformità in Update 3
 
 - **std::is_convertable ora rileva l'assegnazione automatica** (libreria standard)
 
@@ -2854,7 +2854,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    In Visual Studio 2012, `E1` nell'espressione `E1::b` viene risolto in `::E1` nell'ambito globale. In Visual Studio 2013, `E1` nell'espressione `E1::b` viene risolto nella definizione `typedef E2` in `main()` e ha il tipo `::E2`.
 
-- Il layout dell'oggetto è stato modificato. In x64, il layout degli oggetti di una classe può cambiare rispetto alle versioni precedenti. Se ha una funzione **virtuale** ma non una classe di base con una funzione **virtuale**, il modello a oggetti del compilatore inserisce un puntatore a una tabella di funzioni **virtuali** dopo il layout dei membri dati. Ciò significa che il layout potrebbe non essere ottimale in tutti i casi. Nelle versioni precedenti, un'ottimizzazione per x64 tentava di migliorare automaticamente il layout, ma poiché non funzionava correttamente in situazioni di codice complesse, è stata rimossa in Visual Studio 2013. Si consideri ad esempio questo codice:
+- Il layout dell'oggetto è stato modificato. In x64, il layout degli oggetti di una classe può cambiare rispetto alle versioni precedenti. Se dispone di una funzione **virtuale** , ma non dispone di una classe di base con una funzione **virtuale** , il modello a oggetti del compilatore inserisce un puntatore a una tabella di funzioni **virtuali** dopo il layout del membro dati. Ciò significa che il layout potrebbe non essere ottimale in tutti i casi. Nelle versioni precedenti, un'ottimizzazione per x64 tentava di migliorare automaticamente il layout, ma poiché non funzionava correttamente in situazioni di codice complesse, è stata rimossa in Visual Studio 2013. Si consideri ad esempio questo codice:
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2932,7 +2932,7 @@ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _IT
 
 - È necessario utilizzare `#include <algorithm>` quando si chiama `std::min()` o `std::max()`.
 
-- Se il codice esistente usa le enumerazioni con ambito simulate della versione precedente (enumerazioni tradizionali senza ambito contenute negli spazi dei nomi), è necessario modificarle. Ad esempio, se si fa riferimento al tipo `std::future_status::future_status`, è ora necessario impostare `std::future_status`. Tuttavia, la maggior parte del codice non è interessato, ad esempio `std::future_status::ready` viene compilato.
+- Se il codice esistente usa le enumerazioni con ambito simulate della versione precedente (enumerazioni tradizionali senza ambito racchiuse tra gli spazi dei nomi), è necessario modificarle. Ad esempio, se si fa riferimento al tipo `std::future_status::future_status`, è ora necessario impostare `std::future_status`. Tuttavia, la maggior parte del codice non è interessato, ad esempio `std::future_status::ready` viene compilato.
 
 - `explicit operator bool()` è più restrittivo rispetto a operator unspecified-bool-type(). `explicit operator bool()` consente conversioni esplicite a bool, ad esempio con `shared_ptr<X> sp` sono validi sia `static_cast<bool>(sp)` che `bool b(sp)`, e "conversioni contestuali" verificabili in modo booleano a bool, ad esempio uno qualsiasi tra `if (sp)`, `!sp` e `sp &&`. `explicit operator bool()` impedisce tuttavia la conversione implicita a bool, quindi non è possibile specificare `bool b = sp;` e dato un tipo restituito bool, non è possibile specificare `return sp`.
 
@@ -3058,7 +3058,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 ### <a name="crt"></a>CRT
 
-- L'heap di CRT (Runtime C) usato per new e malloc() non è più privato. CRT ora usa l'heap di processo. Questo significa che l'heap non viene eliminato definitivamente quando viene scaricata una DLL, quindi le DLL collegate in modo statico a CRT devono verificare che la memoria allocata dal codice DLL venga pulita prima di essere scaricata.
+- L'heap di CRT (Runtime C) usato per new e malloc() non è più privato. CRT ora usa l'heap di processo. Ciò significa che l'heap non viene eliminato definitivamente quando viene scaricata una DLL, quindi le DLL collegate in modo statico a CRT devono garantire che la memoria allocata dal codice DLL venga pulita prima che venga scaricata.
 
 - La funzione `iscsymf()` esegue asserzioni con valori negativi.
 

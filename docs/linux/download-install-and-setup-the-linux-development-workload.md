@@ -3,12 +3,12 @@ title: Installare il carico di lavoro Linux C++ in Visual Studio
 description: Descrive come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966204"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077633"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
@@ -20,11 +20,11 @@ I progetti Linux sono supportati in Visual Studio 2017 e versioni successive.
 
 ::: moniker range=">=vs-2017"
 
-È possibile usare l'IDE di Visual Studio in Windows per creare, modificare ed C++ eseguire il debug di progetti eseguiti in un sistema Linux remoto, in una macchina virtuale o nel [sottosistema Windows per Linux](/windows/wsl/about). 
+È possibile usare l'IDE di Visual Studio in Windows per creare, modificare ed C++ eseguire il debug di progetti eseguiti in un sistema Linux remoto, in una macchina virtuale o nel [sottosistema Windows per Linux](/windows/wsl/about).
 
-È possibile lavorare sulla codebase esistente che usa CMake senza doverlo convertire in un progetto di Visual Studio. Se il codebase è multipiattaforma, è possibile scegliere sia Windows che Linux da Visual Studio. Ad esempio, è possibile modificare, compilare ed eseguire il debug del codice in Windows con Visual Studio, quindi ridestinare rapidamente il progetto per Linux per compilare ed eseguire il debug in un ambiente Linux. I file di intestazione di Linux vengono copiati automaticamente nel computer locale, in cui Visual Studio li usa per fornire supporto IntelliSense completo (completamento istruzioni, vai a definizione e così via). 
- 
-Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni Linux con C++** . 
+È possibile lavorare sulla codebase esistente che usa CMake senza doverlo convertire in un progetto di Visual Studio. Se il codebase è multipiattaforma, è possibile scegliere sia Windows che Linux da Visual Studio. Ad esempio, è possibile modificare, compilare ed eseguire il debug del codice in Windows con Visual Studio, quindi ridestinare rapidamente il progetto per Linux per compilare ed eseguire il debug in un ambiente Linux. I file di intestazione di Linux vengono copiati automaticamente nel computer locale, in cui Visual Studio li usa per fornire supporto IntelliSense completo (completamento istruzioni, vai a definizione e così via).
+
+Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni Linux con C++** .
 
 ::: moniker-end
 

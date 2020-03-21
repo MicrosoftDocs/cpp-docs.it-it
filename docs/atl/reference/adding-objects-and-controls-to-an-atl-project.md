@@ -11,16 +11,16 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706853"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075296"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Aggiunta di oggetti e controlli a un progetto ATL
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata componente ATL COM+ 1.0, la Creazione guidata consumer OLE DB ATL e la Creazione guidata componente ASP ATL non sono disponibili in Visual Studio 2019 e versioni successive.
 
 È possibile usare una delle procedure guidate per il codice ATL per aggiungere un oggetto o un controllo ai progetti basati su ATL o MFC. Per ogni oggetto o controllo COM aggiunto, la procedura guidata genera file con estensione h e cpp, nonché un file con estensione rgs per il supporto del Registro di sistema basato su script. In Visual Studio sono disponibili le procedure guidate per il codice ATL seguenti:

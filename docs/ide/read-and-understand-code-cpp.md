@@ -2,12 +2,12 @@
 title: Leggere e comprendere il codice C++ in Visual Studio
 description: Usare l'editor di codice C++ in Visual Studio per formattare e comprendere il codice.
 ms.date: 05/28/2019
-ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: aa9008900ae631668d7a87fb413dd389696f3454
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416122"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079036"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Leggere e comprendere il codice C++ in Visual Studio
 
@@ -61,7 +61,7 @@ Passare il mouse su una qualsiasi variabile, funzione o su un altro simbolo per 
 
 ![Informazioni rapide in C&#43;&#43;](../ide/media/quick-info-vs2019.png "Informazioni rapide")
 
-La descrizione comando **Informazioni rapide** ha un collegamento **Ricerca in linea**. Passare a **Strumenti** > **Opzioni** > **Editor di testo** > **C++**  > **Visualizza** per specificare il provider di ricerca. 
+La descrizione comando **Informazioni rapide** ha un collegamento **Ricerca in linea**. Passare a **Strumenti** > **Opzioni** > **Editor di testo** > **C++**  > **Visualizza** per specificare il provider di ricerca.
 
 Se il codice contiene un errore, passare il puntatore su di esso per visualizzare il messaggio di errore in **Informazioni rapide**. Il messaggio di errore viene visualizzato anche nella finestra Elenco errori.
 
@@ -89,7 +89,7 @@ Passare il mouse su una dichiarazione di variabile o di funzione, fare clic con 
 
 ![C&#43; &#43; Visualizza definizione](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
-##  <a name="f1-help"></a>F1 Guida
+##  <a name="f1-help"></a>Guida sensibile al contesto
 
 Posizionare il cursore su o dopo un qualsiasi tipo, parola chiave o funzione e premere **F1** per passare direttamente all'argomento di riferimento pertinente in docs.microsoft.com. **F1** funziona anche con gli elementi dell'elenco errori e in numerose finestre di dialogo.
 

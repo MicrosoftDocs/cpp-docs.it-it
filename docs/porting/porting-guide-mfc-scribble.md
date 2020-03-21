@@ -2,12 +2,12 @@
 title: 'Guida al porting: MFC Scribble'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627220"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076971"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guida al porting: MFC Scribble
 
@@ -23,7 +23,7 @@ Prima di provare a eseguire l'aggiornamento, verificare che sia installato il ca
 
 Quindi eseguire il backup dell'intera soluzione e di tutto il contenuto.
 
-Infine, aprire la soluzione nella versione più recente di Visual Studio e consentire alla procedura guidata di convertire il progetto. 
+Infine, aprire la soluzione nella versione più recente di Visual Studio e consentire alla procedura guidata di convertire il progetto.
 
 Tenere presente che invece di aggiornare i progetti con la procedura guidata, è anche possibile eseguire devenv dalla riga di comando specificando l'opzione `/Upgrade`. Vedere [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Questo approccio può risultare utile per automatizzare la procedura di aggiornamento per un numero elevato di progetti.
 
@@ -47,7 +47,7 @@ Visual Studio visualizza quindi un report di migrazione che elenca tutti i probl
 
 In questo caso, i problemi erano tutti avvisi e Visual Studio ha apportato le modifiche appropriate nel file di progetto. La grande differenza per quanto riguarda il progetto è che lo strumento di compilazione è cambiato da vcbuild a msbuild. Questa modifica è stata introdotta in Visual Studio 2010. Altre modifiche includono una riorganizzazione della sequenza di elementi nel file di progetto. Per questo progetto semplice nessuno dei problemi ha richiesto ulteriore attenzione.
 
-### <a name="step-2-getting-it-to-build"></a>Passaggio 2: Preparazione della compilazione
+### <a name="step-2-getting-it-to-build"></a>Passaggio 2. Preparazione della compilazione
 
 Prima della compilazione è necessario controllare il set di strumenti della piattaforma per conoscere la versione del compilatore usata dal sistema del progetto. Nella finestra delle proprietà del progetto esaminare la proprietà **Set di strumenti della piattaforma** nella categoria **Generale** in **Proprietà di configurazione**. Tale proprietà contiene la versione di Visual Studio e il numero di versione dello strumento della piattaforma, che in questo caso è v141 per la versione Visual Studio 2017 degli strumenti. Quando si converte un progetto compilato originariamente con Visual Studio 2010, 2012, 2013 o 2015, il set di strumenti non viene aggiornato automaticamente al set di strumenti più recente.
 
