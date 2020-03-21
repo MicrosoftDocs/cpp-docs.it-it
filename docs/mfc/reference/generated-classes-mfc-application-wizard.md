@@ -6,41 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-ms.openlocfilehash: 14efffeca11a87f4c3bcaa3241af5cf6784d01e9
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 472ceade4dbb5d99194098d82b7effc40092b5d1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708342"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075654"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Classi generate, Creazione guidata applicazione MFC
 
-In questo argomento elenca i nomi delle classi base e i file generati dal progetto. Per impostazione predefinita, i nomi sono basati sul nome del progetto specificato nella **finestra di dialogo Nuovo progetto**. È possibile modificare la maggior parte di questi nomi, come descritto di seguito:
+In questo argomento vengono elencati i nomi delle classi di base e dei file generati dal progetto. Per impostazione predefinita, i nomi sono basati sul nome del progetto specificato nella finestra di **dialogo nuovo progetto**. È possibile modificare la maggior parte di questi nomi, come descritto di seguito:
 
 - **Classi generate**
 
-   I nomi delle classi create per il progetto. Per impostazione predefinita, i nomi sono basati sul nome del progetto. Il progetto predefinito consente di creare una C*ProjName*visualizzazione, una classe C*ProjName*App, una classe C*ProjName*classe, una CMainFrame (classe) e una classe CChildFrame Doc. Tutti gli altri valori in questa pagina contengono informazioni sulla classe attualmente selezionata nel **le classi generate** elenco.
+   Nomi delle classi create per il progetto. Per impostazione predefinita, i nomi sono basati sul nome del progetto. Il progetto MFC predefinito crea una classe di visualizzazione C*ProjName*, una classe app*ProjName*c, una classe doc c*ProjName*, una classe CMainFrame e una classe CChildFrame. Tutti gli altri valori in questa pagina contengono informazioni sulla classe attualmente selezionata nell'elenco **classi generate** .
 
-   Per modificare un nome di classe, usare il **nome della classe** casella di testo.
+   Per modificare il nome di una classe, utilizzare la casella di testo **nome classe** .
 
 - **Nome classe**
 
-   Il nome della classe che attualmente selezionato nel **le classi generate** elenco. Se la casella è attiva, è possibile modificare il nome della classe. Quando si modifica lo stato attivo dal **nome della classe** casella, qualsiasi modifica al nome della classe selezionata viene visualizzata nel **classi generate** elenco.
+   Nome della classe attualmente selezionata nell'elenco **classi generate** . Se la casella è attiva, è possibile modificare il nome della classe. Quando si modifica lo stato attivo dalla casella **nome classe** , tutte le modifiche apportate al nome della classe selezionata vengono visualizzate nell'elenco **classi generate** .
 
 - **File con estensione h**
 
-   Il nome del file di intestazione della classe attualmente selezionato nel **le classi generate** elenco. Se la casella di testo è attiva, è possibile modificare il nome del file di intestazione.
+   Nome del file di intestazione della classe attualmente selezionato nell'elenco **classi generate** . Se la casella di testo è attiva, è possibile modificare il nome del file di intestazione.
 
 - **Classe base**
 
-   Il nome della classe di base della classe attualmente selezionata nel **le classi generate** elenco. Se la casella è attiva, è possibile selezionare dall'elenco un'altra classe per la classe di base.
+   Nome della classe di base della classe attualmente selezionata nell'elenco delle **classi generate** . Se la casella è attiva, è possibile selezionare nell'elenco un'altra classe per la classe di base.
 
 - **File con estensione cpp**
 
-   Il nome del file del codice sorgente associato alla classe selezionata. Se la casella di testo è attiva, è possibile modificare il nome del file di implementazione.
+   Nome del file di codice sorgente associato alla classe selezionata. Se la casella di testo è attiva, è possibile modificare il nome del file di implementazione.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Funzionalità avanzate, Creazione guidata applicazione MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)<br/>
-[Tipi di file creati per Visual Studio C++ progetti](../../build/reference/file-types-created-for-visual-cpp-projects.md)
-
+[Tipi di file creati per i progetti di Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)

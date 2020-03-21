@@ -9,22 +9,22 @@ helpviewer_keywords:
 - CMyProviderRowset class in MyProviderRS.H
 - CCustomRowset class in CustomRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
-ms.openlocfilehash: 2c84ff359bdbb39f281928fa0135edd40b1f7d20
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8e90db287bc7ac8994914766045eb210446dfd48
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446086"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079787"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
 La procedura guidata genera una voce per l'oggetto set di righe. In questo caso, viene chiamato `CCustomRowset`. La classe `CCustomRowset` eredita da una classe di provider OLE DB denominata `CRowsetImpl`, che implementa tutte le interfacce necessarie per l'oggetto set di righe. Il codice seguente mostra la catena di ereditarietà per `CRowsetImpl`:
 
 ```cpp
-template <class T, class Storage, class CreatorClass, 
+template <class T, class Storage, class CreatorClass,
    class ArrayType = CAtlArray<Storage>>
 class CMyRowsetImpl:
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, 
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType,
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 

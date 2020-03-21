@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3e92d6dc9f6966efda0e26fb28cf14652be880c7
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422500"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075591"
 ---
 # <a name="ltutilitygt-functions"></a>Funzioni &lt;utility&gt;
 
-## <a name="asconst"></a>as_const
+## <a name="as_const"></a><a name="asconst"></a>as_const
 
 ```cpp
 template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
@@ -34,13 +34,13 @@ template <class T> void as_const(const T&&) = delete;
 
 Restituisce *T*.
 
-## <a name="declval"></a>declval
+## <a name="declval"></a><a name="declval"></a>declval
 
 ```cpp
 template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
 ```
 
-## <a name="exchange"></a>Exchange
+## <a name="exchange"></a><a name="exchange"></a>Exchange
 
 **(C++14)** Assegna un nuovo valore a un oggetto e restituisce il relativo valore precedente.
 
@@ -95,7 +95,7 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a>avanti
+## <a name="forward"></a><a name="forward"></a>avanti
 
 Esegue il cast in modo condizionale del relativo argomento a un riferimento rvalue se l'argomento è un rvalue o un riferimento rvalue. In questo modo viene ripristinata la caratteristica rvalue di una funzione di inoltro in supporto dell'inoltro perfetto.
 
@@ -127,19 +127,19 @@ Restituisce un riferimento rvalue a *arg* se il valore passato in *arg* era in o
 
 Il ripristino di rvalue-Ness del valore originale di un argomento per la risoluzione dell'overload è noto come l' *invio perfetto*. L'inoltro perfetto consente a una funzione di modello di accettare un argomento di un tipo di riferimento e di ripristinare la caratteristica rvalue quando è necessario per una risoluzione corretta dell'overload. Utilizzando l'inoltro perfetto è possibile mantenere la semantica di spostamento relativa agli rvalue ed evitare di fornire gli overload per le funzioni che variano solo in base al tipo di riferimento dei relativi argomenti.
 
-## <a name="from_chars"></a>from_chars
+## <a name="from_chars"></a><a name="from_chars"></a>from_chars
 
 ```cpp
 from_chars_result from_chars(const char* first, const char* last, see below& value, int base = 10);
 
-from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general);
 
-from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general);
 
 from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
 ```
 
-## <a name="get"></a>Ottieni
+## <a name="get"></a><a name="get"></a>Ottieni
 
 Consente di visualizzare un elemento dall'oggetto `pair` in base alla posizione di indice o in base al tipo.
 
@@ -235,35 +235,35 @@ int main()
 1 0.27
 ```
 
-## <a name="index_sequence"></a>index_sequence
+## <a name="index_sequence"></a><a name="index_sequence"></a>index_sequence
 
 ```cpp
 template<size_t... I>
     using index_sequence = integer_sequence<size_t, I...>;
 ```
 
-## <a name="index_sequence_for"></a>index_sequence_for
+## <a name="index_sequence_for"></a><a name="index_sequence_for"></a>index_sequence_for
 
 ```cpp
 template<class... T>
     using index_sequence_for = make_index_sequence<sizeof...(T)>;
 ```
 
-## <a name="make_index_sequence"></a>make_index_sequence
+## <a name="make_index_sequence"></a><a name="make_index_sequence"></a>make_index_sequence
 
 ```cpp
 template<size_t N>
     using make_index_sequence = make_integer_sequence<size_t, N>;
 ```
 
-## <a name="make_integer_sequence"></a>make_integer_sequence
+## <a name="make_integer_sequence"></a><a name="make_integer_sequence"></a>make_integer_sequence
 
 ```cpp
 template<class T, T N>
     using make_integer_sequence = integer_sequence<T, see below >;
 ```
 
-## <a name="make_pair"></a>make_pair
+## <a name="make_pair"></a><a name="make_pair"></a>make_pair
 
 Funzione di modello che è possibile usare per costruire oggetti di tipo `pair`, in cui i tipi di componenti vengono automaticamente scelti in base ai tipi di dati passati come parametri.
 
@@ -313,7 +313,7 @@ La funzione helper `make_pair` consente di passare due valori a una funzione che
 
 Per un esempio sull'uso della funzione helper `make_pair` per dichiarare e inizializzare una coppia, vedere [Struttura pair](../standard-library/pair-structure.md).
 
-## <a name="move"></a>spostare
+## <a name="move"></a><a name="move"></a>spostare
 
 Esegue il cast in modo condizionale del relativo argomento a un riferimento rvalue e segnala pertanto che può essere spostato se il relativo tipo è abilitato allo spostamento.
 
@@ -342,13 +342,13 @@ Il *tipo* di argomento del modello non deve essere specificato in modo esplicito
 
 Se il valore passato in *arg* è un lvalue, ovvero ha un nome o il relativo indirizzo può essere accettato, viene invalidato quando si verifica lo spostamento. Non fare riferimento al valore passato in *arg* in base al relativo nome o indirizzo dopo che è stato spostato.
 
-## <a name="moveif"></a>move_if_noexcept
+## <a name="move_if_noexcept"></a><a name="moveif"></a>move_if_noexcept
 
 ```cpp
 template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
 ```
 
-## <a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a>scambio
 
 Scambia gli elementi di due oggetti della struttura di tipo o [coppia](../standard-library/pair-structure.md) .
 
@@ -373,18 +373,18 @@ Oggetto di tipo o di tipo `pair`.
 
 Un vantaggio di `swap` è che i tipi di oggetti archiviati vengono determinati automaticamente dal compilatore e non devono essere specificati in modo esplicito. Non usare gli argomenti di modello espliciti, ad esempio `swap<int, int>(1, 2)` quando si usa `swap` perché è dettagliato e aggiunge problemi di riferimento rvalue complessi che potrebbero causare un errore di compilazione.
 
-## <a name="to_chars"></a>to_chars
+## <a name="to_chars"></a><a name="to_chars"></a>to_chars
 
 ```cpp
 to_chars_result to_chars(char* first, char* last, see below value, int base = 10);
-to_chars_result to_chars(char* first, char* last, float value); 
-to_chars_result to_chars(char* first, char* last, double value); 
+to_chars_result to_chars(char* first, char* last, float value);
+to_chars_result to_chars(char* first, char* last, double value);
 to_chars_result to_chars(char* first, char* last, long double value);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 

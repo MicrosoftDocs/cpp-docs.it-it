@@ -3,12 +3,12 @@ title: Convenzione di chiamata x64
 description: Dettagli della convenzione di chiamata ABI x64 predefinita.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5b9801eff6a9789313d083fdd6ed69c3076643ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417166"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078075"
 ---
 # <a name="x64-calling-convention"></a>Convenzione di chiamata x64
 
@@ -147,7 +147,7 @@ I registri RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 e le parti superiori di YMM0-
 I registri RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 e XMM6-15 sono considerati non volatili e devono essere salvati e ripristinati da una funzione che li utilizza.
 
 ## <a name="function-pointers"></a>Puntatori funzione
- 
+
 I puntatori a funzione sono semplicemente puntatori all'etichetta della rispettiva funzione. Non sono previsti requisiti Sommario per i puntatori a funzione.
 
 ## <a name="floating-point-support-for-older-code"></a>Supporto della virgola mobile per il codice precedente

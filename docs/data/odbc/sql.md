@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: 68c01623ef97e89623dff3f46a952c75ea31a774
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 5e31105e682e8acecbdc0da461614fc46e4ae227
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707821"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079766"
 ---
 # <a name="sql"></a>SQL
 
@@ -23,7 +23,7 @@ SQL (Structured Query Language) è un modo per comunicare con un database relazi
 
 Le istruzioni SQL iniziano con un verbo parola chiave, come **CREATE** o **SELECT**. SQL è un linguaggio molto potente: una singola istruzione può influire su un'intera tabella.
 
-Esistono molte versioni di SQL, ognuna sviluppata con per uno specifico sistema di gestione di database. Le classi di database MFC riconoscono un set di istruzioni SQL che corrisponde alla bozza di specifica SQL X/Open e SQL Access Group Common Applications Environment (CAE) del 1991. Per informazioni sulla sintassi di queste istruzioni, vedere l'appendice C nelle *informazioni di riferimento per programmatori* dell'*SDK di ODBC* sul CD di MSDN Library.
+Esistono molte versioni di SQL, ognuna sviluppata con per uno specifico sistema di gestione di database. Le classi di database MFC riconoscono un set di istruzioni SQL che corrisponde alla bozza di specifica SQL X/Open e SQL Access Group Common Applications Environment (CAE) del 1991. Per informazioni sulla sintassi di queste istruzioni, vedere Appendice C in *ODBC SDK* *Programmer ' s Reference* nel CD di MSDN Library.
 
 In questo argomento:
 
@@ -33,13 +33,13 @@ In questo argomento:
 
 - [In che modo le classi di database usano SQL](#_core_how_the_database_classes_use_sql).
 
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)
+##  <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)
 
-Le classi di database sono implementate con ODBC, che usa SQL in un'interfaccia a livello di chiamata, invece di incorporare i comandi SQL nel codice. ODBC usa SQL per comunicare con un'[origine dati](../../data/odbc/data-source-odbc.md) tramite i driver ODBC. Questi driver interpretano il codice SQL e, se necessario, lo convertono per l'uso con un particolare formato di database, ad esempio Microsoft Access. Per altre informazioni sull'uso di SQL in ODBC, vedere le *informazioni di riferimento per programmatori* di [ODBC](../../data/odbc/odbc-basics.md) e dell'SDK di ODBC sul CD di MSDN Library.
+Le classi di database sono implementate con ODBC, che usa SQL in un'interfaccia a livello di chiamata, invece di incorporare i comandi SQL nel codice. ODBC usa SQL per comunicare con un'[origine dati](../../data/odbc/data-source-odbc.md) tramite i driver ODBC. Questi driver interpretano il codice SQL e, se necessario, lo convertono per l'uso con un particolare formato di database, ad esempio Microsoft Access. Per altre informazioni sull'uso di SQL in ODBC, vedere le [informazioni di riferimento per programmatori](../../data/odbc/odbc-basics.md) di *ODBC* e dell'SDK di ODBC sul CD di MSDN Library.
 
-##  <a name="_core_the_database_classes"></a> Classi di database
+##  <a name="database-classes"></a><a name="_core_the_database_classes"></a> Classi di database
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata consumer ODBC MFC non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile creare manualmente un consumer.
 
 Le classi di database sono progettate per consentire di modificare e aggiornare i dati in un'[origine dati](../../data/odbc/data-source-odbc.md) esistente. La [Creazione guidata applicazione MFC](../../mfc/reference/database-support-mfc-application-wizard.md), la [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (accessibile tramite **Aggiungi classe**) e le classi di database creano automaticamente la maggior parte delle istruzioni SQL.
@@ -64,13 +64,13 @@ Inoltre, le classi di database riconoscono le istruzioni ODBC **CALL**, che è p
 
 Se le classi non sono in grado di riconoscere un'istruzione fornita dall'utente in `CRecordset::Open`, questa viene interpretata come un nome di tabella.
 
-Per una descrizione del modo in cui il framework costruisce le istruzioni SQL, vedere [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Per una spiegazione del modo in cui il Framework crea istruzioni SQL, vedere [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-I database SQL usano tipi di dati simili a quelli usati in C e C++. Per una descrizione di queste analogie, vedere [SQL: tipi di dati SQL e C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+I database SQL usano tipi di dati simili a quelli usati in C e C++. Per una descrizione di queste analogie, vedere [SQL: SQL e C++ tipi di dati (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
-È possibile trovare altre informazioni su SQL, inclusi un elenco di istruzioni SQL supportate, i tipi di dati, la grammatica SQL di base e un elenco di pubblicazioni consigliate su SQL, nelle *informazioni di riferimento per programmatori* dell'*SDK di ODBC* sul CD di MSDN Library.
+Per ulteriori informazioni su SQL, tra cui un elenco di istruzioni SQL supportate, tipi di dati, la grammatica di SQL core e un elenco di lettura delle pubblicazioni consigliate su SQL, vedere *ODBC SDK* *Programmer ' s Reference* nel CD di MSDN Library.
 
-##  <a name="_core_how_the_database_classes_use_sql"></a> In che modo le classi di database usano SQL
+##  <a name="how-the-database-classes-use-sql"></a><a name="_core_how_the_database_classes_use_sql"></a> In che modo le classi di database usano SQL
 
 I recordset derivati dalle classi di database usano ODBC per comunicare con un'origine dati e ODBC recupera i record dall'origine dati mediante l'invio di istruzioni SQL. In questo argomento viene illustrata la relazione tra le classi di database e SQL.
 

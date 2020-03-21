@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2ae1be31233e55aa34d6f3046d90fb2127348c0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153440"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080038"
 ---
 # <a name="lock-class"></a>Classe lock
 
-Questa classe consente di automatizzare l'acquisizione di un blocco per la sincronizzazione dell'accesso a un oggetto da thread diversi.  Quando viene costruito viene acquisito il blocco e quando viene eliminato rilasci il blocco.
+Questa classe automatizza l'acquisizione di un blocco per la sincronizzazione dell'accesso a un oggetto da più thread.  Quando viene costruito, acquisisce il blocco e, quando viene eliminato, rilascia il blocco.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,35 +31,35 @@ Questa classe consente di automatizzare l'acquisizione di un blocco per la sincr
 ref class lock;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`lock` è disponibile solo per gli oggetti CLR e può essere usato solo nel codice CLR.
+`lock` è disponibile solo per gli oggetti CLR e può essere utilizzato solo nel codice CLR.
 
-Internamente, la classe Usa blocco <xref:System.Threading.Monitor> per sincronizzare l'accesso. Per altre informazioni, vedere l'articolo di riferimento.
+Internamente, la classe Lock USA <xref:System.Threading.Monitor> per sincronizzare l'accesso. Per ulteriori informazioni, vedere l'articolo di riferimento.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |---------|-----------|
-|[lock::lock](#lock)|Costruisce un `lock` oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un determinato periodo di tempo o niente affatto.|
-|[lock::~lock](#tilde-lock)|Distrugge un `lock` oggetto.|
+|[lock::lock](#lock)|Costruisce un oggetto `lock`, facoltativamente in attesa di acquisire il blocco per sempre, per un periodo di tempo specificato o non per tutti.|
+|[lock::~lock](#tilde-lock)|Distrugge un oggetto `lock`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |---------|-----------|
-|[lock::acquire](#acquire)|Acquisisce un blocco su un oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un determinato periodo di tempo o niente affatto.|
-|[lock::is_locked](#is-locked)|Indica se un blocco mantenuto.|
+|[lock::acquire](#acquire)|Acquisisce un blocco su un oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un periodo di tempo specificato o non per tutti.|
+|[lock::is_locked](#is-locked)|Indica se viene mantenuto un blocco.|
 |[lock::release](#release)|Rilascia un blocco.|
-|[lock::try_acquire](#try-acquire)|Acquisisce un blocco su un oggetto, in attesa di un intervallo di tempo specificato e restituisce un `bool` per segnalare l'esito positivo dell'acquisizione anziché generare un'eccezione.|
+|[lock::try_acquire](#try-acquire)|Acquisisce un blocco su un oggetto, in attesa del periodo di tempo specificato e restituisce un `bool` per segnalare la riuscita dell'acquisizione anziché generare un'eccezione.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |---------|-----------|
-|[lock::operator&nbsp;bool](#operator-bool)|Operatore per l'uso di `lock` in un'espressione condizionale.|
+|[operatore Lock:: operator&nbsp;bool](#operator-bool)|Operatore per l'utilizzo di `lock` in un'espressione condizionale.|
 |[lock::operator==](#operator-equality)|Operatore di uguaglianza.|
 |[lock::operator!=](#operator-inequality)|Operatore di disuguaglianza.|
 
@@ -67,13 +67,11 @@ Internamente, la classe Usa blocco <xref:System.Threading.Monitor> per sincroniz
 
 **File di intestazione** \<msclr\lock.h >
 
-**Namespace** msclr
+**Spazio dei nomi** msclr
 
+## <a name="locklock"></a><a name="lock"></a>Lock:: Lock
 
-
-## <a name="lock"></a>lock::lock
-
-Costruisce un `lock` oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un determinato periodo di tempo o niente affatto.
+Costruisce un oggetto `lock`, facoltativamente in attesa di acquisire il blocco per sempre, per un periodo di tempo specificato o non per tutti.
 
 ```cpp
 template<class T> lock(
@@ -99,25 +97,25 @@ template<class T> lock(
 Oggetto da bloccare.
 
 *_timeout*<br/>
-Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.
+Valore di timeout in millisecondi o come <xref:System.TimeSpan>.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Genera un'eccezione <xref:System.ApplicationException> se l'acquisizione del blocco non si verifica prima del timeout.
+Genera <xref:System.ApplicationException> se l'acquisizione del blocco non viene eseguita prima del timeout.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I primi tre form del costruttore provano ad acquisire un blocco sul `_object` entro il periodo di timeout specificato (o <xref:System.Threading.Timeout.Infinite> se non è specificato).
+Le prime tre forme del costruttore tentano di acquisire un blocco in `_object` entro il periodo di timeout specificato (oppure <xref:System.Threading.Timeout.Infinite> se non ne viene specificato nessuno).
 
-Il quarto form del costruttore non acquisire un blocco su `_object`. `lock_later` è un membro del [lock_when (enumerazione)](../dotnet/lock-when-enum.md). Uso [lock::acquire](../dotnet/lock-acquire.md) oppure [lock::try_acquire](../dotnet/lock-try-acquire.md) per acquisire il blocco in questo caso.
+Il quarto form del costruttore non acquisisce un blocco su `_object`. `lock_later` è un membro dell' [enumerazione lock_when](../dotnet/lock-when-enum.md). Utilizzare [Lock:: Acquire](../dotnet/lock-acquire.md) o [lock:: try_acquire](../dotnet/lock-try-acquire.md) per acquisire il blocco in questo caso.
 
 Il blocco verrà rilasciato automaticamente quando viene chiamato il distruttore.
 
-`_object` non può essere <xref:System.Threading.ReaderWriterLock>.  Se si tratta, si verificherà un errore del compilatore.
+non è possibile <xref:System.Threading.ReaderWriterLock>`_object`.  In caso contrario, verrà generato un errore del compilatore.
 
 ### <a name="example"></a>Esempio
 
-Questo esempio Usa una singola istanza di una classe tra diversi thread. La classe Usa un blocco su se stesso per assicurarsi che gli accessi ai propri dati interni sono coerenti per ogni thread. Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se esistono ancora qualsiasi thread di lavoro. Quindi l'applicazione principale attende fino al completamento delle attività tutti i thread di lavoro.
+In questo esempio viene usata una singola istanza di una classe tra più thread. La classe utilizza un blocco su se stesso per assicurarsi che gli accessi ai relativi dati interni siano coerenti per ogni thread. Il thread dell'applicazione principale usa un blocco sulla stessa istanza della classe per controllare periodicamente se sono ancora presenti thread di lavoro. L'applicazione principale attende quindi di uscire fino a quando tutti i thread di lavoro non hanno completato le attività.
 
 ```cpp
 // msl_lock_lock.cpp
@@ -205,21 +203,21 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="tilde-lock"></a>blocco:: ~ lock
+## <a name="locklock"></a><a name="tilde-lock"></a>Lock:: ~ Lock
 
-Distrugge un `lock` oggetto.
+Distrugge un oggetto `lock`.
 
 ```cpp
 ~lock();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le chiamate del distruttore [lock::release](../dotnet/lock-release.md).
+Il distruttore chiama [Lock:: Release](../dotnet/lock-release.md).
 
 ### <a name="example"></a>Esempio
 
-Questo esempio Usa una singola istanza di una classe tra diversi thread.  La classe Usa un blocco su se stesso per assicurarsi che gli accessi ai propri dati interni sono coerenti per ogni thread.  Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se esistono ancora qualsiasi thread di lavoro. Quindi l'applicazione principale attende fino al completamento delle attività tutti i thread di lavoro.
+In questo esempio viene usata una singola istanza di una classe tra più thread.  La classe utilizza un blocco su se stesso per assicurarsi che gli accessi ai relativi dati interni siano coerenti per ogni thread.  Il thread dell'applicazione principale usa un blocco sulla stessa istanza della classe per controllare periodicamente se sono ancora presenti thread di lavoro. L'applicazione principale attende quindi di uscire fino a quando tutti i thread di lavoro non hanno completato le attività.
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -307,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="acquire"></a>lock::acquire
+## <a name="lockacquire"></a><a name="acquire"></a>Lock:: Acquire
 
-Acquisisce un blocco su un oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un determinato periodo di tempo o niente affatto.
+Acquisisce un blocco su un oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un periodo di tempo specificato o non per tutti.
 
 ```cpp
 void acquire();
@@ -324,21 +322,21 @@ void acquire(
 ### <a name="parameters"></a>Parametri
 
 *_timeout*<br/>
-Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.
+Valore di timeout in millisecondi o come <xref:System.TimeSpan>.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Genera un'eccezione <xref:System.ApplicationException> se l'acquisizione del blocco non si verifica prima del timeout.
+Genera <xref:System.ApplicationException> se l'acquisizione del blocco non viene eseguita prima del timeout.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se non viene specificato un valore di timeout, il timeout predefinito è <xref:System.Threading.Timeout.Infinite>.
+Se non viene specificato un valore di timeout, viene <xref:System.Threading.Timeout.Infinite>il timeout predefinito.
 
 Se è già stato acquisito un blocco, questa funzione non esegue alcuna operazione.
 
 ### <a name="example"></a>Esempio
 
-Questo esempio Usa una singola istanza di una classe tra diversi thread.  La classe Usa un blocco su se stesso per assicurarsi che gli accessi ai propri dati interni sono coerenti per ogni thread. Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se esistono ancora qualsiasi thread di lavoro. Quindi l'applicazione principale attende fino al completamento delle attività tutti i thread di lavoro.
+In questo esempio viene usata una singola istanza di una classe tra più thread.  La classe utilizza un blocco su se stesso per assicurarsi che gli accessi ai relativi dati interni siano coerenti per ogni thread. Il thread dell'applicazione principale usa un blocco sulla stessa istanza della classe per controllare periodicamente se sono ancora presenti thread di lavoro. L'applicazione principale attende quindi di uscire fino a quando tutti i thread di lavoro non hanno completato le attività.
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -426,9 +424,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="is-locked"></a>lock::is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>Lock:: is_locked
 
-Indica se un blocco mantenuto.
+Indica se viene mantenuto un blocco.
 
 ```cpp
 bool is_locked();
@@ -436,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se un blocco viene mantenuto, `false` in caso contrario.
+`true` se viene mantenuto un blocco, `false` in caso contrario.
 
 ### <a name="example"></a>Esempio
 
-Questo esempio Usa una singola istanza di una classe tra diversi thread.  La classe Usa un blocco su se stesso per assicurarsi che gli accessi ai propri dati interni sono coerenti per ogni thread.  Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se qualsiasi thread di lavoro continuano a esistere e attese per uscire dalla finché tutti thread di lavoro completate le attività.
+In questo esempio viene usata una singola istanza di una classe tra più thread.  La classe utilizza un blocco su se stesso per assicurarsi che gli accessi ai relativi dati interni siano coerenti per ogni thread.  Il thread dell'applicazione principale usa un blocco sulla stessa istanza della classe per controllare periodicamente se sono ancora presenti thread di lavoro e attende di uscire finché tutti i thread di lavoro non hanno completato le attività.
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -529,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="operator-bool"></a>lock::operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>Lock:: operator bool
 
-Operatore per l'uso di `lock` in un'espressione condizionale.
+Operatore per l'utilizzo di `lock` in un'espressione condizionale.
 
 ```cpp
 operator bool();
@@ -539,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se un blocco viene mantenuto, `false` in caso contrario.
+`true` se viene mantenuto un blocco, `false` in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo operatore converte effettivamente `_detail_class::_safe_bool` che è più sicuro di `bool` perché non può essere convertito in un tipo integrale.
+Questo operatore esegue la conversione in `_detail_class::_safe_bool` che è più sicuro di `bool` perché non può essere convertito in un tipo integrale.
 
 ### <a name="example"></a>Esempio
 
-Questo esempio Usa una singola istanza di una classe tra diversi thread.  La classe Usa un blocco su se stesso per assicurarsi che gli accessi ai propri dati interni sono coerenti per ogni thread. Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se esistono ancora qualsiasi thread di lavoro. L'applicazione principale attende fino al completamento delle attività tutti i thread di lavoro.
+In questo esempio viene usata una singola istanza di una classe tra più thread.  La classe utilizza un blocco su se stesso per assicurarsi che gli accessi ai relativi dati interni siano coerenti per ogni thread. Il thread dell'applicazione principale usa un blocco sulla stessa istanza della classe per controllare periodicamente se sono ancora presenti thread di lavoro. L'applicazione principale attende la chiusura fino a quando tutti i thread di lavoro non hanno completato le attività.
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -636,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="release"></a>lock::Release
+## <a name="lockrelease"></a><a name="release"></a>Lock:: Release
 
 Rilascia un blocco.
 
@@ -644,15 +642,15 @@ Rilascia un blocco.
 void release();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se nessun blocco mantenuto, `release` non esegue alcuna operazione.
+Se non viene mantenuto alcun blocco, `release` non esegue alcuna operazione.
 
-Non è necessario chiamare questa funzione in modo esplicito. Quando un `lock` oggetto esce dall'ambito, le chiamate di distruttore `release`.
+Non è necessario chiamare questa funzione in modo esplicito. Quando un oggetto `lock` esce dall'ambito, il distruttore chiama `release`.
 
 ### <a name="example"></a>Esempio
 
-Questo esempio Usa una singola istanza di una classe tra diversi thread. La classe Usa un blocco su se stesso per assicurarsi che gli accessi ai propri dati interni sono coerenti per ogni thread. Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se esistono ancora qualsiasi thread di lavoro. Quindi l'applicazione principale attende fino al completamento delle attività tutti i thread di lavoro.
+In questo esempio viene usata una singola istanza di una classe tra più thread. La classe utilizza un blocco su se stesso per assicurarsi che gli accessi ai relativi dati interni siano coerenti per ogni thread. Il thread dell'applicazione principale usa un blocco sulla stessa istanza della classe per controllare periodicamente se sono ancora presenti thread di lavoro. L'applicazione principale attende quindi di uscire fino a quando tutti i thread di lavoro non hanno completato le attività.
 
 ```cpp
 // msl_lock_release.cpp
@@ -740,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="try-acquire"></a>lock::try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>Lock:: try_acquire
 
-Acquisisce un blocco su un oggetto, in attesa di un intervallo di tempo specificato e restituisce un `bool` per segnalare l'esito positivo dell'acquisizione anziché generare un'eccezione.
+Acquisisce un blocco su un oggetto, in attesa del periodo di tempo specificato e restituisce un `bool` per segnalare la riuscita dell'acquisizione anziché generare un'eccezione.
 
 ```cpp
 bool try_acquire(
@@ -756,19 +754,19 @@ bool try_acquire(
 ### <a name="parameters"></a>Parametri
 
 *_timeout*<br/>
-Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.
+Valore di timeout in millisecondi o come <xref:System.TimeSpan>.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il blocco è stato acquisito, `false` in caso contrario.
+`true` se è stato acquisito il blocco, `false` in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se è già stato acquisito un blocco, questa funzione non esegue alcuna operazione.
 
 ### <a name="example"></a>Esempio
 
-Questo esempio Usa una singola istanza di una classe tra diversi thread. La classe Usa un blocco su se stesso per assicurarsi che gli accessi ai propri dati interni sono coerenti per ogni thread. Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se esistono ancora qualsiasi thread di lavoro. Quindi l'applicazione principale attende fino al completamento delle attività tutti i thread di lavoro.
+In questo esempio viene usata una singola istanza di una classe tra più thread. La classe utilizza un blocco su se stesso per assicurarsi che gli accessi ai relativi dati interni siano coerenti per ogni thread. Il thread dell'applicazione principale usa un blocco sulla stessa istanza della classe per controllare periodicamente se sono ancora presenti thread di lavoro. L'applicazione principale attende quindi di uscire fino a quando tutti i thread di lavoro non hanno completato le attività.
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -856,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="operator-equality"></a>lock::operator==
+## <a name="lockoperator"></a><a name="operator-equality"></a>Lock:: operator = =
 
 Operatore di uguaglianza.
 
@@ -869,7 +867,7 @@ template<class T> bool operator==(
 ### <a name="parameters"></a>Parametri
 
 *t*<br/>
-Oggetto da confrontare per verificarne l'uguaglianza.
+Oggetto da confrontare per l'uguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -899,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="operator-inequality"></a>lock::operator!=
+## <a name="lockoperator"></a><a name="operator-inequality"></a>Lock:: operator! =
 
 Operatore di disuguaglianza.
 

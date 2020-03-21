@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685859"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076377"
 ---
 # <a name="student_t_distribution-class"></a>Classe student_t_distribution
 
@@ -64,10 +64,10 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *RealType*
+\ *RealType*
 Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione *t*di Student. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -80,7 +80,7 @@ La funzione di proprietà `n()` restituisce il valore per il parametro di distri
 
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
 
-Per informazioni dettagliate sulla distribuzione Student-*t*, vedere l'articolo di Wolfram MathWorld [Students t-Distribution](http://mathworld.wolfram.com/Studentst-Distribution.html) (Distribuzione Student-t).
+Per informazioni dettagliate sulla distribuzione Student-*t*, vedere l'articolo di Wolfram MathWorld [Students t-Distribution](https://mathworld.wolfram.com/Studentst-Distribution.html) (Distribuzione Student-t).
 
 ## <a name="example"></a>Esempio
 
@@ -159,11 +159,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<random>
+**Intestazione:** \<> casuale
 
 **Spazio dei nomi:** std
 
-## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
 Costruisce la distribuzione.
 
@@ -180,15 +180,15 @@ Parametro di distribuzione `n`.
 \ di *parmigiana*
 Pacchetto di parametri usato per costruire la distribuzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0.0 < n`
 
 Il primo costruttore crea un oggetto il cui valore `n` archiviato include il valore *n*.
 
-Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
+Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="param_type"></a>  student_t_distribution::param_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>  student_t_distribution::param_type
 
 Archivia tutti i parametri della distribuzione.
 
@@ -211,7 +211,7 @@ Parametro di distribuzione `n`.
 \ a *destra*
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0.0 < n`
 

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-ms.openlocfilehash: 4af302d8a391de359f3b8ac66d41b5d7198fd8f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 103a1ce5568c6137994056e574ce8eec04511d8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182912"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079750"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-La procedura guidata crea una classe che contiene una sola riga di dati. In questo caso, viene chiamato `CCustomWindowsFile`. Nell'esempio di codice per `CCustomWindowsFile` viene generato dalla procedura guidata, sono elencati tutti i file in una directory tramite il `WIN32_FIND_DATA` struttura. `CCustomWindowsFile` eredita dal `WIN32_FIND_DATA` struttura:
+La procedura guidata crea una classe con una riga di dati; in questo caso, viene chiamato `CCustomWindowsFile`. Il codice seguente per `CCustomWindowsFile` è la procedura guidata generata ed elenca tutti i file in una directory usando la struttura di `WIN32_FIND_DATA`. `CCustomWindowsFile` eredita dalla struttura `WIN32_FIND_DATA`:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
 // CustomRS.H
 
-class CCustomWindowsFile: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
@@ -38,9 +38,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-`CCustomWindowsFile` viene chiamato il [classe di record utente](../../data/oledb/user-record.md) poiché dispone anche di una mappa che descrive le colonne nel set di righe del provider. In questa mappa contiene una voce per ogni campo nel set di righe usando le macro PROVIDER_COLUMN_ENTRY. Le macro di specificare il nome di colonna, ordinale e offset a una voce di struttura. Le voci delle colonne del provider nel codice precedente contengano gli offset nel `WIN32_FIND_DATA` struttura. Quando il consumer chiama `IRowset::GetData`, i dati vengono trasferiti in un buffer contiguo. Anziché ricorrere a operazioni di aritmetica dei puntatori, la mappa consente di specificare un membro dati.
+`CCustomWindowsFile` viene chiamato [classe di record utente](../../data/oledb/user-record.md) , perché include anche una mappa che descrive le colonne nel set di righe del provider. La mappa delle colonne del provider contiene una voce per ogni campo nel set di righe mediante le macro PROVIDER_COLUMN_ENTRY. Le macro specificano il nome della colonna, l'ordinale e l'offset in una voce della struttura. Le voci della colonna del provider nel codice precedente contengono gli offset nella struttura `WIN32_FIND_DATA`. Quando il consumer chiama `IRowset::GetData`, i dati vengono trasferiti in un buffer contiguo. Anziché eseguire l'aritmetica dei puntatori, la mappa consente di specificare un membro dati.
 
-Il `CCustomRowset` classe contiene inoltre il `Execute` (metodo). `Execute` è che legge effettivamente i dati dall'origine native. Il codice seguente illustra la procedura guidata genera `Execute` (metodo). La funzione Usa Win32 `FindFirstFile` e `FindNextFile` API per recuperare informazioni sui file nella directory e li inserisce nelle istanze del `CCustomWindowsFile` classe.
+La classe `CCustomRowset` contiene anche il metodo `Execute`. `Execute` è il modo in cui i dati vengono effettivamente letti dall'origine nativa. Il codice seguente illustra il metodo di `Execute` generato dalla procedura guidata. La funzione usa le API Win32 `FindFirstFile` e `FindNextFile` per recuperare informazioni sui file nella directory e inserirli nelle istanze della classe `CCustomWindowsFile`.
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -73,9 +73,9 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }
 ```
 
-Di seguito viene illustrata la directory in cui cercare `m_strCommandText`; questo file contiene il testo rapprentato dal `ICommandText` interfaccia nell'oggetto comando. Se viene specificata alcuna directory, Usa la directory corrente.
+La directory in cui eseguire la ricerca viene visualizzata `m_strCommandText`; contiene il testo rappresentato dall'interfaccia `ICommandText` nell'oggetto Command. Se non viene specificata alcuna directory, viene utilizzata la directory corrente.
 
-Il metodo creerà una voce per ogni file (corrispondente a una riga) e lo inserisce nel `m_rgRowData` (membro dati). Il `CRowsetImpl` classe definisce il `m_rgRowData` (membro dati). I dati in questa matrice viene visualizzati l'intera tabella e viene usati in tutti i modelli.
+Il metodo crea una voce per ogni file (corrispondente a una riga) e la inserisce nel membro dati `m_rgRowData`. La classe `CRowsetImpl` definisce il membro dati `m_rgRowData`. I dati in questa matrice vengono mostrati nell'intera tabella e usati in tutti i modelli.
 
 ## <a name="see-also"></a>Vedere anche
 

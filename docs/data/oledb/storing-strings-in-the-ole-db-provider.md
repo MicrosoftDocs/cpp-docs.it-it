@@ -4,18 +4,17 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 1d6d2b73495d5ca6e275b13ed3c430f8169179d4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525347"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079102"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Memorizzazione di stringhe in un provider OLE DB
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata provider OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive.
-
 
 In *Custom*RS.h la **Creazione guidata provider OLE DB ATL** crea un record utente predefinito denominato `CWindowsFile`. Per gestire le due stringhe, modificare `CWindowsFile` come illustrato nel codice seguente:
 

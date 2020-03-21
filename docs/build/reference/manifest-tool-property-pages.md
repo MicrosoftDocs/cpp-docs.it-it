@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927684"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079493"
 ---
 # <a name="manifest-tool-property-pages"></a>Pagine delle proprietà dello strumento Manifesto
 
-Utilizzare queste pagine per specificare le opzioni generali per [mt. exe](/windows/win32/sbscs/mt-exe). Queste pagine si trovano in proprietà **progetto** >  > proprietà di**configurazione** > **strumento Manifesto**.
+Utilizzare queste pagine per specificare le opzioni generali per [mt. exe](/windows/win32/sbscs/mt-exe). Queste pagine si trovano in **progetto** > **Proprietà** > **proprietà di configurazione** > **strumento Manifesto**.
 
 ## <a name="general-property-page"></a>Pagina delle proprietà generale
 
@@ -49,9 +49,9 @@ Utilizzare queste pagine per specificare le opzioni generali per [mt. exe](/wind
 
 Usa l'opzione /identity per specificare una stringa di identità, che contiene gli attributi per [\<assemblyIdentity> Element](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Una stringa di identità inizia con il valore per l'attributo `name` ed è seguita da *attribute* = *value* pairs. Gli attributi in una stringa di identità sono delimitati dalla virgola.
 
-Di seguito è riportato un esempio di stringa di identità:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Di seguito è riportato un esempio di stringa di identità: `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>Pagina delle proprietà input e output     
+## <a name="input-and-output-property-page"></a>Pagina delle proprietà input e output
 
 ###  <a name="additional-manifest-files"></a>File manifesto aggiuntivi
 
@@ -97,15 +97,15 @@ Utilizzato con-managedassembly. -Category causa la generazione dei tag category.
 
 Specifica se l'applicazione è compatibile con DPI. Per impostazione predefinita, l'impostazione è **Sì** per progetti MFC e **No** in caso contrario, perché solo i progetti MFC hanno la compatibilità DPI incorporata. È possibile forzare l'impostazione su **Sì** se si aggiunge codice per gestire le impostazioni DPI diverse. L'applicazione potrebbe apparire fuzzy o piccola se la si imposta come compatibile con DPI quando in realtà non lo è.
 
-**Scelte**
+**Choices**
 
-- **None**
+- **Nessuno**
 - **Compatibilità DPI elevata**
 - **Per monitor con compatibilità DPI elevata**
 
 ## <a name="isolated-com-property-page"></a>Pagina delle proprietà COM isolata
 
-Per ulteriori informazioni sui componenti COM isolati, vedere [applicazioni isolate](/windows/win32/SbsCs/isolated-applications) e [procedura: Consente di compilare applicazioni isolate per](../how-to-build-isolated-applications-to-consume-com-components.md)l'utilizzo di componenti com.
+Per ulteriori informazioni sui componenti COM isolati, vedere [applicazioni isolate](/windows/win32/SbsCs/isolated-applications) e [procedura: compilare applicazioni isolate per l'utilizzo di componenti com](../how-to-build-isolated-applications-to-consume-com-components.md).
 
 ###  <a name="type-library-file"></a>File della libreria di tipi
 
@@ -136,7 +136,6 @@ Specifica il percorso di ricerca da usare quando si aggiornano gli hash dei file
 ###  <a name="additional-options"></a>Opzioni aggiuntive
 
 Opzioni aggiuntive
-
 
 ## <a name="see-also"></a>Vedere anche
 

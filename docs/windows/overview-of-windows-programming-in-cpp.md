@@ -2,16 +2,16 @@
 title: Cenni preliminari sulla programmazione Windows in C++
 ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
-ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
+ms.openlocfilehash: cd95332721f51ed2d17c3205cba5f1456a1037b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127187"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075495"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
 
-Sono disponibili diverse categorie generali di applicazioni Windows che è possibile creare con C++. Ognuno ha un proprio modello di programmazione e un set di librerie specifiche di Windows, C++ ma è possibile usare la libreria C++ standard e le librerie di terze parti in qualsiasi. 
+Sono disponibili diverse categorie generali di applicazioni Windows che è possibile creare con C++. Ognuno ha un proprio modello di programmazione e un set di librerie specifiche di Windows, C++ ma è possibile usare la libreria C++ standard e le librerie di terze parti in qualsiasi.
 
 In questa sezione viene illustrato come utilizzare Visual Studio e le librerie di wrapper MFC/ATL per creare programmi di Windows. Per la documentazione sulla piattaforma Windows, vedere la [documentazione di Windows](/windows/index).
 
@@ -21,9 +21,9 @@ C++le applicazioni console vengono eseguite dalla riga di comando in una finestr
 
 ## <a name="native-desktop-client-applications"></a>Applicazioni client desktop native
 
-Un' *applicazione client desktop nativa* è un'applicazione c C++ o a finestra che usa le API native di [Windows c o Component Object Model (com)](/windows/win32/apiindex/windows-api-list) originali per accedere al sistema operativo. Queste API vengono scritte principalmente in C. Esistono più modi per creare un'app desktop nativa: È possibile programmare usando direttamente le API Win32, usando un ciclo di messaggi di tipo C che elabora gli eventi del sistema operativo. In alternativa, è possibile programmare utilizzando *Microsoft Foundation Classes* (MFC), una libreria leggermente orientata C++ a oggetti che esegue il wrapping di Win32. Nessuno dei due approcci è considerato "moderno" rispetto al piattaforma UWP (Universal Windows Platform) (UWP), ma entrambi sono ancora completamente supportati e includono milioni di righe di codice in esecuzione nel mondo. Un'applicazione Win32 eseguita in una finestra richiede che lo sviluppatore funzioni in modo esplicito con i messaggi di Windows all'interno di una funzione di routine di Windows. Nonostante il nome, un'applicazione Win32 può essere compilata come un file binario a 32 bit (x86) o a 64 bit (x64). Nell'IDE di Visual Studio i termini x86 e Win32 sono sinonimi.
+Un' *applicazione client desktop nativa* è un'applicazione c C++ o a finestra che usa le API native di [Windows c o Component Object Model (com)](/windows/win32/apiindex/windows-api-list) originali per accedere al sistema operativo. Queste API vengono scritte principalmente in C. Esistono più modi per creare un'app desktop nativa: è possibile programmare usando direttamente le API Win32, usando un ciclo di messaggi di tipo C che elabora gli eventi del sistema operativo. In alternativa, è possibile programmare utilizzando *Microsoft Foundation Classes* (MFC), una libreria leggermente orientata C++ a oggetti che esegue il wrapping di Win32. Nessuno dei due approcci è considerato "moderno" rispetto al piattaforma UWP (Universal Windows Platform) (UWP), ma entrambi sono ancora completamente supportati e includono milioni di righe di codice in esecuzione nel mondo. Un'applicazione Win32 eseguita in una finestra richiede che lo sviluppatore funzioni in modo esplicito con i messaggi di Windows all'interno di una funzione di routine di Windows. Nonostante il nome, un'applicazione Win32 può essere compilata come un file binario a 32 bit (x86) o a 64 bit (x64). Nell'IDE di Visual Studio i termini x86 e Win32 sono sinonimi.
 
-Per iniziare a usare la programmazione C++ tradizionale di Windows, vedere [Introduzione a Win32 C++e ](/windows/win32/LearnWin32/learn-to-program-for-windows). Una volta acquisite informazioni su Win32, sarà più facile ottenere informazioni sulle [applicazioni desktop MFC](../mfc/mfc-desktop-applications.md). Per un esempio di applicazione desktop C++ tradizionale che usa grafica sofisticata, vedere [Hilo: Sviluppo C++ di applicazioni per](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
+Per iniziare a usare la programmazione C++ tradizionale di Windows, vedere [Introduzione a Win32 C++e ](/windows/win32/LearnWin32/learn-to-program-for-windows). Una volta acquisite informazioni su Win32, sarà più facile ottenere informazioni sulle [applicazioni desktop MFC](../mfc/mfc-desktop-applications.md). Per un esempio di applicazione desktop C++ tradizionale che usa grafica sofisticata, vedere [Hilo: sviluppo C++ di applicazioni per Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
 ### <a name="c-or-net"></a>C++o .NET?
 
@@ -77,13 +77,13 @@ Visual Studio include la libreria di runtime C (CRT), C++ la libreria standard e
 
 Le librerie Microsoft includono:
 
-- Microsoft Foundation Classes (MFC): Framework orientato a oggetti per la creazione di programmi Windows tradizionali, in particolare applicazioni aziendali, con interfacce utente avanzate che includono pulsanti, caselle di riepilogo, visualizzazioni albero e altri controlli. Per altre informazioni, vedere [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
+- Microsoft Foundation Classes (MFC): un framework orientato a oggetti per la creazione di programmi Windows tradizionali, in particolare applicazioni aziendali, con interfacce utente avanzate dotate di pulsanti, caselle di riepilogo, visualizzazioni albero e altri controlli. Per altre informazioni, vedere [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
 
-- Active Template Library (ATL): Libreria helper potente per la creazione di componenti COM. Per altre informazioni, vedere [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
+- Active Template Library (ATL): una libreria helper efficace per la creazione di componenti COM. Per altre informazioni, vedere [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
 
-- C++AMP (C++ Accelerated Massive Parallelism): Libreria che consente un lavoro di calcolo generale a prestazioni elevate sulla GPU. Per altre informazioni, vedere [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
+- C++ AMP (C++ Accelerated Massive Parallelism): una libreria che consente attività di elaborazione generale a elevate prestazioni nella GPU. Per altre informazioni, vedere [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
 
-- Runtime di concorrenza: Una libreria che semplifica il lavoro di programmazione parallela e asincrona per i dispositivi multicore e many-core. Per altre informazioni, vedere [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
+- Runtime di concorrenza: una libreria che semplifica le attività di programmazione asincrona e in parallelo per dispositivi multicore e many-core. Per altre informazioni, vedere [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md) (Runtime di concorrenza).
 
 Anche molti scenari di programmazione Windows richiedono Windows SDK, che include i file di intestazione che garantiscono l'accesso ai componenti del sistema operativo Windows. Per impostazione predefinita, Visual Studio installa il Windows SDK come componente del carico C++ di lavoro desktop, che consente lo sviluppo di app di Windows universale. Per sviluppare app UWP, è necessaria la versione di Windows 10 del Windows SDK. Per informazioni, vedere [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). Per ulteriori informazioni su Windows SDK per le versioni precedenti di Windows, vedere l' [archivio Windows SDK](https://developer.microsoft.com/windows/downloads/sdk-archive).
 
@@ -98,8 +98,8 @@ Visual Studio include un potente debugger per codice nativo, strumenti di analis
 ## <a name="in-this-section"></a>Contenuto della sezione
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Procedura dettagliata: Creazione di un programma C++ standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Creare un'applicazione console di Windows.|
-|[Procedura dettagliata: Creazione di applicazioni desktop di Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Creare un'applicazione desktop di Windows nativa.|
+|[Procedura dettagliata: creazione di C++ un programma standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Creare un'applicazione console di Windows.|
+|[Procedura dettagliata: creazione di applicazioni desktop di Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Creare un'applicazione desktop di Windows nativa.|
 |[Creazione guidata applicazione desktop di Windows](windows-desktop-wizard.md)|Utilizzare la procedura guidata per creare nuovi progetti Windows.|
 |[Active Template Library (ATL)](../atl/atl-com-desktop-components.md)|Utilizzare la libreria ATL per creare componenti COM in C++.|
 |[Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)|Usare MFC per creare applicazioni Windows di grandi dimensioni o piccole con finestre di dialogo e controlli|

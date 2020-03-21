@@ -8,16 +8,16 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: d6920a73f107f226cc31cb27fd15178f6d2f1c26
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525261"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079008"
 ---
 # <a name="user-record"></a>Record utente
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata provider OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive.
 
 Il record utente fornisce il codice e la struttura dei dati che rappresenta i dati della colonna per un set di righe. Un record utente può essere creato in fase di compilazione o in fase di esecuzione. Quando si crea un provider tramite la **Creazione guidata provider OLE DB ATL**, la procedura guidata crea un record utente predefinito simile al seguente (supponendo che venga specificato un nome di provider [nome breve] *MyProvider*):
@@ -43,7 +43,7 @@ I modelli di provider OLE DB gestiscono tutte le specifiche OLE DB nelle interaz
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
 ```
 
 Ciò equivale a:

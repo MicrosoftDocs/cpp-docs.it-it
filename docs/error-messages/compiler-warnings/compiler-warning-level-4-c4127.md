@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: bef825f546573b878c415c385e1a2a2286e08db4
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 52a966bb321226058afbf4667a4192e4e814f0a1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444909"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075841"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Avviso del compilatore (livello 4) C4127
 
 > espressione condizionale costante
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'espressione di controllo di un'istruzione **if** o di un ciclo **while** restituisce una costante. A causa dell'utilizzo comune di tipo idiomatiche, a partire da Visual Studio 2015 Update 3, le costanti semplici come 1 o **true** non attivano l'avviso, a meno che non siano il risultato di un'operazione in un'espressione.
 
-Se l'espressione di controllo di un ciclo **while** è una costante perché il ciclo viene chiuso al centro, provare a sostituire il ciclo **while** con un ciclo **for** . È possibile omettere l'inizializzazione, il test di terminazione e l'incremento del ciclo di un ciclo **for** , che fa sì che il ciclo sia infinito, come `while(1)`, ed è possibile uscire dal corpo dell'istruzione **for** .
+Se l'espressione di controllo di un ciclo **while** è una costante perché il ciclo viene chiuso al centro, provare a sostituire il ciclo **while** con un ciclo **for** . È possibile omettere l'inizializzazione, il test di terminazione e l'incremento del ciclo di un ciclo **for** , che fa sì che il ciclo sia infinito, come `while(1)`ed è possibile uscire dal corpo dell'istruzione **for** .
 
 ## <a name="example"></a>Esempio
 
@@ -45,7 +45,6 @@ int main() {
 ```
 
 Questo avviso può essere generato anche quando in un'espressione condizionale viene utilizzata una costante in fase di compilazione:
-
 
 ```cpp
 #include <string>

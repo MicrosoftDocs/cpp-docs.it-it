@@ -1,31 +1,31 @@
 ---
-title: Riferimenti al compilatore MSVC. C/C++ - Visual Studio
-description: Opzioni set di strumenti del compilatore MSVC.
+title: MSVC C/C++ riferimento al compilatore-Visual Studio
+description: Opzioni del set di strumenti del compilatore MSVC.
 ms.date: 12/10/2018
 helpviewer_keywords:
 - cl.exe compiler
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
-ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c75176b139895d7b00d88aca1c58604b47386894
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294148"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077370"
 ---
-# <a name="compiling-a-cc-project"></a>Quando si compila un progetto C/C++
+# <a name="compiling-a-cc-project"></a>Compilazione di un C/C++ progetto
 
-Nell'IDE di Visual Studio o dalla riga di comando, è possono impostare le opzioni del compilatore C e C++. 
+Le opzioni C++ C e del compilatore possono essere impostate nell'IDE di Visual Studio o nella riga di comando.
 
 ## <a name="in-visual-studio"></a>In Visual Studio
 
-È possibile impostare le opzioni del compilatore per ogni progetto nella relativa Visual Studio **pagine delle proprietà** nella finestra di dialogo. Nel riquadro sinistro, selezionare **le proprietà di configurazione**, **C/C++** e quindi scegliere la categoria di opzioni del compilatore. Nell'argomento relativo a ciascuna opzione del compilatore viene descritto come impostarla e dove reperirla nell'ambiente di sviluppo. Visualizzare [opzioni del compilatore MSVC](compiler-options.md) per un elenco completo.
+È possibile impostare le opzioni del compilatore per ogni progetto nella finestra di dialogo **pagine delle proprietà** di Visual Studio. Nel riquadro sinistro selezionare proprietà di **configurazione**, **C/C++**  e quindi scegliere la categoria opzione del compilatore. Nell'argomento relativo a ciascuna opzione del compilatore viene descritto come impostarla e dove reperirla nell'ambiente di sviluppo. Per un elenco completo, vedere [Opzioni del compilatore MSVC](compiler-options.md) .
 
 ## <a name="from-the-command-line"></a>Dalla riga di comando
 
 È possibile impostare le opzioni del compilatore (CL.exe):
 
-- [Nella riga di comando](compiler-command-line-syntax.md)
+- [Dalla riga di comando](compiler-command-line-syntax.md)
 
 - [Nei file di comando](cl-command-files.md)
 
@@ -43,7 +43,7 @@ Le opzioni del compilatore vengono elaborate "da sinistra a destra" e quando vie
 
 - [CL richiama il linker](cl-invokes-the-linker.md)
 
-Per informazioni su come scegliere l'architettura di host e di destinazione del compilatore, vedere [C++ configurare progetti per 64 bit, x64 destinazioni](../configuring-programs-for-64-bit-visual-cpp.md).
+Per informazioni sulla scelta dell'host e dell'architettura di destinazione del compilatore, vedere [Configure C++ projects for 64 bit, x64 targets](../configuring-programs-for-64-bit-visual-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c5cd93607f8e5a892d789dcb6aeef934f8936dad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417173"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078056"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
-Le diverse funzioni `printf` e `wprintf` accettano una stringa di formato e argomenti facoltativi e producono una sequenza di caratteri formattati per l'output. La stringa di formato contiene zero o più *direttive*, che sono caratteri letterali per l'output o *specifiche di conversione* codificate che descrivono come formattare un argomento nell'output. Questo articolo descrive la sintassi usata per codificare le specifiche di conversione nella stringa di formato. Per l'elenco di queste funzioni, vedere [I/O di flusso](../c-runtime-library/stream-i-o.md). 
+Le diverse funzioni `printf` e `wprintf` accettano una stringa di formato e argomenti facoltativi e producono una sequenza di caratteri formattati per l'output. La stringa di formato contiene zero o più *direttive*, che sono caratteri letterali per l'output o *specifiche di conversione* codificate che descrivono come formattare un argomento nell'output. Questo articolo descrive la sintassi usata per codificare le specifiche di conversione nella stringa di formato. Per l'elenco di queste funzioni, vedere [I/O di flusso](../c-runtime-library/stream-i-o.md).
 
 Una specifica di conversione è costituita da campi obbligatori e facoltativi nel seguente formato:
 
@@ -39,7 +39,7 @@ Una specifica di conversione semplice contiene solo il segno di percentuale e un
 
 <a name="type"></a>
 
-> [!NOTE] 
+> [!NOTE]
 > In Visual Studio 2015 il `printf` e la famiglia di funzioni `scanf` sono stati dichiarati come **inline** e spostati nelle intestazioni `<stdio.h>` e `<conio.h>`. Se si esegue la migrazione di codice precedente, è possibile che venga visualizzato *LNK2019* in relazione a queste funzioni. Per ulteriori informazioni, vedere [la C++ cronologia delle modifiche visive 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="type-conversion-specifier"></a>Identificatore di conversione tipo

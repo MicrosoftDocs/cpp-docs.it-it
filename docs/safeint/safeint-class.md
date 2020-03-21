@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515556"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076824"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
 Estende le primitive Integer per impedire l'overflow di Integer e consente di confrontare tipi Integer diversi.
 
-> [!NOTE] 
+> [!NOTE]
 > La versione più recente di questa libreria è disponibile all'indirizzo [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Sintassi
@@ -33,29 +33,29 @@ class SafeInt;
 
 ### <a name="parameters"></a>Parametri
 
-| Modello  |  Description |
+| Modello  |  Descrizione |
 |--------|------------|
 | T         |  Tipo Integer o parametro booleano sostituito da `SafeInt`. |
 | E         |  Tipo di dati enumerato che definisce i criteri di gestione degli errori. |
-| G         |  Tipo Integer o parametro booleano per il secondo operando. |
+| U         |  Tipo Integer o parametro booleano per il secondo operando. |
 
-| Parametro  |  Description |
+| Parametro  |  Descrizione |
 |---------|-----------------|
 | *rhs*      |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
 | *i*        |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
 | *bits*     |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-| nome                          |  Description |
+| Nome                          |  Descrizione |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  Costruttore predefinito. |
 
 ### <a name="assignment-operators"></a>Operatori di assegnazione
 
-| nome  |  Sintassi |
+| Nome  |  Sintassi |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>Operatori di cast
 
-| nome              |  Sintassi |
+| Nome              |  Sintassi |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>Operatori di confronto
 
-| nome  |  Sintassi |
+| Nome  |  Sintassi |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>Operatori aritmetici
 
-| nome  |  Sintassi |
+| Nome  |  Sintassi |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>Operatori logici
 
-| nome     |  Sintassi |
+| Nome     |  Sintassi |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -229,7 +229,7 @@ Ci sono due opzioni per personalizzare i criteri di gestione degli errori. La pr
 
 **Spazio dei nomi:** msl::utilities
 
-## <a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
 
 Costruisce un oggetto `SafeInt`.
 

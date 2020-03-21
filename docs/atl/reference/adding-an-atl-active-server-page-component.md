@@ -2,15 +2,14 @@
 title: Aggiunta di un componente ASP ATL
 ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: b6c1d23efdff6885cc8ab900aaf552db39631e6e
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: a84eeb20f047097e3dbb3c7f3bb5f5a12b069bcb
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706916"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075289"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Aggiunta di un componente ASP ATL
-
 
 ::: moniker range="vs-2019"
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MACRO directive
 ms.assetid: 89434f7c-bc2c-4e91-8940-fe2db8785233
-ms.openlocfilehash: 23c6b0aefae856da449da574669e8475122c7556
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 8eb0afdf73270c3e741f43b2e1fba02fe965846c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75312950"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076144"
 ---
 # <a name="macro"></a>MACRO
 
@@ -25,7 +25,7 @@ Contrassegna un blocco di macro denominato *Name* e stabilisce i segnaposto dei 
 > ⟦ ⟧ Di**uscita**\
 > **ENDM** ⟦*valore*⟧
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Una funzione macro restituisce un *valore* all'istruzione chiamante.
 
@@ -35,4 +35,3 @@ Una funzione macro restituisce un *valore* all'istruzione chiamante.
 [Goto (MASM)](goto-masm.md)\
 \ [ENDM](endm.md)
 [Grammatica BNF di MASM](masm-bnf-grammar.md)
-

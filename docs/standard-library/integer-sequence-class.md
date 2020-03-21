@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: ca923933ac7a401f6a3ef14f821ceb04b844797b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d0de2e56e1f6b8e68e5989f21ecd89b9646caa1b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451011"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076466"
 ---
-# <a name="integersequence-class"></a>Classe integer_sequence
+# <a name="integer_sequence-class"></a>Classe integer_sequence
 
 Rappresenta una sequenza di Integer. Può essere usata per dedurre ed espandere pacchetti di parametri nei tipi variadic come std::tuple\<T...> che vengono passati come argomenti a una funzione.
 
@@ -34,7 +34,7 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Parametri
 
-*T*\
+\ *T*
 Tipo di valori. Deve essere un tipo integrale: bool, char, char16_t, char32_t, wchar_t o tipi Signed Integer o Unsigned Integer.
 
 *Vals*\
@@ -47,17 +47,17 @@ Un pacchetto di parametri non di tipo che rappresenta una sequenza di valori di 
 |`static size_t size() noexcept`|Numero di elementi nella sequenza.|
 |`typedef T value_type`|Tipo di ciascun elemento nella sequenza. Deve essere un tipo integrale.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un pacchetto di parametri che viene passato direttamente a una funzione può essere decompresso senza supporti di librerie speciali. Quando un pacchetto di parametro fa parte di un tipo che viene passato a una funzione, è sono necessari gli indici per accedere agli elementi, il modo più semplice per decomprimerlo consiste nell'usare `integer_sequence` e i rispettivi alias del tipo `make_integer_sequence`, `index_sequence`, `make_index_sequence` e `index_sequence_for`.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente è basato sulla proposta originale [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html). Mostra come usare una `integer_sequence` per creare una `std::tuple` da una `std::array<T,N>` e come usare una `integer_sequence` per ottenere i membri della tupla.
+L'esempio seguente è basato sulla proposta originale [N3658](https://wg21.link/n3658). Mostra come usare una `integer_sequence` per creare una `std::tuple` da una `std::array<T,N>` e come usare una `integer_sequence` per ottenere i membri della tupla.
 
 Nella funzione `a2t`, una `index_sequence` è un alias di `integer_sequence` basato sul tipo integrale `size_t`. `make_index_sequence` è un alias che in fase di compilazione crea una `index_sequence` in base zero con lo stesso numero di elementi della matrice che viene passato dal chiamante. `a2t` passa la `index_sequence` per valore a `a2t_`, dove l'espressione `a[I]...` decomprime `I`, quindi gli elementi vengono inseriti nella funzione `make_tuple` che li usa come singoli argomenti. Ad esempio, se la sequenza contiene tre elementi, la funzione `make_tuple` viene chiamata make_tuple(a[0], a[1], a[2]). Gli elementi di matrice stessi ovviamente possono essere di qualsiasi tipo.
 
-La funzione Apply accetta un oggetto [std:: Tuple](../standard-library/tuple-class.md)e produce `integer_sequence` un oggetto utilizzando `tuple_size` la classe helper. Si noti che [std::d ecay_t](../standard-library/decay-class.md) è necessario perché [tuple_size](../standard-library/tuple-size-class-tuple.md) non funziona con i tipi di riferimento. La funzione `apply_` decomprime i membri della tupla, inoltrandoli come argomenti separati a una chiamata di funzione. In questo esempio la funzione è una semplice espressione lambda che stampa i valori.
+La funzione Apply accetta un oggetto [std:: Tuple](../standard-library/tuple-class.md)e genera un `integer_sequence` usando la classe helper `tuple_size`. Si noti che [std::d ecay_t](../standard-library/decay-class.md) è necessario perché [tuple_size](../standard-library/tuple-size-class-tuple.md) non funziona con i tipi di riferimento. La funzione `apply_` decomprime i membri della tupla, inoltrandoli come argomenti separati a una chiamata di funzione. In questo esempio la funzione è una semplice espressione lambda che stampa i valori.
 
 ```cpp
 #include <stddef.h>

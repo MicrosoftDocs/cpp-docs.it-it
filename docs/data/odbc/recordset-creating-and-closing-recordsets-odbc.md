@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: e7aa4c0fc2a0acfe7b8df2f50f99bf44eb1ef456
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707989"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075917"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset: creazione e chiusura di recordset (ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata consumer ODBC MFC non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile creare manualmente un consumer.
 
 Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
@@ -33,7 +33,7 @@ In questo argomento:
 
 - [Quando e come chiudere un oggetto recordset](#_core_closing_a_recordset).
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> Creazione di recordset in fase di esecuzione
+##  <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> Creazione di recordset in fase di esecuzione
 
 Prima di poter creare oggetti recordset in un programma, in genere si scrivono le classi recordset specifiche dell'applicazione. Per altre informazioni su questo passaggio preliminare, vedere [Aggiunta di un consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
@@ -57,7 +57,7 @@ Nella chiamata [Open](../../mfc/reference/crecordset-class.md#open) è possibile
 
 - Specificare se il recordset è un dynaset o uno snapshot. Per impostazione predefinita, i recordset vengono aperti come snapshot. In alternativa, è possibile specificare un recordset forward-only, che consente solo lo scorrimento in avanti, un record alla volta.
 
-   Per impostazione predefinita, un recordset usa il tipo predefinito archiviato nel membro dati `m_nDefaultType` di `CRecordset`. Le procedure guidate scrivono il codice per inizializzare `m_nDefaultType` per il tipo di recordset scelto nella procedura guidata. Invece di accettare questa impostazione predefinita, è possibile sostituire un altro tipo di recordset.
+   Per impostazione predefinita, un recordset usa il tipo predefinito archiviato nel membro dati `CRecordset` di `m_nDefaultType`. Le procedure guidate scrivono il codice per inizializzare `m_nDefaultType` per il tipo di recordset scelto nella procedura guidata. Invece di accettare questa impostazione predefinita, è possibile sostituire un altro tipo di recordset.
 
 - Specificare una stringa per sostituire l'istruzione SQL **SELECT** predefinita costruita dal recordset.
 
@@ -74,12 +74,12 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Dopo aver chiamato `Open`, usare le funzioni membro e i membri dati dell'oggetto per lavorare con i record. In alcuni casi, può essere necessario ripetere una query o aggiornare il recordset in modo da includere le modifiche apportate nell'origine dati. Per altre informazioni, vedere [Recordset: ripetizione di una query su un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Dopo aver chiamato `Open`, usare le funzioni membro e i membri dati dell'oggetto per lavorare con i record. In alcuni casi, può essere necessario ripetere una query o aggiornare il recordset in modo da includere le modifiche apportate nell'origine dati. Per ulteriori informazioni, vedere [Recordset: esecuzione di una query in un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  La stringa di connessione usata durante lo sviluppo può non essere la stessa stringa di connessione necessaria per gli utenti finali. Per informazioni sulla generalizzazione dell'applicazione a questo proposito, vedere [Origine dati: gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  La stringa di connessione usata durante lo sviluppo può non essere la stessa stringa di connessione necessaria per gli utenti finali. Per le idee sulla generalizzazione dell'applicazione in questo senso, vedere [origine dati: gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-##  <a name="_core_setting_recordset_options"></a> Impostazione delle opzioni del recordset
+##  <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Impostazione delle opzioni del recordset
 
 Dopo la costruzione dell'oggetto recordset ma prima della chiamata a `Open` per selezionare i record, è possibile impostare alcune opzioni per controllare il comportamento del recordset. Per tutti i recordset, è possibile:
 
@@ -96,7 +96,7 @@ Se le condizioni lo richiedono, è anche possibile impostare l'opzione seguente:
 > [!NOTE]
 >  Per influire sulla selezione dei record, è necessario impostare queste opzioni prima di chiamare la funzione membro `Open`.
 
-##  <a name="_core_closing_a_recordset"></a> Chiusura di un recordset
+##  <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> Chiusura di un recordset
 
 Al termine del recordset, è necessario eliminarlo e deallocare la relativa memoria.
 

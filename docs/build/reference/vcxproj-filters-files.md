@@ -1,18 +1,18 @@
 ---
-title: file vcxproj. filters
+title: File vcxproj. filters
 ms.date: 09/25/2019
 description: Usare i file di filtro nei C++ progetti di Visual Studio per definire cartelle logiche personalizzate per i file in Esplora soluzioni
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: ee44bf3d1cbe06d6c007ed8976ec384a456efca5
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686859"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078271"
 ---
-# <a name="vcxprojfilters-files"></a>file vcxproj. filters
+# <a name="vcxprojfilters-files"></a>File vcxproj. filters
 
 Il file dei *filtri* (\*. vcxproj. Filters) è un file XML in formato MSBuild che si trova nella cartella radice del progetto. Specifica quali tipi di file vengono inseriti nella cartella logica **Esplora soluzioni**. Nella figura seguente, i file con *estensione cpp* si trovano nel nodo **file di origine** . i file con *estensione h* si trovano nel nodo **file di intestazione** e i file con *estensione ico* e *RC* si trovano in **file di risorse**. Questa selezione host è controllata dal file dei filtri.
 
@@ -26,7 +26,7 @@ Visual Studio crea automaticamente questo file. Per le applicazioni desktop, le 
 
 Nell'esempio seguente viene illustrato il file dei filtri per l'esempio illustrato in precedenza. Dispone di una gerarchia piatta; in altre parole, non sono presenti cartelle logiche nidificate. Il nodo `UniqueIdentifier` è facoltativo. Consente alle interfacce di automazione di Visual Studio di trovare il filtro. `Extensions` è anche facoltativo. Quando un nuovo file viene aggiunto a un progetto, viene aggiunto al filtro in primo piano con un'estensione di file corrispondente. Per aggiungere un file a un filtro specifico, fare clic con il pulsante destro del mouse sul filtro e scegliere **Aggiungi nuovo elemento**.
 
-Quando il progetto viene avviato per la prima volta, il `ItemGroup` che contiene i nodi `ClInclude` viene creato. Se si generano file vcxproj personalizzati, assicurarsi che tutti gli elementi del progetto includano anche una voce nel file di filtro. I valori in un nodo `ClInclude` eseguono l'override dei filtri predefiniti in base alle estensioni di file. Quando si usa Visual Studio per aggiungere un nuovo elemento al progetto, l'IDE aggiunge una singola voce di file nel file di filtro. Il filtro non viene riassegnato automaticamente se si modifica l'estensione del file. 
+Quando il progetto viene avviato per la prima volta, il `ItemGroup` che contiene i nodi `ClInclude` viene creato. Se si generano file vcxproj personalizzati, assicurarsi che tutti gli elementi del progetto includano anche una voce nel file di filtro. I valori in un nodo `ClInclude` eseguono l'override dei filtri predefiniti in base alle estensioni di file. Quando si usa Visual Studio per aggiungere un nuovo elemento al progetto, l'IDE aggiunge una singola voce di file nel file di filtro. Il filtro non viene riassegnato automaticamente se si modifica l'estensione del file.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,4 +107,3 @@ Per creare cartelle logiche annidate, dichiarare tutti i nodi nei filtri `ItemGr
     </Filter>
   </ItemGroup>
 ```
-

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - A1016
 ms.assetid: 440b3750-ba0b-44d8-b82d-d581f62c08b2
-ms.openlocfilehash: 86f4c0f7f190bfac3ac5aa09e45bd8382b93b051
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 287b76e1ce57f65905266bc93a605080e295463b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317110"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077402"
 ---
 # <a name="ml-fatal-error-a1016"></a>Errore ML irreversibile A1016
 
@@ -25,4 +25,3 @@ Prendere nota delle circostanze dell'errore e contattare Microsoft Corporation. 
 ## <a name="see-also"></a>Vedere anche
 
 [Messaggi di errore ML](ml-error-messages.md)
-

@@ -4,12 +4,12 @@ description: Usare l'editor di codice C++ in Visual Studio per formattare, esplo
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438159"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077842"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Modificare ed effettuare il refactoring del codice C++ in Visual Studio
 
@@ -70,15 +70,15 @@ Un pulsante viene visualizzato solo se è pertinente alla sessione corrente di I
 
 ## <a name="template-intellisense"></a>IntelliSense per i modelli
 
-Quando il cursore si trova all'interno di una definizione di modello, viene visualizzata una **barra modelli** che consente di specificare gli argomenti di modello di esempio per IntelliSense. 
+Quando il cursore si trova all'interno di una definizione di modello, viene visualizzata una **barra modelli** che consente di specificare gli argomenti di modello di esempio per IntelliSense.
 
 ![IntelliSense&#43; &#43; modello C Mostra creazioni di istanze esistenti](../ide/media/template-intellisense-cpp-1.png "IntelliSense del modello che mostra le creazioni di istanze esistenti")
 
-Fare clic sull'icona **\<t >** per espandere o comprimere la **barra del modello**. Fare clic sull'icona a forma di matita oppure fare doppio clic sulla **barra modelli** per aprire la finestra **Modifica**. 
+Fare clic sull'icona **\<t >** per espandere o comprimere la **barra del modello**. Fare clic sull'icona a forma di matita oppure fare doppio clic sulla **barra modelli** per aprire la finestra **Modifica**.
 
 ![IntelliSense&#43; &#43; modello C](../ide/media/template-intellisense-cpp-3.png "IntelliSense per i modelli")
 
-Le modifiche apportate nella finestra vengono applicate direttamente al codice sorgente in modo che sia possibile visualizzare gli effetti in tempo reale. 
+Le modifiche apportate nella finestra vengono applicate direttamente al codice sorgente in modo che sia possibile visualizzare gli effetti in tempo reale.
 
 La barra modelli può inserire automaticamente i candidati in base alle creazioni di istanza nel codice. Fare clic su **Aggiungi tutte le creazioni di istanza esistenti** per visualizzare un elenco di tutti gli argomenti concreti usati per creare un'istanza del modello nella codebase.
 
@@ -94,13 +94,13 @@ Le informazioni della **barra modelli** sono considerate informazioni specifiche
 
 Se rileva problemi nel codice, l'editor aggiunge linee a zigzag colorate che indicano la posizione del problema. Le linee a zigzag rosse indicano un codice che non verrà compilato. Le linee a zigzag verdi indicano altri tipi di problemi che potrebbero essere potenzialmente pericolosi. È possibile visualizzare la finestra **Elenco errori** per ottenere altre informazioni sui problemi.
 
-Per alcuni tipi di errori e i modelli di codice comuni, l'editor offre una **Correzione rapida** sotto forma di lampadina visualizzata quando si passa il mouse sulle linee a zigzag. Fare clic sulla freccia verso il basso per visualizzare i suggerimenti. 
+Per alcuni tipi di errori e i modelli di codice comuni, l'editor offre una **Correzione rapida** sotto forma di lampadina visualizzata quando si passa il mouse sulle linee a zigzag. Fare clic sulla freccia verso il basso per visualizzare i suggerimenti.
 
 Nell'esempio seguente poiché è stato dichiarato un `vector` ma non è stata trovata alcuna definizione, l'editor suggerisce di includere il file di intestazione necessario:
 
 ![Correzione&#43; &#43; rapida C](../ide/media/quick-fix-for-header-cpp.png "C++Correzione rapida")
 
-L'editor offre anche correzioni rapide per alcune opportunità di refactoring. Ad esempio, se si dichiara una classe in un file di intestazione, Visual Studio suggerisce di creare una definizione in un file separato con estensione cpp. 
+L'editor offre anche correzioni rapide per alcune opportunità di refactoring. Ad esempio, se si dichiara una classe in un file di intestazione, Visual Studio suggerisce di creare una definizione in un file separato con estensione cpp.
 
 ![Correzione&#43; &#43; rapida C](../ide/media/quick-fix.png "C++Correzione rapida")
 

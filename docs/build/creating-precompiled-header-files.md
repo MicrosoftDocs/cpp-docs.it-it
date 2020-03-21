@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417376"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078589"
 ---
 # <a name="precompiled-header-files"></a>File di intestazione precompilata
 
-Quando si crea un nuovo progetto in Visual Studio, al progetto viene aggiunto un *file di intestazione precompilato* denominato *PCH. h* . (In Visual Studio 2017 e versioni precedenti, il file era denominato *stdafx. h*). Lo scopo del file è velocizzare il processo di compilazione. Qui è opportuno includere tutti i file di intestazione stabili, ad esempio le intestazioni della libreria standard come `<vector>`. L'intestazione precompilata viene compilata solo quando viene modificato il file o i file in esso inclusi. Se si apportano modifiche solo al codice sorgente del progetto, la compilazione ignorerà la compilazione per l'intestazione precompilata. 
+Quando si crea un nuovo progetto in Visual Studio, al progetto viene aggiunto un *file di intestazione precompilato* denominato *PCH. h* . (In Visual Studio 2017 e versioni precedenti, il file era denominato *stdafx. h*). Lo scopo del file è velocizzare il processo di compilazione. Qui è opportuno includere tutti i file di intestazione stabili, ad esempio le intestazioni della libreria standard come `<vector>`. L'intestazione precompilata viene compilata solo quando viene modificato il file o i file in esso inclusi. Se si apportano modifiche solo al codice sorgente del progetto, la compilazione ignorerà la compilazione per l'intestazione precompilata.
 
-Le opzioni del compilatore per le intestazioni precompilate sono [/Y](reference/y-precompiled-headers.md). Nelle pagine delle proprietà del progetto le opzioni si trovano in **proprietà di configurazione > leC++ intestazioni precompilate C/>** . È possibile scegliere di non usare le intestazioni precompilate e specificare il nome del file di intestazione e il nome e il percorso del file di output. 
+Le opzioni del compilatore per le intestazioni precompilate sono [/Y](reference/y-precompiled-headers.md). Nelle pagine delle proprietà del progetto le opzioni si trovano in **proprietà di configurazione > leC++ intestazioni precompilate C/>** . È possibile scegliere di non usare le intestazioni precompilate e specificare il nome del file di intestazione e il nome e il percorso del file di output.
 
 ## <a name="custom-precompiled-code"></a>Codice precompilato personalizzato
 

@@ -2,12 +2,12 @@
 title: Configurare un progetto C++ Linux in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419385"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077733"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
@@ -17,9 +17,9 @@ Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive
 
 ::: moniker-end
 
-Questo argomento illustra come configurare un progetto Linux C++ come descritto in [Creare un nuovo progetto Linux C++ in Visual Studio](create-a-new-linux-project.md). Per i progetti CMake per Linux, vedere [Configurare un progetto CMake per Linux](cmake-linux-project.md). 
+Questo argomento illustra come configurare un progetto Linux C++ come descritto in [Creare un nuovo progetto Linux C++ in Visual Studio](create-a-new-linux-project.md). Per i progetti CMake per Linux, vedere [Configurare un progetto CMake per Linux](cmake-linux-project.md).
 
-È possibile configurare un progetto Linux in modo che abbia come destinazione una macchina Linux fisica, una macchina virtuale o il [sottosistema Windows per Linux](/windows/wsl/about) (WSL). 
+È possibile configurare un progetto Linux in modo che abbia come destinazione una macchina Linux fisica, una macchina virtuale o il [sottosistema Windows per Linux](/windows/wsl/about) (WSL).
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Poiché tutta la compilazione avviene in un computer remoto (o WSL), sono stati 
 
 ![Eventi di compilazione](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> IntelliSense per le intestazioni nei sistemi remoti
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> IntelliSense per le intestazioni nei sistemi remoti
 
 Quando si aggiunge una nuova connessione in **Gestione connessione**, Visual Studio rileva automaticamente le directory di inclusione per il compilatore nel sistema remoto. Visual Studio quindi comprime e copia i file in una directory nel computer Windows locale. Successivamente, ogni volta che si usa la connessione in un progetto Visual Studio o CMake, le intestazioni in tali directory vengono usate per gestire IntelliSense.
 

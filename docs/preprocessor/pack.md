@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 3572bd0d0b0e8149f527c1c43eca5870783b13a8
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4fa0990de25b624b670ababfd8e66f340e2fb8f3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965250"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079975"
 ---
 # <a name="pack-pragma"></a>pack (pragma)
 
@@ -35,7 +35,7 @@ Opzionale Visualizza il valore byte corrente per l'allineamento di compressione.
 Opzionale Inserisce il valore di allineamento di compressione corrente nello stack interno del compilatore e imposta il valore di allineamento di compressione corrente su *n*. Se *n* non è specificato, viene effettuato il push del valore di allineamento di compressione corrente.
 
 \ **pop**
-Opzionale Rimuove il record dall'inizio dello stack interno del compilatore. Se *n* non è specificato con **pop**, il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se si specifica *n* , ad esempio `#pragma pack(pop, 16)`, *n* diventa il nuovo valore di allineamento di compressione. Se si usa un *identificatore*, ad esempio `#pragma pack(pop, r1)`, verranno estratti tutti i record dello stack finché non viene trovato il record con *identificatore* . Il record viene estratto e il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se si esegue il pop usando un *identificatore* non trovato in nessun record nello stack, il **pop** viene ignorato. 
+Opzionale Rimuove il record dall'inizio dello stack interno del compilatore. Se *n* non è specificato con **pop**, il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se si specifica *n* , ad esempio `#pragma pack(pop, 16)`, *n* diventa il nuovo valore di allineamento di compressione. Se si usa un *identificatore*, ad esempio `#pragma pack(pop, r1)`, verranno estratti tutti i record dello stack finché non viene trovato il record con *identificatore* . Il record viene estratto e il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se si esegue il pop usando un *identificatore* non trovato in nessun record nello stack, il **pop** viene ignorato.
 
 Il `#pragma pack (pop, r1, 2)` di istruzione è equivalente `#pragma pack (pop, r1)` seguito da `#pragma pack(2)`.
 
@@ -45,7 +45,7 @@ Opzionale Se usato con **push**, assegna un nome al record nello stack interno d
 *n*\
 Opzionale Specifica il valore, in byte, da utilizzare per la compressione. Se l'opzione del compilatore [/ZP](../build/reference/zp-struct-member-alignment.md) non è impostata per il modulo, il valore predefinito per *n* è 8. Tra i valori validi sono compresi 1, 2, 4, 8 e 16. L'allineamento di un membro si trova su un limite costituito da un multiplo di *n*o da un multiplo della dimensione del membro, a seconda del valore minore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per *comprimere* una classe è necessario posizionare i membri direttamente dopo l'altro in memoria. Può indicare che alcuni o tutti i membri possono essere allineati su un limite più piccolo dell'allineamento predefinito dell'architettura di destinazione. **Pack** fornisce il controllo a livello di dichiarazione dei dati. Si differenzia dall'opzione del compilatore [/ZP](../build/reference/zp-struct-member-alignment.md), che fornisce solo il controllo a livello di modulo. il **pacchetto** viene applicato alla prima dichiarazione di **struttura**, **Unione**o **classe** dopo che il pragma è stato individuato. il **pacchetto** non ha alcun effetto sulle definizioni. La chiamata a **Pack** senza argomenti imposta *n* sul valore impostato nell'opzione del compilatore `/Zp`. Se l'opzione del compilatore non è impostata, il valore predefinito è 8.
 

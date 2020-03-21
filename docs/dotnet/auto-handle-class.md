@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: ad98bfa9ff447f08c458427961b427e0f2087e62
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44b18304aa8030e4230d78a3579cdba601888faf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209269"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078981"
 ---
-# <a name="autohandle-class"></a>Classe auto_handle
+# <a name="auto_handle-class"></a>Classe auto_handle
 
 Gestione automatica delle risorse, che può essere usata per incorporare un handle virtuale in un tipo gestito.
 
@@ -38,43 +38,43 @@ ref class auto_handle;
 *_element_type*<br/>
 Tipo gestito da incorporare.
 
-## <a name="members"></a>Membri 
+## <a name="members"></a><a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici  
 
 |Nome|Descrizione|  
 |---------|-----------|  
-|[auto_handle::auto_handle](#auto-handle)|Il `auto_handle` costruttore.|  
-|[auto_handle::~auto_handle](#tilde-auto-handle)|Il `auto_handle` distruttore.|  
+|[auto_handle::auto_handle](#auto-handle)|Costruttore `auto_handle`.|  
+|[auto_handle::~auto_handle](#tilde-auto-handle)|Distruttore `auto_handle`.|  
 
 ### <a name="public-methods"></a>Metodi pubblici  
 
 |Nome|Descrizione|  
 |---------|-----------|  
 |[auto_handle::get](#get)|Ottiene l'oggetto contenuto.|  
-|[auto_handle::release](#release)|Rilascia l'oggetto da `auto_handle` management.|
-|[auto_handle::reset](#reset)|Eliminare definitivamente l'oggetto proprietario corrente e, facoltativamente, richiedere il possesso di un nuovo oggetto.| 
-|[auto_handle::swap](#swap)|Scambia gli oggetti con un altro `auto_handle`.|  
+|[auto_handle::release](#release)|Rilascia l'oggetto da gestione `auto_handle`.|
+|[auto_handle::reset](#reset)|Elimina definitivamente l'oggetto di proprietà corrente e, facoltativamente, prende il possesso di un nuovo oggetto.|
+|[auto_handle::swap](#swap)|Scambia oggetti con un'altra `auto_handle`.|  
 
-### <a name="public-operators"></a>Operatori pubblici 
+### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|  
-|---------|-----------| 
-|[auto_handle::operator-&gt;](#operator-arrow)|L'operatore di accesso di membro.|   
-|[auto_handle::operator=](#operator-assign)|Operatore di assegnazione.| 
+|---------|-----------|
+|[auto_handle:: operator-&gt;](#operator-arrow)|Operatore di accesso ai membri.|
+|[auto_handle::operator=](#operator-assign)|Operatore di assegnazione.|
 |[auto_handle::operator auto_handle](#operator-auto-handle)|Operatore di cast di tipo tra `auto_handle` e tipi compatibili.|  
-|[auto_handle::operator bool](#operator-bool)|Operatore per l'uso di `auto_handle` in un'espressione condizionale.|   
-|[auto_handle::operator!](#operator-logical-not)|Operatore per l'uso di `auto_handle` in un'espressione condizionale.|  
+|[auto_handle::operator bool](#operator-bool)|Operatore per l'utilizzo di `auto_handle` in un'espressione condizionale.|
+|[auto_handle::operator!](#operator-logical-not)|Operatore per l'utilizzo di `auto_handle` in un'espressione condizionale.|  
 
 ## <a name="requirements"></a>Requisiti
 
-**File di intestazione** \<msclr\auto_handle.h >
+**File di intestazione** \<msclr \ auto_handle. h >
 
-**Namespace** msclr
+**Spazio dei nomi** msclr
 
-## <a name="auto-handle"></a>auto_handle::auto_handle
+## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a>auto_handle:: auto_handle
 
-Il `auto_handle` costruttore.
+Costruttore `auto_handle`.
 
 ```cpp
 auto_handle();
@@ -93,7 +93,7 @@ auto_handle(
 ### <a name="parameters"></a>Parametri
 
 *_ptr*<br/>
-L'oggetto proprietario.
+Oggetto di cui è proprietario.
 
 *_right*<br/>
 Oggetto `auto_handle` esistente.
@@ -163,17 +163,17 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="tilde-auto-handle"></a>auto_handle:: ~ auto_handle
+## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a>auto_handle:: ~ auto_handle
 
-Il `auto_handle` distruttore.
+Distruttore `auto_handle`.
 
 ```cpp
 ~auto_handle();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Inoltre, il distruttore distrugge l'oggetto proprietà.
+Il distruttore distrugge anche l'oggetto di proprietà.
 
 ### <a name="example"></a>Esempio
 
@@ -210,7 +210,7 @@ ClassA destructor
 done
 ```
 
-## <a name="get"></a>auto_handle::get
+## <a name="auto_handleget"></a><a name="get"></a>auto_handle:: Get
 
 Ottiene l'oggetto contenuto.
 
@@ -270,9 +270,9 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="release"></a>auto_handle::release
+## <a name="auto_handlerelease"></a><a name="release"></a>auto_handle:: versione
 
-Rilascia l'oggetto da `auto_handle` management.
+Rilascia l'oggetto da gestione `auto_handle`.
 
 ```cpp
 _element_type ^ release();
@@ -280,7 +280,7 @@ _element_type ^ release();
 
 ### <a name="return-value"></a>Valore restituito
 
-L'oggetto rilasciato.
+Oggetto rilasciato.
 
 ### <a name="example"></a>Esempio
 
@@ -333,10 +333,9 @@ Hello from first A!
 done
 ```
 
-## <a name="reset"></a>auto_handle::reset
+## <a name="auto_handlereset"></a><a name="reset"></a>auto_handle:: Reset
 
-Eliminare definitivamente l'oggetto proprietario corrente e, facoltativamente, richiedere il possesso di un nuovo oggetto.
-
+Elimina definitivamente l'oggetto di proprietà corrente e, facoltativamente, prende il possesso di un nuovo oggetto.
 
 ```cpp
 void reset(
@@ -348,7 +347,7 @@ void reset();
 ### <a name="parameters"></a>Parametri
 
 *_new_ptr*<br/>
-(Facoltativo) Il nuovo oggetto.
+Opzionale Nuovo oggetto.
 
 ### <a name="example"></a>Esempio
 
@@ -400,9 +399,9 @@ ClassA destructor: second
 done
 ```
 
-## <a name="swap"></a>auto_handle::swap
+## <a name="auto_handleswap"></a><a name="swap"></a>auto_handle:: swap
 
-Scambia gli oggetti con un altro `auto_handle`.
+Scambia oggetti con un'altra `auto_handle`.
 
 ```cpp
 void swap(
@@ -413,7 +412,7 @@ void swap(
 ### <a name="parameters"></a>Parametri
 
 *_right*<br/>
-Il `auto_handle` con cui scambiare gli oggetti.
+`auto_handle` con cui scambiare gli oggetti.
 
 ### <a name="example"></a>Esempio
 
@@ -442,9 +441,9 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="operator-arrow"></a>auto_handle::operator-&gt;
+## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a>auto_handle:: operator-&gt;
 
-L'operatore di accesso di membro.
+Operatore di accesso ai membri.
 
 ```cpp
 _element_type ^ operator->();
@@ -452,7 +451,7 @@ _element_type ^ operator->();
 
 ### <a name="return-value"></a>Valore restituito
 
-L'oggetto che è stato eseguito il wrapping `auto_handle`.
+Oggetto di cui è stato eseguito il wrapper `auto_handle`.
 
 ### <a name="example"></a>Esempio
 
@@ -491,7 +490,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="operator-assign"></a>auto_handle::operator=
+## <a name="auto_handleoperator"></a><a name="operator-assign"></a>auto_handle:: operator =
 
 Operatore di assegnazione.
 
@@ -508,11 +507,11 @@ auto_handle<_element_type> % operator=(
 ### <a name="parameters"></a>Parametri
 
 *_right*<br/>
-Il `auto_handle` da assegnare all'oggetto corrente `auto_handle`.
+`auto_handle` da assegnare al `auto_handle`corrente.
 
 ### <a name="return-value"></a>Valore restituito
 
-L'oggetto corrente `auto_handle`, ora proprietario `_right`.
+`auto_handle`corrente, che ora possiede `_right`.
 
 ### <a name="example"></a>Esempio
 
@@ -575,10 +574,9 @@ done
 in ClassA destructor: second
 ```
 
-## <a name="operator-auto-handle"></a>auto_handle::operator auto_handle
+## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a>auto_handle:: operator auto_handle
 
 Operatore di cast di tipo tra `auto_handle` e tipi compatibili.
-
 
 ```cpp
 template<typename _other_type>
@@ -587,7 +585,7 @@ operator auto_handle<_other_type>();
 
 ### <a name="return-value"></a>Valore restituito
 
-L'oggetto corrente `auto_handle` eseguire il cast a `auto_handle<_other_type>`.
+Cast `auto_handle` corrente `auto_handle<_other_type>`.
 
 ### <a name="example"></a>Esempio
 
@@ -631,9 +629,9 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="operator-bool"></a>auto_handle::operator bool
+## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a>auto_handle:: operator bool
 
-Operatore per l'uso di `auto_handle` in un'espressione condizionale.
+Operatore per l'utilizzo di `auto_handle` in un'espressione condizionale.
 
 ```cpp
 operator bool();
@@ -641,11 +639,11 @@ operator bool();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto con wrapper è valida. `false` in caso contrario.
+`true` se l'oggetto di cui è stato eseguito il wrapped è valido; in caso contrario `false`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo operatore converte effettivamente `_detail_class::_safe_bool` che è più sicuro di `bool` perché non può essere convertito in un tipo integrale.
+Questo operatore esegue la conversione in `_detail_class::_safe_bool` che è più sicuro di `bool` perché non può essere convertito in un tipo integrale.
 
 ### <a name="example"></a>Esempio
 
@@ -676,9 +674,9 @@ s2 is valid
 s2 is now invalid
 ```
 
-## <a name="operator-logical-not"></a>auto_handle::operator!
+## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a>auto_handle:: operator!
 
-Operatore per l'uso di `auto_handle` in un'espressione condizionale.
+Operatore per l'utilizzo di `auto_handle` in un'espressione condizionale.
 
 ```cpp
 bool operator!();
@@ -686,7 +684,7 @@ bool operator!();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto con wrapper è valida; `false` in caso contrario.
+`true` se l'oggetto di cui è stato eseguito il wrapper non è valido in caso contrario `false`.
 
 ### <a name="example"></a>Esempio
 

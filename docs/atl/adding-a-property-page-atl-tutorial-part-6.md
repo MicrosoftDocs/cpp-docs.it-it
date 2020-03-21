@@ -3,16 +3,16 @@ title: Aggiunta di una pagina di proprietà (Esercitazione di ATL, parte 6)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: 2c487d1446f5d1050868f2066359e9639f474ba3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 467ae19c372e24b2d368002cb83367b7087136fd
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524692"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078774"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Aggiunta di una pagina di proprietà (Esercitazione di ATL, parte 6)
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata provider OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive.
 
 Le pagine delle proprietà vengono implementate come oggetti COM separati, che ne permettono la condivisione se necessario. In questo passaggio verranno eseguite le attività seguenti per aggiungere una pagina delle proprietà al controllo:
@@ -45,7 +45,7 @@ Per aggiungere la pagina delle proprietà al controllo, usare il modello Pagina 
 
 Vengono creati i file seguenti:
 
-|File|Description|
+|File|Descrizione|
 |----------|-----------------|
 |PolyProp.h|Contiene la classe C++ `CPolyProp`, che implementa la pagina delle proprietà.|
 |PolyProp.cpp|Include il file PolyProp.h.|

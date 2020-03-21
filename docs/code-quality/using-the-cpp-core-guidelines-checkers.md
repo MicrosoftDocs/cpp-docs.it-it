@@ -4,12 +4,12 @@ ms.date: 08/14/2018
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 955a445fbc29fca479a64684b4b60909234a0b38
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: b9eea6dc466db202ee388a2bfb2e59632e210b7f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418683"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076171"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Usare i controlli delle Linee guida di base di C++
 
@@ -17,7 +17,7 @@ Le C++ linee guida di base sono un set portatile di linee guida, regole e proced
 
 ## <a name="the-c-core-guidelines-project"></a>Progetto C++ di linee guida principali
 
-Creato da Bjarne Stroustrup e altre, le C++ linee guida principali sono una guida all'uso C++ moderno in modo sicuro ed efficace. Le linee guida enfatizzano l'indipendenza dai tipi statici e la sicurezza delle risorse. Identificano modi per eliminare o ridurre al minimo la maggior parte delle parti soggette a errori del linguaggio e suggerire come rendere il codice più semplice e più efficiente in modo affidabile. Queste linee guida sono gestite dalla base C++ standard. Per altre informazioni, vedere la documentazione, [ C++ le linee guida di base](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)e C++ accedere ai file di progetto della documentazione delle linee guida di base su [GitHub](https://github.com/isocpp/CppCoreGuidelines).
+Creato da Bjarne Stroustrup e altre, le C++ linee guida principali sono una guida all'uso C++ moderno in modo sicuro ed efficace. Le linee guida enfatizzano l'indipendenza dai tipi statici e la sicurezza delle risorse. Identificano modi per eliminare o ridurre al minimo la maggior parte delle parti soggette a errori del linguaggio e suggerire come rendere il codice più semplice e più efficiente in modo affidabile. Queste linee guida sono gestite dalla base C++ standard. Per altre informazioni, vedere la documentazione, [ C++ le linee guida di base](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)e C++ accedere ai file di progetto della documentazione delle linee guida di base su [GitHub](https://github.com/isocpp/CppCoreGuidelines).
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>Abilitare le C++ linee guida per il controllo principale nell'analisi del codice
 
@@ -166,7 +166,7 @@ Invece di #pragmas, è possibile utilizzare le opzioni della riga di comando nel
 
 È possibile utilizzare l'opzione della riga di comando per disabilitare temporaneamente tutte le analisi del codice per un file specificando `/analyze-`. Viene generato un avviso *D9025 che esegue l'override di '/analyze ' con '/analyze-'* , che ricorda di riabilitare l'analisi del codice in un secondo momento.
 
-## <a name="corecheck_per_file"></a>Abilitare il C++ controllo delle linee guida di base su file di progetto specifici
+## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a>Abilitare il C++ controllo delle linee guida di base su file di progetto specifici
 
 Talvolta può essere utile eseguire analisi del codice mirate e continuare a usare l'IDE di Visual Studio. Lo scenario di esempio seguente può essere usato per i progetti di grandi dimensioni per risparmiare tempo di compilazione e per semplificare la filtrazione dei risultati:
 
@@ -237,7 +237,7 @@ Se si usa un sistema di compilazione che non si basa su MSBuild, è ancora possi
 
 La libreria del supporto per le linee guida è stata progettata per consentire di seguire le linee guida di base. Il GSL include definizioni che consentono di sostituire costrutti soggetti a errori con alternative più sicure. È ad esempio possibile sostituire un `T*, length` coppia di parametri con il tipo di `span<T>`. GSL è disponibile in [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). La libreria è open source ed è quindi possibile visualizzare le origini, creare commenti o contribuire. Il progetto è disponibile in [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
-## <a name="vs2015_corecheck"></a>Usare le C++ linee guida per il controllo principale nei progetti di Visual Studio 2015
+## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>Usare le C++ linee guida per il controllo principale nei progetti di Visual Studio 2015
 
 Se si usa Visual Studio 2015, i C++ set di regole di analisi del codice di base non sono installati per impostazione predefinita. È necessario eseguire alcuni passaggi aggiuntivi prima di poter abilitare gli C++ strumenti di analisi del codice per il controllo principale in Visual Studio 2015. Microsoft fornisce supporto per i progetti Visual Studio 2015 usando un pacchetto NuGet. Il pacchetto è denominato Microsoft. CppCoreCheck ed è disponibile in [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck). Per questo pacchetto è necessario avere almeno Visual Studio 2015 con Update 1 installato.
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 38a458eb6634d5075315c9c0bbd2cb215bc76eda
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707851"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075908"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset: recupero di somme e altri risultati aggregati (ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > La Creazione guidata consumer ODBC MFC non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile creare manualmente un consumer.
 
 Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
@@ -36,7 +36,7 @@ In questo argomento viene illustrato come ottenere risultati aggregati con le pa
 
 - **COUNT** Esegue il conteggio del numero di record in una colonna con qualsiasi tipo di dati.
 
-Usare queste funzioni SQL per ottenere informazioni statistiche sui record in un'origine dati, anziché per estrarre i record dall'origine dati. Il recordset che viene creato in genere è costituito da un singolo record (se tutte le colonne sono aggregazioni) che contiene un valore. Potrebbe essere presente più di un record se è stata usata una clausola **GROUP BY**. Questo valore è il risultato del calcolo o dell'estrazione eseguita dalla funzione SQL.
+Usare queste funzioni SQL per ottenere informazioni statistiche sui record in un'origine dati, anziché per estrarre i record dall'origine dati. Il recordset che viene creato in genere è costituito da un singolo record (se tutte le colonne sono aggregazioni) che contiene un valore. Se è stata utilizzata una clausola **Group by** , potrebbe essere presente più di un record. Questo valore è il risultato del calcolo o dell'estrazione eseguito dalla funzione SQL.
 
 > [!TIP]
 >  Per aggiungere una clausola SQL **GROUP BY** (ed eventualmente una clausola **HAVING**) all'istruzione SQL, aggiungerla alla fine di `m_strFilter`. Ad esempio:
@@ -56,7 +56,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 
 - **MAX** e **MIN** restituiscono lo stesso tipo di dati delle colonne su cui eseguono il calcolo.
 
-     Ad esempio, la procedura guidata **Aggiungi classe** crea `long` `m_lSales` per contenere una colonna Sales, ma è necessario sostituire questo valore con un membro dati `double m_dblSumSales` per contenere il risultato dell'aggregazione. Vedere l'esempio seguente.
+     Ad esempio, la procedura guidata **Aggiungi classe** consente di creare `long` `m_lSales` per contenere una colonna Sales, ma è necessario sostituirla con un membro dati `double m_dblSumSales` per supportare il risultato dell'aggregazione. Vedere l'esempio seguente.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Per ottenere un risultato aggregato per un recordset
 
@@ -85,7 +85,7 @@ Se si usa una classe [CRecordView](../../mfc/reference/crecordview-class.md) per
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-A:
+Con:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);

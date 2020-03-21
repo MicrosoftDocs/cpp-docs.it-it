@@ -7,39 +7,39 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: a9601b2afe40133a5cc88589b530b5ed549ac81e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a173e1466179dfb40a33d7bdb4a94eabdbf23cc0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389229"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079055"
 ---
 # <a name="testing-the-read-only-provider"></a>Test di un provider in sola lettura
 
-Per testare un provider, è necessario un consumer. È utile se il consumer può corrispondere a con il provider. I modelli consumer OLE DB sono un wrapper sottile per OLE DB e corrispondono con oggetti COM del provider. Poiché l'origine viene fornito con i modelli consumer, è possibile eseguire il debug di un provider con essi. I modelli consumer sono anche un modo molto piccolo e veloce per sviluppare le applicazioni consumer.
+Per testare un provider, è necessario un consumer. Consente di fare in modo che il consumer corrisponda al provider. I modelli consumer OLE DB sono un wrapper sottile intorno OLE DB e corrispondono agli oggetti COM del provider. Poiché l'origine viene fornita con i modelli consumer, è facile eseguirne il debug con un provider. I modelli consumer sono anche un modo molto piccolo e rapido per sviluppare applicazioni consumer.
 
-L'esempio in questo argomento crea un'applicazione di creazione guidata applicazione MFC predefinita per un utente di test. L'applicazione di test è una finestra semplice con il codice del modello consumer OLE DB aggiunto.
+Nell'esempio riportato in questo argomento viene creata un'applicazione della creazione guidata applicazione MFC predefinita per un consumer di test. L'applicazione di test è una semplice finestra di dialogo con OLE DB codice del modello consumer aggiunto.
 
 ## <a name="to-create-the-test-application"></a>Per creare l'applicazione di test
 
 1. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
 
-1. Nel **tipi di progetto** riquadro, selezionare la **installati** > **Visual C++** > **MFC/ATL** cartella. Nel **modelli** riquadro, selezionare **applicazione MFC**.
+1. Nel riquadro **Tipi progetto** selezionare la cartella > **Visual C++**  > **MFC/ATL** **installata** . Nel riquadro **modelli** selezionare **applicazione MFC**.
 
-1. Nome del progetto, immettere *TestProv*, quindi fare clic su **OK**.
+1. Per il nome del progetto, immettere *TestProv*, quindi fare clic su **OK**.
 
-   Il **applicazione MFC** procedura guidata viene visualizzata.
+   Verrà visualizzata la creazione guidata **applicazione MFC** .
 
-1. Nel **tipo di applicazione** pagina, selezionare **basato su finestra di dialogo**.
+1. Nella pagina **tipo di applicazione** selezionare **basata su finestra di dialogo**.
 
-1. Nel **funzionalità avanzate** pagina, selezionare **automazione**, quindi fare clic su **fine**.
+1. Nella pagina **funzionalità avanzate** selezionare **automazione**e quindi fare clic su **fine**.
 
 > [!NOTE]
-> L'applicazione non richiede il supporto di automazione se si aggiungono `CoInitialize` in `CTestProvApp::InitInstance`.
+> L'applicazione non richiede il supporto dell'automazione se si aggiungono `CoInitialize` in `CTestProvApp::InitInstance`.
 
-È possibile visualizzare e modificare il **TestProv** finestra di dialogo (IDD_TESTPROV_DIALOG) selezionandolo nel **visualizzazione risorse**. Nella finestra di dialogo, inserire due caselle di riepilogo, una per ogni stringa del set di righe. Disattivare la proprietà di ordinamento per entrambe caselle di riepilogo facendo clic **Alt**+**invio** quando è selezionata una casella di riepilogo, impostazione e la **ordinamento** proprietà **False**. Inoltre, inserire un **eseguire** pulsante sulla finestra di dialogo per recuperare il file. Il termine **TestProv** finestra di dialogo deve avere due caselle di riepilogo, denominate rispettivamente "String 1" e "String 2,"; include inoltre **OK**, **Annulla**, e **eseguire**  pulsanti.
+È possibile visualizzare e modificare la finestra di dialogo **TestProv** (IDD_TESTPROV_DIALOG) selezionandolo nel **visualizzazione risorse**. Inserire due caselle di riepilogo, una per ogni stringa nel set di righe, nella finestra di dialogo. Disattivare la proprietà Sort per entrambe le caselle di riepilogo premendo **Alt**+**invio** quando viene selezionata una casella di riepilogo e impostando la proprietà **Sort** su **false**. Inserire anche un pulsante **Esegui** nella finestra di dialogo per recuperare il file. Per la finestra di dialogo **TestProv** completata sono presenti due caselle di riepilogo con etichetta "stringa 1" e "stringa 2", rispettivamente. sono inoltre disponibili pulsanti **OK**, **Annulla**ed **Esegui** .
 
-Aprire il file di intestazione per la classe di finestra di dialogo (in questo caso TestProvDlg). Aggiungere il codice seguente al file di intestazione (di fuori di qualsiasi dichiarazione di classe):
+Aprire il file di intestazione per la classe dialog (in questo caso TestProvDlg. h). Aggiungere il codice seguente al file di intestazione (all'esterno di qualsiasi dichiarazione di classe):
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -61,9 +61,9 @@ END_COLUMN_MAP()
 };
 ```
 
-Il codice rappresenta un record utente che definisce quali colonne saranno nel set di righe. Quando il client chiama `IAccessor::CreateAccessor`, Usa queste voci per specificare le colonne da associare. I modelli consumer OLE DB consentono anche di associare le colonne in modo dinamico. Le macro COLUMN_ENTRY rappresentano la versione lato client delle macro PROVIDER_COLUMN_ENTRY. Le due macro COLUMN_ENTRY specificano il numero ordinale, un membro di tipo, lunghezza e i dati per le due stringhe.
+Il codice rappresenta un record utente che definisce le colonne che saranno presenti nel set di righe. Quando il client chiama `IAccessor::CreateAccessor`, usa queste voci per specificare le colonne da associare. I modelli consumer OLE DB consentono inoltre di associare le colonne in modo dinamico. Le macro COLUMN_ENTRY sono la versione lato client delle macro PROVIDER_COLUMN_ENTRY. Le due macro COLUMN_ENTRY specificano il numero ordinale, il tipo, la lunghezza e il membro dati per le due stringhe.
 
-Aggiungere una funzione del gestore per il **eseguiti** pulsante premendo **Ctrl** e fare doppio clic il **eseguire** pulsante. Inserire il codice seguente nella funzione:
+Aggiungere una funzione gestore per il pulsante **Esegui** premendo **CTRL** e facendo doppio clic sul pulsante **Esegui** . Inserire il codice seguente nella funzione:
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -92,19 +92,19 @@ void CTestProvDlg::OnRun()
 }
 ```
 
-Il `CCommand`, `CDataSource`, e `CSession` classi tutte appartengono ai modelli consumer OLE DB. Ogni classe corrisponde a un oggetto COM nel provider. Il `CCommand` oggetto accetta il `CProvider` (classe), dichiarati nel file di intestazione, come parametro di modello. Il `CProvider` parametro rappresenta le associazioni che usano per accedere ai dati dal provider. 
+Le classi `CCommand`, `CDataSource`e `CSession` appartengono tutte ai modelli consumer OLE DB. Ogni classe simula un oggetto COM nel provider. L'oggetto `CCommand` accetta la classe `CProvider`, dichiarata nel file di intestazione, come parametro di modello. Il parametro `CProvider` rappresenta le associazioni utilizzate per accedere ai dati dal provider.
 
-Le righe per ciascuna delle classi aprire creano ciascun oggetto COM nel provider. Per individuare il provider, usare il `ProgID` del provider. È possibile ottenere il `ProgID` dal Registro di sistema o la ricerca nel file Custom.rgs (passare alla directory del provider e cercare il `ProgID` key).
+Le linee per aprire ogni classe creano ogni oggetto COM nel provider. Per individuare il provider, utilizzare la `ProgID` del provider. È possibile ottenere il `ProgID` dal registro di sistema o cercando nel file con estensione rgs personalizzato (aprire la directory del provider e cercare la chiave di `ProgID`).
 
-Il file mydata. txt viene incluso con il `MyProv` esempio. Per creare un file di uso personale, un editor e immettere un numero pari di stringhe, premendo **invio** tra ogni stringa. Se si sposta il file, specificare il nome del percorso.
+Il file Data. txt è incluso nell'esempio `MyProv`. Per creare un file personalizzato, usare un editor e digitare un numero pari di stringhe, premendo **invio** tra ogni stringa. Se si sposta il file, modificare il nome del percorso.
 
-Passare la stringa "c:\\\Samples.\\\myprov\\\MyData.txt" nel `table.Open` riga. Se si esegue la `Open` chiamata, noterete che questa stringa viene passata al `SetCommandText` (metodo) nel provider. Si noti che il `ICommandText::Execute` metodo usato tale stringa.
+Passare la stringa "c:\\\Samples\\\myprov\\\MyData.txt" nella riga `table.Open`. Se si esegue l'istruzione nella chiamata `Open`, si noterà che questa stringa viene passata al metodo `SetCommandText` nel provider. Si noti che il metodo `ICommandText::Execute` usa tale stringa.
 
-Per recuperare i dati, chiamare `MoveNext` sulla tabella. `MoveNext` chiama il `IRowset::GetNextRows`, `GetRowCount`, e `GetData` funzioni. Quando non sono presenti più righe (vale a dire la posizione corrente nel set di righe è supera a `GetRowCount`), il ciclo termina.
+Per recuperare i dati, chiamare `MoveNext` sulla tabella. `MoveNext` chiama le funzioni `IRowset::GetNextRows`, `GetRowCount`e `GetData`. Quando non sono presenti altre righe (ovvero la posizione corrente nel set di righe è maggiore di `GetRowCount`), il ciclo termina.
 
-Se non sono presenti altre righe, i provider restituiscono DB_S_ENDOFROWSET. Il valore di DB_S_ENDOFROWSET. inoltre non è un errore. È sempre consigliabile verificare con S_OK per annullare un ciclo di recupero di dati e non usare la macro SUCCEEDED.
+Quando non sono presenti più righe, i provider restituiscono DB_S_ENDOFROWSET. Il valore DB_S_ENDOFROWSET non è un errore. È sempre consigliabile controllare S_OK per annullare un ciclo di recupero dei dati e non usare la macro SUCCEEDed.
 
-È ora possibile compilare e testare il programma.
+A questo punto dovrebbe essere possibile compilare e testare il programma.
 
 ## <a name="see-also"></a>Vedere anche
 

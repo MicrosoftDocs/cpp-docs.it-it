@@ -12,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 86be11da1e2cef2fe0ca12691aeb0ce3dbe94202
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441704"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076504"
 ---
 # &lt;filesystem&gt;
 
@@ -32,7 +32,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Al rilascio di Visual Studio 2017, il \<filesystemintestazione > non era ancora uno C++ standard. C++in Visual Studio 2017 RTW implementa lo standard Draft finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf). Visual Studio 2017 versione 15,7 e successive supporta il nuovo \<C++ 17 filesystem> standard.
+> Al rilascio di Visual Studio 2017, il \<filesystemintestazione > non era ancora uno C++ standard. C++in Visual Studio 2017 RTW implementa lo standard Draft finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100). Visual Studio 2017 versione 15,7 e successive supporta il nuovo \<C++ 17 filesystem> standard.
 > Si tratta di un'implementazione completamente nuova, incompatibile con la versione precedente del `std::experimental`. È stato reso necessario dal supporto di collegamento simbolico, correzioni di bug e modifiche nel comportamento standard-required. Attualmente, incluso \<filesystem> fornisce il nuovo `std::filesystem` e il `std::experimental::filesystem`precedente. Includendo \<experimental/filesystem> fornisce solo l'implementazione di experimental precedente. L'implementazione del experimental verrà rimossa nella prossima versione di divisione ABI delle librerie.
 
 Questa intestazione supporta file System per una delle due classi generali di sistemi operativi host: Microsoft Windows e POSIX.
