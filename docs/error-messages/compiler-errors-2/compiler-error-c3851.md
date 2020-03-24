@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3851
 ms.assetid: da30c21c-33aa-4439-8fb3-2f5021ea4985
-ms.openlocfilehash: 52c4f3a393ffaf2b61a65c8e2e0dcc8efac08288
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97d9ef1eeeffa0e5a63d2c8ae2428a3fad0ff238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380942"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165584"
 ---
 # <a name="compiler-error-c3851"></a>Errore del compilatore C3851
 
-> «*char*': un nome di carattere universale non è possibile designare un carattere nel set di caratteri di base
+> '*char*': un nome di caratteri universali non può definire un carattere nel set di caratteri di base
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Nel codice compilato come C++, non è possibile usare un nome di carattere universale che rappresenta un carattere nel set di caratteri di origine di base esterno al valore letterale di stringa o carattere. Per altre informazioni, vedere [Character Sets](../../cpp/character-sets.md). Nel codice compilato come C, è possibile usare un nome di carattere universale per i caratteri nell'intervallo 0x20-0x7F, inclusivo, ad eccezione di 0x24 ('$'), 0x40 ('\@'), o 0x60 ('\`').
+Nel codice compilato come C++, non è possibile usare un nome di carattere universale che rappresenta un carattere nel set di caratteri di origine di base esterno al valore letterale di stringa o carattere. Per altre informazioni, vedere [Character Sets](../../cpp/character-sets.md). Nel codice compilato come C, non è possibile usare un nome di carattere universale per i caratteri nell'intervallo 0x20-0x7F, inclusivo, ad eccezione di 0x24 (' $'), 0x40 ('\@') o 0x60 ('\`').
 
 ## <a name="example"></a>Esempio
 

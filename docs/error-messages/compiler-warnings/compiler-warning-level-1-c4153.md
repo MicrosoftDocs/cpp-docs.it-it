@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4153
 ms.assetid: 37a15754-9dba-470b-adda-c4b888064b3e
-ms.openlocfilehash: 20db63c7cae2567f14c454a39d197da265c57c09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24e5a00a23f905841ef41774a6567bbd4298f6f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151240"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163650"
 ---
 # <a name="compiler-warning-level-1-c4153"></a>Avviso del compilatore (livello 1) C4153
 

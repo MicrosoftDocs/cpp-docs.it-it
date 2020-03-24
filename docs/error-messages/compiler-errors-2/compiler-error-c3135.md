@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3135
 ms.assetid: e92ee007-5a26-47f4-8ef4-339f2d9528d1
-ms.openlocfilehash: 02e3884090b7ae1a20a66034f56615b77f038b3d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 23f301a983a085b1d66323f8b8ab9cabcea8224a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344628"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176598"
 ---
 # <a name="compiler-error-c3135"></a>Errore del compilatore C3135
 
-'property': una proprietà non può avere un 'const' o 'volatile' di tipo
+' Property ': una proprietà non può avere un tipo ' const ' o ' volatile '
 
-Il [const](../../cpp/const-cpp.md) e [volatile](../../cpp/volatile-cpp.md) parole chiave non sono consentite per le proprietà.
+Le parole chiave [const](../../cpp/const-cpp.md) e [volatile](../../cpp/volatile-cpp.md) non sono consentite nelle proprietà.

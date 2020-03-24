@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927729"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169708"
 ---
 # <a name="c-debugging-property-pages"></a>C++Pagine delle proprietà di debug
 
-Queste pagine delle proprietà si trovano nel**debug**delle proprietà di**configurazione** > delle**Proprietà** > del **progetto** > . Scegliere il tipo di debugger nel controllo a discesa. Per ulteriori informazioni sul debug C++ del codice, [vedere Esercitazione: Informazioni su come C++ eseguire il debug del](/visualstudio/debugger/getting-started-with-the-debugger-cpp) codice usando Visual Studio e il [debug del codice nativo](/visualstudio/debugger/debugging-native-code).
+Queste pagine delle proprietà si trovano in **progetto** > **Proprietà** > **proprietà di configurazione** > **debug**. Scegliere il tipo di debugger nel controllo a discesa. Per altre informazioni sul debug C++ del codice, vedere [esercitazione: informazioni sul C++ debug del codice con Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp) e [debug del codice nativo](/visualstudio/debugger/debugging-native-code).
 
 ## <a name="local-windows-debugger-property-page"></a>Pagina delle proprietà del debugger Windows locale
 
@@ -60,7 +60,7 @@ Argomenti della riga di comando da passare all'applicazione.
 
 Directory di lavoro dell'applicazione. Per impostazione predefinita, la directory che contiene il file di progetto.
 
-### <a name="attach"></a>Attach
+### <a name="attach"></a>Collegamento
 
 Specifica se il debugger deve tentare di connettersi a un processo esistente all'avvio del debug.
 
@@ -68,7 +68,7 @@ Specifica se il debugger deve tentare di connettersi a un processo esistente all
 
 Specifica il tipo di debugger da utilizzare. Se impostato su automatico, il tipo di debugger verrà selezionato in base al contenuto del file exe.
 
-**Scelte**
+**Choices**
 
 - **Solo nativo** -nativo
 - **Solo gestito** : solo gestito
@@ -77,7 +77,7 @@ Specifica il tipo di debugger da utilizzare. Se impostato su automatico, il tipo
 - **Script-script**
 - **Solo GPU (C++ amp** )-solo GPU (C++ amp)
 
-### <a name="environment"></a>Ambiente
+### <a name="environment"></a>Environment
 
 Specifica l'ambiente per il programma di cui eseguire il debug o le variabili da unire con l'ambiente esistente.
 
@@ -89,7 +89,7 @@ Tipo di acceleratore di debug da usare per il debug del codice GPU. (Disponibile
 
 Imposta la frequenza con cui il debugger GPU si interrompe.
 
-**Scelte**
+**Choices**
 
 - **Interrompi una volta per ogni curva di distorsione** una volta per distorsione
 - **Interrompi per ogni thread (ad esempio, comportamento della CPU)** -Interrompi per ogni thread (ad esempio, comportamento della CPU)
@@ -130,7 +130,7 @@ Specifica il nome di un server remoto.
 
 Specifica il tipo di connessione.
 
-**Scelte**
+**Choices**
 
 - **Remoto con autenticazione di Windows** : remoto con [autenticazione di Windows](/windows-server/security/windows-authentication/windows-authentication-overview).
 - **Remoto senza autenticazione** -remoto senza autenticazione.
@@ -139,7 +139,7 @@ Specifica il tipo di connessione.
 
 Specifica il tipo di debugger da utilizzare. Se impostato su automatico, il tipo di debugger verrà selezionato in base al contenuto del file exe.
 
-**Scelte**
+**Choices**
 
 - **Solo nativo** -nativo
 - **Solo gestito** : solo gestito
@@ -148,7 +148,7 @@ Specifica il tipo di debugger da utilizzare. Se impostato su automatico, il tipo
 - **Script-script**
 - **Solo GPU (C++ amp** )-solo GPU (C++ amp)
 
-### <a name="environment"></a>Ambiente
+### <a name="environment"></a>Environment
 
 Specifica l'ambiente per il programma di cui eseguire il debug o le variabili da unire con l'ambiente esistente.
 
@@ -160,12 +160,12 @@ Tipo di acceleratore di debug da usare per il debug del codice GPU. (Disponibile
 
 Imposta la frequenza con cui il debugger GPU si interrompe.
 
-**Scelte**
+**Choices**
 
 - **Interrompi una volta per ogni curva di distorsione** una volta per distorsione
 - **Interrompi per ogni thread (ad esempio, comportamento della CPU)** -Interrompi per ogni thread (ad esempio, comportamento della CPU)
 
-### <a name="attach"></a>Attach
+### <a name="attach"></a>Collegamento
 
 Specifica se il debugger deve tentare di connettersi a un processo esistente all'avvio del debug.
 
@@ -199,7 +199,7 @@ Specifica l'URL per il progetto.
 
 Specifica il tipo di debugger da utilizzare. Se impostato su automatico, il tipo di debugger verrà selezionato in base al contenuto del file exe.
 
-**Scelte**
+**Choices**
 
 - **Solo nativo** -nativo
 - **Solo gestito** : solo gestito
@@ -217,7 +217,7 @@ Specifica l'URL per il progetto.
 
 Specifica il tipo di debugger da utilizzare. Se impostato su automatico, il tipo di debugger verrà selezionato in base al contenuto del file exe.
 
-**Scelte**
+**Choices**
 
 - **Solo nativo** -nativo
 - **Solo gestito** : solo gestito

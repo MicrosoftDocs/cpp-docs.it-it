@@ -33,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: ebd52a23765177d74f2bff5660f806ee5c4a9573
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dcdf60fee6d57b5561b72b477aa1a8bb31f35f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942589"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171216"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -66,17 +66,17 @@ Numero complesso.
 
 Parte reale della *z*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **CREAL** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono valori **float** o **long double** . In un programma C, **CREAL** accetta sempre un valore **_Dcomplex** e restituisce un valore **Double** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **CREAL** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono valori **float** o **long double** . In un programma C, **CREAL** accetta sempre un valore di **_Dcomplex** e restituisce un valore **Double** .
 
 ## <a name="requirements"></a>Requisiti
 
-|Routine|Intestazione C|Intestazione C++|
+|Routine|Intestazione C|Header C++|
 |-------------|--------------|------------------|
-|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
+|**CREAL**, **crealf**, **Creall**|\<complex.h>|\<ccomplex>|
 
-I tipi **_Fcomplex**, **_Dcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft dei tipi nativi C99 non implementati **float _Complex**, **Double _Complex**e **long double _Complex**, rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+I tipi **_Fcomplex**, **_Dcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft dei tipi C99 nativi non implementati **float _Complex**, **Double _Complex**e **long double _Complex**, rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="see-also"></a>Vedere anche
 

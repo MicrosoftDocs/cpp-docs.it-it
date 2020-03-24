@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2517
 ms.assetid: d79348d5-e271-4aad-b973-8264515f8e90
-ms.openlocfilehash: 63523670fe1292d23327112f627e7d1a9dafeca6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66b7657869c70b6f6175e7f3cccc1dfb4d2614f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202649"
 ---
 # <a name="compiler-error-c2517"></a>Errore del compilatore C2517
 
-'identifier': a destra di ':: ' non è definito
+' Identifier ': il diritto di '::' non è definito
 
-L'identificatore a destra dell'operatore di risoluzione dell'ambito (`::`) deve essere un membro definito di classe, struttura o unione a sinistra. Se non è denominato alcuna classe, struttura o unione, l'identificatore nella parte destra deve essere dichiarato con ambito globale.
+L'identificatore a destra dell'operatore di risoluzione dell'ambito (`::`) deve essere un membro definito della classe, della struttura o dell'Unione a sinistra. Se non viene denominata alcuna classe, struttura o Unione, l'identificatore a destra deve essere dichiarato con ambito globale.

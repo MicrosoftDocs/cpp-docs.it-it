@@ -1,21 +1,21 @@
 ---
-title: db_table (C++ attributo COM)
+title: db_table (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b3be55a4ea118ef3441d3ea93f63e19ebdb3d79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148120"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167251"
 ---
-# <a name="dbtable"></a>db_table
+# <a name="db_table"></a>db_table
 
-Apre una tabella di OLE DB.
+Apre una tabella OLE DB.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,13 +23,13 @@ Apre una tabella di OLE DB.
 [ db_table(db_table, name, source_name, hresult) ]
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *db_table*<br/>
-Stringa che specifica il nome di una tabella di database (ad esempio, "prodotti").
+Stringa che specifica il nome di una tabella di database, ad esempio "Products".
 
-*name*<br/>
-(Facoltativo) Il nome dell'handle usato con la tabella. È necessario specificare questo parametro se si desidera restituire più righe di risultati. **db_table** genera una variabile con il parametro specificato *nome* che può essere utilizzato per attraversare il set di righe o eseguire più query.
+*nome*<br/>
+Opzionale Nome dell'handle usato per lavorare con la tabella. È necessario specificare questo parametro se si desidera restituire più di una riga di risultati. **db_table** genera una variabile con il *nome* specificato che può essere utilizzata per attraversare il set di righe o per eseguire più query di azione.
 
 *source_name*<br/>
 (Facoltativo) La variabile `CSession` o l'istanza di una classe a cui è applicato l'attributo `db_source` con cui viene eseguito il comando. Vedere [db_source](db-source.md).
@@ -37,15 +37,15 @@ Stringa che specifica il nome di una tabella di database (ad esempio, "prodotti"
 *hresult*<br/>
 (Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**db_table** crea un' [CTable](../../data/oledb/ctable-class.md) oggetto, che viene usato da un consumer OLE DB per aprire una tabella. È possibile usare questo attributo solo a livello di classe; è possibile usarlo inline. Usare `db_column` per associare le colonne della tabella alle variabili; usare `db_param` per delimitare (impostare il tipo di parametro e pertanto su) di parametri.
+**db_table** crea un oggetto [CTable](../../data/oledb/ctable-class.md) , che viene usato da un consumer OLE DB per aprire una tabella. È possibile usare questo attributo solo a livello di classe; non è possibile utilizzarlo inline. Utilizzare `db_column` per associare le colonne della tabella alle variabili; utilizzare `db_param` per delimitare (impostare il tipo di parametro e così via) dei parametri.
 
 Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente consente di aprire la tabella di prodotti per l'uso da `CProducts`.
+Nell'esempio seguente viene aperta la tabella Products per l'utilizzo da parte di `CProducts`.
 
 ```cpp
 // db_table.cpp
@@ -60,7 +60,7 @@ class CProducts {
 };
 ```
 
-Per un esempio di questo attributo usato in un'applicazione, vedere gli esempi [AtlAgent](https://github.com/Microsoft/VCSamples) e [MultiRead](https://github.com/Microsoft/VCSamples).
+Per un esempio di questo attributo usato in un'applicazione, vedere [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -70,7 +70,7 @@ Per un esempio di questo attributo usato in un'applicazione, vedere gli esempi [
 |-|-|
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

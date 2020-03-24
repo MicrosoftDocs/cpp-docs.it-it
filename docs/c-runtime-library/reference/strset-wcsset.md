@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wcsset function
 - strset function
 ms.assetid: 20e132d8-4b6c-4341-b1eb-8e19b46047e2
-ms.openlocfilehash: ed974968b75b130ed1ac8cbe6c96ef7392399abe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 399f046d295c040c166ff7f7c1b5563e14976838
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946740"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170124"
 ---
 # <a name="strset-wcsset"></a>strset, wcsset
 

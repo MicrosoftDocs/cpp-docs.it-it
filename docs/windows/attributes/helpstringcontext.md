@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168149"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -28,7 +28,7 @@ Specifica l'ID di un argomento della Guida in un file con estensione hlp o CHM.
 *contextID*<br/>
 Identificatore di contesto della guida a 32 bit nel file della **Guida** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **helpstringcontext** C++ ha la stessa funzionalità dell'attributo [helpstringcontext](/windows/win32/Midl/helpstringcontext) FAD.
 
@@ -56,8 +56,8 @@ __interface IMyI
 |-|-|
 |**Si applica a**|**classe**, **interfaccia**, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

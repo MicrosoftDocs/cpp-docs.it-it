@@ -1,21 +1,21 @@
 ---
-title: case (attributo COM C++)
+title: Case (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148445"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167336"
 ---
 # <a name="case-c"></a>case (C++)
 
-Utilizzato con il [switch_type](switch-type.md) dell'attributo un **union**.
+Utilizzato con l'attributo [switch_type](switch-type.md) in un' **Unione**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,7 +26,7 @@ Utilizzato con il [switch_type](switch-type.md) dell'attributo un **union**.
 #### <a name="parameters"></a>Parametri
 
 *value*<br/>
-Un possibile valore per il quale si desidera fornire l'elaborazione di input. Il tipo della **valore** può essere uno dei tipi seguenti:
+Un possibile valore di input per il quale si desidera fornire l'elaborazione. Il tipo di **valore** può essere uno dei tipi seguenti:
 
 - `int`
 
@@ -38,13 +38,13 @@ Un possibile valore per il quale si desidera fornire l'elaborazione di input. Il
 
 o un identificatore di tale tipo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **case** attributi di C++ ha la stessa funzionalità come la **case** attributo MIDL. Questo attributo viene utilizzato solo con il [switch_type](switch-type.md) attributo.
+L'attributo **case** C++ ha la stessa funzionalità dell'attributo **case** MIDL. Questo attributo viene utilizzato solo con l'attributo [switch_type](switch-type.md) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra un uso le **caso** attributo:
+Il codice seguente illustra l'uso dell'attributo **case** :
 
 ```cpp
 // cpp_attr_ref_case.cpp
@@ -69,9 +69,9 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**Si applica a**|Membro di un **classe** o **struct**|
+|**Si applica a**|Membro di una **classe** o di uno **struct**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

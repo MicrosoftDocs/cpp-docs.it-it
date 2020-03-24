@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1601
 ms.assetid: 25797c39-f085-4d75-9eab-159ecd36ef49
-ms.openlocfilehash: cade1c216053e61b14bd9ccdd0b50e0325bb5cc7
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 22dfdd47fca596282762873ea86b9382c4d8f997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344773"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202917"
 ---
 # <a name="fatal-error-c1601"></a>Errore irreversibile C1601
 
 codice operativo dell'assembly inline non supportato
 
-Questo errore indica una mancata corrispondenza nei file del compilatore .exe, che possono essersi verificati a causa di un'installazione incompleta. Ad esempio, si potrebbe avere installato un service pack, ma non il pacchetto del processore. Installare tutti i prodotti necessari.
+Questo errore indica una mancata corrispondenza nei file exe del compilatore, che potrebbero essersi verificati a causa di un'installazione incompleta. Ad esempio, è possibile che sia stato installato un Service Pack ma non il pacchetto del processore. Installare tutti i prodotti richiesti.

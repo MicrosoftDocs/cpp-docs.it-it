@@ -1,22 +1,22 @@
 ---
-title: Rowset dello schema
+title: Set di righe dello schema
 ms.date: 10/22/2018
 helpviewer_keywords:
 - schema rowsets, defined
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
-ms.openlocfilehash: c0ec284b4bb366b72eae86f684346f70bfb44239
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41bce0b75a947dca64a135ab1ed462ae45f7c46d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404533"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209586"
 ---
-# <a name="schema-rowsets"></a>Rowset dello schema
+# <a name="schema-rowsets"></a>Set di righe dello schema
 
-Schema (o metadati) sono qualsiasi informazioni sulla struttura o un'organizzazione, ad esempio le informazioni sul provider, set di righe, tabelle, colonne, un database o altre informazioni oltre il contenuto effettivo del database. OLE DB ti permette di ottenere tali informazioni senza aprire il set di righe con i rowset dello schema.
+Lo schema o i metadati sono informazioni sulla struttura o sull'organizzazione di un database, ad esempio informazioni sul provider, il set di righe, la tabella, le colonne o altre informazioni rispetto al contenuto del database effettivo. OLE DB consente di ottenere tali informazioni senza aprire il set di righe utilizzando i set di righe dello schema.
 
-Per informazioni su come usare i set di righe dello schema, vedere [recupero di metadati con i rowset dello Schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
+Per informazioni sull'utilizzo dei set di righe dello schema, vedere [recupero di metadati con set di righe dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

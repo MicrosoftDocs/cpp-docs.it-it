@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166367"
 ---
 # <a name="restricted"></a>restricted
 
@@ -30,13 +30,13 @@ Specifica che un membro di un modulo, di un'interfaccia o di un'interfaccia disp
 *interfacce*<br/>
 Una o più interfacce che non possono essere chiamate arbitrariamente su un oggetto COM. Questo parametro è valido solo se applicato a una classe.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L' C++ attributo Restricted ha la stessa funzionalità dell'attributo MIDL [limitato](/windows/win32/Midl/restricted) .
+L'attributo **Restricted** C++ ha la stessa funzionalità dell'attributo MIDL [limitato](/windows/win32/Midl/restricted) .
 
 ## <a name="example"></a>Esempio
 
-Nel codice seguente viene illustrato come utilizzare l' attributo Restricted:
+Nel codice seguente viene illustrato come utilizzare l'attributo **Restricted** :
 
 ```cpp
 // cpp_attr_ref_restricted.cpp
@@ -69,8 +69,8 @@ class c : public a, public b
 |-|-|
 |**Si applica a**|Metodo di interfaccia, **interfaccia**, **classe**, **struct**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|**coclasse** (quando applicato alla **classe** o allo **struct**)|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|**coclasse** (se applicata alla **classe** o allo **struct**)|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

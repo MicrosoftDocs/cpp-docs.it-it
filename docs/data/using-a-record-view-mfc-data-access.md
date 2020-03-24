@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - record views, customizing default code
 ms.assetid: 91f2828f-0666-4273-ae28-e4703fd98521
-ms.openlocfilehash: 9d64fc26e1c78bad0431bc9b10dd5117c4866159
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 611ddfd755eec84d4f2572a50c18802f988c5c3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152917"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209027"
 ---
 # <a name="using-a-record-view--mfc-data-access"></a>Uso di una visualizzazione di record (accesso ai dati MFC)
 
-Questo argomento illustra come personalizzare il codice predefinito per le visualizzazioni di record fornito dalla procedura guidata. In genere, si desidera vincolare la selezione di record con un [filtro](../data/odbc/recordset-filtering-records-odbc.md) oppure [parametri](../data/odbc/recordset-parameterizing-a-recordset-odbc.md), eventualmente [sort](../data/odbc/recordset-sorting-records-odbc.md) i record e personalizzare l'istruzione SQL.
+Questo argomento illustra come personalizzare il codice predefinito per le visualizzazioni di record fornito dalla procedura guidata. In genere, si vuole vincolare la selezione dei record con un [filtro](../data/odbc/recordset-filtering-records-odbc.md) o [parametri](../data/odbc/recordset-parameterizing-a-recordset-odbc.md), ad esempio [ordinare](../data/odbc/recordset-sorting-records-odbc.md) i record, personalizzare l'istruzione SQL.
 
-Usando `CRecordView` è analogo a quello tramite [CFormView](../mfc/reference/cformview-class.md). L'approccio di base consiste nell'usare la visualizzazione di record per visualizzare ed eventualmente aggiornare i record di un solo recordset. Tuttavia, si potrebbe voler usare anche, come descritto in altri recordset [visualizzazioni di Record: La compilazione di una casella di riepilogo da un secondo Recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+L'uso di `CRecordView` è molto simile all'uso di [CFormView](../mfc/reference/cformview-class.md). L'approccio di base consiste nell'usare la visualizzazione di record per visualizzare ed eventualmente aggiornare i record di un solo recordset. Oltre a questo, potrebbe essere necessario utilizzare anche altri recordset, come descritto in visualizzazioni di [record: compilazione di una casella di riepilogo da un secondo recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
 
 ## <a name="see-also"></a>Vedere anche
 
