@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1382
 ms.assetid: 7a100f8c-3179-4927-a2f1-98de4c753850
-ms.openlocfilehash: 2b7f6fd878f0d0ba6cde19a3a316a01c390e954a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ed70a81c4ae2028d09b694f325f83454e99a587
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228564"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203099"
 ---
 # <a name="fatal-error-c1382"></a>Errore irreversibile C1382
 
-il file PCH 'file' è stato generato 'obj' è stato ricompilato. Ricompilare l'oggetto
+il file PCH ' file ' è stato ricompilato dopo la generazione di ' obj '. Ricompilare l'oggetto
 
-Quando si usa [/LTCG](../../build/reference/ltcg-link-time-code-generation.md), il compilatore ha rilevato un file con estensione pch più recente di un file obj CIL che punta ad esso. Le informazioni nel file con estensione obj elenco CIL non sono aggiornate. Ricompilare l'oggetto.
+Quando si usa [/LTCG](../../build/reference/ltcg-link-time-code-generation.md), il compilatore ha rilevato un file PCH più recente di un CIL. obj che vi fa riferimento. Le informazioni nel file CIL. obj non sono aggiornate. Ricompilare l'oggetto.
 
-C1382 può verificarsi anche se si esegue la compilazione con **/Yc**, ma anche passare più origini per i file di codice al compilatore.  Per risolvere, non utilizzare **/Yc** quando si passano più origini, i file di codice al compilatore.  Per altre informazioni, vedere [/Yc (Crea precompilati o meno File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md).
+C1382 può anche verificarsi se si esegue la compilazione con **/YC**, ma si passano anche più file di codice sorgente al compilatore.  Per risolvere il caso, non usare **/YC** quando si passano più file di codice sorgente al compilatore.  Per ulteriori informazioni, vedere [/YC (Crea file di intestazione precompilata)](../../build/reference/yc-create-precompiled-header-file.md).

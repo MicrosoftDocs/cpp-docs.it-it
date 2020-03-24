@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: 7b87f8c57b0d871a577793936ea3cb7dbab7e58d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344543"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200577"
 ---
 # <a name="compiler-error-c3556"></a>Errore del compilatore C3556
 
-> «*espressione*': argomento di 'decltype' non corretto
+> '*Expression*': argomento non corretto per ' decltype '
 
 Il compilatore non può dedurre il tipo dell'espressione che corrisponde all'argomento dell'identificatore di tipo `decltype(`*expression*`)` .
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio di codice seguente il compilatore non può dedurre il tipo dell'argomento `myFunction` perché `myFunction` è in overload. Per risolvere questo problema, è possibile usare `static_cast` per creare un'istanza di un puntatore per la particolare funzione per specificare in overload di `decltype` espressione.
+Nell'esempio di codice seguente il compilatore non può dedurre il tipo dell'argomento `myFunction` perché `myFunction` è in overload. Per risolvere questo problema, è possibile utilizzare `static_cast` per creare un'istanza di un puntatore alla funzione di overload specifica per specificare nell'espressione `decltype`.
 
 ```cpp
 // C3556.cpp

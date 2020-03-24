@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 56970d8b1067e1ac38230b6995074210ddc5549b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 201916eeb235d48473d21188da42d19cafb93bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214674"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -23,7 +23,7 @@ Indica che un'interfaccia è compatibile con l'automazione.
 [oleautomation]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **oleautomation** C++ ha la stessa funzionalità dell'attributo MIDL di [oleautomation](/windows/win32/Midl/oleautomation) .
 
@@ -39,7 +39,7 @@ Vedere gli esempi per [DefaultValue](defaultvalue.md) e non [estendibile](nonext
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|**dispinterface**|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

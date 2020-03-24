@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - D9026
 ms.assetid: 149fe5e3-5329-4be8-b871-49dfd423aaba
-ms.openlocfilehash: 3fd8d442dfabaf2f03d8b564c9fdfb1537f6ff28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59dfcdc97fb9caf60a018cb20583ee6fca3dcb27
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214207"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196703"
 ---
 # <a name="command-line-warning-d9026"></a>Avviso della riga di comando D9026
 
-opzioni si applicano all'intera riga di comando
+opzioni valide per l'intera riga di comando
 
-È stata specificata un'opzione su un comando dopo che è stato specificato un nome di file. L'opzione è stata applicata al file che lo precedesse.
+È stata specificata un'opzione in un comando dopo che è stato specificato un nome file. L'opzione è stata applicata al file che la precede.
 
 Ad esempio, nel comando
 
@@ -25,6 +25,6 @@ Ad esempio, nel comando
 CL verdi.c /G5 puccini.c
 ```
 
-con l'opzione /G5, non il valore predefinito/G4 verrà compilato il file verdi. c.
+il file VERDI. c verrà compilato usando l'opzione/G5, non il valore predefinito di/G4.
 
-Questo comportamento è diverso da quello di alcune versioni precedenti, applicate solo le opzioni specificate prima il nome del file risultante in verdi. c in fase di compilazione con/G4, venivano che si sta compilando /G5.
+Questo comportamento è diverso da quello di alcune versioni precedenti, che applicavano solo le opzioni specificate prima del nome del file, con conseguente compilazione di VERDI. c con/G4 e PUCCINI. c compilati con/G5.

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b917c0a2c15aeb70222c948bce9a6fb275c91068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207246"
 ---
 # <a name="compiler-error-c2144"></a>Errore del compilatore C2144
 
-> Errore di sintassi: '*tipo*'deve essere preceduto da'*token*'
+> errore di sintassi:'*Type*' deve essere preceduto da'*token*'
 
-Il compilatore prevedeva *token* e trovare *tipo* invece.
+Il *token* previsto del compilatore e il *tipo* trovato.
 
-Questo errore può essere causato da una parentesi graffa di chiusura mancanti, parentesi di chiusura o punti e virgola.
+Questo errore può essere causato da una parentesi graffa di chiusura mancante, da una parentesi destra o da un punto e virgola.
 
-C2144 può verificarsi anche quando si tenta di creare una macro da una parola chiave CLR che contiene un carattere di spazio vuoto.
+C2144 può verificarsi anche quando si tenta di creare una macro da una parola chiave CLR che contiene uno spazio vuoto.
 
-È inoltre possibile visualizzare C2144 se si sta tentando di inoltro del tipo. Visualizzare [l'inoltro di tipi (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) per altre informazioni.
+È anche possibile visualizzare C2144 se si sta provando a eseguire l'invio del tipo. Per ulteriori informazioni, vedere [tipo di inoltriC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
 
 ## <a name="examples"></a>Esempi
 
-L'esempio seguente genera l'errore C2144 e viene illustrato un modo per risolvere il problema:
+Nell'esempio seguente viene generato C2144 e viene illustrato come risolverlo:
 
 ```cpp
 // C2144.cpp
@@ -40,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-L'esempio seguente genera l'errore C2144 e viene illustrato un modo per risolvere il problema:
+Nell'esempio seguente viene generato C2144 e viene illustrato come risolverlo:
 
 ```cpp
 // C2144_2.cpp

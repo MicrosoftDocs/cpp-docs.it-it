@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 376cacc3f70995c271a29b741ad266049da45785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330552"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160892"
 ---
 # <a name="subscripting"></a>Indice
 
-L'operatore di pedice (**[]**), ad esempio l'operatore di chiamata di funzione, viene considerato un operatore binario. L'operatore di pedice deve essere una funzione membro non statica che accetta un solo argomento. In questo argomento può essere di qualsiasi tipo e definisce il pedice di matrice desiderato.
+L'operatore di indice ( **[]** ), come l'operatore di chiamata di funzione, viene considerato un operatore binario. L'operatore di pedice deve essere una funzione membro non statica che accetta un solo argomento. In questo argomento può essere di qualsiasi tipo e definisce il pedice di matrice desiderato.
 
 ## <a name="example"></a>Esempio
 
@@ -91,9 +91,9 @@ Element: [10] = 10
 
 ## <a name="comments"></a>Commenti
 
-Quando `i` raggiunge 10 nel programma precedente **operator []** rileva che un indice fuori limite è in uso e genera un messaggio di errore.
+Quando `i` raggiunge 10 nel programma precedente, **operator []** rileva che è in uso un indice out-of-Bounds e genera un messaggio di errore.
 
-Si noti che la funzione **operator []** restituisce un tipo riferimento. In questo modo esso risulterà un l-value, consentendo di utilizzare le espressioni di indice su entrambi i lati degli operatori di assegnazione.
+Si noti che l' **operatore function []** restituisce un tipo di riferimento. In questo modo esso risulterà un l-value, consentendo di utilizzare le espressioni di indice su entrambi i lati degli operatori di assegnazione.
 
 ## <a name="see-also"></a>Vedere anche
 

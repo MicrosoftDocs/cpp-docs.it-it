@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3500
 ms.assetid: 77336f16-04f5-4943-bfc0-faba4cd8bb51
-ms.openlocfilehash: 5dd969ae3fdc54e9ae65ee86532a3fc51116a272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf09381f36731a4c8eda125699f473616ef4cf11
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215240"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200838"
 ---
 # <a name="compiler-error-c3500"></a>Errore del compilatore C3500
 
-ProgID non valido 'progid'
+ProgID ' ProgID ' non valido
 
-Un progid non valido specificato con il `#import` istruzione. Controllare il Registro di sistema di Windows per assicurarsi di avere specificato un valore valido progid.
+ProgID non valido specificato con l'istruzione `#import`. Controllare il registro di sistema di Windows per assicurarsi di specificare un ProgID valido.

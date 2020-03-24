@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2168
 ms.assetid: 625e7dc3-ca74-4980-8268-8d5c0245e376
-ms.openlocfilehash: f019ad4fdec14067fdfdbc36427c826b8937a3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19e34cb7f6a342ef6f6df27390dcb3bbe45cefe0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174770"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207012"
 ---
 # <a name="compiler-error-c2168"></a>Errore del compilatore C2168
 

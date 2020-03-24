@@ -7,32 +7,32 @@ helpviewer_keywords:
 - Visual C++ debugger, debugging providers
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-ms.openlocfilehash: 21d4cb455413c3f7cbcbed02cdd4c364a469426d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f80ce5dc82dd2baeefe3410a488a5fefda0e9bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176148"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211094"
 ---
 # <a name="debugging-your-provider"></a>Debug del provider
 
 Esistono due modi per eseguire il debug del provider:
 
-- Poiché i provider vengono creati nel processo, è possibile creare codice consumer usando i modelli consumer OLE DB e il passaggio in un provider normalmente.
+- Poiché i provider vengono creati in corso, è possibile creare un codice consumer usando i modelli di consumer OLE DB ed eseguire l'istruzione nel provider normalmente.
 
-- È possibile usare varie utilità forniti con Visual C++.
+- È possibile utilizzare diverse utilità disponibili con Visual C++.
 
-## <a name="to-use-debugging"></a>Eseguire il debug
+## <a name="to-use-debugging"></a>Per utilizzare il debug
 
 1. Aprire il progetto del provider.
 
-1. Nel **progetti** menu, fare clic su **proprietà**.
+1. Scegliere **Proprietà**dal menu **progetti** .
 
-1. Nel **pagine delle proprietà** finestra di dialogo, fare clic sul **debug** scheda.
+1. Nella finestra di dialogo **pagine delle proprietà** fare clic sulla scheda **debug** .
 
-1. Selezionare opzioni come richiesto, selezionare **OK**.
+1. Selezionare le opzioni desiderate, quindi fare clic su **OK**.
 
-1. Impostare punti di interruzione e quindi eseguire il debug come di consueto.
+1. Impostare i punti di interruzione, quindi eseguire il debug come di consueto.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2408
 ms.assetid: 3dc4881a-3c33-4c4e-b18e-a1f0e21ea931
-ms.openlocfilehash: a3379ca6e4b48097bda20cc4b890f3914eb57072
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f38805ebf20f66b878f63360f703b525541ce9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282673"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205766"
 ---
 # <a name="compiler-error-c2408"></a>Errore del compilatore C2408
 

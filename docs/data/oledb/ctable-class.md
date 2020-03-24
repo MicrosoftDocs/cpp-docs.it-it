@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368435"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211146"
 ---
 # <a name="ctable-class"></a>Classe CTable
 
-Fornisce un mezzo per accedere direttamente a un rowset semplice (uno senza parametri).
+Fornisce un metodo per accedere direttamente a un set di righe semplice (uno senza parametri).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,30 +36,30 @@ class CTable :
 ### <a name="parameters"></a>Parametri
 
 *TAccessor*<br/>
-Una classe di funzione di accesso.
+Classe della funzione di accesso.
 
 *TRowset*<br/>
-Una classe di set di righe.
+Classe del set di righe.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
 |||
 |-|-|
-|[Apri](#open)|Apre la tabella.|
+|[Apri](#open)|Consente di aprire la tabella.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Visualizzare [CCommand](../../data/oledb/ccommand-class.md) per informazioni su come eseguire un comando per accedere a un set di righe.
+Vedere [CCommand](../../data/oledb/ccommand-class.md) per informazioni su come eseguire un comando per accedere a un set di righe.
 
-## <a name="open"></a> CTable:: Open
+## <a name="ctableopen"></a><a name="open"></a>CTable:: Open
 
-Apre la tabella.
+Consente di aprire la tabella.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -82,33 +82,33 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parametri
 
-*session*<br/>
-[in] Per il quale la tabella verrà aperta la sessione.
+*sessione*<br/>
+in Sessione per la quale viene aperta la tabella.
 
 *wszTableName*<br/>
-[in] Il nome della tabella da aprire, passato come stringa Unicode.
+in Nome della tabella da aprire, passato come stringa Unicode.
 
 *szTableName*<br/>
-[in] Il nome della tabella da aprire, passati come una stringa ANSI.
+in Nome della tabella da aprire, passato come stringa ANSI.
 
 *dbid*<br/>
-[in] Il `DBID` della tabella da aprire.
+in `DBID` della tabella da aprire.
 
 *pPropSet*<br/>
-[in] Un puntatore a una matrice di [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture contenenti le proprietà e valori da impostare. Visualizzare [set di proprietà e i gruppi di proprietà](/previous-versions/windows/desktop/ms713696(v=vs.85)) nel *riferimento per programmatori OLE DB* in Windows SDK. Il valore predefinito NULL non specifica alcuna proprietà.
+in Puntatore a una matrice di strutture [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) che contiene le proprietà e i valori da impostare. Vedere [set di proprietà e gruppi di proprietà](/previous-versions/windows/desktop/ms713696(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* nel Windows SDK. Il valore predefinito di NULL non specifica alcuna proprietà.
 
 *ulPropSets*<br/>
-[in] Il numero di [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture passato il *pPropSet* argomento.
+in Numero di strutture [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passate nell'argomento *pPropSet* .
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per altre informazioni, vedere [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Per ulteriori informazioni, vedere [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

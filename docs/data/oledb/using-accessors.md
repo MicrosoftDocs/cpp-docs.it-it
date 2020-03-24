@@ -1,23 +1,23 @@
 ---
-title: Utilizzo delle funzioni di accesso
+title: Uso delle funzioni di accesso
 ms.date: 10/24/2018
 helpviewer_keywords:
 - accessors [C++], OLE DB Templates
 - OLE DB consumer templates, accessors
 - rowsets [C++], accessors
 ms.assetid: 6ce484a6-fbbe-40de-8ff9-5cddcd78d283
-ms.openlocfilehash: 4eaedfca0c93aca89cbfd985c1de0f57306e470c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e35318fd1b5a245eaed982674d69484e34f9dac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209339"
 ---
-# <a name="using-accessors"></a>Utilizzo delle funzioni di accesso
+# <a name="using-accessors"></a>Uso delle funzioni di accesso
 
-Gli argomenti seguenti illustrano come determinare quale tipo di funzione di accesso è più adatto per l'applicazione e quindi come usare i diversi tipi di funzioni di accesso disponibili:
+Negli argomenti seguenti viene illustrato come determinare quale tipo di funzione di accesso è ottimale per l'applicazione dati e come utilizzare i diversi tipi di funzioni di accesso disponibili:
 
-- [Determinare quale funzione di accesso da usare](../../data/oledb/determining-which-type-of-accessor-to-use.md)
+- [Determinazione della funzione di accesso da usare](../../data/oledb/determining-which-type-of-accessor-to-use.md)
 
 - [Uso di più funzioni di accesso per un rowset](../../data/oledb/using-multiple-accessors-on-a-rowset.md)
 

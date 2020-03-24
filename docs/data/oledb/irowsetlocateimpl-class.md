@@ -32,16 +32,16 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06e860425215d9fde268b780c001301b14a1caa1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408842"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210431"
 ---
 # <a name="irowsetlocateimpl-class"></a>Classe IRowsetLocateImpl
 
-Implementa OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) interfaccia, che recupera righe arbitrarie da un set di righe.
+Implementa l'interfaccia OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) , che recupera le righe arbitrarie da un set di righe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -64,58 +64,58 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Una classe derivata da `IRowsetLocateImpl`.
+Classe derivata da `IRowsetLocateImpl`.
 
 *RowsetInterface*<br/>
-Una classe derivata da `IRowsetImpl`.
+Classe derivata da `IRowsetImpl`.
 
 *RowClass*<br/>
-L'unità di archiviazione per il `HROW`.
+Unità di archiviazione per il `HROW`.
 
 *MapClass*<br/>
-L'unità di archiviazione per tutti gli handle di riga utilizzato dal provider.
+Unità di archiviazione per tutti gli handle di riga utilizzati dal provider.
 
 *BookmarkKeyType*<br/>
-Il tipo del segnalibro, ad esempio un valore LONG o una stringa. I segnalibri ordinari devono avere una lunghezza di almeno due byte. (A byte singolo è riservato per OLE DB [segnalibri standard](/previous-versions/windows/desktop/ms712954(v=vs.85))`DBBMK_FIRST`, `DBBMK_LAST`, e `DBBMK_INVALID`.)
+Tipo di segnalibro, ad esempio LONG o String. I segnalibri ordinari devono avere una lunghezza di almeno due byte. La lunghezza a byte singolo è riservata ai [segnalibri OLE DB standard](/previous-versions/windows/desktop/ms712954(v=vs.85))`DBBMK_FIRST`, `DBBMK_LAST`e `DBBMK_INVALID`.
 
 *BookmarkType*<br/>
-Il meccanismo di mapping per la gestione delle relazioni nei dati segnalibro.
+Meccanismo di mapping per la gestione delle relazioni da segnalibro a dati.
 
 *BookmarkMapClass*<br/>
-L'unità di archiviazione per tutti gli handle di riga mantenuto dal segnalibro.
+Unità di archiviazione per tutti gli handle di riga contenuti nel segnalibro.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione**: Atldb. h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
 |||
 |-|-|
-|[Compare](#compare)|Confronta due segnalibri.|
-|[GetRowsAt](#getrowsat)|Recupera le righe che iniziano con la riga specificata da un offset dal segnalibro.|
-|[GetRowsByBookmark](#getrowsbybookmark)|Recupera le righe che soddisfano i segnalibri specificati.|
-|[Hash](#hash)|Restituisce l'hashing i valori per i segnalibri specificati.|
+|[Confronta](#compare)|Confronta due segnalibri.|
+|[GetRowsAt](#getrowsat)|Recupera le righe che iniziano con la riga specificata da un offset da un segnalibro.|
+|[GetRowsByBookmark](#getrowsbybookmark)|Recupera le righe che corrispondono ai segnalibri specificati.|
+|[Hash](#hash)|Restituisce i valori hash per i segnalibri specificati.|
 
-### <a name="data-members"></a>Membri di dati
+### <a name="data-members"></a>Membri dei dati
 
 |||
 |-|-|
-|[m_rgBookmarks](#rgbookmarks)|Matrice dei segnalibri.|
+|[m_rgBookmarks](#rgbookmarks)|Matrice di segnalibri.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`IRowsetLocateImpl` è l'implementazione di modelli OLE DB del [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) interfaccia. `IRowsetLocate` viene usato per recuperare righe arbitrarie da un set di righe. Un set di righe che non implementa questa interfaccia è un `sequential` set di righe. Quando si `IRowsetLocate` è presente in un set di righe, colonna 0 è il segnalibro per le righe, leggendo questo articolo si otterrà un valore di segnalibro che può essere utilizzato per modificare la posizione alla stessa riga.
+`IRowsetLocateImpl` è l'implementazione dei modelli OLE DB dell'interfaccia [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) . `IRowsetLocate` viene utilizzato per recuperare righe arbitrarie da un set di righe. Un set di righe che non implementa questa interfaccia è un set di righe `sequential`. Quando `IRowsetLocate` è presente in un set di righe, la colonna 0 è il segnalibro per le righe. leggendo questa colonna si otterrà un valore di segnalibro che può essere utilizzato per riposizionare la stessa riga.
 
-`IRowsetLocateImpl` viene utilizzato per implementare il supporto di segnalibro nel provider. I segnalibri sono segnaposti (indici in un set di righe) che consentono al consumer di tornare rapidamente su una riga, che consente l'accesso ad alta velocità per i dati. Il provider determina ciò che i segnalibri possono in modo univoco una riga. Usando `IRowsetLocateImpl` metodi, è possibile confrontare i segnalibri, fetch righe di offset, fetch righe tramite segnalibro e restituiscono valori hash per i segnalibri.
+`IRowsetLocateImpl` viene utilizzato per implementare il supporto di segnalibri nei provider. I segnalibri sono segnaposto (indici su un set di righe) che consentono al consumer di tornare rapidamente a una riga, consentendo un accesso ad alta velocità ai dati. Il provider determina quali segnalibri possono identificare una riga in modo univoco. Utilizzando `IRowsetLocateImpl` metodi, è possibile confrontare i segnalibri, recuperare le righe in base all'offset, recuperare le righe in base al segnalibro e restituire i valori hash per i segnalibri.
 
-Per supportare i segnalibri di OLE DB in un set di righe, verificare il set di righe ereditano da questa classe.
+Per supportare OLE DB segnalibri in un set di righe, fare in modo che il set di righe erediti da questa classe.
 
-Per informazioni sull'implementazione di supporto per segnalibro, vedere [Provider di supporto per i segnalibri](../../data/oledb/provider-support-for-bookmarks.md) nel *Guida per programmatori Visual C++* e [segnalibri](/previous-versions/windows/desktop/ms709728(v=vs.85)) nel *Riferimento per programmatori OLE DB* in Platform SDK.
+Per informazioni sull'implementazione del supporto per i segnalibri, vedere [supporto del provider per i segnalibri](../../data/oledb/provider-support-for-bookmarks.md) nella guida e nei [segnalibri](/previous-versions/windows/desktop/ms709728(v=vs.85)) del *programmatore visuale C++*  in *OLE DB Programmer ' s Reference* in the Platform SDK.
 
-## <a name="compare"></a> IRowsetLocateImpl::Compare
+## <a name="irowsetlocateimplcompare"></a><a name="compare"></a>IRowsetLocateImpl:: compare
 
 Confronta due segnalibri.
 
@@ -132,25 +132,25 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [IRowsetLocate:: compare](/previous-versions/windows/desktop/ms709539(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Uno dei segnalibri possono essere uno standard definite da OLE DB [standard segnalibro](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST`, `DBBMK_LAST`, o `DBBMK_INVALID`). Il valore restituito in `pComparison` indica la relazione tra i due segnalibri:
+Uno dei segnalibri può essere un [segnalibro standard](/previous-versions/windows/desktop/ms712954(v=vs.85)) definito da OLE DB standard (`DBBMK_FIRST`, `DBBMK_LAST`o `DBBMK_INVALID`). Il valore restituito in `pComparison` indica la relazione tra i due segnalibri:
 
-- DBCOMPARE_LT (`cbBookmark1` viene prima `cbBookmark2`.)
+- DBCOMPARE_LT (`cbBookmark1` precede `cbBookmark2`).
 
-- DBCOMPARE_EQ (`cbBookmark1` è uguale a `cbBookmark2`.)
+- DBCOMPARE_EQ (`cbBookmark1` è uguale `cbBookmark2`).
 
-- DBCOMPARE_GT (`cbBookmark1` dopo `cbBookmark2`.)
+- DBCOMPARE_GT (`cbBookmark1` dopo `cbBookmark2`).
 
-- DBCOMPARE_NE (i segnalibri sono uguali e non sono ordinati).
+- DBCOMPARE_NE (i segnalibri sono uguali e non ordinati).
 
 - DBCOMPARE_NOTCOMPARABLE (i segnalibri non possono essere confrontati).
 
-## <a name="getrowsat"></a> IRowsetLocateImpl::GetRowsAt
+## <a name="irowsetlocateimplgetrowsat"></a><a name="getrowsat"></a>IRowsetLocateImpl:: GetRowsAt
 
-Recupera le righe che iniziano con la riga specificata da un offset dal segnalibro.
+Recupera le righe che iniziano con la riga specificata da un offset da un segnalibro.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -167,17 +167,17 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowsetLocate:: GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [IRowsetLocate:: GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per recuperare dalla posizione del cursore in alternativa, usare [IRowset::GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85)).
+Per recuperare dalla posizione del cursore, utilizzare invece [IRowset:: GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85)).
 
 `IRowsetLocateImpl::GetRowsAt` non modifica la posizione del cursore.
 
-## <a name="getrowsbybookmark"></a> IRowsetLocateImpl::GetRowsByBookmark
+## <a name="irowsetlocateimplgetrowsbybookmark"></a><a name="getrowsbybookmark"></a>IRowsetLocateImpl:: GetRowsByBookmark
 
-Recupera uno o più righe che soddisfano i segnalibri specificati.
+Recupera una o più righe che corrispondono ai segnalibri specificati.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -193,17 +193,17 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametri
 
 *hReserved*<br/>
-[in] Corrisponde a *hChapter* parametro per [IRowsetLocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)).
+in Corrisponde al parametro *hChapter* a [IRowsetLocate:: GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)).
 
-Per altri parametri, vedere [IRowsetLocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Per altri parametri, vedere [IRowsetLocate:: GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il segnalibro può essere un valore definire o OLE DB [segnalibri standard](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` o `DBBMK_LAST`). non modifica la posizione del cursore.
+Il segnalibro può essere un valore definito dall'utente o un OLE DB [segnalibri standard](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` o `DBBMK_LAST`). Non modifica la posizione del cursore.
 
-## <a name="hash"></a> IRowsetLocateImpl::Hash
+## <a name="irowsetlocateimplhash"></a><a name="hash"></a>IRowsetLocateImpl:: hash
 
-Restituisce l'hashing i valori per i segnalibri specificati.
+Restituisce i valori hash per i segnalibri specificati.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -219,13 +219,13 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametri
 
 *hReserved*<br/>
-[in] Corrisponde a *hChapter* parametro per [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697(v=vs.85)).
+in Corrisponde al parametro *hChapter* a [IRowsetLocate:: hash](/previous-versions/windows/desktop/ms709697(v=vs.85)).
 
-Per altri parametri, vedere [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Per altri parametri, vedere [IRowsetLocate:: hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="rgbookmarks"></a> IRowsetLocateImpl::m_rgBookmarks
+## <a name="irowsetlocateimplm_rgbookmarks"></a><a name="rgbookmarks"></a>IRowsetLocateImpl:: m_rgBookmarks
 
-Matrice dei segnalibri.
+Matrice di segnalibri.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -235,8 +235,8 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
-[supporto dei bookmark nel Provider](../../data/oledb/provider-support-for-bookmarks.md)<br/>
+[IRowsetLocate:](/previous-versions/windows/desktop/ms721190(v=vs.85)) [supporto del provider
+IRowset per i segnalibri](../../data/oledb/provider-support-for-bookmarks.md)<br/>
 [Segnalibri](/previous-versions/windows/desktop/ms709728(v=vs.85))

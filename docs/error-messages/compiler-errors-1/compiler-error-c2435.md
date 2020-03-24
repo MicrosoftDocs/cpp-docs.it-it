@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2435
 ms.assetid: be6aa8f8-579b-42ea-bdd8-2d01393646ad
-ms.openlocfilehash: 5cd7a83575da7ab2a30401406d0c2ccf6c1b603e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ef22711884dabb83efa8c7ebfdb7648316c12ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166646"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205413"
 ---
 # <a name="compiler-error-c2435"></a>Errore del compilatore C2435
 
-> «*var*': l'inizializzazione dinamica richiede codice CRT gestito; Impossibile compilare con /CLR: safe
+> '*var*': l'inizializzazione dinamica richiede la libreria CRT gestita, non può essere compilata con/CLR: safe
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
+Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
-Inizializzazione della variabile globale per dominio di applicazione richiede la libreria CRT compilate con `/clr:pure`, che non produce un'immagine di verificabile.
+Per l'inizializzazione di una variabile di dominio per applicazione globale è necessario che la libreria CRT sia compilata con `/clr:pure`, che non produce un'immagine verificabile.
 
 Per altre informazioni, vedere [appdomain](../../cpp/appdomain.md) e [process](../../cpp/process.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2435:
+L'esempio seguente genera l'C2435:
 
 ```cpp
 // C2435.cpp

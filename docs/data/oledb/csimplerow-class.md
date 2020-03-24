@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441141"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211120"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 
@@ -77,7 +77,7 @@ class CSimpleRow
 
 Un handle di riga è logicamente un tag univoco per una riga di risultati. `IRowsetImpl` crea una nuova `CSimpleRow` per ogni riga richiesta in [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` possono anche essere sostituiti con la propria implementazione dell'handle di riga, perché si tratta di un argomento di modello predefinito da `IRowsetImpl`. L'unico requisito per la sostituzione di questa classe consiste nel fare in modo che la classe di sostituzione fornisca un costruttore che accetta un solo parametro di tipo **Long**.
 
-## <a name="addrefrow"></a>CSimpleRow:: AddRefRow
+## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a>CSimpleRow:: AddRefRow
 
 Aggiunge un conteggio di riferimenti a un handle di riga esistente in modo thread-safe.
 
@@ -87,7 +87,7 @@ Aggiunge un conteggio di riferimenti a un handle di riga esistente in modo threa
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a>CSimpleRow:: compare
+## <a name="csimplerowcompare"></a><a name="compare"></a>CSimpleRow:: compare
 
 Confronta due righe per verificare se fanno riferimento alla stessa istanza di riga.
 
@@ -106,7 +106,7 @@ Puntatore a un oggetto `CSimpleRow`.
 
 Valore HRESULT, in genere S_OK, che indica che le due righe sono la stessa istanza di riga o S_FALSE, che indica che le due righe sono diverse. Per altri possibili valori restituiti, vedere [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
-## <a name="csimplerow"></a>CSimpleRow:: CSimpleRow
+## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a>CSimpleRow:: CSimpleRow
 
 Costruttore.
 
@@ -125,7 +125,7 @@ in Indice per il set di righe corrente.
 
 Imposta [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) su *iRowsetCur*.
 
-## <a name="releaserow"></a>CSimpleRow:: ReleaseRow
+## <a name="csimplerowreleaserow"></a><a name="releaserow"></a>CSimpleRow:: ReleaseRow
 
 Rilascia le righe in modo thread-safe.
 
@@ -135,7 +135,7 @@ Rilascia le righe in modo thread-safe.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a>CSimpleRow:: m_dwRef
+## <a name="csimplerowm_dwref"></a><a name="dwref"></a>CSimpleRow:: m_dwRef
 
 Conteggio riferimenti a un handle di riga esistente.
 
@@ -145,7 +145,7 @@ Conteggio riferimenti a un handle di riga esistente.
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a>CSimpleRow:: m_iRowset
+## <a name="csimplerowm_irowset"></a><a name="irowset"></a>CSimpleRow:: m_iRowset
 
 Indice del set di righe che rappresenta il cursore.
 

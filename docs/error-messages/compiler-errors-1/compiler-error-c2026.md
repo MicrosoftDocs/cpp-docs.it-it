@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2026
 ms.assetid: 8e64b6e1-b967-479b-be97-d12dc4a8e389
-ms.openlocfilehash: da4c03c681f95efaa5edb159869315b41d027e99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9747b1edadc76ceeb502b2c6fd03496b91769f5a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303528"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208065"
 ---
 # <a name="compiler-error-c2026"></a>Errore del compilatore C2026
 
-la stringa è troppo grande caratteri finali verranno troncati
+stringa troppo grande, caratteri finali troncati
 
-La stringa è supera al limite di caratteri a byte singolo 16380.
+La lunghezza della stringa è superiore al limite di 16380 caratteri a byte singolo.
 
-Prima della concatenazione delle stringhe adiacenti, una stringa non può superare 16380 caratteri a byte singolo.
+Prima di concatenare le stringhe adiacenti, una stringa non può contenere più di 16380 caratteri a byte singolo.
 
-Una stringa Unicode di questa lunghezza di circa la metà anche genera questo errore.
+Questo errore viene generato anche da una stringa Unicode pari a circa una metà di tale lunghezza.
 
-Se si dispone di una stringa definita come indicato di seguito, viene generato C2026:
+Se è presente una stringa definita come segue, viene generato C2026:
 
 ```
 char sz[] =
@@ -33,7 +33,7 @@ long string here\
 ";
 ```
 
-È possibile suddividere la come indicato di seguito:
+È possibile suddividerlo come segue:
 
 ```
 char sz[] =
@@ -43,4 +43,4 @@ imagine a really, really "
 ";
 ```
 
-È possibile archiviare i valori letterali stringa eccezionalmente grandi (32 KB o superiore) in una risorsa personalizzata o un file esterno. Visualizzare [creazione di una nuova risorsa personalizzata o dati](../../windows/creating-a-new-custom-or-data-resource.md) per altre informazioni.
+È possibile archiviare valori letterali stringa eccezionalmente grandi (32K o più) in una risorsa personalizzata o in un file esterno. Per ulteriori informazioni, vedere [creazione di una nuova risorsa personalizzata o di dati](../../windows/creating-a-new-custom-or-data-resource.md) .

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 04ff1d026c97c56611f8b786d8a7254db711e4a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a3ebeb6e7783687abc73cd0dcc018abe827809
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385589"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200473"
 ---
 # <a name="compiler-error-c3646"></a>Errore del compilatore C3646
 
-> 'identificatore': identificatore di override sconosciuto
+> ' specifier ': identificatore di override sconosciuto
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il compilatore ha rilevato un token nella posizione in cui previsto un identificatore di override, ma il token non riconosciuto dal compilatore.
+Il compilatore ha trovato un token nella posizione in cui era prevista la ricerca di un identificatore di override, ma il token non è stato riconosciuto dal compilatore.
 
-Ad esempio, se il non riconosciuto *specifier* viene **_NOEXCEPT**, sostituirla con la parola chiave **noexcept**.
+Se, ad esempio, l' *identificatore* non riconosciuto è **_NOEXCEPT**, sostituirlo con la parola chiave **noexcept**.
 
-Per altre informazioni, vedere [gli identificatori di Override](../../extensions/override-specifiers-cpp-component-extensions.md).
+Per altre informazioni, vedere [identificatori di override](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3646 e viene illustrato un modo per risolvere il problema:
+L'esempio seguente genera C3646 e Mostra un modo per risolverlo:
 
 ```cpp
 // C3646.cpp

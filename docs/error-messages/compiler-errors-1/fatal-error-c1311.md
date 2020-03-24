@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C1311
 ms.assetid: 6590a06c-ce9d-4f17-8f62-c809343143b8
-ms.openlocfilehash: ba2b797c9bf521533e7c2ccff8d358b6216d392f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e57e4e0899a5f9d81e87a203b1b699cef0884f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266466"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203268"
 ---
 # <a name="fatal-error-c1311"></a>Errore irreversibile C1311
 
-Formato COFF non è possibile inizializzare in modo statico 'var' con numero di byte di un indirizzo
+Formato COFF non in grado di inizializzare in modo statico ' var ' con un numero di byte di un indirizzo
 
-Un indirizzo il cui valore non è noto in fase di compilazione non può essere assegnato in modo statico a una variabile il cui tipo è archiviazione di meno di quattro byte.
+Un indirizzo il cui valore non è noto in fase di compilazione non può essere assegnato in modo statico a una variabile il cui tipo dispone di spazio di archiviazione inferiore a quattro byte.
 
-Questo errore può verificarsi nel codice che sarebbe altrimenti C++ valido.
+Questo errore può verificarsi nel codice altrimenti valido C++.
 
 Nell'esempio riportato di seguito viene illustrata una condizione da cui potrebbe essere generato l'errore C1311.
 

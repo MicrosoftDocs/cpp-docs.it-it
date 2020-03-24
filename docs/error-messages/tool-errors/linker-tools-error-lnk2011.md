@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2011
 ms.assetid: 04991ef5-49d5-46c7-8eee-a9d1d3fc541e
-ms.openlocfilehash: c8c62da6c1b4ea856f7a0854b998946893f2be63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e08f068099af68375523eae0f0cc4d63960f3261
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194811"
 ---
 # <a name="linker-tools-error-lnk2011"></a>Errore degli strumenti del linker LNK2011
 
-oggetto precompilato non collegata. immagine non venga eseguita
+oggetto precompilato non collegato; l'immagine potrebbe non essere eseguita
 
-Se si usano intestazioni precompilate, collegamento richiede che tutti i file oggetto creati con le intestazioni precompilate devono essere collegati. Se si dispone di un file di origine utilizzato per generare un'intestazione precompilata per l'uso con altri file di origine, è ora necessario includere il file oggetto creato con l'intestazione precompilata.
+Se si usano le intestazioni precompilate, il collegamento richiede che tutti i file oggetto creati con le intestazioni precompilate debbano essere collegati. Se si dispone di un file di origine usato per generare un'intestazione precompilata da usare con altri file di origine, è ora necessario includere il file oggetto creato insieme all'intestazione precompilata.
 
-Ad esempio, se si compila un file denominato stub. cpp per creare un'intestazione precompilata per l'uso con altri file di origine, è necessario collegarlo con stub o si verificherà questo errore. Nelle righe di comando seguente, la riga 1 consente di creare un'intestazione precompilata, COMMON.pch, che viene usato con PROG1. cpp e PROG2. cpp nelle righe di due e tre. Il file stub. cpp contiene solo `#include` righe (lo stesso `#include` righe PROG1. cpp e PROG2. cpp) e viene usato solo per generare le intestazioni precompilate. Nell'ultima riga, stub deve essere collegato evitare LNK2011.
+Se, ad esempio, si compila un file denominato STUB. cpp per creare un'intestazione precompilata da usare con altri file di origine, è necessario collegarsi a STUB. obj. in caso contrario, si otterrà questo errore. Nelle righe di comando seguenti, la riga uno viene utilizzata per creare un'intestazione precompilata, COMMON. pch, che viene utilizzata con PROG1. cpp e PROG2. cpp nelle righe due e tre. Il file STUB. cpp contiene solo `#include` righe (le stesse `#include` righe di PROG1. cpp e PROG2. cpp) e viene usato solo per generare intestazioni precompilate. Nell'ultima riga, STUB. obj deve essere collegato per evitare il LNK2011.
 
 ```
 cl /c /Yccommon.h stub.cpp

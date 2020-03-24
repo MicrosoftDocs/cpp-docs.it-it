@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447368"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210769"
 ---
 # <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
 
@@ -91,7 +91,7 @@ Classe derivata da `IDBInitializeImpl`.
 
 Interfaccia obbligatoria sugli oggetti origine dati e sull'interfaccia facoltativa sugli enumeratori.
 
-## <a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
 
 Costruttore.
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 Inizializza tutti i membri dati.
 
-## <a name="initialize"></a>IDBInitializeImpl:: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl:: Initialize
 
 Inizializza l'oggetto datasource preparandone il supporto della proprietà.
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 Vedere [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
 
 Inserisce l'oggetto origine dati in uno stato non inizializzato liberando risorse interne, ad esempio il supporto della proprietà.
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 Vedere [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
 
 Flag dell'origine dati.
 
@@ -161,7 +161,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|Impostare se l'oggetto origine dati richiede la persistenza, ovvero se sono state apportate modifiche.|
 |`DSF_INITIALIZED`|Impostare se l'origine dati è stata inizializzata.|
 
-## <a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
 
 Puntatore all'oggetto di implementazione per le informazioni sulle proprietà del database.
 

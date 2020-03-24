@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: d9b9a6c04e7e9a5d88df516125280b6b23894a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206552"
 ---
 # <a name="compiler-error-c2248"></a>Errore del compilatore C2248
 
-«*membro*': non è possibile accedere '*access_level*'membro dichiarato nella classe'*classe*»
+'*member*': Impossibile accedere al membro '*access_level*' dichiarato nella classe '*Class*'
 
-I membri di una classe derivata non possono accedere `private` i membri di una classe di base. Non è possibile accedere `private` o `protected` membri delle istanze della classe.
+I membri di una classe derivata non possono accedere ai membri di `private` di una classe di base. Non è possibile accedere ai membri `private` o `protected` delle istanze di classe.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2248 quando privato o protetto i membri di una classe sono accessibili all'esterno della classe. Per risolvere questo problema, non accedere a questi membri direttamente all'esterno della classe. Usare i dati dei membri pubblici e le funzioni membro per interagire con la classe.
+L'esempio seguente genera C2248 quando si accede a membri privati o protetti di una classe dall'esterno della classe. Per risolvere questo problema, non accedere a questi membri direttamente all'esterno della classe. Usare i dati dei membri pubblici e le funzioni membro per interagire con la classe.
 
 ```cpp
 // C2248_access.cpp
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-Un altro problema di conformità che espone C2248 è l'uso di elementi Friend di modelli e la specializzazione. Per risolvere questo problema, dichiarare come friend funzioni del modello utilizzando un <> elenco parametri di modello vuoto o i parametri di modello specifico.
+Un altro problema di conformità che espone C2248 è l'uso degli amici e della specializzazione del modello. Per risolvere questo problema, dichiarare le funzioni del modello friend usando un elenco di parametri di modello vuoto < > o parametri di modello specifici.
 
 ```cpp
 // C2248_template.cpp
@@ -79,7 +79,7 @@ int main() {
 }
 ```
 
-Un altro problema di conformità che espone C2248 è quando si tenta di dichiarare un elemento friend di una classe e quando la classe non è visibile per la dichiarazione friend nell'ambito della classe. Per risolvere questo problema, concedere l'accesso Friend alla classe contenitore.
+Un altro problema di conformità che espone C2248 è quando si tenta di dichiarare un elemento Friend di una classe e quando la classe non è visibile alla dichiarazione friend nell'ambito della classe. Per risolvere questo problema, concedere l'amicizia alla classe che lo contiene.
 
 ```cpp
 // C2248_enclose.cpp

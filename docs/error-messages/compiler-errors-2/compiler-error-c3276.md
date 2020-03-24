@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3276
 ms.assetid: dd6b4fd2-094d-4d34-a467-a9afd59789f7
-ms.openlocfilehash: 671fda26958d50340ccc628a8d50d19ea74f7939
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4037c5191c0b7316218100123f1cf1823f9d135b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382099"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201448"
 ---
 # <a name="compiler-error-c3276"></a>Errore del compilatore C3276
 
-'keyword': salto dal blocco finally/finally produce un comportamento indefinito durante la gestione della terminazione
+' keyword ': il salto dal blocco __finally/finally presenta un comportamento non definito durante la gestione della terminazione
 
-Questo errore è quello utilizzato per il [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) avviso. Tuttavia, quando si usa /clr, questa condizione non può essere disabilitata con il [avviso](../../preprocessor/warning.md) pragma.
+Questo errore è identico a quello dell'avviso [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) . Tuttavia, quando si utilizza/CLR, questa condizione non può essere disabilitata con il pragma [warning](../../preprocessor/warning.md) .

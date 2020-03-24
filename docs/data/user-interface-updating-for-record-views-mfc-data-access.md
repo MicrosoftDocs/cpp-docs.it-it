@@ -6,26 +6,26 @@ helpviewer_keywords:
 - menus, updating as context changes
 - record views, user interface
 ms.assetid: 2c7914b6-2dc3-40c3-b2f2-8371da2a4063
-ms.openlocfilehash: de94b28e713459edfd63aff832caecc7ea49ca33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bfb907d21c928c605b304c595acb834d0046e35
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152644"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209053"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Aggiornamento dell'interfaccia utente per le visualizzazioni di record (accesso ai dati MFC)
 
-`CRecordView` fornisce predefinito i gestori aggiornamento dell'interfaccia utente per i comandi di navigazione. Questi gestori rendono automatica l'abilitazione e la disabilitazione degli oggetti dell'interfaccia utente, ovvero voci di menu e pulsanti delle barre degli strumenti. La creazione guidata applicazione comprendono menu standard e, se si sceglie la **sulla barra degli strumenti ancorabile** opzione, un set di pulsanti della barra degli strumenti per i comandi. Se si crea una classe per la visualizzazione di record mediante `CRecordView`, sarà possibile aggiungere all'applicazione oggetti dell'interfaccia utente simili.
+`CRecordView` fornisce gestori di aggiornamenti predefiniti dell'interfaccia utente per i comandi di navigazione. Questi gestori rendono automatica l'abilitazione e la disabilitazione degli oggetti dell'interfaccia utente, ovvero voci di menu e pulsanti delle barre degli strumenti. La creazione guidata applicazione fornisce menu standard e, se si sceglie l'opzione **barra degli strumenti ancorabile** , un set di pulsanti della barra degli strumenti per i comandi. Se si crea una classe per la visualizzazione di record mediante `CRecordView`, sarà possibile aggiungere all'applicazione oggetti dell'interfaccia utente simili.
 
 ### <a name="to-create-menu-resources-with-the-menu-editor"></a>Per creare risorse di menu con l'editor di menu
 
-1. Che fa riferimento alle informazioni sull'uso di [editor di menu](../windows/menu-editor.md), creare un menu con gli stessi quattro comandi.
+1. Facendo riferimento alle informazioni sull'uso dell'editor di [menu](../windows/menu-editor.md), creare un menu personalizzato con gli stessi quattro comandi.
 
 #### <a name="to-create-toolbar-buttons-with-the-graphics-editor"></a>Per creare pulsanti delle barre degli strumenti con l'editor grafico
 
-1. Che fa riferimento alle informazioni sull'uso di [editor barra degli strumenti](../windows/toolbar-editor.md), modificare la risorsa barra degli strumenti per aggiungere i pulsanti della barra degli strumenti per i comandi di navigazione tra i record.
+1. Facendo riferimento alle informazioni sull'utilizzo dell'editor della [barra degli strumenti](../windows/toolbar-editor.md), modificare la risorsa della barra degli strumenti per aggiungere i pulsanti della barra degli strumenti per i comandi di spostamento dei record.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della navigazione in una visualizzazione di Record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
-[Uso di una visualizzazione di Record](../data/using-a-record-view-mfc-data-access.md)
+[Supporto della navigazione in una visualizzazione di record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
+[Uso di una visualizzazione di record](../data/using-a-record-view-mfc-data-access.md)

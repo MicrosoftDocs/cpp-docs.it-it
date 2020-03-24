@@ -20,16 +20,16 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f25fb3635f70ee9a0e38ddcdbcf373fe6b1b84c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176070"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211042"
 ---
 # <a name="cxmlaccessor-class"></a>Classe CXMLAccessor
 
-Consente di accedere alle origini dati come dati stringa quando non si dispone di alcuna conoscenza dello schema dell'archivio dati (struttura sottostante).
+Consente di accedere alle origini dati come dati stringa quando non si conosce lo schema dell'archivio dati (struttura sottostante).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,30 +41,30 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 **Intestazione**: atldbcli.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
 |||
 |-|-|
-|[GetXMLColumnData](#getxmlcolumndata)|Recupera le informazioni di colonna.|
-|[GetXMLRowData](#getxmlrowdata)|Recupera l'intero contenuto di una tabella da righe.|
+|[GetXMLColumnData](#getxmlcolumndata)|Recupera le informazioni sulla colonna.|
+|[GetXMLRowData](#getxmlrowdata)|Recupera l'intero contenuto di una tabella in base alle righe.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Tuttavia `CXMLAccessor` differisce da `CDynamicStringAccessorW` in quanto la funzione converte tutti i dati dall'archivio dati come dati in formato XML (tag). Ciò è particolarmente utile per l'output a pagine Web che supportano XML. I nomi di tag XML corrisponderà quanto più possibile i nomi delle colonne dell'archivio dati.
+Tuttavia, `CXMLAccessor` differisce da `CDynamicStringAccessorW` perché converte tutti i dati a cui si accede dall'archivio dati come dati in formato XML (con tag). Questa operazione è particolarmente utile per l'output in pagine Web compatibili con XML. I nomi di tag XML corrispondono al più possibile i nomi di colonna dell'archivio dati.
 
-Usare `CDynamicAccessor` metodi per ottenere informazioni. Utilizzare queste informazioni di colonna per creare una funzione di accesso in modo dinamico in fase di esecuzione.
+Utilizzare `CDynamicAccessor` metodi per ottenere informazioni sulle colonne. Queste informazioni sulla colonna vengono usate per creare una funzione di accesso dinamicamente in fase di esecuzione.
 
-Le informazioni di colonna vengono archiviate in un buffer creato e gestito da questa classe. Ottenere le informazioni di colonna usando [GetXMLColumnData](#getxmlcolumndata) oppure ottenere i dati della colonna per le righe mediante [GetXMLRowData](#getxmlrowdata).
+Le informazioni sulla colonna vengono archiviate in un buffer creato e gestito da questa classe. Ottenere informazioni sulle colonne utilizzando [GetXMLColumnData](#getxmlcolumndata) o ottenere dati di colonna in base alle righe utilizzando [GetXMLRowData](#getxmlrowdata).
 
 ## <a name="example"></a>Esempio
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="getxmlcolumndata"></a> CXMLAccessor:: GetXMLColumnData
+## <a name="cxmlaccessorgetxmlcolumndata"></a><a name="getxmlcolumndata"></a>CXMLAccessor:: GetXMLColumnData
 
-Recupera le informazioni sul tipo di colonna di una tabella come dati stringa in formato XML, dalla colonna.
+Recupera le informazioni sul tipo di colonna di una tabella come dati di stringa in formato XML, per colonna.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -75,15 +75,15 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 #### <a name="parameters"></a>Parametri
 
 *strOutput*<br/>
-[out] Un riferimento a un buffer di stringa che contiene le informazioni sul tipo di colonna da recuperare. La stringa viene formattata con i nomi di tag XML che corrispondono ai nomi di colonna dell'archivio dati.
+out Riferimento a un buffer di stringa contenente le informazioni sul tipo di colonna da recuperare. La stringa è formattata con i nomi di tag XML che corrispondono ai nomi di colonna dell'archivio dati.
 
 ### <a name="return-value"></a>Valore restituito
 
-Uno dei valori di HRESULT standard.
+Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Di seguito viene illustrato come le informazioni sul tipo di colonna è formattati in XML. `type` Specifica il tipo di dati della colonna. Si noti che i tipi di dati sono basati sui tipi di dati OLE DB, non quelle del database a cui si accede.
+Di seguito viene illustrato come formattare le informazioni sul tipo di colonna in XML. `type` specifica il tipo di dati della colonna. Si noti che i tipi di dati sono basati su OLE DB tipi di dati, non su quelli del database a cui si accede.
 
 `<columninfo>`
 
@@ -91,9 +91,9 @@ Di seguito viene illustrato come le informazioni sul tipo di colonna è formatta
 
 `</columninfo>`
 
-## <a name="getxmlrowdata"></a> CXMLAccessor:: GetXMLRowData
+## <a name="cxmlaccessorgetxmlrowdata"></a><a name="getxmlrowdata"></a>CXMLAccessor:: GetXMLRowData
 
-Recupera l'intero contenuto di una tabella come dati stringa in formato XML, dalla riga.
+Recupera l'intero contenuto di una tabella come dati di stringa in formato XML, per riga.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -105,18 +105,18 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 #### <a name="parameters"></a>Parametri
 
 *strOutput*<br/>
-[out] Un riferimento a un buffer contenente i dati della tabella da recuperare. I dati vengono formattati come dati stringa con i nomi di tag XML che corrispondono ai nomi di colonna dell'archivio dati.
+out Riferimento a un buffer contenente i dati della tabella da recuperare. I dati vengono formattati come dati di stringa con nomi di tag XML che corrispondono ai nomi di colonna dell'archivio dati.
 
 *bAppend*<br/>
-[in] Valore booleano che specifica se accodare una stringa alla fine i dati di output.
+in Valore booleano che specifica se accodare una stringa alla fine dei dati di output.
 
 ### <a name="return-value"></a>Valore restituito
 
-Uno dei valori di HRESULT standard.
+Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Di seguito viene illustrato come i dati di riga vengono formattati in XML. `DATA` di seguito rappresenta i dati della riga. Usare i metodi per passare alla riga desiderata di spostamento.
+Di seguito viene illustrato il formato dei dati delle righe in XML. `DATA` riportato di seguito rappresenta i dati della riga. Usare i metodi Move per passare alla riga desiderata.
 
 `<row>`
 
@@ -126,7 +126,7 @@ Di seguito viene illustrato come i dati di riga vengono formattati in XML. `DATA
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>

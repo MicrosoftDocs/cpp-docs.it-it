@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2704
 ms.assetid: 185797e2-55b5-4c11-8493-e70eb1d15a94
-ms.openlocfilehash: 86144d68f526c752f316ad88b6e704b43f312201
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3135b3258954fd17357fa7c2634499eba46d9020
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222772"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202385"
 ---
 # <a name="compiler-error-c2704"></a>Errore del compilatore C2704
 

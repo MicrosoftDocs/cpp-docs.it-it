@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 191456a1e290b568897ba76cd5bdccb8f83c310b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365663"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201461"
 ---
 # <a name="compiler-error-c3268"></a>Errore del compilatore C3268
 
-> «*funzione*': una funzione generica o una funzione membro di una classe generica non può avere un elenco di parametri variabili
+> '*Function*': una funzione generica o una funzione membro di una classe generica non può avere un elenco di parametri variabili
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
+Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
-Visualizzare [Generics](../../extensions/generics-cpp-component-extensions.md) per altre informazioni.
+Per ulteriori informazioni, vedere [generics](../../extensions/generics-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Esempio
 

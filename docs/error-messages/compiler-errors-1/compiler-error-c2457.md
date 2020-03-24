@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-ms.openlocfilehash: a08ac9f9cfbc332b90ad16c663349ee227427278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40e666b1f2b566ca6309ee7759452647f8101a38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347103"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205244"
 ---
 # <a name="compiler-error-c2457"></a>Errore del compilatore C2457
 
-> «*macro*': la macro predefinita non può trovarsi all'esterno di un corpo di funzione
+> '*macro*': la macro predefinita non può apparire all'esterno del corpo di una funzione
 
-Si è provato a usare una macro predefinita, ad esempio [ &#95; &#95;funzioni&#95;&#95;](../../preprocessor/predefined-macros.md), in uno spazio globale.
+Si è provato a usare una macro predefinita, ad esempio [ &#95; &#95;Function&#95;](../../preprocessor/predefined-macros.md), in uno spazio globale.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2457 e anche illustrato l'utilizzo corretto:
+L'esempio seguente genera C2457 e Mostra anche l'uso corretto:
 
 ```cpp
 // C2457.cpp

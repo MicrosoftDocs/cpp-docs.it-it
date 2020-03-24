@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: 44b18304aa8030e4230d78a3579cdba601888faf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3c098b558941630e5c989e5a1b5c0fc1e2c8e10a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078981"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208826"
 ---
 # <a name="auto_handle-class"></a>Classe auto_handle
 

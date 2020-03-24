@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 77f70c8b0bc602da6840bec38565c4441644c6d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f873ec4f4eca434d0eb76df86c0891f1a99c2e2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443715"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210704"
 ---
 # <a name="idbpropertiesimpl-class"></a>Classe IDBPropertiesImpl
 
@@ -62,7 +62,7 @@ Classe derivata da `IDBPropertiesImpl`.
 
 [IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) è un'interfaccia obbligatoria per gli oggetti origine dati e un'interfaccia facoltativa per gli enumeratori. Tuttavia, se un enumeratore espone [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), deve esporre `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` utilizzando una funzione statica definita da [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="getproperties"></a>IDBPropertiesImpl:: GetProperties
+## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a>IDBPropertiesImpl:: GetProperties
 
 Restituisce i valori delle proprietà nell'origine dati, le informazioni sull'origine dati e i gruppi di proprietà di inizializzazione attualmente impostati per l'oggetto origine dati o i valori delle proprietà nel gruppo di proprietà di inizializzazione che sono attualmente impostati nel enumeratore.
 
@@ -92,7 +92,7 @@ Alcuni parametri corrispondono ai parametri di *riferimento di OLE DB Programmer
 
 Se il provider viene inizializzato, questo metodo restituisce i valori delle proprietà nei gruppi di proprietà DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO DBPROPSET_DBINIT attualmente impostati nell'oggetto origine dati. Se il provider non è inizializzato, restituisce DBPROPSET_DBINIT solo proprietà del gruppo.
 
-## <a name="getpropertyinfo"></a>IDBPropertiesImpl:: GetPropertyInfo
+## <a name="idbpropertiesimplgetpropertyinfo"></a><a name="getpropertyinfo"></a>IDBPropertiesImpl:: GetPropertyInfo
 
 Restituisce le informazioni sulle proprietà supportate dall'origine dati.
 
@@ -121,7 +121,7 @@ Alcuni parametri corrispondono ai parametri di *riferimento di OLE DB Programmer
 
 USA [IDBInitializeImpl:: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) per implementare questa funzionalità.
 
-## <a name="setproperties"></a>IDBPropertiesImpl:: seproprietà
+## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a>IDBPropertiesImpl:: seproprietà
 
 Imposta le proprietà nei gruppi di proprietà dell'origine dati e di inizializzazione, per gli oggetti origine dati o per il gruppo di proprietà di inizializzazione, per gli enumeratori.
 

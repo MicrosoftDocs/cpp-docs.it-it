@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ae59abc542a4599d289c099801fc34d56b2b13d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cff1ca374c9489cb9c5df0dad153c4bf7a4cbc9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409161"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210782"
 ---
 # <a name="idbcreatesessionimpl-class"></a>Classe IDBCreateSessionImpl
 
-Fornisce un'implementazione per il [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) interfaccia.
+Fornisce un'implementazione per l'interfaccia [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,16 +34,16 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-CLASSE, DERIVATA DA
+LA CLASSE, DERIVATA DA
 
 *SessionClass*<br/>
-L'oggetto di sessione.
+Oggetto sessione.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
@@ -51,11 +51,11 @@ L'oggetto di sessione.
 |-|-|
 |[CreateSession](#createsession)|Crea una nuova sessione dall'oggetto origine dati e restituisce l'interfaccia richiesta nella sessione appena creata.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un'interfaccia obbligatoria per gli oggetti origine dati.
+Interfaccia obbligatoria sugli oggetti origine dati.
 
-## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
+## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a>IDBCreateSessionImpl:: CreateSession
 
 Crea una nuova sessione dall'oggetto origine dati e restituisce l'interfaccia richiesta nella sessione appena creata.
 
@@ -69,9 +69,9 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
-ms.openlocfilehash: df17a55950b03d4d63dea2199e3bc19bedb8a7e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3016126d09b39ec74f4acb758a2176be05052648
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175342"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210964"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Abilitazione e disabilitazione dei servizi OLE DB
 
-La gestione di componente servizio OLE DB confronta la proprietà specificata dal consumer per le proprietà supportate dal provider per determinare se singoli componenti dei servizi può essere utilizzati per soddisfare le funzionalità estese richieste dal consumer. Ad esempio, se un'applicazione richiede un cursore scorrevole e il provider supporta solo un cursore forward-only, la gestione dei componenti del servizio Usa il componente del servizio motore del cursore Client per fornire le funzionalità di scorrimento. Se l'applicazione si basa sulla funzionalità estese supportate per impostazione predefinita nei set di righe del provider e l'applicazione non imposta in modo esplicito le proprietà per richiedere che la funzionalità, la funzionalità potrebbe non sembrare che il set di righe restituito dal Client Motore del cursore. Per essere interoperativo, le applicazioni devono sempre impostare proprietà per richiedere in modo esplicito la funzionalità estesa dove necessario.
+Il gestore dei componenti del servizio OLE DB Confronta le proprietà specificate dal consumer con quelle supportate dal provider per determinare se i singoli componenti del servizio possono essere utilizzati per soddisfare la funzionalità estesa richiesta dal consumer. Se, ad esempio, un'applicazione richiede un cursore scorrevole e il provider supporta solo un cursore di sola trasmissione, Gestione componenti del servizio utilizzerà il componente del servizio del motore di cursori client per fornire funzionalità scorrevoli. Se l'applicazione si basa sulla funzionalità estesa supportata per impostazione predefinita nel set di righe del provider e l'applicazione non imposta in modo esplicito le proprietà per richiedere tale funzionalità, è possibile che la funzionalità non venga visualizzata nel set di righe restituito dal client Motore di cursore. Per essere interoperabile, le applicazioni devono impostare sempre le proprietà per richiedere in modo esplicito le funzionalità estese, se necessario.
 
-In alcuni casi, potrebbe essere necessario disabilitare singoli servizi OLE DB per l'uso con le applicazioni esistenti che fare ipotesi sulle caratteristiche di un provider. Servizi OLE DB offrono la possibilità di disabilitare singoli servizi o tutti i servizi, in modo da connessioni o per tutte le applicazioni che usano un singolo provider.
+In alcuni casi, potrebbe essere necessario disabilitare i singoli servizi di OLE DB per funzionare correttamente con le applicazioni esistenti che fanno supposizioni sulle caratteristiche di un provider. I servizi OLE DB offrono la possibilità di disabilitare singoli servizi, o tutti i servizi, in modalità connessione per connessione o per tutte le applicazioni che utilizzano un singolo provider.
 
 ## <a name="see-also"></a>Vedere anche
 

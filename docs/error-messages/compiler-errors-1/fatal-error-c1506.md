@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1506
 ms.assetid: c73d5702-c898-4a32-b0fa-a118601a1e14
-ms.openlocfilehash: c3d6eecc997b8dd69f51cee795037968058ed346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6799b86b362e3eb0642acaa392adf1ea4e0039c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203021"
 ---
 # <a name="fatal-error-c1506"></a>Errore irreversibile C1506
 
@@ -19,8 +19,8 @@ errore irreversibile in ambito blocco
 
 Il blocco è troppo grande per la compilazione.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
 
-1. Mancata corrisponde tra parentesi graffe
+1. Parentesi graffe non corrispondenti
 
-1. Funzione insolitamente ampio o classe
+1. Funzione o classe insolitamente grande

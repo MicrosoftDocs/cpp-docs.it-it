@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2722
 ms.assetid: 4cc2c7fa-cb12-4bcf-9df1-6d627ef62973
-ms.openlocfilehash: 4274ac6ec33e0176f998fcf5a2b3efd570a4009f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7426df1970dee58cd4363ee345e2286165e375b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202175"
 ---
 # <a name="compiler-error-c2722"></a>Errore del compilatore C2722
 
-':: operator': non valido dopo il comando operator. Utilizzare 'operator operator'
+':: operator ': comando dell'operatore seguente non valido; USA ' operatore operator '
 
-Un' `operator` istruzione redefines `::new` o `::delete`. Il `new` e `delete` operatori sono globali, in modo che l'operatore di risoluzione dell'ambito (`::`) non è significativo. Rimuovere l'operatore `::` .
+Un'istruzione `operator` ridefinisce `::new` o `::delete`. Gli operatori `new` e `delete` sono globali, quindi l'operatore di risoluzione dell'ambito (`::`) non è significativo. Rimuovere l'operatore `::` .
