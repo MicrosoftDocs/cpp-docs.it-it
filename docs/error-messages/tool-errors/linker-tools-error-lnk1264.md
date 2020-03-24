@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1264
 ms.assetid: 23b1aad7-d382-42c1-bae8-db68575c57a8
-ms.openlocfilehash: ca17b6946b9e988507af2786825223e042356d0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00041e677ac7b69df9981551ee3b6cc18f9eb33d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160588"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183761"
 ---
 # <a name="linker-tools-error-lnk1264"></a>Errore degli strumenti del linker LNK1264
 
-/LTCG: PGINSTRUMENT specificato ma non richiesta; la generazione di codice strumentazione non è riuscita
+/LTCG: PGINSTRUMENT specificato ma non è richiesta la generazione di codice. strumentazione non riuscita
 
-**/LTCG: PGINSTRUMENT** è stato specificato ma non sono stati trovati file non obj compilati con [/GL](../../build/reference/gl-whole-program-optimization.md). Strumentazione non può accettare sul posto e il collegamento non è riuscita. Deve esistere almeno un file con estensione obj nella riga di comando che viene compilato con **/GL** in modo che possa essere eseguita la strumentazione.
+**/LTCG: PGINSTRUMENT** è stato specificato, ma non sono stati trovati file obj compilati con [/GL](../../build/reference/gl-whole-program-optimization.md). Non è possibile eseguire la strumentazione e il collegamento non è riuscito. Nella riga di comando deve essere presente almeno un file con estensione obj compilato con **/GL** in modo che la strumentazione possa essere eseguita.
 
-Ottimizzazione PGO (PGO) è disponibile solo per i compilatori a 64 bit.
+L'ottimizzazione PGO (PGO) è disponibile solo nei compilatori a 64 bit.

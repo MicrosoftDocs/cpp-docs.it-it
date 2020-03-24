@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0046
 - CAN0046
 ms.assetid: a76e657b-c018-415b-b426-ce9e72eb645d
-ms.openlocfilehash: ce139867897852f35cf4758e7105c8740ed5de1e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 2e63def8388a5cfdef195fb31911abafe83f9c09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345363"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184944"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>Errore dell‘analizzatore di espressioni CXX0046
 
-elenco di argomenti necessario per la funzione membro
+elenco di argomenti richiesto per la funzione membro
 
-Un'espressione chiamata una funzione membro, ma non ha specificato i parametri effettivi.
+Espressione denominata funzione membro, ma non sono stati specificati parametri effettivi.
 
-Questo errore è identico all'errore CAN0046.
+Questo errore è identico a CAN0046.

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4197
 ms.assetid: 8a976fd7-a74b-4c83-ab66-a9e7d7073c4a
-ms.openlocfilehash: 0abad1b98ff4782f077312752603ec17fd611c12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92702864a00455e4b70f00dfc9988bfb754e2e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390360"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183280"
 ---
 # <a name="linker-tools-warning-lnk4197"></a>Avviso degli strumenti del linker LNK4197
 
-> esportare '*exportname*' specificato più volte; verrà utilizzata la prima specifica
+> esportazione di '*exportname*' specificata più volte; uso della prima specifica
 
-Un'esportazione è stata specificata più e diversi modi. Il linker utilizza la prima specifica e ignora il resto.
+Un'esportazione viene specificata in diversi modi. Il linker usa la prima specifica e ignora il resto.
 
-Se si rigenera la libreria di runtime C, è possibile ignorare questo messaggio.
+Se si sta ricompilando la libreria di runtime del linguaggio C, è possibile ignorare questo messaggio.
 
-Se un'esportazione sia specificata esattamente allo stesso modo più volte, il linker non emetterà un avviso.
+Se un'esportazione viene specificata esattamente allo stesso modo più volte, il linker non emetterà un avviso.
 
-Ad esempio, il contenuto seguente di un file con estensione def provocherebbe l'avviso:
+Ad esempio, il seguente contenuto di un file con estensione def genera questo avviso:
 
 ```
 EXPORTS
@@ -31,8 +31,8 @@ EXPORTS
    functioname      @10
 ```
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
 
-1. Viene specificata la stessa esportazione sia nella riga di comando (tramite esportazione:) e nel file def.
+1. La stessa esportazione viene specificata sia nella riga di comando (tramite esportazione:) e nel file def.
 
-2. La stessa esportazione viene elencata due volte nel file def con attributi diversi.
+2. La stessa esportazione è elencata due volte nel file con estensione def con attributi diversi.

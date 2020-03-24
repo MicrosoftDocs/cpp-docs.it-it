@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
-ms.openlocfilehash: d2fff1d2f30c4ac80af6d5b9ca452fa5f30f5a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a723b7ce7fc79fb6be9c9dd2b500631098622b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207355"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163219"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>Avviso del compilatore (livello 1) C4251
 
-'identifier': classe 'type' deve avere un'interfaccia dll per essere usata dai client della classe 'type2'
+' Identifier ': la classe ' type ' deve avere un'interfaccia dll che deve essere usata dai client della classe ' tipo2'
 
-Per ridurre al minimo la possibilità di danneggiamento dei dati durante l'esportazione di una classe con [dllexport](../../cpp/dllexport-dllimport.md), assicurarsi che:
+Per ridurre al minimo la possibilità di danneggiamento dei dati quando si esporta una classe con [__declspec (dllexport)](../../cpp/dllexport-dllimport.md), verificare che:
 
-- Tutti i dati statici è l'accesso tramite le funzioni esportate dalla DLL.
+- Tutti i dati statici sono accessibili tramite le funzioni esportate dalla DLL.
 
 - Nessun metodo inline della classe può modificare i dati statici.
 
-- Nessun metodo della classe inline utilizza funzioni CRT o altre funzioni della libreria dati statici (vedere [potenziali errori di passaggio CRT oggetti tra i limiti DLL](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md) per altre informazioni).
+- Nessun metodo inline della classe utilizza funzioni CRT o altre funzioni di libreria utilizzano dati statici. per ulteriori informazioni, vedere [potenziali errori di passaggio di oggetti CRT attraverso i limiti dll](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md) .
 
-- Nessun metodo della classe (indipendentemente l'incorporamento) possono usare i tipi in cui la creazione di istanze nel file EXE e DLL hanno differenze di dati statici.
+- Nessun metodo della classe (indipendentemente dall'incorporamento) può usare i tipi in cui la creazione di un'istanza in EXE e DLL presenta differenze di dati statiche.
 
-È possibile evitare l'esportazione di classi definendo una DLL che definisce una classe con funzioni virtuali e le funzioni è possibile chiamare per creare un'istanza e l'eliminazione di oggetti del tipo.  È quindi possibile semplicemente chiamare funzioni virtuali sul tipo.
+È possibile evitare di esportare classi definendo una DLL che definisce una classe con funzioni virtuali e funzioni che è possibile chiamare per creare un'istanza ed eliminare oggetti del tipo.  È quindi possibile chiamare semplicemente funzioni virtuali sul tipo.
 
-C4251 può essere ignorato se si deriva da un tipo di C++ libreria Standard, la compilazione di una versione di debug (**/MTd**) e il messaggio di errore del compilatore in cui si intende Container_base.
+Possibile avviso C4251 può essere ignorato se si deriva da un tipo nella libreria C++ standard, si compila una versione di debug ( **/MTD**) e il messaggio di errore del compilatore fa riferimento a _Container_base.
 
 ```cpp
 // C4251.cpp

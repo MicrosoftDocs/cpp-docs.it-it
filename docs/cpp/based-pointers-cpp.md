@@ -10,12 +10,12 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 393fe8f8d12266650740942d0605152b6548d146
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f16e9f6582ae846c0c19fc1dcbd86f09baba713e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857697"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181395"
 ---
 # <a name="based-pointers-c"></a>Puntatori based (C++)
 
@@ -27,7 +27,7 @@ La parola chiave **__based** consente di dichiarare i puntatori in base ai punta
 type __based( base ) declarator
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 I puntatori basati sugli indirizzi del puntatore sono l'unico formato della parola chiave **__based** valida nelle compilazioni a 32 bit o a 64 bit. Per i compilatori C e C++ a 32 bit Microsoft un puntatore based è un offset a 32 bit di una base puntatore a 32 bit. Una restrizione analoga è presente per ambienti a 64 bit, in cui un puntatore based è un offset a 64 bit rispetto a una base a 64 bit.
 

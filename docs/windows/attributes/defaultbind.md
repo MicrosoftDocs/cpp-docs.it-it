@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: a2f612c4869a62a84a6a2af99057ced365f875f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 72d1f5a5720466bf7abf08aaad4acdbab05c408f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490984"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167160"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -23,7 +23,7 @@ Indica la singola proprietà associabile che meglio rappresenta l'oggetto.
 [defaultbind]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **defaultbind** C++ ha la stessa funzionalità dell'attributo MIDL di [defaultbind](/windows/win32/Midl/defaultbind) .
 
@@ -39,8 +39,8 @@ Vedere l'esempio per [associabile](bindable.md) per un esempio di come usare **d
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

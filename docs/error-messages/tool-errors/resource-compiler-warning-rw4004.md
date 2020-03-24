@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW4004
 ms.assetid: 596b6a89-9ce7-4ba7-bdcb-e8054c7efafa
-ms.openlocfilehash: bafd1084a665fc656fe184064a48e5fffc61c957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca0fb271a5ab43994ec37cc8d59c33877903f6e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346080"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182344"
 ---
 # <a name="resource-compiler-warning-rw4004"></a>Avviso del compilatore di risorse RW4004
 
@@ -21,4 +21,4 @@ Carattere ASCII non equivalente a codice tasto virtuale
 
 Questo avviso permette di continuare, ma tenere presente che i tasti di scelta rapida generati potrebbero non corrispondere alla stringa specificata (i tasti VIRTKEY usano codici tasto diversi rispetto ai tasti di scelta rapida ASCII).
 
-Valori letterali stringa siano sintatticamente validi, l'unico modo di ottenere il tasto di scelta rapida desiderato usando il **VK _\* #define** valori in Windows. h.
+Sebbene i valori letterali stringa siano sintatticamente validi, è possibile assicurarsi di ottenere solo l'acceleratore desiderato usando il **VK_\* #define** valori in Windows. h.

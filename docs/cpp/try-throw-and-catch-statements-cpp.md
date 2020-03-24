@@ -19,12 +19,12 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 03f7f6f5a1a2842ad7fb0ba2715fada130277e70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245135"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187986"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Istruzioni try, throw e catch (C++)
 
@@ -72,9 +72,9 @@ MyData GetNetworkResource()
 }
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il codice dopo la clausola **try** è la sezione sorvegliata del codice. L' espressione throw *genera*, ovvero genera, un'eccezione. Il blocco di codice dopo la clausola **catch** è il gestore di eccezioni. Si tratta del gestore che *rileva* l'eccezione generata se i tipi nelle espressioni **throw** e **catch** sono compatibili. Per un elenco di regole che regolano la corrispondenza dei tipi nei blocchi **catch** , vedere [come vengono valutati i blocchi catch](../cpp/how-catch-blocks-are-evaluated-cpp.md). Se l'istruzione **catch** specifica i puntini di sospensione (...) anziché un tipo, il blocco **catch** gestisce tutti i tipi di eccezione. Quando si esegue la compilazione con l'opzione [/EHA](../build/reference/eh-exception-handling-model.md) , possono essere incluse le eccezioni strutturate C e le eccezioni asincrone generate dal sistema o dall'applicazione, ad esempio la protezione della memoria, la divisione per zero e le violazioni a virgola mobile. Poiché i blocchi **catch** vengono elaborati nell'ordine del programma per trovare un tipo corrispondente, un gestore di puntini di sospensione deve essere l'ultimo gestore per il blocco **try** associato. Utilizzare con cautela `catch(...)`. Non consentire a un programma di proseguire a meno che il blocco catch non sia in grado di gestire l'eccezione specifica intercettata. Un blocco `catch(...)` viene in genere utilizzato per registrare gli errori ed eseguire una pulizia speciale prima che l'esecuzione del programma venga interrotta.
+Il codice dopo la clausola **try** è la sezione sorvegliata del codice. L' **throw** espressione throw *genera*, ovvero genera, un'eccezione. Il blocco di codice dopo la clausola **catch** è il gestore di eccezioni. Si tratta del gestore che *rileva* l'eccezione generata se i tipi nelle espressioni **throw** e **catch** sono compatibili. Per un elenco di regole che regolano la corrispondenza dei tipi nei blocchi **catch** , vedere [come vengono valutati i blocchi catch](../cpp/how-catch-blocks-are-evaluated-cpp.md). Se l'istruzione **catch** specifica i puntini di sospensione (...) anziché un tipo, il blocco **catch** gestisce tutti i tipi di eccezione. Quando si esegue la compilazione con l'opzione [/EHA](../build/reference/eh-exception-handling-model.md) , possono essere incluse le eccezioni strutturate C e le eccezioni asincrone generate dal sistema o dall'applicazione, ad esempio la protezione della memoria, la divisione per zero e le violazioni a virgola mobile. Poiché i blocchi **catch** vengono elaborati nell'ordine del programma per trovare un tipo corrispondente, un gestore di puntini di sospensione deve essere l'ultimo gestore per il blocco **try** associato. Utilizzare con cautela `catch(...)`. Non consentire a un programma di proseguire a meno che il blocco catch non sia in grado di gestire l'eccezione specifica intercettata. Un blocco `catch(...)` viene in genere utilizzato per registrare gli errori ed eseguire una pulizia speciale prima che l'esecuzione del programma venga interrotta.
 
 Un'espressione **throw** priva di operando genera nuovamente l'eccezione attualmente gestita. È consigliabile utilizzare questo formato quando si rigenera l'eccezione, perché mantiene le informazioni sul tipo polimorfico dell'eccezione generale. Tale espressione deve essere utilizzata solo in un gestore **catch** o in una funzione chiamata da un gestore **catch** . L'oggetto eccezione generato nuovamente è l'oggetto eccezione originale, non una copia.
 

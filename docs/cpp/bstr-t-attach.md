@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 8601ebbea6a9ab837c07518b018e83e8c0df226d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b52661097ca1feab4c8045be240e4138a0c0f21
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385063"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190664"
 ---
-# <a name="bstrtattach"></a>_bstr_t::Attach
+# <a name="_bstr_tattach"></a>_bstr_t::Attach
 
 **Sezione specifica Microsoft**
 
@@ -32,13 +32,13 @@ void Attach(
 *s*<br/>
 `BSTR` da associare a o assegnato alla variabile `_bstr_t`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Se `_bstr_t` in precedenza era associato a un altro `BSTR`, `_bstr_t` eseguirà la pulizia della risorsa `BSTR`, se nessun'altra variabile `_bstr_t` utilizza `BSTR`.
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [_bstr_t::Assign](../cpp/bstr-t-assign.md) per un esempio di utilizzo **Attach**.
+Per un esempio di utilizzo di **Connetti**, vedere [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) .
 
 **Fine sezione specifica Microsoft**
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-ms.openlocfilehash: 71aba1f20cfaf5b6b9ec33d43ebde594e381921f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a267019f1be08cc8dcffdff3b4ba0b73357cccd4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391413"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183957"
 ---
 # <a name="linker-tools-error-lnk1179"></a>Errore degli strumenti del linker LNK1179
 
-file danneggiato o non valido: 'filename' COMDAT duplicati
+file danneggiato o non valido: COMDAT ' filename ' duplicato
 
-Un modulo di oggetti contiene due o più COMDAT con lo stesso nome.
+Un modulo oggetto contiene due o più COMDAT con lo stesso nome.
 
-Questo errore può essere causato dall'utilizzo [/H](../../build/reference/h-restrict-length-of-external-names.md), che limita la lunghezza dei nomi esterni, e [/Gy](../../build/reference/gy-enable-function-level-linking.md), i pacchetti che funzioni nei dati COMDAT.
+Questo errore può essere causato dall'utilizzo di [/h](../../build/reference/h-restrict-length-of-external-names.md), che limita la lunghezza dei nomi esterni e [/Gy](../../build/reference/gy-enable-function-level-linking.md), che consente di raggruppare le funzioni in COMDAT.
 
 ## <a name="example"></a>Esempio
 
-Nel codice seguente, `function1` e `function2` identici i primi otto caratteri. La compilazione con **/Gy** e **/H8** genera un errore di collegamento.
+Nel codice seguente `function1` e `function2` sono identici nei primi otto caratteri. La compilazione con **/Gy** e **/h8** genera un errore di collegamento.
 
 ```
 void function1(void);

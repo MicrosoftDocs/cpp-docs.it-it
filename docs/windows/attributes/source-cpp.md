@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514018"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166224"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -28,7 +28,7 @@ In una classe, specifica le interfacce di origine dell'oggetto COM per i punti d
 *interfacce*<br/>
 Una o più interfacce specificate quando si applica l'attributo di origine a una classe. Questo parametro non viene utilizzato quando l'origine viene applicata a una proprietà o a un metodo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo di **origine** C++ ha la stessa funzionalità dell'attributo MIDL di [origine](/windows/win32/Midl/source) .
 
@@ -76,8 +76,8 @@ class NN : public b
 |-|-|
 |**Si applica a**|**classe**, **struct**, **interfaccia**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|`coclass`(quando applicato alla classe o allo struct)|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|`coclass` (quando applicato alla classe o allo struct)|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

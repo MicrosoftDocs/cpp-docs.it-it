@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4375
 ms.assetid: a19821b5-e9b6-4228-abe7-d812507d6a2a
-ms.openlocfilehash: d5aba9459eb39d654c361e204319010669f235a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 652f8487ebc4282f35ae047a1a01603dcd6137ed
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187024"
 ---
 # <a name="compiler-warning-level-1-c4375"></a>Avviso del compilatore (livello 1) C4375
 
-metodo non pubblico 'method2' non esegue l'override di 'method1'
+il metodo non pubblico ' Method2' non esegue l'override di ' Method1'
 
-Un tipo che implementa un altro tipo definiti un metodo di override, ma non la sostituzione non è pubblica. Pertanto, il metodo non esegue l'override del metodo di tipo base.
+Un tipo che implementa un altro tipo definisce un metodo di override, ma l'override non è pubblico. Pertanto, il metodo non esegue l'override del metodo del tipo di base.

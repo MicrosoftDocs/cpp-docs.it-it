@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 739132ce1889b7e73b7ae19f5072a1dfec9c066d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385050"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181668"
 ---
 # <a name="additive-operators--and--"></a>Operatori di addizione: + e -
 
@@ -28,43 +28,43 @@ expression + expression
 expression - expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Gli operatori additivi sono:
 
-- Addizione (**+**)
+- Addizione ( **+** )
 
-- Sottrazione (**-**)
+- Sottrazione ( **-** )
 
 Questi operatori binari hanno un'associatività da sinistra a destra.
 
-Gli operatori additivi accettano gli operandi di tipi aritmetici o tipi puntatore. Il risultato dell'addizione (**+**) operatore è la somma degli operandi. Il risultato della sottrazione (**-**) l'operatore è la differenza tra gli operandi. Se uno o entrambi gli operandi sono puntatori, questi devono essere puntatori agli oggetti, non alle funzioni. Se entrambi gli operandi sono puntatori, i risultati non sono significativi a meno che entrambi siano puntatori agli oggetti nella stessa matrice.
+Gli operatori additivi accettano gli operandi di tipi aritmetici o tipi puntatore. Il risultato dell'operatore di addizione ( **+** ) è la somma degli operandi. Il risultato dell'operatore di sottrazione ( **-** ) è la differenza tra gli operandi. Se uno o entrambi gli operandi sono puntatori, questi devono essere puntatori agli oggetti, non alle funzioni. Se entrambi gli operandi sono puntatori, i risultati non sono significativi a meno che entrambi siano puntatori agli oggetti nella stessa matrice.
 
-Gli operatori additivi accettano gli operandi *aritmetici*, *integrale*, e *scalare* tipi. Questi vengono definiti nella tabella seguente.
+Gli operatori additivi accettano gli operandi di tipi *aritmetici*, *integrali*e *scalari* . Questi vengono definiti nella tabella seguente.
 
 ### <a name="types-used-with-additive-operators"></a>Tipi utilizzati con gli operatori additivi
 
-|Tipo|Significato|
+|Type|Significato|
 |----------|-------------|
-|*arithmetic*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|
-|*integral*|I tipi char e int di tutte le dimensioni (long e short) e le enumerazioni sono tipi "integrali".|
-|*scalar*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|
+|*aritmetico*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|
+|*integrale*|I tipi char e int di tutte le dimensioni (long e short) e le enumerazioni sono tipi "integrali".|
+|*scalare*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|
 
 Le combinazioni valide per questi operatori sono:
 
-*arithmetic* + *arithmetic*
+*aritmetica + * aritmetica *arithmetic*
 
-*scalar* + *integral*
+*scalare* + *integrale*
 
-*integral* + *scalar*
+*integrale* + *scalare*
 
-*arithmetic* - *arithmetic*
+*aritmetica - * aritmetica *arithmetic*
 
-*scalar* - *scalar*
+*scalare - * scalare *scalar*
 
 Si noti che l'addizione e la sottrazione non sono operazioni equivalenti.
 
-Se entrambi gli operandi sono di tipo aritmetico, le conversioni descritte in [conversioni Standard](standard-conversions.md) vengono applicate agli operandi e il risultato è di tipo convertito.
+Se entrambi gli operandi sono di tipo aritmetico, le conversioni descritte in [conversioni standard](standard-conversions.md) vengono applicate agli operandi e il risultato è del tipo convertito.
 
 ## <a name="example"></a>Esempio
 
@@ -109,9 +109,9 @@ Sebbene il valore integrale 1 venga aggiunto a `pIntArray`, questa operazione no
 
 ## <a name="pointer-subtraction"></a>Sottrazione di puntatori
 
-Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione viene fornito un risultato integrale con segno typu `ptrdiff_t` (definito nel file di inclusione standard \<STDDEF. h >).
+Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione produce un risultato integrale con segno di tipo `ptrdiff_t` (definito nel file di inclusione standard \<stddef. h >).
 
-Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore ai (*n* - *ho*) elemento della matrice th, dove *n* è l'elemento a cui punta il puntatore originale e il *ho* è il valore integrale del secondo operando.
+Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore all'elemento della matrice (*n* - *i*), dove *n* è l'elemento a cui punta il puntatore *originale ed è* il valore integrale del secondo operando.
 
 ## <a name="see-also"></a>Vedere anche
 

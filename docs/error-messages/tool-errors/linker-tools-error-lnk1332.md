@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1332
 ms.assetid: b31d5ca0-c27f-4177-896b-2637dccbde24
-ms.openlocfilehash: 3c071ae8ac8c212b5bf3cd3eba8b082d790f7d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 681a1d723d7a50e04fa2bf57706d61fa995f9789
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161069"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183566"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Errore degli strumenti del linker LNK1332
 
-rilevato\<count > tipi Windows Runtime importati in un modulo e definiti in un altro modulo
+rilevato\<conteggio > tipi Windows Runtime importati in un modulo e definiti in un altro modulo
 
-Quando ha prodotto la destinazione corrente, il linker rileva <`count`> tipi Windows Runtime, ognuno dei quali è importato in un modulo ed è anche definito in un altro modulo.
+Quando ha prodotto la destinazione corrente, il linker ha rilevato <`count`> Windows Runtime i tipi, ognuno dei quali viene importato in un modulo e definito anche in un altro modulo.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 

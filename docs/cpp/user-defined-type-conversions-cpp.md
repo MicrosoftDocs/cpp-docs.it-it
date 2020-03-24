@@ -22,18 +22,18 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-ms.openlocfilehash: 2af30ad3d1244146f32bf2402ed7eccdc4785c1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 055b5bd5c82e4f0be449d548de25267eabef47bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244135"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187934"
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversioni di tipi definite dall'utente (C++)
 
-Oggetto *conversione* produce un nuovo valore di tipo da un valore di un tipo diverso. *Conversioni standard* vengono compilate nel linguaggio C++ e supporto tecnico relativi tipi incorporati ed è possibile creare *conversioni definite dall'utente* per eseguire le conversioni a, da o tra tipi definiti dall'utente.
+Una *conversione* produce un nuovo valore di un determinato tipo da un valore di un tipo diverso. Le C++ *conversioni standard* sono incorporate nel linguaggio e supportano i tipi incorporati ed è possibile creare *conversioni definite dall'utente* per eseguire conversioni in, da o tra tipi definiti dall'utente.
 
-Le conversioni standard avvengono tra tipi incorporati, tra puntatori o riferimenti ai tipi correlati per ereditarietà, a e da puntatori void e al puntatore null. Per altre informazioni, vedere [conversioni Standard](../cpp/standard-conversions.md). Le conversioni definite dall'utente avvengono tra tipi definiti dall'utente oppure tra tipi definiti dall'utente e tipi incorporati. È possibile implementarle come [costruttori di conversione](#ConvCTOR) oppure come [funzioni di conversione](#ConvFunc).
+Le conversioni standard avvengono tra tipi incorporati, tra puntatori o riferimenti ai tipi correlati per ereditarietà, a e da puntatori void e al puntatore null. Per ulteriori informazioni, vedere [conversioni standard](../cpp/standard-conversions.md). Le conversioni definite dall'utente avvengono tra tipi definiti dall'utente oppure tra tipi definiti dall'utente e tipi incorporati. È possibile implementarli come [costruttori di conversione](#ConvCTOR) o come [funzioni di conversione](#ConvFunc).
 
 Le conversioni possono essere esplicite (quando il programmatore chiama un solo tipo da convertire in un altro tipo, come in un cast o in un'inizializzazione diretta) oppure esplicite (quando il linguaggio o il programma chiama un tipo diverso da quello fornito dal programmatore).
 
@@ -47,7 +47,7 @@ Si tenta di eseguire conversioni implicite nei seguenti casi:
 
 - Un'espressione che controlla un'istruzione condizionale, un costrutto di loop o un'opzione non ha lo stesso tipo di risultato necessario per controllarla.
 
-- Il tipo di operando fornito a un operatore non è uguale a quello del parametro di operando corrispondente. Per gli operatori incorporati, entrambi gli operandi devono essere dello stesso tipo e vengono convertiti in un tipo comune che rappresenta entrambi. Per altre informazioni, vedere [conversioni Standard](standard-conversions.md). Per gli operatori definiti dall'utente, il tipo di ogni operando deve essere lo stesso del parametro di operando corrispondente.
+- Il tipo di operando fornito a un operatore non è uguale a quello del parametro di operando corrispondente. Per gli operatori incorporati, entrambi gli operandi devono essere dello stesso tipo e vengono convertiti in un tipo comune che rappresenta entrambi. Per ulteriori informazioni, vedere [conversioni standard](standard-conversions.md). Per gli operatori definiti dall'utente, il tipo di ogni operando deve essere lo stesso del parametro di operando corrispondente.
 
 Quando una conversione standard non può completare una conversione implicita, il compilatore può usare una conversione definita dall'utente, seguita facoltativamente da una conversione standard aggiuntiva che la completa.
 
@@ -59,21 +59,21 @@ Quando in un sito di conversione sono disponibili due o più conversioni definit
 
 Di solito è possibile risolvere un'ambiguità qualificando il nome del tipo implicato in maniera più completa oppure eseguendo un cast esplicito per chiarire le proprie intenzioni.
 
-Sia i costruttori di conversione sia le funzioni di conversione seguono le regole di controllo dell'accesso ai membri, ma l'accessibilità delle conversioni viene presa in considerazione solo se e quando è possibile determinare una conversione non ambigua. Ciò significa che una conversione può essere ambigua anche se il livello di accesso di una conversione concorrente ne impedirebbe l'uso. Per altre informazioni sull'accessibilità dei membri, vedere [controllo di accesso membri](../cpp/member-access-control-cpp.md).
+Sia i costruttori di conversione sia le funzioni di conversione seguono le regole di controllo dell'accesso ai membri, ma l'accessibilità delle conversioni viene presa in considerazione solo se e quando è possibile determinare una conversione non ambigua. Ciò significa che una conversione può essere ambigua anche se il livello di accesso di una conversione concorrente ne impedirebbe l'uso. Per altre informazioni sull'accessibilità dei membri, vedere [controllo di accesso dei membri](../cpp/member-access-control-cpp.md).
 
 ## <a name="the-explicit-keyword-and-problems-with-implicit-conversion"></a>La parola chiave explicit e i problemi insiti nella conversione implicita
 
 Per impostazione predefinita, quando si crea una conversione definita dall'utente, il compilatore può usarla per eseguire conversioni implicite. Questo comportamento non è sempre auspicabile, perché alcune volte le semplici regole che guidano il compilatore a eseguire conversioni implicite possono condurre all'accettazione di codice indesiderato.
 
-Un esempio ben noto di una conversione implicita che può causare problemi è la conversione a **bool**. Esistono molti motivi per cui si potrebbero voler creare un tipo di classe che può essere utilizzato in un contesto booleano, ovvero, ad esempio, così che può essere usata per controllare un' **se** ciclo o istruzione, ma quando il compilatore esegue una conversione definita dall'utente in un tipo incorporato, il compilatore potrà applicare un'ulteriore conversione standard in un secondo momento. Lo scopo di questa ulteriore conversione standard è la possibilità di operazioni come la promozione da **breve** al **int**, ma si apre anche la porta per le conversioni meno ovvie, ad esempio da  **bool** al **int**, che consente il tipo di classe da usare in contesti di numeri interi mai considerati prima. Questo particolare problema è noto come il *problema Safe Bool*. Questo tipo di problema è dove il **esplicita** può aiutare (parola chiave).
+Un esempio noto di conversione implicita che può causare problemi è la conversione a **bool**. Esistono molti motivi per cui potrebbe essere necessario creare un tipo di classe che può essere usato in un contesto booleano, ad esempio, in modo che possa essere usato per controllare un'istruzione **if** o un ciclo, ma quando il compilatore esegue una conversione definita dall'utente in un tipo incorporato, il compilatore è autorizzato a applicare una conversione standard aggiuntiva in seguito. Lo scopo di questa conversione standard aggiuntiva è quello di consentire la promozione da **breve** a **int**, ma apre anche lo sportello per le conversioni meno ovvie, ad esempio da **bool** a **int**, che consente di usare il tipo di classe in contesti integer che non sono mai stati progettati. Questo particolare problema è noto come *problema bool sicuro*. Questo tipo di problema è il punto in cui la parola chiave **Explicit** può essere utile.
 
-Il **esplicita** parola chiave indica al compilatore la conversione specificata non può essere utilizzata per eseguire conversioni implicite. Se si desidera usufruire della comodità sintattica delle conversioni implicite prima la **esplicita** introduzione della parola chiave, è necessario accettare le conseguenze impreviste creata talvolta dalla conversione implicita oppure usare meno convenienti, funzioni di conversione denominati come soluzione alternativa. A questo punto, usando il **esplicita** (parola chiave), è possibile creare conversioni convenienti che può essere utilizzato solo per eseguire cast espliciti oppure l'inizializzazione diretta e senza produrre il tipo di problemi esemplificati come problema Safe Bool.
+La parola chiave **Explicit** indica al compilatore che la conversione specificata non può essere utilizzata per eseguire conversioni implicite. Se si desiderava la praticità sintattica delle conversioni implicite prima che venisse introdotta la parola chiave **Explicit** , era necessario accettare le conseguenze impreviste che talvolta la conversione implicita crea o utilizza funzioni di conversione denominate meno convenienti come soluzione alternativa. A questo punto, usando la parola chiave **Explicit** , è possibile creare conversioni convenienti che possono essere usate solo per eseguire cast espliciti o l'inizializzazione diretta e che non provocheranno il tipo di problemi esemplificati dal problema bool sicuro.
 
-Il **esplicita** parola chiave può essere applicato ai costruttori di conversione fin da c++98 e alle funzioni di conversione fin da c++11. Le sezioni seguenti contengono altre informazioni su come usare il **esplicita** (parola chiave).
+La parola chiave **Explicit** può essere applicata ai costruttori di conversione da c++ 98 e alle funzioni di conversione a partire da c++ 11. Le sezioni seguenti contengono ulteriori informazioni su come usare la parola chiave **Explicit** .
 
-## <a name="ConvCTOR"></a> Costruttori di conversione
+## <a name="conversion-constructors"></a><a name="ConvCTOR"></a>Costruttori di conversione
 
-I costruttori di conversione definiscono le conversioni da tipi definiti dall'utente o incorporati in un tipo definito dall'utente. L'esempio seguente illustra un costruttore di conversione che esegue la conversione dal tipo incorporato **doppie** a un tipo definito dall'utente `Money`.
+I costruttori di conversione definiscono le conversioni da tipi definiti dall'utente o incorporati in un tipo definito dall'utente. Nell'esempio seguente viene illustrato un costruttore di conversione che esegue la conversione dal tipo predefinito **Double** a un tipo definito dall'utente `Money`.
 
 ```cpp
 #include <iostream>
@@ -104,7 +104,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-Notare che la prima chiamata alla funzione `display_balance`, che accetta un argomento di tipo `Money`, non richiede una conversione perché il relativo argomento è del tipo corretto. Tuttavia, nella seconda chiamata a `display_balance`, è necessaria una conversione perché il tipo dell'argomento, una **doppie** con un valore di `49.95`, sia non quanto la funzione si aspetta. La funzione non è possibile utilizzare questo valore direttamente, ma poiché esiste una conversione dal tipo dell'argomento, ovvero**doppie**, ovvero al tipo di parametro corrispondente, ovvero`Money`, ovvero un valore temporaneo di tipo `Money` viene costruito dal l'argomento, usato per completare la chiamata di funzione. Nella terza chiamata a `display_balance`, si noti che l'argomento non è un **doppie**, ma è invece un **float** con un valore di `9.99`: e ancora la chiamata di funzione può ancora completata perché il compilatore può eseguire una conversione standard, ovvero in questo caso, dal **float** al **double**e quindi eseguire la conversione definita dall'utente da **double** a `Money` per completare la conversione necessaria.
+Notare che la prima chiamata alla funzione `display_balance`, che accetta un argomento di tipo `Money`, non richiede una conversione perché il relativo argomento è del tipo corretto. Tuttavia, nella seconda chiamata a `display_balance`, è necessaria una conversione perché il tipo dell'argomento, un valore **Double** con un valore di `49.95`, non è quello previsto dalla funzione. La funzione non può utilizzare direttamente questo valore, ma poiché esiste una conversione dal tipo dell'argomento (**Double**) al tipo del parametro corrispondente, ovvero`Money`, un valore temporaneo di tipo `Money` viene costruito dall'argomento e utilizzato per completare la chiamata di funzione. Nella terza chiamata a `display_balance`si noti che l'argomento non è un valore **Double**, ma è invece un valore **float** con un valore di `9.99`, ma è ancora possibile completare la chiamata di funzione perché il compilatore può eseguire una conversione standard, in questo caso, da **float** a **Double**, quindi eseguire la conversione definita dall'utente da **Double** a `Money` per completare la conversione necessaria.
 
 ### <a name="declaring-conversion-constructors"></a>Dichiarazione di costruttori di conversione
 
@@ -120,7 +120,7 @@ Le regole seguenti si applicano alla dichiarazione di un costruttore di conversi
 
 ### <a name="explicit-conversion-constructors"></a>Costruttori di conversione espliciti
 
-Dichiarando un costruttore di conversione sia **esplicita**, può essere utilizzato solo per eseguire l'inizializzazione diretta di un oggetto o per eseguire un cast esplicito. In tal modo si impedisce alle funzioni che accettano un argomento del tipo di classe di accettare implicitamente anche gli argomenti del tipo di origine del costruttore di conversione e si impedisce anche di eseguire l'inizializzazione di copia per un tipo di classe da un valore del tipo di origine. L'esempio seguente dimostra come definire un costruttore di conversione esplicito e il conseguente effetto sul formato corretto dei codici.
+Dichiarando un costruttore di conversione come **esplicito**, può essere utilizzato solo per eseguire l'inizializzazione diretta di un oggetto o per eseguire un cast esplicito. In tal modo si impedisce alle funzioni che accettano un argomento del tipo di classe di accettare implicitamente anche gli argomenti del tipo di origine del costruttore di conversione e si impedisce anche di eseguire l'inizializzazione di copia per un tipo di classe da un valore del tipo di origine. L'esempio seguente dimostra come definire un costruttore di conversione esplicito e il conseguente effetto sul formato corretto dei codici.
 
 ```cpp
 #include <iostream>
@@ -151,13 +151,13 @@ int main(int argc, char* argv[])
 }
 ```
 
-In questo esempio, notare che è ancora possibile usare il costruttore di conversione esplicito per eseguire l'inizializzazione diretta di `payable`. Se invece si stesse per eseguire l'inizializzazione di copia per `Money payable = 79.99;`, sarebbe un errore. La prima chiamata a `display_balance` non viene alterata perché l'argomento è del tipo corretto. La seconda chiamata a `display_balance` è un errore, perché il costruttore di conversione non può essere usato per eseguire conversioni implicite. La terza chiamata a `display_balance` è legale a causa del cast esplicito al `Money`, ma si noti che il compilatore ha comunque contribuito a completare il cast inserendo un cast implicito da **float** a **double**.
+In questo esempio, notare che è ancora possibile usare il costruttore di conversione esplicito per eseguire l'inizializzazione diretta di `payable`. Se invece si stesse per eseguire l'inizializzazione di copia per `Money payable = 79.99;`, sarebbe un errore. La prima chiamata a `display_balance` non viene alterata perché l'argomento è del tipo corretto. La seconda chiamata a `display_balance` è un errore, perché il costruttore di conversione non può essere usato per eseguire conversioni implicite. La terza chiamata a `display_balance` è valida a causa del cast esplicito da `Money`, ma si noti che il compilatore ha ancora aiutato a completare il cast inserendo un cast implicito da **float** a **Double**.
 
 Benché la comodità di consentire conversioni implicite sia allettante, ciò potrebbe introdurre bug difficili da risolvere. La regola empirica consiste nel rendere espliciti tutti i costruttori di conversione, tranne quando si è sicuri di volere che una specifica conversione avvenga in maniera implicita.
 
-##  <a name="ConvFunc"></a> Funzioni di conversione
+##  <a name="conversion-functions"></a><a name="ConvFunc"></a>Funzioni di conversione
 
-Le funzioni di conversione consentono di definire le conversioni da un tipo definiti dall'utente verso altri tipi. Queste funzioni sono spesso denominate "operatori di cast" perché, assieme ai costruttori, vengono chiamate quando un valore viene sottoposto a cast di un tipo differente. L'esempio seguente illustra una funzione di conversione che esegue la conversione dal tipo definito dall'utente, `Money`, a un tipo incorporato **double**:
+Le funzioni di conversione consentono di definire le conversioni da un tipo definiti dall'utente verso altri tipi. Queste funzioni sono spesso denominate "operatori di cast" perché, assieme ai costruttori, vengono chiamate quando un valore viene sottoposto a cast di un tipo differente. Nell'esempio seguente viene illustrata una funzione di conversione che esegue la conversione dal tipo definito dall'utente, `Money`, a un tipo incorporato, **Double**:
 
 ```cpp
 #include <iostream>
@@ -179,9 +179,9 @@ void display_balance(const Money balance)
 }
 ```
 
-Si noti che la variabile membro `amount` viene impostata come privata e che la funzione di una conversione pubblica nel tipo **doppie** viene introdotta solo per restituire il valore di `amount`. Nella funzione `display_balance`, si ha una conversione implicita quando il valore `balance` viene trasmesso all'output standard usando l'operatore di inserimento del flusso `<<`. Perché non è definito alcun operatore di inserimento del flusso per il tipo definito dall'utente `Money`, ma è presente una per il tipo incorporato **doppie**, il compilatore può usare la funzione di conversione da `Money` a **doppia** per soddisfare l'operatore di inserimento del flusso.
+Si noti che la variabile membro `amount` viene resa privata e che una funzione di conversione pubblica nel tipo **Double** viene introdotta solo per restituire il valore di `amount`. Nella funzione `display_balance`, si ha una conversione implicita quando il valore `balance` viene trasmesso all'output standard usando l'operatore di inserimento del flusso `<<`. Poiché non è definito alcun operatore di inserimento del flusso per il tipo definito dall'utente `Money`, ma ne esiste uno per il tipo incorporato **Double**, il compilatore può usare la funzione di conversione da `Money` a **Double** per soddisfare l'operatore di inserimento del flusso.
 
-Le funzioni di conversione vengono ereditate dalle classi derivate. Le funzioni di conversione in una classe derivata eseguono l'override solo di una funzione di conversione ereditata quando vengono convertite esattamente nello stesso tipo. Ad esempio, una funzione di conversione definita dall'utente della classe derivata **operatore int** non esegue l'override, ovvero o incide su di essa, ovvero una funzione di conversione definita dall'utente della classe di base **operator short**, anche anche se le conversioni standard definiscano una relazione di conversione tra **int** e **breve**.
+Le funzioni di conversione vengono ereditate dalle classi derivate. Le funzioni di conversione in una classe derivata eseguono l'override solo di una funzione di conversione ereditata quando vengono convertite esattamente nello stesso tipo. Ad esempio, una funzione di conversione definita dall'utente dell' **operatore int** della classe derivata non esegue l'override di, né influenza, una funzione di conversione definita dall'utente dell' **operatore**della classe base Short, anche se le conversioni standard definiscono una relazione di conversione tra **int** e **short**.
 
 ### <a name="declaring-conversion-functions"></a>Dichiarazione delle funzioni di conversione
 
@@ -201,7 +201,7 @@ Le regole seguenti si applicano alla dichiarazione di una funzione di conversion
 
 - Le funzioni di conversione possono essere esplicite.
 
-### <a name="explicit-conversion-functions"></a>Funzioni esplicite di conversione
+### <a name="explicit-conversion-functions"></a>Funzioni di conversione esplicita
 
 Quando una funzione di conversione è dichiarata come esplicita può essere usata solo per eseguire un cast esplicito. In tal modo si impedisce alle funzioni che accettano un argomento del tipo di destinazione della funzione di conversione di accettare implicitamente anche gli argomenti del tipo di classe e si impedisce anche di eseguire l'inizializzazione di copia per le istanze del tipo di destinazione da un valore del tipo di classe. L'esempio seguente dimostra come definire una funzione di conversione esplicita e il conseguente effetto sul formato corretto dei codici.
 
@@ -225,4 +225,4 @@ void display_balance(const Money balance)
 }
 ```
 
-Qui la funzione di conversione **operatore double** è stata resa esplicita e un cast esplicito al tipo **double** è stato introdotto nella funzione `display_balance` per eseguire la conversione. Se il cast fosse stato omesso, il compilatore non avrebbe potuto individuare un operatore di inserimento del flusso `<<` adeguato per il tipo `Money` e si sarebbe verificato un errore.
+In questo caso l' **Operatore Double** della funzione di conversione è stato reso esplicito e un cast esplicito al tipo **Double** è stato introdotto nella funzione `display_balance` per eseguire la conversione. Se il cast fosse stato omesso, il compilatore non avrebbe potuto individuare un operatore di inserimento del flusso `<<` adeguato per il tipo `Money` e si sarebbe verificato un errore.

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dbda1759dcb37a1f2a8cbe87f24adbb979ca085
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154308"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188987"
 ---
 # <a name="expressions-with-binary-operators"></a>Espressioni con operatori binari
 
 Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori binari sono:
 
-- [Operatori di moltiplicazione](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+- [Operatori moltiplicativi](../cpp/multiplicative-operators-and-the-modulus-operator.md)
 
    - Moltiplicazione (*)
 
@@ -33,9 +33,9 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
 - [Operatori shift](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - Spostamento a destra (>>)
+   - Spostamento a destra (> >)
 
-   - Spostamento a sinistra (<<)
+   - Spostamento a sinistra (< <)
 
 - [Operatori relazionali e di uguaglianza](../cpp/relational-operators-equal-and-equal.md)
 
@@ -45,7 +45,7 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
    - Minore o uguale a (\<=)
 
-   - Maggiore o uguale a (> =)
+   - Maggiore o uguale a (>=)
 
    - Uguale a (==)
 
@@ -55,15 +55,15 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
    - [AND bit per bit (&)](../cpp/bitwise-and-operator-amp.md)
 
-   - [OR bit per bit esclusivo (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
+   - [OR esclusivo bit per bit (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [OR bit per bit Inclusivo (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+   - [OR inclusivo bit&#124;per bit ()](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - Operatori logici
 
-   - [Logical AND (&&)](../cpp/logical-and-operator-amp-amp.md)
+   - [AND logico (& &)](../cpp/logical-and-operator-amp-amp.md)
 
-   - [Logical OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+   - [OR logico (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
 
 - [Operatori di assegnazione](../cpp/assignment-operators.md)
 
@@ -71,7 +71,7 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
    - Assegnazione di addizione (+=)
 
-   - Assegnazione di sottrazione (-)
+   - Assegnazione di sottrazione (-=)
 
    - Assegnazione di moltiplicazione (*=)
 
@@ -81,13 +81,13 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
    - Assegnazione di spostamento a sinistra (<\<=)
 
-   - Assegnazione di spostamento a destra (>> =)
+   - Assegnazione di spostamento a destra (> > =)
 
    - Assegnazione AND bit per bit (& =)
 
    - Assegnazione dell'operatore OR esclusivo bit per bit (^=)
 
-   - OR bit per bit assegnazione OR inclusivo (&#124;=)
+   - Assegnazione OR inclusivo bit&#124;per bit (=)
 
 - [Operatore virgola](../cpp/comma-operator.md) (,)
 

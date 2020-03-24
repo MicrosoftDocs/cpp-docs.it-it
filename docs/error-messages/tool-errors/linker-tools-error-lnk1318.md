@@ -5,31 +5,31 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: 8ed6489a27d4c0e117f7f18281ff188f40936e0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160991"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183579"
 ---
 # <a name="linker-tools-error-lnk1318"></a>Errore degli strumenti del linker LNK1318
 
-> Errore PDB imprevisto. *causare* '*dettagli*'
+> Errore PDB imprevisto; *motivo* della '*Dettagli*'
 
-Il linker ha rilevato un errore imprevisto durante l'apertura, la lettura o scrittura in un file PDB.
+Il linker ha rilevato un errore imprevisto durante l'apertura, la lettura o la scrittura in un file PDB.
 
-Questo messaggio di errore viene generato per i problemi non comuni in file con estensione PDB. Il *causare* e *dettagli* rappresentano le informazioni disponibili per il linker quando si è verificato l'errore. Ciò potrebbe non essere molto utile, come errori comuni durante la gestione di file PDB sono messaggi di errore più informativo e separato.
+Questo messaggio di errore viene generato per problemi non comuni nei file PDB. La *ragione* e i *Dettagli* rappresentano le informazioni disponibili al linker quando si è verificato l'errore. Questo potrebbe non essere molto utile, in quanto gli errori comuni quando si gestiscono i file PDB hanno messaggi di errore distinti e più informativi.
 
-Poiché l'origine dell'errore è comune, è solo Consiglio generico disponibile per la risoluzione del problema:
+Poiché l'origine dell'errore non è comune, è disponibile solo un Consiglio generico per la risoluzione di questo problema:
 
-- Eseguire un'operazione di pulizia nelle directory di compilazione e quindi eseguire una build completa della soluzione.
+- Eseguire un'operazione di pulizia nelle directory di compilazione e quindi eseguire una compilazione completa della soluzione.
 
-- Riavviare il computer, o verificare la presenza di processi mspdbsrv.exe inutile o bloccata e li termina in TaskManager.
+- Riavviare il computer oppure verificare la presenza di processi mspdbsrv. exe randagi o sospesi e ucciderli in TaskManager.
 
-- Disattivare i controlli antivirus nelle directory del progetto.
+- Disabilitare i controlli antivirus nelle directory del progetto.
 
-- Usare la [/Zf](../../build/reference/zf.md) se si usa l'opzione del compilatore [/MP](../../build/reference/mp-build-with-multiple-processes.md) processo di compilazione con MSBuild o in un altro parallele.
+- Usare l'opzione del compilatore [/ZF](../../build/reference/zf.md) se si usa [/MP](../../build/reference/mp-build-with-multiple-processes.md) con MSBuild o un altro processo di compilazione parallela.
 
-- Provare a compilare con il set di strumenti a 64 bit ospitato.
+- Provare a compilare usando il set di strumenti ospitato a 64 bit.
 
-- Serializzare il collegamento per mitigare i problemi di collegamento parallelo, se necessario. Questo errore può verificarsi se mspdbsrv.exe viene avviato da un'istanza di collegamento e viene arrestata prima che venga eseguita un'altra istanza del collegamento di utilizzarlo. Lo svantaggio di questa correzione è che le compilazioni di progetto potrebbero richiedere tempi notevolmente più lunghi.
+- Serializzare il collegamento per attenuare i problemi di collegamento parallelo, se necessario. Questo errore può verificarsi se mspdbsrv. exe viene avviato da un'istanza di link e viene arrestato prima che un'altra istanza di link venga eseguita utilizzandola. Lo svantaggio di questa correzione è che le compilazioni di progetto possono richiedere tempi di completamento molto più lunghi.

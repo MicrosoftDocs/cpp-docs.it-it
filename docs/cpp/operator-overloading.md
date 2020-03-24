@@ -1,5 +1,5 @@
 ---
-title: Overload degli operatori
+title: Overload di operatori
 ms.date: 11/04/2016
 f1_keywords:
 - operator_cpp
@@ -11,81 +11,81 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16f68088ffffd6c3cf38f5ae3adda5f2d59fb57
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188571"
 ---
 # <a name="operator-overloading"></a>Overload degli operatori
 
-Il **operator** parola chiave dichiara una funzione che specifica il significato *simbolo operatore* quando viene applicato alle istanze di una classe. In tal modo è possibile assegnare più significati all'operatore, che diventa quindi operatore di overload. Il compilatore distingue tra i diversi significati di un operatore esaminando i tipi degli operandi.
+La parola chiave **operator** dichiara una funzione che specifica il significato di *operator-symbol* quando viene applicata alle istanze di una classe. In tal modo è possibile assegnare più significati all'operatore, che diventa quindi operatore di overload. Il compilatore distingue tra i diversi significati di un operatore esaminando i tipi degli operandi.
 
 ## <a name="syntax"></a>Sintassi
 
-> *tipo di* **operator** *simbolo operatore* **(** *dall'elenco dei parametri* **)**
+> *type* **operatore** *di tipo operatore-symbol* **(** *parameter-list* **)**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È possibile ridefinire la funzione della maggior parte degli operatori incorporati globalmente o classe per classe. Gli operatori di overload vengono implementati come funzioni.
 
-È il nome di un operatore di overload **operator** *x*, dove *x* è l'operatore come appare nella tabella seguente. Ad esempio, per eseguire l'overload dell'operatore di addizione, definire una funzione denominata **operatore +**. Analogamente, per eseguire l'overload dell'operatore di addizione/assegnazione **+=**, definire una funzione denominata **operator + =**.
+Il nome di un operatore di overload è **operator** *x*, dove *x* è l'operatore visualizzato nella tabella seguente. Per eseguire l'overload dell'operatore di addizione, ad esempio, si definisce una funzione denominata **operator +** . Analogamente, per eseguire l'overload dell'operatore di addizione/assegnazione, **+=** , definire una funzione denominata **operator + =** .
 
 ### <a name="redefinable-operators"></a>Operatori ridefinibili
 
-|Operatore|Nome|Tipo|
+|Operatore|Nome|Type|
 |--------------|----------|----------|
-|**,**|Virgola|Binario|
-|**\!**|NOT logico|Unario|
-|**\!=**|Disuguaglianza|Binario|
-|**%**|Modulo|Binario|
-|**%=**|Assegnazione modulo|Binario|
-|**&**|AND bit per bit|Binario|
-|**&**|Address-of|Unario|
-|**&&**|AND logico|Binario|
-|**&=**|Assegnazione AND bit per bit|Binario|
+|**,**|Virgola|Binary|
+|**!**|NOT logico|Unaria|
+|**!=**|Disuguaglianza|Binary|
+|**%**|Modulus|Binary|
+|**%=**|Assegnazione modulo|Binary|
+|**&**|AND bit per bit|Binary|
+|**&**|Address-of|Unaria|
+|**&&**|AND logico|Binary|
+|**&=**|Assegnazione AND bit per bit|Binary|
 |**( )**|Chiamata di funzione|—|
-|**( )**|Operatore cast|Unario|
-|**&#42;**|Moltiplicazione|Binario|
-|**&#42;**|Dereferenziazione del puntatore|Unario|
-|**&#42;=**|Assegnazione di moltiplicazione|Binario|
-|**+**|Addizione|Binario|
-|**+**|Più unario|Unario|
-|**++**|Incremento <sup>1</sup>|Unario|
-|**+=**|Assegnazione di addizione|Binario|
-|**-**|Sottrazione|Binario|
-|**-**|Negazione unaria|Unario|
-|**--**|Decremento <sup>1</sup>|Unario|
-|**-=**|Assegnazione di sottrazione|Binario|
-|**->**|Selezione dei membri|Binario|
-|**->&#42;**|Selezione puntatore a membro|Binario|
-|**/**|Divisione|Binario|
-|**/=**|Assegnazione di divisione|Binario|
-|**\<**|Minore di|Binario|
-|**<<**|Spostamento a sinistra|Binario|
-|**<<=**|Assegnazione di spostamento a sinistra|Binario|
-|**<=**|Minore o uguale a|Binario|
-|**=**|Assegnazione|Binario|
-|**==**|Uguaglianza|Binario|
-|**>**|Maggiore di|Binario|
-|**>=**|Maggiore o uguale a|Binario|
-|**>>**|Spostamento a destra|Binario|
-|**>>=**|Assegnazione di spostamento a destra|Binario|
-|**[ ]**|Indice di matrice|—|
-|**^**|OR esclusivo|Binario|
-|**^=**|Assegnazione OR esclusivo|Binario|
-|**&#124;**|OR inclusivo bit per bit|Binario|
-|**&#124;=**|Assegnazione OR inclusivo bit per bit|Binario|
-|**&#124;&#124;**|OR logico|Binario|
-|**~**|Complemento di uno|Unario|
-|**delete**|Eliminare|—|
-|**new**|Nuovo|—|
-|operatori di conversione|operatori di conversione|Unario|
+|**( )**|Operatore cast|Unaria|
+|**&#42;**|Moltiplicazione|Binary|
+|**&#42;**|Dereferenziazione del puntatore|Unaria|
+|**&#42;=**|Assegnazione di moltiplicazione|Binary|
+|**+**|Addizione|Binary|
+|**+**|Più unario|Unaria|
+|**++**|Incremento <sup>1</sup>|Unaria|
+|**+=**|Assegnazione di addizione|Binary|
+|**-**|Sottrazione|Binary|
+|**-**|Negazione unaria|Unaria|
+|**--**|Decrementa <sup>1</sup>|Unaria|
+|**-=**|Assegnazione di sottrazione|Binary|
+|**->**|Selezione dei membri|Binary|
+|**->&#42;**|Selezione puntatore a membro|Binary|
+|**/**|Divisione|Binary|
+|**/=**|Assegnazione di divisione|Binary|
+|**\<**|Minore di|Binary|
+|**<<**|Spostamento a sinistra|Binary|
+|**<<=**|Assegnazione di spostamento a sinistra|Binary|
+|**<=**|Minore o uguale a|Binary|
+|**=**|Assegnazione|Binary|
+|**==**|Uguaglianza|Binary|
+|**>**|Maggiore di|Binary|
+|**>=**|Maggiore o uguale a|Binary|
+|**>>**|Spostamento a destra|Binary|
+|**>>=**|Assegnazione di spostamento a destra|Binary|
+|**[ ]**|Indice inferiore di matrice|—|
+|**^**|OR esclusivo|Binary|
+|**^=**|Assegnazione OR esclusivo|Binary|
+|**&#124;**|OR inclusivo bit per bit|Binary|
+|**&#124;=**|Assegnazione OR inclusivo bit per bit|Binary|
+|**&#124;&#124;**|OR logico|Binary|
+|**~**|Complemento di uno|Unaria|
+|**delete**|Delete|—|
+|**Nuovo**|Nuovo|—|
+|operatori di conversione|operatori di conversione|Unaria|
 
-<sup>1</sup> incrementare due versioni dell'operatore unario e operatori di decremento esistono: incremento prefisso e incremento suffisso.
+<sup>1</sup> sono presenti due versioni degli operatori di incremento e decremento unari: preincrement e postincrement.
 
-Visualizzare [regole generali per overload di operatori](../cpp/general-rules-for-operator-overloading.md) per altre informazioni. Negli argomenti seguenti vengono descritti i vincoli per le diverse categorie di operatori di overload:
+Per ulteriori informazioni, vedere [regole generali per l'overload degli operatori](../cpp/general-rules-for-operator-overloading.md) . Negli argomenti seguenti vengono descritti i vincoli per le diverse categorie di operatori di overload:
 
 - [Operatori unari](../cpp/overloading-unary-operators.md)
 
@@ -103,7 +103,7 @@ Visualizzare [regole generali per overload di operatori](../cpp/general-rules-fo
 
 - [Conversioni di tipo definite dall'utente](../cpp/user-defined-type-conversions-cpp.md)
 
-Gli operatori elencati nella tabella seguente non possono essere sottoposti a overload. La tabella include i simboli del preprocessore **#** e **##**.
+Gli operatori elencati nella tabella seguente non possono essere sottoposti a overload. La tabella include i simboli del preprocessore **#** e **##** .
 
 ### <a name="nonredefinable-operators"></a>Operatori non ridefinibili
 
@@ -125,7 +125,7 @@ pt.operator+( 3 );  // Call addition operator to add 3 to pt.
 
 ## <a name="example"></a>Esempio
 
-Gli overload di esempio seguente il **+** operaa a add due numeri complessi e restituisce il risultato.
+Nell'esempio seguente viene sovraccarico l'operatore **+** per aggiungere due numeri complessi e viene restituito il risultato.
 
 ```cpp
 // operator_overloading.cpp

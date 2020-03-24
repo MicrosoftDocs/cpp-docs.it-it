@@ -4,22 +4,22 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - event handling [C++]
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: bd74ba0b20e2058f0b04d0d0d3c22c9d526157a0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cf16ea0e6e14981f1105456a5f17d68c05a9c3fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222116"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189208"
 ---
 # <a name="event-handling"></a>Gestione di eventi
 
-Gestione degli eventi viene principalmente supportata per le classi COM (classi C++ che implementano oggetti COM, in genere utilizzando le classi ATL o il [coclasse](../windows/coclass.md) attributo). Per altre informazioni, vedere [gestione degli eventi in COM](../cpp/event-handling-in-com.md).
+La gestione degli eventi è supportata principalmente per leC++ classi com (classi che implementano oggetti com, in genere usando le classi ATL o l'attributo [coclass](../windows/coclass.md) ). Per ulteriori informazioni, vedere [gestione degli eventi in com](../cpp/event-handling-in-com.md).
 
-La gestione degli eventi viene inoltre supportata per le classi C++ native (classi C++ che non implementano oggetti COM), tuttavia, tale supporto è deprecato e verrà rimosso nella versione futura.  Per altre informazioni, vedere [gestione degli eventi in C++ nativo](../cpp/event-handling-in-native-cpp.md).
+La gestione degli eventi viene inoltre supportata per le classi C++ native (classi C++ che non implementano oggetti COM), tuttavia, tale supporto è deprecato e verrà rimosso nella versione futura.  Per ulteriori informazioni, vedere [gestione degli eventi in C++native ](../cpp/event-handling-in-native-cpp.md).
 
 La gestione degli eventi supporta l'utilizzo singolo e multithreading e protegge i dati dall'accesso multithreading simultaneo. Consente inoltre di derivare le sottoclassi da classi ricevitore o di origine eventi e di supportare l'origine/la ricezione dell'evento esteso nella classe derivata.
 
-Microsoft C++ compilatore include gli attributi e parole chiave per la dichiarazione di eventi e gestori eventi. Gli attributi e le parole chiave dell'evento possono essere utilizzati nei programmi CLR e nei programmi C++ nativi.
+Il compilatore C++ Microsoft include gli attributi e le parole chiave per la dichiarazione di eventi e gestori eventi. Gli attributi e le parole chiave dell'evento possono essere utilizzati nei programmi CLR e nei programmi C++ nativi.
 
 |Argomento|Descrizione|
 |-----------|-----------------|

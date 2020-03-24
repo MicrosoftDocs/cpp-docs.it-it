@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a556fbffad41d04b3eb0ea1acfd5e8739ddd5b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408342"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186803"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>Avviso del compilatore (livello 1) C4399
 
-> «*simbolo*': simbolo per processo non dovrebbe essere contrassegnato con declspec quando viene compilato con /clr: pure
+> '*Symbol*': il simbolo per processo non deve essere contrassegnato con __declspec (dllimport) quando compilato con/CLR: pure
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
+L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e non è supportata in visual studio 2017.
 
-I dati da un'immagine nativa o un'immagine con costrutti nativi e CLR non possono essere importati in un'immagine pure. Per risolvere questo problema, eseguire la compilazione con **/clr** (non **/clr: pure**) o eliminare `__declspec(dllimport)`.
+I dati di un'immagine nativa o di un'immagine con costrutti nativi e CLR non possono essere importati in un'immagine pure. Per risolvere il problema, compilare con **/CLR** (non **/CLR: pure**) o DELETE `__declspec(dllimport)`.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4399.
+L'esempio seguente genera l'C4399.
 
 ```cpp
 // C4399.cpp

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: 1fc487628f26dcac097109bc71fa960e501d0797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a46ccb1cf519080c5105855e41ecd3ebc23f77
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266816"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188051"
 ---
 # <a name="transfers-of-control"></a>Trasferimenti del controllo
 
-È possibile usare la **goto** istruzione o un' **case** etichette in un **passare** istruzione per specificare un programma che esegue il branching dopo un inizializzatore. Tale codice non è valido, a meno che la dichiarazione che contiene l'inizializzatore non sia in un blocco incluso dal blocco in cui si verifica l'istruzione di salto.
+È possibile usare l'istruzione **goto** o un'etichetta **case** in un'istruzione **Switch** per specificare un programma che esegue il branching dopo un inizializzatore. Tale codice non è valido, a meno che la dichiarazione che contiene l'inizializzatore non sia in un blocco incluso dal blocco in cui si verifica l'istruzione di salto.
 
-Nell'esempio seguente viene illustrato un ciclo che dichiara e inizializza gli oggetti `total`, `ch` e `i`. È inoltre disponibile un errati **goto** istruzione che trasferisce il controllo dopo un inizializzatore.
+Nell'esempio seguente viene illustrato un ciclo che dichiara e inizializza gli oggetti `total`, `ch` e `i`. Esiste anche un'istruzione **goto** errata che trasferisce il controllo oltre un inizializzatore.
 
 ```cpp
 // transfers_of_control.cpp
@@ -48,6 +48,6 @@ int main()
 }
 ```
 
-Nell'esempio precedente, il **goto** istruzione prova a trasferire il controllo dopo l'inizializzazione di `i`. Tuttavia, se `i` è stato dichiarato ma non inizializzato, il trasferimento è valido.
+Nell'esempio precedente, l'istruzione **goto** tenta di trasferire il controllo dopo l'inizializzazione del `i`. Tuttavia, se `i` è stato dichiarato ma non inizializzato, il trasferimento è valido.
 
-Gli oggetti `total` e `ch`, dichiarati nel blocco in cui viene utilizzato come il *istruzione* del **mentre** istruzione, vengono eliminati definitivamente quando tale blocco viene chiuso mediante la  **interruzione** istruzione.
+Gli oggetti `total` e `ch`, dichiarati nel blocco che funge da *istruzione* dell'istruzione **while** , vengono eliminati definitivamente quando il blocco viene terminato utilizzando l'istruzione **break** .

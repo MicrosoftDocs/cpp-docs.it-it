@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4b650542a3a85c8f0008374abef02686c5491a3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154321"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188922"
 ---
-# <a name="fastcall"></a>__fastcall
+# <a name="__fastcall"></a>__fastcall
 
 **Sezione specifica Microsoft**
 
-Il **fastcall** convenzione di chiamata specifica che gli argomenti alle funzioni devono essere passati nei registri, quando possibile. Questa convenzione di chiamata si applica solo all'architettura x86. Nell'elenco seguente viene illustrata l'implementazione di questa convenzione di chiamata.
+La convenzione di chiamata **__fastcall** specifica che gli argomenti per le funzioni devono essere passati nei registri, quando possibile. Questa convenzione di chiamata si applica solo all'architettura x86. Nell'elenco seguente viene illustrata l'implementazione di questa convenzione di chiamata.
 
 |Elemento|Implementazione|
 |-------------|--------------------|
 |Ordine in cui gli argomenti vengono passati|I primi due argomenti DWORD o quelli più piccoli, che sono presenti nell'elenco di argomenti da sinistra a destra, vengono passati nei registri EDX e ECX; tutti gli altri argomenti vengono passati nello stack da destra a sinistra.|
 |Responsabilità di manutenzione dello stack|La funzione chiamata estrae gli argomenti dallo stack.|
-|Convenzione della decorazione dei nomi|Simbolo di chiocciola (\@) è anteposto ai nomi; un simbolo seguito dal numero di byte (in decimale) nel parametro di elenco è Posposto ai nomi.|
+|Convenzione della decorazione dei nomi|Il simbolo di chiocciola (\@) è preceduto dai nomi; un simbolo di chiocciola seguito dal numero di byte (in decimali) nell'elenco di parametri è suffisso per i nomi.|
 |Convenzione della conversione maiuscolo/minuscolo e viceversa|Non viene effettuata alcuna conversione maiuscole/minuscole.|
 
 > [!NOTE]
 > Nelle versioni future del compilatore è possibile che vengano utilizzati registri differenti per archiviare i parametri.
 
-Usando il [/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md) l'opzione del compilatore, ogni funzione nel modulo viene compilata come **fastcall** a meno che la funzione viene dichiarata utilizzando un attributo in conflitto, o il nome della funzione `main` .
+L'uso dell'opzione del compilatore [/gr](../build/reference/gd-gr-gv-gz-calling-convention.md) fa sì che ogni funzione nel modulo venga compilata come **__fastcall** , a meno che la funzione non venga dichiarata usando un attributo in conflitto o il nome della funzione sia `main`.
 
-Il **fastcall** (parola chiave) viene accettata e ignorata dai compilatori destinati a ARM e x64 architetture; su una x64 del chip, per convenzione, i primi quattro argomenti vengono passati nei registri quando possibile e argomenti aggiuntivi vengono passati nello stack. Per altre informazioni, vedere [x64 convenzione di chiamata](../build/x64-calling-convention.md). In un chip ARM possono essere passati fino a quattro argomenti Integer e otto argomenti a virgola mobile nei registri e argomenti aggiuntivi vengono passati nello stack.
+La parola chiave **__fastcall** viene accettata e ignorata dai compilatori destinati alle architetture ARM e x64. in un chip x64, per convenzione, i primi quattro argomenti vengono passati nei registri quando possibile e gli argomenti aggiuntivi vengono passati nello stack. Per altre informazioni, vedere [convenzione di chiamata x64](../build/x64-calling-convention.md). In un chip ARM possono essere passati fino a quattro argomenti Integer e otto argomenti a virgola mobile nei registri e argomenti aggiuntivi vengono passati nello stack.
 
 Per le funzioni di classi non statiche, se la funzione viene definita non inline, il modificatore della convenzione di chiamata non deve essere specificato nella definizione non inline. Questo significa che per i metodi membri non statici della classe la convenzione di chiamata specificata durante la dichiarazione è presunta in corrispondenza della definizione. Data la definizione di classe seguente
 
@@ -55,7 +55,7 @@ equivale a questo
 void __fastcall CMyClass::mymethod() { return; }
 ```
 
-Per garantire la compatibilità con le versioni precedenti, **fastcall** è un sinonimo **fastcall** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
+Per compatibilità con le versioni precedenti, **_fastcall** è un sinonimo di **__fastcall** a meno che non sia specificata l'opzione del compilatore [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Esempio
 

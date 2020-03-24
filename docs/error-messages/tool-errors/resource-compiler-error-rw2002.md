@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230411"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190690"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Errore del compilatore di risorse RW2002
 
 Errore di analisi
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
 
 1. **Tipo di acceleratore obbligatorio (ASCII o VIRTKEY)**
 
@@ -69,7 +69,7 @@ Errore di analisi
 
 1. **Previsto nome classe di controllo**
 
-   Il `class` campo di un'istruzione di **controllo** nell'istruzione della **finestra di dialogo** deve essere uno dei tipi seguenti: BUTTON, COMBOBOX, EDIT, LISTBOX, SCROLLBAR, STATIC o definito dall'utente. Verificare che la classe sia stata digitata correttamente.
+   Il campo `class` di un'istruzione di **controllo** nell'istruzione della **finestra di dialogo** deve essere uno dei seguenti tipi: Button, ComboBox, Edit, ListBox, ScrollBar, static o definito dall'utente. Verificare che la classe sia stata digitata correttamente.
 
 1. **Nome del tipo di carattere previsto**
 
@@ -85,7 +85,7 @@ Errore di analisi
 
 1. **Previsto valore del comando numerico**
 
-   Nel compilatore di risorse era previsto un campo numerico *idValue* nell'istruzione **Accelerators** . Assicurarsi di aver usato una `#define` costante per specificare il valore e che la costante sia stata digitata correttamente.
+   Nel compilatore di risorse era previsto un campo numerico *idValue* nell'istruzione **Accelerators** . Assicurarsi di aver usato una costante `#define` per specificare il valore e che la costante sia stata digitata correttamente.
 
 1. **Prevista costante numerica nella tabella di stringhe**
 
@@ -109,7 +109,7 @@ Errore di analisi
 
 1. **Previsto numero per ID**
 
-   Previsto un numero per il `id` campo di un'istruzione di controllo nell'istruzione della **finestra di dialogo** . Assicurarsi di disporre di un numero o `#define` di un'istruzione per l'ID del controllo.
+   Previsto un numero per il campo `id` di un'istruzione di controllo nell'istruzione della **finestra di dialogo** . Assicurarsi di disporre di un numero o di un'istruzione `#define` per l'ID del controllo.
 
 1. **Prevista stringa tra virgolette nella classe della finestra di dialogo**
 
@@ -141,7 +141,7 @@ Errore di analisi
 
 1. **Tipo di controllo non valido**
 
-   Ogni istruzione di controllo in un'istruzione **Dialog** deve essere una delle seguenti: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICON, LISTBOX, LTEXT, PULSANTE, RADIOBUTTON, RTEXT, SCROLLBAR. Verificare che le istruzioni di controllo siano digitate correttamente.
+   Ogni istruzione di controllo in un'istruzione **Dialog** deve essere una delle seguenti: CheckBox, ComboBox, Control, CTEXT, DEFPUSHBUTTON, EDITTEXT, GroupBox, Icon, ListBox, LTEXT, pulsante, RadioButton, RTEXT, ScrollBar. Verificare che le istruzioni di controllo siano digitate correttamente.
 
 1. **Tipo non valido**
 

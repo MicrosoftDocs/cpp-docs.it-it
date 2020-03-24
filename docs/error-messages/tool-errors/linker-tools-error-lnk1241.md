@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1241
 ms.assetid: 7b8b52eb-0231-4521-b52a-2bce8d3e8956
-ms.openlocfilehash: 87f73680d7ed40b9b2db9f40f9140976d552ab6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e2b955787166c94be4ca35e1c58df5becd243f2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183813"
 ---
 # <a name="linker-tools-error-lnk1241"></a>Errore degli strumenti del linker LNK1241
 
-file di risorse 'file di risorse' già specificato
+il file di risorse ' file di risorse ' è già specificato
 
-Questo errore viene generato se si esegue **cvtres** manualmente dalla riga di comando e se si passa quindi il file risultante obj file al linker anche in altri file con estensione res.
+Questo errore viene generato se si esegue **cvtres** manualmente dalla riga di comando e si passa il file con estensione obj risultante al linker oltre ad altri file con estensione res.
 
-Per specificare più file con estensione res, passarle tutte al linker come file con estensione res, non dall'interno di file con estensione obj creati da **cvtres**.
+Per specificare più file con estensione res, passarli tutti al linker come file con estensione res, non all'interno dei file obj creati da **cvtres**.

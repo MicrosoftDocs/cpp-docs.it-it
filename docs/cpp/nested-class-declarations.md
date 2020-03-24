@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301552"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161165"
 ---
 # <a name="nested-class-declarations"></a>Dichiarazioni di classi annidate
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` e `BufferedIO::BufferedOutput` dichiarati all'interno di `BufferedIO`. Questi nomi di classe non sono visibili al di fuori l'ambito della classe `BufferedIO`. Tuttavia, un oggetto di tipo `BufferedIO` non contiene alcun oggetto dei tipi `BufferedInput` o `BufferedOutput`.
+`BufferedIO::BufferedInput` e `BufferedIO::BufferedOutput` sono dichiarati all'interno `BufferedIO`. Questi nomi di classe non sono visibili al di fuori l'ambito della classe `BufferedIO`. Tuttavia, un oggetto di tipo `BufferedIO` non contiene alcun oggetto dei tipi `BufferedInput` o `BufferedOutput`.
 
 Le classi annidate possono utilizzare direttamente nomi, nomi dei tipi, nomi dei membri statici ed enumeratori solo dalla classe contenitore. Per utilizzare i nomi degli altri membri della classe, è necessario utilizzare puntatori, riferimenti o nomi di oggetto.
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-Nell'esempio precedente, il *qualified-type-name* sintassi viene usata per dichiarare il nome della funzione. La dichiarazione:
+Nell'esempio precedente, la sintassi *Qualified-Type-Name* viene usata per dichiarare il nome della funzione. La dichiarazione:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-indica "la funzione `read` che è un membro della classe `BufferedInput` inclusa nell'ambito della classe `BufferedIO`". Poiché questa dichiarazione Usa la *qualified-type-name* informazioni sulla sintassi, sono possibili i costrutti del form seguente:
+indica "la funzione `read` che è un membro della classe `BufferedInput` inclusa nell'ambito della classe `BufferedIO`". Poiché questa dichiarazione usa la sintassi *Qualified-Type-Name* , sono possibili i costrutti del form seguente:
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-La dichiarazione precedente equivale al precedente, ma usa una **typedef** nome al posto dei nomi di classe.
+La dichiarazione precedente è equivalente a quella precedente, ma usa un nome di **typedef** al posto dei nomi di classe.
 
 ## <a name="friend-functions-in-nested-classes"></a>Funzioni friend in classi annidate
 

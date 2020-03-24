@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 449659126f52997d548ebd7785a78c1200038ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515766"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182032"
 ---
 # <a name="generic-delegates-ccli"></a>Delegati generici (C++/CLI)
 
@@ -29,7 +29,7 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parametri
 
-*Attributi*<br/>
+*attributes*<br/>
 (Facoltativo) Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.
 
 *type-parameter-identifier(s)*<br/>

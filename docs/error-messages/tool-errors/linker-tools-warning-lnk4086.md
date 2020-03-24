@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4086
 ms.assetid: ea1eecbb-ba2c-41bb-9a4f-fa0808a4b92d
-ms.openlocfilehash: c6a5a0714e070e6cf3aee8efcdfbdfa07fa9ee69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e012ceb5e20855353c69bbcde85fb78afad2011
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399934"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183423"
 ---
 # <a name="linker-tools-warning-lnk4086"></a>Avviso degli strumenti del linker LNK4086
 
-punto di ingresso 'function' non è stdcall con 'numero' byte di argomenti; immagine non venga eseguita
+il punto di ingresso ' Function ' non è __stdcall con ' Number ' byte degli argomenti; l'immagine potrebbe non essere eseguita
 
-Deve essere il punto di ingresso per una DLL `__stdcall`. Ricompilare la funzione con il [/Gz](../../build/reference/gd-gr-gv-gz-calling-convention.md) oppure specificare `__stdcall` o WINAPI quando si definisce la funzione.
+Il punto di ingresso per una DLL deve essere `__stdcall`. Ricompilare la funzione con l'opzione [/GZ](../../build/reference/gd-gr-gv-gz-calling-convention.md) o specificare `__stdcall` o WINAPI quando si definisce la funzione.

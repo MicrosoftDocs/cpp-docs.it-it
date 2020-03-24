@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1224
 ms.assetid: e190b5d0-ce0c-4f65-8cc0-753f1cc9758a
-ms.openlocfilehash: 7e2c8da7443a9251d8111f643a785f5d75149cac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b84a2390baad5ac307fa025e3fffafa0f093fb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242544"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183878"
 ---
 # <a name="linker-tools-error-lnk1224"></a>Errore degli strumenti del linker LNK1224
 
-indirizzo di base dell'immagine non valido
+Indirizzo di base dell'immagine non valido
 
-È specificato un indirizzo di base valido per l'immagine. Indirizzi di base devono essere allineati a 64KB (le ultime quattro cifre esadecimali devono essere zero) e l'immagine di base deve essere contenuta in un valore con o senza segno a 32 bit.
+È stato specificato un indirizzo di base non valido per l'immagine. Gli indirizzi di base devono essere allineati a 64KB (le ultime quattro cifre esadecimali devono essere pari a zero) e l'immagine di base deve rientrare in un valore con segno o senza segno a 32 bit.

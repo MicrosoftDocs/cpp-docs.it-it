@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4161
 ms.assetid: 03d3be61-83f1-4009-8310-8758ab67055f
-ms.openlocfilehash: e1bbc949c298a7cfb6c3a3a061616db3dc4730f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ff4b645ec704c1b17d3c74aba434cf3ac7f05e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402268"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199004"
 ---
 # <a name="compiler-warning-level-3-c4161"></a>Avviso del compilatore (livello 3) C4161
 
-> #<a name="pragma-pragmapop--more-pops-than-pushes"></a>il pragma *pragma*(POP...): più estrazioni che inserimenti
+> #<a name="pragma-pragmapop--more-pops-than-pushes"></a>pragma *pragma (pop*...): più estrazioni che push
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il codice sorgente contiene più estrazioni che inserimenti per pragma *pragma*, quindi lo stack potrebbe non comportarsi come previsto. Per evitare l'avviso, assicurarsi che il numero di estrazioni non superi il numero di inserimenti.
 

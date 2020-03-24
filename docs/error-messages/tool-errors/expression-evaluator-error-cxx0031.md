@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0031
 - CXX0031
 ms.assetid: adafbcb7-982f-495f-a34d-72e95d7e54c7
-ms.openlocfilehash: 29bd4959c7bdd20b25279ca5d0e18814d1b23039
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd4b0d744f9fc101ec4a7bc3a2a01f1d14cfbf7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397094"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195591"
 ---
 # <a name="expression-evaluator-error-cxx0031"></a>Errore dell‘analizzatore di espressioni CXX0031
 
-espressione non espandibile.
+espressione non espandibile
 
 L'analizzatore di espressioni ha rilevato un errore interno.
 
-È possibile scrivere un'espressione equivalente che può essere valutata in modo corretto.
+Potrebbe essere possibile scrivere un'espressione equivalente che può essere valutata correttamente.
 
-Questo errore è identico all'errore CAN0031.
+Questo errore è identico a CAN0031.

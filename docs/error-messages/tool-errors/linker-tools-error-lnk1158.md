@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1158
 ms.assetid: 45febf16-d9e1-42db-af91-532e2717fd6a
-ms.openlocfilehash: 0dbb40fb1fe0405f3685a5e7246ecba2b53ec526
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2602c488db660ce067c672df4a746c388d987120
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254969"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184060"
 ---
 # <a name="linker-tools-error-lnk1158"></a>Errore degli strumenti del linker LNK1158
 
-non è possibile eseguire 'filename'
+Impossibile eseguire ' filename '
 
-Il determinato file eseguibile chiamato dal [collegamento](../../build/reference/linking.md) è anziché nella directory che contiene collegamenti né in una directory specificata nella variabile di ambiente PATH.
+Il file eseguibile specificato chiamato da [link](../../build/reference/linking.md) non si trova nella directory che contiene il collegamento o in una directory specificata nella variabile di ambiente Path.
 
-Ad esempio, si otterrà questo errore se si prova a usare il parametro PGOPTIMIZE per il [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) l'opzione del linker in un computer con sistema operativo a 32 bit.
+Se ad esempio si tenta di usare il parametro PGOPTIMIZE per l'opzione del linker [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) in un computer con un sistema operativo a 32 bit, questo errore viene ricevuto.

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - D8022
 ms.assetid: eb18ec34-d32d-4636-a852-abf2063e886b
-ms.openlocfilehash: 2ad64e726a247da0291c98ada5398371a13c37d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59e917f008e528debca3d5237a520cab92a2574a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196898"
 ---
 # <a name="command-line-error-d8022"></a>Errore della riga di comando D8022
 
-non è possibile aprire 'filemessaggio'
+non è possibile aprire ' messageFile '
 
-Il file specificato è non nella directory corrente o in una directory specificata nella variabile di ambiente PATH. Il file di messaggio contiene un breve riepilogo delle opzioni e sintassi della riga di comando del compilatore.
+Il file specificato non si trova nella directory corrente o in una directory specificata nella variabile di ambiente PATH. Il file di messaggio contiene un breve riepilogo della sintassi della riga di comando del compilatore e delle opzioni.
 
-Spostare questo file nella directory corrente o una directory nel percorso corrente. Se non è possibile trovare questo file, eseguire il programma di installazione per copiarlo dai dischi originali.
+Spostare il file nella directory corrente o in una directory nel percorso corrente. Se non è possibile trovare il file, eseguire il programma di installazione per copiarlo dai dischi di distribuzione.

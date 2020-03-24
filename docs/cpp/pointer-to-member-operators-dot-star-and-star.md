@@ -1,5 +1,5 @@
 ---
-title: Operatori puntatore a membro:. * e -&gt;*
+title: Operatori puntatore a membro:. * e-&gt;*
 ms.date: 11/04/2016
 f1_keywords:
 - .*
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-ms.openlocfilehash: 60dad0e3134662957ee21396d330af795e80918e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ff7dd26f36f10948dac42783ad61d16f5feda09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267663"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188337"
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>Operatori puntatore a membro:. * e -&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>Operatori puntatore a membro:. * e-&gt;*
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,9 +27,9 @@ expression .* expression
 expression ->* expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Gli operatori puntatore a membro,. * e ->\*, restituire il valore di un membro di classe specifico per l'oggetto specificato sul lato sinistro dell'espressione.  Nella parte destra deve essere specificato un membro della classe.  Nell'esempio seguente viene illustrato come utilizzare tali operatori.
+Gli operatori puntatore a membro,. * e->\*, restituiscono il valore di un membro di classe specifico per l'oggetto specificato sul lato sinistro dell'espressione.  Nella parte destra deve essere specificato un membro della classe.  Nell'esempio seguente viene illustrato come utilizzare tali operatori.
 
 ```cpp
 // expre_Expressions_with_Pointer_Member_Operators.cpp
@@ -82,11 +82,11 @@ Nell'esempio precedente un puntatore a un membro, `pmfn`, viene utilizzato per r
 
 L'operatore binario .* associa il proprio primo operando, che deve essere un oggetto di tipo classe, con il secondo operando, che deve essere di tipo puntatore a membro.
 
-L'operatore binario -> * Associa il proprio primo operando, che deve essere un puntatore a un oggetto di tipo classe, con il secondo operando, che deve essere un tipo di puntatore a membro.
+L'operatore binario-> * combina il primo operando, che deve essere un puntatore a un oggetto di tipo classe, con il secondo operando, che deve essere un tipo puntatore a membro.
 
 In un'espressione che contiene l'operatore .* il primo operando deve essere del tipo di classe del puntatore a membro specificato nel secondo operando (e deve essere accessibile da tale puntatore) o di un tipo accessibile senza ambiguità derivato da e accessibile da tale classe.
 
-In un'espressione contenente il-> * (operatore), il primo operando deve essere del tipo "puntatore al tipo di classe" del tipo specificato nel secondo operando o deve essere di un tipo senza ambiguità derivato da tale classe.
+In un'espressione che contiene l'operatore-> *, il primo operando deve essere del tipo "puntatore al tipo di classe" del tipo specificato nel secondo operando oppure deve essere di un tipo derivato in modo non ambiguo da tale classe.
 
 ## <a name="example"></a>Esempio
 
@@ -128,7 +128,7 @@ int main() {
 }
 ```
 
-Il risultato della. * o ->\* gli operatori puntatore a membro è un oggetto o una funzione del tipo specificato nella dichiarazione di puntatore a membro. Nell'esempio precedente il risultato dell'espressione `ADerived.*pmfnFunc1()` è un puntatore a una funzione che restituisce un valore nullo. Questo risultato è un valore l-value se il secondo operando è un valore di questo tipo.
+Il risultato di. * o->\* operatori puntatore a membro è un oggetto o una funzione del tipo specificato nella dichiarazione del puntatore a membro. Nell'esempio precedente il risultato dell'espressione `ADerived.*pmfnFunc1()` è un puntatore a una funzione che restituisce un valore nullo. Questo risultato è un valore l-value se il secondo operando è un valore di questo tipo.
 
 > [!NOTE]
 >  Se il risultato di uno degli operatori puntatore a membro è una funzione, il risultato può essere utilizzato solo come operando dell'operatore di chiamata di funzione.

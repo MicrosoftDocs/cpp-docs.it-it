@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ab1b11d3f8d3416a6e9ed345085d63ce86d56010
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516016"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181785"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Operatore di riferimento di traccia (C++/CLI e C++/CX)
 
@@ -29,7 +29,7 @@ Un riferimento di traccia presenta le caratteristiche descritte di seguito.
 
 - L'operatore punto (`.`) di accesso ai membri viene utilizzato per accedere a un membro dell'oggetto.
 
-- I riferimenti di traccia sono validi per i tipi valore e gli handle (ad esempio `String^`).
+- I riferimenti di traccia sono validi per gli handle e i tipi di valore (ad esempio `String^`).
 
 - A un riferimento di traccia non può essere assegnato un valore Null o **nullptr**. Può essere riassegnato a un altro oggetto valido quando necessario.
 

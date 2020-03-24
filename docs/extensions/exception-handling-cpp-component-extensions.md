@@ -10,18 +10,18 @@ helpviewer_keywords:
 - exception handling, types of
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-ms.openlocfilehash: b477f7355ee1f4f70a0ad3df8b85c4276c07d397
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 9f5662bb9e744b5db3b0ab25ac4230b2f67016bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516576"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182123"
 ---
 # <a name="exception-handling--ccli-and-ccx"></a>Gestione delle eccezioni (C++/CLI e C++/CX)
 
 Le applicazioni compilate con l'opzione del compilatore `/ZW` o `/clr` usano entrambe *eccezioni* per gestire gli errori imprevisti durante l'esecuzione del programma. Negli argomenti seguenti viene illustrata la gestione delle eccezioni nelle applicazioni C++/CLI o C++/CX.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Concetti di base per l'uso delle eccezioni gestite](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
 Descrive la generazione di eccezioni e l'uso di blocchi **try**/**catch**.

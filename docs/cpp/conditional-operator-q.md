@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 8c00db06ed5c0347cb9c720e35bd3e517df2a13c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276814"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189578"
 ---
 # <a name="conditional-operator-quest-"></a>Operatore condizionale: &quest;:
 
@@ -23,7 +23,7 @@ ms.locfileid: "72276814"
 expression ? expression : expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'operatore condizionale ( **?:** ) è un operatore ternario (accetta tre operandi). L'operatore condizionale funziona nel modo seguente:
 

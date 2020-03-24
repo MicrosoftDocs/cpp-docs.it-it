@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 31998cf77e3f3cfdc6bc19ad2fc57a50da77e0f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 29c6b22189ea1f644c0fa52ec0f4d605604361ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516346"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181993"
 ---
 # <a name="generics--ccli-and-ccx"></a>Generics (C++/CLI e C++/CX)
 
 I generics sono tipi e metodi con parametri. In questa sezione sono illustrate le funzionalità generiche supportate sia da Windows Runtime sia da Common Language Runtime e quelle supportate solo da Common Language Runtime. Viene inoltre descritto come creare metodi e tipi generici personalizzati in C++/CLI e come usare i tipi generici creati con un linguaggio .NET Framework in C++/CLI. Infine, in questa sezione viene fornito un confronto tra generics e modelli di C++.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Supporto da parte di Windows Runtime e Common Language Runtime
 
@@ -51,7 +51,7 @@ Informazioni sulla definizione e sull'utilizzo di classi generiche.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Procedura: Eseguire l'iterazione in una raccolta generica con for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
+[Procedura: Scorrere una raccolta generica con for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Uso della parola chiave [for each, in](../dotnet/for-each-in.md) in una raccolta generica.
 
 ## <a name="see-also"></a>Vedere anche

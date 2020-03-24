@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1188
 ms.assetid: 4af574b0-5b41-4580-9a37-52a634add995
-ms.openlocfilehash: 69ac20522aebb7391319c0de210e06b305f3fd0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b18a93c7434ee3d66f42829f373bd916a65369bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226478"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195175"
 ---
 # <a name="linker-tools-error-lnk1188"></a>Errore degli strumenti del linker LNK1188
 
-BADFIXUPSECTION:: destinazione di correzione non è valido 'symbol'; possibili sezione abbia lunghezza zero
+BADFIXUPSECTION:: destinazione della correzione ' symbol ' non valida; sezione di lunghezza zero possibile
 
-Durante un collegamento VxD, la destinazione di una rilocazione non dispone di una sezione. Con LINK386 (una versione precedente), un record gruppo OMF (generato da una direttiva di MASM gruppo) potrebbe essere stato utilizzato per combinare la sezione abbia lunghezza zero con un'altra sezione di lunghezza maggiore di zero. Formato COFF non supporta la direttiva di gruppo e sezioni di lunghezza zero. Quando LINK converte automaticamente questo tipo di oggetti OMF a COFF, questo errore può verificarsi.
+Durante un collegamento VxD, la destinazione di una rilocazione non include una sezione. Con LINK386 (versione precedente), è possibile che sia stato utilizzato un record del gruppo OMF (generato da una direttiva di gruppo MASM) per combinare la sezione di lunghezza zero con un'altra sezione di lunghezza diversa da zero. Il formato COFF non supporta la direttiva GROUP e le sezioni di lunghezza zero. Quando il collegamento converte automaticamente questo tipo di oggetti OMF in COFF, è possibile che si verifichi questo errore.

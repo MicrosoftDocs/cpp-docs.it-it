@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Dichiarare e usare puntatori interni e matrici gestite (C++/CLI)'
+title: 'Procedura: dichiarare e utilizzare i puntatori interni e le matrici gestite (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-ms.openlocfilehash: 0f7ec6551b09b2125fdb21736a851dae0dadbd4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 88308e0ba79a8272b2fc323b9219a29e234b25ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516336"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181980"
 ---
-# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Procedura: Dichiarare e usare puntatori interni e matrici gestite (C++/CLI)
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Procedura: dichiarare e utilizzare i puntatori interni e le matrici gestite (C++/CLI)
 
 L'esempio C++/CLI seguente mostra come dichiarare e usare un puntatore interno a una matrice.
 
