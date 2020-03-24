@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 402b59c4aee34a413a08235aab2327ca64e7db39
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c90a35bbaf967ecf50977987865d6a768b019fe3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439676"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150785"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Specifica il comportamento della virgola mobile)
 
@@ -63,7 +63,7 @@ L'opzione `/fp:except` genera il codice per garantire che tutte le eccezioni a v
 
 Si noti che `/fp:except` non Abilita alcuna eccezione a virgola mobile, ma è necessaria per consentire ai programmi di abilitare le eccezioni a virgola mobile. Vedere [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) per informazioni su come abilitare le eccezioni a virgola mobile.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 È possibile specificare più opzioni di `/fp` nella stessa riga di comando del compilatore. È possibile applicare solo una delle opzioni `/fp:strict`, `/fp:fast`e `/fp:precise` alla volta. Se nella riga di comando viene specificata più di una di queste opzioni, l'opzione successiva avrà la precedenza e il compilatore genererà un avviso. Le opzioni `/fp:strict` e `/fp:except` non sono compatibili con `/clr`.
 
@@ -270,4 +270,3 @@ In `/O2` `/fp:fast` il codice generato è semplificato, perché tutti i cast di 
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
- 

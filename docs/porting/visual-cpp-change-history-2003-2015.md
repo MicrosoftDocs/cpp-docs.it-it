@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076855"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150758"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
 
@@ -2883,7 +2883,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     };
     ```
 
-   Per trovare le posizioni nel codice che una versione precedente avrebbe cercato di ottimizzare, usare un compilatore di tale versione insieme all'opzione del compilatore `/W3` e attivare l'avviso C4370. Ad esempio:
+   Per trovare le posizioni nel codice che una versione precedente avrebbe cercato di ottimizzare, usare un compilatore di tale versione insieme all'opzione del compilatore `/W3` e attivare l'avviso C4370. Ad esempio,
 
     ```cpp
     #pragma warning(default:4370)
@@ -3040,7 +3040,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 ### <a name="standard-library"></a>Libreria standard
 
-- A seguito di una modifica che causa un'interruzione tra gli standard C++98/03 e C++11, se si usano argomenti di modello espliciti per la chiamata a `make_pair()`, come in `make_pair<int, int>(x, y)`, in genere la compilazione in Visual C++ in Visual Studio 2012 non viene eseguita. La soluzione consiste nel chiamare sempre `make_pair() ` senza argomenti di modello espliciti, come in `make_pair(x, y)`. Se si indicano argomenti di modello espliciti, viene vanificato lo scopo della funzione. Se è necessario controllare con precisione il tipo risultante, usare `pair` anziché `make_pair`, come in `pair<short, short>(int1, int2)`.
+- A seguito di una modifica che causa un'interruzione tra gli standard C++98/03 e C++11, se si usano argomenti di modello espliciti per la chiamata a `make_pair()`, come in `make_pair<int, int>(x, y)`, in genere la compilazione in Visual C++ in Visual Studio 2012 non viene eseguita. La soluzione consiste nel chiamare sempre `make_pair()` senza argomenti di modello espliciti, come nel `make_pair(x, y)`. Se si indicano argomenti di modello espliciti, viene vanificato lo scopo della funzione. Se è necessario controllare con precisione il tipo risultante, usare `pair` anziché `make_pair`, come in `pair<short, short>(int1, int2)`.
 
 - Un'altra modifica sostanziale tra gli standard C++ 98/03 e C++ 11: quando un è convertibile in modo implicito in B e B è implicitamente convertibile in C, ma non è implicitamente convertibile in C, C++ 98/03 e Visual Studio 2010 consentiva di convertire `pair<A, X>` (in modo implicito o esplicito) per `pair<C, X>`. (L'altro tipo, X, non è di interesse in questo caso e non è specifico del primo tipo nella coppia). Il C++ compilatore in Visual Studio 2012 rileva che non è implicitamente convertibile in C e rimuove la conversione della coppia dalla risoluzione dell'overload. Questa modifica è positiva per molti scenari. Ad esempio, l'overload di `func(const pair<int, int>&)` e `func(const pair<string, string>&)`e la chiamata di `func()` con `pair<const char *, const char *>` eseguiranno la compilazione con questa modifica. Tuttavia, la modifica interrompe il codice che si basava su conversioni di coppia aggressive. In genere, tale codice può essere corretto eseguendo una parte della conversione in modo esplicito, ad esempio passando `make_pair(static_cast<B>(a), x)` a una funzione che prevede `pair<C, X>`.
 

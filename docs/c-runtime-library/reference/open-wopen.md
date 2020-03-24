@@ -34,12 +34,12 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-ms.openlocfilehash: aad98844f4d9faf57c7bc5051eebabad09b860a4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4ce6e9aebe5d058143ad737f9c9db5bb68b30b1f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951169"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150726"
 ---
 # <a name="_open-_wopen"></a>_open, _wopen
 
@@ -65,7 +65,7 @@ int _wopen(
 *filename*<br/>
 Nome file.
 
-*oflag*<br/>
+*Oflag*<br/>
 Tipo di operazioni consentite.
 
 *pmode*<br/>
@@ -78,7 +78,7 @@ Ognuna di queste funzioni restituisce un descrittore di file per il file aperto.
 |Valore errno|Condizione|
 |-|-|
 | **EACCES** | Si è tentato di aprire un file di sola lettura per la scrittura, la modalità di condivisione del file non consente le operazioni specificate o il percorso specificato è una directory. |
-| **EEXIST** | Specificati i flag **_O_CREAT** e **_O_EXCL** , ma *filename* esiste già. |
+| **EEXIST** | Flag di **_O_CREAT** e di **_O_EXCL** specificati, ma *filename* esiste già. |
 | **EINVAL** | Argomento *Oflag* o *pmode* non valido. |
 | **EMFILE** | Non sono disponibili altri descrittori di file (sono aperti troppi file). |
 | **ENOENT** | File o percorso non trovato. |
@@ -95,7 +95,7 @@ La funzione **_open** apre il file specificato da *filename* e lo prepara per la
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_topen**|**_open**|**_open**|**_wopen**|
 
-*Oflag* è un'espressione Integer formata da una o più delle costanti manifeste o combinazioni di costanti seguenti, definite in \<fcntl. h >.
+*Oflag* è un'espressione Integer formata da una o più delle seguenti costanti manifesto o combinazioni di costanti, definite in \<fcntl. h >.
 
 |costante *Oflag*|Comportamento|
 |-|-|
@@ -104,14 +104,14 @@ La funzione **_open** apre il file specificato da *filename* e lo prepara per la
 | **_O_CREAT** | Crea e apre un nuovo file per la scrittura. Non ha alcun effetto se il file specificato da *filename* esiste. L'argomento *pmode* è obbligatorio quando si specifica **_O_CREAT** . |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | Crea un file come temporaneo e se possibile non lo scarica su disco. L'argomento *pmode* è obbligatorio quando si specifica **_O_CREAT** . |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | Crea un file come temporaneo; il file viene eliminato quando l'ultimo descrittore del file viene chiuso. L'argomento *pmode* è obbligatorio quando si specifica **_O_CREAT** . |
-| **_O_CREAT** &#124; ` _O_EXCL` | Restituisce un valore di errore se esiste un file specificato da *filename* . Si applica solo se usato con **_O_CREAT**. |
+| **_O_CREAT** &#124; `_O_EXCL` | Restituisce un valore di errore se esiste un file specificato da *filename* . Si applica solo se utilizzato con **_O_CREAT**. |
 | **_O_NOINHERIT** | Impedisce la creazione di un descrittore di file condiviso. |
 | **_O_RANDOM** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
 | **_O_RDONLY** | Apre un file per la sola lettura. Non può essere specificato con **_O_RDWR** o **_O_WRONLY**. |
 | **_O_RDWR** | Apre un file per lettura e scrittura. Non può essere specificato con **_O_RDONLY** o **_O_WRONLY**. |
 | **_O_SEQUENTIAL** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco. |
 | **_O_TEXT** | Apre un file in modalità testo (convertito). Per altre informazioni, vedere [I/O file in modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [fopen](fopen-wfopen.md). |
-| **_O_TRUNC** | Apre un file e lo tronca a lunghezza zero; il file deve disporre dell'autorizzazione di scrittura. Non può essere specificato con **_O_RDONLY**. **_O_TRUNC** usato con **_O_CREAT** apre un file esistente o crea un file. **Nota:** Il flag **_O_TRUNC** Elimina il contenuto del file specificato. |
+| **_O_TRUNC** | Apre un file e lo tronca a lunghezza zero; il file deve disporre dell'autorizzazione di scrittura. Non può essere specificato con **_O_RDONLY**. **_O_TRUNC** utilizzato con **_O_CREAT** apre un file esistente o crea un file. **Nota:** Il flag **_O_TRUNC** Elimina il contenuto del file specificato. |
 | **_O_WRONLY** | Apre un file per la sola scrittura. Non può essere specificato con **_O_RDONLY** o **_O_RDWR**. |
 | **_O_U16TEXT** | Apre un file in modalità Unicode UTF-16. |
 | **_O_U8TEXT** | Apre un file in modalità Unicode UTF-8. |
@@ -119,11 +119,11 @@ La funzione **_open** apre il file specificato da *filename* e lo prepara per la
 
 Per specificare la modalità di accesso ai file, è necessario specificare **_O_RDONLY**, **_O_RDWR**o **_O_WRONLY**. Non vi è alcun valore predefinito per la modalità d'accesso.
 
-Se **_O_WTEXT** viene usato per aprire un file per la lettura, **_open** legge l'inizio del file e verifica la presenza di un byte order mark (BOM). Se l'indicatore è presente, il file viene considerato come un file UTF-8 o UTF-16LE, a seconda dell'indicatore dell'ordine dei byte. In caso contrario, il file viene considerato come ANSI. Quando un file viene aperto per la scrittura usando **_O_WTEXT**, viene usato il formato UTF-16. Indipendentemente da qualsiasi impostazione precedente o byte order mark, se si utilizza **_O_U8TEXT** , il file viene sempre aperto come UTF-8; Se si usa **_O_U16TEXT** , il file viene sempre aperto come UTF-16.
+Se **_O_WTEXT** viene utilizzato per aprire un file per la lettura, **_open** legge l'inizio del file e verifica la presenza di un byte order mark (BOM). Se l'indicatore è presente, il file viene considerato come un file UTF-8 o UTF-16LE, a seconda dell'indicatore dell'ordine dei byte. In caso contrario, il file viene considerato come ANSI. Quando un file viene aperto per la scrittura tramite **_O_WTEXT**, viene utilizzato UTF-16. Indipendentemente da qualsiasi impostazione precedente o byte order mark, se si utilizza **_O_U8TEXT** , il file viene sempre aperto come UTF-8; Se si utilizza **_O_U16TEXT** , il file viene sempre aperto come UTF-16.
 
-Quando un file viene aperto in modalità Unicode usando **_O_WTEXT**, **_O_U8TEXT**o **_O_U16TEXT**, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **wchar_t**. Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **wchar_t**. Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causerà un errore di convalida del parametro. Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
+Quando un file viene aperto in modalità Unicode usando **_O_WTEXT**, **_O_U8TEXT**o **_O_U16TEXT**, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **wchar_t**. Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **wchar_t**. Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di lettura o scrittura di un numero dispari di byte in modalità Unicode causerà un errore di convalida del parametro. Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
 
-Se **_open** viene chiamato con **_O_WRONLY** |  **_O_APPEND** (modalità Append) e **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**, tenterà innanzitutto di aprire il file per la lettura e la scrittura, di leggere l'indicatore di ordine dei byte e quindi di riaprirlo per solo scrittura. Se l'apertura del file per lettura e scrittura ha esito negativo, il file verrà aperto per la sola lettura e verrà usato il valore predefinito per l'impostazione della modalità Unicode.
+Se **_open** viene chiamato con **_O_WRONLY** |  **_O_APPEND** (modalità Append) e **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**, tenta innanzitutto di aprire il file per la lettura e la scrittura, di leggere l'indicatore di ordine dei byte e quindi di riaprirlo per la sola scrittura. Se l'apertura del file per lettura e scrittura ha esito negativo, il file verrà aperto per la sola lettura e verrà usato il valore predefinito per l'impostazione della modalità Unicode.
 
 Quando vengono usate due o più costanti manifeste per formare l'argomento *Oflag* , le costanti vengono combinate con l'operatore OR bit per bit **&#124;** (). Per una discussione sulle modalità testo e binaria, vedere [I/O file in modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
@@ -137,7 +137,7 @@ L'argomento *pmode* è obbligatorio solo quando si specifica **_O_CREAT** . Se i
 
 Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per **&#124;** bit (). In Windows tutti i file solo leggibili. L'autorizzazione di sola scrittura non è disponibile. Pertanto, le modalità **_S_IWRITE** e **_S_IREAD** |  **_S_IWRITE** sono equivalenti.
 
-Se per *pmode*viene specificato un valore diverso da una combinazione di **_S_IREAD** e **_S_IWRITE** , anche se si specifica un *pmode* valido in un altro sistema operativo, o se un valore diverso dai valori di *Oflag* consentiti è specificata, la funzione genera un'asserzione in modalità debug e richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**.
+Se viene specificato un valore diverso da una combinazione di **_S_IREAD** e **_S_IWRITE** per *pmode*, anche se si specifica un *pmode* valido in un altro sistema operativo, o se viene specificato un valore diverso dai valori *Oflag* consentiti, la funzione genera un'asserzione in modalità debug e richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -146,7 +146,7 @@ Se per *pmode*viene specificato un valore diverso da una combinazione di **_S_IR
 |**_open**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
 |**_wopen**|\<io.h> o \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
 
-**_open** e **_Wopen** sono estensioni Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+**_open** e **_Wopen** sono estensioni Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="libraries"></a>Librerie
 

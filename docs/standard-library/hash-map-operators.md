@@ -5,12 +5,12 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 50a6c2784b4c861f7cf3bbb4d1e1c8ebd0eea72d
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419014"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150745"
 ---
 # <a name="lthash_mapgt-operators"></a>Operatori &lt;hash_map&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "79419014"
 |[operator!=](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
 |[operator==](#op_eq_eq)|[operator== (multimap)](#op_eq_eq_mm)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>  operator!=
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_map](unordered-map-class.md).
@@ -42,7 +42,7 @@ Oggetto di tipo `hash_map`.
 
 **true** se gli oggetti hash_map non sono uguali; in caso contrario, **false**.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il confronto tra gli oggetti hash_map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -88,7 +88,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>  operator==
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_map](unordered-map-class.md).
@@ -111,7 +111,7 @@ Oggetto di tipo `hash_map`.
 
 **true** se l'oggetto hash_map a sinistra dell'operatore è uguale all'oggetto hash_map a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il confronto tra gli oggetti hash_map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>operatore! = (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operatore! = (hash_multimap)
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è [unordered_multimap Class](unordered-multimap-class.md).
@@ -178,7 +178,7 @@ Oggetto di tipo `hash_multimap`.
 
 **true** se gli oggetti hash_multimap non sono uguali; **false** in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il confronto tra gli oggetti hash_multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>operatore = = (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operatore = = (hash_multimap)
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è [unordered_multimap Class](unordered-multimap-class.md).
@@ -245,7 +245,7 @@ Oggetto di tipo `hash_multimap`.
 
 **true** se l'oggetto hash_multimap a sinistra dell'operatore è uguale all'oggetto hash_multimap a destra; in caso contrario, **false**.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il confronto tra gli oggetti hash_multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 

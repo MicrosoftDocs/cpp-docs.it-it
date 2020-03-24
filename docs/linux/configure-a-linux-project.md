@@ -2,12 +2,12 @@
 title: Configurare un progetto C++ Linux in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077733"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150966"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
@@ -17,7 +17,7 @@ Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive
 
 ::: moniker-end
 
-Questo argomento illustra come configurare un progetto Linux C++ come descritto in [Creare un nuovo progetto Linux C++ in Visual Studio](create-a-new-linux-project.md). Per i progetti CMake per Linux, vedere [Configurare un progetto CMake per Linux](cmake-linux-project.md).
+Questo argomento illustra come configurare un progetto Linux C++ come descritto in [Creare un nuovo progetto Linux C++ in Visual Studio](create-a-new-linux-project.md). Per i progetti CMake Linux, vedere [configurare un progetto CMake per Linux](cmake-linux-project.md).
 
 È possibile configurare un progetto Linux in modo che abbia come destinazione una macchina Linux fisica, una macchina virtuale o il [sottosistema Windows per Linux](/windows/wsl/about) (WSL).
 

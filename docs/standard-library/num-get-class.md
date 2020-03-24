@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150616"
 ---
 # <a name="num_get-class"></a>Classe num_get
 
@@ -50,9 +50,9 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 |-|-|
 |[num_get](#num_get)|Costruttore per oggetti di tipo `num_get` utilizzati per estrarre i valori numerici dalle sequenze.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[iter_type](#iter_type)|Tipo che descrive un iteratore di input.|
@@ -66,11 +66,11 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:** \<impostazioni locali >
 
 **Spazio dei nomi:** std
 
-## <a name="char_type"></a>  num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a>  num_get::char_type
 
 Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.
 
@@ -82,7 +82,7 @@ typedef CharType char_type;
 
 Il tipo è un sinonimo del parametro di modello **CharType**.
 
-## <a name="do_get"></a>  num_get::do_get
+## <a name="num_getdo_get"></a><a name="do_get"></a>  num_get::do_get
 
 Funzione virtuale chiamata per estrarre un valore numerico o booleano da una sequenza di caratteri.
 
@@ -167,10 +167,10 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Inizio dell'intervallo di caratteri da cui leggere il numero.
 
-*ultimo* \
+*ultimo*\
 Fine dell'intervallo di caratteri da cui leggere il numero.
 
 \ *iosbase*
@@ -213,9 +213,9 @@ In caso contrario, la specifica di conversione è `ld`.
 
 Il formato di un campo di input di tipo Integer è determinato ulteriormente dal [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class)`fac` restituito dalla chiamata [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. In particolare:
 
-`fac.`[numpunct:: grouping](../standard-library/numpunct-class.md#grouping)`()` determina la modalità di raggruppamento delle cifre a sinistra della virgola decimale
+`fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping)`()` determina la modalità di raggruppamento delle cifre a sinistra della virgola decimale
 
-`fac.`[numpunct:: thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` determina la sequenza che separa i gruppi di cifre a sinistra della virgola decimale.
+`fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` determina la sequenza che separa gruppi di cifre a sinistra della virgola decimale.
 
 Se non esistono istanze di `fac.thousands_sep()` nel campo di input numerico, non viene imposto alcun vincolo di raggruppamento. In caso contrario, vengono applicati i vincoli di raggruppamento imposti da `fac.grouping()` e i separatori vengono rimossi prima che venga eseguita la conversione dell'analisi.
 
@@ -329,7 +329,7 @@ Un campo di input booleano ha una delle due forme seguenti. Se `iosbase.flags() 
 
 Vedere l'esempio relativo a [get](#get), in cui la funzione membro virtuale viene chiamata da `do_get`.
 
-## <a name="get"></a>  num_get::get
+## <a name="num_getget"></a><a name="get"></a>  num_get::get
 
 Estrae un tipo numerico o booleano da una sequenza di caratteri.
 
@@ -414,10 +414,10 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*primo*\
 Inizio dell'intervallo di caratteri da cui leggere il numero.
 
-*ultimo* \
+*ultimo*\
 Fine dell'intervallo di caratteri da cui leggere il numero.
 
 \ *iosbase*
@@ -441,7 +441,7 @@ La prima funzione membro virtuale protetta cerca la corrispondenza con elementi 
 
 Il campo di input Integer viene convertito dalle stesse regole usate dalle funzioni di analisi per la corrispondenza e la conversione di una serie di elementi **char** da un file. Si presuppone che ogni elemento **char** venga mappato a un elemento equivalente di tipo `CharType` da un semplice mapping uno-a-uno. La specifica di conversione di analisi equivalente viene determinata nel modo seguente:
 
-- Se `iosbase.`[flags](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), la specifica di conversione viene `lo`ta.
+- Se `iosbase.`[flags](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), la specifica di conversione viene `lo`ta.
 
 - Se `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), la specifica di conversione è `lx`.
 
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="iter_type"></a>  num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a>  num_get::iter_type
 
 Tipo che descrive un iteratore di input.
 
@@ -563,7 +563,7 @@ typedef InputIterator iter_type;
 
 Il tipo è un sinonimo del parametro di modello `InputIterator`.
 
-## <a name="num_get"></a>  num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a>  num_get::num_get
 
 Costruttore per oggetti di tipo `num_get` utilizzati per estrarre i valori numerici dalle sequenze.
 
@@ -593,5 +593,5 @@ Il costruttore inizializza l'oggetto di base con `locale::`[facet](../standard-l
 ## <a name="see-also"></a>Vedere anche
 
 [\<locale>](../standard-library/locale.md)\
-[Classe facet](../standard-library/locale-class.md#facet_class)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[facet Class](../standard-library/locale-class.md#facet_class)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)

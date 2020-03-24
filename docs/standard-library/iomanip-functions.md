@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7fd523dc9184ae613cf8a52969a497b6b4761cf6
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421639"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150823"
 ---
 # <a name="ltiomanipgt-functions"></a>Funzioni &lt;iomanip&gt;
 
@@ -42,7 +42,7 @@ ms.locfileid: "79421639"
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
 |[setprecision](#setprecision)|[setw](#setw)|
 
-## <a name="iomanip_get_money"></a>  get_money
+## <a name="get_money"></a><a name="iomanip_get_money"></a>  get_money
 
 Estrae un valore monetario da un flusso usando il formato desiderato e restituisce il valore in un parametro.
 
@@ -57,15 +57,15 @@ T7 get_money(Money& amount, bool use_intl);
 Valore monetario estratto.
 
 *use_intl*\
-Se **true**, usare il formato internazionale. Il valore predefinito è **false**.
+Se **true**, usare il formato internazionale. Il valore predefinito **false**.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il manipolatore restituisce un oggetto che, se estratto dal flusso `str`, si comporta come un `formatted input function` che chiama la funzione membro `get` per il facet delle impostazioni locali `money_get` associato a `str`, utilizzando *use_intl* per indicare il formato internazionale. In caso di esito positivo, la chiamata archivia il valore monetario estratto in *quantità* . Il manipolatore restituisce quindi `str`.
 
 `Money` deve essere di tipo `long double` o un'istanza di `basic_string` con gli stessi parametri di elemento e dei tratti di `str`.
 
-## <a name="iomanip_get_time"></a>  get_time
+## <a name="get_time"></a><a name="iomanip_get_time"></a>  get_time
 
 Estrae un valore di ora da un flusso usando il formato desiderato. Restituisce il valore in un parametro come una struttura temporale.
 
@@ -82,11 +82,11 @@ Ora nella forma di una struttura temporale.
 *time_format*\
 Formato desiderato da usare per ottenere il valore di ora.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il manipolatore restituisce un oggetto che, se estratto dal flusso `str`, si comporta come un oggetto `formatted input function` che chiama la funzione membro `get` per il facet delle impostazioni locali `time_get` associato a `str`, usando `tptr` per indicare la struttura temporale e `fmt` per indicare l'inizio di una stringa di formato con terminazione Null. Se ha esito positivo, la chiamata archivia nella struttura temporale i valori associati ai campi ora estratti. Il manipolatore restituisce quindi `str`.
 
-## <a name="iomanip_put_money"></a>  put_money
+## <a name="put_money"></a><a name="iomanip_put_money"></a>  put_money
 
 Inserisce un importo monetario in un flusso usando il formato desiderato.
 
@@ -105,15 +105,15 @@ Impostare su **true** se il manipolatore deve usare il formato internazionale, *
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce `str`.
+Restituisce un valore `str`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il manipolatore restituisce un oggetto che, se inserito nel flusso `str`, si comporta come una funzione di output formattata che chiama la funzione membro `put` per il facet delle impostazioni locali `money_put` associato a `str`. Se ha esito positivo, la chiamata inserisce `amount` opportunamente formattata, usando *use_intl* per indicare il formato internazionale e `str.fill()`come elemento Fill. Il manipolatore restituisce quindi `str`.
 
 `Money` deve essere di tipo `long double` o un'istanza di `basic_string` con gli stessi parametri di elemento e dei tratti di `str`.
 
-## <a name="iomanip_put_time"></a>  put_time
+## <a name="put_time"></a><a name="iomanip_put_time"></a>  put_time
 
 Scrive un valore di ora di una struttura temporale in un flusso usando un formato specificato.
 
@@ -130,11 +130,11 @@ Valore di ora da scrivere nel flusso, fornito in una struttura temporale.
 *time_format*\
 Formato in cui scrivere il valore di ora.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il manipolatore restituisce un oggetto che, se inserito nel flusso `str`, si comporta come un oggetto `formatted output function`. La funzione di output chiama la funzione membro `put` per il facet delle impostazioni locali `time_put` associato a `str`. La funzione output USA *time_ptr* per indicare la struttura temporale e *time_format* per indicare l'inizio di una stringa di formato con terminazione null. Se ha esito positivo, la chiamata inserisce testo letterale ottenuto dalla stringa di formato e i valori convertiti dalla struttura temporale. Il manipolatore restituisce quindi `str`.
 
-## <a name="quoted"></a>  quoted
+## <a name="quoted"></a><a name="quoted"></a>  quoted
 
 **(Novità in C++14)** Manipolatore iostream che consente di usare gli operatori >> e << per il round trip delle stringhe da e verso i flussi.
 
@@ -156,7 +156,7 @@ Carattere specificato dall'utente o carattere wide da usare come delimitatore pe
 \ di *escape*
 Carattere specificato dall'utente o carattere wide da usare come carattere di escape per le sequenze di escape all'interno della stringa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Vedere [Uso degli operatori di inserimento e controllo del formato](../standard-library/using-insertion-operators-and-controlling-format.md).
 
@@ -301,7 +301,7 @@ Press Enter to exit
 */
 ```
 
-## <a name="resetiosflags"></a>  resetiosflags
+## <a name="resetiosflags"></a><a name="resetiosflags"></a>  resetiosflags
 
 Cancella i flag specificati.
 
@@ -322,7 +322,7 @@ Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso `s
 
 Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `resetiosflags`.
 
-## <a name="setbase"></a>  setbase
+## <a name="setbase"></a><a name="setbase"></a>  setbase
 
 Imposta la base per i valori integer.
 
@@ -337,7 +337,7 @@ Base numerica.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso `str`, chiama `str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`e quindi restituisce `str`. Qui, `mask` viene determinato come segue:
+Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso `str`, chiama `str.setf(mask,` [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`e quindi restituisce `str`. Qui, `mask` viene determinato come segue:
 
 - Se *base* è 8, `mask` è `ios_base::`[Oct](../standard-library/ios-functions.md#oct).
 
@@ -351,7 +351,7 @@ Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso `s
 
 Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `setbase`.
 
-## <a name="setfill"></a>  setfill
+## <a name="setfill"></a><a name="setfill"></a>  setfill
 
 Imposta il carattere che verrà usato per riempire gli spazi in una visualizzazione giustificata a destra.
 
@@ -373,7 +373,7 @@ Il manipolatore di modelli restituisce un oggetto che, se estratto o inserito ne
 
 Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `setfill`.
 
-## <a name="setiosflags"></a>  setiosflags
+## <a name="setiosflags"></a><a name="setiosflags"></a>  setiosflags
 
 Imposta i flag specificati.
 
@@ -394,7 +394,7 @@ Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso `s
 
 Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `setiosflags`.
 
-## <a name="setprecision"></a>  setprecision
+## <a name="setprecision"></a><a name="setprecision"></a>  setprecision
 
 Imposta la precisione per i valori a virgola mobile.
 
@@ -415,7 +415,7 @@ Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso `s
 
 Vedere [setw](../standard-library/iomanip-functions.md#setw) per un esempio d'uso di `setprecision`.
 
-## <a name="setw"></a>  setw
+## <a name="setw"></a><a name="setw"></a>  setw
 
 Specifica la larghezza del campo di visualizzazione per l'elemento successivo nel flusso.
 
@@ -432,7 +432,7 @@ Larghezza del campo di visualizzazione.
 
 Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso `str`, chiama `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`, quindi restituisce `str`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 setw imposta la larghezza solo per l'elemento successivo nel flusso e deve essere inserito prima di ogni elemento di cui si vuole specificare la larghezza.
 

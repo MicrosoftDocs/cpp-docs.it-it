@@ -13,12 +13,12 @@ helpviewer_keywords:
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-ms.openlocfilehash: 3f84e8e5f7d0c09a865fe47d7493daecf68cf60c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 08adfcc770551d3050daa46c870b950e468c95b3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689197"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150642"
 ---
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 
@@ -38,7 +38,7 @@ bool operator==(
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce `left.`[dimensioni](../standard-library/container-class-size.md) ` == right.size && equal(left.`[inizio](../standard-library/container-class-begin.md) `, left.`[fine](../standard-library/container-class-end.md) `, right.begin)`.
+Restituisce `left.`[dimensioni](../standard-library/container-class-size.md) `== right.size && equal(left.`[inizio](../standard-library/container-class-begin.md)`, left.`[fine](../standard-library/container-class-end.md)`, right.begin)`.
 
 ## <a name="see-also"></a>Vedere anche
 
