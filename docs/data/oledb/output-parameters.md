@@ -8,24 +8,24 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece626eb7fbecae9b90321ccc2569607897cf520
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283964"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209859"
 ---
 # <a name="output-parameters"></a>Parametri di output
 
-Chiama una stored procedure è simile all'esecuzione di un comando SQL. La differenza principale è che le stored procedure utilizzano i parametri di output (o "output") e restituiscono valori.
+La chiamata di un stored procedure è simile all'esecuzione di un comando SQL. La differenza principale consiste nel fatto che le stored procedure utilizzano parametri di output (o "OutParameters") e valori restituiti.
 
-Nella seguente stored procedure, il primo '? 'è il valore restituito (phone) e il secondo'?' è il parametro di input (nome):
+Nel seguente stored procedure, il primo '?' è il valore restituito (Phone) e il secondo '?' è il parametro di input (nome):
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }"))
 ```
 
-Specificare i parametri in e out nella mappa del parametro:
+Specificare i parametri in e out nella mappa dei parametri:
 
 ```cpp
 BEGIN_PARAM_MAP(CMySProcAccessor)
@@ -36,13 +36,13 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-L'applicazione deve gestire l'output restituito dalla stored procedure. Provider OLE DB diversi restituiscono parametri di output e valori restituiti in momenti diversi durante l'elaborazione dei risultati. Ad esempio, il provider Microsoft OLE DB per SQL Server (SQLOLEDB) non specificare i parametri di output e restituiscono codici di fino a quando il consumer ha recuperato o annullato i set di risultati restituiti dalla stored procedure. L'output viene restituito nell'ultimo pacchetto TDS dal server.
+L'applicazione deve gestire l'output restituito dalle stored procedure. Provider OLE DB diversi restituiscono parametri di output e valori in momenti diversi durante l'elaborazione dei risultati. Ad esempio, il provider Microsoft OLE DB per SQL Server (SQLOLEDB) non fornisce parametri di output e codici restituiti fino a quando il consumer non ha recuperato o annullato i set di risultati restituiti dal stored procedure. L'output viene restituito nell'ultimo pacchetto TDS dal server.
 
-## <a name="row-count"></a>Conteggio delle righe
+## <a name="row-count"></a>Conteggio righe
 
-Se si usa i modelli Consumer OLE DB per eseguire una stored procedure con parametri di output, non è impostato il numero di righe finché non si chiude il set di righe.
+Se si usa il OLE DB modelli di consumer per eseguire una stored procedure con OutParameters, il conteggio delle righe non viene impostato fino a quando non si chiude il set di righe.
 
-Si consideri ad esempio una stored procedure con un set di righe e un parametro di output:
+Si consideri, ad esempio, un stored procedure con un set di righe e un outparameter:
 
 ```sql
 create procedure sp_test
@@ -53,7 +53,7 @@ as
 return 0
 ```
 
-Il `@_rowcount` parametro di output segnala quante righe sono state restituite dalla tabella dei test. Tuttavia, questa stored procedure limita il numero di righe su 50. Ad esempio, se vi sono 100 righe nel test, il conteggio delle righe sarebbero 50 (poiché questo codice recupera solo le prime 50 righe). Se si sono verificati solo 30 righe nella tabella, il conteggio delle righe sarebbero 30. Assicurarsi di chiamare `Close` o `CloseAll` per popolare il parametro di output prima di recuperare il relativo valore.
+Il `@_rowcount` outparameter indica il numero di righe restituite dalla tabella di test. Questo stored procedure tuttavia limita il numero di righe a 50. Se ad esempio sono presenti 100 righe nel test, il conteggio delle righe sarà 50 (poiché questo codice recupera solo le prime 50 righe). Se nella tabella sono presenti solo 30 righe, il conteggio delle righe sarà 30. Assicurarsi di chiamare `Close` o `CloseAll` per popolare l'outparameter prima di recuperare il relativo valore.
 
 ## <a name="see-also"></a>Vedere anche
 

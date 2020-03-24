@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __asm keyword [C++], C/C++ elements in
 - Visual C++, in __asm blocks
 ms.assetid: 0758ffdc-dfe9-41c8-a5e1-fd395bcac328
-ms.openlocfilehash: fc22af8ec04d616eb8f5566b118e19c405605401
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd9f8b444d263818aca1b16260f70730d5350e7c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166542"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169110"
 ---
-# <a name="using-c-or-c-symbols-in-asm-blocks"></a>Utilizzo di simboli C o C++ in blocchi __asm
+# <a name="using-c-or-c-symbols-in-__asm-blocks"></a>Utilizzo di simboli C o C++ in blocchi __asm
 
 **Sezione specifica Microsoft**
 
@@ -23,11 +23,11 @@ Un blocco `__asm` può fare riferimento a qualsiasi simbolo C o C++ nell'ambito 
 
 Alcune restrizioni vengono applicate all'utilizzo dei simboli di C++ e C:
 
-- Ogni istruzione in linguaggio assembly può contenere solo un simbolo C++ o C. I simboli possono trovarsi nella stessa istruzione assembly solo con **lunghezza**, **tipo**, e **dimensioni** espressioni.
+- Ogni istruzione in linguaggio assembly può contenere solo un simbolo C++ o C. Nella stessa istruzione di assembly possono essere presenti più simboli solo con espressioni di **lunghezza**, di **tipo**e di **dimensione** .
 
 - Le funzioni a cui viene fatto riferimento in un blocco `__asm` devono essere dichiarate (con prototipo) in precedenza nel programma. In caso contrario, il compilatore non è in grado di distinguere tra i nomi di funzione e le etichette nel blocco `__asm`.
 
-- Un blocco `__asm` non può contenere alcun simboli di C o C++ con la stessa ortografia di parole riservate MASM (indipendentemente dall'uso di maiuscole e minuscole). Parole riservate di MASM includono, ad esempio i nomi di istruzioni **PUSH** e registrare i nomi, ad esempio sistema internazionale di misura.
+- Un blocco `__asm` non può contenere alcun simboli di C o C++ con la stessa ortografia di parole riservate MASM (indipendentemente dall'uso di maiuscole e minuscole). Le parole riservate di MASM includono nomi di istruzioni quali i nomi di **push** e di registro, ad esempio si.
 
 - I tag di unione e di struttura non sono riconosciuti in blocchi `__asm`.
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ac4c64e9f7e96f214d8a7e40b2c77236c989d0e2
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9a22091b5c57272b4497deea565ab26ff4c6ed88
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "68244468"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167810"
 ---
 > [!NOTE]
->  Nomi o percorsi visualizzati per alcuni elementi dell'interfaccia utente di Visual Studio nelle istruzioni seguenti potrebbero essere diversi nel computer in uso. La versione di Visual Studio in uso e le impostazioni configurate determinano questi elementi. Per altre informazioni, vedere [Personalizzazione dell'IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
+>  I nomi o i percorsi visualizzati per alcuni elementi dell'interfaccia utente di Visual Studio nelle istruzioni seguenti potrebbero essere diversi nel computer in uso. La versione di Visual Studio in uso e le impostazioni configurate determinano questi elementi. Per altre informazioni, vedere [Personalizzazione dell'IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).

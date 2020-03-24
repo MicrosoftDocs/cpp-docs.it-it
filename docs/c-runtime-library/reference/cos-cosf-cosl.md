@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942827"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170255"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -70,9 +70,9 @@ Coseno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si ver
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN, IND|none|**_DOMAIN**|
-|± INF|**INVALID**|**_DOMAIN**|
+|± INF|**Non valido**|**_DOMAIN**|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **cos** accetta e restituisce sempre un **valore Double**.
 
@@ -82,7 +82,7 @@ Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** c
 |-------------|---------------------|-|
 |**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> o \<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-ms.openlocfilehash: 5f9b60499fd3c3bd5f06834e3c4f6482031066d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef07e1b542c4c3977f35de7ed9cd0f0a5358cedb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406964"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201955"
 ---
 # <a name="compiler-error-c2823"></a>Errore del compilatore C2823
 
-> un modello di typedef non è valido
+> un modello typedef non è valido
 
-I modelli non sono consentiti in `typedef` definizioni.
+I modelli non sono consentiti nelle definizioni `typedef`.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2823 e viene illustrato un modo per risolvere il problema:
+L'esempio seguente genera C2823 e Mostra un modo per risolverlo:
 
 ```cpp
 // C2823.cpp

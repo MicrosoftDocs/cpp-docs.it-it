@@ -2,16 +2,16 @@
 title: Risoluzione dei nomi per tipi dipendenti
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222412"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161153"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Risoluzione dei nomi per tipi dipendenti
 
-Uso **typename** per i nomi completi nelle definizioni di modello per indicare al compilatore che il nome completo specificato identifica un tipo. Per altre informazioni, vedere [typename](../cpp/typename.md).
+Usare **typeName** per i nomi completi nelle definizioni di modello per indicare al compilatore che il nome completo specificato identifica un tipo. Per ulteriori informazioni, vedere [typeName](../cpp/typename.md).
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-Ricerca del nome per i nomi dipendenti esamina i nomi sia dal contesto della definizione del modello, nell'esempio seguente, in questo contesto cercherebbe `myFunction(char)`e il contesto dell'istanza del modello. Nell'esempio seguente, il modello viene creata un'istanza; Pertanto, il `MyNamespace::myFunction` è visibile dal momento della creazione dell'istanza e viene selezionato come corrispondenza ottimale. Se `MyNamespace::myFunction` è stato rinominato, in alternativa viene chiamato `myFunction(char)`.
+La ricerca del nome per i nomi dipendenti esamina i nomi dal contesto della definizione del modello. nell'esempio seguente, questo contesto troverà `myFunction(char)`e il contesto della creazione di un'istanza del modello. Nell'esempio seguente viene creata un'istanza del modello in Main; Pertanto, il `MyNamespace::myFunction` è visibile dal punto di creazione dell'istanza e viene selezionato come corrispondenza migliore. Se `MyNamespace::myFunction` è stato rinominato, in alternativa viene chiamato `myFunction(char)`.
 
 Tutti i nomi vengono risolti come se fossero nomi dipendenti. Tuttavia, è consigliabile utilizzare nomi completi se è possibile che si verifichi un conflitto.
 
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>Risoluzione dell'ambiguità del modello
 
-Visual Studio 2012 consente di applicare C + + 03/98/11 regole standard di risoluzione dell'ambiguità con la parola chiave "template". Nell'esempio seguente, Visual Studio 2010 accetterebbero sia le righe non conformi e le righe conformi.  Visual Studio 2012 accetta solo le righe conformi.
+Visual Studio 2012 applica le regole standard C++ 98/03/11 per la risoluzione dell'ambiguità con la parola chiave "template". Nell'esempio seguente Visual Studio 2010 accetta sia le linee non conformi sia le linee conformi.  Visual Studio 2012 accetta solo le righe conformi.
 
 ```cpp
 #include <iostream>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
-ms.openlocfilehash: 876ae7a368d2d1a1ee94a04fc9ecf50d0f4b8d78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1a7c3ccab716a9281d4520f4c5fce2afff60187
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364233"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204438"
 ---
 # <a name="fatal-error-c1060"></a>Errore irreversibile C1060
 
@@ -21,13 +21,13 @@ Una richiesta di memoria non è stata soddisfatta dal sistema operativo o dalla 
 
 ### <a name="to-fix-this-error-try-the-following-possible-solutions"></a>Per correggere questo errore, provare le possibili soluzioni descritte di seguito
 
-1. Se il compilatore genera anche errori [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) e [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), usare il [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opzione del compilatore per ridurre il limite di allocazione di memoria. Se si riduce l'allocazione della memoria rimanente, lo spazio dell'heap disponibile per l'applicazione aumenta.
+1. Se il compilatore genera anche errori [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) e [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), usare l'opzione del compilatore [/ZM](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) per abbassare il limite di allocazione della memoria. Se si riduce l'allocazione della memoria rimanente, lo spazio dell'heap disponibile per l'applicazione aumenta.
 
-   Se il [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opzione è già impostata, provare a rimuoverla. Lo spazio dell'heap potrebbe essere esaurito in quanto il limite di allocazione della memoria specificato nell'opzione è troppo elevato. Il compilatore Usa un limite predefinito se si rimuove il [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opzione.
+   Se l'opzione [/ZM](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) è già impostata, provare a rimuoverla. Lo spazio dell'heap potrebbe essere esaurito in quanto il limite di allocazione della memoria specificato nell'opzione è troppo elevato. Il compilatore usa un limite predefinito se si rimuove l'opzione [/ZM](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) .
 
-1. Se si compila su una piattaforma a 64 bit, usare il set di strumenti del compilatore a 64 bit. Per altre informazioni, vedere [Procedura: Abilitare una a 64 bit Visual C++ set di strumenti della riga di comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
+1. Se si compila su una piattaforma a 64 bit, usare il set di strumenti del compilatore a 64 bit. Per informazioni, vedere [procedura: abilitare un set di strumenti visivi C++ a 64 bit nella riga di comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
-1. In Windows a 32 bit, provare a usare il [3 GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) opzione Boot. ini.
+1. In Windows a 32 bit provare a usare l'opzione [/3GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) boot. ini.
 
 1. Aumentare la dimensione del file di scambio di Windows.
 

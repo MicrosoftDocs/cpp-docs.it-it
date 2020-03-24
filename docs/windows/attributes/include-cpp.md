@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 39f991bb036dce1c50a9d2ee800d3fec65af7c55
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514558"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166783"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -28,15 +28,15 @@ Specifica uno o più file di intestazione da includere nel file con estensione I
 *header_file*<br/>
 Nome di un file che si desidera includere nel file con estensione IDL generato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **include** C++ fa sì `#include` che un'istruzione venga posizionata `import "docobj.idl"` sotto l'istruzione nel file con estensione IDL generato.
+L'attributo **include** C++ determina la posizione di un'istruzione `#include` sotto l'istruzione `import "docobj.idl"` nel file IDL generato.
 
 L'attributo **include** C++ ha la stessa funzionalità dell'attributo MIDL di [inclusione](/windows/win32/Midl/include) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra un esempio di come usare **include**. Per questo esempio, il file include. h contiene solo un' `#include` istruzione.
+Il codice seguente illustra un esempio di come usare **include**. Per questo esempio, il file include. h contiene solo un'istruzione `#include`.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -53,8 +53,8 @@ Il codice seguente illustra un esempio di come usare **include**. Per questo ese
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

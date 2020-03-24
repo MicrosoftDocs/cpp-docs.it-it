@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2121
 ms.assetid: e04f32da-3736-4df3-8a1c-d687afcecf5c
-ms.openlocfilehash: cc16a6212b99142be24560f39888ec0b59a87712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eede1c1c22cd3edf37706589f1148a1d8b2f5be3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397692"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207467"
 ---
 # <a name="compiler-error-c2121"></a>Errore del compilatore C2121
 
-'#': carattere non valido: probabilmente il risultato dell'espansione di una macro
+' #': carattere non valido: probabilmente il risultato di un'espansione della macro
 
-Un carattere non valido & può avere inserito da una macro di tipo non corretta che utilizza l'operatore di Incolla per token (#) anziché l'operatore per (#).
+Un carattere # non valido potrebbe essere stato inserito da una macro non corretta che usa l'operatore di incollamento dei token (# #) invece dell'operatore per (#).

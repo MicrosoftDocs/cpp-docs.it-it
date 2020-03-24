@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2827
 ms.assetid: cb3e5814-0c92-40e4-b620-98578ae3003a
-ms.openlocfilehash: 7f1f19b91580bffa1133ae11ab91f2243153a389
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8da60b895ad5dab0713d736142225053d14301c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201942"
 ---
 # <a name="compiler-error-c2827"></a>Errore del compilatore C2827
 
-non è possibile eseguire l'override globale di 'operator operator' con forma unaria
+non è possibile eseguire l'override globale di ' operator Operator ' con forma unaria
 
-L'operatore non può avere una forma unaria di fuori di un oggetto.
+L'operatore non può avere un form unario all'esterno di un oggetto.
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili
 
 1. Rendere l'operatore di overload locale a un oggetto.
 
-1. Scegliere un operatore unario appropriate per eseguire l'overload.
+1. Scegliere un operatore unario appropriato per eseguire l'overload.

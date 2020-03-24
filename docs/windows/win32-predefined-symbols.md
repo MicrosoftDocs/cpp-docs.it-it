@@ -6,33 +6,33 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: 8a238021f255da30a132755a297a471dd1f51246
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae79b4c1a4021b32f631c694b376d2202b345415
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387682"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165925"
 ---
 # <a name="win32-predefined-symbols"></a>Simboli già definiti di Win32
 
-Questi simboli sono definiti nei file di intestazione Win32 e supportano le azioni e funzioni di applicazione di Windows standard. Questi simboli sono usati principalmente con gli elementi dell'interfaccia utente comuni. Quando si lavora con i controlli nell'editor di risorse, questi simboli verranno visualizzati nei [finestra proprietà](/visualstudio/ide/reference/properties-window) associati ai controlli comuni. Ad esempio, se la barra degli strumenti devono essere visualizzati l'icona dell'applicazione, l'icona verrà associato il simbolo IDI_SMALL nel **proprietà** finestra.
+Questi simboli sono definiti nei file di intestazione Win32 e supportano le funzioni e le azioni dell'applicazione Windows standard. Questi simboli vengono usati principalmente con gli elementi comuni dell'interfaccia utente. Quando si utilizzano i controlli negli editor di risorse, questi simboli verranno visualizzati nella [finestra Proprietà](/visualstudio/ide/reference/properties-window) associata ai controlli comuni. Se, ad esempio, nella barra degli strumenti è visualizzata l'icona dell'applicazione, l'icona verrà associata al simbolo IDI_SMALL nella finestra delle **Proprietà** .
 
 |||
 |-|-|
-|IDABORT|(controllo) Finestra di dialogo, il pulsante Interrompi|
-|IDC_STATIC|(controllo) Testo statico in una finestra di dialogo|
-|IDCANCEL|(controllo) Finestra di dialogo, pulsante Annulla|
-|IDD_ABOUTBOX|(finestra di dialogo) Prodotto sulla finestra di dialogo|
-|IDI_PROJECTNAME|(icona) Icona di progetto corrente|
-|IDI_SMALL|(icona) Icona di piccole dimensioni progetto corrente|
-|IDIGNORE|(controllo) Utilizzato con il pulsante Ignora nelle finestre di dialogo|
-|IDM_ABOUT|(voce di menu) Utilizzato con l'aiuto... Su...|
-|IDM_EXIT|(voce di menu) Utilizzato con File... Esci...|
-|IDNO|(controllo) Nessun pulsante di finestra di dialogo|
-|IDOK|(controllo) Finestra di dialogo, sul pulsante OK|
-|IDRETRY|(controllo) Finestra di dialogo, il pulsante Riprova|
-|IDS_APP_TITLE|(string) Nome dell'applicazione corrente|
-|IDYES|(controllo) Finestra di dialogo, pulsante Sì|
+|IDABORT|controllo Finestra di dialogo, pulsante Interrompi|
+|IDC_STATIC|controllo Testo statico in una finestra di dialogo|
+|IDCANCEL|controllo Finestra di dialogo, pulsante Annulla|
+|IDD_ABOUTBOX|dialogo Finestra di dialogo Product about|
+|IDI_PROJECTNAME|icona Icona del progetto corrente|
+|IDI_SMALL|icona Icona piccolo progetto corrente|
+|IDIGNORE|controllo Usato con il pulsante Ignora nelle finestre di dialogo|
+|IDM_ABOUT|(voce di menu) Usato con la guida... Informazioni su...|
+|IDM_EXIT|(voce di menu) Utilizzato con file... Esci...|
+|IDNO|controllo Finestra di dialogo, nessun pulsante|
+|IDOK|controllo Finestra di dialogo, pulsante OK|
+|IDRETRY|controllo Finestra di dialogo, pulsante Riprova|
+|IDS_APP_TITLE|stringa Nome dell'applicazione corrente|
+|IDYES|controllo Finestra di dialogo, pulsante Sì|
 
 ## <a name="requirements"></a>Requisiti
 

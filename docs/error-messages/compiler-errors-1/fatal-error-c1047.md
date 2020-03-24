@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1047
 ms.assetid: e1bbbc6b-a5bc-4c23-8203-488120a0ec78
-ms.openlocfilehash: 053c4d828b3583d0e16ab8f4fe03a4b0bbed96f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ab98c46d60d15cdcb6de22aa922d62453d41880
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204491"
 ---
 # <a name="fatal-error-c1047"></a>Errore irreversibile C1047
 

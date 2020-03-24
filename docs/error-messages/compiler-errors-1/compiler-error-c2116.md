@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2116
 ms.assetid: 0089a23f-e6bd-4956-9b58-3bcca09ab5ad
-ms.openlocfilehash: 58a1337be74ee1e469ad49502d5808139c984b43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d68451d28a9324d9fb9aaeee8a0a142713228b62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350676"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207441"
 ---
 # <a name="compiler-error-c2116"></a>Errore del compilatore C2116
 

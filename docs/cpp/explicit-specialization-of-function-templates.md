@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
-ms.openlocfilehash: 3d91383f895f1a8be983efe42f685419ca988823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9d77cef790bdd0a65651ffb7246e685175482b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184273"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179991"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Specializzazione esplicita di modelli di funzioni
 
@@ -23,7 +23,7 @@ Con un modello di funzione, è possibile definire il comportamento speciale per 
 template<> void MySwap(double a, double b);
 ```
 
-Questa dichiarazione consente di definire una funzione diversa per **doppie** variabili. Come funzioni non modello, le conversioni di tipo standard (quali la promozione di una variabile di tipo **float** al **double**) vengono applicati.
+Questa dichiarazione consente di definire una funzione diversa per le variabili **Double** . Analogamente alle funzioni non modello, vengono applicate le conversioni di tipi standard, ad esempio la promozione di una variabile di tipo **float** a **Double**.
 
 ## <a name="example"></a>Esempio
 

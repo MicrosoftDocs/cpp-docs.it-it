@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311889"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172607"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Conversione boxing (C++/CLI e C++/CX)
 
@@ -84,9 +84,9 @@ Per altre informazioni, vedere:
 
 - [Procedura: Richiedere la conversione boxing in modo esplicito](../dotnet/how-to-explicitly-request-boxing.md)
 
-- [Procedura: Usare gcnew per creare tipi valore e usare la conversione boxing implicita](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
+- [Procedura: Usare gcnew per creare tipi di valore e usare la conversione boxing implicita](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Procedura: Eseguire la conversione unboxing](../dotnet/how-to-unbox.md)
+- [Procedura: Unbox](../dotnet/how-to-unbox.md)
 
 - [Conversioni standard e conversione boxing implicita](../dotnet/standard-conversions-and-implicit-boxing.md)
 

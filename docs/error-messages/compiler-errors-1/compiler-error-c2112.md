@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2112
 ms.assetid: 527a2fea-f585-4d00-bbb4-477aee17144b
-ms.openlocfilehash: 5f7009f62a0c6e0a08830a914ced22875b8b7fcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edeedf67d43a88bfbd3cb384cfe741aa5d764c88
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152956"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207504"
 ---
 # <a name="compiler-error-c2112"></a>Errore del compilatore C2112
 
 '-': la sottrazione di puntatori richiede un operando integrale o puntatore
 
-È stato effettuato il tentativo di sottrarre puntatori che puntano a tipi diversi.
+È stato effettuato un tentativo di sottrarre i puntatori che puntano a tipi diversi.

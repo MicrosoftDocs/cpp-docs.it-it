@@ -7,14 +7,14 @@ helpviewer_keywords:
 - COM interfaces, attach pointer
 - Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
-ms.openlocfilehash: 4b4b7a21d12cc645c486dd93d555510c1e716563
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 870e3580ed23ce994d832f7c59b951680d725e41
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154890"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180498"
 ---
-# <a name="comptrtattach"></a>_com_ptr_t::Attach
+# <a name="_com_ptr_tattach"></a>_com_ptr_t::Attach
 
 **Sezione specifica Microsoft**
 
@@ -33,13 +33,13 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
 Puntatore a interfaccia raw.
 
 *fAddRef*<br/>
-Se è TRUE, quindi `AddRef` viene chiamato. Se è FALSE, il `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`.
+Se è TRUE, viene chiamato `AddRef`. Se è FALSE, l'oggetto `_com_ptr_t` acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-- **Collega (** *pInterface* **)** `AddRef` non viene chiamato. La proprietà dell'interfaccia viene passata a questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza.
+- Il `AddRef` di **connessione (** *pInterface* **)** non viene chiamato. La proprietà dell'interfaccia viene passata a questo oggetto `_com_ptr_t`. `Release` viene chiamato per decrementare il conteggio dei riferimenti per il puntatore incapsulato in precedenza.
 
-- **Collega (** *pInterface* **,** *fAddRef* **)** se *fAddRef* è TRUE, `AddRef`viene chiamato per incrementare il conteggio dei riferimenti per il puntatore a interfaccia incapsulato. Se *fAddRef* è FALSE, questa `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza.
+- **Connetti (**  *pInterface* **,**  *fAddRef*  **)** Se *fAddRef* è true, viene chiamato `AddRef` per incrementare il conteggio dei riferimenti per il puntatore a interfaccia incapsulato. Se *fAddRef* è false, questo `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`. `Release` viene chiamato per decrementare il conteggio dei riferimenti per il puntatore incapsulato in precedenza.
 
 **Fine sezione specifica Microsoft**
 

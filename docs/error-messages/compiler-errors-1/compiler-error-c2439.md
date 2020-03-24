@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2439
 ms.assetid: 3c5dbe5c-b7d3-4bb0-8619-92f6e280461e
-ms.openlocfilehash: f71112d3f37f3e4d1a4f41bade95726d7aa0a0bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99f3644869f6c5395684643f0e7802f3a01baa62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311735"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205361"
 ---
 # <a name="compiler-error-c2439"></a>Errore del compilatore C2439
 
-'identifier': Impossibile inizializzare il membro
+' Identifier ': Impossibile inizializzare il membro
 
-Impossibile inizializzare una classe, struttura o membro di unione.
+Impossibile inizializzare una classe, una struttura o un membro di Unione.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
 
-1. È stato effettuato un tentativo di inizializzare una struttura o classe base indiretta.
+1. Tentativo di inizializzare una struttura o una classe base indiretta.
 
-1. È stato effettuato un tentativo di inizializzare un membro ereditato di una classe o struttura. Un membro ereditato deve essere inizializzato dal costruttore della classe o struttura.
+1. Tentativo di inizializzare un membro ereditato di una classe o di una struttura. Un membro ereditato deve essere inizializzato dal costruttore della classe o della struttura.

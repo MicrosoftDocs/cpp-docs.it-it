@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2585
 ms.assetid: 05bb1a9c-28fb-4a88-a1b5-aea85ebdee1c
-ms.openlocfilehash: 812ab15aacd1f6a215c6a5beb7781983859fe858
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57a0cd7a200c5bbb875821eb9e10314d98e58185
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360502"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177391"
 ---
 # <a name="compiler-error-c2585"></a>Errore del compilatore C2585
 
-conversione esplicita in 'type' è ambigua
+la conversione esplicita in ' type ' è ambigua
 
-La conversione del tipo può produrre più risultati.
+La conversione del tipo può produrre più di un risultato.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
 
-1. Conversione da un tipo di classe o struttura di base di ereditarietà multipla. Se il tipo eredita più volte la stessa classe di base, la funzione di conversione o un operatore deve usare la risoluzione dell'ambito (`::`) per specificare quali delle classi ereditate da usare durante la conversione.
+1. Conversione da un tipo di classe o di struttura in base a più ereditarietà. Se il tipo eredita la stessa classe di base più di una volta, l'operatore o la funzione di conversione deve utilizzare la risoluzione dell'ambito (`::`) per specificare quali classi ereditate utilizzare nella conversione.
 
-1. Un costruttore e un operatore di conversione sono stati definiti apportare la stessa conversione.
+1. È stato definito un operatore di conversione e un costruttore che effettua la stessa conversione.

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2383
 ms.assetid: 6696221d-879c-477a-a0f3-a6edc15fd3d7
-ms.openlocfilehash: e9c1774fe7cd4a6883aa79f384cc64521a57ed17
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 2aa922ebeadb374a7eac73a0f452376472b00984
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448010"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206028"
 ---
 # <a name="compiler-error-c2383"></a>Errore del compilatore C2383
 
-«*simbolo*': argomenti predefiniti non sono consentiti su questo simbolo
+'*Symbol*': gli argomenti predefiniti non sono consentiti su questo simbolo
 
-Il compilatore C++ non supporta gli argomenti predefiniti sui puntatori a funzioni.
+Il C++ compilatore non consente argomenti predefiniti sui puntatori alle funzioni.
 
-Questo codice è stato accettato da Microsoft C++ compilatore nelle versioni precedenti a Visual Studio 2005, ma ora genera un errore. Per il codice che funziona in tutte le versioni di Visual C++, non assegnare un valore predefinito a un argomento di puntatore a funzione.
+Questo codice è stato accettato dal compilatore C++ Microsoft nelle versioni precedenti a Visual Studio 2005, ma ora restituisce un errore. Per il codice che funziona in tutte le versioni C++di visuale, non assegnare un valore predefinito a un argomento puntatore a funzione.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente genera l'errore C2383 e illustra una possibile soluzione:
+L'esempio seguente genera C2383 e Mostra una possibile soluzione:
 
 ```cpp
 // C2383.cpp

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2077
 ms.assetid: f046f0e3-1987-477a-a0af-fe543a9f5fcb
-ms.openlocfilehash: 0f4b484e1ea248495ecb8fa838dea1b8ad63dc0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7ee3545b3fe6583dac924c3563578875a443386
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404377"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207720"
 ---
 # <a name="compiler-error-c2077"></a>Errore del compilatore C2077
 
-inizializzatore di campo non scalare 'identifier'
+inizializzatore di campo non scalare ' Identifier '
 
-Si è provato a inizializzare un campo di bit con un elemento non scalare (struct, unione, matrice o classe). Usare un numero intero o un valore a virgola mobile.
+Si è tentato di inizializzare un campo di bit con un valore non scalare (struct, Union, array o Class). Usare un valore integer o a virgola mobile.

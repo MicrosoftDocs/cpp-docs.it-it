@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4761f65e0862a8de07330305b292b5b3501cac68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514894"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166016"
 ---
 # <a name="vararg"></a>vararg
 
-Specifica che la funzione accetta un numero variabile di argomenti.
+Specifica che la funzione assume un numero variabile di argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,7 +23,7 @@ Specifica che la funzione accetta un numero variabile di argomenti.
 [vararg]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **vararg** C++ ha la stessa funzionalità dell'attributo MIDL di [vararg](/windows/win32/Midl/vararg) .
 
@@ -53,8 +53,8 @@ __interface X : public IUnknown
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

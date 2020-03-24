@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
-ms.openlocfilehash: c73a8d4fcde945ddf2495cc2d0d7dc47216f2db3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 869db3b49075fa477860e045e59306e22a381ca4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166334"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205465"
 ---
 # <a name="compiler-error-c2434"></a>Errore del compilatore C2434
 
-> '*simbolo*': un simbolo dichiarato con declspec (Process) non può essere inizializzato in modo dinamico in /clr: pure modalità
+> '*Symbol*': non è possibile inizializzare dinamicamente la modalità/CLR: pure di un simbolo dichiarato con __declspec (Process)
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
+Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
-Non è possibile inizializzare in modo dinamico una variabile per ogni processo nella casella **/clr: pure**. Per altre informazioni, vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) e [processo](../../cpp/process.md).
+Non è possibile inizializzare dinamicamente una variabile per processo in **/CLR: pure**. Per ulteriori informazioni, vedere [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) ed [elaborazione](../../cpp/process.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2434. Per risolvere questo problema, utilizzare le costanti per inizializzare `process` variabili.
+L'esempio seguente genera l'C2434. Per risolvere questo problema, usare le costanti per inizializzare `process` variabili.
 
 ```cpp
 // C2434.cpp

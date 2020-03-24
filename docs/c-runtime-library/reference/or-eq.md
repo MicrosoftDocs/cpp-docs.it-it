@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - or_eq function
 ms.assetid: 1eb92464-ed58-40d8-a30e-f0a6aa2f4318
-ms.openlocfilehash: d286fbfaf7c388a41b5c421915b921e3b091045d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3c651cb75fa7628918bc8b5ebbcd4b31f9b583df
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951152"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170163"
 ---
 # <a name="or_eq"></a>or_eq
 
@@ -41,7 +41,7 @@ Alternativa all'operatore &#124;=.
 #define or_eq |=
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La macro restituisce l'operatore &#124;=.
 
@@ -73,4 +73,4 @@ int main( )
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<iso646.h>
+**Intestazione:** \<iso646. h >

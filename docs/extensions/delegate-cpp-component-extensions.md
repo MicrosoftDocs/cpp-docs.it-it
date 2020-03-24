@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516486"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172438"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI e C++/CX)
 

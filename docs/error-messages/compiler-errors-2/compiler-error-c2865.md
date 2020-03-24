@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2865
 ms.assetid: 973eb6a0-c99a-4d25-b3e5-fe0539794d77
-ms.openlocfilehash: 38b7dd86a57c3cd89811c6489e51fb4271fd7b79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd4374c1a577c4c39c5dec107ed5025d7cdc79c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201696"
 ---
 # <a name="compiler-error-c2865"></a>Errore del compilatore C2865
 
-'function': confronto non valido per handle_o_puntatore
+' Function ': confronto non valido per handle_or_pointer
 
-È possibile confrontare i riferimenti a [classi e struct](../../extensions/classes-and-structs-cpp-component-extensions.md) o tipi di riferimento solo per verificarne l'uguaglianza per verificare se fanno riferimento allo stesso oggetto (= =) o per diversi oggetti gestiti (! =).
+È possibile confrontare i riferimenti a [classi e struct](../../extensions/classes-and-structs-cpp-component-extensions.md) o tipi di riferimento gestiti solo per verificarne l'uguaglianza per verificare se fanno riferimento allo stesso oggetto (= =) o a oggetti diversi (! =).
 
-Non è possibile confrontarli per l'ordinamento poiché il runtime di .NET potrebbe spostare gli oggetti gestiti in qualsiasi momento, modificare il risultato del test.
+Non è possibile confrontarli per l'ordinamento perché il Runtime .NET potrebbe spostare gli oggetti gestiti in qualsiasi momento, modificando il risultato del test.

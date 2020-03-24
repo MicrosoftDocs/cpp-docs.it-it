@@ -7,12 +7,12 @@ helpviewer_keywords:
 - invoking inline assembler
 - inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-ms.openlocfilehash: 21e0d9ca0e64922b83518eb79c19d2f2e67813bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6233e07e115c21a0a173f094079dc9c1753533b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167011"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169397"
 ---
 # <a name="inline-assembler-overview"></a>Panoramica sull'assembler inline
 
@@ -22,7 +22,7 @@ ms.locfileid: "62167011"
 
 Poiché l'assembler inline non richiede un assembly separato e operazioni di collegamento, è più conveniente di un assembly separato. Il codice assembly inline può utilizzare qualsiasi nome funzione o variabile di C o C++ incluso nell'ambito, in modo che sia facile integrarlo con il codice C e C++ del programma. E poiché il codice assembly può essere combinato con istruzioni di C++ e C, può effettuare attività che sono complesse o impossibili in C o C++ da solo.
 
-Il [ASM](../../assembler/inline/asm.md) richiamare l'assembler inline e siano visualizzabili ovunque a C (parola chiave) o C++ istruzione sia valida. Non può essere visualizzata da sola. Deve essere seguita da un'istruzione dell'assembly, da un gruppo di istruzioni racchiuse tra parentesi graffe o almeno da una coppia di parentesi graffe vuote. Il termine "`__asm` block" qui si riferisce a qualsiasi istruzione o gruppo di istruzioni, racchiuso o meno tra parentesi graffe.
+La parola chiave [__asm](../../assembler/inline/asm.md) richiama l'assembler inline e può essere visualizzata ovunque un'istruzione C++ C o sia valida. Non può essere visualizzata da sola. Deve essere seguita da un'istruzione dell'assembly, da un gruppo di istruzioni racchiuse tra parentesi graffe o almeno da una coppia di parentesi graffe vuote. Il termine "`__asm` block" qui si riferisce a qualsiasi istruzione o gruppo di istruzioni, racchiuso o meno tra parentesi graffe.
 
 Il codice seguente è un semplice blocco `__asm` racchiuso tra parentesi graffe. Il codice è una sequenza di prologo di funzione personalizzata.
 

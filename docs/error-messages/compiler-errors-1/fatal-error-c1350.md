@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1350
 ms.assetid: 8bb47c23-ac9c-4a33-9ede-4d63ed9d4ba8
-ms.openlocfilehash: 292943d5c94673e265bb9cb3d1fe83a1a907d9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57f2bcb4307195cc55a5b072b770f204c9dbbb00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203177"
 ---
 # <a name="fatal-error-c1350"></a>Errore irreversibile C1350
 
-Errore durante il caricamento di dll 'dll': dll non è stata trovata
+errore durante il caricamento della dll ' dll ': la dll non è stata trovata
 
-La DLL che supporta l'operazione tentata non è stata trovata.
+Impossibile trovare la DLL che supporta l'operazione tentata.
 
-Ciò indica un problema con l'installazione e reinstallare la DLL dal CD del prodotto.
+Ciò indica un problema con l'installazione di ed è necessario reinstallare la DLL dal CD del prodotto.

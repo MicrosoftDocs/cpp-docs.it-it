@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2116
 ms.assetid: d9203ddf-798d-490b-be41-0dd3f7d53653
-ms.openlocfilehash: 38f500b203c0ec47743ccd76c8453ce6c9286918
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fae25b7232425128c51625ca09319cc84064f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191418"
 ---
 # <a name="resource-compiler-error-rc2116"></a>Errore del compilatore di risorse RC2116
 
 previsto numero per ID
 
-È previsto un numero per il `id` campo di un'istruzione di control nel **finestra di dialogo** istruzione. Assicurarsi di avere un numero o `#define` istruzione per l'ID del controllo.
+Previsto un numero per il campo `id` di un'istruzione di controllo nell'istruzione della **finestra di dialogo** . Assicurarsi di disporre di un numero o di un'istruzione `#define` per l'ID del controllo.
