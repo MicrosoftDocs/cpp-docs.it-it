@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Filtrare i record (ODBC)'
+title: 'Recordset: applicazione di filtri ai record (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [MFC], filtering
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e742ee02e142fd87df3f149379d9971c4acd166
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397861"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212908"
 ---
-# <a name="recordset-filtering-records-odbc"></a>Recordset: Filtrare i record (ODBC)
+# <a name="recordset-filtering-records-odbc"></a>Recordset: applicazione di filtri ai record (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-Questo argomento illustra come filtrare un set di record in modo che seleziona solo un sottoinsieme particolare di record disponibili. Ad esempio, è possibile selezionare solo le sezioni di classe per un corso specifico, ad esempio MATH101. Un filtro è una condizione di ricerca definita dal contenuto di un database SQL **in cui** clausola. Quando il framework viene accodato all'istruzione SQL del recordset, il **in cui** clausola vincola la selezione.
+In questo argomento viene illustrato come filtrare un recordset in modo che selezioni solo un subset particolare dei record disponibili. Ad esempio, potrebbe essere necessario selezionare solo le sezioni della classe per un determinato corso, ad esempio MATH101. Un filtro è una condizione di ricerca definita dal contenuto di una clausola **where** SQL. Quando il Framework lo aggiunge all'istruzione SQL del recordset, la clausola **where** vincola la selezione.
 
-È necessario specificare il filtro di un oggetto recordset dopo la creazione dell'oggetto, ma prima di chiamare relativi `Open` funzione membro (o prima di chiamare il `Requery` dell'oggetto la cui funzione membro per un set di record esistente `Open` dispone di funzione membro stato chiamato in precedenza).
+È necessario stabilire un filtro per un oggetto recordset dopo la costruzione dell'oggetto, ma prima di chiamare la relativa funzione membro `Open` (o prima di chiamare la funzione membro `Requery` per un oggetto recordset esistente la cui funzione membro `Open` è stata chiamata in precedenza).
 
 #### <a name="to-specify-a-filter-for-a-recordset-object"></a>Per specificare un filtro per un oggetto recordset
 
-1. Creare un nuovo oggetto recordset (o preparare una chiamata a `Requery` per un oggetto esistente).
+1. Costruire un nuovo oggetto recordset (oppure preparare la chiamata `Requery` per un oggetto esistente).
 
-1. Impostare il valore dell'oggetto [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) (membro dati).
+1. Impostare il valore del membro dati [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) dell'oggetto.
 
-   Il filtro è una stringa con terminazione null che contiene il contenuto di SQL **in cui** clausola, ma non la parola chiave **in cui**. Ad esempio, usare:
+   Il filtro è una stringa con terminazione null che contiene il contenuto della clausola **where** SQL, ma non la parola chiave **where**. Ad esempio, usare:
 
     ```
     m_pSet->m_strFilter = "CourseID = 'MATH101'";
@@ -42,19 +42,19 @@ Questo argomento illustra come filtrare un set di record in modo che seleziona s
     ```
 
     > [!NOTE]
-    >  La stringa letterale "MATH101" viene visualizzata con virgolette singole precedente. Nella specifica ODBC SQL, le virgolette singole vengono utilizzate per indicare un valore letterale stringa di caratteri. Controllare la documentazione del driver ODBC per i requisiti di delimitazione del DBMS in questa situazione. Questa sintassi è illustrata in modo più dettagliato alla fine di questo argomento.
+    >  La stringa letterale "MATH101" viene visualizzata con le virgolette singole sopra. Nella specifica ODBC SQL le virgolette singole vengono utilizzate per indicare un valore letterale stringa di caratteri. In questa situazione, consultare la documentazione del driver ODBC per informazioni sui requisiti del sistema DBMS. Questa sintassi viene inoltre discussa ulteriormente in prossimità della fine di questo argomento.
 
-1. Impostare le opzioni che necessarie, come ordinamento, la modalità di blocco o parametri. Se si specifica un parametro è particolarmente utile. Per informazioni sull'uso dei parametri di filtro, vedere [Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Impostare le altre opzioni necessarie, ad esempio l'ordinamento, la modalità di blocco o i parametri. La specifica di un parametro è particolarmente utile. Per informazioni su come parametrizzazione il filtro, vedere [Recordset: parametrizzazione un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-1. Chiamare `Open` per il nuovo oggetto (o `Requery` per un oggetto aperto in precedenza).
-
-> [!TIP]
->  Utilizzo di parametri del filtro è potenzialmente il metodo più efficiente per il recupero dei record.
+1. Chiamare `Open` per il nuovo oggetto o `Requery` per un oggetto aperto in precedenza.
 
 > [!TIP]
->  Sono utili per i filtri di recordset [aggiunta](../../data/odbc/recordset-performing-a-join-odbc.md) tabelle e per l'uso [parametri](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) basato sulle informazioni specificate o calcolate in fase di esecuzione.
+>  L'utilizzo di parametri nel filtro è potenzialmente il metodo più efficiente per il recupero di record.
 
-Il recordset seleziona solo i record che soddisfano la condizione di ricerca specificato. Ad esempio, per specificare il filtro del corso descritto in precedenza (presupponendo che una variabile `strCourseID` attualmente impostato, ad esempio, per "MATH101"), eseguire le operazioni seguenti:
+> [!TIP]
+>  I filtri recordset sono utili per l' [Unione](../../data/odbc/recordset-performing-a-join-odbc.md) di tabelle e per l'utilizzo di [parametri](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) basati su informazioni ottenute o calcolate in fase di esecuzione.
+
+Il recordset seleziona solo i record che soddisfano la condizione di ricerca specificata. Ad esempio, per specificare il filtro del corso descritto in precedenza (presupponendo che una variabile `strCourseID` attualmente impostata, ad esempio, su "MATH101"), eseguire le operazioni seguenti:
 
 ```
 // Using the recordset pointed to by m_pSet
@@ -68,29 +68,29 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
 // Use the recordset
 ```
 
-Il set di record contiene record per tutte le sezioni di classe per MATH101.
+Il recordset contiene record per tutte le sezioni di classe per MATH101.
 
-Si noti come la stringa di filtro è stata impostata nell'esempio precedente, utilizzando una variabile di stringa. Questo è l'utilizzo tipico. Ma si supponga che si desidera specificare il valore letterale 100 per l'ID del corso. Il codice seguente viene illustrato come impostare la stringa di filtro in modo corretto con un valore letterale:
+Si noti come la stringa di filtro è stata impostata nell'esempio precedente, usando una variabile di stringa. Si tratta dell'utilizzo tipico. Tuttavia, si supponga di voler specificare il valore letterale 100 per l'ID del corso. Nel codice seguente viene illustrato come impostare correttamente la stringa di filtro con un valore letterale:
 
 ```
 m_strFilter = "StudentID = '100'";   // correct
 ```
 
-Si noti l'uso dei caratteri di virgoletta singola. Se si imposta la stringa di filtro direttamente, la stringa di filtro viene **non**:
+Si noti l'uso di caratteri di virgoletta singola; Se si imposta direttamente la stringa di filtro, la stringa di filtro **non**è:
 
 ```
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-Le virgolette sopra è conforme alla specifica ODBC, ma alcuni DBMS potrebbero richiedere altri caratteri di virgoletta. Per altre informazioni, vedere [SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Le virgolette illustrate in precedenza sono conformi alla specifica ODBC, ma alcuni DBMS potrebbero richiedere altri caratteri di virgolette. Per ulteriori informazioni, vedere [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Se si sceglie di eseguire l'override della stringa del recordset predefiniti SQL passando la stringa SQL personalizzata per `Open`, non è necessario impostare un filtro se la stringa personalizzata contiene una **dove** clausola. Per altre informazioni sulle ignorando l'impostazione predefinita, SQL, vedere [SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Se si sceglie di eseguire l'override della stringa SQL predefinita del recordset passando la stringa SQL personalizzata a `Open`, è consigliabile non impostare un filtro se la stringa personalizzata include una clausola **where** . Per ulteriori informazioni sull'override di SQL predefinito, vedere [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: ordinamento di record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Recordset: ordinamento dei record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
 [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Recordset: blocco di record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset: blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

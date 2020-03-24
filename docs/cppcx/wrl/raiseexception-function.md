@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231353"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213629"
 ---
 # <a name="raiseexception-function"></a>RaiseException (funzione)
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,23 +28,23 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Parametri
 
-*hr*<br/>
-Il codice di eccezione dell'eccezione generato; vale a dire, il valore HRESULT di un'operazione non riuscita.
+*HR*<br/>
+Codice dell'eccezione generata. ovvero HRESULT di un'operazione non riuscita.
 
 *dwExceptionFlags*<br/>
-Un flag che indica un'eccezione consentita (il valore del flag è zero) o eccezione noncontinuable (valore del flag è diverso da zero). Per impostazione predefinita, l'eccezione è critica.
+Flag che indica un'eccezione continua (il valore del flag è zero) o un'eccezione non continua (il valore del flag è diverso da zero). Per impostazione predefinita, l'eccezione è non continuabile.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Genera un'eccezione nel thread chiamante.
 
-Per altre informazioni, vedere il Windows `RaiseException` (funzione).
+Per ulteriori informazioni, vedere la funzione Windows `RaiseException`.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** FTM
+**Intestazione:** Internal. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da843405cfec4d1d571a3140f132513d8b068ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176096"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212082"
 ---
 # <a name="ccommand-class"></a>Classe CCommand
 
@@ -81,19 +81,19 @@ Tipo di classe di funzioni di accesso (ad esempio `CDynamicParameterAccessor`, `
 Tipo di classe rowset (ad esempio `CArrayRowset` o `CNoRowset`) che si desidera venga utilizzata dal comando. Il valore predefinito è `CRowset`.
 
 *TMultiple*<br/>
-Per usare un comando OLE DB che può restituire più risultati, specificare [CMultipleResults](../../data/oledb/cmultipleresults-class.md). In caso contrario, utilizzare [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Per informazioni dettagliate, vedere [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85)).
+Per usare un OLE DB comando che può restituire più risultati, specificare [CMultipleResults](../../data/oledb/cmultipleresults-class.md). In caso contrario, usare [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Per informazioni dettagliate, vedere [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85)).
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
 |||
 |-|-|
-|[Chiudi](#close)|Chiude il comando corrente.|
+|[Close](#close)|Chiude il comando corrente.|
 |[GetNextResult](#getnextresult)|Recupera il risultato successivo durante l'utilizzo di più set di risultati.|
 |[Apri](#open)|Esegue ed eventualmente associa il comando.|
 
@@ -101,7 +101,7 @@ Per usare un comando OLE DB che può restituire più risultati, specificare [CMu
 
 |||
 |-|-|
-|[creare](#create)|Crea un nuovo comando per la sessione specificata, quindi imposta il testo del comando.|
+|[Creare](#create)|Crea un nuovo comando per la sessione specificata, quindi imposta il testo del comando.|
 |[CreateCommand](#createcommand)|Crea un nuovo comando.|
 |[GetParameterInfo](#getparameterinfo)|Ottiene un elenco di parametri, i relativi nomi e tipi del comando.|
 |[Preparare](#prepare)|Convalida e ottimizza il comando corrente.|
@@ -109,15 +109,15 @@ Per usare un comando OLE DB che può restituire più risultati, specificare [CMu
 |[SetParameterInfo](#setparameterinfo)|Specifica il tipo nativo di ogni parametro di comando.|
 |[Unprepare](#unprepare)|Rimuove il piano di esecuzione corrente dei comandi.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Utilizzare questa classe quando è necessario eseguire un'operazione basata su parametri o eseguire un comando. Se devi semplicemente aprire un rowset semplice, usare [CTable](../../data/oledb/ctable-class.md) invece.
+Usare questa classe quando è necessario eseguire un'operazione basata su parametri o eseguire un comando. Se è sufficiente aprire un set di righe semplice, usare invece [CTable](../../data/oledb/ctable-class.md) .
 
 La classe di funzioni di accesso che si sta utilizzando determina il metodo di associazione dei parametri e dei dati.
 
 Notare che non è possibile utilizzare le stored procedure con il provider OLE BD per Jet, in quanto da questo non supportate. Nelle stringhe delle query sono infatti ammesse solo costanti.
 
-## <a name="close"></a> CCommand:: Close
+## <a name="ccommandclose"></a><a name="close"></a>CCommand:: Close
 
 Rilascia il set di righe della funzione di accesso associato al comando.
 
@@ -127,23 +127,23 @@ Rilascia il set di righe della funzione di accesso associato al comando.
 void Close();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Un comando Usa un set di righe della funzione di accesso set di risultati e (facoltativamente) una funzione di accesso parametro (a differenza delle tabelle, che non supportano parametri e non è necessario un accesso al parametro).
+Un comando usa un set di righe, una funzione di accesso del set di risultati e (facoltativamente) una funzione di accesso ai parametri (a differenza delle tabelle che non supportano i parametri e non necessitano di una funzione di accesso ai parametri).
 
-Quando si esegue un comando, è necessario chiamare entrambe `Close` e [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) dopo il comando.
+Quando si esegue un comando, è necessario chiamare sia `Close` che [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) dopo il comando.
 
-Quando si desidera eseguire ripetutamente lo stesso comando, si deve rilasciare ogni funzione di accesso set di risultati chiamando `Close` prima di chiamare `Execute`. Alla fine della serie, è necessario rilasciarne la funzione di accesso parametro chiamando `ReleaseCommand`. Un altro scenario comune viene chiamata una stored procedure con parametri di output. In molti provider di servizi (ad esempio, il provider OLE DB per SQL Server) i valori dei parametri di output non sarà accessibile fino a quando non si chiude la funzione di accesso set di risultati. Chiamare `Close` per chiudere il set di righe restituito e funzione di accesso set di risultati, ma non il parametro della funzione di accesso, consentendo in tal modo è possibile recuperare i valori dei parametri di output.
+Quando si desidera eseguire ripetutamente lo stesso comando, è necessario rilasciare ogni funzione di accesso del set di risultati chiamando `Close` prima di chiamare `Execute`. Alla fine della serie è necessario rilasciare la funzione di accesso del parametro chiamando `ReleaseCommand`. Un altro scenario comune è la chiamata di un stored procedure con parametri di output. In molti provider, ad esempio il provider di OLE DB per SQL Server, i valori dei parametri di output non saranno accessibili fino a quando non si chiude la funzione di accesso del set di risultati. Chiamare `Close` per chiudere il set di righe restituito e la funzione di accesso del set di risultati, ma non la funzione di accesso del parametro, consentendo così di recuperare i valori dei parametri di output.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come è possibile richiamare `Close` e `ReleaseCommand` quando si esegue più volte lo stesso comando.
+L'esempio seguente mostra come chiamare `Close` e `ReleaseCommand` quando si esegue più volte lo stesso comando.
 
 [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]
 
-## <a name="getnextresult"></a> CCommand::GetNextResult
+## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a>CCommand:: GetNextResult
 
-Recupera il successivo set di risultati se ne è disponibile.
+Recupera il set di risultati successivo se ne è disponibile uno.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -155,22 +155,22 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 #### <a name="parameters"></a>Parametri
 
 *pulRowsAffected*<br/>
-[in/out] Puntatore alla memoria in cui viene restituito il conteggio delle righe interessate da un comando.
+[in/out] Puntatore alla memoria in cui viene restituito il numero di righe interessate da un comando.
 
 *bBind*<br/>
-[in] Specifica se associare automaticamente il comando dopo l'esecuzione. Il valore predefinito è **true**, in modo che il comando deve essere associato automaticamente. L'impostazione *bBind* al **false** impedisce l'associazione automatica del comando in modo che è possibile associare manualmente. (Associazione manuale è di particolare interesse per gli utenti OLAP).
+in Specifica se associare il comando automaticamente dopo l'esecuzione. Il valore predefinito è **true**, che determina il binding automatico del comando. Se si imposta *bBind* su **false** , viene impedita l'associazione automatica del comando in modo che sia possibile eseguire il binding manualmente. (L'associazione manuale è di particolare interesse per gli utenti OLAP).
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se un set di risultati è stato recuperato in precedenza, questa funzione rilascia il set di risultati precedente e separa le colonne. Se *bBind* viene **true**, associa le nuove colonne.
+Se un set di risultati è stato recuperato in precedenza, questa funzione rilascia il set di risultati precedente e Annulla l'associazione delle colonne. Se *bBind* è **true**, associa le nuove colonne.
 
-È necessario chiamare questa funzione solo se si hanno più risultati impostando il `CCommand` parametro di modello *TMultiple*=`CMultipleResults`.
+È consigliabile chiamare questa funzione solo se sono stati specificati più risultati impostando il parametro di modello `CCommand` *TMultiple*=`CMultipleResults`.
 
-## <a name="open"></a> CCommand::
+## <a name="ccommandopen"></a><a name="open"></a>CCommand:: Open
 
 Esegue ed eventualmente associa il comando.
 
@@ -209,58 +209,58 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 #### <a name="parameters"></a>Parametri
 
-*session*<br/>
-[in] La sessione in cui eseguire il comando.
+*sessione*<br/>
+in Sessione in cui eseguire il comando.
 
 *wszCommand*<br/>
-[in] Il comando da eseguire, passato come stringa Unicode. Può essere NULL quando si usa `CAccessor`, nel qual caso il comando verrà recuperato dal valore passato per il [DEFINE_COMMAND](../../data/oledb/define-command.md) macro. Visualizzare [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) nel *riferimento per programmatori OLE DB* per informazioni dettagliate.
+in Comando da eseguire, passato come stringa Unicode. Può essere NULL quando si usa `CAccessor`, nel qual caso il comando verrà recuperato dal valore passato alla macro [DEFINE_COMMAND](../../data/oledb/define-command.md) . Per informazioni dettagliate, vedere [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 *szCommand*<br/>
-[in] Uguale allo *wszCommand* ad eccezione del fatto che questo parametro accetta una stringa di comandi ANSI. Il quarto form di questo metodo può accettare un valore NULL. Vedere "la sezione Osservazioni" più avanti in questo argomento per informazioni dettagliate.
+in Uguale a *wszCommand* , con la differenza che questo parametro accetta una stringa di comando ANSI. Il quarto form di questo metodo può assumere un valore NULL. Per informazioni dettagliate, vedere la sezione "osservazioni" più avanti in questo argomento.
 
 *pPropSet*<br/>
-[in] Un puntatore a una matrice di [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture contenenti le proprietà e valori da impostare. Visualizzare [set di proprietà e i gruppi di proprietà](/previous-versions/windows/desktop/ms713696(v=vs.85)) nel *riferimento per programmatori OLE DB* in Windows SDK.
+in Puntatore a una matrice di strutture [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) che contiene le proprietà e i valori da impostare. Vedere [set di proprietà e gruppi di proprietà](/previous-versions/windows/desktop/ms713696(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* nel Windows SDK.
 
 *pRowsAffected*<br/>
-[in/out] Puntatore alla memoria in cui viene restituito il conteggio delle righe interessate da un comando. Se  *\*pRowsAffected* è NULL, viene restituito alcun conteggio righe. In caso contrario, `Open` imposta  *\*pRowsAffected* in base alle condizioni seguenti:
+[in/out] Puntatore alla memoria in cui viene restituito il numero di righe interessate da un comando. Se *\*pRowsAffected* è null, non viene restituito alcun conteggio delle righe. In caso contrario, `Open` imposta *\*pRowsAffected* in base alle condizioni seguenti:
 
-|Se|Quindi|
+|Se|Risultato|
 |--------|----------|
-|Il `cParamSets` elemento di `pParams` è maggiore di 1|*\*pRowsAffected* rappresenta il numero totale di righe interessate da tutti i set di parametri specificati nell'esecuzione.|
-|Il numero di righe interessate non disponibile|*\*pRowsAffected* è impostato su -1.|
-|Il comando non vengono aggiornate, eliminare o inserire righe|*\*pRowsAffected* è definito.|
+|L'elemento `cParamSets` di `pParams` è maggiore di 1|*\*pRowsAffected* rappresenta il numero totale di righe interessate da tutti i set di parametri specificati nell'esecuzione.|
+|Il numero di righe interessate non è disponibile|*\*pRowsAffected* è impostato su-1.|
+|Il comando non aggiorna, Elimina o inserisce righe|*\*pRowsAffected* non è definito.|
 
 *guidCommand*<br/>
-[in] GUID che specifica la sintassi e le regole generali per il provider da utilizzare durante l'analisi del testo del comando. Visualizzare [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) e [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) nel *riferimento per programmatori OLE DB* per informazioni dettagliate.
+in GUID che specifica la sintassi e le regole generali del provider da utilizzare per l'analisi del testo del comando. Per informazioni dettagliate, vedere [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) e [ICommandText:: CommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) in *OLE DB Programmer ' s Reference* .
 
 *bBind*<br/>
-[in] Specifica se associare automaticamente il comando dopo l'esecuzione. Il valore predefinito è **true**, in modo che il comando deve essere associato automaticamente. L'impostazione *bBind* al **false** impedisce l'associazione automatica del comando in modo che è possibile associare manualmente. (Associazione manuale è di particolare interesse per gli utenti OLAP).
+in Specifica se associare il comando automaticamente dopo l'esecuzione. Il valore predefinito è **true**, che determina il binding automatico del comando. Se si imposta *bBind* su **false** , viene impedita l'associazione automatica del comando in modo che sia possibile eseguire il binding manualmente. (L'associazione manuale è di particolare interesse per gli utenti OLAP).
 
 *ulPropSets*<br/>
-[in] Il numero di [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture passato il *pPropSet* argomento.
+in Numero di strutture [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passate nell'argomento *pPropSet* .
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le prime tre forme di `Open` richiedere una sessione, creare un comando ed eseguire il comando, tutti i parametri di associazione in base alle esigenze.
+Le prime tre forme di `Open` accettano una sessione, creano un comando ed eseguono il comando, associando tutti i parametri in modo necessario.
 
-La prima forma del `Open` accetta una stringa di comando di Unicode e non dispone di alcun valore predefinito.
+La prima forma di `Open` accetta una stringa di comando Unicode e non ha alcun valore predefinito.
 
-La seconda forma di `Open` accetta una stringa di comandi ANSI e alcun valore predefinito (fornito per garantire la compatibilità con le applicazioni esistenti ANSI).
+Il secondo formato di `Open` accetta una stringa di comando ANSI e nessun valore predefinito (fornito per la compatibilità con le versioni precedenti delle applicazioni ANSI esistenti).
 
-La terza forma `Open` consente alla stringa di comando deve essere NULL, a causa di tipo **int** con un valore predefinito NULL. Viene fornito per la chiamata `Open(session, NULL);` oppure `Open(session);` perché è di tipo NULL **int**. Questa versione è necessario e asserisce che il **int** parametro essere NULL.
+La terza forma di `Open` consente la stringa di comando come NULL, a causa del tipo **int** e il valore predefinito è null. Viene fornito per chiamare `Open(session, NULL);` o `Open(session);` perché NULL è di tipo **int**. Questa versione richiede e dichiara che il parametro **int** è null.
 
-Utilizzare la forma del quarta `Open` quando è già stato creato un comando e si desidera eseguire una singola [Prepare](../../data/oledb/ccommand-prepare.md) e più esecuzioni.
+Utilizzare la quarta forma di `Open` quando è già stato creato un comando e si desidera eseguire una singola [preparazione](../../data/oledb/ccommand-prepare.md) e più esecuzioni.
 
 > [!NOTE]
->  `Open` le chiamate `Execute`, che a sua volta chiama `GetNextResult`.
+>  `Open` chiama `Execute`, che a sua volta chiama `GetNextResult`.
 
-## <a name="create"></a> CCommand:: Create
+## <a name="ccommandcreate"></a><a name="create"></a>CCommand:: create
 
-Le chiamate [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) per creare un comando per la sessione specificata, quindi chiama [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) per specificare il testo del comando.
+Chiama [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) per creare un comando per la sessione specificata, quindi chiama [ICommandText:: secommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) per specificare il testo del comando.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -276,27 +276,27 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 #### <a name="parameters"></a>Parametri
 
-*session*<br/>
-[in] Una sessione in cui creare il comando.
+*sessione*<br/>
+in Sessione in cui creare il comando.
 
 *wszCommand*<br/>
-[in] Puntatore al testo Unicode della stringa di comando.
+in Puntatore al testo Unicode della stringa di comando.
 
 *szCommand*<br/>
-[in] Puntatore al testo ANSI della stringa di comando.
+in Puntatore al testo ANSI della stringa di comando.
 
 *guidCommand*<br/>
-[in] GUID che specifica la sintassi e le regole generali per il provider da utilizzare durante l'analisi del testo del comando. Per una descrizione di dialetti, vedere [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+in GUID che specifica la sintassi e le regole generali del provider da utilizzare per l'analisi del testo del comando. Per una descrizione dei dialetti, vedere [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La prima forma del `Create` accetta una stringa di comando di Unicode. La seconda forma di `Create` accetta una stringa di comandi ANSI (fornita per garantire la compatibilità con le applicazioni esistenti ANSI).
+La prima forma di `Create` accetta una stringa di comando Unicode. La seconda forma di `Create` accetta una stringa di comando ANSI, fornita per compatibilità con le versioni precedenti delle applicazioni ANSI esistenti.
 
-## <a name="createcommand"></a> CCommand::CreateCommand
+## <a name="ccommandcreatecommand"></a><a name="createcommand"></a>CCommand:: CreateCommand
 
 Crea un nuovo comando.
 
@@ -308,18 +308,18 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 #### <a name="parameters"></a>Parametri
 
-*session*<br/>
-[in] Oggetto `CSession` oggetto da associare il nuovo comando.
+*sessione*<br/>
+in Oggetto `CSession` da associare al nuovo comando.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo crea un comando usando l'oggetto di sessione specificato.
+Questo metodo crea un comando utilizzando l'oggetto sessione specificato.
 
-## <a name="getparameterinfo"></a> CCommand:: GetParameterInfo
+## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a>CCommand:: GetParameterInfo
 
 Ottiene un elenco di parametri, i relativi nomi e tipi del comando.
 
@@ -333,13 +333,13 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [ICommandWithParameters:: GetParameterInfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [ICommandWithParameters:: GetParameterInfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-## <a name="prepare"></a> CCommand:: Prepare
+## <a name="ccommandprepare"></a><a name="prepare"></a>CCommand::P ripare
 
 Convalida e ottimizza il comando corrente.
 
@@ -352,19 +352,19 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 #### <a name="parameters"></a>Parametri
 
 *cExpectedRuns*<br/>
-[in] Il numero di volte in cui che si prevede di eseguire il comando.
+in Il numero di volte in cui si prevede di eseguire il comando.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo il wrapping del metodo OLE DB [ICommandPrepare:: Prepare](/previous-versions/windows/desktop/ms718370(v=vs.85)).
+Questo metodo esegue il wrapping del metodo OLE DB [ICommandPrepare::P ripare](/previous-versions/windows/desktop/ms718370(v=vs.85)).
 
-## <a name="releasecommand"></a> CCommand:: ReleaseCommand
+## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a>CCommand:: ReleaseCommand
 
-Rilascia la funzione di accesso di parametro, quindi rilascia il comando stesso.
+Rilascia la funzione di accesso del parametro, quindi rilascia il comando stesso.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -372,11 +372,11 @@ Rilascia la funzione di accesso di parametro, quindi rilascia il comando stesso.
 void CCommandBase::ReleaseCommand() throw();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`ReleaseCommand` viene usato in combinazione con `Close`. Visualizzare [Chiudi](../../data/oledb/ccommand-close.md) per i dettagli di utilizzo.
+`ReleaseCommand` viene utilizzata insieme a `Close`. Vedere [Close](../../data/oledb/ccommand-close.md) per i dettagli di utilizzo.
 
-## <a name="setparameterinfo"></a> CCommand:: SetParameterInfo
+## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a>CCommand:: separameterinfo
 
 Specifica il tipo nativo di ogni parametro di comando.
 
@@ -390,13 +390,13 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [ICommandWithParameters:: SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Vedere [ICommandWithParameters:: separameterinfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-## <a name="unprepare"></a> CCommand:: Unprepare
+## <a name="ccommandunprepare"></a><a name="unprepare"></a>CCommand:: Unprepare
 
 Rimuove il piano di esecuzione corrente dei comandi.
 
@@ -408,13 +408,13 @@ HRESULT CCommandBase::Unprepare() throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo il wrapping del metodo OLE DB [ICommandPrepare::](/previous-versions/windows/desktop/ms719635(v=vs.85)).
+Questo metodo esegue il wrapping del metodo OLE DB [ICommandPrepare:: Unprep](/previous-versions/windows/desktop/ms719635(v=vs.85)).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

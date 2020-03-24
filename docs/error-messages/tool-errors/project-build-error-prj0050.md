@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0050
 ms.assetid: ceef3b37-0acf-4abd-ac62-aa830b4fa145
-ms.openlocfilehash: ec2490bad70d2b2eb72cbb48771900f09f8c2f67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56e092b5f7c33ad9543951621b2a9d8f6992331f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191990"
 ---
 # <a name="project-build-error-prj0050"></a>Errore di compilazione progetto PRJ0050
 
-Impossibile registrare l'output. Assicurarsi di che avere le autorizzazioni appropriate per modificare il Registro di sistema.
+Impossibile registrare l'output. Assicurarsi di disporre delle autorizzazioni appropriate per modificare il registro di sistema.
 
-Il sistema di compilazione Visual C++ non è in grado di registrare l'output della compilazione (dll o .exe). È necessario essere connessi come amministratore per modificare il Registro di sistema.
+Il sistema C++ di compilazione visiva non è stato in grado di registrare l'output della compilazione (dll o exe). Per modificare il registro di sistema, è necessario effettuare l'accesso come amministratore.
 
-Se si compila una DLL, è possibile provare a registrare la DLL manualmente utilizzando regsvr32.exe, questo deve visualizzare informazioni sui motivi per cui la compilazione non riuscita.
+Se si compila un file con estensione dll, è possibile provare a registrare il file con estensione dll manualmente con regsvr32. exe, in modo da visualizzare informazioni sul motivo per cui la compilazione non è riuscita.
 
-Se non si compila una DLL, esaminare il log di compilazione per il comando che ha provocato un errore.
+Se non si compila un file con estensione dll, esaminare il log di compilazione per il comando che genera un errore.

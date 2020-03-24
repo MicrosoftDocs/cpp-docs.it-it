@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2026
 ms.assetid: 9955bf7c-59b5-4fa1-8481-147db0d7df45
-ms.openlocfilehash: c4fcd126a4ecc020243cea7fd187ff666239f0b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1be3b3d292b0d4ab616a5a7f3fbcd4105faaecd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386382"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194597"
 ---
 # <a name="linker-tools-error-lnk2026"></a>Errore degli strumenti del linker LNK2026
 
-modulo unsafe per immagine SAFESEH
+il modulo non è sicuro per l'immagine SAFESEH
 
-[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) è stato specificato, ma un modulo non è compatibile con la funzionalità di gestione sicura delle eccezioni. Se si desidera usare questo modulo con **/SAFESEH**, sarà necessario ricompilare il modulo.
+[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) è stato specificato, ma un modulo non era compatibile con la funzionalità di gestione delle eccezioni sicure. Se si vuole usare questo modulo con **/SAFESEH**, sarà necessario ricompilare il modulo.

@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214123"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>Enumerazione CancelTransitionPolicy
 
-Indica come operazione asincrona del tentativo di eseguire la transizione a uno stato terminale di completamento o errore di comportamento rispetto a uno stato annullato di richiesta del client.
+Indica il comportamento di un tentativo di transizione di un'operazione asincrona a uno stato terminale di completato o errore rispetto a uno stato di annullamento richiesto dal client.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,14 +26,14 @@ Indica come operazione asincrona del tentativo di eseguire la transizione a uno 
 enum CancelTransitionPolicy;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`RemainCanceled`|Se l'operazione asincrona è attualmente in uno stato annullato di richiesta del client, ciò indica che viene mantenuta nello stato annullato anziché in fase di transizione a uno stato di errore o il terminal completata.|
-|`TransitionFromCanceled`|Se l'operazione asincrona è attualmente in uno stato annullato di richiesta del client, ciò indica che lo stato deve eseguire la transizione da quello stato annullato per lo stato terminale di completamento o errore, come determinato dalla chiamata che usa questo flag.|
+|`RemainCanceled`|Se l'operazione asincrona si trova attualmente in uno stato di annullamento richiesto dal client, significa che resterà nello stato annullato anziché passare a uno stato di completamento o di errore del terminale.|
+|`TransitionFromCanceled`|Se l'operazione asincrona si trova attualmente in uno stato di annullamento richiesto dal client, indica che lo stato deve passare dallo stato annullato allo stato finale di completato o errore come determinato dalla chiamata che utilizza questo flag.|
 
 ## <a name="requirements"></a>Requisiti
 

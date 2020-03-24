@@ -1,5 +1,5 @@
 ---
-title: AsWeak (funzione)
+title: Funzione AsWeak
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-ms.openlocfilehash: 45df6332fccb2a22284eb6478c7554d87318ca78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11f55d57f4053fd6d46b727a8ed91b340d1764b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398849"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214175"
 ---
-# <a name="asweak-function"></a>AsWeak (funzione)
+# <a name="asweak-function"></a>Funzione AsWeak
 
 Recupera un riferimento debole a un'istanza specificata.
 
@@ -31,17 +31,17 @@ HRESULT AsWeak(
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Un puntatore al tipo del parametro *p*.
+Puntatore al tipo di parametro *p*.
 
 *p*<br/>
-Un'istanza di un tipo.
+Istanza di un tipo.
 
 *pWeak*<br/>
 Al termine di questa operazione, un puntatore a un riferimento debole al parametro *p*.
 
 ## <a name="return-value"></a>Valore restituito
 
-S_OK, se questa operazione ha esito positivo; in caso contrario, un errore HRESULT che indica la causa dell'errore.
+S_OK, se l'operazione ha esito positivo; in caso contrario, viene generato un errore HRESULT che indica la cause dell'errore.
 
 ## <a name="requirements"></a>Requisiti
 

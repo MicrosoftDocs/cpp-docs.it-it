@@ -5,20 +5,20 @@ helpviewer_keywords:
 - global constants
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-ms.openlocfilehash: 2f0621f52fe445f8f2058ef902824ddc1f5e2bb5
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cabe5e92a496181d60536d7274eca388aba5c068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856101"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195474"
 ---
 # <a name="global-constants-in-c"></a>Costanti globali in C++
 
-Costanti globali C++ hanno un collegamento statico. Questo comportamento è diverso rispetto a C. Se si prova a usare un globali costante in C++ in più file si verifica un errore esterno non risolto. Il compilatore ottimizza le costanti globali sono, senza lasciare spazio riservato per la variabile.
+C++le costanti globali hanno un collegamento statico. Questa operazione è diversa da C. Se si tenta di usare una costante globale in C++ in più file, si ottiene un errore esterno non risolto. Il compilatore ottimizza le costanti globali in uscita, senza lasciare spazio riservato per la variabile.
 
-Un modo per risolvere questo errore è da includere le inizializzazioni const in un file di intestazione e includere l'intestazione nei file CPP quando necessario, come se fosse prototipo di funzione. Un'altra possibilità consiste nel rendere la variabile non costante e usare un riferimento costante quando valutarla.
+Un modo per risolvere questo errore consiste nell'includere le inizializzazioni const in un file di intestazione e includere l'intestazione nei file CPP quando necessario, come se si trattasse di un prototipo di funzione. Un'altra possibilità consiste nel rendere la variabile non costante e usare un riferimento costante per la valutazione.
 
-L'esempio seguente genera l'errore C2019:
+L'esempio seguente genera l'C2019:
 
 ```cpp
 // global_constants.cpp

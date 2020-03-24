@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 2d65fb047e758f449ed76c954bb4ac0c3623f6dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a3b1dac51a8300a915a7177c36f15512b583fa0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209308"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212110"
 ---
 # <a name="ccolumnaccessor-class"></a>Classe CColumnAccessor
 
-Genera il codice inserito consumer.
+Genera il codice del consumer inserito.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,27 +25,27 @@ Genera il codice inserito consumer.
 class CColumnAccessor : public CAccessorBase
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Nel codice inserito, ogni colonna è associata come una funzione di accesso separato. È necessario essere consapevoli che questa classe viene utilizzata l'inserimento di codice (ad esempio, che potrebbe verificarsi durante il debug), ma in genere non è necessario usare direttamente o i relativi metodi.
+Nel codice inserito ogni colonna è associata come funzione di accesso separata. È necessario tenere presente che questa classe viene usata nel codice inserito (ad esempio, potrebbe verificarsi durante il debug), ma in genere non è necessario usarla direttamente o i relativi metodi.
 
-`CColumnAccessor` implementa i metodi stub seguenti, ognuno dei quali corrispondono funzionalità agli altri metodi di classe della funzione di accesso:
+`CColumnAccessor` implementa i metodi stub seguenti, ognuno dei quali corrisponde alla funzionalità ad altri metodi della classe di funzione di accesso:
 
-- `CColumnAccessor` Il costruttore. Crea e inizializza il `CColumnAccessor` oggetto.
+- `CColumnAccessor` il costruttore; Crea un'istanza e Inizializza l'oggetto `CColumnAccessor`.
 
-- `CreateAccessor` Alloca memoria per la colonna di strutture di associazione e inizializza i membri di dati di colonna.
+- `CreateAccessor` alloca memoria per le strutture di associazione di colonna e inizializza i membri dati della colonna.
 
-- `BindColumns` Associa le colonne per le funzioni di accesso.
+- `BindColumns` associa le colonne alle funzioni di accesso.
 
-- `SetParameterBuffer` Alloca i buffer per i parametri.
+- `SetParameterBuffer` alloca i buffer per i parametri.
 
-- `AddParameter` Aggiunge una voce di parametro alle strutture di voce di parametro.
+- `AddParameter` aggiunge una voce di parametro alle strutture di immissione dei parametri.
 
-- `HasOutputColumns` Determina se la funzione di accesso include colonne di output
+- `HasOutputColumns` determina se la funzione di accesso include colonne di output
 
-- `HasParameters` Determina se la funzione di accesso dispone di parametri.
+- `HasParameters` determina se la funzione di accesso dispone di parametri.
 
-- `BindParameters` Associa i parametri creati per le colonne.
+- `BindParameters` associa i parametri creati alle colonne.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -53,5 +53,5 @@ Nel codice inserito, ogni colonna è associata come una funzione di accesso sepa
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

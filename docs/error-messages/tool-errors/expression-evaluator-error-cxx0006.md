@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0006
 - CXX0006
 ms.assetid: 34a8e21c-5443-4817-aad9-bb3143cfcaa6
-ms.openlocfilehash: 984416af73fbf1da5d52404e1a73f918f99ccd6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a082f24bc43878f240e9782e903474465e7c9ef8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406080"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196300"
 ---
 # <a name="expression-evaluator-error-cxx0006"></a>Errore dell‘analizzatore di espressioni CXX0006
 
-parentesi mancante
+parentesi sinistra mancante
 
-Parentesi non corrispondenti sono stati trovati nell'espressione. Digitare di nuovo l'espressione con parentesi bilanciate.
+Nell'espressione sono state trovate parentesi non bilanciate. Digitare nuovamente l'espressione con le parentesi bilanciate.
 
-Questo errore è identico all'errore CAN0006.
+Questo errore è identico a CAN0006.

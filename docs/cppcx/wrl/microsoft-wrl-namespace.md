@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92251dacbfa17e8f1ac0cbdc41aa9b06118ac91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213772"
 ---
 # <a name="microsoftwrl-namespace"></a>Spazio dei nomi Microsoft::WRL
 
-Definisce i tipi fondamentali che costituiscono la libreria di modelli di Windows Runtime C++.
+Definisce i tipi fondamentali che costituiscono la libreria di C++ modelli Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,9 +31,9 @@ Definisce i tipi fondamentali che costituiscono la libreria di modelli di Window
 namespace Microsoft::WRL;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
 |Nome|Descrizione|
 |----------|-----------------|
@@ -48,7 +48,7 @@ namespace Microsoft::WRL;
 |[Classe ClassFactory](classfactory-class.md)|Implementa le funzionalità di base di un'interfaccia `IClassFactory`.|
 |[Classe ComPtr](comptr-class.md)|Crea un tipo di *puntatore intelligente* che rappresenta l'interfaccia specificata dal parametro di modello. ComPtr mantiene automaticamente un conteggio dei riferimenti per il puntatore di interfaccia sottostante e rilascia l'interfaccia quando il conteggio dei riferimenti va a zero.|
 |[Classe DeferrableEventArgs](deferrableeventargs-class.md)|Classe di modello usata per i tipi di argomento evento per rinvii.|
-|[Classe EventSource](eventsource-class.md)|Rappresenta un evento. Le funzioni membro `EventSource` aggiungono, rimuovono ed invocano i gestori di eventi.|
+|[classe EventSource](eventsource-class.md)|Rappresenta un evento. Le funzioni membro `EventSource` aggiungono, rimuovono ed invocano i gestori di eventi.|
 |[Classe FtmBase](ftmbase-class.md)|Rappresenta un oggetto gestore del marshalling a thread libero.|
 |[Classe Module](module-class.md)|Rappresenta una raccolta di oggetti correlati.|
 |[Classe RuntimeClass](runtimeclass-class.md)|Rappresenta una classe istanziata che eredita il numero specificato di interfacce e fornisce il Windows Runtime specificato, COM classico e il supporto dei riferimenti deboli.|
@@ -61,18 +61,18 @@ namespace Microsoft::WRL;
 |Nome|Descrizione|
 |----------|-----------------|
 |[Struttura ChainInterfaces](chaininterfaces-structure.md)|Specifica le funzioni di verifica e inizializzazione che possono essere applicate a un set di ID di interfaccia.|
-|[Struttura CloakedIid](cloakediid-structure.md)|Indica al `RuntimeClass`, `Implements` e `ChainInterfaces` modelli che l'interfaccia specificata non è accessibile nell'elenco di IID.|
-|[Struttura Implements](implements-structure.md)|Implements `QueryInterface` e `GetIid` per le interfacce specificate.|
+|[Struttura CloakedIid](cloakediid-structure.md)|Indica ai modelli `RuntimeClass`, `Implements` e `ChainInterfaces` che l'interfaccia specificata non è accessibile nell'elenco di IID.|
+|[Struttura Implements](implements-structure.md)|Implementa `QueryInterface` e `GetIid` per le interfacce specificate.|
 |[Struttura MixIn](mixin-structure.md)|Verifica che una classe di runtime derivi da interfacce di Windows Runtime, se disponibili, quindi da interfacce COM classiche.|
-|[Struttura RuntimeClassFlags](runtimeclassflags-structure.md)|Contiene il tipo di un'istanza di un [RuntimeClass](runtimeclass-class.md).|
+|[Struttura RuntimeClassFlags](runtimeclassflags-structure.md)|Contiene il tipo per un'istanza di [RuntimeClass](runtimeclass-class.md).|
 
 ### <a name="enumerations"></a>Enumerazioni
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Enumerazione AsyncResultType](asyncresulttype-enumeration.md)|Specifica il tipo di risultato restituito dal `GetResults()` (metodo).|
+|[Enumerazione AsyncResultType](asyncresulttype-enumeration.md)|Specifica il tipo di risultato restituito dal metodo `GetResults()`.|
 |[Enumerazione ModuleType](moduletype-enumeration.md)|Specifica se un modulo deve supportare un server in-process o un server out-of-process.|
-|[Enumerazione RuntimeClassType](runtimeclasstype-enumeration.md)|Specifica il tipo della [RuntimeClass](runtimeclass-class.md) istanza in cui è supportata.|
+|[Enumerazione RuntimeClassType](runtimeclasstype-enumeration.md)|Specifica il tipo di istanza di [RuntimeClass](runtimeclass-class.md) supportata.|
 
 ### <a name="functions"></a>Funzioni
 
@@ -82,11 +82,11 @@ namespace Microsoft::WRL;
 |[Funzione di callback (WRL)](callback-function-wrl.md)|Crea un oggetto la cui funzione membro è un metodo di callback.|
 |[Funzione CreateActivationFactory](createactivationfactory-function.md)|Crea una factory che produce istanze della classe specificata che può essere attivata da Windows Runtime.|
 |[Funzione CreateClassFactory](createclassfactory-function.md)|Crea una factory che produce istanze della classe specificata.|
-|[Funzione Make](make-function.md)|Inizializza la classe di Runtime di Windows specificata.|
+|[Funzione Make](make-function.md)|Inizializza la classe Windows Runtime specificata.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** Async. h, client. h, corewrappers. h, Event, ftm.h, Implements. h, FTM, module.h
+**Intestazione:** Async. h, client. h, corewrappers. h, Event. h, FTM. h, Implements. h, Internal. h, Module. h
 
 **Spazio dei nomi:** Microsoft::WRL
 

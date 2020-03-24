@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446059"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212123"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
@@ -145,7 +145,7 @@ Nell'esempio seguente viene illustrato l'utilizzo della classe `CBulkRowset`.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a>CBulkRowset:: AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset:: AddRefRows
 
 Chiama [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) per incrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal set di righe BULK.
 
@@ -159,7 +159,7 @@ HRESULT AddRefRows() throw();
 
 Valore HRESULT standard.
 
-## <a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
 
 Crea un nuovo oggetto `CBulkRowset` e imposta il numero di righe predefinito su 10.
 
@@ -169,7 +169,7 @@ Crea un nuovo oggetto `CBulkRowset` e imposta il numero di righe predefinito su 
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a>CBulkRowset:: MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset:: MoveFirst
 
 Recupera la prima riga di dati.
 
@@ -183,7 +183,7 @@ HRESULT MoveFirst() throw();
 
 Valore HRESULT standard.
 
-## <a name="movelast"></a>CBulkRowset:: MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset:: MoveLast
 
 Passa all'ultima riga.
 
@@ -197,7 +197,7 @@ HRESULT MoveLast() throw();
 
 Valore HRESULT standard.
 
-## <a name="movenext"></a>CBulkRowset:: MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset:: MoveNext
 
 Recupera la riga di dati successiva.
 
@@ -211,7 +211,7 @@ HRESULT MoveNext() throw();
 
 Valore HRESULT standard. Quando è stata raggiunta la fine del set di righe, restituisce DB_S_ENDOFROWSET.
 
-## <a name="moveprev"></a>CBulkRowset:: MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset:: MovePrev
 
 Passa alla riga precedente.
 
@@ -225,7 +225,7 @@ HRESULT MovePrev() throw();
 
 Valore HRESULT standard.
 
-## <a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
 
 Recupera la riga contrassegnata da un segnalibro o dalla riga in corrispondenza di un offset specificato (*lSkip*) dal segnalibro.
 
@@ -248,7 +248,7 @@ in Numero totale di righe dal segnalibro alla riga di destinazione. Se *lSkip* �
 
 Vedere [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="movetoratio"></a>CBulkRowset:: MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset:: MoveToRatio
 
 Recupera le righe a partire da una posizione frazionaria nel set di righe.
 
@@ -279,7 +279,7 @@ Valore HRESULT standard.
 
 Dove `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="releaserows"></a>CBulkRowset:: ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset:: ReleaseRows
 
 Chiama [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) per decrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal set di righe BULK.
 
@@ -293,7 +293,7 @@ HRESULT ReleaseRows() throw();
 
 Valore HRESULT standard.
 
-## <a name="setrows"></a>CBulkRowset:: GetRows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset:: GetRows
 
 Imposta il numero di handle di riga recuperati da ogni chiamata.
 

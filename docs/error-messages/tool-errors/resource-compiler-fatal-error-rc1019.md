@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1019
 ms.assetid: 432fff44-04a9-4e13-91c6-870df6f0b4e4
-ms.openlocfilehash: b9f83d9bcacce2e76a0e9deeeddfe21863688552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa97c216b3a522c798f549ffd7a34e4d9d48633e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173062"
 ---
 # <a name="resource-compiler-fatal-error-rc1019"></a>Errore irreversibile del compilatore di risorse RC1019
 
-imprevisto ' #else '
+' #else ' imprevisto
 
-Il `#else` direttiva non venivano visualizzati all'interno di un' `#if`, **#ifdef**, o **#ifndef** costruire.
+La direttiva `#else` non è stata visualizzata all'interno di un costrutto di `#if`, **#ifdef**o **#ifndef** .
 
-Assicurarsi che vi sia un' `#if`, **#ifdef**, o **#ifndef** istruzione attiva prima di questa istruzione.
+Verificare che sia presente un'istruzione `#if`, **#ifdef**o **#ifndef** in vigore prima di questa istruzione.

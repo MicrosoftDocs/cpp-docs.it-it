@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: d928d8de34c6caab0f86e9205d0aea45b5ed737c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: e02e928f65ab4cd918e730135abc62ed3237decf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079439"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215124"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Creazione di un'applicazione MFC di tipo browser Web
 
 Un'applicazione di tipo Web browser può accedere alle informazioni da Internet (ad esempio HTML o documenti attivi) o da una rete Intranet, nonché le cartelle nel file system locale e in una rete. Derivando la classe di visualizzazione dell'applicazione da [CHtmlView](../../mfc/reference/chtmlview-class.md), è possibile rendere l'applicazione un Web browser fornendo la visualizzazione con il controllo WebBrowser.
 
-### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Per creare un'applicazione Web browser basata sull'architettura documento/visualizzazione MFC
+## <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Per creare un'applicazione Web browser basata sull'architettura documento/visualizzazione MFC
 
 1. Seguire le istruzioni riportate in [creazione di un'applicazione MFC](../../mfc/reference/creating-an-mfc-application.md).
 
@@ -35,7 +35,7 @@ Un'applicazione di tipo Web browser può accedere alle informazioni da Internet 
 Il controllo WebBrowser supporta l'esplorazione Web attraverso collegamenti ipertestuali e la navigazione Uniform Resource Locator (URL). Il controllo gestisce un elenco di cronologia che consente all'utente di spostarsi avanti e indietro attraverso i siti, le cartelle e i documenti precedentemente esplorati. Il controllo gestisce direttamente la navigazione, i collegamenti ipertestuali, gli elenchi di cronologia, i Preferiti e la sicurezza. Le applicazioni possono utilizzare il controllo WebBrowser come contenitore di documenti attivo anche per ospitare documenti attivi. In questo modo, è possibile aprire e modificare i documenti formattati in modo completo, ad esempio fogli di calcolo di Microsoft Excel o documenti di Word, dall'interno del controllo WebBrowser. Il controllo WebBrowser è anche un contenitore di controlli ActiveX che può ospitare qualsiasi controllo ActiveX.
 
 > [!NOTE]
->  Il controllo ActiveX WebBrowser (e quindi `CHtmlView`) è disponibile solo per le applicazioni in esecuzione in versioni di Windows in cui è stato installato Internet Explorer 4,0 o versione successiva.
+> Il controllo ActiveX WebBrowser (e quindi `CHtmlView`) è disponibile solo per le applicazioni in esecuzione in versioni di Windows in cui è stato installato Internet Explorer 4,0 o versione successiva.
 
 Poiché `CHtmlView` implementa semplicemente il controllo Microsoft Web browser, il suo supporto per la stampa non è analogo ad altre classi derivate da [CView](../../mfc/reference/cview-class.md). Il controllo WebBrowser implementa invece l'interfaccia utente della stampante e la stampa. Di conseguenza, `CHtmlView` non supporta l'anteprima di stampa e il Framework non fornisce altre funzioni di supporto per la stampa, ad esempio [CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView:: OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)e [CView:: OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), disponibili in altre applicazioni MFC.
 
@@ -69,7 +69,7 @@ void CWebView::OnInitialUpdate()
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFCIE di esempio MFC](https://github.com/Microsoft/VCSamples)<br/>
+[MFCIE di esempio MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/internet)<br/>
 [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)<br/>
 [Impostare il compilatore e le proprietà di compilazione](../../build/working-with-project-properties.md)<br/>
 [Pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md)<br/>

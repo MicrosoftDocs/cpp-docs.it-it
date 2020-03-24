@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403132"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213577"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType (enumerazione)
 
-Specifica il tipo della [RuntimeClass](runtimeclass-class.md) istanza in cui è supportata.
+Specifica il tipo di istanza di [RuntimeClass](runtimeclass-class.md) supportata.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,17 +24,17 @@ Specifica il tipo della [RuntimeClass](runtimeclass-class.md) istanza in cui è 
 enum RuntimeClassType;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`ClassicCom`|Una classe di runtime classica COM.|
-|`Delegate`|Equivalente a `ClassicCom`.|
-|`InhibitFtmBase`|Consente di disattivare `FtmBase` supporto durante `__WRL_CONFIGURATION_LEGACY__` non è definito.|
+|`ClassicCom`|Una classe di runtime COM classica.|
+|`Delegate`|È equivalente a `ClassicCom`.|
+|`InhibitFtmBase`|Disabilita il supporto di `FtmBase` mentre `__WRL_CONFIGURATION_LEGACY__` non è definito.|
 |`InhibitWeakReference`|Disabilita il supporto di riferimento debole.|
-|`WinRt`|Una classe di Windows Runtime.|
+|`WinRt`|Classe Windows Runtime.|
 |`WinRtClassicComMix`|Combinazione di `WinRt` e `ClassicCom`.|
 
 ## <a name="requirements"></a>Requisiti

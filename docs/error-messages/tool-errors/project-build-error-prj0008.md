@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0008
 ms.assetid: 6bf7f17a-d2a8-4826-99c7-d600d846952f
-ms.openlocfilehash: 5741b7ef8cb9a7ae53d64874d3531e9271c09e0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d1c11ab7539f25d371c0bfbd2853b6155c9661c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359488"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192954"
 ---
 # <a name="project-build-error-prj0008"></a>Errore di compilazione progetto PRJ0008
 
-Impossibile eliminare il file 'file'.
+Non è stato possibile eliminare il file ' file '.
 
-**Assicurarsi che il file non sia aperto da un altro processo e non è protetto da scrittura.**
+**Verificare che il file non sia aperto da un altro processo e che non sia protetto da scrittura.**
 
-Durante la ricompilazione o di pulizia, Visual C++ vengono eliminati tutti i file intermedi e di output utilizzati per la compilazione, nonché qualsiasi file che soddisfano le specifiche dei caratteri jolly nel **estensioni da eliminare durante la pulitura** proprietà nel [generale Pagina delle proprietà di configurazione delle impostazioni](../../build/reference/general-property-page-project.md).
+Durante un'operazione di ricompilazione o C++ pulizia, l'oggetto visivo Elimina tutti i file intermedi e di output noti per la compilazione, nonché tutti i file che soddisfano le specifiche dei caratteri jolly nelle **estensioni da eliminare nella proprietà Pulisci** nella [pagina delle proprietà impostazioni di configurazione generale](../../build/reference/general-property-page-project.md).
 
-Verrà visualizzato questo errore se non è in grado di eliminare un file di Visual C++. Per risolvere l'errore, verificare il file e la relativa directory scrivibile per l'utente che effettua la compilazione.
+Questo errore viene visualizzato se l'oggetto C++ visivo non è in grado di eliminare un file. Per risolvere l'errore, rendere scrivibile il file e la relativa directory per l'utente che esegue la compilazione.

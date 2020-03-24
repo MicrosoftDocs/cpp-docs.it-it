@@ -6,12 +6,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: c51a5ea5aaabb27babb9e4cd355721742088d31e
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 41ad348b7109451f519c44f685cea0a271f71925
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998893"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161010"
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 
@@ -63,7 +63,7 @@ Gli oggetti di un tipo integrale possono essere convertiti in un altro tipo inte
 
 - campi di bit **int**
 
-- Enumeratori
+- Enumerators
 
 C++le promozioni sono "con mantenimento del valore", come valore dopo che la promozione è garantita come valore prima della promozione. Nelle promozioni con mantenimento del valore, gli oggetti di tipi integrali più brevi, ad esempio campi di bit o oggetti di tipo **char**, vengono promossi al tipo **int** se **int** può rappresentare l'intervallo completo del tipo originale. Se **int** non può rappresentare l'intervallo completo di valori, l'oggetto viene promosso al tipo **unsigned int**.  Sebbene questa strategia sia identica a quella usata dallo standard C, le conversioni con mantenimento del valore non mantengono la "firma" dell'oggetto.
 
@@ -127,7 +127,7 @@ Nell'esempio precedente, `u` è un oggetto integrale **breve senza segno** che d
 
 Un oggetto di un tipo a virgola mobile può essere convertito in modo sicuro in un tipo a virgola mobile più preciso, senza che la conversione causi una perdita di significato. Ad esempio, le conversioni da **float** a **Double** o da **Double** a **long double** sono sicure e il valore è invariato.
 
-Un oggetto di un tipo a virgola mobile può anche essere convertito in un tipo meno preciso, se si trova in un intervallo rappresentabile da quel tipo. (Vedere i [limiti mobili](../cpp/floating-limits.md) per gli intervalli dei tipi a virgola mobile.) Se il valore originale non è rappresentabile con precisione, può essere convertito in un valore successivo o successivo più basso rappresentabile. Il risultato non è definito se non esiste alcun valore di questo tipo. Si consideri l'esempio seguente:
+Un oggetto di un tipo a virgola mobile può anche essere convertito in un tipo meno preciso, se si trova in un intervallo rappresentabile da quel tipo. (Vedere i [limiti mobili](../cpp/floating-limits.md) per gli intervalli dei tipi a virgola mobile.) Se il valore originale non è rappresentabile con precisione, può essere convertito in un valore successivo o successivo più basso rappresentabile. Il risultato non è definito se non esiste alcun valore di questo tipo. Prendere in considerazione gli esempi seguenti:
 
 ```cpp
 cout << (float)1E300 << endl;
@@ -189,20 +189,20 @@ Il primo caso è quando la classe base specificata è accessibile e la conversio
 
 L'accessibilità di una classe base dipende dal tipo di ereditarietà utilizzato nella derivazione. Esaminare l'ereditarietà illustrata nella seguente figura.
 
-![Grafico dell'ereditarietà che&#45;Mostra]il(../cpp/media/vc38xa1.gif "grafico&#45;dell'ereditarietà") dell'accessibilità della classe di base <br/>
+![Grafico dell'ereditarietà che&#45;Mostra l'accessibilità della classe base](../cpp/media/vc38xa1.gif "Grafico dell'ereditarietà che&#45;Mostra l'accessibilità della classe base") <br/>
 Grafico dell'ereditarietà per l'illustrazione dell'accessibilità delle classi base
 
 Nella tabella seguente viene illustrata l'accessibilità della classe base per la situazione illustrata nella figura.
 
 |Tipo di funzione|Derivazione|Conversione da<br /><br /> B * a un\* valido?|
 |----------------------|----------------|-------------------------------------------|
-|Funzione esterna (non a livello dell'ambito della classe)|Private|No|
+|Funzione esterna (non a livello dell'ambito della classe)|Privato|No|
 ||Protetto|No|
 ||Pubblico|Sì|
-|Funzione del membro B (nell'ambito B)|Private|Sì|
+|Funzione del membro B (nell'ambito B)|Privato|Sì|
 ||Protetto|Sì|
 ||Pubblico|Sì|
-|Funzione del membro C (nell'ambito C)|Private|No|
+|Funzione del membro C (nell'ambito C)|Privato|No|
 ||Protetto|Sì|
 ||Pubblico|Sì|
 

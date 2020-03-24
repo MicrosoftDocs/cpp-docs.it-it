@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516386"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172360"
 ---
 # <a name="generic-classes-ccli"></a>Classi generiche (C++/CLI)
 
@@ -37,21 +37,21 @@ class-body
 
 Nella sintassi precedente vengono usati i termini seguenti:
 
-*Attributi*<br/>
+*attributes*<br/>
 (Facoltativo) Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.
 
 *class-key*<br/>
 **class** o **typename**
 
-*type-parameter-identifier(s)*: elenco delimitato da virgole di identificatori che specificano i nomi dei parametri di tipo.
+*type-parameter-identifier(s)* : elenco delimitato da virgole di identificatori che specificano i nomi dei parametri di tipo.
 
 *constraint-clauses*<br/>
 Elenco (non delimitato da virgole) di clausole **where** che specificano i vincoli per i parametri di tipo. Assume il formato:
 
-> **where** *type-parameter-identifier* **:** *constraint-list*  **...**
+> **dove** *type-parameter-Identifier* **:** *Constraint-list*  **...**
 
 *constraint-list*<br/>
-*class-or-interface*[`,` *...*]
+*classe o interfaccia*[`,` *...* ]
 
 *accessibility-modifiers*<br/>
 Modificatori di accessibilità per la classe generica. Per Windows Runtime, l'unico modificatore consentito è **private**. Per Common Language Runtime, i modificatori consentiti sono **private** e **public**.

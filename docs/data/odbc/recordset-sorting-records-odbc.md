@@ -1,33 +1,33 @@
 ---
-title: 'Recordset: Ordinamento dei record (ODBC)'
+title: 'Recordset: ordinamento dei record (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sorting data, recordset data
 - ODBC recordsets, sorting
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
-ms.openlocfilehash: 831f21901186ed0ae010b0f332327eefcba94b51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bbe635cdda9152be6ba178b863147db93b7c706
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368630"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212745"
 ---
-# <a name="recordset-sorting-records-odbc"></a>Recordset: Ordinamento dei record (ODBC)
+# <a name="recordset-sorting-records-odbc"></a>Recordset: ordinamento dei record (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-In questo argomento viene illustrato l'ordinamento del recordset. È possibile specificare uno o più colonne su cui basare l'ordinamento ed è possibile specificare l'ordine crescente o decrescente (**ASC** oppure **DESC**; **ASC** è l'impostazione predefinita) per ciascuna colonna specificata. Ad esempio, se si specificano due colonne, i record sono ordinati nella prima colonna denominata e quindi in base alla seconda. Un database SQL **ORDER BY** clausola definisce un ordinamento. Quando il framework aggiunge il **ORDER BY** clausola to SQL del recordset esegue una query, i controlli di clausola di selezione dell'ordinamento.
+In questo argomento viene illustrato come ordinare il recordset. È possibile specificare una o più colonne su cui basare l'ordinamento ed è possibile specificare l'ordine crescente o decrescente (**ASC** o **desc**; **ASC** è l'impostazione predefinita) per ogni colonna specificata. Se, ad esempio, si specificano due colonne, i record vengono ordinati prima nella prima colonna denominata e quindi nella seconda colonna denominata. Una clausola SQL **Order by** definisce un ordinamento. Quando il Framework aggiunge la clausola **Order by** alla query SQL del recordset, la clausola controlla l'ordinamento della selezione.
 
-È necessario stabilire l'ordinamento del recordset dopo la creazione dell'oggetto, ma prima di chiamare relativi `Open` funzione membro (o prima di chiamare il `Requery` dell'oggetto la cui funzione membro per un set di record esistente `Open` funzione membro è stato chiamato in precedenza).
+È necessario stabilire l'ordinamento di un recordset dopo la costruzione dell'oggetto, ma prima di chiamare la relativa funzione membro `Open` (o prima di chiamare la funzione membro `Requery` per un oggetto recordset esistente la cui funzione membro `Open` è stata chiamata in precedenza).
 
-#### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Per specificare un ordine per un oggetto recordset
+#### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Per specificare un ordinamento per un oggetto recordset
 
-1. Creare un nuovo oggetto recordset (o preparare una chiamata a `Requery` per uno esistente).
+1. Costruire un nuovo oggetto recordset o prepararsi a chiamare `Requery` per uno esistente.
 
-1. Impostare il valore dell'oggetto [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) (membro dati).
+1. Impostare il valore del membro dati [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) dell'oggetto.
 
-   L'ordinamento è una stringa con terminazione null. I contenuti del **ORDER BY** clausola, ma non la parola chiave **ORDER BY**. Ad esempio, usare:
+   L'ordinamento è una stringa con terminazione null. Contiene il contenuto della clausola **Order by** , ma non la parola chiave **Order by**. Ad esempio, usare:
 
     ```
     recordset.m_strSort = "LastName DESC, FirstName DESC";
@@ -39,11 +39,11 @@ In questo argomento viene illustrato l'ordinamento del recordset. È possibile s
     recordset.m_strSort = "ORDER BY LastName DESC, FirstName DESC";
     ```
 
-1. Impostare le opzioni che necessarie, come un filtro, la modalità di blocco o parametri.
+1. Impostare le altre opzioni necessarie, ad esempio un filtro, la modalità di blocco o i parametri.
 
-1. Chiamare `Open` per il nuovo oggetto (o `Requery` per un oggetto esistente).
+1. Chiamare `Open` per il nuovo oggetto o `Requery` per un oggetto esistente.
 
-I record selezionati vengono ordinati come specificato. Ad esempio, per ordinare un set di record in ordine decrescente per cognome e quindi al nome, eseguire le operazioni seguenti:
+I record selezionati vengono ordinati come specificato. Per ordinare, ad esempio, un set di record di studenti in ordine decrescente in base al cognome e quindi al nome, eseguire le operazioni seguenti:
 
 ```cpp
 // Construct the recordset
@@ -54,13 +54,13 @@ rsStudent.m_strSort = "LastName DESC, FirstName DESC";
 rsStudent.Open( );
 ```
 
-Il set di record contiene tutti i record di studenti, vengono ordinati in senso decrescente (dalla Z alla A) il cognome, quindi in base al nome.
+Il recordset contiene tutti i record degli studenti, ordinati in ordine decrescente (da Z a A) in base al cognome, quindi in base al nome.
 
 > [!NOTE]
->  Se si sceglie di eseguire l'override della stringa del recordset predefiniti SQL passando la stringa SQL personalizzata per `Open`, non impostare un ordinamento se la stringa personalizzata è un' **ORDER BY** clausola.
+>  Se si sceglie di eseguire l'override della stringa SQL predefinita del recordset passando la stringa SQL personalizzata a `Open`, non impostare un ordinamento se la stringa personalizzata include una clausola **Order by** .
 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: parametrizzazione di un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
-[Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Recordset: applicazione di parametri a un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[Recordset: applicazione di filtri ai record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

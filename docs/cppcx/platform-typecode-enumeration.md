@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-ms.openlocfilehash: ac3e0fda473cf50c8adc10e603d9b6c3beee05be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86bc17c45f36a5a72b089340e166df11e9a4334d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183042"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214274"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode (enumerazione)
 
@@ -24,23 +24,23 @@ Specifica una categoria numerica che rappresenta un tipo incorporato.
 enum class TypeCode {};
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 |Codice di tipo|Descrizione|
 |---------------|-----------------|
-|Booleano|Tipo Platform::Boolean.|
+|Boolean|Tipo Platform::Boolean.|
 |Char16|Tipo default::char16.|
-|DateTime|Tipo DateTime.|
-|Decimale|Tipo numerico.|
+|Datetime|Tipo DateTime.|
+|Decimal|Tipo numerico.|
 |Double|Tipo default::float64.|
-|Empty|Void|
+|Empty|Un tipo void.|
 |Int16|Tipo default::int16.|
 |Int32|Tipo default::int32.|
 |Int64|Tipo default::int64.|
 |Int8|Tipo default::int8.|
-|Object|Tipo Platform::Object.|
+|Oggetto|Tipo Platform::Object.|
 |Single|Tipo default::float32.|
-|Stringa|Tipo Platform::String.|
+|string|Tipo Platform::String.|
 |UInt16|Tipo default::uint16.|
 |UInt32|Tipo default::uint32.|
 |UInt64|Tipo default::uint64.|
@@ -52,6 +52,6 @@ enum class TypeCode {};
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
 **Metadati:** platform.winmd

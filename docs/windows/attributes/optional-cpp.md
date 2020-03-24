@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514352"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214666"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -23,7 +23,7 @@ Specifica un parametro facoltativo per una funzione membro.
 [optional]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **facoltativo** C++ ha la stessa funzionalità dell'attributo MIDL [facoltativo](/windows/win32/Midl/optional) .
 
@@ -52,8 +52,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0042
 ms.assetid: 682c9999-6f85-409f-b102-00c93243f74f
-ms.openlocfilehash: c91e40b6ad56d6201fc7d0ba7c9fbf23e620e8b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45de1de889dedbc03c556e4c88dc76f21e1c8c63
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297756"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191912"
 ---
 # <a name="project-build-warning-prj0042"></a>Avviso di compilazione progetto PRJ0042
 
-> La proprietà' Outputs' per il passaggio di compilazione personalizzato per il file*file*' non è impostata. Il passaggio di compilazione personalizzata verrà ignorato.
+> La proprietà' output ' per l'istruzione di compilazione personalizzata per il file '*file*' non è impostata. L'istruzione di compilazione personalizzata verrà ignorata.
 
-Un'istruzione di compilazione personalizzati non è stata eseguita perché è stato specificato alcun output.
+Un'istruzione di compilazione personalizzata non è stata eseguita perché non è stato specificato alcun output.
 
-Per risolvere questo errore, effettuare una delle operazioni seguenti:
+Per correggere l'errore, effettuare una delle operazioni seguenti:
 
-- Escludere il passaggio di compilazione personalizzato dalla compilazione.
+- Escludere l'istruzione di compilazione personalizzata dalla compilazione.
 
 - Aggiungere un output.
 

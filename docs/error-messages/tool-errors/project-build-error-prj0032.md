@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0032
 ms.assetid: bc6acbea-4041-4237-8b5a-f0434705d89f
-ms.openlocfilehash: f1f292f3979c993a8fa8cb8ff44653ac7124b121
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 62efa0e72c6fbe4bd38983ff0507923392427c04
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344351"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192484"
 ---
 # <a name="project-build-error-prj0032"></a>Errore di compilazione progetto PRJ0032
 
-La proprietà 'Output' per il passaggio di compilazione personalizzata a livello di progetto contiene "macro" che restituisce "espansione".
+La proprietà' output ' per l'istruzione di compilazione personalizzata a livello di progetto contiene ' macro ' che restituisce ' macro_expansion '.
 
-Un'istruzione di compilazione personalizzata a un progetto ha output non valido probabilmente a causa di un problema di valutazione della macro. Questo errore può anche significare che il percorso non è corretto, che contiene caratteri o delle combinazioni di caratteri che non sono validi in un percorso di file.
+Un'istruzione di compilazione personalizzata in un progetto presentava un output non valido probabilmente a causa di un problema di valutazione macro. Questo errore può anche indicare che il formato del percorso non è corretto, che contiene caratteri o combinazioni di caratteri non validi in un percorso di file.
 
-Per risolvere questo errore, correggere la macro o correggere la specifica del percorso. Il percorso valutato è un percorso assoluto dalla directory del progetto.
+Per correggere l'errore, correggere la macro o correggere la specifica del percorso. Il percorso valutato è un percorso assoluto dalla directory del progetto.
