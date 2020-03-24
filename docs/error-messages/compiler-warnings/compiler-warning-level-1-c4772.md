@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385459"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175131"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>Avviso del compilatore (livello 1) C4772
 
-> \#importazione di fatto riferimento a un tipo da una libreria dei tipi mancanti; «*-type mancante*' utilizzato come segnaposto
+> \#importazione ha fatto riferimento a un tipo da una libreria dei tipi mancante; '*Missing-Type*' usato come segnaposto
 
-Una libreria dei tipi viene fatto riferimento con il [#import](../../preprocessor/hash-import-directive-cpp.md) direttiva. Tuttavia, la libreria dei tipi contiene un riferimento a un'altra libreria dei tipi che non esiste alcun riferimento con `#import`. Quest'altro file con estensione tlb non trovato dal compilatore.
+È stato fatto riferimento a una libreria dei tipi con la direttiva [#import](../../preprocessor/hash-import-directive-cpp.md) . Tuttavia, la libreria dei tipi contiene un riferimento a un'altra libreria dei tipi a cui non è stato fatto riferimento con `#import`. Questo altro file con estensione tlb non è stato trovato dal compilatore.
 
-Si noti che il compilatore non troverà le librerie dei tipi in directory diverse se si usa la [/I (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md) opzione del compilatore per specificare tali directory. Se si vuole che il compilatore per trovare le librerie dei tipi in directory diverse, aggiungere tali directory alla variabile di ambiente PATH.
+Si noti che il compilatore non troverà le librerie dei tipi in directory diverse se si usa l'opzione del compilatore [/i (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md) per specificare tali directory. Se si vuole che il compilatore trovi le librerie dei tipi in directory diverse, aggiungere tali directory alla variabile di ambiente PATH.
 
-Per impostazione predefinita questo avviso viene generato come errore. C4772 non possono essere eliminati con /W0.
+Per impostazione predefinita, questo avviso viene generato come errore. C4772 non può essere eliminato con/W0.
 
 ## <a name="example"></a>Esempio
 
-Questa è la prima libreria dei tipi necessaria per riprodurre C4772.
+Si tratta della prima libreria dei tipi necessaria per riprodurre C4772.
 
 ```IDL
 // c4772a.idl
@@ -40,7 +40,7 @@ library C4772aLib
 };
 ```
 
-Questo è il secondo libreria dei tipi necessaria per riprodurre C4772.
+Si tratta della seconda libreria dei tipi necessaria per riprodurre C4772.
 
 ```IDL
 // c4772b.idl
@@ -58,7 +58,7 @@ library C4772bLib
 };
 ```
 
-L'esempio seguente genera l'errore C4772:
+L'esempio seguente genera l'C4772:
 
 ```cpp
 // C4772.cpp

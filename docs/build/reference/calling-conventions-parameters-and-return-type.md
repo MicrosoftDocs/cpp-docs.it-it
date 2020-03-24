@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294707"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169747"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Convenzioni di chiamata, parametri e tipo restituito
 
@@ -27,12 +27,12 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>Parametri
 
 *pidd*<br/>
-Oggetto `const` puntatore a un `ImgDelayDescr` che contiene gli offset di vari dati relativi all'importazione, un timestamp per le informazioni di associazione e un set di attributi che forniscono ulteriori informazioni sul contenuto del descrittore. Non è attualmente disponibile un solo attributo, `dlattrRva`, che indica che gli indirizzi nel descrittore sono indirizzi virtuali relativi. Per altre informazioni, vedere le dichiarazioni nel *delayimp. h*.
+Puntatore `const` a un `ImgDelayDescr` contenente gli offset di vari dati correlati all'importazione, un timestamp per le informazioni di associazione e un set di attributi che forniscono ulteriori informazioni sul contenuto del descrittore. Attualmente esiste un solo attributo, `dlattrRva`, che indica che gli indirizzi nel descrittore sono indirizzi virtuali relativi. Per ulteriori informazioni, vedere le dichiarazioni in *delayimp. h*.
 
-Per la definizione del `PCImgDelayDescr` struttura, vedere [struttura e definizioni costanti](structure-and-constant-definitions.md).
+Per la definizione della struttura di `PCImgDelayDescr`, vedere [definizioni di struttura e di costanti](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
-Puntatore allo slot nel ritardo carico tabella IAT (IAT) che viene aggiornata con l'indirizzo della funzione importata. Nella routine dell'helper deve archiviare lo stesso valore restituito in questa posizione.
+Puntatore allo slot nella tabella di indirizzi di importazione a caricamento ritardato (IAT) aggiornato con l'indirizzo della funzione importata. La routine di supporto deve archiviare lo stesso valore restituito in questa posizione.
 
 ## <a name="expected-return-values"></a>Valori restituiti previsti
 
@@ -48,9 +48,9 @@ Se ha esito negativo, genera un'eccezione e restituisce 0. Possono essere genera
 
 È responsabilità dell'utente gestire queste eccezioni.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La convenzione di chiamata per la funzione helper è `__stdcall`. Il tipo del valore restituito non è rilevante, pertanto viene usato FARPROC. Questa funzione ha un collegamento C.
+La convenzione di chiamata per la funzione helper è `__stdcall`. Il tipo del valore restituito non è pertinente, pertanto viene usato FARPROC. Questa funzione ha un collegamento C.
 
 Il valore restituito dell'helper a caricamento ritardato deve essere archiviato nel percorso del puntatore della funzione passata, a meno che non si desideri che la routine dell'helper non venga usata come un hook di notifica. In questo caso, il codice è responsabile dell'individuazione del puntatore funzione appropriato da restituire. Il codice thunk generato dal linker accetta quindi quel valore restituito come destinazione effettiva dell'importazione e passa direttamente ad essa.
 

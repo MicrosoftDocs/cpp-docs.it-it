@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516496"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172035"
 ---
-# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+# <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
 Dichiara un *puntatore di blocco*, usato solo con Common Language Runtime.
 
@@ -89,7 +89,7 @@ I puntatori di blocco non possono essere usati come:
 
 Per altre informazioni sui puntatori interni, vedere [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md).
 
-Per altre informazioni sui puntatori di blocco, vedere [Procedura: Bloccare puntatori e matrici](how-to-pin-pointers-and-arrays.md) e [Procedura: Dichiarare puntatori di blocco e tipi valore](how-to-declare-pinning-pointers-and-value-types.md).
+Per ulteriori informazioni sui puntatori di blocco, vedere [procedura: aggiungere puntatori e matrici](how-to-pin-pointers-and-arrays.md) e [procedura: dichiarare i puntatori di blocco e i tipi di valore](how-to-declare-pinning-pointers-and-value-types.md).
 
 ### <a name="requirements"></a>Requisiti
 

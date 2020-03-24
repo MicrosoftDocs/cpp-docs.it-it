@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1067
 ms.assetid: e2c94be6-4573-4571-aac9-73d657fe9f96
-ms.openlocfilehash: f8fe301e25d9ecb5cc67397f9537e0bbd86c0627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b016790220d409435ff7ea53c6f48899a9e8f1c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204347"
 ---
 # <a name="fatal-error-c1067"></a>Errore irreversibile C1067
 
-limite del compilatore: È stato superato il limite di 64 KB per dimensioni di un record di tipo
+limite del compilatore: è stato superato il limite di 64K per la dimensione di un record di tipo
 
-Questo errore può verificarsi se un simbolo è un nome decorato superiore a 247 caratteri.  Per risolvere, abbreviare il nome del simbolo.
+Questo errore può verificarsi se un simbolo ha un nome decorato che supera i 247 caratteri.  Per risolvere il nome, abbreviare il nome del simbolo.
 
-Quando il compilatore genera le informazioni di debug, il simulatore genera record di tipo per definire i tipi individuati nel codice sorgente.  Ad esempio, i record di tipo includono strutture semplici ed elenchi di argomenti delle funzioni.  Alcuni di questi record di tipo possono essere elenchi di grandi dimensioni.
+Quando il compilatore genera informazioni di debug, emette record di tipo per definire i tipi rilevati nel codice sorgente.  Ad esempio, i record di tipo includono strutture semplici ed elenchi di argomenti di funzioni.  Alcuni di questi record di tipo possono essere elenchi di grandi dimensioni.
 
-È previsto un limite di 64 KB per le dimensioni di qualsiasi tipo di record.  Se si supera questo limite di 64 KB, quindi si verificherà questo errore.
+È previsto un limite di 64K per la dimensione di qualsiasi record di tipo.  Se viene superato il limite di 64K, si verificherà questo errore.
 
-C1067 può verificarsi anche se sono presenti più simboli con nomi lunghi o se una classe, struttura o unione con troppi membri.
+C1067 può inoltre verificarsi se sono presenti molti simboli con nomi lunghi o se una classe, uno struct o un'Unione dispone di un numero eccessivo di membri.

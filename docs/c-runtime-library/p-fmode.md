@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 6f7676fc5c9958be3d0567e6bf22a11367094150
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2364a22d52c5bc418e4499a4a639c8e06559063a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171450"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
@@ -43,7 +43,7 @@ int* __p__fmode(
 
 Puntatore alla variabile globale `_fmode`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione `__p__fmode` è solo per uso interno e non deve essere chiamata dal codice utente.
 

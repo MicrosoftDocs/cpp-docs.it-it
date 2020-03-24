@@ -16,35 +16,35 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: da255da9fb9ff7a652fa1af796568a8e50759dc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d54470bdf4b2555b01993582a74f65505858f94b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392180"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189234"
 ---
 # <a name="event-handling-in-com"></a>Gestione di eventi in COM
 
-Nella gestione degli eventi COM, si configura un ricevitore di origine e di eventi eventi usando il [event_source](../windows/attributes/event-source.md) e [event_receiver](../windows/attributes/event-receiver.md) rispettivamente gli attributi, specificare `type` = `com`. Questi attributi inseriscono il codice appropriato per le interfacce personalizzate, dispatch e duali al fine di consentire alle classi a cui vengono applicati di generare eventi e gestirli dai punti di connessione COM.
+Nella gestione degli eventi COM è possibile configurare un'origine evento e un ricevitore di eventi utilizzando rispettivamente gli attributi [event_source](../windows/attributes/event-source.md) e [event_receiver](../windows/attributes/event-receiver.md) , specificando `type`=`com`. Questi attributi inseriscono il codice appropriato per le interfacce personalizzate, dispatch e duali al fine di consentire alle classi a cui vengono applicati di generare eventi e gestirli dai punti di connessione COM.
 
 ## <a name="declaring-events"></a>Dichiarazione di eventi
 
-In una classe di origine eventi, usare il [event](../cpp/event.md) parola chiave in una dichiarazione di interfaccia per dichiarare i metodi dell'interfaccia come eventi. Gli eventi di tale interfaccia vengono generati quando vengono chiamati come metodi di interfaccia. I metodi nelle interfacce eventi possono contenere zero o più parametri (che devono essere tutti *in* parametri). Il tipo restituito può essere void o qualsiasi tipo integrale.
+In una classe di origine evento, usare la parola chiave [__event](../cpp/event.md) in una dichiarazione di interfaccia per dichiarare i metodi dell'interfaccia come eventi. Gli eventi di tale interfaccia vengono generati quando vengono chiamati come metodi di interfaccia. I metodi delle interfacce evento possono avere zero o più parametri (che devono essere tutti presenti *nei* parametri). Il tipo restituito può essere void o qualsiasi tipo integrale.
 
 ## <a name="defining-event-handlers"></a>Definizione di gestori degli eventi
 
-In una classe del ricevitore di eventi, è possibile definire i gestori eventi, ovvero i metodi con firme (tipi restituiti, convenzioni di chiamata e argomenti) che corrispondono all'evento che gestiranno. Per eventi COM, le convenzioni di chiamata non sono necessario corrispondenti tra loro. visualizzare [eventi COM dipendenti del Layout](#vcconeventhandlingincomanchorlayoutdependentcomevents) seguito per informazioni dettagliate.
+In una classe del ricevitore di eventi, è possibile definire i gestori eventi, ovvero i metodi con firme (tipi restituiti, convenzioni di chiamata e argomenti) che corrispondono all'evento che gestiranno. Per gli eventi COM, le convenzioni di chiamata non devono corrispondere. per informazioni dettagliate, vedere [eventi com dipendenti dal layout](#vcconeventhandlingincomanchorlayoutdependentcomevents) .
 
 ## <a name="hooking-event-handlers-to-events"></a>Hook dei gestori eventi agli eventi
 
-Anche in una classe del ricevitore di eventi è usare la funzione intrinseca [hook](../cpp/hook.md) per associare gli eventi a gestori eventi e [unhook](../cpp/unhook.md) per annullare l'associazione di eventi. È possibile eseguire l'hook di più eventi a un singolo gestore eventi o di diversi gestori eventi a un singolo evento.
+In una classe di ricevitori di eventi, inoltre, si utilizza la funzione intrinseca [__hook](../cpp/hook.md) per associare gli eventi ai gestori eventi e [__unhook](../cpp/unhook.md) per annullare l'associazione degli eventi dai gestori eventi. È possibile eseguire l'hook di più eventi a un singolo gestore eventi o di diversi gestori eventi a un singolo evento.
 
 > [!NOTE]
->  In genere, sono disponibili due tecniche per consentire a un ricevitore di eventi COM di accedere alle definizioni dell'interfaccia dell'origine evento. La prima, come mostrata di seguito, consiste nel condividere un file di intestazione comune. Il secondo consiste nell'usare [#import](../preprocessor/hash-import-directive-cpp.md) con il `embedded_idl` importare qualificatore, in modo che la libreria dei tipi di origine eventi viene scritto nel file con estensione tlh con il codice generato dall'attributo mantenuto.
+>  In genere, sono disponibili due tecniche per consentire a un ricevitore di eventi COM di accedere alle definizioni dell'interfaccia dell'origine evento. La prima, come mostrata di seguito, consiste nel condividere un file di intestazione comune. Il secondo consiste nell'utilizzare [#import](../preprocessor/hash-import-directive-cpp.md) con il qualificatore di importazione `embedded_idl`, in modo che la libreria dei tipi di origine evento venga scritta nel file con estensione tlh con il codice generato dall'attributo mantenuto.
 
 ## <a name="firing-events"></a>Generazione di eventi
 
-Per generare un evento, è sufficiente chiamare un metodo nell'interfaccia dichiarata con la **event** classe di origine dell'evento (parola chiave). Se per l'evento è stato eseguito l'hook ai gestori, questi verranno chiamati.
+Per generare un evento, è sufficiente chiamare un metodo nell'interfaccia dichiarata con la parola chiave **__event** nella classe di origine dell'evento. Se per l'evento è stato eseguito l'hook ai gestori, questi verranno chiamati.
 
 ### <a name="com-event-code"></a>Codice dell'evento COM
 
@@ -157,13 +157,13 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.
 ```
 
-##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Eventi COM dipendenti del layout
+##  <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Eventi COM dipendenti dal layout
 
 La dipendenza del layout è solo un problema per la programmazione COM. Nella funzione di gestione degli eventi nativa e gestita, le firme (tipo restituito, convenzione di chiamata e argomenti) dei gestori devono corrispondere ai relativi eventi, mentre tale corrispondenza non è necessaria per i nomi dei gestori.
 
-Tuttavia, nella gestione degli eventi COM, quando si imposta la *layout_dependent* parametro di `event_receiver` al **true**, il nome e la firma corrispondente viene applicato. Ciò significa che i nomi e le firme dei gestori nel ricevitore di eventi devono corrispondere esattamente ai nomi e alle firme degli eventi per il quale è stato eseguito l'hook.
+Tuttavia, nella gestione degli eventi COM, quando si imposta il parametro *layout_dependent* di `event_receiver` su **true**, viene applicato il nome e la corrispondenza della firma. Ciò significa che i nomi e le firme dei gestori nel ricevitore di eventi devono corrispondere esattamente ai nomi e alle firme degli eventi per il quale è stato eseguito l'hook.
 
-Quando *layout_dependent* è impostata su **false**, la classe di archiviazione e convenzione di chiamata (virtuale, statica e così via) può essere combinata e trovare una corrispondenza tra la generazione dell'evento metodo e i metodi di hook (relativo delegati). È leggermente più efficiente disporre *layout_dependent*=**true**.
+Quando *layout_dependent* è impostato su **false**, la convenzione di chiamata e la classe di archiviazione (virtuale, statica e così via) possono essere combinate e confrontate tra il metodo dell'evento di attivazione e i metodi di Hook (i relativi delegati). È leggermente più efficiente avere *layout_dependent*=**true**.
 
 Ad esempio, si supponga che `IEventSource` sia definito con i metodi seguenti:
 

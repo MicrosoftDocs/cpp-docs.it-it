@@ -6,18 +6,18 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188395"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180914"
 ---
 # <a name="class-templates"></a>Modelli di classe
 
-Questo argomento descrive le regole specifiche per i modelli di classe C++.
+In questo argomento vengono descritte le regole specifiche C++ per i modelli di classe.
 
-## <a name="member-functions-of-class-templates"></a>Funzioni membro di modelli di classe
+## <a name="member-functions-of-class-templates"></a>Funzioni membro dei modelli di classe
 
 Le funzioni membro possono essere definite internamente o esternamente a un modello di classe. Tali funzioni vengono definite in modo analogo ai modelli di funzione se definite all'esterno del modello di classe.
 
@@ -77,7 +77,7 @@ int main()
 
 ## <a name="nested-class-templates"></a>Modelli di classe annidati
 
-I modelli possono essere definiti all'interno di classi o modelli di classe, nel qual caso vengono definiti modelli di membro. I modelli di membro, che sono classi, sono definiti modelli di classe annidati. Modelli di membro sono funzioni sono illustrati nella [modelli di funzioni membro](../cpp/member-function-templates.md).
+I modelli possono essere definiti all'interno di classi o modelli di classe, nel qual caso vengono definiti modelli di membro. I modelli di membro, che sono classi, sono definiti modelli di classe annidati. I modelli di membro che sono funzioni vengono descritti in [modelli di funzioni membro](../cpp/member-function-templates.md).
 
 I modelli di classe annidati vengono dichiarati come modelli di classe nell'ambito della classe esterna. Possono essere definiti all'interno o all'esterno della classe contenitore.
 
@@ -193,9 +193,9 @@ X<T>::Y<U>::~Y()
 
 Le classi locali non possono avere modelli di membro.
 
-## <a name="template-friends"></a>Elementi Friend di modelli
+## <a name="template-friends"></a>Amici di modelli
 
-Modelli di classe possono avere [amici](friend-cpp.md). Una classe o un modello di classe oppure una funzione o un modello di funzione può rappresentare un elemento friend per una classe modello. Gli elementi friend possono anche essere specializzazioni di un modello di classe o di funzione, ma non specializzazioni parziali.
+I modelli di classe possono avere [amici](friend-cpp.md). Una classe o un modello di classe oppure una funzione o un modello di funzione può rappresentare un elemento friend per una classe modello. Gli elementi friend possono anche essere specializzazioni di un modello di classe o di funzione, ma non specializzazioni parziali.
 
 Nell'esempio seguente una funzione friend viene definita come modello di funzione nel modello di classe. Questo codice produce una versione della funzione friend per ogni creazione di istanza del modello. Questo costrutto risulta utile se la funzione friend dipende dagli stessi parametri di modello da cui dipende la classe.
 

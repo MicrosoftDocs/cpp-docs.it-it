@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857281"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178539"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -23,7 +23,7 @@ La convenzione di chiamata **__stdcall** viene utilizzata per chiamare le funzio
 
 > *return-type* **\_\_** *nome-funzione*stdcall [ **(** *argument-list* **)** ]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Nell'elenco seguente viene illustrata l'implementazione di questa convenzione di chiamata.
 
@@ -33,7 +33,7 @@ Nell'elenco seguente viene illustrata l'implementazione di questa convenzione di
 |Convenzione per il passaggio degli argomenti|Per valore, a meno che non venga passato un puntatore o un tipo di riferimento.|
 |Responsabilità di manutenzione dello stack|La funzione chiamata determina l'estrazione dei propri argomenti dallo stack.|
 |Convenzione della decorazione dei nomi|Un carattere di sottolineatura (_) viene aggiunto come prefisso del nome. Il nome è seguito dal simbolo @ seguito dal numero di byte (in decimale) nell'elenco di argomenti. Pertanto, la funzione dichiarata come `int func( int a, double b )` è decorata come segue: `_func@12`|
-|Convenzione della conversione maiuscolo/minuscolo e viceversa|nessuna|
+|Convenzione della conversione maiuscolo/minuscolo e viceversa|nessuno|
 
 L'opzione del compilatore [/GZ](../build/reference/gd-gr-gv-gz-calling-convention.md) specifica **__stdcall** per tutte le funzioni non dichiarate in modo esplicito con una convenzione di chiamata diversa.
 
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-this
+questo traffico
 
 ```cpp
 void CMyClass::mymethod() { return; }

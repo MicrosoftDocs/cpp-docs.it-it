@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: 896fca6c6b257c90ccdf813a9c6cb6bc27ad9e96
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c92f805eb2960336ed34f5da93b6c13f46bf15ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623616"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165145"
 ---
 # <a name="compiler-warning-c4485"></a>Avviso del compilatore C4485
 

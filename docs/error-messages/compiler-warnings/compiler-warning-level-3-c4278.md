@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4278
 ms.assetid: 4b6053fb-df62-4c04-b6c8-c011759557b8
-ms.openlocfilehash: 8c5c15105581602566116d3ed82b89a6337435c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7994ae05d6cb16b5ddc9775b1044de7f3a22d542
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402164"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174232"
 ---
 # <a name="compiler-warning-level-3-c4278"></a>Avviso del compilatore (livello 3) C4278
 
-> «*identifier*': identificatore nella libreria dei tipi '*tlb*' è già una macro; utilizzare il qualificatore 'rename'
+> '*Identifier*': l'identificatore nella libreria dei tipi '*tlb*' è già una macro. Usa il qualificatore ' Rename '
 
-Quando si usa [#import](../../preprocessor/hash-import-directive-cpp.md), un identificatore nella libreria dei tipi si importano sta tentando di dichiarare un identificatore *identificatore*. Tuttavia, ciò è già un simbolo valido.
+Quando si utilizza [#import](../../preprocessor/hash-import-directive-cpp.md), un identificatore nella libreria dei tipi che si sta importando sta tentando di dichiarare un *identificatore*dell'identificatore. Tuttavia, questo è già un simbolo valido.
 
-Usare la `#import` **rinominare** attributo per assegnare un alias per il simbolo nella libreria dei tipi.
+Utilizzare l'attributo `#import` **Rename** per assegnare un alias al simbolo nella libreria dei tipi.
