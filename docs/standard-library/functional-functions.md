@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421800"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150680"
 ---
 # <a name="ltfunctionalgt-functions"></a>Funzioni &lt;functional&gt;
 
@@ -51,7 +51,7 @@ Queste funzioni sono deprecate in C++ 17:
 |-|-|
 |[not1](#not1)|[not2](#not2)|
 
-## <a name="bind"></a>associare
+## <a name="bind"></a><a name="bind"></a>associare
 
 Associa gli argomenti a un oggetto richiamabile.
 
@@ -77,11 +77,11 @@ Oggetto da chiamare.
 \ *TN*
 Ennesimo argomento di chiamata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 I tipi `FT, T1, T2, ..., TN` devono essere Copy-costruibile e `INVOKE(fn, t1, ..., tN)` deve essere un'espressione valida per alcuni valori `w1, w2, ..., wN`.
 
-La prima funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo di risultato debole. L'effetto di `g(u1, u2, ..., uM)` è `INVOKE(f, v1, v2, ..., vN, `[invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, dove `cv` sono i qualificatori cv di `g` e i valori e i tipi degli argomenti associati `v1, v2, ..., vN` vengono determinati come specificato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato.
+La prima funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo di risultato debole. L'effetto di `g(u1, u2, ..., uM)` è `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, dove `cv` sono i qualificatori cv di `g` e i valori e i tipi degli argomenti associati `v1, v2, ..., vN` vengono determinati come specificato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato.
 
 La seconda funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo nidificato `result_type` sinonimo di `RTy`. L'effetto di `g(u1, u2, ..., uM)` è `INVOKE(f, v1, v2, ..., vN, RTy)`, dove `cv` corrisponde ai qualificatori CV di `g` e i valori e i tipi degli argomenti associati `v1, v2, ..., vN` vengono determinati come specificato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato e con un tipo restituito specificato.
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a>bind1st
 
 Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria. Associa il primo argomento della funzione binaria a un valore specificato. Deprecato in C++ 11, rimosso in C++ 17.
 
@@ -173,7 +173,7 @@ Valore a cui deve essere associato il primo argomento dell'oggetto funzione bina
 
 Oggetto funzione unaria risultante dall'associazione del primo argomento dell'oggetto funzione binaria al valore a *sinistra*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 I Binder di funzione sono un tipo di adattatore di funzione. Poiché restituiscono oggetti funzione, possono essere usati in determinati tipi di composizione di funzioni per costruire espressioni più complesse e potenti.
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
 
 Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria. Associa il secondo argomento della funzione binaria a un valore specificato. Deprecato in C++ 11, rimosso in C++ 17.
 
@@ -267,7 +267,7 @@ Valore a cui deve essere associato il secondo argomento dell'oggetto funzione bi
 
 Oggetto funzione unaria risultante dall'associazione del secondo argomento dell'oggetto funzione binaria a *right*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 I Binder di funzione sono un tipo di adattatore di funzione. Poiché restituiscono oggetti funzione, possono essere usati in determinati tipi di composizione di funzioni per costruire espressioni più complesse e potenti.
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
 Oggetto funzione predefinito che esegue un'operazione con AND bit per bit (Binary `operator&`) sui relativi argomenti.
 
@@ -377,11 +377,11 @@ Operando destro dell'operazione AND bit per bit. Il modello non specializzato ac
 
 Risultato di `Left & Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator&`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il funtore `bit_and` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator&` binario.
 
-## <a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
 Oggetto funzione predefinito che esegue un'operazione di complemento (NOT) bit per bit (`operator~`unario) sul relativo argomento. Aggiunto in C++ 14.
 
@@ -413,11 +413,11 @@ Operando dell'operazione di complemento bit per bit. Il modello non specializzat
 
 Risultato di `~ Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator~`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il funtore `bit_not` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator~` binario.
 
-## <a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
 Oggetto funzione predefinito che esegue un'operazione OR bit per bit (`operator|`) sui relativi argomenti.
 
@@ -454,11 +454,11 @@ Operando destro dell'operazione OR bit per bit. Il modello non specializzato acc
 
 Risultato di `Left | Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator|`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il funtore `bit_or` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano `operator|`.
 
-## <a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
 Oggetto funzione predefinito che esegue un'operazione XOR bit per bit (Binary `operator^`) sui relativi argomenti.
 
@@ -495,11 +495,11 @@ Operando destro dell'operazione XOR bit per bit. Il modello non specializzato ac
 
 Risultato di `Left ^ Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator^`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il funtore `bit_xor` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator^` binario.
 
-## <a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a>cref
 
 Costruisce un oggetto `reference_wrapper` di tipo const da un argomento.
 
@@ -519,7 +519,7 @@ Tipo di argomento di cui eseguire il wrapping.
 \ *arg*
 Argomento di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La prima funzione restituisce `reference_wrapper<const Ty>(arg.get())`. Usarla per eseguire il wrapping di un riferimento const. La seconda funzione restituisce `reference_wrapper<const Ty>(arg)`. Usarla per eseguire nuovamente il wrapping di un riferimento già sottoposto a wrapping come riferimento const.
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a>richiamare
+## <a name="invoke"></a><a name="invoke"></a>richiamare
 
 Richiama qualsiasi oggetto chiamabile con gli argomenti specificati. Aggiunto in C++ 17.
 
@@ -582,7 +582,7 @@ Argomenti della chiamata.
 \ *specifica*
 `std::is_nothrow_invocable_v<Callable, Args>)`specifica **noexcept** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Richiama l'oggetto chiamabile *FN* usando gli *argomenti*dei parametri. In effetti, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`, in cui la pseudo-funzione `INVOKE(f, t1, t2, ..., tN)` significa una delle operazioni seguenti:
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
 
 Genera un wrapper di chiamata semplice.
 
@@ -693,7 +693,7 @@ Tipo restituito della funzione di cui è stato eseguito il wrapping.
 \ *Ty*
 Tipo di puntatore a funzione membro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La funzione modello restituisce un wrapper di chiamata semplice `cw`, con un tipo di risultato debole, in modo che l'espressione `cw(t, a2, ..., aN)` sia uguale a `INVOKE(pm, t, a2, ..., aN)`. Non genera alcuna eccezione.
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
 
 Funzioni di modello helper utilizzate per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzate con gli argomenti di puntatore. Deprecato in C++ 11 per [mem_fn](#mem_fn) e [Binding](#bind)e rimosso in c++ 17.
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
 
 Funzioni modello helper usate per costruire gli adattatori dell'oggetto funzione per funzioni membro se inizializzate mediante argomenti di riferimento. Deprecato in C++ 11, rimosso in C++ 17.
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a>not1
 
 Restituisce il complemento di un predicato unario. Deprecato per [not_fn](#not_fn) in c++ 17.
 
@@ -949,7 +949,7 @@ Predicato unario da negare.
 
 Predicato unario che è la negazione del predicato unario modificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Se un `unary_negate` viene costruito da un predicato unario `predicate(x)`, restituisce `!predicate(x)`.
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a>not2
 
 Restituisce il complemento di un predicato binario. Deprecato per [not_fn](#not_fn) in c++ 17.
 
@@ -1021,7 +1021,7 @@ Predicato binario da negare.
 
 Predicato binario che è la negazione del predicato binario modificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Se un `binary_negate` viene costruito da un predicato binario `binary_predicate(x, y)`, restituisce `!binary_predicate(x, y)`.
 
@@ -1079,7 +1079,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
 Il modello di funzione `not_fn` accetta un oggetto chiamabile e restituisce un oggetto chiamabile. Quando l'oggetto chiamabile restituito viene richiamato in un secondo momento con alcuni argomenti, li passa all'oggetto chiamabile originale e il risultato viene negato in modo logico. Conserva il comportamento di qualificazione const e categoria valore dell'oggetto richiamabile di cui è stato eseguito il wrapper. `not_fn` è una novità di C++ 17 e sostituisce le `std::not1`deprecate, `std::not2`, `std::unary_negate`e `std::binary_negate`.
 
@@ -1093,7 +1093,7 @@ template <class Callable>
 \ *Func*
 Oggetto chiamabile usato per costruire il wrapper della chiamata di invio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La funzione modello restituisce un wrapper di chiamata come `return call_wrapper(std::forward<Callable>(func))`, in base a questa classe solo di esposizione:
 
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
 
 Funzioni modello helper usate per convertire i puntatori a funzioni unarie e binarie rispettivamente in funzioni adattabili unarie e binarie. Deprecato in C++ 11, rimosso in C++ 17.
 
@@ -1202,7 +1202,7 @@ La prima funzione di modello restituisce la funzione unaria [pointer_to_unary_fu
 
 La seconda funzione di modello restituisce la funzione binaria [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**arg1**, **Arg2**, **result**> (\* `pfunc`).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Un puntatore a funzione è un oggetto funzione. Può essere passato a qualsiasi algoritmo che prevede una funzione come parametro, ma non è adattabile. Le informazioni sui tipi annidati sono necessarie per utilizzarlo con un adattatore, ad esempio per associarvi un valore o per negarlo. La conversione dei puntatori a funzioni unarie e binarie mediante la funzione helper `ptr_fun` consente agli adattatori di funzione di interagire con tali puntatori.
 
@@ -1210,7 +1210,7 @@ Un puntatore a funzione è un oggetto funzione. Può essere passato a qualsiasi 
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>Ref
+## <a name="ref"></a><a name="ref"></a>Ref
 
 Costruisce un oggetto `reference_wrapper` da un argomento.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a>scambio
 
 Scambia due oggetti `function`.
 
@@ -1322,7 +1322,7 @@ Primo oggetto funzione.
 \ *F2*
 Secondo oggetto funzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La funzione restituisce `f1.swap(f2)`.
 
