@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403438"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188298"
 ---
 # <a name="reference-type-function-returns"></a>Elementi restituiti dalla funzione tipo-riferimento
 
@@ -23,9 +23,9 @@ ms.locfileid: "62403438"
 
 - L'oggetto a cui si fa riferimento non uscirà dall'ambito al completamento della funzione.
 
-Così come può essere più efficiente passare oggetti di grandi dimensioni *al* funzioni per riferimento, può essere anche più efficiente per restituire gli oggetti grandi *da* funzioni in base al riferimento. Il protocollo riferimento-restituzione elimina la necessità di copiare l'oggetto in un percorso temporaneo prima della restituzione.
+Analogamente a quanto può essere più efficiente passare oggetti di grandi dimensioni *alle* funzioni per riferimento, può essere più efficiente restituire oggetti di grandi dimensioni *dalle* funzioni in base al riferimento. Il protocollo riferimento-restituzione elimina la necessità di copiare l'oggetto in un percorso temporaneo prima della restituzione.
 
-I tipi riferimento-restituzione possono rivelarsi utili quando la funzione deve restituire un l-value. La maggior parte degli operatori di overload rientra in questa categoria, in particolare l'operatore di assegnazione. Gli operatori di overload vengono analizzati [operatori di overload](../cpp/operator-overloading.md).
+I tipi riferimento-restituzione possono rivelarsi utili quando la funzione deve restituire un l-value. La maggior parte degli operatori di overload rientra in questa categoria, in particolare l'operatore di assegnazione. Gli operatori di overload sono descritti in [operatori di overload](../cpp/operator-overloading.md).
 
 ## <a name="example"></a>Esempio
 
@@ -86,7 +86,7 @@ Si noti anche che in genere l'oggetto ThePoint rimane nell'ambito e quindi i ris
 
 Le dichiarazioni di tipi di riferimenti devono contenere gli inizializzatori tranne nei seguenti casi:
 
-- Explicit **extern** dichiarazione
+- Dichiarazione **extern** esplicita
 
 - Dichiarazione di un membro di classe
 

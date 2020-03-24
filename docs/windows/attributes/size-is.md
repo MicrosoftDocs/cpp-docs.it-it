@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514036"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166250"
 ---
 # <a name="size_is"></a>size_is
 
@@ -28,13 +28,13 @@ Specificare le dimensioni della memoria allocata per i puntatori dimensionati, i
 *expression*<br/>
 Dimensione della memoria allocata per i puntatori di dimensione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **size_is** C++ ha la stessa funzionalità dell'attributo MIDL di [size_is](/windows/win32/Midl/size-is) .
+L'attributo **size_is** C++ ha la stessa funzionalità dell'attributo [size_is](/windows/win32/Midl/size-is) MIDL.
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo a [first_is](first-is.md) per un esempio di come specificare una sezione di una matrice.
+Vedere l'esempio per [first_is](first-is.md) per un esempio di come specificare una sezione di una matrice.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -44,7 +44,7 @@ Vedere l'esempio relativo a [first_is](first-is.md) per un esempio di come speci
 |-|-|
 |**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|`max_is`|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514375"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166640"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -23,13 +23,13 @@ Controlla l'allineamento della rappresentazione dei dati di rete delle unioni no
 [ms_union]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **ms_union** C++ ha la stessa funzionalità dell'attributo MIDL di [ms_union](/windows/win32/Midl/ms-union-attrib) .
+L'attributo **ms_union** C++ ha la stessa funzionalità dell'attributo [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente mostra il posizionamento di **ms_union**:
+Il codice seguente illustra il posizionamento di **ms_union**:
 
 ```cpp
 // cpp_attr_ref_ms_union.cpp
@@ -62,7 +62,7 @@ __interface IFireTabCtrl {
 |-|-|
 |**Si applica a**|Unioni non incapsulate|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|`dispinterface`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

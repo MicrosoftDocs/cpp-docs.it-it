@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: c8dc35a58d40d2619f6e035e07b4ad0b3351c45d
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cd161a37683703fd67b4c682558a51121c130816
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175714"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>Avviso del compilatore (livello 1) C4291
 
@@ -23,7 +23,7 @@ Quando viene allocata memoria per un oggetto con Operator **New**, viene chiamat
 
 Se si usa l'operatore **New** senza argomenti aggiuntivi e si compila con le opzioni [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHS](../../build/reference/eh-exception-handling-model.md)o/EHA per abilitare la gestione delle eccezioni, il compilatore genererà il codice per chiamare operator **Delete** se il costruttore genera un'eccezione.
 
-Se si usa il formato di posizionamento dell'operatore **New** (il form con gli argomenti oltre alla dimensione dell'allocazione) e il costruttore dell'oggetto genera un'eccezione, il compilatore genererà comunque il codice per chiamare operator **Delete**. Questa operazione verrà eseguita solo se esiste una forma di posizione dell'operatore **Delete** corrispondente al formato di posizionamento dell'operatore **New** che ha allocato la memoria. Esempio:
+Se si usa il formato di posizionamento dell'operatore **New** (il form con gli argomenti oltre alla dimensione dell'allocazione) e il costruttore dell'oggetto genera un'eccezione, il compilatore genererà comunque il codice per chiamare operator **Delete**. Questa operazione verrà eseguita solo se esiste una forma di posizione dell'operatore **Delete** corrispondente al formato di posizionamento dell'operatore **New** che ha allocato la memoria. Ad esempio:
 
 ```cpp
 // C4291.cpp

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1205
 ms.assetid: 6cfbe019-ad8a-4267-b4b9-0d675bb3819a
-ms.openlocfilehash: 7593c6ca0ab12ef21297a592b866eb6a87cef8fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a35b01ebd0b058a101bc41d7224ae79963ba3fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359067"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172867"
 ---
 # <a name="resource-compiler-fatal-error-rc1205"></a>Errore irreversibile del compilatore di risorse RC1205
 
-tabella codici non è valido
+tabella codici non valida
 
-La specifica della tabella codici (/c) l'opzione è stata seguita da una tabella codici non è valido. Per altre informazioni, vedere [Tabelle codici](../../c-runtime-library/code-pages.md) in *Riferimenti alla libreria di runtime* .
+L'opzione specifica tabella codici (/c) è stata seguita da una tabella codici non valida. Per altre informazioni, vedere [Tabelle codici](../../c-runtime-library/code-pages.md) in *Riferimenti alla libreria di runtime* .

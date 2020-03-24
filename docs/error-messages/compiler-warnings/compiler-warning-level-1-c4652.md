@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4652
 ms.assetid: 2cf2c666-8cdd-4dd9-bda0-662921498b03
-ms.openlocfilehash: 0675a58d818ef12b53b7d741b894d6e2ecf7f1cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9344d2fd62b7322b8ce32023e5aa8fcddf4b3641
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375704"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175662"
 ---
 # <a name="compiler-warning-level-1-c4652"></a>Avviso del compilatore (livello 1) C4652
 
-opzione del compilatore 'option' non è coerente con l'intestazione precompilata. l'opzione della riga di comando corrente avrà priorità su quanto definito nell'intestazione precompilata
+opzione del compilatore ' Option ' non coerente con l'intestazione precompilata; l'opzione della riga di comando corrente eseguirà l'override di quella definita nell'intestazione precompilata
 
-L'opzione della riga di comando specificato è diverso da quello specificato quando è stata creata l'intestazione precompilata (PCH). È stata utilizzata l'opzione specificata nella riga di comando corrente.
+L'opzione della riga di comando specificata è diversa da quella specificata al momento della creazione dell'intestazione precompilata (PCH). È stata usata l'opzione specificata nella riga di comando corrente.
 
-Questo avviso può essere evitato eseguendo la rigenerazione di intestazione precompilata con l'opzione della riga di comando specificata.
+Questo avviso può essere evitato rigenerando l'intestazione precompilata con l'opzione della riga di comando specificata.

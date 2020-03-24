@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: a6bf4076dfecbd29035716285f52c0a9faf81067
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38346e41c1e943e9bfda70668a163c630a0b9599
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267297"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178873"
 ---
 # <a name="selectany"></a>selectany
 
@@ -26,22 +26,22 @@ Viene indicato al compilatore che l'elemento dati globale (variabile o oggetto) 
 __declspec( selectany ) declarator
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-In fase di collegamento, se sono visualizzate più definizioni di COMDAT, il linker ne sceglie una e ignora il resto. Se l'opzione del linker [/OPT: ref](../build/reference/opt-optimizations.md) (ottimizzazioni) è selezionata, quindi viene eseguita l'eliminazione COMDAT per rimuovere tutti gli elementi dati senza riferimenti nell'output del linker.
+In fase di collegamento, se sono visualizzate più definizioni di COMDAT, il linker ne sceglie una e ignora il resto. Se è selezionata l'opzione del linker [/opt: Ref](../build/reference/opt-optimizations.md) (ottimizzazioni), si verificherà l'eliminazione di COMDAT per rimuovere tutti gli elementi di dati senza riferimenti nell'output del linker.
 
 I costruttori e l'assegnazione attraverso funzione globale o metodi statici presenti nella dichiarazione non creano un riferimento e non impediscono l'eliminazione di /opt:REF. Non si dovrebbe contare sugli effetti collaterali di tale codice, quando non esistono altri riferimenti ai dati.
 
-Per gli oggetti globali, inizializzati in modo dinamico **selectany** eliminerà inizializzazione anche il codice un oggetto senza riferimenti.
+Per gli oggetti globali inizializzati in modo dinamico, **selectany** eliminerà anche il codice di inizializzazione di un oggetto senza riferimenti.
 
-In genere, un elemento dati globale può essere inizializzato solo una volta, in un progetto DLL o EXE. **selectany** può essere usato nell'inizializzazione dati globali definiti dalle intestazioni, quando la stessa intestazione viene visualizzata in più di un file di origine. **selectany** è disponibile per i compilatori C e C++.
+In genere, un elemento dati globale può essere inizializzato solo una volta, in un progetto DLL o EXE. **selectany** può essere utilizzato per inizializzare i dati globali definiti dalle intestazioni, quando la stessa intestazione viene visualizzata in più di un file di origine. **selectany** è disponibile sia in C che C++ nei compilatori.
 
 > [!NOTE]
->  **selectany** può essere applicato solo all'effettiva inizializzazione degli elementi di dati globali che sono visibili esternamente.
+>  **selectany** può essere applicato solo all'inizializzazione effettiva di elementi di dati globali visibile esternamente.
 
 ## <a name="example"></a>Esempio
 
-Questo codice illustra come usare il **selectany** attributo:
+Questo codice Mostra come usare l'attributo **selectany** :
 
 ```cpp
 //Correct - x1 is initialized and externally visible
@@ -75,7 +75,7 @@ __declspec(selectany) X x(1);
 
 ## <a name="example"></a>Esempio
 
-Questo codice illustra come usare il **selectany** attributo per garantire dati riduzione COMDAT quando si usa anche il [/OPT: ICF](../build/reference/opt-optimizations.md) l'opzione del linker. Si noti che i dati devono essere contrassegnati con **selectany** e inserito in un **const** sezione (in sola lettura). È necessario specificare esplicitamente la sezione di sola lettura.
+Questo codice illustra come usare l'attributo **selectany** per garantire la riduzione COMDAT dei dati quando si usa anche l'opzione del linker [/opt: ICF](../build/reference/opt-optimizations.md) . Si noti che i dati devono essere contrassegnati con **selectany** e inseriti in una sezione **const** (ReadOnly). È necessario specificare esplicitamente la sezione di sola lettura.
 
 ```cpp
 // selectany2.cpp

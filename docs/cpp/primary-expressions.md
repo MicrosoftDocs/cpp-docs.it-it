@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: e7dcb8290c0130fa9376e48f065e82163a1ca5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312310"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177625"
 ---
 # <a name="primary-expressions"></a>Espressioni primarie
 
@@ -26,11 +26,11 @@ name
 ::name ( expression )
 ```
 
-Oggetto *letterale* è un'espressione primaria costante. Il tipo di tale valore letterale dipende dal formato della specifica. Visualizzare [valori letterali](../cpp/numeric-boolean-and-pointer-literals-cpp.md) per informazioni complete su come specificare i valori letterali.
+Un *valore letterale* è un'espressione primaria costante. Il tipo di tale valore letterale dipende dal formato della specifica. Per informazioni complete su come specificare i valori letterali, vedere [valori letterali](../cpp/numeric-boolean-and-pointer-literals-cpp.md) .
 
-Il **ciò** (parola chiave) è un puntatore a un oggetto classe. È disponibile all'interno delle funzioni membro non statiche e fa riferimento all'istanza della classe per cui è stata richiamata la funzione. Il **ciò** parola chiave non può essere utilizzata all'esterno del corpo di una funzione membro di classe.
+**Questa** parola chiave è un puntatore a un oggetto classe. È disponibile all'interno delle funzioni membro non statiche e fa riferimento all'istanza della classe per cui è stata richiamata la funzione. Impossibile utilizzare la parola chiave **this** all'esterno del corpo di una funzione membro di classe.
 
-Il tipo del **ciò** puntatore si trova `type`  **\*const** (in cui `type` è il nome della classe) all'interno di funzioni di modifica non specificamente il **questo** puntatore. L'esempio seguente mostra membro dichiarazioni di funzione e i tipi di **ciò**:
+Il tipo del puntatore **this** è `type` **\*const** (dove `type` è il nome della classe) all'interno di funzioni che non modificano in modo specifico il puntatore **this** . Nell'esempio seguente vengono illustrate le dichiarazioni di funzione membro e i tipi di **questo**:
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,9 +44,9 @@ public:
 };
 ```
 
-Visualizzare [questo puntatore](this-pointer.md) per altre informazioni sulla modifica del tipo del **ciò** puntatore.
+Per ulteriori informazioni sulla modifica del tipo del puntatore **this** , vedere [questo puntatore](this-pointer.md) .
 
-L'operatore di risoluzione dell'ambito (`::`) seguito da un nome costituisce un'espressione primaria.  Tali nomi devono essere nomi in ambito globale e non nomi di membri.  Il tipo di questa espressione è determinato dalla dichiarazione del nome. È un l-value, ovvero può essere visualizzato a sinistra di un'espressione dell'operatore di assegnazione, se il nome dichiarante è un l-value. L'operatore di risoluzione dell'ambito consente di fare riferimento a un nome globale, anche se il nome è nascosto nell'ambito corrente. Visualizzare [ambito](../cpp/scope-visual-cpp.md) per un esempio di come usare l'operatore di risoluzione dell'ambito.
+L'operatore di risoluzione dell'ambito (`::`) seguito da un nome costituisce un'espressione primaria.  Tali nomi devono essere nomi in ambito globale e non nomi di membri.  Il tipo di questa espressione è determinato dalla dichiarazione del nome. È un l-value, ovvero può essere visualizzato a sinistra di un'espressione dell'operatore di assegnazione, se il nome dichiarante è un l-value. L'operatore di risoluzione dell'ambito consente di fare riferimento a un nome globale, anche se il nome è nascosto nell'ambito corrente. Vedere [ambito](../cpp/scope-visual-cpp.md) per un esempio di come usare l'operatore di risoluzione dell'ambito.
 
 Un'espressione racchiusa tra parentesi è un'espressione primaria il cui tipo e il cui valore sono identici a quelli dell'espressione non racchiusa tra parentesi. Si tratta di un l-value se l'espressione non racchiusa tra parentesi è un l-value.
 
@@ -62,7 +62,7 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression
 ```
 
-Gli esempi seguenti sono tutti considerati *nomi*e pertanto espressioni primarie, in diversi modi:
+Gli esempi seguenti sono tutti considerati *nomi*e pertanto espressioni primarie, in diverse forme:
 
 ```cpp
 MyClass // a identifier

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: bac1f9a139d2fb0092ef0869587ae8b54342fe82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399330"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190027"
 ---
-# <a name="comptrt-extractors"></a>_com_ptr_t Extractors
+# <a name="_com_ptr_t-extractors"></a>_com_ptr_t Extractors
 
 **Sezione specifica Microsoft**
 
@@ -44,19 +44,19 @@ Interface** operator&( ) throw( );
 operator bool( ) const throw( );
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-- **operatore Interface** <strong>\*</strong> restituisce il puntatore a interfaccia incapsulato, che può essere NULL.
+- **operator interface** <strong>\*</strong> restituisce il puntatore a interfaccia incapsulato, che può essere null.
 
-- **operatore Interface &** restituisce un riferimento a puntatore a interfaccia incapsulato e genera un errore se il puntatore è NULL.
+- **& dell'interfaccia operatore** Restituisce un riferimento al puntatore a interfaccia incapsulato e genera un errore se il puntatore è NULL.
 
-- **operatore** <strong>\*</strong> consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.
+- **operator** <strong>\*</strong> consente a un oggetto puntatore intelligente di agire come se fosse l'interfaccia incapsulata effettiva quando si dereferenziavano.
 
-- **operator ->** consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.
+- **operatore->** Consente a un oggetto puntatore intelligente di agire come se fosse l'interfaccia incapsulata effettiva quando viene dereferenziata.
 
-- **operatore &** rilascia qualsiasi puntatore a interfaccia incapsulato, sostituendolo con valore NULL e restituisce l'indirizzo del puntatore incapsulato. In questo modo il puntatore intelligente deve essere passato in base all'indirizzo a una funzione che ha un *out* parametro con il quale restituisce un puntatore a interfaccia.
+- **operatore &** Rilascia qualsiasi puntatore a interfaccia incapsulato, sostituendolo con NULL e restituisce l'indirizzo del puntatore incapsulato. In questo modo, il puntatore intelligente viene passato in base all'indirizzo a una funzione che ha un parametro *out* tramite il quale restituisce un puntatore a interfaccia.
 
-- **operatore bool** consente a un oggetto del puntatore intelligente da utilizzare in un'espressione condizionale. Questo operatore restituisce TRUE se il puntatore non NULL.
+- **operatore bool** Consente di utilizzare un oggetto puntatore intelligente in un'espressione condizionale. Questo operatore restituisce TRUE se il puntatore non è NULL.
 
 **Fine sezione specifica Microsoft**
 

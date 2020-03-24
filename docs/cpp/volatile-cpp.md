@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 572fe244a076492e3f3316dd6d00f6fe7d7c3c9c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6d193c530cbe0258d8713883b769fe4828a248c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857203"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187427"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -26,7 +26,7 @@ Qualificatore di tipo che è possibile utilizzare per dichiarare che un oggetto 
 volatile declarator ;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È possibile usare l'opzione del compilatore [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) per modificare il modo in cui il compilatore interpreta questa parola chiave.
 
