@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4a385b9559e2f54e81bda76e6dd13505e978a74
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186905"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183488"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Avviso degli strumenti del linker LNK4075
 
-ignorando l'opzione "1" a causa di "option2" specifica
+"opzione1" verrà ignorato a causa della specifica "opzione2"
 
-La seconda opzione sostituisce il primo.
+La seconda opzione esegue l'override della prima.
 
-Vengono specificate le opzioni del linker si escludono a vicenda.  Esaminare le opzioni del linker.  In cui vengono specificate le opzioni del linker dipende dal modo in cui si sta compilando il progetto.
+Sono state specificate le opzioni del linker che si escludono a vicenda.  Esaminare le opzioni del linker.  Le opzioni del linker specificate variano a seconda della modalità di compilazione del progetto.
 
-- Se si sta compilando nell'ambiente di sviluppo, esaminare le pagine delle proprietà del linker per il progetto e in cui vengono specificate entrambe le opzioni del linker.  Visualizzare [impostare del compilatore e proprietà di compilazione](../../build/working-with-project-properties.md) per altre informazioni.
+- Se si esegue la compilazione nell'ambiente di sviluppo, cercare nelle pagine delle proprietà del linker per il progetto e vedere dove sono specificate entrambe le opzioni del linker.  Per ulteriori informazioni, vedere [impostare le proprietà del compilatore e della compilazione](../../build/working-with-project-properties.md) .
 
-- Se si compila dalla riga di comando, esaminare le opzioni del linker specificate non esiste.
+- Se si compila dalla riga di comando, esaminare le opzioni del linker specificate.
 
-- Se si compila con gli script di compilazione, esaminare gli script per in cui vengono specificate le opzioni del linker.
+- Se si compila con script di compilazione, esaminare gli script per vedere dove vengono specificate le opzioni del linker.
 
-Quando si trova in cui vengono specificate le opzioni del linker si escludono a vicenda, rimuovere una delle opzioni del linker.
+Quando si trova la posizione in cui vengono specificate le opzioni del linker che si escludono a vicenda, rimuovere una delle opzioni del linker.
 
 Alcuni esempi specifici:
 
-- Se si collega un modulo compilato con **/ZI**, che implica un'opzione del linker interno chiamato /EDITANDCONTINUE a un modulo compilato con /OPT: REF, /OPT: ICF o /INCREMENTAL: No, che non implica Nessuna /EDITANDCONTINUE, si apprenderà come Ottieni LNK4075.  Visualizzare [/Z7, /Zi, /ZI (formato informazioni di Debug)](../../build/reference/z7-zi-zi-debug-information-format.md) per altre informazioni.
+- Se si collega un modulo compilato con **/Zi**, che implica un'opzione del linker interna denominata/EDITANDCONTINUE e un modulo compilato con/opt: Ref,/opt: ICF o/INCREMENTAL: No, che non implica/EDITANDCONTINUE, si otterrà LNK4075.  Per ulteriori informazioni [, vedere/Z7,/Zi,/Zi (formato informazioni di debug)](../../build/reference/z7-zi-zi-debug-information-format.md) .

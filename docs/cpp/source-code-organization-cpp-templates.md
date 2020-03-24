@@ -2,18 +2,18 @@
 title: Organizzazione del codice sorgente (modelli di C++)
 ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: 1933758e47f2fcc0b63f0d16809591b932501854
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
-ms.translationtype: HT
+ms.openlocfilehash: 76898d04e5f9f0576898eb40945b7718c650d71a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611387"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178730"
 ---
 # <a name="source-code-organization-c-templates"></a>Organizzazione del codice sorgente (modelli di C++)
 
 Quando si definisce un modello di classe, è necessario organizzare il codice sorgente in modo che le definizioni dei membri siano visibili per il compilatore all'occorrenza.   È possibile scegliere di usare il *modello di inclusione* o il modello basato sulla *creazione esplicita di istanze*. Nel modello di inclusione le definizioni dei membri vengono incluse in tutti i file che usano un modello. Questo approccio è più semplice e offre la massima flessibilità per la scelta dei tipi concreti utilizzabili con il modello. Lo svantaggio è un possibile aumento dei tempi di compilazione. L'impatto può essere significativo se un progetto e/o i file inclusi stessi sono di grandi dimensioni. Con l'approccio di creazione esplicita di istanze, il modello stesso crea un'istanza delle classi o dei membri di classe concreti per tipi specifici.  Questo approccio può accelerare i tempi di compilazione, ma limita l'utilizzo solo alle classi abilitate anticipatamente dall'implementatore del modello. In generale, è consigliabile usare il modello di inclusione a meno che i tempi di compilazione non diventino un problema.
 
-## <a name="background"></a>Sfondo
+## <a name="background"></a>Background
 
 I modelli non sono come le classi normali, nel senso che il compilatore non genera codice oggetto per un modello o i relativi membri. Non esiste alcun elemento da generare fino a quando non viene creata un'istanza del modello con tipi concreti. Quando il compilatore rileva un'istanza del modello, ad esempio `MyClass<int> mc;`, e non esiste ancora alcuna classe con tale firma, genera una nuova classe. Tenta anche di generare codice per le eventuali funzioni membro usate. Se tali definizioni sono in un file non incluso direttamente o indirettamente nel file con estensione cpp in corso di compilazione, non sono visibili per il compilatore.  Dal punto di vista del compilatore, non è necessariamente un errore perché le funzioni potrebbero essere definite in un'altra unità di conversione, e in tal caso il linker le troverà.  Se il linker non trova tale codice, genera un errore di **riferimento esterno non risolto**.
 

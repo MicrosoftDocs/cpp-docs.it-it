@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-ms.openlocfilehash: c6400c8060664713fdd004a5aa9536e0617bc0c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93e8d9b0b445d1120ec15911eb763ae1d7d2d359
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154776"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188657"
 ---
 # <a name="final-specifier"></a>Identificatore final
 
-È possibile usare la **finale** parola chiave per definire le funzioni virtuali che non possono essere sottoposto a override in una classe derivata. È inoltre possibile utilizzare tale parola chiave per definire classi che non possono essere ereditate.
+È possibile usare la parola chiave **Final** per definire funzioni virtuali che non possono essere sottoposte a override in una classe derivata. È inoltre possibile utilizzare tale parola chiave per definire classi che non possono essere ereditate.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,15 +24,15 @@ function-declaration final;
 class class-name final base-classes
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**finale** è sensibile al contesto e ha un significato speciale solo quando viene utilizzata dopo una dichiarazione di funzione o nome di classe; in caso contrario, non è una parola chiave riservata.
+**Final** è sensibile al contesto e ha un significato speciale solo quando viene usato dopo una dichiarazione di funzione o un nome di classe; in caso contrario, non si tratta di una parola chiave riservata.
 
-Quando **finale** viene usato nelle dichiarazioni di classe, `base-classes` è una parte facoltativa della dichiarazione.
+Quando **Final** viene usato nelle dichiarazioni di classe, `base-classes` è una parte facoltativa della dichiarazione.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente usa il **finale** (parola chiave) per specificare che una funzione virtuale non può essere sottoposto a override.
+Nell'esempio seguente viene utilizzata la parola chiave **Final** per specificare che non è possibile eseguire l'override di una funzione virtuale.
 
 ```cpp
 class BaseClass
@@ -47,9 +47,9 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Per informazioni su come specificare che è possano eseguire l'override di funzioni membro, vedere [identificatore di override](../cpp/override-specifier.md).
+Per informazioni su come specificare che le funzioni membro possono essere sottoposte a override, vedere [identificatore di override](../cpp/override-specifier.md).
 
-L'esempio seguente usa il **finale** (parola chiave) per specificare che una classe non può essere ereditata.
+Nell'esempio seguente viene usata la parola chiave **Final** per specificare che una classe non può essere ereditata.
 
 ```cpp
 class BaseClass final

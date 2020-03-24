@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0051
 - CXX0051
 ms.assetid: 031cd2ed-d9bb-4aa5-9858-71581bcca49c
-ms.openlocfilehash: 12d7d9ccb1fee096115e8c82c825eb8df336f63b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bacaddb39f1a380053e74c8a7e9fd952dac8ea5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160627"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184827"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>Errore dell‘analizzatore di espressioni CXX0051
 
 più di un simbolo di overload specificato nel punto di interruzione
 
-L'analizzatore di espressioni non è stato possibile determinare quali di più di un simbolo di overload da usare come punto di interruzione.
+L'analizzatore di espressioni non è riuscito a determinare quale di più di un simbolo di overload utilizzare come punto di interruzione.
 
-Questo errore è identico all'errore CAN0051.
+Questo errore è identico a CAN0051.

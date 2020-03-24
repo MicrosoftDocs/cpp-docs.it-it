@@ -3,24 +3,24 @@ title: Concetti relativi a MFC
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 3273538e4fdffbf68fbe01c7f912584380505d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927911"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178522"
 ---
 # <a name="mfc-concepts"></a>Concetti relativi a MFC
 
 In questa sezione vengono forniti argomenti concettuali e basati sulle attività che consentono di programmare utilizzando la libreria MFC (Microsoft Foundation Class).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Argomenti MFC generali](../mfc/general-mfc-topics.md)<br/>
 Vengono illustrati i dettagli tecnici della libreria MFC.
 
 [Uso di CObject](../mfc/using-cobject.md)<br/>
-Fornisce collegamenti all'utilizzo `CObject`di, la classe di base per la maggior parte delle classi in MFC.
+Vengono forniti collegamenti all'utilizzo di `CObject`, la classe base per la maggior parte delle classi in MFC.
 
 [Raccolte](../mfc/collections.md)<br/>
 Vengono illustrate le classi di raccolta create da C++ e non create da modelli.
@@ -29,7 +29,7 @@ Vengono illustrate le classi di raccolta create da C++ e non create da modelli.
 Vengono forniti collegamenti ad argomenti che illustrano l'utilizzo di data e ora con MFC.
 
 [File](../mfc/files-in-mfc.md)<br/>
-Viene `CFile` illustrato e come gestire i file in MFC.
+Viene illustrato `CFile` e come gestire i file in MFC.
 
 [Gestione della memoria (MFC)](../mfc/memory-management.md)<br/>
 Viene descritto come sfruttare i vantaggi dei servizi per utilizzo generico correlati alla gestione della memoria.
@@ -66,5 +66,5 @@ Viene illustrata l'implementazione MFC di Windows Sockets.
 [Riferimenti per MFC](../mfc/mfc-desktop-applications.md)<br/>
 Fornisce materiale di riferimento per la libreria MFC, un set di classi che costituisce un framework applicazione, ovvero il framework di un'applicazione scritta per l'API di Windows.
 
-[Esempi di MFC](../overview/visual-cpp-samples.md)<br/>
+[Esempi di MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Fornisce collegamenti a esempi che illustrano come usare MFC in applicazioni desktop, dll, applicazioni di database, controlli, applicazioni Web e altro ancora.

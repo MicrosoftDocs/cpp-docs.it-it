@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - WCode method [C++]
 ms.assetid: f3b21852-f8ea-4e43-bff1-11c2d35454c4
-ms.openlocfilehash: f33871634b516723c94fead847f64ef20d25513f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92dffbdbe034ef55be04c1b7d204be6880d8d4b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399317"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190196"
 ---
-# <a name="comerrorwcode"></a>_com_error::WCode
+# <a name="_com_errorwcode"></a>_com_error::WCode
 
 **Sezione specifica Microsoft**
 
-Recupera il codice di errore a 16 bit mappato in HRESULT incapsulato.
+Recupera il codice di errore a 16 bit mappato nell'HRESULT incapsulato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,11 +27,11 @@ WORD WCode ( ) const throw( );
 
 ## <a name="return-value"></a>Valore restituito
 
-Se il valore HRESULT è compreso nell'intervallo tra 0x80040200 e 0x8004FFFF, il `WCode` metodo restituisce il valore HRESULT meno 0x80040200; in caso contrario, restituisce zero.
+Se HRESULT è compreso nell'intervallo tra 0x80040200 e 0x8004FFFF, il metodo `WCode` restituisce HRESULT meno 0x80040200; in caso contrario, restituisce zero.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il `WCode` metodo viene utilizzato per annullare un mapping che si verifica nel codice di supporto COM. Il wrapper per un `dispinterface` proprietà o il metodo chiama una routine di supporto che assembla gli argomenti e le chiamate `IDispatch::Invoke`. Al termine, se un HRESULT di errore del `DISP_E_EXCEPTION` viene restituito, le informazioni sull'errore vengono recuperati dal `EXCEPINFO` struttura passata al `IDispatch::Invoke`. Il codice di errore possono essere archiviato in un valore a 16 bit il `wCode` membro del `EXCEPINFO` struttura o un valore a 32 bit completo nel `scode` membro del `EXCEPINFO` struttura. Se un bit 16 `wCode` viene restituito, prima deve essere mappato a un HRESULT di errore a 32 bit.
+Il metodo `WCode` viene utilizzato per annullare un mapping che si verifica nel codice di supporto COM. Il wrapper per una proprietà o un metodo di `dispinterface` chiama una routine di supporto che esegue il package degli argomenti e chiama `IDispatch::Invoke`. Quando viene restituito un errore HRESULT di `DISP_E_EXCEPTION`, le informazioni sull'errore vengono recuperate dalla struttura `EXCEPINFO` passata a `IDispatch::Invoke`. Il codice di errore può essere un valore a 16 bit archiviato nel membro `wCode` della struttura `EXCEPINFO` o un valore intero a 32 bit nel membro `scode` della struttura `EXCEPINFO`. Se viene restituito un `wCode` a 16 bit, è necessario prima eseguirne il mapping a un HRESULT di errore a 32 bit.
 
 **Fine sezione specifica Microsoft**
 

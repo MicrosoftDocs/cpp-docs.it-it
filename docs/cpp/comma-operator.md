@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 8c6757f402cc7422824f1b701d3d1e4ae2566074
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399213"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189767"
 ---
 # <a name="comma-operator-"></a>Operatore virgola: ,
 
@@ -23,13 +23,13 @@ Consente di raggruppare due istruzioni dove previsto.
 expression , expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'operatore virgola presenta un'associatività da sinistra verso destra. Due espressioni separate da virgole vengono valutate da sinistra a destra. L'operando sinistro è sempre valutato e tutti gli effetti collaterali vengono completati prima che venga valutato l'operando destro.
 
 Le virgole possono essere utilizzate come separatori in alcuni contesti, ad esempio gli elenchi di argomenti della funzione. Non confondere l'utilizzo della virgola come separatore con il relativo utilizzo come operatore, i due utilizzi sono completamente differenti.
 
-Valutare l'espressione `e1, e2`. Il tipo e il valore dell'espressione sono il tipo e il valore della *e2*; il risultato della valutazione *e1* viene eliminato. Il risultato è un l-value se l'operando destro è un l-value.
+Valutare l'espressione `e1, e2`. Il tipo e il valore dell'espressione sono il tipo e il valore di *e2*; il risultato della valutazione di *E1* viene eliminato. Il risultato è un l-value se l'operando destro è un l-value.
 
 Quando la virgola viene normalmente utilizzata come separatore (ad esempio negli argomenti effettivi alle funzioni o agli inizializzatori di aggregazione), l'operatore virgola e i relativi operandi devono essere racchiusi tra parentesi. Ad esempio:
 

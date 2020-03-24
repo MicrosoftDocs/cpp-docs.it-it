@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 0073aaa886bba33a0ec6c07fb89d6eee032765c8
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: d12b338b4b52d81b01097a1e1f5c83ec10eac774
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972226"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189494"
 ---
 # <a name="dynamic_cast-operator"></a>Operatore dynamic_cast
 
@@ -24,7 +24,7 @@ Converte l'operando `expression` in un oggetto di tipo `type-id`.
 dynamic_cast < type-id > ( expression )
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il `type-id` deve essere un puntatore o un riferimento a un tipo di classe definito in precedenza o un "puntatore a void". Il tipo di `expression` deve essere un puntatore se `type-id` è un puntatore o un l-value se `type-id` è un riferimento.
 

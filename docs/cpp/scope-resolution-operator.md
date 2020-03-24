@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267393"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178886"
 ---
 # <a name="scope-resolution-operator-"></a>Operatore di risoluzione dell'ambito: ::
 
-L'operatore di risoluzione dell'ambito **::** viene usato per identificare e risolvere l'ambiguità degli identificatori usati in diversi ambiti. Per altre informazioni sull'ambito, vedere [ambito](../cpp/scope-visual-cpp.md).
+L'operatore di risoluzione dell'ambito **::** viene utilizzato per identificare e distinguere gli identificatori utilizzati in ambiti diversi. Per ulteriori informazioni sull'ambito, vedere [ambito](../cpp/scope-visual-cpp.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,7 +30,7 @@ enum class :: identifier
 enum struct :: identifier
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 `identifier` può essere una variabile una funzione oppure un valore di enumerazione.
 
@@ -150,7 +150,7 @@ int main() {
 
 ## <a name="with-scoped-enumerations"></a>Con enumerazioni con ambito
 
-L'operatore di risoluzione dell'ambito viene usato anche con i valori di un'enumerazione con ambito [dichiarazioni di enumerazioni](../cpp/enumerations-cpp.md), come illustrato nell'esempio seguente:
+L'operatore di risoluzione con ambito viene usato anche con i valori di una dichiarazione di [enumerazione](../cpp/enumerations-cpp.md)di enumerazione con ambito, come nell'esempio seguente:
 
 ```cpp
 enum class EnumA{
@@ -167,4 +167,4 @@ int main() {
 ## <a name="see-also"></a>Vedere anche
 
 [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Spazi dei nomi](../cpp/namespaces-cpp.md)
+[Namespaces](../cpp/namespaces-cpp.md) (Spazi dei nomi)

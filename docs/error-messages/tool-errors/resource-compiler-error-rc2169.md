@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2169
 ms.assetid: 832c19ad-a2e2-4f50-b493-26b791877600
-ms.openlocfilehash: 6669a85899922554b264e05c4b83f7b18cfa3157
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1906f8c8e795f6aa05987152ca4901deae62bb46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396847"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190911"
 ---
 # <a name="resource-compiler-error-rc2169"></a>Errore del compilatore di risorse RC2169
 
-file di risorsa non è in formato 2.03
+il nome del file di risorse non è in formato 2,03
 
-La risorsa specificata utilizza un formato precedente alla versione 2.03. Il file di risorse deve essere convertito o ricreati utilizzando il formato per la versione 3.00 o successiva.
+La risorsa specificata usava un formato precedente alla versione 2,03. Il file di risorse deve essere convertito o ricreato usando il formato per la versione 3,00 o successiva.

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311840"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172568"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class e ref struct (C++/CLI e C++/CX)
 
@@ -43,7 +43,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *class_access*<br/>
 (Facoltativo) Accessibilità della classe o dello struct all'esterno dell'assembly. I valori possibili sono **public** e **private** (**private** è quello predefinito). Le classi o gli struct annidati non possono avere un identificatore *class_access*.
 
-*name*<br/>
+*nome*<br/>
 Nome della classe o dello struct.
 
 *modifier*<br/>
@@ -57,7 +57,7 @@ Nome della classe o dello struct.
 
 Per altre informazioni, vedere le descrizioni specifiche del linguaggio di questo parametro nelle sezioni Windows Runtime e Common Language Runtime.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'accessibilità del membro predefinita di un oggetto dichiarato con **ref class** o **value class** è **private**. L'accessibilità del membro predefinita di un oggetto dichiarato con **ref struct** o **value struct** è **public**.
 
@@ -73,7 +73,7 @@ Per altre informazioni sulle classi e gli struct, vedere
 
 - [Classi, strutture e unioni](../cpp/classes-and-structs-cpp.md)
 
-- [Distruttori e finalizzatori in Procedura: Definire e usare classi e struct (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Distruttori e finalizzatori in procedura: definire e utilizzare classi e struct (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Operatori definiti dall'utente (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -85,7 +85,7 @@ Per altre informazioni sulle classi e gli struct, vedere
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Vedere [Classi e struct di riferimento](../cppcx/ref-classes-and-structs-c-cx.md) e [Classi e struct di valore](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -104,7 +104,7 @@ Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La tabella seguente elenca le differenze dalla sintassi mostrata nella sezione **Tutti i runtime** specifiche per C++/CLI.
 

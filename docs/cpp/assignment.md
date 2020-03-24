@@ -5,20 +5,20 @@ helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
-ms.openlocfilehash: 1e6d715011cfaab7e250e23a9a31bb3f0c83f36a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1697a8de3dff6c46de01db6bbff5447c03b6282
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184339"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190703"
 ---
 # <a name="assignment"></a>Assegnazione
 
-L'operatore di assegnazione (**=**) è, in senso stretto, un operatore binario. La relativa dichiarazione è identica a qualsiasi altro operatore binario, con le seguenti eccezioni:
+L'operatore di assegnazione ( **=** ) è, in modo rigoroso, un operatore binario. La relativa dichiarazione è identica a qualsiasi altro operatore binario, con le seguenti eccezioni:
 
-- Deve essere una funzione membro non statica. No **operatore =** può essere dichiarato come una funzione non membro.
+- Deve essere una funzione membro non statica. Non è possibile dichiarare **operator =** come funzione non membro.
 - Non è ereditato da classi derivate.
-- Un valore predefinito **operatore =** funzione può essere generata dal compilatore per i tipi di classe, se non ne esiste alcuno.
+- Una funzione **operator =** predefinita può essere generata dal compilatore per i tipi di classe, se non ne esiste alcuno.
 
 Nell'esempio seguente viene illustrato come dichiarare un operatore di assegnazione:
 
@@ -49,13 +49,13 @@ int main()
 }
 ```
 
-L'argomento fornito è il lato destro dell'espressione. L'operatore restituisce l'oggetto per mantenere il comportamento dell'operatore di assegnazione, che restituisce il valore del lato sinistro una volta completata l'assegnazione. In questo modo il concatenamento delle assegnazioni, ad esempio:
+L'argomento fornito è il lato destro dell'espressione. L'operatore restituisce l'oggetto per mantenere il comportamento dell'operatore di assegnazione, che restituisce il valore del lato sinistro una volta completata l'assegnazione. In questo modo è possibile concatenare le assegnazioni, ad esempio:
 
 ```cpp
 pt1 = pt2 = pt3;
 ```
 
-L'operatore di assegnazione di copia non deve essere confuso con il costruttore di copia. Quest'ultimo viene chiamato durante la creazione di un nuovo oggetto da una esistente:
+L'operatore di assegnazione di copia non deve essere confuso con il costruttore di copia. Quest'ultimo viene chiamato durante la costruzione di un nuovo oggetto da uno esistente:
 
 ```cpp
 // Copy constructor is called--not overloaded copy assignment operator!
@@ -66,7 +66,7 @@ Point pt4(pt1); // Copy constructor call.
 ```
 
 > [!NOTE]
-> È consigliabile seguire le [regola pari a tre](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) che una classe che definisce un operatore di assegnazione di copia debba definire in modo esplicito anche costruttore di copia, distruttore e, a partire da c++11, costruttore e spostamento di assegnazione di spostamento operatore.
+> È consigliabile seguire la [regola di tre](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) che una classe che definisce un operatore di assegnazione di copia deve anche definire in modo esplicito il costruttore di copia, il distruttore e, a partire da c++ 11, costruttore di spostamento e operatore di assegnazione di spostamento.
 
 ## <a name="see-also"></a>Vedere anche
 

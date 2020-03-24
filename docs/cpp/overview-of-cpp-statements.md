@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++]
 ms.assetid: e56996b2-b846-4b99-ac94-ac72fffc5ec7
-ms.openlocfilehash: 9493860087331ee2d8ff05a5c0bd59c7a46ad51a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9aba5deddca6fbf480cd9d573606b16b7ab047db
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325559"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188428"
 ---
 # <a name="overview-of-c-statements"></a>Cenni preliminari sulle istruzioni C++
 
@@ -28,7 +28,7 @@ declaration-statement
 try-throw-catch
 ```
 
-Nella maggior parte dei casi, la sintassi dell'istruzione C++ è identica a quella ANSI C. La differenza principale tra i due è che in C, le dichiarazioni sono consentite solo all'inizio di un blocco; C++ consente di aggiungere il *istruzione di dichiarazione*, che rimuove in modo efficace questa restrizione. Ciò consente di immettere variabili in un punto del programma in cui un valore di inizializzazione precalcolato può essere calcolato.
+Nella maggior parte dei casi C++ , la sintassi dell'istruzione è identica a quella di ANSI C. La differenza principale tra i due è che in C, le dichiarazioni sono consentite solo all'inizio di un blocco; C++ aggiunge l' *istruzione Declaration*, che rimuove in modo efficace questa restrizione. Ciò consente di immettere variabili in un punto del programma in cui un valore di inizializzazione precalcolato può essere calcolato.
 
 La dichiarazione di variabili all'interno di blocchi consente inoltre di esercitare controllo preciso sull'ambito e la durata di tali variabili.
 

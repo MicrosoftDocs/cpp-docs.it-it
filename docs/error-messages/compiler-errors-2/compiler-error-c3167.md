@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3167
 ms.assetid: 58c25fe7-8562-4a18-ad3f-487f081ff173
-ms.openlocfilehash: 0315b970f5b42c98bad9112a25b19d5e2018d034
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45a8d4ce45edb2fe4742ab712049e51bf1a62feb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174185"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176481"
 ---
 # <a name="compiler-error-c3167"></a>Errore del compilatore C3167
 
-Impossibile eseguire l'inizializzazione di .NET Framework: assicurarsi che sia installato
+Impossibile inizializzare .NET Framework: assicurarsi che sia installato
 
-.NET Framework non è installato in questo computer. installare .NET Framework.
+Il .NET Framework non è installato nel computer. installare il .NET Framework.

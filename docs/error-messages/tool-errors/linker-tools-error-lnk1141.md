@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1141
 ms.assetid: 83b78606-6dd3-43a7-88e2-152f5359cbd8
-ms.openlocfilehash: e2e3ae2462919a8261e450460370a46f0022bb1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2564cbb557f818aa3ef06e0032335b534daf7188
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255027"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184203"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Errore degli strumenti del linker LNK1141
 
-Errore durante la compilazione del file di esportazione
+errore durante la compilazione del file di esportazione
 
-[COLLEGAMENTO](../../build/reference/linking.md) non è stato possibile generare il file di esportazione (EXP).
+Il [collegamento](../../build/reference/linking.md) non è riuscito a compilare il file delle esportazioni (exp).
 
-Le cause di questo errore includono problemi di sistema, ad esempio errori di sintassi e di memoria insufficienti in opzioni o istruzioni di definizione moduli.
+Le cause di questo errore includono problemi di sistema, ad esempio errori di sintassi e di memoria insufficienti nelle opzioni o nelle istruzioni di definizione dei moduli.
 
-Questo errore è preceduto da un altro errore che vengono fornite informazioni aggiuntive.
+Questo errore è preceduto da un altro errore che fornisce informazioni aggiuntive.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structured exception handling [C++], exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
-ms.openlocfilehash: 6f1bcecf3aaed2bf2b7ebbe511f11cdb5ec1ca5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 201dcaa6a90584d1f9535df11d5722a37bdceb89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187284"
 ---
 # <a name="writing-an-exception-handler"></a>Scrittura di un gestore di eccezioni
 
@@ -20,15 +20,15 @@ I gestori delle eccezioni utilizzano l'istruzione try-except.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
-- [Try-except istruzione](../cpp/try-except-statement.md)
+- [Istruzione try-except](../cpp/try-except-statement.md)
 
-- [La scrittura di un filtro eccezioni](../cpp/writing-an-exception-filter.md)
+- [Scrittura di un filtro eccezioni](../cpp/writing-an-exception-filter.md)
 
 - [Generazione di eccezioni software](../cpp/raising-software-exceptions.md)
 
 - [Eccezioni hardware](../cpp/hardware-exceptions.md)
 
-- [Limitazioni ai gestori di eccezioni](../cpp/restrictions-on-exception-handlers.md)
+- [Restrizioni relative ai gestori di eccezioni](../cpp/restrictions-on-exception-handlers.md)
 
 ## <a name="see-also"></a>Vedere anche
 

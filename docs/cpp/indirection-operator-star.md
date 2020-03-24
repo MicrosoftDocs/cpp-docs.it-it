@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: a35d8cb28baaee37ad64a61cbcb9d4c76a5aad06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183583"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178278"
 ---
 # <a name="indirection-operator-"></a>Operatore di riferimento indiretto: *
 
@@ -22,9 +22,9 @@ ms.locfileid: "62183583"
 * cast-expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'operatore di riferimento indiretto unario (<strong>\*</strong>) dereferenzia un puntatore; vale a dire, la funzione converte un valore del puntatore a un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'utilizzo dei <strong>\*</strong> operatore in questo contesto è diverso dal relativo significato come operatore binario, ovvero la moltiplicazione.
+L'operatore di riferimento indiretto unario (<strong>\*</strong>) dereferenzia un puntatore; ovvero converte un valore del puntatore in un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'uso dell'operatore <strong>\*</strong> in questo contesto è diverso dal relativo significato come operatore binario, ovvero moltiplicazione.
 
 Se l'operando punta a una funzione, il risultato è un indicatore di funzione. Se invece punta a un percorso di archiviazione, il risultato è un valore l-value che definisce il percorso di archiviazione.
 

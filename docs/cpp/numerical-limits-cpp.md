@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - numerical limits
 ms.assetid: 5ebc9837-e273-4ea6-ac7d-14b3c2c974c7
-ms.openlocfilehash: 54854150b484e2caf66b8e9bc0cb97597d693b49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 591a8d8b3e8f251ef952d4b8f85bbc3690672454
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245076"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177729"
 ---
 # <a name="numerical-limits-c"></a>Limiti numerici (C++)
 
-Lo standard di due file, di inclusione \<Limits. h > e \<float. h >, definire i limiti numerici o valori minimo e massimo che può contenere una variabile di un determinato tipo. Questi valori minimi e massimi sono garantiti portabili in qualsiasi compilatore C++ che usa la stessa rappresentazione di data standard ANSI c. Il \<Limits > includono file definisce il [limiti numerici per i tipi integrali](../cpp/integer-limits.md), e \<float. h > definisce il [limiti numerici per tipo a virgola mobile](../cpp/floating-limits.md).
+I due file di inclusione standard, \<limits. h > e \<float. h >, definiscono i limiti numerici o i valori minimo e massimo che una variabile di un determinato tipo può contenere. Questi valori minimi e massimi sono sicuramente portabili per qualsiasi C++ compilatore che utilizza la stessa rappresentazione di dati di ANSI C. Il file di inclusione \<limits. h > definisce i [limiti numerici per i tipi integrali](../cpp/integer-limits.md)e \<float. h > definisce i [limiti numerici per i tipi a virgola mobile](../cpp/floating-limits.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorInfo method [C++]
 ms.assetid: 071b446c-4395-4fb8-bd3d-300a8b25f5cd
-ms.openlocfilehash: 59ada8a7e098e57cca5641a439365851bbae2485
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cedb9ccadc63166c43d980333d93a195254700d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155072"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180706"
 ---
-# <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
+# <a name="_com_errorerrorinfo"></a>_com_error::ErrorInfo
 
 **Sezione specifica Microsoft**
 
@@ -29,9 +29,9 @@ IErrorInfo * ErrorInfo( ) const throw( );
 
 L'elemento `IErrorInfo` non elaborato passato nel costruttore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Recupera incapsulato `IErrorInfo` di elemento un `_com_error` dell'oggetto, o NULL se nessun `IErrorInfo` voce viene registrata. Il chiamante deve chiamare `Release` sull'oggetto restituito al termine utilizzarlo.
+Recupera l'elemento `IErrorInfo` incapsulato in un oggetto `_com_error` o NULL se non viene registrato alcun elemento di `IErrorInfo`. Al termine dell'utilizzo, il chiamante deve chiamare `Release` sull'oggetto restituito.
 
 **Fine sezione specifica Microsoft**
 

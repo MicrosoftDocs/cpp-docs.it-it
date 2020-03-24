@@ -2,12 +2,12 @@
 title: Modifica firma
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
-ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
-ms.translationtype: HT
+ms.openlocfilehash: 1599a7900e33db61994ea75581f9d87b1aee83f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281948"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171905"
 ---
 # <a name="change-signature"></a>Modifica firma
 
@@ -17,7 +17,7 @@ ms.locfileid: "52281948"
 
 **Motivo:** è possibile modificare manualmente questi parametri e poi cercare tutte le chiamate alla funzione e modificarle una alla volta, ma si tratta di un processo soggetto a errori.  Questo strumento di refactoring eseguirà l'attività automaticamente.
 
-**Come:**
+**Modalità:**
 
 1. Posizionare il cursore del testo o del mouse all'interno del nome del metodo da modificare o di uno dei relativi utilizzi:
 
@@ -35,12 +35,12 @@ ms.locfileid: "52281948"
 
    ![Finestra di dialogo Cambia firma](images/changesignature_dialog.png)
 
-   | Button | Descrizione
+   | Pulsante | Descrizione
    | ------ | ---
    | **Su/Giù**    | Consente di spostare il parametro selezionato verso l'alto e verso il basso nell'elenco
-   | **Aggiungi**        | Consente di aggiungere un nuovo parametro all'elenco
+   | **Aggiungere**        | Consente di aggiungere un nuovo parametro all'elenco
    | **Rimuovi**     | Consente di rimuovere il parametro selezionato dall'elenco
-   | **Modifica**     | Consente di modificare il parametro selezionato cambiandone il tipo, il nome e indicando se è facoltativo e quale deve essere il relativo valore inserito
+   | **Modificare**     | Consente di modificare il parametro selezionato cambiandone il tipo, il nome e indicando se è facoltativo e quale deve essere il relativo valore inserito
    | **Ripristina**     | Consente di ripristinare lo stato originale del parametro selezionato
    | **Revert All** (Ripristina tutto) | Consente di ripristinare lo stato originale di tutti i parametri
 
@@ -55,8 +55,8 @@ ms.locfileid: "52281948"
 
    | Voce | Descrizione
    | ----- | ---
-   | **Type**               | Tipo del parametro (int, double, float e così via)
-   | **Name**               | Nome del parametro
+   | **Tipo**               | Tipo del parametro (int, double, float e così via)
+   | **Nome**               | Nome del parametro
    | **Parametro facoltativo** | Rende il parametro specificato facoltativamente
    | **Valore inserito**     | Il valore inserito in tutte le chiamate alla funzione in cui non è specificato il parametro (valido solo per **Aggiungi**)
    | **Valore predefinito**      | Il valore usato dalla funzione se il chiamante non ne specifica uno (valido solo per **Parametro facoltativo**)

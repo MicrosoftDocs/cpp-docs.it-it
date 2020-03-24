@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e854764dc3f8d3ede79965302b62055b91df0a4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165626"
 ---
 # <a name="compiler-error-c3808"></a>Errore del compilatore C3808
 
-> «*tipo*': una classe con l'attributo ComImport non può definire membro '*membro*', solo abstract o dllimport funzioni consentite
+> '*Type*': una classe con l'attributo ComImport non può definire il membro '*member*'. sono consentite solo le funzioni abstract o dllimport
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un tipo da cui deriva <xref:System.Runtime.InteropServices.ComImportAttribute> non è possibile definire *membro*.
+Un tipo derivato da <xref:System.Runtime.InteropServices.ComImportAttribute> non può definire il *membro*.
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
+Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3808.
+L'esempio seguente genera l'C3808.
 
 ```cpp
 // C3808.cpp

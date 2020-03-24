@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4411
 ms.assetid: d209452c-83bd-4333-8d0b-759ca9b4864e
-ms.openlocfilehash: 2813713a1177a551b1682fb6fef74b2920e91cd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d5064b69259e0b88d51d316f5ecf06591c744f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408201"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162413"
 ---
 # <a name="compiler-warning-level-1-c4411"></a>Avviso del compilatore (livello 1) C4411
 
-'identifier': simbolo punta al Registro di spostamento
+' Identifier ': il simbolo viene risolto nel registro di spostamento
 
-L'identificatore è un simbolo locale che si risolve in un registro di spostamento e pertanto può essere utilizzato su un operando con un altro simbolo.
+L'identificatore è un simbolo locale che viene risolto in un registro di spostamento e pertanto può essere usato in un operando con un altro simbolo.

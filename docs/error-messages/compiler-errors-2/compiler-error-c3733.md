@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3733
 ms.assetid: 0cc1a9fe-1400-4be3-b35a-16435cba7a5a
-ms.openlocfilehash: 006f87691c6e0839115e2c02ab0d922aa95eaa93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 961aa0caf31d49917f6df67305bc01d465884b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165899"
 ---
 # <a name="compiler-error-c3733"></a>Errore del compilatore C3733
 
-'event': sintassi non corretta per la specifica di un evento COM. si è omesso Interface'?
+' Event ': sintassi non corretta per la specifica di un evento COM; si è omesso ' __interface '?
 
-La sintassi errata è stata usata per un evento COM. Per correggere questo errore, modificare il tipo di evento o correggere la sintassi per garantire la conformità con le regole di eventi COM.
+Per un evento COM è stata utilizzata la sintassi errata. Per correggere l'errore, modificare il tipo di evento o correggere la sintassi per conformarsi alle regole dell'evento COM.
 
-L'esempio seguente genera l'errore C3733:
+L'esempio seguente genera l'C3733:
 
 ```
 #define _ATL_ATTRIBUTES 1

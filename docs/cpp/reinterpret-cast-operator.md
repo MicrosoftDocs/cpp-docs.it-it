@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 421a1fdce6834f800cd33a55d75c9dc4f88ffc93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34c2fcb0e1f7f4df4e207d1737afc9c42e011feb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403425"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188285"
 ---
-# <a name="reinterpretcast-operator"></a>Operatore reinterpret_cast
+# <a name="reinterpret_cast-operator"></a>Operatore reinterpret_cast
 
 Consente a qualsiasi puntatore di essere convertito in un qualsiasi altro tipo di puntatore. Consente inoltre a qualsiasi tipo integrale di essere convertito in qualsiasi tipo di puntatore e viceversa.
 
@@ -23,19 +23,19 @@ Consente a qualsiasi puntatore di essere convertito in un qualsiasi altro tipo d
 reinterpret_cast < type-id > ( expression )
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'utilizzo improprio del **reinterpret_cast** operatore può facilmente essere non sicuro. A meno che la conversione desiderata sia intrinsecamente di basso livello, è necessario usare uno degli altri operatori di cast.
+Un utilizzo improprio dell'operatore **reinterpret_cast** può essere facilmente non sicuro. A meno che la conversione desiderata sia intrinsecamente di basso livello, è necessario usare uno degli altri operatori di cast.
 
-Il **reinterpret_cast** operatore può essere usato per le conversioni, ad esempio `char*` al `int*`, o `One_class*` a `Unrelated_class*`, che sono intrinsecamente non sicure.
+È possibile utilizzare l'operatore **reinterpret_cast** per le conversioni, ad esempio `char*` `int*`o `One_class*` a `Unrelated_class*`, che sono intrinsecamente non sicure.
 
-Il risultato di una **reinterpret_cast** non può essere utilizzato in modo sicuro per qualsiasi elemento diverso da sottoposto a cast al tipo originale. Altri usi sono, nella migliore delle ipotesi, non portabili.
+Il risultato di un **reinterpret_cast** non può essere usato in modo sicuro per qualsiasi altra parte del cast al tipo originale. Altri usi sono, nella migliore delle ipotesi, non portabili.
 
-Il **reinterpret_cast** operatore non è possibile eseguire il cast di **const**, **volatile**, oppure **unaligned** attributi. Visualizzare [operatore const_cast](../cpp/const-cast-operator.md) per informazioni sulla rimozione di questi attributi.
+L'operatore **reinterpret_cast** non è in grado di eseguire il cast degli attributi **const**, **volatile**o **__unaligned** . Per informazioni sulla rimozione di questi attributi, vedere [operatore const_cast](../cpp/const-cast-operator.md) .
 
-Il **reinterpret_cast** operatore converte un valore del puntatore null per il valore del puntatore null del tipo di destinazione.
+L'operatore **reinterpret_cast** converte un valore del puntatore null nel valore del puntatore null del tipo di destinazione.
 
-Un uso pratico di **reinterpret_cast** è in una funzione hash, che è associato un valore a un indice in modo che due distinte di valori raramente end backup con lo stesso indice.
+Un uso pratico di **reinterpret_cast** si trova in una funzione hash, che esegue il mapping di un valore a un indice in modo che due valori distinti si concludano raramente con lo stesso indice.
 
 ```cpp
 #include <iostream>
@@ -77,7 +77,7 @@ Output:
 64829
 ```
 
-Il **reinterpret_cast** consente al puntatore di essere considerato come un tipo integrale. Il risultato viene quindi spostato su bit e XORed con se stesso per creare un indice univoco (univoco a un livello elevato di probabilità). L'indice viene quindi troncato da un cast di tipo C standard al tipo restituito della funzione.
+Il **reinterpret_cast** consente di trattare il puntatore come tipo integrale. Il risultato viene quindi spostato su bit e XORed con se stesso per creare un indice univoco (univoco a un livello elevato di probabilità). L'indice viene quindi troncato da un cast di tipo C standard al tipo restituito della funzione.
 
 ## <a name="see-also"></a>Vedere anche
 

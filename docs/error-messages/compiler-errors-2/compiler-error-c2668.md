@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: 1920af8873578c63ab768dae4bcdf4d91fe7cd57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164813"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177157"
 ---
 # <a name="compiler-error-c2668"></a>Errore del compilatore C2668
 
-'function': chiamata ambigua a funzione in overload
+' Function ': chiamata ambigua a funzione in overload
 
-Non è stato possibile risolvere la chiamata di funzione in overload specificato. È possibile eseguire il cast esplicito di uno o più parametri effettivi.
+Impossibile risolvere la chiamata di funzione in overload specificata. È consigliabile eseguire il cast esplicito di uno o più parametri effettivi.
 
-È anche possibile ottenere questo errore tramite l'uso di modello. Se, nella stessa classe, si dispone di una funzione membro normale e una funzione membro basate su modelli con la stessa firma, deve precedere quella basata su modelli. Si tratta di una limitazione dell'implementazione corrente di Visual C++.
+È possibile ottenere questo errore anche tramite l'uso del modello. Se nella stessa classe sono presenti una funzione membro regolare e una funzione membro basata su modelli con la stessa firma, è necessario che il modello sia prima di tutto. Si tratta di una limitazione dell'implementazione corrente di Visual C++.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2668:
+L'esempio seguente genera l'C2668:
 
 ```cpp
 // C2668.cpp
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Un altro modo per correggere l'errore riguarda una [dichiarazione using](../../cpp/using-declaration.md):
+Un altro modo per risolvere questo errore è con una [dichiarazione using](../../cpp/using-declaration.md):
 
 ```cpp
 // C2668b.cpp
@@ -86,9 +86,9 @@ class MyTestCase : public AppTestCase {
 
 ## <a name="example"></a>Esempio
 
-Questo errore può anche essere generato in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: conversione ambigua nel cast della costante 0.
+Questo errore può essere generato anche in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: conversione ambigua sul cast della costante 0.
 
-Eseguire una conversione in un cast usando la costante 0 è ambigua poiché int richiede una conversione sia a lungo e a void *. Per risolvere questo errore, eseguire il cast tra 0 e il tipo esatto del parametro della funzione che perché è in uso per in modo che nessuna conversione necessaria per l'implementazione (questo codice è valido nelle versioni di Visual Studio .NET 2003 e Visual Studio .NET di Visual C++).
+La conversione in un cast con la costante 0 è ambigua perché int richiede una conversione sia a Long che a void *. Per correggere l'errore, eseguire il cast di 0 al tipo esatto del parametro della funzione usato per, in modo che non sia necessario eseguire alcuna conversione (questo codice sarà valido nelle versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++Studio).
 
 ```cpp
 // C2668c.cpp
@@ -110,7 +110,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Questo errore può verificarsi perché la libreria CRT ha ora float e double forme di tutte le funzioni matematiche.
+Questo errore può verificarsi perché CRT dispone ora di forme float e Double di tutte le funzioni matematiche.
 
 ```cpp
 // C2668d.cpp
@@ -125,7 +125,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Questo errore può verificarsi perché il pow (int, int) è stato rimosso da Math. h in CRT.
+Questo errore può verificarsi perché il Pow (int, int) è stato rimosso da Math. h in CRT.
 
 ```cpp
 // C2668e.cpp
@@ -138,7 +138,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Questo codice ha esito positivo in Visual Studio 2015 ma non riesce in Visual Studio 2017 e versioni successive con C2668. In Visual Studio 2015 il compilatore tratta erroneamente copy-list-initialization come l'oggetto copy-initialization normale, considerando solo la conversione dei costruttori per la risoluzione dell'overload.
+Questo codice ha esito positivo in Visual Studio 2015 ma ha esito negativo in Visual Studio 2017 e versioni successive con C2668. In Visual Studio 2015 il compilatore tratta erroneamente copy-list-initialization come l'oggetto copy-initialization normale, considerando solo la conversione dei costruttori per la risoluzione dell'overload.
 
 ```cpp
 struct A {

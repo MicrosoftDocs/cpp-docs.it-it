@@ -7,16 +7,16 @@ helpviewer_keywords:
 - comments, C++ code
 - white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
-ms.openlocfilehash: a90d9d37e69cb2e8be4ab18f77026fdce1221307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3326ad7d0b5118182a5d582061fd0c103986f232
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399174"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189754"
 ---
 # <a name="comments-c"></a>Commenti (C++)
 
-Un commento è un testo ignorato dal compilatore, ma che può risultare utile per i programmatori. I commenti vengono generalmente utilizzati per annotare il codice per riferimento futuro. Il compilatore tratta i commenti come uno spazio vuoto. È possibile utilizzare i commenti nel test per rendere alcune righe di codice inattivo; Tuttavia `#if` / `#endif` le direttive del preprocessore più idoneo per questo oggetto perché è possibile racchiudere il codice che contiene i commenti, ma non è possibile annidare commenti.
+Un commento è un testo ignorato dal compilatore, ma che può risultare utile per i programmatori. I commenti vengono generalmente utilizzati per annotare il codice per riferimento futuro. Il compilatore tratta i commenti come uno spazio vuoto. È possibile usare i commenti nei test per rendere inattive determinate righe di codice; Tuttavia, `#if`/`#endif` le direttive per il preprocessore funzionano in modo ottimale perché è possibile racchiudere il codice che contiene commenti, ma non è possibile nidificare commenti.
 
 Un commento C++ può essere scritto in uno dei modi seguenti:
 

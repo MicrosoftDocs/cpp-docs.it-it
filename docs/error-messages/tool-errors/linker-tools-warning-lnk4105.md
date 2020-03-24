@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4105
 ms.assetid: 6c7bebf4-4ea6-4533-a6ed-e563d43abbd7
-ms.openlocfilehash: 880c8519a530f492d0c322575a1386af8a7d0187
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 655a6dfde77984cd0c941ec0d8abb0c4d099c80f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310929"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183293"
 ---
 # <a name="linker-tools-warning-lnk4105"></a>Avviso degli strumenti del linker LNK4105
 
-Nessun argomento specificato con l'opzione 'option'; l'opzione verrà ignorata
+nessun argomento specificato con l'opzione ' Option '; opzione ignorata
 
-Questo avviso viene generato solo quando la [/LIBPATH](../../build/reference/libpath-additional-libpath.md) opzione è impostata. Se questa opzione viene specificata alcuna directory, il linker ignora l'opzione e genera questo messaggio di avviso.
+Questo avviso viene visualizzato solo quando è impostata l'opzione [/LIBPATH](../../build/reference/libpath-additional-libpath.md) . Se non viene specificata alcuna directory con questa opzione, il linker ignora l'opzione e genera questo messaggio di avviso.
 
-Se non è necessaria eseguire l'override le impostazioni della libreria dell'ambiente esistente, rimuovere l'opzione /LIBPATH dalla riga di comando del linker. Se si desidera utilizzare un percorso di ricerca alternative per le librerie, specificare il percorso alternativo seguendo il /LIBPATH (opzione).
+Se non è necessario eseguire l'override delle impostazioni della libreria ambientale esistente, rimuovere l'opzione/LIBPATH dalla riga di comando del linker. Se si vuole usare un percorso di ricerca alternativo per le librerie, specificare il percorso alternativo dopo l'opzione/LIBPATH.
 
 ## <a name="example"></a>Esempio
 
@@ -27,4 +27,4 @@ Se non è necessaria eseguire l'override le impostazioni della libreria dell'amb
 link /libpath:c:\filepath\lib bar.obj
 ```
 
-potrebbe indicare al linker di cercare le librerie necessarie in `c:\filepath\lib` prima di eseguire ricerche nelle posizioni predefinite.
+indicherà al linker di cercare le librerie richieste in `c:\filepath\lib` prima di cercare nei percorsi predefiniti.

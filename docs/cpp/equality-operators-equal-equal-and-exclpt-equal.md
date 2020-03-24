@@ -13,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: 7e42b66438579bc9be6274863366762b8b4ffbe9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8a0c08f438528caeaac6d5e52e806a36fe56dd25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189247"
 ---
 # <a name="equality-operators--and-"></a>Operatori di uguaglianza: == e !=
 

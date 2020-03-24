@@ -6,28 +6,28 @@ helpviewer_keywords:
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-ms.openlocfilehash: 2c11230d106b50e8120dfa9f4e283e97700d2739
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0514f6a9285936c85608f08774c1d377fd72d6ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175996"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211055"
 ---
 # <a name="data-sources-and-sessions"></a>Origini dati e sessioni
 
-Nella figura seguente vengono illustrate le classi che supportano la connessione e l'accesso a un'origine dati. Ogni classe si basa su un'implementazione del componente OLE DB standard.
+Nella figura seguente sono illustrate le classi che supportano la connessione e l'accesso a un'origine dati. Ogni classe è basata su un'implementazione standard di OLE DB Component.
 
-![Classi di dati origine e di sessione](../../data/oledb/media/vcdatasourcesessionclasses.gif "le classi di origine e la sessione di dati") <br/>
+![Classi di origini dati e sessioni](../../data/oledb/media/vcdatasourcesessionclasses.gif "Classi delle origini dati e delle sessioni") <br/>
 Classi delle origini dati e delle sessioni
 
 Le classi sono:
 
-- [CDataSource](../../data/oledb/cdatasource-class.md) questa classe viene creata un'istanza dell'oggetto di origine dati, che crea e gestisce una connessione a un'origine dati tramite un provider OLE DB. L'origine dati richiede informazioni quali le informazioni origine dati indirizzo e l'autenticazione in forma di stringa di connessione.
+- [CDataSource](../../data/oledb/cdatasource-class.md) Questa classe crea un'istanza dell'oggetto origine dati che crea e gestisce una connessione a un'origine dati tramite un provider OLE DB. L'origine dati acquisisce informazioni quali l'indirizzo dell'origine dati e le informazioni di autenticazione sotto forma di stringa di connessione.
 
-   È anche importante notare che la classe helper [CEnumerator](../../data/oledb/cenumerator-class.md) viene spesso usata prima di stabilire la connessione per ottenere un elenco dei provider disponibili registrato in un sistema. In questo modo è possibile selezionare un provider come origine dati. Ad esempio, il **proprietà di Data Link** finestra di dialogo utilizza questa classe per popolare l'elenco dei provider nel **provider** scheda. Equivale al `SQLBrowseConnect` o `SQLDriverConnect` (funzione).
+   È inoltre importante notare che la classe helper [CEnumerator](../../data/oledb/cenumerator-class.md) viene spesso utilizzata prima che venga stabilita una connessione per ottenere un elenco dei provider disponibili registrati in un sistema. In questo modo è possibile selezionare un provider come origine dati. La finestra di dialogo **proprietà di data link** , ad esempio, utilizza questa classe per popolare l'elenco di provider nella scheda **provider** . Equivale alla funzione `SQLBrowseConnect` o `SQLDriverConnect`.
 
-- [CSession](../../data/oledb/csession-class.md) questa classe viene creata un'istanza dell'oggetto di sessione, che rappresenta una sessione di accesso singolo all'origine dati. Tuttavia, è possibile creare più sessioni su un'origine dati. Per ogni sessione, è possibile creare set di righe, comandi e altri oggetti per accedere ai dati dall'origine dati. La sessione di gestione delle transazioni.
+- [CSession](../../data/oledb/csession-class.md) Questa classe crea un'istanza dell'oggetto Session, che rappresenta una singola sessione di accesso all'origine dati. Tuttavia, è possibile creare più sessioni in un'origine dati. Per ogni sessione è possibile creare set di righe, comandi e altri oggetti per accedere ai dati dall'origine dati. La sessione gestisce le transazioni.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

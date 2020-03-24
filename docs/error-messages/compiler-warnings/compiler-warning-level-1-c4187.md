@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4187
 ms.assetid: 2443d948-ab7b-472c-af43-5d81e09af677
-ms.openlocfilehash: 1f0f513c21be344a02c26afbaf06fcd9eda19222
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b264664b28fd2dd1d43133caecd1675931b18d0e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391595"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163310"
 ---
 # <a name="compiler-warning-level-1-c4187"></a>Avviso del compilatore (livello 1) C4187
 
-\#gli attributi import 'attribute1' e 'attribute2' sono incompatibili. entrambi ignorati
+gli attributi ' attribute1' è attribute2' di importazione \#non sono compatibili. entrambi ignorati
 
 Un'istruzione [#import](../../preprocessor/hash-import-directive-cpp.md) ha specificato gli attributi `no_implementation` e `implementation_only` . Vengono ignorati entrambi.

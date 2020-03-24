@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44b1031376abd6c50c3b9706089042995994e495
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392141"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177677"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma suffissa: ++ e --
 
@@ -30,25 +30,25 @@ postfix-expression ++
 postfix-expression --
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-In C++ sono disponibili operatori di incremento e decremento prefisso e suffisso. In questa sezione verranno descritti solo gli operatori di incremento e decremento suffisso. (Per altre informazioni, vedere [prefisso operatori di incremento e decremento](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md).) La differenza tra i due è che nella notazione suffissa l'operatore viene visualizzato dopo *postfix-expression*, mentre nella notazione prefissa l'operatore viene visualizzato prima *espressione.* Nell'esempio seguente viene illustrato un operatore di decremento suffisso:
+In C++ sono disponibili operatori di incremento e decremento prefisso e suffisso. In questa sezione verranno descritti solo gli operatori di incremento e decremento suffisso. Per altre informazioni, vedere [operatori di incremento e decremento del prefisso](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md). La differenza tra i due è che nella notazione suffissa l'operatore viene visualizzato dopo *Postfix-Expression*, mentre nella notazione del prefisso l'operatore viene visualizzato prima dell' *espressione.* Nell'esempio seguente viene illustrato un operatore di decremento suffisso:
 
 ```cpp
 i++;
 ```
 
-L'effetto dell'applicazione dell'operatore di incremento in forma suffissa (**++**) è che il valore dell'operando viene incrementato di un'unità del tipo appropriato. Analogamente, l'effetto dell'applicazione dell'operatore di decremento in forma suffissa (**--**) è che il valore dell'operando viene diminuito di un'unità del tipo appropriato.
+L'effetto dell'applicazione dell'operatore di incremento suffisso ( **++** ) consiste nel fatto che il valore dell'operando viene incrementato di un'unità del tipo appropriato. Analogamente, l'effetto dell'applicazione dell'operatore di decremento suffisso ( **--** ) consiste nel fatto che il valore dell'operando viene ridotto di un'unità del tipo appropriato.
 
-È importante notare che una forma suffissa incremento o decremento in forma espressione restituisce il valore dell'espressione *precedenti a* dell'applicazione del rispettivo operatore. L'operazione di incremento o decremento avviene *dopo* l'operando viene valutato. Questo problema si verifica solo quando l'operazione di decremento o di decremento in forma suffissa viene eseguita nel contesto di un'espressione più estesa.
+È importante notare che un'espressione di incremento o decremento suffisso restituisce il valore dell'espressione *prima* dell'applicazione dell'operatore corrispondente. L'operazione di incremento o decremento si verifica *dopo* la valutazione dell'operando. Questo problema si verifica solo quando l'operazione di decremento o di decremento in forma suffissa viene eseguita nel contesto di un'espressione più estesa.
 
 Quando un operatore suffisso viene applicato a un argomento di funzione, non è garantito che il valore dell'argomento venga incrementato o decrementato prima di essere passato alla funzione.  Per ulteriori informazioni, vedere la sezione 1.9.17 in C++ standard.
 
-Applica l'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **lungo** incrementata di quattro la rappresentazione interna dell'indicatore di misura. In questo modo il puntatore, indicate in precedenza per il *n*ennesimo elemento della matrice, per fare riferimento al (*n*+ 1) elemento th.
+L'applicazione dell'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **Long** aggiunge effettivamente quattro alla rappresentazione interna del puntatore. Questo comportamento fa sì che il puntatore, che in precedenza faceva riferimento all'elemento *n*della matrice, faccia riferimento all'elemento (*n*+ 1) Th.
 
-Gli operandi di incremento suffisso e operatori di decremento in forma suffissa devono essere modificabili (non **const**) espressioni l-value di tipo aritmetico o puntatore. Il tipo del risultato è uguale a quello del *postfix-expression*, ma non è più un l-value.
+Gli operandi degli operatori di incremento suffisso e di decremento suffisso devono essere valori l-value modificabili (non **const**) di tipo aritmetico o puntatore. Il tipo del risultato corrisponde a quello dell' *espressione suffissa*, ma non è più un l-value.
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): L'operando di un'operazione di incremento o decremento operatore potrebbe non essere di tipo **bool**.
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): l'operando di un operatore di incremento o decremento suffisso non può essere di tipo **bool**.
 
 Il codice seguente illustra l'operatore di incremento suffisso:
 

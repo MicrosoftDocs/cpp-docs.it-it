@@ -8,20 +8,20 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184254"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189026"
 ---
 # <a name="explicit-overrides-c"></a>Override espliciti (C++)
 
 **Sezione specifica Microsoft**
 
-Se la stessa funzione virtuale viene dichiarata in due o più [interfacce](../cpp/interface.md) e se una classe è derivata da queste interfacce, è possibile ignorare in modo esplicito ogni funzione virtuale.
+Se la stessa funzione virtuale viene dichiarata in due o più [interfacce](../cpp/interface.md) e se una classe è derivata da queste interfacce, è possibile eseguire l'override esplicito di ogni funzione virtuale.
 
-Per informazioni sull'override espliciti nel codice gestito mediante C++/CLI, vedere [esegue l'override esplicito](../extensions/explicit-overrides-cpp-component-extensions.md).
+Per informazioni sulle sostituzioni esplicite nel codice C++gestito con/CLI, vedere [override espliciti](../extensions/explicit-overrides-cpp-component-extensions.md).
 
 **Fine sezione specifica Microsoft**
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: 9a01672976703634c06724c9c655605bb433facf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc6359d3d7d2045d44af07f80b3e101da356d4b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301825"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179354"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatori di moltiplicazione e operatori modulo
 
@@ -32,25 +32,25 @@ expression / expression
 expression % expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Gli operatori moltiplicativi sono:
 
 - Moltiplicazione (<strong>\*</strong>)
 
-- Divisione (**/**)
+- Divisione ( **/** )
 
-- Modulo (resto della divisione) (**%**)
+- Modulo (resto della divisione) ( **%** )
 
 Questi operatori binari hanno un'associatività da sinistra a destra.
 
-Gli operatori moltiplicativi accettano gli operandi di tipi aritmetici. L'operatore modulo (**%**) è un requisito più rigido, in quanto gli operandi devono essere di tipo integrale. (Per ottenere il resto di una divisione a virgola mobile, utilizzare la funzione di runtime [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Le conversioni descritte in [conversioni Standard](standard-conversions.md) vengono applicate agli operandi e il risultato è di tipo convertito.
+Gli operatori moltiplicativi accettano gli operandi di tipi aritmetici. L'operatore modulo ( **%** ) ha un requisito più restrittivo in quanto gli operandi devono essere di tipo integrale. Per ottenere il resto di una divisione a virgola mobile, utilizzare la funzione di runtime [fmod](../c-runtime-library/reference/fmod-fmodf.md). Le conversioni descritte in [conversioni standard](standard-conversions.md) vengono applicate agli operandi e il risultato è del tipo convertito.
 
 L'operatore di moltiplicazione produce il risultato moltiplicando il primo operando per il secondo.
 
 L'operatore di divisione produce il risultato dividendo il primo operando per il secondo.
 
-L'operatore modulo produce il resto fornito dall'espressione seguente, dove *e1* è il primo operando e *e2* è il secondo: *e1* -(*e1*  /  *e2*) \* *e2*, dove entrambi gli operandi sono di tipi integrali.
+L'operatore modulo restituisce il resto fornito dall'espressione seguente, dove *E1* è il primo operando ed *E2* è il secondo: *E1* -(*E1* / *E2*) \* *E2*, dove entrambi gli operandi sono di tipo integrale.
 
 La divisione per 0 in una divisione o in un'espressione di modulo non è definita e provoca un errore di runtime. Pertanto, le espressioni seguenti generano risultati errati non definiti:
 
@@ -70,13 +70,13 @@ In Microsoft C++, il risultato di un'espressione di modulo è sempre uguale al s
 
 **Fine sezione specifica Microsoft**
 
-Se la divisione calcolata di due interi non è esatta e un solo operando è negativo, il risultato è l'intero più grande (in termini di grandezza, non considerando il segno) che è minore del valore esatto che produrrebbe l'operazione di divisione. Ad esempio, il valore calcolato di -11 / 3 è-3.666666666. Il risultato della divisione è -3.
+Se la divisione calcolata di due interi non è esatta e un solo operando è negativo, il risultato è l'intero più grande (in termini di grandezza, non considerando il segno) che è minore del valore esatto che produrrebbe l'operazione di divisione. Ad esempio, il valore calcolato di-11/3 è-3,666666666. Il risultato della divisione integrale è-3.
 
-La relazione tra gli operatori moltiplicativi viene fornita dall'identità (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.
+La relazione tra gli operatori di moltiplicazione è fornita dall'identità (*e1* / *E2*) *\* e2* + *E1* % *E2* == *E1*.
 
 ## <a name="example"></a>Esempio
 
-Nel programma seguente vengono illustrati gli operatori moltiplicativi. Si noti che degli operandi del `10 / 3` deve essere convertito in modo esplicito nel tipo **float** per evitare il troncamento in modo che entrambi gli operandi sono di tipo **float** prima della divisione.
+Nel programma seguente vengono illustrati gli operatori moltiplicativi. Si noti che è necessario eseguire il cast esplicito di uno degli operandi di `10 / 3` al tipo **float** per evitare il troncamento, in modo che entrambi gli operandi siano di tipo **float** prima della divisione.
 
 ```cpp
 // expre_Multiplicative_Operators.cpp

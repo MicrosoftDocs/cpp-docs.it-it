@@ -1,20 +1,20 @@
 ---
-title: 'Errore irreversibile U1036 di NMAKE '
+title: Errore irreversibile U1036 di NMAKE
 ms.date: 11/04/2016
 f1_keywords:
 - U1036
 helpviewer_keywords:
 - U1036
 ms.assetid: b1d03b6b-ce82-4bbb-9904-d392ba72b437
-ms.openlocfilehash: 2d70974485c909ebd72de6996dd14193d506ed89
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 31adf750db6f07919d86d403300b6d9bb8b25c8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345327"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173335"
 ---
-# <a name="nmake-fatal-error-u1036"></a>Errore irreversibile U1036 di NMAKE 
+# <a name="nmake-fatal-error-u1036"></a>Errore irreversibile U1036 di NMAKE
 
-Errore di sintassi: troppi nomi a sinistra del segno '='
+errore di sintassi: troppi nomi a sinistra di ' ='
 
-È consentita solo una stringa a sinistra di una definizione di macro.
+A sinistra della definizione di una macro è consentita una sola stringa.

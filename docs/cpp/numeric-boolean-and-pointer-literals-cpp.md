@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: 467300501ffbbf8063e203d4c7395af34a954ed0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 21685af5fc4f2dcf042698e054430e50531163b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301366"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177742"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>Valori letterali numerici, booleani e puntatore
 
@@ -109,7 +109,7 @@ e
 void func( long double );
 ```
 
-## <a name="boolean-literals"></a>Valori letterali booleani
+## <a name="boolean-literals"></a>valori letterali booleani
 
 I valori letterali booleani sono **true** e **false**.
 
