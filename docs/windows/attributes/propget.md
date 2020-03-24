@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-ms.openlocfilehash: 044562ba870d6e36ddfcec0c7e84253b111a9eea
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d2c0ebab1630634ddd4fc81e7c9c8364f7fad46f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514214"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166459"
 ---
 # <a name="propget"></a>propget
 
@@ -23,7 +23,7 @@ Specifica una funzione di accesso alla proprietà.
 [propget]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **propget** C++ ha la stessa funzionalità dell'attributo MIDL di [propget](/windows/win32/Midl/propget) .
 
@@ -39,7 +39,7 @@ Vedere l'esempio per [associabile](bindable.md) per un esempio di uso di **propg
 |-|-|
 |**Si applica a**|Metodo|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|`propput`, `propputref`|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

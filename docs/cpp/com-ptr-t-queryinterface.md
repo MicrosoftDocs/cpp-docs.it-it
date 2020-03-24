@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
-ms.openlocfilehash: 42953c92e4cf31b5ccd02dd51811fc1fdeedbcaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26dda2dff83ff0adbb7ef05c5e75f64b44138bd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399278"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170671"
 ---
-# <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
+# <a name="_com_ptr_tqueryinterface"></a>_com_ptr_t::QueryInterface
 
 **Sezione specifica Microsoft**
 
-Chiama il **QueryInterface** funzione di membro di `IUnknown` sul puntatore a interfaccia incapsulato.
+Chiama la funzione membro **QueryInterface** di `IUnknown` sul puntatore a interfaccia incapsulato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,15 +35,15 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 
 #### <a name="parameters"></a>Parametri
 
-*iid*<br/>
-`IID` un puntatore di interfaccia.
+*IID*<br/>
+`IID` di un puntatore a interfaccia.
 
 *p*<br/>
 Puntatore a interfaccia raw.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le chiamate `IUnknown::QueryInterface` sul puntatore a interfaccia incapsulato con la proprietà specificata `IID` e restituisce un puntatore a interfaccia raw risultante in *p*. Questa routine restituisce il valore HRESULT per indicare esito positivo o negativo.
+Chiama `IUnknown::QueryInterface` sul puntatore a interfaccia incapsulato con il `IID` specificato e restituisce il puntatore a interfaccia non elaborato risultante in *p*. Questa routine restituisce HRESULT per indicare l'esito positivo o negativo.
 
 **Fine sezione specifica Microsoft**
 

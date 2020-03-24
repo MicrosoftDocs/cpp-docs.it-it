@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: cf4cea35386d1f781d6d2946c1730ba2e18dacea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f455e855e782a939e79898ee46e445f65d25d37a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399226"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170592"
 ---
-# <a name="comptrtrelease"></a>_com_ptr_t::Release
+# <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
 **Sezione specifica Microsoft**
 
-Chiama il **Release** funzione di membro di `IUnknown` sul puntatore a interfaccia incapsulato.
+Chiama la funzione membro di **rilascio** di `IUnknown` sul puntatore a interfaccia incapsulato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,9 +26,9 @@ Chiama il **Release** funzione di membro di `IUnknown` sul puntatore a interfacc
 void Release( );
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le chiamate `IUnknown::Release` sul puntatore a interfaccia incapsulato, che genera un `E_POINTER` errore se il puntatore di interfaccia è NULL.
+Chiama `IUnknown::Release` sul puntatore a interfaccia incapsulato, generando un errore `E_POINTER` se il puntatore di interfaccia è NULL.
 
 **Fine sezione specifica Microsoft**
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866125"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169890"
 ---
 # <a name="create-a-c-makefile-project"></a>Creare un progetto makefile C++
 
@@ -19,9 +19,9 @@ Un *makefile* è un file di testo contenente istruzioni su come creare e collega
 
 Nel caso in cui sia già disponibile un progetto makefile, è possibile scegliere una delle opzioni seguenti se si vuole codificare il file o eseguirne il debug nell'IDE di Visual Studio:
 
-- Creare un progetto makefile in Visual Studio che usa il makefile esistente per configurare un file con estensione vcxproj che verrà usato da Visual Studio per IntelliSense. In questo caso, non si potrà usufruire di tutte le funzionalità dell'IDE che si hanno con un progetto MSBuild nativo. Vedere la sezione [Per creare un progetto makefile](#create_a_makefile_project) riportata di seguito.
+- Creare un progetto makefile in Visual Studio che usa il makefile esistente per configurare un file con estensione vcxproj che verrà usato da Visual Studio per IntelliSense. Non sono disponibili tutte le funzionalità dell'IDE che si ottengono con un progetto MSBuild nativo. Vedere [per creare un progetto makefile di](#create_a_makefile_project) seguito.
 - Usare la **Creazione guidata nuovo progetto da file di codice esistenti** per creare un progetto MSBuild nativo dal codice sorgente. Il makefile originale non verrà usato in seguito. Per altre informazioni, vedere [Procedura: Creare un progetto C++ da codice esistente](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 e versioni successive**: usare la funzionalità **Apri cartella** per modificare e creare un progetto makefile così com'è, senza coinvolgere il sistema MSBuild. Per altre informazioni, vedere [Progetti Apri cartella per C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2017 e versioni successive**: usare la funzionalità **Apri cartella** per modificare e compilare un progetto makefile così com'è, senza coinvolgere il sistema MSBuild. Per altre informazioni, vedere [Progetti Apri cartella per C++](../open-folder-projects-cpp.md).
 - **Visual Studio 2019 e versioni successive**: creare un progetto makefile UNIX per Linux.
 
 ## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Per creare un progetto makefile con il modello di progetto makefile
@@ -40,7 +40,7 @@ Il file di output specificato nel progetto non influisce sul nome creato dallo s
 
 1. Scegliere **File** > **Nuovo** > **Progetto** dal menu principale di Visual Studio, quindi digitare "makefile" nella casella di ricerca. In alternativa, nella finestra di dialogo **Nuovo progetto** espandere **Visual C++**  > **Generale** (Visual Studio 2015) o **Altro** (Visual Studio 2017) e quindi selezionare una delle due opzioni a seconda che la destinazione sia Windows o Linux.
 
-1. **Solo Windows**: nella pagina **Impostazioni di configurazione per il debug** specificare le informazioni relative a comando, output, pulizia e ricompilazione per le build di debug e della versione finale. Fare clic su **Avanti** se si vogliono specificare impostazioni diverse per la configurazione di una versione.
+1. **Solo Windows**: nella pagina **impostazioni di configurazione debug** specificare le informazioni relative a comando, output, Pulisci e ricompila per le compilazioni di debug e di vendita al dettaglio. Fare clic su **Avanti** se si vogliono specificare impostazioni diverse per la configurazione di una versione.
 
 1. Fare clic su **Fine** per chiudere la finestra di dialogo e aprire il progetto appena creato in **Esplora soluzioni**.
 
@@ -64,15 +64,15 @@ Il file di output specificato nel progetto non influisce sul nome creato dallo s
 
 Dopo aver creato il progetto makefile, è possibile visualizzare e modificare ognuna delle opzioni seguenti nella pagina **Nmake** della pagina delle proprietà del progetto.
 
-- **Riga di comando per Compila**: specifica la riga di comando da eseguire quando l'utente sceglie Compila dal menu Compila. Viene visualizzata nel campo Riga di comando di compilazione nella pagina Nmake della pagina delle proprietà del progetto.
+- **Riga di comando di compilazione:** Consente di specificare la riga di comando da eseguire quando l'utente seleziona Compila dal menu Compila. Viene visualizzata nel campo Riga di comando di compilazione nella pagina Nmake della pagina delle proprietà del progetto.
 
-- **Output:** Specifica il nome del file che conterrà l'output della riga di comando. Per impostazione predefinita, questa opzione è basata sul nome del progetto. Viene visualizzata nel campo Output nella pagina Nmake della pagina delle proprietà del progetto.
+- **Output:** Specifica il nome del file che conterrà l'output per la riga di comando. Per impostazione predefinita, questa opzione è basata sul nome del progetto. Viene visualizzata nel campo Output nella pagina Nmake della pagina delle proprietà del progetto.
 
-- **Comandi per Pulisci:** specifica la riga di comando da eseguire quando l'utente sceglie Pulisci dal menu Compila. Vengono visualizzati nel campo Riga di comando per Pulisci nella pagina Nmake della pagina delle proprietà del progetto.
+- **Comandi puliti:** Consente di specificare la riga di comando da eseguire quando l'utente seleziona Pulisci dal menu Compila. Vengono visualizzati nel campo Riga di comando per Pulisci nella pagina Nmake della pagina delle proprietà del progetto.
 
-- **Riga di comando per Ricompila:** specifica la riga di comando da eseguire quando l'utente sceglie Ricompila dal menu Compila. Viene visualizzata nel campo Riga di comando per Ricompila tutto nella pagina Nmake della pagina delle proprietà del progetto.
+- **Riga di comando di ricompilazione:** Consente di specificare la riga di comando da eseguire quando l'utente seleziona Ricompila dal menu Compila. Viene visualizzata nel campo Riga di comando per Ricompila tutto nella pagina Nmake della pagina delle proprietà del progetto.
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procedura: Abilitare IntelliSense per i progetti makefile
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procedura: abilitare IntelliSense per progetti makefile
 
 IntelliSense non funziona nei progetti makefile quando determinate impostazioni di progetto o opzioni del compilatore sono configurate in modo non corretto. Per configurare i progetti makefile in modo che IntelliSense funzioni come previsto, seguire questa procedura:
 
@@ -86,7 +86,7 @@ IntelliSense non funziona nei progetti makefile quando determinate impostazioni 
 
    - Impostare la proprietà **Percorso di ricerca di inclusione** per specificare l'elenco delle directory in cui il compilatore esegue la ricerca per risolvere i riferimenti di file che vengono passati alle direttive del preprocessore nel progetto makefile. Per altre informazioni, vedere [/I (Directory di inclusione aggiuntive)](i-additional-include-directories.md).
 
-    - Per i progetti che vengono compilati con CL.EXE da una finestra di comando, impostare la variabile di ambiente **INCLUDE** per specificare le directory in cui il compilatore esegue la ricerca per risolvere i riferimenti di file che vengono passati alle direttive del preprocessore nel progetto makefile.
+   - Per i progetti che vengono compilati con CL.EXE da una finestra di comando, impostare la variabile di ambiente **INCLUDE** per specificare le directory in cui il compilatore esegue la ricerca per risolvere i riferimenti di file che vengono passati alle direttive del preprocessore nel progetto makefile.
 
    - Impostare la proprietà **Inclusioni imposte** per specificare quali file di intestazione elaborare durante la compilazione del progetto makefile. Per altre informazioni, vedere [/FI (Specifica il file di inclusione da usare)](fi-name-forced-include-file.md).
 
@@ -106,6 +106,6 @@ Alla successiva apertura del progetto makefile nell'ambiente di sviluppo di Visu
 
 [Utilizzo di IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [Riferimenti a NMAKE](nmake-reference.md)<br>
-[Procedura: Creare un progetto C++ da codice esistente](../how-to-create-a-cpp-project-from-existing-code.md)
-[Caratteri speciali in un makefile](special-characters-in-a-makefile.md)<br/>
+[Procedura: creare C++ un progetto da codice esistente](../how-to-create-a-cpp-project-from-existing-code.md)
+[caratteri speciali in un makefile](special-characters-in-a-makefile.md)<br/>
 [Contenuto di un makefile](contents-of-a-makefile.md)<br/>

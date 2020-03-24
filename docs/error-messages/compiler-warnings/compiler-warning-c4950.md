@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4950
 ms.assetid: 50226a5c-c664-4d09-ac59-e9e874ca244f
-ms.openlocfilehash: 784179af68ff55ba70c61255c88688105ecb1738
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4de94dfe087b4dcf407295e556c9350b2cb8b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208096"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164989"
 ---
 # <a name="compiler-warning-c4950"></a>Avviso del compilatore C4950
 
 'type_or_member': contrassegnato come obsoleto
 
-Un tipo o membro è stato contrassegnato come obsoleto con la <xref:System.ObsoleteAttribute> attributo.
+Un membro o un tipo è stato contrassegnato come obsoleto con l'attributo <xref:System.ObsoleteAttribute>.
 
-C4950 viene sempre generato come errore. È possibile disattivare questo avviso utilizzando il [avviso](../../preprocessor/warning.md) direttiva pragma o il [/wd](../../build/reference/compiler-option-warning-level.md) opzione del compilatore.
+C4950 viene sempre generato come errore. È possibile disattivare questo avviso utilizzando la direttiva pragma [warning](../../preprocessor/warning.md) o l'opzione del compilatore [/WD.](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Esempio
 

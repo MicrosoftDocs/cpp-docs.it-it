@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4410
 ms.assetid: 7dcdb720-118a-4823-ba73-575f6ad79a71
-ms.openlocfilehash: dfe15dc125a1ca9ca3faec74a5cdb40e27d80c0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe813bfd19f6f7fa3020910d8f2913afd032aaa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408303"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162439"
 ---
 # <a name="compiler-warning-level-1-c4410"></a>Avviso del compilatore (livello 1) C4410
 
-dimensione operando non valida
+dimensioni non valide per l'operando
 
-Uno degli operandi sull'istruzione ha una dimensione non corretta. La dimensione più piccola legale per l'operando è stata usata.
+Una delle dimensioni di uno degli operandi nell'istruzione non è corretta. È stata usata la dimensione legale più piccola per l'operando.

@@ -5,76 +5,76 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-ms.openlocfilehash: 303ad4166f0f1126182956fae9c19f513be7cfb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 192195d02b034546e50b1cb860b1f11c47dc2b65
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283839"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210119"
 ---
 # <a name="ole-db-object-model"></a>Modello a oggetti OLE DB
 
-Il modello a oggetti OLE DB è costituito dalle seguenti oggetti o componenti. I primi quattro oggetti o i componenti elencati (origini dati, le sessioni, i comandi e i set di righe) consentono di connettersi a un'origine dati e visualizzare i dati. Il resto, a partire da funzioni di accesso, riguardano l'utilizzo con i dati quando viene visualizzato.
+Il modello a oggetti di OLE DB è costituito dagli oggetti o dai componenti seguenti. I primi quattro oggetti o componenti elencati (origini dati, sessioni, comandi e set di righe) consentono di connettersi a un'origine dati e visualizzarla. Il resto, a partire dalle funzioni di accesso, è correlato all'utilizzo dei dati quando viene visualizzato.
 
-## <a name="data-sources"></a>Data Sources
+## <a name="data-sources"></a>Origini dati
 
-Oggetti origine dei dati consentono di connettersi a un'origine dati, ad esempio un file o un sistema DBMS. Un oggetto origine dati crea e gestisce la connessione e contiene le informazioni di autenticazioni e autorizzazioni (ad esempio il nome di accesso e password). Un oggetto origine dati è possibile creare una o più sessioni.
+Gli oggetti origine dati consentono di connettersi a un'origine dati, ad esempio un file o un sistema DBMS. Un oggetto origine dati crea e gestisce la connessione e contiene le informazioni sulle autorizzazioni e le autenticazioni, ad esempio nome account di accesso e password. Un oggetto origine dati può creare una o più sessioni.
 
-## <a name="sessions"></a>Sessions
+## <a name="sessions"></a>Sessioni
 
-Una sessione di gestisce una particolare interazione con l'origine dati per eseguire query e recuperare i dati. Ogni sessione è una singola transazione. Una transazione è un'unità di lavoro indivisibile definita dalla proprietà ACID. Per una definizione di proprietà ACID, vedere [transazioni](#vcconoledbcomponents_transactions).
+Una sessione gestisce una particolare interazione con l'origine dati per eseguire una query e recuperare i dati. Ogni sessione è un'unica transazione. Una transazione è un'unità di lavoro indivisibile definita dal test ACID. Per una definizione di ACID, vedere [Transactions](#vcconoledbcomponents_transactions).
 
-Le sessioni eseguire importanti attività, ad esempio aprendo i set di righe e restituire l'oggetto origine dati che l'ha creata. Le sessioni possono anche restituire metadati o informazioni relative all'origine dati (ad esempio, le informazioni della tabella).
+Le sessioni eseguono attività importanti, ad esempio l'apertura di set di righe e la restituzione dell'oggetto origine dati che l'ha creata. Le sessioni possono inoltre restituire i metadati o le informazioni sull'origine dati stessa, ad esempio le informazioni sulla tabella.
 
-Una sessione è possibile creare uno o più comandi.
+Una sessione può creare uno o più comandi.
 
 ## <a name="commands"></a>Comandi:
 
-Comandi di eseguono un comando di testo, ad esempio un'istruzione SQL. Se il comando di testo specifica un set di righe, ad esempio un database SQL **seleziona** istruzione, il comando crea il set di righe.
+I comandi eseguono un comando di testo, ad esempio un'istruzione SQL. Se il comando di testo specifica un set di righe, ad esempio un'istruzione SQL **Select** , il comando crea il set di righe.
 
-Un comando è semplicemente un contenitore per un comando di testo, che è una stringa (ad esempio, un'istruzione SQL) passata da un consumer a un oggetto origine dati per l'esecuzione dall'archivio dati sottostante del provider. In genere, il comando di testo è un database SQL **selezionate** istruzione (nel qual caso, perché SQL **selezionare** specifica un set di righe, il comando crea automaticamente un set di righe).
+Un comando è semplicemente un contenitore per un comando di testo, ovvero una stringa, ad esempio un'istruzione SQL, passata da un consumer a un oggetto origine dati per l'esecuzione da parte dell'archivio dati sottostante del provider. In genere, il comando testo è un'istruzione SQL **Select** (in questo caso, poiché SQL **SELECT** specifica un set di righe, il comando crea automaticamente un set di righe).
 
 ## <a name="rowsets"></a>Set di righe
 
-I set di righe Mostra i dati in formato tabulare. Un indice è un caso speciale di un set di righe. È possibile creare set di righe dalla sessione o il comando.
+I set di righe mostrano i dati in formato tabulare. Un indice è un caso speciale di un set di righe. È possibile creare set di righe dalla sessione o dal comando.
 
-### <a name="schema-rowsets"></a>Rowset dello schema
+### <a name="schema-rowsets"></a>Set di righe dello schema
 
-Gli schemi dispongono di metadati (informazioni strutturali) su un database. Set di righe dello schema sono i set di righe contenenti le informazioni sullo schema. Alcuni provider OLE DB per DBMS supportano gli oggetti set di righe dello schema. Per altre informazioni sui set di righe dello schema, vedere [recupero di metadati with Schema Rowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) e [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
+Gli schemi contengono metadati (informazioni strutturali) su un database. I set di righe dello schema sono set di righe con informazioni sullo schema. Alcuni provider di OLE DB per DBMS supportano gli oggetti set di righe dello schema. Per ulteriori informazioni sui set di righe dello schema, vedere [recupero di metadati con set](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) di righe dello schema e [classi di set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
 
-### <a name="view-objects"></a>Visualizzazione di oggetti
+### <a name="view-objects"></a>Visualizza oggetti
 
-Un oggetto visualizzazione definisce un subset di righe e colonne da un set di righe. Non contiene alcun dato proprio. Visualizzazione di oggetti non può combinare dati da più set di righe.
+Un oggetto visualizzazione definisce un subset delle righe e delle colonne di un set di righe. Non dispone di dati propri. Gli oggetti visualizzazione non possono combinare i dati di più set di righe.
 
-## <a name="accessors"></a>Funzioni di accesso
+## <a name="accessors"></a>Funzioni
 
-Solo OLE DB Usa il concetto di funzioni di accesso. Una funzione di accesso viene descritto come i dati vengono archiviati in un consumer. Contiene un set di associazioni (denominato una mappa delle colonne) tra i campi di set di righe (colonne) e i membri di dati che si dichiara nel consumer.
+Solo OLE DB usa il concetto di funzioni di accesso. Una funzione di accesso descrive il modo in cui i dati vengono archiviati in un consumer. Dispone di un set di associazioni (denominato mappa colonna) tra i campi del set di righe (colonne) e i membri dati dichiarati nel consumer.
 
-##  <a name="vcconoledbcomponents_transactions"></a> Transazioni
+##  <a name="transactions"></a><a name="vcconoledbcomponents_transactions"></a> Transazioni
 
-Oggetti transazione vengono utilizzati durante il commit o annullare transazioni annidate in diverso da quello più basso. Una transazione è un'unità di lavoro indivisibile definita dalla proprietà ACID. ACID è l'acronimo di:
+Gli oggetti transazione vengono utilizzati per il commit o l'interruzione di transazioni nidificate a un livello più basso. Una transazione è un'unità di lavoro indivisibile definita dal test ACID. ACID sta per:
 
-- Atomicità, non può essere suddiviso in unità di lavoro più piccole
+- Atomicità, non può essere divisa in unità di lavoro più piccole
 
-- La concorrenza, più di una transazione può verificarsi in un momento
+- Concorrenza, può verificarsi più di una transazione alla volta
 
 - Isolamento, una transazione ha una conoscenza limitata delle modifiche apportate da un altro
 
-- La transazione di durabilità, apporta modifiche persistenti
+- Durabilità, la transazione apporta modifiche permanenti
 
-## <a name="enumerators"></a>Enumeratori
+## <a name="enumerators"></a>Enumerators
 
-Gli enumeratori cercare origini dati disponibili e altri enumeratori. I consumer che non sono personalizzati per una determinata origine dati vengono utilizzati enumeratori per cercare un'origine dati da utilizzare.
+Gli enumeratori cercano le origini dati disponibili e altri enumeratori. I consumer che non sono personalizzati per una determinata origine dati utilizzano gli enumeratori per cercare un'origine dati da utilizzare.
 
-Un enumeratore radice, distribuito in Microsoft Data Access SDK, analizza il Registro di sistema alla ricerca di origini dati e altri enumeratori. Altri enumeratori attraversano il Registro di sistema o di una ricerca in modo specifico del provider.
+Un enumeratore radice, fornito in Microsoft Data Access SDK, attraversa il registro di sistema per cercare le origini dati e altri enumeratori. Altri enumeratori attraversano il registro di sistema o la ricerca in modo specifico del provider.
 
-## <a name="errors"></a>Errori
+## <a name="errors"></a>Errors
 
-Qualsiasi interfaccia a tutti gli oggetti OLE DB può generare errori. Gli errori sono disponibili ulteriori informazioni sull'errore, tra cui un oggetto error personalizzato facoltativo. Queste informazioni vengono archiviate in un valore HRESULT.
+Qualsiasi interfaccia in qualsiasi OLE DB oggetto può generare errori. Gli errori presentano informazioni aggiuntive su un errore, incluso un oggetto errore personalizzato facoltativo. Queste informazioni vengono archiviate in un HRESULT.
 
 ## <a name="notifications"></a>Notifiche
 
-Le notifiche vengono usate dai gruppi loro condividendo un set di righe (in cui la condivisione significa che i consumer si presuppone che a lavorare nella stessa transazione). Le notifiche permettono loro condividendo un set di righe essere informati sulle azioni sul set di righe eseguite da altri utenti.
+Le notifiche vengono utilizzate da gruppi di consumer cooperating che condividono un set di righe, in cui la condivisione indica che i consumer si presumeranno di lavorare all'interno della stessa transazione. Le notifiche consentono ai consumer cooperativi di condividere un set di righe per essere informati sulle azioni sul set di righe eseguito dai relativi peer.
 
 ## <a name="see-also"></a>Vedere anche
 

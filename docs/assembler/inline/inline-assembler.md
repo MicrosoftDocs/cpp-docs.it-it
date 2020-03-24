@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: f2be42cd5ab4d335d076a1eb4627c41f5b340350
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166945"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169371"
 ---
 # <a name="inline-assembler"></a>Assembler inline
 
@@ -24,7 +24,7 @@ Il linguaggio assembly può essere utilizzato per diverse finalità, ad esempio 
 > [!NOTE]
 >  I programmi con il codice assembler inline non sono completamente portabili in altre piattaforme hardware. Se si sta progetta ai fini della portabilità, evitare di utilizzare l'assembler inline.
 
-Assembly inline non è supportato di ARM e x64 processori.  Negli argomenti riportati di seguito viene illustrato come utilizzare l'assembler inline di Visual C/C++ con i processori x86:
+L'assembly inline non è supportato nei processori ARM e x64.  Negli argomenti riportati di seguito viene illustrato come utilizzare l'assembler inline di Visual C/C++ con i processori x86:
 
 - [Panoramica di assembler inline](../../assembler/inline/inline-assembler-overview.md)
 

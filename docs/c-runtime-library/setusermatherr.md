@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __setusermatherr
 ms.assetid: f306818d-381a-4d68-8739-71b92bacb5ea
-ms.openlocfilehash: 1dc20be40614aaeda72040496a61a6ea9df99383
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 842a6899f37db7a479bf5f1212f0ef6bd6c4edf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170852"
 ---
 # <a name="__setusermatherr"></a>__setusermatherr
 
@@ -47,7 +47,7 @@ Puntatore a un'implementazione di `_matherr` fornita dall'utente.
 
 Il tipo del parametro *pf* è dichiarato come `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 ## <a name="requirements"></a>Requisiti
 

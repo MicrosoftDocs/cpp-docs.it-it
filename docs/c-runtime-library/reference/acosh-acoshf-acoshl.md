@@ -33,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170358"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,22 +66,22 @@ Valore a virgola mobile.
 
 Le funzioni **acosh** restituiscono il coseno iperbolico inverso (coseno iperbolico d'arco) di *x*. Queste funzioni sono valide nel dominio *x* ≥ 1. Se *x* è minore di 1, `errno` viene impostato su `EDOM` e il risultato è una NaN non interattiva. Se *x* è un valore NaN non interattiva, indefinito o infinito, viene restituito lo stesso valore.
 
-|Input|Eccezione SEH|Eccezione`_matherr`|
+|Input|Eccezione SEH|Eccezione `_matherr`|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|none|none|
 |*x* < 1|none|none|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Quando si usa C++, è possibile chiamare gli overload di **acosh** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C **acosh** accetta e restituisce sempre **Double**.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Header C++|
 |--------------|--------------|------------------|
 |**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

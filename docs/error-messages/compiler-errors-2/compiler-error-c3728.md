@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3728
 ms.assetid: 6b510cb1-887f-4fcd-9a1f-3bb720417ed1
-ms.openlocfilehash: 68aa23843b0470f15f409b6f3b58624f979ccfae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aec3ae1ff629ef7fa000182cde29e306a471315
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328107"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165874"
 ---
 # <a name="compiler-error-c3728"></a>Errore del compilatore C3728
 
-'event': evento non ha un metodo di generazione
+' Event ': l'evento non ha un metodo Raise
 
-Metadati creati con un linguaggio, ad esempio c#, che non supporta un evento da generare dall'esterno della classe in cui è stato definito, è stato incluso il [#using](../../preprocessor/hash-using-directive-cpp.md) direttiva e un programma Visual C++ tramite la programmazione CLR ha tentata di generare l'evento.
+I metadati creati con un linguaggio, ad C#esempio, che non consente la generazione di un evento dall'esterno della classe in cui è stata definita, è stato incluso con la direttiva [#using](../../preprocessor/hash-using-directive-cpp.md) e un programma C++ visivo che utilizza la programmazione CLR ha tentato di generare l'evento.
 
-Per generare un evento in un'applicazione sviluppata in un linguaggio come c#, la classe che contiene l'evento deve anche definire un metodo pubblico che genera l'evento.
+Per generare un evento in un programma sviluppato in un linguaggio C#, ad esempio, la classe che contiene l'evento deve definire anche un metodo pubblico che genera l'evento.

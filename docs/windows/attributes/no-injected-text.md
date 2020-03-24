@@ -1,21 +1,21 @@
 ---
-title: no_injected_text (C++ attributo COM)
+title: no_injected_text (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.no_injected_text
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f98be3478b2e1eeb4b464f1784f3f4ece22d8a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409291"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166614"
 ---
-# <a name="noinjectedtext"></a>no_injected_text
+# <a name="no_injected_text"></a>no_injected_text
 
-Impedisce al compilatore di inserire codice in seguito a uso dell'attributo.
+Impedisce al compilatore di inserire codice come risultato dell'utilizzo dell'attributo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,11 +26,11 @@ Impedisce al compilatore di inserire codice in seguito a uso dell'attributo.
 ### <a name="parameters"></a>Parametri
 
 *boolean*<br/>
-(Facoltativo) **true** se si desidera che nessun codice inserito, **false** per consentire al codice da inserire. **true** è il valore predefinito.
+Opzionale **true** se non si desidera inserire codice, **false** per consentire l'inserimento del codice. il valore predefinito è **true** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'uso più comune del **no_injected_text** C++ attributo è per il [/Fx](../../build/reference/fx-merge-injected-code.md) opzione del compilatore, che inserisce il **no_injected_text** attributo nel file mrg.
+L'uso più comune dell'attributo **no_injected_text** C++ è l'opzione del compilatore [/FX](../../build/reference/fx-merge-injected-code.md) , che inserisce l'attributo **no_injected_text** nel file. mrg.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -40,7 +40,7 @@ L'uso più comune del **no_injected_text** C++ attributo è per il [/Fx](../../b
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

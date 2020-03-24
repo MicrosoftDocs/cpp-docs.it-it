@@ -8,22 +8,22 @@ helpviewer_keywords:
 - OLE DB consumers
 - OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
-ms.openlocfilehash: f5940ca65e42787c3156a9537cb3f3f6694339c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d57ded9d084971c3562fc7f22e6a1a12a4e3368d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284020"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210078"
 ---
 # <a name="ole-db-consumers-and-providers"></a>Consumer e provider OLE DB
 
-L'architettura OLE DB Usa il modello di consumer e provider. Un consumer effettua le richieste di dati. Un provider di risponde alle richieste seguenti inserendo i dati in un formato tabulare e restituirlo al consumer. Qualsiasi chiamata che può rendere il consumer deve essere implementata nel provider.
+L'architettura OLE DB utilizza il modello di consumer e provider. Un consumer effettua richieste di dati. Un provider risponde a queste richieste inserendo i dati in formato tabulare e restituendo il valore al consumer. Qualsiasi chiamata che il consumer può effettuare deve essere implementata nel provider.
 
-In termini tecnici, un consumer è un sistema o applicazione codice (non necessariamente un componente di OLE DB) che accede ai dati tramite le interfacce OLE DB. Le interfacce vengono implementate in un provider. Pertanto, un provider è qualsiasi componente software che implementa le interfacce OLE DB per incapsulare l'accesso ai dati e come esporlo ad altri oggetti (ovvero, i consumer).
+Tecnicamente definito, un consumatore è un codice di sistema o di applicazione (non necessariamente un componente OLE DB) che accede ai dati tramite OLE DB interfacce. Le interfacce sono implementate in un provider. Un provider è quindi un componente software che implementa interfacce di OLE DB per incapsulare l'accesso ai dati ed esporlo ad altri oggetti, ovvero ai consumer.
 
-Per i ruoli, un consumer chiama metodi su interfacce OLE DB. un provider OLE DB implementa le interfacce OLE DB necessarie.
+Per i ruoli, un consumer chiama i metodi sulle interfacce OLE DB; un provider OLE DB implementa le interfacce OLE DB necessarie.
 
-OLE DB consente di evitare condizioni client e server poiché questi ruoli non sono sempre utili, soprattutto in una situazione a più livelli. Poiché un consumer può essere un componente in un livello che viene usato un altro componente, per la chiamata di un client componente potrebbe creare confusione. Inoltre, un provider talvolta funge più da un driver di database rispetto a un server.
+OLE DB evita i termini client e server perché questi ruoli non hanno sempre senso, soprattutto in una situazione a più livelli. Poiché un consumer può essere un componente di un livello che funge da altro componente, per chiamarlo un componente client potrebbe creare confusione. Inoltre, un provider a volte agisce in modo più simile a un driver di database rispetto a un server.
 
 ## <a name="see-also"></a>Vedere anche
 

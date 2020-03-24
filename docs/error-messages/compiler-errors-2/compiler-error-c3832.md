@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3832
 ms.assetid: 9a41df82-42e1-4908-958c-76cff9235de0
-ms.openlocfilehash: c21c495f70b9e6f5619b6b46fe1a6ce826de9d95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cee6993a108a5dc006476b31042e615b8d4aa81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390568"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165576"
 ---
 # <a name="compiler-error-c3832"></a>Errore del compilatore C3832
 
-'type library': libreria dei tipi sembra essere stata compilata per puntatori a 32 bit. modificare il qualificatore 'ptrsize'
+' Type Library ': la libreria dei tipi appare come se fosse stata compilata per puntatori a 32 bit; modificare il qualificatore ' ptrsize '
 
-Informazioni esplicite forniti con il `ptrsize` attributo del [#import](../../preprocessor/hash-import-directive-cpp.md) direttiva non corrisponde con ciò che il compilatore ha trovato nella libreria dei tipi.
+Le informazioni esplicite fornite con l'attributo `ptrsize` della direttiva [#import](../../preprocessor/hash-import-directive-cpp.md) non concordano con il compilatore trovato nella libreria dei tipi.

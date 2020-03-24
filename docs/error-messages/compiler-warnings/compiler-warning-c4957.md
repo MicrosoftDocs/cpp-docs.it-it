@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 79a1b516db1508c755693b67ca2e4070095839da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 340c26c97d0b5b686eee487cd3fd8b6b05bdf373
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388665"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164906"
 ---
 # <a name="compiler-warning-c4957"></a>Avviso del compilatore C4957
 
-> «*cast*': cast esplicito da '*cast_from*'a'*cast_to*' non è verificabile
+> '*cast*': cast esplicito da'*cast_from*' a'*cast_to*' non verificabile
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un cast genererà un'immagine non verificabile.
 
 Alcuni cast sono sicuri, ad esempio un `static_cast` che attiva conversioni definite dall'utente e un `const_cast`. Un [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) genera sicuramente codice verificabile.
 
-Per altre informazioni, vedere [codice Pure e verificabile (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Per ulteriori informazioni, vedere [codice pure e verificabile (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-Il **/CLR: safe** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
+L'opzione del compilatore **/CLR: safe** è deprecata in visual studio 2015 e non è supportata in visual studio 2017.
 
 Questo avviso viene generato come errore e può essere disabilitato tramite il pragma [warning](../../preprocessor/warning.md) o l'opzione del compilatore [/wd](../../build/reference/compiler-option-warning-level.md) .
 

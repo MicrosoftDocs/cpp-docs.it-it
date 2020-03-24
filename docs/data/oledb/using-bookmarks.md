@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei bookmark
+title: Uso dei segnalibri
 ms.date: 10/24/2018
 helpviewer_keywords:
 - rowsets, bookmarks
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 579e67151858904e877a34bf30467e3cb97fe2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a4a2d65ba7367b5568603b5f08a07c6d85cc4a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388956"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209313"
 ---
-# <a name="using-bookmarks"></a>Utilizzo dei bookmark
+# <a name="using-bookmarks"></a>Uso dei segnalibri
 
-Prima di aprire il set di righe, è necessario indicare al provider che si desidera usare i segnalibri. A questo scopo, impostare il `DBPROP_BOOKMARKS` proprietà **true** nel set di proprietà. Il provider recupera segnalibri come colonna da zero, pertanto è necessario usare la macro speciale BOOKMARK_ENTRY e `CBookmark` classe se si usa una funzione di accesso statico. `CBookmark` è una classe di modello in cui l'argomento è la lunghezza in byte del buffer del segnalibro. La lunghezza del buffer necessaria per un segnalibro dipende dal provider. Se si usa il provider OLE DB ODBC, come illustrato nell'esempio seguente, il buffer deve essere 4 byte.
+Prima di aprire il set di righe, è necessario indicare al provider che si desidera utilizzare i segnalibri. A tale scopo, impostare la proprietà `DBPROP_BOOKMARKS` su **true** nel set di proprietà. Il provider recupera i segnalibri come colonna zero, quindi è necessario usare la macro speciale BOOKMARK_ENTRY e la classe `CBookmark` se si usa una funzione di accesso statica. `CBookmark` è una classe modello in cui l'argomento è la lunghezza in byte del buffer dei segnalibri. La lunghezza del buffer necessaria per un segnalibro dipende dal provider. Se si utilizza il provider ODBC OLE DB, come illustrato nell'esempio seguente, il buffer deve essere di 4 byte.
 
 ```cpp
 class CProducts
@@ -30,7 +30,7 @@ public:
 };
 ```
 
-Quindi, usato nel codice seguente:
+Quindi, usato dal codice seguente:
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -41,7 +41,7 @@ CSession session;
 product.Open(session, "Products", &propset);
 ```
 
-Se si usa `CDynamicAccessor`, il buffer viene impostato in modo dinamico in fase di esecuzione. In questo caso, è possibile usare una versione specializzata della `CBookmark` per cui non si specifica una lunghezza di buffer. Utilizzare la funzione `GetBookmark` per recuperare il segnalibro dal record corrente, come illustrato nell'esempio di codice:
+Se si utilizza `CDynamicAccessor`, il buffer viene impostato in modo dinamico in fase di esecuzione. In questo caso, è possibile usare una versione specializzata di `CBookmark` per cui non si specifica una lunghezza del buffer. Usare la funzione `GetBookmark` per recuperare il segnalibro dal record corrente, come illustrato nell'esempio di codice seguente:
 
 ```cpp
 CTable<CDynamicAccessor> product;
@@ -55,7 +55,7 @@ product.MoveNext();
 product.GetBookmark(&bookmark);
 ```
 
-Per informazioni sul supporto dei bookmark nel provider, vedere [supporto dei bookmark nel Provider](../../data/oledb/provider-support-for-bookmarks.md).
+Per informazioni sul supporto dei segnalibri nei provider, vedere [supporto del provider per i segnalibri](../../data/oledb/provider-support-for-bookmarks.md).
 
 ## <a name="see-also"></a>Vedere anche
 

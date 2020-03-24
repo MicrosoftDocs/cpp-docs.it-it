@@ -1,17 +1,17 @@
 ---
-title: Tag consigliati per i commenti della documentazione (commenti relativi alla documentazione di C++)
+title: Tag consigliati per i commenti relativiC++ alla documentazione (commenti sulla documentazione)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e0937b79012f65ba136e18ac81f014be23688f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319148"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168863"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>Tag consigliati per i commenti relativi alla documentazione
 
-Il compilatore MSVC elaborerà i commenti della documentazione nel codice e crea un file con estensione xdc per ciascun modulo e xdcmake.exe elaborerà i file con estensione xdc in un file XML. L'elaborazione del file con estensione xml per creare la documentazione è un dettaglio che deve essere implementato nel sito.
+Il compilatore MSVC elabora i commenti relativi alla documentazione nel codice e crea un file con estensione xdc per ogni modulo e XDCMake. exe elaborerà i file con estensione xdc in un file con estensione XML. L'elaborazione del file con estensione xml per creare la documentazione è un dettaglio che deve essere implementato nel sito.
 
 I tag vengono elaborati in costrutti di codice come tipi e membri di tipo.
 
@@ -33,7 +33,7 @@ Il compilatore elabora tutti i tag validi per XML. I tag seguenti forniscono le 
 
 1. Il compilatore verifica la sintassi.
 
-Nella versione corrente, il compilatore MSVC non supporta `<paramref>`, un tag che è supportato da altri compilatori di Visual Studio. Visual C++ potrebbe supportare `<paramref>` in una versione futura.
+Nella versione corrente il compilatore MSVC non supporta `<paramref>`, un tag supportato da altri compilatori di Visual Studio. Visual C++ potrebbe supportare `<paramref>` in una versione futura.
 
 ## <a name="see-also"></a>Vedere anche
 

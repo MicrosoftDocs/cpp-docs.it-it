@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4103
 ms.assetid: 9021b514-375e-4d62-b261-ccb06f299e8e
-ms.openlocfilehash: 456e7d393eb751e99c1969619ccfdcc649193c75
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: dfc3a91b2dcb3ed1e8f4f4993edd67219a6bf1d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163845"
 ---
 # <a name="compiler-warning-level-1-c4103"></a>Avviso del compilatore (livello 1) C4103
 

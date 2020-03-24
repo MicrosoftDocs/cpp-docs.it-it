@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166536"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -28,13 +28,13 @@ Specifica l'attributo del puntatore predefinito per tutti i puntatori, ad eccezi
 *value*<br/>
 Valore che descrive il tipo di puntatore: **ptr**, **ref**o **Unique**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **pointer_default** C++ ha la stessa funzionalità dell'attributo MIDL di [pointer_default](/windows/win32/Midl/pointer-default) .
+L'attributo **pointer_default** C++ ha la stessa funzionalità dell'attributo [pointer_default](/windows/win32/Midl/pointer-default) MIDL.
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di uso di **pointer_default**.
+Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di utilizzo di **pointer_default**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -44,8 +44,8 @@ Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di uso di **
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

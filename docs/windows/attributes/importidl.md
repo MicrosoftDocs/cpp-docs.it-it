@@ -1,21 +1,21 @@
 ---
-title: importidl (attributo COM C++)
+title: importidl (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409434"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166822"
 ---
 # <a name="importidl"></a>importidl
 
-Inserisce il file con estensione idl specificato nel file con estensione IDL generato.
+Inserisce il file idl specificato nel file IDL generato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,13 +26,13 @@ Inserisce il file con estensione idl specificato nel file con estensione IDL gen
 ### <a name="parameters"></a>Parametri
 
 *idl_file*<br/>
-Identifica il nome del file con estensione idl che si desidera eseguire il merge con il file con estensione idl che verrà generato per l'applicazione.
+Identifica il nome del file con estensione IDL da unire al file IDL che verrà generato per l'applicazione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **importidl** C++ attributo inserisce la sezione all'esterno del blocco di libreria (in *idl_file*) nel file IDL generato del programma e la sezione della libreria (in *idl_file*) Nella sezione della libreria di file IDL generato del programma.
+L'attributo **importidl** C++ posiziona la sezione all'esterno del blocco di libreria (in *idl_file*) al file IDL generato dal programma e alla sezione Library (in *idl_file*) nella sezione Library del file. IDL generato dal programma.
 
-È possibile usare **importidl**, ad esempio, se si desidera utilizzare un file con estensione idl codificato manualmente con il file con estensione IDL generato.
+Si consiglia di utilizzare **importidl**, ad esempio, se si desidera utilizzare un file con estensione IDL codificato manualmente con il file IDL generato.
 
 ## <a name="example"></a>Esempio
 
@@ -51,7 +51,7 @@ Il **importidl** C++ attributo inserisce la sezione all'esterno del blocco di li
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

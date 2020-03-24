@@ -9,24 +9,24 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 52c4313de5017b97a193be1afebc020c9896fe6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d29f84a0a5b33d55c0a04a4c758050cf9746f72a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379090"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209549"
 ---
 # <a name="supporting-notifications"></a>Supporto delle notifiche
 
-## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>Implementazione di interfacce di punto di connessione sul Provider e Consumer
+## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>Implementazione delle interfacce dei punti di connessione sul provider e sul consumer
 
-Per implementare le notifiche, è necessario ereditare una classe di provider [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) e [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
+Per implementare le notifiche, una classe provider deve ereditare da [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) e [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
 
-`IRowsetNotifyCP` implementa il sito del provider per l'interfaccia del punto di connessione [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` implementa funzioni per comunicare ai listener nel punto di connessione di broadcast `IID_IRowsetNotify` delle modifiche al contenuto del set di righe.
+`IRowsetNotifyCP` implementa il sito del provider per l'interfaccia del punto di connessione [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` implementa funzioni broadcast per consigliare i listener sul punto di connessione `IID_IRowsetNotify` delle modifiche apportate al contenuto del set di righe.
 
-È inoltre necessario implementare e registrare `IRowsetNotify` sul consumer (noto anche come sink) usando [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) in modo che il consumer può gestire le notifiche. Per informazioni sull'implementazione dell'interfaccia del punto di connessione sul consumer, vedere [ricezione di notifiche](../../data/oledb/receiving-notifications.md).
+È inoltre necessario implementare e registrare `IRowsetNotify` sul consumer (noto anche come sink) utilizzando [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) , in modo che il consumer possa gestire le notifiche. Per informazioni sull'implementazione dell'interfaccia del punto di connessione sul consumer, vedere [ricezione di notifiche](../../data/oledb/receiving-notifications.md).
 
-Inoltre, la classe deve avere una mappa che definisce la voce di punto di connessione, simile al seguente:
+Inoltre, la classe deve disporre di una mappa che definisce la voce del punto di connessione, come indicato di seguito:
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP
@@ -38,10 +38,10 @@ END_CONNECTION_POINT_MAP
 
 Per aggiungere `IRowsetNotify`, è necessario aggiungere `IConnectionPointContainerImpl<rowset-name>` e `IRowsetNotifyCP<rowset-name>` alla catena di ereditarietà.
 
-Ad esempio, ecco la catena di ereditarietà per `RUpdateRowset` nelle [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):
+Ecco ad esempio la catena di ereditarietà per `RUpdateRowset` in [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):
 
 > [!NOTE]
-> Il codice di esempio potrebbe essere diverso da quello riportato di seguito; è consigliabile considerare il codice di esempio come la versione più aggiornata.
+> Il codice di esempio può essere diverso da quello riportato di seguito. Considerare il codice di esempio come la versione più aggiornata.
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////
@@ -56,20 +56,20 @@ public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,
       public IRowsetNotifyCP<RUpdateRowset>
 ```
 
-### <a name="setting-com-map-entries"></a>Impostazione delle voci di mappa COM
+### <a name="setting-com-map-entries"></a>Impostazione delle voci della mappa COM
 
-È anche necessario aggiungere il codice seguente alla mappa COM il set di righe:
+È anche necessario aggiungere quanto segue alla mappa COM nel set di righe:
 
 ```cpp
 COM_INTERFACE_ENTRY(IConnectionPointContainer)
 COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)
 ```
 
-Queste macro consentono a chiunque chiami `QueryInterface` per il contenitore del punto di connessione (la base di `IRowsetNotify`) per trovare l'interfaccia richiesta per il provider. Per un esempio di come usare i punti di connessione, vedere l'esempio di POLIGONO di ATL e l'esercitazione.
+Queste macro consentono a chiunque chiami `QueryInterface` per il contenitore del punto di connessione (la base di `IRowsetNotify`) di trovare l'interfaccia richiesta nel provider. Per un esempio di come usare i punti di connessione, vedere l'esempio di POLYGON e l'esercitazione di ATL.
 
-### <a name="setting-connection-point-map-entries"></a>Impostazione delle voci di mappa dei punti di connessione
+### <a name="setting-connection-point-map-entries"></a>Impostazione delle voci della mappa del punto di connessione
 
-È anche necessario aggiungere una mappa dei punti di connessione. È simile, ad esempio:
+È anche necessario aggiungere una mappa di punti di connessione. Dovrebbe avere un aspetto simile al seguente:
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP(rowset-name)
@@ -77,29 +77,29 @@ BEGIN_CONNECTION_POINT_MAP(rowset-name)
 END_CONNECTION_POINT_MAP()
 ```
 
-Questa mappa dei punti di connessione consente a un componente cercando il `IRowsetNotify` interfaccia si trovano nel provider.
+Questa mappa dei punti di connessione consente a un componente che cerca l'interfaccia `IRowsetNotify` di trovarlo nel provider.
 
 ### <a name="setting-properties"></a>Impostazione delle proprietà
 
-È anche necessario aggiungere le seguenti proprietà per il provider. È sufficiente aggiungere le proprietà in base alle interfacce supportate.
+È anche necessario aggiungere le proprietà seguenti al provider. È sufficiente aggiungere proprietà basate sulle interfacce supportate.
 
-|Proprietà|Aggiungere se è supportare|
+|Proprietà|Aggiungere se si supporta|
 |--------------|------------------------|
-|DBPROP_IConnectionPointContainer|Always|
-|DBPROP_NOTIFICATIONGRANULARITY|Always|
-|DBPROP_NOTIFICATIONPHASES|Always|
+|DBPROP_IConnectionPointContainer|Sempre|
+|DBPROP_NOTIFICATIONGRANULARITY|Sempre|
+|DBPROP_NOTIFICATIONPHASES|Sempre|
 |DBPROP_NOTIFYCOLUMNSET|`IRowsetChange`|
 |DBPROP_NOTIFYROWDELETE|`IRowsetChange`|
 |DBPROP_NOTIFYROWINSERT|`IRowsetChange`|
-|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Always|
+|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Sempre|
 |DBPROP_NOTIFYROWFIRSTCHANGE|`IRowsetUpdate`|
-|DBPROP_NOTIFYROWSETRELEASE|Always|
+|DBPROP_NOTIFYROWSETRELEASE|Sempre|
 |DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUNDODELETE|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUPDATE|`IRowsetUpdate`|
 
-La maggior parte dell'implementazione per le notifiche è già incorporato nei modelli di Provider OLE DB. Se non si aggiungono `IRowsetNotifyCP` alla catena di ereditarietà, il compilatore rimuove tutto il codice dal flusso di compilazione, riducendo le dimensioni del codice.
+La maggior parte dell'implementazione per le notifiche è già incorporata nei modelli di provider OLE DB. Se non si aggiungono `IRowsetNotifyCP` alla catena di ereditarietà, il compilatore rimuove tutto il codice dal flusso di compilazione, rendendo così le dimensioni del codice più ridotte.
 
 ## <a name="see-also"></a>Vedere anche
 

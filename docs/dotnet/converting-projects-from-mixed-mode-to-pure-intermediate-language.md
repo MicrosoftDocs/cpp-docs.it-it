@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 8b22f3aaf706fa096f6c25ab8e9fdab6dc512cd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311647"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208807"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Conversione di progetti da modalità mista a linguaggio intermedio puro
 
@@ -27,7 +27,7 @@ Se si usa una versione precedente del set di strumenti C++ del compilatore Micro
 
 1. Rimuovere i collegamenti alle [librerie di runtime C](../c-runtime-library/crt-library-features.md) (CRT):
 
-   1. Nel file con estensione cpp che definisce il punto di ingresso dell'applicazione, modificare il punto di `Main()`ingresso in. L' `Main()` utilizzo di indica che il progetto non è collegato a CRT.
+   1. Nel file con estensione cpp che definisce il punto di ingresso dell'applicazione, modificare il punto di ingresso in `Main()`. L'uso di `Main()` indica che il progetto non è collegato a CRT.
 
    2. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà** dal menu di scelta rapida per aprire le pagine delle proprietà dell'applicazione.
 
@@ -38,14 +38,14 @@ Se si usa una versione precedente del set di strumenti C++ del compilatore Micro
       > [!NOTE]
       > Non è necessario impostare questa proprietà per Windows Forms applicazioni perché il campo **sottosistema** è impostato su **Windows (/Subsystem: Windows)** per impostazione predefinita.
 
-   5. In *stdafx. h*, impostare come commento tutte `#include` le istruzioni. Ad esempio, nelle applicazioni console:
+   5. In *stdafx. h*, impostare come commento tutte le istruzioni `#include`. Ad esempio, nelle applicazioni console:
 
       ```cpp
       // #include <iostream>
       // #include <tchar.h>
       ```
 
-       oppure
+       -oppure-
 
        Ad esempio, nelle applicazioni Windows Forms:
 
@@ -56,7 +56,7 @@ Se si usa una versione precedente del set di strumenti C++ del compilatore Micro
       // #include <tchar.h>
       ```
 
-   6. Per Windows Forms applicazioni, in Form1. cpp, impostare come commento `#include` l'istruzione che fa riferimento a Windows. h. Ad esempio:
+   6. Per Windows Forms applicazioni, in Form1. cpp, impostare come commento l'istruzione `#include` che fa riferimento a Windows. h. Ad esempio:
 
       ```cpp
       // #include <windows.h>
@@ -89,10 +89,10 @@ Se si usa una versione precedente del set di strumenti C++ del compilatore Micro
    |[Int64](/dotnet/api/system.int64)|Rappresenta un intero con segno a 64 bit.|
    |[IntPtr](/dotnet/api/system.intptr)|Tipo specifico per la piattaforma usato per rappresentare un puntatore o un handle.|
    |[SByte](/dotnet/api/system.byte)|Rappresenta un intero con segno a 8 bit.|
-   |[Single](/dotnet/api/system.single)|Rappresenta un numero a virgola mobile a precisione singola.|
+   |[Singolo](/dotnet/api/system.single)|Rappresenta un numero a virgola mobile a precisione singola.|
    |[TimeSpan](/dotnet/api/system.timespan)|Rappresenta un intervallo di tempo.|
    |[UInt16](/dotnet/api/system.uint16)|Rappresenta un intero senza segno a 16 bit.|
    |[UInt32](/dotnet/api/system.uint32)|Rappresenta un intero senza segno a 32 bit.|
    |[UInt64](/dotnet/api/system.uint64)|Rappresenta un intero senza segno a 64 bit.|
    |[UIntPtr](/dotnet/api/system.uintptr)|Tipo specifico per la piattaforma usato per rappresentare un puntatore o un handle.|
-   |[Void](/dotnet/api/system.void)|Indica un metodo che non restituisce un valore. ovvero il tipo restituito del metodo è void.|
+   |[Vuoto](/dotnet/api/system.void)|Indica un metodo che non restituisce un valore. ovvero il tipo restituito del metodo è void.|

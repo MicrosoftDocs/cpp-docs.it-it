@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 66567b0a1b043136e0a754e3a52bbdd7c463e178
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501622"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168239"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -23,7 +23,7 @@ Inserisce un'interfaccia nel file con estensione idl come interfaccia di dispatc
 [dispinterface]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Quando l'attributo **dispinterface** di C++ precede un'interfaccia, quest'ultima viene inserita nel blocco della libreria nel file con estensione idl generato.
 
@@ -50,7 +50,7 @@ Per informazioni su come usare [dispinterface](bindable.md) , vedere l'esempio r
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
