@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2627be876f0c46bb7d72c2c6b825cf76e24b1eb1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514324"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214734"
 ---
 # <a name="odl"></a>odl
 
@@ -23,7 +23,7 @@ Identifica un'interfaccia come interfaccia Object Description Language (FAD). Il
 [odl]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **FAD** C++ ha la stessa funzionalità dell'attributo di MIDL di [FAD](/windows/win32/Midl/odl) .
 
@@ -57,8 +57,8 @@ public:
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

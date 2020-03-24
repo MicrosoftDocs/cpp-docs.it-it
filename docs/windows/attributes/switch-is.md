@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 05759250ac6c2f382e569feefda9575fddbecac2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513974"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214539"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -23,9 +23,9 @@ Specifica l'espressione o l'identificatore che funge da discriminante di Unione 
 [switch_is]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **switch_is** C++ ha la stessa funzionalità dell'attributo MIDL di [switch_is](/windows/win32/Midl/switch-is) .
+L'attributo **switch_is** C++ ha la stessa funzionalità dell'attributo [switch_is](/windows/win32/Midl/switch-is) MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -39,8 +39,8 @@ Vedere l'esempio di [caso](case-cpp.md) per un uso di esempio di **switch_is**.
 |-|-|
 |**Si applica a**|**typedef**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

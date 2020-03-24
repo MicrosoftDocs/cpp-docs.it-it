@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-ms.openlocfilehash: a1ac0576bdd374daa5cbd445af480e7652b61e45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1291084395b02602b7a3de9013df6720d2e237fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398706"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214097"
 ---
 # <a name="comparestringordinal-method"></a>Metodo CompareStringOrdinal
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,29 +26,29 @@ inline INT32 CompareStringOrdinal(
 
 ### <a name="parameters"></a>Parametri
 
-*lhs*<br/>
-Il primo HSTRING da confrontare.
+*LHS*<br/>
+Primo HSTRING da confrontare.
 
 *rhs*<br/>
-Il secondo HSTRING da confrontare.
+Secondo HSTRING da confrontare.
 
 ## <a name="return-value"></a>Valore restituito
 
-|Value|Condizione|
+|valore|Condizione|
 |-----------|---------------|
-|-1|*LHS* è minore di *rhs*.|
-|0|*LHS* è uguale a *rhs*.|
-|1|*LHS* è maggiore di quella *rhs*.|
+|-1|*LHS* è minore di *RHS*.|
+|0|*LHS* equivale a *RHS*.|
+|1|*LHS* è maggiore di *RHS*.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Confronta due oggetti HSTRING specificati e restituisce un intero che indica la posizione relativa di una sequenza di ordinamento.
+Confronta due oggetti HSTRING specificati e restituisce un intero che ne indica la posizione relativa in un ordinamento.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers::Details
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers::D etails
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514402"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214675"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Specifica che l' `IDispatch` implementazione include solo le proprietà e i metodi elencati nella descrizione dell'interfaccia e che non possono essere estesi con membri aggiuntivi in fase di esecuzione.
+Specifica che l'implementazione del `IDispatch` include solo le proprietà e i metodi elencati nella descrizione dell'interfaccia e che non possono essere estesi con membri aggiuntivi in fase di esecuzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,15 +23,15 @@ Specifica che l' `IDispatch` implementazione include solo le proprietà e i meto
 [nonextensible]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L' C++ attributo non estendibile ha la stessa funzionalità dell'attributo MIDL non [estensibile](/windows/win32/Midl/nonextensible) .
+L'attributo non **estendibile** C++ ha la stessa funzionalità dell'attributo MIDL non [estensibile](/windows/win32/Midl/nonextensible) .
 
-L'utilizzo di non estendibile richiede anche l'attributo [oleautomation](oleautomation.md) .
+L'utilizzo di non **estendibile** richiede anche l'attributo [oleautomation](oleautomation.md) .
 
 ## <a name="example"></a>Esempio
 
-Nel codice seguente viene illustrato un utilizzo dell' attributo non estendibile:
+Nel codice seguente viene illustrato un utilizzo dell'attributo non **estendibile** :
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -56,8 +56,8 @@ __interface IFireTabCtrl
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|`dual`and `oleautomation`, or`dispinterface`|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|`dual` e `oleautomation`oppure `dispinterface`|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

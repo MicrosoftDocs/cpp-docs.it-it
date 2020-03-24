@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 2a451bf68bfb543ee5e82a9a48097cac7e8a9821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398121"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213551"
 ---
 # <a name="terminatemap-function"></a>Funzione TerminateMap
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,27 +30,27 @@ inline bool TerminateMap(
 ### <a name="parameters"></a>Parametri
 
 *module*<br/>
-Oggetto [modulo](module-class.md).
+Un [modulo](module-class.md).
 
 *serverName*<br/>
-Il nome di un subset di class factory del modulo specificato dal parametro *modulo*.
+Nome di un subset di class factory nel modulo specificato dal *modulo*Parameter.
 
 *forceTerminate*<br/>
-**true** per terminare la classe factory indipendentemente dal fatto sono attive; **false** non terminare le class factory se qualsiasi factory è attivo.
+**true** per terminare le class factory indipendentemente dal fatto che siano attive; **false** per non terminare le class factory se una factory è attiva.
 
 ## <a name="return-value"></a>Valore restituito
 
 **true** se tutte le class factory sono state terminate; in caso contrario, **false**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Arresta la class factory nel modulo specificato.
+Arresta le class factory nel modulo specificato.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** module.h
+**Intestazione:** Module. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
 ## <a name="see-also"></a>Vedere anche
 

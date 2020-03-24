@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0017
 ms.assetid: a192729f-bb10-486a-bfda-a7843fa259b2
-ms.openlocfilehash: dc96e24237cf29321bfa5987737baba6f6801541
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8fbc0636d62b7162cf79bea033d7e0b4fa01a9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359410"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192588"
 ---
 # <a name="project-build-error-prj0017"></a>Errore di compilazione progetto PRJ0017
 
-Directory di lavoro corrente non è valida.
+La directory di lavoro corrente non è valida.
 
-Il percorso alla directory di lavoro corrente è più lungo di MaxPath. Per risolvere questo errore, non creare il progetto a livello avanzato.
+Il percorso della directory di lavoro corrente è più lungo del _MAXPATH. Per correggere l'errore, non creare il progetto a un livello più profondo.

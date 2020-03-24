@@ -1,20 +1,20 @@
 ---
-title: B. Stub per funzioni della libreria run-time
+title: B. Stub per funzioni della libreria di runtime
 ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9089bd6ef1f0a8f2f2ed94a7c496943c9bdd5e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215059"
 ---
-# <a name="b-stubs-for-run-time-library-functions"></a>B. Stub per funzioni della libreria run-time
+# <a name="b-stubs-for-run-time-library-functions"></a>B. Stub per funzioni della libreria di runtime
 
-In questa sezione fornisce gli stub per le funzioni della libreria di runtime definite in OpenMP C e C++ API. Gli stub vengono forniti per consentire la portabilità tra piattaforme che non supportano il OpenMP C e C++ API. In queste piattaforme, programmi di OpenMP devono essere collegati con una libreria che contiene queste funzioni stub. Le funzioni stub si presuppongono che le direttive nel programma OpenMP vengono ignorate. Di conseguenza, queste emulano la semantica seriale.
+In questa sezione vengono forniti gli stub per le funzioni della libreria di runtime definite nell'API C++ OpenMP C e. Gli stub vengono forniti per consentire la portabilità su piattaforme che non supportano l'API OpenMP C++ C e. Su queste piattaforme, i programmi OpenMP devono essere collegati a una libreria che contiene queste funzioni stub. Le funzioni Stub presuppongono che le direttive nel programma OpenMP vengano ignorate. Di conseguenza, emulano la semantica seriale.
 
 > [!NOTE]
-> La variabile di blocco che viene visualizzato nelle funzioni di blocco deve avvenire esclusivamente tramite queste funzioni. Si dovrebbe non essere inizializzato o in caso contrario, è stato modificato nel programma utente. Gli utenti non devono dare per scontati meccanismi utilizzati dalle implementazioni OpenMP C e C++ per implementare i blocchi basati sullo schema usato dalle funzioni di stub.
+> È necessario accedere alla variabile di blocco visualizzata nelle funzioni di blocco esclusivamente tramite queste funzioni. Non deve essere inizializzata o modificata in altro modo nel programma utente. Per implementare i blocchi basati sullo schema utilizzato dalle funzioni stub, gli C++ utenti non devono fare supposizioni sui meccanismi utilizzati dalle implementazioni di OpenMP C e.
 
 ## <a name="code"></a>Codice
 

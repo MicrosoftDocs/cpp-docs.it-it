@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49585a697c7880da27357ebcafce9c5cefd89fd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214760"
 ---
 # <a name="licensed"></a>licensed
 
-Indica che l'oggetto COM a cui viene applicato viene concesso in licenza ed è necessario crearne un' `IClassFactory2`istanza usando.
+Indica che l'oggetto COM a cui viene applicato viene concesso in licenza ed è necessario crearne un'istanza utilizzando `IClassFactory2`.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,9 +23,9 @@ Indica che l'oggetto COM a cui viene applicato viene concesso in licenza ed è n
 [licensed]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L' C++ attributo licensed ha la stessa funzionalità dell'attributo MIDL [concesso in licenza](/windows/win32/Midl/licensed) .
+L' **licensed** C++ attributo licensed ha la stessa funzionalità dell'attributo MIDL [concesso in licenza](/windows/win32/Midl/licensed) .
 
 ## <a name="example"></a>Esempio
 
@@ -57,7 +57,7 @@ public:
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|`coclass`|
-|**Attributi non validi**|Nessuna|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

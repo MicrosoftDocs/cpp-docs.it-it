@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bfb5cc8c785c7f62f29488a9379c2c7ed229cad8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514123"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214591"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -23,7 +23,7 @@ Identifica un puntatore di riferimento.
 [ref]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **ref** C++ ha la stessa funzionalità dell'attributo [ref](/windows/win32/Midl/ref) MIDL.
 
@@ -51,8 +51,8 @@ __interface IFireTabCtrl
 |-|-|
 |**Si applica a**|**typedef**, parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

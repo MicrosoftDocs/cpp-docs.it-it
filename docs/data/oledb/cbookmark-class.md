@@ -66,12 +66,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447249"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212238"
 ---
 # <a name="cbookmark-class"></a>Classe CBookmark
 
@@ -117,7 +117,7 @@ Dimensioni in byte del buffer dei segnalibri. Quando *nSize* è zero, il buffer 
 
 `CBookmark<0>` è una specializzazione di modello di `CBookmark`; il buffer viene creato dinamicamente in fase di esecuzione.
 
-## <a name="cbookmark"></a>CBookmark:: CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark:: CBookmark
 
 Costruttore.
 
@@ -140,7 +140,7 @@ La prima funzione imposta il buffer su NULL e la dimensione del buffer su 0. La 
 > [!NOTE]
 >  Questa funzione è disponibile solo in `CBookmark<0>`.
 
-## <a name="getbuffer"></a>CBookmark:: GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark:: GetBuffer
 
 Recupera il puntatore al buffer dei segnalibri.
 
@@ -154,7 +154,7 @@ virtual BYTE* GetBuffer() const throw();
 
 Puntatore al buffer dei segnalibri.
 
-## <a name="getsize"></a>CBookmark:: GetSize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark:: GetSize
 
 Recupera la dimensione del buffer dei segnalibri.
 
@@ -168,7 +168,7 @@ virtual DBLENGTH GetSize() const throw();
 
 Dimensioni del buffer in byte.
 
-## <a name="setbookmark"></a>CBookmark:: sesegnalibro
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark:: sesegnalibro
 
 Copia il valore del segnalibro a cui fa riferimento *pbuffer* nel buffer `CBookmark` e imposta le dimensioni del buffer su *nSize*.
 
@@ -194,7 +194,7 @@ Valore HRESULT standard.
 
 Questa funzione è disponibile solo in `CBookmark<0>`.
 
-## <a name="operator"></a>CBookmark:: operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark:: operator =
 
 Assegna un oggetto `CBookmark` a un altro oggetto.
 

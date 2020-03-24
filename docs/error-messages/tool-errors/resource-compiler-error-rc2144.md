@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RC2144
 ms.assetid: 1b3ff39a-92cd-4a04-b1a3-b1fa6a805813
-ms.openlocfilehash: deabd639e04d5b78b398cda9245e9726e2124740
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b080916642fc1be4b22820668c4cb4137675425
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173470"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191197"
 ---
 # <a name="resource-compiler-error-rc2144"></a>Errore del compilatore di risorse RC2144
 

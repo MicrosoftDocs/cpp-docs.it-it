@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - D8037
 ms.assetid: acddaaa0-bd84-426f-a37b-8f680b379c9d
-ms.openlocfilehash: f9f099d1abb8529620c1b3a0bc14705463ca5cd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed6778861c89bb9755087c4d58f094a57d5f760f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196859"
 ---
 # <a name="command-line-error-d8037"></a>Errore della riga di comando D8037
 
-non è possibile creare il file temporaneo. svuotare la directory temporanea dei file il precedenti
+Impossibile creare il file il temporaneo. Pulisci directory temporanea dei file il precedenti
 
-Non c'è spazio sufficiente per creare i file intermedi del compilatore temporaneo. Per risolvere questo errore, rimuovere i vecchi file MSIL nella directory specificata per il **TMP** variabile di ambiente. Questi file saranno di CL_hhhhhhhh, dove h rappresenta una cifra esadecimale casuali e ss rappresenta il tipo di file IL. Inoltre, assicurarsi di aggiornare il computer con le patch più recenti del sistema operativo.
+Lo spazio disponibile non è sufficiente per la creazione di file intermedi del compilatore temporaneo. Per risolvere questo errore, rimuovere i file MSIL obsoleti nella directory specificata dalla variabile di ambiente **tmp** . Il formato di questi file sarà _CL_hhhhhhhh. SS, dove h rappresenta una cifra esadecimale casuale e ss rappresenta il tipo di file IL. Assicurarsi inoltre di aggiornare il computer con le patch del sistema operativo più recenti.
 
 ## <a name="see-also"></a>Vedere anche
 

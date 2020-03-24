@@ -6,29 +6,29 @@ helpviewer_keywords:
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-ms.openlocfilehash: 0aff645ce9b0edd3976abf8dd77fff8a79d3c545
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c792f94e675ba3f83b4aad8c180ede46770c6856
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362647"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215007"
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP in Visual C++
 
-L'interfaccia di programma dell'applicazione OpenMP C e C++ consente di scrivere applicazioni che usano in modo efficace più processori. Visual C++ supporta lo standard di OpenMP 2.0.
+Il Application Program Interface OpenMP C C++ e consente di scrivere applicazioni che utilizzano in modo efficace più processori. Visual C++ supporta lo standard OpenMP 2,0.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Riferimenti alla libreria](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
-Fornisce collegamenti a costrutti usati nell'API OpenMP.
+Fornisce collegamenti a costrutti utilizzati nell'API OpenMP.
 
-[C e C++ Application Program Interface](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
-Illustra le OpenMP C e C++ API, come documentato nella specifica versione 2.0 dalla Commissione di esame architettura OpenMP.
+[Interfaccia C C++ e Application Program](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
+Illustra l'API OpenMP C C++ e, come documentato nella specifica della versione 2,0 della lavagna di revisione dell'architettura OpenMP.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
 [/openmp (abilita supporto OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
-Indica al compilatore di elaborare `#pragma omp`.
+Fa in modo che il compilatore elabori `#pragma omp`.
 
 [Macro predefinite](../../preprocessor/predefined-macros.md)<br/>
-Assegna un nome di macro di implementazione ANSI C e Microsoft C++ predefinite. Vedere la macro OpenMP.
+Denomina le macro di implementazione ANSI C e C++ Microsoft predefinite. Vedere la macro _OPENMP.

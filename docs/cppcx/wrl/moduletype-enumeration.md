@@ -1,5 +1,5 @@
 ---
-title: ModuleType (enumerazione)
+title: Enumerazione ModuleType
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - ModuleType enumeration
 ms.assetid: 61a763af-a5a4-451d-8b40-815af507fcde
-ms.openlocfilehash: 3c7486cbc761975dd133f229f23dcf0b70e7e3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8425a15d594f7b8b30027d3576ee86015b656130
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403230"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213720"
 ---
-# <a name="moduletype-enumeration"></a>ModuleType (enumerazione)
+# <a name="moduletype-enumeration"></a>Enumerazione ModuleType
 
 Specifica se un modulo deve supportare un server in-process o un server out-of-process.
 
@@ -24,7 +24,7 @@ Specifica se un modulo deve supportare un server in-process o un server out-of-p
 enum ModuleType;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="values"></a>Valori
 
@@ -38,7 +38,7 @@ enum ModuleType;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** module.h
+**Intestazione:** Module. h
 
 **Spazio dei nomi:** Microsoft::WRL
 

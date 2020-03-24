@@ -1,5 +1,5 @@
 ---
-title: CloakedIid (struttura)
+title: Struttura CloakedIid
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: 10dc2af1897147045382e8463b6602fa015fc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cc9e79384bbf4aae44199c2f35331e3afd8fd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398719"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214110"
 ---
-# <a name="cloakediid-structure"></a>CloakedIid (struttura)
+# <a name="cloakediid-structure"></a>Struttura CloakedIid
 
-Indica al `RuntimeClass`, `Implements` e `ChainInterfaces` modelli che l'interfaccia specificata non è accessibile nell'elenco di IID.
+Indica ai modelli `RuntimeClass`, `Implements` e `ChainInterfaces` che l'interfaccia specificata non è accessibile nell'elenco di IID.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,11 +28,11 @@ struct CloakedIid : T;
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-L'interfaccia viene nascosta (mascherato).
+Interfaccia nascosta (mascherata).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Di seguito è riportato un esempio di come **CloakedIid** viene usata: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+Di seguito è riportato un esempio di come viene usato **CloakedIid** : `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

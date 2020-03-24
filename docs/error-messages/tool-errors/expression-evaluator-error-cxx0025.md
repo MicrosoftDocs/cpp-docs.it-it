@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0025
 - CXX0025
 ms.assetid: 3e2fb541-63b3-46ac-9f93-3dadb253bcf6
-ms.openlocfilehash: 695a6e909717fe38dd8db6f4981db0d756fbb390
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b230c10d22abef9bdb8d1fe7030552e52ca3451
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359827"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195773"
 ---
 # <a name="expression-evaluator-error-cxx0025"></a>Errore dell‘analizzatore di espressioni CXX0025
 
-operatore deve struct/union
+operatore struct/union needs
 
-Un operatore che accetta un'espressione di `struct` oppure **union** tipo è stato applicato a un'espressione che non è un `struct` oppure **union**.
+Un operatore che accetta un'espressione di `struct` o un tipo di **Unione** è stato applicato a un'espressione che non è un `struct` o un' **Unione**.
 
-Elementi della classe, struttura o unione variabili devono avere un nome completo. I componenti non possono essere inseriti senza la specifica completa.
+I componenti delle variabili di classe, struttura o Unione devono avere un nome completo. Impossibile immettere i componenti senza una specifica completa.
 
-Questo errore è identico all'errore CAN0025.
+Questo errore è identico a CAN0025.

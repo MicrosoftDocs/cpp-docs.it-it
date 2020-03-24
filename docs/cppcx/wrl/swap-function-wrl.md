@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Swap
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-ms.openlocfilehash: 97d24f1f4453e948c621651e029254db1b0de712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e665dbca025da56ba81c3fdf1749b2d653b78c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398147"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213564"
 ---
 # <a name="swap-function-wrl"></a>Funzione swap (WRL)
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,15 +35,15 @@ Secondo argomento.
 
 ## <a name="return-value"></a>Valore restituito
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Scambia i valori dei due argomenti specificati.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** FTM
+**Intestazione:** Internal. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
 ## <a name="see-also"></a>Vedere anche
 

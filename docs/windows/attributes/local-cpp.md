@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d3710eee748a43a1daa5c07d8b3feb6beb8f64fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214747"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -23,7 +23,7 @@ Quando viene usato nell'intestazione dell'interfaccia, consente di usare il comp
 [local]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **local** C++ ha la stessa funzionalità dell'attributo MIDL [locale](/windows/win32/Midl/local) .
 
@@ -39,7 +39,7 @@ Per un esempio su come usare **local**, vedere [call_as](call-as.md) .
 |-|-|
 |**Si applica a**|**interfaccia**, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|`dispinterface`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
