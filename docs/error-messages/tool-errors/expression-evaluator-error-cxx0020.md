@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CXX0020
 - CAN0020
 ms.assetid: 9dc57c25-e976-44e8-9a4e-db5a79e35bd7
-ms.openlocfilehash: 940faaca0c4c8717f36d79df6cad3a1e02462d75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ebef4752bc779c9705d3bd287ed83b5aaa9d7a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359891"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195877"
 ---
 # <a name="expression-evaluator-error-cxx0020"></a>Errore dell‘analizzatore di espressioni CXX0020
 
-tipi di operando non valido per questa operazione
+tipi di operando non validi per questa operazione
 
-Un operatore è stato applicato a un'espressione con un tipo non valido per tale operatore.
+Un operatore è stato applicato a un'espressione con un tipo non valido per l'operatore.
 
-Ad esempio, non valido per accettare l'indirizzo di un registro né pedice una matrice con un'espressione a virgola mobile.
+Non è ad esempio possibile prendere l'indirizzo di un registro o di un indice di una matrice con un'espressione a virgola mobile.
 
-Questo errore è identico all'errore CAN0020.
+Questo errore è identico a CAN0020.

@@ -79,12 +79,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 046b7e0070d95f5d17b3240884db76533f1c6ccd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 931d84f16b46ea8fe21ecc0a63d20dac958ce960
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443908"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160438"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Procedura: creare un'icona o un'altra immagine
 

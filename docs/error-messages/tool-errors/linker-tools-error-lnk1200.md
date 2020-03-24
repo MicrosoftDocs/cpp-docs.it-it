@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1200
 ms.assetid: 55771145-915e-4006-ac6c-ac702041eb2f
-ms.openlocfilehash: c99b25a83836f1ee0bc6ba622e42ea382c377172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dcc37bd74a25e29726529346b1578bb8b18ac3e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213550"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195136"
 ---
 # <a name="linker-tools-error-lnk1200"></a>Errore degli strumenti del linker LNK1200
 
-Errore durante la lettura del database di programma 'filename'
+errore durante la lettura del database di programma ' filename '
 
-Non è stato possibile leggere il database di programma (PDB).
+Impossibile leggere il database di programma (PDB).
 
-Questo errore può essere causato dal danneggiamento dei file.
+Questo errore può essere causato da un danneggiamento del file.
 
-Se `filename` è il file PDB per un file di oggetti, ricompilare il file oggetto usando [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+Se `filename` è il PDB per un file oggetto, ricompilare il file oggetto utilizzando [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
 
-Se `filename` è il file PDB per il file di output principale, e questo errore si verifica durante un collegamento incrementale, eliminare il file PDB e ricollegare.
+Se `filename` è il PDB per il file di output principale e questo errore si è verificato durante un collegamento incrementale, eliminare il PDB e ricollegarlo.

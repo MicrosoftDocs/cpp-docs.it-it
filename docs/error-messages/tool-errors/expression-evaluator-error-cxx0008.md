@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0008
 - CAN0008
 ms.assetid: 49e0968c-a6ce-4ba9-9762-02a55c08124e
-ms.openlocfilehash: 84fcd13610ca5d0b0b0e342a472934303ed8dca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43d3f6833c3472011c119e53c109b471d1b1a23e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406145"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196237"
 ---
 # <a name="expression-evaluator-error-cxx0008"></a>Errore dell‘analizzatore di espressioni CXX0008
 
-**Missing "alla fine della stringa**
+**"at End Of String mancante**
 
-Le virgolette doppie prevista alla fine della stringa letterale è mancante. Digitare di nuovo l'espressione, che li racchiude la stringa letterale virgolette doppie.
+La virgoletta doppia prevista alla fine del valore letterale stringa è mancante. Digitare nuovamente l'espressione, racchiudendo il valore letterale stringa tra virgolette doppie.
 
-Questo errore è identico al CAN0008.
+Questo errore è identico a CAN0008.

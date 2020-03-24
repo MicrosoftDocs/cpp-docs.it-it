@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388579"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198133"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avviso del compilatore (livello 4) C4754
 
@@ -19,11 +19,11 @@ Le regole di conversione per operazioni aritmetiche in un confronto indicano che
 
 Dal momento che il risultato del confronto è sempre lo stesso viene generato l'avviso C4754. Questo indica che uno dei rami della condizione non viene mai eseguito, molto probabilmente perché l'espressione Integer collegata non è corretta. Tale errore del codice si verifica spesso nei controlli dell'overflow Integer nelle architetture a 64 bit.
 
-Le regole di conversione degli Integer sono complesse ed esistono molte insidie sottili. Come alternativa a correggere ogni avviso C4754, è possibile aggiornare il codice per usare la [Libreria SafeInt](../../safeint/safeint-library.md).
+Le regole di conversione degli Integer sono complesse ed esistono molte insidie sottili. In alternativa alla correzione di ogni avviso C4754, è possibile aggiornare il codice per usare la [libreria SafeInt](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Esempio
 
-In questo esempio genera l'errore C4754:
+Questo esempio genera C4754:
 
 ```cpp
 // C4754a.cpp
@@ -96,7 +96,7 @@ In questo caso, il codice corretto sarà simile alla seguente:
 if (a + (unsigned long)sizeof(unsigned long) < a)
 ```
 
-**Nota** il numero di riga indicato negli avvisi del compilatore è l'ultima riga di un'istruzione. In un messaggio di avviso relativo a un'istruzione condizionale complessa suddivisa su più righe, la riga che effettivamente presenta l'errore del codice può essere una delle righe prima della riga segnalata. Ad esempio:
+**Nota** Il numero di riga a cui si fa riferimento negli avvisi del compilatore è l'ultima riga di un'istruzione. In un messaggio di avviso relativo a un'istruzione condizionale complessa suddivisa su più righe, la riga che effettivamente presenta l'errore del codice può essere una delle righe prima della riga segnalata. Ad esempio:
 
 ```cpp
 unsigned long a;

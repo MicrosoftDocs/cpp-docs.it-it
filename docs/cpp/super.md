@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330531"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160827"
 ---
-# <a name="super"></a>__super
+# <a name="__super"></a>__super
 
 **Sezione specifica Microsoft**
 
@@ -25,15 +25,15 @@ Consente di dichiarare in modo esplicito che si sta chiamando un'implementazione
 __super::member_function();
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Tutti i metodi accessibili della classe di base vengono considerati durante la fase di risoluzione dell'overload e la funzione che fornisce la corrispondenza migliore è quella che viene chiamata.
 
-**super** può trovarsi solo all'interno del corpo di una funzione membro.
+**__super** può essere presente solo all'interno del corpo di una funzione membro.
 
-**super** non è possibile usare con una dichiarazione. Visualizzare [dichiarazione using](../cpp/using-declaration.md) per altre informazioni.
+non è possibile usare **__super** con una dichiarazione using. Per ulteriori informazioni, vedere [utilizzo della dichiarazione](../cpp/using-declaration.md) .
 
-Con l'introduzione del [attributi](../windows/attributes/attributes-alphabetical-reference.md) che inseriscono codice, il codice può contenere uno o più classi base i cui nomi si potrebbe non sapere ma che contengono metodi che si desiderano chiamare.
+Con l'introduzione degli [attributi](../windows/attributes/attributes-alphabetical-reference.md) che comportano il codice, il codice potrebbe contenere una o più classi di base i cui nomi non si conoscono ma che contengono i metodi che si desidera chiamare.
 
 ## <a name="example"></a>Esempio
 

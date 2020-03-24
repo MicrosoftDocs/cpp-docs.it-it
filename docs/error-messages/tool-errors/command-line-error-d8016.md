@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - D8016
 ms.assetid: eec51312-7471-4f92-94b2-d517cafc8ef5
-ms.openlocfilehash: c1e2e3e28f8556416f58d68f8ef1df4b220bc54c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bdef16b14488be86aff880db7c049f4bcddcdb5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399967"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196963"
 ---
 # <a name="command-line-error-d8016"></a>Errore della riga di comando D8016
 
-opzioni della riga di comando 'opzione1' e 'option2' sono incompatibili
+le opzioni della riga di comando ' opzione1' è opzione2' non sono compatibili
 
 Impossibile specificare contemporaneamente le opzioni della riga di comando.
 
-Controllare le variabili di ambiente, ad esempio CL, per le specifiche di opzione.
+Controllare le variabili di ambiente, ad esempio CL, per le specifiche delle opzioni.
 
-**/CLR** implica **/EHa**, e non è possibile specificare qualsiasi altra **/EH** con l'opzione del compilatore **/clr**. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+**/CLR** implica **/EHA**e non è possibile specificare altre opzioni del compilatore **/eh** con **/CLR**. Per altre informazioni, vedere [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
-D8016 potrebbe essere visualizzato dopo aver aggiornato un progetto di Visual C++ 6.0: può abilitare il processo di creazione guidata aggiornamento progetto **/RTC** per ogni file di codice sorgente nel progetto, che esegue l'override di **/RTC** impostazione per il progetto.  Per risolvere, modificare il **/RTC** imposta per ogni file di codice sorgente nel progetto per l'impostazione predefinita, ovvero l'impostazione di progetto per **/RTC** rimarrà in vigore per ogni file.
+È possibile ottenere D8016 dopo l'aggiornamento di C++ un progetto Visual 6,0: il processo di aggiornamento guidato del progetto può abilitare **/RTC** per ogni file di codice sorgente nel progetto, che sostituisce l'impostazione **/RTC** per il progetto.  Per risolvere il cambiamento, modificare l'impostazione **/RTC** per ogni file di codice sorgente nel progetto impostando l'impostazione predefinita, il che significa che l'impostazione del progetto per **/RTC** sarà valida per ogni file.
 
-Visualizzare [/RTC (controlli di errore di Run-Time)](../../build/reference/rtc-run-time-error-checks.md) per informazioni su come modificare le **/RTC** l'impostazione della proprietà.
+Vedere [/RTC (controlli degli errori di run-time)](../../build/reference/rtc-run-time-error-checks.md) per informazioni sulla modifica dell'impostazione della proprietà **/RTC** .

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222033"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161035"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento non standard
 
-Le sezioni seguenti elencano alcune delle posizioni in cui l'implementazione Microsoft del C++ non è conforme con il C++ standard. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).
+Le sezioni seguenti elencano alcune delle posizioni in cui l'implementazione Microsoft C++ di non è conforme allo C++ standard. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).
 
-L'elenco dei limiti del compilatore che differiscono da quelli definiti nello standard C++ è disponibile nella [limiti del compilatore](../cpp/compiler-limits.md).
+L'elenco dei limiti del compilatore che differiscono da quelli definiti C++ nello standard viene fornito nei [limiti del compilatore](../cpp/compiler-limits.md).
 
 ## <a name="covariant-return-types"></a>Tipi restituiti covarianti
 
-Le classi base virtuali non sono supportate come tipi restituiti covarianti quando la funzione virtuale dispone di un numero variabile di argomenti. Questo non è conforme alla sezione 10.3, paragrafo 7 della specifica C++ ISO. L'esempio seguente non viene compilato, fornendo l'errore del compilatore [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+Le classi base virtuali non sono supportate come tipi restituiti covarianti quando la funzione virtuale dispone di un numero variabile di argomenti. Questo non è conforme alla sezione 10.3, paragrafo 7 della specifica C++ ISO. L'esempio seguente non viene compilato, restituendo l'errore del compilatore [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
 
 ```cpp
 // CovariantReturn.cpp
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Associazione di nomi non dipendenti nei modelli
 
-Microsoft C++ compilatore attualmente non supporta nomi di associazione non dipendenti nell'analisi iniziale di un modello. Questo non è conforme alla sezione 16.6.3 della specifica C++ ISO. Ne possono conseguire overload dichiarati dopo il modello, ma prima della creazione di istanze del modello stesso.
+Il compilatore C++ Microsoft attualmente non supporta l'associazione di nomi non dipendenti durante l'analisi iniziale di un modello. Questo non è conforme alla sezione 16.6.3 della specifica C++ ISO. Ne possono conseguire overload dichiarati dopo il modello, ma prima della creazione di istanze del modello stesso.
 
 ```cpp
 #include <iostream>
@@ -71,11 +71,11 @@ void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used
 ```
 
-Per altre informazioni sulle specifiche di eccezione, vedere [specifiche di eccezione](../cpp/exception-specifications-throw-cpp.md).
+Per ulteriori informazioni sulle specifiche di eccezione, vedere [specifiche di eccezione](../cpp/exception-specifications-throw-cpp.md).
 
-## <a name="chartraitseof"></a>char_traits::eof()
+## <a name="char_traitseof"></a>char_traits::eof()
 
-Il C++ standard dichiara che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non devono corrispondere a un valore valido `char_type` valore. Microsoft C++ compilatore impone questo vincolo al tipo **char**, ma non per il tipo **wchar_t**. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.
+Gli C++ stati standard che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non devono corrispondere a un valore `char_type` valido. Il compilatore C++ Microsoft impone questo vincolo per il tipo **char**, ma non per il tipo **wchar_t**. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Percorso di archiviazione di oggetti
 
-Lo standard C++ (sezione 1.8 paragrafo 6) richiede che oggetti C++ completi abbiano percorsi di archiviazione univoci. Tuttavia con Microsoft C++, vi sono casi in cui i tipi senza membri dati condividono un percorso di archiviazione con altri tipi per la durata dell'oggetto.
+Lo standard C++ (sezione 1.8 paragrafo 6) richiede che oggetti C++ completi abbiano percorsi di archiviazione univoci. Tuttavia, con C++Microsoft, esistono casi in cui i tipi senza membri dati condividono un percorso di archiviazione con altri tipi per la durata dell'oggetto.

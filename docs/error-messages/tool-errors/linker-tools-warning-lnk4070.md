@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4070
 ms.assetid: f95f179a-fff9-427e-bd51-466b3934517f
-ms.openlocfilehash: e7139b21f053ea8633356c7194cd719a6a4aef35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 391a477625b51fd37eacc5d455801ce90d2abbc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194005"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>Avviso degli strumenti del linker LNK4070
 
-Direttiva /out: in. EXP differisce dal nome file di output 'filename'; direttiva ignorata
+/OUT: FileName (direttiva) in. EXP differisce dal nome del file di output ' filename '; direttiva ignorata
 
-Il `filename` specificato nella [NAME](../../build/reference/name-c-cpp.md) o [libreria](../../build/reference/library.md) istruzione quando è stato creato il file EXP differisce dall'output `filename` che è stato impostato per impostazione predefinita o specificato con il [/Out](../../build/reference/out-output-file-name.md) opzione.
+Il `filename` specificato nell'istruzione [Name](../../build/reference/name-c-cpp.md) o [Library](../../build/reference/library.md) quando è stato creato il file con estensione EXP è diverso da quello `filename` di output che è stato utilizzato per impostazione predefinita o specificato con l'opzione [/out](../../build/reference/out-output-file-name.md) .
 
-Verrà visualizzato questo avviso se si modifica il nome di un file di output nell'ambiente di sviluppo e in cui non è stato aggiornato il file del progetto con estensione def. Aggiornare manualmente il file con estensione def per risolvere il problema.
+Questo avviso viene visualizzato se si modifica il nome di un file di output nell'ambiente di sviluppo e il file con estensione def del progetto non è stato aggiornato. Aggiornare manualmente il file def per risolvere questo avviso.
 
-Un programma client che usa la DLL risulta potrebbe verificarsi problemi.
+È possibile che un programma client che utilizza la DLL risultante riscontri problemi.

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: af708fd72904fb775ff1088948972bec159816c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f8b79c637662d79051b72e6aabefc99c450bdc5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266907"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160879"
 ---
 # <a name="summary-of-scope-rules"></a>Riepilogo delle regole di ambito
 
-L'utilizzo di un nome deve essere non ambiguo all'interno dell'ambito relativo (fino al punto in cui viene determinata l'esecuzione dell'overload). Se il nome indica una funzione, quest'ultima deve essere non ambigua rispetto al numero e al tipo di parametri. Se il nome è ambiguo, [accesso ai membri](../cpp/member-access-control-cpp.md) vengono applicate le regole.
+L'utilizzo di un nome deve essere non ambiguo all'interno dell'ambito relativo (fino al punto in cui viene determinata l'esecuzione dell'overload). Se il nome indica una funzione, quest'ultima deve essere non ambigua rispetto al numero e al tipo di parametri. Se il nome rimane non ambiguo, vengono applicate le regole [di accesso ai membri](../cpp/member-access-control-cpp.md) .
 
 ## <a name="constructor-initializers"></a>Inizializzatori del costruttore
 
-[Inizializzatori del costruttore](constructors-cpp.md#member_init_list) vengono valutati nell'ambito del blocco più esterno del costruttore per il quale vengono specificate. Di conseguenza, possono usare i nomi dei parametri del costruttore.
+Gli [inizializzatori di costruttori](constructors-cpp.md#member_init_list) vengono valutati nell'ambito del blocco più esterno del costruttore per il quale sono specificati. Di conseguenza, possono usare i nomi dei parametri del costruttore.
 
 ## <a name="global-names"></a>Nomi globali
 
@@ -29,15 +29,15 @@ Un nome di un oggetto, funzione o enumeratore è globale se viene introdotto al 
 
 - Risoluzione ambito (`::`)
 
-- Selezione dei membri per gli oggetti e i riferimenti (**.**)
+- Selezione dei membri per gli oggetti e i riferimenti ( **.** )
 
-- Selezione membro per puntatori (**->**)
+- Selezione dei membri per i puntatori ( **->** )
 
 ## <a name="qualified-names"></a>Nomi completi
 
 I nomi usati con l'operatore di risoluzione dell'ambito binario (`::`) sono denominati "nomi completi". Il nome specificato dopo l'operatore di risoluzione dell'ambito binario deve essere un membro della classe specificata a sinistra dell'operatore o un membro della relativa classe base.
 
-I nomi specificati dopo l'operatore di selezione dei membri (**.** oppure **->**) devono essere membri del tipo di classe dell'oggetto specificato a sinistra dell'operatore o membri della relativa classe base. I nomi specificati a destra dell'operatore di selezione dei membri (**->**) possono anche essere oggetti di un altro tipo di classe, a condizione che il lato sinistro della **->** è un oggetto di classe e che la classe definisce un operatore di selezione dei membri in overload (**->**) che restituisce un puntatore a un altro tipo di classe. (Questa operazione viene illustrata più dettagliatamente [accesso ai membri di classe](../cpp/member-access.md).)
+Nomi specificati dopo l'operatore di selezione dei membri ( **.** o **->** ) deve essere membri del tipo di classe dell'oggetto specificato a sinistra dell'operatore o dei membri della relativa classe di base. I nomi specificati a destra dell'operatore di selezione dei membri ( **->** ) possono essere anche oggetti di un altro tipo di classe, a condizione che il lato sinistro di **->** sia un oggetto classe e che la classe definisca un operatore di selezione dei membri di overload ( **->** ) che restituisce un puntatore a un altro tipo di classe. (Questo provisioning viene trattato in modo più dettagliato nell' [accesso ai membri delle classi](../cpp/member-access.md)).
 
 Il compilatore cerca i nomi nel seguente ordine, arrestandosi quando il nome viene trovato:
 
@@ -57,11 +57,11 @@ Tuttavia, è possibile apportare le modifiche a questo ordine di ricerca come se
 
 1. I nomi preceduti da `::` forzano l'inizio della ricerca in ambito globale.
 
-1. I nomi preceduti dal **classe**, **struct**, e **union** parole chiave imporre al compilatore di cercare solo **classe**,  **struct**, oppure **union** nomi.
+1. I nomi preceduti dalle parole chiave **Class**, **struct**e **Union** forzano il compilatore alla ricerca solo dei nomi di **classi**, **struct**o **unioni** .
 
-1. I nomi sul lato sinistro dell'operatore di risoluzione dell'ambito (`::`) può essere solo **classe**, **struct**, **dello spazio dei nomi**, o **union**i nomi.
+1. I nomi a sinistra dell'operatore di risoluzione dell'ambito (`::`) possono essere solo nomi di **classe**, **struct**, **spazio dei nomi**o di **unione** .
 
-Se il nome riferimento a un membro non statico ma viene usato in una funzione membro statica, verrà generato un messaggio di errore. Analogamente, se il nome fa riferimento a qualsiasi membro non statico in una classe contenitore, un messaggio di errore viene generato perché le classi incluse non dispongono della classe che li racchiude **ciò** puntatori.
+Se il nome riferimento a un membro non statico ma viene usato in una funzione membro statica, verrà generato un messaggio di errore. Analogamente, se il nome fa riferimento a un membro non statico in una classe che lo contiene, viene generato un messaggio di errore perché le classi racchiuse non hanno **i puntatori** di classe di inclusione.
 
 ## <a name="function-parameter-names"></a>Nomi dei parametri delle funzioni
 

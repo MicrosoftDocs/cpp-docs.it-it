@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4065
 ms.assetid: aa5c9e2c-9ad3-4460-8605-4c12bbc6d423
-ms.openlocfilehash: 458685482e7cd5c61710c0080e99763c65e852e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed45eba3964533f6764cc775507a5054a21b700e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410213"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194057"
 ---
 # <a name="linker-tools-warning-lnk4065"></a>Avviso degli strumenti del linker LNK4065
 
-'function' non può essere ordinato; ignorato
+Impossibile ordinare ' Function '. ignorato
 
-La funzione specificata non è stata compilata come una funzione inclusa nel pacchetto. Ricompilare con [/Gy](../../build/reference/gy-enable-function-level-linking.md).
+La funzione specificata non è stata compilata come funzione in pacchetto. Ricompilare usando [/Gy](../../build/reference/gy-enable-function-level-linking.md).

@@ -1,29 +1,29 @@
 ---
-title: Compiler Warning (level 3) C4839
+title: Avviso del compilatore (livello 3) C4839
 ms.date: 09/13/2018
 f1_keywords:
 - C4839
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 09b6e5b8dc984b35df7de96f5cf8610f2b0f16af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401527"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198575"
 ---
-# <a name="compiler-warning-level-3-c4839"></a>Compiler Warning (level 3) C4839
+# <a name="compiler-warning-level-3-c4839"></a>Avviso del compilatore (livello 3) C4839
 
-> uso non standard della classe*tipo*' come argomento per una funzione variadic
+> uso non standard della classe '*Type*' come argomento di una funzione Variadic
 
-Classi o struct che vengono passati a una funzione variadic, ad esempio `printf` devono essere facilmente copiabili. Quando si passano tali oggetti il compilatore si limita a creare una copia bit per bit e non chiama il costruttore o distruttore.
+Le classi o gli struct passati a una funzione Variadic come `printf` devono essere facilmente copiabili. Quando si passano tali oggetti il compilatore si limita a creare una copia bit per bit e non chiama il costruttore o distruttore.
 
 Questo avviso è disponibile a partire da Visual Studio 2017.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4839:
+L'esempio seguente genera l'C4839:
 
 ```cpp
 // C4839.cpp
@@ -51,7 +51,7 @@ Per correggere l'errore, è possibile chiamare una funzione membro che restituis
     printf("%i\n", i.load());
 ```
 
-Per le stringhe compilate e gestite usando `CStringW`, l'oggetto fornito `operator LPCWSTR()` deve essere usato per eseguire il cast un `CStringW` oggetto al puntatore C previsto dalla stringa di formato.
+Per le stringhe compilate e gestite con `CStringW`, è consigliabile usare il `operator LPCWSTR()` fornito per eseguire il cast di un oggetto `CStringW` al puntatore C previsto dalla stringa di formato.
 
 ```cpp
     CStringW str1;

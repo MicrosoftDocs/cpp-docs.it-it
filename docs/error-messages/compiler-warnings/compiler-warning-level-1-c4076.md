@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4076
 ms.assetid: 04581066-313a-4a11-bb60-721e6d038d75
-ms.openlocfilehash: 3a56e58d9bec1034a55f4e588dbddd0dba03f348
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77efeae27a67ea844759fd9980801d3daf788e89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208027"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200257"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>Avviso del compilatore (livello 1) C4076
 
-> «*modificatore di tipo*': non può essere utilizzato con il tipo '*nomeTipo*»
+> '*Type Modifier*': non può essere usato con il tipo '*typeName*'
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un modificatore di tipo, se si tratta **firmato** oppure **unsigned**, non può essere usato con un tipo non integer. *modificatore di tipo* viene ignorato.
+Un modificatore di tipo, indipendentemente dal fatto che sia **firmato** o senza **segno**, non può essere usato con un tipo non integer. il *modificatore di tipo* viene ignorato.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4076; Per risolvere il problema, rimuovere il **unsigned** modificatore di tipo:
+L'esempio seguente genera C4076; per risolvere il problema, rimuovere il modificatore di tipo **senza segno** :
 
 ```cpp
 // C4076.cpp

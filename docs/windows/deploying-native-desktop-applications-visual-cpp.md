@@ -10,12 +10,12 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.topic: overview
-ms.openlocfilehash: af3141a8fd626a909de93b219bf3b6d8186f0623
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: e9ae5db05c0835bb65a65cdccf58ab7f7d1b789f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274754"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160190"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Distribuzione di applicazioni desktop native (Visual C++)
 
@@ -29,7 +29,7 @@ Visual Studio offre le diverse tecnologie per la distribuzione di applicazioni W
 
 Gli articoli presenti in questa sezione della documentazione illustrano come assicurare che un'applicazione Visual C++ nativa venga eseguita in un qualsiasi computer che offre una piattaforma di destinazione supportata, quali file è necessario includere in un pacchetto di installazione e le modalità consigliate per ridistribuire i componenti da cui dipende l'applicazione.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 - [Distribuzione in Visual C++](deployment-in-visual-cpp.md)
 
@@ -49,7 +49,7 @@ Gli articoli presenti in questa sezione della documentazione illustrano come ass
 
 - [Ridistribuzione di applicazioni client Web](redistributing-web-client-applications.md)
 
-- [Distribuzione ClickOnce per applicazioni Visual C++](clickonce-deployment-for-visual-cpp-applications.md)
+- [ClickOnce Deployment for Visual C++ Applications](clickonce-deployment-for-visual-cpp-applications.md)
 
 - [Esecuzione di un'applicazione C++ /clr in una versione runtime precedente](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 

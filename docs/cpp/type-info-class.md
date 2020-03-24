@@ -7,18 +7,18 @@ helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-ms.openlocfilehash: b0cddd2c5cc09e77e8733ca88177c3b2223fc8ce
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7a016fe8fee4e5765e6172184bfa9c90eecbc687
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242080"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160671"
 ---
-# <a name="typeinfo-class"></a>Classe type_info
+# <a name="type_info-class"></a>Classe type_info
 
-Il **type_info** classe descrive le informazioni sul tipo generate all'interno del programma dal compilatore. Gli oggetti di questa classe consentono di archiviare un puntatore a un nome per il tipo. Il **type_info** classe consente archivia anche un valore codificato adatto per il confronto di due tipi per verificarne l'uguaglianza o l'ordinamento. Le regole di codifica e la sequenza di ordinamento per i tipi non sono specificate e possono variare in base al programma.
+La classe **type_info** descrive le informazioni sul tipo generate all'interno del programma dal compilatore. Gli oggetti di questa classe consentono di archiviare un puntatore a un nome per il tipo. La classe **type_info** archivia anche un valore codificato adatto per confrontare due tipi per verificarne l'uguaglianza o l'ordine di ordinamento. Le regole di codifica e la sequenza di ordinamento per i tipi non sono specificate e possono variare in base al programma.
 
-Il `<typeinfo>` file di intestazione deve essere incluso per poter usare il **type_info** classe. L'interfaccia per il **type_info** classe è:
+Per usare la classe **type_info** , è necessario includere il file di intestazione `<typeinfo>`. L'interfaccia per la classe **type_info** è:
 
 ```cpp
 class type_info {
@@ -36,19 +36,19 @@ public:
 };
 ```
 
-È possibile creare istanze di oggetti di **type_info** classe direttamente, poiché la classe ha solo un costruttore di copia. L'unico modo per costruire un elemento (temporaneo) **type_info** oggetto consiste nell'utilizzare il [typeid](../cpp/typeid-operator.md) operatore. Poiché anche l'operatore di assegnazione è privato, non è possibile copiare o assegnare gli oggetti della classe **type_info**.
+Non è possibile creare direttamente istanze di oggetti della classe **type_info** , perché la classe dispone solo di un costruttore di copia privata. L'unico modo per costruire un oggetto **type_info** (temporaneo) consiste nell'utilizzare l'operatore [typeid](../cpp/typeid-operator.md) . Poiché anche l'operatore di assegnazione è privato, non è possibile copiare o assegnare oggetti della classe **type_info**.
 
-`type_info::hash_code` definisce una funzione hash per il mapping di valori di tipo **typeinfo** per una distribuzione di valori di indice.
+`type_info::hash_code` definisce una funzione hash adatta per il mapping di valori di tipo **TypeInfo** a una distribuzione di valori di indice.
 
-Gli operatori `==` e `!=` può essere utilizzato per confrontare l'uguaglianza e disuguaglianza con altre **type_info** oggetti, rispettivamente.
+È possibile utilizzare gli operatori `==` e `!=` per confrontare l'uguaglianza e la disuguaglianza con altri oggetti **type_info** , rispettivamente.
 
-Non esiste alcun collegamento tra l'ordinamento dei tipi e le relazioni di ereditarietà. Usare il `type_info::before` funzione membro per determinare la sequenza di ordinamento dei tipi. Non c'è garanzia che `type_info::before` genererà lo stesso risultato in programmi differenti o addirittura nelle diverse esecuzioni dello stesso programma. In questo modo `type_info::before` è simile a address-of `(&)` operatore.
+Non esiste alcun collegamento tra l'ordinamento dei tipi e le relazioni di ereditarietà. Utilizzare la funzione membro `type_info::before` per determinare la sequenza di ordinamento dei tipi. Non esiste alcuna garanzia che `type_info::before` produrrà lo stesso risultato in programmi diversi o anche in esecuzioni diverse dello stesso programma. In questo modo, `type_info::before` è simile all'operatore address-of `(&)`.
 
-Il `type_info::name` funzione membro restituisce un `const char*` in una stringa con terminazione null che rappresenta il nome leggibile dall'utente del tipo. La memoria a cui si fa riferimento viene memorizzata nella cache e non deve essere mai direttamente deallocata.
+La funzione membro `type_info::name` restituisce una `const char*` a una stringa con terminazione null che rappresenta il nome leggibile del tipo. La memoria a cui si fa riferimento viene memorizzata nella cache e non deve essere mai direttamente deallocata.
 
-Il `type_info::raw_name` funzione membro restituisce un `const char*` in una stringa con terminazione null che rappresenta il nome decorato del tipo di oggetto. Il nome viene archiviato nel formato decorato per risparmiare spazio. Di conseguenza, questa funzione è più veloce `type_info::name` perché non è necessario rimuovere la decorazione di nome. La stringa restituita dal `type_info::raw_name` funzione è utile nelle operazioni di confronto, ma non è leggibile. Se è necessaria una stringa leggibile dall'utente, usare il `type_info::name` funzione.
+La funzione membro `type_info::raw_name` restituisce una `const char*` a una stringa con terminazione null che rappresenta il nome decorato del tipo di oggetto. Il nome viene archiviato nel formato decorato per risparmiare spazio. Di conseguenza, questa funzione è più veloce di `type_info::name` perché non è necessario dedecorare il nome. La stringa restituita dalla funzione `type_info::raw_name` è utile nelle operazioni di confronto, ma non è leggibile. Se è necessaria una stringa leggibile, usare invece la funzione `type_info::name`.
 
-Informazioni sul tipo viene generati per solo se le classi polimorfiche il [/GR (Abilita informazioni sui tipi in fase di esecuzione)](../build/reference/gr-enable-run-time-type-information.md) è specificata l'opzione del compilatore.
+Le informazioni sul tipo vengono generate per le classi polimorfiche solo se è specificata l'opzione del compilatore [/gr (Abilita informazioni sui tipi in fase di esecuzione)](../build/reference/gr-enable-run-time-type-information.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

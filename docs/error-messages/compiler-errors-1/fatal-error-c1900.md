@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1900
 ms.assetid: 3aaa583b-4c1a-45de-aa34-527d806f2cb5
-ms.openlocfilehash: c4622dd4552f7bfcc822a3aab4d5783146d68ac7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a802928315126b72397ba6e8cc61b66f46deb41
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165723"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202840"
 ---
 # <a name="fatal-error-c1900"></a>Errore irreversibile C1900
 
-> Errata corrispondenza tra '*tool1*'version'*number1*"e"*tool2*'version'*numero2*'
+> Mancata corrispondenza tra'*strumento1*' versione '*number1*' è*Tool2*' versione '*number2*'
 
-Gli strumenti eseguiti nei vari passaggi del compilatore non corrispondono. *number1* e *numero2* fare riferimento alle date nei file. Nella fase 1, ad esempio, viene eseguito il front end del compilatore (c1.dll) mentre nella fase 2 viene eseguito il back end (c2.dll). È necessario che le date dei file corrispondano.
+Gli strumenti eseguiti nei vari passaggi del compilatore non corrispondono. *number1* e *number2* fanno riferimento alle date dei file. Nella fase 1, ad esempio, viene eseguito il front end del compilatore (c1.dll) mentre nella fase 2 viene eseguito il back end (c2.dll). È necessario che le date dei file corrispondano.
 
-Per risolvere questo problema, assicurarsi che tutti gli aggiornamenti siano stati applicati a Visual Studio. Se il problema persiste, usare **programmi e funzionalità** nel Pannello di controllo di Windows per ripristinare o reinstallare Visual Studio.
+Per risolvere questo problema, assicurarsi che tutti gli aggiornamenti siano stati applicati a Visual Studio. Se il problema persiste, utilizzare **programmi e funzionalità** nel pannello di controllo di Windows per ripristinare o reinstallare Visual Studio.

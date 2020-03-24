@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2027
 ms.assetid: e2f857a8-8e8a-4697-bbff-12ccb84a35c1
-ms.openlocfilehash: e74912780bab3056ead36ae3705f0910805228e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c531f70f98a017e8b75cceddc684f99d33bc554
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299010"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194596"
 ---
 # <a name="linker-tools-error-lnk2027"></a>Errore degli strumenti del linker LNK2027
 
-modulo non risolti riferimenti 'module'
+riferimento al modulo ' Module ' non risolto
 
-Un file passato al linker presenta una dipendenza su un modulo che non è stato specificato con **/ASSEMBLYMODULE** né passato direttamente al linker.
+Un file passato al linker presenta una dipendenza da un modulo che non è stato specificato con **/ASSEMBLYMODULE** né passato direttamente al linker.
 
-Per correggere l'errore LNK2027, eseguire una delle operazioni seguenti:
+Per risolvere LNK2027, eseguire una delle operazioni seguenti:
 
-- Non passare al linker il file che contiene la dipendenza dal modulo.
+- Non passare al linker il file con la dipendenza del modulo.
 
 - Specificare il modulo con **/ASSEMBLYMODULE**.
 
 - Se il modulo è un file con estensione netmodule sicuro, passare il modulo direttamente al linker.
 
-Per altre informazioni, vedere [/ASSEMBLYMODULE (aggiunge un modulo MSIL all'Assembly)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md) e [i file con estensione netmodule come Input del Linker](../../build/reference/netmodule-files-as-linker-input.md).
+Per altre informazioni, vedere [/ASSEMBLYMODULE (aggiungere un modulo MSIL all'assembly)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md) e [file con estensione netmodule come input del linker](../../build/reference/netmodule-files-as-linker-input.md).

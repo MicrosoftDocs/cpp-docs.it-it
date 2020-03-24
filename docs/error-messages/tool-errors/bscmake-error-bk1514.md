@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1514
 ms.assetid: 7c7e2504-a490-44ab-bb1f-47385ee2f4b0
-ms.openlocfilehash: 410c24b67e76bb2d412e1594abbb4a668c79aa1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14f74bba69db5bf3e02aecedd4540ef8a90d576b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324480"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197626"
 ---
 # <a name="bscmake-error-bk1514"></a>Errore BK1514 di BSCMAKE
 
-tutti. I file SBR troncati, non è stato trovato nel nome file
+tutti. File SBR troncati, nessuno trovato nel nome file
 
-Nessuno dei file SBR specificati per un aggiornamento facevano parte del file di informazioni (BSC) originale. Per trovare i nomi dei file sbr che ha causato l'errore, leggere il [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) avvisi che lo precedono.
+Nessuno dei file sbr specificati per un aggiornamento faceva parte del file di informazioni di visualizzazione (con estensione BSC) originale. Per trovare i nomi dei file SBR che hanno causato l'errore, leggere gli avvisi [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) che lo precedono.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
 
-1. Nome file errato specificato per SBR o con estensione bsc.
+1. Nome file errato specificato per SBR o BSC.
 
-1. File BSC danneggiato necessario BSCMAKE per ricompilarla.
+1. Il file BSC danneggiato è necessario BSCMAKE per ricompilarlo.

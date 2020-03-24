@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-ms.openlocfilehash: 8088494106aa702fda0497fa431e48267167a185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d26ab12c5b82d52b7dcbb176d9bfa033d7ddfee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160419"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194837"
 ---
 # <a name="linker-tools-error-lnk2004"></a>Errore degli strumenti del linker LNK2004
 
-criteri di gruppo overflow della correzione relativa a 'target'; la sezione breve 'section' è troppo grande o non compreso nell'intervallo.
+overflow della correzione relativa a GP in ' target '; la sezione breve ' section ' è troppo grande o non compresa nell'intervallo.
 
 La sezione è troppo grande.
 
-Per risolvere questo errore, ridurre le dimensioni della sezione brevi, in modo esplicito l'inserimento dei dati nelle sezioni riportate di tempo tramite sezione #pragma ("nomesezione", lettura, scrittura, long) e utilizzando `__declspec(allocate(".sectionname"))` su dichiarazioni e definizioni dei dati.  Ad esempio,
+Per correggere l'errore, ridurre le dimensioni della sezione breve, inserendo in modo esplicito i dati nelle sezioni lunghe tramite #pragma sezione (". SectionName", Read, Write, Long) e utilizzando `__declspec(allocate(".sectionname"))` per le definizioni e le dichiarazioni di dati.  Ad esempio,
 
 ```
 #pragma section(".data$mylong", read, write, long)
@@ -32,7 +32,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };
 ```
 
-È inoltre possibile spostare i dati raggruppati logicamente in un proprio struttura che sarà una raccolta di dati superiori a 8 byte, che verrà allocato in una sezione di dati di tipo long.  Ad esempio,
+È anche possibile spostare dati raggruppati logicamente in una propria struttura che costituirà una raccolta di dati di dimensioni maggiori di 8 byte, che verranno allocati dal compilatore in una sezione di dati di lunga durata.  Ad esempio,
 
 ```
 // from this...
@@ -50,4 +50,4 @@ struct X {
 } x  = { 23, 23*2, 23*3, 23*4 };
 ```
 
-Questo errore è seguito dall'errore irreversibile `LNK1165`.
+Questo errore è seguito da un errore irreversibile `LNK1165`.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4657
 ms.assetid: eb750050-cea6-4ead-b80c-d5dcd4971cfc
-ms.openlocfilehash: 92415d1d17c3342dbb721aa850f37f4dfabd1406
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cc049d99339a6f19ca86cd5c7a10f062a1451a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375691"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199499"
 ---
 # <a name="compiler-warning-level-1-c4657"></a>Avviso del compilatore (livello 1) C4657
 

@@ -1,20 +1,20 @@
 ---
-title: 'Errore irreversibile U1083 di NMAKE '
+title: Errore irreversibile U1083 di NMAKE
 ms.date: 11/04/2016
 f1_keywords:
 - U1083
 helpviewer_keywords:
 - U1083
 ms.assetid: b09bc34d-35d5-4676-b000-fd7d434400d9
-ms.openlocfilehash: 304c70e7fe9a7eca4ee56beab2c62494233da55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e005142e40e1e7e2fc4a75ffd45e0d3aa4a164ce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366875"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193368"
 ---
-# <a name="nmake-fatal-error-u1083"></a>Errore irreversibile U1083 di NMAKE 
+# <a name="nmake-fatal-error-u1083"></a>Errore irreversibile U1083 di NMAKE
 
-macro di destinazione 'target' non è definito
+la macro di destinazione ' target ' si espande in nessun modo
 
-La destinazione specificata è una chiamata di una macro che non è stata definita o è un valore null. NMAKE non è in grado di elaborare una destinazione null.
+La destinazione specificata è una chiamata di una macro che non è stata definita o ha un valore null. NMAKE non è in grado di elaborare una destinazione null.

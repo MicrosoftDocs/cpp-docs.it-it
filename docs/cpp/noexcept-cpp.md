@@ -4,12 +4,12 @@ ms.date: 11/19/2019
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: 5e8d58ed246b0143dc3d3be545cd796a4c3d60ed
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: cc669a43ff9acbb98ce970c21cba5ac9cdc5b732
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245620"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161048"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "74245620"
 *espressione costante*<br/>
 Espressione costante di tipo **bool** che indica se il set di tipi di eccezioni potenziali è vuoto. La versione non condizionale equivale a `noexcept(true)`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un' *espressione noexcept* è un tipo di *specifica di eccezione*, un suffisso di una dichiarazione di funzione che rappresenta un set di tipi che potrebbero essere corrispondenti da un gestore di eccezioni per qualsiasi eccezione che esce da una funzione. Operatore condizionale unario `noexcept(`*constant_expression*`)` in cui *constant_expression* restituisce **true**e il relativo sinonimo **non condizionale noexcept**, specifica che il set di potenziali tipi di eccezione che possono uscire da una funzione è vuoto. Ovvero, la funzione non genera mai un'eccezione e non consente mai la propagazione di un'eccezione all'esterno del relativo ambito. L'operatore `noexcept(`*constant_expression*`)` in cui *constant_expression* restituisce **false**o l'assenza di una specifica di eccezione (ad eccezione di un distruttore o di una funzione di deallocazione), indica che il set di potenziali eccezioni che può uscire dalla funzione è il set di tutti i tipi.
 
