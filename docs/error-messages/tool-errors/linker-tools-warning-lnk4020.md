@@ -5,17 +5,17 @@ f1_keywords:
 - LNK4020
 helpviewer_keywords:
 - LNK4020
-ms.openlocfilehash: 7810fd9a97a8f6e22ad362819a024358a9f4b07c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e818909cc0b590b0f7727846cfd7b469e8bc0e3f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298581"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194226"
 ---
 # <a name="linker-tools-warning-lnk4020"></a>Avviso degli strumenti del linker LNK4020
 
-> un record di tipo '*filename*' è danneggiata; alcuni simboli e i tipi potrebbero non essere accessibili dal debugger
+> un record di tipo in '*filename*' è danneggiato. alcuni simboli e tipi potrebbero non essere accessibili dal debugger
 
-Il file PDB *filename* dispone di un record di tipo danneggiato.
+Il *nome* file del file PDB ha un record di tipo danneggiato.
 
-Questo problema è spesso secondario di altri problemi di compilazione; a meno che questo è il primo problema di compilazione segnalati, occuparsi di altri errori e avvisi prima. Se questo è il primo problema segnalato, si potrebbe essere necessario pulire la directory di compilazione e ricompilare il progetto. Se si usano i processi di compilazione in parallelo, vedere se l'errore persiste quando si serializza la compilazione.
+Questo problema è spesso secondario ad altri problemi di compilazione; a meno che non si tratti del primo problema di compilazione segnalato, gestire prima gli altri errori e avvisi. Se questo è il primo problema segnalato, potrebbe essere necessario pulire le directory di compilazione e ricompilare il progetto. Se si usano processi di compilazione paralleli, verificare se l'errore viene mantenuto quando si serializza la compilazione.

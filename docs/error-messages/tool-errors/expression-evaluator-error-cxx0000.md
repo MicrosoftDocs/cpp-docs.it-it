@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0000
 - CXX0000
 ms.assetid: 95a7f17d-88ea-4a6c-a3af-2289bf0529fe
-ms.openlocfilehash: 8bd552b59d9a6fe9dbc128ed7d670c795d7e3819
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 498ea4f218fced461134e24e06e27fbe100c5747
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406210"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196419"
 ---
 # <a name="expression-evaluator-error-cxx0000"></a>Errore dell‘analizzatore di espressioni CXX0000
 
 Nessuna condizione di errore
 
-Si è verificato alcun errore. È possibile continuare il debug normalmente.
+Non si è verificato alcun errore. È possibile continuare il debug normalmente.
 
-Prendere nota delle circostanze e informare il servizio supporto tecnico clienti Microsoft.
+Prendere nota delle circostanze e inviare una notifica al servizio supporto tecnico Microsoft.

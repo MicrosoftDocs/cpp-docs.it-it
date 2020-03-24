@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: d9a32fbf961e980633635f277a76955a706a4b0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c685a1ca3195ad4ab52bab8b5d32b1a51534b24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213783"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196575"
 ---
 # <a name="command-line-warning-d9041"></a>Avviso della riga di comando D9041
 
-valore non valido 'value' per '/Option'; Supponendo che "value"; aggiungere ' /ANALYZE ' alle opzioni della riga di comando quando si specifica questo avviso
+valore ' value ' non valido per '/opzione '; si presuppone ' value '; aggiungere '/analyze ' alle opzioni della riga di comando quando si specifica questo avviso
 
-È stato aggiunto un numero di avviso di analisi del codice per il **/wd**, **/we**, **/wo**, oppure **/wl** opzione della riga di comando senza specificare anche il **/ANALYZE** opzione della riga di comando. Per risolvere questo errore, aggiungere il **/ANALYZE** opzione della riga di comando oppure rimuovere il numero di avviso non valida dal appropriato **/w** opzione della riga di comando.
+È stato aggiunto un numero di avviso di analisi del codice all'opzione della riga di comando **/WD.** , **/we**, **/wo**o **/WL** senza specificare anche l'opzione della riga di comando **/Analyze** . Per risolvere il problema, aggiungere l'opzione della riga di comando **/Analyze** oppure rimuovere il numero di avviso non valido dall'opzione della riga di comando **/w** appropriata.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio di riga di comando seguente genera l'avviso D9041:
+L'esempio di riga di comando seguente genera l'avviso D9041:
 
 ```
 cl /EHsc /LD /wd6001 filename.cpp
 ```
 
-Per risolvere il problema, aggiungere il **/ANALYZE** opzione della riga di comando. Se **/ANALYZE** non è supportato nella versione del compilatore, rimuovere il numero di avviso non valida dalle **/wd** opzione.
+Per risolvere il problema, aggiungere l'opzione della riga di comando **/Analyze** . Se **/Analyze** non è supportato nella versione del compilatore, rimuovere il numero di avviso non valido dall'opzione **/WD.** .
 
 ## <a name="see-also"></a>Vedere anche
 

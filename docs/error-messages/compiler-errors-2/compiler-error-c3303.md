@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3303
 ms.assetid: c6f6ea3d-f6b7-4401-8bbb-f283a2c05540
-ms.openlocfilehash: cc42fb710df8c8cce4cef98f5d9dc591b63b8373
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e802c4c085efd5051d7e8efcd67c7d53a354d99
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222440"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201357"
 ---
 # <a name="compiler-error-c3303"></a>Errore del compilatore C3303
 

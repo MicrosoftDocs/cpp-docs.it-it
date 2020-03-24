@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - R6026
 ms.assetid: 7ea751f8-fc20-46ab-99ef-84c95ca0b6b4
-ms.openlocfilehash: 28e541b61b6381cd283578a0ce1909e5b39a4a53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0f2f6371933d118bf52328726fb2c68907c2666
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151916"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197184"
 ---
 # <a name="c-runtime-error-r6026"></a>Errore di runtime di C R6026
 
 spazio insufficiente per l'inizializzazione stdio
 
 > [!NOTE]
-> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema di memoria interna. Esistono diversi motivi possibili per questo errore, ma in genere è causato da una condizione di memoria estremamente bassa. Può essere causato anche da un bug nell'app, dal danneggiamento delle librerie Visual C++ che utilizza o da un driver.
+> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché presenta un problema di memoria interna. Questo errore può essere dovuto a diversi motivi, ma in genere è dovuto a una condizione di memoria estremamente insufficiente. Può anche essere causato da un bug nell'app, dal danneggiamento delle librerie visive C++ utilizzate o da un driver.
 >
 > Per risolvere questo errore, è possibile provare questi passaggi:
 >
-> - Chiudere le altre applicazioni in esecuzione oppure riavviare il computer per liberare memoria.
-> - Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
-> - Se l'app funzionava in modo corretto prima di un'installazione recente di un'altra app o il driver, usare il **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per rimuovere il nuova app o il driver e provare di nuovo l'app.
-> - Usare il **App e funzionalità** oppure **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare tutte le copie di Microsoft Visual C++ Redistributable.
+> - Chiudere le altre applicazioni in esecuzione o riavviare il computer per liberare memoria.
+> - Utilizzare la pagina **app e funzionalità** o **programmi e funzionalità** nel **Pannello di controllo** per ripristinare o reinstallare il programma.
+> - Se l'app funzionava prima di un'installazione recente di un'altra app o driver, usare la pagina **app e funzionalità** o **programmi e funzionalità** nel **Pannello di controllo** per rimuovere la nuova app o il driver, quindi riprovare a eseguire l'app.
+> - Utilizzare la pagina **app e funzionalità** o **programmi e funzionalità** nel **Pannello di controllo** per ripristinare o reinstallare tutte le copie di Microsoft Visual C++ Redistributable.
 > - Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
-> - Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+> - Verificare la presenza di una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
 
 **Informazioni per i programmatori**
 
-Questo errore si verifica quando non è disponibile memoria sufficiente inizializzare il supporto dei / o standard nel runtime di C. Questo errore si verifica in genere all'avvio dell'app. Verificare che l'app e i driver e le DLL che vengono caricati non danneggino l'heap all'avvio.
+Questo errore si verifica quando non è disponibile memoria sufficiente per inizializzare il supporto di I/O standard nel runtime C. Questo errore si verifica in genere all'avvio dell'app. Verificare che l'app e i driver e le dll caricati non danneggino l'heap all'avvio.

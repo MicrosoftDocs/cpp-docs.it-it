@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-ms.openlocfilehash: cbade3ce8686c8c293b8d40a73c546805e42215d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c497347689bcfc5528280bd22aa5183d5fafd61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399980"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197004"
 ---
 # <a name="c-runtime-error-r6035"></a>Errore di runtime di C R6035
 
-Microsoft Visual C++ libreria di Runtime R6035 errore - un modulo in questa applicazione sta inizializzando il cookie di sicurezza globale del modulo mentre è attiva una funzione di basarsi su tale cookie di sicurezza.  Chiamata di security_init_cookie in precedenza.
+Microsoft Visual C++ Runtime Library, Error R6035: un modulo in questa applicazione sta inizializzando il cookie di sicurezza globale del modulo mentre è attiva una funzione che si basa su tale cookie di sicurezza.  Chiamare __security_init_cookie in precedenza.
 
-[security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) deve essere chiamato prima del primo utilizzo del cookie di sicurezza globale.
+[__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) necessario chiamare prima del primo utilizzo del cookie di sicurezza globale.
 
-Il cookie di sicurezza globale viene usato per la protezione da sovraccarico del buffer nel codice compilato con [/GS (controllo sicurezza Buffer)](../../build/reference/gs-buffer-security-check.md) e nel codice che usa la gestione delle eccezioni strutturata. In pratica, in ingresso a una funzione protetta da sovraccarico, il cookie viene inserito nello stack e in uscita, il valore dello stack viene confrontato con il cookie globale. Eventuali differenze tra di essi indica che si è verificato un sovraccarico del buffer e che comporta la terminazione immediata del programma.
+Il cookie di sicurezza globale viene usato per la protezione del sovraccarico del buffer nel codice compilato con [/GS (controllo di sicurezza del buffer)](../../build/reference/gs-buffer-security-check.md) e nel codice che usa la gestione strutturata delle eccezioni. In sostanza, all'ingresso in una funzione protetta da sovraccarico, il cookie viene inserito nello stack e, all'uscita, il valore dello stack viene confrontato con il cookie globale. Eventuali differenze tra di essi indicano che si è verificato un sovraccarico del buffer e comporta la chiusura immediata del programma.
 
-R6035 di errore indica che una chiamata a `__security_init_cookie` è stato effettuato dopo che è stata immessa una funzione protetta. Se l'esecuzione continua, verrebbe rilevato un sovraccarico del buffer non corretto perché il cookie nello stack non è più corrisponderebbe il cookie globale.
+Errore R6035 indica che è stata effettuata una chiamata a `__security_init_cookie` dopo l'immissione di una funzione protetta. Se l'esecuzione continua, viene rilevato un sovraccarico del buffer non corretto perché il cookie nello stack non corrisponde più al cookie globale.
 
-Considerare il seguente esempio DLL. Il punto di ingresso DLL è impostato su DllEntryPoint tramite il linker [/ENTRY (simbolo del punto di ingresso)](../../build/reference/entry-entry-point-symbol.md) opzione. Ciò consente di ignorare l'inizializzazione di CRT che normalmente Inizializza il cookie di sicurezza globale, in modo che la DLL deve chiamare `__security_init_cookie`.
+Si consideri il seguente esempio di DLL. Il punto di ingresso della DLL è impostato su DllEntryPoint tramite l'opzione del linker [/entry (simbolo del punto di ingresso)](../../build/reference/entry-entry-point-symbol.md) . Questa operazione ignora l'inizializzazione di CRT che in genere Inizializza il cookie di sicurezza globale, quindi la DLL deve chiamare `__security_init_cookie`.
 
 ```
 // Wrong way to call __security_init_cookie
@@ -42,7 +42,7 @@ void DllInitialize() {
 }
 ```
 
-In questo esempio verrà generato l'errore R6035 poiché DllEntryPoint Usa la gestione delle eccezioni strutturata e Usa quindi il cookie di sicurezza per rilevare i sovraccarichi del buffer. Una volta che DllInitialize viene chiamato, il cookie di sicurezza globale è già stato inserito nello stack.
+Questo esempio genera l'errore R6035 poiché DllEntryPoint usa la gestione strutturata delle eccezioni e pertanto usa il cookie di sicurezza per rilevare i sovraccarichi del buffer. Al momento della chiamata a DllInitialize, il cookie di sicurezza globale è già stato inserito nello stack.
 
 In questo esempio viene illustrato il modo corretto:
 
@@ -63,10 +63,10 @@ void DllEntryHelper() {
 }
 ```
 
-In questo caso, non è protetto DllEntryPoint dai sovraccarichi del buffer (non dispone di alcun buffer di stringhe locali e non Usa gestione strutturata delle eccezioni); di conseguenza, può chiamare in modo sicuro `__security_init_cookie`. Quindi chiama una funzione helper che è protetta.
+In questo caso, DllEntryPoint non è protetto da sovraccarichi del buffer (non contiene buffer di stringa locali e non usa la gestione strutturata delle eccezioni); Pertanto, può chiamare in modo sicuro `__security_init_cookie`. Viene quindi chiamata una funzione helper protetta.
 
 > [!NOTE]
->  Messaggio di errore è R6035 CRT debug solo generati da x86 e solo per la gestione strutturata delle eccezioni, ma la condizione di un errore in tutte le piattaforme e per tutte le forme di eccezione gestisce, ad esempio gestione delle eccezioni C++.
+>  Il messaggio di errore R6035 viene generato solo dalla libreria CRT di debug x86 e solo per la gestione delle eccezioni strutturata, ma la condizione è un errore in tutte le piattaforme e per tutte le forme C++ di gestione delle eccezioni, ad esempio eh.
 
 ## <a name="see-also"></a>Vedere anche
 

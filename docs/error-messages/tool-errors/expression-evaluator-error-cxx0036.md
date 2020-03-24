@@ -7,35 +7,35 @@ helpviewer_keywords:
 - CXX0036
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 164fd9ee00071e218e5bb4f3ab00febc618725a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397029"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195500"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Errore dell‘analizzatore di espressioni CXX0036
 
-contesto non valido {...} specification
+contesto non valido {...} specifica
 
-Questo messaggio può essere generato da uno qualsiasi dei numerosi errori nell'uso dell'operatore di contesto (**{}**).
+Questo messaggio può essere generato da diversi errori nell'utilizzo dell'operatore di contesto ( **{}** ).
 
-- La sintassi dell'operatore di contesto (**{}**) è stato specificato in modo errato.
+- La sintassi dell'operatore di contesto ( **{}** ) è stata assegnata in modo errato.
 
-   La sintassi dell'operatore di contesto è:
+   La sintassi dell'operatore di contesto è la seguente:
 
-     {*function*,*module*,*dll*}*expression*
+     {*Function*,*Module*,*dll*} *espressione*
 
-   Specifica il contesto di *espressione*. L'operatore di contesto è la stessa precedenza e l'utilizzo come un cast di tipo.
+   Specifica il contesto dell' *espressione*. L'operatore di contesto ha la stessa precedenza e l'utilizzo di un cast di tipo.
 
-   È possibile omettere le virgole finali. Se una qualsiasi delle *funzione*, *modulo*, o *dll* contiene una virgola letterale, è necessario racchiudere l'intero nome tra parentesi.
+   Le virgole finali possono essere omesse. Se una *funzione*, un *modulo*o una *dll* contiene una virgola letterale, è necessario racchiudere l'intero nome tra parentesi.
 
-- Il nome della funzione sia stato digitato in modo non corretto o non esiste nel modulo o libreria a collegamento dinamico.
+- Il nome della funzione è stato digitato in modo errato o non esiste nel modulo specificato o nella libreria a collegamento dinamico.
 
-   Perché C è un linguaggio di distinzione maiuscole/minuscole *funzione* deve essere specificato esattamente del caso con è definito nell'origine.
+   Poiché C è un linguaggio con distinzione tra maiuscole e minuscole, la *funzione* deve essere specificata nel caso esatto in cui è definita nell'origine.
 
-- Modulo o della DLL non è stata trovata.
+- Impossibile trovare il modulo o la DLL.
 
-   Controllare il nome e percorso completo del modulo specificato o della DLL.
+   Verificare il nome percorso completo del modulo o della DLL specificata.
 
-Questo errore è identico all'errore CAN0036.
+Questo errore è identico a CAN0036.

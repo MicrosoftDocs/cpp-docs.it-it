@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 7dbe4381465036bdd102b3be753a18451886a3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166256"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160684"
 ---
 # <a name="typename"></a>typename
 
-Nelle definizioni di modello, fornisce un suggerimento al compilatore che un identificatore sconosciuto è un tipo. Nell'elenco di parametri di modello, viene utilizzato per specificare un parametro di tipo.
+Nelle definizioni di modello, fornisce un suggerimento al compilatore che un identificatore sconosciuto è un tipo. Negli elenchi di parametri di modello, viene usato per specificare un parametro di tipo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,11 +23,11 @@ Nelle definizioni di modello, fornisce un suggerimento al compilatore che un ide
 typename identifier;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa parola chiave deve essere usata se un nome nella definizione di un modello è un nome completo che dipende da un argomento del modello. è facoltativo se il nome completo non è dipendente. Per altre informazioni, vedere [modelli e risoluzione dei nomi](../cpp/templates-and-name-resolution.md).
+Questa parola chiave deve essere usata se un nome in una definizione di modello è un nome completo che dipende da un argomento di modello; è facoltativo se il nome completo non è dipendente. Per altre informazioni, vedere [modelli e risoluzione dei nomi](../cpp/templates-and-name-resolution.md).
 
-**TypeName** può essere usato da qualsiasi tipo in un punto qualsiasi in una definizione o dichiarazione di modello. Non è consentita nell'elenco di classi base, a meno che non sia un argomento di modello in una classe base del modello.
+**typeName** può essere usato da qualsiasi tipo in qualsiasi posizione in una dichiarazione o definizione di modello. Non è consentita nell'elenco di classi base, a meno che non sia un argomento di modello in una classe base del modello.
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-Il **nomeTipo** parola chiave è anche utilizzabile al posto di **classe** negli elenchi di parametri di modello. Ad esempio, le istruzioni seguenti sono semanticamente equivalenti:
+La parola chiave **typeName** può essere usata anche al posto della **classe** negli elenchi di parametri di modello. Ad esempio, le istruzioni seguenti sono semanticamente equivalenti:
 
 ```cpp
 template<class T1, class T2>...

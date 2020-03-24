@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0011
 - CXX0011
 ms.assetid: c2252e89-ad66-43fc-93e4-b886dcbd3f19
-ms.openlocfilehash: b22b7e39fc2d7436d83bc4fa7cfec49a42ddf06a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68b6087d28b9b3ac5dbaf833cbd544ca4ea22132
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397198"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196157"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>Errore dell‘analizzatore di espressioni CXX0011
 
-manca una parentesi quadra chiusa
+parentesi quadra chiusa mancante
 
-L'espressione contiene un utilizzo non equilibrato delle parentesi quadre. Digitare di nuovo l'espressione tra parentesi quadre bilanciate.
+L'espressione contiene parentesi quadre non bilanciate. Digitare nuovamente l'espressione con parentesi quadre bilanciate.
 
-Questo errore è identico all'errore CAN0011.
+Questo errore è identico a CAN0011.

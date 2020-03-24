@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a259b80b941e37e0c3040ad55894c114fe4bc82
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312154"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160528"
 ---
-# <a name="unhook"></a>__unhook
+# <a name="__unhook"></a>__unhook
 
 Dissocia un metodo del gestore da un evento.
 
@@ -39,27 +39,27 @@ long  __unhook(
 
 #### <a name="parameters"></a>Parametri
 
-**&** *SourceClass* `::` *EventMethod* un puntatore al metodo dell'evento da cui eseguire l'unhook metodo del gestore eventi:
+**&** *SourceClass* `::` *EventMethod* un puntatore al metodo dell'evento da cui si sgancia il metodo del gestore eventi:
 
 - Eventi C++ nativi: *SourceClass* è la classe dell'origine evento e *EventMethod* è l'evento.
 
-- Eventi COM: *SourceClass* è l'interfaccia di origine evento e *EventMethod* è uno dei relativi metodi.
+- Eventi COM: *SourceClass* è l'interfaccia dell'origine evento e *EventMethod* è uno dei relativi metodi.
 
 - Eventi gestiti: *SourceClass* è la classe dell'origine evento e *EventMethod* è l'evento.
 
 *interface*<br/>
-Il nome dell'interfaccia è sottoposto ad unhook da *ricevitore*, solo per i ricevitori di eventi COM in cui il *layout_dependent* parametro la [event_receiver](../windows/attributes/event-receiver.md) attributo è **true**.
+Il nome dell'interfaccia viene disassociato dal *ricevitore*, solo per i ricevitori di eventi com in cui il parametro *layout_dependent* dell'attributo [event_receiver](../windows/attributes/event-receiver.md) è **true**.
 
 *source*<br/>
-Puntatore a un'istanza dell'origine evento. A seconda del codice `type` specificato in `event_receiver`, *origine* può essere uno dei seguenti:
+Puntatore a un'istanza dell'origine evento. A seconda del codice `type` specificato in `event_receiver`, l' *origine* può essere una delle seguenti:
 
 - Un puntatore a un oggetto di origine dell'evento nativo.
 
-- Un `IUnknown`-basato su puntatore (origine COM).
+- Puntatore basato su `IUnknown`(origine COM).
 
 - Un puntatore a un oggetto gestito (per gli eventi gestiti).
 
-**&** *ReceiverClass* `::` `HandlerMethod` un puntatore al metodo del gestore eventi per cui eseguire l'unhook da un evento. Il gestore di è specificato come un metodo di una classe o un riferimento allo stesso; Se non si specifica il nome della classe, **unhook** presuppone che la classe sia che in cui viene chiamato.
+**&** *ReceiverClass* `::` `HandlerMethod` un puntatore al metodo del gestore eventi per essere disassociato da un evento. Il gestore viene specificato come metodo di una classe o un riferimento allo stesso oggetto. Se non si specifica il nome della classe, **__unhook** presuppone che la classe sia quella in cui viene chiamata.
 
 - Eventi C++ nativi: *ReceiverClass* è la classe del ricevitore di eventi e `HandlerMethod` è il gestore.
 
@@ -67,27 +67,27 @@ Puntatore a un'istanza dell'origine evento. A seconda del codice `type` specific
 
 - Eventi gestiti: *ReceiverClass* è la classe del ricevitore di eventi e `HandlerMethod` è il gestore.
 
-*ricevitore*(facoltativo) un puntatore a un'istanza della classe del ricevitore di eventi. Se non si specifica un ricevitore, il valore predefinito è la classe del ricevitore o la struttura in cui **unhook** viene chiamato.
+*Receiver*(facoltativo) puntatore a un'istanza della classe Receiver dell'evento. Se non si specifica un destinatario, il valore predefinito è la classe o la struttura del ricevitore in cui viene chiamato **__unhook** .
 
-## <a name="usage"></a>Utilizzo
+## <a name="usage"></a>Uso
 
 Può essere utilizzato in qualunque ambito della funzione, incluso il principale, all'esterno della classe del ricevitore di eventi.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Utilizzare la funzione intrinseca **unhook** in un ricevitore di eventi per dissociare o "eseguire l'unhook" un metodo del gestore da un metodo dell'evento.
+Usare la funzione intrinseca **__unhook** in un ricevitore di eventi per annullare l'associazione o "scollegare" un metodo del gestore da un metodo di evento.
 
-Esistono tre forme di **unhook**. Nella maggior parte dei casi, è possibile utilizzare la prima tipologia (a quattro argomenti). È possibile utilizzare la seconda tipologia (a due argomenti) di **unhook** solo per un ricevitore di eventi COM; questo viene eseguito l'unhook dell'intera interfaccia eventi. È possibile utilizzare la terza tipologia (a un argomento) per eseguire l'unhook di tutti i delegati dall'origine specificata.
+Esistono tre tipi di **__unhook**. Nella maggior parte dei casi, è possibile utilizzare la prima tipologia (a quattro argomenti). È possibile utilizzare il secondo formato (a due argomenti) di **__unhook** solo per un ricevitore di eventi com. Questa operazione sgancia l'intera interfaccia evento. È possibile utilizzare la terza tipologia (a un argomento) per eseguire l'unhook di tutti i delegati dall'origine specificata.
 
 Un valore restituito diverso da zero indica che si è verificato un errore (gli eventi gestiti generano un'eccezione).
 
-Se si chiama **unhook** per un evento e il gestore eventi che non sono già collegati, avrà alcun effetto.
+Se si chiama **__unhook** su un evento e un gestore eventi che non sono già collegati, non avrà alcun effetto.
 
 In fase di compilazione, il compilatore verifica l'esistenza dell'evento ed effettua il controllo del tipo di parametro con il gestore specificato.
 
-Fatta eccezione per eventi COM, **hook** e **unhook** può essere chiamato all'esterno del ricevitore di eventi.
+Fatta eccezione per gli eventi COM, è possibile chiamare **__hook** e **__unhook** all'esterno del ricevitore di eventi.
 
-Un'alternativa all'uso **unhook** consiste nell'usare l'operatore-=.
+Un'alternativa all'utilizzo di **__unhook** consiste nell'utilizzare l'operatore-=.
 
 Per informazioni sulla codifica di eventi gestiti nella nuova sintassi, vedere [evento](../extensions/event-cpp-component-extensions.md).
 
@@ -96,7 +96,7 @@ Per informazioni sulla codifica di eventi gestiti nella nuova sintassi, vedere [
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [gestione degli eventi in C++ nativo](../cpp/event-handling-in-native-cpp.md) e [gestione degli eventi in COM](../cpp/event-handling-in-com.md) per gli esempi.
+Per esempi, vedere [gestione C++ degli eventi in modalità nativa](../cpp/event-handling-in-native-cpp.md) e [gestione degli eventi in com](../cpp/event-handling-in-com.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C4651
 ms.assetid: f1ea82aa-4dc1-4972-b55a-57fdb962f0dd
-ms.openlocfilehash: 01e2472a547e73eda5fcc56952949a0d9611029f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc8131665c970c3b86bb1e84e39636ae8f93897b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393519"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199542"
 ---
 # <a name="compiler-warning-level-1-c4651"></a>Avviso del compilatore (livello 1) C4651
 
-'definizione' specificato per l'intestazione precompilata ma non per la compilazione corrente
+' Definition ' specificato per l'intestazione precompilata ma non per la compilazione corrente
 
-La definizione è stata specificata quando è stato generato l'intestazione precompilata, ma non in questa compilazione.
+La definizione è stata specificata quando è stata generata l'intestazione precompilata, ma non in questa compilazione.
 
-La definizione sarà attivo all'interno dell'intestazione precompilata, ma non nella parte restante del codice.
+La definizione verrà applicata all'interno dell'intestazione precompilata, ma non nel resto del codice.
 
-Se è stata creata un'intestazione precompilata con /DSYMBOL, il compilatore genera questo avviso se la compilazione di /Yu non ha /DSYMBOL.  Aggiungere /DSYMBOL alla riga di comando /Yu risolve l'avviso.
+Se un'intestazione precompilata è stata compilata con/DSYMBOL, il compilatore genererà questo avviso se la compilazione/Yu non ha/DSYMBOL.  L'aggiunta di/DSYMBOL alla riga di comando di/Yu risolve questo avviso.

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2856
 ms.assetid: fe616c51-124e-49e3-9dd8-883ec1660680
-ms.openlocfilehash: 1e515f250c8ab9d1008ded91b99176f1d86d7cd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c88610607083ecfaf5f20cd585b479991fa51b44
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406847"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201882"
 ---
 # <a name="compiler-error-c2856"></a>Errore del compilatore C2856
 
-\#pragma hdrstop non può trovarsi all'interno di un blocco #if
+\#pragma hdrstop non può trovarsi all'interno di un blocco di #if
 
-Il `hdrstop` pragma non può essere inserito all'interno del corpo di un blocco di compilazione condizionale.
+Impossibile inserire il pragma `hdrstop` all'interno del corpo di un blocco di compilazione condizionale.
 
-Spostare il `#pragma hdrstop` istruzione su un'area che non è inclusa in un `#if/#endif` blocco.
+Spostare l'istruzione `#pragma hdrstop` in un'area non inclusa in un blocco di `#if/#endif`.

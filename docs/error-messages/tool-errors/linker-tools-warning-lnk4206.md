@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-ms.openlocfilehash: dc81df89609f59834c8a3271dd64f3b99b281f90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1758fffb72e183e8a186d115b2b3f3b30c32e047
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395079"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193876"
 ---
 # <a name="linker-tools-warning-lnk4206"></a>Avviso degli strumenti del linker LNK4206
 
-> informazioni sul tipo precompilato non trovati. «*filename*' non collegato o sovrascritto; oggetto collegato senza informazioni di debug
+> informazioni sul tipo precompilato non trovate; '*filename*' non collegato o sovrascritto; oggetto collegato senza informazioni di debug
 
-Il *nomefile* file oggetto compilati con [/Yc](../../build/reference/yc-create-precompiled-header-file.md), non è stato specificato nel comando collegamento o è stato sovrascritto.
+Il file oggetto *filename* , compilato tramite [/YC](../../build/reference/yc-create-precompiled-header-file.md), non è stato specificato nel comando di collegamento o è stato sovrascritto.
 
-Uno scenario comune per questo avviso è quando il file obj che è stato compilato con /Yc si trova in una libreria e in cui non sono presenti riferimenti a simboli per tale obj dal codice.  In tal caso, il linker non usare (o persino visualizzare) il file con estensione obj.  In questo caso, è necessario ricompilare il codice e utilizzare [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) per gli oggetti compilati con [/Yu](../../build/reference/yu-use-precompiled-header-file.md).
+Uno scenario comune per questo avviso è quando il. obj compilato con/YC si trova in una libreria e dove non vi sono riferimenti a simboli. obj dal codice.  In tal caso, il linker non utilizzerà o visualizzerà il file obj.  In questa situazione è necessario ricompilare il codice e usare [/YL](../../build/reference/yl-inject-pch-reference-for-debug-library.md) per gli oggetti compilati usando [/Yu](../../build/reference/yu-use-precompiled-header-file.md).

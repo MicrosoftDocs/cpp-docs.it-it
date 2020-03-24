@@ -7,23 +7,23 @@ helpviewer_keywords:
 - CXX0015
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19cf47d6b7b718eb19b987bcc16854af3266069b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397146"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196066"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Errore dell‘analizzatore di espressioni CXX0015
 
-espressione troppo complessa (overflow dello stack)
+espressione troppo complessa (stack overflow)
 
-L'espressione immessa è troppo complesso o annidata troppo profondamente la quantità di spazio di archiviazione disponibile per l'analizzatore di espressioni C.
+L'espressione immessa è troppo complessa o annidata troppo profondamente per la quantità di spazio di archiviazione disponibile per l'analizzatore di espressioni C.
 
-Overflow si verifica in genere a causa di troppe operazioni in sospeso.
+L'overflow si verifica in genere a causa di un numero eccessivo di calcoli in sospeso.
 
-Modificare l'espressione in modo che ogni componente dell'espressione può essere valutata quando viene rilevata, anziché dover attendere altre parti dell'espressione deve essere calcolato.
+Ridisporre l'espressione in modo che ogni componente dell'espressione possa essere valutato mentre viene rilevato, anziché dover attendere che vengano calcolate altre parti dell'espressione.
 
 Suddividere l'espressione in più comandi.
 
-Questo errore è identico all'errore CAN0015.
+Questo errore è identico a CAN0015.
