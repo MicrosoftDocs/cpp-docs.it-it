@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4220
 ms.assetid: ba0cddfc-9c56-4a09-8207-f7b840a24b4d
-ms.openlocfilehash: d21be7e32eb133f031545d8186ad638461570693
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed572f0bb18e4b5a515f1512bd1001f7f21d8c93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410187"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183072"
 ---
 # <a name="linker-tools-warning-lnk4220"></a>Avviso degli strumenti del linker LNK4220
 
-valido 'opzione del linker' valore 'value'; impostazione predefinita
+' valore ' value ' non valido ' opzione del linker '; presupposto predefinito
 
-Un valore di out-of-range è stato specificato con il [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) opzione. Il valore predefinito per **/TLBID** è 1.
+È stato specificato un valore non compreso nell'intervallo con l'opzione [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) . Il valore predefinito per **/TLBID** è 1.

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0004
 ms.assetid: 1858769f-0be4-40ed-ab70-2cee550488c7
-ms.openlocfilehash: ad11e5b81ec31e1ac8a47a0a0ffa31a443f1a107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66fccc0d5095373d44b823334402f3188dd1777e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359761"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192913"
 ---
 # <a name="project-build-error-prj0004"></a>Errore di compilazione progetto PRJ0004
 
-> Impossibile generare la riga di comando per il '*strumento*' dello strumento.
+> Non è stato possibile generare la riga di comando per lo strumento "*strumento*".
 
-Sono state specificate una o più proprietà in modo da rendere la sintassi della chiamata a *strumento* non valido:
+Una o più proprietà sono state specificate in modo tale da rendere non valida la sintassi della chiamata a *Tool* :
 
-- Era possibile specificare le macro non corretto o sconosciute.
+- È possibile che siano state specificate macro non formattate correttamente o sconosciute.
 
-- Il computer potrebbe essere insufficiente spazio su disco.
+- Lo spazio su disco disponibile nel computer potrebbe essere insufficiente.
 
-Si consiglia di rivedere le impostazioni per lo strumento, esaminare i [pagina delle proprietà della riga di comando](../../build/reference/command-line-property-pages.md).
+È possibile esaminare le impostazioni per lo strumento esaminando la [pagina delle proprietà della riga di comando](../../build/reference/command-line-property-pages.md).

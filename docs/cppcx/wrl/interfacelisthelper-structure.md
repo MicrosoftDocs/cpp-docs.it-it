@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-ms.openlocfilehash: 03bfed00147daef22fe91e6f061ea6720834090f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a7b4c19bbcdd4161e9078274f18f96a48f9e7d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396034"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213850"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper (struttura)
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,7 +48,7 @@ Parametro di modello 0, che è obbligatorio.
 Parametro di modello 1, che per impostazione predefinita non è specificato.
 
 *T2*<br/>
-Parametro di modello 2, che per impostazione predefinita non è specificato. Il terzo parametro di modello.
+Parametro di modello 2, che per impostazione predefinita non è specificato. Terzo parametro di modello.
 
 *T3*<br/>
 Parametro di modello 3, che per impostazione predefinita non è specificato.
@@ -71,19 +71,19 @@ Parametro di modello 8, che per impostazione predefinita non è specificato.
 *T9*<br/>
 Parametro di modello 9, che per impostazione predefinita non è specificato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Compila un `InterfaceList` tipo applicando gli argomenti di parametro di modello specificato in modo ricorsivo.
+Compila un tipo di `InterfaceList` riapplicando in modo ricorsivo gli argomenti specificati per il parametro di modello.
 
-Il **InterfaceListHelper** modello Usa il parametro di modello *T0* per definire il primo membro di dati in un `InterfaceList` struttura, quindi in modo ricorsivo e si applica il  **InterfaceListHelper** modello per i rimanenti parametri del modello. **InterfaceListHelper** si interrompe quando non sono presenti parametri di modello rimanenti.
+Il modello **InterfaceListHelper** usa il parametro di modello *T0* per definire il primo membro dati in una struttura di `InterfaceList` e quindi applica in modo ricorsivo il modello **InterfaceListHelper** a tutti i parametri di modello rimanenti. **InterfaceListHelper** si interrompe quando non sono presenti parametri di modello rimanenti.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`TypeT`|Un sinonimo del tipo InterfaceList.|
+|`TypeT`|Sinonimo del tipo di interfacet.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -93,7 +93,7 @@ Il **InterfaceListHelper** modello Usa il parametro di modello *T0* per definire
 
 **Intestazione:** Implements. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
 ## <a name="see-also"></a>Vedere anche
 

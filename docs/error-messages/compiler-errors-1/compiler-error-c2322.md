@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2322
 ms.assetid: f9b92005-618a-42d8-80e9-67ce769a9f3b
-ms.openlocfilehash: 496c4dc746140777edbc1e0a9db894b50a279cb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d33b939a03748fe6ac8a016fd62cc719b4e93c95
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174318"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206206"
 ---
 # <a name="compiler-error-c2322"></a>Errore del compilatore C2322
 

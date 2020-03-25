@@ -6,34 +6,34 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 3c66cf58ce1f8b83b2b3308c8dabba6cf8cdf0ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175550"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210977"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Associazione dinamica di colonne nel provider
 
-Assicurarsi che ciò che occorre associazione dinamica di colonne. Potrebbe essere necessaria, perché:
+Verificare che sia effettivamente necessaria l'associazione di colonne dinamiche. Potrebbe essere necessario perché:
 
-- Le colonne di set di righe non sono definite in fase di compilazione.
+- Le colonne del set di righe non sono definite in fase di compilazione.
 
-- Si supporta un elemento, ad esempio segnalibro a cui vengono aggiunte colonne.
+- È supportato un elemento, ad esempio segnalibro, che aggiunge colonne.
 
 ## <a name="to-implement-dynamic-column-binding"></a>Per implementare l'associazione dinamica di colonne
 
-1. Rimuovere qualsiasi elemento `PROVIDER_COLUMN_MAP`s dal codice.
+1. Rimuovere tutti i `PROVIDER_COLUMN_MAP`dal codice.
 
-1. Nel record utente (la struttura), aggiungere la dichiarazione seguente:
+1. Nel record utente (struttura) aggiungere la dichiarazione seguente:
 
     ```cpp
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. Implementare il `GetColumnInfo` (funzione). Questa funzione definisce la modalità di archiviazione di informazioni. Si potrebbe essere necessario ottenere le proprietà o altre informazioni per questa funzione. Si potrebbe voler creare una macro simile al [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro, aggiungere le proprie informazioni.
+1. Implementare la funzione `GetColumnInfo`. Questa funzione definisce il modo in cui vengono archiviate le informazioni. Potrebbe essere necessario ottenere proprietà o altre informazioni per questa funzione. Potrebbe essere necessario creare una macro, simile alla [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro, per aggiungere informazioni personalizzate.
 
-   L'esempio seguente mostra un `GetColumnInfo` (funzione).
+   Nell'esempio seguente viene illustrata una funzione `GetColumnInfo`.
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero

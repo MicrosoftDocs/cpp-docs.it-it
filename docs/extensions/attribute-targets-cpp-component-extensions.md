@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516146"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172620"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>Destinazioni degli attributi (C++/CLI e C++/CX)
 
@@ -193,7 +193,7 @@ Di seguito è riportato un elenco di destinazioni degli attributi valide:
     };
     ```
 
-In genere, un attributo precede direttamente l'elemento del linguaggio a cui si applica. In alcuni casi, tuttavia, la posizione di un attributo non è sufficiente per determinare la relativa destinazione prevista. Si consideri l'esempio seguente:
+In genere, un attributo precede direttamente l'elemento del linguaggio a cui si applica. In alcuni casi, tuttavia, la posizione di un attributo non è sufficiente per determinare la relativa destinazione prevista. Considerare questo esempio:
 
 ```cpp
 [Attr] int MyFn(double x)...
@@ -250,7 +250,7 @@ Un identificatore di utilizzo degli attributi si applica solo all'attributo imme
 
 ## <a name="example"></a>Esempio
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 
 In questo esempio viene illustrato come specificare più destinazioni.
 

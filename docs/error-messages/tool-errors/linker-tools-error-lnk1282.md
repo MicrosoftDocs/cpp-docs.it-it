@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1282
 ms.assetid: 99c13f52-eb80-46ce-a5b9-4537583e32a9
-ms.openlocfilehash: 79bfdd9920cbd17af85705530e819316017b0db1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe4edc95eb08e23d8acd0cab5acee4b4dde5683
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183631"
 ---
 # <a name="linker-tools-error-lnk1282"></a>Errore degli strumenti del linker LNK1282
 
-non è possibile /REBASE ' file '; è stato firmato
+Impossibile/REBASE il file; è stata firmata
 
-Si è tentato di modificare l'indirizzo di base di un assembly firmato con l'opzione per /REBASE [editbin](../../build/reference/editbin-reference.md). A tale scopo, modificare prima di tutto l'indirizzo di base e quindi firmare l'assembly.
+Si è tentato di modificare l'indirizzo di base di un assembly firmato con l'opzione/REBASE per [editbin)](../../build/reference/editbin-reference.md). A tale scopo, modificare prima l'indirizzo di base e quindi firmare l'assembly.

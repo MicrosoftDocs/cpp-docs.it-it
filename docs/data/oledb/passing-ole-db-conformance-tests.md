@@ -8,27 +8,27 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eda4dccda147ddd4776bb56e649f539a7550abd1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282816"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209776"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Superamento dei test di conformità OLE DB
 
-Per rendere più coerenti con i provider, Data Access SDK fornisce un set di test di conformità OLE DB. I test verificare tutti gli aspetti del provider e consentono una ragionevole garanzia che il provider funziona come previsto. È possibile trovare i test di conformità OLE DB in Microsoft Data Access SDK. Questa sezione è incentrata su cosa che fare per superare il test della conformità. Per informazioni sull'esecuzione dei test di conformità OLE DB, vedere il SDK.
+Per rendere i provider più coerenti, l'SDK di accesso ai dati fornisce un set di test di conformità OLE DB. I test controllano tutti gli aspetti del provider e assicurano che il provider funzioni come previsto. È possibile trovare i test di conformità OLE DB in Microsoft Data Access SDK. Questa sezione è incentrata sulle operazioni da eseguire per superare i test di conformità. Per informazioni sull'esecuzione dei test di conformità OLE DB, vedere l'SDK.
 
-## <a name="running-the-conformance-tests"></a>Esecuzione di test della conformità
+## <a name="running-the-conformance-tests"></a>Esecuzione dei test di conformità
 
-In Visual C++ 6.0, i modelli di provider OLE DB aggiunta una serie di funzioni hook per consentire all'utente di controllare i valori e le proprietà. La maggior parte di queste funzioni sono state aggiunte in risposta ai test di conformità.
+In Visual C++ 6,0, i modelli di provider OLE DB aggiungono una serie di funzioni di hook che consentono di controllare i valori e le proprietà. La maggior parte di queste funzioni è stata aggiunta in risposta ai test di conformità.
 
 > [!NOTE]
-> È necessario aggiungere diverse funzioni di convalida per il provider passare i test di conformità OLE DB.
+> È necessario aggiungere diverse funzioni di convalida per il provider per superare i test di conformità del OLE DB.
 
-Questo provider richiede due routine di convalida. La prima routine, `CRowsetImpl::ValidateCommandID`, fa parte della classe del set di righe. Viene chiamato durante la creazione del set di righe mediante i modelli di provider. L'esempio Usa questa routine per comunicare ai consumer che non supporta gli indici. La prima chiamata è per `CRowsetImpl::ValidateCommandID` (si noti che il provider utilizza il `_RowsetBaseClass` typedef aggiunto la mappa dell'interfaccia `CCustomRowset` in [supporto dei bookmark nel Provider di](../../data/oledb/provider-support-for-bookmarks.md), in modo da non dover digitare tale riga lunga del modello argomenti). Restituire quindi DB_E_NOINDEX successivamente, se il parametro di indice non è NULL (ciò indica che l'utente vuole usare un indice su Stati Uniti). Per altre informazioni sugli ID di comando, vedere la specifica OLE DB e cercare `IOpenRowset::OpenRowset`.
+Questo provider richiede due routine di convalida. La prima routine, `CRowsetImpl::ValidateCommandID`, fa parte della classe del set di righe. Viene chiamato durante la creazione del set di righe dai modelli di provider. Nell'esempio questa routine viene utilizzata per indicare ai consumer che non supporta gli indici. La prima chiamata consiste nel `CRowsetImpl::ValidateCommandID` (si noti che il provider usa il typedef `_RowsetBaseClass` aggiunto nella mappa dell'interfaccia per `CCustomRowset` nel [supporto del provider per i segnalibri](../../data/oledb/provider-support-for-bookmarks.md), pertanto non è necessario digitare la riga estesa degli argomenti di modello). Successivamente, restituire DB_E_NOINDEX se il parametro di indice non è NULL (indica che l'utente desidera utilizzare un indice in USA). Per ulteriori informazioni sugli ID comando, vedere la specifica OLE DB e cercare `IOpenRowset::OpenRowset`.
 
-Il codice seguente è il `ValidateCommandID` routine di convalida:
+Il codice seguente è la routine di convalida `ValidateCommandID`:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -48,11 +48,11 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-La chiamata di modelli di provider di `OnPropertyChanged` metodo ogni volta che un utente modifica una proprietà nel gruppo di DBPROPSET_ROWSET. Se si desidera gestire le proprietà di altri gruppi, aggiungerli all'oggetto appropriato (vale a dire, DBPROPSET_SESSION passeranno `CCustomSession` classe).
+I modelli di provider chiamano il metodo `OnPropertyChanged` ogni volta che un utente modifica una proprietà nel gruppo DBPROPSET_ROWSET. Se si desidera gestire le proprietà per altri gruppi, aggiungerle all'oggetto appropriato, ovvero DBPROPSET_SESSION controlli vengono inseriti nella classe `CCustomSession`.
 
-Il codice di verifica innanzitutto se la proprietà è collegata a un altro. Se la proprietà deve essere incatenata, imposta la proprietà DBPROP_BOOKMARKS su `True`. Appendice C della specifica OLE DB contiene informazioni sulle proprietà. Queste informazioni anche indicano se la proprietà viene concatenata a un altro.
+Il codice verifica prima di tutto se la proprietà è collegata a un'altra. Se la proprietà viene concatenata, imposta la proprietà DBPROP_BOOKMARKS su `True`. L'Appendice C della specifica OLE DB contiene informazioni sulle proprietà. Queste informazioni indicano anche se la proprietà è concatenata a un'altra.
 
-È possibile anche aggiungere il `IsValidValue` routine al codice. I modelli chiamano `IsValidValue` durante il tentativo di impostare una proprietà. È necessario sostituire questo metodo se è necessaria un'ulteriore elaborazione quando si imposta un valore della proprietà. È possibile avere uno dei metodi seguenti per ogni set di proprietà.
+Potrebbe anche essere necessario aggiungere la routine `IsValidValue` al codice. I modelli chiamano `IsValidValue` quando si tenta di impostare una proprietà. È necessario eseguire l'override di questo metodo se è necessaria un'elaborazione aggiuntiva quando si imposta un valore della proprietà. È possibile disporre di uno di questi metodi per ogni set di proprietà.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Aggiunta, aggiornamento ed eliminazione di record (ODBC)'
+title: 'Recordset: aggiunta, aggiornamento ed eliminazione di record (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14fc26709541135e80a2e0fe4de872cc75221874
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395625"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213005"
 ---
-# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset: Aggiunta, aggiornamento ed eliminazione di record (ODBC)
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset: aggiunta, aggiornamento ed eliminazione di record (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
-
-> [!NOTE]
->  È ora possibile aggiungere i record in blocco in modo più efficiente. Per altre informazioni, vedere [Recordset: Aggiunta di record nel blocco (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
 > [!NOTE]
->  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  È ora possibile aggiungere i record in blocco in modo più efficiente. Per ulteriori informazioni, vedere [Recordset: aggiunta di record in blocco (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
 
-Dynaset e aggiornabili snapshot consentono di aggiungere, modificare (aggiornamento) ed eliminare record. Questo argomento viene illustrato:
+> [!NOTE]
+>  Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se si utilizza il recupero di righe bulk, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+
+Gli snapshot e i dynaset aggiornabili consentono di aggiungere, modificare (aggiornare) ed eliminare record. In questo argomento:
 
 - [Come determinare se il recordset è aggiornabile](#_core_determining_whether_your_recordset_is_updatable).
 
@@ -45,31 +45,31 @@ Dynaset e aggiornabili snapshot consentono di aggiungere, modificare (aggiorname
 
 - [Come eliminare un record](#_core_deleting_a_record_from_a_recordset).
 
-Per altre informazioni sull'esecuzione degli aggiornamenti e come vengono visualizzati gli aggiornamenti ad altri utenti, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). In genere, quando si aggiungere, modificare o eliminare un record, il set di record viene modificato l'origine dati immediatamente. È anche possibile raggruppare gli aggiornamenti correlati in transazioni. Se è in corso una transazione, l'aggiornamento non è definitivo finché non si esegue il commit della transazione. In questo modo è possibile riportare o il rollback delle modifiche. Per informazioni sulle transazioni, vedere [transazione (ODBC)](../../data/odbc/transaction-odbc.md).
+Per ulteriori informazioni sul modo in cui vengono eseguiti gli aggiornamenti e sul modo in cui gli aggiornamenti vengono visualizzati ad altri utenti, vedere [Recordset: aggiornamento dei record (ODBC) dei recordset](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). In genere, quando si aggiunge, modifica o Elimina un record, il recordset modifica immediatamente l'origine dati. È invece possibile raggruppare in batch i gruppi di aggiornamenti correlati nelle transazioni. Se è in corso una transazione, l'aggiornamento non diventa finale fino a quando non si esegue il commit della transazione. In questo modo è possibile eseguire il rollback o il rollback delle modifiche. Per informazioni sulle transazioni, vedere [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
-Nella tabella seguente vengono riepilogate le opzioni disponibili per i recordset con caratteristiche di aggiornamento diversi.
+Nella tabella seguente sono riepilogate le opzioni disponibili per i recordset con caratteristiche di aggiornamento diverse.
 
-### <a name="recordset-readupdate-options"></a>Opzioni di lettura/aggiornamento di recordset
+### <a name="recordset-readupdate-options"></a>Opzioni di lettura/aggiornamento Recordset
 
-|Tipo|Lettura|Modifica record|Eliminazione del record|Aggiungi nuovo (aggiungere)|
+|Type|Lettura|Modifica record|Elimina record|Aggiungi nuovo (Accodamento)|
 |----------|----------|-----------------|-------------------|------------------------|
-|Sola lettura|Y|N|N|N|
-|Solo l'accodamento|Y|N|N|Y|
-|Completamente aggiornabile|Y|Y|Y|Y|
+|Sola lettura|S|N|N|N|
+|Solo Accodamento|S|N|N|S|
+|Completamente aggiornabile|S|S|S|S|
 
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> Determinare se il Recordset è aggiornabile
+##  <a name="determining-whether-your-recordset-is-updateable"></a><a name="_core_determining_whether_your_recordset_is_updatable"></a>Determinare se il recordset è aggiornabile
 
-Un oggetto recordset è aggiornabile se l'origine dati sia aggiornabile ed è stato aperto il recordset in aggiornabili. Relativo aggiornabilità dipende inoltre l'istruzione SQL si usa, le funzionalità del driver ODBC, e se la libreria di cursori ODBC è in memoria. È possibile aggiornare un'origine dati o recordset sola lettura.
+Un oggetto recordset è aggiornabile se l'origine dati è aggiornabile e il recordset è stato aperto come aggiornabile. L'aggiornamento dipende inoltre dall'istruzione SQL utilizzata, dalle funzionalità del driver ODBC e dal fatto che la libreria di cursori ODBC sia in memoria. Non è possibile aggiornare un recordset o un'origine dati di sola lettura.
 
 #### <a name="to-determine-whether-your-recordset-is-updatable"></a>Per determinare se il recordset è aggiornabile
 
-1. Chiamare il metodo dell'oggetto recordset [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) funzione membro.
+1. Chiamare la funzione membro [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) dell'oggetto recordset.
 
-   `CanUpdate` Restituisce un valore diverso da zero se il recordset è aggiornabile.
+   Se il recordset è aggiornabile, `CanUpdate` restituisce un valore diverso da zero.
 
-Per impostazione predefinita, vengono completamente aggiornabili recordset (è possibile eseguire `AddNew`, `Edit`, e `Delete` operazioni). Ma è anche possibile usare la [appendOnly](../../mfc/reference/crecordset-class.md#open) opzione per aprire recordset aggiornabili. Un recordset aperto in questo modo consente solo l'aggiunta di nuovi record con `AddNew`. È possibile modificare o eliminare i record esistenti. È possibile verificare se un recordset è aperto solo per l'aggiunta chiamando il [CanAppend](../../mfc/reference/crecordset-class.md#canappend) funzione membro. `CanAppend` Restituisce un valore diverso da zero se il recordset è aggiornabile o completamente aperto solo per l'aggiunta.
+Per impostazione predefinita, i recordset sono completamente aggiornabili (è possibile eseguire operazioni di `AddNew`, `Edit`e `Delete`). È anche possibile usare l'opzione [appendOnly](../../mfc/reference/crecordset-class.md#open) per aprire i recordset aggiornabili. Un recordset aperto in questo modo consente solo l'aggiunta di nuovi record con `AddNew`. Non è possibile modificare o eliminare i record esistenti. È possibile verificare se un recordset è aperto solo per l'accodamento chiamando la funzione membro [CanAppend](../../mfc/reference/crecordset-class.md#canappend) . `CanAppend` restituisce un valore diverso da zero se il recordset è completamente aggiornabile o aperto solo per l'accodamento.
 
-Il codice seguente illustra come è possibile usare `CanUpdate` per un oggetto recordset denominato `rsStudentSet`:
+Nel codice seguente viene illustrato come utilizzare `CanUpdate` per un oggetto recordset denominato `rsStudentSet`:
 
 ```cpp
 if( !rsStudentSet.Open( ) )
@@ -82,29 +82,29 @@ if( !rsStudentSet.CanUpdate( ) )
 ```
 
 > [!CAUTION]
->  Quando ci si prepara aggiornare un recordset chiamando `Update`, prestare attenzione che il recordset includa tutte le colonne che costituiscono la chiave primaria della tabella (o tutte le colonne di un indice univoco nella tabella). In alcuni casi, il framework può usare solo le colonne selezionate nel set di record per identificare i record nella tabella da aggiornare. Senza tutte le colonne necessari, potrebbe essere aggiornato più record nella tabella, compromettere l'integrità referenziale della tabella. In questo caso, il framework genera eccezioni quando si chiama `Update`.
+>  Quando si prepara l'aggiornamento di un recordset chiamando `Update`, prestare attenzione che il recordset includa tutte le colonne che costituiscono la chiave primaria della tabella o tutte le colonne di qualsiasi indice univoco nella tabella. In alcuni casi, il Framework può utilizzare solo le colonne selezionate nel recordset per identificare il record nella tabella da aggiornare. Senza tutte le colonne necessarie, più record potrebbero essere aggiornati nella tabella, danneggiando l'integrità referenziale della tabella. In questo caso, il Framework genera eccezioni quando si chiama `Update`.
 
-##  <a name="_core_adding_a_record_to_a_recordset"></a> Aggiungere un Record a un Recordset
+##  <a name="adding-a-record-to-a-recordset"></a><a name="_core_adding_a_record_to_a_recordset"></a>Aggiunta di un record a un recordset
 
-È possibile aggiungere nuovi record a un oggetto recordset se relativi [CanAppend](../../mfc/reference/crecordset-class.md#canappend) funzione membro restituisce un valore diverso da zero.
+È possibile aggiungere nuovi record a un recordset se la funzione membro [CanAppend](../../mfc/reference/crecordset-class.md#canappend) restituisce un valore diverso da zero.
 
-#### <a name="to-add-a-new-record-to-a-recordset"></a>Per aggiungere un nuovo record a un set di record
+#### <a name="to-add-a-new-record-to-a-recordset"></a>Per aggiungere un nuovo record a un recordset
 
-1. Assicurarsi che il recordset è abilitato per le aggiunte.
+1. Verificare che il recordset sia accodabile.
 
-1. Chiamare il metodo dell'oggetto recordset [AddNew](../../mfc/reference/crecordset-class.md#addnew) funzione membro.
+1. Chiamare la funzione membro [AddNew](../../mfc/reference/crecordset-class.md#addnew) dell'oggetto recordset.
 
-   `AddNew` Prepara il recordset di agire come buffer di modifica. Tutti i membri dati di campo vengono impostati sul valore speciale Null e contrassegnati come non modificate (dirty) stati modificati soltanto i valori vengono scritti nell'origine dati quando si chiama [Update](../../mfc/reference/crecordset-class.md#update).
+   `AddNew` prepara il recordset affinché funga da buffer di modifica. Tutti i membri dati di campo vengono impostati sul valore speciale null e contrassegnati come invariati, in modo che vengano scritti nell'origine dati solo i valori modificati (Dirty) quando si chiama [Update](../../mfc/reference/crecordset-class.md#update).
 
-1. Impostare i valori dei membri dati di campo del nuovo record.
+1. Impostare i valori dei membri dati del campo del nuovo record.
 
-   Assegnare valori ai membri dati del campo. Questi che non vengono assegnate non vengono scritte nell'origine dati.
+   Assegnare i valori ai membri dati del campo. Quelli non assegnati non vengono scritti nell'origine dati.
 
-1. Chiamare il metodo dell'oggetto recordset `Update` funzione membro.
+1. Chiamare la funzione membro `Update` dell'oggetto recordset.
 
-   `Update` completa l'aggiunta mediante la scrittura del nuovo record nell'origine dati. Per informazioni sugli effetti se non si riesce a chiamare `Update`, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` completa l'aggiunta scrivendo il nuovo record nell'origine dati. Per informazioni sui casi in cui si verificano errori durante la chiamata di `Update`, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
-Per informazioni sull'aggiunta di record e su quando i record aggiunti sono visibili nel set di record, vedere [Recordset: Come dei metodi AddNew, Edit e Delete (ODBC) lavoro](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
+Per informazioni sul funzionamento dell'aggiunta dei record e sui casi in cui i record aggiunti sono visibili nel recordset, vedere [Recordset: come usare AddNew, Edit e Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
 
 Nell'esempio seguente viene illustrato come aggiungere un nuovo record:
 
@@ -125,33 +125,33 @@ if( !rsStudent.Update( ) )
 ```
 
 > [!TIP]
->  Per annullare un' `AddNew` o `Edit` chiamare, è sufficiente eseguire un'altra chiamata a `AddNew` o `Edit` oppure chiamare `Move` con le *AFX_MOVE_REFRESH* parametro. I membri dati vengono reimpostati ai valori precedenti e trovano ancora nello `Edit` o `Add` modalità.
+>  Per annullare una chiamata di `AddNew` o `Edit`, è sufficiente effettuare un'altra chiamata a `AddNew` o `Edit` o chiamare `Move` con il parametro *AFX_MOVE_REFRESH* . I membri dati vengono reimpostati sui valori precedenti e si è ancora in modalità `Edit` o `Add`.
 
-##  <a name="_core_editing_a_record_in_a_recordset"></a> Modifica di un Record in un Recordset
+##  <a name="editing-a-record-in-a-recordset"></a><a name="_core_editing_a_record_in_a_recordset"></a>Modifica di un record in un recordset
 
-Se è possibile modificare i record esistenti del recordset [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) funzione membro restituisce un valore diverso da zero.
+È possibile modificare i record esistenti se la funzione membro [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) del recordset restituisce un valore diverso da zero.
 
 #### <a name="to-edit-an-existing-record-in-a-recordset"></a>Per modificare un record esistente in un recordset
 
-1. Assicurarsi che il recordset è aggiornabile.
+1. Verificare che il recordset sia aggiornabile.
 
-1. Scorrere verso il record da aggiornare.
+1. Scorrere fino al record che si desidera aggiornare.
 
-1. Chiamare il metodo dell'oggetto recordset [modifica](../../mfc/reference/crecordset-class.md#edit) funzione membro.
+1. Chiamare la funzione membro [Edit](../../mfc/reference/crecordset-class.md#edit) dell'oggetto recordset.
 
-   `Edit` Prepara il recordset di agire come buffer di modifica. Tutti i membri dati di campo sono contrassegnati in modo che il recordset può indicare in un secondo momento se sono stati modificati. I nuovi valori per i membri del campo modificato i dati vengono scritti nell'origine dati quando si chiama [Update](../../mfc/reference/crecordset-class.md#update).
+   `Edit` prepara il recordset affinché funga da buffer di modifica. Tutti i membri dati di campo sono contrassegnati in modo che il recordset possa determinare in seguito se sono stati modificati. I nuovi valori per i membri dati del campo modificati vengono scritti nell'origine dati quando si chiama [Aggiorna](../../mfc/reference/crecordset-class.md#update).
 
-1. Impostare i valori dei membri dati di campo del nuovo record.
+1. Impostare i valori dei membri dati del campo del nuovo record.
 
-   Assegnare valori ai membri dati del campo. Quelli che non si assegnano valori rimangono invariati.
+   Assegnare i valori ai membri dati del campo. I valori non assegnati rimangono invariati.
 
-1. Chiamare il metodo dell'oggetto recordset `Update` funzione membro.
+1. Chiamare la funzione membro `Update` dell'oggetto recordset.
 
-   `Update` completa la modifica mediante la scrittura del record modificato all'origine dati. Per informazioni sugli effetti se non si riesce a chiamare `Update`, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` completa la modifica scrivendo il record modificato nell'origine dati. Per informazioni sui casi in cui si verificano errori durante la chiamata di `Update`, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 Dopo aver modificato un record, il record modificato rimane il record corrente.
 
-L'esempio seguente mostra un `Edit` operazione. Si presuppone che l'utente è stato spostato in un record che desidera modificare.
+Nell'esempio seguente viene illustrata un'operazione di `Edit`. Si presuppone che l'utente sia stato spostato in un record che desidera modificare.
 
 ```cpp
 rsStudent.Edit( );
@@ -167,39 +167,39 @@ if( !rsStudent.Update( ) )
 ```
 
 > [!TIP]
-> Per annullare un' `AddNew` o `Edit` chiamare, è sufficiente eseguire un'altra chiamata a `AddNew` o `Edit` oppure chiamare `Move` con le *AFX_MOVE_REFRESH* parametro. I membri dati vengono reimpostati ai valori precedenti e trovano ancora nello `Edit` o `Add` modalità.
+> Per annullare una chiamata di `AddNew` o `Edit`, è sufficiente effettuare un'altra chiamata a `AddNew` o `Edit` o chiamare `Move` con il parametro *AFX_MOVE_REFRESH* . I membri dati vengono reimpostati sui valori precedenti e si è ancora in modalità `Edit` o `Add`.
 
-##  <a name="_core_deleting_a_record_from_a_recordset"></a> Eliminazione di un Record da un Recordset
+##  <a name="deleting-a-record-from-a-recordset"></a><a name="_core_deleting_a_record_from_a_recordset"></a>Eliminazione di un record da un recordset
 
-Se è possibile eliminare i record del recordset [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) funzione membro restituisce un valore diverso da zero.
+È possibile eliminare i record se la funzione membro [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) del recordset restituisce un valore diverso da zero.
 
 #### <a name="to-delete-a-record"></a>Per eliminare un record
 
-1. Assicurarsi che il recordset è aggiornabile.
+1. Verificare che il recordset sia aggiornabile.
 
-1. Scorrere verso il record da aggiornare.
+1. Scorrere fino al record che si desidera aggiornare.
 
-1. Chiamare il metodo dell'oggetto recordset [eliminare](../../mfc/reference/crecordset-class.md#delete) funzione membro.
+1. Chiamare la funzione membro [Delete](../../mfc/reference/crecordset-class.md#delete) dell'oggetto recordset.
 
-   `Delete` Contrassegna immediatamente come eliminato sia nel set di record nell'origine dati.
+   `Delete` contrassegna immediatamente il record come eliminato, sia nel recordset che nell'origine dati.
 
-   A differenza `AddNew` e `Edit`, `Delete` non esiste alcun corrispondente `Update` chiamare.
+   A differenza di `AddNew` e `Edit`, `Delete` non ha una chiamata `Update` corrispondente.
 
 1. Scorrere fino a un altro record.
 
    > [!NOTE]
-   >  Quando si sposta nel recordset, non è possibile ignorare i record eliminati. Per altre informazioni, vedere la [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) funzione membro.
+   >  Quando si esegue il passaggio del recordset, i record eliminati potrebbero non essere ignorati. Per ulteriori informazioni, vedere la funzione membro è stata [eliminata](../../mfc/reference/crecordset-class.md#isdeleted) .
 
-L'esempio seguente mostra un `Delete` operazione. Si presuppone che l'utente è stato spostato in un record che l'utente vuole eliminare. Dopo aver `Delete` viene chiamato, è importante spostare in un nuovo record.
+Nell'esempio seguente viene illustrata un'operazione di `Delete`. Si presuppone che l'utente sia stato spostato in un record che l'utente desidera eliminare. Dopo la chiamata di `Delete`, è importante passare a un nuovo record.
 
 ```
 rsStudent.Delete( );
 rsStudent.MoveNext( );
 ```
 
-Per altre informazioni sugli effetti della `AddNew`, `Edit`, e `Delete` funzioni membro, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Per ulteriori informazioni sugli effetti delle funzioni membro `AddNew`, `Edit`e `Delete`, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: blocco di record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset: blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

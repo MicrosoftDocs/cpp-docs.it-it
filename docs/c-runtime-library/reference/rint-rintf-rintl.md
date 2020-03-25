@@ -30,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949259"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170891"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -65,20 +65,20 @@ Le funzioni **rint** restituiscono un valore a virgola mobile che rappresenta l'
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|none|nessuno|
+|± ∞, QNAN, IND|none|none|
 |Valori denormalizzati|EXCEPTION_FLT_UNDERFLOW|none|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Poiché C++ consente l'overload, è possibile chiamare overload di **rint** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C **rint** accetta e restituisce sempre un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Header C++|
 |--------------|--------------|------------------|
 |**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

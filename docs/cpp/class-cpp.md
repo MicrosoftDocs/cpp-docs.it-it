@@ -1,5 +1,5 @@
 ---
-title: class (C++)
+title: Classe (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - class_cpp
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1b9d8f6510dfe15644f0e47cad7e0aecbac36c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331077"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180976"
 ---
-# <a name="class-c"></a>class (C++)
+# <a name="class-c"></a>Classe (C++)
 
-Il **classe** parola chiave dichiara un tipo di classe o definisce un oggetto di un tipo di classe.
+La parola chiave **Class** dichiara un tipo di classe o definisce un oggetto di un tipo di classe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,28 +31,28 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #### <a name="parameters"></a>Parametri
 
-*template-spec*<br/>
-Specifiche facoltative del modello. Per altre informazioni, consultare [modelli](templates-cpp.md).
+*Template-spec*<br/>
+Specifiche facoltative del modello. Per ulteriori informazioni, vedere [modelli](templates-cpp.md).
 
 *class*<br/>
-Il **classe** (parola chiave).
+Parola chiave **Class** .
 
-*ms-decl-spec*<br/>
-Specifica della classe di archiviazione facoltativa. Per altre informazioni, vedere la [declspec](../cpp/declspec.md) (parola chiave).
+*MS-decl-spec*<br/>
+Specifica della classe di archiviazione facoltativa. Per ulteriori informazioni, fare riferimento alla parola chiave [__declspec](../cpp/declspec.md) .
 
-*tag*<br/>
-Nome del tipo assegnato alla classe. Il tag diventa una parola riservata nell'ambito della classe. Il tag è facoltativo. Se omesso, viene definita una classe anonima. Per altre informazioni, vedere [tipi di classe anonimi](../cpp/anonymous-class-types.md).
+*Tag*<br/>
+Nome del tipo assegnato alla classe. Il tag diventa una parola riservata nell'ambito della classe. Il tag è facoltativo. Se omesso, viene definita una classe anonima. Per ulteriori informazioni, vedere [tipi di classe anonimi](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
-Elenco facoltativo delle classi o delle strutture da cui questa classe deriva i relativi membri. Visualizzare [le classi di Base](../cpp/base-classes.md) per altre informazioni. Ogni nome di classe o struttura di base può essere preceduto da un identificatore di accesso ([pubbliche](../cpp/public-cpp.md), [privato](../cpp/private-cpp.md), [protette](../cpp/protected-cpp.md)) e il [virtuale](../cpp/virtual-cpp.md) parola chiave. Vedere la tabella di accesso ai membri nella [controllo dell'accesso ai membri della classe](member-access-control-cpp.md) per altre informazioni.
+Elenco facoltativo delle classi o delle strutture da cui questa classe deriva i relativi membri. Per ulteriori informazioni, vedere [classi di base](../cpp/base-classes.md) . Ogni classe base o nome di struttura può essere preceduto da un identificatore di accesso ([public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [protected](../cpp/protected-cpp.md)) e dalla parola chiave [Virtual](../cpp/virtual-cpp.md) . Per ulteriori informazioni, vedere la tabella di accesso ai membri in [controllo dell'accesso ai membri della classe](member-access-control-cpp.md) .
 
-*member-list*<br/>
-Elenco dei membri della classe. Fare riferimento a [Panoramica della classe membro](../cpp/class-member-overview.md) per altre informazioni.
+*elenco membri*<br/>
+Elenco dei membri della classe. Per ulteriori informazioni, vedere [Cenni preliminari sui membri della classe](../cpp/class-member-overview.md) .
 
 *declarators*<br/>
-Elenco dei dichiaratori che specificano i nomi di una o più istanze del tipo di classe. I dichiaratori possono includere gli elenchi di inizializzatori se tutti i membri dati della classe vengono **pubblica**. Questa situazione è più comune nelle strutture, i cui membri dati sono **pubblica** per impostazione predefinita, rispetto a classi. Visualizzare [panoramica dei dichiaratori](../cpp/overview-of-declarators.md) per altre informazioni.
+Elenco dei dichiaratori che specificano i nomi di una o più istanze del tipo di classe. I dichiaratori possono includere elenchi di inizializzatori se tutti i membri dati della classe sono **pubblici**. Questo è più comune nelle strutture, i cui membri dati sono **pubblici** per impostazione predefinita, rispetto alle classi. Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](../cpp/overview-of-declarators.md) .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni sulle classi in generale, fare riferimento a uno dei seguenti argomenti:
 
@@ -66,7 +66,7 @@ Per ulteriori informazioni sulle classi in generale, fare riferimento a uno dei 
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Per informazioni sulle classi gestite e nelle strutture in C++/CLI e C++/CX, vedere [classi e struct](../extensions/classes-and-structs-cpp-component-extensions.md)
+Per informazioni sulle classi gestite e sugli struct in C++/CLI e C++/CX, vedere [classi e struct](../extensions/classes-and-structs-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Esempio
 

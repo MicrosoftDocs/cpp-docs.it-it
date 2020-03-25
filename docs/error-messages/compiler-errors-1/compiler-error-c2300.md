@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2300
 ms.assetid: bb8fed56-feb0-412b-ae7b-04d48b202b78
-ms.openlocfilehash: c2028f13dc9ec12ced085e097202c4ae3cf940c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf9bac71d3a4bd1d87ef59be512807e0ba02d1da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302436"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206336"
 ---
 # <a name="compiler-error-c2300"></a>Errore del compilatore C2300
 

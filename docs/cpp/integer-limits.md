@@ -7,22 +7,22 @@ helpviewer_keywords:
 - limits.h header file
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
-ms.openlocfilehash: 0d14f6246dd2ec71c4e0b2286bb1f2b3325085b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75cd05e73aba2d2e82e8077e0a289d8b0fae7ec4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183385"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178224"
 ---
 # <a name="integer-limits"></a>Limiti per tipi Integer
 
 **Sezione specifica Microsoft**
 
-I limiti per i tipi Integer sono elencati nella tabella seguente. Questi limiti sono definiti anche nel file di intestazione standard \<Limits. h >.
+I limiti per i tipi Integer sono elencati nella tabella seguente. Questi limiti sono definiti anche nel file di intestazione standard \<limits. h >.
 
 ## <a name="limits-on-integer-constants"></a>Limiti su costanti Integer
 
-|Costante|Significato|Value|
+|Costante|Significato|valore|
 |--------------|-------------|-----------|
 |CHAR_BIT|Numero di bit nella variabile minore che non sia un campo di bit.|8|
 |SCHAR_MIN|Valore minimo per una variabile di tipo **char con segno**.|-128|
@@ -40,9 +40,9 @@ I limiti per i tipi Integer sono elencati nella tabella seguente. Questi limiti 
 |LONG_MIN|Valore minimo per una variabile di tipo **long**.|-2147483648|
 |LONG_MAX|Valore massimo per una variabile di tipo **long**.|2147483647|
 |ULONG_MAX|Valore massimo per una variabile di tipo **unsigned long**.|4294967295 (0xffffffff)|
-|LLONG_MIN|Valore minimo per una variabile di tipo **long long**|-9223372036854775808|
-|LLONG_MAX|Valore massimo per una variabile di tipo **long long**|9223372036854775807|
-|ULLONG_MAX|Valore massimo per una variabile di tipo **long long senza segno**|18446744073709551615 (0xffffffffffffffff)|
+|LLONG_MIN|Valore minimo per una variabile di tipo **Long Long**|-9223372036854775808|
+|LLONG_MAX|Valore massimo per una variabile di tipo **Long Long**|9223372036854775807|
+|ULLONG_MAX|Valore massimo per una variabile di tipo **unsigned long long**|18446744073709551615 (0xffffffffffffffff)|
 
 Se un valore è superiore al massimo valore rappresentabile con il tipo Integer, il compilatore Microsoft genera un errore.
 

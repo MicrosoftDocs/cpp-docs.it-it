@@ -1,22 +1,22 @@
 ---
-title: 'Errore irreversibile U1064 di NMAKE '
+title: Errore irreversibile U1064 di NMAKE
 ms.date: 11/04/2016
 f1_keywords:
 - U1064
 helpviewer_keywords:
 - U1064
 ms.assetid: 7141e66e-cde6-4173-84df-a391f3ebcdd1
-ms.openlocfilehash: 71213391032989e5faf8889761b29194928125a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfc42c458c1932287f17f367d09c4b23c2c201a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367408"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182825"
 ---
-# <a name="nmake-fatal-error-u1064"></a>Errore irreversibile U1064 di NMAKE 
+# <a name="nmake-fatal-error-u1064"></a>Errore irreversibile U1064 di NMAKE
 
 MAKEFILE non trovato e nessuna destinazione specificata
 
-La riga di comando NMAKE non specificava un makefile o una destinazione e la directory corrente non contiene un file denominato MAKEFILE.
+La riga di comando NMAKE non ha specificato un makefile o una destinazione e la directory corrente non contiene un file denominato MAKEFILE.
 
-NMAKE richiede un makefile o una destinazione della riga di comando (o entrambi). Per rendere disponibile un makefile NMAKE, specificare l'opzione /F o inserire un file denominato MAKEFILE nella directory corrente. NMAKE può creare una destinazione della riga di comando usando una regola di inferenza se non viene fornito un makefile.
+Per NMAKE è necessario un makefile o una destinazione da riga di comando (o entrambi). Per rendere disponibile un makefile per NMAKE, specificare l'opzione/F oppure inserire un file denominato MAKEFILE nella directory corrente. NMAKE può creare una destinazione da riga di comando usando una regola di inferenza se non viene fornito un makefile.

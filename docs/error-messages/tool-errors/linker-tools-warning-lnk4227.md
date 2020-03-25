@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-ms.openlocfilehash: fb657719c69445ce23d36ccf04ac4a14db0955e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b75cff4f03370951245bde1b485d538ffdb4007
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182942"
 ---
 # <a name="linker-tools-warning-lnk4227"></a>Avviso degli strumenti del linker LNK4227
 
-> avviso di operazione dei metadati (*HRESULT*): *messaggio_avviso*
+> avviso di operazione sui metadati (*HRESULT*): *warning_message*
 
-Il linker ha rilevato differenze nei metadati durante il merge:
+Il linker ha rilevato differenze dei metadati durante l'Unione:
 
-- Uno o più assembly a cui si fa riferimento all'assembly in fase di compilazione.
+- Uno o più assembly a cui si fa riferimento con l'assembly in fase di compilazione.
 
 - Uno o più file di codice sorgente in una compilazione.
 
-Ad esempio, può essere causato LNK4227 se si dispongono di due funzioni globali con lo stesso nome ma con le informazioni sui parametri dichiarati in modo diverso (vale a dire, le dichiarazioni non sono coerenti in tutti i moduli). Usare ildasm.exe /TEXT /METADATA *object_file* su ogni file obj per vedere come i tipi sono diversi.
+Ad esempio, LNK4227 può essere causato da due funzioni globali con lo stesso nome ma le informazioni sui parametri dichiarate in modo diverso (ovvero, le dichiarazioni non sono coerenti in tutti moduli). Utilizzare Ildasm. exe/TEXT/METADATA *object_file* in ogni file con estensione obj per vedere il modo in cui i tipi sono diversi.
 
-LNK4227 viene inoltre utilizzato per segnalare i problemi che hanno origine con un altro strumento. Cercare il messaggio di avviso per ulteriori informazioni.
+LNK4227 viene usato anche per segnalare i problemi che hanno origine con un altro strumento. Per ulteriori informazioni, cercare il messaggio di avviso.
 
-Per risolvere l'avviso, è necessario correggere i problemi relativi ai metadati.
+È necessario correggere i problemi relativi ai metadati per risolvere l'avviso.
 
 ## <a name="example"></a>Esempio
 
-LNK4227 viene generato quando un assembly di riferimento è stato firmato in modo diverso rispetto all'assembly che fa riferimento a essa.
+LNK4227 viene generato quando un assembly a cui si fa riferimento è stato firmato in modo diverso rispetto all'assembly a cui fa riferimento.
 
-L'esempio seguente genera l'errore LNK4227:
+L'esempio seguente genera l'LNK4227:
 
 ```cpp
 // LNK4227.cpp
@@ -64,9 +64,9 @@ ref class MyClass
 
 ## <a name="example"></a>Esempio
 
-LNK4227 può anche essere generato quando vengono passati i numeri di versione in formato non corretto per gli attributi dell'assembly.  Il ' *' notation è specifico per il `AssemblyVersionAttribute`.  Per risolvere questo problema, usare solo numeri negli attributi di versione diverso da `AssemblyVersionAttribute`.
+LNK4227 può essere generato anche quando i numeri di versione nel formato errato vengono passati agli attributi dell'assembly.  La notazione "*" è specifica del `AssemblyVersionAttribute`.  Per risolvere il problema, usare solo i numeri negli attributi di versione diversi da `AssemblyVersionAttribute`.
 
-L'esempio seguente genera l'errore LNK4227:
+L'esempio seguente genera l'LNK4227:
 
 ```cpp
 // LNK4227e.cpp

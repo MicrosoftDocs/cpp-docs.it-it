@@ -1,5 +1,5 @@
 ---
-title: 'Operatore logico OR: | |'
+title: 'Operatore OR logico: ||'
 ms.date: 06/14/2018
 f1_keywords:
 - '||'
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-ms.openlocfilehash: 5db1af870644d1552aeac813edce0985a31d95b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b2bc024dd7223ac7adacc72924f5ee289bab37
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368682"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178080"
 ---
-# <a name="logical-or-operator-"></a>Operatore logico OR: | |
+# <a name="logical-or-operator-"></a>Operatore OR logico: ||
 
 ## <a name="syntax"></a>Sintassi
 
-> *logical-or-expression* **||** *logical-and-expression*
+> Logical- *or-expression* **||** *Logical-and-Expression*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'operatore logico OR (**||**) restituisce il valore booleano TRUE se uno o entrambi gli operandi è TRUE e restituisce FALSE in caso contrario. Gli operandi verranno convertiti in modo implicito nel tipo **bool** prima della valutazione e il risultato è di tipo **bool**. L'operatore OR logico presenta un'associatività da sinistra a destra.
+L'operatore OR logico ( **||** ) restituisce il valore booleano true se uno o entrambi gli operandi sono true e restituisce false in caso contrario. Gli operandi vengono convertiti in modo implicito nel tipo **bool** prima della valutazione e il risultato è di tipo **bool**. L'operatore OR logico presenta un'associatività da sinistra a destra.
 
 Gli operandi dell'operatore OR logico non devono essere dello stesso tipo, ma devono essere di tipo integrale o di tipo puntatore. Gli operandi sono in genere espressioni di uguaglianza o relazionali.
 
@@ -40,7 +40,7 @@ Nell'esempio precedente, se `x` è uguale a `w`, `y` o a `z`, il secondo argomen
 
 ## <a name="operator-keyword-for-124124"></a>Parola chiave operator per&#124;&#124;
 
-Il **oppure** operatore è l'equivalente testuale di **||**. Esistono due modi per accedere la **o** operatore nei programmi: includere il file di intestazione \<lt;iso646.h&gt >, o eseguire la compilazione con il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).
+L'operatore **or** è il testo equivalente di **||** . Esistono due modi per accedere all'operatore **or** nei programmi: includere il file di intestazione \<iso646. h > o compilare con l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
 
 ## <a name="example"></a>Esempio
 
@@ -64,6 +64,6 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operatori predefiniti C++ la precedenza e associatività degli operatori](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++Precedenza e associatività degli operatori predefiniti](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operatori logici C](../c-language/c-logical-operators.md)

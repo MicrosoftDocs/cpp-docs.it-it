@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939909"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171320"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -75,9 +75,9 @@ Ogni funzione restituisce 0 se il file ha la modalità specificata. La funzione 
 `ENOENT`|Nome file o percorso non trovato.
 `EINVAL`|Parametro non valido.
 
-Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Se utilizzata con i file, la funzione **_access_s** determina se il file specificato esiste ed è possibile accedervi come specificato dal valore di *mode*. Se utilizzata con le directory, **_access_s** determina solo se la directory specificata esiste. In Windows 2000 e nei sistemi operativi successivi, tutte le directory hanno accesso in lettura e scrittura.
 
@@ -88,7 +88,7 @@ Se utilizzata con i file, la funzione **_access_s** determina se il file specifi
 |04|Autorizzazione di lettura.|
 |06|Autorizzazione di lettura e scrittura.|
 
-L'autorizzazione per la lettura o la scrittura del file non è sufficiente per garantire la possibilità di aprire un file. Ad esempio, se un file è bloccato da un altro processo, potrebbe non essere accessibile anche se **_access_s** restituisce 0.
+L'autorizzazione per la lettura o la scrittura del file non è sufficiente per garantire la possibilità di aprire un file. Se, ad esempio, un file è bloccato da un altro processo, potrebbe non essere accessibile anche se **_access_s** restituisce 0.
 
 **_waccess_s** è una versione a caratteri wide di **_access_s**, in cui l'argomento *path* per **_waccess_s** è una stringa di caratteri wide. In caso contrario, **_waccess_s** e **_access_s** si comportano in modo identico.
 

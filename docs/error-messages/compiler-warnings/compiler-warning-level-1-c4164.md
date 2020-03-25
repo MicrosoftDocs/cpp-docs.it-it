@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4164
 ms.assetid: 6d7e4a36-8227-4419-880f-44576033493e
-ms.openlocfilehash: fee06812753c705444a75d0a1c3a3ead9d402f67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c47320d783e6b314fd10c45180464e5a128111cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391803"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176099"
 ---
 # <a name="compiler-warning-level-1-c4164"></a>Avviso del compilatore (livello 1) C4164
 

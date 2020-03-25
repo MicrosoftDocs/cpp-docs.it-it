@@ -6,28 +6,28 @@ helpviewer_keywords:
 - operators [C++], casting
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
-ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: eac274a0207be675b8d13532c3110c6e71bd55c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345092"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190100"
 ---
 # <a name="casting-operators"></a>Operatori di cast
 
 Nel linguaggio C++ sono disponibili numerosi operatori di cast specifici. Tali operatori consentono di rimuovere parte dell'ambiguità e alcuni problemi relativi agli operatori cast obsoleti del linguaggio C. Gli operatori sono i seguenti:
 
-- [dynamic_cast](../cpp/dynamic-cast-operator.md) utilizzato per la conversione dei tipi polimorfici.
+- [dynamic_cast](../cpp/dynamic-cast-operator.md) Utilizzato per la conversione di tipi polimorfici.
 
-- [static_cast](../cpp/static-cast-operator.md) utilizzato per la conversione dei tipi non polimorfici.
+- [static_cast](../cpp/static-cast-operator.md) Utilizzato per la conversione di tipi nonpolymorphic.
 
-- [const_cast](../cpp/const-cast-operator.md) utilizzato per rimuovere il **const**, **volatile**, e **unaligned** attributi.
+- [const_cast](../cpp/const-cast-operator.md) Utilizzato per rimuovere gli attributi **const**, **volatile**e **__unaligned** .
 
-- [reinterpret_cast](../cpp/reinterpret-cast-operator.md) utilizzato per la reinterpretazione semplice dei bit.
+- [reinterpret_cast](../cpp/reinterpret-cast-operator.md) Usato per la riinterpretazione semplice dei bit.
 
-- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) usato in C++/CLI generi codice MSIL verificabile.
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) Utilizzato in C++/CLI per produrre codice MSIL verificabile.
 
-Uso **const_cast** e **reinterpret_cast** come ultima risorsa, poiché questi operatori provocare gli stessi cast obsoleti. Tali operatori sono tuttavia ancora necessari per sostituire completamente gli operatori cast obsoleti.
+Usare **const_cast** e **reinterpret_cast** come ultima risorsa, poiché questi operatori presentano gli stessi rischi dei cast di tipo precedente. Tali operatori sono tuttavia ancora necessari per sostituire completamente gli operatori cast obsoleti.
 
 ## <a name="see-also"></a>Vedere anche
 

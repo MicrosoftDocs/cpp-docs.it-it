@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-ms.openlocfilehash: 74cfd791e8400b788d38f272eed3d421ca4230e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 567286ee24e9df968b2d352489fe12f2735854eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172347"
 ---
 # <a name="generics-and-templates-ccli"></a>Generics e modelli (C++/CLI)
 
@@ -47,7 +47,7 @@ La differenza di base nei generics ha implicazioni per la creazione di applicazi
 
 ## <a name="example"></a>Esempio
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 
 L'esempio seguente illustra in modo semplice l'uso combinato di modelli e generics. In questo esempio la classe template passa il parametro attraverso il tipo generico. L'operazione contraria non è possibile.
 

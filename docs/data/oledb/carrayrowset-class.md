@@ -42,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441719"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212264"
 ---
 # <a name="carrayrowset-class"></a>Classe CArrayRowset
 
@@ -92,7 +92,7 @@ Tipo di classe della funzione di accesso che si desidera venga utilizzata dal se
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|Numero di righe già lette.|
 
-## <a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
 
 Crea un nuovo oggetto `CArrayRowset`.
 
@@ -107,7 +107,7 @@ CArrayRowset(int nMax = 100000);
 *nMax*<br/>
 [in] Numero massimo di righe nel rowset.
 
-## <a name="snapshot"></a>CArrayRowset:: snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset:: snapshot
 
 Legge l'intero rowset in memoria, creandone un'immagine o uno snapshot.
 
@@ -117,7 +117,7 @@ Legge l'intero rowset in memoria, creandone un'immagine o uno snapshot.
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a>Operatore CArrayRowset::
+## <a name="carrayrowsetoperator"></a><a name="operator"></a>Operatore CArrayRowset::
 
 Fornisce la sintassi di tipo matrice per l'accesso a una riga nel set di righe.
 
@@ -143,7 +143,7 @@ Contenuto della riga richiesta.
 
 Se *nrow* supera il numero di righe nel set di righe, viene generata un'eccezione.
 
-## <a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
 
 Contiene il numero di righe nel set di righe già lette.
 

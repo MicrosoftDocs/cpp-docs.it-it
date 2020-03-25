@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4306
 ms.assetid: 5b2192d7-402d-4b6d-8619-08105e7dcac7
-ms.openlocfilehash: 78ec291b555838b1af63287e3d24fdb809afd7c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d200253d304500e10f5fceeade1c8228acde874d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402060"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198887"
 ---
 # <a name="compiler-warning-level-3-c4306"></a>Avviso del compilatore (livello 3) C4306
 
-> «*identifier*': conversione da '*type1*'a'*type2*' di dimensioni maggiori
+> '*Identifier*': conversione da'*tipo1*' a'*tipo2*' di dimensioni maggiori
 
-L'identificatore è di tipo cast a un puntatore di dimensioni maggiori. Divengono bit alti del nuovo tipo sarà riempiti con zero.
+L'identificatore è di tipo cast su un puntatore più grande. I bit massimi non riempiti del nuovo tipo verranno riempiti con zero.
 
 Questo avviso può indicare una conversione indesiderata. Il puntatore risultante potrebbe non essere valido.

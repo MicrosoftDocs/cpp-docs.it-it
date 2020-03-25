@@ -10,12 +10,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397926"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213408"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Compilazione di una casella di riepilogo da un secondo recordset (accesso ai dati MFC)
 
@@ -30,11 +30,11 @@ Il modello per questo argomento è costituito da un recordset primario che inser
 
 1. Creare l'oggetto recordset ([CRecordset](../mfc/reference/crecordset-class.md).
 
-1. Ottenere un puntatore per il [CComboBox](../mfc/reference/ccombobox-class.md) oggetto per il controllo casella combinata.
+1. Ottenere un puntatore all'oggetto [CComboBox](../mfc/reference/ccombobox-class.md) per il controllo casella combinata.
 
 1. Eliminare eventuali dati già presenti nella casella combinata.
 
-1. Spostarsi tra tutti i record del recordset, chiamando [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) per ogni stringa del record corrente si desidera aggiungere alla casella combinata.
+1. Spostarsi tra tutti i record del recordset, chiamando [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) per ogni stringa del record corrente che si desidera aggiungere alla casella combinata.
 
 1. Inizializzare la selezione nella casella combinata.
 

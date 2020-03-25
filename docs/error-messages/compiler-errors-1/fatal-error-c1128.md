@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C1128
 ms.assetid: 6f9580fd-ecef-48be-9780-dcf666704279
-ms.openlocfilehash: bb1d9af10084d6b3e75325450c7f13ea1683ee2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64671c9abe8ed1375df1e91ca7509e6a597366ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229046"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203638"
 ---
 # <a name="fatal-error-c1128"></a>Errore irreversibile C1128
 
-numero di sezioni ha superato il limite di formato file oggetto: compilare con /bigobj
+il numero di sezioni ha superato il limite di formato del file oggetto: compilare con/bigobj
 
-Un file con estensione obj superato il numero di sezioni consentite, un limite del formato file oggetto COFF.
+Un file con estensione obj supera il numero di sezioni consentite, un limite di formato del file oggetto COFF.
 
-Limite può essere il risultato dell'uso [/Gy](../../build/reference/gy-enable-function-level-linking.md) e una build di debug. **/Gy** fa in modo che funzioni da passare nelle rispettive sezioni COMDAT. In una build di debug, è presente una sezione di informazioni di debug per ogni funzione COMDAT.
+La limitazione di questa sezione può essere il risultato dell'utilizzo di [/Gy](../../build/reference/gy-enable-function-level-linking.md) e di una build di debug; **/Gy** fa sì che le funzioni passino nelle rispettive sezioni di COMDAT. In una build di debug è presente una sezione di informazioni di debug per ogni funzione COMDAT.
 
-C1128 può essere causato anche quando sono presenti troppe funzioni inline.
+C1128 può anche essere causato da un numero eccessivo di funzioni inline.
 
-Per correggere questo errore, suddividere il file di origine in più file di codice sorgente, compilare senza **/Gy**, o eseguire la compilazione con [/bigobj (aumenta il numero di sezioni in. File obj)](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md).  Se non si compila con **/Gy**, è necessario specificare le ottimizzazioni individualmente, poiché **/O2** e **/O1** entrambi implica **/Gy**.
+Per correggere l'errore, dividere il file di origine in più file di codice sorgente, compilare senza **/Gy**o compilare con [/bigobj (aumentare il numero di sezioni in. File obj)](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md).  Se non si esegue la compilazione con **/Gy**, sarà necessario specificare le ottimizzazioni singolarmente, poiché **/O2** e **/O1** implicano entrambi **/Gy**.
 
-Se possibile, eseguire la compilazione senza le informazioni di debug.
+Se possibile, compilare senza informazioni di debug.
 
-È necessario anche avere creazioni di istanze specifiche dei modelli nei file di codice sorgente separato, piuttosto che il compilatore generarli.
+Potrebbe anche essere necessario creare creazioni di istanze specifiche di modelli in file di codice sorgente distinti, invece di creare istanze del compilatore.
 
-Durante il porting del codice, C1128 verrà probabilmente visualizzato per primo quando si usa x64 compilatore e molto più tardi con x86 compilatore. x64 avrà almeno 4 sezioni associate con ciascun compilato di funzione **/Gy** o inline da modelli o classi inline: codice, pdata e informazioni di debug e possibilmente xdata.  X86 non avranno pdata.
+Quando si esegue il porting del codice, C1128 viene probabilmente visualizzato per primo quando si usa il compilatore x64 e molto più tardi con il compilatore x86. x64 avrà almeno 4 sezioni associate a ogni funzione compilata **/Gy** o inline da modelli o da classe inline: codice, pdata e informazioni di debug e possibilmente XData.  Per x86 non sarà presente pData.

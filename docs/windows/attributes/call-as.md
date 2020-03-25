@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501799"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167334"
 ---
 # <a name="call_as"></a>call_as
 
@@ -28,13 +28,13 @@ Consente di eseguire il mapping di una funzione [locale](local-cpp.md) a una fun
 *function*<br/>
 Funzione locale che si desidera chiamare quando viene richiamata una funzione remota.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **call_as** C++ ha la stessa funzionalità dell'attributo MIDL di [call_as](/windows/win32/Midl/call-as) .
+L'attributo **call_as** C++ ha la stessa funzionalità dell'attributo [call_as](/windows/win32/Midl/call-as) MIDL.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra come è possibile usare **call_as** per eseguire il mapping di una`f1`funzione non () a una`Remf1`funzione utilizzabile in remoto ():
+Il codice seguente illustra come è possibile usare **call_as** per eseguire il mapping di una funzione non (`f1`) a una funzione utilizzabile in remoto (`Remf1`):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -56,8 +56,8 @@ __interface IMInterface {
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

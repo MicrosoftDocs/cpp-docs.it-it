@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f9b21893bd361d02b3446360b24a97f4d1d1365
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514722"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214409"
 ---
 # <a name="string-editor-c"></a>Editor stringhe (C++)
 
@@ -58,7 +58,7 @@ L' **editor di stringhe** consente di:
 
 1. Aprire la tabella delle stringhe facendo doppio clic sull'icona in [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Andare al menu **modifica** > **trova e Sostituisci** e scegliere **trova**.
+1. Vai a menu **modifica** > **trova e Sostituisci** e scegli **trova**.
 
 1. Nella casella **trova** selezionare una stringa di ricerca precedente dall'elenco a discesa oppure digitare il testo della didascalia o l'identificatore della risorsa della stringa che si desidera trovare.
 
@@ -69,13 +69,13 @@ L' **editor di stringhe** consente di:
 >
 > Digitare un'espressione regolare per trovare la corrispondenza con un modello oppure selezionare il pulsante a destra della casella **trova** per visualizzare un elenco di espressioni di ricerca regolari. Quando si seleziona un'espressione da questo elenco, viene sostituito come testo di ricerca nella casella **trova** .
 >
-> Se si usano le espressioni regolari, assicurarsi di **usare: È selezionata** la casella di controllo espressioni regolari.
+> Se si usano le espressioni regolari, assicurarsi che la casella di controllo **use: Regular Expressions** sia selezionata.
 
 ### <a name="to-add-or-delete-a-string-resource"></a>Per aggiungere o eliminare una risorsa di stringa
 
 È possibile inserire o eliminare rapidamente voci nella tabella di stringhe usando l' **editor di stringhe**. Le nuove stringhe vengono posizionate alla fine della tabella a cui viene assegnato il successivo identificatore disponibile. È possibile modificare le proprietà **ID**, **valore**o **didascalia** nel [finestra Proprietà](/visualstudio/ide/reference/properties-window) in base alle esigenze.
 
-L' **editor di stringhe** verifica che non venga usato un ID già in uso. Se si seleziona un ID già in uso, l' **editor di stringhe** invierà una notifica e quindi si assegnerà un ID univoco `IDS_STRING58113`generico, ad esempio.
+L' **editor di stringhe** verifica che non venga usato un ID già in uso. Se si seleziona un ID già in uso, l' **editor di stringhe** invierà una notifica e quindi si assegnerà un ID univoco generico, ad esempio `IDS_STRING58113`.
 
 #### <a name="to-add-a-string-table-entry"></a>Per aggiungere una voce della tabella di stringhe
 
@@ -142,7 +142,7 @@ Per modificare le proprietà **ID**, **valore**e **didascalia** , è possibile u
 
 1. Nella [finestra Proprietà](/visualstudio/ide/reference/properties-window)Digitare un nuovo valore per la proprietà che si desidera modificare.
 
-1. Premere **INVIO**.
+1. Premere **Invio**.
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Per aggiungere la formattazione o i caratteri speciali a una risorsa di stringa
 
@@ -156,10 +156,10 @@ Per modificare le proprietà **ID**, **valore**e **didascalia** , è possibile u
    |-----------------|---------------|
    | Nuova riga | \\n |
    | Ritorno a capo | \\r |
-   | TAB | \\t |
+   | Scheda | \\t |
    | Barra rovesciata (\\) | \\\\ |
    | Carattere ASCII | \\ddd (notazione ottale) |
-   | Avviso (campana) | \\un |
+   | Avviso (campana) | \\a |
 
    > [!NOTE]
    > L' **editor di stringhe** non supporta il set completo di caratteri ASCI di escape. È possibile usare solo quelli elencati in precedenza.
@@ -171,6 +171,6 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [Editor di risorse](../windows/resource-editors.md)
-[Stringhe](/windows/win32/menurc/strings)<br/>
+[stringhe](/windows/win32/menurc/strings)<br/>
 [Informazioni sulle stringhe](/windows/win32/menurc/about-strings)<br/>
 [Personalizzazione del layout delle finestre](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - configuring ODBC data sources
 - ODBC data sources, represented by CDatabase
 ms.assetid: b246721f-b9e1-49bd-a6c7-f348b8c3d537
-ms.openlocfilehash: b435c65bab565e109d37e1dd24e051993cbb30c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed9eeb8f5ef0d53846761062cf2c6575d2eaf9e6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213302"
 ---
 # <a name="data-source-odbc"></a>Origine dati (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-In termini di database, un'origine dati è un set specifico di dati, le informazioni necessarie per accedere a tali dati e la posizione dell'origine dati, che può essere descritto usando un nome origine dati. Per utilizzare la classe [CDatabase](../../mfc/reference/cdatabase-class.md), l'origine dati deve essere configurata tramite Amministrazione Open Database Connectivity (ODBC). Esempi di origini dati includono un database remoto in esecuzione su Microsoft SQL Server in una rete o un file di Microsoft Access in una directory locale. Dall'applicazione, è possibile accedere a qualsiasi origine dati per cui si ha un driver ODBC.
+In termini di database, un'origine dati è un set di dati specifico, le informazioni necessarie per accedere a tali dati e il percorso dell'origine dati, che può essere descritto utilizzando un nome dell'origine dati. Per utilizzare la classe [CDatabase](../../mfc/reference/cdatabase-class.md), è necessario che l'origine dati sia configurata tramite l'amministratore di Open Database Connectivity (ODBC). Esempi di origini dati includono un database remoto in esecuzione in Microsoft SQL Server in una rete o in un file di Microsoft Access in una directory locale. Dall'applicazione è possibile accedere a qualsiasi origine dati per la quale si dispone di un driver ODBC.
 
-È possibile avere uno o più origini dati nell'applicazione in una sola volta, ognuno rappresentato da un `CDatabase` oggetto. È inoltre più connessioni simultanee a qualsiasi origine dati. È possibile connettersi in remoto, nonché a origini dati locali, a seconda dei driver che è stato installato e le funzionalità del driver ODBC. Per altre informazioni sulle origini dati e l'amministratore ODBC, vedere [ODBC](../../data/odbc/odbc-basics.md) e [Amministratore ODBC](../../data/odbc/odbc-administrator.md).
+È possibile disporre di una o più origini dati attive contemporaneamente nell'applicazione, ciascuna rappresentata da un oggetto `CDatabase`. È inoltre possibile disporre di più connessioni simultanee a qualsiasi origine dati. È possibile connettersi a origini dati locali e remote, a seconda dei driver installati e delle funzionalità dei driver ODBC. Per ulteriori informazioni sulle origini dati e sull'amministratore ODBC, vedere [ODBC](../../data/odbc/odbc-basics.md) e ODBC [Administrator](../../data/odbc/odbc-administrator.md).
 
-Gli argomenti seguenti fornite ulteriori informazioni sulle origini dati:
+Negli argomenti seguenti vengono illustrate altre informazioni sulle origini dati:
 
 - [Origine dati: gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
 

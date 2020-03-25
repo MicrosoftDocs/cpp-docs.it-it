@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514282"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214673"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -23,7 +23,7 @@ Identifica i parametri dei puntatori restituiti dalla routine chiamata alla rout
 [out]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **out** di C++ ha la stessa funzionalità dell'attributo [out](/windows/win32/Midl/out-idl) di MIDL.
 
@@ -39,8 +39,8 @@ Per un'illustrazione dell'uso di [out](bindable.md) , vedere l'esempio per **bin
 |-|-|
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

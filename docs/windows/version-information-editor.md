@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513648"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214370"
 ---
 # <a name="version-information-editor-c"></a>Editor delle informazioni sullaC++versione ()
 
@@ -50,11 +50,11 @@ L' **editor di informazioni sulla versione** consente di:
 
 Selezionare l'elemento una volta per sceglierlo, quindi di nuovo per iniziare a modificarlo. Apportare modifiche direttamente nella tabella **informazioni sulla versione** o nella [finestra Proprietà](/visualstudio/ide/reference/properties-window). Le modifiche verranno riflesse in entrambe le posizioni.
 
-Quando si modifica `FILEFLAGS` la chiave nell' **Editor delle informazioni sulla versione**, si noti che non è possibile impostare le proprietà **debug**, **private build**o **Special Build** nella finestra **Proprietà** per i file RC:
+Quando si modifica la chiave di `FILEFLAGS` nell' **Editor delle informazioni sulla versione**, si noti che non è possibile impostare le proprietà **debug**, **private build**o **Special Build** nella finestra **Proprietà** per i file RC:
 
-   - L' **editor di informazioni sulla versione** imposta la proprietà **debug** con un oggetto `#ifdef` nello script di risorsa, in base al `_DEBUG` flag di compilazione.
+- L' **editor di informazioni sulla versione** imposta la proprietà **Debug** con un `#ifdef` nello script di risorsa, in base al flag di compilazione `_DEBUG`.
 
-  - Se la `Private Build` chiave ha un **valore** impostato nella tabella delle **informazioni sulla versione** , la proprietà di **compilazione privata** corrispondente nella finestra `FILEFLAGS` proprietà della chiave sarà **true**. Se il **valore** è vuoto, la proprietà sarà **false**. Analogamente, la chiave di **compilazione speciale** nella tabella delle **informazioni sulla versione** è associata alla proprietà di **compilazione speciale** per la `FILEFLAGS` chiave.
+- Se la chiave di `Private Build` dispone di un **valore** impostato nella tabella delle **informazioni sulla versione** , la proprietà di **compilazione privata** corrispondente nella finestra **Proprietà** relativa alla chiave `FILEFLAGS` sarà **true**. Se il **valore** è vuoto, la proprietà sarà **false**. Analogamente, la chiave di **compilazione speciale** nella tabella delle **informazioni sulla versione** è associata alla proprietà di **compilazione speciale** per la chiave `FILEFLAGS`.
 
 È possibile ordinare la sequenza di informazioni del blocco di stringhe selezionando le intestazioni di colonna **chiave** o **valore** . Queste intestazioni riordinano automaticamente le informazioni nella sequenza selezionata.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: daa0ae4aea5ff2a1a3312efcf3c39f43b541abf6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514916"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166692"
 ---
 # <a name="module-c"></a>modulo (C++)
 
@@ -28,22 +28,22 @@ Definisce il blocco di libreria nel file IDL.
 *type*<br/>
 Opzionale Può essere uno dei seguenti:
 
-- `dll`Aggiunge funzioni e classi che consentono alla DLL risultante di funzionare come un server COM in-process. Rappresenta il valore predefinito.
+- `dll` aggiunge funzioni e classi che consentono alla DLL risultante di funzionare come un server COM in-process. Si tratta del valore predefinito.
 
-- `exe`Aggiunge funzioni e classi che consentono all'eseguibile risultante di funzionare come un server COM out-of-process.
+- `exe` aggiunge funzioni e classi che consentono all'eseguibile risultante di funzionare come un server COM out-of-process.
 
-- `service`Aggiunge funzioni e classi che consentono all'eseguibile risultante di funzionare come un servizio NT.
+- `service` aggiunge funzioni e classi che consentono all'eseguibile risultante di funzionare come un servizio NT.
 
-- `unspecified`Disabilita l'inserimento di codice ATL correlato all'attributo di modulo: l'inserimento della classe del modulo ATL, l'istanza globale _AtlModule e le funzioni del punto di ingresso. Non disabilita l'inserimento di codice ATL a causa di altri attributi del progetto.
+- `unspecified` Disabilita l'inserimento di codice ATL correlato all'attributo del modulo, ovvero l'inserimento della classe del modulo ATL, dell'istanza globale _AtlModule e delle funzioni del punto di ingresso. Non disabilita l'inserimento di codice ATL a causa di altri attributi del progetto.
 
-*name*<br/>
+*nome*<br/>
 Opzionale Nome del blocco di libreria.
 
 *version*<br/>
 Opzionale Numero di versione che si desidera assegnare al blocco di libreria. Il valore predefinito è 1,0.
 
 *uuid*<br/>
-L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare l' *UUID* del blocco di libreria. a tale scopo, è possibile usare l'identificatore **__uuidof (** *libraryname* **)** .
+L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare l' *UUID* del blocco di libreria. a tale scopo, è possibile utilizzare l'identificatore **__uuidof (** *libraryname* **)** .
 
 *lcid*<br/>
 Il parametro di localizzazione. Per altre informazioni, vedere [lcid](/windows/win32/Midl/lcid) .
@@ -85,7 +85,7 @@ L'ID di risorsa stringa del file RGS utilizzato per registrare l'ID di APP della
 > [!NOTE]
 > Sia il file RGS che la stringa contenente il nome del servizio devono contenere lo stesso valore numerico.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Se non si imposta il parametro *restricted* su [emitidl](emitidl.md), **module** è obbligatorio in qualsiasi programma che usa gli attributi di C++.
 
@@ -154,8 +154,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -166,7 +166,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi autonomi](stand-alone-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[library](/windows/win32/Midl/library)<br/>
+[libreria](/windows/win32/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

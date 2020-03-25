@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3365
 ms.assetid: 875ec3a4-522c-4e3d-9b67-48808b857f6d
-ms.openlocfilehash: fa11ac57205574da29c55344fedb0e996ab30557
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 355c4530fffa89470ac495aff8bc2822278e2da3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300570"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201195"
 ---
 # <a name="compiler-error-c3365"></a>Errore del compilatore C3365
 
 operatore 'operator': operandi differenti di tipo 'type1' e 'type2'
 
-Si è provato a creare delegati con tipi diversi.  Vedere [How to: Definire e usare delegati (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) per altre informazioni sui delegati.
+Si è provato a creare delegati con tipi diversi.  Per ulteriori informazioni sui delegati, vedere [procedura: definire e utilizzare delegatiC++(/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) .
 
 ## <a name="example"></a>Esempio
 

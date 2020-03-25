@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], uuid
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
-ms.openlocfilehash: c121ad99dfbe0021a263f324ccdb9a95441bba33
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 09e40d38382bea0f902fda03d15d24e0cf1a627d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740458"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187804"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 
@@ -26,7 +26,7 @@ Il compilatore associa un GUID a una classe o a una struttura dichiarata o defin
 __declspec( uuid("ComObjectGUID") ) declarator
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **UUID** accetta una stringa come argomento. Questa stringa denomina un GUID nel formato normale del registro di sistema con o senza i delimitatori **{}** . Ad esempio:
 
@@ -35,7 +35,7 @@ struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;
 ```
 
-Tale attributo può essere applicato in una ridichiarazione. Ciò consente alle intestazioni di sistema di fornire le definizioni delle interfacce `IUnknown`, ad esempio, e la ridichiarazione in un'altra intestazione ( \<ad esempio Comdef. h >) per fornire il GUID.
+Tale attributo può essere applicato in una ridichiarazione. Questo consente alle intestazioni di sistema di fornire le definizioni delle interfacce, ad esempio `IUnknown`e la ridichiarazione in un'altra intestazione, ad esempio \<Comdef. h >, per fornire il GUID.
 
 È possibile applicare la parola chiave [__uuidof](../cpp/uuidof-operator.md) per recuperare il GUID costante associato a un tipo definito dall'utente.
 

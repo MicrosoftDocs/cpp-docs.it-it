@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Migliorare le prestazioni con i generics (C++/CLI)'
+title: 'Procedura: migliorare le prestazioni con i genericsC++(/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: 958da08716022bedaa8d0fe217814fa2bd86c065
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515716"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181941"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>Procedura: Migliorare le prestazioni con i generics (C++/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Procedura: migliorare le prestazioni con i genericsC++(/CLI)
 
 Con i generics, è possibile creare codice riutilizzabile basato su un parametro di tipo. Il tipo effettivo del parametro di tipo viene rinviato fino alla chiamata da parte del codice client. Per altre informazioni sui generics, vedere [Generics](generics-cpp-component-extensions.md).
 

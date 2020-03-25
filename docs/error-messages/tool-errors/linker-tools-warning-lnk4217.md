@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: 1301dd53f71c616d7b7af346923a54c42903c9fd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1ce410312493b353bb68ea7264fce9cd6a394e0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450865"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183111"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Avviso degli strumenti del linker LNK4217
 
-> il simbolo '*Symbol*' definito in '*filename_1. obj*' è importato da'*filename_2. obj*' nella funzione '*Function*'
+> il simbolo '*Symbol*' definito in '*filename_1. obj*' viene importato da'*filename_2. obj*' nella funzione '*Function*'
 
-per un simbolo è stato specificato [_ _ declspec (dllimport)](../../cpp/dllexport-dllimport.md) anche se il simbolo è definito in un file oggetto nella stessa immagine. Rimuovere il `__declspec(dllimport)` modificatore per risolvere questo avviso.
+per un simbolo è stato specificato [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) anche se il simbolo è definito in un file oggetto nella stessa immagine. Rimuovere il modificatore `__declspec(dllimport)` per risolvere questo avviso.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 *Symbol* è il nome del simbolo definito all'interno dell'immagine. *Function* è la funzione che importa il simbolo.
 

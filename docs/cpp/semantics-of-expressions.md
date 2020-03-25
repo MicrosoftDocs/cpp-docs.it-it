@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857320"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178849"
 ---
 # <a name="semantics-of-expressions"></a>Semantica delle espressioni
 
@@ -20,7 +20,7 @@ Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei 
 
 ## <a name="order-of-evaluation"></a>Ordine di valutazione
 
-Si consideri l'esempio seguente:
+Considerare questo esempio:
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -69,16 +69,16 @@ Il linguaggio C++ specifica determinate compatibilità quando specifica gli oper
 
 |Tipo previsto|Tipi consentiti|
 |-------------------|-------------------|
-|*type*|*tipo* di `const`<br /> *tipo* di `volatile`<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> *tipo* di `volatile const`<br /> `volatile const` *type*&|
-|*type* \*|*type* \*<br /> `const` *tipo* \*<br /> `volatile` *tipo* \*<br /> `volatile const` *tipo* \*|
-|*tipo* di `const`|*type*<br /> *tipo* di `const`<br />`const` *type*&|
-|*tipo* di `volatile`|*type*<br /> *tipo* di `volatile`<br /> `volatile` *type*&|
+|*type*|*tipo* di `const`<br /> *tipo* di `volatile`<br /> *digitare*&<br /> *tipo* di `const`&<br /> *tipo* di `volatile`&<br /> *tipo* di `volatile const`<br /> *tipo* di `volatile const`&|
+|*digitare* \*|*digitare* \*<br /> *tipo* di `const` \*<br /> *tipo* di `volatile` \*<br /> *tipo* di `volatile const` \*|
+|*tipo* di `const`|*type*<br /> *tipo* di `const`<br />*tipo* di `const`&|
+|*tipo* di `volatile`|*type*<br /> *tipo* di `volatile`<br /> *tipo* di `volatile`&|
 
 Poiché le regole precedenti possono essere sempre utilizzate in combinazione, qualora sia previsto un puntatore, è possibile fornire un puntatore di tipo const a un oggetto di tipo volatile.
 
 ## <a name="ambiguous-expressions"></a>Espressioni ambigue
 
-Alcune espressioni sono ambigue nel relativo significato. Queste espressioni si verificano più frequentemente quando un valore di un oggetto viene modificato più volte nella stessa espressione. Queste espressioni si basano su un ordine particolare di valutazione in cui il linguaggio non ne definisce uno. Si consideri l'esempio seguente:
+Alcune espressioni sono ambigue nel relativo significato. Queste espressioni si verificano più frequentemente quando un valore di un oggetto viene modificato più volte nella stessa espressione. Queste espressioni si basano su un ordine particolare di valutazione in cui il linguaggio non ne definisce uno. Prendere in considerazione gli esempi seguenti:
 
 ```
 int i = 7;

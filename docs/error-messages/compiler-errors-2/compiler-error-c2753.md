@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2753
 ms.assetid: 92bfeeac-524a-4a8e-9a4f-fb8269055826
-ms.openlocfilehash: e13c45cec99e60d8aec7dcc3db8e5a4813ea7de9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea2901c998ac1a44ad142779e7ce48bfffff66c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228783"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202153"
 ---
 # <a name="compiler-error-c2753"></a>Errore del compilatore C2753
 
-«*modello*': la specializzazione parziale non può corrispondere a elenco di argomenti del modello principale
+'*template*': la specializzazione parziale non può corrispondere all'elenco di argomenti per il modello primario
 
-Se l'elenco degli argomenti modello corrisponde all'elenco di parametri, il compilatore considera il modello stesso. Non è consentito definire due volte lo stesso modello.
+Se l'elenco di argomenti del modello corrisponde all'elenco di parametri, il compilatore lo considera come lo stesso modello. Non è consentito definire due volte lo stesso modello.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2753 e viene illustrato un modo per risolvere il problema:
+L'esempio seguente genera C2753 e Mostra un modo per risolverlo:
 
 ```cpp
 // C2753.cpp

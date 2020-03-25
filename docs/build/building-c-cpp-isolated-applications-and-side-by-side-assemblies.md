@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: b7deb68a441d392464dad8763f80bd4d9cdfcb17
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: db2978c054362b6c329fb786d0f7da322d4c9201
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493350"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169877"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Compilazione di applicazioni isolate C/C++ e di assembly side-by-side
 
@@ -22,9 +22,9 @@ Visual Studio supporta un modello di distribuzione per applicazioni client Windo
 
 La creazione di programmi C/C++ come applicazioni isolate presenta numerosi vantaggi. Ad esempio, un'applicazione isolata non è influenzata dall'installazione o disinstallazione di librerie di Visual C++ da parte di altre applicazioni C/C++. Le librerie di Visual C++ usate da applicazioni isolate possono essere comunque ridistribuite nella cartella locale dell'applicazione o tramite installazione nella cache assembly nativa (WinSxS). La manutenzione delle librerie di Visual C++ per le applicazioni già distribuite può essere tuttavia semplificata tramite un [file di configurazione dell'editore](/windows/win32/SbsCs/publisher-configuration). Il modello di distribuzione basato su applicazioni isolate aiuta ad assicurare che le applicazioni C/C++ in esecuzione in un computer specifico usino la versione più recente delle librerie di Visual C++, permettendo comunque al tempo stesso agli amministratori di sistema e agli autori di applicazioni di controllare l'associazione esplicita delle versioni delle applicazioni ai rispettivi file DLL dipendenti.
 
-Questa sezione illustra come creare un'applicazione C/C++ come applicazione isolata e come assicurarne l'associazione alle librerie di Visual C++ tramite un manifesto. Le informazioni contenute in questa sezione si applicano principalmente alle C++ applicazioni native o non gestite. Per informazioni sulla distribuzione di C++ applicazioni native compilate con Visual Studio, vedere Ridistribuzione di [file C++ visivi](../windows/redistributing-visual-cpp-files.md).
+Questa sezione illustra come creare un'applicazione C/C++ come applicazione isolata e come assicurarne l'associazione alle librerie di Visual C++ tramite un manifesto. Le informazioni contenute in questa sezione si applicano principalmente alle C++ applicazioni native o non gestite. Per informazioni sulla distribuzione di C++ applicazioni native compilate con Visual Studio, vedere [ridistribuzione di file visivi C++ ](../windows/redistributing-visual-cpp-files.md).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Concetti di applicazioni isolate e assembly side-by-side](concepts-of-isolated-applications-and-side-by-side-assemblies.md)
 
@@ -34,7 +34,7 @@ Questa sezione illustra come creare un'applicazione C/C++ come applicazione isol
 
 [Procedura: Compilare componenti COM senza registrazione](how-to-build-registration-free-com-components.md)
 
-[Procedura: Compilare applicazioni isolate per l'uso di componenti COM](how-to-build-isolated-applications-to-consume-com-components.md)
+[Procedura: Compilare applicazioni isolate per l'utilizzo di componenti COM](how-to-build-isolated-applications-to-consume-com-components.md)
 
 [Informazioni sulla generazione di manifesti per programmi C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
 

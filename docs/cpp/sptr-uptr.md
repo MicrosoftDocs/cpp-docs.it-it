@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __sptr modifier
 - __uptr modifier
 ms.assetid: c7f5f3b2-9106-4a0b-a6de-d1588ab153ed
-ms.openlocfilehash: 957f744ca6c5a7be807c1dc68fcd2b602b72300e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfa468c96196c417415801239925707c43a49c4e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330959"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178678"
 ---
-# <a name="sptr-uptr"></a>__sptr, __uptr
+# <a name="__sptr-__uptr"></a>__sptr, __uptr
 
 **Sezione specifica Microsoft**
 
-Usare la **sptr** oppure **uptr** modificatore in una dichiarazione di puntatore a 32 bit per specificare come il compilatore converte un puntatore a 32 bit in un puntatore a 64 bit. Un puntatore a 32 bit viene convertito, ad esempio, quando viene assegnato a una variabile puntatore a 64 bit o è dereferenziato su una piattaforma a 64 bit.
+Usare il modificatore **__sptr** o **__uptr** in una dichiarazione di puntatore a 32 bit per specificare il modo in cui il compilatore converte un puntatore a 32 bit in un puntatore a 64 bit. Un puntatore a 32 bit viene convertito, ad esempio, quando viene assegnato a una variabile puntatore a 64 bit o è dereferenziato su una piattaforma a 64 bit.
 
 La documentazione di Microsoft per il supporto delle piattaforme a 64 bit talvolta si riferisce al bit più significativo di un puntatore a 32 bit come il bit di segno. Per impostazione predefinita, il compilatore utilizza l'estensione del segno per convertire un puntatore a 32 bit in un puntatore a 64 bit. Pertanto i 32 bit meno significativi del puntatore a 64 bit vengono impostati sul valore del puntatore a 32 bit e i 32 bit più significativi vengono impostati sul valore di bit di segno del puntatore a 32 bit. Questa conversione produce risultati corretti se il bit di segno è pari a 0, ma non se il bit di segno è pari a 1. Ad esempio, l'indirizzo 0x7FFFFFFF a 32 bit produce l'indirizzo 0x000000007FFFFFFF equivalente a 64 bit, ma l'indirizzo 0x80000000 a 32 bit vien modificato in modo errato in 0xFFFFFFFF80000000.
 
-Il **sptr**, oppure puntatore con segno, modificatore specifica che una conversione del puntatore imposta i bit più significativi di un puntatore a 64 bit sul bit di segno del puntatore a 32 bit. Il **uptr**, oppure puntatore senza segno, modificatore specifica che una conversione imposta i bit più significativi su zero. Le dichiarazioni seguenti mostrano il **sptr** e **uptr** modificatori usati con due puntatori non qualificati, due puntatori qualificati con il [__ptr32](../cpp/ptr32-ptr64.md) tipo e una funzione parametro.
+Il modificatore **__sptr**, o puntatore firmato, specifica che una conversione del puntatore imposta i bit più significativi di un puntatore a 64 bit sul bit di segno del puntatore a 32 bit. Il modificatore **__uptr**, o puntatore senza segno, specifica che una conversione imposta i bit più significativi su zero. Nelle dichiarazioni seguenti vengono illustrati i modificatori **__sptr** e **__uptr** utilizzati con due puntatori non qualificati, due puntatori qualificati con il tipo di [__ptr32](../cpp/ptr32-ptr64.md) e un parametro di funzione.
 
 ```cpp
 int * __sptr psp;
@@ -37,13 +37,13 @@ int * __ptr32 __uptr pup32;
 void MyFunction(char * __uptr __ptr32 myValue);
 ```
 
-Usare la **sptr** e **uptr** modificatori con dichiarazioni del puntatore. Usare i modificatori nella posizione di un [qualificatore di tipo puntatore](../c-language/pointer-declarations.md), ossia il modificatore deve seguire l'asterisco. Non è possibile usare i modificatori con [puntatori a membri](../cpp/pointers-to-members.md). I modificatori non influiscono sulle dichiarazioni di tipo non puntatore.
+Usare i modificatori **__sptr** e **__uptr** con le dichiarazioni di puntatori. Usare i modificatori nella posizione di un [qualificatore di tipo puntatore](../c-language/pointer-declarations.md), il che significa che il modificatore deve seguire l'asterisco. Non è possibile usare i modificatori con [puntatori a membri](../cpp/pointers-to-members.md). I modificatori non influiscono sulle dichiarazioni di tipo non puntatore.
 
-Per garantire la compatibilità con versioni precedenti **_sptr** e **_uptr** sono sinonimi per **sptr** e **uptr** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
+Per compatibilità con le versioni precedenti, **_sptr** e **_uptr** sono sinonimi per **__sptr** e **__uptr** a meno che non sia specificata l'opzione del compilatore [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente dichiara i puntatori a 32 bit che usano il **sptr** e **uptr** modificatori, viene assegnato ciascun puntatore a 32 bit a una variabile puntatore a 64 bit e quindi Visualizza il valore esadecimale di ogni 64 - puntatore di bit. Nell'esempio viene eseguita la compilazione con il compilatore nativo a 64 bit e viene effettuata l'esecuzione su una piattaforma a 64 bit.
+Nell'esempio seguente vengono dichiarati puntatori a 32 bit che usano i modificatori **__sptr** e **__uptr** , assegna ogni puntatore a 32 bit a una variabile puntatore a 64 bit, quindi Visualizza il valore esadecimale di ogni puntatore a 64 bit. Nell'esempio viene eseguita la compilazione con il compilatore nativo a 64 bit e viene effettuata l'esecuzione su una piattaforma a 64 bit.
 
 ```cpp
 // sptr_uptr.cpp

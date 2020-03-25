@@ -2,12 +2,12 @@
 title: Funzioni impostate come predefinite ed eliminate in modo esplicito
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43588aac1d246c83f5281456625eeb0ff36b94d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184326"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179978"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funzioni impostate come predefinite ed eliminate in modo esplicito
 
@@ -15,7 +15,7 @@ In C++11 le funzioni impostate come predefinite e le funzioni eliminate offrono 
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Vantaggi delle funzioni impostate come predefinite e delle funzioni eliminate
 
-In C++ il compilatore genera automaticamente il costruttore predefinito, il costruttore di copia, l'operatore di assegnazione di copia e il distruttore per un tipo se non viene dichiarato. Queste funzioni sono noti come il *funzioni membro speciali*, e sono ciò che rende semplice i tipi definiti dall'utente in C++ si comportano come le strutture in C. Vale a dire, è possibile creare, copiare ed eliminarle definitivamente senza alcun impegno di codifica aggiuntivo. In C++11 è stata introdotta la semantica di spostamento nel linguaggio e aggiunge il costruttore di spostamento e l'operatore di assegnazione di spostamento all'elenco delle funzioni membro speciali che il compilatore è in grado di generare automaticamente.
+In C++ il compilatore genera automaticamente il costruttore predefinito, il costruttore di copia, l'operatore di assegnazione di copia e il distruttore per un tipo se non viene dichiarato. Queste funzioni sono note come *funzioni membro speciali*, che rendono i tipi semplici definiti dall'utente in C++ si comportano come le strutture in C. Ovvero è possibile crearli, copiarli ed eliminarli senza ulteriori sforzi di codifica. In C++11 è stata introdotta la semantica di spostamento nel linguaggio e aggiunge il costruttore di spostamento e l'operatore di assegnazione di spostamento all'elenco delle funzioni membro speciali che il compilatore è in grado di generare automaticamente.
 
 Ciò risulta utile per i tipi semplici, ma i tipi complessi stessi definiscono spesso una o più funzioni membro speciali e questo può impedire la generazione automatica di altre funzioni membro speciali. In pratica:
 
@@ -43,7 +43,7 @@ Ciò risulta utile per i tipi semplici, ma i tipi complessi stessi definiscono s
 >
 > In entrambi i casi, in Visual Studio si continua automaticamente a generare le funzioni necessarie in modo implicito e non viene generato alcun avviso.
 
-Le conseguenze di tali regole possono inoltre comportare la creazione di gerarchie di oggetti. Ad esempio, se per qualsiasi motivo una classe di base non ha un costruttore predefinito che è possibile chiamato da una classe di derivazione, vale a dire, un **pubblico** o **protetti** costruttore che non accetta parametri, ovvero quindi una classe che deriva da non riesce a generare automaticamente il proprio costruttore predefinito.
+Le conseguenze di tali regole possono inoltre comportare la creazione di gerarchie di oggetti. Se, ad esempio, una classe di base non ha un costruttore predefinito chiamabile da una classe di derivazione, ovvero un costruttore **pubblico** o **protetto** che non accetta parametri, una classe che deriva da essa non può generare automaticamente il proprio costruttore predefinito.
 
 Queste regole possono complicare l'implementazione di tipi semplici definiti dall'utente e idiomi C++ comuni, ad esempio rendendo non copiabile un tipo definito dall'utente, dichiarando il costruttore di copia e l'operatore di assegnazione di copia in modo privato e senza definirli.
 
@@ -132,7 +132,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }
 ```
 
-Si noti che nell'esempio precedente che chiamando `call_with_true_double_only` tramite un **float** argomento provocherebbe un errore del compilatore, ma la chiamata `call_with_true_double_only` usando un **int** argomento non lo; nella finestra di **int** i casi, l'argomento verrà promosso da **int** a **double** e richiamerà correttamente la **double** versione della funzione, anche se ciò potrebbe non essere ciò che serve. Per garantire che le chiamate a questa funzione con un argomento di tipo non double causino un errore del compilatore, è possibile dichiarare una versione del modello della funzione eliminata.
+Si noti che nell'esempio precedente la chiamata a `call_with_true_double_only` tramite un argomento **float** provocherebbe un errore del compilatore, ma la chiamata di `call_with_true_double_only` tramite un argomento **int** non sarebbe; nel caso di **int** , l'argomento verrà promosso da **int** a **Double** e chiamerà correttamente la versione **doppia** della funzione, anche se ciò potrebbe non essere quello previsto. Per garantire che le chiamate a questa funzione con un argomento di tipo non double causino un errore del compilatore, è possibile dichiarare una versione del modello della funzione eliminata.
 
 ```cpp
 template < typename T >

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 430b4ed3f6a02fd3db2bcab05fbb7f21f5367b5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398420"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213980"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory (funzione)
 
@@ -33,23 +33,23 @@ inline HRESULT GetActivationFactory(
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Un parametro di modello che specifica il tipo della factory dell'attivazione.
+Parametro di modello che specifica il tipo della factory di attivazione.
 
 *activatableClassId*<br/>
-Il nome della classe che la factory di attivazione può produrre.
+Nome della classe che può essere prodotta dalla factory di attivazione.
 
-*factory*<br/>
-Al termine di questa operazione, un riferimento alla factory di attivazione per il tipo *T*.
+*fabbrica*<br/>
+Al termine di questa operazione, un riferimento alla Factory di attivazione per il tipo *T*.
 
 ## <a name="return-value"></a>Valore restituito
 
-S_OK se l'esito positivo. in caso contrario, un errore HRESULT che indica il motivo per cui questa operazione non è riuscita.
+S_OK in caso di esito positivo; in caso contrario, un errore HRESULT che indica il motivo per cui questa operazione non è riuscita.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** client.h
 
-**Spazio dei nomi:** Windows::Foundation
+**Spazio dei nomi:** Windows:: Foundation
 
 ## <a name="see-also"></a>Vedere anche
 

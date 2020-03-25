@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2426
 ms.assetid: 3428aeed-3f78-4675-9bc4-5b72f50eaaf6
-ms.openlocfilehash: 6fdb539834f26e794970d0e589cb7ed7072f1e0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf6fe6c1094920fed6bb625256cbbe519308445a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205452"
 ---
 # <a name="compiler-error-c2426"></a>Errore del compilatore C2426
 
-'token': operatore non valido in 'context'
+' token ': operatore non valido in ' context '
 
 Il token non può essere usato come operatore in questo contesto. Gli operatori di indice, ad esempio, non possono essere annidati.

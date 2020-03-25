@@ -1,21 +1,21 @@
 ---
-title: dual (attributo COM C++)
+title: Dual (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409681"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168213"
 ---
 # <a name="dual"></a>dual
 
-Inserisce un'interfaccia nel file con estensione idl come interfaccia duale.
+Inserisce un'interfaccia nel file con estensione IDL come interfaccia duale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,13 +23,13 @@ Inserisce un'interfaccia nel file con estensione idl come interfaccia duale.
 [dual]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando la **duale** attributi di C++ precede un'interfaccia, fa sì che l'interfaccia da inserire all'interno del blocco di libreria nel file con estensione IDL generato.
+Quando l'attributo **doppio** C++ precede un'interfaccia, l'interfaccia viene inserita all'interno del blocco di libreria nel file IDL generato.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente è un blocco di attributi che utilizza **duale** prima di una definizione di interfaccia:
+Il codice seguente è un blocco di attributi che usa **Dual** prima di una definizione di interfaccia:
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -61,7 +61,7 @@ __interface IStatic : IDispatch
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|`dispinterface`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

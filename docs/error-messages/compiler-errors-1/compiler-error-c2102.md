@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2102
 ms.assetid: d15b5fa3-fa46-4cd4-a3d2-3661646ecb7a
-ms.openlocfilehash: 748fc7be3295d24a5c27fd839c919eaa94e13d61
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c945d45982e3bbb807c724b3394a3b77acbf250c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344928"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207454"
 ---
 # <a name="compiler-error-c2102"></a>Errore del compilatore C2102
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: 93f7393f76596766e841dfc25f6d12e20e3db618
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 415ad5e33de3132e055e53178e6e65d411f169f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214604"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -23,7 +23,7 @@ Non consente l'assegnazione a un membro dati.
 [readonly]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **readonly** di C++ ha la stessa funzionalità dell'attributo [readonly](/windows/win32/Midl/readonly) di MIDL.
 
@@ -55,8 +55,8 @@ __interface IFireTabCtrl
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

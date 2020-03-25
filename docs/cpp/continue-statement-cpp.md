@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: 6fbc4af6a9a56f3406582ea9ba59f4d5759b88a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154633"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180277"
 ---
 # <a name="continue-statement-c"></a>Istruzioni continue (C++)
 
-Forza il trasferimento del controllo per l'espressione di controllo di inclusione più piccolo [scopo](../cpp/do-while-statement-cpp.md), [per](../cpp/for-statement-cpp.md), o [mentre](../cpp/while-statement-cpp.md) ciclo.
+Impone il trasferimento del controllo all'espressione di controllo del ciclo [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)o [while](../cpp/while-statement-cpp.md) di inclusione più piccolo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,15 +23,15 @@ Forza il trasferimento del controllo per l'espressione di controllo di inclusion
 continue;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Alcune istruzioni restanti nell'iterazione corrente non vengono eseguite. L'iterazione successiva del ciclo è determinata nel modo seguente:
 
-- In un **effettuare** o **mentre** ciclo, l'iterazione successiva inizia rivalutando l'espressione di controllo del **eseguire** o **mentre** istruzione.
+- In un ciclo **do** o **while** l'iterazione successiva inizia rivalutando l'espressione di controllo dell'istruzione **do** o **while** .
 
-- In un **per** ciclo (usando la sintassi `for`(`init-expr`; `cond-expr`; `loop-expr`)), il `loop-expr` clausola viene eseguita. La clausola `cond-expr` viene rivalutata e, a seconda del risultato, il ciclo termina o si verifica un'altra iterazione.
+- In un ciclo **for** (usando la sintassi `for`(`init-expr`; `cond-expr`; `loop-expr`)), viene eseguita la clausola `loop-expr`. La clausola `cond-expr` viene rivalutata e, a seconda del risultato, il ciclo termina o si verifica un'altra iterazione.
 
-L'esempio seguente illustra come la **continuare** istruzione può essere utilizzata per ignorare le sezioni di codice e avviare l'iterazione successiva di un ciclo.
+Nell'esempio seguente viene illustrato come è possibile utilizzare l'istruzione **continue** per ignorare le sezioni di codice e iniziare l'iterazione successiva di un ciclo.
 
 ## <a name="example"></a>Esempio
 

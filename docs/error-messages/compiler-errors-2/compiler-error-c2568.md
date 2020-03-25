@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2568
 ms.assetid: 140b4dc9-5a88-4032-9aef-a224bb796f72
-ms.openlocfilehash: b94f51c38a4701082a4b6bc7f700cf09114a0d67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82bd1e27c41dff34c30eadab5f188402c96eb013
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257530"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177443"
 ---
 # <a name="compiler-error-c2568"></a>Errore del compilatore C2568
 
-'identifier1': non è possibile risolvere l'overload della funzione
+' identificatore1': Impossibile risolvere l'overload della funzione
 
-Il compilatore non può determinare quale overload di funzione da chiamare. I parametri effettivi passati alla funzione devono essere impostati per corrispondere ai parametri formali per una delle funzioni in overload, ma nessuna corrispondenza è inequivocabilmente migliore di tutti gli altri.
+Il compilatore non è in grado di determinare la funzione di overload da chiamare. È necessario eseguire il cast dei parametri effettivi passati alla funzione in modo che corrispondano ai parametri formali per una delle funzioni di overload, ma nessuna corrispondenza non è ambiguamente migliore di tutti gli altri.

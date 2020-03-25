@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4075
 ms.assetid: 19a700b6-f210-4b9d-a2f2-76cfe39ab178
-ms.openlocfilehash: b4181059a406d85514c3941ed2856d9e95673957
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f69d91ee9335201029d6b566b7987df8c267f82b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626960"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200226"
 ---
 # <a name="compiler-warning-level-1-c4075"></a>Avviso del compilatore (livello 1) C4075
 

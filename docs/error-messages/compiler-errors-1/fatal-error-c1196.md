@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1196
 ms.assetid: 10a79b3f-3423-4ee3-98fa-e9e59cddabb1
-ms.openlocfilehash: a7ae9b9f4bbe049db532d4d8e22b690d336b6a1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49f94c59de89023c10ac42da05a0faebd2e8f354
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229154"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203533"
 ---
 # <a name="fatal-error-c1196"></a>Errore irreversibile C1196
 

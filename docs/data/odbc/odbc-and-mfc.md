@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MFC [C++], ODBC and
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
-ms.openlocfilehash: 9b7d04e2eb8bbb1adf96e05282861ef33e20434a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a3455324a52b789bcfcf192b698a3c42b37c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395872"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213175"
 ---
 # <a name="odbc-and-mfc"></a>ODBC e MFC
 
 > [!NOTE]
->  Per usare le classi di database MFC, è necessario il driver ODBC appropriato per l'origine dati. Il driver ODBC di Microsoft più recente per SQL Server viene [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=50420). La maggior parte dei fornitori di database offrono un driver ODBC per Windows.
+>  Per utilizzare le classi di database MFC, è necessario disporre del driver ODBC appropriato per l'origine dati. Il driver Microsoft ODBC più recente per SQL Server è [Microsoft ODBC driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=50420). La maggior parte dei fornitori di database fornisce un driver ODBC per Windows.
 
-In questo argomento introduce i concetti principali delle classi di database basato su ODBC della libreria Microsoft Foundation Classes (MFC) e viene fornita una panoramica del funzionano congiunto di classi. Per ulteriori informazioni su ODBC e MFC, vedere gli argomenti seguenti:
+In questo argomento vengono presentati i concetti principali delle classi di database basate su ODBC della libreria Microsoft Foundation Classes (MFC) e viene fornita una panoramica del modo in cui le classi interagiscono. Per ulteriori informazioni su ODBC e MFC, vedere gli argomenti seguenti:
 
 - [Connessione a un'origine dati](connecting-to-a-data-source.md)
 
@@ -36,7 +36,7 @@ In questo argomento introduce i concetti principali delle classi di database bas
 
 - [Ulteriori informazioni sulle classi ODBC MFC](further-reading-about-the-mfc-odbc-classes.md)
 
-Le classi di database MFC basate su ODBC sono progettate per fornire l'accesso a qualsiasi database per cui è disponibile un driver ODBC. Poiché le classi usano ODBC, l'applicazione possa accedere a dati in diversi formati di dati diversi e diverse configurazioni locali/remoti. Non devi scrivere codice speciale per gestire sistemi di gestione di diversi database (DBMS). Fino a quando gli utenti hanno un driver ODBC appropriato per i dati che desiderano accedere ai, usano il programma di modificare i dati nelle tabelle presenti.
+Le classi di database MFC basate su ODBC sono progettate per consentire l'accesso a qualsiasi database per cui è disponibile un driver ODBC. Poiché le classi utilizzano ODBC, l'applicazione può accedere ai dati in diversi formati di dati e configurazioni locali/remote differenti. Non è necessario scrivere codice speciale per gestire sistemi di gestione di database (DBMS) diversi. Se gli utenti dispongono di un driver ODBC appropriato per i dati a cui si desidera accedere, possono utilizzare il programma per modificare i dati nelle tabelle archiviate.
 
 ## <a name="see-also"></a>Vedere anche
 

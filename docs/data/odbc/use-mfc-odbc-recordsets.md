@@ -5,72 +5,72 @@ helpviewer_keywords:
 - recordsets, MFC ODBC
 - ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-ms.openlocfilehash: 9d6a2b49f518fd9eaacf589e893bc240d1409a4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42316b5411637e16480abbde196dc15fc6c256c3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329777"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212543"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>Utilizzo di recordset ODBC MFC
 
-Questi argomenti viene illustrato l'utilizzo con ODBC (recordset) tramite MFC.
+In questi argomenti viene illustrato come utilizzare i recordset ODBC tramite MFC.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-### <a name="general-recordset-tasks"></a>Attività generali di Recordset
+### <a name="general-recordset-tasks"></a>Attività generali del recordset
 
 - [Scegliere un tipo di recordset ODBC](../../data/odbc/recordset-odbc.md)
 
-- [Rieseguire una query di un recordset](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [Eseguire una query su un recordset](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
-- [Dichiarazione di una classe per una tabella](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [Dichiarare una classe recordset per una tabella](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [Dichiarazione di una classe per una query predefinita](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [Dichiarare una classe recordset per una query predefinita](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-### <a name="recordset-design-and-implementation"></a>Recordset progettazione e implementazione
+### <a name="recordset-design-and-implementation"></a>Progettazione e implementazione di recordset
 
-- [Informazioni su campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+- [Informazioni su trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)
 
-- [Scambiare i dati tra un database e un oggetto recordset](../../data/odbc/record-field-exchange-using-rfx.md)
+- [Scambiare dati tra un database e un oggetto recordset](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [Personalizzare il codice di recordset prodotto dalle procedure guidate](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)
+- [Personalizzare il codice recordset prodotto dalle procedure guidate](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)
 
-- [Usare le funzioni RFX (RFX)](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [Usare le funzioni di trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-### <a name="recordset-performance-and-convenience"></a>Motivi di praticità e delle prestazioni di Recordset
+### <a name="recordset-performance-and-convenience"></a>Prestazioni e praticità del recordset
 
-- [Aggiungere i record in blocco con un set di record](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
+- [Aggiungere record in blocco con un recordset](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
 
 - [Filtrare i record in un recordset](../../data/odbc/recordset-filtering-records-odbc.md)
 
-### <a name="recordset-operations"></a>Operazioni relative ai recordset
+### <a name="recordset-operations"></a>Operazioni recordset
 
-- [Aggiungere i record in blocco con un set di record](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
+- [Aggiungere record in blocco con un recordset](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)
 
-- [Rieseguire una query di un recordset](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [Eseguire una query su un recordset](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 - [Filtrare i record in un recordset](../../data/odbc/recordset-filtering-records-odbc.md)
 
 - [Ordinare i record in un recordset](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [Impostare i parametri per un set di record](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [Parametrizzare un recordset](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 - [Passare i valori dei parametri a un recordset in fase di esecuzione](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
-- [Eseguire un join con un set di record](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [Eseguire un join con un recordset](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [Blocco di record in un recordset](../../data/odbc/recordset-locking-records-odbc.md)
+- [Bloccare i record in un recordset](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [Usare gli elementi di dati di grandi dimensioni in un recordset](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [Utilizzare elementi di dati di grandi dimensioni in un recordset](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [Recupero di somme e altri risultati aggregati in un recordset](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [Ottenere somme e altri risultati aggregati in un recordset](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
-### <a name="recordset-selection-and-sql"></a>Selezione del Recordset e SQL
+### <a name="recordset-selection-and-sql"></a>Selezione recordset e SQL
 
-- [Selezionare i record da un'origine dati ODBC](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [Selezione di record da un'origine dati ODBC](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [Personalizzare la stringa SQL per un set di record](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [Personalizzare la stringa SQL per un recordset](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
 ### <a name="dynamic-binding-of-recordsets"></a>Associazione dinamica di recordset
 

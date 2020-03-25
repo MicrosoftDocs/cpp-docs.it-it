@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Uso degli elementi di dati di grandi dimensioni (ODBC)'
+title: 'Recordset: gestione di dati di grandi dimensioni (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BLOB (binary large object), recordsets
@@ -8,56 +8,56 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b84365461ce6d45fccdf1922974feff5af93f99f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212758"
 ---
-# <a name="recordset-working-with-large-data-items-odbc"></a>Recordset: Uso degli elementi di dati di grandi dimensioni (ODBC)
+# <a name="recordset-working-with-large-data-items-odbc"></a>Recordset: gestione di dati di grandi dimensioni (ODBC)
 
-In questo argomento si applica a entrambe le classi ODBC MFC e le classi DAO MFC.
+Questo argomento si applica sia alle classi ODBC MFC sia alle classi DAO MFC.
 
 > [!NOTE]
->  Se si usano le classi DAO MFC, gestire gli elementi di dati di grandi dimensioni con la classe [CByteArray](../../mfc/reference/cbytearray-class.md) piuttosto che classe [CLongBinary](../../mfc/reference/clongbinary-class.md). Se si utilizza le classi ODBC MFC con il recupero di righe bulk, utilizzare `CLongBinary` anziché `CByteArray`. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Se si utilizzano le classi DAO MFC, gestire gli elementi di dati di grandi dimensioni con la classe [CByteArray](../../mfc/reference/cbytearray-class.md) anziché la classe [CLongBinary](../../mfc/reference/clongbinary-class.md). Se si utilizzano le classi ODBC MFC con il recupero di righe bulk, utilizzare `CLongBinary` anziché `CByteArray`. Per ulteriori informazioni sul recupero di righe in blocco, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Si supponga che il database consente di archiviare grandi porzioni di dati, ad esempio le bitmap (fotografie dipendente, mappe, immagini dei prodotti, gli oggetti OLE e così via). Questo tipo di dati è noto anche come Binary Large Object (o BLOB) perché:
+Si supponga che il database possa archiviare grandi quantità di dati, ad esempio bitmap (fotografie dei dipendenti, mappe, immagini di prodotti, oggetti OLE e così via). Questo tipo di dati viene spesso definito Large Object binaria (o BLOB) perché:
 
-- Ogni valore del campo è grande.
+- Ogni valore del campo è di grandi dimensioni.
 
-- A differenza dei numeri e altri tipi di dati semplici, non ha la dimensione prevedibile.
+- A differenza di numeri e altri tipi di dati semplici, non ha dimensioni stimabili.
 
-- I dati non hanno alcun formati dalla prospettiva del programma.
+- I dati non sono conformi dal punto di vista del programma.
 
-Questo argomento viene illustrato quale tipo di supporto forniscono classi di database per l'utilizzo di tali oggetti.
+In questo argomento viene illustrato il supporto fornito dalle classi di database per l'utilizzo di tali oggetti.
 
-##  <a name="_core_managing_large_objects"></a> La gestione degli oggetti di grandi dimensioni
+##  <a name="managing-large-objects"></a><a name="_core_managing_large_objects"></a>Gestione di oggetti di grandi dimensioni
 
-Recordset sono due modi per risolvere le difficoltà speciali di gestione di oggetti binari di grandi dimensioni. È possibile usare classi [CByteArray](../../mfc/reference/cbytearray-class.md) oppure è possibile usare classi [CLongBinary](../../mfc/reference/clongbinary-class.md). In generale, `CByteArray` è il modo migliore per gestire dati binari di grandi dimensioni.
+I recordset hanno due modi per risolvere la difficoltà speciale di gestione di oggetti binari di grandi dimensioni. È possibile usare la classe [CByteArray](../../mfc/reference/cbytearray-class.md) oppure è possibile usare la classe [CLongBinary](../../mfc/reference/clongbinary-class.md). In generale, `CByteArray` è il modo migliore per gestire dati binari di grandi dimensioni.
 
-`CByteArray` richiede un overhead maggiore rispetto a `CLongBinary` ma è più in grado di supportare, come descritto in [classe CByteArray](#_core_the_cbytearray_class). `CLongBinary` viene descritto brevemente nella [classe CLongBinary](#_core_the_clongbinary_class).
+`CByteArray` richiede un sovraccarico maggiore rispetto a `CLongBinary` ma è più idoneo, come descritto nella [classe CByteArray](#_core_the_cbytearray_class). `CLongBinary` viene descritto brevemente nella [classe CLongBinary](#_core_the_clongbinary_class).
 
-Per informazioni dettagliate sull'uso `CByteArray` per lavorare con gli elementi di dati di grandi dimensioni, vedere [Nota tecnica 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md).
+Per informazioni dettagliate sull'uso di `CByteArray` per lavorare con elementi di dati di grandi dimensioni, vedere la [Nota tecnica 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md).
 
-##  <a name="_core_the_cbytearray_class"></a> CByteArray Class
+##  <a name="cbytearray-class"></a><a name="_core_the_cbytearray_class"></a>Classe CByteArray
 
-`CByteArray` è una delle classi collection MFC. Oggetto `CByteArray` oggetto archivia una matrice dinamica di byte, ovvero la matrice può aumentare se necessario. La classe fornisce accesso veloce in base all'indice, come con le matrici C++ predefinite. `CByteArray` gli oggetti possono essere serializzati e il dump per scopi diagnostici. La classe fornisce funzioni membro per il recupero e impostazione byte specificati, inserimento aggiungendo byte e la rimozione di un byte o tutti i byte. Queste funzionalità semplificano l'analisi dei dati binari. Se l'oggetto binario è un oggetto OLE, ad esempio, potrebbe essere necessario eseguire alcuni byte intestazione per raggiungere l'oggetto effettivo.
+`CByteArray` è una delle classi di raccolta MFC. Un oggetto `CByteArray` archivia una matrice di byte dinamica. se necessario, è possibile che la matrice aumenti. La classe fornisce accesso rapido in base all'indice, come per le C++ matrici predefinite. `CByteArray` gli oggetti possono essere serializzati e scaricati a scopo diagnostico. La classe fornisce funzioni membro per ottenere e impostare i byte specificati, inserire e accodare byte e rimuovere un byte o tutti i byte. Queste funzionalità semplificano l'analisi dei dati binari. Se, ad esempio, l'oggetto binario è un oggetto OLE, potrebbe essere necessario utilizzare alcuni byte di intestazione per raggiungere l'oggetto effettivo.
 
-##  <a name="_core_using_cbytearray_in_recordsets"></a> Utilizzo CByteArray in recordset
+##  <a name="using-cbytearray-in-recordsets"></a><a name="_core_using_cbytearray_in_recordsets"></a>Utilizzo di CByteArray nei recordset
 
-Fornendo il tipo di un membro dati del campo del recordset `CByteArray`, è fornire una base da cui fissa [RFX](../../data/odbc/record-field-exchange-rfx.md) può gestire il trasferimento di questi oggetti tra il recordset e l'origine dati e tramite la quale è possibile modificare il dati all'interno dell'oggetto. RFX necessita di un sito specifico per i dati recuperati, ed è necessario un modo per accedere ai dati sottostanti.
+Assegnando un membro dati di campo del recordset al tipo `CByteArray`, viene fornita una base fissa da cui [RFX](../../data/odbc/record-field-exchange-rfx.md) può gestire il trasferimento di tale oggetto tra il recordset e l'origine dati e tramite cui è possibile modificare i dati all'interno dell'oggetto. RFX necessita di un sito specifico per i dati recuperati ed è necessario un modo per accedere ai dati sottostanti.
 
-Per informazioni dettagliate sull'uso `CByteArray` per lavorare con gli elementi di dati di grandi dimensioni, vedere [Nota tecnica 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md).
+Per informazioni dettagliate sull'uso di `CByteArray` per lavorare con elementi di dati di grandi dimensioni, vedere la [Nota tecnica 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md).
 
-##  <a name="_core_the_clongbinary_class"></a> CLongBinary (classe)
+##  <a name="clongbinary-class"></a><a name="_core_the_clongbinary_class"></a>Classe CLongBinary
 
-Oggetto [CLongBinary](../../mfc/reference/clongbinary-class.md) oggetto è un semplice contenitore un `HGLOBAL` handle per un blocco di memoria allocata nell'heap. Quando associa una colonna della tabella che contiene un oggetto binario di grandi dimensioni, RFX alloca il `HGLOBAL` gestire quando necessarie trasferire i dati per il recordset e archivia l'handle nel `CLongBinary` campo del set di record.
+Un oggetto [CLongBinary](../../mfc/reference/clongbinary-class.md) è una shell semplice intorno a un handle `HGLOBAL` a un blocco di archiviazione allocato nell'heap. Quando associa una colonna della tabella che contiene un oggetto binario di grandi dimensioni, RFX alloca il `HGLOBAL` handle quando deve trasferire i dati nel recordset e archivia tale handle nel campo `CLongBinary` del recordset.
 
-A sua volta, si utilizza il `HGLOBAL` gestire, `m_hData`, per lavorare con i dati stessi, è in uno qualsiasi gestirà i dati. Si tratta di where [CByteArray](../../mfc/reference/cbytearray-class.md) aggiunge funzionalità.
+A sua volta, è possibile usare l'handle di `HGLOBAL`, `m_hData`, per lavorare con i dati stessi, agendo su di essi come per i dati di handle. Questo è il punto in cui [CByteArray](../../mfc/reference/cbytearray-class.md) aggiunge le funzionalità.
 
 > [!CAUTION]
->  CLongBinary oggetti non possono essere usati come parametri nelle chiamate di funzione. Inoltre, l'implementazione, che chiama `::SQLGetData`, necessariamente rallenta le prestazioni di scorrimento per uno snapshot che è possibile scorrere. Questo potrebbe anche essere vero quando si usa un `::SQLGetData` chiamare manualmente per recuperare le colonne dello schema dinamico.
+>  Gli oggetti CLongBinary non possono essere usati come parametri nelle chiamate di funzione. Inoltre, la loro implementazione, che chiama `::SQLGetData`, rallenta necessariamente le prestazioni di scorrimento per uno snapshot scorrevole. Questo può anche essere vero quando si usa una chiamata `::SQLGetData` per recuperare le colonne dello schema dinamico.
 
 ## <a name="see-also"></a>Vedere anche
 

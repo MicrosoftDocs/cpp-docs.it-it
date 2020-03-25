@@ -1,20 +1,20 @@
 ---
-title: Compilatore Warning (level 1) C4113
+title: Avviso del compilatore (livello 1) C4113
 ms.date: 11/04/2016
 f1_keywords:
 - C4113
 helpviewer_keywords:
 - C4113
 ms.assetid: ec7a7c4a-d2ee-431c-89dc-31b0f9bfd975
-ms.openlocfilehash: 46374d08a5ca96e04ab197eea24765f51d3c0595
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a498550274240c970eb6ea698f023c29f6456320
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300232"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163793"
 ---
-# <a name="compiler-warning-level-1-c4113"></a>Compilatore Warning (level 1) C4113
+# <a name="compiler-warning-level-1-c4113"></a>Avviso del compilatore (livello 1) C4113
 
-'identifier1' differisce in elenchi di parametri da 'identifier2'
+' identificatore1' differisce da' identifier2' negli elenchi di parametri
 
-Un puntatore a funzione è assegnato a un altro puntatore a funzione, ma non si accettano elenchi di parametri formali delle funzioni. L'assegnazione viene compilato senza alcuna modifica.
+Un puntatore a funzione viene assegnato a un altro puntatore a funzione, ma gli elenchi di parametri formali delle funzioni non sono concordati. L'assegnazione viene compilata senza modifiche.

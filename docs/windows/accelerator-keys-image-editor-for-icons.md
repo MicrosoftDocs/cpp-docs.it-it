@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 35aeeb7e644849d215cd4782a1d06576449746ef
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 867c7d2c217b5efb832654a7863e834a4351c126
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447197"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167576"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Tasti di sceltaC++ rapida (editor di immagini per le icone)
 

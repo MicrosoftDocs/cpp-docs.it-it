@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946894"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168707"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -71,9 +71,9 @@ Le funzioni **Tan** restituiscono la tangente di *x*. Se *x* è maggiore o ugual
 |Input|Eccezione SEH|**Matherr** Eccezione|
 |-----------|-------------------|-------------------------|
 |± QNAN, IND|none|_DOMAIN|
-|± INF|**INVALID**|_DOMAIN|
+|± INF|**Non valido**|_DOMAIN|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tan** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **Tan** accetta sempre e restituisce **Double**.
 
@@ -81,9 +81,9 @@ Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tan** c
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------|-|
-|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> o \<math.h>|
+|**Tan**, **TANF**, **Tanl**|\<math.h>|\<cmath> o \<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 
 ## <a name="example"></a>Esempio
 

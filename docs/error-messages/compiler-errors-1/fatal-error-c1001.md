@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e1255578883c8d2bc278184a02575a0a51ed9b6c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345665"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204958"
 ---
 # <a name="fatal-error-c1001"></a>Errore irreversibile C1001
 
-> INTERNI del compilatore ERROR(compiler file *file*, line *number*)
+> ERRORE interno del compilatore ( *file*di file del compilatore, *numero*di riga)
 
-Il compilatore non è possibile generare il codice corretto per un costrutto, spesso dovuti alla combinazione di una particolare espressione e un'opzione di ottimizzazione o un problema durante l'analisi. Se il file del compilatore elencato dispone di un'ora utc o segmento di percorso C2, è probabilmente un errore di ottimizzazione. Se il file contiene un segmento di percorso cxxfe o c1xx, oppure è msc1.cpp, è probabilmente un errore del parser. Se il file denominato cl.exe, non sono disponibili altre informazioni.
+Il compilatore non può generare codice corretto per un costrutto, spesso a causa della combinazione di una particolare espressione e di un'opzione di ottimizzazione, oppure di un problema di analisi. Se il file del compilatore elencato presenta un segmento di percorso UTC o C2, probabilmente si tratta di un errore di ottimizzazione. Se il file ha un segmento di percorso cxxfe o c1xx o è msc1. cpp, probabilmente si tratta di un errore del parser. Se il file denominato è cl. exe, non sono disponibili altre informazioni.
 
-È spesso possibile risolvere un problema di ottimizzazione tramite la rimozione di uno o più opzioni di ottimizzazione. Per determinare quale opzione causa l'errore, rimuovere le opzioni uno alla volta e recompile fino a quando non andrà a sparire il messaggio di errore. Sono le opzioni più comunemente [/Og (ottimizzazioni globali)](../../build/reference/og-global-optimizations.md) e [/Oi (genera funzioni intrinseche)](../../build/reference/oi-generate-intrinsic-functions.md). Dopo aver determinato quale opzione di ottimizzazione è responsabile, è possibile disabilitarlo per la funzione in cui si verifica l'errore utilizzando la [ottimizzare](../../preprocessor/optimize.md) pragma e continuare a usare l'opzione per il resto del modulo. Per altre informazioni sulle opzioni di ottimizzazione, vedere [consigliate di ottimizzazione](../../build/optimization-best-practices.md).
+È spesso possibile risolvere un problema di ottimizzazione rimuovendo una o più opzioni di ottimizzazione. Per determinare quale opzione è in errore, rimuovere le opzioni una alla volta e ricompilare finché il messaggio di errore non viene rimosso. Le opzioni più comunemente responsabili sono [/og (ottimizzazioni globali)](../../build/reference/og-global-optimizations.md) e [/OI (genera funzioni intrinseche)](../../build/reference/oi-generate-intrinsic-functions.md). Una volta individuata l'opzione di ottimizzazione responsabile, è possibile disabilitarla per la funzione in cui si verifica l'errore usando il pragma [optimize](../../preprocessor/optimize.md) e continuare a usare l'opzione per il resto del modulo. Per ulteriori informazioni sulle opzioni di ottimizzazione, vedere [procedure consigliate di ottimizzazione](../../build/optimization-best-practices.md).
 
-Se le ottimizzazioni non sono responsabile dell'errore, provare a riscrivere la riga in cui viene segnalato l'errore, o più righe di codice che circonda tale riga. Per visualizzare il codice nello stesso modo il compilatore visualizzati dopo la pre-elaborazione, è possibile usare la [/P (pre-elabora in un file)](../../build/reference/p-preprocess-to-a-file.md) opzione.
+Se le ottimizzazioni non sono responsabili dell'errore, provare a riscrivere la riga in cui viene segnalato l'errore o a più righe di codice che racchiudono la riga. Per visualizzare il codice in modo che venga visualizzato dal compilatore dopo la pre-elaborazione, è possibile usare l'opzione [/p (pre-elabora in un file)](../../build/reference/p-preprocess-to-a-file.md) .
 
-Per altre informazioni su come isolare l'origine dell'errore e come segnalare un errore del compilatore interno a Microsoft, vedere [come segnalare un problema con il set di strumenti Visual C++](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Per ulteriori informazioni su come isolare l'origine dell'errore e segnalare un errore interno del compilatore a Microsoft, vedere [come segnalare un problema con il set di strumenti visivo C++ ](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).

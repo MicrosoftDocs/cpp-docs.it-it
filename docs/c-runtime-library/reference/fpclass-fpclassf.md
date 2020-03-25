@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857840"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170215"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -65,7 +65,7 @@ Valore a virgola mobile da verificare.
 
 Le funzioni **_fpclass** e **_fpclassf** restituiscono un valore intero che indica la classificazione a virgola mobile dell'argomento *x*. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.
 
-|Valore|Descrizione|
+|valore|Descrizione|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Segnalazione NaN|
 |**_FPCLASS_QNAN**|NaN non interattivo|
@@ -78,11 +78,11 @@ Le funzioni **_fpclass** e **_fpclassf** restituiscono un valore intero che indi
 |**_FPCLASS_PN**|Diverso da zero normalizzato positivo|
 |**_FPCLASS_PINF**|Infinito positivo (+INF)|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le funzioni **_fpclass** e **_fpclassf** sono specifiche di Microsoft. Sono simili a [fpclassify](fpclassify.md), ma restituiscono informazioni più dettagliate sull'argomento. La funzione **_fpclassf** è disponibile solo quando viene compilata per la piattaforma x64.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione obbligatoria|
 |--------------|---------------------|

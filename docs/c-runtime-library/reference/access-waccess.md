@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943931"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170384"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -78,9 +78,9 @@ Ogni funzione restituisce 0 se il file ha la modalità specificata. La funzione 
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando viene usato con i file, la funzione **_access** determina se il file o la directory specificata esiste e ha gli attributi specificati dal valore di *mode*. Quando viene usato con le directory, **_access** determina solo se la directory specificata esiste; in Windows 2000 e nei sistemi operativi successivi, tutte le directory hanno accesso in lettura e scrittura.
+Quando viene usato con i file, la funzione **_access** determina se il file o la directory specificata esiste e ha gli attributi specificati dal valore di *mode*. Se utilizzata con le directory, **_access** determina solo se la directory specificata esiste; in Windows 2000 e nei sistemi operativi successivi, tutte le directory hanno accesso in lettura e scrittura.
 
 |valore della *modalità*|Controllo nel file|
 |------------------|---------------------|

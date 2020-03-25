@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - EventTraits structure
 ms.assetid: 2cf308a4-50e3-4321-bafc-4c7c0364e148
-ms.openlocfilehash: cb54bce8f271b01ee838cfecb891b78c5a9eb6e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abd4bc2e6debae2e7681fc53c9fc4f86a8219cdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398472"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214019"
 ---
 # <a name="eventtraits-structure"></a>EventTraits (struttura)
 
-Definisce le caratteristiche di un `Event` handle di classe.
+Definisce le caratteristiche di un handle di classe `Event`.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,7 +24,7 @@ Definisce le caratteristiche di un `Event` handle di classe.
 struct EventTraits : HANDLENullTraits;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -36,7 +36,7 @@ struct EventTraits : HANDLENullTraits;
 
 **Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers:: HandleTraits
 
 ## <a name="see-also"></a>Vedere anche
 

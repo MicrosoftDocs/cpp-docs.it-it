@@ -1,19 +1,19 @@
 ---
-title: espressioni lambda constexpr in C++
+title: espressioni lambda constExpr inC++
 ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9467d9e404204012df6461adacd5dc4cdbdfe71d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368695"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179575"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>espressioni lambda constexpr in C++
+# <a name="constexpr-lambda-expressions-in-c"></a>espressioni lambda constExpr inC++
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Un'espressione lambda può essere dichiarata come **constexpr** o usato in un'espressione costante durante l'inizializzazione di ogni membro di dati che consente di acquisire o introduce è consentita all'interno di un'espressione costante.
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): un'espressione lambda può essere dichiarata come **constExpr** o utilizzata in un'espressione costante quando l'inizializzazione di ogni membro dati acquisito o introdotto è consentita all'interno di un'espressione costante.
 
 ```cpp
     int y = 32;
@@ -29,7 +29,7 @@ ms.locfileid: "62368695"
     }
 ```
 
-Un'espressione lambda è implicitamente **constexpr** se il relativo risultato soddisfa i requisiti di un **constexpr** funzione:
+Un'espressione lambda è implicitamente **constExpr** se il risultato soddisfa i requisiti di una funzione **constExpr** :
 
 ```cpp
     auto answer = [](int n)
@@ -40,7 +40,7 @@ Un'espressione lambda è implicitamente **constexpr** se il relativo risultato s
     constexpr int response = answer(10);
 ```
 
-Se un'espressione lambda è implicitamente o esplicitamente **constexpr**e di convertirlo in un puntatore a funzione, la funzione risultante è inoltre **constexpr**:
+Se un'espressione lambda è **constExpr**in modo implicito o esplicito e viene convertita in un puntatore a funzione, anche la funzione risultante è **constExpr**:
 
 ```cpp
     auto Increment = [](int n)

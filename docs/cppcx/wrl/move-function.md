@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398173"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213707"
 ---
 # <a name="move-function"></a>Move (funzione)
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,23 +33,23 @@ inline typename RemoveReference<T>::Type&& Move(
 Il tipo di argomento.
 
 *arg*<br/>
-Un argomento da spostare.
+Argomento da spostare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Parametro *arg* dopo traits riferimento o un riferimento rvalue, se presenti, sono state rimosse.
+I parametri *arg* dopo i riferimenti o i tratti di riferimento rvalue, se presenti, sono stati rimossi.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Sposta l'argomento specificato da una posizione a altra.
+Sposta l'argomento specificato da una posizione a un'altra.
 
-Per altre informazioni, vedere la **semantica di spostamento** sezione [dichiaratore di riferimento Rvalue: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Per ulteriori informazioni, vedere la sezione relativa alla **semantica di spostamento** del [dichiaratore di riferimento Rvalue: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** FTM
+**Intestazione:** Internal. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
 ## <a name="see-also"></a>Vedere anche
 

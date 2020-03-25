@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBase
 ms.assetid: 6ada4f81-a857-488a-ad56-8d0b11ccbfcc
-ms.openlocfilehash: 80762a7a2cfdc5c630a42627b8cfd8323f3567eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29bcf37ce9bd524dfe09823e00fda4d41eedaf52
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403178"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213590"
 ---
 # <a name="runtimeclassbase-structure"></a>Struttura RuntimeClassBase
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -22,9 +22,9 @@ Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
 struct RuntimeClassBase;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Consente di rilevare `RuntimeClass` nella [rendere](make-function.md) (funzione).
+Utilizzato per rilevare `RuntimeClass` nella funzione [make](make-function.md) .
 
 **RuntimeClassBase** è una struttura vuota.
 
@@ -36,7 +36,7 @@ Consente di rilevare `RuntimeClass` nella [rendere](make-function.md) (funzione)
 
 **Intestazione:** Implements. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
 ## <a name="see-also"></a>Vedere anche
 

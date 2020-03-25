@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 537bd6d645532d9d5d20b740125c66f3953239bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501870"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168460"
 ---
 # <a name="async_uuid"></a>async_uuid
 
@@ -28,9 +28,9 @@ Specifica l'UUID che indica al compilatore MIDL di definire versioni sincrone e 
 *uuid*<br/>
 UUID che identifica la versione dell'interfaccia.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **async_uuid** C++ ha la stessa funzionalità dell'attributo MIDL di [async_uuid](/windows/win32/Midl/async-uuid) .
+L'attributo **async_uuid** C++ ha la stessa funzionalità dell'attributo [async_uuid](/windows/win32/Midl/async-uuid) MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -54,8 +54,8 @@ __interface ICustom {
 |-|-|
 |**Si applica a**|`interface`|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|**dual**, **dispinterface**|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|**Dual**, **interfaccia dispatch**|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

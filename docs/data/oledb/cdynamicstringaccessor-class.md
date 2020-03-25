@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230995"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211866"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
 
@@ -34,7 +34,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 **Intestazione**: atldbcli.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
@@ -43,19 +43,19 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 |[GetString](#getstring)|Recupera i dati specificati di colonna come stringa.|
 |[SetString](#setstring)|Imposta i dati specificati di colonna come stringa.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Sebbene [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) richiede i dati in formato nativo indicato dal provider, `CDynamicStringAccessor` richiede che il provider recuperi tutti i dati dall'archivio dati come dati di tipo stringa. Ciò è particolarmente utile per eseguire semplici operazioni che non richiedono il calcolo di valori nell'archivio dati, ad esempio visualizzare o stampare il contenuto dell'archivio dati.
+Mentre [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) richiede i dati nel formato nativo segnalato dal provider, `CDynamicStringAccessor` richiede che il provider recuperi tutti i dati a cui si accede dall'archivio dati come dati di stringa. Questa operazione è particolarmente utile per le attività semplici che non richiedono il calcolo dei valori nell'archivio dati, ad esempio la visualizzazione o la stampa del contenuto dell'archivio dati.
 
-Il tipo nativo di dati della colonna nell'archivio dati non è importante; se il provider supporta la conversione di dati, potrà fornire i dati in formato stringa. Se il provider non supporta la conversione dal tipo di dati nativo a una stringa (che non è comune), la chiamata di richiesta restituirà il valore di esito positivo DB_S_ERRORSOCCURED e lo stato per la colonna corrispondente indicherà un problema di conversione DBSTATUS_E_CANTCONVERTVALUE.
+Il tipo nativo di dati della colonna nell'archivio dati non è importante; se il provider supporta la conversione di dati, potrà fornire i dati in formato stringa. Se il provider non supporta la conversione dal tipo di dati nativo a una stringa (non è comune), la chiamata di richiesta restituirà il valore DB_S_ERRORSOCCURED e lo stato per la colonna corrispondente indicherà un problema di conversione con DBSTATUS_E_CANTCONVERTVALUE.
 
-Usare `CDynamicStringAccessor` metodi per ottenere informazioni. Utilizzare queste informazioni di colonna per creare una funzione di accesso in modo dinamico in fase di esecuzione.
+Utilizzare `CDynamicStringAccessor` metodi per ottenere informazioni sulle colonne. Queste informazioni sulla colonna vengono usate per creare una funzione di accesso dinamicamente in fase di esecuzione.
 
-Le informazioni di colonna vengono archiviate in un buffer creato e gestito da questa classe. Ottenere dati dal buffer, utilizzare [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), o se archiviarlo per il buffer usando [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Le informazioni sulla colonna vengono archiviate in un buffer creato e gestito da questa classe. Ottenere i dati dal buffer usando [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)oppure archiviarli nel buffer usando [sestring](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
-Per informazioni ed esempi di utilizzo delle classi della funzione di accesso dinamico, vedere [usando le funzioni di accesso dinamico](../../data/oledb/using-dynamic-accessors.md).
+Per una discussione ed esempi sull'uso delle classi di funzioni di accesso dinamiche, vedere [uso delle funzioni di accesso dinamiche](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="getstring"></a> CDynamicStringAccessor::GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
 
 Recupera i dati specificati di colonna come stringa.
 
@@ -72,20 +72,20 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 #### <a name="parameters"></a>Parametri
 
 *nColumn*<br/>
-[in] Numero di colonna. Numeri di colonna partono da 1. Un valore pari a 0 fa riferimento per la colonna del segnalibro, se presente.
+[in] Numero di colonna. I numeri di colonna iniziano con 1. Un valore pari a 0 indica la colonna del segnalibro, se presente.
 
 *pColumnName*<br/>
-[in] Un puntatore a una stringa di caratteri che contiene il nome della colonna.
+in Puntatore a una stringa di caratteri che contiene il nome della colonna.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore al valore stringa recuperato dalla colonna specificata. Il valore è di tipo `BaseType`, che sarà **CHAR** oppure **WCHAR** a seconda che sia definito Unicode oppure No. Restituisce NULL se la colonna specificata non viene trovata.
+Puntatore al valore stringa recuperato dalla colonna specificata. Il valore è di tipo `BaseType`, che sarà **char** o **WCHAR** a seconda che _UNICODE sia definito o meno. Restituisce NULL se la colonna specificata non viene trovata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il secondo override form accetta il nome della colonna come una stringa ANSI. Il terzo di eseguire l'override form accetta il nome della colonna come stringa Unicode.
+Il secondo modulo di sostituzione accetta il nome della colonna come stringa ANSI. Il terzo modulo di sostituzione accetta il nome della colonna come stringa Unicode.
 
-## <a name="setstring"></a> CDynamicStringAccessor::SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: sestring
 
 Imposta i dati specificati di colonna come stringa.
 
@@ -105,27 +105,27 @@ HRESULT SetString(const WCHAR* pColumnName,
 #### <a name="parameters"></a>Parametri
 
 *nColumn*<br/>
-[in] Numero di colonna. Numeri di colonna partono da 1. Il valore speciale 0 fa riferimento alla colonna segnalibro, se presente.
+[in] Numero di colonna. I numeri di colonna iniziano con 1. Il valore speciale 0 indica la colonna del segnalibro, se presente.
 
 *pColumnName*<br/>
-[in] Un puntatore a una stringa di caratteri che contiene il nome della colonna.
+in Puntatore a una stringa di caratteri che contiene il nome della colonna.
 
 *data*<br/>
-[in] Puntatore ai dati stringa da scrivere nella colonna specificata.
+in Puntatore ai dati stringa da scrivere nella colonna specificata.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore al valore stringa per cui impostare la colonna specificata. Il valore è di tipo `BaseType`, che sarà **CHAR** oppure **WCHAR** a seconda che sia definito Unicode oppure No.
+Puntatore al valore stringa in cui impostare la colonna specificata. Il valore è di tipo `BaseType`, che sarà **char** o **WCHAR** a seconda che _UNICODE sia definito o meno.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il secondo override form accetta il nome della colonna come una stringa ANSI e il terzo di sostituzione form accetta il nome della colonna come stringa Unicode.
+Il secondo modulo di sostituzione accetta il nome della colonna come stringa ANSI e il terzo modulo di sostituzione accetta il nome della colonna come stringa Unicode.
 
-Se _SECURE_ATL è definito con un valore diverso da zero, verrà generato un errore di asserzione di runtime se l'input *dati* stringa è più lunga la lunghezza massima consentita della colonna di dati di riferimento. In caso contrario, la stringa di input verrà troncata se supera la lunghezza massima consentita.
+Se _SECURE_ATL è definito per avere un valore diverso da zero, verrà generato un errore di asserzione di runtime se la stringa di *dati* di input supera la lunghezza massima consentita della colonna di dati a cui si fa riferimento. In caso contrario, la stringa di input verrà troncata se supera la lunghezza massima consentita.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

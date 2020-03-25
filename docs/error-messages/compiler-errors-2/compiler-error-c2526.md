@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2526
 ms.assetid: 0f8c554c-f990-457e-bcae-b6f273481825
-ms.openlocfilehash: 909f1d0d9b2d0ad16948f07a086f29ab194731e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3267b84aa913ec8b8d070fdc0a206abfa0c5a636
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282261"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202605"
 ---
 # <a name="compiler-error-c2526"></a>Errore del compilatore C2526
 
-'identifier1': Funzione con collegamento C non può restituire C++ classe 'identifier2'
+' identificatore1': la funzione di collegamento C C++ non può restituire la classe ' identifier2'
 
-Una funzione definita con collegamento C non può restituire un tipo definito dall'utente.
+Una funzione definita con il collegamento C non può restituire un tipo definito dall'utente.

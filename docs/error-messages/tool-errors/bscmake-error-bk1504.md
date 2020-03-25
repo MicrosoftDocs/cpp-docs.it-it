@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK1504
 ms.assetid: e6d1a171-1472-4b7e-a04b-1a68a561675f
-ms.openlocfilehash: b213944f26932ec3b3934e82953573c1b8050532
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38cbc3173cbb9436a9b2e7f0d0c38af0b2caf4e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197834"
 ---
 # <a name="bscmake-error-bk1504"></a>Errore BK1504 di BSCMAKE
 
-Impossibile posizionarsi nel file 'nomefile' [: motivo]
+Impossibile posizionare nel file ' filename ' [: Reason]
 
-BSCMAKE non è stato possibile spostare in una posizione nel file.
+BSCMAKE non è in grado di spostarsi in un percorso del file.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
 
-1. Un disco pieno.
+1. Disco intero.
 
-1. Un errore hardware.
+1. Errore hardware.
 
-1. Troncamento del file a causa di spazio su disco insufficiente o di un'interruzione del compilatore durante la creazione del file SBR.
+1. Troncamento di file a causa di spazio su disco insufficiente o interruzione del compilatore durante la creazione del file SBR.

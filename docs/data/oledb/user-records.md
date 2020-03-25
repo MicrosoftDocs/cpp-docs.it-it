@@ -15,12 +15,12 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: c9c1126f0e8248f31ac739bb1d939f811bda678d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525292"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209443"
 ---
 # <a name="user-records"></a>Record utente
 

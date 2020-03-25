@@ -5,47 +5,47 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 2cbb334ab15912fdcf6980461016976d869f5a84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 905a9bb32544dbd7453d46362e100047516d22a8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404507"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209573"
 ---
 # <a name="setting-properties-in-your-provider"></a>Impostazione di proprietà nel provider
 
-Trovare il gruppo di proprietà e l'ID di proprietà per la proprietà desiderata. Per altre informazioni, vedere [proprietà OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) nel **riferimento per programmatori OLE DB**.
+Trovare il gruppo di proprietà e l'ID proprietà per la proprietà desiderata. Per ulteriori informazioni, vedere [OLE DB proprietà](/previous-versions/windows/desktop/ms722734(v=vs.85)) nella Guida **di riferimento per programmatori OLE DB**.
 
-Nel codice del provider generato dalla procedura guidata, trovare il mapping di proprietà corrispondente al gruppo di proprietà. Il nome del gruppo di proprietà in genere corrisponde al nome dell'oggetto. Le proprietà di comando e set di righe sono reperibile nel comando o set di righe. proprietà di inizializzazione e di origine dati è reperibile nell'oggetto origine dati.
+Nel codice del provider generato dalla procedura guidata, trovare la mappa delle proprietà corrispondente al gruppo di proprietà. Il nome del gruppo di proprietà corrisponde in genere al nome dell'oggetto. Le proprietà Command e rowset sono disponibili nel comando o nel set di righe. l'origine dati e le proprietà di inizializzazione sono disponibili nell'oggetto origine dati.
 
-Nel mapping della proprietà, aggiungere un [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) macro. PROPERTY_INFO_ENTRY_EX accetta quattro parametri:
+Nella mappa delle proprietà aggiungere una macro [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) . PROPERTY_INFO_ENTRY_EX accetta quattro parametri:
 
-- L'ID di proprietà corrispondente per la proprietà. Rimuovere i primi sette caratteri DBPROP ("_") dall'inizio del nome della proprietà. Ad esempio, se si desidera aggiungere `DBPROP_MAXROWS`, passare `MAXROWS` come primo elemento. Se si tratta di una proprietà personalizzata, passare il nome completo di GUID (ad esempio, `DBMYPROP_MYPROPERTY`).
+- ID della proprietà corrispondente alla proprietà. Rimuovere i primi sette caratteri ("DBPROP_") dall'inizio del nome della proprietà. Se ad esempio si desidera aggiungere `DBPROP_MAXROWS`, passare `MAXROWS` come primo elemento. Se si tratta di una proprietà personalizzata, passare il nome completo del GUID, ad esempio `DBMYPROP_MYPROPERTY`.
 
-- Il tipo di variante della proprietà (in [proprietà OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) nel **riferimento per programmatori OLE DB**). Immettere il tipo (ad esempio VT_BOOL o VT_I2) VT _ corrispondente al tipo di dati.
+- Tipo Variant della proprietà (in [OLE DB proprietà](/previous-versions/windows/desktop/ms722734(v=vs.85)) nel **riferimento del programmatore OLE DB**). Immettere il tipo di VT_, ad esempio VT_BOOL o VT_I2, corrispondente al tipo di dati.
 
-- Flag per indicare se la proprietà è leggibile e scrivibile e il gruppo a cui appartiene. Ad esempio, il codice seguente indica una proprietà di lettura/scrittura che appartengono al gruppo di set di righe:
+- Flag per indicare se la proprietà è leggibile e scrivibile e il gruppo a cui appartiene. Il codice seguente, ad esempio, indica una proprietà di lettura/scrittura appartenente al gruppo di set di righe:
 
     ```cpp
     DBPROPFLAGS_ROWSET | DBPROPFLAGS_READ | DBPROPFLAGS_WRITE
     ```
 
-- Valore di base della proprietà. Potrebbe trattarsi di `VARIANT_FALSE` per un valore booleano digitare o zero per un tipo integer, ad esempio. La proprietà ha questo valore a meno che non venga modificato.
+- Valore di base della proprietà. Questo potrebbe essere `VARIANT_FALSE` per un tipo booleano o zero per un tipo Integer, ad esempio. Il valore della proprietà è a meno che non venga modificato.
 
     > [!NOTE]
-    > Alcune proprietà sono connessi o concatenate ad altre proprietà, ad esempio i segnalibri o l'aggiornamento. Quando un consumer imposta una proprietà su true, potrebbe essere impostata anche un'altra proprietà. I modelli di provider OLE DB supportano questo meccanismo tramite il metodo [CUtlProps:: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
+    > Alcune proprietà sono connesse o concatenate ad altre proprietà, ad esempio segnalibri o aggiornamenti. Quando un consumer imposta una proprietà su true, potrebbe essere impostata anche un'altra proprietà. I modelli di provider OLE DB supportano questa operazione tramite il metodo [CUtlProps:: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
 
-## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>Proprietà ignorata dal provider Microsoft OLE DB
+## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>Proprietà ignorate dai provider Microsoft OLE DB
 
-I provider Microsoft OLE DB ignora le proprietà OLE DB seguenti:
+I provider Microsoft OLE DB ignorano le proprietà OLE DB seguenti:
 
-- `DBPROP_MAXROWS` funziona solo per i provider di sola lettura (vale a dire, dove `DBPROP_IRowsetChange` e `DBPROP_IRowsetUpdate` vengono **false**); in caso contrario, questa proprietà non è supportata.
+- `DBPROP_MAXROWS` funziona solo per i provider di sola lettura, ovvero dove `DBPROP_IRowsetChange` e `DBPROP_IRowsetUpdate` sono **false**. in caso contrario, questa proprietà non è supportata.
 
-- `DBPROP_MAXPENDINGROWS` viene ignorata. il provider specifica uno specifico limite.
+- `DBPROP_MAXPENDINGROWS` viene ignorato; il provider specifica il proprio limite.
 
-- `DBPROP_MAXOPENROWS` viene ignorata. il provider specifica uno specifico limite.
+- `DBPROP_MAXOPENROWS` viene ignorato; il provider specifica il proprio limite.
 
-- `DBPROP_CANHOLDROWS` viene ignorata. il provider specifica uno specifico limite.
+- `DBPROP_CANHOLDROWS` viene ignorato; il provider specifica il proprio limite.
 
 ## <a name="see-also"></a>Vedere anche
 

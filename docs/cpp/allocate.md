@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: a2284395b09c34b0d22c4499bf804cfcc3a74c4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155277"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181525"
 ---
 # <a name="allocate"></a>allocate
 
 **Sezione specifica Microsoft**
 
-Il **allocare** identificatore di dichiarazione denomina un segmento di dati in cui verrà allocato l'elemento di dati.
+L'identificatore di Dichiarazione **allocate** assegna un nome a un segmento di dati in cui verrà allocato l'elemento dati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,9 +26,9 @@ Il **allocare** identificatore di dichiarazione denomina un segmento di dati in 
    __declspec(allocate("segname")) declarator
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il nome *segname* deve essere dichiarato utilizzando uno dei seguenti pragma:
+Il nome *nomeseg* deve essere dichiarato utilizzando uno dei seguenti pragma:
 
 - [code_seg](../preprocessor/code-seg.md)
 

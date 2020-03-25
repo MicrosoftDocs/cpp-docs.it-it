@@ -2,12 +2,12 @@
 title: Problemi relativi alla migrazione dei valori a virgola mobile
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626984"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215020"
 ---
 # <a name="floating-point-migration-issues"></a>Problemi relativi alla migrazione dei valori a virgola mobile
 

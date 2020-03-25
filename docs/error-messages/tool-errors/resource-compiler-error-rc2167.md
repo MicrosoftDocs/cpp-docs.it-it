@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2167
 ms.assetid: 9b24a8eb-367b-4ff6-8266-b0c215f32d6a
-ms.openlocfilehash: ba823a117918cc87b86e0712174939e944ba0275
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b74ffa8706729c3df64b0a0aa6ac3924ddeb73a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191158"
 ---
 # <a name="resource-compiler-error-rc2167"></a>Errore del compilatore di risorse RC2167
 
-campo VERSIONINFO non riconosciuto. Prevista la virgola o BEGIN
+Campo VERSIONINFO non riconosciuto; Prevista inizio o virgola
 
-Un campo non riconosciuto è stato trovato nel **FIXED** fa parte di un **VERSIONINFO** la dichiarazione di struttura. Oggetto **VERSIONINFO** campo deve essere valori DWORD separati da una virgola.
+Un campo non riconosciuto è stato trovato nella parte **fissa** di una dichiarazione di struttura **VERSIONINFO** . Un campo **VERSIONINFO** deve essere DWORD separati da una virgola.

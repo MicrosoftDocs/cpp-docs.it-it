@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4117
 ms.assetid: c45aa281-4cc1-4dfd-bd32-bd7a60ddd577
-ms.openlocfilehash: 97fd5703a744448db87634e313678cf4e824df7f
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2474645a555748b559b1661a2b5327ca1b83e534
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626281"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176378"
 ---
 # <a name="compiler-warning-level-1-c4117"></a>Avviso del compilatore (livello 1) C4117
 
 il nome macro 'name' è riservato. 'Command' ignorato
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
 
 1. Tentativo di definire o annullare la definizione di una macro già definita.
 

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - move operators [C++]
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
-ms.openlocfilehash: 3b26628fd18749bd19819fe787888fd3264a79d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b15a0e50774bbc4e70912a31f9a57ea0439f2c12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330980"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178691"
 ---
 # <a name="special-member-functions"></a>Funzioni membro speciali
 
-Il *funzioni membro speciali* sono funzioni membro che, in alcuni casi, il compilatore genera automaticamente per l'utente di classe (o struct). Queste funzioni sono le [costruttore predefinito](constructors-cpp.md#default_constructors), il [distruttore](destructors-cpp.md), il [costruttore di copia e l'operatore di assegnazione copia](copy-constructors-and-copy-assignment-operators-cpp.md)e il [costruttore di spostamento e operatore di assegnazione spostamento](move-constructors-and-move-assignment-operators-cpp.md). Se la classe non definisce uno o più delle funzioni membro speciali, quindi il compilatore può in modo implicito dichiarano e definire le funzioni che vengono usate. Le implementazioni generate dal compilatore vengono chiamate i *predefinito* funzioni membro speciali. Il compilatore non genera funzioni se non sono necessari.
+Le *funzioni membro speciali* sono funzioni membro di classe (o struct) che, in alcuni casi, il compilatore genera automaticamente. Queste funzioni sono il [costruttore predefinito](constructors-cpp.md#default_constructors), il [distruttore](destructors-cpp.md), il [costruttore di copia e l'operatore di assegnazione di copia](copy-constructors-and-copy-assignment-operators-cpp.md)e il costruttore di [spostamento e l'operatore di assegnazione di spostamento](move-constructors-and-move-assignment-operators-cpp.md). Se la classe non definisce una o più funzioni membro speciali, il compilatore può dichiarare e definire in modo implicito le funzioni utilizzate. Le implementazioni generate dal compilatore sono chiamate funzioni membro speciali *predefinite* . Il compilatore non genera funzioni se non sono necessarie.
 
-È possibile dichiarare una funzione membro speciale predefinito in modo esplicito usando il **= default** (parola chiave). Ciò indica al compilatore di definire la funzione solo se necessario, esattamente come se la funzione non è stata dichiarata affatto.
+È possibile dichiarare in modo esplicito una funzione membro speciale predefinita usando la parola chiave **= default** . In questo modo, il compilatore definisce la funzione solo se necessario, nello stesso modo in cui la funzione non è stata dichiarata.
 
-In alcuni casi, il compilatore può generarne *eliminato* funzioni membro speciali, che non sono definiti e pertanto non richiamabile. Questa situazione può verificarsi nei casi in cui una chiamata a una funzione membro speciale specifica in una classe non ha senso, altre proprietà della classe di base. Per impedire in modo esplicito la generazione automatica di una funzione membro speciale, è possibile dichiararla come eliminato usando il **= eliminazione** (parola chiave).
+In alcuni casi, il compilatore può generare funzioni membro speciali *eliminate* , che non sono definite e pertanto non richiamabili. Questo problema può verificarsi nei casi in cui una chiamata a una particolare funzione membro speciale in una classe non ha senso, date altre proprietà della classe. Per impedire in modo esplicito la generazione automatica di una funzione membro speciale, è possibile dichiararla come eliminata tramite la parola chiave **= Delete** .
 
-Il compilatore genera un *costruttore predefinito*, un costruttore che non accetta argomenti, solo quando non è stato dichiarato un altro costruttore. Se è stata dichiarata solo un costruttore che accetta parametri, il codice che tenta di chiamare un costruttore predefinito fa sì che il compilatore genererà un messaggio di errore. Il costruttore predefinito generato dal compilatore esegue semplice member-wise [inizializzazione predefinita](initializers.md#default_initialization) dell'oggetto. Inizializzazione predefinita lascia tutte le variabili membro in uno stato indeterminato.
+Il compilatore genera un *costruttore predefinito*, un costruttore che non accetta argomenti, solo se non sono stati dichiarati altri costruttori. Se è stato dichiarato solo un costruttore che accetta parametri, il codice che tenta di chiamare un costruttore predefinito fa in modo che il compilatore generi un messaggio di errore. Il costruttore predefinito generato dal compilatore esegue una semplice [inizializzazione predefinita](initializers.md#default_initialization) per membro dell'oggetto. L'inizializzazione predefinita lascia tutte le variabili membro in uno stato indeterminato.
 
-Il distruttore predefinito esegue automaticamente distruzione dell'oggetto. È virtuale solo se un distruttore della classe base è virtuale.
+Il distruttore predefinito esegue la distruzione del membro dell'oggetto. È virtuale solo se un distruttore della classe base è virtuale.
 
-Schema di bit automaticamente di eseguire la copia predefinita e costruzione di spostamenti e le operazioni di assegnazione copia o Sposta dei membri dati non statici. Spostare le operazioni vengono generate solo quando non vengono dichiarate alcun distruttore o operazioni di copia o spostamento. Un costruttore di copia predefinito viene generato solo quando non viene dichiarato alcun costruttore di copia. Se viene dichiarata un'operazione di spostamento viene eliminato in modo implicito. Un operatore di assegnazione di copia predefinito viene generato solo quando non viene dichiarato in modo esplicito alcun operatore di assegnazione di copia. Se viene dichiarata un'operazione di spostamento viene eliminato in modo implicito.
+Le operazioni di creazione e assegnazione predefinite di copia e spostamento eseguono copie dei criteri di bit a livello di membro o spostamenti di membri dati non statici. Le operazioni di spostamento vengono generate solo quando non viene dichiarata alcuna operazione di distruttore o di spostamento o copia. Un costruttore di copia predefinito viene generato solo quando non viene dichiarato alcun costruttore di copia. Viene eliminato in modo implicito se viene dichiarata un'operazione di spostamento. Un operatore di assegnazione di copia predefinito viene generato solo quando non viene dichiarato in modo esplicito alcun operatore di assegnazione di copia. Viene eliminato in modo implicito se viene dichiarata un'operazione di spostamento.
 
 ## <a name="see-also"></a>Vedere anche
 

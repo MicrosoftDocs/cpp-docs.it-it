@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4638
 ms.assetid: 2c07923a-e103-4e40-bd11-fdfed428a5ec
-ms.openlocfilehash: 1bdd7541e16f5c02756678ae78a777094b5fe588
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3662116359f906ef6f0a004fada8efd6771d0a0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174128"
 ---
 # <a name="compiler-warning-level-3-c4638"></a>Avviso del compilatore (livello 3) C4638
 
-> Documento XML di destinazione commento: riferimento al simbolo sconosciuto '*simbolo*'
+> Destinazione commento documento XML: riferimento al simbolo sconosciuto '*Symbol*'
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il compilatore non è riuscito a risolvere un simbolo (*simbolo*). Il simbolo deve essere valido per la compilazione.
 

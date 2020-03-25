@@ -1,28 +1,28 @@
 ---
-title: Compilatore Warning (level 1) C4049
+title: Avviso del compilatore (livello 1) C4049
 ms.date: 11/04/2016
 f1_keywords:
 - C4049
 helpviewer_keywords:
 - C4049
 ms.assetid: d11c1870-bcfc-4d71-8945-b87ec6ec3514
-ms.openlocfilehash: a4958bb446b5f7e80ef2eef92b52a0f86cf6a134
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 214ccae5d9835bc4a3b66bbbe1cd5ded4bc651cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388763"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164144"
 ---
-# <a name="compiler-warning-level-1-c4049"></a>Compilatore Warning (level 1) C4049
+# <a name="compiler-warning-level-1-c4049"></a>Avviso del compilatore (livello 1) C4049
 
-limite del compilatore: termine emissione numeri di riga
+limite del compilatore: termine emissione numero di riga
 
-Il file contiene più di 16.777.215 (2<sup>24</sup>-1) le righe di origine. Il compilatore interrompe la numerazione 16.777.215.
+Il file contiene più di 16.777.215 (2<sup>24</sup>-1) righe di origine. Il compilatore interrompe la numerazione a 16.777.215.
 
-Per il codice dopo la riga e 16.777.215:
+Per il codice dopo la riga 16.777.215:
 
-- L'immagine non conterrà alcuna informazione di debug per i numeri di riga.
+- L'immagine non conterrà informazioni di debug per i numeri di riga.
 
-- Alcune funzionalità di diagnostica possono essere segnalati con numeri di riga non corretto.
+- Alcune diagnostica possono essere segnalate con numeri di riga non corretti.
 
-- gli elenchi di ASM (/ /FAs) possono avere numeri di riga non corretto.
+- gli elenchi ASM (/FAs) possono avere numeri di riga non corretti.

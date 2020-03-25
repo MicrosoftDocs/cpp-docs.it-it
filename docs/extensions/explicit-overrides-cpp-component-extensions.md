@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: c199301794daaa140ede2fd99b0ae755cea70f97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821637"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172373"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Override espliciti (C++/CLI e C++/CX)
 
@@ -33,13 +33,13 @@ Elenco di tipi, nomi e argomenti restituiti della funzione di override.  Si noti
 *type*<br/>
 Tipo di base che contiene una funzione di cui eseguire l'override.
 
-*funzione*<br/>
+*function*<br/>
 Elenco delimitato da virgole di uno o più nomi di funzione di cui eseguire l'override.
 
 *overriding-function-definition*<br/>
 Istruzioni del corpo della funzione che definiscono la funzione di override.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare override espliciti per creare un alias per una firma del metodo o per fornire implementazioni diverse per i metodi con la stessa firma.
 
@@ -47,17 +47,17 @@ Per informazioni sulla modifica del comportamento di tipi ereditati e membri di 
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="requirements"></a>Requisiti di
+### <a name="requirements"></a>Requisiti
 
 Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per informazioni sugli override espliciti in codice nativo o codice compilato con `/clr:oldSyntax`, vedere [Override espliciti](../cpp/explicit-overrides-cpp.md).
 
-### <a name="requirements"></a>Requisiti di
+### <a name="requirements"></a>Requisiti
 
 Opzione del compilatore: `/clr`
 

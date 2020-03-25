@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 05aaaa8a0d0056e0f5318f5e9329d90824760728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515636"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172114"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI e C++/CX)
 
@@ -23,7 +23,7 @@ La parola chiave **__nullptr** è una parola chiave specifica di Microsoft che h
 
 La parola chiave **nullptr** è equivalente a **Nothing** in Visual Basic e **null** in C#.
 
-## <a name="usage"></a>Utilizzo
+## <a name="usage"></a>Uso
 
 La parola chiave **nullptr** può essere usata ovunque sia possibile usare un handle, un puntatore nativo o un argomento di funzione.
 
@@ -221,7 +221,7 @@ int main() {
 
 ## <a name="requirements"></a>Requisiti
 
-Opzione del compilatore: (non obbligatoria, supportata da tutte le opzioni di generazione di codice, tra cui `/ZW` e `/clr`)
+Opzione del compilatore: (non obbligatorio; supportata da tutte le opzioni di generazione del codice, incluse `/ZW` e `/clr`)
 
 ## <a name="see-also"></a>Vedere anche
 

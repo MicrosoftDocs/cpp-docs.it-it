@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514666"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167992"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -28,9 +28,9 @@ Specifica l'IID dell'interfaccia COM a cui fa riferimento un puntatore a interfa
 *expression*<br/>
 Espressione del linguaggio C che specifica un IID di un'interfaccia COM a cui fa riferimento un puntatore a interfaccia.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **iid_is** C++ ha la stessa funzionalità dell'attributo MIDL di [iid_is](/windows/win32/Midl/iid-is) .
+L'attributo **iid_is** C++ ha la stessa funzionalità dell'attributo [iid_is](/windows/win32/Midl/iid-is) MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -59,8 +59,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**Si applica a**|Parametro di interfaccia, membro dati|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

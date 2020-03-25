@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2720
 ms.assetid: 9ee3aab7-711b-4f5a-b2f1-cb62b130f1ce
-ms.openlocfilehash: c6499fd3f279099ea7c5b31860e70bdaa285e3f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f4329ee631eafc7c2670d9ebf28609c22e7592
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383048"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202134"
 ---
 # <a name="compiler-error-c2720"></a>Errore del compilatore C2720
 
-> '*identifier*': '*identificatore*' identificatore classe di archiviazione non valido per i membri
+> '*Identifier*': identificatore classe di archiviazione '*specifier*' non valido nei membri
 
-La classe di archiviazione non può essere usata per i membri della classe esterni alla dichiarazione. Per correggere questo errore, rimuovere il superflue [classe di archiviazione](../../cpp/storage-classes-cpp.md) identificatore dalla definizione del membro all'esterno della dichiarazione di classe.
+La classe di archiviazione non può essere usata per i membri della classe esterni alla dichiarazione. Per correggere l'errore, rimuovere l'identificatore di [classe di archiviazione](../../cpp/storage-classes-cpp.md) non necessario dalla definizione del membro all'esterno della dichiarazione di classe.
 
 ## <a name="example"></a>Esempio
 

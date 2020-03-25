@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_cast keyword [C++]
 ms.assetid: 4d8bb203-ef33-4a10-9f9f-c64d4fbc1687
-ms.openlocfilehash: 389ef84149031fd602ff9ded15d34869258ffd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2711142e4aa73cc0119949876e7e593067cd45d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399109"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180342"
 ---
-# <a name="constcast-operator"></a>Operatore const_cast
+# <a name="const_cast-operator"></a>Operatore const_cast
 
-Rimuove il **const**, **volatile**, e **unaligned** attributi da una classe.
+Rimuove gli attributi **const**, **volatile**e **__unaligned** da una classe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,13 +23,13 @@ Rimuove il **const**, **volatile**, e **unaligned** attributi da una classe.
 const_cast <type-id> (expression)
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un puntatore a qualsiasi tipo di oggetto o un puntatore a un membro dati può essere convertito in modo esplicito a un tipo che è identico tranne per il **const**, **volatile**, e **unaligned** qualificatori. Per i puntatori e i riferimenti, il risultato farà riferimento all'oggetto originale. Per i puntatori ai membri dati, il risultato farà riferimento allo stesso membro del puntatore originale (uncast) al membro dati. A seconda del tipo di oggetto a cui si fa riferimento, un'operazione di scrittura tramite il puntatore risultante, il riferimento o il puntatore al membro dati potrebbe produrre un comportamento non definito.
+Un puntatore a qualsiasi tipo di oggetto o un puntatore a un membro dati può essere convertito in modo esplicito in un tipo identico tranne che per i qualificatori **const**, **volatile**e **__unaligned** . Per i puntatori e i riferimenti, il risultato farà riferimento all'oggetto originale. Per i puntatori ai membri dati, il risultato farà riferimento allo stesso membro del puntatore originale (uncast) al membro dati. A seconda del tipo di oggetto a cui si fa riferimento, un'operazione di scrittura tramite il puntatore risultante, il riferimento o il puntatore al membro dati potrebbe produrre un comportamento non definito.
 
-Non è possibile usare la **const_cast** operatore per eseguire l'override direttamente dello stato costante costante di una variabile.
+Non è possibile usare l'operatore **const_cast** per eseguire direttamente l'override dello stato costante di una variabile costante.
 
-Il **const_cast** operatore converte un valore del puntatore null per il valore del puntatore null del tipo di destinazione.
+L'operatore **const_cast** converte un valore del puntatore null nel valore del puntatore null del tipo di destinazione.
 
 ## <a name="example"></a>Esempio
 
@@ -62,7 +62,7 @@ int main() {
 }
 ```
 
-Nella riga contenente il **const_cast**, il tipo di dati di **questo** puntatore è `const CCTest *`. Il **const_cast** operatore modifica il tipo di dati del **ciò** puntatore al `CCTest *`, consentendo al membro `number` da modificare. Il cast dura solo per il resto dell'istruzione in cui viene visualizzato.
+Nella riga contenente la **const_cast**, il tipo di dati del puntatore **this** è `const CCTest *`. L'operatore **const_cast** modifica il tipo di dati del puntatore **this** in `CCTest *`, consentendo al membro `number` di essere modificato. Il cast dura solo per il resto dell'istruzione in cui viene visualizzato.
 
 ## <a name="see-also"></a>Vedere anche
 

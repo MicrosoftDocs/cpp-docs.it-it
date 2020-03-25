@@ -1,20 +1,20 @@
 ---
-title: Compilatore avviso (livello 2) C4007
+title: Avviso del compilatore (livello 2) C4007
 ms.date: 11/04/2016
 f1_keywords:
 - C4007
 helpviewer_keywords:
 - C4007
 ms.assetid: 56a70c07-59a5-4fd7-80ed-63592c65cbb7
-ms.openlocfilehash: 07cbea639918de8dfa7381880c34ef3bc5656288
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33ef3abfa0b24babf1288f8df4156659c83001dd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384062"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174375"
 ---
-# <a name="compiler-warning-level-2-c4007"></a>Compilatore avviso (livello 2) C4007
+# <a name="compiler-warning-level-2-c4007"></a>Avviso del compilatore (livello 2) C4007
 
-'function': deve essere 'attributo'
+' Function ': deve essere ' attribute '
 
-Un attributo obbligatorio per una funzione non viene dichiarato in modo esplicito. Ad esempio, la funzione **principale** deve avere il `__cdecl` attributo. Il compilatore impone l'attributo.
+Un attributo obbligatorio per una funzione non è dichiarato in modo esplicito. Ad esempio, la funzione **Main** deve avere l'attributo `__cdecl`. Il compilatore forza l'attributo.

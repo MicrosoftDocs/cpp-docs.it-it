@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: f9ed80bdcc04302c0dee85935f377c8e3dbfd37f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f2a0aa9a68c081e83a7a5278aa37a7fddac85416
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514629"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166836"
 ---
-# <a name="import"></a>importazione
+# <a name="import"></a>import
 
 Specifica un altro file con estensione IDL, FAD o di intestazione contenente le definizioni a cui si vuole fare riferimento dall'IDL principale.
 
@@ -30,11 +30,11 @@ Specifica un altro file con estensione IDL, FAD o di intestazione contenente le 
 *idl_file*<br/>
 Nome di un file con estensione IDL che si desidera importare nella libreria dei tipi del progetto corrente.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **Import** C++ causa l' `#import` inserimento di un'istruzione al di `import "docobj.idl"` sotto dell'istruzione nel file con estensione IDL generato. L'attributo **Import** ha la stessa funzionalità dell'attributo MIDL [Import](/windows/win32/Midl/import) .
+L'attributo **Import** C++ causa l'inserimento di un'istruzione `#import` sotto l'istruzione `import "docobj.idl"` nel file IDL generato. L'attributo **Import** ha la stessa funzionalità dell'attributo MIDL [Import](/windows/win32/Midl/import) .
 
-L'attributo **Import** inserisce il file specificato solo nel file con estensione IDL che verrà generato dal progetto. l'attributo **Import** non consente di chiamare costrutti nel file specificato dal codice sorgente nel progetto.  Per chiamare costrutti nel file specificato dal codice sorgente nel progetto, usare [#import](../../preprocessor/hash-import-directive-cpp.md) e l' `embedded_idl` attributo oppure è possibile includere il file con estensione h per *idl_file*, se è presente un file con estensione h.
+L'attributo **Import** inserisce il file specificato solo nel file con estensione IDL che verrà generato dal progetto. l'attributo **Import** non consente di chiamare costrutti nel file specificato dal codice sorgente nel progetto.  Per chiamare costrutti nel file specificato dal codice sorgente nel progetto, usare [#import](../../preprocessor/hash-import-directive-cpp.md) e l'attributo `embedded_idl` oppure è possibile includere il file con estensione h per il *idl_file*, se è presente un file con estensione h.
 
 ## <a name="example"></a>Esempio
 
@@ -68,8 +68,8 @@ library MyLib {
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

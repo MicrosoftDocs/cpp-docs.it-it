@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-ms.openlocfilehash: a03a6100c372e059bd9ef2ddde0558da307923dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c9ae9aedaec202c8798ab454ee5df1a68278a6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181603"
 ---
 # <a name="address-of-operator-amp"></a>Operatore address-of: &amp;
 
@@ -23,15 +23,15 @@ ms.locfileid: "62385024"
 & cast-expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'operatore unario address-of (**&**) accetta l'indirizzo del relativo operando. L'operando dell'operatore address-of può essere un indicatore di funzione o un l-value che definisce un oggetto che non è un campo di bit.
+L'operatore address-of unario ( **&** ) accetta l'indirizzo del relativo operando. L'operando dell'operatore address-of può essere un indicatore di funzione o un l-value che designa un oggetto che non è un campo di bit.
 
 L'operatore address-of può essere applicato solo a variabili di tipo fondamentale, struttura, classe o di unione dichiarate a livello di file oppure a riferimenti a matrice con indice. In queste espressioni, un'espressione costante che non include l'operatore address-of può essere aggiunta o sottratta dall'espressione address-of.
 
-Se applicato a funzioni oppure a valori l-value, il risultato dell'espressione è un tipo puntatore (valore r-value) derivato dal tipo dell'operando. Ad esempio, se l'operando è di tipo **char**, il risultato dell'espressione è di tipo pointer a **char**. L'operatore address-of, applicato a **const** oppure **volatile** gli oggetti, restituisce `const type *` oppure `volatile type *`, dove **tipo** è il tipo dell'originale oggetto.
+Se applicato a funzioni oppure a valori l-value, il risultato dell'espressione è un tipo puntatore (valore r-value) derivato dal tipo dell'operando. Se, ad esempio, l'operando è di tipo **char**, il risultato dell'espressione è di tipo puntatore a **char**. L'operatore address-of, applicato a oggetti **const** o **volatile** , restituisce `const type *` o `volatile type *`, dove **Type** è il tipo dell'oggetto originale.
 
-Quando l'operatore address-of viene applicato a un nome completo, il risultato dipende dal fatto che il *qualified-name* specifichi un membro statico. Se il membro è statico, il risultato è un puntatore al tipo specificato nella dichiarazione del membro. Se il membro non statico, il risultato è un puntatore al membro *name* della classe indicata da *qualified-class-name*. (Vedere [espressioni primarie](../cpp/primary-expressions.md) per altre informazioni sui *qualified-class-name*.) Nel frammento di codice seguente viene illustrato come il risultato sia diverso a seconda che il membro sia statico o meno:
+Quando si applica l'operatore address-of a un nome completo, il risultato dipende dal fatto che il *nome qualificato* specifichi un membro statico. Se il membro è statico, il risultato è un puntatore al tipo specificato nella dichiarazione del membro. Se il membro non è statico, il risultato è un puntatore al *nome* del membro della classe indicata da *qualified-class-name*. (Per altre informazioni su *qualified-class-name*, vedere [espressioni primarie](../cpp/primary-expressions.md) ). Nel frammento di codice seguente viene illustrato il modo in cui il risultato è diverso, a seconda che il membro sia statico:
 
 ```cpp
 // expre_Address_Of_Operator.cpp
@@ -51,7 +51,7 @@ int main() {
 
 In questo esempio l'espressione `&PTM::fValue` contiene il tipo `float *` anziché il tipo `float PTM::*` perché `fValue` è un membro statico.
 
-L'indirizzo di una funzione in overload può essere preso in considerazione solo quando è chiaro a quale versione della funzione viene fatto riferimento. Visualizzare [overload di funzioni](function-overloading.md) per informazioni su come ottenere l'indirizzo di una particolare funzione in overload.
+L'indirizzo di una funzione in overload può essere preso in considerazione solo quando è chiaro a quale versione della funzione viene fatto riferimento. Per informazioni su come ottenere l'indirizzo di una particolare funzione in overload, vedere [Overload della funzione](function-overloading.md) .
 
 L'applicazione dell'operatore address-of a un tipo riferimento restituisce lo stesso risultato dell'applicazione dell'operatore all'oggetto cui il riferimento è associato. Ad esempio:
 

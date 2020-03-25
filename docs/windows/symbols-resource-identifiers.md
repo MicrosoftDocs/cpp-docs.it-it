@@ -1,5 +1,5 @@
 ---
-title: Identificatori di risorsa (simboli) (C++)
+title: Identificatori di risorsa (simboli)C++()
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.identifiers
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 0b19ff0d1c709616868d47c172ff4cf8c6931b82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba0958e455557660ef704f1c2fa570d46307082f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387877"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214396"
 ---
-# <a name="resource-identifiers-symbols-c"></a>Identificatori di risorsa (simboli) (C++)
+# <a name="resource-identifiers-symbols-c"></a>Identificatori di risorsa (simboli)C++()
 
-Un simbolo è un identificatore di risorsa (ID) che è costituito da due parti, il mapping a un valore di simbolo (intero), ad esempio un nome di simbolo (stringa di testo):
+Un simbolo è un identificatore (ID) di risorsa costituito da due parti, un nome di simbolo (stringa di testo) mappato a un valore di simbolo (Integer), ad esempio:
 
 ```
 IDC_EDITNAME = 5100
@@ -29,15 +29,15 @@ Molto spesso i nomi dei simboli sono denominati identificatori.
 
 I simboli offrono un modo descrittivo per fare riferimento alle risorse e agli oggetti dell'interfaccia utente sia nel codice sorgente che durante l'uso negli editor di risorse. I simboli possono essere visualizzati e modificati facilmente mediante la [finestra di dialogo Simboli risorsa](../windows/viewing-resource-symbols.md).
 
-Il numero di risorse e simboli è direttamente proporzionale alle dimensioni e al livello di complessità dell'applicazione. Può quindi risultare difficile tenere traccia di un numero elevato di simboli distribuiti in diversi file. Il **simboli risorsa** nella finestra di dialogo semplifica la gestione dei simboli offrendo uno strumento centrale che consente:
+Il numero di risorse e simboli è direttamente proporzionale alle dimensioni e al livello di complessità dell'applicazione. Può quindi risultare difficile tenere traccia di un numero elevato di simboli distribuiti in diversi file. La finestra di dialogo **simboli risorsa** semplifica la gestione dei simboli offrendo uno strumento centrale tramite il quale è possibile:
 
-- [Creare i simboli](../windows/creating-new-symbols.md)
+- [Crea simboli](../windows/creating-new-symbols.md)
 
-- [Gestione dei simboli](../windows/changing-a-symbol-or-symbol-name-id.md)
+- [Gestisci simboli](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [Visualizzare gli ID simbolo predefiniti](../windows/predefined-symbol-ids.md)
 
-Quando si crea una nuova risorsa o un nuovo oggetto risorsa, gli [editor di risorse](../windows/resource-editors.md) forniscono alla risorsa un nome predefinito, ad esempio `IDC_RADIO1`, e le assegnano un valore. La definizione di nome e dal valore viene archiviata nel `Resource.h` file.
+Quando si crea una nuova risorsa o un nuovo oggetto risorsa, gli [editor di risorse](../windows/resource-editors.md) forniscono alla risorsa un nome predefinito, ad esempio `IDC_RADIO1`, e le assegnano un valore. La definizione nome-più-valore viene archiviata nel file di `Resource.h`.
 
 > [!NOTE]
 > Quando si copiano risorse o oggetti risorsa da un file RC a un altro, Visual C++ potrebbe modificare il valore del simbolo della risorsa trasferita o il nome e il valore del simbolo, allo scopo di evitare conflitti con i nomi o i valori dei simboli nel file esistente.

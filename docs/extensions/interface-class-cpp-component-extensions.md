@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515706"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172165"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class (C++/CLI e C++/CX)
 
@@ -34,7 +34,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 *interface_access*<br/>
 Accessibilità di un'interfaccia all'esterno dell'assembly.  I valori possibili sono **public** e **private**.  Il valore predefinito è **private**. Le interfacce annidate non possono avere un identificatore *interface_access*.
 
-*name*<br/>
+*nome*<br/>
 Nome dell'interfaccia.
 
 *inherit_access*<br/>

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-ms.openlocfilehash: d930c1884975288ff11f4d4e5cf2728e717e17d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f52c065210a8861dc065508248a506770b039b1d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392258"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189273"
 ---
 # <a name="do-while-statement-c"></a>Istruzione do-while (C++)
 
-Esegue una *istruzione* ripetutamente finché la condizione di chiusura specificata (il *espressione*) restituisce zero.
+Esegue ripetutamente un' *istruzione* fino a quando la condizione di chiusura specificata (l' *espressione*) non restituisce zero.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,9 +28,9 @@ do
 while ( expression ) ;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il test della condizione di chiusura viene eseguito dopo ogni esecuzione del ciclo; Pertanto, un **scopo-mentre** ciclo viene eseguito una o più volte, a seconda del valore dell'espressione di chiusura. L'istruzione **do-while** può terminare anche quando un'istruzione [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) o [return](../cpp/return-statement-cpp.md) viene eseguita nel corpo dell'istruzione.
+Il test della condizione di chiusura viene eseguito dopo ogni esecuzione del ciclo. Pertanto, un ciclo **do-while** viene eseguito una o più volte, a seconda del valore dell'espressione di terminazione. L'istruzione **do-while** può terminare anche quando un'istruzione [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) o [return](../cpp/return-statement-cpp.md) viene eseguita nel corpo dell'istruzione.
 
 *espressione* deve essere di tipo puntatore o aritmetico. L'esecuzione procede nel modo seguente:
 
@@ -40,7 +40,7 @@ Il test della condizione di chiusura viene eseguito dopo ogni esecuzione del cic
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato il **scopo-mentre** istruzione:
+Nell'esempio seguente viene illustrata l'istruzione **do-while** :
 
 ```cpp
 // do_while_statement.cpp

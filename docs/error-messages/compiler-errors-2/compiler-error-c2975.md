@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 70fc648de8bcf4f1e85edf3a12cc0b7d3d70625f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344696"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201565"
 ---
 # <a name="compiler-error-c2975"></a>Errore del compilatore C2975
 
-> «*argomenti*': argomento di modello non valido per '*tipo*',. prevista espressione costante in fase di compilazione
+> '*argument*': argomento di modello non valido per '*Type*', espressione costante in fase di compilazione prevista
 
-L'argomento di modello non corrisponde la dichiarazione di modello; un'espressione costante deve trovarsi tra parentesi acute. Le variabili non sono consentite come argomenti effettivi del modello. Controllare la definizione di modello per individuare i tipi corretti.
+L'argomento di modello non corrisponde alla dichiarazione del modello. all'interno delle parentesi angolari dovrebbe essere presente un'espressione costante. Le variabili non sono consentite come argomenti effettivi del modello. Controllare la definizione di modello per individuare i tipi corretti.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2975 e anche illustrato l'utilizzo corretto:
+L'esempio seguente genera C2975 e Mostra anche l'uso corretto:
 
 ```cpp
 // C2975.cpp
@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-C2975 si verifica anche quando si usa &#95; &#95;riga&#95; &#95; come costante della fase di compilazione con [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md). Una soluzione, è possibile eseguire la compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) invece di **/ZI**.
+C2975 si verifica anche quando si &#95; &#95;USA&#95; &#95; la riga come costante in fase di compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md). Una soluzione è la compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) anziché con **/Zi**.
 
 ```cpp
 // C2975b.cpp

@@ -5,31 +5,31 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 6e876fe27bd57194513f637fda90845ca68c59ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0661dbf3dd02bef5f5f056c5f09b39e33d17364
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168551"
 ---
 # <a name="atl-predefined-symbols"></a>Simboli predefiniti di ATL
 
-Questi simboli sono definiti nei file di intestazione ATL, ma supportano le azioni e funzioni di applicazione di Windows standard. Questi simboli sono usati principalmente con le finestre di dialogo.
+Questi simboli sono definiti nei file di intestazione ATL, ma supportano le funzioni e le azioni dell'applicazione Windows standard. Questi simboli vengono utilizzati principalmente con le finestre di dialogo.
 
-Quando si lavora con finestre di dialogo e controlli nel [finestra di dialogo Editor](../windows/dialog-editor.md), questi simboli verranno visualizzati nel [finestra proprietà](/visualstudio/ide/reference/properties-window) associati ai controlli comuni. Ad esempio, se dispone di una finestra di dialogo un **annullare** button, che comando sarà associato il simbolo IDCANCEL nel **proprietà** finestra.
+Quando si utilizzano finestre di dialogo e controlli nell' [editor finestre](../windows/dialog-editor.md), questi simboli verranno visualizzati nel [finestra Proprietà](/visualstudio/ide/reference/properties-window) associato ai controlli comuni. Se, ad esempio, nella finestra di dialogo è presente un pulsante **Annulla** , tale comando verrà associato al simbolo IDCANCEL nella finestra **Proprietà** .
 
 |||
 |-|-|
-|IDABORT|(controllo) Finestra di dialogo, il pulsante Interrompi|
-|IDC_STATIC|(controllo) Controllo statico|
-|IDCANCEL|(controllo) Finestra di dialogo, pulsante Annulla|
-|IDIGNORE|(controllo) Finestra di dialogo, pulsante Ignora|
-|IDNO|(controllo) Nessun pulsante di finestra di dialogo|
-|IDOK|(controllo) Finestra di dialogo, sul pulsante OK|
-|IDR_ACCELERATOR1|(risorsa) Tabella di tasti di scelta rapida|
-|IDRETRY|(controllo) Finestra di dialogo, il pulsante Riprova|
-|IDS_PROJNAME|(string) Nome dell'applicazione corrente|
-|IDYES|(controllo) Finestra di dialogo, pulsante Sì|
+|IDABORT|controllo Finestra di dialogo, pulsante Interrompi|
+|IDC_STATIC|controllo Controllo statico|
+|IDCANCEL|controllo Finestra di dialogo, pulsante Annulla|
+|IDIGNORE|controllo Finestra di dialogo, pulsante Ignora|
+|IDNO|controllo Finestra di dialogo, nessun pulsante|
+|IDOK|controllo Finestra di dialogo, pulsante OK|
+|IDR_ACCELERATOR1|risorse Tabella dei tasti di scelta rapida|
+|IDRETRY|controllo Finestra di dialogo, pulsante Riprova|
+|IDS_PROJNAME|stringa Nome dell'applicazione corrente|
+|IDYES|controllo Finestra di dialogo, pulsante Sì|
 
 ## <a name="requirements"></a>Requisiti
 

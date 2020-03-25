@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects, CLR programming
 - .NET applications, C++
 ms.assetid: 59ae9020-5f26-4ad0-bbdd-97c2e2023a20
-ms.openlocfilehash: e41544adb040175fc8e53ab0e6bc4f8275891580
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 45295a3395f19d32dbf29948e1cbd15cd844adb4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446324"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169006"
 ---
 # <a name="files-created-for-clr-projects"></a>File creati per progetti CLR
 

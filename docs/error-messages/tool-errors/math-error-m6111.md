@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - M6111
 ms.assetid: c0fc13f8-33c8-4e3f-a440-126cc623441b
-ms.openlocfilehash: 44f406881d64d13e23ca2c0911ee278c864a2c11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8abedf6a326a826d0c8ac513b15037c8bf89bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393408"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173691"
 ---
 # <a name="math-error-m6111"></a>Errore matematico M6111
 
-underflow di stack
+underflow dello stack
 
-Un'operazione a virgola mobile ha comportato un underflow di stack nel coprocessore 8087/287/387 o nell'emulatore.
+Un'operazione a virgola mobile ha generato un underflow dello stack sul coprocessore 8087/287/387 o sull'emulatore.
 
-Questo errore è spesso causato da una chiamata a un `long double` funzione che restituisce un valore. Ad esempio, di seguito genera questo errore quando compilato ed eseguito:
+Questo errore è spesso causato da una chiamata a una funzione `long double` che non restituisce un valore. Ad esempio, il codice seguente genera questo errore durante la compilazione e l'esecuzione:
 
 ```
 long double ld() {};

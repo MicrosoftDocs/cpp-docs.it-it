@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CXX0039
 - CAN0039
 ms.assetid: 8bf698d2-e015-4595-944f-72b81aa43d22
-ms.openlocfilehash: 053e57a21f0cb75cbd96732edb6812b3557bcd50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5706d002eb3d566d05b059cb04b6b1626fdb3d33
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185126"
 ---
 # <a name="expression-evaluator-error-cxx0039"></a>Errore dell‘analizzatore di espressioni CXX0039
 
 il simbolo è ambiguo
 
-L'analizzatore di espressioni C non è possibile determinare quale istanza di un simbolo da utilizzare in un'espressione. Il simbolo è presente più volte nella struttura di ereditarietà.
+L'analizzatore di espressioni C non è in grado di determinare l'istanza di un simbolo da utilizzare in un'espressione. Il simbolo si verifica più di una volta nell'albero di ereditarietà.
 
-È necessario usare l'operatore di risoluzione ambito (`::`) specificare in modo esplicito l'istanza da utilizzare nell'espressione.
+Per specificare in modo esplicito l'istanza da utilizzare nell'espressione, è necessario utilizzare l'operatore di risoluzione dell'ambito (`::`).
 
-Questo errore è identico all'errore CAN0039.
+Questo errore è identico a CAN0039.

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2113
 ms.assetid: cbf52e93-ab14-49b7-9ce8-fb55877602ec
-ms.openlocfilehash: 66f2fac2e5524b948db241d6032fb7b6acaaa6de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba286ce9c8ee3663d978b09b6158a6954efdf742
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395001"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191795"
 ---
 # <a name="resource-compiler-error-rc2113"></a>Errore del compilatore di risorse RC2113
 
-END previsto nella finestra di dialogo
+FINE prevista nella finestra di dialogo
 
-Il **END** parola chiave deve verificarsi alla fine di un **dialogo** istruzione. Assicurarsi che non siano presenti virgolette aperte rimasti in seguito all'istruzione precedente.
+La parola chiave **end** deve verificarsi alla fine di un'istruzione di **dialogo** . Verificare che non vi siano virgolette aperte rimaste dall'istruzione precedente.

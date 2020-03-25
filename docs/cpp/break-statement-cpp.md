@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 3dda0b19fffaaf725ab363a0c4fe70d2ca54e3f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d31e1456106d5f82c4a13079c72c231b8477bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267715"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190482"
 ---
 # <a name="break-statement-c"></a>Istruzione break (C++)
 
-Il **interruzione** istruzione termina l'esecuzione di inclusione più vicino ciclo o dell'istruzione condizionale in cui è presente. Il controllo passa all'istruzione che segue la fine dell'istruzione, se presente.
+L'istruzione **break** termina l'esecuzione del ciclo di inclusione più vicino o dell'istruzione condizionale in cui viene visualizzato. Il controllo passa all'istruzione che segue la fine dell'istruzione, se presente.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,19 +23,19 @@ Il **interruzione** istruzione termina l'esecuzione di inclusione più vicino ci
 break;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **break** istruzione viene usata con il parametro condizionale [passare](../cpp/switch-statement-cpp.md) istruzione e con il [eseguire](../cpp/do-while-statement-cpp.md), [per](../cpp/for-statement-cpp.md), e [durante](../cpp/while-statement-cpp.md) le istruzioni loop.
+L'istruzione **break** viene utilizzata con l'istruzione [Switch](../cpp/switch-statement-cpp.md) condizionale e con le istruzioni del ciclo [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)e [while](../cpp/while-statement-cpp.md) .
 
-In un **passa** istruzione, il **interruzione** istruzione fa sì che il programma eseguire l'istruzione successiva di fuori il **passare** istruzione. Senza una **interruzione** , ogni istruzione corrispondente **case** etichetta alla fine della **passare** istruzione, tra cui la **predefinita**clausola, viene eseguita.
+In un'istruzione **Switch** l'istruzione **break** fa sì che il programma esegua l'istruzione successiva al di fuori dell'istruzione **Switch** . Senza un'istruzione **break** , viene eseguita ogni istruzione dall'etichetta **case** corrispondente alla fine dell'istruzione **Switch** , inclusa la clausola **default** .
 
-Nei cicli, il **break** istruzione termina l'esecuzione di inclusione più vicina **si**, **per**, oppure **mentre** istruzione. Il controllo passa all'istruzione che segue l'istruzione terminata, se presente.
+In cicli l'istruzione **break** termina l'esecuzione dell'istruzione di inclusione **do**, **for**o **while** più vicina. Il controllo passa all'istruzione che segue l'istruzione terminata, se presente.
 
-Nelle istruzioni annidate il **break** termina solo l'istruzione il **si**, **per**, **passare**, o **durante**istruzione che la include. È possibile usare una **restituire** oppure **goto** istruzione per trasferire il controllo da più profondamente annidati strutture.
+All'interno di istruzioni nidificate, l'istruzione **break** termina solo l'istruzione **do**, **for**, **Switch**o **while** che la racchiude immediatamente. È possibile utilizzare un'istruzione **return** o **goto** per trasferire il controllo da strutture annidate più profondamente.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente viene illustrato come utilizzare il **INTERR** istruzione in un **per** ciclo.
+Nel codice seguente viene illustrato come utilizzare l'istruzione **break** in un ciclo **for** .
 
 ```cpp
 #include <iostream>
@@ -71,7 +71,7 @@ In each case:
 3
 ```
 
-Il codice seguente viene illustrato come utilizzare **INTERR** in un **mentre** ciclo e un **si** ciclo.
+Il codice seguente illustra come usare **break** in un ciclo **while** e un ciclo **do** .
 
 ```cpp
 #include <iostream>
@@ -104,7 +104,7 @@ In each case:
 0123
 ```
 
-Il codice seguente viene illustrato come utilizzare **interruzione** in un'istruzione switch. È necessario utilizzare **INTERR** in ogni caso, se si desidera gestire ogni caso separatamente; se non si usa **interruzione**, l'esecuzione del codice passa al caso successivo.
+Il codice seguente illustra come usare **break** in un'istruzione switch. È necessario utilizzare **Interrompi** in ogni caso se si desidera gestire separatamente ogni case. Se non si usa **break**, l'esecuzione del codice passa al caso successivo.
 
 ```cpp
 #include <iostream>

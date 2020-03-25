@@ -1,5 +1,5 @@
 ---
-title: MixIn (struttura)
+title: Struttura MixIn
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: 16fd6b46d616df7163a304afa7f32ac3c095d398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325357"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213694"
 ---
-# <a name="mixin-structure"></a>MixIn (struttura)
+# <a name="mixin-structure"></a>Struttura MixIn
 
 Verifica che una classe di runtime derivi da interfacce di Windows Runtime, se disponibili, quindi da interfacce COM classiche.
 
@@ -31,18 +31,18 @@ struct MixIn;
 
 ### <a name="parameters"></a>Parametri
 
-*Derivati*<br/>
-Un tipo derivato dal [implementa](implements-structure.md) struttura.
+*Derivata*<br/>
+Tipo derivato dalla struttura [Implements](implements-structure.md) .
 
 *MixInType*<br/>
 Tipo di base.
 
 *hasImplements*<br/>
-**true** se *MixInType* è derivato dall'implementazione corrente il tipo di base; **false** in caso contrario.
+**true** se *MixInType* è derivato dall'implementazione corrente del tipo di base; in caso contrario, **false** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Se una classe è derivata da Windows Runtime e le interfacce di classi COM, l'elenco di dichiarazione di classe prima di tutto necessario elencare le interfacce di Windows Runtime e quindi qualsiasi COM classico interfacce. **MixIn** assicura che le interfacce sono specificate nell'ordine corretto.
+Se una classe è derivata dalle interfacce Windows Runtime e COM della classe, l'elenco di dichiarazioni di classe deve innanzitutto elencare tutte le interfacce di Windows Runtime e quindi le interfacce COM classiche. **Mixin** garantisce che le interfacce siano specificate nell'ordine corretto.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

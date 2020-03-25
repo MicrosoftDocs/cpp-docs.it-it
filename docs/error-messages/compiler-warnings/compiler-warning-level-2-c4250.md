@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 03826f10659cbdf6035cd4dedebecca3e3302e3a
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: e0feb1cb7131b4388c87213a85ff1c921f636e1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052119"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162036"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Avviso del compilatore (livello 2) C4250
 

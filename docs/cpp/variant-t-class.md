@@ -10,50 +10,50 @@ helpviewer_keywords:
 - VARIANT object
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
-ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e11d31904fd8e54049f69ee4f6530d511c8c7f4e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187752"
 ---
-# <a name="variantt-class"></a>Classe _variant_t
+# <a name="_variant_t-class"></a>Classe _variant_t
 
 **Sezione specifica Microsoft**
 
-Oggetto **variant_t** incapsulato dall'oggetto di `VARIANT` tipo di dati. La classe gestisce l'allocazione delle risorse e la deallocazione ed effettua chiamate di funzione al `VariantInit` e `VariantClear` come appropriato.
+Un oggetto **_variant_t** incapsula il tipo di dati `VARIANT`. La classe gestisce l'allocazione e la deallocazione delle risorse e effettua chiamate di funzione per `VariantInit` e `VariantClear` in base alle esigenze.
 
-### <a name="construction"></a>Costruzione
+### <a name="construction"></a>Costruzioni
 
 |||
 |-|-|
-|[_variant_t](../cpp/variant-t-variant-t.md)|Costruisce un **variant_t** oggetto.|
+|[_variant_t](../cpp/variant-t-variant-t.md)|Costruisce un oggetto **_variant_t** .|
 
 ### <a name="operations"></a>Operazioni
 
 |||
 |-|-|
-|[Attach](../cpp/variant-t-attach.md)|Associa un `VARIANT` nell'oggetto di **variant_t** oggetto.|
-|[Cancella](../cpp/variant-t-clear.md)|Cancella incapsulato `VARIANT` oggetto.|
-|[ChangeType](../cpp/variant-t-changetype.md)|Modifica il tipo dei **variant_t** oggetto indicato `VARTYPE`.|
-|[Detach](../cpp/variant-t-detach.md)|Scollega incapsulato `VARIANT` da questo oggetto **variant_t** oggetto.|
-|[SetString](../cpp/variant-t-setstring.md)|Assegna una stringa a questo **variant_t** oggetto.|
+|[Collega](../cpp/variant-t-attach.md)|Connette un oggetto `VARIANT` nell'oggetto **_variant_t** .|
+|[Cancella](../cpp/variant-t-clear.md)|Cancella l'oggetto `VARIANT` incapsulato.|
+|[ChangeType](../cpp/variant-t-changetype.md)|Consente di modificare il tipo dell'oggetto **_variant_t** nella `VARTYPE`indicata.|
+|[Scollega](../cpp/variant-t-detach.md)|Disconnette l'oggetto `VARIANT` incapsulato da questo oggetto **_variant_t** .|
+|[SetString](../cpp/variant-t-setstring.md)|Assegna una stringa a questo oggetto **_variant_t** .|
 
 ### <a name="operators"></a>Operatori
 
 |||
 |-|-|
-|[operator =](../cpp/variant-t-operator-equal.md)|Assegna un nuovo valore a un oggetto esistente **variant_t** oggetto.|
-|[operator ==, !=](../cpp/variant-t-relational-operators.md)|Confrontare due **variant_t** gli oggetti per verificarne l'uguaglianza o disuguaglianza.|
-|[Estrattori](../cpp/variant-t-extractors.md)|Estrarre dati da incapsulato `VARIANT` oggetto.|
+|[Operatore =](../cpp/variant-t-operator-equal.md)|Assegna un nuovo valore a un oggetto **_variant_t** esistente.|
+|[operatore = =,! =](../cpp/variant-t-relational-operators.md)|Confrontare due oggetti **_variant_t** per verificarne l'uguaglianza o la disuguaglianza.|
+|[Estrattori](../cpp/variant-t-extractors.md)|Estrae i dati dall'oggetto `VARIANT` incapsulato.|
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<comutil.h >
+**Intestazione:** \<comutil. h >
 
-**Lib:** comsuppw. lib o comsuppwd. lib (vedere [/Zc: wchar_t (wchar_t Is tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per altre informazioni)
+**Lib:** comsuppw. lib o comsuppwd. lib (vedere [/Zc: wchar_t (wchar_t è di tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per ulteriori informazioni.
 
 ## <a name="see-also"></a>Vedere anche
 

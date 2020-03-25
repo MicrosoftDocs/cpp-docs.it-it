@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940001"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171294"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -71,11 +71,11 @@ Per impostazione predefinita, se *x* è minore di-1 o maggiore di 1, **ARccOS** 
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|NON VALIDO|_DOMAIN|
+|± ∞|INVALID|_DOMAIN|
 |± QNAN, IND|none|_DOMAIN|
-|&#124;x&#124;>1|NON VALIDO|_DOMAIN|
+|&#124;x&#124;>1|INVALID|_DOMAIN|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Poiché C++ consente l'overload, è possibile chiamare gli overload di **ARccOS** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C, **ARccOS** accetta e restituisce sempre un **valore Double**.
 
@@ -83,7 +83,7 @@ Poiché C++ consente l'overload, è possibile chiamare gli overload di **ARccOS*
 
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**ARccOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Esempio
 

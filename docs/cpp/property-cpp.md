@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301487"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179302"
 ---
 # <a name="property-c"></a>property (C++)
 
@@ -28,9 +28,9 @@ L'attributo può essere applicato ai "membri dati virtuali" non statici in una d
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Se il compilatore rileva un membro dati dichiarato con questo attributo a destra di un operatore di selezione dei membri ("**.**"o"**->**"), l'operazione per la funzione converte un `get` o`put` funzione, a seconda se tale espressione è un l-value o un r-value. In contesti più complessi, ad esempio "`+=`", una riscrittura viene eseguita utilizzando sia `get` e `put`.
+Quando il compilatore rileva un membro dati dichiarato con questo attributo a destra di un operatore di selezione dei membri (" **.** " o " **->** "), converte l'operazione in una funzione `get` o `put`, a seconda che tale espressione sia un l-value o un r-value. In contesti più complessi, ad esempio "`+=`", viene eseguita una riscrittura eseguendo sia `get` che `put`.
 
 Questo attributo può anche essere utilizzato in una dichiarazione di una matrice vuota in una definizione di classe o struttura. Ad esempio:
 

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214448"
 ---
 # <a name="menu-editor-c"></a>Editor menu (C++)
 
@@ -59,7 +59,7 @@ L' **editor di menu** consente di:
 
 ### <a name="to-create-a-standard-menu"></a>Per creare un menu standard
 
-1. Passare alla **visualizzazione**menu  > **other Windows** > **visualizzazione risorse** e fare clic con il pulsante destro del mouse sull'intestazione di **menu** . Scegliere **Aggiungi risorsa**, quindi **menu**.
+1. Passare alla **visualizzazione** menu > **altre finestre** > **visualizzazione risorse** e fare clic con il pulsante destro del mouse sull'intestazione di **menu** . Scegliere **Aggiungi risorsa**, quindi **menu**.
 
 1. Selezionare la casella **nuovo elemento** (il rettangolo che contiene il *tipo qui*) sulla barra dei menu.
 

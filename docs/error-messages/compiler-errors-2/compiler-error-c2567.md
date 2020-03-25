@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2567
 ms.assetid: 9c140ac9-7059-47e6-9ba1-e7939c8c0dc3
-ms.openlocfilehash: eec529f43e23810843651888ef5722c5d0a0b2c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 921992c678c1de0b74f99f544173478ebe809b2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366355"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177456"
 ---
 # <a name="compiler-error-c2567"></a>Errore del compilatore C2567
 
-Impossibile aprire metadati in 'file', file possa avere stato eliminato o spostato
+non è possibile aprire i metadati in ' file '. è possibile che il file sia stato eliminato o spostato
 
-Un file di metadati a cui è stato fatto riferimento nell'origine (con `#using`) non trovato nella stessa directory da parte del processo di back-end del compilatore com'era il processo di front-end del compilatore. Visualizzare [# direttiva using](../../preprocessor/hash-using-directive-cpp.md) per altre informazioni.
+Un file di metadati a cui si fa riferimento nell'origine (con `#using`) non è stato trovato nella stessa directory dal processo del back-end del compilatore, così come era dal processo front-end del compilatore. Per ulteriori informazioni, vedere [#using direttiva](../../preprocessor/hash-using-directive-cpp.md) .
 
-Se esegue la compilazione con può dipendere C2567 **/c** su un computer e quindi eseguire una generazione di codice in fase di collegamento in un altro computer. Per altre informazioni, vedere [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md)).
+C2567 potrebbe essere causato dalla compilazione con **/c** in un computer e quindi dalla generazione di codice in fase di collegamento in un altro computer. Per altre informazioni, vedere [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md)).
 
-Può inoltre indicare che il computer non era alcun maggiore quantità di memoria.
+Potrebbe inoltre indicare che il computer non ha più memoria.
 
-Per correggere questo errore, assicurarsi che il file di metadati è nello stesso percorso di directory per tutte le fasi del processo di compilazione.
+Per correggere l'errore, verificare che il file di metadati si trovi nello stesso percorso di directory per tutte le fasi del processo di compilazione.

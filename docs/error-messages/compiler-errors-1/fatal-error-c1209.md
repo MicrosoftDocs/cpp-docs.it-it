@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1209
 ms.assetid: aa9ee10f-abe3-4683-9792-adca4cbbabb5
-ms.openlocfilehash: 8b23ae3459178937c6af7ccb5c8ee882dd508c93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0948debc2573ace269419641ca8facd495792341
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375067"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203437"
 ---
 # <a name="fatal-error-c1209"></a>Errore irreversibile C1209
 
@@ -23,4 +23,4 @@ Alcune funzionalità del compilatore potrebbero non funzionare in una versione p
 
 Per risolvere l'errore C1209, installare Common Language Runtime fornito con il compilatore in uso.
 
-Per altre informazioni, vedere [gli assembly Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
+Per ulteriori informazioni, vedere [assembly Friend (C++)](../../dotnet/friend-assemblies-cpp.md).

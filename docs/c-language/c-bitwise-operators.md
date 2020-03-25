@@ -12,24 +12,24 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 2133aaa5faa0f4bef7391fb5c0e7e0eb51fd4e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543367"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168773"
 ---
 # <a name="c-bitwise-operators"></a>Operatori bit per bit C
 
-Gli operatori bit per bit eseguono operazioni di tipo AND bit per bit (**&**), OR bit per bit esclusivo (**^**) e OR bit per bit inclusivo (**&#124;**).
+Gli operatori bit per bit eseguono operazioni di tipo AND bit per bit ( **&** ), OR bit per bit esclusivo ( **^** ) e OR bit per bit inclusivo ( **&#124;** ).
 
 ## <a name="syntax"></a>Sintassi
 
-*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
+*And-Expression*: &nbsp;&nbsp;*uguaglianza-* espressione &nbsp;&nbsp;*and-Expression* **&** *Equality-Expression*
 
-*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*exclusive-or-Expression*: &nbsp;&nbsp;*and-Expression* &nbsp;&nbsp;espressione *OR esclusiva* **^** *and* -Expression
 
-*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
+*inclusive-or-Expression*: &nbsp;&nbsp;*exclusive-or-Expression* &nbsp;&nbsp;*inclusive-or-Expression* &#124; *exclusive-or* -Expression
 
 Gli operandi degli operatori bit per bit devono avere tipi di dati integrali, ma i tipi possono essere diversi. Questi operatori eseguono le conversioni aritmetiche comuni; il tipo del risultato è il tipo degli operandi dopo la conversione.
 
@@ -37,9 +37,9 @@ Gli operatori bit per bit C sono descritti di seguito:
 
 |Operatore|Descrizione|
 |--------------|-----------------|
-|**&**|L'operatore AND bit per bit confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se entrambi i bit sono 1, il bit del risultato corrispondente viene impostato su 1. In caso contrario, il bit di risultato corrispondente viene impostato su 0.|
-|**^**|L'operatore OR bit per bit esclusivo confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se un bit è 0 e l'altro bit è 1, il bit di risultato corrispondente viene impostato su 1. In caso contrario, il bit di risultato corrispondente viene impostato su 0.|
-|**&#124;**|L'operatore OR bit per bit inclusivo confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se un bit è 1 bit, il bit di risultato corrispondente viene impostato su 1. In caso contrario, il bit di risultato corrispondente viene impostato su 0.|
+|**&**|L'operatore AND bit per bit confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se entrambi i bit hanno valore 1, il bit del risultato verrà impostato su 1, altrimenti verrà impostato su 0.|
+|**^**|L'operatore OR bit per bit esclusivo confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se un bit ha valore 0 e l'altro 1, il bit del risultato corrispondente verrà impostato su 1. altrimenti verrà impostato su 0.|
+|**&#124;**|L'operatore OR bit per bit inclusivo confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se uno dei due bit ha valore 1, il bit del risultato verrà impostato su 1, altrimenti verrà impostato su 0.|
 
 ## <a name="examples"></a>Esempi
 

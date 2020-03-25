@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: b0c8e6a8f8321dccdfd7cee128a4cf06cebda991
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 649686857000b2bee469f0e3ec551d49717c1d7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501125"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204074"
 ---
 # <a name="fatal-error-c1084"></a>Errore irreversibile C1084
 

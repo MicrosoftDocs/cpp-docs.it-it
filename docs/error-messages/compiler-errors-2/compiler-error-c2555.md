@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-ms.openlocfilehash: cc6c3a3a29665ccf65b77a3d9866986cb0a46b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebf3e4a3aff48311edd5fb95b01a7b2d23990231
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353222"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202424"
 ---
 # <a name="compiler-error-c2555"></a>Errore del compilatore C2555
 
-'class1::function1': funzione virtual in override tipo restituito è diverso e non è una covariante da 'classe2:: funzione2'
+' Class1:: funzione1': il tipo restituito della funzione virtuale che esegue l'override è diverso da' Class2:: funzione2' e non è covariante
 
-Una funzione virtuale e una funzione esegue l'override derivata hanno elenchi di parametri sono identici ma restituire tipi diversi. Una funzione di override in una classe derivata non può essere diversa da una funzione virtuale in una classe base solo per il tipo restituito.
+Una funzione virtuale e una funzione di override derivata hanno elenchi di parametri identici ma tipi restituiti diversi. Una funzione di override in una classe derivata non può essere diversa da una funzione virtuale in una classe base solo per il tipo restituito.
 
-Per risolvere questo errore, il cast del valore restituito dopo la chiamata della funzione virtuale.
+Per correggere l'errore, eseguire il cast del valore restituito dopo che è stata chiamata la funzione virtuale.
 
-È inoltre possibile visualizzare questo errore se esegue la compilazione con /clr.   Ad esempio, l'equivalente in Visual C++ la dichiarazione seguente di c#:
+Questo errore può essere visualizzato anche se si compila con/CLR.   Ad esempio, l'oggetto C++ visivo equivale alla Dichiarazione C# seguente:
 
 ```
 Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);
@@ -33,7 +33,7 @@ is
 Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];
 ```
 
-L'esempio seguente genera l'errore C2555:
+L'esempio seguente genera l'C2555:
 
 ```cpp
 // C2555.cpp

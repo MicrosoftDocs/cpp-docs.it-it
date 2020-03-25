@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 045d2bf5617c81bcc4d7a202f36b112d5f0142a6
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: a463b807d39addfdaa64b829720266bf0502fa7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246297"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188077"
 ---
 # <a name="try-finally-statement"></a>Istruzione try-finally
 
@@ -95,6 +95,6 @@ Il gestore terminazioni non viene chiamato se un processo viene terminato durant
 ## <a name="see-also"></a>Vedere anche
 
 [Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [Sintassi del gestore di terminazione](/windows/win32/Debug/termination-handler-syntax)

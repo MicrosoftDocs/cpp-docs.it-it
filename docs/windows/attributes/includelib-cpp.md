@@ -1,21 +1,21 @@
 ---
-title: includelib (attributo COM C++)
+title: includelib ((C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.includelib
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4022a3f1f2d4ccaabe65c24065be8e1c846d604d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214845"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
-Fa sì che un file con estensione idl o con estensione h da includere nel file IDL generato.
+Comporta l'inclusione di un file IDL o h nel file IDL generato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,12 +25,12 @@ Fa sì che un file con estensione idl o con estensione h da includere nel file I
 
 ### <a name="parameters"></a>Parametri
 
-*name.idl*<br/>
-Il nome del file con estensione idl da inclusi come parte del file IDL generato.
+*nome. idl*<br/>
+Nome del file con estensione IDL che si desidera includere come parte del file IDL generato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **includelib** attributo C++ fa sì che un file con estensione idl o h da includere nel file con estensione IDL generato dopo il `importlib` istruzione.
+L'attributo **INCLUDELIB (** C++ fa sì che un file IDL o h venga incluso nel file IDL generato, dopo l'istruzione `importlib`.
 
 ## <a name="example"></a>Esempio
 
@@ -50,8 +50,8 @@ Il codice seguente è illustrato in un file con estensione cpp:
 |||
 |-|-|
 |**Si applica a**|Ovunque|
-|**Ripetibile**|Yes|
-|**Attributi obbligatori**|Nessuna|
+|**Ripetibile**|Sì|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

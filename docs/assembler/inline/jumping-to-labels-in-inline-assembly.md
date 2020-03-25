@@ -9,12 +9,12 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166906"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169331"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Passaggio a etichette nell'assembly inline
 
@@ -66,7 +66,7 @@ exit:
    ; More __asm code follows
 ```
 
-Perché **uscire** è il nome di una funzione di libreria C, questo codice potrebbe causare un passaggio per il **uscire** funzione anziché nella posizione desiderata.
+Poiché **Exit** è il nome di una funzione della libreria C, questo codice può causare un passaggio alla funzione **Exit** invece che alla posizione desiderata.
 
 Come nei programmi MASM, il simbolo di dollaro (`$`) serve come contatore di posizione corrente. È un'etichetta per l'istruzione al momento assemblata. Nei blocchi `__asm`, l'uso principale è di eseguire passaggi condizionali lunghi:
 

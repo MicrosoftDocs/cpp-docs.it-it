@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2406
 ms.assetid: 9d3fbc4c-40bb-42c7-bfd7-7656c40e2065
-ms.openlocfilehash: 6e1cc35351a07c37031625fd2453d4856755bcdc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99bf4146feebe637a85b871f22efb41e2442c92e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205775"
 ---
 # <a name="compiler-error-c2406"></a>Errore del compilatore C2406
 
 'identifier': nome non definito in 'context'
 
-Viene usato un identificatore non definito con la `SIZE`, `LENGTH`, o un operatore di selezione dei membri (.).
+Un identificatore non definito viene utilizzato con l'operatore `SIZE`, `LENGTH`o di selezione dei membri (.).

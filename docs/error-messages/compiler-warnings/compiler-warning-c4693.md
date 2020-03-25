@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71c3db18b400ce94bff3c643d6728a6613061039
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311318"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165132"
 ---
 # <a name="compiler-warning-c4693"></a>Avviso del compilatore C4693
 
 > 'class': una classe astratta sealed non può avere membri di istanza 'Test'
 
-Se un tipo è contrassegnato [sealed](../../extensions/sealed-cpp-component-extensions.md) e [astratta](../../extensions/abstract-cpp-component-extensions.md), può avere solo membri statici.
+Se un tipo è contrassegnato come [sealed](../../extensions/sealed-cpp-component-extensions.md) e [abstract](../../extensions/abstract-cpp-component-extensions.md), può avere solo membri statici.
 
-Questo avviso viene promossa automaticamente a un errore. Se si vuole modificare questo comportamento, usare [#pragma avviso](../../preprocessor/warning.md).
+Questo avviso viene promosso automaticamente a un errore. Se si desidera modificare questo comportamento, utilizzare [#pragma avviso](../../preprocessor/warning.md).
 
 ## <a name="example"></a>Esempio
 

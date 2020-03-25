@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447045"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210808"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
 
@@ -58,7 +58,7 @@ Classe Properties.
 
 Questa operazione è obbligatoria nei comandi. L'implementazione viene fornita da una funzione statica definita dalla [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.
 
-## <a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
 
 Restituisce tutti i set di proprietà richiesti utilizzando la mappa delle proprietà del comando.
 
@@ -79,7 +79,7 @@ Vedere [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/m
 
 Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a>ICommandPropertiesImpl:: seproprietà
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl:: seproprietà
 
 Imposta le proprietà per l'oggetto Command.
 

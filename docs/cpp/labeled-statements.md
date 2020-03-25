@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368747"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179692"
 ---
 # <a name="labeled-statements"></a>Istruzioni con etichetta
 
@@ -24,7 +24,7 @@ default :  statement
 
 L'ambito di un'etichetta è l'intera funzione in cui è dichiarata.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Esistono tre tipi di istruzioni etichettate. Tutti usano i due punti per separare alcuni tipi di etichette dall'istruzione. Le etichette default e case sono specifiche delle istruzioni case:
 
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-**L'istruzione goto**
+**Istruzione goto**
 
-L'aspetto di un' *identificatore* etichetta nel programma di origine dichiara un'etichetta. Solo un [goto](../cpp/goto-statement-cpp.md) istruzione possa trasferire il controllo a un *identificatore* etichetta. Il frammento di codice seguente viene illustrato l'utilizzo dei **goto** istruzione e una *identificatore* etichetta:
+L'aspetto di un'etichetta *identificatore* nel programma di origine dichiara un'etichetta. Solo un'istruzione [goto](../cpp/goto-statement-cpp.md) può trasferire il controllo a un'etichetta dell' *identificatore* . Nel frammento di codice seguente viene illustrato l'utilizzo dell'istruzione **goto** e di un'etichetta *Identifier* :
 
 Un'etichetta non può apparire da sola ma deve essere sempre associata a un'istruzione. Se è necessario che un'etichetta appaia da sola, inserire un'istruzione null dopo di essa.
 
@@ -79,9 +79,9 @@ int main() {
 //Output: At Test2 label.
 ```
 
-**L'istruzione case**
+**Istruzione case**
 
-Le etichette che vengono visualizzati dopo il **case** parola chiave non può trovarsi anche all'esterno di un **passare** istruzione. (Questa limitazione vale anche per il **predefinito** parola chiave.) Il frammento di codice seguente viene illustrato l'utilizzo corretto delle **caso** etichette:
+Le etichette visualizzate dopo la parola chiave **case** non possono essere visualizzate anche al di fuori di un'istruzione **Switch** . Questa restrizione si applica anche alla parola chiave **default** . Nel frammento di codice seguente viene illustrato l'utilizzo corretto delle etichette **case** :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>Etichette nell'istruzione case
 
-Le etichette che vengono visualizzati dopo il **case** parola chiave non può trovarsi anche all'esterno di un **passare** istruzione. (Questa limitazione vale anche per il **predefinito** parola chiave.) Il frammento di codice seguente viene illustrato l'utilizzo corretto delle **caso** etichette:
+Le etichette visualizzate dopo la parola chiave **case** non possono essere visualizzate anche al di fuori di un'istruzione **Switch** . Questa restrizione si applica anche alla parola chiave **default** . Nel frammento di codice seguente viene illustrato l'utilizzo corretto delle etichette **case** :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>Etichette nell'istruzione goto
 
-L'aspetto di un' *identificatore* etichetta nel programma di origine dichiara un'etichetta. Solo un [goto](../cpp/goto-statement-cpp.md) istruzione possa trasferire il controllo a un *identificatore* etichetta. Il frammento di codice seguente viene illustrato l'utilizzo dei **goto** istruzione e una *identificatore* etichetta:
+L'aspetto di un'etichetta *identificatore* nel programma di origine dichiara un'etichetta. Solo un'istruzione [goto](../cpp/goto-statement-cpp.md) può trasferire il controllo a un'etichetta dell' *identificatore* . Nel frammento di codice seguente viene illustrato l'utilizzo dell'istruzione **goto** e di un'etichetta *Identifier* :
 
 Un'etichetta non può apparire da sola ma deve essere sempre associata a un'istruzione. Se è necessario che un'etichetta appaia da sola, inserire un'istruzione null dopo di essa.
 

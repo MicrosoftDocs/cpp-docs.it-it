@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - HelpContext method [C++]
 ms.assetid: 160d6443-9b68-4cf5-a540-50da951a5b2b
-ms.openlocfilehash: a421a7fd7fa0817c74dac66946e28928b2ad82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3c79bb069ef504680e83359d6ec90c803f16d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155085"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180589"
 ---
-# <a name="comerrorhelpcontext"></a>_com_error::HelpContext
+# <a name="_com_errorhelpcontext"></a>_com_error::HelpContext
 
 **Sezione specifica Microsoft**
 
-Le chiamate `IErrorInfo::GetHelpContext` (funzione).
+Chiama `IErrorInfo::GetHelpContext` funzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,11 +27,11 @@ DWORD HelpContext( ) const throw( );
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il risultato del `IErrorInfo::GetHelpContext` per il `IErrorInfo` registrato nel `_com_error` oggetto. Se nessun `IErrorInfo` è registrato, restituisce zero.
+Restituisce il risultato di `IErrorInfo::GetHelpContext` per l'oggetto `IErrorInfo` registrato nell'oggetto `_com_error`. Se non viene registrato alcun oggetto `IErrorInfo`, viene restituito zero.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Qualsiasi errore durante la chiamata di `IErrorInfo::GetHelpContext` metodo viene ignorato.
+Qualsiasi errore durante la chiamata del metodo `IErrorInfo::GetHelpContext` viene ignorato.
 
 **Fine sezione specifica Microsoft**
 

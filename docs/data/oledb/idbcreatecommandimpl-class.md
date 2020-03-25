@@ -11,12 +11,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 27ca1fd20e8f358d936789da695611d96a6e7aa1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446133"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210717"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
@@ -54,7 +54,7 @@ Classe Command.
 
 Interfaccia facoltativa nell'oggetto Session per ottenere un nuovo comando.
 
-## <a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
 
 Crea un nuovo comando e restituisce l'interfaccia richiesta.
 

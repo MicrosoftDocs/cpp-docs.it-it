@@ -39,50 +39,50 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-ms.openlocfilehash: 4825ca180cb1b419a9ffa5232575ba1a24f8805d
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 1dd30c8e338343626d8a8cc3157d118e44f0ea18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980519"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170488"
 ---
 # <a name="makefile-preprocessing-directives"></a>Direttive di pre-elaborazione di makefile
 
 Le direttive di pre-elaborazione non fanno distinzione tra maiuscole e minuscole. Il punto esclamativo iniziale (!) deve essere visualizzato all'inizio della riga. Dopo il punto esclamativo, è possibile che vengano visualizzati zero o più spazi o tabulazioni per il rientro.
 
-- `!CMDSWITCHES``+` *opzione* { &#124; }...`-`
+- opzione `!CMDSWITCHES` { &#124;`+` `-`*option* }...
 
-   Attiva o disattiva tutte le *Opzioni* elencate. Gli spazi o le schede devono essere `+` visualizzati `-` prima dell'operatore OR; nessuno può comparire tra l'operatore e le [lettere delle opzioni](running-nmake.md#nmake-options). Le lettere non fanno distinzione tra maiuscole e minuscole e`/`vengono specificate senza una barra (). Per attivare alcune opzioni e disattivare altre, usare specifiche separate di `!CMDSWITCHES`.
+   Attiva o disattiva tutte le *Opzioni* elencate. Gli spazi o le schede devono essere visualizzati prima dell'operatore `+` o `-`; Nessuno può comparire tra l'operatore e le [lettere delle opzioni](running-nmake.md#nmake-options). Le lettere non fanno distinzione tra maiuscole e minuscole e vengono specificate senza una barra (`/`). Per attivare alcune opzioni e disattivare altre, usare specifiche separate di `!CMDSWITCHES`.
 
    In un makefile è possibile utilizzare solo/D,/I,/N e/S. In Tools. ini sono consentite tutte le opzioni eccetto/F,/HELP,/NOLOGO,/X e/?. Le modifiche specificate in un blocco di descrizione non diventano effettive fino al blocco di descrizione successivo. Questa direttiva aggiorna **MAKEFLAGS**; le modifiche vengono ereditate durante la ricorsione se viene specificato **MAKEFLAGS** .
 
-- `!ERROR`*testo*
+- *testo* `!ERROR`
 
-   Visualizza il *testo* in Error U1050, quindi interrompe NMAKE, anche se viene usato/K, `.IGNORE`/i `!CMDSWITCHES`,, o il modificatore di comando Dash (`-`). Spazi o tabulazioni prima del *testo* vengono ignorati.
+   Visualizza il *testo* in Error U1050, quindi interrompe NMAKE, anche se viene usato/K,/i, `.IGNORE`, `!CMDSWITCHES`o il modificatore di comando dash (`-`). Spazi o tabulazioni prima del *testo* vengono ignorati.
 
-- `!MESSAGE`*testo*
+- *testo* `!MESSAGE`
 
    Visualizza il *testo* nell'output standard. Spazi o tabulazioni prima del *testo* vengono ignorati.
 
-- `!INCLUDE`[ `<` ] *nomefile* [ `>` ]
+- `!INCLUDE` [`<`] *nomefile* [`>`]
 
-   Legge *filename* come makefile, quindi continua con il Makefile corrente. NMAKE cerca *filename* prima nella directory specificata o corrente, quindi in modo ricorsivo attraverso le directory di tutti i makefile padre, quindi, se *filename* è racchiuso tra parentesi acute (`< >`), nelle directory specificate dal parametro  **INCLUDE** la macro, inizialmente impostata sulla variabile di ambiente include. Utile per passare `.SUFFIXES` le impostazioni `.PRECIOUS`,, e le regole di inferenza ai makefile ricorsivi.
+   Legge *filename* come makefile, quindi continua con il Makefile corrente. NMAKE cerca il *nome file* per primo nella directory specificata o corrente, quindi in modo ricorsivo attraverso le directory di tutti i makefile padre, quindi, se *filename* è racchiuso tra parentesi angolari (`< >`), nelle directory specificate dalla macro **include** , inizialmente impostata sulla variabile di ambiente include. Utile per passare `.SUFFIXES` impostazioni, `.PRECIOUS`e regole di inferenza ai makefile ricorsivi.
 
-- `!IF`*constant_expression*
+- `!IF` *constant_expression*
 
-   Elabora le istruzioni `!IF` tra e il `!ELSE` successivo `!ENDIF` o se *constant_expression* restituisce un valore diverso da zero.
+   Elabora le istruzioni tra `!IF` e il `!ELSE` successivo o `!ENDIF` se *constant_expression* restituisce un valore diverso da zero.
 
-- `!IFDEF`*macroname*
+- `!IFDEF` *macroname*
 
-   Elabora le istruzioni `!IFDEF` tra e il `!ELSE` successivo `!ENDIF` o se viene definito macroname. Una macro NULL è considerata definita.
+   Elabora le istruzioni tra `!IFDEF` e il `!ELSE` successivo o `!ENDIF` se è definito *macroname* . Una macro NULL è considerata definita.
 
-- `!IFNDEF`*macroname*
+- `!IFNDEF` *macroname*
 
-   Elabora le istruzioni `!IFNDEF` tra e il `!ELSE` successivo `!ENDIF` o se macroname non è definito.
+   Elabora le istruzioni tra `!IFNDEF` e il `!ELSE` successivo o `!ENDIF` se *macroname* non è definito.
 
-- `!ELSE`[`IF` &#124; &#124; constant_expression macroname`IFDEF` ] `IFNDEF`
+- `!ELSE` [`IF` *constant_expression* &#124; `IFDEF` *macroname* &#124; `IFNDEF` *macroname*]
 
-   Elabora le istruzioni `!ELSE` tra e il `!ENDIF` successivo se l' `!IF`istruzione `!IFDEF`, o `!IFNDEF` precedente restituisce zero. Le parole chiave facoltative offrono un maggiore controllo sulla pre-elaborazione.
+   Elabora le istruzioni tra `!ELSE` e il `!ENDIF` successivo se l'istruzione `!IF`, `!IFDEF`o `!IFNDEF` precedente è stata valutata su zero. Le parole chiave facoltative offrono un maggiore controllo sulla pre-elaborazione.
 
 - `!ELSEIF`
 
@@ -98,9 +98,9 @@ Le direttive di pre-elaborazione non fanno distinzione tra maiuscole e minuscole
 
 - `!ENDIF`
 
-   Contrassegna la fine di un `!IF`blocco `!IFDEF`, o `!IFNDEF` . Qualsiasi testo dopo `!ENDIF` nella stessa riga viene ignorato.
+   Contrassegna la fine di un blocco di `!IF`, `!IFDEF`o `!IFNDEF`. Qualsiasi testo dopo `!ENDIF` sulla stessa riga viene ignorato.
 
-- `!UNDEF`*macroname*
+- `!UNDEF` *macroname*
 
    Non definisce *macroname*.
 

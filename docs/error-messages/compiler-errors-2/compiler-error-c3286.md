@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-ms.openlocfilehash: 8c09ea34c7dabf2cadecad7c76d766c9496f5a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c87e98f11a560d0d92be8ea7bc624edd4e09ad2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381354"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201396"
 ---
 # <a name="compiler-error-c3286"></a>Errore del compilatore C3286
 
-> «*identificatore*': una variabile di iterazione non può avere identificatori di classi di archiviazione
+> '*specifier*': una variabile di iterazione non può avere identificatori di classe di archiviazione
 
-Una classe di archiviazione non è possibile specificare in una variabile di iterazione. Per altre informazioni, vedere [classi di archiviazione (C++)](../../cpp/storage-classes-cpp.md) e [per ognuna, in](../../dotnet/for-each-in.md).
+Una classe di archiviazione non può essere specificata in una variabile di iterazione. Per ulteriori informazioni, vedere [classi di archiviazioneC++()](../../cpp/storage-classes-cpp.md) e [per ciascuna, in](../../dotnet/for-each-in.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3286 e anche illustrato l'utilizzo corretto.
+L'esempio seguente genera C3286 e Mostra anche l'uso corretto.
 
 ```cpp
 // C3286.cpp

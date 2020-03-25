@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1108
 ms.assetid: 3cadf07b-b7a7-41c7-ad5c-06ceb8af8c3b
-ms.openlocfilehash: 6e029e5cff5994282e96484d7c1ea04ca61049f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39a1891713cfe513f6de63a9e66a0f30147ce96c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257868"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203699"
 ---
 # <a name="fatal-error-c1108"></a>Errore irreversibile C1108
 
-> Impossibile trovare la DLL: '*nome della dll*'
+> Impossibile trovare la DLL:'*dll Name*'
 
-La DLL specificata (*nome della dll*) non è stato trovato nel percorso.
+Impossibile trovare la DLL specificata (*nome dll*) nel percorso.
 
-Per risolvere questo errore, reinstallare Visual C++ o copiare il file DLL appropriato dall'installazione nel computer.
+Per correggere l'errore, reinstallare Visual C++ o copiare il file con estensione dll appropriato dall'installazione di nel computer.

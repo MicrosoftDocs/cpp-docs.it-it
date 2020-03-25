@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0002
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
-ms.openlocfilehash: d8e13bcc03a02fd9dbc739566a92025a7b97d598
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30680f5b26f3be5e7f9b48d18e82fca42ed65493
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359709"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192939"
 ---
 # <a name="project-build-error-prj0002"></a>Errore di compilazione progetto PRJ0002
 
-> Errore restituito da '*riga di comando*'.
+> risultato dell'errore restituito da "*riga di comando*".
 
-Il comando *riga di comando*, dall'input dell'utente in cui è stata formata la **pagine delle proprietà** verrà visualizzata la finestra di dialogo, ha restituito un codice di errore, ma nessuna informazione nel **Output** finestra .
+Un comando, *riga di comando*, creato dall'input dell'utente nella finestra di dialogo **pagine delle proprietà** , ha restituito un codice di errore, ma non vengono visualizzate informazioni nella finestra di **output** .
 
-La risoluzione di questo errore varia a seconda dello strumento ha generato l'errore. Per MIDL, si otterrà un'idea di cosa causa dell'errore se viene definito /o (reindirizzare l'Output).
+La risoluzione di questo errore dipende dallo strumento che ha generato l'errore. Per MIDL, si otterrà un'idea di ciò che si è verificato un errore se/o (Reindirizzamento output) è definito.
 
-Un file batch, ad esempio un passaggio di compilazione personalizzata o un evento di compilazione, che non fornisce informazioni sulle condizioni di errore potrebbe inoltre essere il motivo dell'errore.
+Un file batch, ad esempio un'istruzione di compilazione personalizzata o un evento di compilazione, non informativo sulle condizioni di errore potrebbe anche essere il motivo di questo errore.

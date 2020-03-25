@@ -10,18 +10,18 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f8f08bcea1a44199d15da82b3ddbd37b676b347
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331122"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178795"
 ---
 # <a name="single-inheritance"></a>Ereditarietà singola
 
 Nell'ereditarietà singola, una forma comune di ereditarietà, le classi contengono solo una classe base. Esaminare la relazione illustrata nella figura seguente.
 
-![Singola di base&#45;grafico di ereditarietà](../cpp/media/vc38xj1.gif "singolo Basic&#45;grafico di ereditarietà") <br/>
+![Grafico di&#45;ereditarietà singola di base](../cpp/media/vc38xj1.gif "Grafico di&#45;ereditarietà singola di base") <br/>
 Grafico semplice dell'ereditarietà singola
 
 Si noti la progressione da generale a specifico nella figura. Un altro attributo comune trovato nella progettazione delle gerarchie di classi corrisponde al fatto che la classe derivata ha una relazione "tipo di" con la classe base. Nella figura, `Book` è un tipo di `PrintedDocument` e `PaperbackBook` è un tipo di `book`.
@@ -44,11 +44,11 @@ class PaperbackBook : public Book {};
 
 La classe base da cui ogni classe deriva viene dichiarata prima della classe derivata. Non è sufficiente fornire una dichiarazione di riferimento in avanti per una classe base, ma è necessario fornire una dichiarazione completa.
 
-Nell'esempio precedente, l'identificatore di accesso **pubblica** viene usato. Viene descritto il significato di ereditarietà pubblica, protetta e privata in [controllo di accesso ai membri.](../cpp/member-access-control-cpp.md)
+Nell'esempio precedente viene usato l'identificatore di accesso **public** . Il significato dell'ereditarietà pubblica, protetta e privata è descritto in [controllo dell'accesso ai membri.](../cpp/member-access-control-cpp.md)
 
 Una classe può essere usata come classe base per molte classi specifiche, come illustrato nella figura seguente.
 
-![Un grafo aciclico diretto descritto](../cpp/media/vc38xj2.gif "descritto un grafo aciclico diretto") <br/>
+![Grafico aciclici diretto](../cpp/media/vc38xj2.gif "Directed acyclic graph") <br/>
 Esempio di grafico aciclico diretto
 
 Nel diagramma precedente, denominato grafico aciclico diretto, alcune classi sono classi base per più di una classe derivata. Tuttavia, il contrario non è vero: esiste una sola classe base diretta per qualsiasi classe derivata specificata. Il grafico nella figura raffigura struttura a ereditarietà singola.
@@ -56,7 +56,7 @@ Nel diagramma precedente, denominato grafico aciclico diretto, alcune classi son
 > [!NOTE]
 > I grafici aciclici diretti non sono univoci per l'ereditarietà singola. Tali grafici vengono inoltre utilizzati per rappresentare grafici di ereditarietà multipla.
 
-Nell'ereditarietà la classe derivata contiene i membri della classe base e tutti i nuovi membri aggiunti. Di conseguenza, una classe derivata può fare riferimento ai membri della classe base, a meno che i membri non vengano ridefiniti nella classe derivata. L'operatore di risoluzione dell'ambito (`::`) può essere usato per fare riferimento a membri delle classi base dirette o indirette quando tali membri sono stati ridefiniti nella classe derivata. Si consideri l'esempio seguente:
+Nell'ereditarietà la classe derivata contiene i membri della classe base e tutti i nuovi membri aggiunti. Di conseguenza, una classe derivata può fare riferimento ai membri della classe base, a meno che i membri non vengano ridefiniti nella classe derivata. L'operatore di risoluzione dell'ambito (`::`) può essere usato per fare riferimento a membri delle classi base dirette o indirette quando tali membri sono stati ridefiniti nella classe derivata. Considerare questo esempio:
 
 ```cpp
 // deriv_SingleInheritance2.cpp

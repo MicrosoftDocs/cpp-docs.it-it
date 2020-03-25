@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4555
 ms.assetid: 50b286c1-f7bf-4292-b1fa-baaac9538611
-ms.openlocfilehash: e2c6a12b26754d7823252554950c124bdff4e6e8
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: fb3373178ebb53d7b14228a361fcc2f0a08c873b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162361"
 ---
 # <a name="compiler-warning-level-1-c4555"></a>Avviso del compilatore (livello 1) C4555
 
@@ -21,7 +21,7 @@ Questo avviso informa l'utente quando un'espressione non ha effetto.
 
 Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Esempio:
+Ad esempio:
 
 ```cpp
 // C4555.cpp

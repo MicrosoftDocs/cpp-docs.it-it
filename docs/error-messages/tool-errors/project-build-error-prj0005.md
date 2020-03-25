@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0005
 ms.assetid: 00c1821b-16aa-4bd9-9cf6-a778e5ed4ad9
-ms.openlocfilehash: b77c029b77d48d35ff1a4ea1508ed81cf31fa531
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37f9ad42f0c9f82352beb8b44812029485f9d3f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359646"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192848"
 ---
 # <a name="project-build-error-prj0005"></a>Errore di compilazione progetto PRJ0005
 
-Impossibile creare un file temporaneo nella directory 'directory'.
+Non è possibile creare un file temporaneo nella directory ' directory '.
 
-La chiamata per creare un file temporaneo non riuscita. Motivi dell'errore:
+La chiamata per la creazione di un file temporaneo non è riuscita. I motivi dell'errore includono:
 
-- Si è esaurito i nomi di file temporaneo.
+- Sono stati esauriti i nomi di file temporanei.
 
-- La directory temp è di sola lettura.
+- La directory Temp è di sola lettura.
 
-- Non sono directory temporanea o variabile di ambiente TMP.
+- Non esiste una directory temporanea o una variabile di ambiente TMP.
 
-- Il computer ha esaurito lo spazio libero sul disco.
+- Lo spazio su disco del computer è esaurito.

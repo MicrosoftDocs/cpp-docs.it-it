@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0041
 - CXX0041
 ms.assetid: ce8a2366-758f-481b-8c03-ed7d779091b2
-ms.openlocfilehash: 0b2d2a17bbc7f1084e25fe53157eb5c17e4d71bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b297f7ed928bc2ea248773014293ebae4e8f1d23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396964"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185087"
 ---
 # <a name="expression-evaluator-error-cxx0041"></a>Errore dell‘analizzatore di espressioni CXX0041
 
-l'elemento della classe deve essere un membro statico o una funzione
+l'elemento Class deve essere membro statico o funzione membro
 
-È stato usato un membro non statico di una classe o struttura o unione, senza specificare quali la creazione di istanze della classe da utilizzare.
+Un membro non statico di una classe (o di una struttura o di un'Unione) è stato usato senza specificare quale istanza della classe usare.
 
-Sono utilizzabile solo i membri dati statici o le funzioni membro senza specificare un'istanza.
+Solo i membri dati statici o le funzioni membro possono essere utilizzati senza specificare un'istanza.
 
-Questo errore è identico all'errore CAN0041.
+Questo errore è identico a CAN0041.

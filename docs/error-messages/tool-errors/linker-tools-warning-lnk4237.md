@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4237
 ms.assetid: 87bfec39-5241-464f-9feb-517b49f352ea
-ms.openlocfilehash: 62ce0a0edc7f15bc5a19e4630133976f413da35a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaa26393f1ce76d3e1bc40e5ba4978d1bcdb4fc9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193758"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>Avviso degli strumenti del linker LNK4237
 
-/SUBSYSTEM: native specificato durante l'importazione da 'dll'. Utilizzare /SUBSYSTEM: console o /SUBSYSTEM: Windows.
+/SUBSYSTEM: nativo specificato durante l'importazione da' dll '; Usare/SUBSYSTEM: CONSOLE o/SUBSYSTEM: WINDOWS.
 
-[/SUBSYSTEM: native](../../build/reference/subsystem-specify-subsystem.md) è stato specificato quando la compilazione di un'applicazione windows (Win32) che direttamente utilizza uno o più delle seguenti operazioni:
+[/SUBSYSTEM:](../../build/reference/subsystem-specify-subsystem.md) è stato specificato native durante la compilazione di un'applicazione Windows (Win32) che utilizza direttamente uno o più degli elementi seguenti:
 
 - kernel32.dll
 
@@ -25,6 +25,6 @@ ms.locfileid: "62352658"
 
 - user32.dll
 
-- uno dei file msvcrt\* DLL.
+- una delle dll del\* Msvcrt.
 
-Per risolvere questo problema, se non si specifica **/SUBSYSTEM: native**.
+Per risolvere il problema, non specificare **/SUBSYSTEM: native**.

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-ms.openlocfilehash: 57d0c101358f84816c8d0cf96eb5137833df0b48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7712747deb865ec62fa007fcd95ad09630d00cea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298740"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194499"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Errore degli strumenti del linker LNK2039
 
-l'importazione della classe ref\<tipo >' definita in another, che dovrebbe essere presente importati o definito, ma non entrambi
+importazione della classe di riferimento '\<Type >' definita in un altro. obj; deve essere importata o definita, ma non entrambe
 
-La classe di riferimento ' <`type`>' viene importato nel file con estensione obj spacificto ma viene anche definita in un altro file con estensione obj. Questa condizione può provocare un errore di runtime o altri comportamenti imprevisti.
+La classe di riferimento ' <`type`>' viene importata nel file con estensione obj specificato, ma è definita anche in un altro file obj. Questa condizione può provocare un errore di runtime o altri comportamenti imprevisti.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 

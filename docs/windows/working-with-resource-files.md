@@ -1,24 +1,24 @@
 ---
-title: Uso dei file di risorseC++()
+title: Uso di file di risorse (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513585"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165886"
 ---
 # <a name="working-with-resource-files"></a>Utilizzo di file di risorse
 
 > [!WARNING]
 > Questa sezione si applica ad applicazioni desktop di Windows scritte in C++.
 >
-> Per informazioni sulle risorse nelle app piattaforma UWP (Universal Windows Platform) scritte in C++, vedere [definizione delle risorse dell'app](/windows/uwp/app-resources/)o aggiunta di risorse C++a progetti/CLI (gestiti). vedere [risorse nelle app desktop](/dotnet/framework/resources/index) nel .NET Framework Developer ' s Guida.
+> Per informazioni sulle risorse nelle app piattaforma UWP (Universal Windows Platform) scritte in C++, vedere [definizione delle risorse dell'app](/windows/uwp/app-resources/)o aggiunta di risorse C++a progetti/CLI (gestiti). vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework.
 
 Le risorse possono essere costituite da una vasta gamma di elementi, ad esempio:
 
@@ -36,7 +36,7 @@ Per aggiungere manualmente file di risorse a progetti gestiti, vedere [creazione
 
 Per la globalizzazione e la localizzazione delle risorse nelle app gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
 Descrive i file di risorse e il modo in cui vengono usati nelle applicazioni desktop di Windows. Sono inoltre disponibili collegamenti ad articoli che descrivono come usare i file di risorse.

@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Definire i costruttori di spostamento e operatori di assegnazione di spostamento (C++)'
+title: 'Procedura: definire costruttori di spostamento e operatori di assegnazione di spostamentoC++()'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345019"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179367"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Costruttori di spostamento e operatori di assegnazione di spostamento (C++)
 
-In questo argomento viene descritto come scrivere un *costruttore di spostamento* e un operatore di assegnazione di spostamento per una classe C++. Un costruttore di spostamento consente le risorse appartenenti a un oggetto rvalue da spostare in un elemento lvalue senza copiare. Per altre informazioni sulla semantica di spostamento, vedere [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+In questo argomento viene descritto come scrivere un *costruttore di spostamento* e un operatore di assegnazione C++ di spostamento per una classe. Un costruttore di spostamento consente lo spostamento delle risorse di proprietà di un oggetto rvalue in un lvalue senza copia. Per ulteriori informazioni sulla semantica di spostamento, vedere [dichiaratore di riferimento rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 Questo argomento si basa sulla seguente classe C++, `MemoryBlock`, che gestisce un buffer di memoria.
 
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene mostrato come la semantica di spostamento possa migliorare le prestazioni delle applicazioni in uso. Nell'esempio vengono aggiunti due elementi a un oggetto vettore, quindi viene inserito un nuovo elemento tra i due elementi esistenti. Il `vector` classe Usa semantica di spostamento per eseguire in modo efficiente l'operazione di inserimento spostando gli elementi del vettore anziché copiarli.
+Nell'esempio seguente viene mostrato come la semantica di spostamento possa migliorare le prestazioni delle applicazioni in uso. Nell'esempio vengono aggiunti due elementi a un oggetto vettore, quindi viene inserito un nuovo elemento tra i due elementi esistenti. La classe `vector` utilizza la semantica di spostamento per eseguire in modo efficiente l'operazione di inserimento spostando gli elementi del vettore anziché copiarli.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -241,7 +241,7 @@ int main()
 }
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -264,7 +264,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.
 ```
 
-Prima di Visual Studio 2010, in questo esempio viene prodotto l'output seguente:
+Prima di Visual Studio 2010, questo esempio produceva l'output seguente:
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -307,9 +307,9 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-Il [std:: Move](../standard-library/utility-functions.md#move) funzione mantiene la proprietà rvalue del *altri* parametro.
+La funzione [std:: Move](../standard-library/utility-functions.md#move) conserva la proprietà rvalue dell' *altro* parametro.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std::move](../standard-library/utility-functions.md#move)
+[STD:: Move](../standard-library/utility-functions.md#move)

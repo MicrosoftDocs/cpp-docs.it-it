@@ -9,14 +9,14 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 08e623d84553f9fcf556c9cf480c1816c7300460
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501876"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168499"
 ---
-# <a name="aggregates"></a>aggregati
+# <a name="aggregates"></a>aggregazioni
 
 Indica che l'oggetto aggrega l'oggetto specificato dal CLSID.
 
@@ -28,17 +28,17 @@ Indica che l'oggetto aggrega l'oggetto specificato dal CLSID.
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 Specifica il CLSID dell'oggetto aggregabile.
 
 *variable_name*<br/>
-Nome della variabile da inserire. Questa variabile contiene l' `IUnknown` oggetto dell'oggetto da aggregare.
+Nome della variabile da inserire. Questa variabile contiene il `IUnknown` dell'oggetto da aggregare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Quando è applicato a un oggetto, l'attributo **aggregates** di C++ implementa un wrapper esterno per l'oggetto da aggregare (specificato da `clsid`).
 
-Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Se `progid` , ad esempio, viene applicato `vi_progid` `coclass` , vengono applicati anche.
+Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Se ad esempio `progid` viene applicato, vengono applicati anche `vi_progid` e `coclass`.
 
 ### <a name="atl-projects"></a>Progetti ATL
 
@@ -86,7 +86,7 @@ struct CObject : IObject
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|Sì|
 |**Attributi obbligatori**|Uno o più degli elementi seguenti: `coclass`, `progid`o `vi_progid`.|
-|**Attributi non validi**|Nessuna|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

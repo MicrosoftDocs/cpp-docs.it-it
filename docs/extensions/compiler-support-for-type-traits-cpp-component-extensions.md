@@ -61,12 +61,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: d068917a02fef0f1d4b7fd46fd6978da2d358872
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1bfb4308dc76e3393eceddf8dedd6d11e73adc17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172530"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Supporto del compilatore per caratteristiche di tipo (C++/CLI e C++/CX)
 
@@ -82,7 +82,7 @@ L'elenco seguente contiene le caratteristiche di tipo supportate dal compilatore
 
 Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia, la caratteristica di tipo corrispondente è anche supportata in C++/CX, se non specificato diversamente. Il termine "tipo piattaforma" fa riferimento ai tipi Windows Runtime o Common Language Runtime.
 
-- `__has_assign(` *tipo* `)`
+- *tipo* di `__has_assign(` `)`
 
    Restituisce **true** se il tipo piattaforma o nativo ha un operatore di assegnazione di copia.
 
@@ -96,7 +96,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_copy(` *tipo* `)`
+- *tipo* di `__has_copy(` `)`
 
    Restituisce **true** se il tipo piattaforma o nativo ha un costruttore di copia.
 
@@ -110,9 +110,9 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_finalizer(` *tipo* `)`
+- *tipo* di `__has_finalizer(` `)`
 
-   Non supportato in C++/CX. Restituisce **true** se il tipo CLR ha un finalizzatore. Vedere [Distruttori e finalizzatori in Procedura: Definire e usare classi e struct (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) per altre informazioni.
+   (Non supportato in C++/CX.) Restituisce **true** se il tipo CLR dispone di un finalizzatore. Per ulteriori informazioni, vedere [distruttori e finalizzatori in procedura: definire e utilizzare classi e structC++(/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) .
 
     ```cpp
     using namespace System;
@@ -127,7 +127,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_nothrow_assign(` *tipo* `)`
+- *tipo* di `__has_nothrow_assign(` `)`
 
    Restituisce **true** se un operatore di assegnazione di copia ha una specifica di eccezione vuota.
 
@@ -143,7 +143,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_nothrow_constructor(` *tipo* `)`
+- *tipo* di `__has_nothrow_constructor(` `)`
 
    Restituisce **true** se il costruttore predefinito ha una specifica di eccezione vuota.
 
@@ -159,7 +159,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_nothrow_copy(` *tipo* `)`
+- *tipo* di `__has_nothrow_copy(` `)`
 
    Restituisce **true** se il costruttore di copia ha una specifica di eccezione vuota.
 
@@ -175,7 +175,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_trivial_assign(` *tipo* `)`
+- *tipo* di `__has_trivial_assign(` `)`
 
    Restituisce **true** se il tipo ha un operatore di assegnazione semplice generato dal compilatore.
 
@@ -189,7 +189,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_trivial_constructor(` *tipo* `)`
+- *tipo* di `__has_trivial_constructor(` `)`
 
    Restituisce **true** se il tipo ha un costruttore semplice generato dal compilatore.
 
@@ -203,7 +203,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_trivial_copy(` *tipo* `)`
+- *tipo* di `__has_trivial_copy(` `)`
 
    Restituisce **true** se il tipo ha un costruttore di copia semplice generato dal compilatore.
 
@@ -217,7 +217,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_trivial_destructor(` *tipo* `)`
+- *tipo* di `__has_trivial_destructor(` `)`
 
    Restituisce **true** se il tipo ha un distruttore semplice generato dal compilatore.
 
@@ -232,7 +232,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_user_destructor(` *tipo* `)`
+- *tipo* di `__has_user_destructor(` `)`
 
    Restituisce **true** se il tipo piattaforma o nativo ha un distruttore dichiarato dall'utente.
 
@@ -249,7 +249,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__has_virtual_destructor(` *tipo* `)`
+- *tipo* di `__has_virtual_destructor(` `)`
 
    Restituisce **true** se il tipo ha un distruttore virtuale.
 
@@ -268,7 +268,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_abstract(` *tipo* `)`
+- *tipo* di `__is_abstract(` `)`
 
    Restituisce **true** se il tipo è un tipo astratto. Per altre informazioni sui tipi astratti nativi, vedere [Classi astratte](../cpp/abstract-classes-cpp.md).
 
@@ -308,7 +308,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_class(` *tipo* `)`
+- *tipo* di `__is_class(` `)`
 
    Restituisce **true** se il tipo è una classe o uno struct nativo.
 
@@ -322,7 +322,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_convertible_to(` `from` `,`  `to` `)`
+- `__is_convertible_to(` `from` `,``to` `)`
 
    Restituisce **true** se il primo tipo può essere convertito nel secondo tipo.
 
@@ -340,7 +340,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_delegate(` *tipo* `)`
+- *tipo* di `__is_delegate(` `)`
 
    Restituisce **true** se `type` è un delegato. Per altre informazioni, vedere [delegate (C++/CLI e C++/CX)](delegate-cpp-component-extensions.md).
 
@@ -351,7 +351,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_empty(` *tipo* `)`
+- *tipo* di `__is_empty(` `)`
 
    Restituisce **true** se il tipo non ha membri dati di istanza.
 
@@ -367,7 +367,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_enum(` *tipo* `)`
+- *tipo* di `__is_enum(` `)`
 
    Restituisce **true** se il tipo è un'enumerazione nativa.
 
@@ -389,7 +389,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_interface_class(` *tipo* `)`
+- *tipo* di `__is_interface_class(` `)`
 
    Restituisce **true** se viene passata un'interfaccia di piattaforma. Per altre informazioni, vedere [interface class](interface-class-cpp-component-extensions.md).
 
@@ -403,7 +403,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_pod(` *tipo* `)`
+- *tipo* di `__is_pod(` `)`
 
    Restituisce **true** se il tipo è una classe o un'unione senza costruttori o membri non statici privati o protetti, senza classi base e senza funzioni virtuali. Per altre informazioni sui POD, vedere lo standard C++, sezioni 8.5.1/1, 9/4 e 3.9/10.
 
@@ -419,7 +419,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_polymorphic(` *tipo* `)`
+- *tipo* di `__is_polymorphic(` `)`
 
    Restituisce **true** se un tipo nativo ha funzioni virtuali.
 
@@ -435,7 +435,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_ref_array(` *tipo* `)`
+- *tipo* di `__is_ref_array(` `)`
 
    Restituisce **true** se viene passata una matrice di piattaforme. Per altre informazioni, vedere [Matrici](arrays-cpp-component-extensions.md).
 
@@ -447,7 +447,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_ref_class(` *tipo* `)`
+- *tipo* di `__is_ref_class(` `)`
 
    Restituisce **true** se viene passata una classe di riferimento. Per altre informazioni sui tipi riferimento definiti dall'utente, vedere [Classi e struct](classes-and-structs-cpp-component-extensions.md).
 
@@ -460,7 +460,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_sealed(` *tipo* `)`
+- *tipo* di `__is_sealed(` `)`
 
    Restituisce **true** se viene passato un tipo piattaforma o nativo contrassegnato come sealed. Per altre informazioni, vedere [sealed](sealed-cpp-component-extensions.md).
 
@@ -471,7 +471,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_simple_value_class(` *tipo* `)`
+- *tipo* di `__is_simple_value_class(` `)`
 
    Restituisce **true** se viene passato un tipo valore che non contiene riferimenti all'heap sottoposto a Garbage Collection. Per altre informazioni sui tipi valore definiti dall'utente, vedere [Classi e struct](classes-and-structs-cpp-component-extensions.md).
 
@@ -489,7 +489,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_union(` *tipo* `)`
+- *tipo* di `__is_union(` `)`
 
    Restituisce **true** se un tipo è un'unione.
 
@@ -506,7 +506,7 @@ Nell'elenco seguente gli esempi di codice sono scritti solo in C++/CLI. Tuttavia
     }
     ```
 
-- `__is_value_class(` *tipo* `)`
+- *tipo* di `__is_value_class(` `)`
 
    Restituisce **true** se viene passato un tipo valore. Per altre informazioni sui tipi valore definiti dall'utente, vedere [Classi e struct](classes-and-structs-cpp-component-extensions.md).
 

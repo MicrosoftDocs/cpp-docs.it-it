@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4219
 ms.assetid: 363fedf4-b10c-4985-811a-55a9fba688d6
-ms.openlocfilehash: 7407537b55525bf622fc11cdbdb8e00244e51c18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4488539a4f7282180048f1e3530e62e35c3b339e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410252"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183098"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Avviso degli strumenti del linker LNK4219
 
-overflow della correzione nome correzione. 'Il nome di simbolo di destinazione' di destinazione è compreso nell'intervallo, verrà inserito il thunk
+overflow correzione nome correzione. La destinazione ' nome simbolo di destinazione ' non è compresa nell'intervallo, inserimento del thunk
 
-Il linker inserito un thunk in una situazione in cui l'indirizzo o offset non è riuscito per adattarsi all'interno dell'istruzione specificata perché il simbolo di destinazione è troppo distante dalla posizione dell'istruzione.
+Il linker ha inserito un thunk in una situazione in cui l'indirizzo o l'offset non è stato in grado di rientrare nell'istruzione specificata perché il simbolo di destinazione è troppo lontano dalla posizione dell'istruzione.
 
-È possibile riordinare l'immagine (usando il [/ORDER](../../build/reference/order-put-functions-in-order.md) opzione, ad esempio) per evitare un livello aggiuntivo di riferimento indiretto.
+Potrebbe essere necessario riordinare l'immagine (ad esempio, usando l'opzione [/Order](../../build/reference/order-put-functions-in-order.md) ) per evitare il livello aggiuntivo di riferimento indiretto.

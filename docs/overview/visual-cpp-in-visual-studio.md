@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1e567f2264fe40e6b386bf8d1758ed866d8f3f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416094"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215072"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -26,7 +26,7 @@ Visual Studio 2015, 2017 e 2019 possono essere installati side-by-side. È possi
 ## <a name="whats-new-and-conformance-history"></a>Novità e cronologia conformità
 
 [Novità di C++ in Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Novità introdotte in Visual Studio.
+Scopri le novità di Visual Studio.
 
 [Novità di C++ da Visual Studio 2003 a Visual Studio 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Novità di C++ introdotte per ogni versione di Visual Studio, dalla versione 2003 alla versione 2015.
@@ -65,7 +65,7 @@ Informazioni su C++, panoramica di C++ moderno e collegamenti a libri, articoli,
 [Informazioni su Visual C++](../build/vscpp-step-1-create.md)<br/>
 Primi passi per acquisire familiarità con C++.
 
-[Esempi di Visual C++](visual-cpp-samples.md)<br/>
+[Esempi di C++ Visual Studio](visual-cpp-samples.md)<br/>
 Informazioni sugli esempi.
 
 ## <a name="c-development-tools"></a>Strumenti di sviluppo C++

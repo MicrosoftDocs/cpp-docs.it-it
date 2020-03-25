@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3554
 ms.assetid: aede18d5-fefc-4da9-9b69-adfe90bfa742
-ms.openlocfilehash: 8bc9c465d16aea4714916fa6aa2942eb81c19015
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ecdb90e845714e046ed21cf5a200ef4548487df6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344572"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200603"
 ---
 # <a name="compiler-error-c3554"></a>Errore del compilatore C3554
 

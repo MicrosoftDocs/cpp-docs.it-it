@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2945
 ms.assetid: be640257-7017-45d1-986a-9fe8caab52f3
-ms.openlocfilehash: f526c5923c6368c1ee8822632fd7b05a08421ae8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 066d369680f92c1336f7678d156d05c0e2b7aca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176871"
 ---
 # <a name="compiler-error-c2945"></a>Errore del compilatore C2945
 

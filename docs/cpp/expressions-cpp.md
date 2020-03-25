@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184016"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179939"
 ---
 # <a name="expressions-c"></a>Espressioni (C++)
 
@@ -22,7 +22,7 @@ In questa sezione vengono descritte le espressioni C++. Le espressioni sono sequ
 
 - Generare "effetti collaterali." Gli effetti collaterali sono tutte le azioni diverse dalla valutazione di un'espressione, ad esempio la modifica del valore di un oggetto.
 
-In C++, è possibile sottoporre a overload gli operatori e fare assumere loro significati definiti dall'utente. Non è invece possibile modificare la precedenza degli operatori e il numero di operandi che accettano. In questa sezione vengono descritte la sintassi e la semantica degli operatori così come forniti dal linguaggio, non vengono trattate, invece, sintassi e semantica degli operatori sottoposti a overload. Oltre a [tipi di espressioni](../cpp/types-of-expressions.md) e [semantica delle espressioni](../cpp/semantics-of-expressions.md), vengono trattati i seguenti argomenti:
+In C++, è possibile sottoporre a overload gli operatori e fare assumere loro significati definiti dall'utente. Non è invece possibile modificare la precedenza degli operatori e il numero di operandi che accettano. In questa sezione vengono descritte la sintassi e la semantica degli operatori così come forniti dal linguaggio, non vengono trattate, invece, sintassi e semantica degli operatori sottoposti a overload. Oltre ai [tipi di espressioni](../cpp/types-of-expressions.md) e alla [semantica delle espressioni](../cpp/semantics-of-expressions.md), vengono trattati gli argomenti seguenti:
 
 - [Espressioni primarie](../cpp/primary-expressions.md)
 

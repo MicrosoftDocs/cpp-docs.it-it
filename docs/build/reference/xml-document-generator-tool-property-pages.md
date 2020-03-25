@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: c99677d7fc53ae3343e15e54997fe0101322fbcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f10ddf98c238120750e72644779a6ad74af2d1e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316158"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171632"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Pagina delle proprietà dello strumento generatore di documenti XML
 
@@ -22,7 +22,7 @@ La pagina delle proprietà Strumento Generatore di documenti XML espone la funzi
 > [!NOTE]
 >  Le opzioni di xdcmake.exe nell'ambiente di sviluppo (pagine delle proprietà) sono diverse rispetto alle opzioni di quando xdcmake.exe è usato nella riga di comando. Per informazioni sull'uso di xdcmake.exe nella riga di comando, vedere [Riferimento a XDCMake](xdcmake-reference.md).
 
-## <a name="uielement-list"></a>Elenco UIElement
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia
 
 - **Non visualizzare messaggio di avvio**
 
@@ -34,7 +34,7 @@ La pagina delle proprietà Strumento Generatore di documenti XML espone la funzi
 
 - **File di documento di output**
 
-   Nome e percorso della directory che contiene il file di output con estensione xml. Visualizzare [macro comuni per compilare i comandi e proprietà](common-macros-for-build-commands-and-properties.md) per informazioni sull'uso di macro per specificare i percorsi di directory.
+   Nome e percorso della directory che contiene il file di output con estensione xml. Per informazioni sull'uso delle macro per specificare i percorsi di directory, vedere [macro comuni per i comandi e le proprietà di compilazione](common-macros-for-build-commands-and-properties.md) .
 
 - **Dipendenze raccolte documenti**
 
@@ -42,4 +42,4 @@ La pagina delle proprietà Strumento Generatore di documenti XML espone la funzi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alla pagina di proprietà progetto C++](property-pages-visual-cpp.md)
+[C++riferimento alla pagina delle proprietà del progetto](property-pages-visual-cpp.md)

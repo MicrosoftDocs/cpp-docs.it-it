@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2708
 ms.assetid: d52d3088-1141-42f4-829c-74755a7fcc3a
-ms.openlocfilehash: a128613cabb201142c29b833959924dbf8a6e0ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1d3379a0da42c5aabd38cffbf6f6a3f340ef3b9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160955"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202371"
 ---
 # <a name="compiler-error-c2708"></a>Errore del compilatore C2708
 
-'identifier': lunghezza in byte dei parametri effettivi differisce dalla precedente chiamata o di riferimento
+' Identifier ': la lunghezza in byte dei parametri effettivi differisce dalla chiamata o dal riferimento precedente
 
-Oggetto [stdcall](../../cpp/stdcall.md) funzione deve essere preceduta da un prototipo. In caso contrario, il compilatore interpreta la prima chiamata alla funzione come prototipo e questo errore si verifica quando il compilatore rileva una chiamata che non corrisponde.
+Una funzione [__stdcall](../../cpp/stdcall.md) deve essere preceduta da un prototipo. In caso contrario, il compilatore interpreta la prima chiamata alla funzione come prototipo e questo errore si verifica quando il compilatore rileva una chiamata che non corrisponde a.
 
-Per risolvere questo errore, aggiungere un prototipo di funzione.
+Per correggere l'errore, aggiungere un prototipo di funzione.

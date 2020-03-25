@@ -1,19 +1,19 @@
 ---
-title: Modelli di funzioni
+title: Modelli di funzione
 ms.date: 07/15/2019
 helpviewer_keywords:
 - function templates
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: d430ad7650ffa47f0d6334a827b416cfb05ae6c2
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894366"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179744"
 ---
-# <a name="function-templates"></a>Modelli di funzioni
+# <a name="function-templates"></a>Modelli di funzione
 
 I modelli di classe definiscono un gruppo di classi correlate, basate sugli argomenti tipo passati alla classe mediante la creazione di istanze. I modelli di funzione sono simili ai modelli di classe ma definiscono un gruppo di funzioni. Con i modelli di funzione è possibile specificare un set di funzioni basate sullo stesso codice, ma che agiscono su tipi o classi differenti. Il modello di funzione seguente scambia due elementi:
 
@@ -28,9 +28,9 @@ int main() {
 }
 ```
 
-Questo codice definisce un gruppo di funzioni che scambiano i valori degli argomenti. Da questo modello, è possibile generare funzioni che scambiano **int** e **lungo** tipi e anche tipi definiti dall'utente. `MySwap` scambia anche le classi se il costruttore di copia e l'operatore di assegnazione della classe sono definiti correttamente.
+Questo codice definisce un gruppo di funzioni che scambiano i valori degli argomenti. Da questo modello è possibile generare funzioni che sostituiscono i tipi **int** e **Long** e anche i tipi definiti dall'utente. `MySwap` scambia anche le classi se il costruttore di copia e l'operatore di assegnazione della classe sono definiti correttamente.
 
-Inoltre, il modello di funzione impedirà di scambiare oggetti di tipi diversi, poiché il compilatore riconosce i tipi dei *una* e *b* parametri in fase di compilazione.
+Inoltre, il modello di funzione impedisce lo scambio di oggetti di tipi diversi, perché il compilatore conosce i tipi dei parametri *a* e *b* in fase di compilazione.
 
 Sebbene questa funzione possa essere eseguita da una funzione non basata su modelli, utilizzando i puntatori void, la versione del modello è indipendente dai tipi. Considerare le chiamate seguenti:
 
@@ -55,7 +55,7 @@ int main(int j) {
 }
 ```
 
-Quando un argomento di modello è specificato in modo esplicito, le normali conversioni implicite vengono effettuate per convertire l'argomento della funzione nel tipo dei parametri del modello di funzione corrispondente. Nell'esempio precedente, il compilatore convertirà `j` al tipo **char**.
+Quando un argomento di modello è specificato in modo esplicito, le normali conversioni implicite vengono effettuate per convertire l'argomento della funzione nel tipo dei parametri del modello di funzione corrispondente. Nell'esempio precedente, il compilatore convertirà `j` nel tipo **char**.
 
 ## <a name="see-also"></a>Vedere anche
 

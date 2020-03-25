@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 7710b6f1efc2de770b26ad50923bde2ee5200f61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178067"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Dichiaratore di riferimento lvalue: &amp;
 
@@ -24,13 +24,13 @@ Contiene l'indirizzo di un oggetto, ma sintatticamente si comporta come un ogget
 type-id & cast-expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È possibile considerare un riferimento lvalue come nome alternativo per un oggetto. Una dichiarazione di riferimento lvalue è costituita da un elenco facoltativo di identificatori seguiti da un dichiaratore di riferimento. Un riferimento deve essere inizializzato e non può essere modificato.
 
 Qualsiasi oggetto il cui l'indirizzo può essere convertito in un dato tipo di puntatore, può anche essere convertito in un tipo di riferimento simile. Ad esempio, qualsiasi oggetto il cui l'indirizzo può essere convertito in un tipo `char *`, può anche essere convertito in un tipo `char &`.
 
-Non confondere le dichiarazioni di riferimento utilizzando il [operatore address-of](../cpp/address-of-operator-amp.md). Quando la `&` *identificatore* è preceduto da un tipo, ad esempio **int** oppure **char**, *identificatore* è dichiarato come un riferimento a il tipo. Quando `&` *identificatore* non è preceduto da un tipo, l'utilizzo è quello dell'operatore address-of.
+Non confondere le dichiarazioni di riferimento con l'uso dell' [operatore address-of](../cpp/address-of-operator-amp.md). Quando l' *identificatore* del `&`è preceduto da un tipo, ad esempio **int** o **char**, l' *identificatore* viene dichiarato come un riferimento al tipo. Quando `&`*identificatore* non è preceduto da un tipo, l'utilizzo è quello dell'operatore address-of.
 
 ## <a name="example"></a>Esempio
 

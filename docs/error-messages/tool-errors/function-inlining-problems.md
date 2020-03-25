@@ -9,20 +9,20 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cb4653bd2f03683b9abad1eea0e9ffa88222090e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856879"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184242"
 ---
 # <a name="function-inlining-problems"></a>Problemi di inline di funzioni
 
-Se si usa l'inline delle funzioni, è necessario:
+Se si utilizza l'incorporamento della funzione, è necessario:
 
-- Definire le funzioni inline implementate nel file di intestazione che è includere.
+- Le funzioni inline sono implementate nel file di intestazione incluso.
 
-- Dispone l'incorporamento accesi nel file di intestazione.
+- È stato attivato l'inline nel file di intestazione.
 
 ```cpp
 // LNK2019_function_inline.cpp
@@ -54,11 +54,11 @@ int main() {
 }
 ```
 
-Se si usa il `#pragma inline_depth` compilatore direttiva, assicurarsi di avere un valore superiore o uguale a 2 impostato. Un valore pari a zero per disattivare l'incorporamento. Assicurarsi anche che si usa la **/Ob1** oppure **/Ob2** opzioni del compilatore.
+Se si utilizza la direttiva del compilatore `#pragma inline_depth`, assicurarsi che sia impostato un valore di 2 o maggiore. Un valore pari a zero disabilita l'incorporamento. Assicurarsi anche di usare le opzioni del compilatore **/OB1** o **/Ob2** .
 
-Combinazione di opzioni di compilazione inline e non inline in moduli diversi può talvolta causare problemi. Se si crea una libreria di C++ con attivata l'inline delle funzioni ([/Ob1](../../build/reference/ob-inline-function-expansion.md) oppure [/Ob2](../../build/reference/ob-inline-function-expansion.md)) ma il corrispondente file di intestazione che descrivono le funzioni con l'incorporamento disattivata (nessuna opzione), si otterrà l'errore LNK2001. Le funzioni non inline all'interno del codice dal file di intestazione, ma poiché non si trovano nel file di libreria non è presente alcun indirizzo per risolvere il riferimento.
+La combinazione di opzioni di compilazione inline e non inline in moduli diversi può a volte causare problemi. Se viene C++ creata una libreria con la funzione incorporata inline attivata ([/OB1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md)), ma il file di intestazione corrispondente che descrive le funzioni presenta l'inlining disattivato (nessuna opzione), si otterrà l'errore LNK2001. Le funzioni non vengono inline nel codice del file di intestazione, ma poiché non sono presenti nel file di libreria, non esiste alcun indirizzo per risolvere il riferimento.
 
-Analogamente, un progetto che usa l'inline delle funzioni ancora definisce le funzioni in un file con estensione cpp anziché nell'intestazione del file verrà visualizzato anche l'errore LNK2019. Il file di intestazione è incluso ovunque sia appropriato, ma sono solo le funzioni rese inline quando il file con estensione cpp passa attraverso il compilatore. Pertanto, il linker considera le funzioni di riferimenti esterni non risolti quando usate in altri moduli.
+Analogamente, un progetto che usa la funzione inline definisce ancora le funzioni in un file con estensione cpp invece che nel file di intestazione, otterrà anche LNK2019. Il file di intestazione è incluso ovunque considerato appropriato, ma le funzioni sono inline solo quando il file con estensione cpp passa attraverso il compilatore. il linker vede pertanto le funzioni come External non risolte se utilizzate in altri moduli.
 
 ```cpp
 // LNK2019_FIP.h

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447056"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212162"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
 
@@ -106,7 +106,7 @@ Interfaccia di comando. Il valore predefinito è `ICommand`.
 
 Interfaccia obbligatoria sull'oggetto Command.
 
-## <a name="cancel"></a>ICommandImpl:: Cancel
+## <a name="icommandimplcancel"></a><a name="cancel"></a>ICommandImpl:: Cancel
 
 Annulla l'esecuzione del comando corrente.
 
@@ -120,7 +120,7 @@ STDMETHOD(Cancel)();
 
 Vedere [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="cancelexecution"></a>ICommandImpl:: CancelExecution
+## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a>ICommandImpl:: CancelExecution
 
 Annulla l'esecuzione del comando corrente.
 
@@ -130,7 +130,7 @@ Annulla l'esecuzione del comando corrente.
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a>ICommandImpl:: CreateRowset
+## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a>ICommandImpl:: CreateRowset
 
 Chiamato da [Execute](../../data/oledb/icommandimpl-execute.md) per creare un singolo set di righe.
 
@@ -179,7 +179,7 @@ Per creare più di un set di righe o per fornire condizioni personalizzate per l
 
 Vedere [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB.*
 
-## <a name="execute"></a>ICommandImpl:: Execute
+## <a name="icommandimplexecute"></a><a name="execute"></a>ICommandImpl:: Execute
 
 Esegue il comando.
 
@@ -203,7 +203,7 @@ L'interfaccia in uscita richiesta sarà un'interfaccia acquisita dall'oggetto se
 
 `Execute` chiama [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Eseguire l'override dell'implementazione predefinita per creare più di un set di righe o fornire condizioni personalizzate per la creazione di set di righe diversi.
 
-## <a name="getdbsession"></a>ICommandImpl:: GetDBSession
+## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: GetDBSession
 
 Restituisce un puntatore a interfaccia per la sessione che ha creato il comando.
 
@@ -222,7 +222,7 @@ Vedere [ICommand:: GetDBSession](/previous-versions/windows/desktop/ms719622(v=v
 
 Utile per recuperare le proprietà dalla sessione.
 
-## <a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
+## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
 
 Costruttore.
 
@@ -232,7 +232,7 @@ Costruttore.
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a>ICommandImpl:: m_bCancel
+## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a>ICommandImpl:: m_bCancel
 
 Indica se il comando è stato annullato.
 
@@ -246,7 +246,7 @@ unsigned m_bCancel:1;
 
 È possibile recuperare questa variabile nel metodo `Execute` della classe Command e annullarla in base alle esigenze.
 
-## <a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
+## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
 
 Indica se il comando può essere annullato durante l'esecuzione.
 
@@ -260,7 +260,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 Il valore predefinito è **true** (può essere annullato).
 
-## <a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
+## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
 
 Indica se il comando è attualmente in esecuzione.
 

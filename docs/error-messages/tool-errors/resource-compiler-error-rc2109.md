@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2109
 ms.assetid: b800aa67-33c0-42f5-81a2-7a64a3b6b824
-ms.openlocfilehash: adfbc32adc9e55f4cc0e1a49d3b5505efead5d25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49edd32da192816ba22cb030958f87cd049ec59c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399902"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191561"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Errore del compilatore di risorse RC2109
 
-Prevista costante numerica finestra di dialogo
+prevista costante finestra di dialogo numerica
 
-Oggetto **finestra di dialogo** istruzione richiede valori integer per il *x, y, larghezza*, e *altezza* campi. Assicurarsi che questi valori sono inclusi dopo il **dialogo** (parola chiave) e che non siano negativi.
+Un'istruzione della **finestra di dialogo** richiede valori integer per i campi *x, y, larghezza*e *altezza* . Verificare che questi valori siano inclusi dopo la parola chiave **Dialog** e che non siano negativi.

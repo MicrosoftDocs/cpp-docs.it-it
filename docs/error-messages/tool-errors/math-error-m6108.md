@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - M6108
 ms.assetid: 054893b4-49bc-45d9-882f-7cb50ba387c0
-ms.openlocfilehash: d60e9b6284c79828fda1f7af542fcf197f189ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68e6ae823613d87eb01c443b564b46746259cd7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393272"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173725"
 ---
 # <a name="math-error-m6108"></a>Errore matematico M6108
 
@@ -22,4 +22,4 @@ L'operando in un'operazione radice quadrata è negativo.
 Il programma termina con il codice di uscita 136.
 
 > [!NOTE]
->  Il `sqrt` funzione nella libreria run-time C e la funzione intrinseca FORTRAN **SQRT** non generano questo errore. C `sqrt` funzione Controlla l'argomento prima di eseguire l'operazione e restituisce un errore se l'operando è negativo. Il FORTRAN **SQRT** funzione genera l'errore di dominio [M6201](../../error-messages/tool-errors/math-error-m6201.md) invece di questo errore.
+>  La funzione `sqrt` nella libreria di runtime del linguaggio C e la funzione intrinseca FORTRAN **Sqrt** non generano questo errore. La funzione C `sqrt` controlla l'argomento prima di eseguire l'operazione e restituisce un valore di errore se l'operando è negativo. La funzione **Sqrt sqrt** genera l'errore di dominio [matematico M6201](../../error-messages/tool-errors/math-error-m6201.md) invece di questo errore.

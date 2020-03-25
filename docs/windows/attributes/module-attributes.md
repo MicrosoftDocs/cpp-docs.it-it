@@ -1,23 +1,23 @@
 ---
-title: Attributi di modulo (C++ COM)
+title: Attributi modulo (C++ com)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - module attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: 46d135dc-613f-4810-90a4-e155ab8ed91a
-ms.openlocfilehash: 69c0834c95b6e8bc33c984da5a3589269ed62e97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c71fd4bf007d1a74d9cf959388fdfe37922c60fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409239"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166744"
 ---
 # <a name="module-attributes"></a>Attributi di modulo
-L'attributo seguente può essere applicato solo per i [modulo](module-cpp.md) attributo.
+L'attributo seguente può essere applicato solo all'attributo [Module](module-cpp.md) .
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|[helpstringdll](helpstringdll.md)|Specifica il nome della DLL da usare per eseguire la ricerca della stringa di documento (localizzazione).|
+|[helpstringdll](helpstringdll.md)|Specifica il nome della DLL da usare per eseguire la ricerca di stringhe di documento (localizzazione).|
 
 ## <a name="see-also"></a>Vedere anche
 

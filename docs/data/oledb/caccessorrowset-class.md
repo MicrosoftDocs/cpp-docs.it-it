@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447279"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212251"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -74,7 +74,7 @@ Classe del set di righe.
 
 Classe `TAccessor` gestisce la funzione di accesso. La classe *TRowset* gestisce il set di righe.
 
-## <a name="bind"></a>CAccessorRowset:: bind
+## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: bind
 
 Crea i binding se è stato specificato `bBind` come **false** in [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
@@ -88,7 +88,7 @@ HRESULT Bind();
 
 Valore HRESULT standard.
 
-## <a name="caccessorrowset"></a>CAccessorRowset:: CAccessorRowset
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset:: CAccessorRowset
 
 Inizializza l'oggetto `CAccessorRowset`.
 
@@ -98,7 +98,7 @@ Inizializza l'oggetto `CAccessorRowset`.
 CAccessorRowset();
 ```
 
-## <a name="close"></a>CAccessorRowset:: Close
+## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset:: Close
 
 Rilascia tutte le funzioni di accesso attive e il set di righe.
 
@@ -112,7 +112,7 @@ void Close();
 
 Rilascia qualsiasi memoria associata.
 
-## <a name="freerecordmemory"></a>CAccessorRowset:: FreeRecordMemory
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset:: FreeRecordMemory
 
 Libera tutte le colonne del record corrente che devono essere liberate.
 
@@ -122,7 +122,7 @@ Libera tutte le colonne del record corrente che devono essere liberate.
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
 
 Ottiene le informazioni sulla colonna dal set di righe aperto.
 

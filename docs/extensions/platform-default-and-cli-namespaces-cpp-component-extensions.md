@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311763"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181824"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Spazi dei nomi Platform, default e cli (C++/CLI e C++/CX)
 
@@ -40,13 +40,13 @@ Opzione del compilatore: `/ZW`
 using namespace cli;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 C++/CLI supporta lo spazio dei nomi **cli**. Quando si esegue la compilazione con `/clr`, l'istruzione **using** nella sezione relativa alla sintassi è implicita.
 
 Le funzionalità del linguaggio seguenti si trovano nello spazio dei nomi **cli**:
 
-- [Matrici](arrays-cpp-component-extensions.md)
+- [Array](arrays-cpp-component-extensions.md)
 
 - [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)
 

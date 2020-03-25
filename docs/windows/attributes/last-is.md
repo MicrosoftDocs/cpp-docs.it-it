@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514515"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214812"
 ---
 # <a name="last_is"></a>last_is
 
@@ -28,9 +28,9 @@ Specifica l'indice dell'ultimo elemento della matrice da trasmettere.
 *expression*<br/>
 Una o più espressioni del linguaggio C. Sono consentiti slot di argomento vuoti.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **last_is** C++ ha la stessa funzionalità dell'attributo MIDL di [last_is](/windows/win32/Midl/last-is) .
+L'attributo **last_is** C++ ha la stessa funzionalità dell'attributo [last_is](/windows/win32/Midl/last-is) MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -44,8 +44,8 @@ Vedere [first_is](first-is.md) per un esempio di come specificare una sezione di
 |-|-|
 |**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

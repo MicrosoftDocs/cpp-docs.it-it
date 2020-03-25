@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4115
 ms.assetid: f3f94e72-fc49-4d09-b3e7-23d68e61152f
-ms.openlocfilehash: 20e44eba3b6f6079e6f37b7cf33fa530a996e829
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e39e8c837d94776a804da2bf38643b453edb949
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360021"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198042"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4115"></a>Avviso del compilatore (livelli 1 e 4) C4115
 

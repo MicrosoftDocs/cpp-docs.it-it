@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4952
 ms.assetid: 593324f0-5cfe-42fb-b221-2f71308765dd
-ms.openlocfilehash: c2e9b88125655d9ea0abe3e65500b149289ba83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560705edeb0bbdd6be760736a8d4a19d914133d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393285"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174570"
 ---
 # <a name="compiler-warning-level-1-c4952"></a>Avviso del compilatore (livello 1) C4952
 
-> «*funzione*': nessun dato di profilo trovati nel database di programma '*pgd_file*»
+> '*Function*': non sono stati trovati dati di profilo nel database di programma '*pgd_file*'
 
 Durante l'uso di [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)il compilatore ha rilevato un modulo di input ricompilato dopo `/LTCG:PGINSTRUMENT` e contenente una nuova funzione (*function*).
 

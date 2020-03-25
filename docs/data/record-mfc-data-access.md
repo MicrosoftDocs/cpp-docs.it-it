@@ -6,17 +6,17 @@ helpviewer_keywords:
 - records [C++]
 - records [C++], database
 ms.assetid: d9888635-8121-452c-8cb9-a1c5bf268010
-ms.openlocfilehash: 9b308f98a597a080048377b345c27cb5862e5f12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0087bbf04fa894848fe99c6b6850d19d637068a3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161167"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209170"
 ---
 # <a name="record-mfc-data-access"></a>Record (accesso ai dati MFC)
 
-Un record è una raccolta di dati che riguardano una singola entità, ad esempio un account o un cliente, archiviato in una tabella, ovvero in una riga della tabella. Un record è costituito da un gruppo di colonne contigue, dette anche campi, che contengono dati di vario tipo. In MFC un set di record selezionati da un'origine dati, definito spesso anche set di risultati secondo la terminologia dei database, viene denominato recordset. Per altre informazioni, vedere [Recordset (ODBC)](../data/odbc/recordset-odbc.md).
+Un record è una raccolta di dati che riguardano una singola entità, ad esempio un account o un cliente, archiviato in una tabella, ovvero in una riga della tabella. Un record è costituito da un gruppo di colonne contigue, dette anche campi, che contengono dati di vario tipo. In MFC un set di record selezionati da un'origine dati, definito spesso anche set di risultati secondo la terminologia dei database, viene denominato recordset. Per ulteriori informazioni, vedere [Recordset (ODBC)](../data/odbc/recordset-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Accesso ai dati (MFC/ATL) di programmazione](../data/data-access-programming-mfc-atl.md)
+[Programmazione dell'accesso ai dati (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

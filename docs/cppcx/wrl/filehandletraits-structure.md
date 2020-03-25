@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - FileHandleTraits structure
 ms.assetid: e1107c42-2cd6-4253-9c16-8ecb35f05cd9
-ms.openlocfilehash: 09b8eb1a45efee4f8d0aaf4dc27774de91ffcff4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c20bad1b67719a9fcfb8ea9fa1dfede1feb42ddf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398433"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213993"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits (struttura)
 
@@ -24,7 +24,7 @@ Definisce le caratteristiche di un handle di file.
 struct FileHandleTraits : HANDLETraits;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -36,7 +36,7 @@ struct FileHandleTraits : HANDLETraits;
 
 **Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers:: HandleTraits
 
 ## <a name="see-also"></a>Vedere anche
 

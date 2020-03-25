@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 55e88ab4dfaaa4157a99c4dc523f205370f78c46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513907"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214461"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -23,7 +23,7 @@ Indica che il membro delle informazioni sul tipo è il membro predefinito per la
 [uidefault]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **uidefault** C++ ha la stessa funzionalità dell'attributo MIDL di [uidefault](/windows/win32/Midl/uidefault) .
 
@@ -56,8 +56,8 @@ __interface ICustom{
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

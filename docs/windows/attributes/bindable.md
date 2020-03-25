@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501831"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167355"
 ---
 # <a name="bindable"></a>bindable
 
@@ -23,21 +23,21 @@ Indica che la proprietà supporta il data binding.
 [bindable]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L' C++ attributo associabile ha la stessa funzionalità dell'attributo MIDL [associabile](/windows/win32/Midl/bindable) . È possibile usarlo nelle proprietà definite con gli attributi [propget](propget.md), [propput](propput.md)o [propputref](propputref.md) oppure è possibile definire manualmente un metodo associabile.
+L'attributo **associabile** C++ ha la stessa funzionalità dell'attributo MIDL [associabile](/windows/win32/Midl/bindable) . È possibile usarlo nelle proprietà definite con gli attributi [propget](propget.md), [propput](propput.md)o [propputref](propputref.md) oppure è possibile definire manualmente un metodo associabile.
 
-Negli esempi MFC seguenti viene illustrato l'utilizzodi Bindable:
+Negli esempi MFC seguenti viene illustrato l'utilizzo di **Bindable**:
 
-- [Esempi di controlli: Controlli ActiveX basati su MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Esempi di controlli: controlli ActiveX basati su MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Esempio di CIRC: Controllo ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Esempio CIRC: controllo ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Esempio TESTHELP: Controllo ActiveX con descrizioni comandi e guida](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Esempio TESTHELP: controllo ActiveX con descrizioni comandi e guida](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Esempio
 
-Nel codice seguente viene illustrato come è possibile utilizzare associabile in una proprietà:
+Nel codice seguente viene illustrato come è possibile utilizzare **associabile** in una proprietà:
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -66,8 +66,8 @@ __interface IPropDemo : IDispatch {
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

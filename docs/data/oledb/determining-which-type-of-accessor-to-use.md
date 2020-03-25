@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: d729e2cf5b08ae227d0cc2e4d5ab7f8ac865cdc4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 31efa36bcd61caa154cd3e4c147ad5ed8728b04c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079647"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210990"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Determinazione del tipo di funzione di accesso da utilizzare
 
@@ -28,7 +28,7 @@ La tabella seguente elenca i tipi di funzione di accesso forniti nei modelli di 
 |`CDynamicAccessor`|Automatico.|No.|Utile se non si conosce il tipo di dati in un set di righe.|
 |`CDynamicParameterAccessor`|Automatica, ma è possibile [eseguirne l'override](../../data/oledb/overriding-a-dynamic-accessor.md).|Sì, se il provider supporta `ICommandWithParameters`. Parametri associati automaticamente.|Più lenta di `CDynamicAccessor`, ma utile per chiamare stored procedure generiche.|
 |`CDynamicStringAccessor[A,W]`|Automatico.|No.|Recupera i dati accessibili dall'archivio dati come dati stringa.|
-|`CManualAccessor`|Manuale tramite `AddBindEntry`.|Manuale tramite `AddParameterEntry`.|Veloce. I parametri e le colonne vengono associati solo una volta. Determinare il tipo di dati da usare. Per un esempio, vedere l'esempio [DBVIEWER](https://github.com/Microsoft/VCSamples) . Richiede un codice maggiore rispetto `CDynamicAccessor` o `CAccessor`. È più simile a una chiamata diretta di OLE DB.|
+|`CManualAccessor`|Manuale tramite `AddBindEntry`.|Manuale tramite `AddParameterEntry`.|Veloce. I parametri e le colonne vengono associati solo una volta. Determinare il tipo di dati da usare. Per un esempio, vedere l'esempio [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) . Richiede un codice maggiore rispetto `CDynamicAccessor` o `CAccessor`. È più simile a una chiamata diretta di OLE DB.|
 |`CXMLAccessor`|Automatico.|No.|Recupera i dati accessibili dall'archivio dati come dati stringa e li formatta come dati con tag XML.|
 
 ## <a name="see-also"></a>Vedere anche

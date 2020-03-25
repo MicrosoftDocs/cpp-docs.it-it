@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 689cd3a1f7496ad75bf83e0b1a2a14f7bd1b1f6f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e67e385a8ce0eb9a6b041d4a4f0d43e2db551c79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441173"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211289"
 ---
 # <a name="crowset-class"></a>Classe CRowset
 
@@ -292,7 +292,7 @@ In OLE DB, un set di righe è l'oggetto attraverso il quale un programma imposta
 
 Questa classe non è destinata alla creazione di un'istanza, ma viene invece passata come parametro di modello per `CTable` o `CCommand` (`CRowset` è l'impostazione predefinita).
 
-## <a name="addrefrows"></a>CRowset:: AddRefRows
+## <a name="crowsetaddrefrows"></a><a name="addrefrows"></a>CRowset:: AddRefRows
 
 Chiama [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) per incrementare (di uno) il conteggio dei riferimenti associato all'handle di riga corrente.
 
@@ -310,7 +310,7 @@ Valore HRESULT standard.
 
 Questo metodo incrementa il conteggio dei riferimenti per l'handle di riga corrente. Chiamare [ReleaseRows](../../data/oledb/crowset-releaserows.md) per decrementare il conteggio. Le righe restituite dai metodi di spostamento hanno un conteggio dei riferimenti di uno.
 
-## <a name="close"></a>CRowset:: Close
+## <a name="crowsetclose"></a><a name="close"></a>CRowset:: Close
 
 Rilascia le righe e l'interfaccia [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) corrente.
 
@@ -324,7 +324,7 @@ void Close() throw();
 
 Questo metodo rilascia tutte le righe attualmente presenti nel set di righe.
 
-## <a name="compare"></a>CRowset:: compare
+## <a name="crowsetcompare"></a><a name="compare"></a>CRowset:: compare
 
 Confronta due segnalibri usando [IRowsetLocate:: compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).
 
@@ -357,7 +357,7 @@ Questo metodo richiede l'interfaccia facoltativa `IRowsetLocate`, che potrebbe n
 
 Per informazioni sull'uso di segnalibri nei consumer, vedere [uso dei segnalibri](../../data/oledb/using-bookmarks.md).
 
-## <a name="crowset"></a>CRowset:: CRowset
+## <a name="crowsetcrowset"></a><a name="crowset"></a>CRowset:: CRowset
 
 Crea un nuovo oggetto `CRowset` e, facoltativamente, lo associa a un'interfaccia [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) fornita come parametro.
 
@@ -374,7 +374,7 @@ CRowset(IRowset* pRowset);
 *pRowset*<br/>
 [in] Puntatore a un'interfaccia `IRowset` da associare a questa classe.
 
-## <a name="delete"></a>CRowset::D Elimina
+## <a name="crowsetdelete"></a><a name="delete"></a>CRowset::D Elimina
 
 Chiama [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) per eliminare la riga corrente dal set di righe.
 
@@ -388,7 +388,7 @@ HRESULT Delete() const throw();
 
 Valore HRESULT standard.
 
-## <a name="findnextrow"></a>CRowset:: FindNextRow
+## <a name="crowsetfindnextrow"></a><a name="findnextrow"></a>CRowset:: FindNextRow
 
 Trova la riga corrispondente successiva dopo il segnalibro specificato.
 
@@ -441,7 +441,7 @@ Questo metodo richiede l'interfaccia facoltativa `IRowsetFind`, che potrebbe non
 
 Per informazioni sull'uso di segnalibri nei consumer, vedere [uso dei segnalibri](../../data/oledb/using-bookmarks.md).
 
-## <a name="getapproximateposition"></a>CRowset:: GetApproximatePosition
+## <a name="crowsetgetapproximateposition"></a><a name="getapproximateposition"></a>CRowset:: GetApproximatePosition
 
 Restituisce la posizione approssimativa di una riga corrispondente a un segnalibro.
 
@@ -474,7 +474,7 @@ Questo metodo richiede l'interfaccia facoltativa `IRowsetScroll`, che potrebbe n
 
 Per informazioni sull'uso di segnalibri nei consumer, vedere [uso dei segnalibri](../../data/oledb/using-bookmarks.md).
 
-## <a name="getdata"></a>CRowset:: GetData
+## <a name="crowsetgetdata"></a><a name="getdata"></a>CRowset:: GetData
 
 Recupera dati dalla copia della riga del set di righe.
 
@@ -499,7 +499,7 @@ Valore HRESULT standard.
 
 Se si specifica una funzione di accesso che non è un autoaccesso in [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), usare questo metodo per ottenere i dati in modo esplicito passando il numero di funzione di accesso.
 
-## <a name="getdatahere"></a>CRowset:: GetDataHere
+## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a>CRowset:: GetDataHere
 
 Recupera i dati dalla riga corrente e li inserisce nel buffer specificato.
 
@@ -526,7 +526,7 @@ Valore HRESULT standard.
 
 Per un esempio di come usare questa funzione, vedere l'esempio relativo a più [letture](../../overview/visual-cpp-samples.md).
 
-## <a name="getoriginaldata"></a>CRowset:: GetOriginalData
+## <a name="crowsetgetoriginaldata"></a><a name="getoriginaldata"></a>CRowset:: GetOriginalData
 
 Chiama `IRowsetUpdate::GetOriginalData` per recuperare i dati recuperati o trasmessi più di recente all'origine dati.
 
@@ -546,7 +546,7 @@ Questo metodo recupera i dati recuperati o trasmessi più di recente all'origine
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare `DBPROP_IRowsetUpdate` su VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
-## <a name="getrowstatus"></a>CRowset:: GetRowStatus
+## <a name="crowsetgetrowstatus"></a><a name="getrowstatus"></a>CRowset:: GetRowStatus
 
 Restituisce lo stato di tutte le righe.
 
@@ -569,7 +569,7 @@ Valore HRESULT standard.
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare `DBPROP_IRowsetUpdate` su VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
-## <a name="insert"></a>CRowset:: Insert
+## <a name="crowsetinsert"></a><a name="insert"></a>CRowset:: Insert
 
 Crea e Inizializza una nuova riga usando i dati dalla funzione di accesso.
 
@@ -606,7 +606,7 @@ Per prima cosa, creare una classe di tabella inserendo un nuovo oggetto ATL nel 
 
 [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
-## <a name="issamerow"></a>CRowset:: IsSameRow
+## <a name="crowsetissamerow"></a><a name="issamerow"></a>CRowset:: IsSameRow
 
 Confronta la riga specificata con la riga corrente.
 
@@ -625,7 +625,7 @@ in Handle per la riga da confrontare con la riga corrente.
 
 Valore HRESULT standard. S_OK indica che le righe sono uguali. Per altri valori, vedere [IRowsetIndentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* nel Windows SDK.
 
-## <a name="movefirst"></a>CRowset:: MoveFirst
+## <a name="crowsetmovefirst"></a><a name="movefirst"></a>CRowset:: MoveFirst
 
 Sposta il cursore nella posizione iniziale e recupera la riga iniziale.
 
@@ -643,7 +643,7 @@ Valore HRESULT standard.
 
 Chiama [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) per riposizionare il percorso di recupero successivo nella posizione iniziale (la posizione che era il percorso di recupero successivo al momento della creazione del set di righe) e recupera la riga iniziale.
 
-## <a name="movelast"></a>CRowset:: MoveLast
+## <a name="crowsetmovelast"></a><a name="movelast"></a>CRowset:: MoveLast
 
 Sposta il cursore sull'ultima riga.
 
@@ -663,7 +663,7 @@ Chiama [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v
 
 Per questo metodo è necessario impostare `DBPROP_CANSCROLLBACKWARDS` su VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe. Per ottenere prestazioni ottimali, è anche possibile impostare `DBPROP_QUICKRESTART` su VARIANT_TRUE.
 
-## <a name="movenext"></a>CRowset:: MoveNext
+## <a name="crowsetmovenext"></a><a name="movenext"></a>CRowset:: MoveNext
 
 Sposta il cursore sul record successivo.
 
@@ -700,7 +700,7 @@ Per questo metodo è necessario impostare le proprietà seguenti prima di chiama
 
 In caso contrario (se *lSkip* > = 0 e *bForward* = true), non è necessario impostare proprietà aggiuntive.
 
-## <a name="moveprev"></a>CRowset:: MovePrev
+## <a name="crowsetmoveprev"></a><a name="moveprev"></a>CRowset:: MovePrev
 
 Sposta il cursore sul record precedente.
 
@@ -718,7 +718,7 @@ Valore HRESULT standard.
 
 Per questo metodo è necessario impostare `DBPROP_CANFETCHBACKWARDS` o `DBPROP_CANSCROLLBACKWARDS` su VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
-## <a name="movetobookmark"></a>CRowset:: MoveToBookmark
+## <a name="crowsetmovetobookmark"></a><a name="movetobookmark"></a>CRowset:: MoveToBookmark
 
 Recupera la riga contrassegnata da un segnalibro o dalla riga in corrispondenza di un offset specificato (*lSkip*) dal segnalibro.
 
@@ -747,7 +747,7 @@ Questo metodo richiede l'interfaccia facoltativa `IRowsetLocate`, che potrebbe n
 
 Per informazioni sull'uso di segnalibri nei consumer, vedere [uso dei segnalibri](../../data/oledb/using-bookmarks.md).
 
-## <a name="movetoratio"></a>CRowset:: MoveToRatio
+## <a name="crowsetmovetoratio"></a><a name="movetoratio"></a>CRowset:: MoveToRatio
 
 Recupera le righe a partire da una posizione frazionaria nel set di righe.
 
@@ -779,11 +779,11 @@ Valore HRESULT standard.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-dove `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)).
+Dove `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)).
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetScroll`, che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare `DBPROP_IRowsetScroll` su VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
-## <a name="releaserows"></a>CRowset:: ReleaseRows
+## <a name="crowsetreleaserows"></a><a name="releaserows"></a>CRowset:: ReleaseRows
 
 Chiama [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) per rilasciare l'handle di riga corrente.
 
@@ -797,7 +797,7 @@ HRESULT ReleaseRows() throw();
 
 Valore HRESULT standard.
 
-## <a name="setdata"></a>CRowset:: SetData
+## <a name="crowsetsetdata"></a><a name="setdata"></a>CRowset:: SetData
 
 Imposta i valori dei dati in una o più colonne di una riga.
 
@@ -826,7 +826,7 @@ Questo metodo richiede l'interfaccia facoltativa `IRowsetChange`, che potrebbe n
 
 L'operazione di impostazione potrebbe non riuscire se una o più colonne non sono scrivibili. Modificare la mappa del cursore per risolvere il problema.
 
-## <a name="undo"></a>CRowset:: Undo
+## <a name="crowsetundo"></a><a name="undo"></a>CRowset:: Undo
 
 Annulla le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](../../data/oledb/crowset-update.md).
 
@@ -857,7 +857,7 @@ Valore HRESULT standard.
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare `DBPROP_IRowsetUpdate` su VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
-## <a name="update"></a>CRowset:: Update
+## <a name="crowsetupdate"></a><a name="update"></a>CRowset:: Update
 
 Trasmette tutte le modifiche in sospeso apportate alla riga corrente dall'ultimo recupero o `Update` chiamata su di essa.
 
@@ -890,7 +890,7 @@ Trasmette tutte le modifiche in sospeso apportate alla riga corrente dall'ultimo
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare `DBPROP_IRowsetUpdate` su VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
-## <a name="updateall"></a>CRowset:: UpdateAll
+## <a name="crowsetupdateall"></a><a name="updateall"></a>CRowset:: UpdateAll
 
 Trasmette tutte le modifiche in sospeso apportate a tutte le righe dall'ultimo recupero o dalla chiamata `Update`.
 

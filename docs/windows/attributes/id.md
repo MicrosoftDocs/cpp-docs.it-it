@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501413"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168057"
 ---
 # <a name="id"></a>id
 
@@ -25,10 +25,10 @@ Specifica un parametro *DISPID* per una funzione membro, ovvero una proprietà o
 
 ### <a name="parameters"></a>Parametri
 
-*dispid*<br/>
+*DISPID*<br/>
 ID dispatch per il metodo di interfaccia.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **ID** C++ ha la stessa funzionalità dell'attributo MIDL dell' [ID](/windows/win32/Midl/id) .
 
@@ -44,8 +44,8 @@ Per un esempio su come usare l' **ID**, vedere l'esempio relativo a [Bindable](b
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

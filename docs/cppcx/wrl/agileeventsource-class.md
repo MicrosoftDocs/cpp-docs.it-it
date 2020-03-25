@@ -6,12 +6,12 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441262"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214188"
 ---
 # <a name="agileeventsource-class"></a>Classe AgileEventSource
 
@@ -61,7 +61,7 @@ La maggior parte dei componenti del Windows Runtime sono componenti agile. Per u
 |----------|-----------------|
 |[Metodo AgileEventSource:: Add](#add)|Accoda il gestore eventi agile rappresentato dall'interfaccia del delegato specificata al set di gestori eventi per l'oggetto **AgileEventSource** corrente.|
 
-## <a name="add"></a>Metodo AgileEventSource:: Add
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>Metodo AgileEventSource:: Add
 
 Accoda il gestore eventi rappresentato dall'interfaccia del delegato specificata al set di gestori eventi per l'oggetto [EventSource](eventsource-class.md) corrente.
 

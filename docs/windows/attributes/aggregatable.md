@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: aa70c2417b3262e98118b5e717ce39d0147024de
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d929543f699dcd20471ff9a9b45f54119f82a40a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491020"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168525"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,17 +28,17 @@ Indica che la classe supporta l'aggregazione.
 *value*<br/>
 Opzionale Parametro per indicare quando l'oggetto COM può essere aggregato:
 
-- `never`Impossibile aggregare l'oggetto COM.
+- `never` l'oggetto COM non può essere aggregato.
 
-- `allowed`L'oggetto COM può essere creato direttamente oppure può essere aggregato. Questa è l'impostazione predefinita.
+- `allowed` l'oggetto COM può essere creato direttamente oppure può essere aggregato. Questa è la modalità predefinita.
 
-- `always`L'oggetto COM non può essere creato direttamente e può essere aggregato. Quando si chiama `CoCreateInstance` per questo oggetto, è necessario specificare l'interfaccia dell'oggetto di `IUnknown` aggregazione (controllo `IUnknown`).
+- `always` l'oggetto COM non può essere creato direttamente e può essere aggregato. Quando si chiama `CoCreateInstance` per questo oggetto, è necessario specificare l'interfaccia di `IUnknown` dell'oggetto di aggregazione (il `IUnknown`di controllo).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L' C++ attributo aggregable ha la stessa funzionalità dell'attributo MIDL [aggregabile](/windows/win32/Midl/aggregatable) . Questo significa che il compilatore passerà l'attributo **aggregabile** attraverso al file IDL generato.
+L' **aggregatable** C++ attributo aggregable ha la stessa funzionalità dell'attributo MIDL [aggregabile](/windows/win32/Midl/aggregatable) . Questo significa che il compilatore passerà l'attributo **aggregabile** attraverso al file IDL generato.
 
-Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Se `progid` , ad esempio, viene applicato `vi_progid` `coclass` , vengono applicati anche.
+Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Se ad esempio `progid` viene applicato, vengono applicati anche `vi_progid` e `coclass`.
 
 ### <a name="atl-projects"></a>Progetti ATL
 
@@ -75,7 +75,7 @@ class CMyClass {};
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Uno o più degli elementi seguenti: `coclass`, `progid`o `vi_progid`.|
-|**Attributi non validi**|Nessuna|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

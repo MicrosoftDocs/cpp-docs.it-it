@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Dichiarare tipi valore con la parola chiave interior_ptr (C++/CLI)'
+title: 'Procedura: dichiarare i tipi di valori con la parola chiave interior_ptr (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515756"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172282"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Procedura: Dichiarare tipi valore con la parola chiave interior_ptr (C++/CLI)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Procedura: dichiarare i tipi di valori con la parola chiave interior_ptr (C++/CLI)
 
 Un oggetto **interior_ptr** può essere usato con un tipo valore.
 
@@ -22,7 +22,7 @@ Un oggetto **interior_ptr** può essere usato con un tipo valore.
 
 ## <a name="example"></a>Esempio
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 
 L'esempio C++/CLI seguente mostra come usare un oggetto **interior_ptr** con un tipo valore.
 
@@ -67,7 +67,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 
 In un tipo valore il puntatore **this** restituisce un oggetto interior_ptr.
 
@@ -89,7 +89,7 @@ value struct V {
 
 ## <a name="example"></a>Esempio
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 
 Nell'esempio seguente viene illustrato come utilizzare l'operatore address-of con membri statici.
 

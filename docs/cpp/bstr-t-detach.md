@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Detach method [C++]
 ms.assetid: cc8284bd-f68b-4fff-b2e6-ce8354dabf8b
-ms.openlocfilehash: 51561c6f7cf5ba49c86f818d925db548438b2981
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e56ad29ae9e7fdcf7e8d354bda570364c7be8901
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386174"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181265"
 ---
-# <a name="bstrtdetach"></a>_bstr_t::Detach
+# <a name="_bstr_tdetach"></a>_bstr_t::Detach
 
 **Sezione specifica Microsoft**
 
@@ -31,7 +31,7 @@ L'elemento `BSTR` di cui è stato eseguito il wrapping da `_bstr_t`.
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [_bstr_t::Assign](../cpp/bstr-t-assign.md) per un esempio di utilizzo **Detach**.
+Vedere [_bstr_t:: Assign](../cpp/bstr-t-assign.md) per un esempio di utilizzo di **Detach**.
 
 **Fine sezione specifica Microsoft**
 

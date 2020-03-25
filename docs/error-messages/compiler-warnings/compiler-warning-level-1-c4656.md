@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4656
 ms.assetid: b5aaef74-2320-4345-a6ae-b813881a491c
-ms.openlocfilehash: 4285ce20f6131c2503304ed1bdb1bde02b2efcec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a78da51a99aa924eadbf5c9f458ceb0a75889141
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375249"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175649"
 ---
 # <a name="compiler-warning-level-1-c4656"></a>Avviso del compilatore (livello 1) C4656
 
-'symbol': tipo di dati nuovo o è stato modificato rispetto all'ultima compilazione o definito diversamente altrove
+' symbol ': il tipo di dati è nuovo o è stato modificato dall'ultima compilazione oppure è definito diversamente altrove
 
 Dall'ultima compilazione riuscita, è stato modificato o aggiunto un tipo di dati che risulta quindi nuovo nel codice sorgente. Modifica e continuazione non supporta le modifiche ai tipi di dati.
 

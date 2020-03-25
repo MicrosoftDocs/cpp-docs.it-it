@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: 5e10edba60832112a9023f796be56d88afd52042
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8817d0042c3055b5bbf9b111e6f02b9d9a4c152c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514202"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166445"
 ---
 # <a name="propput"></a>propput
 
@@ -23,7 +23,7 @@ Specifica un funzione di impostazione delle proprietà.
 [propput]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **propput** C++ ha la stessa funzionalità dell'attributo MIDL di [propput](/windows/win32/Midl/propput) .
 
@@ -39,7 +39,7 @@ Vedere l'esempio per [associabile](bindable.md) per un esempio di uso di **propp
 |-|-|
 |**Si applica a**|Metodo|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|`propget`, `propputref`|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

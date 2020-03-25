@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 6068a7ddad78e3347f6987b30cc2884dc3f648fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7780ecd8d03be6fea4ffe3c0be17ed6e995e3f90
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232260"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213655"
 ---
 # <a name="operator-operator-microsoftwrl"></a>Operatore operator!= (Microsoft::WRL)
 
-Operatore di disuguaglianza per [ComPtr](comptr-class.md) e [ComPtrRef](comptrref-class.md) oggetti.
+Operatore di disuguaglianza per gli oggetti [ComPtr](comptr-class.md) e [ComPtrRef](comptrref-class.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -63,7 +63,7 @@ Oggetto a destra.
 
 ## <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti non sono uguali; in caso contrario, **false**.
+**true** se gli oggetti non sono uguali. in caso contrario, **false**.
 
 ## <a name="requirements"></a>Requisiti
 

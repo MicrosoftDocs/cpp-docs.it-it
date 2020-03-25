@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - CVT1105
 ms.assetid: 6fb98e2b-836e-4e1e-9bd8-4e1465ad4e85
-ms.openlocfilehash: f31a6fcee80ea667ddb530a00efc792a184111dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43f806157aad3fcdc303a8e3615d21d24e6c6924
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406223"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196474"
 ---
 # <a name="cvtres-fatal-error-cvt1105"></a>Errore irreversibile CVT1105 di CVTRES
 
-Impossibile spostarsi nel file
+Impossibile eseguire la ricerca nel file
 
-CVTRES non è stato possibile passare a una posizione nel file.
+CVTRES non è stato in grado di passare a un percorso nel file.
 
-Questo errore può essere causato dal danneggiamento dei file.
+Questo errore può essere causato da un danneggiamento del file.

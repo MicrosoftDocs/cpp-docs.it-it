@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2017
 ms.assetid: f7c21733-b0fb-4888-a295-9b453ba6ee77
-ms.openlocfilehash: ce5332c2812740ef0b8c7d8e9c64a095d20a4e2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02e80de5c34809a331003f3b0fb28d32e138a531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299055"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194733"
 ---
 # <a name="linker-tools-error-lnk2017"></a>Errore degli strumenti del linker LNK2017
 
-rilocazione di 'symbol' in 'segment' non valida senza /LARGEADDRESSAWARE: No
+la rilocazione ' symbol ' in ' segment ' non è valida senza/LARGEADDRESSAWARE: NO
 
-Si sta provando a creare un'immagine a 64 bit con gli indirizzi a 32 bit. A tale scopo, è necessario:
+Si sta provando a compilare un'immagine a 64 bit con indirizzi a 32 bit. A tale scopo, è necessario:
 
-- Usare un indirizzo di caricamento predefinito.
+- Usare un indirizzo di carico fisso.
 
 - Limitare l'immagine a 3 GB.
 

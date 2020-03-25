@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 7848a8f071f50f8d809a999a96a9c0f8193c480e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5416a29477651c496d83e6ee215a2cb88ba26e3b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166854"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169058"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>Scrittura di funzioni con assembly inline
 
@@ -42,7 +42,7 @@ _TEXT   ENDS
         END
 ```
 
-Poiché è scritta per un assembler separato, la funzione richiede un file di origine separato e passaggi di collegamento e di assembly. Gli argomenti della funzione C e C++ vengono in genere passati nello stack, pertanto l'accesso di questa versione della funzione `power2` ai relativi argomenti avviene mediante le relative posizioni nello stack. (Si noti che il **modello** direttiva, disponibile in MASM e in altri assembler, consente inoltre di accedere a argomenti dello stack e le variabili dello stack locali in base al nome.)
+Poiché è scritta per un assembler separato, la funzione richiede un file di origine separato e passaggi di collegamento e di assembly. Gli argomenti della funzione C e C++ vengono in genere passati nello stack, pertanto l'accesso di questa versione della funzione `power2` ai relativi argomenti avviene mediante le relative posizioni nello stack. Si noti che la direttiva **Model** , disponibile in MASM e in altri assembler, consente anche di accedere agli argomenti dello stack e alle variabili dello stack locale in base al nome.
 
 ## <a name="example"></a>Esempio
 
@@ -76,7 +76,7 @@ int power2( int num, int power )
 
 La versione inline della funzione `power2` fa riferimento ai relativi argomenti in base al nome e viene visualizzata nello stesso file di origine del resto del programma. Inoltre, in questa versione sono richieste meno istruzioni di assembly.
 
-Poiché la versione inline di `power2` non esegue un'istruzione `return` del linguaggio C, genera un avviso informativo se si compila con avviso di livello 2 o successivo. La funzione non restituisce un valore, ma il compilatore non è in grado di segnalare tale situazione in assenza di un'istruzione `return`. È possibile usare [#pragma avviso](../../preprocessor/warning.md) per disabilitare la generazione dell'avviso.
+Poiché la versione inline di `power2` non esegue un'istruzione `return` del linguaggio C, genera un avviso informativo se si compila con avviso di livello 2 o successivo. La funzione non restituisce un valore, ma il compilatore non è in grado di segnalare tale situazione in assenza di un'istruzione `return`. È possibile utilizzare [#pragma avviso](../../preprocessor/warning.md) per disabilitare la generazione di questo avviso.
 
 **Fine sezione specifica Microsoft**
 

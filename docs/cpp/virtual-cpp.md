@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: f68bd2e500ebe16c43ef6c3d7a5aede26421b27d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8948594bade940834e041adc73d56cc7847acc0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393909"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187505"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
-Il **virtuale** parola chiave dichiara una funzione virtuale o una classe base virtuale.
+La parola chiave **Virtual** dichiara una funzione virtuale o una classe base virtuale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,23 +30,23 @@ virtual [access-specifier] base-class-name
 
 #### <a name="parameters"></a>Parametri
 
-*type-specifiers*<br/>
+*Type-Specifiers*<br/>
 Specifica il tipo restituito della funzione interna virtuale.
 
-*member-function-declarator*<br/>
+*member-function-dichiaratore*<br/>
 Dichiara una nuova funzione interna.
 
-*access-specifier*<br/>
-Definisce il livello di accesso per la classe di base **pubbliche**, **protetti** oppure **private**. Può apparire prima o dopo il **virtuale** (parola chiave).
+*identificatore di accesso*<br/>
+Definisce il livello di accesso alla classe di base, **public**, **protected** o **private**. Può apparire prima o dopo la parola chiave **Virtual** .
 
-*base-class-name*<br/>
+*Nome-classe-base*<br/>
 Identifica un tipo della classe dichiarato precedentemente.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Visualizzare [funzioni virtuali](../cpp/virtual-functions.md) per altre informazioni.
+Per ulteriori informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md) .
 
-Vedere anche le parole chiave seguenti: [classe](../cpp/class-cpp.md), [privato](../cpp/private-cpp.md), [pubblica](../cpp/public-cpp.md), e [protetto](../cpp/protected-cpp.md).
+Vedere anche le parole chiave seguenti: [classe](../cpp/class-cpp.md), [privato](../cpp/private-cpp.md), [pubblico](../cpp/public-cpp.md)e [protetto](../cpp/protected-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

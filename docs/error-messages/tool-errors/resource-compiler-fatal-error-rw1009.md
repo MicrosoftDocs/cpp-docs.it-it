@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1009
 ms.assetid: c11aceaf-3527-4509-867d-e7b22254e276
-ms.openlocfilehash: 77fe8e69d5357e61ab6863e4557ed9a0ed714080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e54037144763c6c1a0d8563fac3714d68887403e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172791"
 ---
 # <a name="resource-compiler-fatal-error-rw1009"></a>Errore irreversibile del compilatore di risorse RW1009
 
-Errore durante la creazione di risorse-name
+errore durante la creazione della risorsa: nome
 
-Impossibile creare il file con estensione res specificato. Assicurarsi che non sia stata creata in un'unità di sola lettura. Usare /V per scoprire se il file viene creato.
+Non è stato possibile creare il file. res specificato. Assicurarsi che non venga creato in un'unità di sola lettura. Usare/V per verificare se il file è in fase di creazione.

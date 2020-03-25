@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912834"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172139"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI e C++/CX)
 
@@ -21,23 +21,23 @@ Una variabile (membro dati) contrassegnata come **literal** in una compilazione 
 
 ## <a name="all-platforms"></a>Tutte le piattaforme
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.
 
-### <a name="requirements"></a>Requisiti di
+### <a name="requirements"></a>Requisiti
 
 Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un membro dati contrassegnato come **literal** deve essere inizializzato quando dichiarato e il valore deve essere un tipo integrale, enumerazione o stringa. Per la conversione dal tipo dell'espressione di inizializzazione al tipo del membro dati const statico non deve essere richiesta una conversione definita dall'utente.
 
@@ -121,7 +121,7 @@ class B {
 }
 ```
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 Opzione del compilatore: `/clr`
 

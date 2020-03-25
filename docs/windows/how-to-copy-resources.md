@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421198"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215215"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedura: gestire le risorse (C++)
 
@@ -46,7 +46,7 @@ ms.locfileid: "79421198"
 È possibile copiare facilmente le risorse da un file eseguibile o da una risorsa esistente nel file di risorse corrente. Per copiare le risorse, si aprono contemporaneamente entrambi i file contenenti risorse e si trascinano gli elementi da un file a un altro oppure si copiano e si incollano tra i due file. Questo metodo funziona per i file di script di risorse (con estensione RC) e i file di modello di risorse (con estensione RCT) e come file eseguibili (exe).
 
 > [!NOTE]
-> Visual C++ include i file di risorse di esempio che è possibile usare nella propria applicazione. Per altre informazioni, vedere [ClipArt: risorse comuni](https://github.com/Microsoft/VCSamples).
+> Visual C++ include i file di risorse di esempio che è possibile usare nella propria applicazione. Per altre informazioni, vedere [ClipArt: risorse comuni](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general).
 
 Non è possibile trascinare, copiare, tagliare o incollare tra i file di risorse nel progetto (**visualizzazione risorse**) e i file RC autonomi aperti nelle finestre dei documenti. Questa operazione può essere eseguita nelle versioni precedenti del prodotto. Usare solo il metodo di trascinamento della selezione tra i file RC aperti all'esterno del progetto.
 
@@ -130,4 +130,4 @@ Win32
 
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
 [Procedura: creare risorse](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Procedura: Includere risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Procedura: Includere risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)

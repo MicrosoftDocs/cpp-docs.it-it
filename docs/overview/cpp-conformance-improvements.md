@@ -3,12 +3,12 @@ title: Miglioramenti della conformità di C++
 ms.date: 03/16/2020
 description: Microsoft C++ in Visual Studio si avvicina alla conformità completa con lo standard di linguaggio C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: d76a6dc4c5ad9cbf83befccfdd470ce755d0603c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 716b3d6bfd75444d1c701b7301b31f8b56eab3ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077433"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167758"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Miglioramenti della conformità di C++ in Visual Studio 2017
 
@@ -164,7 +164,7 @@ Il documento [C++20 P1008R1 - Come vietare gli aggregati con i costruttori dichi
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](https://wg21.link/p0482r6). C++20 aggiunge un nuovo tipo di carattere usato per rappresentare unità di codice UTF-8. I valori letterali stringa `u8` in C++20 hanno il tipo `const char8_t[N]` invece di `const char[N]` come in precedenza. Sono state proposte modifiche simili per lo standard C in [N2231](https://wg14.link/n2231). I suggerimenti per la correzione di compatibilità con le versioni precedenti di `char8_t` sono specificati in [P1423r0](https://wg21.link/p1423r0). Il compilatore Microsoft C++ include ora il supporto per `char8_t` in Visual Studio 2019 versione 16.1 quando si specifica l'opzione del compilatore **/Zc:char8_t**. In futuro il supporto avverrà tramite [/std:c++latest](../build/reference/std-specify-language-standard-version.md), in cui è possibile ripristinare il comportamento di C++17 tramite **/Zc:char8_t-** . Il compilatore EDG che alimenta IntelliSense non supporta ancora questa opzione, pertanto si noteranno errori spuri, limitati a IntelliSense, che non influiscono sulla compilazione vera e propria.
+[P0482r6](https://wg21.link/p0482r6). C++20 aggiunge un nuovo tipo di carattere usato per rappresentare unità di codice UTF-8. I valori letterali stringa `u8` in C++20 hanno il tipo `const char8_t[N]` invece di `const char[N]` come in precedenza. Sono state proposte modifiche simili per lo standard C in [N2231](https://wg14.link/n2231). In [P1423r3](https://wg21.link/p1423r3)vengono forniti suggerimenti per `char8_t` la correzione della compatibilità con le versioni precedenti. Il compilatore Microsoft C++ include ora il supporto per `char8_t` in Visual Studio 2019 versione 16.1 quando si specifica l'opzione del compilatore **/Zc:char8_t**. In futuro il supporto avverrà tramite [/std:c++latest](../build/reference/std-specify-language-standard-version.md), in cui è possibile ripristinare il comportamento di C++17 tramite **/Zc:char8_t-** . Il compilatore EDG che alimenta IntelliSense non supporta ancora questa opzione, pertanto si noteranno errori spuri, limitati a IntelliSense, che non influiscono sulla compilazione vera e propria.
 
 #### <a name="example"></a>Esempio
 

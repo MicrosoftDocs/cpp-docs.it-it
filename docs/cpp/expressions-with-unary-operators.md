@@ -6,12 +6,12 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26aad64e5b9c7a496c2e6bb131b82740c06abe07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183871"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188974"
 ---
 # <a name="expressions-with-unary-operators"></a>Espressioni con operatori unari
 
@@ -21,29 +21,29 @@ Gli operatori unari agiscono solo su un operando in un'espressione. Gli operator
 
 - [Operatore address-of (&)](../cpp/address-of-operator-amp.md)
 
-- [Operatore (+) unario](../cpp/unary-plus-and-negation-operators-plus-and.md)
+- [Operatore più unario (+)](../cpp/unary-plus-and-negation-operators-plus-and.md)
 
 - [Operatore di negazione unario (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)
 
 - [Operatore di negazione logica (!)](../cpp/logical-negation-operator-exclpt.md)
 
-- [Operatore complemento a uno (~)](../cpp/one-s-complement-operator-tilde.md)
+- [Operatore di complemento a uno (~)](../cpp/one-s-complement-operator-tilde.md)
 
 - [Operatore di incremento prefisso (+ +)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
-- [Operatore di decremento prefisso (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
+- [Operatore di decremento prefisso (--)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
-- [Eseguire il cast (operatore)](../cpp/cast-operator-parens.md)
+- [Operatore cast ()](../cpp/cast-operator-parens.md)
 
-- [sizeof operator](../cpp/sizeof-operator.md)
+- [Operatore sizeof](../cpp/sizeof-operator.md)
 
-- [operatore uuidof](../cpp/uuidof-operator.md)
+- [operatore __uuidof](../cpp/uuidof-operator.md)
 
-- [__alignof operator](../cpp/alignof-operator.md)
+- [operatore __alignof](../cpp/alignof-operator.md)
 
-- [operatore new](../cpp/new-operator-cpp.md)
+- [operatore New](../cpp/new-operator-cpp.md)
 
-- [operatore delete](../cpp/delete-operator-cpp.md)
+- [delete-operatore](../cpp/delete-operator-cpp.md)
 
 Questi operatori hanno un'associatività da destra a sinistra. Le espressioni unarie sono caratterizzate in genere da una sintassi che precede un'espressione primaria o in forma suffissa.
 
@@ -51,31 +51,31 @@ Di seguito vengono indicati i formati possibili delle espressioni unarie.
 
 - *postfix-expression*
 
-- `++` *unary-expression*
+- *espressione unaria* `++`
 
-- `--` *unary-expression*
+- *espressione unaria* `--`
 
-- *unary-operator* *cast-expression*
+- *espressione cast-* *operatore unario*
 
-- **sizeof** *unary-expression*
+- **sizeof** *espressione unaria* sizeof
 
-- `sizeof(` *type-name* `)`
+- `sizeof(` *nome-tipo* `)`
 
-- `decltype(` *expression* `)`
+- *espressione* `decltype(` `)`
 
-- *allocation-expression*
+- *Allocation-espressione*
 
-- *deallocation-expression*
+- *deallocazione-espressione*
 
-Eventuali *postfix-expression* viene considerato un *unary-expression*, e poiché qualsiasi espressione primaria viene considerata una *postfix-expression*, tutte le espressioni primarie è considerata una *unary-expression* anche. Per altre informazioni, vedere [espressioni in forma suffissa](../cpp/postfix-expressions.md) e [espressioni primarie](../cpp/primary-expressions.md).
+Qualsiasi espressione *suffissa* è considerata un' *espressione unaria*e, poiché qualsiasi espressione primaria è considerata un'espressione *suffissa*, tutte le espressioni primarie sono considerate anche un' *espressione unaria* . Per altre informazioni, vedere [espressioni di suffisso](../cpp/postfix-expressions.md) ed [espressioni primarie](../cpp/primary-expressions.md).
 
-Oggetto *unary-operator* è costituito da uno o più simboli seguenti: `* & + - ! ~`
+Un *operatore unario* è costituito da uno o più dei simboli seguenti: `* & + - ! ~`
 
-Il *cast-expression* è un'espressione unaria con un operatore cast facoltativo per modificare il tipo. Per altre informazioni, vedere [operatore Cast: ()](../cpp/cast-operator-parens.md).
+*Cast-expression* è un'espressione unaria con un cast facoltativo per modificare il tipo. Per ulteriori informazioni, vedere [operatore cast: ()](../cpp/cast-operator-parens.md).
 
-Un' *espressione* può essere qualsiasi espressione. Per altre informazioni, vedere [espressioni](../cpp/expressions-cpp.md).
+Un' *espressione* può essere qualsiasi espressione. Per ulteriori informazioni, vedere [espressioni](../cpp/expressions-cpp.md).
 
-Il *allocazione-expression* si intende il **nuove** operatore. Il *deallocazione-expression* si intende il **eliminare** operatore. Per ulteriori informazioni, vedere i collegamenti indicati in precedenza in questo argomento.
+L' *espressione di allocazione* fa riferimento all'operatore **New** . La *deallocazione-espressione* fa riferimento all'operatore **Delete** . Per ulteriori informazioni, vedere i collegamenti indicati in precedenza in questo argomento.
 
 ## <a name="see-also"></a>Vedere anche
 

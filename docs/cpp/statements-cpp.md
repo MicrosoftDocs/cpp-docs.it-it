@@ -5,24 +5,24 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
-ms.openlocfilehash: 4cb4dc9b718e0e6b183df62ddd056da1e0ed398f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59eb1ef2cbb9046a8ed9ea134a0c37aba6c37ba3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267193"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178613"
 ---
 # <a name="statements-c"></a>Istruzioni (C++)
 
 Le istruzioni di C++ sono gli elementi di un programma che controllano l'ordine e il modo in cui gli oggetti vengono modificati. Contenuto della sezione
 
-- [Panoramica](../cpp/overview-of-cpp-statements.md)
+- [Overview](../cpp/overview-of-cpp-statements.md)
 
 - [Istruzioni con etichetta](../cpp/labeled-statements.md)
 
 - Categorie di istruzioni
 
-   - [Le istruzioni di espressione](../cpp/expression-statement.md). Queste istruzioni valutano un'espressione per i relativi effetti collaterali o per il valore restituito.
+   - [Istruzioni di espressione](../cpp/expression-statement.md). Queste istruzioni valutano un'espressione per i relativi effetti collaterali o per il valore restituito.
 
    - [Istruzioni null](../cpp/null-statement.md). Queste istruzioni possono essere fornite dove un'istruzione è richiesta dalla sintassi di C++ e dove non esiste alcuna azione da intraprendere.
 
@@ -34,7 +34,7 @@ Le istruzioni di C++ sono gli elementi di un programma che controllano l'ordine 
 
    - [Istruzioni di salto](../cpp/jump-statements-cpp.md). Queste istruzioni trasferiscono immediatamente il controllo a un'altra posizione nella funzione o restituiscono il controllo dalla funzione.
 
-   - [Le istruzioni di dichiarazione](declarations-and-definitions-cpp.md). Le dichiarazioni introducono un nome in un programma.
+   - [Istruzioni di dichiarazione](declarations-and-definitions-cpp.md). Le dichiarazioni introducono un nome in un programma.
 
 Per informazioni sulle istruzioni di gestione delle eccezioni, vedere [gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md).
 

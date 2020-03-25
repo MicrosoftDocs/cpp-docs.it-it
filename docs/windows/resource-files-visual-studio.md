@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513654"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167875"
 ---
 # <a name="resource-files-c"></a>File di risorse (C++)
 
@@ -50,7 +50,7 @@ Il termine *file di risorse* può fare riferimento a un numero di tipi di file, 
 
 Le risorse disponibili in altri tipi di file, ad esempio i file con estensione exe, dll e res, sono definite *risorse*.
 
-È possibile usare *i file di risorse* e *le risorse* all'interno del progetto. È anche possibile usare quelli che non fanno parte del progetto corrente o che sono stati creati all'esterno dell'ambiente di sviluppo di Visual Studio. Ad esempio, è possibile eseguire queste operazioni:
+È possibile usare *i file di risorse* e *le risorse* all'interno del progetto. È anche possibile usare quelli che non fanno parte del progetto corrente o che sono stati creati all'esterno dell'ambiente di sviluppo di Visual Studio. Ad esempio, è possibile:
 
 - Usare file di risorse annidati e inclusi in modo condizionale.
 
@@ -70,12 +70,12 @@ Per ulteriori informazioni sulle risorse, vedere come [creare risorse](../window
 
 Per modificare le risorse contenute, è possibile aprire i seguenti tipi di file:
 
-| Nome file | DESCRIZIONE |
+| Nome file | Descrizione |
 |---|---|
-| RC | File script di risorsa |
-| RCT | File modello di risorsa |
+| .rc | File script di risorsa |
+| .rct | File modello di risorsa |
 | RES | File di risorse |
-| .resx | File di risorse gestite |
+| resx | File di risorse gestite |
 | EXE | File eseguibili |
 | DLL | File di libreria a collegamento dinamico |
 | .bmp, .ico, .dib, .cur | Bitmap, icona, barra degli strumenti e file di cursore |
@@ -86,7 +86,7 @@ Quando si modificano le risorse, l'ambiente di Visual Studio funziona con e infl
 |---|---|
 | Resource.h | File di intestazione generato dall'ambiente di sviluppo che contiene le definizioni dei simboli.<br/><br/>Includere il file nel controllo del codice sorgente. |
 | Nomefile.aps | Versione binaria del file di script di risorsa corrente usato per il caricamento rapido.<br /><br /> Gli editor di risorse non leggono direttamente i file RC o Resource. h. Il compilatore di risorse li compila in file con estensione APS utilizzati dagli editor di risorse. Questo file è presente in una fase di compilazione e archivia solo dati simbolici.<br/><br/>Come nel caso di un normale processo di compilazione, le informazioni che non sono simbolici, ad esempio i commenti, vengono ignorate durante il processo di compilazione.<br/><br/>Ogni volta che il file. APS non è sincronizzato con il file RC, il file RC viene rigenerato. Ad esempio, quando si **Salva**, l'editor risorse sovrascrive il file RC e il file Resource. h. Tutte le modifiche apportate alle risorse rimangono incorporate nel file RC, ma i commenti andranno sempre perduti dopo la sovrascrittura del file RC. Per informazioni su come mantenere i commenti, vedere [includere le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>In genere, non è necessario includere il file con estensione APS nel controllo del codice sorgente. |
-| RC | File di script di risorsa che contiene lo script per le risorse nel progetto corrente. Questo file viene sovrascritto dal file APS ogni volta che si salva.<br/><br/>Includere il file nel controllo del codice sorgente. |
+| .rc | File di script di risorsa che contiene lo script per le risorse nel progetto corrente. Questo file viene sovrascritto dal file APS ogni volta che si salva.<br/><br/>Includere il file nel controllo del codice sorgente. |
 
 ## <a name="manifest-resources"></a>Risorse di manifesto
 
@@ -108,7 +108,7 @@ Nei C++ progetti desktop, le risorse di manifesto sono file XML che descrivono l
 </dependency>
 ```
 
-Per un'applicazione Windows XP o Windows Vista, la risorsa del manifesto deve specificare la versione più recente dei controlli comuni di Windows per l'applicazione da utilizzare. Nell'esempio precedente viene usata `6.0.0.0`la versione, che supporta il [controllo Syslink](/windows/win32/Controls/syslink-overview).
+Per un'applicazione Windows XP o Windows Vista, la risorsa del manifesto deve specificare la versione più recente dei controlli comuni di Windows per l'applicazione da utilizzare. Nell'esempio precedente viene usata la versione `6.0.0.0`, che supporta il [controllo Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
 > È possibile avere solo una risorsa di manifesto per modulo.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514423"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166757"
 ---
 # <a name="max_is"></a>max_is
 
@@ -28,9 +28,9 @@ Definisce il valore massimo per un indice di matrice valido.
 *expression*<br/>
 Una o più espressioni del linguaggio C. Sono consentiti slot di argomento vuoti.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'attributo **max_is** C++ ha la stessa funzionalità dell'attributo MIDL di [max_is](/windows/win32/Midl/max-is) .
+L'attributo **max_is** C++ ha la stessa funzionalità dell'attributo [max_is](/windows/win32/Midl/max-is) MIDL.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -40,7 +40,7 @@ L'attributo **max_is** C++ ha la stessa funzionalità dell'attributo MIDL di [ma
 |-|-|
 |**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|**size_is**|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

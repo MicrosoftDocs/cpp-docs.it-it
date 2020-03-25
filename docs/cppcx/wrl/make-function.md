@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398192"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213811"
 ---
 # <a name="make-function"></a>Funzione Make
 
-Inizializza la classe di Runtime di Windows specificata. Utilizzare questa funzione per creare un'istanza di un componente definito nello stesso modulo.
+Inizializza la classe Windows Runtime specificata. Utilizzare questa funzione per creare un'istanza di un componente definito nello stesso modulo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -168,66 +168,66 @@ ComPtr<T> Make();
 Classe definita dall'utente che eredita da `WRL::RuntimeClass`.
 
 *TArg1*<br/>
-Tipo di argomento 1 che viene passato alla classe di runtime specificato.
+Tipo di argomento 1 passato alla classe di runtime specificata.
 
 *TArg2*<br/>
-Tipo di argomento 2 che viene passato alla classe di runtime specificato.
+Tipo di argomento 2 passato alla classe di runtime specificata.
 
 *TArg3*<br/>
-Tipo di argomento 3 che viene passato alla classe di runtime specificato.
+Tipo di argomento 3 passato alla classe di runtime specificata.
 
 *TArg4*<br/>
-Tipo di argomento 4 che viene passato alla classe di runtime specificato.
+Tipo di argomento 4 passato alla classe di runtime specificata.
 
 *TArg5*<br/>
-Tipo di argomento 5 che viene passato alla classe di runtime specificato.
+Tipo di argomento 5 passato alla classe di runtime specificata.
 
 *TArg6*<br/>
-Tipo di argomento 6 che viene passato alla classe di runtime specificato.
+Tipo di argomento 6 passato alla classe di runtime specificata.
 
 *TArg7*<br/>
-Tipo di argomento 7 che viene passato alla classe di runtime specificato.
+Tipo di argomento 7 passato alla classe di runtime specificata.
 
 *TArg8*<br/>
-Tipo di argomento 8 che viene passato alla classe di runtime specificato.
+Tipo di argomento 8 che viene passato alla classe di runtime specificata.
 
 *TArg9*<br/>
-Tipo di argomento 9 che viene passato alla classe di runtime specificato.
+Tipo di argomento 9 passato alla classe di runtime specificata.
 
 *arg1*<br/>
-Argomento 1 che viene passato alla classe di runtime specificato.
+Argomento 1 passato alla classe di runtime specificata.
 
 *arg2*<br/>
-Argomento 2 che viene passato alla classe di runtime specificato.
+Argomento 2 passato alla classe di runtime specificata.
 
-*arg3*<br/>
-Argomento 3 che viene passato alla classe di runtime specificato.
+*Arg3*<br/>
+Argomento 3 passato alla classe di runtime specificata.
 
-*arg4*<br/>
-Argomento 4 che viene passato alla classe di runtime specificato.
+*Arg4*<br/>
+Argomento 4 passato alla classe di runtime specificata.
 
 *arg5*<br/>
-Argomento 5 che viene passato alla classe di runtime specificato.
+Argomento 5 passato alla classe di runtime specificata.
 
 *arg6*<br/>
-Argomento 6 che viene passato alla classe di runtime specificato.
+Argomento 6 passato alla classe di runtime specificata.
 
 *arg7*<br/>
-Argomento 7 che viene passato alla classe di runtime specificato.
+Argomento 7 passato alla classe di runtime specificata.
 
 *arg8*<br/>
-Argomento 8 che viene passato alla classe di runtime specificato.
+Argomento 8 passato alla classe di runtime specificata.
 
 *arg9*<br/>
-Argomento 9 che viene passato alla classe di runtime specificato.
+Argomento 9 passato alla classe di runtime specificata.
 
 ## <a name="return-value"></a>Valore restituito
 
 Un oggetto `ComPtr<T>` in caso di esito positivo; in caso contrario, `nullptr`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Vedere [How to: Creare un'istanza direttamente componenti WRL](how-to-instantiate-wrl-components-directly.md) per informazioni sulle differenze tra questa funzione e [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)e per un esempio.
+Vedere [procedura: creare un'istanza dei componenti WRL direttamente](how-to-instantiate-wrl-components-directly.md) per informazioni sulle differenze tra questa funzione e [Microsoft:: WRL::D etails:: MakeAndInitialize](makeandinitialize-function.md)e per un esempio.
 
 ## <a name="requirements"></a>Requisiti
 

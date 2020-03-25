@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Esecuzione di un Join (ODBC)'
+title: 'Recordset: esecuzione di un join (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - joins [C++], in recordsets
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - ODBC recordsets [C++], joins
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-ms.openlocfilehash: 9e589f00ec0512794d14accc6bb33c0e7adbd378
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e8d42f2b96911cd57aca7c132b53ed7c10162be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397731"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212797"
 ---
-# <a name="recordset-performing-a-join-odbc"></a>Recordset: Esecuzione di un Join (ODBC)
+# <a name="recordset-performing-a-join-odbc"></a>Recordset: esecuzione di un join (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-## <a name="what-a-join-is"></a>Che cos'è un Join
+## <a name="what-a-join-is"></a>Cosa è un join
 
-L'operazione di join, un'attività di accesso ai dati comuni, consente di lavorare con dati provenienti da più di una tabella usando un unico oggetto recordset. Unione di due o più tabelle restituisce un recordset che può contenere colonne di ogni tabella, ma viene visualizzato come una singola tabella per l'applicazione. In alcuni casi il join utilizza tutte le colonne di tutte le tabelle, ma in alcuni casi il codice SQL **seleziona** clausola in un join utilizza solo alcune colonne di ogni tabella. Le classi di database supportano i join di sola lettura, ma non aggiornabili.
+L'operazione di join, un'attività comune di accesso ai dati, consente di utilizzare i dati di più di una tabella utilizzando un singolo oggetto recordset. L'Unione di due o più tabelle produce un recordset che può contenere colonne di ogni tabella, ma viene visualizzato come una singola tabella per l'applicazione. In alcuni casi il join utilizza tutte le colonne di tutte le tabelle, ma a volte la clausola SQL **Select** in un join utilizza solo alcune colonne di ogni tabella. Le classi di database supportano join di sola lettura ma non join aggiornabili.
 
-Per selezionare record contenenti le colonne da tabelle unite in join, sono necessari gli elementi seguenti:
+Per selezionare record contenenti colonne da tabelle unite in join, sono necessari gli elementi seguenti:
 
-- Un elenco di tabelle contenenti i nomi di tutte le tabelle da unire in join.
+- Elenco di tabelle contenente i nomi di tutte le tabelle da unire in join.
 
-- Un elenco di colonne contenente i nomi di tutte le colonne coinvolte. Le colonne con lo stesso nome ma di tabelle diverse sono qualificate dal nome della tabella.
+- Elenco di colonne contenente i nomi di tutte le colonne partecipanti. Le colonne con lo stesso nome ma da tabelle diverse sono qualificate dal nome della tabella.
 
-- Un filtro (SQL **in cui** clausola) che specifica le colonne in cui vengono unite le tabelle. Questo filtro assume la forma "Tabella1. ColChiave = Tabella2. ColChiave" ed esegue il join.
+- Filtro (clausola SQL **where** ) che specifica le colonne in cui vengono unite le tabelle. Il formato di questo filtro è "Tabella1. KeyCol = Table2. KeyCol" ed esegue effettivamente il join.
 
-È possibile aggiungere più di due tabelle nello stesso modo facendo corrispondere più coppie di colonne, ogni unite mediante la parola chiave SQL **AND**.
+È possibile unire in join più di due tabelle in modo analogo, equivalenti a più coppie di colonne, ciascuna coppia unita dalla parola chiave SQL **e**.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: dichiarazione di una classe per una query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
 [Recordset: dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Recordset: ripetizione di una query su un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+[Recordset: ripetizione di una query in un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

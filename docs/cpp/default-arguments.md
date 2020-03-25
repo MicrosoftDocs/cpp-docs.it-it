@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154516"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189546"
 ---
 # <a name="default-arguments"></a>Argomenti predefiniti
 
-In molti casi, le funzioni presentano argomenti che vengono utilizzati talmente raramente che un valore predefinito basterebbe. Per risolvere questo problema, la funzionalità argomento predefinito consente di specificare solo quegli argomenti di una funzione che sono significativi in una chiamata specificata. Per illustrare questo concetto, si consideri l'esempio illustrato in [overload di funzioni](../cpp/function-overloading.md).
+In molti casi, le funzioni presentano argomenti che vengono utilizzati talmente raramente che un valore predefinito basterebbe. Per risolvere questo problema, la funzionalità argomento predefinito consente di specificare solo quegli argomenti di una funzione che sono significativi in una chiamata specificata. Per illustrare questo concetto, si consideri l'esempio presentato in [Overload di funzioni](../cpp/function-overloading.md).
 
 ```cpp
 // Prototype three print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-L'implementazione del `print` funzione viene modificata leggermente per riflettere il fatto che esista solo una di queste funzioni per il tipo **double**:
+L'implementazione della funzione `print` viene modificata leggermente per riflettere il fatto che esiste una sola funzione per il tipo **Double**:
 
 ```cpp
 // default_arguments.cpp

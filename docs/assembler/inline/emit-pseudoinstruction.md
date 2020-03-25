@@ -7,18 +7,18 @@ helpviewer_keywords:
 - byte defining (inline assembly)
 - _emit pseudoinstruction
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
-ms.openlocfilehash: f2a7c9c4dab97bc1aba3147b5d75f6abbdac951f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8be250aadf20dc4a7dee6a0b565ece21840339d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167166"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169474"
 ---
-# <a name="emit-pseudoinstruction"></a>Pseudo-istruzione _emit
+# <a name="_emit-pseudoinstruction"></a>Pseudo-istruzione _emit
 
 **Sezione specifica Microsoft**
 
-Il **pseudoistruzione** pseudoistruzione definisce un byte nella posizione corrente nel segmento di testo corrente. Il **pseudoistruzione** pseudoistruzione è simile al [DB](../../assembler/masm/db.md) direttive di MASM.
+Il **_emit** emit definisce un byte nella posizione corrente del segmento di testo corrente. Il **_emit** Emit è simile alla direttiva [DB](../../assembler/masm/db.md) di MASM.
 
 Nel frammento seguente i byte 0x4A, 0x43 e 0x4B vengono posizionati nel codice:
 
@@ -33,7 +33,7 @@ __asm {
 ```
 
 > [!CAUTION]
-> Se `_emit` genera istruzioni che modificano i registri e l'applicazione viene compilata con le ottimizzazioni, il compilatore non può determinare i registri interessati. Ad esempio, se `_emit` genera un'istruzione che modifica il **rax** register, il compilatore non sa che **rax** è stato modificato. Il compilatore può quindi basarsi su un presupposto non corretto in relazione al valore nel registro dopo l'esecuzione del codice assembler inline. Di conseguenza, l'applicazione potrebbe comportarsi in modo imprevedibile durante l'esecuzione.
+> Se `_emit` genera istruzioni che modificano i registri e l'applicazione viene compilata con le ottimizzazioni, il compilatore non può determinare i registri interessati. Se, ad esempio, `_emit` genera un'istruzione che modifica il registro **Rax** , il compilatore non sa che **Rax** è stato modificato. Il compilatore può quindi basarsi su un presupposto non corretto in relazione al valore nel registro dopo l'esecuzione del codice assembler inline. Di conseguenza, l'applicazione potrebbe comportarsi in modo imprevedibile durante l'esecuzione.
 
 **Fine sezione specifica Microsoft**
 

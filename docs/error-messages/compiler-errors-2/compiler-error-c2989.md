@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
-ms.openlocfilehash: e5f03d644ab6c25b7eb0da0dc1684c7de5c2e6a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 585823c2114befa3e6d432e3cf8100fa14ed1a7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366134"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176728"
 ---
 # <a name="compiler-error-c2989"></a>Errore del compilatore C2989
 
-'class': tipo di classe è già stato dichiarato come un tipo non classe
+' Class ': il tipo di classe è già stato dichiarato come tipo non di classe
 
-La classe generica o modello consente di ridefinire una classe non-template o non generico. Controllare i file di intestazione per i conflitti.
+La classe generica o modello ridefinisce una classe non modello o non generica. Verificare la presenza di conflitti nei file di intestazione.
 
-L'esempio seguente genera l'errore C2989:
+L'esempio seguente genera l'C2989:
 
 ```cpp
 // C2989.cpp

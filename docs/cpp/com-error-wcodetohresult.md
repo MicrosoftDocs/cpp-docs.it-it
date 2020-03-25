@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - WCodeToHRESULT method [C++]
 ms.assetid: 0ec43a4b-ca91-42d5-b270-3fde9c8412ea
-ms.openlocfilehash: f2fc84be53d95754d21c30eaea8dd981447453d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2194e0e54a93d3227b84d893f9d3f208d972d09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154929"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180511"
 ---
-# <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
+# <a name="_com_errorwcodetohresult"></a>_com_error::WCodeToHRESULT
 
 **Sezione specifica Microsoft**
 
-Esegue il mapping a 16 *wCode* a 32 bit HRESULT.
+Esegue il mapping di *wCode* a 16 bit a HRESULT a 32 bit.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,15 +30,15 @@ static HRESULT WCodeToHRESULT(
 #### <a name="parameters"></a>Parametri
 
 *wCode*<br/>
-Il 16-bit *wCode* devono essere mappati a 32 bit HRESULT.
+*WCode* a 16 bit di cui eseguire il mapping a HRESULT a 32 bit.
 
 ## <a name="return-value"></a>Valore restituito
 
-32 bit HRESULT mappato da 16 bit *wCode*.
+HRESULT a 32 bit mappato da *wCode*a 16 bit.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Vedere le [WCode](../cpp/com-error-wcode.md) funzione membro.
+Vedere la funzione membro [wCode](../cpp/com-error-wcode.md) .
 
 **Fine sezione specifica Microsoft**
 

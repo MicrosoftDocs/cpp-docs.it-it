@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
-ms.openlocfilehash: 39ca693aed3f08e7b2df3d687f94d93384393f23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc3c124f1a4daea0f2517a93c6b354b8233aa5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302397"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205985"
 ---
 # <a name="compiler-error-c2393"></a>Errore del compilatore C2393
 
-> «*simbolo*': Impossibile allocare il simbolo per dominio di applicazione nel segmento '*segmento*»
+> '*Symbol*': non è possibile allocare il simbolo per dominio di applicazione nel segmento '*Segment*'
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
+Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
-L'uso di [appdomain](../../cpp/appdomain.md) variabili implica che si esegue la compilazione con **/clr: pure** oppure **/CLR: safe**, e un'immagine safe o pura non può contenere segmenti di dati.
+L'uso di variabili [AppDomain](../../cpp/appdomain.md) implica la compilazione con **/CLR: pure** o **/CLR: safe**e un'immagine sicura o pura non può contenere segmenti di dati.
 
-Visualizzare [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) per altre informazioni.
+Per ulteriori informazioni, vedere [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2393. Per risolvere questo problema, non creare un segmento di dati.
+L'esempio seguente genera l'C2393. Per risolvere questo problema, non creare un segmento di dati.
 
 ```cpp
 // C2393.cpp

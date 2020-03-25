@@ -6,18 +6,18 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: 01beab80fb8574e0caa4ad3054d174c60106ce94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46531f2d4075df98081886dfdfd1f2cf65d9948
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282936"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209846"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Override di una funzione di accesso dinamica
 
-Quando si usa una funzione di accesso dinamico, ad esempio `CDynamicAccessor`, il comando `Open` metodo crea una funzione di accesso per automaticamente, in base alle informazioni di colonna del set di righe aperto. È possibile sostituire la funzione di accesso dinamico per controllare esattamente come le colonne sono associate.
+Quando si usa una funzione di accesso dinamica, ad esempio `CDynamicAccessor`, il metodo `Open` comando crea automaticamente una funzione di accesso, in base alle informazioni sulla colonna del set di righe aperto. È possibile eseguire l'override della funzione di accesso dinamica per controllare esattamente il modo in cui vengono associate le colonne.
 
-Per sostituire la funzione di accesso dinamico, passare **false** come ultimo parametro per il `CCommand::Open` (metodo). Ciò impedisce `Open` dalla creazione automatica di una funzione di accesso. È quindi possibile chiamare `GetColumnInfo` e chiamare `AddBindEntry` per ogni colonna che si desidera associare. Il codice seguente viene illustrato come eseguire questa operazione:
+Per eseguire l'override della funzione di accesso dinamica, passare **false** come ultimo parametro al metodo `CCommand::Open`. In questo modo si impedisce `Open` la creazione automatica di una funzione di accesso. È quindi possibile chiamare `GetColumnInfo` e chiamare `AddBindEntry` per ogni colonna che si desidera associare. Il codice seguente illustra come eseguire questa operazione:
 
 ```cpp
 USES_CONVERSION;

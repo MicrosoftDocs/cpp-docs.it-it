@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: 700d8fd784862c3e9f81fcde839063ff0a4696bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030ae71fec7a0d1572804f30d09f6f9b2749e436
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176655"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181304"
 ---
 # <a name="binary-operators"></a>Operatori binari
 
@@ -22,8 +22,8 @@ Nella tabella seguente viene mostrato un elenco di operatori che possono essere 
 |Operatore|Nome|
 |--------------|----------|
 |**,**|Virgola|
-|**\!=**|Disuguaglianza|
-|**%**|Modulo|
+|**!=**|Disuguaglianza|
+|**%**|Modulus|
 |**%=**|Modulo/assegnazione|
 |**&**|AND bit per bit|
 |**&&**|AND logico|
@@ -56,15 +56,15 @@ Nella tabella seguente viene mostrato un elenco di operatori che possono essere 
 
 Per dichiarare una funzione di un operatore binario come membro non statico, è necessario dichiararla nel seguente formato:
 
-> *ret-type* **operator** *op* **(** *arg* **)**
+> *operatore di tipo RET* **operator** *op* **(** *arg* **)**
 
-in cui *ret-type* è il tipo restituito *op* è uno degli operatori elencati nella tabella precedente, e *arg* è un argomento di qualsiasi tipo.
+dove *ret-Type* è il tipo restituito, *op* è uno degli operatori elencati nella tabella precedente e *arg* è un argomento di qualsiasi tipo.
 
 Per dichiarare una funzione di un operatore binario come funzione globale, è necessario dichiararla nel seguente formato:
 
-> *ret-type* **operator** *op* **(** _arg1_**,** _arg2_ **)**
+> **operatore** *op* *di tipo RET* **(** _arg1_ **,** _arg2_ **)**
 
-in cui *ret-type* e *op* vengono descritti per le funzioni dell'operatore membro e *arg1* e *arg2* sono indicati gli argomenti. Almeno uno degli argomenti deve essere di tipo di classe.
+dove *ret-Type* e *op* sono descritti per le funzioni dell'operatore membro e *arg1* e *arg2* sono argomenti. Almeno uno degli argomenti deve essere di tipo di classe.
 
 > [!NOTE]
 > Non c'è alcuna restrizione sui tipi restituiti degli operatori binari; tuttavia, la maggior parte degli operatori binari definiti dall'utente restituiscono un tipo di classe o un riferimento al tipo di classe.

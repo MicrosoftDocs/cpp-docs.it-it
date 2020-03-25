@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-ms.openlocfilehash: c577aceacef748045f867a6bc253a1dd6c84aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de051b9ca5c09af74b94be4b75616bce6fadf2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214155"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196760"
 ---
 # <a name="command-line-warning-d9024"></a>Avviso della riga di comando D9024
 
-origine non riconosciuto 'filename' tipo di file, utilizzato file oggetto
+tipo di file di origine non riconosciuto ' filename ', utilizzato file oggetto
 
-L'estensione del file specificato non è stato riconosciuto. Il file è stato si presuppone che sia un file oggetto e passato al linker.
+L'estensione del file specificato non è stata riconosciuta. Si presuppone che il file sia un file oggetto e che sia stato passato al linker.
 
-Le estensioni seguenti sono riconosciute:
+Sono state riconosciute le seguenti estensioni:
 
 - c (file di origine C)
 
-- . cxx (file di origine C++)
+- . cxx (C++ file di origine)
 
-- con estensione cpp (file di origine C++)
+- . cpp (C++ file di origine)
 
 - obj (file oggetto)
 
-- LIB (file di libreria)
+- . lib (file di libreria)
 
-- DEF (file di definizione moduli)
+- . def (file di definizione del modulo)
 
-- EXP (linker Esporta file, creato da /LIB collegamento)
+- . exp (file esportazioni del linker, creato da LINK/LIB)

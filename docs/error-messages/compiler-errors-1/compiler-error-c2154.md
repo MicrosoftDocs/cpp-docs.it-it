@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2154
 ms.assetid: 98d6b044-5a3a-43ad-95fa-9b916b22468a
-ms.openlocfilehash: 74335a35b23f0e5c4f1ee22f01e4f9887c4a3c85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1404f8f2e7f9ab00146b39adf1cd3d375fbde9b3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175543"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207181"
 ---
 # <a name="compiler-error-c2154"></a>Errore del compilatore C2154
 
@@ -19,4 +19,4 @@ ms.locfileid: "62175543"
 
 È possibile ottenere solo il tipo sottostante di un tipo di enumerazione.
 
-Per altre informazioni, vedere [supporto del compilatore per tratti di tipo](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
+Per altre informazioni, vedere [Supporto del compilatore per caratteristiche di tipo](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).

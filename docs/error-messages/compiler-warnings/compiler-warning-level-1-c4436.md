@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 762a458072a0a1104cd1af55ef1f61772485b6c9
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 7772d835e398ade24b452f2b816afeae09659bf7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810619"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162387"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Avviso del compilatore (livello 1) C4436
 

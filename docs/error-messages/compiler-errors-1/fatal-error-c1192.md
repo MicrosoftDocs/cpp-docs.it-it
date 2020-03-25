@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1192
 ms.assetid: 54cff717-a3eb-471d-9bd4-1c2e673dbbef
-ms.openlocfilehash: 5fc5e0a17fb3fedca5719065ae426ac8c05db61f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a15a808c1aff46ba6e63b3e86c0745c8ed7711a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228956"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203669"
 ---
 # <a name="fatal-error-c1192"></a>Errore irreversibile C1192
 
-\#using non riuscito in 'file'
+\#utilizzo di failed in ' file '
 
-Solo un file in formato Microsoft Intermediate Language (MSIL) può essere passato a un [#using](../../preprocessor/hash-using-directive-cpp.md) direttiva. Il [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opzione del compilatore consente di creare un file di output MSIL. File MSIL vengono generati anche altri linguaggi di Visual Studio.
+Solo un file nel formato MSIL (Microsoft Intermediate Language) può essere passato a una direttiva [#using](../../preprocessor/hash-using-directive-cpp.md) . L'opzione [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) del compilatore consente di creare un file di output MSIL. Anche altri linguaggi di Visual Studio producono file MSIL.

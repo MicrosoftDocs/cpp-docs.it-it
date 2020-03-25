@@ -1,5 +1,5 @@
 ---
-title: CreateClassFactory (funzione)
+title: Funzione CreateClassFactory
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0467a9a1341e29a61a3b32d999769b01385f641f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398654"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214058"
 ---
-# <a name="createclassfactory-function"></a>CreateClassFactory (funzione)
+# <a name="createclassfactory-function"></a>Funzione CreateClassFactory
 
 Crea una factory che produce istanze della classe specificata.
 
@@ -33,28 +33,28 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ### <a name="parameters"></a>Parametri
 
 *flags*<br/>
-Una combinazione di uno o più [RuntimeClassType](runtimeclasstype-enumeration.md) valori di enumerazione.
+Combinazione di uno o più valori di enumerazione [RuntimeClassType](runtimeclasstype-enumeration.md) .
 
 *entry*<br/>
-Puntatore a un [CreatorMap](creatormap-structure.md) che contiene informazioni di inizializzazione e la registrazione sul parametro *riid*.
+Puntatore a un [CreatorMap](creatormap-structure.md) che contiene le informazioni di inizializzazione e registrazione sul parametro *riid*.
 
 *riid*<br/>
-Riferimento all'ID di interfaccia.
+Riferimento a un ID di interfaccia.
 
 *ppFactory*<br/>
-Se questa operazione viene completata correttamente, un puntatore a una class factory.
+Se questa operazione viene completata correttamente, un puntatore a un class factory.
 
 ## <a name="return-value"></a>Valore restituito
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Viene generato un errore di asserzione se il parametro di modello *Factory* non deriva dall'interfaccia `IClassFactory`.
+Viene generato un errore di asserzione se la *Factory* del parametro di modello non deriva dall'interfaccia `IClassFactory`.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** module.h
+**Intestazione:** Module. h
 
 **Spazio dei nomi:** Microsoft::WRL
 

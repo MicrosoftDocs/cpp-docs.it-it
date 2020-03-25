@@ -9,14 +9,14 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445896"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169631"
 ---
-# <a name="asm"></a>__asm
+# <a name="__asm"></a>__asm
 
 **Sezione specifica Microsoft**
 
@@ -27,15 +27,15 @@ La parola chiave `__asm` consente di richiamare l'assembler inline e può essere
 
 ## <a name="grammar"></a>Grammatica
 
-*asm-block*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
+*blocco asm*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *assembly-istruzione* **;** <sub>consenso esplicito</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *Assembly-Instruction-List* **}** **;** <sub>consenso esplicito</sub>
 
-*assembly-instruction-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
+*Assembly-Instruction-List*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-istruzione* **;** <sub>consenso esplicito</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Assembly-Instruction* **;** *Assembly-Instruction-List* **;** <sub>consenso esplicito</sub>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Se utilizzata senza parentesi graffe, la parola chiave `__asm` indica che il resto della riga è un'istruzione del linguaggio assembly. Se utilizzata con le parentesi graffe, significa che ogni riga tra parentesi graffe è un'istruzione del linguaggio assembly. Per la compatibilità con le versioni precedenti, `_asm` è un sinonimo di `__asm`.
 
@@ -47,11 +47,11 @@ Prima di Visual Studio 2005, l'istruzione
 __asm int 3
 ```
 
-non ha provocato il codice nativo da generare quando viene compilato con **/clr**; il compilatore convertito l'istruzione in un'istruzione di interruzione CLR.
+non ha causato la generazione del codice nativo quando viene compilato con **/CLR**; il compilatore ha convertito l'istruzione in un'istruzione di interruzioni CLR.
 
-`__asm int 3` determina ora la generazione del codice nativo della funzione. Se si desidera che una funzione a causa di un punto di interruzione nel codice e se si vuole che la funzione compilata in MSIL, utilizzare [DebugBreak](../../intrinsics/debugbreak.md).
+`__asm int 3` determina ora la generazione del codice nativo della funzione. Se si desidera che una funzione provochi un punto di rottura nel codice e se si desidera che tale funzione venga compilata in MSIL, utilizzare [__debugbreak](../../intrinsics/debugbreak.md).
 
-Per garantire la compatibilità con le versioni precedenti, **ASM** è un sinonimo **ASM** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../../build/reference/za-ze-disable-language-extensions.md) è specificato.
+Per compatibilità con le versioni precedenti, **_asm** è un sinonimo di **__asm** a meno che non sia specificata l'opzione del compilatore [/za \(Disable Language Extensions)](../../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Esempio
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514679"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168044"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -26,7 +26,7 @@ function declaration
 
 ### <a name="parameters"></a>Parametri
 
-*name*<br/>
+*nome*<br/>
 Nome definito dall'utente per il blocco di codice che verrà visualizzato nel file con estensione IDL.
 
 *DllName*<br/>
@@ -53,11 +53,11 @@ Opzionale I membri della libreria non possono essere chiamati in modo arbitrario
 *Dichiarazione di funzione*<br/>
 Funzione che si vuole definire.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **idl_module** C++ consente di specificare il punto di ingresso in un file con estensione dll, che consente di importare da un file con estensione dll.
 
-L'attributo **idl_module** ha funzionalità simili all'attributo MIDL del [modulo](/windows/win32/Midl/module) .
+L'attributo **idl_module** dispone di funzionalità simili a quelle del [modulo](/windows/win32/Midl/module) MIDL Attribute.
 
 È possibile esportare qualsiasi elemento da un oggetto COM che è possibile esportare da un file con estensione dll inserendo un punto di ingresso della DLL nel blocco di libreria di un file con estensione IDL.
 
@@ -65,7 +65,7 @@ Il deve usare **idl_module** in due passaggi. In primo luogo, è necessario defi
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra come usare l'attributo **idl_module** :
+Nel codice seguente viene illustrato come utilizzare l'attributo **idl_module** :
 
 ```cpp
 // cpp_attr_ref_idl_module.cpp
@@ -84,8 +84,8 @@ void FuncName(int i);
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

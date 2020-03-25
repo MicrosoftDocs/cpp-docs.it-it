@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514013"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166161"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indica che la matrice unidimensionale **char**, **wchar_t**, `byte` (o equivalente) o il puntatore a una matrice di questo tipo devono essere considerati come una stringa.
+Indica che la matrice unidimensionale **char**, **wchar_t**, `byte` (o equivalente) o il puntatore a tale matrice deve essere considerata come una stringa.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,7 +23,7 @@ Indica che la matrice unidimensionale **char**, **wchar_t**, `byte` (o equivalen
 [string]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **stringa** C++ ha la stessa funzionalità dell'attributo MIDL di [stringa](/windows/win32/Midl/string) .
 
@@ -52,8 +52,8 @@ __interface IFireTabCtrl
 |-|-|
 |**Si applica a**|Matrice o puntatore a una matrice, un parametro di interfaccia, un metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

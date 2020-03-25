@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 4a0e67ff1e800ff0f838b863eaaf839d4456ed82
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 300933fd6d10f5da39d9276db746ab789851a9a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441084"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211172"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
 
@@ -81,7 +81,7 @@ SQL Server 2000 esegue la formattazione XML e restituirà tutte le colonne e tut
 > [!NOTE]
 >  Questa funzionalità funziona solo con SQL Server 2000.
 
-## <a name="cstreamrowset"></a>CStreamRowset:: CStreamRowset
+## <a name="cstreamrowsetcstreamrowset"></a><a name="cstreamrowset"></a>CStreamRowset:: CStreamRowset
 
 Crea un'istanza e Inizializza l'oggetto `CStreamRowset`.
 
@@ -91,7 +91,7 @@ Crea un'istanza e Inizializza l'oggetto `CStreamRowset`.
 CStreamRowset();
 ```
 
-## <a name="close"></a>CStreamRowset:: Close
+## <a name="cstreamrowsetclose"></a><a name="close"></a>CStreamRowset:: Close
 
 Rilascia il puntatore all'interfaccia [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) nella classe.
 

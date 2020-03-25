@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447326"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178545"
 ---
 # <a name="storage-classes"></a>Classi di archiviazione
 
@@ -30,7 +30,7 @@ Una *classe di archiviazione* nel contesto di C++ dichiarazioni di variabili è 
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>statico
+## <a name="static"></a><a name="static"></a>statico
 
 La parola chiave **static** può essere usata per dichiarare variabili e funzioni nell'ambito globale, nell'ambito dello spazio dei nomi e nell'ambito della classe. Le variabili statiche possono essere dichiarate anche in ambito locale.
 
@@ -155,11 +155,11 @@ var == value
 
 A partire da C++11, si garantisce che l'inizializzazione di una variabile locale statica è thread-safe. Questa funzionalità è talvolta denominata *Magic static*. In un'applicazione con multithreading, tuttavia, tutte le assegnazioni successive devono essere sincronizzate. La funzionalità di inizializzazione statica thread-safe può essere disabilitata usando il flag [/Zc: threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) per evitare di creare una dipendenza da CRT.
 
-## <a name="extern"></a>extern
+## <a name="extern"></a><a name="extern"></a>extern
 
 Gli oggetti e le variabili dichiarati come **extern** dichiarano un oggetto definito in un'altra unità di conversione o in un ambito di inclusione come collegamento esterno. Per altre informazioni, vedere [extern](extern-cpp.md) and [translation units and linkage](program-and-linkage-cpp.md).
 
-## <a name="thread_local"></a>thread_local (C++ 11)
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (C++ 11)
 
 Una variabile dichiarata con l'identificatore **thread_local** è accessibile solo sul thread in cui è stata creata. La variabile viene creata quando viene creato il thread e viene eliminata definitivamente quando viene eliminato definitivamente il thread. Ogni thread ha la propria copia della variabile. In Windows **thread_local** è funzionalmente equivalente all'attributo [__declspec (thread)](../cpp/thread.md) specifico di Microsoft.
 
@@ -194,7 +194,7 @@ Aspetti da considerare sull'identificatore **thread_local** :
 
 In Windows **thread_local** è funzionalmente equivalente a [__declspec (thread)](../cpp/thread.md) ad eccezione del fatto che **__declspec (thread)** può essere applicato a una definizione di tipo ed è valido nel codice C. Quando possibile, utilizzare **thread_local** perché fa parte dello C++ standard ed è quindi più portabile.
 
-##  <a name="register"></a>Registro
+##  <a name="register"></a><a name="register"></a>Registro
 
 **Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): la parola chiave **Register** non è più una classe di archiviazione supportata. La parola chiave è ancora riservata nello standard per un uso futuro.
 

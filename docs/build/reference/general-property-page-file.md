@@ -5,12 +5,12 @@ f1_keywords:
 - VC.Project.VCFileConfiguration.ExcludedFromBuild
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
-ms.openlocfilehash: 41366e2eae479c3d00f79cc47da9100b22129d50
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a9281a0ea02bd9b1fd529453cb9a67e54e4ddda7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218191"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168974"
 ---
 # <a name="general-property-page-file"></a>Pagina delle proprietà Generale (File)
 
@@ -24,7 +24,7 @@ Quando si fa clic con il pulsante destro del mouse su un nodo di file **Esplora 
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-- **Contenuto** di (Si applica solo alle app UWP). Specifica se il file contiene contenuto da includere nel pacchetto dell'app.
+- **Contenuto** (si applica solo alle app UWP). Specifica se il file contiene contenuto da includere nel pacchetto dell'app.
 
 - **Tipo di elemento**
 
@@ -36,26 +36,26 @@ Quando si fa clic con il pulsante destro del mouse su un nodo di file **Esplora 
 
     Nella tabella seguente sono elencati i tipi di elemento predefiniti:
 
-    |Estensione di file|Tipo di elemento|Strumento predefinito|
+    |Estensione file|Item Type|Strumento predefinito|
     |-|-|-|
     |. appx|Definizione dell'applicazione XAML|[Pacchetto di app](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |. HLSL,. cso|Compilatore HLSL|[fxc. exe](/windows/win32/direct3dtools/fxc)|
-    |h|C/C++ intestazione|[Preprocessore C/C++](../../preprocessor/c-cpp-preprocessor-reference.md)|
+    |.h|C/C++ intestazione|[Preprocessore C/C++](../../preprocessor/c-cpp-preprocessor-reference.md)|
     |n/d|Non partecipa alla compilazione|n/d|
     |XML, XSLT, XSL|Xml|[Editor XML](/visualstudio/xml-tools/xml-editor)|
     |. resw,. resjson|Risorsa PRI (app UWP)|[MakePri. exe](/windows/uwp/app-resources/compile-resources-manually-with-makepri)|
     ||Supporti (UWP)|[Pacchetto di app](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
-    |. xsd|Strumento generatore di dati XML|[Strumento XML Schema Definition (XSD. exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) (Richiede un carico di lavoro .NET. Non incluso in MSVC.)|
+    |xsd|Strumento generatore di dati XML|[Strumento XML Schema Definition (XSD. exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) (richiede un carico di lavoro .NET. Non incluso in MSVC.)|
     ||Strumento Manifesto|[Mt. exe](/windows/win32/sbscs/mt-exe)|
-    |RC|Risorsa|[Compilatore di risorse Windows (RC. exe)](/windows/win32/menurc/resource-compiler)|
+    |.rc|Risorsa|[Compilatore di risorse Windows (RC. exe)](/windows/win32/menurc/resource-compiler)|
     |. appxmanifest|Manifesto del pacchetto dell'app|[Pacchetto di app](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
-    |.obj|Object|[C/C++ linker (link. exe)](cl-invokes-the-linker.md)|
+    |.obj|Oggetto|[C/C++ linker (link. exe)](cl-invokes-the-linker.md)|
     |. ttf|Carattere|n/d|
-    |txt|Text|n/d|
-    |n/d|Strumento di compilazione personalizzato|Definito dall'utente|
+    |.txt|Text|n/d|
+    |n/d|Strumento di compilazione personalizzato|Route definite dall'utente|
     |n/d|Copia file|n/d|
     |. packagelayout|Layout del pacchetto dell'app|[Pacchetto di app](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
-    |.resx|Risorsa gestita dal compilatore|[Resgen.exe (generatore di file di risorse)](/dotnet/framework/tools/resgen-exe-resource-file-generator)|
+    |resx|Risorsa gestita dal compilatore|[Resgen.exe (generatore di file di risorse)](/dotnet/framework/tools/resgen-exe-resource-file-generator)|
     |. natvis|C++File di visualizzazione del debugger|[Framework natvis](/visualstudio/debugger/create-custom-views-of-native-objects)|
     |. jpg,. bmp,. ico e così via.|Image|Compilatore di risorse in base al tipo di applicazione.|
     |.cpp|C/C++ compilatore|CL. exe|

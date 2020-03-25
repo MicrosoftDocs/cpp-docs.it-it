@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-ms.openlocfilehash: cca2f8cc13cc8317bac3736e142ef58e126ed994
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8dbf77defab2a711ad931057c740193908474b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390490"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186972"
 ---
 # <a name="compiler-warning-level-1-c4382"></a>Avviso del compilatore (livello 1) C4382
 
-> generazione di '*tipo*': un tipo con distruttore clrcall o costruttore di copia può essere rilevato solo in /clr: pura modulo
+> generazione di '*Type*': un tipo con __clrcall distruttore o un costruttore di copia può essere individuato solo nel modulo/CLR: pure
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
+L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e non è supportata in visual studio 2017.
 
-Quando viene compilato con **/clr** (non **/clr: pure**), la gestione delle eccezioni si aspetta che le funzioni membro in un tipo nativo può essere [cdecl](../../cpp/cdecl.md) e non [clrcall](../../cpp/clrcall.md). I tipi nativi con funzioni membro che utilizzano `__clrcall` convenzione di chiamata non può essere intercettato in un modulo compilato con **/clr**.
+Quando viene compilato con **/CLR** (non **/CLR: pure**), la gestione delle eccezioni prevede che le funzioni membro in un tipo nativo siano [__cdecl](../../cpp/cdecl.md) e non [__clrcall](../../cpp/clrcall.md). Non è possibile intercettare tipi nativi con funzioni membro che usano `__clrcall` convenzione di chiamata in un modulo compilato con **/CLR**.
 
-Se l'eccezione viene intercettata in un modulo compilato con **/clr: pure**, è possibile ignorare questo avviso.
+Se l'eccezione viene rilevata in un modulo compilato con **/CLR: pure**, è possibile ignorare questo avviso.
 
-Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Per altre informazioni, vedere [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4382.
+L'esempio seguente genera l'C4382.
 
 ```cpp
 // C4382.cpp

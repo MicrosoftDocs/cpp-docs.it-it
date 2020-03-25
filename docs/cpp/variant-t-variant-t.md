@@ -7,14 +7,14 @@ helpviewer_keywords:
 - _variant_t class [C++], constructor
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
-ms.openlocfilehash: b3575226199c15c4a9796fb439f65efb5a539225
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fff116ef04967a1887eaa075d92d3ea0283d5427
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403282"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187531"
 ---
-# <a name="varianttvariantt"></a>_variant_t::_variant_t
+# <a name="_variant_t_variant_t"></a>_variant_t::_variant_t
 
 **Sezione specifica Microsoft**
 
@@ -134,19 +134,19 @@ _variant_t(
 Oggetto `VARIANT` da copiare nel nuovo oggetto `_variant_t`.
 
 *pVarSrc*<br/>
-Puntatore a un `VARIANT` da copiare nel nuovo oggetto `_variant_t` oggetto.
+Puntatore a un oggetto `VARIANT` da copiare nel nuovo oggetto `_variant_t`.
 
 *var_t_Src*<br/>
 Oggetto `_variant_t` da copiare nel nuovo oggetto `_variant_t`.
 
 *fCopy*<br/>
-Se **false**, l'oggetto fornito `VARIANT` oggetto è associato al nuovo `_variant_t` oggetto senza creare una nuova copia `VariantCopy`.
+Se **false**, l'oggetto `VARIANT` fornito viene associato al nuovo oggetto `_variant_t` senza creare una nuova copia per `VariantCopy`.
 
 *ISrc, sSrc*<br/>
 Integer da copiare nel nuovo oggetto `_variant_t`.
 
 *vtSrc*<br/>
-Il `VARTYPE` per il nuovo `_variant_t` oggetto.
+`VARTYPE` per il nuovo oggetto `_variant_t`.
 
 *fltSrc, dblSrc*<br/>
 Un valore numerico da copiare nel nuovo oggetto `_variant_t`.
@@ -161,13 +161,13 @@ Oggetto `_bstr_t` da copiare nel nuovo oggetto `_variant_t`.
 Una stringa da copiare nel nuovo oggetto `_variant_t`.
 
 *bSrc*<br/>
-Oggetto **bool** valore da copiare nel nuovo `_variant_t` oggetto.
+Valore **bool** da copiare nel nuovo oggetto `_variant_t`.
 
 *pIUknownSrc*<br/>
-Puntatore a interfaccia COM a un oggetto VT_UNKNOWN da copiare nel nuovo `_variant_t` oggetto.
+Puntatore a interfaccia COM a un oggetto VT_UNKNOWN da incapsulare nel nuovo oggetto `_variant_t`.
 
 *pDispSrc*<br/>
-Puntatore a interfaccia COM a un oggetto VT_DISPATCH da copiare nel nuovo `_variant_t` oggetto.
+Puntatore a interfaccia COM a un oggetto VT_DISPATCH da incapsulare nel nuovo oggetto `_variant_t`.
 
 *decSrc*<br/>
 Un valore `DECIMAL` da copiare nel nuovo oggetto `_variant_t`.
@@ -176,63 +176,63 @@ Un valore `DECIMAL` da copiare nel nuovo oggetto `_variant_t`.
 Un valore `BYTE` da copiare nel nuovo oggetto `_variant_t`.
 
 *cSrc*<br/>
-Oggetto **char** valore da copiare nel nuovo `_variant_t` oggetto.
+Valore **char** da copiare nel nuovo oggetto `_variant_t`.
 
 *usSrc*<br/>
-Oggetto **short senza segno** valore da copiare nel nuovo `_variant_t` oggetto.
+Valore **short senza segno** da copiare nel nuovo oggetto `_variant_t`.
 
 *ulSrc*<br/>
-Oggetto **long senza segno** valore da copiare nel nuovo `_variant_t` oggetto.
+Valore **Long senza segno** da copiare nel nuovo oggetto `_variant_t`.
 
 *iSrc*<br/>
-Un' **int** valore da copiare nel nuovo `_variant_t` oggetto.
+Valore **int** da copiare nel nuovo oggetto `_variant_t`.
 
 *uiSrc*<br/>
-Un' **int senza segno** valore da copiare nel nuovo `_variant_t` oggetto.
+Valore **unsigned int** da copiare nel nuovo oggetto `_variant_t`.
 
 *i8Src*<br/>
-Un' **__int64** valore da copiare nel nuovo `_variant_t` oggetto.
+Valore **__int64** da copiare nel nuovo oggetto `_variant_t`.
 
 *ui8Src*<br/>
-Un' **unsigned __int64** valore da copiare nel nuovo `_variant_t` oggetto.
+Valore **__int64 senza segno** da copiare nel nuovo oggetto `_variant_t`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-- **variant_t ()** costruisce un oggetto vuoto `_variant_t` oggetto `VT_EMPTY`.
+- **_variant_t ()** Costruisce un oggetto `_variant_t` vuoto, `VT_EMPTY`.
 
-- **variant_t (VARIANT &** *varSrc* **)** costruisce un `_variant_t` da una copia dell'oggetto di `VARIANT` oggetto. Il tipo variant viene mantenuto.
+- **_variant_t (variante &**  *varSrc*  **)** Costruisce un oggetto `_variant_t` da una copia dell'oggetto `VARIANT`. Il tipo variant viene mantenuto.
 
-- **variant_t (VARIANT**<strong>\*</strong>*pVarSrc* **)** costruisce un `_variant_t` da una copia dell'oggetto di `VARIANT` oggetto. Il tipo variant viene mantenuto.
+- **_variant_t (variante** <strong>\*</strong> *pVarSrc* **)** Costruisce un oggetto `_variant_t` da una copia dell'oggetto `VARIANT`. Il tipo variant viene mantenuto.
 
-- **variant_t ( variant_t &** *var_t_Src* **)** costruisce un `_variant_t` da un altro oggetto `_variant_t` oggetto. Il tipo variant viene mantenuto.
+- **_variant_t (_variant_t &**  *var_t_Src*  **)** Costruisce un oggetto `_variant_t` da un altro oggetto `_variant_t`. Il tipo variant viene mantenuto.
 
-- **variant_t (VARIANT &** *varSrc* **, bool**`fCopy` **)** costruisce un `_variant_t` oggetto da un oggetto esistente `VARIANT` oggetto. Se *fCopy* viene **false**, il **VARIANT** oggetto viene associato al nuovo oggetto senza creare una copia.
+- **_variant_t (variant &** *varSrc* **, bool**`fCopy` **)** Costruisce un oggetto `_variant_t` da un oggetto `VARIANT` esistente. Se *fCopy* è **false**, l'oggetto **Variant** viene associato al nuovo oggetto senza creare una copia.
 
-- **variant_t (short**  *sSrc* **, VARTYPE**  `vtSrc`  **= VT_I2)** costruisce un `_variant_t` oggetto di tipo VT_I2 o VT_BOOL da un **breve** valore intero. Qualsiasi altro `VARTYPE` provoca un errore E_INVALIDARG.
+- **_variant_t (Short***sSrc* **, VarType**`vtSrc` **= VT_I2)** Costruisce un oggetto `_variant_t` di tipo VT_I2 o VT_BOOL da un valore **short** Integer. Qualsiasi altro `VARTYPE` genera un errore E_INVALIDARG.
 
-- **variant_t (long** `lSrc` **, VARTYPE**`vtSrc` **= VT_I4)** costruisce una `_variant_t` oggetto di tipo VT_I4, VT_BOOL o VT_ERROR da un **long**  valore intero. Qualsiasi altro `VARTYPE` provoca un errore E_INVALIDARG.
+- **_variant_t (long**`lSrc` **, VARTYPE**`vtSrc` **= VT_I4)** Costruisce un oggetto `_variant_t` di tipo VT_I4, VT_BOOL o VT_ERROR da un valore **Long** Integer. Qualsiasi altro `VARTYPE` genera un errore E_INVALIDARG.
 
-- **variant_t (float**`fltSrc` **)** costruisce un `_variant_t` oggetto di tipo VT_R4 da un **float** valore numerico.
+- **_variant_t (float**`fltSrc` **)** Costruisce un oggetto `_variant_t` di tipo VT_R4 da un valore numerico **float** .
 
-- **variant_t (double** `dblSrc` **, VARTYPE**`vtSrc` **= VT_R8)** costruisce una `_variant_t` oggetto di tipo VT_R8 o VT_DATE da un **doppia** valore numerico. Qualsiasi altro `VARTYPE` provoca un errore E_INVALIDARG.
+- **_variant_t (double**`dblSrc` **, VARTYPE**`vtSrc` **= VT_R8)** Costruisce un oggetto `_variant_t` di tipo VT_R8 o VT_DATE da un valore numerico **doppio** . Qualsiasi altro `VARTYPE` genera un errore E_INVALIDARG.
 
-- **variant_t (CY &** `cySrc` **)** costruisce un `_variant_t` VT_CY dal tipo di oggetto di un `CY` oggetto.
+- **_variant_t (CY &** `cySrc` **)** Costruisce un oggetto `_variant_t` di tipo VT_CY da un oggetto `CY`.
 
-- **variant_t ( bstr_t &** `bstrSrc` **)** costruisce un `_variant_t` oggetto di tipo VT_BSTR da un `_bstr_t` oggetto. Un nuovo `BSTR` viene allocato.
+- **_variant_t (_bstr_t &** `bstrSrc` **)** Costruisce un oggetto `_variant_t` di tipo VT_BSTR da un oggetto `_bstr_t`. Un nuovo `BSTR` viene allocato.
 
-- **variant_t (wchar_t** <strong>\*</strong> *wstrSrc* **)** costruisce un `_variant_t` oggetto di tipo VT_BSTR da una stringa Unicode. Un nuovo `BSTR` viene allocato.
+- **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc*  **)** Costruisce un oggetto `_variant_t` di tipo VT_BSTR da una stringa Unicode. Un nuovo `BSTR` viene allocato.
 
-- **variant_t (char**<strong>\*</strong>`strSrc` **)** costruisce un `_variant_t` oggetto di tipo VT_BSTR da una stringa. Un nuovo `BSTR` viene allocato.
+- **_variant_t (char** <strong>\*</strong>`strSrc` **)** Costruisce un oggetto `_variant_t` di tipo VT_BSTR da una stringa. Un nuovo `BSTR` viene allocato.
 
-- **variant_t (bool**`bSrc` **)** costruisce un `_variant_t` VT_BOOL dal tipo di oggetto di un **bool** valore.
+- **_variant_t (bool**`bSrc` **)** Costruisce un oggetto `_variant_t` di tipo VT_BOOL da un valore **bool** .
 
-- **variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef` **= true)** costruisce un `_variant_t` oggetto di tipo VT_UNKNOWN da un puntatore a interfaccia COM. Se `fAddRef` viene **true**, quindi `AddRef` viene chiamato sul puntatore a interfaccia indicato per rispondere alla chiamata a `Release` che si verificherà quando il `_variant_t` oggetto viene eliminato definitivamente. È responsabilità dell'utente per chiamare `Release` sul puntatore a interfaccia indicato. Se `fAddRef` viene **false**, questo costruttore acquisisce la proprietà del puntatore a interfaccia indicato; non chiamare `Release` sul puntatore a interfaccia indicato.
+- **_variant_t (IUnknown** <strong>\*</strong>`pIUknownSrc` **, bool**`fAddRef` **= true)** Costruisce un oggetto `_variant_t` di tipo VT_UNKNOWN da un puntatore a interfaccia COM. Se `fAddRef` è **true**, viene chiamato `AddRef` sul puntatore a interfaccia specificato in modo che corrisponda alla chiamata a `Release` che si verificheranno quando l'oggetto `_variant_t` viene eliminato definitivamente. È necessario chiamare `Release` sul puntatore a interfaccia specificato. Se `fAddRef` è **false**, questo costruttore acquisisce la proprietà del puntatore a interfaccia fornito; non chiamare `Release` sul puntatore a interfaccia specificato.
 
-- **variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef` **= true)** costruisce un `_variant_t` oggetto di Digitare VT_DISPATCH da un puntatore a interfaccia COM. Se `fAddRef` viene **true**, quindi `AddRef` viene chiamato sul puntatore a interfaccia indicato per rispondere alla chiamata a `Release` che si verificherà quando il `_variant_t` oggetto viene eliminato definitivamente. È responsabilità dell'utente per chiamare `Release` sul puntatore a interfaccia indicato. Se `fAddRef` viene **false**, questo costruttore acquisisce la proprietà del puntatore a interfaccia indicato; non chiamare `Release` sul puntatore a interfaccia indicato.
+- **_variant_t (IDispatch** <strong>\*</strong>`pDispSrc` **, bool**`fAddRef` **= true)** Costruisce un oggetto `_variant_t` di tipo VT_DISPATCH da un puntatore a interfaccia COM. Se `fAddRef` è **true**, viene chiamato `AddRef` sul puntatore a interfaccia specificato in modo che corrisponda alla chiamata a `Release` che si verificheranno quando l'oggetto `_variant_t` viene eliminato definitivamente. È necessario chiamare `Release` sul puntatore a interfaccia specificato. Se `fAddRef` è **false**, questo costruttore acquisisce la proprietà del puntatore a interfaccia fornito; non chiamare `Release` sul puntatore a interfaccia specificato.
 
-- **variant_t (DECIMAL &** `decSrc` **)** costruisce un `_variant_t` VT_DECIMAL dal tipo di oggetto di un `DECIMAL` valore.
+- **_variant_t (& DEcimale**`decSrc` **)** Costruisce un oggetto `_variant_t` di tipo VT_DECIMAL da un valore di `DECIMAL`.
 
-- **variant_t (BYTE**`bSrc` **)** costruisce un `_variant_t` oggetto di tipo `VT_UI1` da un `BYTE` valore.
+- **_variant_t (** `bSrc`byte **)** Costruisce un oggetto `_variant_t` di tipo `VT_UI1` da un valore di `BYTE`.
 
 **Fine sezione specifica Microsoft**
 

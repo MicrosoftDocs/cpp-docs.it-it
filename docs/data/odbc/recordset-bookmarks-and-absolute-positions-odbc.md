@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Bookmark e Absolute Position (ODBC)'
+title: 'Recordset: bookmark e absolute position (ODBC)'
 ms.date: 11/04/2016
 f1_keywords:
 - SetAbsolutePosition
@@ -21,34 +21,34 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a25c0fe4c1f08d376824fbc02211d22c7c14435
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395612"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212966"
 ---
-# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Recordset: Bookmark e Absolute Position (ODBC)
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Recordset: bookmark e absolute position (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-Durante la navigazione all'interno di un recordset, spesso è necessario un modo per la restituzione di un record specifico. Un record segnalibro e la posizione assoluta forniscono due metodi.
+Quando si Esplora un recordset, è spesso necessario un modo per tornare a un record specifico. Il segnalibro e la posizione assoluta di un record forniscono due metodi di questo tipo.
 
-Questo argomento viene illustrato:
+In questo argomento:
 
-- [Come usare segnalibri](#_core_bookmarks_in_mfc_odbc).
+- [Come usare i segnalibri](#_core_bookmarks_in_mfc_odbc).
 
-- [Come impostare il record corrente utilizzando posizioni assolute](#_core_absolute_positions_in_mfc_odbc).
+- [Come impostare il record corrente usando posizioni assolute](#_core_absolute_positions_in_mfc_odbc).
 
-##  <a name="_core_bookmarks_in_mfc_odbc"></a> Segnalibri in ODBC MFC
+##  <a name="bookmarks-in-mfc-odbc"></a><a name="_core_bookmarks_in_mfc_odbc"></a>Segnalibri in ODBC MFC
 
-Un segnalibro identifica in modo univoco un record. Quando si passa attraverso un set di record, non è sempre possibile basarsi sulla posizione assoluta di un record, perché possono essere eliminati i record dal set di record. Il modo affidabile per tenere traccia della posizione di un record è usare il segnalibro. Classe `CRecordset` fornisce le funzioni membro per:
+Un segnalibro identifica in modo univoco un record. Quando si Esplora un recordset, non è sempre possibile fare affidamento sulla posizione assoluta di un record, perché i record possono essere eliminati dal recordset. Il modo affidabile per tenere traccia della posizione di un record consiste nell'usare il relativo segnalibro. Classe `CRecordset` fornisce funzioni membro per:
 
-- Ottenere il segnalibro del record corrente, in modo che è possibile salvarlo in una variabile ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).
+- Recupero del segnalibro del record corrente, in modo che sia possibile salvarlo in una variabile ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).
 
-- Spostamento rapido per un determinato record, specificando il segnalibro, che è stato salvato in precedenza in una variabile ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)).
+- Passaggio rapido a un determinato record specificando il relativo segnalibro, salvato in precedenza in una variabile ([Sesegnalibro](../../mfc/reference/crecordset-class.md#setbookmark)).
 
-L'esempio seguente illustra come usare queste funzioni membro per contrassegnare il record corrente e ripristinarne in seguito a esso:
+Nell'esempio seguente viene illustrato come utilizzare queste funzioni membro per contrassegnare il record corrente e ritornarvi in seguito:
 
 ```cpp
 // rs is a CRecordset or
@@ -63,24 +63,24 @@ rs.GetBookmark( varRecordToReturnTo );
 rs.SetBookmark( varRecordToReturnTo );
 ```
 
-Non è necessario estrarre il tipo di dati sottostanti dal [classe CDBVariant](../../mfc/reference/cdbvariant-class.md) oggetto. Assegnare il valore con `GetBookmark` e tornare a questo segnalibro con `SetBookmark`.
+Non è necessario estrarre il tipo di dati sottostante dall'oggetto della [classe CDBVariant](../../mfc/reference/cdbvariant-class.md) . Assegnare il valore a `GetBookmark` e tornare a tale segnalibro con `SetBookmark`.
 
 > [!NOTE]
->  A seconda del driver ODBC e il tipo di recordset, segnalibri potrebbero non essere supportati. È possibile determinare facilmente se i segnalibri sono supportati tramite la chiamata [CRecordset:: CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Inoltre, se sono supportati i segnalibri, è necessario scegliere esplicitamente per la relativa implementazione, specificando il `CRecordset::useBookmarks` opzione il [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) funzione membro. È inoltre consigliabile controllare la persistenza dei segnalibri dopo determinate operazioni di recordset. Ad esempio, se si `Requery` un recordset, segnalibri potrebbero non essere più validi. Chiamare [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) per verificare se è possibile chiamare `SetBookmark`.
+>  A seconda del driver ODBC e del tipo di recordset, i segnalibri potrebbero non essere supportati. È possibile determinare facilmente se i segnalibri sono supportati chiamando [CRecordset:: CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Inoltre, se sono supportati segnalibri, è necessario scegliere esplicitamente di implementarli specificando l'opzione `CRecordset::useBookmarks` nella funzione membro [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) . È inoltre consigliabile controllare la persistenza dei segnalibri dopo determinate operazioni del recordset. Se, ad esempio, si `Requery` un recordset, i segnalibri potrebbero non essere più validi. Chiamare [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) per verificare se è possibile chiamare in modo sicuro `SetBookmark`.
 
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Posizioni assolute in ODBC MFC
+##  <a name="absolute-positions-in-mfc-odbc"></a><a name="_core_absolute_positions_in_mfc_odbc"></a>Posizioni assolute in ODBC MFC
 
-Oltre ai segnalibri, classe `CRecordset` consente di impostare il record corrente specificando una posizione ordinale. Si tratta il posizionamento assoluto.
-
-> [!NOTE]
->  Il posizionamento assoluto non è disponibile nei recordset forward-only. Per altre informazioni sulle recordset forward-only, vedere [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).
-
-Per spostare il puntatore di record corrente utilizzando la posizione assoluta, chiamare [CRecordset:: SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Quando si passa un valore a `SetAbsolutePosition`, il record corrispondente alla posizione ordinale diventa il record corrente.
+Oltre ai segnalibri, la classe `CRecordset` consente di impostare il record corrente specificando una posizione ordinale. Questa operazione viene definita posizionamento assoluto.
 
 > [!NOTE]
->  La posizione assoluta di un record è potenzialmente non affidabile. Se l'utente elimina i record dal recordset, cambia la posizione ordinale di tutti i record successivi. I segnalibri sono il metodo consigliato per lo spostamento del record corrente. Per altre informazioni, vedere [segnalibri in MFC ODBC](#_core_bookmarks_in_mfc_odbc).
+>  Il posizionamento assoluto non è disponibile nei recordset di sola trasmissione. Per ulteriori informazioni sui recordset di sola trasmissione, vedere [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).
 
-Per altre informazioni sull'esplorazione del recordset, vedere [Recordset: Scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Per spostare il puntatore di record corrente usando la posizione assoluta, chiamare [CRecordset:: SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Quando si passa un valore a `SetAbsolutePosition`, il record corrispondente a tale posizione ordinale diventa il record corrente.
+
+> [!NOTE]
+>  La posizione assoluta di un record è potenzialmente inaffidabile. Se l'utente elimina i record dal recordset, viene modificata la posizione ordinale di qualsiasi record successivo. I segnalibri sono il metodo consigliato per lo trasferimento del record corrente. Per ulteriori informazioni, vedere [segnalibri in ODBC MFC](#_core_bookmarks_in_mfc_odbc).
+
+Per ulteriori informazioni sull'esplorazione dei recordset, vedere [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 

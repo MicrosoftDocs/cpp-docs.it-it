@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
-ms.openlocfilehash: 439c4976f25688fd9220c3f58ceb933266b5f15c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ac00d3d57f8cf7d6c85f3106dbe9b8c3cb9adf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187509"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162920"
 ---
 # <a name="compiler-warning-level-1-c4342"></a>Avviso del compilatore (livello 1) C4342
 
-modifica del comportamento: '*funzione*' chiamato, ma un operatore membro è stato chiamato nelle versioni precedenti
+modifica del comportamento: è stato chiamato '*Function*', ma nelle versioni precedenti è stato chiamato un operatore membro
 
-Nelle versioni di Visual C++ precedenti Visual Studio 2002, un membro è stato chiamato, ma questo comportamento è stato modificato e il compilatore ora rileva la corrispondenza più appropriata nell'ambito dello spazio dei nomi.
+Nelle versioni di Visual C++ Studio precedenti a visual Studio 2002 è stato chiamato un membro, ma questo comportamento è stato modificato e il compilatore ora trova la migliore corrispondenza nell'ambito dello spazio dei nomi.
 
-Se è stato trovato un operatore membro, il compilatore in precedenza non considererebbero qualsiasi spazio dei nomi degli operatori di ambito. Se è presente una corrispondenza migliore nell'ambito dello spazio dei nomi, il compilatore corrente in modo corretto viene chiamato, mentre non verrebbe considerato compilatori precedenti.
+Se è stato trovato un operatore membro, il compilatore non considererà in precedenza gli operatori di ambito dello spazio dei nomi. Se è presente una corrispondenza migliore nell'ambito dello spazio dei nomi, il compilatore corrente lo chiama correttamente, mentre i compilatori precedenti non lo considerano.
 
-Questo avviso deve essere disabilitato dopo aver aggiornato il codice alla versione corrente.  Il compilatore può fornire i falsi positivi, la generazione di questo avviso per il codice in cui è presente alcuna modifica del comportamento.
+Questo avviso dovrebbe essere disabilitato dopo il completamento del trasferimento del codice alla versione corrente.  Il compilatore può restituire falsi positivi, generando questo avviso per il codice in cui non è presente alcuna modifica del comportamento.
 
 Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-L'esempio seguente genera l'errore C4342:
+L'esempio seguente genera l'C4342:
 
 ```cpp
 // C4342.cpp

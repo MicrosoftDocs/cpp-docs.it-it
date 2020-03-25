@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0041
 ms.assetid: dc9f4cf9-6bd5-4222-89e8-7802a59bb96b
-ms.openlocfilehash: b0fceff05ffe35515965b7e0a880c8b4c941b07e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb6469b1daf193223a9b3361cc3e4bfb96d0c751
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297723"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191932"
 ---
 # <a name="project-build-warning-prj0041"></a>Avviso di compilazione progetto PRJ0041
 
-Non è possibile trovare mancante dipendenza 'dependency' file 'file'. Il progetto può ancora essere compilato, ma risulterà aggiornata fino a quando non viene trovato il file.
+Non è possibile trovare la dipendenza ' Dependency ' mancante per il file ' file '. Il progetto può ancora essere compilato, ma potrebbe continuare a sembrare obsoleto fino a quando non viene trovato il file.
 
-Un file (file di risorse o file.idl/.odl, ad esempio, contiene un'istruzione include che il sistema di progetto non è stato possibile risolvere.
+Un file (file di risorse o file. idl/. FAD, ad esempio, contiene un'istruzione include che il sistema del progetto non è stato in grado di risolvere.
 
-Poiché il sistema di progetto non elabora le istruzioni del preprocessore (#if, ad esempio), l'istruzione che causa il problema non può fare parte della compilazione.
+Poiché il sistema del progetto non elabora le istruzioni del preprocessore (ad esempio, #if), l'istruzione che causa il problema potrebbe non essere effettivamente parte della compilazione.
 
-Per risolvere questo problema, eliminare tutto il codice non necessario nei file RC o aggiungere file segnaposto con il nome appropriato.
+Per risolvere il problema, eliminare il codice non necessario nei file RC o aggiungere i file segnaposto con il nome appropriato.

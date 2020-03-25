@@ -7,12 +7,12 @@ helpviewer_keywords:
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d64f0af994f88d0f4ecd3a5921de4a16b8bdaaa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183568"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178287"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Overload degli operatori di incremento e decremento (C++)
 
@@ -22,10 +22,10 @@ Gli operatori di incremento e decremento rientrano in una categoria speciale poi
 
 - Decremento prefisso e decremento suffisso
 
-Quando si creano le funzioni dell'operatore di overload, può essere utile implementare versioni separate della forma prefissa e suffissa di questi operatori. Per distinguere tra i due, si osserva la regola seguente: La forma prefissa dell'operatore viene dichiarata esattamente come qualsiasi altro operatore unario; forma suffissa accetta un argomento aggiuntivo typu **int**.
+Quando si creano le funzioni dell'operatore di overload, può essere utile implementare versioni separate della forma prefissa e suffissa di questi operatori. Per distinguere tra i due, viene osservata la regola seguente: il formato di prefisso dell'operatore viene dichiarato esattamente allo stesso modo di qualsiasi altro operatore unario; il form suffisso accetta un argomento aggiuntivo di tipo **int**.
 
 > [!NOTE]
->  Quando si specifica un operatore di overload per la forma suffissa dell'operatore di incremento o decremento, l'argomento aggiuntivo deve essere di tipo **int**; specifica un qualsiasi altro tipo genera un errore.
+>  Quando si specifica un operatore di overload per la forma suffissa dell'operatore di incremento o decremento, l'argomento aggiuntivo deve essere di tipo **int**. Se si specifica un altro tipo, viene generato un errore.
 
 Di seguito viene illustrato come definire gli operatori di incremento e di decremento in forma prefissa e suffissa per la classe `Point`:
 
@@ -97,7 +97,7 @@ friend Point& operator--( Point& )      // Prefix decrement
 friend Point& operator--( Point&, int ) // Postfix decrement
 ```
 
-L'argomento di tipo **int** che denota la forma suffissa di incremento o operatore di decremento non viene comunemente usato per passare gli argomenti. Di solito contiene il valore 0. Tuttavia, può essere utilizzato nel modo seguente:
+L'argomento di tipo **int** che indica la forma suffissa dell'operatore di incremento o decremento non viene comunemente usato per passare argomenti. Di solito contiene il valore 0. Tuttavia, può essere utilizzato nel modo seguente:
 
 ```cpp
 // increment_and_decrement2.cpp
@@ -124,7 +124,7 @@ int main()
 }
 ```
 
-Non esiste una sintassi per l'utilizzo degli operatori di incremento o decremento per passare questi valori; è necessario utilizzare la chiamata esplicita, come mostrato nel codice precedente. Un modo più semplice per implementare questa funzionalità è eseguire l'overload dell'operatore di addizione/assegnazione (**+=**).
+Non esiste una sintassi per l'utilizzo degli operatori di incremento o decremento per passare questi valori; è necessario utilizzare la chiamata esplicita, come mostrato nel codice precedente. Un modo più semplice per implementare questa funzionalità è eseguire l'overload dell'operatore di addizione/assegnazione ( **+=** ).
 
 ## <a name="see-also"></a>Vedere anche
 

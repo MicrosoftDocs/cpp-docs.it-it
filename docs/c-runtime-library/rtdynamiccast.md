@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957333"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170072"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -68,7 +68,7 @@ Puntatore all'oggetto secondario appropriato, in caso di esito positivo, in caso
 
 `bad_cast()` se l'input a `dynamic_cast<>` è un riferimento e il cast ha esito negativo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Converte `inptr` in un oggetto del tipo `TargetType`. Il tipo di `inptr` deve essere un puntatore se `TargetType` è un puntatore o un l-value se `TargetType` è un riferimento. `TargetType` deve essere un puntatore o un riferimento a un tipo di classe definito in precedenza oppure un puntatore a void.
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1602
 ms.assetid: a9365c58-fe66-49c4-a702-9bb75429cc1a
-ms.openlocfilehash: 71b721e05db5d4ace61774feb83a364c6c828496
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bb4c6bfa2508afa56fde7c27b08e5446c60ff85
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375028"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202904"
 ---
 # <a name="fatal-error-c1602"></a>Errore irreversibile C1602
 
 intrinseco non supportato
 
-Questo errore indica una mancata corrispondenza nei file del compilatore .exe, che possono essersi verificati a causa di un'installazione incompleta. Ad esempio, si potrebbe avere installato un service pack, ma non il pacchetto del processore. Installare tutti i prodotti necessari.
+Questo errore indica una mancata corrispondenza nei file exe del compilatore, che potrebbero essersi verificati a causa di un'installazione incompleta. Ad esempio, è possibile che sia stato installato un Service Pack ma non il pacchetto del processore. Installare tutti i prodotti richiesti.

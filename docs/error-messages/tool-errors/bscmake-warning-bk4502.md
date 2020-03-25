@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK4502
 ms.assetid: ee412ec8-df03-4cdb-91ee-5d609ded8691
-ms.openlocfilehash: 47bb81827bb6ae1f580ff907be6c0acf7139a29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c5204239909e579fa93006e245e3841b7fb64eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299738"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197457"
 ---
 # <a name="bscmake-warning-bk4502"></a>Avviso BK4502 di BSCMAKE
 
-troncato. File SBR 'nomefile' non nel nome file
+troncato. Il file SBR ' filename ' non è nel nome file
 
-Durante un aggiornamento è stato specificato un file SBR di lunghezza zero che non faceva parte del file con estensione bsc.
+Durante un aggiornamento è stato specificato un file SBR di lunghezza zero che non era originariamente parte del file BSC.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
 
-1. Nome file errato specificato.
+1. Il nome file specificato non è corretto.
 
 1. File eliminato. (Errore [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) risultati.)
 
-1. File danneggiato, BSCMAKE deve eseguire una build completa.
+1. File danneggiato, che richiede BSCMAKE per eseguire una compilazione completa.

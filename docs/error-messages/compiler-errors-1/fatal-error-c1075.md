@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1075
 ms.assetid: 69a74e3d-b53f-4526-a440-2c94e6403355
-ms.openlocfilehash: 36dad542d6ff421ad227b09ebd58052b940b18a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2701cebb7c1da7d737930af11d6c6336fe4e9aa2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166802"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204165"
 ---
 # <a name="fatal-error-c1075"></a>Errore irreversibile C1075
 

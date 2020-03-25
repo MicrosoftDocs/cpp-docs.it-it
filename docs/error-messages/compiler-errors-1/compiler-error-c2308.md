@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2308
 ms.assetid: d1eaf101-077d-4c43-97ac-410efd5b6fc9
-ms.openlocfilehash: f5744509f89337d2fe22af785b9af6a48446997c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d586a04fd132f412dd6fb3750982cdf4c6a82a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302215"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206266"
 ---
 # <a name="compiler-error-c2308"></a>Errore del compilatore C2308
 
 concatenazione di stringhe non corrispondenti
 
-Entrambe le stringhe di caratteri wide e a livello non sono state specificate per la concatenazione. Non è possibile concatenare una stringa di caratteri non wide e la stringa di caratteri wide.
+Per la concatenazione sono state specificate sia stringhe di caratteri wide che non estese. Non è possibile concatenare una stringa di caratteri "wide" e una stringa di caratteri non Wide.

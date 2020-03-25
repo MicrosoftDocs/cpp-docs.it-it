@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 0315af63e9fdbbb0b136a85a23cb28936dee6836
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 40a2828ce6b21384ec49c371f23e506d816f1284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273553"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204789"
 ---
 # <a name="fatal-error-c1010"></a>Errore irreversibile C1010
 
 > fine file imprevista durante la ricerca dell'intestazione precompilata. Si è omesso di aggiungere ' #include *Name*' all'origine?
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un file di inclusione specificato da [/Yu](../../build/reference/yu-use-precompiled-header-file.md) non è elencato nel file di origine. Questa opzione è abilitata per impostazione predefinita in molti C++ tipi di progetto di Visual Studio. Il file di inclusione predefinito specificato da questa opzione è *PCH. h*o *stdafx. h* in Visual Studio 2017 e versioni precedenti.
 
@@ -37,13 +37,13 @@ Per disattivare l'utilizzo di intestazioni precompilate in un progetto, atteners
 
 1. Nell'elenco a discesa **configurazione** selezionare **tutte le configurazioni**.
 
-1. Selezionare la pagina delle proprietà proprietà di **configurazione** >  > **C/C++** **intestazioni precompilate** .
+1. Selezionare le **proprietà di configurazione** > pagina delle proprietà **intestazioni precompilate** **C/C++**  > .
 
 1. Nell'elenco delle proprietà selezionare l'elenco a discesa per la proprietà dell' **intestazione precompilata** , quindi scegliere **non usare intestazioni precompilate**. Scegliere **OK** per salvare le modifiche.
 
 1. Nella finestra di **Esplora soluzioni** , fare clic con il pulsante destro del mouse sul file di origine *PCH. cpp* nel progetto. (Nei progetti precedenti, il file potrebbe essere denominato *stdafx. cpp*). Scegliere **Escludi dal progetto** per rimuoverlo dalla compilazione.
 
-1. Usare il comando di menu **Compila** > **soluzione pulita** per ogni configurazione compilata, per eliminare i file *project_name. pch* nelle directory di compilazione intermedie.
+1. Usare il comando di menu **compila** > **Pulisci soluzione** per ogni configurazione compilata, per eliminare tutti i file *project_name PCH* nelle directory di compilazione intermedie.
 
 ## <a name="see-also"></a>Vedere anche
 

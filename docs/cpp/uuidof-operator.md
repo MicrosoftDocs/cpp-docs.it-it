@@ -10,14 +10,14 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09348d061fde4cb09eb6eb351f146404f355e184
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244157"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187791"
 ---
-# <a name="uuidof-operator"></a>Operatore __uuidof
+# <a name="__uuidof-operator"></a>Operatore __uuidof
 
 **Sezione specifica Microsoft**
 
@@ -29,22 +29,22 @@ Recupera il GUID collegato all'espressione.
 __uuidof (expression)
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il *espressione* può essere un nome di tipo, puntatore, riferimento o matrice di quel tipo, un modello specializzato su questi tipi, o una variabile di questi tipi. L'argomento è valido finché il compilatore può utilizzarlo per trovare il GUID collegato.
+L' *espressione* può essere un nome di tipo, un puntatore, un riferimento o una matrice di quel tipo, un modello specializzato su questi tipi o una variabile di questi tipi. L'argomento è valido finché il compilatore può utilizzarlo per trovare il GUID collegato.
 
-Un caso speciale di questa funzione intrinseca è quando entrambe **0** o NULL viene fornito come argomento. In questo caso **uuidof** restituirà un GUID composto da zero.
+Un caso speciale di questa funzione intrinseca è quando **0** o null viene fornito come argomento. In questo caso, **__uuidof** restituirà un GUID composto da zeri.
 
 Utilizzare questa parola chiave per estrarre il GUID collegato:
 
-- Un oggetto tramite il [uuid](../cpp/uuid-cpp.md) attributi estesa.
+- Oggetto dall'attributo esteso [UUID](../cpp/uuid-cpp.md) .
 
-- Un blocco di libreria creato con il [modulo](../windows/attributes/module-cpp.md) attributo.
+- Un blocco di libreria creato con l'attributo [Module](../windows/attributes/module-cpp.md) .
 
 > [!NOTE]
-> In una build di debug **uuidof** sempre Inizializza un oggetto in modo dinamico (in fase di esecuzione). In una build di rilascio **uuidof** può inizializzare staticamente (in fase di compilazione) un oggetto.
+> In una build di debug **__uuidof** sempre inizializzare un oggetto in modo dinamico (in fase di esecuzione). In una build di rilascio, **__uuidof** possibile inizializzare un oggetto in modo statico (in fase di compilazione).
 
-Per garantire la compatibilità con le versioni precedenti, **uuidof** è un sinonimo **uuidof** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
+Per compatibilità con le versioni precedenti, **_uuidof** è un sinonimo di **__uuidof** a meno che non sia specificata l'opzione del compilatore [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Esempio
 
@@ -73,7 +73,7 @@ int main() {
 
 ## <a name="comments"></a>Commenti
 
-Nei casi in cui il nome della libreria non è più nell'ambito, è possibile usare `__LIBID_` invece di **uuidof**. Ad esempio:
+Nei casi in cui il nome della libreria non è più nell'ambito, è possibile usare `__LIBID_` anziché **__uuidof**. Ad esempio:
 
 ```cpp
 StringFromCLSID(__LIBID_, &lpolestr);

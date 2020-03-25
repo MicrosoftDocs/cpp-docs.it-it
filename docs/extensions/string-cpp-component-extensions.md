@@ -6,12 +6,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: 8440ddf510f99618c28a6b6d585c8628df85f9cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516026"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171944"
 ---
 # <a name="string--ccli-and-ccx"></a>String (C++/CLI e C++/CX)
 
@@ -262,5 +262,5 @@ System.String
 ## <a name="see-also"></a>Vedere anche
 
 [Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
-[Valori letterali stringa e carattere](../cpp/string-and-character-literals-cpp.md)<br/>
+[Stringa e valori letterali carattere](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

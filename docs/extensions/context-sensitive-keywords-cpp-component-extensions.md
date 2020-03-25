@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: ca289a7ebd4578d5c67bb5d3e403d2a9a2756520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516126"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182175"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Parole chiave sensibili al contesto (C++/CLI e C++/CX)
 
@@ -42,7 +42,7 @@ Di seguito è riportato un elenco di parole chiave sensibili al contesto:
 
 - [override](override-cpp-component-extensions.md)
 
-- [proprietà](property-cpp-component-extensions.md)
+- [property](property-cpp-component-extensions.md)
 
 - [sealed](sealed-cpp-component-extensions.md)
 

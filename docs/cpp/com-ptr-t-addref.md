@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - AddRef method [C++], interface pointers
 ms.assetid: c104dac3-aad3-40bb-a298-75c6cd0e63a2
-ms.openlocfilehash: 7408b5c174f76673b56caffd56aaa87895bd08d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51182b461aeac83c12bb18a573a49b2d4347a190
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154942"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189929"
 ---
-# <a name="comptrtaddref"></a>_com_ptr_t::AddRef
+# <a name="_com_ptr_taddref"></a>_com_ptr_t::AddRef
 
 **Sezione specifica Microsoft**
 
-Chiama il `AddRef` funzione membro di `IUnknown` sul puntatore a interfaccia incapsulato.
+Chiama la funzione membro `AddRef` di `IUnknown` sul puntatore a interfaccia incapsulato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,9 +25,9 @@ Chiama il `AddRef` funzione membro di `IUnknown` sul puntatore a interfaccia inc
 void AddRef( );
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le chiamate `IUnknown::AddRef` sul puntatore a interfaccia incapsulato, che genera un `E_POINTER` errore se il puntatore è NULL.
+Chiama `IUnknown::AddRef` sul puntatore a interfaccia incapsulato, generando un errore `E_POINTER` se il puntatore è NULL.
 
 **Fine sezione specifica Microsoft**
 

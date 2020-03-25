@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395547"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209261"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Utilizzo dei modelli consumer OLE DB
 
-Gli argomenti seguenti forniscono alcuni esempi di come usare i modelli Consumer OLE DB in scenari comuni:
+Negli argomenti seguenti vengono forniti alcuni esempi di utilizzo dei modelli di consumer OLE DB negli scenari comuni:
 
 - [Semplificazione dell'accesso ai dati con gli attributi del database](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
@@ -24,7 +24,7 @@ Gli argomenti seguenti forniscono alcuni esempi di come usare i modelli Consumer
 
 - [Esecuzione di una query con parametri](../../data/oledb/issuing-a-parameterized-query.md)
 
-- [Recupero dei dati](../../data/oledb/fetching-data.md)
+- [Recupero di dati](../../data/oledb/fetching-data.md)
 
 - [Aggiornamento dei rowset](../../data/oledb/updating-rowsets.md)
 
@@ -48,16 +48,16 @@ Gli argomenti seguenti forniscono alcuni esempi di come usare i modelli Consumer
 
 - [Ricezione di notifiche](../../data/oledb/receiving-notifications.md)
 
-Per un esempio di creazione e implementazione di un Consumer OLE DB, vedere [creazione di un Consumer semplice](../../data/oledb/creating-an-ole-db-consumer.md).
+Per un esempio di creazione e implementazione di un consumer di OLE DB, vedere [creazione di un consumer semplice](../../data/oledb/creating-an-ole-db-consumer.md).
 
-È anche possibile trovare esempi di come usare i modelli Consumer OLE DB indicato negli esempi seguenti:
+È inoltre possibile trovare esempi di utilizzo dei modelli consumer OLE DB negli esempi seguenti:
 
-- [CatDB](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

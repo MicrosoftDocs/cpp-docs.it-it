@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441032"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211107"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
 
@@ -76,7 +76,7 @@ La maggior parte di questa classe è un dettaglio di implementazione.
 
 Per ulteriori informazioni sulle macro utilizzate in una mappa di set di proprietà, vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) e [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a>CUtlProps:: GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps:: GetPropValue
 
 Ottiene una proprietà da un set di proprietà.
 
@@ -103,7 +103,7 @@ out Puntatore a un Variant che contiene il nuovo valore della proprietà.
 
 `Failure` in caso di errore e S_OK in caso di esito positivo.
 
-## <a name="isvalidvalue"></a>CUtlProps:: IsValidValue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps:: IsValidValue
 
 Utilizzato per convalidare un valore prima di impostare una proprietà.
 
@@ -130,7 +130,7 @@ Valore HRESULT standard. Il valore restituito predefinito è S_OK.
 
 Se si desidera eseguire routine di convalida in un valore che si sta per utilizzare per impostare una proprietà, è necessario eseguire l'override di questa funzione. È ad esempio possibile convalidare DBPROP_AUTH_PASSWORD in base a una tabella delle password per determinare un valore valido.
 
-## <a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
 
 Gestisce le richieste di un'interfaccia facoltativa quando un consumer chiama un metodo su una delle interfacce di creazione degli oggetti.
 
@@ -165,7 +165,7 @@ Se un consumer apre un oggetto e richiede un'interfaccia facoltativa, il provide
 
 Se si desidera gestire altre interfacce, eseguire l'override di questa funzione nell'origine dati, nella sessione, nel comando o nella classe del set di righe per elaborare le funzioni. Per assicurarsi che le proprietà dell'impostazione impostino anche le proprietà concatenate (vedere [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)), è necessario eseguire l'override delle normali interfacce di proprietà set/get.
 
-## <a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
 
 Chiamato dopo l'impostazione di una proprietà per gestire le proprietà concatenate.
 
@@ -198,7 +198,7 @@ In questa funzione, l'utente ottiene l'ID della proprietà dal parametro `DBPROP
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a>CUtlProps:: SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps:: SetPropValue
 
 Imposta una proprietà in un set di proprietà.
 

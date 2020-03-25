@@ -3,12 +3,12 @@ title: enum class (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516596"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182136"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class (C++/CLI e C++/CX)
 
@@ -88,7 +88,7 @@ Accessibilità dell'enumerazione. Può essere **public** o **private**.
 *enumerator-list*<br/>
 Elenco delimitato da virgole di identificatori (enumeratori) nell'enumerazione.
 
-*name*<br/>
+*nome*<br/>
 Nome dell'enumerazione. Le enumerazioni gestite anonime non sono consentite.
 
 *type*<br/>

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
-ms.openlocfilehash: 39d8a20dacb0cdeb2a767529e9716bd476f406dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86ac98a2635975b811c7b50020e4d4782675ae4d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400006"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197017"
 ---
 # <a name="c-runtime-error-r6033"></a>Errore di runtime di C R6033
 
-Provare a usare il codice MSIL da questo assembly durante l'inizializzazione del codice nativo. Questo indica un bug nell'applicazione. È molto probabile che il risultato della chiamata al metodo compilato dal codice MSIL (/ Common Language Runtime) (funzione) da un costruttore nativo o da DllMain.
+Tentativo di utilizzare codice MSIL da questo assembly durante l'inizializzazione del codice nativo. Indica un bug nell'applicazione. È molto probabile che il risultato della chiamata di una funzione compilata in MSIL (/CLR) da un costruttore nativo o da DllMain.
 
 > [!NOTE]
-> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema interno. Questo errore può essere causato da un bug nell'app o da un bug in un componente aggiuntivo o di estensione che usa.
+> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché presenta un problema interno. Questo errore può essere causato da un bug nell'app o da un bug in un componente aggiuntivo o in un'estensione che usa.
 >
 > Per risolvere questo errore, è possibile provare questi passaggi:
 >
-> - Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
-> - Usare il **App e funzionalità** oppure **programmi e funzionalità** nella pagina il **Pannello di controllo** per rimuovere, ripristinare o reinstallare tutte le estensioni o componenti aggiuntivi.
+> - Utilizzare la pagina **app e funzionalità** o **programmi e funzionalità** nel **Pannello di controllo** per ripristinare o reinstallare il programma.
+> - Utilizzare la pagina **app e funzionalità** o **programmi e funzionalità** nel **Pannello di controllo** per rimuovere, ripristinare o reinstallare eventuali estensioni o componenti aggiuntivi.
 > - Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
-> - Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+> - Verificare la presenza di una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
 
 **Informazioni per i programmatori**
 
-Questa diagnostica indica che l'esecuzione di istruzioni MSIL sono stati durante il blocco del caricatore attivo. Ciò può verificarsi se sono stati compilati C++ nativo usando il flag /clr. Usare solo il flag /clr sui moduli contenenti codice gestito. Per altre informazioni, vedere [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md).
+Questa diagnostica indica che le istruzioni MSIL sono state eseguite durante il blocco del caricatore. Questa situazione può verificarsi se è stato compilato C++ il nativo utilizzando il flag/CLR. Usare il flag/CLR solo nei moduli che contengono codice gestito. Per ulteriori informazioni, vedere [inizializzazione di assembly misti](../../dotnet/initialization-of-mixed-assemblies.md).

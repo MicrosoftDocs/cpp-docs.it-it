@@ -6,20 +6,20 @@ helpviewer_keywords:
 - record views, navigation
 - navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
-ms.openlocfilehash: 88c76d31ae542d35476473888ad6282e3693405f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcac4c43cf553528d5c84a090f7e4265e3a1321c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161329"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209118"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Supporto dello spostamento in una visualizzazione di record (accesso ai dati MFC)
 
-Questo argomento viene illustrato come supportare lo spostamento da un record a altro nel [CRecordView](../mfc/reference/crecordview-class.md) (classe), incluse informazioni su:
+In questo argomento viene illustrato come supportare lo spostamento da record a record nella classe [CRecordView](../mfc/reference/crecordview-class.md) , incluse informazioni su:
 
-- [La gestione dei comandi](../data/command-handlers-for-record-scrolling-mfc-data-access.md) per lo scorrimento dei record.
+- [Gestione](../data/command-handlers-for-record-scrolling-mfc-data-access.md) dei comandi per i comandi di scorrimento dei record.
 
-- [I gestori aggiornamento dell'interfaccia utente per lo scorrimento](../data/user-interface-updating-for-record-views-mfc-data-access.md) comandi.
+- [Gestori degli aggiornamenti dell'interfaccia utente per i comandi di scorrimento](../data/user-interface-updating-for-record-views-mfc-data-access.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

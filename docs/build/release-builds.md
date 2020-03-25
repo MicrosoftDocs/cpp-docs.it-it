@@ -1,21 +1,21 @@
 ---
-title: Build di rilascio di C++ - Visual Studio
+title: C++Build di rilascio-Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: b1db396136af4a6ce8cc005753dded9eea2bfbeb
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 46ae5e0f3d545f0e3e004f612314ab416b270fd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400474"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168824"
 ---
 # <a name="release-builds"></a>Build di rilascio
 
-Una build di rilascio utilizza ottimizzazioni. Quando si usano le ottimizzazioni per creare una build di rilascio, il compilatore non genera informazioni sul debug simbolici. Chiama l'assenza di informazioni sul debug simbolici, oltre al fatto che il codice non viene generato per la traccia e ASSERZIONE, significa che le dimensioni del file eseguibile sono ridotto e pertanto è più veloce.
+Una build di rilascio usa le ottimizzazioni. Quando si usano le ottimizzazioni per creare una build di rilascio, il compilatore non genera informazioni di debug simbolico. L'assenza di informazioni sul debug simbolico, oltre al fatto che il codice non viene generato per le chiamate di traccia e ASSERT, significa che la dimensione del file eseguibile è ridotta e sarà quindi più veloce.
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 

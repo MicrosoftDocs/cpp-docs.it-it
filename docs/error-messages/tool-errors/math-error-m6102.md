@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6102
 ms.assetid: dbd2241f-6595-431e-9597-d9dbdb3a0ca2
-ms.openlocfilehash: 73c4b48819937ed4b49c80969c18701c8820956e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 146ca1f51b15ee87475bc2007d63259d70450f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173764"
 ---
 # <a name="math-error-m6102"></a>Errore matematico M6102
 
 denormalizzato
 
-Un'operazione ha generato un numero a virgola mobile molto piccolo, che potrebbe non essere valido a causa di una perdita di significato. Denormalizzato eccezioni a virgola mobile sono in genere mascherate, comportando quindi intercettati e opera.
+Un'operazione ha generato un numero a virgola mobile molto piccolo, che non è una perdita di significato. Le eccezioni a virgola mobile denormalizzate sono in genere mascherate, causando la loro intercettazione e l'operatività.
 
 Il programma termina con il codice di uscita 130.

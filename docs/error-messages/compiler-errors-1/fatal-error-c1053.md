@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C1053
 ms.assetid: f50c1c6a-d9cc-42fa-984e-4e2e6e9cd1b1
-ms.openlocfilehash: 944207702d2928d780c3af8973fb699f16d23b5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34d57e06f008652955ef6522055e124ef1b209e1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347116"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204516"
 ---
 # <a name="fatal-error-c1053"></a>Errore irreversibile C1053
 
-'\<identificatore >': funzione troppo lunga
+'\<Identifier >': funzione troppo grande
 
 La funzione è troppo grande per poter essere compilata.
 

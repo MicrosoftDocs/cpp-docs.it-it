@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: d9544e3002cfa489e9700b83367b15b164e9b513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 2b7e492c62047e3b38224637f842d8a7fcbae84f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516136"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172594"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Cast di tipo C con /clr (C++/CLI)
 

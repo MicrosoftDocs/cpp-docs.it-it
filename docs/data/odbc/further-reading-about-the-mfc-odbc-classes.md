@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aa3b936b9f06153170dac013f9dcd03485c8bbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395898"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213226"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Ulteriori informazioni sulle classi ODBC MFC
 
-Ulteriormente gli argomenti seguenti illustrano i concetti e tecniche introdotte in questo argomento:
+Negli argomenti seguenti vengono illustrati in dettaglio i concetti e le tecniche introdotti in questo argomento:
 
 - [Supporto database, Creazione guidata applicazione MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
 
@@ -23,11 +23,11 @@ Ulteriormente gli argomenti seguenti illustrano i concetti e tecniche introdotte
 
 - [Dynaset](../../data/odbc/dynaset.md)
 
-- [Eccezioni: eccezioni del database](../../mfc/exceptions-database-exceptions.md)
+- [Eccezioni: eccezioni di database](../../mfc/exceptions-database-exceptions.md)
 
-- [MFC: uso di classi di database con documenti e viste](../../data/mfc-using-database-classes-with-documents-and-views.md)
+- [MFC: uso di classi di database con documenti e visualizzazioni](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [MFC: uso di classi di database senza documenti e viste](../../data/mfc-using-database-classes-without-documents-and-views.md)
+- [MFC: uso di classi di database senza documenti e visualizzazioni](../../data/mfc-using-database-classes-without-documents-and-views.md)
 
 - [ODBC](../../data/odbc/odbc-basics.md)
 
@@ -39,7 +39,7 @@ Ulteriormente gli argomenti seguenti illustrano i concetti e tecniche introdotte
 
 - [Visualizzazioni di record](../../data/record-views-mfc-data-access.md)
 
-- [Serializzazione: Serializzazione e Input/Output del database](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [Serializzazione: serializzazione e input/output del database](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [Snapshot](../../data/odbc/snapshot.md)
 
@@ -47,11 +47,11 @@ Ulteriormente gli argomenti seguenti illustrano i concetti e tecniche introdotte
 
 - [Transazione (ODBC)](../../data/odbc/transaction-odbc.md)
 
-Un buon punto di iniziare la lettura riguarda [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).
+Un valido punto di partenza per la lettura è con [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).
 
-Nel *riferimento MFC*, vedere [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md), e [CDBException](../../mfc/reference/cdbexception-class.md).
+Nella Guida *di riferimento a MFC*, vedere [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)e [CDBException](../../mfc/reference/cdbexception-class.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)<br/>
-[Accesso ai dati (MFC/ATL) di programmazione](../../data/data-access-programming-mfc-atl.md)
+[Programmazione dell'accesso ai dati (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

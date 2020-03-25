@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-ms.openlocfilehash: cfc91f971fc975bcdd2c8ae37d798ff2f5a1cab0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b30cef2baf8c13c5001e44901b984aa1293494d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212303"
 ---
 # <a name="caccessor-class"></a>Classe CAccessor
 
@@ -31,15 +31,15 @@ class CAccessor : public CAccessorBase, public T
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-La classe di record utente.
+Classe di record utente.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Viene usato quando un record in modo statico è associato a un'origine dati. Il record contiene il buffer. Questa classe supporta più funzioni di accesso su un set di righe.
+Viene utilizzato quando un record viene associato in modo statico a un'origine dati. Il record contiene il buffer. Questa classe supporta più funzioni di accesso su un set di righe.
 
-Usare questo tipo di funzione di accesso quando si conosce la struttura e il tipo del database.
+Utilizzare questo tipo di funzione di accesso quando si conosce la struttura e il tipo del database.
 
-Se la funzione di accesso contiene campi che punta alla memoria (ad esempio un `BSTR` o l'interfaccia) che deve essere liberata, chiamare la funzione membro [CAccessorRowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) prima della successiva chiamata record viene letto.
+Se la funzione di accesso contiene campi che puntano a memoria, ad esempio un `BSTR` o un'interfaccia, che devono essere liberati, chiamare la funzione membro [CAccessorRowset:: FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) prima di leggere il record successivo.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -47,5 +47,5 @@ Se la funzione di accesso contiene campi che punta alla memoria (ad esempio un `
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

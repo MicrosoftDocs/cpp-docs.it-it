@@ -1,52 +1,52 @@
 ---
-title: "Procedura: Creare direttamente un'istanza dei componenti WRL"
+title: "Procedura: creare direttamente un'istanza dei componenti WRL"
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-ms.openlocfilehash: 3f622a79aed6a1e42feccb92e1a01b3bc1277151
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f291e982d7f77c63821e5943a5867662ccd1b4fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398303"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213902"
 ---
-# <a name="how-to-instantiate-wrl-components-directly"></a>Procedura: Creare direttamente un'istanza dei componenti WRL
+# <a name="how-to-instantiate-wrl-components-directly"></a>Procedura: creare direttamente un'istanza dei componenti WRL
 
-Informazioni su come usare la libreria di modelli C++ (WRL) di Windows Runtime[makeandinitialize](make-function.md) e [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md) funzioni per creare un'istanza di un componente dal modulo che lo definisce.
+Informazioni su come usare le funzioni C++ WRL (Windows Runtime Template Library)[Microsoft:: WRL:: make](make-function.md) e [microsoft:: WRL::D etails:: MakeAndInitialize](makeandinitialize-function.md) per creare un'istanza di un componente dal modulo che lo definisce.
 
-Creando componenti direttamente, è possibile ridurre il sovraccarico quando non è necessario class factory o altri meccanismi. È possibile creare un'istanza di un componente direttamente in entrambe le app Universal Windows Platform e nelle App desktop.
+Creando direttamente un'istanza di componenti, è possibile ridurre il sovraccarico quando non sono necessari class factory o altri meccanismi. È possibile creare un'istanza di un componente direttamente sia in piattaforma UWP (Universal Windows Platform) app che nelle app desktop.
 
-Per informazioni su come usare libreria modelli C++ per Windows Runtime per creare un componente COM classico e crearne un'istanza da un'app desktop esterna, vedere [come: Creare un componente COM classico](how-to-create-a-classic-com-component-using-wrl.md).
+Per informazioni su come usare Windows Runtime C++ libreria di modelli per creare un componente COM classico e crearne un'istanza da un'app desktop esterna, vedere [procedura: creare un componente COM classico](how-to-create-a-classic-com-component-using-wrl.md).
 
-Questo documento illustra due esempi. Il primo esempio Usa il `Make` funzione per creare un'istanza di un componente. Il secondo esempio Usa il `MakeAndInitialize` funzione per creare un'istanza di un componente può avere esito negativo durante la costruzione. (Poiché COM Usa in genere, i valori HRESULT invece delle eccezioni, per indicare gli errori, un tipo COM in genere non viene generata dal costruttore. `MakeAndInitialize` consente a un componente convalidare gli argomenti relativi costruzione di `RuntimeClassInitialize` (metodo).) Entrambi gli esempi definiscono un'interfaccia del logger di base e implementano tale interfaccia definendo una classe che scrive i messaggi alla console.
+In questo documento vengono illustrati due esempi. Nel primo esempio viene utilizzata la funzione `Make` per creare un'istanza di un componente. Nel secondo esempio viene usata la funzione `MakeAndInitialize` per creare un'istanza di un componente che può avere esito negativo durante la costruzione. Poiché COM USA in genere i valori HRESULT, anziché le eccezioni, per indicare gli errori, un tipo COM in genere non viene generato dal relativo costruttore. `MakeAndInitialize` consente a un componente di convalidare gli argomenti di costruzione tramite il metodo di `RuntimeClassInitialize`. Entrambi gli esempi definiscono un'interfaccia del logger di base e implementano tale interfaccia definendo una classe che scrive i messaggi nella console.
 
 > [!IMPORTANT]
-> Non è possibile usare il `new` operatore per creare un'istanza di componenti Windows Runtime C++ Template Library. Pertanto, è consigliabile usare sempre `Make` o `MakeAndInitialize` creare direttamente un'istanza di un componente.
+> Non è possibile usare l'operatore `new` per creare un' C++ istanza dei componenti della libreria di modelli Windows Runtime. È pertanto consigliabile utilizzare sempre `Make` o `MakeAndInitialize` per creare direttamente un'istanza di un componente.
 
-### <a name="to-create-and-instantiate-a-basic-logger-component"></a>Per creare e creare un'istanza di un componente di logger di base
+### <a name="to-create-and-instantiate-a-basic-logger-component"></a>Per creare e creare un'istanza di un componente logger di base
 
-1. In Visual Studio, creare un **applicazione Console Win32** progetto. Nome del progetto, ad esempio *WRLLogger*.
+1. In Visual Studio creare un progetto di **applicazione console Win32** . Assegnare un nome al progetto, ad esempio *WRLLogger*.
 
-2. Aggiungere un **Midl File (. idl)** file al progetto, denominare il file `ILogger.idl`e quindi aggiungere questo codice:
+2. Aggiungere un file di **file MIDL (IDL)** al progetto, denominare il file `ILogger.idl`e quindi aggiungere il codice seguente:
 
    [!code-cpp[wrl-logger-make#1](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]
 
-3. Usare il codice seguente sostituire il contenuto di `WRLLogger.cpp`.
+3. Usare il codice seguente per sostituire il contenuto di `WRLLogger.cpp`.
 
    [!code-cpp[wrl-logger-make#2](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]
 
-### <a name="to-handle-construction-failure-for-the-basic-logger-component"></a>Per gestire gli errori di costruzione per il componente di logger di base
+### <a name="to-handle-construction-failure-for-the-basic-logger-component"></a>Per gestire gli errori di costruzione per il componente logger di base
 
-1. Usare il codice seguente per sostituire la definizione del `CConsoleWriter` classe. Questa versione contiene un membro stringa privata variabile ed esegue l'override di `RuntimeClass::RuntimeClassInitialize` (metodo). `RuntimeClassInitialize` si verifica un errore se la chiamata a `SHStrDup` ha esito negativo.
+1. Usare il codice seguente per sostituire la definizione della classe `CConsoleWriter`. Questa versione include una variabile membro di stringa privata ed esegue l'override del metodo `RuntimeClass::RuntimeClassInitialize`. `RuntimeClassInitialize` ha esito negativo se la chiamata a `SHStrDup` ha esito negativo.
 
    [!code-cpp[wrl-logger-makeandinitialize#1](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]
 
-2. Usare il codice seguente per sostituire la definizione di `wmain`. Questa versione USA `MakeAndInitialize` per creare un'istanza di `CConsoleWriter` dell'oggetto e controlla il risultato HRESULT.
+2. Usare il codice seguente per sostituire la definizione di `wmain`. Questa versione USA `MakeAndInitialize` per creare un'istanza dell'oggetto `CConsoleWriter` e controlla il risultato HRESULT.
 
    [!code-cpp[wrl-logger-makeandinitialize#2](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]
 
 ## <a name="see-also"></a>Vedere anche
 
 [Libreria di modelli di Windows Runtime C++ (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
-[Microsoft::WRL::Make](make-function.md)<br/>
-[Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)
+[Microsoft:: WRL:: make](make-function.md)<br/>
+[Microsoft:: WRL::D etails:: MakeAndInitialize](makeandinitialize-function.md)

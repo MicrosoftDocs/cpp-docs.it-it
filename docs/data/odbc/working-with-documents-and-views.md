@@ -7,22 +7,22 @@ helpviewer_keywords:
 - views [C++], MFC
 - documents [C++], MFC
 ms.assetid: 349b142d-1c5a-4b99-9de4-241e41d3d2f1
-ms.openlocfilehash: 030ac53b924e4746bcd79e712313ce2f30b4198c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 452fb010705e808aabd2ad42d1a0b6ba1c5921ce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329751"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212368"
 ---
 # <a name="working-with-documents-and-views"></a>Gestione di documenti e visualizzazioni
 
-La libreria Microsoft Foundation Classes (MFC) si basa su un'architettura documento/visualizzazione per molte delle sue funzionalità. In genere, un documento archivia i dati e lo visualizza nell'area client di una finestra cornice e gestisce l'interazione dell'utente con i dati di una vista. La vista comunica con il documento per ottenere e aggiornare i dati. È possibile usare le classi di database con il framework o senza di essa.
+La libreria Microsoft Foundation Classes (MFC) si basa su un'architettura documento/visualizzazione per molte delle relative funzionalità. In genere, un documento archivia i dati e una vista la Visualizza all'interno dell'area client di una finestra cornice e gestisce l'interazione dell'utente con i dati. La visualizzazione comunica con il documento per ottenere e aggiornare i dati. È possibile utilizzare le classi di database con il Framework o senza di esso.
 
-Per altre informazioni sull'uso di classi di database in framework, vedere [MFC: Uso di classi di Database con documenti e visualizzazioni](../../data/mfc-using-database-classes-with-documents-and-views.md).
+Per ulteriori informazioni sull'utilizzo delle classi di database nel Framework, vedere [MFC: utilizzo di classi di database con documenti e visualizzazioni](../../data/mfc-using-database-classes-with-documents-and-views.md).
 
-Per impostazione predefinita, la creazione guidata applicazione MFC crea una struttura applicazione senza supporto del database. Tuttavia, è possibile selezionare le opzioni per includere supporto minime del database o un supporto più completo basato su form. Per altre informazioni sulle opzioni di creazione guidata applicazione, vedere [supporto di Database, creazione guidata applicazione MFC](../../mfc/reference/database-support-mfc-application-wizard.md).
+Per impostazione predefinita, la creazione guidata applicazione MFC crea un'applicazione Skeleton senza supporto per i database. Tuttavia, è possibile selezionare le opzioni per includere un supporto minimo per il database o un supporto basato su form più completo. Per ulteriori informazioni sulle opzioni della creazione guidata applicazione, vedere [supporto per database, creazione guidata applicazione MFC](../../mfc/reference/database-support-mfc-application-wizard.md).
 
-È anche possibile usare le classi di database senza utilizzare l'architettura documento/visualizzazione completa. Per altre informazioni, vedere [MFC: Utilizzo di classi di Database senza documenti e visualizzazioni](../../data/mfc-using-database-classes-without-documents-and-views.md).
+È inoltre possibile utilizzare le classi di database senza utilizzare l'architettura documento/visualizzazione completa. Per ulteriori informazioni, vedere [MFC: utilizzo di classi di database senza documenti e visualizzazioni](../../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::FactoryCacheFlags
 ms.assetid: 6f54258f-0144-4264-9608-414e5905f6fb
-ms.openlocfilehash: 8cf4af2ac0b4557fc6b175b84c47f83dd8a6e4ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 250c8c8e7ade72bd1a9cd63f0b515774058f0723
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398459"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214006"
 ---
 # <a name="factorycacheflags-enumeration"></a>Enumerazione FactoryCacheFlags
 
@@ -22,15 +22,15 @@ Determina se gli oggetti factory vengono memorizzati nella cache.
 enum FactoryCacheFlags;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, la factory dei criteri di memorizzazione nella cache è specificata come la [ModuleType](moduletype-enumeration.md) parametro di modello quando si crea un [modulo](module-class.md) oggetto. Per eseguire l'override di questo criterio, specificare una **FactoryCacheFlags** valore quando si crea un oggetto factory.
+Per impostazione predefinita, i criteri di memorizzazione nella cache di factory vengono specificati come parametro di modello [ModuleType](moduletype-enumeration.md) quando si crea un oggetto [modulo](module-class.md) . Per eseguire l'override di questo criterio, specificare un valore **FactoryCacheFlags** quando si crea un oggetto Factory.
 
 |||
 |-|-|
-|`FactoryCacheDefault`|I criteri di memorizzazione nella cache il `Module` oggetto viene usato.|
-|`FactoryCacheEnabled`|Abilita la memorizzazione nella cache di factory indipendentemente i `ModuleType` parametro di modello che viene usato per creare un `Module` oggetto.|
-|`FactoryCacheDisabled`|Disabilita la memorizzazione nella cache di factory indipendentemente i `ModuleType` parametro di modello che viene usato per creare un `Module` oggetto.|
+|`FactoryCacheDefault`|Vengono utilizzati i criteri di memorizzazione nella cache dell'oggetto `Module`.|
+|`FactoryCacheEnabled`|Abilita la memorizzazione nella cache della Factory indipendentemente dal parametro di modello `ModuleType` usato per creare un oggetto `Module`.|
+|`FactoryCacheDisabled`|Disabilita la memorizzazione nella cache di Factory indipendentemente dal parametro di modello `ModuleType` usato per creare un oggetto `Module`.|
 
 ## <a name="requirements"></a>Requisiti
 

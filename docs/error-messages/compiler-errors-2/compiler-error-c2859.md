@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2859
 ms.assetid: fcfbc58d-08f6-4752-9688-8aaac517e684
-ms.openlocfilehash: ac86f7411847fa4bca7623bbd821632277e9a5e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66aebe58853b5dee0caf3d5f7a44b03ee83c1cef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350413"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201773"
 ---
 # <a name="compiler-error-c2859"></a>Errore del compilatore C2859
 
-nome del file non è il file del tipo che è stato usato quando è stata creata questa intestazione precompilata, ricreare l'intestazione precompilata.
+FileName non è il file di tipo utilizzato al momento della creazione dell'intestazione precompilata, quindi ricreare l'intestazione precompilata.
 
-Database di progetto e dei file di intestazione precompilata devono essere creati insieme per garantire che le informazioni coerente. Ricompilare il progetto per ricreare l'intestazione precompilata.
+Il database del progetto e i file di intestazione precompilata devono essere creati insieme per garantire la coerenza delle informazioni. Ricompilare il progetto per ricreare l'intestazione precompilata.
 
 Per informazioni sulle intestazioni precompilate, vedere [/Y (intestazioni precompilate)](../../build/reference/y-precompiled-headers.md).

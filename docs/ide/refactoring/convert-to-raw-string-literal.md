@@ -2,12 +2,12 @@
 title: Converti in valore letterale stringa non elaborata
 ms.date: 11/16/2016
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
-ms.openlocfilehash: bf492e6796b9d2342b5952abb093bddd5ede114b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 5636e00bfe8655d84fb2e4b64e0391324ab35d7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692595"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171814"
 ---
 # <a name="convert-to-raw-string-literal"></a>Converti in valore letterale stringa non elaborata
 
@@ -17,7 +17,7 @@ ms.locfileid: "51692595"
 
 **Perché:** si potrebbero usare caratteri di escape doppi, ma questo spesso causa confusione e stringhe illeggibili.  I valori letterali stringa non elaborata rendono le stringhe molto più facili da leggere.
 
-**Come:**
+**Modalità:**
 
 1. Posizionare il cursore del mouse o del testo sulla stringa con caratteri di escape da convertire.
 

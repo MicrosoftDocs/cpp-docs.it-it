@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1351
 ms.assetid: 1f8502e4-1049-49c7-bbe3-fa101c79021e
-ms.openlocfilehash: 5ba34d07141ddef301f95de23bead654a14b677e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 079f17106f3515b332352c2370371e175e72d7a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329738"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203138"
 ---
 # <a name="fatal-error-c1351"></a>Errore irreversibile C1351
 
-> Errore durante il caricamento di dll '*dll*': versione non compatibile
+> errore durante il caricamento della dll '*dll*': versione non compatibile
 
-La versione errata di una DLL è stata trovata.
+È stata trovata una versione errata di una DLL.
 
-Ciò indica un problema con l'installazione e reinstallare Visual Studio.
+Ciò indica un problema con l'installazione di ed è necessario reinstallare Visual Studio.

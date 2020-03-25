@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-ms.openlocfilehash: 481920fa2d8c32bc872e7b8805188cc674e6fe28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afa81369b2cf329baae02bc1309587015946409
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205153"
 ---
 # <a name="compiler-error-c2482"></a>Errore del compilatore C2482
 
->«*identificatore*': l'inizializzazione dinamica dei dati di 'thread' non consentiti nel codice gestito o WinRT
+>'*Identifier*': l'inizializzazione dinamica dei dati ' thread ' non è consentita nel codice gestito/WinRT
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Nel gestito o WinRT code, le variabili dichiarate utilizzando il [declspec](../../cpp/thread.md) attributo modificatore di classe di archiviazione o il [thread_local](../../cpp/storage-classes-cpp.md#thread_local) identificatore classe di archiviazione non può essere inizializzato con un'espressione che richiede la valutazione in fase di esecuzione. È necessaria un'espressione statica per inizializzare `__declspec(thread)` o `thread_local` dati in questi ambienti di runtime.
+Nel codice gestito o WinRT, le variabili dichiarate tramite l'attributo del modificatore della classe di archiviazione [__declspec (thread)](../../cpp/thread.md) o l'identificatore della classe di archiviazione [thread_local](../../cpp/storage-classes-cpp.md#thread_local) non possono essere inizializzate con un'espressione che richiede la valutazione in fase di esecuzione. È necessaria un'espressione statica per inizializzare `__declspec(thread)` o `thread_local` i dati in questi ambienti di Runtime.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2482 in gestiti (**/clr**) e WinRT (**/ZW**) codice:
+L'esempio seguente genera C2482 in codice gestito ( **/CLR**) e in WinRT ( **/ZW**):
 
 ```cpp
 // C2482.cpp
@@ -36,4 +36,4 @@ int j = j;   // OK in C++; C error
 Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
 
-Per risolvere questo problema, inizializzare l'archiviazione thread-local tramite una costante **constexpr**, o un'espressione statica. Eseguire separatamente qualsiasi inizializzazione specifico del thread.
+Per risolvere il problema, inizializzare l'archiviazione locale del thread utilizzando una costante, **constExpr**o un'espressione statica. Eseguire l'inizializzazione specifica del thread separatamente.

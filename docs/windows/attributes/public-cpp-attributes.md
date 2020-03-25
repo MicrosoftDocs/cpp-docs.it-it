@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: 274af011f2d61521885e93d4ce1eddad149748ad
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6912117ad05d6b608c45425ebec27cd49c0e5dc4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514168"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214719"
 ---
 # <a name="public-c-attributes"></a>public (attributi C++)
 
@@ -23,7 +23,7 @@ Assicura che un typedef entri nella libreria dei tipi anche se non vi viene fatt
 [public]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'attributo **public** C++ ha la stessa funzionalità dell'attributo MIDL [pubblico](/windows/win32/Midl/public) .
 
@@ -53,8 +53,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**Si applica a**|**typedef**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|Nessuna|
+|**Attributi obbligatori**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

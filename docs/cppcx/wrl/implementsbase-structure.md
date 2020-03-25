@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: 5e1d0376a8b2646f12064105af7bcf555f4a8e31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398240"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213889"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase (struttura)
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,11 +24,11 @@ Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
 struct ImplementsBase;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Usato per convalidare i tipi di parametro di modello in [implementa la struttura](implements-structure.md).
+Utilizzato per convalidare i tipi di parametro di modello nella [struttura Implements](implements-structure.md).
 
-Il **ImplementsBase** struttura è vuota per impostazione predefinita.
+La struttura **ImplementsBase** è vuota dalla progettazione.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -38,7 +38,7 @@ Il **ImplementsBase** struttura è vuota per impostazione predefinita.
 
 **Intestazione:** Implements. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
 ## <a name="see-also"></a>Vedere anche
 

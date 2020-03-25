@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 745348e81888b5a87c57fbb99d397fcd423c3ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd06f71bc4d8097366dc0e87d7ff92c5a12a790
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398212"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213863"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList (struttura)
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,23 +28,23 @@ struct InterfaceList;
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Un nome di interfaccia. la prima interfaccia nell'elenco ricorsiva.
+Nome di interfaccia; prima interfaccia nell'elenco ricorsivo.
 
 *U*<br/>
-Un nome di interfaccia. le interfacce rimanenti nell'elenco ricorsiva.
+Nome di interfaccia; interfacce rimanenti nell'elenco ricorsivo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Utilizzato per creare un elenco ricorsivo di interfacce.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`FirstT`|Sinonimo di parametro di modello *T*.|
-|`RestT`|Sinonimo di parametro di modello *U*.|
+|`FirstT`|Sinonimo del parametro di modello *T*.|
+|`RestT`|Sinonimo del parametro di modello *U*.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -54,7 +54,7 @@ Utilizzato per creare un elenco ricorsivo di interfacce.
 
 **Intestazione:** Implements. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
 ## <a name="see-also"></a>Vedere anche
 

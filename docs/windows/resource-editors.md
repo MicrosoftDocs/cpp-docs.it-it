@@ -21,16 +21,16 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445002"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167888"
 ---
 # <a name="resource-editors-c"></a>Editor di risorse (C++)
 
-Un editor di risorse è un ambiente specializzato per la creazione o la modifica di risorse incluse in un progetto di Visual Studio. Gli editor di risorse di Visual Studio condividono tecniche e interfacce in modo da semplificare e velocizzare la creazione e la modifica delle risorse delle applicazioni. Gli editor di risorse consentono di visualizzare e modificare le risorse nell'editor appropriato e di visualizzare in anteprima le risorse.
+Un editor di risorse è un ambiente specializzato per la creazione o la modifica di risorse incluse in un progetto di Visual Studio. Gli editor di risorse di Visual Studio condividono tecniche e interfacce in modo da semplificare e velocizzare la creazione e la modifica delle risorse delle applicazioni. Gli editor di risorse consentono di visualizzare e modificare risorse nell'editor appropriato e di visualizzare in anteprima le risorse.
 
 Quando si crea o si apre una risorsa, si apre automaticamente l'editor appropriato.
 
@@ -42,7 +42,7 @@ Quando si crea o si apre una risorsa, si apre automaticamente l'editor appropria
 |[Editor tasti di scelta rapida](../windows/accelerator-editor.md)|Tabelle dei tasti di scelta C++ rapida nei progetti di Visual Studio.|
 |[Binary Editor](binary-editor.md)|Informazioni sui dati binari e risorse personalizzate in progetti Visual C++, Visual Basic o Visual C#.|
 |[Editor finestre](../windows/dialog-editor.md)|Finestre di dialogo nei progetti C++ di Visual Studio.|
-|[Image Editor](../windows/image-editor-for-icons.md)|Bitmap, icone, cursori e altri file di immagine in progetti Visual C++, Visual Basic o Visual C#.|
+|[Editor immagini](../windows/image-editor-for-icons.md)|Bitmap, icone, cursori e altri file di immagine in progetti Visual C++, Visual Basic o Visual C#.|
 |[Editor dei menu](../windows/menu-editor.md)|Risorse dei menu nei progetti C++ di Visual Studio.|
 |[Editor barra multifunzione](../mfc/ribbon-designer-mfc.md)|Risorse della barra multifunzione in progetti MFC.|
 |[Editor stringhe](../windows/string-editor.md)|Tabelle di stringhe nei progetti C++ di Visual Studio.|
@@ -73,7 +73,7 @@ Le risorse possono anche essere modificate all'esterno del progetto senza aprire
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Per visualizzare una risorsa Win32 in un editor di risorse
 
-1. Passare alla **visualizzazione**menu  > **other Windows** > **visualizzazione risorse**.
+1. Passare alla **visualizzazione** menu > **altre** **visualizzazione risorse** > Windows.
 
 1. Se la finestra **visualizzazione risorse** non è la finestra in primo piano, selezionare la scheda **visualizzazione risorse** per portarla nella parte superiore.
 
@@ -118,13 +118,13 @@ Le risorse seguenti non forniscono un'anteprima visiva: acceleratore, manifesto,
 1. Nella [finestra Proprietà](/visualstudio/ide/reference/properties-window)selezionare il pulsante **pagine delle proprietà** .
 
    > [!TIP]
-   > Usare un tasto di scelta rapida, passare alla **visualizzazione**menu  > **pagine delle proprietà**.
+   > Utilizzare un collegamento, passare alla **visualizzazione** menu > **pagine delle proprietà**.
 
    Viene visualizzata la pagina delle **Proprietà** per la risorsa che visualizza un'anteprima di tale risorsa. È possibile utilizzare i tasti freccia **su** e **giù** per spostarsi nel controllo albero **visualizzazione risorse** o nella finestra del documento. La pagina delle **Proprietà** rimarrà aperta e mostrerà tutte le risorse che hanno lo stato attivo e che possono essere visualizzate in anteprima.
 
 ## <a name="requirements"></a>Requisiti
 
-Nessuno
+nessuno
 
 ## <a name="see-also"></a>Vedere anche
 

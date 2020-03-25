@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 27e15f8dec693c6b7e70f3e03f274dcbc4f04677
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492875"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169019"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipi di file creati per i C++ progetti di Visual Studio
 
@@ -31,7 +31,7 @@ Molti tipi di file sono associati ai progetti di Visual Studio per le applicazio
 
 - [File di intestazione e di origine di un controllo o programma ATL](atl-program-or-control-source-and-header-files.md)
 
-- [File di intestazione e di origine di un controllo o di un programma MFC](mfc-program-or-control-source-and-header-files.md)
+- [File di intestazione e di origine di un controllo o programma MFC](mfc-program-or-control-source-and-header-files.md)
 
 - [File di intestazione precompilata](../creating-precompiled-header-files.md)
 
@@ -47,24 +47,24 @@ I progetti di solito producono un file EXE o una DLL I progetti possono dipender
 
 La tabella seguente illustra i file comuni in un progetto di Visual Studio e li identifica con l'estensione di file.
 
-|Estensione di file|Type|Sommario|
+|Estensione file|Type|Sommario|
 |--------------------|----------|--------------|
-|asmx|Origine|File di distribuzione.|
-|asp|Source|File Active Server Page.|
-|atp|Progetto|File di progetto del modello di applicazione.|
+|asmx|Source (Sorgente)|File di distribuzione.|
+|.asp|Source (Sorgente)|File Active Server Page.|
+|atp|Project|File di progetto del modello di applicazione.|
 |bmp, dib, gif, jpg, jpe, png|Risorsa|File di immagine generali.|
 |bsc|Compilazione|File di codice del browser.|
-|.cpp, .c|Source|File di codice sorgente principali per l'applicazione.|
+|.cpp, .c|Source (Sorgente)|File di codice sorgente principali per l'applicazione.|
 |cur|Risorsa|File grafico bitmap di cursore.|
-|dbp|Progetto|File di progetto di database.|
-|disco|Source|File di documento di individuazione dinamica. Gestisce l'individuazione di servizi Web XML.|
-|exe, dll|Progetto|File eseguibili o di libreria a collegamento dinamico.|
-|h|Source|File di intestazione o di inclusione.|
+|dbp|Project|File di progetto di database.|
+|disco|Source (Sorgente)|File di documento di individuazione dinamica. Gestisce l'individuazione di servizi Web XML.|
+|exe, dll|Project|File eseguibili o di libreria a collegamento dinamico.|
+|.h|Source (Sorgente)|File di intestazione o di inclusione.|
 |htm, html, xsp, asp, htc, hta, xml|Risorsa|File Web comuni.|
-|HxC|Progetto|File di progetto della Guida.|
+|HxC|Project|File di progetto della Guida.|
 |ico|Risorsa|File grafico bitmap di icona.|
 |idb|Compilazione|Il file di stato, contenente le informazioni sulle dipendenze tra i file di origine e le definizioni delle classi. Può essere usato dal compilatore durante la compilazione incrementale. Per specificare il nome del file con estensione idb, usare l'opzione [/Fd](fd-program-database-file-name.md) del compilatore.|
-|idl|Compilazione|File del linguaggio di definizione dell'interfaccia. Per altre informazioni, vedere [Interface Definition (IDL) File](/windows/win32/Rpc/the-interface-definition-language-idl-file) (File di definizione dell'interfaccia (IDL)) in Windows SDK.|
+|.idl|Compilazione|File del linguaggio di definizione dell'interfaccia. Per altre informazioni, vedere [Interface Definition (IDL) File](/windows/win32/Rpc/the-interface-definition-language-idl-file) (File di definizione dell'interfaccia (IDL)) in Windows SDK.|
 |ilk|Collegamento|File di collegamento incrementale. Per ulteriori informazioni, vedere [/Incremental](incremental-link-incrementally.md).|
 |map|Collegamento|File di testo contenente informazioni sul linker. Per denominare il file con estensione map, usare l'opzione [/Fm](fm-name-mapfile.md) del compilatore. Per ulteriori informazioni, vedere [/Map](map-generate-mapfile.md).|
 |mfcribbon-ms|Risorsa|Un file di risorse che contiene il codice XML che definisce i pulsanti, i controlli e gli attributi MFC nella barra multifunzione. Per altre informazioni, vedere [Ribbon Designer](../../mfc/ribbon-designer-mfc.md).|
@@ -74,16 +74,16 @@ La tabella seguente illustra i file comuni in un progetto di Visual Studio e li 
 |sbr|Compilazione|File di origine intermedio del browser. File di input per [BSCMAKE](bscmake-options.md).|
 |sln|Soluzione|File di [soluzione](/visualstudio/ide/solutions-and-projects-in-visual-studio) .|
 |suo|Soluzione|File di opzioni di soluzione.|
-|txt|Risorsa|File di testo, in genere il file Readme.|
-|vap|Progetto|File di progetto di Visual Studio Analyzer.|
+|.txt|Risorsa|File di testo, in genere il file Readme.|
+|vap|Project|File di progetto di Visual Studio Analyzer.|
 |vbg|Soluzione|File del gruppo di progetti compatibili.|
-|vbp, vip, vbproj|Progetto|File di progetto Visual Basic.|
-|.vcxitems|Progetto|Progetto elementi condivisi per condividere file tra più progetti di C++. Per ulteriori informazioni, vedere [file di progetto e di soluzione](project-and-solution-files.md).|
-|vcxproj|Progetto|File di progetto di Visual Studio. Per ulteriori informazioni, vedere [file di progetto e di soluzione](project-and-solution-files.md).|
-|vcxproj.filters|Progetto|Utilizzato quando si utilizza Esplora soluzioni per aggiungere un file a un progetto. Il file dei filtri definisce la posizione nella visualizzazione albero Esplora soluzioni per aggiungere il file, in base all'estensione del nome file.|
-|vdproj|Progetto|File di progetto di distribuzione Visual Studio.|
-|vmx|Progetto|File di progetto macro.|
-|vup|Progetto|File di progetto di utilità.|
+|vbp, vip, vbproj|Project|File di progetto Visual Basic.|
+|.vcxitems|Project|Progetto elementi condivisi per condividere file tra più progetti di C++. Per ulteriori informazioni, vedere [file di progetto e di soluzione](project-and-solution-files.md).|
+|vcxproj|Project|File di progetto di Visual Studio. Per ulteriori informazioni, vedere [file di progetto e di soluzione](project-and-solution-files.md).|
+|vcxproj.filters|Project|Utilizzato quando si utilizza Esplora soluzioni per aggiungere un file a un progetto. Il file dei filtri definisce la posizione nella visualizzazione albero Esplora soluzioni per aggiungere il file, in base all'estensione del nome file.|
+|vdproj|Project|File di progetto di distribuzione Visual Studio.|
+|vmx|Project|File di progetto macro.|
+|vup|Project|File di progetto di utilità.|
 
 Per informazioni sugli altri file associati a Visual Studio, vedere [Tipi di file ed estensioni in Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 

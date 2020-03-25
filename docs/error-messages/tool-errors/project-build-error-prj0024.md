@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0024
 ms.assetid: 8bde6368-6c1b-4e04-bc5e-3c6d0b8fa1d7
-ms.openlocfilehash: 645b898bdffcc6d7b397c25eb3c41cea25cb361f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcfdcce54618acca0e22daa54e95083cf3ee9d50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384103"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192614"
 ---
 # <a name="project-build-error-prj0024"></a>Errore di compilazione progetto PRJ0024
 
-> Percorso Unicode '*percorso*' non può essere tradotto in tabella codici ANSI dell'utente.
+> Impossibile convertire il percorso Unicode '*path*' nella tabella codici ANSI dell'utente.
 
-*percorso* è la versione originale di Unicode della stringa di percorso. Questo errore può verificarsi nei casi in cui è presente un percorso di Unicode che non possa essere convertito direttamente ad ANSI per la tabella codici del sistema corrente.
+*path* è la versione Unicode originale della stringa di percorso. Questo errore può verificarsi nei casi in cui è presente un percorso Unicode che non può essere convertito direttamente in ANSI per la tabella codici di sistema corrente.
 
-Questo errore può verificarsi se si lavora con un progetto che è stato sviluppato in un sistema con una tabella codici non presente nel computer in uso.
+Questo errore può verificarsi se si utilizza un progetto sviluppato in un sistema utilizzando una tabella codici non presente nel computer.
 
-La risoluzione di questo errore consiste nell'aggiornare il percorso da usare testo ANSI o per installare la tabella codici nel computer e impostarlo come impostazione predefinita del sistema.
+La risoluzione di questo errore consiste nell'aggiornare il percorso in modo da usare il testo ANSI o per installare la tabella codici nel computer e impostarla come impostazione predefinita del sistema.

@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421317"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214929"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributi di C++ per COM e .NET
 
@@ -78,7 +78,7 @@ Alcuni progetti contengono più file IDL indipendenti. Questi vengono usati per 
 
 Inoltre, in Visual C++ linker tutte le informazioni sugli attributi correlati a IDL vengono restituite a un singolo file MIDL. Non vi sarà alcun modo per generare due librerie dei tipi da un singolo progetto.
 
-## <a name="contexts"></a>Contesti di attributi
+## <a name="attribute-contexts"></a><a name="contexts"></a>Contesti di attributi
 
 C++gli attributi possono essere descritti usando quattro campi di base: la destinazione a cui possono essere applicati (**si applica a**), se sono ripetibili o meno (**ripetibili**), la presenza richiesta di altri attributi (**attributi obbligatori**) e incompatibilità con altri attributi (**attributi non validi**). Questi campi sono elencati in una tabella associata nell'argomento di riferimento di ogni attributo. Ognuno di questi campi è descritto di seguito.
 

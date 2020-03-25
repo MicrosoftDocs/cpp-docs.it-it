@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e2bb01e6acb9298b08fddc3117ec93dd7c0c2417
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447448"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212024"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 OLE DB provider e consumer utilizzano strutture `DBPROPSET` per passare matrici di strutture di `DBPROP`. Ogni struttura di `DBPROP` rappresenta una singola proprietà che può essere impostata.
 
-## <a name="addproperty"></a>CDBPropSet:: AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: AddProperty
 
 Aggiunge una proprietà al set di proprietà.
 
@@ -124,7 +124,7 @@ in Valore di valuta CY utilizzato per inizializzare il valore della proprietà p
 
 **true** se la proprietà è stata aggiunta correttamente. In caso contrario, **false**.
 
-## <a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
 
 Costruttore. Inizializza i campi `rgProperties`, `cProperties`e `guidPropertySet` della struttura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
@@ -146,7 +146,7 @@ in GUID utilizzato per inizializzare il campo `guidPropertySet`.
 *propset*<br/>
 [in] Altro oggetto `CDBPropSet` per la costruzione di copia.
 
-## <a name="setguid"></a>CDBPropSet:: Seguid
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: Seguid
 
 Imposta il campo `guidPropertySet` nella struttura `DBPROPSET`.
 
@@ -165,7 +165,7 @@ in GUID utilizzato per impostare il campo `guidPropertySet` della struttura [DBP
 
 Questo campo può essere impostato anche dal [Costruttore](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a>CDBPropSet:: operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet:: operator =
 
 Assegna il contenuto di un set di proprietà a un altro set di proprietà.
 

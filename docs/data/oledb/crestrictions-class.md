@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361880"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211302"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 
-Una classe generica che consente di specificare le restrizioni per i set di righe dello schema.
+Classe generica che consente di specificare restrizioni per i set di righe dello schema.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,29 +35,29 @@ class CRestrictions :
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-La classe utilizzata per la funzione di accesso.
+Classe utilizzata per la funzione di accesso.
 
 *nRestrictions*<br/>
-Il numero di colonne di restrizione per il set di righe dello schema.
+Numero di colonne di restrizione per il set di righe dello schema.
 
 *pguid*<br/>
-Puntatore al GUID dello schema.
+Puntatore al GUID per lo schema.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atldbsch. h
+**Intestazione:** Atldbsch. h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
 |||
 |-|-|
-|[Apri](#open)|Restituisce un risultato impostate in base alle restrizioni fornito dall'utente.|
+|[Apri](#open)|Restituisce un set di risultati in base alle restrizioni fornite dall'utente.|
 
-## <a name="open"></a> CRestrictions:: Open
+## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions:: Open
 
-Restituisce un risultato impostate in base alle restrizioni fornito dall'utente.
+Restituisce un set di risultati in base alle restrizioni fornite dall'utente.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -75,27 +75,27 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parametri
 
-*session*<br/>
-[in] Specifica un oggetto sessione esistente utilizzato per la connessione all'origine dati.
+*sessione*<br/>
+in Specifica un oggetto sessione esistente usato per la connessione all'origine dati.
 
 *lpszParam*<br/>
-[in] Specifica le restrizioni nel set di righe dello schema.
+in Specifica le restrizioni per il set di righe dello schema.
 
 *bBind*<br/>
-[in] Specifica se associare automaticamente la mappa delle colonne. Il valore predefinito è **true**, in modo che la mappa delle colonne deve essere associato automaticamente. L'impostazione *bBind* al **false** impedisce l'associazione automatica del mapping di colonna in modo che è possibile associare manualmente. (Associazione manuale è di particolare interesse per gli utenti OLAP).
+in Specifica se associare automaticamente la mappa delle colonne. Il valore predefinito è **true**, che determina l'associazione automatica della mappa delle colonne. Se si imposta *bBind* su **false** , viene impedita l'associazione automatica della mappa delle colonne, in modo che sia possibile eseguire il binding manualmente. (L'associazione manuale è di particolare interesse per gli utenti OLAP).
 
 ### <a name="return-value"></a>Valore restituito
 
-Uno dei valori di HRESULT standard.
+Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-È possibile specificare un massimo di sette restrizioni su un set di righe dello schema.
+È possibile specificare un massimo di sette restrizioni per un set di righe dello schema.
 
-Visualizzare [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) per informazioni sulle restrizioni definite in ogni set di righe dello schema.
+Per informazioni sulle restrizioni definite su ogni set di righe dello schema, vedere [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classi Rowset dello schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

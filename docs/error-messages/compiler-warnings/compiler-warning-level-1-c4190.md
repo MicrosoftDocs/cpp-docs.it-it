@@ -1,25 +1,25 @@
 ---
-title: Compilatore Warning (level 1) C4190
+title: Avviso del compilatore (livello 1) C4190
 ms.date: 11/04/2016
 f1_keywords:
 - C4190
 helpviewer_keywords:
 - C4190
 ms.assetid: a4d0ad93-a19a-4063-addd-36d605831567
-ms.openlocfilehash: 05984594a57878aad8037861a15ac9284ff65192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d110aa70a470382e274546e95599804fa3bc7d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386499"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199875"
 ---
-# <a name="compiler-warning-level-1-c4190"></a>Compilatore Warning (level 1) C4190
+# <a name="compiler-warning-level-1-c4190"></a>Avviso del compilatore (livello 1) C4190
 
-'identifier1' ha specificato un collegamento C, ma restituisce tipi definiti dall'utente 'identifier2' che è incompatibile con C
+' identificatore1' ha un collegamento C specificato, ma restituisce il tipo definito dall'utente ' identifier2' che non è compatibile con C
 
-Una funzione o un puntatore a funzione dispone di un tipo definito dall'utente (tipo definito dall'utente, ovvero una classe, struttura, enum o unione) come tipo restituito e `extern` collegamento "C". Tale operazione è valida se:
+Una funzione o un puntatore a funzione ha un tipo definito dall'utente (tipo definito dall'utente, ovvero una classe, una struttura, un'enumerazione o un'Unione) come tipo restituito e `extern` collegamento "C". Questo è valido se:
 
-- Tutte le chiamate a questa funzione si verificano da C++.
+- Tutte le chiamate a questa funzione si C++verificano da.
 
 - La definizione della funzione è in C++.
 

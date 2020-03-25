@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2242
 ms.assetid: e1b687ed-4460-4c26-9f7e-c43e65c6dd65
-ms.openlocfilehash: 12c472c02fb2ff5802562bfa4de81c6910a36bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3b455c3e3787a6265ceadb2dfcaba0503d76f23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206504"
 ---
 # <a name="compiler-error-c2242"></a>Errore del compilatore C2242
 

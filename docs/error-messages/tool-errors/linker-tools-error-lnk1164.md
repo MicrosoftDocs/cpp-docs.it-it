@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1164
 ms.assetid: da89765c-affa-4f88-b170-6d6b19a577cf
-ms.openlocfilehash: 8685a9e0eb356719eaab129af9df9a1cc0ebb085
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f32fbd455faff449f57cfb9bb38009b03005913
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254961"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184034"
 ---
 # <a name="linker-tools-error-lnk1164"></a>Errore degli strumenti del linker LNK1164
 
-maggiore del valore di /ALIGN di allineamento sezione sezione (number)
+allineamento della sezione di sezione (numero) maggiore del valore di/ALIGN
 
-La dimensione di allineamento per la sezione specificata nel file oggetto supera il valore specificato con il [/align](../../build/reference/align-section-alignment.md) opzione. Il **/align** valore deve essere una potenza di 2 e deve essere uguale o superiore di allineamento della sezione specificato nel file oggetto.
+Le dimensioni di allineamento per la sezione specificata nel file oggetto superano il valore specificato con l'opzione [/align](../../build/reference/align-section-alignment.md) . Il valore **/align** deve essere una potenza di 2 e deve essere uguale o superiore all'allineamento della sezione specificato nel file oggetto.
 
-Entrambi ricompilare con un più piccolo dell'allineamento delle sezioni o aumentare la **/align** valore.
+Ricompilare con un allineamento di sezione più piccolo o aumentare il valore di **/align** .

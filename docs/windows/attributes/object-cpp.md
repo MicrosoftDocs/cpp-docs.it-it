@@ -1,17 +1,17 @@
 ---
-title: oggetto (attributo COM C++)
+title: Object (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.object
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4545d899c13a1eabf8ea5fb6fe3918fb5f05b626
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214676"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -23,15 +23,15 @@ Identifica un'interfaccia personalizzata.
 [object]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando precede una definizione di interfaccia, il **oggetto** C++ attributo causa l'interfaccia da inserire nel file con estensione idl come un'interfaccia personalizzata.
+Quando si precede una definizione di interfaccia, l'attributo dell' **oggetto** C++ causa l'inserimento dell'interfaccia nel file con estensione IDL come interfaccia personalizzata.
 
-Qualsiasi interfaccia contrassegnata con l'oggetto deve ereditare da `IUnknown`. Questa condizione viene soddisfatta se una delle interfacce di base ereditare `IUnknown`. Se nessuna interfaccia di base non eredita da `IUnknown`, il compilatore genererà l'interfaccia contrassegnata con **oggetto** da cui derivare `IUnknown`.
+Qualsiasi interfaccia contrassegnata con l'oggetto deve ereditare da `IUnknown`. Questa condizione viene soddisfatta se una qualsiasi delle interfacce di base eredita da `IUnknown`. Se nessuna interfaccia di base eredita da `IUnknown`, il compilatore provocherà la derivazione dell'interfaccia contrassegnata con l' **oggetto** da `IUnknown`.
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [nonbrowsable](nonbrowsable.md) per un esempio di come usare **oggetto**.
+Per un esempio su come usare l' **oggetto**, vedere [nonbrowsable](nonbrowsable.md) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,7 +41,7 @@ Visualizzare [nonbrowsable](nonbrowsable.md) per un esempio di come usare **ogge
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

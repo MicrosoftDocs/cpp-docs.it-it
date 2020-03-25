@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534be9e3873276313335ca921264be92c9259b93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400214"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165743"
 ---
 # <a name="compiler-error-c3768"></a>Errore del compilatore C3768
 
-> non è possibile accettare l'indirizzo di una funzione vararg virtuale in codice gestito pure
+> Impossibile prendere l'indirizzo di una funzione vararg virtuale in codice gestito pure
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
+L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e non è supportata in visual studio 2017.
 
-Durante la compilazione con **/clr: pure**, è possibile accettare l'indirizzo di una macchina `vararg` (funzione).
+Quando si esegue la compilazione con **/CLR: pure**, non è possibile usare l'indirizzo di una funzione `vararg` virtuale.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3768:
+L'esempio seguente genera l'C3768:
 
 ```cpp
 // C3768.cpp

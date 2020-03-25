@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4158
 ms.assetid: 6513c6b9-6772-4849-b96c-5bb093d54de6
-ms.openlocfilehash: a290762a3b3ae4a86d6490cd2e13325d0b693112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca7dabd5a089f41353fb63378b07b5ffc81d5295
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391829"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176182"
 ---
 # <a name="compiler-warning-level-1-c4158"></a>Avviso del compilatore (livello 1) C4158
 
 > verrà usato #pragma pointers_to_members(full_generality, inheritance)
 
-Oggetto **#pragma pointers_to_members (** *singolo* &#124; *più* &#124; *virtuale* **)** è stato generato senza un oggetto associato **pointers_to_members (full_generality) #pragma**.
+Un **#pragma pointers_to_members (** *singolo* &#124; *multiplo* &#124; *virtuale* **)** è stato emesso senza una **pointers_to_members di #pragma associata (full_generality)** .

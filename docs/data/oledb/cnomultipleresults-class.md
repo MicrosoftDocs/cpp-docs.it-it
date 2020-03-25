@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
-ms.openlocfilehash: 59b7b35c350a37f13e1f253bc1430d69521e4fa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 793b820264d001fbfbf7920fd322a55b98e90f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230386"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211718"
 ---
 # <a name="cnomultipleresults-class"></a>Classe CNoMultipleResults
 
-Utilizzato come argomento di modello (*TMultiple*) per [CCommand](../../data/oledb/ccommand-class.md) per creare un comando ottimizzato che gestisce un singolo risultato set.
+Usato come argomento di modello (*TMultiple*) per [CCommand](../../data/oledb/ccommand-class.md) per creare un comando ottimizzato che gestisce un singolo set di risultati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,9 +25,9 @@ Utilizzato come argomento di modello (*TMultiple*) per [CCommand](../../data/ole
 class CNoMultipleResults
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Se si vuole che un comando gestisca più set di risultati, usare [CMultipleResults](../../data/oledb/cmultipleresults-class.md) invece.
+Se si desidera che un comando gestisca più set di risultati, utilizzare invece [CMultipleResults](../../data/oledb/cmultipleresults-class.md) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -35,5 +35,5 @@ Se si vuole che un comando gestisca più set di risultati, usare [CMultipleResul
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

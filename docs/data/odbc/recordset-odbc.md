@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: b043b08e13611b87bbffbe9dfb3255d5520e3359
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 011191b99170b8a8338b5ca1a440a32404c4d793
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707827"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212823"
 ---
 # <a name="recordset-odbc"></a>Recordset (ODBC)
 
@@ -26,7 +26,7 @@ Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC
 
 Un oggetto [CRecordset](../../mfc/reference/crecordset-class.md) rappresenta un set di record selezionati da un'origine dati. I record possono provenire da:
 
-- Una tabella.
+- Tabella.
 
 - Una query.
 
@@ -37,7 +37,7 @@ Un esempio di recordset basato su una tabella è "tutti i clienti", che accede a
 > [!NOTE]
 >  Alcuni driver ODBC supportano le viste del database. Una vista, in questo senso, è una query originariamente creata l'istruzione SQL `CREATE VIEW`.
 
-##  <a name="_core_recordset_capabilities"></a> Funzionalità dei recordset
+##  <a name="recordset-capabilities"></a><a name="_core_recordset_capabilities"></a> Funzionalità dei recordset
 
 Tutti gli oggetti recordset condividono le funzionalità seguenti:
 
@@ -51,7 +51,7 @@ Tutti gli oggetti recordset condividono le funzionalità seguenti:
 
 - È possibile [parametrizzare](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) il recordset per qualificare la selezione del recordset in fase di esecuzione.
 
-##  <a name="_core_snapshots_and_dynasets"></a> Snapshot e dynaset
+##  <a name="snapshots-and-dynasets"></a><a name="_core_snapshots_and_dynasets"></a> Snapshot e dynaset
 
 Esistono due tipi principali di recordset: [snapshot](../../data/odbc/snapshot.md) e [dynaset](../../data/odbc/dynaset.md). Entrambi sono supportati dalla classe `CRecordset`. Anche se entrambi condividono le caratteristiche comuni di tutti i recordset, ciascuno estende le funzionalità comuni in un modo specifico. Gli snapshot forniscono una vista statica dei dati e sono utili per i report e altre situazioni in cui si vuole un'istantanea dei dati esistenti in un determinato momento. I dynaset sono utili quando si vuole che gli aggiornamenti apportati da altri utenti siano visibili nel recordset senza dover ripetere una query o aggiornare il recordset. Gli snapshot e dynaset possono essere aggiornabili o di sola lettura. Per visualizzare i record aggiunti o eliminati da altri utenti, chiamare [CRecordset:: Requery](../../mfc/reference/crecordset-class.md#requery).
 
@@ -64,11 +64,11 @@ Esistono due tipi principali di recordset: [snapshot](../../data/odbc/snapshot.m
     > [!NOTE]
     >  Per informazioni sui requisiti dei driver ODBC per il supporto dei dynaset, vedere [ODBC](../../data/odbc/odbc-basics.md). Per un elenco dei driver ODBC inclusi in questa versione di Visual C++ e informazioni su come ottenere driver aggiuntivi, vedere [Elenco dei driver ODBC](../../data/odbc/odbc-driver-list.md).
 
-##  <a name="_core_your_recordsets"></a> Recordset personalizzati
+##  <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> Recordset personalizzati
 
-Per ogni singola tabella, vista o stored procedure a cui si vuole accedere, in genere si definisce una classe derivata da `CRecordset`. L'eccezione è un join di database, in cui un recordset rappresenta le colonne di due o più tabelle. Quando si deriva una classe recordset, si abilita il meccanismo di trasferimento di campi di record (RFX) o trasferimento di massa di campi di record (RFX di massa), che sono simili al meccanismo Dialog Data Exchange (DDX). RFX e RFX di massa semplificano il trasferimento dei dati dall'origine dati nel recordset. RFX trasferisce inoltre i dati dal recordset nell'origine dati. Per altre informazioni, vedere [Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md) e [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Per ogni singola tabella, vista o stored procedure a cui si vuole accedere, in genere si definisce una classe derivata da `CRecordset`. (L'eccezione è un join del database, in cui un recordset rappresenta le colonne di due o più tabelle). Quando si deriva una classe recordset, si Abilita il meccanismo RFX (record Field Exchange) o il meccanismo RFX (Bulk Record Field Exchange), che è simile al meccanismo DDX (Dialog Data Exchange). RFX e RFX di massa semplificano il trasferimento dei dati dall'origine dati nel recordset. RFX trasferisce inoltre i dati dal recordset nell'origine dati. Per ulteriori informazioni, vedere [trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md) e [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Un oggetto recordset consente di accedere a tutti i record selezionati. È possibile scorrere i record selezionati usando le funzioni membro `CRecordset`, come `MoveNext` e `MovePrev`. Allo stesso tempo, un oggetto recordset rappresenta solo uno dei record selezionati, il record corrente. È possibile esaminare i campi del record corrente mediante la dichiarazione di variabili membro della classe recordset, che corrispondono alle colonne della tabella o dei record risultanti dalla query sul database. Per informazioni sui membri dati dei recordset, vedere [Recordset: architettura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
+Un oggetto recordset consente di accedere a tutti i record selezionati. È possibile scorrere i record selezionati usando le funzioni membro `CRecordset`, come `MoveNext` e `MovePrev`. Allo stesso tempo, un oggetto recordset rappresenta solo uno dei record selezionati, il record corrente. È possibile esaminare i campi del record corrente mediante la dichiarazione di variabili membro della classe recordset, che corrispondono alle colonne della tabella o dei record risultanti dalla query sul database. Per informazioni sui membri dati del recordset, vedere [Recordset: Architecture (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
 
 Negli argomenti elencati di seguito vengono forniti dettagli sull'uso degli oggetti recordset. Gli argomenti sono elencati per categorie funzionali e organizzati in modo da consentirne la lettura in sequenza.
 
@@ -82,21 +82,21 @@ Negli argomenti elencati di seguito vengono forniti dettagli sull'uso degli ogge
 
 - [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
-- [Recordset: segnalibri e posizione assoluta (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
+- [Recordset: bookmark e absolute position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-- [Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+- [Recordset: applicazione di filtri ai record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [Recordset: ordinamento di record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [Recordset: ordinamento dei record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [Recordset: parametrizzazione di un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [Recordset: applicazione di parametri a un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Argomenti relativi alle operazioni di modifica dei recordset
 
 - [Recordset: aggiunta, aggiornamento ed eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-- [Recordset: blocco di record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+- [Recordset: blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [Recordset: ripetizione di una query su un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [Recordset: ripetizione di una query in un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>Argomenti relativi a tecniche più avanzate
 

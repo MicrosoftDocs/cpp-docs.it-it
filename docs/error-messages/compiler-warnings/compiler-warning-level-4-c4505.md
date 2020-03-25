@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4505
 ms.assetid: 068716a0-7dd2-40af-abf4-478f893b48c5
-ms.openlocfilehash: f9096ea8bc1e80e0e632f3e2e60a810ddb395240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f80b7c2a1fdafbe8333796e6f6befbfa4ed064a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311020"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185321"
 ---
 # <a name="compiler-warning-level-4-c4505"></a>Avviso del compilatore (livello 4) C4505
 
-'function': funzione locale senza riferimenti rimossa
+' Function ': funzione locale senza riferimenti rimossa
 
-La funzione specificata viene locali e di non riferimento nel corpo del modulo. Pertanto, la funzione è codice non utilizzato.
+La funzione specificata è locale e non vi viene fatto riferimento nel corpo del modulo. Pertanto, la funzione è codice inattivo.
 
-Il compilatore non ha generato codice per questa funzione.
+Il compilatore non ha generato il codice per questa funzione non recapitabile.

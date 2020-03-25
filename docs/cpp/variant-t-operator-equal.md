@@ -8,14 +8,14 @@ helpviewer_keywords:
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: 6a8f31e8db6f5ca5a680dd47b5d5391c84ce5025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 402251592a87b723d75fd1b2cd0786be7b17dbfc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403316"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187622"
 ---
-# <a name="varianttoperator-"></a>_variant_t::operator =
+# <a name="_variant_toperator-"></a>_variant_t::operator =
 
 **Sezione specifica Microsoft**
 
@@ -115,41 +115,41 @@ _variant_t& operator=(
 );
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'operatore consente di assegnare un nuovo valore all'oggetto `_variant_t`:
 
-- **operatore = (***varSrc***)** assegna un oggetto esistente `VARIANT` da un `_variant_t` oggetto.
+- **operatore = (**  *varSrc*  **)** Assegna un `VARIANT` esistente a un oggetto `_variant_t`.
 
-- **operatore = (***pVarSrc***)** assegna un oggetto esistente `VARIANT` da un `_variant_t` oggetto.
+- **operatore = (**  *pVarSrc*  **)** Assegna un `VARIANT` esistente a un oggetto `_variant_t`.
 
-- **operatore = (***var_t_Src***)** assegna un oggetto esistente `_variant_t` dell'oggetto a un `_variant_t` oggetto.    
+- **operatore = (**  *var_t_Src*  **)** Assegna un oggetto `_variant_t` esistente a un oggetto `_variant_t`.
 
-- **operatore = (***sSrc***)** assegna un **breve** valore intero da un `_variant_t` oggetto.
+- **operatore = (**  *sSrc*  **)** Assegna un valore integer **breve** a un oggetto `_variant_t`.
 
-- **operatore = (**`lSrc`**)** assegna un **long** valore intero da un `_variant_t` oggetto.
+- **operatore = (** `lSrc` **)** Assegna un valore **Long** Integer a un oggetto `_variant_t`.
 
-- **operatore = (***fltSrc***)** assegna un **float** il valore numerico per un `_variant_t` oggetto.
+- **operatore = (**  *fltSrc*  **)** Assegna un valore numerico **float** a un oggetto `_variant_t`.
 
-- **operatore = (***dblSrc***)** assegna un **double** il valore numerico per un `_variant_t` oggetto.
+- **operatore = (**  *dblSrc*  **)** Assegna un valore numerico **doppio** a un oggetto `_variant_t`.
 
-- **operatore = (***cySrc***)** assegna un `CY` dell'oggetto a un `_variant_t` oggetto.
+- **operatore = (**  *cySrc*  **)** Assegna un oggetto `CY` a un oggetto `_variant_t`.
 
-- **operatore = (***bstrSrc***)** assegna un `BSTR` dell'oggetto a un `_variant_t` oggetto.
+- **operatore = (**  *bstrSrc*  **)** Assegna un oggetto `BSTR` a un oggetto `_variant_t`.
 
-- **operatore = (***wstrSrc***)** assegna una stringa Unicode a un `_variant_t` oggetto.
+- **operatore = (**  *wstrSrc*  **)** Assegna una stringa Unicode a un oggetto `_variant_t`.
 
-- **operatore = (**`strSrc`**)** assegna una stringa multibyte a un `_variant_t` oggetto.
+- **operatore = (** `strSrc` **)** Assegna una stringa multibyte a un oggetto `_variant_t`.
 
-- **operatore = (** `bSrc` **)** assegna un **bool** valore un `_variant_t` oggetto.
+- **operatore = (** `bSrc` **)** Assegna un valore **bool** a un oggetto `_variant_t`.
 
-- **operatore = (***pDispSrc***)** assegna un `VT_DISPATCH` dell'oggetto a un `_variant_t` oggetto.
+- **operatore = (**  *pDispSrc*  **)** Assegna un oggetto `VT_DISPATCH` a un oggetto `_variant_t`.
 
-- **operatore = (***pIUnknownSrc***)** assegna un `VT_UNKNOWN` dell'oggetto a un `_variant_t` oggetto.
+- **operatore = (**  *pIUnknownSrc*  **)** Assegna un oggetto `VT_UNKNOWN` a un oggetto `_variant_t`.
 
-- **operatore = (***decSrc***)** assegna un `DECIMAL` valore un `_variant_t` oggetto.
+- **operatore = (**  *decSrc*  **)** Assegna un valore `DECIMAL` a un oggetto `_variant_t`.
 
-- **operatore = (** `bSrc` **)** assegna un `BYTE` valore un `_variant_t` oggetto.
+- **operatore = (** `bSrc` **)** Assegna un valore `BYTE` a un oggetto `_variant_t`.
 
 **Fine sezione specifica Microsoft**
 

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RC2015
 ms.assetid: 99691683-fb9e-4e61-beb1-12e484858570
-ms.openlocfilehash: 182bc6636ae9d7811824f3f700c6b86811221b5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21c83ae2c1cbd3d9a285e1eec98d0a7b9680d460
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346626"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191724"
 ---
 # <a name="resource-compiler-error-rc2015"></a>Errore del compilatore di risorse RC2015
 
-Troppi caratteri nella costante.
+troppi caratteri nella costante
 
 Una costante carattere contiene più di due caratteri.
 
-Costanti carattere sono limitate a un carattere (le costanti carattere standard) o due caratteri (costanti di tipo carattere long).
+Le costanti carattere sono limitate a un carattere (costanti carattere standard) o a due caratteri (costanti carattere Long).
 
-Si noti che una sequenza di escape (ad esempio, \t per scheda) viene convertita in un singolo carattere.
+Si noti che una sequenza di escape (ad esempio, \t per Tab) viene convertita in un singolo carattere.

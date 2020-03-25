@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 34f9c10cd898b0359463d5933141822576fa4a11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189481"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
-Questo argomento vengono illustrate le specifiche di Microsoft declspec dichiarazione deprecata. Per informazioni su C++ 14 `[[deprecated]]` attributo e indicazioni su quando usare l'attributo e le specifiche di Microsoft declspec o pragma, vedere [attributi Standard di C++](attributes.md).
+Questo argomento riguarda la dichiarazione declspec deprecata specifica di Microsoft. Per informazioni sull'attributo `[[deprecated]]` c++ 14 e indicazioni su quando utilizzare tale attributo rispetto a declspec o pragma specifico di Microsoft, vedere [ C++ attributi standard](attributes.md).
 
-Con le eccezioni riportate di seguito, il **deprecato** dichiarazione offre la stessa funzionalità il [deprecata](../preprocessor/deprecated-c-cpp.md) pragma:
+Con le eccezioni indicate di seguito, la Dichiarazione **deprecata** offre la stessa funzionalità del pragma [deprecated](../preprocessor/deprecated-c-cpp.md) :
 
-- Il **deprecato** dichiarazione consente di specificare formati specifici degli overload di funzione come deprecati, mentre il formato del pragma viene applicato a tutti gli overload di un nome di funzione.
+- La Dichiarazione **deprecata** consente di specificare forme specifiche di overload della funzione come deprecato, mentre il form pragma si applica a tutte le forme di overload di un nome di funzione.
 
-- Il **deprecato** dichiarazione consente di specificare un messaggio che verrà visualizzato in fase di compilazione. Il testo del messaggio può provenire da una macro.
+- La Dichiarazione **deprecata** consente di specificare un messaggio che verrà visualizzato in fase di compilazione. Il testo del messaggio può provenire da una macro.
 
-- Le macro possono essere contrassegnate solo come deprecate con il **deprecato** pragma.
+- Le macro possono essere contrassegnate come deprecate solo con il pragma **deprecated** .
 
-Se il compilatore rileva l'uso di standard o un identificatore deprecato [ `[[deprecated]]` ](attributes.md) attributo, una [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) viene generato l'avviso.
+Se il compilatore rileva l'uso di un identificatore deprecato o dell'attributo [`[[deprecated]]`](attributes.md) standard, viene generato un avviso [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) .
 
 ## <a name="example"></a>Esempio
 

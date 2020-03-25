@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 59028c6d886630ef7db115a2ea93327669b2fcfd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450762"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192926"
 ---
 # <a name="project-build-error-prj0003"></a>Errore di compilazione progetto PRJ0003
 
-> Errore durante la generazione '*riga di comando*'.
+> Errore durante la generazione della "*riga di comando*".
 
-Il *riga di comando* comando creato dall'input nella **pagine delle proprietà** la finestra di dialogo ha restituito un codice di errore, ma viene visualizzata alcuna informazione nella **Output** finestra.
+Il comando della *riga di comando* creato dall'input nella finestra di dialogo **pagine delle proprietà** ha restituito un codice di errore, ma nella finestra di **output** non viene visualizzata alcuna informazione.
 
-Possibili cause di questo errore includono:
+Le possibili cause di questo errore sono le seguenti:
 
-- Il progetto dipende dal Server ATL. A partire da Visual Studio 2008, ATL Server non è più inclusa come parte di Visual Studio, ma è stato rilasciato come progetto di origine condiviso in CodePlex. Per scaricare il codice sorgente di ATL Server e gli strumenti, visitare [libreria Server ATL e strumenti](https://go.microsoft.com/fwlink/p/?linkid=81979).
+- Il progetto dipende da ATL Server. A partire da Visual Studio 2008, ATL Server non è più incluso in Visual Studio, ma è stato rilasciato come progetto di origine condiviso in CodePlex. Per scaricare il codice sorgente e gli strumenti di ATL Server, vedere [strumenti e libreria server ATL](https://go.microsoft.com/fwlink/p/?linkid=81979).
 
-- Risorse di sistema insufficienti. Chiudere alcune applicazioni per risolvere il problema.
+- Risorse di sistema insufficienti. Chiudere alcune applicazioni per risolvere questo problema.
 
-- Privilegi di sicurezza insufficienti. Verificare di disporre di privilegi di sicurezza.
+- Privilegi di sicurezza insufficienti. Verificare di disporre di privilegi di sicurezza sufficienti.
 
-- I percorsi di file eseguibile specificati nel **directory di VC + +** non includono il percorso per lo strumento che si sta provando a eseguire. Per informazioni, vedere [impostare del compilatore e proprietà di compilazione](../../build/working-with-project-properties.md)
+- I percorsi eseguibili specificati nelle **directory di VC + +** non includono il percorso dello strumento che si sta tentando di eseguire. Per informazioni, vedere [impostare le proprietà del compilatore e della compilazione](../../build/working-with-project-properties.md)
 
-- Per progetti makefile, non sono presenti un comando da eseguire in uno **riga di comando di compilazione** oppure **ricompilazione della riga di comando**.
+- Per i progetti makefile, manca un comando da eseguire nella riga di comando di **compilazione** o nella **riga di comando di ricompilazione**.
 
 ## <a name="see-also"></a>Vedere anche
 

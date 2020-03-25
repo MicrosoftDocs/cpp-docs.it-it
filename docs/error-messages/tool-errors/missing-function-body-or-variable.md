@@ -5,20 +5,20 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 5e3436054d69da7fb67c240c1d684585734635c3
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 6d2ef22b90009d320485fb6fe3f7e308ae05c442
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173621"
 ---
 # <a name="missing-function-body-or-variable"></a>Codice di funzione o variabile mancante
 
-Con solo un prototipo di funzione, il compilatore può continuare senza errori, ma il linker non è possibile risolvere una chiamata a un indirizzo poiché non esiste alcun codice di funzione o variabile spazio riservato. Questo errore non verrà visualizzato fino a quando non si crea una chiamata alla funzione che il linker deve essere risolto.
+Con un prototipo di funzione, il compilatore può continuare senza errori, ma il linker non è in grado di risolvere una chiamata a un indirizzo perché non esiste alcun codice di funzione o spazio variabile riservato. Questo errore non verrà visualizzato fino a quando non si crea una chiamata alla funzione che deve essere risolta dal linker.
 
 ## <a name="example"></a>Esempio
 
-La chiamata di funzione principale causerà l'errore LNK2019 perché il prototipo consente al compilatore di considerare che la funzione esiste.  Il linker rileva che non ne.
+La chiamata di funzione in Main provocherà LNK2019 poiché il prototipo consente al compilatore di ritenere che la funzione esista.  Il linker rileva che non lo è.
 
 ```cpp
 // LNK2019_MFBV.cpp
@@ -31,7 +31,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-In C++, assicurarsi di includere l'implementazione di una funzione specifica per una classe e non solo un prototipo nella definizione della classe. Se si definisce la classe all'esterno del file di intestazione, assicurarsi di includere il nome della classe prima della funzione (`Classname::memberfunction`).
+In C++, assicurarsi di includere l'implementazione di una funzione specifica per una classe e non solo di un prototipo nella definizione della classe. Se si definisce la classe all'esterno del file di intestazione, assicurarsi di includere il nome della classe prima della funzione (`Classname::memberfunction`).
 
 ```cpp
 // LNK2019_MFBV_2.cpp

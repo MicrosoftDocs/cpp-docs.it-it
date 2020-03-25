@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], jitintrinsic
 - jitintrinsic __declspec modifier
 ms.assetid: 23dbe416-7ef6-442b-b16d-9a81aab04fa6
-ms.openlocfilehash: 9e726413f0bbfbd9d6affa348777c995c51283a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4626ba82d1d24582951bbffd8e6be687007d390f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245518"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178184"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 
@@ -25,11 +25,11 @@ Contrassegna la funzione come significativa in Common Language Runtime a 64 bit.
 __declspec(jitintrinsic)
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**jitintrinsic** un oggetto modopt (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) per una firma della funzione.
+**jitintrinsic** aggiunge un MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) a una firma della funzione.
 
-Si consiglia di non utilizzo questo **declspec** modificatore, come risultati imprevisti può verificarsi.
+Gli utenti sono sconsigliati di utilizzare questo modificatore **__declspec** , in quanto possono verificarsi risultati imprevisti.
 
 ## <a name="see-also"></a>Vedere anche
 

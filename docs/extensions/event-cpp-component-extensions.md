@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311649"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172386"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI e C++/CX)
 
@@ -55,7 +55,7 @@ Il valore restituito del metodo della funzione di accesso all'evento.  Per esser
 *parameters*<br/>
 (Facoltativo) Parametri per il metodo `raise` che corrispondono alla firma del parametro *delegate*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un evento è un'associazione tra un delegato e una funzione membro (gestore eventi) che risponde all'attivazione dell'evento e consente ai client da qualsiasi classe di registrare metodi conformi alla firma e al tipo restituito del delegato sottostante.
 
@@ -73,7 +73,7 @@ Un blocco eventi consente di dichiarare in modo esplicito e personalizzare il co
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per altre informazioni, vedere [Eventi (C++/CX)](../cppcx/events-c-cx.md).
 
@@ -119,7 +119,7 @@ Il valore restituito del metodo della funzione di accesso all'evento.  Per esser
 *parameters*<br/>
 (Facoltativo) Parametri per il metodo `raise` che corrispondono alla firma del parametro *delegate*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Un evento è un'associazione tra un delegato e una funzione membro (gestore eventi) che risponde all'attivazione dell'evento e consente ai client da qualsiasi classe di registrare metodi conformi alla firma e al tipo restituito del delegato sottostante.
 
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-L'esempio di codice seguente mostra la logica usata per generare il metodo `raise` di un evento semplice: Se l'evento ha uno o più sottoscrittori, la chiamata del metodo `raise` chiama in modo implicito o esplicito il delegato. Se il tipo restituito del delegato non è **void** e se non sono presenti sottoscrittori dell'evento, il metodo `raise` restituisce il valore predefinito per il tipo delegato. Se non sono presenti sottoscrittori dell'evento, la chiamata del metodo `raise` restituisce il controllo e non viene generata alcuna eccezione. Se il tipo restituito del delegato non è **void**, viene restituito il tipo delegato.
+Nell'esempio di codice seguente viene illustrata la logica usata per generare il metodo `raise` di un evento semplice: se l'evento ha uno o più sottoscrittori, quando si chiama il metodo `raise` in modo implicito o esplicito, viene chiamato il delegato. Se il tipo restituito del delegato non è **void** e se non sono presenti sottoscrittori dell'evento, il metodo `raise` restituisce il valore predefinito per il tipo delegato. Se non sono presenti sottoscrittori dell'evento, la chiamata del metodo `raise` restituisce il controllo e non viene generata alcuna eccezione. Se il tipo restituito del delegato non è **void**, viene restituito il tipo delegato.
 
 ```cpp
 // trivial_events.cpp

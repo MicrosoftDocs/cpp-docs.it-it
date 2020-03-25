@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
-ms.openlocfilehash: 759ee503acb12f6c1a30fbbfaf87a8f66433e571
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc1f117cc5f26edf9cd85461281b925c97fa5225
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154750"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180304"
 ---
 # <a name="const-c"></a>const (C++)
 
-Quando si modifica una dichiarazione di dati, il **const** parola chiave specifica che l'oggetto o una variabile non è modificabile.
+Quando si modifica una dichiarazione di dati, la parola chiave **const** specifica che l'oggetto o la variabile non è modificabile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,7 +26,7 @@ member-function const ;
 
 ## <a name="const-values"></a>Valori const
 
-Il **const** parola chiave specifica che il valore della variabile è costante e indica al compilatore di impedire al programmatore di modificarla.
+La parola chiave **const** specifica che il valore di una variabile è costante e indica al compilatore di impedire al programmatore di modificarlo.
 
 ```cpp
 // constant_values1.cpp
@@ -37,7 +37,7 @@ int main() {
 }
 ```
 
-In C++, è possibile usare la **const** parola chiave anziché il [#define](../preprocessor/hash-define-directive-c-cpp.md) direttiva del preprocessore per definire valori costanti. I valori definiti con **const** sono soggetti a controllo del tipo e può essere usato al posto di espressioni costanti. In C++, è possibile specificare le dimensioni di una matrice con un **const** variabile come indicato di seguito:
+In C++è possibile usare la parola chiave **const** anziché la direttiva del preprocessore [#define](../preprocessor/hash-define-directive-c-cpp.md) per definire i valori costanti. I valori definiti con **const** sono soggetti al controllo dei tipi e possono essere utilizzati al posto delle espressioni costanti. In C++è possibile specificare le dimensioni di una matrice con una variabile **const** come indicato di seguito:
 
 ```cpp
 // constant_values2.cpp
@@ -48,7 +48,7 @@ char store_char[maxarray];  // allowed in C++; not allowed in C
 
 In C l'impostazione predefinita dei valori costanti è il collegamento esterno, in modo che possano essere visualizzati solo nei file di origine. In C++ l'impostazione predefinita dei valori costanti è il collegamento interno che consente di visualizzarli nei file di intestazione.
 
-Il **const** parola chiave è anche utilizzabile nelle dichiarazioni del puntatore.
+La parola chiave **const** può essere usata anche nelle dichiarazioni del puntatore.
 
 ```cpp
 // constant_values3.cpp
@@ -60,7 +60,7 @@ int main() {
 }
 ```
 
-Un puntatore a una variabile dichiarata come **const** può essere assegnato solo a un puntatore che viene dichiarato come **const**.
+Un puntatore a una variabile dichiarata come **const** può essere assegnato solo a un puntatore che viene anche dichiarato come **const**.
 
 ```cpp
 // constant_values4.cpp
@@ -79,20 +79,20 @@ int main() {
 
 È possibile utilizzare i puntatori ai dati costanti come parametri di funzione per impedire alla funzione di modificare un parametro passato tramite un puntatore.
 
-Per gli oggetti che vengono dichiarati come **const**, è possibile chiamare solo membro costante funzioni. In questo modo si garantisce che l'oggetto costante non sia mai modificato.
+Per gli oggetti dichiarati come **const**, è possibile chiamare solo funzioni membro costanti. In questo modo si garantisce che l'oggetto costante non sia mai modificato.
 
 ```cpp
 birthday.getMonth();    // Okay
 birthday.setMonth( 4 ); // Error
 ```
 
-È possibile chiamare funzioni membro costanti o non costanti per un oggetto non costante. È possibile eseguire l'overload anche una funzione membro usando la **const** parola chiave; in questo modo una versione diversa della funzione da chiamare per gli oggetti costanti e.
+È possibile chiamare funzioni membro costanti o non costanti per un oggetto non costante. È anche possibile eseguire l'overload di una funzione membro usando la parola chiave **const** ; in questo modo è possibile chiamare una versione diversa della funzione per oggetti costanti e non costanti.
 
-Non è possibile dichiarare costruttori o distruttori con la **const** (parola chiave).
+Non è possibile dichiarare costruttori o distruttori con la parola chiave **const** .
 
 ## <a name="const-member-functions"></a>Funzioni membro const
 
-Dichiarazione di una funzione membro con il **const** parola chiave specifica che la funzione è una funzione di "sola lettura" che non modifica l'oggetto per il quale viene chiamato. Una funzione membro costante non può modificare alcun membro dati non statici o chiamare alcuna funzione che non è costante membro. Per dichiarare una funzione membro costante, inserire il **const** (parola chiave) dopo la parentesi di chiusura dell'elenco di argomenti. Il **const** parola chiave è necessaria la dichiarazione sia la definizione.
+La dichiarazione di una funzione membro con la parola chiave **const** specifica che la funzione è una funzione di "sola lettura" che non modifica l'oggetto per il quale viene chiamato. Una funzione membro costante non può modificare alcun membro dati non statico o chiamare funzioni membro non costanti. Per dichiarare una funzione membro costante, inserire la parola chiave **const** dopo la parentesi di chiusura dell'elenco di argomenti. La parola chiave **const** è obbligatoria sia nella dichiarazione che nella definizione.
 
 ```cpp
 // constant_member_function.cpp
@@ -124,9 +124,9 @@ int main()
 }
 ```
 
-## <a name="c-and-c-const-differences"></a>Differenze const C++ e C
+## <a name="c-and-c-const-differences"></a>Differenze tra C++ C e const
 
-Quando si dichiara una variabile come **const** in un file di codice sorgente C, eseguire questa operazione come:
+Quando si dichiara una variabile come **const** in un file di codice sorgente C, è possibile procedere come segue:
 
 ```cpp
 const int i = 2;
@@ -138,13 +138,13 @@ const int i = 2;
 extern const int i;
 ```
 
-Ma per ottenere lo stesso comportamento in C++, è necessario dichiarare la **const** variabile:
+Tuttavia, per ottenere lo stesso comportamento C++in, è necessario dichiarare la variabile **const** come:
 
 ```cpp
 extern const int i = 2;
 ```
 
-Se si desidera dichiarare un' **extern** variabile in un file di codice sorgente C++ per l'uso in un file di codice sorgente C, usare:
+Se si desidera dichiarare una variabile **extern** in un C++ file di codice sorgente per l'utilizzo in un file di codice sorgente C, utilizzare:
 
 ```cpp
 extern "C" const int x=10;
@@ -152,15 +152,15 @@ extern "C" const int x=10;
 
 per impedire l'alterazione del nome del compilatore C++.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando si segue l'elenco di parametri di una funzione membro, il **const** parola chiave specifica che la funzione non modifichi l'oggetto per il quale viene richiamato.
+Quando si segue un elenco di parametri di una funzione membro, la parola chiave **const** specifica che la funzione non modifica l'oggetto per il quale viene richiamato.
 
-Per ulteriori informazioni sul **const**, vedere gli argomenti seguenti:
+Per ulteriori informazioni su **const**, vedere gli argomenti seguenti:
 
 - [Puntatori const e volatile](../cpp/const-and-volatile-pointers.md)
 
-- [Qualificatori di tipo (riferimenti al linguaggio C)](../c-language/type-qualifiers.md)
+- [Qualificatori di tipo (riferimenti per il linguaggio C)](../c-language/type-qualifiers.md)
 
 - [volatile](../cpp/volatile-cpp.md)
 

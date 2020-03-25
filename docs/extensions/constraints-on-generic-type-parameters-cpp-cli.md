@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 6eefb6a7d888a031f6ff7f88d08da4d67a4dc8c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516206"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172478"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Vincoli su parametri di tipo generico (C++/CLI)
 
@@ -43,7 +43,7 @@ Inoltre può essere compresa una classe. Affinché l'argomento tipo soddisfi un 
 
 ## <a name="remarks"></a>Osservazioni
 
-La clausola di vincolo è costituita da **where** seguita da un parametro di tipo, due punti (**:**) e il vincolo, che specifica la natura della restrizione sul parametro di tipo. **where** è una parola chiave sensibile al contesto. Per altre informazioni, vedere [Parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md). Separare più clausole **where** con uno spazio.
+La clausola di vincolo è costituita da **where** seguita da un parametro di tipo, due punti ( **:** ) e il vincolo, che specifica la natura della restrizione sul parametro di tipo. **where** è una parola chiave sensibile al contesto. Per altre informazioni, vedere [Parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md). Separare più clausole **where** con uno spazio.
 
 I vincoli vengono applicati ai parametri di tipo per impostare limitazioni per i tipi che possono essere utilizzati come argomenti per un tipo o metodo generico.
 

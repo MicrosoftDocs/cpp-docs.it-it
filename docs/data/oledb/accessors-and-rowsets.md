@@ -17,57 +17,57 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 21043e22b37084fa543bf6b8a0fc176c3b8be788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45180b3ac2647c9f4f5d25a1322794552bd79004
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384926"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212381"
 ---
 # <a name="accessors-and-rowsets"></a>Funzioni di accesso e rowset
 
-Per impostare e recuperare i dati, modelli OLE DB utilizza una funzione di accesso e un set di righe tramite il [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) classe. Questa classe può gestire più funzioni di accesso di tipo diverso.
+Per impostare e recuperare i dati, OLE DB modelli utilizzano una funzione di accesso e un set di righe tramite la classe [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) . Questa classe è in grado di gestire più funzioni di accesso di tipi diversi.
 
 ## <a name="accessor-types"></a>Tipi di funzione di accesso
 
-Tutte le funzioni di accesso derivano da [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` Fornisce i parametri e associazione di colonna.
+Tutte le funzioni di accesso derivano da [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` fornisce l'associazione di parametri e colonne.
 
-La figura seguente illustra i tipi di funzione di accesso.
+Nella figura seguente sono illustrati i tipi di funzione di accesso.
 
-![Tipi di funzione di accesso](../../data/oledb/media/vcaccessortypes.gif "i tipi di funzione di accesso")<br/>
-Classi di funzione di accesso
+![Tipi di funzione di accesso](../../data/oledb/media/vcaccessortypes.gif "Tipi di funzioni di accesso")<br/>
+Classi della funzione di accesso
 
-- [CAccessor](../../data/oledb/caccessor-class.md) utilizzare questa funzione di accesso quando si conosce la struttura del database in fase di progettazione. `CAccessor` Associa un record di database, che contiene il buffer, in modo statico all'origine dati.
+- [CAccessor](../../data/oledb/caccessor-class.md) Utilizzare questa funzione di accesso quando si conosce la struttura dell'origine del database in fase di progettazione. `CAccessor` associa in modo statico un record del database, che contiene il buffer, all'origine dati.
 
-- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) usare la funzione di accesso quando non si conosce la struttura del database in fase di progettazione. `CDynamicAccessor` le chiamate `IColumnsInfo::GetColumnInfo` per ottenere le informazioni di colonna di database. Crea e gestisce il buffer e una funzione di accesso.
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Utilizzare questa funzione di accesso quando non si conosce la struttura del database in fase di progettazione. `CDynamicAccessor` chiama `IColumnsInfo::GetColumnInfo` per ottenere le informazioni sulla colonna del database. Crea e gestisce una funzione di accesso e il buffer.
 
-- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) usare la funzione di accesso per gestire i tipi di comando sconosciuto. Quando si preparano i comandi `CDynamicParameterAccessor` può ottenere informazioni sui parametri dal `ICommandWithParameters` dell'interfaccia, se il provider supporta `ICommandWithParameters`.
+- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) Utilizzare questa funzione di accesso per gestire i tipi di comando sconosciuti. Quando si preparano i comandi, `CDynamicParameterAccessor` possibile ottenere informazioni sui parametri dall'interfaccia `ICommandWithParameters`, se il provider supporta `ICommandWithParameters`.
 
-- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), e [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) usano queste classi quando non si dispone di alcuna conoscenza dello schema del database. `CDynamicStringAccessorA` Recupera i dati sotto forma di stringhe ANSI; `CDynamicStringAccessorW` recupera i dati come stringhe Unicode.
+- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)e [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) utilizzano queste classi se non si conosce lo schema del database. `CDynamicStringAccessorA` recupera i dati come stringhe ANSI; `CDynamicStringAccessorW` recupera i dati come stringhe Unicode.
 
-- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) con questa classe, è possibile usare tutti i tipi di dati che si desidera se il provider può convertire il tipo. Gestisce sia le colonne di risultati e i parametri di comando.
+- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) Con questa classe è possibile usare qualsiasi tipo di dati desiderato se il provider è in grado di convertire il tipo. Gestisce sia le colonne dei risultati che i parametri di comando.
 
-La tabella seguente riepiloga il supporto nei tipi di funzione di accesso di modelli OLE DB.
+Nella tabella seguente viene riepilogato il supporto dei tipi di funzione di accesso OLE DB modello.
 
-|Tipo di funzione di accesso|Dynamic|Gestisce params|Buffer|Più funzioni di accesso|
+|Tipo di funzione di accesso|Dinamico|Gestisce i param|Buffer|Più funzioni di accesso|
 |-------------------|-------------|--------------------|------------|------------------------|
-|`CAccessor`|No|Yes|Utente|Yes|
-|`CDynamicAccessor`|Yes|No|Modelli OLE DB|No|
-|`CDynamicParameterAccessor`|Yes|Yes|Modelli OLE DB|No|
+|`CAccessor`|No|Sì|Utente|Sì|
+|`CDynamicAccessor`|Sì|No|Modelli OLE DB|No|
+|`CDynamicParameterAccessor`|Sì|Sì|Modelli OLE DB|No|
 |`CDynamicStringAccessor[A,W]`|Sì|No|Modelli OLE DB|No|
-|`CManualAccessor`|Yes|Yes|Utente|Yes|
+|`CManualAccessor`|Sì|Sì|Utente|Sì|
 
 ## <a name="rowset-types"></a>Tipi di rowset
 
-I modelli OLE DB supporta tre tipi di set di righe (vedere la figura precedente): singolo set di righe (implementato da [CRowset](../../data/oledb/crowset-class.md)), rowset di massa (implementata da [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) e i set di righe (implementato di matrice dal [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Recupero di rowset singoli handle di una singola riga quando `MoveNext` viene chiamato. Set di righe BULK può recuperare più handle di riga. Rowset di matrici sono i set di righe che sono accessibili tramite la sintassi della matrice.
+I modelli di OLE DB supportano tre tipi di set di righe (vedere la figura precedente): set di righe singoli (implementati da [CRowset](../../data/oledb/crowset-class.md)), set di righe bulk (implementati da [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) e set di righe di matrici (implementati da [CArrayRowset](../../data/oledb/carrayrowset-class.md)). I set di righe singoli recuperano un handle di riga singola quando viene chiamato `MoveNext`. I set di righe in blocco possono recuperare più handle di riga. I set di righe di matrici sono set di righe a cui è possibile accedere utilizzando la sintassi di matrice.
 
-La figura seguente illustra i tipi di set di righe.
+Nella figura seguente sono illustrati i tipi di set di righe.
 
-![Immagine di RowsetType](../../data/oledb/media/vcrowsettypes.gif "di RowsetType")<br/>
+![Immagine di RowsetType](../../data/oledb/media/vcrowsettypes.gif "Immagine di RowsetType")<br/>
 Classi rowset
 
-[I set di righe dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) non accesso nei dati di archivio dati, ma invece accedere alle informazioni sull'archivio dati, note come metadati. I set di righe dello schema vengono in genere usati nelle situazioni in cui la struttura del database non è noto in fase di compilazione e deve essere ottenuta in fase di esecuzione.
+I [set di righe dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) non accedono ai dati nell'archivio dati, ma accedono alle informazioni sull'archivio dati, denominate metadati. I set di righe dello schema vengono in genere utilizzati in situazioni in cui la struttura del database non è nota in fase di compilazione e deve essere ottenuta in fase di esecuzione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

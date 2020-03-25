@@ -1,23 +1,23 @@
 ---
-title: "Origine dati: Determinazione dello Schema dell'origine dati (ODBC)"
+title: "Origine dati: determinazione dello schema dell'origine dati (ODBC)"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], schema
 - schemas [C++], data sources
 - data sources [C++], determining schema
 ms.assetid: 17284acb-eb10-4f27-9944-ad1d973c0b05
-ms.openlocfilehash: c419a3ac2d870e6a85675492ee6c9b726427a0e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ed77ec8870ba80832d4f8c73a8362062dc9c2a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395976"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213317"
 ---
-# <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Origine dati: Determinazione dello Schema dell'origine dati (ODBC)
+# <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Origine dati: determinazione dello schema dell'origine dati (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-Per impostare i membri di dati di `CRecordset` oggetti, è necessario conoscere lo schema dell'origine dati a cui ci si connette. Determinazione dello schema di un'origine dati consiste nell'ottenere un elenco delle tabelle nell'origine dati, un elenco di colonne in ogni tabella, il tipo di dati di ogni colonna e l'esistenza di tutti gli indici.
+Per impostare i membri dati negli oggetti di `CRecordset`, è necessario conoscerne lo schema per l'origine dati a cui ci si connette. Per determinare lo schema di un'origine dati, è necessario ottenere un elenco delle tabelle nell'origine dati, un elenco di colonne in ogni tabella, il tipo di dati di ogni colonna e l'esistenza di eventuali indici.
 
 ## <a name="see-also"></a>Vedere anche
 

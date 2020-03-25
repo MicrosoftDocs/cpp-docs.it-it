@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2670
 ms.assetid: 4b3b74c7-a750-4b0d-abd3-216d1234461f
-ms.openlocfilehash: c75c9f68b44dfb3d687942811d3a175f34dc9910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41da2d246bbabd9301f9ac03e46c213b137d82de
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367941"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177144"
 ---
 # <a name="compiler-error-c2670"></a>Errore del compilatore C2670
 
-'identifier': il modello di funzione non è possibile convertire il parametro numero dal tipo 'type'
+' Identifier ': il modello di funzione non può convertire il numero di parametro dal tipo ' type '
 
-Non è stato possibile convertire un parametro nel tipo richiesto.
+Impossibile convertire un parametro nel tipo richiesto.
 
-Questo errore può essere risolto se si crea una conversione esplicita.
+Questo errore può essere corretto se si crea una conversione esplicita.

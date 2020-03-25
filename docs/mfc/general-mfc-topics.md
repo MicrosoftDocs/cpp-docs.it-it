@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: 5f4c75e3f8bd8f7d32109cf92465dfa6e5aba6ed
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 571be8300f46ceecdc65df92d35c731bec96a92a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095860"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169985"
 ---
 # <a name="general-mfc-topics"></a>Argomenti MFC generali
 
@@ -21,9 +21,9 @@ La libreria Microsoft Foundation Class è un framework applicazione per la progr
 
 Il framework MFC rappresenta un metodo efficace che consente di creare applicazioni partendo dal lavoro di esperti programmatori di Windows. MFC riduce il tempo di sviluppo; rende il codice più portabile; fornisce un ampio supporto senza ridurre la libertà e la flessibilità di programmazione e semplifica l'accesso agli elementi e alle tecnologie dell'interfaccia utente "difficili da programmare", come la tecnologia Active, OLE e la programmazione per Internet. Inoltre, MFC semplifica la programmazione di database tramite gli oggetti di accesso ai dati (DAO) (obsoleti) e Open Database Connectivity (ODBC) e la programmazione di rete tramite Windows Sockets. MFC semplifica la programmazione di funzionalità come le finestre delle proprietà ("finestre di dialogo a schede"), l'anteprima di stampa e le barre degli strumenti mobili e personalizzabili.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-`MFC Samples`, fornite in [esempi visivi C++ ](../overview/visual-cpp-samples.md)
+[Esempi di MFC](../overview/visual-cpp-samples.md#mfc-samples)
 
 [Uso dei file di origine MFC](../mfc/using-the-mfc-source-files.md)
 
