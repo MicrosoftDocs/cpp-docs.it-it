@@ -1,5 +1,5 @@
 ---
-title: Classe CAutoHideDockSite
+title: CAutoHideDockSite (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoHideDockSite
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: f24827e2dc1f4d1131f5b63aebeb0e2b09bc2281
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a4593ac17f0af26517144edb7b01a9ca4203b1a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388475"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352972"
 ---
-# <a name="cautohidedocksite-class"></a>Classe CAutoHideDockSite
+# <a name="cautohidedocksite-class"></a>CAutoHideDockSite (classe)
 
-Il `CAutoHideDockSite` estende la [classe CDockSite](../../mfc/reference/cdocksite-class.md) per implementare riquadri di ancoraggio nascosti automaticamente.
+Il `CAutoHideDockSite` estende il [CDockSite classe](../../mfc/reference/cdocksite-class.md) per implementare automaticamente nascondere i riquadri di ancoraggio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -54,27 +54,27 @@ class CAutoHideDockSite : public CDockSite
 |||
 |-|-|
 |Nome|Descrizione|
-|`CAutoHideDockSite::AllowShowOnPaneMenu`|Indica se il `CAutoHideDockSite` viene visualizzato nel menu del riquadro.|
-|[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Determina se un oggetto di base di riquadro è derivato dal [classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|
-|[CAutoHideDockSite::DockPane](#dockpane)|Un riquadro viene ancorato a questo `CAuotHideDockSite` oggetto.|
-|[CAutoHideDockSite::GetAlignRect](#getalignrect)|Recupera la dimensione del sito di ancoraggio in coordinate dello schermo.|
-|[CAutoHideDockSite::RepositionPanes](#repositionpanes)|Ridisegna il riquadro nel `CAutoHideDockSite` con la globali margini e spaziatura del pulsante.|
-|[CAutoHideDockSite::SetOffsetLeft](#setoffsetleft)|Imposta il margine a sinistra della barra ancorabile.|
-|[CAutoHideDockSite::SetOffsetRight](#setoffsetright)|Imposta il margine a destra della barra ancorabile.|
-|[CAutoHideDockSite::UnSetAutoHideMode](#unsetautohidemode)|Le chiamate [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) per gli oggetti di `CAutoHideDockSite`.|
+|`CAutoHideDockSite::AllowShowOnPaneMenu`|Indica se `CAutoHideDockSite` l'oggetto viene visualizzato nel menu del riquadro.|
+|[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Determina se un oggetto riquadro di base è derivato dalla [classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|
+|[CAutoHideDockSite::DockPane](#dockpane)|Ancora un riquadro `CAuotHideDockSite` a questo oggetto.|
+|[CAutoHideDockSite::GetAlignRect](#getalignrect)|Recupera le dimensioni del sito di ancoraggio in coordinate dello schermo.|
+|[CAutoHideDockSite::RepositionPanes](#repositionpanes)|Ridisegna il `CAutoHideDockSite` riquadro in base ai margini globali e alla spaziatura dei pulsanti.|
+|[CAutoHideDockSite::SetOffsetLeft](#setoffsetleft)|Imposta il margine sul lato sinistro della barra di ancoraggio.|
+|[CAutoHideDockSite::SetOffsetRight](#setoffsetright)|Imposta il margine sul lato destro della barra di ancoraggio.|
+|[CAutoHideDockSite::UnSetAutoHideMode](#unsetautohidemode)|Chiama [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) per `CAutoHideDockSite`gli oggetti in .|
 
-### <a name="data-members"></a>Membri di dati
+### <a name="data-members"></a>Membri dei dati
 
 |||
 |-|-|
 |Nome|Descrizione|
-|[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Definisce le dimensioni dello spazio tra le barre degli strumenti e il bordo della barra ancorabile. Questo spazio viene misurato dal bordo sinistro o il bordo superiore, a seconda dell'allineamento per lo spazio di ancoraggio.|
+|[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Definisce la dimensione dello spazio tra le barre degli strumenti e il bordo della barra di ancoraggio. Questo spazio viene misurato dal bordo sinistro o dal bordo superiore, a seconda dell'allineamento per lo spazio di ancoraggio.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando si chiama [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes), il framework crea automaticamente un `CAutoHideDockSite` oggetto. Nella maggior parte dei casi, non è necessario creare un'istanza o usare questa classe direttamente.
+Quando si chiama [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes), `CAutoHideDockSite` il framework crea automaticamente un oggetto . Nella maggior parte dei casi, non è necessario creare un'istanza o utilizzare direttamente questa classe.
 
-Barra ancorabile è lo spazio tra il lato sinistro del riquadro dock e il lato sinistro della [classe CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md).
+La barra di ancoraggio è lo spazio tra il lato sinistro del riquadro di ancoraggio e il lato sinistro della [classe CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -90,7 +90,7 @@ Barra ancorabile è lo spazio tra il lato sinistro del riquadro dock e il lato s
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come recuperare un `CAutoHideDockSite` dell'oggetto da un `CMFCAutoHideBar` oggetto e su come impostare i margini sinistro e destro della barra ancorabile.
+Nell'esempio seguente viene `CAutoHideDockSite` illustrato come `CMFCAutoHideBar` recuperare un oggetto da un oggetto e come impostare i margini sinistro e destro della barra di ancoraggio.
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
@@ -98,9 +98,9 @@ Nell'esempio seguente viene illustrato come recuperare un `CAutoHideDockSite` de
 
 **Intestazione:** afxautohidedocksite.h
 
-##  <a name="canacceptpane"></a>  CAutoHideDockSite::CanAcceptPane
+## <a name="cautohidedocksitecanacceptpane"></a><a name="canacceptpane"></a>CAutoHideDockSite::CanAcceptPane
 
-Determina se un riquadro di base è un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) dell'oggetto o derivato da `CMFCAutoHideBar`.
+Determina se un riquadro di base è un `CMFCAutoHideBar` [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) oggetto o derivato da .
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -111,19 +111,19 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||
 |-|-|
 |Parametro|Descrizione|
-|*pBar*|[in] Nel riquadro di base che il framework di test.|
+|*pBar (Barra)*|[in] Riquadro di base testato dal framework.|
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se *pBar* è derivato da `CMFCAutoHideBar`; FALSE in caso contrario.
+TRUESe *pBar* è `CMFCAutoHideBar`derivato da ; FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se un oggetto di base di riquadro è derivato da `CMFCAutoHideBar`, che può contenere un `CAutoHideDockSite`.
+Se un oggetto riquadro `CMFCAutoHideBar`base è `CAutoHideDockSite`derivato da , può contenere un file .
 
-##  <a name="dockpane"></a>  CAutoHideDockSite::DockPane
+## <a name="cautohidedocksitedockpane"></a><a name="dockpane"></a>CAutoHideDockSite::DockPane
 
-Un riquadro viene ancorato a questo [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) oggetto.
+Ancora un riquadro a questo [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) oggetto.
 
 ```
 virtual void DockPane(
@@ -137,19 +137,19 @@ virtual void DockPane(
 |||
 |-|-|
 |Parametro|Descrizione|
-|*pWnd*|[in] Il riquadro in cui il framework viene ancorato.|
-|*dockMethod*|[in] Opzioni per il riquadro di ancoraggio.|
-|*lpRect*|[in] Un rettangolo che specifica i limiti del riquadro ancorato.|
+|*pWnd (in questo stato di windows*|[in] Riquadro ancorato dal framework.|
+|*dockMethod*|[in] Opzioni di ancoraggio per il riquadro.|
+|*Lprect*|[in] Rettangolo che specifica i limiti per il riquadro ancorato.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita non usa il parametro *dockMethod*, che viene fornito per un uso futuro.
+L'implementazione predefinita non utilizza il parametro *dockMethod*, fornito per un utilizzo futuro.
 
-Se *lpRect* è NULL, il framework inserisce il riquadro nel percorso predefinito nel sito di ancoraggio. Se il sito di ancoraggio è orizzontale, il percorso predefinito è all'estrema sinistra del sito di ancoraggio. In caso contrario, il percorso predefinito è nella parte superiore del sito di ancoraggio.
+Se *lpRect* è NULL, il framework inserisce il riquadro nella posizione predefinita nel sito di ancoraggio. Se il sito di ancoraggio è orizzontale, la posizione predefinita si trova all'estrema sinistra del sito di ancoraggio. In caso contrario, la posizione predefinita si trova nella parte superiore del sito di ancoraggio.
 
-##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect
+## <a name="cautohidedocksitegetalignrect"></a><a name="getalignrect"></a>CAutoHideDockSite::GetAlignRect
 
-Recupera la dimensione del sito di ancoraggio in coordinate dello schermo.
+Recupera le dimensioni del sito di ancoraggio in coordinate dello schermo.
 
 ```
 void GetAlignRect(CRect& rect) const;
@@ -160,27 +160,27 @@ void GetAlignRect(CRect& rect) const;
 |||
 |-|-|
 |Parametro|Descrizione|
-|*rect*|[in] Un riferimento a un rettangolo. Il metodo consente di memorizzare la dimensione del sito di ancoraggio nel rettangolo.|
+|*Rect*|[in] Riferimento a un rettangolo. Il metodo memorizza le dimensioni del sito di ancoraggio in questo rettangolo.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il rettangolo viene regolato per i margini di offset, in modo che non sono inclusi.
+Il rettangolo viene regolato per i margini di offset in modo che non vengano inclusi.
 
-##  <a name="m_nextraspace"></a>  CAutoHideDockSite::m_nExtraSpace
+## <a name="cautohidedocksitem_nextraspace"></a><a name="m_nextraspace"></a>CAutoHideDockSite::m_nExtraSpace
 
-Le dimensioni dello spazio tra i bordi del [classe CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) e il [classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) oggetti.
+La dimensione dello spazio tra i bordi della [classe CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) e [CMFCAutoHideBar Class](../../mfc/reference/cmfcautohidebar-class.md) oggetti.
 
 ```
 static int m_nExtraSpace;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Quando un `CMFCAutoHideBar` bloccata in una `CAutoHideDockSite`, non deve occupare il sito di ancoraggio intero. Questa variabile globale controlla lo spazio aggiuntivo tra il bordo sinistro o superiore del `CMFCAutoHideBar` e le corrispondenti `CAutoHideDockSite` edge. Indica se il bordo superiore o sinistro dipende dall'allineamento corrente.
+Quando `CMFCAutoHideBar` un oggetto è `CAutoHideDockSite`ancorato a un oggetto , non deve occupare l'intero sito di banchina. Questa variabile globale controlla lo spazio aggiuntivo tra `CMFCAutoHideBar` il `CAutoHideDockSite` bordo sinistro o superiore del bordo e corrispondente. L'utilizzo del bordo superiore o sinistro dipende dall'allineamento corrente.
 
-##  <a name="setoffsetleft"></a>  CAutoHideDockSite::SetOffsetLeft
+## <a name="cautohidedocksitesetoffsetleft"></a><a name="setoffsetleft"></a>CAutoHideDockSite::SetOffsetLeft
 
-Imposta il margine a sinistra della barra ancorabile.
+Imposta il margine sul lato sinistro della barra di ancoraggio.
 
 ```
 void SetOffsetLeft(int nOffset);
@@ -191,13 +191,13 @@ void SetOffsetLeft(int nOffset);
 *nOffset*<br/>
 [in] Nuovo offset.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) gli oggetti vengono posizionati in modo statico nel `CAutoHideDockSite` oggetto. Ciò significa che l'utente non è possibile modificare manualmente il percorso del `CMFCAutoHideBar` oggetti. Il `SetOffsetLeft` metodo consente di controllare la spaziatura tra il lato sinistro all'estrema sinistra `CMFCAutoHideBar` e il lato sinistro del `CAutoHideDockSite`.
+[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) gli oggetti sono posizionati in modo statico sull'oggetto. `CAutoHideDockSite` Ciò significa che l'utente `CMFCAutoHideBar` non può modificare manualmente la posizione degli oggetti. Il `SetOffsetLeft` metodo controlla la spaziatura tra il `CMFCAutoHideBar` lato sinistro `CAutoHideDockSite`del lato sinistro e il lato sinistro dell'oggetto .
 
-##  <a name="setoffsetright"></a>  CAutoHideDockSite::SetOffsetRight
+## <a name="cautohidedocksitesetoffsetright"></a><a name="setoffsetright"></a>CAutoHideDockSite::SetOffsetRight
 
-Imposta il margine a destra della barra ancorabile.
+Imposta il margine sul lato destro della barra di ancoraggio.
 
 ```
 void SetOffsetRight(int nOffset);
@@ -208,13 +208,13 @@ void SetOffsetRight(int nOffset);
 *nOffset*<br/>
 [in] Nuovo offset.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) gli oggetti vengono posizionati in modo statico nel `CAutoHideDockSite` oggetto. Ciò significa che l'utente non è possibile modificare manualmente il percorso del `CMFCAutoHideBar` oggetti. Il `SetOffsetRight` metodo consente di controllare la spaziatura tra il lato destro all'estrema destra `CMFCAutoHideBar` e il lato destro del `CAutoHideDockSite`.
+[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) gli oggetti sono posizionati in modo statico sull'oggetto. `CAutoHideDockSite` Ciò significa che l'utente non `CMFCAutoHideBar` può modificare manualmente la posizione degli oggetti. Il `SetOffsetRight` metodo controlla la spaziatura tra il `CMFCAutoHideBar` lato destro `CAutoHideDockSite`tra il lato destro e il lato destro dell'oggetto .
 
-##  <a name="repositionpanes"></a>  CAutoHideDockSite::RepositionPanes
+## <a name="cautohidedocksiterepositionpanes"></a><a name="repositionpanes"></a>CAutoHideDockSite::RepositionPanes
 
-Consente di ricreare i riquadri nel [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md).
+Ridisegna i riquadri nel [cAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md).
 
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -225,15 +225,15 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||
 |-|-|
 |Parametro|Descrizione|
-|*rectNewClientArea*|[in] Un valore riservato.|
+|*rectNewClientArea*|[in] Valore riservato.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita non usa *rectNewClientArea*. Ridisegna i riquadri con i margini della barra degli strumenti globale e spaziatura del pulsante.
+L'implementazione predefinita non utilizza *rectNewClientArea*. Ridisegna i riquadri con i margini globali della barra degli strumenti e la spaziatura dei pulsanti.
 
-##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode
+## <a name="cautohidedocksiteunsetautohidemode"></a><a name="unsetautohidemode"></a>CAutoHideDockSite::UnSetAutoHideMode
 
-Le chiamate [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) per gli oggetti nel sito di ancoraggio.
+Chiama [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) per gli oggetti nel sito di ancoraggio.
 
 ```
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
@@ -244,14 +244,14 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||
 |-|-|
 |Parametro|Descrizione|
-|*pAutoHideToolbar*|[in] Un puntatore a un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) riquadro degli oggetti che si trova nel `CAutoHideDockSite`.|
+|*pAutoHideToolbar*|[in] Puntatore a un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) riquadro degli oggetti che si trova sul `CAutoHideDockSite`.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo cerca la riga che contiene *pAutoHideToolbar*. Viene chiamato `CMFCAutoHideBar.UnSetAutoHideMode` per tutte le `CMFCAutoHideBar` gli oggetti in tale riga. Se *pAutoHideToolbar* non viene trovato o è NULL, questo metodo chiama `CMFCAutoHideBar.UnSetAutoHideMode` per tutti i `CMFCAutoHideBar` gli oggetti nel `CAutoHideDockSite`.
+Questo metodo cerca la riga che contiene *pAutoHideToolbar*. `CMFCAutoHideBar.UnSetAutoHideMode` Richiede tutti gli `CMFCAutoHideBar` oggetti su quella riga. Se *pAutoHideToolbar* non viene trovato o è `CMFCAutoHideBar.UnSetAutoHideMode` NULL, `CMFCAutoHideBar` questo `CAutoHideDockSite`metodo chiama per tutti gli oggetti in .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CDockSite](../../mfc/reference/cdocksite-class.md)
+[CDockSite Class](../../mfc/reference/cdocksite-class.md)

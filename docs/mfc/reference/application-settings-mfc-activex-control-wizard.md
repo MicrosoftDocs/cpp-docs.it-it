@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-ms.openlocfilehash: 3201b5882a1de4064d924fbb28ee1c575ab8ccbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 55f202ffabe945e55589ab1fc771a1757e23ca2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151305"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372472"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Impostazioni applicazione, Creazione guidata controllo ActiveX MFC
 
@@ -30,13 +30,13 @@ Questa schermata della Creazione guidata controllo ActiveX MFC può essere usata
 
    Quando si generano file della Guida con la procedura guidata, il progetto comprende quanto riportato di seguito:
 
-   - Il file vcxproj contiene il codice usato per compilare e configurare il file della Guida al momento della compilazione del progetto.
+  - Il file vcxproj contiene il codice usato per compilare e configurare il file della Guida al momento della compilazione del progetto.
 
-   - Il file *projnamePropPage*.cpp comprende una funzione [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) nel costruttore.
+  - Il file *projnamePropPage*.cpp comprende una funzione [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) nel costruttore.
 
-   - Il file projname.hpj è il file di progetto usato dal compilatore della Guida per creare il file della Guida del controllo ActiveX. Rappresenta un file di testo contenente le informazioni sulla compilazione del file della Guida e sui percorsi dei file aggiuntivi (ad esempio le bitmap) inclusi nel file della Guida.
+  - Il file projname.hpj è il file di progetto usato dal compilatore della Guida per creare il file della Guida del controllo ActiveX. Rappresenta un file di testo contenente le informazioni sulla compilazione del file della Guida e sui percorsi dei file aggiuntivi (ad esempio le bitmap) inclusi nel file della Guida.
 
-   - Il progetto include la directory HLP contenente i file bitmap della Guida del progetto e il file degli argomenti della Guida (*projname.rtf*), che comprende gli argomenti standard per le proprietà, gli eventi e i metodi comuni supportati da numerosi controlli ActiveX. Il file RTF può essere modificato allo scopo di aggiungere o rimuovere determinati argomenti della Guida.
+  - Il progetto include la directory HLP contenente i file bitmap della Guida del progetto e il file degli argomenti della Guida (*projname.rtf*), che comprende gli argomenti standard per le proprietà, gli eventi e i metodi comuni supportati da numerosi controlli ActiveX. Il file RTF può essere modificato allo scopo di aggiungere o rimuovere determinati argomenti della Guida.
 
 ## <a name="see-also"></a>Vedere anche
 

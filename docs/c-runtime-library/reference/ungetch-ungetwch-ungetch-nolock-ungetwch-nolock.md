@@ -1,11 +1,15 @@
 ---
 title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
+- _o__ungetch
+- _o__ungetch_nolock
+- _o__ungetwch
+- _o__ungetwch_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +51,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443755"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361316"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -79,18 +84,20 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Parametri
 
-*c*<br/>
+*C*<br/>
 Carattere da inserire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Entrambe le funzioni restituiscono il carattere *c* in caso di esito positivo. Se si verifica un errore, **_ungetch** restituisce il valore **EOF** e **_ungetwch** restituisce **WEOF**.
+Entrambe le funzioni restituiscono il carattere *c* se ha esito positivo. Se si verifica un errore, **_ungetch** restituisce il valore **EOF** e **_ungetwch** restituisce **WEOF**.
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste funzioni eseguono il push del carattere *c* di nuovo nella console *, causando* il carattere successivo letto da **_getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** e **_ungetwch** hanno esito negativo se vengono chiamati più di una volta prima della successiva lettura. L'argomento *c* non può essere **EOF** (o **WEOF**).
+Queste funzioni spingono il carattere *c* alla console, facendo in modo che *c* sia il carattere successivo letto **da _getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** e **_ungetwch** non riescono se vengono chiamati più di una volta prima della lettura successiva. L'argomento *c* non può essere **EOF** (o **WEOF**).
 
 Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -106,7 +113,7 @@ Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che 
 |**_ungetch**, **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**, **_ungetwch_nolock**|\<conio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -152,6 +159,6 @@ Whitetoken = White
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

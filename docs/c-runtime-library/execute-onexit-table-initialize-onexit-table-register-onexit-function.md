@@ -1,12 +1,16 @@
 ---
 title: _execute_onexit_table, _initialize_onexit_table, _register_onexit_function
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _execute_onexit_table
 - _initialize_onexit_table
 - _register_onexit_function
+- _o__execute_onexit_table
+- _o__initialize_onexit_table
+- _o__register_onexit_function
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +27,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 573be497bafbe5372186f31b3ea60d9a5ef7fac1
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a1e35d9e86a43e48849373a1cf1aa07febcd0e33
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856982"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351647"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
@@ -53,19 +57,19 @@ int _execute_onexit_table(
 
 #### <a name="parameters"></a>Parametri
 
-*table*<br/>
+*tavolo*<br/>
 [in, out] Puntatore alla tabella di funzioni onexit.
 
-*function*<br/>
+*Funzione*<br/>
 [in] Puntatore a una funzione da aggiungere alla tabella di funzioni onexit.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se l'esito è positivo, restituisce 0. In caso contrario viene restituito un valore negativo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Queste funzioni sono dettagli di implementazione dell'infrastruttura usati per supportare il runtime di C e devono essere chiamate direttamente dal codice. Il runtime di C usa una *tabella di funzioni onexit* per rappresentare la sequenza di funzioni registrate dalle chiamate a `atexit`, `at_quick_exit`, e `_onexit`. La struttura dei dati della tabella di funzioni onexit è un dettaglio di implementazione opaco del runtime di C; l'ordine e il significato dei relativi membri dati possono essere modificati. Non devono essere verificati da codice esterno.
+Queste funzioni sono dettagli di implementazione dell'infrastruttura usati per supportare il runtime di C e devono essere chiamate direttamente dal codice. Il runtime C utilizza una tabella di *funzioni onexit* `atexit`per `at_quick_exit`rappresentare la sequenza di funzioni registrate mediante chiamate a , e `_onexit`. La struttura dei dati della tabella di funzioni onexit è un dettaglio di implementazione opaco del runtime di C; l'ordine e il significato dei relativi membri dati possono essere modificati. Non devono essere verificati da codice esterno.
 
 La funzione `_initialize_onexit_table` consente di inizializzare la tabella di funzioni onexit al valore iniziale.  Questa funzione deve essere chiamata prima che la tabella di funzioni onexit venga passata a `_register_onexit_function` o `_execute_onexit_table`.
 
@@ -73,13 +77,15 @@ La funzione `_register_onexit_function` accoda una funzione alla fine della tabe
 
 La funzione `_execute_onexit_table` esegue tutte le funzioni della tabella di funzioni onexit, cancella la tabella e quindi restituisce un risultato. Dopo una chiamata a `_execute_onexit_table`, la tabella è in uno stato non valido: deve essere reinizializzata da una chiamata a `_initialize_onexit_table` prima di essere usata nuovamente.
 
-## <a name="requirements"></a>Requisiti di
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](global-state.md).
+
+## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
 
-Le funzioni `_initialize_onexit_table`, `_register_onexit_function`e `_execute_onexit_table` sono specifiche di Microsoft. Per informazioni sulla compatibilità, vedere [Compatibilità](../c-runtime-library/compatibility.md).
+Le `_initialize_onexit_table` `_register_onexit_function`funzioni `_execute_onexit_table` , e sono specifiche di Microsoft. Per informazioni sulla compatibilità, vedere [Compatibilità](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

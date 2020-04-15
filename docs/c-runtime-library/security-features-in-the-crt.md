@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746943"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361013"
 ---
 # <a name="security-features-in-the-crt"></a>Funzionalità di sicurezza in CRT
 
@@ -52,23 +52,23 @@ char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-Definendo `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` come 1, viene eliminato l'avviso modificando la chiamata `strcpy` a `strcpy_s`, che evita sovraccarichi del buffer. Per altre informazioni, vedere [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
+Definendo `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` come 1, viene eliminato l'avviso modificando la chiamata `strcpy` a `strcpy_s`, che evita sovraccarichi del buffer. Per altre informazioni, vedere [Overload di modelli sicuri](../c-runtime-library/secure-template-overloads.md).
 
 Per queste funzioni deprecate senza overload dei modelli sicuri, è necessario considerare la possibilità di aggiornare manualmente il codice per utilizzare le versioni sicure.
 
-Un'altra origine degli avvisi di deprecazione, indipendente dalla sicurezza, sono le funzioni POSIX. Sostituire i nomi delle funzioni POSIX con i relativi equivalenti standard. Ad esempio, modificare [access](../c-runtime-library/reference/access-crt.md) in [_access](../c-runtime-library/reference/access-waccess.md) o disabilitare gli avvisi di deprecazione correlati a POSIX definendo `_CRT_NONSTDC_NO_WARNINGS`. Per altre informazioni, vedere [Compatibility](compatibility.md).
+Un'altra origine degli avvisi di deprecazione, indipendente dalla sicurezza, sono le funzioni POSIX. Sostituire i nomi delle funzioni POSIX con i relativi equivalenti standard. Ad esempio, modificare [access](../c-runtime-library/reference/access-crt.md) in [_access](../c-runtime-library/reference/access-waccess.md) o disabilitare gli avvisi di deprecazione correlati a POSIX definendo `_CRT_NONSTDC_NO_WARNINGS`. Per altre informazioni, vedere [Compatibilità](compatibility.md).
 
 ## <a name="additional-security-features"></a>Funzionalità di sicurezza aggiuntive
 
 Alcune delle funzionalità di sicurezza includono quanto segue:
 
-- `Parameter Validation`. I parametri passati alle funzioni CRT vengono convalidati, nelle funzioni sicure e in molte versioni preesistenti di funzioni. Le convalide includono:
+- `Parameter Validation`. I parametri passati alle funzioni CRT vengono convalidati, nelle funzioni sicure e in molte versioni preesistenti di funzioni. Queste convalide includono:
 
-   - Verifica dei valori **NULL** passati alle funzioni.
+  - Verifica dei valori **NULL** passati alle funzioni.
 
-   - Verifica dei valori enumerati per la validità.
+  - Verifica dei valori enumerati per la validità.
 
-   - Verifica che i valori integrali siano in intervalli validi.
+  - Verifica che i valori integrali siano in intervalli validi.
 
 - Per altre informazioni, vedere [Convalida dei parametri](../c-runtime-library/parameter-validation.md).
 
@@ -89,5 +89,5 @@ Alcune delle funzionalità di sicurezza includono quanto segue:
 ## <a name="see-also"></a>Vedere anche
 
 [Convalida dei parametri](../c-runtime-library/parameter-validation.md)<br/>
-[Overload di modelli sicuri](../c-runtime-library/secure-template-overloads.md)<br/>
-[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)
+[Overload dei modelli protettiSecure Template Overloads](../c-runtime-library/secure-template-overloads.md)<br/>
+[Funzioni della libreria CRT](../c-runtime-library/crt-library-features.md)

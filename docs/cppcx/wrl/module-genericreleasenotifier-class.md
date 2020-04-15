@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-ms.openlocfilehash: 318415c9726426cbd60c205759a6ff8572cc555e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3cc8e33d596fb1d3ecc4a94fee7971a50ffe596
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325052"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371298"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Classe Module::GenericReleaseNotifier
 
-Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore dell'evento è specificato da un'espressione lambda, funtore o puntatore a funzione.
+Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore eventi è specificato da in un'espressione lambda, un funtore o un puntatore a funzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,7 +34,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Il tipo del membro dati che contiene il percorso del gestore dell'evento.
+Tipo del membro dati che contiene il percorso del gestore eventi.
 
 ## <a name="members"></a>Membri
 
@@ -42,19 +42,19 @@ Il tipo del membro dati che contiene il percorso del gestore dell'evento.
 
 Nome                                                                                                     | Descrizione
 -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | Inizializza una nuova istanza della classe `Module::GenericReleaseNotifier`.
+[Modulo::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | Inizializza una nuova istanza della classe `Module::GenericReleaseNotifier`.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                                                     | Descrizione
 ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
-[Module:: genericreleasenotifier:: Invoke](#genericreleasenotifier-invoke) | Chiama il gestore dell'evento associato all'oggetto corrente `Module::GenericReleaseNotifier` oggetto.
+[Modulo::GenericReleaseNotifier::Richiamare](#genericreleasenotifier-invoke) | Chiama il gestore eventi `Module::GenericReleaseNotifier` associato all'oggetto corrente.
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
 Nome                                                                          | Descrizione
 ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | Contiene l'espressione lambda, funtore o il gestore eventi puntatore a funzione associato all'oggetto corrente `Module::GenericReleaseNotifier` oggetto.
+[Modulo::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | Contiene il gestore eventi lambda, funtore o puntatore a funzione associato all'oggetto corrente. `Module::GenericReleaseNotifier`
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -68,15 +68,15 @@ Nome                                                                          | 
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="genericreleasenotifier-callback"></a>Module::GenericReleaseNotifier::callback_
+## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>Modulo::GenericReleaseNotifier::callback_
 
-Contiene l'espressione lambda, funtore o il gestore eventi puntatore a funzione associato all'oggetto corrente `Module::GenericReleaseNotifier` oggetto.
+Contiene il gestore eventi lambda, funtore o puntatore a funzione associato all'oggetto corrente. `Module::GenericReleaseNotifier`
 
 ```cpp
 T callback_;
 ```
 
-## <a name="genericreleasenotifier-genericreleasenotifier"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier
+## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>Modulo::GenericReleaseNotifier::GenericReleaseNotifier
 
 Inizializza una nuova istanza della classe `Module::GenericReleaseNotifier`.
 
@@ -90,14 +90,14 @@ GenericReleaseNotifier(
 ### <a name="parameters"></a>Parametri
 
 *callback*<br/>
-Un'espressione lambda, funtore o gestore eventi puntatore a funzione che può essere richiamato con l'operatore della funzione delle parentesi (`()`).
+Un gestore eventi lambda, funtore o puntatore a funzione che può`()`essere richiamato con l'operatore di funzione parentesi ( ).
 
-*release*<br/>
-Specificare `true` per abilitare la chiamata sottostante [Module:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) metodo; in caso contrario, specificare `false`.
+*Rilascio*<br/>
+Specificare per abilitare `true` la chiamata al metodo [sottostante Module::ReleaseNotifier::Release();](module-releasenotifier-class.md#releasenotifier-release) in caso `false`contrario, specificare .
 
-## <a name="genericreleasenotifier-invoke"></a>Module:: genericreleasenotifier:: Invoke
+## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>Modulo::GenericReleaseNotifier::Richiamare
 
-Chiama il gestore dell'evento associato all'oggetto corrente `Module::GenericReleaseNotifier` oggetto.
+Chiama il gestore eventi `Module::GenericReleaseNotifier` associato all'oggetto corrente.
 
 ```cpp
 void Invoke();

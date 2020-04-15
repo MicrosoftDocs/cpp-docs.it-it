@@ -1,5 +1,5 @@
 ---
-title: Chiamate di funzione
+title: Chiamate di funzioni
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function calls, C functions
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: 2402f3fef77b19c0420f0c4a52407a730b53b1d5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148205"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334565"
 ---
-# <a name="function-calls"></a>Chiamate di funzione
+# <a name="function-calls"></a>Chiamate di funzioni
 
 Una *chiamata di funzione* è un'espressione che trasferisce il controllo e gli argomenti (se presenti) a una funzione e ha il formato seguente:
 
-*expression* (*expression-list*<sub>opt</sub>)
+*espressione* (*elenco espressioni*<sub>opz</sub>)
 
 dove *expression* è un nome di funzione o restituisce un indirizzo della funzione e *expression-list* è un elenco di espressioni (separate da virgole). I valori di queste ultime espressioni sono gli argomenti passati alla funzione. Se la funzione non restituisce un valore, dichiararla come funzione che restituisce `void`.
 
 Se prima della chiamata di funzione esiste una dichiarazione, ma non viene fornita alcuna informazione relativa ai parametri, tutti gli argomenti non dichiarati subiscono semplicemente le conversioni aritmetiche normali.
 
 > [!NOTE]
->  Le espressioni nell'elenco di argomenti della funzione possono essere valutate in qualsiasi ordine, pertanto gli argomenti i cui valori possono essere modificati da effetti collaterali di un altro argomento hanno valori non definiti. Il punto di sequenza definito dall'operatore della chiamata di funzione assicura solo che gli effetti collaterali nell'elenco di argomenti vengano valutati prima che il controllo venga passato alla funzione chiamata. Tenere presente che l'ordine in cui gli argomenti vengono inseriti nello stack è un altro aspetto diverso. Per altre informazioni, vedere [Punti di sequenza](../c-language/c-sequence-points.md).
+> Le espressioni nell'elenco di argomenti della funzione possono essere valutate in qualsiasi ordine, pertanto gli argomenti i cui valori possono essere modificati da effetti collaterali di un altro argomento hanno valori non definiti. Il punto di sequenza definito dall'operatore della chiamata di funzione assicura solo che gli effetti collaterali nell'elenco di argomenti vengano valutati prima che il controllo venga passato alla funzione chiamata. (Si noti che l'ordine in cui gli argomenti vengono inseriti nello stack è una questione separata.) Per ulteriori informazioni, vedere [Punti di sequenza.](../c-language/c-sequence-points.md)
 
 L'unico requisito per qualsiasi chiamata di funzione è rappresentato dal fatto che l'espressione prima della parentesi deve restituire un indirizzo di funzione. Questo significa che una funzione può essere chiamata tramite qualsiasi espressione di puntatore a funzione.
 

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: bdf19b6b472cd4d224d749f59c75ca77d11c34f8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516696"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358336"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operatore handle all'oggetto (^) (C++/CLI e C++/CX)
 
-Il *dichiaratore di handle* (`^`), modifica l'[identificatore](../cpp/overview-of-declarators.md) di tipo per indicare che l'oggetto dichiarato deve essere eliminato automaticamente quando il sistema determina che non è più accessibile.
+Il *dichiaratore* di`^`handle ( , pronunciato "hat"), modifica l'identificatore di tipo in modo che l'oggetto dichiarato debba essere eliminato automaticamente quando il sistema determina che l'oggetto non è più accessibile. [specifier](../cpp/overview-of-declarators.md)
 
 ## <a name="accessing-the-declared-object"></a>Accesso all'oggetto dichiarato
 
@@ -38,7 +38,7 @@ Il sistema usa il meccanismo *Garbage Collector* CLR per determinare se l'oggett
 
 Dal momento che i puntatori nativi C++ (`*`) e i riferimenti (`&`) non sono riferimenti gestiti, il Garbage Collector non può aggiornare automaticamente gli indirizzi a cui puntano. Per risolvere questo problema, utilizzare il dichiaratore di handle per specificare una variabile che il Garbage Collector riconosce e che consente l'aggiornamento automatico.
 
-Per altre informazioni, vedere [Procedura: Dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
+Per ulteriori informazioni, vedere [Procedura: dichiarare gli handle nei tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
 
 ### <a name="examples"></a>Esempi
 
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-Questo esempio mostra che un riferimento nativo (`&`) non può essere associato a un membro **int** di un tipo gestito, perché **int** può essere archiviato nell'heap sottoposto a Garbage Collection e i riferimenti nativi non tengono traccia dello spostamento di oggetti nell'heap gestito. Per correggere è necessario utilizzare una variabile locale o modificare `&` in `%`, rendendolo un riferimento di traccia.
+In questo esempio viene`&`illustrato che un riferimento nativo ( ) non può essere associato a un membro **int** di un tipo gestito, **poiché int** potrebbe essere archiviato nell'heap sottoposto a Garbage Collection e i riferimenti nativi non tengono traccia dello spostamento degli oggetti nell'heap gestito. Per correggere è necessario utilizzare una variabile locale o modificare `&` in `%`, rendendolo un riferimento di traccia.
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -223,5 +223,5 @@ Opzione del compilatore: `/clr`
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Estensioni dei componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Operatore di riferimento di rilevamento](tracking-reference-operator-cpp-component-extensions.md)

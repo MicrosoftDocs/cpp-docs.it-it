@@ -7,25 +7,25 @@ helpviewer_keywords:
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-ms.openlocfilehash: d91b516253fc160686e2f1f6ae1ca1704f707f75
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 66e99b18d181e9067e90398c35a61db2da66c301
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221436"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328582"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Esportazione di funzioni da una DLL in base al numero ordinale anziché al nome
 
-Il modo più semplice per esportare funzioni da DLL viene per esportarli in base al nome. Questo è ciò che accade quando si usa **dllexport**, ad esempio. Ma è invece possibile esportare le funzioni per ordinale. Con questa tecnica, è necessario usare un file con estensione def al posto di **dllexport**. Per specificare un valore ordinale di funzione, aggiungere il relativo ordinale per il nome della funzione nel file def. Per informazioni su come specificare gli ordinali, vedere [esportazione da una DLL tramite i file def](exporting-from-a-dll-using-def-files.md).
+Il modo più semplice per esportare le funzioni dalla DLL consiste nell'esportarle in base al nome. Questo è ciò che accade quando si utilizza **__declspec(dllexport)**, ad esempio. Ma è invece possibile esportare le funzioni per ordinale. Con questa tecnica è necessario utilizzare un file def anziché **__declspec(dllexport)**. Per specificare il valore ordinale di una funzione, aggiungere il relativo ordinale al nome della funzione nel file def. Per informazioni sulla specifica degli ordinali, vedere [Esportazione da una DLL mediante file def](exporting-from-a-dll-using-def-files.md).
 
 > [!TIP]
->  Se si desidera ottimizzare le dimensioni del file della DLL, usare il **NONAME** attributo su ogni funzione esportata. Con il **NONAME** attributo, in cui vengono memorizzati gli ordinali della DLL Esporta tabella anziché i nomi delle funzioni. Può trattarsi di un considerevole risparmio se si siano esportando molte funzioni.
+> Se si desidera ottimizzare le dimensioni del file della DLL, utilizzare l'attributo **NONAME** su ogni funzione esportata. Con l'attributo **NONAME,** gli ordinali vengono archiviati nella tabella di esportazione della DLL anziché nei nomi delle funzioni. Questo può essere un notevole risparmio se si esportano molte funzioni.
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
-- [Usare un file con estensione def per esportare per ordinale](exporting-from-a-dll-using-def-files.md)
+- [Utilizzare un file def in modo da poter esportare per ordinale](exporting-from-a-dll-using-def-files.md)
 
-- [Usare dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Utilizzare __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 ## <a name="see-also"></a>Vedere anche
 

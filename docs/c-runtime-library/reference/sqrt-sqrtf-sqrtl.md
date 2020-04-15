@@ -1,10 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958100"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355575"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -67,20 +69,22 @@ long double sqrtl(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile non negativo
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **Sqrt** che accettano tipi **float** o **Long** **Double** . In un programma C, **Sqrt** accetta sempre e restituisce **Double**.
+Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **sqrt** che accettano tipi **float** o **long** **double.** In un programma C, **sqrt** accetta e restituisce sempre **double**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **Sqrt** restituiscono la radice quadrata di *x*. Per impostazione predefinita, se *x* è negativo, **Sqrt** restituisce un valore NaN indefinito.
+Le funzioni **sqrt** restituiscono la radice quadrata di *x*. Per impostazione predefinita, se *x* è negativo, **sqrt** restituisce un NaN indefinito.
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND|none|_DOMAIN|
+|QNAN,IND|none|_DOMAIN|
 |- ∞|none|_DOMAIN|
 |x<0|none|_DOMAIN|
 
@@ -119,7 +123,7 @@ The square root of 45.35 is 6.73
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>

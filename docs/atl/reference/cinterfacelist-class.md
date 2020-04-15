@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-ms.openlocfilehash: e740d891e279bb29eeef898de52698dc3f04fc67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7fd781c63e4ea084cf078e49fc9efb9cfa2d85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258637"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326785"
 ---
 # <a name="cinterfacelist-class"></a>Classe CInterfaceList
 
-Questa classe fornisce metodi utili quando si crea un elenco di puntatori a interfaccia COM.
+Questa classe fornisce metodi utili quando si costruisce un elenco di puntatori a interfaccia COM.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,11 +30,11 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Parametri
 
-*I*<br/>
+*Ho*<br/>
 Un'interfaccia COM che specifica il tipo di puntatore da archiviare.
 
 *piid*<br/>
-Un puntatore all'IID del *ho*.
+Puntatore all'IID di *I*.
 
 ## <a name="members"></a>Membri
 
@@ -42,27 +42,27 @@ Un puntatore all'IID del *ho*.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CInterfaceList::CInterfaceList](#cinterfacelist)|Il costruttore per l'elenco di interfacce.|
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|Costruttore per l'elenco di interfacce.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe fornisce un costruttore e i metodi derivati per la creazione di un elenco di puntatori a interfaccia COM. Uso [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) quando è necessaria una matrice.
+Questa classe fornisce un costruttore e metodi derivati per la creazione di un elenco di puntatori a interfaccia COM. Utilizzare [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) quando è necessaria una matrice.
 
-Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
+Per ulteriori informazioni, vedere Classi di raccolte [ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-[CAtlList](../../atl/reference/catllist-class.md)
+[Elenco CAtlList](../../atl/reference/catllist-class.md)
 
 `CInterfaceList`
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcoll. h
+**Intestazione:** atlcoll.h
 
-##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList
+## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a>CInterfaceList::CInterfaceList
 
-Il costruttore per l'elenco di interfacce.
+Costruttore per l'elenco di interfacce.
 
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
@@ -70,16 +70,16 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBlockSize*<br/>
-Dimensione del blocco, con valore predefinito è 10.
+*nBlockSize (dimensioni di blocco)*<br/>
+La dimensione del blocco, con un valore predefinito di 10.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La dimensione del blocco è una misura della quantità di memoria allocata quando un nuovo elemento è obbligatorio. Blocchi di dimensioni maggiori riducono le chiamate alle routine di allocazione della memoria, ma usano più risorse.
+La dimensione del blocco è una misura della quantità di memoria allocata quando è necessario un nuovo elemento. Blocchi di dimensioni maggiori riducono le chiamate alle routine di allocazione della memoria, ma utilizzano più risorse.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CAtlList](../../atl/reference/catllist-class.md)<br/>
-[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtr (classe)](../../atl/reference/ccomqiptr-class.md)<br/>
 [Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

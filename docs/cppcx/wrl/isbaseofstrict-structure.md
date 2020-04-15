@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 85aeb71ceaa162cc6366836dd286f2f9983d34e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71db5a1b52a7d7d5471c15591fb34d954b465d07
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386018"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371359"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict (struttura)
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,14 +35,14 @@ struct IsBaseOfStrict<Base, Base>;
 *Base*<br/>
 Tipo di base.
 
-*Derivati*<br/>
-Il tipo derivato.
+*Derivata*<br/>
+Tipo derivato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Verifica se un tipo è la base di un altro tipo.
 
-Il primo modello di verifica se un tipo è derivato da un tipo di base, che potrebbe produrre **true** oppure **false**. Il secondo modello di verifica se un tipo è derivato da se stessa, che restituisce sempre **false**.
+Il primo modello verifica se un tipo è derivato da un tipo di base, che potrebbe restituire **true** o **false**. Il secondo modello verifica se un tipo è derivato da se stesso, che restituisce sempre **false**.
 
 ## <a name="members"></a>Membri
 
@@ -50,7 +50,7 @@ Il primo modello di verifica se un tipo è derivato da un tipo di base, che potr
 
 Nome                            | Descrizione
 ------------------------------- | --------------------------------------------------
-[IsBaseOfStrict::value](#value) | Indica se un tipo è la base di un altro.
+[IsBaseOfStrict::valore](#value) | Indica se un tipo è la base di un altro.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -58,20 +58,20 @@ Nome                            | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** FTM
+**Intestazione:** internal.h
 
 **Spazio dei nomi:** Microsoft::WRL::Details
 
-## <a name="value"></a>IsBaseOfStrict::value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a>IsBaseOfStrict::valore
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 static const bool value = __is_base_of(Base, Derived);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Indica se un tipo è la base di un altro.
 
-`value` viene **true** se tipo `Base` è una classe di base del tipo `Derived`, in caso contrario è **false**.
+`value`è **true** `Base` se type è una `Derived`classe base del tipo , altrimenti è **false**.

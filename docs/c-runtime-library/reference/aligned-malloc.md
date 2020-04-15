@@ -1,8 +1,9 @@
 ---
 title: _aligned_malloc
-ms.date: 12/11/2019
+ms.date: 4/2/2020
 api_name:
 - _aligned_malloc
+- _o__aligned_malloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: c06c822ae4e7584a172c260a5c06e25019a1ce5e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b7d7f29f50b28ff713de94cc3304014e96d45b70
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300131"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350610"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -48,27 +50,29 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Parametri
 
-*size*<br/>
+*Dimensione*<br/>
 Dimensione dell'allocazione di memoria richiesta.
 
-*alignment*<br/>
+*allineamento*<br/>
 Valore di allineamento, che deve essere una potenza intera di 2.
 
 ## <a name="return-value"></a>Valore restituito
 
 Puntatore al blocco di memoria allocato o NULL se l'operazione non è riuscita. Il puntatore è un multiplo di *allineamento*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 **_aligned_malloc** si basa su [malloc](malloc.md).
 
-**_aligned_malloc** è contrassegnato come `__declspec(noalias)` e `__declspec(restrict)`, vale a dire che la funzione non modifica le variabili globali e che il puntatore restituito non è associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**_aligned_malloc** è `__declspec(noalias)` `__declspec(restrict)`contrassegnato e , ovvero la funzione è garantita per non modificare le variabili globali e che il puntatore restituito non è un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
-La funzione imposta `errno` su `ENOMEM` se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore di `_HEAP_MAXREQ`. Per altre informazioni su `errno`, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Inoltre, **_aligned_malloc** convalida i relativi parametri. Se l' *allineamento* non è una potenza di 2 o la *dimensione* è zero, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce NULL e imposta `errno` su `EINVAL`.
+La funzione imposta `errno` su `ENOMEM` se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore di `_HEAP_MAXREQ`. Per altre informazioni su `errno`, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Inoltre, **_aligned_malloc** convalida i parametri. Se *alignment* non è una potenza di 2 o *size* è zero, questa funzione richiama il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa `errno` funzione `EINVAL`restituisce NULL e imposta su .
 
-Utilizzare [_aligned_free](aligned-free.md) per deallocare la memoria ottenuta da **_aligned_malloc** e `_aligned_offset_malloc`. Non usare `free`, che non recupera correttamente la memoria allineata e può causare bug difficili da diagnosticare.
+Utilizzare [_aligned_free](aligned-free.md) per deallocare la `_aligned_offset_malloc`memoria ottenuta da **_aligned_malloc** e . Non utilizzare `free`, che non recupera correttamente la memoria allineata e può causare bug difficili da diagnosticare.
 
-## <a name="requirements"></a>Requisiti di
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
@@ -158,4 +162,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allineamento dati](../../c-runtime-library/data-alignment.md)
+[Allineamento dei dati](../../c-runtime-library/data-alignment.md)

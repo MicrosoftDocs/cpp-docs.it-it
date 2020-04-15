@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: 9fd315f017d3dcc9823054ea99e845ec99bc4192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd1af3fb5c1079a40d8248dc71ae4972537aa856
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398745"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372657"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (struttura)
 
@@ -71,43 +71,43 @@ struct ChainInterfaces<
 ### <a name="parameters"></a>Parametri
 
 *I0*<br/>
-(Obbligatorio) Interfaccia ID 0.
+(Obbligatorio) ID interfaccia 0.
 
 *I1*<br/>
-(Obbligatorio) Interfaccia ID 1.
+(Obbligatorio) ID interfaccia 1.
 
 *I2*<br/>
-(Facoltativo) ID di interfaccia 2.
+(Facoltativo) ID interfaccia 2.
 
-*I3*<br/>
-(Facoltativo) ID di interfaccia 3.
+*I3 I3*<br/>
+(Facoltativo) ID interfaccia 3.
 
 *I4*<br/>
-(Facoltativo) ID di interfaccia 4.
+(Facoltativo) ID interfaccia 4.
 
 *I5*<br/>
-(Facoltativo) ID di interfaccia 5.
+(Facoltativo) ID interfaccia 5.
 
-*I6*<br/>
-(Facoltativo) ID di interfaccia 6.
+*I6 I6*<br/>
+(Facoltativo) ID interfaccia 6.
 
-*I7*<br/>
-(Facoltativo) ID di interfaccia 7.
+*I7 I7*<br/>
+(Facoltativo) ID interfaccia 7.
 
 *I8*<br/>
-(Facoltativo) ID di interfaccia 8.
+(Facoltativo) ID interfaccia 8.
 
 *I9*<br/>
-(Facoltativo) ID di interfaccia 9.
+(Facoltativo) ID interfaccia 9.
 
-*DerivedType*<br/>
-Un tipo derivato.
+*TipoDerivato*<br/>
+Tipo derivato.
 
 *BaseType*<br/>
-Il tipo di base di un tipo derivato.
+Tipo di base di un tipo derivato.
 
 *hasImplements*<br/>
-Valore booleano che, se **true**, significa che non è possibile utilizzare un [MixIn](mixin-structure.md) struttura con una classe che deriva dal [implementa](implements-structure.md) struttura.
+Un valore booleano che, se **true**, indica che non è possibile utilizzare una struttura [MixIn](mixin-structure.md) con una classe che non deriva dalla struttura [Implements](implements-structure.md) .
 
 ## <a name="members"></a>Membri
 
@@ -115,16 +115,16 @@ Valore booleano che, se **true**, significa che non è possibile utilizzare un [
 
 Nome                                                   | Descrizione
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ChainInterfaces::CanCastTo](#cancastto)               | Indica se l'ID di interfaccia specificato può essere convertito in ognuna delle specializzazioni definite dal `ChainInterface` i parametri del modello.
-[ChainInterfaces::CastToUnknown](#casttounknown)       | Viene eseguito il cast del tipo definito per il puntatore di interfaccia di *I0* parametro di modello in un puntatore a `IUnknown`.
-[ChainInterfaces::FillArrayWithIid](#fillarraywithiid) | Archivia l'ID di interfaccia definito per il *I0* parametro di modello in una posizione specificata in una matrice specificata di ID di interfaccia.
-[ChainInterfaces::Verify](#verify)                     | Verifica che ogni interfaccia definita dai parametri modello *I0* attraverso *I9* eredita `IUnknown` e/o `IInspectable`e che *I0* eredita da *I1* attraverso *I9*.
+[Interfacce catena::CanCastToChainInterfaces::CanCastTo](#cancastto)               | Indica se è possibile eseguire il cast dell'ID di `ChainInterface` interfaccia specificato a ognuna delle specializzazioni definite dai parametri del modello.
+[Interfacce catena::CastToUnknownChainInterfaces::CastToUnknown](#casttounknown)       | Esegue il cast del puntatore a interfaccia del tipo `IUnknown`definito dal parametro di modello *I0* a un puntatore a .
+[Interfacce catena::FillArrayWithIidChainInterfaces::FillArrayWithIid](#fillarraywithiid) | Archivia l'ID di interfaccia definito dal parametro di modello *I0* in una posizione specificata in una matrice specificata di ID di interfaccia.
+[Interfacce catena::Verifica](#verify)                     | Verifica che ogni interfaccia definita dai parametri di modello da *I0* a *I9* erediti `IUnknown` da e/o `IInspectable`, e che *I0* erediti da *I1* a *I9*.
 
 ### <a name="protected-constants"></a>Costanti protette
 
 Nome                                   | Descrizione
 -------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[ChainInterfaces::IidCount](#iidcount) | Il numero totale di interfaccia ID contenuti nelle interfacce specificate dai parametri modello *I0* attraverso *I9*.
+[Interfacce catena::IidCountChainInterfaces::IidCount](#iidcount) | Numero totale di ID di interfaccia contenuti nelle interfacce specificate dai parametri di modello da *I0* a *I9*.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -134,13 +134,13 @@ Nome                                   | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** Implements. h
+**Intestazione:** implements.h
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="cancastto"></a>ChainInterfaces::CanCastTo
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>Interfacce catena::CanCastToChainInterfaces::CanCastTo
 
-Indica se l'ID di interfaccia specificato può essere convertito in ognuna delle specializzazioni definite dai parametri di modello diverso.
+Indica se è possibile eseguire il cast dell'ID di interfaccia specificato in ognuna delle specializzazioni definite dai parametri di modello non predefiniti.
 
 ```cpp
 __forceinline bool CanCastTo(
@@ -151,19 +151,19 @@ __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Parametri
 
-*riid*<br/>
+*Riid*<br/>
 ID di interfaccia.
 
-*ppv*<br/>
-Un puntatore all'ID di interfaccia ultimo che è stato eseguito il cast correttamente.
+*Ppv*<br/>
+Puntatore all'ultimo ID di interfaccia di cui è stato eseguito correttamente il cast.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se tutte le operazioni di cast ha esito positivo; in caso contrario, **false**.
+**true** se tutte le operazioni di cast hanno avuto esito positivo; in caso contrario, **false**.
 
-## <a name="casttounknown"></a>ChainInterfaces::CastToUnknown
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>Interfacce catena::CastToUnknownChainInterfaces::CastToUnknown
 
-Viene eseguito il cast del tipo definito per il puntatore di interfaccia di *I0* parametro di modello in un puntatore a `IUnknown`.
+Esegue il cast del puntatore a interfaccia del tipo `IUnknown`definito dal parametro di modello *I0* a un puntatore a .
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -171,11 +171,11 @@ __forceinline IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a `IUnknown`.
+Puntatore a `IUnknown`.
 
-## <a name="fillarraywithiid"></a>ChainInterfaces::FillArrayWithIid
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>Interfacce catena::FillArrayWithIidChainInterfaces::FillArrayWithIid
 
-Archivia l'ID di interfaccia definito per il *I0* parametro di modello in una posizione specificata in una matrice specificata di ID di interfaccia.
+Archivia l'ID di interfaccia definito dal parametro di modello *I0* in una posizione specificata in una matrice specificata di ID di interfaccia.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -186,15 +186,15 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametri
 
-*index*<br/>
-Puntatore a un valore di indice nel *IID* matrice.
+*Indice*<br/>
+Puntatore a un valore di indice nella matrice *iids.*
 
 *iids*<br/>
-Matrice ID di interfaccia.
+Matrice di ID di interfaccia.
 
-## <a name="iidcount"></a>ChainInterfaces::IidCount
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>Interfacce catena::IidCountChainInterfaces::IidCount
 
-Il numero totale di interfaccia ID contenuti nelle interfacce specificate dai parametri modello *I0* attraverso *I9*.
+Numero totale di ID di interfaccia contenuti nelle interfacce specificate dai parametri di modello da *I0* a *I9*.
 
 ```cpp
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
@@ -202,22 +202,22 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero totale di ID di interfaccia.
+Numero totale di ID di interfaccia.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I parametri del modello *I0* e *I1* sono obbligatori e i parametri *I2* tramite *I9* sono facoltativi. Il conteggio IID di ogni interfaccia in genere è 1.
+I parametri di modello *I0* e *I1* sono obbligatori e i parametri da *I2* a *I9* sono facoltativi. Il numero di IID di ogni interfaccia è in genere 1.The IID count of each interface is typically 1.
 
-## <a name="verify"></a>Chaininterfaces:: Verify
+## <a name="chaininterfacesverify"></a><a name="verify"></a>Interfacce catena::Verifica
 
-Verifica che ogni interfaccia definita dai parametri modello *I0* attraverso *I9* eredita `IUnknown` e/o `IInspectable`e che *I0* eredita da *I1* attraverso *I9*.
+Verifica che ogni interfaccia definita dai parametri di modello da *I0* a *I9* erediti `IUnknown` da e/o `IInspectable`, e che *I0* erediti da *I1* a *I9*.
 
 ```cpp
 WRL_NOTHROW __forceinline static void Verify();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se l'operazione di verifica non riesce, un `static_assert` genera un messaggio di errore che descrive l'errore.
+Se l'operazione di `static_assert` verifica ha esito negativo, viene generato un messaggio di errore che descrive l'errore.
 
-I parametri del modello *I0* e *I1* sono obbligatori e i parametri *I2* tramite *I9* sono facoltativi.
+I parametri di modello *I0* e *I1* sono obbligatori e i parametri da *I2* a *I9* sono facoltativi.

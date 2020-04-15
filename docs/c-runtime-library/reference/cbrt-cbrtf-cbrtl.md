@@ -1,10 +1,12 @@
 ---
 title: cbrt, cbrtf, cbrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cbrt
 - cbrtf
 - cbrtl
+- _o_cbrt
+- _o_cbrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939295"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333572"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -63,7 +66,7 @@ long double cbrtl(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,11 +75,13 @@ Le funzioni **cbrt** restituiscono la radice del cubo di *x*.
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|none|none|
+|, QNAN, IND|none|none|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **cbrt** che accettano tipi **float** o **Long** **Double** . In un programma C **cbrt** accetta e restituisce sempre **Double**.
+Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **cbrt** che accettano tipi **double** **float** o **long.** In un programma C, **cbrt** accetta e restituisce sempre **double**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -112,7 +117,7 @@ The cube root of -64.64 is -4.013289
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>

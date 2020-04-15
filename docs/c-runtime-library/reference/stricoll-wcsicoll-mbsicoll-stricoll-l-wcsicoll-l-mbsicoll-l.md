@@ -1,6 +1,6 @@
 ---
 title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsicoll_l
 - _stricoll_l
@@ -8,6 +8,12 @@ api_name:
 - _wcsicoll_l
 - _wcsicoll
 - _stricoll
+- _o__mbsicoll
+- _o__mbsicoll_l
+- _o__stricoll
+- _o__stricoll_l
+- _o__wcsicoll
+- _o__wcsicoll_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -54,19 +61,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: 952d3b25f9c3741313e791c49f88a7d2e79ac60b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d726d2d33f8f775d09e6197dfeda6abb91106a53
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940691"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355333"
 ---
 # <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
 Le stringhe vengono confrontate usando informazioni specifiche delle impostazioni locali.
 
 > [!IMPORTANT]
-> non è possibile usare **_mbsicoll** e **_mbsicoll_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicoll** e **_mbsicoll_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -102,32 +109,34 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>Parametri
 
-*string1*, *string2*<br/>
+*stringa1*, *stringa2*<br/>
 Stringhe che terminano con Null da confrontare.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un valore che indica la relazione tra *String1* e *string2*, come indicato di seguito.
+Ognuna di queste funzioni restituisce un valore che indica la relazione tra *string1* e *string2*, come indicato di seguito.
 
 |Valore restituito|Relazione di stringa1 e stringa2|
 |------------------|----------------------------------------|
-|< 0|*String1* minore di *string2*|
-|0|*String1* identico a *string2*|
-|> 0|*String1* maggiore di *string2*|
+|< 0|*string1* minore di *string2*|
+|0|*stringa1* identica a *stringa2*|
+|> 0|*string1* maggiore di *string2*|
 |**_NLSCMPERROR**|Si è verificato un errore.|
 
-Ognuna di queste funzioni restituisce **_NLSCMPERROR**. Per usare **_NLSCMPERROR**, includere \<> > String. h o \<mbstring. h. **_wcsicoll** può avere esito negativo se *String1* o *string2* contiene codici a caratteri "wide" al di fuori del dominio della sequenza di ordinamento. Quando si verifica un errore, **_wcsicoll** può impostare **errno** su **EINVAL**. Per verificare la presenza di un errore in una chiamata a **_wcsicoll**, impostare **errno** su 0, quindi controllare **errno** dopo aver chiamato **_wcsicoll**.
+Ognuna di queste funzioni restituisce **_NLSCMPERROR**. Per utilizzare **_NLSCMPERROR** \<, includere string.h> o \<mbstring.h>. **_wcsicoll** può avere esito negativo se *string1* o *string2* contiene codici di caratteri wide all'esterno del dominio della sequenza di confronto. Quando si verifica un errore, **_wcsicoll** possibile impostare **errno** su **EINVAL**. Per verificare la presenza di un errore in una chiamata a **_wcsicoll**, impostare **errno** su 0 e quindi controllare **errno** dopo aver chiamato **_wcsicoll**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Ognuna di queste funzioni esegue un confronto senza distinzione tra maiuscole e minuscole di *String1* e *string2* in base alla tabella codici attualmente in uso. Usare queste funzioni solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe.
+Ognuna di queste funzioni esegue un confronto senza distinzione tra maiuscole e minuscole di *string1* e *string2* in base alla tabella codici attualmente in uso. Usare queste funzioni solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe.
 
-**stricmp** differisce da **_stricoll** in quanto il confronto **stricmp** è influenzato da **LC_CTYPE**, mentre il confronto tra **_stricoll** è in base alle categorie **LC_CTYPE** e **LC_COLLATE** del locale. Per ulteriori informazioni sulla categoria **LC_COLLATE** [, vedere setlocale](setlocale-wsetlocale.md) e [categorie di impostazioni locali](../../c-runtime-library/locale-categories.md). Le versioni di queste funzioni senza il suffisso **suffisso** usano le impostazioni locali correnti; le versioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_stricmp** differisce da **_stricoll** in quanto il confronto **_stricmp** è influenzato da **LC_CTYPE**, mentre il confronto **_stricoll** è in base alle **categorie LC_CTYPE** e **LC_COLLATE** delle impostazioni locali. Per ulteriori informazioni sulla categoria **LC_COLLATE,** vedere [setlocale](setlocale-wsetlocale.md) e [Locale Categories](../../c-runtime-library/locale-categories.md). Le versioni di queste funzioni senza il suffisso **_l** utilizzano le impostazioni locali correnti; le versioni con il **suffisso _l** sono identiche, ad eccezione del fatto che utilizzano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Tutte queste funzioni convalidano i relativi parametri. Se *String1* o *string2* sono puntatori **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostano **errno** su **EINVAL**.
+Tutte queste funzioni convalidano i relativi parametri. Se *string1* o *string2* sono puntatori **NULL,** viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostano **errno** su **EINVAL**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -139,7 +148,7 @@ Tutte queste funzioni convalidano i relativi parametri. Se *String1* o *string2*
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_stricoll**, **_stricoll_l**|\<string.h>|
+|**_stricoll** **, _stricoll_l**|\<string.h>|
 |**_wcsicoll**, **_wcsicoll_l**|\<wchar.h>, \<string.h>|
 |**_mbsicoll**, **_mbsicoll_l**|\<mbstring.h>|
 
@@ -147,8 +156,8 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>

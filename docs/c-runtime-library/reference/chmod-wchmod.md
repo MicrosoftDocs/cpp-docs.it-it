@@ -1,9 +1,11 @@
 ---
 title: _chmod, _wchmod
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _chmod
 - _wchmod
+- _o__chmod
+- _o__wchmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b224133212f19627a8f975dbbe8c80176e29f112
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: faceb49c921162da042f863abbebbe2ef0a52153
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939196"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350090"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
@@ -52,31 +55,33 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>Parametri
 
-*filename*<br/>
+*Filename*<br/>
 Nome del file esistente.
 
-*pmode*<br/>
+*pmode (pmode)*<br/>
 Impostazione di autorizzazione per il file.
 
 ## <a name="return-value"></a>Valore restituito
 
-Queste funzioni restituiscono 0 se l'impostazione di autorizzazione viene modificata. Il valore restituito-1 indica un errore. Se il file specificato non è stato trovato, **errno** viene impostato su **ENOENT**; Se un parametro non è valido, **errno** viene impostato su **EINVAL**.
+Queste funzioni restituiscono 0 se l'impostazione di autorizzazione viene modificata. Un valore restituito di -1 indica un errore. Se il file specificato non viene trovato, **errno** viene impostato su **ENOENT**; se un parametro non è valido, **errno** è impostato su **EINVAL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_chmod** modifica l'impostazione di autorizzazione del file specificato da *filename*. L'impostazione di autorizzazione controlla l'accesso in lettura e scrittura al file. L'espressione integer *pmode* contiene una o entrambe le costanti manifeste seguenti, definite in SYS\Stat.h.
+La funzione **_chmod** modifica l'impostazione di autorizzazione del file specificato da *filename*. L'impostazione di autorizzazione controlla l'accesso in lettura e scrittura al file. L'espressione integer *pmode* contiene una o entrambe le costanti di manifesto seguenti, definite in SYS.Stat.h.
 
-| *pmode* | Significato |
+| *pmode (pmode)* | Significato |
 |-|-|
-| **\_IREAD\_S** | Solo lettura consentita. |
-| **\_IWRITE\_S** | Scrittura consentita. (In effetti, consente la lettura e la scrittura) |
-| **\_S\_IREAD** &#124; **SIWRITE\_ \_** | Lettura e scrittura consentite. |
+| **\_S\_IREAD** | Solo lettura consentita. |
+| **\_S\_IWRITE (Informazioni in stati incomMIin** | Scrittura consentita. (In effetti, consente la lettura e la scrittura) |
+| **\_S\_IREAD** &#124; ** \_\_S IWRITE** | Lettura e scrittura consentite. |
 
-Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit **\|** per bit (). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Pertanto, le modalità **_S_IWRITE** e **_S_IREAD** \| **_S_IWRITE** sono equivalenti.
+Quando vengono fornite entrambe le costanti, vengono unite**\|** con l'operatore o bit per bit ( ). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Pertanto, le **modalità _S_IWRITE** e **_S_IREAD** \| **_S_IWRITE** sono equivalenti.
 
-**_wchmod** è una versione a caratteri wide di **_chmod**; l'argomento *filename* per **_wchmod** è una stringa di caratteri wide. **_wchmod** e **_chmod** si comportano in modo identico.
+**_wchmod** è una versione a caratteri wide di **_chmod**; l'argomento *filename* **di _wchmod** è una stringa di caratteri wide. **_wchmod** e **_chmod** si comportano in modo identico in caso contrario.
 
-Questa funzione convalida i relativi parametri. Se *pmode* non è una combinazione di una delle costanti manifesto o incorpora un set alternativo di costanti, la funzione le ignora semplicemente. Se *filename* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce-1.
+Questa funzione convalida i relativi parametri. Se *pmode* non è una combinazione di una delle costanti manifesto o incorpora un set alternativo di costanti, la funzione semplicemente ignora quelle. Se *filename* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e la funzione restituisce -1.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -91,7 +96,7 @@ Questa funzione convalida i relativi parametri. Se *pmode* non è una combinazio
 |**_chmod**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 |**_wchmod**|\<io.h> o \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -171,7 +176,7 @@ Mode set to read/write
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>

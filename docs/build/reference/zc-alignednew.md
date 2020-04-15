@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: dfcc4982e1b5f67b5a01d5a0d09d4fd9279deacf
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.openlocfilehash: 041f62bbbf5f7a2750960d21d1534cf6daf4b874
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335690"
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (allocazione sovrallineata C++17)
 
@@ -20,11 +20,11 @@ Abilitare il supporto per l'allocazione di memoria dinamica sovrallineata **new*
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Zc:alignedNew**\[-]
+> **/-c:alignedNew**\[-]
 
 ## <a name="remarks"></a>Osservazioni
 
-Il compilatore e la libreria MSVC supportano l'assegnazione della memoria dinamica sovrallineata standard di C++17. Quando è specificata l'opzione **/Zc:alignedNew** un'allocazione dinamica come `new Example;` rispetta l'allineamento di *Example* anche quando è superiore a `max_align_t`, l'allineamento massimo richiesto per qualsiasi tipo fondamentale. Quando l'allineamento del tipo allocato non è superiore all'allineamento garantito dall'operatore originale **new**, disponibile come valore della macro predefinita **\_\_STDCPP\_ DEFAULT\_NEW\_ALIGNMENT\_\_**, l'istruzione `new Example;` dà come risultato una chiamata a `::operator new(size_t)`, come accadeva in C++14. Quando l'allineamento è maggiore di **\_\_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_\_**, l'implementazione ottiene invece la memoria usando `::operator new(size_t, align_val_t)`. In modo analogo l'eliminazione dei tipi sovrallineati chiama `::operator delete(void*, align_val_t)` o la firma di eliminazione con dimensioni `::operator delete(void*, size_t, align_val_t)`.
+Il compilatore e la libreria MSVC supportano l'assegnazione della memoria dinamica sovrallineata standard di C++17. Quando viene specificata l'opzione **//c:alignedNew,** un'allocazione dinamica, ad `new Example;` esempio rispetta l'allineamento di *Esempio* anche quando è maggiore di `max_align_t`, l'allineamento più grande richiesto per qualsiasi tipo fondamentale. Quando l'allineamento del tipo allocato non è superiore all'allineamento garantito dall'operatore originale **new**, `new Example;` disponibile come `::operator new(size_t)` valore della macro ** \_ \_predefinita STDCPP\_\_DEFAULT NEW\_ALIGNMENT\_**, l'istruzione genera una chiamata a come ha fatto in C. Quando l'allineamento è `::operator new(size_t, align_val_t)`maggiore di ** \_ \_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_**, l'implementazione ottiene invece la memoria utilizzando . In modo analogo l'eliminazione dei tipi sovrallineati chiama `::operator delete(void*, align_val_t)` o la firma di eliminazione con dimensioni `::operator delete(void*, size_t, align_val_t)`.
 
 L'opzione **/Zc:alignedNew** è disponibile solo quando è abilitata [/std:c++17](std-specify-language-standard-version.md) o [/std:c++latest](std-specify-language-standard-version.md). In **/std:c++17** o in **/std:c++latest**, **/Zc:alignedNew** è abilitata per impostazione predefinita per la conformità con lo standard ISO C++17. Se l'unico motivo per cui si implementano gli operatori **new** e **delete** è il supporto delle allocazioni sovrallineate, questo codice potrebbe non essere più necessario nella modalità C++17. Per disattivare questa opzione e ripristinare il comportamento di C++14 per **new** e **delete** quando si usa **/std:c++17** o **/std:c++latest**, specificare **/Zc:alignedNew-**. Se si implementano gli operatori **new** e **delete** ma non si è pronti per l'implementazione degli overload degli operatori sovrallineati **new** e **delete** che hanno il parametro `align_val_t`, usare l'opzione **/Zc:alignedNew-** per impedire che il compilatore e la Libreria standard generino chiamate agli overload sovrallineati. L'opzione [/permissive-](permissive-standards-conformance.md) non modifica l'impostazione predefinita **/Zc:alignedNew**.
 
@@ -99,12 +99,12 @@ Per informazioni sui problemi di conformità in Visual C++, vedere [Comportament
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà **Proprietà di configurazione** > **C/C++** > **Riga di comando**.
+1. Selezionare la pagina delle proprietà **Riga** > di**comando** delle proprietà di configurazione**C/C.** > 
 
 1. Modificare la proprietà **Opzioni aggiuntive** in modo da includere **/Zc:alignedNew** o **/Zc:alignedNew-** e quindi scegliere **OK**.
 
 ## <a name="see-also"></a>Vedere anche
 
-[/Zc (conformità)](zc-conformance.md)
+[/Zc (Conformità)](zc-conformance.md)

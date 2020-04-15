@@ -1,6 +1,6 @@
 ---
-title: Funzioni e globali CRT interni
-ms.date: 01/22/2019
+title: Funzioni e variabili globali CRT interne
+ms.date: 4/2/2020
 api_name:
 - __acrt_iob_func
 - __AdjustPointer
@@ -277,6 +277,113 @@ api_name:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
+- _o__CIacos
+- _o__CIasin
+- _o__CIcosh
+- _o__CIsinh
+- _o__CItanh
+- _o__Getdays
+- _o__Getmonths
+- _o__Gettnames
+- _o__Strftime
+- _o__W_Getdays
+- _o__W_Getmonths
+- _o__Wcsftime
+- _o___acrt_iob_func
+- _o___conio_common_vcprintf
+- _o___conio_common_vcprintf_p
+- _o___conio_common_vcprintf_s
+- _o___conio_common_vcscanf
+- _o___conio_common_vcwprintf
+- _o___conio_common_vcwprintf_p
+- _o___conio_common_vcwprintf_s
+- _o___conio_common_vcwscanf
+- _o___fpe_flt_rounds
+- _o___libm_sse2_acos
+- _o___libm_sse2_acosf
+- _o___libm_sse2_asin
+- _o___libm_sse2_asinf
+- _o___libm_sse2_atan
+- _o___libm_sse2_atan2
+- _o___libm_sse2_atanf
+- _o___libm_sse2_cos
+- _o___libm_sse2_cosf
+- _o___libm_sse2_exp
+- _o___libm_sse2_expf
+- _o___libm_sse2_log
+- _o___libm_sse2_log10
+- _o___libm_sse2_log10f
+- _o___libm_sse2_logf
+- _o___libm_sse2_pow
+- _o___libm_sse2_powf
+- _o___libm_sse2_sin
+- _o___libm_sse2_sinf
+- _o___libm_sse2_tan
+- _o___libm_sse2_tanf
+- _o___p___argc
+- _o___p___argv
+- _o___p___wargv
+- _o___p__acmdln
+- _o___p__environ
+- _o___p__mbcasemap
+- _o___p__mbctype
+- _o___p__pgmptr
+- _o___p__wcmdln
+- _o___p__wenviron
+- _o___p__wpgmptr
+- _o___pwctype_func
+- _o___std_exception_copy
+- _o___std_exception_destroy
+- _o___std_type_info_destroy_list
+- _o___stdio_common_vfprintf
+- _o___stdio_common_vfprintf_p
+- _o___stdio_common_vfprintf_s
+- _o___stdio_common_vfscanf
+- _o___stdio_common_vfwprintf
+- _o___stdio_common_vfwprintf_p
+- _o___stdio_common_vfwprintf_s
+- _o___stdio_common_vfwscanf
+- _o___stdio_common_vsnprintf_s
+- _o___stdio_common_vsnwprintf_s
+- _o___stdio_common_vsprintf
+- _o___stdio_common_vsprintf_p
+- _o___stdio_common_vsprintf_s
+- _o___stdio_common_vsscanf
+- _o___stdio_common_vswprintf
+- _o___stdio_common_vswprintf_p
+- _o___stdio_common_vswprintf_s
+- _o___stdio_common_vswscanf
+- _o___timezone
+- _o___tzname
+- _o__calloc_base
+- _o__configure_narrow_argv
+- _o__configure_wide_argv
+- _o__crt_atexit
+- _o__errno
+- _o__except1
+- _o__free_base
+- _o__get_initial_narrow_environment
+- _o__get_initial_wide_environment
+- _o__get_narrow_winmain_command_line
+- _o__get_stream_buffer_pointers
+- _o__get_wide_winmain_command_line
+- _o__initialize_narrow_environment
+- _o__initialize_wide_environment
+- _o__libm_sse2_acos_precise
+- _o__libm_sse2_asin_precise
+- _o__libm_sse2_atan_precise
+- _o__libm_sse2_cos_precise
+- _o__libm_sse2_exp_precise
+- _o__libm_sse2_log10_precise
+- _o__libm_sse2_log_precise
+- _o__libm_sse2_pow_precise
+- _o__libm_sse2_sin_precise
+- _o__libm_sse2_sqrt_precise
+- _o__libm_sse2_tan_precise
+- _o__malloc_base
+- _o__realloc_base
+- _o__sopen_dispatch
+- _o__wsopen_dispatch
 api_location:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
@@ -294,6 +401,7 @@ api_location:
 - msvcp140_app.dll
 - ntdll.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -822,14 +930,14 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: eb31409de131923f6af86b4ec1c4ba02dbc11028
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 22c38c1ad2cd5dad0a0e58437b441faf4cdb6662
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443206"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351244"
 ---
-# <a name="internal-crt-globals-and-functions"></a>Funzioni e globali CRT interni
+# <a name="internal-crt-globals-and-functions"></a>Funzioni e variabili globali CRT interne
 
 La libreria di runtime C (CRT) include funzioni e variabili globali usate solo per il supporto dell'interfaccia della libreria pubblica. Alcune di esse vengono esposte in intestazioni pubbliche come dettagli relativi all'implementazione. Sebbene queste funzioni e variabili globali siano accessibili mediante esportazioni pubbliche, non sono destinate all'uso nel codice da parte degli sviluppatori. È consigliabile modificare eventuale codice che usa queste funzioni e variabili in modo da usare gli equivalenti dalla libreria pubblica. Queste funzioni possono variare a seconda della versione e sono elencate di seguito per facilitarne l'identificazione. Quando esiste documentazione aggiuntiva, vengono specificati i relativi collegamenti, ma in generale questi dettagli di implementazione non vengono documentati.
 
@@ -1062,14 +1170,14 @@ Queste funzioni e macro di funzione vengono usate per implementare la libreria C
 |__p&#95;&#95;_wargv|
 |__p&#95;&#95;_winitenv|
 |__p\__acmdln|
-|[__p\__commode](../c-runtime-library/p-commode.md)|
+|[_commode\___p __p](../c-runtime-library/p-commode.md)|
 |__p\__crtAssertBusy|
 |__p\__crtBreakAlloc|
 |__p\__crtDbgFlag|
 |__p\__daylight|
 |__p\__dstbias|
 |__p\__environ|
-|[__p\__fmode](../c-runtime-library/p-fmode.md)|
+|[_fmode\___p](../c-runtime-library/p-fmode.md)|
 |__p\__iob|
 |__p\__mbcasemap|
 |__p\__mbctype|

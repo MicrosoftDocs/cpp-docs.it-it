@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8339785fd10fa3dcef1c0fb573310762dc2d2405
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164150"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352839"
 ---
 # <a name="cbasetransition-class"></a>Classe CBaseTransition
 
@@ -67,14 +67,14 @@ class CBaseTransition : public CObject;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Enumerazione CBaseTransition::TRANSITION_TYPE](#transition_type_enumeration)|Definisce i tipi di transizione attualmente supportati dall'implementazione MFC di API di animazione di Windows.|
+|[Enumerazione CBaseTransition::TRANSITION_TYPE](#transition_type_enumeration)|Definisce i tipi di transizione attualmente supportati dall'implementazione MFC dell'API di animazione di Windows.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|Costruisce un oggetto di base di transizione.|
-|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di transizione.|
+|[Transizione Di Base::CBaseTransitionCBaseTransition::CBaseTransition](#cbasetransition)|Costruisce un oggetto di transizione di base.|
+|[CBaseTransition:: CBaseTransition](#_dtorcbasetransition)|Distruttore. Chiamato quando un oggetto di transizione viene eliminato definitivamente.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -82,29 +82,29 @@ class CBaseTransition : public CObject;
 |----------|-----------------|
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|Aggiunge una transizione a uno storyboard.|
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Aggiunge una transizione a uno storyboard.|
-|[CBaseTransition::Clear](#clear)|Oggetto COM IUIAnimationTransition incapsulato versioni.|
-|[CBaseTransition::Create](#create)|Crea una transizione di COM.|
-|[CBaseTransition::GetEndKeyframe](#getendkeyframe)|Restituisce l'inizio del fotogramma chiave.|
-|[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|Restituisce un puntatore alla variabile correlati.|
-|[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|Restituisce l'inizio del fotogramma chiave.|
-|[CBaseTransition::GetTransition](#gettransition)|Di overload. Restituisce un puntatore all'oggetto di transizione COM sottostante.|
+|[CBaseTransition::Clear](#clear)|Rilascia l'oggetto COM IUIAnimationTransition incapsulato.|
+|[CBaseTransition::Create](#create)|Crea una transizione COM.|
+|[CBaseTransition::GetEndKeyframe](#getendkeyframe)|Restituisce il fotogramma chiave iniziale.|
+|[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|Restituisce un puntatore alla variabile correlata.|
+|[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|Restituisce il fotogramma chiave iniziale.|
+|[Transizione Di Base::GetTransition](#gettransition)|Di overload. Restituisce un puntatore all'oggetto di transizione COM sottostante.|
 |[CBaseTransition::GetType](#gettype)|Restituisce il tipo di transizione.|
-|[CBaseTransition::IsAdded](#isadded)|Indica se è stata aggiunta una transizione di uno storyboard.|
+|[CBaseTransition::IsAdded](#isadded)|Indica se è stata aggiunta una transizione a uno storyboard.|
 |[CBaseTransition::SetKeyframes](#setkeyframes)|Imposta i fotogrammi chiave per una transizione.|
-|[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|Stabilisce una relazione tra la variabile di animazione e di transizione.|
+|[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|Stabilisce una relazione tra la variabile di animazione e la transizione.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBaseTransition::m_bAdded](#m_badded)|Specifica se è stata aggiunta una transizione di uno storyboard.|
-|[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Archivia un puntatore al fotogramma chiave che specifica la fine della transizione.|
-|[CBaseTransition::m_pRelatedVariable](#m_prelatedvariable)|Puntatore a una variabile di animazione, viene aggiunta un'animazione con la transizione archiviata in m_transition.|
-|[CBaseTransition::m_pStartKeyframe](#m_pstartkeyframe)|Archivia un puntatore al fotogramma chiave che specifica l'inizio della transizione.|
-|[CBaseTransition::m_transition](#m_transition)|Archivia un puntatore a IUIAnimationTransition. NULL se non è stato creato un oggetto COM di transizione.|
-|[CBaseTransition::m_type](#m_type)|Archivia il tipo di transizione.|
+|[CBaseTransition::m_bAdded](#m_badded)|Specifica se è stata aggiunta una transizione a uno storyboard.|
+|[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Memorizza un puntatore al fotogramma chiave che specifica la fine della transizione.|
+|[CBaseTransition::m_pRelatedVariable](#m_prelatedvariable)|Puntatore a una variabile di animazione, animata con la transizione archiviata in m_transition.|
+|[CBaseTransition::m_pStartKeyframe](#m_pstartkeyframe)|Memorizza un puntatore al fotogramma chiave che specifica l'inizio della transizione.|
+|[CBaseTransition::m_transition](#m_transition)|Archivia un puntatore a IUIAnimationTransition. NULL se non è stato creato un oggetto di transizione COM.|
+|[CBaseTransition::m_type](#m_type)|Memorizza il tipo di transizione.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questa classe incapsula l'interfaccia IUIAnimationTransition e funge da classe base per tutte le transizioni.
 
@@ -118,15 +118,15 @@ Questa classe incapsula l'interfaccia IUIAnimationTransition e funge da classe b
 
 **Intestazione:** afxanimationcontroller.h
 
-##  <a name="_dtorcbasetransition"></a>  CBaseTransition:: ~ CBaseTransition
+## <a name="cbasetransitioncbasetransition"></a><a name="_dtorcbasetransition"></a>CBaseTransition:: CBaseTransition
 
-Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di transizione.
+Distruttore. Chiamato quando un oggetto di transizione viene eliminato definitivamente.
 
 ```
 virtual ~CBaseTransition();
 ```
 
-##  <a name="addtostoryboard"></a>  CBaseTransition::AddToStoryboard
+## <a name="cbasetransitionaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseTransition::AddToStoryboard
 
 Aggiunge una transizione a uno storyboard.
 
@@ -137,17 +137,17 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ### <a name="parameters"></a>Parametri
 
 *pStoryboard*<br/>
-Puntatore allo storyboard, che viene animato la variabile correlata.
+Puntatore a storyboard, che animerà la variabile correlata.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se transizione è stato aggiunto a uno storyboard.
+TRUE, se la transizione è stata aggiunta correttamente a uno storyboard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si applica la transizione alla variabile correlata nello storyboard. Se si tratta la transizione prima applicata questa variabile in questo storyboard, la transizione inizia all'inizio dello storyboard. In caso contrario, la transizione viene aggiunto alla transizione aggiunta più di recente alla variabile.
+Applica la transizione alla variabile correlata nello storyboard. Se questa è la prima transizione applicata a questa variabile in questo storyboard, la transizione inizia all'inizio dello storyboard. In caso contrario, la transizione viene aggiunta alla transizione aggiunta più di recente alla variabile.
 
-##  <a name="addtostoryboardatkeyframes"></a>  CBaseTransition::AddToStoryboardAtKeyframes
+## <a name="cbasetransitionaddtostoryboardatkeyframes"></a><a name="addtostoryboardatkeyframes"></a>CBaseTransition::AddToStoryboardAtKeyframes
 
 Aggiunge una transizione a uno storyboard.
 
@@ -158,39 +158,39 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ### <a name="parameters"></a>Parametri
 
 *pStoryboard*<br/>
-Puntatore allo storyboard, che viene animato la variabile correlata.
+Puntatore a storyboard, che animerà la variabile correlata.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se transizione è stato aggiunto a uno storyboard.
+TRUE, se la transizione è stata aggiunta correttamente a uno storyboard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si applica la transizione alla variabile correlata nello storyboard. Se è stato specificato il fotogramma chiave di inizio, la transizione inizia in corrispondenza di quel fotogramma chiave. Se è stato specificato il fotogramma chiave end, la transizione inizia in corrispondenza del fotogramma chiave iniziale e si arresta in corrispondenza del fotogramma chiave di fine. Se la transizione è stata creata con un parametro di durata specificato, la durata viene sovrascritto con l'intervallo di tempo tra i fotogrammi chiave di inizio e fine. Se è stato specificato alcun fotogramma chiave, la transizione viene aggiunto alla transizione aggiunta più di recente alla variabile.
+Applica la transizione alla variabile correlata nello storyboard. Se è stato specificato il fotogramma chiave iniziale, la transizione inizia in corrispondenza di tale fotogramma chiave. Se è stato specificato il fotogramma chiave finale, la transizione inizia dal fotogramma chiave iniziale e si interrompe in corrispondenza del fotogramma chiave finale. Se la transizione è stata creata con un parametro duration specificato, tale durata viene sovrascritta con la durata del tempo tra i fotogrammi chiave iniziale e finale. Se non è stato specificato alcun fotogramma chiave, la transizione viene aggiunta alla transizione aggiunta più di recente alla variabile.
 
-##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
+## <a name="cbasetransitioncbasetransition"></a><a name="cbasetransition"></a>Transizione Di Base::CBaseTransitionCBaseTransition::CBaseTransition
 
-Costruisce un oggetto di base di transizione.
+Costruisce un oggetto di transizione di base.
 
 ```
 CBaseTransition();
 ```
 
-##  <a name="clear"></a>  CBaseTransition::Clear
+## <a name="cbasetransitionclear"></a><a name="clear"></a>CBaseTransition::Clear
 
-Oggetto COM IUIAnimationTransition incapsulato versioni.
+Rilascia l'oggetto COM IUIAnimationTransition incapsulato.
 
 ```
 void Clear();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo deve essere chiamato dal metodo Create della classe derivata per evitare la perdita di interfaccia IUITransition.
+Questo metodo deve essere chiamato dal metodo Create di una classe derivata per evitare perdite di interfaccia IUITransition.
 
-##  <a name="create"></a>  CBaseTransition::Create
+## <a name="cbasetransitioncreate"></a><a name="create"></a>CBaseTransition::Create
 
-Crea una transizione di COM.
+Crea una transizione COM.
 
 ```
 virtual BOOL Create(
@@ -200,23 +200,23 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*pLibrary*<br/>
-Puntatore alla raccolta di transizione, che consente di creare transizioni standard. Per le transizioni personalizzate può essere NULL.
+*pLibreria*<br/>
+Puntatore alla libreria di transizioni, che crea transizioni standard. Può essere NULL per le transizioni personalizzate.
 
 *pFactory*<br/>
-Puntatore alla factory di transizione, che consente di creare transizioni personalizzate. Per le transizioni standard può essere NULL.
+Puntatore alla factory di transizione, che crea transizioni personalizzate. Può essere NULL per le transizioni standard.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se un oggetto COM di transizione è stato creato correttamente. in caso contrario, FALSE.
+TRUESe un oggetto COM di transizione è stato creato correttamente. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si tratta di una funzione virtuale pura che deve essere sottoposto a override in una classe derivata. Viene chiamato dal framework per creare un'istanza di oggetto di transizione COM sottostante.
+Si tratta di una funzione virtuale pura che deve essere sottoposta a override in una classe derivata. Viene chiamato dal framework per creare un'istanza dell'oggetto di transizione COM sottostante.
 
-##  <a name="getendkeyframe"></a>  CBaseTransition::GetEndKeyframe
+## <a name="cbasetransitiongetendkeyframe"></a><a name="getendkeyframe"></a>CBaseTransition::GetEndKeyframe
 
-Restituisce l'inizio del fotogramma chiave.
+Restituisce il fotogramma chiave iniziale.
 
 ```
 CBaseKeyFrame* GetEndKeyframe();
@@ -224,15 +224,15 @@ CBaseKeyFrame* GetEndKeyframe();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore valido a un fotogramma chiave, o NULL se non deve essere inserita una transizione tra fotogrammi chiave.
+Puntatore valido a un fotogramma chiave oppure NULL se non deve essere inserita una transizione tra fotogrammi chiave.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo può essere utilizzato per accedere a un oggetto fotogramma chiave che è stato impostato in precedenza da SetKeyframes. Viene chiamato dal codice di primo livello quando le transizioni vengono aggiunti allo storyboard.
+Questo metodo può essere utilizzato per accedere a un oggetto fotogrammi chiave precedentemente impostato da SetKeyframes. Viene chiamato dal codice di primo livello quando le transizioni vengono aggiunte allo storyboard.
 
-##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable
+## <a name="cbasetransitiongetrelatedvariable"></a><a name="getrelatedvariable"></a>CBaseTransition::GetRelatedVariable
 
-Restituisce un puntatore alla variabile correlati.
+Restituisce un puntatore alla variabile correlata.
 
 ```
 CAnimationVariable* GetRelatedVariable();
@@ -240,15 +240,15 @@ CAnimationVariable* GetRelatedVariable();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore valido a variabile di animazione, o NULL se non è stata impostata una variabile di animazione da SetRelatedVariable.
+Puntatore valido alla variabile di animazione oppure NULL se una variabile di animazione non è stata impostata da SetRelatedVariable.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Si tratta di una funzione di accesso alla variabile di animazione correlati.
+Si tratta di una funzione di accesso alla variabile di animazione correlata.
 
-##  <a name="getstartkeyframe"></a>  CBaseTransition::GetStartKeyframe
+## <a name="cbasetransitiongetstartkeyframe"></a><a name="getstartkeyframe"></a>CBaseTransition::GetStartKeyframe
 
-Restituisce l'inizio del fotogramma chiave.
+Restituisce il fotogramma chiave iniziale.
 
 ```
 CBaseKeyFrame* GetStartKeyframe();
@@ -256,13 +256,13 @@ CBaseKeyFrame* GetStartKeyframe();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore valido a un fotogramma chiave, o NULL se una transizione non deve iniziare dopo un fotogramma chiave.
+Puntatore valido a un fotogramma chiave oppure NULL se una transizione non deve iniziare dopo un fotogramma chiave.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo può essere utilizzato per accedere a un oggetto fotogramma chiave che è stato impostato in precedenza da SetKeyframes. Viene chiamato dal codice di primo livello quando le transizioni vengono aggiunti allo storyboard.
+Questo metodo può essere utilizzato per accedere a un oggetto fotogrammi chiave precedentemente impostato da SetKeyframes. Viene chiamato dal codice di primo livello quando le transizioni vengono aggiunte allo storyboard.
 
-##  <a name="gettransition"></a>  CBaseTransition::GetTransition
+## <a name="cbasetransitiongettransition"></a><a name="gettransition"></a>Transizione Di Base::GetTransition
 
 Restituisce un puntatore all'oggetto di transizione COM sottostante.
 
@@ -276,21 +276,21 @@ IUIAnimationTransition* GetTransition();
 
 ### <a name="parameters"></a>Parametri
 
-*pLibrary*<br/>
-Puntatore alla raccolta di transizione, che consente di creare transizioni standard. Per le transizioni personalizzate può essere NULL.
+*pLibreria*<br/>
+Puntatore alla libreria di transizioni, che crea transizioni standard. Può essere NULL per le transizioni personalizzate.
 
 *pFactory*<br/>
-Puntatore alla factory di transizione, che consente di creare transizioni personalizzate. Per le transizioni standard può essere NULL.
+Puntatore alla factory di transizione, che crea transizioni personalizzate. Può essere NULL per le transizioni standard.
 
 ### <a name="return-value"></a>Valore restituito
 
-Non è possibile creare un puntatore valido a IUIAnimationTransition o NULL se la transizione sottostante.
+Puntatore valido a IUIAnimationTransition o NULL se non è possibile creare la transizione sottostante.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo restituisce un puntatore all'oggetto sottostante di transizione COM e la crea se necessario.
+Questo metodo restituisce un puntatore all'oggetto di transizione COM sottostante e lo crea se necessario.
 
-##  <a name="gettype"></a>  CBaseTransition::GetType
+## <a name="cbasetransitiongettype"></a><a name="gettype"></a>CBaseTransition::GetType
 
 Restituisce il tipo di transizione.
 
@@ -302,13 +302,13 @@ TRANSITION_TYPE GetType() const;
 
 Uno dei TRANSITION_TYPE valori enumerati.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo può essere utilizzato per identificare un oggetto di transizione in base al tipo. Il tipo è impostato in un costruttore in una classe derivata.
+Questo metodo può essere utilizzato per identificare un oggetto di transizione dal relativo tipo. Il tipo viene impostato in un costruttore in una classe derivata.
 
-##  <a name="isadded"></a>  CBaseTransition::IsAdded
+## <a name="cbasetransitionisadded"></a><a name="isadded"></a>CBaseTransition::IsAdded
 
-Indica se è stata aggiunta una transizione di uno storyboard.
+Indica se è stata aggiunta una transizione a uno storyboard.
 
 ```
 BOOL IsAdded();
@@ -316,61 +316,61 @@ BOOL IsAdded();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se è stata aggiunta una transizione a uno storyboard, in caso contrario FALSE.
+Restituisce TRUE se una transizione è stata aggiunta a uno storyboard, in caso contrario FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo flag è impostato internamente quando il codice di primo livello aggiunge le transizioni allo storyboard.
+Questo flag viene impostato internamente quando il codice di primo livello aggiunge transizioni allo storyboard.
 
-##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
+## <a name="cbasetransitionm_badded"></a><a name="m_badded"></a>CBaseTransition::m_bAdded
 
-Specifica se è stata aggiunta una transizione di uno storyboard.
+Specifica se è stata aggiunta una transizione a uno storyboard.
 
 ```
 BOOL m_bAdded;
 ```
 
-##  <a name="m_pendkeyframe"></a>  CBaseTransition::m_pEndKeyframe
+## <a name="cbasetransitionm_pendkeyframe"></a><a name="m_pendkeyframe"></a>CBaseTransition::m_pEndKeyframe
 
-Archivia un puntatore al fotogramma chiave che specifica la fine della transizione.
+Memorizza un puntatore al fotogramma chiave che specifica la fine della transizione.
 
 ```
 CBaseKeyFrame* m_pEndKeyframe;
 ```
 
-##  <a name="m_prelatedvariable"></a>  CBaseTransition::m_pRelatedVariable
+## <a name="cbasetransitionm_prelatedvariable"></a><a name="m_prelatedvariable"></a>CBaseTransition::m_pRelatedVariable
 
-Puntatore a una variabile di animazione, viene aggiunta un'animazione con la transizione archiviata in m_transition.
+Puntatore a una variabile di animazione, animata con la transizione archiviata in m_transition.
 
 ```
 CAnimationVariable* m_pRelatedVariable;
 ```
 
-##  <a name="m_pstartkeyframe"></a>  CBaseTransition::m_pStartKeyframe
+## <a name="cbasetransitionm_pstartkeyframe"></a><a name="m_pstartkeyframe"></a>CBaseTransition::m_pStartKeyframe
 
-Archivia un puntatore al fotogramma chiave che specifica l'inizio della transizione.
+Memorizza un puntatore al fotogramma chiave che specifica l'inizio della transizione.
 
 ```
 CBaseKeyFrame* m_pStartKeyframe;
 ```
 
-##  <a name="m_transition"></a>  CBaseTransition::m_transition
+## <a name="cbasetransitionm_transition"></a><a name="m_transition"></a>CBaseTransition::m_transition
 
-Archivia un puntatore a IUIAnimationTransition. NULL se non è stato creato un oggetto COM di transizione.
+Archivia un puntatore a IUIAnimationTransition. NULL se non è stato creato un oggetto di transizione COM.
 
 ```
 ATL::CComPtr<IUIAnimationTransition> m_transition;
 ```
 
-##  <a name="m_type"></a>  CBaseTransition::m_type
+## <a name="cbasetransitionm_type"></a><a name="m_type"></a>CBaseTransition::m_type
 
-Archivia il tipo di transizione.
+Memorizza il tipo di transizione.
 
 ```
 TRANSITION_TYPE m_type;
 ```
 
-##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes
+## <a name="cbasetransitionsetkeyframes"></a><a name="setkeyframes"></a>CBaseTransition::SetKeyframes
 
 Imposta i fotogrammi chiave per una transizione.
 
@@ -382,19 +382,19 @@ void SetKeyframes(
 
 ### <a name="parameters"></a>Parametri
 
-*pStart*<br/>
+*Pstart*<br/>
 Un fotogramma chiave che specifica l'inizio della transizione.
 
-*pEnd*<br/>
+*Pend*<br/>
 Un fotogramma chiave che specifica la fine della transizione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo indica la transizione a iniziare dopo il fotogramma chiave specificato e, facoltativamente, se non è NULL, in sospeso terminare prima del fotogramma chiave specificato. Se la transizione è stata creata con un parametro di durata specificato, la durata viene sovrascritto con l'intervallo di tempo tra i fotogrammi chiave di inizio e fine.
+Questo metodo indica alla transizione di iniziare dopo il fotogramma chiave specificato e, facoltativamente, se pEnd non è NULL, terminare prima del fotogramma chiave specificato. Se la transizione è stata creata con un parametro duration specificato, tale durata viene sovrascritta con la durata del tempo tra i fotogrammi chiave iniziale e finale.
 
-##  <a name="setrelatedvariable"></a>  CBaseTransition::SetRelatedVariable
+## <a name="cbasetransitionsetrelatedvariable"></a><a name="setrelatedvariable"></a>CBaseTransition::SetRelatedVariable
 
-Stabilisce una relazione tra la variabile di animazione e di transizione.
+Stabilisce una relazione tra la variabile di animazione e la transizione.
 
 ```
 void SetRelatedVariable(CAnimationVariable* pVariable);
@@ -402,24 +402,24 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 
 ### <a name="parameters"></a>Parametri
 
-*pVariable*<br/>
-Puntatore alla variabile di animazione correlati.
+*pVariabile*<br/>
+Puntatore a una variabile di animazione correlata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Stabilisce una relazione tra la variabile di animazione e di transizione. Una transizione può essere applicata solo a una variabile.
+Stabilisce una relazione tra la variabile di animazione e la transizione. Una transizione può essere applicata solo a una variabile.
 
-##  <a name="transition_type_enumeration"></a>  Enumerazione CBaseTransition::TRANSITION_TYPE
+## <a name="cbasetransitiontransition_type-enumeration"></a><a name="transition_type_enumeration"></a>Enumerazione CBaseTransition::TRANSITION_TYPE
 
-Definisce i tipi di transizione attualmente supportati dall'implementazione MFC di API di animazione di Windows.
+Definisce i tipi di transizione attualmente supportati dall'implementazione MFC dell'API di animazione di Windows.
 
 ```
 enum TRANSITION_TYPE;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Un tipo di transizione è impostato nel costruttore della transizione specifica. Ad esempio, CSinusoidalTransitionFromRange imposta il tipo su SINUSOIDAL_FROM_RANGE.
+Un tipo di transizione viene impostato nel costruttore di una transizione specifica. Ad esempio, CSinusoidalTransitionFromRange imposta il tipo su SINUSOIDAL_FROM_RANGE.
 
 ## <a name="see-also"></a>Vedere anche
 
