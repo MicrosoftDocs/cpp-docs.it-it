@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: e1c3dc080c23ba4ac05539674047a66059ce52d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 261f8eb17953c047fcc8ec05ae48dc369de4614c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338181"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377031"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>Classe CAnimationVariableIntegerChangeHandler
 
@@ -44,12 +44,12 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|Crea un'istanza di `CAnimationVariableIntegerChangeHandler` callback.|
-|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Chiamato quando viene modificato un valore di una variabile di animazione. Esegue l'override di `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`.|
+|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Chiamato quando un valore di una variabile di animazione è stato modificato. Esegue l'override di `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`.|
 |[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore al controller di animazione per instradare gli eventi.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questo gestore eventi viene creato e passato al metodo IUIAnimationVariable::SetVariableIntegerChangeHandler, quando si chiama CAnimationBaseObject:: EnableIntegerValueChangedEvent (che consente o CAnimationVariable:: EnableIntegerValueChangedEvent Questo evento per tutte le variabili di animazione incapsulato in un oggetto di animazione).
+Questo gestore eventi viene creato e passato al metodo IUIAnimationVariable::SetVariableIntegerChangeHandler , quando si chiama CAnimationVariable::EnableIntegerValueChangedEvent o CAnimationBaseObject::EnableIntegerValueChangedEvent (che abilita questo evento per tutte le variabili di animazione incapsulate in un oggetto di animazione).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -65,7 +65,7 @@ Questo gestore eventi viene creato e passato al metodo IUIAnimationVariable::Set
 
 **Intestazione:** afxanimationcontroller.h
 
-##  <a name="canimationvariableintegerchangehandler"></a>  CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
+## <a name="canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
 
 Costruisce un oggetto CAnimationVariableIntegerChangeHandler.
 
@@ -73,9 +73,9 @@ Costruisce un oggetto CAnimationVariableIntegerChangeHandler.
 CAnimationVariableIntegerChangeHandler ();
 ```
 
-##  <a name="createinstance"></a>  CAnimationVariableIntegerChangeHandler::CreateInstance
+## <a name="canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance
 
-Crea un'istanza di callback CAnimationVariableIntegerChangeHandler.
+Crea un'istanza del callback di CAnimationVariableIntegerChangeHandler.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -86,17 +86,17 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="parameters"></a>Parametri
 
 *pAnimationController*<br/>
-Puntatore al controller di animazione che riceveranno gli eventi.
+Puntatore al controller di animazione, che riceverà gli eventi.
 
-*ppHandler*
+*ppHandler (ppGestore)*
 
 ### <a name="return-value"></a>Valore restituito
 
 Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.
 
-##  <a name="onintegervaluechanged"></a>  CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
+## <a name="canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
 
-Chiamato quando viene modificato un valore di una variabile di animazione.
+Chiamato quando un valore di una variabile di animazione è stato modificato.
 
 ```
 IFACEMETHOD(OnIntegerValueChanged) (
@@ -108,23 +108,23 @@ IFACEMETHOD(OnIntegerValueChanged) (
 
 ### <a name="parameters"></a>Parametri
 
-*storyboard*<br/>
-Lo storyboard che viene aggiunta un'animazione alla variabile.
+*Storyboard*<br/>
+Storyboard che anima la variabile.
 
-*variable*<br/>
-La variabile di animazione che è stata aggiornata.
+*Variabile*<br/>
+Variabile di animazione aggiornata.
 
 *newValue*<br/>
-Il nuovo valore arrotondato.
+Nuovo valore arrotondato.
 
-*previousValue*<br/>
-Il precedente valore arrotondato.
+*previousValue (valore in precedenza)*<br/>
+Valore arrotondato precedente.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL.
+S_OK se il metodo ha esito positivo; altrimenti E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableIntegerChangeHandler::SetAnimationController
+## <a name="canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController
 
 Archivia un puntatore al controller di animazione per instradare gli eventi.
 
@@ -135,7 +135,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ### <a name="parameters"></a>Parametri
 
 *pAnimationController*<br/>
-Puntatore al controller di animazione che riceveranno gli eventi.
+Puntatore al controller di animazione, che riceverà gli eventi.
 
 ## <a name="see-also"></a>Vedere anche
 

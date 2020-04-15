@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: e3d2d02bc6781ed447d7583ce15a60e983251350
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: dc9bb1c3edf9187b1e5dc1e924298b9dbb02e2ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376717"
 ---
 # <a name="binomial_distribution-class"></a>Classe binomial_distribution
 
@@ -71,24 +71,24 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *intType*
-Il tipo di risultato Integer, il valore predefinito è **int**. Per i tipi possibili, vedere [\<random >](../standard-library/random.md).
+*IntType (tipo intType)*\
+Il tipo di risultato Integer , il valore predefinito è **int**. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
-@No__t_1 *Generatore URNG*
-Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*URNG*\
+Il motore generatore di numeri casuali uniformi. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **int** se non ne viene fornito alcuno, distribuiti in base alla funzione di probabilità discreta di distribuzione binomiale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o tipo **int** se non ne viene fornito alcuno, distribuito in base alla funzione di probabilità discreta della distribuzione binomiale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-I membri della proprietà `t()` e `p()` restituiscono rispettivamente i valori *t* e *p* dei parametri di distribuzione attualmente archiviati.
+I membri `t()` `p()` della proprietà e restituiscono i valori dei parametri di distribuzione attualmente archiviati rispettivamente *t* e *p.*
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto del parametro di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -96,7 +96,7 @@ La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cach
 
 Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
 
-Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
+Per ulteriori informazioni sulle classi di [ \< ](../standard-library/random.md)distribuzione e sui relativi membri, vedere random>.
 
 Per informazioni dettagliate sulla funzione di probabilità discreta binomiale, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione binomiale](https://go.microsoft.com/fwlink/p/?linkid=398469).
 
@@ -231,7 +231,7 @@ Histogram for 100 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="binomial_distribution"></a>  binomial_distribution::binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution::binomial_distribution
 
 Costruisce la distribuzione.
 
@@ -242,24 +242,24 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-\ *t*
+*T*\
 Parametro di distribuzione `t`.
 
-\ *p*
+*P*\
 Parametro di distribuzione `p`.
 
-\ di *parmigiana*
+*Parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`
 
-Il primo costruttore crea un oggetto il cui valore *p* archiviato include il valore *p* e il cui valore *t* archiviato include il valore *t*.
+Il primo costruttore costruisce un oggetto il cui valore *p* archiviato contiene il valore *p* e il cui valore *t* archiviato contiene il valore *t*.
 
-Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
+Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="param_type"></a>  binomial_distribution::param_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::param_type
 
 Archivia tutti i parametri della distribuzione.
 
@@ -277,16 +277,16 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-\ *t*
+*T*\
 Parametro di distribuzione `t`.
 
-\ *p*
+*P*\
 Parametro di distribuzione `p`.
 
-\ a *destra*
+*va bene*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`
 
@@ -294,4 +294,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)
+[\<>casuali](../standard-library/random.md)

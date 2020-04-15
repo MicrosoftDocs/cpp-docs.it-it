@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - C4274
 ms.assetid: 5a948680-7ed1-469f-978d-ae99d154e161
-ms.openlocfilehash: 5f2350f275f883e7bf18aa1621d08b34132e8dfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5d005fccc5920aea61698a65edf9284d56366a1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175846"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377070"
 ---
 # <a name="compiler-warning-level-1-c4274"></a>Avviso del compilatore (livello 1) C4274
 
-\#ident ignorato; vedere la documentazione per #pragma commento (exestr,' String ')
+\#ident ignorato; vedere la documentazione per #pragma comment(exestr, 'string')
 
-La direttiva `#ident`, che inserisce una stringa specificata dall'utente nell'oggetto o nel file eseguibile, è deprecata. Di conseguenza, il compilatore ignora la direttiva.
+La `#ident` direttiva, che inserisce una stringa specificata dall'utente nell'oggetto o nel file eseguibile, è deprecata. Di conseguenza, il compilatore ignora la direttiva.
 
 > [!CAUTION]
->  Avviso C4274 consiglia di usare la direttiva [comment #pragma (exestr,' String ')](../../preprocessor/comment-c-cpp.md) . Tuttavia, questo Consiglio è deprecato e verrà rivisto in una versione futura del compilatore. Se si utilizza la direttiva `#pragma`, lo strumento Linker (LINK. exe) ignora il record di commento prodotto dalla direttiva e genera un avviso [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Invece di `#ident` direttiva, è consigliabile usare una stringa di risorsa della versione del file nell'applicazione.
+> L'avviso C4274 consiglia di utilizzare la [direttiva #pragma comment(exestr, 'string').](../../preprocessor/comment-c-cpp.md) Tuttavia, questo avviso è deprecato e verrà rivisto in una versione futura del compilatore. Se si `#pragma` utilizza la direttiva , lo strumento del linker (LINK.exe) ignora il record di commento prodotto dalla direttiva e genera [l'avviso LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Anziché `#ident` la direttiva, è consigliabile usare una stringa di risorse della versione del file nell'applicazione.
 
 ## <a name="to-correct-this-error"></a>Per correggere l'errore
 
-- Rimuovere la `#ident "`*stringa*`"` direttiva.
+- Rimuovere `#ident "`la direttiva *string.* `"`
 
 ## <a name="see-also"></a>Vedere anche
 

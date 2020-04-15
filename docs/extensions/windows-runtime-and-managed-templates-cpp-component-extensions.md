@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171827"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376312"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime e modelli gestiti (C++/CLI e C++/CX)
 
@@ -73,7 +73,7 @@ template<class T> public ref class R {
 };
 ```
 
-Non è possibile accedere ai modelli definiti in un assembly a cui viene fatto riferimento con la sintassi del linguaggio C++/CLI, tuttavia è possibile utilizzare la reflection. Se non viene creata alcuna istanza di un modello, quest'ultimo non viene creato nei metadati. In caso contrario, nei metadati vengono visualizzate solo le funzioni membro a cui viene fatto riferimento.
+Non è possibile accedere ai modelli definiti in un assembly a cui viene fatto riferimento con la sintassi del linguaggio C++/CLI, tuttavia è possibile utilizzare la reflection. Se non viene creata un'istanza di un modello, non viene generato nei metadati. In caso contrario, nei metadati vengono visualizzate solo le funzioni membro a cui viene fatto riferimento.
 
 ```cpp
 // managed_templates_3.cpp
@@ -132,4 +132,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni dei componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)

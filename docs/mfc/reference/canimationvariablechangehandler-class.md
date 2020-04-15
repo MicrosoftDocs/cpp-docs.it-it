@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 92189ce5ea76811496d4462aa4254bbd03ebb219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f45fdad00bacf56e2ee8c30b76e99d626902534
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338142"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377088"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Classe CAnimationVariableChangeHandler
 
@@ -39,13 +39,13 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`CAnimationVariableChangeHandler::CreateInstance`|Crea un'istanza di `CAnimationVariableChangeHandler` oggetto.|
-|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Chiamato quando viene modificato un valore di una variabile di animazione. Esegue l'override di `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.|
+|`CAnimationVariableChangeHandler::CreateInstance`|Crea un'istanza di `CAnimationVariableChangeHandler` object.|
+|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Chiamato quando un valore di una variabile di animazione è stato modificato. Esegue l'override di `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.|
 |[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore al controller di animazione per instradare gli eventi.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questo gestore eventi viene creato e passato a `IUIAnimationVariable::SetVariableChangeHandler` metodo, quando si chiama `CAnimationVariable::EnableValueChangedEvent` o `CAnimationBaseObject::EnableValueChangedEvent` (che consente questo evento per tutte le variabili di animazione incapsulato in un oggetto di animazione).
+Questo gestore eventi viene `IUIAnimationVariable::SetVariableChangeHandler` creato e `CAnimationVariable::EnableValueChangedEvent` passato `CAnimationBaseObject::EnableValueChangedEvent` al metodo, quando si chiama o (che abilita questo evento per tutte le variabili di animazione incapsulate in un oggetto di animazione).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -59,9 +59,9 @@ Questo gestore eventi viene creato e passato a `IUIAnimationVariable::SetVariabl
 
 **Intestazione:** afxanimationcontroller.h
 
-##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged
+## <a name="canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged
 
-Chiamato quando viene modificato un valore di una variabile di animazione.
+Chiamato quando un valore di una variabile di animazione è stato modificato.
 
 ```
 IFACEMETHOD(OnValueChanged) (
@@ -73,23 +73,23 @@ IFACEMETHOD(OnValueChanged) (
 
 ### <a name="parameters"></a>Parametri
 
-*storyboard*<br/>
-Lo storyboard che viene aggiunta un'animazione alla variabile.
+*Storyboard*<br/>
+Storyboard che anima la variabile.
 
-*variable*<br/>
-La variabile di animazione che è stata aggiornata.
+*Variabile*<br/>
+Variabile di animazione aggiornata.
 
 *newValue*<br/>
 Nuovo valore.
 
-*previousValue*<br/>
-Il valore precedente.
+*previousValue (valore in precedenza)*<br/>
+Valore precedente.
 
 ### <a name="return-value"></a>Valore restituito
 
 Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController
+## <a name="canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController
 
 Archivia un puntatore al controller di animazione per instradare gli eventi.
 
@@ -100,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ### <a name="parameters"></a>Parametri
 
 *pAnimationController*<br/>
-Puntatore al controller di animazione che riceveranno gli eventi.
+Puntatore al controller di animazione, che riceverà gli eventi.
 
 ## <a name="see-also"></a>Vedere anche
 
