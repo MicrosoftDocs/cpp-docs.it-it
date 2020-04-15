@@ -6,12 +6,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: f01866e347b2734b5adfd111e3ae9de4f9edcf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38402e7b8a937cebb823ce13fa1ac01fc1099878
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295019"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328405"
 ---
 # <a name="batch-mode-rules"></a>Regole in modalità batch
 
@@ -20,18 +20,18 @@ ms.locfileid: "62295019"
    commands
 ```
 
-Regole di inferenza in modalità batch forniscono solo una singola chiamata della regola di inferenza dei tipi quando i comandi di N passano attraverso questa regola di inferenza. Senza regole di inferenza in modalità batch, sarebbe necessario comandi N da richiamare. N è il numero di dipendenti che attivano la regola di inferenza.
+Le regole di inferenza in modalità batch forniscono una sola chiamata della regola di inferenza quando i comandi N passano attraverso questa regola di inferenza. Senza regole di inferenza in modalità batch, sarebbe necessario N comandi da richiamare. N è il numero di dipendenti che attivano la regola di inferenza.
 
-Makefile che contengono regole di inferenza in modalità batch devono usare NMAKE 1.62 o versione successiva. Per controllare la versione NMAKE, eseguire la macro NMAKE_VER disponibile con NMAKE versione 1.62 o versione successiva. La macro restituisce una stringa che rappresenta la versione del prodotto Visual C++.
+I makefile che contengono regole di inferenza in modalità batch devono utilizzare NMAKE versione 1.62 o successiva. Per verificare la versione di NMAKE, eseguire la macro _NMAKE_VER disponibile con NMAKE versione 1.62 o successiva. Questa macro restituisce una stringa che rappresenta la versione del prodotto Visual C.
 
-L'unica differenza sintattica dalla regola di inferenza standard è che la regola di inferenza in modalità batch è terminata con un doppio due punti (:).
+L'unica differenza sintattica rispetto alla regola di inferenza standard è che la regola di inferenza in modalità batch viene terminata con due punti doppi (::).
 
 > [!NOTE]
->  Lo strumento di richiamata deve essere in grado di gestire più file. La regola di inferenza in modalità batch deve usare `$<` come la macro per accedere ai file dipendenti.
+> Lo strumento richiamato deve essere in grado di gestire più file. La regola di inferenza `$<` in modalità batch deve essere utilizzata come macro per accedere ai file dipendenti.
 
-Le regole di inferenza in modalità batch possono accelerare il processo di compilazione. È più veloce per fornire i file del compilatore nel batch, poiché il driver a compilatore viene richiamato una sola volta. Ad esempio, il compilatore C e C++ offre prestazioni migliori quando si gestisce un set di file perché è possibile rimanere in memoria durante il processo.
+Le regole di inferenza in modalità batch possono velocizzare il processo di compilazione. È più veloce fornire i file al compilatore in batch, perché il driver del compilatore viene richiamato una sola volta. Ad esempio, le prestazioni del compilatore C e C, ovvero C, funzionano meglio quando si gestisce un set di file, perché può rimanere residente in memoria durante il processo.
 
-Nell'esempio seguente viene illustrato come utilizzare regole di inferenza in modalità batch:
+Nell'esempio seguente viene illustrato come utilizzare le regole di inferenza in modalità batch:The following example shows how to use batch-mode inference rules:
 
 ```
 #
@@ -56,7 +56,7 @@ $(Objs) :
 #end of makefile
 ```
 
-NMAKE produce l'output seguente senza regole di inferenza in modalità batch:
+NMAKE produce il seguente output senza regole di inferenza in modalità batch:
 
 ```
 E:\tmp> nmake -f test.mak -a NOBatch=1
@@ -73,7 +73,7 @@ foo3.cpp
 foo4.cpp
 ```
 
-NMAKE produce il risultato seguente con le regole di inferenza in modalità batch:
+NMAKE produce il seguente risultato con le regole di inferenza in modalità batch:
 
 ```
 E:\tmp> nmake -f test.mak -a

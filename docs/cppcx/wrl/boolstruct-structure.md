@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::BoolStruct structure
 - Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
-ms.openlocfilehash: cdec425e317585abbd9730447e2c4fbb19b8250a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4f2a5acf6edb824cff2121c1b6444181b5cfcf98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418335"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371844"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct (struttura)
 
@@ -28,15 +28,15 @@ struct BoolStruct;
 
 ## <a name="remarks"></a>Osservazioni
 
-La struttura `BoolStruct` definisce se una `ComPtr` gestisce la durata degli oggetti di un'interfaccia. `BoolStruct` viene utilizzato internamente dall'operatore [BoolType ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .
+La `BoolStruct` struttura definisce `ComPtr` se un oggetto gestisce la durata dell'oggetto di un'interfaccia. `BoolStruct`viene utilizzato internamente dall'operatore [BoolType().](comptr-class.md#operator-microsoft-wrl-details-booltype)
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 Nome                          | Descrizione
 ----------------------------- | ------------------------------------------------------------------------------------------------------------------
-[BoolStruct:: member](#member) | Specifica che un [ComPtr](comptr-class.md) è o non è in grado di gestire la durata degli oggetti di un'interfaccia.
+[BoolStruct::Membro](#member) | Specifica che un [ComPtr](comptr-class.md) è, o non è, la gestione della durata dell'oggetto di un'interfaccia.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -44,11 +44,11 @@ Nome                          | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** Internal. h
+**Intestazione:** internal.h
 
-**Spazio dei nomi:** Microsoft:: WRL::D etails
+**Spazio dei nomi:** Microsoft::WRL::Details
 
-## <a name="member"></a>BoolStruct:: member
+## <a name="boolstructmember"></a><a name="member"></a>BoolStruct::Membro
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -58,4 +58,4 @@ int Member;
 
 ### <a name="remarks"></a>Osservazioni
 
-Specifica che un [ComPtr](comptr-class.md) è o non è in grado di gestire la durata degli oggetti di un'interfaccia.
+Specifica che un [ComPtr](comptr-class.md) è, o non è, la gestione della durata dell'oggetto di un'interfaccia.

@@ -5,20 +5,20 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f062c4fd0332525a8b8940d2d93df41df56d2baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422549"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373130"
 ---
 # <a name="ltunordered_mapgt-operators"></a>Operatori &lt;unordered_map&gt;
 
 |||||
 |-|-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
+|[operatore!](#op_neq)|[operatore di comando](#op_eq_eq)|[operatore!](#op_neq_multimap)|[operatore di comando](#op_eq_eq_multimap)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>operatore!
 
 Verifica se l'oggetto [unordered_map](../standard-library/unordered-map-class.md) a sinistra dell'operatore non è uguale all'oggetto unordered_map a destra.
 
@@ -28,15 +28,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*Sinistra*\
 Oggetto di tipo `unordered_map`.
 
-\ a *destra*
+*va bene*\
 Oggetto di tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i unordered_maps non sono uguali. **false** se sono uguali.
+**true** se le unordered_maps non sono uguali; **false** se sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -82,7 +82,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore di comando
 
 Verifica se l'oggetto [unordered_map](../standard-library/unordered-map-class.md) a sinistra dell'operatore è uguale all'oggetto unordered_map a destra.
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*Sinistra*\
 Oggetto di tipo `unordered_map`.
 
-\ a *destra*
+*va bene*\
 Oggetto di tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i unordered_maps sono uguali. **false** se non sono uguali.
+**true** se i unordered_maps sono uguali; **false** se non sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -146,7 +146,7 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="op_neq_multimap"></a>  operator!=
+## <a name="operator"></a><a name="op_neq_multimap"></a>operatore!
 
 Verifica se l'oggetto [unordered_multimap](../standard-library/unordered-multimap-class.md) a sinistra dell'operatore non è uguale all'oggetto unordered_multimap a destra.
 
@@ -156,15 +156,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*Sinistra*\
 Oggetto di tipo `unordered_multimap`.
 
-\ a *destra*
+*va bene*\
 Oggetto di tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i unordered_multimaps non sono uguali. **false** se sono uguali.
+**true** se il unordered_multimaps non è uguale; **false** se sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -211,7 +211,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq_multimap"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operatore di comando
 
 Verifica se l'oggetto [unordered_multimap](../standard-library/unordered-multimap-class.md) a sinistra dell'operatore è uguale all'oggetto unordered_multimap a destra.
 
@@ -221,15 +221,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*Sinistra*\
 Oggetto di tipo `unordered_multimap`.
 
-\ a *destra*
+*va bene*\
 Oggetto di tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i unordered_multimaps sono uguali. **false** se non sono uguali.
+**true** se i unordered_multimaps sono uguali; **false** se non sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 

@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-ms.openlocfilehash: 80efd4dbc4ff0541e083ed61bed872d5e69c7a74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 078cfd5ff93bfcd8acc747904ea05e6a2e762bc1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277448"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330615"
 ---
 # <a name="cstringelementtraits-class"></a>Classe CStringElementTraits
 
-Questa classe fornisce funzioni statiche utilizzate dalle classi di raccolta l'archiviazione `CString` oggetti.
+Questa classe fornisce funzioni statiche `CString` utilizzate dalle classi di insiemi che archiviano gli oggetti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,7 +35,7 @@ class CStringElementTraits
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Il tipo di dati da archiviare nella raccolta.
+Tipo di dati da archiviare nella raccolta.
 
 ## <a name="members"></a>Membri
 
@@ -43,32 +43,32 @@ Il tipo di dati da archiviare nella raccolta.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CStringElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|
-|[CStringElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.|
+|[Caratteristiche di CStringElement::INARGTYPECStringElement Traits::INARGTYPE](#inargtype)|Tipo di dati da utilizzare per l'aggiunta di elementi all'oggetto classe di raccolta.|
+|[Caratteristiche di CStringElement::OUTARGTYPE](#outargtype)|Tipo di dati da utilizzare per il recupero di elementi dall'oggetto classe di raccolta.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CStringElementTraits::CompareElements](#compareelements)|(Statico) Chiamare questa funzione per confrontare due elementi della stringa per verificarne l'uguaglianza.|
-|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(Statico) Chiamare questa funzione per confrontare due elementi della stringa.|
-|[CStringElementTraits::CopyElements](#copyelements)|(Statico) Chiamare questa funzione per copiare `CString` elementi archiviati in un oggetto di classe di raccolta.|
-|[CStringElementTraits::Hash](#hash)|(Statico) Chiamare questa funzione per calcolare un valore hash per l'elemento di stringa specificata.|
-|[CStringElementTraits::RelocateElements](#relocateelements)|(Statico) Chiamare questa funzione per rilocare `CString` elementi archiviati in un oggetto di classe di raccolta.|
+|[CStringElementTraits::CompareElements](#compareelements)|(Statico) Chiamare questa funzione per confrontare due elementi stringa per l'uguaglianza.|
+|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(Statico) Chiamare questa funzione per confrontare due elementi stringa.|
+|[CStringElementTraits::CopyElements](#copyelements)|(Statico) Chiamare questa funzione `CString` per copiare gli elementi archiviati in un oggetto classe di raccolta.|
+|[CStringElementTraits::Hash](#hash)|(Statico) Chiamare questa funzione per calcolare un valore hash per l'elemento stringa specificato.|
+|[CStringElementTraits::RelocateElements](#relocateelements)|(Statico) Chiamare questa funzione `CString` per riposizionare gli elementi archiviati in un oggetto classe di raccolta.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe fornisce funzioni statiche per la copia, spostamento e il confronto di stringhe e per la creazione di un valore hash. Queste funzioni sono utili quando si usa una classe di raccolta per archiviare i dati basati su stringa. Uso [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) quando sono necessari i confronti tra maiuscole e minuscole. Uso [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) quando gli oggetti stringa devono essere affrontati come riferimenti.
+Questa classe fornisce funzioni statiche per la copia, lo spostamento e il confronto di stringhe e per la creazione di un valore hash. Queste funzioni sono utili quando si usa una classe di raccolta per archiviare dati basati su stringa. Utilizzare [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) quando sono necessari confronti senza distinzione tra maiuscole e minuscole. Utilizzare [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) quando gli oggetti stringa devono essere trattati come riferimenti.
 
-Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
+Per ulteriori informazioni, vedere Classi di raccolte [ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** CStringT. h
+**Intestazione:** cstringt.h
 
-##  <a name="compareelements"></a>  CStringElementTraits::CompareElements
+## <a name="cstringelementtraitscompareelements"></a><a name="compareelements"></a>CStringElementTraits::CompareElements
 
-Chiamare questa funzione statica per confrontare due elementi della stringa per verificarne l'uguaglianza.
+Chiamare questa funzione statica per confrontare due elementi stringa per l'uguaglianza.
 
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
@@ -77,18 +77,18 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ### <a name="parameters"></a>Parametri
 
 *str1*<br/>
-Il primo elemento di stringa.
+Primo elemento stringa.
 
-*str2*<br/>
-Il secondo elemento di stringa.
+*str2 (in cui*<br/>
+Secondo elemento stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se gli elementi sono uguali e false in caso contrario.
+Restituisce true se gli elementi sono uguali, false in caso contrario.
 
-##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered
+## <a name="cstringelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered
 
-Chiamare questa funzione statica per confrontare due elementi della stringa.
+Chiamare questa funzione statica per confrontare due elementi stringa.
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
@@ -97,18 +97,18 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 ### <a name="parameters"></a>Parametri
 
 *str1*<br/>
-Il primo elemento di stringa.
+Primo elemento stringa.
 
-*str2*<br/>
-Il secondo elemento di stringa.
+*str2 (in cui*<br/>
+Secondo elemento stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
-Zero se le stringhe sono identiche, < 0 se *str1* è minore di *str2*, o > 0 se *str1* è maggiore di quella *str2*. Il [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metodo viene utilizzato per eseguire i confronti.
+zero se le stringhe sono identiche, < 0 se *str1* è minore di *str2*o > 0 se *str1* è maggiore di *str2*. Il [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metodo viene utilizzato per eseguire i confronti.
 
-##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
+## <a name="cstringelementtraitscopyelements"></a><a name="copyelements"></a>CStringElementTraits::CopyElements
 
-Chiamare questa funzione statica per copiare `CString` elementi archiviati in un oggetto di classe di raccolta.
+Chiamare questa funzione `CString` statica per copiare gli elementi archiviati in un oggetto classe di raccolta.
 
 ```
 static void CopyElements(
@@ -125,16 +125,16 @@ Puntatore al primo elemento che riceverà i dati copiati.
 *pSrc*<br/>
 Puntatore al primo elemento da copiare.
 
-*nElements*<br/>
+*nElementi*<br/>
 Numero degli elementi da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Gli elementi di origine e di destinazione non devono sovrapporsi.
 
-##  <a name="hash"></a>  CStringElementTraits::Hash
+## <a name="cstringelementtraitshash"></a><a name="hash"></a>CStringElementTraits::Hash
 
-Chiamare questa funzione statica per calcolare un valore hash per l'elemento di stringa specificata.
+Chiamare questa funzione statica per calcolare un valore hash per l'elemento stringa specificato.
 
 ```
 static ULONG Hash(INARGTYPE str);
@@ -142,32 +142,32 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
-L'elemento di stringa.
+*Str*<br/>
+Elemento stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un valore hash, calcolato usando il contenuto della stringa.
+Restituisce un valore hash, calcolato utilizzando il contenuto della stringa.
 
-##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE
+## <a name="cstringelementtraitsinargtype"></a><a name="inargtype"></a>Caratteristiche di CStringElement::INARGTYPECStringElement Traits::INARGTYPE
 
-Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.
+Tipo di dati da utilizzare per l'aggiunta di elementi all'oggetto classe di raccolta.
 
 ```
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE
+## <a name="cstringelementtraitsoutargtype"></a><a name="outargtype"></a>Caratteristiche di CStringElement::OUTARGTYPE
 
-Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.
+Tipo di dati da utilizzare per il recupero di elementi dall'oggetto classe di raccolta.
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements
+## <a name="cstringelementtraitsrelocateelements"></a><a name="relocateelements"></a>CStringElementTraits::RelocateElements
 
-Chiamare questa funzione statica per rilocare `CString` elementi archiviati in un oggetto di classe di raccolta.
+Chiamare questa funzione statica per riposizionare `CString` gli elementi archiviati in un oggetto classe di raccolta.
 
 ```
 static void RelocateElements(
@@ -179,20 +179,20 @@ static void RelocateElements(
 ### <a name="parameters"></a>Parametri
 
 *pDest*<br/>
-Puntatore al primo elemento che riceverà i dati spostati.
+Puntatore al primo elemento che riceverà i dati ricollocati.
 
 *pSrc*<br/>
-Puntatore al primo elemento da spostare.
+Puntatore al primo elemento da riposizionare.
 
-*nElements*<br/>
-Il numero di elementi da spostare.
+*nElementi*<br/>
+Numero di elementi da riposizionare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Chiama questa funzione statica [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), che è sufficiente per la maggior parte dei tipi di dati. Se gli oggetti da spostare contengono puntatori ai rispettivi membri, sarà necessario eseguire l'override di questa funzione statica.
+Questa funzione statica chiama [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), che è sufficiente per la maggior parte dei tipi di dati. Se gli oggetti spostati contengono puntatori ai propri membri, questa funzione statica dovrà essere sottoposta a override.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
+[CElementTraitsBase (classe)](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Classe CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

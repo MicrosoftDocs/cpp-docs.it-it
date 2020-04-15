@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: 4a3786e65873d6837389ad4fa5e7d06a14d66460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bae2472a75ab77f138fcee0951a6b869cc7c8e82
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398576"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372571"
 ---
 # <a name="deferrableeventargs-class"></a>Classe DeferrableEventArgs
 
@@ -31,10 +31,10 @@ class DeferrableEventArgs : public TEventArgsInterface;
 
 ### <a name="parameters"></a>Parametri
 
-*TEventArgsInterface*<br/>
+*Interfaccia TEventArgs*<br/>
 Tipo di interfaccia che dichiara gli argomenti per un evento posticipato.
 
-*TEventArgsClass*<br/>
+*Classe TEventArgsClass*<br/>
 La classe che implementa *TEventArgsInterface*.
 
 ## <a name="members"></a>Membri
@@ -43,24 +43,24 @@ La classe che implementa *TEventArgsInterface*.
 
 Nome                                                         | Descrizione
 ------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------
-[DeferrableEventArgs::GetDeferral](#getdeferral)             | Ottiene un riferimento per la [differimento](/uwp/api/windows.foundation.deferral) oggetto che rappresenta un evento posticipato.
-[DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Chiamato per indicare il completamento dell'elaborazione per la gestione di un evento posticipato.
+[DeferrableEventArgs::GetDeferral](#getdeferral)             | Ottiene un riferimento all'oggetto [Deferral](/uwp/api/windows.foundation.deferral) che rappresenta un evento posticipato.
+[DeferrableEventArgs::InvokeAllFinishedDeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Chiamato per indicare il completamento dell'elaborazione per la gestione di un evento posticipato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Istanze di questa classe vengono passate ai gestori eventi per eventi posticipati. I parametri del modello rappresentano un'interfaccia che definisce i dettagli degli argomenti dell'evento per un tipo specifico di evento posticipato e una classe che implementa tale interfaccia.
 
-La classe viene visualizzata come primo argomento a un gestore eventi per un evento posticipato. È possibile chiamare il [GetDeferral](#getdeferral) metodo per ottenere il [differimento](/uwp/api/windows.foundation.deferral) oggetto da cui è possibile ottenere tutte le informazioni sull'evento posticipato. Dopo aver completato la gestione degli eventi, è necessario chiamare Complete sull'oggetto Deferral. È quindi necessario chiamare [InvokeAllFinished](#invokeallfinished) alla fine del metodo del gestore eventi, che assicura che il completamento di tutti gli eventi posticipati sia comunicato correttamente.
+La classe viene visualizzata come primo argomento a un gestore eventi per un evento posticipato. È possibile chiamare il [GetDeferral](#getdeferral) metodo per ottenere il [Deferral](/uwp/api/windows.foundation.deferral) oggetto da cui è possibile ottenere tutte le informazioni sull'evento posticipato. Dopo aver completato la gestione degli eventi, è necessario chiamare Complete sull'oggetto Deferral. È quindi necessario chiamare [InvokeAllFinished](#invokeallfinished) alla fine del metodo del gestore eventi, che assicura che il completamento di tutti gli eventi posticipati venga comunicato correttamente.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** Event. h
+**Intestazione:** event.h
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
+## <a name="deferrableeventargsgetdeferral"></a><a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
 
-Ottiene un riferimento per la [differimento](/uwp/api/windows.foundation.deferral) oggetto che rappresenta un evento posticipato.
+Ottiene un riferimento all'oggetto [Deferral](/uwp/api/windows.foundation.deferral) che rappresenta un evento posticipato.
 
 ```cpp
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
@@ -69,13 +69,13 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ### <a name="parameters"></a>Parametri
 
 *result*<br/>
-Un puntatore che farà riferimento il [differimento](/uwp/api/windows.foundation.deferral) al completamento della chiamata dell'oggetto.
+Puntatore che farà riferimento all'oggetto [Deferral](/uwp/api/windows.foundation.deferral) al termine della chiamata.
 
 ### <a name="return-value"></a>Valore restituito
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-## <a name="invokeallfinished"></a>DeferrableEventArgs::InvokeAllFinished
+## <a name="deferrableeventargsinvokeallfinished"></a><a name="invokeallfinished"></a>DeferrableEventArgs::InvokeAllFinishedDeferrableEventArgs::InvokeAllFinished
 
 Chiamato per indicare il completamento dell'elaborazione per la gestione di un evento posticipato.
 
@@ -83,6 +83,6 @@ Chiamato per indicare il completamento dell'elaborazione per la gestione di un e
 void InvokeAllFinished()
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-È necessario chiamare questo metodo dopo l'origine evento chiami [InvokeAll](eventsource-class.md#invokeall). Se si chiama questo metodo, si eviteranno ulteriori rinvii e si forzerà l'esecuzione del gestore di completamento se non sono stati eseguiti rinvii.
+È necessario chiamare questo metodo dopo che l'origine eventi chiama [InvokeAll](eventsource-class.md#invokeall). Se si chiama questo metodo, si eviteranno ulteriori rinvii e si forzerà l'esecuzione del gestore di completamento se non sono stati eseguiti rinvii.

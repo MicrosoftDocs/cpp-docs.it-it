@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 6a99ad00a43ac7912320ee469d542b6bf9cca3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d66e7043325bbbd324f3ac443368787a653ebe1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403958"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369922"
 ---
 # <a name="cmfcacceleratorkey-class"></a>Classe CMFCAcceleratorKey
 
-Una classe helper che implementa virtuale mapping delle chiavi e la formattazione.
+Classe helper che implementa la formattazione e il mapping dei tasti virtuali.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,18 +41,18 @@ class CMFCAcceleratorKey : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCAcceleratorKey::Format](#format)|Converte la struttura di accelerazione alla relativa rappresentazione visiva.|
-|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Imposta il tasto di scelta rapida per il `CMFCAcceleratorKey` oggetto.|
+|[CMFCAcceleratorKey::Formato](#format)|Converte la struttura ACCEL nella relativa rappresentazione visiva.|
+|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Imposta il tasto `CMFCAcceleratorKey` di scelta rapida per l'oggetto.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Tasti di scelta rapida sono noti anche come tasti di scelta rapida. Se si desidera visualizzare tasti di scelta rapida che un utente immette, il [classe CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) mappe tasti di scelta rapida, ad esempio Alt + Maiusc + S, in un formato di testo personalizzato, ad esempio "Alt + Maiusc + S". Ogni `CMFCAcceleratorKey` oggetto esegue il mapping di un tasto di scelta rapida singolo in un formato di testo.
+I tasti di scelta rapida sono noti anche come tasti di scelta rapida. Se si desidera visualizzare i tasti di scelta rapida immessi da un utente, la [classe CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) esegue il mapping dei tasti di scelta rapida, ad esempio ALT , MAIUSC e S, a un formato di testo personalizzato, ad esempio "ALT s Z- MAIUSC . Ogni `CMFCAcceleratorKey` oggetto esegue il mapping di un singolo tasto di scelta rapida a un formato di testo.
 
-Per altre informazioni su come usare i tasti di scelta rapida e tasti di scelta rapida, vedere [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
+Per ulteriori informazioni sull'utilizzo dei tasti di scelta rapida e delle tabelle dei tasti di scelta rapida, vedere [Classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come costruire una `CMFCAcceleratorKey` oggetto e come usare relativo `Format` (metodo).
+Nell'esempio seguente viene `CMFCAcceleratorKey` illustrato come costruire `Format` un oggetto e come utilizzare il relativo metodo.
 
 [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]
 
@@ -66,7 +66,7 @@ Nell'esempio seguente viene illustrato come costruire una `CMFCAcceleratorKey` o
 
 **Intestazione:** afxacceleratorkey.h
 
-##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey
+## <a name="cmfcacceleratorkeycmfcacceleratorkey"></a><a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey
 
 Costruisce un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) oggetto.
 
@@ -80,13 +80,13 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 *lpAccel*<br/>
 [in] Puntatore a un tasto di scelta rapida.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se non si specifica un tasto di scelta rapida quando si crea una `CMFCAccleratorKey`, usare il [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) metodo per associare un tasto di scelta rapida con i `CMFCAcceleratorKey` oggetto.
+Se non si fornisce un tasto `CMFCAccleratorKey`di scelta rapida quando si crea un , utilizzare il `CMFCAcceleratorKey` [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) metodo per associare un tasto di scelta rapida all'oggetto.
 
-##  <a name="format"></a>  CMFCAcceleratorKey::Format
+## <a name="cmfcacceleratorkeyformat"></a><a name="format"></a>CMFCAcceleratorKey::Formato
 
-Converte la struttura di accelerazione per il valore di stringa associata.
+Converte la struttura ACCEL nel valore stringa associato.
 
 ```
 void Format(CString& str) const;
@@ -94,14 +94,14 @@ void Format(CString& str) const;
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
-[out] Un riferimento a un `CString` oggetto in cui il metodo scrive il tasto di scelta rapida tradotti.
+*Str*<br/>
+[fuori] Un riferimento `CString` a un oggetto in cui il metodo scrive il tasto di scelta rapida convertito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo recupera il formato della stringa del tasto di scelta rapida associato. È possibile impostare il formato della stringa di un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) dell'oggetto utilizzando il costruttore o il metodo [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).
+Questo metodo recupera il formato di stringa del tasto di scelta rapida associato. È possibile impostare il formato della stringa di un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) oggetto utilizzando il costruttore o il metodo [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).
 
-##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator
+## <a name="cmfcacceleratorkeysetaccelerator"></a><a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator
 
 Imposta il tasto di scelta rapida per il [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) oggetto.
 
@@ -114,12 +114,12 @@ void SetAccelerator(LPACCEL lpAccel);
 *lpAccel*<br/>
 [in] Puntatore a un tasto di scelta rapida.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Utilizzare questo metodo per impostare il tasto di scelta rapida per un `CMFCAcceleratorKey` se non è stato specificato un tasto di scelta rapida quando è stato creato il `CMFCAcceleratorKey`.
+Utilizzare questo metodo per impostare `CMFCAcceleratorKey` il tasto di scelta rapida per `CMFCAcceleratorKey`un se non è stato fornito un tasto di scelta rapida al momento della creazione dell'oggetto .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)

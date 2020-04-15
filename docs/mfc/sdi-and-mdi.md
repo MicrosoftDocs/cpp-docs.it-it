@@ -8,23 +8,23 @@ helpviewer_keywords:
 - single document interface (SDI) [MFC], applications
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
-ms.openlocfilehash: 725249e5a71e8ee097c641e5972e3cc8bb0e3e33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9730e7baf9589c4b05a60703c619aae2e941bdec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308532"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372766"
 ---
 # <a name="sdi-and-mdi"></a>SDI e MDI
 
-MFC semplifica funzionare con interfaccia a documento singolo (SDI) e le applicazioni di interfaccia a documenti multipli (MDI).
+MFC semplifica l'utilizzo di applicazioni con interfaccia a documento singolo (SDI) e MDI (Multiple Document Interface).
 
-Le applicazioni SDI consentono solo una finestra cornice di documento aperto in una fase. Le applicazioni MDI consentono di documento più finestre cornice aperto nella stessa istanza di un'applicazione. Un'applicazione MDI con una finestra in cui MDI più finestre figlio, che sono anch'esse finestre cornice, possono essere aperto, ognuno dei quali contiene un documento separato. In alcune applicazioni, le finestre figlio possono essere di tipi diversi, ad esempio grafico windows e windows di foglio di calcolo. In tal caso, la barra dei menu è possibile modificare come vengono attivate finestre figlio MDI di tipi diversi.
+Le applicazioni SDI consentono una sola finestra cornice di documento aperta alla volta. Le applicazioni MDI consentono l'apertura di più finestre cornice di documento nella stessa istanza di un'applicazione. Un'applicazione MDI dispone di una finestra all'interno della quale è possibile aprire più finestre figlio MDI, che sono finestre cornice, ognuna contenente un documento separato. In alcune applicazioni, le finestre figlio possono essere di tipi diversi, ad esempio le finestre del grafico e del foglio di calcolo. In tal caso, la barra dei menu può cambiare quando vengono attivate le finestre figlio MDI di tipi diversi.
 
 > [!NOTE]
->  In Windows 95 e versioni successive, le applicazioni sono comunemente SDI perché il sistema operativo ha adottato una visualizzazione "incentrata sul documento".
+> In Windows 95 e versioni successive, le applicazioni sono in genere SDI perché il sistema operativo ha adottato una visualizzazione "document-centered".
 
-Per altre informazioni, vedere [documenti, visualizzazioni e Framework](../mfc/documents-views-and-the-framework.md).
+Per ulteriori informazioni, vedere [Documenti, visualizzazioni e Framework](../mfc/documents-views-and-the-framework.md).
 
 ## <a name="see-also"></a>Vedere anche
 

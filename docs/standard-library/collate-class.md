@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f05c2e9482f8a0bada3868fdc946d4d26a0e0e1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421898"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371929"
 ---
 # <a name="collate-class"></a>Classe collate
 
-Modello di classe che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare l'ordinamento e il raggruppamento dei caratteri all'interno di una stringa, i confronti tra di essi e l'hashing di stringhe.
+Modello di classe che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare l'ordinamento e il raggruppamento di caratteri all'interno di una stringa, i confronti tra di essi e l'hashing delle stringhe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-\ *CharType*
+*Chartype*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
 ## <a name="remarks"></a>Osservazioni
@@ -53,7 +53,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 |Costruttore|Descrizione|
 |-|-|
-|[collate](#collate)|Costruttore per gli oggetti della classe `collate` utilizzato come facet delle impostazioni locali per gestire le convenzioni di ordinamento delle stringhe.|
+|[Collate](#collate)|Costruttore per gli oggetti della classe `collate` utilizzato come facet delle impostazioni locali per gestire le convenzioni di ordinamento delle stringhe.|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -66,20 +66,20 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 |Funzione membro|Descrizione|
 |-|-|
-|[compare](#compare)|Confronta due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.|
+|[Confrontare](#compare)|Confronta due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.|
 |[do_compare](#do_compare)|Funzione virtuale chiamata per confrontare due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.|
 |[do_hash](#do_hash)|Funzione virtuale chiamata per determinare il valore hash delle sequenze in base alle regole specifiche del relativo facet.|
 |[do_transform](#do_transform)|Funzione virtuale chiamata per convertire una sequenza di caratteri in una stringa che può essere utilizzata nei confronti lessicografici con altre sequenze di caratteri convertite in modo analogo dalle stesse impostazioni locali.|
-|[hash](#hash)|Determina il valore hash della sequenza in base alle regole specifiche del relativo facet.|
-|[transform](#transform)|Converte una sequenza di caratteri dalle impostazioni locali in una stringa che può essere utilizzata nei confronti lessicografici con altre sequenze di caratteri convertite in modo analogo dalle stesse impostazioni locali.|
+|[Hash](#hash)|Determina il valore hash della sequenza in base alle regole specifiche del relativo facet.|
+|[Trasformare](#transform)|Converte una sequenza di caratteri dalle impostazioni locali in una stringa che può essere utilizzata nei confronti lessicografici con altre sequenze di caratteri convertite in modo analogo dalle stesse impostazioni locali.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<impostazioni locali >
+**Intestazione:** \<locale>
 
 **Spazio dei nomi:** std
 
-## <a name="char_type"></a> collate::char_type
+## <a name="collatechar_type"></a><a name="char_type"></a>fascicola::char_type
 
 Tipo che descrive un carattere di tipo `CharType`.
 
@@ -91,7 +91,7 @@ typedef CharType char_type;
 
 Il tipo è un sinonimo del parametro di modello `CharType`.
 
-## <a name="collate"></a> collate::collate
+## <a name="collatecollate"></a><a name="collate"></a>fascicolare::fascicolare
 
 Costruttore per gli oggetti della classe collate usato come facet delle impostazioni locali per gestire le convenzioni di ordinamento delle stringhe.
 
@@ -116,17 +116,17 @@ Nome delle impostazioni locali.
 
 ### <a name="remarks"></a>Osservazioni
 
-I valori possibili per il parametro *_Refs* e i relativi significati sono:
+I valori possibili per il parametro *_Refs* e il loro significato sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
 - 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non sono definiti.
+- \>1: Questi valori non sono definiti.
 
-Il costruttore inizializza l'oggetto di base con **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Il costruttore inizializza il relativo oggetto`_Refs`di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( ).
 
-## <a name="compare"></a> collate::compare
+## <a name="collatecompare"></a><a name="compare"></a>fascicola::confronta
 
 Confronta due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.
 
@@ -139,25 +139,25 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametri
 
-\ *First1*
+*primo 1*\
 Puntatore al primo elemento nella prima sequenza da confrontare.
 
-\ *Last1*
+*ultimo1*\
 Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 
-\ *first2*
+*primo 2*\
 Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-\ *last2*
+*ultimi2*\
 Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
 La funzione membro restituisce:
 
-- \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
+- - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- +1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
@@ -165,7 +165,7 @@ La funzione membro restituisce:
 
 La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
 
-La funzione membro restituisce [do_compare](#do_compare)( `first1`, `last1`, `first2`, `last2`).
+La funzione membro `first1`restituisce `first2` `last2` [do_compare](#do_compare)( , `last1`, , ).
 
 ### <a name="example"></a>Esempio
 
@@ -192,7 +192,7 @@ int main() {
 }
 ```
 
-## <a name="do_compare"></a> collate::do_compare
+## <a name="collatedo_compare"></a><a name="do_compare"></a>fascicola::do_compare
 
 Funzione virtuale chiamata per confrontare due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.
 
@@ -205,37 +205,37 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametri
 
-\ *First1*
+*primo 1*\
 Puntatore al primo elemento nella prima sequenza da confrontare.
 
-\ *Last1*
+*ultimo1*\
 Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 
-\ *first2*
+*primo 2*\
 Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-\ *last2*
+*ultimi2*\
 Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
 La funzione membro restituisce:
 
-- \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
+- - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- +1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro virtuale protetta confronta la sequenza in [* first1, last1) * con la sequenza in *[first2, last2*). Confronta i valori applicando `operator<` tra coppie di elementi corrispondenti di tipo `CharType`. La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
+La funzione membro virtuale protetta confronta la sequenza in corrispondenza di [ , first1, Last1 ) con la sequenza at *[ first2, last2*). Confronta i valori applicando `operator<` tra coppie di `CharType`elementi corrispondenti di tipo . La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio di [collate::compare](#compare), che chiama `do_compare`.
 
-## <a name="do_hash"></a> collate::do_hash
+## <a name="collatedo_hash"></a><a name="do_hash"></a>fascicola::do_hash
 
 Funzione virtuale chiamata per determinare il valore hash delle sequenze in base alle regole specifiche del relativo facet.
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo*\
+*Prima*\
 Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*ultimo*\
+*Ultima*\
 Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -263,7 +263,7 @@ Un valore hash può essere utile, ad esempio, per distribuire le sequenze in mod
 
 Vedere l'esempio di [hash](#hash), che chiama `do_hash`.
 
-## <a name="do_transform"></a> collate::do_transform
+## <a name="collatedo_transform"></a><a name="do_transform"></a>fascicola::do_trasformazione
 
 Funzione virtuale chiamata per convertire una sequenza di caratteri in una stringa che può essere utilizzata nei confronti lessicografici con altre sequenze di caratteri convertite in modo analogo dalle stesse impostazioni locali.
 
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametri
 
-*primo*\
+*Prima*\
 Puntatore al primo carattere nella sequenza da convertire.
 
-*ultimo*\
+*Ultima*\
 Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -285,13 +285,13 @@ Stringa corrispondente alla sequenza di caratteri trasformata.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione del membro virtuale protetto restituisce un oggetto della classe [string_type](#string_type) la cui sequenza controllata è una copia della sequenza [ `first`, `last`). Se una classe derivata da COLLATE\< **CharType**> esegue l'override [do_compare](#do_compare), deve anche eseguire l'override di `do_transform` per trovare una corrispondenza. Quando vengono passate a `collate::compare`, due stringhe trasformate devono produrre lo stesso risultato che si otterrebbe dal passaggio delle stringhe non trasformate per il confronto nella classe derivata.
+La funzione membro virtuale protetta restituisce un oggetto della classe `first` `last` [string_type](#string_type) la cui sequenza controllata è una copia della sequenza [ , ). Se una classe derivata da collate\< **CharType**> esegue l'override di [do_compare](#do_compare), per corrispondere deve anche eseguire l'override di `do_transform`. Quando vengono passate a `collate::compare`, due stringhe trasformate devono produrre lo stesso risultato che si otterrebbe dal passaggio delle stringhe non trasformate per il confronto nella classe derivata.
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio di [transform](#transform) che chiama `do_transform`.
 
-## <a name="hash"></a> collate::hash
+## <a name="collatehash"></a><a name="hash"></a>fascicola::hash
 
 Determina il valore hash della sequenza in base alle regole specifiche del relativo facet.
 
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo*\
+*Prima*\
 Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*ultimo*\
+*Ultima*\
 Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -313,7 +313,7 @@ Valore hash di tipo **long** per la sequenza.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [do_hash](#do_hash)( `first`, `last`).
+La funzione [do_hash](#do_hash)membro `first`restituisce do_hash ( , `last`).
 
 Un valore hash può essere utile, ad esempio, per distribuire le sequenze in modo pseudo-casuale all'interno di una matrice di elenchi.
 
@@ -345,7 +345,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="string_type"></a> collate::string_type
+## <a name="collatestring_type"></a><a name="string_type"></a>fascicola::string_type
 
 Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo `CharType`.
 
@@ -361,7 +361,7 @@ Il tipo descrive una specializzazione del modello di classe [basic_string](../st
 
 Per un esempio di dichiarazione e uso di `string_type`, vedere [transform](#transform).
 
-## <a name="transform"></a> collate::transform
+## <a name="collatetransform"></a><a name="transform"></a>fascicola::trasformazione
 
 Converte una sequenza di caratteri dalle impostazioni locali in una stringa che può essere utilizzata nei confronti lessicografici con altre sequenze di caratteri convertite in modo analogo dalle stesse impostazioni locali.
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo*\
+*Prima*\
 Puntatore al primo carattere nella sequenza da convertire.
 
-*ultimo*\
+*Ultima*\
 Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -383,7 +383,7 @@ Stringa contenente la sequenza di caratteri trasformata.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [do_transform](#do_transform)(`first`, `last`).
+La funzione [do_transform](#do_transform)membro`first`restituisce do_transform ( , `last`).
 
 ### <a name="example"></a>Esempio
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<locale>](../standard-library/locale.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)
+[\<>delle impostazioni locali](../standard-library/locale.md)\
+[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)

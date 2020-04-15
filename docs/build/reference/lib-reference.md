@@ -10,19 +10,19 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 8e0c2815fdc3ab9ab171d3ebb94480393c8815ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ce4e4723faa943a8de1431a604fc7acca2d528
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291496"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328209"
 ---
 # <a name="lib-reference"></a>Riferimenti a LIB
 
-Gestione librerie Microsoft (LIB.exe) Crea e gestisce una libreria di file oggetto File formato COFF (Common Object). LIB è anche utilizzabile per creare i file di esportazione e librerie di importazione per le definizioni dei riferimento esportato.
+Gestione librerie Microsoft (LIB.exe) crea e gestisce una libreria di file oggetto COFF (Common Object File Format). LIB può essere utilizzato anche per creare file di esportazione e librerie di importazione per fare riferimento alle definizioni esportate.
 
 > [!NOTE]
->  È possibile avviare questo strumento solo dal prompt dei comandi di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.
+> È possibile avviare questo strumento solo dal prompt dei comandi di Visual Studio.You can start this tool only from the Visual Studio command prompt. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.
 
 - [Panoramica di LIB](overview-of-lib.md)
 
@@ -38,4 +38,4 @@ Gestione librerie Microsoft (LIB.exe) Crea e gestisce una libreria di file ogget
 
 ## <a name="see-also"></a>Vedere anche
 
-[Strumenti di compilazione MSVC aggiuntive](c-cpp-build-tools.md)
+[Strumenti di compilazione aggiuntivi MSVC](c-cpp-build-tools.md)

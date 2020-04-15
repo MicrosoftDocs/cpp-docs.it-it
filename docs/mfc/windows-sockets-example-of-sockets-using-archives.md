@@ -1,57 +1,57 @@
 ---
-title: 'Windows Sockets: Esempio di socket che utilizzano archivi'
+title: 'Windows Sockets: esempio di socket che utilizzano archivi'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], with archives
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 253a65430ae230fbc4deeb9bd5288f28237310d2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305294"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371083"
 ---
-# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Esempio di socket che utilizzano archivi
+# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: esempio di socket che utilizzano archivi
 
-Questo articolo viene presentato un esempio dell'uso di classi [CSocket](../mfc/reference/csocket-class.md). L'esempio Usa `CArchive` oggetti da serializzare i dati tramite un socket. Si noti che non si tratta di serializzazione di documenti a o da un file.
+In questo articolo viene illustrato un esempio di utilizzo della classe [CSocket](../mfc/reference/csocket-class.md). Nell'esempio `CArchive` vengono impiegati oggetti per serializzare i dati tramite un socket. Si noti che non si tratta di serializzazione di documenti da o verso un file.
 
-Nell'esempio seguente viene illustrato come utilizzare l'archivio per inviare e ricevere dati tramite `CSocket` oggetti. L'esempio è progettato in modo che due istanze dell'applicazione (nello stesso computer o in computer diversi nella rete) lo scambio di dati. Un'istanza di Invia dati, che di altra istanza riceve e invia un acknowledgement. Entrambe le applicazioni possono avviare uno scambio e uno può agire come server o client per l'altra applicazione. La funzione seguente viene definita nella classe di visualizzazione dell'applicazione:
+Nell'esempio seguente viene illustrato come utilizzare l'archivio per inviare e ricevere dati tramite `CSocket` oggetti. L'esempio è progettato in modo che due istanze dell'applicazione (nello stesso computer o su computer diversi in rete) si scambino dati. Un'istanza invia i dati, che l'altra istanza riceve e riconosce. Entrambe le applicazioni possono avviare uno scambio e possono fungere da server o come client per l'altra applicazione. La funzione seguente è definita nella classe di visualizzazione dell'applicazione:The following function is defined in the application's view class:
 
 [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]
 
-L'aspetto più importante in questo esempio è che la struttura è paragonabile a quella di un MFC `Serialize` (funzione). Il `PacketSerialize` funzione membro è costituito da un **se** istruzione con un **else** clausola. La funzione riceve due [CArchive](../mfc/reference/carchive-class.md) riferimenti come parametri: *arData* e *arAck*. Se il *arData* oggetto archivio è impostato per l'archiviazione (trasmissione), il **se** ramo viene eseguito; in caso contrario, se *arData* è impostato per il caricamento (ricezione) la funzione accetta il **else** ramo. Per altre informazioni sulla serializzazione in MFC, vedere [serializzazione](../mfc/how-to-make-a-type-safe-collection.md).
+La cosa più importante di questo esempio è che `Serialize` la sua struttura è parallela a quella di una funzione MFC. La `PacketSerialize` funzione membro è costituita da **un'istruzione if** con una clausola **else.** La funzione riceve due riferimenti [CArchive](../mfc/reference/carchive-class.md) come parametri: *arData* e *arAck*. Se l'oggetto archivio *arData* è impostato per l'archiviazione (invio), viene eseguito il ramo **if;** in caso contrario, se *arData* è impostato per il caricamento (ricezione) la funzione accetta il ramo **else.** Per ulteriori informazioni sulla serializzazione in MFC, vedere [Serializzazione](../mfc/how-to-make-a-type-safe-collection.md).
 
 > [!NOTE]
->  Il *arAck* oggetto archivio viene considerato l'opposto del *arData*. Se *arData* per l'invio, viene *arAck* riceve, e l'opposto è true.
+> Si presuppone che l'oggetto archivio *arAck* sia l'opposto di *arData*. Se *arData* è per l'invio, *arAck* riceve e il contrario è true.
 
-Per l'invio, la funzione di esempio esegue il ciclo per un numero specificato di volte, ogni volta che la generazione di alcuni dati casuali per scopi dimostrativi. L'applicazione ottenuti da un'origine, ad esempio un file di dati reali. Il *arData* l'operatore di inserimento dell'archivio (**<<**) viene usato per inviare un flusso di tre blocchi consecutivi di dati:
+Per l'invio, la funzione di esempio esegue cicli per un numero specificato di volte, generando ogni volta alcuni dati casuali a scopo dimostrativo. L'applicazione otterrebbe dati reali da un'origine, ad esempio un file. L'operatore di inserimento**<<** dell'archivio *arData* ( ) viene utilizzato per inviare un flusso di tre blocchi consecutivi di dati:
 
-- Un "header" che specifica la natura dei dati (in questo caso, il valore di *bValue* variabile e verrà inviato il numero di copie).
+- Una "intestazione" che specifica la natura dei dati (in questo caso, il valore della variabile *bValue* e il numero di copie che verranno inviate).
 
    Entrambi gli elementi vengono generati in modo casuale per questo esempio.
 
-- Il numero specificato di copie dei dati.
+- Numero specificato di copie dei dati.
 
-   Interna **per** ciclo invii *bValue* il numero di volte specificato.
+   Il ciclo **for** interno invia *bValue* il numero di volte specificato.
 
-- Una stringa denominata *strText* che il destinatario visualizza all'utente.
+- Una stringa denominata *strText* che il ricevitore visualizza all'utente.
 
-Per la ricezione, la funzione viene eseguita in modo analogo, ad eccezione del fatto che usa l'operatore di estrazione dell'archivio (**>>**) per ottenere dati dall'archivio. L'applicazione ricevente verifica i dati riceve, viene visualizzato il messaggio "Ricevuto" finale e quindi invia un messaggio con la dicitura "Inviato" per l'applicazione mittente da visualizzare.
+Per la ricezione, la funzione funziona in modo simile, ad**>>** eccezione del fatto che utilizza l'operatore di estrazione dell'archivio ( ) per ottenere i dati dall'archivio. L'applicazione ricevente verifica i dati ricevuti, visualizza il messaggio finale "Ricevuto" e quindi restituisce un messaggio che dice "Inviato" per l'applicazione mittente da visualizzare.
 
-In questo modello di comunicazione, la parola "Ricevuto", il messaggio inviato *strText* variabile sia per la visualizzazione a altra estremità della comunicazione, pertanto specifica per l'utente ricevente che un determinato numero di pacchetti di dati siano stati ricevuto. Il destinatario risponda con una stringa simile con la dicitura "Sent", per la visualizzazione sullo schermo del mittente originale. Ricezione di entrambe le stringhe indica che si è verificata la corretta comunicazione.
+In questo modello di comunicazione, la parola "Received", il messaggio inviato nella variabile *strText,* è per la visualizzazione all'altra estremità della comunicazione, pertanto specifica all'utente ricevente che è stato ricevuto un certo numero di pacchetti di dati. Il destinatario risponde con una stringa simile che dice "Inviato", per la visualizzazione sullo schermo del mittente originale. La ricezione di entrambe le stringhe indica che la comunicazione è stata eseguita correttamente.
 
 > [!CAUTION]
->  Se si scrive un programma MFC client per comunicare con server consolidati (non MFC), non inviare oggetti C++ attraverso l'archivio. A meno che il server è un'applicazione MFC che individua i tipi di oggetti da inviare, non sarà in grado di ricevere e deserializzare gli oggetti. Un esempio dell'articolo [Windows Sockets: Ordinamento dei byte](../mfc/windows-sockets-byte-ordering.md) Mostra una comunicazione di questo tipo.
+> Se si scrive un programma MFC client per comunicare con server consolidati (non MFC), non inviare oggetti C++ attraverso l'archivio. A meno che il server non sia un'applicazione MFC che riconosce i tipi di oggetti che si desidera inviare, non sarà in grado di ricevere e deserializzare gli oggetti. Un esempio nell'articolo [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) mostra una comunicazione di questo tipo.
 
-Per altre informazioni, vedere la specifica di Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Per altre informazioni, vedere anche:
+Per ulteriori informazioni, vedere Windows Sockets Specification: **htonl**, **htons**, **ntohl**, **ntohs**. Inoltre, per ulteriori informazioni, vedere:
 
-- [Windows Sockets: derivazione da classi socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: derivazione dalle classi Socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
 - [Windows Sockets: funzionamento dei socket con archivi](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets: Sfondo](../mfc/windows-sockets-background.md)
+- [Windows Sockets: sfondo](../mfc/windows-sockets-background.md)
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -60,4 +60,4 @@ Per altre informazioni, vedere la specifica di Windows Sockets: **htonl**, **hto
 [CArchive::operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
-[CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
+[Oggetto CObject::Serialize](../mfc/reference/cobject-class.md#serialize)

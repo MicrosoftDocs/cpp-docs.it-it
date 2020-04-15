@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-ms.openlocfilehash: 5ca791af658ee719b2e6d6ea78f82e23a66edc98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf6399d2a245addb7e2e65100d33643fcd54e893
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253732"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369295"
 ---
 # <a name="cd2dbrushproperties-class"></a>Classe CD2DBrushProperties
 
@@ -33,13 +33,13 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Di overload. Crea un `CD2D_BRUSH_PROPERTIES` struttura|
+|[Proprietà Pennello CD2D::CD2DBrushProperties](#cd2dbrushproperties)|Di overload. Crea `CD2D_BRUSH_PROPERTIES` una struttura|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DBrushProperties::CommonInit](#commoninit)|Inizializza l'oggetto|
+|[Proprietà Pennello CD2D::CommonInit](#commoninit)|Inizializza l'oggetto|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -49,9 +49,9 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget. h
+**Intestazione:** afxrendertarget.h
 
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+## <a name="cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>Proprietà Pennello CD2D::CD2DBrushProperties
 
 Crea una struttura CD2D_BRUSH_PROPERTIES
 
@@ -67,12 +67,12 @@ CD2DBrushProperties(
 ### <a name="parameters"></a>Parametri
 
 *_opacity*<br/>
-Base opacità del pennello. Il valore predefinito è 1,0.
+Opacità di base del pennello. Il valore predefinito è 1,0.
 
 *_transform*<br/>
 Trasformazione da applicare al pennello
 
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+## <a name="cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>Proprietà Pennello CD2D::CommonInit
 
 Inizializza l'oggetto
 

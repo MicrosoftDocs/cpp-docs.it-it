@@ -22,95 +22,95 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29f5f815b62835aedbca1f79b797f826ea53d83b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306392"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370463"
 ---
 # <a name="template-based-classes"></a>Classi basate su modello
 
-Questo articolo illustra le classi di raccolta basata su modello indipendente dai tipi in MFC 3.0 e versioni successive. Usare questi modelli per creare raccolte indipendente dai tipi è più comodo e aiuta a offrire indipendenza dai tipi in modo più efficace rispetto all'uso di classi collection non basate su modelli.
+In questo articolo vengono illustrate le classi di raccolte basate su modelli indipendenti dai tipi in MFC versione 3.0 e successive. L'utilizzo di questi modelli per creare raccolte indipendenti dai tipi è più pratico e consente di garantire l'indipendenza dai tipi in modo più efficace rispetto all'utilizzo delle classi di raccolte non basate sui modelli.
 
-MFC sono disponibili due categorie di raccolte basate su modelli:
+MFC predefinisce due categorie di raccolte basate su modelli:
 
-- [Semplice array, list e classi map](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
+- [Classi semplici di matrici, elenchi e mappe](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
    `CArray`, `CList`, `CMap`
 
-- [Le matrici, elenchi e mappe di puntatori tipizzati](#_core_using_typed.2d.pointer_collection_templates)
+- [Matrici, elenchi e mappe di puntatori tipati](#_core_using_typed.2d.pointer_collection_templates)
 
    `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
-Le classi di raccolte semplici sono derivate dalla classe `CObject`, quindi ereditano la serializzazione, la creazione dinamica e altre proprietà di `CObject`. Le classi di raccolta puntatore tipizzato è necessario specificare la classe di derivazione, che deve essere una delle raccolte di puntatore non basate su modelli predefinite da MFC, ad esempio `CPtrList` o `CPtrArray`. La nuova classe di raccolta eredita dalla classe di base specificata e le funzioni membro della nuova classe usano incapsulate chiamate ai membri della classe base per garantire la sicurezza di tipo.
+Le classi di insiemi semplici sono tutte derivate dalla `CObject`classe `CObject`, pertanto ereditano la serializzazione, la creazione dinamica e altre proprietà di . Le classi di raccolte di puntatori tipizzati richiedono di specificare la classe da cui derivare, che deve essere una delle raccolte di puntatori non template predefinite da MFC, ad `CPtrList` esempio o `CPtrArray`. La nuova classe di raccolta eredita dalla classe base specificata e le funzioni membro della nuova classe utilizzano chiamate incapsulate ai membri della classe base per applicare l'indipendenza dai tipi.
 
-Per altre informazioni sui modelli C++, vedere [modelli](../cpp/templates-cpp.md) nel *riferimenti al linguaggio C++*.
+Per ulteriori informazioni sui modelli di C, vedere [Modelli](../cpp/templates-cpp.md) nella Guida di riferimento al *linguaggio C.*
 
-##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> Usando una semplice matrice, elenco e modelli di mappa
+## <a name="using-simple-array-list-and-map-templates"></a><a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a>Utilizzo di modelli semplici di matrici, elenchi e mappe
 
-Per usare i modelli di raccolta semplice, è necessario conoscere il tipo di dati è possibile archiviare in tali raccolte e i parametri da usare nelle dichiarazioni degli insiemi.
+Per usare i modelli di raccolta semplici, è necessario conoscere il tipo di dati che è possibile archiviare in queste raccolte e i parametri da usare nelle dichiarazioni di raccolta.
 
-###  <a name="_core_simple_array_and_list_usage"></a> Utilizzo di elenco e matrice semplice
+### <a name="simple-array-and-list-usage"></a><a name="_core_simple_array_and_list_usage"></a>Utilizzo semplice di matrici ed elenchi
 
-Le classi di elenco e matrice semplice [CArray](../mfc/reference/carray-class.md) e [CList](../mfc/reference/clist-class.md), accettano due parametri: *TIPO di* e `ARG_TYPE`. Queste classi possono archiviare qualsiasi tipo di dati, quali specifica le *tipo* parametro:
+Le classi di matrice ed elenco semplici, [CArray](../mfc/reference/carray-class.md) e `ARG_TYPE` [CList](../mfc/reference/clist-class.md), accettano due parametri: *TYPE* e . Queste classi possono archiviare qualsiasi tipo di dati, specificato nel parametro *TYPE:*
 
-- Tipi di dati C++ fondamentali, ad esempio **int**, **char**, e **float**
+- Tipi di dati di tipo C, ad esempio **int**, **char**e **float**
 
-- Classi e strutture di C++
+- Strutture e classi di C
 
-- Altri tipi che definiscono
+- Altri tipi definiti
 
-Per motivi di praticità e l'efficienza, è possibile usare la *ARG_TYPE* parametro per specificare il tipo degli argomenti della funzione. In genere, specificano *ARG_TYPE* come riferimento per il tipo è denominato nel *tipo* parametro. Ad esempio:
+Per comodità ed efficienza, è possibile utilizzare il parametro *ARG_TYPE* per specificare il tipo di argomenti della funzione. In genere, si specifica *ARG_TYPE* come riferimento al tipo denominato nel parametro *TYPE.* Ad esempio:
 
 [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]
 
-Nel primo esempio dichiara un insieme di matrici `myArray`, che contiene **int**s. Nel secondo esempio dichiara una raccolta di elenchi `myList`, che archivia `CPerson` oggetti. Alcune funzioni membro delle classi collection accettano argomenti il cui tipo è specificato mediante il *ARG_TYPE* parametro di modello. Ad esempio, il `Add` la funzione membro della classe `CArray` accetta una *ARG_TYPE* argomento:
+Nel primo esempio viene dichiarato `myArray`un insieme di matrici, che contiene **int**s. Nel secondo esempio viene dichiarato `myList`un `CPerson` insieme di elenchi, , che archivia oggetti. Alcune funzioni membro delle classi di raccolta accettano argomenti il cui tipo è specificato dal parametro di modello *ARG_TYPE.* Ad esempio, `Add` la funzione `CArray` membro della classe accetta un *argomento ARG_TYPE:*
 
 [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]
 
-###  <a name="_core_simple_map_usage"></a> Utilizzo di mapping semplice
+### <a name="simple-map-usage"></a><a name="_core_simple_map_usage"></a>Utilizzo semplice della mappa
 
-La classe map semplice, [CMap](../mfc/reference/cmap-class.md), accetta quattro parametri: *TASTO*, *ARG_KEY*, *valore*, e *ARG_VALUE*. Ad esempio le classi matrice ed elenco, le classi di mappe possono archiviare qualsiasi tipo di dati. A differenza di matrici ed elenchi, indicizzano e ordinare i dati archiviati, mappe associano chiavi e valori: Accedere a un valore archiviato in una mappa, specificando la relativa chiave del valore. Il *chiave* parametro specifica il tipo di dati delle chiavi utilizzate per accedere ai dati memorizzati nella mappa. Se il tipo della *chiave* è una struttura o una classe, il *ARG_KEY* parametro in genere è un riferimento al tipo specificato *chiave*. Il *valore* parametro specifica il tipo degli elementi memorizzati nella mappa. Se il tipo della *ARG_VALUE* è una struttura o una classe, il *ARG_VALUE* parametro in genere è un riferimento al tipo specificato *valore*. Ad esempio:
+La classe mappa semplice, [CMap](../mfc/reference/cmap-class.md), accetta quattro parametri: *KEY*, *ARG_KEY*, *VALUE*e *ARG_VALUE*. Analogamente alle classi di matrice ed elenco, le classi di mappa possono archiviare qualsiasi tipo di dati. A differenza delle matrici e degli elenchi, che indicizzano e ordinano i dati archiviati, le mappe associano chiavi e valori: si accede a un valore archiviato in una mappa specificando la chiave associata del valore. Il parametro *KEY* consente di specificare il tipo di dati delle chiavi utilizzate per accedere ai dati archiviati nella mappa. Se il tipo di *KEY* è una struttura o una classe, il *parametro ARG_KEY* è in genere un riferimento al tipo specificato in *KEY*. Il parametro *VALUE* consente di specificare il tipo di elementi archiviati nella mappa. Se il tipo di *ARG_VALUE* è una struttura o una classe, il *parametro ARG_VALUE* è in genere un riferimento al tipo specificato in *VALUE*. Ad esempio:
 
 [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]
 
-Il primo esempio Archivia `MY_STRUCT` valori, consente di accedere a altra **int** chiavi e restituisce accessibili `MY_STRUCT` elementi per riferimento. Il secondo esempio Archivia `CPerson` valori, accede a essi da `CString` tasti e restituisce i riferimenti agli elementi a cui si accede. In questo esempio potrebbe rappresentare una rubrica semplice, in cui è definito il cercare le persone in base al cognome.
+Nel primo `MY_STRUCT` esempio vengono archiviati i valori, essi `MY_STRUCT` eseguito l'accesso tramite chiavi **int** e vengono restituiti gli elementi a cui si accede per riferimento. Nel secondo `CPerson` esempio vengono archiviati `CString` i valori, essi eseguito l'accesso tramite chiavi e vengono restituiti riferimenti agli elementi a cui si accede. Questo esempio potrebbe rappresentare una semplice rubrica, in cui si cercano le persone in base al cognome.
 
-Poiché il *chiave* parametro è di tipo `CString` e il *KEY_TYPE* parametro è di tipo `LPCSTR`, le chiavi vengono archiviate nella mappa come elementi di tipo `CString` ma si fa riferimento le funzioni come `SetAt` tramite puntatori di tipo `LPCSTR`. Ad esempio:
+Poiché *KEY* il parametro `CString` KEY è di `LPCSTR`tipo e il parametro *KEY_TYPE* è `CString` di tipo , le `SetAt` chiavi vengono `LPCSTR`archiviate nella mappa come elementi di tipo, ma vi viene fatto riferimento in funzioni quali tramite puntatori di tipo . Ad esempio:
 
 [!code-cpp[NVC_MFCCollections#4](../mfc/codesnippet/cpp/template-based-classes_4.cpp)]
 
-##  <a name="_core_using_typed.2d.pointer_collection_templates"></a> Usando i modelli di raccolta di puntatori
+## <a name="using-typed-pointer-collection-templates"></a><a name="_core_using_typed.2d.pointer_collection_templates"></a>Utilizzo di modelli di raccolta di puntatori tipatiUsing Typed-Pointer Collection Templates
 
-Per usare i modelli di puntatore a raccolta, è necessario conoscere quali tipi di dati è possibile archiviare in tali raccolte e i parametri da usare nelle dichiarazioni degli insiemi.
+Per usare i modelli di raccolta dei puntatori tipizzati, è necessario conoscere i tipi di dati che è possibile archiviare in queste raccolte e i parametri da utilizzare nelle dichiarazioni di raccolta.
 
-###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> Matrice di puntatori e l'utilizzo di elenco
+### <a name="typed-pointer-array-and-list-usage"></a><a name="_core_typed.2d.pointer_array_and_list_usage"></a>Matrice di puntatori tipizzata e utilizzo dell'elenco
 
-Le classi di elenco e matrice di puntatori [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) e [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), accettano due parametri: *BASE_CLASS* e *tipo*. Queste classi possono archiviare qualsiasi tipo di dati, quali specifica le *tipo* parametro. Derivano da una delle classi collection non basate su modelli che archivia i puntatori. si specifica questa classe di base *BASE_CLASS*. Per le matrici, usare `CObArray` o `CPtrArray`. Per gli elenchi, usare `CObList` o `CPtrList`.
+La matrice di puntatori tipizzati e le classi di elenco, [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) e [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), accettano due parametri: *BASE_CLASS* e *TYPE*. Queste classi possono archiviare qualsiasi tipo di dati, specificato nel parametro *TYPE.* Derivano da una delle classi di raccolte non modello che archivia i puntatori; specificare questa classe di base in *BASE_CLASS*. Per le matrici, `CObArray` `CPtrArray`utilizzare o . Per gli elenchi, `CPtrList`utilizzare o `CObList` .
 
-In effetti, quando si dichiara una raccolta di base, ad esempio `CObList`, la nuova classe eredita non solo i membri della relativa classe di base, ma anche dichiara un numero di membri indipendente dai tipi aggiuntivi funzioni e operatori che consentono di fornire l'indipendenza dai tipi incapsulando chiamate ai membri della classe base. Questi incapsulamenti gestire tutte le conversioni necessarie. Ad esempio:
+In effetti, quando si dichiara un `CObList`insieme basato su, ad esempio , la nuova classe non solo eredita i membri della relativa classe base, ma dichiara anche una serie di funzioni membro e operatori indipendenti dai tipi aggiuntivi che consentono di fornire l'indipendenza dai tipi incapsulando le chiamate ai membri della classe base. Questi incapsulamenti gestiscono tutte le conversioni di tipi necessarie. Ad esempio:
 
 [!code-cpp[NVC_MFCCollections#5](../mfc/codesnippet/cpp/template-based-classes_5.cpp)]
 
-Nel primo esempio dichiara una matrice di puntatori `myArray`, derivata da `CObArray`. La matrice vengono archiviati e restituisce i puntatori ai `CPerson` oggetti (dove `CPerson` è una classe derivata da `CObject`). È possibile chiamare tutte `CObArray` funzione membro, oppure è possibile chiamare il nuovo indipendente dai tipi `GetAt` e `ElementAt` tramite le funzioni o usare l'indipendente dai tipi **[]** operatore.
+Nel primo esempio viene dichiarata una `myArray`matrice di `CObArray`puntatori tipizzata, , derivata da . La matrice archivia e `CPerson` restituisce `CPerson` puntatori a `CObject`oggetti (dove è una classe derivata da ). È possibile `CObArray` chiamare qualsiasi funzione membro oppure chiamare `GetAt` `ElementAt` il nuovo type-safe e le funzioni o utilizzare l'operatore indipendente dai **tipi [ ].**
 
-Nel secondo esempio dichiara un elenco con puntatore tipizzato, `myList`, derivata da `CPtrList`. Nell'elenco vengono archiviati e restituisce i puntatori a `MY_STRUCT` oggetti. Una classe di base `CPtrList` viene usato per archiviare i puntatori a oggetti non derivati da `CObject`. `CTypedPtrList` sono disponibili numerose funzioni membro indipendente dai tipi: `GetHead`, `GetTail`, `RemoveHead`, `RemoveTail`, `GetNext`, `GetPrev`, e `GetAt`.
+Nel secondo esempio viene dichiarato un `myList`elenco di `CPtrList`puntatori tipizzato, , derivato da . L'elenco archivia e `MY_STRUCT` restituisce puntatori a oggetti. Una classe `CPtrList` basata su viene utilizzata per `CObject`archiviare puntatori a oggetti non derivati da . `CTypedPtrList`dispone di numerose funzioni membro `GetHead` `GetTail`indipendenti `RemoveHead` `RemoveTail`dai `GetNext` `GetPrev`tipi: `GetAt`, , , , , , e .
 
-###  <a name="_core_typed.2d.pointer_map_usage"></a> Utilizzo di mappe di puntatori
+### <a name="typed-pointer-map-usage"></a><a name="_core_typed.2d.pointer_map_usage"></a>Utilizzo mappa puntatore tipizzato
 
-La classe, mappa di puntatori [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), accetta tre parametri: *BASE_CLASS*, *chiave*, e *valore*. Il *BASE_CLASS* parametro specifica la classe da cui deriva la nuova classe: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`e così via. *TASTO* è analoga a *chiave* in `CMap`: Specifica il tipo della chiave usata per le ricerche. *VALORE* è analoga a *valore* in `CMap`: Specifica il tipo di oggetto archiviato nella mappa. Ad esempio:
+La classe della mappa del puntatore tipizzato, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), accetta tre parametri: *BASE_CLASS*, *KEY*e *VALUE*. Il *parametro BASE_CLASS* consente di specificare la `CMapPtrToWord` `CMapPtrToPtr`classe `CMapStringToPtr` `CMapWordToPtr`da cui derivare la nuova classe: , , , , , `CMapStringToOb`e così via. *KEY* è analogo *KEY* a `CMap`KEY in : specifica il tipo di chiave utilizzato per le ricerche. *VALUE* è analogo *VALUE* a `CMap`VALUE in : specifica il tipo di oggetto memorizzato nella mappa. Ad esempio:
 
 [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]
 
-Il primo esempio è una mappa in base alla `CMapPtrToPtr` : Usa `CString` le chiavi associate a puntatori a `MY_STRUCT`. È possibile cercare un puntatore archiviato chiamando un indipendente dai tipi `Lookup` funzione membro. È possibile usare la **[]** operatore da cercare un puntatore archiviato e aggiungerlo se non viene trovato. Ed è possibile eseguire l'iterazione la mappa utilizzando l'indipendente dai tipi `GetNextAssoc` (funzione). È possibile anche chiamare altri funzioni membro della classe `CMapPtrToPtr`.
+Il primo esempio è `CMapPtrToPtr` una mappa `CString` basata su : `MY_STRUCT`utilizza chiavi mappate a puntatori a . È possibile cercare un puntatore archiviato `Lookup` chiamando una funzione membro indipendente dai tipi. È possibile utilizzare l'operatore **[ ]** per cercare un puntatore archiviato e aggiungerlo se non viene trovato. È possibile scorrere la mappa utilizzando `GetNextAssoc` la funzione indipendente dai tipi. È inoltre possibile chiamare altre `CMapPtrToPtr`funzioni membro della classe .
 
-Il secondo esempio è una mappa in base alla `CMapStringToOb` , che utilizza chiavi di stringa mappate a stored puntatori a `CMyObject` oggetti. È possibile usare gli stessi membri indipendente dai tipi descritti nel paragrafo precedente, oppure è possibile chiamare i membri della classe `CMapStringToOb`.
+Il secondo esempio è `CMapStringToOb` una mappa basata su: usa `CMyObject` chiavi stringa mappate a puntatori archiviati a oggetti. È possibile utilizzare gli stessi membri indipendenti dai tipi descritti nel `CMapStringToOb`paragrafo precedente oppure chiamare i membri della classe .
 
 > [!NOTE]
->  Se si specifica un **classe** oppure **struct** tipo per il *valore* parametro, anziché a un puntatore o un riferimento al tipo, la classe o struttura deve avere un costruttore di copia.
+> Se si specifica una **classe** o un tipo **struct** per il parametro *VALUE,* anziché un puntatore o un riferimento al tipo, la classe o la struttura deve disporre di un costruttore di copia.
 
-Per altre informazioni, vedere [come effettuare una raccolta indipendente dai tipi](../mfc/how-to-make-a-type-safe-collection.md).
+Per ulteriori informazioni, vedere [Come creare una raccolta indipendente dai](../mfc/how-to-make-a-type-safe-collection.md)tipi .
 
 ## <a name="see-also"></a>Vedere anche
 

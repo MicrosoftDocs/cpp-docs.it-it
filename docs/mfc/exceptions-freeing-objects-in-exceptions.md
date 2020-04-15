@@ -1,5 +1,5 @@
 ---
-title: 'Eccezioni: Rilascio di oggetti nelle eccezioni'
+title: 'Eccezioni: rilascio di oggetti nelle eccezioni'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,58 +11,58 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49c7c6b0481f90baa23609c1bb1596deda49f7bd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406067"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371994"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>Eccezioni: Rilascio di oggetti nelle eccezioni
+# <a name="exceptions-freeing-objects-in-exceptions"></a>Eccezioni: rilascio di oggetti nelle eccezioni
 
-Questo articolo illustra la necessità e il metodo di rilascio di oggetti quando si verifica un'eccezione. Gli argomenti trattati includono:
+In questo articolo viene illustrata la necessità e il metodo di liberazione di oggetti quando si verifica un'eccezione. Gli argomenti includono:
 
-- [Gestione locale delle eccezioni](#_core_handling_the_exception_locally)
+- [Gestione dell'eccezione in locale](#_core_handling_the_exception_locally)
 
-- [Generazione di eccezioni dopo l'eliminazione definitiva di oggetti](#_core_throwing_exceptions_after_destroying_objects)
+- [Generazione di eccezioni dopo l'eliminazione di oggetti](#_core_throwing_exceptions_after_destroying_objects)
 
-Eccezioni generate dal framework o per il flusso di programma normale interrupt dell'applicazione. Di conseguenza, è molto importante tenere traccia degli oggetti in modo che è possibile eliminare correttamente di esse nel caso in cui viene generata un'eccezione.
+Le eccezioni generate dal framework o dall'applicazione interrompono il normale flusso del programma. Pertanto, è molto importante tenere traccia degli oggetti in modo che sia possibile eliminarli correttamente nel caso in cui venga generata un'eccezione.
 
 Esistono due metodi principali per eseguire questa operazione.
 
-- Gestire le eccezioni in locale usando il **provare** e **catch** parole chiave, quindi eliminare tutti gli oggetti con un'unica istruzione.
+- Gestire le eccezioni in locale utilizzando le parole chiave **try** e **catch,** quindi eliminare tutti gli oggetti con un'istruzione .
 
-- Eliminare definitivamente un oggetto di **catch** blocco prima che venga generata l'eccezione all'esterno del blocco per la gestione aggiuntiva.
+- Eliminare qualsiasi oggetto nel blocco **catch** prima di generare l'eccezione all'esterno del blocco per un'ulteriore gestione.
 
-Questi due approcci sono illustrati di seguito come soluzioni alle problematiche al seguente:
+Questi due approcci sono illustrati di seguito come soluzioni per il seguente esempio problematico:
 
 [!code-cpp[NVC_MFCExceptions#14](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_1.cpp)]
 
-Come scritto in precedenza, `myPerson` non verrà eliminato se viene generata un'eccezione da `SomeFunc`. L'esecuzione passa direttamente al gestore di eccezioni esterno successivo, ignorando l'uscita dalla funzione normale e il codice che elimina l'oggetto. Il puntatore all'oggetto esce dall'ambito quando quest'ultima lascia la funzione e la memoria occupata dall'oggetto mai essere ripristinata fino a quando l'esecuzione del programma. Si tratta di una perdita di memoria; sarebbe essere rilevato mediante la diagnostica della memoria.
+Come scritto `myPerson` in precedenza, non verrà `SomeFunc`eliminato se viene generata un'eccezione da . L'esecuzione passa direttamente al gestore di eccezioni esterno successivo, ignorando l'uscita della funzione normale e il codice che elimina l'oggetto. Il puntatore all'oggetto esce dall'ambito quando l'eccezione esce dalla funzione e la memoria occupata dall'oggetto non verrà mai recuperata finché il programma è in esecuzione. Si tratta di una perdita di memoria; sarebbe stato rilevato utilizzando la diagnostica della memoria.
 
-##  <a name="_core_handling_the_exception_locally"></a> Gestione locale delle eccezioni
+## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a>Gestione dell'eccezione in locale
 
-Il **try/catch** paradigma fornisce un metodo di programmazione difensivo per evitare perdite di memoria e per garantire che gli oggetti vengono eliminati definitivamente quando si verificano eccezioni. Nell'esempio illustrato in precedenza in questo articolo, ad esempio, potrebbe essere riscritto come segue:
+Il paradigma **try/catch** fornisce un metodo di programmazione difensivo per evitare perdite di memoria e garantire che gli oggetti vengano eliminati quando si verificano eccezioni. Ad esempio, l'esempio illustrato in precedenza in questo articolo potrebbe essere riscritto come segue:For example, the example shown earlier in this article could be rewritten as follows:
 
 [!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]
 
-Questo nuovo esempio configura un gestore di eccezioni per intercettare l'eccezione e gestirla in locale. Viene chiuso normalmente la funzione e quindi distrugge l'oggetto. L'aspetto importante di questo esempio consiste nel fatto che un contesto per intercettare l'eccezione viene stabilito con il **try/catch** blocchi. Senza un frame di eccezione locale, la funzione non saprà mai che un'eccezione è stata generata l'eccezione e non avrà la possibilità di chiudere normalmente e l'eliminazione dell'oggetto.
+Questo nuovo esempio imposta un gestore di eccezioni per intercettare l'eccezione e gestirla localmente. Quindi esce dalla funzione normalmente e distrugge l'oggetto. L'aspetto importante di questo esempio è che un contesto per intercettare l'eccezione viene stabilito con i blocchi **try/catch.** Senza un frame di eccezioni locale, la funzione non saprebbe mai che un'eccezione è stata generata e non avrebbe la possibilità di uscire normalmente ed eliminare l'oggetto.
 
-##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> Generazione di eccezioni dopo l'eliminazione definitiva di oggetti
+## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Generazione di eccezioni dopo l'eliminazione di oggetti
 
-Un altro per gestire le eccezioni consiste nel passare il contesto di gestione delle eccezioni esterno successivo. Nel **catch** blocco, è possibile eseguire alcune operazioni di pulitura degli oggetti allocati in locale e quindi generare l'eccezione per un'ulteriore elaborazione.
+Un altro modo per gestire le eccezioni consiste nel passarle al contesto di gestione delle eccezioni esterno successivo. Nel blocco **catch,** è possibile eseguire alcune operazioni di pulizia degli oggetti allocati localmente e quindi generare l'eccezione per un'ulteriore elaborazione.
 
-La funzione generando un'eccezione può o non è necessario deallocare oggetti dell'heap. Se la funzione di deallocazione sempre l'oggetto heap prima di restituire in una situazione normale, quindi la funzione deve inoltre deallocare l'oggetto heap prima che venga generata l'eccezione. D'altra parte, se la funzione non deallocati in genere l'oggetto prima di restituire in una situazione normale, quindi è necessario decidere caso per caso se l'oggetto heap deve essere deallocata.
+La funzione di generazione può o non può essere necessario deallocare gli oggetti heap. Se la funzione dealloca sempre l'oggetto heap prima di restituire nel caso normale, la funzione deve anche deallocare l'oggetto heap prima di generare l'eccezione. D'altra parte, se la funzione normalmente non dealloca l'oggetto prima della restituzione nel caso normale, è necessario decidere caso per caso se l'oggetto heap deve essere deallocato.
 
-L'esempio seguente mostra come in locale allocati gli oggetti può essere pulito:
+Nell'esempio seguente viene illustrato come pulire gli oggetti allocati localmente:The following example shows how locally allocated objects can be cleaned:
 
 [!code-cpp[NVC_MFCExceptions#16](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_3.cpp)]
 
-Il meccanismo delle eccezioni automaticamente dealloca oggetti frame. viene inoltre chiamato il distruttore dell'oggetto frame.
+Il meccanismo delle eccezioni dealloca automaticamente gli oggetti frame; viene chiamato anche il distruttore dell'oggetto frame.
 
-Se si chiamano funzioni che possono generare eccezioni, è possibile usare **try/catch** blocchi per assicurarsi di intercettare le eccezioni e avere la possibilità di eliminare tutti gli oggetti creati. In particolare, tenere presente che molte funzioni MFC possono generare eccezioni.
+Se si chiamano funzioni che possono generare eccezioni, è possibile utilizzare i blocchi **try/catch** per assicurarsi di intercettare le eccezioni e di eliminare tutti gli oggetti creati. In particolare, tenere presente che molte funzioni MFC possono generare eccezioni.
 
-Per altre informazioni, vedere [alle eccezioni: Rilevamento ed eliminazione di eccezioni](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Per ulteriori informazioni, vedere [eccezioni: intercettazione ed eliminazione di eccezioni](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Vedere anche
 

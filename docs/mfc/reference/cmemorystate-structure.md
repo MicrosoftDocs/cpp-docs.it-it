@@ -8,16 +8,16 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8f49a9faf70673c62167deeaa1bef33e4882378f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420687"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369992"
 ---
 # <a name="cmemorystate-structure"></a>Struttura CMemoryState
 
-Offre un modo pratico per rilevare le perdite di memoria nel programma.
+Fornisce un modo pratico per rilevare le perdite di memoria nel programma.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,47 +25,47 @@ Offre un modo pratico per rilevare le perdite di memoria nel programma.
 struct CMemoryState
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMemoryState:: CMemoryState](#cmemorystate)|Costruisce una struttura di tipo classe che controlla i checkpoint di memoria.|
+|[CMemoryState::CMemoryState](#cmemorystate)|Costruisce una struttura simile a una classe che controlla i checkpoint di memoria.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMemoryState:: Checkpoint](#checkpoint)|Ottiene uno snapshot (Checkpoint) dello stato corrente della memoria.|
-|[CMemoryState::D ifference](#difference)|Calcola la differenza tra due oggetti di tipo `CMemoryState`.|
-|[CMemoryState::D umpAllObjectsSince](#dumpallobjectssince)|Dump di un riepilogo di tutti gli oggetti attualmente allocati a partire da un checkpoint precedente.|
-|[CMemoryState::D umpStatistics](#dumpstatistics)|Stampa le statistiche di allocazione della memoria per un oggetto `CMemoryState`.|
+|[CMemoryState::Checkpoint](#checkpoint)|Ottiene uno snapshot (checkpoint) dello stato della memoria corrente.|
+|[CMemoryState::Difference](#difference)|Calcola la differenza tra `CMemoryState`due oggetti di tipo .|
+|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|Esegue il dump di un riepilogo di tutti gli oggetti attualmente allocati dopo un checkpoint precedente.|
+|[CMemoryState::DumpStatistics](#dumpstatistics)|Stampa le statistiche di `CMemoryState` allocazione della memoria per un oggetto.|
 
 ## <a name="remarks"></a>Osservazioni
 
-`CMemoryState` è una struttura e non dispone di una classe base.
+`CMemoryState`è una struttura e non dispone di una classe base.
 
-Una "perdita di memoria" si verifica quando la memoria per un oggetto viene allocata nell'heap, ma non deallocata quando non è più necessaria. Tali perdite di memoria possono causare errori di memoria insufficiente. Esistono diversi modi per allocare e deallocare memoria nel programma:
+Una "perdita di memoria" si verifica quando la memoria per un oggetto viene allocata nell'heap ma non deallocata quando non è più necessaria. Tali perdite di memoria possono eventualmente portare a errori di memoria insufficiente. Esistono diversi modi per allocare e deallocare la memoria nel programma:
 
-- Utilizzando il `malloc`/ `free` famiglia di funzioni dalla libreria di Runtime.
+- Utilizzo `malloc` /  `free` della famiglia di funzioni della libreria di runtime.
 
-- Utilizzando le funzioni di gestione della memoria dell'API Windows, `LocalAlloc`/ `LocalFree` e `GlobalAlloc`/ `GlobalFree`.
+- Utilizzando `LocalAlloc` /  `LocalFree` le funzioni di gestione `GlobalAlloc` /  `GlobalFree`della memoria dell'API di Windows e .
 
-- Utilizzando gli C++ operatori **New** e **Delete** .
+- Utilizzo degli operatori **new** e **delete** di C.
 
-La diagnostica `CMemoryState` consente solo di rilevare le perdite di memoria causate dalla deallocazione della memoria allocata tramite l'operatore **New** tramite **Delete**. Gli altri due gruppi di funzioni di gestione della memoria sono destinati aC++ non programmi e non è consigliabile combinarli con **nuovi** ed **eliminare** nello stesso programma. Viene fornita una macro aggiuntiva, DEBUG_NEW, per sostituire l'operatore **New** quando è necessario tenere traccia dei file e dei numeri di riga delle allocazioni di memoria. DEBUG_NEW viene usato ogni volta che in genere si usa il **nuovo** operatore.
+La `CMemoryState` diagnostica consente solo di rilevare le perdite di memoria causate quando la memoria allocata utilizzando l'operatore **new** non viene deallocata tramite **delete**. Gli altri due gruppi di funzioni di gestione della memoria sono per i programmi non C , e la loro combinazione con **new** e **delete** nello stesso programma non è raccomandato. Viene fornita una macro aggiuntiva, DEBUG_NEW, per sostituire l'operatore **new** quando è necessario il rilevamento di file e numeri di riga delle allocazioni di memoria. DEBUG_NEW viene utilizzato ogni volta che si utilizza normalmente l'operatore **new.**
 
-Come per altri tipi di diagnostica, la diagnostica `CMemoryState` è disponibile solo nelle versioni di debug del programma. Per una versione di debug deve essere definita la costante _DEBUG.
+Come con altre `CMemoryState` diagnosi, la diagnostica è disponibile solo nelle versioni di debug del programma. Una versione di debug deve avere la _DEBUG costante definita.
 
-Se si sospetta che il programma abbia una perdita di memoria, è possibile usare le funzioni `Checkpoint`, `Difference`e `DumpStatistics` per individuare la differenza tra lo stato della memoria (oggetti allocati) in due punti diversi nell'esecuzione del programma. Queste informazioni possono essere utili per determinare se una funzione sta pulendo tutti gli oggetti allocati.
+Se si sospetta che il programma abbia `Checkpoint`una `Difference`perdita di memoria, è possibile utilizzare le funzioni , e `DumpStatistics` per individuare la differenza tra lo stato della memoria (oggetti allocati) in due punti diversi dell'esecuzione del programma. Queste informazioni possono essere utili per determinare se una funzione sta pulendo tutti gli oggetti allocati.
 
-Se si conosce semplicemente la posizione in cui si verifica lo squilibrio nell'allocazione e la deallocazione non fornisce informazioni sufficienti, è possibile utilizzare la funzione `DumpAllObjectsSince` per eseguire il dump di tutti gli oggetti allocati dalla chiamata precedente al `Checkpoint`. Questo dump Mostra l'ordine di allocazione, il file di origine e la riga in cui è stato allocato l'oggetto (se si utilizza DEBUG_NEW per l'allocazione) e la derivazione dell'oggetto, il relativo indirizzo e le relative dimensioni. `DumpAllObjectsSince` chiama anche la funzione di `Dump` di ogni oggetto per fornire informazioni sullo stato corrente.
+Se la semplice conoscenza dello squilibrio nell'allocazione e nella `DumpAllObjectsSince` deallocazione non fornisce informazioni sufficienti, è possibile utilizzare la funzione per eseguire il dump di tutti gli oggetti allocati dalla chiamata precedente a `Checkpoint`. Questo dump mostra l'ordine di allocazione, il file di origine e la riga in cui è stato allocato l'oggetto (se si utilizza DEBUG_NEW per l'allocazione) e la derivazione dell'oggetto, il relativo indirizzo e le relative dimensioni. `DumpAllObjectsSince`chiama anche la `Dump` funzione di ogni oggetto per fornire informazioni sullo stato corrente.
 
-Per ulteriori informazioni sull'utilizzo di `CMemoryState` e di altre operazioni di diagnostica, vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Per ulteriori informazioni su `CMemoryState` come utilizzare e altri controlli, vedere [Debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
 > [!NOTE]
->  Le dichiarazioni di oggetti di tipo `CMemoryState` e le chiamate a funzioni membro devono essere racchiuse tra `#if defined(_DEBUG)/#endif` direttive. In questo modo, la diagnostica della memoria viene inclusa solo nelle build di debug del programma.
+> Le dichiarazioni di `CMemoryState` oggetti di tipo e le `#if defined(_DEBUG)/#endif` chiamate alle funzioni membro devono essere racchiuse tra parentesi quadre dalle direttive. In questo modo la diagnostica della memoria da includere solo nelle build di debug del programma.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -75,9 +75,9 @@ Per ulteriori informazioni sull'utilizzo di `CMemoryState` e di altre operazioni
 
 **Intestazione:** afx.h
 
-##  <a name="checkpoint"></a>CMemoryState:: Checkpoint
+## <a name="cmemorystatecheckpoint"></a><a name="checkpoint"></a>CMemoryState::Checkpoint
 
-Acquisisce un riepilogo dello snapshot della memoria e lo archivia in questo oggetto `CMemoryState`.
+Crea un riepilogo della memoria dello `CMemoryState` snapshot e lo archivia in questo oggetto.
 
 ```
 void Checkpoint();
@@ -85,15 +85,15 @@ void Checkpoint();
 
 ### <a name="remarks"></a>Osservazioni
 
-Le funzioni membro `CMemoryState` [Difference](#difference) e [DumpAllObjectsSince](#dumpallobjectssince) utilizzano questi dati dello snapshot.
+Le `CMemoryState` funzioni membro [Difference](#difference) e [DumpAllObjectsSince](#dumpallobjectssince) utilizzano questi dati dello snapshot.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per il costruttore [CMemoryState](#cmemorystate) .
+  Vedere l'esempio per il [CMemoryState](#cmemorystate) costruttore.
 
-##  <a name="cmemorystate"></a>CMemoryState:: CMemoryState
+## <a name="cmemorystatecmemorystate"></a><a name="cmemorystate"></a>CMemoryState::CMemoryState
 
-Costruisce un oggetto `CMemoryState` vuoto che deve essere compilato dalla funzione membro [Checkpoint](#checkpoint) o [Difference](#difference) .
+Costruisce un `CMemoryState` oggetto vuoto che deve essere compilato dalla funzione membro [Checkpoint](#checkpoint) o [Difference.](#difference)
 
 ```
 CMemoryState();
@@ -103,9 +103,9 @@ CMemoryState();
 
 [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]
 
-##  <a name="difference"></a>CMemoryState::D ifference
+## <a name="cmemorystatedifference"></a><a name="difference"></a>CMemoryState::Difference
 
-Confronta due oggetti `CMemoryState`, quindi archivia la differenza in questo oggetto `CMemoryState`.
+Confronta due `CMemoryState` oggetti, quindi memorizza `CMemoryState` la differenza in questo oggetto.
 
 ```
 BOOL Difference(
@@ -115,27 +115,27 @@ BOOL Difference(
 
 ### <a name="parameters"></a>Parametri
 
-*Stato precedente*<br/>
-Stato di memoria iniziale definito da un checkpoint `CMemoryState`.
+*oldState*<br/>
+Stato di memoria iniziale `CMemoryState` definito da un checkpoint.
 
 *newState*<br/>
-Nuovo stato di memoria definito da un checkpoint `CMemoryState`.
+Nuovo stato di memoria `CMemoryState` definito da un checkpoint.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se i due Stati della memoria sono diversi. in caso contrario, 0.
+Diverso da zero se i due stati di memoria sono diversi; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il [Checkpoint](#checkpoint) deve essere stato chiamato per ognuno dei due parametri dello stato della memoria.
+[Il checkpoint](#checkpoint) deve essere stato chiamato per ognuno dei due parametri dello stato di memoria.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per il costruttore [CMemoryState](#cmemorystate) .
+  Vedere l'esempio per il [CMemoryState](#cmemorystate) costruttore.
 
-##  <a name="dumpallobjectssince"></a>CMemoryState::D umpAllObjectsSince
+## <a name="cmemorystatedumpallobjectssince"></a><a name="dumpallobjectssince"></a>CMemoryState::DumpAllObjectsSince
 
-Chiama la funzione `Dump` per tutti gli oggetti di un tipo derivato dalla classe `CObject` allocata (e ancora allocata) dall'ultima chiamata di [Checkpoint](#checkpoint) per questo oggetto `CMemoryState`.
+Chiama `Dump` la funzione per tutti gli `CObject` oggetti di un tipo derivato dalla classe che `CMemoryState` sono stati allocati (e sono ancora allocati) dall'ultima chiamata [Checkpoint](#checkpoint) per questo oggetto.
 
 ```
 void DumpAllObjectsSince() const;
@@ -143,15 +143,15 @@ void DumpAllObjectsSince() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-La chiamata di `DumpAllObjectsSince` con un oggetto `CMemoryState` non inizializzato effettuerà il dump di tutti gli oggetti attualmente in memoria.
+La `DumpAllObjectsSince` chiamata con `CMemoryState` un oggetto non inizializzato eseguirà il dump di tutti gli oggetti attualmente in memoria.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per il costruttore [CMemoryState](#cmemorystate) .
+  Vedere l'esempio per il [CMemoryState](#cmemorystate) costruttore.
 
-##  <a name="dumpstatistics"></a>CMemoryState::D umpStatistics
+## <a name="cmemorystatedumpstatistics"></a><a name="dumpstatistics"></a>CMemoryState::DumpStatistics
 
-Stampa un report conciso Statistics Memory da un oggetto `CMemoryState` compilato dalla funzione membro [Difference](#difference) .
+Stampa un report di statistiche di `CMemoryState` memoria conciso da un oggetto che viene compilato dalla funzione membro [Difference.](#difference)
 
 ```
 void DumpStatistics() const;
@@ -159,9 +159,9 @@ void DumpStatistics() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il report, stampato nel dispositivo [afxDump](diagnostic-services.md#afxdump) , Mostra gli elementi seguenti:
+Il report, che viene stampato sul dispositivo [afxDump,](diagnostic-services.md#afxdump) mostra quanto segue:
 
-In un report di esempio vengono fornite informazioni sul numero o sull'importo di:
+Un rapporto di esempio fornisce informazioni sul numero (o l'importo) di:
 
 - blocchi liberi
 
@@ -169,32 +169,32 @@ In un report di esempio vengono fornite informazioni sul numero o sull'importo d
 
 - Blocchi CRT
 
-- Ignora blocchi
+- ignorare i blocchi
 
 - blocchi client
 
-- quantità massima di memoria utilizzata dal programma in qualsiasi momento (in byte)
+- memoria massima utilizzata dal programma in qualsiasi momento (in byte)
 
 - memoria totale attualmente utilizzata dal programma (in byte)
 
-I blocchi liberi sono il numero di blocchi la cui deallocazione è stata posticipata se `afxMemDF` è stato impostato su `delayFreeMemDF`. Per ulteriori informazioni, vedere [afxMemDF](diagnostic-services.md#afxmemdf)nella sezione "macro MFC e Globals".
+I blocchi liberi sono il numero di `afxMemDF` blocchi la `delayFreeMemDF`cui deallocazione è stata ritardata se è stata impostata su . Per ulteriori informazioni, vedere [afxMemDF](diagnostic-services.md#afxmemdf), nella sezione "Mfc Macros and Globals".
 
 ### <a name="example"></a>Esempio
 
-  Il codice seguente deve essere inserito in *ProjName*app. cpp. Definire le variabili globali seguenti:
+  Il codice seguente deve essere inserito in *projname*App.cpp. Definire le seguenti variabili globali:
 
 [!code-cpp[NVC_MFC_Utilities#40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]
 
-Nella funzione `InitInstance` aggiungere la riga:
+Nella `InitInstance` funzione, aggiungere la riga:
 
 [!code-cpp[NVC_MFC_Utilities#41](../../mfc/codesnippet/cpp/cmemorystate-structure_3.cpp)]
 
-Aggiungere un gestore per la funzione `ExitInstance` e usare il codice seguente:
+Aggiungere un gestore per la funzione e usare il codice seguente:Add a handler for the `ExitInstance` function and use the following code:
 
 [!code-cpp[NVC_MFC_Utilities#42](../../mfc/codesnippet/cpp/cmemorystate-structure_4.cpp)]
 
-È ora possibile eseguire il programma in modalità di debug per visualizzare l'output della funzione `DumpStatistics`.
+È ora possibile eseguire il programma in modalità Debug per visualizzare l'output della `DumpStatistics` funzione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

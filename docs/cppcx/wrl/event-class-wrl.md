@@ -1,5 +1,5 @@
 ---
-title: Classe di evento (WRL)
+title: Classe event (WRL)
 ms.date: 09/24/2018
 ms.topic: reference
 f1_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Event::Event, constructor
 - Microsoft::WRL::Wrappers::Event::operator= operator
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-ms.openlocfilehash: 2d36b4fa3d1824f43e0cfafe55c439a6bdeccb6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85b4c2d1f1a27e90a65e47aa749e079f4aa08739
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398550"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371531"
 ---
-# <a name="event-class-wrl"></a>Classe di evento (WRL)
+# <a name="event-class-wrl"></a>Classe event (WRL)
 
 Rappresenta un evento.
 
@@ -34,13 +34,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 Nome                   | Descrizione
 ---------------------- | ------------------------------------------------
-[Event::Event](#event) | Inizializza una nuova istanza della classe `Event`.
+[Evento::Evento](#event) | Inizializza una nuova istanza della classe `Event`.
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 Nome                                 | Descrizione
 ------------------------------------ | ------------------------------------------------------------------------
-[Event:: operator =](#operator-assign) | Assegna l'oggetto specificato `Event` riferimento all'oggetto corrente `Event` istanza.
+[Evento:::operatore](#operator-assign) | Assegna il `Event` riferimento specificato `Event` all'istanza corrente.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -50,11 +50,11 @@ Nome                                 | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers. h
+**Intestazione:** corewrappers.h
 
 **Spazio dei nomi:** Microsoft::WRL::Wrappers
 
-## <a name="event"></a>Event::Event
+## <a name="eventevent"></a><a name="event"></a>Evento::Evento
 
 Inizializza una nuova istanza della classe `Event`.
 
@@ -69,12 +69,12 @@ WRL_NOTHROW Event(
 
 ### <a name="parameters"></a>Parametri
 
-*h*<br/>
-Handle per un evento. Per impostazione predefinita *h* viene inizializzata su `nullptr`.
+*H*<br/>
+Handle per un evento. Per impostazione predefinita, `nullptr` *h* viene inizializzato su .
 
-## <a name="operator-assign"></a>Event:: operator =
+## <a name="eventoperator"></a><a name="operator-assign"></a>Evento:::operatore
 
-Assegna l'oggetto specificato `Event` riferimento all'oggetto corrente `Event` istanza.
+Assegna il `Event` riferimento specificato `Event` all'istanza corrente.
 
 ```cpp
 WRL_NOTHROW Event& operator=(
@@ -84,9 +84,9 @@ WRL_NOTHROW Event& operator=(
 
 ### <a name="parameters"></a>Parametri
 
-*h*<br/>
-Un riferimento rvalue a un `Event` istanza.
+*H*<br/>
+Riferimento rvalue a `Event` un'istanza.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore all'oggetto corrente `Event` istanza.
+Puntatore all'istanza corrente. `Event`

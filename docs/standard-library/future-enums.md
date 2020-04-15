@@ -6,20 +6,20 @@ f1_keywords:
 - future/std::future_status
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
-ms.openlocfilehash: a5bcebd80b296a0b8416580aa03acc59ce3750cd
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0f1064fdf434560c3130d1254512470cc5bc1ee0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421765"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370687"
 ---
 # <a name="ltfuturegt-enums"></a>Enumerazioni &lt;future&gt;
 
 ||||
 |-|-|-|
-|[future_errc](#future_errc)|[future_status](#future_status)|[avviare](#launch)|
+|[future_errc](#future_errc)|[future_status](#future_status)|[Lancio](#launch)|
 
-## Enumerazione <a name="future_errc"></a>  future_errc
+## <a name="future_errc-enumeration"></a><a name="future_errc"></a>Enumerazione future_errc
 
 Fornisce i nomi simbolici per tutti gli errori segnalati dalla classe [future_error](../standard-library/future-error-class.md).
 
@@ -32,7 +32,7 @@ class future_errc {
    };
 ```
 
-## Enumerazione <a name="future_status"></a>  future_status
+## <a name="future_status-enumeration"></a><a name="future_status"></a>Enumerazione future_status
 
 Fornisce i nomi simbolici per i motivi che una funzione di attesa temporizzata può restituire.
 
@@ -44,7 +44,7 @@ enum future_status{
 };
 ```
 
-## Enumerazione <a name="launch"></a>  launch
+## <a name="launch-enumeration"></a><a name="launch"></a>Launch Enumeration (Enumerazione dei lanci)
 
 Rappresenta un tipo di maschera di bit che descrive le modalità possibili per la funzione modello [async](../standard-library/future-functions.md#async).
 
@@ -57,4 +57,4 @@ class launch{
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<future>](../standard-library/future.md)
+[\<>futuro](../standard-library/future.md)
