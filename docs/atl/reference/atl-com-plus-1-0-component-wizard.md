@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075287"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321683"
 ---
 # <a name="atl-com-10-component-wizard"></a>Creazione guidata componente ATL COM+ 1.0
 
@@ -72,7 +72,7 @@ Fornisce informazioni sulla funzionalità COM per l'oggetto.
    Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto.
 
 > [!NOTE]
->  Se si crea il progetto mediante attributi o se in questa pagina della procedura guidata si indica che il componente COM+ 1.0 usa attributi, non è possibile modificare questa opzione perché ATL non include l'attributo `coclass`.
+> Se si crea il progetto mediante attributi o se in questa pagina della procedura guidata si indica che il componente COM+ 1.0 usa attributi, non è possibile modificare questa opzione perché ATL non include l'attributo `coclass`.
 
 - **Tipo**
 
@@ -82,7 +82,7 @@ Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
    Imposta l'interfaccia creata per l'oggetto. Questa interfaccia contiene i metodi personalizzati.
 
-- **ProgID**
+- **Progid**
 
    Imposta il nome che può essere usato dai contenitori invece del CLSID dell'oggetto.
 

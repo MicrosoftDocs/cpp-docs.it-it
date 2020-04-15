@@ -1,8 +1,9 @@
 ---
 title: bsearch_s
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch_s
+- _o_bsearch_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ef8a68f0db45e718af6b17fe0d08c33a6fd61d6c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811151"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333838"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-Esegue una ricerca binaria di una matrice ordinata. Questa funzione è una versione di [bCerca](bsearch.md) con miglioramenti per la sicurezza, come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Esegue una ricerca binaria di una matrice ordinata. Questa funzione è una versione di [bsearch](bsearch.md) con miglioramenti della sicurezza come descritto in Funzionalità di [protezione in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -52,43 +54,43 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
-Puntatore alla chiave da cercare.
+*Chiave*\
+Puntatore al tasto da cercare.
 
-*base*\
+*Base*\
 Puntatore alla base dei dati di ricerca.
 
-*numero*\
+*Numero*\
 Numero di elementi.
 
-\ *larghezza*
+*Larghezza*\
 Larghezza degli elementi.
 
-*confronta*\
-Funzione di callback che confronta due elementi. Il primo argomento è il puntatore di *contesto* . Il secondo argomento è un puntatore alla *chiave* per la ricerca. Il terzo argomento è un puntatore all'elemento della matrice da confrontare con la *chiave*.
+*Confrontare*\
+Funzione di callback che confronta due elementi. Il primo argomento è il puntatore di *contesto.* Il secondo argomento è un puntatore alla *chiave* per la ricerca. Il terzo argomento è un puntatore all'elemento della matrice da confrontare con *key*.
 
-\ *contesto*
+*Contesto*\
 Puntatore a un oggetto accessibile nella funzione di confronto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**bsearch_s** restituisce un puntatore a un'occorrenza della *chiave* nella matrice a cui punta la *base*. Se *Key* non viene trovato, la funzione restituisce **null**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
+**bsearch_s** restituisce un puntatore a un'occorrenza di *key* nella matrice a cui punta *base*. Se *key* non viene trovato, la funzione restituisce **NULL**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
 
-Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
+Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e la funzione restituisce **NULL**. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*numero*|*width*|**errno**|
-|**NULL**|any|any|any|any|**EINVAL**|
-|any|**NULL**|any|!= 0|any|**EINVAL**|
-|any|any|any|any|= 0|**EINVAL**|
-|any|any|**NULL**|any|any|**EINVAL**|
+|*Chiave*|*base*|*Confrontare*|*Numero*|*width*|**errno**|
+|**Null**|any|any|any|any|**Einval**|
+|any|**Null**|any|!= 0|any|**Einval**|
+|any|any|any|any|= 0|**Einval**|
+|any|any|**Null**|any|any|**Einval**|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **bsearch_s** esegue una ricerca binaria di una matrice ordinata di elementi *numerici* , ognuno con dimensioni di byte di *larghezza* . Il valore di *base* è un puntatore alla base della matrice in cui eseguire la ricerca e *Key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento della matrice e restituisce uno dei valori seguenti che specifica la relazione:
+La funzione **bsearch_s** esegue una ricerca binaria di una matrice ordinata di elementi *numerici,* ognuno di byte di *larghezza* di dimensioni. Il valore *di base* è un puntatore alla base della matrice da cercare e *key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento della matrice e restituisce uno dei valori seguenti che ne specificano la relazione:
 
 |Valore restituito dalla routine di *confronto*|Descrizione|
 |-----------------------------------------|-----------------|
@@ -96,7 +98,9 @@ La funzione **bsearch_s** esegue una ricerca binaria di una matrice ordinata di 
 |0|La chiave è uguale all'elemento della matrice.|
 |> 0|La chiave è maggiore dell'elemento della matrice.|
 
-Il puntatore di *contesto* può essere utile se la struttura dei dati cercati fa parte di un oggetto e la funzione di confronto deve accedere ai membri dell'oggetto. La funzione *compare* può eseguire il cast del puntatore void nel tipo di oggetto appropriato e accedere ai membri di tale oggetto. L'aggiunta del parametro di *contesto* rende **bsearch_s** più sicuro poiché può essere usato un contesto aggiuntivo per evitare i bug rientranti associati all'uso di variabili statiche per rendere disponibili i dati alla funzione di *confronto* .
+Il puntatore di *contesto* può essere utile se la struttura di dati ricercata fa parte di un oggetto e la funzione di confronto deve accedere ai membri dell'oggetto. La funzione *di confronto* può eseguire il cast del puntatore void nel tipo di oggetto appropriato e accedere ai membri di tale oggetto. L'aggiunta del parametro *context* rende **bsearch_s** più sicura poiché è possibile utilizzare un contesto aggiuntivo per evitare bug di rientranza associati all'utilizzo di variabili statiche per rendere disponibili i dati per la funzione di *confronto.*
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -104,11 +108,11 @@ Il puntatore di *contesto* può essere utile se la struttura dei dati cercati fa
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> e \<search.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
-Questo programma consente di ordinare una matrice di stringhe con [qsort_s](qsort-s.md)e quindi usa bsearch_s per trovare la parola "cat".
+Questo programma consente di ordinare una matrice di stringhe con [qsort_s](qsort-s.md) e quindi usa bsearch_s per trovare la parola "cat".
 
 ```cpp
 // crt_bsearch_s.cpp

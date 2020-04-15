@@ -1,8 +1,9 @@
 ---
 title: wcrtomb_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcrtomb_s
+- _o_wcrtomb_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee25b18bfbb86b34e46c8c6776e8ab83157613e8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945842"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328178"
 ---
 # <a name="wcrtomb_s"></a>wcrtomb_s
 
@@ -59,38 +61,40 @@ errno_t wcrtomb_s(
 
 ### <a name="parameters"></a>Parametri
 
-*pReturnValue*<br/>
+*pReturnValue (Valore restituito)*<br/>
 Restituisce il numero di byte scritti o -1 se si è verificato un errore.
 
-*mbchar*<br/>
+*mbchar (in questo mbchar)*<br/>
 Carattere multibyte convertito risultante.
 
 *sizeOfmbchar*<br/>
-Dimensioni in byte della variabile *mbchar* .
+Dimensione della variabile *mbchar* in byte.
 
-*wchar*<br/>
+*Wchar*<br/>
 Carattere wide da convertire.
 
-*mbstate*<br/>
-Puntatore a un oggetto **mbstate_t** .
+*mbstate (in stato di stato)*<br/>
+Puntatore a un **oggetto mbstate_t.**
 
 ## <a name="return-value"></a>Valore restituito
 
 Restituisce zero o un valore **errno** se si verifica un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **wcrtomb_s** converte un carattere wide, a partire dallo stato di conversione specificato contenuto in *mbstate*, dal valore contenuto in *WCHAR*, nell'indirizzo rappresentato da *mbchar*. Il valore *pReturnValue* sarà il numero di byte convertiti, ma non più di **MB_CUR_MAX** byte, oppure-1 se si è verificato un errore.
+La funzione **wcrtomb_s** converte un carattere wide, a partire dallo stato di conversione specificato contenuto in *mbstate*, dal valore contenuto in *wchar*, nell'indirizzo rappresentato da *mbchar*. Il valore *pReturnValue* sarà il numero di byte convertiti, ma non più di **MB_CUR_MAX** byte o un -1 se si è verificato un errore.
 
-Se *mbstate* è null, viene usato lo stato di conversione **mbstate_t** interno. Se il carattere contenuto in *WCHAR* non contiene un carattere multibyte corrispondente, il valore di *pReturnValue* sarà-1 e la funzione restituirà il valore **errno** di **EILSEQ**.
+Se *mbstate* è null, viene utilizzato lo stato di conversione **dell'mbstate_t** interno. Se il carattere contenuto in *wchar* non dispone di un carattere multibyte corrispondente, il valore di *pReturnValue* sarà -1 e la funzione restituirà il valore **errno** di **EILSEQ**.
 
-La funzione **wcrtomb_s** differisce da [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) per la relativa riavviabilità. Lo stato di conversione viene archiviato in *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili. Ad esempio, un'applicazione utilizzerebbe **wcsrlen** anziché **wcslen**se veniva utilizzata una chiamata successiva a **wcsrtombs_s** anziché **wcstombs_s**.
+La funzione **wcrtomb_s** è diversa da [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) per la sua riavviabilità. Lo stato di conversione viene archiviato in *mbstate* per le chiamate successive alla stessa o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili. Ad esempio, un'applicazione utilizzerebbe **wcsrlen** anziché **wcslen**, se al posto di wcsrtombs_s venisse utilizzata una chiamata successiva a **wcsrtombs_s** anziché **wcstombs_s**.
 
-In C++ l'uso di questa funzione è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento per le dimensioni) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'uso di questa funzione è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento per le dimensioni) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Eccezioni
 
-La funzione **wcrtomb_s** è multithread safe a condizione che nessuna funzione nel thread corrente chiami **setlocale** mentre questa funzione è in esecuzione e *mbstate* è null.
+La funzione **wcrtomb_s** è multithread-safe finché nessuna funzione nel thread corrente chiama **setlocale** mentre questa funzione è in esecuzione e *mbstate* è null.
 
 ## <a name="example"></a>Esempio
 
@@ -144,7 +148,7 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

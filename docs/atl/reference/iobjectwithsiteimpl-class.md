@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-ms.openlocfilehash: e857f739e3ff7235c473e99abbef6aab0d3f4205
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 034e5dd42f6e10286520bb2a08effc40b0aca71a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495839"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329650"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Classe IObjectWithSiteImpl
 
@@ -33,31 +33,31 @@ template <class T>
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe derivata da `IObjectWithSiteImpl`.
+La classe, `IObjectWithSiteImpl`derivata da .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IObjectWithSiteImpl::GetSite](#getsite)|Esegue una query sul sito per un puntatore a interfaccia.|
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Fornisce l'oggetto con il `IUnknown` puntatore del sito.|
-|[IObjectWithSiteImpl::SetSite](#setsite)|Fornisce l'oggetto con il `IUnknown` puntatore del sito.|
+|[IObjectWithSiteImpl::Sito](#getsite)|Esegue una query sul sito per un puntatore a interfaccia.|
+|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Fornisce all'oggetto il `IUnknown` puntatore del sito.|
+|[IObjectWithSiteImpl::SetSite](#setsite)|Fornisce all'oggetto il `IUnknown` puntatore del sito.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|NOME|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Gestisce il `IUnknown` puntatore del sito.|
+|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Gestisce il puntatore del `IUnknown` sito.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'interfaccia [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) consente a un oggetto di comunicare con il relativo sito. La `IObjectWithSiteImpl` classe fornisce un'implementazione predefinita di questa interfaccia e `IUnknown` implementa inviando informazioni al dispositivo di dump nelle compilazioni di debug.
+L'interfaccia [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) consente a un oggetto di comunicare con il relativo sito. Classe `IObjectWithSiteImpl` fornisce un'implementazione predefinita `IUnknown` di questa interfaccia e implementa inviando informazioni al dispositivo di dump nelle build di debug.
 
-`IObjectWithSiteImpl`specifica due metodi. Il client chiama `SetSite`prima, passando il `IUnknown` puntatore del sito. Questo puntatore viene archiviato all'interno dell'oggetto e può essere recuperato in un secondo momento tramite `GetSite`una chiamata a.
+`IObjectWithSiteImpl`specifica due metodi. Il client `SetSite`chiama innanzitutto , `IUnknown` passando il puntatore del sito. Questo puntatore viene memorizzato all'interno dell'oggetto `GetSite`e può essere successivamente recuperato tramite una chiamata a .
 
-In genere, la classe viene derivata da `IObjectWithSiteImpl` quando si crea un oggetto che non è un controllo. Per i controlli, derivare la classe da [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), che fornisce anche un puntatore al sito. Non derivare la classe da `IObjectWithSiteImpl` e. `IOleObjectImpl`
+In genere, derivare `IObjectWithSiteImpl` la classe da quando si crea un oggetto che non è un controllo. Per i controlli, derivare la classe da [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), che fornisce anche un puntatore al sito. Non derivare la `IObjectWithSiteImpl` classe `IOleObjectImpl`da entrambi e .
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -67,11 +67,11 @@ In genere, la classe viene derivata da `IObjectWithSiteImpl` quando si crea un o
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom. h
+**Intestazione:** atlcom.h
 
-##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite
+## <a name="iobjectwithsiteimplgetsite"></a><a name="getsite"></a>IObjectWithSiteImpl::Sito
 
-Esegue una query sul sito per individuare un puntatore all'interfaccia `riid`identificata da.
+Esegue una query sul sito per `riid`ottenere un puntatore all'interfaccia identificata da .
 
 ```
 STDMETHOD(GetSite)(
@@ -79,27 +79,27 @@ STDMETHOD(GetSite)(
     void** ppvSite);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il sito supporta questa interfaccia, il puntatore viene restituito tramite `ppvSite`. In caso `ppvSite` contrario, viene impostato su null.
+Se il sito supporta questa interfaccia, il `ppvSite`puntatore viene restituito tramite . In `ppvSite` caso contrario, viene impostato su NULL.
 
-Vedere [IObjectWithSite:: GetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-getsite) nel Windows SDK.
+Vedere [IObjectWithSite::GetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-getsite) in Windows SDK.
 
-##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite
+## <a name="iobjectwithsiteimplm_spunksite"></a><a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite
 
-Gestisce il `IUnknown` puntatore del sito.
+Gestisce il puntatore del `IUnknown` sito.
 
 ```
 CComPtr<IUnknown> m_spUnkSite;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`m_spUnkSite`riceve inizialmente questo puntatore tramite una chiamata a [SESITE](#setsite).
+`m_spUnkSite`riceve inizialmente questo puntatore tramite una chiamata a [SetSite](#setsite).
 
-##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite
+## <a name="iobjectwithsiteimplsetchildsite"></a><a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite
 
-Fornisce l'oggetto con il `IUnknown` puntatore del sito.
+Fornisce all'oggetto il `IUnknown` puntatore del sito.
 
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
@@ -107,25 +107,25 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 
 ### <a name="parameters"></a>Parametri
 
-*pUnkSite*<br/>
-in Puntatore al puntatore `IUnknown` a interfaccia del sito che gestisce questo oggetto. Se è null, l'oggetto deve `IUnknown::Release` chiamare su un sito esistente in cui l'oggetto non conosce più il proprio sito.
+*sito pUnk*<br/>
+[in] Puntatore `IUnknown` al puntatore a interfaccia del sito che gestisce questo oggetto. Se NULL, l'oggetto deve chiamare `IUnknown::Release` su qualsiasi sito esistente a quel punto l'oggetto non conosce più il sito.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce S_OK.
 
-##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite
+## <a name="iobjectwithsiteimplsetsite"></a><a name="setsite"></a>IObjectWithSiteImpl::SetSite
 
-Fornisce l'oggetto con il `IUnknown` puntatore del sito.
+Fornisce all'oggetto il `IUnknown` puntatore del sito.
 
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Vedere [IObjectWithSite:: SESITE](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) nel Windows SDK.
+Vedere [IObjectWithSite::SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) in Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

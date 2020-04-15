@@ -1,99 +1,99 @@
 ---
-title: Implementazione di una raccolta basata sulla libreria Standard C++
+title: Implementazione di una raccolta standard basata su libreria C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e80ce5e7bbc6b9c6be1615dad1ea43c18e03eb55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197497"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319434"
 ---
-# <a name="implementing-a-c-standard-library-based-collection"></a>Implementazione di una raccolta basata sulla libreria Standard C++
+# <a name="implementing-a-c-standard-library-based-collection"></a>Implementazione di una raccolta standard basata su libreria C
 
-ATL fornisce il `ICollectionOnSTLImpl` interfaccia che consentono di implementare rapidamente le interfacce di raccolta basata su libreria Standard C++ per gli oggetti. Per comprendere il funzionamento di questa classe, sarà necessario utilizzare un semplice esempio (sotto) che utilizza questa classe per implementare una raccolta di sola lettura mira a client di automazione.
+ATL fornisce `ICollectionOnSTLImpl` l'interfaccia che consente di implementare rapidamente le interfacce di raccolta basate su libreria standard di C, per gli oggetti. Per comprendere il funzionamento di questa classe, si utilizzerà un semplice esempio (di seguito) che utilizza questa classe per implementare una raccolta di sola lettura destinata ai client di automazione.
 
-Il codice di esempio è il [esempio ATLCollections](../overview/visual-cpp-samples.md).
+Il codice di esempio è tratto [dall'esempio ATLCollections](../overview/visual-cpp-samples.md).
 
-Per completare questa procedura, si apprenderà come:
+Per completare questa procedura, è necessario:
 
 - [Generare un nuovo oggetto semplice](#vccongenerating_an_object).
 
 - [Modificare il file IDL](#vcconedit_the_idl) per l'interfaccia generata.
 
-- [Creare oggetti cinque typedef](#vcconstorage_and_exposure_typedefs) che descrive come vengono archiviati gli elementi della raccolta e modo in cui vengono esposti ai client tramite interfacce COM.
+- [Creare cinque typedef](#vcconstorage_and_exposure_typedefs) che descrivono come vengono archiviati gli elementi della raccolta e come verranno esposti ai client tramite interfacce COM.
 
-- [Creare due typedef per la copia di classi di criteri](#vcconcopy_classes).
+- [Creare due typedef per le classi criteri di copia.](#vcconcopy_classes)
 
-- [Creare oggetti TypeDef per le implementazioni di enumeratore e raccolta](#vcconenumeration_and_collection).
+- [Creare typedef per le implementazioni dell'enumeratore e della raccolta.](#vcconenumeration_and_collection)
 
-- [Modificare il codice di C++ generato dalla procedura guidata per l'utilizzo di typedef raccolta](#vcconedit_the_generated_code).
+- [Modificare il codice generato dalla procedura guidata in](#vcconedit_the_generated_code)modo che utilizzi il typedef della raccolta .
 
 - [Aggiungere il codice per popolare la raccolta](#vcconpopulate_the_collection).
 
-##  <a name="vccongenerating_an_object"></a> Generazione di un nuovo oggetto semplice
+## <a name="generating-a-new-simple-object"></a><a name="vccongenerating_an_object"></a>Generazione di un nuovo oggetto semplice
 
-Creare un nuovo progetto, assicurando che la casella di attributi nelle impostazioni dell'applicazione sia deselezionata. Utilizzare la finestra di dialogo Aggiungi classe ATL e guidata oggetto semplice per generare un semplice oggetto chiamato `Words`. Assicurarsi che un'interfaccia duale chiamato `IWords` viene generato. Gli oggetti della classe generata verranno usati per rappresentare una raccolta di parole (vale a dire, stringhe).
+Creare un nuovo progetto, assicurandosi che la casella Attributi in Impostazioni applicazione sia deselezionata. Utilizzare la finestra di dialogo Aggiungi classe ATL e `Words`l'Aggiunta guidata oggetto semplice per generare un oggetto semplice denominato . Assicurarsi che `IWords` venga generata una doppia interfaccia. Gli oggetti della classe generata verranno utilizzati per rappresentare una raccolta di parole, ovvero stringhe.
 
-##  <a name="vcconedit_the_idl"></a> Modifica del File IDL
+## <a name="editing-the-idl-file"></a><a name="vcconedit_the_idl"></a>Modifica del file IDL
 
-A questo punto, aprire il file IDL e aggiungere le tre proprietà necessarie per trasformare `IWords` in un'interfaccia di raccolta di sola lettura, come illustrato di seguito:
+A questo punto, aprire il file IDL `IWords` e aggiungere le tre proprietà necessarie per trasformarsi in un'interfaccia di raccolta di sola lettura, come illustrato di seguito:Now, open the IDL file and add the three properties necessary to turn into a read-only collection interface, as shown below:
 
 [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/cpp/implementing-an-stl-based-collection_1.idl)]
 
-Questo è il modulo standard per un'interfaccia di raccolta di sola lettura progettato con client di automazione. I commenti numerati in questa definizione di interfaccia corrispondono ai commenti riportati di seguito:
+Questo è il modulo standard per un'interfaccia di raccolta di sola lettura progettata con i client di automazione in mente. I commenti numerati in questa definizione di interfaccia corrispondono ai commenti seguenti:The numbered comments in this interface definition correspond to the comments below:
 
-1. Interfacce di raccolta sono in genere due perché accede ai client di automazione di `_NewEnum` proprietà tramite `IDispatch::Invoke`. I client di automazione, tuttavia, è possono accedere a dei rimanenti metodi tramite vtable, in modo che le interfacce duali sono preferibili alle interfacce dispatch.
+1. Le interfacce di raccolta sono in `_NewEnum` genere `IDispatch::Invoke`doppie perché i client di automazione accedono alla proprietà tramite . Tuttavia, i client di automazione possono accedere ai metodi rimanenti tramite vtable, pertanto le interfacce duali sono preferibili alle interfacce dispatch.
 
-1. Se un'interfaccia duale o interfaccia dispatch verrà esteso non in fase di esecuzione (vale a dire, se non sono forniti metodi aggiuntivi o le proprietà tramite `IDispatch::Invoke`), è consigliabile applicare la **nonextensible** la definizione dell'attributo. Questo attributo consente ai client di automazione eseguire la verifica del codice completo in fase di compilazione. In questo caso, l'interfaccia non deve essere esteso.
+1. Se un'interfaccia duale o un'interfaccia dispatch non verrà estesa in fase di `IDispatch::Invoke`esecuzione, ovvero non verranno forniti metodi o proprietà aggiuntivi tramite , è necessario applicare l'attributo **nonextensible** alla definizione. Questo attributo consente ai client di automazione di eseguire la verifica completa del codice in fase di compilazione. In questo caso, l'interfaccia non deve essere estesa.
 
-1. I DISPID corretto è importante se si desidera che i client di automazione per poter utilizzare questa proprietà. Si noti che nel DISPID_NEWENUM sia presente un solo carattere di sottolineatura.
+1. Il DISPID corretto è importante se si desidera che i client di automazione siano in grado di utilizzare questa proprietà. (Si noti che è presente un solo sottolineatura in DISPID_NEWENUM.)
 
-1. È possibile specificare qualsiasi valore come il DISPID del `Item` proprietà. Tuttavia, `Item` utilizza in genere DISPID_VALUE per rendere la proprietà predefinita della raccolta. In questo modo i client di automazione fare riferimento alla proprietà senza denominarlo in modo esplicito.
+1. È possibile fornire qualsiasi valore come `Item` DISPID della proprietà. Tuttavia, `Item` in genere utilizza DISPID_VALUE per impostarla come proprietà predefinita della raccolta. Ciò consente ai client di automazione di fare riferimento alla proprietà senza denominarla in modo esplicito.
 
-1. Il tipo di dati utilizzato per il valore restituito del `Item` proprietà è il tipo di elemento archiviato nella raccolta per quanto riguarda i client COM sono interessati. L'interfaccia restituisce stringhe, è necessario utilizzare il tipo di stringa COM standard, BSTR. È possibile archiviare i dati in un formato diverso internamente come si vedrà a breve.
+1. Il tipo di dati utilizzato `Item` per il valore restituito della proprietà è il tipo dell'elemento archiviato nella raccolta per quanto riguarda i client COM. L'interfaccia restituisce stringhe, pertanto è necessario utilizzare il tipo di stringa COM standard, BSTR. È possibile memorizzare i dati in un formato diverso internamente, come si vedrà a breve.
 
-1. Il valore usato per il DISPID del `Count` proprietà è del tutto arbitraria. Non è disponibile alcun DISPID standard per questa proprietà.
+1. Il valore utilizzato per il `Count` DISPID della proprietà è completamente arbitrario. Non esiste un DISPID standard per questa proprietà.
 
-##  <a name="vcconstorage_and_exposure_typedefs"></a> Creazione per l'archiviazione e l'esposizione di typedef
+## <a name="creating-typedefs-for-storage-and-exposure"></a><a name="vcconstorage_and_exposure_typedefs"></a>Creazione di typedef per l'archiviazione e l'esposizioneCreating Typedefs for Storage and Exposure
 
-Una volta definito l'interfaccia di raccolta, è necessario decidere come verranno archiviati i dati e come i dati saranno esposti tramite l'enumeratore.
+Una volta definita l'interfaccia di raccolta, è necessario decidere come verranno archiviati i dati e come i dati verranno esposti tramite l'enumeratore.
 
-Le risposte a queste domande possono essere fornite sotto forma di un numero di typedef, che è possibile aggiungere all'inizio del file di intestazione per la classe appena creata:
+Le risposte a queste domande possono essere fornite sotto forma di un numero di typedef, che è possibile aggiungere nella parte superiore del file di intestazione per la classe appena creata:
 
 [!code-cpp[NVC_ATL_COM#25](../atl/codesnippet/cpp/implementing-an-stl-based-collection_2.h)]
 
-In questo caso, si archivieranno i dati come una **std:: Vector** dei **std:: String**s. **std:: Vector** è una classe contenitore della libreria Standard C++ che si comporta come una matrice gestita. **std:: String** è una classe di stringa della libreria Standard C++. Queste classi rendono più semplice lavorare con una raccolta di stringhe.
+In questo caso, i dati verranno archiviati come **std::vector** di **std::string**s. **std::vector** è una classe contenitore della libreria standard di C, che si comporta come una matrice gestita. **std::string** è la classe di stringa della libreria standard di C. Queste classi semplificano l'utilizzo di una raccolta di stringhe.
 
-Poiché il supporto di Visual Basic è fondamentale per il successo di questa interfaccia, enumeratore restituito dal `_NewEnum` deve supportare proprietà di `IEnumVARIANT` interfaccia. Questo è l'interfaccia dell'enumeratore solo riconosciuta da Visual Basic.
+Poiché il supporto visual Basic è fondamentale per la `_NewEnum` riuscita `IEnumVARIANT` di questa interfaccia, l'enumeratore restituito dalla proprietà deve supportare l'interfaccia. Questa è l'unica interfaccia dell'enumeratore riconosciuta da Visual Basic.
 
-##  <a name="vcconcopy_classes"></a> Creazione di TypeDef per classi di criteri di copia
+## <a name="creating-typedefs-for-copy-policy-classes"></a><a name="vcconcopy_classes"></a>Creazione di Typedef per le classi di criteri di copiaCreating Typedefs for Copy Policy Classes
 
-Il typedef creati finora fornire tutte le informazioni necessarie per creare altre TypeDef per le classi di copia che verranno usate per l'enumeratore e la raccolta:
+I typedef creati finora forniscono tutte le informazioni necessarie per creare ulteriori typedef per le classi di copia che verranno utilizzate dall'enumeratore e dalla raccolta:
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-In questo esempio, è possibile usare l'oggetto personalizzato `GenericCopy` classe definita in VCUE_Copy e VCUE_CopyString. h dal [ATLCollections](../overview/visual-cpp-samples.md) esempio. È possibile usare questa classe in un altro codice, ma potrebbe essere necessario definire ulteriori specializzazioni di `GenericCopy` per supportare tipi di dati utilizzati nelle raccolte personalizzate. Per altre informazioni, vedere [classi di criteri di copia ATL](../atl/atl-copy-policy-classes.md).
+In questo esempio è possibile `GenericCopy` utilizzare la classe personalizzata definita in VCUE_Copy.h e VCUE_CopyString.h dell'esempio [ATLCollections.](../overview/visual-cpp-samples.md) È possibile utilizzare questa classe in altro codice, ma potrebbe `GenericCopy` essere necessario definire ulteriori specializzazioni per supportare i tipi di dati utilizzati nelle raccolte personalizzate. Per ulteriori informazioni, vedere [Classi criteri di copia ATL](../atl/atl-copy-policy-classes.md).
 
-##  <a name="vcconenumeration_and_collection"></a> Creazione di TypeDef per la raccolta e di enumerazione
+## <a name="creating-typedefs-for-enumeration-and-collection"></a><a name="vcconenumeration_and_collection"></a>Creazione di typedef per l'enumerazione e la raccoltaCreating Typedefs for Enumeration and Collection
 
-A questo punto tutti i parametri del modello necessari per specializzare il `CComEnumOnSTL` e `ICollectionOnSTLImpl` classi per questa situazione viene fornite sotto forma di typedef. Per semplificare l'uso di specializzazioni, creare due ulteriori TypeDef come illustrato di seguito:
+Ora tutti i parametri di `CComEnumOnSTL` modello `ICollectionOnSTLImpl` necessari per specializzare le classi e per questa situazione sono stati forniti sotto forma di typedef. Per semplificare l'utilizzo delle specializzazioni, creare altri due typedef come illustrato di seguito:
 
 [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/cpp/implementing-an-stl-based-collection_4.h)]
 
-A questo punto `CollectionType` è un sinonimo per una specializzazione dello `ICollectionOnSTLImpl` che implementa il `IWords` interfaccia definita in precedenza e fornisce un enumeratore che supporta `IEnumVARIANT`.
+A `CollectionType` questo punto è un sinonimo di `ICollectionOnSTLImpl` una `IWords` specializzazione di che implementa l'interfaccia definita in precedenza e fornisce un enumeratore che supporta `IEnumVARIANT`.
 
-##  <a name="vcconedit_the_generated_code"></a> La modifica del codice generato dalla procedura guidata
+## <a name="editing-the-wizard-generated-code"></a><a name="vcconedit_the_generated_code"></a>Modifica del codice generato dalla procedura guidata
 
-A questo punto è necessario derivare `CWords` rispetto all'implementazione di interfaccia rappresentata dal `CollectionType` typedef anziché `IWords`, come illustrato di seguito:
+A questo `CWords` punto è necessario derivare dall'implementazione dell'interfaccia rappresentata dal `CollectionType` typedef anziché da `IWords`, come illustrato di seguito:
 
 [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/cpp/implementing-an-stl-based-collection_5.h)]
 
-##  <a name="vcconpopulate_the_collection"></a> Aggiunta di codice per popolare la raccolta
+## <a name="adding-code-to-populate-the-collection"></a><a name="vcconpopulate_the_collection"></a>Aggiunta di codice per popolare la raccoltaAdding Code to Populate the Collection
 
-L'unica cosa che rimane è per popolare il vettore con dei dati. In questo semplice esempio, è possibile aggiungere alcune parole nella raccolta nel costruttore della classe:
+L'unica cosa che rimane è popolare il vettore con i dati. In questo semplice esempio, è possibile aggiungere alcune parole alla raccolta nel costruttore per la classe:In this simple example, you can add a few words to the collection in the constructor for the class:
 
 [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/cpp/implementing-an-stl-based-collection_6.h)]
 
@@ -102,5 +102,5 @@ A questo punto, è possibile testare il codice con il client di propria scelta.
 ## <a name="see-also"></a>Vedere anche
 
 [Raccolte ed enumeratori](../atl/atl-collections-and-enumerators.md)<br/>
-[Nell'esempio ATLCollections](../overview/visual-cpp-samples.md)<br/>
-[Classi di criteri di copia ATL](../atl/atl-copy-policy-classes.md)
+[Esempio ATLCollections](../overview/visual-cpp-samples.md)<br/>
+[Classi criteri di copia ATL](../atl/atl-copy-policy-classes.md)

@@ -1,6 +1,6 @@
 ---
-title: Struttura SYMBOL_NAME_DATA
-description: Il C++ riferimento alla struttura SYMBOL_NAME_DATA di build Insights SDK.
+title: struttura SYMBOL_NAME_DATA
+description: L'SDK di approfondimenti sulla compilazione di C'è SYMBOL_NAME_DATA riferimento alla struttura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 618e84f198c20aa089dc7e06e1e6c09b96b6d273
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1217572f20a772fde629533d6ab170c14dc5b5e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325345"
 ---
-# <a name="symbol_name_data-structure"></a>Struttura SYMBOL_NAME_DATA
+# <a name="symbol_name_data-structure"></a>struttura SYMBOL_NAME_DATA
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La struttura `SYMBOL_NAME_DATA` descrive un simbolo front-end del compilatore.
+La `SYMBOL_NAME_DATA` struttura descrive un simbolo front-end del compilatore.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,7 +38,7 @@ typedef struct SYMBOL_NAME_DATA_TAG
 } SYMBOL_NAME_DATA;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 |  |  |
 |--|--|
@@ -47,6 +47,6 @@ typedef struct SYMBOL_NAME_DATA_TAG
 
 ## <a name="remarks"></a>Osservazioni
 
-I simboli provenienti da due passaggi front-end del compilatore diversi possono avere lo stesso nome ma una chiave diversa. In questo caso, usare i nomi dei simboli per determinare se due tipi sono uguali.
+I simboli provenienti da due passaggi front-end del compilatore diverso possono avere lo stesso nome ma una chiave diversa. In questo caso, utilizzare i nomi dei simboli per determinare se due tipi sono uguali.
 
 ::: moniker-end

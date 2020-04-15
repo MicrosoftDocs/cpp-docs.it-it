@@ -1,5 +1,5 @@
 ---
-title: Classe CHeapPtrList
+title: CHeapPtrList (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CHeapPtrList
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-ms.openlocfilehash: 84b4241dcad8d54321aea37c7055c6669ff3ca87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0500ab8f76049aeaf1c89355ea5450a93243b734
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245647"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326864"
 ---
-# <a name="cheapptrlist-class"></a>Classe CHeapPtrList
+# <a name="cheapptrlist-class"></a>CHeapPtrList (classe)
 
-Questa classe fornisce metodi utili quando si crea un elenco di puntatori di heap.
+Questa classe fornisce metodi utili quando si costruisce un elenco di puntatori heap.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,11 +33,11 @@ class CHeapPtrList
 
 #### <a name="parameters"></a>Parametri
 
-*E*<br/>
-Il tipo di oggetto da archiviare nella classe di raccolta.
+*E (in questo modo*<br/>
+Tipo di oggetto da archiviare nella classe di raccolta.
 
 *Allocatore*<br/>
-La classe di allocazione di memoria da utilizzare. Il valore predefinito è [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
+Classe di allocazione di memoria da utilizzare. Il valore predefinito è [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Membri
 
@@ -47,21 +47,21 @@ La classe di allocazione di memoria da utilizzare. Il valore predefinito è [CCR
 |----------|-----------------|
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Costruttore.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe fornisce un costruttore e metodi da deriva [CAtlList](../../atl/reference/catllist-class.md) e [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) per facilitare la creazione di un oggetto di classe di raccolta l'archiviazione dei puntatori di heap.
+Questa classe fornisce un costruttore e deriva i metodi da [CAtlList](../../atl/reference/catllist-class.md) e [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) per facilitare la creazione di un oggetto classe di raccolta che archivia i puntatori all'heap.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-[CAtlList](../../atl/reference/catllist-class.md)
+[Elenco CAtlList](../../atl/reference/catllist-class.md)
 
 `CHeapPtrList`
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcoll. h
+**Intestazione:** atlcoll.h
 
-##  <a name="cheapptrlist"></a>  CHeapPtrList::CHeapPtrList
+## <a name="cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a>CHeapPtrList::CHeapPtrList
 
 Costruttore.
 
@@ -71,16 +71,16 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBlockSize*<br/>
-La dimensione del blocco.
+*nBlockSize (dimensioni di blocco)*<br/>
+Dimensione del blocco.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La dimensione del blocco è una misura della quantità di memoria allocata quando un nuovo elemento è obbligatorio. Blocchi di dimensioni maggiori riducono le chiamate alle routine di allocazione della memoria, ma usano più risorse.
+La dimensione del blocco è una misura della quantità di memoria allocata quando è necessario un nuovo elemento. Blocchi di dimensioni maggiori riducono le chiamate alle routine di allocazione della memoria, ma utilizzano più risorse.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CAtlList](../../atl/reference/catllist-class.md)<br/>
-[Classe CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
-[Classe CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[CHeapPtr (classe)](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrElementTraits (classe)](../../atl/reference/cheapptrelementtraits-class.md)<br/>
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)
