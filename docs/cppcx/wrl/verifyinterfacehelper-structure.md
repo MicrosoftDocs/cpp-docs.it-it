@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInterfaceHelper structure
 - Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-ms.openlocfilehash: cdd0272953b2399cd71efe207eb1c56e5de154e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09c2cc7e08e2dc0e8df42c64d285c37627c5925a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398095"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374242"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper (struttura)
 
-Supporta l'infrastruttura di libreria modelli C++ per Windows Runtime e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura della libreria di modelli di Windows Runtime di C, non è destinato a essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,12 +32,12 @@ struct VerifyInterfaceHelper<false, I>;
 
 ### <a name="parameters"></a>Parametri
 
-*I*<br/>
+*Ho*<br/>
 Interfaccia da verificare.
 
-*isWinRTInterface*
+*isWinRTInterface (interfaccia utente)*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Verifica che l'interfaccia specificata dal parametro di modello soddisfi determinati requisiti.
 
@@ -55,18 +55,18 @@ Nome                                            | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** Implements. h
+**Intestazione:** implements.h
 
 **Spazio dei nomi:** Microsoft::WRL::Details
 
-## <a name="verify"></a>VerifyInterfaceHelper::Verify
+## <a name="verifyinterfacehelperverify"></a><a name="verify"></a>VerifyInterfaceHelper::Verify
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 static void Verify();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Verifica che l'interfaccia specificata dal parametro di modello corrente soddisfi determinati requisiti.
