@@ -1,5 +1,5 @@
 ---
-title: Classe CRBMultiMap
+title: CRBMultiMap (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CRBMultiMap
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e36bc267b3a539d2d1d4bf370b9cdc33828c760
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278137"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331427"
 ---
-# <a name="crbmultimap-class"></a>Classe CRBMultiMap
+# <a name="crbmultimap-class"></a>CRBMultiMap (classe)
 
-Questa classe rappresenta una struttura di mapping che consente a che ogni chiave può essere associato a più di un valore, usando un albero binario rosso-bianco.
+Questa classe rappresenta una struttura di mapping che consente a ogni chiave può essere associata a più di un valore, utilizzando un albero binario rosso-nero.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,16 +37,16 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 #### <a name="parameters"></a>Parametri
 
 *K*<br/>
-Il tipo di elemento key.
+Tipo di elemento chiave.
 
 *V*<br/>
-Il tipo di elemento di valore.
+Tipo di elemento valore.
 
-*KTraits*<br/>
-Il codice usato per copiare o spostare gli elementi chiave. Visualizzare [classe CElementTraits](../../atl/reference/celementtraits-class.md) per altri dettagli.
+*Caratteristiche KTraits*<br/>
+Codice utilizzato per copiare o spostare gli elementi chiave. Vedere [CElementTraits classe](../../atl/reference/celementtraits-class.md) per ulteriori dettagli.
 
-*VTraits*<br/>
-Il codice usato per copiare o spostare gli elementi di valore.
+*Tratti V*<br/>
+Codice utilizzato per copiare o spostare gli elementi valore.
 
 ## <a name="members"></a>Membri
 
@@ -55,43 +55,43 @@ Il codice usato per copiare o spostare gli elementi di valore.
 |Nome|Descrizione|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Costruttore.|
-|[CRBMultiMap::~CRBMultiMap](#dtor)|Distruttore.|
+|[CRBMultiMap:: : CRBMultiMap](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|Chiamare questo metodo per individuare la posizione del primo elemento con una chiave specificata.|
-|[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|Chiamare questo metodo per ottenere il valore associato alla chiave specificata e aggiornare il valore di posizione.|
-|[CRBMultiMap::GetNextWithKey](#getnextwithkey)|Chiamare questo metodo per ottenere l'elemento associato alla chiave specificata e aggiornare il valore di posizione.|
-|[CRBMultiMap::Insert](#insert)|Chiamare questo metodo per inserire una coppia di elementi nella mappa.|
-|[CRBMultiMap::RemoveKey](#removekey)|Chiamare questo metodo per rimuovere tutti gli elementi chiave/valore per una determinata chiave.|
+|[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|Chiamare questo metodo per trovare la posizione del primo elemento con un determinato tasto.|
+|[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|Chiamare questo metodo per ottenere il valore associato a una chiave specificata e aggiornare il valore della posizione.|
+|[CRBMultiMap::GetNextWithKey](#getnextwithkey)|Chiamare questo metodo per ottenere l'elemento associato a una chiave specificata e aggiornare il valore della posizione.|
+|[CRBMultiMap::Inserire](#insert)|Chiamare questo metodo per inserire una coppia di elementi nella mappa.|
+|[CRBMultiMap::RemoveKey (CrBMultiMappa::RemoveKey)](#removekey)|Chiamare questo metodo per rimuovere tutti gli elementi chiave/valore per una determinata chiave.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`CRBMultiMap` fornisce supporto per una matrice di mapping di un determinato tipo, la gestione di una matrice ordinata di valori e gli elementi chiave. A differenza di [CRBMap](../../atl/reference/crbmap-class.md) (classe), ogni chiave può essere associato a più di un valore.
+`CRBMultiMap`fornisce il supporto per una matrice di mapping di qualsiasi tipo specificato, la gestione di una matrice ordinata di elementi chiave e valori. A differenza della classe [CRBMap,](../../atl/reference/crbmap-class.md) ogni chiave può essere associata a più di un valore.
 
-Elementi (costituito da una chiave e valore) vengono archiviati in un albero binario struttura, tramite il [CRBMultiMap::Insert](#insert) (metodo). Gli elementi possono essere rimossi tramite il [CRBMultiMap::RemoveKey](#removekey) metodo, che consente di eliminare tutti gli elementi che corrispondono alla chiave specificata.
+Gli elementi (costituiti da una chiave e da un valore) vengono archiviati in una struttura ad albero binaria, utilizzando il metodo [CRBMultiMap::Insert.](#insert) Gli elementi possono essere rimossi utilizzando il metodo [CRBMultiMap::RemoveKey,](#removekey) che elimina tutti gli elementi che corrispondono alla chiave specificata.
 
-Attraversamento dell'albero è reso possibile con i metodi, ad esempio [CRBTree](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), e [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue). L'accesso al potenzialmente più valori per ogni chiave viene possibile utilizzando il [CRBMultiMap::FindFirstWithKey](#findfirstwithkey), [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), e [CRBMultiMap::GetNextWithKey ](#getnextwithkey) metodi. Vedere l'esempio relativo [CRBMultiMap::CRBMultiMap](#crbmultimap) per un'illustrazione di questa in pratica.
+L'attraversamento della struttura ad albero è reso possibile con metodi quali [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext)e [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue). È possibile accedere ai valori potenzialmente multipli per chiave utilizzando i metodi [CRBMultiMap::FindFirstWithKey](#findfirstwithkey), [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)e [CRBMultiMap::GetNextWithKey](#getnextwithkey) . Vedere l'esempio per [CRBMultiMap::CRBMultiMap](#crbmultimap) per un'illustrazione di questo in pratica.
 
-Il *KTraits* e *VTraits* i parametri sono traits (classi) che contengono il codice necessario per copiare o spostare elementi supplementare.
+I parametri *KTraits* e *VTraits* sono classi di tratti che contengono codice supplementare necessario per copiare o spostare gli elementi.
 
-`CRBMultiMap` è derivato da [CRBTree](../../atl/reference/crbtree-class.md), che implementa un albero binario con l'algoritmo rosso-bianco. Un'alternativa al `CRBMultiMap` e `CRBMap` è disponibile per il [CAtlMap](../../atl/reference/catlmap-class.md) classe. Quando solo un numero ridotto di elementi debba essere archiviati, è consigliabile usare la [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.
+`CRBMultiMap`è derivato da [CRBTree](../../atl/reference/crbtree-class.md), che implementa un albero binario utilizzando l'algoritmo Red-Black. Un'alternativa `CRBMultiMap` `CRBMap` e viene offerta dalla classe [CAtlMap.](../../atl/reference/catlmap-class.md) Quando è necessario archiviare solo un numero ridotto di elementi, è consigliabile usare la classe [CSimpleMap.When](../../atl/reference/csimplemap-class.md) only a small number of elements needs to be stored, consider using the CSimpleMap class instead.
 
-Per una descrizione più completa di varie classi di raccolta e le funzionalità e caratteristiche di prestazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
+Per una descrizione più completa delle varie classi di raccolte e delle relative caratteristiche e caratteristiche delle prestazioni, vedere [Classi di raccolte ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-[CRBTree](../../atl/reference/crbtree-class.md)
+[CRBTree (Albero CRB)](../../atl/reference/crbtree-class.md)
 
 `CRBMultiMap`
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcoll. h
+**Intestazione:** atlcoll.h
 
-##  <a name="crbmultimap"></a>  CRBMultiMap::CRBMultiMap
+## <a name="crbmultimapcrbmultimap"></a><a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap
 
 Costruttore.
 
@@ -101,20 +101,20 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBlockSize*<br/>
-La dimensione del blocco.
+*nBlockSize (dimensioni di blocco)*<br/>
+Dimensione del blocco.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il *nBlockSize* parametro è una misura della quantità di memoria allocata quando un nuovo elemento è obbligatorio. Blocchi di dimensioni maggiori riducono le chiamate alle routine di allocazione della memoria, ma usano più risorse. Il valore predefinito verrà allocare spazio per 10 elementi alla volta.
+Il *nBlockSize* parametro è una misura della quantità di memoria allocata quando è necessario un nuovo elemento. Blocchi di dimensioni maggiori riducono le chiamate alle routine di allocazione della memoria, ma utilizzano più risorse. L'impostazione predefinita allocherà spazio per 10 elementi alla volta.
 
-Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni su altri metodi disponibili.
+Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni sugli altri metodi disponibili.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMultiMap::~CRBMultiMap
+## <a name="crbmultimapcrbmultimap"></a><a name="dtor"></a>CRBMultiMap:: : CRBMultiMap
 
 Distruttore.
 
@@ -122,15 +122,15 @@ Distruttore.
 ~CRBMultiMap() throw();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Libera tutte le risorse allocate.
 
-Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni su altri metodi disponibili.
+Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni sugli altri metodi disponibili.
 
-##  <a name="findfirstwithkey"></a>  CRBMultiMap::FindFirstWithKey
+## <a name="crbmultimapfindfirstwithkey"></a><a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey
 
-Chiamare questo metodo per individuare la posizione del primo elemento con una chiave specificata.
+Chiamare questo metodo per trovare la posizione del primo elemento con un determinato tasto.
 
 ```
 POSITION FindFirstWithKey(KINARGTYPE key) const throw();
@@ -138,26 +138,26 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*key*<br/>
+*Chiave*<br/>
 Specifica la chiave che identifica l'elemento da trovare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la chiave viene trovata, NULL in caso contrario, restituisce la posizione del primo elemento chiave/valore.
+Restituisce la POSITION del primo elemento chiave/valore se la chiave viene trovata, NULL in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Una chiave nel `CRBMultiMap` può avere uno o più valori associati. Questo metodo fornirà il valore di posizione del primo valore (che può essere in effetti, l'unico valore) associato a tale chiave specifica. Il valore di posizione restituito è quindi utilizzabile con [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey) oppure [CRBMultiMap::GetNextWithKey](#getnextwithkey) per ottenere il valore e aggiornare la posizione.
+Una chiave `CRBMultiMap` in può avere uno o più valori associati. Questo metodo fornirà il valore di posizione del primo valore (che può, infatti, essere l'unico valore) associato a quella particolare chiave. Il valore di posizione restituito può quindi essere utilizzato con [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey) o [CRBMultiMap::GetNextWithKey](#getnextwithkey) per ottenere il valore e aggiornare la posizione.
 
-Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni su altri metodi disponibili.
+Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni sugli altri metodi disponibili.
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [CRBMultiMap::CRBMultiMap](#crbmultimap).
+Vedere l'esempio per [CRBMultiMap::CRBMultiMap](#crbmultimap).
 
-##  <a name="getnextvaluewithkey"></a>  CRBMultiMap::GetNextValueWithKey
+## <a name="crbmultimapgetnextvaluewithkey"></a><a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey
 
-Chiamare questo metodo per ottenere il valore associato alla chiave specificata e aggiornare il valore di posizione.
+Chiamare questo metodo per ottenere il valore associato a una chiave specificata e aggiornare il valore della posizione.
 
 ```
 const V& GetNextValueWithKey(
@@ -170,29 +170,29 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>Parametri
 
-*pos*<br/>
-Il valore di posizione, ottenuto con una chiamata a [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) oppure [CRBMultiMap::GetNextWithKey](#getnextwithkey), o una chiamata precedente a `GetNextValueWithKey`.
+*Pos*<br/>
+Il valore della posizione, ottenuto con una chiamata a [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) o [CRBMultiMap::GetNextWithKey](#getnextwithkey), o con una chiamata precedente a `GetNextValueWithKey`.
 
-*key*<br/>
+*Chiave*<br/>
 Specifica la chiave che identifica l'elemento da trovare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la coppia di elemento associata alla chiave specificata.
+Restituisce la coppia di elementi associata alla chiave specificata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il valore di posizione viene aggiornato per puntare il successivo valore associato alla chiave. Se nessun altro valore esistono, il valore di posizione è impostato su NULL.
+Il valore della posizione viene aggiornato in modo da puntare al valore successivo associato alla chiave. Se non esistono altri valori, il valore della posizione è impostato su NULL.
 
-Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni su altri metodi disponibili.
+Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni sugli altri metodi disponibili.
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [CRBMultiMap::CRBMultiMap](#crbmultimap).
+Vedere l'esempio per [CRBMultiMap::CRBMultiMap](#crbmultimap).
 
-##  <a name="getnextwithkey"></a>  CRBMultiMap::GetNextWithKey
+## <a name="crbmultimapgetnextwithkey"></a><a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey
 
-Chiamare questo metodo per ottenere l'elemento associato alla chiave specificata e aggiornare il valore di posizione.
+Chiamare questo metodo per ottenere l'elemento associato a una chiave specificata e aggiornare il valore della posizione.
 
 ```
 const CPair* GetNextWithKey(
@@ -205,23 +205,23 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>Parametri
 
-*pos*<br/>
-Il valore di posizione, ottenuto con una chiamata a [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) oppure [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), o una chiamata precedente a `GetNextWithKey`.
+*Pos*<br/>
+Il valore della posizione, ottenuto con una chiamata a [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) o [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), o con una chiamata precedente a `GetNextWithKey`.
 
-*key*<br/>
+*Chiave*<br/>
 Specifica la chiave che identifica l'elemento da trovare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il successivo [CRBTree::CPair classe](crbtree-class.md#cpair_class) elemento associato alla chiave specificata.
+Restituisce il successivo elemento [di classe CRBTree::CPair](crbtree-class.md#cpair_class) associato alla chiave specificata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il valore di posizione viene aggiornato per puntare il successivo valore associato alla chiave. Se nessun altro valore esistono, il valore di posizione è impostato su NULL.
+Il valore della posizione viene aggiornato in modo da puntare al valore successivo associato alla chiave. Se non esistono altri valori, il valore della posizione è impostato su NULL.
 
-Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni su altri metodi disponibili.
+Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni sugli altri metodi disponibili.
 
-##  <a name="insert"></a>  CRBMultiMap::Insert
+## <a name="crbmultimapinsert"></a><a name="insert"></a>CRBMultiMap::Inserire
 
 Chiamare questo metodo per inserire una coppia di elementi nella mappa.
 
@@ -231,25 +231,25 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*key*<br/>
-Il valore della chiave da aggiungere per il `CRBMultiMap` oggetto.
+*Chiave*<br/>
+Valore della chiave da `CRBMultiMap` aggiungere all'oggetto.
 
-*value*<br/>
-Il valore da aggiungere per il `CRBMultiMap` oggetto, associato *chiave*.
+*Valore*<br/>
+Valore da aggiungere `CRBMultiMap` all'oggetto, associato alla *chiave*.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la posizione della coppia chiave/valore elemento all'interno di `CRBMultiMap` oggetto.
+Restituisce la posizione della coppia di `CRBMultiMap` elementi chiave/valore nell'oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni su altri metodi disponibili.
+Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni sugli altri metodi disponibili.
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [CRBMultiMap::CRBMultiMap](#crbmultimap).
+Vedere l'esempio per [CRBMultiMap::CRBMultiMap](#crbmultimap).
 
-##  <a name="removekey"></a>  CRBMultiMap::RemoveKey
+## <a name="crbmultimapremovekey"></a><a name="removekey"></a>CRBMultiMap::RemoveKey (CrBMultiMappa::RemoveKey)
 
 Chiamare questo metodo per rimuovere tutti gli elementi chiave/valore per una determinata chiave.
 
@@ -259,26 +259,26 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*key*<br/>
+*Chiave*<br/>
 Specifica la chiave che identifica gli elementi da eliminare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il numero di valori associato alla chiave specificata.
+Restituisce il numero di valori associati alla chiave specificata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`RemoveKey` Elimina tutti gli elementi chiave/valore con una chiave corrispondente *chiave*.
+`RemoveKey`elimina tutti gli elementi chiave/valore che hanno una chiave che corrisponde a *key*.
 
-Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni su altri metodi disponibili.
+Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crbtree-class.md) per informazioni sugli altri metodi disponibili.
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [CRBMultiMap::CRBMultiMap](#crbmultimap).
+Vedere l'esempio per [CRBMultiMap::CRBMultiMap](#crbmultimap).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CRBTree](../../atl/reference/crbtree-class.md)<br/>
+[CrBTree (classe)](../../atl/reference/crbtree-class.md)<br/>
 [Classe CAtlMap](../../atl/reference/catlmap-class.md)<br/>
-[Classe CRBMap](../../atl/reference/crbmap-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[CrBMap (classe)](../../atl/reference/crbmap-class.md)<br/>
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

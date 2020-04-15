@@ -1,8 +1,9 @@
 ---
 title: _gcvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt
+- _o__gcvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f161256c6dc86a045f49111cde3651bea08ead11
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956107"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345324"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -54,10 +56,10 @@ char *_gcvt(
 
 ### <a name="parameters"></a>Parametri
 
-*value*<br/>
+*Valore*<br/>
 Valore da convertire.
 
-*cifre*<br/>
+*Cifre*<br/>
 Numero di cifre significative archiviate.
 
 *buffer*<br/>
@@ -67,13 +69,15 @@ Posizione di archiviazione per il risultato.
 
 **_gcvt** restituisce un puntatore alla stringa di cifre.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_gcvt** converte un *valore* a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte di segno) e archivia la stringa nel *buffer*. Il *buffer* deve essere sufficientemente grande da contenere il valore convertito e un carattere null di terminazione, che viene aggiunto automaticamente. Se viene usata una dimensione del buffer di *cifre* + 1, la funzione sovrascrive la fine del buffer. Ciò perché la stringa convertita include un separatore decimale e può contenere informazioni su segno ed esponente. Non sono previste misure per l'overflow. **_gcvt** tenta *di produrre cifre cifrate* in formato decimale. In caso contrario, *le cifre vengono generate* in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
+La funzione **_gcvt** converte un *valore* a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte di segno) e memorizza la stringa nel *buffer*. Il *buffer* deve essere sufficientemente grande da contenere il valore convertito più un carattere di terminazione null, che viene aggiunto automaticamente. Se viene utilizzata una dimensione del buffer di *cifre* : 1, la funzione sovrascrive la fine del buffer. Ciò perché la stringa convertita include un separatore decimale e può contenere informazioni su segno ed esponente. Non sono previste misure per l'overflow. **_gcvt** tenta di produrre *cifre cifre* in formato decimale. In caso contrario, *produce* cifre in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
 
 Un *buffer* di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a virgola mobile.
 
-Questa funzione convalida i relativi parametri. Se *buffer* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **null**.
+Questa funzione convalida i relativi parametri. Se *buffer* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **NULL**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -81,7 +85,7 @@ Questa funzione convalida i relativi parametri. Se *buffer* è **null**, viene r
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -141,8 +145,8 @@ buffer: '-1.23456789012e-002' (19 chars)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>

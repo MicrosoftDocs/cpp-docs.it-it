@@ -1,9 +1,11 @@
 ---
 title: _fsopen, _wfsopen
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wfsopen
 - _fsopen
+- _o__fsopen
+- _o__wfsopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 1ffc3aa5801ff2ed63ecf815f3351e4d7a8cf459
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49907808729375e3bea18a5f4bbf204852e0072a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956474"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345693"
 ---
 # <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
@@ -66,10 +69,10 @@ FILE *_wfsopen(
 
 ### <a name="parameters"></a>Parametri
 
-*filename*<br/>
+*Filename*<br/>
 Nome del file da aprire.
 
-*mode*<br/>
+*Modalità*<br/>
 Tipo di accesso consentito.
 
 *shflag*<br/>
@@ -77,49 +80,51 @@ Tipo di condivisione consentita.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore al flusso. Un valore di puntatore Null indica un errore. Se *filename* o *mode* è **null** o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **null** e impostano **errno** su **EINVAL**.
+Ognuna di queste funzioni restituisce un puntatore al flusso. Un valore di puntatore Null indica un errore. Se *filename* o *mode* è **NULL** o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **NULL** e impostano **errno** su **EINVAL**.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_fsopen** apre il file specificato da *filename* come flusso e prepara il file per una successiva lettura o scrittura condivisa, come definito dagli argomenti mode e *shflag* . **_wfsopen** è una versione a caratteri wide di **_fsopen**; gli argomenti *filename* e *mode* di **_wfsopen** sono stringhe a caratteri wide. **_wfsopen** e **_fsopen** si comportano in modo identico.
+La funzione **_fsopen** apre il file specificato da *filename* come flusso e prepara il file per la successiva lettura o scrittura condivisa, come definito dagli argomenti mode e *shflag.* **_wfsopen** è una versione a caratteri wide di **_fsopen**; gli argomenti *filename* e *mode* per **_wfsopen** sono stringhe di caratteri wide. **_wfsopen** e **_fsopen** si comportano in modo identico in caso contrario.
 
 La *modalità* stringa di caratteri specifica il tipo di accesso richiesto per il file, come illustrato nella tabella seguente.
 
-|Nome|Definizione|
+|Termine|Definizione|
 |----------|----------------|
-|**"r"**|Viene aperto per la lettura. Se il file non esiste o non viene trovato, la chiamata a **_fsopen** ha esito negativo.|
+|**"r"**|Viene aperto per la lettura. Se il file non esiste o non viene trovato, la **chiamata _fsopen** ha esito negativo.|
 |**"w"**|Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente.|
 |**"a"**|Viene aperto in scrittura alla fine del file (aggiunta); crea prima il file se non esiste.|
-|**"r+"**|Viene aperto per la lettura e la scrittura. Il file deve esistere.|
-|**"w+"**|Apre un file vuoto per la lettura e la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente.|
-|**"a+"**|Viene aperto in lettura e aggiunta; crea prima il file se non esiste.|
+|**"r"**|Viene aperto per la lettura e la scrittura. Il file deve esistere.|
+|**"w" (w)**|Apre un file vuoto per la lettura e la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente.|
+|**"A"**|Viene aperto in lettura e aggiunta; crea prima il file se non esiste.|
 
-Usare i tipi **"w"** e **"w +"** con cautela, in quanto possono eliminare i file esistenti.
+Utilizzare i tipi **"w"** e **"w"** con attenzione, in quanto possono distruggere i file esistenti.
 
-Quando un file viene aperto con il tipo di accesso **"a"** o **"a +"** , tutte le operazioni di scrittura si verificano alla fine del file. Il puntatore del file può essere riposizionato utilizzando [fseek](fseek-fseeki64.md) o [Rewind](rewind.md), ma viene sempre spostato di nuovo alla fine del file prima che venga eseguita un'operazione di scrittura. Di conseguenza, i dati esistenti non possono essere sovrascritti. Quando viene specificato il tipo di accesso **"r +"** , **"w +"** o **"a +"** , sono consentite sia la lettura che la scrittura (il file viene definito aperto per l'aggiornamento). Tuttavia, quando si passa da lettura a scrittura, deve esserci un'operazione [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md) intermedia. Se lo si desidera, è possibile specificare la posizione corrente per l'operazione [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) . Oltre ai valori precedenti, è possibile includere uno dei caratteri seguenti in *modalità* per specificare la modalità di conversione per le nuove righe e per la gestione dei file.
+Quando un file viene aperto con il tipo di accesso **"a"** o **"a"** , tutte le operazioni di scrittura si verificano alla fine del file. Il puntatore del file può essere riposizionato utilizzando [fseek](fseek-fseeki64.md) o [rewind](rewind.md), ma viene sempre spostato alla fine del file prima che venga eseguita qualsiasi operazione di scrittura. Pertanto, i dati esistenti non possono essere sovrascritti. Quando viene specificato il tipo di accesso **"r"**, **"w"** o **"a"** , sono consentite sia la lettura che la scrittura (il file viene detto aperto per l'aggiornamento). Tuttavia, quando si passa da lettura a scrittura, deve esserci un'operazione [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md) intermedia. La posizione corrente può essere specificata per l'operazione [fsetpos](fsetpos.md) o [fseek,](fseek-fseeki64.md) se lo si desidera. Oltre ai valori sopra, uno dei seguenti caratteri può essere incluso in *modalità* per specificare la modalità di conversione per le nuove righe e per la gestione dei file.
 
-|Nome|Definizione|
+|Termine|Definizione|
 |----------|----------------|
-|**t**|Apre un file in modalità testo (convertito). In questa modalità, le combinazioni di ritorno a capo/avanzamento riga (CR-LF) vengono convertite in feed a riga singola (LF) su input e i caratteri LF vengono convertite in combinazioni CR-LF nell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. Nei file aperti per la lettura o la lettura/scrittura, **_fsopen** verifica la presenza della combinazione CTRL + Z alla fine del file e la rimuove, se possibile. Questa operazione viene eseguita perché l'uso di [fseek](fseek-fseeki64.md) e [ftell](ftell-ftelli64.md) per spostarsi all'interno di un file che termina con CTRL + Z potrebbe causare un comportamento non corretto di [fseek](fseek-fseeki64.md) in prossimità della fine del file.|
-|**b**|Apre un file in modalità binaria (nessuna conversione); le conversioni sopra indicate vengono eliminate.|
+|**T**|Apre un file in modalità testo (convertito). In questa modalità, le combinazioni ritorno a capo-avanzamento riga (CR-LF) vengono convertite in avanzamenti riga singola (LF) all'input e i caratteri LF vengono convertiti in combinazioni CR-LF nell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. Nei file aperti per la lettura o la lettura/scrittura, **_fsopen** verifica la presenza di un tasto CTRL alla fine del file e lo rimuove, se possibile. Questa operazione viene eseguita in quanto l'utilizzo di [fseek](fseek-fseeki64.md) e [ftell](ftell-ftelli64.md) per spostarsi all'interno di un file che termina con un CTRL , potrebbe causare il [corretto composizionio](fseek-fseeki64.md) verso la fine del file.|
+|**B**|Apre un file in modalità binaria (nessuna conversione); le conversioni sopra indicate vengono eliminate.|
 |**S**|Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco.|
 |**R**|Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco.|
 |**T**|Specifica un file come temporaneo. Se possibile, non viene scaricato su disco.|
 |**D**|Specifica un file come temporaneo. Viene eliminato quando viene chiuso l'ultimo puntatore del file.|
 
-Se **t** o **b** non è specificato in *mode*, la modalità di conversione è definita dalla variabile globale **_fmode** della modalità predefinita. Se **t** o **b** è preceduto dall'argomento, la funzione ha esito negativo e restituisce **null**. Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Se **t** o **b** non è specificato in *mode*, la modalità di conversione è definita dalla variabile globale **_fmode** della modalità predefinita. Se **t** o **b** è preceduto dall'argomento , la funzione ha esito negativo e restituisce **NULL**. Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-L'argomento *shflag* è un'espressione costante costituita da una delle seguenti costanti manifesto, definite in Share. h.
+L'argomento *shflag* è un'espressione costante costituita da una delle costanti manifesto seguenti, definita in Share.h.
 
-|Nome|Definizione|
+|Termine|Definizione|
 |----------|----------------|
 |**_SH_COMPAT**|Imposta la modalità di compatibilità per applicazioni a 16 bit.|
 |**_SH_DENYNO**|Consente l'accesso in lettura e scrittura.|
 |**_SH_DENYRD**|Nega l'accesso in lettura al file.|
 |**_SH_DENYRW**|Nega l'accesso in lettura e scrittura al file.|
 |**_SH_DENYWR**|Nega l'accesso in scrittura al file.|
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -131,8 +136,8 @@ L'argomento *shflag* è un'espressione costante costituita da una delle seguenti
 
 |Funzione|Intestazione obbligatoria|Intestazioni facoltative|
 |--------------|---------------------|----------------------|
-|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Per la costante manifesto per il parametro *shflag* .|
-|**_wfsopen**|\<stdio.h> o \<wchar.h>|\<share.h><br /><br /> Per la costante manifesto per il parametro *shflag* .|
+|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Per la costante manifesto per il parametro *shflag.*|
+|**_wfsopen**|\<stdio.h> o \<wchar.h>|\<share.h><br /><br /> Per la costante manifesto per il parametro *shflag.*|
 
 ## <a name="example"></a>Esempio
 

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8664e98c6668568918cc0e6504a38119d2e71428
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213408"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336930"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Compilazione di una casella di riepilogo da un secondo recordset (accesso ai dati MFC)
 
 Per impostazione predefinita, una visualizzazione di record è associata a un unico oggetto recordset i cui campi sono associati ai controlli della visualizzazione di record. In alcuni casi, può essere utile aggiungere un controllo casella di riepilogo o casella combinata nella visualizzazione di record e inserirvi valori provenienti da un secondo oggetto recordset. L'utente può usare la casella di riepilogo per selezionare una nuova categoria di informazioni da visualizzare nella visualizzazione dei record. Questo argomento spiega come e quando eseguire questa operazione.
 
 > [!TIP]
->  Tenere presente che l'inserimento di valori in una casella combinata o di riepilogo da un'origine dati può essere un'operazione lenta. Come precauzione, non inserire mai in un controllo valori di un recordset contenente un elevato numero di record.
+> Tenere presente che l'inserimento di valori in una casella combinata o di riepilogo da un'origine dati può essere un'operazione lenta. Come precauzione, non inserire mai in un controllo valori di un recordset contenente un elevato numero di record.
 
 Il modello per questo argomento è costituito da un recordset primario che inserisce valori nei controlli del form e da un recordset secondario che li inserisce in una casella di riepilogo o in una casella combinata. La selezione di una stringa dalla casella di riepilogo avvia una nuova query sul recordset primario in base alla voce selezionata. Sebbene la procedura illustrata di seguito preveda l'uso di una casella combinata, è applicabile anche a una casella di riepilogo.
 
@@ -34,7 +34,7 @@ Il modello per questo argomento è costituito da un recordset primario che inser
 
 1. Eliminare eventuali dati già presenti nella casella combinata.
 
-1. Spostarsi tra tutti i record del recordset, chiamando [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) per ogni stringa del record corrente che si desidera aggiungere alla casella combinata.
+1. Spostarsi tra tutti i record del recordset, chiamando [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) per ogni stringa dal record corrente che si desidera aggiungere alla casella combinata.
 
 1. Inizializzare la selezione nella casella combinata.
 
@@ -71,4 +71,4 @@ La funzione ottiene `m_courseSet` dal documento e lo apre. Elimina quindi il con
 ## <a name="see-also"></a>Vedere anche
 
 [Visualizzazioni di record (accesso ai dati MFC)](../data/record-views-mfc-data-access.md)<br/>
-[Elenco dei driver ODBC](../data/odbc/odbc-driver-list.md)
+[Elenco driver ODBC](../data/odbc/odbc-driver-list.md)

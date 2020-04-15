@@ -1,9 +1,11 @@
 ---
 title: _mbsnbicmp, _mbsnbicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbicmp_l
 - _mbsnbicmp
+- _o__mbsnbicmp
+- _o__mbsnbicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +40,16 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 80d2708396cdaeb86c25932c3d13129fb318719a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442830"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340570"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Confronta **n** byte di due stringhe di caratteri multibyte e ignora la distinzione tra maiuscole e minuscole.
+Confronta **n** byte di due stringhe di caratteri multibyte e ignora case.
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -63,7 +66,7 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>Parametri
 
-*String1*, *string2*<br/>
+*stringa1*, *stringa2*<br/>
 Stringhe che terminano con Null da confrontare.
 
 *count*<br/>
@@ -75,23 +78,25 @@ Il valore restituito indica la relazione ordinale tra le sottostringhe.
 
 |Valore restituito|Descrizione|
 |------------------|-----------------|
-|< 0|sottostringa *String1* minore della sottostringa *string2* .|
-|0|sottostringa *String1* identica alla sottostringa *string2* .|
-|> 0|sottostringa *String1* maggiore della sottostringa *string2* .|
+|< 0|*stringa1* sottostringa minore di *stringa2* sottostringa.|
+|0|*stringa1* sottostringa identica alla sottostringa *string2.*|
+|> 0|*stringa1* sottostringa maggiore di *string2* substring.|
 
-In un errore, **_mbsnbicmp** restituisce **_NLSCMPERROR**, che è definito in String. h e mbstring. h.
+In caso di errore, **_mbsnbicmp** restituisce **_NLSCMPERROR**, definito in String.h e Mbstring.h.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_mbsnbicmp** esegue un confronto ordinale al massimo dei primi byte di *conteggio* di *String1* e *string2*. Il confronto viene eseguito convertendo ogni carattere in minuscolo; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) è una versione con distinzione tra maiuscole e minuscole di **_mbsnbicmp**. Il confronto termina se viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* . Se le stringhe sono uguali quando viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* , la stringa più corta è minore.
+La funzione **_mbsnbicmp** esegue un confronto ordinale massimo dei primi byte di *conteggio* di *string1* e *string2*. Il confronto viene eseguito convertendo ogni carattere in minuscolo; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) è una versione di **_mbsnbicmp**con distinzione tra maiuscole e minuscole. Il confronto termina se viene raggiunto un carattere di terminazione null in entrambe le stringhe prima di *contare* i caratteri vengono confrontati. Se le stringhe sono uguali quando viene raggiunto un carattere di terminazione null in entrambe le stringhe prima di *contare* i caratteri vengono confrontati, la stringa più breve è minore.
 
-**_mbsnbicmp** è simile a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), ad eccezione del fatto che confronta le stringhe fino al *conteggio* dei byte anziché in base ai caratteri.
+**_mbsnbicmp** è simile a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), ad eccezione del fatto che confronta le stringhe fino a *contare* i byte anziché per caratteri.
 
-Due stringhe che contengono caratteri compresi tra "Z" e "a" nella tabella ASCII ('[', '\\', ']', '^', '_' e '\`') vengono confrontate in modo diverso, a seconda della combinazione di maiuscole e minuscole. Ad esempio, le due stringhe "ABCDe" e "ABCD ^" vengono confrontate in un modo se il confronto è in minuscolo ("abcde" > "abcd ^") e viceversa ("ABCDe" < "ABCD ^") se è maiuscolo.
+Due stringhe che contengono caratteri compresi tra "Z" e "a" nella tabella ASCII ('[', '\\', ']', '^', '_' e '\`') vengono confrontate in modo diverso, a seconda della combinazione di maiuscole e minuscole. Ad esempio, le due stringhe "ABCDE" e "ABCD" confrontano in un modo se il confronto è minuscolo ("abcde" > "abcd") e viceversa ("ABCDE" < "ABCD") se è maiuscolo.
 
-**_mbsnbicmp** riconosce le sequenze di caratteri multibyte in base alla tabella [codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso. Non viene influenzata dalle impostazioni locali correnti.
+**_mbsnbicmp** riconosce le sequenze di caratteri multibyte in base alla tabella codici [multibyte](../../c-runtime-library/code-pages.md) attualmente in uso. Non viene influenzata dalle impostazioni locali correnti.
 
-Se *String1* o *string2* è un puntatore null, **_mbsnbicmp** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **_NLSCMPERROR** e imposta **errno** su **EINVAL**.
+Se *string1* o *string2* è un puntatore null, **_mbsnbicmp** richiama il gestore di parametri non validi come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **_NLSCMPERROR** e imposta **errno** su **EINVAL**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -106,7 +111,7 @@ Se *String1* o *string2* è un puntatore null, **_mbsnbicmp** richiama il gestor
 |-------------|---------------------|
 |**_mbsnbicmp**|\<mbstring.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -114,7 +119,7 @@ Vedere l'esempio per [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>

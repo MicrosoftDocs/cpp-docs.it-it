@@ -1,8 +1,9 @@
 ---
 title: _msize
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _msize
+- _o__msize
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d5f62bd6111a305c18b0ee19bb6d3e90f2ddb49
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951441"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338672"
 ---
 # <a name="_msize"></a>_msize
 
@@ -53,15 +55,17 @@ Puntatore al blocco di memoria.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_msize** restituisce le dimensioni (in byte) come Unsigned Integer.
+**_msize** restituisce la dimensione (in byte) come intero senza segno.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_msize** restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a **calloc**, **malloc**o **realloc**.
+La **funzione _msize** restituisce la dimensione, in byte, del blocco di memoria allocato da una chiamata a **calloc**, **malloc**o **realloc**.
 
-Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **_msize** si risolve in [_msize_dbg](msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
+Quando l'applicazione è collegata a una versione di debug delle librerie di runtime del linguaggio C, **_msize** viene risolto [in _msize_dbg](msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null, **_msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** su **EINVAL** e restituisce-1.
+Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null, **_msize** richiama un gestore di parametri non valido, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** su **EINVAL** e restituisce -1.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -69,7 +73,7 @@ Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore n
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -81,7 +85,7 @@ Vedere l'esempio per [realloc](realloc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [_expand](expand.md)<br/>
 [malloc](malloc.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: _searchenv_s, _wsearchenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wsearchenv_s
 - _searchenv_s
+- _o__searchenv_s
+- _o__wsearchenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +42,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 606215fb7a2cce7929b29e2035f8e03556ca25e0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d526c546e1496b3b13b14a12c9025cbd0347cd2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948794"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332406"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
@@ -84,17 +87,17 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>Parametri
 
-*filename*<br/>
+*Filename*<br/>
 Nome del file di cui eseguire la ricerca.
 
-*varname*<br/>
+*Varname*<br/>
 Ambiente per la ricerca.
 
-*percorso*<br/>
+*Percorso*<br/>
 Buffer per l'archiviazione del percorso completo.
 
-*numberOfElements*<br/>
-Dimensioni del buffer del *percorso* .
+*Sizeinbytes*<br/>
+Dimensione del buffer dei nomi di *percorso.*
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -104,25 +107,27 @@ Se *filename* è una stringa vuota, il valore restituito è **ENOENT**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*filename*|*varname*|*percorso*|*numberOfElements*|Valore restituito|Contenuto di *pathname*|
+|*Filename*|*Varname*|*Percorso*|*Sizeinbytes*|Valore restituito|Contenuto del *nome del percorso*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|qualsiasi|qualsiasi|**NULL**|qualsiasi|**EINVAL**|n/d|
-|**NULL**|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|non modificato|
-|qualsiasi|qualsiasi|qualsiasi|<= 0|**EINVAL**|non modificato|
+|any|any|**Null**|any|**Einval**|n/d|
+|**Null**|any|any|any|**Einval**|non modificato|
+|any|any|any|<= 0|**Einval**|non modificato|
 
 Se si verifica una di queste condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La routine **_searchenv_s** Cerca il file di destinazione nel dominio specificato. La variabile *VarName* può essere qualsiasi ambiente o variabile definita dall'utente che specifica un elenco di percorsi di directory, ad esempio **path**, **lib**e **include**. Poiché **_searchenv_s** fa distinzione tra maiuscole e minuscole, *VarName* deve corrispondere al case della variabile di ambiente. Se *VarName* non corrisponde al nome di una variabile di ambiente definita nell'ambiente del processo, la funzione restituisce zero e la variabile *pathname* è invariata.
+La **routine _searchenv_s** cerca il file di destinazione nel dominio specificato. La variabile *varname* può essere qualsiasi variabile di ambiente o definita dall'utente che specifica un elenco di percorsi di directory, ad esempio **PATH**, **LIB**e **INCLUDE**. Poiché **_searchenv_s** fa distinzione tra maiuscole e minuscole, *varname* deve corrispondere al case della variabile di ambiente. Se *varname* non corrisponde al nome di una variabile di ambiente definita nell'ambiente del processo, la funzione restituisce zero e la variabile *pathname* viene modificata.
 
-La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione si trova in una di queste directory, il percorso appena creato viene copiato in *pathname*. Se il file *filename* non viene trovato, *pathname* contiene una stringa vuota con terminazione null.
+La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione si trova in una di queste directory, il percorso appena creato viene copiato in *nomepercorso*. Se il file *filename* non viene trovato, *pathname* contiene una stringa vuota con terminazione null.
 
-Il buffer del *percorso* deve avere una lunghezza di almeno **_MAX_PATH** caratteri per contenere la lunghezza totale del nome del percorso costruito. In caso contrario, **_searchenv_s** potrebbe sovraccaricare il buffer del *percorso* causando un comportamento imprevisto.
+Il buffer *dei nomi* di percorso deve essere lungo almeno **_MAX_PATH** per contenere l'intera lunghezza del nome del percorso costruito. In caso contrario, **_searchenv_s** potrebbe sovraccaricare il buffer *dei nomi* di percorso causando un comportamento imprevisto.
 
-**_wsearchenv_s** è una versione a caratteri wide di **_searchenv_s**; gli argomenti di **_wsearchenv_s** sono stringhe a caratteri wide. **_wsearchenv_s** e **_searchenv_s** si comportano in modo identico.
+**_wsearchenv_s** è una versione a caratteri wide di **_searchenv_s**; gli argomenti per **_wsearchenv_s** sono stringhe di caratteri wide. **_wsearchenv_s** e **_searchenv_s** si comportano in modo identico in caso contrario.
 
-In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -135,9 +140,9 @@ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli.
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**_searchenv_s**|\<stdlib.h>|
-|**_wsearchenv_s**|\<stdlib.h> or \<wchar.h>|
+|**_wsearchenv_s**|\<stdlib.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

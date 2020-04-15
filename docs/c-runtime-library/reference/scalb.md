@@ -1,9 +1,10 @@
 ---
 title: _scalb, _scalbf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _scalb
 - _scalbf
+- _o__scalb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: 630a5e3db2c39cb40d31c71e6a6dfa214ed91e34
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6501fe53e67d0f277fa64c08e0edbff1d7eeb61a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948888"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332682"
 ---
 # <a name="_scalb-_scalbf"></a>_scalb, _scalbf
 
@@ -56,21 +58,23 @@ float _scalbf(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile e precisione doppia.
 
-*exp*<br/>
+*Exp*<br/>
 Esponente Long Integer.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un valore esponenziale se ha esito positivo. In caso di overflow (a seconda del segno di *x*), **_scalb** restituisce +/- **HUGE_VAL**; la variabile **errno** è impostata su **ERANGE**.
+Restituisce un valore esponenziale se ha esito positivo. In caso di overflow (a seconda del segno di *x*), **_scalb** restituisce HUGE_VAL di **tipo x**; la variabile **errno** è impostata su **ERANGE**.
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_scalb** calcola il valore di *x* \* 2<sup>*Exp*</sup>.
+La funzione **_scalb** calcola il valore di *x* \* 2<sup>*exp*</sup>.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -78,9 +82,9 @@ La funzione **_scalb** calcola il valore di *x* \* 2<sup>*Exp*</sup>.
 |-------------|---------------------|
 |**_scalb**, **_scalbf**|\<float.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

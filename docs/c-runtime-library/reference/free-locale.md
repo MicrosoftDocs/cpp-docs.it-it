@@ -1,8 +1,9 @@
 ---
 title: _free_locale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _free_locale
+- _o__free_locale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 31a8e3191c5e370acb00aaf12e21f0c712c51dd1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 568e44d731f384a0503420339d716fdfdc81e13a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956753"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346048"
 ---
 # <a name="_free_locale"></a>_free_locale
 
@@ -50,14 +52,16 @@ void _free_locale(
 
 ### <a name="parameters"></a>Parametri
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 L'oggetto delle impostazioni locali da liberare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_free_locale** viene utilizzata per liberare l'oggetto delle impostazioni locali ottenuto da una chiamata a **_get_current_locale** o **_create_locale**.
+La funzione **_free_locale** viene utilizzata per liberare l'oggetto locale ottenuto da una chiamata a **_get_current_locale** o **_create_locale**.
 
-Il nome precedente di questa funzione, **__free_locale** (con due caratteri di sottolineatura iniziali), è stato deprecato.
+Il nome precedente di questa funzione, **__free_locale** (con due caratteri di sottolineatura iniziali) è stato deprecato.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -65,7 +69,7 @@ Il nome precedente di questa funzione, **__free_locale** (con due caratteri di s
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

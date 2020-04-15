@@ -1,10 +1,11 @@
 ---
 title: fmod, fmodf, fmodl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fmod
 - fmodf
 - fmodl
+- _o_fmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957071"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346560"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -75,13 +77,15 @@ Valori a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fmod** restituisce il resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **fmod** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** restituisce il resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **fmod** restituisce un NaN silenzioso. Per informazioni sulla rappresentazione di un NaN silenzioso da parte della famiglia **printf,** consultate [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La **funzione fmod** calcola il resto a virgola mobile *f* di *x* / *y* in modo che *x* = *i* \* *y* + *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
+La funzione **fmod** calcola il resto a virgola mobile *f* di *x* / *y* tale che *x* = *i* \* *y* + *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
 
-C++consente l'overload, quindi è possibile chiamare overload di **fmod** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C **fmod** accetta sempre due argomenti **doppi** e restituisce un **valore Double**.
+Il linguaggio C, ovvero l'overload, pertanto è possibile chiamare overload di **fmod** che accettano e restituiscono valori **float** e **long** **double.** In un programma C, **fmod** accetta sempre due argomenti **double** e restituisce un **valore double**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -115,7 +119,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

@@ -1,11 +1,15 @@
 ---
 title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _atoi64_l
 - _wtoi64
 - _atoi64
 - _wtoi64_l
+- _o__atoi64
+- _o__atoi64_l
+- _o__wtoi64
+- _o__wtoi64_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 950774e74462e8d1f301a1d5b933e57feaa9f840
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 103b100b293ff183dd89f3e7c2f291f9d49519e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939493"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348823"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -81,35 +86,37 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
+*Str*<br/>
 Stringa da convertire.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il valore **__int64** prodotto interpretando i caratteri di input come numero. Il valore restituito è 0 per **_atoi64** se l'input non può essere convertito in un valore di tale tipo.
+Ogni funzione restituisce il **valore di __int64** prodotto interpretando i caratteri di input come un numero. Il valore restituito è 0 per **_atoi64** se l'input non può essere convertito in un valore di quel tipo.
 
-In caso di overflow con valori integrali positivi di grandi dimensioni, **_atoi64** restituisce **I64_MAX** e **I64_MIN** in caso di overflow con valori integrali negativi di grandi dimensioni.
+In caso di overflow con grandi valori integrali positivi, **_atoi64** restituisce **I64_MAX** e **I64_MIN** in caso di overflow con valori integrali negativi di grandi dimensioni.
 
-In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
+In tutti i casi non compresi nell'intervallo, **errno** è impostato su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Queste funzioni convertono una stringa di caratteri in un Integer a 64 bit.
 
 La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere potrebbe essere il carattere null ('\0' or L'\0') che termina la stringa.
 
-L'argomento *Str* di **_atoi64** ha il formato seguente:
+L'argomento *str* per **_atoi64** ha il seguente formato:
 
-> [*spazi vuoti*] [*segno*] [*cifre*]
+> [*spazio vuoto*] [*segno*] [*cifre*]
 
-Uno spazio *vuoto* è costituito da caratteri di spazio o di tabulazione, che vengono ignorati; *segno* più (+) o meno (-); le *cifre* e corrispondono a una o più cifre.
+Uno *spazio è* costituito da spazi o caratteri di tabulazione, che vengono ignorati; *segno* è il segno più (-) o meno (-); e *cifre* sono una o più cifre.
 
-**_wtoi64** è identico a **_atoi64** con la differenza che accetta una stringa di caratteri wide come parametro.
+**_wtoi64** è identica a **_atoi64** ad eccezione del fatto che accetta una stringa di caratteri wide come parametro.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni con il **suffisso _l** sono identiche, ad eccezione del fatto che utilizzano il parametro locale passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -123,11 +130,11 @@ Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad e
 |Routine|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_atoi64**, **_atoi64_l**|\<stdlib.h>|
-|**_wtoi64**, **_wtoi64_l**|\<stdlib.h> or \<wchar.h>|
+|**_wtoi64**, **_wtoi64_l**|\<stdlib.h> o \<wchar.h>|
 
 ## <a name="example"></a>Esempio
 
-Questo programma Mostra come i numeri archiviati come stringhe possono essere convertiti in valori numerici usando le funzioni **_atoi64** .
+Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici utilizzando le funzioni **_atoi64.**
 
 ```C
 // crt_atoi64.c
@@ -176,9 +183,9 @@ Overflow condition occurred.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

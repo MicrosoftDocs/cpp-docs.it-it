@@ -11,35 +11,35 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: e06ef25c14f8073d2b8753b57c9593af7bb6c69f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857125"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335002"
 ---
 # <a name="c-multiplicative-operators"></a>Operatori di moltiplicazione C
 
-Gli operatori di moltiplicazione eseguono operazioni di moltiplicazione (<strong>\*</strong>), divisione ( **/** ) e resto ( **%** ).
+Gli operatori moltiplicativi eseguono<strong>\*</strong>operazioni**/** di moltiplicazione**%**( ), division ( ) e resto ( ).
 
 ## <a name="syntax"></a>Sintassi
 
-*multiplicative-expression*: &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
+*multiplicative-expression* &nbsp; &nbsp; &nbsp; &nbsp;: *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *moltiplicativo-espressione* <strong>\*</strong> *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *moltiplicatrice-espressione* **/** *cast-expression cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **%** *cast-expression*
 
-Gli operandi dell'operatore di resto ( **%** ) devono essere integrali. Gli operatori di moltiplicazione (<strong>\*</strong>) e divisione ( **/** ) possono accettare operandi di tipo integrale o mobile; i tipi degli operandi possono essere diversi.
+Gli operandi dell'operatore resto (**%**) devono essere parte integrante. Gli operatori di<strong>\*</strong>moltiplicazione**/**( ) e divisione ( ) possono accettare operandi di tipo integrale o a virgola mobile; i tipi degli operandi possono essere diversi.
 
 Gli operatori di moltiplicazione eseguono le tipiche conversioni aritmetiche sugli operandi. Il tipo del risultato è il tipo degli operandi in seguito alla conversione.
 
 > [!NOTE]
->  Poiché le conversioni eseguite dagli operatori di moltiplicazione non consentono condizioni di overflow o di underflow, le informazioni potrebbero essere perse se il risultato di un'operazione di moltiplicazione non può essere rappresentato nel tipo degli operandi in seguito alla conversione.
+> Poiché le conversioni eseguite dagli operatori di moltiplicazione non consentono condizioni di overflow o di underflow, le informazioni potrebbero essere perse se il risultato di un'operazione di moltiplicazione non può essere rappresentato nel tipo degli operandi in seguito alla conversione.
 
 Gli operatori di moltiplicazione di C sono vengono descritti di seguito:
 
-|??|Descrizione|
+|Operatore|Descrizione|
 |--------------|-----------------|
 |<strong>\*</strong>|L'operatore di moltiplicazione consente ai suoi due operandi di essere moltiplicati.|
-|**/**|L’operatore di divisione consente al primo operando di essere diviso per il secondo. Se due operandi del numero intero vengono divisi e il risultato non è un numero intero, questo viene troncato in base alle regole seguenti:<br/><br/>- Il risultato della divisione per 0 non è definito, in base allo standard ANSI C. Il compilatore C Microsoft genera un errore in fase di compilazione o di esecuzione.<br/><br/>- Se entrambi gli operandi sono positivi o senza segno, il risultato viene troncato verso 0.<br/><br/>- Se uno degli operandi è negativo, a seconda dell'implementazione il risultato dell'operazione può essere l'intero più grande minore o uguale al quoziente algebrico o l'intero più piccolo maggiore o uguale al quoziente algebrico. Vedere la sezione specifica di Microsoft riportata di seguito.|
-|**%**|Il risultato dell'operatore di resto è il resto quando il primo operando viene diviso per il secondo. Quando la divisione non è esatta, il risultato è determinato dalle seguenti regole:<br/><br/>- Se l'operando destro è zero, il risultato è non definito.<br/><br/>- Se entrambi gli operandi sono positivi o senza segno, il risultato è positivo.<br/><br/>- Se uno degli operandi è negativo e il risultato non è esatto, il risultato è definito dall'implementazione. Vedere la sezione specifica di Microsoft riportata di seguito.|
+|**/**|L’operatore di divisione consente al primo operando di essere diviso per il secondo. Se due operandi del numero intero vengono divisi e il risultato non è un numero intero, questo viene troncato in base alle regole seguenti:<br/><br/>- Il risultato della divisione per 0 non è definito, in base allo standard ANSI C. Il compilatore C Microsoft genera un errore in fase di compilazione o di esecuzione.<br/><br/>- Se entrambi gli operandi sono positivi o senza segno, il risultato viene troncato verso 0.<br/><br/>- Se uno degli operandi è negativo, a seconda dell'implementazione il risultato dell'operazione può essere l'intero più grande minore o uguale al quoziente algebrico o l'intero più piccolo maggiore o uguale al quoziente algebrico. (Vedere la sezione specifica di Microsoft di seguito.)|
+|**%**|Il risultato dell'operatore di resto è il resto quando il primo operando viene diviso per il secondo. Quando la divisione non è esatta, il risultato è determinato dalle seguenti regole:<br/><br/>- Se l'operando destro è zero, il risultato è non definito.<br/><br/>- Se entrambi gli operandi sono positivi o senza segno, il risultato è positivo.<br/><br/>- Se uno degli operandi è negativo e il risultato non è esatto, il risultato è definito dall'implementazione. (Vedere la sezione specifica di Microsoft di seguito.)|
 
 ### <a name="microsoft-specific"></a>Specifico di Microsoft
 
@@ -76,7 +76,7 @@ n = i % j;
 
 Questa istruzione assegna `n` il resto del numero intero, 1 quando 10 viene diviso per 3.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Il segno del resto è uguale al segno del dividendo. Ad esempio:
 
@@ -87,8 +87,8 @@ Il segno del resto è uguale al segno del dividendo. Ad esempio:
 
 In ogni caso, `50` e `2` hanno lo stesso segno.
 
-**Fine sezione specifica Microsoft**
+**FINE Specifico di Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operatori di moltiplicazione e operatori modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+[Operatori moltiplicativi e l'operatore Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md)

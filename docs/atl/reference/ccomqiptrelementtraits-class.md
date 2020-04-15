@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
-ms.openlocfilehash: 42662a971f5d293cff404ca1eda161a3b87b13b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f2669c157310be02f746672b22f6c0ed005075
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327403"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>Classe CComQIPtrElementTraits
 
-Questa classe fornisce metodi e funzioni statiche typedef utile durante la creazione di raccolte di puntatori a interfaccia COM.
+Questa classe fornisce metodi, funzioni statiche e typedef utili durante la creazione di raccolte di puntatori a interfaccia COM.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,11 +29,11 @@ class CComQIPtrElementTraits :
 
 #### <a name="parameters"></a>Parametri
 
-*I*<br/>
+*Ho*<br/>
 Un'interfaccia COM che specifica il tipo di puntatore da archiviare.
 
 *piid*<br/>
-Un puntatore all'IID del *ho*.
+Puntatore all'IID di *I*.
 
 ## <a name="members"></a>Membri
 
@@ -41,33 +41,33 @@ Un puntatore all'IID del *ho*.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|
+|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Tipo di dati da utilizzare per l'aggiunta di elementi all'oggetto classe di raccolta.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe deriva i metodi e fornisce un typedef utile durante la creazione di una classe di raccolta di [CComQIPtr](../../atl/reference/ccomqiptr-class.md) oggetti puntatore dell'interfaccia COM. Questa classe viene usata da entrambe le [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) e [CInterfaceList](../../atl/reference/cinterfacelist-class.md) classi.
+Questa classe deriva i metodi e fornisce un typedef utile quando si crea una classe di raccolta di [CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM interface pointer oggetti. Questa classe viene utilizzata da entrambe le classi [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) e [CInterfaceList.](../../atl/reference/cinterfacelist-class.md)
 
-Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
+Per ulteriori informazioni, vedere Classi di raccolte [ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
 [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+[Caratteristiche CDefaultHash](../../atl/reference/cdefaulthashtraits-class.md)
 
 [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[Tratti CDefaultElement](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CComQIPtrElementTraits`
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcoll. h
+**Intestazione:** atlcoll.h
 
-##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE
+## <a name="ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE
 
-Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.
+Tipo di dati da utilizzare per l'aggiunta di elementi all'oggetto classe di raccolta.
 
 ```
 typedef I* INARGTYPE;
@@ -76,4 +76,4 @@ typedef I* INARGTYPE;
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

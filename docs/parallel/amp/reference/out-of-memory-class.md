@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: 4edc1db3c1a70a41f9a0493bd3dc484e27f99b44
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e716d4952bdb9634cc0d195285d3a65c5c06b0a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126448"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336809"
 ---
 # <a name="out_of_memory-class"></a>out_of_memory (classe)
 
-Eccezione generata quando un metodo ha esito negativo a causa della mancanza di memoria del sistema o del dispositivo.
+Eccezione generata quando un metodo non riesce a causa della mancanza di memoria del sistema o del dispositivo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,13 +25,13 @@ Eccezione generata quando un metodo ha esito negativo a causa della mancanza di 
 class out_of_memory : public runtime_exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore out_of_memory](#ctor)|Inizializza una nuova istanza della classe `out_of_memory`.|
+|[Out_of_memory Costruttore](#ctor)|Inizializza una nuova istanza della classe `out_of_memory`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -43,10 +43,11 @@ class out_of_memory : public runtime_exception;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amprt. h
+**Intestazione:** amprt.h
 
-**Spazio dei nomi:** Concurrency
-## <a name="ctor"></a>out_of_memory
+**Spazio dei nomi:** Concorrenza
+
+## <a name="out_of_memory"></a><a name="ctor"></a>out_of_memory
 
 Inizializza una nuova istanza della classe.
 
@@ -70,4 +71,4 @@ Nuova istanza della classe `out_of_memory`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Spazio dei nomi Concurrency (AMP)](concurrency-namespace-cpp-amp.md)

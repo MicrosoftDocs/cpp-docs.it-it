@@ -1,10 +1,12 @@
 ---
 title: _seh_filter_dll, _seh_filter_exe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _XcptFilter
 - _seh_filter_dll
 - _seh_filter_exe
+- _o__seh_filter_dll
+- _o__seh_filter_exe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-ms.openlocfilehash: c8c76a4a1d1a39e26f5e78869d3b107578d2085a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf92ea52c2614eb133bcd1ec820a386d1f38e8f5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948687"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337946"
 ---
 # <a name="_seh_filter_dll-_seh_filter_exe"></a>_seh_filter_dll, _seh_filter_exe
 
@@ -70,9 +73,9 @@ Puntatore alle informazioni sull'eccezione.
 
 Un intero che indica l'azione da intraprendere in base al risultato dell'elaborazione delle eccezioni.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questi metodi vengono chiamati dall'espressione di filtro delle eccezioni dell'[istruzione try-except](../../cpp/try-except-statement.md). Il metodo consulta una tabella interna di costanti per identificare l'eccezione e determinare l'azione appropriata, come illustrato di seguito. I numeri di eccezione sono definiti in winnt.h e i numeri di segnale in signal.h.
+Questi metodi vengono chiamati dall'espressione di filtro eccezioni di [try-except Statement](../../cpp/try-except-statement.md). Il metodo consulta una tabella interna di costanti per identificare l'eccezione e determinare l'azione appropriata, come illustrato di seguito. I numeri di eccezione sono definiti in winnt.h e i numeri di segnale in signal.h.
 
 |Numero di eccezioni (unsigned long)|Numero di segnale|
 |----------------------------------------|-------------------|
@@ -87,10 +90,12 @@ Questi metodi vengono chiamati dall'espressione di filtro delle eccezioni dell'[
 |STATUS_FLOAT_STACK_CHECK|SIGFPE|
 |STATUS_FLOAT_UNDERFLOW|SIGFPE|
 
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** corecrt_startup.h
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>

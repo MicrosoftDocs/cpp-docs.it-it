@@ -1,5 +1,5 @@
 ---
-title: Classe IPropertyPage2Impl
+title: IPropertyPage2Impl (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyPage2Impl
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: 5ec6cb2f4fc6931a1bec429068b558bf7ac1906e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d112a2411a9debbf2eb77e6b851f4500e8d32ab8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495604"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329598"
 ---
-# <a name="ipropertypage2impl-class"></a>Classe IPropertyPage2Impl
+# <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl (classe)
 
-Questa classe implementa `IUnknown` ed eredita l'implementazione predefinita di [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).
+Questa classe `IUnknown` implementa ed eredita l'implementazione predefinita di [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,25 +34,25 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe derivata da `IPropertyPage2Impl`.
+La classe, `IPropertyPage2Impl`derivata da .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IPropertyPage2Impl::EditProperty](#editproperty)|Specifica quale controllo proprietà riceverà lo stato attivo quando la pagina delle proprietà viene attivata. L'implementazione ATL restituisce E_NOTIMPL.|
+|[IPropertyPage2Impl::EditProperty](#editproperty)|Specifica quale controllo proprietà riceverà lo stato attivo quando viene attivata la pagina delle proprietà. L'implementazione ATL restituisce E_NOTIMPL.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'interfaccia [IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2) estende [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) aggiungendo il `EditProperty` metodo. Questo metodo consente a un client di selezionare una proprietà specifica in un oggetto pagina delle proprietà.
+Il [IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2) interfaccia estende [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) aggiungendo il `EditProperty` metodo . Questo metodo consente a un client di selezionare una proprietà specifica in un oggetto pagina delle proprietà.
 
-La `IPropertyPage2Impl` classe restituisce semplicemente E_NOTIMPL `IPropertyPage2::EditProperty`per. Tuttavia, eredita l'implementazione predefinita di [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) e implementa `IUnknown` inviando informazioni al dispositivo di dump nelle build di debug.
+Classe `IPropertyPage2Impl` restituisce `IPropertyPage2::EditProperty`semplicemente E_NOTIMPL per . Tuttavia, eredita l'implementazione predefinita di [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) e implementa `IUnknown` inviando informazioni al dispositivo di dump nelle build di debug.
 
-Quando si crea una pagina delle proprietà, la classe viene in genere `IPropertyPageImpl`derivata da. Per fornire il supporto aggiuntivo di `IPropertyPage2`, modificare la definizione della classe ed eseguire `EditProperty` l'override del metodo.
+Quando si crea una pagina delle proprietà, la classe viene in genere derivata da `IPropertyPageImpl`. Per fornire il `IPropertyPage2`supporto aggiuntivo di , `EditProperty` modificare la definizione della classe ed eseguire l'override del metodo.
 
-**Articoli correlati** [Esercitazione su ATL](../../atl/active-template-library-atl-tutorial.md), [creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)
+**Articoli correlati** [ATL Esercitazione](../../atl/active-template-library-atl-tutorial.md), [Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -64,11 +64,11 @@ Quando si crea una pagina delle proprietà, la classe viene in genere `IProperty
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlctl. h
+**Intestazione:** atlctl.h
 
-##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty
+## <a name="ipropertypage2impleditproperty"></a><a name="editproperty"></a>IPropertyPage2Impl::EditProperty
 
-Specifica quale controllo proprietà riceverà lo stato attivo quando la pagina delle proprietà viene attivata.
+Specifica quale controllo proprietà riceverà lo stato attivo quando viene attivata la pagina delle proprietà.
 
 ```
 HRESULT EditProperty(DISPID dispID);
@@ -78,12 +78,12 @@ HRESULT EditProperty(DISPID dispID);
 
 Restituisce E_NOTIMPL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Vedere [IPropertyPage2:: EditProperty](/windows/win32/api/ocidl/nf-ocidl-ipropertypage2-editproperty) nella Windows SDK.
+Vedere [IPropertyPage2::EditProperty](/windows/win32/api/ocidl/nf-ocidl-ipropertypage2-editproperty) in Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[IPerPropertyBrowsingImpl (classe)](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [Classe ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)
