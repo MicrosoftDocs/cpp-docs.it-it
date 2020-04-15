@@ -6,37 +6,37 @@ helpviewer_keywords:
 - image lists [MFC], toolbar controls
 - CToolBarCtrl class [MFC], image lists
 ms.assetid: ccbe8df4-4ed9-4b54-bb93-9a1dcb3b97eb
-ms.openlocfilehash: d027f7834c67ad0ed51d1b7fda5b2704972efe38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81468528c15300a7e9ace6b20fd9fb34818f1928
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411565"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366488"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Utilizzo di elenchi di immagini in un controllo Toolbar
 
-Per impostazione predefinita, le immagini utilizzate dai pulsanti di un controllo barra degli strumenti vengono archiviate come una singola bitmap. Tuttavia, è anche possibile archiviare le immagini dei pulsanti in un set di elenchi di immagini. L'oggetto di controllo della barra degli strumenti è possibile usare fino a tre elenchi di immagini distinti:
+Per impostazione predefinita, le immagini utilizzate dai pulsanti in un controllo barra degli strumenti vengono archiviate come una singola bitmap. Tuttavia, è anche possibile memorizzare le immagini dei pulsanti in un set di elenchi di immagini. L'oggetto controllo barra degli strumenti può utilizzare fino a tre elenchi di immagini separati:
 
-- Abilitato immagine elenco contiene le icone per i pulsanti della barra degli strumenti attualmente abilitati.
+- Elenco immagini abilitate Contiene immagini per i pulsanti della barra degli strumenti attualmente abilitati.
 
-- Disabilitato immagine elenco contiene le icone per i pulsanti della barra degli strumenti sono attualmente disabilitate.
+- Elenco immagini disabilitate Contiene immagini per i pulsanti della barra degli strumenti attualmente disabilitati.
 
-- Evidenziato immagine elenco contiene le icone per i pulsanti della barra degli strumenti sono attualmente evidenziati. Questo elenco immagini viene usato solo quando la barra degli strumenti Usa lo stile TBSTYLE_FLAT.
+- Elenco immagini evidenziate Contiene immagini per i pulsanti della barra degli strumenti attualmente evidenziati. Questo elenco immagini viene utilizzato solo quando la barra degli strumenti utilizza lo stile TBSTYLE_FLAT.
 
-Questi elenchi di immagini vengono utilizzati dal controllo della barra degli strumenti quando si associa con il `CToolBarCtrl` oggetto. Viene eseguita questa associazione effettuando chiamate al [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), e [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).
+Questi elenchi immagini vengono utilizzati dal controllo `CToolBarCtrl` barra degli strumenti quando vengono associati all'oggetto. Questa associazione viene eseguita effettuando chiamate a [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist)e [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).
 
-Per impostazione predefinita, MFC utilizza il `CToolBar` classe per implementare le barre degli strumenti dell'applicazione MFC. Tuttavia, il `GetToolBarCtrl` funzione membro può essere usata per recuperare l'oggetto incorporato `CToolBarCtrl` oggetto. È quindi possibile effettuare chiamate al `CToolBarCtrl` funzioni membro tramite l'oggetto restituito.
+Per impostazione predefinita, MFC utilizza la `CToolBar` classe per implementare le barre degli strumenti dell'applicazione MFC. Tuttavia, `GetToolBarCtrl` la funzione membro può `CToolBarCtrl` essere utilizzata per recuperare l'oggetto incorporato. È quindi possibile `CToolBarCtrl` effettuare chiamate alle funzioni membro utilizzando l'oggetto restituito.
 
-L'esempio seguente illustra questa tecnica assegnando un abilitato (`m_ToolBarImages`) e disabled (`m_ToolBarDisabledImages`) elenco immagini da un `CToolBarCtrl` oggetto (`m_ToolBarCtrl`).
+Nell'esempio seguente viene illustrata questa`m_ToolBarImages`tecnica assegnando un elenco immagini enabled ( ) e disabled (`m_ToolBarDisabledImages`) a un `CToolBarCtrl` oggetto (`m_ToolBarCtrl`).
 
 [!code-cpp[NVC_MFCControlLadenDialog#35](../mfc/codesnippet/cpp/using-image-lists-in-a-toolbar-control_1.cpp)]
 
 > [!NOTE]
->  Gli elenchi di immagini utilizzati dall'oggetto della barra degli strumenti devono essere di oggetti permanenti. Per questo motivo, sono comunemente dati membri di una classe MFC. In questo esempio, la classe della finestra cornice principale.
+> Gli elenchi di immagini utilizzati dall'oggetto barra degli strumenti devono essere oggetti permanenti. Per questo motivo, sono in genere membri dati di una classe MFC; in questo esempio, la classe della finestra cornice principale.
 
-Una volta sono associati gli elenchi di immagini di `CToolBarCtrl` dell'oggetto, il framework visualizza automaticamente l'immagine del pulsante appropriata.
+Una volta che gli `CToolBarCtrl` elenchi di immagini sono associati all'oggetto, il framework visualizza automaticamente l'immagine del pulsante appropriato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Utilizzo di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

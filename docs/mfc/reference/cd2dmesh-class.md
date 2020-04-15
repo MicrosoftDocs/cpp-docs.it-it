@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-ms.openlocfilehash: f4ad6fd054eeb8576c2fdb2dc924f70034b3abad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64f5dd7b40853a86dc7f964ecd3701f132a94e16
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396366"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369190"
 ---
 # <a name="cd2dmesh-class"></a>Classe CD2DMesh
 
@@ -48,25 +48,25 @@ class CD2DMesh : public CD2DResource;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DMesh::CD2DMesh](#cd2dmesh)|Costruisce un oggetto CD2DMesh.|
-|[CD2DMesh:: ~ CD2DMesh](#_dtorcd2dmesh)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto reticolato D2D.|
+|[CD2DMesh::CD2DMesh](#_dtorcd2dmesh)|Distruttore. Chiamato quando un oggetto mesh D2D viene eliminato definitivamente.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DMesh::Attach](#attach)|Collega esistente all'oggetto di interfaccia delle risorse|
-|[CD2DMesh::Create](#create)|Crea un CD2DMesh. (Esegue l'override [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DMesh::Destroy](#destroy)|Elimina un oggetto CD2DMesh. (Esegue l'override [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DMesh::Detach](#detach)|Scollega interfaccia di risorse dall'oggetto|
-|[CD2DMesh::Get](#get)|Restituisce l'interfaccia ID2D1Mesh|
-|[CD2DMesh::IsValid](#isvalid)|Controlla la validità della risorsa (esegue l'override [CD2DResource:: IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
-|[CD2DMesh::Open](#open)|Apre il mesh per il popolamento.|
+|[CD2DMesh::Associare](#attach)|Associa all'oggetto un'interfaccia di risorsa esistente|
+|[CD2DMesh::Creare](#create)|Crea un CD2DMesh. (Esegue l'override di [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DMesh::Destroy](#destroy)|Elimina un oggetto CD2DMesh. (Esegue l'override di [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DMesh::Detach](#detach)|Scollega l'interfaccia delle risorse dall'oggetto|
+|[CD2DMesh::Ottenere](#get)|Restituisce l'interfaccia ID2D1Mesh|
+|[CD2DMesh::IsValid](#isvalid)|Controlla la validità delle risorse (sostituisce [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DMesh::Aperto](#open)|Apre la mesh per la popolazione.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DMesh::operator ID2D1Mesh *](#operator_id2d1mesh_star)|Restituisce l'interfaccia ID2D1Mesh|
+|[CD2DMesh::operatore ID2D1Mesh](#operator_id2d1mesh_star)|Restituisce l'interfaccia ID2D1Mesh|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -78,25 +78,25 @@ class CD2DMesh : public CD2DResource;
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource (informazioni in confronto a 3)](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DMesh`
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget. h
+**Intestazione:** afxrendertarget.h
 
-##  <a name="_dtorcd2dmesh"></a>  CD2DMesh:: ~ CD2DMesh
+## <a name="cd2dmeshcd2dmesh"></a><a name="_dtorcd2dmesh"></a>CD2DMesh::CD2DMesh
 
-Distruttore. Chiamato quando viene eliminata definitivamente un oggetto reticolato D2D.
+Distruttore. Chiamato quando un oggetto mesh D2D viene eliminato definitivamente.
 
 ```
 virtual ~CD2DMesh();
 ```
 
-##  <a name="attach"></a>  CD2DMesh::Attach
+## <a name="cd2dmeshattach"></a><a name="attach"></a>CD2DMesh::Associare
 
-Collega esistente all'oggetto di interfaccia delle risorse
+Associa all'oggetto un'interfaccia di risorsa esistente
 
 ```
 void Attach(ID2D1Mesh* pResource);
@@ -104,10 +104,10 @@ void Attach(ID2D1Mesh* pResource);
 
 ### <a name="parameters"></a>Parametri
 
-*pResource*<br/>
-Interfaccia di risorse esistente. Non può essere NULL
+*pRisorsa*<br/>
+Interfaccia delle risorse esistente. Non può essere NULL
 
-##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh
+## <a name="cd2dmeshcd2dmesh"></a><a name="cd2dmesh"></a>CD2DMesh::CD2DMesh
 
 Costruisce un oggetto CD2DMesh.
 
@@ -119,13 +119,13 @@ CD2DMesh(
 
 ### <a name="parameters"></a>Parametri
 
-*pParentTarget*<br/>
+*pParentTarget (Destinazionepadre)*<br/>
 Puntatore alla destinazione di rendering.
 
-*bAutoDestroy*<br/>
-Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
+*bAutoDistruggi*<br/>
+Indica che l'oggetto verrà eliminato dal proprietario (pParentTarget).
 
-##  <a name="create"></a>  CD2DMesh::Create
+## <a name="cd2dmeshcreate"></a><a name="create"></a>CD2DMesh::Creare
 
 Crea un CD2DMesh.
 
@@ -135,14 +135,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*pRenderTarget*<br/>
+*pRenderTarget (informazioni in base alla proprietà*<br/>
 Puntatore alla destinazione di rendering.
 
 ### <a name="return-value"></a>Valore restituito
 
 Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.
 
-##  <a name="destroy"></a>  CD2DMesh::Destroy
+## <a name="cd2dmeshdestroy"></a><a name="destroy"></a>CD2DMesh::Destroy
 
 Elimina un oggetto CD2DMesh.
 
@@ -150,9 +150,9 @@ Elimina un oggetto CD2DMesh.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DMesh::Detach
+## <a name="cd2dmeshdetach"></a><a name="detach"></a>CD2DMesh::Detach
 
-Scollega interfaccia di risorse dall'oggetto
+Scollega l'interfaccia delle risorse dall'oggetto
 
 ```
 ID2D1Mesh* Detach();
@@ -160,9 +160,9 @@ ID2D1Mesh* Detach();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'interfaccia risorse scollegato.
+Puntatore all'interfaccia delle risorse disconnesse.
 
-##  <a name="get"></a>  CD2DMesh::Get
+## <a name="cd2dmeshget"></a><a name="get"></a>CD2DMesh::Ottenere
 
 Restituisce l'interfaccia ID2D1Mesh
 
@@ -174,9 +174,9 @@ ID2D1Mesh* Get();
 
 Puntatore a un'interfaccia ID2D1Mesh o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="isvalid"></a>  CD2DMesh::IsValid
+## <a name="cd2dmeshisvalid"></a><a name="isvalid"></a>CD2DMesh::IsValid
 
-Verifica la validità della risorsa
+Controlla la validità delle risorse
 
 ```
 virtual BOOL IsValid() const;
@@ -184,9 +184,9 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la risorsa è valida. in caso contrario, FALSE.
+TRUESe la risorsa è valida. in caso contrario, FALSE.
 
-##  <a name="m_pmesh"></a>  CD2DMesh::m_pMesh
+## <a name="cd2dmeshm_pmesh"></a><a name="m_pmesh"></a>CD2DMesh::m_pMesh
 
 Puntatore a un ID2D1Mesh.
 
@@ -194,9 +194,9 @@ Puntatore a un ID2D1Mesh.
 ID2D1Mesh* m_pMesh;
 ```
 
-##  <a name="open"></a>  CD2DMesh::Open
+## <a name="cd2dmeshopen"></a><a name="open"></a>CD2DMesh::Aperto
 
-Apre il mesh per il popolamento.
+Apre la mesh per la popolazione.
 
 ```
 ID2D1TessellationSink* Open();
@@ -204,9 +204,9 @@ ID2D1TessellationSink* Open();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a un ID2D1TessellationSink che viene usata per popolare il mesh.
+Puntatore a un ID2D1TessellationSink utilizzato per popolare la mesh.
 
-##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::operator ID2D1Mesh *
+## <a name="cd2dmeshoperator-id2d1mesh"></a><a name="operator_id2d1mesh_star"></a>CD2DMesh::operatore ID2D1Mesh
 
 Restituisce l'interfaccia ID2D1Mesh
 

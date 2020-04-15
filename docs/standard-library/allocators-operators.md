@@ -5,22 +5,22 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7bc37e98ed85582cac8fc7ae21e54a6d5da9e06f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416900"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364954"
 ---
 # <a name="ltallocatorsgt-operators"></a>Operatori &lt;allocators&gt;
 
-Queste sono le funzioni dell'operatore modello globale definite in &lt;allocatori&gt;. Per le funzioni dell'operatore membro della classe, vedere la documentazione relativa alla classe.
+Si tratta delle funzioni dell'operatore del modello globale definite negli &lt;allocatori&gt;. Per le funzioni dell'operatore membro di classe, vedere la documentazione della classe.
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+|[operatore!](#op_neq)|[operatore di comando](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>operatore!
 
 Verifica la disuguaglianza tra gli oggetti allocatore di una classe specificata.
 
@@ -35,8 +35,8 @@ bool operator!=(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*left*|Uno degli oggetti allocatore di cui verificare la disuguaglianza.|
-|*right*|Uno degli oggetti allocatore di cui verificare la disuguaglianza.|
+|*Sinistra*|Uno degli oggetti allocatore di cui verificare la disuguaglianza.|
+|*va bene*|Uno degli oggetti allocatore di cui verificare la disuguaglianza.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -44,9 +44,9 @@ bool operator!=(
 
 ### <a name="remarks"></a>Osservazioni
 
-L'operatore di modello restituisce `!(left == right)`.
+L'operatore modello restituisce `!(left == right)`.
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore di comando
 
 Verifica l'uguaglianza tra gli oggetti allocatore di una classe specificata.
 
@@ -61,8 +61,8 @@ bool operator==(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*left*|Uno degli oggetti allocatore di cui verificare l'uguaglianza.|
-|*right*|Uno degli oggetti allocatore di cui verificare l'uguaglianza.|
+|*Sinistra*|Uno degli oggetti allocatore di cui verificare l'uguaglianza.|
+|*va bene*|Uno degli oggetti allocatore di cui verificare l'uguaglianza.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -74,4 +74,4 @@ Questo operatore di modello restituisce `left.equals(right)`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocatori>](../standard-library/allocators-header.md)

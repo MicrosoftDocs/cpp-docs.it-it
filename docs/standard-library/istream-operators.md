@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 5ac5c61488530f99cdad38ca1bfca365b6ac0f8c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3b9521fde1b5a03389bfc1ad3e35fa407d9d6ac0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420127"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363030"
 ---
 # <a name="ltistreamgt-operators"></a>Operatori &lt;istream&gt;
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Operatore&gt;&gt;
 
 Estrae caratteri e stringhe dal flusso.
 
@@ -56,16 +56,16 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-\ *ch*
+*Ch*\
 Carattere.
 
-\ *istr*
+*Istr*\
 Flusso.
 
-\ *Str*
+*Str*\
 Stringa.
 
-\ *Val*
+*Val*\
 Tipo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-estrae fino a `N - 1` elementi e li archivia nella matrice a partire da *Str*. Se `Istr.`[larghezza](../standard-library/ios-base-class.md#width) è maggiore di zero, *N* è `Istr.width`; in caso contrario, è la dimensione della matrice di `Elem` più grande che può essere dichiarata. La funzione archivia sempre il valore `Elem()` dopo gli elementi estratti archiviati. L'estrazione si interrompe prima della fine del file, su un carattere con valore `Elem(0)` (che non viene estratto) o su qualsiasi elemento (che non viene estratto) che verrebbe rimosso da [WS](../standard-library/istream-functions.md#ws). Se la funzione non estrae alcun elemento, chiama `Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. In ogni caso, chiama `Istr.width(0)` e restituisce *istr*.
+estrae `N - 1` fino a elementi e li memorizza nella matrice a partire da *str*. Se `Istr.` [width](../standard-library/ios-base-class.md#width) è maggiore di zero, *N* è `Istr.width`; in caso contrario, è la `Elem` dimensione della matrice più grande di che può essere dichiarata. La funzione archivia `Elem()` sempre il valore dopo tutti gli elementi estratti archiviati. L'estrazione si interrompe presto alla fine `Elem(0)` del file, su un carattere con valore (che non viene estratto) o su qualsiasi elemento (che non viene estratto) che verrebbe eliminato da [ws](../standard-library/istream-functions.md#ws). Se la funzione non estrae alcun elemento, chiama `Istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`. In ogni caso, `Istr.width(0)` chiama e restituisce *Istr*.
 
-**Nota sulla sicurezza** La stringa con terminazione null da estrarre dal flusso di input non deve superare la dimensione dello *Str*del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
+**Nota sulla sicurezza** La stringa con terminazione null estratta dal flusso di input non deve superare la dimensione del buffer di destinazione *str*. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Il modello di funzione:
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-estrae un elemento, se possibile, e lo archivia in *ch*. In caso contrario, chiama `is.``(failbit)`[`setstate`](../standard-library/basic-ios-class.md#setstate) . In ogni caso, restituisce *istr*.
+estrae un elemento, se possibile, e lo memorizza in *Ch*. In caso `is.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`contrario, chiama . In ogni caso, restituisce *Istr*.
 
 Il modello di funzione:
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Restituisce `Istr >> val` (e converte un riferimento rvalue in `Istr` in un lvalue nel processo).
+restituisce `Istr >> val` (e converte un `Istr` riferimento rvalue in un lvalue nel processo).
 
 ### <a name="example"></a>Esempio
 

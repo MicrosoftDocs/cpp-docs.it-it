@@ -8,12 +8,12 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 9d19328fb82503519fd8eca083e0dd11e10883ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9618f25d738c092ab1818ef7c4ea52928e2ea60
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212953"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367045"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset: dichiarazione di una classe per una query già definita (ODBC)
 
@@ -25,14 +25,14 @@ Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC
 In questo argomento viene illustrato come creare una classe recordset per una query predefinita (talvolta denominata stored procedure, come in Microsoft SQL Server).
 
 > [!NOTE]
->  Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se viene implementato il recupero di massa di righe, il processo è molto simile. Per comprendere le differenze tra i recordset che implementano il recupero di righe bulk e quelli che non lo sono, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se viene implementato il recupero di massa di righe, il processo è molto simile. Per comprendere le differenze tra i recordset che implementano il recupero di massa di righe e quelli che non lo implementano, vedere [Recordset: recupero di massa di record (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Alcuni sistemi di gestione di database (DBMS) consentono di creare una query predefinita e di chiamarla dai programmi come una funzione. La query dispone di un nome, può accettare parametri e può restituire record. La procedura descritta in questo argomento illustra come chiamare una query predefinita che restituisce record (ed eventualmente accetta parametri).
 
 Le classi di database non supportano l'aggiornamento delle query predefinite. La differenza tra una query predefinita snapshot e una query predefinita dynaset non è l'aggiornabilità, ma il fatto che le modifiche apportate da altri utenti (o altri recordset nel programma) siano visibili o meno nel recordset.
 
 > [!TIP]
->  Non è necessario un recordset per chiamare una query predefinita che non restituisce record. Preparare l'istruzione SQL come descritto di seguito, ma eseguirla chiamando la funzione `CDatabase`ExecuteSQL[ del membro ](../../mfc/reference/cdatabase-class.md#executesql).
+> Non è necessario un recordset per chiamare una query predefinita che non restituisce record. Preparare l'istruzione SQL come descritto di seguito, ma eseguirla chiamando la funzione [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) del membro `CDatabase`.
 
 È possibile creare una singola classe recordset per gestire la chiamata di una query predefinita, ma è necessario eseguire alcune operazioni manualmente. Le procedure guidate non supportano la creazione di una classe per questo scopo specifico.
 
@@ -66,7 +66,7 @@ Le classi di database non supportano l'aggiornamento delle query predefinite. La
 
 1. Se la query accetta parametri, aggiungere un membro dati di parametro per ogni parametro, nonché una chiamata di funzione RFX e un'inizializzazione per ognuno.
 
-1. È necessario incrementare `m_nParams` per ciascun parametro aggiunto, com'è stato fatto con `m_nFields` per i campi aggiunti nel passaggio 4 di questa procedura. Per ulteriori informazioni, vedere [Recordset: parametrizzazione di un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. È necessario incrementare `m_nParams` per ciascun parametro aggiunto, com'è stato fatto con `m_nFields` per i campi aggiunti nel passaggio 4 di questa procedura. Per ulteriori informazioni, vedere [Recordset: applicazione di parametri a un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Scrivere manualmente una stringa di istruzione SQL nel formato seguente:
 
@@ -151,7 +151,7 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 Questo codice crea uno snapshot, gli passa un parametro ottenuto in precedenza dall'utente e chiama la query predefinita. Quando la query viene eseguita, restituisce i record per la zona di vendita specificata. Ogni record contiene le colonne per il numero di account, il cognome del cliente e il numero di telefono del cliente.
 
 > [!TIP]
->  È possibile gestire un valore restituito (parametro di output) da una stored procedure. Per altre informazioni e un esempio, vedere [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
+> È possibile gestire un valore restituito (parametro di output) da una stored procedure. Per altre informazioni e un esempio, vedere [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
 ## <a name="see-also"></a>Vedere anche
 

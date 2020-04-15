@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb51c7b11f75debece61105bf20a201b6eab80a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391257"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369232"
 ---
 # <a name="cd2dgeometrysink-class"></a>Classe CD2DGeometrySink
 
-Un wrapper per ID2D1GeometrySink.
+Wrapper per ID2D1GeometrySink.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -62,32 +62,32 @@ class CD2DGeometrySink;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Costruisce un oggetto CD2DGeometrySink dall'oggetto CD2DPathGeometry.|
-|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto sink di geometry D2D.|
+|[CD2DGeometrySink:: s CD2DGeometrySink](#_dtorcd2dgeometrysink)|Distruttore. Chiamato quando un oggetto sink di geometria D2D viene eliminato definitivamente.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DGeometrySink::AddArc](#addarc)|Aggiunge un arco singolo per la geometria del percorso|
+|[CD2DGeometrySink::AddArc](#addarc)|Aggiunge un singolo arco alla geometria del percorso|
 |[CD2DGeometrySink::AddBezier](#addbezier)|Crea una curva di Bézier cubica tra il punto corrente e il punto finale specificato.|
-|[CD2DGeometrySink::AddBeziers](#addbeziers)|Crea una sequenza di curve di Bézier cubiche e li aggiunge al sink di geometria.|
-|[CD2DGeometrySink::AddLine](#addline)|Crea un segmento di linea tra il punto corrente e il punto finale specificato e lo aggiunge al sink di geometria.|
-|[CD2DGeometrySink::AddLines](#addlines)|Crea una sequenza di righe usando i punti specificati e li aggiunge al sink di geometria.|
+|[CD2DGeometrySink::AddBeziers](#addbeziers)|Crea una sequenza di curve di Bézier cubiche e le aggiunge al sink di geometria.|
+|[CD2DGeometrySink::AddLine](#addline)|Crea un segmento di linea tra il punto corrente e il punto finale specificato e lo aggiunge al sink geometrico.|
+|[CD2DGeometrySink::AddLines](#addlines)|Crea una sequenza di linee utilizzando i punti specificati e li aggiunge al sink di geometria.|
 |[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|Crea una curva di Bézier quadratica tra il punto corrente e il punto finale specificato.|
-|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|Aggiunge una sequenza di segmenti di curva di Bezier quadratica sotto forma di matrice in una singola chiamata.|
+|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|Aggiunge una sequenza di segmenti di Bézier quadratici come matrice in una singola chiamata.|
 |[CD2DGeometrySink::BeginFigure](#beginfigure)|Avvia una nuova figura nel punto specificato.|
-|[CD2DGeometrySink::Close](#close)|Chiude il sink di geometria|
-|[CD2DGeometrySink::EndFigure](#endfigure)|Termina la figura corrente. Facoltativamente, lo chiude.|
+|[CD2DGeometrySink::Close](#close)|Chiude il lavandino della geometria|
+|[CD2DGeometrySink::EndFigure (Figurafinale)](#endfigure)|Termina la figura corrente; facoltativamente, lo chiude.|
 |[CD2DGeometrySink::Get](#get)|Restituisce l'interfaccia ID2D1GeometrySink|
-|[CD2DGeometrySink::IsValid](#isvalid)|Controlla la validità di sink di geometria|
-|[CD2DGeometrySink::SetFillMode](#setfillmode)|Specifica il metodo utilizzato per determinare quali punti si trovano all'interno della geometria descritta da questo sink geometry e quali punti sono di fuori.|
-|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Specifica le opzioni di traccia e join da applicare ai nuovi segmenti aggiunti al sink di geometria.|
+|[CD2DGeometrySink::IsValid](#isvalid)|Verifica la validità del sink di geometria|
+|[CD2DGeometrySink::SetFillMode](#setfillmode)|Specifica il metodo utilizzato per determinare quali punti si trovano all'interno della geometria descritta da questo sink di geometria e quali punti sono all'esterno.|
+|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Specifica le opzioni di traccia e giunzione da applicare ai nuovi segmenti aggiunti al sink di geometria.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|Restituisce l'interfaccia ID2D1GeometrySink|
+|[CD2DGeometrySink::operator ID2D1GeometrySink](#operator_id2d1geometrysink_star)|Restituisce l'interfaccia ID2D1GeometrySink|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -101,19 +101,19 @@ class CD2DGeometrySink;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget. h
+**Intestazione:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink
+## <a name="cd2dgeometrysinkcd2dgeometrysink"></a><a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink:: s CD2DGeometrySink
 
-Distruttore. Chiamato quando viene eliminata definitivamente un oggetto sink di geometry D2D.
+Distruttore. Chiamato quando un oggetto sink di geometria D2D viene eliminato definitivamente.
 
 ```
 virtual ~CD2DGeometrySink();
 ```
 
-##  <a name="addarc"></a>  CD2DGeometrySink::AddArc
+## <a name="cd2dgeometrysinkaddarc"></a><a name="addarc"></a>CD2DGeometrySink::AddArc
 
-Aggiunge un arco singolo per la geometria del percorso
+Aggiunge un singolo arco alla geometria del percorso
 
 ```
 void AddArc(const D2D1_ARC_SEGMENT& arc);
@@ -121,10 +121,10 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 ### <a name="parameters"></a>Parametri
 
-*arc*<br/>
+*Arco*<br/>
 Il segmento di arco da aggiungere alla figura
 
-##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
+## <a name="cd2dgeometrysinkaddbezier"></a><a name="addbezier"></a>CD2DGeometrySink::AddBezier
 
 Crea una curva di Bézier cubica tra il punto corrente e il punto finale specificato.
 
@@ -134,12 +134,12 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Parametri
 
-*bezier*<br/>
+*Bezier*<br/>
 Struttura che descrive i punti di controllo e il punto finale della curva di Bézier da aggiungere.
 
-##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
+## <a name="cd2dgeometrysinkaddbeziers"></a><a name="addbeziers"></a>CD2DGeometrySink::AddBeziers
 
-Crea una sequenza di curve di Bézier cubiche e li aggiunge al sink di geometria.
+Crea una sequenza di curve di Bézier cubiche e le aggiunge al sink di geometria.
 
 ```
 void AddBeziers(
@@ -149,12 +149,12 @@ void AddBeziers(
 
 ### <a name="parameters"></a>Parametri
 
-*beziers*<br/>
-Una matrice di segmenti di Bézier che descrive le curve di Bezier per creare. Una curva viene disegnata dal punto corrente del sink di geometria (il punto finale dell'ultimo segmento disegnata o alla posizione specificata da BeginFigure) per il punto finale del segmento di Bézier prima nella matrice. Se la matrice contiene altri segmenti di curva di Bezier, ogni segmento di Bézier successivo Usa il punto finale del segmento di Bézier precedente come punto di inizio.
+*Beziers*<br/>
+Matrice di segmenti di Bézier che descrive le curve di Bézier da creare. Una curva viene disegnata dal punto corrente del sink geometrico (il punto finale dell'ultimo segmento disegnato o la posizione specificata da BeginFigure) al punto finale del primo segmento di Bezier nella matrice. se la serie contiene segmenti di Bézier aggiuntivi, ogni segmento di Bézier successivo utilizza il punto finale del segmento di Bézier precedente come punto iniziale.
 
-##  <a name="addline"></a>  CD2DGeometrySink::AddLine
+## <a name="cd2dgeometrysinkaddline"></a><a name="addline"></a>CD2DGeometrySink::AddLine
 
-Crea un segmento di linea tra il punto corrente e il punto finale specificato e lo aggiunge al sink di geometria.
+Crea un segmento di linea tra il punto corrente e il punto finale specificato e lo aggiunge al sink geometrico.
 
 ```
 void AddLine(CD2DPointF point);
@@ -162,12 +162,12 @@ void AddLine(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
-Il punto finale della riga da disegnare.
+*Punto*<br/>
+Punto finale della linea da disegnare.
 
-##  <a name="addlines"></a>  CD2DGeometrySink::AddLines
+## <a name="cd2dgeometrysinkaddlines"></a><a name="addlines"></a>CD2DGeometrySink::AddLines
 
-Crea una sequenza di righe usando i punti specificati e li aggiunge al sink di geometria.
+Crea una sequenza di linee utilizzando i punti specificati e li aggiunge al sink di geometria.
 
 ```
 void AddLines(
@@ -177,10 +177,10 @@ void AddLines(
 
 ### <a name="parameters"></a>Parametri
 
-*points*<br/>
-Matrice di uno o più punti che descrivono le righe da disegnare. Viene tracciata una linea dal punto corrente del sink di geometria (il punto finale dell'ultimo segmento disegnata o alla posizione specificata da BeginFigure) per il primo punto della matrice. Se la matrice contiene punti aggiuntivi, dal primo punto viene disegnata una linea e il secondo punto nella matrice, dal punto di secondo per il terzo punto e così via. Matrice di una sequenza dei punti di fine di righe da disegnare.
+*Punti*<br/>
+Matrice di uno o più punti che descrivono le linee da disegnare. Viene disegnata una linea dal punto corrente del sink di geometria (il punto finale dell'ultimo segmento disegnato o la posizione specificata da BeginFigure) al primo punto della matrice. se la matrice contiene punti aggiuntivi, viene disegnata una linea dal primo al secondo punto della matrice, dal secondo al terzo punto e così via. Matrice di una sequenza dei punti finali delle linee da disegnare.
 
-##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
+## <a name="cd2dgeometrysinkaddquadraticbezier"></a><a name="addquadraticbezier"></a>CD2DGeometrySink::AddQuadraticBezier
 
 Crea una curva di Bézier quadratica tra il punto corrente e il punto finale specificato.
 
@@ -190,12 +190,12 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Parametri
 
-*bezier*<br/>
+*Bezier*<br/>
 Struttura che descrive il punto di controllo e il punto finale della curva di Bézier quadratica da aggiungere.
 
-##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
+## <a name="cd2dgeometrysinkaddquadraticbeziers"></a><a name="addquadraticbeziers"></a>CD2DGeometrySink::AddQuadraticBeziers
 
-Aggiunge una sequenza di segmenti di curva di Bezier quadratica sotto forma di matrice in una singola chiamata.
+Aggiunge una sequenza di segmenti di Bézier quadratici come matrice in una singola chiamata.
 
 ```
 void AddQuadraticBeziers(
@@ -205,10 +205,10 @@ void AddQuadraticBeziers(
 
 ### <a name="parameters"></a>Parametri
 
-*beziers*<br/>
-Matrice di una sequenza di segmenti di curva di Bezier quadratica.
+*Beziers*<br/>
+Matrice di una sequenza di segmenti quadratici di Bézier.
 
-##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure
+## <a name="cd2dgeometrysinkbeginfigure"></a><a name="beginfigure"></a>CD2DGeometrySink::BeginFigure
 
 Avvia una nuova figura nel punto specificato.
 
@@ -221,12 +221,12 @@ void BeginFigure(
 ### <a name="parameters"></a>Parametri
 
 *startPoint*<br/>
-Il punto da cui iniziare la nuova figura.
+Punto in cui iniziare la nuova figura.
 
-*figureBegin*<br/>
-Indica se la nuova figura deve essere vuota o piena.
+*figuraInizio*<br/>
+Se la nuova figura deve essere vuota o riempita.
 
-##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink
+## <a name="cd2dgeometrysinkcd2dgeometrysink"></a><a name="cd2dgeometrysink"></a>CD2DGeometrySink::CD2DGeometrySink
 
 Costruisce un oggetto CD2DGeometrySink dall'oggetto CD2DPathGeometry.
 
@@ -236,12 +236,12 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 
 ### <a name="parameters"></a>Parametri
 
-*pathGeometry*<br/>
+*Pathgeometry*<br/>
 Oggetto CD2DPathGeometry esistente.
 
-##  <a name="close"></a>  CD2DGeometrySink::Close
+## <a name="cd2dgeometrysinkclose"></a><a name="close"></a>CD2DGeometrySink::Close
 
-Chiude il sink di geometria
+Chiude il lavandino della geometria
 
 ```
 BOOL Close();
@@ -249,11 +249,11 @@ BOOL Close();
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo. in caso contrario, FALSE.
+Diverso da zero in caso di esito positivo; in caso contrario, FALSE.
 
-##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure
+## <a name="cd2dgeometrysinkendfigure"></a><a name="endfigure"></a>CD2DGeometrySink::EndFigure (Figurafinale)
 
-Termina la figura corrente. Facoltativamente, lo chiude.
+Termina la figura corrente; facoltativamente, lo chiude.
 
 ```
 void EndFigure(D2D1_FIGURE_END figureEnd);
@@ -261,10 +261,10 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 
 ### <a name="parameters"></a>Parametri
 
-*figureEnd*<br/>
-Un valore che indica se la figura corrente è chiuso. Se nella figura è chiusa, viene tracciata una linea tra il punto corrente e il punto di inizio specificato da BeginFigure.
+*figuraFine*<br/>
+Valore che indica se la cifra corrente è chiusa. Se la figura è chiusa, viene tracciata una linea tra il punto corrente e il punto iniziale specificato da BeginFigure.
 
-##  <a name="get"></a>  CD2DGeometrySink::Get
+## <a name="cd2dgeometrysinkget"></a><a name="get"></a>CD2DGeometrySink::Get
 
 Restituisce l'interfaccia ID2D1GeometrySink
 
@@ -274,11 +274,11 @@ ID2D1GeometrySink* Get();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a un'interfaccia ID2D1GeometrySink o NULL se l'oggetto non è ancora inizializzato.
+Puntatore a un ID2D1GeometrySink interfaccia o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid
+## <a name="cd2dgeometrysinkisvalid"></a><a name="isvalid"></a>CD2DGeometrySink::IsValid
 
-Controlla la validità di sink di geometria
+Verifica la validità del sink di geometria
 
 ```
 BOOL IsValid() const;
@@ -286,9 +286,9 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il sink di geometry è valido. in caso contrario, FALSE.
+TRUESe il sink di geometria è valido. in caso contrario, FALSE.
 
-##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink
+## <a name="cd2dgeometrysinkm_psink"></a><a name="m_psink"></a>CD2DGeometrySink::m_pSink
 
 Puntatore a un ID2D1GeometrySink.
 
@@ -296,7 +296,7 @@ Puntatore a un ID2D1GeometrySink.
 ID2D1GeometrySink* m_pSink;
 ```
 
-##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *
+## <a name="cd2dgeometrysinkoperator-id2d1geometrysink"></a><a name="operator_id2d1geometrysink_star"></a>CD2DGeometrySink::operator ID2D1GeometrySink
 
 Restituisce l'interfaccia ID2D1GeometrySink
 
@@ -306,11 +306,11 @@ operator ID2D1GeometrySink*();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a un'interfaccia ID2D1GeometrySink o NULL se l'oggetto non è ancora inizializzato.
+Puntatore a un ID2D1GeometrySink interfaccia o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode
+## <a name="cd2dgeometrysinksetfillmode"></a><a name="setfillmode"></a>CD2DGeometrySink::SetFillMode
 
-Specifica il metodo utilizzato per determinare quali punti si trovano all'interno della geometria descritta da questo sink geometry e quali punti sono di fuori.
+Specifica il metodo utilizzato per determinare quali punti si trovano all'interno della geometria descritta da questo sink di geometria e quali punti sono all'esterno.
 
 ```
 void SetFillMode(D2D1_FILL_MODE fillMode);
@@ -318,12 +318,12 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 
 ### <a name="parameters"></a>Parametri
 
-*fillMode*<br/>
-Il metodo utilizzato per determinare se un determinato punto fa parte della geometria.
+*Fillmode*<br/>
+Metodo utilizzato per determinare se un determinato punto fa parte della geometria.
 
-##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags
+## <a name="cd2dgeometrysinksetsegmentflags"></a><a name="setsegmentflags"></a>CD2DGeometrySink::SetSegmentFlags
 
-Specifica le opzioni di traccia e join da applicare ai nuovi segmenti aggiunti al sink di geometria.
+Specifica le opzioni di traccia e giunzione da applicare ai nuovi segmenti aggiunti al sink di geometria.
 
 ```
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
@@ -331,8 +331,8 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 
 ### <a name="parameters"></a>Parametri
 
-*vertexFlags*<br/>
-Le opzioni di traccia e join da applicare ai nuovi segmenti aggiunti alla geometria di sink.
+*vertexFlags (contrassegni)*<br/>
+Opzioni di traccia e giunzione da applicare ai nuovi segmenti aggiunti al sink di geometria.
 
 ## <a name="see-also"></a>Vedere anche
 

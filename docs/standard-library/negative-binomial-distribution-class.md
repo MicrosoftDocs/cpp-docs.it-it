@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 940ea790e724ffacdefe2cefb256a3314ba244e3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689260"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367958"
 ---
 # <a name="negative_binomial_distribution-class"></a>Classe negative_binomial_distribution
 
@@ -71,21 +71,21 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *intType*
-Il tipo di risultato Integer, il valore predefinito è **int**. Per i tipi possibili, vedere [\<random >](../standard-library/random.md).
+*IntType (tipo intType)*\
+Il tipo di risultato Integer , il valore predefinito è **int**. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **int** se non ne viene fornito alcuno, distribuiti in base alla funzione di probabilità discreta di distribuzione binomiale negativa. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o tipo **int** se non ne viene fornito alcuno, distribuito in base alla funzione di probabilità discreta distribuzione binomiale negativa. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-I membri della proprietà `k()` e `p()` restituiscono rispettivamente i valori *k* e *p* del parametro di distribuzione attualmente archiviati.
+I membri `k()` `p()` della proprietà e restituiscono i valori dei parametri di distribuzione attualmente archiviati rispettivamente *k* e *p.*
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto del parametro di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -93,9 +93,9 @@ La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cach
 
 Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
 
-Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
+Per ulteriori informazioni sulle classi di [ \< ](../standard-library/random.md)distribuzione e sui relativi membri, vedere random>.
 
-Per informazioni dettagliate sulla funzione di probabilità discreta della distribuzione binomiale negativa, vedere l'articolo relativo alla [distribuzione binomiale negativa](https://go.microsoft.com/fwlink/p/?linkid=400516)di Wolfram articolo MathWorld.
+Per informazioni dettagliate sulla funzione di probabilità discreta della distribuzione binomiale negativa, vedere l'articolo di Wolfram MathWorld [Negative Binomial Distribution](https://go.microsoft.com/fwlink/p/?linkid=400516).
 
 ## <a name="example"></a>Esempio
 
@@ -221,7 +221,7 @@ Histogram for 100 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution::negative_binomial_distribution
 
 Costruisce la distribuzione.
 
@@ -232,43 +232,43 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*k* \
+*K*\
 Parametro di distribuzione `k`.
 
-\ *p*
+*P*\
 Parametro di distribuzione `p`.
 
-\ di *parmigiana*
+*Parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0.0 < k` e `0.0 < p ≤ 1.0`
 
 Il primo costruttore crea un oggetto il cui valore `p` archiviato include il valore *p* e il cui valore `k` archiviato include il valore *k*.
 
-Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
+Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="param_type"></a>  negative_binomial_distribution::param_type
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::param_type (tipo)
 
 Archivia i parametri della distribuzione.
 
-struct param_type {typedef negative_binomial_distribution `<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () const; double p () const;
+struct param_type -`<`typedef negative_binomial_distribution result_type> distribution_type; param_type(result_type k : 1, double p e 0,5); result_type const() const; doppio p() const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parametri
 
-*k* \
+*K*\
 Parametro di distribuzione `k`.
 
-\ *p*
+*P*\
 Parametro di distribuzione `p`.
 
-\ a *destra*
+*va bene*\
 Struttura `param_type` usata per il confronto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0.0 < k` e `0.0 < p ≤ 1.0`
 
@@ -276,4 +276,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)
+[\<>casuali](../standard-library/random.md)

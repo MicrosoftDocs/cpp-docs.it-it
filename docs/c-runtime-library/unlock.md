@@ -23,19 +23,19 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 5535b19a2419bf58f22bc39d87fc615c19265cd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 185cb1e5f582fd5eeb1dbcb337c402319ab78f00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365692"
 ---
 # <a name="_unlock"></a>_unlock
 
 Rilascia un blocco multithread.
 
 > [!IMPORTANT]
->  Questa funzione è obsoleta. A partire da Visual Studio 2015 non è disponibile in CRT.
+> questa funzione è obsoleta. A partire da Visual Studio 2015 non è disponibile in CRT.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -56,5 +56,5 @@ void __cdecl _unlock(
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alfabetico alle funzioni](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
 [_lock](../c-runtime-library/lock.md)

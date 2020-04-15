@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: 87c8820bc33f3a344933faa797a9fc60d2422b13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a507d1e69b3524074e50fde0e87fc5ebb6e5ca03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252958"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367336"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Struttura CMFCTabToolTipInfo
 
-Questa struttura fornisce informazioni sulla scheda MDI che l'utente ha posizionato il failover.
+Questa struttura fornisce informazioni sulla scheda MDI su cui l'utente passa il mouse.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,21 +25,21 @@ struct CMFCTabToolTipInfo
 
 ## <a name="members"></a>Membri
 
-### <a name="data-members"></a>Membri di dati
+### <a name="data-members"></a>Membri dei dati
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Specifica l'indice del controllo scheda.|
-|[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Puntatore al controllo struttura a schede.|
-|[CMFCTabToolTipInfo::m_strText](#m_strtext)|Il testo della descrizione comando.|
+|[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Specifica l'indice del controllo struttura a schede.|
+|[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Puntatore al controllo Struttura a schede.|
+|[CMFCTabToolTipInfo::m_strText](#m_strtext)|Testo della descrizione comando.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un puntatore a un `CMFCTabToolTipInfo` struttura viene passata come parametro del messaggio AFX_WM_ON_GET_TAB_TOOLTIP. Questo messaggio viene generato quando sono abilitate le schede MDI e l'utente passa su un controllo struttura a schede.
+Un puntatore `CMFCTabToolTipInfo` a una struttura viene passato come parametro del messaggio di AFX_WM_ON_GET_TAB_TOOLTIP. Questo messaggio viene generato quando le schede MDI sono abilitate e l'utente passa il mouse su un controllo struttura a schede.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `CMFCTabToolTipInfo` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente `CMFCTabToolTipInfo` viene illustrato come viene utilizzato nell'esempio [MDITabsDemo: applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -51,27 +51,27 @@ L'esempio seguente illustra come `CMFCTabToolTipInfo` viene utilizzata la [esemp
 
 **Intestazione:** afxbasetabctrl.h
 
-##  <a name="m_ntabindex"></a>  CMFCTabToolTipInfo::m_nTabIndex
+## <a name="cmfctabtooltipinfom_ntabindex"></a><a name="m_ntabindex"></a>CMFCTabToolTipInfo::m_nTabIndex
 
-Specifica l'indice del controllo scheda.
+Specifica l'indice del controllo struttura a schede.
 
 ```
 int m_nTabIndex;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Indice della scheda in cui si trova l'utente.
+Indice della scheda su cui l'utente è al passaggio del mouse.
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `m_nTabIndex` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente `m_nTabIndex` viene illustrato come viene utilizzato nell'esempio [MDITabsDemo: applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_ptabwnd"></a>  CMFCTabToolTipInfo::m_pTabWnd
+## <a name="cmfctabtooltipinfom_ptabwnd"></a><a name="m_ptabwnd"></a>CMFCTabToolTipInfo::m_pTabWnd
 
-Puntatore al controllo struttura a schede.
+Puntatore al controllo Struttura a schede.
 
 ```
 CMFCBaseTabCtrl* m_pTabWnd;
@@ -79,29 +79,29 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `m_pTabWnd` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente `m_pTabWnd` viene illustrato come viene utilizzato nell'esempio [MDITabsDemo: applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_strtext"></a>  CMFCTabToolTipInfo::m_strText
+## <a name="cmfctabtooltipinfom_strtext"></a><a name="m_strtext"></a>CMFCTabToolTipInfo::m_strText
 
-Il testo della descrizione comando.
+Testo della descrizione comando.
 
 ```
 CString m_strText;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se la stringa è vuota, la descrizione comando non viene visualizzato.
+Se la stringa è vuota, la descrizione comando non viene visualizzata.
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `m_strText` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente `m_strText` viene illustrato come viene utilizzato nell'esempio [MDITabsDemo: applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

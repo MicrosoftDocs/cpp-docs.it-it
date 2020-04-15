@@ -14,62 +14,62 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: e2b073b20b9518667b43c30e7ee3199a84a3ad38
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9e071e0cc25492073cd74ed517284476b6e49ef8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213382"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368894"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: utilizzo di classi di database con documenti e viste
 
-È possibile utilizzare le classi di database MFC con o senza l'architettura documento/visualizzazione. In questo argomento viene evidenziato l'utilizzo di documenti e visualizzazioni. Viene illustrato quanto segue:
+È possibile utilizzare le classi di database MFC con o senza l'architettura documento/visualizzazione. In questo argomento viene enfatizzato l'utilizzo di documenti e visualizzazioni. Spiega:
 
-- [Come scrivere un'applicazione basata su form](#_core_writing_a_form.2d.based_application) usando un oggetto `CRecordView` come vista principale del documento.
+- [Come scrivere un'applicazione basata su form](#_core_writing_a_form.2d.based_application) utilizzando un `CRecordView` oggetto come visualizzazione principale nel documento.
 
-- [Come usare gli oggetti recordset nei documenti e nelle visualizzazioni](#_core_using_recordsets_in_documents_and_views).
+- [Come utilizzare gli oggetti recordset nei documenti e nelle visualizzazioni.](#_core_using_recordsets_in_documents_and_views)
 
 - [Altre considerazioni](#_core_other_factors).
 
-Per le alternative, vedere [MFC: uso di classi di database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md).
+Per altre alternative, vedere [MFC: utilizzo di classi di database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md).
 
-##  <a name="writing-a-form-based-application"></a><a name="_core_writing_a_form.2d.based_application"></a>Scrittura di un'applicazione basata su form
+## <a name="writing-a-form-based-application"></a><a name="_core_writing_a_form.2d.based_application"></a>Scrittura di un'applicazione basata su form
 
-Molte applicazioni di accesso ai dati sono basate su moduli. L'interfaccia utente è un form contenente i controlli in cui l'utente esamina, immette o modifica i dati. Per fare in modo che il form dell'applicazione sia basato su, usare la classe `CRecordView`. Quando si esegue la creazione guidata applicazione MFC e si seleziona tipo di client **ODBC** nella pagina **supporto database** , il progetto utilizza `CRecordView` per la classe di visualizzazione.
+Molte applicazioni di accesso ai dati sono basate su moduli. L'interfaccia utente è un modulo contenente i controlli in cui l'utente esamina, immette o modifica i dati. Per rendere il form di `CRecordView`applicazione basato, utilizzare la classe . Quando si esegue la Creazione guidata applicazione MFC e selezionare `CRecordView` il tipo di client **ODBC** nella pagina Supporto **Database,** il progetto utilizza per la classe di visualizzazione.
 
-In un'applicazione basata su form, ogni oggetto visualizzazione di record archivia un puntatore a un oggetto `CRecordset`. Il meccanismo RFX (record Field Exchange) del Framework scambia i dati tra il recordset e l'origine dati. Il meccanismo DDX (Dialog Data Exchange) scambia i dati tra i membri dati del campo dell'oggetto recordset e i controlli nel form. `CRecordView` fornisce anche le funzioni predefinite del gestore comandi per lo spostamento da record a record nel form.
+In un'applicazione basata su form, ogni `CRecordset` oggetto visualizzazione record archivia un puntatore a un oggetto. Il meccanismo di scambio di campi di record (RFX) del framework scambia i dati tra il recordset e l'origine dati. Il meccanismo DDX (Dialog Data Exchange) scambia i dati tra i membri dati di campo dell'oggetto recordset e i controlli nel form. `CRecordView`fornisce inoltre funzioni di gestione dei comandi predefinite per lo spostamento da un record all'altro nel modulo.
 
-Per creare un'applicazione basata su form con la creazione guidata applicazione, vedere [creazione di un'applicazione MFC basata su form](../mfc/reference/creating-a-forms-based-mfc-application.md) e [supporto del database, creazione guidata applicazione MFC](../mfc/reference/database-support-mfc-application-wizard.md).
+Per creare un'applicazione basata su form con la creazione guidata applicazione, vedere Creazione di una creazione guidata database di applicazioni [MFC](../mfc/reference/database-support-mfc-application-wizard.md) [basata su form](../mfc/reference/creating-a-forms-based-mfc-application.md) .
 
-Per una descrizione completa dei moduli, vedere [visualizzazioni di record](../data/record-views-mfc-data-access.md).
+Per una descrizione completa dei moduli, vedere [Visualizzazioni di record](../data/record-views-mfc-data-access.md).
 
-##  <a name="using-recordsets-in-documents-and-views"></a><a name="_core_using_recordsets_in_documents_and_views"></a>Utilizzo di recordset in documenti e visualizzazioni
+## <a name="using-recordsets-in-documents-and-views"></a><a name="_core_using_recordsets_in_documents_and_views"></a>Utilizzo di oggetti recordset in documenti e visualizzazioni
 
-Molte applicazioni semplici basate su form non necessitano di documenti. Se l'applicazione è più complessa, è probabile che si voglia usare un documento come proxy per il database, archiviando un `CDatabase` oggetto che si connette all'origine dati. Le applicazioni basate su form in genere archiviano un puntatore a un oggetto recordset nella visualizzazione. Altri tipi di applicazioni di database archiviano recordset e `CDatabase` oggetto nel documento. Di seguito sono riportate alcune possibilità per l'utilizzo di documenti nelle applicazioni di database:
+Molte semplici applicazioni basate su moduli non hanno bisogno di documenti. Se l'applicazione è più complessa, è probabile che si desideri `CDatabase` utilizzare un documento come proxy per il database, archiviando un oggetto che si connette all'origine dati. Le applicazioni basate su form archiviano in genere un puntatore a un oggetto recordset nella visualizzazione. Altri tipi di applicazioni di `CDatabase` database archiviano recordset e oggetti nel documento. Di seguito sono riportate alcune possibilità per l'utilizzo di documenti nelle applicazioni di database:Here are some possibilities for using documents in database applications:
 
-- Se si accede a un recordset in un contesto locale, creare un oggetto `CRecordset` localmente in funzioni membro del documento o della vista, in base alle esigenze.
+- Se si accede a un recordset in `CRecordset` un contesto locale, creare un oggetto localmente nelle funzioni membro del documento o della visualizzazione, in base alle esigenze.
 
-   Dichiarare un oggetto recordset come variabile locale in una funzione. Passare NULL al costruttore, che determina la creazione e l'apertura di un oggetto `CDatabase` temporaneo da parte del Framework. In alternativa, passare un puntatore a un oggetto `CDatabase`. Usare il recordset all'interno della funzione e lasciarlo eliminato automaticamente quando la funzione viene chiusa.
+   Dichiarare un oggetto recordset come variabile locale in una funzione. Passare NULL al costruttore, che fa sì `CDatabase` che il framework per creare e aprire un oggetto temporaneo per l'utente. In alternativa, passare un `CDatabase` puntatore a un oggetto. Utilizzare il recordset all'interno della funzione e lasciare che venga eliminato automaticamente alla chiusura della funzione.
 
-   Quando si passa NULL a un costruttore recordset, il Framework utilizza le informazioni restituite dalla funzione membro `GetDefaultConnect` del recordset per creare un oggetto `CDatabase` e aprirlo. Le procedure guidate implementano `GetDefaultConnect`.
+   Quando si passa NULL a un costruttore di recordset, `GetDefaultConnect` il framework utilizza `CDatabase` le informazioni restituite dalla funzione membro del recordset per creare un oggetto e aprirlo. Le procedure `GetDefaultConnect` guidate implementano per l'utente.
 
-- Se si accede a un recordset durante il ciclo di vita del documento, incorporare uno o più oggetti `CRecordset` nel documento.
+- Se si accede a un recordset durante la durata `CRecordset` del documento, incorporare uno o più oggetti nel documento.
 
-   Creare gli oggetti recordset quando si inizializza il documento o in base alle esigenze. È possibile scrivere una funzione che restituisce un puntatore al recordset se esiste già o costruisce e apre il recordset se non esiste ancora. Chiudere, eliminare e ricreare il recordset in base alle esigenze oppure chiamare la relativa funzione membro `Requery` per aggiornare i record.
+   Costruire gli oggetti recordset quando si inizializza il documento o in base alle esigenze. È possibile scrivere una funzione che restituisce un puntatore al recordset se esiste già o costruisce e apre il recordset se non esiste ancora. Chiudere, eliminare e ricreare il recordset in `Requery` base alle esigenze oppure chiamare la relativa funzione membro per aggiornare i record.
 
-- Se si accede a un'origine dati durante il ciclo di vita del documento, incorporare un oggetto `CDatabase` o archiviarvi un puntatore a un oggetto `CDatabase`.
+- Se si accede a un'origine dati durante la `CDatabase` durata del documento, `CDatabase` incorporare un oggetto o memorizzarvi un puntatore a un oggetto.
 
-   L'oggetto `CDatabase` gestisce una connessione all'origine dati. L'oggetto viene costruito automaticamente durante la costruzione del documento e viene chiamato il relativo `Open` funzione membro quando si inizializza il documento. Quando si creano oggetti recordset nelle funzioni membro del documento, si passa un puntatore all'oggetto `CDatabase` del documento. Viene associato ogni recordset alla relativa origine dati. L'oggetto di database viene in genere eliminato definitivamente quando il documento viene chiuso. Gli oggetti recordset vengono in genere eliminati definitivamente quando escono dall'ambito di una funzione.
+   L'oggetto `CDatabase` gestisce una connessione all'origine dati. L'oggetto viene costruito automaticamente durante la `Open` costruzione del documento e si chiama la relativa funzione membro quando si inizializza il documento. Quando si creano oggetti recordset nelle funzioni membro del documento, si passa un puntatore all'oggetto del `CDatabase` documento. In questo modo ogni recordset viene associato alla relativa origine dati. L'oggetto di database viene in genere eliminato alla chiusura del documento. Gli oggetti recordset vengono in genere eliminati quando escono dall'ambito di una funzione.
 
-##  <a name="other-factors"></a><a name="_core_other_factors"></a>Altri fattori
+## <a name="other-factors"></a><a name="_core_other_factors"></a>Altri fattori
 
-Le applicazioni basate su form spesso non hanno alcun uso per il meccanismo di serializzazione dei documenti del Framework, quindi è possibile rimuovere, disabilitare o sostituire i comandi **nuovi** e **aperti** nel menu **file** . Vedere l'articolo [serializzazione: serializzazione e input/output del database](../mfc/serialization-serialization-vs-database-input-output.md).
+Le applicazioni basate su form spesso non utilizzano il meccanismo di serializzazione dei documenti del framework, pertanto è possibile rimuovere, disabilitare o sostituire i comandi **Nuovo** e **Apri** del menu **File.** Vedere l'articolo [Serializzazione: serializzazione e input/output del database](../mfc/serialization-serialization-vs-database-input-output.md).
 
-È inoltre possibile utilizzare le numerose possibilità dell'interfaccia utente supportate dal Framework. Ad esempio, è possibile utilizzare più oggetti `CRecordView` in una finestra con separatore, aprire più recordset in finestre figlio MDI (Multiple Document Interface) diverse e così via.
+È anche possibile utilizzare le numerose possibilità dell'interfaccia utente che il framework è in grado di supportare. Ad esempio, è `CRecordView` possibile utilizzare più oggetti in una finestra con separatore, aprire più recordset in diverse finestre figlio di interfaccia a documenti multipli (MDI) e così via.
 
-Potrebbe essere necessario implementare la stampa di qualsiasi elemento nella propria visualizzazione, sia che si tratti di un modulo implementato con `CRecordView` o altro. Poiché le classi derivate da `CFormView`, `CRecordView` non supporta la stampa, ma è possibile eseguire l'override della funzione membro `OnPrint` per consentire la stampa. Per ulteriori informazioni, vedere la classe [CFormView](../mfc/reference/cformview-class.md).
+Potresti voler implementare la stampa di tutto ciò che `CRecordView` è nella tua vista, sia che si tratti di un modulo implementato con o qualcos'altro. Poiché le `CFormView` `CRecordView` classi derivate da , non `OnPrint` supportano la stampa, ma è possibile eseguire l'override della funzione membro per consentire la stampa. Per ulteriori informazioni, vedere la classe [CFormView](../mfc/reference/cformview-class.md).
 
-È possibile che non si desideri utilizzare documenti e visualizzazioni. In tal caso, vedere [MFC: utilizzo di classi di database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md).
+È possibile che non si desideri utilizzare documenti e visualizzazioni. In tal caso, vedere MFC: utilizzo di classi di [database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ## <a name="see-also"></a>Vedere anche
 

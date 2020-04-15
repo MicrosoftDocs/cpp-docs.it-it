@@ -1,11 +1,13 @@
 ---
 title: _strinc, _wcsinc, _mbsinc, _mbsinc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsinc
 - _wcsinc
 - _mbsinc_l
 - _strinc
+- _o__mbsinc
+- _o__mbsinc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +46,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: a468438d747a9497e974b10f9974bb79ffef1add
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cfbe857ec8bbcdec887d4594cee0bf2b66de380
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958245"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362902"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
 Sposta un puntatore di stringa in avanti di un carattere.
 
 > [!IMPORTANT]
-> non è possibile usare **_mbsinc** e **_mbsinc_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsinc** e **_mbsinc_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -79,26 +82,28 @@ unsigned char *_mbsinc_l(
 
 ### <a name="parameters"></a>Parametri
 
-*current*<br/>
+*Corrente*<br/>
 Puntatore di caratteri.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un puntatore al carattere immediatamente successivo a quello *corrente*.
+Ognuna di queste routine restituisce un puntatore al carattere che segue immediatamente *l'oggetto corrente.*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_mbsinc** restituisce un puntatore al primo byte del carattere multibyte che segue immediatamente l' *oggetto corrente*. **_mbsinc** riconosce le sequenze di caratteri multibyte in base alla tabella [codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso. **_mbsinc_l** è identico, con la differenza che usa invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La funzione **_mbsinc** restituisce un puntatore al primo byte del carattere multibyte che segue immediatamente *l'oggetto corrente.* **_mbsinc** riconosce le sequenze di caratteri multibyte in base alla tabella codici [multibyte](../../c-runtime-library/code-pages.md) attualmente in uso; **_mbsinc_l** è identico ad eccezione del fatto che utilizza invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-La funzione di testo generico **_tcsinc**, definita in TCHAR. h, viene mappata a **_mbsinc** se **_MBCS** è stato definito o a **_wcsinc** se **_UNICODE** è stato definito. In caso contrario, **_tcsinc** esegue il mapping a **_strinc**. **_strinc** e **_wcsinc** sono versioni a caratteri a byte singolo e a caratteri wide di **_mbsinc**. **_strinc** e **_wcsinc** sono forniti solo per questo mapping e non devono essere utilizzati in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
+La funzione testo generico **_tcsinc**, definita in Tchar.h, esegue il mapping a **_mbsinc** se è stato definito **_MBCS** o a **_wcsinc** se è stato definito **_UNICODE.** In caso contrario, **_tcsinc** esegue il mapping a **_strinc**. **_strinc** e **_wcsinc** sono versioni a byte singolo e a caratteri wide di **_mbsinc**. **_strinc** e **_wcsinc** vengono forniti solo per questo mapping e non devono essere utilizzati in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 
-Se *Current* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**.
+Se *current* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**.
 
 > [!IMPORTANT]
 > Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -109,11 +114,11 @@ Se *Current* è **null**, viene richiamato il gestore di parametri non validi, c
 |**_strinc**|\<tchar.h>|
 |**_wcsinc**|\<tchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
 [_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

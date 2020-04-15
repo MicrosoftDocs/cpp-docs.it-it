@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 68f8e113f6199d3b320bc6d241ee3396d2b70a1a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: cf3bb23069b2692c0ca4ce270a5b8060195becf7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988221"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370167"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Procedura: Definire e usare enumerazioni in C++/CLI
 
-In questo argomento vengono illustrate C++le enumerazioni in/CLI.
+In questo argomento vengono illustrate le enumerazioni in C.
 
-## <a name="specifying-the-underlying-type-of-an-enum"></a>Specifica del tipo sottostante di un'enumerazione
+## <a name="specifying-the-underlying-type-of-an-enum"></a>Specifica del tipo sottostante di un'enumerazioneSpecifying the underlying type of an enum
 
-Per impostazione predefinita, il tipo sottostante di un'enumerazione viene `int`.  Tuttavia, è possibile specificare il tipo da firmare o forme senza segno di `int`, `short`, `long`, `__int32`o `__int64`.  È anche possibile usare `char`.
+Per impostazione predefinita, il `int`tipo sottostante di un'enumerazione è .  È tuttavia possibile specificare il tipo da `int` `short`assegnare o non firmare i form di , , `long` `__int32`, o `__int64`.  È anche possibile usare `char`.
 
 ```cpp
 // mcppv2_enum_3.cpp
@@ -47,9 +47,9 @@ sun
 2
 ```
 
-## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>Come eseguire la conversione tra enumerazioni gestite e standard
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>Come convertire tra enumerazioni gestite e standard
 
-Non esiste una conversione standard tra un'enumerazione e un tipo integrale. è necessario un cast.
+Non esiste alcuna conversione standard tra un'enumerazione e un tipo integrale. è necessario un cast.
 
 ```cpp
 // mcppv2_enum_4.cpp
@@ -77,22 +77,22 @@ a and day2 are the same
 
 ## <a name="operators-and-enums"></a>Operatori ed enumerazioni
 
-Gli operatori seguenti sono validi nelle enumerazioni in C++/CLI:
+Gli operatori seguenti sono validi per le enumerazioni in C.
 
-|??|
+|Operatore|
 |--------------|
-|== != \< > \<= >=|
+|!E \<  >  \<n. di >|
 |+ -|
-|&#124; ^ & ~|
+|&#124; : & .|
 |++ --|
 |sizeof|
 
-Gli &#124; operatori ^ & ~ + +--sono definiti solo per le enumerazioni con tipi sottostanti integrali, escluso bool.  Entrambi gli operandi devono essere del tipo di enumerazione.
+Gli operatori &#124; , & , sono definiti solo per le enumerazioni con tipi sottostanti integrali, escluso bool.  Entrambi gli operandi devono essere del tipo di enumerazione.
 
-Il compilatore non esegue alcun controllo statico o dinamico del risultato di un'operazione di enumerazione. un'operazione può causare un valore non compreso nell'intervallo degli enumeratori validi dell'enumerazione.
+Il compilatore non esegue alcun controllo statico o dinamico del risultato di un'operazione di enumerazione; un'operazione può generare un valore non compreso nell'intervallo degli enumeratori validi dell'enumerazione.
 
 > [!NOTE]
->  C++ 11 introduce i tipi di classe enum nel codice non gestito che sono significativamente diversi dalle classi enum gestite C++in/CLI. In particolare, il tipo di classe enum C++ 11 non supporta gli stessi operatori del tipo di classe enum gestito in C++/CLI e C++il codice sorgente/CLI deve fornire un identificatore di accessibilità nelle dichiarazioni di classe enum gestite per distinguerle dalle dichiarazioni di classe enum non gestite (c++ 11). Per ulteriori informazioni sulle classi Enum in C++/CLI, C++/CX e c++ 11, vedere [enum class](../extensions/enum-class-cpp-component-extensions.md).
+> Il linguaggio C-11 introduce i tipi di classe enum nel codice non gestito che sono significativamente diversi rispetto alle classi di enumerazione gestite in C. In particolare, il tipo di classe di enumerazione di C, 11, non supporta gli stessi operatori del tipo di classe enum gestita nelle dichiarazioni di classe enum c'è e il codice sorgente di C/CLI, è necessario fornire un identificatore di accessibilità nelle dichiarazioni di classe enum gestite per distinguerli dalle dichiarazioni di classe enum non gestite (C.11). Per ulteriori informazioni sulle classi di enumerazione in C, in C, c'è/CX e in C, vedere [la classe enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ```cpp
 // mcppv2_enum_5.cpp

@@ -118,111 +118,112 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 1e022f09986f5d49ab2bba44c62cb716ce939a0c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420883"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369608"
 ---
 # <a name="cwinappex-class"></a>Classe CWinAppEx
 
-`CWinAppEx` gestisce lo stato dell'applicazione, Salva lo stato nel registro di sistema, carica lo stato dal registro di sistema, Inizializza i gestori applicazione e fornisce collegamenti a tali gestori di applicazioni.
+`CWinAppEx`gestisce lo stato dell'applicazione, salva lo stato nel Registro di sistema, carica lo stato dal Registro di sistema, inizializza i gestori delle applicazioni e fornisce collegamenti agli stessi gestori di applicazioni.
 
-   Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
+
 ## <a name="syntax"></a>Sintassi
 
 ```
 class CWinAppEx : public CWinApp
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CWinAppEx:: CWinAppEx](#cwinappex)|Costruisce un oggetto `CWinAppEx`.|
+|[CWinAppEx::CWinAppEx](#cwinappex)|Costruisce un oggetto `CWinAppEx`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CWinAppEx:: CleanState](#cleanstate)|Rimuove le informazioni relative all'applicazione dal registro di sistema di Windows.|
-|[CWinAppEx:: EnableLoadWindowPlacement](#enableloadwindowplacement)|Specifica se l'applicazione caricherà le dimensioni e il percorso iniziali della finestra cornice principale dal registro di sistema.|
-|[CWinAppEx:: EnableTearOffMenus](#enabletearoffmenus)|Abilita i menu di strappo per l'applicazione.|
-|[CWinAppEx:: EnableUserTools](#enableusertools)|Consente all'utente di creare comandi di menu personalizzati nell'applicazione.|
-|[CWinAppEx:: ExitInstance](#exitinstance)|Chiamata eseguita dal Framework dall'interno della funzione membro `Run` per uscire da questa istanza dell'applicazione. Esegue l'override di [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).|
-|[CWinAppEx:: GetBinary](#getbinary)|Legge i dati binari associati al valore del registro di sistema specificato.|
-|[CWinAppEx:: GetContextMenuManager](#getcontextmenumanager)|Restituisce un puntatore all'oggetto [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) globale.|
-|[CWinAppEx:: GetDataVersion](#getdataversion)||
-|[CWinAppEx:: GetDataVersionMajor](#getdataversionmajor)|Restituisce la versione principale dell'applicazione salvata nel registro di sistema di Windows.|
-|[CWinAppEx:: GetDataVersionMinor](#getdataversionminor)|Restituisce la versione secondaria dell'applicazione salvata nel registro di sistema di Windows.|
-|[CWinAppEx:: GetInt](#getint)|Legge i dati numerici associati al valore specificato dal registro di sistema.|
-|[CWinAppEx:: GetKeyboardManager](#getkeyboardmanager)|Restituisce un puntatore all'oggetto [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) globale.|
-|[CWinAppEx:: GetMouseManager](#getmousemanager)|Restituisce un puntatore all'oggetto [CMouseManager](../../mfc/reference/cmousemanager-class.md) globale.|
-|[CWinAppEx:: GetObject](#getobject)|Legge i dati derivati da `CObject`associati al valore specificato dal registro di sistema.|
-|[CWinAppEx:: GetRegSectionPath](#getregsectionpath)|Restituisce una stringa che rappresenta il percorso di una chiave del registro di sistema. Questo percorso concatena il percorso relativo fornito con il percorso dell'applicazione.|
-|[CWinAppEx:: GetRegistryBase](#getregistrybase)|Restituisce il percorso del registro di sistema per l'applicazione.|
-|[CWinAppEx:: GetSectionBinary](#getsectionbinary)|Legge i dati binari associati alla chiave e al valore specificati dal registro di sistema.|
-|[CWinAppEx:: GetSectionInt](#getsectionint)|Legge i dati numerici dal registro di sistema associato alla chiave e al valore specificati.|
-|[CWinAppEx:: GetSectionObject](#getsectionobject)|Legge `CObject` dati associati alla chiave e al valore specificati dal registro di sistema.|
-|[CWinAppEx:: GetSectionString](#getsectionstring)|Legge i dati stringa associati alla chiave e al valore specificati dal registro di sistema.|
-|[CWinAppEx:: GetShellManager](#getshellmanager)|Restituisce un puntatore all'oggetto [CShellManager](../../mfc/reference/cshellmanager-class.md) globale.|
-|[CWinAppEx:: GetString](#getstring)|Legge i dati stringa associati al valore specificato dal registro di sistema.|
-|[CWinAppEx:: GetTooltipManager](#gettooltipmanager)|Restituisce un puntatore all'oggetto [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) globale.|
-|[CWinAppEx:: GetUserToolsManager](#getusertoolsmanager)|Restituisce un puntatore all'oggetto [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) globale.|
-|[CWinAppEx:: InitContextMenuManager](#initcontextmenumanager)|Inizializza l'oggetto `CContextMenuManager`.|
-|[CWinAppEx:: InitKeyboardManager](#initkeyboardmanager)|Inizializza l'oggetto `CKeyboardManager`.|
-|[CWinAppEx:: InitMouseManager](#initmousemanager)|Inizializza l'oggetto `CMouseManager`.|
-|[CWinAppEx:: InitShellManager](#initshellmanager)|Inizializza la classe `CShellManager`|
-|[CWinAppEx:: InitTooltipManager](#inittooltipmanager)|Inizializza la classe `CTooltipManager`.|
-|[CWinAppEx:: IsResourceSmartUpdate](#isresourcesmartupdate)||
-|[CWinAppEx:: IsStateExists](#isstateexists)|Indica se la chiave specificata si trova nel registro di sistema.|
-|[CWinAppEx:: LoadState](#loadstate)|Carica lo stato dell'applicazione dal registro di sistema.|
-|[CWinAppEx:: OnAppContextHelp](#onappcontexthelp)|Chiamata eseguita dal framework quando l'utente richiede la guida del contesto per la finestra di dialogo di **personalizzazione** .|
-|[CWinAppEx:: OnViewDoubleClick](#onviewdoubleclick)|Chiama il comando definito dall'utente quando l'utente fa doppio clic in un punto qualsiasi dell'applicazione.|
-|[CWinAppEx:: OnWorkspaceIdle](#onworkspaceidle)||
-|[CWinAppEx:: SaveState](#savestate)|Scrive lo stato del Framework applicazione nel registro di sistema di Windows.|
-|[CWinAppEx:: SetRegistryBase](#setregistrybase)|Imposta il percorso della chiave del registro di sistema predefinita. Questa chiave fungerà da radice per tutte le chiamate successive al registro di sistema.|
-|[CWinAppEx:: ShowPopupMenu](#showpopupmenu)|Consente di visualizzare un menu di scelta rapida.|
-|[CWinAppEx:: WriteBinary](#writebinary)|Scrive i dati binari nel valore del registro di sistema specificato.|
-|[CWinAppEx:: WriteInt](#writeint)|Scrive i dati numerici nel valore del registro di sistema specificato.|
-|[CWinAppEx:: WriteObject](#writeobject)|Scrive i dati derivati dalla [classe CObject](../../mfc/reference/cobject-class.md) nel valore del registro di sistema specificato.|
-|[CWinAppEx:: WriteSectionBinary](#writesectionbinary)|Scrive i dati binari in un valore della chiave del registro di sistema specificata.|
-|[CWinAppEx:: WriteSectionInt](#writesectionint)|Scrive i dati numerici in un valore della chiave del registro di sistema specificata.|
-|[CWinAppEx:: WriteSectionObject](#writesectionobject)|Scrive i dati derivati dalla classe `CObject` in un valore della chiave del registro di sistema specificata.|
-|[CWinAppEx:: WriteSectionString](#writesectionstring)|Scrive i dati stringa in un valore della chiave del registro di sistema specificata.|
-|[CWinAppEx:: WriteString](#writestring)|Scrive i dati stringa nel valore del registro di sistema specificato.|
+|[CWinAppEx::CleanState](#cleanstate)|Rimuove le informazioni sull'applicazione dal Registro di sistema di Windows.|
+|[CWinAppEx::EnableLoadWindowPlacement](#enableloadwindowplacement)|Specifica se l'applicazione caricherà le dimensioni e il percorso iniziali della finestra cornice principale dal Registro di sistema.|
+|[CWinAppEx::EnableTearOffMenus](#enabletearoffmenus)|Abilita i menu tear-off per l'applicazione.|
+|[CWinAppEx::EnableUserTools](#enableusertools)|Consente all'utente di creare comandi di menu personalizzati nell'applicazione.|
+|[CWinAppEx::ExitInstance](#exitinstance)|Chiamato dal framework dall'interno della `Run` funzione membro per uscire da questa istanza dell'applicazione. (Esegue l'override di [CWinApp::ExitInstance.)](../../mfc/reference/cwinapp-class.md#exitinstance)|
+|[CWinAppEx::GetBinary](#getbinary)|Legge i dati binari associati al valore del Registro di sistema specificato.|
+|[CWinAppEx::GetContextMenuManager](#getcontextmenumanager)|Restituisce un puntatore all'oggetto [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) globale.|
+|[CWinAppEx::GetDataVersion](#getdataversion)||
+|[CWinAppEx::GetDataVersionMajor](#getdataversionmajor)|Restituisce la versione principale dell'applicazione salvata nel Registro di sistema di Windows.|
+|[CWinAppEx::GetDataVersionMinor](#getdataversionminor)|Restituisce la versione secondaria dell'applicazione salvata nel Registro di sistema di Windows.|
+|[CWinAppEx::GetInt](#getint)|Legge i dati numerici associati al valore specificato dal Registro di sistema.|
+|[CWinAppEx::GetKeyboardManager](#getkeyboardmanager)|Restituisce un puntatore all'oggetto [globale CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) oggetto.|
+|[CWinAppEx::GetMouseManager](#getmousemanager)|Restituisce un puntatore all'oggetto [CMouseManager](../../mfc/reference/cmousemanager-class.md) globale.|
+|[CWinAppEx::GetObject](#getobject)|Legge `CObject`i dati derivati associati al valore specificato dal Registro di sistema.|
+|[CWinAppEx::GetRegSectionPath (percorso CWinAppEx::GetRegSectionPath)](#getregsectionpath)|Restituisce una stringa che è il percorso di una chiave del Registro di sistema. Questo percorso concatena il percorso relativo fornito con il percorso dell'applicazione.|
+|[CWinAppEx::GetRegistryBase](#getregistrybase)|Restituisce il percorso del Registro di sistema per l'applicazione.|
+|[CWinAppEx::GetSectionBinary](#getsectionbinary)|Legge dal Registro di sistema i dati binari associati alla chiave e al valore specificati.|
+|[CWinAppEx::GetSectionInt](#getsectionint)|Legge i dati numerici dal Registro di sistema associato alla chiave e al valore specificati.|
+|[CWinAppEx::GetSectionObject](#getsectionobject)|Legge `CObject` dal Registro di sistema i dati associati alla chiave e al valore specificati.|
+|[CWinAppEx::GetSectionString](#getsectionstring)|Legge i dati di stringa associati alla chiave e al valore specificati dal Registro di sistema.|
+|[CWinAppEx::GetShellManager](#getshellmanager)|Restituisce un puntatore all'oggetto [CShellManager](../../mfc/reference/cshellmanager-class.md) globale.|
+|[CWinAppEx::GetString](#getstring)|Legge i dati di stringa associati al valore specificato dal Registro di sistema.|
+|[CWinAppEx::GetTooltipManager](#gettooltipmanager)|Restituisce un puntatore all'oggetto [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) globale.|
+|[CWinAppEx::GetUserToolsManager](#getusertoolsmanager)|Restituisce un puntatore all'oggetto [globale CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) oggetto.|
+|[CWinAppEx::InitContextMenuManager (informazioni in base al menu CWinAppEx::InitContextMenuManager)](#initcontextmenumanager)|Inizializza l'oggetto `CContextMenuManager`.|
+|[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)|Inizializza l'oggetto `CKeyboardManager`.|
+|[CWinAppEx::InitMouseManager](#initmousemanager)|Inizializza l'oggetto `CMouseManager`.|
+|[CWinAppEx::InitShellManager](#initshellmanager)|Inizializza la `CShellManager` classe|
+|[CWinAppEx::InitTooltipManager](#inittooltipmanager)|Inizializza la classe `CTooltipManager`.|
+|[CWinAppEx::IsResourceSmartUpdate](#isresourcesmartupdate)||
+|[CWinAppEx::IsStateExists](#isstateexists)|Indica se la chiave specificata si trova nel Registro di sistema.|
+|[CWinAppEx::LoadState](#loadstate)|Carica lo stato dell'applicazione dal Registro di sistema.|
+|[CWinAppEx::OnAppContextHelp](#onappcontexthelp)|Chiamato dal framework quando l'utente richiede la Guida del contesto per la finestra di dialogo **Personalizzazione.**|
+|[CWinAppEx::OnViewDoubleClick (Informazioni in base alle funzionalità)](#onviewdoubleclick)|Chiama il comando definito dall'utente quando l'utente fa doppio clic in un punto qualsiasi dell'applicazione.|
+|[CWinAppEx::OnWorkspaceIdle](#onworkspaceidle)||
+|[CWinAppEx::SaveState](#savestate)|Scrive lo stato del framework dell'applicazione nel Registro di sistema di Windows.|
+|[CWinAppEx::SetRegistryBase](#setregistrybase)|Imposta il percorso della chiave del Registro di sistema predefinita. Questa chiave fungerà da radice per tutte le chiamate del Registro di sistema successive.|
+|[CWinAppEx::ShowPopupMenu](#showpopupmenu)|Visualizza un menu a comparsa.|
+|[CWinAppEx::WriteBinary](#writebinary)|Scrive i dati binari nel valore del Registro di sistema specificato.|
+|[CWinAppEx::WriteInt](#writeint)|Scrive i dati numerici nel valore del Registro di sistema specificato.|
+|[CWinAppEx::WriteObject](#writeobject)|Scrive i dati derivati dalla [classe CObject](../../mfc/reference/cobject-class.md) nel valore del Registro di sistema specificato.|
+|[CWinAppEx::WriteSectionBinary](#writesectionbinary)|Scrive i dati binari in un valore della chiave del Registro di sistema specificata.|
+|[CWinAppEx::WriteSectionInt](#writesectionint)|Scrive i dati numerici in un valore della chiave del Registro di sistema specificata.|
+|[CWinAppEx::WriteSectionObject](#writesectionobject)|Scrive i dati `CObject` derivati dalla classe in un valore della chiave del Registro di sistema specificata.|
+|[CWinAppEx::WriteSectionString](#writesectionstring)|Scrive i dati della stringa in un valore della chiave del Registro di sistema specificata.|
+|[CWinAppEx::WriteString](#writestring)|Scrive i dati della stringa nel valore del Registro di sistema specificato.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CWinAppEx:: LoadCustomState](#loadcustomstate)|Chiamata eseguita dal framework quando è stato caricato lo stato dell'applicazione.|
-|[CWinAppEx:: LoadWindowPlacement](#loadwindowplacement)|Chiamata eseguita dal framework quando carica le dimensioni e la posizione dell'applicazione dal registro di sistema. I dati caricati includono le dimensioni e la posizione del fotogramma principale al momento dell'ultima chiusura dell'applicazione.|
-|[CWinAppEx:: OnClosingMainFrame](#onclosingmainframe)|Chiamata eseguita dal framework quando una finestra cornice principale viene elaborata WM_CLOSE.|
-|[CWinAppEx::P reloadstate](#preloadstate)|Chiamata eseguita dal framework immediatamente prima del caricamento dello stato dell'applicazione.|
-|[CWinAppEx::P reSaveState](#presavestate)|Chiamata eseguita dal framework immediatamente prima del salvataggio dello stato dell'applicazione.|
-|[CWinAppEx:: ReloadWindowPlacement](#reloadwindowplacement)|Ricarica le dimensioni e la posizione della finestra fornita dal registro di sistema|
-|[CWinAppEx:: SaveCustomState](#savecustomstate)|Chiamata eseguita dal Framework dopo la scrittura dello stato dell'applicazione nel registro di sistema.|
-|[CWinAppEx:: StoreWindowPlacement](#storewindowplacement)|Chiamato dal Framework per scrivere la dimensione e la posizione del fotogramma principale nel registro di sistema.|
+|[CWinAppEx::LoadCustomState](#loadcustomstate)|Chiamato dal framework quando lo stato dell'applicazione è stato caricato.|
+|[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Chiamato dal framework quando carica le dimensioni e il percorso dell'applicazione dal Registro di sistema. I dati caricati includono le dimensioni e la posizione del frame principale al momento dell'ultima chiusura dell'applicazione.|
+|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|Chiamato dal framework quando una finestra cornice principale sta elaborando WM_CLOSE.|
+|[CWinAppEx::PreLoadState](#preloadstate)|Chiamato dal framework immediatamente prima del caricamento dello stato dell'applicazione.|
+|[CWinAppEx::PreSaveState](#presavestate)|Chiamato dal framework immediatamente prima del salvataggio dello stato dell'applicazione.|
+|[CWinAppEx::ReloadWindowPlacement](#reloadwindowplacement)|Ricarica le dimensioni e la posizione della finestra fornita dal Registro di sistema|
+|[CWinAppEx::SaveCustomState (informazioni in base alla proprietà è un'opzione che consente di salvare](#savecustomstate)|Chiamato dal framework dopo aver scritto lo stato dell'applicazione nel Registro di sistema.|
+|[CWinAppEx::StoreWindowPlacement](#storewindowplacement)|Chiamato dal framework per scrivere le dimensioni e la posizione del frame principale nel Registro di sistema.|
 
 ### <a name="data-members"></a>Membri dei dati
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CWinAppEx:: m_bForceImageReset](#m_bforceimagereset)|Consente di specificare se il Framework Reimposta tutte le immagini della barra degli strumenti quando viene caricata la finestra cornice che contiene la barra degli strumenti.|
+|[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|Specifica se il framework reimposterà tutte le immagini della barra degli strumenti quando viene caricata la finestra cornice che contiene la barra degli strumenti.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Gran parte delle funzionalità fornite dal framework MFC dipende dalla classe `CWinAppEx`. È possibile incorporare la classe `CWinAppEx` nell'applicazione in uno dei due modi seguenti:
+Gran parte delle funzionalità fornite dal `CWinAppEx` framework MFC dipende dalla classe. È possibile `CWinAppEx` incorporare la classe nell'applicazione in uno dei due modi seguenti:You can incorporate the class into your application in one of two ways:
 
-- Costruire una classe `CWinAppEx` nel thread principale.
+- Costruire `CWinAppEx` una classe nel thread principale.
 
-- Derivare la classe dell'applicazione principale da `CWinAppEx`.
+- Derivare la classe `CWinAppEx`di applicazione principale da .
 
-Dopo aver incorporato `CWinAppEx` nell'applicazione, è possibile inizializzare uno qualsiasi dei responsabili dell'applicazione. Prima di usare un gestore di applicazioni, è necessario inizializzarlo chiamando il metodo Initialize appropriato. Per ottenere un puntatore a un gestore specifico, chiamare il metodo Get associato. La classe `CWinAppEx` gestisce i gestori di applicazioni seguenti: [classe CMouseManager](../../mfc/reference/cmousemanager-class.md), [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), classe [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)e [Classe CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
+Dopo aver `CWinAppEx` incorporato nell'applicazione, è possibile inizializzare uno qualsiasi dei gestori dell'applicazione. Prima di utilizzare un gestore applicazioni, è necessario inizializzarlo chiamando il metodo initialize appropriato. Per ottenere un puntatore a un gestore specifico, chiamare il metodo get associato. La `CWinAppEx` classe gestisce i seguenti gestori di applicazioni: [CMouseManager Class](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager Class](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md), [CUserToolsManager Class](../../mfc/reference/cusertoolsmanager-class.md)e [CMenuTearOffManager Class](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -232,17 +233,17 @@ Dopo aver incorporato `CWinAppEx` nell'applicazione, è possibile inizializzare 
 
 [CWinThread](../../mfc/reference/cwinthread-class.md)
 
-[CWinApp](../../mfc/reference/cwinapp-class.md)
+[Cwinapp](../../mfc/reference/cwinapp-class.md)
 
 [CWinAppEx](../../mfc/reference/cwinappex-class.md)
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxwinappex. h
+**Intestazione:** afxwinappex.h
 
-##  <a name="cleanstate"></a>CWinAppEx:: CleanState
+## <a name="cwinappexcleanstate"></a><a name="cleanstate"></a>CWinAppEx::CleanState
 
-Rimuove tutte le informazioni sull'applicazione dal registro di sistema di Windows.
+Rimuove tutte le informazioni sull'applicazione dal Registro di sistema di Windows.
 
 ```
 virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
@@ -250,18 +251,18 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSectionName*<br/>
-in Stringa che contiene un percorso di una chiave del registro di sistema.
+*Nomesezione lpsz*<br/>
+[in] Stringa contenente un percorso di una chiave del Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il metodo ha avuto esito positivo; in caso contrario, 0.
+Diverso da zero se il metodo ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo cancella i dati dell'applicazione da una sezione specifica del registro di sistema. È possibile specificare la sezione da cancellare usando il parametro *lpszSectionName*. Se *lpszSectionName* è null, questo metodo utilizzerà il percorso del registro di sistema predefinito archiviato nell'oggetto `CWinAppEx`. Per ottenere il percorso predefinito del registro di sistema, usare [CWinAppEx:: GetRegistryBase](#getregistrybase).
+Questo metodo cancella i dati dell'applicazione da una sezione specifica del Registro di sistema. È possibile specificare la sezione da cancellare utilizzando il parametro *lpszSectionName*. Se *lpszSectionName* è NULL, questo metodo utilizzerà `CWinAppEx` il percorso del Registro di sistema predefinito archiviato nell'oggetto. Per ottenere il percorso del Registro di sistema predefinito, utilizzare [CWinAppEx::GetRegistryBase](#getregistrybase).
 
-##  <a name="cwinappex"></a>CWinAppEx:: CWinAppEx
+## <a name="cwinappexcwinappex"></a><a name="cwinappex"></a>CWinAppEx::CWinAppEx
 
 Costruisce un oggetto `CWinAppEx`.
 
@@ -271,16 +272,16 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-*bResourceSmartUpdate*<br/>
-in Parametro booleano che specifica se l'oggetto dell'area di lavoro deve rilevare e gestire gli aggiornamenti delle risorse.
+*bResourceSmartUpdate (aggiornamento)*<br/>
+[in] Parametro booleano che specifica se l'oggetto dell'area di lavoro deve rilevare e gestire gli aggiornamenti delle risorse.
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe `CWinAppEx` dispone di metodi di inizializzazione, fornisce funzionalità per il salvataggio e il caricamento delle informazioni sull'applicazione nel registro di sistema e controlla le impostazioni globali dell'applicazione. Consente inoltre di utilizzare i gestori globali, ad esempio la [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) e la [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md). Ogni applicazione può avere una sola istanza della classe `CWinAppEx`.
+La `CWinAppEx` classe dispone di metodi di inizializzazione, fornisce funzionalità per il salvataggio e il caricamento delle informazioni dell'applicazione nel Registro di sistema e controlla le impostazioni globali dell'applicazione. Consente inoltre di utilizzare gestori globali, ad esempio la [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) e la [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md). Ogni applicazione può avere una `CWinAppEx` sola istanza della classe.
 
-##  <a name="enableloadwindowplacement"></a>CWinAppEx:: EnableLoadWindowPlacement
+## <a name="cwinappexenableloadwindowplacement"></a><a name="enableloadwindowplacement"></a>CWinAppEx::EnableLoadWindowPlacement
 
-Specifica se l'applicazione caricherà le dimensioni e il percorso iniziali della finestra cornice principale dal registro di sistema.
+Specifica se l'applicazione caricherà le dimensioni e il percorso iniziali della finestra cornice principale dal Registro di sistema.
 
 ```
 void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
@@ -289,15 +290,15 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bEnable*<br/>
-in Specifica se l'applicazione carica le dimensioni e il percorso iniziali della finestra cornice principale dal registro di sistema.
+[in] Specifica se l'applicazione carica le dimensioni iniziali e il percorso della finestra cornice principale dal Registro di sistema.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, le dimensioni e la posizione del fotogramma principale vengono caricate dal registro di sistema insieme ad altre impostazioni dell'applicazione. Questo errore si verifica durante [CWinAppEx:: LoadState](#loadstate). Se non si desidera caricare la posizione iniziale della finestra dal registro di sistema, chiamare questo metodo con *bEnable* impostato su false.
+Per impostazione predefinita, le dimensioni e la posizione del frame principale vengono caricate dal Registro di sistema insieme ad altre impostazioni dell'applicazione. Ciò si verifica durante [CWinAppEx::LoadState](#loadstate). Se non si desidera caricare la posizione iniziale della finestra dal Registro di sistema, chiamare questo metodo con *bEnable* impostato su FALSE.
 
-##  <a name="enabletearoffmenus"></a>CWinAppEx:: EnableTearOffMenus
+## <a name="cwinappexenabletearoffmenus"></a><a name="enabletearoffmenus"></a>CWinAppEx::EnableTearOffMenus
 
-Crea e Inizializza un oggetto [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) .
+Crea e inizializza un oggetto [CMenuTearOffManager.](../../mfc/reference/cmenutearoffmanager-class.md)
 
 ```
 BOOL EnableTearOffMenus(
@@ -308,26 +309,26 @@ BOOL EnableTearOffMenus(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszRegEntry*<br/>
-in Stringa che contiene il percorso di una chiave del registro di sistema. L'applicazione usa questa chiave del registro di sistema per archiviare le informazioni per i menu di strappo.
+*LpszRegEntry (informazioni in questo conto in commiato)*<br/>
+[in] Stringa contenente il percorso di una chiave del Registro di sistema. L'applicazione utilizza questa chiave del Registro di sistema per archiviare le informazioni per i menu tear-off.
 
-*uiCmdFirst*<br/>
-in Primo ID menu di strappo.
+*uiCmdPrimo*<br/>
+[in] Il primo tear off ID menu.
 
-*uiCmdLast*<br/>
-in ID del menu dell'ultimo strappo.
+*uiCmdLast (informazioni in questo modo)*<br/>
+[in] Id del menu di strappo.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il `CMenuTearOffManager` viene creato e inizializzato correttamente. FALSE se si verifica un errore o se il `CMenuTearOffManager` esiste già.
+TRUESe `CMenuTearOffManager` l'oggetto viene creato e inizializzato correttamente. FALSE se si verifica `CMenuTearOffManager` un errore o se l'oggetto esiste già.
 
 ### <a name="remarks"></a>Osservazioni
 
-Usare questa funzione per abilitare i menu tear-off nell'applicazione. È necessario chiamare questa funzione da `InitInstance`.
+Utilizzare questa funzione per abilitare i menu tear-off nell'applicazione. È necessario chiamare `InitInstance`questa funzione da .
 
-##  <a name="enableusertools"></a>CWinAppEx:: EnableUserTools
+## <a name="cwinappexenableusertools"></a><a name="enableusertools"></a>CWinAppEx::EnableUserTools
 
-Consente all'utente di creare comandi di menu personalizzati per ridurre le sequenze di tasti nell'applicazione. Questo metodo crea un oggetto [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) .
+Consente all'utente di creare comandi di menu personalizzati che riducono le sequenze di tasti nell'applicazione. Questo metodo crea un [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) oggetto.
 
 ```
 BOOL EnableUserTools(
@@ -341,37 +342,37 @@ BOOL EnableUserTools(
 
 ### <a name="parameters"></a>Parametri
 
-*uiCmdToolsDummy*<br/>
-in Unsigned Integer utilizzato dal Framework come segnaposto per l'ID del comando del menu strumenti utente.
+*uiCmdToolsDummy (informazioni in base al nome)*<br/>
+[in] Un intero senza segno che il framework utilizza come segnaposto per l'ID di comando del menu degli strumenti utente.
 
-*uiCmdFirst*<br/>
-in ID del comando per il primo strumento utente.
+*uiCmdPrimo*<br/>
+[in] ID di comando per il primo comando dello strumento utente.
 
-*uiCmdLast*<br/>
-in ID del comando per l'ultimo strumento utente.
+*uiCmdLast (informazioni in questo modo)*<br/>
+[in] ID di comando per l'ultimo comando dello strumento utente.
 
 *pToolRTC*<br/>
-in Classe utilizzata dall'oggetto `CUserToolsManager` per creare nuovi strumenti utente.
+[in] Classe utilizzata `CUserToolsManager` dall'oggetto per creare nuovi strumenti utente.
 
-*uArgMenuID*<br/>
-in ID del menu degli argomenti.
+*uArgMenuID (informazioni in stato in questo stato instato)*<br/>
+[in] ID del menu dell'argomento.
 
-*uInitDirMenuID*<br/>
-in ID del menu per la directory iniziale dello strumento.
+*uInitDirMenuID (informazioni in base alla proprietà utente)*<br/>
+[in] ID di menu per la directory iniziale degli strumenti.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il metodo crea e Inizializza un oggetto `CUserToolsManager`; FALSE se il metodo ha esito negativo o se un oggetto `CUserToolsManager` esiste già.
+TRUESe il metodo crea `CUserToolsManager` e inizializza un oggetto. FALSE se il metodo `CUserToolsManager` ha esito negativo o se un oggetto esiste già.
 
 ### <a name="remarks"></a>Osservazioni
 
-Quando si abilitano gli strumenti definiti dall'utente, il Framework supporta automaticamente un menu dinamico che può essere esteso durante la personalizzazione. Il framework associa ogni nuovo elemento a un comando esterno. Il Framework richiama questi comandi quando l'utente seleziona l'elemento appropriato dal menu **strumenti** .
+Quando si abilitano gli strumenti definiti dall'utente, il framework supporta automaticamente un menu dinamico che può essere esteso durante la personalizzazione. Il framework associa ogni nuovo elemento a un comando esterno. Il framework richiama questi comandi quando l'utente seleziona la voce appropriata dal **strumenti** menu.
 
-Ogni volta che l'utente aggiunge un nuovo elemento, il Framework crea un nuovo oggetto. Il tipo di classe per il nuovo oggetto è definito da *pToolRTC*. Il tipo della classe *pToolRTC* deve essere derivato dalla [Classe CUserTool](../../mfc/reference/cusertool-class.md).
+Ogni volta che l'utente aggiunge un nuovo elemento, il framework crea un nuovo oggetto. Il tipo di classe per il nuovo oggetto è definito da *pToolRTC*. Il tipo di classe *pToolRTC* deve essere derivato dalla [classe CUserTool](../../mfc/reference/cusertool-class.md).
 
-Per ulteriori informazioni sugli strumenti utente e su come incorporarli nell'applicazione, vedere [strumenti definiti dall'utente](../../mfc/user-defined-tools.md).
+Per ulteriori informazioni sugli strumenti utente e su come incorporarli nell'applicazione, vedere [Strumenti definiti dall'utente](../../mfc/user-defined-tools.md).
 
-##  <a name="exitinstance"></a>CWinAppEx:: ExitInstance
+## <a name="cwinappexexitinstance"></a><a name="exitinstance"></a>CWinAppEx::ExitInstance
 
 ```
 virtual int ExitInstance();
@@ -381,9 +382,9 @@ virtual int ExitInstance();
 
 ### <a name="remarks"></a>Osservazioni
 
-##  <a name="getbinary"></a>CWinAppEx:: GetBinary
+## <a name="cwinappexgetbinary"></a><a name="getbinary"></a>CWinAppEx::GetBinary
 
-Legge i dati binari da una chiave del registro di sistema specificata.
+Legge i dati binari da una chiave del Registro di sistema specificata.
 
 ```
 BOOL GetBinary(
@@ -394,14 +395,14 @@ BOOL GetBinary(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszEntry*<br/>
-in Stringa che contiene il nome di una chiave del registro di sistema.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il nome di una chiave del Registro di sistema.
 
-*ppData*<br/>
-out Puntatore al buffer che il metodo compila con i dati binari.
+*dati ppData*<br/>
+[fuori] Puntatore al buffer riempito dal metodo con i dati binari.
 
-*pBytes*<br/>
-out Puntatore a un Unsigned Integer utilizzato dal metodo per scrivere il numero di byte letti.
+*pByte*<br/>
+[fuori] Puntatore a un intero senza segno utilizzato dal metodo per scrivere il numero di byte letti.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -409,11 +410,11 @@ TRUE in caso di esito positivo, FALSE in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo legge i dati binari scritti nel registro di sistema. Per scrivere i dati nel registro di sistema, usare i metodi [CWinAppEx:: WriteBinary](#writebinary) e [CWinAppEx:: WriteSectionBinary](#writesectionbinary).
+Questo metodo legge i dati binari scritti nel Registro di sistema. Per scrivere dati nel Registro di sistema, utilizzare i metodi [CWinAppEx::WriteBinary](#writebinary) e [CWinAppEx::WriteSectionBinary](#writesectionbinary).
 
-Il parametro *lpszEntry* è il nome di una voce del registro di sistema che si trova sotto la chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il parametro *lpszEntry* è il nome di una voce del Registro di sistema che si trova nella chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="getcontextmenumanager"></a>CWinAppEx:: GetContextMenuManager
+## <a name="cwinappexgetcontextmenumanager"></a><a name="getcontextmenumanager"></a>CWinAppEx::GetContextMenuManager
 
 Restituisce un puntatore all'oggetto [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) globale.
 
@@ -423,13 +424,13 @@ CContextMenuManager* GetContextMenuManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto `CContextMenuManager` globale.
+Puntatore all'oggetto globale. `CContextMenuManager`
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'oggetto CContextMenuManager non è inizializzato, questa funzione chiama [CWinAppEx:: InitContextMenuManager](#initcontextmenumanager) prima di restituire un puntatore.
+Se l'oggetto CContextMenuManager non è inizializzato, questa funzione chiama [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) prima di restituire un puntatore.
 
-##  <a name="getdataversion"></a>CWinAppEx:: GetDataVersion
+## <a name="cwinappexgetdataversion"></a><a name="getdataversion"></a>CWinAppEx::GetDataVersion
 
 ```
 int GetDataVersion() const;
@@ -439,9 +440,9 @@ int GetDataVersion() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-##  <a name="getdataversionmajor"></a>CWinAppEx:: GetDataVersionMajor
+## <a name="cwinappexgetdataversionmajor"></a><a name="getdataversionmajor"></a>CWinAppEx::GetDataVersionMajor
 
-Restituisce la versione principale dell'applicazione salvata nel registro di sistema di Windows quando si chiama [CWinAppEx:: SaveState](#savestate).
+Restituisce la versione principale dell'applicazione salvata nel Registro di sistema di Windows quando si chiama [CWinAppEx::SaveState](#savestate).
 
 ```
 int GetDataVersionMajor() const;
@@ -449,11 +450,11 @@ int GetDataVersionMajor() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore integer che contiene il numero di versione principale.
+Valore intero che contiene il numero di versione principale.
 
-##  <a name="getdataversionminor"></a>CWinAppEx:: GetDataVersionMinor
+## <a name="cwinappexgetdataversionminor"></a><a name="getdataversionminor"></a>CWinAppEx::GetDataVersionMinor
 
-Restituisce la versione secondaria dell'applicazione salvata nel registro di sistema di Windows quando si chiama [CWinAppEx:: SaveState](#savestate).
+Restituisce la versione secondaria dell'applicazione salvata nel Registro di sistema di Windows quando si chiama [CWinAppEx::SaveState](#savestate).
 
 ```
 int GetDataVersionMinor() const;
@@ -461,11 +462,11 @@ int GetDataVersionMinor() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore integer che contiene il numero di versione secondario.
+Valore intero che contiene il numero di versione secondario.
 
-##  <a name="getint"></a>CWinAppEx:: GetInt
+## <a name="cwinappexgetint"></a><a name="getint"></a>CWinAppEx::GetInt
 
-Legge i dati integer da una chiave del registro di sistema specificata.
+Legge i dati di tipo integer da una chiave del Registro di sistema specificata.
 
 ```
 int GetInt(
@@ -475,25 +476,25 @@ int GetInt(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszEntry*<br/>
-in Stringa che contiene il nome di una voce del registro di sistema.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il nome di una voce del Registro di sistema.
 
-*nDefault*<br/>
-in Valore predefinito restituito dal metodo se la voce del registro di sistema specificata non esiste.
+*nImpostazione predefinita*<br/>
+[in] Valore predefinito restituito dal metodo se la voce del Registro di sistema specificata non esiste.
 
 ### <a name="return-value"></a>Valore restituito
 
-Dati del registro di sistema se il metodo ha avuto esito positivo; in caso contrario, *nDefault*.
+I dati del Registro di sistema se il metodo ha esito positivo; in caso contrario *nDefault*.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo legge i dati Integer dal registro di sistema. Se non sono presenti dati integer associati alla chiave del registro di sistema indicata da *lpszEntry*, questo metodo restituisce *nDefault*. Per scrivere i dati nel registro di sistema, usare i metodi [CWinAppEx:: WriteSectionInt](#writesectionint) e [CWinAppEx:: WriteInt](#writeint).
+Questo metodo legge i dati integer dal Registro di sistema. Se alla chiave del Registro di sistema indicata da *lpszEntry*non sono associati dati integer , questo metodo restituisce *nDefault*. Per scrivere dati nel Registro di sistema, utilizzare i metodi [CWinAppEx::WriteSectionInt](#writesectionint) e [CWinAppEx::WriteInt](#writeint).
 
-Il parametro *lpszEntry* è il nome di una voce del registro di sistema che si trova sotto la chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il parametro *lpszEntry* è il nome di una voce del Registro di sistema che si trova nella chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="getkeyboardmanager"></a>CWinAppEx:: GetKeyboardManager
+## <a name="cwinappexgetkeyboardmanager"></a><a name="getkeyboardmanager"></a>CWinAppEx::GetKeyboardManager
 
-Restituisce un puntatore all'oggetto [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) globale.
+Restituisce un puntatore all'oggetto [globale CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) oggetto.
 
 ```
 CKeyboardManager* GetKeyboardManager();
@@ -501,13 +502,13 @@ CKeyboardManager* GetKeyboardManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto `CKeyboardManager` globale.
+Puntatore all'oggetto globale. `CKeyboardManager`
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il gestore della tastiera non è inizializzato, questa funzione chiama [CWinAppEx:: InitKeyboardManager](#initkeyboardmanager) prima di restituire un puntatore.
+Se il gestore della tastiera non è inizializzato, questa funzione chiama [CWinAppEx::InitKeyboardManager](#initkeyboardmanager) prima di restituire un puntatore.
 
-##  <a name="getmousemanager"></a>CWinAppEx:: GetMouseManager
+## <a name="cwinappexgetmousemanager"></a><a name="getmousemanager"></a>CWinAppEx::GetMouseManager
 
 Restituisce un puntatore all'oggetto [CMouseManager](../../mfc/reference/cmousemanager-class.md) globale.
 
@@ -517,15 +518,15 @@ CMouseManager* GetMouseManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto `CMouseManager` globale.
+Puntatore all'oggetto globale. `CMouseManager`
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il gestore del mouse non è inizializzato, questa funzione chiama [CWinAppEx:: InitMouseManager](#initmousemanager) prima di restituire un puntatore.
+Se il gestore del mouse non è inizializzato, questa funzione chiama [CWinAppEx::InitMouseManager](#initmousemanager) prima di restituire un puntatore.
 
-##  <a name="getobject"></a>CWinAppEx:: GetObject
+## <a name="cwinappexgetobject"></a><a name="getobject"></a>CWinAppEx::GetObject
 
-Legge i dati [CObject](../../mfc/reference/cobject-class.md)-derivato dal registro di sistema.
+Legge i dati dervied di [CObject](../../mfc/reference/cobject-class.md)dal Registro di sistema.
 
 ```
 BOOL GetObject(
@@ -535,25 +536,25 @@ BOOL GetObject(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszEntry*<br/>
-in Stringa che contiene il percorso relativo di una voce del registro di sistema.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa che contiene il percorso relativo di una voce del Registro di sistema.
 
 *obj*<br/>
-out Riferimento a un `CObject`. Il metodo utilizza questo riferimento per archiviare i dati del registro di sistema.
+[fuori] Un riferimento `CObject`a un oggetto . Il metodo utilizza questo riferimento per archiviare i dati del Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il metodo ha avuto esito positivo; in caso contrario, 0.
+Diverso da zero se il metodo ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo legge i dati dal registro di sistema derivato da `CObject`. Per scrivere `CObject` dati nel registro di sistema, usare [CWinAppEx:: WriteObject](#writeobject) o [CWinAppEx:: WriteSectionObject](#writesectionobject).
+Questo metodo legge i dati dal `CObject`Registro di sistema derivato da . Per `CObject` scrivere dati nel Registro di sistema, utilizzare [CWinAppEx::WriteObject](#writeobject) o [CWinAppEx::WriteSectionObject](#writesectionobject).
 
-Il parametro *lpszEntry* è il nome di una voce del registro di sistema che si trova sotto la chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il parametro *lpszEntry* è il nome di una voce del Registro di sistema che si trova nella chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="getregistrybase"></a>CWinAppEx:: GetRegistryBase
+## <a name="cwinappexgetregistrybase"></a><a name="getregistrybase"></a>CWinAppEx::GetRegistryBase
 
-Recupera il percorso predefinito del registro di sistema per l'applicazione.
+Recupera il percorso del Registro di sistema predefinito per l'applicazione.
 
 ```
 LPCTSTR GetRegistryBase();
@@ -561,15 +562,15 @@ LPCTSTR GetRegistryBase();
 
 ### <a name="return-value"></a>Valore restituito
 
-Stringa che contiene il percorso del percorso del registro di sistema predefinito.
+Stringa contenente il percorso del registro di sistema predefinito.
 
 ### <a name="remarks"></a>Osservazioni
 
-Tutti i metodi della [classe CWinAppEx](../../mfc/reference/cwinappex-class.md) che accedono al registro di sistema vengono avviati in un percorso predefinito. Utilizzare questo metodo per recuperare un percorso del percorso del registro di sistema predefinito. Usare [CWinAppEx:: SetRegistryBase](#setregistrybase) per modificare il percorso predefinito del registro di sistema.
+Tutti i metodi della [classe CWinAppEx](../../mfc/reference/cwinappex-class.md) che accedono al Registro di sistema vengono avviati in un percorso predefinito. Utilizzare questo metodo per recuperare un percorso del percorso predefinito del Registro di sistema. Utilizzare [CWinAppEx::SetRegistryBase](#setregistrybase) per modificare il percorso predefinito del Registro di sistema.
 
-##  <a name="getregsectionpath"></a>CWinAppEx:: GetRegSectionPath
+## <a name="cwinappexgetregsectionpath"></a><a name="getregsectionpath"></a>CWinAppEx::GetRegSectionPath (percorso CWinAppEx::GetRegSectionPath)
 
-Crea e restituisce il percorso assoluto di una chiave del registro di sistema.
+Crea e restituisce il percorso assoluto di una chiave del Registro di sistema.
 
 ```
 CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
@@ -577,20 +578,20 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 
 ### <a name="parameters"></a>Parametri
 
-*szSectionAdd*<br/>
-in Stringa che contiene il percorso relativo di una chiave del registro di sistema.
+*szSectionAdd (Componente aggiuntivo di szz)*<br/>
+[in] Stringa contenente il percorso relativo di una chiave del Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
-`CString` che contiene il percorso assoluto di una chiave del registro di sistema.
+Oggetto `CString` che contiene il percorso assoluto di una chiave del Registro di sistema.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo definisce il percorso assoluto della chiave del registro di sistema aggiungendo il percorso relativo in *szSectionAdd* al percorso predefinito del registro di sistema per l'applicazione. Per ottenere la chiave del registro di sistema predefinita, usare il metodo [CWinAppEx:: GetRegistryBase](#getregistrybase).
+Questo metodo definisce il percorso assoluto della chiave del Registro di sistema aggiungendo il percorso relativo in *szSectionAdd* al percorso predefinito del Registro di sistema per l'applicazione. Per ottenere la chiave del Registro di sistema predefinita, utilizzare il metodo [CWinAppEx::GetRegistryBase](#getregistrybase).
 
-##  <a name="getsectionbinary"></a>CWinAppEx:: GetSectionBinary
+## <a name="cwinappexgetsectionbinary"></a><a name="getsectionbinary"></a>CWinAppEx::GetSectionBinary
 
-Legge i dati binari dal registro di sistema.
+Legge i dati binari dal Registro di sistema.
 
 ```
 BOOL GetSectionBinary(
@@ -602,17 +603,17 @@ BOOL GetSectionBinary(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSubSection*<br/>
-in Stringa che contiene il percorso relativo di una chiave del registro di sistema.
+*lpszSubSezione*<br/>
+[in] Stringa contenente il percorso relativo di una chiave del Registro di sistema.
 
-*lpszEntry*<br/>
-in Stringa che contiene il valore da leggere.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il valore da leggere.
 
-*ppData*<br/>
-out Puntatore al buffer in cui il metodo archivia i dati.
+*dati ppData*<br/>
+[fuori] Puntatore al buffer in cui il metodo archivia i dati.
 
-*pBytes*<br/>
-out Puntatore a un Unsigned Integer. Il metodo scrive la dimensione di *ppData* in questo parametro.
+*pByte*<br/>
+[fuori] Puntatore a un intero senza segno. Il metodo scrive la dimensione di *ppData* in questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -620,13 +621,13 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo legge i dati binari scritti nel registro di sistema utilizzando i metodi [CWinAppEx:: WriteBinary](#writebinary) e [CWinAppEx:: WriteSectionBinary](#writesectionbinary).
+Questo metodo legge i dati binari scritti nel Registro di sistema utilizzando i metodi [CWinAppEx::WriteBinary](#writebinary) e [CWinAppEx::WriteSectionBinary](#writesectionbinary).
 
-Il parametro *lpszSubSection* non è un percorso assoluto per una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla fine della chiave del registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il *lpszSubSection* parametro non è un percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="getsectionint"></a>CWinAppEx:: GetSectionInt
+## <a name="cwinappexgetsectionint"></a><a name="getsectionint"></a>CWinAppEx::GetSectionInt
 
-Legge i dati Integer dal registro di sistema.
+Legge i dati di tipo integer dal Registro di sistema.
 
 ```
 int GetSectionInt(
@@ -637,28 +638,28 @@ int GetSectionInt(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSubSection*<br/>
-in Stringa che contiene il percorso relativo di una chiave del registro di sistema.
+*lpszSubSezione*<br/>
+[in] Stringa contenente il percorso relativo di una chiave del Registro di sistema.
 
-*lpszEntry*<br/>
-in Stringa che contiene il valore da leggere.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il valore da leggere.
 
-*nDefault*<br/>
-in Valore predefinito da restituire se il valore specificato non esiste.
+*nImpostazione predefinita*<br/>
+[in] Valore predefinito da restituire se il valore specificato non esiste.
 
 ### <a name="return-value"></a>Valore restituito
 
-Dati Integer archiviati nel valore del registro di sistema specificato; *nDefault* se i dati non esistono.
+I dati integer archiviati nel valore del Registro di sistema specificato; *nImpostazione* se i dati non esistono.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per scrivere dati integer nel registro di sistema, usare i metodi [CWinAppEx:: WriteInt](#writeint) e [CWinAppEx:: WriteSectionInt](#writesectionint) .
+Utilizzare i metodi [CWinAppEx::WriteInt](#writeint) e [CWinAppEx::WriteSectionInt](#writesectionint) per scrivere dati interi nel Registro di sistema.
 
-Il parametro *lpszSubSection* non è un percorso assoluto di una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla fine della chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il *lpszSubSection* parametro non è un percorso assoluto di una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="getsectionobject"></a>CWinAppEx:: GetSectionObject
+## <a name="cwinappexgetsectionobject"></a><a name="getsectionobject"></a>CWinAppEx::GetSectionObject
 
-Legge i dati del registro di sistema [CObject](../../mfc/reference/cobject-class.md) dal registro di sistema.
+Legge i dati del Registro di sistema [CObject](../../mfc/reference/cobject-class.md) dal Registro di sistema.
 
 ```
 BOOL GetSectionObject(
@@ -669,14 +670,14 @@ BOOL GetSectionObject(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSubSection*<br/>
-in Stringa che contiene il percorso relativo di una chiave del registro di sistema.
+*lpszSubSezione*<br/>
+[in] Stringa contenente il percorso relativo di una chiave del Registro di sistema.
 
-*lpszEntry*<br/>
-in Stringa che contiene il valore da leggere.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il valore da leggere.
 
 *obj*<br/>
-out Riferimento a un `CObject`. Il metodo usa questa `CObject` per archiviare i dati del registro di sistema.
+[fuori] Un riferimento `CObject`a un oggetto . Il metodo `CObject` utilizza questo per archiviare i dati del Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -684,13 +685,13 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo legge i dati dal registro di sistema. I dati letti sono `CObject` dati o dati per una classe derivata da `CObject`. Per scrivere `CObject` dati nel registro di sistema, usare [CWinAppEx:: WriteObject](#writeobject) o [CWinAppEx:: WriteSectionObject](#writesectionobject).
+Questo metodo legge i dati dal Registro di sistema. I dati `CObject` letti sono dati o dati `CObject`per una classe derivata da . Per `CObject` scrivere dati nel Registro di sistema, utilizzare [CWinAppEx::WriteObject](#writeobject) o [CWinAppEx::WriteSectionObject](#writesectionobject).
 
-Il parametro *lpszSubSection* non è un percorso assoluto per una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla fine della chiave del registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il *lpszSubSection* parametro non è un percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="getsectionstring"></a>CWinAppEx:: GetSectionString
+## <a name="cwinappexgetsectionstring"></a><a name="getsectionstring"></a>CWinAppEx::GetSectionString
 
-Legge i dati stringa dal registro di sistema.
+Legge i dati di stringa dal Registro di sistema.
 
 ```
 CString GetSectionString(
@@ -701,26 +702,26 @@ CString GetSectionString(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSubSection*<br/>
-in Stringa che contiene il percorso relativo di una chiave del registro di sistema.
+*lpszSubSezione*<br/>
+[in] Stringa contenente il percorso relativo di una chiave del Registro di sistema.
 
-*lpszEntry*<br/>
-in Stringa che contiene il valore da leggere.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il valore da leggere.
 
-*lpszDefault*<br/>
-in Valore predefinito da restituire se il valore specificato non esiste.
+*lpszDefault (impostazione predefinita)*<br/>
+[in] Valore predefinito da restituire se il valore specificato non esiste.
 
 ### <a name="return-value"></a>Valore restituito
 
-Dati stringa archiviati nel valore del registro di sistema specificato se i dati esistono. in caso contrario, *lpszDefault*.
+I dati stringa archiviati nel valore del Registro di sistema specificato se i dati esistono; in caso *contrario lpszDefault*.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo legge i dati stringa scritti nel registro di sistema. Per scrivere dati di stringa nel registro di sistema, usare [CWinAppEx:: WriteString](#writestring) e [CWinAppEx:: WriteSectionString](#writesectionstring) .
+Questo metodo legge i dati di stringa scritti nel Registro di sistema. Utilizzare [CWinAppEx::WriteString](#writestring) e [CWinAppEx::WriteSectionString](#writesectionstring) per scrivere dati di stringa nel Registro di sistema.
 
-Il parametro *lpszSubSection* non è un percorso assoluto per una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla fine della chiave del registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il *lpszSubSection* parametro non è un percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="getshellmanager"></a>CWinAppEx:: GetShellManager
+## <a name="cwinappexgetshellmanager"></a><a name="getshellmanager"></a>CWinAppEx::GetShellManager
 
 Restituisce un puntatore all'oggetto [CShellManager](../../mfc/reference/cshellmanager-class.md) globale.
 
@@ -730,15 +731,15 @@ CShellManager* GetShellManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto `CShellManager` globale.
+Puntatore all'oggetto globale. `CShellManager`
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'oggetto `CShellManager` non è inizializzato, questa funzione chiama [CWinAppEx:: InitShellManager](#initshellmanager) prima di restituire un puntatore.
+Se `CShellManager` l'oggetto non è inizializzato, questa funzione chiama [CWinAppEx::InitShellManager](#initshellmanager) prima di restituire un puntatore.
 
-##  <a name="getstring"></a>CWinAppEx:: GetString
+## <a name="cwinappexgetstring"></a><a name="getstring"></a>CWinAppEx::GetString
 
-Legge i dati stringa da una chiave del registro di sistema specificata.
+Legge i dati di stringa da una chiave del Registro di sistema specificata.
 
 ```
 CString GetString(
@@ -748,23 +749,23 @@ CString GetString(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszEntry*<br/>
-in Stringa che contiene il nome di una chiave del registro di sistema
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il nome di una chiave del Registro di sistema
 
-*lpzDefault*<br/>
-in Valore predefinito restituito dal metodo se la voce del registro di sistema specificata non esiste.
+*LpzDefault (impostazione predefinita)*<br/>
+[in] Valore predefinito restituito dal metodo se la voce del Registro di sistema specificata non esiste.
 
 ### <a name="return-value"></a>Valore restituito
 
-Dati stringa archiviati nel registro di sistema in caso di esito positivo; *lpszDefault* in caso contrario.
+I dati stringa archiviati nel Registro di sistema in caso di esito positivo; *lpszDefault* in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo legge i dati stringa scritti nel registro di sistema. Per scrivere i dati nel registro di sistema, usare i metodi [CWinAppEx:: WriteString](#writestring) o [CWinAppEx:: WriteSectionString](#writesectionstring).
+Questo metodo legge i dati di stringa scritti nel Registro di sistema. Per scrivere dati nel Registro di sistema, utilizzare i metodi [CWinAppEx::WriteString](#writestring) o [CWinAppEx::WriteSectionString](#writesectionstring).
 
-Il parametro *lpszEntry* è il nome di una voce del registro di sistema che si trova sotto la chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il parametro *lpszEntry* è il nome di una voce del Registro di sistema che si trova nella chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="gettooltipmanager"></a>CWinAppEx:: GetTooltipManager
+## <a name="cwinappexgettooltipmanager"></a><a name="gettooltipmanager"></a>CWinAppEx::GetTooltipManager
 
 Restituisce un puntatore all'oggetto [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) globale.
 
@@ -774,15 +775,15 @@ CTooltipManager* GetTooltipManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto `CTooltipManager` globale.
+Puntatore all'oggetto globale. `CTooltipManager`
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'oggetto `CTooltipManager` non è inizializzato, questa funzione chiama [CWinAppEx:: InitTooltipManager](#inittooltipmanager) prima di restituire un puntatore.
+Se `CTooltipManager` l'oggetto non è inizializzato, questa funzione chiama [CWinAppEx::InitTooltipManager](#inittooltipmanager) prima di restituire un puntatore.
 
-##  <a name="getusertoolsmanager"></a>CWinAppEx:: GetUserToolsManager
+## <a name="cwinappexgetusertoolsmanager"></a><a name="getusertoolsmanager"></a>CWinAppEx::GetUserToolsManager
 
-Restituisce un puntatore all'oggetto [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) globale.
+Restituisce un puntatore all'oggetto [globale CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) oggetto.
 
 ```
 CUserToolsManager* GetUserToolsManager();
@@ -790,15 +791,15 @@ CUserToolsManager* GetUserToolsManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto `CUserToolsManager` globale; NULL se la gestione degli strumenti utente non è abilitata per l'applicazione.
+Un puntatore `CUserToolsManager` all'oggetto globale; NULL se la gestione degli strumenti utente non è abilitata per l'applicazione.
 
 ### <a name="remarks"></a>Osservazioni
 
-Prima di recuperare un puntatore all'oggetto `CUserToolsManager`, è necessario inizializzare il gestore chiamando [CWinAppEx:: EnableUserTools](#enableusertools).
+Prima di recuperare un `CUserToolsManager` puntatore all'oggetto, è necessario inizializzare il gestore chiamando [CWinAppEx::EnableUserTools](#enableusertools).
 
-##  <a name="initcontextmenumanager"></a>CWinAppEx:: InitContextMenuManager
+## <a name="cwinappexinitcontextmenumanager"></a><a name="initcontextmenumanager"></a>CWinAppEx::InitContextMenuManager (informazioni in base al menu CWinAppEx::InitContextMenuManager)
 
-Inizializza l'oggetto [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) .
+Inizializza l'oggetto [CContextMenuManager.](../../mfc/reference/ccontextmenumanager-class.md)
 
 ```
 BOOL InitContextMenuManager();
@@ -806,17 +807,17 @@ BOOL InitContextMenuManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il metodo crea l'oggetto CContextMenuManager; 0 se l'oggetto `CContextMenuManager` esiste già.
+Diverso da zero se il metodo crea il CContextMenuManager oggetto; 0 se `CContextMenuManager` l'oggetto esiste già.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se si chiama [CWinAppEx:: GetContextMenuManager](#getcontextmenumanager), l'implementazione predefinita di tale metodo chiama `InitContextMenuManager`.
+Se si chiama [CWinAppEx::GetContextMenuManager](#getcontextmenumanager), l'implementazione predefinita di tale metodo chiama `InitContextMenuManager`.
 
-Se l'applicazione dispone già di un gestore di menu di scelta rapida e si chiama `InitContextMenuManager`, l'applicazione avrà un errore di [asserzione](diagnostic-services.md#assert) . Pertanto, non è necessario chiamare `InitContextMenuManager` se si crea direttamente un oggetto `CContextMenuManager`. Se non si utilizza una `CContextMenuManager`personalizzata, è necessario utilizzare `GetContextMenuManager` per creare un oggetto `CContextMenuManager`.
+Se l'applicazione dispone già di `InitContextMenuManager`un gestore di menu di scelta rapida e si chiama , l'applicazione avrà un errore [ASSERT.](diagnostic-services.md#assert) Pertanto, è `InitContextMenuManager` consigliabile non `CContextMenuManager` chiamare se si crea un oggetto direttamente. Se non si utilizza `CContextMenuManager`un oggetto `GetContextMenuManager` personalizzato `CContextMenuManager` , è necessario utilizzare per creare un oggetto .
 
-##  <a name="initkeyboardmanager"></a>CWinAppEx:: InitKeyboardManager
+## <a name="cwinappexinitkeyboardmanager"></a><a name="initkeyboardmanager"></a>CWinAppEx::InitKeyboardManager
 
-Inizializza l'oggetto [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) .
+Inizializza l'oggetto [CKeyboardManager.](../../mfc/reference/ckeyboardmanager-class.md)
 
 ```
 BOOL InitKeyboardManager();
@@ -824,17 +825,17 @@ BOOL InitKeyboardManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il metodo crea l'oggetto `CKeyboardManager`; 0 se l'oggetto `CKeyboardManager` esiste già.
+Diverso da zero se `CKeyboardManager` il metodo crea l'oggetto; 0 se `CKeyboardManager` l'oggetto esiste già.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se si chiama [CWinAppEx:: GetKeyboardManager](#getkeyboardmanager), l'implementazione predefinita di tale metodo chiama `InitKeyboardManager`.
+Se si chiama [CWinAppEx::GetKeyboardManager](#getkeyboardmanager), l'implementazione predefinita di tale metodo chiama `InitKeyboardManager`.
 
-Se l'applicazione dispone già di un gestore della tastiera e si chiama `InitKeyboardManager`, l'applicazione avrà un errore di [asserzione](diagnostic-services.md#assert) . Pertanto, non è necessario chiamare `InitKeyboardManager` se si crea direttamente un oggetto `CKeyboardManager`. Se non si utilizza una `CKeyboardManager`personalizzata, è necessario utilizzare `GetKeyboardManager` per creare un oggetto `CKeyboardManager`.
+Se l'applicazione dispone già di `InitKeyboardManager`un gestore della tastiera e si chiama , l'applicazione avrà un errore [ASSERT.](diagnostic-services.md#assert) Pertanto, è `InitKeyboardManager` consigliabile non `CKeyboardManager` chiamare se si crea un oggetto direttamente. Se non si utilizza `CKeyboardManager`un oggetto `GetKeyboardManager` personalizzato `CKeyboardManager` , è necessario utilizzare per creare un oggetto .
 
-##  <a name="initmousemanager"></a>CWinAppEx:: InitMouseManager
+## <a name="cwinappexinitmousemanager"></a><a name="initmousemanager"></a>CWinAppEx::InitMouseManager
 
-Inizializza l'oggetto [CMouseManager](../../mfc/reference/cmousemanager-class.md) .
+Inizializza l'oggetto [CMouseManager.](../../mfc/reference/cmousemanager-class.md)
 
 ```
 BOOL InitMouseManager();
@@ -842,17 +843,17 @@ BOOL InitMouseManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il metodo crea l'oggetto `CMouseManager`; 0 se l'oggetto `CMouseManager` esiste già.
+Diverso da zero se `CMouseManager` il metodo crea l'oggetto; 0 se `CMouseManager` l'oggetto esiste già.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se si chiama [CWinAppEx:: GetMouseManager](#getmousemanager), l'implementazione predefinita di tale metodo chiama `InitMouseManager`.
+Se si chiama [CWinAppEx::GetMouseManager](#getmousemanager), l'implementazione predefinita di tale metodo chiama `InitMouseManager`.
 
-Se l'applicazione dispone già di un gestore del mouse e si chiama `InitMouseManager`, l'applicazione avrà un errore di [asserzione](diagnostic-services.md#assert) . Pertanto, non è necessario chiamare `InitMouseManager` se si crea direttamente un oggetto `CMouseManager`. Se non si utilizza una `CMouseManager`personalizzata, è necessario utilizzare `GetMouseManager` per creare un oggetto `CMouseManager`.
+Se l'applicazione dispone già di `InitMouseManager`un gestore del mouse e si chiama , l'applicazione avrà un errore [ASSERT.](diagnostic-services.md#assert) Pertanto non `InitMouseManager` è necessario `CMouseManager` chiamare se si crea un oggetto direttamente. Se non si utilizza `CMouseManager`un oggetto `GetMouseManager` personalizzato `CMouseManager` , è necessario utilizzare per creare un oggetto .
 
-##  <a name="initshellmanager"></a>CWinAppEx:: InitShellManager
+## <a name="cwinappexinitshellmanager"></a><a name="initshellmanager"></a>CWinAppEx::InitShellManager
 
-Inizializza l'oggetto [CShellManager](../../mfc/reference/cshellmanager-class.md) .
+Inizializza l'oggetto [CShellManager.](../../mfc/reference/cshellmanager-class.md)
 
 ```
 BOOL InitShellManager();
@@ -860,17 +861,17 @@ BOOL InitShellManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il metodo crea l'oggetto `CShellManager`; 0 se l'oggetto `CShellManager` esiste già.
+Diverso da zero se `CShellManager` il metodo crea l'oggetto; 0 se `CShellManager` l'oggetto esiste già.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se si chiama [CWinAppEx:: GetShellManager](#getshellmanager), l'implementazione predefinita di tale metodo chiama `InitShellManager`.
+Se si chiama [CWinAppEx::GetShellManager](#getshellmanager), l'implementazione predefinita di tale metodo chiama `InitShellManager`.
 
-Se l'applicazione dispone già di una gestione Shell e si chiama `InitShellManager`, l'applicazione genera un errore di [asserzione](diagnostic-services.md#assert) . Pertanto, non chiamare `InitShellManager` se si crea direttamente un oggetto `CShellManager`. Se non si utilizza una `CShellManager`personalizzata, utilizzare `GetShellManager` per creare un oggetto `CShellManager`.
+Se l'applicazione dispone già di `InitShellManager`un gestore della shell e si chiama , l'applicazione genera un errore [ASSERT.](diagnostic-services.md#assert) Pertanto, non `InitShellManager` chiamare se `CShellManager` si crea un oggetto direttamente. Se non si utilizza `CShellManager`un `GetShellManager` oggetto `CShellManager` personalizzato , utilizzare per creare un oggetto .
 
-##  <a name="inittooltipmanager"></a>CWinAppEx:: InitTooltipManager
+## <a name="cwinappexinittooltipmanager"></a><a name="inittooltipmanager"></a>CWinAppEx::InitTooltipManager
 
-Inizializza l'oggetto [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) .
+Inizializza l'oggetto [CTooltipManager.](../../mfc/reference/ctooltipmanager-class.md)
 
 ```
 BOOL InitTooltipManager();
@@ -878,15 +879,15 @@ BOOL InitTooltipManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il metodo crea l'oggetto `CTooltipManager`; 0 se l'oggetto `CTooltipManager` esiste già.
+Diverso da zero se `CTooltipManager` il metodo crea l'oggetto; 0 se `CTooltipManager` l'oggetto esiste già.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se si chiama [CWinAppEx:: GetTooltipManager](#gettooltipmanager), l'implementazione predefinita di tale metodo chiama `InitTooltipManager`.
+Se si chiama [CWinAppEx::GetTooltipManager](#gettooltipmanager), l'implementazione predefinita di tale metodo chiama `InitTooltipManager`.
 
-Se l'applicazione dispone già di una gestione descrizioni comandi e si chiama `InitTooltipManager`, l'applicazione avrà un errore di [asserzione](diagnostic-services.md#assert) . Pertanto, non è necessario chiamare `InitTooltipManager` se si crea direttamente un oggetto `CTooltipManager`. Se non si utilizza una `CTooltipManager`personalizzata, è necessario utilizzare `GetTooltipManager` per creare un oggetto `CTooltipManager`.
+Se l'applicazione dispone già di `InitTooltipManager`un gestore di descrizioni comandi e si chiama , l'applicazione avrà un errore [ASSERT.](diagnostic-services.md#assert) Pertanto, è `InitTooltipManager` consigliabile non `CTooltipManager` chiamare se si crea un oggetto direttamente. Se non si utilizza `CTooltipManager`un oggetto `GetTooltipManager` personalizzato `CTooltipManager` , è necessario utilizzare per creare un oggetto .
 
-##  <a name="isresourcesmartupdate"></a>CWinAppEx:: IsResourceSmartUpdate
+## <a name="cwinappexisresourcesmartupdate"></a><a name="isresourcesmartupdate"></a>CWinAppEx::IsResourceSmartUpdate
 
 ```
 BOOL IsResourceSmartUpdate() const;
@@ -896,9 +897,9 @@ BOOL IsResourceSmartUpdate() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-##  <a name="isstateexists"></a>CWinAppEx:: IsStateExists
+## <a name="cwinappexisstateexists"></a><a name="isstateexists"></a>CWinAppEx::IsStateExists
 
-Indica se la chiave specificata si trova nel registro di sistema.
+Indica se la chiave specificata si trova nel Registro di sistema.
 
 ```
 BOOL IsStateExists(LPCTSTR lpszSectionName);
@@ -906,16 +907,16 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSectionName*<br/>
-in Stringa che contiene un percorso di una chiave del registro di sistema.
+*Nomesezione lpsz*<br/>
+[in] Stringa contenente un percorso di una chiave del Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la chiave si trova nel registro di sistema; in caso contrario, 0.
+Diverso da zero se la chiave è nel Registro di sistema; in caso contrario 0.
 
-##  <a name="loadcustomstate"></a>CWinAppEx:: LoadCustomState
+## <a name="cwinappexloadcustomstate"></a><a name="loadcustomstate"></a>CWinAppEx::LoadCustomState
 
-Il Framework chiama questo metodo dopo aver caricato lo stato dell'applicazione dal registro di sistema.
+Il framework chiama questo metodo dopo aver caricato lo stato dell'applicazione dal Registro di sistema.
 
 ```
 virtual void LoadCustomState();
@@ -923,13 +924,13 @@ virtual void LoadCustomState();
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo se si desidera eseguire un'elaborazione dopo che l'applicazione carica lo stato dal registro di sistema. Per impostazione predefinita, questo metodo non effettua alcuna operazione.
+Eseguire l'override di questo metodo se si desidera eseguire qualsiasi elaborazione dopo che l'applicazione carica lo stato dal Registro di sistema. Per impostazione predefinita, questo metodo non effettua alcuna operazione.
 
-Per caricare le informazioni sullo stato personalizzate dal registro di sistema, è necessario innanzitutto salvare le informazioni utilizzando [CWinAppEx:: SaveCustomState](#savecustomstate).
+Per caricare informazioni personalizzate sullo stato dal Registro di sistema, è necessario prima salvare le informazioni utilizzando [CWinAppEx::SaveCustomState](#savecustomstate).
 
-##  <a name="loadstate"></a>CWinAppEx:: LoadState
+## <a name="cwinappexloadstate"></a><a name="loadstate"></a>CWinAppEx::LoadState
 
-Legge lo stato dell'applicazione dal registro di sistema di Windows.
+Legge lo stato dell'applicazione dal Registro di sistema di Windows.
 
 ```
 BOOL LoadState(
@@ -952,13 +953,13 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parametri
 
 *pFrame*<br/>
-in Puntatore a un oggetto finestra cornice. Il metodo applica le informazioni sullo stato nel registro di sistema a questa finestra cornice.
+[in] Puntatore a un oggetto finestra cornice. Il metodo applica le informazioni sullo stato nel Registro di sistema a questa finestra cornice.
 
-*lpszSectionName*<br/>
-in Stringa che contiene il percorso relativo di una chiave del registro di sistema.
+*Nomesezione lpsz*<br/>
+[in] Stringa contenente il percorso relativo di una chiave del Registro di sistema.
 
-*pFrameImpl*<br/>
-in Puntatore a un oggetto `CFrameImpl`. Il metodo applica le informazioni sullo stato nel registro di sistema a questa finestra cornice.
+*pFrameImpl (ImplAzione)*<br/>
+[in] Puntatore a `CFrameImpl` un oggetto. Il metodo applica le informazioni sullo stato nel Registro di sistema a questa finestra cornice.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -966,15 +967,15 @@ Valore diverso da zero in caso di esito positivo, 0 in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo carica lo stato dell'applicazione e qualsiasi informazione sullo stato per una finestra cornice. Le informazioni caricate per la finestra cornice vengono applicate alla finestra cornice fornita. Se non si specifica una finestra cornice, vengono caricate solo le informazioni sullo stato dell'applicazione. Le informazioni sull'applicazione includono lo stato della [classe CMouseManager](../../mfc/reference/cmousemanager-class.md), della classe [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), della [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)e della [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).
+Questo metodo carica lo stato dell'applicazione e tutte le informazioni sullo stato per una finestra cornice. Le informazioni caricate per la finestra cornice vengono applicate alla finestra cornice fornita. Se non si fornisce una finestra cornice, vengono caricate solo le informazioni sullo stato dell'applicazione. Le informazioni sull'applicazione includono lo stato della [classe CMouseManager](../../mfc/reference/cmousemanager-class.md), della [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), della [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)e della [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).
 
-L'implementazione predefinita di `CFrameImpl::OnLoadFrame` chiama `LoadState`.
+L'implementazione `CFrameImpl::OnLoadFrame` `LoadState`predefinita delle chiamate .
 
-Il parametro *lpszSectionName* non è il percorso assoluto di una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla fine della chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il *lpszSectionName* parametro non è il percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="loadwindowplacement"></a>CWinAppEx:: LoadWindowPlacement
+## <a name="cwinappexloadwindowplacement"></a><a name="loadwindowplacement"></a>CWinAppEx::LoadWindowPlacement
 
-Chiamata eseguita dal Framework durante il caricamento delle dimensioni e della posizione della finestra cornice principale dal registro di sistema.
+Chiamato dal framework quando carica le dimensioni e la posizione della finestra cornice principale dal Registro di sistema.
 
 ```
 virtual BOOL LoadWindowPlacement(
@@ -985,14 +986,14 @@ virtual BOOL LoadWindowPlacement(
 
 ### <a name="parameters"></a>Parametri
 
-*rectNormalPosition*<br/>
-out Rettangolo che contiene le coordinate della finestra cornice principale quando si trova nella posizione ripristinata.
+*RectNormalPosition (RectNormalPosition)*<br/>
+[fuori] Rettangolo che contiene le coordinate della finestra cornice principale quando si trova nella posizione ripristinata.
 
-*nFlags*<br/>
-out Flag che controllano la posizione della finestra ridotta a icona e il modo in cui il sistema operativo passa tra una finestra ridotta a icona e una finestra ripristinata.
+*Nflags*<br/>
+[fuori] Flag che controllano la posizione della finestra ridotta a icona e il modo in cui il sistema operativo passa da una finestra ridotta a icona a una finestra ripristinata.
 
 *nShowCmd*<br/>
-out Intero che specifica lo stato di visualizzazione della finestra. Per ulteriori informazioni sui valori possibili, vedere [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).
+[fuori] Un numero intero che specifica lo stato di visualizzazione della finestra. Per ulteriori informazioni sui valori possibili, vedere [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1000,13 +1001,13 @@ Valore diverso da zero in caso di esito positivo, 0 in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, MFC carica automaticamente la posizione e lo stato precedenti della finestra cornice principale all'avvio dell'applicazione. Per ulteriori informazioni sul modo in cui queste informazioni vengono archiviate nel registro di sistema, vedere [CWinAppEx:: StoreWindowPlacement](#storewindowplacement).
+Per impostazione predefinita, MFC carica automaticamente la posizione e lo stato precedenti della finestra cornice principale all'avvio dell'applicazione. Per ulteriori informazioni sulla modalità di archiviazione di queste informazioni nel Registro di sistema, vedere [CWinAppEx::StoreWindowPlacement](#storewindowplacement).
 
 Eseguire l'override di questo metodo se si desidera caricare informazioni aggiuntive sulla finestra cornice principale.
 
-##  <a name="m_bforceimagereset"></a>CWinAppEx:: m_bForceImageReset
+## <a name="cwinappexm_bforceimagereset"></a><a name="m_bforceimagereset"></a>CWinAppEx::m_bForceImageReset
 
-Specifica se il Framework Reimposta tutte le immagini della barra degli strumenti quando ricarica la finestra cornice che contiene la barra degli strumenti.
+Specifica se il framework reimposta tutte le immagini della barra degli strumenti quando ricarica la finestra cornice che contiene la barra degli strumenti.
 
 ```
 BOOL m_bForceImageReset;
@@ -1014,11 +1015,11 @@ BOOL m_bForceImageReset;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il membro dati `m_bForceImageReset` è una variabile protetta.
+Il `m_bForceImageReset` membro dati è una variabile protetta.
 
-##  <a name="onappcontexthelp"></a>CWinAppEx:: OnAppContextHelp
+## <a name="cwinappexonappcontexthelp"></a><a name="onappcontexthelp"></a>CWinAppEx::OnAppContextHelp
 
-Il Framework chiama questo metodo quando l'utente richiede la guida del contesto per la finestra di dialogo di **personalizzazione** .
+Il framework chiama questo metodo quando l'utente richiede la Guida del contesto per la finestra di dialogo **Personalizzazione.**
 
 ```
 virtual void OnAppContextHelp(
@@ -1028,19 +1029,19 @@ virtual void OnAppContextHelp(
 
 ### <a name="parameters"></a>Parametri
 
-*pWndControl*<br/>
-in Puntatore a un oggetto finestra per il quale l'utente ha richiamato la guida del contesto.
+*pWndControl (in taè)*<br/>
+[in] Puntatore a un oggetto finestra per il quale l'utente ha richiamato la Guida del contesto.
 
 *dwHelpIDArray[]*<br/>
-in Valore riservato.
+[in] Valore riservato.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo è attualmente riservato per un utilizzo futuro. L'implementazione predefinita non esegue alcuna operazione e non è attualmente chiamata dal Framework.
+Questo metodo è attualmente riservato per un utilizzo futuro. L'implementazione predefinita non esegue alcuna operazione e attualmente non viene chiamata dal framework.
 
-##  <a name="onclosingmainframe"></a>CWinAppEx:: OnClosingMainFrame
+## <a name="cwinappexonclosingmainframe"></a><a name="onclosingmainframe"></a>CWinAppEx::OnClosingMainFrame
 
-Il Framework chiama questo metodo quando una finestra cornice sta elaborando WM_CLOSE.
+Il framework chiama questo metodo quando una finestra cornice sta elaborando WM_CLOSE.
 
 ```
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
@@ -1048,14 +1049,14 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 
 ### <a name="parameters"></a>Parametri
 
-*pFrameImpl*<br/>
-in Puntatore a un oggetto `CFrameImpl`.
+*pFrameImpl (ImplAzione)*<br/>
+[in] Puntatore a `CFrameImpl` un oggetto.
 
 ### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita di questo metodo salva lo stato di *pFrameImpl*.
 
-##  <a name="onviewdoubleclick"></a>CWinAppEx:: OnViewDoubleClick
+## <a name="cwinappexonviewdoubleclick"></a><a name="onviewdoubleclick"></a>CWinAppEx::OnViewDoubleClick (Informazioni in base alle funzionalità)
 
 Chiama il comando definito dall'utente associato a una visualizzazione quando l'utente fa doppio clic in un punto qualsiasi all'interno di tale visualizzazione.
 
@@ -1067,21 +1068,21 @@ virtual BOOL OnViewDoubleClick(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd*<br/>
-in Puntatore a un oggetto derivato dalla [classe CView](../../mfc/reference/cview-class.md).
+*pWnd (in questo stato di windows*<br/>
+[in] Puntatore a un oggetto derivato dalla [classe CView](../../mfc/reference/cview-class.md).
 
-*iViewId*<br/>
-in ID della vista.
+*iViewId (informazioni in stato in stato in stato*<br/>
+[in] ID visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il Framework trova un comando. in caso contrario, FALSE.
+TRUESe il framework trova un comando. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per supportare il comportamento del mouse personalizzato, è necessario chiamare questa funzione quando si elabora il messaggio di WM_LBUTTONDBLCLK. Questo metodo eseguirà il comando associato all'ID visualizzazione fornito da *iViewId*. Per ulteriori informazioni sul comportamento del mouse personalizzato, vedere [personalizzazione della tastiera e del mouse](../../mfc/keyboard-and-mouse-customization.md).
+Per supportare il comportamento personalizzato del mouse, è necessario chiamare questa funzione quando si elabora il messaggio di WM_LBUTTONDBLCLK. Questo metodo eseguirà il comando associato all'ID visualizzazione fornito da *iViewId*. Per ulteriori informazioni sul comportamento personalizzato del mouse, vedere [Personalizzazione di tastiera e mouse](../../mfc/keyboard-and-mouse-customization.md).
 
-##  <a name="onworkspaceidle"></a>CWinAppEx:: OnWorkspaceIdle
+## <a name="cwinappexonworkspaceidle"></a><a name="onworkspaceidle"></a>CWinAppEx::OnWorkspaceIdle
 
 ```
 virtual BOOL OnWorkspaceIdle(CWnd*);
@@ -1089,15 +1090,15 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 
 ### <a name="parameters"></a>Parametri
 
-in *CWnd&#38;*<br/>
+[in] *&#38;CWnd*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Osservazioni
 
-##  <a name="preloadstate"></a>CWinAppEx::P reloadstate
+## <a name="cwinappexpreloadstate"></a><a name="preloadstate"></a>CWinAppEx::PreLoadState
 
-Il Framework chiama questo metodo immediatamente prima di caricare lo stato dell'applicazione dal registro di sistema.
+Il framework chiama questo metodo immediatamente prima di caricare lo stato dell'applicazione dal Registro di sistema.
 
 ```
 virtual void PreLoadState();
@@ -1105,11 +1106,11 @@ virtual void PreLoadState();
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo se si desidera eseguire un'elaborazione immediatamente prima che il Framework carica lo stato dell'applicazione.
+Eseguire l'override di questo metodo se si desidera eseguire qualsiasi elaborazione immediatamente prima che il framework carichi lo stato dell'applicazione.
 
-##  <a name="presavestate"></a>CWinAppEx::P reSaveState
+## <a name="cwinappexpresavestate"></a><a name="presavestate"></a>CWinAppEx::PreSaveState
 
-Il Framework chiama questo metodo immediatamente prima di salvare lo stato dell'applicazione.
+Il framework chiama questo metodo immediatamente prima di salvare lo stato dell'applicazione.
 
 ```
 virtual void PreSaveState();
@@ -1117,11 +1118,11 @@ virtual void PreSaveState();
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo se si desidera eseguire un'elaborazione immediatamente prima che il Framework salvi lo stato dell'applicazione.
+Eseguire l'override di questo metodo se si desidera eseguire qualsiasi elaborazione immediatamente prima che il framework salva lo stato dell'applicazione.
 
-##  <a name="reloadwindowplacement"></a>CWinAppEx:: ReloadWindowPlacement
+## <a name="cwinappexreloadwindowplacement"></a><a name="reloadwindowplacement"></a>CWinAppEx::ReloadWindowPlacement
 
-Ricarica le dimensioni e la posizione di una finestra dal registro di sistema.
+Ricarica le dimensioni e la posizione di una finestra dal Registro di sistema.
 
 ```
 virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
@@ -1130,19 +1131,19 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ### <a name="parameters"></a>Parametri
 
 *pFrame*<br/>
-in Puntatore a una finestra cornice.
+[in] Puntatore a una finestra cornice.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il metodo ha avuto esito positivo; 0 se il caricamento non è riuscito o non sono presenti dati da caricare.
+Diverso da zero se il metodo ha esito positivo; 0 se il caricamento non è riuscito o non sono presenti dati da caricare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Usare la funzione [CWinAppEx:: StoreWindowPlacement](#storewindowplacement) per scrivere le dimensioni e la posizione di una finestra nel registro di sistema.
+Utilizzare la funzione [CWinAppEx::StoreWindowPlacement](#storewindowplacement) per scrivere le dimensioni e la posizione di una finestra nel Registro di sistema.
 
-##  <a name="savecustomstate"></a>CWinAppEx:: SaveCustomState
+## <a name="cwinappexsavecustomstate"></a><a name="savecustomstate"></a>CWinAppEx::SaveCustomState (informazioni in base alla proprietà è un'opzione che consente di salvare
 
-Il Framework chiama questo metodo dopo il salvataggio dello stato dell'applicazione nel registro di sistema.
+Il framework chiama questo metodo dopo aver salvato lo stato dell'applicazione nel Registro di sistema.
 
 ```
 virtual void SaveCustomState();
@@ -1150,11 +1151,11 @@ virtual void SaveCustomState();
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo se si desidera eseguire un'elaborazione dopo che l'applicazione salva lo stato nel registro di sistema. Per impostazione predefinita, questo metodo non effettua alcuna operazione.
+Eseguire l'override di questo metodo se si desidera eseguire qualsiasi elaborazione dopo che l'applicazione salva lo stato nel Registro di sistema. Per impostazione predefinita, questo metodo non effettua alcuna operazione.
 
-##  <a name="savestate"></a>CWinAppEx:: SaveState
+## <a name="cwinappexsavestate"></a><a name="savestate"></a>CWinAppEx::SaveState
 
-Scrive lo stato dell'applicazione nel registro di sistema di Windows.
+Scrive lo stato dell'applicazione nel Registro di sistema di Windows.
 
 ```
 virtual BOOL SaveState(
@@ -1176,14 +1177,14 @@ BOOL SaveState(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSectionName*<br/>
-in Stringa che contiene il percorso relativo di una chiave del registro di sistema.
+*Nomesezione lpsz*<br/>
+[in] Stringa contenente il percorso relativo di una chiave del Registro di sistema.
 
-*pFrameImpl*<br/>
-in Puntatore a un oggetto `CFrameImpl`. Questo frame viene salvato nel registro di sistema di Windows.
+*pFrameImpl (ImplAzione)*<br/>
+[in] Puntatore a `CFrameImpl` un oggetto. Questo frame viene salvato nel Registro di sistema di Windows.
 
 *pFrame*<br/>
-in Puntatore a un oggetto finestra cornice. Questo frame viene salvato nel registro di sistema di Windows.
+[in] Puntatore a un oggetto finestra cornice. Questo frame viene salvato nel Registro di sistema di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1191,13 +1192,13 @@ TRUE in caso di esito positivo, FALSE in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo salva lo stato dell'applicazione e qualsiasi informazione sullo stato per la finestra cornice fornita. Se non si specifica una finestra cornice, il metodo salva solo lo stato dell'applicazione. Le informazioni sull'applicazione includono lo stato della [classe CMouseManager](../../mfc/reference/cmousemanager-class.md), della classe [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), della [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)e della [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).
+Questo metodo salva lo stato dell'applicazione e tutte le informazioni sullo stato per la finestra cornice fornita. Se non si fornisce una finestra cornice, il metodo salva solo lo stato dell'applicazione. Le informazioni sull'applicazione includono lo stato della [classe CMouseManager](../../mfc/reference/cmousemanager-class.md), della [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), della [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)e della [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).
 
-Il parametro *lpszSectionName* non è il percorso assoluto di una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla fine della chiave del registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il *lpszSectionName* parametro non è il percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-##  <a name="setregistrybase"></a>CWinAppEx:: SetRegistryBase
+## <a name="cwinappexsetregistrybase"></a><a name="setregistrybase"></a>CWinAppEx::SetRegistryBase
 
-Imposta il percorso predefinito del registro di sistema per l'applicazione.
+Imposta il percorso del Registro di sistema predefinito per l'applicazione.
 
 ```
 LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
@@ -1205,20 +1206,20 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSectionName*<br/>
-in Stringa che contiene il percorso di una chiave del registro di sistema.
+*Nomesezione lpsz*<br/>
+[in] Stringa contenente il percorso di una chiave del Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
-Stringa che contiene il percorso del percorso del registro di sistema predefinito.
+Stringa contenente il percorso del registro di sistema predefinito.
 
 ### <a name="remarks"></a>Osservazioni
 
-Tutti i metodi della [classe CWinAppEx](../../mfc/reference/cwinappex-class.md) che accedono al registro di sistema vengono avviati in un percorso predefinito. Utilizzare questo metodo per modificare il percorso predefinito del registro di sistema. Usare [CWinAppEx:: GetRegistryBase](#getregistrybase) per recuperare il percorso predefinito del registro di sistema.
+Tutti i metodi della [classe CWinAppEx](../../mfc/reference/cwinappex-class.md) che accedono al Registro di sistema vengono avviati in un percorso predefinito. Utilizzare questo metodo per modificare il percorso predefinito del Registro di sistema. Utilizzare [CWinAppEx::GetRegistryBase](#getregistrybase) per recuperare il percorso predefinito del Registro di sistema.
 
-##  <a name="showpopupmenu"></a>CWinAppEx:: ShowPopupMenu
+## <a name="cwinappexshowpopupmenu"></a><a name="showpopupmenu"></a>CWinAppEx::ShowPopupMenu
 
-Consente di visualizzare un menu di scelta rapida.
+Visualizza un menu a comparsa.
 
 ```
 virtual BOOL ShowPopupMenu(
@@ -1230,27 +1231,27 @@ virtual BOOL ShowPopupMenu(
 ### <a name="parameters"></a>Parametri
 
 *uiMenuResId*<br/>
-in ID della risorsa di menu.
+[in] UN ID risorsa di menu.
 
-*point*<br/>
-in Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica la posizione del menu nelle coordinate dello schermo.
+*Punto*<br/>
+[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica la posizione del menu in coordinate dello schermo.
 
-*pWnd*<br/>
-in Puntatore alla finestra proprietaria del menu popup.
+*pWnd (in questo stato di windows*<br/>
+[in] Puntatore alla finestra proprietaria del menu a comparsa.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il menu popup viene visualizzato correttamente; 0 in caso contrario.
+Diverso da zero se il menu a comparsa viene visualizzato correttamente; 0 in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo consente di visualizzare il menu associato a *uiMenuResId*.
+Questo metodo visualizza il menu associato a *uiMenuResId*.
 
-Per supportare i menu popup, è necessario disporre di un oggetto [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) . Se l'oggetto `CContextMenuManager` non è stato inizializzato, `ShowPopupMenu` avrà esito negativo.
+Per supportare i menu popup, è necessario disporre di un [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) oggetto. Se l'oggetto `CContextMenuManager` non è `ShowPopupMenu` stato inizializzato, avrà esito negativo.
 
-##  <a name="storewindowplacement"></a>CWinAppEx:: StoreWindowPlacement
+## <a name="cwinappexstorewindowplacement"></a><a name="storewindowplacement"></a>CWinAppEx::StoreWindowPlacement
 
-Chiamato dal Framework per scrivere la dimensione e la posizione della finestra cornice principale nel registro di sistema.
+Chiamato dal framework per scrivere le dimensioni e la posizione della finestra cornice principale nel Registro di sistema.
 
 ```
 virtual BOOL StoreWindowPlacement(
@@ -1261,14 +1262,14 @@ virtual BOOL StoreWindowPlacement(
 
 ### <a name="parameters"></a>Parametri
 
-*nFlags*<br/>
-in Flag che controllano la posizione della finestra ridotta a icona e il modo in cui il sistema operativo passa tra una finestra ridotta a icona e una finestra ripristinata.
+*Nflags*<br/>
+[in] Flag che controllano la posizione della finestra ridotta a icona e il modo in cui il sistema operativo passa da una finestra ridotta a icona a una finestra ripristinata.
 
 *nShowCmd*<br/>
-in Intero che specifica lo stato di visualizzazione della finestra. Per ulteriori informazioni sui valori possibili, vedere [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).
+[in] Un numero intero che specifica lo stato di visualizzazione della finestra. Per ulteriori informazioni sui valori possibili, vedere [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).
 
-*rectNormalPosition*<br/>
-in Rettangolo che contiene le coordinate della finestra cornice principale quando si trova nello stato ripristinato.
+*RectNormalPosition (RectNormalPosition)*<br/>
+[in] Rettangolo che contiene le coordinate della finestra cornice principale quando si trova nello stato ripristinato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1276,13 +1277,13 @@ Valore diverso da zero in caso di esito positivo, 0 in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, in MFC il percorso e lo stato della finestra cornice principale vengono salvati automaticamente prima della chiusura dell'applicazione. Queste informazioni vengono archiviate nel registro di sistema di Windows sotto la chiave WindowPlacement nel percorso predefinito del registro di sistema per l'applicazione. Per ulteriori informazioni sul percorso predefinito del registro di sistema dell'applicazione, vedere [CWinAppEx:: GetRegistryBase](#getregistrybase).
+Per impostazione predefinita, MFC salva automaticamente la posizione e lo stato della finestra cornice principale prima della chiusura dell'applicazione. Queste informazioni vengono archiviate nel Registro di sistema di Windows nella chiave WindowPlacement nel percorso predefinito del Registro di sistema per l'applicazione. Per ulteriori informazioni sul percorso predefinito del Registro di sistema dell'applicazione, vedere [CWinAppEx::GetRegistryBase](#getregistrybase).
 
 Eseguire l'override di questo metodo se si desidera archiviare informazioni aggiuntive sulla finestra cornice principale.
 
-##  <a name="writebinary"></a>CWinAppEx:: WriteBinary
+## <a name="cwinappexwritebinary"></a><a name="writebinary"></a>CWinAppEx::WriteBinary
 
-Scrive i dati binari nel registro di sistema.
+Scrive dati binari nel Registro di sistema.
 
 ```
 BOOL WriteBinary(
@@ -1293,28 +1294,28 @@ BOOL WriteBinary(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszEntry*<br/>
-in Stringa che contiene il nome di una chiave del registro di sistema.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il nome di una chiave del Registro di sistema.
 
-*pData*<br/>
-in Dati da archiviare.
+*pDati*<br/>
+[in] Dati da archiviare.
 
-*nBytes*<br/>
-in Dimensioni in byte di *pData* .
+*nByte*<br/>
+[in] Dimensione di *pData* in byte.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
+TRUESe questo metodo ha esito positivo. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il parametro *lpszEntry* è il nome di una voce del registro di sistema che si trova sotto la chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il parametro *lpszEntry* è il nome di una voce del Registro di sistema che si trova nella chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-Se la chiave specificata da *lpszEntry* non esiste, questo metodo lo creerà.
+Se la chiave specificata da *lpszEntry* non esiste, questo metodo la creerà.
 
-##  <a name="writeint"></a>CWinAppEx:: WriteInt
+## <a name="cwinappexwriteint"></a><a name="writeint"></a>CWinAppEx::WriteInt
 
-Scrive dati numerici nel registro di sistema.
+Scrive dati numerici nel Registro di sistema.
 
 ```
 BOOL WriteInt(
@@ -1324,25 +1325,25 @@ BOOL WriteInt(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszEntry*<br/>
-in Stringa che contiene il nome di una chiave del registro di sistema.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il nome di una chiave del Registro di sistema.
 
-*nValue*<br/>
-in Dati da archiviare.
+*nValore*<br/>
+[in] Dati da archiviare.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
+TRUESe questo metodo ha esito positivo. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il parametro *lpszEntry* è il nome di una voce del registro di sistema che si trova sotto la chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il parametro *lpszEntry* è il nome di una voce del Registro di sistema che si trova nella chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-Se la chiave specificata da *lpszEntry* non esiste, questo metodo lo creerà.
+Se la chiave specificata da *lpszEntry* non esiste, questo metodo la creerà.
 
-##  <a name="writeobject"></a>CWinAppEx:: WriteObject
+## <a name="cwinappexwriteobject"></a><a name="writeobject"></a>CWinAppEx::WriteObject
 
-Scrive i dati derivati dalla [classe CObject](../../mfc/reference/cobject-class.md) nel registro di sistema.
+Scrive i dati derivati dalla [classe CObject](../../mfc/reference/cobject-class.md) nel Registro di sistema.
 
 ```
 BOOL WriteObject(
@@ -1352,23 +1353,23 @@ BOOL WriteObject(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszEntry*<br/>
-in Stringa che contiene il valore da impostare.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il valore da impostare.
 
 *obj*<br/>
-in Riferimento ai dati di `CObject` che il metodo archivia.
+[in] Riferimento ai `CObject` dati che verranno archiviati dal metodo.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
+TRUESe questo metodo ha esito positivo. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo scrive i dati *obj* nel valore specificato sotto la chiave del registro di sistema predefinita. Usare [CWinAppEx:: GetRegistryBase](#getregistrybase) per determinare la chiave del registro di sistema corrente.
+Questo metodo scrive i dati *obj* nel valore specificato nella chiave del Registro di sistema predefinita. Utilizzare [CWinAppEx::GetRegistryBase](#getregistrybase) per determinare la chiave del Registro di sistema corrente.
 
-##  <a name="writesectionbinary"></a>CWinAppEx:: WriteSectionBinary
+## <a name="cwinappexwritesectionbinary"></a><a name="writesectionbinary"></a>CWinAppEx::WriteSectionBinary
 
-Scrive i dati binari in un valore nel registro di sistema.
+Scrive dati binari in un valore del Registro di sistema.
 
 ```
 BOOL WriteSectionBinary(
@@ -1380,31 +1381,31 @@ BOOL WriteSectionBinary(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSubSection*<br/>
-in Stringa che contiene il nome di una chiave del registro di sistema
+*lpszSubSezione*<br/>
+[in] Stringa contenente il nome di una chiave del Registro di sistema
 
-*lpszEntry*<br/>
-in Stringa che contiene il valore da impostare.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il valore da impostare.
 
-*pData*<br/>
-in Dati da scrivere nel registro di sistema.
+*pDati*<br/>
+[in] Dati da scrivere nel Registro di sistema.
 
-*nBytes*<br/>
-in Dimensioni in byte di *pData* .
+*nByte*<br/>
+[in] Dimensione di *pData* in byte.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
+TRUESe questo metodo ha esito positivo. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il parametro *lpszSubSection* non è il percorso assoluto di una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla fine della chiave del registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il *lpszSubSection* parametro non è il percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-Se la chiave specificata da *lpszEntry* non esiste, questo metodo lo creerà.
+Se la chiave specificata da *lpszEntry* non esiste, questo metodo la creerà.
 
-##  <a name="writesectionint"></a>CWinAppEx:: WriteSectionInt
+## <a name="cwinappexwritesectionint"></a><a name="writesectionint"></a>CWinAppEx::WriteSectionInt
 
-Scrive dati numerici nel registro di sistema.
+Scrive dati numerici nel Registro di sistema.
 
 ```
 BOOL WriteSectionInt(
@@ -1415,28 +1416,28 @@ BOOL WriteSectionInt(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSubSection*<br/>
-in Stringa che contiene il percorso relativo di una chiave del registro di sistema.
+*lpszSubSezione*<br/>
+[in] Stringa contenente il percorso relativo di una chiave del Registro di sistema.
 
-*lpszEntry*<br/>
-in Stringa che contiene il valore da impostare.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il valore da impostare.
 
-*nValue*<br/>
-in Dati da scrivere nel registro di sistema.
+*nValore*<br/>
+[in] Dati da scrivere nel Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
+TRUESe questo metodo ha esito positivo. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il parametro *lpszSubSection* non è un percorso assoluto per una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il *lpszSubSection* parametro non è un percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-Se la chiave specificata da *lpszEntry* non esiste, questo metodo lo creerà.
+Se la chiave specificata da *lpszEntry* non esiste, questo metodo la creerà.
 
-##  <a name="writesectionobject"></a>CWinAppEx:: WriteSectionObject
+## <a name="cwinappexwritesectionobject"></a><a name="writesectionobject"></a>CWinAppEx::WriteSectionObject
 
-Scrive i dati derivati dalla [classe CObject](../../mfc/reference/cobject-class.md) in un valore del registro di sistema specifico.
+Scrive i dati derivati dalla [classe CObject in](../../mfc/reference/cobject-class.md) un valore del Registro di sistema specifico.
 
 ```
 BOOL WriteSectionObject(
@@ -1447,28 +1448,28 @@ BOOL WriteSectionObject(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSubSection*<br/>
-in Stringa che contiene il nome di una chiave del registro di sistema.
+*lpszSubSezione*<br/>
+[in] Stringa contenente il nome di una chiave del Registro di sistema.
 
-*lpszEntry*<br/>
-in Stringa che contiene il nome del valore da impostare.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il nome del valore da impostare.
 
 *obj*<br/>
-in Dati da archiviare.
+[in] Dati da archiviare.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
+TRUESe questo metodo ha esito positivo. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il parametro *lpszSubSection* non è un percorso assoluto per una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla fine della chiave del registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase), rispettivamente.
+Il *lpszSubSection* parametro non è un percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase](#setregistrybase).
 
-Se il valore specificato da *lpszEntry* non esiste nella chiave del registro di sistema specificata da *lpszSubSection*, questo metodo creerà tale valore.
+Se il valore specificato da *lpszEntry* non esiste nella chiave del Registro di sistema specificata da *lpszSubSection*, questo metodo creerà tale valore.
 
-##  <a name="writesectionstring"></a>CWinAppEx:: WriteSectionString
+## <a name="cwinappexwritesectionstring"></a><a name="writesectionstring"></a>CWinAppEx::WriteSectionString
 
-Scrive i dati stringa in un valore nel registro di sistema.
+Scrive dati di tipo stringa in un valore del Registro di sistema.
 
 ```
 BOOL WriteSectionString(
@@ -1479,28 +1480,28 @@ BOOL WriteSectionString(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszSubSection*<br/>
-in Stringa che contiene il nome di una chiave del registro di sistema.
+*lpszSubSezione*<br/>
+[in] Stringa contenente il nome di una chiave del Registro di sistema.
 
-*lpszEntry*<br/>
-in Stringa che contiene il valore da impostare.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il valore da impostare.
 
-*lpszValue*<br/>
-in Dati stringa da scrivere nel registro di sistema.
+*lpszValore*<br/>
+[in] Dati stringa da scrivere nel Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
+TRUESe questo metodo ha esito positivo. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il parametro *lpszSubSection* non è un percorso assoluto per una voce del registro di sistema. Si tratta di un percorso relativo aggiunto alla fine della chiave del registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase), rispettivamente.
+Il *lpszSubSection* parametro non è un percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase](#setregistrybase).
 
-Se il valore specificato da *lpszEntry* non esiste in *lpszSubSection*, questo metodo lo creerà.
+Se il valore specificato da *lpszEntry* non esiste *in lpszSubSection*, questo metodo lo creerà.
 
-##  <a name="writestring"></a>CWinAppEx:: WriteString
+## <a name="cwinappexwritestring"></a><a name="writestring"></a>CWinAppEx::WriteString
 
-Scrive i dati stringa nel registro di sistema.
+Scrive dati di tipo stringa nel Registro di sistema.
 
 ```
 BOOL WriteString(
@@ -1510,25 +1511,25 @@ BOOL WriteString(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszEntry*<br/>
-in Stringa che contiene il nome di una chiave del registro di sistema.
+*LpszEntry (ingresso )*<br/>
+[in] Stringa contenente il nome di una chiave del Registro di sistema.
 
-*lpszValue*<br/>
-in Dati da archiviare.
+*lpszValore*<br/>
+[in] Dati da archiviare.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
+TRUESe questo metodo ha esito positivo. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il parametro *lpszEntry* è il nome di una voce del registro di sistema che si trova sotto la chiave predefinita del registro di sistema per l'applicazione. Per ottenere o impostare la chiave del registro di sistema predefinita, usare i metodi [CWinAppEx:: GetRegistryBase](#getregistrybase) e [CWinAppEx:: SetRegistryBase](#setregistrybase) rispettivamente.
+Il parametro *lpszEntry* è il nome di una voce del Registro di sistema che si trova nella chiave del Registro di sistema predefinita per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinita, utilizzare rispettivamente i metodi [CWinAppEx::GetRegistryBase](#getregistrybase) e [CWinAppEx::SetRegistryBase.](#setregistrybase)
 
-Se la chiave specificata da *lspzEntry* non esiste, questo metodo lo creerà.
+Se la chiave specificata da *lspzEntry* non esiste, questo metodo la creerà.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CWinApp](../../mfc/reference/cwinapp-class.md)<br/>
 [Classe CMouseManager](../../mfc/reference/cmousemanager-class.md)<br/>

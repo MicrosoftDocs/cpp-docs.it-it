@@ -1,29 +1,30 @@
 ---
 title: Creazione di oggetti dinamici
-ms.date: 11/04/2016
+ms.date: 03/27/2020
 helpviewer_keywords:
 - object creation [MFC], dynamically at run time
 - CObject class [MFC], dynamic object creation
 - objects [MFC], creating dynamically at run time
 - dynamic object creation [MFC]
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
-ms.openlocfilehash: 3478e5481c177e0ebca1e6b5c2cd07509371c5ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40a17d3ed458d0634fd5bf27b54d0a36a65e35b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173359"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364799"
 ---
 # <a name="dynamic-object-creation"></a>Creazione di oggetti dinamici
 
-Questo articolo illustra come creare un oggetto in modo dinamico in fase di esecuzione. La procedura Usa le informazioni sulla classe di runtime, come descritto nell'articolo [l'accesso a informazioni sulle classi di Run-Time](../mfc/accessing-run-time-class-information.md).
+In questo articolo viene illustrato come creare un oggetto in modo dinamico in fase di esecuzione. La routine utilizza le informazioni sulle classi in fase di esecuzione, come descritto nell'articolo [Accesso alle informazioni](../mfc/accessing-run-time-class-information.md)sulle classi in fase di esecuzione .
 
-#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>Per creare dinamicamente un oggetto dato relativa classe di runtime
+#### <a name="dynamically-create-an-object-given-its-run-time-class"></a>Creare dinamicamente un oggetto data la relativa classe in fase di esecuzioneDynamically create an object given its run-time class
 
-1. Usare il codice seguente per creare dinamicamente un oggetto utilizzando il `CreateObject` funzione del `CRuntimeClass`. Si noti che in caso di errore `CreateObject` restituisce **NULL** anziché generare un'eccezione:
+1. Utilizzare il codice riportato di `CreateObject` seguito per `CRuntimeClass`creare dinamicamente un oggetto utilizzando la funzione dell'oggetto . In caso `CreateObject` di errore, restituisce NULL anziché generare un'eccezione:On failure, returns **NULL** instead of raising an exception:
 
    [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CObject](../mfc/using-cobject.md)
+[Eliminazione di oggetti](tn017-destroying-window-objects.md)
+finestra[mediante CObject](using-cobject.md)

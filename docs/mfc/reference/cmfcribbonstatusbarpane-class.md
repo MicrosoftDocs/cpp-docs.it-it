@@ -32,16 +32,16 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 9911672ec139ab1598db8005e9b7b909e85dd33d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 554b9fe364c6a213e038416a605c17cdd4f8e7d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410076"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368790"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Classe CMFCRibbonStatusBarPane
 
-Il `CMFCRibbonStatusBarPane` classe implementa un elemento della barra multifunzione che è possibile aggiungere a una barra di stato multifunzione.
+La `CMFCRibbonStatusBarPane` classe implementa un elemento della barra multifunzione che è possibile aggiungere a una barra di stato della barra multifunzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,27 +61,27 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Restituisce la stringa che definisce la stringa di testo più lunga che può essere visualizzata nel riquadro senza troncamenti.|
+|[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Restituisce la stringa che definisce la stringa di testo più lunga che può essere visualizzata nel riquadro senza troncamento.|
 |[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Restituisce l'impostazione corrente dell'allineamento del testo.|
 |[CMFCRibbonStatusBarPane::IsAnimation](#isanimation)|Determina se l'animazione è in corso.|
 |[CMFCRibbonStatusBarPane::IsExtended](#isextended)|Determina se il riquadro si trova nell'area estesa della barra di stato della barra multifunzione.|
-|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Esegue l'override [CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|
-|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Esegue l'override [CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|
-|[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|Definisce la stringa di testo più lunga che può essere visualizzata nel riquadro senza troncamenti.|
-|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Assegna al riquadro di un elenco di immagini che può essere utilizzato per l'animazione.|
+|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Overrides [CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|
+|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Esegue l'override [di CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|
+|[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|Definisce la stringa di testo più lunga che può essere visualizzata nel riquadro senza troncamento.|
+|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Assegna al riquadro un elenco immagini che può essere utilizzato per l'animazione.|
 |[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|Imposta l'allineamento del testo.|
-|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Viene avviata l'animazione viene assegnato al riquadro.|
-|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|Interrompe l'animazione viene assegnato al riquadro. .|
+|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Avvia l'animazione assegnata al riquadro.|
+|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|Interrompe l'animazione assegnata al riquadro. .|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Chiamato dal framework quando si arresta l'animazione viene assegnato al riquadro.|
+|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Chiamato dal framework quando l'animazione assegnata al riquadro si arresta.|
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come usare vari metodi nella classe `CMFCRibbonStatusBarPane`. Nell'esempio viene illustrato come costruire un `CMFCRibbonStatusBarPane` oggetto, impostare l'allineamento del testo dell'etichetta del riquadro della barra di stato, il testo più lungo che possono essere visualizzati nel riquadro della barra di stato senza troncamento, stabilire una connessione nel riquadro barra di stato di un elenco di immagini che può essere usato per definire un nimazione e avviare l'animazione.
+Nell'esempio seguente viene illustrato come usare vari metodi nella classe `CMFCRibbonStatusBarPane`. Nell'esempio viene illustrato `CMFCRibbonStatusBarPane` come costruire un oggetto, impostare l'allineamento del testo dell'etichetta del riquadro della barra di stato, definire il testo più lungo che può essere visualizzato nel riquadro della barra di stato senza troncamento, allegare al riquadro della barra di stato un elenco immagini che può essere utilizzato per l'animazione e avviare l'animazione.
 
 [!code-cpp[NVC_MFC_RibbonApp#2](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbarpane-class_1.cpp)]
 
@@ -99,9 +99,9 @@ Nell'esempio seguente viene illustrato come usare vari metodi nella classe `CMFC
 
 **Intestazione:** afxribbonstatusbarpane.h
 
-##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane
+## <a name="cmfcribbonstatusbarpanecmfcribbonstatusbarpane"></a><a name="cmfcribbonstatusbarpane"></a>CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane
 
-Costruire un oggetto di riquadro nella barra di stato.
+Costruire un oggetto riquadro nella barra di stato.
 
 ```
 CMFCRibbonStatusBarPane(
@@ -132,36 +132,36 @@ CMFCRibbonStatusBarPane(
 
 ### <a name="parameters"></a>Parametri
 
-*nCmdID*<br/>
+*nCmdID (informazioni in stato in questo base comando*<br/>
 [in] Specifica l'ID di comando del riquadro.
 
 *lpszText*<br/>
 [in] Specifica la stringa di testo da visualizzare nel riquadro.
 
-*bIsStatic*<br/>
-[in] Se TRUE, nel riquadro di stato non può essere evidenziato o selezionato facendovi clic sopra.
+*bIsStatico*<br/>
+[in] Se TRUE, il riquadro di stato non può essere evidenziato o selezionato facendo clic su di esso.
 
 *hIcon*<br/>
 [in] Specifica un handle per un'icona da visualizzare nel riquadro.
 
-*lpszAlmostLargeText*<br/>
+*lpszAlmostLargeText (testo di un'immagine spwindowsammalma)*<br/>
 [in] Specifica la stringa di testo più lunga che può essere visualizzata dal riquadro.
 
-*hBmpAnimationList*<br/>
-[in] Specifica un handle per un elenco di immagini che viene usato per l'animazione.
+*hBmpAnimationList (elenco di animazione)*<br/>
+[in] Specifica un handle per un elenco di immagini utilizzato per l'animazione.
 
-*cxAnimation*<br/>
-[in] Specifica la larghezza, in pixel, dell'icona nell'elenco di immagini che viene usato per l'animazione.
+*cxAnimazione*<br/>
+[in] Specifica la larghezza, in pixel, dell'icona nell'elenco immagini utilizzato per l'animazione.
 
 *clrTrnsp*<br/>
-[in] Specifica il colore trasparente delle immagini nell'elenco di immagini che vengono utilizzati per l'animazione.
+[in] Specifica il colore trasparente delle immagini nell'elenco immagini utilizzate per l'animazione.
 
-*uiAnimationListResID*<br/>
-[in] Specifica un ID di risorsa di un elenco di immagini che viene usato per l'animazione.
+*uiAnimationListResID (informazioni in due)*<br/>
+[in] Specifica un ID risorsa di un elenco immagini utilizzato per l'animazione.
 
-##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText
+## <a name="cmfcribbonstatusbarpanegetalmostlargetext"></a><a name="getalmostlargetext"></a>CMFCRibbonStatusBarPane::GetAlmostLargeText
 
-Ottiene la stringa di testo più lunga in grado di visualizzare il riquadro della barra di stato.
+Ottiene la stringa di testo più lunga che il riquadro della barra di stato può visualizzare.
 
 ```
 LPCTSTR GetAlmostLargeText() const;
@@ -169,9 +169,9 @@ LPCTSTR GetAlmostLargeText() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La stringa di testo più lunga in grado di visualizzare il riquadro della barra di stato.
+Stringa di testo più lunga che può essere visualizzata nel riquadro della barra di stato.
 
-##  <a name="gettextalign"></a>  CMFCRibbonStatusBarPane::GetTextAlign
+## <a name="cmfcribbonstatusbarpanegettextalign"></a><a name="gettextalign"></a>CMFCRibbonStatusBarPane::GetTextAlign
 
 Ottiene l'impostazione corrente dell'allineamento del testo dell'etichetta del riquadro della barra di stato.
 
@@ -189,7 +189,7 @@ L'allineamento del testo corrente che può essere uno dei seguenti:
 
 - TA_RIGHT.
 
-##  <a name="isanimation"></a>  CMFCRibbonStatusBarPane::IsAnimation
+## <a name="cmfcribbonstatusbarpaneisanimation"></a><a name="isanimation"></a>CMFCRibbonStatusBarPane::IsAnimation
 
 Determina se l'animazione è in corso.
 
@@ -199,9 +199,9 @@ BOOL IsAnimation() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'animazione è in corso; FALSE in caso contrario.
+TRUESe l'animazione è in corso; FALSE in caso contrario.
 
-##  <a name="isextended"></a>  CMFCRibbonStatusBarPane::IsExtended
+## <a name="cmfcribbonstatusbarpaneisextended"></a><a name="isextended"></a>CMFCRibbonStatusBarPane::IsExtended
 
 Determinare se il riquadro si trova nell'area estesa della barra di stato della barra multifunzione.
 
@@ -211,11 +211,11 @@ BOOL IsExtended() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro è stato barra area estesa. FALSE in caso contrario.
+TRUESe il riquadro è nell'area estesa barra di stato. In caso contrario, FALSE.
 
-##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder
+## <a name="cmfcribbonstatusbarpaneondrawborder"></a><a name="ondrawborder"></a>CMFCRibbonStatusBarPane::OnDrawBorder
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 virtual void OnDrawBorder(CDC*);
@@ -223,13 +223,13 @@ virtual void OnDrawBorder(CDC*);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CDC&#42;*<br/>
+[in] *&#42;CDC*<br/>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground
+## <a name="cmfcribbonstatusbarpaneonfillbackground"></a><a name="onfillbackground"></a>CMFCRibbonStatusBarPane::OnFillBackground
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -241,23 +241,23 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onfinishanimation"></a>  CMFCRibbonStatusBarPane::OnFinishAnimation
+## <a name="cmfcribbonstatusbarpaneonfinishanimation"></a><a name="onfinishanimation"></a>CMFCRibbonStatusBarPane::OnFinishAnimation
 
-Framework chiama questo metodo al termine dell'animazione che viene assegnato al riquadro.
+Framework chiama questo metodo quando termina l'animazione assegnata al riquadro.
 
 ```
 virtual void OnFinishAnimation();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`StopAnimation` chiamate ai metodi di `OnFinishAnimation` metodo, che è possibile usare per pulire i dati quando l'animazione termina.
+`StopAnimation`metodo chiama `OnFinishAnimation` il metodo , che è possibile utilizzare per pulire i dati al termine dell'animazione.
 
-##  <a name="setalmostlargetext"></a>  CMFCRibbonStatusBarPane::SetAlmostLargeText
+## <a name="cmfcribbonstatusbarpanesetalmostlargetext"></a><a name="setalmostlargetext"></a>CMFCRibbonStatusBarPane::SetAlmostLargeText
 
-Definire il testo più lungo che può essere visualizzato nel riquadro della barra di stato senza troncamenti.
+Definire il testo più lungo che può essere visualizzato nel riquadro della barra di stato senza troncamento.
 
 ```
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
@@ -265,16 +265,16 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszAlmostLargeText*<br/>
-[in] Specifica la stringa più lunga che può essere visualizzata nel riquadro della barra di stato senza troncamenti.
+*lpszAlmostLargeText (testo di un'immagine spwindowsammalma)*<br/>
+[in] Specifica la stringa più lunga che può essere visualizzata nel riquadro della barra di stato senza troncamento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La libreria calcola le dimensioni del testo che *lpszAlmostLargeText* specifica e ridimensiona il riquadro di conseguenza. Il testo verrà troncato se ancora non rientra nel riquadro.
+La libreria calcola la dimensione del testo che *lpszAlmostLargeText* specifica e ridimensiona il riquadro di conseguenza. Il testo verrà troncato se ancora non rientra nel riquadro.
 
-##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList
+## <a name="cmfcribbonstatusbarpanesetanimationlist"></a><a name="setanimationlist"></a>CMFCRibbonStatusBarPane::SetAnimationList
 
-Si collega al riquadro della barra di stato per un elenco di immagini che può essere utilizzato per l'animazione.
+Associa al riquadro della barra di stato un elenco immagini che può essere utilizzato per l'animazione.
 
 ```
 void SetAnimationList(
@@ -290,23 +290,23 @@ BOOL SetAnimationList(
 
 ### <a name="parameters"></a>Parametri
 
-*hBmpAnimationList*<br/>
-[in] Specifica un handle per un elenco di immagini.
+*hBmpAnimationList (elenco di animazione)*<br/>
+[in] Specifica un handle per un elenco immagini.
 
-*cxAnimation*<br/>
-[in] Specifica la larghezza, in pixel, del frame nell'elenco di immagini.
+*cxAnimazione*<br/>
+[in] Specifica la larghezza, in pixel, della cornice nell'elenco immagini.
 
 *clrTransp*<br/>
 [in] Specifica il colore trasparente dell'elenco immagini.
 
-*uiAnimationListResID*<br/>
+*uiAnimationListResID (informazioni in due)*<br/>
 [in] Specifica l'ID risorsa dell'elenco immagini.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elenco di immagini è connesso correttamente al riquadro della barra di stato; FALSE in caso contrario.
+TRUESe l'elenco di immagini è collegato correttamente al riquadro della barra di stato. FALSE in caso contrario.
 
-##  <a name="settextalign"></a>  CMFCRibbonStatusBarPane::SetTextAlign
+## <a name="cmfcribbonstatusbarpanesettextalign"></a><a name="settextalign"></a>CMFCRibbonStatusBarPane::SetTextAlign
 
 Imposta l'allineamento del testo dell'etichetta del riquadro della barra di stato.
 
@@ -316,12 +316,12 @@ void SetTextAlign(int nAlign);
 
 ### <a name="parameters"></a>Parametri
 
-*nAlign*<br/>
+*nAllineamento*<br/>
 [in] Specifica l'allineamento del testo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-*nAlign* può avere uno dei valori seguenti:
+*nAlign* può avere uno dei seguenti valori:
 
 - TA_LEFT: allineamento a sinistra
 
@@ -329,9 +329,9 @@ void SetTextAlign(int nAlign);
 
 - TA_RIGHT: allineamento a destra
 
-##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation
+## <a name="cmfcribbonstatusbarpanestartanimation"></a><a name="startanimation"></a>CMFCRibbonStatusBarPane::StartAnimation
 
-Viene avviata l'animazione assegnato al riquadro.
+Avvia l'animazione assegnata al riquadro.
 
 ```
 void StartAnimation(
@@ -341,19 +341,19 @@ void StartAnimation(
 
 ### <a name="parameters"></a>Parametri
 
-*nFrameDelay*<br/>
-[in] Specifica la frequenza dei fotogrammi di animazione, in millisecondi.
+*nFrameDelay (inframeDelay)*<br/>
+[in] Specifica la frequenza fotogrammi dell'animazione, in millisecondi.
 
-*nDuration*<br/>
-[in] Specifica il tempo di riproduzione dell'animazione, in millisecondi. Usare -1 per un ciclo infinito.
+*nDurata*<br/>
+[in] Specifica per quanto tempo riprodurre l'animazione, in millisecondi. Utilizzare -1 per un ciclo infinito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-È necessario specificare un handle per un elenco di immagini prima di chiamare `StartAnimation` tramite `SetAnimationList`.
+È necessario specificare un handle per `StartAnimation` un `SetAnimationList`elenco immagini prima di chiamare utilizzando .
 
-##  <a name="stopanimation"></a>  CMFCRibbonStatusBarPane::StopAnimation
+## <a name="cmfcribbonstatusbarpanestopanimation"></a><a name="stopanimation"></a>CMFCRibbonStatusBarPane::StopAnimation
 
-Interrompe l'animazione assegnato al riquadro della barra di stato.
+Interrompe l'animazione assegnata al riquadro della barra di stato.
 
 ```
 void StopAnimation();
@@ -361,7 +361,7 @@ void StopAnimation();
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 [Classe CMFCRibbonStatusBar](../../mfc/reference/cmfcribbonstatusbar-class.md)

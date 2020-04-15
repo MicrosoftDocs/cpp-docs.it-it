@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e747eda42e625d0f4cf65859e471933bbb043ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396301"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369099"
 ---
 # <a name="cd2dresource-class"></a>Classe CD2DResource
 
-Una classe astratta che fornisce un'interfaccia per la creazione e la gestione delle risorse D2D, ad esempio pennelli, livelli e testi.
+Classe astratta che fornisce un'interfaccia per la creazione e la gestione di risorse D2D, ad esempio pennelli, livelli e testi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,30 +45,30 @@ class CD2DResource : public CObject;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DResource::CD2DResource](#cd2dresource)|Costruisce un oggetto CD2DResource.|
-|[CD2DResource:: ~ CD2DResource](#_dtorcd2dresource)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto risorsa D2D.|
+|[CD2DRisorsa::CD2DResource](#cd2dresource)|Costruisce un oggetto CD2DResource.|
+|[Cd2DRisorsa: : CD2DResource](#_dtorcd2dresource)|Distruttore. Chiamato quando un oggetto risorsa D2D viene eliminato definitivamente.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DResource::Create](#create)|Crea un CD2DResource.|
-|[CD2DResource:: Destroy](#destroy)|Elimina un oggetto CD2DResource.|
-|[CD2DResource::IsValid](#isvalid)|Verifica la validità della risorsa|
+|[CD2DResource::Creare](#create)|Crea un CD2DResource.|
+|[CD2DRisorsa::Destroy](#destroy)|Elimina un oggetto CD2DResource.|
+|[CD2DResource::IsValid](#isvalid)|Controlla la validità delle risorse|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DResource::IsAutoDestroy](#isautodestroy)|Controllo automatico l'eliminazione flag.|
-|[CD2DResource::ReCreate](#recreate)|Ricrea un CD2DResource.|
+|[CD2DResource::IsAutoDestroy](#isautodestroy)|Controllare auto distruggere flag.|
+|[CD2DResource::Ricrea](#recreate)|Ricrea un CD2DResource.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Risorse verranno eliminato definitivamente dal proprietario (CRenderTarget)|
-|[CD2DResource::m_pParentTarget](#m_pparenttarget)|Puntatore all'elemento padre CRenderTarget)|
+|[CD2DRisorsa::m_bIsAutoDestroy](#m_bisautodestroy)|La risorsa verrà distrutta dal proprietario (CRenderTarget)Resource will be destroyed by owner (CRenderTarget)|
+|[CD2DRisorsa::m_pParentTarget](#m_pparenttarget)|Puntatore all'elemento padre CRenderTarget)|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -78,17 +78,17 @@ class CD2DResource : public CObject;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget. h
+**Intestazione:** afxrendertarget.h
 
-##  <a name="_dtorcd2dresource"></a>  CD2DResource:: ~ CD2DResource
+## <a name="cd2dresourcecd2dresource"></a><a name="_dtorcd2dresource"></a>Cd2DRisorsa: : CD2DResource
 
-Distruttore. Chiamato quando viene eliminata definitivamente un oggetto risorsa D2D.
+Distruttore. Chiamato quando un oggetto risorsa D2D viene eliminato definitivamente.
 
 ```
 virtual ~CD2DResource();
 ```
 
-##  <a name="cd2dresource"></a>  CD2DResource::CD2DResource
+## <a name="cd2dresourcecd2dresource"></a><a name="cd2dresource"></a>CD2DRisorsa::CD2DResource
 
 Costruisce un oggetto CD2DResource.
 
@@ -100,13 +100,13 @@ CD2DResource(
 
 ### <a name="parameters"></a>Parametri
 
-*pParentTarget*<br/>
+*pParentTarget (Destinazionepadre)*<br/>
 Puntatore alla destinazione di rendering.
 
-*bAutoDestroy*<br/>
-Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
+*bAutoDistruggi*<br/>
+Indica che l'oggetto verrà eliminato dal proprietario (pParentTarget).
 
-##  <a name="create"></a>  CD2DResource:: Create
+## <a name="cd2dresourcecreate"></a><a name="create"></a>CD2DResource::Creare
 
 Crea un CD2DResource.
 
@@ -116,14 +116,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*pRenderTarget*<br/>
+*pRenderTarget (informazioni in base alla proprietà*<br/>
 Puntatore alla destinazione di rendering.
 
 ### <a name="return-value"></a>Valore restituito
 
 Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.
 
-##  <a name="destroy"></a>  CD2DResource:: Destroy
+## <a name="cd2dresourcedestroy"></a><a name="destroy"></a>CD2DRisorsa::Destroy
 
 Elimina un oggetto CD2DResource.
 
@@ -131,9 +131,9 @@ Elimina un oggetto CD2DResource.
 virtual void Destroy() = 0;
 ```
 
-##  <a name="isautodestroy"></a>  CD2DResource::IsAutoDestroy
+## <a name="cd2dresourceisautodestroy"></a><a name="isautodestroy"></a>CD2DResource::IsAutoDestroy
 
-Controllo automatico l'eliminazione flag.
+Controllare auto distruggere flag.
 
 ```
 BOOL IsAutoDestroy() const;
@@ -141,11 +141,11 @@ BOOL IsAutoDestroy() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'oggetto viene distrutto dal relativo proprietario; in caso contrario, FALSE.
+TRUESe l'oggetto verrà eliminato dal relativo proprietario. in caso contrario, FALSE.
 
-##  <a name="isvalid"></a>  CD2DResource:: IsValid
+## <a name="cd2dresourceisvalid"></a><a name="isvalid"></a>CD2DResource::IsValid
 
-Verifica la validità della risorsa
+Controlla la validità delle risorse
 
 ```
 virtual BOOL IsValid() const = 0;
@@ -153,17 +153,17 @@ virtual BOOL IsValid() const = 0;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la risorsa è valida. in caso contrario, FALSE.
+TRUESe la risorsa è valida. in caso contrario, FALSE.
 
-##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
+## <a name="cd2dresourcem_bisautodestroy"></a><a name="m_bisautodestroy"></a>CD2DRisorsa::m_bIsAutoDestroy
 
-Risorse verranno eliminato definitivamente dal proprietario (CRenderTarget)
+La risorsa verrà distrutta dal proprietario (CRenderTarget)Resource will be destroyed by owner (CRenderTarget)
 
 ```
 BOOL m_bIsAutoDestroy;
 ```
 
-##  <a name="m_pparenttarget"></a>  CD2DResource::m_pParentTarget
+## <a name="cd2dresourcem_pparenttarget"></a><a name="m_pparenttarget"></a>CD2DRisorsa::m_pParentTarget
 
 Puntatore all'elemento padre CRenderTarget)
 
@@ -171,7 +171,7 @@ Puntatore all'elemento padre CRenderTarget)
 CRenderTarget* m_pParentTarget;
 ```
 
-##  <a name="recreate"></a>  CD2DResource:: ReCreate
+## <a name="cd2dresourcerecreate"></a><a name="recreate"></a>CD2DResource::Ricrea
 
 Ricrea un CD2DResource.
 
@@ -181,7 +181,7 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*pRenderTarget*<br/>
+*pRenderTarget (informazioni in base alla proprietà*<br/>
 Puntatore alla destinazione di rendering.
 
 ### <a name="return-value"></a>Valore restituito

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 2cf2844fd4247c3c69648823302a6ad56ff5fd45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 082aa353d3046d9c9b20669e075e200c96017bce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171776"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371755"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C++
 
 L'ambiente di sviluppo integrato (IDE) di Visual Studio offre un set di funzionalità che consentono di gestire grandi e piccoli progetti di codice, scrivere ed effettuare il refactoring del codice, rilevare e correggere gli errori tramite analisi statica e potenti strumenti di debug. Questo set di articoli è progettato per guidare ogni passaggio necessario per gestire i progetti, scrivere, testare ed eseguire il debug del codice e quindi distribuirlo in un altro computer.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Se Visual Studio non è stato installato, procedere subito. Per i collegamenti ai download e una procedura dettagliata, vedere [Installare il supporto C++ in Visual Studio](../build/vscpp-step-0-installation.md). Per altre informazioni su come installare Visual Studio in generale e suggerimenti per la risoluzione dei problemi, vedere [Installare Visual Studio](/visualstudio/install/install-visual-studio). Assicurarsi di scegliere il carico di lavoro **Sviluppo di applicazioni desktop con C++** per includere compilatori, strumenti e librerie di C++ al momento dell'installazione di Visual Studio poiché questi non vengono installati per impostazione predefinita.
 
@@ -30,7 +30,7 @@ Se Visual Studio non è stato installato, procedere subito. In generale, è cons
 
 **Installazione di Visual Studio 2017**
 
-È possibile scaricare Visual Studio 2017 da [Download delle versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Quando si installa Visual Studio, assicurarsi di includere gli strumenti di sviluppo C++ perché non sono installati per impostazione predefinita. Per altre informazioni su come installare Visual Studio, vedere [Installare Visual Studio](/visualstudio/install/install-visual-studio) e impostare il selettore di versione nella pagina su **Visual Studio 2017**.
+È possibile scaricare Visual Studio 2017 da [Download delle versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Quando si installa Visual Studio, assicurarsi di includere gli strumenti di sviluppo C++ perché non sono installati per impostazione predefinita. Per altre informazioni su come installare Visual Studio, vedere [Installare Visual Studio](/visualstudio/install/install-visual-studio). Per visualizzare le istruzioni per Visual Studio 2017, impostare il controllo del selettore Versione di Visual Studio su Visual Studio 2017.To see the instructions for Visual Studio 2017, set the Visual Studio **Version** selector control to Visual Studio 2017. Si trova nella parte superiore del sommario della pagina.
 
 **Installazione di Visual Studio 2015**
 

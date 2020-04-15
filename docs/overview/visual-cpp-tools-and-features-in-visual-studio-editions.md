@@ -4,18 +4,18 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079244"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366789"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Strumenti e funzionalità C++ nelle versioni di Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-Le funzionalità C++ riportate di seguito sono disponibili in Visual Studio 2019. Se non diversamente specificato, tutte le funzionalità sono disponibili in tutte le edizioni: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alcune funzionalità richiedono carichi di lavoro specifici o componenti facoltativi che è possibile installare tramite il programma di installazione di Visual Studio.
+Le funzionalità C++ riportate di seguito sono disponibili in Visual Studio 2019. Se non specificato diversamente, tutte le funzionalità sono disponibili in tutte le edizioni: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alcune funzionalità richiedono carichi di lavoro specifici o componenti facoltativi che è possibile installare tramite il programma di installazione di Visual Studio.
 
 ## <a name="platforms"></a>Piattaforme
 
@@ -41,9 +41,11 @@ Visual Studio include i carichi di lavoro seguenti per lo sviluppo con C++. È p
 ### <a name="desktop-development-with-c"></a>Sviluppo per desktop con C++
 
 Inclusi:
+
 - Funzionalità desktop di base di C++
 
 Componenti facoltativi:
+
 - MSVC v142 - VS 2019 C++ Build Tools x64/x86 (v14.21)
 - Windows 10 SDK (10.0.17763.0)
 - Debugger JIT
@@ -68,17 +70,20 @@ Componenti facoltativi:
 ### <a name="linux-development-with-c"></a>Sviluppo di applicazioni Linux con C++
 
 Inclusi:
+
 - Funzionalità di base per C++
 - Windows Universal C Runtime
 - C++ per lo sviluppo di applicazioni Linux
 
 Componenti facoltativi:
+
 - Strumenti CMake C++ per Linux
 - Strumenti di sviluppo Embedded e IoT
 
 ### <a name="universal-windows-platform-development"></a>Sviluppo della piattaforma UWP (Universal Windows Platform)
 
 Inclusi:
+
 - Blend per Visual Studio
 - .NET Native e .NET Standard
 - Gestione pacchetti NuGet
@@ -86,6 +91,7 @@ Inclusi:
 - Windows 10 SDK (10.0.17763.0)
 
 Componenti facoltativi:
+
 - IntelliCode
 - IntelliTrace (solo Enterprise)
 - Connettività dispositivi USB
@@ -100,12 +106,14 @@ Componenti facoltativi:
 ### <a name="c-game-development"></a>Sviluppo di giochi con C++
 
 Inclusi:
+
 - Funzionalità di base per C++
 - Windows Universal C Runtime
 - Aggiornamento di C++ 2019 Redistributable
 - MSVC v142 - VS 2019 C++ Build Tools x64/x86 (v14.21)
 
 Componenti facoltativi:
+
 - Strumenti di profilatura C++
 - Windows 10 SDK (10.0.17763.0)
 - IntelliCode
@@ -120,10 +128,12 @@ Componenti facoltativi:
 ### <a name="mobile-development-with-c"></a>Sviluppo di app per dispositivi mobili con C++
 
 Inclusi:
+
 - Funzionalità di base per C++
 - Programma di installazione di Android SDK (livello API 25) (installazione locale per sviluppo di applicazioni per dispositivi mobili con C++)
 
 Componenti facoltativi:
+
 - Android NDK (R16B)
 - Apache Ant (1.9.3)
 - Strumenti di sviluppo per app Android in C++
@@ -172,6 +182,7 @@ Componenti facoltativi:
 A seconda dei carichi di lavoro installati sono disponibili i modelli di progetto riportati di seguito.
 
 Desktop di Windows:
+
 - Progetto vuoto
 - App console
 - Creazione guidata applicazione desktop di Windows
@@ -192,17 +203,19 @@ Desktop di Windows:
 - Google Test
 
 Piattaforma UWP (Universal Windows Platform) (C++/CX):
+
 - Applicazione vuota
 - App DirectX 11 e XAML
 - App DirectX 11
 - App DirectX 12
 - App unit test
 - DLL
-- Componente di Windows Runtime
+- Componente Windows Runtime
 - Libreria statica
 - Progetto di creazione pacchetti di applicazione Windows
 
 Linux:
+
 - App console (Linux)
 - Progetto vuoto (Linux)
 - Intermittenza Raspberry Pi
@@ -245,11 +258,11 @@ Linux:
 - Editor/Finestra di progettazione HTML
 - Editor XML
 - Editor codice sorgente
-- Funzionalità di produttività: refactoring, motore IntelliSense EDG C++ , formattazione del codice
+- Funzionalità di produttività: Refactoring, motore IntelliSense EDG, formattazione del codice C
 - Progettazione Windows Form
 - Data Designer
 - Editor risorse native (file .rc)
-- Editor risorse
+- Editor di risorse
 - Editor dei modelli
 - Finestra di progettazione shader
 - Convalida delle dipendenze in tempo reale (solo Enterprise)
@@ -342,7 +355,7 @@ Le tabelle seguenti illustrano le funzionalità di Visual C++ disponibili in Vis
 |Applicazione Direct3D|X||X|X|
 |DLL (Windows universale)|X||X|X|
 |Libreria statica (Windows universale)|X||X|X|
-|Componente di Windows Runtime|X||X|X|
+|Componente Windows Runtime|X||X|X|
 |App unit test (Windows universale)|X||X|X|
 |Progetto ATL|||X|X|
 |Libreria di classi (CLR)||X|X|X|
@@ -407,7 +420,7 @@ Le tabelle seguenti illustrano le funzionalità di Visual C++ disponibili in Vis
 |Progettazione Windows Form||X|X|X|
 |Data Designer|||X|X|
 |Editor risorse native (file .rc)|||X|X|
-|Editor risorse|X|X|X|X|
+|Editor di risorse|X|X|X|X|
 |Editor dei modelli|X||X|X|
 |Finestra di progettazione shader|X||X|X|
 

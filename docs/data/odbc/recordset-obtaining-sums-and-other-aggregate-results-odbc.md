@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 1a8abc8b73ee878ac2feefa210268e87c608e938
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212836"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368646"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset: recupero di somme e altri risultati aggregati (ODBC)
 
@@ -36,10 +36,10 @@ In questo argomento viene illustrato come ottenere risultati aggregati con le pa
 
 - **COUNT** Esegue il conteggio del numero di record in una colonna con qualsiasi tipo di dati.
 
-Usare queste funzioni SQL per ottenere informazioni statistiche sui record in un'origine dati, anziché per estrarre i record dall'origine dati. Il recordset che viene creato in genere è costituito da un singolo record (se tutte le colonne sono aggregazioni) che contiene un valore. Se è stata utilizzata una clausola **Group by** , potrebbe essere presente più di un record. Questo valore è il risultato del calcolo o dell'estrazione eseguito dalla funzione SQL.
+Usare queste funzioni SQL per ottenere informazioni statistiche sui record in un'origine dati, anziché per estrarre i record dall'origine dati. Il recordset che viene creato in genere è costituito da un singolo record (se tutte le colonne sono aggregazioni) che contiene un valore. (Potrebbero essere presenti più record se è stata utilizzata una clausola **GROUP BY.)** Questo valore è il risultato del calcolo o dell'estrazione eseguita dalla funzione SQL.
 
 > [!TIP]
->  Per aggiungere una clausola SQL **GROUP BY** (ed eventualmente una clausola **HAVING**) all'istruzione SQL, aggiungerla alla fine di `m_strFilter`. Ad esempio:
+> Per aggiungere una clausola SQL **GROUP BY** (ed eventualmente una clausola **HAVING**) all'istruzione SQL, aggiungerla alla fine di `m_strFilter`. Ad esempio:
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -48,7 +48,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 È possibile limitare il numero di record usati per ottenere risultati aggregati filtrando e ordinando le colonne.
 
 > [!CAUTION]
->  Alcuni operatori di aggregazione restituiscono un tipo di dati diverso da quello delle colonne su cui eseguono l'aggregazione.
+> Alcuni operatori di aggregazione restituiscono un tipo di dati diverso da quello delle colonne su cui eseguono l'aggregazione.
 
 - **SUM** e **AVG** possono restituire il successivo tipo di dati più grande (ad esempio, la chiamata con `int` restituisce **LONG** o **double**).
 
@@ -56,7 +56,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 
 - **MAX** e **MIN** restituiscono lo stesso tipo di dati delle colonne su cui eseguono il calcolo.
 
-     Ad esempio, la procedura guidata **Aggiungi classe** consente di creare `long` `m_lSales` per contenere una colonna Sales, ma è necessario sostituirla con un membro dati `double m_dblSumSales` per supportare il risultato dell'aggregazione. Vedere l'esempio seguente.
+     Ad esempio, la procedura guidata **Aggiungi classe** crea `long` `m_lSales` per contenere una colonna Sales, ma è necessario sostituire questo valore con un membro dati `double m_dblSumSales` per contenere il risultato dell'aggregazione. Vedere l'esempio seguente.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Per ottenere un risultato aggregato per un recordset
 
@@ -77,7 +77,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 1. Aprire il recordset. Il risultato dell'operazione di aggregazione viene lasciato in `m_dblSumSales`.
 
 > [!NOTE]
->  La procedura guidata assegna i nomi dei membri dati senza i prefissi della notazione ungherese. Ad esempio, la procedura guidata produrrebbe `m_Sales` per una colonna Sales, anziché il nome `m_lSales` usato in precedenza a scopo illustrativo.
+> La procedura guidata assegna i nomi dei membri dati senza i prefissi della notazione ungherese. Ad esempio, la procedura guidata produrrebbe `m_Sales` per una colonna Sales, anziché il nome `m_lSales` usato in precedenza a scopo illustrativo.
 
 Se si usa una classe [CRecordView](../../mfc/reference/crecordview-class.md) per visualizzare i dati, è necessario modificare la chiamata di funzione DDX per visualizzare il valore del nuovo membro dati. In questo caso, deve essere modificata da:
 

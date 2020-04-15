@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f30e6f78b0988b791617ee0926cf649377972ce2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410090"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368807"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Classe CMFCRibbonUndoButton
 
-Il `CMFCRibbonUndoButton` classe implementa un pulsante elenco a discesa che contiene i comandi utente più recenti. Gli utenti possono selezionare uno o più dei comandi più recenti dall'elenco a discesa scegliere rollforward o annullarle.
+La `CMFCRibbonUndoButton` classe implementa un pulsante di elenco a discesa che contiene i comandi utente più recenti. Gli utenti possono selezionare uno o più comandi più recenti dall'elenco a discesa per ripetirli o annullarli.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,24 +39,24 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Costruisce un nuovo `CMFCRibbonUndoButton` oggetto utilizzando l'ID del comando specificato, l'etichetta di testo e immagini dall'elenco immagini dell'oggetto padre.|
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Costruisce un `CMFCRibbonUndoButton` nuovo oggetto utilizzando l'ID di comando specificato, l'etichetta di testo e le immagini dall'elenco immagini dell'oggetto padre.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Aggiunge una nuova azione all'elenco di azioni.|
-|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Cancella elenco di azioni, ovvero l'elenco di riepilogo a discesa.|
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Determina il numero di elementi che un utente selezionato dall'elenco a discesa.|
+|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Cancella l'elenco delle azioni, ovvero l'elenco a discesa.|
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Determina il numero di elementi selezionati da un utente dall'elenco a discesa.|
 |[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indica se l'oggetto contiene un menu.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il `CMFCRibbonUndoButton` classe usa uno stack per rappresentare l'elenco a discesa.
+La `CMFCRibbonUndoButton` classe utilizza uno stack per rappresentare l'elenco a discesa.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCRibbonUndoButton` classe e aggiungere una nuova azione all'elenco di azioni. Questo frammento di codice fa parte di [esempio di gadget della barra multifunzione](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come `CMFCRibbonUndoButton` costruire un oggetto della classe e aggiungere una nuova azione all'elenco di azioni. Questo frammento di codice fa parte [dell'esempio Ribbon Gadgets](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 
@@ -76,7 +76,7 @@ Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCRibbon
 
 **Intestazione:** afxribbonundobutton.h
 
-##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction
+## <a name="cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction
 
 Aggiunge una nuova azione all'elenco di azioni.
 
@@ -86,20 +86,20 @@ void AddUndoAction(LPCTSTR lpszLabel);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszLabel*<br/>
-[in] L'etichetta dell'azione che verrà visualizzato nell'elenco a discesa.
+*lpszLabel (etichetta di un'etichetta di base)*<br/>
+[in] Etichetta dell'azione che verrà visualizzata nell'elenco a discesa.
 
-##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList
+## <a name="cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList
 
-Cancella elenco di azioni, ovvero l'elenco di riepilogo a discesa.
+Cancella l'elenco delle azioni, ovvero l'elenco a discesa.
 
 ```
 void CleanUpUndoList();
 ```
 
-##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton
+## <a name="cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton
 
-Costruisce un nuovo `CMFCRibbonUndoButton` oggetto utilizzando l'ID del comando specificato, l'etichetta di testo e immagini dall'elenco immagini dell'oggetto padre.
+Costruisce un `CMFCRibbonUndoButton` nuovo oggetto utilizzando l'ID di comando specificato, l'etichetta di testo e le immagini dall'elenco immagini dell'oggetto padre.
 
 ```
 CMFCRibbonUndoButton(
@@ -117,23 +117,23 @@ CMFCRibbonUndoButton(
 ### <a name="parameters"></a>Parametri
 
 *nID*<br/>
-[in] Specifica l'identificatore di comando.
+[in] Specifica l'identificatore del comando.
 
 *lpszText*<br/>
 [in] Specifica l'etichetta di testo del pulsante.
 
-*nSmallImageIndex*<br/>
-[in] Indice in base zero nell'elenco delle immagini dell'oggetto padre per l'immagine di piccole dimensioni del pulsante.
+*nSmallImageIndex (indice di immagine e immagine e immagine e modifica*<br/>
+[in] Indice in base zero nell'elenco immagini dell'oggetto padre per l'immagine piccola del pulsante.
 
-*nLargeImageIndex*<br/>
-[in] Indice in base zero nell'elenco delle immagini dell'oggetto padre per dell'immagine di grandi dimensioni del pulsante.
+*nLargeImageIndex (ingranditoImage)*<br/>
+[in] Indice in base zero nell'elenco immagini dell'oggetto padre per l'immagine di grandi dimensioni del pulsante.
 
 *hIcon*<br/>
-[in] Handle per un'icona che è possibile usare come immagine del pulsante.
+[in] Handle di un'icona che è possibile utilizzare come immagine di un pulsante.
 
-##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber
+## <a name="cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber
 
-Determina il numero di elementi che un utente selezionato dall'elenco a discesa.
+Determina il numero di elementi selezionati da un utente dall'elenco a discesa.
 
 ```
 int GetActionNumber() const;
@@ -141,9 +141,9 @@ int GetActionNumber() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di elementi che un utente ha selezionato.
+Numero di elementi selezionati da un utente.
 
-##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu
+## <a name="cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu
 
 Indica se l'oggetto contiene un menu.
 
@@ -155,11 +155,11 @@ virtual BOOL HasMenu() const;
 
 Restituisce sempre TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)<br/>
+[CMFCRibbonGallery (classe)](../../mfc/reference/cmfcribbongallery-class.md)<br/>
 [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)

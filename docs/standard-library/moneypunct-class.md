@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3a277b2f97fd53c52b705051c30eb18faf6364d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419854"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366244"
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 
-Il modello di classe descrive un oggetto che può fungere da facet delle impostazioni locali per descrivere le sequenze di tipo *CharType* utilizzate per rappresentare un campo di input di tipo valuta o un campo di output di tipo valuta. Se il parametro di modello *Intl* è *true*, vengono rispettate le convenzioni internazionali.
+Il modello di classe descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per descrivere le sequenze di tipo *CharType* usate per rappresentare un campo di input monetario o un campo di output monetario. Se il parametro di modello *Intl* è *true*, vengono rispettate le convenzioni internazionali.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parametri
 
-\ *CharType*
+*Chartype*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-\ *Intl*
+*Intl*\
 Flag che specifica se devono essere rispettate le convenzioni internazionali.
 
 ## <a name="remarks"></a>Osservazioni
@@ -107,7 +107,7 @@ L'oggetto statico const intl archivia il valore del parametro di modello *Intl*.
 |[do_positive_sign](#do_positive_sign)|Funzione membro virtuale protetta chiamata per restituire una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di segno positivo.|
 |[do_thousands_sep](#do_thousands_sep)|Funzione membro virtuale protetta chiamata per restituire una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di separatore delle migliaia.|
 |[frac_digits](#frac_digits)|Restituisce un conteggio del numero di cifre specifico delle impostazioni locali da visualizzare a destra di un separatore decimale.|
-|[grouping](#grouping)|Restituisce una regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra della virgola decimale.|
+|[Raggruppamento](#grouping)|Restituisce una regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra della virgola decimale.|
 |[neg_format](#neg_format)|Restituisce una regola specifica delle impostazioni locali per la formattazione degli output con importi negativi.|
 |[negative_sign](#negative_sign)|Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di segno negativo.|
 |[pos_format](#pos_format)|Restituisce una regola specifica delle impostazioni locali per la formattazione degli output con importi positivi.|
@@ -116,11 +116,11 @@ L'oggetto statico const intl archivia il valore del parametro di modello *Intl*.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<impostazioni locali >
+**Intestazione:** \<locale>
 
 **Spazio dei nomi:** std
 
-## <a name="char_type"></a>  moneypunct::char_type
+## <a name="moneypunctchar_type"></a><a name="char_type"></a>moneypunct::char_type
 
 Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.
 
@@ -132,7 +132,7 @@ typedef CharType char_type;
 
 Il tipo è un sinonimo del parametro di modello **CharType**.
 
-## <a name="curr_symbol"></a>  moneypunct::curr_symbol
+## <a name="moneypunctcurr_symbol"></a><a name="curr_symbol"></a>moneypunct::curr_symbol
 
 Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di valuta.
 
@@ -169,7 +169,7 @@ int main( )
 };
 ```
 
-## <a name="decimal_point"></a>  moneypunct::decimal_point
+## <a name="moneypunctdecimal_point"></a><a name="decimal_point"></a>moneypunct::decimal_point
 
 Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di separatore decimale.
 
@@ -215,7 +215,7 @@ German_Germany.1252 international decimal point ,
 German_Germany.1252 domestic decimal point ,
 ```
 
-## <a name="do_curr_symbol"></a>  moneypunct::do_curr_symbol
+## <a name="moneypunctdo_curr_symbol"></a><a name="do_curr_symbol"></a>moneypunct::do_curr_symbol
 
 Funzione membro virtuale protetta che restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di valuta.
 
@@ -231,7 +231,7 @@ Sequenza di elementi specifica delle impostazioni locali da usare come simbolo d
 
 Vedere l'esempio relativo a [curr_symbol](#curr_symbol), in cui la funzione membro virtuale viene chiamata da `curr_symbol`.
 
-## <a name="do_decimal_point"></a>  moneypunct::do_decimal_point
+## <a name="moneypunctdo_decimal_point"></a><a name="do_decimal_point"></a>moneypunct::do_decimal_separatore
 
 Funzione membro virtuale protetta che restituisce una sequenza di elementi specifica delle impostazioni locali da usare come simbolo di separatore decimale.
 
@@ -247,7 +247,7 @@ Sequenza di elementi specifica delle impostazioni locali da usare come simbolo d
 
 Vedere l'esempio relativo a [decimal_point](#decimal_point), in cui la funzione membro virtuale viene chiamata da `decimal_point`.
 
-## <a name="do_frac_digits"></a>  moneypunct::do_frac_digits
+## <a name="moneypunctdo_frac_digits"></a><a name="do_frac_digits"></a>moneypunct::do_frac_digits
 
 Funzione membro virtuale protetta che restituisce un conteggio del numero di cifre specifico delle impostazioni locali da visualizzare a destra di un separatore decimale.
 
@@ -263,7 +263,7 @@ Conteggio del numero di cifre specifico delle impostazioni locali da visualizzar
 
 Vedere l'esempio relativo a [frac_digits](#frac_digits), in cui la funzione membro virtuale viene chiamata da `frac_digits`.
 
-## <a name="do_grouping"></a>  moneypunct::do_grouping
+## <a name="moneypunctdo_grouping"></a><a name="do_grouping"></a>moneypunct::do_grouping
 
 Funzione membro virtuale protetta che restituisce una regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra di un separatore decimale.
 
@@ -277,9 +277,9 @@ Regola specifica delle impostazioni locali per determinare la modalità di raggr
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio per il [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata da `grouping`.
+Vedere l'esempio per il [raggruppamento](#grouping)di `grouping`, in cui la funzione membro virtuale viene chiamata da .
 
-## <a name="do_neg_format"></a>  moneypunct::do_neg_format
+## <a name="moneypunctdo_neg_format"></a><a name="do_neg_format"></a>moneypunct::do_neg_format
 
 Funzione membro virtuale protetta chiamata per restituire una regola specifica delle impostazioni locali per la formattazione degli output con importi negativi.
 
@@ -289,27 +289,27 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo negativo. Ognuno dei quattro elementi di `pattern::field` può includere i valori seguenti:
+La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo negativo. Ognuno dei quattro `pattern::field` elementi di può avere i valori:
 
-- `none` per trovare la corrispondenza con zero o più spazi oppure non generare alcun elemento.
+- `none`per abbinare zero o più spazi o non generare nulla.
 
-- `sign` per trovare la corrispondenza o generare un segno positivo o negativo.
+- `sign`per abbinare o generare un segno positivo o negativo.
 
-- `space` per trovare la corrispondenza con zero o più spazi o per generare uno spazio.
+- `space`per far corrispondere zero o più spazi o generare uno spazio.
 
-- `symbol` la corrispondenza o la generazione di un simbolo di valuta.
+- `symbol`per trovare una corrispondenza o generare un simbolo di valuta.
 
-- `value` la corrispondenza o la generazione di un valore monetario.
+- `value`per abbinare o generare un valore monetario.
 
-I componenti di un campo di output di tipo valuta vengono generati e i componenti di un campo di input di tipo valuta corrispondono nell'ordine in cui questi elementi vengono visualizzati in `pattern::field`. Ogni valore `sign`, `symbol`, `value`e `none` o `space` deve essere visualizzato esattamente una volta. Il valore `none` non deve essere visualizzato per primo. Il valore **space** non deve comparire come primo o ultimo. Se `Intl` è true, l'ordine è `symbol`, `sign``none`, quindi `value`.
+I componenti di un campo di output monetario vengono generati e i componenti di `pattern::field`un campo di input monetario vengono confrontati nell'ordine in cui questi elementi vengono visualizzati in . Ognuno dei `sign` `symbol`valori `value`, `none` , `space` e deve essere visualizzato esattamente una volta. Il `none` valore non deve essere visualizzato per primo. Il valore **space** non deve comparire come primo o ultimo. Se `Intl` è true, `symbol`l'ordine è , `sign`, `none`, quindi `value`.
 
-La versione del modello di `moneypunct`\< **CharType**, **Intl**> restituisce **`{`money_base:: Symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: None**`}`.
+La versione del modello di `moneypunct`\< **CharType**, **Intl**> restituisce `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio relativo a [neg_format](#neg_format), in cui la funzione membro virtuale viene chiamata da `neg_format`.
 
-## <a name="do_negative_sign"></a>  moneypunct::do_negative_sign
+## <a name="moneypunctdo_negative_sign"></a><a name="do_negative_sign"></a>moneypunct::do_segno negativo
 
 Funzione membro virtuale protetta chiamata per restituire una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di segno negativo.
 
@@ -325,7 +325,7 @@ Sequenza di elementi specifica delle impostazioni locali da usare come segno neg
 
 Vedere l'esempio relativo a [negative_sign](#negative_sign), in cui la funzione membro virtuale viene chiamata da `negative_sign`.
 
-## <a name="do_pos_format"></a>  moneypunct::do_pos_format
+## <a name="moneypunctdo_pos_format"></a><a name="do_pos_format"></a>moneypunct::do_pos_format
 
 Funzione membro virtuale protetta chiamata per restituire una regola specifica delle impostazioni locali per la formattazione degli output con importi positivi.
 
@@ -335,15 +335,15 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo positivo. Determina inoltre la modalità di corrispondenza tra i componenti di un campo di input di tipo valuta. La codifica è identica a quella per [do_neg_format](#do_neg_format).
+La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo positivo. (Determina anche come abbinare i componenti di un campo di input monetario.) La codifica è la stessa di [do_neg_format](#do_neg_format).
 
-La versione del modello di moneypunct\< **CharType**, **Inputlterator**> restituisce **`{`money_base:: Symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: None**`}`.
+La versione del modello di moneypunct\< **CharType**, **Inputlterator**> restituisce `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio relativo a [pos_format](#pos_format), in cui la funzione membro virtuale viene chiamata da `pos_format`.
 
-## <a name="do_positive_sign"></a>  moneypunct::do_positive_sign
+## <a name="moneypunctdo_positive_sign"></a><a name="do_positive_sign"></a>moneypunct::do_positive_sign
 
 Funzione membro virtuale protetta che restituisce una sequenza di elementi specifica delle impostazioni locali da usare come segno positivo.
 
@@ -359,7 +359,7 @@ Sequenza di elementi specifica delle impostazioni locali da usare come segno pos
 
 Vedere l'esempio relativo a [positive_sign](#positive_sign), in cui la funzione membro virtuale viene chiamata da `positive_sign`.
 
-## <a name="do_thousands_sep"></a>  moneypunct::do_thousands_sep
+## <a name="moneypunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>moneypunct::do_thousands_sep
 
 Funzione membro virtuale protetta che restituisce un elemento specifico delle impostazioni locali da usare come separatore dei gruppi a sinistra della virgola decimale.
 
@@ -375,7 +375,7 @@ Elemento specifico delle impostazioni locali da usare come separatore dei gruppi
 
 Vedere l'esempio relativo a [thousands_sep](#thousands_sep), in cui la funzione membro virtuale viene chiamata da `thousands_sep`.
 
-## <a name="frac_digits"></a>  moneypunct::frac_digits
+## <a name="moneypunctfrac_digits"></a><a name="frac_digits"></a>moneypunct::frac_digits
 
 Restituisce un conteggio del numero di cifre specifico delle impostazioni locali da visualizzare a destra di un separatore decimale.
 
@@ -444,7 +444,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="grouping"></a>  moneypunct::grouping
+## <a name="moneypunctgrouping"></a><a name="grouping"></a>moneypunct::raggruppamento
 
 Restituisce una regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra della virgola decimale.
 
@@ -513,7 +513,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="moneypunct"></a>  moneypunct::moneypunct
+## <a name="moneypunctmoneypunct"></a><a name="moneypunct"></a>moneypunct::moneypunct
 
 Costruttore di oggetti di tipo `moneypunct`.
 
@@ -528,19 +528,19 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 ### <a name="remarks"></a>Osservazioni
 
-I valori possibili per il parametro *_Refs* e i relativi significati sono:
+I valori possibili per il parametro *_Refs* e il loro significato sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
 - 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non sono definiti.
+- \>1: Questi valori non sono definiti.
 
-Non è possibile offrire esempi diretti, poiché il distruttore è protetto.
+Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
 Il costruttore inizializza l'oggetto di base con [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).
 
-## <a name="neg_format"></a>  moneypunct::neg_format
+## <a name="moneypunctneg_format"></a><a name="neg_format"></a>moneypunct::neg_format
 
 Restituisce una regola specifica delle impostazioni locali per la formattazione degli output con importi negativi.
 
@@ -588,7 +588,7 @@ int main( ) {
 }
 ```
 
-## <a name="negative_sign"></a>  moneypunct::negative_sign
+## <a name="moneypunctnegative_sign"></a><a name="negative_sign"></a>moneypunct::negative_sign
 
 Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di segno negativo.
 
@@ -650,7 +650,7 @@ French_France.1252 international negative sign: -
 French_France.1252 domestic negative sign: -
 ```
 
-## <a name="pos_format"></a>  moneypunct::pos_format
+## <a name="moneypunctpos_format"></a><a name="pos_format"></a>moneypunct::pos_format
 
 Restituisce una regola specifica delle impostazioni locali per la formattazione degli output con importi positivi.
 
@@ -698,7 +698,7 @@ int main() {
 }
 ```
 
-## <a name="positive_sign"></a>  moneypunct::positive_sign
+## <a name="moneypunctpositive_sign"></a><a name="positive_sign"></a>moneypunct::positive_sign
 
 Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di segno positivo.
 
@@ -760,7 +760,7 @@ French_France.1252 international positive sign:
 French_France.1252 domestic positive sign:
 ```
 
-## <a name="string_type"></a>  moneypunct::string_type
+## <a name="moneypunctstring_type"></a><a name="string_type"></a>moneypunct::string_type
 
 Tipo che descrive una stringa contenente caratteri di tipo **CharType**.
 
@@ -772,7 +772,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie delle sequenze di punteggiatura.
 
-## <a name="thousands_sep"></a>  moneypunct::thousands_sep
+## <a name="moneypunctthousands_sep"></a><a name="thousands_sep"></a>moneypunct::thousands_sep
 
 Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di separatore delle migliaia.
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<locale>](../standard-library/locale.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)
+[\<>delle impostazioni locali](../standard-library/locale.md)\
+[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)

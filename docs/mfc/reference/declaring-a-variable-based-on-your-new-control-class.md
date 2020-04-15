@@ -8,40 +8,40 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: d550b80beb124f3d8ec36ba81dad1a9ca7e9fa15
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 994f81524001a80d1cf0dd3783b9de742d61e84d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741611"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365839"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Dichiarazione di una variabile basata su una nuova classe di controlli
 
-Dopo aver creato una classe di controllo MFC, è possibile dichiarare una variabile basata su di esso. Per fornire un contesto per la nuova variabile, è necessario aprire l'editor finestre e modificare la finestra di dialogo in cui si desidera utilizzare il controllo riutilizzabile. Inoltre, la finestra di dialogo deve avere già una classe associata. Per informazioni sull'uso dell'editor finestre, vedere [finestra di dialogo Editor](../../windows/dialog-editor.md).
+Dopo aver creato una classe di controllo MFC, è possibile dichiarare una variabile basata su di essa. Per fornire un contesto per la nuova variabile, è necessario aprire l'editor finestre e modificare la finestra di dialogo in cui si desidera utilizzare il controllo riutilizzabile. Inoltre, la finestra di dialogo deve avere già una classe associata. Per informazioni sull'utilizzo dell'editor finestre, vedere [Editor finestre](../../windows/dialog-editor.md).
 
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Per dichiarare una variabile basata su classe riutilizzabile
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Per dichiarare una variabile in base alla classe riutilizzabileTo declare a variable based on your reusable class
 
-1. Quando si modifica la finestra di dialogo, trascinare un controllo dello stesso tipo come classe di base del nuovo controllo nella barra degli strumenti di controlli nella finestra di dialogo.
+1. Durante la modifica della finestra di dialogo, trascinare un controllo dello stesso tipo della classe base del nuovo controllo dalla barra degli strumenti Controlli nella finestra di dialogo.
 
 1. Posizionare il puntatore del mouse sul controllo rilasciato.
 
-1. Tenere premuto il tasto CTRL e fare doppio clic sul controllo.
+1. Tenendo premuto il tasto CTRL, fare doppio clic sul controllo.
 
-   Il [Aggiunta guidata variabile membro](../../ide/add-member-variable-wizard.md) verrà visualizzata la finestra di dialogo.
+   Verrà visualizzata la finestra di dialogo [Aggiungi variabile membro.](../../ide/add-member-variable-wizard.md)
 
-1. Nel **accesso** , selezionare l'accesso corretto per il controllo.
+1. Nella casella **Accesso** selezionare l'accesso corretto per il controllo.
 
-1. Scegliere il **variabile di controllo** casella di controllo.
+1. Fare clic sulla casella di controllo **Variabile di** controllo.
 
-1. Nel **nome della variabile** , digitare un nome.
+1. Nella casella **Nome variabile** digitare un nome.
 
-1. Sotto **categoria**, fare clic su **controllo**.
+1. In **Categoria**fare clic su **Controllo**.
 
-1. Nel **ID del controllo** elencare, selezionare il controllo aggiunto. Il **tipo di variabile** elenco verrà visualizzato il tipo di variabile corretto e il **tipo di controllo** casella deve essere visualizzato il tipo di controllo.
+1. Nell'elenco **ID controllo** selezionare il controllo aggiunto. Nell'elenco **Tipo di variabile** dovrebbe essere visualizzato il tipo di variabile corretto e nella casella Tipo di **controllo** dovrebbe essere visualizzato il tipo di controllo corretto.
 
-9. Nel **commento** , aggiungere qualsiasi commento da visualizzare nel codice.
+1. Nella casella **Commento** aggiungere il commento che si desidera visualizzare nel codice.
 
-10. Fare clic su **OK**.
+1. Fare clic su **OK**.
 
 ## <a name="see-also"></a>Vedere anche
 

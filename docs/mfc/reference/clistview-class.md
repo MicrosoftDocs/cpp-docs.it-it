@@ -1,5 +1,5 @@
 ---
-title: CListView (classe)
+title: Classe CListView
 ms.date: 11/04/2016
 f1_keywords:
 - CListView
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae1a76e4cdd052ff44dcbd69d467c51741bcc2ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296657"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370144"
 ---
-# <a name="clistview-class"></a>CListView (classe)
+# <a name="clistview-class"></a>Classe CListView
 
-Semplifica l'uso del controllo di riepilogo e dei [CListCtrl](../../mfc/reference/clistctrl-class.md), la classe che incapsula la funzionalità del controllo elenco con l'architettura documento-visualizzazione di MFC.
+Semplifica l'utilizzo del controllo elenco e di [CListCtrl](../../mfc/reference/clistctrl-class.md), la classe che incapsula la funzionalità di controllo elenco, con l'architettura di visualizzazione documento di MFC.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,11 +47,11 @@ class CListView : public CCtrlView
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CListView::RemoveImageList](#removeimagelist)|Rimuove l'elenco di immagini specificato nella visualizzazione elenco.|
+|[CListView::RemoveImageList](#removeimagelist)|Rimuove l'elenco immagini specificato dalla visualizzazione elenco.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per altre informazioni su questa architettura, vedere la panoramica per il [CView](../../mfc/reference/cview-class.md) classe e i riferimenti incrociati citati non esiste.
+Per altre informazioni su questa architettura, vedere i cenni preliminari per la classe [CView](../../mfc/reference/cview-class.md) e i riferimenti incrociati citati.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -71,7 +71,7 @@ Per altre informazioni su questa architettura, vedere la panoramica per il [CVie
 
 **Intestazione:** afxcview.h
 
-##  <a name="clistview"></a>  CListView::CListView
+## <a name="clistviewclistview"></a><a name="clistview"></a>CListView::CListView
 
 Costruisce un oggetto `CListView`.
 
@@ -79,7 +79,7 @@ Costruisce un oggetto `CListView`.
 CListView();
 ```
 
-##  <a name="getlistctrl"></a>  CListView::GetListCtrl
+## <a name="clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl
 
 Chiamare questa funzione membro per ottenere un riferimento al controllo elenco associato alla visualizzazione.
 
@@ -89,15 +89,15 @@ CListCtrl& GetListCtrl() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento al controllo elenco associato alla visualizzazione.
+Riferimento al controllo elenco associato alla visualizzazione.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]
 
-##  <a name="removeimagelist"></a>  CListView::RemoveImageList
+## <a name="clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList
 
-Rimuove l'elenco di immagini specificato nella visualizzazione elenco.
+Rimuove l'elenco immagini specificato dalla visualizzazione elenco.
 
 ```
 void RemoveImageList(int nImageList);
@@ -105,12 +105,12 @@ void RemoveImageList(int nImageList);
 
 ### <a name="parameters"></a>Parametri
 
-*nImageList*<br/>
-Indice a base zero dell'immagine da rimuovere.
+*nImageList (elenco immagini)*<br/>
+Indice in base zero dell'immagine da rimuovere.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Esempio MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)

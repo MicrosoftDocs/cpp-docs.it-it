@@ -3,17 +3,17 @@ title: Proprietà del linker (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
 ms.openlocfilehash: 934e639199d663cba391c9913b067f32e5e32165
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79441276"
 ---
 # <a name="linker-properties-linux-c"></a>Proprietà del linker (Linux C++)
 
 ::: moniker range="vs-2015"
 
-Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
@@ -52,7 +52,7 @@ Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive
 
 | Proprietà | Descrizione | Opzioni |
 |--|--|--|
-| Informazioni sui simboli del debugger | Informazioni sui simboli del debugger ottenuti dal file di output. | **Includi tutti**<br>**Ometti solo le informazioni sui simboli del debugger**<br>**Ometti tutte le informazioni sui simboli**<br> |
+| Informazioni sui simboli del debugger | Informazioni sui simboli del debugger ottenuti dal file di output. | **Includi tutto**<br>**Ometti solo le informazioni sui simboli del debugger**<br>**Ometti tutte le informazioni sui simboli**<br> |
 | Nome file di mapping | L'opzione Map indica al linker di creare un file di mapping con il nome specificato dall'utente. (-Map=) |
 
 ## <a name="advanced"></a>Avanzate
@@ -60,7 +60,7 @@ Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive
 | Proprietà | Descrizione | Opzioni |
 |--|--|--|
 | Contrassegna le variabili come di sola lettura dopo la rilocazione | Questa opzione contrassegna le variabili come di sola lettura dopo la rilocazione. |
-| Abilita il binding immediato delle funzioni | Questa opzione contrassegna l'oggetto per il binding immediato delle funzioni. |
+| Abilita il binding immediato delle funzioni | Questa opzione contrassegna l'oggetto per l'associazione immediata delle funzioni. |
 | Non richiedere stack eseguibili | Questa opzione contrassegna l'output in modo da non richiedere lo stack degli eseguibili. |
 | Intero archivio | Con Intero archivio viene usato tutto il codice disponibile in origini e dipendenze aggiuntive. |
 

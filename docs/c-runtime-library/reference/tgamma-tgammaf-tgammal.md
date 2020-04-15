@@ -1,10 +1,13 @@
 ---
 title: tgamma, tgammaf, tgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - tgamma
 - tgammaf
 - tgammal
+- _o_tgamma
+- _o_tgammaf
+- _o_tgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d7e27e8b818a16cb0c18f58e2f40c0090dd13ecf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946204"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362499"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -70,44 +74,46 @@ long double tgammal(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore di cui trovare la funzione gamma.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se ha esito positivo, restituisce la gamma di *x*.
 
-È possibile che si verifichi un errore di intervallo se la grandezza di *x* è troppo grande o troppo piccola per il tipo di dati. Se *x* < = 0, è possibile che si verifichi un errore di dominio o di intervallo.
+Un errore di intervallo può verificarsi se la grandezza di *x* è troppo grande o troppo piccola per il tipo di dati. Se *x* <è 0, può verificarsi un errore di dominio o di intervallo.
 
-|Problema|INVIO|
+|Problema|Return|
 |-----------|------------|
-|x = ±0|INFINITO ±|
+|x : 0|-INFINITO|
 |x = intero negativo|NaN|
-|x = -INFINITY|NaN|
+|x -INFINITY (INFINITO)|NaN|
 |x = +INFINITY|+INFINITO|
 |x = NaN|NaN|
 |Eerrore di dominio|NaN|
-|Errore polo|± HUGE_VAL, ± HUGE_VALF o ± HUGE_VALL|
-|Errore di intervallo di overflow|± HUGE_VAL, ± HUGE_VALF o ± HUGE_VALL|
+|Errore polo|HUGE_VAL, HUGE_VALF o HUGE_VALL|
+|Errore di intervallo di overflow|HUGE_VAL, HUGE_VALF o HUGE_VALL|
 |Errore di intervallo di underflow|Valore corretto dopo l'arrotondamento.|
 
-Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
+Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **tgamma** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **tgamma** accetta e restituisce sempre un **valore Double**.
+Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **tgamma** che accettano e restituiscono tipi **float** e **long** **double.** In un programma C, **tgamma** accetta e restituisce sempre un **valore double.**
 
 Se x è un numero naturale, questa funzione restituisce il fattoriale di (x-1).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
-|**tgamma**, **tgammaf**,  **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

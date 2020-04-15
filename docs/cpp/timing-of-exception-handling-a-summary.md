@@ -1,5 +1,5 @@
 ---
-title: 'Intervallo di gestione delle eccezioni: Riepilogo'
+title: 'Tempi di gestione delle eccezioni: un riepilogo'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 3ed2e02412bd84663674a2df2c4454d21e83575a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17d1c250a98afc2b86c198735602df7d80118bd4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188116"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316602"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Intervallo di gestione delle eccezioni: Riepilogo
+# <a name="timing-of-exception-handling-a-summary"></a>Tempi di gestione delle eccezioni: un riepilogo
 
-Un gestore terminazioni viene eseguito indipendentemente dal modo in cui il blocco di istruzioni **__try** viene terminato. Le cause includono il salto all'esterno del blocco di **__try** , un'istruzione `longjmp` che trasferisce il controllo dal blocco e la rimozione dello stack a causa della gestione delle eccezioni.
+Viene eseguito un gestore di terminazione indipendentemente dal modo in cui il blocco di istruzioni **__try** viene terminato. Le cause includono l'uscita `longjmp` dal blocco **__try,** un'istruzione che trasferisce il controllo all'esterno del blocco e la rimozione dello stack a causa della gestione delle eccezioni.
 
 > [!NOTE]
->  Il compilatore C++ Microsoft supporta due forme delle istruzioni `setjmp` e `longjmp`. La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per usare questa versione, includere il file \<> setjmp. h. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per usare questa versione, includere il file \<> setjmpex. h. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.
+> Il compilatore Microsoft Cè supporta `setjmp` due `longjmp` forme di istruzione e . La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per utilizzare questa versione, \<includere il file setjmp.h>. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per utilizzare questa versione, \<includere il file setjmpex.h>. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.
 
 Il sistema operativo esegue tutti i gestori terminazioni nell'ordine corretto (incluso il corpo di un gestore eccezioni), prima che sia possibile eseguire qualsiasi altro codice.
 
@@ -35,7 +35,7 @@ Quando la causa dell'interruzione è un'eccezione, il sistema deve innanzitutto 
 
 1. Se questo filtro supera il controllo (restituisce 0), il processo continua fino a quando non viene trovato un filtro che non invece non lo supera.
 
-1. Se questo filtro restituisce-1, l'esecuzione continua dove è stata generata l'eccezione e non viene completata alcuna terminazione.
+1. Se questo filtro restituisce -1, l'esecuzione continua nel punto in cui è stata generata l'eccezione e non viene eseguita alcuna terminazione.
 
 1. Se il filtro restituisce 1, si verificano i seguenti eventi:
 
@@ -50,4 +50,4 @@ Quando la causa dell'interruzione è un'eccezione, il sistema deve innanzitutto 
 ## <a name="see-also"></a>Vedere anche
 
 [Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)<br/>
-[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

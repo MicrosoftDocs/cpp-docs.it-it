@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 55860a65fc77f834ed699f3a5114768b7efdde6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688351"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366725"
 ---
 # <a name="cache_suballoc-class"></a>Classe cache_suballoc
 
@@ -32,13 +32,13 @@ class cache_suballoc
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*SZ*|Numero di elementi della matrice da allocare.|
+|*Sz*|Numero di elementi della matrice da allocare.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe cache_suballoc archivia i blocchi di memoria deallocati in un elenco libero con lunghezza non vincolata, usando `freelist<sizeof(Type), max_unbounded>` e suddivide i blocchi di memoria da un blocco maggiore allocato con **operator new** quando l'elenco di disponibilità è vuoto.
+Il modello di classe cache_suballoc archivia i blocchi di memoria `freelist<sizeof(Type), max_unbounded>`deallocati in un elenco libero con lunghezza illimitata, utilizzando , e sottoalloca i blocchi di memoria da un blocco più grande allocato con **operatore new** quando l'elenco libero è vuoto.
 
-Ogni blocco include `Sz * Nelts` byte di memoria utilizzabile e i dati necessari per **operator new** e **operator delete** . Le porzioni allocate non vengono mai liberate.
+Ogni blocco `Sz * Nelts` contiene byte di memoria utilizzabile e i dati che **l'operatore new** e **operator delete** richiedono. Le porzioni allocate non vengono mai liberate.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -50,8 +50,8 @@ Ogni blocco include `Sz * Nelts` byte di memoria utilizzabile e i dati necessari
 
 |Funzione membro|Descrizione|
 |-|-|
-|[allocate](#allocate)|Alloca un blocco di memoria.|
-|[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
+|[Allocare](#allocate)|Alloca un blocco di memoria.|
+|[Deallocare](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -59,7 +59,7 @@ Ogni blocco include `Sz * Nelts` byte di memoria utilizzabile e i dati necessari
 
 **Spazio dei nomi:** stdext
 
-## <a name="allocate"></a>  cache_suballoc::allocate
+## <a name="cache_suballocallocate"></a><a name="allocate"></a>cache_suballoc::allocare
 
 Alloca un blocco di memoria.
 
@@ -77,9 +77,9 @@ void *allocate(std::size_t count);
 
 Puntatore all'oggetto allocato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
+## <a name="cache_suballoccache_suballoc"></a><a name="cache_suballoc"></a>cache_suballoc::cache_suballoc
 
 Costruisce un oggetto di tipo `cache_suballoc`.
 
@@ -87,9 +87,9 @@ Costruisce un oggetto di tipo `cache_suballoc`.
 cache_suballoc();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-## <a name="deallocate"></a>  cache_suballoc::deallocate
+## <a name="cache_suballocdeallocate"></a><a name="deallocate"></a>cache_suballoc::deallocate
 
 Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.
 
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*Ptr*|Puntatore al primo oggetto che deve essere deallocato dall'archivio.|
 |*count*|Numero di oggetti da deallocare dall'archivio.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocatori>](../standard-library/allocators-header.md)

@@ -2,12 +2,12 @@
 title: Interfacce (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: 263feb7b9c8a472a6077236596107bdeff26a5a4
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740183"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366045"
 ---
 # <a name="interfaces-ccx"></a>Interfacce (C++/CX)
 
@@ -25,7 +25,7 @@ Ecco le caratteristiche di un'interfaccia:
 
 - Non sono consentiti campi e membri statici.
 
-- I tipi utilizzati come proprietà, parametri di metodo o valori restituiti possono essere solo tipi di Windows Runtime; sono inclusi i tipi fondamentali e i tipi di classe Enum.
+- I tipi utilizzati come proprietà, parametri di metodo o valori restituiti possono essere solo tipi Windows Runtime. sono inclusi i tipi fondamentali e i tipi di classe enum.
 
 ## <a name="declaration-and-usage"></a>Dichiarazione e utilizzo
 
@@ -63,9 +63,9 @@ Quando una classe di riferimento implementa più interfacce e queste ultime hann
 
 ## <a name="generic-interfaces"></a>Interfacce generiche
 
-In C++/CX, la `generic` parola chiave viene usata per rappresentare un Windows Runtime tipo con parametri. Un tipo con parametri viene emesso nei metadati e può essere utilizzato da codice scritto in qualsiasi linguaggio che supporta i parametri di tipo. Il Windows Runtime definisce alcune interfacce generiche, ad esempio [Windows:: Foundation:: Collections::\<IVector T >](Windows::Foundation::Collections::IVector), ma non supporta la creazione di interfacce generiche definite dall'utente pubbliche C++in/CX. Tuttavia, è possibile creare interfacce generiche private.
+La `generic` parola chiave viene utilizzata per rappresentare un tipo con parametri di Windows Runtime. Un tipo con parametri viene emesso nei metadati e può essere utilizzato da codice scritto in qualsiasi linguaggio che supporta i parametri di tipo. Windows Runtime definisce alcune interfacce generiche, ad [esempio, Windows::Foundation::Collections::IVector\<T>, ](/uwp/api/Windows.Foundation.Collections.IVector_T_)ma non supporta la creazione di interfacce generiche pubbliche definite dall'utente in C. Tuttavia, è possibile creare interfacce generiche private.
 
-Ecco come è possibile usare i tipi di Windows Runtime per creare un'interfaccia generica:
+Ecco come usare i tipi di Windows Runtime per creare un'interfaccia generica:Here's how Windows Runtime types can be used to author a generic interface:
 
 - Una `interface class` generica definita dall'utente in un componente non può essere emessa nel relativo file di metadati Windows, pertanto non può avere accessibilità pubblica e il codice client in altri file con estensione winmd non può implementarla. Può essere implementata da classi di riferimento non pubbliche nello stesso componente. Una classe di riferimento pubblica può avere un tipo di interfaccia generico come membro privato.
 
@@ -77,7 +77,7 @@ Ecco come è possibile usare i tipi di Windows Runtime per creare un'interfaccia
 
 - Questo tipo di interfaccia può accettare uno o più parametri di tipo generico che sono preceduti da `typename` o da `class`. Non sono supportati i parametri non di tipo.
 
-- Un parametro di tipo può essere qualsiasi tipo di Windows Runtime. Ciò significa che il parametro di tipo può essere un tipo di riferimento, un tipo di valore, una classe di interfaccia, un delegato, un tipo fondamentale o una classe enum pubblica.
+- Un parametro di tipo può essere qualsiasi tipo di Windows Runtime.A type parameter can be any Windows Runtime type. Ciò significa che il parametro di tipo può essere un tipo di riferimento, un tipo di valore, una classe di interfaccia, un delegato, un tipo fondamentale o una classe enum pubblica.
 
 - Un' *interfaccia generica chiusa* è un'interfaccia che eredita da un'interfaccia generica e specifica gli argomenti di tipo concreti per tutti i parametri di tipo. Può essere utilizzata in tutti i casi in cui è consentito l'uso di un'interfaccia privata non generica.
 
@@ -89,11 +89,11 @@ Ecco come è possibile usare i tipi di Windows Runtime per creare un'interfaccia
 
 - Un'interfaccia generica chiusa dispone di un UUID generato in modo implicito. Un utente non può specificare l'UUID.
 
-- Nell'interfaccia, si presuppone che qualsiasi riferimento all'interfaccia corrente, in un parametro di metodo, un valore restituito o una proprietà, faccia riferimento all'istanza corrente. Ad esempio, *IMyIntf* indica *IMyIntf\<T >* .
+- Nell'interfaccia, si presuppone che qualsiasi riferimento all'interfaccia corrente, in un parametro di metodo, un valore restituito o una proprietà, faccia riferimento all'istanza corrente. Ad esempio, *IMyIntf* significa *IMyIntf\<T>*.
 
 - Quando il tipo di un parametro di metodo è un parametro di tipo, la dichiarazione di tale parametro o variabile contiene il nome del parametro di tipo senza dichiaratori di puntatore, riferimento nativo o handle. In altre parole, non si scrive mai "T^".
 
-- Le classi di riferimento basate su modelli devono essere private, Possono implementare interfacce generiche e passare il parametro di modello *t* all'argomento generico *t*. Ogni creazione di istanza di una classe di riferimento basata su modelli è essa stessa una classe di riferimento.
+- Le classi di riferimento basate su modelli devono essere private, Possono implementare interfacce generiche e possono passare il parametro di modello *T* all'argomento generico *T*. Ogni creazione di istanze di una classe di riferimento basata su modelli è essa stessa una classe di riferimento.
 
 ## <a name="see-also"></a>Vedere anche
 

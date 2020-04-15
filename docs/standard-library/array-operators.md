@@ -9,23 +9,23 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422045"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364903"
 ---
 # <a name="ltarraygt-operators"></a>Operatori &lt;array&gt;
 
-L'intestazione di > della matrice \<include le funzioni del modello di confronto non membro della **matrice** .
+L'intestazione \<di> di matrice include queste funzioni del modello di confronto non membro della **matrice.**
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[operatore!](#op_neq)|[Operatore&gt;](#op_gt)|[Operatore&gt;=](#op_gt_eq)|
+|[Operatore&lt;](#op_lt)|[Operatore&lt;=](#op_lt_eq)|[operatore di comando](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>operatore!
 
 Confronto tra matrici, diverso.
 
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-\ *Ty*
+*Ty*\
 Tipo di un elemento.
 
 *N*\
 Dimensione della matrice.
 
-\ a *sinistra*
+*Sinistra*\
 Contenitore sinistro da confrontare.
 
-\ a *destra*
+*va bene*\
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Operatore&lt;
 
 Confronto tra matrici, minore di.
 
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-\ *Ty*
+*Ty*\
 Tipo di un elemento.
 
 *N*\
 Dimensione della matrice.
 
-\ a *sinistra*
+*Sinistra*\
 Contenitore sinistro da confrontare.
 
-\ a *destra*
+*va bene*\
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello viene sottoposta a overload `operator<` per confrontare due oggetti della classe [Array](../standard-library/array-class-stl.md)template class. La funzione restituisce `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+La funzione modello `operator<` esegue l'overload per confrontare due oggetti della classe [di matrice](../standard-library/array-class-stl.md)del modello di classe . La funzione restituisce `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Esempio
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operatore&lt;=
 
 Confronto tra matrici, minore di o uguale.
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-\ *Ty*
+*Ty*\
 Tipo di un elemento.
 
 *N*\
 Dimensione della matrice.
 
-\ a *sinistra*
+*Sinistra*\
 Contenitore sinistro da confrontare.
 
-\ a *destra*
+*va bene*\
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore di comando
 
 Confronto tra matrici, uguale.
 
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-\ *Ty*
+*Ty*\
 Tipo di un elemento.
 
 *N*\
 Dimensione della matrice.
 
-\ a *sinistra*
+*Sinistra*\
 Contenitore sinistro da confrontare.
 
-\ a *destra*
+*va bene*\
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello viene sottoposta a overload `operator==` per confrontare due oggetti della classe [Array](../standard-library/array-class-stl.md)template class. La funzione restituisce `equal(left.begin(), left.end(), right.begin())`.
+La funzione modello `operator==` esegue l'overload per confrontare due oggetti della classe [di matrice](../standard-library/array-class-stl.md)del modello di classe . La funzione restituisce `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Esempio
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Operatore&gt;
 
 Confronto tra matrici, maggiore di.
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-\ *Ty*
+*Ty*\
 Tipo di un elemento.
 
 *N*\
 Dimensione della matrice.
 
-\ a *sinistra*
+*Sinistra*\
 Contenitore sinistro da confrontare.
 
-\ a *destra*
+*va bene*\
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operatore&gt;=
 
 Confronto tra matrici, maggiore di o uguale.
 
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-\ *Ty*
+*Ty*\
 Tipo di un elemento.
 
 *N*\
 Dimensione della matrice.
 
-\ a *sinistra*
+*Sinistra*\
 Contenitore sinistro da confrontare.
 
-\ a *destra*
+*va bene*\
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<array>](../standard-library/array.md)
+[\<>array](../standard-library/array.md)

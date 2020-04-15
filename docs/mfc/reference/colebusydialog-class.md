@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-ms.openlocfilehash: aa3f0d85bcbf34d325125187b22b38c4da01fb43
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5be42463c08cacd83de84900fb4d98771774e897
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504397"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364248"
 ---
 # <a name="colebusydialog-class"></a>Classe COleBusyDialog
 
@@ -31,37 +31,37 @@ Utilizzata per la finestra di dialogo relativa al server OLE che non risponde o 
 class COleBusyDialog : public COleDialog
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[COleBusyDialog:: COleBusyDialog](#colebusydialog)|Costruisce un oggetto `COleBusyDialog`.|
+|[COleBusyDialog::COleBusyDialog](#colebusydialog)|Costruisce un oggetto `COleBusyDialog`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleBusyDialog::D oModal](#domodal)|Consente di visualizzare la finestra di dialogo server OLE occupato.|
-|[COleBusyDialog:: GetSelectionType](#getselectiontype)|Determina la scelta effettuata nella finestra di dialogo.|
+|[COleBusyDialog::DoModal](#domodal)|Visualizza la finestra di dialogo Server OLE Occupato.|
+|[COleBusyDialog::GetSelectionType](#getselectiontype)|Determina la scelta effettuata nella finestra di dialogo.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|NOME|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleBusyDialog::m_bz](#m_bz)|Struttura di tipo OLEUIBUSY che controlla il comportamento della finestra di dialogo.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Creare un oggetto della classe `COleBusyDialog` quando si desidera chiamare queste finestre di dialogo. Dopo che `COleBusyDialog` un oggetto è stato creato, è possibile utilizzare la struttura [m_bz](#m_bz) per inizializzare i valori o gli Stati dei controlli nella finestra di dialogo. La `m_bz` struttura è di tipo OLEUIBUSY. Per ulteriori informazioni sull'utilizzo di questa classe della finestra di dialogo, vedere la funzione membro [DoModal](#domodal) .
+Creare un oggetto `COleBusyDialog` di classe quando si desidera chiamare queste finestre di dialogo. Dopo `COleBusyDialog` aver costruito un oggetto, è possibile utilizzare la struttura [m_bz](#m_bz) per inizializzare i valori o gli stati dei controlli nella finestra di dialogo. La `m_bz` struttura è di tipo OLEUIBUSY. Per altre informazioni sull'uso di questa classe di finestre di dialogo, vedere la funzione membro [DoModal.For](#domodal) more information about using this dialog class, see the DoModal member function.
 
 > [!NOTE]
->  Il codice contenitore generato dalla creazione guidata applicazione usa questa classe.
+> Il codice del contenitore generato dalla creazione guidata dall'applicazione utilizza questa classe.
 
-Per ulteriori informazioni, vedere la struttura [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) nel Windows SDK.
+Per ulteriori informazioni, vedere la struttura [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) in Windows SDK.
 
-Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l'articolo finestre [di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).
+Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l'articolo [Finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -81,11 +81,11 @@ Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxodlgs. h
+**Intestazione:** afxodlgs.h
 
-##  <a name="colebusydialog"></a>COleBusyDialog:: COleBusyDialog
+## <a name="colebusydialogcolebusydialog"></a><a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog
 
-Questa funzione costruisce solo un `COleBusyDialog` oggetto.
+Questa funzione costruisce `COleBusyDialog` solo un oggetto.
 
 ```
 explicit COleBusyDialog(
@@ -98,32 +98,32 @@ explicit COleBusyDialog(
 ### <a name="parameters"></a>Parametri
 
 *htaskBusy*<br/>
-Handle per l'attività server occupata.
+Gestire l'attività server occupata.
 
-*bNotResponding*<br/>
-Se TRUE, chiamare la finestra di dialogo non risponde invece della finestra di dialogo Server occupato. Il testo nella finestra di dialogo che non risponde è leggermente diverso rispetto a quello della finestra di dialogo Server occupato e il pulsante Annulla è disabilitato.
+*bNonrisponde*<br/>
+Se TRUE, chiamare la finestra di dialogo Non risponde anziché la finestra di dialogo Server occupato . Il testo nella finestra di dialogo Non risponde è leggermente diverso da quello nella finestra di dialogo Server occupato e il pulsante Annulla è disabilitato.
 
 *dwFlags*<br/>
-Flag di creazione. Può contenere zero o più dei valori seguenti combinati con l'operatore OR bit per bit:
+Flag di creazione. Può contenere zero o più dei seguenti valori combinati con l'operatore OR bit per bit:
 
-- BZ_DISABLECANCELBUTTON Disabilita il pulsante Annulla quando si chiama la finestra di dialogo.
+- BZ_DISABLECANCELBUTTON disattivare il pulsante Annulla quando si chiama la finestra di dialogo.
 
-- BZ_DISABLESWITCHTOBUTTON disabilita il pulsante passa a quando si chiama la finestra di dialogo.
+- BZ_DISABLESWITCHTOBUTTON disattivare il pulsante Cambia in quando si chiama la finestra di dialogo.
 
-- BZ_DISABLERETRYBUTTON disabilita il pulsante Riprova quando si chiama la finestra di dialogo.
+- BZ_DISABLERETRYBUTTON disattivare il pulsante Riprova quando si chiama la finestra di dialogo.
 
-*pParentWnd*<br/>
-Punta all'oggetto padre o alla finestra proprietaria (di `CWnd`tipo) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre dell'oggetto finestra di dialogo viene impostata sulla finestra principale dell'applicazione.
+*pParentWnd (informazioni in due)*<br/>
+Punta all'oggetto finestra padre o `CWnd`proprietario (di tipo ) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre dell'oggetto finestra di dialogo viene impostata sulla finestra principale dell'applicazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per visualizzare la finestra di dialogo, chiamare [DoModal](#domodal).
 
-Per ulteriori informazioni, vedere la struttura [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) nel Windows SDK.
+Per ulteriori informazioni, vedere la struttura [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) in Windows SDK.
 
-##  <a name="domodal"></a>COleBusyDialog::D oModal
+## <a name="colebusydialogdomodal"></a><a name="domodal"></a>COleBusyDialog::DoModal
 
-Chiamare questa funzione per visualizzare la finestra di dialogo server OLE occupato o non in risposta.
+Chiamare questa funzione per visualizzare la finestra di dialogo Server OLE occupato o Server non risponde.
 
 ```
 virtual INT_PTR DoModal();
@@ -131,23 +131,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valore restituito
 
-Stato di completamento della finestra di dialogo. Uno dei valori seguenti:
+Stato di completamento per la finestra di dialogo. Uno dei valori seguenti:
 
 - IDOK se la finestra di dialogo è stata visualizzata correttamente.
 
 - IDCANCEL se l'utente ha annullato la finestra di dialogo.
 
-- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare la `COleDialog::GetLastError` funzione membro per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco di possibili errori, vedere la funzione [OLEUIBUSY](/windows/win32/api/oledlg/nf-oledlg-oleuibusyw) nella Windows SDK.
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, `COleDialog::GetLastError` chiamare la funzione membro per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco dei possibili errori, vedere la funzione [OleUIBusy](/windows/win32/api/oledlg/nf-oledlg-oleuibusyw) in Windows SDK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se si desidera inizializzare i vari controlli della finestra di dialogo impostando i membri della struttura [m_bz](#m_bz) , è necessario eseguire questa `DoModal`operazione prima di chiamare, ma dopo la costruzione dell'oggetto finestra di dialogo.
+Se si desidera inizializzare i vari controlli della finestra di dialogo `DoModal`impostando i membri della [struttura m_bz,](#m_bz) è necessario eseguire questa operazione prima di chiamare , ma dopo la costruzione dell'oggetto finestra di dialogo.
 
-Se `DoModal` restituisce IDOK, è possibile chiamare altre funzioni membro per recuperare le impostazioni o le informazioni che sono state inserite dall'utente nella finestra di dialogo.
+Se `DoModal` restituisce IDOK, è possibile chiamare altre funzioni membro per recuperare le impostazioni o le informazioni immesse dall'utente nella finestra di dialogo.
 
-##  <a name="getselectiontype"></a>COleBusyDialog:: GetSelectionType
+## <a name="colebusydialoggetselectiontype"></a><a name="getselectiontype"></a>COleBusyDialog::GetSelectionType
 
-Chiamare questa funzione per ottenere il tipo di selezione scelto dall'utente nella finestra di dialogo Server occupato.
+Chiamare questa funzione per ottenere il tipo di selezione scelto dall'utente nella finestra di dialogo Server occupato .
 
 ```
 UINT GetSelectionType() const;
@@ -155,11 +155,11 @@ UINT GetSelectionType() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Tipo di selezione eseguita.
+Tipo di selezione effettuata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I valori dei tipi restituiti sono specificati dal `Selection` tipo di enumerazione dichiarato `COleBusyDialog` nella classe.
+I valori del tipo `Selection` restituito vengono specificati `COleBusyDialog` dal tipo di enumerazione dichiarato nella classe.
 
 ```
 enum Selection {
@@ -169,15 +169,15 @@ enum Selection {
     };
 ```
 
-Le brevi descrizioni di questi valori seguono:
+Seguono brevi descrizioni di questi valori:
 
-- `COleBusyDialog::switchTo`È stato premuto il pulsante passa a.
+- `COleBusyDialog::switchTo`È stato premuto il pulsante Passa a.
 
 - `COleBusyDialog::retry`È stato premuto il pulsante Riprova.
 
 - `COleBusyDialog::callUnblocked`La chiamata per attivare il server è ora sbloccata.
 
-##  <a name="m_bz"></a>COleBusyDialog:: m_bz
+## <a name="colebusydialogm_bz"></a><a name="m_bz"></a>COleBusyDialog::m_bz
 
 Struttura di tipo OLEUIBUSY utilizzata per controllare il comportamento della finestra di dialogo Server occupato.
 
@@ -185,14 +185,14 @@ Struttura di tipo OLEUIBUSY utilizzata per controllare il comportamento della fi
 OLEUIBUSY m_bz;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.
+I membri di questa struttura possono essere modificati direttamente o tramite funzioni membro.
 
-Per ulteriori informazioni, vedere la struttura [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) nel Windows SDK.
+Per ulteriori informazioni, vedere la struttura [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) in Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)

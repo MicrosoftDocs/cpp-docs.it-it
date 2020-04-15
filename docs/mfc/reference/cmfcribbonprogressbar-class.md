@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063f8ce560af84d350abc0114644f6a63f969f95
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391114"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368855"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
 
@@ -58,20 +58,20 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 |[CMFCRibbonProgressBar::GetPos](#getpos)|Restituisce lo stato di avanzamento corrente.|
 |[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Restituisce il valore massimo dell'intervallo corrente.|
 |[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|Restituisce il valore minimo dell'intervallo corrente.|
-|[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|Restituisce la dimensione regolare dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
-|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Specifica se l'indicatore di stato viene eseguito in modalità infinita.|
-|[CMFCRibbonProgressBar::OnDraw](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
-|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Imposta l'indicatore di stato per l'utilizzo della modalità infinita.|
+|[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|Restituisce la dimensione regolare dell'elemento della barra multifunzione. (Esegue l'override [di CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Specifica se l'indicatore di stato funziona in modalità infinita.|
+|[CMFCRibbonProgressBar::OnDraw](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione. (Esegue l'override di [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Imposta la barra di avanzamento in modo che funzioni in modalità infinita.|
 |[CMFCRibbonProgressBar::SetPos](#setpos)|Imposta lo stato di avanzamento corrente.|
-|[CMFCRibbonProgressBar::SetRange](#setrange)|Imposta i valori minimi e massimo.|
+|[CMFCRibbonProgressBar::SetRange](#setrange)|Imposta i valori minimo e massimo.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Oggetto `CMFCRibbonProgressBar` possono operare in due modalità: normale e infinito. In modalità normale, l'indicatore di stato viene riempita da sinistra a destra e si arresta quando raggiunge il valore massimo. In modalità infinita, l'indicatore di stato viene riempita ripetutamente dal valore minimo al valore massimo. È possibile usare la modalità infinita per indicare che è in corso un'operazione, ma che il tempo di completamento è sconosciuto.
+A `CMFCRibbonProgressBar` può funzionare in due modalità: normale e infinita. In modalità normale, la barra di avanzamento viene riempita da sinistra a destra e si arresta quando raggiunge il valore massimo. In modalità infinita, l'indicatore di stato viene riempito ripetutamente dal valore minimo al valore massimo. È possibile utilizzare la modalità infinita per indicare che un'operazione è in corso, ma che il tempo di completamento è sconosciuto.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonProgressBar` . Nell'esempio viene illustrato come impostare l'indicatore di stato per l'utilizzo della modalità infinita (in cui il tempo di completamento di un'operazione è sconosciuto), impostare i valori minimi e massimo per l'indicatore di stato e impostare la posizione corrente dell'indicatore di stato. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../overview/visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonProgressBar` . Nell'esempio viene illustrato come impostare l'indicatore di stato in modo che funzioni in modalità infinita (in cui il tempo di completamento di un'operazione è sconosciuto), impostare i valori minimo e massimo per l'indicatore di stato e impostare la posizione corrente dell'indicatore di stato. Questo frammento di codice fa parte dell'esempio Demo di [MS Office 2007.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -87,9 +87,9 @@ L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonPro
 
 **Intestazione:** afxRibbonProgressBar.h
 
-##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar
+## <a name="cmfcribbonprogressbarcmfcribbonprogressbar"></a><a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar
 
-Costruisce e Inizializza un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) oggetto.
+Costruisce e inizializza un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) oggetto.
 
 ```
 CMFCRibbonProgressBar();
@@ -105,13 +105,13 @@ CMFCRibbonProgressBar(
 *nID*<br/>
 [in] Specifica l'ID di comando per l'indicatore di stato della barra multifunzione.
 
-*nWidth*<br/>
-[in] Specifica la larghezza, in pixel, dell'indicatore di stato della barra multifunzione.
+*nLarghezza*<br/>
+[in] Specifica la larghezza, in pixel, della barra di avanzamento della barra multifunzione.
 
-*nHeight*<br/>
+*nAltezza*<br/>
 [in] Specifica l'altezza, in pixel, dell'indicatore di stato della barra multifunzione.
 
-##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos
+## <a name="cmfcribbonprogressbargetpos"></a><a name="getpos"></a>CMFCRibbonProgressBar::GetPos
 
 Restituisce la posizione corrente dell'indicatore di stato.
 
@@ -121,15 +121,15 @@ int GetPos () const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore che rappresenta la posizione corrente dell'indicatore di stato.
+Valore che rappresenta la posizione corrente dell'indicatore di stato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'intervallo impostato deve essere compreso nell'intervallo specificato per il [CMFCRibbonProgressBar::SetRange](#setrange) (metodo).
+L'intervallo impostato deve essere compreso nell'intervallo specificato dal [CMFCRibbonProgressBar::SetRange](#setrange) metodo.
 
-##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax
+## <a name="cmfcribbonprogressbargetrangemax"></a><a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax
 
-Restituisce l'indicatore di stato corrente del valore massimo.
+Restituisce il valore massimo corrente dell'indicatore di stato.
 
 ```
 int GetRangeMax() const;
@@ -137,13 +137,13 @@ int GetRangeMax() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore massimo dell'intervallo corrente.
+Valore massimo dell'intervallo corrente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin
+## <a name="cmfcribbonprogressbargetrangemin"></a><a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin
 
-Restituisce l'indicatore di stato corrente del valore di intervallo minimo.
+Restituisce il valore dell'intervallo minimo corrente dell'indicatore di stato.
 
 ```
 int GetRangeMin() const;
@@ -151,11 +151,11 @@ int GetRangeMin() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore minimo dell'intervallo corrente.
+Valore minimo dell'intervallo corrente.
 
-##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize
+## <a name="cmfcribbonprogressbargetregularsize"></a><a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -167,11 +167,11 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode
+## <a name="cmfcribbonprogressbarisinfinitemode"></a><a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode
 
-Specifica se l'indicatore di stato viene eseguito in modalità infinita.
+Specifica se l'indicatore di stato funziona in modalità infinita.
 
 ```
 BOOL IsInfiniteMode() const;
@@ -179,15 +179,15 @@ BOOL IsInfiniteMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'indicatore di stato è in modalità infinita. in caso contrario, FALSE.
+TRUESe l'indicatore di stato è in modalità infinita. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-In modalità infinita, l'indicatore di stato riempie ripetutamente dal valore minimo al valore massimo. È possibile usare la modalità infinita per indicare che è in corso un'operazione, ma che il tempo di completamento è sconosciuto.
+In modalità infinita, la barra di avanzamento si riempie ripetutamente dal valore minimo al valore massimo. È possibile utilizzare la modalità infinita per indicare che un'operazione è in corso, ma che il tempo di completamento è sconosciuto.
 
-##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw
+## <a name="cmfcribbonprogressbarondraw"></a><a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -197,11 +197,11 @@ virtual void OnDraw(CDC* pDC);
 
 [in] *pDC*<br/>
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode
+## <a name="cmfcribbonprogressbarsetinfinitemode"></a><a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode
 
-Imposta l'indicatore di stato per l'utilizzo della modalità infinita.
+Imposta la barra di avanzamento in modo che funzioni in modalità infinita.
 
 ```
 void SetInfiniteMode(BOOL bSet = TRUE);
@@ -209,14 +209,14 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bSet*<br/>
+*bImpostazione*<br/>
 [in] TRUE per specificare che l'indicatore di stato è in modalità infinita. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-In genere, se l'indicatore di stato è in modalità infinita, lo segnala all'utente che è in corso un'operazione, ma che il tempo di completamento è sconosciuto. Di conseguenza, l'indicatore di stato riempie ripetutamente dal valore minimo al valore massimo.
+In genere, se l'indicatore di stato è in modalità infinita, indica all'utente che è in corso un'operazione, ma che il tempo di completamento è sconosciuto. Pertanto, la barra di avanzamento si riempie ripetutamente dal valore minimo al valore massimo.
 
-##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos
+## <a name="cmfcribbonprogressbarsetpos"></a><a name="setpos"></a>CMFCRibbonProgressBar::SetPos
 
 Imposta la posizione corrente dell'indicatore di stato.
 
@@ -228,19 +228,19 @@ void SetPos(
 
 ### <a name="parameters"></a>Parametri
 
-*nPos*<br/>
-[in] Specifica la posizione in cui è impostato l'indicatore di stato.
+*Npos*<br/>
+[in] Specifica la posizione in cui è impostata l'indicatore di stato.
 
 *bRedraw*<br/>
 [in] Specifica se l'indicatore di stato deve essere ridisegnato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'intervallo impostato deve essere compreso nell'intervallo specificato per il [CMFCRibbonProgressBar::SetRange](#setrange) (metodo).
+L'intervallo impostato deve essere compreso nell'intervallo specificato dal [CMFCRibbonProgressBar::SetRange](#setrange) metodo.
 
-##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange
+## <a name="cmfcribbonprogressbarsetrange"></a><a name="setrange"></a>CMFCRibbonProgressBar::SetRange
 
-Imposta i valori minimi e massimo per l'indicatore di stato.
+Imposta i valori minimo e massimo per l'indicatore di stato.
 
 ```
 void SetRange(
@@ -253,16 +253,16 @@ void SetRange(
 *nMin*<br/>
 [in] Specifica il valore minimo dell'intervallo.
 
-*nMax*<br/>
+*Nmax*<br/>
 [in] Specifica il valore massimo dell'intervallo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare questo metodo per definire l'intervallo dell'indicatore di stato impostando i valori minimi e massimo.
+Utilizzare questo metodo per definire l'intervallo dell'indicatore di stato impostando i valori minimo e massimo.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
+[CMFCRibbonBaseElement (classe)](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 82193a9b592cded96f3726cbabd6cf646eaa27c8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c9221cab1ac2d48bd099a769188e4bee797823c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140072"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368140"
 ---
 # <a name="itopologyexecutionresource-structure"></a>Struttura ITopologyExecutionResource
 
@@ -26,18 +26,18 @@ Interfaccia a una risorsa di esecuzione come definita da Gestione risorse.
 struct ITopologyExecutionResource;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[ITopologyExecutionResource:: GetId](#getid)|Restituisce l'identificatore univoco di Gestione risorse per questa risorsa di esecuzione.|
-|[ITopologyExecutionResource:: GetNext](#getnext)|Restituisce un'interfaccia in corrispondenza della risorsa di esecuzione successiva nell'ordine dell'enumerazione.|
+|[ITopologyExecutionResource::GetIdITopologyExecutionResource::GetId](#getid)|Restituisce l'identificatore univoco di Gestione risorse per questa risorsa di esecuzione.|
+|[ITopologyExecutionResource::GetNextITopologyExecutionResource::GetNext](#getnext)|Restituisce un'interfaccia in corrispondenza della risorsa di esecuzione successiva nell'ordine dell'enumerazione.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Questa interfaccia viene in genere utilizzata per esaminare la topologia del sistema come osservato dal Gestione risorse.
+Questa interfaccia viene in genere utilizzata per esaminare la topologia del sistema come osservato da Gestione risorse.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -45,11 +45,11 @@ Questa interfaccia viene in genere utilizzata per esaminare la topologia del sis
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** concrtrm. h
+**Intestazione:** concrtrm.h
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="getid"></a>Metodo ITopologyExecutionResource:: GetId
+## <a name="itopologyexecutionresourcegetid-method"></a><a name="getid"></a>Metodo ITopologyExecutionResource::GetIdITopologyExecutionResource::GetId Method
 
 Restituisce l'identificatore univoco di Gestione risorse per questa risorsa di esecuzione.
 
@@ -61,7 +61,7 @@ virtual unsigned int GetId() const = 0;
 
 Identificatore univoco di Gestione risorse per questa risorsa di esecuzione.
 
-## <a name="getnext"></a>Metodo ITopologyExecutionResource:: GetNext
+## <a name="itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>Metodo ITopologyExecutionResource::GetNextITopologyExecutionResource::GetNext Method
 
 Restituisce un'interfaccia in corrispondenza della risorsa di esecuzione successiva nell'ordine dell'enumerazione.
 

@@ -17,148 +17,148 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 8799ac36c443898f1e32b539f017e682bbf3e033
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 63718a6be3a9ce19ddbce923a84def21448c42a0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212907"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366996"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: funzionamento dei metodi AddNew, Edit e Delete (ODBC)
 
 Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-In questo argomento viene illustrato il funzionamento delle funzioni membro `AddNew`, `Edit`e `Delete` della classe `CRecordset`. Gli argomenti trattati includono:
+In questo argomento `AddNew`viene `Edit`illustrato `Delete` il funzionamento `CRecordset` delle funzioni membro , , e della classe . Gli argomenti trattati includono:
 
 - [Funzionamento dell'aggiunta di record](#_core_adding_a_record)
 
 - [Visibilità dei record aggiunti](#_core_visibility_of_added_records)
 
-- [Funzionamento delle modifiche ai record](#_core_editing_an_existing_record)
+- [Funzionamento della modifica dei record](#_core_editing_an_existing_record)
 
 - [Funzionamento dell'eliminazione di record](#_core_deleting_a_record)
 
 > [!NOTE]
->  Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se si utilizza il recupero di righe bulk, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se si utilizza il recupero di massa di righe, vedere [Recordset: recupero di massa di record (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Come supplemento, potrebbe essere necessario leggere lo [scambio di campi di record:](../../data/odbc/record-field-exchange-how-rfx-works.md)funzionamento di RFX, che descrive il ruolo corrispondente di RFX nelle operazioni di aggiornamento.
+Come supplemento, è possibile leggere [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md), che descrive il ruolo corrispondente di RFX nelle operazioni di aggiornamento.
 
-##  <a name="adding-a-record"></a><a name="_core_adding_a_record"></a>Aggiunta di un record
+## <a name="adding-a-record"></a><a name="_core_adding_a_record"></a>Aggiunta di un record
 
-L'aggiunta di un nuovo record a un recordset comporta la chiamata della funzione membro [AddNew](../../mfc/reference/crecordset-class.md#addnew) del recordset, l'impostazione dei valori dei membri dati del campo del nuovo record e la chiamata della funzione membro [Update](../../mfc/reference/crecordset-class.md#update) per scrivere il record nell'origine dati.
+L'aggiunta di un nuovo record a un recordset comporta la chiamata della funzione membro [AddNew](../../mfc/reference/crecordset-class.md#addnew) del recordset, l'impostazione dei valori dei membri dati di campo del nuovo record e la chiamata alla funzione membro [Update](../../mfc/reference/crecordset-class.md#update) per scrivere il record nell'origine dati.
 
-Come precondizione per la chiamata di `AddNew`, il recordset non deve essere aperto in sola lettura. Le funzioni membro `CanUpdate` e `CanAppend` consentono di determinare queste condizioni.
+Come condizione preliminare `AddNew`per la chiamata a , il recordset non deve essere stato aperto in sola lettura. Le `CanUpdate` `CanAppend` funzioni membro e consentono di determinare queste condizioni.
 
-Quando si chiama `AddNew`:
+Quando si `AddNew`chiama :
 
-- Il record nel buffer di modifica è archiviato, quindi il relativo contenuto può essere ripristinato se l'operazione viene annullata.
+- Il record nel buffer di modifica viene archiviato, pertanto il relativo contenuto può essere ripristinato se l'operazione viene annullata.
 
-- I membri dati del campo sono contrassegnati in modo che sia possibile rilevare le modifiche in un secondo momento. Anche i membri dati del campo vengono contrassegnati come puliti (senza modifiche) e impostati su un valore null.
+- I membri dati di campo vengono contrassegnati in modo che sia possibile rilevare le modifiche in essi in un secondo momento. The field data members are also marked clean (unchanged) and set to a Null.
 
-Dopo aver chiamato `AddNew`, il buffer di modifica rappresenta un nuovo record vuoto, pronto per essere compilato con i valori. A tale scopo, è necessario impostare manualmente i valori assegnando loro i valori. Anziché specificare un valore di dati effettivo per un campo, è possibile chiamare `SetFieldNull` per specificare il valore null.
+Dopo aver `AddNew`chiamato , il buffer di modifica rappresenta un nuovo record vuoto, pronto per essere compilato con valori. A tale scopo, impostare manualmente i valori assegnando loro. Anziché specificare un valore di dati effettivo `SetFieldNull` per un campo, è possibile chiamare per specificare il valore Null.
 
-Per eseguire il commit delle modifiche, chiamare `Update`. Quando si chiama `Update` per il nuovo record:
+Per eseguire il commit `Update`delle modifiche, chiamare . Quando si `Update` chiama per il nuovo record:
 
-- Se il driver ODBC supporta la funzione `::SQLSetPos` API ODBC, MFC utilizza la funzione per aggiungere il record nell'origine dati. Con `::SQLSetPos`, MFC può aggiungere un record in modo più efficiente perché non è necessario creare ed elaborare un'istruzione SQL.
+- Se il driver ODBC `::SQLSetPos` supporta la funzione API ODBC, MFC utilizza la funzione per aggiungere il record nell'origine dati. Con `::SQLSetPos`, MFC può aggiungere un record in modo più efficiente perché non è necessario costruire ed elaborare un'istruzione SQL.
 
-- Se non è possibile utilizzare `::SQLSetPos`, MFC esegue le operazioni seguenti:
+- Se `::SQLSetPos` non è possibile utilizzare, MFC esegue le operazioni seguenti:
 
-   1. Se non viene rilevata alcuna modifica, `Update` non esegue alcuna operazione e restituisce 0.
+   1. Se non vengono `Update` rilevate modifiche, non esegue alcuna operazione e restituisce 0.
 
-   1. Se sono state apportate modifiche, `Update` crea un'istruzione SQL **Insert** . Le colonne rappresentate da tutti i membri dati di campo Dirty sono elencate nell'istruzione **Insert** . Per forzare l'inclusione di una colonna, chiamare la funzione membro [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) :
+   1. Se sono presenti `Update` modifiche, costruisce un'istruzione SQL **INSERT.** Le colonne rappresentate da tutti i membri dati di campo dirty sono elencate nell'istruzione **INSERT.** Per forzare l'includere in una colonna, chiamare la funzione membro [SetFieldDirty:To](../../mfc/reference/crecordset-class.md#setfielddirty) force a column to be included, call the SetFieldDirty member function:
 
         ```cpp
         SetFieldDirty( &m_dataMember, TRUE );
         ```
 
-   1. `Update` esegue il commit del nuovo record, ovvero viene eseguita l'istruzione **Insert** e viene eseguito il commit del record nella tabella dell'origine dati (e del recordset, se non è uno snapshot), a meno che non sia in corso una transazione.
+   1. `Update`esegue il commit del nuovo record: viene eseguita l'istruzione **INSERT** e viene eseguito il commit del record nella tabella nell'origine dati (e nel recordset, se non uno snapshot) a meno che non sia in corso una transazione.
 
-   1. Il record archiviato viene ripristinato nel buffer di modifica. Il record che era corrente prima della chiamata di `AddNew` è di nuovo corrente, indipendentemente dal fatto che l'istruzione **Insert** sia stata eseguita correttamente.
-
-   > [!TIP]
-   > Per il controllo completo di un nuovo record, adottare l'approccio seguente: impostare i valori di tutti i campi che avranno valori, quindi impostare in modo esplicito tutti i campi che rimarranno null chiamando `SetFieldNull` con un puntatore al campo e il parametro TRUE (impostazione predefinita). Se si desidera assicurarsi che un campo non venga scritto nell'origine dati, chiamare `SetFieldDirty` con un puntatore al campo e il parametro FALSE e non modificare il valore del campo. Per determinare se un campo può essere null, chiamare `IsFieldNullable`.
+   1. Il record archiviato viene ripristinato nel buffer di modifica. Il record corrente prima `AddNew` della chiamata è di nuovo corrente indipendentemente dal fatto che l'istruzione **INSERT** sia stata eseguita correttamente.
 
    > [!TIP]
-   > Per rilevare quando i membri dati del recordset modificano il valore, MFC utilizza un PSEUDO_NULL valore appropriato per ogni tipo di dati che è possibile archiviare in un recordset. Se è necessario impostare in modo esplicito un campo sul valore PSEUDO_NULL e il campo è già contrassegnato come null, è necessario chiamare anche `SetFieldNull`, passando l'indirizzo del campo nel primo parametro e FALSE nel secondo parametro.
+   > Per il controllo completo di un nuovo record, adottare l'approccio seguente: impostare i valori `SetFieldNull` di tutti i campi che avranno valori e quindi impostare in modo esplicito tutti i campi che rimarranno Null chiamando con un puntatore al campo e il parametro TRUE (impostazione predefinita). Se si desidera assicurarsi che un campo non `SetFieldDirty` venga scritto nell'origine dati, chiamare con un puntatore al campo e al parametro FALSE e non modificare il valore del campo. Per determinare se un campo può `IsFieldNullable`essere Null, chiamare .
 
-##  <a name="visibility-of-added-records"></a><a name="_core_visibility_of_added_records"></a>Visibilità dei record aggiunti
+   > [!TIP]
+   > Per rilevare quando i membri dati del recordset cambiano valore, MFC utilizza un valore di PSEUDO_NULL appropriato per ogni tipo di dati che è possibile archiviare in un recordset. Se è necessario impostare in modo esplicito un campo sul valore di `SetFieldNull`PSEUDO_NULL e il campo sembra già contrassegnato come Null, è necessario chiamare anche , passando l'indirizzo del campo nel primo parametro e FALSE nel secondo parametro.
 
-Quando un record aggiunto è visibile al recordset? I record aggiunti a volte vengono visualizzati e talvolta non sono visibili, a seconda di due elementi:
+## <a name="visibility-of-added-records"></a><a name="_core_visibility_of_added_records"></a>Visibilità dei record aggiunti
 
-- Funzionalità del driver.
+Quando è visibile un record aggiunto al recordset? I record aggiunti a volte vengono visualizzati e talvolta non sono visibili, a seconda di due elementi:
 
-- Il Framework può trarre vantaggio da.
+- Ciò di cui il tuo autista è capace.
 
-Se il driver ODBC supporta la funzione `::SQLSetPos` API ODBC, MFC utilizza la funzione per aggiungere i record. Con `::SQLSetPos`, i record aggiunti sono visibili a tutti i recordset MFC aggiornabili. Senza il supporto per la funzione, i record aggiunti non sono visibili ed è necessario chiamare `Requery` per visualizzarli. Anche l'uso di `::SQLSetPos` è più efficiente.
+- Ciò che il quadro può trarre vantaggio.
 
-##  <a name="editing-an-existing-record"></a><a name="_core_editing_an_existing_record"></a>Modifica di un record esistente
+Se il driver ODBC `::SQLSetPos` supporta la funzione API ODBC, MFC utilizza la funzione per aggiungere record. Con `::SQLSetPos`, i record aggiunti sono visibili a qualsiasi recordset MFC aggiornabile. Senza il supporto per la funzione, i `Requery` record aggiunti non sono visibili ed è necessario chiamare per visualizzarli. L'uso `::SQLSetPos` è anche più efficiente.
 
-Per modificare un record esistente in un recordset è necessario scorrere fino al record, chiamare la funzione membro [Edit](../../mfc/reference/crecordset-class.md#edit) del recordset, impostare i valori dei membri dati del campo del nuovo record e chiamare la funzione membro [Update](../../mfc/reference/crecordset-class.md#update) per scrivere il record modificato nell'origine dati.
+## <a name="editing-an-existing-record"></a><a name="_core_editing_an_existing_record"></a>Modifica di un record esistente
 
-Come precondizione per la chiamata di `Edit`, il recordset deve essere aggiornabile e su un record. Le funzioni membro `CanUpdate` e `IsDeleted` consentono di determinare queste condizioni. Anche il record corrente non deve essere già stato eliminato ed è necessario che nel recordset siano presenti record (sia `IsBOF` che `IsEOF` restituiscono 0).
+La modifica di un record esistente in un recordset comporta lo scorrimento del record, la chiamata della funzione membro [Edit](../../mfc/reference/crecordset-class.md#edit) del recordset, l'impostazione dei valori dei membri dati di campo del nuovo record e la chiamata alla funzione membro [Update](../../mfc/reference/crecordset-class.md#update) per scrivere il record modificato nell'origine dati.
 
-Quando si chiama `Edit`, viene archiviato il record nel buffer di modifica (il record corrente). I valori del record archiviato verranno usati in un secondo momento per rilevare se sono stati modificati i campi.
+Come condizione preliminare `Edit`per la chiamata a , il recordset deve essere aggiornabile e su un record. Le `CanUpdate` `IsDeleted` funzioni membro e consentono di determinare queste condizioni. Inoltre, il record corrente non deve essere già stato eliminato `IsBOF` e `IsEOF` devono essere presenti record nel recordset (entrambi e restituire 0).
 
-Dopo aver chiamato `Edit`, il buffer di modifica rappresenta ancora il record corrente, ma è ora pronto ad accettare le modifiche ai membri dati del campo. Per modificare il record, impostare manualmente i valori di tutti i membri dati di campo che si desidera modificare. Anziché specificare un valore di dati effettivo per un campo, è possibile chiamare `SetFieldNull` per specificare il valore null. Per eseguire il commit delle modifiche, chiamare `Update`.
+Quando si `Edit`chiama , il record nel buffer di modifica (il record corrente) viene memorizzato. I valori del record archiviato vengono successivamente utilizzati per rilevare se i campi sono stati modificati.
+
+Dopo aver `Edit`chiamato , il buffer di modifica rappresenta ancora il record corrente, ma è ora pronto per accettare le modifiche ai membri dati di campo. Per modificare il record, impostare manualmente i valori di tutti i membri dati di campo che si desidera modificare. Anziché specificare un valore di dati effettivo `SetFieldNull` per un campo, è possibile chiamare per specificare il valore Null. Per eseguire il `Update`commit delle modifiche, chiamare .
 
 > [!TIP]
-> Per uscire dalla modalità `AddNew` o `Edit`, chiamare `Move` con il parametro *AFX_MOVE_REFRESH*.
+> Per uscire `AddNew` dalla `Edit` modalità `Move` o, chiamare con il parametro *AFX_MOVE_REFRESH*.
 
-Come precondizione per la chiamata di `Update`, il recordset non deve essere vuoto e il record corrente non deve essere stato eliminato. `IsBOF`, `IsEOF`e `IsDeleted` devono restituire tutti 0.
+Come precondizione per `Update`la chiamata , il recordset non deve essere vuoto e il record corrente non deve essere stato eliminato. `IsBOF`, `IsEOF`, `IsDeleted` e devono restituire 0.
 
-Quando si chiama `Update` per il record modificato:
+Quando si `Update` chiama per il record modificato:
 
-- Se il driver ODBC supporta la funzione `::SQLSetPos` API ODBC, MFC utilizza la funzione per aggiornare il record nell'origine dati. Con `::SQLSetPos`, il driver confronta il buffer di modifica con il record corrispondente sul server, aggiornando il record sul server se i due tipi sono diversi. Con `::SQLSetPos`, MFC può aggiornare un record in modo più efficiente perché non è necessario creare ed elaborare un'istruzione SQL.
+- Se il driver ODBC `::SQLSetPos` supporta la funzione API ODBC, MFC utilizza la funzione per aggiornare il record nell'origine dati. Con `::SQLSetPos`, il driver confronta il buffer di modifica con il record corrispondente sul server, aggiornando il record sul server se i due sono diversi. Con `::SQLSetPos`, MFC può aggiornare un record in modo più efficiente perché non è necessario costruire ed elaborare un'istruzione SQL.
 
    \- - oppure -
 
-- Se non è possibile utilizzare `::SQLSetPos`, MFC esegue le operazioni seguenti:
+- Se `::SQLSetPos` non è possibile utilizzare, MFC esegue le operazioni seguenti:
 
-   1. Se non sono state apportate modifiche, `Update` non esegue alcuna operazione e restituisce 0.
+   1. Se non sono state `Update` apportate modifiche, non esegue alcuna operazione e restituisce 0.
 
-   1. Se sono state apportate modifiche, `Update` crea un'istruzione SQL **Update** . Le colonne elencate nell'istruzione **Update** sono basate sui membri dati del campo che sono stati modificati.
+   1. Se sono presenti `Update` modifiche, costruisce un'istruzione SQL **UPDATE.** Le colonne elencate nell'istruzione **UPDATE** si basano sui membri dati di campo che sono stati modificati.
 
-   1. `Update` esegue il commit delle modifiche: esegue l'istruzione **Update** e il record viene modificato nell'origine dati, ma non viene eseguito il commit se è in corso una transazione (vedere [Transaction: esecuzione di una transazione in un recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) per informazioni sul modo in cui la transazione influisca sull'aggiornamento). ODBC mantiene una copia del record, che cambia anche.
+   1. `Update`esegue il commit delle modifiche, ovvero esegue l'istruzione **UPDATE,** e il record viene modificato nell'origine dati, ma non ne viene eseguito il commit se è in corso una transazione (vedere [Transazione: esecuzione di una transazione in un recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) per informazioni su come la transazione influisce sull'aggiornamento). ODBC mantiene una copia del record, che cambia anche.
 
-   1. A differenza del processo di `AddNew`, il processo di `Edit` non ripristina il record archiviato. Il record modificato rimane sul posto come record corrente.
+   1. A differenza `AddNew`del `Edit` processo per , il processo non ripristina il record archiviato. Il record modificato rimane presente come record corrente.
 
    > [!CAUTION]
-   > Quando si prepara l'aggiornamento di un recordset chiamando `Update`, prestare attenzione che il recordset includa tutte le colonne che costituiscono la chiave primaria della tabella (o tutte le colonne di qualsiasi indice univoco nella tabella o un numero sufficiente di colonne per identificare in modo univoco la riga). In alcuni casi, il Framework può utilizzare solo le colonne selezionate nel recordset per identificare il record nella tabella da aggiornare. Senza tutte le colonne necessarie, più record potrebbero essere aggiornati nella tabella. In questo caso, il Framework genera eccezioni quando si chiama `Update`.
+   > Quando si prepara l'aggiornamento `Update`di un recordset chiamando , assicurarsi che il recordset includa tutte le colonne che costituiscono la chiave primaria della tabella (o tutte le colonne di qualsiasi indice univoco nella tabella o colonne sufficienti per identificare in modo univoco la riga). In alcuni casi, il framework può utilizzare solo le colonne selezionate nel recordset per identificare il record nella tabella da aggiornare. Senza tutte le colonne necessarie, più record potrebbero essere aggiornati nella tabella. In questo caso, il framework genera `Update`eccezioni quando si chiama .
 
    > [!TIP]
-   > Se si chiama `AddNew` o `Edit` dopo aver chiamato una funzione precedente ma prima di chiamare `Update`, il buffer di modifica viene aggiornato con il record archiviato, sostituendo il record nuovo o modificato in corso. Questo comportamento consente di interrompere un `AddNew` o `Edit` e iniziare una nuova operazione: se si determina che il record in corso è difettoso, è sufficiente chiamare nuovamente `Edit` o `AddNew`.
+   > Se si `AddNew` `Edit` chiama o dopo aver chiamato `Update`una delle due funzioni in precedenza ma prima della chiamata, il buffer di modifica viene aggiornato con il record archiviato, sostituendo il record nuovo o modificato in corso. Questo comportamento consente di interrompere `AddNew` `Edit` un o e iniziare uno nuovo: se si determina che il `Edit` `AddNew` record in corso è difettoso, è sufficiente chiamare o ricominciare.
 
-##  <a name="deleting-a-record"></a><a name="_core_deleting_a_record"></a>Eliminazione di un record
+## <a name="deleting-a-record"></a><a name="_core_deleting_a_record"></a>Eliminazione di un record
 
-L'eliminazione di un record da un recordset comporta lo scorrimento al record e la chiamata della funzione membro [Delete](../../mfc/reference/crecordset-class.md#delete) del recordset. A differenza di `AddNew` e `Edit`, `Delete` non richiede una chiamata corrispondente a `Update`.
+L'eliminazione di un record da un recordset comporta lo scorrimento al record e la chiamata alla funzione membro [Delete](../../mfc/reference/crecordset-class.md#delete) del recordset. A `AddNew` `Edit`differenza `Delete` di e , `Update`non richiede una chiamata corrispondente a .
 
-Come precondizione per la chiamata di `Delete`, il recordset deve essere aggiornabile e deve trovarsi in un record. Le funzioni membro `CanUpdate`, `IsBOF`, `IsEOF`e `IsDeleted` consentono di determinare queste condizioni.
+Come condizione preliminare `Delete`per la chiamata di , il recordset deve essere aggiornabile e deve trovarsi su un record. Le `CanUpdate` `IsBOF`funzioni `IsEOF`membro `IsDeleted` , , e consentono di determinare queste condizioni.
 
-Quando si chiama `Delete`:
+Quando si `Delete`chiama :
 
-- Se il driver ODBC supporta la funzione `::SQLSetPos` API ODBC, MFC utilizza la funzione per eliminare il record nell'origine dati. L'uso di `::SQLSetPos` è in genere più efficiente rispetto all'uso di SQL.
+- Se il driver ODBC `::SQLSetPos` supporta la funzione API ODBC, MFC utilizza la funzione per eliminare il record nell'origine dati. L'utilizzo `::SQLSetPos` è in genere più efficiente rispetto all'utilizzo di SQL.
 
    \- - oppure -
 
-- Se non è possibile utilizzare `::SQLSetPos`, MFC esegue le operazioni seguenti:
+- Se `::SQLSetPos` non è possibile utilizzare, MFC esegue le operazioni seguenti:
 
-   1. Non viene eseguito il backup del record corrente nel buffer di modifica come in `AddNew` e `Edit`.
+   1. Non viene eseguito il backup del `AddNew` record `Edit`corrente nel buffer di modifica come in e .
 
-   1. `Delete` crea un'istruzione SQL **Delete** che rimuove il record.
+   1. `Delete`costruisce un'istruzione SQL **DELETE** che rimuove il record.
 
-      Il record corrente nel buffer di modifica non è archiviato come in `AddNew` e `Edit`.
+      Il record corrente nel buffer di `AddNew` modifica `Edit`non viene memorizzato come in e .
 
-   1. `Delete` esegue il commit dell'eliminazione: esegue l'istruzione **Delete** . Il record viene contrassegnato come eliminato nell'origine dati e, se il record è uno snapshot, in ODBC.
+   1. `Delete`esegue il commit dell'eliminazione: esegue l'istruzione **DELETE.** Il record viene contrassegnato come eliminato nell'origine dati e, se il record è uno snapshot, in ODBC.
 
-   1. I valori del record eliminato sono ancora nei membri dati del campo del recordset, ma i membri dati del campo sono contrassegnati come null e la funzione membro `IsDeleted` del recordset restituisce un valore diverso da zero.
+   1. I valori del record eliminato sono ancora nei membri dati di campo del recordset, ma `IsDeleted` i membri dati di campo sono contrassegnati come Null e la funzione membro del recordset restituisce un valore diverso da zero.
 
    > [!NOTE]
-   > Dopo l'eliminazione di un record, è necessario scorrere fino a un altro record per riempire il buffer di modifica con i dati del nuovo record. È un errore chiamare di nuovo `Delete` o chiamare `Edit`.
+   > Dopo aver eliminato un record, è necessario scorrere verso un altro record per riempire il buffer di modifica con i dati del nuovo record. È un errore `Delete` chiamare di `Edit`nuovo o chiamare .
 
 Per informazioni sulle istruzioni SQL utilizzate nelle operazioni di aggiornamento, vedere [SQL](../../data/odbc/sql.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: altre informazioni sugli aggiornamenti (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
-[Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Recordset: ulteriori informazioni sugli aggiornamenti (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[Scambio di campi record (RFX)](../../data/odbc/record-field-exchange-rfx.md)

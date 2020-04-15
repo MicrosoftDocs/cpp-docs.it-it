@@ -1,31 +1,31 @@
 ---
-title: Estensioni SIMD
+title: Estensione SIMD
 ms.date: 03/20/2019
 helpviewer_keywords:
 - SIMD
 - OpenMP in Visual C++, new features
 - explicit parallelization, new features
-ms.openlocfilehash: 52402aa553c6d68d3073aba26ecac7b784522ee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7f1142a3a432628795341f4885b76a5c144990
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363271"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366458"
 ---
-# <a name="simd-extension"></a>Estensioni SIMD
+# <a name="simd-extension"></a>Estensione SIMD
 
-Visual C++ supporta attualmente lo standard di OpenMP 2.0, tuttavia 2019 di Visual Studio offre ora anche funzionalità SIMD.
+Attualmente è supportato lo standard OpenMP 2.0, tuttavia Visual Studio 2019 offre anche funzionalità SIMD.
 
 > [!NOTE]
-> Per usare SIMD, eseguire la compilazione con il `-openmp:experimental` opzione che abilita funzionalità aggiuntive di OpenMP non è disponibile quando si utilizza il `-openmp` passare.
+> Per utilizzare SIMD, `-openmp:experimental` compilare con lo switch che abilita `-openmp` ulteriori funzionalità OpenMP non disponibili quando si utilizza lo switch.
 >
-> Il `-openmp:experimental` commutatore capitali `-openmp`, vale a dire tutte le funzionalità di OpenMP 2.0 sono incluse nel relativo uso.
+> I `-openmp:experimental` componenti su `-openmp`base switch , ovvero tutte le funzionalità di OpenMP 2.0 sono incluse nel suo utilizzo.
 
-Per altre informazioni, vedere [estensioni SIMD per C++ in Visual Studio OpenMP](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/).
+Per ulteriori informazioni, vedere [Estensione SIMD per l'estensione OpenMP](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/)di C' in Visual Studio .
 
-## <a name="openmp-simd-in-visual-c"></a>SIMD OpenMP nell'oggetto visivoC++
+## <a name="openmp-simd-in-visual-c"></a>SimD OpenMP in Visual C
 
-SIMD OpenMP, introdotto in 4.0 OpenMP standard, destinazioni di rendere i cicli di facile integrazione con vettore. Tramite il `simd` direttiva prima di un ciclo, il compilatore può ignorare le dipendenze del vettore, apportare il ciclo come vettore di facile integrazione con minor e rispettano intenzione degli utenti di avere più iterazioni del ciclo eseguite contemporaneamente.
+OpenMP SIMD, introdotto nello standard OpenMP 4.0, obiettivi che fanno loop vettoriali. Utilizzando la `simd` direttiva prima di un ciclo, il compilatore può ignorare le dipendenze vettoriali, rendere il ciclo il più compatibile con il vettore possibile e rispettare l'intenzione degli utenti di avere più iterazioni del ciclo eseguite contemporaneamente.
 
 ```c
     #pragma omp simd
@@ -37,15 +37,15 @@ SIMD OpenMP, introdotto in 4.0 OpenMP standard, destinazioni di rendere i cicli 
     }
 ```
 
-Visual C++ include come direttive pragma di ciclo simile non OpenMP `#pragma vector` e `#pragma ivdep`, ma con SIMD OpenMP, il compilatore può eseguire altre operazioni, ad esempio:
+In Visual Cè sono disponibili pragma `#pragma vector` di `#pragma ivdep`loop simili e, tuttavia con OpenMP SIMD, il compilatore può eseguire altre azioni, ad esempio:
 
-- Sempre consentito ignorare le dipendenze del vettore presente.
-- `/fp:fast` è abilitato all'interno del ciclo.
-- I cicli esterni e i cicli con le chiamate di funzione sono adatti vettore.
-- Cicli annidati possono essere uniti in un ciclo e reso facile integrazione con vettore.
-- Accelerazione ibrida con `#pragma omp for simd` abilitare con granularità grossolana vettori multithread e con granularità fine.  
+- Sempre consentito ignorare le dipendenze vettoriali presenti.
+- `/fp:fast`è abilitato all'interno del ciclo.
+- I cicli esterni e i cicli con chiamate di funzione sono vettoriali.
+- I loop nidificati possono essere uniti in un unico ciclo e resi vettoriali.Nested loops can be coalesced into one loop and made vector-friendly.
+- Accelerazione `#pragma omp for simd` ibrida con per consentire vettori grossolani multithreading e granularità fine.  
 
-Per i cicli di facile integrazione con vettore, il compilatore rimane invisibile all'utente se non si usa un'opzione di log di vettori di supporto:
+Per i cicli vector-friendly, il compilatore rimane invisibile all'utente a meno che non si utilizzi un'opzione di log di supporto vettoriale:For vector-friendly loops, the compiler remains silent unless you use a vector-support log switch:
 
 ```cmd
     cl -O2 -openmp:experimental -Qvec-report:2 mycode.cpp
@@ -57,7 +57,7 @@ Per i cicli di facile integrazione con vettore, il compilatore rimane invisibile
     mycode.cpp(96) : info C5001: Omp simd loop vectorized
 ```
 
-Per i cicli non vettore-brevi, il compilatore genera ognuna un messaggio:
+Per i cicli non vettoriali, il compilatore genera un messaggio:
 
 ```cmd
     cl -O2 -openmp:experimental mycode.cpp
@@ -70,23 +70,23 @@ Per i cicli non vettore-brevi, il compilatore genera ognuna un messaggio:
 
 ### <a name="clauses"></a>Clausole
 
-La direttiva OpenMP SIMD può anche usare le clausole seguenti per migliorare il supporto di vettore:
+La direttiva OPENMP SIMD può anche accettare le seguenti clausole per migliorare il supporto vettoriale:
 
 |Direttiva|Descrizione|
 |---|---|
-|`simdlen(length)`|Specificare il numero di corsie di vettore.|
-|`safelen(length)`|Specificare la distanza di dipendenza di vettore.|
+|`simdlen(length)`|Specificare il numero di corsie vettoriali.|
+|`safelen(length)`|Specificare la distanza di dipendenza del vettore.|
 |`linear(list[ : linear-step]`)|Il mapping lineare dalla variabile di induzione del ciclo alla sottoscrizione di matrice.|
 |`aligned(list[ : alignment])`|L'allineamento dei dati.|
-|`private(list)`|Specificare privatizzazione dati.|
-|`lastprivate(list)`|Specificare privatizzazione dati con valore finale dall'ultima iterazione.|
-|`reduction(reduction-identifier:list)`|Specificare le operazioni di riduzione personalizzato.|
-|`collapse(n)`|Annidamento di ciclo coalescing.|
+|`private(list)`|Specificare la privatizzazione dei dati.|
+|`lastprivate(list)`|Specificare la privatizzazione dei dati con il valore finale dell'ultima iterazione.|
+|`reduction(reduction-identifier:list)`|Specificare operazioni di riduzione personalizzate.|
+|`collapse(n)`|Nido di loop Coalescing.|
 
 > [!NOTE]
-> Le clausole SIMD non efficace vengono analizzate e ignorate dal compilatore con un avviso.
+> Le clausole SIMD non efficaci vengono analizzate e ignorate dal compilatore con un avviso.
 >
-> Ad esempio, usare i seguenti problemi di codice un messaggio di avviso:
+> Ad esempio, l'utilizzo del codice seguente genera un avviso:
 >
 > ```c
 >    #pragma omp simd simdlen(8)
@@ -104,9 +104,9 @@ La direttiva OpenMP SIMD può anche usare le clausole seguenti per migliorare il
 
 ### <a name="example"></a>Esempio
   
-La direttiva OpenMP SIMD offre agli utenti un modo per determinare il compilatore apportare cicli vettore adatto. Annotando un ciclo con la direttiva OpenMP SIMD, gli utenti intendono disporre di più iterazioni del ciclo eseguite contemporaneamente.
+La direttiva SIMD OpenMP fornisce agli utenti un modo per dettare al compilatore un ciclo compatibile con i cicli. Annotando un ciclo con la direttiva SIMD OpenMP, gli utenti intendono avere più iterazioni del ciclo eseguite contemporaneamente.
 
-Ad esempio, il ciclo seguente è annotato con la direttiva OpenMP SIMD. Non è disponibile parallelismo perfetto tra le iterazioni del ciclo, poiché è presente una dipendenza con le versioni precedenti da un [i] a [i-1], ma a causa della direttiva SIMD che il compilatore è comunque consentito pack iterazioni consecutive della prima istruzione in una singola istruzione vettore ed eseguire li in parallelo.
+Ad esempio, il ciclo seguente è annotato con la direttiva SIMD OpenMP. Non esiste un parallelismo perfetto tra le iterazioni del ciclo poiché esiste una dipendenza all'indietro da a[i] a [i-1], ma a causa della direttiva SIMD il compilatore è ancora autorizzato a comprimere le iterazioni consecutive della prima istruzione in un'istruzione vettoriale ed eseguirle in parallelo.
 
 ```c
     #pragma omp simd
@@ -118,7 +118,7 @@ Ad esempio, il ciclo seguente è annotato con la direttiva OpenMP SIMD. Non è d
     }
 ```
 
-Pertanto, è il seguente formato vettore trasformato del ciclo **legali** poiché il compilatore mantiene il comportamento di ogni iterazione del ciclo originale sequenza. In altre parole, `a[i]` viene eseguito dopo `a[-1]`, `b[i]` dopo `a[i]` e la chiamata a `bar` viene eseguito per ultimo.
+Pertanto, la seguente forma vettoriale trasformata del ciclo è **valida** perché il compilatore mantiene il comportamento sequenziale di ogni iterazione del ciclo originale. In altre `a[i]` parole, viene `a[-1]` `b[i]` eseguito `a[i]` dopo , `bar` è dopo e la chiamata a avviene per ultima.
 
 ```c
     for (i = 0; i < count; i+=4)
@@ -132,7 +132,7 @@ Pertanto, è il seguente formato vettore trasformato del ciclo **legali** poich�
     }
 ```
 
-Dispone **non validi** spostare il riferimento alla memoria `*c` all'esterno del ciclo se è possibile che sia alias con `a[i]` o `b[i]`. Inoltre non è consentito riordinare le istruzioni all'interno di un'iterazione originale se interrompe la dipendenza sequenza. Ad esempio, il ciclo seguente trasformato non è valido:
+Non è **legale** spostare il `*c` riferimento di memoria fuori `a[i]` dal `b[i]`ciclo se può alias con o . Inoltre, non è legale riordinare le istruzioni all'interno di un'iterazione originale se interrompe la dipendenza sequenziale. Ad esempio, il seguente ciclo trasformato non è valido:For example, the following transformed loop isn't legal:
 
 ```c
     c = b;
@@ -150,4 +150,4 @@ Dispone **non validi** spostare il riferimento alla memoria `*c` all'esterno del
 
 ## <a name="see-also"></a>Vedere anche
 
-[/openmp (abilita supporto OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
+[/openmp (Attiva supporto OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>

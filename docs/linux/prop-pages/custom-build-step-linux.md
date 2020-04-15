@@ -3,17 +3,17 @@ title: Proprietà Istruzione di compilazione personalizzata (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 77a9c1fb-7c41-4a9b-9418-18ac17ce4e74
 ms.openlocfilehash: 67b281e245c4fff8f37baff8875cbc3dc84ca718
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79441337"
 ---
 # <a name="custom-build-step-properties-linux-c"></a>Proprietà Istruzione di compilazione personalizzata (Linux C++)
 
 ::: moniker range="vs-2015"
 
-Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 

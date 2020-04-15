@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: a75ce23cf55f26505c2584c3a021b654602a6a2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce72c156ab31b742a42d2960923fc56afff656c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182280"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369438"
 ---
 # <a name="cconnectionpoint-class"></a>Classe CConnectionPoint
 
@@ -54,41 +54,41 @@ class CConnectionPoint : public CCmdTarget
 |Nome|Descrizione|
 |----------|-----------------|
 |[CConnectionPoint::GetConnections](#getconnections)|Recupera tutti i punti di connessione in una mappa delle connessioni.|
-|[CConnectionPoint::GetContainer](#getcontainer)|Recupera il contenitore del controllo cui appartiene la mappa delle connessioni.|
+|[CConnectionPoint::GetContainer](#getcontainer)|Recupera il contenitore del controllo proprietario della mappa delle connessioni.|
 |[CConnectionPoint::GetIID](#getiid)|Recupera l'ID di interfaccia di un punto di connessione.|
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Recupera il numero massimo di punti di connessione supportati da un controllo.|
-|[CConnectionPoint::GetNextConnection](#getnextconnection)|Recupera un puntatore all'elemento connessione al *pos*.|
-|[CConnectionPoint::GetStartPosition](#getstartposition)|Inizia un'iterazione di mappa, restituendo un valore di posizione che può essere passato a un `GetNextConnection` chiamare.|
-|[CConnectionPoint::OnAdvise](#onadvise)|Chiamato dal framework quando la definizione o le connessioni di rilievo.|
-|[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Recupera un puntatore all'interfaccia sink richiesto.|
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|Recupera un puntatore all'elemento di connessione in *pos*.|
+|[CConnectionPoint::GetStartPosition](#getstartposition)|Avvia un'iterazione della mappa restituendo un `GetNextConnection` valore POSITION che può essere passato a una chiamata.|
+|[CConnectionPoint::OnAdvise](#onadvise)|Chiamato dal framework durante la creazione o l'interruzione delle connessioni.|
+|[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Recupera un puntatore all'interfaccia sink richiesta.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-A differenza dei normali interfacce OLE, che consentono di implementare ed esporre le funzionalità di un controllo OLE, un punto di connessione implementa un'interfaccia in uscita che è in grado di avviare le operazioni di altri oggetti, ad esempio la generazione degli eventi e le notifiche di modifica.
+A differenza delle normali interfacce OLE, utilizzate per implementare ed esporre la funzionalità di un controllo OLE, un punto di connessione implementa un'interfaccia in uscita in grado di avviare azioni su altri oggetti, ad esempio eventi di generazione e notifiche di modifica.
 
-Una connessione è costituita da due parti: l'oggetto che chiama l'interfaccia, denominata "source" e l'oggetto che implementa l'interfaccia, chiamata "sink". Tramite l'esposizione di un punto di connessione, un'origine consente ai sink stabilire connessioni a se stesso. Tramite il meccanismo di punto di connessione, un oggetto di origine Ottiene un puntatore all'implementazione del sink di un set di funzioni membro. Ad esempio, per generare un evento implementato dal sink, origine possa chiamare il metodo appropriato dell'implementazione del sink.
+Una connessione è costituita da due parti: l'oggetto che chiama l'interfaccia, denominato "origine" e l'oggetto che implementa l'interfaccia, denominato "sink". Esponendo un punto di connessione, un'origine consente ai sink di stabilire connessioni a se stessa. Tramite il meccanismo del punto di connessione, un oggetto di origine ottiene un puntatore all'implementazione del sink di un set di funzioni membro. Ad esempio, per generare un evento implementato dal sink, l'origine può chiamare il metodo appropriato dell'implementazione del sink.
 
-Per impostazione predefinita, un `COleControl`-classe derivata implementa due punti di connessione: uno per gli eventi e uno per la proprietà le notifiche di modifica. Queste connessioni vengono usate, rispettivamente, per la generazione dell'evento e per avvisare un sink (ad esempio, il contenitore del controllo) quando un valore della proprietà è stato modificato. Il supporto viene fornito anche per controlli OLE implementare i punti di connessione aggiuntive. Per ogni punto di connessione aggiuntive implementata nella classe del controllo, è necessario dichiarare una "parte di connessione" che implementa il punto di connessione. Se si implementano uno o più punti di connessione, è necessario anche dichiarare un singolo "mappa delle connessioni" nella classe del controllo.
+Per impostazione `COleControl`predefinita, una classe derivata da un oggetto derivato implementa due punti di connessione: uno per gli eventi e uno per le notifiche di modifica delle proprietà. Queste connessioni vengono utilizzate, rispettivamente, per la generazione di eventi e per la notifica di un sink (ad esempio, il contenitore del controllo) quando un valore della proprietà è stato modificato. Viene inoltre fornito supporto per i controlli OLE per implementare punti di connessione aggiuntivi. Per ogni punto di connessione aggiuntivo implementato nella classe del controllo, è necessario dichiarare una "parte di connessione" che implementa il punto di connessione. Se si implementano uno o più punti di connessione, è inoltre necessario dichiarare una singola "mappa di connessione" nella classe del controllo.
 
-Nell'esempio seguente viene illustrato un mapping semplice connessione e un punto di connessione per il `Sample` controllo OLE, composto da due frammenti di codice: la prima parte viene dichiarata la mappa delle connessioni e un punto; il secondo implementa questa mappa e punto. Il primo frammento viene inserito nella dichiarazione di classe del controllo, sotto il **protetti** sezione:
+Nell'esempio seguente viene illustrata una mappa `Sample` delle connessioni semplice e un punto di connessione per il controllo OLE, costituito da due frammenti di codice: la prima parte dichiara la mappa delle connessioni e il punto; il secondo implementa questa mappa e il punto. Il primo frammento viene inserito nella dichiarazione della classe del controllo, nella sezione **protected:**
 
 [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]
 
-Le macro BEGIN_CONNECTION_PART ed END_CONNECTION_PART viene dichiarano una classe incorporata, `XSampleConnPt` (derivata da `CConnectionPoint`) che implementa il punto di connessione specifico. Se si desidera eseguire l'override di qualsiasi `CConnectionPoint` funzioni membro, oppure aggiungere le funzioni di membro personalizzata, dichiarare le variabili tra questi due macro. Ad esempio, CONNECTION_IID (macro) esegue l'override di `CConnectionPoint::GetIID` funzione membro quando viene inserita tra questi due macro.
+Le macro BEGIN_CONNECTION_PART e END_CONNECTION_PART dichiarano una classe incorporata, `XSampleConnPt` (derivata da `CConnectionPoint`) che implementa questo particolare punto di connessione. Se si desidera `CConnectionPoint` eseguire l'override di qualsiasi funzione membro o aggiungere funzioni membro personalizzate, dichiararle tra queste due macro. Ad esempio, la macro `CConnectionPoint::GetIID` CONNECTION_IID esegue l'override della funzione membro quando viene inserita tra queste due macro.
 
-Il secondo frammento di codice viene inserito nel file di implementazione (. CPP) della classe del controllo. Questo codice implementa la mappa delle connessioni, che include il punto di connessione aggiuntive, `SampleConnPt`:
+Il secondo frammento di codice viene inserito nel file di implementazione (. CPP) della classe di controllo. Questo codice implementa la mappa delle connessioni, `SampleConnPt`che include il punto di connessione aggiuntivo, :
 
 [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]
 
-Dopo che sono stati inseriti questi frammenti di codice, il controllo OLE di esempio espone un punto di connessione per il `ISampleSink` interfaccia.
+Una volta inseriti questi frammenti di codice, il controllo `ISampleSink` OLE di esempio espone un punto di connessione per l'interfaccia.
 
-In genere, i punti di connessione supportano "il multicasting", ovvero la possibilità di trasmettere più nei sink connessa all'interfaccia stessa. Il frammento di codice seguente viene illustrato come eseguire il multicast scorrendo ogni sink in un punto di connessione:
+In genere, i punti di connessione supportano il "multicasting", ovvero la possibilità di trasmettere a più sink connessi alla stessa interfaccia. Nel frammento di codice seguente viene illustrato come eseguire il multicasting scorrendo ogni sink in un punto di connessione:The following code fragment demonstrates how to accomplish multicasting by iterating through each sink on a connection point:
 
 [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]
 
-Questo esempio recupera il set corrente di connessioni nel `SampleConnPt` punto di connessione con una chiamata a `CConnectionPoint::GetConnections`. Quindi esegue l'iterazione attraverso le connessioni e le chiamate `ISampleSink::SinkFunc` su tutte le connessioni attive.
+In questo esempio viene recuperato `SampleConnPt` il set corrente `CConnectionPoint::GetConnections`di connessioni sul punto di connessione con una chiamata a . Scorre quindi le connessioni e `ISampleSink::SinkFunc` le chiamate su ogni connessione attiva.
 
-Per altre informazioni sull'uso `CConnectionPoint`, vedere l'articolo [punti di connessione](../../mfc/connection-points.md).
+Per ulteriori informazioni `CConnectionPoint`sull'utilizzo di , vedere l'articolo [Punti di connessione](../../mfc/connection-points.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -102,7 +102,7 @@ Per altre informazioni sull'uso `CConnectionPoint`, vedere l'articolo [punti di 
 
 **Intestazione:** afxdisp.h
 
-##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint
+## <a name="cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint
 
 Costruisce un oggetto `CConnectionPoint`.
 
@@ -110,7 +110,7 @@ Costruisce un oggetto `CConnectionPoint`.
 CConnectionPoint();
 ```
 
-##  <a name="getconnections"></a>  CConnectionPoint::GetConnections
+## <a name="cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint::GetConnections
 
 Chiamare questa funzione per recuperare tutte le connessioni attive per un punto di connessione.
 
@@ -120,11 +120,11 @@ const CPtrArray* GetConnections();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a una matrice di connessioni attive (sink). Alcuni degli indicatori di misura della matrice può essere NULL. Ogni puntatore non NULL in questa matrice può essere convertito in modo sicuro a un puntatore all'interfaccia sink con un operatore cast.
+Puntatore a una matrice di connessioni attive (sinks). Alcuni dei puntatori nella matrice possono essere NULL. Ogni puntatore non NULL in questa matrice può essere convertito in modo sicuro in un puntatore all'interfaccia sink utilizzando un operatore cast.
 
-##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer
+## <a name="cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint::GetContainer
 
-Chiamata eseguita dal framework per recuperare il `IConnectionPointContainer` del punto di connessione.
+Chiamato dal framework per `IConnectionPointContainer` recuperare l'oggetto per il punto di connessione.
 
 ```
 virtual LPCONNECTIONPOINTCONTAINER GetContainer();
@@ -132,15 +132,15 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, un puntatore al contenitore di; in caso contrario NULL.
+Se ha esito positivo, un puntatore al contenitore; in caso contrario NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione viene in genere implementata da BEGIN_CONNECTION_PART (macro).
+Questa funzione viene in genere implementata dalla macro BEGIN_CONNECTION_PART.
 
-##  <a name="getiid"></a>  CConnectionPoint::GetIID
+## <a name="cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint::GetIID
 
-Chiamata eseguita dal framework per recuperare l'ID di interfaccia di un punto di connessione.
+Chiamato dal framework per recuperare l'ID di interfaccia di un punto di connessione.
 
 ```
 virtual REFIID GetIID() = 0;
@@ -148,15 +148,15 @@ virtual REFIID GetIID() = 0;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento all'ID dell'interfaccia. del punto di connessione
+Riferimento all'ID di interfaccia del punto di connessione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questa funzione per restituire l'ID di interfaccia per questo punto di connessione.
 
-##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections
+## <a name="cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections
 
-Chiamata eseguita dal framework per recuperare il numero massimo di connessioni supportate dal punto di connessione.
+Chiamato dal framework per recuperare il numero massimo di connessioni supportate dal punto di connessione.
 
 ```
 virtual int GetMaxConnections();
@@ -164,17 +164,17 @@ virtual int GetMaxConnections();
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero massimo di connessioni supportate dal controllo, oppure -1 se nessun limite.
+Il numero massimo di connessioni supportate dal controllo oppure -1 se non è previsto alcun limite.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita restituisce -1, che indica nessun limite.
+L'implementazione predefinita restituisce -1, che non indica alcun limite.
 
 Eseguire l'override di questa funzione se si desidera limitare il numero di sink che possono connettersi al controllo.
 
-##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection
+## <a name="cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>CConnectionPoint::GetNextConnection
 
-Recupera un puntatore all'elemento connessione al *pos*.
+Recupera un puntatore all'elemento di connessione in *pos*.
 
 ```
 LPUNKNOWN GetNextConnection(POSITION& pos) const;
@@ -182,24 +182,24 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*pos*<br/>
-Specifica un riferimento a un valore di posizione restituito da una precedente `GetNextConnection` oppure [GetStartPosition](#getstartposition) chiamare.
+*Pos*<br/>
+Specifica un riferimento a un valore POSITION `GetNextConnection` restituito da una chiamata precedente o [GetStartPosition.](#getstartposition)
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore all'elemento di connessione specificato da *pos*, o NULL.
+Puntatore all'elemento di connessione specificato da *pos*o NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione è particolarmente utile per l'iterazione di tutti gli elementi della mappa di connessione. Quando si esegue l'iterazione, ignorare gli spazi vuoti restituiti da questa funzione.
+Questa funzione è particolarmente utile per scorrere tutti gli elementi nella mappa delle connessioni. Durante l'iterazione, ignorare i valori NUL restituiti da questa funzione.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]
 
-##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition
+## <a name="cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint::GetStartPosition
 
-Inizia un'iterazione di mappa, restituendo un valore di posizione che può essere passato a un [GetNextConnection](#getnextconnection) chiamare.
+Avvia un'iterazione della mappa restituendo un valore POSITION che può essere passato a una chiamata [GetNextConnection.](#getnextconnection)
 
 ```
 POSITION GetStartPosition() const;
@@ -207,17 +207,17 @@ POSITION GetStartPosition() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore di posizione che indica una posizione di inizio per l'iterazione della mappa; o NULL se la mappa è vuota.
+Valore POSITION che indica una posizione iniziale per l'iterazione della mappa; o NULL se la mappa è vuota.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La sequenza di iterazione non è stimabile; Pertanto, il "primo elemento nella mappa" non ha alcun significato speciale.
+La sequenza di iterazione non è prevedibile. pertanto, il "primo elemento nella mappa" non ha un significato speciale.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CConnectionPoint:: GetNextConnection](#getnextconnection).
+  Vedere l'esempio per [CConnectionPoint::GetNextConnection](#getnextconnection).
 
-##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise
+## <a name="cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint::OnAdvise
 
 Chiamato dal framework quando una connessione viene stabilita o interrotta.
 
@@ -227,18 +227,18 @@ virtual void OnAdvise(BOOL bAdvise);
 
 ### <a name="parameters"></a>Parametri
 
-*bAdvise*<br/>
-TRUE se viene stabilita una connessione; in caso contrario, FALSE.
+*bConsigli*<br/>
+TRUE, se viene stabilita una connessione; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita non esegue alcuna operazione.
 
-Eseguire l'override di questa funzione per ricevere notifica quando i sink di connettersi o disconnettersi dal punto di connessione.
+Eseguire l'override di questa funzione se si desidera ricevere una notifica quando i sink si connettono o si disconnettono dal punto di connessione.
 
-##  <a name="querysinkinterface"></a>  CConnectionPoint::QuerySinkInterface
+## <a name="cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface
 
-Recupera un puntatore all'interfaccia sink richiesto.
+Recupera un puntatore all'interfaccia sink richiesta.
 
 ```
 virtual HRESULT QuerySinkInterface(
@@ -249,16 +249,16 @@ virtual HRESULT QuerySinkInterface(
 ### <a name="parameters"></a>Parametri
 
 *pUnkSink*<br/>
-L'identificatore dell'interfaccia sink richiesto.
+Identificatore dell'interfaccia sink richiesta.
 
-*ppInterface*<br/>
-Un puntatore al puntatore a interfaccia identificato dal *pUnkSink*. Se l'oggetto non supporta questa interfaccia, \* *ppInterface* è impostato su NULL.
+*ppInterface (interfaccia utente)*<br/>
+Puntatore al puntatore a interfaccia identificato da *pUnkSink*. Se l'oggetto non supporta \* questa interfaccia, *ppInterface* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

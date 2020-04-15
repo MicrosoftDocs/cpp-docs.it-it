@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C4744
 ms.assetid: f2a7d0b5-afd5-4926-abc3-cfbd367e3ff5
-ms.openlocfilehash: 9f63da4acd87ef2bb0ba80df9e8c0e3e3db4bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f932b1bcdf011678d4f85e0edf1e116a954b59fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185646"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367374"
 ---
 # <a name="compiler-warning-level-1-c4744"></a>Avviso del compilatore (livello 1) C4744
 
-' var ' ha un tipo diverso in ' file1' è file2':' tipo1' è tipo2'
+'var' ha un tipo diverso in 'file1' e 'file2': 'tipo1' e 'tipo2'
 
-Una variabile esterna a cui viene fatto riferimento o definita in due file ha tipi diversi in tali file.  Per risolvere il nome, impostare lo stesso tipo di definizioni oppure modificare il nome della variabile in uno dei file.
+Una variabile esterna a cui viene fatto riferimento o definita in due file ha tipi diversi in tali file.  Per risolvere il problema, rendere uguali le definizioni dei tipi oppure modificare il nome della variabile in uno dei file.
 
-C4744 viene generato solo quando i file vengono compilati con/GL.  Per altre informazioni, vedere [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md).
+L'operazione C4744 viene generata solo quando i file vengono compilati con /GL.  Per altre informazioni, vedere [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md).
 
 > [!NOTE]
->  C4744 di solito si verifica nei file C++C (non), C++ perché in un nome di variabile è decorato con le informazioni sul tipo.  Quando l'esempio (sotto) viene compilato come C++, si otterrà l'errore del linker LNK2019.
+> L'errore C4744 si verifica in genere nei file C (non in C) , perché in C, un nome di variabile è decorato con informazioni sul tipo.  Quando l'esempio (sotto) viene compilato come C , si otterrà l'errore del linker LNK2019.
 
 ## <a name="example"></a>Esempio
 
@@ -36,7 +36,7 @@ int global;
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'C4744.
+Nell'esempio seguente viene generato l'errore C4744.
 
 ```c
 // C4744b.c
