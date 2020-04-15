@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f55811f5d2bb81bc77da38a87c35bae91ce6cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292796"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320515"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Crea file sbr)
 
@@ -31,7 +31,7 @@ Crea file SBR.
 /Fr[pathname[\filename]]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 > [!WARNING]
 > Sebbene BSCMAKE venga ancora installato con Visual Studio, non viene più usato dall'IDE. A partire da Visual Studio 2008, le informazioni di visualizzazione e sui simboli vengono automaticamente archiviate in un file sdf di SQL Server nella cartella della soluzione.
@@ -47,11 +47,11 @@ Se non si specifica `filename`, al file SBR viene assegnato lo stesso nome di ba
 **/Fr** è deprecato. Usare **/FR** . Per altre informazioni, vedere le opzioni del compilatore deprecate o obsolete in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 > [!NOTE]
->  Non modificare l'estensione SBR. BSCMAKE richiede questa estensione per i file intermediari.
+> Non modificare l'estensione SBR. BSCMAKE richiede questa estensione per i file intermediari.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Nel riquadro di navigazione scegliere la pagina delle proprietà **C/C++**, **Informazioni di visualizzazione** .
 
@@ -59,11 +59,11 @@ Se non si specifica `filename`, al file SBR viene assegnato lo stesso nome di ba
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
-- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
+- Controllare <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Opzioni del file di output (/F)](output-file-f-options.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Sintassi della riga di comando del compilatore MSVCMSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)<br/>
 [Specifica del nome del percorso](specifying-the-pathname.md)

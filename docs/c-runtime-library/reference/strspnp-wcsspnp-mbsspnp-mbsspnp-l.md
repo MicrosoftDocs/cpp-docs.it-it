@@ -1,11 +1,13 @@
 ---
 title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
+- _o__mbsspnp
+- _o__mbsspnp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +48,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c45fc42fb9edce1b82b0910f8aae81d4058d5974
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946674"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317015"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Restituisce un puntatore al primo carattere in una stringa specificata non incluso un'altra stringa specificata.
 
 > [!IMPORTANT]
-> non è possibile usare **_mbsspnp** e **_mbsspnp_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** e **_mbsspnp_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -83,24 +86,26 @@ unsigned char *_mbsspnp_l(
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
+*Str*<br/>
 Stringa con terminazione Null in cui eseguire la ricerca.
 
-*charset*<br/>
+*Charset*<br/>
 Set di caratteri con terminazione Null.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_strspnp**, **_wcsspnp**e **_mbsspnp** restituiscono un puntatore al primo carattere in *STR* che non appartiene al set di caratteri *nel set di caratteri.* Ognuna di queste funzioni restituisce **null** se *Str* è costituito interamente da caratteri del *set*di caratteri. Per ognuna di queste routine non è riservato alcun valore restituito per indicare un errore.
+**_strspnp**, **_wcsspnp e** **_mbsspnp** restituiscono un puntatore al primo carattere in *str* che non appartiene al set di caratteri nel set *di caratteri*. Ognuna di queste funzioni restituisce **NULL** se *str* è costituito interamente da caratteri da *charset*. Per ognuna di queste routine non è riservato alcun valore restituito per indicare un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_mbsspnp** restituisce un puntatore al carattere multibyte che rappresenta il primo carattere in *Str* che non appartiene al set di caratteri *nel set di caratteri.* **_mbsspnp** riconosce le sequenze di caratteri multibyte in base alla tabella [codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso. La ricerca non include i caratteri Null di terminazione.
+La funzione **_mbsspnp** restituisce un puntatore al carattere multibyte che è il primo carattere in *str* che non appartiene al set di caratteri nel *set di caratteri*. **_mbsspnp** riconosce le sequenze di caratteri multibyte in base alla tabella codici [multibyte](../../c-runtime-library/code-pages.md) attualmente in uso. La ricerca non include i caratteri Null di terminazione.
 
-Se *Str* o *CharSet* è un puntatore null, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **null** e imposta **errno** su **EINVAL**.
+Se *str* o *charset* è un puntatore null, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **NULL** e imposta **errno** su **EINVAL**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -108,9 +113,9 @@ Se *Str* o *CharSet* è un puntatore null, questa funzione richiama il gestore d
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** e **_wcsspnp** sono costituiti da caratteri a byte singolo e versioni a caratteri wide di **_mbsspnp**. **_strspnp** e **_wcsspnp** si comportano in modo identico a **_mbsspnp** altrimenti; vengono fornite solo per questo mapping e non devono essere usate per altri motivi. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** e **_wcsspnp** sono versioni a byte singolo e caratteri wide di **_mbsspnp**. **_strspnp** e **_wcsspnp** si comportano in modo identico a **_mbsspnp** in caso contrario; sono forniti solo per questa mappatura e non devono essere utilizzati per altri motivi. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** è identico, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** è identico, ad eccezione del fatto che utilizza invece il parametro locale passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -120,7 +125,7 @@ Se *Str* o *CharSet* è un puntatore null, questa funzione richiama il gestore d
 |**_strspnp**|\<tchar.h>|
 |**_wcsspnp**|\<tchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -146,9 +151,9 @@ abbage
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

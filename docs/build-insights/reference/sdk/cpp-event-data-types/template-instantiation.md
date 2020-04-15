@@ -1,6 +1,6 @@
 ---
-title: Classe TemplateInstantiation
-description: Riferimento C++ alla classe TemplateInstantiation di build Insights SDK.
+title: TemplateInstantiation (classe)
+description: Informazioni di riferimento per la classe TemplateInstantiation SDK di Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2c94f8d3a4613e072c03f6dd4c846798d3d2122b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ba8fd10efc6a536c9160f10b19e19e17bfaaad98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332971"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324229"
 ---
-# <a name="templateinstantiation-class"></a>Classe TemplateInstantiation
+# <a name="templateinstantiation-class"></a>TemplateInstantiation (classe)
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La classe `TemplateInstantiation` viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usarlo per trovare la corrispondenza con un evento [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) .
+La `TemplateInstantiation` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usalo per trovare una corrispondenza con un [evento TEMPLATE_INSTANTIATION.](../event-table.md#template-instantiation)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -50,21 +50,21 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-Insieme ai membri ereditati dalla relativa classe di base [Activity](activity.md) , la classe `TemplateInstantiation` contiene i membri seguenti:
+Insieme ai membri ereditati dalla relativa `TemplateInstantiation` classe base [Activity,](activity.md) la classe contiene i membri seguenti:
 
 ### <a name="constructors"></a>Costruttori
 
-[TemplateInstantiation](#template-instantiation)
+[ModelloInstantiation (Creazione guidata)](#template-instantiation)
 
 ### <a name="functions"></a>Funzioni
 
-[Kind](#kind)
+[Tipo](#kind)
 [PrimaryTemplateSymbolKey](#primary-template-symbol-key)
-[SpecializationSymbolKey](#specialization-symbol-key)
+[SpecializzazioneSymbolKey](#specialization-symbol-key)
 
-## <a name="kind"></a>Tipo
+## <a name="kind"></a><a name="kind"></a>gentile
 
 ```cpp
 Kind Kind() const;
@@ -72,9 +72,9 @@ Kind Kind() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Codice che descrive il tipo di creazione di istanza del modello eseguita.
+Codice che descrive il tipo di creazione di istanze del modello che è stata eseguita.
 
-## <a name="primary-template-symbol-key"></a>PrimaryTemplateSymbolKey
+## <a name="primarytemplatesymbolkey"></a><a name="primary-template-symbol-key"></a>PrimaryTemplateSymbolKey (Modello primario)
 
 ```cpp
 const unsigned long long& PrimaryTemplateSymbolKey() const;
@@ -84,7 +84,7 @@ const unsigned long long& PrimaryTemplateSymbolKey() const;
 
 Identificatore numerico per il tipo di modello specializzato. Questo identificatore è univoco all'interno di un passaggio front-end del compilatore.
 
-## <a name="specialization-symbol-key"></a>SpecializationSymbolKey
+## <a name="specializationsymbolkey"></a><a name="specialization-symbol-key"></a>SpecializzazioneSymbolKey
 
 ```cpp
 const unsigned long long& SpecializationSymbolKey() const;
@@ -92,9 +92,9 @@ const unsigned long long& SpecializationSymbolKey() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Identificatore numerico per il tipo di specializzazione. Questo identificatore è univoco all'interno di un passaggio front-end del compilatore.
+Identificatore numerico per il tipo della specializzazione. Questo identificatore è univoco all'interno di un passaggio front-end del compilatore.
 
-## <a name="template-instantiation"></a>TemplateInstantiation
+## <a name="templateinstantiation"></a><a name="template-instantiation"></a>ModelloInstantiation (Creazione guidata)
 
 ```cpp
 TemplateInstantiation(const RawEvent& event);
@@ -102,7 +102,7 @@ TemplateInstantiation(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametri
 
-*event*\
-Evento [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) .
+*Evento*\
+Un [evento TEMPLATE_INSTANTIATION.](../event-table.md#template-instantiation)
 
 ::: moniker-end

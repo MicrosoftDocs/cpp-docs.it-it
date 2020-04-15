@@ -1,6 +1,6 @@
 ---
-title: MatchEventStackInMemberFunction
-description: Riferimento C++ alla funzione MatchEventStackInMemberFunction di build Insights SDK.
+title: Funzione MatchEventStackInMemberFunctionMatchEventStackInMemberFunction
+description: Informazioni di riferimento per la funzione MatchEventStackInMemberFunction dell'SDK di C.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a966ea5209a25a62c08cb0873d0565299a15d27
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28842a02e7edc2e00266d8c7941798f4ce714ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323891"
 ---
-# <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
+# <a name="matcheventstackinmemberfunction"></a>Funzione MatchEventStackInMemberFunctionMatchEventStackInMemberFunction
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La funzione `MatchEventStackInMemberFunction` viene utilizzata per trovare la corrispondenza di uno stack di eventi con una gerarchia di eventi specifica, descritta dall'elenco di parametri di una funzione membro. Le gerarchie corrispondenti vengono trasmesse alla funzione membro per un'ulteriore elaborazione. Per ulteriori informazioni su eventi, stack di eventi e gerarchie, vedere [tabella eventi](../event-table.md).
+La `MatchEventStackInMemberFunction` funzione viene utilizzata per confrontare uno stack di eventi con una gerarchia di eventi specifica, descritta dall'elenco di parametri di una funzione membro. Le gerarchie corrispondenti vengono inoltrate alla funzione membro per un'ulteriore elaborazione. Per ulteriori informazioni su eventi, stack di eventi e gerarchie, vedere [la tabella degli eventi](../event-table.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -81,42 +81,42 @@ bool MatchEventStackInMemberFunction(
 
 ### <a name="parameters"></a>Parametri
 
-\ *TInterface*
+*Interfaccia utente*\
 Tipo che contiene la funzione membro.
 
-\ *TReturn*
+*Capotame*\
 Tipo restituito della funzione membro.
 
-*T1*,..., *T10*\
-Tipi che descrivono la gerarchia di eventi di cui trovare una corrispondenza.
+*T1*, ..., *T10*\
+Tipi che descrivono la gerarchia di eventi in modo che corrispondano.
 
-\ *TExtraParams*
-Tipi dei parametri aggiuntivi accettati dalla funzione membro e tipi di gerarchia di eventi.
+*TExtraParams (informazioni in base al tA*\
+Tipi dei parametri aggiuntivi accettati dalla funzione membro e dai tipi della gerarchia di eventi.
 
-\ *TExtraArgs*
-Tipi degli argomenti aggiuntivi passati a `MatchEventStackInMemberFunction`.
+*TExtraArgs (informazioni in base all'altro)*\
+Tipi degli argomenti aggiuntivi passati `MatchEventStackInMemberFunction`a .
 
-\ *eventStack*
-Stack di eventi da confrontare con la gerarchia dei tipi di evento descritta da *T1* a *T10*.
+*eventStack (impilare)*\
+Stack di eventi da confrontare con la gerarchia del tipo di evento descritta da *T1* a *T10*.
 
-\ *objectPtr*
-Puntatore a un oggetto su cui viene chiamato *memberFunc* .
+*objectPtr*\
+Puntatore a un oggetto su cui viene chiamato *memberFunc.*
 
-\ *memberFunc*
-Funzione membro che descrive la gerarchia dei tipi di evento di cui trovare una corrispondenza.
+*membroFunc*\
+Funzione membro che descrive la gerarchia del tipo di evento di corrispondenza.
 
-\ di *argomenti*
-Argomenti che vengono completati in modo perfetto per *memberFunc* insieme ai parametri della gerarchia dei tipi di evento.
+*ExtraArgs (informazioni in stato inci*\
+Argomenti che vengono inoltrati perfetti a *memberFunc* insieme ai parametri della gerarchia del tipo di evento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore **bool** che è **true** se la corrispondenza è riuscita o **false** in caso contrario.
+Valore **bool** che è **true** se la corrispondenza ha avuto esito positivo o **false** in caso contrario.
 
 ## <a name="remarks"></a>Osservazioni
 
-Per la corrispondenza dell'ultimo evento in *eventStack* viene sempre eseguita la corrispondenza con l'ultima voce nella gerarchia dei tipi di evento. Tutti gli altri tipi nella gerarchia dei tipi di evento possono corrispondere a qualsiasi posizione in *eventStack* , ad eccezione dell'ultimo, purché si trovino nello stesso ordine.
+L'ultimo evento in *eventStack* viene sempre confrontato con l'ultima voce nella gerarchia dei tipi di evento in modo che corrisponda. Tutti gli altri tipi nella gerarchia dei tipi di evento possono corrispondere a qualsiasi posizione in *eventStack* tranne l'ultimo, a condizione che siano nello stesso ordine.
 
-I tipi di evento da usare per i parametri da *T1* a *T10* sono selezionati da un elenco di *classi di acquisizione*. Per un elenco di eventi e le classi di acquisizione che è possibile usare per trovare una corrispondenza, vedere [tabella eventi](../event-table.md).
+I tipi di evento da utilizzare per i parametri *T1* e *T10* vengono selezionati da un elenco di classi di *acquisizione.* Per un elenco degli eventi e delle classi di acquisizione che è possibile utilizzare per associarli, vedere [tabella eventi](../event-table.md).
 
 ## <a name="example"></a>Esempio
 

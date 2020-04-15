@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Modificare le proprietà del progetto C++ e le destinazioni senza modificare il file di progetto'
+title: 'Procedura: modificare le proprietà e le destinazioni del progetto in C, senza modificare il file di progetto'
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: ad527d8ee69a1786be7d325571f9c9ac4f9a8574
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72107b572e35f222c0b03959e0edd2d23bd0130a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273339"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328467"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Procedura: Modificare le proprietà del progetto C++ e le destinazioni senza modificare il file di progetto
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Procedura: modificare le proprietà e le destinazioni del progetto in C, senza modificare il file di progetto
 
 È possibile ignorare le proprietà e le destinazioni del progetto al prompt dei comandi di MSBuild senza modificare il file di progetto. Ciò è utile quando si intende applicare alcune proprietà in modo temporaneo o occasionalmente. Si presuppone una conoscenza di MSBuild. Per altre informazioni, vedere [MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 

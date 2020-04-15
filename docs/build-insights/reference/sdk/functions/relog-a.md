@@ -1,6 +1,6 @@
 ---
-title: RelogA
-description: Riferimento C++ alla funzione RelogA di build Insights SDK.
+title: RilogA
+description: Informazioni di riferimento sulla funzione RelogA dell'SDK di Build Insights in C.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c4427aa0ac85e34bfb9d569913a8ccf6ab264f52
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 5a772b1156fc69eeef39514afe401c549c3b7c38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332733"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323841"
 ---
-# <a name="reloga"></a>RelogA
+# <a name="reloga"></a>RilogA
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La funzione `RelogA` viene utilizzata per leggere gli eventi MSVC da una traccia di Event Tracing for Windows (ETW) e scriverli in una nuova traccia ETW modificata.
+La `RelogA` funzione viene utilizzata per leggere gli eventi MSVC da una traccia ETW (Event Tracing for Windows) e scriverli in una nuova traccia ETW modificata.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,17 +38,17 @@ enum RESULT_CODE RelogA(
 
 ### <a name="parameters"></a>Parametri
 
-\ *inputLogFile*
-Traccia ETW di input da cui si vogliono leggere gli eventi.
+*inputLogFile*\
+Traccia ETW di input da cui si desidera leggere gli eventi.
 
-\ *outputLogFile*
+*outputLogFile (file outputLog)*\
 File in cui scrivere i nuovi eventi.
 
-\ *relogDescriptor*
-Puntatore a un oggetto [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md) . Utilizzare questo oggetto per configurare la sessione di registrazione.
+*relogDescriptor*\
+Puntatore a un oggetto [RELOG_DESCRIPTOR.](../other-types/relog-descriptor-struct.md) Utilizzare questo oggetto per configurare la sessione di riregistrazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Codice risultato dell'enumerazione [RESULT_CODE](../other-types/result-code-enum.md) .
+Codice di risultato dall'enumerazione [RESULT_CODE.](../other-types/result-code-enum.md)
 
 ::: moniker-end

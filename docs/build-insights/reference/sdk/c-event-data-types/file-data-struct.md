@@ -1,6 +1,6 @@
 ---
-title: Struttura FILE_DATA
-description: Il C++ riferimento alla struttura FILE_DATA di build Insights SDK.
+title: struttura FILE_DATA
+description: L'SDK di build Insights di C'è FILE_DATA riferimento alla struttura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 72cae8c8eb81bdb8d94897c46c5af90c89e92ab4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 6b7b0129c54fa4b1d5285bafb38761da45bab4e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333755"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325582"
 ---
-# <a name="file_data-structure"></a>Struttura FILE_DATA
+# <a name="file_data-structure"></a>struttura FILE_DATA
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La struttura `FILE_DATA` descrive un input o un output del file.
+La `FILE_DATA` struttura descrive un input o un output di file.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,11 +38,11 @@ typedef struct FILE_DATA_TAG
 } FILE_DATA;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 |  |  |
 |--|--|
-| `Path` | Percorso assoluto del file |
+| `Path` | Il percorso assoluto del file |
 | `TypeCode` | Codice che descrive il tipo di file. Per ulteriori informazioni, vedere [FILE_TYPE_CODE](file-type-code-enum.md). |
 
 ::: moniker-end

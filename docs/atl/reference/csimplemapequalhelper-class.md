@@ -1,5 +1,5 @@
 ---
-title: Classe CSimpleMapEqualHelper
+title: CSimpleMapEqualHelper (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelper
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: c614cbb11376c5ae338762c0feaa54c8f1bb3e27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d137a35a517ea93139f036f6e9a7a8de06d518a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330749"
 ---
-# <a name="csimplemapequalhelper-class"></a>Classe CSimpleMapEqualHelper
+# <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper (classe)
 
-Questa classe è un supporto per la [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.
+Questa classe è un helper per la [classe CSimpleMap.This](../../atl/reference/csimplemap-class.md) class is a helper for the CSimpleMap class.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,10 +30,10 @@ class CSimpleMapEqualHelper
 #### <a name="parameters"></a>Parametri
 
 *TKey*<br/>
-L'elemento principale.
+Elemento chiave.
 
-*TVal*<br/>
-L'elemento di valore.
+*Valore TVal*<br/>
+Elemento valore.
 
 ## <a name="members"></a>Membri
 
@@ -41,20 +41,20 @@ L'elemento di valore.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statico) Verifica l'uguaglianza delle due chiavi.|
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statico) Verifica l'uguaglianza di due valori.|
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statico) Verifica l'uguaglianza di due chiavi.|
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statico) Verifica due valori per l'uguaglianza.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe traits costituisce un'integrazione di `CSimpleMap` classe. Fornisce metodi per confrontare due `CSimpleMap` eguaglianza degli elementi (in particolare, i componenti chiave / valore) dell'oggetto. Per impostazione predefinita, le chiavi e valori vengono confrontati usando **operator==()**, ma se la mappa contiene tipi di dati complessi che non dispongono di propri operatore di uguaglianza, è possibile eseguire l'override di questa classe per fornire le funzionalità aggiuntive richieste.
+Questa classe di tratti è `CSimpleMap` un supplemento alla classe. Fornisce metodi per `CSimpleMap` confrontare due elementi oggetto (in particolare, i componenti chiave e valore) per l'uguaglianza. Per impostazione predefinita, le chiavi e i valori vengono confrontati utilizzando **operator**, ma se la mappa contiene tipi di dati complessi che non dispongono di un proprio operatore di uguaglianza, è possibile eseguire l'override di questa classe per fornire la funzionalità aggiuntiva richiesta.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlsimpcoll. h
+**Intestazione:** atlsimpcoll.h
 
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey
+## <a name="csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey
 
-Verifica l'uguaglianza delle due chiavi.
+Verifica l'uguaglianza di due chiavi.
 
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -70,11 +70,11 @@ La seconda chiave.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se le chiavi sono uguali e false in caso contrario.
+Restituisce true se le chiavi sono uguali, false in caso contrario.
 
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue
+## <a name="csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue
 
-Verifica l'uguaglianza di due valori.
+Verifica due valori per l'uguaglianza.
 
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
@@ -90,9 +90,9 @@ Secondo valore.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se i valori sono uguali e false in caso contrario.
+Restituisce true se i valori sono uguali, false in caso contrario.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[CSimpleMapEqualHelperFalse (classe)](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

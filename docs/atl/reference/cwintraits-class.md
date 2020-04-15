@@ -13,19 +13,19 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd73f733e4eff21da92937d1e1b0cce21552a48c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276783"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330305"
 ---
 # <a name="cwintraits-class"></a>Classe CWinTraits
 
-Questa classe fornisce un metodo per la standardizzazione con gli stili usati durante la creazione di un oggetto finestra.
+Questa classe fornisce un metodo per standardizzare gli stili utilizzati durante la creazione di un oggetto finestra.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,10 +36,10 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 #### <a name="parameters"></a>Parametri
 
 *t_dwStyle*<br/>
-Stili di finestra standard predefinito.
+Stili di finestra standard predefiniti.
 
 *t_dwExStyle*<br/>
-Stili finestra estesi per impostazione predefinita.
+Stili di finestra estesa predefiniti.
 
 ## <a name="members"></a>Membri
 
@@ -47,38 +47,38 @@ Stili finestra estesi per impostazione predefinita.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CWinTraits::GetWndExStyle](#getwndexstyle)|(Statico) Recupera gli stili estesi per il `CWinTraits` oggetto.|
-|[CWinTraits::GetWndStyle](#getwndstyle)|(Statico) Recupera gli stili di standard per il `CWinTraits` oggetto.|
+|[CWinTraits::GetWndExStyle](#getwndexstyle)|(Statico) Recupera gli stili estesi `CWinTraits` per l'oggetto.|
+|[CWinTraits::GetWndStyle](#getwndstyle)|(Statico) Recupera gli stili standard `CWinTraits` per l'oggetto.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Ciò [tratti delle finestre](../../atl/understanding-window-traits.md) classe fornisce un metodo semplice per la standardizzazione con gli stili usati per la creazione di un oggetto di finestra ATL. Usare una specializzazione della classe come parametro di modello per [CWindowImpl](../../atl/reference/cwindowimpl-class.md) o un'altra delle classi di finestra di ATL per specificare gli stili di standard ed estese predefiniti usati per le istanze di tale classe della finestra.
+Questa classe [traits](../../atl/understanding-window-traits.md) della finestra fornisce un metodo semplice per standardizzare gli stili utilizzati per la creazione di un oggetto finestra ATL. Utilizzare una specializzazione di questa classe come parametro di modello per [CWindowImpl](../../atl/reference/cwindowimpl-class.md) o un'altra delle classi finestra di ATL per specificare gli stili standard ed estesi predefiniti utilizzati per le istanze di tale classe finestra.
 
-Usare questo modello quando si desidera fornire stili di finestra che verranno utilizzati solo se nessun altri stili vengono specificati nella chiamata a predefiniti [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).
+Utilizzare questo modello quando si desidera fornire stili di finestra predefiniti che verranno utilizzati solo quando nella chiamata a [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)non sono specificati altri stili .
 
-ATL fornisce tre predefinite specializzazioni del modello per le combinazioni di usate comune degli stili finestra:
+ATL fornisce tre specializzazioni predefinite di questo modello per le combinazioni di stili di finestra di uso comune:
 
 - `CControlWinTraits`
 
-   Progettato per una finestra di controllo standard. Vengono utilizzati gli stili standard seguenti: WS_CHILD WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Sono non disponibili stili estesi.
+   Progettato per una finestra di controllo standard. Vengono utilizzati i seguenti stili standard: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Non esistono stili estesi.
 
 - `CFrameWinTraits`
 
-   Progettato per una finestra cornice standard. Gli stili standard usati includono: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Gli stili estesi usati includono: WS_EX_APPWINDOW e WS_EX_WINDOWEDGE.
+   Progettato per una finestra cornice standard. Gli stili standard utilizzati includono: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Gli stili estesi utilizzati includono: WS_EX_APPWINDOW e WS_EX_WINDOWEDGE.
 
 - `CMDIChildWinTraits`
 
-   Progettato per una finestra figlio MDI standard. Gli stili standard usati includono: WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Gli stili estesi usati includono: WS_EX_MDICHILD.
+   Progettato per una finestra figlio MDI standard. Gli stili standard utilizzati includono: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Gli stili estesi utilizzati includono: WS_EX_MDICHILD.
 
-Se si desidera assicurarsi che siano impostati alcuni stili per tutte le istanze della classe della finestra mentre altri devono essere impostate in una base per istanza, utilizzare [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) invece.
+Se si desidera assicurarsi che determinati stili vengono impostati per tutte le istanze della classe della finestra, consentendo altri stili da impostare in base all'istanza, utilizzare [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) invece.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h
+**Intestazione:** atlwin.h
 
-##  <a name="getwndstyle"></a>  CWinTraits::GetWndStyle
+## <a name="cwintraitsgetwndstyle"></a><a name="getwndstyle"></a>CWinTraits::GetWndStyle
 
-Chiamare questa funzione per recuperare gli stili di standard di `CWinTraits` oggetto.
+Chiamare questa funzione per recuperare `CWinTraits` gli stili standard dell'oggetto.
 
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
@@ -86,16 +86,16 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*dwStyle*<br/>
-Stili usati per la creazione di una finestra standard. Se *dwStyle* è 0, i valori dello stile di modello (`t_dwStyle`) vengono restituiti. Se *dwStyle* è diverso da zero, *dwStyle* viene restituito.
+*DwStyle (in stile dwStyle)*<br/>
+Stili standard utilizzati per la creazione di una finestra. Se *dwStyle* è 0, vengono`t_dwStyle`restituiti i valori dello stile del modello ( ). Se *dwStyle* è diverso da zero, viene restituito *dwStyle.*
 
 ### <a name="return-value"></a>Valore restituito
 
-Gli stili di finestra standard dell'oggetto.
+Stili di finestra standard dell'oggetto.
 
-##  <a name="getwndexstyle"></a>  CWinTraits::GetWndExStyle
+## <a name="cwintraitsgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraits::GetWndExStyle
 
-Chiamare questa funzione per recuperare gli stili estesi del `CWinTraits` oggetto.
+Chiamare questa funzione per recuperare `CWinTraits` gli stili estesi dell'oggetto.
 
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
@@ -103,14 +103,14 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*dwExStyle*<br/>
-Stili estesi utilizzati per la creazione di una finestra. Se *dwExStyle* è 0, i valori dello stile di modello (`t_dwExStyle`) vengono restituiti. Se *dwExStyle* è diverso da zero, *dwExStyle* viene restituito.
+*DwExStyle (in stile dwExStyle)*<br/>
+Stili estesi utilizzati per la creazione di una finestra. Se *dwExStyle* è 0, vengono`t_dwExStyle`restituiti i valori dello stile del modello ( ). Se *dwExStyle* è diverso da zero, viene restituito *dwExStyle.*
 
 ### <a name="return-value"></a>Valore restituito
 
-Stili finestra estesi dell'oggetto.
+Stili di finestra estesi dell'oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
-[Informazioni sui tratti delle finestre](../../atl/understanding-window-traits.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)<br/>
+[Informazioni sui tratti delle finestreUnderstanding Window Traits](../../atl/understanding-window-traits.md)

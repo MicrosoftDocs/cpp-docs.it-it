@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 184513bc63975bd8eaaf0e53300e5a6be7986389
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320276"
 ---
-# <a name="randomdevice-class"></a>Classe random_device
+# <a name="random_device-class"></a>Classe random_device
 
 Genera una sequenza casuale da un dispositivo esterno.
 
@@ -49,14 +49,14 @@ public:
    };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 |||
 |-|-|
-|[random_device](#random_device)|[entropy](#entropy)|
+|[random_device](#random_device)|[Entropia](#entropy)|
 |[random_device::operator()](#op_call)||
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La classe descrive un'origine di numeri casuali e può, ma non deve, essere non deterministica o crittograficamente sicura in base allo standard C++ ISO. Nell'implementazione di Visual Studio i valori prodotti sono non deterministici e crittograficamente sicuri, ma l'esecuzione risulta più lenta rispetto ai generatori creati da motori e adattatori del motore, ad esempio [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), il motore veloce e di qualità elevata scelto per la maggior parte delle applicazioni.
 
@@ -64,7 +64,7 @@ I risultati di `random_device` sono distribuiti in modo uniforme nell'intervallo
 
 Non è garantito che `random_device` abbia come risultato una chiamata non di blocco.
 
-In genere, `random_device` è usato per il seeding di altri generatori creati con motori o adattatori del motore. Per altre informazioni, vedere [\<random>](../standard-library/random.md).
+In genere, `random_device` è usato per il seeding di altri generatori creati con motori o adattatori del motore. Per ulteriori informazioni, vedere [ \<>casuale ](../standard-library/random.md).
 
 ## <a name="example"></a>Esempio
 
@@ -100,7 +100,7 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-Questo esempio è semplicistico e non rappresentativo dei casi d'utilizzo generali per questo generatore. Per un esempio di codice più rappresentativo, vedere [\<random>](../standard-library/random.md).
+Questo esempio è semplicistico e non rappresentativo dei casi d'utilizzo generali per questo generatore. Per un esempio di [ \< ](../standard-library/random.md)codice più rappresentativo, vedere random>.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -108,7 +108,7 @@ Questo esempio è semplicistico e non rappresentativo dei casi d'utilizzo genera
 
 **Spazio dei nomi:** std
 
-## <a name="random_device"></a>  random_device::random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device::random_device
 
 Costruisce il generatore.
 
@@ -116,11 +116,11 @@ Costruisce il generatore.
 random_device(const std::string& = "");
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il costruttore inizializza il generatore in base alle esigenze, ignorando il parametro di stringa. Se non è stato possibile inizializzare `random_device`, genera un valore di un tipo definito dall'implementazione derivato dall'oggetto [exception](../standard-library/exception-class.md).
 
-## <a name="entropy"></a>  random_device::entropy
+## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device::entropia
 
 Stima la casualità dell'origine.
 
@@ -128,11 +128,11 @@ Stima la casualità dell'origine.
 double entropy() const noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce una stima della casualità dell'origine, misurata in bit.
 
-## <a name="op_call"></a>  random_device::operator()
+## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device:operator()
 
 Restituisce un valore casuale.
 
@@ -140,10 +140,10 @@ Restituisce un valore casuale.
 result_type operator()();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Restituisce valori distribuiti in modo uniforme nell'intervallo chiuso [ `min, max`], in base a quanto determinato dalle funzioni membro `min()` e `max()`. Se non è stato possibile ottenere un numero casuale, genera un valore di un tipo definito dall'implementazione derivato dall'oggetto [exception](../standard-library/exception-class.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)
+[\<>casuali](../standard-library/random.md)

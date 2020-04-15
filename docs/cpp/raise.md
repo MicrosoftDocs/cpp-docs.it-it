@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317230"
 ---
 # <a name="__raise"></a>__raise
 
@@ -26,12 +26,12 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>Osservazioni
 
-Un evento può essere generato dal codice gestito solo dall'interno della classe in cui è definito. Per ulteriori informazioni, vedere l' [evento](../extensions/event-cpp-component-extensions.md) .
+Un evento può essere generato dal codice gestito solo dall'interno della classe in cui è definito. Per ulteriori informazioni, vedere [l'evento.](../extensions/event-cpp-component-extensions.md)
 
-La parola chiave **__raise** genera un errore da emettere se si chiama un evento non.
+La **parola** chiave __raise causa la visualizzazione di un errore se si chiama un non-evento.
 
 > [!NOTE]
->  Una classe o una struttura basata su template non può contenere eventi.
+> Una classe o una struttura basata su template non può contenere eventi.
 
 ## <a name="example"></a>Esempio
 
@@ -62,5 +62,5 @@ int main() {
 ## <a name="see-also"></a>Vedere anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Gestione di eventi](../cpp/event-handling.md)<br/>
+[Gestione degli eventiEvent Handling](../cpp/event-handling.md)<br/>
 [Estensioni componenti per le piattaforme runtime](../extensions/component-extensions-for-runtime-platforms.md)

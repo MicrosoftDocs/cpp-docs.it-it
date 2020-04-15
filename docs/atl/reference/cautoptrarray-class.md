@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fc5cfea4ea655e57e785ca234df59fe10d6570
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246811"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318889"
 ---
 # <a name="cautoptrarray-class"></a>Classe CAutoPtrArray
 
-Questa classe fornisce metodi utili quando si crea una matrice di puntatori intelligenti.
+Questa classe fornisce metodi utili quando si costruisce una matrice di puntatori intelligenti.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,8 +33,8 @@ class CAutoPtrArray : public CAtlArray<
 
 #### <a name="parameters"></a>Parametri
 
-*E*<br/>
-Il tipo di puntatore.
+*E (in questo modo*<br/>
+Tipo di puntatore.
 
 ## <a name="members"></a>Membri
 
@@ -44,11 +44,11 @@ Il tipo di puntatore.
 |----------|-----------------|
 |[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Costruttore.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe fornisce un costruttore e metodi da deriva [CAtlArray](../../atl/reference/catlarray-class.md) e [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) per facilitare la creazione di un oggetto di classe di raccolta l'archiviazione dei puntatori intelligenti.
+Questa classe fornisce un costruttore e deriva i metodi da [CAtlArray](../../atl/reference/catlarray-class.md) e [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) per facilitare la creazione di un oggetto classe di raccolta che archivia i puntatori intelligenti.
 
-Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
+Per ulteriori informazioni, vedere Classi di raccolte [ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -58,9 +58,9 @@ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcoll. h
+**Intestazione:** atlcoll.h
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 Costruttore.
 
@@ -68,13 +68,13 @@ Costruttore.
 CAutoPtrArray() throw();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Consente di inizializzare la matrice di puntatore intelligente.
+Inizializza la matrice di puntatori intelligenti.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CAtlArray](../../atl/reference/catlarray-class.md)<br/>
 [Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
-[Classe CAutoPtrList](../../atl/reference/cautoptrlist-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[CAutoPtrList (classe)](../../atl/reference/cautoptrlist-class.md)<br/>
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

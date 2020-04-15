@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-ms.openlocfilehash: 88389d4fe913a31fce43e3c8cc95605f99701695
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6c727993b2907aaa551421a5d2d23e372b68917
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261195"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319139"
 ---
 # <a name="ca2caex-class"></a>Classe CA2CAEX
 
-Questa classe viene utilizzata dalle macro di conversione di stringhe CA2CTEX e CT2CAEX e typedef CA2CA.
+Questa classe viene utilizzata dalle macro di conversione delle stringhe CA2CTEX e CT2CAEX e dal typedef CA2CA.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,7 +33,7 @@ class CA2CAEX
 #### <a name="parameters"></a>Parametri
 
 *t_nBufferLength*<br/>
-Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza predefinita è di 128 byte.
+Dimensione del buffer utilizzato nel processo di conversione. La lunghezza predefinita è 128 byte.
 
 ## <a name="members"></a>Membri
 
@@ -42,13 +42,13 @@ Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza pre
 |Nome|Descrizione|
 |----------|-----------------|
 |[CA2CAEX::CA2CAEX](#ca2caex)|Costruttore.|
-|[CA2CAEX:: ~ CA2CAEX](#dtor)|Distruttore.|
+|[CA2CAEX::CA2CAEX](#dtor)|Distruttore.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CA2CAEX::operator LPCSTR](#operator_lpcstr)|Operatore di conversione.|
+|[CA2CAEX::operatore LPCSTR](#operator_lpcstr)|Operatore di conversione.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -56,33 +56,33 @@ Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza pre
 |----------|-----------------|
 |[CA2CAEX::m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-A meno che non è necessaria la funzionalità aggiuntiva, usare CA2CTEX, CT2CAEX o CA2CA nel proprio codice.
+A meno che non siano necessarie funzionalità aggiuntive, utilizzare CA2CTEX, CT2CAEX o CA2CA nel codice.
 
-Questa classe sia sicura per l'uso nei cicli e non eseguiranno l'overflow dello stack. Per impostazione predefinita, le classi e le macro di conversione ATL useranno la tabella codici ANSI del thread corrente per la conversione.
+Questa classe è sicura da usare nei cicli e non eseguirà l'overflow dello stack. Per impostazione predefinita, le classi e le macro di conversione ATL useranno la tabella codici ANSI del thread corrente per la conversione.
 
-Le macro seguenti si basano su questa classe:
+Le seguenti macro sono basate su questa classe:
 
-- CA2CTEX
+- CA2CTEX (CA2CTEX)
 
 - CT2CAEX
 
-Il typedef seguente si basa su questa classe:
+Il typedef seguente è basato su questa classe:The following typedef is based on this class:
 
 - CA2CA
 
-Per una descrizione di queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md).
+Per una descrizione di queste macro di conversione del testo, vedere Macro di [conversione di stringhe ATL e MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md) per un esempio dell'uso di queste macro di conversione di stringhe.
+Per un esempio di utilizzo di queste macro di conversione delle stringhe, vedere Macro di conversione di stringhe [ATL e MFC.](string-conversion-macros.md)
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlconv. h
+**Intestazione:** atlconv.h
 
-##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX
+## <a name="ca2caexca2caex"></a><a name="ca2caex"></a>CA2CAEX::CA2CAEX
 
 Costruttore.
 
@@ -93,17 +93,17 @@ CA2CAEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*psz*<br/>
-La stringa di testo da convertire.
+*Psz*<br/>
+Stringa di testo da convertire.
 
-*nCodePage*<br/>
+*nPaginaclico*<br/>
 Non utilizzato in questa classe.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Crea il buffer della traduzione.
+Crea il buffer necessario per la conversione.
 
-##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX
+## <a name="ca2caexca2caex"></a><a name="dtor"></a>CA2CAEX::CA2CAEX
 
 Distruttore.
 
@@ -111,11 +111,11 @@ Distruttore.
 ~CA2CAEX() throw();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Consente di liberare il buffer allocato.
+Libera il buffer allocato.
 
-##  <a name="m_psz"></a>  CA2CAEX::m_psz
+## <a name="ca2caexm_psz"></a><a name="m_psz"></a>CA2CAEX::m_psz
 
 Membro dati che archivia la stringa di origine.
 
@@ -123,7 +123,7 @@ Membro dati che archivia la stringa di origine.
 LPCSTR m_psz;
 ```
 
-##  <a name="operator_lpcstr"></a>  CA2CAEX::operator LPCSTR
+## <a name="ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a>CA2CAEX::operatore LPCSTR
 
 Operatore di conversione.
 
@@ -142,4 +142,4 @@ Restituisce la stringa di testo come tipo LPCSTR.
 [Classe CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
 [Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
 [Classe CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

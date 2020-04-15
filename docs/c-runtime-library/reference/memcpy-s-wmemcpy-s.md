@@ -1,9 +1,11 @@
 ---
 title: memcpy_s, wmemcpy_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - memcpy_s
 - wmemcpy_s
+- _o_memcpy_s
+- _o_wmemcpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952805"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333330"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -61,7 +64,7 @@ errno_t wmemcpy_s(
 *dest*<br/>
 Nuovo buffer.
 
-*destSize*<br/>
+*DestSize (informazioni in base alle dimensioni in due*<br/>
 Dimensione del buffer di destinazione, in byte per memcpy_s e in caratteri wide (wchar_t) per wmemcpy_s.
 
 *src*<br/>
@@ -76,18 +79,20 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*dest*|*destSize*|*src*|*count*|Valore restituito|Contenuto di *dest*|
+|*dest*|*DestSize (informazioni in base alle dimensioni in due*|*src*|*count*|Valore restituito|Contenuto di *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|qualsiasi|qualsiasi|qualsiasi|0|0|Non modificato|
-|**NULL**|qualsiasi|qualsiasi|non zero|**EINVAL**|Non modificato|
-|qualsiasi|qualsiasi|**NULL**|non zero|**EINVAL**|*dest* è azzerato|
-|qualsiasi|< *count*|qualsiasi|non zero|**ERANGE**|*dest* è azzerato|
+|any|any|any|0|0|Non modificato|
+|**Null**|any|any|non zero|**Einval**|Non modificato|
+|any|any|**Null**|non zero|**Einval**|*dest* è azzerato|
+|any|< *Conteggio*|any|non zero|**ERANGE**|*dest* è azzerato|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**memcpy_s** copia i byte del *conteggio* da *src* a *dest*; **wmemcpy_s** copia il *numero* di caratteri wide (due byte). Se l'origine e la destinazione si sovrappongono, il comportamento di **memcpy_s** non è definito. Usare **memmove_s** per gestire le aree sovrapposte.
+**memcpy_s** le copie *contano i* byte da *src* a *dest*; **wmemcpy_s** le copie *contano* i caratteri wide (due byte). Se l'origine e la destinazione si sovrappongono, il comportamento di **memcpy_s** non è definito. Utilizzare **memmove_s** per gestire le aree sovrapposte.
 
-Queste funzioni convalidano i relativi parametri. Se *count* è diverso da zero e *dest* o *src* è un puntatore null o *destSize* è minore di *count*, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** o **ERANGE** e impostano **errno** sul valore restituito.
+Queste funzioni convalidano i relativi parametri. Se *count* è diverso da zero e *dest* o *src* è un puntatore null o *destSize* è minore di *count*, queste funzioni richiamano il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** o **ERANGE** e impostano **errno** sul valore restituito.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

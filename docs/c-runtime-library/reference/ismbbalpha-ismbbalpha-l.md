@@ -1,9 +1,11 @@
 ---
 title: _ismbbalpha, _ismbbalpha_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbalpha
 - _ismbbalpha_l
+- _o__ismbbalpha
+- _o__ismbbalpha_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: fe60eec2eb7f93d866340aabe382bf32d6b04b21
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e7ff45c9d43a01d89d7ad2e9bac004ca1dcffd9d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954251"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343703"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha, _ismbbalpha_l
 
@@ -55,10 +58,10 @@ int _ismbbalpha_l(
 
 ### <a name="parameters"></a>Parametri
 
-*c*<br/>
+*C*<br/>
 Valore Integer da testare.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -67,7 +70,11 @@ Impostazioni locali da usare.
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-è diverso da zero per *c*oppure 0 in caso contrario. **_ismbbalpha** usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. **_ismbbalpha_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate.
+è diverso da zero per *c*, o 0 se non lo è. **_ismbbalpha** utilizza le impostazioni locali correnti per tutte le impostazioni dei caratteri dipendenti dalle impostazioni locali. **_ismbbalpha_l** è identica, ad eccezione del fatto che utilizza le impostazioni locali passate.
+
+## <a name="remarks"></a>Osservazioni
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -76,7 +83,7 @@ Impostazioni locali da usare.
 |**_ismbbalpha**|\<mbctype.h>|
 |**_ismbbalpha_l**|\<mbctype.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

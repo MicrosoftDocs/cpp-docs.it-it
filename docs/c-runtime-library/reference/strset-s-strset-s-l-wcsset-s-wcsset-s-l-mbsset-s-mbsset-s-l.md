@@ -1,6 +1,6 @@
 ---
 title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsset_s
 - _wcsset_s_l
@@ -8,6 +8,10 @@ api_name:
 - _mbsset_s_l
 - _strset_s_l
 - _mbsset_s
+- _o__mbsset_s
+- _o__mbsset_s_l
+- _o__strset_s
+- _o__wcsset_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -61,19 +66,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: a962a333af2a7f5c75d1ce2eb3fb5ce797a5d7f2
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 599c991e2e9b4cee1515decdaf1050311d844a68
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626127"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317246"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
 Imposta i caratteri di una stringa su un carattere. Queste versioni di [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> non è possibile usare **_mbsset_s** e **_mbsset_s_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset_s** e **_mbsset_s_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -115,31 +120,33 @@ errno_t _mbsset_s_l(
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
+*Str*<br/>
 Stringa con terminazione Null da impostare.
 
-*numberOfElements*<br/>
-Dimensioni del buffer *Str* .
+*Sizeinbytes*<br/>
+Dimensione del buffer *str.*
 
-*c*<br/>
+*C*<br/>
 Impostazione del carattere.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero in caso di esito positivo e un codice di errore in caso contrario.
 
-Queste funzioni convalidano i rispettivi argomenti. Se *Str* è un puntatore null o se l'argomento *NumberOfElements* è minore o uguale a 0 oppure il blocco passato non ha terminazione null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**.
+Queste funzioni convalidano i rispettivi argomenti. Se *str* è un puntatore null o l'argomento *numberOfElements* è minore o uguale a 0 o il blocco passato non è con terminazione null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_strset_s** imposta tutti i caratteri di *Str* su *c* (convertiti in **char**), ad eccezione del carattere di terminazione null. **_wcsset_s** e **_mbsset_s** sono versioni a caratteri wide e a caratteri multibyte di **_strset_s**. I tipi di dati degli argomenti e dei valori restituiti variano di conseguenza. A parte ciò, queste funzioni si comportano in modo identico.
+La funzione **_strset_s** imposta tutti i caratteri di *str* su *c* (convertito in **char**), ad eccezione del carattere di terminazione null. **_wcsset_s** e **_mbsset_s** sono versioni a caratteri wide e a caratteri multibyte di **_strset_s**. I tipi di dati degli argomenti e dei valori restituiti variano di conseguenza. A parte ciò, queste funzioni si comportano in modo identico.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -156,9 +163,9 @@ Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il
 |**_strset_s_l**|\<tchar.h>|
 |**_wcsset_s**|\<string.h> o \<wchar.h>|
 |**_wcsset_s_l**|\<tchar.h>|
-|**_mbsset_s**, **_mbsset_s_l**|\<mbstring.h>|
+|**_mbsset_s** **, _mbsset_s_l**|\<mbstring.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -184,9 +191,9 @@ After:  *******************************
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

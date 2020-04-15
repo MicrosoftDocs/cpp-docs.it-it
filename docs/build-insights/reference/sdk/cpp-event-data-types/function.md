@@ -1,6 +1,6 @@
 ---
 title: Classe Function
-description: Riferimento C++ alla classe della funzione SDK per Build Insights.
+description: Informazioni di riferimento per la classe Function SDK di Build Insights in C.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3ff66119007ed7172fed7e824287ab8617c70973
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 69acbe4d6630de37120aec89a24a9f33d447009e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324717"
 ---
 # <a name="function-class"></a>Classe Function
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La classe `Function` viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usarlo per trovare la corrispondenza con un evento di [funzione](../event-table.md#function) .
+La `Function` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilizzarlo per trovare una corrispondenza con un evento [FUNCTION.](../event-table.md#function)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,9 +39,9 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-Insieme ai membri ereditati dalla relativa classe di base [Activity](activity.md) , la classe `Function` contiene i membri seguenti:
+Insieme ai membri ereditati dalla relativa `Function` classe base [Activity,](activity.md) la classe contiene i membri seguenti:
 
 ### <a name="constructors"></a>Costruttori
 
@@ -51,7 +51,7 @@ Insieme ai membri ereditati dalla relativa classe di base [Activity](activity.md
 
 [Nome](#name)
 
-## <a name="function"></a>Funzione
+## <a name="function"></a><a name="function"></a>Funzione
 
 ```cpp
 Function(const RawEvent& event);
@@ -59,10 +59,10 @@ Function(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametri
 
-*event*\
-Evento di [funzione](../event-table.md#function) .
+*Evento*\
+Un evento [FUNCTION.](../event-table.md#function)
 
-## <a name="name"></a> Name
+## <a name="name"></a><a name="name"></a>Nome
 
 ```cpp
 const char* Name() const;

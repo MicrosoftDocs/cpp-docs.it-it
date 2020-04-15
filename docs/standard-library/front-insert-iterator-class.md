@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 455db433aff1c1aa241beeb6e2435807959b7dd4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419084"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317153"
 ---
 # <a name="front_insert_iterator-class"></a>Classe front_insert_iterator
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parametri
 
-\ *contenitore*
+*Contenitore*\
 Tipo di contenitore nella cui parte iniziale devono essere inseriti gli elementi da un `front_insert_iterator`.
 
 ## <a name="remarks"></a>Osservazioni
@@ -48,23 +48,23 @@ Il contenitore deve soddisfare i requisiti di una sequenza di inserimento all'in
 |Nome tipo|Descrizione|
 |-|-|
 |[container_type](#container_type)|Tipo che rappresenta il contenitore in cui è necessario effettuare un inserimento all'inizio.|
-|[reference](#reference)|Tipo che fornisce un riferimento a un elemento di una sequenza controllata dal contenitore associato.|
+|[Riferimento](#reference)|Tipo che fornisce un riferimento a un elemento di una sequenza controllata dal contenitore associato.|
 
 ### <a name="operators"></a>Operatori
 
 |Operatore|Descrizione|
 |-|-|
-|[operator*](#op_star)|Operatore di dereferenziazione utilizzato per implementare l'espressione dell'iteratore di output \* `i` = `x` per un inserimento all'inizio.|
-|[operator++](#op_add_add)|Incrementa `front_insert_iterator` alla posizione successiva in cui è possibile archiviare un valore.|
-|[operator=](#op_eq)|Operatore di assegnazione usato per implementare l'espressione dell'iteratore di output \* `i` = `x` per un inserimento all'inizio.|
+|[operatore](#op_star)|Operatore di dereferenza utilizzato \* `i`  =  `x` per implementare l'espressione dell'iteratore di output per un inserimento frontale.|
+|[operatore .](#op_add_add)|Incrementa `front_insert_iterator` alla posizione successiva in cui è possibile archiviare un valore.|
+|[operatore di comando](#op_eq)|Operatore di assegnazione utilizzato \* `i`  =  `x` per implementare l'espressione dell'iteratore di output per un inserimento frontale.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**: \<iterator>
+**Intestazione**: \<> iteratore
 
 **Spazio dei nomi:** std
 
-## <a name="container_type"></a>  front_insert_iterator::container_type
+## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator::container_type
 
 Tipo che rappresenta il contenitore in cui è necessario effettuare un inserimento all'inizio.
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 10 20 ).
 */
 ```
 
-## <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator
+## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator::front_insert_iterator
 
 Crea un iteratore in grado di inserire elementi all'inizio di un oggetto contenitore specificato.
 
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>front_insert_iterator:: operator\*
+## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator::operatore\*
 
 Dereferenzia l'iteratore di inserimento restituendo l'elemento a cui punta.
 
@@ -183,7 +183,7 @@ La funzione membro restituisce il valore dell'elemento puntato.
 
 ### <a name="remarks"></a>Osservazioni
 
-Usato per implementare l'espressione dell'iteratore di output **\*Iter** = **value**. Se `Iter` è un iteratore che punta a un elemento in una sequenza, **\*Iter** = **valore** sostituirà tale elemento con Value e non modificherà il numero totale di elementi della sequenza.
+Utilizzato per implementare l'espressione dell'iteratore = **value** ** \*** di output Valore iter . Se `Iter` è un iteratore che punta a un elemento in una sequenza, = **il valore** ** \*Iter**sostituisce tale elemento con valore e non modifica il numero totale di elementi nella sequenza.
 
 ### <a name="example"></a>Esempio
 
@@ -230,7 +230,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_add_add"></a>  front_insert_iterator::operator++
+## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator::operator
 
 Incrementa `back_insert_iterator` alla posizione successiva in cui è possibile archiviare un valore.
 
@@ -281,7 +281,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="op_eq"></a>  front_insert_iterator::operator=
+## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator::operatore
 
 Accoda (inserisce mediante push) un valore all'inizio del contenitore.
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Valore da assegnare al contenitore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -343,7 +343,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="reference"></a>  front_insert_iterator::reference
+## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator::riferimento
 
 Tipo che fornisce un riferimento a un elemento di una sequenza controllata dal contenitore associato.
 
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<iterator>](../standard-library/iterator.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[\<>iteratore](../standard-library/iterator.md)\
+[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimenti per librerie standard di C](../standard-library/cpp-standard-library-reference.md)

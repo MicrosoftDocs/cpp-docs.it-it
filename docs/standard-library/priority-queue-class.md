@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 3591264efec87c2c3454d0f885c19b30b73ae51c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cef85eafaa3aab1c448234399f146191de957b8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458422"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322987"
 ---
 # <a name="priority_queue-class"></a>Classe priority_queue
 
@@ -40,7 +40,7 @@ class priority_queue
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo*\
+*digitare*\
 Tipo di dati degli elementi da archiviare nell'oggetto priority_queue.
 
 *Contenitore*\
@@ -49,11 +49,11 @@ Tipo del contenitore sottostante usato per implementare l'oggetto priority_queue
 *Confrontare*\
 Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nell'oggetto priority_queue. Questo argomento è facoltativo e il predicato binario `less<typename Container::value_type>` rappresenta il valore predefinito.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Gli elementi della classe `Type` stipulati nel primo parametro di modello di un oggetto Queue sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento nella classe `Container` di contenitore sottostante prevista dal secondo modello parametro. L' `Type` oggetto deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
+Gli elementi `Type` della classe stipulati nel primo parametro di modello di un oggetto coda sono `Container` sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento nella classe contenitore sottostante stipulata dal secondo parametro di modello. L'oggetto `Type` deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori a variabili di quel tipo.
 
-Priority_queue ordina la sequenza che controlla chiamando un oggetto funzione archiviato della classe `Traits`. In genere, gli elementi devono essere confrontabili come "minore di" per stabilire questo ordine: in modo che, dati qualsiasi due elementi, sia possibile determinare che sono equivalenti (ovvero che uno non è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. A un livello più tecnico, la funzione di confronto è un predicato binario che provoca un ordinamento di tipo "strict weak" nel senso matematico standard.
+Il priority_queue ordina la sequenza che controlla `Traits`chiamando un oggetto funzione memorizzato della classe . In genere, gli elementi devono essere confrontabili come "minore di" per stabilire questo ordine: in modo che, dati qualsiasi due elementi, sia possibile determinare che sono equivalenti (ovvero che uno non è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. A un livello più tecnico, la funzione di confronto è un predicato binario che provoca un ordinamento di tipo "strict weak" nel senso matematico standard.
 
 Le classi contenitore sottostanti idonee per l'oggetto priority_queue includono la [classe deque](../standard-library/deque-class.md), la [classe vector](../standard-library/vector-class.md) predefinita o qualsiasi altro contenitore sequenziale che supporta le operazioni di `front`, `push_back` e `pop_back`, nonché un iteratore ad accesso casuale. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
 
@@ -63,7 +63,7 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 
 - La [classe stack](../standard-library/stack-class.md) supporta una struttura di dati LIFO (Last-In, First-Out). Una buona analogia è costituita da una pila di piatti. Gli elementi (piatti) possono essere inseriti, ispezionati o rimossi solo dalla cima della pila/stack, ovvero l'ultimo elemento alla fine del contenitore di base. La restrizione relativa alla possibilità di accedere solo al primo elemento è il motivo per l'uso della classe stack.
 
-- La [classe queue](../standard-library/queue-class.md) supporta una struttura dei dati FIFO (First-In, First-Out). Una buona analogia è costituita da persone in coda davanti allo sportello di una banca. Gli elementi (persone) possono essere aggiunti alla fine della fila e vengono rimossi dalla parte iniziale della fila. È possibile ispezionare sia l'inizio che la fine della fila. La restrizione relativa alla possibilità di accedere solo agli elementi iniziali e finali in questo modo costituisce il motivo per l'uso della classe queue.
+- La [classe queue](../standard-library/queue-class.md) supporta una struttura di dati FIFO (first-in, first-out). Una buona analogia è costituita da persone in coda davanti allo sportello di una banca. Gli elementi (persone) possono essere aggiunti alla fine della fila e vengono rimossi dalla parte iniziale della fila. È possibile ispezionare sia l'inizio che la fine della fila. La restrizione relativa alla possibilità di accedere solo agli elementi iniziali e finali in questo modo costituisce il motivo per l'uso della classe queue.
 
 - L'oggetto priority_queue ordina gli elementi in modo che l'elemento più grande sia sempre in posizione iniziale. Supporta l'inserimento di un elemento e l'ispezione e la rimozione del primo elemento. Una buona analogia è costituita da una fila di persone disposte in base a età, altezza o qualche altro criterio.
 
@@ -73,23 +73,23 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 |-|-|
 |[priority_queue](#priority_queue)|Costruisce una `priority_queue` vuota o che rappresenta una copia di un intervallo di un oggetto contenitore di base o di un'altra `priority_queue`.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[container_type](#container_type)|Tipo che fornisce il contenitore di base che deve essere adattato da un oggetto `priority_queue`.|
 |[size_type](#size_type)|Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un `priority_queue`.|
-|[value_type](#value_type)|Tipo che rappresenta il tipo di oggetto archiviato come elemento in `priority_queue`.|
+|[Value_type](#value_type)|Tipo che rappresenta il tipo di oggetto archiviato come elemento in `priority_queue`.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
 |Funzione membro|Descrizione|
 |-|-|
-|[empty](#empty)|Verifica se `priority_queue` è vuoto.|
-|[pop](#pop)|Rimuove l'elemento più grande dalla posizione iniziale della `priority_queue`.|
+|[Vuoto](#empty)|Verifica se `priority_queue` è vuoto.|
+|[Pop](#pop)|Rimuove l'elemento più grande dalla posizione iniziale della `priority_queue`.|
 |[push](#push)|Aggiunge un elemento all'oggetto priority_queue in base alla priorità dell'elemento di operator<.|
-|[size](#size)|Restituisce il numero di elementi nel `priority_queue`.|
-|[top](#top)|Restituisce un riferimento const all'elemento più grande all'inizio della `priority_queue`.|
+|[Dimensione](#size)|Restituisce il numero di elementi nel `priority_queue`.|
+|[In alto](#top)|Restituisce un riferimento const all'elemento più grande all'inizio della `priority_queue`.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -97,7 +97,7 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 
 **Spazio dei nomi:** std
 
-## <a name="container_type"></a>  priority_queue::container_type
+## <a name="priority_queuecontainer_type"></a><a name="container_type"></a>priority_queue::container_type
 
 Tipo che fornisce il contenitore di base da adattare.
 
@@ -105,7 +105,7 @@ Tipo che fornisce il contenitore di base da adattare.
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello `Container`. La classe contenitore sequenziale della libreria standard C++ `deque` e la classe predefinita `vector` soddisfano i requisiti da usare come contenitore di base per un oggetto priority_queue. È anche possibile usare tipi definiti dall'utente che soddisfano i requisiti.
 
@@ -115,7 +115,7 @@ Per altre informazioni su `Container`, vedere la sezione Note dell'argomento [Cl
 
 Vedere l'esempio relativo a [priority_queue](#priority_queue) per indicazioni su come dichiarare e usare `container_type`.
 
-## <a name="empty"></a>  priority_queue::empty
+## <a name="priority_queueempty"></a><a name="empty"></a>priority_queue::vuoto
 
 Verifica se un oggetto priority_queue è vuoto.
 
@@ -161,7 +161,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.
 ```
 
-## <a name="pop"></a>  priority_queue::pop
+## <a name="priority_queuepop"></a><a name="pop"></a>priority_queue::pop
 
 Rimuove l'elemento più grande dalla prima posizione dell'oggetto priority_queue.
 
@@ -169,7 +169,7 @@ Rimuove l'elemento più grande dalla prima posizione dell'oggetto priority_queue
 void pop();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La classe priority_queue deve essere non vuota per applicare la funzione membro. L'inizio dell'oggetto priority_queue è sempre occupato dall'elemento più grande del contenitore.
 
@@ -217,7 +217,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.
 ```
 
-## <a name="priority_queue"></a>  priority_queue::priority_queue
+## <a name="priority_queuepriority_queue"></a><a name="priority_queue"></a>priority_queue::priority_queue
 
 Costruisce un oggetto priority_queue vuoto o che rappresenta una copia di un intervallo di un oggetto contenitore di base o di un altro oggetto priority_queue.
 
@@ -248,22 +248,22 @@ Funzione di confronto di tipo **constTraits** usata per ordinare gli elementi ne
 *_Cont*\
 Contenitore di base di cui l'oggetto priority_queue costruito deve essere una copia.
 
-*Ok*\
+*va bene*\
 Oggetto priority_queue di cui il set costruito deve essere una copia.
 
-*prima*\
+*Prima*\
 Posizione del primo elemento nell'intervallo di elementi da copiare.
 
 *Ultima*\
 Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Ognuno dei primi tre costruttori specifica un priority_queue iniziale vuoto, il secondo specifica anche il tipo di funzione di confronto (`comp`) da usare per stabilire l'ordine degli elementi e il terzo specifica `container_type`inmodoesplicito(`_Cont`) da utilizzare. La parola chiave **explicit** elimina alcuni tipi di conversione automatica del tipo.
+Ognuno dei primi tre costruttori specifica un priority_queue iniziale vuoto, il`comp`secondo specifica anche il tipo di funzione di confronto `container_type` (`_Cont`) da utilizzare per stabilire l'ordine degli elementi e il terzo specifica in modo esplicito il ( ) da utilizzare. La parola chiave **explicit** elimina alcuni tipi di conversione automatica del tipo.
 
 Il quarto costruttore specifica una copia del priority_queue *right*.
 
-Gli ultimi tre costruttori copiano l'intervallo \[ *First*, *Last*) di un contenitore e usano i valori per inizializzare un priority_queue con una maggiore esplicitità nell'impostazione del tipo di funzione di `Traits` confronto della classe e `container_type`.
+Gli ultimi tre costruttori \[copiano l'intervallo *primo*, *ultimo*) di un contenitore e utilizzano `Traits` i `container_type`valori per inizializzare un priority_queue con crescente esplicitezza nella specifica del tipo di funzione di confronto di class e .
 
 ### <a name="example"></a>Esempio
 
@@ -376,7 +376,7 @@ int main( )
 }
 ```
 
-## <a name="push"></a>  priority_queue::push
+## <a name="priority_queuepush"></a><a name="push"></a>priority_queue::push
 
 Aggiunge un elemento all'oggetto priority_queue in base alla priorità dell'elemento di operator<.
 
@@ -389,7 +389,7 @@ void push(const Type& val);
 *Val*\
 Elemento aggiunto all'inizio dell'oggetto priority_queue.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'inizio dell'oggetto priority_queue è la posizione occupata dall'elemento più grande del contenitore.
 
@@ -425,7 +425,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="size"></a>  priority_queue::size
+## <a name="priority_queuesize"></a><a name="size"></a>priority_queue::dimensione
 
 Restituisce il numero di elementi presenti nell'oggetto priority_queue.
 
@@ -466,7 +466,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.
 ```
 
-## <a name="size_type"></a>  priority_queue::size_type
+## <a name="priority_queuesize_type"></a><a name="size_type"></a>priority_queue::size_type
 
 Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un oggetto priority_queue.
 
@@ -474,7 +474,7 @@ Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un ogge
 typedef typename Container::size_type size_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del `size_type` del contenitore di base adattato dall'oggetto priority_queue.
 
@@ -482,7 +482,7 @@ Il tipo è un sinonimo del `size_type` del contenitore di base adattato dall'ogg
 
 Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`.
 
-## <a name="top"></a>  priority_queue::top
+## <a name="priority_queuetop"></a><a name="top"></a>priority_queue::superiore
 
 Restituisce un riferimento const all'elemento più grande all'inizio della classe priority_queue.
 
@@ -492,9 +492,9 @@ const_reference top() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento all'elemento più grande, come determinato dalla `Traits` funzione, oggetto di priority_queue.
+Riferimento all'elemento più grande, `Traits` come determinato dalla funzione, oggetto dell'priority_queue.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La classe priority_queue deve essere non vuota per applicare la funzione membro.
 
@@ -530,7 +530,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="value_type"></a>  priority_queue::value_type
+## <a name="priority_queuevalue_type"></a><a name="value_type"></a>priority_queue::value_type
 
 Tipo che rappresenta il tipo di oggetto archiviato come elemento in un oggetto priority_queue.
 
@@ -538,7 +538,7 @@ Tipo che rappresenta il tipo di oggetto archiviato come elemento in un oggetto p
 typedef typename Container::value_type value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del `value_type` del contenitore di base adattato dall'oggetto priority_queue.
 
@@ -574,5 +574,5 @@ The element at the top of the priority_queue is 69.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimenti per librerie standard di C](../standard-library/cpp-standard-library-reference.md)

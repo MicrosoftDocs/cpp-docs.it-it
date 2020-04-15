@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSmoothStopTransition [MFC], m_dblFinalValue
 - CSmoothStopTransition [MFC], m_maximumDuration
 ms.assetid: e1a4b476-6f96-43dd-90db-870a64406b85
-ms.openlocfilehash: 89496c1b867d6fbb498f56271de7b45afef7edc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ba550b4a0b9443d0681e17195687fb94c207ace
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323882"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318200"
 ---
 # <a name="csmoothstoptransition-class"></a>Classe CSmoothStopTransition
 
@@ -37,30 +37,30 @@ class CSmoothStopTransition : public CBaseTransition;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Costruisce una transizione a interruzione e inizializza la durata massima e il valore finale.|
+|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Costruisce una transizione smooth-stop e ne inizializza la durata massima e il valore finale.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSmoothStopTransition::Create](#create)|Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato. (Esegue l'override [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CSmoothStopTransition::Create](#create)|Chiama la libreria di transizione per creare un oggetto COM di transizione incapsulato. (Esegue l'override di [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione al termine della transizione.|
-|[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|La durata massima della transizione.|
+|[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|Valore della variabile di animazione alla fine della transizione.|
+|[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|Durata massima della transizione.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Una transizione a interruzione rallenta quanto si avvicina a un determinato valore finale e raggiunge con una velocità pari a zero. La durata della transizione è determinata dalla velocità iniziale, la differenza tra i valori iniziali e finali e la durata massima specificata. Se è presente alcuna soluzione costituita da un arco parabolico singolo, questo metodo crea una transizione cubica. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile allocata li utilizzando l'operatore new. L'oggetto incapsulato IUIAnimationTransition COM viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.
+Una transizione smooth-stop rallenta quando si avvicina a un determinato valore finale e lo raggiunge con una velocità pari a zero. La durata della transizione è determinata dalla velocità iniziale, dalla differenza tra i valori iniziale e finale e dalla durata massima specificata. Se non esiste una soluzione costituita da un singolo arco parabolico, questo metodo crea una transizione cubica. Poiché tutte le transizioni vengono cancellate automaticamente, si consiglia di allocare le autorizzazioni utilizzando operator new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController::AnimateGroup, fino a quel momento è NULL. La modifica delle variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition (Transizione di Base](../../mfc/reference/cbasetransition-class.md)
 
 [CSmoothStopTransition](../../mfc/reference/csmoothstoptransition-class.md)
 
@@ -68,9 +68,9 @@ Una transizione a interruzione rallenta quanto si avvicina a un determinato valo
 
 **Intestazione:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSmoothStopTransition::Create
+## <a name="csmoothstoptransitioncreate"></a><a name="create"></a>CSmoothStopTransition::Create
 
-Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato.
+Chiama la libreria di transizione per creare un oggetto COM di transizione incapsulato.
 
 ```
 virtual BOOL Create(
@@ -80,16 +80,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*pLibrary*<br/>
-Puntatore alla raccolta di transizione, che è responsabile per la creazione di transizioni standard.
+*pLibreria*<br/>
+Puntatore alla libreria di transizioni, responsabile della creazione di transizioni standard.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se transizione viene creata correttamente. in caso contrario, FALSE.
+TRUESe la transizione viene creata correttamente. in caso contrario, FALSE.
 
-##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition
+## <a name="csmoothstoptransitioncsmoothstoptransition"></a><a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition
 
-Costruisce una transizione a interruzione e inizializza la durata massima e il valore finale.
+Costruisce una transizione smooth-stop e ne inizializza la durata massima e il valore finale.
 
 ```
 CSmoothStopTransition(
@@ -99,23 +99,23 @@ CSmoothStopTransition(
 
 ### <a name="parameters"></a>Parametri
 
-*maximumDuration*<br/>
-La durata massima della transizione.
+*maximumDuration (Durata massima)*<br/>
+Durata massima della transizione.
 
-*dblFinalValue*<br/>
-Il valore della variabile di animazione al termine della transizione.
+*dblFinalValue (valore dblFinale)*<br/>
+Valore della variabile di animazione alla fine della transizione.
 
-##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue
+## <a name="csmoothstoptransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue
 
-Il valore della variabile di animazione al termine della transizione.
+Valore della variabile di animazione alla fine della transizione.
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_maximumduration"></a>  CSmoothStopTransition::m_maximumDuration
+## <a name="csmoothstoptransitionm_maximumduration"></a><a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration
 
-La durata massima della transizione.
+Durata massima della transizione.
 
 ```
 UI_ANIMATION_SECONDS m_maximumDuration;

@@ -1,6 +1,6 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - scalblnl
 - scalbnl
@@ -8,6 +8,12 @@ api_name:
 - scalblnf
 - scalbn
 - scalbln
+- _o_scalbln
+- _o_scalblnf
+- _o_scalblnl
+- _o_scalbn
+- _o_scalbnf
+- _o_scalbnl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d0c7f6db7ad6970be85203eef76e5ccb152e2200
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948908"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332593"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -97,23 +104,25 @@ long double scalblnl(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile.
 
-*exp*<br/>
+*Exp*<br/>
 Esponente dell'intero.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le **funzioni scalbn** restituiscono il valore *di x* \* **FLT_RADIX**<sup>Exp</sup> in caso di esito positivo. In caso di overflow (a seconda del segno di *x*), **scalbn** restituisce +/- **HUGE_VAL**; il valore **errno** è impostato su **ERANGE**.
+Le funzioni **scalbn** restituiscono il valore di *x* \* **FLT_RADIX**<sup>exp</sup> quando hanno esito positivo. In caso di overflow (a seconda del segno di *x*), **scalbn** restituisce HUGE_VAL **;** il valore **errno** è impostato su **ERANGE**.
 
-Per ulteriori informazioni su **errno** e sui possibili valori restituiti degli errori, vedere [errno, doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per ulteriori informazioni su **errno** e sui possibili valori restituiti di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**FLT_RADIX** è definito in \<float. h > come radice a virgola mobile nativa. nei sistemi binari, il valore è 2 e **scalbn** è equivalente a [ldexp](ldexp.md).
+**FLT_RADIX** è \<definito in float.h> come radice a virgola mobile nativa; sui sistemi binari, ha un valore di 2, e **scalbn** è equivalente a [ldexp](ldexp.md).
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **scalbn** e **scalbln** che accettano e restituiscono tipi **float** o **Long** **Double** . In un programma C **scalbn** accetta sempre un **valore** Double e un valore **Integer** e restituisce un **valore Double**e **scalbln** accetta sempre un **valore Double** e un oggetto **Long** e restituisce un **valore Double**.
+Dato che il linguaggio C, è possibile chiamare overload di **scalbn** e **scalbln** che accettano e restituiscono tipi **float** o **long** **double.** In un programma C, **scalbn** accetta sempre un **double** e un **int** e restituisce un **double**, e **scalbln** accetta sempre un **double** e un **long** e restituisce un **double**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -149,7 +158,7 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

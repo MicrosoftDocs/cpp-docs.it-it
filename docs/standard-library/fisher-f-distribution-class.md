@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: eb72c3abbe87bc975dbc3c99ffab9e77635c9df5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 2c6a976f3874d563f5bba600b9894ae0103625b0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319592"
 ---
 # <a name="fisher_f_distribution-class"></a>Classe fisher_f_distribution
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *RealType*
-Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*Tipo reale*\
+Il tipo di risultato a virgola mobile è **double**. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
-@No__t_1 *Generatore URNG*
-Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*URNG*\
+Il motore generatore di numeri casuali uniformi. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione F di Fisher. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o tipo **double** se non ne viene fornito alcuno, distribuito in base alla distribuzione F di Fisher. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ Il modello di classe descrive una distribuzione che produce valori di un tipo a 
 
 Le funzioni di proprietà `m()` e `n()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati `m` e `n`, rispettivamente.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto del parametro di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -94,7 +94,7 @@ La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cach
 
 Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
 
-Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
+Per ulteriori informazioni sulle classi di [ \< ](../standard-library/random.md)distribuzione e sui relativi membri, vedere random>.
 
 Per informazioni dettagliate, vedere l'articolo di Wolfram MathWorld relativo alla [distribuzione F](https://go.microsoft.com/fwlink/p/?linkid=400899).
 
@@ -237,7 +237,7 @@ Distribution for 10 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution::fisher_f_distribution
 
 Costruisce la distribuzione.
 
@@ -248,24 +248,24 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-\ *m*
+*M*\
 Parametro di distribuzione `m`.
 
-*n*\
+*N*\
 Parametro di distribuzione `n`.
 
-\ di *parmigiana*
+*Parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0.0 < m` e `0.0 < n`
 
 Il primo costruttore crea un oggetto il cui valore `m` archiviato include il valore *m* e il cui valore `n` archiviato include il valore *n*.
 
-Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
+Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="param_type"></a>  fisher_f_distribution::param_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::param_type
 
 Archivia i parametri della distribuzione.
 
@@ -283,16 +283,16 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-\ *m*
+*M*\
 Parametro di distribuzione `m`.
 
-*n*\
+*N*\
 Parametro di distribuzione `n`.
 
-\ a *destra*
+*va bene*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0.0 < m` e `0.0 < n`
 
@@ -300,4 +300,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)
+[\<>casuali](../standard-library/random.md)
