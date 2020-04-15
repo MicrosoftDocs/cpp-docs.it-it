@@ -87,7 +87,7 @@
                   topicHref: /cpp/data/odbc/open-database-connectivity-odbc
             - name: 'Modificare, esplorare ed effettuare il refactoring del codice'
               tocHref: /cpp/ide
-              topicHref: /cpp/overview-of-cpp-development
+              topicHref: /cpp/ide/read-and-understand-code-cpp
               items:
                 - name: IDE
                   tocHref: /cpp/ide/
@@ -109,7 +109,7 @@
             - name: Testo e stringhe
               tocHref: /cpp/text/
               topicHref: /cpp/text/text-and-strings-in-visual-cpp
-            - name: Sicurezza
+            - name: Security
               tocHref: /cpp/security
               topicHref: /cpp/security/security-best-practices-for-cpp
             - name: Cloud e Web

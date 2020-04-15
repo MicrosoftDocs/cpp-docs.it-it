@@ -7,10 +7,10 @@ author: jasongroce
 ms.author: jasgro
 ms.topic: landing-page
 ms.openlocfilehash: d250a1586b4cf01dfae2a39b7d595b60c53a5123
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "78171454"
 ---
 # <a name="mobile-development-with-c-documentation"></a>Documentazione per lo sviluppo di app per dispositivi mobili con C++

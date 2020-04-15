@@ -162,7 +162,7 @@
       href: specifying-the-threading-model-for-a-project-atl.md
     - name: Classi di moduli ATL
       href: atl-module-classes.md
-    - name: Servizi ATL
+    - name: ATL (servizi)
       expanded: false
       items:
         - name: Servizi ATL
@@ -179,7 +179,7 @@
           href: registry-entries.md
         - name: DCOMCNFG
           href: dcomcnfg.md
-        - name: Suggerimenti sul debug
+        - name: Suggerimenti relativi al debug
           expanded: false
           items:
             - name: Suggerimenti sul debug
