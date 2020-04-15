@@ -50,16 +50,16 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: b927012f241c30b1beec23ff7e0bbc9e8302d8da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296605"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368824"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Classe CMFCRibbonStatusBar
 
-Il `CMFCRibbonStatusBar` classe implementa un controllo barra di stato che possa visualizzare gli elementi della barra multifunzione.
+La `CMFCRibbonStatusBar` classe implementa un controllo barra di stato che può visualizzare gli elementi della barra multifunzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -73,45 +73,45 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|Aggiunge un elemento dinamico per la barra di stato della barra multifunzione.|
+|[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|Aggiunge un elemento dinamico alla barra di stato della barra multifunzione.|
 |[CMFCRibbonStatusBar::AddElement](#addelement)|Aggiunge un nuovo elemento della barra multifunzione alla barra di stato della barra multifunzione.|
-|[CMFCRibbonStatusBar::AddExtendedElement](#addextendedelement)|Aggiunge un elemento della barra multifunzione nell'area estesa della barra di stato della barra multifunzione.|
-|[CMFCRibbonStatusBar::AddSeparator](#addseparator)|Aggiunge un separatore per la barra di stato della barra multifunzione.|
+|[CMFCRibbonStatusBar::AddExtendedElement](#addextendedelement)|Aggiunge un elemento della barra multifunzione all'area estesa della barra di stato della barra multifunzione.|
+|[CMFCRibbonStatusBar::AddSeparator](#addseparator)|Aggiunge un separatore alla barra di stato della barra multifunzione.|
 |[CMFCRibbonStatusBar::Create](#create)|Crea una barra di stato della barra multifunzione.|
 |[CMFCRibbonStatusBar::CreateEx](#createex)|Crea una barra di stato della barra multifunzione con uno stile esteso.|
 |[CMFCRibbonStatusBar::FindByID](#findbyid)||
-|[CMFCRibbonStatusBar::FindElement](#findelement)|Restituisce un puntatore all'elemento che ha l'ID del comando specificato.|
+|[CMFCRibbonStatusBar::FindElement](#findelement)|Restituisce un puntatore all'elemento con l'ID di comando specificato.|
 |[CMFCRibbonStatusBar::GetCount](#getcount)|Restituisce il numero di elementi che si trovano nell'area principale della barra di stato della barra multifunzione.|
-|[CMFCRibbonStatusBar::GetElement](#getelement)|Restituisce un puntatore all'elemento che si trova in corrispondenza dell'indice specificato.|
+|[CMFCRibbonStatusBar::GetElement](#getelement)|Restituisce un puntatore all'elemento che si trova in corrispondenza di un indice specificato.|
 |[CMFCRibbonStatusBar::GetExCount](#getexcount)|Restituisce il numero di elementi che si trovano nell'area estesa della barra di stato della barra multifunzione.|
 |[CMFCRibbonStatusBar::GetExElement](#getexelement)|Restituisce un puntatore all'elemento situato in corrispondenza dell'indice specificato nell'area estesa della barra di stato multifunzione.|
 |[CMFCRibbonStatusBar::GetExtendedArea](#getextendedarea)||
 |[CMFCRibbonStatusBar::GetSpace](#getspace)||
 |[CMFCRibbonStatusBar::IsBottomFrame](#isbottomframe)||
 |[CMFCRibbonStatusBar::IsExtendedElement](#isextendedelement)||
-|[CMFCRibbonStatusBar::IsInformationMode](#isinformationmode)|Determina se la modalità di informazioni viene abilitata per la barra di stato della barra multifunzione.|
-|[CMFCRibbonStatusBar::RecalcLayout](#recalclayout)|(Esegue l'override [CMFCRibbonBar::RecalcLayout](../../mfc/reference/cmfcribbonbar-class.md#recalclayout).)|
+|[CMFCRibbonStatusBar::IsInformationMode](#isinformationmode)|Determina se la modalità informazioni è abilitata per la barra di stato della barra multifunzione.|
+|[CMFCRibbonStatusBar::RecalcLayout](#recalclayout)|(Esegue l'override [di CMFCRibbonBar::RecalcLayout](../../mfc/reference/cmfcribbonbar-class.md#recalclayout).)|
 |[CMFCRibbonStatusBar::RemoveAll](#removeall)|Rimuove tutti gli elementi dalla barra di stato della barra multifunzione.|
-|[CMFCRibbonStatusBar::RemoveElement](#removeelement)|Rimuove l'elemento che presenta un ID di comando specificato dalla barra di stato della barra multifunzione.|
+|[CMFCRibbonStatusBar::RemoveElement](#removeelement)|Rimuove l'elemento con un ID di comando specificato dalla barra di stato della barra multifunzione.|
 |[CMFCRibbonStatusBar::SetInformation](#setinformation)|Abilita o disabilita la modalità di informazioni per la barra di stato della barra multifunzione.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|Visualizza la stringa di informazioni che viene visualizzato sulla barra quando è abilitata la modalità di informazioni di stato della barra multifunzione.|
+|[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|Visualizza la stringa di informazioni visualizzata sulla barra di stato della barra multifunzione quando la modalità informazioni è abilitata.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Gli utenti possono modificare la visibilità degli elementi della barra multifunzione in una barra di stato della barra multifunzione usando il menu di scelta rapida predefiniti per la barra di stato della barra multifunzione. È possibile aggiungere o rimuovere elementi in modo dinamico.
+Gli utenti possono modificare la visibilità degli elementi della barra multifunzione in una barra di stato della barra multifunzione utilizzando il menu di scelta rapida incorporato per la barra di stato della barra multifunzione. È possibile aggiungere o rimuovere elementi in modo dinamico.
 
-Una barra di stato della barra multifunzione dispone di due aree: un'area principale e un'area estesa. L'area estesa viene visualizzato sul lato destro della barra di stato della barra multifunzione e viene visualizzato in un colore diverso rispetto a quelle dell'area principale.
+Una barra di stato della barra multifunzione ha due aree: un'area principale e un'area estesa. L'area estesa viene visualizzata sul lato destro della barra di stato della barra multifunzione e viene visualizzata in un colore diverso rispetto all'area principale.
 
-In genere, l'area principale della barra di stato vengono visualizzate notifiche di stato e l'area estesa vengono visualizzati i controlli di visualizzazione. L'area estesa rimane visibile più a lungo possibile quando l'utente ridimensiona la barra di stato della barra multifunzione.
+In genere, nell'area principale della barra di stato vengono visualizzate le notifiche di stato e nell'area estesa vengono visualizzati i controlli di visualizzazione. L'area estesa rimane visibile il più a lungo possibile quando l'utente ridimensiona la barra di stato della barra multifunzione.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonStatusBar` . L'esempio illustra come aggiungere un nuovo elemento della barra multifunzione alla barra di stato della barra multifunzione, aggiungere un elemento della barra multifunzione all'area estesa della barra di stato della barra multifunzione, aggiungere un separatore e abilitare la modalità standard per la barra di stato della barra multifunzione.
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonStatusBar` . Nell'esempio viene illustrato come aggiungere un nuovo elemento della barra multifunzione alla barra di stato della barra multifunzione, aggiungere un elemento della barra multifunzione all'area estesa della barra di stato della barra multifunzione, aggiungere un separatore e abilitare la modalità normale per la barra di stato della barra multifunzione.
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -134,11 +134,11 @@ L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonSta
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxribbonstatusbar. h
+**Intestazione:** afxribbonstatusbar.h
 
-##  <a name="adddynamicelement"></a>  CMFCRibbonStatusBar::AddDynamicElement
+## <a name="cmfcribbonstatusbaradddynamicelement"></a><a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement
 
-Aggiunge un elemento dinamico per la barra di stato della barra multifunzione.
+Aggiunge un elemento dinamico alla barra di stato della barra multifunzione.
 
 ```
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
@@ -146,14 +146,14 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 
 ### <a name="parameters"></a>Parametri
 
-*pElement*<br/>
-[in] Un puntatore a un elemento dinamico.
+*pElemento*<br/>
+[in] Puntatore a un elemento dinamico.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-A differenza dei normali elementi, elementi dinamici non sono personalizzabili e queste non vengono visualizzate nel menu di personalizzazione della barra di stato.
+A differenza degli elementi normali, gli elementi dinamici non sono personalizzabili e il menu Personalizza della barra di stato non li visualizza.
 
-##  <a name="addelement"></a>  CMFCRibbonStatusBar::AddElement
+## <a name="cmfcribbonstatusbaraddelement"></a><a name="addelement"></a>CMFCRibbonStatusBar::AddElement
 
 Aggiunge un nuovo elemento della barra multifunzione alla barra di stato della barra multifunzione.
 
@@ -166,18 +166,18 @@ void AddElement(
 
 ### <a name="parameters"></a>Parametri
 
-*pElement*<br/>
-[in] Un puntatore all'elemento aggiunto.
+*pElemento*<br/>
+[in] Puntatore all'elemento aggiunto.
 
-*lpszLabel*<br/>
-[in] Un'etichetta di testo dell'elemento.
+*lpszLabel (etichetta di un'etichetta di base)*<br/>
+[in] Etichetta di testo dell'elemento.
 
-*bIsVisible*<br/>
-[in] TRUE se si desidera aggiungere l'elemento come visibile, FALSE se si desidera aggiungere l'elemento come nascosto.
+*bIsVisibile*<br/>
+[in] TRUEse si desidera aggiungere l'elemento come visibile, FALSE se si desidera aggiungere l'elemento come nascosto.
 
-##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement
+## <a name="cmfcribbonstatusbaraddextendedelement"></a><a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement
 
-Aggiunge un elemento della barra multifunzione nell'area estesa della barra di stato della barra multifunzione.
+Aggiunge un elemento della barra multifunzione all'area estesa della barra di stato della barra multifunzione.
 
 ```
 void AddExtendedElement(
@@ -188,32 +188,32 @@ void AddExtendedElement(
 
 ### <a name="parameters"></a>Parametri
 
-*pElement*<br/>
-[in] Un puntatore all'elemento aggiunto.
+*pElemento*<br/>
+[in] Puntatore all'elemento aggiunto.
 
-*lpszLabel*<br/>
-[in] L'etichetta di testo dell'elemento.
+*lpszLabel (etichetta di un'etichetta di base)*<br/>
+[in] Etichetta di testo dell'elemento.
 
-*bIsVisible*<br/>
-[in] TRUE se si desidera aggiungere l'elemento come visibile, FALSE se si desidera aggiungere l'elemento come nascosto.
+*bIsVisibile*<br/>
+[in] TRUEse si desidera aggiungere l'elemento come visibile, FALSE se si desidera aggiungere l'elemento come nascosto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'area estesa si trova a destra della barra di stato.
 
-##  <a name="addseparator"></a>  CMFCRibbonStatusBar::AddSeparator
+## <a name="cmfcribbonstatusbaraddseparator"></a><a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator
 
-Aggiunge un separatore per la barra di stato della barra multifunzione.
+Aggiunge un separatore alla barra di stato della barra multifunzione.
 
 ```
 void AddSeparator();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il framework aggiunge un separatore dopo il metodo [CMFCRibbonStatusBar::AddElement](#addelement). Inserisce l'ultimo elemento.
+Il framework aggiunge un separatore dopo il metodo [CMFCRibbonStatusBar::AddElement](#addelement). inserisce l'ultimo elemento.
 
-##  <a name="create"></a>  CMFCRibbonStatusBar::Create
+## <a name="cmfcribbonstatusbarcreate"></a><a name="create"></a>CMFCRibbonStatusBar::Create
 
 Crea una barra di stato della barra multifunzione.
 
@@ -226,20 +226,20 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*pParentWnd*<br/>
+*pParentWnd (informazioni in due)*<br/>
 [in] Puntatore alla finestra padre.
 
-*dwStyle*<br/>
-[in] Combinazione OR logica di stili del controllo.
+*DwStyle (in stile dwStyle)*<br/>
+[in] Combinazione logica OR di stili di controllo.
 
 *nID*<br/>
 [in] ID di controllo della barra di stato.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la barra di stato è stata creata correttamente, FALSE in caso contrario.
+TRUESe la barra di stato viene creata correttamente, FALSE in caso contrario.
 
-##  <a name="createex"></a>  CMFCRibbonStatusBar::CreateEx
+## <a name="cmfcribbonstatusbarcreateex"></a><a name="createex"></a>CMFCRibbonStatusBar::CreateEx
 
 Crea una barra di stato della barra multifunzione con uno stile esteso.
 
@@ -253,25 +253,25 @@ BOOL CreateEx(
 
 ### <a name="parameters"></a>Parametri
 
-*pParentWnd*<br/>
+*pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra padre.
 
 *dwCtrlStyle*<br/>
-Combinazione OR logica di stili aggiuntivi per la creazione dell'oggetto barra di stato.
+Combinazione logica OR di stili aggiuntivi per la creazione dell'oggetto barra di stato.
 
-*dwStyle*<br/>
-Lo stile del controllo della barra di stato.
+*DwStyle (in stile dwStyle)*<br/>
+Stile di controllo della barra di stato.
 
 *nID*<br/>
 ID di controllo della barra di stato.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la barra di stato è stata creata correttamente, FALSE in caso contrario.
+TRUESe la barra di stato viene creata correttamente, FALSE in caso contrario.
 
-##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID
+## <a name="cmfcribbonstatusbarfindbyid"></a><a name="findbyid"></a>CMFCRibbonStatusBar::FindByID
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
@@ -279,16 +279,16 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *uiCmdID*<br/>
+[in] *uiCmdID (informazioni in questo icomando)*<br/>
 [in] *BOOL*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="findelement"></a>  CMFCRibbonStatusBar::FindElement
+## <a name="cmfcribbonstatusbarfindelement"></a><a name="findelement"></a>CMFCRibbonStatusBar::FindElement
 
-Restituisce un puntatore all'elemento che ha l'ID del comando specificato.
+Restituisce un puntatore all'elemento con l'ID di comando specificato.
 
 ```
 CMFCRibbonBaseElement* FindElement(UINT uiID);
@@ -297,13 +297,13 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ### <a name="parameters"></a>Parametri
 
 *uiID*<br/>
-[in] L'ID dell'elemento.
+[in] ID dell'elemento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore all'elemento che ha l'ID del comando specificato. NULL se tale elemento non esiste.
+Puntatore all'elemento con l'ID di comando specificato. NULL se non è presente alcun elemento di questo tipo.
 
-##  <a name="getcount"></a>  CMFCRibbonStatusBar::GetCount
+## <a name="cmfcribbonstatusbargetcount"></a><a name="getcount"></a>CMFCRibbonStatusBar::GetCount
 
 Restituisce il numero di elementi che si trovano nell'area principale della barra di stato della barra multifunzione.
 
@@ -315,9 +315,9 @@ int GetCount() const;
 
 Il numero di elementi che si trovano nell'area principale della barra di stato della barra multifunzione.
 
-##  <a name="getelement"></a>  CMFCRibbonStatusBar::GetElement
+## <a name="cmfcribbonstatusbargetelement"></a><a name="getelement"></a>CMFCRibbonStatusBar::GetElement
 
-Restituisce un puntatore all'elemento che si trova in corrispondenza dell'indice specificato.
+Restituisce un puntatore all'elemento che si trova in corrispondenza di un indice specificato.
 
 ```
 CMFCRibbonBaseElement* GetElement(int nIndex);
@@ -326,15 +326,15 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-[in] Specifica un indice in base zero di un elemento che si trova nell'area principale del controllo indicatore di stato.
+[in] Specifica un indice in base zero di un elemento che si trova nell'area principale del controllo barra di stato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore all'elemento situato in corrispondenza dell'indice specificato. NULL se l'indice è un valore negativo o supera il numero di elementi nella barra di stato.
+Puntatore all'elemento che si trova in corrispondenza dell'indice specificato. NULL se l'indice è negativo o supera il numero di elementi nella barra di stato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getexcount"></a>  CMFCRibbonStatusBar::GetExCount
+## <a name="cmfcribbonstatusbargetexcount"></a><a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount
 
 Restituisce il numero di elementi che si trovano nell'area estesa della barra di stato della barra multifunzione.
 
@@ -344,9 +344,9 @@ int GetExCount() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di elementi che si trovano nell'area estesa della barra di stato della barra multifunzione.
+Numero di elementi che si trovano nell'area estesa della barra di stato della barra multifunzione.
 
-##  <a name="getexelement"></a>  CMFCRibbonStatusBar::GetExElement
+## <a name="cmfcribbonstatusbargetexelement"></a><a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement
 
 Restituisce un puntatore all'elemento situato in corrispondenza dell'indice specificato nell'area estesa della barra di stato multifunzione. L'area estesa si trova a destra della barra di stato.
 
@@ -357,17 +357,17 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-[in] Specifica l'indice in base zero di un elemento che si trova nell'area estesa della barra di stato.
+[in] Specifica l'indice in base zero di un elemento che si trova nell'area estesa del controllo barra di stato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Puntatore all'elemento situato in corrispondenza dell'indice specificato nell'area estesa della barra di stato multifunzione. NULL se *nIndex* è negativo o supera il numero di elementi nell'area estesa della barra di stato della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea
+## <a name="cmfcribbonstatusbargetextendedarea"></a><a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 virtual BOOL GetExtendedArea(CRect& rect) const;
@@ -379,11 +379,11 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace
+## <a name="cmfcribbonstatusbargetspace"></a><a name="getspace"></a>CMFCRibbonStatusBar::GetSpace
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 int GetSpace() const;
@@ -391,11 +391,11 @@ int GetSpace() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame
+## <a name="cmfcribbonstatusbarisbottomframe"></a><a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 BOOL IsBottomFrame() const;
@@ -403,11 +403,11 @@ BOOL IsBottomFrame() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement
+## <a name="cmfcribbonstatusbarisextendedelement"></a><a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
@@ -415,15 +415,15 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pElement*<br/>
+[in] *pElemento*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isinformationmode"></a>  CMFCRibbonStatusBar::IsInformationMode
+## <a name="cmfcribbonstatusbarisinformationmode"></a><a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode
 
-Determina se la modalità di informazioni viene abilitata per la barra di stato della barra multifunzione.
+Determina se la modalità informazioni è abilitata per la barra di stato della barra multifunzione.
 
 ```
 BOOL IsInformationMode() const;
@@ -431,15 +431,15 @@ BOOL IsInformationMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la barra di stato può funzionare in modalità di informazioni. in caso contrario, FALSE.
+TRUESe la barra di stato può funzionare in modalità informazioni. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-In modalità di informazioni, la barra di stato nasconde tutti i riquadri regolari e visualizza una stringa di messaggio.
+In modalità informazioni, la barra di stato nasconde tutti i riquadri normali e visualizza una stringa di messaggio.
 
-##  <a name="ondrawinformation"></a>  CMFCRibbonStatusBar::OnDrawInformation
+## <a name="cmfcribbonstatusbarondrawinformation"></a><a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation
 
-Visualizza la stringa visualizzata sulla barra quando è abilitata la modalità di informazioni di stato della barra multifunzione.
+Visualizza la stringa visualizzata sulla barra di stato della barra multifunzione quando è attivata la modalità informazioni.
 
 ```
 virtual void OnDrawInformation(
@@ -454,26 +454,26 @@ virtual void OnDrawInformation(
 [in] Puntatore a un contesto di dispositivo.
 
 *strInfo*<br/>
-[in] La stringa di informazioni.
+[in] Stringa di informazioni.
 
-*rectInfo*<br/>
-[in] Il rettangolo di delimitazione.
+*rectInfo (Informazioni in rect)*<br/>
+[in] Rettangolo di delimitazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'override del metodo in una classe derivata se si desidera personalizzare l'aspetto della stringa di informazioni sulla barra di stato. Usare la [CMFCRibbonStatusBar::SetInformation](#setinformation) metodo per mettere la barra di stato in modalità di informazioni. In questa modalità, la barra di stato nasconde tutti i riquadri e Visualizza la stringa di informazioni specificata da *strInfo*.
+Eseguire l'override di questo metodo in una classe derivata se si desidera personalizzare l'aspetto della stringa di informazioni sulla barra di stato. Utilizzare il [CMFCRibbonStatusBar::SetInformation](#setinformation) metodo per impostare la barra di stato in modalità informazioni. In questa modalità, la barra di stato nasconde tutti i riquadri e visualizza la stringa di informazioni specificata da *strInfo*.
 
-##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout
+## <a name="cmfcribbonstatusbarrecalclayout"></a><a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
+Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
 ```
 virtual void RecalcLayout();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="removeall"></a>  CMFCRibbonStatusBar::RemoveAll
+## <a name="cmfcribbonstatusbarremoveall"></a><a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll
 
 Rimuove tutti gli elementi dalla barra di stato della barra multifunzione.
 
@@ -481,9 +481,9 @@ Rimuove tutti gli elementi dalla barra di stato della barra multifunzione.
 void RemoveAll();
 ```
 
-##  <a name="removeelement"></a>  CMFCRibbonStatusBar::RemoveElement
+## <a name="cmfcribbonstatusbarremoveelement"></a><a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement
 
-Rimuove l'elemento che presenta un ID di comando specificato dalla barra di stato della barra multifunzione.
+Rimuove l'elemento con un ID di comando specificato dalla barra di stato della barra multifunzione.
 
 ```
 BOOL RemoveElement(UINT uiID);
@@ -496,9 +496,9 @@ BOOL RemoveElement(UINT uiID);
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se un elemento con l'oggetto specificato *uiID* viene rimosso. FALSE in caso contrario.
+TRUESe un elemento con *l'uiID* specificato viene rimosso. In caso contrario, FALSE.
 
-##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation
+## <a name="cmfcribbonstatusbarsetinformation"></a><a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation
 
 Abilita o disabilita la modalità di informazioni per la barra di stato della barra multifunzione.
 
@@ -508,19 +508,19 @@ void SetInformation(LPCTSTR lpszInfo);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszInfo*<br/>
-[in] La stringa di informazioni.
+*lpszInfo (informazioni in base alle informazioni in stato di in*<br/>
+[in] Stringa di informazioni.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare questo metodo per inserire la barra di stato nella modalità di informazioni. In questa modalità, la barra di stato nasconde tutti i riquadri e Visualizza la stringa di informazioni specificata da *lpszInfo*.
+Utilizzare questo metodo per mettere la barra di stato in modalità informazioni. In questa modalità, la barra di stato nasconde tutti i riquadri e visualizza la stringa di informazioni specificata da *lpszInfo*.
 
-Quando lpszInfo è NULL, la barra di stato viene ripristinato alla modalità normale.
+Quando lpszInfo è NULL, la barra di stato torna alla modalità normale.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)<br/>
-[Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
+[CMFCRibbonBaseElement (classe)](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

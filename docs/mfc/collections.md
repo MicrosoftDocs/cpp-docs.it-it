@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fba3a3c6cd3fecbda7f46575b1d72c450c44019
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383846"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361860"
 ---
 # <a name="collections"></a>Raccolte
 
@@ -30,22 +30,22 @@ La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti.
 
 - [Classi Collection create da modelli C++](#_core_the_template_based_collection_classes)
 
-- [Classi Collection non create da modelli](#_core_the_collection_classes_not_based_on_templates)
+- [Classi di raccolta non create da modelli C++](#_core_the_collection_classes_not_based_on_templates)
 
 > [!NOTE]
->  Se nel codice vengono già utilizzate le classi Collection non create da modelli, è possibile continuare a utilizzarle. Se si scrivono nuove classi di raccolta indipendenti dai tipi per i tipi di dati personalizzati, si consiglia di utilizzare le classi basate su modelli, che sono più recenti.
+> Se nel codice vengono già utilizzate le classi Collection non create da modelli, è possibile continuare a utilizzarle. Se si scrivono nuove classi di raccolta indipendenti dai tipi per i tipi di dati personalizzati, si consiglia di utilizzare le classi basate su modelli, che sono più recenti.
 
-##  <a name="_core_collection_shapes"></a> Forme di raccolta
+## <a name="collection-shapes"></a><a name="_core_collection_shapes"></a>Forme raccolta
 
 Una classe di raccolta è caratterizzata dalla "forma" e dai tipi dei relativi elementi. La forma fa riferimento al modo in cui gli oggetti sono organizzati e archiviati dalla raccolta. MFC offre tre forme base di raccolta: elenchi, matrici e mappe (denominate anche dizionari). È possibile selezionare la forma di raccolta più appropriata al problema di programmazione specifico.
 
-Più avanti in questo argomento viene descritta brevemente ciascuna delle forme di raccolta fornite. Per confrontare le funzionalità delle forme che consentono di decidere quale sia ottimale per il programma, vedere [suggerimenti per la scelta di una classe Collection](../mfc/recommendations-for-choosing-a-collection-class.md).
+Più avanti in questo argomento viene descritta brevemente ciascuna delle forme di raccolta fornite. Per confrontare le caratteristiche delle forme per decidere quale è la scelta più adatta al programma, vedere [Raccomandazioni per](../mfc/recommendations-for-choosing-a-collection-class.md)la scelta di una classe di raccolta .
 
-- List
+- Elenco
 
    La classe elenco fornisce un elenco di elementi ordinato e non indicizzato, implementato come elenco a doppio collegamento. Un elenco ha un inizio e una fine e aggiungere o rimuovere elementi dall'inizio o dalla fine o inserire o eliminare elementi al centro è molto veloce.
 
-- Matrice
+- Array
 
    La classe array fornisce una matrice di oggetti dinamicamente ridimensionata, ordinata e indicizzata per interi.
 
@@ -53,9 +53,9 @@ Più avanti in questo argomento viene descritta brevemente ciascuna delle forme 
 
    Una mappa è una raccolta che associa un oggetto chiave a un oggetto valore.
 
-##  <a name="_core_the_template_based_collection_classes"></a> Le classi Collection basate su modello
+## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a>Classi di raccolte basate su modelliThe Template-Based Collection Classes
 
-Il modo più semplice per implementare una raccolta indipendente dai tipi che contiene oggetti di qualsiasi tipo consiste nell'utilizzare una delle classi MFC basate su modelli. Per esempi di queste classi, vedere l'esempio MFC [raccogliere](../overview/visual-cpp-samples.md).
+Il modo più semplice per implementare una raccolta indipendente dai tipi che contiene oggetti di qualsiasi tipo consiste nell'utilizzare una delle classi MFC basate su modelli. Per esempi di queste classi, vedere l'esempio MFC [COLLECT](../overview/visual-cpp-samples.md).
 
 Nella tabella seguente vengono elencate le classi Collection MFC basate su modelli.
 
@@ -66,7 +66,7 @@ Nella tabella seguente vengono elencate le classi Collection MFC basate su model
 |Raccolte di oggetti di qualsiasi tipo|`CArray`|`CList`|`CMap`|
 |Raccolte di puntatori a oggetti di qualsiasi tipo|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
 
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a> Le classi Collection non basate su modelli
+## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a>Classi di raccolte non basate su modelliThe Collection Classes Not Based on Templates
 
 Se nell'applicazione vengono utilizzate già le classi di raccolta MFC non create da modelli, è possibile continuare a utilizzarle. Tuttavia, per le nuove raccolte, si consiglia di utilizzare le classi basate su modelli. Nella tabella seguente sono elencate le classi Collection MFC che non sono basate su modelli.
 
@@ -82,7 +82,7 @@ Se nell'applicazione vengono utilizzate già le classi di raccolta MFC non creat
 |`CWordArray`||`CMapWordToOb`|
 |`CUIntArray`||`CMapWordToPtr`|
 
-Nella tabella caratteristiche delle classi di raccolta MFC [suggerimenti per la scelta di una classe Collection](../mfc/recommendations-for-choosing-a-collection-class.md) vengono descritte le classi di raccolta MFC in termini di queste caratteristiche (diverse dalla forma):
+Le caratteristiche della tabella Classi di raccolte MFC nella tabella Suggerimenti per la scelta di [una classe](../mfc/recommendations-for-choosing-a-collection-class.md) di insiemi descrivono le classi di raccolte MFC in termini di queste caratteristiche (diverse dalla forma):
 
 - Se la classe utilizza modelli C++
 
@@ -92,7 +92,7 @@ Nella tabella caratteristiche delle classi di raccolta MFC [suggerimenti per la 
 
 - Se la raccolta è indipendente dai tipi
 
-### <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire
+### <a name="what-do-you-want-to-do"></a>Cosa vuoi fare
 
 #### <a name="general-collection-class-tasks"></a>Attività generali della classe Collection
 
@@ -100,9 +100,9 @@ Nella tabella caratteristiche delle classi di raccolta MFC [suggerimenti per la 
 
 - [Procedura: Creare una raccolta indipendente dai tipi](../mfc/how-to-make-a-type-safe-collection.md)
 
-- [Creazione di raccolte di stack e code](../mfc/creating-stack-and-queue-collections.md)
+- [Creazione di raccolta Stack e Code](../mfc/creating-stack-and-queue-collections.md)
 
-- [CArray::Add](../mfc/reference/carray-class.md#add)
+- [CArray::Aggiungi](../mfc/reference/carray-class.md#add)
 
 #### <a name="template-based-collection-class-tasks"></a>Attività delle classi di raccolta basate su modello
 

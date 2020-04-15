@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: f4fb43a4223cad8cc63049d2a0f8345e48b90f17
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2e748b1da02394e1f70afd8b92947e1291957c62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139967"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368074"
 ---
 # <a name="iumsthreadproxy-structure"></a>Struttura IUMSThreadProxy
 
@@ -29,33 +29,33 @@ Astrazione per un thread di esecuzione. Se si vuole che all'utilità di pianific
 struct IUMSThreadProxy : public IThreadProxy;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IUMSThreadProxy:: EnterCriticalRegion](#entercriticalregion)|Chiamato per accedere a un'area critica. Quando si trova all'interno di un'area critica, l'utilità di pianificazione non osserverà le operazioni di blocco asincrone che si verificano durante l'area. Ciò significa che l'utilità di pianificazione non verrà nuovamente immessa per errori di pagina, sospensioni di thread, chiamate di procedure asincrone del kernel (APC) e così via per un thread UMS.|
-|[IUMSThreadProxy:: EnterHyperCriticalRegion](#enterhypercriticalregion)|Chiamato per accedere a un'area ipercritica. All'interno di un'area ipercritica, l'utilità di pianificazione non osserverà le operazioni di blocco che si verificano durante l'area. Pertanto l'utilità di pianificazione non sarà nuovamente immessa per bloccare le chiamate di funzione, i tentativi di acquisizione di blocchi tramite cui vengono eseguiti blocchi, gli errori di pagina, le sospensioni di thread, le chiamate asincrone di procedura del kernel (APC, Asynchronous Procedure Call) e così via, per un thread UMS.|
-|[IUMSThreadProxy:: ExitCriticalRegion](#exitcriticalregion)|Chiamato per uscire da un'area critica.|
-|[IUMSThreadProxy:: ExitHyperCriticalRegion](#exithypercriticalregion)|Chiamato per uscire da un'area ipercritica.|
-|[IUMSThreadProxy:: GetCriticalRegionType](#getcriticalregiontype)|Restituisce il tipo di area critica in cui si trova il proxy del thread. Poiché le aree ipercritiche sono un superset di aree critiche, se il codice è entrato in un'area critica e quindi un'area ipercritica, viene restituito `InsideHyperCriticalRegion`.|
+|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Chiamato per entrare in un'area critica. Quando si è all'interno di un'area critica, l'utilità di pianificazione non osserverà le operazioni di blocco asincrone che si verificano durante l'area. Ciò significa che l'utilità di pianificazione non verrà reinserita per errori di pagina, sospensioni del thread, chiamate di procedura asincrona (APC) del kernel e così via, per un thread UMS.|
+|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Chiamato per entrare in un'area ipercritica. Quando si è all'interno di un'area ipercritica, l'utilità di pianificazione non osserverà le operazioni di blocco che si verificano durante l'area. Pertanto l'utilità di pianificazione non sarà nuovamente immessa per bloccare le chiamate di funzione, i tentativi di acquisizione di blocchi tramite cui vengono eseguiti blocchi, gli errori di pagina, le sospensioni di thread, le chiamate asincrone di procedura del kernel (APC, Asynchronous Procedure Call) e così via, per un thread UMS.|
+|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Chiamato per uscire da un'area critica.|
+|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Chiamato per uscire da un'area ipercritica.|
+|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Restituisce il tipo di area critica all'interno del proxy del thread. Poiché le aree ipercritiche sono un superset di aree critiche, se `InsideHyperCriticalRegion` il codice è entrato in un'area critica e quindi in un'area ipercritica, verrà restituito.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-[IThreadProxy](ithreadproxy-structure.md)
+[Proxy Thread](ithreadproxy-structure.md)
 
 `IUMSThreadProxy`
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** concrtrm. h
+**Intestazione:** concrtrm.h
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="entercriticalregion"></a>Metodo IUMSThreadProxy:: EnterCriticalRegion
+## <a name="iumsthreadproxyentercriticalregion-method"></a><a name="entercriticalregion"></a>Metodo IUMSThreadProxy::EnterCriticalRegion
 
-Chiamato per accedere a un'area critica. Quando si trova all'interno di un'area critica, l'utilità di pianificazione non osserverà le operazioni di blocco asincrone che si verificano durante l'area. Ciò significa che l'utilità di pianificazione non verrà nuovamente immessa per errori di pagina, sospensioni di thread, chiamate di procedure asincrone del kernel (APC) e così via per un thread UMS.
+Chiamato per entrare in un'area critica. Quando si è all'interno di un'area critica, l'utilità di pianificazione non osserverà le operazioni di blocco asincrone che si verificano durante l'area. Ciò significa che l'utilità di pianificazione non verrà reinserita per errori di pagina, sospensioni del thread, chiamate di procedura asincrona (APC) del kernel e così via, per un thread UMS.
 
 ```cpp
 virtual int EnterCriticalRegion() = 0;
@@ -63,11 +63,11 @@ virtual int EnterCriticalRegion() = 0;
 
 ### <a name="return-value"></a>Valore restituito
 
-Nuova profondità dell'area critica. Le aree critiche sono rientranti.
+La nuova profondità dell'area critica. Le aree critiche sono rientranti.
 
-## <a name="enterhypercriticalregion"></a>Metodo IUMSThreadProxy:: EnterHyperCriticalRegion
+## <a name="iumsthreadproxyenterhypercriticalregion-method"></a><a name="enterhypercriticalregion"></a>Metodo IUMSThreadProxy::EnterHyperCriticalRegion
 
-Chiamato per accedere a un'area ipercritica. All'interno di un'area ipercritica, l'utilità di pianificazione non osserverà le operazioni di blocco che si verificano durante l'area. Pertanto l'utilità di pianificazione non sarà nuovamente immessa per bloccare le chiamate di funzione, i tentativi di acquisizione di blocchi tramite cui vengono eseguiti blocchi, gli errori di pagina, le sospensioni di thread, le chiamate asincrone di procedura del kernel (APC, Asynchronous Procedure Call) e così via, per un thread UMS.
+Chiamato per entrare in un'area ipercritica. Quando si è all'interno di un'area ipercritica, l'utilità di pianificazione non osserverà le operazioni di blocco che si verificano durante l'area. Pertanto l'utilità di pianificazione non sarà nuovamente immessa per bloccare le chiamate di funzione, i tentativi di acquisizione di blocchi tramite cui vengono eseguiti blocchi, gli errori di pagina, le sospensioni di thread, le chiamate asincrone di procedura del kernel (APC, Asynchronous Procedure Call) e così via, per un thread UMS.
 
 ```cpp
 virtual int EnterHyperCriticalRegion() = 0;
@@ -75,13 +75,13 @@ virtual int EnterHyperCriticalRegion() = 0;
 
 ### <a name="return-value"></a>Valore restituito
 
-Nuova profondità dell'area ipercritica. Le aree ipercritiche sono rientranti.
+La nuova profondità dell'area ipercritica. Le aree iper-critiche rientrano.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'utilità di pianificazione deve prestare particolare attenzione ai metodi che chiama e a quali blocchi acquisisce in tali aree. Se il codice in tale area si blocca in un blocco che è gestito da un elemento che l'utilità di pianificazione è responsabile della pianificazione, è possibile che si verifichi un deadlock.
+L'utilità di pianificazione deve essere straordinariamente attenta a quali metodi chiama e quali blocchi acquisisce in tali aree. Se il codice in tale area si blocca su un blocco che è tenuto da un elemento che l'utilità di pianificazione è responsabile della pianificazione, potrebbe verificarsi un deadlock.
 
-## <a name="exitcriticalregion"></a>Metodo IUMSThreadProxy:: ExitCriticalRegion
+## <a name="iumsthreadproxyexitcriticalregion-method"></a><a name="exitcriticalregion"></a>Metodo IUMSThreadProxy::ExitCriticalRegion
 
 Chiamato per uscire da un'area critica.
 
@@ -91,9 +91,9 @@ virtual int ExitCriticalRegion() = 0;
 
 ### <a name="return-value"></a>Valore restituito
 
-Nuova profondità dell'area critica. Le aree critiche sono rientranti.
+La nuova profondità dell'area critica. Le aree critiche sono rientranti.
 
-## <a name="exithypercriticalregion"></a>Metodo IUMSThreadProxy:: ExitHyperCriticalRegion
+## <a name="iumsthreadproxyexithypercriticalregion-method"></a><a name="exithypercriticalregion"></a>Metodo IUMSThreadProxy::ExitHyperCriticalRegion
 
 Chiamato per uscire da un'area ipercritica.
 
@@ -103,11 +103,11 @@ virtual int ExitHyperCriticalRegion() = 0;
 
 ### <a name="return-value"></a>Valore restituito
 
-Nuova profondità dell'area ipercritica. Le aree ipercritiche sono rientranti.
+La nuova profondità dell'area ipercritica. Le aree iper-critiche rientrano.
 
-## <a name="getcriticalregiontype"></a>Metodo IUMSThreadProxy:: GetCriticalRegionType
+## <a name="iumsthreadproxygetcriticalregiontype-method"></a><a name="getcriticalregiontype"></a>Metodo IUMSThreadProxy::GetCriticalRegionType
 
-Restituisce il tipo di area critica in cui si trova il proxy del thread. Poiché le aree ipercritiche sono un superset di aree critiche, se il codice è entrato in un'area critica e quindi un'area ipercritica, viene restituito `InsideHyperCriticalRegion`.
+Restituisce il tipo di area critica all'interno del proxy del thread. Poiché le aree ipercritiche sono un superset di aree critiche, se `InsideHyperCriticalRegion` il codice è entrato in un'area critica e quindi in un'area ipercritica, verrà restituito.
 
 ```cpp
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
@@ -115,7 +115,7 @@ virtual CriticalRegionType GetCriticalRegionType() const = 0;
 
 ### <a name="return-value"></a>Valore restituito
 
-Tipo di area critica in cui si trova il proxy del thread.
+Tipo di area critica all'interno del proxy del thread.
 
 ## <a name="see-also"></a>Vedere anche
 

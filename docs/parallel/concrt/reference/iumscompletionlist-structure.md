@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-ms.openlocfilehash: 02382ef4606a6e73804fcbd5ce7735ecf2f0dcc7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c388cc98aedbd35b2d0e00a4653a85a47abcb838
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140043"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368115"
 ---
 # <a name="iumscompletionlist-structure"></a>Struttura IUMSCompletionList
 
@@ -25,17 +25,17 @@ Rappresenta un elenco di completamento UMS. Quando si blocca il thread UMS, il c
 struct IUMSCompletionList;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IUMSCompletionList:: GetUnblockNotifications](#getunblocknotifications)|Recupera una catena di interfacce di `IUMSUnblockNotification` che rappresentano i contesti di esecuzione i cui proxy di thread associati sono sbloccati dall'ultima volta in cui è stato richiamato questo metodo.|
+|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|Recupera una catena `IUMSUnblockNotification` di interfacce che rappresentano i contesti di esecuzione i cui proxy di thread associati sono sbloccati dall'ultima volta che questo metodo è stato richiamato.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Un'utilità di pianificazione deve prestare particolare attenzione alle azioni che vengono eseguite dopo l'utilizzo di questa interfaccia per rimuovere dalla coda gli elementi dall'elenco di completamento. Gli elementi devono essere inseriti nell'elenco di contesti eseguibili dell'utilità di pianificazione ed essere in genere accessibili il prima possibile. È possibile che a uno degli elementi rimossi dalla coda sia stata assegnata la proprietà di un blocco arbitrario. L'utilità di pianificazione non può eseguire chiamate di funzione arbitrarie che potrebbero bloccarsi tra la chiamata a elementi rimossi dalla coda e la posizione di tali elementi in un elenco a cui è possibile accedere in genere dall'utilità di pianificazione.
+Un'utilità di pianificazione deve prestare straordinariaattenzione sulle azioni eseguite dopo l'utilizzo di questa interfaccia per rimuovere gli elementi dall'elenco di completamento. Gli elementi devono essere inseriti nell'elenco dei contesti gestibili dell'utilità di pianificazione ed essere in genere accessibili il prima possibile. È del tutto possibile che a uno degli elementi rimossi dalla coda sia stata assegnata la proprietà di un blocco arbitrario. L'utilità di pianificazione non può effettuare chiamate di funzione arbitrarie che potrebbero bloccarsi tra la chiamata agli elementi di rimozione dalla coda e il posizionamento di tali elementi in un elenco a cui è in genere possibile accedere dall'interno dell'utilità di pianificazione.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -43,13 +43,13 @@ Un'utilità di pianificazione deve prestare particolare attenzione alle azioni c
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** concrtrm. h
+**Intestazione:** concrtrm.h
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="getunblocknotifications"></a>Metodo IUMSCompletionList:: GetUnblockNotifications
+## <a name="iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>Metodo IUMSCompletionList::GetUnblockNotificationsIUMSCompletionList::GetUnblockNotifications Method
 
-Recupera una catena di interfacce di `IUMSUnblockNotification` che rappresentano i contesti di esecuzione i cui proxy di thread associati sono sbloccati dall'ultima volta in cui è stato richiamato questo metodo.
+Recupera una catena `IUMSUnblockNotification` di interfacce che rappresentano i contesti di esecuzione i cui proxy di thread associati sono sbloccati dall'ultima volta che questo metodo è stato richiamato.
 
 ```cpp
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
@@ -57,11 +57,11 @@ virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 
 ### <a name="return-value"></a>Valore restituito
 
-Catena di interfacce di `IUMSUnblockNotification`.
+Una catena `IUMSUnblockNotification` di interfacce.
 
 ### <a name="remarks"></a>Osservazioni
 
-Le notifiche restituite non sono valide dopo la ripianificazione dei contesti di esecuzione.
+Le notifiche restituite non sono valide dopo la riprogrammazione dei contesti di esecuzione.
 
 ## <a name="see-also"></a>Vedere anche
 

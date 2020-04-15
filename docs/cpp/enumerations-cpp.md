@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2a1b3d33534887568c6a55e320e77e0a018cafff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180186"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366328"
 ---
 # <a name="enumerations-c"></a>Enumerazioni (C++)
 
 Un'enumerazione è un tipo definito dall'utente costituito da un set di costanti integrali note come enumeratori.
 
 > [!NOTE]
->  Questo articolo illustra il tipo di C++ **enumerazione** del linguaggio standard ISO e il tipo di **classe enum** con ambito (o fortemente tipizzato), introdotto in c++ 11. Per informazioni sulla **classe enum pubblica** o sui tipi di **classe Enum privati** in C++/CLI C++e/CX, vedere [enum class](../extensions/enum-class-cpp-component-extensions.md).
+> In questo articolo vengono illustrati il tipo di **enumerazione** di lingua standard ISO c'è e il tipo di **classe di enumerazione** con ambito (o fortemente tipizzato) che viene introdotto in C . Per informazioni sulla **classe enum pubblica** o sui tipi di **classe enum privata** in C, vedere classe [enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,19 +46,19 @@ enum class C : short;  // ... may have any integral underlying type
 
 ## <a name="parameters"></a>Parametri
 
-*identifier*<br/>
+*Identificatore*<br/>
 Nome del tipo assegnato all'enumerazione.
 
 *type*<br/>
 Tipo sottostante degli enumeratori. Tutti gli enumeratori dispongono dello stesso tipo sottostante. Può essere un tipo integrale qualsiasi.
 
-*elenco enum*<br/>
-Elenco degli enumeratori nell'enumerazione separati da virgola. Ogni enumeratore o nome della variabile nell'ambito deve essere univoco. I valori possono essere tuttavia duplicati. In un'enumerazione senza ambito, l'ambito è l'ambito circostante; in un'enumerazione con ambito, l'ambito è *enum-list* stesso.  In un'enumerazione con ambito, l'elenco può essere vuoto, che in effetti definisce un nuovo tipo integrale.
+*elenco di enumerazione*<br/>
+Elenco degli enumeratori nell'enumerazione separati da virgola. Ogni enumeratore o nome della variabile nell'ambito deve essere univoco. I valori possono essere tuttavia duplicati. In un'enumerazione senza ambito, l'ambito è l'ambito circostante; in un'enumerazione con ambito, l'ambito è *l'enum-list* stesso.  In un'enumerazione con ambito, l'elenco può essere vuoto e che in effetti definisce un nuovo tipo integrale.
 
-*class*<br/>
-Utilizzando questa parola chiave nella dichiarazione, si specifica che l'enumerazione è con ambito ed è necessario fornire un *identificatore* . È anche possibile usare la parola chiave **struct** al posto della **classe**, perché sono semanticamente equivalenti in questo contesto.
+*classe*<br/>
+Utilizzando questa parola chiave nella dichiarazione, si specifica che l'enum ha come ambito e deve essere fornito un *identificatore.* È inoltre possibile utilizzare la parola chiave **struct** al posto della **classe**, in quanto sono equivalenti dal punto di vista semantico in questo contesto.
 
-## <a name="enumerator-scope"></a>Ambito enumeratore
+## <a name="enumerator-scope"></a>Ambito dell'enumeratore
 
 Un'enumerazione fornisce contesto per descrivere un intervallo di valori rappresentati come costanti denominate e che vengono chiamati anche enumeratori. Nei tipi di enumerazione C e C++ gli enumeratori non qualificati sono visibili in tutto l'ambito in cui viene dichiarata l'enumerazione. Nelle enumerazioni con ambito il nome dell'enumeratore deve essere qualificato dal nome del tipo di enumerazione. Nell'esempio seguente viene illustrata questa differenza di base tra i due tipi di enumerazioni:
 
@@ -95,7 +95,7 @@ enum Suit { Diamonds = 1, Hearts, Clubs, Spades };
 
 All'enumeratore `Diamonds` viene assegnato al valore `1`. Gli enumeratori successivi, se viene loro assegnato un valore esplicito, ricevono il valore dell'enumeratore precedente più uno. Nell'esempio precedente `Hearts` avrebbe il valore 2, `Clubs` avrebbe il valore 3 e così via.
 
-Ogni enumeratore viene considerato come una costante e deve avere un nome univoco all'interno dell'ambito in cui è definita l' **enumerazione** (per le enumerazioni senza ambito) o all'interno dell' **enum** stesso (per le enumerazioni con ambito). I valori assegnati ai nomi non devono essere univoci. Ad esempio, se la dichiarazione di un'enumerazione senza ambito `Suit` è la seguente:
+Ogni enumeratore viene considerato come una costante e deve avere un nome univoco all'interno dell'ambito in cui è definita **l'enumerazione** (per le enumerazioni senza ambito) o all'interno **dell'enumerazione** stessa (per le enumerazioni con ambito). I valori assegnati ai nomi non devono essere univoci. Ad esempio, se la dichiarazione di un'enumerazione senza ambito `Suit` è la seguente:
 
 ```cpp
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
@@ -105,7 +105,7 @@ I valori di `Diamonds`, `Hearts`, `Clubs` e `Spades` sono rispettivamente 5, 6, 
 
 ## <a name="casting-rules"></a>Regole di cast
 
-Le costanti di enumerazione senza ambito possono essere convertite in modo implicito in **int**, ma un **int** non è mai convertibile in modo implicito in un valore enum. Nell'esempio seguente viene mostrato cosa avviene se si tenta di assegnare a `hand` un valore che non sia `Suit`:
+Le costanti enum senza ambito possono essere convertite in modo implicito **in int**, ma **un int** non è mai convertibile in modo implicito in un valore enum. Nell'esempio seguente viene mostrato cosa avviene se si tenta di assegnare a `hand` un valore che non sia `Suit`:
 
 ```cpp
 int account_num = 135692;
@@ -113,7 +113,7 @@ Suit hand;
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
 ```
 
-È necessario un cast per convertire un valore **int** in un enumeratore con ambito o senza ambito. È tuttavia possibile alzare di livello un enumeratore senza ambito in un Integer senza un cast.
+È necessario un cast per convertire un **int** in un enumeratore con ambito o senza ambito. È tuttavia possibile alzare di livello un enumeratore senza ambito in un Integer senza un cast.
 
 ```cpp
 int account_num = Hearts; //OK if Hearts is in a unscoped enum
@@ -145,13 +145,13 @@ Notare che la riga `hand = account_num;` causa ancora l'errore che si verifica c
 
 ## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Enumerazioni senza enumeratori
 
-**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): definendo un'enumerazione (regolare o con ambito) con un tipo sottostante esplicito e senza enumeratori, è possibile introdurre un nuovo tipo integrale senza conversione implicita in un altro tipo. Utilizzando questo tipo anziché il tipo sottostante incorporato, è possibile eliminare il rischio di errori evidenti causati da conversioni implicite involontarie.
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std:c'17):](../build/reference/std-specify-language-standard-version.md)definendo un'enumerazione (normale o con ambito) con un tipo sottostante esplicito e nessun enumeratore, è possibile introdurre in effetti un nuovo tipo integrale che non dispone di alcuna conversione implicita in qualsiasi altro tipo. Utilizzando questo tipo anziché il tipo sottostante incorporato, è possibile eliminare il rischio di errori sottili causati da conversioni implicite involontarie.
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-Il nuovo tipo è una copia esatta del tipo sottostante e pertanto ha la stessa convenzione di chiamata, il che significa che può essere usato tra le ABI senza alcuna riduzione delle prestazioni. Non è necessario alcun cast quando le variabili del tipo vengono inizializzate tramite l'inizializzazione Direct-List. Nell'esempio seguente viene illustrato come inizializzare le enumerazioni senza enumeratori in diversi contesti:
+Il nuovo tipo è una copia esatta del tipo sottostante e pertanto ha la stessa convenzione di chiamata, il che significa che può essere utilizzato tra achege senza alcuna riduzione delle prestazioni. Non è necessario alcun cast quando le variabili del tipo vengono inizializzate utilizzando l'inizializzazione dell'elenco diretto. Nell'esempio seguente viene illustrato come inizializzare enumerazioni senza enumeratori in vari contesti:The following example shows how to initialize enums with no enumerators in various contexts:
 
 ```cpp
 enum class byte : unsigned char { };
@@ -183,5 +183,5 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Dichiarazioni di enumerazioni C](../c-language/c-enumeration-declarations.md)<br/>
+[Dichiarazioni di enumerazione CC Enumeration Declarations](../c-language/c-enumeration-declarations.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177216"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369263"
 ---
 # <a name="cd2dellipse-class"></a>Classe CD2DEllipse
 
@@ -25,13 +25,13 @@ Wrapper per `D2D1_ELLIPSE`.
 class CD2DEllipse : public D2D1_ELLIPSE;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Di overload. Costruisce un `CD2DEllipse` oggetto da `D2D1_ELLIPSE` un oggetto.|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Di overload. Costruisce un `CD2DEllipse` oggetto `D2D1_ELLIPSE` dall'oggetto.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -41,9 +41,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget. h
+**Intestazione:** afxrendertarget.h
 
-##  <a name="cd2dellipse"></a>CD2DEllipse:: CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
 
 Costruisce un oggetto CD2DEllipse dall'oggetto CD2DRectF.
 
@@ -59,17 +59,17 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>Parametri
 
-*rect*<br/>
+*Rect*<br/>
 rettangolo di origine
 
 *ellipse*<br/>
 ellisse di origine
 
 *ptCenter*<br/>
-Punto centrale dell'ellisse.
+Il punto centrale dell'ellisse.
 
 *sizeRadius*<br/>
-Raggio X e raggio Y dell'ellisse.
+Raggio X e Raggio Y dell'ellisse.
 
 ## <a name="see-also"></a>Vedere anche
 

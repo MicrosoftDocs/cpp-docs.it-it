@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCTabDropTarget
+title: CMFCTabDropTarget (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabDropTarget
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: d0090386b1ebb4d89b9a7613a0b2a28529decbe5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 83432fdb90fe28214fb1faaf843556deb2f44750
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127429"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367348"
 ---
-# <a name="cmfctabdroptarget-class"></a>Classe CMFCTabDropTarget
+# <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget (classe)
 
 Fornisce il meccanismo di comunicazione tra un controllo struttura a schede e le librerie OLE.
 
@@ -33,7 +33,7 @@ Fornisce il meccanismo di comunicazione tra un controllo struttura a schede e le
 class CMFCTabDropTarget : public COleDropTarget
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -47,17 +47,17 @@ class CMFCTabDropTarget : public COleDropTarget
 |||
 |-|-|
 |Nome|Descrizione|
-|[CMFCTabDropTarget:: OnDragEnter](#ondragenter)|Chiamata eseguita dal framework quando l'utente trascina un oggetto in una finestra di tabulazione. Esegue l'override di [COleDropTarget:: OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).|
-|[CMFCTabDropTarget:: OnDragLeave](#ondragleave)|Chiamata eseguita dal framework quando l'utente trascina un oggetto all'esterno della finestra di tabulazione con lo stato attivo. Esegue l'override di [COleDropTarget:: OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).|
-|[CMFCTabDropTarget:: OnDragOver](#ondragover)|Chiamata eseguita dal framework quando l'utente trascina un oggetto nella finestra di tabulazione con lo stato attivo. Esegue l'override di [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).|
-|[CMFCTabDropTarget:: OnDropEx](#ondropex)|Chiamata eseguita dal framework quando l'utente rilascia il pulsante del mouse alla fine di un'operazione di trascinamento. Esegue l'override di [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).|
-|[CMFCTabDropTarget:: Register](#register)|Registra un controllo che può essere la destinazione di un'operazione di trascinamento e rilascio OLE.|
+|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Chiamato dal framework quando l'utente trascina un oggetto in una finestra a schede. (Overrides [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
+|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Chiamato dal framework quando l'utente trascina un oggetto all'esterno della finestra della scheda che ha lo stato attivo. (Overrides [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
+|[CMFCTabDropTarget::OnDragOver](#ondragover)|Chiamato dal framework quando l'utente trascina un oggetto nella finestra della scheda che ha lo stato attivo. (OverrideS [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
+|[CMFCTabDropTarget::OnDropEx](#ondropex)|Chiamato dal framework quando l'utente rilascia il pulsante del mouse alla fine di un'operazione di trascinamento. (Overrides [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).)|
+|[CMFCTabDropTarget::Register](#register)|Registra il controllo come destinazione di un'operazione di trascinamento OLE.|
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa classe fornisce supporto per il trascinamento della selezione alla classe `CMFCBaseTabCtrl`. Se l'applicazione Inizializza le librerie OLE usando la funzione [AfxOleInit](ole-initialization.md#afxoleinit) , gli oggetti `CMFCBaseTabCtrl` si registrano per le operazioni di trascinamento della selezione.
+Questa classe fornisce il supporto di `CMFCBaseTabCtrl` trascinamento della selezione per la classe. Se l'applicazione inizializza le librerie OLE utilizzando la `CMFCBaseTabCtrl` funzione [AfxOleInit,](ole-initialization.md#afxoleinit) gli oggetti si registrano per le operazioni di trascinamento della selezione.
 
-La classe `CMFCTabDropTarget` estende la relativa classe di base rendendo attiva la scheda sotto il cursore quando si verifica un'operazione di trascinamento. Per altre informazioni sulle operazioni di trascinamento della selezione, vedere [trascinamento della selezione OLE](../../mfc/drag-and-drop-ole.md).
+La `CMFCTabDropTarget` classe estende la classe base rendendo attiva la scheda che si trova sotto il cursore quando si verifica un'operazione di trascinamento. Per ulteriori informazioni sulle operazioni di trascinamento della selezione, vedere [OLE drag and drop](../../mfc/drag-and-drop-ole.md).
 
 ## <a name="example"></a>Esempio
 
@@ -73,15 +73,15 @@ L'esempio seguente illustra come costruire un oggetto `CMFCTabDropTarget` e usar
 
 [COleDropTarget](../../mfc/reference/coledroptarget-class.md)
 
-[CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)
+[CMFCTabDropTargetCMFCDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxbasetabctrl.h
 
-##  <a name="ondragenter"></a>CMFCTabDropTarget:: OnDragEnter
+## <a name="cmfctabdroptargetondragenter"></a><a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter
 
-Chiamata eseguita dal framework quando l'utente trascina un oggetto in una finestra di tabulazione.
+Chiamato dal framework quando l'utente trascina un oggetto in una finestra a schede.
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -96,14 +96,14 @@ virtual DROPEFFECT OnDragEnter(
 |||
 |-|-|
 |Parametro|Descrizione|
-|*pWnd*|[in] Non utilizzato.|
-|*pDataObject*|in Puntatore all'oggetto trascinato dall'utente.|
-|*dwKeyState*|in Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti elementi: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|
-|*point*|in Posizione del cursore nelle coordinate del client.|
+|*pWnd (in questo stato di windows*|[in] Non utilizzato.|
+|*pDataObject (oggetto PDataObject)*|[in] Puntatore all'oggetto trascinato dall'utente.|
+|*dwKeyState*|[in] Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|
+|*Punto*|[in] Posizione del cursore nelle coordinate client.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Effetto risultante se il trascinamento si verifica in corrispondenza della posizione specificata dal *punto*. Può essere uno o più degli elementi seguenti:
+Effetto risultante se il rilascio si verifica nella posizione specificata dal *punto*. Può essere uno o più dei seguenti:
 
 - DROPEFFECT_NONE
 
@@ -117,13 +117,13 @@ Effetto risultante se il trascinamento si verifica in corrispondenza della posiz
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo restituisce DROPEFFECT_NONE se il Framework della barra degli strumenti non è in modalità di personalizzazione o se il formato dei dati degli Appunti non è disponibile. In caso contrario, restituisce il risultato della chiamata di `CMFCBaseTabCtrl::OnDragEnter` con i parametri forniti.
+Questo metodo restituisce DROPEFFECT_NONE se il framework della barra degli strumenti non è in modalità di personalizzazione o il formato dati degli Appunti non è disponibile. In caso contrario, `CMFCBaseTabCtrl::OnDragEnter` restituisce il risultato della chiamata con i parametri forniti.
 
-Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Per ulteriori informazioni sui formati di dati degli Appunti, vedere [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Per ulteriori informazioni sui formati dei dati degli Appunti, vedere [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-##  <a name="ondragleave"></a>CMFCTabDropTarget:: OnDragLeave
+## <a name="cmfctabdroptargetondragleave"></a><a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave
 
-Chiamata eseguita dal framework quando l'utente trascina un oggetto all'esterno della finestra di tabulazione con lo stato attivo.
+Chiamato dal framework quando l'utente trascina un oggetto all'esterno della finestra della scheda che ha lo stato attivo.
 
 ```
 virtual void OnDragLeave(CWnd* pWnd);
@@ -134,15 +134,15 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||
 |-|-|
 |Parametro|Descrizione|
-|*pWnd*|[in] Non utilizzato.|
+|*pWnd (in questo stato di windows*|[in] Non utilizzato.|
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo chiama il metodo `CMFCBaseTabCtrl::OnDragLeave` per eseguire l'operazione di trascinamento.
+Questo metodo `CMFCBaseTabCtrl::OnDragLeave` chiama il metodo per eseguire l'operazione di trascinamento.
 
-##  <a name="ondragover"></a>CMFCTabDropTarget:: OnDragOver
+## <a name="cmfctabdroptargetondragover"></a><a name="ondragover"></a>CMFCTabDropTarget::OnDragOver
 
-Chiamata eseguita dal framework quando l'utente trascina un oggetto nella finestra di tabulazione con lo stato attivo.
+Chiamato dal framework quando l'utente trascina un oggetto nella finestra della scheda che ha lo stato attivo.
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -157,14 +157,14 @@ virtual DROPEFFECT OnDragOver(
 |||
 |-|-|
 |Parametro|Descrizione|
-|*pWnd*|[in] Non utilizzato.|
-|*pDataObject*|in Puntatore all'oggetto trascinato dall'utente.|
-|*dwKeyState*|in Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti elementi: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|
-|*point*|in Posizione del puntatore del mouse nelle coordinate del client.|
+|*pWnd (in questo stato di windows*|[in] Non utilizzato.|
+|*pDataObject (oggetto PDataObject)*|[in] Puntatore all'oggetto trascinato dall'utente.|
+|*dwKeyState*|[in] Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|
+|*Punto*|[in] Posizione del puntatore del mouse nelle coordinate client.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Effetto risultante se il trascinamento si verifica in corrispondenza della posizione specificata dal *punto*. Può essere uno o più degli elementi seguenti:
+Effetto risultante se il rilascio si verifica nella posizione specificata dal *punto*. Può essere uno o più dei seguenti:
 
 - DROPEFFECT_NONE
 
@@ -178,13 +178,13 @@ Effetto risultante se il trascinamento si verifica in corrispondenza della posiz
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo rende attiva la scheda sotto il cursore quando si verifica un'operazione di trascinamento. Restituisce DROPEFFECT_NONE se il Framework della barra degli strumenti non è in modalità di personalizzazione o se il formato dei dati degli Appunti non è disponibile. In caso contrario, restituisce il risultato della chiamata di `CMFCBaseTabCtrl::OnDragOver` con i parametri forniti.
+Questo metodo rende attiva la scheda che si trova sotto il cursore quando si verifica un'operazione di trascinamento. Restituisce DROPEFFECT_NONE se il framework della barra degli strumenti non è in modalità di personalizzazione o il formato dati degli Appunti non è disponibile. In caso contrario, `CMFCBaseTabCtrl::OnDragOver` restituisce il risultato della chiamata con i parametri forniti.
 
-Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Per ulteriori informazioni sui formati di dati degli Appunti, vedere [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Per ulteriori informazioni sui formati dei dati degli Appunti, vedere [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-##  <a name="ondropex"></a>CMFCTabDropTarget:: OnDropEx
+## <a name="cmfctabdroptargetondropex"></a><a name="ondropex"></a>CMFCTabDropTarget::OnDropEx
 
-Chiamata eseguita dal framework quando l'utente rilascia il pulsante del mouse alla fine di un'operazione di trascinamento.
+Chiamato dal framework quando l'utente rilascia il pulsante del mouse alla fine di un'operazione di trascinamento.
 
 ```
 virtual DROPEFFECT OnDropEx(
@@ -200,15 +200,15 @@ virtual DROPEFFECT OnDropEx(
 |||
 |-|-|
 |Parametro|Descrizione|
-|*pWnd*|[in] Non utilizzato.|
-|*pDataObject*|in Puntatore all'oggetto trascinato dall'utente.|
-|*dropEffect*|in Operazione di rilascio predefinita.|
-|*dropList*|[in] Non utilizzato.|
-|*point*|in Posizione del puntatore del mouse nelle coordinate del client.|
+|*pWnd (in questo stato di windows*|[in] Non utilizzato.|
+|*pDataObject (oggetto PDataObject)*|[in] Puntatore all'oggetto trascinato dall'utente.|
+|*DropEffect (effetto drop)*|[in] Operazione di rilascio predefinita.|
+|*elenco di rilascio*|[in] Non utilizzato.|
+|*Punto*|[in] Posizione del puntatore del mouse nelle coordinate client.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Effetto di rilascio risultante. Può essere uno o più degli elementi seguenti:
+Effetto di rilascio risultante. Può essere uno o più dei seguenti:
 
 - DROPEFFECT_NONE
 
@@ -222,13 +222,13 @@ Effetto di rilascio risultante. Può essere uno o più degli elementi seguenti:
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo chiama `CMFCBaseTabCtrl::OnDrop` se il Framework della barra degli strumenti è in modalità di personalizzazione e il formato dati degli Appunti è disponibile. Se la chiamata a `CMFCBaseTabCtrl::OnDrop` restituisce un valore diverso da zero, questo metodo restituisce l'effetto di rilascio predefinito specificato da *DropEffect*. In caso contrario, questo metodo restituisce DROPEFFECT_NONE. Per ulteriori informazioni sugli effetti di rilascio, vedere [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).
+Questo metodo `CMFCBaseTabCtrl::OnDrop` chiama se il framework della barra degli strumenti è in modalità di personalizzazione e il formato dati degli Appunti è disponibile. Se la `CMFCBaseTabCtrl::OnDrop` chiamata a restituisce un valore diverso da zero, questo metodo restituisce l'effetto di rilascio predefinito specificato da *dropEffect*. In caso contrario, questo metodo restituisce DROPEFFECT_NONE. Per ulteriori informazioni sugli effetti di rilascio, vedere [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).
 
-Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Per ulteriori informazioni sui formati di dati degli Appunti, vedere [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Per ulteriori informazioni sui formati dei dati degli Appunti, vedere [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-##  <a name="register"></a>CMFCTabDropTarget:: Register
+## <a name="cmfctabdroptargetregister"></a><a name="register"></a>CMFCTabDropTarget::Register
 
-Registra un controllo che può essere la destinazione di un'operazione di trascinamento e rilascio OLE.
+Registra il controllo come destinazione di un'operazione di trascinamento OLE.
 
 ```
 BOOL Register(CMFCBaseTabCtrl *pOwner);
@@ -239,18 +239,18 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||
 |-|-|
 |Parametro|Descrizione|
-|*pOwner*|in Controllo struttura a schede da registrare come destinazione di rilascio.|
+|*pProprietario*|[in] Controllo struttura a schede da registrare come destinazione di rilascio.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la registrazione ha avuto esito positivo; in caso contrario, 0.
+Diverso da zero se la registrazione ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo chiama [COleDropTarget:: Register](../../mfc/reference/coledroptarget-class.md#register) per registrare il controllo per le operazioni di trascinamento della selezione.
+Questo metodo chiama [COleDropTarget::Register](../../mfc/reference/coledroptarget-class.md#register) per registrare il controllo per le operazioni di trascinamento della selezione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Trascinamento della selezione OLE](../../mfc/drag-and-drop-ole.md)

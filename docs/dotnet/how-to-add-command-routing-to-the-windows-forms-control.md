@@ -1,59 +1,59 @@
 ---
-title: 'Procedura: Comando Aggiungi controllo Routing per i Windows Form'
+title: 'Procedura: aggiungere il routing dei comandi al controllo Windows Form'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad64a12051c22a0cfca99d3ec9c5abef579902f4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222910"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365163"
 ---
-# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Procedura: Comando Aggiungi controllo Routing per i Windows Form
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Procedura: aggiungere il routing dei comandi al controllo Windows Form
 
-[CWinFormsView](../mfc/reference/cwinformsview-class.md) instrada i comandi e messaggi di comando di aggiornamento dell'interfaccia utente per il controllo utente in modo che possa gestire i comandi MFC (ad esempio, voci di menu della cornice e i pulsanti della barra degli strumenti).
+[CWinFormsView](../mfc/reference/cwinformsview-class.md) indirizza i comandi e i messaggi dell'interfaccia utente di comando di aggiornamento al controllo utente per consentirgli di gestire i comandi MFC (ad esempio, voci di menu cornice e pulsanti della barra degli strumenti).
 
-Il controllo utente utilizza [ICommandTarget:: Initialize](../mfc/reference/icommandtarget-interface.md#initialize) per archiviare un riferimento all'oggetto di origine del comando in `m_CmdSrc`, come illustrato nell'esempio seguente. Usare `ICommandTarget` è necessario aggiungere un riferimento a mfcmifc80.dll.
+Il controllo utente utilizza [ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize) per archiviare `m_CmdSrc`un riferimento all'oggetto origine comando in , come illustrato nell'esempio seguente. Per `ICommandTarget` utilizzare è necessario aggiungere un riferimento a mfcmifc80.dll.
 
-`CWinFormsView` gestisce diverse delle notifiche di visualizzazione MFC comuni inoltrandole al controllo utente gestito. Tali notifiche includono i [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) e [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) metodi.
+`CWinFormsView`gestisce diverse delle notifiche di visualizzazione MFC comuni inoltrandole al controllo utente gestito. Queste notifiche includono i metodi [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) e [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) .
 
-In questo argomento si presuppone che è stata completata [come: Creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [come: Creare il controllo utente e inserirlo nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+In questo argomento si presuppone che sia stata completata in precedenza [procedura: creare il controllo utente e host in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [procedura: creare il controllo utente e Host visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Per creare l'applicazione host MFC
 
-1. Aprire una libreria di controlli Windows Form creata in [come: Creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+1. Aprire la libreria di controlli Windows Form creata in [Procedura: creare il controllo utente e ospitarlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
-1. Aggiungere un riferimento a mfcmifc80.dll, operazione che è possibile effettuare facendo clic sul nodo del progetto in **Esplora soluzioni**, selezionando **Add**, **riferimento**e quindi passando a Microsoft Visual Studio 10.0\VC\atlmfc\lib.
+1. Aggiungere un riferimento a mfcmifc80.dll, operazione che è possibile eseguire facendo clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni**, scegliendo **Aggiungi**, **Riferimento**e quindi individuando Microsoft Visual Studio 10.0.
 
-1. Aprire UserControl1.Designer.cs e aggiungere la seguente istruzione using:
+1. Aprire UserControl1.Designer.cs e aggiungere l'istruzione using seguente:Open and add the following using statement:
 
     ```
     using Microsoft.VisualC.MFC;
     ```
 
-1. È inoltre in UserControl1.Designer.cs modificare questa riga:
+1. Inoltre, in UserControl1.Designer.cs, modificare questa riga:
 
     ```
     partial class UserControl1
     ```
 
-   A questo scopo:
+   con questo:
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
     ```
 
-1. Aggiungere quanto segue come prima riga della definizione di classe per `UserControl1`:
+1. Aggiungere questo come prima riga della `UserControl1`definizione di classe per :
 
     ```
     private ICommandSource m_CmdSrc;
     ```
 
-1. Aggiungere le seguenti definizioni di metodo a `UserControl1` (nel passaggio successivo verrà creato l'ID del controllo MFC):
+1. Aggiungere le seguenti `UserControl1` definizioni di metodo a (verrà creato l'ID del controllo MFC nel passaggio successivo):
 
     ```
     public void Initialize (ICommandSource cmdSrc)
@@ -70,23 +70,23 @@ In questo argomento si presuppone che è stata completata [come: Creare il contr
     }
     ```
 
-1. Aprire l'applicazione MFC creata in [come: Creare il controllo utente e inserirlo nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+1. Aprire l'applicazione MFC creata in [Procedura: creare il controllo utente e ospitare la visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
-1. Aggiungere un'opzione di menu che verrà richiamato `singleMenuHandler`.
+1. Aggiungere un'opzione di `singleMenuHandler`menu che richiami .
 
-   Passare a **visualizzazione di risorse** (Ctrl + MAIUSC + E), espandere il **dal Menu** cartella e quindi fare doppio clic **IDR_MFC02TYPE**. Verrà visualizzato l'editor di menu.
+   Passare alla **visualizzazione Risorse** (CTRL-MAIUSC-E), espandere la cartella **Menu** e quindi fare doppio clic su **IDR_MFC02TYPE**. Verrà visualizzato l'editor di menu.
 
-   Aggiungere un'opzione di menu nella parte inferiore della **vista** menu. Si noti che l'ID dell'opzione di menu nel **proprietà** finestra. Salvare il file.
+   Aggiungere un'opzione di menu nella parte inferiore del menu **Visualizza.** Si noti l'ID dell'opzione di menu nella finestra **Proprietà.** Salvare il file.
 
-   Nelle **Esplora soluzioni**, aprire il file Resource h, copiare il valore ID per l'opzione di menu appena aggiunto e incollare tale valore come primo parametro per il `m_CmdSrc.AddCommandHandler` chiamare del progetto c# `Initialize` (sostituendo (metodo)`32771` se necessario).
+   In **Esplora soluzioni**, aprire il file Resource.h , copiare il valore ID per l'opzione di menu appena aggiunta e incollare tale valore come primo parametro per la `m_CmdSrc.AddCommandHandler` chiamata nel metodo del `Initialize` progetto C, `32771` se necessario.
 
-9. Compilare ed eseguire il progetto.
+1. Compilare ed eseguire il progetto.
 
-   Scegliere **Compila soluzione** dal menu **Compila**.
+   Nel menu **Compila** scegliere **Compila soluzione**.
 
-   Nel **Debug** menu, fare clic su **Avvia senza eseguire debug**.
+   Scegliere Avvia senza **eseguire debug**dal menu **Debug** .
 
-   Selezionare l'opzione di menu aggiunta. Si noti che viene chiamato il metodo nel file DLL.
+   Selezionare l'opzione di menu aggiunta. Si noti che viene chiamato il metodo nella DLL.
 
 ## <a name="see-also"></a>Vedere anche
 

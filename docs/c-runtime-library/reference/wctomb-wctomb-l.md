@@ -1,9 +1,11 @@
 ---
 title: wctomb, _wctomb_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wctomb_l
 - wctomb
+- _o__wctomb_l
+- _o_wctomb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 195105618c75bd2a3a493f169fca4c2d3d4ebd62
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 162585ea866b4fb26cfaae3bc94345dadaba0baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944995"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367407"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
@@ -59,21 +62,23 @@ int _wctomb_l(
 
 ### <a name="parameters"></a>Parametri
 
-*mbchar*<br/>
+*mbchar (in questo mbchar)*<br/>
 Indirizzo di un carattere multibyte.
 
-*wchar*<br/>
+*Wchar*<br/>
 Carattere wide.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se **wctomb** converte il carattere wide in un carattere multibyte, restituisce il numero di byte (che non è mai maggiore di **MB_CUR_MAX**) nel carattere wide. Se *WCHAR* è il carattere null Wide (L'\ 0'), **wctomb** restituisce 1. Se il puntatore di destinazione *mbchar* è **null**, **wctomb** restituisce 0. Se la conversione non è possibile nelle impostazioni locali correnti, **wctomb** restituisce-1 e **errno** viene impostato su **EILSEQ**.
+Se **wctomb** converte il carattere wide in un carattere multibyte, restituisce il numero di byte (che non è mai maggiore di **MB_CUR_MAX**) nel carattere wide. Se *wchar* è il carattere null carattere wide (L'-0'), **wctomb** restituisce 1. Se il puntatore di destinazione *mbchar* è **NULL,** **wctomb** restituisce 0. Se la conversione non è possibile nelle impostazioni locali correnti, **wctomb** restituisce -1 e **errno** è impostato su **EILSEQ**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **wctomb** converte il relativo argomento *WCHAR* nel carattere multibyte corrispondente e archivia il risultato in *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma. **wctomb** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **_wctomb_l** è identico a **wctomb** con la differenza che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La funzione **wctomb** converte il relativo argomento *wchar* nel carattere multibyte corrispondente e archivia il risultato in corrispondenza di *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma. **wctomb** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **_wctomb_l** è identico a **wctomb,** ad eccezione del fatto che utilizza invece le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-**wctomb** convalida i relativi parametri. Se *mbchar* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce-1.
+**wctomb** convalida i parametri. Se *mbchar* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e la funzione restituisce -1.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -115,8 +120,8 @@ Convert a wide character:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

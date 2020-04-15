@@ -1,17 +1,18 @@
 ---
 title: Esplorazione del file system
-ms.date: 11/04/2016
+description: Come utilizzare le API del file system della libreria standard di C.
+ms.date: 04/13/2020
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 412d865582a14da7b8c31d9f07a43106b0c49491
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368435"
 ---
 # <a name="file-system-navigation"></a>Esplorazione del file system
 
-L'intestazione \<filesystem> implementa la specifica tecnica del file system di ISO/IEC TS 18822:2015 di C++ (bozza finale [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) e contiene tipi e funzioni che consentono di scrivere codice indipendente dalla piattaforma per l'esplorazione del file system. Essendo multipiattaforma, contiene le API che non sono rilevanti per i sistemi Windows. Questo significa, ad esempio, che `is_fifo(const path&)` restituisce sempre **false** in Windows.
+L'intestazione \<filesystem> implementa la specifica tecnica del file system di ISO/IEC TS 18822:2015 di C++ (bozza finale [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) e contiene tipi e funzioni che consentono di scrivere codice indipendente dalla piattaforma per l'esplorazione del file system. Poiché è multipiattaforma, contiene API che non sono rilevanti per i sistemi Windows.Because it's cross-platform, it's contains APIs that aren't relevant for Windows systems. Ad esempio, restituisce sempre false in Windows.For example, `is_fifo(const path&)` always returns **false** on Windows.
 
 ## <a name="overview"></a>Panoramica
 
@@ -23,7 +24,7 @@ Usare le API \<filesystem> per le attività seguenti:
 
 - comporre, scomporre e confrontare percorsi
 
-- creare, copiare ed eliminare le directory
+- creare, copiare ed eliminare directory
 
 - copiare ed eliminare i file
 
@@ -33,7 +34,7 @@ Per altre informazioni sull'I/O file con la libreria standard, vedere la [Progra
 
 ### <a name="constructing-and-composing-paths"></a>Costruzione e composizione di percorsi
 
-I percorsi in Windows (a partire da XP) vengono archiviati in modo nativo in formato Unicode. La classe [path](../standard-library/path-class.md) esegue automaticamente tutte le conversioni di stringa necessarie. Accetta gli argomenti di matrici di caratteri sia wide che narrow, nonché tipi `std::string` e `std::wstring` nel formato UTF8 o UTF16. La classe `path` normalizza automaticamente anche i separatori del percorso. È possibile usare una singola barra come separatore di directory in argomenti del costruttore. In questo modo è possibile usare le stesse stringhe per memorizzare i percorsi in ambienti Windows e UNIX:
+I percorsi in Windows (a partire da XP) vengono archiviati in modo nativo in formato Unicode. La classe [path](../standard-library/path-class.md) esegue automaticamente tutte le conversioni di stringhe necessarie. Accetta argomenti di matrici di caratteri wide e `std::string` `std::wstring` narrow e sia i tipi formattati come UTF8 o UTF16. La classe `path` normalizza automaticamente anche i separatori del percorso. È possibile usare una singola barra come separatore di directory in argomenti del costruttore. Questo separatore consente di utilizzare le stesse stringhe per archiviare i percorsi in ambienti Windows e UNIX:
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -41,7 +42,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-Per concatenare due percorsi, è possibile usare gli operatori `/` e `/=` in rapporto di overload, che sono analoghi agli operatori `+` e `+=` in `std::string` e `std::wstring`. In caso contrario, l'oggetto `path` fornirà facilmente i separatori.
+Per concatenare due percorsi, è possibile usare gli operatori `/` e `/=` in rapporto di overload, che sono analoghi agli operatori `+` e `+=` in `std::string` e `std::wstring`. L'oggetto `path` fornirà comodamente i separatori in caso contrario.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -50,18 +51,18 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>Esame dei percorsi
 
-La classe path ha diversi metodi che restituiscono informazioni sulle varie parti del percorso stesso, distinte dall'entità di file system a cui potrebbe riferirsi. È possibile ottenere la radice, il percorso relativo, il nome del file, l'estensione del file e molto altro. È possibile eseguire l'iterazione su un oggetto path per esaminare tutte le cartelle nella gerarchia. L'esempio seguente illustra come eseguire l'iterazione su un percorso (non la directory a cui fa riferimento) e recuperare informazioni sulle sue parti.
+La classe path dispone di diversi metodi che restituiscono informazioni sulle varie parti del percorso stesso. Queste informazioni sono distinte dalle informazioni sull'entità del file system a cui potrebbe fare riferimento. È possibile ottenere la radice, il percorso relativo, il nome del file, l'estensione del file e molto altro. È possibile eseguire l'iterazione su un oggetto path per esaminare tutte le cartelle nella gerarchia. Nell'esempio seguente viene illustrato come scorrere un oggetto percorso. E, come recuperare informazioni sulle sue parti.
 
 ```cpp
 // filesystem_path_example.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <sstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
 wstring DisplayPathInfo()
 {
@@ -88,7 +89,7 @@ wstring DisplayPathInfo()
     return wos.str();
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     wcout << DisplayPathInfo() << endl;
     // wcout << ComparePaths() << endl; // see following example
@@ -119,7 +120,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>Confronto tra percorsi
 
-La classe `path` è in rapporto di overload con gli stessi operatori di confronto di `std::string` e `std::wstring`. Quando si confrontano due percorsi, si sta eseguendo un confronto tra stringhe dopo che i separatori sono stati normalizzati. Se non è presente una barra finale (o una barra rovesciata), non viene aggiunta e influenza il confronto. L'esempio seguente dimostra come confrontare i valori di percorso:
+La classe `path` è in rapporto di overload con gli stessi operatori di confronto di `std::string` e `std::wstring`. Quando si confrontano due percorsi, si esegue un confronto tra stringhe dopo che i separatori sono stati normalizzati. Se manca una barra finale (o barra rovesciata), non viene aggiunta e ciò influisce sul confronto. L'esempio seguente dimostra come confrontare i valori di percorso:
 
 ```cpp
 wstring ComparePaths()
@@ -158,18 +159,18 @@ Un oggetto `path` è convertibile in modo implicito in un oggetto `std::wstring`
 
 ```cpp
 // filesystem_path_conversion.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
-int main(int argc, char* argv[])
+int main()
 {
-    wchar_t* p = L"C:/Users/Public/Documents";
+    const wchar_t* p{ L"C:/Users/Public/Documents" };
     path filePath(p);
 
     filePath /= L"NewFile.txt";
@@ -209,4 +210,4 @@ Press Enter to exit
 
 L'intestazione \<filesystem> specifica il tipo [directory_iterator](../standard-library/directory-iterator-class.md) per eseguire l'iterazione sulle singole directory e la classe [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) per eseguire l'iterazione in modo ricorsivo su una directory e le relative sottodirectory. Dopo aver creato un iteratore passandovi un oggetto `path` , l'iteratore punta al primo oggetto directory_entry nel percorso. Creare l'iteratore finale chiamando il costruttore predefinito.
 
-Quando si esegue l'iterazione su una directory, è possibile riscontrare diversi tipi di elementi, inclusi in via esemplificativa directory, file, collegamenti simbolici e file di socket. `directory_iterator` restituisce gli elementi come oggetti [directory_entry](../standard-library/directory-entry-class.md).
+Quando si scorre una directory, ci sono diversi tipi di elementi che si potrebbero scoprire. Questi elementi includono directory, file, collegamenti simbolici, file socket e altri. `directory_iterator` restituisce gli elementi come oggetti [directory_entry](../standard-library/directory-entry-class.md).

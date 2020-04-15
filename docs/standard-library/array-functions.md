@@ -10,22 +10,22 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416914"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364935"
 ---
 # <a name="ltarraygt-functions"></a>Funzioni &lt;array&gt;
 
-L'intestazione > della matrice \<include due funzioni non membro, `get` e `swap`, che operano su oggetti **Array** .
+La \<matrice> intestazione include `get` due `swap`funzioni non membro e , che operano su oggetti **di matrice.**
 
 |||
 |-|-|
-|[get](#get)|[swap](#swap)|
+|[get](#get)|[Swap](#swap)|
 
-## <a name="get"></a>  get
+## <a name="get"></a><a name="get"></a>Ottieni
 
 Restituisce un riferimento all'elemento specificato della matrice.
 
@@ -42,16 +42,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Index*\ (Indice)
+*Indice*\
 Offset di un elemento.
 
-\ *T*
+*T*\
 Tipo di un elemento.
 
 *N*\
 Numero di elementi nella matrice.
 
-\ *arr*
+*Arrangiamento*\
 Matrice da selezionare.
 
 ### <a name="example"></a>Esempio
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Swap
 
-Una specializzazione di un modello non membro di `std::swap` che scambia due oggetti **Array** .
+Specializzazione di modello non `std::swap` membro che scambia due oggetti **di matrice.**
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,16 +97,16 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parametri
 
-\ *Ty*
+*Ty*\
 Tipo di un elemento.
 
 *N*\
 Dimensione della matrice.
 
-\ a *sinistra*
+*Sinistra*\
 La prima matrice da scambiare.
 
-\ a *destra*
+*va bene*\
 La seconda matrice da scambiare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<array>](../standard-library/array.md)
+[\<>array](../standard-library/array.md)

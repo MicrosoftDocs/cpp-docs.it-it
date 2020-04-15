@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-ms.openlocfilehash: 4cbf1137a15a9f86a6377980526e6d188f4d0a69
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6cdc0ed6bfa4765817de8b7628f339db5e7e5bf5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504775"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369627"
 ---
 # <a name="colechangeicondialog-class"></a>Classe COleChangeIconDialog
 
@@ -33,35 +33,35 @@ Utilizzato per la finestra di dialogo di modifica dell'icona OLE.
 class COleChangeIconDialog : public COleDialog
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleChangeIconDialog:: COleChangeIconDialog](#colechangeicondialog)|Costruisce un oggetto `COleChangeIconDialog`.|
+|[COleChangeIconDialog::COleChangeIconDialog](#colechangeicondialog)|Costruisce un oggetto `COleChangeIconDialog`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleChangeIconDialog::D oChangeIcon](#dochangeicon)|Esegue la modifica specificata nella finestra di dialogo.|
-|[COleChangeIconDialog::D oModal](#domodal)|Consente di visualizzare la finestra di dialogo icona modifica OLE 2.|
-|[COleChangeIconDialog:: GetIconicMetafile](#geticonicmetafile)|Ottiene un handle per il Metafile associato alla forma iconica di questo elemento.|
+|[COleChangeIconDialog::DochangeIcon](#dochangeicon)|Esegue la modifica specificata nella finestra di dialogo.|
+|[COleChangeIconDialog::DoModal](#domodal)|Visualizza la finestra di dialogo Cambia icona OLE 2.|
+|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|Ottiene un handle per il metafile associato al form iconico di questo elemento.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|NOME|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[COleChangeIconDialog:: m_ci](#m_ci)|Struttura che controlla il comportamento della finestra di dialogo.|
+|[COleChangeIconDialog::m_ci](#m_ci)|Struttura che controlla il comportamento della finestra di dialogo.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Creare un oggetto della classe `COleChangeIconDialog` quando si desidera chiamare questa finestra di dialogo. Dopo che `COleChangeIconDialog` un oggetto è stato creato, è possibile utilizzare la struttura [m_ci](#m_ci) per inizializzare i valori o gli Stati dei controlli nella finestra di dialogo. La `m_ci` struttura è di tipo OLEUICHANGEICON. Per ulteriori informazioni sull'utilizzo di questa classe della finestra di dialogo, vedere la funzione membro [DoModal](#domodal) .
+Creare un oggetto `COleChangeIconDialog` di classe quando si desidera chiamare questa finestra di dialogo. Dopo `COleChangeIconDialog` aver costruito un oggetto, è possibile utilizzare la struttura [m_ci](#m_ci) per inizializzare i valori o gli stati dei controlli nella finestra di dialogo. La `m_ci` struttura è di tipo OLEUICHANGEICON. Per altre informazioni sull'uso di questa classe di finestre di dialogo, vedere la funzione membro [DoModal.For](#domodal) more information about using this dialog class, see the DoModal member function.
 
-Per ulteriori informazioni, vedere la struttura [OleUIChangeIcon](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) nel Windows SDK.
+Per ulteriori informazioni, vedere la struttura [OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) in Windows SDK.
 
-Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l'articolo finestre [di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).
+Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l'articolo [Finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -81,11 +81,11 @@ Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxodlgs. h
+**Intestazione:** afxodlgs.h
 
-##  <a name="colechangeicondialog"></a>COleChangeIconDialog:: COleChangeIconDialog
+## <a name="colechangeicondialogcolechangeicondialog"></a><a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog
 
-Questa funzione costruisce solo un `COleChangeIconDialog` oggetto.
+Questa funzione costruisce `COleChangeIconDialog` solo un oggetto.
 
 ```
 explicit COleChangeIconDialog(
@@ -96,34 +96,34 @@ explicit COleChangeIconDialog(
 
 ### <a name="parameters"></a>Parametri
 
-*pItem*<br/>
+*pItem (elemento)*<br/>
 Punta all'elemento da convertire.
 
 *dwFlags*<br/>
-Flag di creazione, che contiene un numero qualsiasi dei valori seguenti combinati tramite l'operatore OR bit per bit:
+Flag di creazione, che contiene un numero qualsiasi dei seguenti valori combinati utilizzando l'operatore or bit per bit:
 
-- CIF_SELECTCURRENT specifica che il pulsante di opzione corrente verrà selezionato inizialmente quando viene chiamata la finestra di dialogo. Questa è l'impostazione predefinita.
+- CIF_SELECTCURRENT specifica che il pulsante di opzione Corrente verrà selezionato inizialmente quando viene chiamata la finestra di dialogo. Questa è la modalità predefinita.
 
-- CIF_SELECTDEFAULT specifica che il pulsante di opzione predefinito verrà selezionato inizialmente quando viene chiamata la finestra di dialogo.
+- CIF_SELECTDEFAULT specifica che il pulsante di opzione Predefinito verrà selezionato inizialmente quando viene chiamata la finestra di dialogo.
 
-- CIF_SELECTFROMFILE specifica che il pulsante di opzione da file verrà selezionato inizialmente quando viene chiamata la finestra di dialogo.
+- CIF_SELECTFROMFILE specifica che il pulsante di opzione Da file verrà selezionato inizialmente quando viene chiamata la finestra di dialogo.
 
-- CIF_SHOWHELP specifica che il pulsante della guida viene visualizzato quando viene chiamata la finestra di dialogo.
+- CIF_SHOWHELP specifica che il pulsante ?da un messaggio di posta elettronica verrà visualizzato quando viene chiamata la finestra di dialogo.
 
-- CIF_USEICONEXE specifica che l'icona deve essere estratta dall'eseguibile specificato nel `szIconExe` campo di [m_ci](#m_ci) anziché recuperato dal tipo. Questa operazione è utile per l'incorporamento o il collegamento a file non OLE.
+- CIF_USEICONEXE Specifica che l'icona deve essere estratta `szIconExe` dall'eseguibile specificato nel campo di [m_ci](#m_ci) anziché essere recuperata dal tipo. Ciò è utile per l'incorporamento o il collegamento a file non OLE.
 
-*pParentWnd*<br/>
-Punta all'oggetto padre o alla finestra proprietaria (di `CWnd`tipo) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre della finestra di dialogo verrà impostata sulla finestra principale dell'applicazione.
+*pParentWnd (informazioni in due)*<br/>
+Punta all'oggetto finestra padre o `CWnd`proprietario (di tipo ) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre della finestra di dialogo verrà impostata sulla finestra principale dell'applicazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per visualizzare la finestra di dialogo, chiamare la funzione [DoModal](#domodal) .
 
-Per ulteriori informazioni, vedere la struttura [OleUIChangeIcon](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) nel Windows SDK.
+Per ulteriori informazioni, vedere la struttura [OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) in Windows SDK.
 
-##  <a name="dochangeicon"></a>COleChangeIconDialog::D oChangeIcon
+## <a name="colechangeicondialogdochangeicon"></a><a name="dochangeicon"></a>COleChangeIconDialog::DochangeIcon
 
-Chiamare questa funzione per modificare l'icona che rappresenta l'elemento in quello selezionato nella finestra di dialogo dopo che [DoModal](#domodal) restituisce IDOK.
+Chiamare questa funzione per modificare l'icona che rappresenta l'elemento a quello selezionato nella finestra di dialogo dopo [DoModal](#domodal) restituisce IDOK.
 
 ```
 BOOL DoChangeIcon(COleClientItem* pItem);
@@ -131,16 +131,16 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 
 ### <a name="parameters"></a>Parametri
 
-*pItem*<br/>
-Punta all'elemento di cui è in corso la modifica dell'icona.
+*pItem (elemento)*<br/>
+Punta all'elemento la cui icona sta cambiando.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la modifica ha esito positivo; in caso contrario, 0.
+Diverso da zero se la modifica ha esito positivo; in caso contrario 0.
 
-##  <a name="domodal"></a>COleChangeIconDialog::D oModal
+## <a name="colechangeicondialogdomodal"></a><a name="domodal"></a>COleChangeIconDialog::DoModal
 
-Chiamare questa funzione per visualizzare la finestra di dialogo icona di modifica OLE.
+Chiamare questa funzione per visualizzare la finestra di dialogo Modifica icona OLE.
 
 ```
 virtual INT_PTR DoModal();
@@ -148,21 +148,21 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valore restituito
 
-Stato di completamento della finestra di dialogo. Uno dei valori seguenti:
+Stato di completamento per la finestra di dialogo. Uno dei valori seguenti:
 
 - IDOK se la finestra di dialogo è stata visualizzata correttamente.
 
 - IDCANCEL se l'utente ha annullato la finestra di dialogo.
 
-- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare la `COleDialog::GetLastError` funzione membro per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco di possibili errori, vedere la funzione [OleUIChangeIcon](/windows/win32/api/oledlg/nf-oledlg-oleuichangeiconw) nella Windows SDK.
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, `COleDialog::GetLastError` chiamare la funzione membro per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco dei possibili errori, vedere la funzione [OleUIChangeIcon](/windows/win32/api/oledlg/nf-oledlg-oleuichangeiconw) in Windows SDK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se si desidera inizializzare i vari controlli della finestra di dialogo impostando i membri della struttura [m_ci](#m_ci) , è necessario eseguire questa `DoModal`operazione prima di chiamare, ma dopo la costruzione dell'oggetto finestra di dialogo.
+Se si desidera inizializzare i vari controlli della finestra di dialogo `DoModal`impostando i membri della [struttura m_ci,](#m_ci) è necessario eseguire questa operazione prima di chiamare , ma dopo la costruzione dell'oggetto finestra di dialogo.
 
-Se `DoModal` restituisce IDOK, è possibile chiamare altre funzioni membro per recuperare le impostazioni o le informazioni che sono state inserite dall'utente nella finestra di dialogo.
+Se `DoModal` restituisce IDOK, è possibile chiamare altre funzioni membro per recuperare le impostazioni o le informazioni immesse dall'utente nella finestra di dialogo.
 
-##  <a name="geticonicmetafile"></a>COleChangeIconDialog:: GetIconicMetafile
+## <a name="colechangeicondialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile
 
 Chiamare questa funzione per ottenere un handle per il metafile che contiene l'aspetto iconico dell'elemento selezionato.
 
@@ -172,9 +172,9 @@ HGLOBAL GetIconicMetafile() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Handle per il metafile contenente l'aspetto iconico della nuova icona, se la finestra di dialogo è stata annullata scegliendo **OK**; in caso contrario, l'icona era prima che venisse visualizzata la finestra di dialogo.
+Handle del metafile contenente l'aspetto iconico della nuova icona, se la finestra di dialogo è stata chiusa scegliendo **OK;** in caso contrario, l'icona così com'era prima della visualizzazione della finestra di dialogo.
 
-##  <a name="m_ci"></a>COleChangeIconDialog:: m_ci
+## <a name="colechangeicondialogm_ci"></a><a name="m_ci"></a>COleChangeIconDialog::m_ci
 
 Struttura di tipo OLEUICHANGEICON utilizzata per controllare il comportamento della finestra di dialogo Cambia icona.
 
@@ -182,14 +182,14 @@ Struttura di tipo OLEUICHANGEICON utilizzata per controllare il comportamento de
 OLEUICHANGEICON m_ci;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.
+I membri di questa struttura possono essere modificati direttamente o tramite funzioni membro.
 
-Per ulteriori informazioni, vedere la struttura [OleUIChangeIcon](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) nel Windows SDK.
+Per ulteriori informazioni, vedere la struttura [OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) in Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)
