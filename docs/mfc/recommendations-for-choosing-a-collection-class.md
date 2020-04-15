@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53a4eb3e30048d9dc82722d912a026d63a87586d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371751"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Suggerimenti per la scelta di una classe di raccolte
 
@@ -47,45 +47,45 @@ Nella tabella seguente, [Funzionalità delle forme di raccolta](#_core_collectio
 
 - La colonna 6 indica se ogni forma consente elementi duplicati.
 
-### <a name="_core_collection_shape_features"></a>  Funzionalità delle forme di raccolta
+### <a name="collection-shape-features"></a><a name="_core_collection_shape_features"></a>Caratteristiche della forma della raccolta
 
-|Forma|Ordered|Indicizzati|Inserimento di un elemento|Ricerca di un elemento specificato|Elementi duplicati|
+|Con forme|Ordinato|Indicizzato|Inserimento di un elemento|Ricerca di un elemento specificato|Elementi duplicati|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
-|List|Yes|No|Fast|Lento|Yes|
-|Matrice|Yes|Tramite valore Integer|Lento|Lento|Yes|
-|Mappa|No|Tramite chiave|Fast|Fast|No (chiavi) Sì (valori)|
+|Elenco|Sì|No|Veloce|Lento|Sì|
+|Array|Sì|Tramite valore Integer|Lento|Lento|Sì|
+|Mappa|No|Tramite chiave|Veloce|Veloce|No (chiavi) Sì (valori)|
 
 Nella tabella seguente, [Caratteristiche delle classi di raccolta MFC](#_core_characteristics_of_mfc_collection_classes), vengono riepilogate altre importanti caratteristiche di classi della raccolta MFC specifiche come guida alla selezione. La scelta può variare a seconda se la classe è basata su modelli C++, se gli elementi possono essere serializzati tramite il meccanismo di [serializzazione](../mfc/serialization-in-mfc.md) dei documenti MFC, se è possibile eseguire il dump dei relativi elementi tramite il meccanismo di dump diagnostico di MFC o se la classe è indipendente dai tipi, ovvero se è in grado di garantire il tipo di elementi archiviati in e recuperati da una raccolta basata sulla classe.
 
-### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Caratteristiche delle classi di raccolta MFC
+### <a name="characteristics-of-mfc-collection-classes"></a><a name="_core_characteristics_of_mfc_collection_classes"></a>Caratteristiche delle classi di raccolte MFC
 
-|Classe|Usa C++<br /><br /> modelli|Può essere<br /><br /> serializzato|Può essere<br /><br /> oggetto di dump|È<br /><br /> indipendente dai tipi|
+|Classe|Usa C++<br /><br /> Modelli|Può essere<br /><br /> serializzato|Può essere<br /><br /> oggetto di dump|Is<br /><br /> indipendente dai tipi|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
-|`CArray`|Yes|Sì 1|Sì 1|No|
-|`CByteArray`|No|Yes|Yes|Sì 3|
-|`CDWordArray`|No|Yes|Yes|Sì 3|
-|`CList`|Yes|Sì 1|Sì 1|No|
-|`CMap`|Yes|Sì 1|Sì 1|No|
+|`CArray`|Sì|Sì 1|Sì 1|No|
+|`CByteArray`|No|Sì|Sì|Sì 3|
+|`CDWordArray`|No|Sì|Sì|Sì 3|
+|`CList`|Sì|Sì 1|Sì 1|No|
+|`CMap`|Sì|Sì 1|Sì 1|No|
 |`CMapPtrToPtr`|No|No|Sì|No|
 |`CMapPtrToWord`|No|No|Sì|No|
-|`CMapStringToOb`|No|Yes|Yes|No|
+|`CMapStringToOb`|No|Sì|Sì|No|
 |`CMapStringToPtr`|No|No|Sì|No|
-|`CMapStringToString`|No|Yes|Yes|Sì 3|
-|`CMapWordToOb`|No|Yes|Yes|No|
+|`CMapStringToString`|No|Sì|Sì|Sì 3|
+|`CMapWordToOb`|No|Sì|Sì|No|
 |`CMapWordToPtr`|No|No|Sì|No|
-|`CObArray`|No|Yes|Yes|No|
-|`CObList`|No|Yes|Yes|No|
+|`CObArray`|No|Sì|Sì|No|
+|`CObList`|No|Sì|Sì|No|
 |`CPtrArray`|No|No|Sì|No|
 |`CPtrList`|No|No|Sì|No|
-|`CStringArray`|No|Yes|Yes|Sì 3|
-|`CStringList`|No|Yes|Yes|Sì 3|
-|`CTypedPtrArray`|Yes|Dipende 2|Yes|Yes|
-|`CTypedPtrList`|Yes|Dipende 2|Yes|Yes|
-|`CTypedPtrMap`|Yes|Dipende 2|Yes|Yes|
-|`CUIntArray`|No|No|Yes|Sì 3|
-|`CWordArray`|No|Yes|Yes|Sì 3|
+|`CStringArray`|No|Sì|Sì|Sì 3|
+|`CStringList`|No|Sì|Sì|Sì 3|
+|`CTypedPtrArray`|Sì|Dipende 2|Sì|Sì|
+|`CTypedPtrList`|Sì|Dipende 2|Sì|Sì|
+|`CTypedPtrMap`|Sì|Dipende 2|Sì|Sì|
+|`CUIntArray`|No|No|Sì|Sì 3|
+|`CWordArray`|No|Sì|Sì|Sì 3|
 
-1. Per serializzare, è necessario chiamare in modo esplicito la funzione `Serialize` dell'oggetto raccolta. Per eseguire il dump, è necessario chiamare esplicitamente la funzione `Dump`. Non è possibile usare il modulo `ar << collObj` per la serializzazione o il modulo `dmp` `<< collObj` per eseguire il dump.
+1. Per serializzare, è necessario chiamare in modo esplicito la funzione `Serialize` dell'oggetto raccolta. Per eseguire il dump, è necessario chiamare esplicitamente la funzione `Dump`. Non è possibile `ar << collObj` utilizzare il `dmp` `<< collObj` modulo per serializzare o il form per eseguire il dump.
 
 2. La serializzabilità dipende infatti dal tipo di raccolta sottostante. Ad esempio, se una matrice di puntatori tipizzata è basata su `CObArray`, è serializzabile, mentre se è basata su `CPtrArray`, non è serializzabile. In generale, le classi "Ptr" non possono essere serializzate.
 

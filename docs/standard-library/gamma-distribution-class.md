@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: ab71ada5b1fb8b604b94ed098a46820b86a65c63
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 4bcc17ada430c1e3b14ef1ef67ea97e863dbdd5d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689613"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370677"
 ---
 # <a name="gamma_distribution-class"></a>Classe gamma_distribution
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *RealType*
-Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*Tipo reale*\
+Il tipo di risultato a virgola mobile è **double**. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
-@No__t_1 *Generatore URNG*
-Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*URNG*\
+Il motore generatore di numeri casuali uniformi. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione gamma. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o tipo **double** se non ne viene fornito alcuno, distribuito in base alla distribuzione gamma. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -87,7 +87,7 @@ Il modello di classe descrive una distribuzione che produce valori di un tipo a 
 
 Le funzioni di proprietà `alpha()` e `beta()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati *alpha* e *beta*.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto del parametro di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -95,7 +95,7 @@ La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cach
 
 Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
 
-Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
+Per ulteriori informazioni sulle classi di [ \< ](../standard-library/random.md)distribuzione e sui relativi membri, vedere random>.
 
 Per informazioni dettagliate, vedere l'articolo di Wolfram MathWorld relativo alla [distribuzione gamma](https://go.microsoft.com/fwlink/p/?linkid=401111).
 
@@ -188,7 +188,7 @@ Distribution for 10 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution::gamma_distribution
 
 Costruisce la distribuzione.
 
@@ -199,24 +199,24 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-\ *alfa*
+*Alfa*\
 Parametro di distribuzione `alpha`.
 
-\ *beta*
+*Beta*\
 Parametro di distribuzione `beta`.
 
-\ di *parmigiana*
+*Parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0.0 < alpha` e `0.0 < beta`
 
 Il primo costruttore crea un oggetto il cui valore `alpha` archiviato include il valore *alpha* e il cui valore `beta` archiviato include il valore *beta*.
 
-Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
+Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="param_type"></a>  gamma_distribution::param_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::param_type
 
 Archivia i parametri della distribuzione.
 
@@ -234,16 +234,16 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-\ *alfa*
+*Alfa*\
 Parametro di distribuzione `alpha`.
 
-\ *beta*
+*Beta*\
 Parametro di distribuzione `beta`.
 
-\ a *destra*
+*va bene*\
 Istanza `param_type` con cui eseguire il confronto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 **Precondizione:** `0.0 < alpha` e `0.0 < beta`
 
@@ -251,4 +251,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)
+[\<>casuali](../standard-library/random.md)

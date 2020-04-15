@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: bbd88225249ac18a2bb3ca4006e1edbe62fbddfc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095876"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371661"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Aggiunta di un gestore messaggi MFC
 
-È possibile utilizzare la [creazione guidata classe](mfc-class-wizard.md) o la finestra **Proprietà** in **Visualizzazione classi** per aggiungere un gestore di messaggi (una funzione membro che gestisce i messaggi di Windows) a una classe ed eseguire il mapping dei messaggi di Windows al gestore di messaggi. È inoltre possibile aggiungere [un gestore eventi per qualsiasi controllo finestra di dialogo](../../windows/adding-event-handlers-for-dialog-box-controls.md).
+È possibile utilizzare la [Creazione guidata classe](mfc-class-wizard.md) o la finestra **Proprietà** in **Visualizzazione CLass** per aggiungere un gestore messaggi (una funzione membro che gestisce i messaggi di Windows) a una classe ed eseguire il mapping dei messaggi di Windows al gestore messaggi. È inoltre possibile aggiungere [un gestore eventi per qualsiasi controllo finestra di dialogo](../../windows/adding-event-handlers-for-dialog-box-controls.md).
 
-Utilizzando la **creazione guidata classe** o la finestra **proprietà** (in **Visualizzazione classi**) per definire le funzioni di gestione degli eventi e dei messaggi, è possibile aggiornare automaticamente la tabella di invio messaggi (o la mappa messaggi) e il file di intestazione della classe.
+Utilizzando la **Creazione guidata classe** o la finestra **Proprietà** (in Visualizzazione **classi**) per definire le funzioni di gestione dei messaggi e degli eventi, è possibile aggiornare automaticamente la tabella di invio dei messaggi (o mappa messaggi) e il file di intestazione della classe.
 
 > [!NOTE]
->  È possibile aggiungere un gestore di messaggi a una classe ATL utilizzando la creazione guidata classe; Tuttavia, alcuni risultati possono variare. Per ulteriori informazioni, vedere l'argomento relativo all' [aggiunta di un gestore di messaggi ATL](../../atl/adding-an-atl-message-handler.md).
+> È possibile aggiungere un gestore messaggi a una classe ATL utilizzando la Creazione guidata classe; tuttavia, alcuni risultati possono variare. Per ulteriori informazioni, vedere l'argomento ATL [Aggiunta di un gestore messaggi ATL](../../atl/adding-an-atl-message-handler.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,50 +7,50 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: e0cd2d6d85cb9820b23495a003068994b13f9c85
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a46096592c9983d04d2122bfabb56ece9346c4bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371199"
 ---
 # <a name="printing"></a>Stampa
 
-Microsoft Windows implementa visualizzazione indipendente dal dispositivo. In MFC, questo significa che le stesse chiamate di disegnare, nel `OnDraw` funzione membro di classe di visualizzazione sono responsabili del disegno sullo schermo e in altri dispositivi, ad esempio le stampanti. Per l'anteprima di stampa, il dispositivo di destinazione è una stampante simulato visualizzato sullo schermo.
+Microsoft Windows implementa la visualizzazione indipendente dal dispositivo. In MFC, ciò significa che le `OnDraw` stesse chiamate di disegno, nella funzione membro della classe di visualizzazione, sono responsabili del disegno sullo schermo e su altri dispositivi, ad esempio le stampanti. Per l'anteprima di stampa, il dispositivo di destinazione è un output della stampante simulato sul display.
 
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Il ruolo nella stampa e il ruolo del Framework
+## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>Il ruolo nella stampa e il ruolo del Framework
 
-Classe di visualizzazione ha le responsabilità seguenti:
+La classe di visualizzazione ha le seguenti responsabilità:
 
-- Il framework che indicano il numero di pagine è nel documento.
+- Informare il framework di quante pagine sono presenti nel documento.
 
-- Quando viene richiesto per stampare una pagina specifica, disegnare tale parte del documento.
+- Quando viene richiesto di stampare una pagina specificata, disegnare quella parte del documento.
 
-- È possibile allocare e deallocare i tipi di carattere o altre risorse di interface (GDI) di dispositivo di grafica necessari per la stampa.
+- Allocare e deallocare eventuali tipi di carattere o altre risorse GDI (Graphics Device Interface) necessarie per la stampa.
 
-- Se necessario, inviare eventuali codici di escape necessari per modificare la modalità di stampa prima di stampare una determinata pagina, ad esempio, per modificare l'orientamento di stampa per ogni pagina.
+- Se necessario, inviare i codici di escape necessari per modificare la modalità della stampante prima di stampare una determinata pagina, ad esempio per modificare l'orientamento di stampa in base alla pagina.
 
-Le responsabilità del framework sono i seguenti:
+Le responsabilità del quadro sono le seguenti:
 
-- Visualizzare il **stampa** nella finestra di dialogo.
+- Visualizzare la finestra di dialogo **Stampa.**
 
-- Creare un [CDC](../mfc/reference/cdc-class.md) oggetto per la stampante.
+- Creare un oggetto [CDC](../mfc/reference/cdc-class.md) per la stampante.
 
-- Chiamare il [StartDoc](../mfc/reference/cdc-class.md#startdoc) e [EndDoc](../mfc/reference/cdc-class.md#enddoc) funzioni membro del `CDC` oggetto.
+- Chiamare le funzioni membro [StartDoc](../mfc/reference/cdc-class.md#startdoc) `CDC` e [EndDoc](../mfc/reference/cdc-class.md#enddoc) dell'oggetto.
 
-- Chiamare ripetutamente il [StartPage](../mfc/reference/cdc-class.md#startpage) funzione membro delle `CDC` dell'oggetto, informare la classe di visualizzazione quale pagina deve essere stampata e chiamare il [EndPage](../mfc/reference/cdc-class.md#endpage) funzione membro del `CDC` oggetto.
+- Chiamare ripetutamente la funzione membro `CDC` [StartPage](../mfc/reference/cdc-class.md#startpage) dell'oggetto, informare la classe di visualizzazione della `CDC` pagina da stampare e chiamare la funzione membro [EndPage](../mfc/reference/cdc-class.md#endpage) dell'oggetto.
 
-- Chiamare funzioni sottoponibili a override nella visualizzazione nel momento appropriato.
+- Chiamare le funzioni sottoponibili a override nella visualizzazione nei momenti appropriati.
 
-Gli articoli seguenti illustrano come il framework supporta la stampa e anteprima di stampa:
+Gli articoli seguenti illustrano come il framework supporta la stampa e l'anteprima di stampa:
 
-### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+### <a name="what-do-you-want-to-know-more-about"></a>Cosa vuoi sapere di più su
 
-- [Procedura di stampa predefinita](../mfc/how-default-printing-is-done.md)
+- [Modalità di stampa predefinita](../mfc/how-default-printing-is-done.md)
 
-- [Documenti con più pagine](../mfc/multipage-documents.md)
+- [Documenti a più pagine](../mfc/multipage-documents.md)
 
-- [Informazioni sulle intestazioni e piè di pagina](../mfc/headers-and-footers.md)
+- [Intestazioni e piè di pagina](../mfc/headers-and-footers.md)
 
 - [Allocazione di risorse GDI per la stampa](../mfc/allocating-gdi-resources.md)
 

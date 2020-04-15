@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cd7dc8467d07f53b0c741f98743a471df6f6c944
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372093"
 ---
 # <a name="piecewise_constant_distribution-class"></a>Classe piecewise_constant_distribution
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-\ *RealType*
-Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*Tipo reale*\
+Il tipo di risultato a virgola mobile, il valore predefinito è **double**. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -98,7 +98,7 @@ La funzione di proprietà `intervals()` restituisce una `vector<result_type>` co
 
 La funzione di proprietà `densities()` restituisce un `vector<result_type>` con le densità archiviate per ogni insieme di intervalli, calcolate in base ai pesi specificati nei parametri del costruttore.
 
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
+Il membro di proprietà `param()` imposta o restituisce il pacchetto del parametro di distribuzione archiviato `param_type`.
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.
 
@@ -106,7 +106,7 @@ La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cach
 
 Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
 
-Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
+Per ulteriori informazioni sulle classi di [ \< ](../standard-library/random.md)distribuzione e sui relativi membri, vedere random>.
 
 ## <a name="example"></a>Esempio
 
@@ -214,11 +214,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<> casuale
+**Intestazione:** \<random>
 
 **Spazio dei nomi:** std
 
-## <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::piecewise_constant_distribution
 
 Costruisce la distribuzione.
 
@@ -248,31 +248,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*primi*\
+*primoI*\
 Iteratore di input del primo elemento dell'intervallo di distribuzioni.
 
-*ultimi*\
+*lastI*\
 Iteratore di input dell'ultimo elemento dell'intervallo di distribuzioni.
 
-\ *firstW*
+*firstW*\
 Iteratore di input del primo elemento dell'intervallo di pesi.
 
-*intervalli*\
+*Intervalli*\
 Oggetto [initializer_list](../cpp/initializers.md) con gli intervalli della distribuzione.
 
-*conteggio*\
+*Conteggio*\
 Numero di elementi nell'intervallo di distribuzioni.
 
 *xmin*\
 Valore minimo dell'intervallo di distribuzioni.
 
-*xmax*\
+*Xmax*\
 Valore massimo dell'intervallo di distribuzioni. Deve essere maggiore di *xmin*.
 
-\ *weightfunc*
-Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il parametro e il valore restituito devono essere convertibili in **Double**.
+*pesofunc*\
+Oggetto che rappresenta la funzione di probabilità per la distribuzione. Sia il parametro che il valore restituito devono essere convertibili in **double.**
 
-\ di *parmigiana*
+*Parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Osservazioni
@@ -298,7 +298,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-costruisce un oggetto di distribuzione con intervalli dall'elenco di inizializzatori gli *intervalli* e i pesi generati dalla funzione *weightfunc*.
+costruisce un oggetto di distribuzione con intervalli dagli *intervalli* dell'elenco di inizializzatori e pesi generati dalla funzione *weightfunc*.
 
 Il costruttore definito come
 
@@ -308,7 +308,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-costruisce un oggetto di distribuzione con intervalli di *conteggio* distribuiti in modo uniforme rispetto a [`xmin,xmax`], assegnando i pesi di ogni intervallo in base alla funzione *weightfunc*e *weightfunc* deve accettare un parametro e avere un valore restituito, entrambi convertibili in `double`. **Precondizione:** `xmin < xmax`
+costruisce un oggetto *count* di distribuzione con intervalli `xmin,xmax`di conteggio distribuiti uniformemente su [ ], assegnando ogni intervallo di pesi in base alla funzione *weightfunc*e *weightfunc* deve accettare un parametro e avere un valore restituito, entrambi convertibili in `double`. **Prerequisito:**`xmin < xmax`
 
 Il costruttore definito come
 
@@ -316,9 +316,9 @@ Il costruttore definito come
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-costruisce un *oggetto di distribuzione utilizzando la* struttura di parametri archiviata.
+costruisce un oggetto di distribuzione utilizzando *parm* come struttura di parametri archiviata.
 
-## <a name="param_type"></a>  piecewise_constant_distribution::param_type
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::param_type (tipo di opzione)
 
 Archivia tutti i parametri della distribuzione.
 
@@ -344,11 +344,11 @@ Per la distribuzione [piecewise_constant_distribution](#piecewise_constant_distr
 
 ### <a name="remarks"></a>Osservazioni
 
-**Precondizione:** `xmin < xmax`
+**Prerequisito:**`xmin < xmax`
 
 Questa struttura può essere passata al costruttore di classe della distribuzione durante la creazione di istanze, alla funzione membro `param()` per impostare i parametri archiviati di una distribuzione esistente e a `operator()` per l'uso in sostituzione dei parametri archiviati.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)\
+[\<>casuali](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

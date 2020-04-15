@@ -7,95 +7,95 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fa39a4d9369c84d2cffdaeff28dc9cb2f966b31
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394741"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370861"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Aggiunta di più visualizzazioni a un singolo documento
 
-In un'applicazione single document interface (SDI) creata con la libreria di classi MFC (Microsoft Foundation), ogni tipo di documento è associato un solo tipo di visualizzazione. In alcuni casi, è consigliabile avere la possibilità di passare dalla visualizzazione corrente di un documento con una nuova visualizzazione.
+In un'applicazione di interfaccia a documento singolo (SDI) creata con la libreria MFC (Microsoft Foundation Class), ogni tipo di documento è associato a un singolo tipo di visualizzazione. In alcuni casi, è auspicabile avere la possibilità di cambiare la visualizzazione corrente di un documento con una nuova visualizzazione.
 
 > [!TIP]
->  Per procedure aggiuntive sull'implementazione di più visualizzazioni per un singolo documento, vedere [CDocument:: AddView](../mfc/reference/cdocument-class.md#addview) e il [raccogliere](../overview/visual-cpp-samples.md) esempio MFC.
+> Per ulteriori procedure sull'implementazione di più visualizzazioni per un singolo documento, vedere [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) e l'esempio [MFC COLLECT.](../overview/visual-cpp-samples.md)
 
-È possibile implementare questa funzionalità aggiungendo una nuova `CView`-classe derivata e codice aggiuntivo per il passaggio tra le visualizzazioni in modo dinamico a un'applicazione MFC esistente.
+È possibile implementare questa `CView`funzionalità aggiungendo una nuova classe derivata e codice aggiuntivo per passare le visualizzazioni in modo dinamico a un'applicazione MFC esistente.
 
-I passaggi sono i seguenti:
+Attenersi alla procedura seguente:
 
-- [Modificare la classe dell'applicazione esistente](#vcconmodifyexistingapplicationa1)
+- [Modificare la classe di applicazione esistente](#vcconmodifyexistingapplicationa1)
 
 - [Creare e modificare la nuova classe di visualizzazione](#vcconnewviewclassa2)
 
 - [Creare e collegare la nuova vista](#vcconattachnewviewa3)
 
-- [Implementare la funzione switch](#vcconswitchingfunctiona4)
+- [Implementare la funzione di commutazioneImplement the Switching Function](#vcconswitchingfunctiona4)
 
-- [Aggiungere il supporto per il passaggio alla visualizzazione](#vcconswitchingtheviewa5)
+- [Aggiunta del supporto per il passaggio da una visualizzazione all'altra](#vcconswitchingtheviewa5)
 
-Il resto di questo argomento si presuppone quanto segue:
+Nella parte restante di questo argomento si presuppone quanto segue:
 
-- Il nome del `CWinApp`-oggetto derivato `CMyWinApp`, e `CMyWinApp` dichiarato e definito *MYWINAPP. H* e *MYWINAPP. CPP*.
+- Il nome `CWinApp`dell'oggetto `CMyWinApp`derivato `CMyWinApp` è e viene dichiarato e definito in *MYWINAPP. H* e *MYWINAPP. CPP*.
 
-- `CNewView` è il nome della nuova `CView`-derivato, e `CNewView` dichiarato e definito *NEWVIEW. H* e *NEWVIEW. CPP*.
+- `CNewView`è il nome `CView`dell'oggetto derivato da new e `CNewView` viene dichiarato e definito in *NEWVIEW. H* e *NEWVIEW. CPP*.
 
-##  <a name="vcconmodifyexistingapplicationa1"></a> Modificare la classe dell'applicazione esistente
+## <a name="modify-the-existing-application-class"></a><a name="vcconmodifyexistingapplicationa1"></a>Modificare la classe di applicazione esistente
 
-Per l'applicazione passare dalla visualizzazione, è necessario modificare la classe dell'applicazione mediante l'aggiunta di variabili membro per archiviare le viste e un metodo per modificare i valori.
+Affinché l'applicazione passi da una visualizzazione all'altra, è necessario modificare la classe dell'applicazione aggiungendo variabili membro per archiviare le visualizzazioni e un metodo per passare da una visualizzazione all'altra.
 
-Aggiungere il codice seguente alla dichiarazione di `CMyWinApp` in *MYWINAPP. H*:
+Aggiungere il codice seguente `CMyWinApp` alla dichiarazione di in *MYWINAPP. H*:
 
 [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]
 
-Nuove variabili membro, `m_pOldView` e `m_pNewView`, scegliere la visualizzazione corrente e quello appena creato. Il nuovo metodo (`SwitchView`) attiva le viste quando richiesto dall'utente. Il corpo del metodo è illustrato più avanti in questo argomento nella [implementare la funzione cambio](#vcconswitchingfunctiona4).
+Le nuove variabili `m_pOldView` `m_pNewView`membro e , puntano alla visualizzazione corrente e a quella appena creata. Il nuovo`SwitchView`metodo ( ) consente di passare le visualizzazioni quando richiesto dall'utente. Il corpo del metodo viene illustrato più avanti in questo argomento in [Implementare la funzione](#vcconswitchingfunctiona4)di commutazione .
 
-Ultima modifica alla classe di applicazione richiede l'inclusione di un nuovo file di intestazione che definisce un messaggio di Windows (**WM_INITIALUPDATE**) che viene utilizzata nella funzione di passaggio a un'altra.
+L'ultima modifica alla classe dell'applicazione richiede l'inclusione di un nuovo file di intestazione che definisce un messaggio di Windows (**WM_INITIALUPDATE**) utilizzato nella funzione di commutazione.
 
-Inserire la riga seguente nella sezione di inclusione *MYWINAPP. CPP*:
+Inserire la riga seguente nella sezione include di *MYWINAPP. CPP*:
 
 [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]
 
-Salvare le modifiche e continuare al passaggio successivo.
+Salvare le modifiche e continuare con il passaggio successivo.
 
-##  <a name="vcconnewviewclassa2"></a> Creare e modificare la nuova classe di visualizzazione
+## <a name="create-and-modify-the-new-view-class"></a><a name="vcconnewviewclassa2"></a>Creare e modificare la nuova classe di visualizzazione
 
-Creare la nuova classe di visualizzazione è facilitata mediante il **una nuova classe** i comandi disponibili dalla visualizzazione classi. È l'unico requisito per questa classe che deriva da `CView`. Aggiungere la nuova classe all'applicazione. Per informazioni specifiche su come aggiungere una nuova classe al progetto, vedere [aggiunta di una classe](../ide/adding-a-class-visual-cpp.md).
+La creazione della nuova classe di visualizzazione è semplificata utilizzando il comando **Nuova classe** disponibile in Visualizzazione classi. L'unico requisito per questa classe `CView`è che deriva da . Aggiungere questa nuova classe all'applicazione. Per informazioni specifiche sull'aggiunta di una nuova classe al progetto, vedere [Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md).
 
-Dopo aver aggiunto la classe al progetto, è necessario modificare l'accessibilità di alcuni membri di classe di visualizzazione.
+Dopo aver aggiunto la classe al progetto, è necessario modificare l'accessibilità di alcuni membri della classe di visualizzazione.
 
-Modificare *NEWVIEW. H* modificando l'identificatore di accesso da **protetti** al **pubblica** per il costruttore e distruttore. In questo modo la classe per essere creati ed eliminati in modo dinamico e modificare l'aspetto della visualizzazione prima che diventi visibile.
+Modificare *NEWVIEW. H* modificando l'identificatore di accesso da **protected** a **public** per il costruttore e il distruttore. In questo modo la classe da creare ed eliminare in modo dinamico e modificare l'aspetto della visualizzazione prima che sia visibile.
 
-Salvare le modifiche e continuare al passaggio successivo.
+Salvare le modifiche e continuare con il passaggio successivo.
 
-##  <a name="vcconattachnewviewa3"></a> Creare e collegare la nuova vista
+## <a name="create-and-attach-the-new-view"></a><a name="vcconattachnewviewa3"></a>Creare e collegare la nuova vista
 
-Per creare e collegare la nuova vista, è necessario modificare il `InitInstance` funzione della classe dell'applicazione. La modifica viene aggiunto nuovo codice che crea un nuovo oggetto di visualizzazione e quindi inizializza entrambe `m_pOldView` e `m_pNewView` con i due oggetti di visualizzazione esistente.
+Per creare e collegare la nuova visualizzazione, è necessario modificare la `InitInstance` funzione della classe dell'applicazione. La modifica aggiunge nuovo codice che crea un `m_pOldView` nuovo `m_pNewView` oggetto visualizzazione e quindi inizializza entrambi e con i due oggetti visualizzazione esistenti.
 
-Poiché la nuova vista viene creata all'interno di `InitInstance` (funzione), entrambe le visualizzazioni di nuove ed esistenti rimangono valide per la durata dell'applicazione. Tuttavia, l'applicazione è stato possibile semplicemente creare la nuova vista in modo dinamico.
+Poiché la nuova visualizzazione `InitInstance` viene creata all'interno della funzione, entrambe le visualizzazioni nuove e quelle esistenti persistono per tutta la durata dell'applicazione. Tuttavia, l'applicazione potrebbe altrettanto facilmente creare la nuova visualizzazione in modo dinamico.
 
-Inserire questo codice dopo la chiamata a `ProcessShellCommand`:
+Inserire questo codice dopo `ProcessShellCommand`la chiamata a :
 
 [!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_3.cpp)]
 
-Salvare le modifiche e continuare al passaggio successivo.
+Salvare le modifiche e continuare con il passaggio successivo.
 
-##  <a name="vcconswitchingfunctiona4"></a> Implementare la funzione switch
+## <a name="implement-the-switching-function"></a><a name="vcconswitchingfunctiona4"></a>Implementare la funzione di commutazioneImplement the Switching Function
 
-Nel passaggio precedente, è stato aggiunto codice che creato e inizializzato un nuovo oggetto di visualizzazione. L'ultima parte principale consiste nell'implementare il metodo di commutazione, `SwitchView`.
+Nel passaggio precedente è stato aggiunto il codice che ha creato e inizializzato un nuovo oggetto visualizzazione. L'ultimo pezzo importante è quello `SwitchView`di implementare il metodo di commutazione, .
 
-Alla fine del file di implementazione per la classe dell'applicazione (*MYWINAPP. CPP*), aggiungere la definizione di metodo seguente:
+Alla fine del file di implementazione per la classe dell'applicazione (*MYWINAPP. CPP*), aggiungere la seguente definizione di metodo:
 
 [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]
 
-Salvare le modifiche e continuare al passaggio successivo.
+Salvare le modifiche e continuare con il passaggio successivo.
 
-##  <a name="vcconswitchingtheviewa5"></a> Aggiungere il supporto per il passaggio alla visualizzazione
+## <a name="add-support-for-switching-the-view"></a><a name="vcconswitchingtheviewa5"></a>Aggiunta del supporto per il passaggio da una visualizzazione all'altra
 
-Il passaggio finale implica l'aggiunta di codice che chiama il `SwitchView` metodo quando l'applicazione deve passare tra le visualizzazioni. Questa operazione può essere eseguita in diversi modi: mediante l'aggiunta di una nuova voce di menu per l'utente di scegliere o cambio internamente le viste quando vengono soddisfatte determinate condizioni.
+Il passaggio finale prevede `SwitchView` l'aggiunta di codice che chiama il metodo quando l'applicazione deve passare da una visualizzazione all'altra. Questa operazione può essere eseguita in diversi modi: aggiungendo una nuova voce di menu per l'utente di scegliere o passare le visualizzazioni internamente quando vengono soddisfatte determinate condizioni.
 
-Per altre informazioni sull'aggiunta di nuove voci di menu e funzioni del gestore comando, vedere [gestori per comandi e notifiche dei controlli](../mfc/handlers-for-commands-and-control-notifications.md).
+Per ulteriori informazioni sull'aggiunta di nuove voci di menu e funzioni del gestore di comandi, vedere [Gestori per comandi e notifiche](../mfc/handlers-for-commands-and-control-notifications.md)di controllo .
 
 ## <a name="see-also"></a>Vedere anche
 

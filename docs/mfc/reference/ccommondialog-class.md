@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853a4756df3b70f4f33deb7159b4d1aee610092c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182267"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369450"
 ---
 # <a name="ccommondialog-class"></a>Classe CCommonDialog
 
@@ -33,7 +33,7 @@ class CCommonDialog : public CDialog
 |----------|-----------------|
 |[CCommonDialog::CCommonDialog](#ccommondialog)|Costruisce un oggetto `CCommonDialog`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le classi seguenti incapsulano la funzionalità delle finestre di dialogo comuni di Windows:
 
@@ -67,9 +67,9 @@ Le classi seguenti incapsulano la funzionalità delle finestre di dialogo comuni
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdlgs. h
+**Intestazione:** afxdlgs.h
 
-##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog
+## <a name="ccommondialogccommondialog"></a><a name="ccommondialog"></a>CCommonDialog::CCommonDialog
 
 Costruisce un oggetto `CCommonDialog`.
 
@@ -79,17 +79,17 @@ explicit CCommonDialog(CWnd* pParentWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*pParentWnd*<br/>
-Punta all'oggetto finestra padre o proprietaria (typu [CWnd](../../mfc/reference/cwnd-class.md)) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, finestra padre dell'oggetto finestra di dialogo è impostata per la finestra principale dell'applicazione.
+*pParentWnd (informazioni in due)*<br/>
+Punta all'oggetto finestra padre o proprietario (di tipo [CWnd](../../mfc/reference/cwnd-class.md)) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre dell'oggetto finestra di dialogo viene impostata sulla finestra principale dell'applicazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Visualizzare [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) per informazioni complete.
+Vedere [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) per informazioni complete.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CDialog](../../mfc/reference/cdialog-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CFileDialog](../../mfc/reference/cfiledialog-class.md)<br/>
 [Classe CFontDialog](../../mfc/reference/cfontdialog-class.md)<br/>
 [Classe CColorDialog](../../mfc/reference/ccolordialog-class.md)<br/>

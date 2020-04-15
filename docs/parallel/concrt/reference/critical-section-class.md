@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: aef3ae6100133374cb89098f118c447effafd840
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 24f96282a7728c6db6e0b05d36406f15383913f3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417152"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372683"
 ---
 # <a name="critical_section-class"></a>Classe critical_section
 
@@ -31,7 +31,7 @@ Un'esclusione reciproca non rientrante che tiene conto in modo esplicito del run
 class critical_section;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -43,28 +43,28 @@ class critical_section;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Classe critical_section:: scoped_lock](#critical_section__scoped_lock_class)|Wrapper RAII safe di eccezione per un oggetto `critical_section`.|
+|[Classe critical_section::scoped_lock](#critical_section__scoped_lock_class)|Wrapper RAII sicuro per `critical_section` un oggetto.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[critical_section](#ctor)|Costruisce una nuova sezione critica.|
-|[Distruttore ~ critical_section](#dtor)|Elimina una sezione critica.|
+|[Distruttore critical_section](#dtor)|Distrugge una sezione critica.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[lock](#lock)|Acquisisce questa sezione critica.|
-|[native_handle](#native_handle)|Restituisce un handle nativo specifico della piattaforma, se ne esiste uno.|
-|[try_lock](#try_lock)|Tenta di acquisire il blocco senza bloccarsi.|
+|[native_handle](#native_handle)|Restituisce un handle nativo specifico della piattaforma, se presente.|
+|[try_lock](#try_lock)|Tenta di acquisire il blocco senza bloccarlo.|
 |[try_lock_for](#try_lock_for)|Tenta di acquisire il blocco senza bloccarsi per un numero specifico di millisecondi.|
-|[unlock](#unlock)|Sblocca la sezione critica.|
+|[Sbloccare](#unlock)|Sblocca la sezione critica.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Per altre informazioni, vedere [Synchronization Data Structures](../../../parallel/concrt/synchronization-data-structures.md).
+Per ulteriori informazioni, vedere [Strutture di dati di sincronizzazione](../../../parallel/concrt/synchronization-data-structures.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -72,11 +72,11 @@ Per altre informazioni, vedere [Synchronization Data Structures](../../../parall
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** concrt. h
+**Intestazione:** concrt.h
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>critical_section
+## <a name="critical_section"></a><a name="ctor"></a>critical_section
 
 Costruisce una nuova sezione critica.
 
@@ -84,9 +84,9 @@ Costruisce una nuova sezione critica.
 critical_section();
 ```
 
-## <a name="dtor"></a>~ critical_section
+## <a name="critical_section"></a><a name="dtor"></a>critical_section dollari
 
-Elimina una sezione critica.
+Distrugge una sezione critica.
 
 ```cpp
 ~critical_section();
@@ -94,9 +94,9 @@ Elimina una sezione critica.
 
 ### <a name="remarks"></a>Osservazioni
 
-Si prevede che il blocco non venga più mantenuto durante l'esecuzione del distruttore. Consentire alla sezione critica di distruggersi con il blocco ancora mantenuto comporta un comportamento non definito.
+Si prevede che il blocco non viene più mantenuto quando viene eseguito il distruttore. Se si consente alla sezione critica di essere distrutta con il blocco ancora mantenuto, si ottiene un comportamento indefinito.
 
-## <a name="lock"></a>blocco
+## <a name="lock"></a><a name="lock"></a>Blocco
 
 Acquisisce questa sezione critica.
 
@@ -106,13 +106,13 @@ void lock();
 
 ### <a name="remarks"></a>Osservazioni
 
-Spesso è più sicuro usare il costrutto [scoped_lock](#critical_section__scoped_lock_class) per acquisire e rilasciare un oggetto `critical_section` in modo sicuro.
+Spesso è più sicuro utilizzare il costrutto [scoped_lock](#critical_section__scoped_lock_class) per acquisire e rilasciare un `critical_section` oggetto in modo sicuro.
 
-Se il blocco è già utilizzato dal contesto chiamante, verrà generata un'eccezione [improper_lock](improper-lock-class.md) .
+Se il blocco è già mantenuto dal contesto di chiamata, verrà generata un'eccezione [improper_lock.](improper-lock-class.md)
 
-## <a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a>native_handle
 
-Restituisce un handle nativo specifico della piattaforma, se ne esiste uno.
+Restituisce un handle nativo specifico della piattaforma, se presente.
 
 ```cpp
 native_handle_type native_handle();
@@ -120,23 +120,23 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento alla sezione critica.
+Un riferimento alla sezione critica.
 
 ### <a name="remarks"></a>Osservazioni
 
-Un oggetto `critical_section` non è associato a un handle nativo specifico della piattaforma per il sistema operativo Windows. Il metodo restituisce semplicemente un riferimento all'oggetto stesso.
+Un `critical_section` oggetto non è associato a un handle nativo specifico della piattaforma per il sistema operativo Windows. Il metodo restituisce semplicemente un riferimento all'oggetto stesso.
 
-## <a name="critical_section__scoped_lock_class"></a>Classe critical_section:: scoped_lock
+## <a name="critical_sectionscoped_lock-class"></a><a name="critical_section__scoped_lock_class"></a>Classe critical_section::scoped_lock
 
-Wrapper RAII safe di eccezione per un oggetto `critical_section`.
+Wrapper RAII sicuro per `critical_section` un oggetto.
 
 ```cpp
 class scoped_lock;
 ```
 
-## <a name="critical_section__scoped_lock_ctor"></a>scoped_lock:: scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock
 
-Costruisce un oggetto `scoped_lock` e acquisisce l'oggetto `critical_section` passato nel parametro `_Critical_section`. Se la sezione critica è mantenuta da un altro thread, questa chiamata si bloccherà.
+Costruisce un `scoped_lock` oggetto e `critical_section` acquisisce l'oggetto passato nel `_Critical_section` parametro. Se la sezione critica è contenuta da un altro thread, questa chiamata si bloccherà.
 
 ```cpp
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
@@ -147,17 +147,17 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 *_Critical_section*<br/>
 Sezione critica da bloccare.
 
-## <a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_dtor"></a>scoped_lock:::SCOPED_LOCK
 
-Elimina un oggetto `scoped_lock` e rilascia la sezione critica fornita nel relativo costruttore.
+Elimina un `scoped_lock` oggetto e rilascia la sezione critica fornita nel relativo costruttore.
 
 ```cpp
 ~scoped_lock();
 ```
 
-## <a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
-Tenta di acquisire il blocco senza bloccarsi.
+Tenta di acquisire il blocco senza bloccarlo.
 
 ```cpp
 bool try_lock();
@@ -165,9 +165,9 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il blocco è stato acquisito, il valore è **true**; in caso contrario, il valore è **false**.
+Se il blocco è stato acquisito, il valore **true**; in caso contrario, il valore **false**.
 
-## <a name="try_lock_for"></a>try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
 Tenta di acquisire il blocco senza bloccarsi per un numero specifico di millisecondi.
 
@@ -182,9 +182,9 @@ Numero di millisecondi che si devono attendere prima del timeout.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il blocco è stato acquisito, il valore è **true**; in caso contrario, il valore è **false**.
+Se il blocco è stato acquisito, il valore **true**; in caso contrario, il valore **false**.
 
-## <a name="unlock"></a>sbloccare
+## <a name="unlock"></a><a name="unlock"></a>Sbloccare
 
 Sblocca la sezione critica.
 

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-ms.openlocfilehash: f30ad029742a01280abda85cbd1a81104d01d8cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dfaabf3da62c216d3da662f59c57b63e695d9ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297034"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371156"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Fornire supporto di trascinamento per gli elementi di intestazione
 
-Per fornire supporto di trascinamento e rilascio per gli elementi di intestazione, specificare il HDS_DRAGDROP (stile). Supporto di trascinamento e rilascio per gli elementi di intestazione fornisce all'utente la possibilità di riordinare gli elementi dell'intestazione di un controllo intestazione. Il comportamento predefinito fornisce un'immagine di trascinamento semitrasparenti dell'elemento dell'intestazione che viene trascinato e un indicatore visivo della nuova posizione, se viene eliminato l'elemento dell'intestazione.
+Per fornire il supporto del trascinamento della selezione per gli elementi dell'intestazione, specificare lo stile di HDS_DRAGDROP. Il supporto del trascinamento della selezione per gli elementi di intestazione offre all'utente la possibilità di riordinare gli elementi di intestazione di un controllo intestazione. Il comportamento predefinito fornisce un'immagine di trascinamento semitrasparente dell'elemento dell'intestazione trascinato e un indicatore visivo della nuova posizione, se l'elemento dell'intestazione viene rilasciato.
 
-Come con le funzionalità di trascinamento e rilascio comuni, è possibile estendere il comportamento di trascinamento e rilascio predefinito gestendo le notifiche di funzione e HDN_ENDDRAG. È anche possibile personalizzare l'aspetto dell'immagine di trascinamento eseguendo l'override di [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) funzione membro.
+Come per le comuni funzionalità di trascinamento della selezione, è possibile estendere il comportamento predefinito di trascinamento della selezione gestendo le notifiche di HDN_BEGINDRAG e HDN_ENDDRAG. È inoltre possibile personalizzare l'aspetto dell'immagine di trascinamento eseguendo l'override di [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) funzione membro.
 
 > [!NOTE]
->  Se si fornisce il supporto di trascinamento e rilascio per un controllo header incorporato in un controllo elenco, vedere la sezione di stile esteso nel [la modifica degli stili del controllo elenco](../mfc/changing-list-control-styles.md) argomento.
+> Se si fornisce il supporto del trascinamento della selezione per un controllo intestazione incorporato in un controllo elenco, vedere la sezione Stile esteso nell'argomento Modifica degli stili del [controllo elenco.](../mfc/changing-list-control-styles.md)
 
 ## <a name="see-also"></a>Vedere anche
 

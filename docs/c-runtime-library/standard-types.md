@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500631"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367940"
 ---
 # <a name="standard-types"></a>Tipi standard
 
@@ -173,7 +173,7 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 
 ### <a name="fixed-width-integral-types-stdinth"></a>Tipi integrali a larghezza fissa (stdint.h)
 
-|nome|Tipo incorporato equivalente|
+|Nome|Tipo incorporato equivalente|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|signed char, unsigned char|
 |int16\_t, uint16\_t|short, unsigned short|
@@ -189,7 +189,7 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 |int_fast64_t, uint_fast64_t|long long, long long senza segno|
 |intmax_t, uintmax_t|long long, long long senza segno|
 
-|Tipo|DESCRIZIONE|Dichiarato in|
+|Type|Descrizione|Dichiarato in|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|Archivia valori temporali. Usato da [clock](../c-runtime-library/reference/clock.md).|TIME.H|
 |Struttura `_complex`|Archivia parti reali e immaginarie di numeri complessi. Usato da [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|
@@ -198,7 +198,7 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 |Struttura `_CrtMemState`|Fornisce informazioni sullo stato corrente dell'heap di debug del runtime C.|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Tipo definito per una funzione di callback che verrà chiamata in [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> I parametri di questa funzione sono: tipo di report, messaggio di output e valore restituito dalla funzione di callback.|CRTDBG.H|
 |`dev_t`, `_dev_t` short o unsigned integer|Rappresenta i gestori di dispositivo.|SYS\TYPES.H|
-|Struttura `_diskfree_t`|Contiene informazioni su un'unità disco. Usato da [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) **.**|DOS.H e DIRECT.H|
+|Struttura `_diskfree_t`|Contiene informazioni su un'unità disco. Usato da [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H e DIRECT.H|
 |Strutture `div_t`, `ldiv_t` e `lldiv_t`|Archiviano i valori restituiti rispettivamente da [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) e [lldiv](../c-runtime-library/reference/ldiv-lldiv.md).|STDLIB.H|
 |Tipo integer `errno_t`|Usato per un parametro o un tipo restituito della funzione che riguarda i codici di errore di `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Struttura `_exception`|Archivia informazioni sugli errori per [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
@@ -217,7 +217,7 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 |Matrice `jmp_buf`|Usata da [setjmp](../c-runtime-library/reference/setjmp.md) e [longjmp](../c-runtime-library/reference/longjmp.md) per salvare e ripristinare l'ambiente del programma.|SETJMP.H|
 |Struttura `lconv`|Contiene regole di formattazione per valori numerici in paesi diversi. Usata da [localeconv](../c-runtime-library/reference/localeconv.md).|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (long double o una matrice di unsigned char)|Usare per rappresentare un valore long double.|STDLIB.H|
-|Struttura `_locale_t`|Archivia i valori delle impostazioni locali correnti. Usato in tutte le librerie di runtime C specifiche delle impostazioni locali.|CRTDEF.H|
+|Struttura `_locale_t`|Archivia i valori delle impostazioni locali correnti. Usato in tutte le librerie di runtime C specifiche delle impostazioni locali.|CRTDEFS.H|
 |`mbstate_t`|Tiene traccia dello stato di una conversione di caratteri multibyte.|WCHAR.H|
 |`off_t`, `_off_t` long integer|Rappresenta il valore di offset di file.|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> Puntatore `_onexit_m_t`|Restituito da [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md).|STDLIB.H|
@@ -255,4 +255,4 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)
+[Riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)

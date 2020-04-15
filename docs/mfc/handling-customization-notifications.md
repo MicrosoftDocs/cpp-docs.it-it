@@ -47,18 +47,18 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: dc34f3eaa4b085b9d8acbaf47b21cf1825627100
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67f40d0dc50a853a39cb9b60a938d8eafe8293c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240687"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370480"
 ---
 # <a name="handling-customization-notifications"></a>Gestione delle notifiche di personalizzazione
 
 In una comune barra degli strumenti Windows sono incorporate funzionalità di personalizzazione, inclusa una finestra di dialogo di personalizzazione definita dal sistema, che consentono all'utente di inserire, eliminare o riordinare i pulsanti della barra degli strumenti. L'applicazione determina se le funzionalità di personalizzazione sono disponibili e controlla l'ambito in cui l'utente può personalizzare la barra degli strumenti.
 
-È possibile rendere queste funzionalità di personalizzazione disponibili all'utente assegnando la barra degli strumenti di **CCS_ADJUSTABLE** stile. Le funzionalità di personalizzazione consentono all'utente di trascinare un pulsante in una nuova posizione o di rimuovere un pulsante trascinandolo dalla barra degli strumenti. L'utente può anche fare doppio clic sulla barra degli strumenti per visualizzare la finestra di dialogo **Personalizza barra degli strumenti** , che consente di aggiungere, eliminare e riordinare i pulsanti della barra degli strumenti. L'applicazione può visualizzare la finestra di dialogo con la funzione membro [Personalizza](../mfc/reference/ctoolbarctrl-class.md#customize) .
+È possibile rendere disponibili all'utente queste funzionalità di personalizzazione assegnando alla barra degli strumenti lo stile **CCS_ADJUSTABLE.** Le funzionalità di personalizzazione consentono all'utente di trascinare un pulsante in una nuova posizione o di rimuovere un pulsante trascinandolo dalla barra degli strumenti. L'utente può anche fare doppio clic sulla barra degli strumenti per visualizzare la finestra di dialogo **Personalizza barra degli strumenti** , che consente di aggiungere, eliminare e riordinare i pulsanti della barra degli strumenti. L'applicazione può visualizzare la finestra di dialogo con la funzione membro [Personalizza](../mfc/reference/ctoolbarctrl-class.md#customize) .
 
 La barra degli strumenti invia messaggi di notifica alla finestra padre in ogni fase del processo di personalizzazione. Se l'utente tiene premuto il tasto MAIUSC e inizia a trascinare un pulsante, la barra degli strumenti gestisce automaticamente l'operazione di trascinamento. La barra degli strumenti invia il messaggio di notifica **TBN_QUERYDELETE** alla finestra padre per determinare se il pulsante può essere eliminato. L'operazione di trascinamento termina se la finestra padre restituisce **FALSE**. In caso contrario, la barra degli strumenti acquisisce gli input del mouse e attende che l'utente rilasci il pulsante del mouse.
 
@@ -80,15 +80,15 @@ Questi sono tutti messaggi **WM_NOTIFY** che possono essere gestiti nella finest
 ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 ```
 
-- **wNotifyCode**
+- **wNotifyCode (codice wNotifyCode)**
 
    Codice identificatore del messaggio di notifica, ad esempio **TBN_BEGINADJUST**.
 
-- **idControl**
+- **idControl (controllo)**
 
    Identificatore del controllo che invia la notifica.
 
-- **memberFxn**
+- **memberFxn (parte utente)**
 
    Funzione membro da chiamare quando si riceve la notifica.
 
@@ -120,25 +120,25 @@ typedef struct tagNMHDR {
 
    Identificatore del controllo che invia la notifica.
 
-- **codice**
+- **Codice**
 
    Codice di notifica. Questo membro può essere un valore specifico di un tipo di controllo, ad esempio **TBN_BEGINADJUST** o **TTN_NEEDTEXT**, oppure può essere uno dei valori di notifica comuni elencati di seguito:
 
-   - **NM_CLICK** L'utente ha fatto clic con il pulsante sinistro del mouse sul controllo.
+  - **NM_CLICK** L'utente ha fatto clic con il pulsante sinistro del mouse sul controllo.
 
-   - **NM_DBLCLK** L'utente ha fatto doppio clic con il pulsante sinistro del mouse sul controllo.
+  - **NM_DBLCLK** L'utente ha fatto doppio clic con il pulsante sinistro del mouse sul controllo.
 
-   - **NM_KILLFOCUS** Il controllo ha perso lo stato attivo per l'input.
+  - **NM_KILLFOCUS** Il controllo ha perso lo stato attivo per l'input.
 
-   - **NM_OUTOFMEMORY** Il controllo non ha completato un'operazione perché la memoria non è sufficiente.
+  - **NM_OUTOFMEMORY** Il controllo non ha completato un'operazione perché la memoria non è sufficiente.
 
-   - **NM_RCLICK** L'utente ha fatto clic con il pulsante destro del mouse sul controllo.
+  - **NM_RCLICK** L'utente ha fatto clic con il pulsante destro del mouse sul controllo.
 
-   - **NM_RDBLCLK** L'utente ha fatto doppio clic con il pulsante destro del mouse sul controllo.
+  - **NM_RDBLCLK** L'utente ha fatto doppio clic con il pulsante destro del mouse sul controllo.
 
-   - **NM_RETURN** Lo stato attivo per l'input si trova sul controllo e l'utente ha premuto il tasto INVIO.
+  - **NM_RETURN** Lo stato attivo per l'input si trova sul controllo e l'utente ha premuto il tasto INVIO.
 
-   - **NM_SETFOCUS** Il controllo ha ricevuto lo stato attivo per l'input.
+  - **NM_SETFOCUS** Il controllo ha ricevuto lo stato attivo per l'input.
 
 La struttura **TBNOTIFY** contiene i membri seguenti:
 
@@ -162,7 +162,7 @@ typedef struct {
 
 - **tbButton**
 
-   **TBBUTTON** struttura che contiene informazioni sul pulsante della barra degli strumenti associato alla notifica.
+   **Struttura TBBUTTON** che contiene informazioni sul pulsante della barra degli strumenti associato alla notifica.
 
 - **cchText**
 
@@ -176,7 +176,7 @@ Le notifiche che la barra degli strumenti invia sono i seguenti:
 
 - **TBN_BEGINADJUST**
 
-   Inviato quando l'utente inizia a personalizzare una barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sulla notifica. Il gestore non deve necessariamente restituire un valore specifico.
+   Inviato quando l'utente inizia a personalizzare un controllo barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sulla notifica. Il gestore non deve necessariamente restituire un valore specifico.
 
 - **TBN_BEGINDRAG**
 
@@ -184,37 +184,37 @@ Le notifiche che la barra degli strumenti invia sono i seguenti:
 
 - **TBN_CUSTHELP**
 
-   Inviato quando l'utente sceglie il pulsante nella finestra di dialogo Personalizza barra degli strumenti. Nessun valore restituito. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.
+   Inviato quando l'utente sceglie il pulsante ?, nella finestra di dialogo Personalizza barra degli strumenti. Nessun valore restituito. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.
 
 - **TBN_ENDADJUST**
 
-   Inviato quando l'utente termina di personalizzare un controllo barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.
+   Inviato quando l'utente interrompe la personalizzazione di un controllo barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.
 
 - **TBN_ENDDRAG**
 
-   Inviato quando l'utente smette di trascinare un pulsante in un controllo barra degli strumenti. Il puntatore punta a una struttura **TBNOTIFY** . Il membro **iItem** contiene l'indice in base zero del pulsante trascinato. Il gestore non deve necessariamente restituire un valore specifico.
+   Inviato quando l'utente interrompe il trascinamento di un pulsante in un controllo barra degli strumenti. Il puntatore punta a una struttura **TBNOTIFY** . Il membro **iItem** contiene l'indice in base zero del pulsante trascinato. Il gestore non deve necessariamente restituire un valore specifico.
 
 - **TBN_GETBUTTONINFO**
 
-   Inviato quando l'utente sta personalizzando una barra degli strumenti. La barra degli strumenti usa questo messaggio di notifica per recuperare le informazioni necessarie per la finestra di dialogo Personalizza barra degli strumenti. Il puntatore punta a una struttura **TBNOTIFY** . Il membro **iItem** specifica l'indice in base zero di un pulsante. I membri **pszText** e **cchText** specificano l'indirizzo e la lunghezza, in caratteri, del testo del pulsante corrente. Un'applicazione dovrebbe popolare la struttura con le informazioni relative al pulsante. Restituisce **TRUE** se le informazioni sul pulsante sono state copiate nella struttura; in caso contrario, restituisce **FALSE** .
+   Inviato quando l'utente personalizza un controllo barra degli strumenti. La barra degli strumenti usa questo messaggio di notifica per recuperare le informazioni necessarie per la finestra di dialogo Personalizza barra degli strumenti. Il puntatore punta a una struttura **TBNOTIFY** . Il membro **iItem** specifica l'indice in base zero di un pulsante. I membri **pszText** e **cchText** specificano l'indirizzo e la lunghezza, in caratteri, del testo del pulsante corrente. Un'applicazione dovrebbe popolare la struttura con le informazioni relative al pulsante. Restituisce **TRUE** se le informazioni sul pulsante sono state copiate nella struttura; in caso contrario, restituisce **FALSE** .
 
 - **TBN_QUERYDELETE**
 
-   Inviato quando l'utente sta personalizzando una barra degli strumenti per determinare se un pulsante può essere eliminato da un controllo barra degli strumenti. Il puntatore punta a una struttura **TBNOTIFY** . Il membro **iItem** contiene l'indice in base zero del pulsante da eliminare. Restituisce **TRUE** per consentire l'eliminazione del pulsante o **FALSE** per impedirne l'eliminazione.
+   Inviato mentre l'utente personalizza una barra degli strumenti per determinare se un pulsante può essere eliminato da un controllo barra degli strumenti. Il puntatore punta a una struttura **TBNOTIFY** . Il membro **iItem** contiene l'indice in base zero del pulsante da eliminare. Restituisce **TRUE** per consentire l'eliminazione del pulsante o **FALSE** per impedirne l'eliminazione.
 
 - **TBN_QUERYINSERT**
 
-   Inviato quando l'utente sta personalizzando una barra degli strumenti per determinare se un pulsante può essere inserito a sinistra del pulsante specificato. Il puntatore punta a una struttura **TBNOTIFY** . Il membro **iItem** contiene l'indice in base zero del pulsante da inserire. Restituisce **TRUE** per consentire l'inserimento del pulsante davanti al pulsante specificato o **FALSE** per impedirne l'inserimento.
+   Inviato mentre l'utente personalizza un controllo barra degli strumenti per determinare se un pulsante può essere inserito a sinistra del pulsante specificato. Il puntatore punta a una struttura **TBNOTIFY** . Il membro **iItem** contiene l'indice in base zero del pulsante da inserire. Restituisce **TRUE** per consentire l'inserimento del pulsante davanti al pulsante specificato o **FALSE** per impedirne l'inserimento.
 
 - **TBN_RESET**
 
-   Inviato quando l'utente Reimposta il contenuto della finestra di dialogo Personalizza barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.
+   Inviato quando l'utente reimposta il contenuto della finestra di dialogo Personalizza barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.
 
 - **TBN_TOOLBARCHANGE**
 
-   Inviato quando l'utente ha personalizzato una barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.
+   Inviato dopo che l'utente ha personalizzato un controllo barra degli strumenti. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Utilizzo di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CInvalidArgException [MFC], CInvalidArgException
 ms.assetid: e43d7c67-1157-47f8-817a-804083e8186e
-ms.openlocfilehash: d2df9b482fe95ad0a13a85a51037a4cbbc28d057
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b28b6e84043b85a8117694a67ff5fff13e7c786b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392621"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372371"
 ---
 # <a name="cinvalidargexception-class"></a>Classe CInvalidArgException
 
@@ -33,17 +33,17 @@ class CInvalidArgException : public CSimpleException
 |----------|-----------------|
 |[CInvalidArgException::CInvalidArgException](#cinvalidargexception)|Costruttore.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Oggetto `CInvalidArgException` oggetto rappresenta una condizione di eccezione di argomento non valido.
+Un `CInvalidArgException` oggetto rappresenta una condizione di eccezione di argomento non valido.
 
-Per ulteriori informazioni sulla gestione delle eccezioni, vedere la [classe CException](../../mfc/reference/cexception-class.md) argomento e [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md).
+Per ulteriori informazioni sulla gestione delle eccezioni, vedere l'argomento [Classe CException](../../mfc/reference/cexception-class.md) e [Gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CException](../../mfc/reference/cexception-class.md)
+[CEccezione](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -53,7 +53,7 @@ Per ulteriori informazioni sulla gestione delle eccezioni, vedere la [classe CEx
 
 **Intestazione:** afx.h
 
-##  <a name="cinvalidargexception"></a>  CInvalidArgException::CInvalidArgException
+## <a name="cinvalidargexceptioncinvalidargexception"></a><a name="cinvalidargexception"></a>CInvalidArgException::CInvalidArgException
 
 Costruttore.
 
@@ -61,11 +61,11 @@ Costruttore.
 CInvalidArgException();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Non utilizzare questo costruttore direttamente. chiamare la funzione globale **AfxThrowInvalidArgException**.
+Non utilizzare direttamente questo costruttore; chiamare la funzione globale **AfxThrowInvalidArgException**.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CSimpleException](../../mfc/reference/csimpleexception-class.md)

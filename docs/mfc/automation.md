@@ -1,5 +1,5 @@
 ---
-title: automazione
+title: Automazione
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation servers, about Automation servers
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9320ccf7a21c6110c51366fa8af96596512a4a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374155"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370820"
 ---
-# <a name="automation"></a>automazione
+# <a name="automation"></a>Automazione
 
 L'automazione (precedentemente nota come automazione OLE) fa sì che un'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati.
 
@@ -45,11 +45,11 @@ Ad esempio, un elaboratore di testo potrebbe esporre la propria funzionalità di
 
 Più importante è il supporto che l'automazione fornisce agli utenti e ai provider di soluzioni. Esponendo la funzionalità dell'applicazione tramite un'interfaccia comune e definita chiaramente, l'automazione consente di compilare soluzioni complete in un unico linguaggio di programmazione generale, come ad esempio Microsoft Visual Basic, anziché in diversi macro linguaggi specifici per applicazione.
 
-Molte applicazioni commerciali, quali Microsoft Excel e Microsoft Visual C++, permettono di automatizzare gran parte delle funzionalità che offrono. Ad esempio, in Visual C++, è possibile scrivere macro di VBScript per automatizzare compilazioni, aspetti del codice, la modifica o l'attività di debug.
+Molte applicazioni commerciali, quali Microsoft Excel e Microsoft Visual C++, permettono di automatizzare gran parte delle funzionalità che offrono. Ad esempio, in Visual C++, è possibile scrivere macro VBScript per automatizzare compilazioni, aspetti della modifica di codice o attività di debug.
 
-##  <a name="_core_passing_parameters_in_automation"></a> Passaggio di parametri nell'automazione
+## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> Passaggio di parametri nell'automazione
 
-Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il **VARIANT** tipo supporta numerosi tipi di dati standard: numeri interi a 2 e 4 byte, numeri a virgola mobile a 4 e 8 byte, stringhe e valori booleani. Inoltre, supporta il **HRESULT** (codici di errore OLE), **valuta** (un tipo numerico a virgola fissa), e **data** tipi (assoluto data e ora), nonché puntatori alle `IUnknown` e `IDispatch` interfacce.
+Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il tipo **VARIANT** supporta numerosi tipi di dati standard: interi a 2 e a 4 byte, numeri in virgola mobile a 4 e a 8 byte, stringhe e valori Boolean. Inoltre, supporta i tipi **HRESULT** (codici di errore OLE), **CURRENCY** (un tipo numerico a virgola fissa) `IUnknown` e `IDispatch` **DATE** (data e ora assoluta), nonché puntatori a e interfacce.
 
 Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/colevariant-class.md) . Le classi **CURRENCY** e **DATE** di supporto sono incapsulate nelle classi [COleCurrency](../mfc/reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .
 
@@ -67,9 +67,9 @@ Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/c
 
 - [MFCCALC](../overview/visual-cpp-samples.md) Mostra un'applicazione client di automazione.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Cosa vuoi sapere di più su
 
-- [Automation Clients](../mfc/automation-clients.md)
+- [Client di automazione](../mfc/automation-clients.md)
 
 - [Server di automazione](../mfc/automation-servers.md)
 
@@ -77,7 +77,7 @@ Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/c
 
 - [tecnologia Active](../mfc/mfc-com.md)
 
-## <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire
+## <a name="what-do-you-want-to-do"></a>Cosa vuoi fare
 
 - [Aggiungere una classe di automazione](../mfc/automation-servers.md)
 

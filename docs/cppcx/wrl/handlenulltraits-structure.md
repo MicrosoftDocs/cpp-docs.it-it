@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: d70425f414b998eb67e3937c2c126dd3eda0c00d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398381"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371467"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits (struttura)
 
@@ -49,11 +49,11 @@ Nome                                                  | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers. h
+**Intestazione:** corewrappers.h
 
 **Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="close"></a>HANDLENullTraits::Close
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Close
 
 Chiude l'handle specificato.
 
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametri
 
-*h*<br/>
+*H*<br/>
 Handle da chiudere.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gestiscono *h* chiuso correttamente; in caso contrario, **false**.
+**true** se l'handle *h* è stato chiuso correttamente; in caso contrario, **false**.
 
-## <a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
 
 Rappresenta un handle non valido.
 

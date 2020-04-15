@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: b659f832756b79289181db34fa8d6fc0d974609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161277"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371337"
 ---
 # <a name="issame-structure"></a>IsSame (struttura)
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,9 +38,9 @@ Tipo.
 *T2*<br/>
 Un altro tipo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Consente di verificare se un tipo specificato è uguale a un altro tipo specificato.
+Verifica se un tipo specificato è uguale a un altro tipo specificato.
 
 ## <a name="members"></a>Membri
 
@@ -48,7 +48,7 @@ Consente di verificare se un tipo specificato è uguale a un altro tipo specific
 
 Nome                    | Descrizione
 ----------------------- | --------------------------------------------------
-[IsSame::value](#value) | Indica se un tipo è uguale a un altro.
+[IsSame::valore](#value) | Indica se un tipo è uguale a un altro.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -56,13 +56,13 @@ Nome                    | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** FTM
+**Intestazione:** internal.h
 
 **Spazio dei nomi:** Microsoft::WRL::Details
 
-## <a name="value"></a>IsSame::value
+## <a name="issamevalue"></a><a name="value"></a>IsSame::valore
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 template <typename T1, typename T2>
@@ -78,8 +78,8 @@ struct IsSame<T1, T1>
 };
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Indica se un tipo è uguale a un altro.
 
-`value` viene **true** se i parametri del modello sono gli stessi, e **false** se i parametri del modello sono diversi.
+`value`è **true** se i parametri di modello sono uguali e **false** se i parametri di modello sono diversi.

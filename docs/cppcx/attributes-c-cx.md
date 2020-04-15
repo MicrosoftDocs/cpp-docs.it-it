@@ -2,22 +2,22 @@
 title: Attributi (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-ms.openlocfilehash: 77962dc2d4b7f6bda90a5376e5154782365a4106
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 437432ce32497311a9a91237118d6088881662a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740385"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371878"
 ---
 # <a name="attributes-ccx"></a>Attributi (C++/CX)
 
-Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre per Windows Runtime tipi e metodi per specificare determinati comportamenti nella creazione dei metadati. Diversi attributi predefiniti, ad esempio [Windows:: Foundation:: Metadata:: WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute), sono comunemente usati nel C++codice/CX. Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:
+Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre ai tipi e ai metodi di Windows Runtime per specificare determinati comportamenti nella creazione dei metadati. Diversi attributi predefiniti, ad [esempio, Windows::Foundation::Metadata::WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute), vengono comunemente utilizzati nel codice C . Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:
 
 [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]
 
 ## <a name="custom-attributes"></a>Attributi personalizzati
 
-Puoi anche definire attributi personalizzati. Gli attributi personalizzati devono essere conformi a queste regole di Windows Runtime:
+Puoi anche definire attributi personalizzati. Gli attributi personalizzati devono essere conformi alle seguenti regole di Windows Runtime:
 
 - Gli attributi personalizzati possono contenere solo campi pubblici.
 
@@ -25,19 +25,19 @@ Puoi anche definire attributi personalizzati. Gli attributi personalizzati devon
 
 - Un campo può essere uno dei seguenti tipi:
 
-   - int32 (int)
+  - int32 (int)
 
-   - uint32 (int non firmato)
+  - uint32 (int non firmato)
 
-   - bool
+  - bool
 
-   - Platform::String^
+  - Platform::String^
 
-   - Windows::Foundation::HResult
+  - Windows::Foundation::HResult
 
-   - Platform::Type^
+  - Platform::Type^
 
-   - classe enum pubblica (include le enumerazioni definite dall'utente)
+  - classe enum pubblica (include le enumerazioni definite dall'utente)
 
 Nell'esempio riportato di seguito viene mostrato come definire un attributo personalizzato e quindi inizializzarlo quando lo si utilizza.
 

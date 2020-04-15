@@ -35,51 +35,51 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-ms.openlocfilehash: b15a303f69ce13cf3ba3b6c1c0739acdb8a33c7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f73c72830216679f8a91d0037d48c1e1b8e400c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309479"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372859"
 ---
 # <a name="variant-parameter-type-constants"></a>Costanti di tipi di parametri varianti
 
-Questo argomento elenca le nuove costanti che indicano i tipi di parametri varianti progettati per l'uso con le classi di controlli OLE della libreria di classi Microsoft Foundation.
+In questo argomento vengono elencate le nuove costanti che indicano i tipi di parametro variant progettati per l'utilizzo con le classi di controlli OLE della libreria Microsoft Foundation Class.
 
-Di seguito è riportato un elenco di costanti di classe:
+Di seguito è riportato un elenco di costanti di classe:The following is a list of class constants:
 
-##  <a name="_mfc_variant_data_constants"></a> Costanti di dati Variant
+## <a name="variant-data-constants"></a><a name="_mfc_variant_data_constants"></a>Costanti di dati Variant
 
-- Valore integer A 32 bit VTS_COLOR utilizzato per rappresentare un valore di colore RGB.
+- VTS_COLOR Un numero intero a 32 bit utilizzato per rappresentare un valore di colore RGB.
 
-- Puntatore a oggetto VTS_FONT al `IFontDisp` interfaccia dell'oggetto font OLE.
+- VTS_FONT Puntatore `IFontDisp` all'interfaccia di un oggetto tipo di carattere OLE.
 
-- Valore dell'handle VTS_HANDLE A Windows.
+- VTS_HANDLE un valore di handle di Windows.A Windows handle value.
 
-- Puntatore a oggetto VTS_PICTURE al `IPictureDisp` interfaccia dell'oggetto immagine OLE.
+- VTS_PICTURE Puntatore `IPictureDisp` all'interfaccia di un oggetto immagine OLE.
 
-- Valore A 16 bit VTS_OPTEXCLUSIVE utilizzato per un controllo che dovrà essere utilizzato in un gruppo di controlli, quali pulsanti di opzione. Questo tipo indica al contenitore che se un controllo in un gruppo dispone di un valore TRUE, tutti gli altri utenti deve essere FALSE.
+- VTS_OPTEXCLUSIVE Valore a 16 bit utilizzato per un controllo destinato a essere utilizzato in un gruppo di controlli, ad esempio i pulsanti di opzione. Questo tipo indica al contenitore che se un controllo in un gruppo ha un valore TRUE, tutti gli altri devono essere FALSE.
 
-- VTS_TRISTATE A 16 bit signed integer a utilizzato per le proprietà che possono avere uno dei tre valori possibili (selezionati, deselezionati, non disponibili), ad esempio, una casella di controllo.
+- VTS_TRISTATE Un intero con segno a 16 bit utilizzato per le proprietà che possono avere uno dei tre valori possibili (selezionato, deselezionato, non disponibile), ad esempio una casella di controllo.
 
-- VTS_XPOS_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse x in unità HIMETRIC.
+- VTS_XPOS_HIMETRIC Un intero senza segno a 32 bit utilizzato per rappresentare una posizione lungo l'asse x in unità HIMETRIC.
 
-- VTS_YPOS_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse y in unità HIMETRIC.
+- VTS_YPOS_HIMETRIC Un intero senza segno a 32 bit utilizzato per rappresentare una posizione lungo l'asse y in unità HIMETRIC.
 
-- VTS_XPOS_PIXELS A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse x in pixel.
+- VTS_XPOS_PIXELS Un intero senza segno a 32 bit utilizzato per rappresentare una posizione lungo l'asse x in pixel.
 
-- VTS_YPOS_PIXELS A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse y in pixel.
+- VTS_YPOS_PIXELS Un intero senza segno a 32 bit utilizzato per rappresentare una posizione lungo l'asse y in pixel.
 
-- VTS_XSIZE_PIXELS A 32 bit unsigned integer utilizzato per rappresentare la larghezza di un oggetto sullo schermo in pixel.
+- VTS_XSIZE_PIXELS Un intero senza segno a 32 bit utilizzato per rappresentare la larghezza di un oggetto dello schermo in pixel.
 
-- VTS_YSIZE_PIXELS A 32 bit unsigned integer utilizzato per rappresentare l'altezza di un oggetto sullo schermo in pixel.
+- VTS_YSIZE_PIXELS Un intero senza segno a 32 bit utilizzato per rappresentare l'altezza di un oggetto dello schermo in pixel.
 
-- VTS_XSIZE_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare la larghezza di un oggetto sullo schermo in unità HIMETRIC.
+- VTS_XSIZE_HIMETRIC Un intero senza segno a 32 bit utilizzato per rappresentare la larghezza di un oggetto dello schermo in unità HIMETRIC.
 
-- VTS_YSIZE_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare l'altezza di un oggetto sullo schermo in unità HIMETRIC.
+- VTS_YSIZE_HIMETRIC Un intero senza segno a 32 bit utilizzato per rappresentare l'altezza di un oggetto dello schermo in unità HIMETRIC.
 
     > [!NOTE]
-    >  Costanti variante aggiuntive sono state definite per tutti i tipi varianti, fatta eccezione per VTS_FONT e VTS_PICTURE, che offrono un puntatore alla costante di dati variant. Queste costanti vengono denominate usando il VTS_P`constantname` convenzione. Ad esempio, VTS_PCOLOR è un puntatore a un VTS_COLOR (costante).
+    >  Sono state definite costanti variant aggiuntive per tutti i tipi variant, ad eccezione di VTS_FONT e VTS_PICTURE, che forniscono un puntatore alla costante di dati variant. Queste costanti vengono denominate`constantname` utilizzando la convenzione VTS_P. Ad esempio, VTS_PCOLOR è un puntatore a una costante di VTS_COLOR.
 
 ## <a name="requirements"></a>Requisiti
 

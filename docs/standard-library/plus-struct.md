@@ -1,5 +1,5 @@
 ---
-title: plus (struct)
+title: Struct plus
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::plus
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372074"
 ---
-# <a name="plus-struct"></a>plus (struct)
+# <a name="plus-struct"></a>Struct plus
 
 Oggetto funzione predefinito che esegue l'operazione di addizione (`operator+` binario) negli argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -39,14 +39,14 @@ struct plus<void>
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo di*, *T*, *U*\
+*Tipo*, *T*, *U*\
 Tipo che supporta un `operator+` binario che accetta gli operandi dei tipi specificati o dedotti.
 
-*A sinistra*\
-Operando sinistro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*Sinistra*\
+Operando sinistro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto *T*.
 
-*Ok*\
-Operando destro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+*va bene*\
+Operando destro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto *U*.
 
 ## <a name="return-value"></a>Valore restituito
 
