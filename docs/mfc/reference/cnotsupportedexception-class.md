@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
-ms.openlocfilehash: c3af508cd39e277ca4ae0a9aad5e639f66edc53b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b859b939baef018e69b245e597eea90e608253ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407926"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363189"
 ---
 # <a name="cnotsupportedexception-class"></a>Classe CNotSupportedException
 
@@ -33,17 +33,17 @@ class CNotSupportedException : public CSimpleException
 |----------|-----------------|
 |[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|Costruisce un oggetto `CNotSupportedException`.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Nessun ulteriore qualificazione è necessaria o possibile.
+Non sono necessarie o possibili ulteriori qualifiche.
 
-Per altre informazioni sull'uso `CNotSupportedException`, vedere l'articolo [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md).
+Per ulteriori informazioni `CNotSupportedException`sull'utilizzo di , vedere l'articolo [Gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CException](../../mfc/reference/cexception-class.md)
+[CEccezione](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -53,7 +53,7 @@ Per altre informazioni sull'uso `CNotSupportedException`, vedere l'articolo [ges
 
 **Intestazione:** afx.h
 
-##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException
+## <a name="cnotsupportedexceptioncnotsupportedexception"></a><a name="cnotsupportedexception"></a>CNotSupportedException::CNotSupportedException
 
 Costruisce un oggetto `CNotSupportedException`.
 
@@ -61,11 +61,11 @@ Costruisce un oggetto `CNotSupportedException`.
 CNotSupportedException();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Non utilizzare questo costruttore direttamente, ma piuttosto chiamare la funzione globale [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). per altre informazioni sull'elaborazione delle eccezioni, vedere l'articolo [gestione delle eccezioni in MFC](../exception-handling-in-mfc.md).
+Non utilizzare questo costruttore direttamente, ma chiamare la funzione globale [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). Per ulteriori informazioni sull'elaborazione delle eccezioni, vedere l'articolo [Gestione delle eccezioni in MFC](../exception-handling-in-mfc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CException](cexception-class.md)<br/>
-[Grafico della gerarchia](../hierarchy-chart.md)
+[Grafico delle gerarchie](../hierarchy-chart.md)

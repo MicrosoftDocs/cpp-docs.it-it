@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5ada2ad69cbcac15e09968045e54095dfb2623d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689064"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366407"
 ---
 # <a name="regex_token_iterator-class"></a>Classe regex_token_iterator
 
@@ -45,24 +45,24 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>Parametri
 
-@No__t_1 *BidIt*
+*BidIt*\
 Tipo di iteratore per le sottocorrispondenze.
 
-*Elem* \
+*Elem*\
 Tipo di elementi di cui trovare una corrispondenza.
 
-@No__t_1 *RXtraits*
+*RXtratti*\
 Classe traits per gli elementi.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe descrive un oggetto iteratore costante in futuro. Concettualmente, contiene un oggetto `regex_iterator` usato per eseguire la ricerca di corrispondenze di espressione regolare in una sequenza di caratteri. Estrae gli oggetti di tipo `sub_match<BidIt>` che rappresentano le sottocorrispondenze identificate dai valori di indice nel vettore archiviato `subs` per ogni corrispondenza di espressione regolare.
+Il modello di classe descrive un oggetto iteratore in avanti costante. Concettualmente, contiene un oggetto `regex_iterator` usato per eseguire la ricerca di corrispondenze di espressione regolare in una sequenza di caratteri. Estrae gli oggetti di tipo `sub_match<BidIt>` che rappresentano le sottocorrispondenze identificate dai valori di indice nel vettore archiviato `subs` per ogni corrispondenza di espressione regolare.
 
 Un valore di indice di -1 indica la sequenza di caratteri che comincia subito dopo la fine della precedente corrispondenza di espressione regolare o all'inizio della sequenza di caratteri se non esisteva alcuna corrispondenza di espressione regolare precedente e che si estende, senza includerlo, al primo carattere della corrispondenza di espressione regolare corrente o alla fine della sequenza di caratteri se non esiste alcuna corrispondenza corrente. Qualsiasi altro valore di indice `idx` definisce il contenuto del gruppo Capture contenuto in `it.match[idx]`.
 
-### <a name="members"></a>Members
+### <a name="members"></a>Membri
 
-|Member|Valore predefinito|
+|Membro|Default Value|
 |-|-|
 |`private regex_iterator<BidIt, Elem, RXtraits> it`||
 |`private vector<int> subs`||
@@ -74,26 +74,26 @@ Un valore di indice di -1 indica la sequenza di caratteri che comincia subito do
 |-|-|
 |[regex_token_iterator](#regex_token_iterator)|Costruisce l'iteratore.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |[difference_type](#difference_type)|Tipo di differenza iteratore.|
 |[iterator_category](#iterator_category)|Tipo della categoria di iteratore.|
-|[pointer](#pointer)|Tipo di un puntatore a una corrispondenza.|
-|[reference](#reference)|Tipo di un riferimento a una sottocorrispondenza.|
+|[indicatore di misura](#pointer)|Tipo di un puntatore a una corrispondenza.|
+|[Riferimento](#reference)|Tipo di un riferimento a una sottocorrispondenza.|
 |[regex_type](#regex_type)|Tipo dell'espressione regolare per cui cercare una corrispondenza.|
-|[value_type](#value_type)|Tipo di una sottocorrispondenza.|
+|[Value_type](#value_type)|Tipo di una sottocorrispondenza.|
 
 ### <a name="operators"></a>Operatori
 
-|??|Descrizione|
+|Operatore|Descrizione|
 |-|-|
-|[operator!=](#op_neq)|Confronta gli iteratori per verificarne la disuguaglianza.|
-|[operator*](#op_star)|Accede alla sottocorrispondenza designata.|
-|[operator++](#op_add_add)|Incrementa l'iteratore.|
-|[operator==](#op_eq_eq)|Confronta gli iteratori per verificarne l'uguaglianza.|
-|[operator->](#op_arrow)|Accede alla sottocorrispondenza designata.|
+|[operatore!](#op_neq)|Confronta gli iteratori per verificarne la disuguaglianza.|
+|[operatore](#op_star)|Accede alla sottocorrispondenza designata.|
+|[operatore .](#op_add_add)|Incrementa l'iteratore.|
+|[operatore di comando](#op_eq_eq)|Confronta gli iteratori per verificarne l'uguaglianza.|
+|[>'operatore](#op_arrow)|Accede alla sottocorrispondenza designata.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -197,7 +197,7 @@ match == aa
 match == z
 ```
 
-## <a name="difference_type"></a>  regex_token_iterator::difference_type
+## <a name="regex_token_iteratordifference_type"></a><a name="difference_type"></a>regex_token_iterator::difference_type
 
 Tipo di differenza iteratore.
 
@@ -205,11 +205,11 @@ Tipo di differenza iteratore.
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è sinonimo di `std::ptrdiff_t`.
 
-## <a name="iterator_category"></a>  regex_token_iterator::iterator_category
+## <a name="regex_token_iteratoriterator_category"></a><a name="iterator_category"></a>regex_token_iterator::iterator_category
 
 Tipo della categoria di iteratore.
 
@@ -217,11 +217,11 @@ Tipo della categoria di iteratore.
 typedef std::forward_iterator_tag iterator_category;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è sinonimo di `std::forward_iterator_tag`.
 
-## <a name="op_neq"></a>  regex_token_iterator::operator!=
+## <a name="regex_token_iteratoroperator"></a><a name="op_neq"></a>regex_token_iterator::operator!
 
 Confronta gli iteratori per verificarne la disuguaglianza.
 
@@ -231,14 +231,14 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*va bene*\
 Iteratore per il confronto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce `!(*this == right)`.
+La funzione membro restituisce`!(*this == right)`.
 
-## <a name="op_star"></a>  regex_token_iterator::operator*
+## <a name="regex_token_iteratoroperator"></a><a name="op_star"></a>regex_token_iterator::operatore
 
 Accede alla sottocorrispondenza designata.
 
@@ -246,11 +246,11 @@ Accede alla sottocorrispondenza designata.
 const sub_match<BidIt>& operator*();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce un oggetto `sub_match<BidIt>` che rappresenta il gruppo Capture identificato dal valore di indice `subs[pos]`.
 
-## <a name="op_add_add"></a>  regex_token_iterator::operator++
+## <a name="regex_token_iteratoroperator"></a><a name="op_add_add"></a>regex_token_iterator::operatore
 
 Incrementa l'iteratore.
 
@@ -260,13 +260,13 @@ regex_token_iterator& operator++();
 regex_token_iterator& operator++(int);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se l'iteratore archiviato `it` è un iteratore di fine di sequenza, il primo operatore imposta il valore archiviato `pos` al valore di `subs.size()` (creando in tal modo un iteratore di fine di sequenza). In caso contrario l'operatore incrementa il valore archiviato `pos`; se il risultato è uguale al valore `subs.size()`, imposta il valore archiviato `pos` su zero e incrementa l'iteratore archiviato `it`. Se nonostante l'incremento l'iteratore archiviato resta diverso da un iteratore di fine di sequenza, l'operatore non esegue altre operazioni. In caso contrario, se la fine della corrispondenza precedente fosse alla fine della sequenza di caratteri l'operatore, imposta il valore archiviato di `pos` su `subs.size()`. Diversamente, l'operatore incrementa ripetutamente il valore archiviato `pos` fino a `pos == subs.size()` o `subs[pos] == -1`; in tal modo la successiva dereferenziazione dell'iteratore restituirà la parte finale della sequenza di caratteri se uno dei valori di indice è -1. In tutti i casi l'operatore restituisce l'oggetto.
 
 Il secondo operatore esegue una copia dell'oggetto, incrementa l'oggetto, quindi restituisce la copia.
 
-## <a name="op_eq_eq"></a>  regex_token_iterator::operator==
+## <a name="regex_token_iteratoroperator"></a><a name="op_eq_eq"></a>regex_token_iterator::operator
 
 Confronta gli iteratori per verificarne l'uguaglianza.
 
@@ -276,14 +276,14 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*va bene*\
 Iteratore per il confronto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce `it == right.it && subs == right.subs && pos == right.pos`.
+La funzione membro restituisce`it == right.it && subs == right.subs && pos == right.pos`.
 
-## <a name="op_arrow"></a>  regex_token_iterator::operator-&gt;
+## <a name="regex_token_iteratoroperator-gt"></a><a name="op_arrow"></a>regex_token_iterator::operatore-&gt;
 
 Accede alla sottocorrispondenza designata.
 
@@ -291,11 +291,11 @@ Accede alla sottocorrispondenza designata.
 const sub_match<BidIt> * operator->();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce un puntatore a un oggetto `sub_match<BidIt>` che rappresenta il gruppo Capture identificato dal valore di indice `subs[pos]`.
 
-## <a name="pointer"></a>  regex_token_iterator::pointer
+## <a name="regex_token_iteratorpointer"></a><a name="pointer"></a>regex_token_iterator::p o'interina
 
 Tipo di un puntatore a una corrispondenza.
 
@@ -303,11 +303,11 @@ Tipo di un puntatore a una corrispondenza.
 typedef sub_match<BidIt> *pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo di `sub_match<BidIt>*`, dove `BidIt` è il parametro di modello.
 
-## <a name="reference"></a>  regex_token_iterator::reference
+## <a name="regex_token_iteratorreference"></a><a name="reference"></a>regex_token_iterator::riferimento
 
 Tipo di un riferimento a una sottocorrispondenza.
 
@@ -315,11 +315,11 @@ Tipo di un riferimento a una sottocorrispondenza.
 typedef sub_match<BidIt>& reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo di `sub_match<BidIt>&`, dove `BidIt` è il parametro di modello.
 
-## <a name="regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator
+## <a name="regex_token_iteratorregex_token_iterator"></a><a name="regex_token_iterator"></a>regex_token_iterator::regex_token_iterator
 
 Costruisce l'iteratore.
 
@@ -342,19 +342,19 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* \
+*Prima*\
 Inizio della sequenza per cui cercare una corrispondenza.
 
-*ultimo* \
+*Ultima*\
 Fine della sequenza per cui cercare una corrispondenza.
 
-\ di *nuovo*
+*re re*\
 Espressione regolare per le corrispondenze.
 
-\ *f*
+*F*\
 Flag per le corrispondenze.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo costruttore crea un iteratore di fine sequenza.
 
@@ -364,7 +364,7 @@ Il terzo costruttore crea un oggetto il cui iteratore archiviato `it` viene iniz
 
 Il quarto costruttore crea un oggetto il cui iteratore archiviato `it` viene inizializzato in `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, il cui vettore archiviato `subs` contiene i valori `N` a cui fa riferimento l'argomento del costruttore `submatches`e il cui valore archiviato `pos` è zero.
 
-## <a name="regex_type"></a>  regex_token_iterator::regex_type
+## <a name="regex_token_iteratorregex_type"></a><a name="regex_type"></a>regex_token_iterator::regex_type
 
 Tipo dell'espressione regolare per cui cercare una corrispondenza.
 
@@ -372,11 +372,11 @@ Tipo dell'espressione regolare per cui cercare una corrispondenza.
 typedef basic_regex<Elem, RXtraits> regex_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 typedef è sinonimo di `basic_regex<Elem, RXtraits>`.
 
-## <a name="value_type"></a>  regex_token_iterator::value_type
+## <a name="regex_token_iteratorvalue_type"></a><a name="value_type"></a>regex_token_iterator::value_type
 
 Tipo di una sottocorrispondenza.
 
@@ -384,17 +384,17 @@ Tipo di una sottocorrispondenza.
 typedef sub_match<BidIt> value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo di `sub_match<BidIt>`, dove `BidIt` è il parametro di modello.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<regex>](../standard-library/regex.md)\
-[classe regex_constants](../standard-library/regex-constants-class.md) \
-[classe regex_error](../standard-library/regex-error-class.md) \
-[\<regex funzioni >](../standard-library/regex-functions.md) \
-[Classe regex_iterator](../standard-library/regex-iterator-class.md) \
-[operatori \<regex >](../standard-library/regex-operators.md) \
-[Classe regex_traits](../standard-library/regex-traits-class.md) \
-[Typedef \<regex>](../standard-library/regex-typedefs.md)
+[\<>regex](../standard-library/regex.md)\
+[Classe regex_constants](../standard-library/regex-constants-class.md)\
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[\<funzioni di> regex](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operatori di> regex](../standard-library/regex-operators.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> typedef](../standard-library/regex-typedefs.md)

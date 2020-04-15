@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d7952e3082bf68cff7ad9ba218073081ee522320
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339597"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363915"
 ---
 # <a name="csplitterwndex-class"></a>Classe CSplitterWndEx
 
@@ -38,13 +38,13 @@ class CSplitterWndEx : public CSplitterWnd
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Chiamata eseguita dal framework per disegnare una finestra con separatore. (Esegue l'override [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Chiamato dal framework per disegnare una finestra con separatore. (Esegue l'override di [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di `OnDrawSplitter` metodo per personalizzare l'aspetto dei componenti con interfaccia grafici di una finestra con separatore.
+Eseguire `OnDrawSplitter` l'override del metodo per personalizzare l'aspetto dei componenti grafici di una finestra con separatore.
 
-Il `CSplitterWndEx` classe viene usata in combinazione con il [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), e [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metodi, ovvero implementata da un gestore visualizzazione. Per generare un gestore visualizzazione disegnare una finestra con separatore all'interno dell'applicazione, sostituire le dichiarazioni del `CSplitterWnd` classe con il `CSplitterWndEx` classe. Per le applicazioni a finestre cornice, la classe della finestra con separatore viene dichiarata nella classe CMainFrame che si trova in MainFrm. Per un esempio, vedere il `OutlookDemo` esempio nella directory degli esempi.
+La `CSplitterWndEx` classe viene utilizzata insieme ai metodi [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)e [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) , implementati da un gestore visualizzazione. Per fare in modo che un gestore visualizzazione disegni una `CSplitterWnd` finestra `CSplitterWndEx` con separatore nell'applicazione, sostituire le dichiarazioni della classe con la classe . Per le applicazioni finestra cornice, la classe della finestra con separatore viene dichiarata nella classe CMainFrame che si trova in mainfrm.h. Per un esempio, `OutlookDemo` vedere l'esempio nella directory Samples.For an example, see the sample in the Samples directory.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -60,9 +60,9 @@ Il `CSplitterWndEx` classe viene usata in combinazione con il [OnDrawSplitterBor
 
 **Intestazione:** afxsplitterwndex.h
 
-##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter
+## <a name="csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter
 
-Chiamata eseguita dal framework per disegnare una finestra con separatore.
+Chiamato dal framework per disegnare una finestra con separatore.
 
 ```
 virtual void OnDrawSplitter(
@@ -78,16 +78,16 @@ virtual void OnDrawSplitter(
 [in] Puntatore al contesto di dispositivo. Se questo parametro è NULL, il framework ridisegna la finestra attiva.
 
 *nType*<br/>
-[in] Uno del `CSplitterWnd::ESplitType` valori di enumerazione che specifica l'elemento di finestra con separatore da disegnare. I valori validi sono `splitBox`, `splitBar`, `splitIntersection` e `splitBorder`.
+[in] Uno dei `CSplitterWnd::ESplitType` valori di enumerazione che specifica l'elemento della finestra di divisione da disegnare. I valori validi sono `splitBox`, `splitBar`, `splitIntersection` e `splitBorder`.
 
-*rect*<br/>
-[in] Un rettangolo di delimitazione che specifica le dimensioni e il percorso in cui disegnare l'elemento di finestra con separatore specificato.
+*Rect*<br/>
+[in] Rettangolo di delimitazione che specifica le dimensioni e la posizione in cui disegnare l'elemento della finestra con separatore specificato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../hierarchy-chart.md)<br/>
 [Classi](mfc-classes.md)<br/>
 [Classe CSplitterWnd](csplitterwnd-class.md)<br/>
-[Classe CMFCVisualManager](cmfcvisualmanager-class.md)
+[CMFCVisualManager (classe)](cmfcvisualmanager-class.md)

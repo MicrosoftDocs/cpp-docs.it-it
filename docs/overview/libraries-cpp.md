@@ -2,22 +2,22 @@
 title: Librerie
 ms.date: 11/18/2018
 ms.openlocfilehash: dc139fea346be8034fa80236844abb2303fa345d
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "80075602"
 ---
 # <a name="libraries"></a>Librerie
 
-Quando si installano uno o più carichi di lavoro C++, Visual Studio include le librerie seguenti. Per informazioni sull'installazione di librerie di terze parti, vedere [vcpkg C++ : Gestione pacchetti per Windows, Linux e MacOS](../build/vcpkg.md).
+Quando si installano uno o più carichi di lavoro C++, Visual Studio include le librerie seguenti. Per informazioni sull'installazione di librerie di terze parti, vedere [vcpkg: un gestore di pacchetti di C, Per Windows, Linux e MacOS](../build/vcpkg.md).
 
 ## <a name="standard-libraries"></a>Librerie standard
 
 [Libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
-[Libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Libreria standard di C](../standard-library/cpp-standard-library-reference.md)<br/>
 [Libreria SafeInt](../safeint/safeint-library.md)<br/>
-[OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)
+[Openmp](../parallel/openmp/openmp-in-visual-cpp.md)
 
 ## <a name="libraries-for-windows-applications"></a>Librerie per applicazioni Windows
 

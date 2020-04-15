@@ -18,12 +18,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: 3c04879c7ec90aaba1199264c0c2128b9d1ea27c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db4927e983a27110e587dacd9acf909f0c735b87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957229"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365670"
 ---
 # <a name="vprintf-functions"></a>Funzioni vprintf
 
@@ -38,7 +38,7 @@ Ognuna delle funzioni `vprintf` accetta un puntatore a un elenco di argomenti e 
 |[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|[vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|
 |[_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le funzioni `vprintf` sono simili alle loro controparti, come indicato nella tabella seguente. Tuttavia, ogni funzione `vprintf` accetta un puntatore a una lista di argomenti, mentre ognuna delle funzioni corrispondenti accetta un elenco di argomenti.
 
@@ -48,12 +48,12 @@ Queste funzioni consentono di formattare i dati per l'output verso le destinazio
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|
 |`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Controllo dei valori null.|no|
 |`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Controllo dei valori null.|no|
-|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Controllo dei valori null.|no|
-|**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Controllo dei valori null e del formato valido.|sì|
-|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Controllo dei valori null e del formato valido.|no|
-|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Controllo dei valori null.|no|
-|**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Controllo dei valori null e del formato valido.|sì|
-|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Controllo dei valori null e del formato valido.|no|
+|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Flusso*|Controllo dei valori null.|no|
+|**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Flusso*|Controllo dei valori null e del formato valido.|sì|
+|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Flusso*|Controllo dei valori null e del formato valido.|no|
+|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Flusso*|Controllo dei valori null.|no|
+|**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Flusso*|Controllo dei valori null e del formato valido.|sì|
+|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Flusso*|Controllo dei valori null e del formato valido.|no|
 |`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Controllo dei valori null.|no|
 |**vprintf_p**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Controllo dei valori null e del formato valido.|sì|
 |`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Controllo dei valori null e del formato valido.|no|
@@ -79,12 +79,12 @@ Le versioni di queste funzioni con l'infisso **w** nel nome sono versioni a cara
 
 Le versioni di queste funzioni con suffissi **_s** e **_p** sono le versioni più sicure. Queste versioni convalidano le stringhe di formato e generano un'eccezione se la stringa di formato non è ben formata, ad esempio se vengono usati caratteri di formattazione non validi.
 
-Le versioni di queste funzioni con il suffisso **_p** consentono di specificare l'ordine in cui gli argomenti forniti vengono sostituiti nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Le versioni di queste funzioni con il suffisso **_p** consentono di specificare l'ordine in cui gli argomenti forniti vengono sostituiti nella stringa di formato. Per altre informazioni, vedere [Parametri posizionali printf_p](../c-runtime-library/printf-p-positional-parameters.md).
 
-Per **vsprintf**, `vswprintf`, `_vsnprintf` e `_vsnwprintf`, se si verifica una copia tra stringhe che si sovrappongono, il comportamento non è definito.
+Per **vsprintf** `_vsnprintf` , `_vsnwprintf` `vswprintf`e , se la copia viene eseguita tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
->  Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns). Se si usano le versioni sicure di queste funzioni, con il suffisso **_s** o **_p**, e la stringa di formato specificata dall'utente contiene caratteri di formattazione non validi, potrebbe verificarsi un'eccezione di parametro non valido.
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns). Se si usano le versioni sicure di queste funzioni, con il suffisso **_s** o **_p**, e la stringa di formato specificata dall'utente contiene caratteri di formattazione non validi, potrebbe verificarsi un'eccezione di parametro non valido.
 
 ## <a name="see-also"></a>Vedere anche
 

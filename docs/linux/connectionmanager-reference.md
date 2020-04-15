@@ -6,53 +6,53 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionManager program
 ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "77258033"
 ---
 # <a name="connectionmanager-reference"></a>Informazioni di riferimento su ConnectionManager
 
 ::: moniker range="<=vs-2017"
 
-ConnectionManager. exe è disponibile in Visual Studio 2019 versione 16,5 e successive.
+ConnectionManager.exe è disponibile in Visual Studio 2019 versione 16.5 e successive.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-ConnectionManager. exe è un'utilità da riga di comando per gestire le connessioni di sviluppo remoto all'esterno di Visual Studio. È utile per attività come il provisioning di un nuovo computer di sviluppo. In alternativa, usarlo per configurare Visual Studio per l'integrazione continua. È possibile usarlo in una finestra Prompt dei comandi per gli sviluppatori. Per altre informazioni sulla Prompt dei comandi per gli sviluppatori, vedere [usare il set di C++ strumenti Microsoft dalla riga di comando](../build/building-on-the-command-line.md).
+ConnectionManager.exe è un'utilità della riga di comando per gestire le connessioni di sviluppo remoto all'esterno di Visual Studio. È utile per attività come il provisioning di una nuova macchina di sviluppo. In alternativa, utilizzarlo per configurare Visual Studio per l'integrazione continua.È possibile utilizzarlo in una finestra del prompt dei comandi per gli sviluppatori. Per ulteriori informazioni sul prompt dei comandi per gli sviluppatori, vedere Utilizzo del set di strumenti [Di Microsoft C](../build/building-on-the-command-line.md)
 
-ConnectionManager. exe è disponibile in Visual Studio 2019 versione 16,5 e successive. Fa parte dello **sviluppo Linux con C++**  carico di lavoro nella programma di installazione di Visual Studio. Viene inoltre installato automaticamente quando si sceglie il componente **gestione connessione** nel programma di installazione. Viene installato in *% VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager. exe*.
+ConnectionManager.exe è disponibile in Visual Studio 2019 versione 16.5 e successive. Fa parte dello **sviluppo di Linux con** il carico di lavoro di C , nel programma di installazione di Visual Studio. Viene installato anche automaticamente quando si sceglie il componente **Connection Manager** nel programma di installazione. Viene installato in *\\%VCIDEInstallDir%\\\\Linux bin\\ConnectionManagerExe ConnectionManager.exe*.
 
-La funzionalità di ConnectionManager. exe è disponibile anche in Visual Studio. Per gestire le connessioni di sviluppo remote nell'IDE, sulla barra dei menu scegliere **strumenti** > **Opzioni** per aprire la finestra di dialogo Opzioni. Nella finestra di dialogo Opzioni selezionare **multipiattaforma** > **gestione connessione**.
+La funzionalità di ConnectionManager.exe è disponibile anche in Visual Studio.The functionality of ConnectionManager.exe is also available in Visual Studio. Per gestire le connessioni di sviluppo remoto nell'IDE, nella barra dei menu, scegliere**Opzioni** **degli strumenti** > per aprire la finestra di dialogo Opzioni. Nella finestra di dialogo Opzioni selezionare**Gestione connessione** **multipiattaforma.** > 
 
 ## <a name="syntax"></a>Sintassi
 
-> *Argomenti*\[*comando* di **ConnectionManager. exe** ] \[*Opzioni*]
+> **ConnectionManager.exe** *argomenti* \[ *del comando* \[] *opzioni*]
 
 ### <a name="commands-and-arguments"></a>Comandi e argomenti
 
-- **Aggiungi** *utente\@host* \[ **--** *porta*porta] \[ **--** *password*password] \[ **--PrivateKey** *privatekey_file*]
+- **aggiungere** *\@l'host* \[utente \[ **--porta** \[ *porta*] **--password** *password*] **--privatekey** *privatekey_file*]
 
-  Autentica e aggiunge una nuova connessione. Per impostazione predefinita, usa la porta 22 e l'autenticazione della password. (Verrà richiesto di immettere una password). Usare sia **--password** che **--PrivateKey** per specificare una password per una chiave privata.
+  Esegue l'autenticazione e aggiunge una nuova connessione. Per impostazione predefinita, utilizza la porta 22 e l'autenticazione tramite password. Verrà richiesto di immettere una password. Utilizzare sia **--password** che **--privatekey** per specificare una password per una chiave privata.
 
-- **remove** \[*connection_id* \| *utente\@host* \[ **--** *porta*porta]]
+- **rimuovere** \[ *connection_idhost* \| \[ *utente\@* **--port** *port*]]
 
   Rimuove una connessione. Se non viene specificato alcun argomento, viene richiesto di specificare la connessione da rimuovere.
 
-- **Rimuovi tutto**
+- **rimuovere tutti**
 
   Rimuove tutte le connessioni archiviate.
 
-- **list**
+- **Elenco**
 
-  Visualizza le informazioni e gli ID di tutte le connessioni archiviate.
+  Visualizza le informazioni e gli ID di tutte le connessioni memorizzate.
 
-- **help**
+- **Guida**
 
-  Visualizza una schermata della guida.
+  Visualizza una schermata di aiuto.
 
 - **version**
 
@@ -62,27 +62,27 @@ La funzionalità di ConnectionManager. exe è disponibile anche in Visual Studio
 
 - **-q**, **--quiet**
 
-  Impedisce l'output per `stdout` o `stderr`.
+  Impedisce `stdout` l'output a o `stderr`.
 
-- **--Nessuna richiesta**
+- **--no-prompt (nessuna richiesta)**
 
-  Esito negativo anziché prompt, quando appropriato.
+  Non riuscire invece di prompt, quando appropriato.
 
-- **--No-Verify**
+- **--no-verify**
 
   Aggiungere o modificare una connessione senza autenticazione.
 
-- **--file** *nomefile*
+- **--nome** *file*
 
-  Leggere le informazioni di connessione dal *nome file*specificato.
+  Leggere le informazioni di connessione dal *nome file*fornito .
 
-- **--No-telemetria**
+- **--no-telemetria**
 
-  Disabilitare l'invio di dati di utilizzo a Microsoft. I dati di utilizzo vengono raccolti e restituiti a Microsoft a meno che non venga passato il flag **--No-telemetria** .  
+  Disabilitare l'invio di dati di utilizzo a Microsoft.Disable sending usage data back to Microsoft. I dati di utilizzo vengono raccolti e inviati a Microsoft, a meno che non venga passato il flag **--no-telemetry.**  
 
-- **-n**, **--esecuzione a secco**
+- **-n**, **--secco-run**
 
-  Esegue un'esecuzione a secco del comando.
+  Fa una corsa a secco del comando.
 
 - **-p**
 
@@ -90,17 +90,17 @@ La funzionalità di ConnectionManager. exe è disponibile anche in Visual Studio
 
 - **-i**
 
-  Uguale a **--PrivateKey**.
+  Uguale a **--privatekey**.
 
 ## <a name="examples"></a>Esempi
 
-Questo comando aggiunge una connessione per un utente denominato "User" in localhost. La connessione usa un file di chiave per l'autenticazione, disponibile in *% USERPROFILE%\.SSH \ id_rsa*.
+Questo comando aggiunge una connessione per un utente denominato "user" su localhost. La connessione utilizza un file di chiave per l'autenticazione, disponibile in *%USERPROFILE%\.ssh-id_rsa*.
 
 ```cmd
 ConnectionManager.exe add user@127.0.0.1 --privatekey "%USERPROFILE%\.ssh\id_rsa"
 ```
 
-Tramite questo comando viene rimossa la connessione con ID 1975957870 dall'elenco di connessioni.
+Questo comando rimuove la connessione con ID 1975957870 dall'elenco delle connessioni.
 
 ```cmd
 ConnectionManager.exe remove 1975957870

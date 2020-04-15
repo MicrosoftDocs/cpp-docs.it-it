@@ -10,14 +10,14 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e1de674d4a13ba465100923bffe6cba76e61ab4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459983"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368022"
 ---
-# <a name="timepoint-class"></a>Classe time_point
+# <a name="time_point-class"></a>Classe time_point
 
 Una classe `time_point` descrive un tipo che rappresenta un punto nel tempo. Contiene un oggetto di tipo [duration](../standard-library/duration-class.md) che archivia il tempo trascorso dopo il periodo rappresentato dall'argomento di modello `Clock`.
 
@@ -29,11 +29,11 @@ template <class Clock,
 class time_point;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|NOME|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`time_point::clock`|Sinonimo del parametro di modello `Clock`.|
 |`time_point::duration`|Sinonimo del parametro di modello `Duration`.|
@@ -42,7 +42,7 @@ class time_point;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[time_point](#time_point)|Costruisce un oggetto `time_point`.|
 
@@ -50,24 +50,24 @@ class time_point;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[max](#max)|Specifica il limite superiore per `time_point::ref`.|
-|[min](#min)|Specifica il limite inferiore per `time_point::ref`.|
+|[Massimo](#max)|Specifica il limite superiore per `time_point::ref`.|
+|[Minimo](#min)|Specifica il limite inferiore per `time_point::ref`.|
 |[time_since_epoch](#time_since_epoch)|Restituisce il valore `duration` archiviato.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[time_point::operator+=](#op_add_eq)|Somma un valore specificato alla durata archiviata.|
+|[time_point::operator](#op_add_eq)|Somma un valore specificato alla durata archiviata.|
 |[time_point::operator-=](#operator-_eq)|Sottrae un valore specificato alla durata archiviata.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<> Chrono
+**Intestazione:** \<crono>
 
 **Spazio dei nomi:** std::chrono
 
-## <a name="max"></a>  time_point::max
+## <a name="time_pointmax"></a><a name="max"></a>time_point::max
 
 Metodo statico che restituisce il limite superiore dei valori di tipo `time_point::ref`.
 
@@ -79,7 +79,7 @@ static constexpr time_point max();
 
 In effetti, restituisce `time_point(duration::max())`.
 
-## <a name="min"></a>  time_point::min
+## <a name="time_pointmin"></a><a name="min"></a>time_point::min
 
 Metodo statico che restituisce il limite inferiore dei valori di tipo `time_point::ref`.
 
@@ -91,7 +91,7 @@ static constexpr time_point min();
 
 In effetti, restituisce `time_point(duration::min())`.
 
-## <a name="op_add_eq"></a>  time_point::operator+=
+## <a name="time_pointoperator"></a><a name="op_add_eq"></a>time_point::operator
 
 Somma un valore specificato al valore [duration](../standard-library/duration-class.md) archiviato.
 
@@ -101,14 +101,14 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*\
-Oggetto `duration`.
+*Dur*\
+Oggetto `duration` .
 
 ### <a name="return-value"></a>Valore restituito
 
 Oggetto `time_point` dopo l'esecuzione della somma.
 
-## <a name="operator-_eq"></a>  time_point::operator-=
+## <a name="time_pointoperator-"></a><a name="operator-_eq"></a>time_point::operatore
 
 Sottrae un valore specificato al valore [duration](../standard-library/duration-class.md) archiviato.
 
@@ -118,14 +118,14 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*\
-Oggetto `duration`.
+*Dur*\
+Oggetto `duration` .
 
 ### <a name="return-value"></a>Valore restituito
 
 Oggetto `time_point` dopo l'esecuzione della sottrazione.
 
-## <a name="time_point"></a>  Costruttore time_point::time_point
+## <a name="time_pointtime_point-constructor"></a><a name="time_point"></a>Costruttore time_point::time_point
 
 Costruisce un oggetto `time_point`.
 
@@ -140,21 +140,21 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*\
+*Dur*\
 Oggetto [duration](../standard-library/duration-class.md).
 
-*TP*\
-Oggetto `time_point`.
+*Tp*\
+Oggetto `time_point` .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo costruttore crea un oggetto il cui valore `duration` archiviato è uguale a [duration::zero](../standard-library/duration-class.md#zero).
 
-Il secondo costruttore crea un oggetto il cui valore Duration archiviato è uguale a *dur*. A meno `is_convertible<Duration2, duration>` che non contenga true, il secondo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
+Il secondo costruttore costruisce un oggetto il cui valore di durata archiviato è uguale a *Dur*. A `is_convertible<Duration2, duration>` meno che non sia true, il secondo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
 Il terzo costruttore inizializza il suo valore `duration` usando `Tp.time_since_epoch()`.
 
-## <a name="time_since_epoch"></a>  time_point::time_since_epoch
+## <a name="time_pointtime_since_epoch"></a><a name="time_since_epoch"></a>time_point::time_since_epoch
 
 Recupera il valore [duration](../standard-library/duration-class.md) archiviato.
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[\<chrono>](../standard-library/chrono.md)
+[Riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<>crono](../standard-library/chrono.md)

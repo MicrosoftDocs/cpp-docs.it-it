@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: La serializzazione'
+title: 'Controlli ActiveX MFC: serializzazione'
 ms.date: 09/12/2018
 f1_keywords:
 - _wVerMinor
@@ -15,83 +15,83 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d804486b612906f537b6ed1665dfc0cec5149826
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324740"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364538"
 ---
-# <a name="mfc-activex-controls-serializing"></a>Controlli ActiveX MFC: La serializzazione
+# <a name="mfc-activex-controls-serializing"></a>Controlli ActiveX MFC: serializzazione
 
-Questo articolo illustra come eseguire la serializzazione di un controllo ActiveX. La serializzazione è il processo di lettura o scrittura su un supporto di archiviazione permanente, ad esempio un file su disco. La libreria Microsoft Foundation classi (MFC) fornisce supporto incorporato per la serializzazione in classe `CObject`. `COleControl` estende il supporto per i controlli ActiveX tramite l'uso di un meccanismo di scambio di proprietà.
+In questo articolo viene illustrato come serializzare un controllo ActiveX. La serializzazione è il processo di lettura o scrittura su un supporto di archiviazione persistente, ad esempio un file su disco. La libreria MFC (Microsoft Foundation Class) fornisce il `CObject`supporto incorporato per la serializzazione nella classe . `COleControl`estende questo supporto ai controlli ActiveX tramite l'utilizzo di un meccanismo di scambio di proprietà.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per il nuovo sviluppo. Per ulteriori informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [Controlli ActiveX](activex-controls.md).
 
-La serializzazione per i controlli ActiveX viene implementata eseguendo l'override [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Questa funzione, chiamata durante il caricamento e salvataggio dell'oggetto di controllo, archivia tutte le proprietà implementate con una variabile membro o una variabile membro con la notifica delle modifiche.
+La serializzazione per i controlli ActiveX viene implementata eseguendo l'override di [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Questa funzione, chiamata durante il caricamento e il salvataggio dell'oggetto controllo, archivia tutte le proprietà implementate con una variabile membro o una variabile membro con notifica di modifica.
 
-Gli argomenti seguenti descrivono i problemi principali legati alla serializzazione di un controllo ActiveX:
+Negli argomenti seguenti vengono illustrati i principali problemi relativi alla serializzazione di un controllo ActiveX:
 
-- Implementazione `DoPropExchange` per serializzare l'oggetto di controllo (funzione)
+- Implementazione della `DoPropExchange` funzione per serializzare l'oggetto controlloImplementing function to serialize your control object
 
-- [Personalizzazione del processo di serializzazione](#_core_customizing_the_default_behavior_of_dopropexchange)
+- [Personalizzazione del processo di serializzazioneCustomizing the Serialization Process](#_core_customizing_the_default_behavior_of_dopropexchange)
 
-- [Implementazione di supporto della versione](#_core_implementing_version_support)
+- [Implementazione del supporto della versioneImplementing Version Support](#_core_implementing_version_support)
 
-##  <a name="_core_implementing_the_dopropexchange_function"></a> Implementazione della funzione di DoPropExchange
+## <a name="implementing-the-dopropexchange-function"></a><a name="_core_implementing_the_dopropexchange_function"></a>Implementazione della funzione DoPropExchange
 
-Quando si usa la creazione guidata controllo ActiveX per generare il progetto di controllo, diverse funzioni predefinite di gestione vengono automaticamente aggiunti alla classe del controllo, tra cui l'implementazione predefinita di [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Nell'esempio seguente viene illustrato il codice aggiunto per le classi create con Creazione guidata controllo ActiveX:
+Quando si utilizza la Creazione guidata controllo ActiveX per generare il progetto di controllo, diverse funzioni di gestione predefinite vengono aggiunte automaticamente alla classe del controllo, inclusa l'implementazione predefinita di [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Nell'esempio seguente viene illustrato il codice aggiunto alle classi create con la Creazione guidata controllo ActiveX:
 
 [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]
 
-Se si vuole rendere persistente una proprietà, modificare `DoPropExchange` aggiungendo una chiamata alla funzione di scambio di proprietà. Nell'esempio seguente viene illustrata la serializzazione di una proprietà booleana CircleShape personalizzata, in cui la proprietà CircleShape ha un valore predefinito di **TRUE**:
+Se si desidera rendere persistente `DoPropExchange` una proprietà, modificarla aggiungendo una chiamata alla funzione di scambio delle proprietà. Nell'esempio seguente viene illustrata la serializzazione di una proprietà CircleShape booleana personalizzata, in cui il valore predefinito della proprietà CircleShape è **TRUE**:
 
 [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
 [!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]
 
-La tabella seguente elenca le funzioni di scambio possibili proprietà che è possibile usare per serializzare le proprietà del controllo:
+Nella tabella seguente sono elencate le possibili funzioni di scambio delle proprietà che è possibile utilizzare per serializzare le proprietà del controllo:
 
-|Funzioni di proprietà exchange|Scopo|
+|Funzioni di scambio di proprietà|Scopo|
 |---------------------------------|-------------|
-|**PX_Blob( )**|Serializza un tipo di proprietà di dati di oggetti BLOB (Binary Large).|
-|**PX_Bool( )**|Serializza un tipo booleano della proprietà.|
-|**PX_Color( )**|Serializza una proprietà di colore del tipo.|
-|**PX_Currency( )**|Serializza un tipo **CY** proprietà (valuta).|
-|**PX_Double( )**|Serializza un tipo **doppie** proprietà.|
-|**PX_Font( )**|Serializza una proprietà di tipo carattere.|
-|**PX_Float( )**|Serializza un tipo **float** proprietà.|
-|**PX_IUnknown( )**|Serializza una proprietà di tipo `LPUNKNOWN`.|
-|**PX_Long( )**|Serializza un tipo **lungo** proprietà.|
-|**PX_Picture( )**|Serializza un tipo di proprietà immagine.|
-|**PX_Short( )**|Serializza un tipo **breve** proprietà.|
-|**PXstring( )**|Serializza un tipo `CString` proprietà.|
-|**PX_ULong( )**|Serializza un tipo **ULONG** proprietà.|
-|**PX_UShort( )**|Serializza un tipo **USHORT** proprietà.|
+|**PX_Blob( )**|Serializza una proprietà di dati BLOB (Binary Large Object) di tipo.|
+|**PX_Bool( )**|Serializza una proprietà booleana di tipo.|
+|**PX_Color( )**|Serializza una proprietà di tipo color.|
+|**PX_Currency( )**|Serializza una proprietà CY (valuta) **di** tipo.|
+|**PX_Double( )**|Serializza una proprietà **double** di tipo.|
+|**PX_Font( )**|Serializza un Font tipo proprietà.|
+|**PX_Float( )**|Serializza una proprietà **float** del tipo.|
+|**PX_IUnknown( )**|Serializza una `LPUNKNOWN`proprietà di tipo .|
+|**PX_Long( )**|Serializza una proprietà **long** di tipo.|
+|**PX_Picture( )**|Serializza una proprietà Picture di tipo.|
+|**PX_Short( )**|Serializza una proprietà **short** di tipo.|
+|**StringaP( )**|Serializza `CString` una proprietà del tipo.|
+|**PX_ULong( )**|Serializza una proprietà **ULONG di** tipo.|
+|**PX_UShort( )**|Serializza una proprietà **USHORT di** tipo.|
 
-Per altre informazioni su queste funzioni di scambio di proprietà, vedere [persistenza dei controlli OLE](../mfc/reference/persistence-of-ole-controls.md) nel *riferimento MFC*.
+Per ulteriori informazioni su queste funzioni di scambio di proprietà, vedere [Persistenza dei controlli OLE](../mfc/reference/persistence-of-ole-controls.md) in *Riferimenti a MFC*.
 
-##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Personalizzazione del comportamento predefinito del DoPropExchange
+## <a name="customizing-the-default-behavior-of-dopropexchange"></a><a name="_core_customizing_the_default_behavior_of_dopropexchange"></a>Personalizzazione del comportamento predefinito di DoPropExchange
 
-L'implementazione predefinita di `DoPropertyExchange` (come illustrato nell'argomento precedente) effettua una chiamata alla classe di base `COleControl`. Serializza l'insieme di proprietà supportate automaticamente da `COleControl`, che usa più spazio di archiviazione rispetto a serializzare solo le proprietà personalizzate del controllo. Rimozione di questa chiamata consente all'oggetto serializzare solo le proprietà che sono considerate importanti. Eventuali stati di proprietà predefinite ha implementato il controllo non verranno serializzati durante il salvataggio o caricamento l'oggetto di controllo, a meno che non venga esplicitamente aggiunto **px _** chiama per loro.
+L'implementazione `DoPropertyExchange` predefinita di (come illustrato nell'argomento `COleControl`precedente) effettua una chiamata alla classe base . In questo modo il set `COleControl`di proprietà supportato automaticamente da , che utilizza più spazio di archiviazione rispetto alla serializzazione solo delle proprietà personalizzate del controllo. La rimozione di questa chiamata consente all'oggetto di serializzare solo le proprietà considerate importanti. Qualsiasi proprietà predefinita indica che il controllo ha implementato non verrà serializzato durante il salvataggio o il caricamento dell'oggetto controllo a meno che non si aggiunge in modo esplicito **PX_** li chiama.
 
-##  <a name="_core_implementing_version_support"></a> Implementazione di supporto della versione
+## <a name="implementing-version-support"></a><a name="_core_implementing_version_support"></a>Implementazione del supporto della versioneImplementing Version Support
 
-Supporto delle versioni consente a un controllo ActiveX rivisto aggiungere nuove proprietà persistenti e ancora essere in grado di rilevare e caricare lo stato permanente creato da una versione precedente del controllo. Per rendere disponibile una versione del controllo come parte dei dati persistenti, chiamare [COleControl:: ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) del controllo `DoPropExchange` (funzione). Questa chiamata viene inserita automaticamente se il controllo ActiveX è stato creato tramite la creazione guidata controllo ActiveX. Può essere rimosso se non è necessario il supporto della versione. Tuttavia, il costo di una dimensione del controllo è molto piccolo (4 byte) per un'ulteriore flessibilità che offre il supporto della versione.
+Il supporto della versione consente a un controllo ActiveX rivisto di aggiungere nuove proprietà persistenti e di essere comunque in grado di rilevare e caricare lo stato persistente creato da una versione precedente del controllo. Per rendere disponibile la versione di un controllo come parte dei dati persistenti, chiamare `DoPropExchange` [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) nella funzione del controllo. Questa chiamata viene inserita automaticamente se il controllo ActiveX è stato creato utilizzando la Creazione guidata controllo ActiveX. Può essere rimosso se non è necessario il supporto della versione. Tuttavia, il costo nella dimensione del controllo è molto piccolo (4 byte) per la flessibilità aggiuntiva fornita dal supporto della versione.
 
-Se il controllo non è stato creato con la creazione guidata controllo ActiveX, aggiungere una chiamata a `COleControl::ExchangeVersion` inserendo la riga seguente all'inizio del `DoPropExchange` funzione (prima della chiamata a `COleControl::DoPropExchange`):
+Se il controllo non è stato creato con la `COleControl::ExchangeVersion` Creazione guidata controllo ActiveX, `DoPropExchange` aggiungere una chiamata `COleControl::DoPropExchange`a inserendo la riga seguente all'inizio della funzione (prima della chiamata a ):
 
 [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
 
-È possibile usare qualsiasi **DWORD** come il numero di versione. Usano i progetti generati dalla creazione guidata controllo ActiveX `_wVerMinor` e `_wVerMajor` come impostazione predefinita. Questi sono costanti globali definite nel file di implementazione della classe del controllo ActiveX del progetto. Nel resto del `DoPropExchange` funzione, è possibile chiamare [CPropExchange:: GetVersion](../mfc/reference/cpropexchange-class.md#getversion) in qualsiasi momento per recuperare la versione di salvataggio o il recupero.
+È possibile utilizzare qualsiasi **DWORD** come numero di versione. I progetti generati dalla Creazione `_wVerMinor` `_wVerMajor` guidata controllo ActiveX utilizzano e come impostazione predefinita. Si tratta di costanti globali definite nel file di implementazione della classe del controllo ActiveX del progetto. All'interno del `DoPropExchange` resto della funzione, è possibile chiamare [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) in qualsiasi momento per recuperare la versione che si sta salvando o recuperando.
 
-Nell'esempio seguente, la versione 1 di questo controllo di esempio ha solo una proprietà "ReleaseDate". Versione 2 aggiunge una proprietà "OriginalDate". Se il controllo viene richiesto di caricare lo stato permanente dalla versione precedente, inizializza la variabile membro per la nuova proprietà su un valore predefinito.
+Nell'esempio seguente, la versione 1 di questo controllo di esempio ha solo una proprietà "ReleaseDate". La versione 2 aggiunge una proprietà "OriginalDate". Se al controllo viene richiesto di caricare lo stato persistente dalla versione precedente, inizializza la variabile membro per la nuova proprietà su un valore predefinito.
 
 [!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
 
-Per impostazione predefinita, un controllo "converte" i dati precedenti al formato più recente. Ad esempio, se la versione 2 di un controllo carica i dati che è stati salvati dalla versione 1, scriverà il formato della versione 2 quando viene salvato anche in questo caso. Se si desidera il controllo per salvare i dati in formato ultima lettura, passare **FALSE** come terzo parametro quando si chiama `ExchangeVersion`. Il terzo parametro è facoltativo e viene **TRUE** per impostazione predefinita.
+Per impostazione predefinita, un controllo "converte" i dati precedenti nel formato più recente. Ad esempio, se la versione 2 di un controllo carica i dati salvati dalla versione 1, scriverà il formato della versione 2 quando viene salvato di nuovo. Se si desidera che il controllo salvi **FALSE** i dati nel `ExchangeVersion`formato ultima lettura, passare FALSE come terzo parametro quando si chiama . Questo terzo parametro è facoltativo e è **TRUE** per impostazione predefinita.
 
 ## <a name="see-also"></a>Vedere anche
 

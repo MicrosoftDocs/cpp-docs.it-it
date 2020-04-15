@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f72401d7bdc4a61a8e986c10cdbd4fad732e41ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368438"
 ---
 # <a name="extreme_value_distribution-class"></a>Classe extreme_value_distribution
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *RealType*
-Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*Tipo reale*\
+Il tipo di risultato a virgola mobile è **double**. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
-@No__t_1 *Generatore URNG*
-Motore generatore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*URNG*\
+Il motore generatore di numeri casuali. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione dei valori estremi. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o tipo **double** se non ne viene fornito alcuno, distribuito in base alla distribuzione Extreme Value. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ Il modello di classe descrive una distribuzione che produce valori di un tipo a 
 
 Le funzioni di proprietà `a()` e `b()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati `a` e `b`.
 
-Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
+Per ulteriori informazioni sulle classi di [ \< ](../standard-library/random.md)distribuzione e sui relativi membri, vedere random>.
 
 Per informazioni dettagliate sulla distribuzione dei valori estremi, vedere l'articolo di Wolfram MathWorld [Extreme Value Distribution](https://go.microsoft.com/fwlink/p/?linkid=401110) (Distribuzione dei valori estremi).
 
@@ -181,7 +181,7 @@ Distribution for 10 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution::extreme_value_distribution
 
 Costruisce la distribuzione.
 
@@ -192,24 +192,24 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-\ *a_value*
+*a_value*\
 Parametro di distribuzione `a`.
 
-\ *b_value*
+*b_value*\
 Parametro di distribuzione `b`.
 
-\ di *parmigiana*
+*Parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-**Precondizione:** `0.0 < b`
+**Prerequisito:**`0.0 < b`
 
 Il primo costruttore crea un oggetto il cui valore `a` archiviato include il valore *a_value* e il cui valore `b` archiviato include il valore *b_value*.
 
-Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
+Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="param_type"></a>  extreme_value_distribution::param_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::param_type
 
 Archivia i parametri della distribuzione.
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-\ *a_value*
+*a_value*\
 Parametro di distribuzione `a`.
 
-\ *b_value*
+*b_value*\
 Parametro di distribuzione `b`.
 
-\ a *destra*
+*va bene*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-**Precondizione:** `0.0 < b`
+**Prerequisito:**`0.0 < b`
 
 Questa struttura può essere passata al costruttore di classe della distribuzione durante la creazione di istanze, alla funzione membro `param()` per impostare i parametri archiviati di una distribuzione esistente e a `operator()` per l'uso in sostituzione dei parametri archiviati.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)
+[\<>casuali](../standard-library/random.md)

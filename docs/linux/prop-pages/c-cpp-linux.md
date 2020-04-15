@@ -4,17 +4,17 @@ ms.date: 06/07/2019
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
 ms.openlocfilehash: 394cb501b4df6caed6a358ffa96ce0de5d187ae1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79441479"
 ---
 # <a name="cc-properties-linux-c"></a>Proprietà C/C++ (Linux C++)
 
 ::: moniker range="vs-2015"
 
-Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive.
+Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
@@ -25,9 +25,9 @@ Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive
 | Proprietà | Descrizione | Opzioni |
 |--|--|--|
 | Directory di inclusione aggiuntive | Specifica una o più directory da aggiungere al percorso di inclusione. Usare il punto e virgola per separare più directory. (-I\[percorso]). |
-| Formato informazioni di debug | Specifica il tipo di informazioni di debug generate dal compilatore. | **Nessuno**: non produce informazioni di debug, quindi la compilazione può risultare più veloce.<br/>**Informazioni minime di debug**: genera informazioni minime di debug.<br/>**Informazioni di debug complete (DWARF2)** : genera informazioni di debug DWARF2.<br/> |
+| Formato informazioni di debug | Specifica il tipo di informazioni di debug generate dal compilatore. | **Nessuno**: non produce informazioni di debug, quindi la compilazione può risultare più veloce.<br/>**Informazioni minime di debug**: genera informazioni minime di debug.<br/>**Informazioni di debug complete (DWARF2)**: genera informazioni di debug DWARF2.<br/> |
 | Nome file oggetto | Specifica un nome con cui eseguire l'override del nome del file oggetto predefinito. Può essere un nome di file o directory. (-o [name]). |
-| Livello di avviso | Seleziona il grado di severità del controllo eseguito dal compilatore per trovare gli errori del codice.  Aggiungere altri flag direttamente a **Opzioni aggiuntive**. (/w, /Weverything). | **Disattiva tutti gli avvisi**: disabilita tutti gli avvisi del compilatore.<br/>**Abilita tutti gli avvisi**: abilita tutti gli avvisi, inclusi quelli disabilitati per impostazione predefinita.<br/> |
+| Livello avvisi | Seleziona il grado di severità del controllo eseguito dal compilatore per trovare gli errori del codice.  Aggiungere altri flag direttamente a **Opzioni aggiuntive**. (/w, /Weverything). | **Disattiva tutti gli avvisi**: disabilita tutti gli avvisi del compilatore.<br/>**Abilita tutti gli avvisi**: abilita tutti gli avvisi, inclusi quelli disabilitati per impostazione predefinita.<br/> |
 | Considera gli avvisi come errori | Considera tutti gli avvisi del compilatore come errori. Per un nuovo progetto, potrebbe essere preferibile usare /Werror in tutte le compilazioni. La risoluzione di tutti gli avvisi garantirà il minor numero possibile di errori del codice di difficile individuazione. |
 | Avvisi C aggiuntivi | Consente di definire un set di messaggi di avviso aggiuntivi. |
 | Avvisi C++ aggiuntivi | Consente di definire un set di messaggi di avviso aggiuntivi. |
@@ -73,14 +73,14 @@ Il supporto per Linux è disponibile in Visual Studio 2017 e versioni successive
 | Proprietà | Descrizione | Opzioni |
 |--|--|--|
 | Abilita informazioni sui tipi in fase di esecuzione | Aggiunge codice per il controllo dei tipi di oggetto C++ in fase di esecuzione (informazioni sui tipi in fase di esecuzione).     (frtti, fno-rtti) |
-| Standard del linguaggio C | Determina lo standard del linguaggio C. | **Default**<br/>**C89**: standard del linguaggio C89.<br/>**C99**: standard del linguaggio C99.<br/>**C11**: standard del linguaggio C11.<br/>**C99 (dialetto GNU)** : standard del linguaggio C99 (dialetto GNU).<br/>**C11 (dialetto GNU)** : standard del linguaggio C11 (dialetto GNU). |
-| Standard del linguaggio C++ | Determina lo standard del linguaggio C++. | **Default**<br/>**C++03**: standard del linguaggio C++03.<br/>**C++11**: standard del linguaggio C++11.<br/>**C++14**: standard del linguaggio C++14.<br/>**C++03 (dialetto GNU)** : standard del linguaggio C++03 (dialetto GNU).<br/>**C++11 (dialetto GNU)** : standard del linguaggio C++11 (dialetto GNU).<br/>**C++14 (dialetto GNU)** : standard del linguaggio C++14 (dialetto GNU). |
+| Standard del linguaggio C | Determina lo standard del linguaggio C. | **Predefinito**<br/>**C89**: standard del linguaggio C89.<br/>**C99**: standard del linguaggio C99.<br/>**C11**: standard del linguaggio C11.<br/>**C99 (dialetto GNU)**: standard del linguaggio C99 (dialetto GNU).<br/>**C11 (GNU Dialect)** - C11 (GNU Dialect) Language Standard. |
+| Standard del linguaggio C++ | Determina lo standard del linguaggio C++. | **Predefinito**<br/>**C++03**: standard del linguaggio C++03.<br/>**C-11** - Standard linguistico C-11.<br/>**C++14**: standard del linguaggio C++14.<br/>**C++03 (dialetto GNU)**: standard del linguaggio C++03 (dialetto GNU).<br/>**C++11 (dialetto GNU)**: standard del linguaggio C++11 (dialetto GNU).<br/>**C++14 (dialetto GNU)**: standard del linguaggio C++14 (dialetto GNU). |
 
 ## <a name="advanced"></a>Avanzate
 
 | Proprietà | Descrizione | Opzioni |
 |--|--|--|
-| Compila come | Seleziona il linguaggio di compilazione per i file con estensione c e cpp. (-x c, -x c++) | **Valore predefinito**: viene rilevato in base all'estensione c o cpp.<br/>**Compila come codice C**: viene compilato come codice C.<br/>**Compila come codice C++** : viene compilato come codice C++. |
+| Compila come | Seleziona il linguaggio di compilazione per i file con estensione c e cpp. (-x c, -x c++) | **Valore predefinito**: viene rilevato in base all'estensione c o cpp.<br/>**Compila come codice C** - Compila come codice C.Compile as C Code - Compile as C code.<br/>**Compilare come codice C** , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , |
 | File di inclusione forzati | Specifica uno o più file di inclusione forzati (-include \[nome]) |
 
 ::: moniker-end

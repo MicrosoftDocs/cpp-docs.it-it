@@ -10,38 +10,38 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-ms.openlocfilehash: 07d9e706e8ed01a81ee580e7c4e11fa1f1a7a8df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 686d5eef4aaa67785aa56133d820b637fbf4bb86
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206880"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364747"
 ---
 # <a name="message-categories"></a>Categorie di messaggi
 
-Quali tipi di messaggi è possibile scrivere i gestori per sono disponibili tre categorie principali:
+Quali tipi di messaggi si scrivono gestori per Ci sono tre categorie principali:
 
 1. Windows (messaggi)
 
-   Ciò include principalmente i messaggi che iniziano con la **WM _** prefisso, ad eccezione di WM_COMMAND. I messaggi di Windows vengono gestiti da windows e le viste. Questi messaggi hanno spesso parametri che vengono usati per determinare come gestire il messaggio.
+   Sono inclusi principalmente i messaggi che iniziano con il prefisso **WM_,** ad eccezione di WM_COMMAND. I messaggi di Windows vengono gestiti da finestre e visualizzazioni. Questi messaggi spesso dispongono di parametri utilizzati per determinare come gestire il messaggio.
 
-1. Notifiche dei controlli
+1. Controllare le notifiche
 
-   Ciò include WM_COMMAND (messaggi) notifica da controlli e altre finestre figlio nelle finestre padre. Ad esempio, un controllo di modifica invia padre un messaggio WM_COMMAND che contiene il codice di notifica del controllo EN_CHANGE quando l'utente ha eseguito un'azione che potrebbe aver modificato il testo nel controllo di modifica. Il gestore della finestra per il messaggio risponde al messaggio di notifica in modo appropriato, ad esempio recuperando il testo nel controllo.
+   Sono inclusi WM_COMMAND i messaggi di notifica dai controlli e da altre finestre figlio alle finestre padre. Ad esempio, un controllo di modifica invia all'elemento padre un messaggio di WM_COMMAND contenente il codice di notifica del controllo EN_CHANGE quando l'utente ha eseguito un'azione che potrebbe aver modificato il testo nel controllo di modifica. Il gestore della finestra per il messaggio risponde al messaggio di notifica in modo appropriato, ad esempio recuperando il testo nel controllo.
 
-   Il framework indirizza i messaggi di notifica del controllo come altro **WM _** messaggi. Un'unica eccezione, tuttavia, è il messaggio di notifica del controllo BN_CLICKED inviato dai pulsanti quando l'utente fa clic su essi. Questo messaggio viene trattato in modo speciale come un messaggio di comando e indirizzato come gli altri comandi.
+   Il framework indirizza i messaggi di notifica del controllo come altri messaggi **di WM_.** Un'eccezione, tuttavia, è il messaggio di notifica di controllo BN_CLICKED inviato dai pulsanti quando l'utente fa clic su di essi. Questo messaggio viene trattato in modo speciale come un messaggio di comando e instradato come altri comandi.
 
 1. Messaggi di comando
 
-   Sono inclusi i messaggi di notifica WM_COMMAND da oggetti dell'interfaccia utente: menu, pulsanti della barra degli strumenti e tasti di scelta rapida. Il framework elabora i comandi in modo diverso dagli altri messaggi e possono essere gestiti da più tipi di oggetti, come illustrato in [destinazioni comandi](../mfc/command-targets.md).
+   Sono inclusi i messaggi di notifica WM_COMMAND dagli oggetti dell'interfaccia utente: menu, pulsanti della barra degli strumenti e tasti di scelta rapida. Il framework elabora i comandi in modo diverso dagli altri messaggi e possono essere gestiti da più tipi di oggetti, come illustrato in [Command Targets](../mfc/command-targets.md).
 
-##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> I messaggi di Windows e i messaggi di notifica del controllo
+## <a name="windows-messages-and-control-notification-messages"></a><a name="_core_windows_messages_and_control.2d.notification_messages"></a>Messaggi di Windows e messaggi di notifica del controllo
 
-I messaggi nelle categorie 1 e 2, ovvero i messaggi di Windows e le notifiche dei controlli, vengono gestiti da windows: gli oggetti di classi derivate dalla classe `CWnd`. Sono inclusi `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, e le classi derivano da queste classi di base. Tali oggetti includono un `HWND`, un handle a una finestra di Windows.
+I messaggi nelle categorie 1 e 2, ovvero i messaggi di Windows `CWnd`e le notifiche di controllo, vengono gestiti dalle finestre: oggetti di classi derivate dalla classe . Sono `CFrameWnd`incluse `CMDIFrameWnd` `CMDIChildWnd`, `CView` `CDialog`, , , e le classi personalizzate derivate da queste classi base. Tali oggetti `HWND`incapsulano un oggetto , un handle a una finestra di Windows.
 
-##  <a name="_core_command_messages"></a> Messaggi di comando
+## <a name="command-messages"></a><a name="_core_command_messages"></a>Messaggi di comando
 
-I messaggi nella categoria 3: i comandi, può essere gestita da un'ampia gamma di oggetti: documenti, i modelli di documento e l'oggetto applicazione oltre a windows e le viste. Quando un comando influisce direttamente su un determinato oggetto, è opportuno avere creato l'oggetto di gestire il comando. Ad esempio, il comando Apri del menu File è associato in modo logico con l'applicazione: l'applicazione apre un documento specificato dopo aver ricevuto il comando. Pertanto, il gestore per il comando Apri è una funzione membro della classe dell'applicazione. Per altre informazioni sui comandi e come vengono instradati agli oggetti, vedere [chiamata di un gestore dal Framework](../mfc/how-the-framework-calls-a-handler.md).
+I messaggi della categoria 3, ovvero i comandi, possono essere gestiti da una più ampia gamma di oggetti: documenti, modelli di documento e l'oggetto applicazione stesso, oltre a finestre e visualizzazioni. Quando un comando influisce direttamente su un particolare oggetto, è opportuno che l'oggetto gestisca il comando. Ad esempio, il comando Apri del menu File è associato logicamente all'applicazione: l'applicazione apre un documento specificato alla ricezione del comando. Pertanto, il gestore per il comando Open è una funzione membro della classe dell'applicazione. Per ulteriori informazioni sui comandi e su come vengono indirizzati agli oggetti, vedere [Come il framework chiama un gestore](../mfc/how-the-framework-calls-a-handler.md).
 
 ## <a name="see-also"></a>Vedere anche
 

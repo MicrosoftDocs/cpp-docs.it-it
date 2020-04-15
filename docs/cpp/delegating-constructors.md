@@ -1,13 +1,13 @@
 ---
-title: Delega di costruttori (C++)
-description: Usare i costruttori di delega in C++ per richiamare altri costruttori e ridurre la ripetizione del codice.
+title: Delega di costruttori (C )
+description: Utilizzare i costruttori di delega in C , per richiamare altri costruttori e ridurre la ripetizione del codice.
 ms.date: 11/19/2019
-ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f26a013aa3c081d900ffc3eb32649acc77505db0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250674"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316665"
 ---
 # <a name="delegating-constructors"></a>Delega dei costruttori
 

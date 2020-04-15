@@ -10,18 +10,18 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 5f8f08bcea1a44199d15da82b3ddbd37b676b347
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8fe141886fd5087b71484368c0f79d62238f7f22
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178795"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365605"
 ---
 # <a name="single-inheritance"></a>Ereditarietà singola
 
 Nell'ereditarietà singola, una forma comune di ereditarietà, le classi contengono solo una classe base. Esaminare la relazione illustrata nella figura seguente.
 
-![Grafico di&#45;ereditarietà singola di base](../cpp/media/vc38xj1.gif "Grafico di&#45;ereditarietà singola di base") <br/>
+![Grafico di ereditarietà di base di singolo&#45;Basic single&#45;inheritance graph](../cpp/media/vc38xj1.gif "Grafico di ereditarietà di base di singolo&#45;Basic single&#45;inheritance graph") <br/>
 Grafico semplice dell'ereditarietà singola
 
 Si noti la progressione da generale a specifico nella figura. Un altro attributo comune trovato nella progettazione delle gerarchie di classi corrisponde al fatto che la classe derivata ha una relazione "tipo di" con la classe base. Nella figura, `Book` è un tipo di `PrintedDocument` e `PaperbackBook` è un tipo di `book`.
@@ -44,11 +44,11 @@ class PaperbackBook : public Book {};
 
 La classe base da cui ogni classe deriva viene dichiarata prima della classe derivata. Non è sufficiente fornire una dichiarazione di riferimento in avanti per una classe base, ma è necessario fornire una dichiarazione completa.
 
-Nell'esempio precedente viene usato l'identificatore di accesso **public** . Il significato dell'ereditarietà pubblica, protetta e privata è descritto in [controllo dell'accesso ai membri.](../cpp/member-access-control-cpp.md)
+Nell'esempio precedente viene utilizzato l'identificatore di accesso **public.** Il significato dell'ereditarietà pubblica, protetta e privata è descritto in Controllo accesso ai [membri.](../cpp/member-access-control-cpp.md)
 
 Una classe può essere usata come classe base per molte classi specifiche, come illustrato nella figura seguente.
 
-![Grafico aciclici diretto](../cpp/media/vc38xj2.gif "Directed acyclic graph") <br/>
+![Directed acyclic graph](../cpp/media/vc38xj2.gif "Directed acyclic graph") <br/>
 Esempio di grafico aciclico diretto
 
 Nel diagramma precedente, denominato grafico aciclico diretto, alcune classi sono classi base per più di una classe derivata. Tuttavia, il contrario non è vero: esiste una sola classe base diretta per qualsiasi classe derivata specificata. Il grafico nella figura raffigura struttura a ereditarietà singola.
@@ -154,4 +154,4 @@ Nell'esempio precedente vengono creati tipi differenti. Tuttavia, poiché questi
 Poiché la classe `Document` dispone di una funzione `PrintNameOf`, può stampare il nome di ogni libro della biblioteca, anche se può omettere alcune informazioni specifiche del tipo di documento (numero di pagine di `Book`, numero di byte pagina per `HelpFile` e così via).
 
 > [!NOTE]
->  Forzare la classe base a implementare una funzione come `PrintNameOf` non è spesso una la soluzione di progettazione migliore. [Funzioni virtuali](../cpp/virtual-functions.md) offre altre alternative di progettazione.
+> Forzare la classe base a implementare una funzione come `PrintNameOf` non è spesso una la soluzione di progettazione migliore. [Funzioni virtuali](../cpp/virtual-functions.md) offre altre alternative di progettazione.

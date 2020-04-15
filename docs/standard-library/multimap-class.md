@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: a4b066bf1620f8aaca1b0fc581348c73d5255591
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2f6ae50a825d6eff2eb64c84b209fa81c4b7949f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419826"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363861"
 ---
 # <a name="multimap-class"></a>Classe multimap
 
@@ -109,10 +109,10 @@ class multimap;
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
+*Chiave*\
 Tipo di dati della chiave da archiviare nel multimap.
 
-*Tipo*\
+*digitare*\
 Tipo di dati degli elementi da archiviare nel multimap.
 
 *Tratti*\
@@ -120,7 +120,7 @@ Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due el
 
 In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato `std::less<>` o `std::greater<>` che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14).
 
-\ *allocatore*
+*Allocatore*\
 Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione della mappa e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Osservazioni
@@ -137,7 +137,7 @@ La classe multimap della libreria standard C++ è:
 
 - Un contenitore associativo di coppie, in quanto i valori dei dati degli elementi sono diversi dai valori delle relative chiavi.
 
-- Un modello di classe, poiché la funzionalità che fornisce è generica e indipendente dal tipo specifico di dati contenuti come elementi o chiavi. I tipi di dati da utilizzare per gli elementi e le chiavi vengono invece specificati come parametri nel modello di classe i insieme alla funzione di confronto e all'allocatore.
+- Modello di classe, poiché la funzionalità che fornisce è generica e quindi indipendente dal tipo specifico di dati contenuti come elementi o chiavi. I tipi di dati da utilizzare per gli elementi e le chiavi vengono invece specificati come parametri nel modello di classe i insieme alla funzione di confronto e all'allocatore.
 
 L'iteratore fornito dalla classe map è un iteratore bidirezionale, ma le funzioni membro [insert](#insert) e [multimap](#multimap) della classe hanno versioni che accettano come parametri di modello un iteratore di input più debole, in cui i requisiti delle funzionalità sono inferiori a quelli garantiti dalla classe degli iteratori bidirezionali. I diversi concetti di iteratore formano una famiglia correlata dai perfezionamenti delle relative funzionalità. Ogni concetto di iteratore dispone di un set di requisiti e gli algoritmi utilizzati con tali concetti devono limitare le proprie ipotesi ai requisiti forniti da tale tipo di iteratore. Si può presupporre che un iteratore di input possa essere dereferenziato per fare riferimento a un determinato oggetto e possa essere incrementato all'iteratore successivo nella sequenza. Si tratta di un set di funzionalità minimo, ma è sufficiente per poter descrivere chiaramente un intervallo di iteratori `[First, Last)` nel contesto delle funzioni membro della classe.
 
@@ -149,7 +149,7 @@ L'oggetto multimap ordina la sequenza che controlla chiamando un oggetto funzion
 
 In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato `std::less<>` o `std::greater<>` che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#sequence_containers).
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
@@ -162,66 +162,66 @@ In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato
 |Nome tipo|Descrizione|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe `allocator` per l'oggetto `multimap`.|
-|[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento **const** nell'`multimap`.|
-|[const_pointer](#const_pointer)|Tipo che fornisce un puntatore a un elemento **const** in un `multimap`.|
-|[const_reference](#const_reference)|Tipo che fornisce un riferimento a un elemento **const** archiviato in un `multimap` per la lettura e l'esecuzione di operazioni **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento **const** nell'`multimap`.|
+|[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado `multimap`di leggere un elemento **const** nell'oggetto .|
+|[const_pointer](#const_pointer)|Tipo che fornisce un puntatore a `multimap`un elemento **const** in un oggetto .|
+|[const_reference](#const_reference)|Tipo che fornisce un riferimento a un `multimap` elemento **const** archiviato in un oggetto per la lettura e l'esecuzione di operazioni **const.**|
+|[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado `multimap`di leggere qualsiasi elemento **const** nell'oggetto .|
 |[difference_type](#difference_type)|Tipo Signed Integer che può essere utilizzato per rappresentare il numero di elementi di un `multimap` in un intervallo compreso tra gli elementi a cui puntano gli iteratori.|
-|[iterator](#iterator)|Tipo che fornisce la differenza tra due iteratori che fanno riferimento agli elementi all'interno dello stesso `multimap`.|
+|[Iteratore](#iterator)|Tipo che fornisce la differenza tra due iteratori che fanno riferimento agli elementi all'interno dello stesso `multimap`.|
 |[key_compare](#key_compare)|Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordinamento per determinare l'ordine relativo di due elementi nel `multimap`.|
 |[key_type](#key_type)|Tipo che descrive l'oggetto chiave di ordinamento di cui è costituito ogni elemento del `multimap`.|
 |[mapped_type](#mapped_type)|Tipo che rappresenta il tipo di dati archiviati in un `multimap`.|
-|[pointer](#pointer)|Tipo che fornisce un puntatore a un elemento **const** in un `multimap`.|
-|[reference](#reference)|Tipo che fornisce un riferimento a un elemento archiviato in un `multimap`.|
+|[indicatore di misura](#pointer)|Tipo che fornisce un puntatore a `multimap`un elemento **const** in un oggetto .|
+|[Riferimento](#reference)|Tipo che fornisce un riferimento a un elemento archiviato in un `multimap`.|
 |[reverse_iterator](#reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un elemento di un `multimap` invertito.|
-|[size_type](#size_type)|Tipo di Unsigned Integer che fornisce un puntatore a un elemento **const** in un `multimap`.|
-|[value_type](#value_type)|Tipo che fornisce un oggetto funzione in grado di confrontare due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel `multimap`.|
+|[size_type](#size_type)|Tipo Unsigned Integer che fornisce un puntatore `multimap`a un elemento **const** in un oggetto .|
+|[Value_type](#value_type)|Tipo che fornisce un oggetto funzione in grado di confrontare due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel `multimap`.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
 |Funzione membro|Descrizione|
 |-|-|
-|[begin](#begin)|Restituisce un iteratore che punta al primo elemento del `multimap`.|
+|[Iniziare](#begin)|Restituisce un iteratore che punta al primo elemento del `multimap`.|
 |[cbegin](#cbegin)|Restituisce un iteratore const che punta al primo elemento del `multimap`.|
 |[cend](#cend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un `multimap`.|
-|[deselezionare](#clear)|Cancella tutti gli elementi di un `multimap`.|
+|[Chiaro](#clear)|Cancella tutti gli elementi di un `multimap`.|
 |[count](#count)|Restituisce il numero di elementi di un `multimap` la cui chiave corrisponde a una chiave specificata dal parametro.|
 |[crbegin](#crbegin)|Restituisce un iteratore const che punta al primo elemento di un `multimap` invertito.|
 |[crend](#crend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un set `multimap` invertito.|
 |[emplace](#emplace)|Inserisce un elemento costruito sul posto in un `multimap`.|
 |[emplace_hint](#emplace_hint)|Inserisce un elemento costruito sul posto in un `multimap`, con un suggerimento sulla posizione.|
-|[empty](#empty)|Verifica se un `multimap` è vuoto.|
+|[Vuoto](#empty)|Verifica se un `multimap` è vuoto.|
 |[end](#end)|Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un `multimap`.|
 |[equal_range](#equal_range)|Trova l'intervallo di elementi in cui la chiave dell'elemento corrisponde a un valore specificato.|
 |[erase](#erase)|Rimuove un elemento o un intervallo di elementi di un `multimap` dalle posizioni specificate oppure rimuove gli elementi che corrispondono a una chiave specificata.|
-|[find](#find)|Restituisce un iteratore che punta alla prima posizione di un elemento di un `multimap` che dispone di una chiave equivalente a una chiave specificata.|
+|[Trovare](#find)|Restituisce un iteratore che punta alla prima posizione di un elemento di un `multimap` che dispone di una chiave equivalente a una chiave specificata.|
 |[get_allocator](#get_allocator)|Restituisce una copia dell'oggetto `allocator` utilizzato per costruire il `multimap`.|
-|[insert](#insert)|Inserisce un elemento o un intervallo di elementi in un `multimap`.|
+|[Inserire](#insert)|Inserisce un elemento o un intervallo di elementi in un `multimap`.|
 |[key_comp](#key_comp)|Recupera una copia dell'oggetto di confronto utilizzato per ordinare le chiavi di un `multimap`.|
 |[lower_bound](#lower_bound)|Restituisce un iteratore al primo elemento di un `multimap` con una chiave uguale o maggiore di una chiave specificata.|
 |[max_size](#max_size)|Restituisce la lunghezza massima del `multimap`.|
 |[rbegin](#rbegin)|Restituisce un iteratore che punta al primo elemento di un `multimap` invertito.|
 |[rend](#rend)|Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un `multimap` invertito.|
-|[size](#size)|Restituisce il numero di elementi nel `multimap`.|
-|[swap](#swap)|Scambia gli elementi di due `multimap`.|
-|[upper_bound](#upper_bound)|Restituisce un iteratore al primo elemento di un `multimap` con una chiave maggiore di una chiave specificata.|
+|[Dimensione](#size)|Restituisce il numero di elementi nel `multimap`.|
+|[Swap](#swap)|Scambia gli elementi di due `multimap`.|
+|[Upper_bound](#upper_bound)|Restituisce un iteratore al primo elemento di un `multimap` con una chiave maggiore di una chiave specificata.|
 |[value_comp](#value_comp)|La funzione membro restituisce un oggetto funzione che determina l'ordine degli elementi in un `multimap` confrontando i valori delle relative chiavi.|
 
 ### <a name="operators"></a>Operatori
 
 |Operatore|Descrizione|
 |-|-|
-|[operator=](#op_eq)|Sostituisce gli elementi di un `multimap` con una copia di un altro `multimap`.|
+|[operatore di comando](#op_eq)|Sostituisce gli elementi di un `multimap` con una copia di un altro `multimap`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<mappa >
+**Intestazione:** \<map>
 
 **Spazio dei nomi:** std
 
 Le coppie ( **key**, **value**) vengono archiviate in un oggetto multimap come oggetti di tipo `pair`. La classe della coppia richiede l'intestazione \<utility>, inclusa automaticamente da \<map>.
 
-## <a name="allocator_type"></a>  multimap::allocator_type
+## <a name="multimapallocator_type"></a><a name="allocator_type"></a>multimap::allocator_type
 
 Tipo che rappresenta la classe allocator per l'oggetto multimap.
 
@@ -233,7 +233,7 @@ typedef Allocator allocator_type;
 
 Vedere l'esempio relativo a [get_allocator](#get_allocator) per indicazioni su come usare `allocator_type`.
 
-## <a name="begin"></a>  multimap::begin
+## <a name="multimapbegin"></a><a name="begin"></a>multimap::begin
 
 Restituisce un iteratore che punta al primo elemento dell'oggetto multimap.
 
@@ -288,9 +288,9 @@ The first element of m1 is 0
 First element of m1 is now 1
 ```
 
-## <a name="cbegin"></a>  multimap::cbegin
+## <a name="multimapcbegin"></a><a name="cbegin"></a>multimappa::cbegin
 
-Restituisce un iteratore **const** che punta al primo elemento nell'intervallo.
+Restituisce un iteratore **const** che indirizza il primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -298,13 +298,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di accesso bidirezionale **const** che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
+Iteratore di accesso bidirezionale **const** che punta al primo elemento dell'intervallo o alla posizione appena `cbegin() == cend()`oltre la fine di un intervallo vuoto ( per un intervallo vuoto, ).
 
 ### <a name="remarks"></a>Osservazioni
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
-È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` essere un contenitore modificabile (non **const**) di qualsiasi tipo che supporta `begin()` e `cbegin()`.
+È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, `Container` si consideri un contenitore modificabile (non **const)** di qualsiasi tipo che supporta `begin()` e `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -314,9 +314,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  multimap::cend
+## <a name="multimapcend"></a><a name="cend"></a>multimap::cend
 
-Restituisce un iteratore **const** che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
+Restituisce un iteratore **const** che indirizza la posizione appena oltre l'ultimo elemento in un intervallo.
 
 ```cpp
 const_iterator cend() const;
@@ -324,13 +324,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di accesso bidirezionale **const** che punta appena oltre la fine dell'intervallo.
+Un iteratore **const** a accesso bidirezionale che punta appena oltre la fine dell'intervallo.
 
 ### <a name="remarks"></a>Osservazioni
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
-È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` essere un contenitore modificabile (non **const**) di qualsiasi tipo che supporta `end()` e `cend()`.
+È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, `Container` si consideri un contenitore modificabile (non **const)** di qualsiasi tipo che supporta `end()` e `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -342,7 +342,7 @@ auto i2 = Container.cend();
 
 Non è consigliabile dereferenziare il valore restituito da `cend`.
 
-## <a name="clear"></a>  multimap::clear
+## <a name="multimapclear"></a><a name="clear"></a>multimap::cancella
 
 Cancella tutti gli elementi di una classe multimap.
 
@@ -386,7 +386,7 @@ The size of the multimap is initially 2.
 The size of the multimap after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>  multimap::const_iterator
+## <a name="multimapconst_iterator"></a><a name="const_iterator"></a>multimappa::const_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento **const** dell'oggetto multimap.
 
@@ -398,17 +398,17 @@ typedef implementation-defined const_iterator;
 
 Un tipo `const_iterator` non può essere usato per modificare il valore di un elemento.
 
-Il `const_iterator` definito da multimap punta a oggetti di [value_type](#value_type), che sono di tipo `pair<const Key, Type>`. Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
+L'oggetto `const_iterator` definito dal multimap punta agli `pair<const Key, Type>`oggetti di [value_type](#value_type), che sono di tipo . Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
 
-Per dereferenziare un `const_iterator` *Citer* che punta a un elemento in un oggetto multimap, usare l'operatore **->** .
+Per dereferenziare un `const_iterator` *cIter* che punta **->** a un elemento in un multimap, utilizzare l'operatore.
 
-Per accedere al valore della chiave per l'elemento, usare `cIter->first`, che equivale a `(*cIter).first`. Per accedere al valore del punto di riferimento mappato per l'elemento, utilizzare `cIter->second`, che equivale a `(*cIter).second`.
+Per accedere al valore della chiave `cIter->first`per l'elemento, utilizzare , che equivale a `(*cIter).first`. Per accedere al valore del riferimento mappato per `cIter->second`l'elemento, `(*cIter).second`utilizzare , che equivale a .
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio relativo a [begin](#begin) per indicazioni su come usare `const_iterator`.
 
-## <a name="const_pointer"></a>  multimap::const_pointer
+## <a name="multimapconst_pointer"></a><a name="const_pointer"></a>multimap::const_pointer
 
 Tipo che fornisce un puntatore a un elemento **const** di un oggetto multimap.
 
@@ -422,7 +422,7 @@ Un tipo `const_pointer` non può essere usato per modificare il valore di un ele
 
 Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto multimap.
 
-## <a name="const_reference"></a>  multimap::const_reference
+## <a name="multimapconst_reference"></a><a name="const_reference"></a>multimappa::const_reference
 
 Tipo che fornisce un riferimento a un elemento **const** archiviato in un oggetto multimap per la lettura e l'esecuzione di operazioni **const**.
 
@@ -472,7 +472,7 @@ The key of the first element in the multimap is 1.
 The data value of the first element in the multimap is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>  multimap::const_reverse_iterator
+## <a name="multimapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>multimap::const_reverse_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento **const** dell'oggetto multimap.
 
@@ -484,17 +484,17 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione sull'oggetto multimap in ordine inverso.
 
-Il `const_reverse_iterator` definito da multimap punta a oggetti di [value_type](#value_type), che sono di tipo `pair<const Key, Type>`. Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
+L'oggetto `const_reverse_iterator` definito dal multimap punta agli `pair<const Key, Type>`oggetti di [value_type](#value_type), che sono di tipo . Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
 
-Per dereferenziare un `const_reverse_iterator` *criter* che punta a un elemento in un oggetto multimap, usare l'operatore **->** .
+Per dereferenziare un `const_reverse_iterator` *crIter* che punta **->** a un elemento in un multimap, utilizzare l'operatore .
 
-Per accedere al valore della chiave per l'elemento, usare `crIter->first`, che equivale a `(*crIter).first`. Per accedere al valore del punto di riferimento mappato per l'elemento, utilizzare `crIter->second`, che equivale a `(*crIter).first`.
+Per accedere al valore della chiave `crIter->first`per l'elemento, utilizzare , che equivale a `(*crIter).first`. Per accedere al valore del riferimento mappato per `crIter->second`l'elemento, `(*crIter).first`utilizzare , che equivale a .
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio relativo a [rend](#rend) per indicazioni su come dichiarare e usare `const_reverse_iterator`.
 
-## <a name="count"></a>  multimap::count
+## <a name="multimapcount"></a><a name="count"></a>multimap::count
 
 Restituisce il numero di elementi di un multimap la cui chiave corrisponde a una chiave specificata dal parametro.
 
@@ -504,7 +504,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
+*Chiave*\
 La chiave degli elementi per cui trovare un corrispondenza nel multimap.
 
 ### <a name="return-value"></a>Valore restituito
@@ -515,9 +515,9 @@ Il numero di elementi le cui chiavi di ordinamento corrispondono alla chiave del
 
 La funzione membro restituisce il numero di elementi nell'intervallo
 
-\[ lower_bound (*chiave*), upper_bound (*chiave*)
+\[lower_bound(*chiave*), upper_bound(*chiave*) )
 
-con una *chiave*del valore della chiave.
+che dispongono di una *chiave*del valore della chiave .
 
 ### <a name="example"></a>Esempio
 
@@ -563,7 +563,7 @@ The number of elements in m1 with a sort key of 2 is: 2.
 The number of elements in m1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a>  multimap::crbegin
+## <a name="multimapcrbegin"></a><a name="crbegin"></a>multimap::crbegin
 
 Restituisce un iteratore const che punta al primo elemento di un oggetto multimap invertito.
 
@@ -613,7 +613,7 @@ int main( )
 The first element of the reversed multimap m1 is 3.
 ```
 
-## <a name="crend"></a>  multimap::crend
+## <a name="multimapcrend"></a><a name="crend"></a>multimap::crend
 
 Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un oggetto multimap invertito.
 
@@ -666,7 +666,7 @@ int main( )
 The last element of the reversed multimap m1 is 1.
 ```
 
-## <a name="difference_type"></a>  multimap::difference_type
+## <a name="multimapdifference_type"></a><a name="difference_type"></a>multimap::difference_type
 
 Tipo Signed Integer che può essere usato per rappresentare il numero di elementi di un oggetto multimap in un intervallo compreso tra gli elementi a cui puntano gli iteratori.
 
@@ -676,7 +676,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-`difference_type` è il tipo restituito quando si sottrae o si incrementa tramite gli iteratori del contenitore. Il `difference_type` viene in genere usato per rappresentare il numero di elementi nell'intervallo [*First*, *Last*) tra gli iteratori `first` e `last`, include l'elemento a cui punta `first` e l'intervallo di elementi fino a, ma non include, l'elemento a cui punta `last`.
+`difference_type` è il tipo restituito quando si sottrae o si incrementa tramite gli iteratori del contenitore. `difference_type` L'oggetto viene in genere utilizzato per rappresentare il numero di `first` `last`elementi nell'intervallo `first` [*first*, *last*) tra gli iteratori `last`e , include l'elemento a cui punta e l'intervallo di elementi fino a, ma non includendolo, l'elemento a cui punta a .
 
 Si noti che, sebbene `difference_type` sia disponibile per tutti gli iteratori che soddisfano i requisiti di un iteratore di input, inclusa la classe degli iteratori bidirezionali supportati da contenitori reversibili come set, la sottrazione tra gli iteratori è supportata solo da iteratori ad accesso casuale forniti da un contenitore ad accesso casuale, ad esempio vector.
 
@@ -724,9 +724,9 @@ int main( )
 The number of elements in the multimap m1 is: 4.
 ```
 
-## <a name="emplace"></a>  multimap::emplace
+## <a name="multimapemplace"></a><a name="emplace"></a>multimap::emplace
 
-Inserisce un elemento costruito sul posto, senza operazioni di copia o spostamento.
+Inserisce un elemento costruito sul posto, senza che vengano eseguite operazioni di copia o spostamento.
 
 ```cpp
 template <class... Args>
@@ -737,7 +737,7 @@ iterator emplace(Args&&... args);
 
 |Parametro|Descrizione|
 |-|-|
-|*args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto multimap.|
+|*Args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto multimap.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -749,7 +749,7 @@ Questa funzione non invalida alcun riferimento a elementi del contenitore, ma po
 
 Se viene generata un'eccezione durante l'inserimento, il contenitore rimane invariato e viene nuovamente generata l'eccezione.
 
-L'oggetto [value_type](../standard-library/map-class.md#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dati dell'elemento.
+L'oggetto [value_type](../standard-library/map-class.md#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dei dati dell'elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -792,7 +792,7 @@ int main()
 }
 ```
 
-## <a name="emplace_hint"></a>  multimap::emplace_hint
+## <a name="multimapemplace_hint"></a><a name="emplace_hint"></a>multimappa::emplace_hint
 
 Inserisce un elemento costruito in locale (senza che vengano eseguite operazioni di copia o di spostamento), con un suggerimento sulla posizione.
 
@@ -807,8 +807,8 @@ iterator emplace_hint(
 
 |Parametro|Descrizione|
 |-|-|
-|*args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto multimap.|
-|*where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. Se il punto precede immediatamente la *posizione*, l'inserimento può essere eseguito in tempo costante ammortizzato anziché in tempo logaritmico.|
+|*Args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto multimap.|
+|*Dove*|Posizione in cui iniziare a cercare il punto di inserimento corretto. (Se tale punto precede immediatamente *where ,* l'inserimento può verificarsi in tempo costante ammortizzato anziché in tempo logaritmico.)|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -820,11 +820,11 @@ Questa funzione non invalida alcun riferimento a elementi del contenitore, ma po
 
 Se viene generata un'eccezione durante l'inserimento, lo stato del contenitore non viene modificato.
 
-L'oggetto [value_type](../standard-library/map-class.md#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dati dell'elemento.
+L'oggetto [value_type](../standard-library/map-class.md#value_type) di un elemento è una coppia, pertanto il valore di un elemento sarà una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dei dati dell'elemento.
 
 Per un esempio di codice, vedere [map::emplace_hint](../standard-library/map-class.md#emplace_hint).
 
-## <a name="empty"></a>  multimap::empty
+## <a name="multimapempty"></a><a name="empty"></a>multimap::vuoto
 
 Verifica se un oggetto multimap è vuoto.
 
@@ -869,7 +869,7 @@ The multimap m1 is not empty.
 The multimap m2 is empty.
 ```
 
-## <a name="end"></a>  multimap::end
+## <a name="multimapend"></a><a name="end"></a>multimap::end
 
 Restituisce l'iteratore successivo all'ultimo valore.
 
@@ -891,7 +891,7 @@ Non è consigliabile dereferenziare il valore restituito da **end**.
 
 Per un esempio di codice, vedere [multimap::find](#find).
 
-## <a name="equal_range"></a>  multimap::equal_range
+## <a name="multimapequal_range"></a><a name="equal_range"></a>multimappa::equal_range
 
 Trova l'intervallo di elementi in cui la chiave dell'elemento corrisponde a un valore specificato.
 
@@ -903,14 +903,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
+*Chiave*\
 Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
 Coppia di iteratori in cui il primo è l'elemento [lower_bound](#lower_bound) e il secondo è l'elemento [upper_bound](#upper_bound) della chiave.
 
-Per accedere al primo iteratore di una coppia `pr` restituita dalla funzione membro, usare `pr`. **first** e per dereferenziare l'iteratore del limite inferiore, usare \*( `pr`. **first**). Per accedere al secondo iteratore di una coppia `pr` restituita dalla funzione membro, usare `pr`. **second** e per dereferenziare l'iteratore del limite superiore, usare \*( `pr`. **second**).
+Per accedere al primo iteratore di una coppia `pr` restituita dalla funzione membro, usare `pr`. **prima** e per dereferenziare l'iteratore del limite inferiore, utilizzare \*( `pr`. **prima di tutto**). Per accedere al secondo iteratore di una coppia `pr` restituita dalla funzione membro, usare `pr`. **secondo** e per dereferenziare l'iteratore del limite superiore, utilizzare \*( `pr`. **secondo**).
 
 ### <a name="example"></a>Esempio
 
@@ -972,7 +972,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The multimap m1 doesn't have an element with a key less than 4.
 ```
 
-## <a name="erase"></a>  multimap::erase
+## <a name="multimaperase"></a><a name="erase"></a>multimap::cancellare
 
 Rimuove un elemento o un intervallo di elementi di un oggetto multimap dalle posizioni specificate oppure rimuove gli elementi che corrispondono a una chiave specificata.
 
@@ -993,13 +993,13 @@ size_type erase(
 *Dove*\
 Posizione dell'elemento che deve essere rimosso.
 
-*Primo*\
+*Prima*\
 Posizione del primo elemento che deve essere rimosso.
 
-*Ultimo*\
+*Ultima*\
 Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
-\ *chiave*
+*Chiave*\
 Chiave degli elementi da rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1012,7 +1012,7 @@ Per la terza funzione membro, restituisce il numero di elementi rimossi dall'ogg
 
 Per un esempio di codice, vedere [map::erase](../standard-library/map-class.md#erase).
 
-## <a name="find"></a>  multimap::find
+## <a name="multimapfind"></a><a name="find"></a>multimap::trovare
 
 Restituisce un iteratore che fa riferimento alla prima posizione di un elemento in un multimap che contiene una chiave equivalente a una chiave specificata.
 
@@ -1024,7 +1024,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
+*Chiave*\
 Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nel multimap in cui eseguire la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1035,7 +1035,7 @@ Iteratore che fa riferimento alla posizione di un elemento con una chiave specif
 
 La funzione membro restituisce un iteratore che fa riferimento a un elemento del multimap la cui chiave di ordinamento è equivalente alla chiave dell'argomento in un predicato binario che causa un ordinamento basato su una relazione di comparabilità minore di.
 
-Se il valore restituito di `find` viene assegnato a un `const_iterator`, l'oggetto multimap non può essere modificato. Se il valore restituito di `find` viene assegnato a una `iterator`, l'oggetto multimap può essere modificato.
+Se il valore restituito di `find` viene assegnato a un `const_iterator`, l'oggetto multimap non può essere modificato. Se il valore `find` restituito di `iterator`è assegnato a un oggetto , l'oggetto multimap può essere modificato.
 
 ### <a name="example"></a>Esempio
 
@@ -1099,7 +1099,7 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a>  multimap::get_allocator
+## <a name="multimapget_allocator"></a><a name="get_allocator"></a>multimap::get_allocator
 
 Restituisce una copia dell'oggetto allocatore usato per costruire l'oggetto multimap.
 
@@ -1113,7 +1113,7 @@ Allocatore usato dall'oggetto multimap.
 
 ### <a name="remarks"></a>Osservazioni
 
-Gli allocatori per la classe multimap specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti forniti con le classi contenitore della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
+Gli allocatori per la classe multimap specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti forniti con le classi dei contenitori della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
 
 ### <a name="example"></a>Esempio
 
@@ -1171,7 +1171,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>  multimap::insert
+## <a name="multimapinsert"></a><a name="insert"></a>multimap::inserire
 
 Inserisce un elemento o un intervallo di elementi in un multimap.
 
@@ -1214,12 +1214,12 @@ IList);
 |Parametro|Descrizione|
 |-|-|
 |*Val*|Valore di un elemento da inserire nel multimap.|
-|*Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. Se il punto precede immediatamente la *posizione*, l'inserimento può essere eseguito in tempo costante ammortizzato anziché in tempo logaritmico.|
-|*ValTy*|Parametro di modello che specifica il tipo di argomento che può essere usato dalla mappa per costruire un elemento di [value_type](../standard-library/map-class.md#value_type)e che consente di eseguire l'avanzamento perfetto di *Val* come argomento.|
-|*Primo*|Posizione del primo elemento da copiare.|
-|*Ultimo*|Posizione immediatamente dopo l'ultimo elemento da copiare.|
+|*Dove*|Posizione in cui iniziare a cercare il punto di inserimento corretto. Se tale punto precede immediatamente *Where*, l'inserimento può verificarsi in tempo costante ammortizzato anziché in tempo logaritmico.|
+|*ValTy*|Parametro modello che specifica il tipo di argomento che la mappa può utilizzare per costruire un elemento di [value_type](../standard-library/map-class.md#value_type)e perfeziona *Val* come argomento.|
+|*Prima*|Posizione del primo elemento da copiare.|
+|*Ultima*|Posizione immediatamente dopo l'ultimo elemento da copiare.|
 |*InputIterator*|Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](../standard-library/map-class.md#value_type).|
-|*IList*|Oggetto [initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|
+|*IList*|Il [initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1235,7 +1235,7 @@ Se viene generata un'eccezione durante l'inserimento di un solo elemento, ma l'e
 
 L'oggetto [value_type](../standard-library/map-class.md#value_type) di un contenitore è un typedef appartenente al contenitore e, per map, `multimap<K, V>::value_type` è `pair<const K, V>`. Il valore di un elemento è una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dati dell'elemento.
 
-La funzione membro di intervallo (5) inserisce la sequenza di valori di elemento in un oggetto multimap che corrisponde a ogni elemento a cui punta un iteratore nell'intervallo `[First, Last)`; Pertanto, *l'ultimo* non viene inserito. La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `m.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `m`.
+La funzione membro di intervallo (5) inserisce la sequenza di valori di elemento `[First, Last)`in un multimap che corrisponde a ogni elemento indirizzato da un iteratore nell'intervallo ; pertanto, *Last* non viene inserito. La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `m.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `m`.
 
 La funzione membro dell'elenco di inizializzatori (6) usa un oggetto [initializer_list](../standard-library/initializer-list.md) per copiare gli elementi nell'oggetto map.
 
@@ -1331,7 +1331,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a>  multimap::iterator
+## <a name="multimapiterator"></a><a name="iterator"></a>multimap::iteratore
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qualsiasi elemento di un oggetto multimap.
 
@@ -1341,19 +1341,19 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il `iterator` definito da multimap punta a oggetti di [value_type](#value_type), che sono di tipo `pair<const Key, Type>`. Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
+L'oggetto `iterator` definito dal multimap punta agli `pair<const Key, Type>`oggetti di [value_type](#value_type), che sono di tipo . Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
 
-Per dereferenziare un `iterator` *iter* che punta a un elemento in un oggetto multimap, usare l'operatore **->** .
+Per dereferenziare un `iterator` *Iter* che punta **->** a un elemento in un multimap, utilizzare l'operatore .
 
-Per accedere al valore della chiave per l'elemento, usare `Iter->first`, che equivale a `(*Iter).first`. Per accedere al valore del punto di riferimento mappato per l'elemento, utilizzare `Iter->second`, che equivale a `(*Iter).second`.
+Per accedere al valore della chiave `Iter->first`per l'elemento, utilizzare , che equivale a `(*Iter).first`. Per accedere al valore del riferimento mappato per `Iter->second`l'elemento, `(*Iter).second`utilizzare , che equivale a .
 
-È possibile utilizzare un tipo `iterator` per modificare il valore di un elemento.
+Un `iterator` tipo può essere utilizzato per modificare il valore di un elemento.
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio per [begin](#begin) per un esempio di dichiarazione e utilizzo di `iterator`.
 
-## <a name="key_comp"></a>  multimap::key_comp
+## <a name="multimapkey_comp"></a><a name="key_comp"></a>multimap::key_comp
 
 Recupera una copia dell'oggetto di confronto usato per ordinare le chiavi di un oggetto multimap.
 
@@ -1424,7 +1424,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```
 
-## <a name="key_compare"></a>  multimap::key_compare
+## <a name="multimapkey_compare"></a><a name="key_compare"></a>multimappa::key_compare
 
 Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordinamento per determinare l'ordine relativo di due elementi nell'oggetto multimap.
 
@@ -1442,7 +1442,7 @@ Per altre informazioni su `Traits`, vedere l'argomento [Classe multimap](../stan
 
 Vedere l'esempio relativo a [key_comp](#key_comp) per indicazioni su come dichiarare e usare `key_compare`.
 
-## <a name="key_type"></a>  multimap::key_type
+## <a name="multimapkey_type"></a><a name="key_type"></a>multimap::key_type
 
 Tipo che descrive l'oggetto chiave di ordinamento di cui è costituito ogni elemento dell'oggetto multimap.
 
@@ -1460,7 +1460,7 @@ Per altre informazioni su `Key`, vedere la sezione Note dell'argomento [Classe m
 
 Vedere l'esempio relativo a [value_type](#value_type) per indicazioni su come dichiarare e usare `key_type`.
 
-## <a name="lower_bound"></a>  multimap::lower_bound
+## <a name="multimaplower_bound"></a><a name="lower_bound"></a>multimappa::lower_bound
 
 Restituisce un iteratore al primo elemento di un oggetto multimap con una chiave uguale o maggiore di una chiave specificata.
 
@@ -1472,7 +1472,7 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
+*Chiave*\
 Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1548,7 +1548,7 @@ that of the last element is: 20.
 This is not the last element of multimap m1.
 ```
 
-## <a name="mapped_type"></a>  multimap::mapped_type
+## <a name="multimapmapped_type"></a><a name="mapped_type"></a>multimappa::mapped_type
 
 Tipo che rappresenta il tipo di dati archiviato in un oggetto multimap.
 
@@ -1566,7 +1566,7 @@ Per altre informazioni su `Type`, vedere l'argomento [Classe multimap](../standa
 
 Vedere l'esempio relativo a [value_type](#value_type) per indicazioni su come dichiarare e usare `key_type`.
 
-## <a name="max_size"></a>  multimap::max_size
+## <a name="multimapmax_size"></a><a name="max_size"></a>multimappa::max_size
 
 Restituisce la lunghezza massima dell'oggetto multimap.
 
@@ -1598,7 +1598,7 @@ int main( )
 }
 ```
 
-## <a name="multimap"></a>  multimap::multimap
+## <a name="multimapmultimap"></a><a name="multimap"></a>multimap::multimap
 
 Costruisce un oggetto multimap vuoto o che rappresenta una copia totale o parziale di un altro oggetto multimap.
 
@@ -1655,10 +1655,10 @@ multimap(
 |-|-|
 |*Al*|Classe dell'allocatore di archiviazione da usare per l'oggetto multimap. Per impostazione predefinita è Allocator.|
 |*Comp*|Funzione di confronto di tipo `constTraits` usata per ordinare gli elementi nell'oggetto map. Per impostazione predefinita è `Traits`.|
-|*Right*|Oggetto map di cui il set costruito deve essere una copia.|
-|*Primo*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
-|*Ultimo*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
-|*IList*|Oggetto initializer_list da cui copiare gli elementi.|
+|*va bene*|Oggetto map di cui il set costruito deve essere una copia.|
+|*Prima*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
+|*Ultima*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
+|*IList*|initializer_list da cui copiare gli elementi.|
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1668,11 +1668,11 @@ Tutti i costruttori inizializzano il relativo oggetto multimap.
 
 Tutti i costruttori archiviano un oggetto funzione di tipo `Traits` che viene usato per stabilire un ordine tra le chiavi dell'oggetto multimap e che può essere restituito in un secondo momento chiamando [key_comp](#key_comp).
 
-I primi tre costruttori specificano un multimap iniziale vuoto, il secondo specifica il tipo di funzione di confronto (*comp*) da usare per stabilire l'ordine degli elementi e il terzo specifica in modo esplicito il tipo di allocatore (*al*) da usare. La parola chiave **Explicit** annulla alcuni tipi di conversione automatica del tipo.
+I primi tre costruttori specificano un multimap iniziale vuoto, il secondo specifica il tipo di funzione di confronto (*Comp*) da utilizzare per stabilire l'ordine degli elementi e il terzo specifica in modo esplicito il tipo di allocatore (*Al*) da utilizzare. La parola chiave **explicit** sopprime alcuni tipi di conversione automatica del tipo.
 
-Il quarto costruttore specifica una copia del *diritto*multimap.
+Il quarto costruttore specifica una copia del multimap *Right*.
 
-Il quinto costruttore specifica una copia del multimap spostando a *destra*.
+Il quinto costruttore specifica una copia del multimap spostando *Right*.
 
 Il sesto, il settimo e l'ottavo costruttore copiano i membri di un oggetto initializer_list.
 
@@ -1786,7 +1786,7 @@ int main()
 }
 ```
 
-## <a name="op_eq"></a>  multimap::operator=
+## <a name="multimapoperator"></a><a name="op_eq"></a>multimap::operatore
 
 Sostituisce gli elementi di un oggetto multimap con una copia di un altro oggetto multimap.
 
@@ -1800,11 +1800,11 @@ multimap& operator=(multimap&& right);
 
 |Parametro|Descrizione|
 |-|-|
-|*right*|Oggetto [multimap](../standard-library/multimap-class.md) da copiare nell'oggetto `multimap`.|
+|*va bene*|Oggetto [multimap](../standard-library/multimap-class.md) da copiare nell'oggetto `multimap`.|
 
 ### <a name="remarks"></a>Osservazioni
 
-Dopo la cancellazione di tutti gli elementi esistenti in un `multimap`, `operator=` copia o sposta il contenuto di *direttamente* nella `multimap`.
+Dopo aver cancellato tutti `multimap`gli `operator=` elementi esistenti in un oggetto `multimap`, viene copiato o spostato il contenuto di *right* nel file .
 
 ### <a name="example"></a>Esempio
 
@@ -1843,7 +1843,7 @@ int main( )
    }
 ```
 
-## <a name="pointer"></a>  multimap::pointer
+## <a name="multimappointer"></a><a name="pointer"></a>multimap::pointer
 
 Tipo che fornisce un puntatore a un elemento di un oggetto multimap.
 
@@ -1853,11 +1853,11 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>Osservazioni
 
-È possibile utilizzare un tipo `pointer` per modificare il valore di un elemento.
+Un `pointer` tipo può essere utilizzato per modificare il valore di un elemento.
 
 Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto multimap.
 
-## <a name="rbegin"></a>  multimap::rbegin
+## <a name="multimaprbegin"></a><a name="rbegin"></a>multimap::rbegin
 
 Restituisce un iteratore che punta al primo elemento di un oggetto multimap invertito.
 
@@ -1937,7 +1937,7 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the first element in the reversed multimap is 2.
 ```
 
-## <a name="reference"></a>  multimap::reference
+## <a name="multimapreference"></a><a name="reference"></a>multimap::riferimento
 
 Tipo che fornisce un riferimento a un elemento archiviato in un oggetto multimap.
 
@@ -1994,7 +1994,7 @@ The data value of first element in the multimap is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a>  multimap::rend
+## <a name="multimaprend"></a><a name="rend"></a>multimap::rend
 
 Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un oggetto multimap invertito.
 
@@ -2078,7 +2078,7 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the last element in the reversed multimap is 2.
 ```
 
-## <a name="reverse_iterator"></a>  multimap::reverse_iterator
+## <a name="multimapreverse_iterator"></a><a name="reverse_iterator"></a>multimappa::reverse_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un elemento di un oggetto multimap invertito.
 
@@ -2090,17 +2090,17 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Un tipo `reverse_iterator` viene usato per eseguire l'iterazione sull'oggetto multimap in ordine inverso.
 
-Il `reverse_iterator` definito da multimap punta a oggetti di [value_type](#value_type), che sono di tipo `pair<const Key, Type>`. Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
+L'oggetto `reverse_iterator` definito dal multimap punta agli `pair<const Key, Type>`oggetti di [value_type](#value_type), che sono di tipo . Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
 
-Per dereferenziare un `reverse_iterator` *Riter* che punta a un elemento in un oggetto multimap, usare l'operatore **->** .
+Per dereferenziare un `reverse_iterator` *rIter* che punta **->** a un elemento in un multimap, utilizzare l'operatore.
 
-Per accedere al valore della chiave per l'elemento, usare `rIter->first`, che equivale a `(*rIter).first`. Per accedere al valore del punto di riferimento mappato per l'elemento, utilizzare `rIter->second`, che equivale a `(*rIter).second`.
+Per accedere al valore della chiave `rIter->first`per l'elemento, utilizzare , che equivale a `(*rIter).first`. Per accedere al valore del riferimento mappato per `rIter->second`l'elemento, `(*rIter).second`utilizzare , che equivale a .
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo a [rbegin](#rbegin) per indicazioni su come dichiarare e usare `reverse_iterator`.
+Vedere l'esempio per [rbegin](#rbegin) per un esempio di dichiarazione e utilizzo di `reverse_iterator`.
 
-## <a name="size"></a>  multimap::size
+## <a name="multimapsize"></a><a name="size"></a>multimap::dimensione
 
 Restituisce il numero di elementi nel multimap.
 
@@ -2144,7 +2144,7 @@ The multimap length is 1.
 The multimap length is now 2.
 ```
 
-## <a name="size_type"></a>  multimap::size_type
+## <a name="multimapsize_type"></a><a name="size_type"></a>multimappa::size_type
 
 Tipo Unsigned Integer in grado di contare il numero di elementi di un oggetto multimap.
 
@@ -2154,9 +2154,9 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`
+Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`.
 
-## <a name="swap"></a>  multimap::swap
+## <a name="multimapswap"></a><a name="swap"></a>multimap::swap
 
 Scambia gli elementi di due oggetti multimap.
 
@@ -2167,7 +2167,7 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*va bene*\
 Oggetto multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto multimap `left`.
 
 ### <a name="remarks"></a>Osservazioni
@@ -2225,7 +2225,7 @@ After swapping with m2, multimap m1 is: 100 200.
 After swapping with m3, multimap m1 is: 300.
 ```
 
-## <a name="upper_bound"></a>  multimap::upper_bound
+## <a name="multimapupper_bound"></a><a name="upper_bound"></a>multimap::upper_bound
 
 Restituisce un iteratore al primo elemento di un oggetto multimap con una chiave maggiore di una chiave specificata.
 
@@ -2237,14 +2237,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
+*Chiave*\
 Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
 Tipo iterator o `const_iterator` che punta alla posizione di un elemento di un oggetto multimap con una chiave maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento dell'oggetto multimap se non viene trovata alcuna corrispondenza per la chiave.
 
-Se il valore restituito viene assegnato a un `const_iterator`, l'oggetto multimap non può essere modificato. Se il valore restituito viene assegnato a una `iterator`, l'oggetto multimap può essere modificato.
+Se il valore restituito viene assegnato a un `const_iterator`, l'oggetto multimap non può essere modificato. Se il valore restituito `iterator`viene assegnato a un oggetto , l'oggetto multimap può essere modificato.
 
 ### <a name="example"></a>Esempio
 
@@ -2304,7 +2304,7 @@ The first element of m1 with a key greater than
 that of the initial element of m1 is: 20.
 ```
 
-## <a name="value_comp"></a>  multimap::value_comp
+## <a name="multimapvalue_comp"></a><a name="value_comp"></a>multimap::value_comp
 
 La funzione membro restituisce un oggetto funzione che determina l'ordine degli elementi in un oggetto multimap confrontando i valori delle relative chiavi.
 
@@ -2318,7 +2318,7 @@ Restituisce l'oggetto funzione di confronto che viene usato da un oggetto multim
 
 ### <a name="remarks"></a>Osservazioni
 
-Per un multimap *m*, se due elementi *E1*(*K1*, *D1*) ed *E2*(*K2*, *D2*) sono oggetti di tipo `value_type`, dove *K1* e *K2* sono le chiavi di tipo `key_type` e *D1* e *D2* sono i dati di tipo `mapped_type`, `m.value_comp(e1, e2)` è equivalente a `m.key_comp(k1, k2)`.
+Per un multimap *m*, se due elementi *e1*(*k1*, *d1*) `value_type`ed *e2*(*k2*, *d2*) sono oggetti di tipo `m.value_comp(e1, e2)` , dove `m.key_comp(k1, k2)` *k1* e *k2* sono le chiavi di tipo `key_type` e *d1* e *d2* sono i dati di tipo `mapped_type`, quindi equivale a .
 
 ### <a name="example"></a>Esempio
 
@@ -2370,7 +2370,7 @@ The element ( 1,10 ) precedes the element ( 2,5 ).
 The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```
 
-## <a name="value_type"></a>  multimap::value_type
+## <a name="multimapvalue_type"></a><a name="value_type"></a>multimap::value_type
 
 Tipo che rappresenta il tipo di oggetto archiviato come elemento di un oggetto map.
 
@@ -2439,5 +2439,5 @@ The values of the mapped elements are: 10 20.
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori](../cpp/containers-modern-cpp.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimenti per librerie standard di C](../standard-library/cpp-standard-library-reference.md)

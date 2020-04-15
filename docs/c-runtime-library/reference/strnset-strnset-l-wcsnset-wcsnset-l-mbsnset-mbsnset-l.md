@@ -1,6 +1,6 @@
 ---
 title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset
 - _strnset
@@ -8,6 +8,9 @@ api_name:
 - _wcsnset_l
 - _wcsnset
 - _strnset_l
+- _o__mbsnset
+- _o__mbsnset_l
+- _o__wcsnset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -69,19 +73,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: bb2365684f9c35e1523b34aaad30c9ae6875b5c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 50b1a5157bd2a60d9819c92103a380ca1005be56
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946982"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364430"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
 Inizializza i caratteri di una stringa sul carattere specificato. Esistono versioni più sicure di queste funzioni. Vedere [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
 
 > [!IMPORTANT]
-> non è possibile usare **_mbsnset** e **_mbsnset_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset** e **_mbsnset_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -123,31 +127,33 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
+*Str*<br/>
 Stringa da modificare.
 
-*c*<br/>
+*C*<br/>
 Impostazione del carattere.
 
 *count*<br/>
 Numero dei caratteri da impostare.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Restituisce un puntatore alla stringa modificata.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_strnset** imposta, al massimo, i primi caratteri di *conteggio* da *Str* a *c* (convertiti in **char**). Se *count* è maggiore della lunghezza di *Str*, viene utilizzata la lunghezza di *Str* anziché *count*.
+La funzione **_strnset** imposta al massimo i caratteri di *conteggio* da *str* a *c* (convertiti in **char**). Se *count* è maggiore della lunghezza di *str*, viene utilizzata la lunghezza di *str* anziché *count*.
 
-**_wcsnset** e **_mbsnset** sono versioni a caratteri wide e a caratteri multibyte di **_strnset**. Gli argomenti di stringa e il valore restituito di **_wcsnset** sono stringhe a caratteri wide. quelli di **_mbsnset** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**_wcsnset** e **_mbsnset** sono versioni a caratteri wide e a caratteri multibyte di **_strnset**. Gli argomenti stringa e il valore restituito di **_wcsnset** sono stringhe di caratteri wide; quelli di **_mbsnset** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-**_mbsnset** convalida i parametri; Se *Str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, **_mbsnset** restituisce **null** e imposta **errno** su **EINVAL**. **_strnset** e **_wcsnset** non convalidano i relativi parametri.
+**_mbsnset** convalida i parametri; Se *str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, **_mbsnset** restituisce **NULL** e imposta **errno** su **EINVAL**. **_strnset** e **_wcsnset** non convalidano i relativi parametri.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -194,9 +200,9 @@ After:  **** is a test
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

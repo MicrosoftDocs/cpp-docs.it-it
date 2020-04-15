@@ -1,6 +1,6 @@
 ---
 title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strupr_s
 - _strupr_s_l
@@ -8,6 +8,12 @@ api_name:
 - _wcsupr_s_l
 - _mbsupr_s_l
 - _wcsupr_s
+- _o__mbsupr_s
+- _o__mbsupr_s_l
+- _o__strupr_s
+- _o__strupr_s_l
+- _o__wcsupr_s
+- _o__wcsupr_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -63,19 +70,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-ms.openlocfilehash: 04ae6fe34d51de8b026cb1c3536f4e3ed6fc5c22
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2fd90f462787df739f41a9e8e10f84d2fc52c456
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625909"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362988"
 ---
 # <a name="_strupr_s-_strupr_s_l-_mbsupr_s-_mbsupr_s_l-_wcsupr_s-_wcsupr_s_l"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
 Converte una stringa in maiuscolo, usando le impostazioni locali correnti o le impostazioni locali specificate passate. Queste versioni di [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> non è possibile usare **_mbsupr_s** e **_mbsupr_s_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr_s** e **_mbsupr_s_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -138,30 +145,32 @@ errno_t _mbsupr_s_l(
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
+*Str*<br/>
 Stringa da convertire in lettere maiuscole.
 
-*numberOfElements*<br/>
+*Sizeinbytes*<br/>
 Dimensioni del buffer.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero in caso di esito positivo. Un codice di errore diverso da zero in caso di esito negativo.
 
-Queste funzioni convalidano i relativi parametri. Se *Str* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**. Se *NumberOfElements* è minore della lunghezza della stringa, le funzioni restituiscono **ERANGE** e impostano **errno** su **ERANGE**.
+Queste funzioni convalidano i relativi parametri. Se *str* è un puntatore **NULL,** viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**. Se *numberOfElements* è minore della lunghezza della stringa, le funzioni restituiscono **ERANGE** e impostano **errno** su **ERANGE**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_strupr_s** converte, sul posto, ogni lettera minuscola in *Str* in maiuscolo. **_wcsupr_s** è la versione a caratteri wide di **_strupr_s**. **_mbsupr_s** è la versione a caratteri multibyte di **_strupr_s**.
+La funzione **_strupr_s** converte, sul posto, ogni lettera minuscola in *str* in maiuscolo. **_wcsupr_s** è la versione a caratteri wide di **_strupr_s**. **_mbsupr_s** è la versione di caratteri multibyte di **_strupr_s**.
 
-La conversione è determinata dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Gli altri caratteri non sono interessati. Per ulteriori informazioni su **LC_CTYPE**, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **suffisso** usano le impostazioni locali correnti; le visioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La conversione è determinata dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Gli altri caratteri non sono interessati. Per ulteriori informazioni su **LC_CTYPE**, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** utilizzano le impostazioni locali correnti; le visioni con il suffisso **_l** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -174,10 +183,10 @@ Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_strupr_s**, **_strupr_s_l**|\<string.h>|
-|**_wcsupr_s**, **_wcsupr_s_l**, **_mbsupr_s**, **_mbsupr_s_l**|\<string.h> o \<wchar.h>|
+|**_strupr_s,** **_strupr_s_l**|\<string.h>|
+|**_WCSUPR_S** **, _WCSUPR_S_L** **, _MBSUPR_S**, **_mbsupr_s_l**|\<string.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -185,7 +194,7 @@ Vedere l'esempio per [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s,
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)<br/>

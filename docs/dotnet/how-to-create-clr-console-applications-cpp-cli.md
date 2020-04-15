@@ -5,12 +5,12 @@ helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: 610efc8b0780422fc89e3bf9708ba488fe7d1f47
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 86e5abe330b0edc514fed74a12188ab73e8bfdd8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080060"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368529"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Procedura: Creare applicazioni console CLR (C++/CLI)
 
@@ -22,29 +22,29 @@ Quando si usa il modello di applicazione console per creare un progetto, vengono
 
 - Riferimenti a questi spazi dei nomi di .NET Framework:
 
-   - <xref:System.AppDomainManager>: contiene le classi fondamentali e le classi base che definiscono i valori usati comunemente e i tipi di dati di riferimento, gli eventi e i gestori eventi, le interfacce, gli attributi e le eccezioni di elaborazione.
+  - <xref:System.AppDomainManager>: contiene classi fondamentali e classi di base che definiscono valori di uso comune e tipi di dati di riferimento, eventi e gestori eventi, interfacce, attributi ed eccezioni di elaborazione.
 
-   - mscorlib - DLL di assembly che supporta lo sviluppo in .NET Framework.
+  - mscorlib - DLL di assembly che supporta lo sviluppo in .NET Framework.
 
 - File di origine:
 
-   - Console (file con estensione cpp) - File sorgente principale e punto di ingresso nell'applicazione appena creata. Identifica il file con estensione dll e lo spazio dei nomi del progetto. Fornire il proprio codice in questo file.
+  - Console (file con estensione cpp) - File sorgente principale e punto di ingresso nell'applicazione appena creata. Identifica il file con estensione dll e lo spazio dei nomi del progetto. Fornire il proprio codice in questo file.
 
-   - AssemblyInfo.cpp - Contiene attributi, file, risorse, tipi, informazioni sulla versione e sulla firma e così via che è possibile usare per modificare i metadati dell'assembly del progetto. Per ulteriori informazioni, vedere [contenuto dell'assembly](/dotnet/framework/app-domains/assembly-contents).
+  - AssemblyInfo.cpp - Contiene attributi, file, risorse, tipi, informazioni sulla versione e sulla firma e così via che è possibile usare per modificare i metadati dell'assembly del progetto. Per ulteriori informazioni, vedere [Contenuto dell'assieme](/dotnet/framework/app-domains/assembly-contents).
 
-   - Stdafx.cpp - Usato per compilare un file di intestazione precompilato denominato Win32.pch e un file di tipi precompilati denominato StdAfx.obj.
+  - Stdafx.cpp - Usato per compilare un file di intestazione precompilato denominato Win32.pch e un file di tipi precompilati denominato StdAfx.obj.
 
 - File di intestazione:
 
-   - Stdafx.h - Usato per compilare un file di intestazione precompilato denominato Win32.pch e un file di tipi precompilati denominato StdAfx.obj.
+  - Stdafx.h - Usato per compilare un file di intestazione precompilato denominato Win32.pch e un file di tipi precompilati denominato StdAfx.obj.
 
-   - resource.h - File di inclusione generato per app.rc.
+  - resource.h - File di inclusione generato per app.rc.
 
 - File di risorse:
 
-   - app.rc: - File script di risorse di un programma.
+  - app.rc: - File script di risorse di un programma.
 
-   - app.ico - File icona di un programma.
+  - app.ico - File icona di un programma.
 
 - ReadMe.txt - Descrive i file nel progetto.
 

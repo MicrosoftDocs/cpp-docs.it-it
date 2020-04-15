@@ -1,5 +1,5 @@
 ---
-title: 'Gestione della memoria: Blocchi di memoria ridimensionabili'
+title: 'Gestione della memoria: blocchi di memoria ridimensionabili'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory blocks [MFC], resizable
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: 124a2599e1523d5393fcf6255c88de0fd8cd72cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b048b60a5512ecc54750cb980ca67e2373e2c837
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219142"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364781"
 ---
-# <a name="memory-management-resizable-memory-blocks"></a>Gestione della memoria: Blocchi di memoria ridimensionabili
+# <a name="memory-management-resizable-memory-blocks"></a>Gestione della memoria: blocchi di memoria ridimensionabili
 
-Il **nuove** e **eliminare** operatori, descritti nell'articolo [gestione della memoria: Esempi](../mfc/memory-management-examples.md), sono ideali per l'allocazione e deallocazione di oggetti e i blocchi di memoria di dimensioni fisse. In alcuni casi, l'applicazione potrebbe richiedere blocchi di memoria ridimensionabili. È necessario usare le funzioni della libreria di runtime C standard [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), e [gratuito](../c-runtime-library/reference/free.md) per gestire i blocchi di memoria ridimensionabili nell'heap.
+Gli operatori **new** e **delete,** descritti nell'articolo [Memory Management: Examples](../mfc/memory-management-examples.md), sono adatti per allocare e deallocare blocchi di memoria e oggetti a dimensione fissa. In alcuni casi, l'applicazione potrebbe richiedere blocchi di memoria ridimensionabili. È necessario utilizzare le funzioni standard della libreria di runtime del linguaggio C [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md)e [free](../c-runtime-library/reference/free.md) to manage resizable memory blocks nell'heap.
 
 > [!IMPORTANT]
->  La combinazione di **nuove** e **eliminare** operatori con le funzioni di allocazione di memoria ridimensionabili nello stesso blocco di memoria comporterà la memoria danneggiata nella versione di Debug di MFC. È consigliabile non usare **realloc** in un blocco di memoria allocato con **nuove**. Allo stesso modo, non è consigliabile allocare un blocco di memoria con il **nuove** operatore ed eliminarlo con **gratuita**, o usare il **Elimina** operatore su un blocco di memoria allocato con **malloc**.
+> La combinazione degli operatori **new** e **delete** con le funzioni di allocazione della memoria ridimensionabili nello stesso blocco di memoria comporterà la memoria danneggiata nella versione di debug di MFC. Non utilizzare **realloc** su un blocco di memoria allocato con **new**. Analogamente, è consigliabile non allocare un blocco di memoria con l'operatore **new** ed eliminarlo con **free**oppure utilizzare l'operatore **delete** su un blocco di memoria allocato con **malloc**.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161165"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367896"
 ---
 # <a name="nested-class-declarations"></a>Dichiarazioni di classi annidate
 
@@ -54,14 +54,14 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` e `BufferedIO::BufferedOutput` sono dichiarati all'interno `BufferedIO`. Questi nomi di classe non sono visibili al di fuori l'ambito della classe `BufferedIO`. Tuttavia, un oggetto di tipo `BufferedIO` non contiene alcun oggetto dei tipi `BufferedInput` o `BufferedOutput`.
+`BufferedIO::BufferedInput`e `BufferedIO::BufferedOutput` sono `BufferedIO`dichiarati entro . Questi nomi di classe non sono visibili al di fuori l'ambito della classe `BufferedIO`. Tuttavia, un oggetto di tipo `BufferedIO` non contiene alcun oggetto dei tipi `BufferedInput` o `BufferedOutput`.
 
 Le classi annidate possono utilizzare direttamente nomi, nomi dei tipi, nomi dei membri statici ed enumeratori solo dalla classe contenitore. Per utilizzare i nomi degli altri membri della classe, è necessario utilizzare puntatori, riferimenti o nomi di oggetto.
 
 Nell'esempio `BufferedIO` precedente, all'enumerazione `IOError` possono accedere direttamente le funzioni membro delle classi annidate, `BufferedIO::BufferedInput` o `BufferedIO::BufferedOutput`, come illustrato nella funzione `good`.
 
 > [!NOTE]
->  Le classi annidate dichiarano solo tipi all'interno dell'ambito della classe. Non comportano la creazione di oggetti contenuti della classe annidata. Nell'esempio precedente vengono dichiarate due classi annidate ma non viene dichiarato alcun oggetto di questi tipi di classe.
+> Le classi annidate dichiarano solo tipi all'interno dell'ambito della classe. Non comportano la creazione di oggetti contenuti della classe annidata. Nell'esempio precedente vengono dichiarate due classi annidate ma non viene dichiarato alcun oggetto di questi tipi di classe.
 
 Un'eccezione alla visibilità nell'ambito di una dichiarazione di classe annidata è quando il nome di un tipo viene dichiarato con una dichiarazione con prototipo.  In questo caso, il nome della classe dichiarata dalla dichiarazione con prototipo è visibile all'esterno della classe contenitore, con il relativo ambito definito come il più piccolo ambito contenitore di tipo non classe.  Ad esempio:
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-Nell'esempio precedente, la sintassi *Qualified-Type-Name* viene usata per dichiarare il nome della funzione. La dichiarazione:
+Nell'esempio precedente, la sintassi *qualified-type-name* viene utilizzata per dichiarare il nome della funzione. La dichiarazione:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-indica "la funzione `read` che è un membro della classe `BufferedInput` inclusa nell'ambito della classe `BufferedIO`". Poiché questa dichiarazione usa la sintassi *Qualified-Type-Name* , sono possibili i costrutti del form seguente:
+indica "la funzione `read` che è un membro della classe `BufferedInput` inclusa nell'ambito della classe `BufferedIO`". Poiché questa dichiarazione utilizza la sintassi *qualified-type-name,* sono possibili costrutti nel formato seguente:
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-La dichiarazione precedente è equivalente a quella precedente, ma usa un nome di **typedef** al posto dei nomi di classe.
+La dichiarazione precedente è equivalente alla precedente, ma utilizza un nome **typedef** al posto dei nomi di classe.
 
 ## <a name="friend-functions-in-nested-classes"></a>Funzioni friend in classi annidate
 
