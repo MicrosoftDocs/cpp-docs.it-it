@@ -1,11 +1,15 @@
 ---
 title: strtoull, _strtoull_l, wcstoull, _wcstoull_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strtoull_l
 - _wcstoull_l
 - strtoull
 - wcstoull
+- _o__strtoull_l
+- _o__wcstoull_l
+- _o_strtoull
+- _o_wcstoull
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +42,12 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-ms.openlocfilehash: 70d7a53219a9176e848fde239d90291366b67eb0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5a27218b9d83314f995df30fbe21d97031d371af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957591"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354055"
 ---
 # <a name="strtoull-_strtoull_l-wcstoull-_wcstoull_l"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 
@@ -77,55 +82,57 @@ unsigned long long _wcstoull_l(
 
 ### <a name="parameters"></a>Parametri
 
-*strSource*<br/>
+*Strsource*<br/>
 Stringa con terminazione Null da convertire.
 
-*endptr*<br/>
+*endptr (in base alla data in*<br/>
 Puntatore al carattere che interrompe la lettura.
 
 *base*<br/>
 Base numerica da usare.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strtoull** restituisce il valore convertito, se presente, o **ULLONG_MAX** in caso di overflow. **strtoull** restituisce 0 se non è possibile eseguire alcuna conversione. **wcstoull** restituisce i valori in modo analogo a **strtoull**. Per entrambe le funzioni, **errno** viene impostato su **ERANGE** se si verifica un overflow o un underflow.
+**strtoull** restituisce il valore convertito, se presente, o **ULLONG_MAX** in caso di overflow. **strtoull** restituisce 0 se non è possibile eseguire alcuna conversione. **wcstoull** restituisce valori analogamente a **strtoull**. Per entrambe le funzioni, **errno** è impostato su **ERANGE** se si verifica un overflow o un underflow.
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Ognuna di queste funzioni converte la stringa di input *strSource* in un valore intero **Long** **Long** **senza segno** .
+Ognuna di queste funzioni converte la stringa di input *strSource* in un valore **Long** **Integer** **senza segno.**
 
-**strtoull** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Può trattarsi del carattere null di terminazione o del primo carattere numerico maggiore o uguale a *base*. L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali determina il riconoscimento del carattere radice in *strSource*; Per ulteriori informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoull** e **wcstoull** usano le impostazioni locali correnti; **_strtoull_l** e **_wcstoull_l** usano invece le impostazioni locali che vengono passate ma sono identiche in caso contrario. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**strtoull** interrompe la lettura della stringa *strSource* in corrispondenza del primo carattere che non è in grado di riconoscere come parte di un numero. Può trattarsi del carattere di terminazione null oppure del primo carattere numerico maggiore o uguale a *base*. L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali determina il riconoscimento del carattere di radice in *strSource*; Per ulteriori informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoull** e **wcstoull** utilizzano le impostazioni locali correnti; **_strtoull_l** e **_wcstoull_l** utilizzano invece le impostazioni locali passate ma sono identiche in caso contrario. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'analisi viene archiviato nella posizione a cui punta *endptr*. Se non è possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore di *strSource* viene archiviato nella posizione a cui punta *endptr*.
+Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto l'analisi viene archiviato nella posizione a cui punta *endptr*. Se non è possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore di *strSource* viene archiviato nella posizione a cui punta *endptr*.
 
-**wcstoull** è una versione a caratteri wide di **strtoull** e il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
+**wcstoull** è una versione a caratteri wide di **strtoull** e il relativo argomento *strSource* è una stringa a caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstoull**|**strtoull**|**strtoull**|**wcstoull**|
+|**_tcstoull**|**strtoull**|**strtoull**|**wcstoullo**|
 |**_tcstoull_l**|**strtoull_l**|**_strtoull_l**|**_wcstoull_l**|
 
-**strtoull** prevede che *strSource* faccia riferimento a una stringa nel formato seguente:
+**strtoull** prevede che *strSource* punti a una stringa del formato seguente:
 
-> [*spazi vuoti*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [cifre lettere] **-**
+> [*spazio vuoto*] **-**[&#124;]**+** [**0** **[x** &#124; **X]]** [*cifre* &#124; *lettere*]
 
-Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. le *cifre* corrispondono a una o più cifre decimali. le *lettere* sono una o più lettere da' a' a' z ' (o da' A ' a' z '). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta *strSource* . Se il primo carattere è '0' e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Se ad esempio *base* è 0 e il primo carattere analizzato è' 0', si presuppone un Integer ottale e il carattere ' 8' o ' 9' interrompe l'analisi. **strtoull** consente un prefisso con segno **+** più () o meno **-** (); un segno meno iniziale indica che il valore restituito è negato.
+Uno *spazio vuoto* può essere costituito da spazi e caratteri di tabulazione, che vengono ignorati. *cifre* sono una o più cifre decimali. *lettere* sono una o più lettere tra 'a' e 'z' (o da 'A' a '''). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene utilizzato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui *punta strSource* vengono utilizzati per determinare la base. Se il primo carattere è '0' e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se *base* è 0 e il primo carattere analizzato è '0', si presuppone un numero intero ottale e un carattere '8' o '9' interrompe la scansione. **strtoull** consente un**+** prefisso con**-** il segno più ( ) o meno ( ); un segno meno iniziale indica che il valore restituito è negato.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**strtoull**|\<stdlib.h>|
-|**wcstoull**|\<stdlib.h> or \<wchar.h>|
+|**wcstoullo**|\<stdlib.h> o \<wchar.h>|
 |**_strtoull_l**|\<stdlib.h>|
-|**_wcstoull_l**|\<stdlib.h> or \<wchar.h>|
+|**_wcstoull_l**|\<stdlib.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -135,8 +142,8 @@ Vedere l'esempio per [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

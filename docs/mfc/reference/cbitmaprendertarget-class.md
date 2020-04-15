@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: 8c110ec8f7c232180bf054e8e4ba90a18f1902c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6249c121f7bcca0675a8138baef0e2cdc9e632d8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388437"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352595"
 ---
 # <a name="cbitmaprendertarget-class"></a>Classe CBitmapRenderTarget
 
-Un wrapper per ID2D1BitmapRenderTarget.
+Wrapper per ID2D1BitmapRenderTarget.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,22 +47,22 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBitmapRenderTarget::Attach](#attach)|Collega esistente di eseguire il rendering come interfaccia di destinazione per l'oggetto|
-|[CBitmapRenderTarget::Detach](#detach)|Scollega interfaccia di destinazione di rendering dell'oggetto|
-|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Recupera la bitmap per questa destinazione di rendering. La bitmap restituita può essere utilizzata per operazioni di disegno.|
-|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Restituisce l'interfaccia ID2D1BitmapRenderTarget|
+|[CBitmapRenderTarget::Attacha](#attach)|Associa all'oggetto l'interfaccia di destinazione di rendering esistente|
+|[CBitmapRenderTarget::Detach](#detach)|Scollega l'interfaccia di destinazione di rendering dall'oggetto|
+|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Recupera la bitmap per questa destinazione di rendering. La bitmap restituita può essere utilizzata per le operazioni di disegno.|
+|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Interfaccia ID2D1BitmapRenderTarget|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Restituisce l'interfaccia ID2D1BitmapRenderTarget|
+|[CBitmapRenderTarget::operatore ID2D1BitmapRenderTarget](#operator_id2d1bitmaprendertarget_star)|Interfaccia ID2D1BitmapRenderTarget|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Un puntatore a un oggetto ID2D1BitmapRenderTarget.|
+|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Puntatore a un oggetto ID2D1BitmapRenderTarget.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -74,11 +74,11 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget. h
+**Intestazione:** afxrendertarget.h
 
-##  <a name="attach"></a>  CBitmapRenderTarget::Attach
+## <a name="cbitmaprendertargetattach"></a><a name="attach"></a>CBitmapRenderTarget::Attacha
 
-Collega esistente di eseguire il rendering come interfaccia di destinazione per l'oggetto
+Associa all'oggetto l'interfaccia di destinazione di rendering esistente
 
 ```
 void Attach(ID2D1BitmapRenderTarget* pTarget);
@@ -86,10 +86,10 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*pTarget*<br/>
-Interfaccia destinazione di rendering esistente. Non può essere NULL
+*pTarget (Destinazione)*<br/>
+Interfaccia di destinazione di rendering esistente. Non può essere NULL
 
-##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget
+## <a name="cbitmaprendertargetcbitmaprendertarget"></a><a name="cbitmaprendertarget"></a>CBitmapRenderTarget::CBitmapRenderTarget
 
 Costruisce un oggetto CBitmapRenderTarget.
 
@@ -97,9 +97,9 @@ Costruisce un oggetto CBitmapRenderTarget.
 CBitmapRenderTarget();
 ```
 
-##  <a name="detach"></a>  CBitmapRenderTarget::Detach
+## <a name="cbitmaprendertargetdetach"></a><a name="detach"></a>CBitmapRenderTarget::Detach
 
-Scollega interfaccia di destinazione di rendering dell'oggetto
+Scollega l'interfaccia di destinazione di rendering dall'oggetto
 
 ```
 ID2D1BitmapRenderTarget* Detach();
@@ -107,11 +107,11 @@ ID2D1BitmapRenderTarget* Detach();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a scollegare il rendering dell'interfaccia di destinazione.
+Puntatore all'interfaccia di destinazione di rendering scollegata.
 
-##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap
+## <a name="cbitmaprendertargetgetbitmap"></a><a name="getbitmap"></a>CBitmapRenderTarget::GetBitmap
 
-Recupera la bitmap per questa destinazione di rendering. La bitmap restituita può essere utilizzata per operazioni di disegno.
+Recupera la bitmap per questa destinazione di rendering. La bitmap restituita può essere utilizzata per le operazioni di disegno.
 
 ```
 BOOL GetBitmap(CD2DBitmap& bitmap);
@@ -119,16 +119,16 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 
 ### <a name="parameters"></a>Parametri
 
-*bitmap*<br/>
-Quando termina, questo metodo contiene la mappa di bit valida per questa destinazione di rendering. Questa bitmap può essere utilizzata per operazioni di disegno.
+*Bitmap*<br/>
+Quando termina, questo metodo contiene la bitmap valida per questa destinazione di rendering. Questa bitmap può essere utilizzata per le operazioni di disegno.
 
 ### <a name="return-value"></a>Valore restituito
 
 Se il metodo ha esito positivo, restituisce TRUE. In caso contrario, restituisce FALSE.
 
-##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget
+## <a name="cbitmaprendertargetgetbitmaprendertarget"></a><a name="getbitmaprendertarget"></a>CBitmapRenderTarget::GetBitmapRenderTarget
 
-Restituisce l'interfaccia ID2D1BitmapRenderTarget
+Interfaccia ID2D1BitmapRenderTarget
 
 ```
 ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
@@ -138,17 +138,17 @@ ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
 
 Puntatore a un'interfaccia ID2D1BitmapRenderTarget o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget
+## <a name="cbitmaprendertargetm_pbitmaprendertarget"></a><a name="m_pbitmaprendertarget"></a>CBitmapRenderTarget::m_pBitmapRenderTarget
 
-Un puntatore a un oggetto ID2D1BitmapRenderTarget.
+Puntatore a un oggetto ID2D1BitmapRenderTarget.
 
 ```
 ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;
 ```
 
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*
+## <a name="cbitmaprendertargetoperator-id2d1bitmaprendertarget"></a><a name="operator_id2d1bitmaprendertarget_star"></a>CBitmapRenderTarget::operatore ID2D1BitmapRenderTarget
 
-Restituisce l'interfaccia ID2D1BitmapRenderTarget
+Interfaccia ID2D1BitmapRenderTarget
 
 ```
 operator ID2D1BitmapRenderTarget*();

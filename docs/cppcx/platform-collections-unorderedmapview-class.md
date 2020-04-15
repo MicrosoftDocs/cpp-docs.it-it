@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161634"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354391"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 
@@ -35,11 +35,11 @@ Tipo di chiave nella coppia chiave-valore.
 Tipo di valore nella coppia chiave-valore.
 
 *C*<br/>
-Tipo che fornisce un oggetto funzione che può confrontare due valori di chiavi per la loro uguaglianza. Per impostazione predefinita [std:: equal_to\<K >](../standard-library/equal-to-struct.md)
+Tipo che fornisce un oggetto funzione che può confrontare due valori di chiavi per la loro uguaglianza. Per impostazione predefinita, [\<std::equal_to K>](../standard-library/equal-to-struct.md)
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-UnorderedMapView è un'implementazione concreta di C++ del [Windows::Foundation::Collections::IMapView\<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) passata attraverso l'interfaccia applicativa binaria (ABI). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).
+UnorderedMapView è un'implementazione concreta di C, ovvero un'implementazione di [Windows::Foundation::Collections::IMapView\<K,V>'interfaccia](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) che viene passata attraverso l'interfaccia a binario dell'applicazione (ABI). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membri
 
@@ -47,7 +47,7 @@ UnorderedMapView è un'implementazione concreta di C++ del [Windows::Foundation:
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[UnorderedMapView::UnorderedMapView](#ctor)|Inizializza una nuova istanza della classe UnorderedMapView.|
+|[UnorderedMapView::UnorderedMapViewUnorderedMapView::UnorderedMapView](#ctor)|Inizializza una nuova istanza della classe UnorderedMapView.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -55,8 +55,8 @@ UnorderedMapView è un'implementazione concreta di C++ del [Windows::Foundation:
 |----------|-----------------|
 |[UnorderedMapView::First](#first)|Restituisce un iteratore che viene inizializzato al primo elemento nella visualizzazione della mappa.|
 |[UnorderedMapView::HasKey](#haskey)|Determina se l'oggetto UnorderedMapView corrente contiene la chiave specificata.|
-|[UnorderedMapView::Lookup](#lookup)|Recupera l'elemento in corrispondenza della chiave specificata nell'oggetto UnorderedMapView corrente.|
-|[UnorderedMapView::Size](#size)|Restituisce il numero di elementi nell'oggetto UnorderedMapView corrente.|
+|[UnorderedMapView::Ricerca](#lookup)|Recupera l'elemento in corrispondenza della chiave specificata nell'oggetto UnorderedMapView corrente.|
+|[UnorderedMapView::Dimensione](#size)|Restituisce il numero di elementi nell'oggetto UnorderedMapView corrente.|
 |[UnorderedMapView::Split](#split)|Divide un oggetto UnorderedMapView originale in due oggetti UnorderedMapView.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
@@ -69,9 +69,9 @@ UnorderedMapView è un'implementazione concreta di C++ del [Windows::Foundation:
 
 **Spazio dei nomi:** Platform::Collections
 
-## <a name="first"></a>  Metodo UnorderedMapView::First
+## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>Metodo UnorderedMapView::First
 
-Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elemento della mappa non ordinata.
+Restituisce un iteratore che specifica il primo elemento [windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) nella mappa non ordinata.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -85,11 +85,11 @@ virtual Windows::Foundation::Collections::IIterator<
 
 Iteratore che specifica il primo elemento nella visualizzazione della mappa.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Un modo pratico per contenere l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **automatica** digita parola chiave di deduzione dei tipi. Ad esempio `auto x = myMapView->First();`.
+Un modo pratico per contenere l'iteratore restituito da First() consiste nell'assegnare il valore restituito a una variabile dichiarata con la parola chiave **auto** type deduction. Ad esempio: `auto x = myMapView->First();`.
 
-## <a name="haskey"></a>  Metodo UnorderedMapView::HasKey
+## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a>Metodo UnorderedMapView::HasKeyUnorderedMapView::HasKey Method
 
 Determina se l'oggetto UnorderedMap corrente contiene la chiave specificata.
 
@@ -101,14 +101,14 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parametri
 
-*key*<br/>
-Chiave usata per individuare l'elemento. Il tipo della `key` è typename *K*.
+*Chiave*<br/>
+Chiave usata per individuare l'elemento. Il tipo `key` di è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la chiave venga trovata; in caso contrario, **false**.
+**true** se la chiave viene trovata; in caso contrario, **false**.
 
-## <a name="lookup"></a>  Metodo UnorderedMapView::Lookup
+## <a name="unorderedmapviewlookup-method"></a><a name="lookup"></a>Metodo UnorderedMapView::LookupUnorderedMapView::Lookup Method
 
 Recupera il valore di tipo V associato alla chiave specificata di tipo K.
 
@@ -120,16 +120,16 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parametri
 
-*key*<br/>
-Chiave usata per individuare un elemento in UnorderedMapView. Il tipo della `key` è typename *K*.
+*Chiave*<br/>
+Chiave usata per individuare un elemento in UnorderedMapView. Il tipo `key` di è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore abbinato a `key`. Il tipo del valore restituito è typename *V*.
 
-## <a name="size"></a>  Metodo UnorderedMapView::Size
+## <a name="unorderedmapviewsize-method"></a><a name="size"></a>Metodo UnorderedMapView::SizeUnorderedMapView::Size Method
 
-Restituisce il numero di [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementi in UnorderedMapView.
+Restituisce il numero di [elementi Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementi in UnorderedMapView.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -141,7 +141,7 @@ virtual property unsigned int Size;
 
 Numero di elementi nell'oggetto UnorderedMapView.
 
-## <a name="split"></a>  Metodo UnorderedMapView::Split
+## <a name="unorderedmapviewsplit-method"></a><a name="split"></a>Metodo UnorderedMapView::SplitUnorderedMapView::Split Method
 
 Divide l'oggetto UnorderedMapView corrente in due oggetti UnorderedMapView. Questo metodo non è operativo.
 
@@ -157,17 +157,17 @@ void Split(
 
 ### <a name="parameters"></a>Parametri
 
-*firstPartition*<br/>
+*firstPartition (partizione in primo luogo*<br/>
 Prima parte dell'oggetto UnorderedMapView originale.
 
-*secondPartition*<br/>
+*secondPartition (Partizione di secondo)*<br/>
 Seconda parte dell'oggetto UnorderedMapView originale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo non è operativo; non esegue alcuna operazione.
 
-## <a name="ctor"></a>  Costruttore UnorderedMapView::UnorderedMapView
+## <a name="unorderedmapviewunorderedmapview-constructor"></a><a name="ctor"></a>Costruttore UnorderedMapView::UnorderedMapView
 
 Inizializza una nuova istanza della classe UnorderedMapView.
 
@@ -218,25 +218,25 @@ UnorderedMapView(
 
 ### <a name="parameters"></a>Parametri
 
-*n*<br/>
+*N*<br/>
 Numero di elementi per cui preallocare spazio.
 
-*InIt*<br/>
+*Init*<br/>
 Typename dell'oggetto UnorderedMapView.
 
 *H*<br/>
-Oggetto funzione che può eseguire l'hash di un valore per una chiave. Per impostazione predefinita [std:: hash\<K >](../standard-library/hash-class.md) per i tipi che `std::hash` supporta.
+Oggetto funzione che può eseguire l'hash di un valore per una chiave. Il valore predefinito è [\<std::hash K>](../standard-library/hash-class.md) per i tipi che `std::hash` supportano.
 
 *P*<br/>
-Tipo che fornisce un oggetto funzione che può confrontare due chiavi per determinare la loro uguaglianza. Per impostazione predefinita [std:: equal_to\<K >](../standard-library/equal-to-struct.md).
+Tipo che fornisce un oggetto funzione che può confrontare due chiavi per determinare la loro uguaglianza. Il valore predefinito è [\<std::equal_to K>](../standard-library/equal-to-struct.md).
 
-*m*<br/>
-Un riferimento oppure [Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std:: unordered_map](../standard-library/unordered-map-class.md) che viene usato per inizializzare l'oggetto unorderedmapview corrente.
+*M*<br/>
+Un riferimento o [Lvalue e Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) a un std::unordered_map utilizzato per inizializzare il UnorderedMapView.A reference or Lvalues and Rvalues to a [std::unordered_map](../standard-library/unordered-map-class.md) that is used to initialize the UnorderedMapView.
 
-*first*<br/>
+*Prima*<br/>
 Iteratore di input del primo elemento in un intervallo di elementi usato per inizializzare l'oggetto UnorderedMapView corrente.
 
-*last*<br/>
+*Ultima*<br/>
 Iteratore di input del primo elemento dopo un intervallo di elementi usato per inizializzare l'oggetto UnorderedMapView corrente.
 
 ## <a name="see-also"></a>Vedere anche

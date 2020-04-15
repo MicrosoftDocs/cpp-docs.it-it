@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300305"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351660"
 ---
 # <a name="_exec-_wexec-functions"></a>Funzioni _exec, _wexec
 
@@ -83,7 +83,7 @@ La lettera alla fine del nome della funzione identifica la modifica.
 |`p`|Per trovare il file da eseguire viene usata la variabile di ambiente `PATH`.|
 |`v`|`argv`, matrice di puntatori agli argomenti della riga di comando, viene passato a `_exec`. Si usa in genere quando il numero di parametri per il nuovo processo è variabile.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Ogni funzione `_exec` carica ed esegue un nuovo processo. Tutte le funzioni `_exec` usano la stessa funzione di sistema operativo ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)). La funzione `_exec` gestisce automaticamente gli argomenti della stringa con caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. Le funzioni `_wexec` sono versioni a caratteri wide delle funzioni `_exec`. Le funzioni `_wexec` si comportano in modo identico alle corrispondenti della famiglia `_exec`, ma non gestiscono le stringhe di caratteri multibyte.
 
@@ -105,10 +105,10 @@ Il parametro `cmdname` specifica il file da eseguire come nuovo processo. È pos
 I parametri vengono passati al nuovo processo specificando uno o più puntatori alle stringhe di caratteri come parametri nella chiamata `_exec`. Queste stringhe di caratteri formano l'elenco dei parametri per il nuovo processo. La lunghezza combinata delle impostazioni di ambiente ereditate e delle stringhe che compongono l'elenco dei parametri del nuovo processo non deve superare i 32 KB. Il carattere di terminazione null ('\0') per ogni stringa non è incluso nel conteggio, ma gli spazi (inseriti automaticamente per separare i parametri) vengono contati.
 
 > [!NOTE]
->  La presenza di spazi incorporati nelle stringhe può causare comportamenti imprevisti; ad esempio, passare a `_exec` la stringa `"hi there"` comporterà la presenza nel nuovo processo di due argomenti, `"hi"` e `"there"`. Se lo scopo è quello di far aprire al nuovo processo un file denominato "hi there", il processo avrà esito negativo. Per evitarlo, racchiudere la stringa tra virgolette doppie: `"\"hi there\""`.
+> La presenza di spazi incorporati nelle stringhe può causare comportamenti imprevisti; ad esempio, passare a `_exec` la stringa `"hi there"` comporterà la presenza nel nuovo processo di due argomenti, `"hi"` e `"there"`. Se lo scopo è quello di far aprire al nuovo processo un file denominato "hi there", il processo avrà esito negativo. Per evitarlo, racchiudere la stringa tra virgolette doppie: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  Non passare input utente a `_exec` senza verificarne esplicitamente il contenuto. `_exec` determinerà una chiamata a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.
+> Non passare input utente a `_exec` senza verificarne esplicitamente il contenuto. `_exec` determinerà una chiamata a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.
 
 Le funzioni `_exec` convalidano i propri parametri. Se i parametri previsti sono puntatori Null, stringhe vuote oppure sono omessi, le funzioni `_exec` richiamano il gestore di parametri non validi come descritto in [Convalida dei parametri](../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono -1. Non viene eseguito alcun nuovo processo.
 
@@ -118,7 +118,7 @@ Le chiamate `_execl`, `_execle`, `_execlp` e `_execlpe` vengono in genere usate 
 
 Le chiamate `_execv`, `_execve`, `_execvp` e `_execvpe` sono utili quando il numero di parametri per il nuovo processo è variabile. I puntatori ai parametri vengono passati come matrice, `argv`. Il parametro `argv`[0] è generalmente un puntatore a `cmdname`. I parametri da `argv`[1] a `argv`[`n`] puntano alle stringhe di caratteri che costituiscono il nuovo elenco di parametri. Il parametro `argv`[`n`+1] deve essere un puntatore **NULL** per contrassegnare la fine dell'elenco dei parametri.
 
-I file che vengono aperti quando viene effettuata una chiamata `_exec` rimangono aperti nel nuovo processo. Nelle chiamate `_execl`, `_execlp`, `_execv` e `_execvp` il nuovo processo eredita l'ambiente del processo chiamante. Le chiamate `_execle`, `_execlpe`, `_execve` e `_execvpe` alterano l'ambiente del nuovo processo passando un elenco delle impostazioni di ambiente tramite il parametro `envp`. `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. Si noti che `value` non è racchiuso tra virgolette doppie. L'elemento finale della matrice di `envp` deve essere **null**. Quando `envp` stesso è **NULL**, il nuovo processo eredita le impostazioni di ambiente del processo chiamante.
+I file che vengono aperti quando viene effettuata una chiamata `_exec` rimangono aperti nel nuovo processo. Nelle chiamate `_execl`, `_execlp`, `_execv` e `_execvp` il nuovo processo eredita l'ambiente del processo chiamante. Le chiamate `_execle`, `_execlpe`, `_execve` e `_execvpe` alterano l'ambiente del nuovo processo passando un elenco delle impostazioni di ambiente tramite il parametro `envp`. `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. (Si `value` noti che non è racchiuso tra virgolette doppie.) L'elemento finale `envp` della matrice deve essere **NULL.** Quando `envp` stesso è **NULL**, il nuovo processo eredita le impostazioni di ambiente del processo chiamante.
 
 Un programma eseguito tramite una delle funzioni `_exec` viene sempre caricato in memoria come se il campo di allocazione massima nell'intestazione del file .exe fosse stato impostato sul valore predefinito 0xFFFFH.
 
@@ -232,16 +232,16 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 **Intestazione:** process.h
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](../c-runtime-library/reference/abort.md)<br/>
+[Process and Environment Control](../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Interrompere](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[_spawn, _wspawn Functions](../c-runtime-library/spawn-wspawn-functions.md) (Funzioni _spawn, _wspawn)<br/>
+[Funzioni _spawn e _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

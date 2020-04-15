@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 79854d8ead089aeba88fbdc151fdc0788dd181c1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fcb680c8f43a50801d081762bb5b546cb110c52d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354775"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Classe Platform::Collections::BackInsertIterator
 
@@ -35,20 +35,20 @@ Tipo di elemento nella raccolta corrente.
 
 La classe BackInsertIterator implementa le regole richieste da [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md).
 
-### <a name="members"></a>Members
+### <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[BackInsertIterator:: BackInsertIterator](#ctor)|Inizializza una nuova istanza della classe BackInsertIterator.|
+|[BackInsertIterator::BackInsertIterator](#ctor)|Inizializza una nuova istanza della classe BackInsertIterator.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Operatore BackInsertIterator::operator*](#operator-dereference)|Recupera un riferimento all'oggetto BackInsertIterator corrente.|
-|[Operatore BackInsertIterator::operator++](#operator-increment)|Restituisce un riferimento all'oggetto BackInsertIterator corrente. L'iteratore è invariato.|
+|[Operatore BackInsertIterator::operatore](#operator-dereference)|Recupera un riferimento all'oggetto BackInsertIterator corrente.|
+|[Operatore BackInsertIterator::operator](#operator-increment)|Restituisce un riferimento all'oggetto BackInsertIterator corrente. L'iteratore è invariato.|
 |[Operatore BackInsertIterator::operator=](#operator-assign)|Aggiunge l'oggetto specificato alla fine della raccolta sequenziale corrente.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
@@ -61,7 +61,7 @@ La classe BackInsertIterator implementa le regole richieste da [back_insert_iter
 
 **Spazio dei nomi:** Platform::Collections
 
-## <a name="ctor"></a>Costruttore BackInsertIterator:: BackInsertIterator
+## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a>Costruttore BackInsertIterator::BackInsertIterator
 
 Inizializza una nuova istanza della classe `BackInsertIterator`.
 
@@ -74,14 +74,14 @@ explicit BackInsertIterator(
 
 #### <a name="parameters"></a>Parametri
 
-*v*<br/>
-Oggetto IVector\<T >.
+*Presso*<br/>
+Oggetto>\<IVector T.
 
 ### <a name="remarks"></a>Osservazioni
 
 Un oggetto `BackInsertIterator` inserisce gli elementi dopo l'ultimo elemento dell'oggetto specificato dal parametro `v`.
 
-## <a name="operator-assign"></a>Operatore BackInsertIterator:: operator =
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a>Operatore BackInsertIterator::operator
 
 Aggiunge l'oggetto specificato alla fine della raccolta sequenziale corrente.
 
@@ -93,14 +93,14 @@ BackInsertIterator& operator=( const T& t);
 
 #### <a name="parameters"></a>Parametri
 
-*t*<br/>
+*T*<br/>
 Oggetto da aggiungere alla raccolta corrente.
 
 ### <a name="return-value"></a>Valore restituito
 
 Riferimento all'oggetto BackInsertIterator corrente.
 
-## <a name="operator-dereference"></a>Operatore BackInsertIterator:: operator *
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a>Operatore BackInsertIterator::operatore
 
 Recupera un riferimento all'oggetto BackInsertIterator corrente.
 
@@ -118,7 +118,7 @@ Riferimento all'oggetto BackInsertIterator corrente.
 
 Questo operatore restituisce un riferimento all'oggetto BackInsertIterator corrente, non a qualsiasi elemento nella raccolta corrente.
 
-## <a name="operator-increment"></a>Operatore BackInsertIterator:: operator + +
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a>Operatore BackInsertIterator::operator
 
 Restituisce un riferimento all'oggetto BackInsertIterator corrente. L'iteratore è invariato.
 
@@ -138,8 +138,8 @@ Riferimento all'oggetto BackInsertIterator corrente.
 
 In base alla progettazione, l'esempio della prima sintassi determina dei pre-incrementi dell'oggetto BackInsertIterator corrente e la seconda sintassi ne determina dei post-incrementi. Il tipo `int` nella seconda sintassi indica un'operazione di post-incremento, non un effettivo operando Integer.
 
-Tuttavia, questo operatore in realtà non modifica l'oggetto BackInsertIterator. Restituisce invece un riferimento all'iteratore corrente invariato. Si tratta dello stesso comportamento di [operator *](#operator-dereference).
+Tuttavia, questo operatore in realtà non modifica l'oggetto BackInsertIterator. Restituisce invece un riferimento all'iteratore corrente invariato. Si tratta dello stesso comportamento [dell'operatore](#operator-dereference).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi Platform](platform-namespace-c-cx.md)
+[Spazio dei nomi della piattaforma](platform-namespace-c-cx.md)

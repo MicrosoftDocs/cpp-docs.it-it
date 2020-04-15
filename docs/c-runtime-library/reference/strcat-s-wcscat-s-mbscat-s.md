@@ -1,11 +1,15 @@
 ---
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
+- _o__mbscat_s
+- _o__mbscat_s_l
+- _o_strcat_s
+- _o_wcscat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -38,19 +43,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 458c8ef4c69630b92f39c6ca13a538a1ba7ec72a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355423"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
 Aggiunge una stringa. Queste versioni di [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> non è possibile usare **questa API** e **_mbscat_s_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** e **_mbscat_s_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -101,16 +106,16 @@ errno_t _mbscat_s_l(
 
 ### <a name="parameters"></a>Parametri
 
-*strDestination*<br/>
+*strDestination (destinazione di strDestination)*<br/>
 Buffer della stringa di destinazione con terminazione Null.
 
-*numberOfElements*<br/>
+*Sizeinbytes*<br/>
 Dimensioni del buffer della stringa di destinazione.
 
-*strSource*<br/>
+*Strsource*<br/>
 Buffer della stringa di origine che termina con Null.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -119,15 +124,15 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*strDestination*|*numberOfElements*|*strSource*|Valore restituito|Contenuto di *strDestination*|
+|*strDestination (destinazione di strDestination)*|*Sizeinbytes*|*Strsource*|Valore restituito|Contenuto di *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null** o senza terminazione|any|any|**EINVAL**|non modificato|
-|any|any|**NULL**|**EINVAL**|*strDestination*[0] impostato su 0|
+|**NULL** o non terminato|any|any|**Einval**|non modificato|
+|any|any|**Null**|**Einval**|*strDestination*[0] impostato su 0|
 |any|0 o troppo piccolo|any|**ERANGE**|*strDestination*[0] impostato su 0|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **strcat_s** aggiunge *strSource* a *strDestination* e termina la stringa risultante con un carattere null. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione di *strDestination*. Il comportamento di **strcat_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
+La funzione **strcat_s** aggiunge *strSource* a *strDestination* e termina la stringa risultante con un carattere null. Il carattere iniziale di *strSource* sovrascrive il carattere di terminazione null di *strDestination*. Il comportamento di **strcat_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
 Si noti che il secondo parametro rappresenta le dimensioni totali del buffer e non le dimensioni rimanenti:
 
@@ -138,15 +143,17 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** e **questa API** sono versioni a caratteri wide e a caratteri multibyte di **strcat_s**. Gli argomenti e il valore restituito di **wcscat_s** sono stringhe a caratteri wide. quelli di **questa API** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcscat_s** e **_mbscat_s** sono versioni a caratteri wide e a caratteri multibyte di **strcat_s**. Gli argomenti e **il** valore restituito di wcscat_s sono stringhe di caratteri wide; quelli di **_mbscat_s** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Se *strDestination* è un puntatore null o non ha terminazione null oppure se *strSource* è un puntatore **null** o se la stringa di destinazione è troppo piccola, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**.
+Se *strDestination* è un puntatore null o non è con terminazione null o se *strSource* è un puntatore **NULL** o se la stringa di destinazione è troppo piccola, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**.
 
-Le versioni delle funzioni che hanno il suffisso **suffisso** hanno lo stesso comportamento, ma usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni delle funzioni con il **suffisso _l** hanno lo stesso comportamento, ma usano il parametro locale passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -162,7 +169,7 @@ Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il
 |**wcscat_s**|\<string.h> o \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -170,7 +177,7 @@ Vedere il codice di esempio in [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

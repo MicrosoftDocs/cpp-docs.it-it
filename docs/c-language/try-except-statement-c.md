@@ -10,16 +10,16 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 9940fdf983f6141c0de207509bb800533b0f1eb8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152326"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349734"
 ---
 # <a name="try-except-statement-c"></a>Istruzione try-except (C)
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 L'istruzione **try-except** è un'estensione Microsoft per il linguaggio C che consente alle applicazioni di ottenere il controllo di un programma quando si verificano eventi che generalmente terminano l'esecuzione. Tali eventi vengono chiamati eccezioni e il meccanismo che tratta le eccezioni viene chiamato gestione delle eccezioni strutturate.
 
@@ -29,7 +29,7 @@ Le eccezioni possono essere basate sull'hardware o sul software. Anche quando le
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (**  *espressione*  **)**  *compound-statement*
+**__except (***espressione***)** istruzione*composta*      
 
 L'istruzione composta dopo la clausola `__try` è la sezione protetta. L'istruzione composta dopo la clausola `__except` è il gestore dell'eccezione. Il gestore specifica un set di azioni da intraprendere se viene generata un'eccezione durante l'esecuzione della sezione protetta. L'esecuzione procede nel modo seguente:
 
@@ -48,10 +48,10 @@ L'istruzione composta dopo la clausola `__try` è la sezione protetta. L'istruzi
 Poiché l'espressione `__except` viene valutata come un'espressione C, è limitata a un singolo valore, l'operatore di espressione condizionale o l'operatore virgola. Se è necessaria un'elaborazione più estesa, l'espressione può chiamare una routine che restituisce uno dei tre valori sopra elencati.
 
 > [!NOTE]
->  La gestione strutturata delle eccezioni funziona con i file di origine C e C++. Tuttavia, non è progettato in particolare per C++. È possibile garantire maggiore portabilità del codice tramite la gestione delle eccezioni C++. Inoltre, il meccanismo di gestione delle eccezioni di C++ è molto più flessibile, in quanto è in grado di gestire eccezioni di qualsiasi tipo.
+> La gestione strutturata delle eccezioni funziona con i file di origine C e C++. Tuttavia, non è progettato in particolare per C++. È possibile garantire maggiore portabilità del codice tramite la gestione delle eccezioni C++. Inoltre, il meccanismo di gestione delle eccezioni di C++ è molto più flessibile, in quanto è in grado di gestire eccezioni di qualsiasi tipo.
 
 > [!NOTE]
->  Per i programmi C++, è necessario utilizzare la gestione delle eccezioni C++ anziché la gestione delle eccezioni strutturata. Per altre informazioni, vedere [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md) in *Riferimenti al linguaggio C++*.
+> Per i programmi C++, è necessario utilizzare la gestione delle eccezioni C++ anziché la gestione delle eccezioni strutturata. Per altre informazioni, vedere [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md) in *Riferimenti al linguaggio C++*.
 
 Ogni routine in un'applicazione può essere associata al proprio gestore eccezioni. L'espressione `__except` viene eseguita nell'ambito del corpo `__try`. Ciò significa che ha accesso a tutte le variabili locali dichiarate lì.
 
@@ -94,7 +94,7 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**Fine sezione specifica Microsoft**
+**FINE Specifico di Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

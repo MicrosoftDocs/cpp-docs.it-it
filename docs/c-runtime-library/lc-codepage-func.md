@@ -1,8 +1,9 @@
 ---
 title: ___lc_codepage_func
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ___lc_codepage_func
+- _o____lc_codepage_func
 api_location:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -11,6 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcrt.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: dbadf8239652f5c96e7177dedd91d340e545b9fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2f3eeb4611a0a41ff1782e0b162cd65d86d3ef65
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944917"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351240"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
@@ -42,13 +44,15 @@ UINT ___lc_codepage_func(void);
 
 Pagina del codice corrente del thread.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 `___lc_codepage_func` è una funzione CRT interna che viene usata da altre funzioni CRT per ottenere la tabella codici corrente delle regole di confronto dall'archiviazione locale del thread per i dati di CRT. Queste informazioni sono disponibili anche usando la funzione [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
-Una *tabella codici* è un mapping di codici a un byte o a byte doppio su singoli caratteri. Diverse tabelle codici contengono caratteri speciali differenti, in genere personalizzati per un linguaggio o per un gruppo di linguaggi. Per altre informazioni sulle tabelle codici, vedere [Code Pages](../c-runtime-library/code-pages.md).
+Una *tabella codici* è un mapping di codici a un byte o a byte doppio su singoli caratteri. Diverse tabelle codici contengono caratteri speciali differenti, in genere personalizzati per un linguaggio o per un gruppo di linguaggi. Per altre informazioni sulle tabelle codici, vedere [Tabelle codici](../c-runtime-library/code-pages.md).
 
 Le funzioni CRT interne sono specifiche dell'implementazione e soggette a modifica a ogni rilascio. Se ne sconsiglia l'uso nel codice.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

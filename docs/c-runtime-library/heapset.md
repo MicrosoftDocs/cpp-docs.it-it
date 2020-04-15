@@ -25,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300261"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351279"
 ---
 # <a name="_heapset"></a>_heapset
 
 Controlla la coerenza minima negli heap e imposta le voci disponibili su un valore specificato.
 
 > [!IMPORTANT]
->  Questa funzione è obsoleta. A partire da Visual Studio 2015 non è disponibile in CRT.
+> questa funzione è obsoleta. A partire da Visual Studio 2015 non è disponibile in CRT.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,7 +49,7 @@ int _heapset(
 
 #### <a name="parameters"></a>Parametri
 
-*fill*<br/>
+*Riempire*<br/>
 Carattere di riempimento.
 
 ## <a name="return-value"></a>Valore restituito
@@ -65,13 +65,13 @@ Carattere di riempimento.
 
 Inoltre, se si verifica un errore, `_heapset` imposta `errno` su `ENOSYS`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione `_heapset` mostra i nodi o le posizioni di memoria disponibili che sono stati sovrascritti accidentalmente.
 
 `_heapset` verifica la coerenza minima nell'heap e quindi imposta ogni byte delle voci disponibili dell'heap sul valore `fill`. Questo valore noto mostra le posizioni di memoria dell'heap che contengono nodi disponibili e quelle che contengono dati scritti accidentalmente nella memoria liberata. Se il sistema operativo non supporta `_heapset`(ad esempio, Windows 98), la funzione restituisce `_HEAPOK` e imposta `errno` su `ENOSYS`.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|
 |-------------|---------------------|---------------------|
@@ -123,7 +123,7 @@ OK - heap is fine
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allocazione di memoria](../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione della memoria](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>

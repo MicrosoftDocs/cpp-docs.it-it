@@ -1,8 +1,9 @@
 ---
 title: _set_new_handler
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_new_handler
+- _o__set_new_handler
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: a1f340887efd657dd9ff9bf219534d77fdd90aa3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c3f1b9bd8bf2a4404e2239858e4c3c59b755bacd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948476"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332369"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -47,25 +49,27 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ### <a name="parameters"></a>Parametri
 
-*pNewHandler*<br/>
+*pNewHandler (informazioni in base al gestore utente*<br/>
 Puntatore alla funzione di gestione della memoria fornita dall'applicazione. Un argomento 0 causa la rimozione del nuovo gestore.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla funzione di gestione delle eccezioni precedente registrata da **_set_new_handler**, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito. Questo valore può essere **null**.
+Restituisce un puntatore alla funzione di gestione delle eccezioni precedente registrata da **_set_new_handler**, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; questo valore può essere **NULL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La C++ funzione **_set_new_handler** specifica una funzione di gestione delle eccezioni che ottiene il controllo se l'operatore **New** non riesce ad allocare memoria. Se **New** ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni passata come argomento a **_set_new_handler**. **_PNH**, definito in New. h, è un puntatore a una funzione che restituisce il tipo **int** e accetta un argomento di tipo **size_t**. Utilizzare **size_t** per specificare la quantità di spazio da allocare.
+La funzione **di _set_new_handler** di C, specifica una funzione di gestione delle eccezioni che ottiene il controllo se l'operatore **new** non riesce ad allocare memoria. Se **new** ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni passata come argomento a **_set_new_handler**. **_PNH**, definito in New.h, è un puntatore a una funzione che restituisce il tipo **int** e accetta un argomento di tipo **size_t**. Utilizzare **size_t** per specificare la quantità di spazio da allocare.
 
 Non è previsto alcun gestore predefinito.
 
-**_set_new_handler** è essenzialmente uno schema di Garbage Collection. Il sistema di runtime ritenta l'allocazione ogni volta che la funzione restituisce un valore diverso da zero e non riesce se la funzione restituisce 0.
+**_set_new_handler** è essenzialmente uno schema di garbage collection. Il sistema di runtime ritenta l'allocazione ogni volta che la funzione restituisce un valore diverso da zero e non riesce se la funzione restituisce 0.
 
 Un'occorrenza della funzione **_set_new_handler** in un programma registra la funzione di gestione delle eccezioni specificata nell'elenco di argomenti con il sistema di runtime:
 
 ```cpp
 // set_new_handler1.cpp
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #include <new.h>
 
 int handle_program_memory_depletion( size_t )
@@ -80,7 +84,7 @@ int main( void )
 }
 ```
 
-È possibile salvare l'indirizzo della funzione che è stato passato alla funzione **_set_new_handler** e ripristinarlo in un secondo momento:
+È possibile salvare l'indirizzo della funzione passato l'ultima volta alla funzione **_set_new_handler** e ripristinarlo in un secondo momento:
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -91,7 +95,7 @@ int main( void )
    // . . .
 ```
 
-La funzione C++ [_set_new_mode](set-new-mode.md) imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da **_set_new_handler**. Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando si verifica un errore per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare:
+La funzione C++ [_set_new_mode](set-new-mode.md) imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la nuova routine del gestore come impostato da **_set_new_handler**. Per impostazione predefinita, **malloc** non chiama la nuova routine del gestore in caso di errore nell'allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la nuova routine del gestore nello stesso modo in cui l'operatore **new** esegue quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare:
 
 ```cpp
 _set_new_mode(1);
@@ -99,11 +103,11 @@ _set_new_mode(1);
 
 all'inizio del programma o collegare con Newmode.obj.
 
-Se viene specificato un oggetto `operator new` definito dall'utente, le nuove funzioni del gestore non vengono chiamate automaticamente in caso di errore.
+Se viene fornito `operator new` un utente definito, le nuove funzioni del gestore non vengono chiamate automaticamente in caso di errore.
 
-Per altre informazioni, vedere [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++* .
+Per altre informazioni, vedere [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*.
 
-È disponibile un singolo gestore **_set_new_handler** per tutte le dll o i file eseguibili collegati in modo dinamico; anche se si chiama **_set_new_handler** , il gestore potrebbe essere sostituito da un altro o che si sta sostituendo un gestore impostato da un altro file dll o eseguibile.
+Esiste un unico **gestore di _set_new_handler** per tutte le DLL o eseguibili collegate dinamicamente; anche se si chiama **_set_new_handler** il gestore potrebbe essere sostituito da un altro o che si sta sostituendo un gestore impostato da un'altra DLL o eseguibile.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -111,7 +115,7 @@ Per altre informazioni, vedere [new](../../cpp/new-operator-cpp.md) e [delete](.
 |-------------|---------------------|
 |**_set_new_handler**|\<new.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -165,7 +169,7 @@ Please contact the application's support team for more information.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[Gratuito](free.md)<br/>
 [realloc](realloc.md)<br/>

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24cf4127c2f429f66143af3a0f49625f23a4e6ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345786"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372456"
 ---
 # <a name="chwndrendertarget-class"></a>Classe CHwndRenderTarget
 
@@ -49,32 +49,32 @@ class CHwndRenderTarget : public CRenderTarget;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Costruisce un oggetto CHwndRenderTarget dall'oggetto HWND.|
+|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Costruisce un oggetto CHwndRenderTarget da HWND.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CHwndRenderTarget::Attach](#attach)|Collega esistente di eseguire il rendering come interfaccia di destinazione per l'oggetto|
-|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Indica se l'oggetto HWND associata a questa destinazione di rendering è nascosto.|
+|[CHwndRenderTarget::Attacha](#attach)|Associa all'oggetto l'interfaccia di destinazione di rendering esistente|
+|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Indica se l'HWND associato a questa destinazione di rendering è occluso.|
 |[CHwndRenderTarget::Create](#create)|Crea una destinazione di rendering associata alla finestra|
-|[CHwndRenderTarget::Detach](#detach)|Scollega interfaccia di destinazione di rendering dell'oggetto|
-|[CHwndRenderTarget::GetHwnd](#gethwnd)|Restituisce l'oggetto HWND associato a questa destinazione di rendering.|
+|[CHwndRenderTarget::Detach](#detach)|Scollega l'interfaccia di destinazione di rendering dall'oggetto|
+|[CHwndRenderTarget::GetHwnd](#gethwnd)|Restituisce l'HWND associato a questa destinazione di rendering.|
 |[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Restituisce l'interfaccia ID2D1HwndRenderTarget.|
-|[CHwndRenderTarget::ReCreate](#recreate)|Consente di ricreare una destinazione di rendering associata alla finestra|
-|[CHwndRenderTarget::Resize](#resize)|Modifica la dimensione di destinazione di rendering per le dimensioni pixel specificato|
+|[CHwndRenderTarget::Ricrea](#recreate)|Ricrea una destinazione di rendering associata alla finestra|
+|[CHwndRenderTarget::Ridimensiona](#resize)|Modifica le dimensioni della destinazione di rendering in base alle dimensioni in pixel specificate|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Restituisce l'interfaccia ID2D1HwndRenderTarget.|
+|[CHwndRenderTarget::operator ID2D1HwndRenderTarget](#operator_id2d1hwndrendertarget_star)|Restituisce l'interfaccia ID2D1HwndRenderTarget.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Un puntatore a un oggetto ID2D1HwndRenderTarget.|
+|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Puntatore a un oggetto ID2D1HwndRenderTarget.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -86,11 +86,11 @@ class CHwndRenderTarget : public CRenderTarget;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget. h
+**Intestazione:** afxrendertarget.h
 
-##  <a name="attach"></a>  CHwndRenderTarget::Attach
+## <a name="chwndrendertargetattach"></a><a name="attach"></a>CHwndRenderTarget::Attacha
 
-Collega esistente di eseguire il rendering come interfaccia di destinazione per l'oggetto
+Associa all'oggetto l'interfaccia di destinazione di rendering esistente
 
 ```
 void Attach(ID2D1HwndRenderTarget* pTarget);
@@ -98,12 +98,12 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*pTarget*<br/>
-Interfaccia destinazione di rendering esistente. Non può essere NULL
+*pTarget (Destinazione)*<br/>
+Interfaccia di destinazione di rendering esistente. Non può essere NULL
 
-##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState
+## <a name="chwndrendertargetcheckwindowstate"></a><a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState
 
-Indica se l'oggetto HWND associata a questa destinazione di rendering è nascosto.
+Indica se l'HWND associato a questa destinazione di rendering è occluso.
 
 ```
 D2D1_WINDOW_STATE CheckWindowState() const;
@@ -111,11 +111,11 @@ D2D1_WINDOW_STATE CheckWindowState() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore che indica se l'oggetto HWND associato a questa destinazione di rendering è nascosto.
+Valore che indica se l'HWND associato a questa destinazione di rendering è occluso.
 
-##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget
+## <a name="chwndrendertargetchwndrendertarget"></a><a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget
 
-Costruisce un oggetto CHwndRenderTarget dall'oggetto HWND.
+Costruisce un oggetto CHwndRenderTarget da HWND.
 
 ```
 CHwndRenderTarget(HWND hwnd = NULL);
@@ -123,10 +123,10 @@ CHwndRenderTarget(HWND hwnd = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*hwnd*<br/>
-L'oggetto HWND associato a questa destinazione rendering
+*Hwnd*<br/>
+L'HWND associato a questa destinazione di rendering
 
-##  <a name="create"></a>  CHwndRenderTarget::Create
+## <a name="chwndrendertargetcreate"></a><a name="create"></a>CHwndRenderTarget::Create
 
 Crea una destinazione di rendering associata alla finestra
 
@@ -137,15 +137,15 @@ BOOL Create(HWND hWnd);
 ### <a name="parameters"></a>Parametri
 
 *hWnd*<br/>
-L'oggetto HWND associato a questa destinazione rendering
+L'HWND associato a questa destinazione di rendering
 
 ### <a name="return-value"></a>Valore restituito
 
 Se il metodo ha esito positivo, restituisce TRUE. In caso contrario, restituisce FALSE
 
-##  <a name="detach"></a>  CHwndRenderTarget::Detach
+## <a name="chwndrendertargetdetach"></a><a name="detach"></a>CHwndRenderTarget::Detach
 
-Scollega interfaccia di destinazione di rendering dell'oggetto
+Scollega l'interfaccia di destinazione di rendering dall'oggetto
 
 ```
 ID2D1HwndRenderTarget* Detach();
@@ -153,11 +153,11 @@ ID2D1HwndRenderTarget* Detach();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a scollegare il rendering dell'interfaccia di destinazione.
+Puntatore all'interfaccia di destinazione di rendering scollegata.
 
-##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd
+## <a name="chwndrendertargetgethwnd"></a><a name="gethwnd"></a>CHwndRenderTarget::GetHwnd
 
-Restituisce l'oggetto HWND associato a questa destinazione di rendering.
+Restituisce l'HWND associato a questa destinazione di rendering.
 
 ```
 HWND GetHwnd() const;
@@ -165,9 +165,9 @@ HWND GetHwnd() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-L'oggetto HWND associato a questa destinazione di rendering.
+HWND associato a questa destinazione di rendering.
 
-##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget
+## <a name="chwndrendertargetgethwndrendertarget"></a><a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget
 
 Restituisce l'interfaccia ID2D1HwndRenderTarget.
 
@@ -179,15 +179,15 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 
 Puntatore a un'interfaccia ID2D1HwndRenderTarget o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget
+## <a name="chwndrendertargetm_phwndrendertarget"></a><a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget
 
-Un puntatore a un oggetto ID2D1HwndRenderTarget.
+Puntatore a un oggetto ID2D1HwndRenderTarget.
 
 ```
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;
 ```
 
-##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget *
+## <a name="chwndrendertargetoperator-id2d1hwndrendertarget"></a><a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget
 
 Restituisce l'interfaccia ID2D1HwndRenderTarget.
 
@@ -199,9 +199,9 @@ operator ID2D1HwndRenderTarget*();
 
 Puntatore a un'interfaccia ID2D1HwndRenderTarget o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate
+## <a name="chwndrendertargetrecreate"></a><a name="recreate"></a>CHwndRenderTarget::Ricrea
 
-Consente di ricreare una destinazione di rendering associata alla finestra
+Ricrea una destinazione di rendering associata alla finestra
 
 ```
 BOOL ReCreate(HWND hWnd);
@@ -210,15 +210,15 @@ BOOL ReCreate(HWND hWnd);
 ### <a name="parameters"></a>Parametri
 
 *hWnd*<br/>
-L'oggetto HWND associato a questa destinazione rendering
+L'HWND associato a questa destinazione di rendering
 
 ### <a name="return-value"></a>Valore restituito
 
 Se il metodo ha esito positivo, restituisce TRUE. In caso contrario, restituisce FALSE.
 
-##  <a name="resize"></a>  CHwndRenderTarget::Resize
+## <a name="chwndrendertargetresize"></a><a name="resize"></a>CHwndRenderTarget::Ridimensiona
 
-Modifica la dimensione di destinazione di rendering per le dimensioni pixel specificato
+Modifica le dimensioni della destinazione di rendering in base alle dimensioni in pixel specificate
 
 ```
 BOOL Resize(const CD2DSizeU& size);
@@ -226,8 +226,8 @@ BOOL Resize(const CD2DSizeU& size);
 
 ### <a name="parameters"></a>Parametri
 
-*size*<br/>
-Le nuove dimensioni della destinazione di rendering in pixel del dispositivo
+*Dimensione*<br/>
+Nuova dimensione della destinazione di rendering in pixel del dispositivo
 
 ### <a name="return-value"></a>Valore restituito
 

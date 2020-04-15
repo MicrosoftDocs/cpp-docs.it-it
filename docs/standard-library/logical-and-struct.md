@@ -7,20 +7,20 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7036ebf9fed3877a395e44d8383776002b9afcae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821616"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351695"
 ---
 # <a name="logical_and-struct"></a>logical_and (struct)
 
-Oggetto funzione predefinito che esegue l'operazione di congiunzione logica (`operator&&`) sui relativi argomenti.
+Oggetto funzione predefinito che esegue l'operazione di congiunzione logica (`operator&&`) sugli argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template <class Type = void>
 struct logical_and : public binary_function<Type, Type, bool>
 {
@@ -39,20 +39,20 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>Parametri
 
-*Digitare*, *T*, *U*\
+*Tipo*, *T*, *U*\
 Qualsiasi tipo che supporta un `operator&&` che accetta gli operandi dei tipi specificati o dedotti.
 
-\ a *sinistra*
-Operando sinistro dell'operazione di congiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *T*.
+*Sinistra*\
+Operando sinistro dell'operazione di congiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto *T*.
 
-\ a *destra*
-Operando destro dell'operazione di congiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *U*.
+*va bene*\
+Operando destro dell'operazione di congiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto *U*.
 
 ## <a name="return-value"></a>Valore restituito
 
 Risultato di `Left && Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator&&`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per i tipi definiti dall'utente, non si verifica alcun corto circuito nella valutazione degli operandi. Entrambi gli argomenti vengono valutati da `operator&&`.
 

@@ -1,8 +1,9 @@
 ---
 title: srand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - srand
+- _o_srand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 03e2b87a37d1b520b6e2b32c2f756fea625eb9a2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a8d018d429b2a484f88b7c1e0679f1f799983910
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958002"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355491"
 ---
 # <a name="srand"></a>srand
 
-Imposta il valore di inizializzazione iniziale per il generatore di numeri pseudocasuale usato dalla funzione **Rand** .
+Imposta il valore di serie iniziale per il generatore di numeri pseudocasuali utilizzato dalla funzione **rand.**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -53,12 +55,14 @@ void srand(
 
 ### <a name="parameters"></a>Parametri
 
-*seed*<br/>
+*Seme*<br/>
 Valore di inizializzazione per la generazione di numeri pseudocasuali
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **srand** imposta il punto di partenza per la generazione di una serie di numeri interi pseudocasuale nel thread corrente. Per reinizializzare il generatore per creare la stessa sequenza di risultati, chiamare la funzione **srand** e usare di nuovo lo stesso argomento di *inizializzazione* . Qualsiasi altro valore per *Seed* imposta il generatore su un punto di partenza diverso nella sequenza pseudocasuale. **Rand** recupera i numeri pseudocasuale generati. La chiamata di **Rand** prima di qualsiasi chiamata a **srand** genera la stessa sequenza della chiamata di **srand** con il valore di *inizializzazione* passato a 1.
+La funzione **srand** imposta il punto di partenza per la generazione di una serie di interi pseudocasuali nel thread corrente. Per reinizializzare il generatore per creare la stessa sequenza di risultati, chiamare la funzione **srand** e utilizzare nuovamente lo stesso argomento *di inizializzazione.* Qualsiasi altro valore per *seed* imposta il generatore su un punto di partenza diverso nella sequenza pseudocasuale. **rand** recupera i numeri pseudocasuali generati. La chiamata di **rand** prima di qualsiasi chiamata a **srand** genera la stessa sequenza della chiamata **srand** con *seme* passato come 1.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -74,5 +78,5 @@ Vedere l'esempio per [rand](rand.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[rand](rand.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Rand](rand.md)<br/>

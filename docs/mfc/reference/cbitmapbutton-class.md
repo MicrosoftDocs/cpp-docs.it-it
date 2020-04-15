@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 45e0214cafb80c3e00a7e888a3170040f46113f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c052f913f68d1890a470ed8a6aae2882ed181863
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388462"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352721"
 ---
 # <a name="cbitmapbutton-class"></a>Classe CBitmapButton
 
@@ -43,58 +43,58 @@ class CBitmapButton : public CButton
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBitmapButton::AutoLoad](#autoload)|Associa un oggetto di un pulsante in una finestra di dialogo di `CBitmapButton` (classe), carica il bitmap(s) in base al nome e il pulsante per adattare la mappa di bit con dimensioni.|
-|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inizializza l'oggetto caricamento di una o più risorse denominate bitmap da file di risorse dell'applicazione e collegando le bitmap all'oggetto.|
-|[CBitmapButton::SizeToContent](#sizetocontent)|Ridimensiona il pulsante per adattarlo la bitmap.|
+|[CBitmapButton::Caricamento automatico](#autoload)|Associa un pulsante in una finestra `CBitmapButton` di dialogo a un oggetto della classe , carica le bitmap in base al nome e ridimensiona il pulsante per adattarlo alla bitmap.|
+|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inizializza l'oggetto caricando una o più risorse bitmap denominate dal file di risorse dell'applicazione e allegando le bitmap all'oggetto.|
+|[CBitmapButton::SizeToContent](#sizetocontent)|Ridimensiona il pulsante per contenere la bitmap.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`CBitmapButton` gli oggetti contengono fino a quattro bitmap, che contengono immagini per i diversi stati può presupporre che un pulsante: aggiornata (o normale) verso il basso (o selezionato), con stato attivo e disabilitati. Solo il primo bitmap è obbligatoria; gli altri sono facoltativi.
+`CBitmapButton`gli oggetti contengono fino a quattro bitmap, che contengono immagini per i diversi stati che un pulsante può assumere: su (o normale), giù (o selezionato), stato attivo e disabilitato. È necessaria solo la prima bitmap; gli altri sono opzionali.
 
-Le immagini bitmap dei pulsanti includono il bordo dell'immagine, nonché dell'immagine stessa. Bordo in genere riveste un ruolo in che mostra lo stato del pulsante. Ad esempio, la bitmap per lo stato attivo è in genere è simile a quella per lo stato attivo, ma con un rettangolo tratteggiata a grande scala da una linea continua spessa al bordo o il bordo. La bitmap per disabilitato lo stato in genere è simile a quello per lo stato attivo, ma ha inferiore a contrasto elevato (ad esempio, una selezione di menu in grigio o non disponibile).
+Le immagini con pulsante bitmap includono il bordo intorno all'immagine e l'immagine stessa. Il bordo in genere svolge un ruolo nella visualizzazione dello stato del pulsante. Ad esempio, la bitmap per lo stato attivo è in genere simile a quella per lo stato attivo, ma con un rettangolo tratteggiato ingiunto dal bordo o una linea continua spessa al bordo. La bitmap per lo stato disabilitato è in genere simile a quella per lo stato attivo, ma presenta un contrasto inferiore (ad esempio una selezione di menu in grigio o in grigio).
 
-Queste bitmap può essere di qualsiasi dimensione, ma vengono considerate tutte come se fossero le stesse dimensioni di bitmap per lo stato attivo.
+Queste bitmap possono essere di qualsiasi dimensione, ma tutte vengono trattate come se fossero delle stesse dimensioni della bitmap per lo stato attivo.
 
-Diverse applicazioni richiedono diverse combinazioni di immagini bitmap:
+Varie applicazioni richiedono diverse combinazioni di immagini bitmap:
 
-|Su|Giù|Con stato attivo|Disabilitato|Applicazione|
+|Su|Giù|Con stato attivo|Disabled|Applicazione|
 |--------|----------|-------------|--------------|-----------------|
 |×||||Bitmap|
 |×|×|||Pulsante senza stile WS_TABSTOP|
-|×|×|×|×|Pulsante di finestra di dialogo con tutti gli Stati|
-|×|×|×||Pulsante di finestra di dialogo con stile WS_TABSTOP|
+|×|×|×|×|Pulsante di finestra di dialogo con tutti gli stati|
+|×|×|×||Pulsante della finestra di dialogo con stile WS_TABSTOP|
 
-Quando si crea un controllo pulsante di bitmap, impostare lo stile BS_OWNERDRAW per specificare che il pulsante è disegnato dal proprietario. In questo modo, Windows inviare i messaggi WM_MEASUREITEM e WM_DRAWITEM; del pulsante il framework gestisce questi messaggi e gestisce l'aspetto del pulsante per l'utente.
+Quando si crea un controllo pulsante bitmap, impostare lo stile di BS_OWNERDRAW per specificare che il pulsante è disegnato dal proprietario. In questo modo Windows inviare i messaggi WM_MEASUREITEM e WM_DRAWITEM per il pulsante; il framework gestisce questi messaggi e gestisce l'aspetto del pulsante per l'utente.
 
-### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>Per creare un controllo pulsante di bitmap nell'area client della finestra
+### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>Per creare un controllo pulsante bitmap nell'area client di una finestraTo create a bitmap-button control in a window's client area
 
-1. Creare una a quattro immagini bitmap per il pulsante.
+1. Creare da una a quattro immagini bitmap per il pulsante.
 
-1. Costruire il [CBitmapButton](#cbitmapbutton) oggetto.
+1. Costruire l'oggetto [CBitmapButton.](#cbitmapbutton)
 
-1. Chiamare il [Create](../../mfc/reference/cbutton-class.md#create) funzione per creare il controllo pulsante Windows e associarlo al `CBitmapButton` oggetto.
+1. Chiamare la funzione [Create](../../mfc/reference/cbutton-class.md#create) per creare il controllo `CBitmapButton` pulsante di Windows e associarlo all'oggetto.
 
-1. Chiamare il [LoadBitmaps](#loadbitmaps) funzione membro per caricare le risorse di bitmap dopo il pulsante bitmap è stato costruito.
+1. Chiamare la funzione membro [LoadBitmaps](#loadbitmaps) per caricare le risorse bitmap dopo la costruzione del pulsante bitmap.
 
-### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>Per includere un controllo pulsante di bitmap in una finestra di dialogo
+### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>Per includere un controllo pulsante bitmap in una finestra di dialogoTo include a bitmap-button control in a dialog box
 
-1. Creare una a quattro immagini bitmap per il pulsante.
+1. Creare da una a quattro immagini bitmap per il pulsante.
 
-1. Creare un modello di finestra di dialogo con un pulsante creato dal proprietario posizionato in cui si desidera il pulsante di bitmap. Le dimensioni del pulsante nel modello non è importante.
+1. Creare un modello di finestra di dialogo con un pulsante di disegno del proprietario posizionato nel punto in cui si desidera inserire il pulsante bitmap. La dimensione del pulsante nel modello non ha importanza.
 
-1. Impostare la didascalia del pulsante su un valore, ad esempio "MYIMAGE" e definire un simbolo per il pulsante, ad esempio IDC_MYIMAGE.
+1. Impostare la didascalia del pulsante su un valore quale "MYIMAGE" e definire un simbolo per il pulsante, ad esempio IDC_MYIMAGE.
 
-1. Nello script di risorsa dell'applicazione, assegnare ognuna delle immagini create per il pulsante di un ID creato mediante l'aggiunta di una lettera "U", "D", "F", o "X" (per verso l'alto, verso il basso, con stato attivo, disabilitato) e la stringa utilizzata per la didascalia del pulsante in passaggio 3. Per la didascalia del pulsante "MYIMAGE", ad esempio, gli ID sarà "MYIMAGEU", "MYIMAGED", "MYIMAGEF" e "MYIMAGEX." Si **necessario** specificare l'ID dei vostri bitmap all'interno delle virgolette doppie. In caso contrario, l'editor di risorse verrà assegnato un numero intero per la risorsa e MFC ha esito negativo quando il caricamento dell'immagine.
+1. Nello script di risorsa dell'applicazione assegnare a ognuna delle immagini create per il pulsante un ID creato aggiungendo una delle lettere "U", "D", "F" o "X" (per l'alto, verso il basso, lo stato attivo e disabilitato) alla stringa utilizzata per la didascalia del pulsante nel passaggio 3. Per la didascalia del pulsante "MYIMAGE", ad esempio, gli ID sarebbero " MYIMAGEU", "MYIMAGED", "MYIMAGEF" e "MYIMAGEX". È **necessario** specificare l'ID delle bitmap tra virgolette doppie. In caso contrario, l'editor di risorse assegnerà un numero intero alla risorsa e MFC avrà esito negativo durante il caricamento dell'immagine.
 
-1. Nella classe di finestra di dialogo dell'applicazione (derivato da `CDialog`), aggiungere un `CBitmapButton` oggetto membro.
+1. Nella classe di finestre di `CDialog`dialogo `CBitmapButton` dell'applicazione (derivata da ), aggiungere un oggetto membro.
 
-1. Nel `CDialog` dell'oggetto [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) chiamata di routine, il `CBitmapButton` dell'oggetto [AutoLoad](#autoload) funzionare, usando come parametri di ID di controllo del pulsante e `CDialog` oggetto **ciò** puntatore.
+1. Nella `CDialog` routine [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) dell'oggetto, `CBitmapButton` chiamare la funzione [AutoLoad](#autoload) dell'oggetto, utilizzando come `CDialog` parametri l'ID di controllo del pulsante e il puntatore **this** dell'oggetto.
 
-Se si desidera gestire i messaggi di notifica di Windows, ad esempio BN_CLICKED, inviato da un controllo pulsante bitmap all'elemento padre (in genere una classe derivata da `CDialog`), aggiungere il `CDialog`-oggetto derivato da un membro della mappa messaggi di movimento e gestore di messaggi funzione per ogni messaggio. Le notifiche inviate da un `CBitmapButton` oggetti sono identici a quelli inviati da un [CButton](../../mfc/reference/cbutton-class.md) oggetto.
+Se si desidera gestire i messaggi di notifica di Windows, ad esempio BN_CLICKED, inviati `CDialog`da un `CDialog`controllo pulsante bitmap all'elemento padre (in genere una classe derivata da ), aggiungere all'oggetto derivato dall'oggetto derivato da una voce della mappa messaggi e una funzione membro del gestore messaggi per ogni messaggio. Le notifiche inviate `CBitmapButton` da un oggetto sono le stesse di quelle inviate da un oggetto [CButton.](../../mfc/reference/cbutton-class.md)
 
-La classe [CToolBar](../../mfc/reference/ctoolbar-class.md) adotta un approccio diverso per pulsanti con bitmap.
+La classe [CToolBar](../../mfc/reference/ctoolbar-class.md) adotta un approccio diverso ai pulsanti bitmap.
 
-Per ulteriori informazioni sul `CBitmapButton`, vedere [controlli](../../mfc/controls-mfc.md).
+Per ulteriori `CBitmapButton`informazioni su , vedere [Controlli](../../mfc/controls-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -110,11 +110,11 @@ Per ulteriori informazioni sul `CBitmapButton`, vedere [controlli](../../mfc/con
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** AFXEXT. h
+**Intestazione:** afxext.h
 
-##  <a name="autoload"></a>  CBitmapButton::AutoLoad
+## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton::Caricamento automatico
 
-Associa un oggetto di un pulsante in una finestra di dialogo di `CBitmapButton` (classe), carica il bitmap(s) in base al nome e il pulsante per adattare la mappa di bit con dimensioni.
+Associa un pulsante in una finestra `CBitmapButton` di dialogo a un oggetto della classe , carica le bitmap in base al nome e ridimensiona il pulsante per adattarlo alla bitmap.
 
 ```
 BOOL AutoLoad(
@@ -125,24 +125,24 @@ BOOL AutoLoad(
 ### <a name="parameters"></a>Parametri
 
 *nID*<br/>
-ID del controllo. del pulsante
+ID di controllo del pulsante.
 
-*pParent*<br/>
-Puntatore all'oggetto a cui appartiene il pulsante.
+*pPadre*<br/>
+Puntatore all'oggetto proprietario del pulsante.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare il `AutoLoad` funzione per inizializzare un pulsante di disegno in una finestra di dialogo come un pulsante bitmap. Le istruzioni per l'uso di questa funzione sono nella sezione Osservazioni per il `CBitmapButton` classe.
+Utilizzare `AutoLoad` la funzione per inizializzare un pulsante di disegno del proprietario in una finestra di dialogo come pulsante bitmap. Le istruzioni per l'utilizzo di `CBitmapButton` questa funzione sono riportate nelle osservazioni per la classe.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]
 
-##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton
+## <a name="cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton
 
 Crea un oggetto `CBitmapButton`.
 
@@ -150,17 +150,17 @@ Crea un oggetto `CBitmapButton`.
 CBitmapButton();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Dopo la creazione di C++ `CBitmapButton` dell'oggetto, chiamare [CButton::Create](../../mfc/reference/cbutton-class.md#create) per creare il controllo pulsante Windows e associarlo al `CBitmapButton` oggetto.
+Dopo aver creato `CBitmapButton` l'oggetto di C, chiamare [CButton::Create](../../mfc/reference/cbutton-class.md#create) per `CBitmapButton` creare il controllo pulsante di Windows e collegarlo all'oggetto.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]
 
-##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps
+## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps
 
-Utilizzare questa funzione quando si vuole caricare le immagini bitmap identificate da ai nomi di risorse o ai numeri ID, o quando non è possibile usare il `AutoLoad` funzionano perché, ad esempio, quando si crea un pulsante bitmap che non fa parte di una finestra di dialogo.
+Utilizzare questa funzione quando si desidera caricare le immagini bitmap identificate dai `AutoLoad` relativi nomi di risorse o numeri ID o quando non è possibile utilizzare la funzione perché, ad esempio, si crea un pulsante bitmap che non fa parte di una finestra di dialogo.
 
 ```
 BOOL LoadBitmaps(
@@ -178,29 +178,29 @@ BOOL LoadBitmaps(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszBitmapResource*<br/>
-Punta alla stringa con terminazione null che contiene il nome della bitmap per normale del pulsante una bitmap o "backup" dello stato. Obbligatorio.
+*lpszBitmapResource (informazioni in base alla proprietà)*<br/>
+Punta alla stringa con terminazione null che contiene il nome della bitmap per lo stato normale o "su" di un pulsante bitmap. Obbligatorio.
 
 *lpszBitmapResourceSel*<br/>
-Punta alla stringa con terminazione null che contiene il nome della bitmap per sia selezionato un pulsante bitmap o "disattivato". Può essere NULL.
+Punta alla stringa con terminazione null che contiene il nome della bitmap per lo stato selezionato o "giù" di un pulsante bitmap. Può essere Null.
 
 *lpszBitmapResourceFocus*<br/>
-Punta alla stringa con terminazione null che contiene il nome della bitmap per un pulsante di bitmap con stato attivo dello stato. Può essere NULL.
+Punta alla stringa con terminazione null che contiene il nome della bitmap per lo stato attivo di un pulsante bitmap. Può essere Null.
 
 *lpszBitmapResourceDisabled*<br/>
-Punta alla stringa con terminazione null che contiene il nome della bitmap per un pulsante di bitmap con stato disabilitato. Può essere NULL.
+Punta alla stringa con terminazione null che contiene il nome della bitmap per lo stato disabilitato di un pulsante bitmap. Può essere Null.
 
-*nIDBitmapResource*<br/>
-Specifica il numero di ID risorsa della risorsa bitmap per normale del pulsante una bitmap o "backup" dello stato. Obbligatorio.
+*nIdBitmapResource*<br/>
+Specifica il numero ID della risorsa bitmap per lo stato normale o "su" di un pulsante bitmap. Obbligatorio.
 
-*nIDBitmapResourceSel*<br/>
-Specifica il numero di ID risorsa della risorsa bitmap per sia selezionato un pulsante bitmap o "disattivato". Può essere 0.
+*nIdBitmapResourceSel*<br/>
+Specifica il numero ID della risorsa bitmap per lo stato selezionato o "giù" di un pulsante bitmap. Può essere 0.
 
-*nIDBitmapResourceFocus*<br/>
-Specifica il numero di ID risorsa della risorsa bitmap per lo stato attivo del pulsante una bitmap. Può essere 0.
+*nIdBitmapResourceFocus*<br/>
+Specifica il numero ID della risorsa bitmap per lo stato attivo di un pulsante bitmap. Può essere 0.
 
 *nIDBitmapResourceDisabled*<br/>
-Specifica il numero di ID risorsa della risorsa bitmap per stato disabilitato del pulsante una bitmap. Può essere 0.
+Specifica il numero ID della risorsa bitmap per lo stato disabilitato di un pulsante bitmap. Può essere 0.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -210,9 +210,9 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]
 
-##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent
+## <a name="cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton::SizeToContent
 
-Chiamare questa funzione per ridimensionare un pulsante bitmap per le dimensioni della bitmap.
+Chiamare questa funzione per ridimensionare un pulsante bitmap alle dimensioni della bitmap.
 
 ```
 void SizeToContent();
@@ -226,4 +226,4 @@ void SizeToContent();
 
 [Esempio MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [Classe CButton](../../mfc/reference/cbutton-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

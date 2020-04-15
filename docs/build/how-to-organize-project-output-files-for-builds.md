@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Organizzare file di output dei progetti per le compilazioni'
+title: 'Procedura: organizzare file di output dei progetti per le compilazioni'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 202b2cbf135a5d8371354aac0fb8dd26367896c2
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220658"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328521"
 ---
-# <a name="how-to-organize-project-output-files-for-builds"></a>Procedura: Organizzare file di output dei progetti per le compilazioni
+# <a name="how-to-organize-project-output-files-for-builds"></a>Procedura: organizzare file di output dei progetti per le compilazioni
 
 In questo argomento vengono descritte le procedure consigliate per l'organizzazione dei file di output dei progetti. Se i file di output dei progetti non vengono organizzati correttamente possono verificarsi errori. L'argomento descrive anche i vantaggi e gli svantaggi delle varie alternative per organizzare i file di output dei progetti.
 
@@ -34,7 +34,7 @@ In questo argomento vengono descritte le procedure consigliate per l'organizzazi
 
 #### <a name="to-reference-assemblies-with-add-new-reference"></a>Per impostare il riferimento agli assembly con Aggiungi nuovo riferimento
 
-1. Questo è il modo più semplice per usare gli assembly CLR. In primo luogo verificare che il progetto sia compilato con l'opzione del compilatore **/clr**. Quindi fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Aggiungi** **Riferimenti**. Viene visualizzata la finestra di dialogo **Pagine delle proprietà**.
+1. Questo è il modo più semplice per usare gli assembly CLR. In primo luogo verificare che il progetto sia compilato con l'opzione del compilatore **/clr**. Quindi fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Aggiungi****Riferimenti**. Viene visualizzata la finestra di dialogo **Pagine delle proprietà**.
 
 1. Nella finestra di dialogo **Pagine delle proprietà** selezionare **Aggiungi nuovo riferimento**. Viene visualizzata una finestra di dialogo che elenca tutti gli assembly .NET, COM e gli altri assembly disponibili nel progetto corrente. Selezionare l'assembly desiderato e scegliere **OK**.
 
@@ -46,9 +46,9 @@ In questo argomento vengono descritte le procedure consigliate per l'organizzazi
 
 1. Definire un riferimento al file di intestazione appropriato nel codice, usando la direttiva #include. Il file di intestazione deve essere presente nel percorso di inclusione o appartenere al progetto corrente. Per altre informazioni, vedere [Direttiva #include (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
 
-1. È anche possibile impostare le dipendenze di progetto. L'impostazione delle dipendenze del progetto offre due garanzie. In primo luogo garantisce che i progetti vengano compilati nell'ordine corretto e che un progetto sia sempre in grado di trovare i file dipendenti necessari. In secondo luogo aggiunge in modo implicito al percorso la directory di output del progetto dipendente, facilitando il rilevamento dei file in fase di collegamento.
+1. È anche possibile impostare le dipendenze di progetto. L'impostazione delle dipendenze del progetto offre due garanzie. In primo luogo garantisce che i progetti vengano compilati nell'ordine corretto e che un progetto sia sempre in grado di trovare i file dipendenti necessari. In secondo luogo, aggiunge in modo implicito la directory di output del progetto dipendente al percorso in modo che i file possano essere trovati facilmente in fase di collegamento.
 
-1. Per distribuire l'applicazione è necessario inserire la DLL in una posizione appropriata. La posizione può essere una delle seguenti:
+1. Per distribuire l'applicazione è necessario inserire la DLL in una posizione appropriata. I possibili valori sono i seguenti:
 
    1. Lo stesso percorso del file eseguibile.
 
@@ -70,4 +70,4 @@ Il percorso dei file di output può essere un problema di primaria importanza pe
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++tipi di progetto in Visual Studio](reference/visual-cpp-project-types.md)
+[Tipi di progetto C++ in Visual Studio](reference/visual-cpp-project-types.md)

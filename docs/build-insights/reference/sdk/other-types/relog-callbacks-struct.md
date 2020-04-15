@@ -1,6 +1,6 @@
 ---
-title: Struttura RELOG_CALLBACKS
-description: Il C++ riferimento alla struttura RELOG_CALLBACKS di build Insights SDK.
+title: struttura RELOG_CALLBACKS
+description: L'SDK di analisi di compilazione di C'è RELOG_CALLBACKS riferimento alla struttura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c5dbed196e6cafaa301b6e07cd0f5546a0f4d563
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 60e7db81a48731090a23b82332704a79a51e97df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332341"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328964"
 ---
-# <a name="relog_callbacks-structure"></a>Struttura RELOG_CALLBACKS
+# <a name="relog_callbacks-structure"></a>struttura RELOG_CALLBACKS
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La struttura `RELOG_CALLBACKS` viene utilizzata per l'inizializzazione di un oggetto [RELOG_DESCRIPTOR](relog-descriptor-struct.md) . Specifica le funzioni da chiamare durante la riregistrazione di una traccia di Event Tracing for Windows (ETW).
+La `RELOG_CALLBACKS` struttura viene utilizzata durante l'inizializzazione di un [oggetto RELOG_DESCRIPTOR.](relog-descriptor-struct.md) Specifica le funzioni da chiamare durante la riregistrazione di una traccia ETW (Event Tracing for Windows).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -43,21 +43,21 @@ typedef struct RELOG_CALLBACKS_TAG
 } RELOG_CALLBACKS;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 |  |  |
 |--|--|
 | `OnStartActivity` | Chiamato per elaborare un evento di avvio dell'attività. |
 | `OnStopActivity` | Chiamato per elaborare un evento di arresto dell'attività. |
 | `OnSimpleEvent` | Chiamato per elaborare un evento semplice. |
-| `OnTraceInfo` | Chiamato una volta all'inizio del passaggio di registrazione, dopo la chiamata di `OnBeginReloggingPass`. |
-| `OnBeginRelogging` | Chiamato quando viene avviata una sessione di registrazione, prima dell'inizio del passaggio di registrazione. |
-| `OnEndRelogging` | Chiamato quando termina una sessione di registrazione, al termine del passaggio di registrazione. |
-| `OnBeginReloggingPass` | Chiamato quando si inizia il passaggio di registrazione, prima di elaborare qualsiasi evento. |
-| `OnEndReloggingPass` | Chiamato quando termina il passaggio di registrazione, dopo l'elaborazione di tutti gli eventi. |
+| `OnTraceInfo` | Chiamato una volta all'inizio del `OnBeginReloggingPass` passaggio di riregistrazione, dopo è stato chiamato. |
+| `OnBeginRelogging` | Chiamato all'inizio di una sessione di nuova registrazione, prima dell'inizio del passaggio di ricreazione della ricreazione della ricreazione. |
+| `OnEndRelogging` | Chiamato quando si termina una sessione di nuova registrazione, al termine del passaggio di riregistrazione. |
+| `OnBeginReloggingPass` | Chiamato quando si inizia il passaggio di riregistrazione, prima di elaborare qualsiasi evento. |
+| `OnEndReloggingPass` | Chiamato quando si termina il passaggio di relogging, dopo l'elaborazione di tutti gli eventi. |
 
 ## <a name="remarks"></a>Osservazioni
 
-Tutti i membri della struttura `RELOG_CALLBACKS` devono puntare a una funzione valida. Per ulteriori informazioni sulle firme di funzione accettate, vedere [OnRelogEventFunc](on-relog-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)e [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
+Tutti i `RELOG_CALLBACKS` membri della struttura devono puntare a una funzione valida. Per ulteriori informazioni sulle firme delle funzioni accettate, vedere [OnRelogEventFunc](on-relog-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)e [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
 
 ::: moniker-end

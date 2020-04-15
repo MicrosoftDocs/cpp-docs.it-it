@@ -2,12 +2,12 @@
 title: Operatore Windows::UI::Xaml::Interop::TypeName
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: 5acf17b7c87a71259dba6579d8ee69e0eea86fa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35056ca1a4e7f06c9f91fe86998a676a12395f2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161589"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337007"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Operatore Windows::UI::Xaml::Interop::TypeName
 
@@ -23,11 +23,11 @@ Operator TypeName(Platform::Type^ type);
 
 Restituisce [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) se è specificato `Platform::Type^`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `TypeName` è uno struct di Windows Runtime indipendente dal linguaggio per la rappresentazione delle informazioni sul tipo. [Platform::Type](../cppcx/platform-type-class.md) è specifico del linguaggio C++ e non può essere passato attraverso l'interfaccia applicativa binaria (ABI). Ecco un esempio di utilizzo di `TypeName`nella funzione [Navigate](/uwp/api/windows.ui.xaml.controls.frame.navigate) :
 
-```
+```cpp
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
@@ -35,8 +35,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 
 L'esempio seguente mostra come eseguire la conversione tra `TypeName` e `Type`.
 
-```
-
+```cpp
 // Convert from Type to TypeName
 Windows::UI::Xaml::Interop::TypeName tn = TypeName(MainPage::typeid);
 
@@ -46,7 +45,7 @@ Type^ tx2 = (Type^)(tn);
 
 ## <a name="net-framework-equivalent"></a>Equivalente .NET Framework
 
-I programmi .NET Framework proiettano `TypeName` come [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True).
+I programmi .NET Framework proiettano `TypeName` come [System.Type](/dotnet/api/system.type).
 
 ### <a name="requirements"></a>Requisiti
 

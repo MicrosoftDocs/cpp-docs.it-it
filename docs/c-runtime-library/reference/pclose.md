@@ -1,8 +1,9 @@
 ---
 title: _pclose
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _pclose
+- _o__pclose
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: 383dd96553463a2619537cf06fc6534770ed88d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c66a749d6aeb74fdc677b2d6088e1b5093f3570b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951090"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338519"
 ---
 # <a name="_pclose"></a>_pclose
 
@@ -51,18 +53,20 @@ FILE *stream
 
 ### <a name="parameters"></a>Parametri
 
-*stream*<br/>
-Valore restituito dalla chiamata precedente a **_popen**.
+*flusso*<br/>
+Restituisce il valore della chiamata precedente a **_popen**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce lo stato di uscita del processore del comando di terminazione oppure-1 se si verifica un errore. Il formato del valore restituito è uguale a quello di **_cwait**, ad eccezione del fatto che i byte di ordine inferiore e di ordine superiore vengono scambiati. Se stream è **null**, **_pclose** imposta **errno** su **EINVAL** e restituisce-1.
+Restituisce lo stato di uscita del processore dei comandi di terminazione oppure -1 se si verifica un errore. Il formato del valore restituito è lo stesso di quello per **_cwait**, ad eccezione dei byte meno significativi e più significativi vengono scambiati. Se stream è **NULL**, **_pclose** imposta **errno** su **EINVAL** e restituisce -1.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_pclose** cerca l'ID del processo del processore dei comandi (cmd. exe) avviato dalla chiamata **_popen** associata, esegue una chiamata [_cwait](cwait.md) sul nuovo processore dei comandi e chiude il flusso sulla pipe associata.
+La funzione **_pclose** cerca l'ID di processo del processore di comando (Cmd.exe) avviato dalla chiamata **_popen** associata, esegue una [chiamata _cwait](cwait.md) sul nuovo processore di comandi e chiude il flusso sulla pipe associata.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -70,7 +74,7 @@ La funzione **_pclose** cerca l'ID del processo del processore dei comandi (cmd.
 |-------------|---------------------|
 |**_pclose**|\<stdio.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -78,6 +82,6 @@ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-libr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
 [_pipe](pipe.md)<br/>
 [_popen, _wpopen](popen-wpopen.md)<br/>

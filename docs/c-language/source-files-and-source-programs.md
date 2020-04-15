@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152534"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349882"
 ---
 # <a name="source-files-and-source-programs"></a>File e programmi di origine
 
@@ -21,17 +21,17 @@ Un programma di origine può essere suddiviso in uno o più file di origine, den
 ## <a name="syntax"></a>Sintassi
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*dichiarazione esterna* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+&nbsp;&nbsp;&nbsp;&nbsp;*definizione di funzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione*
 
 In [Cenni preliminari sulle dichiarazioni](../c-language/overview-of-declarations.md) viene illustrata la sintassi per l'elemento `declaration` non terminale, mentre in *Riferimenti al preprocessore* viene illustrata l'elaborazione dell'[unità di conversione](../preprocessor/phases-of-translation.md).
 
 > [!NOTE]
->  Per una spiegazione delle convenzioni di sintassi ANSI, vedere l'introduzione a [Riepilogo di sintassi del linguaggio C](../c-language/c-language-syntax-summary.md).
+> Per una spiegazione delle convenzioni di sintassi ANSI, vedere l'introduzione a [Riepilogo di sintassi del linguaggio C](../c-language/c-language-syntax-summary.md).
 
 I componenti di un'unità di conversione sono dichiarazioni esterne che includono definizioni di funzioni e dichiarazioni di identificatore. Tali dichiarazioni e definizioni possono essere presenti in file di origine, file di intestazione, librerie e altri file necessari al programma. È necessario compilare ogni unità di conversione e collegare i file oggetti risultanti per realizzare un programma.
 

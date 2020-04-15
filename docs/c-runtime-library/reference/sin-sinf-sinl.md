@@ -1,10 +1,11 @@
 ---
 title: sin, sinf, sinl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - sinl
 - sinf
 - sin
+- _o_sin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948070"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355007"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Calcola il seno di un valore a virgola mobile.
+Calcola il sinusoidale di un valore a virgola mobile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -60,29 +62,31 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **sin** restituiscono il seno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si verifica una perdita di significato nel risultato.
+Le funzioni **sin** restituiscono il seno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a -263, si verifica una perdita di significato nel risultato.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|None|_DOMAIN|
-|± ∞ (sin, sinf, sinl)|NON VALIDO|_DOMAIN|
+|QNAN,IND|nessuno|_DOMAIN|
+|(peccato, sinf, sinl)|NON VALIDO|_DOMAIN|
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **sin** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **sin** accetta e restituisce sempre **Double**.
+Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload del **sin** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **il peccato** accetta e restituisce **sempre double**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-|-|-|
-|**sin**, **sinf**, **sinl**|\<math.h>|\<cmath> o \<math.h>|
+|**peccato**, **sinf**, **peccato**|\<math.h>|\<cmath> o \<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -116,7 +120,7 @@ cos( 1.570796 ) = 0.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
