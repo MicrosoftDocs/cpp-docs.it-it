@@ -12,20 +12,20 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 05f87cbb6061e205f9731d2a903ce52a2482b214
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79094843"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336711"
 ---
 # <a name="slice-class"></a>Classe slice
 
 Classe di utilità per valarray usata per definire subset unidimensionali di un elemento valarray padre. Se valarray viene considerato come una matrice bidimensionale con tutti gli elementi di una matrice, slice estrae un vettore di una dimensione all'esterno della matrice bidimensionale.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La classe archivia i parametri che caratterizzano un oggetto di tipo [slice_array](../standard-library/slice-array-class.md). Il subset di valarray viene costruito indirettamente quando un oggetto della classe slice viene visualizzato come argomento per un oggetto della classe [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . I valori archiviati che specificano il subset selezionato da valarray padre includono:
+La classe archivia i parametri che caratterizzano un oggetto di tipo [slice_array](../standard-library/slice-array-class.md). Il subset di valarray viene costruito indirettamente quando un oggetto della classe slice viene visualizzato come argomento per un oggetto della classe [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. I valori archiviati che specificano il subset selezionato da valarray padre includono:
 
 - Un indice iniziale in valarray.
 
@@ -41,23 +41,23 @@ Le operazioni sui valarray sono consentite solo se i subset di origine e di dest
 
 |Costruttore|Descrizione|
 |-|-|
-|[slice](#slice)|Definisce un subset di un `valarray` che è costituito da un numero di elementi che sono equidistanti e che iniziano da un elemento specificato.|
+|[Fetta](#slice)|Definisce un subset di un `valarray` che è costituito da un numero di elementi che sono equidistanti e che iniziano da un elemento specificato.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
 |Funzione membro|Descrizione|
 |-|-|
-|[size](#size)|Trova il numero di elementi in uno slice di un `valarray`.|
-|[start](#start)|Trova l'indice iniziale di uno slice di un `valarray`.|
-|[stride](#stride)|Trova la distanza tra gli elementi in uno slice di un `valarray`.|
+|[Dimensione](#size)|Trova il numero di elementi in uno slice di un `valarray`.|
+|[Iniziare](#start)|Trova l'indice iniziale di uno slice di un `valarray`.|
+|[Passo](#stride)|Trova la distanza tra gli elementi in uno slice di un `valarray`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<valarray >
+**Intestazione:** \<valarray>
 
 **Spazio dei nomi:** std
 
-## <a name="size"></a>  slice::size
+## <a name="slicesize"></a><a name="size"></a>slice::size
 
 Trova il numero di elementi di una sezione di un valarray.
 
@@ -121,7 +121,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The size of slice vaSlice is: 6.
 ```
 
-## <a name="slice"></a>  slice::slice
+## <a name="sliceslice"></a><a name="slice"></a>slice::slice
 
 Definisce un subset di un valarray costituito da un numero di elementi che sono equidistanti e che iniziano da un elemento specificato.
 
@@ -142,14 +142,14 @@ Indice valarray del primo elemento del subset.
 *_Len*\
 Numero di elementi del subset.
 
-\ *stride*
+*Passo*\
 Distanza tra gli elementi del subset.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il costruttore predefinito archivia zero per l'indice iniziale, la lunghezza totale e lo stride. Il secondo costruttore archivia *_StartIndex* per l'indice iniziale, *_Len* per la lunghezza totale e *stride* per lo stride.
+Il costruttore predefinito archivia zero per l'indice iniziale, la lunghezza totale e lo stride. Il secondo costruttore archivia *_StartIndex* per l'indice iniziale, *_Len* per la lunghezza totale e *passo* per il passo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Lo stride non può essere negativo.
 
@@ -194,7 +194,7 @@ The slice of valarray va is vaResult:
 va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```
 
-## <a name="start"></a>  slice::start
+## <a name="slicestart"></a><a name="start"></a>slice::start
 
 Trova l'indice iniziale di una sezione di un valarray.
 
@@ -252,7 +252,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The start index of slice vaSlice is: 3.
 ```
 
-## <a name="stride"></a>  slice::stride
+## <a name="slicestride"></a><a name="stride"></a>slice::stride
 
 Trova la distanza tra gli elementi di una sezione di un valarray.
 
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)

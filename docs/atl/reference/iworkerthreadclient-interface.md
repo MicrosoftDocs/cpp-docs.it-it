@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 1fa8a5e42d002260076f737d3d33cfa191ff297a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a68f25f153a0ad2cf42ebfaa374ff63c5746fcd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197406"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326303"
 ---
 # <a name="iworkerthreadclient-interface"></a>Interfaccia IWorkerThreadClient
 
-`IWorkerThreadClient` è l'interfaccia implementata da client del [CWorkerThread](../../atl/reference/cworkerthread-class.md) classe.
+`IWorkerThreadClient`è l'interfaccia implementata dai client della classe [CWorkerThread.](../../atl/reference/cworkerthread-class.md)
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,20 +35,20 @@ __interface IWorkerThreadClient
 
 |||
 |-|-|
-|[CloseHandle](#closehandle)|Implementare questo metodo per chiudere l'handle associato all'oggetto.|
-|[Execute](#execute)|Implementare questo metodo per eseguire codice quando viene segnalato l'handle associato all'oggetto.|
+|[Closehandle](#closehandle)|Implementare questo metodo per chiudere l'handle associato a questo oggetto.|
+|[Execute](#execute)|Implementare questo metodo per eseguire il codice quando l'handle associato a questo oggetto diventa segnalato.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando si dispone di codice che deve essere eseguito su un thread di lavoro in risposta a un handle che diventa segnalato, implementano questa interfaccia.
+Implementare questa interfaccia quando si dispone di codice che deve essere eseguito su un thread di lavoro in risposta a un handle che diventa segnalato.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlutil. h
+**Intestazione:** atlutil.h
 
-##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle
+## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThreadClient::CloseHandleIWorkerThreadClient::CloseHandle
 
-Implementare questo metodo per chiudere l'handle associato all'oggetto.
+Implementare questo metodo per chiudere l'handle associato a questo oggetto.
 
 ```
 HRESULT CloseHandle(HANDLE  hHandle);
@@ -57,25 +57,25 @@ HRESULT CloseHandle(HANDLE  hHandle);
 ### <a name="parameters"></a>Parametri
 
 *hHandle*<br/>
-Handle da chiudere.
+Maniglia da chiudere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituire S_OK su esito positivo o un valore HRESULT di errore in caso di errore.
+Restituire S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'handle passato a questo metodo è stato precedentemente associato a questo oggetto da una chiamata a [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Esempio
 
-Il codice seguente illustra un'implementazione semplice di `IWorkerThreadClient::CloseHandle`.
+Nel codice riportato di `IWorkerThreadClient::CloseHandle`seguito viene illustrata una semplice implementazione di .
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]
 
-##  <a name="execute"></a>  IWorkerThreadClient::Execute
+## <a name="iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThreadClient::EsecuzioneIWorkerThreadClient::Execute
 
-Implementare questo metodo per eseguire codice quando viene segnalato l'handle associato all'oggetto.
+Implementare questo metodo per eseguire il codice quando l'handle associato a questo oggetto diventa segnalato.
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -83,23 +83,23 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Parametri
 
-*dwParam*<br/>
-Il parametro user.
+*dwParam (informazioni in base al tano*<br/>
+Parametro dell'utente.
 
-*hObject*<br/>
+*hOggetto*<br/>
 Handle che è diventato segnalato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituire S_OK su esito positivo o un valore HRESULT di errore in caso di errore.
+Restituire S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'handle e DWORD/puntatore passato a questo metodo era precedentemente associato l'oggetto da una chiamata a [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+L'handle e il DWORD/pointer passati a questo metodo sono stati precedentemente associati a questo oggetto da una chiamata a [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Esempio
 
-Il codice seguente illustra un'implementazione semplice di `IWorkerThreadClient::Execute`.
+Nel codice riportato di `IWorkerThreadClient::Execute`seguito viene illustrata una semplice implementazione di .
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]
 

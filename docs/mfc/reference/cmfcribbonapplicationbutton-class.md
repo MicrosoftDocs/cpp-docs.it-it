@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: d1dc8ef6e801623aa96cb4b47936413cd17f24f0
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 0debd40825990b647cd5b1df9a144e3abd450de3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821247"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361603"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Classe CMFCRibbonApplicationButton
 
@@ -27,7 +27,7 @@ Implementa un pulsante speciale posizionato nell'angolo superiore sinistro della
 class CMFCRibbonApplicationButton : public CMFCRibbonButton
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -40,8 +40,8 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 |Nome|Descrizione|
 |----------|-----------------|
 |`CMFCRibbonApplicationButton::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
-|`CMFCRibbonApplicationButton::GetThisClass`|Utilizzato dal Framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|Assegna un'immagine al pulsante applicazione della barra multifunzione.|
+|`CMFCRibbonApplicationButton::GetThisClass`|Utilizzato dal framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
+|[CMFCRibbonApplicationButton::SetImage](#setimage)|Assegna un'immagine al pulsante dell'applicazione della barra multifunzione.|
 
 ## <a name="example"></a>Esempio
 
@@ -62,11 +62,11 @@ L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonApp
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxRibbonBar. h
+**Intestazione:** afxRibbonBar.h
 
-##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton:: CMFCRibbonApplicationButton
+## <a name="cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
 
-Costruisce e Inizializza un oggetto [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) .
+Costruisce e inizializza un [oggetto CMFCRibbonApplicationButton.](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
 ```
 CMFCRibbonApplicationButton();
@@ -76,17 +76,17 @@ CMFCRibbonApplicationButton(HBITMAP hBmp);
 
 ### <a name="parameters"></a>Parametri
 
-*uiBmpResID*<br/>
+*uiBmpResID (informazioni in stato in stato in stato in stato di identificazione in*<br/>
 ID risorsa dell'immagine da visualizzare sul pulsante dell'applicazione.
 
 *hBmp*<br/>
 Handle per una bitmap da visualizzare sul pulsante dell'applicazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il pulsante applicazione della barra multifunzione è un pulsante speciale situato nell'angolo superiore sinistro della finestra dell'applicazione. Quando un utente fa clic su questo pulsante, l'applicazione apre un menu che in genere contiene i comandi **file** comuni, ad esempio **Apri**, **Salva**ed **Esci**.
+Il pulsante dell'applicazione della barra multifunzione è un pulsante speciale che si trova nell'angolo superiore sinistro della finestra dell'applicazione. Quando un utente fa clic su questo pulsante, l'applicazione apre un menu che in genere contiene comandi **File** comuni, ad esempio **Apri**, **Salva**ed **Esci**.
 
-##  <a name="setimage"></a>CMFCRibbonApplicationButton:: seimagine
+## <a name="cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>CMFCRibbonApplicationButton::SetImage
 
 Assegna un'immagine al pulsante dell'applicazione.
 
@@ -97,18 +97,18 @@ void SetImage(HBITMAP hBmp);
 
 ### <a name="parameters"></a>Parametri
 
-*uiBmpResID*<br/>
-in ID risorsa dell'immagine da visualizzare sul pulsante dell'applicazione.
+*uiBmpResID (informazioni in stato in stato in stato in stato di identificazione in*<br/>
+[in] ID risorsa dell'immagine da visualizzare sul pulsante dell'applicazione.
 
 *hBmp*<br/>
-in Handle per una bitmap da visualizzare sul pulsante dell'applicazione.
+[in] Handle per una bitmap da visualizzare sul pulsante dell'applicazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usare questo metodo per assegnare una nuova immagine al pulsante dell'applicazione Ribbon dopo aver creato il pulsante. Il pulsante applicazione si trova nell'angolo superiore sinistro della finestra dell'applicazione.
+Utilizzare questo metodo per assegnare una nuova immagine al pulsante dell'applicazione della barra multifunzione dopo aver creato il pulsante. Il pulsante dell'applicazione si trova nell'angolo superiore sinistro della finestra dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)

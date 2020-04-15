@@ -9,34 +9,34 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-ms.openlocfilehash: 2276f6a3c28c6f2fac509ef0e4bc14cce9932582
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 212f39ee62008b391977aaa91d5c8c4fadfd9730
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170463"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336464"
 ---
 # <a name="makefile-preprocessing-operators"></a>Operatori di pre-elaborazione di makefile
 
 Nelle espressioni della pre-elaborazione di makefile è possibile usare operatori che agiscono sui valori delle costanti, sui codici di uscita dei comandi, su stringhe, macro e percorsi del file system. Per valutare l'espressione, il preprocessore prima di tutto espande le macro ed esegue i comandi e quindi esegue le operazioni. Le operazioni vengono valutate per raggruppamento tra parentesi esplicito e quindi per la precedenza degli operatori. Il risultato è un valore costante.
 
-L'operatore **definito** è un operatore logico che agisce su un nome di macro. L'espressione **definita (** _macroname_ **)** è true se è definito *macroname* , anche se non ha un valore assegnato. **Definito** insieme a **. SE** o **! ALTRIMENTI, se** è equivalente a **! IFDEF** o **! ALTRIMENTI IFDEF**. Tuttavia, a differenza di queste direttive, **defined** può essere utilizzato in espressioni complesse.
+L'operatore **DEFINED** è un operatore logico che agisce sul nome di una macro. L'espressione **DEFINED(**_nomemacro_**)** è true se *nomemacro* è definito, anche se non dispone di un valore assegnato. **DEFINED** in combinazione con **! SE** o **! ELSE IF** equivale a **! SEDEF** o **! ELSE IFDEF**. Tuttavia, a differenza di queste direttive, **DEFINED** può essere utilizzato in espressioni complesse.
 
-L'operatore **exist** è un operatore logico che agisce su un percorso di file System. **Exist (** _percorso_ **)** è true se il *percorso* esiste. Il risultato di **exist** può essere utilizzato in espressioni binarie. Se il *percorso* contiene spazi, racchiuderlo tra virgolette doppie.
+L'operatore **EXIST** è un operatore logico che agisce su un percorso del file system. **EXIST(**_path_**)** è true se *path* esiste. Il risultato di **EXIST** può essere utilizzato nelle espressioni binarie. Se *path* contiene spazi, racchiuderlo tra virgolette doppie.
 
-Per confrontare due stringhe, usare l'operatore di uguaglianza ( **==** ) o l'operatore di disuguaglianza ( **! =** ). Racchiudere le stringhe tra virgolette doppie.
+Per confrontare due stringhe,**==** utilizzare l'operatore di uguaglianza ( ) o l'operatore di disuguaglianza (**! )**. Racchiudere le stringhe tra virgolette doppie.
 
-Le costanti integer possono usare gli operatori unari per la negazione numerica ( **-** ), il complemento a uno ( **~** ) e la negazione logica ( **!** ).
+Le costanti integer possono utilizzare gli operatori unari**-** per la negazione numerica ( ), il complemento di uno (**~**) e la negazione logica (**!**).
 
 Le espressioni possono usare gli operatori seguenti. Gli operatori con uguale precedenza vengono raggruppati e i gruppi vengono elencati in ordine di precedenza decrescente. Gli operatori unari si associano all'operando a destra. Gli operatori binari con uguale precedenza uguale si associano agli operandi da sinistra a destra.
 
 |Operatore|Descrizione|
 |--------------|-----------------|
-|**Definito (** *macroname* **)**|Produce un valore logico per lo stato di definizione corrente di *macroname*.|
-|**Exist (** *percorso* **)**|Produce un valore logico per l'esistenza di un file nel *percorso*.|
+|**DEFINED(** *nomemacro* **)**|Produce un valore logico per lo stato di definizione corrente di *nomemacro.*|
+|**EXIST(** *percorso* **)**|Produce un valore logico per l'esistenza di un file nel *percorso*.|
 |||
 |**!**|NOT logico unario.|
-|**~**|Complemento di uno unario.|
+|**~**|Unario il complemento.|
 |**-**|Negazione unaria.|
 |||
 |**&#42;**|Moltiplicazione.|
@@ -66,7 +66,7 @@ Le espressioni possono usare gli operatori seguenti. Gli operatori con uguale pr
 |**&#124;&#124;**|OR logico.|
 
 > [!NOTE]
-> L'operatore XOR bit per bit ( **^** ) corrisponde al carattere di escape e deve essere preceduto da un carattere di escape (come **^^** ) quando viene utilizzato in un'espressione.
+> L'operatore XOR**^** bit per bit ( ) corrisponde al **^^** carattere di escape e deve essere sottoposto a escape (come ) quando viene utilizzato in un'espressione.
 
 ## <a name="see-also"></a>Vedere anche
 

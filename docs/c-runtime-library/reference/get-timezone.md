@@ -1,8 +1,9 @@
 ---
 title: _get_timezone
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_timezone
+- _o__get_timezone
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: cf77ca21383bcae6919b6c1d00b99c082ef99919
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 94dfae1aaaddf9c545af4309d3ddc62a0bcb33f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955628"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344898"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
@@ -48,18 +50,20 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parametri
 
-*secondi*<br/>
+*Secondi*<br/>
 La differenza in secondi tra l'ora UTC e l'ora locale.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero se ha esito positivo o un valore **errno** se si verifica un errore.
+zero se ha esito positivo o un valore **errno** se si verifica un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_get_timezone** recupera la differenza in secondi tra l'ora UTC e l'ora locale come valore integer. Il valore predefinito è 28.800 secondi per l'ora solare Pacifico (otto ore in meno rispetto all'ora UTC).
+La funzione **_get_timezone** recupera la differenza in secondi tra l'ora UTC e l'ora locale come numero intero. Il valore predefinito è 28.800 secondi per l'ora solare Pacifico (otto ore in meno rispetto all'ora UTC).
 
-Se *seconds* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
+Se *seconds* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -67,11 +71,11 @@ Se *seconds* è **null**, viene richiamato il gestore di parametri non validi, c
 |-------------|---------------------|
 |**_get_timezone**|\<time.h>|
 
-Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>

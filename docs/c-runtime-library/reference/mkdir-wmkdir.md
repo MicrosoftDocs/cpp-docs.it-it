@@ -1,9 +1,11 @@
 ---
 title: _mkdir, _wmkdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmkdir
 - _mkdir
+- _o__mkdir
+- _o__wmkdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 56e525dd765ff2594eebcfe9a0aed37670b12e3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951724"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338778"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -66,19 +69,21 @@ Percorso per una nuova directory.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il valore 0 se la nuova directory è stata creata. In seguito a un errore, la funzione restituisce-1 e imposta **errno** come segue.
+Ognuna di queste funzioni restituisce il valore 0 se la nuova directory è stata creata. In caso di errore, la funzione restituisce -1 e imposta **errno** come segue.
 
-**EEXIST** La directory non è stata creata perché *dirname* è il nome di un file, di una directory o di un dispositivo esistente.
+**EEXIST** La directory non è stata creata perché *dirname* è il nome di un file, una directory o un dispositivo esistente.
 
-**ENOENT** Il percorso non è stato trovato.
+**ENOENTE** Percorso non trovato.
 
-Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_mkdir** crea una nuova directory con il *dirname specificato.* **_mkdir** può creare solo una nuova directory per chiamata, quindi solo l'ultimo componente di *dirname* può denominare una nuova directory. **_mkdir** non converte i delimitatori di percorso. In Windows NT, sia la barra rovesciata (\\) che la barra (/) sono delimitatori validi di percorso nelle stringhe di caratteri delle routine di runtime.
+La funzione **_mkdir** crea una nuova directory con il *dirname specificato.* **_mkdir** possibile creare una sola nuova directory per chiamata, in modo che solo l'ultimo componente di *dirname* possa denominare una nuova directory. **_mkdir** non converte i delimitatori di percorso. In Windows NT, sia la barra rovesciata (\\) che la barra (/) sono delimitatori validi di percorso nelle stringhe di caratteri delle routine di runtime.
 
-**_wmkdir** è una versione a caratteri wide di **_mkdir**; l'argomento *dirname* per **_wmkdir** è una stringa di caratteri wide. **_wmkdir** e **_mkdir** si comportano in modo identico.
+**_wmkdir** è una versione a caratteri wide di **_mkdir**; l'argomento *dirname* a **_wmkdir** è una stringa di caratteri wide. **_wmkdir** e **_mkdir** si comportano in modo identico in caso contrario.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -93,7 +98,7 @@ La funzione **_mkdir** crea una nuova directory con il *dirname specificato.* **
 |**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<direct.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -124,7 +129,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Esempio di output
+### <a name="sample-output"></a>Output di esempio
 
 ```Output
 Directory '\testtmp' was successfully created

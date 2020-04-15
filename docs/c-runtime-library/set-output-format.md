@@ -25,19 +25,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957317"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360911"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
 Consente di personalizzare i formati di output usati dalle funzioni di I/O formattate.
 
 > [!IMPORTANT]
->  Questa funzione è obsoleta. A partire da Visual Studio 2015 non è disponibile in CRT.
+> questa funzione è obsoleta. A partire da Visual Studio 2015 non è disponibile in CRT.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,14 +49,14 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>Parametri
 
-*format*<br/>
+*Formato*<br/>
 [in] Valore che rappresenta il formato da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Formato di output precedente.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 `_set_output_format` viene usato per configurare l'output delle funzioni di I/O formattate, come [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Attualmente, l'unica convenzione di formattazione che può essere modificata da questa funzione è il numero di cifre visualizzate negli esponenti dell'output di numeri a virgola mobile.
 
@@ -70,7 +70,7 @@ Per abilitare gli esponenti a due cifre, chiamare questa funzione con il paramet
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
-Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../c-runtime-library/compatibility.md) nell'introduzione.
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../c-runtime-library/compatibility.md) nell'introduzione.
 
 ## <a name="example"></a>Esempio
 

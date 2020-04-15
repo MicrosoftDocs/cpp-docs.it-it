@@ -7,20 +7,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146482"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334587"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Considerazioni sulla scrittura di codice di prologo/epilogo
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Prima di scrivere le proprie sequenze di codice di prologo ed epilogo, è importante comprendere il layout dello stack frame. È anche utile sapere come usare la costante predefinita **__LOCAL_SIZE**.
+Prima di scrivere sequenze di codice di prologo ed epilogo personalizzate, è importante comprendere come viene disposto lo stack frame. È anche utile sapere come utilizzare il **__LOCAL_SIZE** costante predefinita.
 
-##  <a name="_clang_c_stack_frame_layout"></a> Layout dello stack frame C
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Layout cornice CStack
 
 In questo esempio viene illustrato il codice standard di prologo che potrebbe essere visualizzato in una funzione a 32 bit:
 
@@ -42,7 +42,7 @@ ret                          ; Return from function
 
 Lo stack va sempre verso il basso (dal livello alto a quello basso degli indirizzi di memoria). Il puntatore di base (`ebp`) punta al valore inserito di `ebp`. La sezione variabili locali inizia a `ebp-2`. Per accedere alle variabili locali, calcolare un offset da `ebp` sottraendo il valore appropriato da `ebp`.
 
-##  <a name="_clang_the___local_size_constant"></a> Costante __LOCAL_SIZE
+## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a> Costante __LOCAL_SIZE
 
 Il compilatore specifica una costante **__LOCAL_SIZE** da usare nel blocco dell'assembler inline del codice di prologo di una funzione. Questa costante viene utilizzata per allocare spazio per le variabili locali sullo stack frame nel codice di prologo.
 
@@ -79,7 +79,7 @@ __declspec ( naked ) func()
 }
 ```
 
-**Fine sezione specifica Microsoft**
+**FINE Specifico di Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,8 +1,9 @@
 ---
 title: bsearch
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch
+- _o_bsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: efad391eb2512cfa59cc3597430a84727676f27e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811092"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333810"
 ---
 # <a name="bsearch"></a>bsearch
 
-Esegue una ricerca binaria di una matrice ordinata. È disponibile una versione più sicura di questa funzione; vedere [bsearch_s](bsearch-s.md).
+Esegue una ricerca binaria di una matrice ordinata. È disponibile una versione più sicura di questa funzione. Vedere [bsearch_s](bsearch-s.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,28 +53,28 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
-Puntatore alla chiave da cercare.
+*Chiave*\
+Puntatore al tasto da cercare.
 
-*base*\
+*Base*\
 Puntatore alla base dei dati di ricerca.
 
-*numero*\
+*Numero*\
 Numero di elementi.
 
-\ *larghezza*
+*Larghezza*\
 Larghezza degli elementi.
 
-*confronta*\
+*Confrontare*\
 Funzione di callback che confronta due elementi. Il primo è un puntatore alla chiave per la ricerca e il secondo è un puntatore all'elemento della matrice da confrontare con la chiave.
 
 ## <a name="return-value"></a>Valore restituito
 
-**bCerca** restituisce un puntatore a un'occorrenza della *chiave* nella matrice a cui punta la *base*. Se *Key* non viene trovato, la funzione restituisce **null**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
+**bsearch** restituisce un puntatore a un'occorrenza di *key* nella matrice a cui punta *base*. Se *key* non viene trovato, la funzione restituisce **NULL**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **bCerca** esegue una ricerca binaria di una matrice ordinata di elementi *numerici* , ognuno con dimensioni di byte di *larghezza* . Il valore di *base* è un puntatore alla base della matrice in cui eseguire la ricerca e *Key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento di matrice. Restituisce uno dei valori seguenti che specificano la relazione:
+La funzione **bsearch** esegue una ricerca binaria di una matrice ordinata di elementi *numerici,* ognuno dei byte di *larghezza.* Il valore *di base* è un puntatore alla base della matrice da cercare e *key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento della matrice. Restituisce uno dei seguenti valori che ne specificano la relazione:
 
 |Valore restituito dalla routine di *confronto*|Descrizione|
 |-----------------------------------------|-----------------|
@@ -80,7 +82,9 @@ La funzione **bCerca** esegue una ricerca binaria di una matrice ordinata di ele
 |0|La chiave è uguale all'elemento della matrice.|
 |> 0|La chiave è maggiore dell'elemento della matrice.|
 
-Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è zero, la funzione richiama il gestore di parametri non validi, come descritto in [Parameter Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su `EINVAL` e la funzione restituisce **null**.
+Questa funzione convalida i relativi parametri. Se *compare*, *key* o *number* è **NULL**o se *base* è **NULL** e *number* è diverso da zero o se *width* è zero, la funzione richiama il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato `EINVAL` su e la funzione restituisce **NULL**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -88,7 +92,7 @@ Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* �
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> e \<search.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

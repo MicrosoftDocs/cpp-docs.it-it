@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331953"
 ---
 # <a name="regex_constants-namespace"></a>Spazio dei nomi regex_constants
 
@@ -115,11 +115,11 @@ Lo spazio dei nomi `regex_constants` incapsula molti tipi di flag e i valori dei
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<Regex >
+**Intestazione:** \<regex>
 
 **Spazio dei nomi:** std
 
-## <a name="error_type"></a>  regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants::error_type
 
 Indicatori per segnalare errori di sintassi di espressione regolare.
 
@@ -180,7 +180,7 @@ Il tipo è un tipo enumerato che descrive un oggetto che può contenere flag di 
 
 `error_backref` -- l'espressione contiene un backreference non valido
 
-## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
 
 Flag per opzioni di corrispondenza delle espressioni regolari.
 
@@ -238,7 +238,7 @@ I flag di formato sono:
 
 `format_first_only` -- non cercare corrispondenze dopo la prima
 
-## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants::syntax_option_type
 
 Flag per selezionare le opzioni di sintassi.
 
@@ -290,11 +290,11 @@ I modificatori di sintassi sono:
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<regex>](../standard-library/regex.md)\
-[classe regex_error](../standard-library/regex-error-class.md)\
-[\<funzioni > regex](../standard-library/regex-functions.md)\
-[classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operatori > regex](../standard-library/regex-operators.md)\
-[classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[classe regex_traits](../standard-library/regex-traits-class.md)\
-[Typedef \<regex>](../standard-library/regex-typedefs.md)
+[\<>regex](../standard-library/regex.md)\
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[\<funzioni di> regex](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operatori di> regex](../standard-library/regex-operators.md)\
+[regex_token_iterator classe](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> typedef](../standard-library/regex-typedefs.md)

@@ -1,9 +1,11 @@
 ---
 title: _searchenv, _wsearchenv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _searchenv
 - _wsearchenv
+- _o__searchenv
+- _o__wsearchenv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 22a8ca8fa7e56a84289d7e90ffb519073f006b5c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948765"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332388"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -80,32 +83,34 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Parametri
 
-*filename*<br/>
+*Filename*<br/>
 Nome del file di cui eseguire la ricerca.
 
-*varname*<br/>
+*Varname*<br/>
 Ambiente per la ricerca.
 
-*percorso*<br/>
+*Percorso*<br/>
 Buffer per l'archiviazione del percorso completo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La routine **_searchenv** Cerca il file di destinazione nel dominio specificato. La variabile *VarName* può essere qualsiasi ambiente o variabile definita dall'utente, ad esempio **path**, **lib**o **include**, che specifica un elenco di percorsi di directory. Poiché **_searchenv** fa distinzione tra maiuscole e minuscole, *VarName* deve corrispondere al case della variabile di ambiente.
+La **routine _searchenv** cerca il file di destinazione nel dominio specificato. La variabile *varname* può essere qualsiasi variabile di ambiente o definita dall'utente, ad esempio **PATH**, **LIB**o **INCLUDE,** che specifica un elenco di percorsi di directory. Poiché **_searchenv** fa distinzione tra maiuscole e minuscole, *varname* deve corrispondere al case della variabile di ambiente.
 
-La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione si trova in una di queste directory, il percorso appena creato viene copiato in *pathname*. Se il file *filename* non viene trovato, *pathname* contiene una stringa vuota con terminazione null.
+La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione si trova in una di queste directory, il percorso appena creato viene copiato in *nomepercorso*. Se il file *filename* non viene trovato, *pathname* contiene una stringa vuota con terminazione null.
 
-Il buffer del *percorso* deve avere una lunghezza di almeno **_MAX_PATH** caratteri per contenere la lunghezza totale del nome del percorso costruito. In caso contrario, **_searchenv** potrebbe sovraccaricare il buffer del *percorso* e causare un comportamento imprevisto.
+Il buffer *dei nomi* di percorso deve essere lungo almeno **_MAX_PATH** per contenere l'intera lunghezza del nome del percorso costruito. In caso contrario, **_searchenv** potrebbe sovraccaricare il buffer *dei nomi* di percorso e causare un comportamento imprevisto.
 
-**_wsearchenv** è una versione a caratteri wide di **_searchenv**e gli argomenti per **_wsearchenv** sono stringhe a caratteri wide. **_wsearchenv** e **_searchenv** si comportano in modo identico.
+**_wsearchenv** è una versione a caratteri wide di **_searchenv**e gli argomenti per **_wsearchenv** sono stringhe a caratteri wide. **_wsearchenv** e **_searchenv** si comportano in modo identico in caso contrario.
 
 Se *filename* è una stringa vuota, queste funzioni restituiscono **ENOENT**.
 
-Se *filename* o *pathname* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
+Se *filename* o *pathname* è un puntatore **NULL,** viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano **errno** su **EINVAL**.
 
-Per altre informazioni sui codici di errore e **errno** , vedere [costanti errno](../../c-runtime-library/errno-constants.md).
+Per ulteriori informazioni su **errno** e sui codici di errore, vedere [errno Constants](../../c-runtime-library/errno-constants.md).
 
-In C++, queste funzioni presentano overload di modello che richiamano le relative controparti più sicure e più recenti. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++, queste funzioni presentano overload di modello che richiamano le relative controparti più sicure e più recenti. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -118,9 +123,9 @@ In C++, queste funzioni presentano overload di modello che richiamano le relativ
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**_searchenv**|\<stdlib.h>|
-|**_wsearchenv**|\<stdlib.h> or \<wchar.h>|
+|**_wsearchenv**|\<stdlib.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
