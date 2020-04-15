@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: a3372a176a158dd9c89eb888c8deb0244eef9a84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a80c0ec14da2a955a95ac84dd3975212ef20ae04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374210"
 ---
 # <a name="weakreference-class"></a>Classe WeakReference
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,15 +36,15 @@ Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
 class WeakReference;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Rappresenta un *riferimento debole* che può essere utilizzato con il Runtime di Windows o da COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.
+Rappresenta un *riferimento debole* che può essere utilizzato con Windows Runtime o COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.
 
-Oggetto `WeakReference` oggetto mantiene una *riferimento sicuro*, che è un puntatore a un oggetto e un *conteggio dei riferimenti forti*, che corrisponde al numero di copie del riferimento forte che sono stati distribuiti da il `Resolve()` (metodo). Anche se il conteggio dei riferimenti forti è diverso da zero, il riferimento sicuro è valido e l'oggetto è accessibile. Quando il conteggio dei riferimenti forti diventa zero, il riferimento sicuro non è valido e l'oggetto non è accessibile.
+Un `WeakReference` oggetto mantiene un *riferimento forte*, ovvero un puntatore a un oggetto, e un conteggio dei riferimenti *forte,* ovvero il numero di copie del riferimento sicuro distribuite dal `Resolve()` metodo . Mentre il conteggio dei riferimenti sicuri è diverso da zero, il riferimento forte è valido e l'oggetto è accessibile. Quando il conteggio dei riferimenti sicuri diventa zero, il riferimento forte non è valido e l'oggetto non è accessibile.
 
-Oggetto `WeakReference` oggetto viene in genere usato per rappresentare un oggetto la cui esistenza è controllata da un'applicazione o un thread esterno. Ad esempio, costruire un `WeakReference` oggetto da un riferimento a un oggetto file. Finché il file rimane aperto, il riferimento sicuro è valido. Ma se il file viene chiuso, il riferimento sicuro non è più valido.
+Un `WeakReference` oggetto viene in genere utilizzato per rappresentare un oggetto la cui esistenza è controllata da un thread esterno o da un'applicazione. Ad esempio, `WeakReference` costruire un oggetto da un riferimento a un oggetto file. Finché il file rimane aperto, il riferimento sicuro è valido. Ma se il file viene chiuso, il riferimento sicuro non è più valido.
 
-Il `WeakReference` metodi sono thread-safe.
+I `WeakReference` metodi sono thread-safe.
 
 ## <a name="members"></a>Membri
 
@@ -52,17 +52,17 @@ Il `WeakReference` metodi sono thread-safe.
 
 Nome                                                  | Descrizione
 ----------------------------------------------------- | ---------------------------------------------------------------------------
-[WeakReference:: WeakReference](#weakreference)        | Inizializza una nuova istanza della classe `WeakReference`.
-[WeakReference:: ~ WeakReference](#tilde-weakreference) | Deinizializza (Elimina) l'istanza corrente del `WeakReference` classe.
+[DeboleRiferimento::WeakReference](#weakreference)        | Inizializza una nuova istanza della classe `WeakReference`.
+[DeboleRiferimento::](#tilde-weakreference) | Deinizializza (elimina) l'istanza corrente `WeakReference` della classe.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                                                 | Descrizione
 -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[WeakReference::DecrementStrongReference](#decrementstrongreference) | Decrementa il riferimento sicuro conteggio corrente `WeakReference` oggetto.
-[WeakReference::IncrementStrongReference](#incrementstrongreference) | Incrementa il conteggio dei riferimenti forti corrente `WeakReference` oggetto.
-[WeakReference:: Resolve](#resolve)                                   | Imposta il puntatore specificato per il valore di riferimento forte corrente se il conteggio dei riferimenti forti è diverso da zero.
-[WeakReference::SetUnknown](#setunknown)                             | Imposta il riferimento sicuro corrente `WeakReference` oggetto al puntatore a interfaccia specificato.
+[WeakReference::DecrementStrongReference](#decrementstrongreference) | Decrementa il conteggio dei `WeakReference` riferimenti sicuri dell'oggetto corrente.
+[DeboleRiferimento::IncrementStrongReference](#incrementstrongreference) | Incrementa il conteggio dei `WeakReference` riferimenti forti dell'oggetto corrente.
+[WeakReference::Resolve](#resolve)                                   | Imposta il puntatore specificato sul valore di riferimento forte corrente se il conteggio dei riferimenti sicuri è diverso da zero.
+[DeboleRiferimento::SetUnknown](#setunknown)                             | Imposta il riferimento sicuro `WeakReference` dell'oggetto corrente sul puntatore a interfaccia specificato.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -70,13 +70,13 @@ Nome                                                                 | Descrizio
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** Implements. h
+**Intestazione:** implements.h
 
 **Spazio dei nomi:** Microsoft::WRL::Details
 
-## <a name="tilde-weakreference"></a>WeakReference:: ~ WeakReference
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>DeboleRiferimento::
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 virtual ~WeakReference();
@@ -84,31 +84,31 @@ virtual ~WeakReference();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Deinizializza l'istanza corrente del `WeakReference` classe.
+Deinizializza l'istanza corrente `WeakReference` della classe.
 
-## <a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 ULONG DecrementStrongReference();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Decrementa il riferimento sicuro conteggio corrente `WeakReference` oggetto.
+Decrementa il conteggio dei `WeakReference` riferimenti sicuri dell'oggetto corrente.
 
-Quando il conteggio dei riferimenti forti diventa zero, il riferimento sicuro è impostato su `nullptr`.
+Quando il conteggio dei riferimenti sicuri diventa `nullptr`zero, il riferimento forte viene impostato su .
 
 ### <a name="return-value"></a>Valore restituito
 
-Il conteggio dei riferimenti forti decrementato.
+Conteggio dei riferimenti forti decrementato.
 
-## <a name="incrementstrongreference"></a>WeakReference::IncrementStrongReference
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>DeboleRiferimento::IncrementStrongReference
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 ULONG IncrementStrongReference();
@@ -116,15 +116,15 @@ ULONG IncrementStrongReference();
 
 ### <a name="return-value"></a>Valore restituito
 
-Il conteggio dei riferimenti forti incrementato.
+Conteggio dei riferimenti sicuri incrementato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Incrementa il conteggio dei riferimenti forti corrente `WeakReference` oggetto.
+Incrementa il conteggio dei `WeakReference` riferimenti forti dell'oggetto corrente.
 
-## <a name="resolve"></a>WeakReference:: Resolve
+## <a name="weakreferenceresolve"></a><a name="resolve"></a>WeakReference::Resolve
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 STDMETHOD(Resolve)
@@ -135,27 +135,27 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>Parametri
 
-*riid*<br/>
+*Riid*<br/>
 ID di interfaccia.
 
-*ppvObject*<br/>
-Quando questa operazione viene completata, una copia del riferimento forte corrente se il conteggio dei riferimenti forti è diverso da zero.
+*Oggetto ppv*<br/>
+Quando questa operazione viene completata, una copia del riferimento sicuro corrente se il conteggio dei riferimenti sicuri è diverso da zero.
 
 ### <a name="return-value"></a>Valore restituito
 
-- S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti forti è uguale a zero. Il *ppvObject* parametro è impostato su `nullptr`.
+- S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti sicuri è zero. Il parametro *ppvObject* è impostato su `nullptr`.
 
-- S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti forti è diverso da zero. Il *ppvObject* parametro è impostato per il riferimento sicuro.
+- S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti sicuri è diverso da zero. Il parametro *ppvObject* è impostato sul riferimento sicuro.
 
-- In caso contrario, HRESULT che indica il motivo per questa operazione non riuscita.
+- In caso contrario, un HRESULT che indica il motivo per cui l'operazione non è riuscita.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Imposta il puntatore specificato per il valore di riferimento forte corrente se il conteggio dei riferimenti forti è diverso da zero.
+Imposta il puntatore specificato sul valore di riferimento forte corrente se il conteggio dei riferimenti sicuri è diverso da zero.
 
-## <a name="setunknown"></a>WeakReference:: Setunknown
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>DeboleRiferimento::SetUnknown
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 void SetUnknown(
@@ -166,22 +166,22 @@ void SetUnknown(
 ### <a name="parameters"></a>Parametri
 
 *unk*<br/>
-Un puntatore al `IUnknown` interfaccia di un oggetto.
+Puntatore all'interfaccia `IUnknown` di un oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Imposta il riferimento sicuro corrente `WeakReference` oggetto al puntatore a interfaccia specificato.
+Imposta il riferimento sicuro `WeakReference` dell'oggetto corrente sul puntatore a interfaccia specificato.
 
-## <a name="weakreference"></a>WeakReference:: WeakReference
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>DeboleRiferimento::WeakReference
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 WeakReference();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Inizializza una nuova istanza della classe `WeakReference`.
 
-Il puntatore di riferimento sicuro per il `WeakReference` viene inizializzato in `nullptr`, il conteggio dei riferimenti forti viene inizializzato su 1.
+Il puntatore di `WeakReference` riferimento sicuro `nullptr`per l'oggetto viene inizializzato su e il conteggio dei riferimenti sicuri viene inizializzato su 1.

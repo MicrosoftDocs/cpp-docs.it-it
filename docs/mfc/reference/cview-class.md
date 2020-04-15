@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 763e36b0736ce588e7e2aded25e50347f9e0ca70
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421569"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373208"
 ---
 # <a name="cview-class"></a>CView (classe)
 
@@ -69,85 +69,85 @@ Fornisce la funzionalità di base per le classi di visualizzazione definite dall
 class AFX_NOVTABLE CView : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CView:: CView](#cview)|Costruisce un oggetto `CView`.|
+|[CView::CView](#cview)|Costruisce un oggetto `CView`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CView::D oPreparePrinting](#doprepareprinting)|Visualizza la finestra di dialogo Stampa e crea il contesto di dispositivo stampante; chiamare quando si esegue l'override della funzione membro `OnPreparePrinting`.|
-|[CView:: GetDocument](#getdocument)|Restituisce il documento associato alla visualizzazione.|
-|[CView:: IsSelected](#isselected)|Verifica se è selezionato un elemento del documento. Obbligatorio per il supporto OLE.|
-|[CView:: OnDragEnter](#ondragenter)|Chiamato quando un elemento viene trascinato per la prima volta nell'area di trascinamento della selezione di una visualizzazione.|
-|[CView:: OnDragLeave](#ondragleave)|Chiamato quando un elemento trascinato lascia l'area di trascinamento della selezione di una visualizzazione.|
-|[CView:: OnDragOver](#ondragover)|Chiamato quando un elemento viene trascinato sull'area di trascinamento e rilascio di una visualizzazione.|
-|[CView:: OnDragScroll](#ondragscroll)|Chiamata eseguita per determinare se il cursore viene trascinato nell'area di scorrimento della finestra.|
-|[CView:: OnDrop](#ondrop)|Chiamato quando un elemento è stato rilasciato nell'area di trascinamento della selezione di una visualizzazione, gestore predefinito.|
-|[CView:: OnDropEx](#ondropex)|Chiamato quando un elemento è stato rilasciato nell'area di trascinamento della selezione di una visualizzazione, gestore primario.|
-|[CView:: OnInitialUpdate](#oninitialupdate)|Chiamato dopo che una vista è stata associata per la prima volta a un documento.|
-|[CView:: OnPrepareDC](#onpreparedc)|Chiamata eseguita prima della chiamata della funzione membro `OnDraw` per la visualizzazione schermo oppure la funzione membro `OnPrint` viene chiamata per la stampa o l'anteprima di stampa.|
-|[CView:: OnScroll](#onscroll)|Chiamato quando gli elementi OLE vengono trascinati oltre i bordi della visualizzazione.|
-|[CView:: OnScrollBy](#onscrollby)|Chiamato quando viene eseguita lo scorrimento di una visualizzazione contenente elementi OLE attivi sul posto.|
+|[CView::DoPreparePrinting](#doprepareprinting)|Visualizza la finestra di dialogo Stampa e crea il contesto di periferica della stampante; chiamare quando si `OnPreparePrinting` esegue l'override della funzione membro.|
+|[CView::GetDocument](#getdocument)|Restituisce il documento associato alla visualizzazione.|
+|[CView::IsSelected](#isselected)|Verifica se un elemento del documento è selezionato. Obbligatorio per il supporto OLE.|
+|[CView::OnDragEnter](#ondragenter)|Chiamato quando un elemento viene trascinato per la prima volta nell'area di trascinamento della selezione di una visualizzazione.|
+|[CView::OnDragLeave](#ondragleave)|Chiamato quando un elemento trascinato lascia l'area di trascinamento di una visualizzazione.|
+|[CView::OnDragOver](#ondragover)|Chiamato quando un elemento viene trascinato sull'area di trascinamento della selezione di una visualizzazione.|
+|[CView::OnDragScroll](#ondragscroll)|Chiamato per determinare se il cursore viene trascinato nell'area di scorrimento della finestra.|
+|[CView::OnDrop](#ondrop)|Chiamato quando un elemento è stato rilasciato nell'area di trascinamento della selezione di una visualizzazione, gestore predefinito.|
+|[CView::OnDropEx](#ondropex)|Chiamato quando un elemento è stato rilasciato nell'area di trascinamento della selezione di una visualizzazione, gestore primario.|
+|[CView::OnInitialUpdate](#oninitialupdate)|Chiamato dopo che una visualizzazione è stata prima associata a un documento.|
+|[CView::OnPrepareDC](#onpreparedc)|Chiamato prima `OnDraw` che la funzione membro `OnPrint` viene chiamata per la visualizzazione dello schermo o la funzione membro viene chiamata per la stampa o l'anteprima di stampa.|
+|[CView::OnScroll](#onscroll)|Chiamato quando gli elementi OLE vengono trascinati oltre i bordi della visualizzazione.|
+|[CView::OnScrollBy](#onscrollby)|Chiamato quando si scorre una visualizzazione contenente elementi OLE attivi sul posto.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CView:: OnActivateFrame](#onactivateframe)|Chiamato quando la finestra cornice contenente la visualizzazione viene attivata o disattivata.|
-|[CView:: OnActivateView](#onactivateview)|Chiamato quando viene attivata una visualizzazione.|
-|[CView:: OnBeginPrinting](#onbeginprinting)|Chiamata eseguita all'inizio di un processo di stampa. eseguire l'override di per allocare le risorse GDI (Graphics Device Interface).|
-|[CView:: onpare](#ondraw)|Chiamata eseguita per eseguire il rendering di un'immagine del documento per la visualizzazione dello schermo, la stampa o l'anteprima di stampa. Implementazione richiesta.|
-|[CView:: OnEndPrinting](#onendprinting)|Chiamata eseguita al termine di un processo di stampa. eseguire l'override di per deallocare le risorse GDI.|
-|[CView:: OnEndPrintPreview](#onendprintpreview)|Chiamato quando viene chiusa la modalità di anteprima.|
-|[CView:: OnPreparePrinting](#onprepareprinting)|Chiamata eseguita prima della stampa o dell'anteprima di un documento; eseguire l'override per inizializzare la finestra di dialogo Stampa.|
-|[CView:: OnPrint](#onprint)|Chiamata eseguita per stampare o visualizzare un'anteprima di una pagina del documento.|
-|[CView:: OnUpdate](#onupdate)|Chiamato per notificare a una visualizzazione che il documento è stato modificato.|
+|[CView::OnActivateFrame](#onactivateframe)|Chiamato quando la finestra cornice contenente la visualizzazione viene attivata o disattivata.|
+|[CView::OnActivateView](#onactivateview)|Chiamato quando viene attivata una visualizzazione.|
+|[CView::OnBeginPrinting](#onbeginprinting)|Chiamato quando inizia un processo di stampa; per allocare le risorse GDI (Graphics Device Interface).|
+|[CView::OnDraw](#ondraw)|Chiamato per eseguire il rendering di un'immagine del documento per la visualizzazione su schermo, la stampa o l'anteprima di stampa. Implementazione necessaria.|
+|[CView::OnEndPrinting](#onendprinting)|Chiamato al termine di un processo di stampa; eseguire l'override per deallocare le risorse GDI.|
+|[CView::OnEndPrintPreview](#onendprintpreview)|Chiamato quando viene chiusa la modalità di anteprima.|
+|[CView::OnPreparePrinting](#onprepareprinting)|Chiamato prima che un documento venga stampato o visualizzato in anteprima; per inizializzare la finestra di dialogo Stampa.|
+|[CView::OnPrint](#onprint)|Chiamato per stampare o visualizzare in anteprima una pagina del documento.|
+|[CView::OnAggiorna](#onupdate)|Chiamato per notificare a una visualizzazione che il documento è stato modificato.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Una vista è associata a un documento e funge da intermediario tra il documento e l'utente: la visualizzazione esegue il rendering di un'immagine del documento sullo schermo o sulla stampante e interpreta l'input dell'utente come operazioni sul documento.
+Una visualizzazione è associata a un documento e funge da intermediario tra il documento e l'utente: la visualizzazione esegue il rendering di un'immagine del documento sullo schermo o sulla stampante e interpreta l'input dell'utente come operazioni sul documento.
 
-Una visualizzazione è un elemento figlio di una finestra cornice. Più di una visualizzazione può condividere una finestra cornice, come nel caso di una finestra con separatore. La relazione tra una classe di visualizzazione, una classe della finestra cornice e una classe di documento viene stabilita da un oggetto `CDocTemplate`. Quando l'utente apre una nuova finestra o ne divide una esistente, il Framework costruisce una nuova visualizzazione e la collega al documento.
+Una visualizzazione è un elemento figlio di una finestra cornice. Più di una visualizzazione può condividere una finestra cornice, come nel caso di una finestra con separatore. La relazione tra una classe di visualizzazione, una classe finestra `CDocTemplate` cornice e una classe documento viene stabilita da un oggetto. Quando l'utente apre una nuova finestra o ne divide una esistente, il framework crea una nuova visualizzazione e la associa al documento.
 
-Una vista può essere collegata a un solo documento, ma a un documento possono essere associate più visualizzazioni contemporaneamente, ad esempio se il documento viene visualizzato in una finestra con separatore o in più finestre figlio in un'applicazione con interfaccia a documenti multipli (MDI). L'applicazione può supportare tipi diversi di visualizzazioni per un tipo di documento specifico. un programma di elaborazione di testi, ad esempio, potrebbe fornire una visualizzazione di testo completa di un documento e una visualizzazione struttura che mostra solo le intestazioni di sezione. Questi diversi tipi di viste possono essere posizionati in finestre cornice separate o in riquadri distinti di una singola finestra cornice se si utilizza una finestra con separatore.
+Una visualizzazione può essere associata a un solo documento, ma a un documento possono essere associate più visualizzazioni contemporaneamente, ad esempio se il documento viene visualizzato in una finestra con separatore o in più finestre figlio in un'applicazione MDI (Multiple Document Interface). L'applicazione può supportare diversi tipi di visualizzazioni per un determinato tipo di documento; ad esempio, un programma di elaborazione testi potrebbe fornire sia una visualizzazione di testo completa di un documento che una visualizzazione struttura che mostra solo i titoli di sezione. Questi diversi tipi di visualizzazioni possono essere inseriti in finestre cornice separate o in riquadri separati di una singola finestra cornice se si utilizza una finestra con separatore.
 
-Una vista può essere responsabile della gestione di diversi tipi di input, ad esempio l'input da tastiera, l'input del mouse o l'input mediante trascinamento della selezione, nonché i comandi dei menu, delle barre degli strumenti o delle barre di scorrimento. Una visualizzazione riceve i comandi inoltrati dalla relativa finestra cornice. Se la vista non gestisce un determinato comando, il comando viene inviato al documento associato. Come tutte le destinazioni dei comandi, una visualizzazione gestisce i messaggi tramite una mappa messaggi.
+Una visualizzazione può essere responsabile della gestione di diversi tipi di input, ad esempio l'input da tastiera, l'input del mouse o l'input tramite trascinamento della selezione, nonché i comandi da menu, barre degli strumenti o barre di scorrimento. Una visualizzazione riceve i comandi inoltrati dalla relativa finestra cornice. Se la visualizzazione non gestisce un determinato comando, inoltra il comando al documento associato. Come tutte le destinazioni dei comandi, una visualizzazione gestisce i messaggi tramite una mappa messaggi.
 
-La visualizzazione è responsabile della visualizzazione e della modifica dei dati del documento, ma non della relativa archiviazione. Il documento fornisce la visualizzazione con i dettagli necessari sui relativi dati. È possibile consentire alla visualizzazione di accedere direttamente ai membri dati del documento oppure è possibile fornire funzioni membro nella classe Document affinché la classe di visualizzazione chiami.
+La visualizzazione è responsabile della visualizzazione e della modifica dei dati del documento, ma non dell'archiviazione. Il documento fornisce alla vista i dettagli necessari sui suoi dati. È possibile consentire alla visualizzazione di accedere direttamente ai membri dati del documento oppure è possibile fornire funzioni membro nella classe documento per la classe di visualizzazione da chiamare.
 
-Quando i dati di un documento cambiano, la visualizzazione responsabile delle modifiche chiama in genere la funzione [CDocument:: UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) per il documento, che invia una notifica a tutte le altre viste chiamando la funzione membro `OnUpdate` per ciascuna. L'implementazione predefinita di `OnUpdate` invalida l'intera area client della visualizzazione. È possibile eseguirne l'override per invalidare solo le aree dell'area client mappate alle parti modificate del documento.
+Quando i dati di un documento vengono modificati, la visualizzazione responsabile delle modifiche chiama in genere la funzione [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) per il documento, che notifica tutte le altre visualizzazioni chiamando la `OnUpdate` funzione membro per ognuna. L'implementazione `OnUpdate` predefinita di invalida l'intera area client della visualizzazione. È possibile eseguirne l'override per invalidare solo le aree dell'area client che eseguono il mapping alle parti modificate del documento.
 
-Per utilizzare `CView`, derivare una classe e implementare la funzione membro `OnDraw` per eseguire la visualizzazione dello schermo. È inoltre possibile utilizzare `OnDraw` per eseguire la stampa e l'anteprima di stampa. Il Framework gestisce il ciclo di stampa per la stampa e l'anteprima del documento.
+Per `CView`utilizzare , derivare una `OnDraw` classe da essa e implementare la funzione membro per eseguire la visualizzazione dello schermo. È inoltre `OnDraw` possibile utilizzare per eseguire la stampa e l'anteprima di stampa. Il framework gestisce il ciclo di stampa per la stampa e l'anteprima del documento.
 
-Una visualizzazione gestisce i messaggi della barra di scorrimento con le funzioni membro [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [CWnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) . È possibile implementare la gestione dei messaggi della barra di scorrimento in queste funzioni oppure è possibile usare la classe derivata `CView` [CScrollView](../../mfc/reference/cscrollview-class.md) per gestire lo scorrimento.
+Una visualizzazione gestisce i messaggi della barra di scorrimento con le funzioni membro [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) . È possibile implementare la gestione dei messaggi della `CView` barra di scorrimento in queste funzioni oppure è possibile utilizzare la classe derivata [CScrollView](../../mfc/reference/cscrollview-class.md) per gestire lo scorrimento per l'utente.
 
-Oltre `CScrollView`, il libreria Microsoft Foundation Class fornisce altre nove classi derivate da `CView`:
+Inoltre `CScrollView`, la libreria Microsoft Foundation Class `CView`fornisce altre nove classi derivate da :
 
-- [CCtrlView](../../mfc/reference/cctrlview-class.md), una vista che consente l'utilizzo dell'architettura documento-visualizzazione con controlli struttura ad albero, elenco e modifica avanzata.
+- [CCtrlView](../../mfc/reference/cctrlview-class.md), una visualizzazione che consente l'utilizzo dell'architettura del documento- visualizzazione con ad albero, elenco e controlli Rich Edit.
 
-- [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md), una vista che consente di visualizzare i record del database nei controlli della finestra di dialogo.
+- [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md), una visualizzazione che visualizza i record del database nei controlli finestra di dialogo.
 
-- [CEditView](../../mfc/reference/ceditview-class.md), una vista che fornisce un semplice editor di testo su più righe. È possibile utilizzare un oggetto `CEditView` come controllo in una finestra di dialogo e una vista in un documento.
+- [CEditView](../../mfc/reference/ceditview-class.md), una visualizzazione che fornisce un semplice editor di testo multilinea. È possibile `CEditView` utilizzare un oggetto come controllo in una finestra di dialogo e una visualizzazione in un documento.
 
-- [CFormView](../../mfc/reference/cformview-class.md), una vista scorrevole che contiene controlli della finestra di dialogo ed è basata su una risorsa modello di finestra di dialogo.
+- [CFormView](../../mfc/reference/cformview-class.md), una visualizzazione scorrevole che contiene i controlli della finestra di dialogo e si basa su una risorsa modello di finestra di dialogo.
 
-- [CListView](../../mfc/reference/clistview-class.md), una vista che consente l'utilizzo dell'architettura Document-view con i controlli List.
+- [CListView](../../mfc/reference/clistview-class.md), una visualizzazione che consente l'utilizzo dell'architettura documento - visualizzazione con controlli elenco.
 
-- [CRecordView](../../mfc/reference/crecordview-class.md), una vista che consente di visualizzare i record del database nei controlli della finestra di dialogo.
+- [CRecordView](../../mfc/reference/crecordview-class.md), una visualizzazione che visualizza i record del database nei controlli finestra di dialogo.
 
-- [CRichEditView](../../mfc/reference/cricheditview-class.md), una vista che consente l'utilizzo dell'architettura documento-visualizzazione con controlli Rich Edit.
+- [CRichEditView](../../mfc/reference/cricheditview-class.md), una visualizzazione che consente l'utilizzo dell'architettura documento - visualizzazione con controlli Rich Edit.
 
-- [CScrollView](../../mfc/reference/cscrollview-class.md), una vista che fornisce automaticamente il supporto dello scorrimento.
+- [CScrollView](../../mfc/reference/cscrollview-class.md), una visualizzazione che fornisce automaticamente il supporto per lo scorrimento.
 
-- [CTreeView](../../mfc/reference/ctreeview-class.md), una vista che consente l'utilizzo dell'architettura documento-visualizzazione con i controlli struttura ad albero.
+- [CTreeView](../../mfc/reference/ctreeview-class.md), una visualizzazione che consente l'utilizzo dell'architettura documento - visualizzazione con i controlli struttura ad albero.
 
-La classe `CView` dispone inoltre di una classe di implementazione derivata denominata `CPreviewView`, che viene utilizzata dal Framework per eseguire l'anteprima di stampa. Questa classe fornisce supporto per le funzionalità univoche per la finestra di anteprima di stampa, ad esempio una barra degli strumenti, un'anteprima a singola pagina o una doppia pagina, nonché lo zoom, ovvero l'ingrandimento dell'immagine in anteprima. Non è necessario chiamare o eseguire l'override di una delle funzioni membro di `CPreviewView`a meno che non si desideri implementare una propria interfaccia per l'anteprima di stampa, ad esempio se si desidera supportare la modifica in modalità anteprima di stampa. Per altre informazioni sull'uso di `CView`, vedere [architettura documento/visualizzazione](../../mfc/document-view-architecture.md) e [stampa](../../mfc/printing.md). Vedere anche la [Nota tecnica 30](../../mfc/tn030-customizing-printing-and-print-preview.md) per altri dettagli sulla personalizzazione dell'anteprima di stampa.
+La `CView` classe dispone inoltre di `CPreviewView`una classe di implementazione derivata denominata , utilizzata dal framework per eseguire l'anteprima di stampa. Questa classe fornisce supporto per le funzionalità specifiche della finestra di anteprima di stampa, ad esempio una barra degli strumenti, l'anteprima a pagina singola o doppia e lo zoom, ovvero l'ingrandimento dell'immagine visualizzata in anteprima. Non è necessario chiamare o eseguire `CPreviewView`l'override di una delle funzioni membro a meno che non si desideri implementare un'interfaccia personalizzata per l'anteprima di stampa (ad esempio, se si desidera supportare la modifica in modalità di anteprima di stampa). Per ulteriori informazioni `CView`sull'utilizzo di , vedere [Architettura documento/visualizzazione](../../mfc/document-view-architecture.md) e [stampa](../../mfc/printing.md). Inoltre, vedere [la nota tecnica 30](../../mfc/tn030-customizing-printing-and-print-preview.md) per ulteriori dettagli sulla personalizzazione dell'anteprima di stampa.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -163,7 +163,7 @@ La classe `CView` dispone inoltre di una classe di implementazione derivata deno
 
 **Intestazione:** afxwin.h
 
-##  <a name="cview"></a>CView:: CView
+## <a name="cviewcview"></a><a name="cview"></a>CView::CView
 
 Costruisce un oggetto `CView`.
 
@@ -173,11 +173,11 @@ CView();
 
 ### <a name="remarks"></a>Osservazioni
 
-Il Framework chiama il costruttore quando viene creata una nuova finestra cornice o una finestra è divisa. Eseguire l'override della funzione membro [OnInitialUpdate](#oninitialupdate) per inizializzare la visualizzazione dopo che il documento è stato collegato.
+Il framework chiama il costruttore quando viene creata una nuova finestra cornice o viene divisa una finestra. Eseguire l'override di [OnInitialUpdate](#oninitialupdate) funzione membro per inizializzare la visualizzazione dopo il documento è collegato.
 
-##  <a name="doprepareprinting"></a>CView::D oPreparePrinting
+## <a name="cviewdoprepareprinting"></a><a name="doprepareprinting"></a>CView::DoPreparePrinting
 
-Chiamare questa funzione dall'override di [OnPreparePrinting](#onprepareprinting) per richiamare la finestra di dialogo Stampa e creare un contesto di dispositivo stampante.
+Chiamare questa funzione dall'override di [OnPreparePrinting](#onprepareprinting) per richiamare la finestra di dialogo Stampa e creare un contesto di periferica della stampante.
 
 ```
 BOOL DoPreparePrinting(CPrintInfo* pInfo);
@@ -185,20 +185,20 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 
 ### <a name="parameters"></a>Parametri
 
-*pInfo*<br/>
+*pInfo (informazioni in stato inquesto*<br/>
 Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se è possibile avviare la stampa o l'anteprima di stampa. 0 se l'operazione è stata annullata.
+Diverso da zero se può iniziare la stampa o l'anteprima di stampa; 0 se l'operazione è stata annullata.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il comportamento di questa funzione dipende dal fatto che venga chiamato per la stampa o l'anteprima di stampa (specificata dal `m_bPreview` membro del parametro *pInfo* ). Se è in corso la stampa di un file, questa funzione richiama la finestra di dialogo Stampa, usando i valori nella struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) a cui punta *pInfo* ; dopo che l'utente ha chiuso la finestra di dialogo, la funzione crea un contesto di dispositivo stampante in base alle impostazioni specificate dall'utente nella finestra di dialogo e restituisce il contesto del dispositivo tramite il parametro *pInfo* . Questo contesto di dispositivo viene usato per stampare il documento.
+Il comportamento di questa funzione dipende dal fatto che venga chiamata `m_bPreview` per la stampa o l'anteprima di stampa (specificata dal membro del *pInfo* parametro). Se viene stampato un file, questa funzione richiama la finestra di dialogo Stampa, utilizzando i valori nel [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) struttura che *pInfo* punta a; dopo che l'utente ha chiuso la finestra di dialogo, la funzione crea un contesto di periferica della stampante in base alle impostazioni specificate dall'utente nella finestra di dialogo e restituisce questo contesto di periferica tramite il *pInfo* parametro. Questo contesto di periferica viene utilizzato per stampare il documento.
 
-Se un file viene visualizzato in anteprima, questa funzione crea un contesto di dispositivo stampante utilizzando le impostazioni della stampante correnti; questo contesto di dispositivo viene usato per simulare la stampante durante l'anteprima.
+Se un file viene visualizzato in anteprima, questa funzione crea un contesto di periferica della stampante utilizzando le impostazioni correnti della stampante; questo contesto di dispositivo viene utilizzato per simulare la stampante durante l'anteprima.
 
-##  <a name="getdocument"></a>CView:: GetDocument
+## <a name="cviewgetdocument"></a><a name="getdocument"></a>CView::GetDocument
 
 Chiamare questa funzione per ottenere un puntatore al documento della visualizzazione.
 
@@ -208,15 +208,15 @@ CDocument* GetDocument() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto [CDocument](../../mfc/reference/cdocument-class.md) associato alla visualizzazione. NULL se la vista non è associata a un documento.
+Puntatore all'oggetto [CDocument](../../mfc/reference/cdocument-class.md) associato alla visualizzazione. NULL se la visualizzazione non è associata a un documento.
 
 ### <a name="remarks"></a>Osservazioni
 
 In questo modo è possibile chiamare le funzioni membro del documento.
 
-##  <a name="isselected"></a>CView:: IsSelected
+## <a name="cviewisselected"></a><a name="isselected"></a>CView::IsSelected
 
-Chiamata eseguita dal Framework per verificare se è selezionato l'elemento del documento specificato.
+Chiamato dal framework per verificare se l'elemento del documento specificato è selezionato.
 
 ```
 virtual BOOL IsSelected(const CObject* pDocItem) const;
@@ -224,20 +224,20 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 
 ### <a name="parameters"></a>Parametri
 
-*pDocItem*<br/>
+*pDocItem (informazioni in stato in stato in stato*<br/>
 Punta all'elemento del documento sottoposto a test.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se l'elemento del documento specificato è selezionato; in caso contrario, 0.
+Diverso da zero se l'elemento del documento specificato è selezionato; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita di questa funzione restituisce FALSE. Eseguire l'override di questa funzione se si sta implementando la selezione usando oggetti [CDocItem](../../mfc/reference/cdocitem-class.md) . È necessario eseguire l'override di questa funzione se la vista contiene elementi OLE.
+L'implementazione predefinita di questa funzione restituisce FALSE. Eseguire l'override di questa funzione se si implementa la selezione utilizzando [CDocItem](../../mfc/reference/cdocitem-class.md) oggetti. È necessario eseguire l'override di questa funzione se la visualizzazione contiene elementi OLE.
 
-##  <a name="onactivateframe"></a>CView:: OnActivateFrame
+## <a name="cviewonactivateframe"></a><a name="onactivateframe"></a>CView::OnActivateFrame
 
-Chiamata eseguita dal framework quando la finestra cornice contenente la visualizzazione viene attivata o disattivata.
+Chiamato dal framework quando la finestra cornice contenente la visualizzazione viene attivata o disattivata.
 
 ```
 virtual void OnActivateFrame(
@@ -247,25 +247,25 @@ virtual void OnActivateFrame(
 
 ### <a name="parameters"></a>Parametri
 
-*nState*<br/>
-Specifica se è in corso l'attivazione o la disattivazione della finestra cornice. Può essere uno dei valori seguenti:
+*nStato*<br/>
+Specifica se la finestra cornice viene attivata o disattivata. Può essere uno dei valori seguenti:
 
-- WA_INACTIVE la finestra cornice verrà disattivata.
+- WA_INACTIVE La finestra cornice viene disattivata.
 
-- WA_ACTIVE la finestra cornice viene attivata tramite un metodo diverso da un clic del mouse, ad esempio usando l'interfaccia della tastiera per selezionare la finestra.
+- WA_ACTIVE La finestra cornice viene attivata tramite un metodo diverso da un clic del mouse (ad esempio, utilizzando l'interfaccia della tastiera per selezionare la finestra).
 
-- WA_CLICKACTIVE la finestra cornice viene attivata con un clic del mouse
+- WA_CLICKACTIVE La finestra cornice viene attivata con un clic del mouse
 
-*pFrameWnd*<br/>
-Puntatore alla finestra cornice da attivare.
+*pFrameWnd (inframe)*<br/>
+Puntatore alla finestra cornice che deve essere attivata.
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione membro se si desidera eseguire un'elaborazione speciale quando la finestra cornice associata alla visualizzazione viene attivata o disattivata. Ad esempio, [CFormView](../../mfc/reference/cformview-class.md) esegue questa sostituzione quando salva e ripristina il controllo con lo stato attivo.
+Eseguire l'override di questa funzione membro se si desidera eseguire un'elaborazione speciale quando la finestra cornice associata alla visualizzazione viene attivata o disattivata. Ad esempio, [CFormView](../../mfc/reference/cformview-class.md) esegue questo override quando salva e ripristina il controllo che ha lo stato attivo.
 
-##  <a name="onactivateview"></a>CView:: OnActivateView
+## <a name="cviewonactivateview"></a><a name="onactivateview"></a>CView::OnActivateView
 
-Chiamata eseguita dal framework quando una visualizzazione viene attivata o disattivata.
+Chiamato dal framework quando una visualizzazione viene attivata o disattivata.
 
 ```
 virtual void OnActivateView(
@@ -277,23 +277,23 @@ virtual void OnActivateView(
 ### <a name="parameters"></a>Parametri
 
 *bActivate*<br/>
-Indica se la visualizzazione viene attivata o disattivata.
+Indica se la vista è attivata o disattivata.
 
 *pActivateView*<br/>
-Punta all'oggetto visualizzazione che viene attivato.
+Punta all'oggetto vista che viene attivato.
 
-*pDeactiveView*<br/>
-Punta all'oggetto visualizzazione da disattivare.
+*pDeactiveView (visualizzazione inattivo)*<br/>
+Punta all'oggetto vista che viene disattivato.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita di questa funzione imposta lo stato attivo sulla visualizzazione attivata. Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando una visualizzazione viene attivata o disattivata. Se, ad esempio, si desidera fornire segnali visivi speciali che distinguono la visualizzazione attiva dalle viste inattive, esaminare il parametro *bActivate* e aggiornare di conseguenza l'aspetto della visualizzazione.
+L'implementazione predefinita di questa funzione imposta lo stato attivo sulla visualizzazione attivata. Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando una vista viene attivata o disattivata. Ad esempio, se si desidera fornire segnali visivi speciali che distinguono la vista attiva dalle viste inattive, è necessario esaminare il *bActivate* parametro e aggiornare l'aspetto della vista di conseguenza.
 
-I parametri *pActivateView* e *pDeactiveView* puntano alla stessa vista se la finestra cornice principale dell'applicazione viene attivata senza alcuna modifica nella visualizzazione attiva, ad esempio se lo stato attivo viene trasferito da un'altra applicazione a questa, anziché da una vista a un'altra all'interno dell'applicazione o quando si passa da una visualizzazione a un'altra all'interno dell'applicazione o al passaggio tra le finestre figlio MDI. Ciò consente a una visualizzazione di rirealizzare la relativa tavolozza, se necessario.
+I parametri *pActivateView* e *pDeactiveView* puntano alla stessa visualizzazione se la finestra cornice principale dell'applicazione viene attivata senza alcuna modifica nella visualizzazione attiva, ad esempio se lo stato attivo viene trasferito da un'altra applicazione a questa, anziché da una visualizzazione all'altra all'interno dell'applicazione o quando si passa tra le finestre figlio MDI. Ciò consente a una vista di rirealizzare la tavolozza, se necessario.
 
-Questi parametri sono diversi quando viene chiamato [CFrameWnd:: SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) con una vista diversa da quella che viene restituita da [CFrameWnd:: GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) . Questa situazione si verifica spesso con le finestre con separatore.
+Questi parametri differiscono quando [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) viene chiamato con una visualizzazione diversa da ciò che [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) restituirebbe. Questo accade più spesso con le finestre con separatore.
 
-##  <a name="onbeginprinting"></a>CView:: OnBeginPrinting
+## <a name="cviewonbeginprinting"></a><a name="onbeginprinting"></a>CView::OnBeginPrinting
 
 Chiamata eseguita dal framework all'inizio di un processo di stampa o di anteprima di stampa, dopo la chiamata di `OnPreparePrinting` .
 
@@ -308,7 +308,7 @@ virtual void OnBeginPrinting(
 *pDC*<br/>
 Punta al contesto di dispositivo stampante.
 
-*pInfo*<br/>
+*pInfo (informazioni in stato inquesto*<br/>
 Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
 ### <a name="remarks"></a>Osservazioni
@@ -317,9 +317,9 @@ L'implementazione predefinita di questa funzione non esegue alcuna operazione. E
 
 È anche possibile usare questa funzione per eseguire inizializzazioni che dipendono dalle proprietà del contesto di dispositivo stampante. Ad esempio, il numero di pagine richiesto per stampare il documento può dipendere dalle impostazioni specificate dall'utente nella finestra di dialogo Stampa (come la lunghezza della pagina). In questo caso non è possibile specificare, come di norma, la lunghezza del documento nella funzione membro [OnPreparePrinting](#onprepareprinting) . È necessario attendere fino a quando non è stato creato il contesto di dispositivo stampante in base alle impostazioni della finestra di dialogo. [OnBeginPrinting](#onbeginprinting) è la prima funzione sottoponibile a override che consente l'accesso all'oggetto [CDC](../../mfc/reference/cdc-class.md) che rappresenta il contesto di dispositivo stampante. Pertanto è possibile impostare la lunghezza del documento da questa funzione. Si noti che se a questo punto la lunghezza del documento non è specificata, durante l'anteprima di stampa non viene visualizzata una barra di scorrimento.
 
-##  <a name="ondragenter"></a>CView:: OnDragEnter
+## <a name="cviewondragenter"></a><a name="ondragenter"></a>CView::OnDragEnter
 
-Chiamata eseguita dal framework quando il mouse entra per la prima volta nell'area non di scorrimento della finestra destinazione di rilascio.
+Chiamato dal framework quando il mouse entra per la prima volta nell'area non di scorrimento della finestra di destinazione della finestra di destinazione della finestra di rilascio.
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -330,38 +330,38 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>Parametri
 
-*pDataObject*<br/>
+*pDataObject (oggetto PDataObject)*<br/>
 Punta al [COleDataObject](../../mfc/reference/coledataobject-class.md) trascinato nell'area di rilascio della visualizzazione.
 
 *dwKeyState*<br/>
-Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti elementi: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*point*<br/>
+*Punto*<br/>
 Posizione corrente del mouse rispetto all'area client della visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore del tipo enumerato DROPEFFECT, che indica il tipo di eliminazione che verrebbe generato se l'utente ha eliminato l'oggetto in questa posizione. Il tipo di eliminazione dipende in genere dallo stato della chiave corrente indicato da *dwKeyState*. Un mapping standard dei valori di DROPEFFECT è:
+Un valore del tipo enumerato DROPEFFECT, che indica il tipo di rilascio che si verificherebbe se l'utente rilasciasse l'oggetto in questa posizione. Il tipo di eliminazione dipende in genere dallo stato della chiave corrente indicato da *dwKeyState*. Un mapping standard di keystates ai valori DROPEFFECT è:
 
-- DROPEFFECT_NONE non è possibile eliminare l'oggetto dati in questa finestra.
+- DROPEFFECT_NONE L'oggetto dati non può essere eliminato in questa finestra.
 
-- DROPEFFECT_LINK per MK_CONTROL &#124; MK_SHIFT crea un collegamento tra l'oggetto e il relativo server.
+- DROPEFFECT_LINK per MK_CONTROL &#124; MK_SHIFT Crea un collegamento tra l'oggetto e il relativo server.
 
-- DROPEFFECT_COPY per MK_CONTROL crea una copia dell'oggetto eliminato.
+- DROPEFFECT_COPY per MK_CONTROL Crea una copia dell'oggetto rilasciato.
 
-- DROPEFFECT_MOVE per MK_ALT crea una copia dell'oggetto eliminato ed Elimina l'oggetto originale. Si tratta in genere dell'effetto di rilascio predefinito, quando la vista può accettare questo oggetto dati.
+- DROPEFFECT_MOVE per MK_ALT Crea una copia dell'oggetto rilasciato ed elimina l'oggetto originale. Si tratta in genere dell'effetto di rilascio predefinito, quando la visualizzazione può accettare questo oggetto dati.
 
-Per ulteriori informazioni, vedere l'esempio relativo ai concetti avanzati MFC [OCLIENT](../../overview/visual-cpp-samples.md).
+Per ulteriori informazioni, vedere l'esempio Concetti avanzati MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita non esegue alcuna operazione e restituisce DROPEFFECT_NONE.
+L'implementazione predefinita consiste nell'eseguire alcuna operazione e restituire DROPEFFECT_NONE.
 
-Eseguire l'override di questa funzione per prepararsi per chiamate future alla funzione membro [OnDragOver](#ondragover) . I dati richiesti dall'oggetto dati devono essere recuperati in questo momento per un uso successivo nella funzione membro `OnDragOver`. La visualizzazione deve essere aggiornata anche in questo momento per fornire commenti e suggerimenti visivi dell'utente. Per altre informazioni, vedere l'articolo [trascinamento della selezione OLE: implementare una destinazione di rilascio](../../mfc/drag-and-drop-ole.md#implement-a-drop-target).
+Eseguire l'override di questa funzione per preparare le chiamate future per il [OnDragOver](#ondragover) funzione membro. Tutti i dati richiesti dall'oggetto dati devono essere `OnDragOver` recuperati in questo momento per un utilizzo successivo nella funzione membro. Anche la visualizzazione deve essere aggiornata in questo momento per fornire un feedback visivo all'utente. Per ulteriori informazioni, vedere l'articolo Trascinamento della selezione [OLE: Implementare una destinazione di rilascio](../../mfc/drag-and-drop-ole.md#implement-a-drop-target).
 
-##  <a name="ondragleave"></a>CView:: OnDragLeave
+## <a name="cviewondragleave"></a><a name="ondragleave"></a>CView::OnDragLeave
 
-Chiamata eseguita dal Framework durante un'operazione di trascinamento quando il mouse viene spostato fuori dall'area di rilascio valida per tale finestra.
+Chiamato dal framework durante un'operazione di trascinamento quando il mouse viene spostato all'esterno dell'area di rilascio valida per la finestra.
 
 ```
 virtual void OnDragLeave();
@@ -369,11 +369,11 @@ virtual void OnDragLeave();
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione se la visualizzazione corrente deve eseguire la pulizia di tutte le azioni eseguite durante le chiamate a [OnDragEnter](#ondragenter) o [OnDragOver](#ondragover) , ad esempio la rimozione di eventuali commenti e suggerimenti degli utenti visivi mentre l'oggetto è stato trascinato.
+Eseguire l'override di questa funzione se la visualizzazione corrente deve pulire le azioni eseguite durante le chiamate [OnDragEnter](#ondragenter) o [OnDragOver,](#ondragover) ad esempio la rimozione di eventuali commenti visivi dell'utente mentre l'oggetto è stato trascinato e rilasciato.
 
-##  <a name="ondragover"></a>CView:: OnDragOver
+## <a name="cviewondragover"></a><a name="ondragover"></a>CView::OnDragOver
 
-Chiamata eseguita dal Framework durante un'operazione di trascinamento quando il mouse viene spostato sulla finestra destinazione di rilascio.
+Chiamato dal framework durante un'operazione di trascinamento quando il mouse viene spostato sulla finestra di destinazione del rilascio.
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -384,38 +384,38 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>Parametri
 
-*pDataObject*<br/>
-Punta al [COleDataObject](../../mfc/reference/coledataobject-class.md) trascinato sulla destinazione di rilascio.
+*pDataObject (oggetto PDataObject)*<br/>
+Punta al [COleDataObject](../../mfc/reference/coledataobject-class.md) trascinato sopra la destinazione di rilascio.
 
 *dwKeyState*<br/>
-Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti elementi: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*point*<br/>
+*Punto*<br/>
 Posizione corrente del mouse rispetto all'area client di visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore del tipo enumerato DROPEFFECT, che indica il tipo di eliminazione che verrebbe generato se l'utente ha eliminato l'oggetto in questa posizione. Il tipo di eliminazione dipende spesso dallo stato della chiave corrente come indicato da *dwKeyState*. Un mapping standard dei valori di DROPEFFECT è:
+Un valore del tipo enumerato DROPEFFECT, che indica il tipo di rilascio che si verificherebbe se l'utente rilasciasse l'oggetto in questa posizione. Il tipo di eliminazione dipende spesso dallo stato della chiave corrente, come indicato da *dwKeyState*. Un mapping standard di keystates ai valori DROPEFFECT è:
 
-- DROPEFFECT_NONE non è possibile eliminare l'oggetto dati in questa finestra.
+- DROPEFFECT_NONE L'oggetto dati non può essere eliminato in questa finestra.
 
-- DROPEFFECT_LINK per MK_CONTROL &#124; MK_SHIFT crea un collegamento tra l'oggetto e il relativo server.
+- DROPEFFECT_LINK per MK_CONTROL &#124; MK_SHIFT Crea un collegamento tra l'oggetto e il relativo server.
 
-- DROPEFFECT_COPY per MK_CONTROL crea una copia dell'oggetto eliminato.
+- DROPEFFECT_COPY per MK_CONTROL Crea una copia dell'oggetto rilasciato.
 
-- DROPEFFECT_MOVE per MK_ALT crea una copia dell'oggetto eliminato ed Elimina l'oggetto originale. Si tratta in genere dell'effetto di rilascio predefinito, quando la vista può accettare l'oggetto dati.
+- DROPEFFECT_MOVE per MK_ALT Crea una copia dell'oggetto rilasciato ed elimina l'oggetto originale. Si tratta in genere dell'effetto di rilascio predefinito, quando la visualizzazione può accettare l'oggetto dati.
 
-Per ulteriori informazioni, vedere l'esempio relativo ai concetti avanzati MFC [OCLIENT](../../overview/visual-cpp-samples.md).
+Per ulteriori informazioni, vedere l'esempio Concetti avanzati MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita non esegue alcuna operazione e restituisce DROPEFFECT_NONE.
+L'implementazione predefinita consiste nell'eseguire alcuna operazione e restituire DROPEFFECT_NONE.
 
-Eseguire l'override di questa funzione per fornire all'utente il feedback visivo durante l'operazione di trascinamento. Poiché questa funzione viene chiamata continuamente, il codice contenuto al suo interno dovrebbe essere ottimizzato per quanto possibile. Per altre informazioni, vedere l'articolo [trascinamento della selezione OLE: implementare una destinazione di rilascio](../../mfc/drag-and-drop-ole.md#implement-a-drop-target).
+Eseguire l'override di questa funzione per fornire all'utente un feedback visivo durante l'operazione di trascinamento. Poiché questa funzione viene chiamata continuamente, qualsiasi codice in essa contenuto deve essere ottimizzato il più possibile. Per ulteriori informazioni, vedere l'articolo Trascinamento della selezione [OLE: Implementare una destinazione di rilascio](../../mfc/drag-and-drop-ole.md#implement-a-drop-target).
 
-##  <a name="ondragscroll"></a>CView:: OnDragScroll
+## <a name="cviewondragscroll"></a><a name="ondragscroll"></a>CView::OnDragScroll
 
-Chiamata eseguita dal Framework prima della chiamata a [OnDragEnter](#ondragenter) o [OnDragOver](#ondragover) per determinare se il punto si trova nell'area di scorrimento.
+Chiamato dal framework prima di chiamare [OnDragEnter](#ondragenter) o [OnDragOver](#ondragover) per determinare se il punto si trova nell'area di scorrimento.
 
 ```
 virtual DROPEFFECT OnDragScroll(
@@ -426,34 +426,34 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>Parametri
 
 *dwKeyState*<br/>
-Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti elementi: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi dei seguenti: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*point*<br/>
-Contiene la posizione del cursore, in pixel, relativa allo schermo.
+*Punto*<br/>
+Contiene la posizione del cursore, in pixel, rispetto allo schermo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore del tipo enumerato DROPEFFECT, che indica il tipo di eliminazione che verrebbe generato se l'utente ha eliminato l'oggetto in questa posizione. Il tipo di eliminazione dipende in genere dallo stato della chiave corrente indicato da *dwKeyState*. Un mapping standard dei valori di DROPEFFECT è:
+Un valore del tipo enumerato DROPEFFECT, che indica il tipo di rilascio che si verificherebbe se l'utente rilasciasse l'oggetto in questa posizione. Il tipo di eliminazione dipende in genere dallo stato della chiave corrente indicato da *dwKeyState*. Un mapping standard di keystates ai valori DROPEFFECT è:
 
-- DROPEFFECT_NONE non è possibile eliminare l'oggetto dati in questa finestra.
+- DROPEFFECT_NONE L'oggetto dati non può essere eliminato in questa finestra.
 
-- DROPEFFECT_LINK per MK_CONTROL &#124; MK_SHIFT crea un collegamento tra l'oggetto e il relativo server.
+- DROPEFFECT_LINK per MK_CONTROL &#124; MK_SHIFT Crea un collegamento tra l'oggetto e il relativo server.
 
-- DROPEFFECT_COPY per MK_CONTROL crea una copia dell'oggetto eliminato.
+- DROPEFFECT_COPY per MK_CONTROL Crea una copia dell'oggetto rilasciato.
 
-- DROPEFFECT_MOVE per MK_ALT crea una copia dell'oggetto eliminato ed Elimina l'oggetto originale.
+- DROPEFFECT_MOVE per MK_ALT Crea una copia dell'oggetto rilasciato ed elimina l'oggetto originale.
 
-- DROPEFFECT_SCROLL indica che sta per verificarsi un'operazione di scorrimento di trascinamento o che si sta verificando nella visualizzazione di destinazione.
+- DROPEFFECT_SCROLL Indica che un'operazione di scorrimento di trascinamento sta per verificarsi o si sta verificando nella vista di destinazione.
 
-Per ulteriori informazioni, vedere l'esempio relativo ai concetti avanzati MFC [OCLIENT](../../overview/visual-cpp-samples.md).
+Per ulteriori informazioni, vedere l'esempio Concetti avanzati MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione quando si desidera fornire un comportamento speciale per questo evento. L'implementazione predefinita scorre automaticamente le finestre quando il cursore viene trascinato nell'area di scorrimento predefinita all'interno del bordo di ogni finestra. Per altre informazioni, vedere l'articolo [trascinamento della selezione OLE: implementare una destinazione di rilascio](../../mfc/drag-and-drop-ole.md#implement-a-drop-target).
+Eseguire l'override di questa funzione quando si desidera fornire un comportamento speciale per questo evento. L'implementazione predefinita scorre automaticamente le finestre quando il cursore viene trascinato nell'area di scorrimento predefinita all'interno del bordo di ogni finestra. Per ulteriori informazioni, vedere l'articolo Trascinamento della selezione [OLE: Implementare una destinazione di rilascio](../../mfc/drag-and-drop-ole.md#implement-a-drop-target).
 
-##  <a name="ondraw"></a>CView:: onpare
+## <a name="cviewondraw"></a><a name="ondraw"></a>CView::OnDraw
 
-Chiamato dal Framework per eseguire il rendering di un'immagine del documento.
+Chiamato dal framework per eseguire il rendering di un'immagine del documento.
 
 ```
 virtual void OnDraw(CDC* pDC) = 0;
@@ -466,15 +466,15 @@ Punta al contesto di dispositivo da utilizzare per il rendering di un'immagine d
 
 ### <a name="remarks"></a>Osservazioni
 
-Il Framework chiama questa funzione per eseguire la visualizzazione dello schermo, la stampa e l'anteprima di stampa e passa un contesto di dispositivo diverso in ogni caso. Non vi è nessuna implementazione predefinita.
+Il framework chiama questa funzione per eseguire la visualizzazione dello schermo, la stampa e l'anteprima di stampa e passa un contesto di dispositivo diverso in ogni caso. Non vi è nessuna implementazione predefinita.
 
-È necessario eseguire l'override di questa funzione per visualizzare la visualizzazione del documento. È possibile effettuare chiamate GDI (Graphical Device Interface) utilizzando l'oggetto [CDC](../../mfc/reference/cdc-class.md) a cui punta il parametro *PDC* . È possibile selezionare le risorse GDI, ad esempio penne o tipi di carattere, nel contesto di dispositivo prima di disegnare e quindi deselezionarle successivamente. Spesso il codice di disegno può essere indipendente dal dispositivo. Ciò significa che non sono necessarie informazioni sul tipo di dispositivo che Visualizza l'immagine.
+È necessario eseguire l'override di questa funzione per visualizzare la visualizzazione del documento. È possibile effettuare chiamate GDI (Graphic Device Interface) utilizzando l'oggetto [CDC](../../mfc/reference/cdc-class.md) a cui punta il parametro *pDC.* È possibile selezionare le risorse GDI, ad esempio penne o tipi di carattere, nel contesto di periferica prima di disegnare e quindi deselezionarle in un secondo momento. Spesso il codice di disegno può essere indipendente dal dispositivo; ovvero, non richiede informazioni sul tipo di dispositivo che visualizza l'immagine.
 
-Per ottimizzare il disegno, chiamare la funzione membro [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) del contesto di dispositivo per sapere se verrà disegnato un rettangolo specificato. Se è necessario distinguere tra visualizzazione normale dello schermo e stampa, chiamare la funzione membro di [stampa](../../mfc/reference/cdc-class.md#isprinting) del contesto di dispositivo.
+Per ottimizzare il disegno, chiamare il [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) funzione membro del contesto di dispositivo per scoprire se un determinato rettangolo verrà disegnato. Se è necessario distinguere tra visualizzazione normale dello schermo e stampa, chiamare il [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) funzione membro del contesto di periferica.
 
-##  <a name="ondrop"></a>CView:: OnDrop
+## <a name="cviewondrop"></a><a name="ondrop"></a>CView::OnDrop
 
-Chiamata eseguita dal framework quando l'utente rilascia un oggetto dati su un obiettivo di rilascio valido.
+Chiamato dal framework quando l'utente rilascia un oggetto dati su una destinazione di rilascio valida.
 
 ```
 virtual BOOL OnDrop(
@@ -485,36 +485,36 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>Parametri
 
-' pDataObject * punta alla [COleDataObject](../../mfc/reference/coledataobject-class.md) che viene rilasciata nell'obiettivo di rilascio.
+'pDataObject' Punta al [COleDataObject](../../mfc/reference/coledataobject-class.md) che viene rilasciato nella destinazione di rilascio.
 
-*dropEffect*<br/>
+*DropEffect (effetto drop)*<br/>
 Effetto di rilascio richiesto dall'utente.
 
-- DROPEFFECT_COPY crea una copia dell'oggetto dati da eliminare.
+- DROPEFFECT_COPY Crea una copia dell'oggetto dati rilasciato.
 
-- DROPEFFECT_MOVE sposta l'oggetto dati nella posizione corrente del mouse.
+- DROPEFFECT_MOVE Sposta l'oggetto dati nella posizione corrente del mouse.
 
-- DROPEFFECT_LINK crea un collegamento tra un oggetto dati e il relativo server.
+- DROPEFFECT_LINK Crea un collegamento tra un oggetto dati e il relativo server.
 
-*point*<br/>
+*Punto*<br/>
 Posizione corrente del mouse rispetto all'area client di visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il rilascio ha avuto esito positivo; in caso contrario, 0.
+Diverso da zero se l'eliminazione ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
 L'implementazione predefinita non esegue alcuna operazione e restituisce FALSE.
 
-Eseguire l'override di questa funzione per implementare l'effetto di un calo OLE nell'area client della visualizzazione. L'oggetto dati può essere esaminato tramite *pDataObject* per i formati di dati degli Appunti e i dati eliminati in corrispondenza del punto specificato.
+Eseguire l'override di questa funzione per implementare l'effetto di un rilascio OLE nell'area client della visualizzazione. L'oggetto dati può essere esaminato tramite *pDataObject* per i formati di dati degli Appunti e i dati rilasciati nel punto specificato.
 
 > [!NOTE]
->  Il Framework non chiama questa funzione se è presente una sostituzione per [OnDropEx](#ondropex) in questa classe di visualizzazione.
+> Il framework non chiama questa funzione se è presente un override di [OnDropEx](#ondropex) in questa classe di visualizzazione.
 
-##  <a name="ondropex"></a>CView:: OnDropEx
+## <a name="cviewondropex"></a><a name="ondropex"></a>CView::OnDropEx
 
-Chiamata eseguita dal framework quando l'utente rilascia un oggetto dati su un obiettivo di rilascio valido.
+Chiamato dal framework quando l'utente rilascia un oggetto dati su una destinazione di rilascio valida.
 
 ```
 virtual DROPEFFECT OnDropEx(
@@ -526,59 +526,59 @@ virtual DROPEFFECT OnDropEx(
 
 ### <a name="parameters"></a>Parametri
 
-*pDataObject*<br/>
-Punta a [COleDataObject](../../mfc/reference/coledataobject-class.md) che viene rilasciato nell'obiettivo di rilascio.
+*pDataObject (oggetto PDataObject)*<br/>
+Punta al [COleDataObject](../../mfc/reference/coledataobject-class.md) che viene rilasciato nella destinazione di rilascio.
 
-*dropDefault*<br/>
-Effetto scelto dall'utente per l'operazione di rilascio predefinita in base allo stato della chiave corrente. Potrebbe essere DROPEFFECT_NONE. Gli effetti di rilascio sono descritti nella sezione Osservazioni.
+*dropPredefinito*<br/>
+Effetto scelto dall'utente per l'operazione di rilascio predefinita in base allo stato corrente della chiave. Potrebbe essere DROPEFFECT_NONE. Gli effetti di eliminazione sono descritti nella sezione Osservazioni.
 
-*dropList*<br/>
-Elenco degli effetti di trascinamento supportati dall'origine di rilascio. I valori dell'effetto di rilascio possono essere combinati tramite **&#124;** l'operazione OR bit per bit (). Gli effetti di rilascio sono descritti nella sezione Osservazioni.
+*elenco di rilascio*<br/>
+Elenco degli effetti di rilascio supportati dall'origine di rilascio. I valori dell'effetto di rilascio possono essere combinati utilizzando l'operazione OR bit per bit **(&#124;**). Gli effetti di eliminazione sono descritti nella sezione Osservazioni.
 
-*point*<br/>
+*Punto*<br/>
 Posizione corrente del mouse rispetto all'area client di visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Effetto di rilascio risultante dal tentativo di rilascio nella posizione specificata dal *punto*. Deve essere uno dei valori indicati da *dropEffectList*. Gli effetti di rilascio sono descritti nella sezione Osservazioni.
+Effetto di rilascio risultante dal tentativo di rilascio nella posizione specificata dal *punto*. Deve essere uno dei valori indicati da *dropEffectList*. Gli effetti di eliminazione sono descritti nella sezione Osservazioni.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita non esegue alcuna operazione e restituisce un valore fittizio (-1) per indicare che il Framework deve chiamare il gestore [OnDrop](#ondrop) .
+L'implementazione predefinita consiste nell'eseguire alcuna operazione e restituire un valore fittizio ( -1 ) per indicare che il framework deve chiamare il gestore [OnDrop.](#ondrop)
 
-Eseguire l'override di questa funzione per implementare l'effetto del trascinamento di un pulsante destro del mouse. Pulsante destro del mouse-trascina in genere Visualizza un menu di scelte quando viene rilasciato il pulsante destro del mouse.
+Eseguire l'override di questa funzione per implementare l'effetto di un trascinamento del pulsante destro del mouse. Il trascinamento con il pulsante destro del mouse in genere visualizza un menu di scelte quando viene rilasciato il pulsante destro del mouse.
 
-L'override di `OnDropEx` deve eseguire una query per il pulsante destro del mouse. È possibile chiamare [GetKeyState](/windows/win32/api/winuser/nf-winuser-getkeystate) o archiviare lo stato del pulsante destro del mouse dal gestore [OnDragEnter](#ondragenter) .
+L'override `OnDropEx` di dovrebbe eseguire una query per il pulsante destro del mouse. È possibile chiamare GetKeyState o archiviare lo stato destro del pulsante del mouse dal gestore [OnDragEnter.You](#ondragenter) can call [GetKeyState](/windows/win32/api/winuser/nf-winuser-getkeystate) or store the right mouse-button state from your OnDragEnter handler.
 
-- Se il pulsante destro del mouse è inattivo, la sostituzione dovrebbe visualizzare un menu popup che offre il supporto degli effetti di rilascio dall'origine di rilascio.
+- Se il pulsante destro del mouse è premuto, la sostituzione dovrebbe visualizzare un menu a comparsa che offre il supporto degli effetti di rilascio dalla sorgente di rilascio.
 
-   - Esaminare l' *elenco a selezione* per determinare gli effetti di rilascio supportati dall'origine di rilascio. Abilitare solo queste azioni nel menu di scelta rapida.
+  - Esaminare *dropList* per determinare gli effetti di rilascio supportati dall'origine di rilascio. Abilitare solo queste azioni nel menu a comparsa.
 
-   - Usare [SetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem) per impostare l'azione predefinita in base a *DropDefault*.
+  - Utilizzare [SetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem) per impostare l'azione predefinita in base a *dropDefault*.
 
-   - Infine, eseguire l'azione indicata dalla selezione dell'utente dal menu di scelta rapida.
+  - Infine, eseguire l'azione indicata dalla selezione dell'utente dal menu a comparsa.
 
-- Se il pulsante destro del mouse non è attivo, la sostituzione deve essere elaborata come richiesta di rilascio standard. Usare l'effetto di rilascio specificato in *DropDefault*. In alternativa, l'override può restituire il valore fittizio (-1) per indicare che `OnDrop` gestirà questa operazione di rilascio.
+- Se il pulsante destro del mouse non è premuto, l'override deve elaborare questo come una richiesta di rilascio standard. Utilizzare l'effetto di rilascio specificato in *dropDefault*. In alternativa, l'override può restituire il valore fittizio `OnDrop` ( -1 ) per indicare che gestirà questa operazione di rilascio.
 
-Utilizzare *pDataObject* per esaminare il `COleDataObject` per il formato dati degli Appunti e i dati eliminati in corrispondenza del punto specificato.
+Utilizzare *pDataObject* per `COleDataObject` esaminare il per il formato dei dati degli Appunti e i dati rilasciati nel punto specificato.
 
-Gli effetti Drop descrivono l'azione associata a un'operazione DROP. Vedere l'elenco seguente di effetti di eliminazione:
+Gli effetti di rilascio descrivono l'azione associata a un'operazione di rilascio. Vedere il seguente elenco di effetti a discesa:
 
-- DROPEFFECT_NONE un rilascio non è consentito.
+- DROPEFFECT_NONE Non sarebbe consentito un goccio.
 
-- DROPEFFECT_COPY viene eseguita un'operazione di copia.
+- DROPEFFECT_COPY Verrà eseguita un'operazione di copia.
 
-- DROPEFFECT_MOVE viene eseguita un'operazione di spostamento.
+- DROPEFFECT_MOVE Verrà eseguita un'operazione di spostamento.
 
-- DROPEFFECT_LINK viene stabilito un collegamento tra i dati eliminati e i dati originali.
+- DROPEFFECT_LINK Verrà stabilito un collegamento dai dati eliminati ai dati originali.
 
-- DROPEFFECT_SCROLL indica che sta per verificarsi un'operazione di scorrimento di trascinamento o che si sta verificando nella destinazione.
+- DROPEFFECT_SCROLL Indica che un'operazione di scorrimento di trascinamento sta per verificarsi o si sta verificando nella destinazione.
 
-Per ulteriori informazioni sull'impostazione del comando di menu predefinito, vedere [SetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem) in Windows SDK e [CMenu:: GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) in questo volume.
+Per ulteriori informazioni sull'impostazione del comando di menu predefinito, vedere [SetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem) in Windows SDK e [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) in questo volume.
 
-##  <a name="onendprinting"></a>CView:: OnEndPrinting
+## <a name="cviewonendprinting"></a><a name="onendprinting"></a>CView::OnEndPrinting
 
-Chiamata eseguita dal Framework dopo la stampa o l'anteprima di un documento.
+Chiamato dal framework dopo che un documento è stato stampato o visualizzato in anteprima.
 
 ```
 virtual void OnEndPrinting(
@@ -591,16 +591,16 @@ virtual void OnEndPrinting(
 *pDC*<br/>
 Punta al contesto di dispositivo stampante.
 
-*pInfo*<br/>
+*pInfo (informazioni in stato inquesto*<br/>
 Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita di questa funzione non esegue alcuna operazione. Eseguire l'override di questa funzione per liberare tutte le risorse GDI allocate nella funzione membro [OnBeginPrinting](#onbeginprinting) .
+L'implementazione predefinita di questa funzione non esegue alcuna operazione. Eseguire l'override di questa funzione per liberare tutte le risorse GDI allocate nel [OnBeginPrinting](#onbeginprinting) funzione membro.
 
-##  <a name="onendprintpreview"></a>CView:: OnEndPrintPreview
+## <a name="cviewonendprintpreview"></a><a name="onendprintpreview"></a>CView::OnEndPrintPreview
 
-Chiamata eseguita dal framework quando l'utente esce dalla modalità di anteprima di stampa.
+Chiamato dal framework quando l'utente esce dalla modalità di anteprima di stampa.
 
 ```
 virtual void OnEndPrintPreview(
@@ -615,24 +615,24 @@ virtual void OnEndPrintPreview(
 *pDC*<br/>
 Punta al contesto di dispositivo stampante.
 
-*pInfo*<br/>
+*pInfo (informazioni in stato inquesto*<br/>
 Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
-*point*<br/>
-Specifica il punto della pagina che è stato visualizzato per ultimo in modalità di anteprima.
+*Punto*<br/>
+Specifica il punto della pagina visualizzato per ultimo in modalità anteprima.
 
-*pView*<br/>
-Punta all'oggetto visualizzazione utilizzato per l'anteprima.
+*Pview*<br/>
+Punta all'oggetto vista utilizzato per l'anteprima.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita di questa funzione chiama la funzione membro [OnEndPrinting](#onendprinting) e ripristina la finestra cornice principale sullo stato in cui si trovava prima dell'inizio dell'anteprima di stampa. Eseguire l'override di questa funzione per eseguire un'elaborazione speciale quando la modalità di anteprima viene terminata. Se, ad esempio, si desidera mantenere la posizione dell'utente nel documento quando si passa dalla modalità di anteprima alla modalità di visualizzazione normale, è possibile scorrere fino alla posizione descritta dal parametro *Point* e il membro `m_nCurPage` della struttura `CPrintInfo` a cui punta il parametro *pInfo* .
+L'implementazione predefinita di questa funzione chiama il [OnEndPrinting](#onendprinting) funzione membro e ripristina la finestra cornice principale allo stato in cui si trovava prima dell'inizio dell'anteprima di stampa. Eseguire l'override di questa funzione per eseguire un'elaborazione speciale quando viene terminata la modalità di anteprima. Ad esempio, se si desidera mantenere la posizione dell'utente nel documento quando si passa dalla modalità *point* di anteprima `m_nCurPage` alla modalità di visualizzazione normale, è possibile scorrere fino alla posizione descritta dal parametro point e dal membro della `CPrintInfo` struttura a cui punta il parametro *pInfo.*
 
-Chiamare sempre la versione della classe base di `OnEndPrintPreview` dall'override, in genere alla fine della funzione.
+Chiamare sempre la versione `OnEndPrintPreview` della classe base di dall'override, in genere alla fine della funzione.
 
-##  <a name="oninitialupdate"></a>CView:: OnInitialUpdate
+## <a name="cviewoninitialupdate"></a><a name="oninitialupdate"></a>CView::OnInitialUpdate
 
-Chiamata eseguita dal Framework dopo che la vista è stata associata per la prima volta al documento, ma prima che venga visualizzata inizialmente la visualizzazione.
+Chiamato dal framework dopo che la visualizzazione viene prima associata al documento, ma prima che la visualizzazione venga inizialmente visualizzata.
 
 ```
 virtual void OnInitialUpdate();
@@ -640,11 +640,11 @@ virtual void OnInitialUpdate();
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita di questa funzione chiama la funzione membro [OnUpdate](#onupdate) senza informazioni sui suggerimenti, ovvero usando i valori predefiniti 0 per il parametro *lHint* e null per il parametro *pHint* . Eseguire l'override di questa funzione per eseguire un'inizializzazione unica che richiede informazioni sul documento. Se, ad esempio, l'applicazione dispone di documenti di dimensioni fisse, è possibile utilizzare questa funzione per inizializzare i limiti di scorrimento di una visualizzazione in base alle dimensioni del documento. Se l'applicazione supporta documenti di dimensioni variabili, utilizzare [OnUpdate](#onupdate) per aggiornare i limiti di scorrimento ogni volta che il documento viene modificato.
+L'implementazione predefinita di questa funzione chiama la funzione membro [OnUpdate](#onupdate) senza informazioni sull'hint, ovvero utilizzando i valori predefiniti 0 per il *lHint* parametro e NULL per il *pHint* parametro). Eseguire l'override di questa funzione per eseguire qualsiasi inizializzazione una tantera che richiede informazioni sul documento. Ad esempio, se l'applicazione dispone di documenti di dimensioni fisse, è possibile utilizzare questa funzione per inizializzare i limiti di scorrimento di una visualizzazione in base alle dimensioni del documento. Se l'applicazione supporta documenti di dimensioni variabili, utilizzare [OnUpdate](#onupdate) per aggiornare i limiti di scorrimento ogni volta che il documento viene modificato.
 
-##  <a name="onpreparedc"></a>CView:: OnPrepareDC
+## <a name="cviewonpreparedc"></a><a name="onpreparedc"></a>CView::OnPrepareDC
 
-Chiamata eseguita dal Framework prima della chiamata della funzione membro [onpare](#ondraw) per la visualizzazione dello schermo e prima della chiamata della funzione membro [OnPrint](#onprint) per ogni pagina durante la stampa o l'anteprima di stampa.
+Chiamato dal framework prima che il [OnDraw](#ondraw) funzione membro viene chiamata per la visualizzazione dello schermo e prima di [OnPrint](#onprint) funzione membro viene chiamata per ogni pagina durante la stampa o l'anteprima di stampa.
 
 ```
 virtual void OnPrepareDC(
@@ -657,32 +657,32 @@ virtual void OnPrepareDC(
 *pDC*<br/>
 Punta al contesto di dispositivo da utilizzare per il rendering di un'immagine del documento.
 
-*pInfo*<br/>
-Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente se `OnPrepareDC` viene chiamato per la stampa o l'anteprima di stampa. il membro `m_nCurPage` specifica la pagina che sta per essere stampata. Questo parametro è NULL se `OnPrepareDC` viene chiamato per la visualizzazione dello schermo.
+*pInfo (informazioni in stato inquesto*<br/>
+Punta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) struttura che descrive `OnPrepareDC` il processo di stampa corrente se viene chiamato per la stampa o anteprima di stampa; il `m_nCurPage` membro specifica la pagina che sta per essere stampata. Questo parametro `OnPrepareDC` è NULL se viene chiamato per la visualizzazione dello schermo.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita di questa funzione non esegue alcuna operazione se la funzione viene chiamata per la visualizzazione dello schermo. Tuttavia, questa funzione viene sottoposta a override nelle classi derivate, ad esempio [CScrollView](../../mfc/reference/cscrollview-class.md), per modificare gli attributi del contesto di dispositivo; di conseguenza, è necessario chiamare sempre l'implementazione della classe di base all'inizio dell'override.
+L'implementazione predefinita di questa funzione non esegue alcuna operazione se la funzione viene chiamata per la visualizzazione dello schermo. Tuttavia, questa funzione viene sottoposta a override nelle classi derivate, ad esempio [CScrollView](../../mfc/reference/cscrollview-class.md), per regolare gli attributi del contesto di periferica; di conseguenza, è necessario chiamare sempre l'implementazione della classe base all'inizio dell'override.
 
-Se la funzione viene chiamata per la stampa, l'implementazione predefinita esamina le informazioni di pagina archiviate nel parametro *pInfo* . Se la lunghezza del documento non è stata specificata, `OnPrepareDC` presuppone che il documento sia di una pagina lunga e arresta il ciclo di stampa dopo la stampa di una pagina. La funzione interrompe il ciclo di stampa impostando il membro `m_bContinuePrinting` della struttura su FALSE.
+Se la funzione viene chiamata per la stampa, l'implementazione predefinita esamina le informazioni sulla pagina archiviate nel *pInfo* parametro. Se la lunghezza del documento non `OnPrepareDC` è stata specificata, si presuppone che il documento sia lungo una pagina e interrompe il ciclo di stampa dopo la stampa di una pagina. La funzione interrompe il ciclo `m_bContinuePrinting` di stampa impostando il membro della struttura su FALSE.
 
-Eseguire l'override `OnPrepareDC` per uno dei seguenti motivi:
+Eseguire `OnPrepareDC` l'override per uno dei seguenti motivi:
 
-- Per modificare gli attributi del contesto di dispositivo come necessario per la pagina specificata. Ad esempio, se è necessario impostare la modalità di mapping o altre caratteristiche del contesto di dispositivo, eseguire questa operazione in questa funzione.
+- Per regolare gli attributi del contesto di dispositivo in base alle esigenze per la pagina specificata. Ad esempio, se è necessario impostare la modalità di mapping o altre caratteristiche del contesto di dispositivo, eseguire questa operazione in questa funzione.
 
-- Per eseguire l'impaginazione dell'ora di stampa. Normalmente si specifica la lunghezza del documento all'inizio della stampa, usando la funzione membro [OnPreparePrinting](#onprepareprinting) . Tuttavia, se non si conosce in anticipo per quanto tempo il documento (ad esempio, quando si stampa un numero non determinato di record da un database), eseguire l'override di `OnPrepareDC` per verificare la fine del documento mentre viene stampato. Quando non sono più presenti documenti da stampare, impostare il membro `m_bContinuePrinting` della struttura `CPrintInfo` su FALSE.
+- Per eseguire l'impaginazione in fase di stampa. In genere si specifica la lunghezza del documento all'inizio della stampa, utilizzando la funzione membro [OnPreparePrinting.](#onprepareprinting) Tuttavia, se non si conosce in anticipo la durata del documento (ad esempio, quando `OnPrepareDC` si stampa un numero indeterminato di record da un database), eseguire l'override per verificare la fine del documento durante la stampa. Quando non vi è più del documento da `m_bContinuePrinting` stampare, impostare il membro della `CPrintInfo` struttura su FALSE.
 
-- Per inviare i codici di escape alla stampante in base a una pagina alla volta. Per inviare codici di escape da `OnPrepareDC`, chiamare la funzione membro `Escape` del parametro *PDC* .
+- Per inviare i codici di escape alla stampante pagina per pagina. Per inviare `OnPrepareDC`codici di `Escape` escape da , chiamare la funzione membro del parametro *pDC.*
 
-Chiamare la versione della classe base di `OnPrepareDC` all'inizio dell'override.
+Chiamare la versione `OnPrepareDC` della classe base di all'inizio dell'override.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]
 
-##  <a name="onprepareprinting"></a>CView:: OnPreparePrinting
+## <a name="cviewonprepareprinting"></a><a name="onprepareprinting"></a>CView::OnPreparePrinting
 
-Chiamata eseguita dal Framework prima della stampa o dell'anteprima di un documento.
+Chiamato dal framework prima che un documento venga stampato o visualizzato in anteprima.
 
 ```
 virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
@@ -690,7 +690,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 
 ### <a name="parameters"></a>Parametri
 
-*pInfo*<br/>
+*pInfo (informazioni in stato inquesto*<br/>
 Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -701,27 +701,27 @@ Diverso da zero per iniziare la stampa; 0 se il processo di stampa è stato annu
 
 L'implementazione predefinita non esegue alcuna operazione.
 
-È necessario eseguire l'override di questa funzione per abilitare la stampa e l'anteprima di stampa. Chiamare la funzione membro [DoPreparePrinting](#doprepareprinting) , passando il parametro *pInfo* e restituire il relativo valore restituito. `DoPreparePrinting` Visualizza la finestra di dialogo Stampa e crea un contesto di dispositivo stampante. Se si desidera inizializzare la finestra di dialogo Stampa con valori diversi da quelli predefiniti, assegnare i valori ai membri di *pInfo*. Se, ad esempio, si conosce la lunghezza del documento, passare il valore alla funzione membro [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) di *pInfo* prima di chiamare `DoPreparePrinting`. Questo valore viene visualizzato nella casella a: nella parte relativa all'intervallo della finestra di dialogo Stampa.
+È necessario eseguire l'override di questa funzione per abilitare la stampa e l'anteprima di stampa. Chiamare il [DoPreparePrinting](#doprepareprinting) funzione membro, passando il *pInfo* parametro e quindi restituire il valore restituito; `DoPreparePrinting` visualizza la finestra di dialogo Stampa e crea un contesto di periferica della stampante. Se si desidera inizializzare la finestra di dialogo Stampa con valori diversi da quelli predefiniti, assegnare valori ai membri di *pInfo*. Ad esempio, se si conosce la lunghezza del documento, passare il valore alla `DoPreparePrinting`funzione membro [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) di *pInfo* prima di chiamare . Questo valore viene visualizzato nella casella A: della parte Intervallo della finestra di dialogo Stampa.
 
-`DoPreparePrinting` non Visualizza la finestra di dialogo Stampa per un processo di anteprima. Se si desidera ignorare la finestra di dialogo Stampa per un processo di stampa, verificare che il `m_bPreview` membro di *pInfo* sia false, quindi impostarlo su true prima di passarlo a `DoPreparePrinting`; reimpostarlo su FALSE in seguito.
+`DoPreparePrinting`non visualizza la finestra di dialogo Stampa per un lavoro di anteprima. Se si desidera ignorare la finestra di dialogo `m_bPreview` Stampa per un processo di stampa, verificare `DoPreparePrinting`che il membro di *pInfo* sia FALSE e quindi impostarlo su TRUE prima di passarlo a ; ripristinarlo su FALSE in seguito.
 
-Se è necessario eseguire inizializzazioni che richiedono l'accesso all'oggetto `CDC` che rappresenta il contesto di dispositivo stampante (ad esempio, se è necessario ottenere informazioni sulle dimensioni della pagina prima di specificare la lunghezza del documento), eseguire l'override della funzione membro `OnBeginPrinting`.
+Se è necessario eseguire inizializzazioni che `CDC` richiedono l'accesso all'oggetto che rappresenta il contesto di periferica della stampante (ad `OnBeginPrinting` esempio, se è necessario conoscere le dimensioni della pagina prima di specificare la lunghezza del documento), eseguire l'override della funzione membro.
 
-Se si desidera impostare il valore del `m_nNumPreviewPages` o `m_strPageDesc` membri del parametro *pInfo* , eseguire questa operazione dopo aver chiamato `DoPreparePrinting`. La funzione membro `DoPreparePrinting` imposta `m_nNumPreviewPages` sul valore trovato nell'oggetto dell'applicazione. Il file INI e imposta `m_strPageDesc` sul valore predefinito.
+Se si desidera impostare `m_nNumPreviewPages` il `m_strPageDesc` valore dei membri o del `DoPreparePrinting` *pInfo,* eseguire questa operazione dopo aver chiamato . La `DoPreparePrinting` funzione `m_nNumPreviewPages` membro imposta il valore trovato nell'oggetto . INI e `m_strPageDesc` imposta il valore predefinito.
 
 ### <a name="example"></a>Esempio
 
-  Eseguire l'override `OnPreparePrinting` e chiamare `DoPreparePrinting` dalla sostituzione in modo che nel Framework venga visualizzata una finestra di dialogo Stampa e venga creato un controller di dominio della stampante.
+  Eseguire `OnPreparePrinting` l'override e chiamare `DoPreparePrinting` dalla sostituzione in modo che il framework visualizzerà una finestra di dialogo Stampa e creerà una stampante DC per l'utente.
 
 [!code-cpp[NVC_MFCDocView#184](../../mfc/codesnippet/cpp/cview-class_2.cpp)]
 
-Se si conosce il numero di pagine contenute nel documento, impostare la pagina massima in `OnPreparePrinting` prima di chiamare `DoPreparePrinting`. Il Framework visualizzerà il numero massimo di pagine nella casella "a" della finestra di dialogo Stampa.
+Se si conosce il numero di pagine contenute nel documento, impostare la pagina massima `OnPreparePrinting` prima di chiamare `DoPreparePrinting`. Il framework visualizzerà il numero di pagina massimo nella casella "a" della finestra di dialogo Stampa.
 
 [!code-cpp[NVC_MFCDocView#185](../../mfc/codesnippet/cpp/cview-class_3.cpp)]
 
-##  <a name="onprint"></a>CView:: OnPrint
+## <a name="cviewonprint"></a><a name="onprint"></a>CView::OnPrint
 
-Chiamata eseguita dal Framework per la stampa o l'anteprima di una pagina del documento.
+Chiamato dal framework per stampare o visualizzare in anteprima una pagina del documento.
 
 ```
 virtual void OnPrint(
@@ -734,38 +734,38 @@ virtual void OnPrint(
 *pDC*<br/>
 Punta al contesto di dispositivo stampante.
 
-*pInfo*<br/>
-Punta a una struttura di `CPrintInfo` che descrive il processo di stampa corrente.
+*pInfo (informazioni in stato inquesto*<br/>
+Punta a `CPrintInfo` una struttura che descrive il lavoro di stampa corrente.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per ogni pagina da stampare, il Framework chiama questa funzione immediatamente dopo aver chiamato la funzione membro [OnPrepareDC](#onpreparedc) . La pagina da stampare viene specificata dal membro `m_nCurPage` della struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) a cui punta *pInfo* . L'implementazione predefinita chiama la funzione membro [onpare](#ondraw) e la passa al contesto del dispositivo stampante.
+Per ogni pagina da stampare, il framework chiama questa funzione immediatamente dopo aver chiamato la funzione membro [OnPrepareDC.](#onpreparedc) La pagina da stampare `m_nCurPage` è specificata dal membro della [Struttura CPrintInfo](../../mfc/reference/cprintinfo-structure.md) a cui punta *pInfo.* L'implementazione predefinita chiama la funzione membro [OnDraw](#ondraw) e le passa il contesto di periferica della stampante.
 
-Eseguire l'override di questa funzione per uno dei motivi seguenti:
+Eseguire l'override di questa funzione per uno dei seguenti motivi:
 
-- Per consentire la stampa di documenti a più pagine. Esegue il rendering solo della parte del documento che corrisponde alla pagina attualmente stampata. Se si usa `OnDraw` per eseguire il rendering, è possibile modificare l'origine del viewport in modo che venga stampata solo la parte appropriata del documento.
+- Per consentire la stampa di documenti a più pagine. Eseguire il rendering solo della parte del documento che corrisponde alla pagina attualmente stampata. Se si utilizza `OnDraw` per eseguire il rendering, è possibile regolare l'origine della finestra in modo che venga stampata solo la parte appropriata del documento.
 
-- Per rendere l'immagine stampata diversa dall'immagine dello schermo, ovvero se l'applicazione non è WYSIWYG. Anziché passare il contesto di dispositivo stampante a `OnDraw`, usare il contesto di dispositivo per eseguire il rendering di un'immagine usando gli attributi non visualizzati sullo schermo.
+- Per rendere l'immagine stampata diversa dall'immagine dello schermo (ovvero, se l'applicazione non è WYSIWYG). Anziché passare il contesto di periferica della stampante a `OnDraw`, utilizzare il contesto di periferica per eseguire il rendering di un'immagine utilizzando attributi non visualizzati sullo schermo.
 
-   Se sono necessarie risorse GDI per la stampa che non vengono usate per la visualizzazione dello schermo, selezionarle nel contesto di dispositivo prima di disegnarle e deselezionarle in seguito. Queste risorse GDI devono essere allocate in [OnBeginPrinting](#onbeginprinting) e rilasciate in [OnEndPrinting](#onendprinting).
+   Se sono necessarie risorse GDI per la stampa che non vengono utilizzate per la visualizzazione su schermo, selezionarle nel contesto di periferica prima di disegnare e deselezionarle in un secondo momento. Queste risorse GDI devono essere allocate in [OnBeginPrinting](#onbeginprinting) e rilasciate in [OnEndPrinting](#onendprinting).
 
-- Per implementare intestazioni o piè di pagina. È comunque possibile usare `OnDraw` per eseguire il rendering limitando l'area in cui è possibile stampare.
+- Per implementare intestazioni o piè di pagina. È comunque `OnDraw` possibile utilizzare per eseguire il rendering limitando l'area su cui è possibile stampare.
 
-Si noti che il `m_rectDraw` membro del parametro *pInfo* descrive l'area stampabile della pagina in unità logiche.
+Si noti che il `m_rectDraw` membro del *pInfo* parametro descrive l'area stampabile della pagina in unità logiche.
 
-Non chiamare `OnPrepareDC` nell'override di `OnPrint`; il Framework chiama automaticamente `OnPrepareDC` prima di chiamare `OnPrint`.
+Non chiamare `OnPrepareDC` l'override `OnPrint`di ; il framework `OnPrepareDC` chiama `OnPrint`automaticamente prima di chiamare .
 
 ### <a name="example"></a>Esempio
 
-Di seguito è riportato uno scheletro per una funzione `OnPrint` sottoposta a override:
+Di seguito è riportato `OnPrint` uno scheletro per una funzione sottoposta a override:
 
 [!code-cpp[NVC_MFCDocView#186](../../mfc/codesnippet/cpp/cview-class_4.cpp)]
 
-Per un altro esempio, vedere [CRichEditView::P rintinsiderect](../../mfc/reference/cricheditview-class.md#printinsiderect).
+Per un altro esempio, vedere [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect).
 
-##  <a name="onscroll"></a>CView:: OnScroll
+## <a name="cviewonscroll"></a><a name="onscroll"></a>CView::OnScroll
 
-Chiamata eseguita dal Framework per determinare se lo scorrimento è possibile.
+Chiamato dal framework per determinare se lo scorrimento è possibile.
 
 ```
 virtual BOOL OnScroll(
@@ -776,40 +776,40 @@ virtual BOOL OnScroll(
 
 ### <a name="parameters"></a>Parametri
 
-*nScrollCode*<br/>
-Codice A barre di scorrimento che indica la richiesta di scorrimento dell'utente. Questo parametro è costituito da due parti: un byte di ordine inferiore, che determina il tipo di scorrimento che si verifica orizzontalmente e un byte di ordine superiore, che determina il tipo di scorrimento che si verifica verticalmente:
+*nScrollCode (Codice degli effetti su inequi*<br/>
+Codice a barre di scorrimento che indica la richiesta di scorrimento dell'utente. Questo parametro è composto da due parti: un byte meno significativo, che determina il tipo di scorrimento che si verifica orizzontalmente, e un byte di ordine superiore, che determina il tipo di scorrimento verticale:
 
 - SB_BOTTOM scorre verso il basso.
 
-- SB_LINEDOWN scorre una riga verso il basso.
+- SB_LINEDOWN Scorre una riga verso il basso.
 
-- SB_LINEUP scorre una riga verso l'alto.
+- SB_LINEUP Scorre di una riga verso l'alto.
 
-- SB_PAGEDOWN scorre verso il basso di una pagina.
+- SB_PAGEDOWN Scorre di una pagina verso il basso.
 
-- SB_PAGEUP scorre una pagina verso l'alto.
+- SB_PAGEUP Scorre di una pagina verso l'alto.
 
-- SB_THUMBTRACK trascina la casella di scorrimento nella posizione specificata. La posizione corrente è specificata in *nPos*.
+- SB_THUMBTRACK Trascina la casella di scorrimento nella posizione specificata. La posizione corrente è specificata in *nPos*.
 
-- SB_TOP scorre verso l'alto.
+- SB_TOP Scorre verso l'alto.
 
-*nPos*<br/>
-Contiene la posizione corrente della casella di scorrimento se il codice della barra di scorrimento è SB_THUMBTRACK; in caso contrario, non viene utilizzato. A seconda dell'intervallo di scorrimento iniziale, *nPos* può essere negativo e deve essere eseguito il cast a un **int** se necessario.
+*Npos*<br/>
+Contiene la posizione corrente della casella di scorrimento se il codice della barra di scorrimento è SB_THUMBTRACK; in caso contrario non viene utilizzato. A seconda dell'intervallo di scorrimento iniziale, *nPos* può essere negativo e deve essere eseguito il cast in un **int,** se necessario.
 
-*bDoScroll*<br/>
-Determina se eseguire effettivamente l'azione di scorrimento specificata. Se TRUE, lo scorrimento deve essere eseguito. Se FALSE, lo scorrimento non deve essere eseguito.
+*bScorrere*<br/>
+Determina se è necessario eseguire effettivamente l'azione di scorrimento specificata. Se TRUE, lo scorrimento deve essere eseguito; se FALSE, lo scorrimento non deve verificarsi.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se *bDoScroll* è true e la visualizzazione è stata effettivamente spostata, restituire un valore diverso da zero; in caso contrario, 0. Se *bDoScroll* è false, restituire il valore restituito se *bDoScroll* è true, anche se non si esegue effettivamente lo scorrimento.
+Se *bDoScroll* è TRUE e la visualizzazione è stata effettivamente svolta, quindi restituire diverso da zero; in caso contrario 0. Se *bDoScroll* è FALSE, quindi restituire il valore che sarebbe stato restituito se *bDoScroll* fosse TRUE, anche se in realtà non si esegue lo scorrimento.
 
 ### <a name="remarks"></a>Osservazioni
 
-In un caso questa funzione viene chiamata dal Framework con *bDoScroll* impostato su true quando la visualizzazione riceve un messaggio ScrollBar. In questo caso, è necessario scorrere effettivamente la visualizzazione. Nell'altro caso questa funzione viene chiamata con *bDoScroll* impostato su false quando un elemento OLE viene inizialmente trascinato nell'area di scorrimento automatico di un obiettivo di rilascio prima che lo scorrimento avvenga effettivamente. In questo caso, non è necessario scorrere effettivamente la visualizzazione.
+In un caso questa funzione viene chiamata dal framework con *bDoScroll* impostato su TRUE quando la visualizzazione riceve un messaggio della barra di scorrimento. In questo caso, si dovrebbe effettivamente scorrere la vista. Nell'altro caso questa funzione viene chiamata con *bDoScroll* impostato su FALSE quando un elemento OLE viene inizialmente trascinato nell'area di scorrimento automatico di una destinazione di rilascio prima dello scorrimento effettivamente. In questo caso, non è necessario scorrere effettivamente la visualizzazione.
 
-##  <a name="onscrollby"></a>CView:: OnScrollBy
+## <a name="cviewonscrollby"></a><a name="onscrollby"></a>CView::OnScrollBy
 
-Chiamata eseguita dal framework quando l'utente visualizza un'area oltre la visualizzazione corrente del documento, trascinando un elemento OLE sui bordi correnti della visualizzazione o modificando le barre di scorrimento verticali o orizzontali.
+Chiamato dal framework quando l'utente visualizza un'area oltre la visualizzazione corrente del documento, trascinando un elemento OLE sui bordi correnti della visualizzazione o modificando le barre di scorrimento verticali o orizzontali.
 
 ```
 virtual BOOL OnScrollBy(
@@ -820,26 +820,26 @@ virtual BOOL OnScrollBy(
 ### <a name="parameters"></a>Parametri
 
 *sizeScroll*<br/>
-Numero di pixel a scorrimento orizzontale e verticale.
+Numero di pixel scorrevole orizzontalmente e verticalmente.
 
-*bDoScroll*<br/>
-Determina se si verifica lo scorrimento della visualizzazione. Se TRUE, viene eseguito lo scorrimento; Se FALSE, lo scorrimento non viene eseguito.
+*bScorrere*<br/>
+Determina se si verifica lo scorrimento della visualizzazione. Se TRUE, lo scorrimento viene eseguito; se FALSE, lo scorrimento non si verifica.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se è stato possibile scorrere la vista; in caso contrario, 0.
+Diverso da zero se è stato possibile scorrere la visualizzazione; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Nelle classi derivate questo metodo verifica se la visualizzazione è scorrevole nella direzione richiesta dall'utente e quindi aggiorna la nuova area, se necessario. Questa funzione viene chiamata automaticamente da [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [CWnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) per eseguire la richiesta di scorrimento effettiva.
+Nelle classi derivate questo metodo verifica se la visualizzazione è scorrevole nella direzione richiesta dall'utente e quindi aggiorna la nuova area, se necessario. Questa funzione viene chiamata automaticamente da [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) per eseguire la richiesta di scorrimento effettiva.
 
-L'implementazione predefinita di questo metodo non modifica la vista, ma se non viene chiamata, la vista non scorrerà in una classe derivata da `CScrollView`.
+L'implementazione predefinita di questo metodo non modifica la visualizzazione, ma se `CScrollView`non viene chiamato, la visualizzazione non scorrerà in una classe derivata.
 
-Se la larghezza o l'altezza del documento è superiore a 32767 pixel, lo scorrimento precedente 32767 avrà esito negativo perché `OnScrollBy` viene chiamato con un argomento *sizeScroll* non valido.
+Se la larghezza o l'altezza del documento supera i 32767 `OnScrollBy` pixel, lo scorrimento oltre 32767 avrà esito negativo perché viene chiamato con un argomento *sizeScroll* non valido.
 
-##  <a name="onupdate"></a>CView:: OnUpdate
+## <a name="cviewonupdate"></a><a name="onupdate"></a>CView::OnAggiorna
 
-Chiamata eseguita dal Framework dopo che il documento della vista è stato modificato. Questa funzione viene chiamata da [CDocument:: UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) e consente alla visualizzazione di aggiornare la visualizzazione per riflettere tali modifiche.
+Chiamato dal framework dopo che il documento della visualizzazione è stato modificato; questa funzione viene chiamata da [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) e consente alla visualizzazione di aggiornare la visualizzazione per riflettere tali modifiche.
 
 ```
 virtual void OnUpdate(
@@ -851,9 +851,9 @@ virtual void OnUpdate(
 ### <a name="parameters"></a>Parametri
 
 *pSender*<br/>
-Punta alla visualizzazione che ha modificato il documento oppure NULL se tutte le viste devono essere aggiornate.
+Punta alla visualizzazione che ha modificato il documento o NULL se tutte le viste devono essere aggiornate.
 
-*lHint*<br/>
+*LSuggerimento*<br/>
 Contiene informazioni sulle modifiche.
 
 *pHint*<br/>
@@ -861,19 +861,19 @@ Punta a un oggetto che archivia le informazioni sulle modifiche.
 
 ### <a name="remarks"></a>Osservazioni
 
-Viene anche chiamato dall'implementazione predefinita di [OnInitialUpdate](#oninitialupdate). L'implementazione predefinita invalida l'intera area client e la contrassegna per il disegno quando viene ricevuto il messaggio di WM_PAINT successivo. Eseguire l'override di questa funzione se si desidera aggiornare solo le aree che eseguono il mapping alle parti modificate del documento. A tale scopo, è necessario passare informazioni sulle modifiche utilizzando i parametri dell'hint.
+Viene inoltre chiamato dall'implementazione predefinita di [OnInitialUpdate](#oninitialupdate). L'implementazione predefinita invalida l'intera area client, contrassegnandola per il disegno quando viene ricevuto il messaggio di WM_PAINT successivo. Eseguire l'override di questa funzione se si desidera aggiornare solo le aree che eseguono il mapping alle parti modificate del documento. A tale scopo è necessario passare informazioni sulle modifiche utilizzando i parametri di suggerimento.
 
-Per usare *lHint*, definire valori di hint speciali, in genere una maschera di maschera o un tipo enumerato e fare in modo che il documento passi uno di questi valori. Per usare *pHint*, derivare una classe hint da [CObject](../../mfc/reference/cobject-class.md) e fare in modo che il documento passi un puntatore a un oggetto hint; Quando si esegue l'override di `OnUpdate`, utilizzare la funzione membro [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) per determinare il tipo di runtime dell'oggetto hint.
+Per utilizzare *lHint*, definire valori di hint speciali, in genere una maschera di bit o un tipo enumerato, e fare in modo che il documento passi uno di questi valori. Per utilizzare *pHint*, derivare una classe hint da [CObject](../../mfc/reference/cobject-class.md) e fare in modo che il documento passi un puntatore a un oggetto hint; Quando si `OnUpdate`esegue l'override , utilizzare la funzione membro [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) per determinare il tipo in fase di esecuzione dell'oggetto hint.
 
-In genere non è consigliabile eseguire alcun disegno direttamente da `OnUpdate`. Determinare invece il rettangolo che descrive, in coordinate del dispositivo, l'area che richiede l'aggiornamento; passare questo rettangolo a [CWnd:: InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect). In questo modo il disegno verrà eseguito alla successiva ricezione di un messaggio di [WM_PAINT](/windows/win32/gdi/wm-paint) .
+In genere non è necessario `OnUpdate`eseguire alcun disegno direttamente da . Determinare invece il rettangolo che descrive, in coordinate del dispositivo, l'area che richiede l'aggiornamento; passare questo rettangolo a [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect). In questo modo il disegno si verifica la volta successiva che viene ricevuto un messaggio [di WM_PAINT.](/windows/win32/gdi/wm-paint)
 
-Se *lHint* è 0 e *pHint* è null, il documento ha inviato una notifica di aggiornamento generica. Se una visualizzazione riceve una notifica di aggiornamento generica o non può decodificare gli hint, deve invalidare l'intera area client.
+Se *lHint* è 0 e *pHint* è NULL, il documento ha inviato una notifica di aggiornamento generica. Se una vista riceve una notifica di aggiornamento generica o se non è in grado di decodificare i suggerimenti, deve invalidare l'intera area client.
 
 ## <a name="see-also"></a>Vedere anche
 
-[MDIDOCVW di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Classe CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)<br/>

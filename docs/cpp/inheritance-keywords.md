@@ -18,16 +18,16 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: 781673582cb2c3086677b05abc6a7eb73eeabdb4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f0aae655540b4d3f9130d9840d77e0abcf270cc2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178186"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374094"
 ---
 # <a name="inheritance-keywords"></a>Parole chiave di ereditarietà
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 ```
 class [__single_inheritance] class-name;
@@ -37,7 +37,7 @@ class [__virtual_inheritance] class-name;
 
 dove:
 
-*Nome classe*<br/>
+*nome-classe*<br/>
 Il nome della classe che si sta dichiarando.
 
 Il linguaggio C++ consente di dichiarare un puntatore a un membro della classe prima della definizione della classe. Ad esempio:
@@ -47,15 +47,15 @@ class S;
 int S::*p;
 ```
 
-Nel codice precedente, `p` viene dichiarata come puntatore a un membro integer della classe S. Tuttavia, `class S` non è ancora stato definito in questo codice. è stata dichiarata solo. Quando il compilatore rileva tale puntatore, deve effettuare una rappresentazione generalizzata del puntatore. La dimensione della rappresentazione dipende dal modello di ereditarietà specificato. Sono disponibili quattro modi per specificare un modello di ereditarietà al compilatore:
+Nel codice precedente, `p` viene dichiarato come un puntatore a un membro integer della classe S. Tuttavia, `class S` non è ancora stato definito in questo codice; è stato solo dichiarato. Quando il compilatore rileva tale puntatore, deve effettuare una rappresentazione generalizzata del puntatore. La dimensione della rappresentazione dipende dal modello di ereditarietà specificato. Sono disponibili quattro modi per specificare un modello di ereditarietà al compilatore:
 
-- Nell'IDE sotto la **rappresentazione da puntatore a membro**
+- Nell'IDE in **rappresentazione puntatore a membro**
 
-- Dalla riga di comando usando l'opzione [/VMG](../build/reference/vmb-vmg-representation-method.md)
+- Nella riga di comando utilizzando l'opzione [/vmg](../build/reference/vmb-vmg-representation-method.md)
 
-- Uso del pragma [pointers_to_members](../preprocessor/pointers-to-members.md)
+- Utilizzo del pragma [pointers_to_members](../preprocessor/pointers-to-members.md)
 
-- Utilizzo delle parole chiave di ereditarietà **__single_inheritance**, **__multiple_inheritance**e **__virtual_inheritance**. Con questa tecnica viene controllato il modello di ereditarietà in base alle classi.
+- Utilizzando le parole chiave di ereditarietà **__single_inheritance**, **__multiple_inheritance**e **__virtual_inheritance**. Con questa tecnica viene controllato il modello di ereditarietà in base alle classi.
 
     > [!NOTE]
     >  Se si dichiara sempre un puntatore a un membro di una classe dopo la definizione della classe, non è necessario utilizzare nessuna di queste opzioni.
@@ -72,11 +72,11 @@ int S::*p;
 indipendentemente dalle opzioni della riga di comando o dai pragma, i puntatori ai membri di `class S` utilizzeranno la più piccola rappresentazione possibile.
 
 > [!NOTE]
->  La stessa dichiarazione con prototipo della rappresentazione della classe puntatore a membro deve verificarsi in ogni unità di conversione che dichiara i puntatori ai membri di quella classe e la dichiarazione deve verificarsi prima che vengano dichiarati i puntatori ai membri.
+> La stessa dichiarazione con prototipo della rappresentazione della classe puntatore a membro deve verificarsi in ogni unità di conversione che dichiara i puntatori ai membri di quella classe e la dichiarazione deve verificarsi prima che vengano dichiarati i puntatori ai membri.
 
-Per compatibilità con le versioni precedenti, **_single_inheritance**, **_multiple_inheritance**e **_virtual_inheritance** sono sinonimi **di __single_inheritance**, **__multiple_inheritance**e **__virtual_inheritance** a meno che non sia specificata l'opzione del compilatore [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
+Per compatibilità con le versioni precedenti, **_single_inheritance**, **_multiple_inheritance**e **_virtual_inheritance** sono sinonimi di **__single_inheritance**, **__multiple_inheritance**e **__virtual_inheritance,** a meno che non venga specificata l'opzione del compilatore [ \(/-As Disable).](../build/reference/za-ze-disable-language-extensions.md)
 
-**Fine sezione specifica Microsoft**
+**FINE Specifico di Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

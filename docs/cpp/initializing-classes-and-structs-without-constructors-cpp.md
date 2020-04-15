@@ -1,14 +1,14 @@
 ---
 title: Inizializzazione delle parentesi graffe per classi, struct e unioni
-description: USA inizializzazione parentesi graffa con C++ qualsiasi classe, struct o Unione
+description: Utilizzare l'inizializzazione delle parentesi graffe con qualsiasi classe, struct o unione di C
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 4628ffe8935fc32e86468c631d5d9e9622d63d2e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075877"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374068"
 ---
 # <a name="brace-initialization"></a>Inizializzazione con parentesi graffe
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Si noti che quando una classe o uno struct non ha un costruttore, fornire gli elementi elenco nell'ordine in cui i membri vengono dichiarati nella classe. Se la classe dispone di un costruttore, fornire gli elementi nell'ordine dei parametri. Se un tipo dispone di un costruttore predefinito, dichiarato in modo implicito o esplicito, è possibile utilizzare l'inizializzazione predefinita con parentesi graffe (con le parentesi graffe vuote). Ad esempio, la classe seguente può essere inizializzata utilizzando sia l'inizializzazione con parentesi graffe predefinita che quella non predefinita:
+Si noti che quando una classe o uno struct non dispone di alcun costruttore, si forniscono gli elementi dell'elenco nell'ordine in cui i membri vengono dichiarati nella classe. Se la classe dispone di un costruttore, fornire gli elementi nell'ordine dei parametri. Se un tipo dispone di un costruttore predefinito, dichiarato in modo implicito o esplicito, è possibile utilizzare l'inizializzazione predefinita con parentesi graffe (con le parentesi graffe vuote). Ad esempio, la classe seguente può essere inizializzata utilizzando sia l'inizializzazione con parentesi graffe predefinita che quella non predefinita:
 
 ```cpp
 #include <string>
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-È possibile usare l'inizializzazione delle parentesi graffe ovunque si esegua l'inizializzazione, ad esempio un parametro di funzione o un valore restituito o con la parola chiave **New** :
+È possibile utilizzare l'inizializzazione delle parentesi graffe ovunque si esegue in genere l'inizializzazione, ad esempio come parametro di funzione o valore restituito, o con la parola chiave **new:You** can use brace initialization anywhere you would typically do initialization, for example, as a function parameter or a return value, or with the new keyword:
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,18 +136,18 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-In modalità **/std: c++ 17** , le regole per l'inizializzazione con parentesi graffe vuote sono leggermente più restrittive. Vedere [costruttori derivati e inizializzazione di aggregazione estesa](constructors-cpp.md#extended_aggregate).
+In modalità **/std:c'17,** le regole per l'inizializzazione delle parentesi graffe vuote sono leggermente più restrittive. Vedere [Costruttori derivati e inizializzazione di aggregazione estesa](constructors-cpp.md#extended_aggregate).
 
-## <a name="initializer_list-constructors"></a>costruttori di initializer_list
+## <a name="initializer_list-constructors"></a>Costruttori initializer_list
 
-La [classe initializer_list](../standard-library/initializer-list-class.md) rappresenta un elenco di oggetti di un tipo specificato che può essere utilizzato in un costruttore e in altri contesti. È possibile creare un initializer_list tramite l'inizializzazione con parentesi graffe:
+Il [initializer_list Class](../standard-library/initializer-list-class.md) rappresenta un elenco di oggetti di un tipo specificato che possono essere utilizzati in un costruttore e in altri contesti. È possibile creare un initializer_list tramite l'inizializzazione con parentesi graffe:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  Per utilizzare questa classe, è necessario includere l'intestazione di [> initializer_list di\<](../standard-library/initializer-list.md) .
+> Per utilizzare questa classe, [ \<](../standard-library/initializer-list.md) è necessario includere il initializer_list>'intestazione.
 
 Un `initializer_list` può essere copiato. In questo caso, i membri del nuovo elenco sono riferimenti ai membri dell'elenco originale:
 

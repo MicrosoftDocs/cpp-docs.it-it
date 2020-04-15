@@ -4,45 +4,45 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: a36c112de8c760f91afd5cf544b355f7cb8e1bed
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 947cd09023ef4028a32db8e2e4e8b33f7e04e0dd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612280"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374798"
 ---
 # <a name="connection-maps"></a>Mappe di connessione
 
-OLE controlli sono in grado di esporre interfacce ad altre applicazioni. Queste interfacce consentono solo l'accesso da un contenitore in tale controllo. Se un controllo OLE richiede per accedere a interfacce esterne di altri oggetti OLE, è necessario stabilire un punto di connessione. Questo punto di connessione consente a un controllo in uscita di accesso alle mappe di invio esterni, ad esempio mappe eventi o le funzioni di notifica.
+I controlli OLE sono in grado di esporre interfacce ad altre applicazioni. Queste interfacce consentono solo l'accesso da un contenitore in tale controllo. Se un controllo OLE desidera accedere alle interfacce esterne di altri oggetti OLE, è necessario stabilire un punto di connessione. Questo punto di connessione consente a un controllo l'accesso in uscita a mappe di invio esterne, ad esempio mappe eventi o funzioni di notifica.
 
-La libreria Microsoft Foundation Class offre un modello di programmazione che supporta i punti di connessione. In questo modello, "connessione viene eseguito il mapping" vengono utilizzate per designare le interfacce o i punti di connessione per il controllo OLE. Mappe di connessione contengono una macro per ogni punto di connessione. Per altre informazioni sulle mappe di connessione, vedere la [CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md) classe.
+La libreria Microsoft Foundation Class offre un modello di programmazione che supporta i punti di connessione. In questo modello, le "mappe di connessione" vengono utilizzate per designare interfacce o punti di connessione per il controllo OLE. Le mappe di connessione contengono una macro per ogni punto di connessione. Per altre informazioni sulle mappe di connessione, vedere la classe [CConnectionPoint.For](../../mfc/reference/cconnectionpoint-class.md) more information on connection maps, see the CConnectionPoint class.
 
-In genere, un controllo supporterà solo due punti di connessione: uno per gli eventi e uno per le notifiche di proprietà. Questi vengono implementati dal `COleControl` classe di base e non richiedere alcun intervento aggiuntivo dal writer del controllo. I punti di connessione aggiuntive da implementare nella classe devono essere aggiunti manualmente. Per supportare le mappe di connessione e i punti, MFC fornisce le seguenti macro:
+In genere, un controllo supporterà solo due punti di connessione: uno per gli eventi e uno per le notifiche delle proprietà. Questi vengono implementati dalla `COleControl` classe base e non richiedono alcun lavoro aggiuntivo da parte del writer del controllo. Eventuali punti di connessione aggiuntivi che si desidera implementare nella classe devono essere aggiunti manualmente. Per supportare le mappe di connessione e punti, MFC fornisce le macro seguenti:
 
-### <a name="connection-map-declaration-and-demarcation"></a>Connessione mappa dichiarazione e demarcazione
-
-|||
-|-|-|
-|[BEGIN_CONNECTION_PART](#begin_connection_part)|Dichiara una classe incorporata che implementa un punto di connessione aggiuntive (deve essere usato nella dichiarazione di classe).|
-|[END_CONNECTION_PART](#end_connection_part)|Termina la dichiarazione di un punto di connessione (deve essere usato nella dichiarazione di classe).|
-|[CONNECTION_IID](#connection_iid)|Specifica l'ID di interfaccia del controllo punto di connessione.|
-|[DECLARE_CONNECTION_MAP](#declare_connection_map)|Dichiara che una mappa di connessione verrà utilizzata in una classe (deve essere usato nella dichiarazione di classe).|
-|[BEGIN_CONNECTION_MAP](#begin_connection_map)|Inizia la definizione di una mappa delle connessioni (deve essere usato nell'implementazione della classe).|
-|[END_CONNECTION_MAP](#end_connection_map)|Termina la definizione di una mappa delle connessioni (deve essere usato nell'implementazione della classe).|
-|[CONNECTION_PART](#connection_part)|Specifica un punto di connessione nella mappa delle connessioni del controllo.|
-
-Le funzioni seguenti assistere un sink nella definizione e la disconnessione di una connessione usando i punti di connessione:
-
-### <a name="initializationtermination-of-connection-points"></a>Inizializzazione/terminazione dei punti di connessione
+### <a name="connection-map-declaration-and-demarcation"></a>Dichiarazione e demarcazione della mappa di connessioneConnection Map Declaration and Demarcation
 
 |||
 |-|-|
-|[AfxConnectionAdvise](#afxconnectionadvise)|Stabilisce una connessione tra un'origine e sink.|
-|[AfxConnectionUnadvise](#afxconnectionunadvise)|Interrompe una connessione tra un'origine e sink.|
+|[BEGIN_CONNECTION_PART](#begin_connection_part)|Dichiara una classe incorporata che implementa un punto di connessione aggiuntivo (deve essere utilizzato nella dichiarazione di classe).|
+|[END_CONNECTION_PART](#end_connection_part)|Termina la dichiarazione di un punto di connessione (deve essere utilizzato nella dichiarazione di classe).|
+|[CONNECTION_IID](#connection_iid)|Specifica l'ID di interfaccia del punto di connessione del controllo.|
+|[DECLARE_CONNECTION_MAP](#declare_connection_map)|Dichiara che una mappa di connessione verrà utilizzata in una classe (deve essere utilizzata nella dichiarazione di classe).|
+|[BEGIN_CONNECTION_MAP](#begin_connection_map)|Avvia la definizione di una mappa delle connessioni (deve essere utilizzata nell'implementazione della classe).|
+|[END_CONNECTION_MAP](#end_connection_map)|Termina la definizione di una mappa di connessione (deve essere utilizzata nell'implementazione della classe).|
+|[CONNECTION_PART](#connection_part)|Specifica un punto di connessione nella mappa di connessione del controllo.|
 
-##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART
+Le funzioni seguenti consentono a un sink di stabilire e disconnettere una connessione utilizzando i punti di connessione:
 
-Utilizzare il BEGIN_CONNECTION_PART (macro) per iniziare la definizione dei punti di connessione aggiuntive oltre i punti di connessione di notifica eventi e proprietà.
+### <a name="initializationtermination-of-connection-points"></a>Inizializzazione/Terminazione dei punti di connessione
+
+|||
+|-|-|
+|[AfxConnectionAdvise](#afxconnectionadvise)|Stabilisce una connessione tra un'origine e un sink.|
+|[AfxConnectionUnadvise](#afxconnectionunadvise)|Interrompe una connessione tra un'origine e un sink.|
+
+## <a name="begin_connection_part"></a><a name="begin_connection_part"></a>BEGIN_CONNECTION_PART
+
+Utilizzare la macro BEGIN_CONNECTION_PART per iniziare la definizione di punti di connessione aggiuntivi oltre i punti di connessione di eventi e proprietà.
 
 ```
 BEGIN_CONNECTION_PART(theClass, localClass)
@@ -50,21 +50,21 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 
 ### <a name="parameters"></a>Parametri
 
-*theClass*<br/>
-Specifica il nome della classe del controllo la cui connessione di questo aspetto.
+*classe theClass*<br/>
+Specifica il nome della classe del controllo di cui si trova il punto di connessione.
 
 *localClass*<br/>
 Specifica il nome della classe locale che implementa il punto di connessione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Nel file di dichiarazione (con estensione h) che definisce le funzioni membro per la classe, iniziare il punto di connessione con BEGIN_CONNECTION_PART (macro), quindi aggiungere CONNECTION_IID (macro) e si desidera implementare altre funzioni membro e completare la connessione mappa dei punti con END_CONNECTION_PART (macro).
+Nel file di dichiarazione (h) che definisce le funzioni membro per la classe, avviare il punto di connessione con la macro BEGIN_CONNECTION_PART, quindi aggiungere la macro CONNECTION_IID e tutte le altre funzioni membro che si desidera implementare e completare la mappa dei punti di connessione con la macro END_CONNECTION_PART.
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdisp. h
+  **Intestazione** afxdisp.h
 
-##  <a name="end_connection_part"></a>  END_CONNECTION_PART
+## <a name="end_connection_part"></a><a name="end_connection_part"></a>END_CONNECTION_PART
 
 Termina la dichiarazione del punto di connessione.
 
@@ -79,11 +79,11 @@ Specifica il nome della classe locale che implementa il punto di connessione.
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdisp. h
+  **Intestazione** afxdisp.h
 
-##  <a name="connection_iid"></a>  CONNECTION_IID
+## <a name="connection_iid"></a><a name="connection_iid"></a>CONNECTION_IID
 
-Utilizzare tra il BEGIN_CONNECTION_PART ed END_CONNECTION_PART viene macro per definire un ID di interfaccia per un punto di connessione supportato dal controllo OLE.
+Utilizzare tra le macro BEGIN_CONNECTION_PART e END_CONNECTION_PART per definire un ID di interfaccia per un punto di connessione supportato dal controllo OLE.
 
 ```
 CONNECTION_IID(iid)
@@ -91,38 +91,38 @@ CONNECTION_IID(iid)
 
 ### <a name="parameters"></a>Parametri
 
-*iid*<br/>
-L'ID di interfaccia dell'interfaccia chiamato dal punto di connessione.
+*Iid*<br/>
+ID dell'interfaccia chiamata dal punto di connessione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il *iid* argomento è un'interfaccia ID usato per identificare l'interfaccia che chiamerà il punto di connessione nel relativo sink connesso. Ad esempio:
+L'argomento *iid* è un ID di interfaccia utilizzato per identificare l'interfaccia che il punto di connessione chiamerà sui sink connessi. Ad esempio:
 
 [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]
 
-Specifica un punto di connessione che chiama il `ISinkInterface` interfaccia.
+specifica un punto di `ISinkInterface` connessione che chiama l'interfaccia.
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdisp. h
+  **Intestazione** afxdisp.h
 
-##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP
+## <a name="declare_connection_map"></a><a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP
 
-Ogni `COleControl`-classe derivata in un programma può fornire una mappa di connessione per specificare i punti di connessione aggiuntive che supporta il controllo.
+Ogni `COleControl`classe derivata dal codice nel programma può fornire una mappa delle connessioni per specificare punti di connessione aggiuntivi supportati dal controllo.
 
 ```
 DECLARE_CONNECTION_MAP()
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il controllo supporta punti aggiuntivi, usare il declare_connection_map (macro) alla fine della dichiarazione di classe. Quindi, nel file con estensione cpp che definisce le funzioni membro della classe, usare BEGIN_CONNECTION_MAP (macro), CONNECTION_PART macro per ognuno dei punti di connessione del controllo ed END_CONNECTION_MAP (macro) per dichiarare la fine dell'oggetto map di connessione.
+Se il controllo supporta punti aggiuntivi, utilizzare la macro DECLARE_CONNECTION_MAP alla fine della dichiarazione di classe. Quindi, nel file cpp che definisce le funzioni membro per la classe, utilizzare la macro BEGIN_CONNECTION_MAP, CONNECTION_PART macro per ognuno dei punti di connessione del controllo e la macro END_CONNECTION_MAP per dichiarare la fine della mappa di connessione.
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdisp. h
+  **Intestazione** afxdisp.h
 
-##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP
+## <a name="begin_connection_map"></a><a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP
 
 Ogni classe derivata da `COleControl` nel programma può fornire una mappa di connessioni per specificare i punti di connessione che il controllo supporterà.
 
@@ -132,21 +132,21 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 
 ### <a name="parameters"></a>Parametri
 
-*theClass*<br/>
+*classe theClass*<br/>
 Specifica il nome della classe del controllo a cui appartiene la mappa delle connessioni.
 
 *theBase*<br/>
-Specifica il nome della classe di base *theClass*.
+Specifica il nome della classe base di *theClass*.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Nell'implementazione (. File CPP) che definisce il membro funzioni per la classe, avviare la mappa delle connessioni con BEGIN_CONNECTION_MAP (macro), quindi aggiungere le voci di macro per ognuno dei punti di connessione utilizzando il [CONNECTION_PART](#connection_part) macro. Infine, completare la mappa delle connessioni con il [END_CONNECTION_MAP](#end_connection_map) macro.
+Nell'implementazione (. CPP) che definisce le funzioni membro per la classe, avviare la mappa di connessione con la macro BEGIN_CONNECTION_MAP, quindi aggiungere voci di macro per ogni punto di connessione utilizzando la macro [CONNECTION_PART.](#connection_part) Infine, completare la mappa di connessione con la macro [END_CONNECTION_MAP.](#end_connection_map)
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdisp. h
+  **Intestazione** afxdisp.h
 
-##  <a name="end_connection_map"></a>  END_CONNECTION_MAP
+## <a name="end_connection_map"></a><a name="end_connection_map"></a>END_CONNECTION_MAP
 
 Termina la definizione della mappa delle connessioni.
 
@@ -156,11 +156,11 @@ END_CONNECTION_MAP()
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdisp. h
+  **Intestazione** afxdisp.h
 
-##  <a name="connection_part"></a>  CONNECTION_PART
+## <a name="connection_part"></a><a name="connection_part"></a>CONNECTION_PART
 
-Esegue il mapping di un punto di connessione per il controllo OLE a un ID di interfaccia specifica.
+Esegue il mapping di un punto di connessione per il controllo OLE a un ID di interfaccia specifico.
 
 ```
 CONNECTION_PART(theClass, iid, localClass)
@@ -168,30 +168,30 @@ CONNECTION_PART(theClass, iid, localClass)
 
 ### <a name="parameters"></a>Parametri
 
-*theClass*<br/>
-Specifica il nome della classe del controllo la cui connessione di questo aspetto.
+*classe theClass*<br/>
+Specifica il nome della classe del controllo di cui si trova il punto di connessione.
 
-*iid*<br/>
-L'ID di interfaccia dell'interfaccia chiamato dal punto di connessione.
+*Iid*<br/>
+ID dell'interfaccia chiamata dal punto di connessione.
 
 *localClass*<br/>
 Specifica il nome della classe locale che implementa il punto di connessione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Ad esempio:
 
 [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]
 
-implementa una mappa delle connessioni, con un punto di connessione, che chiama il `IID_ISinkInterface` interfaccia.
+implementa una mappa di connessione, con `IID_ISinkInterface` un punto di connessione, che chiama l'interfaccia .
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdisp. h
+  **Intestazione** afxdisp.h
 
-##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise
+## <a name="afxconnectionadvise"></a><a name="afxconnectionadvise"></a>AfxConnectionAdvise
 
-Chiamare questa funzione per stabilire una connessione tra un'origine, specificata da *pUnkSrc*e un sink, specificato da *pUnkSink*.
+Chiamare questa funzione per stabilire una connessione tra un'origine, specificata da *pUnkSrc*, e un sink , specificato da *pUnkSink*.
 
 ```
 BOOL AFXAPI AfxConnectionAdvise(
@@ -205,19 +205,19 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="parameters"></a>Parametri
 
 *pUnkSrc*<br/>
-Un puntatore all'oggetto che chiama l'interfaccia.
+Puntatore all'oggetto che chiama l'interfaccia.
 
 *pUnkSink*<br/>
-Un puntatore all'oggetto che implementa l'interfaccia.
+Puntatore all'oggetto che implementa l'interfaccia.
 
-*iid*<br/>
-L'ID di interfaccia della connessione.
+*Iid*<br/>
+ID dell'interfaccia della connessione.
 
-*bRefCount*<br/>
-TRUE indica che la creazione della connessione deve provocare il conteggio dei riferimenti *pUnkSink* deve essere aumentato. FALSE indica che il conteggio dei riferimenti non deve essere incrementato.
+*bConteggioRiferimento*<br/>
+TRUE indica che la creazione della connessione deve causare l'incremento del conteggio dei riferimenti di *pUnkSink.* FALSE indica che il conteggio dei riferimenti non deve essere incrementato.
 
 *pdwCookie*<br/>
-Un puntatore a un valore DWORD in cui viene restituito un identificatore di connessione. Questo valore deve essere passato come il *dwCookie* parametro per `AfxConnectionUnadvise` durante la disconnessione della connessione.
+Puntatore a un DWORD in cui viene restituito un identificatore di connessione. Questo valore deve essere passato come `AfxConnectionUnadvise` parametro *dwCookie* a quando si disconnette la connessione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -229,11 +229,11 @@ Diverso da zero se è stata stabilita una connessione; in caso contrario 0.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxctl. h
+**Intestazione:** afxctl.h
 
-##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise
+## <a name="afxconnectionunadvise"></a><a name="afxconnectionunadvise"></a>AfxConnectionUnadvise
 
-Chiamare questa funzione per disconnettere una connessione tra un'origine, specificata da *pUnkSrc*e un sink, specificato da *pUnkSink*.
+Chiamare questa funzione per disconnettere una connessione tra un'origine, specificata da *pUnkSrc*, e un sink , specificato da *pUnkSink*.
 
 ```
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -247,23 +247,23 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ### <a name="parameters"></a>Parametri
 
 *pUnkSrc*<br/>
-Un puntatore all'oggetto che chiama l'interfaccia.
+Puntatore all'oggetto che chiama l'interfaccia.
 
 *pUnkSink*<br/>
-Un puntatore all'oggetto che implementa l'interfaccia.
+Puntatore all'oggetto che implementa l'interfaccia.
 
-*iid*<br/>
-L'ID di interfaccia dell'interfaccia di punto di connessione.
+*Iid*<br/>
+ID dell'interfaccia del punto di connessione.
 
-*bRefCount*<br/>
-TRUE indica che la disconnessione deve provocare il conteggio dei riferimenti *pUnkSink* deve essere diminuito. FALSE indica che il conteggio dei riferimenti non deve essere decrementato.
+*bConteggioRiferimento*<br/>
+TRUE indica che la disconnessione della connessione deve causare la decrementazione del conteggio dei riferimenti di *pUnkSink.* FALSE indica che il conteggio dei riferimenti non deve essere decrementato.
 
-*dwCookie*<br/>
-L'identificatore di connessione restituito dalla `AfxConnectionAdvise`.
+*dwCookie (Cookie)*<br/>
+Identificatore di connessione `AfxConnectionAdvise`restituito da .
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se una connessione è stata interrotta; in caso contrario 0.
+Diverso da zero se una connessione è stata disconnessa; in caso contrario 0.
 
 ### <a name="example"></a>Esempio
 
@@ -271,7 +271,7 @@ Diverso da zero se una connessione è stata interrotta; in caso contrario 0.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxctl. h
+**Intestazione:** afxctl.h
 
 ## <a name="see-also"></a>Vedere anche
 

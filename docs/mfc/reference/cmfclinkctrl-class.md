@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1ef4e390d88f81d738d2ee18be6ba02843633011
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346203"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374399"
 ---
 # <a name="cmfclinkctrl-class"></a>Classe CMFCLinkCtrl
 
-Il `CMFCLinkCtrl` classe visualizza un pulsante come collegamento ipertestuale e richiama la destinazione del collegamento quando si fa clic sul pulsante.
+La `CMFCLinkCtrl` classe visualizza un pulsante come collegamento ipertestuale e richiama la destinazione del collegamento quando si fa clic sul pulsante.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,23 +37,23 @@ class CMFCLinkCtrl : public CMFCButton
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCLinkCtrl::SetURL](#seturl)|Consente di visualizzare un URL specificato come testo del pulsante.|
+|[CMFCLinkCtrl::SetURL](#seturl)|Visualizza un URL specificato come testo del pulsante.|
 |[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Imposta il protocollo implicito (ad esempio, "http:") dell'URL.|
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Ridimensiona il pulsante per contenere il testo del pulsante o bitmap.|
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Ridimensiona il pulsante per contenere il testo o la bitmap del pulsante.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Chiamato dal framework prima di disegnata il rettangolo di attivazione del pulsante.|
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Chiamato dal framework prima che venga disegnato il rettangolo di attivazione del pulsante.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando si fa clic su un pulsante che è derivato dal `CMFCLinkCtrl` (classe), il framework passa l'URL del pulsante come parametro per il `ShellExecute` (metodo). Il `ShellExecute` metodo apre la destinazione dell'URL.
+Quando si fa clic su `CMFCLinkCtrl` un pulsante derivato dalla classe , il `ShellExecute` framework passa l'URL del pulsante come parametro al metodo. Quindi `ShellExecute` il metodo apre la destinazione dell'URL.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come impostare le dimensioni di un `CMFCLinkCtrl` oggetto e come impostare un url e una descrizione comando in un `CMFCLinkCtrl` oggetto. In questo esempio fa parte il [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come `CMFCLinkCtrl` impostare le dimensioni di un oggetto `CMFCLinkCtrl` e come impostare un URL e una descrizione comando in un oggetto. Questo esempio fa parte [dell'esempio New Controls](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]
@@ -76,9 +76,9 @@ Nell'esempio seguente viene illustrato come impostare le dimensioni di un `CMFCL
 
 **Intestazione:** afxlinkctrl.h
 
-##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect
+## <a name="cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect
 
-Chiamato dal framework prima di disegnata il rettangolo di attivazione del pulsante.
+Chiamato dal framework prima che venga disegnato il rettangolo di attivazione del pulsante.
 
 ```
 virtual void OnDrawFocusRect(
@@ -91,16 +91,16 @@ virtual void OnDrawFocusRect(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*rectClient*<br/>
-[in] Un rettangolo che delimita il controllo di collegamento.
+*RectClient (client)*<br/>
+[in] Rettangolo che delimita il controllo di collegamento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo quando si desidera usare il proprio codice per disegnare il rettangolo di attivazione del pulsante.
+Eseguire l'override di questo metodo quando si desidera utilizzare il proprio codice per disegnare il rettangolo di attivazione del pulsante.
 
-##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL
+## <a name="cmfclinkctrlseturl"></a><a name="seturl"></a>CMFCLinkCtrl::SetURL
 
-Consente di visualizzare un URL specificato come testo del pulsante.
+Visualizza un URL specificato come testo del pulsante.
 
 ```
 void SetURL(LPCTSTR lpszURL);
@@ -108,12 +108,12 @@ void SetURL(LPCTSTR lpszURL);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszURL*<br/>
-[in] Il testo del pulsante da visualizzare.
+*URL lpsz*<br/>
+[in] Testo del pulsante da visualizzare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix
+## <a name="cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix
 
 Imposta il protocollo implicito (ad esempio, "http:") dell'URL.
 
@@ -123,16 +123,16 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszPrefix*<br/>
-[in] Il prefisso del protocollo URL.
+*LpszPrefix (Prefisso)*<br/>
+[in] Prefisso del protocollo URL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Utilizzare questo metodo per impostare il prefisso dell'URL. Il prefisso non viene visualizzato nella superficie del pulsante, ma è possibile usarlo per passare alla destinazione dell'URL.
+Utilizzare questo metodo per impostare il prefisso URL. Il prefisso non viene visualizzato sul volto del pulsante, ma è possibile utilizzarlo per individuare la destinazione dell'URL.
 
-##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent
+## <a name="cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent
 
-Ridimensiona il pulsante per contenere il testo del pulsante o bitmap.
+Ridimensiona il pulsante per contenere il testo o la bitmap del pulsante.
 
 ```
 virtual CSize SizeToContent(
@@ -142,21 +142,21 @@ virtual CSize SizeToContent(
 
 ### <a name="parameters"></a>Parametri
 
-*bVCenter*<br/>
-[in] TRUE per allineare al centro il testo del pulsante e una bitmap in senso verticale tra la parte superiore e inferiore del controllo collegamento. in caso contrario, FALSE. Il valore predefinito è FALSE.
+*bVCentro*<br/>
+[in] TRUE per centrare il testo del pulsante e bitmap verticalmente tra la parte superiore e inferiore del controllo di collegamento; in caso contrario, FALSE. Il valore predefinito è FALSE.
 
-*bHCenter*<br/>
-[in] TRUE per allineare al centro il testo del pulsante e bitmap orizzontalmente tra i lati sinistro e destro del controllo collegamento. in caso contrario, FALSE. Il valore predefinito è FALSE.
+*bHCentro*<br/>
+[in] TRUE per centrare il testo del pulsante e la bitmap orizzontalmente tra i lati sinistro e destro del controllo collegamento; in caso contrario, FALSE. Il valore predefinito è FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto che contiene le nuove dimensioni del controllo collegamento.
+Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto che contiene le nuove dimensioni del controllo di collegamento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CLinkCtrl](../../mfc/reference/clinkctrl-class.md)<br/>
-[Classe CMFCButton](../../mfc/reference/cmfcbutton-class.md)
+[CMFCButton (classe)](../../mfc/reference/cmfcbutton-class.md)

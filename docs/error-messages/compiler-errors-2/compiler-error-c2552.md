@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
-ms.openlocfilehash: 7f3e4cfc46655c5201e7a79a9333f532a8fcab9c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b15ee67e39631926b7061826369e855bc3714a96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740806"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374185"
 ---
 # <a name="compiler-error-c2552"></a>Errore del compilatore C2552
 
@@ -19,19 +19,19 @@ ms.locfileid: "74740806"
 
 L'identificatore di aggregazione è stato inizializzato in modo non corretto.
 
-Le [aggregazioni](../../c-language/initializing-aggregate-types.md) sono definite come segue:
+[Le aggregazioni](../../c-language/initializing-aggregate-types.md) sono definite come:Aggregates are defined as:
 
-- Array
+- Matrici
 
 - Classi, strutture e unioni che non includono:
 
-   - Costruttori
+  - Costruttori
 
-   - Membri privati o protetti
+  - Membri privati o protetti
 
-   - Classi di base
+  - Classi di base
 
-   - Funzioni virtuali
+  - Funzioni virtuali
 
 Inoltre, Visual C++ non consente i tipi di dati in un aggregato che contiene costruttori.
 

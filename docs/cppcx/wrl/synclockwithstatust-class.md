@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: 1c9c0805834a59d10a559bfc2b6da0f10e2fe160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77bcb8336e4650de7ed01a067fa1bdd7ec0ba3e8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398134"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374270"
 ---
 # <a name="synclockwithstatust-class"></a>Classe SyncLockWithStatusT
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,14 +35,14 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ### <a name="parameters"></a>Parametri
 
-*SyncTraits*<br/>
-Un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.
+*Traits Di sincronizzazione*<br/>
+Tipo che può assumere la proprietà esclusiva o condivisa di una risorsa.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Rappresenta un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.
+Rappresenta un tipo che può assumere la proprietà esclusiva o condivisa di una risorsa.
 
-Il `SyncLockWithStatusT` classe viene utilizzata per implementare il [Mutex](mutex-class.md) e [semaforo](semaphore-class.md) classi.
+La `SyncLockWithStatusT` classe viene utilizzata per implementare le classi [Mutex](mutex-class.md) e [Semaphore.](semaphore-class.md)
 
 ## <a name="members"></a>Membri
 
@@ -62,14 +62,14 @@ Nome                                                             | Descrizione
 
 Nome                                         | Descrizione
 -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
-[SyncLockWithStatusT::GetStatus](#getstatus) | Recupera lo stato di attesa dell'oggetto corrente `SyncLockWithStatusT` oggetto.
-[SyncLockWithStatusT::IsLocked](#islocked)   | Indica se l'oggetto corrente `SyncLockWithStatusT` oggetto proprietario di una risorsa, ovvero, il `SyncLockWithStatusT` oggetto viene *bloccato*.
+[SyncLockWithStatusT::GetStatus](#getstatus) | Recupera lo stato di `SyncLockWithStatusT` attesa dell'oggetto corrente.
+[SyncLockWithStatusT::IsLocked](#islocked)   | Indica se l'oggetto corrente `SyncLockWithStatusT` possiede una risorsa; ovvero l'oggetto `SyncLockWithStatusT` è *bloccato.*
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
 Nome                                    | Descrizione
 --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
-[SyncLockWithStatusT::status_](#status) | Contiene il risultato dell'operazione di attesa sottostanti dopo un'operazione di blocco su un oggetto in base a corrente `SyncLockWithStatusT` oggetto.
+[SyncLockWithStatusT::status_](#status) | Contiene il risultato dell'operazione di attesa sottostante dopo `SyncLockWithStatusT` un'operazione di blocco su un oggetto basato sull'oggetto corrente.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -79,13 +79,13 @@ Nome                                    | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers. h
+**Intestazione:** corewrappers.h
 
 **Spazio dei nomi:** Microsoft::WRL::Wrappers::Details
 
-## <a name="getstatus"></a>SyncLockWithStatusT::GetStatus
+## <a name="synclockwithstatustgetstatus"></a><a name="getstatus"></a>SyncLockWithStatusT::GetStatus
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 DWORD GetStatus() const;
@@ -93,45 +93,45 @@ DWORD GetStatus() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il risultato di un'operazione di attesa per l'oggetto che si basa sul `SyncLockWithStatusT` classe, ad esempio un [Mutex](mutex-class.md) oppure [semaforo](semaphore-class.md). Zero (0) indica che l'operazione di attesa restituito lo stato segnalato; in caso contrario, un altro stato si è verificato, come valore di timeout è scaduto.
+Risultato di un'operazione di attesa sull'oggetto basato sulla `SyncLockWithStatusT` classe , ad esempio un [Mutex](mutex-class.md) o [Semaphore](semaphore-class.md). Il valore zero (0) indica che l'operazione di attesa ha restituito lo stato segnalato; in caso contrario, si è verificato un altro stato, ad esempio il valore di timeout trascorso.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Recupera lo stato di attesa dell'oggetto corrente `SyncLockWithStatusT` oggetto.
+Recupera lo stato di `SyncLockWithStatusT` attesa dell'oggetto corrente.
 
-La funzione GetStatus recupera il valore dell'oggetto sottostante [Status](#status) (membro dati). Quando un oggetto basato sul `SyncLockWithStatusT` classe esegue un'operazione di blocco, l'oggetto è in attesa prima di tutto per l'oggetto divenga disponibile. Il risultato di tale operazione di attesa viene archiviato nel `status_` (membro dati). I valori possibili del `status_` (membro dati) sono i valori restituiti dell'operazione di attesa. Per altre informazioni, vedere i valori restituiti di `WaitForSingleObjectEx()` (funzione) in MSDN Library.
+La funzione GetStatus() recupera il valore del membro dati [status_](#status) sottostante. Quando un oggetto `SyncLockWithStatusT` basato sulla classe esegue un'operazione di blocco, l'oggetto attende innanzitutto che l'oggetto diventi disponibile. Il risultato di tale operazione `status_` di attesa viene archiviato nel membro dati. I valori possibili `status_` del membro dati sono i valori restituiti dell'operazione di attesa. Per ulteriori informazioni, vedere i `WaitForSingleObjectEx()` valori restituiti della funzione in MSDN Library.
 
-## <a name="islocked"></a>SyncLockWithStatusT::IsLocked
+## <a name="synclockwithstatustislocked"></a><a name="islocked"></a>SyncLockWithStatusT::IsLocked
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 bool IsLocked() const;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Indica se l'oggetto corrente `SyncLockWithStatusT` oggetto proprietario di una risorsa, ovvero, il `SyncLockWithStatusT` oggetto viene *bloccato*.
+Indica se l'oggetto corrente `SyncLockWithStatusT` possiede una risorsa; ovvero l'oggetto `SyncLockWithStatusT` è *bloccato.*
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il `SyncLockWithStatusT` oggetto è bloccato; in caso contrario, **false**.
+**true** se `SyncLockWithStatusT` l'oggetto è bloccato; in caso contrario, **false**.
 
-## <a name="status"></a>SyncLockWithStatusT::status_
+## <a name="synclockwithstatuststatus_"></a><a name="status"></a>SyncLockWithStatusT::status_
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 DWORD status_;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Contiene il risultato dell'operazione di attesa sottostanti dopo un'operazione di blocco su un oggetto in base a corrente `SyncLockWithStatusT` oggetto.
+Contiene il risultato dell'operazione di attesa sottostante dopo `SyncLockWithStatusT` un'operazione di blocco su un oggetto basato sull'oggetto corrente.
 
-## <a name="synclockwithstatust"></a>SyncLockWithStatusT::SyncLockWithStatusT
+## <a name="synclockwithstatustsynclockwithstatust"></a><a name="synclockwithstatust"></a>SyncLockWithStatusT::SyncLockWithStatusT
 
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
 ```cpp
 SyncLockWithStatusT(
@@ -146,17 +146,17 @@ explicit SyncLockWithStatusT(
 
 ### <a name="parameters"></a>Parametri
 
-*other*<br/>
-Un riferimento rvalue a un altro `SyncLockWithStatusT` oggetto.
+*Altro*<br/>
+Riferimento rvalue a `SyncLockWithStatusT` un altro oggetto.
 
 *sync*<br/>
-Un riferimento a un altro `SyncLockWithStatusT` oggetto.
+Riferimento a `SyncLockWithStatusT` un altro oggetto.
 
 *status*<br/>
-Il valore della [Status](#status) membro dati del *altri* parametro o i *sincronizzazione* parametro.
+Valore [dell'status_](#status) membro dati *dell'altro* parametro o del parametro *sync.*
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Inizializza una nuova istanza della classe `SyncLockWithStatusT`.
 
-Il primo costruttore inizializza l'oggetto corrente `SyncLockWithStatusT` oggetto da un altro `SyncLockWithStatusT` specificato dal parametro *altri*e quindi invalida l'altro `SyncLockWithStatusT` oggetto. Il secondo costruttore viene `protected`e la inizializza corrente `SyncLockWithStatusT` oggetto da uno stato non valido.
+Il primo costruttore `SyncLockWithStatusT` inizializza l'oggetto corrente da un altro `SyncLockWithStatusT` specificato dal parametro *other*, quindi invalida l'altro `SyncLockWithStatusT` oggetto. Il secondo `protected`costruttore è , `SyncLockWithStatusT` e inizializza l'oggetto corrente su uno stato non valido.

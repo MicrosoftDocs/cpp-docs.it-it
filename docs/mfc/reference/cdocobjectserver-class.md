@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnApplyViewState
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
-ms.openlocfilehash: f4b1a352a9fa62dfcb46d1c1cb0784661e66e5b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd8ddc9f4981b3d9f7f4e1decdf6790cd05b98b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391135"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375484"
 ---
 # <a name="cdocobjectserver-class"></a>Classe CDocObjectServer
 
@@ -45,25 +45,25 @@ class CDocObjectServer : public CCmdTarget
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDocObjectServer::ActivateDocObject](#activatedocobject)|Attiva il server oggetto di documento, ma non viene visualizzato.|
+|[CDocObjectServer::ActivateDocObject](#activatedocobject)|Attiva il server degli oggetti documento, ma non lo visualizza.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDocObjectServer::OnActivateView](#onactivateview)|Mostra la visualizzazione DocObject.|
+|[CDocObjectServer::OnActivateView (visualizzazione di Unoggetto )CDocObjectServer::OnActivateView](#onactivateview)|Visualizza la visualizzazione DocObject.|
 |[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|Ripristina lo stato della visualizzazione DocObject.|
 |[CDocObjectServer::OnSaveViewState](#onsaveviewstate)|Salva lo stato della visualizzazione DocObject.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`CDocObjectServer` è derivato da `CCmdTarget` e collabora con `COleServerDoc` per esporre le interfacce.
+`CDocObjectServer`deriva da `CCmdTarget` e lavora `COleServerDoc` a stretto contatto con per esporre le interfacce.
 
-Può contenere un documento server DocObject [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) oggetti che rappresentano l'interfaccia server agli elementi DocObject.
+Un documento server DocObject può contenere oggetti [CDocObjectServerItem,](../../mfc/reference/cdocobjectserveritem-class.md) che rappresentano l'interfaccia server per gli elementi DocObject.
 
-Per personalizzare il server DocObject, derivare la propria classe dal `CDocObjectServer` ed eseguire l'override delle funzioni di installazione, view [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), e [OnSaveViewState ](#onsaveviewstate). È necessario fornire una nuova istanza della classe in risposta alle chiamate framework.
+Per personalizzare il server DocObject, `CDocObjectServer` derivare una classe personalizzata da ed eseguire l'override delle relative funzioni di impostazione della visualizzazione, [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate)e [OnSaveViewState](#onsaveviewstate). Sarà necessario fornire una nuova istanza della classe in risposta alle chiamate del framework.
 
-Per altre informazioni su DocObjects, vedere [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) e [COleCmdUI](../../mfc/reference/colecmdui-class.md) nel *riferimenti alla libreria MFC*.
+Per ulteriori informazioni su DocObjects, vedere [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) e [COleCmdUI](../../mfc/reference/colecmdui-class.md) in *Riferimenti a MFC.*
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -75,23 +75,23 @@ Per altre informazioni su DocObjects, vedere [CDocObjectServerItem](../../mfc/re
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** AfxDocOb. h
+**Intestazione:** afxdocob.h
 
-##  <a name="activatedocobject"></a>  CDocObjectServer::ActivateDocObject
+## <a name="cdocobjectserveractivatedocobject"></a><a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject
 
-Chiamare questa funzione per attivare il server di oggetti documento (ma non mostra).
+Chiamare questa funzione per attivare (ma non mostrare) il server oggetti documento.
 
 ```
 void ActivateDocObject();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`ActivateDocObject` le chiamate `IOleDocumentSite`del `ActivateMe` metodo, ma non mostra la visualizzazione perché è in attesa per istruzioni specifiche su come configurare e visualizzare la vista, specificato nella chiamata a [CDocObjectServer::OnActivateView](#onactivateview).
+`ActivateDocObject`chiama `IOleDocumentSite`'s `ActivateMe` metodo, ma non viene visualizzata la visualizzazione perché attende istruzioni specifiche su come impostare e visualizzare la visualizzazione, data nella chiamata a [CDocObjectServer::OnActivateView](#onactivateview).
 
-Insieme, `ActivateDocObject` e `OnActivateView` attivare e visualizzare la visualizzazione DocObject. Attivazione DocObject è diverso dagli altri tipi di attivazione sul posto OLE. Attivazione DocObject Ignora visualizzazione posto tratteggio bordi e le aree di controllo di oggetto (ad esempio quadratini di ridimensionamento), ignora le funzioni di extent di oggetto e disegna le barre di scorrimento all'interno del rettangolo di visualizzazione anziché di disegno all'esterno di questo rettangolo (come in normale attivazione sul posto).
+Insieme, `ActivateDocObject` `OnActivateView` attivare e visualizzare la visualizzazione DocObject. L'attivazione docObject è diversa da altri tipi di attivazione sul posto OLE. L'attivazione di DocObject ignora la visualizzazione dei bordi del tratteggio sul posto e delle aree di controllo degli oggetti (ad esempio i quadratini di ridimensionamento), ignora le funzioni di estensione dell'oggetto e disegna le barre di scorrimento all'interno del rettangolo di visualizzazione anziché disegnarle all'esterno di tale rettangolo (come nella normale attivazione sul posto).
 
-##  <a name="cdocobjectserver"></a>  CDocObjectServer::CDocObjectServer
+## <a name="cdocobjectservercdocobjectserver"></a><a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer
 
 Costruisce e inizializza un oggetto `CDocObjectServer`.
 
@@ -103,17 +103,17 @@ explicit CDocObjectServer(
 
 ### <a name="parameters"></a>Parametri
 
-*pOwner*<br/>
-Puntatore al documento sito client che il client per il server DocObject.
+*pProprietario*<br/>
+Puntatore al documento del sito client che è il client per il server DocObject.
 
-*pDocSite*<br/>
-Un puntatore al `IOleDocumentSite` interfaccia implementato dal contenitore.
+*pDocSito*<br/>
+Puntatore all'interfaccia `IOleDocumentSite` implementata dal contenitore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Quando un DocObject è attivo, il client del sito interfaccia OLE ( `IOleDocumentSite`) consente al server DocObject di comunicare con il relativo client (contenitore). Quando un server DocObject è attivato, per prima cosa controlla che il contenitore implementa il `IOleDocumentSite` interfaccia. In questo caso, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) viene chiamato per verificare se il contenitore supporta DocObjects. Per impostazione predefinita, `GetDocObjectServer` restituisce NULL. È necessario eseguire l'override `COleServerDoc::GetDocObjectServer` per costruire un nuovo `CDocObjectServer` oggetto o un oggetto derivato di personalizzata, con puntatori al `COleServerDoc` contenitore e il relativo `IOleDocumentSite` interfaccia come argomenti al costruttore.
+Quando un DocObject è attivo, l'interfaccia OLE del sito client ( `IOleDocumentSite`) consente al server DocObject di comunicare con il relativo client (contenitore). Quando un server DocObject viene attivato, controlla `IOleDocumentSite` innanzitutto che il contenitore implementi l'interfaccia. In tal caso, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) viene chiamato per verificare se il contenitore supporta DocObjects. Per impostazione predefinita, `GetDocObjectServer` restituisce NULL. È necessario `COleServerDoc::GetDocObjectServer` eseguire l'override per costruire un nuovo `CDocObjectServer` oggetto o `COleServerDoc` un `IOleDocumentSite` oggetto derivato personalizzato, con puntatori al contenitore e la relativa interfaccia come argomenti per il costruttore.
 
-##  <a name="onactivateview"></a>  CDocObjectServer::OnActivateView
+## <a name="cdocobjectserveronactivateview"></a><a name="onactivateview"></a>CDocObjectServer::OnActivateView (visualizzazione di Unoggetto )CDocObjectServer::OnActivateView
 
 Chiamare questa funzione per visualizzare la visualizzazione DocObject.
 
@@ -123,13 +123,13 @@ virtual HRESULT OnActivateView();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un errore o un valore di avviso. Per impostazione predefinita, restituisce NOERROR se ha esito positivo. in caso contrario, E_FAIL.
+Restituisce un valore di errore o di avviso. Per impostazione predefinita, restituisce NOERROR se ha esito positivo; in caso contrario, E_FAIL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione crea una finestra cornice sul posto, disegna le barre di scorrimento all'interno della visualizzazione, imposta il menu di scelta rapida del server condivide con il proprio contenitore, aggiunge i controlli frame, imposta l'oggetto attivo, quindi infine Mostra la finestra cornice sul posto e imposta lo stato attivo.
+Questa funzione crea una finestra cornice sul posto, disegna le barre di scorrimento all'interno della visualizzazione, imposta i menu condivide il server con il relativo contenitore, aggiunge controlli frame, imposta l'oggetto attivo, quindi mostra infine la finestra cornice sul posto e imposta lo stato attivo.
 
-##  <a name="onapplyviewstate"></a>  CDocObjectServer::OnApplyViewState
+## <a name="cdocobjectserveronapplyviewstate"></a><a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState
 
 Eseguire l'override di questa funzione per ripristinare lo stato della visualizzazione DocObject.
 
@@ -139,18 +139,18 @@ virtual void OnApplyViewState(CArchive& ar);
 
 ### <a name="parameters"></a>Parametri
 
-*ar*<br/>
-Oggetto `CArchive` oggetto dal quale serializzare lo stato di visualizzazione.
+*Ar*<br/>
+Oggetto `CArchive` da cui serializzare lo stato di visualizzazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione viene chiamata quando viene visualizzata la vista per la prima volta dopo la creazione dell'istanza. `OnApplyViewState` indica a una visualizzazione reinizializzazione in base ai dati nel `CArchive` oggetto salvato in precedenza con [OnSaveViewState](#onsaveviewstate). La visualizzazione deve convalidare i dati nel `CArchive` oggetto perché il contenitore non cerca di interpretare i dati dello stato di visualizzazione in alcun modo.
+Questa funzione viene chiamata quando la visualizzazione viene visualizzata per la prima volta dopo la creazione dell'istanza. `OnApplyViewState`indica a una vista di reinizializzarsi in `CArchive` base ai dati nell'oggetto precedentemente salvato con [OnSaveViewState](#onsaveviewstate). La visualizzazione deve convalidare `CArchive` i dati nell'oggetto perché il contenitore non tenta di interpretare i dati dello stato di visualizzazione in alcun modo.
 
-È possibile usare `OnSaveViewState` per l'archiviazione permanente informazioni specifiche per lo stato della visualizzazione. Se esegue l'override `OnSaveViewState` per archiviare le informazioni, si dovranno eseguire l'override `OnApplyViewState` leggere tali informazioni e applicarla alla visualizzazione qualora venga appena attivata.
+È possibile `OnSaveViewState` utilizzare per archiviare informazioni permanenti specifiche per lo stato della visualizzazione. Se si `OnSaveViewState` esegue l'override per `OnApplyViewState` archiviare le informazioni, è necessario eseguire l'override per leggere tali informazioni e applicarle alla visualizzazione quando viene attivata di recente.
 
-##  <a name="onsaveviewstate"></a>  CDocObjectServer::OnSaveViewState
+## <a name="cdocobjectserveronsaveviewstate"></a><a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState
 
-Eseguire l'override di questa funzione per salvare le informazioni di stato aggiuntivi sulla visualizzazione DocObject.
+Eseguire l'override di questa funzione per salvare informazioni aggiuntive sullo stato della visualizzazione DocObject.
 
 ```
 virtual void OnSaveViewState(CArchive& ar);
@@ -158,17 +158,17 @@ virtual void OnSaveViewState(CArchive& ar);
 
 ### <a name="parameters"></a>Parametri
 
-*ar*<br/>
-Oggetto `CArchive` dell'oggetto in cui verrà serializzato lo stato di visualizzazione.
+*Ar*<br/>
+Oggetto `CArchive` in cui viene serializzato lo stato di visualizzazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Lo stato potrebbe includere le proprietà come il tipo di visualizzazione, il fattore di zoom, inserimento e punto di selezione e così via. In genere, il contenitore chiama questa funzione prima di disattivare la visualizzazione. Lo stato salvato può essere ripristinato in un secondo momento attraverso [OnApplyViewState](#onapplyviewstate).
+Lo stato può includere proprietà come il tipo di vista, il fattore di zoom, il punto di inserimento e selezione e così via. Il contenitore chiama in genere questa funzione prima di disattivare la visualizzazione. Lo stato salvato può essere ripristinato in un secondo momento tramite [OnApplyViewState](#onapplyviewstate).
 
-È possibile usare `OnSaveViewState` per l'archiviazione permanente informazioni specifiche per lo stato della visualizzazione. Se esegue l'override `OnSaveViewState` per archiviare le informazioni, si dovranno eseguire l'override `OnApplyViewState` leggere tali informazioni e applicarla alla visualizzazione qualora venga appena attivata.
+È possibile `OnSaveViewState` utilizzare per archiviare informazioni permanenti specifiche per lo stato della visualizzazione. Se si `OnSaveViewState` esegue l'override per `OnApplyViewState` archiviare le informazioni, è necessario eseguire l'override per leggere tali informazioni e applicarle alla visualizzazione quando viene attivata di recente.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)

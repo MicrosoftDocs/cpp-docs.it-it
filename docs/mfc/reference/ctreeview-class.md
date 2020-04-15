@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CTreeView [MFC], CTreeView
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
-ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2ef93152c83d3bbec2b89ada0596ee612b24701b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421429"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373299"
 ---
 # <a name="ctreeview-class"></a>Classe CTreeView
 
-Semplifica l'uso del controllo albero e di [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), la classe che incapsula la funzionalità di controllo struttura ad albero, con l'architettura documento/visualizzazione di MFC.
+Semplifica l'utilizzo del controllo struttura ad albero e di [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), la classe che incapsula la funzionalità del controllo struttura ad albero, con l'architettura di visualizzazione documento di MFC.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,23 +27,23 @@ Semplifica l'uso del controllo albero e di [CTreeCtrl](../../mfc/reference/ctree
 class CTreeView : public CCtrlView
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CTreeView:: CTreeView](#ctreeview)|Costruisce un oggetto `CTreeView`.|
+|[CTreeView::CTreeView](#ctreeview)|Costruisce un oggetto `CTreeView`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CTreeView:: GetTreeCtrl](#gettreectrl)|Restituisce il controllo albero associato alla visualizzazione.|
+|[CTreeView::GetTreeCtrl](#gettreectrl)|Restituisce il controllo struttura ad albero associato alla visualizzazione.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni su questa architettura, vedere la panoramica della classe [CView](../../mfc/reference/cview-class.md) e i riferimenti incrociati citati.
+Per altre informazioni su questa architettura, vedere i cenni preliminari per la classe [CView](../../mfc/reference/cview-class.md) e i riferimenti incrociati citati.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -61,9 +61,9 @@ Per ulteriori informazioni su questa architettura, vedere la panoramica della cl
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** Afxcview. h
+**Intestazione:** afxcview.h
 
-##  <a name="ctreeview"></a>CTreeView:: CTreeView
+## <a name="ctreeviewctreeview"></a><a name="ctreeview"></a>CTreeView::CTreeView
 
 Costruisce un oggetto `CTreeView`.
 
@@ -71,7 +71,7 @@ Costruisce un oggetto `CTreeView`.
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>CTreeView:: GetTreeCtrl
+## <a name="ctreeviewgettreectrl"></a><a name="gettreectrl"></a>CTreeView::GetTreeCtrl
 
 Restituisce un riferimento al controllo struttura ad albero associato alla visualizzazione.
 
@@ -82,7 +82,7 @@ CTreeCtrl& GetTreeCtrl() const;
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[Classe CView](../../mfc/reference/cview-class.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[CView (classe)](../../mfc/reference/cview-class.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)

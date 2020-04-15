@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 150e78b7880a61343db21c3c787ffdd1f0b734a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9e2c7a8d79ebf5e6483a06354b280e474d7b8e61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503162"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374845"
 ---
 # <a name="coleupdatedialog-class"></a>Classe COleUpdateDialog
 
@@ -27,23 +27,23 @@ Utilizzata per un caso speciale della finestra di dialogo di modifica collegamen
 class COleUpdateDialog : public COleLinksDialog
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleUpdateDialog:: COleUpdateDialog](#coleupdatedialog)|Costruisce un oggetto `COleUpdateDialog`.|
+|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Costruisce un oggetto `COleUpdateDialog`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[COleUpdateDialog::D oModal](#domodal)|Consente di visualizzare la finestra di dialogo **Modifica collegamenti** in modalità di aggiornamento.|
+|[COleUpdateDialog::DoModal](#domodal)|Visualizza la finestra di dialogo **Modifica collegamenti** in modalità di aggiornamento.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l'articolo finestre [di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).
+Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l'articolo [Finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -65,9 +65,9 @@ Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxodlgs. h
+**Intestazione:** afxodlgs.h
 
-##  <a name="coleupdatedialog"></a>COleUpdateDialog:: COleUpdateDialog
+## <a name="coleupdatedialogcoleupdatedialog"></a><a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog
 
 Costruisce un oggetto `COleUpdateDialog`.
 
@@ -81,25 +81,25 @@ explicit COleUpdateDialog(
 
 ### <a name="parameters"></a>Parametri
 
-*pDoc*<br/>
-Punta al documento contenente i collegamenti che possono richiedere l'aggiornamento.
+*pDoc (informazioni in stato ine*<br/>
+Punta al documento contenente i collegamenti che potrebbero essere necessari per l'aggiornamento.
 
-*bUpdateLinks*<br/>
+*bAggiornare i collegamenti*<br/>
 Flag che determina se gli oggetti collegati devono essere aggiornati.
 
-*bUpdateEmbeddings*<br/>
+*bAggiornamenti di aggiornamento*<br/>
 Flag che determina se gli oggetti incorporati devono essere aggiornati.
 
-*pParentWnd*<br/>
-Punta all'oggetto padre o alla finestra proprietaria (di `CWnd`tipo) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre della finestra di dialogo verrà impostata sulla finestra principale dell'applicazione.
+*pParentWnd (informazioni in due)*<br/>
+Punta all'oggetto finestra padre o `CWnd`proprietario (di tipo ) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre della finestra di dialogo verrà impostata sulla finestra principale dell'applicazione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione costruisce solo un `COleUpdateDialog` oggetto. Per visualizzare la finestra di dialogo, chiamare [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Questa classe deve essere utilizzata al posto `COleLinksDialog` di quando si desidera aggiornare solo gli elementi collegati o incorporati esistenti.
+Questa funzione costruisce `COleUpdateDialog` solo un oggetto. Per visualizzare la finestra di dialogo, chiamare [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Questa classe deve essere `COleLinksDialog` utilizzata al posto di quando si desidera aggiornare solo gli elementi collegati o incorporati esistenti.
 
-##  <a name="domodal"></a>COleUpdateDialog::D oModal
+## <a name="coleupdatedialogdomodal"></a><a name="domodal"></a>COleUpdateDialog::DoModal
 
-Consente di visualizzare la finestra di dialogo Modifica collegamenti in modalità di aggiornamento.
+Visualizza la finestra di dialogo Modifica collegamenti in modalità di aggiornamento.
 
 ```
 virtual INT_PTR DoModal();
@@ -107,21 +107,21 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valore restituito
 
-Stato di completamento della finestra di dialogo. Uno dei valori seguenti:
+Stato di completamento per la finestra di dialogo. Uno dei valori seguenti:
 
-- IDOK se la finestra di dialogo viene restituita correttamente.
+- IDOK se la finestra di dialogo ha restituito correttamente.
 
-- IDCANCEL se non è necessario aggiornare nessuno degli elementi collegati o incorporati nel documento corrente.
+- IDCANCEL se nessuno degli elementi collegati o incorporati nel documento corrente deve essere aggiornato.
 
-- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare la funzione membro [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco di possibili errori, vedere la funzione [OLEUIEDITLINKS](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) nella Windows SDK.
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funzione membro per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco dei possibili errori, vedere la funzione [OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) in Windows SDK.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tutti i collegamenti e/o gli incorporamenti vengono aggiornati a meno che l'utente non selezioni il pulsante Annulla.
 
 ## <a name="see-also"></a>Vedere anche
 
-[OCLIENT di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
