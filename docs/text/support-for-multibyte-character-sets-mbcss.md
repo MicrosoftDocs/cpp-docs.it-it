@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: c21b5b1ff059f26558749e904894cb5d15572519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b43168ec4331e99dea7e939b097674cc880804e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410564"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375758"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Supporto per set di caratteri multibyte (MBCS, Multibyte Character Set)
 
@@ -28,11 +28,11 @@ In MBCS i caratteri vengono codificati in 1 o 2 byte. Nei caratteri a 2 byte il 
 
 Per la programmazione MBCS, tenere presenti tutte le considerazioni seguenti.
 
-Caratteri MBCS i caratteri MBCS ambiente possono essere visualizzati in stringhe, ad esempio nomi di file e directory.
+I caratteri MBCS nell'ambiente caratteri MBCS possono essere visualizzati in stringhe quali nomi di file e directory.
 
 ### <a name="editing-operations"></a>Operazioni di modifica
 
-Le operazioni di modifica nelle applicazioni MBCS devono intervenire sui caratteri e non sui byte. Il punto di inserimento non deve dividere un carattere, il **freccia destra** key deve spostare a destra di un carattere e così via. **Elimina** dovrebbe eliminare un carattere. **Annullare** lo deve reinserire.
+Le operazioni di modifica nelle applicazioni MBCS devono intervenire sui caratteri e non sui byte. Il punto di inserimento non deve dividere un carattere, il tasto **freccia destra** deve spostarsi a destra di un carattere e così via. **Delete** deve eliminare un carattere; **Annulla** dovrebbe reinserirlo.
 
 ### <a name="string-handling"></a>Gestione delle stringhe
 
@@ -40,28 +40,28 @@ In un'applicazione che usa MBCS la gestione delle stringhe pone problemi special
 
 ### <a name="run-time-library-support"></a>Supporto delle librerie di runtime
 
-La libreria di runtime C e MFC supportano programmazione a un byte, MBCS e Unicode. Le stringhe a un byte vengono elaborate con la `str` famiglia di funzioni di runtime, le stringhe MBCS vengono elaborate con i corrispondenti `_mbs` funzioni e le stringhe Unicode vengono elaborate con i corrispondenti `wcs` funzioni. Le implementazioni delle funzioni membro delle classi MFC usano funzioni di runtime portabili mappate, nelle situazioni appropriate, alla normale famiglia `str` di funzioni, le funzioni MBCS o le funzioni Unicode, come descritto in "Portabilità di MBCS/Unicode".
+La libreria di runtime C e MFC supportano programmazione a un byte, MBCS e Unicode. Le stringhe a byte `str` singolo vengono elaborate con la famiglia di `_mbs` funzioni di runtime, le `wcs` stringhe MBCS vengono elaborate con le funzioni corrispondenti e le stringhe Unicode vengono elaborate con le funzioni corrispondenti. Le implementazioni delle funzioni membro delle classi MFC usano funzioni di runtime portabili mappate, nelle situazioni appropriate, alla normale famiglia `str` di funzioni, le funzioni MBCS o le funzioni Unicode, come descritto in "Portabilità di MBCS/Unicode".
 
 ### <a name="mbcsunicode-portability"></a>Portabilità di MBCS/Unicode
 
-Usa il file di intestazione Tchar. h, è possibile compilare a un byte, MBCS e Unicode dalle stesse origini applicazioni. Tchar. h definisce le macro precedute *tcs* , che eseguono il mapping al `str`, `_mbs`, o `wcs` funzioni, come appropriato. Per compilare applicazioni MBCS, definire il simbolo `_MBCS`. Per compilare Unicode, definire il simbolo `_UNICODE`. Per impostazione predefinita, `_UNICODE` è definito per le applicazioni MFC. Per altre informazioni, vedere [mapping testo generico in Tchar. h](../text/generic-text-mappings-in-tchar-h.md).
+Utilizzando il file di intestazione tchar.h, è possibile compilare applicazioni a byte singolo, MBCS e Unicode dalle stesse origini. Tchar.h definisce le macro *_tcs* precedute da `str` `_mbs`_tcs `wcs` , che eseguono il mapping a , , o funzioni, in base alle esigenze. Per costruire MBCS, `_MBCS`definire il simbolo . Per compilare Unicode, `_UNICODE`definire il simbolo . Per impostazione predefinita, `_UNICODE` è definito per le applicazioni MFC. Per ulteriori informazioni, consultate Mapping di [testo generico in tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
->  Comportamento sarà indefinito se si definiscono entrambi `_UNICODE` e `_MBCS`.
+> Il comportamento non è `_UNICODE` definito `_MBCS`se si definiscono entrambi e .
 
 I file di intestazione Mbctype.h e Mbstring.h definiscono funzioni e macro specifiche di MBCS, che possono essere necessarie in alcuni casi. Ad esempio, `_ismbblead` indica se un byte specifico in una stringa è un byte di apertura.
 
-Per ottenere portabilità internazionale, il codice del programma con [Unicode](../text/support-for-unicode.md) o set di caratteri multibyte (MBCS).
+Per la portabilità internazionale, codificare il programma con [Unicode](../text/support-for-unicode.md) o set di caratteri multibyte (MBCS).
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Abilitare MBCS in un programma](../text/international-enabling.md)
 
-- [Abilitare Unicode e MBCS in un programma](../text/internationalization-strategies.md)
+- [Abilitare Unicode e MBCS nel programma](../text/internationalization-strategies.md)
 
 - [Usare MBCS per creare un programma per mercati internazionali](../text/mbcs-programming-tips.md)
 
-- [Visualizzare un riepilogo della programmazione MBCS](../text/mbcs-programming-tips.md)
+- [Esaminare un riepilogo della programmazione MBCS](../text/mbcs-programming-tips.md)
 
 - [Informazioni sulle mappature di testo generico per la portabilità della larghezza dei byte](../text/generic-text-mappings-in-tchar-h.md)
 

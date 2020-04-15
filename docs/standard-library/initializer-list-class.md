@@ -1,6 +1,6 @@
 ---
 title: Classe initializer_list
-description: Riferimento per la classe initializer_list nella libreria C++ standard, come implementato da Microsoft in Visual Studio.
+description: Un riferimento per la classe initializer_list nella libreria standard di C, come implementato da Microsoft in Visual Studio.
 ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: 6be51835958a07162ce22ff9d619fb793102669f
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1d33ce484948e731f8d3062b7a99df06ef26073
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894333"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373353"
 ---
 # <a name="initializer_list-class"></a>Classe initializer_list
 
@@ -33,10 +33,10 @@ class initializer_list
 
 ### <a name="parameters"></a>Parametri
 
-*Digitare*\
+*digitare*\
 Tipo di dati degli elementi da archiviare in `initializer_list`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un oggetto `initializer_list` può essere costruito utilizzando un elenco di inizializzatori tra parentesi:
 
@@ -44,7 +44,7 @@ Un oggetto `initializer_list` può essere costruito utilizzando un elenco di ini
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-Il compilatore trasforma gli elenchi di inizializzatori tra parentesi graffe con elementi omogenei in un oggetto `initializer_list` ogni volta che la firma della funzione richiede un oggetto `initializer_list`. Per ulteriori informazioni sull'utilizzo di `initializer_list`, vedere [inizializzazione uniforme e costruttori deleganti](../cpp/uniform-initialization-and-delegating-constructors.md)
+Il compilatore trasforma gli elenchi di inizializzatori tra parentesi graffe con elementi omogenei in un oggetto `initializer_list` ogni volta che la firma della funzione richiede un oggetto `initializer_list`. Per ulteriori informazioni `initializer_list`sull'utilizzo di , vedere [Inizializzazione uniforme e delega dei costruttoriFor](../cpp/uniform-initialization-and-delegating-constructors.md) more information about using , see Uniform initialization and delegating constructors
 
 ### <a name="constructors"></a>Costruttori
 
@@ -52,9 +52,9 @@ Il compilatore trasforma gli elenchi di inizializzatori tra parentesi graffe con
 |-|-|
 |[initializer_list](#initializer_list)|Costruisce un oggetto di tipo `initializer_list`.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
 |`value_type`|Tipo degli elementi contenuti nell'oggetto `initializer_list`.|
 |`reference`|Tipo che fornisce un riferimento a un elemento archiviato in `initializer_list`.|
@@ -67,17 +67,17 @@ Il compilatore trasforma gli elenchi di inizializzatori tra parentesi graffe con
 
 |Funzione membro|Descrizione|
 |-|-|
-|[begin](#begin)|Restituisce un puntatore al primo elemento in `initializer_list`.|
+|[Iniziare](#begin)|Restituisce un puntatore al primo elemento in `initializer_list`.|
 |[end](#end)|Restituisce un puntatore nella posizione successiva dopo l'ultimo elemento in `initializer_list`.|
-|[size](#size)|Restituisce il numero di elementi nel `initializer_list`.|
+|[Dimensione](#size)|Restituisce il numero di elementi nel `initializer_list`.|
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<initializer_list >
+**Intestazione:** \<initializer_list>
 
 **Spazio dei nomi:** std
 
-## <a name="begin"></a>  initializer_list::begin
+## <a name="initializer_listbegin"></a><a name="begin"></a>initializer_list::begin
 
 Restituisce un puntatore al primo elemento in `initializer_list`.
 
@@ -89,7 +89,7 @@ constexpr const InputIterator* begin() const noexcept;
 
 Puntatore al primo elemento di `initializer_list`. Se l'elenco è vuoto, il puntatore sarà lo stesso per l'inizio e la fine dell'elenco.
 
-## <a name="end"></a>  initializer_list::end
+## <a name="initializer_listend"></a><a name="end"></a>initializer_list::fine
 
 Restituisce un puntatore nella posizione successiva dopo l'ultimo elemento in `initializer list`.
 
@@ -99,9 +99,9 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore nella posizione successiva dopo l'ultimo elemento nell'elenco. Se l'elenco è vuoto, corrisponde al puntatore al primo elemento nell'elenco.
+Puntatore nella posizione successiva dopo l'ultimo elemento nell'elenco. Se l'elenco è vuoto, è lo stesso del puntatore al primo elemento dell'elenco.
 
-## <a name="initializer_list"></a>  initializer_list::initializer_list
+## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a>initializer_list::initializer_list
 
 Costruisce un oggetto di tipo `initializer_list`.
 
@@ -112,15 +112,15 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Prima*\
 Posizione del primo elemento nell'intervallo di elementi da copiare.
 
-*Ultimo*\
+*Ultima*\
 Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Un oggetto `initializer_list` è basato su una matrice di oggetti del tipo specificato. La copia di un `initializer_list` crea una seconda istanza di un elenco che punta agli stessi oggetti; gli oggetti sottostanti non vengono copiati.
+Un oggetto `initializer_list` è basato su una matrice di oggetti del tipo specificato. La `initializer_list` copia di un crea una seconda istanza di un elenco che punta agli stessi oggetti; gli oggetti sottostanti non vengono copiati.
 
 ### <a name="example"></a>Esempio
 
@@ -183,7 +183,7 @@ c3 = 5 4 3 2 1
 c5 = 5 4
 ```
 
-## <a name="size"></a>  initializer_list::size
+## <a name="initializer_listsize"></a><a name="size"></a>initializer_list::dimensione
 
 Restituisce il numero di elementi nell'elenco.
 
@@ -197,4 +197,4 @@ Numero di elementi contenuti nell'elenco.
 
 ## <a name="see-also"></a>Vedere anche
 
-[<forward_list>](../standard-library/forward-list.md)
+[>forward_list<](../standard-library/forward-list.md)

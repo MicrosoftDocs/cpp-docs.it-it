@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 49cd4a8d3db436d5e3c4d29efbb4d80b4741a270
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739786"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374829"
 ---
 # <a name="colevariant-class"></a>Classe COleVariant
 
@@ -37,7 +37,7 @@ Incapsula il tipo di dati [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) .
 class COleVariant : public tagVARIANT
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -47,37 +47,37 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[COleVariant:: Connetti](#attach)|Connette un oggetto VARIANT a un `COleVariant`oggetto.|
-|[COleVariant::ChangeType](#changetype)|Modifica il tipo Variant di questo `COleVariant` oggetto.|
-|[COleVariant:: Clear](#clear)|Cancella questo `COleVariant` oggetto.|
-|[COleVariant::Detach](#detach)|Scollega un variant da un oggetto `COleVariant` e restituisce il VARIANT.|
+|[COleVariant::Attach](#attach)|Associa un VARIANT a `COleVariant`un oggetto .|
+|[COleVariant::ChangeType](#changetype)|Modifica il tipo `COleVariant` di variante di questo oggetto.|
+|[COleVariant::Clear](#clear)|Cancella questo oggetto `COleVariant`.|
+|[COleVariant::Detach](#detach)|Stacca un VARIANT `COleVariant` da a e restituisce il VARIANT.|
 |[COleVariant::GetByteArrayFromVariantArray](#getbytearrayfromvariantarray)|Recupera una matrice di byte da una matrice variant esistente.|
-|[COleVariant::SetString](#setstring)|Imposta la stringa su un tipo particolare, in genere ANSI.|
+|[COleVariant::SetString](#setstring)|Imposta la stringa su un tipo specifico, in genere ANSI.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleVariant:: operator LPCVARIANT](#operator_lpcvariant)|Converte un `COleVariant` valore in un `LPCVARIANT`oggetto.|
-|[COleVariant:: operator LPVARIANT](#operator_lpvariant)|Converte un `COleVariant` oggetto in un `LPVARIANT`oggetto.|
-|[COleVariant:: operator =](#operator_eq)|Copia un `COleVariant` valore.|
-|[COleVariant:: operator = =](#operator_eq_eq)|Confronta due `COleVariant` valori.|
-|[&lt; Operatore&lt;COleVariant::,&gt;&gt;](#operator_lt_lt__gt_gt)|Restituisce un `COleVariant` valore a `CArchive` o `CDumpContext` e immette un `COleVariant` oggetto da `CArchive`.|
+|[COleVariant::operator LPCVARIANT](#operator_lpcvariant)|Converte `COleVariant` un valore `LPCVARIANT`in un oggetto .|
+|[COleVariant::operatorE LPVARIANT](#operator_lpvariant)|Converte `COleVariant` un oggetto `LPVARIANT`in un oggetto .|
+|[COleVariant::operatore](#operator_eq)|Copia un `COleVariant` valore.|
+|[COleVariant::operatore](#operator_eq_eq)|Confronta due `COleVariant` valori.|
+|[COleVariant::operator &lt; &lt;,&gt;&gt;](#operator_lt_lt__gt_gt)|Restituisce `COleVariant` un `CArchive` valore `CDumpContext` in o `COleVariant` e `CArchive`immette un oggetto da .|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questo tipo di dati viene utilizzato nell'automazione OLE. In particolare, la struttura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) contiene un puntatore a una matrice di strutture VARIANT. Per `DISPPARAMS` passare parametri a [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)viene utilizzata una struttura.
+Questo tipo di dati viene utilizzato nell'automazione OLE. In particolare, la struttura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) contiene un puntatore a una matrice di strutture VARIANT. Una `DISPPARAMS` struttura viene utilizzata per passare parametri a [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
 
 > [!NOTE]
-> Questa classe è derivata dalla `VARIANT` struttura. Ciò significa che è possibile passare `COleVariant` un oggetto in un parametro che chiama `VARIANT` per un e che `VARIANT` i membri dati della struttura sono membri dati accessibili `COleVariant`di.
+> Questa classe è `VARIANT` derivata dalla struttura. Ciò significa che `COleVariant` è possibile passare `VARIANT` un in un parametro che richiede un e che i membri dati della `VARIANT` struttura sono membri dati accessibili di `COleVariant`.
 
-Le due classi MFC correlate [COleCurrency](../../mfc/reference/colecurrency-class.md) e [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) incapsulano i tipi di dati Variant `VT_CY`Currency () e `VT_DATE`date (). La `COleVariant` classe viene ampiamente utilizzata nelle classi DAO. vedere queste classi per l'utilizzo tipico di questa classe, ad esempio [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) e [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
+Le due classi MFC correlate [COleCurrency](../../mfc/reference/colecurrency-class.md) e [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) incapsulano i tipi di dati variant CURRENCY ( `VT_CY`) e DATE ( `VT_DATE`). La `COleVariant` classe viene ampiamente utilizzata nelle classi DAO; vedere queste classi per l'utilizzo tipico di questa classe, ad esempio [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) e [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy~r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams)e [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant), [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy~r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams)e [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) in Windows SDK.
 
-Per ulteriori informazioni sulla `COleVariant` classe e sul relativo utilizzo nell'automazione OLE, vedere "passaggio di parametri in automazione OLE" nell'articolo [automazione](../../mfc/automation.md).
+Per ulteriori informazioni `COleVariant` sulla classe e sul relativo utilizzo nell'automazione OLE, vedere "Passaggio di parametri nell'automazione OLE" nell'articolo [Automazione](../../mfc/automation.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -89,9 +89,9 @@ Per ulteriori informazioni sulla `COleVariant` classe e sul relativo utilizzo ne
 
 **Intestazione:** afxdisp.h
 
-##  <a name="attach"></a>COleVariant:: Connetti
+## <a name="colevariantattach"></a><a name="attach"></a>COleVariant::Attach
 
-Chiamare questa funzione per alleghi l'oggetto [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) specificato all'oggetto `COleVariant` corrente.
+Chiamare questa funzione per associare l'oggetto [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) specificato all'oggetto corrente. `COleVariant`
 
 ```
 void Attach(VARIANT& varSrc);
@@ -100,15 +100,15 @@ void Attach(VARIANT& varSrc);
 ### <a name="parameters"></a>Parametri
 
 *varSrc*<br/>
-Oggetto esistente `VARIANT` da collegare all'oggetto corrente `COleVariant` .
+Oggetto `VARIANT` esistente da associare all'oggetto corrente. `COleVariant`
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione imposta il VARTYPE di *varSrc* su VT_EMPTY.
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) e [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) e [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) in Windows SDK.
 
-##  <a name="colevariant"></a>COleVariant:: COleVariant
+## <a name="colevariantcolevariant"></a><a name="colevariant"></a>COleVariant::COleVariant
 
 Costruisce un oggetto `COleVariant`.
 
@@ -135,82 +135,82 @@ COleVariant(LPCITEMIDLIST pidl);
 ### <a name="parameters"></a>Parametri
 
 *varSrc*<br/>
-Oggetto o `COleVariant` `VARIANT` esistente da copiare nel nuovo `COleVariant` oggetto.
+Oggetto `COleVariant` esistente `VARIANT` da copiare nel `COleVariant` nuovo oggetto.
 
 *pSrc*<br/>
-Puntatore a un `VARIANT` oggetto che verrà copiato nel nuovo `COleVariant` oggetto.
+Puntatore a `VARIANT` un oggetto che verrà `COleVariant` copiato nel nuovo oggetto.
 
 *lpszSrc*<br/>
 Stringa con terminazione null da copiare nel nuovo `COleVariant` oggetto.
 
 *vtSrc*<br/>
-Per il nuovo `COleVariant`oggetto. `VARTYPE`
+Oggetto `VARTYPE` per `COleVariant` il nuovo oggetto.
 
 *strSrc*<br/>
-Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) da copiare nel nuovo `COleVariant` oggetto.
+Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto da copiare nel nuovo `COleVariant` oggetto.
 
-*nsrc*, *lSrc* un valore numerico da copiare nel nuovo `COleVariant` oggetto.
+*nSrc*, *lSrc* Valore numerico da `COleVariant` copiare nel nuovo oggetto.
 
 *vtSrc*<br/>
-Per il nuovo `COleVariant`oggetto. `VARTYPE`
+Oggetto `VARTYPE` per `COleVariant` il nuovo oggetto.
 
 *curSrc*<br/>
-Oggetto [COleCurrency](../../mfc/reference/colecurrency-class.md) da copiare nel nuovo `COleVariant` oggetto.
+Oggetto [COleCurrency](../../mfc/reference/colecurrency-class.md) oggetto da copiare nel nuovo `COleVariant` oggetto.
 
 *fltSrc*, *dblSrc*<br/>
 Un valore numerico da copiare nel nuovo oggetto `COleVariant`.
 
 *timeSrc*<br/>
-Oggetto [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) da copiare nel nuovo `COleVariant` oggetto.
+Oggetto [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oggetto da copiare nel nuovo `COleVariant` oggetto.
 
 *arrSrc*<br/>
-Oggetto [CByteArray](../../mfc/reference/cbytearray-class.md) da copiare nel nuovo `COleVariant` oggetto.
+Oggetto [CByteArray](../../mfc/reference/cbytearray-class.md) da copiare `COleVariant` nel nuovo oggetto.
 
 *lbSrc*<br/>
-Oggetto [CLongBinary](../../mfc/reference/clongbinary-class.md) da copiare nel nuovo `COleVariant` oggetto.
+Oggetto [CLongBinary](../../mfc/reference/clongbinary-class.md) da copiare `COleVariant` nel nuovo oggetto.
 
 *pidl*<br/>
-Puntatore a una struttura [ItemId](/windows/win32/api/shtypes/ns-shtypes-itemidlist) da copiare nel nuovo `COleVariant` oggetto.
+Puntatore a una struttura [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) da `COleVariant` copiare nel nuovo oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Tutti questi costruttori creano nuovi `COleVariant` oggetti inizializzati sul valore specificato. Di seguito viene riportata una breve descrizione di ognuno di questi costruttori.
+Tutti questi costruttori `COleVariant` creano nuovi oggetti inizializzati sul valore specificato. Segue una breve descrizione di ciascuno di questi costruttori.
 
-- **COleVariant ()** Crea un oggetto `COleVariant` vuoto, VT_EMPTY.
+- **COleVariant( )** Crea un `COleVariant` oggetto vuoto, VT_EMPTY.
 
-- **COleVariant (** *varSrc* **)** Copia un oggetto `VARIANT` o `COleVariant` esistente. Il tipo variant viene mantenuto.
+- **COleVariant(** *varSrc* **)** Copia un `VARIANT` oggetto `COleVariant` esistente o. Il tipo variant viene mantenuto.
 
-- **COleVariant (** *pSrc* **)** Copia un oggetto `VARIANT` o `COleVariant` esistente. Il tipo variant viene mantenuto.
+- **COleVariant(** *pSrc* **)** Copia un `VARIANT` oggetto `COleVariant` esistente o. Il tipo variant viene mantenuto.
 
-- **COleVariant (** *lpszSrc* **)** Copia una stringa nel nuovo oggetto, VT_BSTR (UNICODE).
+- **COleVariant(** *lpszSrc* **)** Copia una stringa nel nuovo oggetto, VT_BSTR (UNICODE).
 
-- **COleVariant (** *lpszSrc* **,** *vtSrc* **)** Copia una stringa nel nuovo oggetto. Il parametro *vtSrc* deve essere VT_BSTR (Unicode) o VT_BSTRT (ANSI).
+- **COleVariant(** *lpszSrc* **,** *vtSrc* **)** Copia una stringa nel nuovo oggetto. Il parametro *vtSrc* deve essere VT_BSTR (UNICODE) o VT_BSTRT (ANSI).
 
-- **COleVariant (** *strSrc* **)** Copia una stringa nel nuovo oggetto, VT_BSTR (UNICODE).
+- **COleVariant(** *strSrc* **)** Copia una stringa nel nuovo oggetto, VT_BSTR (UNICODE).
 
-- **COleVariant (** *nsrc* **)** Copia un intero a 8 bit nel nuovo oggetto, VT_UI1.
+- **COleVariant(** *nSrc* **)** Copia un intero a 8 bit nel nuovo oggetto, VT_UI1.
 
-- **COleVariant (** *nsrc* **,** *vtSrc* **)** Copia un intero a 16 bit (o un valore booleano) nel nuovo oggetto. Il parametro *vtSrc* deve essere VT_I2 o VT_BOOL.
+- **COleVariant(** *nSrc* **,** *vtSrc* **)** Copia un numero intero a 16 bit (o valore booleano) nel nuovo oggetto. Il parametro *vtSrc* deve essere VT_I2 o VT_BOOL.
 
-- **COleVariant (** *lSrc* **,** *vtSrc* **)** Copia un intero a 32 bit (o un valore SCODE) nel nuovo oggetto. Il parametro *vtSrc* deve essere VT_I4, VT_ERROR o VT_BOOL.
+- **COleVariant(** *lSrc* **,** *vtSrc* **)** Copia un intero a 32 bit (o valore SCODE) nel nuovo oggetto. Il parametro *vtSrc* deve essere VT_I4, VT_ERROR o VT_BOOL.
 
-- **COleVariant (** *curSrc* **)** Copia un `COleCurrency` valore nel nuovo oggetto VT_CY.
+- **COleVariant(** *rcSrc* **)** Copia un `COleCurrency` valore nel nuovo oggetto, VT_CY.
 
-- **COleVariant (** *fltSrc* **)** Copia un valore a virgola mobile a 32 bit nel nuovo oggetto VT_R4.
+- **COleVariant(** *fltSrc* **)** Copia un valore a virgola mobile a 32 bit nel nuovo oggetto, VT_R4.
 
-- **COleVariant (** *dblSrc* **)** Copia un valore a virgola mobile a 64 bit nel nuovo oggetto VT_R8.
+- **COleVariant(** *dblSrc* **)** Copia un valore a virgola mobile a 64 bit nel nuovo oggetto, VT_R8.
 
-- **COleVariant (** *timeSrc* **)** Copia un `COleDateTime` valore nel nuovo oggetto VT_DATE.
+- **COleVariant(** *timeSrc* **)** Copia un `COleDateTime` valore nel nuovo oggetto, VT_DATE.
 
-- **COleVariant (** *arrSrc* **)** Copia un `CByteArray` oggetto nel nuovo oggetto, VT_EMPTY.
+- **COleVariant(** *arrSrc* **)** Copia un `CByteArray` oggetto nel nuovo oggetto, VT_EMPTY.
 
-- **COleVariant (** *lbSrc* **)** Copia un `CLongBinary` oggetto nel nuovo oggetto, VT_EMPTY.
+- **COleVariant(** *lbSrc* **)** Copia un `CLongBinary` oggetto nel nuovo oggetto, VT_EMPTY.
 
-Per ulteriori informazioni su SCODE, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes) nell'Windows SDK.
+Per ulteriori informazioni su SCODE, vedere [Struttura dei codici](/windows/win32/com/structure-of-com-error-codes) di errore COM in Windows SDK.
 
-##  <a name="changetype"></a>COleVariant:: ChangeType
+## <a name="colevariantchangetype"></a><a name="changetype"></a>COleVariant::ChangeType
 
-Converte il tipo di valore Variant in questo `COleVariant` oggetto.
+Converte il tipo di `COleVariant` valore variant in questo oggetto.
 
 ```
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
@@ -218,48 +218,48 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*vartype*<br/>
-VarType per questo `COleVariant` oggetto.
+*Vartype*<br/>
+VARTYPE per `COleVariant` questo oggetto.
 
 *pSrc*<br/>
-Puntatore all'oggetto [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) da convertire. Se questo valore è null, questo `COleVariant` oggetto viene usato come origine per la conversione.
+Puntatore all'oggetto [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) da convertire. Se questo valore è `COleVariant` NULL, questo oggetto viene utilizzato come origine per la conversione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum)e [VariantChangeType](/windows/win32/api/oleauto/nf-oleauto-variantchangetype) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant), [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)e [VariantChangeType](/windows/win32/api/oleauto/nf-oleauto-variantchangetype) in Windows SDK.
 
-##  <a name="clear"></a>COleVariant:: Clear
+## <a name="colevariantclear"></a><a name="clear"></a>COleVariant::Clear
 
-`VARIANT`Cancella.
+Cancella la classe `VARIANT`.
 
 ```
 void Clear();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-In questo modo, il VARTYPE per questo oggetto viene impostato su VT_EMPTY. Il `COleVariant` distruttore chiama questa funzione.
+In questo modo varTYPE per questo oggetto viene impostato su VT_EMPTY. Il `COleVariant` distruttore chiama questa funzione.
 
-Per ulteriori informazioni, vedere le `VARIANT`voci, VARTYPE e `VariantClear` nell'Windows SDK.
+Per ulteriori informazioni, `VARIANT`vedere , `VariantClear` VARTYPE e le voci in Windows SDK.
 
-##  <a name="detach"></a>COleVariant::D etach
+## <a name="colevariantdetach"></a><a name="detach"></a>COleVariant::Detach
 
-Disconnette l'oggetto [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) sottostante da questo `COleVariant` oggetto.
+Scollega l'oggetto [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) `COleVariant` sottostante da questo oggetto.
 
 ```
 VARIANT Detach();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questa funzione imposta il VarType per questo `COleVariant` oggetto su VT_EMPTY.
+Questa funzione imposta varTYPE `COleVariant` per questo oggetto su VT_EMPTY.
 
 > [!NOTE]
->  Dopo la `Detach`chiamata a, è responsabilità del chiamante chiamare `VariantClear` sulla struttura risultante `VARIANT` .
+> Dopo `Detach`aver chiamato , è responsabilità `VariantClear` del `VARIANT` chiamante chiamare la struttura risultante.
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum)e [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant), [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)e [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) in Windows SDK.
 
-##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray
+## <a name="colevariantgetbytearrayfromvariantarray"></a><a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray
 
 Recupera una matrice di byte da una matrice variant esistente
 
@@ -269,35 +269,35 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Parametri
 
-*byte*<br/>
+*Byte*<br/>
 Riferimento a un oggetto [CByteArray](../../mfc/reference/cbytearray-class.md) esistente.
 
-##  <a name="operator_lpcvariant"></a>COleVariant:: operator LPCVARIANT
+## <a name="colevariantoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT
 
-Questo operatore di cast restituisce `VARIANT` una struttura il cui valore viene copiato `COleVariant` da questo oggetto.
+Questo operatore `VARIANT` di cast restituisce `COleVariant` una struttura il cui valore viene copiato da questo oggetto.
 
 ```
 operator LPCVARIANT() const;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="operator_lpvariant"></a>COleVariant:: operator LPVARIANT
+## <a name="colevariantoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleVariant::operatorE LPVARIANT
 
-Chiamare questo operatore di cast per accedere alla `VARIANT` struttura sottostante per `COleVariant` questo oggetto.
+Chiamare questo operatore di `VARIANT` cast `COleVariant` per accedere alla struttura sottostante per questo oggetto.
 
 ```
 operator LPVARIANT();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 > [!CAUTION]
-> La modifica del valore nella `VARIANT` struttura a cui accede il puntatore restituito da questa funzione modificherà il valore di `COleVariant` questo oggetto.
+> Se si modifica `VARIANT` il valore nella struttura a cui accede il `COleVariant` puntatore restituito da questa funzione, il valore di questo oggetto verrà modificato.
 
-##  <a name="operator_eq"></a>COleVariant:: operator =
+## <a name="colevariantoperator-"></a><a name="operator_eq"></a>COleVariant::operatore
 
-Questi operatori di assegnazione di overload copiano il valore di origine `COleVariant` in questo oggetto.
+Questi operatori di assegnazione di `COleVariant` overload copiano il valore di origine in questo oggetto.
 
 ```
 const COleVariant& operator=(const VARIANT& varSrc);
@@ -316,48 +316,48 @@ const COleVariant& operator=(const CByteArray& arrSrc);
 const COleVariant& operator=(const CLongBinary& lbSrc);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Di seguito viene riportata una breve descrizione di ogni operatore:
+Di seguito è fornita una breve descrizione di ciascun operatore:
 
-- **operatore = (** *varSrc* **)** Copia un oggetto Variant o `COleVariant` esistente in questo oggetto.
+- **operatore : (** *varSrc* **)** Copia un oggetto `COleVariant` o un oggetto variant esistente in questo oggetto.
 
-- **operatore = (** *pSrc* **)** Copia l'oggetto VARIANT accessibile da *pSrc* in questo oggetto.
+- **operatore : (** *pSrc* **)** Copia l'oggetto VARIANT a cui accede *pSrc* in questo oggetto.
 
-- **operatore = (** *lpszSrc* **)** Copia una stringa con terminazione null in questo oggetto e imposta VARTYPE su VT_BSTR.
+- **operatore : (** *lpszSrc* **)** Copia una stringa con terminazione null in questo oggetto e imposta VARTYPE su VT_BSTR.
 
-- **operatore = (** *strSrc* **)** Copia un oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) in questo oggetto e imposta VARTYPE su VT_BSTR.
+- **operatore : (** *strSrc* **)** Copia un [oggetto CString](../../atl-mfc-shared/reference/cstringt-class.md) in questo oggetto e imposta VARTYPE su VT_BSTR.
 
-- **operatore = (** *nsrc* **)** Copia un valore integer a 8 o a 16 bit in questo oggetto. Se *nsrc* è un valore a 8 bit, il VarType di questo oggetto viene impostato su VT_UI1. Se *nsrc* è un valore a 16 bit e il VarType di questo oggetto è VT_BOOL, viene mantenuto; in caso contrario, viene impostato su VT_I2.
+- **operatore : (** *nSrc* **)** Copia un valore integer a 8 o 16 bit in questo oggetto. Se *nSrc* è un valore a 8 bit, il VARTYPE di questo è impostato su VT_UI1. Se *nSrc* è un valore a 16 bit e il VARTYPE di questo tipo è VT_BOOL, viene mantenuto; in caso contrario, è impostato su VT_I2.
 
-- **operatore = (** *lSrc* **)** Copia un valore integer a 32 bit in questo oggetto. Se il VARTYPE di questo oggetto è VT_ERROR, viene mantenuto; in caso contrario, viene impostato su VT_I4.
+- **operatore : (** *lSrc* **)** Copia un valore integer a 32 bit in questo oggetto. Se il VARTYPE di questo è VT_ERROR, viene mantenuto; in caso contrario, è impostato su VT_I4.
 
-- **operatore = (** *curSrc* **)** Copia un oggetto [COleCurrency](../../mfc/reference/colecurrency-class.md) in questo oggetto e imposta VARTYPE su VT_CY.
+- **operatore : (** *curSrc* **)** Copia un [COleCurrency](../../mfc/reference/colecurrency-class.md) oggetto in questo oggetto e imposta il VARTYPE per VT_CY.
 
-- **operatore = (** *fltSrc* **)** Copia un valore a virgola mobile a 32 bit in questo oggetto e imposta VARTYPE su VT_R4.
+- **operatore : (** *fltSrc* **)** Copia un valore a virgola mobile a 32 bit in questo oggetto e imposta VARTYPE su VT_R4.
 
-- **operatore = (** *dblSrc* **)** Copia un valore a virgola mobile a 64 bit in questo oggetto e imposta VARTYPE su VT_R8.
+- **operatore : (** *dblSrc* **)** Copia un valore a virgola mobile a 64 bit in questo oggetto e imposta VARTYPE su VT_R8.
 
-- **operatore = (** *dateSrc* **)** Copia un oggetto [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) in questo oggetto e imposta VARTYPE su VT_DATE.
+- **operatore : (** *dateSrc* **)** Copia un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oggetto in questo oggetto e imposta il VARTYPE per VT_DATE.
 
-- **operatore = (** *arrSrc* **)** Copia un oggetto [CByteArray](../../mfc/reference/cbytearray-class.md) in questo `COleVariant` oggetto.
+- **operatore : (** *arrSrc* **)** Copia un [CByteArray](../../mfc/reference/cbytearray-class.md) oggetto `COleVariant` in questo oggetto.
 
-- **operatore = (** *lbSrc* **)** Copia un oggetto [CLongBinary](../../mfc/reference/clongbinary-class.md) in questo `COleVariant` oggetto.
+- **operatore : (** *lbSrc* **)** Copia un [CLongBinary](../../mfc/reference/clongbinary-class.md) oggetto `COleVariant` in questo oggetto.
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) e [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) e [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) in Windows SDK.
 
-##  <a name="operator_eq_eq"></a>COleVariant:: operator = =
+## <a name="colevariantoperator-"></a><a name="operator_eq_eq"></a>COleVariant::operatore
 
-Questo operatore confronta due valori Variant e restituisce un valore diverso da zero se sono uguali. in caso contrario, 0.
+Questo operatore confronta due valori variant e restituisce diverso da zero se sono uguali; in caso contrario 0.
 
 ```
 BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```
 
-##  <a name="operator_lt_lt__gt_gt"></a>&lt; Operatore&lt;COleVariant::,&gt;&gt;
+## <a name="colevariantoperator-ltlt-gtgt"></a><a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;
 
-Restituisce un `COleVariant` valore a `CArchive` o `CdumpContext` e immette un `COleVariant` oggetto da `CArchive`.
+Restituisce `COleVariant` un `CArchive` valore `CdumpContext` in o `COleVariant` e `CArchive`immette un oggetto da .
 
 ```
 friend CDumpContext& AFXAPI operator<<(
@@ -373,11 +373,11 @@ friend CArchive& AFXAPI operator>>(
     COleVariant& varSrc);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L' `COleVariant` operatore di **\<inserimento(\<** ) supporta il dump e l'archiviazione di diagnostica in un archivio. L'operatore Extraction ( **>>** ) supporta il caricamento da un archivio.
+L'operatore `COleVariant` di inserimento (**\<**) supporta il dump diagnostico e l'archiviazione in un archivio. L'operatore di estrazione (**>>**) supporta il caricamento da un archivio.
 
-##  <a name="setstring"></a>COleVariant:: sestring
+## <a name="colevariantsetstring"></a><a name="setstring"></a>COleVariant::SetString
 
 Imposta la stringa su un tipo particolare.
 
@@ -391,14 +391,14 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 Stringa con terminazione null da copiare nel nuovo `COleVariant` oggetto.
 
 *VtSrc*<br/>
-VarType per il nuovo `COleVariant` oggetto.
+VARTYPE per il `COleVariant` nuovo oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il parametro *vtSrc* deve essere VT_BSTR (Unicode) o VT_BSTRT (ANSI). `SetString`viene in genere usato per impostare le stringhe su ANSI, poiché il valore predefinito per il costruttore [COleVariant:: COleVariant](#colevariant) con una stringa o un parametro puntatore di stringa e nessun VarType è Unicode.
+Il parametro *vtSrc* deve essere VT_BSTR (UNICODE) o VT_BSTRT (ANSI). `SetString`viene in genere utilizzato per impostare le stringhe su ANSI, poiché il valore predefinito per il [COleVariant::COleVariant](#colevariant) costruttore con una stringa o un parametro del puntatore di stringa e nessun VARTYPE è UNICODE.
 
-Un recordset DAO in una compilazione non UNICODE prevede che le stringhe siano ANSI. Per `COleVariant` le funzioni DAO che utilizzano oggetti, pertanto, se non si crea un recordset Unicode, è necessario utilizzare il form **COleVariant:: COleVariant (** *lpszSrc* **,** *vtSrc* **)** del costruttore con *vtSrc* impostato su VT. _BSTRT (ANSI) o usare `SetString` with *vtSrc* impostato su VT_BSTRT per creare stringhe ANSI. Ad esempio, le `CDaoRecordset` funzioni [CDaoRecordset:: Seek](../../mfc/reference/cdaorecordset-class.md#seek) e [CDaoRecordset:: SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) utilizzano `COleVariant` oggetti come parametri. Questi oggetti devono essere ANSI se il recordset DAO non è UNICODE.
+Un recordset DAO in una build non UNICODE prevede che le stringhe siano ANSI. Pertanto, per le `COleVariant` funzioni DAO che utilizzano oggetti, se non si crea un recordset UNICODE, è necessario utilizzare la forma di costruttore **COleVariant::COleVariant(** *lpszSrc* **,** *vtSrc* **)** con *vtSrc* impostato su VT_BSTRT (ANSI) o utilizzare `SetString` con *vtSrc* impostato per VT_BSTRT per creare stringhe ANSI. Ad esempio, `CDaoRecordset` le funzioni [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) e [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) utilizzano `COleVariant` gli oggetti come parametri. Questi oggetti devono essere ANSI se il recordset DAO non è UNICODE.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
