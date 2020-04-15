@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d05a2e186f001a69310e99cec013193a4d1bff3b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338246"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319727"
 ---
 # <a name="cmousemanager-class"></a>Classe CMouseManager
 
-Consente agli utenti di associare comandi diversi a un determinato [CView](../../mfc/reference/cview-class.md) quando l'utente fa doppio clic all'interno della visualizzazione dell'oggetto.
+Consente a un utente di associare comandi diversi a un particolare [CView](../../mfc/reference/cview-class.md) oggetto quando l'utente fa doppio clic all'interno di tale visualizzazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,20 +45,20 @@ class CMouseManager : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMouseManager::AddView](#addview)|Aggiunge un `CView` dell'oggetto per il **personalizzazione** nella finestra di dialogo. Il **personalizzazione** nella finestra di dialogo consente all'utente di associare un doppio clic un comando per ognuna delle viste elencate.|
-|[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|Restituisce il comando che viene eseguito quando l'utente fa doppio clic all'interno della visualizzazione specificata.|
-|[CMouseManager::GetViewIconId](#getviewiconid)|Restituisce l'icona associata all'ID vista specificato.|
-|[CMouseManager::GetViewIdByName](#getviewidbyname)|Restituisce l'ID della vista associata con il nome della visualizzazione specificato.|
-|[CMouseManager::GetViewNames](#getviewnames)|Recupera un elenco di tutti i nomi di vista aggiunto.|
-|[CMouseManager::LoadState](#loadstate)|Carica il `CMouseManager` dello stato dal Registro di sistema Windows.|
-|[CMouseManager::SaveState](#savestate)|Scrive il `CMouseManager` dello stato nel Registro di sistema di Windows.|
-|[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|Associa il comando specificato e la visualizzazione specificata.|
+|[CMouseManager::AddView](#addview)|Aggiunge `CView` un oggetto alla finestra di dialogo **Personalizzazione.** La finestra di dialogo **Personalizzazione** consente all'utente di associare un doppio clic a un comando per ciascuna delle viste elencate.|
+|[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|Restituisce il comando che viene eseguito quando l'utente fa doppio clic all'interno della visualizzazione fornita.|
+|[CMouseManager::GetViewIconId](#getviewiconid)|Restituisce l'icona associata all'ID visualizzazione fornito.|
+|[CMouseManager::GetViewIdByName](#getviewidbyname)|Restituisce l'ID visualizzazione associato al nome della visualizzazione specificato.|
+|[CMouseManager::GetViewNames](#getviewnames)|Recupera un elenco di tutti i nomi delle viste aggiunte.|
+|[CMouseManager::LoadState](#loadstate)|Carica `CMouseManager` lo stato dal Registro di sistema di Windows.|
+|[CMouseManager::SaveState](#savestate)|Scrive `CMouseManager` lo stato nel Registro di sistema di Windows.|
+|[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|Associa il comando fornito e la visualizzazione fornita.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il `CMouseManager` classe mantiene una raccolta di `CView` oggetti. Ogni visualizzazione è identificato da un nome e da un ID. Tali viste vengono visualizzate nei **personalizzazione** nella finestra di dialogo. L'utente può modificare il comando associato a qualsiasi visualizzazione tramite il **personalizzazione** nella finestra di dialogo. Quando l'utente fa doppio clic in tale visualizzazione, viene eseguito il comando associato. Per supportare questo scenario dal punto di vista della scrittura di codice, è necessario elaborare il messaggio di WM_LBUTTONDBLCLK e chiamano il [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick) funzione nel codice per cui `CView` oggetto...
+La `CMouseManager` classe gestisce `CView` una raccolta di oggetti. Ogni vista è identificata da un nome e da un ID. Queste visualizzazioni vengono visualizzate nella finestra di dialogo **Personalizzazione.** L'utente può modificare il comando associato a qualsiasi visualizzazione tramite la finestra di dialogo **Personalizzazione.** Il comando associato viene eseguito quando l'utente fa doppio clic in tale visualizzazione. Per supportare questo dal punto di vista della codifica, è necessario elaborare il messaggio di `CView` WM_LBUTTONDBLCLK e chiamare la funzione CWinAppEx::OnViewDoubleClick nel codice per tale oggetto.To support this from a coding perspective, you must process the message message and call the [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick) function in the code for that object..
 
-Non è necessario creare un `CMouseManager` oggetto manualmente. Verrà creato dal framework dell'applicazione. Verrà inoltre quindi eliminato automaticamente quando l'utente chiude l'applicazione. Per ottenere un puntatore al gestore del mouse per l'applicazione, chiamare [CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager).
+Non creare un `CMouseManager` oggetto manualmente. Verrà creato dal framework dell'applicazione. Verrà inoltre eliminato automaticamente quando l'utente esce dall'applicazione. Per ottenere un puntatore al gestore del mouse per l'applicazione, chiamare [CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -70,9 +70,9 @@ Non è necessario creare un `CMouseManager` oggetto manualmente. Verrà creato d
 
 **Intestazione:** afxmousemanager.h
 
-##  <a name="addview"></a>  CMouseManager::AddView
+## <a name="cmousemanageraddview"></a><a name="addview"></a>CMouseManager::AddView
 
-Registra una [CView](../../mfc/reference/cview-class.md) dell'oggetto con il [classe CMouseManager](../../mfc/reference/cmousemanager-class.md) per supportare il comportamento personalizzato del mouse.
+Registra un [CView](../../mfc/reference/cview-class.md) oggetto con il [CMouseManager classe](../../mfc/reference/cmousemanager-class.md) per supportare il comportamento del mouse personalizzato.
 
 ```
 BOOL AddView(
@@ -88,42 +88,42 @@ BOOL AddView(
 
 ### <a name="parameters"></a>Parametri
 
-*iViewId*<br/>
-[in] Un ID di vista.
+*iViewId (informazioni in stato in stato in stato*<br/>
+[in] Un ID vista.
 
-*uiViewNameResId*<br/>
-[in] Un ID di stringa di risorsa che fa riferimento il nome della visualizzazione.
+*UIViewNameResId*<br/>
+[in] ID di stringa di risorsa che fa riferimento al nome della visualizzazione.
 
-*uiIconId*<br/>
-[in] Un ID icona di visualizzazione.
+*uiIconId (informazioni in questo modo)*<br/>
+[in] ID dell'icona di visualizzazione.
 
-*iId*<br/>
-[in] Un ID di vista.
+*Iid*<br/>
+[in] Un ID vista.
 
-*lpszViewName*<br/>
-[in] Un nome di visualizzazione.
+*lpszViewName (nome di visualizzazione)*<br/>
+[in] Un nome di vista.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per supportare il comportamento personalizzato del mouse, una vista deve essere registrata con il `CMouseManager` oggetto. Qualsiasi oggetto derivato dal `CView` classe può essere registrata con il gestore del mouse. La stringa e l'icona associata a una vista vengono visualizzati nei **Mouse** scheda della finestra di **Personalizza** nella finestra di dialogo.
+Per supportare il comportamento personalizzato del mouse, `CMouseManager` una vista deve essere registrata con l'oggetto. Qualsiasi oggetto derivato dalla `CView` classe può essere registrato con il gestore del mouse. La stringa e l'icona associate a una vista vengono visualizzate nella scheda **Mouse** della finestra di dialogo **Personalizza.**
 
-È compito del programmatore di creare e gestire, ad esempio visualizzare gli ID *iViewId* e *iId*.
+È responsabilità del programmatore creare e gestire gli ID di visualizzazione, ad esempio *iViewId* e *iId*.
 
-Per altre informazioni su come fornire comportamento personalizzato del mouse, vedere [personalizzazione di tastiera e Mouse](../../mfc/keyboard-and-mouse-customization.md).
+Per ulteriori informazioni su come fornire un comportamento personalizzato del mouse, vedere [Personalizzazione della tastiera e del mouse](../../mfc/keyboard-and-mouse-customization.md).
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come recuperare un puntatore a un `CMouseManager` oggetto utilizzando il `CWinAppEx::GetMouseManager` metodo e il `AddView` metodo nel `CMouseManager` classe. Questo frammento di codice fa parte il [campione raccolta stato](../../overview/visual-cpp-samples.md).
+Nell'esempio riportato di seguito `CMouseManager` viene illustrato `CWinAppEx::GetMouseManager` come recuperare `AddView` un `CMouseManager` puntatore a un oggetto utilizzando il metodo e il metodo nella classe . Questo frammento di codice fa parte [dell'esempio di](../../overview/visual-cpp-samples.md)raccolta di stati .
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 
-##  <a name="getviewdblclickcommand"></a>  CMouseManager::GetViewDblClickCommand
+## <a name="cmousemanagergetviewdblclickcommand"></a><a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand
 
-Restituisce il comando che viene eseguito quando l'utente fa doppio clic all'interno della visualizzazione specificata.
+Restituisce il comando che viene eseguito quando l'utente fa doppio clic all'interno della visualizzazione fornita.
 
 ```
 UINT GetViewDblClickCommand(int iId) const;
@@ -131,16 +131,16 @@ UINT GetViewDblClickCommand(int iId) const;
 
 ### <a name="parameters"></a>Parametri
 
-*iId*<br/>
-[in] L'ID di vista.
+*Iid*<br/>
+[in] ID visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la visualizzazione è associata a un comando; l'identificatore di comando in caso contrario 0.
+Identificatore del comando se la visualizzazione è associata a un comando; in caso contrario 0.
 
-##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId
+## <a name="cmousemanagergetviewiconid"></a><a name="getviewiconid"></a>CMouseManager::GetViewIconId
 
-Recupera l'icona associata a un ID di vista.
+Recupera l'icona associata a un ID vista.
 
 ```
 UINT GetViewIconId(int iViewId) const;
@@ -148,20 +148,20 @@ UINT GetViewIconId(int iViewId) const;
 
 ### <a name="parameters"></a>Parametri
 
-*iViewId*<br/>
-[in] L'ID di vista.
+*iViewId (informazioni in stato in stato in stato*<br/>
+[in] ID visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un identificatore di risorsa icona se ha esito positivo. in caso contrario 0.
+Un identificatore di risorsa icona se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo avrà esito negativo se la vista non viene inizialmente registrata mediante [CMouseManager::AddView](#addview).
+Questo metodo avrà esito negativo se la visualizzazione non viene prima registrata utilizzando [CMouseManager::AddView](#addview).
 
-##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName
+## <a name="cmousemanagergetviewidbyname"></a><a name="getviewidbyname"></a>CMouseManager::GetViewIdByName
 
-Recupera l'ID della vista associata a un nome di visualizzazione.
+Recupera l'ID vista associato a un nome di vista.
 
 ```
 int GetViewIdByName(LPCTSTR lpszName) const;
@@ -170,19 +170,19 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ### <a name="parameters"></a>Parametri
 
 *lpszName*<br/>
-[in] Il nome della visualizzazione.
+[in] Nome della vista.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un ID di vista se ha esito positivo. in caso contrario 0.
+Un ID vista se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo esegue la ricerca tramite le viste registrate mediante [CMouseManager::AddView](#addview).
+Questo metodo esegue la ricerca nelle visualizzazioni registrate tramite [CMouseManager::AddView](#addview).
 
-##  <a name="getviewnames"></a>  CMouseManager::GetViewNames
+## <a name="cmousemanagergetviewnames"></a><a name="getviewnames"></a>CMouseManager::GetViewNames
 
-Recupera un elenco di tutti i nomi di visualizzazione registrati.
+Recupera un elenco di tutti i nomi delle viste registrate.
 
 ```
 void GetViewNames(CStringList& listOfNames) const;
@@ -190,16 +190,16 @@ void GetViewNames(CStringList& listOfNames) const;
 
 ### <a name="parameters"></a>Parametri
 
-*listOfNames*<br/>
-[out] Un riferimento a `CStringList` oggetto.
+*listOfNomi*<br/>
+[fuori] Riferimento all'oggetto. `CStringList`
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo inserisce il parametro `listOfNames` con i nomi di tutte le visualizzazioni registrate mediante [CMouseManager::AddView](#addview).
+Questo metodo riempie `listOfNames` il parametro con i nomi di tutte le viste registrate utilizzando [CMouseManager::AddView](#addview).
 
-##  <a name="loadstate"></a>  CMouseManager::LoadState
+## <a name="cmousemanagerloadstate"></a><a name="loadstate"></a>CMouseManager::LoadState
 
-Carica lo stato del [classe CMouseManager](../../mfc/reference/cmousemanager-class.md) dal Registro di sistema.
+Carica lo stato della [classe CMouseManager](../../mfc/reference/cmousemanager-class.md) dal Registro di sistema.
 
 ```
 BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -207,22 +207,22 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszProfileName*<br/>
-[in] Un percorso di una chiave del Registro di sistema.
+*lpszNomeprofilo (informazioni in base al profilo)*<br/>
+[in] Percorso di una chiave del Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le informazioni sullo state caricate dal Registro di sistema includono le viste registrate, gli identificatori di visualizzazione e i comandi associati. Se il parametro *lpszProfileName* è NULL, questa funzione viene caricata la `CMouseManager` i dati dalla posizione predefinita del Registro di sistema controllata dal [classe CWinAppEx](../../mfc/reference/cwinappex-class.md).
+Le informazioni sullo stato caricate dal Registro di sistema includono le visualizzazioni registrate, gli identificatori di visualizzazione e i comandi associati. Se il parametro *lpszProfileName* è `CMouseManager` NULL, questa funzione carica i dati dal percorso predefinito del Registro di sistema controllato dalla [classe CWinAppEx](../../mfc/reference/cwinappex-class.md).
 
-Nella maggior parte dei casi, non è necessario chiamare direttamente questa funzione. Viene chiamato come parte del processo di inizializzazione dell'area di lavoro. Per altre informazioni sul processo di inizializzazione dell'area di lavoro, vedere [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).
+Nella maggior parte dei casi, non è necessario chiamare direttamente questa funzione. Viene chiamato come parte del processo di inizializzazione dell'area di lavoro. Per ulteriori informazioni sul processo di inizializzazione dell'area di lavoro, vedere [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).
 
-##  <a name="savestate"></a>  CMouseManager::SaveState
+## <a name="cmousemanagersavestate"></a><a name="savestate"></a>CMouseManager::SaveState
 
-Scrive lo stato del [classe CMouseManager](../../mfc/reference/cmousemanager-class.md) nel Registro di sistema.
+Scrive lo stato della [classe CMouseManager](../../mfc/reference/cmousemanager-class.md) nel Registro di sistema.
 
 ```
 BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -230,22 +230,22 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszProfileName*<br/>
-[in] Un percorso di una chiave del Registro di sistema.
+*lpszNomeprofilo (informazioni in base al profilo)*<br/>
+[in] Percorso di una chiave del Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le informazioni sullo stato scritte nel Registro di sistema includono registrate tutte le viste, gli identificatori di visualizzazione e i comandi associati. Se il parametro *lpszProfileName* è NULL, questa funzione scrive il `CMouseManager` i dati nel percorso del Registro di sistema predefinito controllata dal [classe CWinAppEx](../../mfc/reference/cwinappex-class.md).
+Le informazioni sullo stato scritte nel Registro di sistema includono tutte le visualizzazioni registrate, gli identificatori di visualizzazione e i comandi associati. Se il parametro *lpszProfileName* è `CMouseManager` NULL, questa funzione scrive i dati nel percorso predefinito del Registro di sistema controllato dalla [classe CWinAppEx](../../mfc/reference/cwinappex-class.md).
 
-Nella maggior parte dei casi, non è necessario chiamare direttamente questa funzione. Viene chiamato come parte del processo di serializzazione dell'area di lavoro. Per altre informazioni sul processo di serializzazione dell'area di lavoro, vedere [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).
+Nella maggior parte dei casi, non è necessario chiamare direttamente questa funzione. Viene chiamato come parte del processo di serializzazione dell'area di lavoro. Per ulteriori informazioni sul processo di serializzazione dell'area di lavoro, vedere [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).
 
-##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk
+## <a name="cmousemanagersetcommandfordblclk"></a><a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk
 
-Associa un comando personalizzato a una vista che viene inizialmente registrata con il gestore del mouse.
+Associa un comando personalizzato a una visualizzazione registrata per la prima volta con il gestore del mouse.
 
 ```
 void SetCommandForDblClk(
@@ -255,21 +255,21 @@ void SetCommandForDblClk(
 
 ### <a name="parameters"></a>Parametri
 
-*iViewId*<br/>
-[in] L'identificatore della vista.
+*iViewId (informazioni in stato in stato in stato*<br/>
+[in] Identificatore della visualizzazione.
 
-*uiCmd*<br/>
-[in] Identificatore di comando.
+*uiCmd (informazioni in stato in questo*<br/>
+[in] Identificatore del comando.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per associare un comando personalizzato a una vista, è innanzitutto necessario registrare la visualizzazione usando [CMouseManager::AddView](#addview). Il `AddView` metodo richiede un identificatore della vista come parametro di input. Dopo aver registrato una vista, è possibile chiamare `CMouseManager::SetCommandForDblClk` con il parametro di input di stessa visualizzazione identificatore fornito per `AddView`. Successivamente, quando l'utente fa doppio clic con il mouse nella visualizzazione registrato, l'applicazione eseguirà il comando indicato da *uiCmd.* Per supportare il comportamento del mouse personalizzato, è necessario anche personalizzare la visualizzazione registrata con il gestore del mouse. Per altre informazioni sul comportamento del mouse personalizzato, vedere [personalizzazione di tastiera e Mouse](../keyboard-and-mouse-customization.md).
+Per associare un comando personalizzato a una visualizzazione, è necessario innanzitutto registrare la visualizzazione utilizzando [CMouseManager::AddView](#addview). Il `AddView` metodo richiede un identificatore di visualizzazione come parametro di input. Una volta registrati una vista, è possibile chiamare `CMouseManager::SetCommandForDblClk` con lo `AddView`stesso parametro di input dell'identificatore della vista fornito a . Successivamente, quando l'utente fa doppio clic con il mouse nella visualizzazione registrata, l'applicazione eseguirà il comando indicato da *uiCmd.* Per supportare il comportamento del mouse personalizzato, è inoltre necessario personalizzare la visualizzazione registrata con il gestore del mouse. Per ulteriori informazioni sul comportamento personalizzato del mouse, vedere [Personalizzazione di tastiera e mouse](../keyboard-and-mouse-customization.md).
 
 Se *uiCmd* è impostato su 0, la visualizzazione specificata non è più associata a un comando.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
 [Personalizzazione di tastiera e mouse](../../mfc/keyboard-and-mouse-customization.md)

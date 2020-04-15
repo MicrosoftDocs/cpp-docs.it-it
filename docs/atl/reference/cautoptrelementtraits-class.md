@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
-ms.openlocfilehash: d217441048403b0ff5361f8049b76367174812f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac29116dc9beedf587c42cc0e52f8c9dbaf3d782
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246741"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318880"
 ---
 # <a name="cautoptrelementtraits-class"></a>Classe CAutoPtrElementTraits
 
-Questa classe fornisce metodi e funzioni statiche typedef utile durante la creazione di raccolte di puntatori intelligenti.
+Questa classe fornisce metodi, funzioni statiche e typedef utili durante la creazione di raccolte di puntatori intelligenti.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,7 +34,7 @@ class CAutoPtrElementTraits
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Il tipo di puntatore.
+Tipo di puntatore.
 
 ## <a name="members"></a>Membri
 
@@ -42,40 +42,40 @@ Il tipo di puntatore.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|
-|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.|
+|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Tipo di dati da utilizzare per l'aggiunta di elementi all'oggetto classe di raccolta.|
+|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Tipo di dati da utilizzare per il recupero di elementi dall'oggetto classe di raccolta.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe fornisce metodi e funzioni statiche TypeDef per la creazione di oggetti di classe di raccolta che contiene i puntatori intelligenti. Le classi [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) e [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) derivano da `CAutoPtrElementTraits`. Se la compilazione di una raccolta di puntatori intelligenti che richiede nuovo vettore e gli operatori di eliminazione, usare [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) invece.
+Questa classe fornisce metodi, funzioni statiche e typedef per facilitare la creazione di oggetti classe di raccolta contenenti puntatori intelligenti. Le classi [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) e [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) derivano da `CAutoPtrElementTraits`. Se la compilazione di una raccolta di puntatori intelligenti che richiede operatori new ed delete vettoriali, usare invece [CAutoVectorPtrElementTraits.If](../../atl/reference/cautovectorptrelementtraits-class.md) building a collection of smart pointers that requires vector new and delete operators, use CAutoVectorPtrElementTraits instead.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
 [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+[Caratteristiche CDefaultHash](../../atl/reference/cdefaulthashtraits-class.md)
 
 [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[Tratti CDefaultElement](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CAutoPtrElementTraits`
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcoll. h
+**Intestazione:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoPtrElementTraits::INARGTYPE
+## <a name="cautoptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE
 
-Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.
+Tipo di dati da utilizzare per l'aggiunta di elementi all'oggetto classe di raccolta.
 
 ```
 typedef CAutoPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoPtrElementTraits::OUTARGTYPE
+## <a name="cautoptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE
 
-Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.
+Tipo di dati da utilizzare per il recupero di elementi dall'oggetto classe di raccolta.
 
 ```
 typedef T *& OUTARGTYPE;
@@ -84,4 +84,4 @@ typedef T *& OUTARGTYPE;
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

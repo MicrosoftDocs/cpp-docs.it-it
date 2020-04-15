@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 712c1f1638b954d1580eb527dd9eab7401917517
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688046"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317197"
 ---
 # <a name="freelist-class"></a>Classe freelist
 
@@ -32,12 +32,12 @@ class freelist : public Max
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*SZ*|Numero di elementi della matrice da allocare.|
-|*Max*|Classe max che rappresenta il numero massimo di elementi da archiviare nell'elenco di disponibilità. La classe max può essere [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*Sz*|Numero di elementi della matrice da allocare.|
+|*Massimo*|Classe max che rappresenta il numero massimo di elementi da archiviare nell'elenco di disponibilità. La classe max può essere [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questo modello di classe gestisce un elenco di blocchi di memoria di dimensioni *SZ* con la lunghezza massima dell'elenco determinato dalla classe max passata in *Max*.
+Questo modello di classe gestisce un elenco di blocchi di memoria di dimensioni *Sz* con la lunghezza massima dell'elenco determinata dalla classe max passata in *Max*.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -49,7 +49,7 @@ Questo modello di classe gestisce un elenco di blocchi di memoria di dimensioni 
 
 |Funzione membro|Descrizione|
 |-|-|
-|[pop](#pop)|Rimuove il primo blocco di memoria dall'elenco di disponibilità.|
+|[Pop](#pop)|Rimuove il primo blocco di memoria dall'elenco di disponibilità.|
 |[push](#push)|Aggiunge un blocco di memoria all'elenco.|
 
 ## <a name="requirements"></a>Requisiti
@@ -58,7 +58,7 @@ Questo modello di classe gestisce un elenco di blocchi di memoria di dimensioni 
 
 **Spazio dei nomi:** stdext
 
-## <a name="freelist"></a>  freelist::freelist
+## <a name="freelistfreelist"></a><a name="freelist"></a>freelist::freelist
 
 Costruisce un oggetto di tipo `freelist`.
 
@@ -66,9 +66,9 @@ Costruisce un oggetto di tipo `freelist`.
 freelist();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-## <a name="pop"></a>  freelist::pop
+## <a name="freelistpop"></a><a name="pop"></a>freelist::pop
 
 Rimuove il primo blocco di memoria dall'elenco di disponibilità.
 
@@ -80,11 +80,11 @@ void *pop();
 
 Restituisce un puntatore al blocco di memoria rimosso dall'elenco.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce NULL se l'elenco è vuoto. In caso contrario, rimuove il primo blocco di memoria dall'elenco.
 
-## <a name="push"></a>  freelist::push
+## <a name="freelistpush"></a><a name="push"></a>freelist::push
 
 Aggiunge un blocco di memoria all'elenco.
 
@@ -96,16 +96,16 @@ bool push(void* ptr);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*ptr*|Puntatore al blocco di memoria da aggiungere all'elenco di disponibilità.|
+|*Ptr*|Puntatore al blocco di memoria da aggiungere all'elenco di disponibilità.|
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la funzione `full` della classe max restituisce **false**; in caso contrario, la funzione `push` restituisce **false**.
+**true** se `full` la funzione della classe max restituisce **false**; in caso `push` contrario, la funzione restituisce **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se la funzione `full` della classe max restituisce **false**, questa funzione membro aggiunge il blocco di memoria a cui punta *ptr* all'inizio dell'elenco.
+Se `full` la funzione della classe max restituisce **false**, questa funzione membro aggiunge il blocco di memoria a cui punta *ptr* all'intestazione dell'elenco.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocatori>](../standard-library/allocators-header.md)

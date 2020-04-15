@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 5808a99d376ab3640c955156688d64bc0285e67e
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: eaf070d5a98a05dbe3102afac8317ffd59298ad2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706985"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321669"
 ---
 # <a name="atl-property-page-wizard"></a>Creazione guidata pagina delle proprietà ATL
 
@@ -30,12 +30,12 @@ Questa procedura guidata [aggiunge una pagina delle proprietà in un progetto AT
 
 A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
 
-## <a name="names"></a>Nomi
+## <a name="names"></a>nomi
 
 Specificare i nomi per l'oggetto, l'interfaccia e le classi da aggiungere al progetto. Ad eccezione di **Nome breve**, tutte le altre caselle possono essere modificate indipendentemente. Se si modifica il testo per **Nome breve**, la modifica viene applicata ai nomi di tutte le altre caselle in questa pagina. Se si modifica il nome di **CoClass** nella sezione COM, la modifica viene applicata alle caselle **Tipo** e **ProgID**. Questo comportamento di denominazione è progettato per rendere tutti i nomi facilmente identificabili durante lo sviluppo della pagina delle proprietà.
 
 > [!NOTE]
->  **CoClass** è modificabile solo in progetti senza attributi. Se il progetto è con attributi, non è possibile modificare **CoClass**.
+> **CoClass** è modificabile solo in progetti senza attributi. Se il progetto è con attributi, non è possibile modificare **CoClass**.
 
 ### <a name="c"></a>C++
 
@@ -46,7 +46,7 @@ Fornisce informazioni per la classe C++ creata per implementare l'oggetto.
 |Termine|Definizione|
 |**Nome breve**|Imposta il nome abbreviato per l'oggetto. Il nome specificato determina i nomi della classe e di **CoClass**, i nomi dei file (con estensioni **cpp** e **h**), il nome di **Tipo** e il valore di **ProgID**, a meno che questi campi non vengano modificati singolarmente.|
 |**File con estensione h**|Imposta il nome del file di intestazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome specificato in **Nome breve**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nel percorso desiderato o aggiungere la dichiarazione di classe a un file esistente. Se si seleziona un file esistente, la procedura guidata non lo salverà nel percorso selezionato finché non si sceglie **Fine**.<br /><br /> La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.|
-|**Classe**|Imposta il nome della classe che implementa l'oggetto. Questo nome è basato sul nome specificato in **Nome breve**, preceduto da "C", il prefisso tipico per un nome di classe.|
+|**Class**|Imposta il nome della classe che implementa l'oggetto. Questo nome è basato sul nome specificato in **Nome breve**, preceduto da "C", il prefisso tipico per un nome di classe.|
 |**File con estensione cpp**|Imposta il nome del file di implementazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome specificato in **Nome breve**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome del file nel percorso desiderato. Il file non viene salvato nel percorso selezionato fino a quando non si fa clic su **Fine** nella procedura guidata.<br /><br /> La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se l'implementazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.|
 |**Con attributi**|Indica se l'oggetto usa attributi. Se si aggiunge un oggetto a un progetto ATL con attributi, questa opzione è selezionata e non può essere modificata, ovvero è possibile aggiungere oggetti con attributi solo a un progetto creato con supporto per gli attributi.<br /><br /> È possibile aggiungere un oggetto con attributi solo a un progetto ATL che usa attributi. Se si seleziona questa opzione per un progetto ATL che non include il supporto per gli attributi, la procedura guidata chiede di specificare se si vuole aggiungere il supporto per gli attributi al progetto.<br /><br /> Per impostazione predefinita, qualsiasi oggetto aggiunto dopo aver impostato questa opzione viene designato come con attributi (la casella di controllo è selezionata). È possibile deselezionare questa casella per aggiungere un oggetto che non usa attributi.<br /><br /> Per altre informazioni, vedere [Impostazioni applicazione, Creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [Meccanismi di base degli attributi](../../windows/basic-mechanics-of-attributes.md).|
 
@@ -61,11 +61,11 @@ Fornisce informazioni sulla funzionalità COM per l'oggetto.
    > [!NOTE]
    > Se si crea il progetto mediante attributi o se in questa pagina della procedura guidata si indica che la pagina delle proprietà usa attributi, non è possibile modificare questa opzione perché ATL non include l'attributo `coclass`.
 
-- **Type**
+- **Tipo**
 
    Imposta la descrizione dell'oggetto che verrà visualizzata nel Registro di sistema.
 
-- **ProgID**
+- **Progid**
 
    Imposta il nome che può essere usato dai contenitori invece del CLSID dell'oggetto.
 

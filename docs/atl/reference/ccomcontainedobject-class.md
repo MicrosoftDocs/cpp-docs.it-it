@@ -1,5 +1,5 @@
 ---
-title: Classe CComContainedObject
+title: CComContainedObject (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CComContainedObject
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: c5e2fa64cc0938e632a37eac7dd1d6e9111c3d98
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 72ba27c3be6576621995ffb8c98995c6abc9324c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497315"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320788"
 ---
-# <a name="ccomcontainedobject-class"></a>Classe CComContainedObject
+# <a name="ccomcontainedobject-class"></a>CComContainedObject (classe)
 
-Questa classe implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) delegando all'oggetto `IUnknown`proprietario.
+Questa classe implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) delegando all'oggetto proprietario . `IUnknown`
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,29 +38,29 @@ class CComContainedObject : public Base
 #### <a name="parameters"></a>Parametri
 
 *Base*<br/>
-Classe derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
+La classe derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Costruttore. Inizializza il puntatore del membro all'oggetto `IUnknown`proprietario.|
-|[CComContainedObject::~CComContainedObject](#dtor)|Distruttore.|
+|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Costruttore. Inizializza il puntatore del membro `IUnknown`all'oggetto proprietario.|
+|[CComContainedObject:: CComContainedObject](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CComContainedObject::AddRef](#addref)|Incrementa il conteggio dei riferimenti nell'oggetto proprietario.|
-|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Recupera l'oggetto `IUnknown`proprietario.|
-|[CComContainedObject::QueryInterface](#queryinterface)|Recupera un puntatore all'interfaccia richiesta nell'oggetto proprietario.|
-|[CComContainedObject::Release](#release)|Decrementa il conteggio dei riferimenti nell'oggetto proprietario.|
+|[CComContainedObject::AddRef](#addref)|Incrementa il conteggio dei riferimenti per l'oggetto proprietario.|
+|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Recupera l'oggetto proprietario `IUnknown`di .|
+|[CComContainedObject::QueryInterface](#queryinterface)|Recupera un puntatore all'interfaccia richiesta sull'oggetto proprietario.|
+|[CComContainedObject::Release](#release)|Decrementa il conteggio dei riferimenti sull'oggetto proprietario.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-In ATL `CComContainedObject` vengono utilizzate le classi [ccomaggobjec](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md)e [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) delegando all'oggetto `IUnknown`proprietario. Il proprietario è l'oggetto esterno di un'aggregazione oppure l'oggetto per il quale viene creata un'interfaccia di tipo tear-off. `CComContainedObject` lechiamate`CComObjectRootEx` ,`OuterAddRef`e ,ereditano`Base`tutte tramite. `OuterRelease` `OuterQueryInterface`
+ATL `CComContainedObject` utilizza nelle classi [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md)e [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) delegando all'oggetto `IUnknown`proprietario . Il proprietario è l'oggetto esterno di un'aggregazione o l'oggetto per il quale viene creata un'interfaccia tear-off. `CComContainedObject` chiama `CComObjectRootEx`' `OuterQueryInterface` `OuterAddRef`, `OuterRelease`e , tutti `Base`ereditati tramite .
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -70,11 +70,11 @@ In ATL `CComContainedObject` vengono utilizzate le classi [ccomaggobjec](../../a
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom. h
+**Intestazione:** atlcom.h
 
-##  <a name="addref"></a>  CComContainedObject::AddRef
+## <a name="ccomcontainedobjectaddref"></a><a name="addref"></a>CComContainedObject::AddRef
 
-Incrementa il conteggio dei riferimenti nell'oggetto proprietario.
+Incrementa il conteggio dei riferimenti per l'oggetto proprietario.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -84,7 +84,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 Valore che può essere utile per la diagnostica o il test.
 
-##  <a name="ccomcontainedobject"></a>CComContainedObject:: CComContainedObject
+## <a name="ccomcontainedobjectccomcontainedobject"></a><a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject
 
 Costruttore.
 
@@ -94,14 +94,14 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*pv*<br/>
-in Oggetto del proprietario `IUnknown`.
+*Pv*<br/>
+[in] L'oggetto proprietario `IUnknown`è .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Imposta il `m_pOuterUnknown` puntatore del membro (ereditato attraverso `Base` la classe) su *PV*.
+Imposta `m_pOuterUnknown` il puntatore del `Base` membro (ereditato tramite la classe ) su *pv*.
 
-##  <a name="dtor"></a>CComContainedObject:: ~ CComContainedObject
+## <a name="ccomcontainedobjectccomcontainedobject"></a><a name="dtor"></a>CComContainedObject:: CComContainedObject
 
 Distruttore.
 
@@ -109,13 +109,13 @@ Distruttore.
 ~CComContainedObject();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Libera tutte le risorse allocate.
 
-##  <a name="getcontrollingunknown"></a>CComContainedObject:: GetControllingUnknown
+## <a name="ccomcontainedobjectgetcontrollingunknown"></a><a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown
 
-Restituisce il `m_pOuterUnknown` puntatore del membro (ereditato tramite la classe *base* ) che include `IUnknown`l'oggetto proprietario.
+Restituisce `m_pOuterUnknown` il puntatore del membro (ereditato tramite `IUnknown`la classe *Base)* che contiene l'oggetto proprietario dell'oggetto proprietario.
 
 ```
 IUnknown* GetControllingUnknown();
@@ -123,15 +123,15 @@ IUnknown* GetControllingUnknown();
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto del proprietario `IUnknown`.
+L'oggetto proprietario `IUnknown`è .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo può essere virtuale se `Base` ha dichiarato la macro [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) .
+Questo metodo può `Base` essere virtuale se ha dichiarato la macro [DECLARE_GET_CONTROLLING_UNKNOWN.](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown)
 
-##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface
+## <a name="ccomcontainedobjectqueryinterface"></a><a name="queryinterface"></a>CComContainedObject::QueryInterface
 
-Recupera un puntatore all'interfaccia richiesta nell'oggetto proprietario.
+Recupera un puntatore all'interfaccia richiesta sull'oggetto proprietario.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -141,22 +141,22 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametri
 
-*iid*<br/>
-in Identificatore dell'interfaccia richiesta.
+*Iid*<br/>
+[in] Identificatore dell'interfaccia richiesta.
 
-*ppvObject*<br/>
-out Puntatore al puntatore a interfaccia identificato da *IID*. Se l'oggetto non supporta questa interfaccia, *ppvObject* è impostato su null.
+*Oggetto ppv*<br/>
+[fuori] Puntatore al puntatore a interfaccia identificato da *iid*. Se l'oggetto non supporta questa interfaccia, *ppvObject* è impostato su NULL.
 
-*pp*<br/>
-out Puntatore al puntatore a interfaccia identificato dal tipo `Q`. Se l'oggetto non supporta questa interfaccia, *PP* è impostato su null.
+*Pp*<br/>
+[fuori] Puntatore al puntatore a `Q`interfaccia identificato dal tipo . Se l'oggetto non supporta questa interfaccia, *pp* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore HRESULT standard.
 
-##  <a name="release"></a>CComContainedObject:: Release
+## <a name="ccomcontainedobjectrelease"></a><a name="release"></a>CComContainedObject::Release
 
-Decrementa il conteggio dei riferimenti nell'oggetto proprietario.
+Decrementa il conteggio dei riferimenti sull'oggetto proprietario.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -164,8 +164,8 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valore restituito
 
-Nelle build `Release` di debug restituisce un valore che può essere utile per la diagnostica o il test. Nelle compilazioni `Release` non di debug restituisce sempre 0.
+Nelle build di `Release` debug restituisce un valore che può essere utile per la diagnostica o il test. Nelle compilazioni non `Release` di debug, restituisce sempre 0.In non-debug builds, always returns 0.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

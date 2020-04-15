@@ -1,9 +1,11 @@
 ---
 title: _strtime_s, _wstrtime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime_s
 - _strtime_s
+- _o__strtime_s
+- _o__wstrtime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: c74e7359f68469fd8322ba1c9348acffd636282a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 771dfdb6bd8035fe8683d62d52b3b4980ecda215
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625913"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316948"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -70,7 +73,7 @@ errno_t _wstrtime_s(
 *buffer*<br/>
 Buffer con una lunghezza di almeno 10 byte in cui verrà scritta l'ora.
 
-*numberOfElements*<br/>
+*Sizeinbytes*<br/>
 Dimensione del buffer.
 
 ## <a name="return-value"></a>Valore restituito
@@ -81,28 +84,30 @@ Se si verifica una condizione di errore, viene richiamato il gestore di parametr
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*numberOfElements*|INVIO|Contenuto del *buffer*|
+|*buffer*|*Sizeinbytes*|Return|Contenuto del *buffer*|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|(qualsiasi)|**EINVAL**|Non modificato|
-|Not **null** (che punta a un buffer valido)|0|**EINVAL**|Non modificato|
-|Not **null** (che punta a un buffer valido)|0 < dimensioni < 9|**EINVAL**|Stringa vuota|
-|Not **null** (che punta a un buffer valido)|Dimensioni > 9|0|Ora corrente, formattata come specificato nella sezione Note|
+|**Null**|(qualsiasi)|**Einval**|Non modificato|
+|Non **NULL** (che punta al buffer valido)|0|**Einval**|Non modificato|
+|Non **NULL** (che punta al buffer valido)|0 < dimensioni < 9|**Einval**|stringa vuota|
+|Non **NULL** (che punta al buffer valido)|Dimensioni > 9|0|Ora corrente, formattata come specificato nella sezione Note|
 
-## <a name="security-issues"></a>Problemi relativi alla sicurezza
+## <a name="security-issues"></a>Problemi di sicurezza
 
-Il passaggio di un valore non**null** non valido per il buffer comporterà una violazione di accesso se il parametro *NumberOfElements* è maggiore di 9.
+Il passaggio di un valore non**NULL** non valido per il buffer genererà una violazione di accesso se il parametro *numberOfElements* è maggiore di 9.
 
-Il passaggio di un valore per *NumberOfElements* maggiore della dimensione effettiva del buffer provocherà il sovraccarico del buffer.
+Se si passa un valore per *numberOfElements* maggiore della dimensione effettiva del buffer, il sovraccarico del buffer verrà eseguito.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Queste funzioni forniscono versioni più sicure di [_strtime](strtime-wstrtime.md) e [_wstrtime](strtime-wstrtime.md). La funzione **_strtime_s** copia l'ora locale corrente nel buffer a cui punta *timestr*. Il formato dell'ora è **hh: mm: SS** , dove **HH** è due cifre che rappresentano l'ora nella notazione di 24 ore, **mm** è due cifre che rappresentano i minuti trascorsi dall'ora e **SS** sono due cifre che rappresentano i secondi. Ad esempio, la stringa **18:23:44** rappresenta 23 minuti e 44 secondi dopo le 18.00 Il buffer deve avere una lunghezza di almeno 9 byte. Le dimensioni effettive sono specificate dal secondo parametro.
+Queste funzioni forniscono versioni più sicure di [_strtime](strtime-wstrtime.md) e [_wstrtime](strtime-wstrtime.md). La funzione **_strtime_s** copia l'ora locale corrente nel buffer a cui punta *timestr*. L'ora viene formattata come **hh:mm:ss** dove **hh** è due cifre che rappresentano l'ora nella notazione 24 ore, **mm** è due cifre che rappresentano i minuti dopo l'ora e **ss** è due cifre che rappresentano i secondi. Ad esempio, la stringa **18:23:44** rappresenta 23 minuti e 44 secondi dopo le 6 P.M. Il buffer deve avere una lunghezza di almeno 9 byte. Le dimensioni effettive sono specificate dal secondo parametro.
 
-**_wstrtime** è una versione a caratteri wide di **_strtime**; l'argomento e il valore restituito di **_wstrtime** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
+**_wstrtime** è una versione a caratteri wide di **_strtime**; l'argomento e il valore restituito di **_wstrtime** sono stringhe di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico:
 
@@ -115,9 +120,9 @@ Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
-|**_wstrtime_s**|\<time.h> o \<wchar.h>|
+|**_wstrtime_s**|\<time.h> or \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -164,7 +169,7 @@ OS date:            04/25/03
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>

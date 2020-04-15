@@ -6,56 +6,56 @@ helpviewer_keywords:
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-ms.openlocfilehash: 2fe659b47893f821aab4cda31ab1a4e9a6788ec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b72cac0da06b70a40e01fcc75da52f1678f3f64
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252070"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317377"
 ---
 # <a name="atl-module-classes"></a>Classi di modulo ATL
 
-In questo argomento vengono illustrate le classi che sono state introdotte in ATL 7.0.
+In questo argomento vengono illustrate le classi di modulo che erano nuove in ATL 7.0.
 
-## <a name="ccommodule-replacement-classes"></a>Classi di sostituzione CComModule
+## <a name="ccommodule-replacement-classes"></a>Classi di sostituzione CComModuleCComModule Replacement Classes
 
-Le versioni precedenti di ATL usato `CComModule`. In ATL 7.0 `CComModule` funzionalità viene sostituita da diverse classi:
+Nelle versioni precedenti `CComModule`di ATL veniva utilizzato . In ATL 7.0, la funzionalità viene sostituita da diverse classi:In ATL 7.0, `CComModule` functionality is replaced by several classes:
 
-- [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) contiene le informazioni necessarie per la maggior parte delle applicazioni che usano ATL. Contiene l'HINSTANCE del modulo e l'istanza della risorsa.
+- [CAtlBaseModule (Modulo CAtlBase)](../atl/reference/catlbasemodule-class.md) Contiene le informazioni richieste dalla maggior parte delle applicazioni che utilizzano ATL. Contiene l'HINSTANCE del modulo e l'istanza della risorsa.
 
-- [CAtlComModule](../atl/reference/catlcommodule-class.md) contiene le informazioni necessarie per le classi COM in ATL.
+- [Modulo CAtlCom](../atl/reference/catlcommodule-class.md) Contiene le informazioni richieste dalle classi COM in ATL.
 
-- [CAtlWinModule](../atl/reference/catlwinmodule-class.md) contiene le informazioni necessarie per le classi di windowing in ATL.
+- [CAtlWinModule](../atl/reference/catlwinmodule-class.md) Contiene le informazioni richieste dalle classi di windowing in ATL.
 
-- [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) include il supporto per il debug dell'interfaccia.
+- [CAtlDebugInterfacesModulo](../atl/reference/catldebuginterfacesmodule-class.md) Contiene il supporto per il debug dell'interfaccia.
 
-- [CAtlModule](../atl/reference/catlmodule-class.md) quanto segue `CAtlModule`-le classi derivate sono personalizzate per contenere le informazioni necessarie in un determinato tipo di applicazione. La maggior parte dei membri di queste classi possono eseguire l'override:
+- [CAtlModule (modulo CAtlModule)](../atl/reference/catlmodule-class.md) Le `CAtlModule`classi derivate di seguito vengono personalizzate per contenere le informazioni necessarie in un particolare tipo di applicazione. La maggior parte dei membri di queste classi può essere sottoposta a override:Most members in these classes can be overridden:
 
-   - [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) usati nelle applicazioni di DLL. Fornisce il codice per le esportazioni standard.
+  - [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) Utilizzato nelle applicazioni DLL. Fornisce il codice per le esportazioni standard.
 
-   - [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) usati nelle applicazioni EXE. Fornisce il codice necessario in un file EXE.
+  - [CAtlExeModuleT (modulo CAtlExe)](../atl/reference/catlexemodulet-class.md) Utilizzato nelle applicazioni EXE. Fornisce il codice necessario in un file EXE.
 
-   - [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) fornisce il supporto per creare servizi di Windows 2000 e Windows NT.
+  - [CAtlServiceModuleT (modulo CAtlServiceModuleT)](../atl/reference/catlservicemodulet-class.md) Fornisce supporto per la creazione di servizi Windows NT e Windows 2000.
 
-`CComModule` è ancora disponibile per compatibilità con le versioni precedenti.
+`CComModule`è ancora disponibile per la compatibilità con le versioni precedenti.
 
-## <a name="reasons-for-distributing-ccommodule-functionality"></a>Vantaggi della distribuzione delle funzionalità CComModule
+## <a name="reasons-for-distributing-ccommodule-functionality"></a>Motivi per la distribuzione della funzionalità CComModule
 
-La funzionalità di `CComModule` sono state distribuite in diverse nuove classi per i motivi seguenti:
+La funzionalità `CComModule` di è stata distribuita in diverse nuove classi per i seguenti motivi:
 
-- Verificare la funzionalità di `CComModule` granulare.
+- Rendere la `CComModule` funzionalità in granulare.
 
-   Supporto per COM, windowing, il debug dell'interfaccia e le funzionalità (DLL o EXE) specifico dell'applicazione è ora in classi separate.
+   Il supporto per COM, windowing, debug delle interfacce e funzionalità specifiche dell'applicazione (DLL o EXE) è ora in classi separate.
 
-- Dichiarare automaticamente l'istanza globale della ognuno di questi moduli.
+- Dichiarare automaticamente l'istanza globale di ognuno di questi moduli.
 
-   Un'istanza globale delle classi di modulo necessario è collegata al progetto.
+   Un'istanza globale delle classi di modulo necessarie è collegata al progetto.
 
-- Rimuovere la necessità di chiamare i metodi Init e termini.
+- Rimuovere la necessità di chiamare i metodi Init e Term.
 
-   Metodi Init e termini sono spostati nei costruttori e distruttori per le classi di modulo; non è più necessario chiamare Init e termine.
+   I metodi Init e Term sono stati spostati nei costruttori e nei distruttori per le classi del modulo; non è più necessario chiamare Init e Term.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Concetti](../atl/active-template-library-atl-concepts.md)<br/>
-[Panoramica della classe](../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../atl/atl-class-overview.md)

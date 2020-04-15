@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-ms.openlocfilehash: de302c7a58bf1b15e63e7cd391621ed9558e5a70
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 165cdb8b0b16a4872214f4556c26ee141e6a4d89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497590"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321149"
 ---
 # <a name="ccomallocator-class"></a>Classe CComAllocator
 
-Questa classe fornisce metodi per la gestione della memoria utilizzando le routine di memoria COM.
+Questa classe fornisce metodi per la gestione della memoria utilizzando routine di memoria COM.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,25 +27,25 @@ Questa classe fornisce metodi per la gestione della memoria utilizzando le routi
 class CComAllocator
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComAllocator:: allocate](#allocate)|Chiamare questo metodo statico per allocare memoria.|
-|[CComAllocator::Free](#free)|Chiamare questo metodo statico per liberare la memoria allocata.|
-|[CComAllocator:: Reallocate](#reallocate)|Chiamare questo metodo statico per riallocare la memoria.|
+|[CComAllocator::Allocare](#allocate)|Chiamare questo metodo statico per allocare memoria.|
+|[CComAllocator::Gratuito](#free)|Chiamare questo metodo statico per liberare memoria allocata.|
+|[CComAllocator::Riallocare](#reallocate)|Chiamare questo metodo statico per riallocare la memoria.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe viene utilizzata da [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) per fornire le routine di allocazione della memoria com. La classe controparte, [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), fornisce gli stessi metodi usando le routine CRT.
+Questa classe viene utilizzata da [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) per fornire le routine di allocazione di memoria COM. La classe counterpart, [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), fornisce gli stessi metodi utilizzando le routine CRT.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlbase. h
+**Intestazione:** atlbase.h
 
-##  <a name="allocate"></a>CComAllocator:: allocate
+## <a name="ccomallocatorallocate"></a><a name="allocate"></a>CComAllocator::Allocare
 
 Chiamare questa funzione statica per allocare la memoria.
 
@@ -55,20 +55,20 @@ static void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBytes*<br/>
+*nByte*<br/>
 Numero di byte da allocare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce un puntatore void allo spazio allocato o NULL se la memoria disponibile è insufficiente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Alloca memoria. Per ulteriori informazioni, vedere [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc) .
+Alloca memoria. Per ulteriori dettagli, vedere [CoTaskMemAlloc.See CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc) for more details.
 
-##  <a name="free"></a>CComAllocator:: Free
+## <a name="ccomallocatorfree"></a><a name="free"></a>CComAllocator::Gratuito
 
-Chiamare questa funzione statica per liberare la memoria allocata.
+Chiamare questa funzione statica per liberare memoria allocata.
 
 ```
 static void Free(void* p) throw();
@@ -76,14 +76,14 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*<br/>
+*P*<br/>
 Puntatore alla memoria allocata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Libera la memoria allocata. Per ulteriori informazioni, vedere [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) .
+Libera la memoria allocata. Vedere [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) per ulteriori dettagli.
 
-##  <a name="reallocate"></a>CComAllocator:: Reallocate
+## <a name="ccomallocatorreallocate"></a><a name="reallocate"></a>CComAllocator::Riallocare
 
 Chiamare questa funzione statica per riallocare la memoria.
 
@@ -93,22 +93,22 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*<br/>
+*P*<br/>
 Puntatore alla memoria allocata.
 
-*nBytes*<br/>
+*nByte*<br/>
 Numero di byte da riallocare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore void allo spazio allocato o NULL se la memoria è insufficiente.
+Restituisce un puntatore void allo spazio allocato o NULL se la memoria è insufficiente
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Ridimensiona la quantità di memoria allocata. Per ulteriori informazioni, vedere [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc) .
+Ridimensiona la quantità di memoria allocata. Vedere [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc) per ulteriori dettagli.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
+[CComHeapPtr (classe)](../../atl/reference/ccomheapptr-class.md)<br/>
 [Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

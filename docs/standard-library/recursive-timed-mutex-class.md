@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 6ae61d17084cc744cac8819ac2c0ca48eb59add7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 93ce7b99728d1ce89c8124efd6c74aea7ff66d22
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460110"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320139"
 ---
-# <a name="recursivetimedmutex-class"></a>Classe recursive_timed_mutex
+# <a name="recursive_timed_mutex-class"></a>Classe recursive_timed_mutex
 
-Rappresenta un *tipo mutex programmato*. Gli oggetti di questo tipo vengono usati per gestire l'esclusione reciproca con un blocco a tempo limitato all'interno di un programma. A differenza degli oggetti di tipo [timed_mutex](../standard-library/timed-mutex-class.md), l'effetto della chiamata di metodi di blocco per oggetti `recursive_timed_mutex` è ben definito.
+Rappresenta un *tipo mutex a tempo.* Gli oggetti di questo tipo vengono usati per gestire l'esclusione reciproca con un blocco a tempo limitato all'interno di un programma. A differenza degli oggetti di tipo [timed_mutex](../standard-library/timed-mutex-class.md), l'effetto della chiamata di metodi di blocco per oggetti `recursive_timed_mutex` è ben definito.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,32 +35,32 @@ Rappresenta un *tipo mutex programmato*. Gli oggetti di questo tipo vengono usat
 class recursive_timed_mutex;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[recursive_timed_mutex](#recursive_timed_mutex)|Costruisce un oggetto `recursive_timed_mutex` non bloccato.|
-|[Distruttore ~recursive_timed_mutex](#dtorrecursive_timed_mutex_destructor)|Rilascia le risorse usate dall'oggetto `recursive_timed_mutex`.|
+|[Distruttore recursive_timed_mutex](#dtorrecursive_timed_mutex_destructor)|Rilascia le risorse usate dall'oggetto `recursive_timed_mutex`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[lock](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.|
 |[try_lock](#try_lock)|Tenta di ottenere proprietà di `mutex` senza bloccare.|
 |[try_lock_for](#try_lock_for)|Tenta di ottenere la proprietà del `mutex` per un intervallo di tempo specificato.|
 |[try_lock_until](#try_lock_until)|Tenta di ottenere la proprietà del `mutex` fino all'ora specificata.|
-|[unlock](#unlock)|Rilascia la proprietà di `mutex`.|
+|[Sbloccare](#unlock)|Rilascia la proprietà di `mutex`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<> mutex
+**Intestazione:** \<mutex>
 
 **Spazio dei nomi:** std
 
-## <a name="lock"></a>  lock
+## <a name="lock"></a><a name="lock"></a>Blocco
 
 Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.
 
@@ -68,11 +68,11 @@ Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex
 void lock();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se il thread chiamante è già proprietario del `mutex`, il metodo restituisce immediatamente un valore e il blocco precedente rimane valido.
 
-## <a name="recursive_timed_mutex"></a>  Costruttore recursive_timed_mutex
+## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>Costruttore recursive_timed_mutex
 
 Costruisce un oggetto `recursive_timed_mutex` non bloccato.
 
@@ -80,7 +80,7 @@ Costruisce un oggetto `recursive_timed_mutex` non bloccato.
 recursive_timed_mutex();
 ```
 
-## <a name="dtorrecursive_timed_mutex_destructor"></a>  Distruttore ~recursive_timed_mutex
+## <a name="recursive_timed_mutex-destructor"></a><a name="dtorrecursive_timed_mutex_destructor"></a>  Distruttore ~recursive_timed_mutex
 
 Rilascia le risorse usate dall'oggetto `recursive_timed_mutex`.
 
@@ -88,11 +88,11 @@ Rilascia le risorse usate dall'oggetto `recursive_timed_mutex`.
 ~recursive_timed_mutex();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se l'oggetto è bloccato quando il distruttore viene eseguito, il comportamento non è definito.
 
-## <a name="try_lock"></a>  try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -102,13 +102,13 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ha ottenuto la proprietà dell' `mutex` oggetto o se il thread chiamante è già `mutex`proprietario dell'oggetto; in caso contrario, **false**.
+**true** se il metodo ha `mutex` ottenuto correttamente la `mutex`proprietà di o se il thread chiamante è già proprietario dell'oggetto ; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il thread chiamante è già proprietario `mutex`di, la funzione restituisce immediatamente **true**e il blocco precedente rimane attivo.
+Se il thread chiamante `mutex`è già proprietario di , la funzione restituisce immediatamente **true**e il blocco precedente rimane attivo.
 
-## <a name="try_lock_for"></a>  try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -120,17 +120,17 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="parameters"></a>Parametri
 
 *Rel_time*\
-Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica il periodo di tempo massimo per cui il metodo può tentare di ottenere la proprietà del `mutex`.
+Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica il periodo di tempo massimo per cui il metodo può tentare di ottenere la proprietà dell'oggetto `mutex`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene correttamente la proprietà di `mutex` o se il thread chiamante è già proprietario dell'oggetto `mutex`; in caso contrario, **false**.
+**true** se il metodo ottiene `mutex` correttamente la proprietà di `mutex`o se il thread chiamante è già proprietario di ; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il thread chiamante è già proprietario `mutex`di, il metodo restituisce immediatamente **true**e il blocco precedente rimane attivo.
+Se il thread chiamante `mutex`è già proprietario di , il metodo restituisce immediatamente **true**e il blocco precedente rimane attivo.
 
-## <a name="try_lock_until"></a>  try_lock_until
+## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -148,13 +148,13 @@ Momento specifico che indica la soglia oltre la quale il metodo non tenta più d
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene correttamente la proprietà di `mutex` o se il thread chiamante è già proprietario dell'oggetto `mutex`; in caso contrario, **false**.
+**true** se il metodo ottiene `mutex` correttamente la proprietà di `mutex`o se il thread chiamante è già proprietario di ; in caso contrario, **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se il thread chiamante è già proprietario `mutex`di, il metodo restituisce immediatamente **true**e il blocco precedente rimane attivo.
+Se il thread chiamante `mutex`è già proprietario di , il metodo restituisce immediatamente **true**e il blocco precedente rimane attivo.
 
-## <a name="unlock"></a>  unlock
+## <a name="unlock"></a><a name="unlock"></a>Sbloccare
 
 Rilascia la proprietà di `mutex`.
 
@@ -162,7 +162,7 @@ Rilascia la proprietà di `mutex`.
 void unlock();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo rilascia la proprietà del `mutex` solo dopo essere stato chiamato tante volte quante sono state le chiamate a [lock](#lock), [try_lock](#try_lock), [try_lock_for](#try_lock_for) e [try_lock_until](#try_lock_until) con esito positivo sull'oggetto `recursive_timed_mutex`.
 
@@ -170,5 +170,5 @@ Se il thread chiamante non è proprietario di `mutex`, il comportamento non è d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[Riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<>mutex](../standard-library/mutex.md)

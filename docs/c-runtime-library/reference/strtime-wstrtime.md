@@ -1,9 +1,11 @@
 ---
 title: _strtime, _wstrtime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime
 - _strtime
+- _o__strtime
+- _o__wstrtime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 827e5a579d801c12b932440fcbbaa18343ad7ece
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946566"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316874"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
@@ -75,13 +78,15 @@ Stringa dell'ora.
 
 Restituisce un puntatore alla stringa di caratteri risultante *timestr*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_strtime** copia l'ora locale corrente nel buffer a cui punta *timestr*. Il formato dell'ora è **hh: mm: SS** , dove **HH** è due cifre che rappresentano l'ora nella notazione di 24 ore, **mm** è due cifre che rappresentano i minuti trascorsi dall'ora e **SS** sono due cifre che rappresentano i secondi. Ad esempio, la stringa **18:23:44** rappresenta 23 minuti e 44 secondi dopo le 18.00 La lunghezza del buffer deve essere di almeno 9 byte.
+La funzione **_strtime** copia l'ora locale corrente nel buffer a cui punta *timestr*. L'ora viene formattata come **hh:mm:ss** dove **hh** è due cifre che rappresentano l'ora nella notazione 24 ore, **mm** è due cifre che rappresentano i minuti dopo l'ora e **ss** è due cifre che rappresentano i secondi. Ad esempio, la stringa **18:23:44** rappresenta 23 minuti e 44 secondi dopo le 6 P.M. La lunghezza del buffer deve essere di almeno 9 byte.
 
-**_wstrtime** è una versione a caratteri wide di **_strtime**; l'argomento e il valore restituito di **_wstrtime** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico. Se *timestr* è un puntatore **null** o se *timestr* è formattato in modo errato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'eccezione può continuare, queste funzioni restituiscono un **valore null** e impostano **errno** su **EINVAL** se *timestr* è **null** o imposta **errno** su **ERANGE** se *timestr* è formattato in modo errato.
+**_wstrtime** è una versione a caratteri wide di **_strtime**; l'argomento e il valore restituito di **_wstrtime** sono stringhe di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico. Se *timestr* è un puntatore **NULL** o se *timestr* è formattato in modo non corretto, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'eccezione può continuare, queste funzioni restituiscono un **valore NULL** e impostano **errno** su **EINVAL** se *timestr* è un **valore NULL** oppure impostano **errno** su **ERANGE** se *timestr* è formattato in modo non corretto.
 
-In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -122,7 +127,7 @@ The current time is 14:21:44
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 378c8634e00935c622f0bf5d06a4f6c50cc60cb6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321433"
 ---
 # <a name="catlmodule-class"></a>Classe CAtlModule
 
@@ -37,44 +37,44 @@ Questa classe fornisce i metodi utilizzati da diverse classi di moduli ATL.
 class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAtlModule:: CAtlModule](#catlmodule)|Costruttore.|
-|[CAtlModule:: ~ CAtlModule](#dtor)|Distruttore.|
+|[CAtlModule::CAtlModule](#catlmodule)|Costruttore.|
+|[CAtlModule::](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements)|Eseguire l'override di questo metodo per aggiungere parametri alla mappa di sostituzione del componente del registro di sistema ATL (Registrar).|
-|[CAtlModule:: AddTermFunc](#addtermfunc)|Aggiunge una nuova funzione da chiamare al termine del modulo.|
-|[CAtlModule:: GetGITPtr](#getgitptr)|Restituisce il puntatore a interfaccia globale.|
-|[CAtlModule:: GetLockCount](#getlockcount)|Restituisce il conteggio dei blocchi.|
-|[CAtlModule:: Lock](#lock)|Incrementa il conteggio dei blocchi.|
-|[CAtlModule:: term](#term)|Rilascia tutti i membri dati.|
-|[CAtlModule:: Unlock](#unlock)|Consente di diminuire il conteggio dei blocchi.|
-|[CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto.|
-|[CAtlModule:: UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Questo metodo viene chiamato da `UpdateRegistryFromResourceD` per eseguire l'aggiornamento del registro di sistema.|
-|[CAtlModule:: UpdateRegistryFromResourceS](#updateregistryfromresources)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto. Questo metodo collega in modo statico il componente del registro di sistema ATL.|
+|[CAtlModule::AddCommonRGSReplacements (Modulo CAtlModule::AddCommonRGS)](#addcommonrgsreplacements)|Eseguire l'override di questo metodo per aggiungere parametri alla mappa di sostituzione del componente registro ATL (Registrar).|
+|[CAtlModule::AddTermFunc](#addtermfunc)|Aggiunge una nuova funzione da chiamare quando il modulo termina.|
+|[CAtlModule::GetGITPtr](#getgitptr)|Restituisce il puntatore a interfaccia globale.|
+|[CAtlModule::GetLockCount](#getlockcount)|Restituisce il conteggio dei blocchi.|
+|[CAtlModule::Lock](#lock)|Incrementa il conteggio dei blocchi.|
+|[CAtlModule::Term](#term)|Rilascia tutti i membri dati.|
+|[CAtlModule::Sblocca](#unlock)|Consente di diminuire il conteggio dei blocchi.|
+|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto.|
+|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Questo metodo viene `UpdateRegistryFromResourceD` chiamato da per eseguire l'aggiornamento del Registro di sistema.|
+|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto. Questo metodo si collega in modo statico al componente del Registro di sistema ATL.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAtlModule:: m_libid](#m_libid)|Contiene il GUID del modulo corrente.|
-|[CAtlModule:: m_pGIT](#m_pgit)|Puntatore alla tabella dell'interfaccia globale.|
+|[CAtlModule::m_libid](#m_libid)|Contiene il GUID del modulo corrente.|
+|[CAtlModule::m_pGIT](#m_pgit)|Puntatore alla tabella di interfaccia globale.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Questa classe viene usata dalla classe [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md), dalla [classe CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)e dalla [classe funzione CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) per fornire il supporto rispettivamente per le applicazioni dll, le applicazioni exe e i servizi Windows.
+Questa classe viene utilizzata da [CAtlDllModuleT Class](../../atl/reference/catldllmodulet-class.md), [CAtlExeModuleT Class](../../atl/reference/catlexemodulet-class.md)e [CAtlServiceModuleT Class](../../atl/reference/catlservicemodulet-class.md) per fornire il supporto rispettivamente per applicazioni DLL, applicazioni EXE e servizi Windows .
 
-Per ulteriori informazioni sui moduli in ATL, vedere [ATL Module Classes](../../atl/atl-module-classes.md).
+Per ulteriori informazioni sui moduli in ATL, vedere [Classi di moduli ATL](../../atl/atl-module-classes.md).
 
-Questa classe sostituisce la [classe CComModule](../../atl/reference/ccommodule-class.md) obsoleta usata nelle versioni precedenti di ATL.
+Questa classe sostituisce la [classe CComModule](../../atl/reference/ccommodule-class.md) obsoleta utilizzata nelle versioni precedenti di ATL.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -84,11 +84,11 @@ Questa classe sostituisce la [classe CComModule](../../atl/reference/ccommodule-
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlbase. h
+**Intestazione:** atlbase.h
 
-##  <a name="addcommonrgsreplacements"></a>CAtlModule:: AddCommonRGSReplacements
+## <a name="catlmoduleaddcommonrgsreplacements"></a><a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements (Modulo CAtlModule::AddCommonRGS)
 
-Eseguire l'override di questo metodo per aggiungere parametri alla mappa di sostituzione del componente del registro di sistema ATL (Registrar).
+Eseguire l'override di questo metodo per aggiungere parametri alla mappa di sostituzione del componente registro ATL (Registrar).
 
 ```
 virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw() = 0;
@@ -96,22 +96,22 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="parameters"></a>Parametri
 
-*pRegistrar*<br/>
+*pRegistrare*<br/>
 Riservato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
 
 ### <a name="remarks"></a>Osservazioni
 
-I parametri sostituibili consentono a un client del registrar di specificare i dati in fase di esecuzione. A tale scopo, il registrar mantiene una mappa sostitutiva in cui immette i valori associati ai parametri sostituibili nello script. Il registrar esegue queste voci in fase di esecuzione.
+I parametri sostituibili consentono al client di una funzione di registrazione di specificare i dati di runtime. A tale scopo, la funzione di registrazione mantiene una mappa di sostituzione in cui immette i valori associati ai parametri sostituibili nello script. La funzione di registrazione crea queste voci in fase di esecuzione.
 
-Per ulteriori informazioni, vedere l'argomento [utilizzo di parametri sostituibili (preprocessore del registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) .
+Per ulteriori informazioni, vedere l'argomento Utilizzo di [parametri sostituibili (il preprocessore della funzione](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) di registrazione).
 
-##  <a name="addtermfunc"></a>CAtlModule:: AddTermFunc
+## <a name="catlmoduleaddtermfunc"></a><a name="addtermfunc"></a>CAtlModule::AddTermFunc
 
-Aggiunge una nuova funzione da chiamare al termine del modulo.
+Aggiunge una nuova funzione da chiamare quando il modulo termina.
 
 ```
 HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
@@ -127,9 +127,9 @@ Dati definiti dall'utente, passati alla funzione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
 
-##  <a name="catlmodule"></a>CAtlModule:: CAtlModule
+## <a name="catlmodulecatlmodule"></a><a name="catlmodule"></a>CAtlModule::CAtlModule
 
 Costruttore.
 
@@ -141,7 +141,7 @@ CAtlModule() throw();
 
 Inizializza i membri dati e avvia una sezione critica intorno al thread del modulo.
 
-##  <a name="dtor"></a>CAtlModule:: ~ CAtlModule
+## <a name="catlmodulecatlmodule"></a><a name="dtor"></a>CAtlModule::
 
 Distruttore.
 
@@ -153,9 +153,9 @@ Distruttore.
 
 Rilascia tutti i membri dati.
 
-##  <a name="getgitptr"></a>CAtlModule:: GetGITPtr
+## <a name="catlmodulegetgitptr"></a><a name="getgitptr"></a>CAtlModule::GetGITPtr
 
-Recupera un puntatore alla tabella dell'interfaccia globale.
+Recupera un puntatore alla tabella di interfaccia globale.
 
 ```
 virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
@@ -164,21 +164,21 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 ### <a name="parameters"></a>Parametri
 
 *ppGIT*<br/>
-Puntatore alla variabile che riceverà il puntatore alla tabella dell'interfaccia globale.
+Puntatore alla variabile che riceverà il puntatore alla tabella di interfaccia globale.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un codice di errore in caso di errore. Se *ppGIT* è uguale a null, viene restituito E_POINTER.
+Restituisce S_OK in caso di esito positivo o un codice di errore in caso di errore. E_POINTER viene restituito se *ppGIT* è uguale a NULL.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'oggetto tabella dell'interfaccia globale non esiste, viene creato e il relativo indirizzo viene archiviato nella variabile membro [CAtlModule:: m_pGIT](#m_pgit).
+Se l'oggetto tabella interfaccia globale non esiste, viene creato e il relativo indirizzo viene archiviato nella variabile membro [CAtlModule::m_pGIT](#m_pgit).
 
-Nelle build di debug, si verificherà un errore di asserzione se *ppGIT* è uguale a null o se non è possibile ottenere il puntatore alla tabella dell'interfaccia globale.
+Nelle build di debug, si verificherà un errore di asserzione se *ppGIT* è uguale a NULL o se non è possibile ottenere il puntatore della tabella di interfaccia globale.
 
-Per informazioni sulla tabella dell'interfaccia globale, vedere [IGlobalInterfaceTable](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable) .
+Vedere [IGlobalInterfaceTable](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable) per informazioni sulla tabella dell'interfaccia globale.
 
-##  <a name="getlockcount"></a>CAtlModule:: GetLockCount
+## <a name="catlmodulegetlockcount"></a><a name="getlockcount"></a>CAtlModule::GetLockCount
 
 Restituisce il conteggio dei blocchi.
 
@@ -190,7 +190,7 @@ virtual LONG GetLockCount() throw();
 
 Restituisce il conteggio dei blocchi. Questo valore può essere utile per la diagnostica e il debug.
 
-##  <a name="lock"></a>CAtlModule:: Lock
+## <a name="catlmodulelock"></a><a name="lock"></a>CAtlModule::Lock
 
 Incrementa il conteggio dei blocchi.
 
@@ -202,7 +202,7 @@ virtual LONG Lock() throw();
 
 Incrementa il conteggio dei blocchi e restituisce il valore aggiornato. Questo valore può essere utile per la diagnostica e il debug.
 
-##  <a name="m_libid"></a>CAtlModule:: m_libid
+## <a name="catlmodulem_libid"></a><a name="m_libid"></a>CAtlModule::m_libid
 
 Contiene il GUID del modulo corrente.
 
@@ -210,15 +210,15 @@ Contiene il GUID del modulo corrente.
 static GUID m_libid;
 ```
 
-##  <a name="m_pgit"></a>CAtlModule:: m_pGIT
+## <a name="catlmodulem_pgit"></a><a name="m_pgit"></a>CAtlModule::m_pGIT
 
-Puntatore alla tabella dell'interfaccia globale.
+Puntatore alla tabella di interfaccia globale.
 
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```
 
-##  <a name="term"></a>CAtlModule:: term
+## <a name="catlmoduleterm"></a><a name="term"></a>CAtlModule::Term
 
 Rilascia tutti i membri dati.
 
@@ -230,7 +230,7 @@ void Term() throw();
 
 Rilascia tutti i membri dati. Questo metodo viene chiamato dal distruttore.
 
-##  <a name="unlock"></a>CAtlModule:: Unlock
+## <a name="catlmoduleunlock"></a><a name="unlock"></a>CAtlModule::Sblocca
 
 Consente di diminuire il conteggio dei blocchi.
 
@@ -242,7 +242,7 @@ virtual LONG Unlock() throw();
 
 Decrementa il conteggio dei blocchi e restituisce il valore aggiornato. Questo valore può essere utile per la diagnostica e il debug.
 
-##  <a name="updateregistryfromresourced"></a>CAtlModule:: UpdateRegistryFromResourceD
+## <a name="catlmoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD
 
 Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto.
 
@@ -261,32 +261,32 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 ### <a name="parameters"></a>Parametri
 
 *lpszRes*<br/>
-Nome della risorsa.
+Un nome di risorsa.
 
-*nResID*<br/>
-ID di risorsa.
+*nResID (informazioni in stato inquestoe utente*<br/>
+Un ID risorsa.
 
-*bRegister*<br/>
-TRUE se l'oggetto deve essere registrato; In caso contrario, FALSE.
+*bRegistrare*<br/>
+TRUESe l'oggetto deve essere registrato. FALSE in caso contrario.
 
-*pMapEntries*<br/>
-Puntatore alla mappa sostitutiva che archivia i valori associati ai parametri sostituibili dello script. ATL utilizza automaticamente% MODULE%. Per usare parametri sostituibili aggiuntivi, vedere [CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements). In caso contrario, usare il valore predefinito NULL.
+*pMapEvoci*<br/>
+Puntatore alla mappa di sostituzione che memorizza i valori associati ai parametri sostituibili dello script. ATL utilizza automaticamente %MODULE%. Per utilizzare parametri sostituibili aggiuntivi, vedere [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). In caso contrario, utilizzare il valore predefinito NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
 
 ### <a name="remarks"></a>Osservazioni
 
-Esegue lo script contenuto nella risorsa specificata da *lpszRes o nResID*. Se *bRegister* è true, questo metodo registra l'oggetto nel registro di sistema. in caso contrario, rimuove l'oggetto dal registro di sistema.
+Esegue lo script contenuto nella risorsa specificata da *lpszRes o nResID*. Se *bRegister* è TRUE, questo metodo registra l'oggetto nel Registro di sistema; in caso contrario rimuove l'oggetto dal Registro di sistema.
 
-Per eseguire il collegamento statico al componente del registro di sistema ATL (Registrar), vedere [CAtlModule:: UpdateRegistryFromResourceS](#updateregistryfromresources).
+Per eseguire il collegamento statico al componente registro ATL (Registrar), vedere [CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources).
 
-Questo metodo chiama [CAtlModule:: UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) e [IRegistrar:: ResourceUnregister](iregistrar-class.md#resourceunregister).
+Questo metodo chiama [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) e [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister).
 
-##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule:: UpdateRegistryFromResourceDHelper
+## <a name="catlmoduleupdateregistryfromresourcedhelper"></a><a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper
 
-Questo metodo viene chiamato da `UpdateRegistryFromResourceD` per eseguire l'aggiornamento del registro di sistema.
+Questo metodo viene `UpdateRegistryFromResourceD` chiamato da per eseguire l'aggiornamento del Registro di sistema.
 
 ```
 inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
@@ -298,25 +298,25 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ### <a name="parameters"></a>Parametri
 
 *lpszRes*<br/>
-Nome della risorsa.
+Un nome di risorsa.
 
-*bRegister*<br/>
+*bRegistrare*<br/>
 Indica se l'oggetto deve essere registrato.
 
-*pMapEntries*<br/>
-Puntatore alla mappa sostitutiva che archivia i valori associati ai parametri sostituibili dello script. ATL utilizza automaticamente% MODULE%. Per usare parametri sostituibili aggiuntivi, vedere [CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements). In caso contrario, usare il valore predefinito NULL.
+*pMapEvoci*<br/>
+Puntatore alla mappa di sostituzione che memorizza i valori associati ai parametri sostituibili dello script. ATL utilizza automaticamente %MODULE%. Per utilizzare parametri sostituibili aggiuntivi, vedere [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). In caso contrario, utilizzare il valore predefinito NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo fornisce l'implementazione di [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced).
+Questo metodo fornisce l'implementazione di [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).
 
-##  <a name="updateregistryfromresources"></a>CAtlModule:: UpdateRegistryFromResourceS
+## <a name="catlmoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS
 
-Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto. Questo metodo collega in modo statico il componente del registro di sistema ATL.
+Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto. Questo metodo si collega in modo statico al componente del Registro di sistema ATL.
 
 ```
 HRESULT WINAPI UpdateRegistryFromResourceS(
@@ -332,29 +332,29 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Parametri
 
-*nResID*<br/>
-ID di risorsa.
+*nResID (informazioni in stato inquestoe utente*<br/>
+Un ID risorsa.
 
 *lpszRes*<br/>
-Nome della risorsa.
+Un nome di risorsa.
 
-*bRegister*<br/>
+*bRegistrare*<br/>
 Indica se lo script di risorsa deve essere registrato.
 
-*pMapEntries*<br/>
-Puntatore alla mappa sostitutiva che archivia i valori associati ai parametri sostituibili dello script. ATL utilizza automaticamente% MODULE%. Per usare parametri sostituibili aggiuntivi, vedere [CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements). In caso contrario, usare il valore predefinito NULL.
+*pMapEvoci*<br/>
+Puntatore alla mappa di sostituzione che memorizza i valori associati ai parametri sostituibili dello script. ATL utilizza automaticamente %MODULE%. Per utilizzare parametri sostituibili aggiuntivi, vedere [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). In caso contrario, utilizzare il valore predefinito NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
 
 ### <a name="remarks"></a>Osservazioni
 
-Analogamente a [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) ad eccezione di `CAtlModule::UpdateRegistryFromResourceS` crea un collegamento statico al componente del registro di sistema ATL (Registrar).
+Simile a [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced) tranne che `CAtlModule::UpdateRegistryFromResourceS` crea un collegamento statico al componente del Registro di sistema ATL (Registrar).
 
 ## <a name="see-also"></a>Vedere anche
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
-[Classi modulo](../../atl/atl-module-classes.md)<br/>
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)<br/>
+[Classi di modulo](../../atl/atl-module-classes.md)<br/>
 [Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md)

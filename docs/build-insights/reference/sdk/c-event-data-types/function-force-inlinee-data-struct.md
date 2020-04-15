@@ -1,6 +1,6 @@
 ---
-title: Struttura FUNCTION_FORCE_INLINEE_DATA
-description: Il C++ riferimento alla struttura FUNCTION_FORCE_INLINEE_DATA di build Insights SDK.
+title: struttura FUNCTION_FORCE_INLINEE_DATA
+description: Informazioni di riferimento sulla struttura di FUNCTION_FORCE_INLINEE_DATA di Analisi dettagliate di compilazione di C.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3d6929f2f16e9b1bd79b7fb8b383b40e031268bf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a4781c9157130cb46e92906017af98710f5637b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325500"
 ---
-# <a name="function_force_inlinee_data-structure"></a>Struttura FUNCTION_FORCE_INLINEE_DATA
+# <a name="function_force_inlinee_data-structure"></a>struttura FUNCTION_FORCE_INLINEE_DATA
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La struttura `FUNCTION_FORCE_INLINEE_DATA` descrive una funzione forzata in linea.
+La `FUNCTION_FORCE_INLINEE_DATA` struttura descrive una funzione forzata inline.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,11 +38,11 @@ typedef struct FUNCTION_FORCE_INLINEE_DATA_TAG
 } FUNCTION_FORCE_INLINEE_DATA;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 |  |  |
 |--|--|
 | `Name` | Nome della funzione, codificato in UTF-8. |
-| `Size` | Dimensione della funzione, come numero di istruzioni intermedie. |
+| `Size` | Dimensioni della funzione, come numerose istruzioni intermedie. |
 
 ::: moniker-end

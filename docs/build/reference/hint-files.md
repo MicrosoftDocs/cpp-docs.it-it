@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8037cb8025cc85a8479528490e1512531cbcc035
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075201"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322318"
 ---
 # <a name="hint-files"></a>File dei suggerimenti
 
@@ -36,8 +36,9 @@ Un file dei suggerimenti contiene suggerimenti che possono essere personalizzati
 
 > [!IMPORTANT]
 > Se si modifica o aggiunge un file dei suggerimenti, è necessario eseguire altri passaggi per rendere effettive le modifiche:
-> - Nelle versioni precedenti a Visual Studio 2017 versione 15,6: eliminare il file SDF e/o il file VC. DB nella soluzione per tutte le modifiche.
-> - In Visual Studio 2017 versione 15,6 e successive: chiudere e riaprire la soluzione dopo l'aggiunta di nuovi file hint.
+>
+> - Nelle versioni precedenti a Visual Studio 2017 versione 15.6: eliminare il file sdf e/o VC.db nella soluzione per tutte le modifiche.
+> - In Visual Studio 2017 versione 15.6 e successive: chiudere e riaprire la soluzione dopo l'aggiunta di nuovi file dei suggerimenti.
 
 ## <a name="scenario"></a>Scenario
 
@@ -92,17 +93,17 @@ A partire da Visual Studio 2017 versione 15.8 sono disponibili numerose funziona
 
 - Azione rapida per la creazione di un file dei suggerimenti che includa la macro evidenziata oppure, se il file dei suggerimenti è già presente, per l'aggiunta della macro al file.
 
-![Macro evidenziata.](media/hint-squiggle-and-actions.png "Hint zigzag e azioni rapide")
+![Macro evidenziata.](media/hint-squiggle-and-actions.png "Hint onquiggle e azioni rapide")
 
 Dopo l'esecuzione di una delle azioni rapide, il parser analizza di nuovo i file interessati dal file dei suggerimenti.
 
-Per impostazione predefinita, la macro dannosa è evidenziata come un suggerimento. L'evidenziazione può essere modificata in un elemento maggiormente visibile, ad esempio una sottolineatura a zigzag rossa o verde. Usare l'opzione **Macro nelle aree di esplorazione ignorate** nella sezione **Controllo ortografia codice** in **Strumenti** > **Opzioni** > **Editor di testo** > **C/C++**  > **Visualizza**.
+Per impostazione predefinita, la macro dannosa è evidenziata come un suggerimento. L'evidenziazione può essere modificata in un elemento maggiormente visibile, ad esempio una sottolineatura a zigzag rossa o verde. Usare l'opzione **Macro nelle aree di esplorazione ignorate** nella sezione **Controllo ortografia codice** in **Strumenti** > **Opzioni** > **Editor di testo** > **C/C++** > **Visualizza**.
 
-![Macro nell'opzione aree di esplorazione ignorate.](media/skipped-regions-squiggle-option.png "Opzione zigzag di Regions ignorata.")
+![Macro nell'opzione Opzioni opzioni Opzioni di esplorazione ignorate.](media/skipped-regions-squiggle-option.png "Opzione di gioco ondulato delle aree ignorate.")
 
 ## <a name="display-browsing-database-errors"></a>Visualizzare gli errori del database di esplorazione
 
-Il comando di menu **Progetto** > **Visualizza errori del database di esplorazione** visualizza tutte le aree non analizzate nell'**Elenco errori**. Il comando è progettato per semplificare la creazione del file dei suggerimenti iniziale. Tuttavia, poiché il parser non indica se la causa dell'errore è stato una macro dannosa, sarà necessario valutare ogni errore. Eseguire il comando **Visualizza errori del database di esplorazione** e passare a ogni errore per caricare il file interessato nell'editor. Dopo aver caricato il file, le macro presenti all'interno dell'area vengono evidenziate. È possibile richiamare le azioni rapide per aggiungerle a un file dei suggerimenti. Dopo l'aggiornamento del file dei suggerimenti, l'elenco errori viene aggiornato automaticamente. In alternativa, se si modifica manualmente il file dei suggerimenti è possibile usare il comando **Ripeti analisi soluzione** per attivare un aggiornamento.
+Il comando di menu**Errori database esplorazione visualizzazione** **progetto** > visualizza tutte le aree che non è stato possibile analizzare nell'Elenco **errori**. Il comando è progettato per semplificare la creazione del file dei suggerimenti iniziale. Tuttavia, poiché il parser non indica se la causa dell'errore è stato una macro dannosa, sarà necessario valutare ogni errore. Eseguire il comando **Visualizza errori del database di esplorazione** e passare a ogni errore per caricare il file interessato nell'editor. Dopo aver caricato il file, le macro presenti all'interno dell'area vengono evidenziate. È possibile richiamare le azioni rapide per aggiungerle a un file dei suggerimenti. Dopo l'aggiornamento del file dei suggerimenti, l'elenco errori viene aggiornato automaticamente. In alternativa, se si modifica manualmente il file dei suggerimenti è possibile usare il comando **Ripeti analisi soluzione** per attivare un aggiornamento.
 
 ## <a name="architecture"></a>Architecture
 
@@ -150,13 +151,13 @@ I suggerimenti usano questa sintassi:
 
 |Sintassi|Significato|
 |------------|-------------|
-|`#define` *hint-* *stringa di sostituzione* nome<br /><br /> `#define` *hint-name* `(` *parametro*,...`)`la *stringa di sostituzione*|Una direttiva del preprocessore che definisce un nuovo suggerimento o ridefinisce un suggerimento esistente. Dopo la direttiva, il preprocessore sostituisce ogni occorrenza di *hint-name* nel codice sorgente con *replacement-string*.<br /><br /> La seconda forma di sintassi definisce un suggerimento simile a una funzione. Se un suggerimento di tipo funzione si verifica nel codice sorgente, il preprocessore prima sostituisce ogni occorrenza di *parameter* in *replacement-string* con l'argomento corrispondente nel codice sorgente e quindi sostituisce *hint-name* con *replacement-string*.|
+|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|Una direttiva del preprocessore che definisce un nuovo suggerimento o ridefinisce un suggerimento esistente. Dopo la direttiva, il preprocessore sostituisce ogni occorrenza di *hint-name* nel codice sorgente con *replacement-string*.<br /><br /> La seconda forma di sintassi definisce un suggerimento simile a una funzione. Se un suggerimento di tipo funzione si verifica nel codice sorgente, il preprocessore prima sostituisce ogni occorrenza di *parameter* in *replacement-string* con l'argomento corrispondente nel codice sorgente e quindi sostituisce *hint-name* con *replacement-string*.|
 |`@<`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica l'inizio di un set di elementi della mappa.|
 |`@=`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica un elemento intermedio della mappa. Una mappa può contenere più elementi.|
 |`@>`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica la fine di un set di elementi della mappa.|
-|`#undef` *hint-Name*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è specificato dall'identificatore *hint-name*.|
-|*commento* `//`|Commento a riga singola.|
-|`/*` *commento* `*/`|Un commento su più righe.|
+|`#undef` *hint-name*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è specificato dall'identificatore *hint-name*.|
+|`//`*commento*|Commento a riga singola.|
+|`/*`*commento*`*/`|Un commento su più righe.|
 
 ## <a name="example"></a>Esempio
 
@@ -166,7 +167,7 @@ La figura illustra alcune delle directory fisiche di un progetto Visual Studio C
 
 ### <a name="hint-file-directories"></a>Directory dei file dei suggerimenti
 
-![Directory di file&#45;di hint comuni e specifici del progetto.](media/hintfile.png "HintFile")
+![Comune e proietta&#45;directory specifiche dei file dei suggerimenti.](media/hintfile.png "File Hint")
 
 ### <a name="directories-and-hint-file-contents"></a>Directory e contenuto dei file dei suggerimenti
 
