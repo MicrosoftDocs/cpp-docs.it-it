@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: fb764dbd71d89ae3317816df3539c2881b9695b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbc64aad0d65c0430ad23b96f635be8fe2b396e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322320"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81357037"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>funzioni di bitmap grige e retinate
 
@@ -22,7 +22,7 @@ ms.locfileid: "62322320"
 
 MFC fornisce due funzioni visualizzare una bitmap con l'aspetto di un controllo disabilitato.
 
-![Confronto delle versioni di icone grigie e originali](../../mfc/reference/media/vcgraybitmap.gif "confronto delle versioni di icone grigie e originali")
+![Confronto delle versioni di icone grigie e originali](../../mfc/reference/media/vcgraybitmap.gif "Confronto delle versioni di icone grigie e originali")
 
 |||
 |-|-|
@@ -33,14 +33,14 @@ MFC fornisce due funzioni visualizzare una bitmap con l'aspetto di un controllo 
 
 MFC fornisce anche due funzioni per la sostituzione dello sfondo di una bitmap con un modello con dithering.
 
-![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "confronto delle versioni di icone con dithering e originali")
+![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "Confronto delle versioni di icone con dithering e originali")
 
 |||
 |-|-|
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Disegna una bitmap con uno sfondo con dithering.|
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Copia una bitmap con uno sfondo con dithering.|
 
-##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap
+## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap
 
 Disegna una versione in grigio di una bitmap.
 
@@ -58,23 +58,23 @@ void AFXAPI AfxDrawGrayBitmap(
 *pDC*<br/>
 Punta al controller di dominio di destinazione.
 
-*x*<br/>
+*X*<br/>
 Coordinata X di destinazione.
 
-*y*<br/>
+*Y*<br/>
 Coordinata Y di destinazione.
 
 *rSrc*<br/>
 Bitmap di origine.
 
-*crBackground*<br/>
+*crBackground (informazioni in background)*<br/>
 Nuovo colore di sfondo (in genere grigio, ad esempio COLOR_MENU).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La bitmap disegnata con `AfxDrawGrayBitmap` avrà l'aspetto di un controllo disabilitato.
 
-![Confronto delle versioni di icone grigie e originali](../../mfc/reference/media/vcgraybitmap.gif "confronto delle versioni di icone grigie e originali")
+![Confronto delle versioni di icone grigie e originali](../../mfc/reference/media/vcgraybitmap.gif "Confronto delle versioni di icone grigie e originali")
 
 ### <a name="example"></a>Esempio
 
@@ -84,7 +84,7 @@ La bitmap disegnata con `AfxDrawGrayBitmap` avrà l'aspetto di un controllo disa
 
 **Intestazione:** afxwin.h
 
-##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap
+## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGetGrayBitmap
 
 Copia una versione in grigio di una bitmap.
 
@@ -103,14 +103,14 @@ Bitmap di origine.
 *pDest*<br/>
 Bitmap di destinazione.
 
-*crBackground*<br/>
+*crBackground (informazioni in background)*<br/>
 Nuovo colore di sfondo (in genere grigio, ad esempio COLOR_MENU).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La bitmap copiata con `AfxGetGrayBitmap` avrà l'aspetto di un controllo disabilitato.
 
-![Confronto delle versioni di icone grigie e originali](../../mfc/reference/media/vcgraybitmap.gif "confronto delle versioni di icone grigie e originali")
+![Confronto delle versioni di icone grigie e originali](../../mfc/reference/media/vcgraybitmap.gif "Confronto delle versioni di icone grigie e originali")
 
 ### <a name="example"></a>Esempio
 
@@ -120,9 +120,9 @@ La bitmap copiata con `AfxGetGrayBitmap` avrà l'aspetto di un controllo disabil
 
 **Intestazione:** afxwin.h
 
-##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap
+## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap
 
-Disegna una bitmap, sostituendo lo sfondo con un modello con dithering (controllo).
+Disegna una bitmap, sostituendone lo sfondo con un motivo dithered (checker).
 
 ```
 void AFXAPI AfxDrawDitheredBitmap(
@@ -139,26 +139,26 @@ void AFXAPI AfxDrawDitheredBitmap(
 *pDC*<br/>
 Punta al controller di dominio di destinazione.
 
-*x*<br/>
+*X*<br/>
 Coordinata X di destinazione.
 
-*y*<br/>
+*Y*<br/>
 Coordinata Y di destinazione.
 
 *rSrc*<br/>
 Bitmap di origine.
 
-*cr1*<br/>
-Uno dei colori due retinatura, in genere bianco.
+*cr1 (in questo*<br/>
+Uno dei due colori dither, in genere il bianco.
 
-*cr2*<br/>
-Altri retinatura colore, colore grigio chiaro in genere (COLOR_MENU).
+*cr2 (in questo momento)*<br/>
+L'altro colore dither, in genere grigio chiaro (COLOR_MENU).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La bitmap di origine viene disegnata nella destinazione con un colore di due controller di dominio (*gli oggetti cr1* e *cr2*) motivo a scacchi sostituzione dello sfondo della mappa di bit. Lo sfondo della bitmap di origine è definito come dei pixel bianchi e tutti i pixel corrispondenza tra il colore del pixel nell'angolo superiore sinistro della bitmap.
+La bitmap di origine viene disegnata sul controller di dominio di destinazione con un motivo a due colori (*cr1* e *cr2*) a scacchi che sostituisce lo sfondo della bitmap. Lo sfondo della bitmap di origine è definito come i suoi pixel bianchi e tutti i pixel corrispondenti al colore del pixel nell'angolo superiore sinistro della bitmap.
 
-![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "confronto delle versioni di icone con dithering e originali")
+![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "Confronto delle versioni di icone con dithering e originali")
 
 ### <a name="example"></a>Esempio
 
@@ -168,9 +168,9 @@ La bitmap di origine viene disegnata nella destinazione con un colore di due con
 
 **Intestazione:** afxwin.h
 
-##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
+## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap
 
-Copia una bitmap, sostituendo lo sfondo con un modello con dithering (controllo).
+Copia una bitmap, sostituendone lo sfondo con un motivo dithered (checker).
 
 ```
 void AFXAPI AfxGetDitheredBitmap(
@@ -188,17 +188,17 @@ Bitmap di origine.
 *pDest*<br/>
 Bitmap di destinazione.
 
-*cr1*<br/>
-Uno dei colori due retinatura, in genere bianco.
+*cr1 (in questo*<br/>
+Uno dei due colori dither, in genere il bianco.
 
-*cr2*<br/>
-Altri retinatura colore, colore grigio chiaro in genere (COLOR_MENU).
+*cr2 (in questo momento)*<br/>
+L'altro colore dither, in genere grigio chiaro (COLOR_MENU).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La bitmap di origine viene copiata nella bitmap di destinazione con un colore di due (*gli oggetti cr1* e *cr2*) motivo a scacchi sostituendo in background del bitmap di origine. Lo sfondo della bitmap di origine è definito come dei pixel bianchi e tutti i pixel corrispondenza tra il colore del pixel nell'angolo superiore sinistro della bitmap.
+La bitmap di origine viene copiata nella bitmap di destinazione con un motivo a due colori (*cr1* e *cr2*) a seguito dello sfondo della bitmap di origine. Lo sfondo della bitmap di origine è definito come i suoi pixel bianchi e tutti i pixel corrispondenti al colore del pixel nell'angolo superiore sinistro della bitmap.
 
-![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap (informazioni in inglese)")
 
 ### <a name="example"></a>Esempio
 

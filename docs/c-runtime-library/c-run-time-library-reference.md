@@ -8,12 +8,12 @@ helpviewer_keywords:
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 9193e5c38c01f9dddcf0a8cd324d07f5dd90cb5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589462"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334424"
 ---
 # <a name="c-run-time-library-reference"></a>Riferimenti alla libreria di runtime C
 
@@ -21,7 +21,7 @@ La libreria di runtime Microsoft fornisce le routine per la programmazione per i
 
 I programmi di esempio sono inclusi nei singoli argomenti di riferimento per la maggior parte delle routine nella libreria.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Librerie di runtime C](../c-runtime-library/crt-library-features.md)<br/>
 Vengono descritti i file LIB che includono le librerie di runtime C.
@@ -35,10 +35,13 @@ Vengono forniti collegamenti alle variabili globali e ai tipi standard forniti d
 [Costanti globali](../c-runtime-library/global-constants.md)<br/>
 Vengono forniti collegamenti alle costanti globali definite dalla libreria di runtime.
 
-[Riferimento alfabetico alle funzioni](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[Stato globale](../c-runtime-library/global-state.md)<br/>
+Descrive l'ambito dello stato globale nella libreria di runtime del linguaggio C.
+
+[Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
 Fornisce un punto di ingresso del sommario in un elenco alfabetico di tutte le funzioni della libreria di runtime C.
 
-[Mapping di testo generico](../c-runtime-library/generic-text-mappings.md)<br/>
+[Mapping di testo genericoGeneric-Text Mappings](../c-runtime-library/generic-text-mappings.md)<br/>
 Vengono forniti collegamenti ai mapping di testo generico definiti in Tchar.h.
 
 [Stringhe relative a lingue e paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>

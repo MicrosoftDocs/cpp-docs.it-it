@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: 2dbda1759dcb37a1f2a8cbe87f24adbb979ca085
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a5c9127db4714575cdf037147cc97601a4523e93
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188987"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360855"
 ---
 # <a name="expressions-with-binary-operators"></a>Espressioni con operatori binari
 
@@ -19,75 +19,75 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
 - [Operatori moltiplicativi](../cpp/multiplicative-operators-and-the-modulus-operator.md)
 
-   - Moltiplicazione (*)
+  - Moltiplicazione (*)
 
-   - Divisione (/)
+  - Divisione (/)
 
-   - Modulo (%)
+  - Modulo (%)
 
 - [Operatori additivi](../cpp/additive-operators-plus-and.md)
 
-   - Addizione (+)
+  - Addizione (+)
 
-   - Sottrazione (-)
+  - Sottrazione (-)
 
-- [Operatori shift](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
+- [Operatori Shift](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - Spostamento a destra (> >)
+  - Spostamento a destra (>>)
 
-   - Spostamento a sinistra (< <)
+  - Spostamento a sinistra (<<)
 
-- [Operatori relazionali e di uguaglianza](../cpp/relational-operators-equal-and-equal.md)
+- [Operatori relazionali e di uguaglianzaRelational and equality operators](../cpp/relational-operators-equal-and-equal.md)
 
-   - Minore di (\<)
+  - Minore di (\<)
 
-   - Maggiore di (>)
+  - Maggiore di (>)
 
-   - Minore o uguale a (\<=)
+  - Minore o uguale\<a (
 
-   - Maggiore o uguale a (>=)
+  - Maggiore o uguale a (>=)
 
-   - Uguale a (==)
+  - Uguale a (==)
 
-   - Diverso da (!=)
+  - Diverso da (!=)
 
 - Operatori bit per bit
 
-   - [AND bit per bit (&)](../cpp/bitwise-and-operator-amp.md)
+  - [AND bit per bit (&)](../cpp/bitwise-and-operator-amp.md)
 
-   - [OR esclusivo bit per bit (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
+  - [OR esclusivo bit per bit](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [OR inclusivo bit&#124;per bit ()](../cpp/bitwise-inclusive-or-operator-pipe.md)
+  - [OR inclusivo bit per bit (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - Operatori logici
 
-   - [AND logico (& &)](../cpp/logical-and-operator-amp-amp.md)
+  - [AND logico (&&)](../cpp/logical-and-operator-amp-amp.md)
 
-   - [OR logico (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+  - [OR logico (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
 
 - [Operatori di assegnazione](../cpp/assignment-operators.md)
 
-   - Assegnazione (=)
+  - Assegnazione (=)
 
-   - Assegnazione di addizione (+=)
+  - Assegnazione di addizione (+=)
 
-   - Assegnazione di sottrazione (-=)
+  - Assegnazione di sottrazione (-- )
 
-   - Assegnazione di moltiplicazione (*=)
+  - Assegnazione di moltiplicazione (*=)
 
-   - Assegnazione di divisione (/=)
+  - Assegnazione di divisione (/=)
 
-   - Assegnazione di modulo (%=)
+  - Assegnazione di modulo (%=)
 
-   - Assegnazione di spostamento a sinistra (<\<=)
+  - Assegnazione spostamento \<a sinistra (<)
 
-   - Assegnazione di spostamento a destra (> > =)
+  - Assegnazione del turno a destra (>>)
 
-   - Assegnazione AND bit per bit (& =)
+  - Assegnazione AND bit per bit (&)
 
-   - Assegnazione dell'operatore OR esclusivo bit per bit (^=)
+  - Assegnazione dell'operatore OR esclusivo bit per bit (^=)
 
-   - Assegnazione OR inclusivo bit&#124;per bit (=)
+  - Assegnazione OR inclusiva bit per bit (&#124;)
 
 - [Operatore virgola](../cpp/comma-operator.md) (,)
 

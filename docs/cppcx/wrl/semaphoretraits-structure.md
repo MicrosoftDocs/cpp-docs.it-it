@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-ms.openlocfilehash: e7bd2e5d0993c8e4be7223d98ffb1dbec14cbb74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11719576c9fc7b23f4cd318ee1b3ed9ca3f5edaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403113"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360732"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits (struttura)
 
-Definisce le caratteristiche comuni di un `Semaphore` oggetto.
+Definisce le caratteristiche `Semaphore` comuni di un oggetto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,7 +32,7 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 Nome                               | Descrizione
 ---------------------------------- | --------------------------------------
-[SemaphoreTraits::Unlock](#unlock) | Controllo delle versioni di una risorsa condivisa.
+[SemaphoreTraits::Sblocca](#unlock) | Rilascia il controllo di una risorsa condivisa.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -42,13 +42,13 @@ Nome                               | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers. h
+**Intestazione:** corewrappers.h
 
 **Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="unlock"></a>SemaphoreTraits::Unlock
+## <a name="semaphoretraitsunlock"></a><a name="unlock"></a>SemaphoreTraits::Sblocca
 
-Controllo delle versioni di una risorsa condivisa.
+Rilascia il controllo di una risorsa condivisa.
 
 ```cpp
 inline static void Unlock(
@@ -58,9 +58,9 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametri
 
-*h*<br/>
-Handle per un `Semaphore` oggetto.
+*H*<br/>
+Handle a `Semaphore` un oggetto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se l'operazione di sblocco ha esito negativo, `Unlock()` genera un errore che indica la causa dell'errore.
+Se l'operazione di `Unlock()` sblocco non riesce, genera un errore che indica la causa dell'errore.

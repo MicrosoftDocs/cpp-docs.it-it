@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: a224b868ea1923bb4f84b0d682c71fadb63da572
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 865a8a27d96f84f536e40ec5a7bbbbdd9837dfcd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322069"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356920"
 ---
 # <a name="icommandtarget-interface"></a>Interfaccia ICommandTarget
 
-Fornisce un controllo utente con un'interfaccia per la ricezione di comandi da un oggetto di origine del comando.
+Fornisce un controllo utente con un'interfaccia per ricevere comandi da un oggetto origine comando.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,19 +33,19 @@ interface class ICommandTarget
 |----------|-----------------|
 |[ICommandTarget::Initialize](#initialize)|Inizializza l'oggetto di destinazione del comando.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando si ospita un controllo utente in una visualizzazione, MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) invia comandi e aggiornamento comando messaggi dell'interfaccia utente per il controllo utente in modo che possa gestire i comandi MFC (ad esempio, voci di menu della cornice e i pulsanti della barra degli strumenti). Implementando `ICommandTarget`, il controllo utente fornire un riferimento al [ICommandSource](../../mfc/reference/icommandsource-interface.md) oggetto.
+Quando si ospita un controllo utente in una visualizzazione MFC, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) indirizza i comandi e aggiornare i messaggi dell'interfaccia utente di comando al controllo utente per consentire di gestire i comandi MFC (ad esempio, voci di menu cornice e pulsanti della barra degli strumenti). Implementando `ICommandTarget`, si assegna al controllo utente un riferimento all'oggetto [ICommandSource](../../mfc/reference/icommandsource-interface.md) .
 
-Vedere [How to: Aggiungere il Routing di comandi al controllo Windows Form](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) per un esempio di come usare `ICommandTarget`.
+Per un esempio di utilizzo, `ICommandTarget`vedere Procedura: aggiungere il routing dei comandi al controllo Windows [Form.](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
-Per altre informazioni sull'uso di Windows Form, vedere [usando un controllo utente di Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Per ulteriori informazioni sull'utilizzo di Windows Form, vedere [Utilizzo di un controllo utente Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxwinforms. h (definito nell'assembly atlmfc\lib\mfcmifc80.dll)
+**Intestazione:** afxwinforms.h (definita nell'assembly atlmfc.lib.mfcmifc80.dll)
 
-##  <a name="initialize"></a> ICommandTarget::Initialize
+## <a name="icommandtargetinitialize"></a><a name="initialize"></a>ICommandTarget::Initialize
 
 Inizializza l'oggetto di destinazione del comando.
 
@@ -55,14 +55,14 @@ void Initialize(ICommandSource^ cmdSource);
 
 ### <a name="parameters"></a>Parametri
 
-*cmdSource*<br/>
-Handle all'oggetto di origine del comando.
+*CmdSource (informazioni in base a un*<br/>
+Handle per l'oggetto origine del comando.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Quando si ospita un controllo utente in una visualizzazione di MFC, CWinFormsView invia comandi e messaggi dell'interfaccia utente del comando di aggiornamento per il controllo utente in modo che possa gestire i comandi MFC.
+Quando si ospita un controllo utente in una visualizzazione MFC, CWinFormsView indirizza i comandi e aggiornare i messaggi dell'interfaccia utente dei comandi al controllo utente per consentire di gestire i comandi MFC.
 
-Questo metodo inizializza l'oggetto di destinazione di comando e associa il cmdSource oggetto di origine comando specificato. Deve essere chiamato nell'implementazione della classe del controllo utente. In fase di inizializzazione, è consigliabile registrare gestori di comandi con l'oggetto di origine comando da ICommandSource::AddCommandHandler chiamante nell'implementazione di inizializzazione. Vedere Procedura: Aggiungere il Routing di comandi al controllo Windows Form per un esempio di come utilizzare Initialize a tale scopo.
+Questo metodo inizializza l'oggetto destinazione del comando e lo associa all'oggetto origine comando specificato cmdSource. Deve essere chiamato nell'implementazione della classe del controllo utente. Al momento dell'inizializzazione, è necessario registrare i gestori di comando con l'oggetto origine comando chiamando ICommandSource::AddCommandHandler nell'implementazione di Initialize.In initialization, you should register command handlers with the command source object by calling ICommandSource::AddCommandHandler in the Initialize implementation. Vedere procedura: aggiungere il routing dei comandi al controllo Windows Form per un esempio di come utilizzare Initialize a tale scopo.
 
 ## <a name="see-also"></a>Vedere anche
 

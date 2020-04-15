@@ -1,9 +1,11 @@
 ---
 title: _strdate, _wstrdate
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strdate
 - _wstrdate
+- _o__strdate
+- _o__wstrdate
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: e1164db5857643bac649e96493a3d66cdee3b6e2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9b4b6d3b81dd1dda968cc42448ab2e53bdd44433
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958215"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361287"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
@@ -73,19 +76,21 @@ Puntatore a un buffer contenente la stringa di data formattata.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore alla stringa di caratteri risultante *dateStr*.
+Ognuna di queste funzioni restituisce un puntatore alla stringa di caratteri risultante *datestr*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Sono disponibili versioni più sicure di queste funzioni. Vedere [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). È consigliabile usare le funzioni più sicure laddove possibile.
 
-La funzione **_strdate** copia la data di sistema corrente nel buffer a cui punta *dateStr*, formattato **mm**/**GG**/**AA**, dove **mm** è due cifre che rappresentano il mese, **GG** è costituito da due cifre che rappresentano il giorno e **YY** rappresenta le ultime due cifre dell'anno. Ad esempio, la stringa **12/05/99** rappresenta il 5 dicembre 1999. La lunghezza del buffer deve essere di almeno 9 byte.
+La funzione **_strdate** copia la data di sistema corrente nel buffer a cui punta *datestr*, formattato **mm**/**gg**/**yy**, dove **mm** è costituito da due cifre che rappresentano il mese, **gg** è due cifre che rappresentano il giorno e **yy** è le ultime due cifre dell'anno. Ad esempio, la stringa **05/12/99** rappresenta il 5 dicembre 1999. La lunghezza del buffer deve essere di almeno 9 byte.
 
-Se *dateStr* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
+Se *datestr* è un puntatore **NULL,** viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano **errno** su **EINVAL**.
 
-**_wstrdate** è una versione a caratteri wide di **_strdate**; l'argomento e il valore restituito di **_wstrdate** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
+**_wstrdate** è una versione a caratteri wide di **_strdate**; l'argomento e il valore restituito di **_wstrdate** sono stringhe di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
-In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -130,7 +135,7 @@ OS date: 04/25/03
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

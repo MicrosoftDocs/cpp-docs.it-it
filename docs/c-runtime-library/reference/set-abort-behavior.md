@@ -1,8 +1,9 @@
 ---
 title: _set_abort_behavior
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - _set_abort_behavior
+- _o__set_abort_behavior
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,19 +28,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: a63d4e77a91dafa4500d5fef8e9b5e94ee28cfbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fd3a3c2f99d1702cdccf68328c2122b965b2d078
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948661"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337879"
 ---
 # <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 Specifica l'azione da eseguire quando un programma viene terminato in modo anomalo.
 
 > [!NOTE]
-> Non usare la funzione [Abort](abort.md) per arrestare un'app Microsoft Store, tranne che negli scenari di test o di debug. I metodi a livello di codice o dell'interfaccia utente per chiudere un'app dello Store non sono consentiti in base ai [criteri Microsoft Store](/legal/windows/agreements/store-policies). Per altre informazioni, vedere ciclo di vita dell' [app UWP](/windows/uwp/launch-resume/app-lifecycle).
+> Non usare la funzione [abort](abort.md) per arrestare un'app di Microsoft Store, tranne negli scenari di test o debug. Le modalità a livello di codice o dell'interfaccia utente per chiudere un'app di Store non sono consentite in base ai criteri di [Microsoft Store.](/legal/windows/agreements/store-policies) Per altre informazioni, vedere Ciclo di [vita dell'app UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,19 +53,21 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Parametri
 
-*flags*<br/>
-Nuovo valore dei flag di [interruzione](abort.md) .
+*Bandiere*<br/>
+Nuovo valore dei flag [di interruzione.](abort.md)
 
-*maschera*<br/>
-Maschera per i bit dei flag di [interruzione](abort.md) da impostare.
+*mask*<br/>
+Maschera per i bit di flag di [interruzione](abort.md) da impostare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Valore precedente dei flag.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Sono presenti due flag di [interruzione](abort.md) : **_WRITE_ABORT_MSG** e **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina se viene stampato un messaggio di testo utile quando un programma viene terminato in modo anomalo. Il messaggio indica che l'applicazione ha chiamato la funzione [Abort](abort.md) . Il comportamento predefinito prevede la stampa del messaggio. **_CALL_REPORTFAULT**, se impostato, specifica che viene generato un dump di arresto anomalo di Watson e viene segnalato quando viene chiamato [Abort](abort.md) . Per impostazione predefinita, la segnalazione di dump di arresto anomalo del sistema è abilitata per le compilazioni non di debug.
+Esistono due flag di [interruzione:](abort.md) **_WRITE_ABORT_MSG** e **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina se un messaggio di testo utile viene stampato quando un programma viene terminato in modo anomalo. Il messaggio indica che l'applicazione ha chiamato la funzione [abort.](abort.md) Il comportamento predefinito prevede la stampa del messaggio. **_CALL_REPORTFAULT,** se impostato, specifica che un dump di arresto anomalo di Watson viene generato e segnalato quando viene chiamato [l'interruzione.](abort.md) Per impostazione predefinita, la segnalazione di dump di arresto anomalo del sistema è abilitata per le compilazioni non di debug.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -71,7 +75,7 @@ Sono presenti due flag di [interruzione](abort.md) : **_WRITE_ABORT_MSG** e **_C
 |-------------|---------------------|
 |**_set_abort_behavior**|\<stdlib.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -96,4 +100,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>Vedere anche
 
-[abort](abort.md)<br/>
+[Interrompere](abort.md)<br/>

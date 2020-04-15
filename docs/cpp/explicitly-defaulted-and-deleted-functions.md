@@ -2,12 +2,12 @@
 title: Funzioni impostate come predefinite ed eliminate in modo esplicito
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: b43588aac1d246c83f5281456625eeb0ff36b94d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bd13b5fef3a9dfc13d72f1ee34d7ced902735e15
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179978"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360901"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funzioni impostate come predefinite ed eliminate in modo esplicito
 
@@ -15,7 +15,7 @@ In C++11 le funzioni impostate come predefinite e le funzioni eliminate offrono 
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Vantaggi delle funzioni impostate come predefinite e delle funzioni eliminate
 
-In C++ il compilatore genera automaticamente il costruttore predefinito, il costruttore di copia, l'operatore di assegnazione di copia e il distruttore per un tipo se non viene dichiarato. Queste funzioni sono note come *funzioni membro speciali*, che rendono i tipi semplici definiti dall'utente in C++ si comportano come le strutture in C. Ovvero è possibile crearli, copiarli ed eliminarli senza ulteriori sforzi di codifica. In C++11 è stata introdotta la semantica di spostamento nel linguaggio e aggiunge il costruttore di spostamento e l'operatore di assegnazione di spostamento all'elenco delle funzioni membro speciali che il compilatore è in grado di generare automaticamente.
+In C++ il compilatore genera automaticamente il costruttore predefinito, il costruttore di copia, l'operatore di assegnazione di copia e il distruttore per un tipo se non viene dichiarato. Queste funzioni sono note come le *funzioni membro speciali*e sono ciò che rendono i tipi semplici definiti dall'utente in C , si comportano come in C. Ovvero, è possibile crearli, copiarli ed eliminarli senza alcuno sforzo di codifica aggiuntivo. In C++11 è stata introdotta la semantica di spostamento nel linguaggio e aggiunge il costruttore di spostamento e l'operatore di assegnazione di spostamento all'elenco delle funzioni membro speciali che il compilatore è in grado di generare automaticamente.
 
 Ciò risulta utile per i tipi semplici, ma i tipi complessi stessi definiscono spesso una o più funzioni membro speciali e questo può impedire la generazione automatica di altre funzioni membro speciali. In pratica:
 
@@ -25,15 +25,15 @@ Ciò risulta utile per i tipi semplici, ma i tipi complessi stessi definiscono s
 
 - Se un costruttore di spostamento o un operatore di assegnazione di spostamento viene dichiarato in modo esplicito:
 
-   - Non viene generato automaticamente alcun costruttore di copia.
+  - Non viene generato automaticamente alcun costruttore di copia.
 
-   - Non viene generato automaticamente alcun operatore di assegnazione di copia.
+  - Non viene generato automaticamente alcun operatore di assegnazione di copia.
 
 - Se un costruttore di copia, un operatore di assegnazione di copia, un costruttore di spostamento, un operatore di assegnazione spostamento o un distruttore è dichiarato in modo esplicito:
 
-   - Non viene generato automaticamente alcun costruttore di spostamento.
+  - Non viene generato automaticamente alcun costruttore di spostamento.
 
-   - Non viene generato automaticamente alcun operatore di assegnazione di spostamento.
+  - Non viene generato automaticamente alcun operatore di assegnazione di spostamento.
 
 > [!NOTE]
 > Lo standard C++11 specifica inoltre le regole aggiuntive seguenti:
@@ -43,7 +43,7 @@ Ciò risulta utile per i tipi semplici, ma i tipi complessi stessi definiscono s
 >
 > In entrambi i casi, in Visual Studio si continua automaticamente a generare le funzioni necessarie in modo implicito e non viene generato alcun avviso.
 
-Le conseguenze di tali regole possono inoltre comportare la creazione di gerarchie di oggetti. Se, ad esempio, una classe di base non ha un costruttore predefinito chiamabile da una classe di derivazione, ovvero un costruttore **pubblico** o **protetto** che non accetta parametri, una classe che deriva da essa non può generare automaticamente il proprio costruttore predefinito.
+Le conseguenze di tali regole possono inoltre comportare la creazione di gerarchie di oggetti. Ad esempio, se per qualsiasi motivo una classe di base non dispone di un costruttore predefinito che può essere chiamato da una classe derivata, ovvero un costruttore **pubblico** o **protetto** che non accetta parametri, una classe che deriva da essa non può generare automaticamente il proprio costruttore predefinito.
 
 Queste regole possono complicare l'implementazione di tipi semplici definiti dall'utente e idiomi C++ comuni, ad esempio rendendo non copiabile un tipo definito dall'utente, dichiarando il costruttore di copia e l'operatore di assegnazione di copia in modo privato e senza definirli.
 
@@ -60,7 +60,7 @@ private:
 
 Prima di C++11 questo frammento di codice ha rappresentato la forma idiomatica dei tipi non copiabili. Presenta tuttavia alcuni problemi:
 
-- Il costruttore di copia deve essere dichiarato privatamente per poter essere nascosto, ma la dichiarazione stessa impedisce la generazione automatica del costruttore predefinito. È necessario definire esplicitamente il costruttore predefinito, se lo si vuole usare, anche se non esegue alcuna operazione.
+- Il costruttore di copia deve essere dichiarato privatamente per nasconderlo, ma poiché è dichiarato, la generazione automatica del costruttore predefinito non è consentita. È necessario definire esplicitamente il costruttore predefinito, se lo si vuole usare, anche se non esegue alcuna operazione.
 
 - Anche se il costruttore predefinito definito esplicitamente non esegue alcuna operazione, viene considerato non superfluo dal compilatore. È meno efficiente di un costruttore predefinito generato automaticamente e impedisce a `noncopyable` di essere effettivamente un tipo POD.
 
@@ -108,13 +108,13 @@ struct widget
 inline widget& widget::operator=(const widget&) =default;
 ```
 
-Si noti che è possibile impostare come predefinita una funzione membro speciale all'esterno del corpo di una classe, purché sia impostabile come inline.
+Si noti che è possibile predefinita una funzione membro speciale all'esterno del corpo di una classe, purché sia inlinable.
 
 A causa dei vantaggi a livello di prestazioni offerti dalle funzioni membro speciali superflue, è consigliabile favorire le funzioni membro speciali generate automaticamente rispetto ai corpi di funzione vuoti quando si vuole ottenere il comportamento predefinito. È possibile ottenere questo risultato impostando esplicitamente come predefinita la funzione membro speciale o non dichiarandola e non dichiarando le altre funzioni membro speciali che ne impedirebbero la generazione automatica.
 
 ## <a name="deleted-functions"></a>Funzioni eliminate
 
-È possibile eliminare le funzioni membro speciali, oltre alle funzioni membro normali e alle funzioni non membro, per impedirne la definizione o la chiamata. L'eliminazione di funzioni membro speciali offre un modo più semplice per impedire al compilatore di generare funzioni membro speciali indesiderate. La funzione deve essere eliminata come viene dichiarata, non può essere eliminata in seguito nel modo in cui può essere dichiarata e successivamente impostata in base alla forma predefinita.
+È possibile eliminare le funzioni membro speciali, oltre alle funzioni membro normali e alle funzioni non membro, per impedirne la definizione o la chiamata. L'eliminazione di funzioni membro speciali fornisce un modo più semplice per impedire al compilatore di generare funzioni membro speciali che non si desidera. La funzione deve essere eliminata come viene dichiarata, non può essere eliminata in seguito nel modo in cui può essere dichiarata e successivamente impostata in base alla forma predefinita.
 
 ```cpp
 struct widget
@@ -132,7 +132,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }
 ```
 
-Si noti che nell'esempio precedente la chiamata a `call_with_true_double_only` tramite un argomento **float** provocherebbe un errore del compilatore, ma la chiamata di `call_with_true_double_only` tramite un argomento **int** non sarebbe; nel caso di **int** , l'argomento verrà promosso da **int** a **Double** e chiamerà correttamente la versione **doppia** della funzione, anche se ciò potrebbe non essere quello previsto. Per garantire che le chiamate a questa funzione con un argomento di tipo non double causino un errore del compilatore, è possibile dichiarare una versione del modello della funzione eliminata.
+Si noti che nell'esempio precedente la `call_with_true_double_only` chiamata tramite un argomento **float** causerebbe un errore del compilatore, ma la chiamata `call_with_true_double_only` utilizzando un argomento **int** non lo farebbe; nel caso **int,** l'argomento verrà promosso da **int** a **double** e chiamare correttamente la versione **doppia** della funzione, anche se questo potrebbe non essere quello previsto. Per garantire che qualsiasi chiamata a questa funzione utilizzando un argomento non double causa un errore del compilatore, è possibile dichiarare una versione del modello della funzione che viene eliminata.
 
 ```cpp
 template < typename T >

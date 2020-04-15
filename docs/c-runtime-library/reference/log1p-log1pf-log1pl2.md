@@ -1,10 +1,13 @@
 ---
 title: log1p, log1pf, log1pl2
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log1p
 - log1pf
 - log1pl
+- _o_log1p
+- _o_log1pf
+- _o_log1pl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4e077f5b806dbe38ed4a4f4e8eef0259170cb7e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953214"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341814"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -70,35 +74,37 @@ long double log1pl(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Argomento a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, restituisce il log naturale (base*e*) di (*x* + 1).
+In caso di esito positivo, restituisce il log naturale (base-e) di (*x* - 1).*e*
 
-In caso contrario può restituire uno dei valori seguenti:
+In caso contrario, può restituire uno dei valori seguenti:
 
 |Input|Risultato|Eccezione SEH|errno|
 |-----------|------------|-------------------|-----------|
 |+inf|+inf|||
-|Valori denormalizzati|Come input|UNDERFLOW||
-|±0|Come input|||
+|Valori denormalizzati|Uguale all'input|UNDERFLOW||
+|0 ( ) 0 (0)|Uguale all'input|||
 |-1|-inf|DIVBYZERO|ERANGE|
 |< -1|nan|NON VALIDO|EDOM|
 |-inf|nan|NON VALIDO|EDOM|
-|±SNaN|Come input|INVALID||
-|±QNaN, indefinite|Come input|||
+|SNaN|Uguale all'input|NON VALIDO||
+|QNaN, a tempo indeterminato|Uguale all'input|||
 
-Il valore **errno** è impostato su ERANGE se *x* =-1. Il valore **errno** viene impostato su **EDOM** se *x* <-1.
+Il valore **errno** è impostato su ERANGE se *x* è -1. Il valore **errno** è impostato su **EDOM** se *x* < -1.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le funzioni **log1p** possono essere più accurate rispetto all' `log(x + 1)` uso di quando *x* è vicino a 0.
+Le funzioni **log1p** possono essere `log(x + 1)` più accurate rispetto all'utilizzo quando *x* è vicino a 0.
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **log1p** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **log1p** accetta e restituisce sempre un **valore Double**.
+Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **log1p** che accettano e restituiscono tipi **float** e **long** **double.** In un programma C, **log1p** accetta e restituisce sempre un **valore double**.
 
-Se *x* è un numero naturale, questa funzione restituisce il logaritmo del fattoriale di (*x* -1).
+Se *x* è un numero naturale, questa funzione restituisce il logaritmo del fattoriale di (*x* - 1).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -110,6 +116,6 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

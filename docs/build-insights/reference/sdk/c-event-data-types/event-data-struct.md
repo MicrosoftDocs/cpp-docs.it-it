@@ -1,6 +1,6 @@
 ---
-title: Struttura EVENT_DATA
-description: Il C++ riferimento alla struttura EVENT_DATA di build Insights SDK.
+title: struttura EVENT_DATA
+description: L'SDK di analisi di compilazione di C'è EVENT_DATA riferimento alla struttura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 572cbdaba346ddb77b665b5677b978c83a80aa3d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8ce396febe278c5e7c34fe170939c9522913f92a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417446"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325602"
 ---
-# <a name="event_data-structure"></a>Struttura EVENT_DATA
+# <a name="event_data-structure"></a>struttura EVENT_DATA
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La struttura `EVENT_DATA` descrive un evento ricevuto da una sessione di analisi o di registrazione. Queste sessioni vengono avviate chiamando le funzioni [Analyze](../functions/analyze.md), [Analyze](../functions/analyze-a.md), [AnalyzeW](../functions/analyze-w.md), [relog](../functions/relog.md), [RelogA](../functions/relog-a.md)o [RelogW](../functions/relog-w.md) .
+La `EVENT_DATA` struttura descrive un evento ricevuto da una sessione di analisi o di riregistrazione. Queste sessioni vengono avviate chiamando le funzioni [Analyze](../functions/analyze.md), [AnalyzeA](../functions/analyze-a.md), [AnalyzeW](../functions/analyze-w.md), [Relog](../functions/relog.md), [RelogA](../functions/relog-a.md)o [RelogW](../functions/relog-w.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -56,34 +56,34 @@ typedef struct EVENT_DATA_TAG
 } EVENT_DATA;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 |  |  |
 |--|--|
-| `EventId` | Numero che identifica l'evento. Per un elenco degli identificatori di evento, vedere [event_id](event-id-enum.md). |
-| `EventInstanceId` | Numero che identifica in modo univoco l'evento corrente all'interno di una traccia. Questo valore non viene modificato durante l'analisi o la registrazione più volte della stessa traccia. Utilizzare questo campo per identificare lo stesso evento in più analisi o la riregistrazione passa sulla stessa traccia. |
-| `TickFrequency` | Numero di cicli al secondo da utilizzare durante la valutazione di una durata misurata in cicli. |
-| `StartTimestamp` | Quando l'evento è un' *attività*, questo campo viene impostato su un valore di segno di selezione acquisito al momento dell'avvio dell'attività. Se questo evento è un *evento semplice*, questo campo viene impostato su un valore di segno di selezione acquisito nel momento in cui si è verificato l'evento. |
-| `StopTimestamp` | Quando l'evento è un' *attività*, questo campo viene impostato su un valore di segno di selezione acquisito nel momento in cui l'attività è stata arrestata. Se l'evento Stop non è ancora stato ricevuto per questa attività, questo campo è impostato su zero. Se questo evento è un *evento semplice*, questo campo è impostato su zero. |
-| `ExclusiveDurationTicks` | Se questo evento è un' *attività*, questo campo viene impostato sul numero di cicli che si sono verificati direttamente in questa attività. Il numero di cicli che si sono verificati in un'attività figlio è escluso. Questo campo è impostato su zero per *gli eventi semplici*. |
-| `CPUTicks` | Se questo evento è un' *attività*, questo campo viene impostato sul numero di cicli della CPU verificatisi durante l'attività. Un ciclo della CPU è diverso da un normale segno di selezione. I cicli della CPU vengono conteggiati solo quando la CPU sta eseguendo codice in un'attività. I cicli della CPU non vengono conteggiati quando il thread associato all'attività è in stato di sospensione. Questo campo è impostato su zero per *gli eventi semplici*. |
-| `ExclusiveCPUTicks` | Questo campo ha lo stesso significato di `CPUTicks`, ad eccezione del fatto che non include i cicli della CPU che si sono verificati nelle attività figlio. Questo campo è impostato su zero per *gli eventi semplici*. |
-| `WallClockTimeResponsibilityTicks` | Se questo evento è un' *attività*, questo campo viene impostato su un numero di tick che rappresenta il contributo dell'attività al tempo complessivo del clock. Un tick di responsabilità del tempo reale è diverso rispetto a un tick normale. I tick di responsabilità del tempo reale prendono in considerazione il parallelismo tra le attività. Ad esempio, due attività parallele possono avere una durata di 50 cicli e la stessa ora di inizio e di fine. In questo caso, a entrambi verrà assegnata una responsabilità del tempo reale di 25 tick. Questo campo è impostato su zero per *gli eventi semplici*. |
-| `ExclusiveWallClockTimeResponsibilityTicks` | Questo campo ha lo stesso significato di `WallClockTimeResponsibilityTicks`, ad eccezione del fatto che non include i tick di responsabilità del tempo di clock delle attività figlio. Questo campo è impostato su zero per *gli eventi semplici*. |
-| `Data` | Punta a dati aggiuntivi archiviati nell'evento. Il tipo di dati a cui punta è diverso, a seconda del campo `EventId`. |
+| `EventId` | Numero che identifica l'evento. Per un elenco degli identificatori di evento, vedere [EVENT_ID](event-id-enum.md). |
+| `EventInstanceId` | Numero che identifica in modo univoco l'evento corrente all'interno di una traccia. Questo valore non cambia quando si analizza o si riregistra la stessa traccia più volte. Utilizzare questo campo per identificare lo stesso evento in più passaggi di analisi o di reimpostazione della stessa traccia. |
+| `TickFrequency` | Il numero di segni di graduazione al secondo da utilizzare per valutare una durata misurata in segni di graduazione. |
+| `StartTimestamp` | Quando l'evento è *un'attività*, questo campo viene impostato su un valore di tick acquisito al momento dell'avvio dell'attività. Se questo evento è un *evento semplice*, questo campo viene impostato su un valore di graduazione acquisito nel momento in cui si è verificato l'evento. |
+| `StopTimestamp` | Quando l'evento è *un'attività*, questo campo viene impostato su un valore di tick acquisito al momento dell'interruzione dell'attività. Se l'evento di arresto non è ancora stato ricevuto per questa attività, questo campo è impostato su zero. Se questo evento è un *evento semplice*, questo campo è impostato su zero. |
+| `ExclusiveDurationTicks` | Se questo evento è *un'attività*, questo campo è impostato sul numero di segni di graduazione che si sono verificati direttamente in questa attività. Il numero di segni di graduazione che si sono verificati in un'attività figlio sono esclusi. Questo campo è impostato su zero per *eventi semplici*. |
+| `CPUTicks` | Se questo evento è *un'attività*, questo campo è impostato sul numero di segni di graduazione della CPU che si sono verificati durante questa attività. Un segno di spunta della CPU è diverso da un segno di spunta normale. I segni di graduazione della CPU vengono conteggiati solo quando la CPU sta eseguendo codice in un'attività. I segni di spunta della CPU non vengono conteggiati quando il thread associato all'attività è in attivo. Questo campo è impostato su zero per *eventi semplici*. |
+| `ExclusiveCPUTicks` | Questo campo ha lo `CPUTicks`stesso significato di , ad eccezione del fatto che non include i segni di graduazione della CPU che si sono verificati nelle attività figlio. Questo campo è impostato su zero per *eventi semplici*. |
+| `WallClockTimeResponsibilityTicks` | Se questo evento è un *evento Activity*, questo campo viene impostato su un conteggio che rappresenta il contributo di questa attività all'ora complessiva dell'orologio a muro. Un segno di spunta di responsabilità a parete è diverso da un segno di spunta normale. Le zecche di responsabilità del tempo a parete tengono conto del parallelismo tra le attività. Ad esempio, due attività parallele possono avere una durata di 50 tick e lo stesso tempo di inizio e di arresto. In questo caso, a entrambi verrà assegnata una responsabilità del tempo a parete di 25 zecche. Questo campo è impostato su zero per *eventi semplici*. |
+| `ExclusiveWallClockTimeResponsibilityTicks` | Questo campo ha lo `WallClockTimeResponsibilityTicks`stesso significato di , ad eccezione del fatto che non include le zecche di responsabilità del tempo a parete delle attività relative ai bambini. Questo campo è impostato su zero per *eventi semplici*. |
+| `Data` | Punta a dati aggiuntivi memorizzati nell'evento. Il tipo di dati a cui `EventId` punta è diverso, a seconda del campo. |
 | `ProcessId` | Identificatore per il processo in cui si è verificato l'evento. |
-| `ThreadId` | Identificatore per il thread in cui si è verificato l'evento. |
-| `ProcessorIndex` | Numero di CPU con indice zero in cui si è verificato l'evento. |
+| `ThreadId` | Identificatore del thread in cui si è verificato l'evento. |
+| `ProcessorIndex` | Numero di CPU indicizzato su zero in cui si è verificato l'evento. |
 | `EventName` | Stringa ANSI contenente il nome dell'entità identificata da `EventId`. |
-| `EventWideName` | Stringa di caratteri "wide" che contiene il nome dell'entità identificata da `EventId`. |
+| `EventWideName` | Stringa larga contenente il nome dell'entità identificata da `EventId`. |
 
 ## <a name="remarks"></a>Osservazioni
 
-Molti campi in `EVENT_DATA` contengono i conteggi dei cicli. C++Build Insights usa il contatore delle prestazioni della finestra come origine dei cicli. Per convertirlo in un'unità di tempo appropriata, ad esempio i secondi, è necessario usare un conteggio dei segni di selezione con il campo `TickFrequency`. Vedere l'esempio seguente per eseguire questa conversione. `EVENT_DATA` non contiene un campo per il numero di cicli regolari di un'attività. Per ottenere questo valore, sottrarre `StartTimestamp` da `StopTimestamp`. `EVENT_DATA` è una struttura che deve essere usata dagli utenti dell'API C. Per C++ gli utenti dell'API, le classi come gli [eventi](../cpp-event-data-types/event.md) eseguono le conversioni automatiche.
+Molti campi `EVENT_DATA` in contengono conteggi di controllo. Informazioni dettagliate sulla compilazione di C, in C, viene utilizzato il contatore delle prestazioni della finestra come origine dei segni di graduazione. È necessario utilizzare un `TickFrequency` conteggio di controllo con il campo per convertirlo in un'unità di tempo appropriata, ad esempio secondi. Per eseguire questa conversione, vedere l'esempio seguente. `EVENT_DATA`non contiene un campo per il conteggio regolare di un'attività. Per ottenere questo `StartTimestamp` valore, sottrarre da `StopTimestamp`. `EVENT_DATA`è una struttura che deve essere utilizzata dagli utenti dell'API C. Per gli utenti dell'API di C, classi come [Event](../cpp-event-data-types/event.md) time conversions automaticamente.
 
-Il valore del campo `EVENT_DATA` `Data` dipende dal valore del campo `EventId`. Il valore di `Data` viene descritto nella tabella seguente. Alcuni identificatori di entità potrebbero mancare nella tabella seguente. In questo caso, il campo `Data` è impostato su `nullptr` o zero.
+Il valore `EVENT_DATA` `Data` del campo dipende dal `EventId` valore del relativo campo. Il valore `Data` di è descritto nella tabella seguente. Alcuni identificatori di entità potrebbero mancare nella tabella seguente. In questo caso, il `Data` `nullptr` campo è impostato su o zero.
 
-| Valore della proprietà `EventId` | Tipo a cui punta `Data` |
+| Valore della proprietà `EventId` | Tipo indicato da`Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
 | `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
@@ -103,7 +103,7 @@ Il valore del campo `EVENT_DATA` `Data` dipende dal valore del campo `EventId`. 
 | `EVENT_ID_SYMBOL_NAME` | [SYMBOL_NAME_DATA](symbol-name-data-struct.md) |
 | `EVENT_ID_TEMPLATE_INSTANTIATION` | [TEMPLATE_INSTANTIATION_DATA](template-instantiation-data-struct.md) |
 
-## <a name="tick-conversion-example"></a>Esempio di conversione del segno di selezione
+## <a name="tick-conversion-example"></a>Esempio di conversione tick
 
 ```cpp
 //

@@ -1,5 +1,5 @@
 ---
-title: Classe CComHeapPtr
+title: CComHeapPtr (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CComHeapPtr
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-ms.openlocfilehash: ace8dbb174bd6585e61bd941a60dad28296af72a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78cadfff9a278cf080393ab919f3891b201c91aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246375"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327769"
 ---
-# <a name="ccomheapptr-class"></a>Classe CComHeapPtr
+# <a name="ccomheapptr-class"></a>CComHeapPtr (classe)
 
-Una classe del puntatore intelligente per la gestione dei puntatori di heap.
+Una classe puntatore intelligente per la gestione dei puntatori dell'heap.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,7 +29,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Il tipo di oggetto da archiviare nell'heap.
+Tipo di oggetto da archiviare nell'heap.
 
 ## <a name="members"></a>Membri
 
@@ -37,11 +37,11 @@ Il tipo di oggetto da archiviare nell'heap.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComHeapPtr::CComHeapPtr](#ccomheapptr)|Costruttore.|
+|[CComHeapPtr::CComHeapPtrCComHeapPtr::CComHeapPtr](#ccomheapptr)|Costruttore.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`CComHeapPtr` deriva da `CHeapPtr`, ma vengono utilizzati [CComAllocator](../../atl/reference/ccomallocator-class.md) allocare la memoria usando le routine di COM. Visualizzare [CHeapPtr](../../atl/reference/cheapptr-class.md) e [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) per i metodi disponibili.
+`CComHeapPtr`deriva da `CHeapPtr`, ma utilizza [CComAllocator](../../atl/reference/ccomallocator-class.md) per allocare memoria utilizzando routine COM. Vedere [CHeapPtr](../../atl/reference/cheapptr-class.md) e [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) per i metodi disponibili.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -53,9 +53,9 @@ Il tipo di oggetto da archiviare nell'heap.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlbase. h
+**Intestazione:** atlbase.h
 
-##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr
+## <a name="ccomheapptrccomheapptr"></a><a name="ccomheapptr"></a>CComHeapPtr::CComHeapPtrCComHeapPtr::CComHeapPtr
 
 Costruttore.
 
@@ -66,16 +66,16 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pData*<br/>
+*pDati*<br/>
 Oggetto `CComHeapPtr` esistente.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il puntatore di heap può facoltativamente essere creato usando un oggetto esistente `CComHeapPtr` oggetto. In questo caso, il nuovo `CComHeapPtr` oggetto assume la responsabilità per gestire le risorse e il nuovo puntatore.
+Il puntatore dell'heap può `CComHeapPtr` essere creato facoltativamente utilizzando un oggetto esistente. In tal caso, il nuovo `CComHeapPtr` oggetto si assume la responsabilità della gestione del nuovo puntatore e delle nuove risorse.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtr (classe)](../../atl/reference/cheapptr-class.md)<br/>
 [Classe CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
 [Classe CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

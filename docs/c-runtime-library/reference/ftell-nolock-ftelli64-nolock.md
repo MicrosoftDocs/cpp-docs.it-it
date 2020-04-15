@@ -1,9 +1,11 @@
 ---
 title: _ftell_nolock, _ftelli64_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ftelli64_nolock
 - _ftell_nolock
+- _o__ftell_nolock
+- _o__ftelli64_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-ms.openlocfilehash: 9e72687077cc5401bb411fca81a3ccec48a6258f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc6534daaeb3818e28e3c48dbc6d1d9586b6429e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956358"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345588"
 ---
 # <a name="_ftell_nolock-_ftelli64_nolock"></a>_ftell_nolock, _ftelli64_nolock
 
@@ -56,16 +59,18 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>Parametri
 
-*stream*<br/>
-Definire la struttura dei **file** come destinazione.
+*flusso*<br/>
+Impostare come destinazione la struttura **FILE.**
 
 ## <a name="return-value"></a>Valore restituito
 
-Uguale a **ftell** e **_ftelli64**. Per ulteriori informazioni, vedere [ftell, _ftelli64](ftell-ftelli64.md).
+Come **ftell** e **_ftelli64**. Per ulteriori informazioni, vedere [ftell, _ftelli64](ftell-ftelli64.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Queste funzioni sono rispettivamente versioni non bloccanti di **ftell** e **_ftelli64**. Sono identici a **ftell** e **_ftelli64** , ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Queste funzioni potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Queste funzioni sono rispettivamente versioni senza chiusura di **ftell** e **_ftelli64**. Sono identici a **ftell** e **_ftelli64** ad eccezione del fatto che non sono protetti da interferenze da altri thread. Queste funzioni potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -74,7 +79,7 @@ Queste funzioni sono rispettivamente versioni non bloccanti di **ftell** e **_ft
 |**ftell_nolock**|\<stdio.h>|\<errno.h>|
 |**_ftelli64_nolock**|\<stdio.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

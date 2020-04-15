@@ -1,5 +1,5 @@
 ---
-title: Puntatori ai membri
+title: Puntatori a membri
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarations, pointers
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 3238cd801763c72e96ccd93eee9640e672a5fbf5
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: adffacc3ddc08679d7db4e17e027d8a7dbe8a92b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150784"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320323"
 ---
-# <a name="pointers-to-members"></a>Puntatori ai membri
+# <a name="pointers-to-members"></a>Puntatori a membri
 
-Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del puntatore.  Vengono dichiarati usando la sequenza seguente:
+Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del puntatore.  Vengono dichiarati utilizzando la sequenza seguente:They're declared using the following sequence:
 
-> *Storage-Class-Specifiers*<sub>opz</sub> *CV-Qualifiers*<sub>opz</sub> *Type-specifier* *MS-Modifier*<sub>opz</sub> *qualified-name* **`::*`** *CV-Qualifiers*<sub>opt</sub> *identificatore* *PM-inizializzatore*<sub>opt</sub> **`;`**
+> *storage-class-specifiers*<sub>opt</sub> *cv-qualificatos*<sub>opopt</sub> *tipo-identificatore* *ms-modifier*<sub>opz</sub> *qualified-name* **`::*`** *cv-qualifiers*<sub>opz</sub> *identificatore* *pm-initializer*<sub>opt</sub>**`;`**
 
 1. Identificatore di dichiarazione:
 
@@ -27,37 +27,37 @@ Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del
 
    - Identificatori **const** e **volatile** facoltativi.
 
-   - Il tipo di identificatore: il nome di un tipo. Si tratta del tipo del membro a cui puntare, non della classe.
+   - Il tipo di identificatore: il nome di un tipo. È il tipo del membro a cui fare riferimento, non la classe.
 
 1. Dichiaratore:
 
-   - Modificatore specifico di Microsoft facoltativo. Per ulteriori informazioni, vedere [modificatori specifici di Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Modificatore specifico di Microsoft facoltativo. Per ulteriori informazioni, vedere [Modificatori specifici di Microsoft](../cpp/microsoft-specific-modifiers.md).
 
    - Il nome completo della classe che contiene i membri a cui puntare.
 
-   - Operatore __`::`__ .
+   - L'operatore. __`::`__
 
-   - Operatore __`*`__ .
+   - L'operatore. __`*`__
 
    - Identificatori **const** e **volatile** facoltativi.
 
    - L'identificatore di denominazione del puntatore a membro.
 
-1. Inizializzatore puntatore a membro facoltativo:
+1. Un inizializzatore puntatore a membro facoltativo:An optional pointer-to-member initializer:
 
-   - Operatore **`=`** .
+   - L'operatore. **`=`**
 
-   - Operatore **`&`** .
+   - L'operatore. **`&`**
 
    - Nome completo della classe.
 
-   - Operatore __`::`__ .
+   - L'operatore. __`::`__
 
    - Nome di un membro non statico della classe del tipo appropriato.
 
-Come sempre, più dichiaratori (e tutti gli inizializzatori associati) sono consentiti in una singola dichiarazione. Un puntatore a un membro non può puntare a un membro statico della classe, un membro del tipo di riferimento o **`void`** .
+Come sempre, più dichiaratori (e tutti gli inizializzatori associati) sono consentiti in una singola dichiarazione. Un puntatore a membro non può puntare a un membro statico **`void`** della classe, a un membro di tipo riferimento o a .
 
-Un puntatore a un membro di una classe differisce da un puntatore normale: dispone di entrambe le informazioni sul tipo per il tipo del membro e per la classe a cui appartiene il membro. Un puntatore normale identifica (con l'indirizzo) un singolo oggetto in memoria. Un puntatore a un membro di una classe identifica tale membro in qualsiasi istanza della classe. Nell'esempio seguente viene dichiarata una classe, `Window`, e alcuni puntatori ai dati dei membri.
+Un puntatore a un membro di una classe è diverso da un puntatore normale: dispone sia di informazioni sul tipo per il tipo del membro che per la classe a cui appartiene il membro. Un puntatore normale identifica (con l'indirizzo) un singolo oggetto in memoria. Un puntatore a un membro di una classe identifica tale membro in qualsiasi istanza della classe. Nell'esempio seguente viene dichiarata una classe, `Window`, e alcuni puntatori ai dati dei membri.
 
 ```cpp
 // pointers_to_members1.cpp
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-Nell'esempio precedente `pwCaption` è un puntatore a qualsiasi membro della classe `Window` di tipo `char*`. Il tipo di `pwCaption` è `char * Window::* `. Il frammento di codice seguente dichiara i puntatori alle funzioni membro `SetCaption` e `GetCaption`.
+Nell'esempio precedente, `pwCaption` è un puntatore `Window` a qualsiasi membro `char*`della classe di tipo . Il tipo di `pwCaption` è `char * Window::*`. Il frammento di codice seguente dichiara i puntatori alle funzioni membro `SetCaption` e `GetCaption`.
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-La differenza tra gli operatori **`.*`** e **`->*`** (gli operatori puntatore a membro) è che l'operatore **`.*`** seleziona i membri in base a un oggetto o un riferimento a un oggetto, mentre l'operatore **`->*`** seleziona i membri tramite un puntatore. Per ulteriori informazioni su questi operatori, vedere [espressioni con gli operatori puntatore a membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).
+La differenza **`.*`** tra **`->*`** gli operatori e (gli operatori puntatore a membro) è che l'operatore **`.*`** seleziona i membri in base a un oggetto o a un riferimento a un oggetto, mentre l'operatore **`->*`** seleziona i membri tramite un puntatore. Per ulteriori informazioni su questi operatori, vedere [Espressioni con operatori puntatore a membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).
 
 Il risultato degli operatori puntatore a membro è il tipo del membro. In questo caso, è `char *`.
 
@@ -124,13 +124,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>Limitazioni sui puntatori ai membri
 
-L'indirizzo di un membro statico non è un puntatore a un membro. Si tratta di un puntatore normale a un'istanza del membro statico. Esiste una sola istanza di un membro statico per tutti gli oggetti di una determinata classe. Ciò significa che è possibile usare gli operatori address-of ( **&** ) e dereference (<strong>\*</strong>) ordinari.
+L'indirizzo di un membro statico non è un puntatore a un membro. Si tratta di un puntatore normale a un'istanza del membro statico. Esiste una sola istanza di un membro statico per tutti gli oggetti di una determinata classe. Ciò significa che è possibile**&** utilizzare gli operatori<strong>\*</strong>address-of ( ) e dereferenziare ( ).
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>Puntatori a membri e funzioni virtuali
 
 La chiamata di una funzione virtuale tramite una funzione puntatore a membro funziona come se la funzione fosse stata chiamata direttamente. La funzione corretta viene cercata nella tabella v e richiamata.
 
-La chiave per le funzioni virtuali in esecuzione, come sempre, le richiama tramite un puntatore a una classe base. Per ulteriori informazioni sulle funzioni virtuali, vedere [funzioni virtuali](../cpp/virtual-functions.md).
+La chiave per le funzioni virtuali in esecuzione, come sempre, le richiama tramite un puntatore a una classe base. Per ulteriori informazioni sulle funzioni virtuali, vedere [Funzioni virtuali.](../cpp/virtual-functions.md)
 
 Nel codice seguente viene illustrato come richiamare una funzione virtuale con una funzione puntatore a membro:
 

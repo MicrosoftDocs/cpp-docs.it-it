@@ -1,6 +1,6 @@
 ---
-title: Classe ImpLibOutput
-description: Riferimento C++ alla classe ImpLibOutput di build Insights SDK.
+title: ImpLibOutput (classe)
+description: Il riferimento della classe ImpLibOutput dell'SDK di Build Insights in C.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 068415250f2981724ad4efd14de9eaf67c546c96
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 98905dfe75484e98e14a0fa575e75fe3ab284559
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333251"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324708"
 ---
-# <a name="impliboutput-class"></a>Classe ImpLibOutput
+# <a name="impliboutput-class"></a>ImpLibOutput (classe)
 
 ::: moniker range="<=vs-2015"
 
-C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.
+L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La classe `ImpLibOutput` viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usarlo per trovare la corrispondenza con un evento [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output) .
+La `ImpLibOutput` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usalo per trovare una corrispondenza con un evento [IMP_LIB_OUTPUT.](../event-table.md#imp-lib-output)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-Insieme ai membri ereditati dalla relativa classe base [FileOutput](file-output.md) , la classe `ImpLibOutput` contiene i membri seguenti:
+Insieme ai membri ereditati dalla relativa `ImpLibOutput` classe base [FileOutput,](file-output.md) la classe contiene i membri seguenti:
 
 ### <a name="constructors"></a>Costruttori
 
 [ImpLibOutput](#imp-lib-output)
 
-## <a name="imp-lib-output"></a>ImpLibOutput
+## <a name="impliboutput"></a><a name="imp-lib-output"></a>ImpLibOutput
 
 ```cpp
 ImpLibOutput(const RawEvent& event);
@@ -53,7 +53,7 @@ ImpLibOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametri
 
-*event*\
-Evento [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output) .
+*Evento*\
+Un [evento IMP_LIB_OUTPUT.](../event-table.md#imp-lib-output)
 
 ::: moniker-end
