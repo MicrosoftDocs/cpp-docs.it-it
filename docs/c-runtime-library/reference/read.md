@@ -1,8 +1,9 @@
 ---
 title: _read
-ms.date: 02/13/2019
+ms.date: 4/2/2020
 api_name:
 - _read
+- _o__read
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 32238923aeef14230f68def15e27c676753faf61
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db3726b85bb4ba7c8e9a691bef3fb063ec5709c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338138"
 ---
 # <a name="_read"></a>_read
 
@@ -52,7 +54,7 @@ int _read(
 
 ### <a name="parameters"></a>Parametri
 
-*fd*<br/>
+*Fd*<br/>
 Il descrittore del file che fa riferimento al file aperto.
 
 *buffer*<br/>
@@ -63,19 +65,21 @@ Numero massimo di byte da leggere.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_read** restituisce il numero di byte letti, che potrebbero essere minori di *BUFFER_SIZE* se nel file sono rimasti meno di *BUFFER_SIZE* byte o se il file è stato aperto in modalità testo. In modalità testo ogni coppia `\r\n` ritorno a capo/avanzamento riga viene sostituita da un singolo carattere `\n`di avanzamento riga. Solo il carattere di avanzamento riga singolo viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
+**_read** restituisce il numero di byte letti, che potrebbe essere inferiore *a buffer_size* se il file è rimasto meno di *buffer_size* byte o se il file è stato aperto in modalità testo. In modalità testo, ogni coppia `\r\n` ritorno a capo-avanzamento riga viene sostituita con un singolo carattere `\n`di avanzamento riga. Solo il carattere di avanzamento riga singola viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
 
-Se la funzione tenta di leggere alla fine del file, restituisce 0. Se *FD* non è valido, il file non è aperto per la lettura o il file è bloccato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EBADF**.
+Se la funzione tenta di leggere alla fine del file, restituisce 0. Se *fd* non è valido, il file non è aperto per la lettura o il file è bloccato, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** su **EBADF**.
 
-Se il *buffer* è **null**o se *BUFFER_SIZE* > **INT_MAX**, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**.
+Se *buffer* è **NULL**o se *buffer_size* > **INT_MAX**, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostato su **EINVAL**.
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_read** legge un massimo di *BUFFER_SIZE* byte nel *buffer* dal file associato a *FD*. L'operazione di lettura inizia dalla posizione corrente del puntatore del file associato al file specificato. Dopo l'operazione di lettura, il puntatore del file punta al carattere successivo non letto.
+La funzione **_read** legge un massimo di *buffer_size* byte nel *buffer* dal file associato a *fd*. L'operazione di lettura inizia dalla posizione corrente del puntatore del file associato al file specificato. Dopo l'operazione di lettura, il puntatore del file punta al carattere successivo non letto.
 
-Se il file è stato aperto in modalità testo, la lettura termina quando **_read** rileva un carattere CTRL + Z, che viene considerato come un indicatore di fine file. Usa [lseek](lseek-lseeki64.md) per cancellare l'indicatore di fine del file.
+Se il file è stato aperto in modalità testo, la lettura termina quando **_read** viene rilevato un carattere di chiusura del file, che viene considerato come un indicatore di fine file. Usa [lseek](lseek-lseeki64.md) per cancellare l'indicatore di fine del file.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -83,7 +87,7 @@ Se il file è stato aperto in modalità testo, la lettura termina quando **_read
 |-------------|---------------------|
 |**_read**|\<io.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

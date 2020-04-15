@@ -1,6 +1,6 @@
 ---
 title: 'Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn'
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _j0
 - _j1
@@ -8,6 +8,12 @@ api_name:
 - _y0
 - _y1
 - _yn
+- _o__j0
+- _o__j1
+- _o__jn
+- _o__y0
+- _o__y1
+- _o__yn
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939464"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348654"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -79,37 +86,39 @@ double _yn(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile.
 
-*n*<br/>
+*N*<br/>
 Ordine Integer della funzione di Bessel.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce una funzione di Bessel *x*. Se *x* è negativo nelle funzioni **_y0**, **_y1**o **_Yn** , la routine imposta **errno** su **Edom**, stampa un messaggio di errore **_DOMAIN** in **stderr**e restituisce **_HUGE_VAL**. È possibile modificare la gestione degli errori usando **_matherr**.
+Ognuna di queste routine restituisce una funzione di Bessel *di x*. Se *x* è negativo nelle funzioni **_y0**, **_y1**o **_yn** , la routine imposta **errno** su **EDOM**, stampa un messaggio di errore **_DOMAIN** in **stderr**e restituisce **_HUGE_VAL**. È possibile modificare la gestione degli errori utilizzando **_matherr**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le routine **_j0**, **_j1**e **_Jn** restituiscono funzioni di Bessel del primo tipo: Orders 0, 1 e n, rispettivamente.
-
-|Input|Eccezione SEH|Eccezione Matherr|
-|-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**INVALID**|**_DOMAIN**|
-
-Le routine **_y0**, **_y1**e **_Yn** restituiscono funzioni di Bessel del secondo tipo: ordini 0, 1 e n, rispettivamente.
+Le routine **_j0**, **_j1**e **_jn** restituiscono le funzioni di Bessel del primo tipo, rispettivamente gli ordini 0, 1 e n.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**INVALID**|**_DOMAIN**|
-|± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**INVALID**|**_DOMAIN**|
+|**QNAN**, **IND**|**Non valido**|**_DOMAIN**|
+
+Le routine **_y0**, **_y1**e **_yn** restituiscono le funzioni di Bessel del secondo tipo, rispettivamente gli ordini 0, 1 e n.
+
+|Input|Eccezione SEH|Eccezione Matherr|
+|-----------|-------------------|-----------------------|
+|**QNAN**, **IND**|**Non valido**|**_DOMAIN**|
+|: 0 (in questo modo)|**ZERODIVIDE**|**_SING**|
+|&#124;x&#124; < 0.0|**Non valido**|**_DOMAIN**|
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0** **_yn** **, _y1**|\<cmath> (C++), \<math.h> (C, C++)|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -156,5 +165,5 @@ Bessel functions for x = 2.387000:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

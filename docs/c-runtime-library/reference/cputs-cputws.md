@@ -1,9 +1,11 @@
 ---
 title: _cputs, _cputws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cputws
 - _cputs
+- _o__cputs
+- _o__cputws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942637"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348376"
 ---
 # <a name="_cputs-_cputws"></a>_cputs, _cputws
 
@@ -60,18 +63,20 @@ int _cputws(
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
+*Str*<br/>
 Stringa di output.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se ha esito positivo, **_cputs** restituisce 0. In caso contrario, restituisce un valore diverso da zero.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_cputs** scrive la stringa con terminazione null a cui punta *Str* direttamente nella console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.
+La funzione **_cputs** scrive la stringa con terminazione null a cui punta *str* direttamente nella console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.
 
-Questa funzione convalida il relativo parametro. Se *Str* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito-1.
+Questa funzione convalida il relativo parametro. Se *str* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e viene restituito -1.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -86,7 +91,7 @@ Questa funzione convalida il relativo parametro. Se *Str* è **null**, viene ric
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -151,5 +156,5 @@ Hello world (courtesy of _cputws)!
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_putch, _putwch](putch-putwch.md)<br/>

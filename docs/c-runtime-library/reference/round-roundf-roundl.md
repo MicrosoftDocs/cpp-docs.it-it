@@ -1,10 +1,13 @@
 ---
 title: round, roundf, roundl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - round
 - roundl
 - roundf
+- _o_round
+- _o_roundf
+- _o_roundl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949110"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337995"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -63,7 +67,7 @@ long double roundl(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,17 +76,19 @@ Le funzioni **round** restituiscono un valore a virgola mobile che rappresenta l
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|none|**_DOMAIN**|
+|**QNAN**, **IND**|none|**_DOMAIN**|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **round** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C, **round** accetta sempre e restituisce un **valore Double**.
+Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **round** che accettano e restituiscono valori **float** e **long** **double.** In un programma C, **round** accetta e restituisce sempre un **valore double**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**round**, **roundf**, **roundl**|\<math.h>|
+|**rotondo**, **rotondo**, **rotondo**|\<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -124,7 +130,7 @@ roundl(-2.500000) is -3
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

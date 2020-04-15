@@ -1,9 +1,10 @@
 ---
 title: isascii, __isascii, iswascii
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswascii
 - __isascii
+- _o_iswascii
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +39,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: aeb9c27fee4d179cc16caa50c6f0aae521402beb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857788"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343917"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -63,18 +65,20 @@ int iswascii(
 
 ### <a name="parameters"></a>Parametri
 
-*c*<br/>
+*C*<br/>
 Valore Integer da testare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un valore diverso da zero se **c** è una rappresentazione particolare di un carattere ASCII. **__isascii** restituisce un valore diverso da zero se **c** è un carattere ASCII (nell'intervallo tra 0x00 e 0x7F). **iswascii** restituisce un valore diverso da zero se **c** è una rappresentazione a caratteri wide di un carattere ASCII. Ognuna di queste routine restituisce 0 se **c** non soddisfa la condizione di test.
+Ognuna di queste routine restituisce diverso da zero se **c** è una rappresentazione particolare di un carattere ASCII. **__isascii** restituisce un valore diverso da zero se **c** è un carattere ASCII (nell'intervallo 0x00 - 0x7F). **iswascii** restituisce un valore diverso da zero se **c** è una rappresentazione a caratteri wide di un carattere ASCII. Ognuna di queste routine restituisce 0 se **c** non soddisfa la condizione di test.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Sia **__isascii** che **iswascii** vengono implementati come macro a meno che non sia definita la macro del preprocessore _CTYPE_DISABLE_MACROS.
+Sia **__isascii** che **iswascii** vengono implementati come macro, a meno che non venga definita la _CTYPE_DISABLE_MACROS macro del preprocessore.
 
-Per compatibilità con le versioni **precedenti, il** valore di viene implementato come macro solo se [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) non è definito o è definito come 0. in caso contrario, non è definito.
+Per compatibilità con le versioni precedenti, **isascii** viene implementato come macro solo se [&#95;&#95;&#95;&#95;STDC](../../preprocessor/predefined-macros.md) non è definito o è definito come 0; in caso contrario non è definito.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -82,17 +86,17 @@ Per compatibilità con le versioni **precedenti, il** valore di viene implementa
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**isascii**, **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
 |**iswascii**|C: \<wctype.h>, \<ctype.h> o \<wchar.h><br /><br /> C++: \<cwctype>, \<cctype>, \<wctype.h>, \<ctype.h> o \<wchar.h>|
 
-Le funzioni **ASCII**, **__isascii** e **iswascii** sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Le funzioni **isascii**, **__isascii** e **iswascii** sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>

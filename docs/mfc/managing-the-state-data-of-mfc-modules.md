@@ -12,37 +12,37 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-ms.openlocfilehash: 0cdb368dc70b73ba70b3721fecdaf47de36686d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8e79f54ed586201a7d82327662643a9a241b8f4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338369"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81357272"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Gestione dei dati dello stato dei moduli MFC
 
-Questo articolo illustra i dati dello stato dei moduli MFC e come questo stato viene aggiornato quando il flusso di esecuzione (codice di path accetta tramite un'applicazione durante l'esecuzione) entra ed esce da un modulo. Cambio di stato dei moduli con le macro AFX_MANAGE_STATE e METHOD_PROLOGUE viene anche illustrata.
+In questo articolo vengono illustrati i dati di stato dei moduli MFC e come questo stato viene aggiornato quando il flusso di esecuzione (il codice di percorso passa attraverso un'applicazione durante l'esecuzione) entra e esce da un modulo. Viene inoltre discusso il passaggio da uno stato di modulo all'altro con le macro AFX_MANAGE_STATE e METHOD_PROLOGUE.
 
 > [!NOTE]
->  Il termine "modulo" qui fa riferimento a un programma eseguibile o una DLL (o set di DLL) che funzionino a prescindere dal resto dell'applicazione, ma usa una copia della DLL MFC condivisa. Un controllo ActiveX è un esempio tipico di un modulo.
+> Il termine "modulo" qui si riferisce a un programma eseguibile o a una DLL (o insieme di DLL) che operano indipendentemente dal resto dell'applicazione, ma utilizza una copia condivisa della DLL MFC. Un controllo ActiveX è un esempio tipico di un modulo.
 
-Come illustrato nella figura seguente, MFC include dati relativi allo stato per ogni modulo usato in un'applicazione. Esempi di questi dati includono gli handle dell'istanza di Windows (utilizzati per il caricamento delle risorse), i puntatori all'oggetto corrente `CWinApp` e `CWinThread` gli oggetti di un'applicazione, i conteggi dei riferimenti modulo OLE e un'ampia gamma di mappe che consentono di mantenere le connessioni tra Windows oggetto handle e le istanze corrispondenti di oggetti MFC. Tuttavia, quando un'applicazione usa più moduli, i dati dello stato di ciascun modulo non sono applicazione wide. Piuttosto, ogni modulo ha una propria copia privata dei dati dello stato di MFC.
+Come illustrato nella figura seguente, MFC dispone di dati sullo stato per ogni modulo utilizzato in un'applicazione. Esempi di questi dati includono handle di istanza di Windows `CWinApp` `CWinThread` (utilizzati per il caricamento delle risorse), puntatori all'oggetto corrente e agli oggetti di un'applicazione, conteggi dei riferimenti ai moduli OLE e una varietà di mappe che gestiscono le connessioni tra gli handle di oggetti Windows e le istanze corrispondenti di oggetti MFC. Tuttavia, quando un'applicazione utilizza più moduli, i dati di stato di ogni modulo non sono a livello di applicazione. Piuttosto, ogni modulo ha la propria copia privata dei dati di stato di MFC.
 
-![I dati di un singolo modulo sullo stato &#40;applicazione&#41;](../mfc/media/vc387n1.gif "i dati di un singolo modulo sullo stato &#40;applicazione&#41;") <br/>
+![Dati di stato di un singolo modulo &#40;&#41;dell'applicazione](../mfc/media/vc387n1.gif "Dati di stato di un singolo modulo &#40;&#41; dell'applicazione") <br/>
 Dati sullo stato di un modulo singolo (applicazione)
 
-Dati relativi allo stato di un modulo sono contenuti in una struttura ed sono sempre disponibile tramite un puntatore alla struttura. Quando il flusso di esecuzione entra in un modulo specifico, come illustrato nella figura seguente, lo stato del modulo che deve essere lo stato "effettivo" o "corrente". Pertanto, ogni oggetto thread dispone di un puntatore alla struttura dallo stato effettivo dell'applicazione. Mantenere questo puntatore aggiornato affatto volte in cui è fondamentale per la gestione dello stato globale dell'applicazione e il mantenimento dell'integrità dello stato di ogni modulo. Corretta gestione dello stato globale può causare comportamenti imprevedibili dell'applicazione.
+I dati sullo stato di un modulo sono contenuti in una struttura ed è sempre disponibile tramite un puntatore a tale struttura. Quando il flusso di esecuzione entra in un particolare modulo, come illustrato nella figura seguente, lo stato del modulo deve essere lo stato "corrente" o "efficace". Pertanto, ogni oggetto thread dispone di un puntatore alla struttura di stato effettivo dell'applicazione. Mantenere questo puntatore aggiornato in ogni momento è fondamentale per gestire lo stato globale dell'applicazione e mantenere l'integrità dello stato di ogni modulo. Una gestione non corretta dello stato globale può causare un comportamento imprevedibile dell'applicazione.
 
-![Dati di più moduli dello stato](../mfc/media/vc387n2.gif "dati di più moduli dello stato") <br/>
+![Dati di stato di più moduli](../mfc/media/vc387n2.gif "Dati dello stato di più moduli") <br/>
 Dati sullo stato di più moduli
 
-In altre parole, ogni modulo è responsabile di commutazione correttamente tra gli stati di modulo in tutti i relativi punti di ingresso. Un "punto di ingresso" sia in qualsiasi luogo in cui il flusso di esecuzione possibile immettere il codice del modulo. Punti di ingresso includono:
+In altre parole, ogni modulo è responsabile del passaggio corretto tra gli stati del modulo in tutti i relativi punti di ingresso. Un "punto di ingresso" è qualsiasi luogo in cui il flusso di esecuzione può inserire il codice del modulo. I punti di ingresso includono:
 
-- [Funzioni esportate in una DLL](../mfc/exported-dll-function-entry-points.md)
+- [Funzioni esportate in una DLLExported functions in a DLL](../mfc/exported-dll-function-entry-points.md)
 
 - [Funzioni membro delle interfacce COM](../mfc/com-interface-entry-points.md)
 
-- [Routine della finestra](../mfc/window-procedure-entry-points.md)
+- [Procedure per finestre](../mfc/window-procedure-entry-points.md)
 
 ## <a name="see-also"></a>Vedere anche
 

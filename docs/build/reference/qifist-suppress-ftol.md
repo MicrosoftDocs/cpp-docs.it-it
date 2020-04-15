@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d6e12a1003ea125b0da4bfef580d8096e97553a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319278"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336107"
 ---
-# <a name="qifist-suppress-ftol"></a>/QIfist (Elimina _ftol)
+# <a name="qifist-suppress-_ftol"></a>/QIfist (Elimina _ftol)
 
-Deprecato. Disattiva la chiamata della funzione helper `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale.
+Operazione deprecata. Disattiva la chiamata della funzione helper `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,33 +25,33 @@ Deprecato. Disattiva la chiamata della funzione helper `_ftol` quando è necessa
 /QIfist
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
->  **/QIfist** è disponibile solo nel compilatore per piattaforme x86, questa opzione del compilatore non è disponibile nei compilatori per x64 o ARM.
+> **/QIfist** è disponibile solo nel compilatore destinato a x86; questa opzione del compilatore non è disponibile nei compilatori destinati a x64 oARM.
 
-Oltre alla conversione dal tipo a virgola mobile a tipo integrale, il `_ftol` funzione assicura la modalità di arrotondamento dell'unità a virgola mobile (FPU) sia verso lo zero (troncamento), impostando i bit 10 e 11 della parola di controllo. In questo modo si garantisce che la conversione da un tipo a virgola mobile a un tipo integrale viene generato come descritto dallo standard C ANSI (non viene eliminata la parte frazionaria del numero). Quando si usa **/QIfist**, questa garanzia non è più valido. La modalità di arrotondamento sarà uno dei quattro come documentato in manuali di riferimento di Intel:
+Oltre a convertire da un tipo a virgola `_ftol` mobile a un tipo integrale, la funzione garantisce che la modalità di arrotondamento dell'unità a virgola mobile (FPU) sia verso zero (truncate), impostando i bit 10 e 11 della parola di controllo. Ciò garantisce che la conversione da un tipo a virgola mobile a un tipo integrale si verifica come descritto dallo standard ANSI C (la parte frazionaria del numero viene eliminata). Quando si utilizza **/QIfist**, questa garanzia non è più valida. La modalità di arrotondamento sarà una delle quattro, come documentato nei manuali di riferimento Intel:
 
-- Arrotonda verso (numero pari più vicino se equidistanti)
+- Arrotondare verso il nearest (numero pari se equidistante)
 
 - Arrotonda verso l'infinito negativo
 
-- Arrotonda verso l'infinito positivo
+- Arrotondare verso l'infinito positivo
 
-- Arrotondamento per difetto
+- Arrotondare verso lo zero
 
-È possibile usare la [_control87, controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) funzione C Run-Time per modificare la modalità di arrotondamento dell'unità FPU. La modalità dell'unità FPU predefinita è "Round verso più vicino." Usando **/QIfist** può migliorare le prestazioni dell'applicazione, ma non è esente da rischi. È consigliabile verificare attentamente le parti del codice che sono sensibili alle modalità di arrotondamento, prima di fare affidamento sul codice compilato con **/QIfist** negli ambienti di produzione.
+È possibile utilizzare la [funzione _control87, \__controlfp _control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) runtime C per modificare il comportamento di arrotondamento dell'fPU. La modalità di arrotondamento predefinita dell'fPU è "Arrotonda verso più vicina". L'utilizzo di **/QIfist** può migliorare le prestazioni dell'applicazione, ma non senza rischi. È necessario testare accuratamente le parti del codice che sono sensibili alle modalità di arrotondamento prima di basarsi sul codice compilato con **/QIfist** negli ambienti di produzione.
 
-[/arch (x86)](arch-x86.md) e **/QIfist** non può essere utilizzato nello stesso compilando.
+[/arch (x86)](arch-x86.md) e **/QIfist** non possono essere utilizzati sullo stesso compilatore.
 
 > [!NOTE]
->  **/QIfist** è non attivo per impostazione predefinita perché l'arrotondamento di bit a virgola mobile mobile influiscono anche punto arrotondamento (che si verifica dopo ogni operazione di calcolo), in modo che quando si impostano i flag per l'arrotondamento di tipo C (verso zero), della virgola i calcoli potrebbero essere diversi. **/QIfist** non deve essere usato se codice dipende dalla fase il comportamento previsto di troncare la parte frazionaria del numero a virgola mobile. Se si è certi, non utilizzare **/QIfist**.
+> **/QIfist** non è attiva per impostazione predefinita perché i bit di arrotondamento influiscono anche sull'arrotondamento a virgola mobile (che si verifica dopo ogni calcolo), pertanto quando si impostano i flag per l'arrotondamento di tipo C (verso lo zero), i calcoli a virgola mobile potrebbero essere diversi. **/QIfist** non deve essere utilizzato se il codice dipende dal comportamento previsto di troncare la parte frazionaria del numero a virgola mobile. In caso di dubbi, non utilizzare **/QIfist**.
 
-Il **/QIfist** opzione è deprecata a partire da Visual Studio 2005. Il compilatore è stati introdotti miglioramenti significativi in float a int velocità di conversione. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
+L'opzione **/QIfist** è deprecata a partire da Visual Studio 2005. Il compilatore ha apportato miglioramenti significativi nella velocità di conversione da float a int. Per un elenco delle opzioni del compilatore deprecate, vedere **Deprecated and Removed Compiler Options** in Compiler Options Listed by [Category](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -67,4 +67,4 @@ Il **/QIfist** opzione è deprecata a partire da Visual Studio 2005. Il compilat
 
 [Opzioni /Q (operazioni di basso livello)](q-options-low-level-operations.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi della riga di comando del compilatore MSVCMSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)

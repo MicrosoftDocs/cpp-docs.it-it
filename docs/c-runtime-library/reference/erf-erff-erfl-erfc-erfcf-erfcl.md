@@ -1,6 +1,6 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - erff
 - erfl
@@ -8,6 +8,12 @@ api_name:
 - erfc
 - erfcf
 - erfcl
+- _o_erf
+- _o_erfc
+- _o_erfcf
+- _o_erfcl
+- _o_erff
+- _o_erfl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: ad7ad279d3686e4f33a6f5f901c60348c131b89a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70937610"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347916"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -87,31 +94,33 @@ long double erfcl(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Un valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **ERF** restituiscono la funzione di errore di Gauss di *x*. Le funzioni **erfc** restituiscono la funzione di errore di Gauss complementare di *x*.
+Le funzioni **erf** restituiscono la funzione di errore Gauss di *x*. Le funzioni **erfc** restituiscono la funzione di errore complementare Gauss di *x*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le funzioni **ERF** calcolano la funzione di errore di Gauss di *x*, definita come:
+Le funzioni **erf** calcolano la funzione di errore Gauss di *x*, definita come:
 
 ![Funzione di errore di x](media/crt_erf_formula.PNG "Funzione di errore di x")
 
-La funzione di errore di Gauss complementare è definita come 1-ERF (x). Le funzioni **ERF** restituiscono un valore compreso tra-1,0 e 1,0. Non vi è restituzione di errori. Le funzioni **erfc** restituiscono un valore compreso tra 0 e 2. Se *x* è troppo grande per **erfc**, la variabile **errno** è impostata su **ERANGE**.
+La funzione di errore complementare di Gauss è definita come 1 - erf(x). Le funzioni **erf** restituiscono un valore compreso tra -1,0 e 1,0. Non vi è restituzione di errori. Le funzioni **erfc** restituiscono un valore compreso tra 0 e 2. Se *x* è troppo grande per **erfc**, la variabile **errno** è impostata su **ERANGE**.
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **ERF** e **erfc** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C, **ERF** e **erfc** accettano e restituiscono sempre un **valore Double**.
+Dato che il linguaggio C' consente l'overload, è possibile chiamare overload di **erf** e **erfc** che accettano e restituiscono tipi **float** e **long** **double.** In un programma C, **erf** e **erfc** accettano e restituiscono sempre un **valore double**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
-|**ERF**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>

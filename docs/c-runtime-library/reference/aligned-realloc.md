@@ -1,8 +1,9 @@
 ---
 title: _aligned_realloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_realloc
+- _o__aligned_realloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_realloc function
 - _aligned_realloc function
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
-ms.openlocfilehash: 34af7d1dc3c5c8e5d504191b18280e228079eaa2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8b9dfae3fe7b17ad4ad28f69a36fbe0aa1c421e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943818"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350506"
 ---
 # <a name="_aligned_realloc"></a>_aligned_realloc
 
@@ -52,23 +54,25 @@ void * _aligned_realloc(
 *memblock*<br/>
 Puntatore al blocco di memoria corrente.
 
-*size*<br/>
+*Dimensione*<br/>
 Dimensione dell'allocazione di memoria richiesta.
 
-*alignment*<br/>
+*allineamento*<br/>
 Valore di allineamento, che deve essere una potenza intera di 2.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_aligned_realloc** restituisce un puntatore void al blocco di memoria riallocato (e possibilmente spostato). Il valore restituito è **null** se la dimensione è zero e l'argomento del buffer non è **null**o se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata. Nel primo caso il blocco originale viene liberato. Nel secondo caso il blocco originale resta invariato. Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da void, usare un cast del tipo sul valore restituito.
+**_aligned_realloc** restituisce un puntatore void al blocco di memoria riallocato (ed eventualmente spostato). Il valore restituito è **NULL** se la dimensione è zero e l'argomento buffer non è **NULL**o se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata. Nel primo caso il blocco originale viene liberato. Nel secondo caso il blocco originale resta invariato. Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da void, usare un cast del tipo sul valore restituito.
 
 Riallocare memoria modificando l'allineamento di un blocco è un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**_aligned_realloc** è basato su **malloc**. Per altre informazioni sull'uso di **_aligned_offset_malloc**, vedere [malloc](malloc.md).
+**_aligned_realloc** si basa su **malloc**. Per ulteriori informazioni sull'utilizzo di **_aligned_offset_malloc**, vedere [malloc](malloc.md).
 
-Questa funzione imposta **errno** su **ENOMEM** se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore di **_HEAP_MAXREQ**. Per ulteriori informazioni su **errno**, vedere [errno, doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Inoltre, **_aligned_realloc** convalida i relativi parametri. Se l' *allineamento* non è una potenza di 2, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **null** e imposta **errno** su **EINVAL**.
+Questa funzione imposta **errno** su **ENOMEM** se l'allocazione della memoria non è riuscita o se la dimensione richiesta è maggiore di **_HEAP_MAXREQ**. Per ulteriori informazioni su **errno**, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Inoltre, **_aligned_realloc** convalida i parametri. Se *alignment* non è una potenza di 2, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **NULL** e imposta **errno** su **EINVAL**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -82,4 +86,4 @@ Per altre informazioni, vedere [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allineamento dati](../../c-runtime-library/data-alignment.md)<br/>
+[Allineamento dei dati](../../c-runtime-library/data-alignment.md)<br/>

@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8ccab08b89da8c1b8ef56c8932e27a6c74e62aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275787"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329899"
 ---
 # <a name="icollectiononstlimpl-class"></a>Classe ICollectionOnSTLImpl
 
-Questa classe fornisce metodi usati da una classe di raccolta.
+Questa classe fornisce i metodi utilizzati da una classe di raccolta.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,19 +32,19 @@ class ICollectionOnSTLImpl : public T
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Un'interfaccia COM di raccolta.
+Interfaccia di raccolta COM.
 
-*CollType*<br/>
-Classe contenitore della libreria Standard C++.
+*CollType (tipo di lavoro*<br/>
+Una classe contenitore Libreria Standard di C.
 
-*ItemType*<br/>
-Il tipo di elemento esposto dall'interfaccia del contenitore.
+*Itemtype*<br/>
+Tipo di elemento esposto dall'interfaccia del contenitore.
 
-*CopyItem*<br/>
-Oggetto [copiare criteri classe](../../atl/atl-copy-policy-classes.md).
+*CopiaElemento*<br/>
+Classe [criteri di copia](../../atl/atl-copy-policy-classes.md).
 
-*EnumType*<br/>
-Oggetto [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-classe di enumeratori compatibile.
+*Enumtype*<br/>
+Una classe enumeratore compatibile con [CComEnumOnSTL.](../../atl/reference/ccomenumonstl-class.md)
 
 ## <a name="members"></a>Membri
 
@@ -62,24 +62,24 @@ Oggetto [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-classe di en
 |----------|-----------------|
 |[ICollectionOnSTLImpl::m_coll](#m_coll)|Raccolta.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe fornisce l'implementazione per i tre metodi di un'interfaccia di raccolta: [getcount](#get_count), [get_Item](#get_item), e [Get NewEnum](#newenum).
+Questa classe fornisce l'implementazione per tre metodi di un'interfaccia di raccolta: [getcount](#get_count), [get_Item](#get_item)e [get__NewEnum](#newenum).
 
-Utilizzare questa classe:
+Per utilizzare questa classe:
 
-- Definire un'interfaccia di raccolta che si desidera implementare (o presi in prestito).
+- Definire (o prendere in prestito) un'interfaccia di raccolta che si desidera implementare.
 
-- Derivare la classe da una specializzazione di `ICollectionOnSTLImpl` basate su questa interfaccia di raccolta.
+- Derivare la classe da `ICollectionOnSTLImpl` una specializzazione di basata su questa interfaccia di raccolta.
 
-- Usare la classe derivata per implementare metodi dall'interfaccia di raccolta non è gestito da `ICollectionOnSTLImpl`.
+- Utilizzare la classe derivata per implementare i `ICollectionOnSTLImpl`metodi dall'interfaccia di raccolta non gestita da .
 
 > [!NOTE]
->  Se l'interfaccia di raccolta è un'interfaccia duale, derivare la classe da [IDispatchImpl](../../atl/reference/idispatchimpl-class.md), passando il `ICollectionOnSTLImpl` specializzazione come primo parametro di modello se si desidera che ATL per fornire l'implementazione del `IDispatch` metodi.
+> Se l'interfaccia dell'insieme è un'interfaccia duale, `ICollectionOnSTLImpl` derivare la classe da [IDispatchImpl](../../atl/reference/idispatchimpl-class.md), passando `IDispatch` la specializzazione come primo parametro di modello se si desidera che ATL fornisca l'implementazione dei metodi.
 
-- Aggiungere elementi per il [m_coll](#m_coll) membro per popolare la raccolta.
+- Aggiungere elementi al [membro m_coll](#m_coll) per popolare la raccolta.
 
-Per altre informazioni ed esempi, vedere [ATL raccolte ed enumeratori](../../atl/atl-collections-and-enumerators.md).
+Per ulteriori informazioni ed esempi, vedere [Raccolte ED enumeratori ATL](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -89,9 +89,9 @@ Per altre informazioni ed esempi, vedere [ATL raccolte ed enumeratori](../../atl
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom. h
+**Intestazione:** atlcom.h
 
-##  <a name="get_count"></a>  ICollectionOnSTLImpl::getcount
+## <a name="icollectiononstlimplgetcount"></a><a name="get_count"></a>ICollectionOnSTLImpl::getcount
 
 Questo metodo restituisce il numero di elementi nella raccolta.
 
@@ -102,13 +102,13 @@ STDMETHOD(getcount)(long* pcount);
 ### <a name="parameters"></a>Parametri
 
 *pcount*<br/>
-[out] Il numero di elementi nella raccolta.
+[fuori] Numero di elementi nella raccolta.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-##  <a name="get_item"></a>  ICollectionOnSTLImpl::get_Item
+## <a name="icollectiononstlimplget_item"></a><a name="get_item"></a>ICollectionOnSTLImpl::get_Item
 
 Questo metodo restituisce l'elemento specificato dalla raccolta.
 
@@ -118,21 +118,21 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*Indice*<br/>
 [in] Indice in base 1 di un elemento nella raccolta.
 
 *pvar*<br/>
-[out] L'elemento corrispondente *indice*.
+[fuori] L'elemento corrispondente a *Index*.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'elemento viene ottenuto tramite la copia i dati nella posizione specificata in [m_coll](#m_coll) utilizzando il metodo di copia del [copiare classe policy](../../atl/atl-copy-policy-classes.md) passato come argomento di modello nel `ICollectionOnSTLImpl` specializzazione.
+L'elemento viene ottenuto copiando i dati nella posizione specificata in [m_coll](#m_coll) utilizzando il `ICollectionOnSTLImpl` metodo copy della classe criteri di [copia](../../atl/atl-copy-policy-classes.md) passata come argomento di modello nella specializzazione.
 
-##  <a name="newenum"></a>  ICollectionOnSTLImpl::get__NewEnum
+## <a name="icollectiononstlimplget__newenum"></a><a name="newenum"></a>ICollectionOnSTLImpl::get__NewEnum
 
 Restituisce un oggetto enumeratore per la raccolta.
 
@@ -143,17 +143,17 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 ### <a name="parameters"></a>Parametri
 
 *ppUnk*<br/>
-[out] Il **IUnknown** puntatore di un oggetto enumeratore appena creato.
+[fuori] Puntatore **IUnknown** di un oggetto enumeratore appena creato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'enumeratore appena creato mantiene un iteratore per la raccolta originale, `m_coll`, (in modo che viene eseguita alcuna copia) e mantiene un riferimento COM sull'oggetto di raccolta per assicurarsi che la raccolta rimane attiva anche se esistono gli enumeratori in sospeso.
+L'enumeratore appena creato mantiene un `m_coll`iteratore sull'insieme originale, , (quindi non viene creata alcuna copia) e contiene un riferimento COM sull'oggetto insieme per garantire che l'insieme rimanga attivo mentre sono presenti enumeratori in sospeso.
 
-##  <a name="m_coll"></a>  ICollectionOnSTLImpl::m_coll
+## <a name="icollectiononstlimplm_coll"></a><a name="m_coll"></a>ICollectionOnSTLImpl::m_coll
 
 Questo membro contiene gli elementi rappresentati dalla raccolta.
 
@@ -163,5 +163,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Nell'esempio ATLCollections](../../overview/visual-cpp-samples.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Esempio ATLCollections](../../overview/visual-cpp-samples.md)<br/>
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

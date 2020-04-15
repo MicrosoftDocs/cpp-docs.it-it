@@ -1,10 +1,11 @@
 ---
 title: cos, cosf, cosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cos
 - cosf
 - cosl
+- _o_cos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 536d9a235ef0d4b2bb68362645b5b4e03d8f37a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170255"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348461"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -60,21 +62,23 @@ long double cos( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Coseno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si verifica una perdita di significato nel risultato.
+Il coseno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a -263, si verifica una perdita di significato nel risultato.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|**_DOMAIN**|
-|± INF|**Non valido**|**_DOMAIN**|
+|QNAN, IND|none|**_DOMAIN**|
+|- INF|**Non valido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **cos** accetta e restituisce sempre un **valore Double**.
+Dato che il linguaggio Cè consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **cos** accetta e restituisce sempre un **valore double**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -82,7 +86,7 @@ Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** c
 |-------------|---------------------|-|
 |**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> o \<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -90,7 +94,7 @@ Vedere l'esempio in [sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>

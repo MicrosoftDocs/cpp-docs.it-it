@@ -1,9 +1,11 @@
 ---
 title: rename, _wrename
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - rename
 - _wrename
+- _o__wrename
+- _o_rename
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 730458c5027f8f690e8238b29cbdb1056f09ed68
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949299"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338111"
 ---
 # <a name="rename-_wrename"></a>rename, _wrename
 
@@ -71,33 +74,35 @@ Puntatore al nome nuovo.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce 0 in caso di esito positivo. In seguito a un errore, la funzione restituisce un valore diverso da zero e imposta **errno** su uno dei valori seguenti:
+Ognuna di queste funzioni restituisce 0 in caso di esito positivo. In caso di errore, la funzione restituisce un valore diverso da zero e imposta **errno** su uno dei valori seguenti:
 
 |Valore errno|Condizione|
 |-|-|
 | **EACCES** | La directory o il file specificato da *newname* esiste già o non può essere creato (percorso non valido) oppure *oldname* è una directory e *newname* specifica un percorso diverso. |
-| **ENOENT** | File o percorso specificato da *oldname* non trovato. |
-| **EINVAL** | Il nome contiene caratteri non validi. |
+| **ENOENTE** | File o percorso specificato da *oldname* non trovato. |
+| **Einval** | Il nome contiene caratteri non validi. |
 
 Per altri possibili valori restituiti, vedere [doserrno, errno, syserrlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **rename** rinomina la directory o il file specificato da *oldname* con il nome specificato da *newname*. Il nome precedente deve essere il percorso di un file o una directory esistente. Il nuovo nome deve essere il nome di un file o una directory esistente. È possibile usare **rename** per spostare un file da una directory o un dispositivo a un altro, assegnando a un percorso diverso nell'argomento *newname*. Non è tuttavia possibile usare **rename** per spostare una directory. Le directory possono essere rinominate, ma non spostate.
 
-**_wrename** è una versione a caratteri wide di **_rename**; gli argomenti di **_wrename** sono stringhe a caratteri wide. **_wrename** e **_rename** si comportano in modo identico.
+**_wrename** è una versione a caratteri wide di **_rename**; gli argomenti per **_wrename** sono stringhe di caratteri wide. **_wrename** e **_rename** si comportano in modo identico in caso contrario.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_trename**|**rename**|**rename**|**_wrename**|
+|**_trename**|**Rinominare**|**Rinominare**|**_wrename**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**rename**|\<io.h> o \<stdio.h>|
+|**Rinominare**|\<io.h> o \<stdio.h>|
 |**_wrename**|\<stdio.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
@@ -140,4 +145,4 @@ File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>

@@ -1,11 +1,13 @@
 ---
 title: isupper, _isupper_l, iswupper, _iswupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isupper
 - iswupper
 - _iswupper_l
 - _isupper_l
+- _o_isupper
+- _o_iswupper
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-ms.openlocfilehash: 558373d845b88d8959651d0a76e24af80cb6fa5e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 713689649b33873796b7a73bad6a4ac6e8acc998
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953613"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342793"
 ---
 # <a name="isupper-_isupper_l-iswupper-_iswupper_l"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
@@ -69,19 +72,19 @@ int _iwsupper_l(
 
 ### <a name="parameters"></a>Parametri
 
-*c*<br/>
+*C*<br/>
 Valore Integer da testare.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un valore diverso da zero se *c* è una rappresentazione particolare di una lettera maiuscola. Se *c* è un carattere maiuscolo (a-Z), **viene restituito un** valore diverso da zero. **iswupper** restituisce un valore diverso da zero se *c* è un carattere wide che corrisponde a una lettera maiuscola o se *c* è uno di un set definito dall'implementazione di caratteri wide per cui nessuna di **iswcntrl**, **iswdigit**,  **iswpunct**o **iswspace** è diverso da zero. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di una lettera maiuscola. **isupper** restituisce un valore diverso da zero se *c* è un carattere maiuscolo (A - z). **iswupper** restituisce un valore diverso da zero se *c* è un carattere wide che corrisponde a una lettera maiuscola o se *c* è uno di un set di caratteri wide definito dall'implementazione per il quale nessuno di **iswcntrl**, **iswdigit**, **iswpunct**o **iswspace** è diverso da zero. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni che hanno il suffisso **suffisso** usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni con il **suffisso _l** utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento di e di **_isupper_l** non è definito se *c* non è EOF o nell'intervallo **compreso tra 0** e 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
+Il comportamento di **isupper** e **_isupper_l** non è definito se *c* non è EOF o compreso nell'intervallo da 0 a 0xFF, inclusivo. Quando viene utilizzata una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -89,6 +92,10 @@ Il comportamento di e di **_isupper_l** non è definito se *c* non è EOF o nell
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istupper**|**isupper**|[_ismbcupper](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswupper**|
 |**_istupper_l**|**_isupper_l**|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_iswupper_l**|
+
+## <a name="remarks"></a>Osservazioni
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -104,5 +111,5 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="see-also"></a>Vedere anche
 
 [Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>
